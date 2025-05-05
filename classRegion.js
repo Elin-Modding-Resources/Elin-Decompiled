@@ -5,7 +5,7 @@ var classRegion =
     [ "CreateRandomSite", "classRegion.html#af8fd63f724ab634433d97dd7602ba303", null ],
     [ "CreateRandomSite", "classRegion.html#addd277cb0c221ce4e6f9e78e93501806", null ],
     [ "CreateZone", "classRegion.html#a98b2cc1888130954a1b264a0747373dc", null ],
-    [ "GetRandomPoint", "classRegion.html#a836bf0e0d03daf979cbce4326cf78ca6", null ],
+    [ "GetRandomPoint", "classRegion.html#a036ce5fedf8aa267f23e7f6433bddf15", null ],
     [ "GetRandomPoint", "classRegion.html#a23e7e9b5fdd2af9f11ddef9caa9a5f94", null ],
     [ "GetRandomPoint", "classRegion.html#a2b0914da44d635427467cd3611f78efb", null ],
     [ "GetRandomSiteSource", "classRegion.html#a09503d19cb3e6be74f6070b2d940f27c", null ],

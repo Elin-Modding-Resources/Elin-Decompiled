@@ -5,6 +5,7 @@ var classSpawnSetting =
     [ "DefenseEnemy", "classSpawnSetting.html#ad0b09c0647d774fc82deace7d2932f6b", null ],
     [ "Encounter", "classSpawnSetting.html#a0cb6358dbdc2a78e6b0d794701da5b0e", null ],
     [ "Evolved", "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a", null ],
+    [ "Fish", "classSpawnSetting.html#aa1db65406ce51e1303a9bad67b9a3114", null ],
     [ "HomeEnemy", "classSpawnSetting.html#a3b50dc0e398966092d680d41b941a611", null ],
     [ "HomeGuest", "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832", null ],
     [ "HomeWild", "classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967", null ],

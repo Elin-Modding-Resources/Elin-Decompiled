@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.132 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.133 Nightly</span>
    </div>
   </td>
  </tr>
@@ -154,6 +154,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acbfd706138fa5739c631ddfbcd610411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6391e9bebe3098aebd389c2efcf06504"><td class="memItemLeft" align="right" valign="top">GaussianBlur&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraSupport.html#a6391e9bebe3098aebd389c2efcf06504">blur</a></td></tr>
 <tr class="separator:a6391e9bebe3098aebd389c2efcf06504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d6fbac28f1587fe2640de1c97a121e"><td class="memItemLeft" align="right" valign="top">MonoBehaviour&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraSupport.html#af2d6fbac28f1587fe2640de1c97a121e">water</a></td></tr>
+<tr class="separator:af2d6fbac28f1587fe2640de1c97a121e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471cdfa4a963f79880987207feae88cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCameraSupport.html#a471cdfa4a963f79880987207feae88cc">Zoom</a> = 1f</td></tr>
 <tr class="separator:a471cdfa4a963f79880987207feae88cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -220,35 +222,35 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00055">55</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">float</span> result = 0f;</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classCameraSupport.html#a6d34c8d6ee4755e11a58175b64bb4566">divier</a>)</div>
-<div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.None:</div>
-<div class="line"><span class="lineno">   61</span>            result = (float)Screen.height * 0.5f * 0.01f;</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Floor:</div>
-<div class="line"><span class="lineno">   64</span>            result = (<span class="keywordtype">float</span>)Mathf.FloorToInt((<span class="keywordtype">float</span>)Screen.height * 0.5f) * 0.01f;</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Round:</div>
-<div class="line"><span class="lineno">   67</span>            result = (float)Mathf.RoundToInt((<span class="keywordtype">float</span>)Screen.height * 0.5f) * 0.01f;</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Ceil:</div>
-<div class="line"><span class="lineno">   70</span>            result = (float)Mathf.CeilToInt((<span class="keywordtype">float</span>)Screen.height * 0.5f) * 0.01f;</div>
-<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Odd:</div>
-<div class="line"><span class="lineno">   73</span>            result = (float)Screen.height * 0.5f * 0.01f + 0.005f;</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00057">57</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">float</span> result = 0f;</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classCameraSupport.html#a6d34c8d6ee4755e11a58175b64bb4566">divier</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.None:</div>
+<div class="line"><span class="lineno">   63</span>            result = (float)Screen.height * 0.5f * 0.01f;</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Floor:</div>
+<div class="line"><span class="lineno">   66</span>            result = (<span class="keywordtype">float</span>)Mathf.FloorToInt((<span class="keywordtype">float</span>)Screen.height * 0.5f) * 0.01f;</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Round:</div>
+<div class="line"><span class="lineno">   69</span>            result = (float)Mathf.RoundToInt((<span class="keywordtype">float</span>)Screen.height * 0.5f) * 0.01f;</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Ceil:</div>
+<div class="line"><span class="lineno">   72</span>            result = (float)Mathf.CeilToInt((<span class="keywordtype">float</span>)Screen.height * 0.5f) * 0.01f;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">Divider</a>.Odd:</div>
+<div class="line"><span class="lineno">   75</span>            result = (float)Screen.height * 0.5f * 0.01f + 0.005f;</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
 <div class="ttc" id="aclassCameraSupport_html_a6d34c8d6ee4755e11a58175b64bb4566"><div class="ttname"><a href="classCameraSupport.html#a6d34c8d6ee4755e11a58175b64bb4566">CameraSupport.divier</a></div><div class="ttdeci">Divider divier</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00027">CameraSupport.cs:27</a></div></div>
 <div class="ttc" id="aclassCameraSupport_html_a764fe3119d6b3264c4981f01836076ec"><div class="ttname"><a href="classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec">CameraSupport.Divider</a></div><div class="ttdeci">Divider</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00008">CameraSupport.cs:9</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CameraSupport_8cs_source.html#l00027">divier</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CameraSupport_8cs_source.html#l00046">ResizeCameraToPixelPerfect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CameraSupport_8cs_source.html#l00048">ResizeCameraToPixelPerfect()</a>.</p>
 
 </div>
 </div>
@@ -275,9 +277,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00051">51</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00053">53</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00941">CoreConfig.ApplyGrading()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00924">CoreConfig.ApplyZoom()</a>, and <a class="el" href="Core_8cs_source.html#l00641">Core.OnChangeResolution()</a>.</p>
 
@@ -306,16 +308,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00046">46</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        cam.orthographicSize = <a class="code hl_function" href="classCameraSupport.html#aaa9545ee266f45c5c6eee9dd5a9c157a">GetOrthoSize</a>() / <a class="code hl_variable" href="classCameraSupport.html#a471cdfa4a963f79880987207feae88cc">Zoom</a>;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="ttc" id="aclassCameraSupport_html_a471cdfa4a963f79880987207feae88cc"><div class="ttname"><a href="classCameraSupport.html#a471cdfa4a963f79880987207feae88cc">CameraSupport.Zoom</a></div><div class="ttdeci">float Zoom</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00044">CameraSupport.cs:44</a></div></div>
-<div class="ttc" id="aclassCameraSupport_html_aaa9545ee266f45c5c6eee9dd5a9c157a"><div class="ttname"><a href="classCameraSupport.html#aaa9545ee266f45c5c6eee9dd5a9c157a">CameraSupport.GetOrthoSize</a></div><div class="ttdeci">float GetOrthoSize()</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00055">CameraSupport.cs:55</a></div></div>
+<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00048">48</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        cam.orthographicSize = <a class="code hl_function" href="classCameraSupport.html#aaa9545ee266f45c5c6eee9dd5a9c157a">GetOrthoSize</a>() / <a class="code hl_variable" href="classCameraSupport.html#a471cdfa4a963f79880987207feae88cc">Zoom</a>;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="ttc" id="aclassCameraSupport_html_a471cdfa4a963f79880987207feae88cc"><div class="ttname"><a href="classCameraSupport.html#a471cdfa4a963f79880987207feae88cc">CameraSupport.Zoom</a></div><div class="ttdeci">float Zoom</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00046">CameraSupport.cs:46</a></div></div>
+<div class="ttc" id="aclassCameraSupport_html_aaa9545ee266f45c5c6eee9dd5a9c157a"><div class="ttname"><a href="classCameraSupport.html#aaa9545ee266f45c5c6eee9dd5a9c157a">CameraSupport.GetOrthoSize</a></div><div class="ttdeci">float GetOrthoSize()</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00057">CameraSupport.cs:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CameraSupport_8cs_source.html#l00055">GetOrthoSize()</a>, and <a class="el" href="CameraSupport_8cs_source.html#l00044">Zoom</a>.</p>
+<p class="reference">References <a class="el" href="CameraSupport_8cs_source.html#l00057">GetOrthoSize()</a>, and <a class="el" href="CameraSupport_8cs_source.html#l00046">Zoom</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshScreenSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseGameScreen_8cs_source.html#l00549">BaseGameScreen.RefreshScreenSize()</a>.</p>
 
 </div>
 </div>
@@ -404,7 +406,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00027">27</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CameraSupport_8cs_source.html#l00055">GetOrthoSize()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshScreenSize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CameraSupport_8cs_source.html#l00057">GetOrthoSize()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00549">BaseGameScreen.RefreshScreenSize()</a>.</p>
 
 </div>
 </div>
@@ -422,7 +424,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00023">23</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00941">CoreConfig.ApplyGrading()</a>, <a class="el" href="Scene_8cs_source.html#l00814">Scene.ApplyZoneConfig()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00533">BaseTileMap.Draw()</a>, <a class="el" href="ConBlind_8cs_source.html#l00026">ConBlind.OnRemoved()</a>, <a class="el" href="ConBlind_8cs_source.html#l00016">ConBlind.OnStart()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00520">BaseGameScreen.RefreshAll()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00675">BaseGameScreen.RefreshGrading()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00961">CoreConfig.RefreshUIBrightness()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00605">BaseGameScreen.RefreshWeather()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00347">BaseGameScreen.UpdateShaders()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CoreConfig_8cs_source.html#l00941">CoreConfig.ApplyGrading()</a>, <a class="el" href="Scene_8cs_source.html#l00820">Scene.ApplyZoneConfig()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00533">BaseTileMap.Draw()</a>, <a class="el" href="ConBlind_8cs_source.html#l00026">ConBlind.OnRemoved()</a>, <a class="el" href="ConBlind_8cs_source.html#l00016">ConBlind.OnStart()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00521">BaseGameScreen.RefreshAll()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00676">BaseGameScreen.RefreshGrading()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00961">CoreConfig.RefreshUIBrightness()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00606">BaseGameScreen.RefreshWeather()</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00348">BaseGameScreen.UpdateShaders()</a>.</p>
 
 </div>
 </div>
@@ -540,6 +542,22 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="af2d6fbac28f1587fe2640de1c97a121e" name="af2d6fbac28f1587fe2640de1c97a121e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d6fbac28f1587fe2640de1c97a121e">&#9670;&#160;</a></span>water</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MonoBehaviour CameraSupport.water</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00043">43</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
+
+</div>
+</div>
 <a id="a471cdfa4a963f79880987207feae88cc" name="a471cdfa4a963f79880987207feae88cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a471cdfa4a963f79880987207feae88cc">&#9670;&#160;</a></span>Zoom</h2>
 
@@ -552,9 +570,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00044">44</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CameraSupport_8cs_source.html#l00046">46</a> of file <a class="el" href="CameraSupport_8cs_source.html">CameraSupport.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00533">BaseTileMap.Draw()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00008">TileMapElona.Draw()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00548">BaseGameScreen.RefreshScreenSize()</a>, and <a class="el" href="CameraSupport_8cs_source.html#l00046">ResizeCameraToPixelPerfect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00533">BaseTileMap.Draw()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00008">TileMapElona.Draw()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00549">BaseGameScreen.RefreshScreenSize()</a>, and <a class="el" href="CameraSupport_8cs_source.html#l00048">ResizeCameraToPixelPerfect()</a>.</p>
 
 </div>
 </div>

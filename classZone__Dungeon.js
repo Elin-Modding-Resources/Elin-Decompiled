@@ -7,6 +7,7 @@ var classZone__Dungeon =
     [ "GetDungenID", "classZone__Dungeon.html#acbff4fdb58b56d8d5fb4ce6060959157", null ],
     [ "OnGenerateMap", "classZone__Dungeon.html#aa330befb029e0ea57124519eb57930d4", null ],
     [ "PlaceRail", "classZone__Dungeon.html#a933a5e4c23a03e6862e90315b91a2035", null ],
+    [ "BaseElectricity", "classZone__Dungeon.html#a587320df847dfb64930fc14c6a21a499", null ],
     [ "BigDaddyChance", "classZone__Dungeon.html#ae29cadb6b2b889bcc83589f87159f19d", null ],
     [ "BlockBorderExit", "classZone__Dungeon.html#a46a98ed4b8b845af3cdda793e4c7257a", null ],
     [ "CountDeepestLevel", "classZone__Dungeon.html#aa0d00adc52d171ed02de0b30ac28f98f", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.132 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.133 Nightly</span>
    </div>
   </td>
  </tr>
@@ -201,6 +201,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a22bfb39845fe0852d2a95f1e93e7970b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afca5a7092a22d2536c97994d1f79658d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeBlock.html">TileTypeBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#afca5a7092a22d2536c97994d1f79658d">Block</a> = new <a class="el" href="classTileTypeBlock.html">TileTypeBlock</a>()</td></tr>
 <tr class="separator:afca5a7092a22d2536c97994d1f79658d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2710344ba2849fb170f104535fd7293"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeBlockOpen.html">TileTypeBlockOpen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#ae2710344ba2849fb170f104535fd7293">BlockOpen</a> = new <a class="el" href="classTileTypeBlockOpen.html">TileTypeBlockOpen</a>()</td></tr>
+<tr class="separator:ae2710344ba2849fb170f104535fd7293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a641bec189d9b5dbc81ae6850d3fa81b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeBlockShip.html">TileTypeBlockShip</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a641bec189d9b5dbc81ae6850d3fa81b1">BlockShip</a> = new <a class="el" href="classTileTypeBlockShip.html">TileTypeBlockShip</a>()</td></tr>
 <tr class="separator:a641bec189d9b5dbc81ae6850d3fa81b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fb9d9984fdf9601c53ba0dd921987f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileTypeSlope.html">TileTypeSlope</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileType.html#a5fb9d9984fdf9601c53ba0dd921987f5">Slope</a> = new <a class="el" href="classTileTypeSlope.html">TileTypeSlope</a>()</td></tr>
@@ -581,71 +583,71 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00287">287</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  288</span>    {</div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">if</span> ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#aeb7b76109b3acaf95d6a3e92410690fb">ignoreBuildRule</a> || <a class="code hl_property" href="classTileType.html#aa3f1e6eba35bbbfc36b650654843a01f">IgnoreBuildRule</a>) &amp;&amp; canIgnore)</div>
-<div class="line"><span class="lineno">  290</span>        {</div>
-<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
-<div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#a0b10fa51e7f5e1b59b69b949a915096a">CanBuiltOnArea</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#aab88199d3d79c4fe8776057d0cc1a24d">HasArea</a>)</div>
-<div class="line"><span class="lineno">  294</span>        {</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  296</span>        }</div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">IsTopWater</a>)</div>
-<div class="line"><span class="lineno">  298</span>        {</div>
-<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#ac8fc0c2f65ea5f26efe469b83da7129b">CanBuiltOnWater</a>)</div>
-<div class="line"><span class="lineno">  300</span>            {</div>
-<div class="line"><span class="lineno">  301</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  302</span>            }</div>
-<div class="line"><span class="lineno">  303</span>        }</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#a5b6a80afc2110ceb6045b73a050fbb79">CanBuiltOnFloor</a>)</div>
-<div class="line"><span class="lineno">  305</span>        {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  307</span>        }</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#aced6cafdffd45f03c327752164595544">CanBuiltOnBridge</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
-<div class="line"><span class="lineno">  309</span>        {</div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  311</span>        }</div>
-<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  313</span>        {</div>
-<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">if</span> (target.<a class="code hl_property" href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">sourceCard</a>.<a class="code hl_variable" href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">multisize</a> &amp;&amp; (pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != <span class="keyword">null</span> || pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">blocked</a> || (pos.<a class="code hl_property" href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">HasChara</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">FirstChara</a>.<a class="code hl_function" href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">IsHostile</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>))))</div>
-<div class="line"><span class="lineno">  315</span>            {</div>
-<div class="line"><span class="lineno">  316</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  317</span>            }</div>
-<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != <span class="keyword">null</span> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != target)</div>
-<div class="line"><span class="lineno">  319</span>            {</div>
-<div class="line"><span class="lineno">  320</span>                <a class="code hl_class" href="classTileType.html">TileType</a> tileType = pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a>.<a class="code hl_property" href="classCard.html#a7d77dcb1302d78e698ab908f03f339f5">TileType</a>;</div>
-<div class="line"><span class="lineno">  321</span>                <a class="code hl_class" href="classTileType.html">TileType</a> tileType2 = target.<a class="code hl_property" href="classCard.html#a7d77dcb1302d78e698ab908f03f339f5">TileType</a>;</div>
-<div class="line"><span class="lineno">  322</span>                <span class="keywordflow">if</span> (!tileType.<a class="code hl_property" href="classTileType.html#a3584cf979a693049c27697a4015b1adb">AllowMultiInstall</a> || !tileType2.<a class="code hl_property" href="classTileType.html#a3584cf979a693049c27697a4015b1adb">AllowMultiInstall</a>)</div>
-<div class="line"><span class="lineno">  323</span>                {</div>
-<div class="line"><span class="lineno">  324</span>                    <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  325</span>                }</div>
-<div class="line"><span class="lineno">  326</span>            }</div>
-<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">if</span> (!target.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff">CanBuiltAt</a>(pos))</div>
-<div class="line"><span class="lineno">  328</span>            {</div>
-<div class="line"><span class="lineno">  329</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  330</span>            }</div>
-<div class="line"><span class="lineno">  331</span>        }</div>
-<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_property" href="classTileType.html#af48563ad8cb01b1abfab716357ff6e7c">CanBuiltOnThing</a> &amp;&amp; !pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ae073de82704ca745de21f839a5fee783">hasDoor</a>)</div>
-<div class="line"><span class="lineno">  333</span>        {</div>
-<div class="line"><span class="lineno">  334</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  335</span>        }</div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a>)</div>
-<div class="line"><span class="lineno">  337</span>        {</div>
-<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#a4e2e3fe3d11f45f870f638c6035fab5c">CanBuiltOnBlock</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.IsOccupyCell &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad440e94257b81f8f997ac591b60ed64d">test</a>.<a class="code hl_variable" href="classCoreConfig_1_1Test.html#a51b883e315faf3c71d17a985756ffff0">allowBlockOnItem</a>)</div>
-<div class="line"><span class="lineno">  339</span>            {</div>
-<div class="line"><span class="lineno">  340</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  341</span>            }</div>
-<div class="line"><span class="lineno">  342</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTileType.html#a3499b8e71b10330cf7ed8074bca232fd">IsDoor</a> &amp;&amp; !pos.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
-<div class="line"><span class="lineno">  343</span>            {</div>
-<div class="line"><span class="lineno">  344</span>            }</div>
-<div class="line"><span class="lineno">  345</span>        }</div>
-<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_property" href="classTileType.html#a3499b8e71b10330cf7ed8074bca232fd">IsDoor</a>)</div>
-<div class="line"><span class="lineno">  347</span>        {</div>
-<div class="line"><span class="lineno">  348</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
-<div class="line"><span class="lineno">  349</span>        }</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d">HitTest</a>(pos);</div>
-<div class="line"><span class="lineno">  351</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00289">289</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  290</span>    {</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">if</span> ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#aeb7b76109b3acaf95d6a3e92410690fb">ignoreBuildRule</a> || <a class="code hl_property" href="classTileType.html#aa3f1e6eba35bbbfc36b650654843a01f">IgnoreBuildRule</a>) &amp;&amp; canIgnore)</div>
+<div class="line"><span class="lineno">  292</span>        {</div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">  294</span>        }</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#a0b10fa51e7f5e1b59b69b949a915096a">CanBuiltOnArea</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#aab88199d3d79c4fe8776057d0cc1a24d">HasArea</a>)</div>
+<div class="line"><span class="lineno">  296</span>        {</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  298</span>        }</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">IsTopWater</a>)</div>
+<div class="line"><span class="lineno">  300</span>        {</div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#ac8fc0c2f65ea5f26efe469b83da7129b">CanBuiltOnWater</a>)</div>
+<div class="line"><span class="lineno">  302</span>            {</div>
+<div class="line"><span class="lineno">  303</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  304</span>            }</div>
+<div class="line"><span class="lineno">  305</span>        }</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#a5b6a80afc2110ceb6045b73a050fbb79">CanBuiltOnFloor</a>)</div>
+<div class="line"><span class="lineno">  307</span>        {</div>
+<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  309</span>        }</div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#aced6cafdffd45f03c327752164595544">CanBuiltOnBridge</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
+<div class="line"><span class="lineno">  311</span>        {</div>
+<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  313</span>        }</div>
+<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">if</span> (target != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  315</span>        {</div>
+<div class="line"><span class="lineno">  316</span>            <span class="keywordflow">if</span> (target.<a class="code hl_property" href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">sourceCard</a>.<a class="code hl_variable" href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">multisize</a> &amp;&amp; (pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != <span class="keyword">null</span> || pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">blocked</a> || (pos.<a class="code hl_property" href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">HasChara</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">FirstChara</a>.<a class="code hl_function" href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">IsHostile</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>))))</div>
+<div class="line"><span class="lineno">  317</span>            {</div>
+<div class="line"><span class="lineno">  318</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  319</span>            }</div>
+<div class="line"><span class="lineno">  320</span>            <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != <span class="keyword">null</span> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != target)</div>
+<div class="line"><span class="lineno">  321</span>            {</div>
+<div class="line"><span class="lineno">  322</span>                <a class="code hl_class" href="classTileType.html">TileType</a> tileType = pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a>.<a class="code hl_property" href="classCard.html#a7d77dcb1302d78e698ab908f03f339f5">TileType</a>;</div>
+<div class="line"><span class="lineno">  323</span>                <a class="code hl_class" href="classTileType.html">TileType</a> tileType2 = target.<a class="code hl_property" href="classCard.html#a7d77dcb1302d78e698ab908f03f339f5">TileType</a>;</div>
+<div class="line"><span class="lineno">  324</span>                <span class="keywordflow">if</span> (!tileType.<a class="code hl_property" href="classTileType.html#a3584cf979a693049c27697a4015b1adb">AllowMultiInstall</a> || !tileType2.<a class="code hl_property" href="classTileType.html#a3584cf979a693049c27697a4015b1adb">AllowMultiInstall</a>)</div>
+<div class="line"><span class="lineno">  325</span>                {</div>
+<div class="line"><span class="lineno">  326</span>                    <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  327</span>                }</div>
+<div class="line"><span class="lineno">  328</span>            }</div>
+<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">if</span> (!target.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff">CanBuiltAt</a>(pos))</div>
+<div class="line"><span class="lineno">  330</span>            {</div>
+<div class="line"><span class="lineno">  331</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  332</span>            }</div>
+<div class="line"><span class="lineno">  333</span>        }</div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#a010eb501d90a00f1f9ccab4fbeee945e">Installed</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_property" href="classTileType.html#af48563ad8cb01b1abfab716357ff6e7c">CanBuiltOnThing</a> &amp;&amp; !pos.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ae073de82704ca745de21f839a5fee783">hasDoor</a>)</div>
+<div class="line"><span class="lineno">  335</span>        {</div>
+<div class="line"><span class="lineno">  336</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  337</span>        }</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a>)</div>
+<div class="line"><span class="lineno">  339</span>        {</div>
+<div class="line"><span class="lineno">  340</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTileType.html#a4e2e3fe3d11f45f870f638c6035fab5c">CanBuiltOnBlock</a> &amp;&amp; pos.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.tileType.IsOccupyCell &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#af03219aa378fd94376bc0a5ca9204d0a">config</a>.<a class="code hl_variable" href="classCoreConfig.html#ad440e94257b81f8f997ac591b60ed64d">test</a>.<a class="code hl_variable" href="classCoreConfig_1_1Test.html#a51b883e315faf3c71d17a985756ffff0">allowBlockOnItem</a>)</div>
+<div class="line"><span class="lineno">  341</span>            {</div>
+<div class="line"><span class="lineno">  342</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  343</span>            }</div>
+<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTileType.html#a3499b8e71b10330cf7ed8074bca232fd">IsDoor</a> &amp;&amp; !pos.<a class="code hl_property" href="classPoint.html#a6b2acc02dc9b1c00963431c6c13f0903">HasWallOrFence</a>)</div>
+<div class="line"><span class="lineno">  345</span>            {</div>
+<div class="line"><span class="lineno">  346</span>            }</div>
+<div class="line"><span class="lineno">  347</span>        }</div>
+<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_property" href="classTileType.html#a3499b8e71b10330cf7ed8074bca232fd">IsDoor</a>)</div>
+<div class="line"><span class="lineno">  349</span>        {</div>
+<div class="line"><span class="lineno">  350</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Invalid;</div>
+<div class="line"><span class="lineno">  351</span>        }</div>
+<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d">HitTest</a>(pos);</div>
+<div class="line"><span class="lineno">  353</span>    }</div>
 <div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00001">HitResult.cs:2</a></div></div>
 <div class="ttc" id="aclassAlgorithms_1_1WeightCell_html_a2c5ee336064b309bc73a1db233757553"><div class="ttname"><a href="classAlgorithms_1_1WeightCell.html#a2c5ee336064b309bc73a1db233757553">Algorithms.WeightCell.blocked</a></div><div class="ttdeci">bool blocked</div><div class="ttdef"><b>Definition:</b> <a href="WeightCell_8cs_source.html#l00005">WeightCell.cs:5</a></div></div>
 <div class="ttc" id="aclassCard_html_a7d77dcb1302d78e698ab908f03f339f5"><div class="ttname"><a href="classCard.html#a7d77dcb1302d78e698ab908f03f339f5">Card.TileType</a></div><div class="ttdeci">TileType TileType</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02047">Card.cs:2047</a></div></div>
@@ -654,7 +656,7 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassCell_html_a23a20aed3b871d236514d5e80ce425ab"><div class="ttname"><a href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">Cell._bridge</a></div><div class="ttdeci">byte _bridge</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00046">Cell.cs:46</a></div></div>
 <div class="ttc" id="aclassCell_html_a7e00f5166a7344f5cf8fc79132689b6f"><div class="ttname"><a href="classCell.html#a7e00f5166a7344f5cf8fc79132689b6f">Cell.IsTopWater</a></div><div class="ttdeci">bool IsTopWater</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00699">Cell.cs:700</a></div></div>
 <div class="ttc" id="aclassCell_html_ae073de82704ca745de21f839a5fee783"><div class="ttname"><a href="classCell.html#ae073de82704ca745de21f839a5fee783">Cell.hasDoor</a></div><div class="ttdeci">bool hasDoor</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00257">Cell.cs:258</a></div></div>
-<div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05944">Chara.cs:5944</a></div></div>
+<div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05959">Chara.cs:5959</a></div></div>
 <div class="ttc" id="aclassCoreConfig_1_1Test_html_a51b883e315faf3c71d17a985756ffff0"><div class="ttname"><a href="classCoreConfig_1_1Test.html#a51b883e315faf3c71d17a985756ffff0">CoreConfig.Test.allowBlockOnItem</a></div><div class="ttdeci">bool allowBlockOnItem</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00547">CoreConfig.cs:547</a></div></div>
 <div class="ttc" id="aclassCoreConfig_html_ad440e94257b81f8f997ac591b60ed64d"><div class="ttname"><a href="classCoreConfig.html#ad440e94257b81f8f997ac591b60ed64d">CoreConfig.test</a></div><div class="ttdeci">Test test</div><div class="ttdef"><b>Definition:</b> <a href="CoreConfig_8cs_source.html#l00612">CoreConfig.cs:612</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_aeb7b76109b3acaf95d6a3e92410690fb"><div class="ttname"><a href="classCoreDebug.html#aeb7b76109b3acaf95d6a3e92410690fb">CoreDebug.ignoreBuildRule</a></div><div class="ttdeci">bool ignoreBuildRule</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00184">CoreDebug.cs:184</a></div></div>
@@ -673,19 +675,19 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassPoint_html_af4f53c5ef543798320ca855aa873dc46"><div class="ttname"><a href="classPoint.html#af4f53c5ef543798320ca855aa873dc46">Point.HasChara</a></div><div class="ttdeci">bool HasChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00225">Point.cs:226</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a2081e4780b37fba374c0014d0405cc09"><div class="ttname"><a href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">RenderRow.multisize</a></div><div class="ttdeci">bool multisize</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00064">RenderRow.cs:64</a></div></div>
 <div class="ttc" id="aclassTileType_html"><div class="ttname"><a href="classTileType.html">TileType</a></div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00005">TileType.cs:6</a></div></div>
-<div class="ttc" id="aclassTileType_html_a0b10fa51e7f5e1b59b69b949a915096a"><div class="ttname"><a href="classTileType.html#a0b10fa51e7f5e1b59b69b949a915096a">TileType.CanBuiltOnArea</a></div><div class="ttdeci">virtual bool CanBuiltOnArea</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00187">TileType.cs:187</a></div></div>
-<div class="ttc" id="aclassTileType_html_a3499b8e71b10330cf7ed8074bca232fd"><div class="ttname"><a href="classTileType.html#a3499b8e71b10330cf7ed8074bca232fd">TileType.IsDoor</a></div><div class="ttdeci">virtual bool IsDoor</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00195">TileType.cs:195</a></div></div>
-<div class="ttc" id="aclassTileType_html_a3584cf979a693049c27697a4015b1adb"><div class="ttname"><a href="classTileType.html#a3584cf979a693049c27697a4015b1adb">TileType.AllowMultiInstall</a></div><div class="ttdeci">virtual bool AllowMultiInstall</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00219">TileType.cs:219</a></div></div>
-<div class="ttc" id="aclassTileType_html_a4e2e3fe3d11f45f870f638c6035fab5c"><div class="ttname"><a href="classTileType.html#a4e2e3fe3d11f45f870f638c6035fab5c">TileType.CanBuiltOnBlock</a></div><div class="ttdeci">virtual bool CanBuiltOnBlock</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00193">TileType.cs:193</a></div></div>
-<div class="ttc" id="aclassTileType_html_a5b6a80afc2110ceb6045b73a050fbb79"><div class="ttname"><a href="classTileType.html#a5b6a80afc2110ceb6045b73a050fbb79">TileType.CanBuiltOnFloor</a></div><div class="ttdeci">virtual bool CanBuiltOnFloor</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00197">TileType.cs:197</a></div></div>
-<div class="ttc" id="aclassTileType_html_a87395d3bd1b8cfbcb8f96e00873d951d"><div class="ttname"><a href="classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d">TileType.HitTest</a></div><div class="ttdeci">virtual HitResult HitTest(Point pos)</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00353">TileType.cs:353</a></div></div>
-<div class="ttc" id="aclassTileType_html_aa3f1e6eba35bbbfc36b650654843a01f"><div class="ttname"><a href="classTileType.html#aa3f1e6eba35bbbfc36b650654843a01f">TileType.IgnoreBuildRule</a></div><div class="ttdeci">virtual bool IgnoreBuildRule</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00255">TileType.cs:255</a></div></div>
-<div class="ttc" id="aclassTileType_html_ac8fc0c2f65ea5f26efe469b83da7129b"><div class="ttname"><a href="classTileType.html#ac8fc0c2f65ea5f26efe469b83da7129b">TileType.CanBuiltOnWater</a></div><div class="ttdeci">virtual bool CanBuiltOnWater</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00189">TileType.cs:189</a></div></div>
-<div class="ttc" id="aclassTileType_html_aced6cafdffd45f03c327752164595544"><div class="ttname"><a href="classTileType.html#aced6cafdffd45f03c327752164595544">TileType.CanBuiltOnBridge</a></div><div class="ttdeci">virtual bool CanBuiltOnBridge</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00199">TileType.cs:199</a></div></div>
-<div class="ttc" id="aclassTileType_html_af48563ad8cb01b1abfab716357ff6e7c"><div class="ttname"><a href="classTileType.html#af48563ad8cb01b1abfab716357ff6e7c">TileType.CanBuiltOnThing</a></div><div class="ttdeci">virtual bool CanBuiltOnThing</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00191">TileType.cs:191</a></div></div>
+<div class="ttc" id="aclassTileType_html_a0b10fa51e7f5e1b59b69b949a915096a"><div class="ttname"><a href="classTileType.html#a0b10fa51e7f5e1b59b69b949a915096a">TileType.CanBuiltOnArea</a></div><div class="ttdeci">virtual bool CanBuiltOnArea</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00189">TileType.cs:189</a></div></div>
+<div class="ttc" id="aclassTileType_html_a3499b8e71b10330cf7ed8074bca232fd"><div class="ttname"><a href="classTileType.html#a3499b8e71b10330cf7ed8074bca232fd">TileType.IsDoor</a></div><div class="ttdeci">virtual bool IsDoor</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00197">TileType.cs:197</a></div></div>
+<div class="ttc" id="aclassTileType_html_a3584cf979a693049c27697a4015b1adb"><div class="ttname"><a href="classTileType.html#a3584cf979a693049c27697a4015b1adb">TileType.AllowMultiInstall</a></div><div class="ttdeci">virtual bool AllowMultiInstall</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00221">TileType.cs:221</a></div></div>
+<div class="ttc" id="aclassTileType_html_a4e2e3fe3d11f45f870f638c6035fab5c"><div class="ttname"><a href="classTileType.html#a4e2e3fe3d11f45f870f638c6035fab5c">TileType.CanBuiltOnBlock</a></div><div class="ttdeci">virtual bool CanBuiltOnBlock</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00195">TileType.cs:195</a></div></div>
+<div class="ttc" id="aclassTileType_html_a5b6a80afc2110ceb6045b73a050fbb79"><div class="ttname"><a href="classTileType.html#a5b6a80afc2110ceb6045b73a050fbb79">TileType.CanBuiltOnFloor</a></div><div class="ttdeci">virtual bool CanBuiltOnFloor</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00199">TileType.cs:199</a></div></div>
+<div class="ttc" id="aclassTileType_html_a87395d3bd1b8cfbcb8f96e00873d951d"><div class="ttname"><a href="classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d">TileType.HitTest</a></div><div class="ttdeci">virtual HitResult HitTest(Point pos)</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00355">TileType.cs:355</a></div></div>
+<div class="ttc" id="aclassTileType_html_aa3f1e6eba35bbbfc36b650654843a01f"><div class="ttname"><a href="classTileType.html#aa3f1e6eba35bbbfc36b650654843a01f">TileType.IgnoreBuildRule</a></div><div class="ttdeci">virtual bool IgnoreBuildRule</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00257">TileType.cs:257</a></div></div>
+<div class="ttc" id="aclassTileType_html_ac8fc0c2f65ea5f26efe469b83da7129b"><div class="ttname"><a href="classTileType.html#ac8fc0c2f65ea5f26efe469b83da7129b">TileType.CanBuiltOnWater</a></div><div class="ttdeci">virtual bool CanBuiltOnWater</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00191">TileType.cs:191</a></div></div>
+<div class="ttc" id="aclassTileType_html_aced6cafdffd45f03c327752164595544"><div class="ttname"><a href="classTileType.html#aced6cafdffd45f03c327752164595544">TileType.CanBuiltOnBridge</a></div><div class="ttdeci">virtual bool CanBuiltOnBridge</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00201">TileType.cs:201</a></div></div>
+<div class="ttc" id="aclassTileType_html_af48563ad8cb01b1abfab716357ff6e7c"><div class="ttname"><a href="classTileType.html#af48563ad8cb01b1abfab716357ff6e7c">TileType.CanBuiltOnThing</a></div><div class="ttdeci">virtual bool CanBuiltOnThing</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00193">TileType.cs:193</a></div></div>
 <div class="ttc" id="aclassTrait_html_acbbdd1adb2e0f80d00fda68c6bca34ff"><div class="ttname"><a href="classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff">Trait.CanBuiltAt</a></div><div class="ttdeci">virtual bool CanBuiltAt(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00713">Trait.cs:713</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00046">Cell._bridge</a>, <a class="el" href="CoreConfig_8cs_source.html#l00547">CoreConfig.Test.allowBlockOnItem</a>, <a class="el" href="TileType_8cs_source.html#l00219">AllowMultiInstall</a>, <a class="el" href="WeightCell_8cs_source.html#l00005">Algorithms.WeightCell.blocked</a>, <a class="el" href="Trait_8cs_source.html#l00713">Trait.CanBuiltAt()</a>, <a class="el" href="TileType_8cs_source.html#l00187">CanBuiltOnArea</a>, <a class="el" href="TileType_8cs_source.html#l00193">CanBuiltOnBlock</a>, <a class="el" href="TileType_8cs_source.html#l00199">CanBuiltOnBridge</a>, <a class="el" href="TileType_8cs_source.html#l00197">CanBuiltOnFloor</a>, <a class="el" href="TileType_8cs_source.html#l00191">CanBuiltOnThing</a>, <a class="el" href="TileType_8cs_source.html#l00189">CanBuiltOnWater</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Core_8cs_source.html#l00070">Core.config</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Point_8cs_source.html#l00276">Point.FirstChara</a>, <a class="el" href="Point_8cs_source.html#l00223">Point.HasArea</a>, <a class="el" href="Point_8cs_source.html#l00141">Point.HasBlock</a>, <a class="el" href="Point_8cs_source.html#l00226">Point.HasChara</a>, <a class="el" href="Cell_8cs_source.html#l00258">Cell.hasDoor</a>, <a class="el" href="Point_8cs_source.html#l00155">Point.HasWallOrFence</a>, <a class="el" href="TileType_8cs_source.html#l00353">HitTest()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00184">CoreDebug.ignoreBuildRule</a>, <a class="el" href="TileType_8cs_source.html#l00255">IgnoreBuildRule</a>, <a class="el" href="Point_8cs_source.html#l00315">Point.Installed</a>, <a class="el" href="TileType_8cs_source.html#l00195">IsDoor</a>, <a class="el" href="Chara_8cs_source.html#l05944">Chara.IsHostile()</a>, <a class="el" href="Cell_8cs_source.html#l00700">Cell.IsTopWater</a>, <a class="el" href="RenderRow_8cs_source.html#l00064">RenderRow.multisize</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Point_8cs_source.html#l00063">Point.sourceBlock</a>, <a class="el" href="Card_8cs_source.html#l02043">Card.sourceCard</a>, <a class="el" href="CoreConfig_8cs_source.html#l00612">CoreConfig.test</a>, <a class="el" href="Card_8cs_source.html#l02047">Card.TileType</a>, and <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00046">Cell._bridge</a>, <a class="el" href="CoreConfig_8cs_source.html#l00547">CoreConfig.Test.allowBlockOnItem</a>, <a class="el" href="TileType_8cs_source.html#l00221">AllowMultiInstall</a>, <a class="el" href="WeightCell_8cs_source.html#l00005">Algorithms.WeightCell.blocked</a>, <a class="el" href="Trait_8cs_source.html#l00713">Trait.CanBuiltAt()</a>, <a class="el" href="TileType_8cs_source.html#l00189">CanBuiltOnArea</a>, <a class="el" href="TileType_8cs_source.html#l00195">CanBuiltOnBlock</a>, <a class="el" href="TileType_8cs_source.html#l00201">CanBuiltOnBridge</a>, <a class="el" href="TileType_8cs_source.html#l00199">CanBuiltOnFloor</a>, <a class="el" href="TileType_8cs_source.html#l00193">CanBuiltOnThing</a>, <a class="el" href="TileType_8cs_source.html#l00191">CanBuiltOnWater</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Core_8cs_source.html#l00070">Core.config</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Point_8cs_source.html#l00276">Point.FirstChara</a>, <a class="el" href="Point_8cs_source.html#l00223">Point.HasArea</a>, <a class="el" href="Point_8cs_source.html#l00141">Point.HasBlock</a>, <a class="el" href="Point_8cs_source.html#l00226">Point.HasChara</a>, <a class="el" href="Cell_8cs_source.html#l00258">Cell.hasDoor</a>, <a class="el" href="Point_8cs_source.html#l00155">Point.HasWallOrFence</a>, <a class="el" href="TileType_8cs_source.html#l00355">HitTest()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00184">CoreDebug.ignoreBuildRule</a>, <a class="el" href="TileType_8cs_source.html#l00257">IgnoreBuildRule</a>, <a class="el" href="Point_8cs_source.html#l00315">Point.Installed</a>, <a class="el" href="TileType_8cs_source.html#l00197">IsDoor</a>, <a class="el" href="Chara_8cs_source.html#l05959">Chara.IsHostile()</a>, <a class="el" href="Cell_8cs_source.html#l00700">Cell.IsTopWater</a>, <a class="el" href="RenderRow_8cs_source.html#l00064">RenderRow.multisize</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Point_8cs_source.html#l00063">Point.sourceBlock</a>, <a class="el" href="Card_8cs_source.html#l02043">Card.sourceCard</a>, <a class="el" href="CoreConfig_8cs_source.html#l00612">CoreConfig.test</a>, <a class="el" href="Card_8cs_source.html#l02047">Card.TileType</a>, and <a class="el" href="Card_8cs_source.html#l00049">Card.trait</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TaskBuild_8cs_source.html#l00248">TaskBuild._GetHitResult()</a>, and <a class="el" href="TaskMoveInstalled_8cs_source.html#l00040">TaskMoveInstalled.GetHitResult()</a>.</p>
 
@@ -717,10 +719,10 @@ Properties</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTileTypeRoof.html#a9c514fed43f142b65d6b5b7dfccac158">TileTypeRoof</a>, and <a class="el" href="classTileTypeSlope.html#a3bdde15089d5e86ff5b61c37ade4a8b0">TileTypeSlope</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00282">282</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  283</span>    {</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00284">284</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>    {</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -760,10 +762,10 @@ Properties</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTileTypeVine.html#a88fcf3c8e7504207c00f81826174e74a">TileTypeVine</a>, <a class="el" href="classTileTypeWallHang.html#aa464f4de355f4ca3a564dabd28f355e0">TileTypeWallHang</a>, and <a class="el" href="classTileTypeWallHangSign.html#a0934d3ec040ad3664d50d56b49fcf463">TileTypeWallHangSign</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00362">362</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  363</span>    {</div>
-<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  365</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00364">364</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  365</span>    {</div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  367</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00239">AM_Build.OnRenderTile()</a>, <a class="el" href="GenRoom_8cs_source.html#l00041">GenRoom.Populate()</a>, and <a class="el" href="BiomeProfile_8cs_source.html#l00576">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
 
@@ -817,13 +819,13 @@ Properties</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTileTypeWallHang.html#a0b82650b3237bef5768db8e52481c126">TileTypeWallHang</a>, and <a class="el" href="classTileTypeWallMount.html#acc7e049acd7783cc837bbe9680373c37">TileTypeWallMount</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00367">367</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  368</span>    {</div>
-<div class="line"><span class="lineno">  369</span>        v += EClass.screen.tileMap.altitudeFix * target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
-<div class="line"><span class="lineno">  370</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00369">369</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  370</span>    {</div>
+<div class="line"><span class="lineno">  371</span>        v += EClass.screen.tileMap.altitudeFix * target.<a class="code hl_property" href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">altitude</a>;</div>
+<div class="line"><span class="lineno">  372</span>    }</div>
 <div class="ttc" id="aclassCard_html_a9cdd346f116c9c5d277ce3dbe2faffc2"><div class="ttname"><a href="classCard.html#a9cdd346f116c9c5d277ce3dbe2faffc2">Card.altitude</a></div><div class="ttdeci">int altitude</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00213">Card.cs:214</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, and <a class="el" href="Card_8cs_source.html#l05746">Card.RenderMarker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, and <a class="el" href="Card_8cs_source.html#l05801">Card.RenderMarker()</a>.</p>
 
 </div>
 </div>
@@ -861,24 +863,24 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00372">372</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span>    {</div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordtype">int</span> num = (int)<a class="code hl_property" href="classTileType.html#a69b1a754489151f938de54f93565411a">Ramp</a> * 2 - 2 + ((dir &gt; 1) ? 1 : 0);</div>
-<div class="line"><span class="lineno">  375</span>        Vector3 vector = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#ab79249a4d614032bac52b8828bf7bf4d">render</a>.<a class="code hl_variable" href="classGameSetting_1_1RenderSetting.html#a1f651aff992051e67be775dac541b740">rampFix</a>[num];</div>
-<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">if</span> (pref != <span class="keyword">null</span> &amp;&amp; <a class="code hl_property" href="classTileType.html#a69b1a754489151f938de54f93565411a">Ramp</a> == <a class="code hl_enumeration" href="classTileType.html#a40fd08da6f01be4b322461238acafae5">RampType</a>.Flat)</div>
-<div class="line"><span class="lineno">  377</span>        {</div>
-<div class="line"><span class="lineno">  378</span>            vector.y += pref.<a class="code hl_property" href="classSourcePref.html#a4cee251f54b7eb88c74f600ac6c25db1">height</a>;</div>
-<div class="line"><span class="lineno">  379</span>        }</div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3(vector.x * (<span class="keywordtype">float</span>)((dir % 2 == 0) ? 1 : (-1)), vector.y, vector.z);</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00374">374</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  375</span>    {</div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordtype">int</span> num = (int)<a class="code hl_property" href="classTileType.html#a69b1a754489151f938de54f93565411a">Ramp</a> * 2 - 2 + ((dir &gt; 1) ? 1 : 0);</div>
+<div class="line"><span class="lineno">  377</span>        Vector3 vector = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#ab79249a4d614032bac52b8828bf7bf4d">render</a>.<a class="code hl_variable" href="classGameSetting_1_1RenderSetting.html#a1f651aff992051e67be775dac541b740">rampFix</a>[num];</div>
+<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">if</span> (pref != <span class="keyword">null</span> &amp;&amp; <a class="code hl_property" href="classTileType.html#a69b1a754489151f938de54f93565411a">Ramp</a> == <a class="code hl_enumeration" href="classTileType.html#a40fd08da6f01be4b322461238acafae5">RampType</a>.Flat)</div>
+<div class="line"><span class="lineno">  379</span>        {</div>
+<div class="line"><span class="lineno">  380</span>            vector.y += pref.<a class="code hl_property" href="classSourcePref.html#a4cee251f54b7eb88c74f600ac6c25db1">height</a>;</div>
+<div class="line"><span class="lineno">  381</span>        }</div>
+<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3(vector.x * (<span class="keywordtype">float</span>)((dir % 2 == 0) ? 1 : (-1)), vector.y, vector.z);</div>
+<div class="line"><span class="lineno">  383</span>    }</div>
 <div class="ttc" id="aclassEClass_html_afef49687145e5bf7994b77ba86d1ff11"><div class="ttname"><a href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">EClass.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00034">EClass.cs:34</a></div></div>
 <div class="ttc" id="aclassGameSetting_1_1RenderSetting_html_a1f651aff992051e67be775dac541b740"><div class="ttname"><a href="classGameSetting_1_1RenderSetting.html#a1f651aff992051e67be775dac541b740">GameSetting.RenderSetting.rampFix</a></div><div class="ttdeci">Vector3[] rampFix</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00174">GameSetting.cs:174</a></div></div>
 <div class="ttc" id="aclassGameSetting_html_ab79249a4d614032bac52b8828bf7bf4d"><div class="ttname"><a href="classGameSetting.html#ab79249a4d614032bac52b8828bf7bf4d">GameSetting.render</a></div><div class="ttdeci">RenderSetting render</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00301">GameSetting.cs:301</a></div></div>
 <div class="ttc" id="aclassSourcePref_html_a4cee251f54b7eb88c74f600ac6c25db1"><div class="ttname"><a href="classSourcePref.html#a4cee251f54b7eb88c74f600ac6c25db1">SourcePref.height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00046">SourcePref.cs:47</a></div></div>
 <div class="ttc" id="aclassTileType_html_a40fd08da6f01be4b322461238acafae5"><div class="ttname"><a href="classTileType.html#a40fd08da6f01be4b322461238acafae5">TileType.RampType</a></div><div class="ttdeci">RampType</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00007">TileType.cs:8</a></div></div>
-<div class="ttc" id="aclassTileType_html_a69b1a754489151f938de54f93565411a"><div class="ttname"><a href="classTileType.html#a69b1a754489151f938de54f93565411a">TileType.Ramp</a></div><div class="ttdeci">virtual RampType Ramp</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00147">TileType.cs:147</a></div></div>
+<div class="ttc" id="aclassTileType_html_a69b1a754489151f938de54f93565411a"><div class="ttname"><a href="classTileType.html#a69b1a754489151f938de54f93565411a">TileType.Ramp</a></div><div class="ttdeci">virtual RampType Ramp</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00149">TileType.cs:149</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TileType_8cs_source.html#l00147">Ramp</a>, <a class="el" href="GameSetting_8cs_source.html#l00174">GameSetting.RenderSetting.rampFix</a>, <a class="el" href="GameSetting_8cs_source.html#l00301">GameSetting.render</a>, and <a class="el" href="EClass_8cs_source.html#l00034">EClass.setting</a>.</p>
+<p class="reference">References <a class="el" href="TileType_8cs_source.html#l00149">Ramp</a>, <a class="el" href="GameSetting_8cs_source.html#l00174">GameSetting.RenderSetting.rampFix</a>, <a class="el" href="GameSetting_8cs_source.html#l00301">GameSetting.render</a>, and <a class="el" href="EClass_8cs_source.html#l00034">EClass.setting</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l03167">BaseTileMap.GetThingPosition()</a>.</p>
 
@@ -910,19 +912,19 @@ Properties</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTileTypeBridgePillar.html#af821ab305856d5a0c8279083b6674f61">TileTypeBridgePillar</a>, <a class="el" href="classTileTypeRoof.html#a831518fae5e522f71336cfc2feb7e34c">TileTypeRoof</a>, <a class="el" href="classTileTypeWallHang.html#a570909940537c3b5f9915ed6536f4b66">TileTypeWallHang</a>, and <a class="el" href="classTileTypeWallMount.html#a498b4f656e4b3567873661991b72f5e8">TileTypeWallMount</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00353">353</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  354</span>    {</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">HasObj</a>)</div>
-<div class="line"><span class="lineno">  356</span>        {</div>
-<div class="line"><span class="lineno">  357</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Warning;</div>
-<div class="line"><span class="lineno">  358</span>        }</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
-<div class="line"><span class="lineno">  360</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00355">355</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  356</span>    {</div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">if</span> (pos.<a class="code hl_property" href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">HasObj</a>)</div>
+<div class="line"><span class="lineno">  358</span>        {</div>
+<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Warning;</div>
+<div class="line"><span class="lineno">  360</span>        }</div>
+<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid;</div>
+<div class="line"><span class="lineno">  362</span>    }</div>
 <div class="ttc" id="aclassPoint_html_abd8d973186ba376ea92ca7563dd98231"><div class="ttname"><a href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">Point.HasObj</a></div><div class="ttdeci">bool HasObj</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00137">Point.cs:137</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Point_8cs_source.html#l00137">Point.HasObj</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -949,21 +951,21 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00269">269</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>    {</div>
-<div class="line"><span class="lineno">  271</span>        <a class="code hl_variable" href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">dict</a>.Clear();</div>
-<div class="line"><span class="lineno">  272</span>        FieldInfo[] fields = typeof(<a class="code hl_class" href="classTileType.html">TileType</a>).GetFields(BindingFlags.Static | BindingFlags.Public);</div>
-<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">foreach</span> (FieldInfo fieldInfo <span class="keywordflow">in</span> fields)</div>
-<div class="line"><span class="lineno">  274</span>        {</div>
-<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">if</span> (typeof(<a class="code hl_class" href="classTileType.html">TileType</a>).IsAssignableFrom(fieldInfo.FieldType))</div>
-<div class="line"><span class="lineno">  276</span>            {</div>
-<div class="line"><span class="lineno">  277</span>                <a class="code hl_variable" href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">dict</a>[fieldInfo.Name] = (<a class="code hl_class" href="classTileType.html">TileType</a>)fieldInfo.GetValue(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  278</span>            }</div>
-<div class="line"><span class="lineno">  279</span>        }</div>
-<div class="line"><span class="lineno">  280</span>    }</div>
-<div class="ttc" id="aclassTileType_html_aa22c79ec23d1fab819fc6069da8592bb"><div class="ttname"><a href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">TileType.dict</a></div><div class="ttdeci">static Dictionary&lt; string, TileType &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00119">TileType.cs:119</a></div></div>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00271">271</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>    {</div>
+<div class="line"><span class="lineno">  273</span>        <a class="code hl_variable" href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">dict</a>.Clear();</div>
+<div class="line"><span class="lineno">  274</span>        FieldInfo[] fields = typeof(<a class="code hl_class" href="classTileType.html">TileType</a>).GetFields(BindingFlags.Static | BindingFlags.Public);</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">foreach</span> (FieldInfo fieldInfo <span class="keywordflow">in</span> fields)</div>
+<div class="line"><span class="lineno">  276</span>        {</div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (typeof(<a class="code hl_class" href="classTileType.html">TileType</a>).IsAssignableFrom(fieldInfo.FieldType))</div>
+<div class="line"><span class="lineno">  278</span>            {</div>
+<div class="line"><span class="lineno">  279</span>                <a class="code hl_variable" href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">dict</a>[fieldInfo.Name] = (<a class="code hl_class" href="classTileType.html">TileType</a>)fieldInfo.GetValue(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  280</span>            }</div>
+<div class="line"><span class="lineno">  281</span>        }</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
+<div class="ttc" id="aclassTileType_html_aa22c79ec23d1fab819fc6069da8592bb"><div class="ttname"><a href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">TileType.dict</a></div><div class="ttdeci">static Dictionary&lt; string, TileType &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00121">TileType.cs:121</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TileType_8cs_source.html#l00119">dict</a>.</p>
+<p class="reference">References <a class="el" href="TileType_8cs_source.html#l00121">dict</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00097">Core.Awake()</a>.</p>
 
@@ -996,6 +998,30 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="ae2710344ba2849fb170f104535fd7293" name="ae2710344ba2849fb170f104535fd7293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2710344ba2849fb170f104535fd7293">&#9670;&#160;</a></span>BlockOpen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTileTypeBlockOpen.html">TileTypeBlockOpen</a> TileType.BlockOpen = new <a class="el" href="classTileTypeBlockOpen.html">TileTypeBlockOpen</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00021">21</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+
+</div>
+</div>
 <a id="a641bec189d9b5dbc81ae6850d3fa81b1" name="a641bec189d9b5dbc81ae6850d3fa81b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a641bec189d9b5dbc81ae6850d3fa81b1">&#9670;&#160;</a></span>BlockShip</h2>
 
@@ -1016,7 +1042,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00021">21</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00023">23</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1066,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00113">113</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00115">115</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1064,7 +1090,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00063">63</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00065">65</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1088,7 +1114,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00065">65</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00067">67</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1112,7 +1138,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00067">67</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00069">69</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1136,7 +1162,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00111">111</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00113">113</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1160,9 +1186,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00119">119</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00121">121</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00032">SourceCard.AddRow()</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, and <a class="el" href="TileType_8cs_source.html#l00269">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00032">SourceCard.AddRow()</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, and <a class="el" href="TileType_8cs_source.html#l00271">Init()</a>.</p>
 
 </div>
 </div>
@@ -1186,9 +1212,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00093">93</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00095">95</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05746">Card.RenderMarker()</a>, <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>, and <a class="el" href="Card_8cs_source.html#l05673">Card.Rotate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05801">Card.RenderMarker()</a>, <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>, and <a class="el" href="Card_8cs_source.html#l05728">Card.Rotate()</a>.</p>
 
 </div>
 </div>
@@ -1212,7 +1238,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00049">49</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00051">51</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1236,7 +1262,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00051">51</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00053">53</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1260,7 +1286,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00053">53</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00055">55</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1310,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00055">55</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00057">57</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1334,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00057">57</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00059">59</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1358,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00061">61</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00063">63</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1382,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00059">59</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00061">61</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -1382,7 +1408,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00027">27</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00029">29</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SourceBlock_8cs_source.html#l00053">SourceBlock.Row.GetRenderParam()</a>.</p>
 
@@ -1408,7 +1434,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00085">85</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00087">87</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00080">TraitDoor.CanClose()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -1458,7 +1484,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00037">37</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00039">39</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1482,7 +1508,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00115">115</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00117">117</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1506,7 +1532,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00117">117</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00119">119</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1554,7 +1580,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00071">71</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00073">73</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00032">SourceCard.AddRow()</a>.</p>
 
@@ -1580,7 +1606,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00073">73</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00075">75</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1604,7 +1630,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00077">77</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00079">79</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1628,7 +1654,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00079">79</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00081">81</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1652,7 +1678,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00075">75</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00077">77</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1676,7 +1702,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00081">81</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00083">83</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1700,7 +1726,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00083">83</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00085">85</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1724,7 +1750,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00103">103</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00105">105</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1748,7 +1774,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00039">39</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00041">41</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00031">RecipeManager.BuildList()</a>.</p>
 
@@ -1774,7 +1800,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00109">109</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00111">111</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1798,7 +1824,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00107">107</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00109">109</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00069">LayerEditHouse.SetBoard()</a>.</p>
 
@@ -1824,7 +1850,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00033">33</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00035">35</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1874,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00035">35</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00037">37</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1872,7 +1898,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00089">89</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00091">91</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1896,9 +1922,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00069">69</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00071">71</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="ZonePreEnterDigStairs_8cs_source.html#l00014">ZonePreEnterDigStairs.Execute()</a>, and <a class="el" href="Cell_8cs_source.html#l01148">Cell.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="ZonePreEnterDigStairs_8cs_source.html#l00014">ZonePreEnterDigStairs.Execute()</a>, and <a class="el" href="Cell_8cs_source.html#l01152">Cell.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1922,7 +1948,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00023">23</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00025">25</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00069">LayerEditHouse.SetBoard()</a>.</p>
 
@@ -1948,7 +1974,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00025">25</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00027">27</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -1972,7 +1998,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00029">29</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00031">31</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerEditHouse_8cs_source.html#l00069">LayerEditHouse.SetBoard()</a>.</p>
 
@@ -1998,7 +2024,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00031">31</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00033">33</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2022,7 +2048,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00087">87</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00089">89</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2046,7 +2072,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00091">91</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00093">93</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2070,7 +2096,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00099">99</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00101">101</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2094,7 +2120,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00043">43</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00045">45</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2118,7 +2144,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00047">47</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00049">49</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2142,7 +2168,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00095">95</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00097">97</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2166,7 +2192,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00097">97</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00099">99</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2190,7 +2216,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00101">101</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00103">103</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2214,7 +2240,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00045">45</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00047">47</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +2264,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00041">41</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00043">43</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2262,7 +2288,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00105">105</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00107">107</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2287,7 +2313,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00237">237</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00239">239</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2311,7 +2337,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00235">235</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00237">237</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2335,9 +2361,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00219">219</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00221">221</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -2361,7 +2387,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00217">217</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00219">219</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>.</p>
 
@@ -2387,7 +2413,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00207">207</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00209">209</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00610">Recipe.Build()</a>, <a class="el" href="AM__Build_8cs_source.html#l00239">AM_Build.OnRenderTile()</a>, <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>, <a class="el" href="AM__Build_8cs_source.html#l00380">AM_Build.SetAltitude()</a>, <a class="el" href="AM__Build_8cs_source.html#l00101">AM_Build.TopHeight()</a>, and <a class="el" href="HotItemHeld_8cs_source.html#l00177">HotItemHeld.TrySetAct()</a>.</p>
 
@@ -2413,7 +2439,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00241">241</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00243">243</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -2439,7 +2465,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00265">265</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00267">267</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -2465,7 +2491,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00261">261</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00263">263</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00448">Recipe.GetBoxType()</a>.</p>
 
@@ -2491,7 +2517,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00247">247</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00249">249</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="HotItemNoItem_8cs_source.html#l00010">HotItemNoItem._TrySetAct()</a>.</p>
 
@@ -2517,9 +2543,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00187">187</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00189">189</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -2543,9 +2569,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00193">193</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00195">195</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>, and <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>, and <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>.</p>
 
 </div>
 </div>
@@ -2569,9 +2595,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00199">199</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00201">201</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -2595,9 +2621,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00197">197</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00199">199</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -2621,9 +2647,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00191">191</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00193">193</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -2647,9 +2673,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00189">189</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00191">191</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -2673,7 +2699,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00201">201</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00203">203</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="HitSummary_8cs_source.html#l00108">HitSummary.Execute()</a>, and <a class="el" href="AM__Build_8cs_source.html#l00124">AM_Build.ForcedInstaComplete()</a>.</p>
 
@@ -2699,7 +2725,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00175">175</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00177">177</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2723,7 +2749,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00123">123</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00125">125</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l03167">BaseTileMap.GetThingPosition()</a>.</p>
 
@@ -2749,7 +2775,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00183">183</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00185">185</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2773,7 +2799,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00185">185</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00187">187</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2797,7 +2823,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00181">181</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00183">183</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2821,7 +2847,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00179">179</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00181">181</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2845,7 +2871,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00125">125</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00127">127</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00610">Recipe.Build()</a>.</p>
 
@@ -2871,7 +2897,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00249">249</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00251">251</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2895,7 +2921,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00231">231</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00233">233</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2919,7 +2945,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00227">227</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00229">229</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2943,7 +2969,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00245">245</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00247">247</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -2969,7 +2995,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00221">221</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00223">223</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -2993,7 +3019,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00263">263</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00265">265</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3017,9 +3043,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00255">255</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00257">257</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>.</p>
 
 </div>
 </div>
@@ -3043,7 +3069,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00253">253</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00255">255</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3067,7 +3093,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00159">159</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00161">161</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3091,7 +3117,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00165">165</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00167">167</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIInspector_8cs_source.html#l00194">UIInspector.DrawHighlight()</a>.</p>
 
@@ -3117,7 +3143,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00151">151</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00153">153</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00610">Recipe.Build()</a>, <a class="el" href="Map_8cs_source.html#l01812">Map.DestroyObj()</a>, and <a class="el" href="TaskBuild_8cs_source.html#l00149">TaskBuild.GetHitResult()</a>.</p>
 
@@ -3143,7 +3169,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00155">155</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00157">157</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3167,7 +3193,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00139">139</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00141">141</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3191,7 +3217,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00163">163</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00165">165</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3215,9 +3241,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00195">195</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00197">197</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00287">_HitTest()</a>, and <a class="el" href="TaskBuild_8cs_source.html#l00149">TaskBuild.GetHitResult()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00289">_HitTest()</a>, and <a class="el" href="TaskBuild_8cs_source.html#l00149">TaskBuild.GetHitResult()</a>.</p>
 
 </div>
 </div>
@@ -3241,7 +3267,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00169">169</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00171">171</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, and <a class="el" href="Room_8cs_source.html#l00070">Room.Refresh()</a>.</p>
 
@@ -3267,7 +3293,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00171">171</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00173">173</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3291,7 +3317,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00251">251</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00253">253</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3315,7 +3341,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00137">137</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00139">139</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3339,7 +3365,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00133">133</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00135">135</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3363,7 +3389,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00167">167</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00169">169</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -3389,7 +3415,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00149">149</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00151">151</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3413,7 +3439,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00267">267</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00269">269</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3437,7 +3463,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00153">153</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00155">155</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3461,7 +3487,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00157">157</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00159">159</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3485,7 +3511,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00173">173</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00175">175</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3509,7 +3535,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00145">145</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00147">147</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03167">BaseTileMap.GetThingPosition()</a>, and <a class="el" href="SourceBlock_8cs_source.html#l00043">SourceBlock.Row.OnInit()</a>.</p>
 
@@ -3535,7 +3561,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00129">129</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00131">131</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3559,7 +3585,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00127">127</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00129">129</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>.</p>
 
@@ -3585,7 +3611,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00131">131</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00133">133</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, and <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>.</p>
 
@@ -3611,7 +3637,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00135">135</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00137">137</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, and <a class="el" href="Room_8cs_source.html#l00070">Room.Refresh()</a>.</p>
 
@@ -3637,7 +3663,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00141">141</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00143">143</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00688">Recipe.OnRenderMarker()</a>.</p>
 
@@ -3663,7 +3689,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00143">143</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00145">145</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3687,9 +3713,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00161">161</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00163">163</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02467">Chara._Move()</a>, and <a class="el" href="Recipe_8cs_source.html#l00688">Recipe.OnRenderMarker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02478">Chara._Move()</a>, and <a class="el" href="Recipe_8cs_source.html#l00688">Recipe.OnRenderMarker()</a>.</p>
 
 </div>
 </div>
@@ -3713,7 +3739,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00177">177</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00179">179</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -3739,7 +3765,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00121">121</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00123">123</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00050">UICardInfo.SetRecipe()</a>.</p>
 
@@ -3765,7 +3791,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00233">233</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00235">235</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3789,9 +3815,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00205">205</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00207">207</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05704">Card.ChangeAltitude()</a>, and <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05759">Card.ChangeAltitude()</a>, and <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>.</p>
 
 </div>
 </div>
@@ -3815,7 +3841,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00203">203</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00205">205</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00230">AM_Build.FixBridge()</a>.</p>
 
@@ -3841,7 +3867,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00225">225</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00227">227</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3865,9 +3891,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00147">147</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00149">149</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00372">GetRampFix()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TileType_8cs_source.html#l00374">GetRampFix()</a>.</p>
 
 </div>
 </div>
@@ -3891,7 +3917,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00215">215</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00217">217</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3915,7 +3941,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00257">257</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00259">259</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -3939,7 +3965,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00243">243</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00245">245</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -3965,7 +3991,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00229">229</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00231">231</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00688">Recipe.OnRenderMarker()</a>.</p>
 
@@ -3991,7 +4017,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00259">259</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00261">261</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="AM__Build_8cs_source.html#l00177">AM_Build.HitTest()</a>.</p>
 
@@ -4017,7 +4043,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00239">239</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00241">241</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 </div>
 </div>
@@ -4041,9 +4067,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00223">223</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00225">225</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01148">Cell.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Cell_8cs_source.html#l01152">Cell.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -4067,7 +4093,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00211">211</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00213">213</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -4093,7 +4119,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00213">213</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00215">215</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>.</p>
 
@@ -4119,9 +4145,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00209">209</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TileType_8cs_source.html#l00211">211</a> of file <a class="el" href="TileType_8cs_source.html">TileType.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03167">BaseTileMap.GetThingPosition()</a>, <a class="el" href="GenRoom_8cs_source.html#l00041">GenRoom.Populate()</a>, and <a class="el" href="Card_8cs_source.html#l05746">Card.RenderMarker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00900">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03167">BaseTileMap.GetThingPosition()</a>, <a class="el" href="GenRoom_8cs_source.html#l00041">GenRoom.Populate()</a>, and <a class="el" href="Card_8cs_source.html#l05801">Card.RenderMarker()</a>.</p>
 
 </div>
 </div>

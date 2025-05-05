@@ -14,6 +14,7 @@ var classTileType =
     [ "HitTest", "classTileType.html#a87395d3bd1b8cfbcb8f96e00873d951d", null ],
     [ "Init", "classTileType.html#a4456e9bf550fe200ae026894f22e0922", null ],
     [ "Block", "classTileType.html#afca5a7092a22d2536c97994d1f79658d", null ],
+    [ "BlockOpen", "classTileType.html#ae2710344ba2849fb170f104535fd7293", null ],
     [ "BlockShip", "classTileType.html#a641bec189d9b5dbc81ae6850d3fa81b1", null ],
     [ "Boat", "classTileType.html#aa92e959d8ce1979a55a014c468af590e", null ],
     [ "Bridge", "classTileType.html#a117100633146aacdcfb5ccb8c7dd9f9f", null ],

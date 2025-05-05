@@ -23,5 +23,6 @@ var classCameraSupport =
     [ "snap", "classCameraSupport.html#ae745505a71694bf03ed2dd58059171f2", null ],
     [ "tiltShift", "classCameraSupport.html#a568c1efc97d8873b2c727c95b0d58254", null ],
     [ "upscaler", "classCameraSupport.html#aa22eb2f3398121e32e0e1c5f1ea6b6a2", null ],
+    [ "water", "classCameraSupport.html#af2d6fbac28f1587fe2640de1c97a121e", null ],
     [ "Zoom", "classCameraSupport.html#a471cdfa4a963f79880987207feae88cc", null ]
 ];

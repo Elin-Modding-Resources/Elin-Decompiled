@@ -190,6 +190,7 @@ var classZone =
     [ "IsSkyLevel", "classZone.html#a4fc0615656263255e26f1039af4d6602", null ],
     [ "IsStartZone", "classZone.html#a79d8a69c170a6377219509b5e4bcdd10", null ],
     [ "IsTown", "classZone.html#a98e18c99b9b4dd93176e660a5c545d74", null ],
+    [ "IsUnderwater", "classZone.html#acef4329fb52efa341f2aa9c0bef7c968", null ],
     [ "IsUserZone", "classZone.html#a7a2728e8894a1803eeba17ffc4c9f735", null ],
     [ "KeepAllyDistance", "classZone.html#ae933f30f3673bc106d3568c6429c6e78", null ],
     [ "LockExit", "classZone.html#a164383b08e57f110006618af00f3949d", null ],

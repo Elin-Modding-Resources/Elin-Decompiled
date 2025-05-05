@@ -734,6 +734,7 @@ var hierarchy =
           ] ],
           [ "ActBash", "classActBash.html", null ],
           [ "ActChat", "classActChat.html", null ],
+          [ "ActClearWater", "classActClearWater.html", null ],
           [ "ActDrawWater", "classActDrawWater.html", null ],
           [ "ActItem", "classActItem.html", null ],
           [ "ActKick", "classActKick.html", null ],
@@ -1190,9 +1191,11 @@ var hierarchy =
               [ "Zone_RandomDungeonFactory", "classZone__RandomDungeonFactory.html", null ],
               [ "Zone_RandomDungeonNature", "classZone__RandomDungeonNature.html", [
                 [ "Zone_RandomDungeonForest", "classZone__RandomDungeonForest.html", null ],
-                [ "Zone_RandomDungeonPlain", "classZone__RandomDungeonPlain.html", null ]
+                [ "Zone_RandomDungeonPlain", "classZone__RandomDungeonPlain.html", null ],
+                [ "Zone_RandomDungeonWater", "classZone__RandomDungeonWater.html", null ]
               ] ]
             ] ],
+            [ "Zone_UnderseaTemple", "classZone__UnderseaTemple.html", null ],
             [ "Zone_VernisMine", "classZone__VernisMine.html", null ],
             [ "Zone_Void", "classZone__Void.html", null ]
           ] ],
@@ -1249,6 +1252,7 @@ var hierarchy =
       [ "TileType", "classTileType.html", [
         [ "TileTypeBaseBlock", "classTileTypeBaseBlock.html", [
           [ "TileTypeBlock", "classTileTypeBlock.html", [
+            [ "TileTypeBlockOpen", "classTileTypeBlockOpen.html", null ],
             [ "TileTypeWall", "classTileTypeWall.html", [
               [ "TileTypeFence", "classTileTypeFence.html", [
                 [ "TileTypeFenceClosed", "classTileTypeFenceClosed.html", null ]
