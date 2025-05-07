@@ -316,7 +316,7 @@ public class DramaCustomSequence : EClass
 			if (!c.isSummon)
 			{
 				Choice((c.GetInt(106) == 0) ? "daShutup" : "daShutup2", "_shutup");
-				if (c.CanInsult())
+				if (c.CanInsult() || c.GetInt(108) == 1)
 				{
 					Choice((c.GetInt(108) == 0) ? "daInsult" : "daInsult2", "_insult");
 				}

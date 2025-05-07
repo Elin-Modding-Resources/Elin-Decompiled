@@ -94,14 +94,14 @@ public class Region : Zone
 	public void UpdateRandomSites()
 	{
 		List<Zone> list = ListRandomSites();
-		int num = 60 - list.Count;
+		int num = 70 - list.Count;
 		if (num <= 0)
 		{
 			return;
 		}
 		for (int i = 0; i < num; i++)
 		{
-			if (EClass.rnd(5) == 0)
+			if (EClass.rnd(100) < 25)
 			{
 				CreateRandomSite(GetRandomPoint(ElomapSiteType.NefiaWater), "dungeon_water", updateMesh: false);
 			}
@@ -120,7 +120,12 @@ public class Region : Zone
 	public Zone CreateRandomSite(Zone center, int radius = 8, string idSource = null, bool updateMesh = true, int lv = 0)
 	{
 		InitElomap();
-		return CreateRandomSite(GetRandomPoint(center.IsRegion ? (EClass.pc.pos.x + EClass.scene.elomap.minX) : center.x, center.IsRegion ? (EClass.pc.pos.z + EClass.scene.elomap.minY) : center.y, radius), idSource, updateMesh, lv);
+		Point point = new Point(center.IsRegion ? (EClass.pc.pos.x + EClass.scene.elomap.minX) : center.x, center.IsRegion ? (EClass.pc.pos.z + EClass.scene.elomap.minY) : center.y);
+		if (elomap.IsWater(point.x, point.z))
+		{
+			return CreateRandomSite(GetRandomPoint(point.x, point.z, radius, increaseRadius: false, ElomapSiteType.NefiaWater), "dungeon_water", updateMesh, lv);
+		}
+		return CreateRandomSite(GetRandomPoint(point.x, point.z, radius), idSource, updateMesh, lv);
 	}
 
 	private Zone CreateRandomSite(Point pos, string idSource, bool updateMesh, int lv = 0)
@@ -193,7 +198,7 @@ public class Region : Zone
 		return null;
 	}
 
-	public Point GetRandomPoint(int orgX, int orgY, int radius = 8, bool increaseRadius = false)
+	public Point GetRandomPoint(int orgX, int orgY, int radius = 8, bool increaseRadius = false, ElomapSiteType type = ElomapSiteType.Nefia)
 	{
 		Point point = new Point();
 		for (int i = 0; i < 1000; i++)
@@ -204,7 +209,7 @@ public class Region : Zone
 			{
 				radius++;
 			}
-			if (elomap.CanBuildSite(point.x, point.z))
+			if (elomap.CanBuildSite(point.x, point.z, 0, type))
 			{
 				return point;
 			}

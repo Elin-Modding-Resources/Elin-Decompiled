@@ -10,9 +10,9 @@ public class AI_Read : AIAct
 		{
 			if (target != null)
 			{
-				if (!(target.trait is TraitStoryBook))
+				if (!(target.trait is TraitStoryBook) && !(target.trait is TraitDeedRelocate))
 				{
-					return !(target.trait is TraitDeedRelocate);
+					return !(target.trait is TraitScrollMap);
 				}
 				return false;
 			}

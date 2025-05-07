@@ -324,6 +324,10 @@ public class Faction : EClass
 
 	public void AddReserve(Chara c)
 	{
+		if (c.IsPCParty)
+		{
+			EClass.pc.party.RemoveMember(c);
+		}
 		if (c.memberType == FactionMemberType.Livestock)
 		{
 			c.SetInt(36, EClass.world.date.GetRaw() + 14400);

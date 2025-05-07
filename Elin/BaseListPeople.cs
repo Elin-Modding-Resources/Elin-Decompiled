@@ -367,19 +367,22 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						});
 					}
 				}
-				uIContextMenu.AddButton("makeMaid", delegate
+				if (c.homeBranch == EClass.Branch)
 				{
-					if (EClass.Branch.uidMaid == c.uid)
+					uIContextMenu.AddButton("makeMaid", delegate
 					{
-						EClass.Branch.uidMaid = 0;
-					}
-					else
-					{
-						EClass.Branch.uidMaid = c.uid;
-					}
-					list.Refresh();
-					SE.Click();
-				});
+						if (EClass.Branch.uidMaid == c.uid)
+						{
+							EClass.Branch.uidMaid = 0;
+						}
+						else
+						{
+							EClass.Branch.uidMaid = c.uid;
+						}
+						list.Refresh();
+						SE.Click();
+					});
+				}
 				int @int = c.GetInt(36);
 				bool isLivestockTimerOn = memberType == FactionMemberType.Default && !EClass.world.date.IsExpired(@int);
 				int remainingHours = EClass.world.date.GetRemainingHours(@int);
@@ -406,23 +409,23 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 							SE.Click();
 						}
 					});
-					uIContextMenu.AddButton("addToReserve".lang() + " (" + EClass.Home.listReserve.Count + "/" + EClass.Home.GetMaxReserve() + ")", delegate
-					{
-						if (EClass.Home.listReserve.Count >= EClass.Home.GetMaxReserve())
-						{
-							SE.Beep();
-							Msg.Say("reserveLimit");
-							return;
-						}
-						SE.MoveZone();
-						EClass.Home.AddReserve(c);
-						list.List();
-						foreach (ListOwner owner2 in layer.multi.owners)
-						{
-							owner2.RefreshTab();
-						}
-					});
 				}
+				uIContextMenu.AddButton("addToReserve".lang() + " (" + EClass.Home.listReserve.Count + "/" + EClass.Home.GetMaxReserve() + ")", delegate
+				{
+					if (EClass.Home.listReserve.Count >= EClass.Home.GetMaxReserve())
+					{
+						SE.Beep();
+						Msg.Say("reserveLimit");
+						return;
+					}
+					SE.MoveZone();
+					EClass.Home.AddReserve(c);
+					list.List();
+					foreach (ListOwner owner2 in layer.multi.owners)
+					{
+						owner2.RefreshTab();
+					}
+				});
 			}
 		}
 		uIContextMenu.Show();
@@ -446,6 +449,13 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			if (member.memberType == memberType && !member.isSummon)
 			{
 				list.Add(member);
+			}
+		}
+		foreach (Chara member2 in EClass.pc.party.members)
+		{
+			if (member2.memberType == memberType && !list.items.Contains(member2))
+			{
+				list.Add(member2);
 			}
 		}
 	}

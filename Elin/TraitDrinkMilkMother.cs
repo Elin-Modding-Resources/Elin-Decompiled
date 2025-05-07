@@ -81,6 +81,7 @@ public class TraitDrinkMilkMother : TraitDrinkMilk
 				case "chicken":
 				case "duck":
 				case "shamo":
+				case "penguin":
 					c.idSkin = 0;
 					break;
 				}

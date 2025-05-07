@@ -6752,11 +6752,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			switch (currency)
 			{
 			case CurrencyType.Ecopo:
-				if (id == "plat")
+			{
+				string text = id;
+				if (!(text == "plat"))
 				{
-					return 500;
+					if (!(text == "whip_egg"))
+					{
+						break;
+					}
+					return 3000;
 				}
-				break;
+				return 500;
+			}
 			case CurrencyType.Plat:
 			{
 				string text = id;

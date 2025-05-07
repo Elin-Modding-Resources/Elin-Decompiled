@@ -11,4 +11,6 @@ public class TileTypeBlockOpen : TileTypeBlock
 	public override bool CastAmbientShadow => false;
 
 	public override bool IsSkipFloor => false;
+
+	public override bool IsBlockSight => false;
 }

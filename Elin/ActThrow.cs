@@ -263,7 +263,7 @@ public class ActThrow : ActBaseAttack
 				Chara chara2 = Act.TC.Chara;
 				if (traitMonsterBall.IsLittleBall)
 				{
-					if (chara2.id != "littleOne" || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone)
+					if (chara2.id != "littleOne" || chara2.IsPCFactionOrMinion || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone)
 					{
 						Msg.Say("monsterball_invalid");
 						break;

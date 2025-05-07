@@ -44,7 +44,11 @@ public class ConSuffocation : Condition
 		}
 		if (owner != null && owner.IsAliveInCurrentZone)
 		{
-			if (!owner.Cell.CanSuffocate())
+			if (!owner.IsPC)
+			{
+				Mod(owner.IsPowerful ? (-15) : (-5));
+			}
+			else if (!owner.Cell.CanSuffocate())
 			{
 				Mod(-25);
 			}

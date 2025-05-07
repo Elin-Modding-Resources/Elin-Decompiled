@@ -1849,6 +1849,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Ecopo:
 					Add("ecomark", 5, 0);
+					Add("whip_egg", 1, 0);
 					Add("1165", 1, 0);
 					Add("plat", 100, 0);
 					AddThing(ThingGen.CreateScroll(9160).SetNum(5));

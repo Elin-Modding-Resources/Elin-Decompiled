@@ -1,6 +1,8 @@
+using UnityEngine;
+
 public class TraitToolWaterCan : TraitTool
 {
-	public int MaxCharge => owner.material.hardness / 5 + 4;
+	public int MaxCharge => Mathf.Max(1, owner.material.hardness / 4 + Mathf.Clamp(owner.QualityLv * 2, 0, 40) + 3);
 
 	public override bool HasCharges => true;
 

@@ -395,6 +395,7 @@ public class CardRenderer : RenderObject
 				case 2622:
 				case 2624:
 				case 2626:
+				case 2828:
 					return EClass.core.refs.prefs.snowputit2;
 				}
 			}

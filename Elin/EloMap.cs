@@ -410,6 +410,20 @@ public class EloMap : EClass
 		return true;
 	}
 
+	public bool IsWater(int gx, int gy)
+	{
+		if (GetCell(gx, gy) == null)
+		{
+			return false;
+		}
+		SourceGlobalTile.Row row = GetSources(gx, gy).LastItem();
+		if (row != null)
+		{
+			return row.id == 4;
+		}
+		return false;
+	}
+
 	public bool IsSnow(int gx, int gy)
 	{
 		if (GetCell(gx, gy) == null)

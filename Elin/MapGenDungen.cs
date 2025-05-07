@@ -33,6 +33,11 @@ public class MapGenDungen : BaseMapGen
 			biome.exterior.floor.mat = MATERIAL.GetRandomMaterialFromCategory(zone.lv % 50 + 10, "rock", EClass.sources.materials.alias["granite"]).id;
 			biome.exterior.floor.matSub = MATERIAL.GetRandomMaterialFromCategory(zone.lv % 50 + 10, "rock", EClass.sources.materials.alias["granite"]).id;
 		}
+		if (biome.name == "Dungeon_Water")
+		{
+			int id = ((EClass.rnd(2) == 0) ? 187 : 188);
+			biome.exterior.block.id = (biome.interior.block.id = id);
+		}
 		BiomeProfile.TileFloor floor = biome.exterior.floor;
 		BiomeProfile.TileBlock block = biome.exterior.block;
 		int idMat = -1;
@@ -219,12 +224,12 @@ public class MapGenDungen : BaseMapGen
 			int tries = 3;
 			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), tries, delegate(Crawler.Result r)
 			{
-				int id = ((EClass.rnd(3) == 0) ? 108 : 105);
+				int id2 = ((EClass.rnd(3) == 0) ? 108 : 105);
 				foreach (Point point2 in r.points)
 				{
 					if (!point2.cell.isModified && !point2.HasThing && !point2.HasBlock && !point2.HasObj)
 					{
-						map.SetObj(point2.x, point2.z, id);
+						map.SetObj(point2.x, point2.z, id2);
 						int num3 = 3;
 						if (EClass.rnd(6) == 0)
 						{
