@@ -1,5 +1,9 @@
 var NAVTREEINDEX119 =
 {
+"classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1727,4],
+"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1727,1],
+"classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1727,3],
+"classTraitPunishBall.html":[1,0,1728],
 "classTraitPunishBall.html#a7aef7ba745933c57778ad77772f5b1ea":[1,0,1728,1],
 "classTraitPunishBall.html#a8eed1e8041d764c11247005ecef42000":[1,0,1728,4],
 "classTraitPunishBall.html#a94ac158ebca677e1b6dd601c52a5232b":[1,0,1728,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitShackle.html#a141ae3562c5f5c57a3a5ca23924a16eb":[1,0,1773,1],
 "classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3":[1,0,1773,7],
 "classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1773,10],
-"classTraitShackle.html#a236f46437d85f1e740a110b66484bbba":[1,0,1773,6],
-"classTraitShackle.html#a2d6c3adbbaa632d21cc6b49444b7a6f1":[1,0,1773,0],
-"classTraitShackle.html#a3ddb785981a40e16a321f2f3edd274f6":[1,0,1773,3],
-"classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea":[1,0,1773,2],
-"classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1773,8]
+"classTraitShackle.html#a236f46437d85f1e740a110b66484bbba":[1,0,1773,6]
 };

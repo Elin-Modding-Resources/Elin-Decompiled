@@ -1,5 +1,8 @@
 var NAVTREEINDEX78 =
 {
+"classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899":[1,0,807,15],
+"classLayerShippingResult.html#a4829fa2349536e5c959162d2c1eb9921":[1,0,807,24],
+"classLayerShippingResult.html#a679771954a3bba1e311abf6257712001":[1,0,807,23],
 "classLayerShippingResult.html#a7349877582133007e9824d59a0befc3e":[1,0,807,2],
 "classLayerShippingResult.html#a7d7c913de6dc4296930fd1d4098b91fc":[1,0,807,6],
 "classLayerShippingResult.html#a882924a25ec67b2b4419e0844aed86fd":[1,0,807,22],
@@ -246,8 +249,5 @@ var NAVTREEINDEX78 =
 "classLayer_1_1Option.html#ae19a48b8d44b4bc4939225b1831aa176":[1,0,745,0,15],
 "classLayer_1_1Option.html#ae6a7e25c57949857e7a65f7e94306203":[1,0,745,0,5],
 "classLayer_1_1Option.html#aead4d87c5c520395a7bd198dd18b1a85":[1,0,745,0,11],
-"classLayoutMaxSize.html":[1,0,820],
-"classLayoutMaxSize.html#a2c91780afcbac8d78a87c99f54e09827":[1,0,820,4],
-"classLayoutMaxSize.html#a2c9d05887fb8d47300295e9f44872580":[1,0,820,1],
-"classLayoutMaxSize.html#a6f79c3dc2e592ed40eca73e32f7c6bf0":[1,0,820,0]
+"classLayoutMaxSize.html":[1,0,820]
 };

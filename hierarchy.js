@@ -1922,6 +1922,7 @@ var hierarchy =
           [ "TraitToolWaterCan", "classTraitToolWaterCan.html", null ],
           [ "TraitToolWaterPot", "classTraitToolWaterPot.html", null ],
           [ "TraitWhipLove", "classTraitWhipLove.html", [
+            [ "TraitWhipEgg", "classTraitWhipEgg.html", null ],
             [ "TraitWhipInterest", "classTraitWhipInterest.html", null ]
           ] ]
         ] ],

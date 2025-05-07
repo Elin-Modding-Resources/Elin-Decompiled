@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"classBuruBuru.html#a7f955908ffc612115d51479ad2a7d41f":[1,0,224,0],
+"classBuruBuru.html#a87185d9be73b0e445f78acf1b80c87c1":[1,0,224,2],
 "classBuruBuru.html#accaf7adefee8a7e5e2fe9e40d22d746d":[1,0,224,3],
 "classButtonAbility.html":[1,0,225],
 "classButtonAbility.html#a07afc23f0c014e2648b162006951c998":[1,0,225,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "classCINT.html#a69336b5f862df5cee13e39cb7ca32cd0":[1,0,272,63],
 "classCINT.html#a6fde033a27cf226a352c39cdbcc6356b":[1,0,272,22],
 "classCINT.html#a71582ba1818dc9558e173dfa86437ed3":[1,0,272,23],
-"classCINT.html#a71db5e06600041f69f744821a8c194d2":[1,0,272,25],
-"classCINT.html#a7ad3b279d438058b8ad526a5c5acb093":[1,0,272,37],
-"classCINT.html#a7d437c4c3e077f7eb1afe0cee899728c":[1,0,272,49]
+"classCINT.html#a71db5e06600041f69f744821a8c194d2":[1,0,272,25]
 };

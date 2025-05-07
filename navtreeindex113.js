@@ -1,5 +1,9 @@
 var NAVTREEINDEX113 =
 {
+"classTraitAltar.html#ac631be9bc0add6867a5fb6993215df3e":[1,0,1385,8],
+"classTraitAltar.html#acce5c7d09ed1a3b0acaf4a577cbfdbc0":[1,0,1385,9],
+"classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752":[1,0,1385,4],
+"classTraitAltar.html#ae59022869e58c61830f66a53b1bdfe54":[1,0,1385,10],
 "classTraitAltar.html#ae5fd67e75b95c7edf12a6cf333c01a6d":[1,0,1385,15],
 "classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919":[1,0,1385,3],
 "classTraitAltarAncient.html":[1,0,1386],
@@ -245,9 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitButcher.html#a7c70e9340a319dcaea9405e19e121223":[1,0,1438,0],
 "classTraitButcher.html#aaa2e972b3aecbd51a01b4df7e1aede2a":[1,0,1438,2],
 "classTraitButcher.html#aabe2afc5aa8883e90a78ffc9325172db":[1,0,1438,1],
-"classTraitButcher.html#ad06c72c96bc8d4520e5f41a3a11dea30":[1,0,1438,4],
-"classTraitButcher.html#af9cd246546f984180c50259ad6651217":[1,0,1438,3],
-"classTraitCage.html":[1,0,1439],
-"classTraitCage.html#ad30f8fdf75aa274c1a046adeaecc7a19":[1,0,1439,0],
-"classTraitCageBreeding.html":[1,0,1440]
+"classTraitButcher.html#ad06c72c96bc8d4520e5f41a3a11dea30":[1,0,1438,4]
 };

@@ -13,6 +13,7 @@ var classEloMap =
     [ "GetZone", "classEloMap.html#a7d81ebd3fe251d3edf76e31ed742cc9c", null ],
     [ "Init", "classEloMap.html#abcd156e0bfc0ee0dd375d58f4ff05876", null ],
     [ "IsSnow", "classEloMap.html#a53b37ac6d3bcfbcd2870e2bfb6fb0fa6", null ],
+    [ "IsWater", "classEloMap.html#ac1560473b01bbf057e9b1245875ddac2", null ],
     [ "OnDeserialized", "classEloMap.html#a0797d69e85c0817f04a75280fec113d7", null ],
     [ "OnSerializing", "classEloMap.html#a9d919d832581d0032e2e39c8e2e79588", null ],
     [ "RemoveLight", "classEloMap.html#a5342d77713992cf89a768ca67e962be2", null ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX64 =
 {
+"classGameIndex.html#a067c1fe807ad4d218d5f22e5fd9757ab":[1,0,514,7],
+"classGameIndex.html#a06cbefd55026ea5aa6331601ec274bce":[1,0,514,25],
+"classGameIndex.html#a0a22e276afebd3a87b76d32e66e863d3":[1,0,514,0],
 "classGameIndex.html#a290288aa32ce6d95924d9a599f013824":[1,0,514,16],
 "classGameIndex.html#a2babae415cea4e0010f277939a8c6abd":[1,0,514,23],
 "classGameIndex.html#a3de95db1434ea4398f1fb551066fe9c9":[1,0,514,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX64 =
 "classGameSetting_1_1TransData.html#a7a9e08b98ec9d727474754b1b66468ea":[1,0,522,8,2],
 "classGameSetting_1_1TransData.html#aabfa6ead5a8f3f0e2d584dec173f88b9":[1,0,522,8,0],
 "classGameSetting_1_1UISetting.html":[1,0,522,9],
-"classGameSetting_1_1UISetting.html#a542579d4c24cb2a99908ac08ba2a8beb":[1,0,522,9,0],
-"classGameSetting_1_1UISetting.html#ae238187d8241ceedbdbeb9cbdf1c38d6":[1,0,522,9,1],
-"classGameSetting_1_1WeatherSetting.html":[1,0,522,10],
-"classGameSetting_1_1WeatherSetting.html#a3725a64a065ea4749016086b572fcf10":[1,0,522,10,0]
+"classGameSetting_1_1UISetting.html#a542579d4c24cb2a99908ac08ba2a8beb":[1,0,522,9,0]
 };

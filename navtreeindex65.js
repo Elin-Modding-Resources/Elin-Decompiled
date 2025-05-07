@@ -1,5 +1,8 @@
 var NAVTREEINDEX65 =
 {
+"classGameSetting_1_1UISetting.html#ae238187d8241ceedbdbeb9cbdf1c38d6":[1,0,522,9,1],
+"classGameSetting_1_1WeatherSetting.html":[1,0,522,10],
+"classGameSetting_1_1WeatherSetting.html#a3725a64a065ea4749016086b572fcf10":[1,0,522,10,0],
 "classGameSetting_1_1WeatherSetting.html#a87971bdabd56cf8952c7182109ea381c":[1,0,522,10,1],
 "classGameUpdater.html":[1,0,523],
 "classGameUpdater.html#a113311626fadee7ecee93f38156b53e7":[1,0,523,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX65 =
 "classGoalGraze.html#affeab77ac447b411a4d3420a8773ecab":[1,0,541,1],
 "classGoalHobby.html":[1,0,542],
 "classGoalHobby.html#a41f2e6557172551ef08aa6f218631ebc":[1,0,542,1],
-"classGoalHobby.html#afeca2a0893c90cb6c550b341821d3306":[1,0,542,0],
-"classGoalIdle.html":[1,0,543],
-"classGoalIdle.html#ae43f9d1591d8aa3e4d369af3d5920a61":[1,0,543,0],
-"classGoalList.html":[1,0,544]
+"classGoalHobby.html#afeca2a0893c90cb6c550b341821d3306":[1,0,542,0]
 };

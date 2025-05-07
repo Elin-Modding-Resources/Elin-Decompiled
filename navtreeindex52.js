@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"classCoreRef.html#afb1f3cdc02fb15cc2138061d141211db":[1,0,387,63],
+"classCoreRef.html#afde0d5f3e6afc28fe83ea176cb8656bb":[1,0,387,40],
 "classCoreRef.html#afed647ebedfc0205918bc6e587c95a10":[1,0,387,41],
 "classCoreRef_1_1Biomes.html":[1,0,387,0],
 "classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a":[1,0,387,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "classCritterRoach.html#a5ac122ba4a69b5d66358ebcb18347c53":[1,0,399,3],
 "classCritterRoach.html#a9b00b3ae5b5e1cea02e175d60403fe21":[1,0,399,1],
 "classCritterRoach.html#aa9164b154baa2ae48ede3bc897a64a5a":[1,0,399,2],
-"classCritterRoachSmall.html":[1,0,400],
-"classCritterRoachSmall.html#a21751b5e2118afe68abc4a7d4abc44b0":[1,0,400,1],
-"classCritterRoachSmall.html#a49f165282c7701c06b8a5eb520bc4df7":[1,0,400,3]
+"classCritterRoachSmall.html":[1,0,400]
 };

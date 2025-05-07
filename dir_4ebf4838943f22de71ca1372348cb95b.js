@@ -1772,6 +1772,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitWaystone.cs", "TraitWaystone_8cs.html", "TraitWaystone_8cs" ],
     [ "TraitWell.cs", "TraitWell_8cs.html", "TraitWell_8cs" ],
     [ "TraitWellHoly.cs", "TraitWellHoly_8cs.html", "TraitWellHoly_8cs" ],
+    [ "TraitWhipEgg.cs", "TraitWhipEgg_8cs.html", "TraitWhipEgg_8cs" ],
     [ "TraitWhipInterest.cs", "TraitWhipInterest_8cs.html", "TraitWhipInterest_8cs" ],
     [ "TraitWhipLove.cs", "TraitWhipLove_8cs.html", "TraitWhipLove_8cs" ],
     [ "TraitWhistlePeace.cs", "TraitWhistlePeace_8cs.html", "TraitWhistlePeace_8cs" ],

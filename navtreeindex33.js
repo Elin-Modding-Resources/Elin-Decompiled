@@ -1,5 +1,7 @@
 var NAVTREEINDEX33 =
 {
+"classBaseDebuff.html#a940e25502178fac4d6c4117549670126":[1,0,194,2],
+"classBaseDebuff.html#a9eba42e8bd5336a6ff0344a831990be4":[1,0,194,0],
 "classBaseGameScreen.html":[1,0,195],
 "classBaseGameScreen.html#a0244963d488be65fb895dc19ca4cbaf9":[1,0,195,60],
 "classBaseGameScreen.html#a0acbca3a3f0664cdb732734c54a1d4db":[1,0,195,89],
@@ -247,7 +249,5 @@ var NAVTREEINDEX33 =
 "classBaseModManager.html#ae64a4add340a2fb429e9d961ad5549c7":[1,0,201,4],
 "classBaseModManager_1_1BaseResource.html":[1,0,201,0],
 "classBaseModManager_1_1BaseResource.html#a588903f409388715609f167442ce0922":[1,0,201,0,1],
-"classBaseModManager_1_1BaseResource.html#acb03d5939efae682a3448aeb8be5978c":[1,0,201,0,0],
-"classBaseModManager_1_1BaseResource.html#aea5a1db4372d1867defdaf3e11c63721":[1,0,201,0,2],
-"classBaseModPackage.html":[1,0,202]
+"classBaseModManager_1_1BaseResource.html#acb03d5939efae682a3448aeb8be5978c":[1,0,201,0,0]
 };

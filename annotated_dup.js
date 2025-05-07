@@ -1962,6 +1962,7 @@ var annotated_dup =
     [ "TraitWaystone", "classTraitWaystone.html", "classTraitWaystone" ],
     [ "TraitWell", "classTraitWell.html", "classTraitWell" ],
     [ "TraitWellHoly", "classTraitWellHoly.html", null ],
+    [ "TraitWhipEgg", "classTraitWhipEgg.html", "classTraitWhipEgg" ],
     [ "TraitWhipInterest", "classTraitWhipInterest.html", null ],
     [ "TraitWhipLove", "classTraitWhipLove.html", "classTraitWhipLove" ],
     [ "TraitWhistlePeace", "classTraitWhistlePeace.html", "classTraitWhistlePeace" ],

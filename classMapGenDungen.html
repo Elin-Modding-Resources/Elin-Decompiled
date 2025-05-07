@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.133 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.134 Nightly</span>
    </div>
   </td>
  </tr>
@@ -340,14 +340,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MapGenDungen_8cs_source.html#l00282">282</a> of file <a class="el" href="MapGenDungen_8cs_source.html">MapGenDungen.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  283</span>    {</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100) &lt; 5)</div>
-<div class="line"><span class="lineno">  285</span>        {</div>
-<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classGenRoomMonsterHouse.html">GenRoomMonsterHouse</a>();</div>
-<div class="line"><span class="lineno">  287</span>        }</div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classGenRoom.html">GenRoom</a>();</div>
-<div class="line"><span class="lineno">  289</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="MapGenDungen_8cs_source.html#l00287">287</a> of file <a class="el" href="MapGenDungen_8cs_source.html">MapGenDungen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  288</span>    {</div>
+<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100) &lt; 5)</div>
+<div class="line"><span class="lineno">  290</span>        {</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classGenRoomMonsterHouse.html">GenRoomMonsterHouse</a>();</div>
+<div class="line"><span class="lineno">  292</span>        }</div>
+<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classGenRoom.html">GenRoom</a>();</div>
+<div class="line"><span class="lineno">  294</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00058">EClass.cs:58</a></div></div>
 <div class="ttc" id="aclassGenRoomMonsterHouse_html"><div class="ttname"><a href="classGenRoomMonsterHouse.html">GenRoomMonsterHouse</a></div><div class="ttdef"><b>Definition:</b> <a href="GenRoomMonsterHouse_8cs_source.html#l00001">GenRoomMonsterHouse.cs:2</a></div></div>
@@ -409,251 +409,256 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>            biome.exterior.floor.mat = <a class="code hl_class" href="classMATERIAL.html">MATERIAL</a>.<a class="code hl_function" href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">GetRandomMaterialFromCategory</a>(<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a> % 50 + 10, <span class="stringliteral">&quot;rock&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;granite&quot;</span>]).id;</div>
 <div class="line"><span class="lineno">   34</span>            biome.exterior.floor.matSub = <a class="code hl_class" href="classMATERIAL.html">MATERIAL</a>.<a class="code hl_function" href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">GetRandomMaterialFromCategory</a>(<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classSpatial.html#a12267d80d357d59863cbbcf3da43a458">lv</a> % 50 + 10, <span class="stringliteral">&quot;rock&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;granite&quot;</span>]).id;</div>
 <div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_class" href="classBiomeProfile_1_1TileFloor.html">BiomeProfile.TileFloor</a> floor = biome.<a class="code hl_property" href="classBiomeProfile.html#a1ece4699324f138920b61ced975c4ec4">exterior</a>.<a class="code hl_variable" href="classBiomeProfile_1_1TileGroup.html#ad4935ee6dc32f06f6b7976fa83cffe31">floor</a>;</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_class" href="classBiomeProfile_1_1TileBlock.html">BiomeProfile.TileBlock</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a> = biome.<a class="code hl_property" href="classBiomeProfile.html#a1ece4699324f138920b61ced975c4ec4">exterior</a>.<a class="code hl_variable" href="classBiomeProfile_1_1TileGroup.html#a48d0d6b61fc0f70a847e1b68fa61aba2">block</a>;</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">int</span> idMat = -1;</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> ((<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonPlain.html">Zone_RandomDungeonPlain</a> || <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonForest.html">Zone_RandomDungeonForest</a>) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a>(3, <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">uid</a>) != 0)</div>
-<div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a3524cd73568fbf455dcdcc2af384afe0">biomes</a>.<a class="code hl_variable" href="classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a">dict</a>[<span class="stringliteral">&quot;Dungeon_Forest&quot;</span>].exterior.block;</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonPlain.html">Zone_RandomDungeonPlain</a>)</div>
-<div class="line"><span class="lineno">   43</span>            {</div>
-<div class="line"><span class="lineno">   44</span>                idMat = 5;</div>
-<div class="line"><span class="lineno">   45</span>            }</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordtype">bool</span> flag = zone.lv &lt;= 0;</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">bool</span> flag3 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   50</span>        <a class="code hl_class" href="classPoint.html">Point</a> point = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>();</div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing2 = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mapData.size_X + 2; i++)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; mapData.size_Y + 2; j++)</div>
-<div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (i == 0 || j == 0 || i &gt;= mapData.size_X || j &gt;= mapData.size_Y)</div>
-<div class="line"><span class="lineno">   58</span>                {</div>
-<div class="line"><span class="lineno">   59</span>                    <a class="code hl_function" href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">SetFloor</a>(floor, i, j);</div>
-<div class="line"><span class="lineno">   60</span>                    <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
-<div class="line"><span class="lineno">   61</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   62</span>                }</div>
-<div class="line"><span class="lineno">   63</span>                Dungen.Cell cell = mapData.cellsOnMap[i - 1, j - 1];</div>
-<div class="line"><span class="lineno">   64</span>                CellType type = cell.type;</div>
-<div class="line"><span class="lineno">   65</span>                point.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(i, j);</div>
-<div class="line"><span class="lineno">   66</span>                <a class="code hl_function" href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">SetFloor</a>(floor, i, j);</div>
-<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">switch</span> (type.name)</div>
-<div class="line"><span class="lineno">   68</span>                {</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Entrance&quot;</span>:</div>
-<div class="line"><span class="lineno">   70</span>                {</div>
-<div class="line"><span class="lineno">   71</span>                    <span class="keywordflow">if</span> (flag2)</div>
-<div class="line"><span class="lineno">   72</span>                    {</div>
-<div class="line"><span class="lineno">   73</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: already created entrance&quot;</span>);</div>
-<div class="line"><span class="lineno">   74</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   75</span>                    }</div>
-<div class="line"><span class="lineno">   76</span>                    flag2 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   77</span>                    <a class="code hl_class" href="classThing.html">Thing</a> thing4 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_function" href="classBiomeProfile_1_1Style.html#ae25273318844ca7fd6e0a454ac7084d4">GetIdStairs</a>(flag), biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#a09b1f1ec607be5f5f16f3bc7fdea878d">matStairs</a>);</div>
-<div class="line"><span class="lineno">   78</span>                    <span class="keywordflow">if</span> (!flag)</div>
-<div class="line"><span class="lineno">   79</span>                    {</div>
-<div class="line"><span class="lineno">   80</span>                        thing = thing4;</div>
-<div class="line"><span class="lineno">   81</span>                    }</div>
-<div class="line"><span class="lineno">   82</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   83</span>                    {</div>
-<div class="line"><span class="lineno">   84</span>                        thing2 = thing4;</div>
-<div class="line"><span class="lineno">   85</span>                    }</div>
-<div class="line"><span class="lineno">   86</span>                    <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(thing4, i, j).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
-<div class="line"><span class="lineno">   87</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   88</span>                }</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Exit&quot;</span>:</div>
-<div class="line"><span class="lineno">   90</span>                {</div>
-<div class="line"><span class="lineno">   91</span>                    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#aab5e98e6de491debdb5f42f270573f14">ShouldMakeExit</a>)</div>
-<div class="line"><span class="lineno">   92</span>                    {</div>
-<div class="line"><span class="lineno">   93</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   94</span>                    }</div>
-<div class="line"><span class="lineno">   95</span>                    <span class="keywordflow">if</span> (flag3)</div>
-<div class="line"><span class="lineno">   96</span>                    {</div>
-<div class="line"><span class="lineno">   97</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: already created exit&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (biome.name == <span class="stringliteral">&quot;Dungeon_Water&quot;</span>)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordtype">int</span> <span class="keywordtype">id</span> = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0) ? 187 : 188);</div>
+<div class="line"><span class="lineno">   39</span>            biome.exterior.block.id = (biome.interior.block.id = id);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_class" href="classBiomeProfile_1_1TileFloor.html">BiomeProfile.TileFloor</a> floor = biome.<a class="code hl_property" href="classBiomeProfile.html#a1ece4699324f138920b61ced975c4ec4">exterior</a>.<a class="code hl_variable" href="classBiomeProfile_1_1TileGroup.html#ad4935ee6dc32f06f6b7976fa83cffe31">floor</a>;</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_class" href="classBiomeProfile_1_1TileBlock.html">BiomeProfile.TileBlock</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a> = biome.<a class="code hl_property" href="classBiomeProfile.html#a1ece4699324f138920b61ced975c4ec4">exterior</a>.<a class="code hl_variable" href="classBiomeProfile_1_1TileGroup.html#a48d0d6b61fc0f70a847e1b68fa61aba2">block</a>;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">int</span> idMat = -1;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> ((<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonPlain.html">Zone_RandomDungeonPlain</a> || <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonForest.html">Zone_RandomDungeonForest</a>) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a>(3, <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1">uid</a>) != 0)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a3524cd73568fbf455dcdcc2af384afe0">biomes</a>.<a class="code hl_variable" href="classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a">dict</a>[<span class="stringliteral">&quot;Dungeon_Forest&quot;</span>].exterior.block;</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonPlain.html">Zone_RandomDungeonPlain</a>)</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                idMat = 5;</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordtype">bool</span> flag = zone.lv &lt;= 0;</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordtype">bool</span> flag2 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">bool</span> flag3 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_class" href="classPoint.html">Point</a> point = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>();</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing2 = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mapData.size_X + 2; i++)</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; mapData.size_Y + 2; j++)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (i == 0 || j == 0 || i &gt;= mapData.size_X || j &gt;= mapData.size_Y)</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    <a class="code hl_function" href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">SetFloor</a>(floor, i, j);</div>
+<div class="line"><span class="lineno">   65</span>                    <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
+<div class="line"><span class="lineno">   66</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   67</span>                }</div>
+<div class="line"><span class="lineno">   68</span>                Dungen.Cell cell = mapData.cellsOnMap[i - 1, j - 1];</div>
+<div class="line"><span class="lineno">   69</span>                CellType type = cell.type;</div>
+<div class="line"><span class="lineno">   70</span>                point.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(i, j);</div>
+<div class="line"><span class="lineno">   71</span>                <a class="code hl_function" href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">SetFloor</a>(floor, i, j);</div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">switch</span> (type.name)</div>
+<div class="line"><span class="lineno">   73</span>                {</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Entrance&quot;</span>:</div>
+<div class="line"><span class="lineno">   75</span>                {</div>
+<div class="line"><span class="lineno">   76</span>                    <span class="keywordflow">if</span> (flag2)</div>
+<div class="line"><span class="lineno">   77</span>                    {</div>
+<div class="line"><span class="lineno">   78</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: already created entrance&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>                    }</div>
+<div class="line"><span class="lineno">   81</span>                    flag2 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   82</span>                    <a class="code hl_class" href="classThing.html">Thing</a> thing4 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_function" href="classBiomeProfile_1_1Style.html#ae25273318844ca7fd6e0a454ac7084d4">GetIdStairs</a>(flag), biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#a09b1f1ec607be5f5f16f3bc7fdea878d">matStairs</a>);</div>
+<div class="line"><span class="lineno">   83</span>                    <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">   84</span>                    {</div>
+<div class="line"><span class="lineno">   85</span>                        thing = thing4;</div>
+<div class="line"><span class="lineno">   86</span>                    }</div>
+<div class="line"><span class="lineno">   87</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   88</span>                    {</div>
+<div class="line"><span class="lineno">   89</span>                        thing2 = thing4;</div>
+<div class="line"><span class="lineno">   90</span>                    }</div>
+<div class="line"><span class="lineno">   91</span>                    <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(thing4, i, j).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
+<div class="line"><span class="lineno">   92</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   93</span>                }</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Exit&quot;</span>:</div>
+<div class="line"><span class="lineno">   95</span>                {</div>
+<div class="line"><span class="lineno">   96</span>                    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#aab5e98e6de491debdb5f42f270573f14">ShouldMakeExit</a>)</div>
+<div class="line"><span class="lineno">   97</span>                    {</div>
 <div class="line"><span class="lineno">   98</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   99</span>                    }</div>
-<div class="line"><span class="lineno">  100</span>                    flag3 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  101</span>                    <a class="code hl_class" href="classThing.html">Thing</a> thing3 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a164383b08e57f110006618af00f3949d">LockExit</a> ? <span class="stringliteral">&quot;stairs_locked&quot;</span> : biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_function" href="classBiomeProfile_1_1Style.html#ae25273318844ca7fd6e0a454ac7084d4">GetIdStairs</a>(!flag), <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#a164383b08e57f110006618af00f3949d">LockExit</a> ? (-1) : biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#a09b1f1ec607be5f5f16f3bc7fdea878d">matStairs</a>);</div>
-<div class="line"><span class="lineno">  102</span>                    <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  103</span>                    {</div>
-<div class="line"><span class="lineno">  104</span>                        thing = thing3;</div>
-<div class="line"><span class="lineno">  105</span>                    }</div>
-<div class="line"><span class="lineno">  106</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  107</span>                    {</div>
-<div class="line"><span class="lineno">  108</span>                        thing2 = thing3;</div>
-<div class="line"><span class="lineno">  109</span>                    }</div>
-<div class="line"><span class="lineno">  110</span>                    <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(thing3, i, j).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
-<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  112</span>                }</div>
-<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Door&quot;</span>:</div>
-<div class="line"><span class="lineno">  114</span>                    <span class="keywordflow">if</span> (!(biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#a91000127ca4e93af9b8a1b9ba2eefca1">doorChance</a> &lt; <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(0f, 1f)))</div>
-<div class="line"><span class="lineno">  115</span>                    {</div>
-<div class="line"><span class="lineno">  116</span>                        <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
-<div class="line"><span class="lineno">  117</span>                        <a class="code hl_class" href="classThing.html">Thing</a> t2 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_function" href="classBiomeProfile_1_1Style.html#ac79abfd748c78dda71beb3377ce93dfe">GetIdDoor</a>(), biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#afe32cfbfda489fff8da633d29f65db6a">matDoor</a>);</div>
-<div class="line"><span class="lineno">  118</span>                        <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(t2, i, j).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
-<div class="line"><span class="lineno">  119</span>                    }</div>
-<div class="line"><span class="lineno">  120</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Abyss&quot;</span>:</div>
-<div class="line"><span class="lineno">  122</span>                    <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
-<div class="line"><span class="lineno">  123</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  124</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">if</span> (type.passable == generator.reversePassage)</div>
-<div class="line"><span class="lineno">  126</span>                    {</div>
-<div class="line"><span class="lineno">  127</span>                        <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
-<div class="line"><span class="lineno">  128</span>                    }</div>
-<div class="line"><span class="lineno">  129</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  130</span>                }</div>
-<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">if</span> (!cell.isRoomCell)</div>
-<div class="line"><span class="lineno">  132</span>                {</div>
-<div class="line"><span class="lineno">  133</span>                    biome.<a class="code hl_function" href="classBiomeProfile.html#ab93966d1d10cdaa3a4fe5651583ced0d">Populate</a>(point);</div>
-<div class="line"><span class="lineno">  134</span>                }</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (!flag2)</div>
-<div class="line"><span class="lineno">  138</span>        {</div>
-<div class="line"><span class="lineno">  139</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: Failed to create entrance:&quot;</span>);</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  100</span>                    <span class="keywordflow">if</span> (flag3)</div>
+<div class="line"><span class="lineno">  101</span>                    {</div>
+<div class="line"><span class="lineno">  102</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: already created exit&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  104</span>                    }</div>
+<div class="line"><span class="lineno">  105</span>                    flag3 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  106</span>                    <a class="code hl_class" href="classThing.html">Thing</a> thing3 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a164383b08e57f110006618af00f3949d">LockExit</a> ? <span class="stringliteral">&quot;stairs_locked&quot;</span> : biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_function" href="classBiomeProfile_1_1Style.html#ae25273318844ca7fd6e0a454ac7084d4">GetIdStairs</a>(!flag), <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#a164383b08e57f110006618af00f3949d">LockExit</a> ? (-1) : biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#a09b1f1ec607be5f5f16f3bc7fdea878d">matStairs</a>);</div>
+<div class="line"><span class="lineno">  107</span>                    <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  108</span>                    {</div>
+<div class="line"><span class="lineno">  109</span>                        thing = thing3;</div>
+<div class="line"><span class="lineno">  110</span>                    }</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  112</span>                    {</div>
+<div class="line"><span class="lineno">  113</span>                        thing2 = thing3;</div>
+<div class="line"><span class="lineno">  114</span>                    }</div>
+<div class="line"><span class="lineno">  115</span>                    <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(thing3, i, j).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
+<div class="line"><span class="lineno">  116</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  117</span>                }</div>
+<div class="line"><span class="lineno">  118</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Door&quot;</span>:</div>
+<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">if</span> (!(biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#a91000127ca4e93af9b8a1b9ba2eefca1">doorChance</a> &lt; <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(0f, 1f)))</div>
+<div class="line"><span class="lineno">  120</span>                    {</div>
+<div class="line"><span class="lineno">  121</span>                        <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
+<div class="line"><span class="lineno">  122</span>                        <a class="code hl_class" href="classThing.html">Thing</a> t2 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_function" href="classBiomeProfile_1_1Style.html#ac79abfd748c78dda71beb3377ce93dfe">GetIdDoor</a>(), biome.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#afe32cfbfda489fff8da633d29f65db6a">matDoor</a>);</div>
+<div class="line"><span class="lineno">  123</span>                        <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(t2, i, j).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
+<div class="line"><span class="lineno">  124</span>                    }</div>
+<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Abyss&quot;</span>:</div>
+<div class="line"><span class="lineno">  127</span>                    <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
+<div class="line"><span class="lineno">  128</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  130</span>                    <span class="keywordflow">if</span> (type.passable == generator.reversePassage)</div>
+<div class="line"><span class="lineno">  131</span>                    {</div>
+<div class="line"><span class="lineno">  132</span>                        <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, i, j, idMat);</div>
+<div class="line"><span class="lineno">  133</span>                    }</div>
+<div class="line"><span class="lineno">  134</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  135</span>                }</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">if</span> (!cell.isRoomCell)</div>
+<div class="line"><span class="lineno">  137</span>                {</div>
+<div class="line"><span class="lineno">  138</span>                    biome.<a class="code hl_function" href="classBiomeProfile.html#ab93966d1d10cdaa3a4fe5651583ced0d">Populate</a>(point);</div>
+<div class="line"><span class="lineno">  139</span>                }</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
 <div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#aab5e98e6de491debdb5f42f270573f14">ShouldMakeExit</a> &amp;&amp; !flag3)</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (!flag2)</div>
 <div class="line"><span class="lineno">  143</span>        {</div>
-<div class="line"><span class="lineno">  144</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: Failed to create exist:&quot;</span>);</div>
+<div class="line"><span class="lineno">  144</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: Failed to create entrance:&quot;</span>);</div>
 <div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  146</span>        }</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> (thing2 != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#aab5e98e6de491debdb5f42f270573f14">ShouldMakeExit</a> &amp;&amp; !flag3)</div>
 <div class="line"><span class="lineno">  148</span>        {</div>
-<div class="line"><span class="lineno">  149</span>            thing2.pos.cell._block = 0;</div>
-<div class="line"><span class="lineno">  150</span>            thing2.pos.cell.obj = 0;</div>
+<div class="line"><span class="lineno">  149</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;exception: Failed to create exist:&quot;</span>);</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (thing != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (thing2 != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  153</span>        {</div>
-<div class="line"><span class="lineno">  154</span>            thing.pos.cell._block = 0;</div>
-<div class="line"><span class="lineno">  155</span>            thing.pos.cell.obj = 0;</div>
+<div class="line"><span class="lineno">  154</span>            thing2.pos.cell._block = 0;</div>
+<div class="line"><span class="lineno">  155</span>            thing2.pos.cell.obj = 0;</div>
 <div class="line"><span class="lineno">  156</span>        }</div>
-<div class="line"><span class="lineno">  157</span>        Dictionary&lt;int, GenRoom&gt; rooms = <span class="keyword">new</span> Dictionary&lt;int, GenRoom&gt;();</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  159</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">foreach</span> (Dungen.Room room in mapData.rooms)</div>
-<div class="line"><span class="lineno">  161</span>        {</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (room.width != 0 &amp;&amp; room.height != 0)</div>
-<div class="line"><span class="lineno">  163</span>            {</div>
-<div class="line"><span class="lineno">  164</span>                num++;</div>
-<div class="line"><span class="lineno">  165</span>            }</div>
-<div class="line"><span class="lineno">  166</span>        }</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">if</span> (num == 0)</div>
-<div class="line"><span class="lineno">  168</span>        {</div>
-<div class="line"><span class="lineno">  169</span>            mapData.rooms.Clear();</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (mapData.rooms.Count == 0)</div>
-<div class="line"><span class="lineno">  172</span>        {</div>
-<div class="line"><span class="lineno">  173</span>            <a class="code hl_class" href="classGenRoomBig.html">GenRoomBig</a> genRoomBig = <span class="keyword">new</span> <a class="code hl_class" href="classGenRoomBig.html">GenRoomBig</a>();</div>
-<div class="line"><span class="lineno">  174</span>            genRoomBig.<a class="code hl_function" href="classGenRoom.html#a5e19c073f1c78f0a86d19dc1fd5025cb">Init</a>(1, 1, <a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> - 1, <a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> - 1);</div>
-<div class="line"><span class="lineno">  175</span>            SetRoom(genRoomBig);</div>
-<div class="line"><span class="lineno">  176</span>        }</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  178</span>        {</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">foreach</span> (Dungen.Room room2 in mapData.rooms)</div>
-<div class="line"><span class="lineno">  180</span>            {</div>
-<div class="line"><span class="lineno">  181</span>                <a class="code hl_class" href="classGenRoom.html">GenRoom</a> genRoom = <a class="code hl_function" href="classMapGenDungen.html#a24ceda9ac91f1f2458ab855fb3e3df51">ChooseRoom</a>();</div>
-<div class="line"><span class="lineno">  182</span>                genRoom.<a class="code hl_function" href="classGenRoom.html#a5e19c073f1c78f0a86d19dc1fd5025cb">Init</a>(room2);</div>
-<div class="line"><span class="lineno">  183</span>                SetRoom(genRoom);</div>
-<div class="line"><span class="lineno">  184</span>            }</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>        <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_function" href="classMap.html#aee8120d9016faadc762f0b80bf0ef1e8">RefreshAllTiles</a>();</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classGenRoom.html">GenRoom</a> value <span class="keywordflow">in</span> rooms.Values)</div>
-<div class="line"><span class="lineno">  188</span>        {</div>
-<div class="line"><span class="lineno">  189</span>            value.<a class="code hl_function" href="classGenRoom.html#a2e0f7b7b611ca8cc7337c42201dc5e28">Populate</a>();</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (thing != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>            thing.pos.cell._block = 0;</div>
+<div class="line"><span class="lineno">  160</span>            thing.pos.cell.obj = 0;</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        Dictionary&lt;int, GenRoom&gt; rooms = <span class="keyword">new</span> Dictionary&lt;int, GenRoom&gt;();</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">foreach</span> (Dungen.Room room in mapData.rooms)</div>
+<div class="line"><span class="lineno">  166</span>        {</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">if</span> (room.width != 0 &amp;&amp; room.height != 0)</div>
+<div class="line"><span class="lineno">  168</span>            {</div>
+<div class="line"><span class="lineno">  169</span>                num++;</div>
+<div class="line"><span class="lineno">  170</span>            }</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            mapData.rooms.Clear();</div>
+<div class="line"><span class="lineno">  175</span>        }</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (mapData.rooms.Count == 0)</div>
+<div class="line"><span class="lineno">  177</span>        {</div>
+<div class="line"><span class="lineno">  178</span>            <a class="code hl_class" href="classGenRoomBig.html">GenRoomBig</a> genRoomBig = <span class="keyword">new</span> <a class="code hl_class" href="classGenRoomBig.html">GenRoomBig</a>();</div>
+<div class="line"><span class="lineno">  179</span>            genRoomBig.<a class="code hl_function" href="classGenRoom.html#a5e19c073f1c78f0a86d19dc1fd5025cb">Init</a>(1, 1, <a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> - 1, <a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> - 1);</div>
+<div class="line"><span class="lineno">  180</span>            SetRoom(genRoomBig);</div>
+<div class="line"><span class="lineno">  181</span>        }</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">foreach</span> (Dungen.Room room2 in mapData.rooms)</div>
+<div class="line"><span class="lineno">  185</span>            {</div>
+<div class="line"><span class="lineno">  186</span>                <a class="code hl_class" href="classGenRoom.html">GenRoom</a> genRoom = <a class="code hl_function" href="classMapGenDungen.html#a24ceda9ac91f1f2458ab855fb3e3df51">ChooseRoom</a>();</div>
+<div class="line"><span class="lineno">  187</span>                genRoom.<a class="code hl_function" href="classGenRoom.html#a5e19c073f1c78f0a86d19dc1fd5025cb">Init</a>(room2);</div>
+<div class="line"><span class="lineno">  188</span>                SetRoom(genRoom);</div>
+<div class="line"><span class="lineno">  189</span>            }</div>
 <div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span>        <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#abe9a4109ae4e9b6b01c1d9a26b1d6eea">OnGenerateRooms</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  192</span>        <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_function" href="classMap.html#ad90b2130abe3d8a0fbe14ec0e0f929af">ReloadRoom</a>();</div>
-<div class="line"><span class="lineno">  193</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Dungen: room:&quot;</span> + rooms.Count + <span class="stringliteral">&quot;/&quot;</span> + mapData.rooms.Count + <span class="stringliteral">&quot; width:&quot;</span> + <a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> + <span class="stringliteral">&quot; height:&quot;</span> + <a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a>);</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> * <a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> / 50 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(20)) + 5;</div>
-<div class="line"><span class="lineno">  195</span>        num2 = num2 * Mathf.Min(20 + <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a> * 5, 100) / 100;</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonNature.html">Zone_RandomDungeonNature</a>)</div>
-<div class="line"><span class="lineno">  197</span>        {</div>
-<div class="line"><span class="lineno">  198</span>            num2 /= 5;</div>
-<div class="line"><span class="lineno">  199</span>        }</div>
-<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num2; k++)</div>
-<div class="line"><span class="lineno">  201</span>        {</div>
-<div class="line"><span class="lineno">  202</span>            point = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a201e5925b364f2c6446f02c35e75c2d1">GetRandomPoint</a>();</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (!point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a72615980592d3817dbae7235d7563afe">isModified</a> &amp;&amp; !point.<a class="code hl_property" href="classPoint.html#a8c088e2f6ed71551750b02814a6032d4">HasThing</a> &amp;&amp; !point.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a> &amp;&amp; !point.<a class="code hl_property" href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">HasObj</a>)</div>
-<div class="line"><span class="lineno">  204</span>            {</div>
-<div class="line"><span class="lineno">  205</span>                <a class="code hl_class" href="classThing.html">Thing</a> t3 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8">CreateFromCategory</a>(<span class="stringliteral">&quot;trap&quot;</span>, <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>);</div>
-<div class="line"><span class="lineno">  206</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(t3, point).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
-<div class="line"><span class="lineno">  207</span>            }</div>
-<div class="line"><span class="lineno">  208</span>        }</div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">IsUnderwater</a>)</div>
-<div class="line"><span class="lineno">  210</span>        {</div>
-<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; 30 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(30); l++)</div>
-<div class="line"><span class="lineno">  212</span>            {</div>
-<div class="line"><span class="lineno">  213</span>                <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#a743d6d3ff9afabf8ec22a96581f75ceb">SpawnMob</a>(<span class="keyword">null</span>, <a class="code hl_class" href="classSpawnSetting.html">SpawnSetting</a>.<a class="code hl_function" href="classSpawnSetting.html#aa1db65406ce51e1303a9bad67b9a3114">Fish</a>());</div>
-<div class="line"><span class="lineno">  214</span>            }</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonPlain.html">Zone_RandomDungeonPlain</a>)</div>
-<div class="line"><span class="lineno">  217</span>        {</div>
-<div class="line"><span class="lineno">  218</span>            <a class="code hl_class" href="classCrawler.html">Crawler</a> crawler = <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_function" href="classCrawler.html#a51aa26cb2c9adfb751b42fd25cbe7dd5">Create</a>(<span class="stringliteral">&quot;pasture&quot;</span>);</div>
-<div class="line"><span class="lineno">  219</span>            <span class="keywordtype">int</span> tries = 3;</div>
-<div class="line"><span class="lineno">  220</span>            crawler.<a class="code hl_function" href="classCrawler.html#ad6a7568d628865a8d90317056a3f5511">CrawlUntil</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>, () =&gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a201e5925b364f2c6446f02c35e75c2d1">GetRandomPoint</a>(), tries, delegate(<a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_class" href="classCrawler_1_1Result.html">Result</a> r)</div>
-<div class="line"><span class="lineno">  221</span>            {</div>
-<div class="line"><span class="lineno">  222</span>                int id = ((EClass.rnd(3) == 0) ? 108 : 105);</div>
-<div class="line"><span class="lineno">  223</span>                foreach (Point point2 in r.points)</div>
-<div class="line"><span class="lineno">  224</span>                {</div>
-<div class="line"><span class="lineno">  225</span>                    if (!point2.cell.isModified &amp;&amp; !point2.HasThing &amp;&amp; !point2.HasBlock &amp;&amp; !point2.HasObj)</div>
-<div class="line"><span class="lineno">  226</span>                    {</div>
-<div class="line"><span class="lineno">  227</span>                        map.SetObj(point2.x, point2.z, id);</div>
-<div class="line"><span class="lineno">  228</span>                        int num3 = 3;</div>
-<div class="line"><span class="lineno">  229</span>                        if (EClass.rnd(6) == 0)</div>
-<div class="line"><span class="lineno">  230</span>                        {</div>
-<div class="line"><span class="lineno">  231</span>                            num3++;</div>
-<div class="line"><span class="lineno">  232</span>                        }</div>
-<div class="line"><span class="lineno">  233</span>                        point2.growth.SetStage(num3);</div>
-<div class="line"><span class="lineno">  234</span>                    }</div>
-<div class="line"><span class="lineno">  235</span>                }</div>
-<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  237</span>            });</div>
-<div class="line"><span class="lineno">  238</span>        }</div>
-<div class="line"><span class="lineno">  239</span>        <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#a5858488cfbd50ec11fd2cf81d9615eee">things</a>.ForeachReverse(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
-<div class="line"><span class="lineno">  240</span>        {</div>
-<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitDoor.html">TraitDoor</a> traitDoor &amp;&amp; !traitDoor.<a class="code hl_function" href="classTraitDoor.html#adf1a3b9932603789145e294254d33fbe">IsValid</a>())</div>
-<div class="line"><span class="lineno">  242</span>            {</div>
-<div class="line"><span class="lineno">  243</span>                Debug.Log(<span class="stringliteral">&quot;Purging Door:&quot;</span> + t.Name + <span class="stringliteral">&quot;/&quot;</span> + t.pos);</div>
-<div class="line"><span class="lineno">  244</span>                t.Destroy();</div>
-<div class="line"><span class="lineno">  245</span>            }</div>
-<div class="line"><span class="lineno">  246</span>        });</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (thing != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  248</span>        {</div>
-<div class="line"><span class="lineno">  249</span>            ClearPos(thing);</div>
-<div class="line"><span class="lineno">  250</span>        }</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span> (thing2 != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  252</span>        {</div>
-<div class="line"><span class="lineno">  253</span>            ClearPos(thing2);</div>
-<div class="line"><span class="lineno">  254</span>        }</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> ClearPos(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><span class="lineno">  191</span>        <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_function" href="classMap.html#aee8120d9016faadc762f0b80bf0ef1e8">RefreshAllTiles</a>();</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classGenRoom.html">GenRoom</a> value <span class="keywordflow">in</span> rooms.Values)</div>
+<div class="line"><span class="lineno">  193</span>        {</div>
+<div class="line"><span class="lineno">  194</span>            value.<a class="code hl_function" href="classGenRoom.html#a2e0f7b7b611ca8cc7337c42201dc5e28">Populate</a>();</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>        <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#abe9a4109ae4e9b6b01c1d9a26b1d6eea">OnGenerateRooms</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  197</span>        <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_function" href="classMap.html#ad90b2130abe3d8a0fbe14ec0e0f929af">ReloadRoom</a>();</div>
+<div class="line"><span class="lineno">  198</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Dungen: room:&quot;</span> + rooms.Count + <span class="stringliteral">&quot;/&quot;</span> + mapData.rooms.Count + <span class="stringliteral">&quot; width:&quot;</span> + <a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> + <span class="stringliteral">&quot; height:&quot;</span> + <a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a>);</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordtype">int</span> num2 = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(<a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> * <a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> / 50 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(20)) + 5;</div>
+<div class="line"><span class="lineno">  200</span>        num2 = num2 * Mathf.Min(20 + <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a> * 5, 100) / 100;</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonNature.html">Zone_RandomDungeonNature</a>)</div>
+<div class="line"><span class="lineno">  202</span>        {</div>
+<div class="line"><span class="lineno">  203</span>            num2 /= 5;</div>
+<div class="line"><span class="lineno">  204</span>        }</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; num2; k++)</div>
+<div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            point = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a201e5925b364f2c6446f02c35e75c2d1">GetRandomPoint</a>();</div>
+<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span> (!point.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a72615980592d3817dbae7235d7563afe">isModified</a> &amp;&amp; !point.<a class="code hl_property" href="classPoint.html#a8c088e2f6ed71551750b02814a6032d4">HasThing</a> &amp;&amp; !point.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a> &amp;&amp; !point.<a class="code hl_property" href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">HasObj</a>)</div>
+<div class="line"><span class="lineno">  209</span>            {</div>
+<div class="line"><span class="lineno">  210</span>                <a class="code hl_class" href="classThing.html">Thing</a> t3 = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8">CreateFromCategory</a>(<span class="stringliteral">&quot;trap&quot;</span>, <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>);</div>
+<div class="line"><span class="lineno">  211</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(t3, point).<a class="code hl_function" href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Install</a>();</div>
+<div class="line"><span class="lineno">  212</span>            }</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">IsUnderwater</a>)</div>
+<div class="line"><span class="lineno">  215</span>        {</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; 30 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(30); l++)</div>
+<div class="line"><span class="lineno">  217</span>            {</div>
+<div class="line"><span class="lineno">  218</span>                <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_function" href="classZone.html#a743d6d3ff9afabf8ec22a96581f75ceb">SpawnMob</a>(<span class="keyword">null</span>, <a class="code hl_class" href="classSpawnSetting.html">SpawnSetting</a>.<a class="code hl_function" href="classSpawnSetting.html#aa1db65406ce51e1303a9bad67b9a3114">Fish</a>());</div>
+<div class="line"><span class="lineno">  219</span>            }</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonPlain.html">Zone_RandomDungeonPlain</a>)</div>
+<div class="line"><span class="lineno">  222</span>        {</div>
+<div class="line"><span class="lineno">  223</span>            <a class="code hl_class" href="classCrawler.html">Crawler</a> crawler = <a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_function" href="classCrawler.html#a51aa26cb2c9adfb751b42fd25cbe7dd5">Create</a>(<span class="stringliteral">&quot;pasture&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>            <span class="keywordtype">int</span> tries = 3;</div>
+<div class="line"><span class="lineno">  225</span>            crawler.<a class="code hl_function" href="classCrawler.html#ad6a7568d628865a8d90317056a3f5511">CrawlUntil</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>, () =&gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a201e5925b364f2c6446f02c35e75c2d1">GetRandomPoint</a>(), tries, delegate(<a class="code hl_class" href="classCrawler.html">Crawler</a>.<a class="code hl_class" href="classCrawler_1_1Result.html">Result</a> r)</div>
+<div class="line"><span class="lineno">  226</span>            {</div>
+<div class="line"><span class="lineno">  227</span>                int id2 = ((EClass.rnd(3) == 0) ? 108 : 105);</div>
+<div class="line"><span class="lineno">  228</span>                foreach (Point point2 in r.points)</div>
+<div class="line"><span class="lineno">  229</span>                {</div>
+<div class="line"><span class="lineno">  230</span>                    if (!point2.cell.isModified &amp;&amp; !point2.HasThing &amp;&amp; !point2.HasBlock &amp;&amp; !point2.HasObj)</div>
+<div class="line"><span class="lineno">  231</span>                    {</div>
+<div class="line"><span class="lineno">  232</span>                        map.SetObj(point2.x, point2.z, id2);</div>
+<div class="line"><span class="lineno">  233</span>                        int num3 = 3;</div>
+<div class="line"><span class="lineno">  234</span>                        if (EClass.rnd(6) == 0)</div>
+<div class="line"><span class="lineno">  235</span>                        {</div>
+<div class="line"><span class="lineno">  236</span>                            num3++;</div>
+<div class="line"><span class="lineno">  237</span>                        }</div>
+<div class="line"><span class="lineno">  238</span>                        point2.growth.SetStage(num3);</div>
+<div class="line"><span class="lineno">  239</span>                    }</div>
+<div class="line"><span class="lineno">  240</span>                }</div>
+<div class="line"><span class="lineno">  241</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  242</span>            });</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>.<a class="code hl_variable" href="classMap.html#a5858488cfbd50ec11fd2cf81d9615eee">things</a>.ForeachReverse(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><span class="lineno">  245</span>        {</div>
+<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitDoor.html">TraitDoor</a> traitDoor &amp;&amp; !traitDoor.<a class="code hl_function" href="classTraitDoor.html#adf1a3b9932603789145e294254d33fbe">IsValid</a>())</div>
+<div class="line"><span class="lineno">  247</span>            {</div>
+<div class="line"><span class="lineno">  248</span>                Debug.Log(<span class="stringliteral">&quot;Purging Door:&quot;</span> + t.Name + <span class="stringliteral">&quot;/&quot;</span> + t.pos);</div>
+<div class="line"><span class="lineno">  249</span>                t.Destroy();</div>
+<div class="line"><span class="lineno">  250</span>            }</div>
+<div class="line"><span class="lineno">  251</span>        });</div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (thing != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  253</span>        {</div>
+<div class="line"><span class="lineno">  254</span>            ClearPos(thing);</div>
+<div class="line"><span class="lineno">  255</span>        }</div>
+<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">if</span> (thing2 != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  257</span>        {</div>
-<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> t.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>())</div>
-<div class="line"><span class="lineno">  259</span>            {</div>
-<div class="line"><span class="lineno">  260</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> != t &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.isThing)</div>
-<div class="line"><span class="lineno">  261</span>                {</div>
-<div class="line"><span class="lineno">  262</span>                    <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Destroy();</div>
-<div class="line"><span class="lineno">  263</span>                }</div>
-<div class="line"><span class="lineno">  264</span>            }</div>
-<div class="line"><span class="lineno">  265</span>            t.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">SetObj</a>();</div>
-<div class="line"><span class="lineno">  266</span>            t.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#aa9f4606372ab30aaf490838175342c3e">SetBlock</a>();</div>
-<div class="line"><span class="lineno">  267</span>            t.pos.cell.height = 0;</div>
-<div class="line"><span class="lineno">  268</span>        }</div>
-<div class="line"><span class="lineno">  269</span>        <span class="keywordtype">void</span> SetRoom(<a class="code hl_class" href="classGenRoom.html">GenRoom</a> room)</div>
-<div class="line"><span class="lineno">  270</span>        {</div>
-<div class="line"><span class="lineno">  271</span>            room.map = <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>;</div>
-<div class="line"><span class="lineno">  272</span>            room.zone = <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>;</div>
-<div class="line"><span class="lineno">  273</span>            room.gen = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  274</span>            room.group = ((<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonNature.html">Zone_RandomDungeonNature</a>) ? biome.<a class="code hl_property" href="classBiomeProfile.html#a1ece4699324f138920b61ced975c4ec4">exterior</a> : biome.<a class="code hl_property" href="classBiomeProfile.html#a78a3fadd7e5c8b7fd21dc161b64bc9ac">interior</a>);</div>
-<div class="line"><span class="lineno">  275</span>            rooms[room.<a class="code hl_property" href="classGenRoom.html#a43abf93b2acc63d8b0b1f0decbdaa0e4">Index</a>] = room;</div>
-<div class="line"><span class="lineno">  276</span>            room.<a class="code hl_function" href="classGenRoom.html#a19aefaeef18d9692459005dea3ca4cff">Fill</a>();</div>
-<div class="line"><span class="lineno">  277</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Room&quot;</span> + count + <span class="stringliteral">&quot; &quot;</span> + room.<a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> + <span class="stringliteral">&quot;*&quot;</span> + room.<a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> + <span class="stringliteral">&quot; &quot;</span> + room);</div>
-<div class="line"><span class="lineno">  278</span>            count++;</div>
-<div class="line"><span class="lineno">  279</span>        }</div>
-<div class="line"><span class="lineno">  280</span>    }</div>
+<div class="line"><span class="lineno">  258</span>            ClearPos(thing2);</div>
+<div class="line"><span class="lineno">  259</span>        }</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> ClearPos(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><span class="lineno">  262</span>        {</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> t.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a256787e4a6e7438db25289f56e618463">ListCards</a>())</div>
+<div class="line"><span class="lineno">  264</span>            {</div>
+<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> != t &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.isThing)</div>
+<div class="line"><span class="lineno">  266</span>                {</div>
+<div class="line"><span class="lineno">  267</span>                    <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Destroy();</div>
+<div class="line"><span class="lineno">  268</span>                }</div>
+<div class="line"><span class="lineno">  269</span>            }</div>
+<div class="line"><span class="lineno">  270</span>            t.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">SetObj</a>();</div>
+<div class="line"><span class="lineno">  271</span>            t.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#aa9f4606372ab30aaf490838175342c3e">SetBlock</a>();</div>
+<div class="line"><span class="lineno">  272</span>            t.pos.cell.height = 0;</div>
+<div class="line"><span class="lineno">  273</span>        }</div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordtype">void</span> SetRoom(<a class="code hl_class" href="classGenRoom.html">GenRoom</a> room)</div>
+<div class="line"><span class="lineno">  275</span>        {</div>
+<div class="line"><span class="lineno">  276</span>            room.map = <a class="code hl_variable" href="classGenBounds.html#adf2bff5b09ee53bbc398d000088bf14e">map</a>;</div>
+<div class="line"><span class="lineno">  277</span>            room.zone = <a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>;</div>
+<div class="line"><span class="lineno">  278</span>            room.gen = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  279</span>            room.group = ((<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a> is <a class="code hl_class" href="classZone__RandomDungeonNature.html">Zone_RandomDungeonNature</a>) ? biome.<a class="code hl_property" href="classBiomeProfile.html#a1ece4699324f138920b61ced975c4ec4">exterior</a> : biome.<a class="code hl_property" href="classBiomeProfile.html#a78a3fadd7e5c8b7fd21dc161b64bc9ac">interior</a>);</div>
+<div class="line"><span class="lineno">  280</span>            rooms[room.<a class="code hl_property" href="classGenRoom.html#a43abf93b2acc63d8b0b1f0decbdaa0e4">Index</a>] = room;</div>
+<div class="line"><span class="lineno">  281</span>            room.<a class="code hl_function" href="classGenRoom.html#a19aefaeef18d9692459005dea3ca4cff">Fill</a>();</div>
+<div class="line"><span class="lineno">  282</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Room&quot;</span> + count + <span class="stringliteral">&quot; &quot;</span> + room.<a class="code hl_variable" href="classGenBounds.html#a675dac829df0bcca9a76cb35c9a6dbc9">width</a> + <span class="stringliteral">&quot;*&quot;</span> + room.<a class="code hl_variable" href="classGenBounds.html#a15a9cd4da52ef5039981300b88e7a5d5">height</a> + <span class="stringliteral">&quot; &quot;</span> + room);</div>
+<div class="line"><span class="lineno">  283</span>            count++;</div>
+<div class="line"><span class="lineno">  284</span>        }</div>
+<div class="line"><span class="lineno">  285</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">ContainerFlag.block</a></div><div class="ttdeci">@ block</div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
@@ -706,7 +711,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassGenRoom_html_a5e19c073f1c78f0a86d19dc1fd5025cb"><div class="ttname"><a href="classGenRoom.html#a5e19c073f1c78f0a86d19dc1fd5025cb">GenRoom.Init</a></div><div class="ttdeci">void Init(Dungen.Room room)</div><div class="ttdef"><b>Definition:</b> <a href="GenRoom_8cs_source.html#l00023">GenRoom.cs:23</a></div></div>
 <div class="ttc" id="aclassMATERIAL_html"><div class="ttname"><a href="classMATERIAL.html">MATERIAL</a></div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00005">MATERIAL.cs:6</a></div></div>
 <div class="ttc" id="aclassMATERIAL_html_a73ba8b2d53fde9370c47ce79c285fd6a"><div class="ttname"><a href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">MATERIAL.GetRandomMaterialFromCategory</a></div><div class="ttdeci">static SourceMaterial.Row GetRandomMaterialFromCategory(int lv, string cat, SourceMaterial.Row fallback)</div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00081">MATERIAL.cs:81</a></div></div>
-<div class="ttc" id="aclassMapGenDungen_html_a24ceda9ac91f1f2458ab855fb3e3df51"><div class="ttname"><a href="classMapGenDungen.html#a24ceda9ac91f1f2458ab855fb3e3df51">MapGenDungen.ChooseRoom</a></div><div class="ttdeci">GenRoom ChooseRoom()</div><div class="ttdef"><b>Definition:</b> <a href="MapGenDungen_8cs_source.html#l00282">MapGenDungen.cs:282</a></div></div>
+<div class="ttc" id="aclassMapGenDungen_html_a24ceda9ac91f1f2458ab855fb3e3df51"><div class="ttname"><a href="classMapGenDungen.html#a24ceda9ac91f1f2458ab855fb3e3df51">MapGenDungen.ChooseRoom</a></div><div class="ttdeci">GenRoom ChooseRoom()</div><div class="ttdef"><b>Definition:</b> <a href="MapGenDungen_8cs_source.html#l00287">MapGenDungen.cs:287</a></div></div>
 <div class="ttc" id="aclassMap_html_a201e5925b364f2c6446f02c35e75c2d1"><div class="ttname"><a href="classMap.html#a201e5925b364f2c6446f02c35e75c2d1">Map.GetRandomPoint</a></div><div class="ttdeci">Point GetRandomPoint(Point center, int radius, int tries=100, bool mustBeWalkable=true, bool requireLos=true)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02193">Map.cs:2193</a></div></div>
 <div class="ttc" id="aclassMap_html_a4bb0a0e4ecbd6cd6939a2153dd6adf95"><div class="ttname"><a href="classMap.html#a4bb0a0e4ecbd6cd6939a2153dd6adf95">Map.SetZone</a></div><div class="ttdeci">void SetZone(Zone _zone)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00181">Map.cs:181</a></div></div>
 <div class="ttc" id="aclassMap_html_a5858488cfbd50ec11fd2cf81d9615eee"><div class="ttname"><a href="classMap.html#a5858488cfbd50ec11fd2cf81d9615eee">Map.things</a></div><div class="ttdeci">List&lt; Thing &gt; things</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00049">Map.cs:49</a></div></div>
@@ -751,7 +756,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassZone_html_acef4329fb52efa341f2aa9c0bef7c968"><div class="ttname"><a href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">Zone.IsUnderwater</a></div><div class="ttdeci">virtual bool IsUnderwater</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00264">Zone.cs:264</a></div></div>
 <div class="ttc" id="aclassZone_html_af3a7bcf0f1c645ac02c3793e85700bf9"><div class="ttname"><a href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">Zone.AddCard</a></div><div class="ttdeci">Card AddCard(Card t, Point point)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01896">Zone.cs:1896</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l01896">Zone.AddCard()</a>, <a class="el" href="Zone_8cs_source.html#l00126">Zone.biome</a>, <a class="el" href="CoreRef_8cs_source.html#l00327">CoreRef.biomes</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00293">BiomeProfile.TileGroup.block</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00282">ChooseRoom()</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Crawler_8cs_source.html#l00057">Crawler.CrawlUntil()</a>, <a class="el" href="Crawler_8cs_source.html#l00190">Crawler.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00075">ThingGen.CreateFromCategory()</a>, <a class="el" href="Map_8cs_source.html#l00153">Map.CreateNew()</a>, <a class="el" href="Zone_8cs_source.html#l00107">Zone.DangerLv</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="GameSetting_8cs_source.html#l00270">GameSetting.GenSetting.defaultBlockHeight</a>, <a class="el" href="CoreRef_8cs_source.html#l00144">CoreRef.Biomes.dict</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00299">BiomeProfile.Style.doorChance</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00647">BiomeProfile.exterior</a>, <a class="el" href="SpawnSetting_8cs_source.html#l00136">SpawnSetting.Fish()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00291">BiomeProfile.TileGroup.floor</a>, <a class="el" href="Core_8cs_source.html#l00047">Core.gameSetting</a>, <a class="el" href="GameSetting_8cs_source.html#l00311">GameSetting.gen</a>, <a class="el" href="Zone_8cs_source.html#l00134">Zone.Generator</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00387">BiomeProfile.Style.GetIdDoor()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00356">BiomeProfile.Style.GetIdStairs()</a>, <a class="el" href="MATERIAL_8cs_source.html#l00081">MATERIAL.GetRandomMaterialFromCategory()</a>, <a class="el" href="Map_8cs_source.html#l02193">Map.GetRandomPoint()</a>, <a class="el" href="GenBounds_8cs_source.html#l00019">GenBounds.height</a>, <a class="el" href="GenRoom_8cs_source.html#l00023">GenRoom.Init()</a>, <a class="el" href="Card_8cs_source.html#l03504">Card.Install()</a>, <a class="el" href="Zone_8cs_source.html#l00264">Zone.IsUnderwater</a>, <a class="el" href="Zone_8cs_source.html#l00270">Zone.LockExit</a>, <a class="el" href="Spatial_8cs_source.html#l00142">Spatial.lv</a>, <a class="el" href="GenBounds_8cs_source.html#l00007">GenBounds.map</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00304">BiomeProfile.Style.matDoor</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00309">BiomeProfile.Style.matStairs</a>, <a class="el" href="Zone_8cs_source.html#l02551">Zone.OnGenerateRooms()</a>, <a class="el" href="Map_8cs_source.html#l00097">Map.poiMap</a>, <a class="el" href="GenRoom_8cs_source.html#l00041">GenRoom.Populate()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00665">BiomeProfile.Populate()</a>, <a class="el" href="Rand_8cs_source.html#l00042">Rand.Range()</a>, <a class="el" href="Map_8cs_source.html#l02086">Map.RefreshAllTiles()</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="Map_8cs_source.html#l00325">Map.ReloadRoom()</a>, <a class="el" href="POIMap_8cs_source.html#l00035">POIMap.Reset()</a>, <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rndSeed()</a>, <a class="el" href="Point_8cs_source.html#l00491">Point.Set()</a>, <a class="el" href="GenBounds_8cs_source.html#l00043">GenBounds.SetBlock()</a>, <a class="el" href="GenBounds_8cs_source.html#l00037">GenBounds.SetFloor()</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00091">BaseMapGen.SetSize()</a>, <a class="el" href="Map_8cs_source.html#l00181">Map.SetZone()</a>, <a class="el" href="Zone_8cs_source.html#l00361">Zone.ShouldMakeExit</a>, <a class="el" href="GenBounds_8cs_source.html#l00011">GenBounds.Size</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="Zone_8cs_source.html#l02569">Zone.SpawnMob()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00631">BiomeProfile.style</a>, <a class="el" href="Spatial_8cs_source.html#l00070">Spatial.uid</a>, <a class="el" href="GenBounds_8cs_source.html#l00017">GenBounds.width</a>, and <a class="el" href="GenBounds_8cs_source.html#l00009">GenBounds.zone</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l01896">Zone.AddCard()</a>, <a class="el" href="Zone_8cs_source.html#l00126">Zone.biome</a>, <a class="el" href="CoreRef_8cs_source.html#l00327">CoreRef.biomes</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00293">BiomeProfile.TileGroup.block</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba14511f2f5564650d129ca7cabc333278">block</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00287">ChooseRoom()</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Crawler_8cs_source.html#l00057">Crawler.CrawlUntil()</a>, <a class="el" href="Crawler_8cs_source.html#l00190">Crawler.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00075">ThingGen.CreateFromCategory()</a>, <a class="el" href="Map_8cs_source.html#l00153">Map.CreateNew()</a>, <a class="el" href="Zone_8cs_source.html#l00107">Zone.DangerLv</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="GameSetting_8cs_source.html#l00270">GameSetting.GenSetting.defaultBlockHeight</a>, <a class="el" href="CoreRef_8cs_source.html#l00144">CoreRef.Biomes.dict</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00299">BiomeProfile.Style.doorChance</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00647">BiomeProfile.exterior</a>, <a class="el" href="SpawnSetting_8cs_source.html#l00136">SpawnSetting.Fish()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00291">BiomeProfile.TileGroup.floor</a>, <a class="el" href="Core_8cs_source.html#l00047">Core.gameSetting</a>, <a class="el" href="GameSetting_8cs_source.html#l00311">GameSetting.gen</a>, <a class="el" href="Zone_8cs_source.html#l00134">Zone.Generator</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00387">BiomeProfile.Style.GetIdDoor()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00356">BiomeProfile.Style.GetIdStairs()</a>, <a class="el" href="MATERIAL_8cs_source.html#l00081">MATERIAL.GetRandomMaterialFromCategory()</a>, <a class="el" href="Map_8cs_source.html#l02193">Map.GetRandomPoint()</a>, <a class="el" href="GenBounds_8cs_source.html#l00019">GenBounds.height</a>, <a class="el" href="GenRoom_8cs_source.html#l00023">GenRoom.Init()</a>, <a class="el" href="Card_8cs_source.html#l03504">Card.Install()</a>, <a class="el" href="Zone_8cs_source.html#l00264">Zone.IsUnderwater</a>, <a class="el" href="Zone_8cs_source.html#l00270">Zone.LockExit</a>, <a class="el" href="Spatial_8cs_source.html#l00142">Spatial.lv</a>, <a class="el" href="GenBounds_8cs_source.html#l00007">GenBounds.map</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00304">BiomeProfile.Style.matDoor</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00309">BiomeProfile.Style.matStairs</a>, <a class="el" href="Zone_8cs_source.html#l02551">Zone.OnGenerateRooms()</a>, <a class="el" href="Map_8cs_source.html#l00097">Map.poiMap</a>, <a class="el" href="GenRoom_8cs_source.html#l00041">GenRoom.Populate()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00665">BiomeProfile.Populate()</a>, <a class="el" href="Rand_8cs_source.html#l00042">Rand.Range()</a>, <a class="el" href="Map_8cs_source.html#l02086">Map.RefreshAllTiles()</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="Map_8cs_source.html#l00325">Map.ReloadRoom()</a>, <a class="el" href="POIMap_8cs_source.html#l00035">POIMap.Reset()</a>, <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>, <a class="el" href="EClass_8cs_source.html#l00050">EClass.rndSeed()</a>, <a class="el" href="Point_8cs_source.html#l00491">Point.Set()</a>, <a class="el" href="GenBounds_8cs_source.html#l00043">GenBounds.SetBlock()</a>, <a class="el" href="GenBounds_8cs_source.html#l00037">GenBounds.SetFloor()</a>, <a class="el" href="BaseMapGen_8cs_source.html#l00091">BaseMapGen.SetSize()</a>, <a class="el" href="Map_8cs_source.html#l00181">Map.SetZone()</a>, <a class="el" href="Zone_8cs_source.html#l00361">Zone.ShouldMakeExit</a>, <a class="el" href="GenBounds_8cs_source.html#l00011">GenBounds.Size</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="Zone_8cs_source.html#l02569">Zone.SpawnMob()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00631">BiomeProfile.style</a>, <a class="el" href="Spatial_8cs_source.html#l00070">Spatial.uid</a>, <a class="el" href="GenBounds_8cs_source.html#l00017">GenBounds.width</a>, and <a class="el" href="GenBounds_8cs_source.html#l00009">GenBounds.zone</a>.</p>
 
 </div>
 </div>

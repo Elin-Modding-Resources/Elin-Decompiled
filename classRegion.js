@@ -7,7 +7,7 @@ var classRegion =
     [ "CreateZone", "classRegion.html#a98b2cc1888130954a1b264a0747373dc", null ],
     [ "GetRandomPoint", "classRegion.html#a036ce5fedf8aa267f23e7f6433bddf15", null ],
     [ "GetRandomPoint", "classRegion.html#a23e7e9b5fdd2af9f11ddef9caa9a5f94", null ],
-    [ "GetRandomPoint", "classRegion.html#a2b0914da44d635427467cd3611f78efb", null ],
+    [ "GetRandomPoint", "classRegion.html#afa918fe705236f60614c3d24ee804700", null ],
     [ "GetRandomSiteSource", "classRegion.html#a09503d19cb3e6be74f6070b2d940f27c", null ],
     [ "GetRandomTown", "classRegion.html#aa68093fe293fea6902df698a521c204b", null ],
     [ "InitElomap", "classRegion.html#a05ed7e0203400a7b627d3dbfb281d00e", null ],

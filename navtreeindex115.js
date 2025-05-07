@@ -1,5 +1,9 @@
 var NAVTREEINDEX115 =
 {
+"classTraitCurrencyMedal.html":[1,0,1486],
+"classTraitCurrencyMedal.html#a83af106650761bd1917199486fe112f2":[1,0,1486,0],
+"classTraitCurtain.html":[1,0,1487],
+"classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1487,3],
 "classTraitCurtain.html#a1f1e4de13216bc852a9ff429896d712e":[1,0,1487,1],
 "classTraitCurtain.html#a2b50ce8f3b99e7b80da8bc908409b8f0":[1,0,1487,4],
 "classTraitCurtain.html#a6d171ff8fd09f46803032f43954dd416":[1,0,1487,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitFactory.html#a4c38f7cc3a498750a2a11c75aa87460e":[1,0,1535,4],
 "classTraitFactory.html#a4ea2e3f2fa68547ae6f8664924ec1b1a":[1,0,1535,3],
 "classTraitFactory.html#a78d67401eceea58e197ddf83824dbf5e":[1,0,1535,1],
-"classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461":[1,0,1535,2],
-"classTraitFarmChest.html":[1,0,1536],
-"classTraitFarmChest.html#a24ba7195fdbb804198d179484cbcc0ad":[1,0,1536,1],
-"classTraitFarmChest.html#a2e5532fbdab692f8145e0aa82a785367":[1,0,1536,3],
-"classTraitFarmChest.html#a4ca85bab37d8bcb65709d7b9365e65d1":[1,0,1536,2]
+"classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461":[1,0,1535,2]
 };

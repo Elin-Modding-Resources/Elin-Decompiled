@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitButcher.html#af9cd246546f984180c50259ad6651217":[1,0,1438,3],
+"classTraitCage.html":[1,0,1439],
+"classTraitCage.html#ad30f8fdf75aa274c1a046adeaecc7a19":[1,0,1439,0],
+"classTraitCageBreeding.html":[1,0,1440],
 "classTraitCageBreeding.html#a779c81f89cd66f20077a888380404e22":[1,0,1440,1],
 "classTraitCageBreeding.html#aa7d49a6b01ba23fad87525861730ba91":[1,0,1440,0],
 "classTraitCamera.html":[1,0,1441],
@@ -245,9 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitCrenel.html#adb6e4a2b412ecdd0c4edb7895a11d7ea":[1,0,1484,0],
 "classTraitCrenel.html#adcc43621d3918d5e8df769c1445e7136":[1,0,1484,1],
 "classTraitCurrency.html":[1,0,1485],
-"classTraitCurrency.html#a8ad4ef6f66318b88486c825e591e4082":[1,0,1485,0],
-"classTraitCurrencyMedal.html":[1,0,1486],
-"classTraitCurrencyMedal.html#a83af106650761bd1917199486fe112f2":[1,0,1486,0],
-"classTraitCurtain.html":[1,0,1487],
-"classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1487,3]
+"classTraitCurrency.html#a8ad4ef6f66318b88486c825e591e4082":[1,0,1485,0]
 };

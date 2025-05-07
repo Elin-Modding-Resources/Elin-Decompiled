@@ -1,5 +1,8 @@
 var NAVTREEINDEX94 =
 {
+"classRenderCamUpscaler.html#aa10bcbf3e648c027795578d853c86ac7":[1,0,1075,4],
+"classRenderCamUpscaler.html#aab65262acea8b2f4747e86bcf7feb23e":[1,0,1075,5],
+"classRenderCamUpscaler.html#ab9c3bb082bc9d8536627330ae5887218":[1,0,1075,0],
 "classRenderCamUpscaler.html#ada9013fdf45b28a6da0751512580c546":[1,0,1075,2],
 "classRenderCamUpscaler.html#ade91a5427932d60516ba11f75f87714d":[1,0,1075,7],
 "classRenderCamUpscaler.html#ae1ad368123b964350ad04e7450e70346":[1,0,1075,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX94 =
 "classResearchPlan.html#a454e0eeec8637a381bbda4076d8b5916":[1,0,1096,4],
 "classResearchPlan.html#a7222857b06542721e27348e75314560c":[1,0,1096,9],
 "classResearchPlan.html#a824ddaf03c475f68d5770026932b6710":[1,0,1096,12],
-"classResearchPlan.html#a86c8d7af5d6f4ecfa02972017349d7df":[1,0,1096,7],
-"classResearchPlan.html#a955b74f680a1bbd826b71d163c3701ed":[1,0,1096,1],
-"classResearchPlan.html#aba4d54a4726b097a85b1896147e65260":[1,0,1096,15],
-"classResearchPlan.html#aba7f3a94a7cb52306ffeb7de8ca99c5a":[1,0,1096,14]
+"classResearchPlan.html#a86c8d7af5d6f4ecfa02972017349d7df":[1,0,1096,7]
 };

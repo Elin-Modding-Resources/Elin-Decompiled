@@ -1,5 +1,8 @@
 var NAVTREEINDEX72 =
 {
+"classInvOwner_1_1Transaction.html#a45e24c0159e7f0e0288c4abcde6433eb":[1,0,671,4,11],
+"classInvOwner_1_1Transaction.html#a4b8e7de3da63be19ac567f00f2e3b9cf":[1,0,671,4,9],
+"classInvOwner_1_1Transaction.html#a51b38c2d27fab3d29665ed30012366fb":[1,0,671,4,13],
 "classInvOwner_1_1Transaction.html#a5b03e99859db856c3051bb6c22ce3fd2":[1,0,671,4,18],
 "classInvOwner_1_1Transaction.html#a655b7399f737d4abdb6054d131f7899d":[1,0,671,4,19],
 "classInvOwner_1_1Transaction.html#a98a60c562e298491e981b826c56fc951":[1,0,671,4,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX72 =
 "classLangList_1_1Row.html#a30da2113b75fcb173e51afb90c0019d1":[1,0,739,0,5],
 "classLangList_1_1Row.html#a354bf2c74b732b0dfc2f6e3cd5ffd286":[1,0,739,0,4],
 "classLangList_1_1Row.html#a3e0c2b6bd5517e135c4159091ba19b11":[1,0,739,0,2],
-"classLangList_1_1Row.html#ab6284f71401716dd6d759d77d595ec49":[1,0,739,0,6],
-"classLangList_1_1Row.html#acfca6761a35811ac53f416cf6158469b":[1,0,739,0,3],
-"classLangNote.html":[1,0,740],
-"classLangNote.html#a844a6afdef40f6894ced249f26dda0b6":[1,0,740,1]
+"classLangList_1_1Row.html#ab6284f71401716dd6d759d77d595ec49":[1,0,739,0,6]
 };

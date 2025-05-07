@@ -1,5 +1,9 @@
 var NAVTREEINDEX120 =
 {
+"classTraitShackle.html#a2d6c3adbbaa632d21cc6b49444b7a6f1":[1,0,1773,0],
+"classTraitShackle.html#a3ddb785981a40e16a321f2f3edd274f6":[1,0,1773,3],
+"classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea":[1,0,1773,2],
+"classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1773,8],
 "classTraitShackle.html#ab5a93c54ff3fb2a6abcf850cb02eb3b4":[1,0,1773,4],
 "classTraitShackle.html#ae2f48b61df0b7b07d44db68f247d22d1":[1,0,1773,5],
 "classTraitShippingChest.html":[1,0,1774],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitToolButcher.html#a0103466a2e9987634cc7f73461ec8aaa":[1,0,1838,1],
 "classTraitToolButcher.html#a3de7c0c977df29e7f3fb7309e820117f":[1,0,1838,0],
 "classTraitToolFishing.html":[1,0,1839],
-"classTraitToolHammer.html":[1,0,1840],
-"classTraitToolLoom.html":[1,0,1841],
-"classTraitToolMusic.html":[1,0,1842],
-"classTraitToolMusic.html#a6c7c055a5a8b58dd04965de99fce74be":[1,0,1842,0],
-"classTraitToolMusic.html#a781fb5d77ac59a1293edca876030cf25":[1,0,1842,1]
+"classTraitToolHammer.html":[1,0,1840]
 };

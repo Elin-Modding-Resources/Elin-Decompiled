@@ -1,5 +1,9 @@
 var NAVTREEINDEX118 =
 {
+"classTraitMerchantMagic.html#aab92dce618d7f6d3998faa77a0c058c2":[1,0,1663,0],
+"classTraitMerchantMap.html":[1,0,1664],
+"classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1664,1],
+"classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1664,0],
 "classTraitMerchantMeat.html":[1,0,1665],
 "classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1665,0],
 "classTraitMerchantMilk.html":[1,0,1666],
@@ -245,9 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18":[1,0,1727,2],
 "classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1727,7],
 "classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1727,5],
-"classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1727,6],
-"classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1727,4],
-"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1727,1],
-"classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1727,3],
-"classTraitPunishBall.html":[1,0,1728]
+"classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1727,6]
 };
