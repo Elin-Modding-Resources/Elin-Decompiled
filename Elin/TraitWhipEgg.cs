@@ -1,5 +1,10 @@
 public class TraitWhipEgg : TraitWhipLove
 {
+	public override void OnCreate(int lv)
+	{
+		owner.c_charges = 6;
+	}
+
 	public override void TrySetHeldAct(ActPlan p)
 	{
 		p.pos.ListCards().ForEach(delegate(Card c)
@@ -26,6 +31,7 @@ public class TraitWhipEgg : TraitWhipLove
 						EClass.pc.Say("spellbookCrumble", owner);
 						owner.Destroy();
 					}
+					EClass.player.ModKarma(-1);
 					return true;
 				}, c);
 			}

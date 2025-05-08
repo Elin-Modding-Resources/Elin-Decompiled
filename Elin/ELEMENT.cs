@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
+	public const int comfort = 750;
+
 	public const int rare = 751;
 
 	public const int cute = 752;
@@ -23,7 +25,7 @@ public class ELEMENT
 
 	public const int roasted = 762;
 
-	public const int comfort = 750;
+	public const int air = 763;
 
 	public const int purity = 759;
 
@@ -73,12 +75,12 @@ public class ELEMENT
 
 	public const int poison = 20;
 
-	public static readonly int[] IDS = new int[34]
+	public static readonly int[] IDS = new int[35]
 	{
-		751, 752, 753, 754, 755, 756, 760, 761, 762, 750,
-		759, 0, 3, 1, 2, 5, 10, 11, 12, 13,
-		14, 16, 17, 18, 15, 21, 22, 23, 24, 25,
-		26, 29, 85, 20
+		750, 751, 752, 753, 754, 755, 756, 760, 761, 762,
+		763, 759, 0, 3, 1, 2, 5, 10, 11, 12,
+		13, 14, 16, 17, 18, 15, 21, 22, 23, 24,
+		25, 26, 29, 85, 20
 	};
 }
 public class Element : EClass

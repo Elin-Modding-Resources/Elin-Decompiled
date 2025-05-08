@@ -1655,6 +1655,7 @@ public class Chara : Card, IPathfindWalker
 		if (body.GetSlot(37, onlyEmpty: false)?.thing != null && HasElement(1209))
 		{
 			_Speed -= 25;
+			info?.AddText(-25, EClass.sources.elements.map[1209].GetName());
 		}
 		if (parasite != null)
 		{

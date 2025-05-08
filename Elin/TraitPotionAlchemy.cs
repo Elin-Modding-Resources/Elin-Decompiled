@@ -40,6 +40,9 @@ public class TraitPotionAlchemy : TraitPotionRandom
 			case 756:
 				num = 8506;
 				break;
+			case 763:
+				num = 8507;
+				break;
 			}
 			if (num != 0)
 			{

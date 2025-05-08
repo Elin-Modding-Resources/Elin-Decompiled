@@ -54,7 +54,7 @@ public class SPELL
 
 	public const int hand_Holy = 50409;
 
-	public const int hand_Void = 50416;
+	public const int weapon_Nether = 50806;
 
 	public const int miasma_Nether = 50706;
 
@@ -70,9 +70,9 @@ public class SPELL
 
 	public const int puddle_Mind = 50904;
 
-	public const int sword_Mind = 51004;
-
 	public const int weapon_Void = 50816;
+
+	public const int sword_Mind = 51004;
 
 	public const int ball_Poison = 50105;
 
@@ -90,9 +90,9 @@ public class SPELL
 
 	public const int weapon_Poison = 50805;
 
-	public const int puddle_Poison = 50905;
-
 	public const int funnel_Void = 50616;
+
+	public const int puddle_Poison = 50905;
 
 	public const int sword_Poison = 51005;
 
@@ -108,7 +108,7 @@ public class SPELL
 
 	public const int funnel_Nether = 50606;
 
-	public const int weapon_Nether = 50806;
+	public const int hand_Void = 50416;
 
 	public const int bolt_Impact = 50315;
 
@@ -228,11 +228,9 @@ public class SPELL
 
 	public const int funnel_Acid = 50613;
 
-	public const int weapon_Fire = 50800;
+	public const int miasma_Fire = 50700;
 
 	public const int sword_Darkness = 51003;
-
-	public const int SpHealLight = 8400;
 
 	public const int SpHealHeavy = 8401;
 
@@ -258,11 +256,11 @@ public class SPELL
 
 	public const int SpRemoveHex = 8490;
 
-	public const int SpWish = 8390;
-
 	public const int SpVanishHex = 8491;
 
-	public const int SpCatsEye = 8501;
+	public const int SpHealLight = 8400;
+
+	public const int SpHolyVeil = 8500;
 
 	public const int SpHolyShield = 8502;
 
@@ -271,6 +269,8 @@ public class SPELL
 	public const int SpHero = 8504;
 
 	public const int SpResEle = 8506;
+
+	public const int SpBreath = 8507;
 
 	public const int SpSpeedUp = 8510;
 
@@ -288,13 +288,13 @@ public class SPELL
 
 	public const int SpBane = 8706;
 
-	public const int SpHolyVeil = 8500;
+	public const int SpCatsEye = 8501;
 
-	public const int SpGravity = 8708;
+	public const int SpWish = 8390;
 
 	public const int SpMutation = 8380;
 
-	public const int SpReconstruction = 8288;
+	public const int SpLevitate = 8300;
 
 	public const int ball_ = 7001;
 
@@ -322,9 +322,9 @@ public class SPELL
 
 	public const int SpReturn = 8220;
 
-	public const int SpLevitate = 8300;
-
 	public const int SpEvac = 8221;
+
+	public const int SpIdentify = 8230;
 
 	public const int SpIdentifyG = 8232;
 
@@ -352,11 +352,13 @@ public class SPELL
 
 	public const int SpChangeMaterialG = 8286;
 
-	public const int SpIdentify = 8230;
+	public const int SpReconstruction = 8288;
+
+	public const int SpGravity = 8708;
+
+	public const int ball_Mind = 50104;
 
 	public const int SpSpeedDown = 8710;
-
-	public const int SpTelepathy = 8770;
 
 	public const int SpInvisibility = 8775;
 
@@ -386,7 +388,7 @@ public class SPELL
 
 	public const int bolt_Lightning = 50302;
 
-	public const int miasma_Fire = 50700;
+	public const int weapon_Fire = 50800;
 
 	public const int hand_Lightning = 50402;
 
@@ -482,37 +484,37 @@ public class SPELL
 
 	public const int bolt_Fire = 50300;
 
-	public const int ball_Mind = 50104;
+	public const int SpTelepathy = 8770;
 
 	public const int sword_Void = 51016;
 
-	public static readonly int[] IDS = new int[243]
+	public static readonly int[] IDS = new int[244]
 	{
 		50415, 51006, 50107, 50316, 50307, 50407, 50507, 50607, 50707, 50807,
 		50907, 51007, 50108, 50116, 50308, 50408, 50508, 50608, 50708, 50808,
-		50908, 51008, 50109, 51015, 50309, 50906, 50409, 50416, 50706, 50404,
-		50504, 50604, 50704, 50804, 50904, 51004, 50816, 50105, 50716, 50305,
-		50405, 50505, 50605, 50705, 50805, 50905, 50616, 51005, 50106, 50516,
-		50306, 50406, 50506, 50606, 50806, 50315, 50509, 50709, 50712, 50812,
+		50908, 51008, 50109, 51015, 50309, 50906, 50409, 50806, 50706, 50404,
+		50504, 50604, 50704, 50804, 50904, 50816, 51004, 50105, 50716, 50305,
+		50405, 50505, 50605, 50705, 50805, 50616, 50905, 51005, 50106, 50516,
+		50306, 50406, 50506, 50606, 50416, 50315, 50509, 50709, 50712, 50812,
 		50912, 51012, 50113, 50615, 50313, 50413, 50513, 50304, 50713, 50813,
 		50913, 51013, 50114, 50515, 50314, 50414, 50514, 50614, 50714, 50814,
 		50914, 51014, 50115, 50612, 50609, 50512, 50312, 50809, 50909, 51009,
 		50110, 50915, 50310, 50410, 50510, 50610, 50710, 50810, 50910, 51010,
 		50111, 50815, 50311, 50411, 50511, 50611, 50711, 50811, 50911, 51011,
-		50112, 50715, 50412, 50613, 50800, 51003, 8400, 8401, 8402, 8403,
-		8404, 8405, 8406, 8430, 8450, 8470, 8471, 8480, 8490, 8390,
-		8491, 8501, 8502, 8503, 8504, 8506, 8510, 8550, 8555, 8700,
-		8702, 8704, 8705, 8706, 8500, 8708, 8380, 8288, 7001, 7002,
+		50112, 50715, 50412, 50613, 50700, 51003, 8401, 8402, 8403, 8404,
+		8405, 8406, 8430, 8450, 8470, 8471, 8480, 8490, 8491, 8400,
+		8500, 8502, 8503, 8504, 8506, 8507, 8510, 8550, 8555, 8700,
+		8702, 8704, 8705, 8706, 8501, 8390, 8380, 8300, 7001, 7002,
 		7003, 7004, 7005, 7006, 7007, 7008, 7800, 8200, 8201, 8202,
-		8220, 8300, 8221, 8232, 8240, 8241, 8250, 8251, 8255, 8256,
-		8260, 8280, 8281, 8284, 8285, 8286, 8230, 8710, 8770, 8775,
-		50900, 51000, 50101, 50301, 50401, 50501, 50601, 50701, 50801, 50901,
-		51001, 50102, 50302, 50700, 50402, 50602, 50702, 50802, 50902, 51002,
-		50103, 50303, 50403, 50503, 50603, 50703, 50803, 50903, 50502, 50600,
-		50500, 50400, 8776, 8780, 8790, 8791, 8800, 8801, 9000, 9001,
-		9002, 9003, 9004, 9005, 9006, 9007, 9008, 9009, 9010, 9050,
-		9150, 9151, 9160, 9200, 9500, 9501, 9502, 9503, 50100, 50916,
-		50300, 50104, 51016
+		8220, 8221, 8230, 8232, 8240, 8241, 8250, 8251, 8255, 8256,
+		8260, 8280, 8281, 8284, 8285, 8286, 8288, 8708, 50104, 8710,
+		8775, 50900, 51000, 50101, 50301, 50401, 50501, 50601, 50701, 50801,
+		50901, 51001, 50102, 50302, 50800, 50402, 50602, 50702, 50802, 50902,
+		51002, 50103, 50303, 50403, 50503, 50603, 50703, 50803, 50903, 50502,
+		50600, 50500, 50400, 8776, 8780, 8790, 8791, 8800, 8801, 9000,
+		9001, 9002, 9003, 9004, 9005, 9006, 9007, 9008, 9009, 9010,
+		9050, 9150, 9151, 9160, 9200, 9500, 9501, 9502, 9503, 50100,
+		50916, 50300, 8770, 51016
 	};
 }
 public class Spell : Ability

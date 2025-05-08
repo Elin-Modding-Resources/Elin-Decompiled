@@ -2585,9 +2585,9 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 		}
 		BiomeProfile biome = pos.cell.biome;
-		if (IsUnderwater && EClass.rnd(10) != 0)
+		if (IsUnderwater && EClass.rnd(15) != 0)
 		{
-			biome = ((EClass.rnd(3) == 0) ? EClass.core.refs.biomes.Water : EClass.core.refs.biomes.Sand);
+			biome = ((EClass.rnd(4) != 0) ? EClass.core.refs.biomes.Water : EClass.core.refs.biomes.Sand);
 		}
 		SpawnList spawnList = null;
 		spawnList = ((setting.idSpawnList != null) ? SpawnList.Get(setting.idSpawnList) : ((EClass._zone is Zone_DungeonYeek) ? SpawnListChara.Get("dungeon_yeek", (SourceChara.Row r) => r.race == "yeek") : ((setting.hostility == SpawnHostility.Neutral || (setting.hostility != SpawnHostility.Enemy && Rand.Range(0f, 1f) < ChanceSpawnNeutral)) ? SpawnList.Get("c_neutral") : ((biome.spawn.chara.Count <= 0) ? SpawnList.Get(biome.name, "chara", new CharaFilter

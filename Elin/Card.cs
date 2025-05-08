@@ -4877,6 +4877,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						list.Add(ThingGen.Create("crystal_earth"));
 					}
 					break;
+				case "golem_fish":
 				case "golem_stone":
 					if (chance(30))
 					{
@@ -6743,6 +6744,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public virtual int GetPrice(CurrencyType currency = CurrencyType.Money, bool sell = false, PriceType priceType = PriceType.Default, Chara c = null)
 	{
+		if (priceType == PriceType.CopyShop && sell)
+		{
+			return 0;
+		}
 		if (!sell)
 		{
 			if (id == "littleball")
