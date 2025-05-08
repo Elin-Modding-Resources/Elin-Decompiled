@@ -83,7 +83,7 @@ public class TooltipManager : MonoBehaviour
 			}
 		}
 		uITooltip.transform.position = vector + data.offset + uITooltip.offset;
-		Util.ClampToScreen(uITooltip.Rect(), 50);
+		Util.ClampToScreen(uITooltip.Rect(), 20);
 	}
 
 	public void HideTooltips(bool immediate = false)
