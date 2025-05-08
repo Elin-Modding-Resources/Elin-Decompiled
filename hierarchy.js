@@ -424,6 +424,7 @@ var hierarchy =
             [ "BaseDebuff", "classBaseDebuff.html", [
               [ "BaseBuff", "classBaseBuff.html", [
                 [ "ConBoost", "classConBoost.html", null ],
+                [ "ConBreath", "classConBreath.html", null ],
                 [ "ConBrightnessOfLife", "classConBrightnessOfLife.html", null ],
                 [ "ConChampagne", "classConChampagne.html", null ],
                 [ "ConDrawBacker", "classConDrawBacker.html", null ],
@@ -2034,6 +2035,7 @@ var hierarchy =
     [ "WidgetHP.Extra", "classWidgetHP_1_1Extra.html", null ],
     [ "WidgetInspector.Extra", "classWidgetInspector_1_1Extra.html", null ],
     [ "WidgetMainText.Extra", "classWidgetMainText_1_1Extra.html", null ],
+    [ "WidgetMemo.Extra", "classWidgetMemo_1_1Extra.html", null ],
     [ "WidgetMenuPanel.Extra", "classWidgetMenuPanel_1_1Extra.html", null ],
     [ "WidgetMinimap.Extra", "classWidgetMinimap_1_1Extra.html", null ],
     [ "WidgetNotice.Extra", "classWidgetNotice_1_1Extra.html", null ],

@@ -1,6 +1,7 @@
 var classELEMENT =
 [
     [ "_void", "classELEMENT.html#a6aae5b6161ecec65018e09a2a7f142e2", null ],
+    [ "air", "classELEMENT.html#a17143096cacb61a317ebee675486c889", null ],
     [ "antidote", "classELEMENT.html#a2743ff5153f063e03f345b228c8881ea", null ],
     [ "blood", "classELEMENT.html#aec0564d55b447cbe33461f9408397aa5", null ],
     [ "comfort", "classELEMENT.html#a433604087fe654f291b541133f60e449", null ],

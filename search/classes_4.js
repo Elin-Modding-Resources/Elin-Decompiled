@@ -13,8 +13,8 @@ var searchData=
   ['egraphic_10',['EGraphic',['../classEGraphic.html',1,'']]],
   ['einput_11',['EInput',['../classEInput.html',1,'']]],
   ['elayer_12',['ELayer',['../classELayer.html',1,'']]],
-  ['element_13',['ELEMENT',['../classELEMENT.html',1,'']]],
-  ['element_14',['Element',['../classElement.html',1,'']]],
+  ['element_13',['Element',['../classElement.html',1,'']]],
+  ['element_14',['ELEMENT',['../classELEMENT.html',1,'']]],
   ['elementcontainer_15',['ElementContainer',['../classElementContainer.html',1,'']]],
   ['elementcontainercard_16',['ElementContainerCard',['../classElementContainerCard.html',1,'']]],
   ['elementcontainerfaction_17',['ElementContainerFaction',['../classElementContainerFaction.html',1,'']]],
@@ -49,6 +49,6 @@ var searchData=
   ['expeditionmanager_46',['ExpeditionManager',['../classExpeditionManager.html',1,'']]],
   ['extensionfilter_47',['ExtensionFilter',['../structSFB_1_1ExtensionFilter.html',1,'SFB']]],
   ['extensions_48',['Extensions',['../classEmpyrean_1_1Utils_1_1Extensions.html',1,'Empyrean::Utils']]],
-  ['extra_49',['Extra',['../classWidgetBottomBar_1_1Extra.html',1,'WidgetBottomBar.Extra'],['../classWidgetCurrentTool_1_1Extra.html',1,'WidgetCurrentTool.Extra'],['../classWidgetDate_1_1Extra.html',1,'WidgetDate.Extra'],['../classWidgetEquip_1_1Extra.html',1,'WidgetEquip.Extra'],['../classWidgetExp_1_1Extra.html',1,'WidgetExp.Extra'],['../classWidgetExpHome_1_1Extra.html',1,'WidgetExpHome.Extra'],['../classWidgetFeed_1_1Extra.html',1,'WidgetFeed.Extra'],['../classWidgetHotbar_1_1Extra.html',1,'WidgetHotbar.Extra'],['../classWidgetHP_1_1Extra.html',1,'WidgetHP.Extra'],['../classWidgetInspector_1_1Extra.html',1,'WidgetInspector.Extra'],['../classWidgetMainText_1_1Extra.html',1,'WidgetMainText.Extra'],['../classWidgetMenuPanel_1_1Extra.html',1,'WidgetMenuPanel.Extra'],['../classWidgetMinimap_1_1Extra.html',1,'WidgetMinimap.Extra'],['../classWidgetNotice_1_1Extra.html',1,'WidgetNotice.Extra'],['../classWidgetRoster_1_1Extra.html',1,'WidgetRoster.Extra'],['../classWidgetSearch_1_1Extra.html',1,'WidgetSearch.Extra'],['../classWidgetSideScreen_1_1Extra.html',1,'WidgetSideScreen.Extra'],['../classWidgetStatsBar_1_1Extra.html',1,'WidgetStatsBar.Extra'],['../classWidgetSticky_1_1Extra.html',1,'WidgetSticky.Extra'],['../classWidgetTracker_1_1Extra.html',1,'WidgetTracker.Extra']]],
+  ['extra_49',['Extra',['../classWidgetBottomBar_1_1Extra.html',1,'WidgetBottomBar.Extra'],['../classWidgetCurrentTool_1_1Extra.html',1,'WidgetCurrentTool.Extra'],['../classWidgetDate_1_1Extra.html',1,'WidgetDate.Extra'],['../classWidgetEquip_1_1Extra.html',1,'WidgetEquip.Extra'],['../classWidgetExp_1_1Extra.html',1,'WidgetExp.Extra'],['../classWidgetExpHome_1_1Extra.html',1,'WidgetExpHome.Extra'],['../classWidgetFeed_1_1Extra.html',1,'WidgetFeed.Extra'],['../classWidgetHotbar_1_1Extra.html',1,'WidgetHotbar.Extra'],['../classWidgetHP_1_1Extra.html',1,'WidgetHP.Extra'],['../classWidgetInspector_1_1Extra.html',1,'WidgetInspector.Extra'],['../classWidgetMainText_1_1Extra.html',1,'WidgetMainText.Extra'],['../classWidgetMemo_1_1Extra.html',1,'WidgetMemo.Extra'],['../classWidgetMenuPanel_1_1Extra.html',1,'WidgetMenuPanel.Extra'],['../classWidgetMinimap_1_1Extra.html',1,'WidgetMinimap.Extra'],['../classWidgetNotice_1_1Extra.html',1,'WidgetNotice.Extra'],['../classWidgetRoster_1_1Extra.html',1,'WidgetRoster.Extra'],['../classWidgetSearch_1_1Extra.html',1,'WidgetSearch.Extra'],['../classWidgetSideScreen_1_1Extra.html',1,'WidgetSideScreen.Extra'],['../classWidgetStatsBar_1_1Extra.html',1,'WidgetStatsBar.Extra'],['../classWidgetSticky_1_1Extra.html',1,'WidgetSticky.Extra'],['../classWidgetTracker_1_1Extra.html',1,'WidgetTracker.Extra']]],
   ['extrahint_50',['ExtraHint',['../classExtraHint.html',1,'']]]
 ];
