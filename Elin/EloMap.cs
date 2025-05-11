@@ -378,6 +378,10 @@ public class EloMap : EClass
 			return false;
 		}
 		SourceGlobalTile.Row row = GetSources(gx, gy).LastItem();
+		if (row == null)
+		{
+			return false;
+		}
 		switch (type)
 		{
 		case ElomapSiteType.NefiaWater:

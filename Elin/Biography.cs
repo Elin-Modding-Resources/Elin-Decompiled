@@ -462,21 +462,19 @@ public class Biography : EClass
 
 	public void SetPortrait(Chara c)
 	{
-		string id = c.id;
-		if (!(id == "shojo"))
+		switch (c.id)
 		{
-			if (id == "sister")
-			{
-				c.c_idPortrait = Portrait.GetRandomPortrait("special_f-littlesister");
-			}
-			else
-			{
-				c.c_idPortrait = Portrait.GetRandomPortrait(gender, c.GetIdPortraitCat());
-			}
-		}
-		else
-		{
+		case "shojo":
 			c.c_idPortrait = Portrait.GetRandomPortrait("special_f-littlegirl");
+			break;
+		case "sister":
+		case "sister_shark":
+		case "sister_penguin":
+			c.c_idPortrait = Portrait.GetRandomPortrait("special_f-littlesister");
+			break;
+		default:
+			c.c_idPortrait = Portrait.GetRandomPortrait(gender, c.GetIdPortraitCat());
+			break;
 		}
 	}
 

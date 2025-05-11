@@ -124,6 +124,22 @@ public class QuestManager : EClass
 		});
 	}
 
+	public bool IsAdded<T>() where T : Quest
+	{
+		if (IsStarted<T>())
+		{
+			return true;
+		}
+		foreach (Quest global in globalList)
+		{
+			if (global is T)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public bool IsStarted<T>() where T : Quest
 	{
 		return GetPhase<T>() != -1;

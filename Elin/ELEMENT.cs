@@ -624,7 +624,7 @@ public class Element : EClass
 					switch (act.id)
 					{
 					case 6902:
-						condition.SetRefVal(79, 267);
+						condition.SetRefVal(79, 268);
 						break;
 					case 8510:
 					case 8710:

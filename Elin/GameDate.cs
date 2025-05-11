@@ -193,6 +193,10 @@ public class GameDate : Date
 		{
 			EClass.game.quests.Add("fiama_starter_gift", "fiama");
 		}
+		if (EClass.game.quests.completedIDs.Contains("demitas_spellwriter") && !EClass.game.quests.IsAdded<QuestNegotiationDarkness>())
+		{
+			EClass.game.quests.Add("negotiation_darkness", "loytel");
+		}
 		if (EClass.game.quests.IsCompleted("exploration"))
 		{
 			EClass.player.flags.daysAfterQuestExploration++;

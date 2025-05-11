@@ -1594,7 +1594,7 @@ public class Thing : Card
 		{
 			return false;
 		}
-		if (to.c_priceAdd != base.c_priceAdd || to.c_priceFix != base.c_priceFix)
+		if (to.c_priceAdd != base.c_priceAdd || to.c_priceFix != base.c_priceFix || to.c_priceCopy != base.c_priceCopy)
 		{
 			return false;
 		}

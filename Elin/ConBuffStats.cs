@@ -27,7 +27,7 @@ public class ConBuffStats : Condition
 
 	public override int EvaluateTurn(int p)
 	{
-		if (base.refVal2 == 267)
+		if (base.refVal2 == 268)
 		{
 			return 7;
 		}
@@ -95,7 +95,7 @@ public class ConBuffStats : Condition
 
 	public int CalcValue()
 	{
-		if (base.refVal2 == 267)
+		if (base.refVal2 == 268)
 		{
 			return 100 + (int)Mathf.Sqrt(base.power) * 2;
 		}

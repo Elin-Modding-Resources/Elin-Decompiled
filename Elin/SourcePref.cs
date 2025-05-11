@@ -313,6 +313,8 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 
 	public bool Surface => (ints[1] & 8) != 0;
 
+	public bool FloatUnderwater => (ints[1] & 0x10) != 0;
+
 	public void OnAfterDeserialize()
 	{
 		if (ints.Length >= 25)
