@@ -1054,6 +1054,7 @@ var hierarchy =
             [ "QuestIntoDarkness", "classQuestIntoDarkness.html", null ],
             [ "QuestIntroInspector", "classQuestIntroInspector.html", null ],
             [ "QuestLoytelFarm", "classQuestLoytelFarm.html", null ],
+            [ "QuestNegotiationDarkness", "classQuestNegotiationDarkness.html", null ],
             [ "QuestPuppy", "classQuestPuppy.html", null ],
             [ "QuestSharedContainer", "classQuestSharedContainer.html", null ],
             [ "QuestShippingChest", "classQuestShippingChest.html", null ],

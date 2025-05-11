@@ -1,5 +1,12 @@
 var NAVTREEINDEX65 =
 {
+"classGameSetting_1_1RenderSetting_1_1ZSetting.html#aee8e7888958b0a929c157d13cac1a4ae":[1,0,523,6,6,5],
+"classGameSetting_1_1StartSetting.html":[1,0,523,7],
+"classGameSetting_1_1StartSetting.html#a9f9746e7ae5db153c3d684a47f2c76cd":[1,0,523,7,0],
+"classGameSetting_1_1StartSetting.html#ab02132a4c8e7cec0c244444007cc2bff":[1,0,523,7,1],
+"classGameSetting_1_1StartSetting.html#ac3275f8c582f7c122a0f49c351eac207":[1,0,523,7,2],
+"classGameSetting_1_1TransData.html":[1,0,523,8],
+"classGameSetting_1_1TransData.html#a4f9a112181feb34e224f02ac4d48a4bc":[1,0,523,8,1],
 "classGameSetting_1_1TransData.html#a7a9e08b98ec9d727474754b1b66468ea":[1,0,523,8,2],
 "classGameSetting_1_1TransData.html#aabfa6ead5a8f3f0e2d584dec173f88b9":[1,0,523,8,0],
 "classGameSetting_1_1UISetting.html":[1,0,523,9],
@@ -242,12 +249,5 @@ var NAVTREEINDEX65 =
 "classGoalCombat_1_1ItemAbility.html#a3872003f56fd33309f72357312d42e6e":[1,0,540,0,3],
 "classGoalCombat_1_1ItemAbility.html#a4aeca13577ef7bbd5b102700c9255c1d":[1,0,540,0,5],
 "classGoalCombat_1_1ItemAbility.html#a5116fc5650b4369494f1290fb9e80379":[1,0,540,0,4],
-"classGoalCombat_1_1ItemAbility.html#a5b30a9350a54d8b8fde1104000a1060f":[1,0,540,0,0],
-"classGoalCombat_1_1ItemAbility.html#a8c7ec2bf97dd92ac046c4b0cf189ff7b":[1,0,540,0,1],
-"classGoalEndTurn.html":[1,0,541],
-"classGoalEndTurn.html#a207648cf696513dbca960c9c1f6adca4":[1,0,541,0],
-"classGoalEndTurn.html#afef9d655986c1e102ab5dcf79b594e68":[1,0,541,1],
-"classGoalGraze.html":[1,0,542],
-"classGoalGraze.html#a2b1565ee34febf7be0ff0ece785427f5":[1,0,542,0],
-"classGoalGraze.html#aa2efa0d49a8622cfb1d8712b0edf4fb8":[1,0,542,2]
+"classGoalCombat_1_1ItemAbility.html#a5b30a9350a54d8b8fde1104000a1060f":[1,0,540,0,0]
 };

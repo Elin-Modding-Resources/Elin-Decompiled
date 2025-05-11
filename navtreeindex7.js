@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GoalListType_8cs.html":[2,0,0,512],
 "GoalListType_8cs.html#acc2c91e20349cba5b506a76e93e038b9":[2,0,0,512,0],
 "GoalListType_8cs.html#acc2c91e20349cba5b506a76e93e038b9a6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,512,0,0],
 "GoalListType_8cs.html#acc2c91e20349cba5b506a76e93e038b9a8c6d21187fb58b7a079d70030686b33e":[2,0,0,512,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HotItemActionSleep_8cs.html":[2,0,0,588],
 "HotItemActionSleep_8cs_source.html":[2,0,0,588],
 "HotItemChara_8cs.html":[2,0,0,589],
-"HotItemChara_8cs_source.html":[2,0,0,589],
-"HotItemContext_8cs.html":[2,0,0,590]
+"HotItemChara_8cs_source.html":[2,0,0,589]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"HotItemContext_8cs.html":[2,0,0,590],
 "HotItemContext_8cs_source.html":[2,0,0,590],
 "HotItemEQSet_8cs.html":[2,0,0,591],
 "HotItemEQSet_8cs_source.html":[2,0,0,591],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "ItemGachaResult_8cs.html":[2,0,0,670],
 "ItemGachaResult_8cs_source.html":[2,0,0,670],
 "ItemGeneral_8cs.html":[2,0,0,671],
-"ItemGeneral_8cs_source.html":[2,0,0,671],
-"ItemHomeResource_8cs.html":[2,0,0,672]
+"ItemGeneral_8cs_source.html":[2,0,0,671]
 };

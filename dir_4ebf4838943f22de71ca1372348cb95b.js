@@ -935,6 +935,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "QuestMeal_soup.cs", "QuestMeal__soup_8cs.html", "QuestMeal__soup_8cs" ],
     [ "QuestMeal_vegi.cs", "QuestMeal__vegi_8cs.html", "QuestMeal__vegi_8cs" ],
     [ "QuestMusic.cs", "QuestMusic_8cs.html", "QuestMusic_8cs" ],
+    [ "QuestNegotiationDarkness.cs", "QuestNegotiationDarkness_8cs.html", "QuestNegotiationDarkness_8cs" ],
     [ "QuestProgression.cs", "QuestProgression_8cs.html", "QuestProgression_8cs" ],
     [ "QuestPuppy.cs", "QuestPuppy_8cs.html", "QuestPuppy_8cs" ],
     [ "QuestRandom.cs", "QuestRandom_8cs.html", "QuestRandom_8cs" ],

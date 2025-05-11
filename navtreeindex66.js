@@ -1,5 +1,12 @@
 var NAVTREEINDEX66 =
 {
+"classGoalCombat_1_1ItemAbility.html#a8c7ec2bf97dd92ac046c4b0cf189ff7b":[1,0,540,0,1],
+"classGoalEndTurn.html":[1,0,541],
+"classGoalEndTurn.html#a207648cf696513dbca960c9c1f6adca4":[1,0,541,0],
+"classGoalEndTurn.html#afef9d655986c1e102ab5dcf79b594e68":[1,0,541,1],
+"classGoalGraze.html":[1,0,542],
+"classGoalGraze.html#a2b1565ee34febf7be0ff0ece785427f5":[1,0,542,0],
+"classGoalGraze.html#aa2efa0d49a8622cfb1d8712b0edf4fb8":[1,0,542,2],
 "classGoalGraze.html#affeab77ac447b411a4d3420a8773ecab":[1,0,542,1],
 "classGoalHobby.html":[1,0,543],
 "classGoalHobby.html#a41f2e6557172551ef08aa6f218631ebc":[1,0,543,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX66 =
 "classGrowSystemKinoko.html#a8a6d487f4133d9a3529f1c81f6eee891":[1,0,572,3],
 "classGrowSystemKinoko.html#a9baf46e4f24e58cf40b755e28b55be56":[1,0,572,7],
 "classGrowSystemKinoko.html#ac3ff4c25f4969ab353f963d0a2477dc9":[1,0,572,2],
-"classGrowSystemKinoko.html#ad3ecf944a2fabd71d75a486330ac08e2":[1,0,572,4],
-"classGrowSystemKinoko.html#af49878e5da59a94790ccac57ffa1ed78":[1,0,572,0],
-"classGrowSystemPasture.html":[1,0,573],
-"classGrowSystemPasture.html#a567f0396da1882361493fdfdd46f78b0":[1,0,573,0],
-"classGrowSystemPasture.html#a78f17aecc3256ffebcec52cb971ae05d":[1,0,573,2],
-"classGrowSystemPasture.html#aaf32cb7bd0ab19dcc26487b2c7d6a922":[1,0,573,1],
-"classGrowSystemPlant.html":[1,0,574],
-"classGrowSystemPlant.html#a2222e95fe0f67801e699b9f1ad1ea89a":[1,0,574,4]
+"classGrowSystemKinoko.html#ad3ecf944a2fabd71d75a486330ac08e2":[1,0,572,4]
 };

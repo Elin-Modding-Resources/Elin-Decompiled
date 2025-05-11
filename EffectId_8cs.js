@@ -81,6 +81,7 @@ var EffectId_8cs =
       [ "Buff", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a536e1a5d9f4fe868e6ea5ff628f51f25", null ],
       [ "Debuff", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a941c9c4ecaa0bb3ab530f13b0078be01", null ],
       [ "Weaken", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a02883c225eb0c47356903f1678d854ff", null ],
+      [ "DebuffKizuami", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a7412edccb0bbaae66c178887a1299392", null ],
       [ "Bubble", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ab6230dfc594205d0ea15d5890ac22d7f", null ],
       [ "Web", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ac6e190b284633c48e39e55049da3cce8", null ],
       [ "MistOfDarkness", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ac60eff5e4bd77f7aff5c0b9a6aa52441", null ],

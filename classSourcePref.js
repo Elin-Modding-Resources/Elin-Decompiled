@@ -10,6 +10,7 @@ var classSourcePref =
     [ "equipY", "classSourcePref.html#a562ee95073038282b6e7e63216abcd54", null ],
     [ "flags", "classSourcePref.html#ab159ab314b866628631fb4f6464f8801", null ],
     [ "Float", "classSourcePref.html#a80470e33705f660efedf6a3d5716a473", null ],
+    [ "FloatUnderwater", "classSourcePref.html#a25c6a521e16837149a27c1efc12aa720", null ],
     [ "hatY", "classSourcePref.html#af67e02842a49ab3c996a057f9ed8dca3", null ],
     [ "height", "classSourcePref.html#a4cee251f54b7eb88c74f600ac6c25db1", null ],
     [ "liquidMod", "classSourcePref.html#a6edb24d8a86d724c4647430c87eab33b", null ],
