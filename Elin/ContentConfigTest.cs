@@ -9,6 +9,8 @@ public class ContentConfigTest : ContentConfig
 
 	public UIButtonLR buttonAnimeFramePCC;
 
+	public UIButtonLR buttonExtraToneMTP;
+
 	public UIButton toggleAlwaysRun;
 
 	public UIButton toggleShowNumber;
@@ -48,6 +50,7 @@ public class ContentConfigTest : ContentConfig
 			base.config.ApplySkin();
 		});
 		List<string> langs = new List<string> { "ani0", "ani1", "ani2", "ani3", "ani4" };
+		List<string> langs2 = new List<string> { "0x", "1x", "2x", "5x", "10x" };
 		toggleRefIcon.SetToggle(base.config.test.showRefIcon, delegate(bool on)
 		{
 			base.config.test.showRefIcon = on;
@@ -56,6 +59,11 @@ public class ContentConfigTest : ContentConfig
 				LayerInventory.SetDirtyAll();
 			}
 		});
+		buttonExtraToneMTP.SetOptions(base.config.test.extraToneMTP, langs2, delegate(int i)
+		{
+			base.config.test.extraToneMTP = i;
+			base.config.Apply();
+		}, invoke: false, "extraToneMTP");
 		buttonAnimeFrame.SetOptions(base.config.test.animeFrame, langs, delegate(int i)
 		{
 			base.config.test.animeFrame = i;

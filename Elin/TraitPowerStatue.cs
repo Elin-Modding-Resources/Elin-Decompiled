@@ -1,5 +1,19 @@
 public class TraitPowerStatue : TraitItem
 {
+	public override bool CanBeDestroyed
+	{
+		get
+		{
+			if (!owner.isNPCProperty)
+			{
+				return base.CanBeDestroyed;
+			}
+			return false;
+		}
+	}
+
+	public override bool CanBeStolen => false;
+
 	public override bool CanUseFromInventory => false;
 
 	public override bool UseExtra => owner.isOn;
@@ -47,8 +61,8 @@ public class TraitPowerStatue : TraitItem
 		if (flag)
 		{
 			owner.ChangeMaterial("onyx");
-			owner.rarity = Rarity.Normal;
 		}
+		owner.rarity = Rarity.Normal;
 		owner.renderer.RefreshExtra();
 		return true;
 	}

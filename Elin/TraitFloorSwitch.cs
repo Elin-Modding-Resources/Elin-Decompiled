@@ -2,7 +2,7 @@ public class TraitFloorSwitch : TraitSwitch
 {
 	public override void OnStepped(Chara c)
 	{
-		if (!IsNegativeEffect || !EClass._zone.IsPCFaction || c.IsHostile())
+		if (!IsNegativeEffect || (!EClass._zone.IsPCFaction && !EClass._zone.IsUserZone) || c.IsHostile())
 		{
 			owner.SetHidden(hide: false);
 			if (IgnoreWhenLevitating() && c.IsLevitating)

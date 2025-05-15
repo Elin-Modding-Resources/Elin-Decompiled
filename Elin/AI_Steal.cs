@@ -40,7 +40,11 @@ public class AI_Steal : AI_TargetCard
 
 	public override bool CanPerform()
 	{
-		return Act.TC != null;
+		if (Act.TC != null)
+		{
+			return Act.TC.trait.CanBeStolen;
+		}
+		return false;
 	}
 
 	public override bool Perform()

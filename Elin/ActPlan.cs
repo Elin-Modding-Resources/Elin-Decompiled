@@ -549,13 +549,28 @@ public class ActPlan : EClass
 						{
 							TrySetAct("ActBanishSummon", delegate
 							{
-								EClass.pc.Say("summon_vanish", c2);
-								c2.pos.PlayEffect("vanish");
-								c2.pos.PlaySound("vanish");
-								c2.pos.PlayEffect("teleport");
-								c2.Destroy();
+								Banish(c2);
 								return true;
 							}, c2, null, 99);
+							List<Chara> list2 = new List<Chara>();
+							foreach (Chara chara in EClass._map.charas)
+							{
+								if (chara.IsPCPartyMinion && !chara.IsEscorted())
+								{
+									list2.Add(chara);
+								}
+							}
+							if (list2.Count > 1)
+							{
+								TrySetAct("ActBanishSummonAll", delegate
+								{
+									foreach (Chara item in list2)
+									{
+										Banish(item);
+									}
+									return true;
+								}, c2, null, 99);
+							}
 						}
 					}
 				}
@@ -812,11 +827,11 @@ public class ActPlan : EClass
 						IList<Card> _cards = items.Copy();
 						TrySetAct("actPickAll", delegate
 						{
-							foreach (Card item in _cards)
+							foreach (Card item2 in _cards)
 							{
-								if (item.isThing && item.placeState == PlaceState.roaming)
+								if (item2.isThing && item2.placeState == PlaceState.roaming)
 								{
-									EClass.pc.Pick(item.Thing);
+									EClass.pc.Pick(item2.Thing);
 								}
 							}
 							return true;
@@ -961,6 +976,14 @@ public class ActPlan : EClass
 			{
 				WidgetCurrentTool.Instance.placer.Refresh();
 			}
+		}
+		static void Banish(Chara m)
+		{
+			EClass.pc.Say("summon_vanish", m);
+			m.pos.PlayEffect("vanish");
+			m.pos.PlaySound("vanish");
+			m.pos.PlayEffect("teleport");
+			m.Destroy();
 		}
 	}
 }

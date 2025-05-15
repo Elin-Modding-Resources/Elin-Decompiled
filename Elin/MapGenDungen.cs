@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Dungen;
 using UnityEngine;
 
@@ -35,8 +36,16 @@ public class MapGenDungen : BaseMapGen
 		}
 		if (biome.name == "Dungeon_Water")
 		{
-			int id = ((EClass.rnd(2) == 0) ? 187 : 188);
-			biome.exterior.block.id = (biome.interior.block.id = id);
+			int num = ((EClass.rnd(3) == 0) ? 187 : ((EClass.rnd(2) == 0) ? 188 : 189));
+			biome.exterior.block.id = (biome.interior.block.id = num);
+			if (num == 189)
+			{
+				biome.exterior.block.mat = (biome.interior.block.mat = (byte)EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.tag.Contains("coral")).RandomItem().id);
+			}
+			else
+			{
+				biome.exterior.block.mat = (biome.interior.block.mat = 3);
+			}
 		}
 		BiomeProfile.TileFloor floor = biome.exterior.floor;
 		BiomeProfile.TileBlock block = biome.exterior.block;
@@ -161,15 +170,15 @@ public class MapGenDungen : BaseMapGen
 		}
 		Dictionary<int, GenRoom> rooms = new Dictionary<int, GenRoom>();
 		int count = 0;
-		int num = 0;
+		int num2 = 0;
 		foreach (Dungen.Room room in mapData.rooms)
 		{
 			if (room.width != 0 && room.height != 0)
 			{
-				num++;
+				num2++;
 			}
 		}
-		if (num == 0)
+		if (num2 == 0)
 		{
 			mapData.rooms.Clear();
 		}
@@ -196,13 +205,13 @@ public class MapGenDungen : BaseMapGen
 		zone.OnGenerateRooms(this);
 		map.ReloadRoom();
 		Debug.Log("Dungen: room:" + rooms.Count + "/" + mapData.rooms.Count + " width:" + width + " height:" + height);
-		int num2 = EClass.rnd(Size * Size / 50 + EClass.rnd(20)) + 5;
-		num2 = num2 * Mathf.Min(20 + zone.DangerLv * 5, 100) / 100;
+		int num3 = EClass.rnd(Size * Size / 50 + EClass.rnd(20)) + 5;
+		num3 = num3 * Mathf.Min(20 + zone.DangerLv * 5, 100) / 100;
 		if (zone is Zone_RandomDungeonNature)
 		{
-			num2 /= 5;
+			num3 /= 5;
 		}
-		for (int k = 0; k < num2; k++)
+		for (int k = 0; k < num3; k++)
 		{
 			point = EClass._map.GetRandomPoint();
 			if (!point.cell.isModified && !point.HasThing && !point.HasBlock && !point.HasObj)
@@ -217,25 +226,37 @@ public class MapGenDungen : BaseMapGen
 			{
 				zone.SpawnMob(null, SpawnSetting.Fish());
 			}
-		}
-		if (zone is Zone_RandomDungeonPlain)
-		{
-			Crawler crawler = Crawler.Create("pasture");
-			int tries = 3;
-			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), tries, delegate(Crawler.Result r)
+			Crawler.Create("pasture").CrawlUntil(tries: EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(5) + 1) + 1) + 1), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 			{
-				int id2 = ((EClass.rnd(3) == 0) ? 108 : 105);
+				int id2 = 137;
 				foreach (Point point2 in r.points)
 				{
 					if (!point2.cell.isModified && !point2.HasThing && !point2.HasBlock && !point2.HasObj)
 					{
 						map.SetObj(point2.x, point2.z, id2);
-						int num3 = 3;
+						int idx = 3 + ((EClass.rnd(3) == 0) ? 1 : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0);
+						point2.growth.SetStage(idx);
+					}
+				}
+				return false;
+			});
+		}
+		if (zone is Zone_RandomDungeonPlain)
+		{
+			Crawler.Create("pasture").CrawlUntil(tries: EClass.rnd(EClass.rnd(3) + 1), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			{
+				int id = ((EClass.rnd(3) == 0) ? 108 : 105);
+				foreach (Point point3 in r.points)
+				{
+					if (!point3.cell.isModified && !point3.HasThing && !point3.HasBlock && !point3.HasObj)
+					{
+						map.SetObj(point3.x, point3.z, id);
+						int num4 = 3;
 						if (EClass.rnd(6) == 0)
 						{
-							num3++;
+							num4++;
 						}
-						point2.growth.SetStage(num3);
+						point3.growth.SetStage(num4);
 					}
 				}
 				return false;

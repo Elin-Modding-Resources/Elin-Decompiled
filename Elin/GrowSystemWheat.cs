@@ -6,6 +6,8 @@ public class GrowSystemWheat : GrowSystemCrop
 
 	public override int AutoMineStage => 3;
 
+	public virtual bool GenerateStraw => true;
+
 	public override string GetSoundProgress()
 	{
 		return source.DefaultMaterial.GetSoundImpact();
@@ -22,7 +24,7 @@ public class GrowSystemWheat : GrowSystemCrop
 
 	public override void OnMineObj(Chara c = null)
 	{
-		if (IsWithered() || IsHarvestStage(base.stage.idx))
+		if (GenerateStraw && (IsWithered() || IsHarvestStage(base.stage.idx)))
 		{
 			TryPick(GrowSystem.cell, ThingGen.Create("grass", "straw"), c);
 		}

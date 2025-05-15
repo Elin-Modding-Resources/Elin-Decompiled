@@ -1646,6 +1646,16 @@ public class CoreDebug : EScriptable
 				}
 			});
 		});
+		Add(cat2, "Reset Certain obj materials", delegate
+		{
+			EClass._map.ForeachCell(delegate(Cell c)
+			{
+				if (c.HasObj && c.obj == 79)
+				{
+					c.objMat = (byte)c.sourceObj.DefaultMaterial.id;
+				}
+			});
+		});
 		Add(cat2, "Fix Floors under Blocks", delegate
 		{
 			EClass._map.ForeachCell(delegate(Cell c)
@@ -1925,6 +1935,19 @@ public class CoreDebug : EScriptable
 			return "Demitas Removed!";
 		}
 		return "Not enough Demitas!";
+	}
+
+	[ConsoleCommand("")]
+	public static string Fix_RemoveDesignations()
+	{
+		EClass._map.ForeachCell(delegate(Cell c)
+		{
+			if (c.detail != null && c.detail.designation != null)
+			{
+				c.detail.designation.taskList.Remove(c.detail.designation);
+			}
+		});
+		return "Done.";
 	}
 
 	[ConsoleCommand("")]

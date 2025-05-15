@@ -46,6 +46,10 @@ public class TraitSeed : Trait
 		{
 			n.AddText("isWaterCrop");
 		}
+		if (row.tag.Contains("undersea"))
+		{
+			n.AddText("isUnderseaCrop");
+		}
 		if (row.growth != null && row.growth.NeedSunlight)
 		{
 			n.AddText("isNeedSun");

@@ -1714,6 +1714,11 @@ public class Trait : EClass
 							Add("1237", 1, -1);
 							Add("1239", 1, -1);
 							Add("candle9", 1, -1);
+							Add("candle9", 1, -1);
+							Add("candle9", 1, -1);
+							Add("candle8", 1, 0);
+							Add("candle8b", 1, 0);
+							Add("candle8c", 1, 0);
 						}
 					}
 					break;

@@ -1886,7 +1886,7 @@ public class Map : MapBounds, IPathfindGrid
 				}
 				int num3 = EClass.rnd(EClass.rnd(sourceObj.components.Length) + 1);
 				string[] array = sourceObj.components[num3].Split('/');
-				Thing thing = ThingGen.Create(array[0], matObj_fixed.alias);
+				Thing thing = ThingGen.Create(array[0].Split('|')[0], matObj_fixed.alias);
 				if (array.Length > 1)
 				{
 					thing.SetNum(EClass.rnd(array[1].ToInt()) + 1);

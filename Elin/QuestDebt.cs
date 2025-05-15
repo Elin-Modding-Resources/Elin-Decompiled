@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json;
 
 public class QuestDebt : QuestProgression
@@ -36,7 +37,7 @@ public class QuestDebt : QuestProgression
 
 	public override string GetTextProgress()
 	{
-		return "progressDebt".lang(Lang._currency(EClass.player.debt, showUnit: true));
+		return "progressDebt".lang(Lang._currency(EClass.player.debt, showUnit: true)) + ((!EClass.debug.showExtra) ? "" : (Environment.NewLine + phase + "/" + gaveBill + "/" + paid + "/" + stage));
 	}
 
 	public bool CanGiveBill()

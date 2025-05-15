@@ -1670,7 +1670,7 @@ public class Chara : Card, IPathfindWalker
 		if (EClass._zone.IsUnderwater)
 		{
 			int num2 = Evalue(200);
-			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5, 0, 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
+			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5 - EClass._zone.DangerLv / 50, 0, 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
 			if (info != null && num != 100)
 			{
 				info.AddFix(num - 100, EClass.sources.elements.map[200].GetName().ToTitleCase());
@@ -6506,7 +6506,7 @@ public class Chara : Card, IPathfindWalker
 					questDebt.stage++;
 					if (questDebt.stage > 7)
 					{
-						questDebt.stage = 1;
+						questDebt.stage = 7;
 					}
 					ShowDialog("loytel", "debt" + questDebt.stage);
 					return;

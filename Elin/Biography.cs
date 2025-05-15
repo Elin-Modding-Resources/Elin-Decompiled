@@ -472,6 +472,9 @@ public class Biography : EClass
 		case "sister_penguin":
 			c.c_idPortrait = Portrait.GetRandomPortrait("special_f-littlesister");
 			break;
+		case "citizen_exile":
+			c.c_idPortrait = "special_n-exile";
+			break;
 		default:
 			c.c_idPortrait = Portrait.GetRandomPortrait(gender, c.GetIdPortraitCat());
 			break;

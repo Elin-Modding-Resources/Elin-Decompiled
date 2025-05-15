@@ -721,15 +721,22 @@ public class Zone : Spatial, ICardParent, IInspect
 					}
 					map.things.ForeachReverse(delegate(Thing t)
 					{
-						if (t.trait is TraitNewZone)
+						if (t.trait is TraitNewZone || t.trait is TraitPowerStatue)
 						{
 							foreach (Thing thing in orgMap.things)
 							{
 								if (t.id == thing.id && t.pos.Equals(thing.pos))
 								{
-									RemoveCard(t);
-									map.things.Insert(0, thing);
-									thing.stackOrder = 0;
+									if (t.trait is TraitNewZone)
+									{
+										RemoveCard(t);
+										map.things.Insert(0, thing);
+										thing.stackOrder = 0;
+									}
+									else
+									{
+										t.ChangeMaterial(thing.material);
+									}
 									break;
 								}
 							}

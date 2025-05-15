@@ -524,6 +524,8 @@ public class CoreConfig : EClass
 
 		public int animeFrame;
 
+		public int extraToneMTP;
+
 		public bool showNumbers;
 
 		public bool stackNumbers;
@@ -669,6 +671,10 @@ public class CoreConfig : EClass
 			coreConfig.game.numBackup = 5;
 			coreConfig.game.backupInterval = 8;
 			coreConfig.game.autoBackup = true;
+		}
+		if (coreConfig.version.IsBelow(0, 23, 138))
+		{
+			coreConfig.test.extraToneMTP = 1;
 		}
 		if (coreConfig.version.IsBelow(0, 23, 63))
 		{

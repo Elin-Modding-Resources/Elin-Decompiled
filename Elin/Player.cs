@@ -1796,7 +1796,7 @@ public class Player : EClass
 				Msg.Say("voidClosed");
 				return;
 			}
-			if (zone is Zone_Exile && EClass.player.CountKeyItem("key_exile") == 0)
+			if (zone is Zone_Exile && EClass.player.CountKeyItem("key_exile") == 0 && !EClass.debug.enable)
 			{
 				Msg.Say("exileClosed");
 				return;

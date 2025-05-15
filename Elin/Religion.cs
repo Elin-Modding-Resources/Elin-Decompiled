@@ -423,6 +423,16 @@ public class Religion : EClass
 		if (c.IsPC)
 		{
 			EClass.pc.faction.charaElements.OnJoinFaith();
+			if (EClass._zone is Zone_Mifu)
+			{
+				EClass._map.config.blossom = EClass.pc.faith == EClass.game.religions.Trickery;
+				EClass.screen.RefreshWeather();
+			}
+			if (EClass._zone is Zone_Nefu)
+			{
+				EClass._map.config.blossom = EClass.pc.faith == EClass.game.religions.MoonShadow;
+				EClass.screen.RefreshWeather();
+			}
 		}
 	}
 

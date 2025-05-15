@@ -24,7 +24,7 @@ public class TraitTicketFurniture : Trait
 		}
 		p.pos.Things.ForEach(delegate(Thing t)
 		{
-			if (t.IsInstalled && t.isNPCProperty && t.trait.CanBeHeld && !t.trait.IsDoor && !t.isMasked && t.source.value != 0 && (EClass._zone is Zone_LittleGarden || !(t.trait is TraitNewZone)))
+			if (t.IsInstalled && t.isNPCProperty && t.trait.CanBeHeld && t.trait.CanBeStolen && !t.trait.IsDoor && !t.isMasked && t.source.value != 0 && (EClass._zone is Zone_LittleGarden || !(t.trait is TraitNewZone)))
 			{
 				int price = GetPrice(t) * t.Num;
 				p.TrySetAct("actCollectFurniture".lang(price.ToString() ?? "", t.Name) + ((t.category.ticket >= 10) ? "ticketNotIntended".lang() : ""), delegate

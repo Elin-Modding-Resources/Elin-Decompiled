@@ -402,6 +402,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int version
+	{
+		get
+		{
+			return _ints[29];
+		}
+		set
+		{
+			_ints[29] = value;
+		}
+	}
+
 	public bool isCensored
 	{
 		get
@@ -2592,6 +2604,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		_ints[0] = _bits1.ToInt();
 		_ints[2] = _bits2.ToInt();
 		_placeState = placeState;
+		version = 1;
 		OnSerializing();
 	}
 
@@ -6391,6 +6404,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				text2 = text.Replace("{", "").Replace("}", "");
 			}
 		}
+		if (c != null)
+		{
+			text2 = text2.Replace("#me", c.NameSimple);
+		}
 		if (!stripPun || !Lang.setting.stripPuns)
 		{
 			return text2;
@@ -6411,21 +6428,25 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		MOD.tones.Initialize();
 		List<Dictionary<string, string>> list = MOD.tones.list;
-		if (list.Count == 0)
+		if (list.Count != 0)
 		{
-			return;
-		}
-		string text = list.RandomItem()["id"];
-		for (int i = 0; i < 10; i++)
-		{
-			Dictionary<string, string> dictionary = list.RandomItem();
-			if (EClass.rnd(100) <= dictionary["chance"].ToInt())
+			int mtp = EClass.core.config.test.extraToneMTP switch
 			{
-				text = dictionary["id"];
-				break;
+				4 => 10, 
+				3 => 5, 
+				2 => 2, 
+				1 => 1, 
+				0 => 0, 
+				_ => 0, 
+			};
+			if (EClass.debug.enable)
+			{
+				mtp *= 100;
 			}
+			string text = list.RandomItem()["id"];
+			text = list.RandomItemWeighted((Dictionary<string, string> a) => a["chance"].ToInt() * ((!a["tag"].Contains("meta")) ? 1 : mtp))["id"];
+			c_idTone = MOD.tones.GetToneID(text, bio?.gender ?? 0);
 		}
-		c_idTone = MOD.tones.GetToneID(text, bio?.gender ?? 0);
 	}
 
 	public bool HasCraftBonusTrait()
