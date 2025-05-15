@@ -10,6 +10,7 @@ var classCoreConfig_1_1Test =
     [ "brightnessNight", "classCoreConfig_1_1Test.html#a941d76751fd76ccbb2ba8016612b8d51", null ],
     [ "extraMoveCancel", "classCoreConfig_1_1Test.html#a187d26dd01abad7ef1c307ff4817ba1e", null ],
     [ "extraRace", "classCoreConfig_1_1Test.html#a7708ab8c0bace6a10c0e288e5f7d8e30", null ],
+    [ "extraToneMTP", "classCoreConfig_1_1Test.html#ac4f3141e040fda192675a01d50469065", null ],
     [ "extraTurnaround", "classCoreConfig_1_1Test.html#a847935740d464df5d95ab5a4d6a52e13", null ],
     [ "idSkin", "classCoreConfig_1_1Test.html#af11cdf6acc44b7f1f60cb0177714b289", null ],
     [ "ignoreBackerDestoryFlag", "classCoreConfig_1_1Test.html#a805a08ac8836310286b4fe9841a6bbc5", null ],

@@ -3,6 +3,7 @@ var classContentConfigTest =
     [ "OnInstantiate", "classContentConfigTest.html#ae610336376ccb2a9d23fd01ccf8434a1", null ],
     [ "buttonAnimeFrame", "classContentConfigTest.html#a07ec4cfc8c7ab2d0f0b132e91143f0bf", null ],
     [ "buttonAnimeFramePCC", "classContentConfigTest.html#a7f876781373daee161dc91a24a75140e", null ],
+    [ "buttonExtraToneMTP", "classContentConfigTest.html#a8a5428978b6c05ae29c2f37578ca7f48", null ],
     [ "ddSkin", "classContentConfigTest.html#a50451f3a9b5c95121216621c91116979", null ],
     [ "sliderBrightness", "classContentConfigTest.html#a83a85de4a048c7b3036ab544631799b7", null ],
     [ "toggleAAPortrait", "classContentConfigTest.html#a033c67f001fee196a5e85ba67e6bac93", null ],

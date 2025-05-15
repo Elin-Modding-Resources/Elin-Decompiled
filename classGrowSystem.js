@@ -65,6 +65,7 @@ var classGrowSystem =
     [ "IsTree", "classGrowSystem.html#af10f9c992febbe00247e1e7e9e62d7b5", null ],
     [ "MtpProgress", "classGrowSystem.html#ac472ef27a3b0cea02b320b9cc7b57be2", null ],
     [ "NeedSunlight", "classGrowSystem.html#aad7964ae6bf55495bdabdafba3cc5c6f", null ],
+    [ "NeedUndersea", "classGrowSystem.html#a152c47a1c951338375afbb59cf3eed98", null ],
     [ "RenderHarvest", "classGrowSystem.html#a57b6e5357eb98ca212bc811a3e2c8ddd", null ],
     [ "ShadowStage", "classGrowSystem.html#ad3fe5889d3decc1da93aa5b61f57b9b5", null ],
     [ "stage", "classGrowSystem.html#a9975e5a3addacdc704ab5297f88ec652", null ],

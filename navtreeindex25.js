@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958ea195c8475402d7574aeb09058c57a44e6":[1,0,88,0,0],
+"classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958eaaddb82a9db13d66f21584a33675c92a5":[1,0,88,0,1],
 "classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958eae1e87761b01848aa72e4135478fd219f":[1,0,88,0,2],
 "classAI__PassTime.html#abf0d99be158e259232b123e0eaa79fe4":[1,0,88,2],
 "classAI__PassTime.html#accbc37fa3f8e48021926e10ab9ae7aef":[1,0,88,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classAM__BaseGameMode.html#a9bc821b2adb8c21ec29795244895368a":[1,0,122,4],
 "classAM__BaseGameMode.html#aa443de7a8a292bf7b178739952477c06":[1,0,122,9],
 "classAM__BaseGameMode.html#aabe60e15ac9f78080737949d819a45f3":[1,0,122,12],
-"classAM__BaseGameMode.html#ad0b51c597e313ff1654b978334f82b2e":[1,0,122,1],
-"classAM__BaseGameMode.html#ae072c17d3643f98cd4d39dfe32a5e825":[1,0,122,8],
-"classAM__BaseGameMode.html#afadc75f79dac79c555604841928a77d0":[1,0,122,10]
+"classAM__BaseGameMode.html#ad0b51c597e313ff1654b978334f82b2e":[1,0,122,1]
 };

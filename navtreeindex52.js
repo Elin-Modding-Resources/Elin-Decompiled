@@ -1,5 +1,11 @@
 var NAVTREEINDEX52 =
 {
+"classCoreRef.html#a95d701a6074ac6e40a0bb9b9be7b0e71":[1,0,388,21],
+"classCoreRef.html#aa0abdb8880ef44aa3696c91be78e00d8":[1,0,388,29],
+"classCoreRef.html#aa25b5dc8ee2eb0270b0f310ba27cb586":[1,0,388,28],
+"classCoreRef.html#aad30d5e5407d0510c923d6a306d94ba7":[1,0,388,64],
+"classCoreRef.html#aaddf2847e84ec22513b1266ce56c4b66":[1,0,388,37],
+"classCoreRef.html#ab8ee69b00b8cc684f2e56800457151c2":[1,0,388,18],
 "classCoreRef.html#ac0978109f56153e17ae3cec51ba3d8c4":[1,0,388,61],
 "classCoreRef.html#acaf7660e7db592c1a9d2542c769608a3":[1,0,388,35],
 "classCoreRef.html#ace6a1894aab8e5cf3953e4a679a57861":[1,0,388,39],
@@ -243,11 +249,5 @@ var NAVTREEINDEX52 =
 "classCritterRandom.html#a1baff08a180fb13fb8e9d98ac195eb32":[1,0,397,3],
 "classCritterRandom.html#a2a26268ebfef43ebfcff7e23c25c463c":[1,0,397,2],
 "classCritterRandom.html#a7a60eaa6c8aae5077e8b5ddceafdbbca":[1,0,397,1],
-"classCritterRandom.html#a86c90b2aaa74a9271c6f2439265cf411":[1,0,397,0],
-"classCritterRat.html":[1,0,398],
-"classCritterRat.html#a31d966074d16810a06f684f6169fdb26":[1,0,398,3],
-"classCritterRat.html#a3bef0cbd070e9274a8352456c7022292":[1,0,398,2],
-"classCritterRat.html#a86c95a12a5832c25764026dd7c98573c":[1,0,398,1],
-"classCritterRat.html#aea9879284f0dcdb449d2822bd6d5edec":[1,0,398,0],
-"classCritterRatSmall.html":[1,0,399]
+"classCritterRandom.html#a86c90b2aaa74a9271c6f2439265cf411":[1,0,397,0]
 };

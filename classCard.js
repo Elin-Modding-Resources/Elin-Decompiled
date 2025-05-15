@@ -520,6 +520,7 @@ var classCard =
     [ "TileType", "classCard.html#a7d77dcb1302d78e698ab908f03f339f5", null ],
     [ "Tool", "classCard.html#a425a963bc60ba8e1b76e86db0a89627f", null ],
     [ "uid", "classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4", null ],
+    [ "version", "classCard.html#a1cd93e2e180be683054ab0140b13fda1", null ],
     [ "visitorState", "classCard.html#af5de54ad930466f10fc909464f558327", null ],
     [ "W", "classCard.html#ad03194fe33b200a48c78e8a53e8c1bea", null ],
     [ "WeightLimit", "classCard.html#a63155b6ee05d2f2d90bc8119ac10cd2d", null ],

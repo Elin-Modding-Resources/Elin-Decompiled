@@ -1,5 +1,8 @@
 var NAVTREEINDEX47 =
 {
+"classConHallucination.html#a7d23bd75af8458738df4a221e97daac5":[1,0,318,0],
+"classConHallucination.html#a829965949dee7153dde60bfa5ce1be8b":[1,0,318,1],
+"classConHero.html":[1,0,319],
 "classConHolyVeil.html":[1,0,320],
 "classConHotspring.html":[1,0,322],
 "classConHotspring.html#aab8a03aa74e2f885a0819da3ef48f7ab":[1,0,322,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX47 =
 "classContentConfigGame.html#a4634a5c025497cbcfed4613226153383":[1,0,352,11],
 "classContentConfigGame.html#a50328ca664090a34dec47b58ba56e476":[1,0,352,10],
 "classContentConfigGame.html#a54b049bbb2815f9710ce5facf065c7b1":[1,0,352,15],
-"classContentConfigGame.html#a55cdd7d15b503081237ba1c31079067c":[1,0,352,29],
-"classContentConfigGame.html#a5ef6b14da51e36976ea3756d4965c442":[1,0,352,5],
-"classContentConfigGame.html#a6603bf13d93490c525b285290d44b5f1":[1,0,352,33],
-"classContentConfigGame.html#a7664a7569c3886307c2b42d7cd181c14":[1,0,352,14]
+"classContentConfigGame.html#a55cdd7d15b503081237ba1c31079067c":[1,0,352,29]
 };
