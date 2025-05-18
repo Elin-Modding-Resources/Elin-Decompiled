@@ -5489,6 +5489,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return elements.GetElement(ele)?.IsGlobalElement ?? false;
 	}
 
+	public bool HasElementNoCopy()
+	{
+		if (HasElement(759))
+		{
+			return true;
+		}
+		if (HasElement(703))
+		{
+			return true;
+		}
+		return false;
+	}
+
 	public virtual CardRenderer _CreateRenderer()
 	{
 		renderer = new CardRenderer();
@@ -5617,7 +5630,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void SetImage(Image image, int dir, int idSkin = 0)
 	{
-		sourceRenderCard.SetImage(image, GetSprite(dir), colorInt, setNativeSize: true, dir, idSkin);
+		sourceRenderCard.SetImage(image, GetSprite(dir), colorInt, setNativeSize: true, dir, idSkin, this);
 	}
 
 	public virtual void SetImage(Image image)
@@ -5628,7 +5641,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else
 		{
-			sourceRenderCard.SetImage(image, GetSprite(), colorInt);
+			sourceRenderCard.SetImage(image, GetSprite(), colorInt, setNativeSize: true, 0, 0, this);
 		}
 	}
 

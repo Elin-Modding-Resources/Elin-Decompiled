@@ -3217,8 +3217,9 @@ public class BaseTileMap : EMono
 		{
 			zero.z -= 1f;
 		}
-		zero.x += tg.Pref.x * (float)((!tg.flipX) ? 1 : (-1));
-		zero.z += tg.Pref.z;
+		SourcePref pref = tg.Pref;
+		zero.x += pref.x * (float)((!tg.flipX) ? 1 : (-1));
+		zero.z += pref.z;
 		detail = cell.detail;
 		if (tg.isChara)
 		{
@@ -3248,16 +3249,16 @@ public class BaseTileMap : EMono
 			for (int i = 0; i < detail.things.Count; i++)
 			{
 				Thing thing = detail.things[i];
-				SourcePref pref = thing.Pref;
+				SourcePref pref2 = thing.Pref;
 				TileType tileType = thing.trait.tileType;
-				float num4 = (tileType.UseMountHeight ? 0f : ((pref.height == 0f) ? 0.1f : pref.height));
+				float num4 = (tileType.UseMountHeight ? 0f : ((pref2.height == 0f) ? 0.1f : pref2.height));
 				if (!thing.IsInstalled || thing == ActionMode.Inspect.target)
 				{
 					continue;
 				}
 				if (thing.TileType.IsRamp)
 				{
-					Vector3 rampFix2 = thing.TileType.GetRampFix(thing.dir, pref);
+					Vector3 rampFix2 = thing.TileType.GetRampFix(thing.dir, pref2);
 					zero.x += rampFix2.x;
 					zero.y += rampFix2.y;
 					zero.z += rampFix2.z;
@@ -3269,8 +3270,8 @@ public class BaseTileMap : EMono
 						zero.y -= num3;
 					}
 					zero.y += num4;
-					zero.x += pref.stackX * (float)((!thing.flipX) ? 1 : (-1));
-					zero.z += pref.z + thing.renderer.data.stackZ;
+					zero.x += pref2.stackX * (float)((!thing.flipX) ? 1 : (-1));
+					zero.z += pref2.z + thing.renderer.data.stackZ;
 					if (!tileType.UseMountHeight && thing.altitude != 0)
 					{
 						zero += altitudeFix * thing.altitude;

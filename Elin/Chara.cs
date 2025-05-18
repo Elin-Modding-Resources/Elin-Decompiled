@@ -777,6 +777,38 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public override SourcePref Pref
+	{
+		get
+		{
+			if (spriteReplacer != null)
+			{
+				return EClass.core.refs.prefs.replacer1;
+			}
+			if (base.idSkin > 0)
+			{
+				switch (sourceCard.tiles.TryGet(base.idSkin))
+				{
+				case 2319:
+				case 2619:
+				case 2621:
+				case 2623:
+				case 2625:
+					return EClass.core.refs.prefs.sonwputit1;
+				case 2320:
+				case 2611:
+				case 2620:
+				case 2622:
+				case 2624:
+				case 2626:
+				case 2828:
+					return EClass.core.refs.prefs.snowputit2;
+				}
+			}
+			return sourceCard.pref;
+		}
+	}
+
 	public bool CanOpenDoor
 	{
 		get

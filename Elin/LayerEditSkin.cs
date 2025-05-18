@@ -22,6 +22,10 @@ public class LayerEditSkin : ELayer
 	{
 		imageSkin.sprite = chara.GetSprite();
 		imageSkin.SetNativeSize();
+		if ((bool)WidgetRoster.Instance)
+		{
+			WidgetRoster.Instance.Build();
+		}
 	}
 
 	public void OnClickClear()

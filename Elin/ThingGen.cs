@@ -55,9 +55,9 @@ public class ThingGen : CardGen
 		return _Create(id, idMat, lv);
 	}
 
-	public static Thing Create(string id, string idMat)
+	public static Thing Create(string id, string idMat, int lv = -1)
 	{
-		return Create(id, idMat.IsEmpty() ? (-1) : EClass.sources.materials.alias[idMat].id);
+		return Create(id, idMat.IsEmpty() ? (-1) : EClass.sources.materials.alias[idMat].id, lv);
 	}
 
 	public static Thing CreateFromFilter(string id, int lv = -1)

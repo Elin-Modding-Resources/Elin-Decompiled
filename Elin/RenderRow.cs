@@ -348,7 +348,7 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		return pref;
 	}
 
-	public void SetImage(Image image, Sprite sprite = null, int matCol = 0, bool setNativeSize = true, int dir = 0, int idSkin = 0)
+	public void SetImage(Image image, Sprite sprite = null, int matCol = 0, bool setNativeSize = true, int dir = 0, int idSkin = 0, Card card = null)
 	{
 		image.sprite = sprite ?? GetSprite(dir, idSkin);
 		int num = ((matCol == 0) ? 104025 : matCol);
@@ -357,7 +357,9 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		color.a = 1f;
 		image.color = color;
 		RectTransform rectTransform = image.Rect();
-		SourcePref sourcePref = GetPref();
+		bool num3 = card != null && card.isChara && card.Chara.spriteReplacer != null && !card.HasHost;
+		SourcePref sourcePref = ((card != null) ? card.Pref : GetPref());
+		RenderData renderData = (num3 ? card.renderer.data : this.renderData);
 		rectTransform.pivot = renderData.imagePivot - new Vector2(0.01f * (float)sourcePref.pivotX, 0.01f * (float)sourcePref.pivotY);
 		float x = Mathf.Abs(image.transform.localScale.x) * (float)((_tiles == null || _tiles.Length == 0 || _tiles[dir % _tiles.Length] >= 0) ? 1 : (-1));
 		float y = image.transform.localScale.y;

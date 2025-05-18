@@ -371,38 +371,6 @@ public class CardRenderer : RenderObject
 	{
 	}
 
-	public SourcePref GetPref()
-	{
-		if (isChara)
-		{
-			if (owner.IsPCC || (owner.HasHost && owner.Chara.host.ride == owner))
-			{
-				return EClass.core.refs.prefs.pcc;
-			}
-			if (owner.idSkin > 0)
-			{
-				switch (owner.sourceCard.tiles.TryGet(owner.idSkin))
-				{
-				case 2319:
-				case 2619:
-				case 2621:
-				case 2623:
-				case 2625:
-					return EClass.core.refs.prefs.sonwputit1;
-				case 2320:
-				case 2611:
-				case 2620:
-				case 2622:
-				case 2624:
-				case 2626:
-				case 2828:
-					return EClass.core.refs.prefs.snowputit2;
-				}
-			}
-		}
-		return owner.Pref;
-	}
-
 	public void RefreshSprite()
 	{
 		if (hasActor)
@@ -752,5 +720,14 @@ public class CardRenderer : RenderObject
 
 	public virtual void Refresh()
 	{
+	}
+
+	public SourcePref GetPref()
+	{
+		if (owner.IsPCC || (owner.HasHost && owner.Chara.host.ride == owner))
+		{
+			return EClass.core.refs.prefs.pcc;
+		}
+		return owner.Pref;
 	}
 }

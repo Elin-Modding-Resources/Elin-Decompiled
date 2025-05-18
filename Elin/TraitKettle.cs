@@ -60,7 +60,7 @@ public class TraitKettle : TraitUniqueChara
 		{
 			return false;
 		}
-		if (t.HasElement(759))
+		if (t.HasElementNoCopy())
 		{
 			return false;
 		}

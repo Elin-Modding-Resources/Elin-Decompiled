@@ -13,6 +13,8 @@ public class SourceAsset : EScriptable
 		public int version;
 
 		public PrefData things = new PrefData();
+
+		public PrefData charas = new PrefData();
 	}
 
 	public string idLoad = "prefs";
@@ -36,6 +38,7 @@ public class SourceAsset : EScriptable
 		Prefs prefs = new Prefs();
 		prefs.version = 2;
 		Debug.Log(EClass.sources.things.rows.Count);
+		Debug.Log(EClass.sources.charas.rows.Count);
 		foreach (SourceThing.Row row in EClass.sources.things.rows)
 		{
 			if (prefs.things.dict.ContainsKey(row.id))
@@ -45,6 +48,17 @@ public class SourceAsset : EScriptable
 			else
 			{
 				prefs.things.dict.Add(row.id, row.pref);
+			}
+		}
+		foreach (SourceChara.Row row2 in EClass.sources.charas.rows)
+		{
+			if (prefs.charas.dict.ContainsKey(row2.id))
+			{
+				Debug.LogError("exception: duplicate id:" + row2.id + "/" + row2.name);
+			}
+			else
+			{
+				prefs.charas.dict.Add(row2.id, row2.pref);
 			}
 		}
 		IO.SaveFile(PrefPath + id, prefs);
@@ -65,6 +79,7 @@ public class SourceAsset : EScriptable
 	{
 		IO.CopyAs(PrefPath + id, PrefPath + id + "_loadbk");
 		Prefs prefs = IO.LoadFile<Prefs>(PrefPath + id);
+		Debug.Log(prefs);
 		foreach (SourceThing.Row row in EClass.sources.things.rows)
 		{
 			if (prefs.things.dict.ContainsKey(row.id))
@@ -74,6 +89,13 @@ public class SourceAsset : EScriptable
 			if (prefs.version == 0)
 			{
 				row.pref.y = 0f;
+			}
+		}
+		foreach (SourceChara.Row row2 in EClass.sources.charas.rows)
+		{
+			if (prefs.charas.dict.ContainsKey(row2.id))
+			{
+				row2.pref = prefs.charas.dict[row2.id];
 			}
 		}
 		Debug.Log("Imported Prefs:" + id);

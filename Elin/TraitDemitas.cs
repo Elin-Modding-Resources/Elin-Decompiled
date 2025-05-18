@@ -52,7 +52,7 @@ public class TraitDemitas : TraitUniqueChara
 
 	public override bool CanCopy(Thing t)
 	{
-		if (t.HasElement(759))
+		if (t.HasElementNoCopy())
 		{
 			return false;
 		}

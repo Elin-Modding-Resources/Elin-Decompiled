@@ -420,9 +420,13 @@ public class Religion : EClass
 		{
 			c.elements.Learn(306);
 		}
-		if (c.IsPC)
+		if (!c.IsPC)
 		{
-			EClass.pc.faction.charaElements.OnJoinFaith();
+			return;
+		}
+		EClass.pc.faction.charaElements.OnJoinFaith();
+		if (EClass._zone.lv == 0)
+		{
 			if (EClass._zone is Zone_Mifu)
 			{
 				EClass._map.config.blossom = EClass.pc.faith == EClass.game.religions.Trickery;
@@ -431,6 +435,11 @@ public class Religion : EClass
 			if (EClass._zone is Zone_Nefu)
 			{
 				EClass._map.config.blossom = EClass.pc.faith == EClass.game.religions.MoonShadow;
+				EClass.screen.RefreshWeather();
+			}
+			if (EClass._zone is Zone_Aquli)
+			{
+				EClass._map.config.fixedCondition = ((EClass.pc.faith == EClass.game.religions.Strife) ? Weather.Condition.Ether : Weather.Condition.None);
 				EClass.screen.RefreshWeather();
 			}
 		}

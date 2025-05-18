@@ -17,7 +17,8 @@ public class TraitCrafter : Trait
 		Incubator,
 		Fortune,
 		RuneMold,
-		FixedResource
+		FixedResource,
+		SeedWork
 	}
 
 	public enum AnimeType
@@ -106,6 +107,10 @@ public class TraitCrafter : Trait
 			return false;
 		}
 		if (c.trait is TraitFoodFishSlice)
+		{
+			return false;
+		}
+		if (r.tag.Contains("debug") && !EClass.debug.enable)
 		{
 			return false;
 		}
@@ -320,10 +325,10 @@ public class TraitCrafter : Trait
 		case MixType.Sculpture:
 		{
 			t = ThingGen.Create(thing3);
-			List<CardRow> list2 = EClass.player.codex.ListKills();
-			list2.Add(EClass.sources.cards.map["putty"]);
-			list2.Add(EClass.sources.cards.map["snail"]);
-			CardRow cardRow = list2.RandomItemWeighted((CardRow a) => Mathf.Max(50 - a.LV, Mathf.Clamp(EClass.pc.Evalue(258) / 2, 1, a.LV * 2)));
+			List<CardRow> list = EClass.player.codex.ListKills();
+			list.Add(EClass.sources.cards.map["putty"]);
+			list.Add(EClass.sources.cards.map["snail"]);
+			CardRow cardRow = list.RandomItemWeighted((CardRow a) => Mathf.Max(50 - a.LV, Mathf.Clamp(EClass.pc.Evalue(258) / 2, 1, a.LV * 2)));
 			t.c_idRefCard = cardRow.id;
 			t.ChangeMaterial(thing.material);
 			t.SetEncLv(Mathf.Min(EClass.rnd(EClass.rnd(Mathf.Max(5 + EClass.pc.Evalue(258) - cardRow.LV, 1))), 12));
@@ -335,13 +340,13 @@ public class TraitCrafter : Trait
 			Thing eq = ai.ings[0];
 			Thing thing7 = eq.Duplicate(1);
 			thing7.SetEncLv(0);
-			List<Element> list = thing7.elements.ListRune();
-			if (list.Count == 0)
+			List<Element> list2 = thing7.elements.ListRune();
+			if (list2.Count == 0)
 			{
 				Msg.SayNothingHappen();
 				break;
 			}
-			foreach (Element item in list)
+			foreach (Element item in list2)
 			{
 				SocketData runeEnc = eq.GetRuneEnc(item.id);
 				item.vLink = 0;
@@ -360,7 +365,7 @@ public class TraitCrafter : Trait
 				Msg.Say("rune_tooHard", owner);
 				break;
 			}
-			EClass.ui.AddLayer<LayerList>().SetList2(list, (Element a) => a.Name, delegate(Element a, ItemGeneral b)
+			EClass.ui.AddLayer<LayerList>().SetList2(list2, (Element a) => a.Name, delegate(Element a, ItemGeneral b)
 			{
 				owner.ModNum(-1);
 				eq.Destroy();
@@ -387,20 +392,41 @@ public class TraitCrafter : Trait
 				.SetTitles("wRuneMold");
 			break;
 		}
+		case MixType.SeedWork:
+		{
+			TraitSeed traitSeed = thing.trait as TraitSeed;
+			string id = thing2.id;
+			if (id == "mercury" || id == "blood_angel")
+			{
+				int num7 = thing.encLV;
+				if (thing2.id == "mercury")
+				{
+					num7 = num7 * 2 / 3;
+				}
+				t = TraitSeed.MakeSeed(traitSeed.row);
+				TraitSeed.LevelSeed(t, traitSeed.row, num7);
+				t.elements.SetBase(2, EClass.curve(t.encLV, 50, 10, 80));
+			}
+			else
+			{
+				t = TraitSeed.MakeSeed(traitSeed.row);
+			}
+			break;
+		}
 		case MixType.Talisman:
 		{
-			int num4 = EClass.pc.Evalue(1418);
-			Thing thing5 = ai.ings[1];
-			SourceElement.Row source2 = (thing5.trait as TraitSpellbook).source;
-			int num5 = thing5.c_charges * source2.charge * (100 + num4 * 50) / 500 + 1;
-			int num6 = 100;
-			Thing thing6 = ThingGen.Create("talisman").SetNum(num5);
-			thing6.refVal = source2.id;
-			thing6.encLV = num6 * (100 + num4 * 10) / 100;
-			thing.ammoData = thing6;
-			thing.c_ammo = num5;
-			EClass.pc.Say("talisman", thing, thing6);
-			thing5.Destroy();
+			int num2 = EClass.pc.Evalue(1418);
+			Thing thing4 = ai.ings[1];
+			SourceElement.Row source2 = (thing4.trait as TraitSpellbook).source;
+			int num3 = thing4.c_charges * source2.charge * (100 + num2 * 50) / 500 + 1;
+			int num4 = 100;
+			Thing thing5 = ThingGen.Create("talisman").SetNum(num3);
+			thing5.refVal = source2.id;
+			thing5.encLV = num4 * (100 + num2 * 10) / 100;
+			thing.ammoData = thing5;
+			thing.c_ammo = num3;
+			EClass.pc.Say("talisman", thing, thing5);
+			thing4.Destroy();
 			break;
 		}
 		case MixType.Scratch:
@@ -415,28 +441,28 @@ public class TraitCrafter : Trait
 		case MixType.Fortune:
 		{
 			EClass.player.seedFortune++;
-			int num2 = 0;
+			int num5 = 0;
 			FortuneRollData orCreateFortuneRollData = EClass._zone.GetOrCreateFortuneRollData(refresh: false);
 			int seed = orCreateFortuneRollData.seed + orCreateFortuneRollData.count + EClass.player.seedFortune;
 			Rand.SetSeed(seed);
-			for (int num3 = 3; num3 > 0; num3--)
+			for (int num6 = 3; num6 > 0; num6--)
 			{
-				if (EClass.rnd(FortuneRollData.chances[num3]) == 0)
+				if (EClass.rnd(FortuneRollData.chances[num6]) == 0)
 				{
-					num2 = num3;
+					num5 = num6;
 					break;
 				}
 			}
 			Rand.SetSeed();
-			if (num2 != 0)
+			if (num5 != 0)
 			{
-				owner.PlaySound((num2 == 3) ? "fortuneroll_winBig" : "fortuneroll_win");
+				owner.PlaySound((num5 == 3) ? "fortuneroll_winBig" : "fortuneroll_win");
 			}
-			Thing thing4 = ThingGen.Create("fortune_ball");
-			thing4.ChangeMaterial(FortuneRollData.mats[num2]);
-			EClass._zone.AddCard(thing4, owner.pos);
+			Thing thing6 = ThingGen.Create("fortune_ball");
+			thing6.ChangeMaterial(FortuneRollData.mats[num5]);
+			EClass._zone.AddCard(thing6, owner.pos);
 			owner.PlaySound("fortuneroll_ball");
-			orCreateFortuneRollData.GetPrize(num2, seed);
+			orCreateFortuneRollData.GetPrize(num5, seed);
 			if ((bool)LayerDragGrid.Instance)
 			{
 				LayerDragGrid.Instance.info.Refresh();

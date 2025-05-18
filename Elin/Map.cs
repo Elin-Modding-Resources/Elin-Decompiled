@@ -1856,8 +1856,19 @@ public class Map : MapBounds, IPathfindGrid
 				}
 				else if (!EClass._zone.IsUserZone)
 				{
-					Thing t2 = TraitSeed.MakeSeed(sourceObj, TryGetPlant(cell)).SetNum(num2);
-					EClass.pc.PickOrDrop(point, t2);
+					Thing thing = TraitSeed.MakeSeed(sourceObj, TryGetPlant(cell)).SetNum(num2);
+					if (EClass._zone is Zone_Dungeon)
+					{
+						int num3 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
+						if (num3 > 0)
+						{
+							Rand.SetSeed(EClass._zone.uid * 10 + num3);
+							TraitSeed.LevelSeed(thing, (thing.trait as TraitSeed).row, num3);
+							Rand.SetSeed();
+							thing.elements.SetBase(2, EClass.curve(thing.encLV, 50, 10, 80));
+						}
+					}
+					EClass.pc.PickOrDrop(point, thing);
 				}
 				if (cell.growth.IsTree)
 				{
@@ -1884,14 +1895,14 @@ public class Map : MapBounds, IPathfindGrid
 					}
 					break;
 				}
-				int num3 = EClass.rnd(EClass.rnd(sourceObj.components.Length) + 1);
-				string[] array = sourceObj.components[num3].Split('/');
-				Thing thing = ThingGen.Create(array[0].Split('|')[0], matObj_fixed.alias);
+				int num4 = EClass.rnd(EClass.rnd(sourceObj.components.Length) + 1);
+				string[] array = sourceObj.components[num4].Split('/');
+				Thing thing2 = ThingGen.Create(array[0].Split('|')[0], matObj_fixed.alias);
 				if (array.Length > 1)
 				{
-					thing.SetNum(EClass.rnd(array[1].ToInt()) + 1);
+					thing2.SetNum(EClass.rnd(array[1].ToInt()) + 1);
 				}
-				Pop(thing);
+				Pop(thing2);
 			}
 		}
 		SetObj(point.x, point.z);

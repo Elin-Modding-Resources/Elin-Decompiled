@@ -736,6 +736,7 @@ public class Zone : Spatial, ICardParent, IInspect
 									else
 									{
 										t.ChangeMaterial(thing.material);
+										t.isOn = thing.isOn;
 									}
 									break;
 								}
@@ -1178,7 +1179,8 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 			}
 		}
-		if (HourSinceLastActive <= 1)
+		Debug.Log("Last Active:" + base.lastActive);
+		if (base.lastActive == 0 || HourSinceLastActive <= 1 || IsRegion)
 		{
 			return;
 		}
@@ -2300,9 +2302,9 @@ public class Zone : Spatial, ICardParent, IInspect
 			for (int i = 0; i < num; i++)
 			{
 				Point randomSurface = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
-				if (!randomSurface.HasObj)
+				if (!randomSurface.HasObj && !randomSurface.HasThing)
 				{
-					Thing t = ThingGen.Create("pearl_oyster", new string[3] { "wood_birch", "poplar", "coralwood" }.RandomItem());
+					Thing t = ThingGen.Create("pearl_oyster", new string[3] { "wood_birch", "poplar", "coralwood" }.RandomItem(), ContentLv);
 					EClass._zone.AddCard(t, randomSurface).Install();
 				}
 			}
@@ -2310,9 +2312,9 @@ public class Zone : Spatial, ICardParent, IInspect
 			for (int j = 0; j < num; j++)
 			{
 				Point randomSurface2 = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
-				if (!randomSurface2.HasObj && (IsUnderwater || randomSurface2.cell.IsTopWaterAndNoSnow || EClass.rnd(6) == 0))
+				if (!randomSurface2.HasObj && !randomSurface2.HasThing && (IsUnderwater || randomSurface2.cell.IsTopWaterAndNoSnow || EClass.rnd(6) == 0))
 				{
-					EClass._zone.AddCard(ThingGen.Create("70"), randomSurface2);
+					EClass._zone.AddCard(ThingGen.Create("70", -1, ContentLv), randomSurface2);
 				}
 			}
 		}
@@ -2324,7 +2326,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				for (int k = 0; k < num2; k++)
 				{
 					Point randomSurface3 = EClass._map.bounds.GetRandomSurface();
-					if (!randomSurface3.HasObj)
+					if (!randomSurface3.HasObj && !randomSurface3.HasThing)
 					{
 						Card t2 = ThingGen.Create("chest3").ChangeMaterial(biome.style.matDoor);
 						EClass._zone.AddCard(t2, randomSurface3).Install();
