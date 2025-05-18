@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.140</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.141 Nightly</span>
    </div>
   </td>
  </tr>
@@ -94,8 +94,23 @@ $(document).ready(function(){initNavTree('Zone__Aquli_8cs_source.html',''); init
 <div class="contents">
 <a href="Zone__Aquli_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classZone__Aquli.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classZone__Aquli.html">Zone_Aquli</a> : <a class="code hl_class" href="classZone__Town.html">Zone_Town</a></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>}</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classZone__Aquli.html#accc3131e12f50fa9949721c1ecfb6228">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classZone__Aquli.html#accc3131e12f50fa9949721c1ecfb6228">OnActivate</a>()</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keywordflow">if</span> (base.lv == 0)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>            EClass._map.config.fixedCondition = ((EClass.pc.faith == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a349cf4f21b9bd958acabb37981d11105">religions</a>.<a class="code hl_variable" href="classReligionManager.html#a6413c06600ad14eb96763f5ff99d7c9c">Strife</a>) ? <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.Ether : <a class="code hl_class" href="classWeather.html">Weather</a>.<a class="code hl_enumeration" href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Condition</a>.None);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        base.OnActivate();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a349cf4f21b9bd958acabb37981d11105"><div class="ttname"><a href="classGame.html#a349cf4f21b9bd958acabb37981d11105">Game.religions</a></div><div class="ttdeci">ReligionManager religions</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00158">Game.cs:158</a></div></div>
+<div class="ttc" id="aclassReligionManager_html_a6413c06600ad14eb96763f5ff99d7c9c"><div class="ttname"><a href="classReligionManager.html#a6413c06600ad14eb96763f5ff99d7c9c">ReligionManager.Strife</a></div><div class="ttdeci">ReligionStrife Strife</div><div class="ttdef"><b>Definition:</b> <a href="ReligionManager_8cs_source.html#l00048">ReligionManager.cs:48</a></div></div>
+<div class="ttc" id="aclassWeather_html"><div class="ttname"><a href="classWeather.html">Weather</a></div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00005">Weather.cs:6</a></div></div>
+<div class="ttc" id="aclassWeather_html_aa6b3688c6e602502cf6163abaddf9a1c"><div class="ttname"><a href="classWeather.html#aa6b3688c6e602502cf6163abaddf9a1c">Weather.Condition</a></div><div class="ttdeci">Condition</div><div class="ttdef"><b>Definition:</b> <a href="Weather_8cs_source.html#l00015">Weather.cs:16</a></div></div>
 <div class="ttc" id="aclassZone__Aquli_html"><div class="ttname"><a href="classZone__Aquli.html">Zone_Aquli</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Aquli_8cs_source.html#l00001">Zone_Aquli.cs:2</a></div></div>
+<div class="ttc" id="aclassZone__Aquli_html_accc3131e12f50fa9949721c1ecfb6228"><div class="ttname"><a href="classZone__Aquli.html#accc3131e12f50fa9949721c1ecfb6228">Zone_Aquli.OnActivate</a></div><div class="ttdeci">override void OnActivate()</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Aquli_8cs_source.html#l00003">Zone_Aquli.cs:3</a></div></div>
 <div class="ttc" id="aclassZone__Town_html"><div class="ttname"><a href="classZone__Town.html">Zone_Town</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Town_8cs_source.html#l00001">Zone_Town.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

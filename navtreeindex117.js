@@ -1,5 +1,10 @@
 var NAVTREEINDEX117 =
 {
+"classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d":[1,0,1598,0],
+"classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9":[1,0,1598,4],
+"classTraitGuildDoorman.html#aadcfa292e43eeb2526e61af2d3fdf94b":[1,0,1598,3],
+"classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3":[1,0,1598,1],
+"classTraitGuildPersonnel.html":[1,0,1599],
 "classTraitGuildPersonnel.html#a5319d30754ed823433c0ed6dc0bf487b":[1,0,1599,0],
 "classTraitHarvest.html":[1,0,1600],
 "classTraitHarvest.html#a9c1d15a0abea72025b0737f4676442db":[1,0,1600,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitMerchantDrug.html#a7fad723510255411c247dbcf21b90593":[1,0,1651,0],
 "classTraitMerchantDye.html":[1,0,1652],
 "classTraitMerchantDye.html#ae2ce393bd47ac202ccff4640e88eed5d":[1,0,1652,0],
-"classTraitMerchantEcopo.html":[1,0,1653],
-"classTraitMerchantEcopo.html#a2807e15baab41db1b09f875969a1391d":[1,0,1653,2],
-"classTraitMerchantEcopo.html#aa1d573699db3cf74ea0d561f2f542f42":[1,0,1653,1],
-"classTraitMerchantEcopo.html#ac75a7355ef413590208f0ede137950f8":[1,0,1653,0],
-"classTraitMerchantExotic.html":[1,0,1654],
-"classTraitMerchantExotic.html#a3664f3c679c914d3c28fab3bff9ad2ef":[1,0,1654,0]
+"classTraitMerchantEcopo.html":[1,0,1653]
 };

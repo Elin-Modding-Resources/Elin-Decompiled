@@ -109,6 +109,7 @@ var classCard =
     [ "HasEditorTag", "classCard.html#aac6327d31e4aac5ec2dc1993dd98fff2", null ],
     [ "HasElement", "classCard.html#a2f0a86151cde4993541b7a5da468dc6c", null ],
     [ "HasElement", "classCard.html#a37fbc90ca83c36559ee295b8d0dcaf10", null ],
+    [ "HasElementNoCopy", "classCard.html#afe2181dcf1836617cba63b74886b4d29", null ],
     [ "HasGlobalElement", "classCard.html#aaa06a86523f81f1e511bc967ed32b160", null ],
     [ "HasLight", "classCard.html#a706ea072b9545b123863b1294b6adf57", null ],
     [ "HasRune", "classCard.html#a1a28353830ac60c8ebf01f599b99b0db", null ],

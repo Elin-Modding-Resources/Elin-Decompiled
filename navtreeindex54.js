@@ -1,5 +1,8 @@
 var NAVTREEINDEX54 =
 {
+"classDateHelper.html#aa20799e2a0e6904662ae65e73d4df991":[1,0,412,1],
+"classDateHelper.html#af6b12b4238d51e066e76b85ba3255bdf":[1,0,412,2],
+"classDayData.html":[1,0,413],
 "classDayData.html#a0e9b605c31006052c8aea6c44b533505":[1,0,413,1],
 "classDayData.html#a6e21e42558518ebb28e71f634dc4bec1":[1,0,413,0],
 "classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a0c6ad70beb3a7e76c3fc7adab7c46acc":[1,0,413,0,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX54 =
 "classDramaEventEndRoll.html#a351e30cfc448a309f0ee91835769a3fc":[1,0,429,0],
 "classDramaEventEndRoll.html#a6309fdf7989ba137fd045e08dd685090":[1,0,429,1],
 "classDramaEventEndRoll.html#a68f54f6e88b6ae82e1e8b92eed348e4c":[1,0,429,2],
-"classDramaEventEndRoll.html#a7bfda0d13dd72d0e8b71f7b49c8e5b24":[1,0,429,3],
-"classDramaEventExit.html":[1,0,430],
-"classDramaEventExit.html#a1fd4452ea16d9dc4b0b4155a34f2381d":[1,0,430,0],
-"classDramaEventGoto.html":[1,0,431]
+"classDramaEventEndRoll.html#a7bfda0d13dd72d0e8b71f7b49c8e5b24":[1,0,429,3]
 };

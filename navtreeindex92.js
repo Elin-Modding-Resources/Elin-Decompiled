@@ -1,5 +1,8 @@
 var NAVTREEINDEX92 =
 {
+"classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112":[1,0,1028,4],
+"classQuestTaskFlyer.html#a581586d87a136a65df3d459703de0145":[1,0,1028,1],
+"classQuestTaskFlyer.html#a71fab17ce78ca1e35b9a4ca3f01e22bc":[1,0,1028,3],
 "classQuestTaskFlyer.html#a7958007d00391ae2fdd8bff423703fc2":[1,0,1028,7],
 "classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853":[1,0,1028,5],
 "classQuestTaskFlyer.html#abcff73b3c86ae3a009bb869401f8e3fd":[1,0,1028,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX92 =
 "classRecipeCard.html#ae68602dae6d23be47d31c41c7e069113":[1,0,1045,25],
 "classRecipeCard.html#ae7aa11e6f2e92e7f7a2d98c2f0b06fe6":[1,0,1045,13],
 "classRecipeCard.html#ae9f1836259fe6e4f04b50f4573e7eaba":[1,0,1045,21],
-"classRecipeCard.html#af377543126bdb0bc58970aaa9ad580e7":[1,0,1045,10],
-"classRecipeCard.html#af53b450ba76382791207621f937529fa":[1,0,1045,17],
-"classRecipeCard.html#af83dc9e60d60b465e39b7ccbcce18faf":[1,0,1045,9],
-"classRecipeCustom.html":[1,0,1046]
+"classRecipeCard.html#af377543126bdb0bc58970aaa9ad580e7":[1,0,1045,10]
 };

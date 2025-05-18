@@ -1,5 +1,10 @@
 var NAVTREEINDEX116 =
 {
+"classTraitElder.html":[1,0,1528],
+"classTraitElder.html#a086a963da4fcb0e38a4a976aa2f7d838":[1,0,1528,1],
+"classTraitElder.html#a67e44ab97e10d3eab228452fcb276311":[1,0,1528,0],
+"classTraitElevator.html":[1,0,1529],
+"classTraitElevator.html#a76be5d65a652a723cf990124e375fc5f":[1,0,1529,4],
 "classTraitElevator.html#a92dcd328d5551465272aa7f1fd2cd9f2":[1,0,1529,1],
 "classTraitElevator.html#aaa9bf5d3d883dc9187e983e59cd0e571":[1,0,1529,5],
 "classTraitElevator.html#ab0e9634ffd686f0bf9662bfb18f567f2":[1,0,1529,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1597,0],
 "classTraitGuildClerk.html#af26f260414696aa1275acfa5775f5bda":[1,0,1597,1],
 "classTraitGuildDoorman.html":[1,0,1598],
-"classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d":[1,0,1598,2],
-"classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d":[1,0,1598,0],
-"classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9":[1,0,1598,4],
-"classTraitGuildDoorman.html#aadcfa292e43eeb2526e61af2d3fdf94b":[1,0,1598,3],
-"classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3":[1,0,1598,1],
-"classTraitGuildPersonnel.html":[1,0,1599]
+"classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d":[1,0,1598,2]
 };

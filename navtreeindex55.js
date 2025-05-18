@@ -1,5 +1,8 @@
 var NAVTREEINDEX55 =
 {
+"classDramaEventExit.html":[1,0,430],
+"classDramaEventExit.html#a1fd4452ea16d9dc4b0b4155a34f2381d":[1,0,430,0],
+"classDramaEventGoto.html":[1,0,431],
 "classDramaEventGoto.html#aa8938ac3db76bdca2b26eca0e6638a23":[1,0,431,0],
 "classDramaEventMethod.html":[1,0,432],
 "classDramaEventMethod.html#a7f813141a89602174e290c63c764402d":[1,0,432,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX55 =
 "classDynamicAct.html":[1,0,444],
 "classDynamicAct.html#a28ba85510e9d679dc17ddb86461f704c":[1,0,444,16],
 "classDynamicAct.html#a30d398978c8fd49d079464b7f61c082b":[1,0,444,11],
-"classDynamicAct.html#a3d839c77221ba43b48ace04af9931244":[1,0,444,9],
-"classDynamicAct.html#a3e50d8f91755e4a713c4dd88b64fa0f6":[1,0,444,17],
-"classDynamicAct.html#a462e2ee2e4da20aa761ef4a5c072ee87":[1,0,444,14],
-"classDynamicAct.html#a5836943eb65241c58f1139db5a101ff6":[1,0,444,19]
+"classDynamicAct.html#a3d839c77221ba43b48ace04af9931244":[1,0,444,9]
 };

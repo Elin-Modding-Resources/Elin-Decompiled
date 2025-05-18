@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.140</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.141 Nightly</span>
    </div>
   </td>
  </tr>
@@ -142,8 +142,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:accc19e7e1a2e00fb5a6440bd041989f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05af08650883a1b1a12451e393f98bb5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSourcePref.html">SourcePref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a05af08650883a1b1a12451e393f98bb5">GetPref</a> ()</td></tr>
 <tr class="separator:a05af08650883a1b1a12451e393f98bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31e60d1c7ca10e9b57f695e66dfc93a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6">SetImage</a> (Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0)</td></tr>
-<tr class="separator:a31e60d1c7ca10e9b57f695e66dfc93a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2dc97be906ded91ad9527ef6203e29a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#ab2dc97be906ded91ad9527ef6203e29a">SetImage</a> (Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0, <a class="el" href="classCard.html">Card</a> <a class="el" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>=null)</td></tr>
+<tr class="separator:ab2dc97be906ded91ad9527ef6203e29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107056ec89fe5d7b157fec0a35d16030"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a107056ec89fe5d7b157fec0a35d16030">SetRenderParam</a> (<a class="el" href="classRenderParam.html">RenderParam</a> p, <a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat, int dir)</td></tr>
 <tr class="separator:a107056ec89fe5d7b157fec0a35d16030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae20b0c2156133bf41691d46496cfa6f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRenderParam.html">RenderParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#ae20b0c2156133bf41691d46496cfa6f4">GetRenderParam</a> (<a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat, int dir, <a class="el" href="classPoint.html">Point</a> point=null, int bridgeHeight=-1)</td></tr>
@@ -330,7 +330,7 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00058">tag</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00343">CharaRenderer.DrawHeld()</a>, <a class="el" href="SourceFloor_8cs_source.html#l00169">SourceFloor.OnAfterInit()</a>, and <a class="el" href="Chara_8cs_source.html#l04343">Chara.RestockEquip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CharaRenderer_8cs_source.html#l00343">CharaRenderer.DrawHeld()</a>, <a class="el" href="SourceFloor_8cs_source.html#l00169">SourceFloor.OnAfterInit()</a>, and <a class="el" href="Chara_8cs_source.html#l04375">Chara.RestockEquip()</a>.</p>
 
 </div>
 </div>
@@ -393,32 +393,32 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00422">422</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  423</span>    {</div>
-<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a73919878ff8f3bb5fd01ebc41493ceb1">useAltColor</a>)</div>
-<div class="line"><span class="lineno">  425</span>        {</div>
-<div class="line"><span class="lineno">  426</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a> != 0)</div>
-<div class="line"><span class="lineno">  427</span>            {</div>
-<div class="line"><span class="lineno">  428</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a0ebc168801afa07d9d92611a141841c8">altColor</a>, <a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a>);</div>
-<div class="line"><span class="lineno">  429</span>            }</div>
-<div class="line"><span class="lineno">  430</span>            <span class="keywordflow">return</span> 104025;</div>
-<div class="line"><span class="lineno">  431</span>        }</div>
-<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a> != 0)</div>
-<div class="line"><span class="lineno">  433</span>        {</div>
-<div class="line"><span class="lineno">  434</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">matColor</a>, <a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a>);</div>
-<div class="line"><span class="lineno">  435</span>        }</div>
-<div class="line"><span class="lineno">  436</span>        <span class="keywordflow">return</span> 104025;</div>
-<div class="line"><span class="lineno">  437</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00424">424</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  425</span>    {</div>
+<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a73919878ff8f3bb5fd01ebc41493ceb1">useAltColor</a>)</div>
+<div class="line"><span class="lineno">  427</span>        {</div>
+<div class="line"><span class="lineno">  428</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a> != 0)</div>
+<div class="line"><span class="lineno">  429</span>            {</div>
+<div class="line"><span class="lineno">  430</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a0ebc168801afa07d9d92611a141841c8">altColor</a>, <a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a>);</div>
+<div class="line"><span class="lineno">  431</span>            }</div>
+<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">return</span> 104025;</div>
+<div class="line"><span class="lineno">  433</span>        }</div>
+<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a> != 0)</div>
+<div class="line"><span class="lineno">  435</span>        {</div>
+<div class="line"><span class="lineno">  436</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">matColor</a>, <a class="code hl_variable" href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">colorMod</a>);</div>
+<div class="line"><span class="lineno">  437</span>        }</div>
+<div class="line"><span class="lineno">  438</span>        <span class="keywordflow">return</span> 104025;</div>
+<div class="line"><span class="lineno">  439</span>    }</div>
 <div class="ttc" id="aclassBaseTileMap_html"><div class="ttname"><a href="classBaseTileMap.html">BaseTileMap</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00005">BaseTileMap.cs:6</a></div></div>
-<div class="ttc" id="aclassBaseTileMap_html_a4ce40943930704595f222254d924a7c5"><div class="ttname"><a href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">BaseTileMap.GetColorInt</a></div><div class="ttdeci">static int GetColorInt(ref Color matColor, int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03688">BaseTileMap.cs:3688</a></div></div>
+<div class="ttc" id="aclassBaseTileMap_html_a4ce40943930704595f222254d924a7c5"><div class="ttname"><a href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">BaseTileMap.GetColorInt</a></div><div class="ttdeci">static int GetColorInt(ref Color matColor, int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03689">BaseTileMap.cs:3689</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a73919878ff8f3bb5fd01ebc41493ceb1"><div class="ttname"><a href="classRenderRow.html#a73919878ff8f3bb5fd01ebc41493ceb1">RenderRow.useAltColor</a></div><div class="ttdeci">bool useAltColor</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00080">RenderRow.cs:80</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_aea949f00c2d71b1a2065f925193da56d"><div class="ttname"><a href="classRenderRow.html#aea949f00c2d71b1a2065f925193da56d">RenderRow.colorMod</a></div><div class="ttdeci">int colorMod</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00016">RenderRow.cs:16</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html_a0ebc168801afa07d9d92611a141841c8"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a0ebc168801afa07d9d92611a141841c8">SourceMaterial.Row.altColor</a></div><div class="ttdeci">Color altColor</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00082">SourceMaterial.cs:82</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html_ac134d6a3e626a2e05695b105aa708ee4"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">SourceMaterial.Row.matColor</a></div><div class="ttdeci">Color matColor</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00079">SourceMaterial.cs:79</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00016">colorMod</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03688">BaseTileMap.GetColorInt()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00080">useAltColor</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00016">colorMod</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03689">BaseTileMap.GetColorInt()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00080">useAltColor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00457">Recipe.GetDefaultColor()</a>, <a class="el" href="RenderRow_8cs_source.html#l00386">GetRenderParam()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">DropdownGrid.OnChangeIngredient()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="Recipe_8cs_source.html#l00882">Recipe.SetImage()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00518">ButtonGrid.SetRecipeVariation()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00376">SetRenderParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00457">Recipe.GetDefaultColor()</a>, <a class="el" href="RenderRow_8cs_source.html#l00388">GetRenderParam()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">DropdownGrid.OnChangeIngredient()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="Recipe_8cs_source.html#l00882">Recipe.SetImage()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00518">ButtonGrid.SetRecipeVariation()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00378">SetRenderParam()</a>.</p>
 
 </div>
 </div>
@@ -507,36 +507,36 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSourceBlock_1_1Row.html#a27e7b2e8b3f714ef60221d0d46ac7af4">SourceBlock.Row</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00386">386</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>    {</div>
-<div class="line"><span class="lineno">  388</span>        <a class="code hl_class" href="classRenderParam.html">RenderParam</a> shared = <a class="code hl_class" href="classRenderParam.html">RenderParam</a>.<a class="code hl_variable" href="classRenderParam.html#a92d2ea1a74544a17ca327137272c613a">shared</a>;</div>
-<div class="line"><span class="lineno">  389</span>        shared.tile = <a class="code hl_function" href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">GetTile</a>(mat, dir);</div>
-<div class="line"><span class="lineno">  390</span>        shared.matColor = <a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(mat);</div>
-<div class="line"><span class="lineno">  391</span>        shared.mat = mat;</div>
-<div class="line"><span class="lineno">  392</span>        shared.liquidLv = 0;</div>
-<div class="line"><span class="lineno">  393</span>        shared.dir = dir;</div>
-<div class="line"><span class="lineno">  394</span>        shared.cell = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  395</span>        Vector3 vector;</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordflow">if</span> (point == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  397</span>        {</div>
-<div class="line"><span class="lineno">  398</span>            shared.color = 11010048f;</div>
-<div class="line"><span class="lineno">  399</span>            vector = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>.<a class="code hl_variable" href="classScene.html#a4fed7b4258761e1c13852b02ea502564">camSupport</a>.<a class="code hl_variable" href="classCameraSupport.html#a71dcc9dc415aca52eddc1342aa0d2eee">renderPos</a>;</div>
-<div class="line"><span class="lineno">  400</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#ac52b17a3d3bd312b9756e849bb546e50">multiSize</a>)</div>
-<div class="line"><span class="lineno">  401</span>            {</div>
-<div class="line"><span class="lineno">  402</span>                vector.y -= 0.8f;</div>
-<div class="line"><span class="lineno">  403</span>            }</div>
-<div class="line"><span class="lineno">  404</span>        }</div>
-<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  406</span>        {</div>
-<div class="line"><span class="lineno">  407</span>            shared.color = 10485760f;</div>
-<div class="line"><span class="lineno">  408</span>            _ = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>;</div>
-<div class="line"><span class="lineno">  409</span>            vector = point.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>(bridgeHeight);</div>
-<div class="line"><span class="lineno">  410</span>        }</div>
-<div class="line"><span class="lineno">  411</span>        shared.x = vector.x;</div>
-<div class="line"><span class="lineno">  412</span>        shared.y = vector.y;</div>
-<div class="line"><span class="lineno">  413</span>        shared.z = vector.z;</div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">return</span> shared;</div>
-<div class="line"><span class="lineno">  415</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00388">388</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  389</span>    {</div>
+<div class="line"><span class="lineno">  390</span>        <a class="code hl_class" href="classRenderParam.html">RenderParam</a> shared = <a class="code hl_class" href="classRenderParam.html">RenderParam</a>.<a class="code hl_variable" href="classRenderParam.html#a92d2ea1a74544a17ca327137272c613a">shared</a>;</div>
+<div class="line"><span class="lineno">  391</span>        shared.tile = <a class="code hl_function" href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">GetTile</a>(mat, dir);</div>
+<div class="line"><span class="lineno">  392</span>        shared.matColor = <a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(mat);</div>
+<div class="line"><span class="lineno">  393</span>        shared.mat = mat;</div>
+<div class="line"><span class="lineno">  394</span>        shared.liquidLv = 0;</div>
+<div class="line"><span class="lineno">  395</span>        shared.dir = dir;</div>
+<div class="line"><span class="lineno">  396</span>        shared.cell = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  397</span>        Vector3 vector;</div>
+<div class="line"><span class="lineno">  398</span>        <span class="keywordflow">if</span> (point == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  399</span>        {</div>
+<div class="line"><span class="lineno">  400</span>            shared.color = 11010048f;</div>
+<div class="line"><span class="lineno">  401</span>            vector = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>.<a class="code hl_variable" href="classScene.html#a4fed7b4258761e1c13852b02ea502564">camSupport</a>.<a class="code hl_variable" href="classCameraSupport.html#a71dcc9dc415aca52eddc1342aa0d2eee">renderPos</a>;</div>
+<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#ac52b17a3d3bd312b9756e849bb546e50">multiSize</a>)</div>
+<div class="line"><span class="lineno">  403</span>            {</div>
+<div class="line"><span class="lineno">  404</span>                vector.y -= 0.8f;</div>
+<div class="line"><span class="lineno">  405</span>            }</div>
+<div class="line"><span class="lineno">  406</span>        }</div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  408</span>        {</div>
+<div class="line"><span class="lineno">  409</span>            shared.color = 10485760f;</div>
+<div class="line"><span class="lineno">  410</span>            _ = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>;</div>
+<div class="line"><span class="lineno">  411</span>            vector = point.<a class="code hl_function" href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Position</a>(bridgeHeight);</div>
+<div class="line"><span class="lineno">  412</span>        }</div>
+<div class="line"><span class="lineno">  413</span>        shared.x = vector.x;</div>
+<div class="line"><span class="lineno">  414</span>        shared.y = vector.y;</div>
+<div class="line"><span class="lineno">  415</span>        shared.z = vector.z;</div>
+<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">return</span> shared;</div>
+<div class="line"><span class="lineno">  417</span>    }</div>
 <div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.cs:114</a></div></div>
 <div class="ttc" id="aclassCameraSupport_html_a71dcc9dc415aca52eddc1342aa0d2eee"><div class="ttname"><a href="classCameraSupport.html#a71dcc9dc415aca52eddc1342aa0d2eee">CameraSupport.renderPos</a></div><div class="ttdeci">Vector3 renderPos</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00019">CameraSupport.cs:19</a></div></div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
@@ -547,11 +547,11 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassRenderData_html_ac52b17a3d3bd312b9756e849bb546e50"><div class="ttname"><a href="classRenderData.html#ac52b17a3d3bd312b9756e849bb546e50">RenderData.multiSize</a></div><div class="ttdeci">bool multiSize</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00032">RenderData.cs:32</a></div></div>
 <div class="ttc" id="aclassRenderParam_html"><div class="ttname"><a href="classRenderParam.html">RenderParam</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00003">RenderParam.cs:4</a></div></div>
 <div class="ttc" id="aclassRenderParam_html_a92d2ea1a74544a17ca327137272c613a"><div class="ttname"><a href="classRenderParam.html#a92d2ea1a74544a17ca327137272c613a">RenderParam.shared</a></div><div class="ttdeci">static RenderParam shared</div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00005">RenderParam.cs:5</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_a1e21e8fd472ec7cb4b810bbb94532071"><div class="ttname"><a href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">RenderRow.GetColorInt</a></div><div class="ttdeci">int GetColorInt(SourceMaterial.Row mat)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00422">RenderRow.cs:422</a></div></div>
-<div class="ttc" id="aclassRenderRow_html_adce2993750fa8bfc77d6de91231e1fce"><div class="ttname"><a href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">RenderRow.GetTile</a></div><div class="ttdeci">virtual int GetTile(SourceMaterial.Row mat, int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00417">RenderRow.cs:417</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a1e21e8fd472ec7cb4b810bbb94532071"><div class="ttname"><a href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">RenderRow.GetColorInt</a></div><div class="ttdeci">int GetColorInt(SourceMaterial.Row mat)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00424">RenderRow.cs:424</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_adce2993750fa8bfc77d6de91231e1fce"><div class="ttname"><a href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">RenderRow.GetTile</a></div><div class="ttdeci">virtual int GetTile(SourceMaterial.Row mat, int dir=0)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00419">RenderRow.cs:419</a></div></div>
 <div class="ttc" id="aclassScene_html_a4fed7b4258761e1c13852b02ea502564"><div class="ttname"><a href="classScene.html#a4fed7b4258761e1c13852b02ea502564">Scene.camSupport</a></div><div class="ttdeci">CameraSupport camSupport</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00041">Scene.cs:41</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00041">Scene.camSupport</a>, <a class="el" href="RenderRow_8cs_source.html#l00422">GetColorInt()</a>, <a class="el" href="RenderRow_8cs_source.html#l00417">GetTile()</a>, <a class="el" href="Core_8cs_source.html#l00015">Core.Instance</a>, <a class="el" href="RenderData_8cs_source.html#l00032">RenderData.multiSize</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, <a class="el" href="CameraSupport_8cs_source.html#l00019">CameraSupport.renderPos</a>, <a class="el" href="Core_8cs_source.html#l00065">Core.scene</a>, <a class="el" href="Core_8cs_source.html#l00067">Core.screen</a>, <a class="el" href="RenderParam_8cs_source.html#l00005">RenderParam.shared</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l00248">BaseTileMap.x</a>.</p>
+<p class="reference">References <a class="el" href="Scene_8cs_source.html#l00041">Scene.camSupport</a>, <a class="el" href="RenderRow_8cs_source.html#l00424">GetColorInt()</a>, <a class="el" href="RenderRow_8cs_source.html#l00419">GetTile()</a>, <a class="el" href="Core_8cs_source.html#l00015">Core.Instance</a>, <a class="el" href="RenderData_8cs_source.html#l00032">RenderData.multiSize</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, <a class="el" href="CameraSupport_8cs_source.html#l00019">CameraSupport.renderPos</a>, <a class="el" href="Core_8cs_source.html#l00065">Core.scene</a>, <a class="el" href="Core_8cs_source.html#l00067">Core.screen</a>, <a class="el" href="RenderParam_8cs_source.html#l00005">RenderParam.shared</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l00248">BaseTileMap.x</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Recipe_8cs_source.html#l00688">Recipe.OnRenderMarker()</a>, and <a class="el" href="UICardInfo_8cs_source.html#l00045">UICardInfo.UpdateRecipe()</a>.</p>
 
@@ -709,7 +709,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  316</span>        }</div>
 <div class="line"><span class="lineno">  317</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#a42f046e3b3eaa41b3fda82a66226bf7a">sprites</a>[skin, dir];</div>
 <div class="line"><span class="lineno">  318</span>    }</div>
-<div class="ttc" id="aclassCoreRef_html_a5601843946c06172f196f21998beb21c"><div class="ttname"><a href="classCoreRef.html#a5601843946c06172f196f21998beb21c">CoreRef.spriteNull</a></div><div class="ttdeci">Sprite spriteNull</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00377">CoreRef.cs:377</a></div></div>
+<div class="ttc" id="aclassCoreRef_html_a5601843946c06172f196f21998beb21c"><div class="ttname"><a href="classCoreRef.html#a5601843946c06172f196f21998beb21c">CoreRef.spriteNull</a></div><div class="ttdeci">Sprite spriteNull</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00379">CoreRef.cs:379</a></div></div>
 <div class="ttc" id="aclassCore_html_a174ab976ba96dbcd610d5219de4a85cb"><div class="ttname"><a href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">Core.refs</a></div><div class="ttdeci">CoreRef refs</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00051">Core.cs:51</a></div></div>
 <div class="ttc" id="aclassMeshPass_html"><div class="ttname"><a href="classMeshPass.html">MeshPass</a></div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00007">MeshPass.cs:8</a></div></div>
 <div class="ttc" id="aclassMeshPass_html_a409c185361b62f271f198d999a8ed4ae"><div class="ttname"><a href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">MeshPass.pmesh</a></div><div class="ttdeci">ProceduralMesh pmesh</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00025">MeshPass.cs:25</a></div></div>
@@ -731,9 +731,9 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassSpriteSheet_html"><div class="ttname"><a href="classSpriteSheet.html">SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00004">SpriteSheet.cs:5</a></div></div>
 <div class="ttc" id="aclassSpriteSheet_html_a3ba485078c417ef19ea17e2f624dba02"><div class="ttname"><a href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">SpriteSheet.Get</a></div><div class="ttdeci">static Sprite Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">_tiles</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00014">SpriteReplacer.data</a>, <a class="el" href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.Get()</a>, <a class="el" href="SpriteData_8cs_source.html#l00056">SpriteData.GetSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00051">SpriteReplacer.HasSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00115">idSprite</a>, <a class="el" href="Core_8cs_source.html#l00015">Core.Instance</a>, <a class="el" href="MeshPass_8cs_source.html#l00021">MeshPass.mat</a>, <a class="el" href="RenderData_8cs_source.html#l00032">RenderData.multiSize</a>, <a class="el" href="RenderData_8cs_source.html#l00016">RenderData.pass</a>, <a class="el" href="RenderRow_8cs_source.html#l00113">pathSprite</a>, <a class="el" href="MeshPass_8cs_source.html#l00025">MeshPass.pmesh</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00089">replacer</a>, <a class="el" href="RenderRow_8cs_source.html#l00014">skins</a>, <a class="el" href="CoreRef_8cs_source.html#l00377">CoreRef.spriteNull</a>, <a class="el" href="RenderRow_8cs_source.html#l00074">sprites</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00006">ProceduralMesh.tiling</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">_tiles</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00014">SpriteReplacer.data</a>, <a class="el" href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.Get()</a>, <a class="el" href="SpriteData_8cs_source.html#l00056">SpriteData.GetSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00051">SpriteReplacer.HasSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00115">idSprite</a>, <a class="el" href="Core_8cs_source.html#l00015">Core.Instance</a>, <a class="el" href="MeshPass_8cs_source.html#l00021">MeshPass.mat</a>, <a class="el" href="RenderData_8cs_source.html#l00032">RenderData.multiSize</a>, <a class="el" href="RenderData_8cs_source.html#l00016">RenderData.pass</a>, <a class="el" href="RenderRow_8cs_source.html#l00113">pathSprite</a>, <a class="el" href="MeshPass_8cs_source.html#l00025">MeshPass.pmesh</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, <a class="el" href="RenderRow_8cs_source.html#l00089">replacer</a>, <a class="el" href="RenderRow_8cs_source.html#l00014">skins</a>, <a class="el" href="CoreRef_8cs_source.html#l00379">CoreRef.spriteNull</a>, <a class="el" href="RenderRow_8cs_source.html#l00074">sprites</a>, and <a class="el" href="ProceduralMesh_8cs_source.html#l00006">ProceduralMesh.tiling</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05604">Card.GetSprite()</a>, <a class="el" href="Chara_8cs_source.html#l06118">Chara.GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">SetImage()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00320">SetSpriteRenderer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05617">Card.GetSprite()</a>, <a class="el" href="Chara_8cs_source.html#l06150">Chara.GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">SetImage()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00320">SetSpriteRenderer()</a>.</p>
 
 </div>
 </div>
@@ -773,14 +773,14 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSourceBlock_1_1Row.html#ae24dea78dc28bdd1a6bb36d34cf73b94">SourceBlock.Row</a>, <a class="el" href="classSourceCellEffect_1_1Row.html#a42442ee2fe780d2987672facba30c00f">SourceCellEffect.Row</a>, and <a class="el" href="classSourceFloor_1_1Row.html#ae066e9baa517f3c7966f8488840b9b96">SourceFloor.Row</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00417">417</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  418</span>    {</div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[dir % <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length];</div>
-<div class="line"><span class="lineno">  420</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00419">419</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  420</span>    {</div>
+<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[dir % <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length];</div>
+<div class="line"><span class="lineno">  422</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">_tiles</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00386">GetRenderParam()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00376">SetRenderParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00388">GetRenderParam()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00378">SetRenderParam()</a>.</p>
 
 </div>
 </div>
@@ -870,8 +870,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a31e60d1c7ca10e9b57f695e66dfc93a6" name="a31e60d1c7ca10e9b57f695e66dfc93a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31e60d1c7ca10e9b57f695e66dfc93a6">&#9670;&#160;</a></span>SetImage()</h2>
+<a id="ab2dc97be906ded91ad9527ef6203e29a" name="ab2dc97be906ded91ad9527ef6203e29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2dc97be906ded91ad9527ef6203e29a">&#9670;&#160;</a></span>SetImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -913,7 +913,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>idSkin</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>idSkin</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCard.html">Card</a>&#160;</td>
+          <td class="paramname"><em>card</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -937,22 +943,26 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  357</span>        color.a = 1f;</div>
 <div class="line"><span class="lineno">  358</span>        image.color = color;</div>
 <div class="line"><span class="lineno">  359</span>        RectTransform rectTransform = image.Rect();</div>
-<div class="line"><span class="lineno">  360</span>        <a class="code hl_class" href="classSourcePref.html">SourcePref</a> sourcePref = <a class="code hl_function" href="classRenderRow.html#a05af08650883a1b1a12451e393f98bb5">GetPref</a>();</div>
-<div class="line"><span class="lineno">  361</span>        rectTransform.pivot = renderData.imagePivot - <span class="keyword">new</span> Vector2(0.01f * (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#a1eb1308badc480c80270846cc913a19c">pivotX</a>, 0.01f * (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#ae74d8d440e0b825bb455a8f5b96602f8">pivotY</a>);</div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordtype">float</span> x = Mathf.Abs(image.transform.localScale.x) * (float)((<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length == 0 || <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[dir % <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length] &gt;= 0) ? 1 : (-1));</div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordtype">float</span> y = image.transform.localScale.y;</div>
-<div class="line"><span class="lineno">  364</span>        image.transform.localScale = <span class="keyword">new</span> Vector3(x, y, image.transform.localScale.z);</div>
-<div class="line"><span class="lineno">  365</span>        sourcePref.<a class="code hl_function" href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">Validate</a>();</div>
-<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">if</span> (setNativeSize)</div>
-<div class="line"><span class="lineno">  367</span>        {</div>
-<div class="line"><span class="lineno">  368</span>            image.SetNativeSize();</div>
-<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.x != 1f || <a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.y != 1f || sourcePref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> != 0)</div>
-<div class="line"><span class="lineno">  370</span>            {</div>
-<div class="line"><span class="lineno">  371</span>                rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x * (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.x + (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> * 0.01f), rectTransform.sizeDelta.y * (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.y + (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> * 0.01f));</div>
-<div class="line"><span class="lineno">  372</span>            }</div>
-<div class="line"><span class="lineno">  373</span>        }</div>
-<div class="line"><span class="lineno">  374</span>    }</div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordtype">bool</span> num3 = <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span> &amp;&amp; card.isChara &amp;&amp; card.Chara.spriteReplacer != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>.HasHost;</div>
+<div class="line"><span class="lineno">  361</span>        <a class="code hl_class" href="classSourcePref.html">SourcePref</a> sourcePref = ((<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span>) ? <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>.Pref : <a class="code hl_function" href="classRenderRow.html#a05af08650883a1b1a12451e393f98bb5">GetPref</a>());</div>
+<div class="line"><span class="lineno">  362</span>        <a class="code hl_class" href="classRenderData.html">RenderData</a> <a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> = (num3 ? card.renderer.data : this.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>);</div>
+<div class="line"><span class="lineno">  363</span>        rectTransform.pivot = renderData.imagePivot - <span class="keyword">new</span> Vector2(0.01f * (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#a1eb1308badc480c80270846cc913a19c">pivotX</a>, 0.01f * (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#ae74d8d440e0b825bb455a8f5b96602f8">pivotY</a>);</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordtype">float</span> x = Mathf.Abs(image.transform.localScale.x) * (float)((<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length == 0 || <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[dir % <a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>.Length] &gt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  365</span>        <span class="keywordtype">float</span> y = image.transform.localScale.y;</div>
+<div class="line"><span class="lineno">  366</span>        image.transform.localScale = <span class="keyword">new</span> Vector3(x, y, image.transform.localScale.z);</div>
+<div class="line"><span class="lineno">  367</span>        sourcePref.<a class="code hl_function" href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">Validate</a>();</div>
+<div class="line"><span class="lineno">  368</span>        <span class="keywordflow">if</span> (setNativeSize)</div>
+<div class="line"><span class="lineno">  369</span>        {</div>
+<div class="line"><span class="lineno">  370</span>            image.SetNativeSize();</div>
+<div class="line"><span class="lineno">  371</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.x != 1f || <a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.y != 1f || sourcePref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> != 0)</div>
+<div class="line"><span class="lineno">  372</span>            {</div>
+<div class="line"><span class="lineno">  373</span>                rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x * (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.x + (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> * 0.01f), rectTransform.sizeDelta.y * (<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.y + (<span class="keywordtype">float</span>)sourcePref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> * 0.01f));</div>
+<div class="line"><span class="lineno">  374</span>            }</div>
+<div class="line"><span class="lineno">  375</span>        }</div>
+<div class="line"><span class="lineno">  376</span>    }</div>
+<div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
+<div class="ttc" id="aclassRenderData_html"><div class="ttname"><a href="classRenderData.html">RenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00004">RenderData.cs:5</a></div></div>
 <div class="ttc" id="aclassRenderData_html_aafc563cf13156fae364ef9b9e23f99a5"><div class="ttname"><a href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">RenderData.imageScale</a></div><div class="ttdeci">Vector2 imageScale</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00028">RenderData.cs:28</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a05af08650883a1b1a12451e393f98bb5"><div class="ttname"><a href="classRenderRow.html#a05af08650883a1b1a12451e393f98bb5">RenderRow.GetPref</a></div><div class="ttdeci">virtual SourcePref GetPref()</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00346">RenderRow.cs:346</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_acc4325d305863606f002e014de0e5bd1"><div class="ttname"><a href="classRenderRow.html#acc4325d305863606f002e014de0e5bd1">RenderRow.GetSprite</a></div><div class="ttdeci">Sprite GetSprite(int dir=0, int skin=0, bool snow=false)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00261">RenderRow.cs:261</a></div></div>
@@ -962,9 +972,9 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassSourcePref_html_ae74d8d440e0b825bb455a8f5b96602f8"><div class="ttname"><a href="classSourcePref.html#ae74d8d440e0b825bb455a8f5b96602f8">SourcePref.pivotY</a></div><div class="ttdeci">int pivotY</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00154">SourcePref.cs:155</a></div></div>
 <div class="ttc" id="aclassSourcePref_html_afbc57d24dff0f3bc7c9a0b10cbdb6923"><div class="ttname"><a href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">SourcePref.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00335">SourcePref.cs:335</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">_tiles</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="RenderRow_8cs_source.html#l00346">GetPref()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="RenderData_8cs_source.html#l00028">RenderData.imageScale</a>, <a class="el" href="SourcePref_8cs_source.html#l00143">SourcePref.pivotX</a>, <a class="el" href="SourcePref_8cs_source.html#l00155">SourcePref.pivotY</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, <a class="el" href="SourcePref_8cs_source.html#l00287">SourcePref.scaleIcon</a>, and <a class="el" href="SourcePref_8cs_source.html#l00335">SourcePref.Validate()</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">_tiles</a>, <a class="el" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="RenderRow_8cs_source.html#l00346">GetPref()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="RenderData_8cs_source.html#l00028">RenderData.imageScale</a>, <a class="el" href="SourcePref_8cs_source.html#l00143">SourcePref.pivotX</a>, <a class="el" href="SourcePref_8cs_source.html#l00155">SourcePref.pivotY</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, <a class="el" href="SourcePref_8cs_source.html#l00287">SourcePref.scaleIcon</a>, and <a class="el" href="SourcePref_8cs_source.html#l00335">SourcePref.Validate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">DropdownGrid.OnChangeIngredient()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00017">TraitFigure.OnSetCardGrid()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00061">LayerInspect.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="GridItemCardSource_8cs_source.html#l00007">GridItemCardSource.SetButton()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="Recipe_8cs_source.html#l00882">Recipe.SetImage()</a>, <a class="el" href="Card_8cs_source.html#l05618">Card.SetImage()</a>, <a class="el" href="ButtonResourceTrack_8cs_source.html#l00011">ButtonResourceTrack.SetProp()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00547">ButtonGrid.SetRecipe()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00518">ButtonGrid.SetRecipeVariation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00314">DropdownGrid.OnChangeIngredient()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00017">TraitFigure.OnSetCardGrid()</a>, <a class="el" href="LayerInspect_8cs_source.html#l00061">LayerInspect.Refresh()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00224">UIRecipeInfo.RefreshImages()</a>, <a class="el" href="GridItemCardSource_8cs_source.html#l00007">GridItemCardSource.SetButton()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="Recipe_8cs_source.html#l00882">Recipe.SetImage()</a>, <a class="el" href="Card_8cs_source.html#l05631">Card.SetImage()</a>, <a class="el" href="ButtonResourceTrack_8cs_source.html#l00011">ButtonResourceTrack.SetProp()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00547">ButtonGrid.SetRecipe()</a>, and <a class="el" href="ButtonGrid_8cs_source.html#l00518">ButtonGrid.SetRecipeVariation()</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1076,6 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  241</span>        <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a> = <a class="code hl_property" href="classRenderRow.html#a18f34f005da6c0978f96568dac3018da">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<a class="code hl_variable" href="classRenderRow.html#a65b53cf1137a59a8071e49582c75ca9d">defMat</a>];</div>
 <div class="line"><span class="lineno">  242</span>    }</div>
 <div class="ttc" id="aclassProceduralMesh_html_af8f81e07870f27302f1047f59b4468c2"><div class="ttname"><a href="classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2">ProceduralMesh.pos</a></div><div class="ttdeci">Vector3 pos</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00010">ProceduralMesh.cs:10</a></div></div>
-<div class="ttc" id="aclassRenderData_html"><div class="ttname"><a href="classRenderData.html">RenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00004">RenderData.cs:5</a></div></div>
 <div class="ttc" id="aclassRenderData_html_a805ff3d001c452809b0cfb2c9cacb4ed"><div class="ttname"><a href="classRenderData.html#a805ff3d001c452809b0cfb2c9cacb4ed">RenderData.initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00053">RenderData.cs:53</a></div></div>
 <div class="ttc" id="aclassRenderData_html_aba75940aa3f40125a63c3e017ca8b69b"><div class="ttname"><a href="classRenderData.html#aba75940aa3f40125a63c3e017ca8b69b">RenderData.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00094">RenderData.cs:94</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a18f34f005da6c0978f96568dac3018da"><div class="ttname"><a href="classRenderRow.html#a18f34f005da6c0978f96568dac3018da">RenderRow.sources</a></div><div class="ttdeci">SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00123">RenderRow.cs:123</a></div></div>
@@ -1130,19 +1139,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00376">376</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  377</span>    {</div>
-<div class="line"><span class="lineno">  378</span>        p.tile = <a class="code hl_function" href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">GetTile</a>(mat ?? <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>, dir);</div>
-<div class="line"><span class="lineno">  379</span>        p.matColor = <a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(mat ?? <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>);</div>
-<div class="line"><span class="lineno">  380</span>        p.mat = mat ?? <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>;</div>
-<div class="line"><span class="lineno">  381</span>        p.liquidLv = 0;</div>
-<div class="line"><span class="lineno">  382</span>        p.dir = dir;</div>
-<div class="line"><span class="lineno">  383</span>        p.cell = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  384</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00378">378</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  379</span>    {</div>
+<div class="line"><span class="lineno">  380</span>        p.tile = <a class="code hl_function" href="classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce">GetTile</a>(mat ?? <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>, dir);</div>
+<div class="line"><span class="lineno">  381</span>        p.matColor = <a class="code hl_function" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a>(mat ?? <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>);</div>
+<div class="line"><span class="lineno">  382</span>        p.mat = mat ?? <a class="code hl_variable" href="classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364">DefaultMaterial</a>;</div>
+<div class="line"><span class="lineno">  383</span>        p.liquidLv = 0;</div>
+<div class="line"><span class="lineno">  384</span>        p.dir = dir;</div>
+<div class="line"><span class="lineno">  385</span>        p.cell = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  386</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00086">DefaultMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00422">GetColorInt()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00417">GetTile()</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00086">DefaultMaterial</a>, <a class="el" href="RenderRow_8cs_source.html#l00424">GetColorInt()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00419">GetTile()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l03334">BaseTileMap.DrawRoof()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l03335">BaseTileMap.DrawRoof()</a>.</p>
 
 </div>
 </div>
@@ -1229,12 +1238,12 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  342</span>            sr.transform.localPosition = <span class="keyword">new</span> Vector3(-0.5f * num5, 0f, 0f);</div>
 <div class="line"><span class="lineno">  343</span>        }</div>
 <div class="line"><span class="lineno">  344</span>    }</div>
-<div class="ttc" id="aclassCoreRef_html_a2c5adbdf212528192cbdb9ce9f6d9cba"><div class="ttname"><a href="classCoreRef.html#a2c5adbdf212528192cbdb9ce9f6d9cba">CoreRef.spriteThingActor</a></div><div class="ttdeci">Sprite spriteThingActor</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00387">CoreRef.cs:387</a></div></div>
+<div class="ttc" id="aclassCoreRef_html_a2c5adbdf212528192cbdb9ce9f6d9cba"><div class="ttname"><a href="classCoreRef.html#a2c5adbdf212528192cbdb9ce9f6d9cba">CoreRef.spriteThingActor</a></div><div class="ttdeci">Sprite spriteThingActor</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00389">CoreRef.cs:389</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00006">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassRenderDataThing_html"><div class="ttname"><a href="classRenderDataThing.html">RenderDataThing</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderDataThing_8cs_source.html#l00004">RenderDataThing.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, and <a class="el" href="CoreRef_8cs_source.html#l00387">CoreRef.spriteThingActor</a>.</p>
+<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">renderData</a>, and <a class="el" href="CoreRef_8cs_source.html#l00389">CoreRef.spriteThingActor</a>.</p>
 
 </div>
 </div>
@@ -1399,7 +1408,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00012">12</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06490">Card.ApplyBacker()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00009">RendererReplacer.CreateFrom()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00311">CharaRenderer.DrawHat()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00053">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="Chara_8cs_source.html#l06118">Chara.GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00417">GetTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00048">SourceBlock.Row.GetTile()</a>, <a class="el" href="SourceCellEffect_8cs_source.html#l00018">SourceCellEffect.Row.GetTile()</a>, <a class="el" href="SourceFloor_8cs_source.html#l00068">SourceFloor.Row.GetTile()</a>, <a class="el" href="RenderRow_8cs_source.html#l00153">OnImportData()</a>, <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">SetImage()</a>, <a class="el" href="Chara_8cs_source.html#l06158">Chara.SetRenderParam()</a>, <a class="el" href="Thing_8cs_source.html#l01414">Thing.SetRenderParam()</a>, <a class="el" href="RenderRow_8cs_source.html#l00244">SetTiles()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00085">SourceThing.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06503">Card.ApplyBacker()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00009">RendererReplacer.CreateFrom()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00311">CharaRenderer.DrawHat()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00053">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="Chara_8cs_source.html#l06150">Chara.GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00419">GetTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00048">SourceBlock.Row.GetTile()</a>, <a class="el" href="SourceCellEffect_8cs_source.html#l00018">SourceCellEffect.Row.GetTile()</a>, <a class="el" href="SourceFloor_8cs_source.html#l00068">SourceFloor.Row.GetTile()</a>, <a class="el" href="RenderRow_8cs_source.html#l00153">OnImportData()</a>, <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">SetImage()</a>, <a class="el" href="Chara_8cs_source.html#l06190">Chara.SetRenderParam()</a>, <a class="el" href="Thing_8cs_source.html#l01414">Thing.SetRenderParam()</a>, <a class="el" href="RenderRow_8cs_source.html#l00244">SetTiles()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00085">SourceThing.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -1489,7 +1498,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00016">16</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="RenderRow_8cs_source.html#l00422">GetColorInt()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00053">SourceBlock.Row.GetRenderParam()</a>, and <a class="el" href="Card_8cs_source.html#l05542">Card.RefreshColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="RenderRow_8cs_source.html#l00424">GetColorInt()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00053">SourceBlock.Row.GetRenderParam()</a>, and <a class="el" href="Card_8cs_source.html#l05555">Card.RefreshColor()</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1552,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00086">86</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00094">UICardInfo.SetObj()</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00376">SetRenderParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="MapGen_8cs_source.html#l00053">MapGen.OnGenerateTerrain()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00094">UICardInfo.SetObj()</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00378">SetRenderParam()</a>.</p>
 
 </div>
 </div>
@@ -1711,7 +1720,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00022">22</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00244">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00263">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00266">TraitCrafter.Craft()</a>, <a class="el" href="SpawnList_8cs_source.html#l00089">SpawnList.Filter()</a>, <a class="el" href="DNA_8cs_source.html#l00117">DNA.GenerateGene()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00109">RecipeSource.GetReqSkill()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00028">TraitFigure.GetValue()</a>, <a class="el" href="Card_8cs_source.html#l05334">Card.MakeMilk()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RecipeManager_8cs_source.html#l00244">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00263">RecipeManager.ComeUpWithRecipe()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00271">TraitCrafter.Craft()</a>, <a class="el" href="SpawnList_8cs_source.html#l00089">SpawnList.Filter()</a>, <a class="el" href="DNA_8cs_source.html#l00117">DNA.GenerateGene()</a>, <a class="el" href="RecipeSource_8cs_source.html#l00109">RecipeSource.GetReqSkill()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00028">TraitFigure.GetValue()</a>, <a class="el" href="Card_8cs_source.html#l05334">Card.MakeMilk()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
 
 </div>
 </div>
@@ -1819,7 +1828,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00071">71</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00256">ConvertTile()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00009">RendererReplacer.CreateFrom()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00311">CharaRenderer.DrawHat()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03334">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00042">ScreenGuide.DrawWall()</a>, <a class="el" href="Recipe_8cs_source.html#l00812">Recipe.GetRenderer()</a>, <a class="el" href="RenderRow_8cs_source.html#l00386">GetRenderParam()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="Recipe_8cs_source.html#l00688">Recipe.OnRenderMarker()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00191">GrowSystem.OnRenderTileMap()</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">SetImage()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00094">UICardInfo.SetObj()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00038">CardRenderer.SetOwner()</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>, <a class="el" href="RenderRow_8cs_source.html#l00320">SetSpriteRenderer()</a>, <a class="el" href="RenderRow_8cs_source.html#l00244">SetTiles()</a>, <a class="el" href="SourceChara_8cs_source.html#l00097">SourceChara.Row.SetTiles()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00085">SourceThing.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00256">ConvertTile()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00009">RendererReplacer.CreateFrom()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00311">CharaRenderer.DrawHat()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l03335">BaseTileMap.DrawRoof()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="ScreenGuide_8cs_source.html#l00042">ScreenGuide.DrawWall()</a>, <a class="el" href="Recipe_8cs_source.html#l00812">Recipe.GetRenderer()</a>, <a class="el" href="RenderRow_8cs_source.html#l00388">GetRenderParam()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">GetSprite()</a>, <a class="el" href="Recipe_8cs_source.html#l00688">Recipe.OnRenderMarker()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00191">GrowSystem.OnRenderTileMap()</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">SetImage()</a>, <a class="el" href="UICardInfo_8cs_source.html#l00094">UICardInfo.SetObj()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00038">CardRenderer.SetOwner()</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>, <a class="el" href="RenderRow_8cs_source.html#l00320">SetSpriteRenderer()</a>, <a class="el" href="RenderRow_8cs_source.html#l00244">SetTiles()</a>, <a class="el" href="SourceChara_8cs_source.html#l00097">SourceChara.Row.SetTiles()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00085">SourceThing.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -1873,7 +1882,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00028">28</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l03334">BaseTileMap.DrawRoof()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l03335">BaseTileMap.DrawRoof()</a>, and <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>.</p>
 
 </div>
 </div>
@@ -1927,7 +1936,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00058">58</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardFilter_8cs_source.html#l00061">CardFilter.ContainsTag()</a>, <a class="el" href="CharaFilter_8cs_source.html#l00021">CharaFilter.ContainsTag()</a>, <a class="el" href="RenderRow_8cs_source.html#l00148">ContainsTag()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00145">RecipeCard.Craft()</a>, <a class="el" href="RenderRow_8cs_source.html#l00125">HasTag()</a>, <a class="el" href="Card_8cs_source.html#l02519">Card.HasTag()</a>, <a class="el" href="Card_8cs_source.html#l06457">Card.ListCraftBonusTraits()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>, <a class="el" href="SourceFloor_8cs_source.html#l00056">SourceFloor.Row.OnInit()</a>, <a class="el" href="SourceObj_8cs_source.html#l00049">SourceObj.Row.OnInit()</a>, and <a class="el" href="Map_8cs_source.html#l01527">Map.SetObj()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardFilter_8cs_source.html#l00061">CardFilter.ContainsTag()</a>, <a class="el" href="CharaFilter_8cs_source.html#l00021">CharaFilter.ContainsTag()</a>, <a class="el" href="RenderRow_8cs_source.html#l00148">ContainsTag()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00145">RecipeCard.Craft()</a>, <a class="el" href="RenderRow_8cs_source.html#l00125">HasTag()</a>, <a class="el" href="Card_8cs_source.html#l02519">Card.HasTag()</a>, <a class="el" href="Card_8cs_source.html#l06470">Card.ListCraftBonusTraits()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>, <a class="el" href="SourceFloor_8cs_source.html#l00056">SourceFloor.Row.OnInit()</a>, <a class="el" href="SourceObj_8cs_source.html#l00049">SourceObj.Row.OnInit()</a>, and <a class="el" href="Map_8cs_source.html#l01527">Map.SetObj()</a>.</p>
 
 </div>
 </div>
@@ -1961,7 +1970,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00010">10</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06069">Chara._CreateRenderer()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00393">SerializedCards.Add()</a>, <a class="el" href="Thing_8cs_source.html#l00745">Thing.GetHoverText()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00374">CardRenderer.GetPref()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>, <a class="el" href="Chara_8cs_source.html#l01332">Chara.OnCreate()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00480">SerializedCards.Restore()</a>, <a class="el" href="Card_8cs_source.html#l05742">Card.Rotate()</a>, <a class="el" href="RenderRow_8cs_source.html#l00244">SetTiles()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00037">TraitFigure.TrySetAct()</a>, and <a class="el" href="Thing_8cs_source.html#l00837">Thing.WriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06101">Chara._CreateRenderer()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00393">SerializedCards.Add()</a>, <a class="el" href="Thing_8cs_source.html#l00745">Thing.GetHoverText()</a>, <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>, <a class="el" href="Chara_8cs_source.html#l01364">Chara.OnCreate()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00480">SerializedCards.Restore()</a>, <a class="el" href="Card_8cs_source.html#l05755">Card.Rotate()</a>, <a class="el" href="RenderRow_8cs_source.html#l00244">SetTiles()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00037">TraitFigure.TrySetAct()</a>, and <a class="el" href="Thing_8cs_source.html#l00837">Thing.WriteNote()</a>.</p>
 
 </div>
 </div>
@@ -1979,7 +1988,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00077">77</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02479">Chara._Move()</a>, <a class="el" href="Map_8cs_source.html#l01812">Map.DestroyObj()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00053">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00043">SourceBlock.Row.OnInit()</a>, and <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02511">Chara._Move()</a>, <a class="el" href="Map_8cs_source.html#l01812">Map.DestroyObj()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00053">SourceBlock.Row.GetRenderParam()</a>, <a class="el" href="TileRow_8cs_source.html#l00016">TileRow.Init()</a>, <a class="el" href="SourceBlock_8cs_source.html#l00043">SourceBlock.Row.OnInit()</a>, and <a class="el" href="Recipe_8cs_source.html#l00825">Recipe.Rotate()</a>.</p>
 
 </div>
 </div>
@@ -1997,7 +2006,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00080">80</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="RenderRow_8cs_source.html#l00422">GetColorInt()</a>, <a class="el" href="Card_8cs_source.html#l05542">Card.RefreshColor()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00914">BaseTileMap.DrawTile()</a>, <a class="el" href="TileMapElona_8cs_source.html#l00115">TileMapElona.DrawTile()</a>, <a class="el" href="RenderRow_8cs_source.html#l00424">GetColorInt()</a>, <a class="el" href="Card_8cs_source.html#l05555">Card.RefreshColor()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>.</p>
 
 </div>
 </div>
@@ -2015,7 +2024,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00083">83</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05542">Card.RefreshColor()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l05555">Card.RefreshColor()</a>, and <a class="el" href="RenderRow_8cs_source.html#l00169">SetRenderData()</a>.</p>
 
 </div>
 </div>

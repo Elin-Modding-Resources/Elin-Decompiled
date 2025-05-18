@@ -10,7 +10,7 @@ var classRenderRow =
     [ "GetTile", "classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce", null ],
     [ "HasTag", "classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b", null ],
     [ "OnImportData", "classRenderRow.html#af0237d9eb8b48e4d17919ed001f91c49", null ],
-    [ "SetImage", "classRenderRow.html#a31e60d1c7ca10e9b57f695e66dfc93a6", null ],
+    [ "SetImage", "classRenderRow.html#ab2dc97be906ded91ad9527ef6203e29a", null ],
     [ "SetRenderData", "classRenderRow.html#ab65ea9cd24798f115b3628ac3833c255", null ],
     [ "SetRenderParam", "classRenderRow.html#a107056ec89fe5d7b157fec0a35d16030", null ],
     [ "SetSpriteRenderer", "classRenderRow.html#accc19e7e1a2e00fb5a6440bd041989f3", null ],

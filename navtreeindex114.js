@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitBookSkill.html#a5972d668c656eae458806db1a30475bb":[1,0,1436,6],
+"classTraitBookSkill.html#a63c1300106e2912ee4c3ae3f3fb989d4":[1,0,1436,0],
+"classTraitBookSkill.html#aa47b45c43d6da0c4173c2d940ac8f8bc":[1,0,1436,11],
+"classTraitBookSkill.html#aa63d4580da4a1a76951bc9dd84cc4c3e":[1,0,1436,7],
 "classTraitBookSkill.html#ab3e4b473d66fa8fc0f70eb0c086c5f53":[1,0,1436,3],
 "classTraitBookSkill.html#ab6713c7b1e8deecda697aaefff9b5626":[1,0,1436,4],
 "classTraitBookSkill.html#ac695a7d658deb3806341d2dfcfd68d87":[1,0,1436,8],
@@ -239,15 +243,11 @@ var NAVTREEINDEX114 =
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba21f8f0448bd198448990e23ab640f4c8":[1,0,1486,1,5],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba2765242ce212b33cd934c1b24f12cc39":[1,0,1486,1,3],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba416cbeae2070fddbfc244e8c51179235":[1,0,1486,1,12],
+"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba451f9c5171a55b1b6003778d2a35f138":[1,0,1486,1,13],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba67b587b7da7425259fa9f40c9307fd4b":[1,0,1486,1,7],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba6adf97f83acf6453d4a6a4b1070f3754":[1,0,1486,1,0],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba817e896c4caf2cfa1428599302caadc0":[1,0,1486,1,6],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcba83882de81950799bb1e033c7feffe2a5":[1,0,1486,1,4],
 "classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbaa53f4cee63e4f783b0d8dded8760cfba":[1,0,1486,1,8],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbabe8545ae7ab0276e15898aae7acfbd7a":[1,0,1486,1,2],
-"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbae52b97288ca1666a985ab2354397ddb7":[1,0,1486,1,9],
-"classTraitCrafter.html#a1fbe73f7969a5a7616846de2c329bdca":[1,0,1486,30],
-"classTraitCrafter.html#a2775523ce44d0ea98e4a6f2f4f2b9e8b":[1,0,1486,27],
-"classTraitCrafter.html#a2bfa7dc079102a56add5f4cbb0116d4d":[1,0,1486,23],
-"classTraitCrafter.html#a380ec8a3ad068bb5d7f154aa6b9d5e30":[1,0,1486,11]
+"classTraitCrafter.html#a1ee82645e2183ef8e687068242a34dcbabe8545ae7ab0276e15898aae7acfbd7a":[1,0,1486,1,2]
 };

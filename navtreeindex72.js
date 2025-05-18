@@ -1,5 +1,8 @@
 var NAVTREEINDEX72 =
 {
+"classInvOwnerUncurse.html#a94e1e19d3a91954f3b04a2117c3798fb":[1,0,700,1],
+"classInvOwnerUncurse.html#a9b9cc80a29cd4fea77f3d16373580eb5":[1,0,700,4],
+"classInvOwnerUncurse.html#aadc059aceb86711eb973a8bfca256c0f":[1,0,700,0],
 "classInvOwnerUncurse.html#ac8052a0c387288340e503d437d035af9":[1,0,700,2],
 "classInvOwnerUncurse.html#af590c31f3125225e136c9b824bb60110":[1,0,700,5],
 "classInvOwner_1_1ErrorMessage.html":[1,0,673,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX72 =
 "classLangExporter.html#ae001258992ec3daee4d988bd15518579":[1,0,738,0],
 "classLangGame.html":[1,0,739],
 "classLangGame.html#a31859a45fb637b0f34fdb604a24d1ccb":[1,0,739,1],
-"classLangGame.html#a649d62b8c1a6619d56924456b9868629":[1,0,739,2],
-"classLangGame.html#a9f6d49fb67608a93e4bb9c96fa23e767":[1,0,739,3],
-"classLangGame_1_1Row.html":[1,0,739,0],
-"classLangGame_1_1Row.html#a4d95fa3685f6ce006ef3f561dae73135":[1,0,739,0,5]
+"classLangGame.html#a649d62b8c1a6619d56924456b9868629":[1,0,739,2]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"classCoreConfig_1_1GameConfig.html#a20ae5dd93045d2bffb8b498bfe96cc7d":[1,0,383,5,34],
+"classCoreConfig_1_1GameConfig.html#a241904d9b6248f3731595c70bb257e60":[1,0,383,5,41],
 "classCoreConfig_1_1GameConfig.html#a25a470b11e54b17a01db5c55826e107f":[1,0,383,5,18],
 "classCoreConfig_1_1GameConfig.html#a2ff0d84f1cc4ac9ca107781293d4e951":[1,0,383,5,12],
 "classCoreConfig_1_1GameConfig.html#a33f3a6ccdef384df1758fe995c1985f5":[1,0,383,5,45],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "classCoreDebug.html#a669319abcd748efaa6f60d5a2ad578ca":[1,0,384,131],
 "classCoreDebug.html#a6696ca4ae997370a88adf04d5c6ebb35":[1,0,384,127],
 "classCoreDebug.html#a67119fab3e23ff06d668cfa05803e99d":[1,0,384,49],
-"classCoreDebug.html#a68a8792ea19e2cab21d8b2997277901b":[1,0,384,48],
-"classCoreDebug.html#a68d5e0c38c1c979da243d41dfd74fd43":[1,0,384,62],
-"classCoreDebug.html#a69aef1e06f50b9739f7f06b799e397ab":[1,0,384,103]
+"classCoreDebug.html#a68a8792ea19e2cab21d8b2997277901b":[1,0,384,48]
 };

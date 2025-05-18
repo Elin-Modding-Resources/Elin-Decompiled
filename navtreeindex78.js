@@ -1,5 +1,8 @@
 var NAVTREEINDEX78 =
 {
+"classLayerRegisterHotbar.html#a6815e6048478483ed048ea8bdfd2734a":[1,0,807,9],
+"classLayerRegisterHotbar.html#a7860e70b08f60db791ec69cd26db0afc":[1,0,807,4],
+"classLayerRegisterHotbar.html#a9a0ec87fcc2d8074448b91b45d839cd1":[1,0,807,7],
 "classLayerRegisterHotbar.html#aa2b3ad8b1fb0a2113076aea943cd1c14":[1,0,807,3],
 "classLayerRegisterHotbar.html#aaad1bfe16839cfa7c0962bf7851cac59":[1,0,807,5],
 "classLayerRegisterHotbar.html#ab0c96f75a6120a1ba092a03fd758b77e":[1,0,807,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerWorldSetting.html#afefe51c6a802ec45fec8f92efdcfb22e":[1,0,821,2],
 "classLayer_1_1Option.html":[1,0,747,0],
 "classLayer_1_1Option.html#a2e685c75caa0fcd9fbc85881ab6ddc11":[1,0,747,0,10],
-"classLayer_1_1Option.html#a347d8aaba887939262b88d848b3d469e":[1,0,747,0,6],
-"classLayer_1_1Option.html#a43ac40dd6dffffb515ae136e194791ee":[1,0,747,0,9],
-"classLayer_1_1Option.html#a448dd0393d9d03966300d31472ae7cc3":[1,0,747,0,12],
-"classLayer_1_1Option.html#a44b413a3cbf15c8723470bb35fdf158a":[1,0,747,0,7]
+"classLayer_1_1Option.html#a347d8aaba887939262b88d848b3d469e":[1,0,747,0,6]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitSeed.html":[1,0,1771],
+"classTraitSeed.html#a022b05bc222961ddf02ab956699a4376":[1,0,1771,1],
+"classTraitSeed.html#a0a7364e58a3db978d861f788fcd72438":[1,0,1771,8],
+"classTraitSeed.html#a1727c60f9daf9a01e0236563a5f9996d":[1,0,1771,7],
+"classTraitSeed.html#a2fd15c009c1b0ffaf779cdeb47b687e4":[1,0,1771,16],
 "classTraitSeed.html#a346a08c0db4fdbb57b8086666608db8e":[1,0,1771,14],
 "classTraitSeed.html#a3aa16e52587f4375ef3bad7d638a09a5":[1,0,1771,0],
 "classTraitSeed.html#a4c8fc307a12d9be529fdcc916a6fa541":[1,0,1771,10],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitThrownExplosive.html#a5c0197caa76da42e635848ca65439097":[1,0,1830,0],
 "classTraitThrownExplosive.html#a98e390f9d299283a1f55f5dbc959df7d":[1,0,1830,1],
 "classTraitTicketArmPillow.html":[1,0,1831],
-"classTraitTicketChampagne.html":[1,0,1832],
-"classTraitTicketFurniture.html":[1,0,1833],
-"classTraitTicketFurniture.html#a96306db452cd06ecd5623c3d3e414244":[1,0,1833,2],
-"classTraitTicketFurniture.html#aa79abe574ba219d7ddf31ecaae48810b":[1,0,1833,1],
-"classTraitTicketFurniture.html#ada74a4ace463f5923278d818f7cfecbf":[1,0,1833,3],
-"classTraitTicketFurniture.html#adf26d3791bd374d651c28c4e43d0275c":[1,0,1833,0]
+"classTraitTicketChampagne.html":[1,0,1832]
 };

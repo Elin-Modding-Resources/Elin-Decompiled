@@ -451,6 +451,7 @@ var classChara =
     [ "NameBraced", "classChara.html#a77fdd5861e500e5a7faf16fb89577bdf", null ],
     [ "NameTitled", "classChara.html#a9c7e80ce72f241fc1a726f6c514e1768", null ],
     [ "OriginalHostility", "classChara.html#a16a8614d744fb716390159b086dc6da4", null ],
+    [ "Pref", "classChara.html#a09ad983b6bcfe43e64ddd5ff326481cd", null ],
     [ "PrefIndex", "classChara.html#af49ec2c0b468f1d1fc54cd6f766223e5", null ],
     [ "PV", "classChara.html#a9b90b5fc39dfdef5a04b59c8ede96907", null ],
     [ "race", "classChara.html#aff51c1a00af6403830b9d32980033a66", null ],

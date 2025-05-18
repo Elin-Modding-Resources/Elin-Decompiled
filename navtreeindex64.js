@@ -1,5 +1,8 @@
 var NAVTREEINDEX64 =
 {
+"classGameIO.html#a26c1b96af10f68ff67c262a31d542d0d":[1,0,516,19],
+"classGameIO.html#a33c393c075f356bdad0d427c1924e0ff":[1,0,516,5],
+"classGameIO.html#a3641078c1136f225277874c099b60179":[1,0,516,2],
 "classGameIO.html#a3d95322fcd775b6675b6f5195ca0643f":[1,0,516,20],
 "classGameIO.html#a41128f17f082ef1ab651945f44fb461b":[1,0,516,0],
 "classGameIO.html#a472e51294a31ce7706182f850aabaa5e":[1,0,516,17],
@@ -246,8 +249,5 @@ var NAVTREEINDEX64 =
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#a8042f490018718ba6a69f28ed34230da":[1,0,523,6,3,2],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#aadeb796c757a7dddefcac8af544451e3":[1,0,523,6,3,0],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#ab376ae129417c9faa2800057cde5101b":[1,0,523,6,3,1],
-"classGameSetting_1_1RenderSetting_1_1UD__FogSetting.html":[1,0,523,6,4],
-"classGameSetting_1_1RenderSetting_1_1UD__MapBGSetting.html":[1,0,523,6,5],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html":[1,0,523,6,6],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html#a13dc98707ea47b9832b77fadfe31e5b5":[1,0,523,6,6,7]
+"classGameSetting_1_1RenderSetting_1_1UD__FogSetting.html":[1,0,523,6,4]
 };

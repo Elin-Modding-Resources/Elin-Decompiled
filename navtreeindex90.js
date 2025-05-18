@@ -1,5 +1,8 @@
 var NAVTREEINDEX90 =
 {
+"classQuest.html#a14a357f3949714e4cdad890ae074aaa2":[1,0,959,1],
+"classQuest.html#a14a357f3949714e4cdad890ae074aaa2a072f2184f07fc315bbc1009984014609":[1,0,959,1,2],
+"classQuest.html#a14a357f3949714e4cdad890ae074aaa2a1380afebc7ce22de7b3450f8cab86d2c":[1,0,959,1,0],
 "classQuest.html#a14a357f3949714e4cdad890ae074aaa2ab076720bf810da4be557169fb0168c6f":[1,0,959,1,3],
 "classQuest.html#a14a357f3949714e4cdad890ae074aaa2aee36e56adf16aadb8a21914be9d78865":[1,0,959,1,1],
 "classQuest.html#a15e15a319d34b5ee653b8462ff7fd0b3":[1,0,959,87],
@@ -246,8 +249,5 @@ var NAVTREEINDEX90 =
 "classQuestExploration.html#aac1f0b889fb96c4b0704d6dcce9467ab":[1,0,974,8],
 "classQuestExploration.html#af05c362547863b2d52385ca56e30093f":[1,0,974,7],
 "classQuestFarrisSister.html":[1,0,975],
-"classQuestFarrisSister.html#a889fd39e8b2c3fa57595f9288b77130f":[1,0,975,0],
-"classQuestFiamaLock.html":[1,0,976],
-"classQuestFiamaLock.html#a34943052fe9042089c74d24672f860e4":[1,0,976,1],
-"classQuestFiamaLock.html#a4478d856bb84ffb2bbe72bf4dd0e792b":[1,0,976,0]
+"classQuestFarrisSister.html#a889fd39e8b2c3fa57595f9288b77130f":[1,0,975,0]
 };

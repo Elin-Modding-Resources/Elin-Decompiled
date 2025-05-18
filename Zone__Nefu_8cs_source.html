@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.140</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.141 Nightly</span>
    </div>
   </td>
  </tr>
@@ -96,10 +96,13 @@ $(document).ready(function(){initNavTree('Zone__Nefu_8cs_source.html',''); initR
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classZone__Nefu.html#ac7d3126cebd226c555192dd8d78ba9d0">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classZone__Nefu.html#ac7d3126cebd226c555192dd8d78ba9d0">OnActivate</a>()</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        EClass._map.config.blossom = EClass.pc.faith == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a349cf4f21b9bd958acabb37981d11105">religions</a>.<a class="code hl_variable" href="classReligionManager.html#a76dc8a310c6021205baa8049cb671396">MoonShadow</a>;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        base.OnActivate();</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    }</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keywordflow">if</span> (base.lv == 0)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>            EClass._map.config.blossom = EClass.pc.faith == <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a349cf4f21b9bd958acabb37981d11105">religions</a>.<a class="code hl_variable" href="classReligionManager.html#a76dc8a310c6021205baa8049cb671396">MoonShadow</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        base.OnActivate();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
 <div class="ttc" id="aclassGame_html_a349cf4f21b9bd958acabb37981d11105"><div class="ttname"><a href="classGame.html#a349cf4f21b9bd958acabb37981d11105">Game.religions</a></div><div class="ttdeci">ReligionManager religions</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00158">Game.cs:158</a></div></div>

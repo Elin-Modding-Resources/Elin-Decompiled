@@ -2129,7 +2129,7 @@ var annotated_dup =
     [ "Xyz", "classXyz.html", "classXyz" ],
     [ "ZINT", "classZINT.html", "classZINT" ],
     [ "Zone", "classZone.html", "classZone" ],
-    [ "Zone_Aquli", "classZone__Aquli.html", null ],
+    [ "Zone_Aquli", "classZone__Aquli.html", "classZone__Aquli" ],
     [ "Zone_Arena", "classZone__Arena.html", "classZone__Arena" ],
     [ "Zone_Arena2", "classZone__Arena2.html", "classZone__Arena2" ],
     [ "Zone_Asylum", "classZone__Asylum.html", "classZone__Asylum" ],

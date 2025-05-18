@@ -1,5 +1,8 @@
 var NAVTREEINDEX66 =
 {
+"classGoalCombat.html#aeae216bc23d768910acf07b70c065184":[1,0,540,3],
+"classGoalCombat.html#aebfd4fe447a80e7584de1f041d9f5357":[1,0,540,1],
+"classGoalCombat_1_1ItemAbility.html":[1,0,540,0],
 "classGoalCombat_1_1ItemAbility.html#a0c9f100a7844d305b5cce5c6feed84e0":[1,0,540,0,6],
 "classGoalCombat_1_1ItemAbility.html#a214857701de121b8c5f92cbabaa22fa4":[1,0,540,0,2],
 "classGoalCombat_1_1ItemAbility.html#a3872003f56fd33309f72357312d42e6e":[1,0,540,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX66 =
 "classGrowSystemFlower.html#abd68fa7c8bcf4dbc73218099cfa4de21":[1,0,570,1],
 "classGrowSystemHerb.html":[1,0,571],
 "classGrowSystemHerb.html#a273d43a046ad77a9b0b547c6be55f512":[1,0,571,0],
-"classGrowSystemHerb.html#a4e5d6ca0fa0f039a9fff8a875e5f09b5":[1,0,571,2],
-"classGrowSystemHerb.html#af9ab00f59c132f8c7c4627b011113e9c":[1,0,571,1],
-"classGrowSystemKinoko.html":[1,0,572],
-"classGrowSystemKinoko.html#a0d762e7ad7f24dd7edb6e6d28e974d98":[1,0,572,5]
+"classGrowSystemHerb.html#a4e5d6ca0fa0f039a9fff8a875e5f09b5":[1,0,571,2]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX119 =
 {
+"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1722,0],
+"classTraitPoolTable.html":[1,0,1723],
+"classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1723,0],
+"classTraitPoop.html":[1,0,1724],
+"classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1724,0],
 "classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1724,1],
 "classTraitPotion.html":[1,0,1725],
 "classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1725,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitSecretary.html#a30a9225084c8540bab55047482cdd0cb":[1,0,1770,2],
 "classTraitSecretary.html#a609c1fe1754e9ba237082cdb70fa0ea6":[1,0,1770,5],
 "classTraitSecretary.html#a6110ea0c3c95006b574bc9ee6131f9d4":[1,0,1770,4],
-"classTraitSecretary.html#ac6154c708ec273c7f2daf8708b80274a":[1,0,1770,3],
-"classTraitSeed.html":[1,0,1771],
-"classTraitSeed.html#a022b05bc222961ddf02ab956699a4376":[1,0,1771,1],
-"classTraitSeed.html#a0a7364e58a3db978d861f788fcd72438":[1,0,1771,8],
-"classTraitSeed.html#a1727c60f9daf9a01e0236563a5f9996d":[1,0,1771,7],
-"classTraitSeed.html#a2fd15c009c1b0ffaf779cdeb47b687e4":[1,0,1771,16]
+"classTraitSecretary.html#ac6154c708ec273c7f2daf8708b80274a":[1,0,1770,3]
 };

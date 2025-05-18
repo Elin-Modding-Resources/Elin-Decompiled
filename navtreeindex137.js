@@ -1,5 +1,11 @@
 var NAVTREEINDEX137 =
 {
+"classZone__CursedManorDungeon.html#a6a14f2aba3851f66484214c512344554":[1,0,2062,0],
+"classZone__CursedManorDungeon.html#abf2157af362b83032c9f047732cf838d":[1,0,2062,5],
+"classZone__CursedManorDungeon.html#aeedf0e1d86871d2d6d24425bc481b834":[1,0,2062,3],
+"classZone__Derphy.html":[1,0,2063],
+"classZone__Derphy.html#a04f71a2cc18aad5a78857ad3f212d8f1":[1,0,2063,0],
+"classZone__DerphyWhore.html":[1,0,2064],
 "classZone__Dungeon.html":[1,0,2065],
 "classZone__Dungeon.html#a1866eecd3a3eebe039a903b990651ff8":[1,0,2065,11],
 "classZone__Dungeon.html#a46a98ed4b8b845af3cdda793e4c7257a":[1,0,2065,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX137 =
 "classZone__Wilds.html":[1,0,2123],
 "classZone__WindRest.html":[1,0,2124],
 "classZone__WindRest.html#a00c28373e5462d7d7c6114c97ceb8577":[1,0,2124,2],
-"classZone__WindRest.html#a6ee955644545669b4670588b6b4fc85d":[1,0,2124,1],
-"classZone__WindRest.html#ad58bc792e39606985b4880dcb10f1f62":[1,0,2124,0],
-"classZone__Yowyn.html":[1,0,2125],
-"classZone__Yowyn.html#aa10c776b8328eb263cb5814e5875b381":[1,0,2125,3],
-"classZone__Yowyn.html#adb44b596d5aec8a6f5de868d95c0ecc8":[1,0,2125,0],
-"classZone__Yowyn.html#ae06b0b6751f31fb892c2d0af76691405":[1,0,2125,1],
-"classZone__Yowyn.html#ae0cb126cce3f9edf5e6644e2167542bc":[1,0,2125,2]
+"classZone__WindRest.html#a6ee955644545669b4670588b6b4fc85d":[1,0,2124,1]
 };
