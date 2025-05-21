@@ -1,6 +1,6 @@
 public class FOOD
 {
-	public const int food_undead = 709;
+	public const int food_CHA = 700;
 
 	public const int justcooked = 757;
 
@@ -8,7 +8,7 @@ public class FOOD
 
 	public const int food_cat = 701;
 
-	public const int food_CHA = 700;
+	public const int food_undead = 709;
 
 	public const int food_love = 703;
 
@@ -26,7 +26,7 @@ public class FOOD
 
 	public static readonly int[] IDS = new int[12]
 	{
-		709, 757, 758, 701, 700, 703, 702, 707, 706, 708,
+		700, 757, 758, 701, 709, 703, 702, 707, 706, 708,
 		704, 705
 	};
 }

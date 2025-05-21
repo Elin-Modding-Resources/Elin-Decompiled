@@ -547,6 +547,7 @@ public class ActEffect : EClass
 				radius = 1;
 				break;
 			}
+			num3 += CC.Evalue(1240);
 			for (int j = 0; j < num3; j++)
 			{
 				if (EClass._zone.CountMinions(CC) >= CC.MaxSummon)

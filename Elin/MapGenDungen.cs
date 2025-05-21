@@ -226,7 +226,19 @@ public class MapGenDungen : BaseMapGen
 			{
 				zone.SpawnMob(null, SpawnSetting.Fish());
 			}
-			Crawler.Create("pasture").CrawlUntil(tries: EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(5) + 1) + 1) + 1), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			Crawler crawler = Crawler.Create("pasture");
+			int tries = (EClass.debug.enable ? 3 : EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(5) + 1) + 1) + 1));
+			Thing seed = null;
+			int num4 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
+			if (num4 > 0)
+			{
+				seed = TraitSeed.MakeSeed(EClass.sources.objs.map[137]);
+				Rand.SetSeed(EClass._zone.uid * 10 + num4);
+				TraitSeed.LevelSeed(seed, (seed.trait as TraitSeed).row, num4);
+				Rand.SetSeed();
+				seed.elements.SetBase(2, EClass.curve(seed.encLV, 50, 10, 80));
+			}
+			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), tries, delegate(Crawler.Result r)
 			{
 				int id2 = 137;
 				foreach (Point point2 in r.points)
@@ -236,27 +248,58 @@ public class MapGenDungen : BaseMapGen
 						map.SetObj(point2.x, point2.z, id2);
 						int idx = 3 + ((EClass.rnd(3) == 0) ? 1 : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0);
 						point2.growth.SetStage(idx);
+						if (seed != null)
+						{
+							EClass._map.AddPlant(point2, seed);
+						}
+					}
+				}
+				return false;
+			});
+			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(5) + 1) + 1, map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			{
+				int id = 136;
+				foreach (Point point3 in r.points)
+				{
+					if (!point3.cell.isModified && !point3.HasThing && !point3.HasBlock && !point3.HasObj)
+					{
+						map.SetObj(point3.x, point3.z, id, 1, EClass.rnd(4));
 					}
 				}
 				return false;
 			});
 		}
-		if (zone is Zone_RandomDungeonPlain)
+		bool forest = zone is Zone_RandomDungeonForest;
+		if (zone is Zone_RandomDungeonPlain || (forest && EClass.rnd(3) == 0))
 		{
-			Crawler.Create("pasture").CrawlUntil(tries: EClass.rnd(EClass.rnd(3) + 1), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			Crawler.Create("pasture").CrawlUntil(tries: EClass.debug.enable ? 3 : EClass.rnd(EClass.rnd(3) + 1), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 			{
-				int id = ((EClass.rnd(3) == 0) ? 108 : 105);
-				foreach (Point point3 in r.points)
+				int num5 = ((forest || EClass.rnd(5) == 0) ? EClass.sources.objs.rows.Where((SourceObj.Row a) => a.ContainsTag("wild")).RandomItem().id : ((EClass.rnd(3) == 0) ? 108 : 105));
+				Thing thing5 = null;
+				int num6 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
+				if (num6 > 0)
 				{
-					if (!point3.cell.isModified && !point3.HasThing && !point3.HasBlock && !point3.HasObj)
+					thing5 = TraitSeed.MakeSeed(EClass.sources.objs.map[num5]);
+					Rand.SetSeed(EClass._zone.uid * 10 + num6);
+					TraitSeed.LevelSeed(thing5, (thing5.trait as TraitSeed).row, num6);
+					Rand.SetSeed();
+					thing5.elements.SetBase(2, EClass.curve(thing5.encLV, 50, 10, 80));
+				}
+				foreach (Point point4 in r.points)
+				{
+					if (!point4.cell.isModified && !point4.HasThing && !point4.HasBlock && !point4.HasObj)
 					{
-						map.SetObj(point3.x, point3.z, id);
-						int num4 = 3;
+						map.SetObj(point4.x, point4.z, num5);
+						int num7 = 3;
 						if (EClass.rnd(6) == 0)
 						{
-							num4++;
+							num7++;
 						}
-						point3.growth.SetStage(num4);
+						point4.growth.SetStage(num7);
+						if (thing5 != null)
+						{
+							EClass._map.AddPlant(point4, thing5);
+						}
 					}
 				}
 				return false;

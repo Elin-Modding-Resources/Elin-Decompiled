@@ -38,7 +38,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 		{
 			onInstantiate = delegate(Chara a, ItemGeneral b)
 			{
-				b.SetChara(a);
+				b.SetChara(a, (this is ListPeopleBuySlave) ? ItemGeneral.Mode.Slave : ItemGeneral.Mode.Default);
 				OnInstantiate(a, b);
 				b.Build();
 			},

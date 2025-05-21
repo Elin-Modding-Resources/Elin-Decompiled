@@ -491,6 +491,11 @@ public class Biography : EClass
 		return Lang.Parse("heightWeight", height.ToString() ?? "", weight.ToString() ?? "") + " " + ((c.material.alias == "meat") ? "" : c.material.GetName().ToTitleCase(wholeText: true));
 	}
 
+	public string TextBioSlave(Chara c)
+	{
+		return " (" + Lang.GetList("genders_animal")[c.bio.gender] + " " + "age".lang(c.bio.TextAge(c)) + ")";
+	}
+
 	public string TextBirthDate(Chara c, bool _age = false)
 	{
 		return Lang.Parse("birthText", (birthYear >= 0) ? (birthYear.ToString() ?? "") : "???", birthMonth.ToString() ?? "", birthDay.ToString() ?? "") + (_age ? (" (" + Lang.Parse("age", TextAge(c)) + ")") : "");

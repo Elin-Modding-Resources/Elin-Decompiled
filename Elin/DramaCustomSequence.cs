@@ -181,13 +181,16 @@ public class DramaCustomSequence : EClass
 				{
 					Choice2(c.trait.TextNextRestock, "_buy").DisableSound();
 				}
-				if (c.trait.SlaverType != 0)
+				if (!EClass._zone.IsUserZone)
 				{
-					Choice2(c.trait.TextNextRestockPet, "_buySlave").DisableSound();
-				}
-				if (c.trait.CopyShop != 0)
-				{
-					Choice2(("daCopy" + c.trait.CopyShop).lang(c.trait.NumCopyItem.ToString() ?? ""), "_copyItem").DisableSound();
+					if (c.trait.SlaverType != 0)
+					{
+						Choice2(c.trait.TextNextRestockPet, "_buySlave").DisableSound();
+					}
+					if (c.trait.CopyShop != 0)
+					{
+						Choice2(("daCopy" + c.trait.CopyShop).lang(c.trait.NumCopyItem.ToString() ?? ""), "_copyItem").DisableSound();
+					}
 				}
 				if (c.trait.HaveNews && c.GetInt(33) + 10080 < EClass.world.date.GetRaw())
 				{

@@ -86,6 +86,8 @@ public class Act : Element
 
 	public static bool forcePt;
 
+	public static Act CurrentAct;
+
 	public override bool ShowPotential => false;
 
 	public override bool UsePotential => false;

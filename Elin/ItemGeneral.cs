@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 public class ItemGeneral : UIItem, IPrefImage
 {
+	public enum Mode
+	{
+		Default,
+		Slave
+	}
+
 	private const int IconSize = 40;
 
 	private const int IconPadding = 10;
@@ -18,7 +24,7 @@ public class ItemGeneral : UIItem, IPrefImage
 
 	private int count;
 
-	public void SetChara(Chara c)
+	public void SetChara(Chara c, Mode mode = Mode.Default)
 	{
 		card = c;
 		c.SetImage(button1.icon);
@@ -39,6 +45,10 @@ public class ItemGeneral : UIItem, IPrefImage
 		else if (c.hp < c.MaxHP / 2 && c.currentZone == EClass._zone)
 		{
 			c2 = FontColor.Warning;
+		}
+		if (mode == Mode.Slave)
+		{
+			text = text + " " + c.bio.TextBioSlave(c);
 		}
 		button1.mainText.SetText(text, c2);
 		_ = button1.icon.rectTransform;

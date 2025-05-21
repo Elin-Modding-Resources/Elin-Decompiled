@@ -40,7 +40,7 @@ public class FACTION
 
 	public const int bfTranquil = 3703;
 
-	public const int fHeirloom = 2120;
+	public const int fSoil = 2200;
 
 	public const int fTaxEvasion = 2119;
 
@@ -106,16 +106,16 @@ public class FACTION
 
 	public const int fConstruction = 2003;
 
-	public const int fSoil = 2200;
+	public const int fHeirloom = 2120;
 
 	public static readonly int[] IDS = new int[52]
 	{
 		3500, 3600, 3601, 3602, 3700, 3701, 3603, 3605, 2207, 3702,
-		3604, 4004, 2205, 2204, 2203, 2202, 2201, 3703, 2120, 2119,
+		3604, 4004, 2205, 2204, 2203, 2202, 2201, 3703, 2200, 2119,
 		2118, 2117, 2116, 2206, 3704, 3802, 3706, 4005, 4006, 4003,
 		4002, 2115, 4001, 4000, 3900, 3805, 3804, 3705, 3803, 3800,
 		3784, 3783, 3782, 3781, 3780, 3710, 3709, 3708, 3707, 3801,
-		2003, 2200
+		2003, 2120
 	};
 }
 public class Faction : EClass

@@ -23,7 +23,7 @@ public class TraitCoreDefense : Trait
 				return true;
 			});
 		}
-		if (ev.CanRetreat && !ev.retreated)
+		if (ev.CanRetreat && EClass.player.returnInfo == null)
 		{
 			p.TrySetAct("actEvacDefense", delegate
 			{

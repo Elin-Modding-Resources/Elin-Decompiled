@@ -90,7 +90,10 @@ public class ActMelee : ActBaseAttack
 
 	public override bool Perform()
 	{
-		return Attack();
+		Act.CurrentAct = this;
+		bool result = Attack();
+		Act.CurrentAct = null;
+		return result;
 	}
 
 	public bool Attack(float dmgMulti = 1f, bool maxRoll = false)

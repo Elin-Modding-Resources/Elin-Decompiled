@@ -2605,6 +2605,14 @@ public class Chara : Card, IPathfindWalker
 		if (IsPCFaction && EClass.rnd(5) == 0 && newPoint.cell.CanSuffocate())
 		{
 			ModExp(200, EClass._zone.IsRegion ? 50 : 5);
+			if (ride != null)
+			{
+				ride.ModExp(200, EClass._zone.IsRegion ? 50 : 5);
+			}
+			if (parasite != null)
+			{
+				parasite.ModExp(200, EClass._zone.IsRegion ? 50 : 5);
+			}
 		}
 		Chara chara = ((ride == null) ? this : ride);
 		if (!EClass._zone.IsRegion || chara.IsPC)

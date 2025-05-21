@@ -4814,6 +4814,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				num3 += (int)Mathf.Min(Mathf.Sqrt(EClass.pc.Evalue(290)), 20f);
 			}
+			if (EClass.rnd((Act.CurrentAct is ActMeleeBladeStorm) ? 2 : 100) == 0)
+			{
+				text = "dattamono";
+			}
 			if (num2 && num3 > EClass.rnd(100))
 			{
 				text = "meat_marble";
