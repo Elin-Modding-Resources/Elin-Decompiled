@@ -1,5 +1,8 @@
 var NAVTREEINDEX66 =
 {
+"classGoalCombat.html#abe14ec2e5ea805d31be2dfc34701cd93":[1,0,540,19],
+"classGoalCombat.html#ace487d76923e212d80f9d0b999d7e9cd":[1,0,540,16],
+"classGoalCombat.html#ad2349c9a7709bf783d0e4f953b41734e":[1,0,540,6],
 "classGoalCombat.html#aeae216bc23d768910acf07b70c065184":[1,0,540,3],
 "classGoalCombat.html#aebfd4fe447a80e7584de1f041d9f5357":[1,0,540,1],
 "classGoalCombat_1_1ItemAbility.html":[1,0,540,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX66 =
 "classGrowSystemFlower.html":[1,0,570],
 "classGrowSystemFlower.html#a1eb606a7054ba01d98f32c33d9015efd":[1,0,570,0],
 "classGrowSystemFlower.html#ab20c1a2e8388da5cad4981840ae80fb7":[1,0,570,2],
-"classGrowSystemFlower.html#abd68fa7c8bcf4dbc73218099cfa4de21":[1,0,570,1],
-"classGrowSystemHerb.html":[1,0,571],
-"classGrowSystemHerb.html#a273d43a046ad77a9b0b547c6be55f512":[1,0,571,0],
-"classGrowSystemHerb.html#a4e5d6ca0fa0f039a9fff8a875e5f09b5":[1,0,571,2]
+"classGrowSystemFlower.html#abd68fa7c8bcf4dbc73218099cfa4de21":[1,0,570,1]
 };

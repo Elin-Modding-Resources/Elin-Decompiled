@@ -1,5 +1,11 @@
 var NAVTREEINDEX136 =
 {
+"classZoneEventManager.html#ade91a72719cc08bc4303d34d941cbebd":[1,0,2131,9],
+"classZoneEventMusic.html":[1,0,2132],
+"classZoneEventMusic.html#a0325efde8156307ef91d1340b20fa86a":[1,0,2132,0],
+"classZoneEventMusic.html#a20903b08f801d2e294643885fcb3ff08":[1,0,2132,3],
+"classZoneEventMusic.html#a3bd946d9a3eeecf5e8b2044050bdaa36":[1,0,2132,5],
+"classZoneEventMusic.html#a4c23d8a249b7ab3304aa5cc74821b8df":[1,0,2132,2],
 "classZoneEventMusic.html#a7fa7e1a5b5edfc0d270efd8cf32aa218":[1,0,2132,4],
 "classZoneEventMusic.html#a8c45fba146c222e4da918bfb5e238d3d":[1,0,2132,1],
 "classZoneEventPhone.html":[1,0,2133],
@@ -243,11 +249,5 @@ var NAVTREEINDEX136 =
 "classZone__CursedManor.html":[1,0,2061],
 "classZone__CursedManor.html#a121b9fe5f94519d85ea40c5b7265f6bb":[1,0,2061,1],
 "classZone__CursedManor.html#aa150c9205a532a69a04e4b6689f447ea":[1,0,2061,0],
-"classZone__CursedManor.html#aa1b0cf17c11a73667228a45a847a75bf":[1,0,2061,2],
-"classZone__CursedManor.html#adc56f3b2a1f8b9c026e4c3c450184e90":[1,0,2061,3],
-"classZone__CursedManor.html#add100cf842a97b6a534f444e15db9700":[1,0,2061,4],
-"classZone__CursedManorDungeon.html":[1,0,2062],
-"classZone__CursedManorDungeon.html#a251b73731f7e1305e924b1b841d9be90":[1,0,2062,1],
-"classZone__CursedManorDungeon.html#a27625f5c16b5a920337868318ef8a1cb":[1,0,2062,4],
-"classZone__CursedManorDungeon.html#a523db04f56ae645e1ad9af4cb3074306":[1,0,2062,2]
+"classZone__CursedManor.html#aa1b0cf17c11a73667228a45a847a75bf":[1,0,2061,2]
 };

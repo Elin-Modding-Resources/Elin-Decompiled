@@ -1,5 +1,11 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#afc6dee1e32d290bdace9512dbb7df397":[1,0,1382,102],
+"classTrait.html#afe04c35d6a7b1cb37e81944261583702":[1,0,1382,49],
+"classTraitAbility.html":[1,0,1383],
+"classTraitAbility.html#a2da4cca35e5e2e466d75a02d6712c7be":[1,0,1383,6],
+"classTraitAbility.html#a3badd2ca0e7d5fb05b21ccfe4f61b46a":[1,0,1383,0],
+"classTraitAbility.html#a3ff0e49744c0db27dc6b601bfdf8bda5":[1,0,1383,5],
 "classTraitAbility.html#a7b2c5167072bc230341cc179e006225d":[1,0,1383,3],
 "classTraitAbility.html#a8d2e3feb454e134a2ec4f2de28760b59":[1,0,1383,2],
 "classTraitAbility.html#aa09c0fc724d476dff439483a22c9b663":[1,0,1383,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitBookSecret.html":[1,0,1434],
 "classTraitBookSecret.html#a1205df148f455a95a9530c6aa7083c76":[1,0,1434,2],
 "classTraitBookSecret.html#a215ca78cdcc00697186d537abf8e9351":[1,0,1434,0],
-"classTraitBookSecret.html#a8f15b023c265ca0a70f1f8ec57f0046c":[1,0,1434,1],
-"classTraitBookShelf.html":[1,0,1435],
-"classTraitBookShelf.html#a2f2ea8d92fd19b64c53459be7cc5c806":[1,0,1435,1],
-"classTraitBookShelf.html#ab1599a157037b8bdc1b4e8e8a40e5177":[1,0,1435,2],
-"classTraitBookShelf.html#afbc597174fddf775ca4d223f3375d76d":[1,0,1435,0],
-"classTraitBookSkill.html":[1,0,1436],
-"classTraitBookSkill.html#a11b3629d21599f3a7ce0af7a0e060087":[1,0,1436,5]
+"classTraitBookSecret.html#a8f15b023c265ca0a70f1f8ec57f0046c":[1,0,1434,1]
 };

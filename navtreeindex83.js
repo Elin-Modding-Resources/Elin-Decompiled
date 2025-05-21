@@ -1,14 +1,20 @@
 var NAVTREEINDEX83 =
 {
+"classMosframe_1_1DynamicVScrollView.html#ac8c505bf44d30a57f832836aa0d9c0a4":[1,0,6,3,5],
+"classMosframe_1_1ScrollbarHandleSize.html":[0,4,6,4],
+"classMosframe_1_1ScrollbarHandleSize.html":[1,0,6,4],
+"classMosframe_1_1ScrollbarHandleSize.html#a11c24db7e8999ca504709748621c21c7":[0,4,6,4,5],
+"classMosframe_1_1ScrollbarHandleSize.html#a11c24db7e8999ca504709748621c21c7":[1,0,6,4,5],
+"classMosframe_1_1ScrollbarHandleSize.html#a54904beb7979f1bcec120cfd073bccd2":[0,4,6,4,4],
 "classMosframe_1_1ScrollbarHandleSize.html#a54904beb7979f1bcec120cfd073bccd2":[1,0,6,4,4],
-"classMosframe_1_1ScrollbarHandleSize.html#a5506d004226f778d75a832a974ce3b18":[1,0,6,4,2],
 "classMosframe_1_1ScrollbarHandleSize.html#a5506d004226f778d75a832a974ce3b18":[0,4,6,4,2],
-"classMosframe_1_1ScrollbarHandleSize.html#a70157e91dcf7c331965964d8dc083559":[1,0,6,4,6],
+"classMosframe_1_1ScrollbarHandleSize.html#a5506d004226f778d75a832a974ce3b18":[1,0,6,4,2],
 "classMosframe_1_1ScrollbarHandleSize.html#a70157e91dcf7c331965964d8dc083559":[0,4,6,4,6],
-"classMosframe_1_1ScrollbarHandleSize.html#a7136678cfa87ecc6118216e60b445a53":[1,0,6,4,1],
+"classMosframe_1_1ScrollbarHandleSize.html#a70157e91dcf7c331965964d8dc083559":[1,0,6,4,6],
 "classMosframe_1_1ScrollbarHandleSize.html#a7136678cfa87ecc6118216e60b445a53":[0,4,6,4,1],
-"classMosframe_1_1ScrollbarHandleSize.html#ae078d14b2cb61eb8991df85b30e72734":[1,0,6,4,3],
+"classMosframe_1_1ScrollbarHandleSize.html#a7136678cfa87ecc6118216e60b445a53":[1,0,6,4,1],
 "classMosframe_1_1ScrollbarHandleSize.html#ae078d14b2cb61eb8991df85b30e72734":[0,4,6,4,3],
+"classMosframe_1_1ScrollbarHandleSize.html#ae078d14b2cb61eb8991df85b30e72734":[1,0,6,4,3],
 "classMosframe_1_1ScrollbarHandleSize.html#ae7699ca4b0258c1c696652bf3465c43b":[1,0,6,4,0],
 "classMosframe_1_1ScrollbarHandleSize.html#ae7699ca4b0258c1c696652bf3465c43b":[0,4,6,4,0],
 "classMsg.html":[1,0,881],
@@ -243,11 +249,5 @@ var NAVTREEINDEX83 =
 "classNotificationGuest.html#af74035b4be7b2bcb0febd0fc1b7fdda1":[1,0,899,1],
 "classNotificationHome.html":[1,0,900],
 "classNotificationHome.html#a7198d2b2277afd033bac1f1f65d4fab2":[1,0,900,2],
-"classNotificationHome.html#a740df8bd342780851f71415771445b22":[1,0,900,0],
-"classNotificationHome.html#af08830cb002a067956afa44b20e3c301":[1,0,900,1],
-"classNotificationStance.html":[1,0,901],
-"classNotificationStance.html#a2d6050a923d27df4f40fda55fd58a789":[1,0,901,1],
-"classNotificationStance.html#a3eea49363ea353b7acc11c962c521115":[1,0,901,0],
-"classNotificationStats.html":[1,0,902],
-"classNotificationStats.html#a01d69844cdc1fce36cbc0c04d7676ae2":[1,0,902,2]
+"classNotificationHome.html#a740df8bd342780851f71415771445b22":[1,0,900,0]
 };

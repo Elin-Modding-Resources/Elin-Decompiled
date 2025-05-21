@@ -1,5 +1,11 @@
 var NAVTREEINDEX118 =
 {
+"classTraitMerchantDrug.html#a446f3eea6485b5fc795d887c6daa6d5a":[1,0,1651,1],
+"classTraitMerchantDrug.html#a6047d4aa438e0445fa8e87faeb1a92f0":[1,0,1651,2],
+"classTraitMerchantDrug.html#a7fad723510255411c247dbcf21b90593":[1,0,1651,0],
+"classTraitMerchantDye.html":[1,0,1652],
+"classTraitMerchantDye.html#ae2ce393bd47ac202ccff4640e88eed5d":[1,0,1652,0],
+"classTraitMerchantEcopo.html":[1,0,1653],
 "classTraitMerchantEcopo.html#a2807e15baab41db1b09f875969a1391d":[1,0,1653,2],
 "classTraitMerchantEcopo.html#aa1d573699db3cf74ea0d561f2f542f42":[1,0,1653,1],
 "classTraitMerchantEcopo.html#ac75a7355ef413590208f0ede137950f8":[1,0,1653,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitPlamoBox.html":[1,0,1720],
 "classTraitPlamoBox.html#a3ecfbe024a6d6c55ad1e1267535e070c":[1,0,1720,0],
 "classTraitPlamoBox.html#a6e7b9d64c7c085307fc53e15e607be0d":[1,0,1720,1],
-"classTraitPlatform.html":[1,0,1721],
-"classTraitPlatform.html#a3deb37840dcdc3fce46118fbf5468d6c":[1,0,1721,1],
-"classTraitPlatform.html#a761bc5daab23761ed77e4d766fe73c1c":[1,0,1721,2],
-"classTraitPlatform.html#aa1e9d56c2306479fafdfef3e5fe19786":[1,0,1721,0],
-"classTraitPlatform.html#ac84c80f09f56c79e194ff076ce0f3f44":[1,0,1721,3],
-"classTraitPolicyBoard.html":[1,0,1722],
-"classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1722,1]
+"classTraitPlatform.html":[1,0,1721]
 };

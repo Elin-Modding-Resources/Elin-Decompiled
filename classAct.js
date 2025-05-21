@@ -27,6 +27,7 @@ var classAct =
     [ "ShouldMapHighlight", "classAct.html#aa770e74e4b54c29dcd0ac1c418393b02", null ],
     [ "ShowMouseHint", "classAct.html#a6375223c76382529f113aad1c31d8b1f", null ],
     [ "CC", "classAct.html#aaee36f292832814173c67d44df115a5a", null ],
+    [ "CurrentAct", "classAct.html#a85d8f0640f0172e8bffc51cbd34cefad", null ],
     [ "forcePt", "classAct.html#a8e57c15f7a6c45035be1f0ae087543f8", null ],
     [ "powerMod", "classAct.html#aa106a09937e33729b264d03c580a7a76", null ],
     [ "TC", "classAct.html#a2bbe355c1c37f1ac7958c5f1040400db", null ],

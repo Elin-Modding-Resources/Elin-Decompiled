@@ -1,5 +1,11 @@
 var NAVTREEINDEX120 =
 {
+"classTraitSecretary.html#a04dd47662c866bf02d6bac3187a80395":[1,0,1770,1],
+"classTraitSecretary.html#a0b9a93b1c07797b776f15320f577da41":[1,0,1770,0],
+"classTraitSecretary.html#a30a9225084c8540bab55047482cdd0cb":[1,0,1770,2],
+"classTraitSecretary.html#a609c1fe1754e9ba237082cdb70fa0ea6":[1,0,1770,5],
+"classTraitSecretary.html#a6110ea0c3c95006b574bc9ee6131f9d4":[1,0,1770,4],
+"classTraitSecretary.html#ac6154c708ec273c7f2daf8708b80274a":[1,0,1770,3],
 "classTraitSeed.html":[1,0,1771],
 "classTraitSeed.html#a022b05bc222961ddf02ab956699a4376":[1,0,1771,1],
 "classTraitSeed.html#a0a7364e58a3db978d861f788fcd72438":[1,0,1771,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitTerraGlobe.html#ae14402d3bd5c865d86e002d4e394b00c":[1,0,1828,2],
 "classTraitTerraGlobe.html#af86df78ae3d14388b985d7b5e4ab32c1":[1,0,1828,5],
 "classTraitThrown.html":[1,0,1829],
-"classTraitThrown.html#a11f5ac00698f5598dcdac8d41061ecce":[1,0,1829,0],
-"classTraitThrown.html#ac7f8523e6f0db3812f77e20e6d359a8d":[1,0,1829,1],
-"classTraitThrownExplosive.html":[1,0,1830],
-"classTraitThrownExplosive.html#a5c0197caa76da42e635848ca65439097":[1,0,1830,0],
-"classTraitThrownExplosive.html#a98e390f9d299283a1f55f5dbc959df7d":[1,0,1830,1],
-"classTraitTicketArmPillow.html":[1,0,1831],
-"classTraitTicketChampagne.html":[1,0,1832]
+"classTraitThrown.html#a11f5ac00698f5598dcdac8d41061ecce":[1,0,1829,0]
 };

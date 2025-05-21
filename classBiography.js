@@ -15,6 +15,7 @@ var classBiography =
     [ "TextAppearance", "classBiography.html#ad94ae56084447c7d13f12f063bea7176", null ],
     [ "TextBio", "classBiography.html#a44bdd85a54ff8fd53f6389999d4ddb4d", null ],
     [ "TextBio2", "classBiography.html#ab7b7937f2d0669ce8904a09d5c6e9a1e", null ],
+    [ "TextBioSlave", "classBiography.html#ae0cabb9739b853ba8d8fe69074f52aa6", null ],
     [ "TextBirthDate", "classBiography.html#a67348ad1c49c2205ae3f409c78e728bd", null ],
     [ "idFemale", "classBiography.html#a487d821c9564bb3eef8bbe56e5c6b548", null ],
     [ "ints", "classBiography.html#a9c859714dfb8dc60b7cd44ed473b33eb", null ],

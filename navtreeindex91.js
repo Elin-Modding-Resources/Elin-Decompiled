@@ -1,5 +1,11 @@
 var NAVTREEINDEX91 =
 {
+"classQuestExploration.html#a9433991f51d54e81c6eb3b1130a16a72":[1,0,974,6],
+"classQuestExploration.html#a953f4ea887504aca3143b274c4a27448":[1,0,974,4],
+"classQuestExploration.html#aac1f0b889fb96c4b0704d6dcce9467ab":[1,0,974,8],
+"classQuestExploration.html#af05c362547863b2d52385ca56e30093f":[1,0,974,7],
+"classQuestFarrisSister.html":[1,0,975],
+"classQuestFarrisSister.html#a889fd39e8b2c3fa57595f9288b77130f":[1,0,975,0],
 "classQuestFiamaLock.html":[1,0,976],
 "classQuestFiamaLock.html#a34943052fe9042089c74d24672f860e4":[1,0,976,1],
 "classQuestFiamaLock.html#a4478d856bb84ffb2bbe72bf4dd0e792b":[1,0,976,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX91 =
 "classQuestTask.html#a53adcdd119c41c788aaddfd8980221bd":[1,0,1027,5],
 "classQuestTask.html#a822bdda2f6f31321de1390786a24daf0":[1,0,1027,11],
 "classQuestTask.html#a919251253f962ffcf2ea526750792fe9":[1,0,1027,1],
-"classQuestTask.html#aae66c8a4a55cd34143c950b462f12965":[1,0,1027,10],
-"classQuestTask.html#ac0eda456021cf5a00daf2632eadfec35":[1,0,1027,12],
-"classQuestTask.html#ac273032ffb9a68478913857cbd545c7a":[1,0,1027,8],
-"classQuestTask.html#ad03f302ddf56f5f5240ff0a254c4d19b":[1,0,1027,0],
-"classQuestTask.html#ae57409e9ab51714bc02638de64143dee":[1,0,1027,6],
-"classQuestTask.html#afac014ea90ab317ddeb694bb178b9091":[1,0,1027,7],
-"classQuestTaskFlyer.html":[1,0,1028]
+"classQuestTask.html#aae66c8a4a55cd34143c950b462f12965":[1,0,1027,10]
 };

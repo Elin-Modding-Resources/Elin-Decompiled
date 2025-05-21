@@ -1,5 +1,11 @@
 var NAVTREEINDEX116 =
 {
+"classTraitEffect.html#aaeeba5ee4f7bac0f3962584c2337e013":[1,0,1527,5],
+"classTraitEffect_1_1Data.html":[1,0,1527,0],
+"classTraitEffect_1_1Data.html#a2116a01c036bfae086b787c90af459a1":[1,0,1527,0,3],
+"classTraitEffect_1_1Data.html#a3502ac49bd26966befa2067f0f96d441":[1,0,1527,0,0],
+"classTraitEffect_1_1Data.html#a3a51e5710db33047e3636f7088120090":[1,0,1527,0,2],
+"classTraitEffect_1_1Data.html#aa0f85ef2bd036e2b9821ea9aa7dacdd7":[1,0,1527,0,1],
 "classTraitElder.html":[1,0,1528],
 "classTraitElder.html#a086a963da4fcb0e38a4a976aa2f7d838":[1,0,1528,1],
 "classTraitElder.html#a67e44ab97e10d3eab228452fcb276311":[1,0,1528,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1595,0],
 "classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1595,6],
 "classTraitGuard.html":[1,0,1596],
-"classTraitGuard.html#a8c0a04548373303e71ed5a9d15bbd6f8":[1,0,1596,0],
-"classTraitGuard.html#ab37ae0e246f09be3190e1017ac92c948":[1,0,1596,1],
-"classTraitGuildClerk.html":[1,0,1597],
-"classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1597,0],
-"classTraitGuildClerk.html#af26f260414696aa1275acfa5775f5bda":[1,0,1597,1],
-"classTraitGuildDoorman.html":[1,0,1598],
-"classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d":[1,0,1598,2]
+"classTraitGuard.html#a8c0a04548373303e71ed5a9d15bbd6f8":[1,0,1596,0]
 };
