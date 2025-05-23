@@ -1,8 +1,14 @@
 var NAVTREEINDEX23 =
 {
-"Zone__WindRest_8cs_source.html":[2,0,0,1952],
-"Zone__Yowyn_8cs.html":[2,0,0,1953],
-"Zone__Yowyn_8cs_source.html":[2,0,0,1953],
+"Zone__Vernis_8cs_source.html":[2,0,0,1951],
+"Zone__Void_8cs.html":[2,0,0,1953],
+"Zone__Void_8cs_source.html":[2,0,0,1953],
+"Zone__Wilds_8cs.html":[2,0,0,1954],
+"Zone__Wilds_8cs_source.html":[2,0,0,1954],
+"Zone__WindRest_8cs.html":[2,0,0,1955],
+"Zone__WindRest_8cs_source.html":[2,0,0,1955],
+"Zone__Yowyn_8cs.html":[2,0,0,1956],
+"Zone__Yowyn_8cs_source.html":[2,0,0,1956],
 "annotated.html":[1,0],
 "classABILITY.html":[1,0,11],
 "classABILITY.html#a045614514412a5bfd4324d98c0de1184":[1,0,11,98],
@@ -243,11 +249,5 @@ var NAVTREEINDEX23 =
 "classAIProgress.html#af4afe1ea2821d62d67544fb72f6f9e3a":[1,0,111,7],
 "classAIWork.html":[1,0,112],
 "classAIWork.html#a14b7a8534cdbb2c0ce938e86a701c38f":[1,0,112,14],
-"classAIWork.html#a16a11b4aada2cc3952d0a9da51e51cd6":[1,0,112,15],
-"classAIWork.html#a1766ec0c976dea1607ff4d8618dca613":[1,0,112,3],
-"classAIWork.html#a3b976b4f8261696f0b29acc0b1159f05":[1,0,112,18],
-"classAIWork.html#a43d3863762df78c231e7ff70df9a5035":[1,0,112,9],
-"classAIWork.html#a45bc2734b93e902595d007bcd474e58d":[1,0,112,17],
-"classAIWork.html#a751ce6464ca3848fa1ba0219447d30db":[1,0,112,10],
-"classAIWork.html#a7e405e29a5e5f004dd25d7a774dd186f":[1,0,112,0]
+"classAIWork.html#a16a11b4aada2cc3952d0a9da51e51cd6":[1,0,112,15]
 };

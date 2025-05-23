@@ -67,5 +67,6 @@ var classElementContainer =
     [ "sizeElement", "classElementContainer.html#ad9015972a10f4d83e08a7b9a9b6b05c3", null ],
     [ "Card", "classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5", null ],
     [ "Chara", "classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287", null ],
-    [ "IsMeleeWeapon", "classElementContainer.html#aaedd15010e02d54d161fdad9dea786a8", null ]
+    [ "IsMeleeWeapon", "classElementContainer.html#aaedd15010e02d54d161fdad9dea786a8", null ],
+    [ "LimitLink", "classElementContainer.html#a0bac6e3b5164c4ec34467163f6e50533", null ]
 ];

@@ -448,6 +448,7 @@ var hierarchy =
                 [ "ConTorch", "classConTorch.html", null ],
                 [ "ConTransmute", "classConTransmute.html", [
                   [ "ConTransmuteBroom", "classConTransmuteBroom.html", null ],
+                  [ "ConTransmuteCat", "classConTransmuteCat.html", null ],
                   [ "ConTransmutePutit", "classConTransmutePutit.html", null ]
                 ] ],
                 [ "ConWardMonster", "classConWardMonster.html", null ],
@@ -767,6 +768,7 @@ var hierarchy =
       ] ],
       [ "ElementContainer", "classElementContainer.html", [
         [ "ElementContainerCard", "classElementContainerCard.html", null ],
+        [ "ElementContainerCondition", "classElementContainerCondition.html", null ],
         [ "ElementContainerFaction", "classElementContainerFaction.html", null ],
         [ "ElementContainerZone", "classElementContainerZone.html", null ]
       ] ],
@@ -1647,7 +1649,8 @@ var hierarchy =
           [ "TraitGeneratorDrain", "classTraitGeneratorDrain.html", null ],
           [ "TraitGeneratorWheel", "classTraitGeneratorWheel.html", [
             [ "TraitGeneratorChair", "classTraitGeneratorChair.html", null ]
-          ] ]
+          ] ],
+          [ "TraitGeneratorWind", "classTraitGeneratorWind.html", null ]
         ] ],
         [ "TraitGrave", "classTraitGrave.html", null ],
         [ "TraitHarvest", "classTraitHarvest.html", [
