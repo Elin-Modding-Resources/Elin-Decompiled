@@ -29,6 +29,8 @@ public class ElementContainer : EClass
 
 	public virtual Chara Chara => null;
 
+	public virtual bool LimitLink => true;
+
 	public virtual bool IsMeleeWeapon => false;
 
 	[OnSerializing]
@@ -356,7 +358,7 @@ public class ElementContainer : EClass
 	public Element SetBase(int id, int v, int potential = 0)
 	{
 		Element orCreateElement = GetOrCreateElement(id);
-		if (parent != null && orCreateElement.CanLink(this))
+		if (parent != null && (!LimitLink || orCreateElement.CanLink(this)))
 		{
 			parent.ModLink(id, -orCreateElement.vBase + v);
 		}
@@ -390,7 +392,7 @@ public class ElementContainer : EClass
 		Element element = GetElement(id);
 		if (element != null)
 		{
-			if (parent != null && element.CanLink(this))
+			if (parent != null && (!LimitLink || element.CanLink(this)))
 			{
 				parent.ModLink(id, -element.Value);
 			}
@@ -402,7 +404,7 @@ public class ElementContainer : EClass
 	{
 		Element orCreateElement = GetOrCreateElement(ele);
 		orCreateElement.vBase += v;
-		if (parent != null && orCreateElement.CanLink(this))
+		if (parent != null && (!LimitLink || orCreateElement.CanLink(this)))
 		{
 			parent.ModLink(ele, v);
 		}
@@ -451,7 +453,7 @@ public class ElementContainer : EClass
 		Element orCreateElement = GetOrCreateElement(id);
 		orCreateElement.vLink += v;
 		orCreateElement.OnChangeValue();
-		if (parent != null && orCreateElement.CanLink(this))
+		if (parent != null && (!LimitLink || orCreateElement.CanLink(this)))
 		{
 			parent.ModLink(id, v);
 		}
@@ -528,7 +530,7 @@ public class ElementContainer : EClass
 		{
 			foreach (Element value in dict.Values)
 			{
-				if (value.CanLink(this))
+				if (!LimitLink || value.CanLink(this))
 				{
 					parent.ModLink(value.id, -(value.vBase + value.vSource));
 				}
@@ -538,7 +540,7 @@ public class ElementContainer : EClass
 		{
 			foreach (Element value2 in dict.Values)
 			{
-				if (value2.CanLink(this))
+				if (!LimitLink || value2.CanLink(this))
 				{
 					newParent.ModLink(value2.id, value2.vBase + value2.vSource);
 				}

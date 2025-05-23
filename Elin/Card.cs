@@ -4814,7 +4814,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				num3 += (int)Mathf.Min(Mathf.Sqrt(EClass.pc.Evalue(290)), 20f);
 			}
-			if (EClass.rnd((Act.CurrentAct is ActMeleeBladeStorm) ? 2 : 100) == 0)
+			if (EClass.rnd((Act.CurrentAct is ActMeleeBladeStorm || (origin != null && (origin.HasElement(1556) || origin.HasCondition<ConTransmuteCat>()))) ? 2 : 100) == 0)
 			{
 				text = "dattamono";
 			}

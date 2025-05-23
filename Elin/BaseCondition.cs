@@ -198,7 +198,7 @@ public class BaseCondition : BaseStats
 		}
 		if (UseElements)
 		{
-			elements = new ElementContainer();
+			elements = new ElementContainerCondition();
 			if (base.source.elements.Length != 0)
 			{
 				for (int i = 0; i < base.source.elements.Length; i += 2)

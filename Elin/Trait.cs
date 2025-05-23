@@ -1929,6 +1929,7 @@ public class Trait : EClass
 				case "rodwyn":
 					AddThing(ThingGen.CreateSpellbook(8790));
 					AddThing(ThingGen.CreatePotion(8791).SetNum(3 + EClass.rnd(3)));
+					AddThing(ThingGen.CreatePotion(8792).SetNum(3 + EClass.rnd(3)));
 					break;
 				case "girl_blue":
 					Add("779", 1 + EClass.rnd(3), 0);

@@ -115,6 +115,7 @@ public class ActMelee : ActBaseAttack
 		{
 			Act.TC = c;
 		});
+		Act.TP.Set(Act.TC.pos);
 		CellEffect effect = Act.TP.cell.effect;
 		if (effect != null && effect.id == 6 && EClass.rnd(2) == 0)
 		{

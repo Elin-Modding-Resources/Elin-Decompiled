@@ -14,6 +14,8 @@ public class Crawler : EScriptable
 	public class Result
 	{
 		public List<Point> points = new List<Point>();
+
+		public Point startPos;
 	}
 
 	public enum MoveType
@@ -128,6 +130,7 @@ public class Crawler : EScriptable
 		point.Clamp();
 		Result result = new Result();
 		BiomeProfile biome = point.cell.biome;
+		result.startPos = _start;
 		sync++;
 		Size = map.Size;
 		int num = (skipBorder ? 2 : 0);

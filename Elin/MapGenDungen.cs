@@ -268,6 +268,15 @@ public class MapGenDungen : BaseMapGen
 				}
 				return false;
 			});
+			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(10) + 1) + 3, map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			{
+				int idFloor = 121;
+				foreach (Point point4 in r.points)
+				{
+					map.SetFloor(point4.x, point4.z, 97, idFloor, Mathf.Clamp(4 - r.startPos.Distance(point4) + EClass.rnd(3) - EClass.rnd(3), 0, 3));
+				}
+				return false;
+			});
 		}
 		bool forest = zone is Zone_RandomDungeonForest;
 		if (zone is Zone_RandomDungeonPlain || (forest && EClass.rnd(3) == 0))
@@ -285,20 +294,20 @@ public class MapGenDungen : BaseMapGen
 					Rand.SetSeed();
 					thing5.elements.SetBase(2, EClass.curve(thing5.encLV, 50, 10, 80));
 				}
-				foreach (Point point4 in r.points)
+				foreach (Point point5 in r.points)
 				{
-					if (!point4.cell.isModified && !point4.HasThing && !point4.HasBlock && !point4.HasObj)
+					if (!point5.cell.isModified && !point5.HasThing && !point5.HasBlock && !point5.HasObj)
 					{
-						map.SetObj(point4.x, point4.z, num5);
+						map.SetObj(point5.x, point5.z, num5);
 						int num7 = 3;
 						if (EClass.rnd(6) == 0)
 						{
 							num7++;
 						}
-						point4.growth.SetStage(num7);
+						point5.growth.SetStage(num7);
 						if (thing5 != null)
 						{
-							EClass._map.AddPlant(point4, thing5);
+							EClass._map.AddPlant(point5, thing5);
 						}
 					}
 				}

@@ -229,9 +229,9 @@ public class FEAT
 
 	public const int featLuckyCat = 1412;
 
-	public const int featPaladin2 = 1408;
-
 	public const int featPaladin = 1407;
+
+	public const int featPaladin2 = 1408;
 
 	public const int featFairysan = 1413;
 
@@ -248,7 +248,7 @@ public class FEAT
 		1325, 1403, 1233, 1231, 1415, 1213, 1214, 1215, 1216, 1217,
 		1218, 1219, 1220, 1232, 1221, 1223, 1212, 1224, 1225, 1226,
 		1227, 1228, 1229, 1230, 1222, 1404, 1305, 1406, 1405, 1409,
-		1410, 1411, 1412, 1408, 1407, 1413
+		1410, 1411, 1412, 1407, 1408, 1413
 	};
 }
 public class Feat : Element
