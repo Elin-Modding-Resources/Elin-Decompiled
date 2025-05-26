@@ -16,6 +16,8 @@ public class QuestDefenseGame : QuestInstance
 
 	public override string RewardSuffix => "Defense";
 
+	public override bool FameContent => true;
+
 	public override int FameOnComplete => (lastWave * 8 + difficulty * 10) * (100 + bonus * 5) / 100;
 
 	public override ZoneEventQuest CreateEvent()

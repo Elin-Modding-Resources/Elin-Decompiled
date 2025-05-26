@@ -58,6 +58,8 @@ public class ENC
 
 	public const int sustain_STR = 440;
 
+	public const int negateShockwave = 430;
+
 	public const int breathing = 429;
 
 	public const int allNeckHunt = 428;
@@ -82,17 +84,17 @@ public class ENC
 
 	public const int seeInvisible = 416;
 
-	public const int sustain_END = 441;
-
 	public const int invisibility = 415;
+
+	public const int encHit = 414;
 
 	public const int slowCorruption = 412;
 
 	public const int encSpell = 411;
 
-	public const int throwReturn = 410;
-
 	public const int mod_splash = 608;
+
+	public const int corruption = 409;
 
 	public const int resWeather = 408;
 
@@ -112,11 +114,11 @@ public class ENC
 
 	public const int negateTeleport = 400;
 
-	public const int encHit = 414;
+	public const int sustain_END = 441;
 
 	public const int sustain_DEX = 442;
 
-	public const int corruption = 409;
+	public const int throwReturn = 410;
 
 	public const int mod_ammo = 600;
 
@@ -152,8 +154,6 @@ public class ENC
 
 	public const int strongStomach = 480;
 
-	public const int sustain_PER = 443;
-
 	public const int bane_man = 464;
 
 	public const int bane_animal = 463;
@@ -174,16 +174,18 @@ public class ENC
 
 	public const int sustain_LER = 444;
 
-	public static readonly int[] IDS = new int[87]
+	public const int sustain_PER = 443;
+
+	public static readonly int[] IDS = new int[88]
 	{
 		653, 652, 651, 650, 641, 624, 621, 622, 623, 654,
 		640, 655, 851, 660, 661, 662, 663, 664, 665, 666,
-		850, 620, 865, 852, 656, 609, 420, 607, 440, 429,
-		428, 427, 426, 425, 424, 423, 422, 421, 418, 417,
-		416, 441, 415, 412, 411, 410, 608, 408, 407, 406,
-		405, 404, 403, 402, 401, 400, 414, 442, 409, 600,
-		606, 605, 604, 603, 602, 601, 486, 485, 484, 483,
-		482, 481, 468, 467, 466, 480, 443, 464, 463, 462,
-		461, 460, 447, 465, 446, 445, 444
+		850, 620, 865, 852, 656, 609, 420, 607, 440, 430,
+		429, 428, 427, 426, 425, 424, 423, 422, 421, 418,
+		417, 416, 415, 414, 412, 411, 608, 409, 408, 407,
+		406, 405, 404, 403, 402, 401, 400, 441, 442, 410,
+		600, 606, 605, 604, 603, 602, 601, 486, 485, 484,
+		483, 482, 481, 468, 467, 466, 480, 464, 463, 462,
+		461, 460, 447, 465, 446, 445, 444, 443
 	};
 }

@@ -341,6 +341,10 @@ public class Game : EClass
 			SoundManager.ignoreSounds = false;
 			TooltipManager.Instance.HideTooltips(immediate: true);
 		}
+		if ((bool)WidgetSideScreen.Instance)
+		{
+			WidgetSideScreen.Instance.OnChangeResolution();
+		}
 		EClass.game.isLoading = false;
 	}
 

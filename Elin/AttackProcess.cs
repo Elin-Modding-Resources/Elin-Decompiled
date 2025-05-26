@@ -447,6 +447,10 @@ public class AttackProcess : EClass
 		bool flag = CC.HasCondition<ConReload>();
 		bool flag2 = CC.HasElement(486) && CC.IsPCFactionOrMinion;
 		hit = CalcHit();
+		if (CC.id == "tsunami")
+		{
+			hit = true;
+		}
 		int num = GetRawDamage(dmgMulti, crit, maxRoll);
 		if (IsRanged && count >= numFireWithoutDamageLoss)
 		{

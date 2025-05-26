@@ -2129,7 +2129,6 @@ public class Chara : Card, IPathfindWalker
 
 	public void ReleaseMinion()
 	{
-		Debug.Log("released:" + this);
 		base.c_uidMaster = 0;
 		master = null;
 		enemy = null;
@@ -3446,6 +3445,18 @@ public class Chara : Card, IPathfindWalker
 			{
 				Die();
 				return;
+			}
+		}
+		if (id == "tsunami")
+		{
+			if (elements.Base(79) < 30)
+			{
+				Die();
+				return;
+			}
+			if (IsInCombat)
+			{
+				elements.SetTo(79, elements.Base(79) * 3 / 4);
 			}
 		}
 		if (EClass.world.weather.IsRaining && !EClass._map.IsIndoor && !pos.cell.HasRoof)
@@ -4889,6 +4900,12 @@ public class Chara : Card, IPathfindWalker
 			{
 				EClass._zone.ResetHostility();
 			}
+			if (id == "tsunami")
+			{
+				pos.PlaySound("water");
+				Destroy();
+				return;
+			}
 			if (base.isSummon)
 			{
 				Say("summon_vanish", this);
@@ -5749,25 +5766,33 @@ public class Chara : Card, IPathfindWalker
 		{
 			c.MakeEgg();
 		}
-		if (!headpat || this == c)
+		if (headpat && this != c)
 		{
-			return;
-		}
-		if (c.interest > 0)
-		{
-			c.ModAffinity(EClass.pc, 1 + EClass.rnd(3));
-			c.interest -= 20 + EClass.rnd(10);
-		}
-		if (faith != EClass.game.religions.MoonShadow || !c.IsPCParty)
-		{
-			return;
-		}
-		foreach (Chara member in party.members)
-		{
-			if (!member.IsPC && CanSeeLos(member))
+			if (c.interest > 0)
 			{
-				member.AddCondition<ConEuphoric>(100 + Evalue(6904) * 5);
+				c.ModAffinity(EClass.pc, 1 + EClass.rnd(3));
+				c.interest -= 20 + EClass.rnd(10);
 			}
+			if (faith == EClass.game.religions.MoonShadow && c.IsPCParty)
+			{
+				foreach (Chara member in party.members)
+				{
+					if (!member.IsPC && CanSeeLos(member))
+					{
+						member.AddCondition<ConEuphoric>(100 + Evalue(6904) * 5);
+					}
+				}
+			}
+		}
+		if (c.Evalue(1221) > 0)
+		{
+			int ele = ((c.MainElement == Element.Void) ? 924 : c.MainElement.id);
+			if (c.id == "hedgehog_ether")
+			{
+				ele = 922;
+			}
+			Say("reflect_thorne", c, this);
+			DamageHP(10, ele, Power, AttackSource.Condition);
 		}
 	}
 
@@ -7344,27 +7369,28 @@ public class Chara : Card, IPathfindWalker
 		{
 			a = a * num / 100;
 		}
+		if (show)
+		{
+			if (a == 0)
+			{
+				if (!showOnlyEmo)
+				{
+					Say("affinityNone", this, c);
+				}
+			}
+			else
+			{
+				ShowEmo((!flag) ? Emo.angry : Emo.love);
+				c.ShowEmo(flag ? Emo.love : Emo.sad);
+				if (!showOnlyEmo)
+				{
+					Say(flag ? "affinityPlus" : "affinityMinus", this, c);
+				}
+			}
+		}
 		if (c.IsPC)
 		{
 			a = affinity.Mod(a);
-		}
-		if (!show)
-		{
-			return;
-		}
-		if (a == 0)
-		{
-			if (!showOnlyEmo)
-			{
-				Say("affinityNone", this, c);
-			}
-			return;
-		}
-		ShowEmo((!flag) ? Emo.angry : Emo.love);
-		c.ShowEmo(flag ? Emo.love : Emo.sad);
-		if (!showOnlyEmo)
-		{
-			Say(flag ? "affinityPlus" : "affinityMinus", this, c);
 		}
 	}
 

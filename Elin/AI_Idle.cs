@@ -571,6 +571,7 @@ public class AI_Idle : AIAct
 			{
 				owner.Cuddle(c);
 			});
+			yield return KeepRunning();
 		}
 		if (EClass.rnd(100) == 0 && owner.trait is TraitBitch)
 		{

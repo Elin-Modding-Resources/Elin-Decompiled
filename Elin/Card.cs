@@ -5575,7 +5575,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else if (isDyed)
 		{
-			_colorInt = BaseTileMap.GetColorInt(ref DyeMat.matColor, sourceRenderCard.colorMod);
+			if (sourceRenderCard.useAltColor)
+			{
+				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.altColor, sourceRenderCard.colorMod);
+			}
+			else
+			{
+				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.matColor, sourceRenderCard.colorMod);
+			}
 		}
 		else if (sourceRenderCard.useRandomColor)
 		{

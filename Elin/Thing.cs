@@ -943,7 +943,7 @@ public class Thing : Card
 					{
 						text6 = text6 + (text6.IsEmpty() ? "" : "  ") + "_nutrition".lang(Evalue(10).ToFormat() ?? "");
 					}
-					if ((base.category.IsChildOf("resource") || trait.IsTool) && !(trait is TraitAbility))
+					if ((base.category.IsChildOf("throw") || base.category.IsChildOf("resource") || trait.IsTool) && !(trait is TraitAbility))
 					{
 						text6 = text6 + (text6.IsEmpty() ? "" : "  ") + "_hardness".lang(base.material.hardness.ToString() ?? "");
 					}

@@ -968,6 +968,7 @@ public class DramaCustomSequence : EClass
 						EClass._map.bounds.Expand(1);
 						SE.Play("good");
 						EClass._map.RefreshAllTiles();
+						WidgetMinimap.UpdateMap();
 						ScreenEffect.Play("Firework");
 					}
 				});

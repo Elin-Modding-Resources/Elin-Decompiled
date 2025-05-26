@@ -530,6 +530,7 @@ public class ActEffect : EClass
 			switch (actRef.n1)
 			{
 			case "shadow":
+			case "tsunami":
 				num3 = Mathf.Clamp(power / 100, 1, 5) + ((power >= 100) ? EClass.rnd(2) : 0);
 				break;
 			case "monster":

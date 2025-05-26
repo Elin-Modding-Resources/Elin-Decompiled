@@ -26,15 +26,15 @@ public class SLOT
 
 	public const int waist = 37;
 
-	public const int token = 43;
-
 	public const int head = 30;
 
 	public const int range = 41;
 
+	public const int token = 43;
+
 	public static readonly int[] IDS = new int[16]
 	{
 		44, 38, 40, 32, 33, 45, 42, 31, 34, 35,
-		39, 36, 37, 43, 30, 41
+		39, 36, 37, 30, 41, 43
 	};
 }
