@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"classLayerQuestBoard.html#a96766b4d247434eb1d0974ed4fdbb1f0":[1,0,807,5],
 "classLayerQuestBoard.html#aad10f0e5c50919833cec5652fa16ba4f":[1,0,807,1],
 "classLayerQuestBoard.html#aba1697b4d6a0ee24342ff9037acaaa61":[1,0,807,0],
 "classLayerQuestBoard.html#ac7097e6cd1acc2fdc03ece0c9d9ba6dd":[1,0,807,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerWorldSetting.html#a7795c34d61c4167f5de9c32f6dc72aea":[1,0,823,19],
 "classLayerWorldSetting.html#a7a7e3e93e130d037f93f93f1ce1b64ff":[1,0,823,22],
 "classLayerWorldSetting.html#a83178d855f262af18720a0f24345d952":[1,0,823,28],
-"classLayerWorldSetting.html#a85d943fe40dc3024c5f8145850c0d694":[1,0,823,13],
-"classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0":[1,0,823,10]
+"classLayerWorldSetting.html#a85d943fe40dc3024c5f8145850c0d694":[1,0,823,13]
 };

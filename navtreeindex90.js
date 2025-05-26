@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"classPropsManager.html#a0c5a47eaa47ab2bd2b8347e3ff3437a3":[1,0,958,4],
 "classPropsManager.html#a252eb48a13e330c55d5fea897fe10465":[1,0,958,6],
 "classPropsManager.html#a588cdfa97c852be622323e96d2d81945":[1,0,958,5],
 "classPropsManager.html#a62335779e5e3ef519b5d6a5d11baa6c2":[1,0,958,0],
@@ -188,10 +189,11 @@ var NAVTREEINDEX90 =
 "classQuestDefenseGame.html":[1,0,969],
 "classQuestDefenseGame.html#a034cd5e16342dd9038d2d7e49429b216":[1,0,969,7],
 "classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8":[1,0,969,6],
-"classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd":[1,0,969,10],
-"classQuestDefenseGame.html#a551d58179e2ee0b30584c2dac865f912":[1,0,969,9],
-"classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482":[1,0,969,11],
-"classQuestDefenseGame.html#a78b66992932d0fa32dbcbf17c094ddfd":[1,0,969,8],
+"classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd":[1,0,969,11],
+"classQuestDefenseGame.html#a551d58179e2ee0b30584c2dac865f912":[1,0,969,10],
+"classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482":[1,0,969,12],
+"classQuestDefenseGame.html#a78b66992932d0fa32dbcbf17c094ddfd":[1,0,969,9],
+"classQuestDefenseGame.html#a859e1c04385585dbc327c19ee7406e27":[1,0,969,8],
 "classQuestDefenseGame.html#aa3430704375447d0efde0093a54dacff":[1,0,969,2],
 "classQuestDefenseGame.html#aa99bffe9473ce269dbab915f55553245":[1,0,969,1],
 "classQuestDefenseGame.html#ac30bf7f41b3cc1a02276afcf91c5333c":[1,0,969,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX90 =
 "classQuestEscort.html":[1,0,975],
 "classQuestEscort.html#a1b15c44c5825de775519686480c60c51":[1,0,975,6],
 "classQuestEscort.html#a34a5fac00141fb6e2a40e9bd5426ab27":[1,0,975,3],
-"classQuestEscort.html#a449b6f0adac6eb77d6e46a1075e00c57":[1,0,975,1],
-"classQuestEscort.html#a533012513bfee3ab6705621e89c54a19":[1,0,975,0],
-"classQuestEscort.html#a70416e2b58cb2ef5d8f031e172a97688":[1,0,975,9]
+"classQuestEscort.html#a449b6f0adac6eb77d6e46a1075e00c57":[1,0,975,1]
 };

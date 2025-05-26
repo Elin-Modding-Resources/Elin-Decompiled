@@ -1,5 +1,8 @@
 var NAVTREEINDEX118 =
 {
+"classTraitMerchant.html#af444fd651a60a11d125a7094e132707a":[1,0,1648,4],
+"classTraitMerchantBlack.html":[1,0,1649],
+"classTraitMerchantBlack.html#a0c55ab4bf916652cb165aba6b61f358b":[1,0,1649,4],
 "classTraitMerchantBlack.html#a426b63b31cfd38c4f2abfcdcf43f8a89":[1,0,1649,0],
 "classTraitMerchantBlack.html#a63c10f324fc16b05a1806794b99a06f7":[1,0,1649,3],
 "classTraitMerchantBlack.html#aaaee57988bd078678deba34c5ba43121":[1,0,1649,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitPillowGod.html#a12103e758f3a07f7cfde68d18d211303":[1,0,1714,0],
 "classTraitPillowItzpalt.html":[1,0,1715],
 "classTraitPillowItzpalt.html#a53db86df55de7a593f182c72e3b393e8":[1,0,1715,0],
-"classTraitPillowJure.html":[1,0,1716],
-"classTraitPillowJure.html#adc8f9f6ee80dbf56471f8a5f6314d8ea":[1,0,1716,0],
-"classTraitPillowKumiromi.html":[1,0,1717],
-"classTraitPillowKumiromi.html#a89ee68d31727cb744640e27b359110c0":[1,0,1717,0]
+"classTraitPillowJure.html":[1,0,1716]
 };

@@ -1,11 +1,12 @@
 var NAVTREEINDEX61 =
 {
-"classEmpyrean_1_1Utils_1_1Colorist.html#af79a28d71bfdf8d2fead7352ad8f2487":[0,4,5,1,0,56],
+"classEmpyrean_1_1Utils_1_1Colorist.html#ae47694964f05fedf910bf14597833442":[1,0,5,1,0,24],
 "classEmpyrean_1_1Utils_1_1Colorist.html#af79a28d71bfdf8d2fead7352ad8f2487":[1,0,5,1,0,56],
-"classEmpyrean_1_1Utils_1_1Colorist.html#af9cb37fcfbeeb6f4fa93c25e2b68f628":[0,4,5,1,0,53],
+"classEmpyrean_1_1Utils_1_1Colorist.html#af79a28d71bfdf8d2fead7352ad8f2487":[0,4,5,1,0,56],
 "classEmpyrean_1_1Utils_1_1Colorist.html#af9cb37fcfbeeb6f4fa93c25e2b68f628":[1,0,5,1,0,53],
-"classEmpyrean_1_1Utils_1_1Extensions.html":[0,4,5,1,1],
+"classEmpyrean_1_1Utils_1_1Colorist.html#af9cb37fcfbeeb6f4fa93c25e2b68f628":[0,4,5,1,0,53],
 "classEmpyrean_1_1Utils_1_1Extensions.html":[1,0,5,1,1],
+"classEmpyrean_1_1Utils_1_1Extensions.html":[0,4,5,1,1],
 "classEmpyrean_1_1Utils_1_1Extensions.html#a4fe2b8fd2aa773b744cc0ae3bbcf1f26":[1,0,5,1,1,0],
 "classEmpyrean_1_1Utils_1_1Extensions.html#a4fe2b8fd2aa773b744cc0ae3bbcf1f26":[0,4,5,1,1,0],
 "classEmpyrean_1_1Utils_1_1Extensions.html#a5a7dec6e58f9a0fad8f6c0bcca49a4f7":[1,0,5,1,1,2],
@@ -14,8 +15,8 @@ var NAVTREEINDEX61 =
 "classEmpyrean_1_1Utils_1_1Extensions.html#a64df85f9a1049edc07ca514c68efe7b7":[1,0,5,1,1,3],
 "classEmpyrean_1_1Utils_1_1Extensions.html#a8da770acba776a4fa08d1092f25030c6":[1,0,5,1,1,1],
 "classEmpyrean_1_1Utils_1_1Extensions.html#a8da770acba776a4fa08d1092f25030c6":[0,4,5,1,1,1],
-"classEmpyrean_1_1Utils_1_1Extensions.html#aeb67f99fe6c979d48703d39f9b60019c":[0,4,5,1,1,4],
 "classEmpyrean_1_1Utils_1_1Extensions.html#aeb67f99fe6c979d48703d39f9b60019c":[1,0,5,1,1,4],
+"classEmpyrean_1_1Utils_1_1Extensions.html#aeb67f99fe6c979d48703d39f9b60019c":[0,4,5,1,1,4],
 "classEventAwareSlider.html":[1,0,481],
 "classEventAwareSlider.html#af7b2fabe7136dcf8185a20d0c43a35ae":[1,0,481,0],
 "classExcelBookImportSetting.html":[1,0,482],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "classFEAT.html#a99799ffa0458a177ff163acb2b76bb2c":[1,0,500,10],
 "classFEAT.html#a9990c642d1c622a82ad54d1d1448e290":[1,0,500,105],
 "classFEAT.html#a9a18d11f2883cf72fd18e778d16795e2":[1,0,500,18],
-"classFEAT.html#a9a24d8cae8aa9e9afe88e2e02f5e60a8":[1,0,500,97],
-"classFEAT.html#a9dc997249c07337520b10cab896efd32":[1,0,500,112]
+"classFEAT.html#a9a24d8cae8aa9e9afe88e2e02f5e60a8":[1,0,500,97]
 };

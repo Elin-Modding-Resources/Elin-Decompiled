@@ -54,6 +54,7 @@ var classENC =
     [ "negateNeckHunt", "classENC.html#a4e721b575d3389b927ec9adb481d4ca8", null ],
     [ "negateParalysis", "classENC.html#a33873a23355fa4e75368a61a08ecbc92", null ],
     [ "negatePoison", "classENC.html#ac703c0e063e8180adc73811f5b22d960", null ],
+    [ "negateShockwave", "classENC.html#ab4e66b6632e6b960ec8fb7000bfdbf3c", null ],
     [ "negateSleep", "classENC.html#afbfe3afa9f6b7bfc3f59a59596278210", null ],
     [ "negateSteal", "classENC.html#a1e36907400d5789ffe93497a9d9c01db", null ],
     [ "negateTeleport", "classENC.html#aa313b4266696ee6caff3a2a0d9957464", null ],

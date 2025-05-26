@@ -1,5 +1,8 @@
 var NAVTREEINDEX137 =
 {
+"classZone__Casino.html#a0e8d43bd7bddb3ebf21dc02a747e4bf9":[1,0,2060,0],
+"classZone__Casino.html#a51d4b8ef554fe208c3b0cd3ceb7fd826":[1,0,2060,1],
+"classZone__Casino.html#aa351821b7dd57fe51522a6ac4620e9df":[1,0,2060,3],
 "classZone__Casino.html#aa5b7c74c5b75a5a1ee050efa70907307":[1,0,2060,2],
 "classZone__CaveElona.html":[1,0,2061],
 "classZone__CaveElona.html#a09e7dbd0732fd994162d0bd52d798e60":[1,0,2061,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX137 =
 "classZone__Vernis.html#a62d7086f01d835d74bf433dd552e03d5":[1,0,2123,2],
 "classZone__Vernis.html#a837a98de42990fa5e02793ba2bf2bafb":[1,0,2123,3],
 "classZone__Vernis.html#a8a0583eee016f944fe7b6e7499fbda85":[1,0,2123,1],
-"classZone__Vernis.html#ac0658c708135b3890165ca706d4eb619":[1,0,2123,4],
-"classZone__Vernis.html#ac967c3d6e9afc1f0e647d87221869f14":[1,0,2123,0],
-"classZone__VernisMine.html":[1,0,2124],
-"classZone__VernisMine.html#a00ecc6211c303d27920c1caa16d308c2":[1,0,2124,2]
+"classZone__Vernis.html#ac0658c708135b3890165ca706d4eb619":[1,0,2123,4]
 };

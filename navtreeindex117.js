@@ -1,5 +1,8 @@
 var NAVTREEINDEX117 =
 {
+"classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1593,3],
+"classTraitGodStatue.html#abc0ce01bea37d901ff1893ea8576377d":[1,0,1593,4],
+"classTraitGoodsCoin.html":[1,0,1594],
 "classTraitGoodsCoin.html#a9751edccc0d9badf730cb5cca88fb87d":[1,0,1594,0],
 "classTraitGrave.html":[1,0,1595],
 "classTraitGriffin.html":[1,0,1596],
@@ -246,8 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitMerchant.html#a1ee6cb78e5ddfe35d4236ccf5b42bcb4":[1,0,1648,3],
 "classTraitMerchant.html#a2281763a5cfa3c85ebf5e674f9622079":[1,0,1648,1],
 "classTraitMerchant.html#abfb294a520a3b4f6fa0dc806e776344c":[1,0,1648,0],
-"classTraitMerchant.html#ac785b13ae49732f62e5c6494e0bd2d96":[1,0,1648,2],
-"classTraitMerchant.html#af444fd651a60a11d125a7094e132707a":[1,0,1648,4],
-"classTraitMerchantBlack.html":[1,0,1649],
-"classTraitMerchantBlack.html#a0c55ab4bf916652cb165aba6b61f358b":[1,0,1649,4]
+"classTraitMerchant.html#ac785b13ae49732f62e5c6494e0bd2d96":[1,0,1648,2]
 };

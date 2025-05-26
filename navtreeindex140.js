@@ -1,5 +1,8 @@
 var NAVTREEINDEX140 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daca7163bd3e992d9f5b0ec0024c092fc2":[0,4,3,0,8,196],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dacee7fd6b791b2751c26f1eb4078fad74":[0,4,3,0,8,80],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad104b77eb1b8269d6ad67c55fea641f2":[0,4,3,0,8,44],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad2222ddc18747e01a7f1049a389ef4ee":[0,4,3,0,8,225],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad23c607e300445f857d4da1ef37fc81e":[0,4,3,0,8,45],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad27a84713a758d1ac105af3d7cdb849c":[0,4,3,0,8,98],

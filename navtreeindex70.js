@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"classHyphenationJpn.html#ae31cb9a081488960ac00e00e8d7cc1bf":[1,0,650,16],
 "classIO.html":[1,0,703],
 "classIO.html#a027d18f80b45d2adf531c9e64af20bd7":[1,0,703,8],
 "classIO.html#a06289866e6a7c70e01e7b515323c71e3":[1,0,703,36],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "classInvOwner.html#a96357e3656cee281f5fa146f78fdfb31":[1,0,675,73],
 "classInvOwner.html#a96d3ffaeaee1396a65908eb9dbfa56c3":[1,0,675,37],
 "classInvOwner.html#a9c290c0f27b3eae174975ba0b2dfa91a":[1,0,675,46],
-"classInvOwner.html#a9d89740dd06e6cd432da7aa7b8a65ac7":[1,0,675,34],
-"classInvOwner.html#a9da2225b73a90f6a2456896711a173dd":[1,0,675,80]
+"classInvOwner.html#a9d89740dd06e6cd432da7aa7b8a65ac7":[1,0,675,34]
 };

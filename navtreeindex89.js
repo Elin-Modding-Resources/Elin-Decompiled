@@ -1,5 +1,6 @@
 var NAVTREEINDEX89 =
 {
+"classPrimitiveUI_1_1PrimitiveCanvas.html#a103c1fce6b1eaa132189f94b1d5503ed":[1,0,7,1,42],
 "classPrimitiveUI_1_1PrimitiveCanvas.html#a103c1fce6b1eaa132189f94b1d5503ed":[0,4,7,1,42],
 "classPrimitiveUI_1_1PrimitiveCanvas.html#a118cc23e56760d6713c73e0b79b4b503":[0,4,7,1,7],
 "classPrimitiveUI_1_1PrimitiveCanvas.html#a118cc23e56760d6713c73e0b79b4b503":[1,0,7,1,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX89 =
 "classPropsInstalled.html":[1,0,957],
 "classPropsInstalled.html#a0b85cc038d55bbd0c836c8357bca31ac":[1,0,957,0],
 "classPropsInstalled.html#a390a80d5599dd944b6c19d4bbb7bedb0":[1,0,957,1],
-"classPropsManager.html":[1,0,958],
-"classPropsManager.html#a0c5a47eaa47ab2bd2b8347e3ff3437a3":[1,0,958,4]
+"classPropsManager.html":[1,0,958]
 };

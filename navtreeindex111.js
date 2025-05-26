@@ -1,5 +1,8 @@
 var NAVTREEINDEX111 =
 {
+"classTileTypeBridge.html#a4eec48fa9724ee9869b274df30c06bae":[1,0,1327,1],
+"classTileTypeBridge.html#ac0654f8e915881990692038574b5a0e2":[1,0,1327,0],
+"classTileTypeBridge.html#af5ab25877c18302d3a41a3a31beac243":[1,0,1327,2],
 "classTileTypeBridgeDeco.html":[1,0,1328],
 "classTileTypeBridgeDeco.html#a0bfe36b0e52b0904d28ae28ebbd246da":[1,0,1328,3],
 "classTileTypeBridgeDeco.html#a32c61b9e3fd276c8f18340faed80dba9":[1,0,1328,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX111 =
 "classToJShadow.html#a7d20378b0e810f3c29192365993bfa71":[1,0,1380,9],
 "classToJShadow.html#a8c4dbbd45e0c3def795ba0216e4d295d":[1,0,1380,1],
 "classToJShadow.html#a9380cbd479a3ce54ce62b9befa00f157":[1,0,1380,4],
-"classToJShadow.html#addfe02c83ef6e83c3a64020ba1856e48":[1,0,1380,10],
-"classToJShadow.html#ae59d5488cb7cf63029135e8d5e7389b6":[1,0,1380,0],
-"classToJShadow.html#af51c7ead4ae452f6bb848e2317efeb3d":[1,0,1380,3],
-"classToneDataList.html":[1,0,1381]
+"classToJShadow.html#addfe02c83ef6e83c3a64020ba1856e48":[1,0,1380,10]
 };

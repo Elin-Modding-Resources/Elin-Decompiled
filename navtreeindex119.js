@@ -1,5 +1,8 @@
 var NAVTREEINDEX119 =
 {
+"classTraitPillowJure.html#adc8f9f6ee80dbf56471f8a5f6314d8ea":[1,0,1716,0],
+"classTraitPillowKumiromi.html":[1,0,1717],
+"classTraitPillowKumiromi.html#a89ee68d31727cb744640e27b359110c0":[1,0,1717,0],
 "classTraitPillowLulwy.html":[1,0,1718],
 "classTraitPillowLulwy.html#a5f2f80611b2d65b9414d7c371e5b033d":[1,0,1718,0],
 "classTraitPillowMani.html":[1,0,1719],
@@ -246,8 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitScrollRandom.html#a08b514b9e11ff796bc1684237c39b766":[1,0,1770,5],
 "classTraitScrollRandom.html#a255d6649635ecb3991ab2016bc0f018e":[1,0,1770,6],
 "classTraitScrollRandom.html#a2a25d812c94df25815c40afa56a64e72":[1,0,1770,2],
-"classTraitScrollRandom.html#a62c3d173f9c602db12758a35833dfeb8":[1,0,1770,4],
-"classTraitScrollRandom.html#a665570b9a89aae769c2366ee4571bf33":[1,0,1770,7],
-"classTraitScrollRandom.html#a85a67ab98267c1bede1eecde4832b138":[1,0,1770,1],
-"classTraitScrollRandom.html#aa74e652f1dd77c0617634025c7fa888d":[1,0,1770,3]
+"classTraitScrollRandom.html#a62c3d173f9c602db12758a35833dfeb8":[1,0,1770,4]
 };
