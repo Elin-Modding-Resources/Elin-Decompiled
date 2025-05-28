@@ -119,6 +119,8 @@ public class Chara : Card, IPathfindWalker
 
 	public float idleTimer;
 
+	public bool isBerserk;
+
 	public bool isDrunk;
 
 	public bool isConfused;
@@ -1453,7 +1455,7 @@ public class Chara : Card, IPathfindWalker
 		InitStats();
 		body.SetOwner(this);
 		hostility = OriginalHostility;
-		if (race.EQ.Length != 0)
+		if (race.EQ.Length != 0 || !source.equip.IsEmpty())
 		{
 			TryRestock(onCreate: true);
 		}
@@ -8669,6 +8671,10 @@ public class Chara : Card, IPathfindWalker
 		if (c.ShouldRefresh)
 		{
 			Refresh();
+		}
+		if (c.CancelAI)
+		{
+			ai.Cancel();
 		}
 		if (IsPC && c.ConsumeTurn && !EClass.pc.isRestrained)
 		{

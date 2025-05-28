@@ -47,10 +47,6 @@ public class TraitToolBrush : TraitTool
 		{
 			return false;
 		}
-		if (!EClass._zone.IsInstance && c.c_bossType == BossType.none)
-		{
-			return c.trait.CanInvite;
-		}
-		return false;
+		return !EClass._zone.IsInstance;
 	}
 }

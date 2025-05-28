@@ -1,12 +1,12 @@
 public class SKILL
 {
-	public const int weaponBlunt = 111;
-
 	public const int shield = 123;
 
 	public const int armorHeavy = 122;
 
 	public const int armorLight = 120;
+
+	public const int weaponBlunt = 111;
 
 	public const int PDR = 55;
 
@@ -16,15 +16,13 @@ public class SKILL
 
 	public const int acidproof = 51;
 
-	public const int twohand = 130;
-
 	public const int weaponScythe = 110;
 
 	public const int fishing = 245;
 
-	public const int mining = 220;
-
 	public const int marksman = 133;
+
+	public const int tactics = 132;
 
 	public const int climbing = 242;
 
@@ -44,7 +42,7 @@ public class SKILL
 
 	public const int lumberjack = 225;
 
-	public const int spotting = 210;
+	public const int mining = 220;
 
 	public const int weightlifting = 207;
 
@@ -60,13 +58,17 @@ public class SKILL
 
 	public const int eyeofmind = 134;
 
-	public const int tactics = 132;
+	public const int twowield = 131;
+
+	public const int spotting = 210;
+
+	public const int weaponAxe = 102;
+
+	public const int weaponDagger = 107;
 
 	public const int EDR = 56;
 
-	public const int weaponStaff = 103;
-
-	public const int throwing = 108;
+	public const int evasionPerfect = 57;
 
 	public const int life = 60;
 
@@ -96,43 +98,41 @@ public class SKILL
 
 	public const int WIL = 75;
 
-	public const int evasionPerfect = 57;
-
 	public const int MAG = 76;
-
-	public const int LUC = 78;
-
-	public const int SPD = 79;
-
-	public const int INT = 80;
-
-	public const int critical = 90;
-
-	public const int vopal = 91;
-
-	public const int penetration = 92;
-
-	public const int antiMagic = 93;
-
-	public const int martial = 100;
-
-	public const int weaponSword = 101;
-
-	public const int weaponAxe = 102;
-
-	public const int weaponBow = 104;
-
-	public const int weaponGun = 105;
 
 	public const int weaponPolearm = 106;
 
-	public const int weaponDagger = 107;
+	public const int weaponGun = 105;
+
+	public const int weaponBow = 104;
+
+	public const int weaponStaff = 103;
+
+	public const int weaponSword = 101;
+
+	public const int martial = 100;
+
+	public const int throwing = 108;
+
+	public const int antiMagic = 93;
+
+	public const int vopal = 91;
+
+	public const int critical = 90;
+
+	public const int INT = 80;
+
+	public const int SPD = 79;
+
+	public const int LUC = 78;
 
 	public const int CHA = 77;
 
+	public const int penetration = 92;
+
 	public const int gathering = 250;
 
-	public const int twowield = 131;
+	public const int twohand = 130;
 
 	public const int blacksmith = 256;
 
@@ -268,13 +268,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		111, 123, 122, 120, 55, 109, 50, 51, 130, 110,
-		245, 220, 133, 242, 241, 240, 237, 235, 230, 227,
-		226, 225, 210, 207, 200, 152, 151, 150, 135, 134,
-		132, 56, 103, 108, 60, 61, 62, 64, 65, 66,
-		67, 68, 70, 71, 72, 73, 74, 75, 57, 76,
-		78, 79, 80, 90, 91, 92, 93, 100, 101, 102,
-		104, 105, 106, 107, 77, 250, 131, 256, 916, 917,
+		123, 122, 120, 111, 55, 109, 50, 51, 110, 245,
+		133, 132, 242, 241, 240, 237, 235, 230, 227, 226,
+		225, 220, 207, 200, 152, 151, 150, 135, 134, 131,
+		210, 102, 107, 56, 57, 60, 61, 62, 64, 65,
+		66, 67, 68, 70, 71, 72, 73, 74, 75, 76,
+		106, 105, 104, 103, 101, 100, 108, 93, 91, 90,
+		80, 79, 78, 77, 92, 250, 130, 256, 916, 917,
 		918, 919, 920, 921, 922, 923, 924, 925, 926, 950,
 		951, 952, 915, 953, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 965, 970, 971, 972, 255, 954, 914,

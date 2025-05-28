@@ -273,6 +273,8 @@ public class CoreRef : ScriptableObject
 
 		public TextureData objs_C;
 
+		public TextureData objs_CL;
+
 		public TextureData objs_CLL;
 
 		public TextureData shadows;

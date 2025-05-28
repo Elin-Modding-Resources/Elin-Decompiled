@@ -56,6 +56,7 @@ public class TraitMoongate : Trait
 			lang = ((EClass.rnd(10) != 0) ? ((EClass.rnd(2) == 0) ? "JP" : "EN") : "CN");
 		}
 		Debug.Log(lang);
+		Net.DownloadMeta meta = null;
 		try
 		{
 			List<Net.DownloadMeta> listOrg = await Net.GetFileList(lang);
@@ -74,13 +75,13 @@ public class TraitMoongate : Trait
 			}
 			List<MapMetaData> list = ListSavedUserMap();
 			IList<Net.DownloadMeta> list2 = listOrg.Copy();
-			foreach (MapMetaData item2 in list)
+			foreach (MapMetaData item in list)
 			{
-				foreach (Net.DownloadMeta item3 in list2)
+				foreach (Net.DownloadMeta item2 in list2)
 				{
-					if (item3.id == item2.id && item3.version == item2.version)
+					if (item2.id == item.id && item2.version == item.version)
 					{
-						list2.Remove(item3);
+						list2.Remove(item2);
 						break;
 					}
 				}
@@ -90,16 +91,16 @@ public class TraitMoongate : Trait
 			{
 				list2 = listOrg.Copy();
 			}
-			Net.DownloadMeta item = list2.RandomItem();
-			Zone_User zone_User = EClass.game.spatials.Find((Zone_User z) => z.id == item.id);
+			meta = list2.RandomItem();
+			Zone_User zone_User = EClass.game.spatials.Find((Zone_User z) => z.id == meta.id);
 			if (zone_User != null)
 			{
 				MoveZone(zone_User);
 				return true;
 			}
-			FileInfo fileInfo = await Net.DownloadFile(item, CorePath.ZoneSaveUser, lang);
-			Debug.Log(item?.ToString() + "/" + item.title + item.id + "/" + item.path + "/");
-			Debug.Log(fileInfo?.ToString() + "/" + item.name + "/" + item.path);
+			FileInfo fileInfo = await Net.DownloadFile(meta, CorePath.ZoneSaveUser, lang);
+			Debug.Log(meta?.ToString() + "/" + meta.title + meta.id + "/" + meta.path + "/");
+			Debug.Log(fileInfo?.ToString() + "/" + meta.name + "/" + meta.path);
 			if (Zone.IsImportValid(fileInfo.FullName))
 			{
 				Debug.Log("valid");
@@ -114,6 +115,10 @@ public class TraitMoongate : Trait
 		catch (Exception ex)
 		{
 			EClass.ui.Say(ex.Message);
+			if (meta != null)
+			{
+				EClass.ui.Say("Invalid Usermap: " + meta.title + "(" + meta.id + ")");
+			}
 			return false;
 		}
 		return true;

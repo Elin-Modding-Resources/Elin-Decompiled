@@ -8,5 +8,6 @@ public enum BiomeID
 	Plain,
 	Artificial,
 	Snow,
-	Barren
+	Barren,
+	Undersea
 }

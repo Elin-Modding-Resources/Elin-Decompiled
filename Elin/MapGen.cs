@@ -344,7 +344,7 @@ public class MapGen : BaseMapGen
 	{
 		EloMap.TileInfo thisInfo;
 		int seaDir;
-		if (bp.surrounding != null)
+		if (bp.surrounding != null && !zone.IsUnderwater)
 		{
 			thisInfo = bp.surrounding[1, 1];
 			seaDir = (thisInfo.sea ? (1 + EClass.rnd(4)) : 0);

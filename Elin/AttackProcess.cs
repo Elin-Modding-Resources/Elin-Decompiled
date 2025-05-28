@@ -711,7 +711,7 @@ public class AttackProcess : EClass
 		{
 			return true;
 		}
-		if (TC.isChara && num3 > 0 && num3 * 2 + 15 > EClass.rnd(100) && !TC.isRestrained && TC.Chara.TryMoveFrom(CC.pos) == Card.MoveResult.Success)
+		if (TC.isChara && !TC.HasCondition<ConGravity>() && num3 > 0 && num3 * 2 + 15 > EClass.rnd(100) && !TC.isRestrained && TC.Chara.TryMoveFrom(CC.pos) == Card.MoveResult.Success)
 		{
 			TC.pos.PlayEffect("vanish");
 			TC.PlaySound("push", 1.5f);

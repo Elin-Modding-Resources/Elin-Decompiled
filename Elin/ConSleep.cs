@@ -35,8 +35,6 @@ public class ConSleep : BadCondition
 
 	public override bool ConsumeTurn => true;
 
-	public override bool CancelAI => false;
-
 	public override int GetPhase()
 	{
 		return 0;

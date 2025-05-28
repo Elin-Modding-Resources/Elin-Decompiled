@@ -94,6 +94,8 @@ public class Zone_Field : Zone
 		}
 	}
 
+	public override bool IsUnderwater => IdBiome == "Undersea";
+
 	public override void OnGenerateMap()
 	{
 		base.OnGenerateMap();

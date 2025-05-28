@@ -10,34 +10,34 @@ public class DOMAIN
 
 	public const int domEyth = 814;
 
-	public const int domWind = 807;
-
 	public const int domElement = 806;
 
 	public const int domComm = 805;
 
 	public const int domArcane = 804;
 
+	public const int domMiracle = 803;
+
+	public const int domMachine = 809;
+
 	public const int domLuck = 810;
 
-	public const int domFaith = 802;
-
 	public const int domHarmony = 815;
+
+	public const int domWind = 807;
 
 	public const int domHarvest = 808;
 
 	public const int domTest = 800;
 
+	public const int domFaith = 802;
+
 	public const int domSurvival = 801;
-
-	public const int domMiracle = 803;
-
-	public const int domMachine = 809;
 
 	public static readonly int[] IDS = new int[16]
 	{
-		811, 812, 813, 814, 807, 806, 805, 804, 810, 802,
-		815, 808, 800, 801, 803, 809
+		811, 812, 813, 814, 806, 805, 804, 803, 809, 810,
+		815, 807, 808, 800, 802, 801
 	};
 }
 public class Domain : EClass

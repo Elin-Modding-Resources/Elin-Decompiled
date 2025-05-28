@@ -376,7 +376,7 @@ public class ActMelee : ActBaseAttack
 						}
 					});
 				}
-				if (Act.TC.isChara && Act.TC.ExistsOnMap && knockback > 0 && knockback * 2 + 15 > EClass.rnd(100) && !Act.TC.isRestrained)
+				if (Act.TC.isChara && !Act.TC.HasCondition<ConGravity>() && Act.TC.ExistsOnMap && knockback > 0 && knockback * 2 + 15 > EClass.rnd(100) && !Act.TC.isRestrained)
 				{
 					Card.MoveResult num6 = Act.TC.Chara.TryMoveFrom(Act.CC.pos);
 					bool flag3 = Act.CC.id == "tsunami";

@@ -2298,7 +2298,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		Zone_Field zone_Field = this as Zone_Field;
 		if (IdBiome == "Sand" || IdBiome == "Water" || IsUnderwater)
 		{
-			int num = 1 + EClass.rnd((IdBiome == "water") ? 4 : 2);
+			int num = 1 + EClass.rnd((IdBiome == "Water") ? 3 : 2);
 			for (int i = 0; i < num; i++)
 			{
 				Point randomSurface = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
@@ -2318,12 +2318,71 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 			}
 		}
+		if (IsUnderwater)
+		{
+			for (int k = 0; k < 30 + EClass.rnd(30); k++)
+			{
+				SpawnMob(null, SpawnSetting.Fish());
+			}
+			Crawler crawler = Crawler.Create("pasture");
+			int num2 = (EClass.debug.enable ? 3 : EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(5) + 1) + 1) + 1));
+			bool flag = this is Zone_Field;
+			Thing seed = null;
+			int num3 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
+			if (num3 > 0)
+			{
+				seed = TraitSeed.MakeSeed(EClass.sources.objs.map[137]);
+				Rand.SetSeed(EClass._zone.uid * 10 + num3);
+				TraitSeed.LevelSeed(seed, (seed.trait as TraitSeed).row, num3);
+				Rand.SetSeed();
+				seed.elements.SetBase(2, EClass.curve(seed.encLV, 50, 10, 80));
+			}
+			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), num2 + (flag ? 4 : 0), delegate(Crawler.Result r)
+			{
+				int num6 = 137;
+				foreach (Point point in r.points)
+				{
+					if (!point.cell.isModified && !point.HasThing && !point.HasBlock && !point.HasObj)
+					{
+						map.SetObj(point.x, point.z, num6);
+						int idx = 3 + ((EClass.rnd(3) == 0) ? 1 : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0);
+						point.growth.SetStage(idx);
+						if (seed != null)
+						{
+							EClass._map.AddPlant(point, seed);
+						}
+					}
+				}
+				return false;
+			});
+			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(5) + 1) + 1 + (flag ? 20 : 0), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			{
+				int num5 = 136;
+				foreach (Point point2 in r.points)
+				{
+					if (!point2.cell.isModified && !point2.HasThing && !point2.HasBlock && !point2.HasObj)
+					{
+						map.SetObj(point2.x, point2.z, num5, 1, EClass.rnd(4));
+					}
+				}
+				return false;
+			});
+			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(10) + 1) + 3 + (flag ? 40 : 0), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			{
+				int idFloor = 121;
+				foreach (Point point3 in r.points)
+				{
+					map.SetFloor(point3.x, point3.z, 97, idFloor, Mathf.Clamp(4 - r.startPos.Distance(point3) + EClass.rnd(3) - EClass.rnd(3), 0, 3));
+				}
+				return false;
+			});
+		}
 		if (zone_Field != null)
 		{
 			if (EClass.rnd(3) == 0)
 			{
-				int num2 = EClass.rnd(2);
-				for (int k = 0; k < num2; k++)
+				int num4 = EClass.rnd(2);
+				for (int l = 0; l < num4; l++)
 				{
 					Point randomSurface3 = EClass._map.bounds.GetRandomSurface();
 					if (!randomSurface3.HasObj && !randomSurface3.HasThing)

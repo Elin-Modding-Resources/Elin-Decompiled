@@ -3497,6 +3497,34 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
+		string encSlot = row.encSlot;
+		if (encSlot == null || encSlot.Length != 0)
+		{
+			switch (encSlot)
+			{
+			default:
+			{
+				bool flag = false;
+				string[] array = row.encSlot.Split(',');
+				foreach (string key in array)
+				{
+					if (EClass.sources.elements.alias[key].id == category.slot)
+					{
+						flag = true;
+					}
+				}
+				if (!flag)
+				{
+					return false;
+				}
+				break;
+			}
+			case "global":
+			case "all":
+			case "weapon":
+				break;
+			}
+		}
 		return CountRune() < MaxRune();
 	}
 
@@ -3906,6 +3934,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = dmg * (100 - (int)Mathf.Min(80f, Mathf.Sqrt(LV - 50) * 2.5f)) / 100;
 			}
+			if (origin != null && origin.HasCondition<ConBerserk>())
+			{
+				dmg = dmg * 3 / 2;
+			}
 			if (EClass.game.principal.enableDamageReduction && IsPCFaction)
 			{
 				int num2 = ((origin != null) ? origin.LV : EClass._zone.DangerLv);
@@ -4106,7 +4138,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0baa;
+							goto IL_0bcf;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -4118,8 +4150,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0baa;
-		IL_0baa:
+		goto IL_0bcf;
+		IL_0bcf:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);

@@ -68,7 +68,7 @@ public class ZoneEventDefenseGame : ZoneEventQuest
 			QuestDefenseGame.bonus = bonus;
 			return;
 		}
-		int num = EClass.pc.FameLv / 100 * 50;
+		int num = (base.quest.FameContent ? (EClass.pc.FameLv / 100 * 50) : 0);
 		EClass._zone._dangerLv = 5 + num;
 		bonus += num / 10;
 		Point nearestPoint = EClass._map.GetCenterPos().GetNearestPoint(allowBlock: false, allowChara: false);
@@ -83,7 +83,7 @@ public class ZoneEventDefenseGame : ZoneEventQuest
 	{
 		wave++;
 		turns = 0;
-		EClass._zone._dangerLv += ((EClass._zone.DangerLv >= 100) ? (EClass._zone.DangerLv / 100 * 10) : 5);
+		EClass._zone._dangerLv += ((EClass._zone.DangerLv >= 100) ? (EClass._zone.DangerLv / 100 * 5 + 5) : 5);
 		SE.Play("warhorn");
 		Msg.Say("defense_wave", wave.ToString() ?? "", EClass._zone.DangerLv.ToString() ?? "");
 		Spawn(2 + base.quest.difficulty + add);

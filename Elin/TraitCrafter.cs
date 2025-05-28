@@ -365,7 +365,7 @@ public class TraitCrafter : Trait
 				Msg.Say("rune_tooHard", owner);
 				break;
 			}
-			EClass.ui.AddLayer<LayerList>().SetList2(list, (Element a) => a.Name, delegate(Element a, ItemGeneral b)
+			EClass.ui.AddLayer<LayerList>().SetList2(list, (Element a) => GetName(a), delegate(Element a, ItemGeneral b)
 			{
 				owner.ModNum(-1);
 				eq.Destroy();
@@ -378,7 +378,8 @@ public class TraitCrafter : Trait
 				EClass.pc.PlayEffect("intonation");
 			}, delegate(Element a, ItemGeneral b)
 			{
-				b.SetSubText(a.vBase + a.vSource + ((a.vLink != 0) ? (" (" + a.vLink + ")") : ""), 200, FontColor.Default, TextAnchor.MiddleRight);
+				string lang = a.vBase + a.vSource + ((a.vLink != 0) ? (" (" + a.vLink + ")") : "");
+				b.SetSubText(lang, 200, FontColor.Default, TextAnchor.MiddleRight);
 				b.Build();
 				if (a.HasTag("noRune"))
 				{
@@ -509,6 +510,23 @@ public class TraitCrafter : Trait
 			t.SetNum(num);
 		}
 		return t;
+		static string GetName(Element a)
+		{
+			string text = a.Name;
+			string encSlot = a.source.encSlot;
+			if ((encSlot == null || encSlot.Length != 0) && !(encSlot == "global") && !(encSlot == "all"))
+			{
+				text += " [";
+				string[] array2 = a.source.encSlot.Split(',');
+				foreach (string text2 in array2)
+				{
+					text += ((text2 == "weapon") ? "weapon_enc".lang() : EClass.sources.elements.alias[text2].GetName().ToTitleCase());
+					text += ", ";
+				}
+				text = text.TrimEnd(", ".ToCharArray()) + "]";
+			}
+			return text;
+		}
 		void Prize(int chance, string s, string col, bool cat)
 		{
 			if (!claimed && EClass.rnd(chance) == 0)

@@ -10,13 +10,16 @@ public class QuestDefenseGame : QuestInstance
 	[JsonProperty]
 	public Thing thing;
 
+	[JsonProperty]
+	public bool useFame;
+
 	public override string IdZone => "instance_arena";
 
 	public override string RefDrama1 => thing.NameSimple;
 
 	public override string RewardSuffix => "Defense";
 
-	public override bool FameContent => true;
+	public override bool FameContent => useFame;
 
 	public override int FameOnComplete => (lastWave * 8 + difficulty * 10) * (100 + bonus * 5) / 100;
 
@@ -33,6 +36,7 @@ public class QuestDefenseGame : QuestInstance
 	public override void OnInit()
 	{
 		thing = ThingGen.CreateFromFilter("thing", 30);
+		useFame = EClass.rnd(3) != 0;
 	}
 
 	public override void OnBeforeComplete()

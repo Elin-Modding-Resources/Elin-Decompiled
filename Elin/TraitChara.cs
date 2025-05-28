@@ -104,9 +104,9 @@ public class TraitChara : Trait
 	{
 		get
 		{
-			if (!IsUnique && owner.rarity < Rarity.Legendary && !owner.IsMultisize && !owner.IsGlobal && !owner.IsPCFaction)
+			if (!IsUnique && owner.rarity < Rarity.Legendary && !owner.IsMultisize && !owner.IsGlobal && !owner.IsPCFaction && EClass._zone.Boss != owner && CanInvite)
 			{
-				return EClass._zone.Boss != owner;
+				return owner.c_bossType == BossType.none;
 			}
 			return false;
 		}

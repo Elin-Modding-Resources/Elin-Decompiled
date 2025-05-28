@@ -22,6 +22,7 @@ public class TextureManager
 		AddBase(textureData.shadows, "shadows.png", tileMap.passShadow);
 		AddBase(textureData.fov, "fov.png", tileMap.passFov);
 		AddBase(textureData.objs_C, "objs_C.png", tileMap.passChara);
+		AddBase(textureData.objs_CL, "objs_CL.png", tileMap.passCharaL);
 		AddBase(textureData.objs_CLL, "objs_CLL.png", tileMap.passCharaLL);
 		AddBase(textureData.block_snow, "blocks_snow.png", tileMap.passBlock.snowPass);
 		AddBase(textureData.floor_snow, "floors_snow.png", tileMap.passFloor.snowPass);
@@ -42,8 +43,7 @@ public class TextureManager
 		Add(tileMap.passShore, textureData.floor);
 		Add(tileMap.passAutoTileWater, textureData.floor);
 		Add(tileMap.passFloorMarker, textureData.floor);
-		Add(tileMap.passCharaL, textureData.objs_C);
-		Add(tileMap.passCharaLW, textureData.objs_C);
+		Add(tileMap.passCharaLW, textureData.objs_CL);
 		Add(tileMap.passIcon, textureData.objs_S);
 		AddList(textureData.world, "world.png");
 		AddList(textureData.bird, "bird1.png");

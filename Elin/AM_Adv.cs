@@ -530,6 +530,16 @@ public class AM_Adv : AM_BaseGameMode
 				EClass.player.invlunerable = false;
 				return;
 			}
+			if (EClass.pc.isBerserk && !(EClass.pc.ai is GoalCombat))
+			{
+				EClass.pc.FindNearestNewEnemy();
+				if (EClass.pc.enemy != null)
+				{
+					EClass.pc.SetAIImmediate(new GoalAutoCombat(EClass.pc.enemy));
+				}
+				EClass.player.EndTurn();
+				return;
+			}
 			if (EClass.player.lastTurn != EClass.pc.turn)
 			{
 				EClass.player.lastTurn = EClass.pc.turn;

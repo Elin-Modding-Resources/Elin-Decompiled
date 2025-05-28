@@ -104,7 +104,7 @@ public class BaseCondition : BaseStats
 
 	public virtual bool ShouldRefresh => false;
 
-	public virtual bool CancelAI => ConsumeTurn;
+	public virtual bool CancelAI => false;
 
 	public virtual bool TimeBased => false;
 
