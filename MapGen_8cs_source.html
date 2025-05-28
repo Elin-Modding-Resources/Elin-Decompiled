@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.144 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.145 Nightly</span>
    </div>
   </td>
  </tr>
@@ -438,7 +438,7 @@ $(document).ready(function(){initNavTree('MapGen_8cs_source.html',''); initResiz
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    {</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <a class="code hl_class" href="classEloMap_1_1TileInfo.html">EloMap.TileInfo</a> thisInfo;</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keywordtype">int</span> seaDir;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">IsUnderwater</a>)</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        {</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            thisInfo = <a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a>[1, 1];</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            seaDir = (thisInfo.sea ? (1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4)) : 0);</div>
@@ -1060,6 +1060,7 @@ $(document).ready(function(){initNavTree('MapGen_8cs_source.html',''); initResiz
 <div class="ttc" id="aclassZone__Gathering_html"><div class="ttname"><a href="classZone__Gathering.html">Zone_Gathering</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Gathering_8cs_source.html#l00001">Zone_Gathering.cs:2</a></div></div>
 <div class="ttc" id="aclassZone_html_a4db1e848e7bff8b57cbc60873d15b87d"><div class="ttname"><a href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">Zone.GetTopZone</a></div><div class="ttdeci">Zone GetTopZone()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01866">Zone.cs:1866</a></div></div>
 <div class="ttc" id="aclassZone_html_a8b5957d040b8530f921b24f82e42539d"><div class="ttname"><a href="classZone.html#a8b5957d040b8530f921b24f82e42539d">Zone.bounds</a></div><div class="ttdeci">MapBounds bounds</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00046">Zone.cs:46</a></div></div>
+<div class="ttc" id="aclassZone_html_acef4329fb52efa341f2aa9c0bef7c968"><div class="ttname"><a href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">Zone.IsUnderwater</a></div><div class="ttdeci">virtual bool IsUnderwater</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00264">Zone.cs:264</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

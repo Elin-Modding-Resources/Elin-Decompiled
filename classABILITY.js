@@ -6,6 +6,7 @@ var classABILITY =
     [ "ActCancelTask", "classABILITY.html#ace019e9ba722e4d94c4da89a2f125da6", null ],
     [ "ActChat", "classABILITY.html#afacb4e07fb01980838dc0783af4dbcc2", null ],
     [ "ActCrabBreathe", "classABILITY.html#a8a69010ec89e0f07900917dc392cc4cd", null ],
+    [ "ActCryRage", "classABILITY.html#a54e9ead91c89fe70b94e7d11b92565a5", null ],
     [ "ActCurse", "classABILITY.html#ab98578bfc8d31ef0a1913eb90a81657b", null ],
     [ "ActDrainBlood", "classABILITY.html#aeb818e2a3d2405a2344cde18d6ede810", null ],
     [ "ActDraw", "classABILITY.html#ad2991d6041a5db20299cc95eecab2501", null ],

@@ -8,6 +8,7 @@ var classCoreRef_1_1TextureDatas =
     [ "fov", "classCoreRef_1_1TextureDatas.html#abe85c6208ecedbc4a2cf6c9f6e73b97a", null ],
     [ "objs", "classCoreRef_1_1TextureDatas.html#a22734d26ecd8897b83e6d4cb328a7e1e", null ],
     [ "objs_C", "classCoreRef_1_1TextureDatas.html#ae48b2f78060ac83ab4ccc53f38944297", null ],
+    [ "objs_CL", "classCoreRef_1_1TextureDatas.html#acd9da4e754c960f75833c5f70de4c89b", null ],
     [ "objs_CLL", "classCoreRef_1_1TextureDatas.html#ad0e230ab9838f2db770cb09828849021", null ],
     [ "objs_L", "classCoreRef_1_1TextureDatas.html#a8c4fa509417c145dcd16b3cff6e8d768", null ],
     [ "objs_L_snow", "classCoreRef_1_1TextureDatas.html#a3afb39e7c51e8b6068ae33d2aa53a62e", null ],

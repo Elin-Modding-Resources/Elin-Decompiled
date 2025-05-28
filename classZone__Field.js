@@ -13,6 +13,7 @@ var classZone__Field =
     [ "idExport", "classZone__Field.html#a7afb81b205f4f68af5a1f3a8eca3aa0e", null ],
     [ "IsBridge", "classZone__Field.html#a08f85c900e2427c1b3c9408e7d34b918", null ],
     [ "isClaimable", "classZone__Field.html#a1f8b0642d7138d037c4a487e1c3bac06", null ],
+    [ "IsUnderwater", "classZone__Field.html#ad29dc9c23f84994d745326557396e516", null ],
     [ "OreChance", "classZone__Field.html#a19f096eb7e5b532333bbb6ecf44d9c03", null ],
     [ "PrespawnRate", "classZone__Field.html#a260b5e5594979d4755fcd3bb87e8e918", null ],
     [ "ShrineChance", "classZone__Field.html#a7dd61974fd7fb37391277400fee7f1ea", null ],

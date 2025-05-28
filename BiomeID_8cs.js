@@ -9,6 +9,7 @@ var BiomeID_8cs =
       [ "Plain", "BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5aa4cd8413207629a963225f4314b53adcd", null ],
       [ "Artificial", "BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5aa8ddf793655a47d1de2721e32313ebf36", null ],
       [ "Snow", "BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5aab46d3c8ee8032551c011745d587705cc", null ],
-      [ "Barren", "BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5aa492e9acd19159730032da8322ed0666f", null ]
+      [ "Barren", "BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5aa492e9acd19159730032da8322ed0666f", null ],
+      [ "Undersea", "BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5aa8a1bb96d4f917cda298f60a57e1fc2c1", null ]
     ] ]
 ];

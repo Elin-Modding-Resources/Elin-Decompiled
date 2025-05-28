@@ -403,6 +403,7 @@ var hierarchy =
           [ "Condition", "classCondition.html", [
             [ "BadCondition", "classBadCondition.html", [
               [ "ConAnorexia", "classConAnorexia.html", null ],
+              [ "ConBerserk", "classConBerserk.html", null ],
               [ "ConBleed", "classConBleed.html", null ],
               [ "ConBlind", "classConBlind.html", null ],
               [ "ConBurning", "classConBurning.html", null ],
@@ -704,6 +705,7 @@ var hierarchy =
           ] ],
           [ "Ability", "classAbility.html", [
             [ "ActBreathe", "classActBreathe.html", null ],
+            [ "ActCryRage", "classActCryRage.html", null ],
             [ "ActDreamBug", "classActDreamBug.html", null ],
             [ "ActMultihit", "classActMultihit.html", null ],
             [ "ActNTR", "classActNTR.html", null ],

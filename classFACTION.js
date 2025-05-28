@@ -36,6 +36,7 @@ var classFACTION =
     [ "bfSnow", "classFACTION.html#ab8fd27225e0656b60fae791683d6f886", null ],
     [ "bfStart", "classFACTION.html#a144acb7cd0715653c1df5a294b8427b7", null ],
     [ "bfTranquil", "classFACTION.html#a2cf34f835dcd2b8bc4d73e8a583c31b8", null ],
+    [ "bfUndersea", "classFACTION.html#afe75f816e1d5b20631bf3babf3bfe597", null ],
     [ "bfVolcano", "classFACTION.html#a738f572470e5fa2741e275f0316c81bd", null ],
     [ "fAdmin", "classFACTION.html#afdc24dec3837d2529acc678471158cc9", null ],
     [ "fAttraction", "classFACTION.html#ad5607abbf32d8d2ed48f14fb272bc908", null ],
