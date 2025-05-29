@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500ae9bb5320b3890b6747c91b5a71ae5a01":[2,0,0,585,0,1],
+"Hostility_8cs_source.html":[2,0,0,585],
+"HotAction_8cs.html":[2,0,0,586],
 "HotAction_8cs_source.html":[2,0,0,586],
 "HotItemAct_8cs.html":[2,0,0,590],
 "HotItemAct_8cs_source.html":[2,0,0,590],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "InvOwnerRecycle_8cs.html":[2,0,0,661],
 "InvOwnerRecycle_8cs_source.html":[2,0,0,661],
 "InvOwnerRefuel_8cs.html":[2,0,0,662],
-"InvOwnerRefuel_8cs_source.html":[2,0,0,662],
-"InvOwnerShop_8cs.html":[2,0,0,663],
-"InvOwnerShop_8cs_source.html":[2,0,0,663],
-"InvOwnerToolbelt_8cs.html":[2,0,0,664]
+"InvOwnerRefuel_8cs_source.html":[2,0,0,662]
 };

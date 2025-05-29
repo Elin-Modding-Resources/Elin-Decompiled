@@ -1,5 +1,11 @@
 var NAVTREEINDEX64 =
 {
+"classGame.html#afbc3aeeecce2de239ce4bb08d824e5fd":[1,0,513,36],
+"classGameBlueprint.html":[1,0,514],
+"classGameBlueprint.html#a58e3d174326f3eeb6403796fb5ca06e3":[1,0,514,1],
+"classGameBlueprint.html#afae2d34c810b2af91ae9d529ec68e5c2":[1,0,514,0],
+"classGameContractResolver.html":[1,0,515],
+"classGameContractResolver.html#a9bd3abb8ca7cb07ff18d8dd0abf51790":[1,0,515,0],
 "classGameData.html":[1,0,516],
 "classGameData.html#a43977101aacc23cff46581fc74142a08":[1,0,516,2],
 "classGameData.html#ac93c0a803c83d08e18579eb0b1ee71aa":[1,0,516,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX64 =
 "classGameSetting_1_1RenderSetting.html#ae9b715310908c3030b81891ac5fc999f":[1,0,527,6,44],
 "classGameSetting_1_1RenderSetting.html#afb9e69dcaf23d3f8c0b32371901b05cc":[1,0,527,6,32],
 "classGameSetting_1_1RenderSetting.html#afe9f2986aef696c452909a674df94783":[1,0,527,6,30],
-"classGameSetting_1_1RenderSetting_1_1ActorSetting.html":[1,0,527,6,0],
-"classGameSetting_1_1RenderSetting_1_1ActorSetting.html#a5375e0637042f926e57088d8c13d1d57":[1,0,527,6,0,0],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html":[1,0,527,6,1],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a0931ee1c54c80aaa5d893b4b2b120287":[1,0,527,6,1,6],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a12c0ff3873ea822a796b64379d6f536a":[1,0,527,6,1,4],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a18f41d1a9c5f7b1d0e9f50bf1c66e648":[1,0,527,6,1,0],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a1af2f246ded9115148c004daef45c1a9":[1,0,527,6,1,20]
+"classGameSetting_1_1RenderSetting_1_1ActorSetting.html":[1,0,527,6,0]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX12 =
 {
+"QuestTaskHunt_8cs_source.html":[2,0,0,957],
+"QuestTaskKarma_8cs.html":[2,0,0,958],
+"QuestTaskKarma_8cs_source.html":[2,0,0,958],
+"QuestTask_8cs.html":[2,0,0,955],
 "QuestTask_8cs_source.html":[2,0,0,955],
 "QuestTax_8cs.html":[2,0,0,959],
 "QuestTax_8cs_source.html":[2,0,0,959],
@@ -245,9 +249,5 @@ var NAVTREEINDEX12 =
 "SceneProfile_8cs_source.html":[2,0,0,1043],
 "SceneTemplate_8cs.html":[2,0,0,1044],
 "SceneTemplate_8cs_source.html":[2,0,0,1044],
-"Scene_8cs.html":[2,0,0,1039],
-"Scene_8cs_source.html":[2,0,0,1039],
-"Schedule_8cs.html":[2,0,0,1045],
-"Schedule_8cs_source.html":[2,0,0,1045],
-"ScreenEffect_8cs.html":[2,0,0,1046]
+"Scene_8cs.html":[2,0,0,1039]
 };

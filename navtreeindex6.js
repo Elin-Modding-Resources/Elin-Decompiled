@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac68e1e6faa33bfdf051e2ad6e3ce967d":[2,0,0,453,0,4],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac6eac6d335664c1738761f747081fccc":[2,0,0,453,0,15],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac982717e53ebc5802607247af070d870":[2,0,0,453,0,10],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aeb88d7636980738cd0522ea69e212905":[2,0,0,453,0,8],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9":[2,0,0,453,0,14],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088afe6e31a8aae3a19ca53be63cee8a2c73":[2,0,0,453,0,17],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "GlobalGoalVisitTown_8cs.html":[2,0,0,507],
 "GlobalGoalVisitTown_8cs_source.html":[2,0,0,507],
 "GlobalGoal_8cs.html":[2,0,0,503],
-"GlobalGoal_8cs_source.html":[2,0,0,503],
-"GoalAutoCombat_8cs.html":[2,0,0,509],
-"GoalAutoCombat_8cs_source.html":[2,0,0,509],
-"GoalCombat_8cs.html":[2,0,0,510]
+"GlobalGoal_8cs_source.html":[2,0,0,503]
 };

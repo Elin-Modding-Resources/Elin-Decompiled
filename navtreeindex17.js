@@ -1,5 +1,9 @@
 var NAVTREEINDEX17 =
 {
+"TraitFireworkLauncher_8cs.html":[2,0,0,1436],
+"TraitFireworkLauncher_8cs_source.html":[2,0,0,1436],
+"TraitFirework_8cs.html":[2,0,0,1435],
+"TraitFirework_8cs_source.html":[2,0,0,1435],
 "TraitFloorSwitch_8cs.html":[2,0,0,1438],
 "TraitFloorSwitch_8cs_source.html":[2,0,0,1438],
 "TraitFloor_8cs.html":[2,0,0,1437],
@@ -245,9 +249,5 @@ var NAVTREEINDEX17 =
 "TraitMerchantMeat_8cs.html":[2,0,0,1559],
 "TraitMerchantMeat_8cs_source.html":[2,0,0,1559],
 "TraitMerchantMilk_8cs.html":[2,0,0,1560],
-"TraitMerchantMilk_8cs_source.html":[2,0,0,1560],
-"TraitMerchantPlan_8cs.html":[2,0,0,1561],
-"TraitMerchantPlan_8cs_source.html":[2,0,0,1561],
-"TraitMerchantPlat_8cs.html":[2,0,0,1562],
-"TraitMerchantPlat_8cs_source.html":[2,0,0,1562]
+"TraitMerchantMilk_8cs_source.html":[2,0,0,1560]
 };

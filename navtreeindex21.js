@@ -1,5 +1,9 @@
 var NAVTREEINDEX21 =
 {
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da443fbc53a431131389c886b604850036":[2,0,0,2,0,0,10,0,104],
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da44d568ef47e45762271bb13989e17a00":[2,0,0,2,0,0,10,0,179],
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da458be9570a8e57d81c055007bdc5d96b":[2,0,0,2,0,0,10,0,136],
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da475e16c8ec0e8901d73fdf022b2926c4":[2,0,0,2,0,0,10,0,23],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da47a00a5cb32b6473c9d0ef624bdd6e86":[2,0,0,2,0,0,10,0,228],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da4884ca93f08e1bdf4efbd3647bd36cf9":[2,0,0,2,0,0,10,0,205],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da4983f7d197b9065e2d6531b59009cfe0":[2,0,0,2,0,0,10,0,139],
@@ -245,9 +249,5 @@ var NAVTREEINDEX21 =
 "WidgetStats_8cs.html":[2,0,0,1864],
 "WidgetStats_8cs_source.html":[2,0,0,1864],
 "WidgetSticky_8cs.html":[2,0,0,1866],
-"WidgetSticky_8cs_source.html":[2,0,0,1866],
-"WidgetStockTracker_8cs.html":[2,0,0,1867],
-"WidgetStockTracker_8cs_source.html":[2,0,0,1867],
-"WidgetSystemIndicator_8cs.html":[2,0,0,1868],
-"WidgetSystemIndicator_8cs_source.html":[2,0,0,1868]
+"WidgetSticky_8cs_source.html":[2,0,0,1866]
 };

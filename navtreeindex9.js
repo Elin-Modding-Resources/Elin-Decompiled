@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"InvOwnerShop_8cs.html":[2,0,0,663],
+"InvOwnerShop_8cs_source.html":[2,0,0,663],
+"InvOwnerToolbelt_8cs.html":[2,0,0,664],
 "InvOwnerToolbelt_8cs_source.html":[2,0,0,664],
 "InvOwnerUncurse_8cs.html":[2,0,0,665],
 "InvOwnerUncurse_8cs_source.html":[2,0,0,665],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "ListOwner_8cs.html":[2,0,0,777],
 "ListOwner_8cs_source.html":[2,0,0,777],
 "ListPeopleBed_8cs.html":[2,0,0,779],
-"ListPeopleBed_8cs_source.html":[2,0,0,779],
-"ListPeopleBuySlave_8cs.html":[2,0,0,780],
-"ListPeopleBuySlave_8cs_source.html":[2,0,0,780],
-"ListPeopleCallReserve_8cs.html":[2,0,0,781]
+"ListPeopleBed_8cs_source.html":[2,0,0,779]
 };

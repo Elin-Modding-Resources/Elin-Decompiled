@@ -1,5 +1,9 @@
 var NAVTREEINDEX16 =
 {
+"TraitBill_8cs.html":[2,0,0,1309],
+"TraitBill_8cs_source.html":[2,0,0,1309],
+"TraitBinocular_8cs.html":[2,0,0,1310],
+"TraitBinocular_8cs_source.html":[2,0,0,1310],
 "TraitBitchDancer_8cs.html":[2,0,0,1312],
 "TraitBitchDancer_8cs_source.html":[2,0,0,1312],
 "TraitBitch_8cs.html":[2,0,0,1311],
@@ -245,9 +249,5 @@ var NAVTREEINDEX16 =
 "TraitFiama_8cs.html":[2,0,0,1433],
 "TraitFiama_8cs_source.html":[2,0,0,1433],
 "TraitFigure_8cs.html":[2,0,0,1434],
-"TraitFigure_8cs_source.html":[2,0,0,1434],
-"TraitFireworkLauncher_8cs.html":[2,0,0,1436],
-"TraitFireworkLauncher_8cs_source.html":[2,0,0,1436],
-"TraitFirework_8cs.html":[2,0,0,1435],
-"TraitFirework_8cs_source.html":[2,0,0,1435]
+"TraitFigure_8cs_source.html":[2,0,0,1434]
 };

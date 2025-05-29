@@ -1,5 +1,11 @@
 var NAVTREEINDEX118 =
 {
+"classTraitMannequin.html#a51c9d4666799b2cb4a2b74090d010f9b":[1,0,1645,6],
+"classTraitMannequin.html#a8ebbf82ab1219140cb7656a4e6b76562":[1,0,1645,3],
+"classTraitMannequin.html#a97a6fc60e9f0d1318054b79ef4c07bc8":[1,0,1645,2],
+"classTraitMannequin.html#ade085d97dce3c7f95d85c701deb30067":[1,0,1645,4],
+"classTraitMannequin.html#ae3a609bd452a21d8c2b0eed280952dc8":[1,0,1645,0],
+"classTraitMap.html":[1,0,1646],
 "classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf":[1,0,1646,0],
 "classTraitMapBoard.html":[1,0,1647],
 "classTraitMapBoard.html#a23d8440d3eab72f9ac73480312d0f3db":[1,0,1647,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitParcel.html#a64392f9e69a1a046171f1809c93afd5e":[1,0,1707,1],
 "classTraitParcel.html#ab355e6d3c7d6a8c02fcc286d805530ce":[1,0,1707,3],
 "classTraitParcel.html#ae77b3e62de983fd1011245bc3b2008e7":[1,0,1707,4],
-"classTraitParchment.html":[1,0,1708],
-"classTraitPartTimeMascot.html":[1,0,1709],
-"classTraitPerfume.html":[1,0,1710],
-"classTraitPerfume.html#a44af00dc25af7b63e520aac54a3621e5":[1,0,1710,2],
-"classTraitPerfume.html#a8a2dd71e42b790ecd858cc97e58cd624":[1,0,1710,3],
-"classTraitPerfume.html#ad1358859d7c5b49bf9333a3a4fd2c38d":[1,0,1710,1],
-"classTraitPerfume.html#ad9ec97d1c6703377b979f58036c71534":[1,0,1710,0]
+"classTraitParchment.html":[1,0,1708]
 };

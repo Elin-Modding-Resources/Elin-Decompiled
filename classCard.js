@@ -129,7 +129,7 @@ var classCard =
     [ "ListCraftBonusTraits", "classCard.html#adad6bddfdfacbbe43ccc42c7b57b06e0", null ],
     [ "LookAt", "classCard.html#a865ba61678ed4cdcc97d44ab92cf74f2", null ],
     [ "LookAt", "classCard.html#a41c7af36473a6ffecaef0fda8ad73887", null ],
-    [ "MakeEgg", "classCard.html#a1ab2b9c6ebc9c2bd28f7f527bf0001ee", null ],
+    [ "MakeEgg", "classCard.html#a22990430eeb9cacef306f89fc68a502f", null ],
     [ "MakeFigureFrom", "classCard.html#a20033aa7db8a7ea3a87d10de3d8dcae5", null ],
     [ "MakeFoodFrom", "classCard.html#afcd1cb7245a2d0d496bf304617f2f9c8", null ],
     [ "MakeFoodFrom", "classCard.html#aa53755a525ef141147e2e5fa605b8130", null ],

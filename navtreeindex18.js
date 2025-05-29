@@ -1,5 +1,9 @@
 var NAVTREEINDEX18 =
 {
+"TraitMerchantPlan_8cs.html":[2,0,0,1561],
+"TraitMerchantPlan_8cs_source.html":[2,0,0,1561],
+"TraitMerchantPlat_8cs.html":[2,0,0,1562],
+"TraitMerchantPlat_8cs_source.html":[2,0,0,1562],
 "TraitMerchantSeed_8cs.html":[2,0,0,1563],
 "TraitMerchantSeed_8cs_source.html":[2,0,0,1563],
 "TraitMerchantSouvenir_8cs.html":[2,0,0,1564],
@@ -245,9 +249,5 @@ var NAVTREEINDEX18 =
 "TraitSpotDining_8cs_source.html":[2,0,0,1682],
 "TraitSpotExit_8cs.html":[2,0,0,1683],
 "TraitSpotExit_8cs_source.html":[2,0,0,1683],
-"TraitSpotFarm_8cs.html":[2,0,0,1684],
-"TraitSpotFarm_8cs_source.html":[2,0,0,1684],
-"TraitSpotFish_8cs.html":[2,0,0,1685],
-"TraitSpotFish_8cs_source.html":[2,0,0,1685],
-"TraitSpotFuel_8cs.html":[2,0,0,1686]
+"TraitSpotFarm_8cs.html":[2,0,0,1684]
 };

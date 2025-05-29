@@ -1,5 +1,11 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#ad3a2395462bdb3aa3f70fba7155a66d1":[1,0,1386,215],
+"classTrait.html#ad3adbb27e406a0e923840806bb500660":[1,0,1386,212],
+"classTrait.html#ad545a68adbba6e0deffc3ceef163ceb9":[1,0,1386,2],
+"classTrait.html#ad7f13252240393095d363004b6e89347":[1,0,1386,24],
+"classTrait.html#adbd5ca5694536e90f772c119bf79126c":[1,0,1386,110],
+"classTrait.html#adf5a2086db57abb7dc0133d7d13753da":[1,0,1386,118],
 "classTrait.html#adfc3e89789e170dff0672e351a7c0c39":[1,0,1386,43],
 "classTrait.html#ae1eacb11cd46933558154ad527cfd672":[1,0,1386,117],
 "classTrait.html#ae204452f89f0b124aa60bb296ecb3928":[1,0,1386,196],
@@ -243,11 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1428,2],
 "classTraitBlanketColdproof.html":[1,0,1429],
 "classTraitBlanketFireproof.html":[1,0,1430],
-"classTraitBlock.html":[1,0,1431],
-"classTraitBlock.html#ae426f33158dbe2679e431c2b12875260":[1,0,1431,0],
-"classTraitBlueprint.html":[1,0,1432],
-"classTraitBlueprint.html#a4989a72401bf958df7200cfd8e709a0c":[1,0,1432,1],
-"classTraitBlueprint.html#a5869a67e01e4a14c1ed8377ebc66171c":[1,0,1432,0],
-"classTraitBlueprint.html#ae167e9f3b6ec667b7c0ebee490542bae":[1,0,1432,2],
-"classTraitBlueprint.html#ae334cd0a729dcc765ac4591119ec1c53":[1,0,1432,3]
+"classTraitBlock.html":[1,0,1431]
 };

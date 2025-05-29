@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"ListPeopleBuySlave_8cs.html":[2,0,0,780],
+"ListPeopleBuySlave_8cs_source.html":[2,0,0,780],
+"ListPeopleCallReserve_8cs.html":[2,0,0,781],
 "ListPeopleCallReserve_8cs_source.html":[2,0,0,781],
 "ListPeopleEmbark_8cs.html":[2,0,0,782],
 "ListPeopleEmbark_8cs_source.html":[2,0,0,782],
@@ -50,6 +53,7 @@ var NAVTREEINDEX10 =
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfa03462a41aec357b74c89eb8d272532f7":[2,0,0,794,0,0],
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfa6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,794,0,1],
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfa815dff01257e5ef182b25d4c1ef0a7a0":[2,0,0,794,0,2],
+"MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfaa5d26924452a28f1bf2f169dd1a044c0":[2,0,0,794,0,6],
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfab46d3c8ee8032551c011745d587705cc":[2,0,0,794,0,4],
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfacd56a9c68c3b6503ccfb283c81775b07":[2,0,0,794,0,5],
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfade750545706d10adc6a3b6ca1b0f7c3f":[2,0,0,794,0,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX10 =
 "PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472eea79313848ceb6b2f0db6226af25fdfa61":[2,0,0,858,0,0],
 "PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472eeaecafa7613fa0751f1d327559c2508d54":[2,0,0,858,0,2],
 "PeriodOfDay_8cs_source.html":[2,0,0,858],
-"Person_8cs.html":[2,0,0,859],
-"Person_8cs_source.html":[2,0,0,859],
-"PickerState_8cs.html":[2,0,0,860],
-"PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437":[2,0,0,860,0],
-"PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437a526d688f37a86d3c3f27d0c5016eb71d":[2,0,0,860,0,1]
+"Person_8cs.html":[2,0,0,859]
 };

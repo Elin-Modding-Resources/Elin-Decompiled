@@ -1,5 +1,8 @@
 var NAVTREEINDEX7 =
 {
+"GoalAutoCombat_8cs.html":[2,0,0,509],
+"GoalAutoCombat_8cs_source.html":[2,0,0,509],
+"GoalCombat_8cs.html":[2,0,0,510],
 "GoalCombat_8cs_source.html":[2,0,0,510],
 "GoalEndTurn_8cs.html":[2,0,0,511],
 "GoalEndTurn_8cs_source.html":[2,0,0,511],
@@ -246,8 +249,5 @@ var NAVTREEINDEX7 =
 "Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500":[2,0,0,585,0],
 "Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500a0dd87782600574e2f791bcfe639d4fcc":[2,0,0,585,0,3],
 "Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500a8c6d21187fb58b7a079d70030686b33e":[2,0,0,585,0,0],
-"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500a930a91848917f92cf7e2f8d744fa4177":[2,0,0,585,0,2],
-"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500ae9bb5320b3890b6747c91b5a71ae5a01":[2,0,0,585,0,1],
-"Hostility_8cs_source.html":[2,0,0,585],
-"HotAction_8cs.html":[2,0,0,586]
+"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500a930a91848917f92cf7e2f8d744fa4177":[2,0,0,585,0,2]
 };

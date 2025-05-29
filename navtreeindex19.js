@@ -1,5 +1,9 @@
 var NAVTREEINDEX19 =
 {
+"TraitSpotFarm_8cs_source.html":[2,0,0,1684],
+"TraitSpotFish_8cs.html":[2,0,0,1685],
+"TraitSpotFish_8cs_source.html":[2,0,0,1685],
+"TraitSpotFuel_8cs.html":[2,0,0,1686],
 "TraitSpotFuel_8cs_source.html":[2,0,0,1686],
 "TraitSpotGarbage_8cs.html":[2,0,0,1687],
 "TraitSpotGarbage_8cs_source.html":[2,0,0,1687],
@@ -245,9 +249,5 @@ var NAVTREEINDEX19 =
 "UD__String__MatData_8cs_source.html":[2,0,0,2,94],
 "UD__String__PaintPosition_8cs.html":[2,0,0,2,95],
 "UD__String__PaintPosition_8cs_source.html":[2,0,0,2,95],
-"UD__String__String_8cs.html":[2,0,0,2,96],
-"UD__String__String_8cs_source.html":[2,0,0,2,96],
-"UDictionary_8cs.html":[2,0,0,2,97],
-"UDictionary_8cs_source.html":[2,0,0,2,97],
-"UIAnchor_8cs.html":[2,0,0,3,107]
+"UD__String__String_8cs.html":[2,0,0,2,96]
 };

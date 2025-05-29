@@ -6,7 +6,7 @@ var searchData=
   ['gate_3',['Gate',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ad25b4bd4c72aa2c07ee87adb10b59f16',1,'EffectId.cs']]],
   ['gaze_4',['Gaze',['../AttackType_8cs.html#a904b2f9c8f3951116c343784c59d6afead100e38cc1447b3e43832f1fb294ddb8',1,'AttackType.cs']]],
   ['gear_5',['Gear',['../classUIInventory.html#a1060581fa9fb2ff479cfcb45088aff15afb845762a66c26782f477febab5344dc',1,'UIInventory']]],
-  ['gene_6',['Gene',['../classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6a624aa1a206e09836e3c81ea95502f459',1,'TCExtraProgress']]],
+  ['gene_6',['Gene',['../classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6a624aa1a206e09836e3c81ea95502f459',1,'TCExtraProgress.Gene()'],['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a624aa1a206e09836e3c81ea95502f459',1,'Gene():&#160;EffectId.cs']]],
   ['general_7',['General',['../classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0db377921f4ce762c62526131097968f',1,'CraftUtil.General()'],['../classUISelectableGroup.html#aee0e7cb583412e9ac5a25cd16e8847aaa0db377921f4ce762c62526131097968f',1,'UISelectableGroup.General()'],['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0db377921f4ce762c62526131097968f',1,'General():&#160;ShopType.cs'],['../MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a0db377921f4ce762c62526131097968f',1,'General():&#160;MsgCat.cs']]],
   ['generalexotic_8',['GeneralExotic',['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba819c8a5aefef403c3a9690d35d578260',1,'ShopType.cs']]],
   ['getall_9',['GetAll',['../EAction_8cs.html#a81d4868b129e5f45325894085a36a8a5ad030f526529ddcef6ea892c34fb8f252',1,'EAction.cs']]],

@@ -6,6 +6,7 @@ var MapBG_8cs =
       [ "Landscape", "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfa815dff01257e5ef182b25d4c1ef0a7a0", null ],
       [ "Airship", "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfade750545706d10adc6a3b6ca1b0f7c3f", null ],
       [ "Snow", "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfab46d3c8ee8032551c011745d587705cc", null ],
-      [ "Fog", "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfacd56a9c68c3b6503ccfb283c81775b07", null ]
+      [ "Fog", "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfacd56a9c68c3b6503ccfb283c81775b07", null ],
+      [ "Seabed", "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfaa5d26924452a28f1bf2f169dd1a044c0", null ]
     ] ]
 ];
