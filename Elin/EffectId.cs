@@ -116,5 +116,8 @@ public enum EffectId
 	ThrowPotion = 292,
 	DrainMana = 293,
 	Swarm = 294,
-	Sword = 295
+	Sword = 295,
+	LovePlus = 296,
+	HairGrowth = 297,
+	Gene = 298
 }

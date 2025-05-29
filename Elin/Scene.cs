@@ -199,10 +199,13 @@ public class Scene : EMono
 				EMono.game.Kill();
 			}
 			EMono.ui.AddLayer<LayerTitle>();
-			if (!isAnnounced)
+			if (!isAnnounced || Application.isEditor)
 			{
 				isAnnounced = true;
-				EMono.ui.AddLayer("LayerAnnounce").SetOnKill(TryWarnMacScreen);
+				EMono.core.WaitForEndOfFrame(delegate
+				{
+					EMono.ui.AddLayer("LayerAnnounce").SetOnKill(TryWarnMacScreen);
+				});
 			}
 			else
 			{

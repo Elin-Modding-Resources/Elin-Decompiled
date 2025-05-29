@@ -285,6 +285,14 @@ public class ActMelee : ActBaseAttack
 				bool flag = false;
 				for (int k = 0; k < num5; k++)
 				{
+					if (!Act.CC.IsAliveInCurrentZone)
+					{
+						break;
+					}
+					if (!Act.TC.IsAliveInCurrentZone)
+					{
+						break;
+					}
 					if (k > 0)
 					{
 						Act.CC.Say("attack_chaser");

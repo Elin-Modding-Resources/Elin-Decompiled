@@ -98,6 +98,14 @@ public class ActRide : Ability
 		host.Refresh();
 	}
 
+	public static void Unride(Chara host, Chara mount, bool talk = true)
+	{
+		if (host != null && (host.parasite == mount || host.ride == mount))
+		{
+			Unride(host, host.parasite == mount, talk);
+		}
+	}
+
 	public static void Unride(Chara host, bool parasite = false, bool talk = true)
 	{
 		Chara chara = null;

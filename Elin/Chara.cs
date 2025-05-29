@@ -1701,7 +1701,7 @@ public class Chara : Card, IPathfindWalker
 			info?.AddText("minSpeed".lang((elements.ValueWithoutLink(79) / 3).ToString() ?? ""));
 		}
 		int num = 100;
-		if (EClass._zone.IsUnderwater)
+		if (EClass._zone.map != null && EClass._zone.IsUnderwater)
 		{
 			int num2 = Evalue(200);
 			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5 - EClass._zone.DangerLv / 50, 0, 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
@@ -4902,17 +4902,18 @@ public class Chara : Card, IPathfindWalker
 			{
 				EClass._zone.ResetHostility();
 			}
-			if (id == "tsunami")
-			{
-				pos.PlaySound("water");
-				Destroy();
-				return;
-			}
 			if (base.isSummon)
 			{
-				Say("summon_vanish", this);
-				pos.PlayEffect("vanish");
-				pos.PlaySound("vanish");
+				if (id == "tsunami")
+				{
+					pos.PlaySound("water");
+				}
+				else
+				{
+					Say("summon_vanish", this);
+					pos.PlayEffect("vanish");
+					pos.PlaySound("vanish");
+				}
 				Destroy();
 				return;
 			}

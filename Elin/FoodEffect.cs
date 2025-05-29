@@ -419,6 +419,16 @@ public class FoodEffect : EClass
 					c.AddCondition<ConInsane>(-value.Value * 10);
 					c.AddCondition<ConHallucination>(-value.Value * 20);
 					break;
+				case 755:
+					c.AddCondition<ConBleed>(-value.Value * 10);
+					break;
+				case 756:
+					c.hygiene.Mod(-value.Value * 5);
+					break;
+				case 760:
+					c.RemoveCondition<ConAwakening>();
+					c.sleepiness.Mod(value.Value);
+					break;
 				case 761:
 					c.Say("recharge_stamina_negative", c);
 					c.stamina.Mod(-c.stamina.max * (-value.Value / 10 + 1) / 100 + value.Value);

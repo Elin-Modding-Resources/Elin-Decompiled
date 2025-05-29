@@ -219,7 +219,7 @@ public class Net : MonoBehaviour
 				list.Add(new DownloadMeta
 				{
 					path = array[0],
-					id = array[1].Replace("\"", ""),
+					id = Path.GetFileNameWithoutExtension(array[0]),
 					name = array[2],
 					title = array[3],
 					cat = array[5],

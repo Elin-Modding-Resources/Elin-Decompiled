@@ -354,7 +354,7 @@ public class DNA : EClass
 				for (int j = 0; j < 100; j++)
 				{
 					BodySlot bodySlot2 = model.body.slots.RandomItem();
-					if (bodySlot2 != null && bodySlot2.elementId != 40)
+					if (bodySlot2 != null && bodySlot2.elementId != 40 && bodySlot2.elementId != 44)
 					{
 						bodySlot = bodySlot2;
 						break;
@@ -537,7 +537,12 @@ public class DNA : EClass
 
 	public string GetText()
 	{
-		return "gene".lang((EClass.sources.cards.map.TryGetValue(id)?.GetName() ?? "???").ToTitleCase(), cost.ToString() ?? "");
+		string text = EClass.sources.cards.map.TryGetValue(id)?.GetName() ?? "???";
+		if (text == "*r")
+		{
+			text = "???";
+		}
+		return "gene".lang(text.ToTitleCase(), cost.ToString() ?? "");
 	}
 
 	public void WriteNote(UINote n)

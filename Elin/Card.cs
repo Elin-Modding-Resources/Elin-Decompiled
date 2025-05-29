@@ -2808,6 +2808,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public Card SetLv(int a)
 	{
+		bool flag = a > LV;
 		LV = a;
 		if (!isChara)
 		{
@@ -2829,6 +2830,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					elements.ModBase(value.id, num2);
 				}
 			}
+		}
+		if (flag && elements.Base(286) > 50)
+		{
+			elements.SetTo(286, 50 + (int)Mathf.Sqrt(elements.Base(286) - 50));
 		}
 		Rand.SetSeed();
 		hp = MaxHP;
@@ -5355,9 +5360,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		c_extraNameRef = (c1.IsPC ? EClass.pc.c_altName : c1.c_extraNameRef);
 	}
 
-	public Thing MakeEgg(bool effect = true, int num = 1, bool addToZone = true)
+	public Thing MakeEgg(bool effect = true, int num = 1, bool addToZone = true, int fertChance = 20)
 	{
-		Thing thing = ThingGen.Create((EClass.rnd(EClass.debug.enable ? 1 : 20) == 0) ? "egg_fertilized" : "_egg").SetNum(num);
+		Thing thing = ThingGen.Create((EClass.rnd(EClass.debug.enable ? 1 : fertChance) == 0) ? "egg_fertilized" : "_egg").SetNum(num);
 		thing.MakeFoodFrom(this);
 		thing.c_idMainElement = c_idMainElement;
 		if (!addToZone)

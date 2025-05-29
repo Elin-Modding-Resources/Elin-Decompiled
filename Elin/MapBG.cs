@@ -5,5 +5,6 @@ public enum MapBG
 	Landscape,
 	Airship,
 	Snow,
-	Fog
+	Fog,
+	Seabed
 }

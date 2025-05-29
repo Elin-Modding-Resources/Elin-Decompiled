@@ -44,7 +44,7 @@ public class Zone_Field : Zone
 
 	public override int DangerLvFix => base.Tile.source.dangerLv;
 
-	public override string IdBiome => EClass._map.config.idBiome.IsEmpty(base.Tile.source.idBiome.IsEmpty("Plain"));
+	public override string IdBiome => map.config.idBiome.IsEmpty(base.Tile.source.idBiome.IsEmpty("Plain"));
 
 	public override float PrespawnRate => 1.2f;
 
