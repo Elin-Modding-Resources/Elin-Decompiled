@@ -225,6 +225,7 @@ var classChara =
     [ "SetHomeZone", "classChara.html#a0b2ba9d93562809893e885317bdc2124", null ],
     [ "SetMainElement", "classChara.html#a4a0a9c52ac86aedc21cb7338a7cd634d", null ],
     [ "SetMainElement", "classChara.html#a5b686ecdb565a00ff4f2c35789073461", null ],
+    [ "SetMutation", "classChara.html#a53d6e652bdb7bd806f0729094065a298", null ],
     [ "SetNoGoal", "classChara.html#a4232ed1de561b2d995253e55e6a480a8", null ],
     [ "SetPCCState", "classChara.html#aff10de8b44df6d76c6e79ea358029a46", null ],
     [ "SetRenderParam", "classChara.html#acd50b61ee223ce1a104e64818215e3a2", null ],

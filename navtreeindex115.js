@@ -1,5 +1,10 @@
 var NAVTREEINDEX115 =
 {
+"classTraitCookerMicrowave.html#a939ab44480c2378293feeb7cf4ee7c58":[1,0,1484,4],
+"classTraitCookerMicrowave.html#a9a2886773a4d86f7f980c798ac022133":[1,0,1484,7],
+"classTraitCookerMicrowave.html#acbaac805d0c276d5c3e8dbf531c57391":[1,0,1484,2],
+"classTraitCookingPot.html":[1,0,1485],
+"classTraitCookingPot.html#a06eefe52d00e7052f29909e85255e6c8":[1,0,1485,3],
 "classTraitCookingPot.html#a17c2359f3abf72e61414c5ba4bdeb01a":[1,0,1485,1],
 "classTraitCookingPot.html#a2a431da841e83b1f79dff85d206dc808":[1,0,1485,2],
 "classTraitCookingPot.html#a690bae0528287f00cac47d2189b646a2":[1,0,1485,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitDrinkMilkMother.html#ab9e55698aaa3407f02bdd751d8364fcf":[1,0,1523,2],
 "classTraitDrug.html":[1,0,1524],
 "classTraitDryBrick.html":[1,0,1525],
-"classTraitDryBrick.html#a4ab474cc3db6a71b31d41a0dd38da4f6":[1,0,1525,2],
-"classTraitDryBrick.html#a8091dd0c833bc8e5d2df14f7ec9deb1a":[1,0,1525,3],
-"classTraitDryBrick.html#aad88cfbd9d6750a4cede8b44c8732451":[1,0,1525,1],
-"classTraitDryBrick.html#ac86b78296636288df539f4cd5d847805":[1,0,1525,0],
-"classTraitDye.html":[1,0,1526],
-"classTraitDye.html#a0c666c22498c366ecbc81733694bee14":[1,0,1526,1]
+"classTraitDryBrick.html#a4ab474cc3db6a71b31d41a0dd38da4f6":[1,0,1525,2]
 };

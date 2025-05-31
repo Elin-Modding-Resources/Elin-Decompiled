@@ -1,5 +1,10 @@
 var NAVTREEINDEX136 =
 {
+"classZoneEventBeggerChest.html#aae15c24adbc743f421bdf1e5b858cfe9":[1,0,2133,0],
+"classZoneEventBeggerChest.html#ab53a8081ae39e45e257b5bb518a5e283":[1,0,2133,1],
+"classZoneEventDefenseGame.html":[1,0,2134],
+"classZoneEventDefenseGame.html#a028f37450a45faa2f3535b271ccf4a99":[1,0,2134,10],
+"classZoneEventDefenseGame.html#a26e408a57a552868851fb9f96fdfe278":[1,0,2134,1],
 "classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9":[1,0,2134,11],
 "classZoneEventDefenseGame.html#a456cd9c78941f6089159f834a0f6d08e":[1,0,2134,6],
 "classZoneEventDefenseGame.html#a477daf74a2638c7052e0fd556dc83d7a":[1,0,2134,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX136 =
 "classZoneTransition.html#a51da688f2a1cddd01e4a719c1f6e4e68":[1,0,2159,8],
 "classZoneTransition.html#a7ed5f08ed5b9b5a164a151feebaec68a":[1,0,2159,2],
 "classZoneTransition.html#a9a9b35d964be80c61f3f9c2574dca9b0":[1,0,2159,1],
-"classZoneTransition.html#aacf916740a82e8431d3b0145a18f3876":[1,0,2159,3],
-"classZoneTransition.html#abd388ee1aa206bee4e99b009110162cd":[1,0,2159,5],
-"classZoneTransition.html#ac0e2f506fdd8a439a7809841f8c1704a":[1,0,2159,7],
-"classZoneUtil.html":[1,0,2160],
-"classZoneUtil.html#a0dd01b01f23a6fbc87f57ad6bebd710a":[1,0,2160,2],
-"classZoneUtil.html#a5fd8fa71f8d18eccd6d64c18db502687":[1,0,2160,1]
+"classZoneTransition.html#aacf916740a82e8431d3b0145a18f3876":[1,0,2159,3]
 };

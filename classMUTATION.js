@@ -29,6 +29,8 @@ var classMUTATION =
     [ "mutationDexN", "classMUTATION.html#a717568d621353041281d3559daa2d2eb", null ],
     [ "mutationEye", "classMUTATION.html#a091d5c110704402092eabc0ea6fb81df", null ],
     [ "mutationEyeN", "classMUTATION.html#ab61001fbd945b3f8dbbb8d49defe3eec", null ],
+    [ "mutationHair", "classMUTATION.html#a1443a5f82e043410688cc7e5f7597e33", null ],
+    [ "mutationHairN", "classMUTATION.html#ad74eac4138dcd2469a969aad80bd97e8", null ],
     [ "mutationLightning", "classMUTATION.html#a6ae21b941c032ca6d6875253909cf08f", null ],
     [ "mutationLightningN", "classMUTATION.html#a082bd8a46af01be5222bee43295afc1a", null ],
     [ "mutationRegen", "classMUTATION.html#a2aa1f2a799ddc1ae90bf937a695952e6", null ],

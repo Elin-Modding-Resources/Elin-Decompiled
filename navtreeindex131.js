@@ -1,5 +1,10 @@
 var NAVTREEINDEX131 =
 {
+"classWidgetMainText.html#a007d463ccdc77a58083e86390f613fff":[1,0,2015,3],
+"classWidgetMainText.html#a0f86d5516c5bb3ad7b294150899c5213":[1,0,2015,19],
+"classWidgetMainText.html#a107d83c032d34115817e24d87da37b2b":[1,0,2015,24],
+"classWidgetMainText.html#a1e78e5c7d44ced2eb9770115a3b5652a":[1,0,2015,14],
+"classWidgetMainText.html#a386395593032ba460d80c6c14fad0833":[1,0,2015,8],
 "classWidgetMainText.html#a56ad6b9746847a0364ad44ca04147252":[1,0,2015,12],
 "classWidgetMainText.html#a581214a64297f76b317d89f7a5feaf7e":[1,0,2015,4],
 "classWidgetMainText.html#a58c8a7dcfbb30793cc3d06434d305d67":[1,0,2015,22],
@@ -244,10 +249,5 @@ var NAVTREEINDEX131 =
 "classWidgetPopup.html#adb1f2e2ef9dfecb2b4b761cd01aa3d3a":[1,0,2025,3],
 "classWidgetPopup.html#af121c53fea403db68777143b0a7a193b":[1,0,2025,5],
 "classWidgetQuestTracker.html":[1,0,2026],
-"classWidgetQuestTracker.html#a00e241b660fe2a5517062ab370ff4cd1":[1,0,2026,7],
-"classWidgetQuestTracker.html#a02c37205b8393da83a2d1f6efa9ff7b6":[1,0,2026,0],
-"classWidgetQuestTracker.html#a3075df3911a3770f0f26ee0315359659":[1,0,2026,1],
-"classWidgetQuestTracker.html#a3635d3d3260eaddb80ef6ada3a10dbd9":[1,0,2026,9],
-"classWidgetQuestTracker.html#a4342d71955ad4c1dac6c898f2e686435":[1,0,2026,6],
-"classWidgetQuestTracker.html#a8fcd018e87e7f0867b5de29bd048cea5":[1,0,2026,3]
+"classWidgetQuestTracker.html#a00e241b660fe2a5517062ab370ff4cd1":[1,0,2026,7]
 };

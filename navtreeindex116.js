@@ -1,5 +1,10 @@
 var NAVTREEINDEX116 =
 {
+"classTraitDryBrick.html#a8091dd0c833bc8e5d2df14f7ec9deb1a":[1,0,1525,3],
+"classTraitDryBrick.html#aad88cfbd9d6750a4cede8b44c8732451":[1,0,1525,1],
+"classTraitDryBrick.html#ac86b78296636288df539f4cd5d847805":[1,0,1525,0],
+"classTraitDye.html":[1,0,1526],
+"classTraitDye.html#a0c666c22498c366ecbc81733694bee14":[1,0,1526,1],
 "classTraitDye.html#a0fed784d147a98ed68e0c97b6f3b15fa":[1,0,1526,3],
 "classTraitDye.html#a7b048cccd0c4e95a05e81833b65a0973":[1,0,1526,4],
 "classTraitDye.html#ae12263f7d8b9f94f05d3714d52e0df24":[1,0,1526,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitGenerator.html#acba96b8b4ecc0e5108a029eca8411ca6":[1,0,1581,3],
 "classTraitGenerator.html#aeb1f1412c770daa859af6c226c4ae24a":[1,0,1581,6],
 "classTraitGeneratorChair.html":[1,0,1582],
-"classTraitGeneratorDrain.html":[1,0,1583],
-"classTraitGeneratorDrain.html#a23e8cb93bc3ba370049dcf147335f9cb":[1,0,1583,0],
-"classTraitGeneratorWheel.html":[1,0,1584],
-"classTraitGeneratorWheel.html#a2abb80b9c1097874eb18a47a47c3994f":[1,0,1584,0],
-"classTraitGeneratorWheel.html#a352011c0a160c5d6db44a0019d2307fa":[1,0,1584,6],
-"classTraitGeneratorWheel.html#a3d8d8b6f6323a404490a47d463e3c78b":[1,0,1584,1]
+"classTraitGeneratorDrain.html":[1,0,1583]
 };

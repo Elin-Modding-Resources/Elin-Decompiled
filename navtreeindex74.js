@@ -1,5 +1,8 @@
 var NAVTREEINDEX74 =
 {
+"classLayerAdmin.html":[1,0,753],
+"classLayerAdmin.html#a1182711a3aaeed1ae98cbd893697b3a6":[1,0,753,0],
+"classLayerAdmin.html#a1d4df30fad18e310a632436d3d3f3ae4":[1,0,753,1],
 "classLayerAdmin.html#a5a20f925ea9f69a0af9efa3739b38686":[1,0,753,2],
 "classLayerArea.html":[1,0,754],
 "classLayerArea.html#a0c8a59dee3af9730b878ddb71c0d5a40":[1,0,754,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX74 =
 "classLayerDragGrid.html#a64f55df9ac1cbfd1b9649693b9a7e3f0":[1,0,768,38],
 "classLayerDragGrid.html#a6aca08627fc378b11246c791f365cd1c":[1,0,768,47],
 "classLayerDragGrid.html#a797f5abd479b75ac4335c151ee4ff8a7":[1,0,768,3],
-"classLayerDragGrid.html#a7d12b1527f6f94982c3f2ff1f641540a":[1,0,768,48],
-"classLayerDragGrid.html#a824b1ad8d5d3e0e8e20ccc2b39dd19e8":[1,0,768,28],
-"classLayerDragGrid.html#a83e6da0655c3e3116e995a8eb6582540":[1,0,768,22],
-"classLayerDragGrid.html#a89239930762013de412b10edbc4984d1":[1,0,768,52]
+"classLayerDragGrid.html#a7d12b1527f6f94982c3f2ff1f641540a":[1,0,768,48]
 };

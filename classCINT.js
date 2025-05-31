@@ -21,6 +21,7 @@ var classCINT =
     [ "dateSteal", "classCINT.html#a4603db49c8142027ff6d1207a1cae002", null ],
     [ "dateStockExpire", "classCINT.html#a48c4150592597cb407c923ecc434b0b9", null ],
     [ "daysWithGod", "classCINT.html#a8cf115fea61bb75e441890c69d7b6781", null ],
+    [ "daysWithPC", "classCINT.html#a47b37a0aaa9031cceaf951cff75312dc", null ],
     [ "diceDim", "classCINT.html#a6693fde0fe243376087ffcb001247cd0", null ],
     [ "disableSharedEquip", "classCINT.html#a6fde033a27cf226a352c39cdbcc6356b", null ],
     [ "disarmFail", "classCINT.html#a71582ba1818dc9558e173dfa86437ed3", null ],

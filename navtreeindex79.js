@@ -1,5 +1,8 @@
 var NAVTREEINDEX79 =
 {
+"classLayerWidget.html#ad8133d7bd53208f663844736d384f85b":[1,0,824,1],
+"classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb":[1,0,824,6],
+"classLayerWorldSetting.html":[1,0,825],
 "classLayerWorldSetting.html#a02372087adc2a8b5bba0508f26c2a523":[1,0,825,1],
 "classLayerWorldSetting.html#a0feecf2a7b581b967a300f0869f39dc3":[1,0,825,29],
 "classLayerWorldSetting.html#a135010f3719d38d6539d4187dd718c4a":[1,0,825,31],
@@ -246,8 +249,5 @@ var NAVTREEINDEX79 =
 "classLogicalPointManager.html#ad2fcc4c7996dacce504eecb4ae12b843":[1,0,849,0],
 "classLogicalPointManager.html#ae46c342ea7f5a60fc29326235545b680":[1,0,849,5],
 "classLogicalPointManager.html#aeb57756cb200475f795a026991574327":[1,0,849,1],
-"classLogicalPointManager.html#af8db0eb4fa059e80496a7f0ebfd7ec44":[1,0,849,3],
-"classLos.html":[1,0,850],
-"classLos.html#a005a8440a5909b791dc87fc53f193aa2":[1,0,850,8],
-"classLos.html#a03e5f3577103f25dba564d70482ad1c1":[1,0,850,5]
+"classLogicalPointManager.html#af8db0eb4fa059e80496a7f0ebfd7ec44":[1,0,849,3]
 };
