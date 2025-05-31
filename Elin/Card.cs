@@ -1441,6 +1441,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int c_daysWithPC
+	{
+		get
+		{
+			return GetInt(67);
+		}
+		set
+		{
+			SetInt(67, value);
+		}
+	}
+
 	public string c_idPortrait
 	{
 		get
@@ -5360,11 +5372,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		c_extraNameRef = (c1.IsPC ? EClass.pc.c_altName : c1.c_extraNameRef);
 	}
 
-	public Thing MakeEgg(bool effect = true, int num = 1, bool addToZone = true, int fertChance = 20)
+	public Thing MakeEgg(bool effect = true, int num = 1, bool addToZone = true, int fertChance = 20, BlessedState? state = null)
 	{
 		Thing thing = ThingGen.Create((EClass.rnd(EClass.debug.enable ? 1 : fertChance) == 0) ? "egg_fertilized" : "_egg").SetNum(num);
 		thing.MakeFoodFrom(this);
 		thing.c_idMainElement = c_idMainElement;
+		if (state.HasValue)
+		{
+			thing.SetBlessedState(state.Value);
+		}
 		if (!addToZone)
 		{
 			return thing;
@@ -5372,10 +5388,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return GiveBirth(thing, effect);
 	}
 
-	public Thing MakeMilk(bool effect = true, int num = 1, bool addToZone = true)
+	public Thing MakeMilk(bool effect = true, int num = 1, bool addToZone = true, BlessedState? state = null)
 	{
 		Thing thing = ThingGen.Create("milk").SetNum(num);
 		thing.MakeRefFrom(this);
+		if (state.HasValue)
+		{
+			thing.SetBlessedState(state.Value);
+		}
 		int num2 = LV - sourceCard.LV;
 		if (!IsPCFaction && EClass._zone.IsUserZone)
 		{

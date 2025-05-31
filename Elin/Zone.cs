@@ -2328,14 +2328,17 @@ public class Zone : Spatial, ICardParent, IInspect
 			int num2 = (EClass.debug.enable ? 3 : EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(5) + 1) + 1) + 1));
 			bool flag = this is Zone_Field;
 			Thing seed = null;
-			int num3 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
-			if (num3 > 0)
+			if (IsNefia)
 			{
-				seed = TraitSeed.MakeSeed(EClass.sources.objs.map[137]);
-				Rand.SetSeed(EClass._zone.uid * 10 + num3);
-				TraitSeed.LevelSeed(seed, (seed.trait as TraitSeed).row, num3);
-				Rand.SetSeed();
-				seed.elements.SetBase(2, EClass.curve(seed.encLV, 50, 10, 80));
+				int num3 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
+				if (num3 > 0)
+				{
+					seed = TraitSeed.MakeSeed(EClass.sources.objs.map[137]);
+					Rand.SetSeed(EClass._zone.uid * 10 + num3);
+					TraitSeed.LevelSeed(seed, (seed.trait as TraitSeed).row, num3);
+					Rand.SetSeed();
+					seed.elements.SetBase(2, EClass.curve(seed.encLV, 50, 10, 80));
+				}
 			}
 			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), num2 + (flag ? 4 : 0), delegate(Crawler.Result r)
 			{

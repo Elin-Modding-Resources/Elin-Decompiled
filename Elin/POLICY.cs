@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class POLICY
 {
-	public const int license_food = 2818;
+	public const int tourist_safety = 2811;
 
 	public const int bed_quality = 2812;
 
@@ -13,21 +13,23 @@ public class POLICY
 
 	public const int platinum_ticket = 2815;
 
-	public const int tourist_safety = 2811;
-
 	public const int store_ripoff = 2816;
 
 	public const int store_premium = 2817;
 
-	public const int license_furniture = 2819;
+	public const int license_food = 2818;
 
-	public const int license_stolen = 2824;
+	public const int license_furniture = 2819;
 
 	public const int legendary_heirloom = 2821;
 
 	public const int celeb = 2822;
 
 	public const int legendary_exhibition = 2823;
+
+	public const int license_stolen = 2824;
+
+	public const int open_business = 2810;
 
 	public const int milk_fan = 2825;
 
@@ -37,13 +39,11 @@ public class POLICY
 
 	public const int license_slaver = 2828;
 
-	public const int open_business = 2810;
-
 	public const int license_general = 2820;
 
 	public const int home_discount = 2800;
 
-	public const int taxfree = 2514;
+	public const int resident_wanted = 2513;
 
 	public const int forcePanty = 2712;
 
@@ -73,7 +73,7 @@ public class POLICY
 
 	public const int resident_tax = 2512;
 
-	public const int resident_wanted = 2513;
+	public const int taxfree = 2514;
 
 	public const int food_for_people = 2502;
 
@@ -107,10 +107,10 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2818, 2812, 2813, 2814, 2815, 2811, 2816, 2817, 2819, 2824,
-		2821, 2822, 2823, 2825, 2826, 2827, 2828, 2810, 2820, 2800,
-		2514, 2712, 2504, 2505, 2506, 2507, 2508, 2501, 2500, 2715,
-		2503, 2509, 2510, 2511, 2512, 2513, 2502, 2516, 2703, 2515,
+		2811, 2812, 2813, 2814, 2815, 2816, 2817, 2818, 2819, 2821,
+		2822, 2823, 2824, 2810, 2825, 2826, 2827, 2828, 2820, 2800,
+		2513, 2712, 2504, 2505, 2506, 2507, 2508, 2501, 2500, 2715,
+		2503, 2509, 2510, 2511, 2512, 2514, 2502, 2516, 2703, 2515,
 		2705, 2706, 2704, 2708, 2707, 2710, 2711, 2702, 2701, 2700,
 		2709
 	};

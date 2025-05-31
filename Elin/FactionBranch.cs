@@ -579,7 +579,12 @@ public class FactionBranch : EClass
 		int num = 0;
 		foreach (Chara member in members)
 		{
-			if (!member.IsPC && !member.isDead && member.memberType == FactionMemberType.Default)
+			if (member.IsPC || member.isDead)
+			{
+				continue;
+			}
+			member.c_daysWithPC++;
+			if (member.memberType == FactionMemberType.Default)
 			{
 				if (EClass.rnd(3) == 0)
 				{
@@ -781,7 +786,18 @@ public class FactionBranch : EClass
 				}
 				if (i.HaveFur())
 				{
-					i.c_fur++;
+					if (i.HasElement(1533))
+					{
+						i.c_fur = 0;
+					}
+					else
+					{
+						i.c_fur++;
+						if (EClass.rnd(4) == 0 && i.HasElement(1532))
+						{
+							i.c_fur++;
+						}
+					}
 				}
 				thing.ModNum(-1);
 				if (thing.isDestroyed || thing.Num == 0)

@@ -40,41 +40,42 @@ public class DramaCustomSequence : EClass
 		string rumor = (c.IsPCParty ? GetTalk("sup") : GetRumor(c));
 		Layer layer = null;
 		bool flag3 = c.IsHumanSpeak || EClass.pc.HasElement(1640);
+		bool num = !c.IsUnique || (c.IsPCFaction && c.trait is TraitOlderYoungerSister);
 		if (!flag)
 		{
 			Step("Resident");
 			_Talk("tg", () => rumor);
-			if (flag3)
+		}
+		if (num && flag3)
+		{
+			DramaChoice choice = Choice2("letsTalk", StepDefault);
+			choice.SetOnClick(delegate
 			{
-				DramaChoice choice = Choice2("letsTalk", StepDefault);
-				choice.SetOnClick(delegate
+				sequence.firstTalk.funcText = () => rumor;
+				List<Hobby> list2 = c.ListHobbies();
+				Hobby hobby = ((list2.Count > 0) ? list2[0] : null);
+				if (EClass.rnd(20) == 0 || EClass.debug.showFav)
 				{
-					sequence.firstTalk.funcText = () => rumor;
-					List<Hobby> list2 = c.ListHobbies();
-					Hobby hobby = ((list2.Count > 0) ? list2[0] : null);
-					if (EClass.rnd(20) == 0 || EClass.debug.showFav)
+					if (EClass.rnd(2) == 0 || hobby == null)
 					{
-						if (EClass.rnd(2) == 0 || hobby == null)
-						{
-							GameLang.refDrama1 = c.GetFavCat().GetName().ToLower();
-							GameLang.refDrama2 = c.GetFavFood().GetName();
-							rumor = GetText(c, "general", "talk_fav");
-							c.knowFav = true;
-						}
-						else
-						{
-							GameLang.refDrama1 = hobby.Name.ToLower();
-							rumor = GetText(c, "general", "talk_hobby");
-						}
+						GameLang.refDrama1 = c.GetFavCat().GetName().ToLower();
+						GameLang.refDrama2 = c.GetFavFood().GetName();
+						rumor = GetText(c, "general", "talk_fav");
+						c.knowFav = true;
 					}
 					else
 					{
-						rumor = GetRumor(c);
+						GameLang.refDrama1 = hobby.Name.ToLower();
+						rumor = GetText(c, "general", "talk_hobby");
 					}
-					c.affinity.OnTalkRumor();
-					choice.forceHighlight = true;
-				}).SetCondition(() => c.interest > 0);
-			}
+				}
+				else
+				{
+					rumor = GetRumor(c);
+				}
+				c.affinity.OnTalkRumor();
+				choice.forceHighlight = true;
+			}).SetCondition(() => c.interest > 0);
 		}
 		bool flag4 = false;
 		if (!c.IsPCFaction && c.affinity.CanInvite() && !EClass._zone.IsInstance && c.c_bossType == BossType.none)
@@ -943,11 +944,11 @@ public class DramaCustomSequence : EClass
 		Step("_buyLand");
 		Method(delegate
 		{
-			bool num4 = EClass._map.bounds.CanExpand(1);
+			bool num5 = EClass._map.bounds.CanExpand(1);
 			int costLand = CalcGold.ExpandLand();
 			GameLang.refDrama1 = "";
 			GameLang.refDrama2 = costLand.ToString() ?? "";
-			if (!num4)
+			if (!num5)
 			{
 				TempTalkTopic("expand3", StepDefault);
 			}
@@ -1029,12 +1030,12 @@ public class DramaCustomSequence : EClass
 				{
 					onClick = delegate(Element a, ButtonElement b)
 					{
-						int num3 = (EClass.pc.elements.HasBase(a.id) ? CalcPlat.Train(EClass.pc, a) : CalcPlat.Learn(EClass.pc, a));
-						if (num3 == 0)
+						int num4 = (EClass.pc.elements.HasBase(a.id) ? CalcPlat.Train(EClass.pc, a) : CalcPlat.Learn(EClass.pc, a));
+						if (num4 == 0)
 						{
 							SE.Beep();
 						}
-						else if (EClass.pc.TryPay(num3, "plat"))
+						else if (EClass.pc.TryPay(num4, "plat"))
 						{
 							if (EClass.pc.elements.HasBase(a.id))
 							{
@@ -1377,9 +1378,9 @@ public class DramaCustomSequence : EClass
 			GameLang.refDrama1 = Lang._currency(EClass.player.extraTax, "money");
 			TempTalkTopic("extraTax", null);
 			int[] array2 = taxTier;
-			foreach (int num2 in array2)
+			foreach (int num3 in array2)
 			{
-				int _i2 = num2;
+				int _i2 = num3;
 				Choice(Lang._currency(_i2, showUnit: true), delegate
 				{
 					EClass.player.extraTax = _i2;
@@ -1396,9 +1397,9 @@ public class DramaCustomSequence : EClass
 			GameLang.refDrama1 = bankMoney.ToString() ?? "";
 			TempTalkTopic("banker2", null);
 			int[] array = bankTier;
-			foreach (int num in array)
+			foreach (int num2 in array)
 			{
-				int _i = num;
+				int _i = num2;
 				if (EClass.player.bankMoney >= _i)
 				{
 					Choice(Lang._currency(_i, showUnit: true), delegate

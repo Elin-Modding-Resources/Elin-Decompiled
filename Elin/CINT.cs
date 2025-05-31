@@ -104,6 +104,8 @@ public class CINT
 
 	public const int dateCooked = 66;
 
+	public const int daysWithPC = 67;
+
 	public const int fiamaPet = 100;
 
 	public const int noRestock = 101;

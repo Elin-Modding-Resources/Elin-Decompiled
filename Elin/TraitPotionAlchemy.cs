@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TraitPotionAlchemy : TraitPotionRandom
 {
-	public override int Power => owner.Power;
+	public override int Power => owner.Power * (100 + owner.encLV * 100) / 100;
 
 	public override void OnCrafted(Recipe recipe)
 	{
@@ -20,7 +20,6 @@ public class TraitPotionAlchemy : TraitPotionRandom
 			case 750:
 			case 753:
 				num = ((num2 >= 6) ? 8402 : ((num2 >= 4) ? 8401 : 8400));
-				Debug.Log(num.ToString() + num2);
 				break;
 			case 754:
 				num = 8471;
@@ -50,5 +49,6 @@ public class TraitPotionAlchemy : TraitPotionRandom
 			}
 		}
 		owner.refVal = num;
+		owner.SetEncLv(Mathf.Min(EClass.pc.Evalue(257) / 10, EClass.debug.enable ? 1000 : owner.QualityLv));
 	}
 }

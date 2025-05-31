@@ -109,7 +109,7 @@ public class TraitWell : Trait
 				if (EClass.player.CountKeyItem("well_wish") > 0)
 				{
 					EClass.player.ModKeyItem("well_wish", -1);
-					ActEffect.Proc(EffectId.Wish, EClass.pc, null, 10 + EClass.player.CountKeyItem("well_enhance") * 10);
+					ActEffect.Proc(EffectId.Wish, EClass.pc, null, 50 + EClass.player.CountKeyItem("well_enhance") * 50);
 					EClass.player.wellWished = true;
 				}
 				else

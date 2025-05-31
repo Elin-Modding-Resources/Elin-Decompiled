@@ -703,7 +703,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override int MaxHP => (int)Mathf.Clamp(((long)(base.END * 2 + base.STR + base.WIL / 2) * (long)Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((IsPCFaction ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100, 1f, 100000000f);
 
-	public override int WeightLimit => (base.STR * 500 + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000;
+	public override int WeightLimit => Mathf.Max((base.STR * 500 + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000, 1000);
 
 	public override int SelfWeight => bio.weight * 1000;
 
@@ -1785,6 +1785,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			num -= 30;
 			info?.AddFix(-30, GetCondition<ConGravity>().Name);
+		}
+		if (_Speed < 10)
+		{
+			_Speed = 10;
 		}
 		_Speed = _Speed * num / 100;
 		if (_Speed < 10)
@@ -3449,18 +3453,6 @@ public class Chara : Card, IPathfindWalker
 				return;
 			}
 		}
-		if (id == "tsunami")
-		{
-			if (elements.Base(79) < 30)
-			{
-				Die();
-				return;
-			}
-			if (IsInCombat)
-			{
-				elements.SetTo(79, elements.Base(79) * 3 / 4);
-			}
-		}
 		if (EClass.world.weather.IsRaining && !EClass._map.IsIndoor && !pos.cell.HasRoof)
 		{
 			AddCondition<ConWet>(20);
@@ -3625,6 +3617,18 @@ public class Chara : Card, IPathfindWalker
 				{
 					return;
 				}
+			}
+		}
+		if (id == "tsunami")
+		{
+			if (elements.Base(79) < 30)
+			{
+				Die();
+				return;
+			}
+			if (IsInCombat)
+			{
+				elements.SetTo(79, elements.Base(79) * 3 / 4);
 			}
 		}
 		if (!preventRegen)
@@ -9153,6 +9157,43 @@ public class Chara : Card, IPathfindWalker
 			Say((value > num) ? feat.source.GetText("textInc") : feat.source.GetText("textDec"), this, feat.FullName);
 		}
 		elements.CheckSkillActions();
+	}
+
+	public void SetMutation(int idEle, int a = 0)
+	{
+		SourceElement.Row row = EClass.sources.elements.map[idEle];
+		SourceElement.Row row2 = EClass.sources.elements.alias[row.aliasParent];
+		Element element = elements.GetElement(idEle);
+		Element element2 = elements.GetElement(row2.id);
+		int num = element?.Value ?? 0;
+		if (a < 0)
+		{
+			a = 0;
+		}
+		if (a > row.max)
+		{
+			a = row.max;
+		}
+		bool flag = (row.tag.Contains("neg") ? (a > num) : (a < num));
+		if (a == 0 && (element == null || element.Value == 0))
+		{
+			SayNothingHappans();
+			return;
+		}
+		if (element != null && element.Value == a)
+		{
+			SayNothingHappans();
+			return;
+		}
+		if (element2 != null && element2.Value > 0)
+		{
+			SetFeat(element2.id, 0);
+		}
+		SetFeat(idEle, a);
+		PlaySound("mutation");
+		PlayEffect("mutation");
+		Msg.SetColor(flag ? Msg.colors.MutateBad : Msg.colors.MutateGood);
+		Say(row.GetText(flag ? "textDec" : "textInc", returnNull: true) ?? row.alias, this);
 	}
 
 	public bool MutateRandom(int vec = 0, int tries = 100, bool ether = false, BlessedState state = BlessedState.Normal)

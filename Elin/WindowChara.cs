@@ -915,6 +915,10 @@ public class WindowChara : WindowController
 		{
 			AddText("info_criminal".lang());
 		}
+		if (!chara.IsPC && chara.c_daysWithPC > 0)
+		{
+			AddText("info_daysWithPC".lang(chara.c_daysWithPC.ToString() ?? ""));
+		}
 		if (EClass.debug.showExtra)
 		{
 			n.AddText("LV:" + chara.LV + "  exp:" + chara.exp + " next:" + chara.ExpToNext);
