@@ -1,5 +1,11 @@
 var NAVTREEINDEX114 =
 {
+"classTraitBitchDancer.html":[1,0,1426],
+"classTraitBitchDancer.html#aaff86ca2a1ba915a96df9dd919145bd8":[1,0,1426,0],
+"classTraitBitchDancer.html#abb15b7f0168a14d8acb7617e06963571":[1,0,1426,1],
+"classTraitBlanket.html":[1,0,1428],
+"classTraitBlanket.html#a53d27637cc556e3c125c466cc8ac652c":[1,0,1428,3],
+"classTraitBlanket.html#a63e4069f3a84e8c318bb62957ee9f216":[1,0,1428,0],
 "classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1428,1],
 "classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1428,2],
 "classTraitBlanketColdproof.html":[1,0,1429],
@@ -243,11 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitCooker.html#a67e9ed5046f389a1c664d41ed6193c51":[1,0,1483,3],
 "classTraitCooker.html#a8b4cce75ee58cbab2725611a4dc60ce6":[1,0,1483,0],
 "classTraitCooker.html#a912c97e1cccd75a289d656cfaa78a9fe":[1,0,1483,2],
-"classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1483,4],
-"classTraitCookerMicrowave.html":[1,0,1484],
-"classTraitCookerMicrowave.html#a09995ff5750a6aafd9db13aaf8649805":[1,0,1484,5],
-"classTraitCookerMicrowave.html#a0af22d1d7b9228b6dee6c5a8b7d454cd":[1,0,1484,1],
-"classTraitCookerMicrowave.html#a0ca3fbeffff6406e6f040cb1b8635364":[1,0,1484,0],
-"classTraitCookerMicrowave.html#a1da4d1f54e491074e8b347b15383c420":[1,0,1484,3],
-"classTraitCookerMicrowave.html#a35999b4086077023692f89dc99d72f8b":[1,0,1484,6]
+"classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1483,4]
 };

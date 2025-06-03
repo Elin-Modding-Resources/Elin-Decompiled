@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.148 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.149 Nightly</span>
    </div>
   </td>
  </tr>
@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('DramaCustomSequence_8cs_source.html','
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">string</span> rumor = (c.IsPCParty ? GetTalk(<span class="stringliteral">&quot;sup&quot;</span>) : <a class="code hl_function" href="classDramaCustomSequence.html#a5a79ef632ce2044e6ae6b605e3906c6e">GetRumor</a>(c));</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="classLayer.html">Layer</a> layer = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">bool</span> flag3 = c.IsHumanSpeak || <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1640);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">bool</span> num = !c.IsUnique || (c.IsPCFaction &amp;&amp; c.trait is <a class="code hl_class" href="classTraitOlderYoungerSister.html">TraitOlderYoungerSister</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">bool</span> num = !c.IsUnique || <a class="code hl_function" href="classDramaCustomSequence.html#ab1a85999c15f00e25476e924fa2edbb9">HasTopic</a>(<span class="stringliteral">&quot;unique&quot;</span>, c.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (!flag)</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_function" href="classDramaCustomSequence.html#ae7788de6fda03d695bc9c9ab96b1d2cc">Step</a>(<span class="stringliteral">&quot;Resident&quot;</span>);</div>
@@ -2084,7 +2084,6 @@ $(document).ready(function(){initNavTree('DramaCustomSequence_8cs_source.html','
 <div class="ttc" id="aclassTraitLoytel_html"><div class="ttname"><a href="classTraitLoytel.html">TraitLoytel</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitLoytel_8cs_source.html#l00001">TraitLoytel.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitMiko__Mifu_html"><div class="ttname"><a href="classTraitMiko__Mifu.html">TraitMiko_Mifu</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMiko__Mifu_8cs_source.html#l00001">TraitMiko_Mifu.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitMiko__Nefu_html"><div class="ttname"><a href="classTraitMiko__Nefu.html">TraitMiko_Nefu</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMiko__Nefu_8cs_source.html#l00001">TraitMiko_Nefu.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitOlderYoungerSister_html"><div class="ttname"><a href="classTraitOlderYoungerSister.html">TraitOlderYoungerSister</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitOlderYoungerSister_8cs_source.html#l00001">TraitOlderYoungerSister.cs:2</a></div></div>
 <div class="ttc" id="aclassTrait_html_aceeacc69a335a21da1cc0f9c3befde86"><div class="ttname"><a href="classTrait.html#aceeacc69a335a21da1cc0f9c3befde86">Trait.GuidePriotiy</a></div><div class="ttdeci">virtual int GuidePriotiy</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00098">Trait.cs:98</a></div></div>
 <div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a6736e16f32684c87b44bef2263f10692"><div class="ttname"><a href="classUIButton.html#a6736e16f32684c87b44bef2263f10692">UIButton.SetTooltip</a></div><div class="ttdeci">void SetTooltip(Action&lt; UITooltip &gt; onShowTooltip=null, bool enable=true)</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00361">UIButton.cs:361</a></div></div>

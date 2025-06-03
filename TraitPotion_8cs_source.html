@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.148 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.149 Nightly</span>
    </div>
   </td>
  </tr>
@@ -94,15 +94,29 @@ $(document).ready(function(){initNavTree('TraitPotion_8cs_source.html',''); init
 <div class="contents">
 <a href="TraitPotion_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitPotion.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitPotion.html">TraitPotion</a> : <a class="code hl_class" href="classTraitDrink.html">TraitDrink</a></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">    3</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">Create</a>(<a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keywordtype">int</span> ele)</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        owner.refVal = ele;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele].tag.Contains(<span class="stringliteral">&quot;noCopy&quot;</span>))</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(759, 10);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        }</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitPotion.html#ab2fda8e9176856a55f5c0c255b8cf5b4">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classTraitPotion.html#ab2fda8e9176856a55f5c0c255b8cf5b4">Power</a> =&gt; 200;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0">CraftNum</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1) == <span class="stringliteral">&quot;HairGrowth&quot;</span>)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">return</span> base.CraftNum;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">   17</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">Create</a>(<a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <span class="keywordtype">int</span> ele)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        owner.refVal = ele;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele].tag.Contains(<span class="stringliteral">&quot;noCopy&quot;</span>))</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(759, 10);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00037">Card.cs:37</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
@@ -111,7 +125,10 @@ $(document).ready(function(){initNavTree('TraitPotion_8cs_source.html',''); init
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
 <div class="ttc" id="aclassTraitDrink_html"><div class="ttname"><a href="classTraitDrink.html">TraitDrink</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitDrink_8cs_source.html#l00003">TraitDrink.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitPotion_html"><div class="ttname"><a href="classTraitPotion.html">TraitPotion</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitPotion_8cs_source.html#l00001">TraitPotion.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitPotion_html_afff8d665590ded77bf0541ff9a5de82e"><div class="ttname"><a href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">TraitPotion.Create</a></div><div class="ttdeci">static void Create(Card owner, int ele)</div><div class="ttdef"><b>Definition:</b> <a href="TraitPotion_8cs_source.html#l00003">TraitPotion.cs:3</a></div></div>
+<div class="ttc" id="aclassTraitPotion_html_ab2fda8e9176856a55f5c0c255b8cf5b4"><div class="ttname"><a href="classTraitPotion.html#ab2fda8e9176856a55f5c0c255b8cf5b4">TraitPotion.Power</a></div><div class="ttdeci">override int Power</div><div class="ttdef"><b>Definition:</b> <a href="TraitPotion_8cs_source.html#l00003">TraitPotion.cs:3</a></div></div>
+<div class="ttc" id="aclassTraitPotion_html_abd2561c2870de2bf7225c8dcdd7116a0"><div class="ttname"><a href="classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0">TraitPotion.CraftNum</a></div><div class="ttdeci">override int CraftNum</div><div class="ttdef"><b>Definition:</b> <a href="TraitPotion_8cs_source.html#l00005">TraitPotion.cs:6</a></div></div>
+<div class="ttc" id="aclassTraitPotion_html_afff8d665590ded77bf0541ff9a5de82e"><div class="ttname"><a href="classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e">TraitPotion.Create</a></div><div class="ttdeci">static void Create(Card owner, int ele)</div><div class="ttdef"><b>Definition:</b> <a href="TraitPotion_8cs_source.html#l00017">TraitPotion.cs:17</a></div></div>
+<div class="ttc" id="aclassTrait_html_a7db8c514710fbb74b2f471cf9e6fe0af"><div class="ttname"><a href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">Trait.GetParam</a></div><div class="ttdeci">string GetParam(int i, string def=null)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00553">Trait.cs:553</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

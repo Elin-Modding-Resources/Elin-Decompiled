@@ -1,5 +1,11 @@
 var NAVTREEINDEX79 =
 {
+"classLayerWidget.html":[1,0,824],
+"classLayerWidget.html#a73d7afc4d49c03d61630e5fc0b8d0386":[1,0,824,2],
+"classLayerWidget.html#a7ef305837efd2401add929f685847b96":[1,0,824,0],
+"classLayerWidget.html#a8d07296b2387c997671db18aa05d8137":[1,0,824,3],
+"classLayerWidget.html#aad7face4139f9581a563a9dadbcfd7c2":[1,0,824,4],
+"classLayerWidget.html#ad0d89cbd69896ca19e42ace17b9b6567":[1,0,824,5],
 "classLayerWidget.html#ad8133d7bd53208f663844736d384f85b":[1,0,824,1],
 "classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb":[1,0,824,6],
 "classLayerWorldSetting.html":[1,0,825],
@@ -243,11 +249,5 @@ var NAVTREEINDEX79 =
 "classLogicalPoint.html#afb1b909492286e80078b233327c47132":[1,0,848,5],
 "classLogicalPointManager.html":[1,0,849],
 "classLogicalPointManager.html#a0a39e14ce6b24939f6324b7c8d14af6d":[1,0,849,2],
-"classLogicalPointManager.html#a4c29d11855b7b7d394c1938b2e7b702d":[1,0,849,4],
-"classLogicalPointManager.html#aa408174f45c7312c12351d55864bd455":[1,0,849,7],
-"classLogicalPointManager.html#abbd320e7462cab76a0539f192b8680aa":[1,0,849,6],
-"classLogicalPointManager.html#ad2fcc4c7996dacce504eecb4ae12b843":[1,0,849,0],
-"classLogicalPointManager.html#ae46c342ea7f5a60fc29326235545b680":[1,0,849,5],
-"classLogicalPointManager.html#aeb57756cb200475f795a026991574327":[1,0,849,1],
-"classLogicalPointManager.html#af8db0eb4fa059e80496a7f0ebfd7ec44":[1,0,849,3]
+"classLogicalPointManager.html#a4c29d11855b7b7d394c1938b2e7b702d":[1,0,849,4]
 };

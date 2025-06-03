@@ -1,5 +1,11 @@
 var NAVTREEINDEX65 =
 {
+"classGameSetting_1_1RenderSetting.html#ac4d866a1b965d39be0461af57aec2d91":[1,0,527,6,14],
+"classGameSetting_1_1RenderSetting.html#ac7fd6f9986812f6e8e0c475822b05456":[1,0,527,6,11],
+"classGameSetting_1_1RenderSetting.html#acaa53bf154c628466226f50cf4e823fb":[1,0,527,6,45],
+"classGameSetting_1_1RenderSetting.html#ae976b7edaa927f50c75b0c2a0e470d65":[1,0,527,6,8],
+"classGameSetting_1_1RenderSetting.html#ae9992b5becf3b7df21c272b1153d85bb":[1,0,527,6,25],
+"classGameSetting_1_1RenderSetting.html#ae9b715310908c3030b81891ac5fc999f":[1,0,527,6,44],
 "classGameSetting_1_1RenderSetting.html#afb9e69dcaf23d3f8c0b32371901b05cc":[1,0,527,6,32],
 "classGameSetting_1_1RenderSetting.html#afe9f2986aef696c452909a674df94783":[1,0,527,6,30],
 "classGameSetting_1_1RenderSetting_1_1ActorSetting.html":[1,0,527,6,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX65 =
 "classGlobalGoal.html#afeaafaf50c4aa90c1bf01fdc681f9b37":[1,0,537,0],
 "classGlobalGoalAdv.html":[1,0,538],
 "classGlobalGoalAdv.html#a4b10fb5369a0b97b50f052d91fcf845e":[1,0,538,0],
-"classGlobalGoalExplore.html":[1,0,539],
-"classGlobalGoalExplore.html#a689769ea5b7cf54a36d8bfd8cefca1ca":[1,0,539,0],
-"classGlobalGoalVisitAndStay.html":[1,0,540],
-"classGlobalGoalVisitAndStay.html#a162170fc0af8541f55bfc026cd3e29d4":[1,0,540,3],
-"classGlobalGoalVisitAndStay.html#a1a7f83b3029294dbf8a9f9eb8922c53b":[1,0,540,4],
-"classGlobalGoalVisitAndStay.html#a42b2206ba3190670a7f53796a1d2dc2d":[1,0,540,2],
-"classGlobalGoalVisitAndStay.html#a44cc6c81e0ef2b7d462699431cf29784":[1,0,540,1]
+"classGlobalGoalExplore.html":[1,0,539]
 };

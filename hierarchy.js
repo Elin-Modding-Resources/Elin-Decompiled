@@ -1498,9 +1498,12 @@ var hierarchy =
             [ "TraitMiko_Mifu", "classTraitMiko__Mifu.html", null ],
             [ "TraitMiko_Nefu", "classTraitMiko__Nefu.html", null ],
             [ "TraitMoyer", "classTraitMoyer.html", null ],
+            [ "TraitNanasu", "classTraitNanasu.html", null ],
             [ "TraitOlderYoungerSister", "classTraitOlderYoungerSister.html", null ],
+            [ "TraitPoina", "classTraitPoina.html", null ],
             [ "TraitPuppy", "classTraitPuppy.html", null ],
             [ "TraitQuru", "classTraitQuru.html", null ],
+            [ "TraitRaina", "classTraitRaina.html", null ],
             [ "TraitStrangeGirl", "classTraitStrangeGirl.html", null ],
             [ "TraitUniqueMerchant", "classTraitUniqueMerchant.html", [
               [ "TraitClerk_Casino", "classTraitClerk__Casino.html", null ],
