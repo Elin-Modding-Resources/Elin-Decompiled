@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class TraitPotionAlchemy : TraitPotionRandom
 {
-	public override int Power => owner.Power * (100 + owner.encLV * 100) / 100;
+	public override int Power => GetPower();
+
+	public int GetPower()
+	{
+		int num = 200;
+		int num2 = 100;
+		int refVal = owner.refVal;
+		if ((uint)(refVal - 8400) <= 5u)
+		{
+			num2 = 150;
+		}
+		return num * (100 + owner.encLV * num2) / 100;
+	}
 
 	public override void OnCrafted(Recipe recipe)
 	{

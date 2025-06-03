@@ -40,7 +40,7 @@ public class DramaCustomSequence : EClass
 		string rumor = (c.IsPCParty ? GetTalk("sup") : GetRumor(c));
 		Layer layer = null;
 		bool flag3 = c.IsHumanSpeak || EClass.pc.HasElement(1640);
-		bool num = !c.IsUnique || (c.IsPCFaction && c.trait is TraitOlderYoungerSister);
+		bool num = !c.IsUnique || HasTopic("unique", c.id);
 		if (!flag)
 		{
 			Step("Resident");

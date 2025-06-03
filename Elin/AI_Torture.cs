@@ -40,7 +40,7 @@ public class AI_Torture : AI_Practice
 				List<Chara> list = new List<Chara>();
 				foreach (Chara chara in EClass._map.charas)
 				{
-					if (!chara.IsDisabled && chara.IsPCFaction && chara != owner && !chara.IsPC && !chara.isRestrained && chara.host == null && !chara.noMove && !chara.IsInCombat)
+					if (!chara.IsDisabled && chara.IsPCFaction && chara != owner && !chara.IsPC && !chara.isRestrained && chara.host == null && !chara.noMove && !chara.IsInCombat && !(chara.ai.Current is AI_Eat))
 					{
 						list.Add(chara);
 					}
@@ -50,7 +50,7 @@ public class AI_Torture : AI_Practice
 				int num2 = 0;
 				foreach (Chara item in list)
 				{
-					if (EClass.rnd(3) == 0 && item.HasAccess(owner.pos))
+					if (EClass.rnd(3) == 0 && item.HasAccess(owner.pos) && PathManager.Instance.IsPathClear(owner.pos, item.pos, item, 30))
 					{
 						item.SetEnemy(owner);
 					}

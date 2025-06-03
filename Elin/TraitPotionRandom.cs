@@ -10,8 +10,6 @@ public class TraitPotionRandom : TraitPotion
 
 	public override string AliasEle => source.aliasRef;
 
-	public override int Power => 200;
-
 	public override EffectId IdEffect
 	{
 		get

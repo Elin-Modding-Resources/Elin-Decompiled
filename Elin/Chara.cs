@@ -3501,7 +3501,7 @@ public class Chara : Card, IPathfindWalker
 			break;
 		}
 		}
-		if (turn % 500 == 0)
+		if (turn % 200 == 0)
 		{
 			DiminishTempElements();
 		}
@@ -7558,7 +7558,7 @@ public class Chara : Card, IPathfindWalker
 			if (HasElement(1231))
 			{
 				Talk("insulted");
-				AddCondition<ConEuphoric>();
+				AddCondition<ConEuphoric>(100 * Evalue(1231));
 			}
 			else if (EClass.rnd(20) == 0)
 			{
@@ -9203,7 +9203,7 @@ public class Chara : Card, IPathfindWalker
 			Say("resistMutation", this);
 			return false;
 		}
-		IEnumerable<SourceElement.Row> ie = EClass.sources.elements.rows.Where((SourceElement.Row a) => a.category == (ether ? "ether" : "mutation"));
+		IEnumerable<SourceElement.Row> ie = EClass.sources.elements.rows.Where((SourceElement.Row a) => a.category == (ether ? "ether" : "mutation") && !a.tag.Contains("noRandomMutation"));
 		for (int i = 0; i < tries; i++)
 		{
 			SourceElement.Row row = ie.RandomItem();
@@ -9445,7 +9445,7 @@ public class Chara : Card, IPathfindWalker
 		faithElements.SetParent(this);
 	}
 
-	public void ModTempElement(int ele, int a, bool naturalDecay = false)
+	public void ModTempElement(int ele, int a, bool naturalDecay = false, bool onlyRenew = false)
 	{
 		if (a < 0 && !naturalDecay && HasElement(EClass.sources.elements.alias["sustain_" + EClass.sources.elements.map[ele].alias]?.id ?? 0))
 		{
@@ -9456,15 +9456,28 @@ public class Chara : Card, IPathfindWalker
 			tempElements = new ElementContainer();
 			tempElements.SetParent(this);
 		}
-		if (a > 0 && tempElements.Base(ele) > a)
+		int num = Mathf.Abs(elements.ValueWithoutLink(ele)) + 20;
+		int num2 = Mathf.Max(-num, -100);
+		int num3 = tempElements.Base(ele);
+		int num4 = num3 + a;
+		if (onlyRenew)
 		{
-			a = a * 100 / (200 + (tempElements.Base(ele) - a) * 10);
+			if (a > 0 && num3 >= a)
+			{
+				a = 0;
+			}
+			if (a < 0 && num3 <= a)
+			{
+				a = 0;
+			}
 		}
-		int num = Mathf.Abs(elements.ValueWithoutLink(ele)) * 2 + 20;
-		int num2 = tempElements.Base(ele) + a;
-		if (num2 < -num || num2 > num || (a < 0 && num2 < -100))
+		if (num4 > num)
 		{
-			a = 0;
+			a = ((num > num3) ? (num - num3) : 0);
+		}
+		if (num4 < num2)
+		{
+			a = ((num2 < num3) ? (num2 - num3) : 0);
 		}
 		Element element = tempElements.ModBase(ele, a);
 		if (element.vBase == 0)
@@ -9477,7 +9490,7 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public void DamageTempElements(int p, bool body, bool mind)
+	public void DamageTempElements(int p, bool body, bool mind, bool onlyRenew = false)
 	{
 		if (body)
 		{
@@ -9489,12 +9502,12 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public void DamageTempElement(int ele, int p)
+	public void DamageTempElement(int ele, int p, bool onlyRenew = false)
 	{
-		ModTempElement(ele, -(p / 100 + EClass.rnd(p / 100 + 1) + 1));
+		ModTempElement(ele, -(p / 100 + EClass.rnd(p / 100 + 1) + 1), naturalDecay: false, onlyRenew);
 	}
 
-	public void EnhanceTempElements(int p, bool body, bool mind)
+	public void EnhanceTempElements(int p, bool body, bool mind, bool onlyRenew = false)
 	{
 		if (body)
 		{
@@ -9506,9 +9519,9 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public void EnhanceTempElement(int ele, int p)
+	public void EnhanceTempElement(int ele, int p, bool onlyRenew = false)
 	{
-		ModTempElement(ele, p / 100 + EClass.rnd(p / 100 + 1));
+		ModTempElement(ele, p / 100 + EClass.rnd(p / 100 + 1), naturalDecay: false, onlyRenew);
 	}
 
 	public void DiminishTempElements(int a = 1)

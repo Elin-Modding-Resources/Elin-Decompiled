@@ -933,12 +933,15 @@ public class ActEffect : EClass
 			break;
 		case EffectId.AbsorbMana:
 		{
-			EClass.game.religions.Element.Talk("ability");
+			if (CC == TC)
+			{
+				EClass.game.religions.Element.Talk("ability");
+			}
 			Dice dice = Dice.Create("ActManaAbsorb", power, CC, (actRef.refThing != null) ? null : actRef.act);
 			TC.mana.Mod(dice.Roll());
 			TC.PlaySound("heal");
 			TC.PlayEffect("heal");
-			if (TC.IsPC)
+			if (TC == CC)
 			{
 				CC.Say("absorbMana", CC);
 			}
@@ -1790,7 +1793,7 @@ public class ActEffect : EClass
 			TC.Say(flag9 ? "damageBody" : "damageMind", TC);
 			for (int m = 0; m < num9; m++)
 			{
-				TC.DamageTempElements(power, flag9, mind2);
+				TC.DamageTempElements(power, flag9, mind2, id != EffectId.Weaken);
 			}
 			if (TC.IsPC)
 			{
@@ -1811,7 +1814,7 @@ public class ActEffect : EClass
 			TC.PlaySound("buff");
 			for (int k = 0; k < num6; k++)
 			{
-				TC.EnhanceTempElements(power, flag6, mind);
+				TC.EnhanceTempElements(power, flag6, mind, onlyRenew: true);
 			}
 			break;
 		}

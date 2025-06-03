@@ -423,7 +423,11 @@ public class EloMap : EClass
 		SourceGlobalTile.Row row = GetSources(gx, gy).LastItem();
 		if (row != null)
 		{
-			return row.id == 4;
+			if (row.id != 4)
+			{
+				return row.id == 15;
+			}
+			return true;
 		}
 		return false;
 	}

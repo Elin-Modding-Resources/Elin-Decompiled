@@ -2905,7 +2905,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (Chara.race.id == "mutant")
 		{
-			int num = Mathf.Min(1 + LV / 5, 22);
+			int num = Mathf.Min(1 + LV / 5, 20);
 			for (int i = 0; i < num; i++)
 			{
 				if (Evalue(1644) < i + 1)
