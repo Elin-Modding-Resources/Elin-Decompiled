@@ -1,5 +1,9 @@
 var NAVTREEINDEX104 =
 {
+"classSourcePrefInspector.html#aceba88b57dcd66031c42fb9f0c5e1740":[1,0,1197,4],
+"classSourcePrefInspector.html#af163347caeb7239037d615b027b34635":[1,0,1197,2],
+"classSourcePrefInspector.html#af299b2f570538ec2f75f5db12c99cde4":[1,0,1197,17],
+"classSourcePrefTile.html":[1,0,1198],
 "classSourceQuest.html":[1,0,1199],
 "classSourceQuest.html#a92f82c4c94b972e81e80e42fa2586409":[1,0,1199,3],
 "classSourceQuest.html#afcadd8efdf28c58d2223a1d7934b5930":[1,0,1199,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX104 =
 "classSourceTactics_1_1Row.html#a52df1f501d5334099f5ac2ea1ae4d688":[1,0,1207,0,5],
 "classSourceTactics_1_1Row.html#a55884a794f58754015614815e4e42f49":[1,0,1207,0,7],
 "classSourceTactics_1_1Row.html#a56e8fcbaab8c75b7c3bef7c94d752f03":[1,0,1207,0,14],
-"classSourceTactics_1_1Row.html#a683884deccc253a4cdb79810e40640a6":[1,0,1207,0,10],
-"classSourceTactics_1_1Row.html#a6c633789aa7e3bb65967dd1c2e48c12c":[1,0,1207,0,0],
-"classSourceTactics_1_1Row.html#a6d4a2d3c8ec0842590b7dfaff5a5be37":[1,0,1207,0,12],
-"classSourceTactics_1_1Row.html#a8f4f377b2ab35f60db964960995543f3":[1,0,1207,0,9],
-"classSourceTactics_1_1Row.html#a92a54a904c7e41f95a7331aac45cc079":[1,0,1207,0,3]
+"classSourceTactics_1_1Row.html#a683884deccc253a4cdb79810e40640a6":[1,0,1207,0,10]
 };

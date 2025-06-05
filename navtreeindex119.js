@@ -1,5 +1,9 @@
 var NAVTREEINDEX119 =
 {
+"classTraitPainter.html":[1,0,1706],
+"classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea":[1,0,1706,1],
+"classTraitPainter.html#a676298524aad36fa4b67bfd137c69a12":[1,0,1706,3],
+"classTraitPainter.html#a804454fa49e9e95eb60096914c11a747":[1,0,1706,0],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a4802a5ac6005a6ab9c68a2fb29e30a3e":[1,0,1706,0,0],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a967d35e40f3f95b1f538bd248640bf3b":[1,0,1706,0,1],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747ad0a662a5235ecde30739fe50cf0de830":[1,0,1706,0,2],
@@ -68,7 +72,6 @@ var NAVTREEINDEX119 =
 "classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1731,0],
 "classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1731,1],
 "classTraitPotion.html":[1,0,1732],
-"classTraitPotion.html#ab2fda8e9176856a55f5c0c255b8cf5b4":[1,0,1732,2],
 "classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0":[1,0,1732,1],
 "classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1732,0],
 "classTraitPotionAlchemy.html":[1,0,1733],
@@ -85,11 +88,12 @@ var NAVTREEINDEX119 =
 "classTraitPotionLove.html":[1,0,1735],
 "classTraitPotionRandom.html":[1,0,1736],
 "classTraitPotionRandom.html#a446a2199968a1bd5756385afb8bf1d5c":[1,0,1736,0],
+"classTraitPotionRandom.html#a531b0e1d3ffaa723f9ed9ab0cd05f928":[1,0,1736,9],
 "classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1736,8],
 "classTraitPotionRandom.html#a6edd071c6499d46dbdb86a912357421b":[1,0,1736,3],
 "classTraitPotionRandom.html#a6f8ad0e2c44a98bfcf172afef5aa307d":[1,0,1736,7],
 "classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1736,1],
-"classTraitPotionRandom.html#a81f51a653e3ce1a6e0a118178812daf2":[1,0,1736,9],
+"classTraitPotionRandom.html#a81f51a653e3ce1a6e0a118178812daf2":[1,0,1736,10],
 "classTraitPotionRandom.html#abaae34393bf06c2aaad531ca30799516":[1,0,1736,5],
 "classTraitPotionRandom.html#adbaf7305ae19e67a415e1ac710688c4f":[1,0,1736,4],
 "classTraitPotionRandom.html#af5d2e6755f6bcfa5b0b53d091fd6473c":[1,0,1736,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitSalaryChest.html#a04617e0bc88d81de8892425be3753925":[1,0,1768,1],
 "classTraitSalaryChest.html#a0c24817e7280837e708d252f51490260":[1,0,1768,0],
 "classTraitSalesTag.html":[1,0,1769],
-"classTraitSalesTag.html#a1847e16f59895662a5404130593c0aab":[1,0,1769,3],
-"classTraitSalesTag.html#a192160d4f2b8384e2c2021b91b2cd8e3":[1,0,1769,4],
-"classTraitSalesTag.html#a25581dfef060629517263b86bb68ce12":[1,0,1769,0],
-"classTraitSalesTag.html#a5c87ee56f2fbd659da3f1ec1687a70b3":[1,0,1769,1],
-"classTraitSalesTag.html#ad775fb0e118436eb927e004f71c7f413":[1,0,1769,5]
+"classTraitSalesTag.html#a1847e16f59895662a5404130593c0aab":[1,0,1769,3]
 };

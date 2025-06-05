@@ -660,7 +660,7 @@ var annotated_dup =
     [ "GrowSystemSeaweed", "classGrowSystemSeaweed.html", "classGrowSystemSeaweed" ],
     [ "GrowSystemTree", "classGrowSystemTree.html", "classGrowSystemTree" ],
     [ "GrowSystemTreeCoralwood", "classGrowSystemTreeCoralwood.html", "classGrowSystemTreeCoralwood" ],
-    [ "GrowSystemTreeFeywood", "classGrowSystemTreeFeywood.html", null ],
+    [ "GrowSystemTreeFeywood", "classGrowSystemTreeFeywood.html", "classGrowSystemTreeFeywood" ],
     [ "GrowSystemTreeSingle", "classGrowSystemTreeSingle.html", "classGrowSystemTreeSingle" ],
     [ "GrowSystemWeed", "classGrowSystemWeed.html", "classGrowSystemWeed" ],
     [ "GrowSystemWheat", "classGrowSystemWheat.html", "classGrowSystemWheat" ],

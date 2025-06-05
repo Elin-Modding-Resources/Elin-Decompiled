@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitBitch.html":[1,0,1425],
+"classTraitBitch.html#a0229b481536a7dc8ab0f33f98c8cfcef":[1,0,1425,0],
+"classTraitBitch.html#ab408dea815eb741838f705f5702046f7":[1,0,1425,1],
+"classTraitBitch.html#ad20e834013f30d0c761aad0371ead036":[1,0,1425,2],
 "classTraitBitchDancer.html":[1,0,1426],
 "classTraitBitchDancer.html#aaff86ca2a1ba915a96df9dd919145bd8":[1,0,1426,0],
 "classTraitBitchDancer.html#abb15b7f0168a14d8acb7617e06963571":[1,0,1426,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitContainerShop.html":[1,0,1481],
 "classTraitContainerUnburnable.html":[1,0,1482],
 "classTraitCooker.html":[1,0,1483],
-"classTraitCooker.html#a407d967ec67ff0423d8a96c772772f3f":[1,0,1483,1],
-"classTraitCooker.html#a67e9ed5046f389a1c664d41ed6193c51":[1,0,1483,3],
-"classTraitCooker.html#a8b4cce75ee58cbab2725611a4dc60ce6":[1,0,1483,0],
-"classTraitCooker.html#a912c97e1cccd75a289d656cfaa78a9fe":[1,0,1483,2],
-"classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1483,4]
+"classTraitCooker.html#a407d967ec67ff0423d8a96c772772f3f":[1,0,1483,1]
 };

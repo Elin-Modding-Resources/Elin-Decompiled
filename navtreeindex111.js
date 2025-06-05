@@ -1,5 +1,9 @@
 var NAVTREEINDEX111 =
 {
+"classTileTypeBlock.html":[1,0,1325],
+"classTileTypeBlock.html#a00953339ad215637ac1ad0e221d9640c":[1,0,1325,1],
+"classTileTypeBlock.html#a01552ed10b1286857879a50dc98a6426":[1,0,1325,2],
+"classTileTypeBlock.html#a129f05407248948fbc101da9bd80ffc1":[1,0,1325,4],
 "classTileTypeBlock.html#a371850eb551d1334b70e4748d69d9b0c":[1,0,1325,3],
 "classTileTypeBlock.html#a41c024e8e2feabe334f7b5bd6097fc4d":[1,0,1325,11],
 "classTileTypeBlock.html#a45a1ec332ea89142beee7c316594bce4":[1,0,1325,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX111 =
 "classTileTypeWaterShallow.html#aff8f4ff777aff77ae69a4175f8e53dca":[1,0,1376,1],
 "classTileTypeWaterfall.html":[1,0,1375],
 "classTileTypeWaterfall.html#a69f0baf8f1360ec2df815f0f89081ba1":[1,0,1375,1],
-"classTileTypeWaterfall.html#a9bb6608eaab3c87a9e93c6da220bf594":[1,0,1375,0],
-"classTileTypeWaterfall.html#a9dd83ed4f5725d6e77c57e79140c332f":[1,0,1375,2],
-"classTileTypeWindow.html":[1,0,1377],
-"classTileTypeWindow.html#ae030831b4335ef48b7cea9b53706a5f3":[1,0,1377,0],
-"classTimeDebuff.html":[1,0,1379]
+"classTileTypeWaterfall.html#a9bb6608eaab3c87a9e93c6da220bf594":[1,0,1375,0]
 };

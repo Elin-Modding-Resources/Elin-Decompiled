@@ -1,5 +1,9 @@
 var NAVTREEINDEX139 =
 {
+"interfaceIDragParent.html#afaebc90d9389a33cabfbc0be7f0a720a":[1,0,656,0],
+"interfaceIGlobalValue.html":[1,0,657],
+"interfaceIGlobalValue.html#a5bcca28f13ae08915eb0a54186b3e572":[1,0,657,0],
+"interfaceIInspect.html":[1,0,658],
 "interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f":[1,0,658,1],
 "interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c":[1,0,658,2],
 "interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e":[1,0,658,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX139 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da964af2af259188703a9dde3adce53d47":[0,4,3,0,8,138],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9bacb86ad80810707c08a9216f6ccdb3":[0,4,3,0,8,218],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9bdbe8b74f12ee43a209888b99042697":[0,4,3,0,8,208],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9ccfd2a000679641f1d16338153a58b2":[0,4,3,0,8,171],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9d087bfb809874e1b3e9adcbae8ca761":[0,4,3,0,8,57],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9de5761cbb7bf3dc8e9b0ac53b07f2e1":[0,4,3,0,8,213],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9e6f10db784e3f0c4cb9e745364a59e1":[0,4,3,0,8,175],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9e6f4e80a0daa232436392f337727741":[0,4,3,0,8,146]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9ccfd2a000679641f1d16338153a58b2":[0,4,3,0,8,171]
 };

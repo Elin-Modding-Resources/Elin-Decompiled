@@ -1,5 +1,9 @@
 var NAVTREEINDEX112 =
 {
+"classTileTypeWaterfall.html#a9dd83ed4f5725d6e77c57e79140c332f":[1,0,1375,2],
+"classTileTypeWindow.html":[1,0,1377],
+"classTileTypeWindow.html#ae030831b4335ef48b7cea9b53706a5f3":[1,0,1377,0],
+"classTimeDebuff.html":[1,0,1379],
 "classTimeDebuff.html#a56a68cce782c76a86fd3cb52551f9a43":[1,0,1379,0],
 "classTimeDebuff.html#ace6f24fb07b1f3c4db0e583f6528c0ca":[1,0,1379,1],
 "classTimeTable.html":[1,0,1380],
@@ -245,9 +249,5 @@ var NAVTREEINDEX112 =
 "classTrait.html#abe2e0dadad63c335e4219a7aebe9fedc":[1,0,1386,116],
 "classTrait.html#ac0d6248b0468917710ad9bc9020f8e35":[1,0,1386,100],
 "classTrait.html#ac2f016c586a7ff780cb436e83bc3ba27":[1,0,1386,76],
-"classTrait.html#ac45c76ca50bef4ccac766640350165f4":[1,0,1386,182],
-"classTrait.html#ac4966fed692d07ed9ac3a189a90caa1a":[1,0,1386,17],
-"classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79":[1,0,1386,99],
-"classTrait.html#ac7ab36c3665e29a4409d9e3390e3f2a3":[1,0,1386,164],
-"classTrait.html#ac8a7b0424ba2861d77e4a3320ced075e":[1,0,1386,68]
+"classTrait.html#ac45c76ca50bef4ccac766640350165f4":[1,0,1386,182]
 };

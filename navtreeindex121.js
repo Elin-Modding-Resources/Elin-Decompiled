@@ -1,5 +1,9 @@
 var NAVTREEINDEX121 =
 {
+"classTraitSwing.html#af6cada8c4e4bb880882b43a999a50b9a":[1,0,1828,2],
+"classTraitSwing.html#af9b30b301ce085c223344c32891c88fc":[1,0,1828,3],
+"classTraitSwing.html#affe3bc4a8f03bb9e1b6546afbfb29ceb":[1,0,1828,4],
+"classTraitSwitch.html":[1,0,1829],
 "classTraitSwitch.html#a069e285e73f58fcb14dd4ce45b058a44":[1,0,1829,5],
 "classTraitSwitch.html#a38ceb3586c4921cafed4f9cdfed87d21":[1,0,1829,10],
 "classTraitSwitch.html#a3c9509bede5f05b010e060ce84565232":[1,0,1829,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitUsuihon.html#a9e2b8cfd1c42ff883b3a18d76e751689":[1,0,1889,0],
 "classTraitUsuihon.html#ae9d3b575f6fabcddbc088b50b6305b71":[1,0,1889,2],
 "classTraitVase.html":[1,0,1890],
-"classTraitVendingMachine.html":[1,0,1891],
-"classTraitVendingMachine.html#a329def7b0c25bf0e716501317ff8177f":[1,0,1891,4],
-"classTraitVendingMachine.html#a4254b5be98a12a2d09c39e1e9dc9e411":[1,0,1891,1],
-"classTraitVendingMachine.html#ab466c22e9734fc8ef713a6679e0ad1d6":[1,0,1891,3],
-"classTraitVendingMachine.html#ad895e9e7d4ed9691d63b363ee1bb5be7":[1,0,1891,0]
+"classTraitVendingMachine.html":[1,0,1891]
 };

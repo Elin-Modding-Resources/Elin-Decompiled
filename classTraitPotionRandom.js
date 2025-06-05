@@ -9,5 +9,6 @@ var classTraitPotionRandom =
     [ "IdEffect", "classTraitPotionRandom.html#af5d2e6755f6bcfa5b0b53d091fd6473c", null ],
     [ "IsNeg", "classTraitPotionRandom.html#a6f8ad0e2c44a98bfcf172afef5aa307d", null ],
     [ "N1", "classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83", null ],
+    [ "Power", "classTraitPotionRandom.html#a531b0e1d3ffaa723f9ed9ab0cd05f928", null ],
     [ "source", "classTraitPotionRandom.html#a81f51a653e3ce1a6e0a118178812daf2", null ]
 ];

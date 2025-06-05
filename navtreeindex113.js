@@ -1,5 +1,9 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#ac4966fed692d07ed9ac3a189a90caa1a":[1,0,1386,17],
+"classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79":[1,0,1386,99],
+"classTrait.html#ac7ab36c3665e29a4409d9e3390e3f2a3":[1,0,1386,164],
+"classTrait.html#ac8a7b0424ba2861d77e4a3320ced075e":[1,0,1386,68],
 "classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff":[1,0,1386,3],
 "classTrait.html#acd6adfcd43845d33010f1794393f0d07":[1,0,1386,130],
 "classTrait.html#acd9a84b047c27051d35b96073d35c92d":[1,0,1386,105],
@@ -245,9 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitBinocular.html":[1,0,1424],
 "classTraitBinocular.html#a3b5c8c0f8d6890a013ce77a26ee94079":[1,0,1424,1],
 "classTraitBinocular.html#a46a3ece4b05416679f5908918d675d56":[1,0,1424,2],
-"classTraitBinocular.html#a7e33b7814533e1e666e5e9623509efd2":[1,0,1424,0],
-"classTraitBitch.html":[1,0,1425],
-"classTraitBitch.html#a0229b481536a7dc8ab0f33f98c8cfcef":[1,0,1425,0],
-"classTraitBitch.html#ab408dea815eb741838f705f5702046f7":[1,0,1425,1],
-"classTraitBitch.html#ad20e834013f30d0c761aad0371ead036":[1,0,1425,2]
+"classTraitBinocular.html#a7e33b7814533e1e666e5e9623509efd2":[1,0,1424,0]
 };

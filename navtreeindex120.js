@@ -1,5 +1,9 @@
 var NAVTREEINDEX120 =
 {
+"classTraitSalesTag.html#a192160d4f2b8384e2c2021b91b2cd8e3":[1,0,1769,4],
+"classTraitSalesTag.html#a25581dfef060629517263b86bb68ce12":[1,0,1769,0],
+"classTraitSalesTag.html#a5c87ee56f2fbd659da3f1ec1687a70b3":[1,0,1769,1],
+"classTraitSalesTag.html#ad775fb0e118436eb927e004f71c7f413":[1,0,1769,5],
 "classTraitSalesTag.html#af240bb3862ff5b8acb871e125b0ae553":[1,0,1769,2],
 "classTraitSawMill.html":[1,0,1770],
 "classTraitSawMill.html#a2c05175e641c6a8c4f1735138ecaebec":[1,0,1770,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitSwing.html":[1,0,1828],
 "classTraitSwing.html#a34af8b2a20141f86ae3dab5b249a0d66":[1,0,1828,0],
 "classTraitSwing.html#a65c5fe1d3a1255e1fd77e5e9ea58d015":[1,0,1828,1],
-"classTraitSwing.html#aa1119fe1adc12884e7c7c2aaf6ebbb92":[1,0,1828,5],
-"classTraitSwing.html#af6cada8c4e4bb880882b43a999a50b9a":[1,0,1828,2],
-"classTraitSwing.html#af9b30b301ce085c223344c32891c88fc":[1,0,1828,3],
-"classTraitSwing.html#affe3bc4a8f03bb9e1b6546afbfb29ceb":[1,0,1828,4],
-"classTraitSwitch.html":[1,0,1829]
+"classTraitSwing.html#aa1119fe1adc12884e7c7c2aaf6ebbb92":[1,0,1828,5]
 };
