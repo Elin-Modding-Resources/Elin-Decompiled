@@ -1,7 +1,5 @@
 public class TraitPotion : TraitDrink
 {
-	public override int Power => 200;
-
 	public override int CraftNum
 	{
 		get

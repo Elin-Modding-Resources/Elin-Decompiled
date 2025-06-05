@@ -13,28 +13,21 @@ public class TraitDeed : TraitScroll
 		}
 		Dialog.YesNo("dialog_claimLand", delegate
 		{
-			if (EClass._zone.GetInt(2) != 0)
+			EClass._zone.ClaimZone();
+			owner.ModNum(-1);
+			WidgetMenuPanel.OnChangeMode();
+			if (EClass._zone == EClass.game.StartZone)
 			{
-				Msg.Say("claimCooldown2");
-			}
-			else
-			{
-				EClass._zone.ClaimZone();
-				owner.ModNum(-1);
-				WidgetMenuPanel.OnChangeMode();
-				if (EClass._zone == EClass.game.StartZone)
+				if (EClass.game.quests.Get<QuestHome>() != null)
 				{
-					if (EClass.game.quests.Get<QuestHome>() != null)
-					{
-						EClass.game.quests.Home.ChangePhase(1);
-					}
-					if (QuestMain.Phase < 200)
-					{
-						EClass.game.quests.Main.ChangePhase(200);
-					}
+					EClass.game.quests.Home.ChangePhase(1);
 				}
-				EClass.player.EndTurn();
+				if (QuestMain.Phase < 200)
+				{
+					EClass.game.quests.Main.ChangePhase(200);
+				}
 			}
+			EClass.player.EndTurn();
 		});
 	}
 }

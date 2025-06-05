@@ -3303,7 +3303,7 @@ public class Zone : Spatial, ICardParent, IInspect
 							{
 								date.BuildSunMap();
 							}
-							if (!date.sunMap.Contains(c.index))
+							if (!date.sunMap.Contains(c.index) && !c.growth.CanGrow(date))
 							{
 								c.growth.Perish();
 							}

@@ -92,7 +92,9 @@ public class GrowSystem : EClass
 
 	public virtual bool NeedSunlight => true;
 
-	public virtual bool NeedUndersea => false;
+	public virtual bool GrowOnLand => true;
+
+	public virtual bool GrowUndersea => false;
 
 	public virtual AnimeID AnimeProgress => AnimeID.HitObj;
 
@@ -273,6 +275,21 @@ public class GrowSystem : EClass
 		{
 			return false;
 		}
+		if (GrowUndersea)
+		{
+			if (EClass._zone.IsUnderwater || cell.sourceFloor.tileType.IsDeepWater)
+			{
+				return true;
+			}
+		}
+		else if (EClass._zone.IsUnderwater)
+		{
+			return false;
+		}
+		if (!GrowOnLand)
+		{
+			return false;
+		}
 		if (NeedSunlight)
 		{
 			if (date.sunMap == null)
@@ -283,17 +300,6 @@ public class GrowSystem : EClass
 			{
 				return false;
 			}
-		}
-		if (NeedUndersea)
-		{
-			if (!EClass._zone.IsUnderwater && !cell.sourceFloor.tileType.IsDeepWater)
-			{
-				return false;
-			}
-		}
-		else if (EClass._zone.IsUnderwater)
-		{
-			return false;
 		}
 		return true;
 	}

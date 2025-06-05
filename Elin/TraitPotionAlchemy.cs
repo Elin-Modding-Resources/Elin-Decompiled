@@ -10,10 +10,20 @@ public class TraitPotionAlchemy : TraitPotionRandom
 	{
 		int num = 200;
 		int num2 = 100;
-		int refVal = owner.refVal;
-		if ((uint)(refVal - 8400) <= 5u)
+		switch (owner.refVal)
 		{
+		case 8400:
+		case 8401:
+		case 8402:
+		case 8403:
+		case 8404:
+		case 8405:
 			num2 = 150;
+			break;
+		case 8470:
+		case 8471:
+			num2 = 100 + owner.encLV * 50;
+			break;
 		}
 		return num * (100 + owner.encLV * num2) / 100;
 	}

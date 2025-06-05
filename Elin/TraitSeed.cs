@@ -46,13 +46,20 @@ public class TraitSeed : Trait
 		{
 			n.AddText("isWaterCrop");
 		}
-		if (row.tag.Contains("undersea"))
+		if (row.growth != null)
 		{
-			n.AddText("isUnderseaCrop");
-		}
-		if (row.growth != null && row.growth.NeedSunlight)
-		{
-			n.AddText("isNeedSun");
+			if (row.growth.GrowOnLand)
+			{
+				n.AddText("isGrowOnLand");
+			}
+			if (row.growth.GrowUndersea)
+			{
+				n.AddText("isGrowUndersea");
+			}
+			if (row.growth.NeedSunlight)
+			{
+				n.AddText("isNeedSun");
+			}
 		}
 		if (row.growth == null || !row.growth.CanLevelSeed)
 		{

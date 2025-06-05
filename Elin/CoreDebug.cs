@@ -445,6 +445,7 @@ public class CoreDebug : EScriptable
 			{
 				thing.AddCard(ThingGen.Create("mathammer", MATERIAL.GetRandomMaterial(100).alias)).SetNum(10);
 			}
+			thing.AddCard(ThingGen.Create("mathammer", 103)).SetNum(10);
 			thing.AddCard(ThingGen.Create("mathammer", 102)).SetNum(10);
 			thing.AddCard(ThingGen.Create("mathammer", 33)).SetNum(10);
 			thing.AddCard(ThingGen.Create("mathammer", 18)).SetNum(10);

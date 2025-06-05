@@ -2,7 +2,9 @@ public class GrowSystemSeaweed : GrowSystemWheat
 {
 	public override int HarvestStage => -1;
 
-	public override bool NeedUndersea => true;
+	public override bool GrowOnLand => false;
+
+	public override bool GrowUndersea => true;
 
 	public override bool NeedSunlight => false;
 

@@ -2,6 +2,8 @@ using System.Linq;
 
 public class GrowSystemTreeCoralwood : GrowSystemTreeSingle
 {
+	public override bool GrowUndersea => true;
+
 	public override int GetShadow(int index)
 	{
 		return 34;

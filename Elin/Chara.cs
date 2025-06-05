@@ -8876,6 +8876,7 @@ public class Chara : Card, IPathfindWalker
 			if (type == CureType.Death || type == CureType.Boss)
 			{
 				SAN.Mod(-20);
+				RemoveCondition<ConBrightnessOfLife>();
 			}
 			if (type == CureType.Jure)
 			{
@@ -9451,33 +9452,34 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
+		bool flag = HasElement(1215);
 		if (tempElements == null)
 		{
 			tempElements = new ElementContainer();
 			tempElements.SetParent(this);
 		}
-		int num = Mathf.Abs(elements.ValueWithoutLink(ele)) + 20;
-		int num2 = Mathf.Max(-num, -100);
-		int num3 = tempElements.Base(ele);
-		int num4 = num3 + a;
+		if (a > 0 && flag)
+		{
+			a = a * 150 / 100;
+		}
+		int num = elements.ValueWithoutLink(ele);
+		int num2 = Mathf.Abs(num) + 100;
+		int num3 = num2 / (flag ? 2 : 4);
+		int num4 = -num - 100;
+		int num5 = tempElements.Base(ele);
+		int num6 = num5 + a;
 		if (onlyRenew)
 		{
-			if (a > 0 && num3 >= a)
-			{
-				a = 0;
-			}
-			if (a < 0 && num3 <= a)
-			{
-				a = 0;
-			}
+			num3 = Mathf.Min(a, num3);
+			num4 = Mathf.Max(a, -num2 / 3);
 		}
-		if (num4 > num)
+		if (a > 0 && num6 > num3)
 		{
-			a = ((num > num3) ? (num - num3) : 0);
+			a = ((num3 > num5) ? (num3 - num5) : 0);
 		}
-		if (num4 < num2)
+		if (a < 0 && num6 < num4)
 		{
-			a = ((num2 < num3) ? (num2 - num3) : 0);
+			a = ((num4 < num5) ? (num4 - num5) : 0);
 		}
 		Element element = tempElements.ModBase(ele, a);
 		if (element.vBase == 0)
@@ -9494,34 +9496,31 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (body)
 		{
-			DamageTempElement(Element.List_Body.RandomItem(), p);
+			DamageTempElement(Element.List_Body.RandomItem(), p, onlyRenew);
 		}
 		if (mind)
 		{
-			DamageTempElement(Element.List_Mind.RandomItem(), p);
+			DamageTempElement(Element.List_Mind.RandomItem(), p, onlyRenew);
 		}
 	}
 
 	public void DamageTempElement(int ele, int p, bool onlyRenew = false)
 	{
-		ModTempElement(ele, -(p / 100 + EClass.rnd(p / 100 + 1) + 1), naturalDecay: false, onlyRenew);
+		ModTempElement(ele, onlyRenew ? (-p / 20) : (-(p / 100 + EClass.rnd(p / 100 + 1) + 1)), naturalDecay: false, onlyRenew);
 	}
 
 	public void EnhanceTempElements(int p, bool body, bool mind, bool onlyRenew = false)
 	{
-		if (body)
+		int[] array = (body ? Element.List_Body : Element.List_Mind);
+		foreach (int ele in array)
 		{
-			EnhanceTempElement(Element.List_Body.RandomItem(), p);
-		}
-		if (mind)
-		{
-			EnhanceTempElement(Element.List_Mind.RandomItem(), p);
+			EnhanceTempElement(ele, p, onlyRenew);
 		}
 	}
 
 	public void EnhanceTempElement(int ele, int p, bool onlyRenew = false)
 	{
-		ModTempElement(ele, p / 100 + EClass.rnd(p / 100 + 1), naturalDecay: false, onlyRenew);
+		ModTempElement(ele, onlyRenew ? (p / 20) : (p / 100 + EClass.rnd(p / 100 + 1)), naturalDecay: false, onlyRenew);
 	}
 
 	public void DiminishTempElements(int a = 1)

@@ -1042,6 +1042,7 @@ public class Element : EClass
 			case 6020:
 				result2.cost = Mathf.Min(c.stamina.max / 3 + 10, 30);
 				break;
+			case 6663:
 			case 6664:
 			{
 				int num2 = -2;

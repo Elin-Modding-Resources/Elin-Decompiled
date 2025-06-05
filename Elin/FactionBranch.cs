@@ -1229,17 +1229,21 @@ public class FactionBranch : EClass
 
 	public void OnUnclaimZone()
 	{
-		List<Element> list = owner.ListLandFeats();
-		elements.SetBase(list[1].id, 0);
-		elements.SetBase(list[2].id, 0);
-		if (lv < 5)
+		List<Element> source = owner.ListLandFeats();
+		if (lv >= 5)
 		{
-			return;
+			foreach (Element item in source.Where((Element a) => a.HasTag("network")).ToList())
+			{
+				EClass.pc.faction.elements.ModBase(item.id, -item.Value);
+			}
 		}
-		foreach (Element item in list.Where((Element a) => a.HasTag("network")).ToList())
+		Element[] array = elements.dict.Values.ToArray();
+		foreach (Element element in array)
 		{
-			EClass.pc.faction.elements.ModBase(item.id, -item.Value);
+			elements.SetBase(element.id, 0);
 		}
+		owner.landFeats = null;
+		owner.ListLandFeats();
 	}
 
 	public void ValidateUpgradePolicies()

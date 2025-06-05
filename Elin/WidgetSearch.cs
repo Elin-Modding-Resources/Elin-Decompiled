@@ -106,6 +106,10 @@ public class WidgetSearch : WidgetCodex
 			extra.lastSearch = s;
 		}
 		s = s.ToLower();
+		if (!buttonClear)
+		{
+			return;
+		}
 		buttonClear.SetActive(field.text != "");
 		buttonRefresh.SetActive(field.text != "");
 		if (s == lastSearch || s.Length == 0)
