@@ -130,4 +130,13 @@ public class TraitTeleporter : TraitNewZone
 			s = "_engraved".lang(id, s);
 		}
 	}
+
+	public override bool CanStackTo(Thing to)
+	{
+		if (id != to.GetStr(31))
+		{
+			return false;
+		}
+		return base.CanStackTo(to);
+	}
 }

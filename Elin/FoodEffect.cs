@@ -13,7 +13,7 @@ public class FoodEffect : EClass
 		{
 			num2 = 0.1f;
 		}
-		int num3 = food.Evalue(10);
+		int num3 = Mathf.Clamp(food.Evalue(10), 0, 10000);
 		float num4 = 25f;
 		float num5 = 1f;
 		string idTaste = "";

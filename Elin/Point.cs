@@ -881,6 +881,10 @@ public class Point : EClass
 
 	public void CallGuard(Chara criminal, Chara caller)
 	{
+		if (caller.HasCondition<ConSleep>())
+		{
+			caller.RemoveCondition<ConSleep>();
+		}
 		caller.Talk("callGuards");
 		List<Chara> list = EClass._map.charas.Where((Chara c) => c.trait is TraitGuard && !c.IsInCombat).ToList();
 		if (list.Count > 0)

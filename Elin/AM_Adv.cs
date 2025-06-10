@@ -291,26 +291,16 @@ public class AM_Adv : AM_BaseGameMode
 		{
 			point.Installed.trait.OnRenderTile(point, result, dir);
 		}
-		if (!EClass.core.config.game.highlightEnemy)
+		if (!EClass.core.config.game.highlightEnemy || !point.HasChara)
 		{
 			return;
 		}
-		foreach (Chara item in point.ListCharas())
+		foreach (Chara chara in EClass._map.charas)
 		{
-			if (!item.IsHostile(EClass.pc))
+			if (chara.isSynced && chara.IsHostile(EClass.pc) && !chara.IsMultisize && EClass.pc.CanSee(chara))
 			{
-				continue;
-			}
-			{
-				foreach (Chara chara in EClass._map.charas)
-				{
-					if (chara.isSynced && chara.IsHostile(EClass.pc) && !chara.IsMultisize)
-					{
-						Vector3 vector = chara.pos.Position();
-						EClass.screen.guide.passGuideFloor.Add(vector.x, vector.y, vector.z - 0.01f, 23f, 0.3f);
-					}
-				}
-				break;
+				Vector3 vector = chara.pos.Position();
+				EClass.screen.guide.passGuideFloor.Add(vector.x, vector.y, vector.z - 0.01f, 23f, 0.3f);
 			}
 		}
 	}

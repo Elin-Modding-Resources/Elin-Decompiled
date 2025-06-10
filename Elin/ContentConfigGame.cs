@@ -49,6 +49,8 @@ public class ContentConfigGame : ContentConfig
 
 	public UIButton toggleSortEach;
 
+	public UIButton toggleHighlightEnemy;
+
 	public UISelectableGroup groupBackerFilter;
 
 	public UISelectableGroup groupBorder;
@@ -144,6 +146,10 @@ public class ContentConfigGame : ContentConfig
 		toggleShippingResult.SetToggle(base.config.game.showShippingResult, delegate(bool on)
 		{
 			base.config.game.showShippingResult = on;
+		});
+		toggleHighlightEnemy.SetToggle(base.config.game.highlightEnemy, delegate(bool on)
+		{
+			base.config.game.highlightEnemy = on;
 		});
 		toggleAdvanceMenu.SetToggle(base.config.game.advancedMenu, delegate(bool on)
 		{

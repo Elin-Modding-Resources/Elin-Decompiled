@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ContentFaction : EContent
@@ -86,33 +87,46 @@ public class ContentFaction : EContent
 	{
 		UIList uIList = listFaction;
 		uIList.Clear();
-		uIList.callbacks = new UIList.Callback<Spatial, ItemGeneral>
+		uIList.callbacks = new UIList.Callback<Zone, ItemGeneral>
 		{
-			onClick = delegate(Spatial a, ItemGeneral b)
+			onClick = delegate(Zone a, ItemGeneral b)
 			{
-				if (a is Zone)
-				{
-					info.SetZone(a as Zone);
-				}
+				info.SetZone(a);
 			},
-			onInstantiate = delegate(Spatial a, ItemGeneral b)
+			onInstantiate = delegate(Zone a, ItemGeneral b)
 			{
 				b.SetSound();
 				b.SetMainText(a.Name);
+				b.SetMainText(((!a.IsPCFaction) ? "" : ((a == EClass.pc.homeZone) ? "★" : "☆")) + a.Name + ((a.influence == 0) ? "" : (" (" + a.influence + ")")));
 				b.Build();
 			}
 		};
+		List<Zone> list = new List<Zone>();
 		foreach (Spatial value in EClass.game.spatials.map.Values)
 		{
-			if (value is Zone && value.parent == EClass.pc.currentZone.Region && value.mainFaction == EClass.pc.faction)
+			if (value is Zone && value.parent == EClass.pc.currentZone.Region && (value.mainFaction == EClass.pc.faction || (value.visitCount != 0 && value is Zone_Town)))
 			{
-				uIList.Add(value);
+				list.Add(value as Zone);
 			}
+		}
+		EClass.game.spatials.ranks.GetList();
+		list.Sort((Zone a, Zone b) => GetSortVal(b) - GetSortVal(a));
+		foreach (Zone item in list)
+		{
+			uIList.Add(item);
 		}
 		uIList.Refresh();
 		if (uIList.items.Count == 0)
 		{
 			info.Clear();
+		}
+		static int GetSortVal(Zone z)
+		{
+			if (!z.IsPCFaction)
+			{
+				return -10000000 + z.source.dev;
+			}
+			return 10000000 - z.uid;
 		}
 	}
 }

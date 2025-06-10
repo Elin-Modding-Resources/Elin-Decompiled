@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -122,48 +123,62 @@ public class UIFactionInfo : EMono
 	{
 		zone = _zone;
 		FactionBranch branch = zone.branch;
+		bool isPCFaction = zone.IsPCFaction;
+		RankedZone rankedZone = (from a in EMono.game.spatials.ranks.GetList()
+			where a.z == zone
+			select a).First();
 		gx = zone.x;
 		gy = zone.y;
 		note.Clear();
 		note.AddHeader("HeaderNoteFaction", zone.Name);
 		note.AddTopic("mainFaction", zone.mainFaction.Name ?? "");
-		note.AddTopic("branchLv", branch.TextLv);
-		note.AddTopic("wealth", branch.resources.worth.value.ToFormat() ?? "");
-		note.AddTopic("ranking", EMono.game.spatials.ranks.GetRankText(zone) ?? "");
-		note.AddTopic("rank_income", "rank_income2".lang(EMono.game.spatials.ranks.GetIncome(zone).ToFormat()));
-		note.Space();
-		note.AddHeaderTopic("landfeat".lang());
-		List<Element> list = _zone.ListLandFeats();
-		for (int i = 0; i < list.Count; i++)
+		note.AddTopic("influence", zone.influence.ToString() ?? "");
+		if (isPCFaction)
 		{
-			note.AddText(list[i].Name + (((i == 1 && branch.lv < 4) || (i == 2 && branch.lv < 7)) ? "landfeat_locked".lang() : ""));
+			note.AddTopic("branchLv", branch.TextLv);
 		}
-		note.Space();
-		note.AddHeaderTopic("listRoamers".lang());
-		int num = 0;
-		foreach (Chara value in EMono.game.cards.globalCharas.Values)
+		note.AddTopic("wealth", (isPCFaction ? branch.resources.worth.value : rankedZone.value).ToFormat() ?? "");
+		note.AddTopic("ranking", EMono.game.spatials.ranks.GetRankText(zone) ?? "");
+		if (isPCFaction)
 		{
-			if (value.homeBranch == branch)
+			note.AddTopic("rank_income", "rank_income2".lang(EMono.game.spatials.ranks.GetIncome(zone).ToFormat()));
+		}
+		if (isPCFaction)
+		{
+			note.Space();
+			note.AddHeaderTopic("landfeat".lang());
+			List<Element> list = _zone.ListLandFeats();
+			for (int i = 0; i < list.Count; i++)
 			{
-				note.AddText(value.Name);
-				num++;
-				if (num > 5)
+				note.AddText(list[i].Name + (((i == 1 && branch.lv < 4) || (i == 2 && branch.lv < 7)) ? "landfeat_locked".lang() : ""));
+			}
+			note.Space();
+			note.AddHeaderTopic("listRoamers".lang());
+			int num = 0;
+			foreach (Chara value in EMono.game.cards.globalCharas.Values)
+			{
+				if (value.homeBranch == branch)
 				{
-					break;
+					note.AddText(value.Name);
+					num++;
+					if (num > 5)
+					{
+						break;
+					}
 				}
 			}
-		}
-		if (num == 0)
-		{
-			note.AddText("????????");
-		}
-		note.Space();
-		note.AddHeaderTopic("listPolicies".lang());
-		foreach (Element value2 in branch.elements.dict.Values)
-		{
-			if (value2.source.category == "policy")
+			if (num == 0)
 			{
-				note.AddText(value2.Name);
+				note.AddText("????????");
+			}
+			note.Space();
+			note.AddHeaderTopic("listPolicies".lang());
+			foreach (Element value2 in branch.elements.dict.Values)
+			{
+				if (value2.source.category == "policy")
+				{
+					note.AddText(value2.Name);
+				}
 			}
 		}
 		note.Build();

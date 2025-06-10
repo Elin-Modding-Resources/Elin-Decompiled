@@ -9063,7 +9063,7 @@ public class Chara : Card, IPathfindWalker
 			if (num != 0)
 			{
 				float num2 = (float)a * 100f / (float)Mathf.Max(100 + num * 2, 10);
-				a = (int)num2 + ((EClass.rndf(1f) > num2 % 1f) ? 1 : 0);
+				a = (int)num2 + ((EClass.rndf(1f) < num2 % 1f) ? 1 : 0);
 			}
 		}
 		if (a == 0)
