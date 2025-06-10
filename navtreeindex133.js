@@ -1,5 +1,8 @@
 var NAVTREEINDEX133 =
 {
+"classWidgetSystemIndicator.html#af6825bacd6a8bde6c344c573cbe4ab37":[1,0,2039,8],
+"classWidgetTracker.html":[1,0,2040],
+"classWidgetTracker.html#a01abf9b80f646807e83609467e08c07e":[1,0,2040,10],
 "classWidgetTracker.html#a3616753be4180c315d0b44c584da4985":[1,0,2040,12],
 "classWidgetTracker.html#a3f49050cc201369be163b0af875de077":[1,0,2040,8],
 "classWidgetTracker.html#a4642ec07619e6720dc41e60a3f9e760f":[1,0,2040,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX133 =
 "classWindowChara.html#a63b4dcdeda1a688fdedd19be42a2d0b4":[1,0,2044,94],
 "classWindowChara.html#a65b8b1b3a3a7b89b9b6620dec9b06806":[1,0,2044,89],
 "classWindowChara.html#a70a092d2e2a6c8e93012ae513b05224c":[1,0,2044,41],
-"classWindowChara.html#a72de875009c7f8ae044626c669d977de":[1,0,2044,4],
-"classWindowChara.html#a740bbffdf516c3bf7791dd6f96f4305e":[1,0,2044,91],
-"classWindowChara.html#a773c9d6176424a8f6ba99fbbca0e2422":[1,0,2044,9],
-"classWindowChara.html#a773e96d4c19be235342eb8015c0ccd9f":[1,0,2044,3]
+"classWindowChara.html#a72de875009c7f8ae044626c669d977de":[1,0,2044,4]
 };

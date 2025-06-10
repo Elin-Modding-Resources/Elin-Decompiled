@@ -18,6 +18,7 @@ var classContentConfigGame =
     [ "toggleHaltOnSpotEnemy", "classContentConfigGame.html#a54b049bbb2815f9710ce5facf065c7b1", null ],
     [ "toggleHaltOnSpotTrap", "classContentConfigGame.html#a42ee116ef3fd444a810c8d9a1ff1c74a", null ],
     [ "toggleHideWeapon", "classContentConfigGame.html#a03fdfb07a8e9f56be9956ab89eea1a63", null ],
+    [ "toggleHighlightEnemy", "classContentConfigGame.html#ac67ba95c3a0864128ef623478a3df18e", null ],
     [ "toggleHoldDoubleClick", "classContentConfigGame.html#a0a4d1f0ffca9ad9cf0d0c7298f863229", null ],
     [ "toggleHoldMiddle", "classContentConfigGame.html#aee1520b2e99693c0065615b1048d7ed1", null ],
     [ "toggleMarkStack", "classContentConfigGame.html#a22c55d308bbba252d904d3ccd4b2a6d3", null ],

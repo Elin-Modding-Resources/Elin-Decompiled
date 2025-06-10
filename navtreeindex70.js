@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"classHotbarManager.html#a33084f53cee2aacb9ab8de3ba68dc943":[1,0,622,0],
 "classHotbarManager.html#a6d9fbb5e886f6dfdb09071c05212b0f6":[1,0,622,2],
 "classHotbarManager.html#af53b94f23ea108ff451105b2c44a4e8e":[1,0,622,1],
 "classHotbar_1_1Page.html":[1,0,621,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "classInvOwner.html#a26b04af8bf5c801622c1342a225f5787":[1,0,677,31],
 "classInvOwner.html#a27aaf2a557a797c285a3e2f6ca0c2992":[1,0,677,12],
 "classInvOwner.html#a298f5f9938948377de584dacd88dc309":[1,0,677,10],
-"classInvOwner.html#a29cbb99a980735a30c31a9c346e7e14d":[1,0,677,39],
-"classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9":[1,0,677,54]
+"classInvOwner.html#a29cbb99a980735a30c31a9c346e7e14d":[1,0,677,39]
 };

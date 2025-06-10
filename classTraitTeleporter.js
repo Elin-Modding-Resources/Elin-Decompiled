@@ -1,5 +1,6 @@
 var classTraitTeleporter =
 [
+    [ "CanStackTo", "classTraitTeleporter.html#a0cdbc89b19a9d960fff29ee811ffc422", null ],
     [ "OnChangePlaceState", "classTraitTeleporter.html#a4110ffe98170b471c57bc33e5aca87f2", null ],
     [ "SetName", "classTraitTeleporter.html#a22ce50c2eb094f47e298fab1fdee4f4f", null ],
     [ "TrySetAct", "classTraitTeleporter.html#a77cd454a972c0519c9f10b83622fb236", null ],

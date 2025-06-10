@@ -1,5 +1,6 @@
 var NAVTREEINDEX114 =
 {
+"classTraitBinocular.html#a7e33b7814533e1e666e5e9623509efd2":[1,0,1424,0],
 "classTraitBitch.html":[1,0,1425],
 "classTraitBitch.html#a0229b481536a7dc8ab0f33f98c8cfcef":[1,0,1425,0],
 "classTraitBitch.html#ab408dea815eb741838f705f5702046f7":[1,0,1425,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitContainerShared.html#ad1c35637c320a062119c4a541ba3ec91":[1,0,1480,0],
 "classTraitContainerShop.html":[1,0,1481],
 "classTraitContainerUnburnable.html":[1,0,1482],
-"classTraitCooker.html":[1,0,1483],
-"classTraitCooker.html#a407d967ec67ff0423d8a96c772772f3f":[1,0,1483,1]
+"classTraitCooker.html":[1,0,1483]
 };

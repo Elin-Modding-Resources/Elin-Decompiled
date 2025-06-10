@@ -1,5 +1,6 @@
 var NAVTREEINDEX108 =
 {
+"classTargetTypeGround.html#a8185c612184b00ed8edebe386d12d744":[1,0,1262,1],
 "classTargetTypeParty.html":[1,0,1263],
 "classTargetTypeParty.html#a4fe344796ab24fc83e6230a923035a13":[1,0,1263,0],
 "classTargetTypeParty.html#a9df6ba725763954f95eaec03862552ae":[1,0,1263,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX108 =
 "classTaskMine.html":[1,0,1283],
 "classTaskMine.html#a060fee64a88701e1ca142e0f9f029bf2":[1,0,1283,2],
 "classTaskMine.html#a0fe0c4a94fc5b1f48b7a1462b8234a60":[1,0,1283,5],
-"classTaskMine.html#a109f65ae62b982bea3b97177f96725eb":[1,0,1283,14],
-"classTaskMine.html#a2a4272f6a8f0f91af4b25c8adb0c2230":[1,0,1283,17]
+"classTaskMine.html#a109f65ae62b982bea3b97177f96725eb":[1,0,1283,14]
 };

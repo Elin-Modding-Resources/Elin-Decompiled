@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1705,5],
 "classTraitPainter.html":[1,0,1706],
 "classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea":[1,0,1706,1],
 "classTraitPainter.html#a676298524aad36fa4b67bfd137c69a12":[1,0,1706,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitSalaryChest.html":[1,0,1768],
 "classTraitSalaryChest.html#a04617e0bc88d81de8892425be3753925":[1,0,1768,1],
 "classTraitSalaryChest.html#a0c24817e7280837e708d252f51490260":[1,0,1768,0],
-"classTraitSalesTag.html":[1,0,1769],
-"classTraitSalesTag.html#a1847e16f59895662a5404130593c0aab":[1,0,1769,3]
+"classTraitSalesTag.html":[1,0,1769]
 };

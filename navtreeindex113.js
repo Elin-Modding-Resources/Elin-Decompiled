@@ -1,5 +1,6 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#ac45c76ca50bef4ccac766640350165f4":[1,0,1386,182],
 "classTrait.html#ac4966fed692d07ed9ac3a189a90caa1a":[1,0,1386,17],
 "classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79":[1,0,1386,99],
 "classTrait.html#ac7ab36c3665e29a4409d9e3390e3f2a3":[1,0,1386,164],
@@ -248,6 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitBill.html#a3c97a6202f16d622d01ef1d8050ecc2f":[1,0,1423,0],
 "classTraitBinocular.html":[1,0,1424],
 "classTraitBinocular.html#a3b5c8c0f8d6890a013ce77a26ee94079":[1,0,1424,1],
-"classTraitBinocular.html#a46a3ece4b05416679f5908918d675d56":[1,0,1424,2],
-"classTraitBinocular.html#a7e33b7814533e1e666e5e9623509efd2":[1,0,1424,0]
+"classTraitBinocular.html#a46a3ece4b05416679f5908918d675d56":[1,0,1424,2]
 };

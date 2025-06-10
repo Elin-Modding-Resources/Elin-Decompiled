@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"classGrowSystem.html#ab9f10adb899d78bdd81163f4619bb26a":[1,0,569,23],
 "classGrowSystem.html#ac304007393c8bc2aa72f38b8cebf0251":[1,0,569,18],
 "classGrowSystem.html#ac472ef27a3b0cea02b320b9cc7b57be2":[1,0,569,65],
 "classGrowSystem.html#ad2a474240347fdf1f78c4198d1cce587":[1,0,569,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "classHappinessManager.html":[1,0,596],
 "classHappinessManager.html#a77ed2b931d37e961a366fcabf2be5a35":[1,0,596,1],
 "classHappinessManager.html#aa02d31c3e7f9a1e81f72d1f24af88758":[1,0,596,4],
-"classHappinessManager.html#aa5282f58fac2a34b45bd8c03b6c7bfda":[1,0,596,3],
-"classHappinessManager.html#ada2e0cff45ba4bb7d8d50786a1a221b3":[1,0,596,5]
+"classHappinessManager.html#aa5282f58fac2a34b45bd8c03b6c7bfda":[1,0,596,3]
 };

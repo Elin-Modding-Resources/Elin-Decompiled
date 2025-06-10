@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.150 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.152 Stable</span>
    </div>
   </td>
  </tr>
@@ -224,7 +224,16 @@ $(document).ready(function(){initNavTree('TraitTeleporter_8cs_source.html',''); 
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            s = <span class="stringliteral">&quot;_engraved&quot;</span>.lang(<span class="keywordtype">id</span>, s);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classTraitTeleporter.html#a0cdbc89b19a9d960fff29ee811ffc422">  134</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitTeleporter.html#a0cdbc89b19a9d960fff29ee811ffc422">CanStackTo</a>(<a class="code hl_class" href="classThing.html">Thing</a> to)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != to.<a class="code hl_function" href="classBaseCard.html#a37d75bafa1ca0522652554af0e354f11">GetStr</a>(31))</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">return</span> base.CanStackTo(to);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
 <div class="ttc" id="aActInput_8cs_html_a0b87c74553636e0d52d296c7664e7564"><div class="ttname"><a href="ActInput_8cs.html#a0b87c74553636e0d52d296c7664e7564">ActInput</a></div><div class="ttdeci">ActInput</div><div class="ttdef"><b>Definition:</b> <a href="ActInput_8cs_source.html#l00001">ActInput.cs:2</a></div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a></div><div class="ttdeci">PlaceState</div><div class="ttdef"><b>Definition:</b> <a href="PlaceState_8cs_source.html#l00001">PlaceState.cs:2</a></div></div>
@@ -266,6 +275,7 @@ $(document).ready(function(){initNavTree('TraitTeleporter_8cs_source.html',''); 
 <div class="ttc" id="aclassTraitNewZone_html"><div class="ttname"><a href="classTraitNewZone.html">TraitNewZone</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitNewZone_8cs_source.html#l00003">TraitNewZone.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitNewZone_html_aa61a82c68c59451f3df12768d3aa1984"><div class="ttname"><a href="classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984">TraitNewZone.zone</a></div><div class="ttdeci">Zone zone</div><div class="ttdef"><b>Definition:</b> <a href="TraitNewZone_8cs_source.html#l00005">TraitNewZone.cs:6</a></div></div>
 <div class="ttc" id="aclassTraitTeleporter_html"><div class="ttname"><a href="classTraitTeleporter.html">TraitTeleporter</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitTeleporter_8cs_source.html#l00003">TraitTeleporter.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitTeleporter_html_a0cdbc89b19a9d960fff29ee811ffc422"><div class="ttname"><a href="classTraitTeleporter.html#a0cdbc89b19a9d960fff29ee811ffc422">TraitTeleporter.CanStackTo</a></div><div class="ttdeci">override bool CanStackTo(Thing to)</div><div class="ttdef"><b>Definition:</b> <a href="TraitTeleporter_8cs_source.html#l00134">TraitTeleporter.cs:134</a></div></div>
 <div class="ttc" id="aclassTraitTeleporter_html_a14bb9eb09bdd5f58ade2ec65c2788a9c"><div class="ttname"><a href="classTraitTeleporter.html#a14bb9eb09bdd5f58ade2ec65c2788a9c">TraitTeleporter.IsTeleport</a></div><div class="ttdeci">override bool IsTeleport</div><div class="ttdef"><b>Definition:</b> <a href="TraitTeleporter_8cs_source.html#l00023">TraitTeleporter.cs:23</a></div></div>
 <div class="ttc" id="aclassTraitTeleporter_html_a22ce50c2eb094f47e298fab1fdee4f4f"><div class="ttname"><a href="classTraitTeleporter.html#a22ce50c2eb094f47e298fab1fdee4f4f">TraitTeleporter.SetName</a></div><div class="ttdeci">override void SetName(ref string s)</div><div class="ttdef"><b>Definition:</b> <a href="TraitTeleporter_8cs_source.html#l00126">TraitTeleporter.cs:126</a></div></div>
 <div class="ttc" id="aclassTraitTeleporter_html_a3f158449655d0697742adccd620425d6"><div class="ttname"><a href="classTraitTeleporter.html#a3f158449655d0697742adccd620425d6">TraitTeleporter.TryTeleport</a></div><div class="ttdeci">override bool TryTeleport()</div><div class="ttdef"><b>Definition:</b> <a href="TraitTeleporter_8cs_source.html#l00062">TraitTeleporter.cs:62</a></div></div>

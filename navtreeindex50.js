@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"classCoreConfig_1_1CameraConfig.html#a140de5dfc721213e6d8f11eb61f06df9":[1,0,386,1,6],
 "classCoreConfig_1_1CameraConfig.html#a28ef63bae5baae34c6a01f7cada6777c":[1,0,386,1,13],
 "classCoreConfig_1_1CameraConfig.html#a2ee35ef04a5ac0cd3253f5c3b5caf299":[1,0,386,1,3],
 "classCoreConfig_1_1CameraConfig.html#a32d3846137ecee9dcef05f8385399091":[1,0,386,1,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "classCoreDebug.html#a2d6f36f1c61a191a16d8fdefa62ad2be":[1,0,387,70],
 "classCoreDebug.html#a31de3e997347e8d96979a90439cebfe0":[1,0,387,59],
 "classCoreDebug.html#a3236e48f598717810b6dcb9fc4f66643":[1,0,387,76],
-"classCoreDebug.html#a33766f3b281c68073daa37a455d5edd2":[1,0,387,145],
-"classCoreDebug.html#a3416f9ec187fda7e992d27f297f0dcd0":[1,0,387,107]
+"classCoreDebug.html#a33766f3b281c68073daa37a455d5edd2":[1,0,387,145]
 };

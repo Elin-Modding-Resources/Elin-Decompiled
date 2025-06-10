@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitManager.html#a081802c5d65cca165bcb166eace19913":[1,0,1643,5],
 "classTraitManager.html#a5c7be3389262c6008368f88f346b7761":[1,0,1643,7],
 "classTraitManager.html#a7bf4a93c42e4356203fc8384b749e68b":[1,0,1643,0],
 "classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273":[1,0,1643,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitPaintBoard.html#a2246016312bcd9dd29eace932f52f6e9":[1,0,1705,4],
 "classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1705,0],
 "classTraitPaintBoard.html#a2e38431eb54463fd6a7f3bd4598dd149":[1,0,1705,2],
-"classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1705,1],
-"classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1705,5]
+"classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1705,1]
 };

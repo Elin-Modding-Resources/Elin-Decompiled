@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.150 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.152 Stable</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f158449655d0697742adccd620425d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ce50c2eb094f47e298fab1fdee4f4f"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitTeleporter.html#a22ce50c2eb094f47e298fab1fdee4f4f">SetName</a> (ref string s)</td></tr>
 <tr class="separator:a22ce50c2eb094f47e298fab1fdee4f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cdbc89b19a9d960fff29ee811ffc422"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitTeleporter.html#a0cdbc89b19a9d960fff29ee811ffc422">CanStackTo</a> (<a class="el" href="classThing.html">Thing</a> to)</td></tr>
+<tr class="separator:a0cdbc89b19a9d960fff29ee811ffc422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTraitNewZone"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTraitNewZone')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTraitNewZone.html">TraitNewZone</a></td></tr>
 <tr class="memitem:ae0df02573fce410f2e3dab1fc991c1fe inherit pub_methods_classTraitNewZone"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitNewZone.html#ae0df02573fce410f2e3dab1fc991c1fe">OnImportMap</a> ()</td></tr>
 <tr class="separator:ae0df02573fce410f2e3dab1fc991c1fe inherit pub_methods_classTraitNewZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -755,6 +757,46 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="TraitTeleporter_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitTeleporter_8cs_source.html">TraitTeleporter.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0cdbc89b19a9d960fff29ee811ffc422" name="a0cdbc89b19a9d960fff29ee811ffc422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cdbc89b19a9d960fff29ee811ffc422">&#9670;&#160;</a></span>CanStackTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool TraitTeleporter.CanStackTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classThing.html">Thing</a>&#160;</td>
+          <td class="paramname"><em>to</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classTrait.html#a4b2d59088504ce0145c3096fb99645fc">Trait</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="TraitTeleporter_8cs_source.html#l00134">134</a> of file <a class="el" href="TraitTeleporter_8cs_source.html">TraitTeleporter.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != to.<a class="code hl_function" href="classBaseCard.html#a37d75bafa1ca0522652554af0e354f11">GetStr</a>(31))</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> base.CanStackTo(to);</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="ttc" id="aclassBaseCard_html_a37d75bafa1ca0522652554af0e354f11"><div class="ttname"><a href="classBaseCard.html#a37d75bafa1ca0522652554af0e354f11">BaseCard.GetStr</a></div><div class="ttdeci">string GetStr(int id, string defaultStr=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00054">BaseCard.cs:54</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseCard_8cs_source.html#l00054">BaseCard.GetStr()</a>.</p>
+
+</div>
+</div>
 <a id="a4110ffe98170b471c57bc33e5aca87f2" name="a4110ffe98170b471c57bc33e5aca87f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4110ffe98170b471c57bc33e5aca87f2">&#9670;&#160;</a></span>OnChangePlaceState()</h2>
 
@@ -1149,9 +1191,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   16</span>        }</div>
 <div class="line"><span class="lineno">   17</span>    }</div>
 <div class="ttc" id="aclassBaseCard_html_a0b4a87d58880cf73c22170e42605b923"><div class="ttname"><a href="classBaseCard.html#a0b4a87d58880cf73c22170e42605b923">BaseCard.SetStr</a></div><div class="ttdeci">void SetStr(int id, string value=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00063">BaseCard.cs:63</a></div></div>
-<div class="ttc" id="aclassBaseCard_html_a37d75bafa1ca0522652554af0e354f11"><div class="ttname"><a href="classBaseCard.html#a37d75bafa1ca0522652554af0e354f11">BaseCard.GetStr</a></div><div class="ttdeci">string GetStr(int id, string defaultStr=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00054">BaseCard.cs:54</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l01294">Zone.GetSpawnPos()</a>, <a class="el" href="TeleportManager_8cs_source.html#l00037">TeleportManager.GetTeleportZone()</a>, and <a class="el" href="TeleportManager_8cs_source.html#l00018">TeleportManager.SetID()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l01299">Zone.GetSpawnPos()</a>, <a class="el" href="TeleportManager_8cs_source.html#l00037">TeleportManager.GetTeleportZone()</a>, and <a class="el" href="TeleportManager_8cs_source.html#l00018">TeleportManager.SetID()</a>.</p>
 
 </div>
 </div>

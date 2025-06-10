@@ -1,5 +1,6 @@
 var NAVTREEINDEX115 =
 {
+"classTraitCooker.html#a407d967ec67ff0423d8a96c772772f3f":[1,0,1483,1],
 "classTraitCooker.html#a67e9ed5046f389a1c664d41ed6193c51":[1,0,1483,3],
 "classTraitCooker.html#a8b4cce75ee58cbab2725611a4dc60ce6":[1,0,1483,0],
 "classTraitCooker.html#a912c97e1cccd75a289d656cfaa78a9fe":[1,0,1483,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitDrink.html#ad9b0a48d51f67c076e30b33b0a677834":[1,0,1521,1],
 "classTraitDrink.html#adcd5e846d9fdd1e3cfbe692ad2fcb84d":[1,0,1521,8],
 "classTraitDrink.html#ae71cd26e116c46e80fdbb5d13f27048f":[1,0,1521,19],
-"classTraitDrink.html#aee4631f0388761dc3024f09b46ddbfe9":[1,0,1521,3],
-"classTraitDrink.html#af09a4c0047023ec0dafca8e1a7b6e7fd":[1,0,1521,2]
+"classTraitDrink.html#aee4631f0388761dc3024f09b46ddbfe9":[1,0,1521,3]
 };

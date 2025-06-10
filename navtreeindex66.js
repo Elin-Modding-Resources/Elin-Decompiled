@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"classGlobalGoalExplore.html":[1,0,539],
 "classGlobalGoalExplore.html#a689769ea5b7cf54a36d8bfd8cefca1ca":[1,0,539,0],
 "classGlobalGoalVisitAndStay.html":[1,0,540],
 "classGlobalGoalVisitAndStay.html#a162170fc0af8541f55bfc026cd3e29d4":[1,0,540,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "classGrowSystem.html#aac6278e9765227e16e062e1d79f598c6":[1,0,569,57],
 "classGrowSystem.html#aad7964ae6bf55495bdabdafba3cc5c6f":[1,0,569,66],
 "classGrowSystem.html#ab028808110e94251906390f66f446389":[1,0,569,20],
-"classGrowSystem.html#ab1b371c9b7bcec41814c9b256028e20f":[1,0,569,35],
-"classGrowSystem.html#ab9f10adb899d78bdd81163f4619bb26a":[1,0,569,23]
+"classGrowSystem.html#ab1b371c9b7bcec41814c9b256028e20f":[1,0,569,35]
 };
