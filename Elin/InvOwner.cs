@@ -256,11 +256,6 @@ public class InvOwner : EClass
 				Msg.Say("markedImportant");
 				return false;
 			}
-			if (inv.owner.isChara && inv.owner.Chara.IsPCFaction && !inv.owner.IsPC && thing2.IsRangedWeapon)
-			{
-				thing2.ammoData = null;
-				thing2.c_ammo = 0;
-			}
 			if (startTransaction)
 			{
 				dragItemCard.from.thing = thing2;
@@ -1036,11 +1031,6 @@ public class InvOwner : EClass
 		if (shitDestOwner.Container.isChara && !shitDestOwner.owner.IsPC && !shitDestOwner.owner.Chara.CanAcceptItem(thing))
 		{
 			return false;
-		}
-		if (b.invOwner.owner.isChara && b.invOwner.owner.Chara.IsPCFaction && !b.invOwner.owner.IsPC && thing.IsRangedWeapon)
-		{
-			thing.ammoData = null;
-			thing.c_ammo = 0;
 		}
 		if (EInput.isShiftDown)
 		{

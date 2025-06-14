@@ -4,17 +4,7 @@ public class TraitMerchantBlack : TraitMerchant
 
 	public override int CostRerollShop => 2;
 
-	public override ShopType ShopType
-	{
-		get
-		{
-			if (!Guild.Thief.IsCurrentZone || Guild.Thief.relation.rank >= 4)
-			{
-				return ShopType.Blackmarket;
-			}
-			return ShopType.None;
-		}
-	}
+	public override ShopType ShopType => ShopType.Blackmarket;
 
 	public override bool CanSellStolenGoods => true;
 

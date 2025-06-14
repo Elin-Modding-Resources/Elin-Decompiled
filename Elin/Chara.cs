@@ -1217,7 +1217,8 @@ public class Chara : Card, IPathfindWalker
 			return EClass.sources.backers.map[base.c_idBacker].Name;
 		}
 		string text = base.c_altName ?? source.GetName(this);
-		text = text.Replace("#ele4", MainElement.source.GetAltname(2)).Replace("#ele3", MainElement.source.GetAltname(1)).Replace("#ele2", MainElement.source.GetAltname(0))
+		text = text.Replace("#ele5", MainElement.source.GetAltname(3)).Replace("#ele4", MainElement.source.GetAltname(2)).Replace("#ele3", MainElement.source.GetAltname(1))
+			.Replace("#ele2", MainElement.source.GetAltname(0))
 			.Replace("#ele", MainElement.source.GetName().ToLower());
 		if (base.c_bossType == BossType.Evolved)
 		{
@@ -1526,6 +1527,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		_affinity = 0;
 		interest = 100;
+		ClampInitialSkill();
 		CalculateMaxStamina();
 		Refresh();
 		stamina.value = stamina.max;

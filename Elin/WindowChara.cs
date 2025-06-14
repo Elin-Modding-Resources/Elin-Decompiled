@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using PrimitiveUI.Examples;
@@ -915,9 +916,18 @@ public class WindowChara : WindowController
 		{
 			AddText("info_criminal".lang());
 		}
-		if (!chara.IsPC && chara.c_daysWithPC > 0)
+		if (!chara.IsPC)
 		{
-			AddText("info_daysWithPC".lang(chara.c_daysWithPC.ToString() ?? ""));
+			int num = chara.GetAffinityExpBonus() - 100;
+			if (num != 0)
+			{
+				AddText("affinity_exp_bonus".lang(chara.affinity.Name, ((num > 0) ? "+" : "") + num));
+			}
+			if (chara.c_daysWithPC > 0)
+			{
+				num = chara.GetDaysTogetherBonus() - 100;
+				AddText("info_daysWithPC".lang(chara.c_daysWithPC.ToString() ?? "") + Environment.NewLine + "daystogether_bonus".lang(((num > 0) ? "+" : "") + num));
+			}
 		}
 		if (EClass.debug.showExtra)
 		{

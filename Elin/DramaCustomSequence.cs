@@ -728,7 +728,12 @@ public class DramaCustomSequence : EClass
 		});
 		Method(delegate
 		{
-			if (EClass.player.IsCriminal && !EClass._zone.AllowCriminal && !EClass._zone.IsPCFaction && !c.trait.AllowCriminal)
+			if (c.trait is TraitMerchantBlack && Guild.Thief.relation.rank < 4 && (Guild.Thief.IsCurrentZone || (!(EClass._zone.id == "derphy") && !(EClass._zone.id == "kapul"))))
+			{
+				SE.Play("click_chat");
+				TempTalkTopic("shop_blackmarket_noaccess", StepEnd);
+			}
+			else if (EClass.player.IsCriminal && !EClass._zone.AllowCriminal && !EClass._zone.IsPCFaction && !c.trait.AllowCriminal)
 			{
 				SE.Play("click_chat");
 				TempTalkTopic("shop_criminal", StepEnd);

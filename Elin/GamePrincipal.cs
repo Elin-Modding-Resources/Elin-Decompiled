@@ -145,6 +145,9 @@ public class GamePrincipal : EClass
 	public bool disableUsermapBenefit;
 
 	[JsonProperty]
+	public bool realAdv;
+
+	[JsonProperty]
 	public bool dropRate;
 
 	[JsonProperty]

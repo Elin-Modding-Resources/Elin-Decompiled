@@ -120,8 +120,10 @@ public class CardRow : RenderRow
 		{
 			source = c.Chara.MainElement.source;
 		}
-		text = ((source == Element.Void.source) ? text.Replace("#ele4", "").Replace("#ele3", "").Replace("#ele2", "")
-			.Replace("#ele", "") : text.Replace("#ele4", source.GetAltname(2)).Replace("#ele3", source.GetAltname(1)).Replace("#ele2", source.GetAltname(0))
+		text = ((source == Element.Void.source) ? text.Replace("#ele5", "").Replace("#ele4", "").Replace("#ele3", "")
+			.Replace("#ele2", "")
+			.Replace("#ele", "") : text.Replace("#ele5", source.GetAltname(3)).Replace("#ele4", source.GetAltname(2)).Replace("#ele3", source.GetAltname(1))
+			.Replace("#ele2", source.GetAltname(0))
 			.Replace("#ele", source.GetName().ToLower()));
 		string text2 = GetText("aka");
 		if (text == "*r")

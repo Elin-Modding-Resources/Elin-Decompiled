@@ -583,7 +583,10 @@ public class FactionBranch : EClass
 			{
 				continue;
 			}
-			member.c_daysWithPC++;
+			if (member.IsPCParty || member.currentZone == EClass.pc.currentZone)
+			{
+				member.c_daysWithPC++;
+			}
 			if (member.memberType == FactionMemberType.Default)
 			{
 				if (EClass.rnd(3) == 0)

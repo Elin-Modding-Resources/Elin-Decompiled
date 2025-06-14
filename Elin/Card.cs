@@ -2843,9 +2843,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		if (flag && elements.Base(286) > 50)
+		if (flag)
 		{
-			elements.SetTo(286, 50 + (int)Mathf.Sqrt(elements.Base(286) - 50));
+			ClampInitialSkill();
 		}
 		Rand.SetSeed();
 		hp = MaxHP;
@@ -2855,27 +2855,55 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return this;
 	}
 
+	public void ClampInitialSkill()
+	{
+		if (elements.Base(286) > 50)
+		{
+			elements.SetTo(286, 50 + (int)Mathf.Sqrt(elements.Base(286) - 50));
+		}
+	}
+
 	public void AddExp(int a)
 	{
-		if (!IsPC)
-		{
-			a *= 2;
-			if (IsPCFaction)
-			{
-				a = a * Mathf.Clamp(100 + Chara.affinity.value / 10, 50, 200) / 100;
-				if (EClass.game.principal.petFeatExp)
-				{
-					a = a * (50 + EClass.game.principal.petFeatExpMtp * 50) / 100;
-				}
-			}
-		}
-		a = a * (100 + Evalue(1237) * 30) / 100;
+		a = a * GetExpMtp() / 100;
 		exp += a;
 		while (exp >= ExpToNext)
 		{
 			exp -= ExpToNext;
 			LevelUp();
 		}
+	}
+
+	public int GetExpMtp()
+	{
+		int num = 100;
+		if (!IsPC)
+		{
+			num *= 2;
+			if (IsPCFaction)
+			{
+				num = num * GetAffinityExpBonus() / 100;
+				if (EClass.game.principal.petFeatExp)
+				{
+					num = num * (50 + EClass.game.principal.petFeatExpMtp * 50) / 100;
+				}
+			}
+		}
+		return num * (100 + Evalue(1237) * 30) / 100;
+	}
+
+	public int GetAffinityExpBonus()
+	{
+		return Mathf.Clamp(100 + Chara.affinity.value / 10, 50, 200);
+	}
+
+	public int GetDaysTogetherBonus()
+	{
+		if (!IsPCFactionOrMinion)
+		{
+			return 100;
+		}
+		return 100 + EClass.curve(c_daysWithPC / 100 * 3, 100, 20, 70);
 	}
 
 	public void LevelUp()
@@ -7049,7 +7077,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			p *= 0.004999999888241291;
 			break;
 		default:
-			if (IsIdentified || (this.trait is TraitErohon && !sell))
+			if (IsIdentified || (this.trait is TraitErohon && !sell) || priceType == PriceType.Tourism)
 			{
 				if (blessedState == BlessedState.Blessed)
 				{

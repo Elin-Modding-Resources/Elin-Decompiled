@@ -99,6 +99,7 @@ public class AI_Slaughter : AI_TargetCard
 					}
 					else
 					{
+						target.Chara.c_uniqueData = null;
 						target.Chara.homeBranch.BanishMember(target.Chara, skipMsg: true);
 					}
 				}

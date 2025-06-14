@@ -277,6 +277,10 @@ public class ElementContainer : EClass
 		{
 			return;
 		}
+		if (!chain && a > 0 && Card != null && Card.isChara)
+		{
+			a = a * Card.Chara.GetDaysTogetherBonus() / 100;
+		}
 		int value = (element.UsePotential ? element.Potential : 100);
 		if (element.UseExpMod && a >= 0)
 		{

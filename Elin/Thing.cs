@@ -267,7 +267,7 @@ public class Thing : Card
 			{
 				if (bp.qualityBonus == 0)
 				{
-					num4 = EClass.rnd(EClass.rnd(11) + 1);
+					num4 = EClass.rnd(EClass.rnd(12) + 1);
 					if (num4 == 1 && EClass.rnd(3) != 0)
 					{
 						num4 = 0;
@@ -287,7 +287,11 @@ public class Thing : Card
 			}
 			if (num4 > 0)
 			{
-				SetEncLv(Mathf.Min(num4, 12));
+				if (num4 > 12)
+				{
+					num4 = 12;
+				}
+				SetEncLv(num4);
 			}
 		}
 		if (HasTag(CTAG.randomSkin))

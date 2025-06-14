@@ -111,7 +111,8 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		public override string GetName()
 		{
 			string text = GetText();
-			text = text.Replace("#ele4", "").Replace("#ele3", "").Replace("#ele2", "")
+			text = text.Replace("#ele5", "").Replace("#ele4", "").Replace("#ele3", "")
+				.Replace("#ele2", "")
 				.Replace("#ele", "");
 			if (text == "*r")
 			{
