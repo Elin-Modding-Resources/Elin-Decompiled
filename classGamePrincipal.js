@@ -23,6 +23,7 @@ var classGamePrincipal =
     [ "permadeath", "classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9", null ],
     [ "petFeatExp", "classGamePrincipal.html#a56980908c63bf9df8a4e3982561461b6", null ],
     [ "petFeatExpMtp", "classGamePrincipal.html#a2be217677d0059e921b6ae7a07a697a5", null ],
+    [ "realAdv", "classGamePrincipal.html#ac5dc979a30cd2463aedc0247dfea108c", null ],
     [ "socre", "classGamePrincipal.html#a0ad5d93312657968a904932dbdae1e5c", null ],
     [ "tax", "classGamePrincipal.html#a8b5f1b36de3ea0520445e3c3f3fe3733", null ],
     [ "IsCustom", "classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979", null ]

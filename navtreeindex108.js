@@ -1,5 +1,10 @@
 var NAVTREEINDEX108 =
 {
+"classTargetTypeChara.html#aa076c608cc5f66c2a3fe56614c0a7871":[1,0,1260,1],
+"classTargetTypeEnemy.html":[1,0,1261],
+"classTargetTypeEnemy.html#ab5ec9046aa86e7ebe6f351c1972f2036":[1,0,1261,0],
+"classTargetTypeGround.html":[1,0,1262],
+"classTargetTypeGround.html#a6ec3c7ee6c9714b49a6da39ba687c45b":[1,0,1262,0],
 "classTargetTypeGround.html#a8185c612184b00ed8edebe386d12d744":[1,0,1262,1],
 "classTargetTypeParty.html":[1,0,1263],
 "classTargetTypeParty.html#a4fe344796ab24fc83e6230a923035a13":[1,0,1263,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX108 =
 "classTaskManager_1_1Designations.html#a766c3f8b7eb557f502c7a52223723228":[1,0,1282,0,0],
 "classTaskManager_1_1Designations.html#a8a01f6e9293ef3e8a327a644ab3b1b2d":[1,0,1282,0,2],
 "classTaskManager_1_1Designations.html#a8d16ae882e3694d6b480982abf3acd8d":[1,0,1282,0,5],
-"classTaskManager_1_1Designations.html#aad4bbcfbd0a6dc433cd134ba9457d293":[1,0,1282,0,8],
-"classTaskManager_1_1Designations.html#acf3d25ef9c5d0687bddc7fcb8e508121":[1,0,1282,0,6],
-"classTaskMine.html":[1,0,1283],
-"classTaskMine.html#a060fee64a88701e1ca142e0f9f029bf2":[1,0,1283,2],
-"classTaskMine.html#a0fe0c4a94fc5b1f48b7a1462b8234a60":[1,0,1283,5],
-"classTaskMine.html#a109f65ae62b982bea3b97177f96725eb":[1,0,1283,14]
+"classTaskManager_1_1Designations.html#aad4bbcfbd0a6dc433cd134ba9457d293":[1,0,1282,0,8]
 };

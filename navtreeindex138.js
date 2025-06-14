@@ -1,5 +1,10 @@
 var NAVTREEINDEX138 =
 {
+"classZone__StartVillage.html#a252569541d83a7dd063956b6026c64d1":[1,0,2117,0],
+"classZone__StartVillage.html#ae56bd9df897118e3367abb8379ed9c9c":[1,0,2117,1],
+"classZone__SubTown.html":[1,0,2118],
+"classZone__SubTown.html#a1005ced2822061588497d24a4d3ad226":[1,0,2118,0],
+"classZone__SubTown.html#a7ff8f9f4885273a54000b3eba12c622d":[1,0,2118,1],
 "classZone__Tent.html":[1,0,2119],
 "classZone__Tent.html#a3bedebfdf9768e021471e38a856e0f00":[1,0,2119,2],
 "classZone__Tent.html#a48b4536cd96758c79b05d6e0722dd326":[1,0,2119,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX138 =
 "interfaceAlgorithms_1_1IPriorityQueue.html#af1887da066d9386166f1622e4569296e":[1,0,0,1,1],
 "interfaceICardParent.html":[1,0,653],
 "interfaceICardParent.html#adb41e4e345432f3b206bb36d2e0b130d":[1,0,653,2],
-"interfaceICardParent.html#aeb6336ce4e60d5dd104dfa2a18c316be":[1,0,653,1],
-"interfaceICardParent.html#af2c73f4a0e87b8f4eb68d3113c486b1b":[1,0,653,0],
-"interfaceIChangeLanguage.html":[1,0,654],
-"interfaceIChangeLanguage.html#a99c5e19f621da36834aa3ec4e7b0636c":[1,0,654,0],
-"interfaceIChangeResolution.html":[1,0,655],
-"interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d":[1,0,655,0]
+"interfaceICardParent.html#aeb6336ce4e60d5dd104dfa2a18c316be":[1,0,653,1]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX117 =
 {
+"classTraitGeneMachine.html#aaba778eaed8a003cd53f8b1f995546b9":[1,0,1580,8],
+"classTraitGeneMachine.html#abc5664c3b0f81910c90a5edabae3fa6f":[1,0,1580,0],
+"classTraitGeneMachine.html#acd96fe02bc2700863076918aa3dabcc7":[1,0,1580,5],
+"classTraitGeneMachine.html#af1ad39a68f732324fc81ce0d0963e0b8":[1,0,1580,4],
+"classTraitGenerator.html":[1,0,1581],
 "classTraitGenerator.html#a11a723c61164373246f873d3c26d06be":[1,0,1581,7],
 "classTraitGenerator.html#a4f1bf038188ad91be9ad5df2e5fc66a6":[1,0,1581,8],
 "classTraitGenerator.html#a5be285cfd5a23ffd594bcaf6348404ac":[1,0,1581,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1640,0],
 "classTraitMahjong.html#a86d68283a84acf869c68193fddf3a198":[1,0,1640,3],
 "classTraitMahjong.html#ab0a37c49a996da5b11700a4799287790":[1,0,1640,1],
-"classTraitMahjong.html#ac0ab7deae7e14aa5ee8f1bf073126970":[1,0,1640,2],
-"classTraitMaid.html":[1,0,1641],
-"classTraitMaid.html#a3f5b42d62953fd0ee2abec62a1650b89":[1,0,1641,0],
-"classTraitMailPost.html":[1,0,1642],
-"classTraitManager.html":[1,0,1643],
-"classTraitManager.html#a067d996cb2fecff60760aac97a0b837e":[1,0,1643,2]
+"classTraitMahjong.html#ac0ab7deae7e14aa5ee8f1bf073126970":[1,0,1640,2]
 };

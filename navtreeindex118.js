@@ -1,5 +1,10 @@
 var NAVTREEINDEX118 =
 {
+"classTraitMaid.html":[1,0,1641],
+"classTraitMaid.html#a3f5b42d62953fd0ee2abec62a1650b89":[1,0,1641,0],
+"classTraitMailPost.html":[1,0,1642],
+"classTraitManager.html":[1,0,1643],
+"classTraitManager.html#a067d996cb2fecff60760aac97a0b837e":[1,0,1643,2],
 "classTraitManager.html#a081802c5d65cca165bcb166eace19913":[1,0,1643,5],
 "classTraitManager.html#a5c7be3389262c6008368f88f346b7761":[1,0,1643,7],
 "classTraitManager.html#a7bf4a93c42e4356203fc8384b749e68b":[1,0,1643,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitOven.html":[1,0,1703],
 "classTraitOven.html#a1f80d356b2342a2e64725cf208df224f":[1,0,1703,0],
 "classTraitPaint.html":[1,0,1704],
-"classTraitPaintBoard.html":[1,0,1705],
-"classTraitPaintBoard.html#a20f72d48f1b7286fd038d9c5736ef41b":[1,0,1705,3],
-"classTraitPaintBoard.html#a2246016312bcd9dd29eace932f52f6e9":[1,0,1705,4],
-"classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1705,0],
-"classTraitPaintBoard.html#a2e38431eb54463fd6a7f3bd4598dd149":[1,0,1705,2],
-"classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1705,1]
+"classTraitPaintBoard.html":[1,0,1705]
 };

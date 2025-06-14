@@ -1,5 +1,10 @@
 var NAVTREEINDEX119 =
 {
+"classTraitPaintBoard.html#a20f72d48f1b7286fd038d9c5736ef41b":[1,0,1705,3],
+"classTraitPaintBoard.html#a2246016312bcd9dd29eace932f52f6e9":[1,0,1705,4],
+"classTraitPaintBoard.html#a290e02ac8c652174f6dd58d4fb7c800a":[1,0,1705,0],
+"classTraitPaintBoard.html#a2e38431eb54463fd6a7f3bd4598dd149":[1,0,1705,2],
+"classTraitPaintBoard.html#a7a87ffa8797bc7143516b9a5479a10e3":[1,0,1705,1],
 "classTraitPaintBoard.html#ada4555a148c835ae16b2ac7fbdf5455a":[1,0,1705,5],
 "classTraitPainter.html":[1,0,1706],
 "classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea":[1,0,1706,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitRuneMoldSun.html":[1,0,1766],
 "classTraitRuneMoldSun.html#a81942ebbbe6681ff721b95abce3a2ffb":[1,0,1766,0],
 "classTraitSack.html":[1,0,1767],
-"classTraitSack.html#a0849f9fa92dacafa1eee0cc4fdc9987a":[1,0,1767,0],
-"classTraitSack.html#a7f0bf4fff6720ad40009df89a4c380f9":[1,0,1767,1],
-"classTraitSalaryChest.html":[1,0,1768],
-"classTraitSalaryChest.html#a04617e0bc88d81de8892425be3753925":[1,0,1768,1],
-"classTraitSalaryChest.html#a0c24817e7280837e708d252f51490260":[1,0,1768,0],
-"classTraitSalesTag.html":[1,0,1769]
+"classTraitSack.html#a0849f9fa92dacafa1eee0cc4fdc9987a":[1,0,1767,0]
 };

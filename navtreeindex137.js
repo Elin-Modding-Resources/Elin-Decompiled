@@ -1,5 +1,10 @@
 var NAVTREEINDEX137 =
 {
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a054fc7866c93a2496fd9048c493e6aed":[1,0,2162,0,15],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a06b9281e396db002010bde1de57262eb":[1,0,2162,0,0],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a08a38277b0309070706f6652eeae9a53":[1,0,2162,0,12],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a1649aed298f99d587e2eb30c1db5946b":[1,0,2162,0,9],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a183b62c7f067711f9c5a54913c054617":[1,0,2162,0,8],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a1df77512d7438a05a42148249f6c9092":[1,0,2162,0,10],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a258f49887ef8d14ac268c92b02503aaa":[1,0,2162,0,13],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a2ad9d63b69c4a10a5cc9cad923133bc4":[1,0,2162,0,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX137 =
 "classZone__StartSiteCave.html":[1,0,2116],
 "classZone__StartSiteCave.html#a2106dc0e66e389e282195e3ff6aaede7":[1,0,2116,1],
 "classZone__StartSiteCave.html#a5a5ab353838208ee74c22cf1a777c29e":[1,0,2116,0],
-"classZone__StartVillage.html":[1,0,2117],
-"classZone__StartVillage.html#a252569541d83a7dd063956b6026c64d1":[1,0,2117,0],
-"classZone__StartVillage.html#ae56bd9df897118e3367abb8379ed9c9c":[1,0,2117,1],
-"classZone__SubTown.html":[1,0,2118],
-"classZone__SubTown.html#a1005ced2822061588497d24a4d3ad226":[1,0,2118,0],
-"classZone__SubTown.html#a7ff8f9f4885273a54000b3eba12c622d":[1,0,2118,1]
+"classZone__StartVillage.html":[1,0,2117]
 };

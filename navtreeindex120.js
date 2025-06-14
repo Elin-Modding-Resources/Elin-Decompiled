@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitSack.html#a7f0bf4fff6720ad40009df89a4c380f9":[1,0,1767,1],
+"classTraitSalaryChest.html":[1,0,1768],
+"classTraitSalaryChest.html#a04617e0bc88d81de8892425be3753925":[1,0,1768,1],
+"classTraitSalaryChest.html#a0c24817e7280837e708d252f51490260":[1,0,1768,0],
+"classTraitSalesTag.html":[1,0,1769],
 "classTraitSalesTag.html#a1847e16f59895662a5404130593c0aab":[1,0,1769,3],
 "classTraitSalesTag.html#a192160d4f2b8384e2c2021b91b2cd8e3":[1,0,1769,4],
 "classTraitSalesTag.html#a25581dfef060629517263b86bb68ce12":[1,0,1769,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitStoryBookHome.html#a14b9c17c5033ce2e84c0b6293039c109":[1,0,1825,0],
 "classTraitStove.html":[1,0,1826],
 "classTraitStove.html#ac88747a2273b8fda4dcd70701f9d671a":[1,0,1826,0],
-"classTraitStrangeGirl.html":[1,0,1827],
-"classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8":[1,0,1827,0],
-"classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3":[1,0,1827,1],
-"classTraitSwing.html":[1,0,1828],
-"classTraitSwing.html#a34af8b2a20141f86ae3dab5b249a0d66":[1,0,1828,0],
-"classTraitSwing.html#a65c5fe1d3a1255e1fd77e5e9ea58d015":[1,0,1828,1]
+"classTraitStrangeGirl.html":[1,0,1827]
 };
