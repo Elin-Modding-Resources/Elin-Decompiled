@@ -475,6 +475,9 @@ var hierarchy =
               ] ]
             ] ],
             [ "BaseStance", "classBaseStance.html", [
+              [ "BaseSong", "classBaseSong.html", [
+                [ "StanceSongSleep", "classStanceSongSleep.html", null ]
+              ] ],
               [ "StanceFury", "classStanceFury.html", null ],
               [ "StanceIai", "classStanceIai.html", null ],
               [ "StanceManaCost", "classStanceManaCost.html", null ],
@@ -967,6 +970,7 @@ var hierarchy =
       [ "Person", "classPerson.html", null ],
       [ "Player", "classPlayer.html", null ],
       [ "Player.Flags", "classPlayer_1_1Flags.html", null ],
+      [ "Player.Stats", "classPlayer_1_1Stats.html", null ],
       [ "Point", "classPoint.html", [
         [ "LogicalPoint", "classLogicalPoint.html", [
           [ "LogicalFire", "classLogicalFire.html", null ]
@@ -3159,7 +3163,6 @@ var hierarchy =
     [ "CoreDebug.StartSetting", "classCoreDebug_1_1StartSetting.html", null ],
     [ "GameSetting.StartSetting", "classGameSetting_1_1StartSetting.html", null ],
     [ "CoreRef.StateIcons", "classCoreRef_1_1StateIcons.html", null ],
-    [ "Player.Stats", "classPlayer_1_1Stats.html", null ],
     [ "PrimitiveUI.StrokeStyle", "classPrimitiveUI_1_1StrokeStyle.html", null ],
     [ "SubPassData", "classSubPassData.html", null ],
     [ "UIInventory.Tab", "classUIInventory_1_1Tab.html", null ],

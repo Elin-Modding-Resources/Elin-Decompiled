@@ -24,6 +24,7 @@ var classENC =
     [ "eheluck", "classENC.html#aa7fc17245e590db0dea62ac57a2cea30", null ],
     [ "encHit", "classENC.html#a3dc9b5f8557459c047b2f8c87aba5876", null ],
     [ "encSpell", "classENC.html#a082acb3ccb9281afd0da55f67c959264", null ],
+    [ "encTail", "classENC.html#a1bfcdad0c620c34aa12c4f0c02814440", null ],
     [ "expMod", "classENC.html#a0ce600fd7031e892c5357353d1e3487b", null ],
     [ "force_weapon", "classENC.html#a9f1818d1783e6c234846718c768c8596", null ],
     [ "IDS", "classENC.html#a0ea03827875acf944710cf32043f6a83", null ],

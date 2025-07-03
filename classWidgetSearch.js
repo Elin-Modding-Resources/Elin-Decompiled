@@ -14,6 +14,7 @@ var classWidgetSearch =
     [ "cards", "classWidgetSearch.html#ac0ce10330b7045de8b221d9194bba79d", null ],
     [ "cgResult", "classWidgetSearch.html#a8f90c09f549d9d2bc381c654c2f70ce8", null ],
     [ "Instance", "classWidgetSearch.html#a686c7b45318a5618092249ac98448ce1", null ],
+    [ "isDirty", "classWidgetSearch.html#a82bf4b2cd9c9eeed8710900ed55ebf15", null ],
     [ "lastZone", "classWidgetSearch.html#a9374246aa53d60d6cdff693c26135ff6", null ],
     [ "listWords", "classWidgetSearch.html#ad6026cf6b6ad02b82d9d25fdf541b376", null ],
     [ "selected", "classWidgetSearch.html#a6fffbd39f451735d25f7185387dc2285", null ],

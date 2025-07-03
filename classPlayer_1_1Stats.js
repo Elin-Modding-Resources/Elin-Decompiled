@@ -1,6 +1,7 @@
 var classPlayer_1_1Stats =
 [
     [ "GetShippingBonus", "classPlayer_1_1Stats.html#a7ea7dd5fee508438475b04643b52a86d", null ],
+    [ "_longs", "classPlayer_1_1Stats.html#ada6b14866ee7fc79fa32cfe4ee13510d", null ],
     [ "allyDeath", "classPlayer_1_1Stats.html#ab85ff926e445e3a4aea392a745684295", null ],
     [ "days", "classPlayer_1_1Stats.html#ad7fe6db5d3ff138870b89de937470dde", null ],
     [ "death", "classPlayer_1_1Stats.html#aba555ea8a12aa6e4d618808f692065ef", null ],
@@ -21,5 +22,12 @@ var classPlayer_1_1Stats =
     [ "taxBills", "classPlayer_1_1Stats.html#a076320f325be3bf11d6d5590c395047c", null ],
     [ "taxBillsPaid", "classPlayer_1_1Stats.html#a62d0999ce40548d7d9e664d023a1517a", null ],
     [ "timeElapsed", "classPlayer_1_1Stats.html#a25aa49994e7c001cb8cc6f934878fbbb", null ],
-    [ "turns", "classPlayer_1_1Stats.html#a41b344b7dc933f0e764313a390949319", null ]
+    [ "turns", "classPlayer_1_1Stats.html#a41b344b7dc933f0e764313a390949319", null ],
+    [ "brush", "classPlayer_1_1Stats.html#a5b05d59c1542baafd720efa9005c0769", null ],
+    [ "clean", "classPlayer_1_1Stats.html#a84e326e192127f9a31c6e8e110d20f30", null ],
+    [ "eggHatched", "classPlayer_1_1Stats.html#a0d861b9b25b0efa6a81d35b30e4a9482", null ],
+    [ "kimo", "classPlayer_1_1Stats.html#a65588225970c26f8a09e91db9ea2a4c8", null ],
+    [ "nefiaBeaten", "classPlayer_1_1Stats.html#a2c1ef75d0893707ccb013935fd5ea8dc", null ],
+    [ "plow", "classPlayer_1_1Stats.html#a56a973aa8b004dd419ce952b791210ec", null ],
+    [ "shear", "classPlayer_1_1Stats.html#ae6a32ebf4cfd9521a80e2642b7cc37e2", null ]
 ];

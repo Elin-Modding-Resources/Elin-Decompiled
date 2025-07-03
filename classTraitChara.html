@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.153 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.166 Nightly</span>
    </div>
   </td>
  </tr>
@@ -846,20 +846,21 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  163</span>        <span class="keywordflow">switch</span> (<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>)</div>
 <div class="line"><span class="lineno">  164</span>        {</div>
 <div class="line"><span class="lineno">  165</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;adv_gaki&quot;</span>:</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;adv_kiria&quot;</span>:</div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;adv_ivory&quot;</span>:</div>
-<div class="line"><span class="lineno">  168</span>            min = 4;</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> Mathf.Clamp(<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> / 10, min, 6);</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;adv_yukiimo&quot;</span>:</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;adv_kiria&quot;</span>:</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;adv_ivory&quot;</span>:</div>
+<div class="line"><span class="lineno">  169</span>            min = 4;</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span> Mathf.Clamp(<a class="code hl_property" href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> / 10, min, 6);</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00031">Card.cs:31</a></div></div>
 <div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00369">Card.cs:370</a></div></div>
 <div class="ttc" id="aclassTraitChara_html_acd41bf1785e6918b297a392c75f7befc"><div class="ttname"><a href="classTraitChara.html#acd41bf1785e6918b297a392c75f7befc">TraitChara.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00015">TraitChara.cs:15</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Card_8cs_source.html#l00031">Card.id</a>, <a class="el" href="Card_8cs_source.html#l00370">Card.LV</a>, and <a class="el" href="TraitChara_8cs_source.html#l00015">owner</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitChara_8cs_source.html#l00174">GetAdvRankText()</a>, and <a class="el" href="LayerQuestBoard_8cs_source.html#l00169">LayerQuestBoard.RefreshRanking()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitChara_8cs_source.html#l00175">GetAdvRankText()</a>, and <a class="el" href="LayerQuestBoard_8cs_source.html#l00169">LayerQuestBoard.RefreshRanking()</a>.</p>
 
 </div>
 </div>
@@ -886,11 +887,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitChara_8cs_source.html#l00174">174</a> of file <a class="el" href="TraitChara_8cs_source.html">TraitChara.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>    {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordtype">int</span> advRank = <a class="code hl_function" href="classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3">GetAdvRank</a>();</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTraitChara.html#a87668c63e44d245f2c84f2d39aa268e2">ListRank</a>[advRank];</div>
-<div class="line"><span class="lineno">  178</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitChara_8cs_source.html#l00175">175</a> of file <a class="el" href="TraitChara_8cs_source.html">TraitChara.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>    {</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordtype">int</span> advRank = <a class="code hl_function" href="classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3">GetAdvRank</a>();</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTraitChara.html#a87668c63e44d245f2c84f2d39aa268e2">ListRank</a>[advRank];</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
 <div class="ttc" id="aclassTraitChara_html_a87668c63e44d245f2c84f2d39aa268e2"><div class="ttname"><a href="classTraitChara.html#a87668c63e44d245f2c84f2d39aa268e2">TraitChara.ListRank</a></div><div class="ttdeci">static string[] ListRank</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00013">TraitChara.cs:13</a></div></div>
 <div class="ttc" id="aclassTraitChara_html_afc8a3d0d54d7140a40672748356b27a3"><div class="ttname"><a href="classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3">TraitChara.GetAdvRank</a></div><div class="ttdeci">int GetAdvRank()</div><div class="ttdef"><b>Definition:</b> <a href="TraitChara_8cs_source.html#l00160">TraitChara.cs:160</a></div></div>
 </div><!-- fragment -->
@@ -1029,7 +1030,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitChara_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitChara_8cs_source.html">TraitChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitChara_8cs_source.html#l00174">GetAdvRankText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitChara_8cs_source.html#l00175">GetAdvRankText()</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1148,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitChara_8cs_source.html#l00115">115</a> of file <a class="el" href="TraitChara_8cs_source.html">TraitChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03058">Chara.CanReplace()</a>, <a class="el" href="Chara_8cs_source.html#l02270">Chara.IsEnemyOnPath()</a>, <a class="el" href="Chara_8cs_source.html#l05301">Chara.Kick()</a>, and <a class="el" href="Chara_8cs_source.html#l02991">Chara.TryPush()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03058">Chara.CanReplace()</a>, <a class="el" href="Chara_8cs_source.html#l02270">Chara.IsEnemyOnPath()</a>, <a class="el" href="Chara_8cs_source.html#l05308">Chara.Kick()</a>, and <a class="el" href="Chara_8cs_source.html#l02991">Chara.TryPush()</a>.</p>
 
 </div>
 </div>
@@ -1869,7 +1870,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitChara_8cs_source.html#l00067">67</a> of file <a class="el" href="TraitChara_8cs_source.html">TraitChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l01583">FactionBranch.CountMembers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l01584">FactionBranch.CountMembers()</a>.</p>
 
 </div>
 </div>
