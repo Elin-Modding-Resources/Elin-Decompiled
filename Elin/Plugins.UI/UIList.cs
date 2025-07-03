@@ -415,7 +415,7 @@ public class UIList : BaseList
 		{
 			value.OnSelect(activeList);
 		}
-		if (this != activeList)
+		if (this != activeList && (bool)group)
 		{
 			group.Select(-1);
 		}
