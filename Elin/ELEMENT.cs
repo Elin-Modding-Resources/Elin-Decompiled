@@ -9,11 +9,11 @@ public class ELEMENT
 
 	public const int rare = 751;
 
-	public const int cute = 752;
-
 	public const int antidote = 753;
 
 	public const int nerve = 754;
+
+	public const int blood = 755;
 
 	public const int hotspring = 756;
 
@@ -27,7 +27,7 @@ public class ELEMENT
 
 	public const int air = 763;
 
-	public const int blood = 755;
+	public const int cute = 752;
 
 	public const int _void = 0;
 
@@ -77,8 +77,8 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[35]
 	{
-		750, 751, 752, 753, 754, 756, 759, 760, 761, 762,
-		763, 755, 0, 3, 1, 2, 5, 10, 11, 12,
+		750, 751, 753, 754, 755, 756, 759, 760, 761, 762,
+		763, 752, 0, 3, 1, 2, 5, 10, 11, 12,
 		13, 14, 16, 17, 18, 15, 21, 22, 23, 24,
 		25, 26, 29, 85, 20
 	};

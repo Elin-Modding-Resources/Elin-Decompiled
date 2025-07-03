@@ -167,7 +167,7 @@ public class ActEffect : EClass
 							flag4 = true;
 						}
 					}
-					else if (e.id != 910 || !item.IsFood || !item.category.IsChildOf("foodstuff"))
+					else if ((e.id != 910 && e.id != 911) || !item.IsFood || !item.category.IsChildOf("foodstuff"))
 					{
 						flag4 = true;
 					}

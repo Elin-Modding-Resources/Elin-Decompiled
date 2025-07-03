@@ -28,7 +28,10 @@ public class Zone_User : Zone
 		{
 			return;
 		}
-		WidgetMainText.Instance.NewLine();
+		if ((bool)WidgetMainText.Instance)
+		{
+			WidgetMainText.Instance.NewLine();
+		}
 		string[] array = EClass._map.exportSetting.textWelcome.Replace("\\n", "").Split(Environment.NewLine.ToCharArray());
 		int num = 0;
 		string[] array2 = array;
@@ -36,7 +39,10 @@ public class Zone_User : Zone
 		{
 			Msg.SetColor("save");
 			Msg.SayRaw("<i>" + text.Replace(Environment.NewLine, "") + "</i>");
-			WidgetMainText.Instance.NewLine();
+			if ((bool)WidgetMainText.Instance)
+			{
+				WidgetMainText.Instance.NewLine();
+			}
 			num++;
 			if (num >= 5)
 			{

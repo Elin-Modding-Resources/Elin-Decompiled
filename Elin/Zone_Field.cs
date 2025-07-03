@@ -104,7 +104,17 @@ public class Zone_Field : Zone
 		}
 	}
 
-	public override bool IsUnderwater => IdBiome == "Undersea";
+	public override bool IsUnderwater
+	{
+		get
+		{
+			if (!(IdBiome == "Undersea"))
+			{
+				return elements.Has(3606);
+			}
+			return true;
+		}
+	}
 
 	public override void OnGenerateMap()
 	{

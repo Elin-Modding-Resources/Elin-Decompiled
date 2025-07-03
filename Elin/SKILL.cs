@@ -1,22 +1,18 @@
 public class SKILL
 {
-	public const int shield = 123;
-
-	public const int armorHeavy = 122;
-
-	public const int armorLight = 120;
-
-	public const int weaponBlunt = 111;
-
-	public const int PDR = 55;
+	public const int fireproof = 50;
 
 	public const int weaponCrossbow = 109;
 
-	public const int fireproof = 50;
-
-	public const int acidproof = 51;
-
 	public const int weaponScythe = 110;
+
+	public const int weaponBlunt = 111;
+
+	public const int armorLight = 120;
+
+	public const int armorHeavy = 122;
+
+	public const int shield = 123;
 
 	public const int twohand = 130;
 
@@ -66,39 +62,41 @@ public class SKILL
 
 	public const int weaponDagger = 107;
 
-	public const int EDR = 56;
-
-	public const int evasionPerfect = 57;
-
-	public const int life = 60;
-
-	public const int mana = 61;
-
-	public const int vigor = 62;
-
-	public const int DV = 64;
-
-	public const int PV = 65;
-
-	public const int HIT = 66;
-
-	public const int DMG = 67;
-
-	public const int FPV = 68;
+	public const int END = 71;
 
 	public const int STR = 70;
 
-	public const int END = 71;
+	public const int FPV = 68;
+
+	public const int DMG = 67;
+
+	public const int HIT = 66;
+
+	public const int PV = 65;
 
 	public const int DEX = 72;
+
+	public const int DV = 64;
+
+	public const int mana = 61;
+
+	public const int life = 60;
+
+	public const int evasionPerfect = 57;
+
+	public const int EDR = 56;
+
+	public const int PDR = 55;
+
+	public const int acidproof = 51;
+
+	public const int vigor = 62;
 
 	public const int PER = 73;
 
 	public const int LER = 74;
 
 	public const int WIL = 75;
-
-	public const int MAG = 76;
 
 	public const int weaponPolearm = 106;
 
@@ -112,9 +110,9 @@ public class SKILL
 
 	public const int martial = 100;
 
-	public const int throwing = 108;
-
 	public const int antiMagic = 93;
+
+	public const int penetration = 92;
 
 	public const int vopal = 91;
 
@@ -128,7 +126,9 @@ public class SKILL
 
 	public const int CHA = 77;
 
-	public const int penetration = 92;
+	public const int MAG = 76;
+
+	public const int throwing = 108;
 
 	public const int gathering = 250;
 
@@ -268,13 +268,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		123, 122, 120, 111, 55, 109, 50, 51, 110, 130,
-		133, 132, 242, 241, 240, 237, 235, 230, 227, 226,
-		225, 220, 207, 200, 152, 151, 150, 135, 134, 245,
-		210, 102, 107, 56, 57, 60, 61, 62, 64, 65,
-		66, 67, 68, 70, 71, 72, 73, 74, 75, 76,
-		106, 105, 104, 103, 101, 100, 108, 93, 91, 90,
-		80, 79, 78, 77, 92, 250, 131, 256, 916, 917,
+		50, 109, 110, 111, 120, 122, 123, 130, 133, 132,
+		242, 241, 240, 237, 235, 230, 227, 226, 225, 220,
+		207, 200, 152, 151, 150, 135, 134, 245, 210, 102,
+		107, 71, 70, 68, 67, 66, 65, 72, 64, 61,
+		60, 57, 56, 55, 51, 62, 73, 74, 75, 106,
+		105, 104, 103, 101, 100, 93, 92, 91, 90, 80,
+		79, 78, 77, 76, 108, 250, 131, 256, 916, 917,
 		918, 919, 920, 921, 922, 923, 924, 925, 926, 950,
 		951, 952, 915, 953, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 965, 970, 971, 972, 255, 954, 914,

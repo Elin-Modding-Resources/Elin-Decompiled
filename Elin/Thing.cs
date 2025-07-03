@@ -282,7 +282,7 @@ public class Thing : Card
 				}
 				else if (bp.qualityBonus >= 10)
 				{
-					num4 = Mathf.Min(bp.qualityBonus / 10 + 2, 7) + EClass.rnd(EClass.rnd(5) + 1);
+					num4 = Mathf.Min(bp.qualityBonus / 10 + 2, 8) + EClass.rnd(EClass.rnd(5) + 1);
 				}
 			}
 			if (num4 > 0)

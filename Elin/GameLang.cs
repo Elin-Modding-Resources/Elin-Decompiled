@@ -97,6 +97,7 @@ public class GameLang : EClass
 		stringBuilder.Replace("#festival", EClass._zone.IsFestival ? (EClass._zone.id + "_festival").lang() : "_festival".lang());
 		stringBuilder.Replace("#brother2", (EClass.pc.IsMale ? "brother" : "sister").lang());
 		stringBuilder.Replace("#brother", Lang.GetList(EClass.pc.IsMale ? "bro" : "sis").RandomItem());
+		stringBuilder.Replace("#onii2", Lang.GetList(EClass.pc.IsMale ? "onii2" : "onee2").RandomItem());
 		stringBuilder.Replace("#onii", Lang.GetList(EClass.pc.IsMale ? "onii" : "onee").RandomItem());
 		stringBuilder.Replace("#gender", Lang.GetList("gendersDrama")[EClass.pc.bio.gender]);
 		stringBuilder.Replace("#he", ((EClass.pc.bio.gender == 2) ? "he" : "she").lang());

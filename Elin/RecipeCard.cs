@@ -470,10 +470,17 @@ public class RecipeCard : Recipe
 			t.isRoofItem = true;
 			t.SetPlaceState(PlaceState.roaming);
 		}
-		t.ForeachPoint(delegate(Point p, bool main)
+		try
 		{
-			CheckBlock(p);
-		});
+			t.ForeachPoint(delegate(Point p, bool main)
+			{
+				CheckBlock(p);
+			});
+		}
+		catch
+		{
+			Debug.LogWarning("kokodayo");
+		}
 		t.freePos = freePos;
 		if (freePos)
 		{

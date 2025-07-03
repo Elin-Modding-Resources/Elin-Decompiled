@@ -58,6 +58,7 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 			}
 		}
 		Msg.Say("incubate", chara);
+		EClass.player.stats.eggHatched++;
 		return chara;
 	}
 

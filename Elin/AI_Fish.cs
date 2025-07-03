@@ -374,7 +374,7 @@ public class AI_Fish : AIAct
 			int num5 = 5;
 			if (EClass.Branch != null)
 			{
-				num5 += EClass.Branch.Evalue(3604) * 20 + EClass.Branch.Evalue(3605) * 20 + EClass.Branch.Evalue(3706) * 25;
+				num5 += EClass.Branch.Evalue(3604) * 20 + EClass.Branch.Evalue(3605) * 20 + EClass.Branch.Evalue(3606) * 20 + EClass.Branch.Evalue(3706) * 25;
 			}
 			if (EClass._zone is Zone_Kapul)
 			{

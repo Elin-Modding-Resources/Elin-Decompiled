@@ -163,6 +163,7 @@ public class TraitChara : Trait
 		switch (owner.id)
 		{
 		case "adv_gaki":
+		case "adv_yukiimo":
 		case "adv_kiria":
 		case "adv_ivory":
 			min = 4;

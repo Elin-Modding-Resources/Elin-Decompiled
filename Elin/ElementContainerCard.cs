@@ -181,7 +181,7 @@ public class ElementContainerCard : ElementContainer
 			if (owner.IsPCParty)
 			{
 				int id = e.id;
-				if (id == 70 || (uint)(id - 72) <= 1u)
+				if ((id == 70 || (uint)(id - 72) <= 1u) && EClass.game.activeZone != null)
 				{
 					int num2 = 0;
 					foreach (Chara member in EClass.pc.party.members)

@@ -687,11 +687,11 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
-			if (!renderer.isSynced)
+			if (renderer == null || !renderer.isSynced)
 			{
 				if (host != null)
 				{
-					return host.renderer.isSynced;
+					return host.isSynced;
 				}
 				return false;
 			}
@@ -1688,7 +1688,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			_Speed = Evalue(79) + Evalue(407) / 2;
 		}
-		if (body.GetSlot(37, onlyEmpty: false)?.thing != null && HasElement(1209))
+		if (body.GetSlot(37, onlyEmpty: false)?.thing != null && HasElement(1209) && !HasElement(419))
 		{
 			_Speed -= 25;
 			info?.AddText(-25, EClass.sources.elements.map[1209].GetName());
@@ -4421,6 +4421,12 @@ public class Chara : Card, IPathfindWalker
 			EQ_CAT("torso");
 			EQ_CAT("arm");
 			return;
+		case "adv_yukiimo":
+			if (onCreate)
+			{
+				EQ_ID("tail_snowleopard");
+			}
+			break;
 		case "adv_kiria":
 			if (onCreate)
 			{
@@ -5223,6 +5229,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (EClass._zone.IsNefia)
 			{
+				EClass.player.stats.nefiaBeaten++;
 				EClass._zone.GetTopZone().isConquered = true;
 				EClass.Sound.StopBGM(2f);
 				SE.Play("Jingle/fanfare2");

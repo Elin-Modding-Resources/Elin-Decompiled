@@ -34,6 +34,8 @@ public class WidgetSearch : WidgetCodex
 
 	public Zone lastZone;
 
+	private bool isDirty;
+
 	public Extra extra => base.config.extra as Extra;
 
 	public override SearchType type => SearchType.Search;
@@ -85,10 +87,11 @@ public class WidgetSearch : WidgetCodex
 			return;
 		}
 		base.Update();
-		if (lastZone != EMono._zone)
+		if (lastZone != EMono._zone || isDirty)
 		{
 			lastSearch = "";
 			Search(field.text);
+			isDirty = false;
 		}
 	}
 
@@ -302,6 +305,10 @@ public class WidgetSearch : WidgetCodex
 			},
 			onRedraw = delegate(Card a, ButtonGrid b, int i)
 			{
+				if (a.isDestroyed)
+				{
+					isDirty = true;
+				}
 				b.SetCard(a, ButtonGrid.Mode.Search);
 			},
 			onList = delegate

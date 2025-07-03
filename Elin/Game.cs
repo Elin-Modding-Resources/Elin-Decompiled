@@ -450,6 +450,10 @@ public class Game : EClass
 			}
 		});
 		TryAddQuest("into_darkness", "exile_kettle");
+		if (version.IsBelow(0, 23, 155))
+		{
+			AddAdventurer("adv_yukiimo");
+		}
 		if (version.IsBelow(0, 23, 100))
 		{
 			int num = player.recipes.knownRecipes.TryGetValue("trainingDummy_heavy", 0);
@@ -892,7 +896,7 @@ public class Game : EClass
 	public void AddAdventurers()
 	{
 		List<Zone> source = world.region.ListTowns();
-		string[] array = new string[6] { "adv_kiria", "adv_gaki", "adv_wini", "adv_verna", "adv_ivory", "adv_mesherada" };
+		string[] array = new string[7] { "adv_kiria", "adv_gaki", "adv_wini", "adv_verna", "adv_ivory", "adv_mesherada", "adv_yukiimo" };
 		for (int i = 0; i < EClass.setting.balance.numAdv; i++)
 		{
 			Zone zone = source.RandomItem();
@@ -914,6 +918,27 @@ public class Game : EClass
 			zone.AddCard(chara);
 			cards.listAdv.Add(chara);
 		}
+	}
+
+	public void AddAdventurer(string id, Zone z = null)
+	{
+		if (z == null)
+		{
+			List<Zone> source = world.region.ListTowns();
+			do
+			{
+				z = source.RandomItem();
+			}
+			while ((z is Zone_SubTown && EClass.rnd(5) != 0) || z == EClass.pc.currentZone);
+		}
+		Chara chara = CharaGen.Create(id);
+		chara.SetHomeZone(z);
+		chara.global.transition = new ZoneTransition
+		{
+			state = ZoneTransition.EnterState.RandomVisit
+		};
+		z.AddCard(chara);
+		cards.listAdv.Add(chara);
 	}
 
 	public void GotoTitle(bool showDialog = true)

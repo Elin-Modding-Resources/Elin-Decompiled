@@ -64,6 +64,10 @@ public class AI_Steal : AI_TargetCard
 				if (EClass.rnd(2) == 0)
 				{
 					target = chara.AddThing(ThingGen.Create("money").SetNum(1 + EClass.rnd(chara.LV * 10)));
+					if (EClass.rnd(3) == 0)
+					{
+						chara.SetInt(30, EClass.world.date.GetRaw() + 1440);
+					}
 				}
 				else
 				{

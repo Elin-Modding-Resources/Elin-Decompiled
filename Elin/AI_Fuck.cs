@@ -279,6 +279,10 @@ public class AI_Fuck : AIAct
 			SuccubusExp(chara, chara2);
 			SuccubusExp(chara2, chara);
 			chara2.ModAffinity(chara, flag ? 10 : (-5));
+			if (chara == EClass.pc || chara2 == EClass.pc)
+			{
+				EClass.player.stats.kimo++;
+			}
 			if (!ntr || !chara.HasElement(1239) || chara2.HasElement(1216))
 			{
 				break;
@@ -303,6 +307,10 @@ public class AI_Fuck : AIAct
 			target.PlaySound("groomed");
 			target.PlayEffect("heal_tick");
 			target.hygiene.Mod(15);
+			if (chara == EClass.pc)
+			{
+				EClass.player.stats.brush++;
+			}
 			if (target == owner)
 			{
 				break;

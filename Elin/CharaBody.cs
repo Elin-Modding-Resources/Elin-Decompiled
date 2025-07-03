@@ -96,7 +96,7 @@ public class CharaBody : EClass
 		if (refresh && owner.isCreated && EClass.core.IsGameStarted)
 		{
 			owner.Refresh();
-			if (slot.elementId == 37 && owner.HasElement(1209))
+			if (slot.elementId == 37 && owner.HasElement(1209) && !thing.HasElement(419))
 			{
 				owner.Say("tail_free", owner);
 			}
@@ -251,7 +251,7 @@ public class CharaBody : EClass
 				owner.PlaySound("curse3");
 			}
 		}
-		if (slot.elementId == 37 && owner.HasElement(1209))
+		if (slot.elementId == 37 && owner.HasElement(1209) && !thing.HasElement(419))
 		{
 			owner.Say("tail_covered", owner);
 		}

@@ -1196,7 +1196,7 @@ public class Map : MapBounds, IPathfindGrid
 		Element element = Element.Create(ele);
 		List<Card> list = new List<Card>();
 		bool fire = ele == 910;
-		bool flag = ele == 911;
+		bool cold = ele == 911;
 		_ = fire;
 		List<Card> list2 = pos.ListCards();
 		if (fire && (pos.cell.IsSnowTile || pos.cell.IsTopWater))
@@ -1205,7 +1205,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		foreach (Card item in list2)
 		{
-			if (item.ResistLvFrom(ele) >= 3 || item.trait is TraitBlanket || (EClass.rnd(3) == 0 && !CanCook(item)) || (item.IsPCFaction && EClass.rnd(3) == 0) || (fire && item.HasCondition<ConWet>()) || (flag && item.HasCondition<ConBurning>()))
+			if (item.ResistLvFrom(ele) >= 3 || item.trait is TraitBlanket || (EClass.rnd(3) == 0 && !CanCook(item)) || (item.IsPCFaction && EClass.rnd(3) == 0) || (fire && item.HasCondition<ConWet>()) || (cold && item.HasCondition<ConBurning>()))
 			{
 				continue;
 			}
@@ -1292,39 +1292,46 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				continue;
 			}
-			bool flag2 = CanCook(item3);
+			bool flag = CanCook(item3);
 			string text = "";
-			if (flag2)
+			if (flag)
 			{
-				List<SourceThing.Row> list3 = new List<SourceThing.Row>();
-				foreach (RecipeSource item4 in RecipeManager.list)
+				if (fire)
 				{
-					if (!(item4.row is SourceThing.Row { isOrigin: false } row) || row.components.IsEmpty() || (row.components.Length >= 3 && !row.components[2].StartsWith('+')) || !row.Category.IsChildOf("meal"))
+					List<SourceThing.Row> list3 = new List<SourceThing.Row>();
+					foreach (RecipeSource item4 in RecipeManager.list)
 					{
-						continue;
-					}
-					if (!row.factory.IsEmpty())
-					{
-						switch (row.factory[0])
+						if (!(item4.row is SourceThing.Row { isOrigin: false } row) || row.components.IsEmpty() || (row.components.Length >= 3 && !row.components[2].StartsWith('+')) || !row.Category.IsChildOf("meal"))
 						{
-						case "chopper":
-						case "mixer":
-						case "camppot":
-						case "cauldron":
 							continue;
 						}
+						if (!row.factory.IsEmpty())
+						{
+							switch (row.factory[0])
+							{
+							case "chopper":
+							case "mixer":
+							case "camppot":
+							case "cauldron":
+								continue;
+							}
+						}
+						if (row.components[0].Split('|').Contains(item3.id) || row.components[0].Split('|').Contains(item3.sourceCard._origin))
+						{
+							list3.Add(row);
+						}
 					}
-					if (row.components[0].Split('|').Contains(item3.id) || row.components[0].Split('|').Contains(item3.sourceCard._origin))
+					if (list3.Count > 0)
 					{
-						list3.Add(row);
+						text = list3.RandomItem().id;
 					}
 				}
-				if (list3.Count > 0)
+				else
 				{
-					text = list3.RandomItem().id;
+					text = "711";
 				}
 			}
-			if (flag2 && !text.IsEmpty())
+			if (flag && !text.IsEmpty())
 			{
 				item3.GetRoot();
 				Thing thing2 = item3.Split(1);
@@ -1335,7 +1342,7 @@ public class Map : MapBounds, IPathfindGrid
 				thing3.elements.ModBase(2, EClass.curve(power / 10, 50, 10));
 				if (pos.IsSync)
 				{
-					Msg.Say((rootCard3 == item3) ? "cook_groundItem" : "cook_invItem", thing2, rootCard3, thing3.Name);
+					Msg.Say(((rootCard3 == item3) ? "cook_groundItem" : "cook_invItem") + (fire ? "" : "_cold"), thing2, rootCard3, thing3.Name);
 				}
 				if (rootCard3 == item3)
 				{
@@ -1385,7 +1392,7 @@ public class Map : MapBounds, IPathfindGrid
 		_ValidateInstalled(pos.x, pos.z);
 		bool CanCook(Card c)
 		{
-			if (fire && c.IsFood)
+			if ((fire || cold) && c.IsFood)
 			{
 				return c.category.IsChildOf("foodstuff");
 			}

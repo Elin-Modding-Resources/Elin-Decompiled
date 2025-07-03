@@ -1247,6 +1247,7 @@ public class FactionBranch : EClass
 		}
 		owner.landFeats = null;
 		owner.ListLandFeats();
+		owner.branch = null;
 	}
 
 	public void ValidateUpgradePolicies()

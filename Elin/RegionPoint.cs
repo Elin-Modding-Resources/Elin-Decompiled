@@ -34,7 +34,6 @@ public class RegionPoint : Point
 		Mathf.Min(num2 / 10, 4);
 		EClass.rnd(3 + Mathf.Min(num2 / 10, 4));
 		_ = 5;
-		Debug.Log(x + "/" + z + " road dist:" + roadDist + " homeDist:" + num + " dangerLv:" + num2);
 		dangerLv = num2 + 5;
 	}
 }

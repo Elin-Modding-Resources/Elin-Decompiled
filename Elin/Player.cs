@@ -57,51 +57,155 @@ public class Player : EClass
 		public UIInventory.InteractMode interactMode;
 	}
 
-	public class Stats
+	public class Stats : EClass
 	{
+		[JsonProperty]
+		public long[] _longs = new long[50];
+
+		[JsonProperty]
 		public double timeElapsed;
 
+		[JsonProperty]
 		public int kumi;
 
+		[JsonProperty]
 		public int mins;
 
+		[JsonProperty]
 		public int days;
 
+		[JsonProperty]
 		public int months;
 
+		[JsonProperty]
 		public int sieges;
 
+		[JsonProperty]
 		public int turns;
 
+		[JsonProperty]
 		public int kills;
 
+		[JsonProperty]
 		public int taxBills;
 
+		[JsonProperty]
 		public int taxBillsPaid;
 
+		[JsonProperty]
 		public int digs;
 
+		[JsonProperty]
 		public int shipNum;
 
+		[JsonProperty]
 		public int slept;
 
+		[JsonProperty]
 		public int death;
 
+		[JsonProperty]
 		public int allyDeath;
 
+		[JsonProperty]
 		public int deepest;
 
+		[JsonProperty]
 		public int gambleChest;
 
+		[JsonProperty]
 		public int gambleChestOpen;
 
+		[JsonProperty]
 		public long shipMoney;
 
-		[JsonIgnore]
 		public int lastShippingExp;
 
-		[JsonIgnore]
 		public int lastShippingExpMax;
+
+		public long nefiaBeaten
+		{
+			get
+			{
+				return _longs[10];
+			}
+			set
+			{
+				_longs[10] = value;
+			}
+		}
+
+		public long kimo
+		{
+			get
+			{
+				return _longs[11];
+			}
+			set
+			{
+				_longs[11] = value;
+			}
+		}
+
+		public long shear
+		{
+			get
+			{
+				return _longs[12];
+			}
+			set
+			{
+				_longs[12] = value;
+			}
+		}
+
+		public long brush
+		{
+			get
+			{
+				return _longs[13];
+			}
+			set
+			{
+				_longs[13] = value;
+			}
+		}
+
+		public long eggHatched
+		{
+			get
+			{
+				return _longs[14];
+			}
+			set
+			{
+				_longs[14] = value;
+			}
+		}
+
+		public long plow
+		{
+			get
+			{
+				return _longs[15];
+			}
+			set
+			{
+				_longs[15] = value;
+			}
+		}
+
+		public long clean
+		{
+			get
+			{
+				return _longs[16];
+			}
+			set
+			{
+				_longs[16] = value;
+			}
+		}
 
 		public int GetShippingBonus(long _a)
 		{

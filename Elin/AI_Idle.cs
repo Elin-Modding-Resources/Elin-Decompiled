@@ -381,6 +381,10 @@ public class AI_Idle : AIAct
 				}
 				if (owner != null)
 				{
+					if (!owner.IsPCFactionOrMinion)
+					{
+						EClass.pc.ai.Cancel();
+					}
 					owner.Teleport(nearestPoint);
 				}
 				yield return Success();

@@ -74,6 +74,7 @@ public class AI_Shear : AI_TargetCard
 					owner.elements.ModExp(237, 50 * furLv);
 					owner.stamina.Mod(-1);
 					target.Chara.ModAffinity(owner, 1);
+					EClass.player.stats.shear++;
 				}
 			}
 		}.SetDuration((6 + furLv * 6) * 100 / (100 + owner.Tool.material.hardness * 2), 3);

@@ -583,10 +583,10 @@ public class GoalCombat : Goal
 				{
 					foreach (Chara member2 in EClass.pc.party.members)
 					{
-						float num3 = 100f - (float)(member2.mana.value * 100) / MathF.Max(1f, member2.mana.max);
-						if (num3 > (float)num)
+						float num2 = 100f - (float)(member2.mana.value * 100) / MathF.Max(1f, member2.mana.max);
+						if (num2 > (float)num)
 						{
-							num = (int)num3;
+							num = (int)num2;
 						}
 					}
 				}
@@ -618,9 +618,16 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag8 = owner.HasCondition<StanceTaunt>();
-				bool flag9 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag8 && !flag9) ? 100 : ((!flag8 && flag9) ? 100 : 0));
+				bool flag6 = owner.HasCondition<StanceTaunt>();
+				bool flag7 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag6 && !flag7) ? 100 : ((!flag6 && flag7) ? 100 : 0));
+				break;
+			}
+			case "song":
+			{
+				bool flag9 = owner.HasCondition<BaseSong>();
+				bool flag10 = owner.mana.value > owner.mana.max / 3;
+				num = ((flag9 && !flag10) ? 100 : ((!flag9 && flag10) ? 100 : 0));
 				break;
 			}
 			case "melee":
@@ -704,13 +711,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag7 = text == "dot";
-				if (flag7 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag8 = text == "dot";
+				if (flag8 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag7)
+				if (num > 0 && flag8)
 				{
 					num += 10;
 				}
@@ -726,13 +733,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag6 = ability.act is ActBolt;
+				bool flag11 = ability.act is ActBolt;
 				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}
-				GetNumEnemy(flag6 ? 6 : 5);
-				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag6 ? 6 : 5) > 0))
+				GetNumEnemy(flag11 ? 6 : 5);
+				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag11 ? 6 : 5) > 0))
 				{
 					continue;
 				}
@@ -808,12 +815,12 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				int num2 = EClass._zone.CountMinions(owner);
-				if (num2 >= owner.MaxSummon)
+				int num3 = EClass._zone.CountMinions(owner);
+				if (num3 >= owner.MaxSummon)
 				{
 					continue;
 				}
-				num = tactics.P_Summon - 20 * num2 / owner.MaxSummon;
+				num = tactics.P_Summon - 20 * num3 / owner.MaxSummon;
 				break;
 			}
 			case "summonAlly":
@@ -906,36 +913,36 @@ public class GoalCombat : Goal
 				{
 					return 0;
 				}
-				float num6 = (float)c.hp / (float)c.MaxHP;
-				if (num6 > (isHOT ? 0.85f : 0.75f))
+				float num9 = (float)c.hp / (float)c.MaxHP;
+				if (num9 > (isHOT ? 0.85f : 0.75f))
 				{
 					return 0;
 				}
-				int num7 = tactics.P_Heal - (int)((float)tactics.P_Heal * num6) + (isHOT ? 50 : 25);
+				int num10 = tactics.P_Heal - (int)((float)tactics.P_Heal * num9) + (isHOT ? 50 : 25);
 				foreach (Condition condition in c.conditions)
 				{
 					if (condition is ConFear)
 					{
-						num7 += 10;
+						num10 += 10;
 					}
 					else if (condition is ConPoison)
 					{
-						num7 += 2;
+						num10 += 2;
 					}
 					else if (condition is ConConfuse)
 					{
-						num7 += 4;
+						num10 += 4;
 					}
 					else if (condition is ConDim)
 					{
-						num7 += 6;
+						num10 += 6;
 					}
 					else if (condition is ConBleed)
 					{
-						num7 += 8;
+						num10 += 8;
 					}
 				}
-				return num7;
+				return num10;
 			}
 		}
 		abilities.Sort((ItemAbility a, ItemAbility b) => b.priority - a.priority);
@@ -1021,8 +1028,8 @@ public class GoalCombat : Goal
 			{
 				if (chara2 != owner)
 				{
-					int num10 = owner.Dist(chara2);
-					if (num10 > sightRadius || !owner.CanSeeLos(chara2, num10))
+					int num6 = owner.Dist(chara2);
+					if (num6 > sightRadius || !owner.CanSeeLos(chara2, num6))
 					{
 						continue;
 					}
@@ -1038,11 +1045,11 @@ public class GoalCombat : Goal
 				return func(owner);
 			}
 			BuildCharaList();
-			int num4 = 0;
+			int num7 = 0;
 			foreach (Chara chara3 in charas)
 			{
-				int num5 = func(chara3);
-				if (num5 > 0)
+				int num8 = func(chara3);
+				if (num8 > 0)
 				{
 					if (isFriendlyAbility)
 					{
@@ -1059,21 +1066,21 @@ public class GoalCombat : Goal
 						}
 						if (chara3 != owner)
 						{
-							num5 += tactics.P_Party;
+							num8 += tactics.P_Party;
 						}
 					}
 					else if (!owner.IsHostile(chara3))
 					{
 						continue;
 					}
-					if (num5 >= num4)
+					if (num8 >= num7)
 					{
 						a.tg = chara3;
-						num4 = num5;
+						num7 = num8;
 					}
 				}
 			}
-			return num4;
+			return num7;
 		}
 		int GetAttackMod(Act a)
 		{
@@ -1081,30 +1088,30 @@ public class GoalCombat : Goal
 			{
 				return 0;
 			}
-			int num8 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
-			int num9 = -15 * tc.ResistLvFrom(num8);
-			switch (num8)
+			int num4 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
+			int num5 = -15 * tc.ResistLvFrom(num4);
+			switch (num4)
 			{
 			case 910:
 				if (tc.isWet)
 				{
-					num9 -= 30;
+					num5 -= 30;
 				}
 				break;
 			case 911:
 				if (tc.HasCondition<ConBurning>())
 				{
-					num9 -= 30;
+					num5 -= 30;
 				}
 				break;
 			case 912:
 				if (tc.isWet)
 				{
-					num9 += 30;
+					num5 += 30;
 				}
 				break;
 			}
-			return num9;
+			return num5;
 		}
 		void GetNumEnemy(int radius)
 		{

@@ -54,8 +54,9 @@ public class TaskClean : Task
 			dest.PlayEffect("vanish");
 			EClass.pc.Say("clean", owner);
 			EClass.pc.PlaySound("clean_floor");
-			EClass.pc.stamina.Mod(-1);
 			EClass.pc.ModExp(293, 30);
+			EClass.player.stats.clean++;
+			EClass.pc.stamina.Mod(-1);
 			yield return KeepRunning();
 		}
 	}
