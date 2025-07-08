@@ -119,5 +119,6 @@ public enum EffectId
 	Sword = 295,
 	LovePlus = 296,
 	HairGrowth = 297,
-	Gene = 298
+	Gene = 298,
+	CatSniff = 299
 }

@@ -68,6 +68,8 @@ public class TraitNewZone : Trait
 
 	public override bool CanBeStolen => false;
 
+	public override bool CanBeTeleported => false;
+
 	public virtual int UseDist => 0;
 
 	public override void OnImportMap()

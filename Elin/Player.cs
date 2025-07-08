@@ -1580,32 +1580,33 @@ public class Player : EClass
 
 	public void CreateEquip()
 	{
-		Chara chara = EClass.pc;
-		chara.body.AddBodyPart(45);
+		Chara c = EClass.pc;
+		c.body.AddBodyPart(45);
 		if (EClass.debug.enable)
 		{
 			EClass.pc.EQ_ID("lantern_old");
 		}
-		chara.body.AddBodyPart(44);
-		chara.EQ_ID("toolbelt").c_IDTState = 0;
-		chara.EQ_ID("shirt").c_IDTState = 0;
-		chara.AddCard(ThingGen.CreateCurrency(1 + EClass.rnd(5)));
+		c.body.AddBodyPart(44);
+		c.EQ_ID("toolbelt").c_IDTState = 0;
+		c.EQ_ID("shirt").c_IDTState = 0;
+		c.AddCard(ThingGen.CreateCurrency(1 + EClass.rnd(5)));
+		bool firstSpellbook = true;
 		switch (EClass.pc.job.id)
 		{
 		case "paladin":
-			chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8400), 2));
+			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8400), 2));
 			break;
 		case "inquisitor":
-			chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8706), 4));
+			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8706), 4));
 			break;
 		case "witch":
-			chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8790), 4));
+			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8790), 4));
 			break;
 		case "swordsage":
-			chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(50300), 4));
-			chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(50301), 4));
-			chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(50802), 2));
-			chara.AddCard(ThingGen.Create("tool_talisman"));
+			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(50300), 4));
+			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(50301), 4));
+			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(50802), 2));
+			c.AddCard(ThingGen.Create("tool_talisman"));
 			break;
 		}
 		switch (EClass.pc.job.id)
@@ -1638,7 +1639,7 @@ public class Player : EClass
 				}
 				if (text != "")
 				{
-					chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(text + element.source.alias.Replace("ele", "")), 4));
+					c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(text + element.source.alias.Replace("ele", "")), 4));
 					num++;
 					if (num >= 2)
 					{
@@ -1648,20 +1649,25 @@ public class Player : EClass
 			}
 			if (EClass.pc.job.id == "priest")
 			{
-				chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8400), 2));
+				c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8400), 2));
 			}
 			else
 			{
-				chara.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8200), 2));
+				c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8200), 2));
 			}
 			break;
 		}
 		default:
-			chara.AddCard(ThingGen.Create("bandage").SetNum(6 + EClass.rnd(3)));
+			c.AddCard(ThingGen.Create("bandage").SetNum(6 + EClass.rnd(3)));
 			break;
 		}
-		static Thing SetSpellbook(Thing t, int charge)
+		Thing SetSpellbook(Thing t, int charge)
 		{
+			if (firstSpellbook)
+			{
+				c.AddCard(ThingGen.CreateRedBook("guide_magic"));
+				firstSpellbook = false;
+			}
 			t.AddEditorTag(EditorTag.NoReadFail);
 			t.c_charges = charge;
 			t.SetBlessedState(BlessedState.Normal);

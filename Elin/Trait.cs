@@ -11,7 +11,8 @@ public class Trait : EClass
 		Door,
 		Illumination,
 		DefaultNoAnime,
-		SignalAnime
+		SignalAnime,
+		FakeBlock
 	}
 
 	public enum CopyShopType
@@ -161,6 +162,8 @@ public class Trait : EClass
 	}
 
 	public virtual bool CanBeAttacked => false;
+
+	public virtual bool CanBeTeleported => true;
 
 	public virtual bool CanExtendBuild => false;
 
@@ -649,7 +652,7 @@ public class Trait : EClass
 	{
 	}
 
-	public virtual void OnCrafted(Recipe recipe)
+	public virtual void OnCrafted(Recipe recipe, List<Thing> ings)
 	{
 	}
 

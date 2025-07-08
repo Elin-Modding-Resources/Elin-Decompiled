@@ -495,6 +495,10 @@ public class TaskHarvest : BaseTaskHarvest
 
 	public bool ShouldGenerateDismantled(string dest)
 	{
+		if (target.trait is TraitFakeBlock)
+		{
+			return false;
+		}
 		if (target.trait is TraitGrave)
 		{
 			return false;

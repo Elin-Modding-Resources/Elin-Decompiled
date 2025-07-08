@@ -542,7 +542,7 @@ public class Recipe : EClass
 		{
 			return null;
 		}
-		thing.trait.OnCrafted(this);
+		thing.trait.OnCrafted(this, ings);
 		thing.SetBlessedState(blessed);
 		if (model)
 		{

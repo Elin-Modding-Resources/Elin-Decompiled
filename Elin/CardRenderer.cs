@@ -40,7 +40,14 @@ public class CardRenderer : RenderObject
 		owner = c;
 		if (data == null)
 		{
-			data = owner.sourceCard.renderData;
+			if (owner.trait is TraitFakeBlock)
+			{
+				data = EClass.sources.blocks.map[owner.refVal].renderData;
+			}
+			else
+			{
+				data = owner.sourceCard.renderData;
+			}
 		}
 		isChara = c.isChara;
 		usePass = data.pass != null;

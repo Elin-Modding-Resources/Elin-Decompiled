@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfCave = 3500;
-
-	public const int bfUndersea = 3606;
-
-	public const int bfFertile = 3700;
-
-	public const int bfBeach = 3604;
-
-	public const int bfHill = 3603;
-
-	public const int bfGeyser = 3701;
-
-	public const int bfSnow = 3602;
+	public const int bfPlain = 3600;
 
 	public const int bfForest = 3601;
 
-	public const int bfPlain = 3600;
+	public const int bfSnow = 3602;
 
-	public const int bfRuin = 3702;
+	public const int bfHill = 3603;
 
 	public const int bfSea = 3605;
+
+	public const int bfUndersea = 3606;
+
+	public const int bfCave = 3500;
+
+	public const int bfFertile = 3700;
+
+	public const int bfGeyser = 3701;
+
+	public const int bfBeach = 3604;
+
+	public const int bfRuin = 3702;
 
 	public const int fPromo = 2202;
 
@@ -42,13 +42,13 @@ public class FACTION
 
 	public const int fTaxEvasion = 2119;
 
-	public const int fEducation = 2116;
+	public const int fLuck = 2118;
 
 	public const int bfTranquil = 3703;
 
-	public const int fLoyal = 2117;
+	public const int fEducation = 2116;
 
-	public const int fLuck = 2118;
+	public const int fLoyal = 2117;
 
 	public const int fRation = 2207;
 
@@ -60,9 +60,9 @@ public class FACTION
 
 	public const int actBuildInspect = 4006;
 
-	public const int actBuildRecipe = 4005;
-
 	public const int fAdmin = 2115;
+
+	public const int actBuildRecipe = 4005;
 
 	public const int actBuildCollect = 4004;
 
@@ -112,9 +112,9 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[53]
 	{
-		3500, 3606, 3700, 3604, 3603, 3701, 3602, 3601, 3600, 3702,
-		3605, 2202, 2206, 2205, 2204, 2203, 2200, 2120, 2119, 2116,
-		3703, 2117, 2118, 2207, 3704, 3803, 3706, 4006, 4005, 2115,
+		3600, 3601, 3602, 3603, 3605, 3606, 3500, 3700, 3701, 3604,
+		3702, 2202, 2206, 2205, 2204, 2203, 2200, 2120, 2119, 2118,
+		3703, 2116, 2117, 2207, 3704, 3803, 3706, 4006, 2115, 4005,
 		4004, 4003, 4002, 4001, 4000, 3900, 3805, 3804, 3802, 3801,
 		3800, 3784, 3783, 3782, 3781, 3780, 3710, 3709, 3708, 3707,
 		3705, 2003, 2201

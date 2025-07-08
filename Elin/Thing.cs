@@ -1435,37 +1435,13 @@ public class Thing : Card
 				p.tile = sourceCard._tiles[base.dir % sourceCard._tiles.Length] * ((!flipX) ? 1 : (-1));
 			}
 			break;
-		case Trait.TileMode.Default:
-			if (source._altTiles.Length != 0 && trait.UseAltTiles)
-			{
-				p.tile = source._altTiles[base.dir % source._altTiles.Length] * ((!flipX) ? 1 : (-1));
-			}
-			else
-			{
-				p.tile = sourceCard._tiles[base.dir % sourceCard._tiles.Length] * ((!flipX) ? 1 : (-1));
-			}
-			if (source.anime.Length == 0 || !trait.IsAnimeOn)
-			{
-				break;
-			}
-			if (source.anime.Length > 2)
-			{
-				float num = Time.realtimeSinceStartup * 1000f / (float)source.anime[1] % (float)source.anime[2];
-				if ((int)num == source.anime[0] - 1 && source.anime.Length > 3)
-				{
-					PlaySound("anime_sound" + source.anime[3]);
-				}
-				if (!(num >= (float)source.anime[0]))
-				{
-					p.tile += num * (float)((!flipX) ? 1 : (-1));
-				}
-			}
-			else
-			{
-				float num2 = Time.realtimeSinceStartup * 1000f / (float)source.anime[1] % (float)source.anime[0];
-				p.tile += num2 * (float)((!flipX) ? 1 : (-1));
-			}
+		case Trait.TileMode.FakeBlock:
+		{
+			p.color += 1572864f;
+			SourceBlock.Row row = EClass.sources.blocks.map[base.refVal];
+			p.tile = row._tiles[base.dir % row._tiles.Length];
 			break;
+		}
 		case Trait.TileMode.SignalAnime:
 			if (source._altTiles.Length != 0 && trait.UseAltTiles)
 			{
@@ -1529,6 +1505,37 @@ public class Thing : Card
 			if (trait is TraitDoorSwing traitDoorSwing && traitDoorSwing.IsOpen())
 			{
 				p.tile += ((!(p.tile < 0f)) ? 1 : (-1));
+			}
+			break;
+		default:
+			if (source._altTiles.Length != 0 && trait.UseAltTiles)
+			{
+				p.tile = source._altTiles[base.dir % source._altTiles.Length] * ((!flipX) ? 1 : (-1));
+			}
+			else
+			{
+				p.tile = sourceCard._tiles[base.dir % sourceCard._tiles.Length] * ((!flipX) ? 1 : (-1));
+			}
+			if (source.anime.Length == 0 || !trait.IsAnimeOn)
+			{
+				break;
+			}
+			if (source.anime.Length > 2)
+			{
+				float num = Time.realtimeSinceStartup * 1000f / (float)source.anime[1] % (float)source.anime[2];
+				if ((int)num == source.anime[0] - 1 && source.anime.Length > 3)
+				{
+					PlaySound("anime_sound" + source.anime[3]);
+				}
+				if (!(num >= (float)source.anime[0]))
+				{
+					p.tile += num * (float)((!flipX) ? 1 : (-1));
+				}
+			}
+			else
+			{
+				float num2 = Time.realtimeSinceStartup * 1000f / (float)source.anime[1] % (float)source.anime[0];
+				p.tile += num2 * (float)((!flipX) ? 1 : (-1));
 			}
 			break;
 		}

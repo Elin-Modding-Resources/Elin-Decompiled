@@ -6,6 +6,8 @@ public class TraitDoor : Trait
 
 	public override bool CanBuildInTown => false;
 
+	public override bool CanBeTeleported => false;
+
 	public override bool CanBeDisassembled => !owner.IsInstalled;
 
 	public override TileMode tileMode => TileMode.Door;

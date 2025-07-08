@@ -160,6 +160,13 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
+	public static Thing CreateRedBook(string id, int num = 1)
+	{
+		Thing thing = Create("book").SetNum(num);
+		thing.SetStr(53, id);
+		return thing;
+	}
+
 	public static Thing CreateSkillbook(int ele, int num = 1)
 	{
 		Thing thing = Create("book_skill").SetNum(num);

@@ -94,9 +94,9 @@ public class ENC
 
 	public const int resWeather = 408;
 
-	public const int mod_talisman = 609;
+	public const int travelSpeed = 407;
 
-	public const int resMutation = 406;
+	public const int mod_talisman = 609;
 
 	public const int slowDecay = 405;
 
@@ -114,69 +114,69 @@ public class ENC
 
 	public const int sustain_STR = 440;
 
-	public const int travelSpeed = 407;
+	public const int resMutation = 406;
 
 	public const int sustain_DEX = 442;
 
-	public const int revealFaith = 481;
-
-	public const int force_weapon = 482;
-
-	public const int optimizeMana = 483;
-
-	public const int slot_rune = 484;
-
-	public const int nonLethal = 485;
-
-	public const int safetyMeasure = 486;
-
-	public const int strongStomach = 480;
-
-	public const int mod_ammo = 600;
-
-	public const int mod_ammo_knockback = 603;
-
-	public const int mod_ammo_recover = 604;
-
-	public const int mod_precision = 605;
-
-	public const int mod_drill = 606;
+	public const int sustain_END = 441;
 
 	public const int mod_scatter = 607;
 
-	public const int sustain_END = 441;
+	public const int mod_drill = 606;
 
-	public const int mod_reload = 601;
+	public const int mod_precision = 605;
 
-	public const int bane_all = 468;
+	public const int mod_ammo_recover = 604;
 
 	public const int mod_rapid = 602;
 
-	public const int bane_god = 466;
+	public const int mod_reload = 601;
+
+	public const int mod_ammo = 600;
+
+	public const int safetyMeasure = 486;
+
+	public const int nonLethal = 485;
+
+	public const int slot_rune = 484;
+
+	public const int optimizeMana = 483;
+
+	public const int force_weapon = 482;
+
+	public const int revealFaith = 481;
+
+	public const int strongStomach = 480;
+
+	public const int mod_ammo_knockback = 603;
 
 	public const int bane_fish = 467;
+
+	public const int bane_all = 468;
 
 	public const int sustain_LER = 444;
 
 	public const int sustain_WIL = 445;
 
-	public const int sustain_MAG = 446;
+	public const int sustain_CHA = 447;
 
 	public const int bane_dragon = 460;
 
-	public const int sustain_CHA = 447;
-
-	public const int bane_fairy = 462;
-
-	public const int bane_machine = 465;
-
 	public const int bane_undead = 461;
 
-	public const int bane_man = 464;
+	public const int sustain_MAG = 446;
+
+	public const int sustain_PER = 443;
 
 	public const int bane_animal = 463;
 
-	public const int sustain_PER = 443;
+	public const int bane_man = 464;
+
+	public const int bane_machine = 465;
+
+	public const int bane_god = 466;
+
+	public const int bane_fairy = 462;
 
 	public static readonly int[] IDS = new int[89]
 	{
@@ -184,10 +184,10 @@ public class ENC
 		655, 851, 660, 661, 662, 663, 664, 665, 666, 850,
 		621, 865, 852, 656, 620, 422, 608, 429, 428, 427,
 		426, 425, 424, 423, 421, 420, 419, 418, 417, 416,
-		430, 415, 412, 411, 410, 409, 408, 609, 406, 405,
-		404, 403, 402, 401, 400, 414, 440, 407, 442, 481,
-		482, 483, 484, 485, 486, 480, 600, 603, 604, 605,
-		606, 607, 441, 601, 468, 602, 466, 467, 444, 445,
-		446, 460, 447, 462, 465, 461, 464, 463, 443
+		430, 415, 412, 411, 410, 409, 408, 407, 609, 405,
+		404, 403, 402, 401, 400, 414, 440, 406, 442, 441,
+		607, 606, 605, 604, 602, 601, 600, 486, 485, 484,
+		483, 482, 481, 480, 603, 467, 468, 444, 445, 447,
+		460, 461, 446, 443, 463, 464, 465, 466, 462
 	};
 }

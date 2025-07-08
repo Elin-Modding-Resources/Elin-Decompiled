@@ -5510,7 +5510,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			return;
 		}
 		PlayEffect("teleport");
-		if (!force && (trait is TraitNewZone || elements.Has(400) || (isChara && Chara.HasCondition<ConGravity>())))
+		if (!force && (!trait.CanBeTeleported || elements.Has(400) || (isChara && Chara.HasCondition<ConGravity>())))
 		{
 			Say("antiTeleport", this);
 			PlaySound("gravity");

@@ -275,7 +275,7 @@ public class RecipeCard : Recipe
 				thing.decay = thing.MaxDecay + 1;
 			}
 		}
-		thing.trait.OnCrafted(this);
+		thing.trait.OnCrafted(this, ings);
 		if (thing.IsAmmo && num2 < 0)
 		{
 			thing.SetEncLv(-num2 / 10);

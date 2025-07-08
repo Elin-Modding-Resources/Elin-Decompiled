@@ -14,6 +14,8 @@ public class TraitPowerStatue : TraitItem
 
 	public override bool CanBeStolen => false;
 
+	public override bool CanBeTeleported => false;
+
 	public override bool CanUseFromInventory => false;
 
 	public override bool UseExtra => owner.isOn;

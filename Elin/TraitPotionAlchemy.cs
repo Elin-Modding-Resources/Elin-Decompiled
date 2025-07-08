@@ -28,7 +28,7 @@ public class TraitPotionAlchemy : TraitPotionRandom
 		return num * (100 + owner.encLV * num2) / 100;
 	}
 
-	public override void OnCrafted(Recipe recipe)
+	public override void OnCrafted(Recipe recipe, List<Thing> ings)
 	{
 		owner.refVal = 0;
 		List<Element> list = owner.elements.dict.Values.Where((Element e) => e.IsTrait).ToList();

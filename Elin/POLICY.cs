@@ -41,7 +41,7 @@ public class POLICY
 
 	public const int open_business = 2810;
 
-	public const int stop_growth = 2515;
+	public const int speed_growth = 2516;
 
 	public const int livestock_priv = 2715;
 
@@ -75,7 +75,7 @@ public class POLICY
 
 	public const int human_right = 2506;
 
-	public const int speed_growth = 2516;
+	public const int stop_growth = 2515;
 
 	public const int trash_no = 2702;
 
@@ -108,9 +108,9 @@ public class POLICY
 	public static readonly int[] IDS = new int[51]
 	{
 		2812, 2813, 2814, 2815, 2816, 2817, 2818, 2819, 2822, 2821,
-		2823, 2824, 2825, 2826, 2827, 2828, 2811, 2820, 2810, 2515,
+		2823, 2824, 2825, 2826, 2827, 2828, 2811, 2820, 2810, 2516,
 		2715, 2508, 2509, 2510, 2505, 2504, 2503, 2502, 2501, 2500,
-		2800, 2507, 2511, 2512, 2513, 2506, 2516, 2702, 2703, 2514,
+		2800, 2507, 2511, 2512, 2513, 2506, 2515, 2702, 2703, 2514,
 		2705, 2706, 2707, 2704, 2709, 2710, 2711, 2712, 2701, 2700,
 		2708
 	};
