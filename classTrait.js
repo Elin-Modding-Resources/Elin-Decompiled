@@ -10,7 +10,8 @@ var classTrait =
       [ "Door", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af44e14d49cd011d1e873d9fe0c4624f1", null ],
       [ "Illumination", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79aa4869d0be7226ce32aa8c89c79a0dc4f", null ],
       [ "DefaultNoAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1", null ],
-      [ "SignalAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90", null ]
+      [ "SignalAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90", null ],
+      [ "FakeBlock", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0", null ]
     ] ],
     [ "CanBlend", "classTrait.html#ad545a68adbba6e0deffc3ceef163ceb9", null ],
     [ "CanBuiltAt", "classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff", null ],
@@ -62,7 +63,7 @@ var classTrait =
     [ "OnBlend", "classTrait.html#afe04c35d6a7b1cb37e81944261583702", null ],
     [ "OnChangePlaceState", "classTrait.html#a1bcc89016758ef51b5722da792d53f41", null ],
     [ "OnChildDecay", "classTrait.html#a5a26a2b47cf0cd07ec1e9094131fc29e", null ],
-    [ "OnCrafted", "classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085", null ],
+    [ "OnCrafted", "classTrait.html#adc7c088d718de5c6d150975a3f8606a8", null ],
     [ "OnCreate", "classTrait.html#aa93666c96d1a63bd8f3848561a11873d", null ],
     [ "OnDrink", "classTrait.html#acebd3a3c43b4806bd7cab6c97dab25ad", null ],
     [ "OnEat", "classTrait.html#ae345e0e8d44aeac0f2cf22ed173825b5", null ],
@@ -129,6 +130,7 @@ var classTrait =
     [ "CanBeShipped", "classTrait.html#abe2e0dadad63c335e4219a7aebe9fedc", null ],
     [ "CanBeSmashedToDeath", "classTrait.html#ae1eacb11cd46933558154ad527cfd672", null ],
     [ "CanBeStolen", "classTrait.html#adf5a2086db57abb7dc0133d7d13753da", null ],
+    [ "CanBeTeleported", "classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d", null ],
     [ "CanBuildInTown", "classTrait.html#a559565c2b219f365239f923cffe2b567", null ],
     [ "CanChangeHeight", "classTrait.html#a3f3b522d5f37459262eb30f511dbc667", null ],
     [ "CanCopyInBlueprint", "classTrait.html#ab1956cd682b44d4fdc61fb15c840c76d", null ],

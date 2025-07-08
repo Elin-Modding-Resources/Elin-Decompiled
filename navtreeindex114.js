@@ -1,5 +1,12 @@
 var NAVTREEINDEX114 =
 {
+"classTraitBath.html#a1fc2fd5db5f5966c5b1c4ded93794d37":[1,0,1419,0],
+"classTraitBed.html":[1,0,1421],
+"classTraitBed.html#a08547dc3eb39076ea1208a52790e84d4":[1,0,1421,0],
+"classTraitBed.html#a18a6505005e68927663e333610713e19":[1,0,1421,4],
+"classTraitBed.html#a26c7c52784804d1ec6c9e557d940500b":[1,0,1421,7],
+"classTraitBed.html#a28ec384a8d046d5c6da999820f89c57b":[1,0,1421,12],
+"classTraitBed.html#a333714ba3ee1c05449866a65d5191c96":[1,0,1421,11],
 "classTraitBed.html#a34a3cbb665f0f0e11346eb701079bde7":[1,0,1421,13],
 "classTraitBed.html#a4435f2f8b8997c03cbea0f7c37824f1d":[1,0,1421,8],
 "classTraitBed.html#a4a0a38bf3561473e8951dc8d64f1a8b8":[1,0,1421,14],
@@ -35,7 +42,7 @@ var NAVTREEINDEX114 =
 "classTraitBitchDancer.html#abb15b7f0168a14d8acb7617e06963571":[1,0,1428,1],
 "classTraitBlanket.html":[1,0,1430],
 "classTraitBlanket.html#a53d27637cc556e3c125c466cc8ac652c":[1,0,1430,3],
-"classTraitBlanket.html#a63e4069f3a84e8c318bb62957ee9f216":[1,0,1430,0],
+"classTraitBlanket.html#a782f100d552308d63b1ddac41ca4cf87":[1,0,1430,0],
 "classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1430,1],
 "classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1430,2],
 "classTraitBlanketColdproof.html":[1,0,1431],
@@ -242,12 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitClerk__Fighter.html":[1,0,1469],
 "classTraitClerk__Mage.html":[1,0,1470],
 "classTraitClerk__Merchant.html":[1,0,1471],
-"classTraitClerk__Thief.html":[1,0,1472],
-"classTraitClock.html":[1,0,1473],
-"classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1473,0],
-"classTraitCobWeb.html":[1,0,1474],
-"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1474,0],
-"classTraitComputer.html":[1,0,1475],
-"classTraitContainer.html":[1,0,1476],
-"classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1476,5]
+"classTraitClerk__Thief.html":[1,0,1472]
 };

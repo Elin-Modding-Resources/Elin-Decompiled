@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.166 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.167 Nightly</span>
    </div>
   </td>
  </tr>
@@ -408,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="StanceSongSleep_8cs_source.html#l00001">1</a> of file <a class="el" href="StanceSongSleep_8cs_source.html">StanceSongSleep.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StanceSongSleep_8cs_source.html#l00003">3</a> of file <a class="el" href="StanceSongSleep_8cs_source.html">StanceSongSleep.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a318d7f7de1e04b2b1f0cc9c27e4d148a" name="a318d7f7de1e04b2b1f0cc9c27e4d148a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a318d7f7de1e04b2b1f0cc9c27e4d148a">&#9670;&#160;</a></span>OnStart()</h2>
@@ -435,10 +435,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a5b906e1dde65d20a17f961c9fe57ba03">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="StanceSongSleep_8cs_source.html#l00003">3</a> of file <a class="el" href="StanceSongSleep_8cs_source.html">StanceSongSleep.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
-<div class="line"><span class="lineno">    5</span>        <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.happy);</div>
-<div class="line"><span class="lineno">    6</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StanceSongSleep_8cs_source.html#l00005">5</a> of file <a class="el" href="StanceSongSleep_8cs_source.html">StanceSongSleep.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">ShowEmo</a>(<a class="code hl_enumeration" href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a>.happy);</div>
+<div class="line"><span class="lineno">    8</span>    }</div>
 <div class="ttc" id="aEmo_8cs_html_a3a776133b1ce94bdc19666187232d047"><div class="ttname"><a href="Emo_8cs.html#a3a776133b1ce94bdc19666187232d047">Emo</a></div><div class="ttdeci">Emo</div><div class="ttdef"><b>Definition:</b> <a href="Emo_8cs_source.html#l00001">Emo.cs:2</a></div></div>
 <div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
 <div class="ttc" id="aclassCard_html_a9381cbefabfa31e73a65c0046c3256d9"><div class="ttname"><a href="classCard.html#a9381cbefabfa31e73a65c0046c3256d9">Card.ShowEmo</a></div><div class="ttdeci">void ShowEmo(Emo _emo=Emo.none, float duration=0f, bool skipSame=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05744">Card.cs:5744</a></div></div>
@@ -472,28 +472,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseStance.html#a61ec727803b748944a5388fcd661d394">BaseStance</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="StanceSongSleep_8cs_source.html#l00008">8</a> of file <a class="el" href="StanceSongSleep_8cs_source.html">StanceSongSleep.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>    {</div>
-<div class="line"><span class="lineno">   10</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a8b1488299388277a7ac0e7556b3ee3b9">ListCharasInRadius</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, 4, (<a class="code hl_class" href="classChara.html">Chara</a> c) =&gt; !c.<a class="code hl_property" href="classChara.html#a8d5d9a7d9eeaee31ed0efed30fedc4e6">IsDeadOrSleeping</a> &amp;&amp; c.<a class="code hl_function" href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">IsHostile</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>)))</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">if</span> ((<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsPowerful ? 10 : 25) &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100))</div>
-<div class="line"><span class="lineno">   14</span>            {</div>
-<div class="line"><span class="lineno">   15</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.AddCondition&lt;<a class="code hl_class" href="classConSleep.html">ConSleep</a>&gt;(50 + base.power / 2);</div>
-<div class="line"><span class="lineno">   16</span>            }</div>
-<div class="line"><span class="lineno">   17</span>            num++;</div>
-<div class="line"><span class="lineno">   18</span>        }</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
-<div class="line"><span class="lineno">   20</span>        {</div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#a98e75854a92d992deba6688b2cb8c7e8">mana</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-(1 + <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#a98e75854a92d992deba6688b2cb8c7e8">mana</a>.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a> / 200));</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="StanceSongSleep_8cs_source.html#l00010">10</a> of file <a class="el" href="StanceSongSleep_8cs_source.html">StanceSongSleep.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConSilence.html">ConSilence</a>&gt;())</div>
+<div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a8b1488299388277a7ac0e7556b3ee3b9">ListCharasInRadius</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, 4, (<a class="code hl_class" href="classChara.html">Chara</a> c) =&gt; !c.<a class="code hl_property" href="classChara.html#a8d5d9a7d9eeaee31ed0efed30fedc4e6">IsDeadOrSleeping</a> &amp;&amp; c.<a class="code hl_function" href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">IsHostile</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>)))</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> ((<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsPowerful ? 10 : 30) * Mathf.Min(base.power / 4, 100) / 100 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(100))</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.AddCondition&lt;<a class="code hl_class" href="classConSleep.html">ConSleep</a>&gt;(50 + base.power / 2);</div>
+<div class="line"><span class="lineno">   22</span>            }</div>
+<div class="line"><span class="lineno">   23</span>            num++;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#a98e75854a92d992deba6688b2cb8c7e8">mana</a>.<a class="code hl_function" href="classStats.html#a2972d0d69579f77f16a038c181357c20">Mod</a>(-(1 + <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#a98e75854a92d992deba6688b2cb8c7e8">mana</a>.<a class="code hl_property" href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">max</a> / 200));</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00055">Card.cs:55</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08723">Chara.cs:8723</a></div></div>
 <div class="ttc" id="aclassChara_html_a8d5d9a7d9eeaee31ed0efed30fedc4e6"><div class="ttname"><a href="classChara.html#a8d5d9a7d9eeaee31ed0efed30fedc4e6">Chara.IsDeadOrSleeping</a></div><div class="ttdeci">override bool IsDeadOrSleeping</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00568">Chara.cs:569</a></div></div>
 <div class="ttc" id="aclassChara_html_a98e75854a92d992deba6688b2cb8c7e8"><div class="ttname"><a href="classChara.html#a98e75854a92d992deba6688b2cb8c7e8">Chara.mana</a></div><div class="ttdeci">Stats mana</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01006">Chara.cs:1006</a></div></div>
 <div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06041">Chara.cs:6041</a></div></div>
+<div class="ttc" id="aclassConSilence_html"><div class="ttname"><a href="classConSilence.html">ConSilence</a></div><div class="ttdef"><b>Definition:</b> <a href="ConSilence_8cs_source.html#l00001">ConSilence.cs:2</a></div></div>
 <div class="ttc" id="aclassConSleep_html"><div class="ttname"><a href="classConSleep.html">ConSleep</a></div><div class="ttdef"><b>Definition:</b> <a href="ConSleep_8cs_source.html#l00003">ConSleep.cs:4</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00058">EClass.cs:58</a></div></div>
@@ -501,7 +507,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassStats_html_a2972d0d69579f77f16a038c181357c20"><div class="ttname"><a href="classStats.html#a2972d0d69579f77f16a038c181357c20">Stats.Mod</a></div><div class="ttdeci">virtual void Mod(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00135">Stats.cs:135</a></div></div>
 <div class="ttc" id="aclassStats_html_af3f73e47b0645cc644d07700c65d95d4"><div class="ttname"><a href="classStats.html#af3f73e47b0645cc644d07700c65d95d4">Stats.max</a></div><div class="ttdeci">virtual int max</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00067">Stats.cs:68</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00569">Chara.IsDeadOrSleeping</a>, <a class="el" href="Chara_8cs_source.html#l06041">Chara.IsHostile()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Point_8cs_source.html#l01200">Point.ListCharasInRadius()</a>, <a class="el" href="Chara_8cs_source.html#l01006">Chara.mana</a>, <a class="el" href="Stats_8cs_source.html#l00068">Stats.max</a>, <a class="el" href="Stats_8cs_source.html#l00135">Stats.Mod()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, and <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l08723">Chara.HasCondition()</a>, <a class="el" href="Chara_8cs_source.html#l00569">Chara.IsDeadOrSleeping</a>, <a class="el" href="Chara_8cs_source.html#l06041">Chara.IsHostile()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Point_8cs_source.html#l01200">Point.ListCharasInRadius()</a>, <a class="el" href="Chara_8cs_source.html#l01006">Chara.mana</a>, <a class="el" href="Stats_8cs_source.html#l00068">Stats.max</a>, <a class="el" href="Stats_8cs_source.html#l00135">Stats.Mod()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, and <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>.</p>
 
 </div>
 </div>

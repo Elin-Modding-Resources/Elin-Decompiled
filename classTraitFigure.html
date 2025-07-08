@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.166 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.167 Nightly</span>
    </div>
   </td>
  </tr>
@@ -158,8 +158,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01114b762877593444f784e64c4421de inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af1967dc797493c26375ce1f8f1f6e75e">SetParams</a> (params string[] s)</td></tr>
 <tr class="separator:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe)</td></tr>
-<tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
@@ -414,6 +414,8 @@ Properties</h2></td></tr>
 <tr class="separator:ab1956cd682b44d4fdc61fb15c840c76d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4">CanBeAttacked</a><code> [get]</code></td></tr>
 <tr class="separator:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d">CanBeTeleported</a><code> [get]</code></td></tr>
+<tr class="separator:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a04da9197dd7d1484f6ab9529a93a05b2">CanExtendBuild</a><code> [get]</code></td></tr>
 <tr class="separator:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5403dc0110848cbb7e18de734186502c inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5403dc0110848cbb7e18de734186502c">langNote</a><code> [get]</code></td></tr>
@@ -644,6 +646,7 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1">DefaultNoAnime</a>
 , <br />
 &#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90">SignalAnime</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0">FakeBlock</a>
 <br />
  }</td></tr>
 <tr class="separator:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -720,7 +723,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   14</span>        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">   15</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00075">CardRenderer.Draw()</a>.</p>
 
 </div>
 </div>
@@ -808,9 +811,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassRenderRow_html_ab2dc97be906ded91ad9527ef6203e29a"><div class="ttname"><a href="classRenderRow.html#ab2dc97be906ded91ad9527ef6203e29a">RenderRow.SetImage</a></div><div class="ttdeci">void SetImage(Image image, Sprite sprite=null, int matCol=0, bool setNativeSize=true, int dir=0, int idSkin=0, Card card=null)</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00351">RenderRow.cs:351</a></div></div>
 <div class="ttc" id="aclassSourceChara_1_1Row_html"><div class="ttname"><a href="classSourceChara_1_1Row.html">SourceChara.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00007">SourceChara.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00018">SourceManager.cs:18</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00027">Trait.cs:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00063">ButtonGrid.Attach()</a>, <a class="el" href="Card_8cs_source.html#l01697">Card.c_idRefCard</a>, <a class="el" href="SourceManager_8cs_source.html#l00018">SourceManager.charas</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">RenderRow.SetImage()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="ButtonGrid_8cs_source.html#l00063">ButtonGrid.Attach()</a>, <a class="el" href="Card_8cs_source.html#l01697">Card.c_idRefCard</a>, <a class="el" href="SourceManager_8cs_source.html#l00018">SourceManager.charas</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="RenderRow_8cs_source.html#l00351">RenderRow.SetImage()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -867,7 +870,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUIContextMenu_html_a5afad4580b1ab1aecc9f0f607170ec37"><div class="ttname"><a href="classUIContextMenu.html#a5afad4580b1ab1aecc9f0f607170ec37">UIContextMenu.Show</a></div><div class="ttdeci">void Show(UIItem i)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00175">UIContextMenu.cs:175</a></div></div>
 <div class="ttc" id="aclassUIContextMenu_html_a75c796a9dd17902e8a8f710e8c8760f6"><div class="ttname"><a href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">UIContextMenu.AddSlider</a></div><div class="ttdeci">UIContextMenuItem AddSlider(string text, Func&lt; float, string &gt; textFunc, float value, Action&lt; float &gt; action, float min=0f, float max=1f, bool isInt=false, bool hideOther=true, bool useInput=false)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.cs:329</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="ActPlan_8cs_source.html#l00152">ActPlan.input</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00190">Card.refVal</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00175">UIContextMenu.Show()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00008">source</a>, <a class="el" href="RenderRow_8cs_source.html#l00010">RenderRow.tiles</a>, <a class="el" href="ActPlan_8cs_source.html#l00345">ActPlan.TrySetAct()</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="ActPlan_8cs_source.html#l00152">ActPlan.input</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00190">Card.refVal</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00175">UIContextMenu.Show()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00008">source</a>, <a class="el" href="RenderRow_8cs_source.html#l00010">RenderRow.tiles</a>, <a class="el" href="ActPlan_8cs_source.html#l00345">ActPlan.TrySetAct()</a>, and <a class="el" href="EClass_8cs_source.html#l00016">EClass.ui</a>.</p>
 
 </div>
 </div>
@@ -918,7 +921,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitFigure_8cs_source.html#l00010">10</a> of file <a class="el" href="TraitFigure_8cs_source.html">TraitFigure.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00068">CardRenderer.Draw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00075">CardRenderer.Draw()</a>.</p>
 
 </div>
 </div>

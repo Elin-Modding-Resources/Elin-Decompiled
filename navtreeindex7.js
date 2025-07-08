@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GlobalGoalVisitTown_8cs_source.html":[2,0,0,508],
 "GlobalGoal_8cs.html":[2,0,0,504],
 "GlobalGoal_8cs_source.html":[2,0,0,504],
 "GoalAutoCombat_8cs.html":[2,0,0,510],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1aff533d4c16523ed1a05bf5443c74dd15":[2,0,0,2,0,0,3,0,13],
 "HookType_8cs_source.html":[2,0,0,2,0,0,3],
 "Hostility_8cs.html":[2,0,0,586],
-"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500":[2,0,0,586,0],
-"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500a0dd87782600574e2f791bcfe639d4fcc":[2,0,0,586,0,3]
+"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500":[2,0,0,586,0]
 };

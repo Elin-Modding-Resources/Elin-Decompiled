@@ -1,5 +1,9 @@
 var NAVTREEINDEX91 =
 {
+"classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8":[1,0,972,6],
+"classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd":[1,0,972,12],
+"classQuestDefenseGame.html#a551d58179e2ee0b30584c2dac865f912":[1,0,972,11],
+"classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482":[1,0,972,13],
 "classQuestDefenseGame.html#a78b66992932d0fa32dbcbf17c094ddfd":[1,0,972,10],
 "classQuestDefenseGame.html#a859e1c04385585dbc327c19ee7406e27":[1,0,972,9],
 "classQuestDefenseGame.html#aa3430704375447d0efde0093a54dacff":[1,0,972,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX91 =
 "classQuestMusic.html#ad6f8b85fd301afbbe0562c303a573e16":[1,0,1016,1],
 "classQuestMusic.html#aedcdc849e926a8b3520b5fc3cc84402d":[1,0,1016,2],
 "classQuestMusic.html#af0c8e7a2f533e99f1eec42b3fd98b63e":[1,0,1016,7],
-"classQuestMusic.html#af36c6da51fff84856e7d2d6dca395298":[1,0,1016,8],
-"classQuestNegotiationDarkness.html":[1,0,1017],
-"classQuestNegotiationDarkness.html#a05ad6892e43a89fac37a9edd4c4709b4":[1,0,1017,0],
-"classQuestNegotiationDarkness.html#aa28bb6b7d7d08d20463dec9ad1dc796a":[1,0,1017,1],
-"classQuestProgression.html":[1,0,1018]
+"classQuestMusic.html#af36c6da51fff84856e7d2d6dca395298":[1,0,1016,8]
 };

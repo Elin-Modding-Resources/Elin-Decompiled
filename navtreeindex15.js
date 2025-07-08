@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"TextureImportSetting_8cs.html":[2,0,0,2,87],
 "TextureImportSetting_8cs_source.html":[2,0,0,2,87],
 "TextureManager_8cs.html":[2,0,0,1200],
 "TextureManager_8cs_source.html":[2,0,0,1200],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "TraitBath_8cs_source.html":[2,0,0,1305],
 "TraitBed_8cs.html":[2,0,0,1307],
 "TraitBed_8cs_source.html":[2,0,0,1307],
-"TraitBeekeep_8cs.html":[2,0,0,1308],
-"TraitBeekeep_8cs_source.html":[2,0,0,1308]
+"TraitBeekeep_8cs.html":[2,0,0,1308]
 };

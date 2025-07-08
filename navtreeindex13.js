@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"SceneTemplate_8cs.html":[2,0,0,1045],
 "SceneTemplate_8cs_source.html":[2,0,0,1045],
 "Scene_8cs.html":[2,0,0,1040],
 "Scene_8cs_source.html":[2,0,0,1040],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "SourceReligion_8cs.html":[2,0,0,1100],
 "SourceReligion_8cs_source.html":[2,0,0,1100],
 "SourceResearch_8cs.html":[2,0,0,1101],
-"SourceResearch_8cs_source.html":[2,0,0,1101],
-"SourceSpawnList_8cs.html":[2,0,0,1102]
+"SourceResearch_8cs_source.html":[2,0,0,1101]
 };

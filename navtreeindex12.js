@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"QuestTaskFlyer_8cs.html":[2,0,0,957],
 "QuestTaskFlyer_8cs_source.html":[2,0,0,957],
 "QuestTaskHunt_8cs.html":[2,0,0,958],
 "QuestTaskHunt_8cs_source.html":[2,0,0,958],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "SceneObject_8cs.html":[2,0,0,1043],
 "SceneObject_8cs_source.html":[2,0,0,1043],
 "SceneProfile_8cs.html":[2,0,0,1044],
-"SceneProfile_8cs_source.html":[2,0,0,1044],
-"SceneTemplate_8cs.html":[2,0,0,1045]
+"SceneProfile_8cs_source.html":[2,0,0,1044]
 };

@@ -120,6 +120,7 @@ var EffectId_8cs =
       [ "Sword", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a6c198603789a4928477eccd5d550b6b2", null ],
       [ "LovePlus", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a312da5bc79a943ea049795e3bb70401f", null ],
       [ "HairGrowth", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a01216d2839b07e7d0eaea8fc83ab7ac8", null ],
-      [ "Gene", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a624aa1a206e09836e3c81ea95502f459", null ]
+      [ "Gene", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a624aa1a206e09836e3c81ea95502f459", null ],
+      [ "CatSniff", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a07ab5fafa998d5bfa83104abb350d114", null ]
     ] ]
 ];

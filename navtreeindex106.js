@@ -1,5 +1,9 @@
 var NAVTREEINDEX106 =
 {
+"classSpatialGen.html#a1f71ec7993040f0b0ac2de45d7b4ed64":[1,0,1214,0],
+"classSpatialGen.html#a3ba5bf78488ddd87eb9ae0599c5f2e4a":[1,0,1214,1],
+"classSpatialGen.html#a90d62326e3b53772b69af9fddbe0f0f2":[1,0,1214,2],
+"classSpatialInspector.html":[1,0,1215],
 "classSpatialInspector.html#adcec7e3aaa5b7313b9ba42987ad4e3ae":[1,0,1215,0],
 "classSpatialManager.html":[1,0,1216],
 "classSpatialManager.html#a15075004b4748e12c876388d05c9b166":[1,0,1216,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX106 =
 "classStatsHygiene.html#ad0889bab0571eb9d8e6b63a6f261fadb":[1,0,1240,3],
 "classStatsMana.html":[1,0,1241],
 "classStatsMana.html#a139c5b18dc30e35d1e47b62a1847b55a":[1,0,1241,1],
-"classStatsMana.html#a6470aeb93cb08b7d1be5ee135db95da4":[1,0,1241,2],
-"classStatsMana.html#a64d348c6710c69010c4e72d1131f3e63":[1,0,1241,0],
-"classStatsSAN.html":[1,0,1242],
-"classStatsSleepiness.html":[1,0,1243],
-"classStatsSleepiness.html#a4ca086b556618937773fe99636df1761":[1,0,1243,2]
+"classStatsMana.html#a6470aeb93cb08b7d1be5ee135db95da4":[1,0,1241,2]
 };

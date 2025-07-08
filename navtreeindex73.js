@@ -1,5 +1,9 @@
 var NAVTREEINDEX73 =
 {
+"classKnowledgeList.html#ad35625cfb7422a47c4b491eccc4d9dba":[1,0,735,1],
+"classKnowledgeManager.html":[1,0,736],
+"classKnowledgeManager.html#a31b6a27de63dde3f5de0b8228d75098a":[1,0,736,0],
+"classKnowledgeManager.html#a91d01a316bc11ed4d9fe99fcb57220bd":[1,0,736,1],
 "classKnowledgeManager.html#ae4cc17b8305c088ffbd4dfb5680a21be":[1,0,736,2],
 "classKnowledgeRecipe.html":[1,0,737],
 "classKnowledgeResearch.html":[1,0,738],
@@ -245,9 +249,5 @@ var NAVTREEINDEX73 =
 "classLayer.html#af28698ec60569b75d19886ffe1a3f113":[1,0,752,46],
 "classLayer.html#af6363853dd23d7c6fd389c228ff30625":[1,0,752,17],
 "classLayer.html#af70006cb16342f3d51c4bf36cb829a54":[1,0,752,14],
-"classLayer.html#afa85d191f8e6375270c9d01ddde61855":[1,0,752,48],
-"classLayer.html#afb1354f408e1bd6ef31a47afb00e69f2":[1,0,752,58],
-"classLayer.html#afec4335761e856e36a79f53c69e578b0":[1,0,752,81],
-"classLayerAbility.html":[1,0,753],
-"classLayerAbility.html#a1b9207041dd4d3052eef1b55f1e856d7":[1,0,753,7]
+"classLayer.html#afa85d191f8e6375270c9d01ddde61855":[1,0,752,48]
 };

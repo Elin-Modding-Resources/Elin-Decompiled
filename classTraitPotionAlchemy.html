@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.166 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.167 Nightly</span>
    </div>
   </td>
  </tr>
@@ -114,8 +114,8 @@ Inheritance diagram for TraitPotionAlchemy:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fc02cad3212f3257ce98be1e74b24d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitPotionAlchemy.html#a1fc02cad3212f3257ce98be1e74b24d2">GetPower</a> ()</td></tr>
 <tr class="separator:a1fc02cad3212f3257ce98be1e74b24d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7123be52ae80785f096bf6a55d7ed3cf"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitPotionAlchemy.html#a7123be52ae80785f096bf6a55d7ed3cf">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe)</td></tr>
-<tr class="separator:a7123be52ae80785f096bf6a55d7ed3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe2c5dc046840f3d0e06840b81548fb"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitPotionAlchemy.html#afbe2c5dc046840f3d0e06840b81548fb">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:afbe2c5dc046840f3d0e06840b81548fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTraitPotionRandom"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTraitPotionRandom')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTraitPotionRandom.html">TraitPotionRandom</a></td></tr>
 <tr class="memitem:a6edd071c6499d46dbdb86a912357421b inherit pub_methods_classTraitPotionRandom"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitPotionRandom.html#a6edd071c6499d46dbdb86a912357421b">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:a6edd071c6499d46dbdb86a912357421b inherit pub_methods_classTraitPotionRandom"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,8 +179,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01114b762877593444f784e64c4421de inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af1967dc797493c26375ce1f8f1f6e75e">SetParams</a> (params string[] s)</td></tr>
 <tr class="separator:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe)</td></tr>
-<tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
@@ -470,6 +470,8 @@ Properties</h2></td></tr>
 <tr class="separator:ab1956cd682b44d4fdc61fb15c840c76d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4">CanBeAttacked</a><code> [get]</code></td></tr>
 <tr class="separator:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d">CanBeTeleported</a><code> [get]</code></td></tr>
+<tr class="separator:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a04da9197dd7d1484f6ab9529a93a05b2">CanExtendBuild</a><code> [get]</code></td></tr>
 <tr class="separator:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5403dc0110848cbb7e18de734186502c inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5403dc0110848cbb7e18de734186502c">langNote</a><code> [get]</code></td></tr>
@@ -700,6 +702,7 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1">DefaultNoAnime</a>
 , <br />
 &#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90">SignalAnime</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0">FakeBlock</a>
 <br />
  }</td></tr>
 <tr class="separator:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -802,14 +805,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> num * (100 + owner.encLV * num2) / 100;</div>
 <div class="line"><span class="lineno">   29</span>    }</div>
 <div class="ttc" id="aclassCard_html_a92374cf656cfe9b1314fdafa8dd1c0cb"><div class="ttname"><a href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">Card.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00189">Card.cs:190</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00027">Trait.cs:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l00190">Card.refVal</a>.</p>
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l00190">Card.refVal</a>.</p>
 
 </div>
 </div>
-<a id="a7123be52ae80785f096bf6a55d7ed3cf" name="a7123be52ae80785f096bf6a55d7ed3cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7123be52ae80785f096bf6a55d7ed3cf">&#9670;&#160;</a></span>OnCrafted()</h2>
+<a id="afbe2c5dc046840f3d0e06840b81548fb" name="afbe2c5dc046840f3d0e06840b81548fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbe2c5dc046840f3d0e06840b81548fb">&#9670;&#160;</a></span>OnCrafted()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,8 +824,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">override void TraitPotionAlchemy.OnCrafted </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRecipe.html">Recipe</a>&#160;</td>
-          <td class="paramname"><em>recipe</em></td><td>)</td>
+          <td class="paramname"><em>recipe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="classThing.html">Thing</a> &gt;&#160;</td>
+          <td class="paramname"><em>ings</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -832,7 +845,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085">Trait</a>.</p>
+<p>Reimplemented from <a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">Trait</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="TraitPotionAlchemy_8cs_source.html#l00031">31</a> of file <a class="el" href="TraitPotionAlchemy_8cs_source.html">TraitPotionAlchemy.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
@@ -891,7 +904,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00290">ELEMENT.cs:290</a></div></div>
 <div class="ttc" id="aclassElement_html_abd6a3bc2c79d7216263bb29e11675271"><div class="ttname"><a href="classElement.html#abd6a3bc2c79d7216263bb29e11675271">Element.IsTrait</a></div><div class="ttdeci">bool IsTrait</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00360">ELEMENT.cs:360</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ElementContainer_8cs_source.html#l00019">ElementContainer.dict</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02507">Card.Evalue()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00360">Element.IsTrait</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l02363">Card.QualityLv</a>, <a class="el" href="Card_8cs_source.html#l03709">Card.SetEncLv()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00290">Element.Value</a>.</p>
+<p class="reference">References <a class="el" href="ElementContainer_8cs_source.html#l00019">ElementContainer.dict</a>, <a class="el" href="Card_8cs_source.html#l00037">Card.elements</a>, <a class="el" href="Card_8cs_source.html#l02507">Card.Evalue()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00360">Element.IsTrait</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l02363">Card.QualityLv</a>, <a class="el" href="Card_8cs_source.html#l03709">Card.SetEncLv()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00290">Element.Value</a>.</p>
 
 </div>
 </div>

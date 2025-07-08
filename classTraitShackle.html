@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.166 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.167 Nightly</span>
    </div>
   </td>
  </tr>
@@ -164,8 +164,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01114b762877593444f784e64c4421de inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af1967dc797493c26375ce1f8f1f6e75e">SetParams</a> (params string[] s)</td></tr>
 <tr class="separator:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe)</td></tr>
-<tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
@@ -424,6 +424,8 @@ Properties</h2></td></tr>
 <tr class="separator:ab1956cd682b44d4fdc61fb15c840c76d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4">CanBeAttacked</a><code> [get]</code></td></tr>
 <tr class="separator:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d">CanBeTeleported</a><code> [get]</code></td></tr>
+<tr class="separator:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a04da9197dd7d1484f6ab9529a93a05b2">CanExtendBuild</a><code> [get]</code></td></tr>
 <tr class="separator:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5403dc0110848cbb7e18de734186502c inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5403dc0110848cbb7e18de734186502c">langNote</a><code> [get]</code></td></tr>
@@ -654,6 +656,7 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1">DefaultNoAnime</a>
 , <br />
 &#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90">SignalAnime</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0">FakeBlock</a>
 <br />
  }</td></tr>
 <tr class="separator:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -778,10 +781,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassPoint_html_adc2028a1488786ea6d4e75c42fdaec5c"><div class="ttname"><a href="classPoint.html#adc2028a1488786ea6d4e75c42fdaec5c">Point.FirstChara</a></div><div class="ttdeci">Chara FirstChara</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00275">Point.cs:276</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00027">Trait.cs:27</a></div></div>
 <div class="ttc" id="aclassZone_html_ac7a26417683b0ffe3668a504b1bd6cc0"><div class="ttname"><a href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">Zone.IsPCFaction</a></div><div class="ttdeci">bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00466">Zone.cs:466</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Point_8cs_source.html#l00276">Point.FirstChara</a>, <a class="el" href="Card_8cs_source.html#l02317">Card.IsInstalled</a>, <a class="el" href="Zone_8cs_source.html#l00466">Zone.IsPCFaction</a>, <a class="el" href="Card_8cs_source.html#l00550">Card.isRestrained</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Point_8cs_source.html#l00276">Point.FirstChara</a>, <a class="el" href="Card_8cs_source.html#l02317">Card.IsInstalled</a>, <a class="el" href="Zone_8cs_source.html#l00466">Zone.IsPCFaction</a>, <a class="el" href="Card_8cs_source.html#l00550">Card.isRestrained</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>.</p>
 
 </div>
 </div>
@@ -842,7 +845,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPoint_html_a7c39f4085805ef81c56b538e34f16f8a"><div class="ttname"><a href="classPoint.html#a7c39f4085805ef81c56b538e34f16f8a">Point.Charas</a></div><div class="ttdeci">List&lt; Chara &gt; Charas</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00328">Point.cs:328</a></div></div>
 <div class="ttc" id="aclassPoint_html_a91e18491812702289084e1b9728d1fa0"><div class="ttname"><a href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Point.Equals</a></div><div class="ttdeci">bool Equals(int _x, int _z)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00940">Point.cs:940</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Card_8cs_source.html#l01096">Card.c_uidRefCard</a>, <a class="el" href="Map_8cs_source.html#l00081">Map.charas</a>, <a class="el" href="Point_8cs_source.html#l00328">Point.Charas</a>, <a class="el" href="Point_8cs_source.html#l00940">Point.Equals()</a>, <a class="el" href="Chara_8cs_source.html#l00682">Chara.isChara</a>, <a class="el" href="Card_8cs_source.html#l02317">Card.IsInstalled</a>, <a class="el" href="Card_8cs_source.html#l00550">Card.isRestrained</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="Player_8cs_source.html#l01099">Player.simulatingZone</a>, and <a class="el" href="Card_8cs_source.html#l00118">Card.uid</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="Card_8cs_source.html#l01096">Card.c_uidRefCard</a>, <a class="el" href="Map_8cs_source.html#l00081">Map.charas</a>, <a class="el" href="Point_8cs_source.html#l00328">Point.Charas</a>, <a class="el" href="Point_8cs_source.html#l00940">Point.Equals()</a>, <a class="el" href="Chara_8cs_source.html#l00682">Chara.isChara</a>, <a class="el" href="Card_8cs_source.html#l02317">Card.IsInstalled</a>, <a class="el" href="Card_8cs_source.html#l00550">Card.isRestrained</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="Player_8cs_source.html#l01099">Player.simulatingZone</a>, and <a class="el" href="Card_8cs_source.html#l00118">Card.uid</a>.</p>
 
 </div>
 </div>
@@ -884,7 +887,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassActRestrain_html_af748a0d763546c2512b63fe349c2a57c"><div class="ttname"><a href="classActRestrain.html#af748a0d763546c2512b63fe349c2a57c">ActRestrain.Perform</a></div><div class="ttdeci">override bool Perform()</div><div class="ttdef"><b>Definition:</b> <a href="ActRestrain_8cs_source.html#l00027">ActRestrain.cs:27</a></div></div>
 <div class="ttc" id="aclassCard_html_ac26839ce1faec3c1226002eb5303606d"><div class="ttname"><a href="classCard.html#ac26839ce1faec3c1226002eb5303606d">Card.MoveImmediate</a></div><div class="ttdeci">void MoveImmediate(Point p, bool focus=true, bool cancelAI=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05479">Card.cs:5479</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l05479">Card.MoveImmediate()</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="ActRestrain_8cs_source.html#l00027">ActRestrain.Perform()</a>, and <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l05479">Card.MoveImmediate()</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="ActRestrain_8cs_source.html#l00027">ActRestrain.Perform()</a>, and <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>.</p>
 
 </div>
 </div>

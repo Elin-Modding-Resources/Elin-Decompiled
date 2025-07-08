@@ -1,5 +1,9 @@
 var NAVTREEINDEX72 =
 {
+"classInvOwnerHotbar.html#ad903a2d268da548e3b0b3ddefe65f690":[1,0,695,0],
+"classInvOwnerIdentify.html":[1,0,696],
+"classInvOwnerIdentify.html#a58f9a75f0b24bc0896ffec89caa05c42":[1,0,696,4],
+"classInvOwnerIdentify.html#aa939c978eef6ee2387c534b2c407b2d3":[1,0,696,3],
 "classInvOwnerIdentify.html#aab74d23eae4cd10c0fc27f7864e84b97":[1,0,696,0],
 "classInvOwnerIdentify.html#abb0df1a04a94c123fc28770aaf4bb291":[1,0,696,5],
 "classInvOwnerIdentify.html#ac5e4fe5673b194159ccae0469ea9fe07":[1,0,696,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX72 =
 "classKnowledge.html":[1,0,733],
 "classKnowledgeFaction.html":[1,0,734],
 "classKnowledgeList.html":[1,0,735],
-"classKnowledgeList.html#ace18e80339a381c9c47139d43366e084":[1,0,735,0],
-"classKnowledgeList.html#ad35625cfb7422a47c4b491eccc4d9dba":[1,0,735,1],
-"classKnowledgeManager.html":[1,0,736],
-"classKnowledgeManager.html#a31b6a27de63dde3f5de0b8228d75098a":[1,0,736,0],
-"classKnowledgeManager.html#a91d01a316bc11ed4d9fe99fcb57220bd":[1,0,736,1]
+"classKnowledgeList.html#ace18e80339a381c9c47139d43366e084":[1,0,735,0]
 };

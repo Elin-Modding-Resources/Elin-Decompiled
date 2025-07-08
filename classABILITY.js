@@ -104,6 +104,7 @@ var classABILITY =
     [ "Shoot", "classABILITY.html#a7cb7bc71634cfe4b980b7c1a47caee01", null ],
     [ "Sleep", "classABILITY.html#a4b0d861103c165f656e1fa7873cbc70e", null ],
     [ "SongSleep", "classABILITY.html#a530882edbe4481603c5301946a6b7b1c", null ],
+    [ "SongTulip", "classABILITY.html#aedab18658e1088c7d9105eb0816217a7", null ],
     [ "StManaCost", "classABILITY.html#aa74f8fa720ebd9ab23d4e1be983183d8", null ],
     [ "StTaunt", "classABILITY.html#a95955e7cb37876d089e49d8d96eea35c", null ],
     [ "TaskAttack", "classABILITY.html#a5e5613f46539c790b830307b8a2ab9ad", null ],

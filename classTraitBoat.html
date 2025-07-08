@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.166 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.167 Nightly</span>
    </div>
   </td>
  </tr>
@@ -156,8 +156,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01114b762877593444f784e64c4421de inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af1967dc797493c26375ce1f8f1f6e75e">SetParams</a> (params string[] s)</td></tr>
 <tr class="separator:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe)</td></tr>
-<tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
@@ -412,6 +412,8 @@ Properties</h2></td></tr>
 <tr class="separator:ab1956cd682b44d4fdc61fb15c840c76d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4">CanBeAttacked</a><code> [get]</code></td></tr>
 <tr class="separator:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d">CanBeTeleported</a><code> [get]</code></td></tr>
+<tr class="separator:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a04da9197dd7d1484f6ab9529a93a05b2">CanExtendBuild</a><code> [get]</code></td></tr>
 <tr class="separator:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5403dc0110848cbb7e18de734186502c inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5403dc0110848cbb7e18de734186502c">langNote</a><code> [get]</code></td></tr>
@@ -642,6 +644,7 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1">DefaultNoAnime</a>
 , <br />
 &#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90">SignalAnime</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0">FakeBlock</a>
 <br />
  }</td></tr>
 <tr class="separator:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -735,9 +738,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPoint_html_a1b6aa4e8565d4dde3333a6dfb99bd894"><div class="ttname"><a href="classPoint.html#a1b6aa4e8565d4dde3333a6dfb99bd894">Point.ForeachMultiSize</a></div><div class="ttdeci">void ForeachMultiSize(int w, int h, Action&lt; Point, bool &gt; action)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01365">Point.cs:1365</a></div></div>
 <div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00036">Point.cs:36</a></div></div>
 <div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00039">Point.cs:39</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00027">Trait.cs:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Point_8cs_source.html#l01365">Point.ForeachMultiSize()</a>, <a class="el" href="Card_8cs_source.html#l02302">Card.H</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l02290">Card.W</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l01365">Point.ForeachMultiSize()</a>, <a class="el" href="Card_8cs_source.html#l02302">Card.H</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l02290">Card.W</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitBoat_8cs_source.html#l00011">OnChangePlaceState()</a>, and <a class="el" href="TraitBoat_8cs_source.html#l00023">OnRemovedFromZone()</a>.</p>
 
@@ -785,7 +788,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l07400">Card.ForeachPoint()</a>, <a class="el" href="Cell_8cs_source.html#l00727">Cell.IsFloorWater</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l07400">Card.ForeachPoint()</a>, <a class="el" href="Cell_8cs_source.html#l00727">Cell.IsFloorWater</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitBoat_8cs_source.html#l00023">OnRemovedFromZone()</a>.</p>
 
@@ -877,7 +880,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html_af25f7aab4d97ca55b5ee305f82ccf6c8"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#af25f7aab4d97ca55b5ee305f82ccf6c8">SourceMaterial.Row.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00010">SourceMaterial.cs:10</a></div></div>
 <div class="ttc" id="aclassTraitBoat_html_ac97e5e8c4ae9111069e4075e2e57c7c6"><div class="ttname"><a href="classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6">TraitBoat.GetWaterMat</a></div><div class="ttdeci">SourceMaterial.Row GetWaterMat()</div><div class="ttdef"><b>Definition:</b> <a href="TraitBoat_8cs_source.html#l00052">TraitBoat.cs:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitBoat_8cs_source.html#l00035">ForeachDeck()</a>, <a class="el" href="TraitBoat_8cs_source.html#l00052">GetWaterMat()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00010">SourceMaterial.Row.id</a>, <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00079">Card.placeState</a>, and <a class="el" href="Point_8cs_source.html#l00903">Point.SetFloor()</a>.</p>
+<p class="reference">References <a class="el" href="TraitBoat_8cs_source.html#l00035">ForeachDeck()</a>, <a class="el" href="TraitBoat_8cs_source.html#l00052">GetWaterMat()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00010">SourceMaterial.Row.id</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00079">Card.placeState</a>, and <a class="el" href="Point_8cs_source.html#l00903">Point.SetFloor()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a9076b177927e40e81c779c41ace60dc4":[2,0,0,454,0,19],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aa8ef8de53d6ca526834d088ac2365bdd":[2,0,0,454,0,20],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aaec34f6af628cb6181e5f1d975f14c3e":[2,0,0,454,0,11],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac68e1e6faa33bfdf051e2ad6e3ce967d":[2,0,0,454,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "GlobalGoalExplore_8cs_source.html":[2,0,0,506],
 "GlobalGoalVisitAndStay_8cs.html":[2,0,0,507],
 "GlobalGoalVisitAndStay_8cs_source.html":[2,0,0,507],
-"GlobalGoalVisitTown_8cs.html":[2,0,0,508],
-"GlobalGoalVisitTown_8cs_source.html":[2,0,0,508]
+"GlobalGoalVisitTown_8cs.html":[2,0,0,508]
 };

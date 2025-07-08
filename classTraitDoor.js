@@ -13,6 +13,7 @@ var classTraitDoor =
     [ "count", "classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a", null ],
     [ "CanBeDisassembled", "classTraitDoor.html#a79df44d6b5e137eb8fb409f6fb79558a", null ],
     [ "CanBeOnlyBuiltInHome", "classTraitDoor.html#ae97feebb4cd06140e4b276757ee8170c", null ],
+    [ "CanBeTeleported", "classTraitDoor.html#aa2aab9bfa7125a999b5b2ac5a598d9c6", null ],
     [ "CanBuildInTown", "classTraitDoor.html#a01266a1c7b65a7c0d9e6b1d8711e1e57", null ],
     [ "HaveUpdate", "classTraitDoor.html#a87d71aa097e12f8717fa4f8d4d8e6e6b", null ],
     [ "idSound", "classTraitDoor.html#ad0b7578066367ee483762b3dacf54578", null ],

@@ -13,6 +13,7 @@ var classTraitNewZone =
     [ "CanBeDestroyed", "classTraitNewZone.html#aeebced4525b68749edc9e0296611c84e", null ],
     [ "CanBeHeld", "classTraitNewZone.html#a4a5f6b919a184a1459c0035f13c43df0", null ],
     [ "CanBeStolen", "classTraitNewZone.html#a340969fab4513a06b89a3050c2726600", null ],
+    [ "CanBeTeleported", "classTraitNewZone.html#a5f8428fdd28fd867be7661ae1d58bbca", null ],
     [ "CanToggleAutoEnter", "classTraitNewZone.html#ad3ef2288dca8c3423c6b3abaab2b25c9", null ],
     [ "CanUseInTempDungeon", "classTraitNewZone.html#a3de38236209dd47b9ddf9c73d5508a68", null ],
     [ "CreateExternalZone", "classTraitNewZone.html#a45084d4e1fe1843960bdaf1d79ba5a13", null ],

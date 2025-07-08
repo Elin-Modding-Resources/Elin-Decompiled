@@ -1,5 +1,9 @@
 var NAVTREEINDEX90 =
 {
+"classPrologue.html#a3ba489caf49044257e3c94ea0fef87fa":[1,0,956,5],
+"classPrologue.html#a4238692911288efddeb45c0528efe5b7":[1,0,956,9],
+"classPrologue.html#a5638ba5673578da5004ba909415b29f6":[1,0,956,3],
+"classPrologue.html#a70c7f8521b5c7b4e9e0fc9d3b1c19502":[1,0,956,0],
 "classPrologue.html#a8d481459364a5a40dfd923a1c3f458e0":[1,0,956,10],
 "classPrologue.html#a95da02f8e132212d4723925a0814b8b2":[1,0,956,1],
 "classPrologue.html#ac2db16c597d5ff6653e6383bb06843a2":[1,0,956,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX90 =
 "classQuestDefense.html#a6d57887fbc63f1b9afb541d2c458e5fc":[1,0,971,1],
 "classQuestDefense.html#a8df54ea51ec9403136de4056ab0b1f74":[1,0,971,0],
 "classQuestDefenseGame.html":[1,0,972],
-"classQuestDefenseGame.html#a034cd5e16342dd9038d2d7e49429b216":[1,0,972,7],
-"classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8":[1,0,972,6],
-"classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd":[1,0,972,12],
-"classQuestDefenseGame.html#a551d58179e2ee0b30584c2dac865f912":[1,0,972,11],
-"classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482":[1,0,972,13]
+"classQuestDefenseGame.html#a034cd5e16342dd9038d2d7e49429b216":[1,0,972,7]
 };

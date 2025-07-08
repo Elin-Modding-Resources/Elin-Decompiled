@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.166 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.167 Nightly</span>
    </div>
   </td>
  </tr>
@@ -113,8 +113,8 @@ Inheritance diagram for TraitBlanket:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4fb34d1b8f83fa6eda4da648f6b9da6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:ad4fb34d1b8f83fa6eda4da648f6b9da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63e4069f3a84e8c318bb62957ee9f216"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBlanket.html#a63e4069f3a84e8c318bb62957ee9f216">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe)</td></tr>
-<tr class="separator:a63e4069f3a84e8c318bb62957ee9f216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782f100d552308d63b1ddac41ca4cf87"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBlanket.html#a782f100d552308d63b1ddac41ca4cf87">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:a782f100d552308d63b1ddac41ca4cf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
 <tr class="memitem:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a> (int i, string def=null)</td></tr>
 <tr class="separator:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,8 +154,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01114b762877593444f784e64c4421de inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af1967dc797493c26375ce1f8f1f6e75e">SetParams</a> (params string[] s)</td></tr>
 <tr class="separator:af1967dc797493c26375ce1f8f1f6e75e inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe)</td></tr>
-<tr class="separator:a5b4c1ce1841cdaf6284cd5bb20838085 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:adc7c088d718de5c6d150975a3f8606a8 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:aa93666c96d1a63bd8f3848561a11873d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e078411c4ef5c0c9f060070396422e2 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2e078411c4ef5c0c9f060070396422e2">OnEquip</a> (<a class="el" href="classChara.html">Chara</a> c, bool onSetOwner)</td></tr>
@@ -408,6 +408,8 @@ Properties</h2></td></tr>
 <tr class="separator:ab1956cd682b44d4fdc61fb15c840c76d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a0f1f1194906b32b083c352d0a4a3c3f4">CanBeAttacked</a><code> [get]</code></td></tr>
 <tr class="separator:a0f1f1194906b32b083c352d0a4a3c3f4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d">CanBeTeleported</a><code> [get]</code></td></tr>
+<tr class="separator:a9f5f514eb961efaa6f4f4e8ffda5692d inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a04da9197dd7d1484f6ab9529a93a05b2">CanExtendBuild</a><code> [get]</code></td></tr>
 <tr class="separator:a04da9197dd7d1484f6ab9529a93a05b2 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5403dc0110848cbb7e18de734186502c inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5403dc0110848cbb7e18de734186502c">langNote</a><code> [get]</code></td></tr>
@@ -638,6 +640,7 @@ Additional Inherited Members</h2></td></tr>
 , <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1">DefaultNoAnime</a>
 , <br />
 &#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90">SignalAnime</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0">FakeBlock</a>
 <br />
  }</td></tr>
 <tr class="separator:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -682,10 +685,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00004">4</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a63e4069f3a84e8c318bb62957ee9f216" name="a63e4069f3a84e8c318bb62957ee9f216"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63e4069f3a84e8c318bb62957ee9f216">&#9670;&#160;</a></span>OnCrafted()</h2>
+<a id="a782f100d552308d63b1ddac41ca4cf87" name="a782f100d552308d63b1ddac41ca4cf87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782f100d552308d63b1ddac41ca4cf87">&#9670;&#160;</a></span>OnCrafted()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -697,8 +700,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">override void TraitBlanket.OnCrafted </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRecipe.html">Recipe</a>&#160;</td>
-          <td class="paramname"><em>recipe</em></td><td>)</td>
+          <td class="paramname"><em>recipe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="classThing.html">Thing</a> &gt;&#160;</td>
+          <td class="paramname"><em>ings</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -708,17 +721,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classTrait.html#a5b4c1ce1841cdaf6284cd5bb20838085">Trait</a>.</p>
+<p>Reimplemented from <a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00014">14</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_function" href="classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6">OnCreate</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>);</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_function" href="classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6">OnCreate</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>);</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
 <div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00369">Card.cs:370</a></div></div>
-<div class="ttc" id="aclassTraitBlanket_html_ad4fb34d1b8f83fa6eda4da648f6b9da6"><div class="ttname"><a href="classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6">TraitBlanket.OnCreate</a></div><div class="ttdeci">override void OnCreate(int lv)</div><div class="ttdef"><b>Definition:</b> <a href="TraitBlanket_8cs_source.html#l00009">TraitBlanket.cs:9</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
+<div class="ttc" id="aclassTraitBlanket_html_ad4fb34d1b8f83fa6eda4da648f6b9da6"><div class="ttname"><a href="classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6">TraitBlanket.OnCreate</a></div><div class="ttdeci">override void OnCreate(int lv)</div><div class="ttdef"><b>Definition:</b> <a href="TraitBlanket_8cs_source.html#l00010">TraitBlanket.cs:10</a></div></div>
+<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00027">Trait.cs:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l00370">Card.LV</a>, <a class="el" href="TraitBlanket_8cs_source.html#l00009">OnCreate()</a>, and <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00370">Card.LV</a>, <a class="el" href="TraitBlanket_8cs_source.html#l00010">OnCreate()</a>, and <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>.</p>
 
 </div>
 </div>
@@ -748,17 +761,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00009">9</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
-<div class="line"><span class="lineno">   11</span>        owner.c_charges = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a>(8 + Mathf.Clamp(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#afb1f6856af8994dababd0ecb4c7ad901">QualityLv</a> * 2, -2, 30));</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00010">10</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        owner.c_charges = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a>(8 + Mathf.Clamp(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#afb1f6856af8994dababd0ecb4c7ad901">QualityLv</a> * 2, -2, 30));</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
 <div class="ttc" id="aclassCard_html_afb1f6856af8994dababd0ecb4c7ad901"><div class="ttname"><a href="classCard.html#afb1f6856af8994dababd0ecb4c7ad901">Card.QualityLv</a></div><div class="ttdeci">int QualityLv</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02363">Card.cs:2363</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_aab84d4222ba97e33775a9b7f3a2785dd"><div class="ttname"><a href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">EClass.rndHalf</a></div><div class="ttdeci">static int rndHalf(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00082">EClass.cs:82</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00026">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l02363">Card.QualityLv</a>, and <a class="el" href="EClass_8cs_source.html#l00082">EClass.rndHalf()</a>.</p>
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l02363">Card.QualityLv</a>, and <a class="el" href="EClass_8cs_source.html#l00082">EClass.rndHalf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitBlanket_8cs_source.html#l00014">OnCrafted()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitBlanket_8cs_source.html#l00015">OnCrafted()</a>.</p>
 
 </div>
 </div>
@@ -783,7 +796,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00006">6</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
 
 </div>
 </div>
@@ -807,7 +820,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitBlanket_8cs_source.html#l00008">8</a> of file <a class="el" href="TraitBlanket_8cs_source.html">TraitBlanket.cs</a>.</p>
 
 </div>
 </div>

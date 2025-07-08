@@ -1625,6 +1625,7 @@ var hierarchy =
         ] ],
         [ "TraitEcoMark", "classTraitEcoMark.html", null ],
         [ "TraitEditorSign", "classTraitEditorSign.html", null ],
+        [ "TraitFakeBlock", "classTraitFakeBlock.html", null ],
         [ "TraitFertilizer", "classTraitFertilizer.html", [
           [ "TraitDefertilizer", "classTraitDefertilizer.html", null ]
         ] ],
