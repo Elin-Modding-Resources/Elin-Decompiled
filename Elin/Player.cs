@@ -1555,22 +1555,9 @@ public class Player : EClass
 		stringBuilder.Replace("#he", (EClass.pc.IsMale ? "he" : "she").lang());
 		stringBuilder.Replace("#his", (EClass.pc.IsMale ? "his" : "her").lang());
 		stringBuilder.Replace("#him", (EClass.pc.IsMale ? "him" : "her").lang());
-		string text = "_period".lang();
-		string[] array = stringBuilder.ToString().Split(text);
-		string text2 = "";
-		if (array.Length != 0)
-		{
-			string[] array2 = array;
-			foreach (string text3 in array2)
-			{
-				text2 += text3.ToTitleCase();
-				if (text3 != text && text3 != Environment.NewLine && text3.Length > 2 && text3 != array[^1])
-				{
-					text2 += text;
-				}
-			}
-		}
-		return text2.TrimEnd(Environment.NewLine.ToCharArray());
+		string separator = "_period".lang();
+		stringBuilder.ToString().Split(separator);
+		return stringBuilder.ToString().TrimEnd(Environment.NewLine.ToCharArray());
 	}
 
 	public void EditBackgroundText()

@@ -467,7 +467,7 @@ public class CardRenderer : RenderObject
 	public override void OnLeaveScreen()
 	{
 		isSynced = false;
-		if (hasActor && (!owner.ExistsOnMap || !data.persistActor))
+		if (hasActor && (!owner.ExistsOnMap || !data.persistActor || owner.isMasked))
 		{
 			KillActor();
 		}

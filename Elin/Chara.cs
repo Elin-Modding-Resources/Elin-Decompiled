@@ -5758,7 +5758,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			num5 = 0;
 		}
-		return Mathf.Clamp(100 + e.Value - 10 - e.source.LV * e.source.cost[0] * num4 / (10 + num3 * 10), 0, 100 - num5);
+		return Mathf.Clamp(100 + e.Value - 10 - e.source.LV * e.source.cost[0] * num4 / Mathf.Max(10 + num3 * 10, 1), 0, 100 - num5);
 	}
 
 	public void DoAI(int wait, Action onPerform)
@@ -6547,13 +6547,24 @@ public class Chara : Card, IPathfindWalker
 		{
 			ShowDialog("_chara", "sleep");
 		}
+		else if (EClass.pc.isHidden && !CanSee(EClass.pc))
+		{
+			ShowDialog("_chara", "invisible");
+		}
 		else if (base.isRestrained)
 		{
 			ShowDialog("_chara", "strain");
 		}
-		else if (EClass.pc.isHidden && !CanSee(EClass.pc))
+		else if (base.IsUnique && !EClass.player.codex.DroppedCard(id) && affinity.CanGiveCard())
 		{
-			ShowDialog("_chara", "invisible");
+			EClass.player.codex.MarkCardDrop(id);
+			ShowDialog("_chara", "give_card");
+			Thing thing = ThingGen.Create("figure");
+			thing.MakeFigureFrom(id);
+			EClass.player.DropReward(thing);
+			thing = ThingGen.Create("figure3");
+			thing.MakeFigureFrom(id);
+			EClass.player.DropReward(thing);
 		}
 		else if (IsEscorted())
 		{
@@ -6617,18 +6628,10 @@ public class Chara : Card, IPathfindWalker
 				}
 				return;
 			case "ashland":
-				if (zone_Nymelle != null && zone_Nymelle.IsCrystalLv)
-				{
-					SoundManager.ForceBGM();
-					LayerDrama.ActivateMain("mono", "nymelle_crystal");
-				}
-				else
-				{
-					ShowDialog("ashland");
-				}
+				ShowDialog("ashland");
 				return;
 			case "fiama":
-				if (zone_Nymelle != null && zone_Nymelle.IsCrystalLv)
+				if (zone_Nymelle != null && zone_Nymelle.IsCrystalLv && EClass.game.quests.GetPhase<QuestExploration>() == 3)
 				{
 					SoundManager.ForceBGM();
 					LayerDrama.ActivateMain("mono", "nymelle_crystal");
@@ -7491,6 +7494,28 @@ public class Chara : Card, IPathfindWalker
 			r = _listFavCat.RandomItem();
 		});
 		return r;
+	}
+
+	public Chara GetNearbyCatToSniff()
+	{
+		using (List<Chara>.Enumerator enumerator = pos.ListCharasInRadius(this, 3, (Chara c) => c != this && c.race.id == "cat").GetEnumerator())
+		{
+			if (enumerator.MoveNext())
+			{
+				return enumerator.Current;
+			}
+		}
+		return null;
+	}
+
+	public void Sniff(Chara c)
+	{
+		Say("abCatSniff", this, c);
+		AddCondition<ConHOT>(EClass.curve(50 + c.CHA * 5, 400, 100));
+		c.ShowEmo(Emo.angry);
+		ShowEmo(Emo.love);
+		Talk("sniff");
+		c.Talk(new string[4] { "labor", "disgust", "scold", "callGuards" }.RandomItem());
 	}
 
 	public int GetTotalFeat()

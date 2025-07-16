@@ -665,12 +665,22 @@ public class Zone : Spatial, ICardParent, IInspect
 					IO.DeleteDirectory(pathTemp + "Texture Replace");
 					Debug.Log(pathTemp);
 				}
-				zoneExportData = Import(pathExport);
-				base.isGenerated = true;
-				isImported = true;
-				if (flag3)
+				try
 				{
-					zoneExportData.orgMap = GameIO.LoadFile<Map>(base.pathSave + "map");
+					zoneExportData = Import(pathExport);
+					base.isGenerated = true;
+					isImported = true;
+					if (flag3)
+					{
+						zoneExportData.orgMap = GameIO.LoadFile<Map>(base.pathSave + "map");
+					}
+				}
+				catch (Exception message)
+				{
+					Debug.Log(message);
+					zoneExportData = Import(CorePath.ZoneSave + "fail.z");
+					base.isGenerated = true;
+					isImported = true;
 				}
 			}
 			EClass.game.countLoadedMaps++;

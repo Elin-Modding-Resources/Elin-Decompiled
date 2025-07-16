@@ -157,4 +157,16 @@ public class CharaAbility : EClass
 		}
 		Refresh();
 	}
+
+	public bool Has(int id)
+	{
+		foreach (ActList.Item item in list.items)
+		{
+			if (item.act.id == id)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 }

@@ -1370,8 +1370,14 @@ public class ActEffect : EClass
 			break;
 		}
 		case EffectId.CatSniff:
-			CC.Say("abCatSniff", CC, TC);
+		{
+			Chara nearbyCatToSniff = CC.GetNearbyCatToSniff();
+			if (nearbyCatToSniff != null)
+			{
+				CC.Sniff(nearbyCatToSniff);
+			}
 			break;
+		}
 		case EffectId.Steal:
 		{
 			if (EClass._zone.instance is ZoneInstanceBout)

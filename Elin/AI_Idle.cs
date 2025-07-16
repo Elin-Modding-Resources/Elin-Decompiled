@@ -60,11 +60,7 @@ public class AI_Idle : AIAct
 			}
 			if (EClass.rnd(owner.IsPCParty ? 10 : 100) == 0 && owner.hunger.GetPhase() >= 3)
 			{
-				Thing thing = owner.things.Find((Thing a) => owner.CanEat(a, owner.IsPCFaction) && !a.c_isImportant, recursive: false);
-				if (thing == null && owner.IsPCFaction)
-				{
-					thing = owner.FindBestFoodToEat();
-				}
+				Thing thing = (owner.IsPCFaction ? owner.FindBestFoodToEat() : owner.things.Find((Thing a) => owner.CanEat(a, owner.IsPCFaction) && !a.c_isImportant, recursive: false));
 				if (thing == null && owner.IsPCFaction && EClass._zone.IsPCFaction)
 				{
 					thing = EClass._zone.branch.GetMeal(owner);
@@ -82,10 +78,14 @@ public class AI_Idle : AIAct
 					else if (!owner.things.IsFull())
 					{
 						thing = ThingGen.CreateFromCategory("food", EClass.rnd(EClass.rnd(60) + 1) + 10);
-						thing.isNPCProperty = true;
-						if ((thing.ChildrenAndSelfWeight < 5000 || !owner.IsPCParty) && thing.trait.CanEat(owner))
+						if (thing.trait.CanEat(owner))
 						{
+							thing.isNPCProperty = true;
 							thing = owner.AddThing(thing);
+						}
+						else
+						{
+							thing = null;
 						}
 					}
 				}
@@ -105,39 +105,47 @@ public class AI_Idle : AIAct
 					}
 				}
 			}
-			if (EClass.rnd(3) == 0 && owner.mana.value > 0 && !EClass._zone.IsRegion)
+			if (!EClass._zone.IsRegion)
 			{
-				Act act = null;
-				Act actRevive = null;
-				foreach (ActList.Item item in owner.ability.list.items)
+				if (EClass.rnd(10) == 0 && owner.ability.Has(6627) && ((float)owner.hp < (float)owner.MaxHP * 0.8f || EClass.rnd(10) == 0) && owner.GetNearbyCatToSniff() != null && !owner.HasCondition<ConHOT>())
 				{
-					Act act2 = item.act;
-					if (act2.id == 8430)
-					{
-						actRevive = act2;
-					}
-					string[] abilityType = act2.source.abilityType;
-					if (!abilityType.IsEmpty() && (abilityType[0] == "heal" || abilityType[0] == "hot"))
-					{
-						act = item.act;
-					}
+					owner.Sniff(owner.GetNearbyCatToSniff());
+					yield return KeepRunning();
 				}
-				if (act != null)
+				if (EClass.rnd(3) == 0 && owner.mana.value > 0)
 				{
-					List<Chara> list = (owner.IsPCParty ? EClass.pc.party.members : new List<Chara> { owner });
-					foreach (Chara item2 in list)
+					Act act = null;
+					Act actRevive = null;
+					foreach (ActList.Item item in owner.ability.list.items)
 					{
-						if (!((float)item2.hp > (float)item2.MaxHP * 0.75f) && owner.CanSeeLos(item2) && (!(act.source.abilityType[0] == "hot") || !item2.HasCondition<ConHOT>()))
+						Act act2 = item.act;
+						if (act2.id == 8430)
 						{
-							owner.UseAbility(act, item2);
-							yield return KeepRunning();
-							break;
+							actRevive = act2;
+						}
+						string[] abilityType = act2.source.abilityType;
+						if (!abilityType.IsEmpty() && (abilityType[0] == "heal" || abilityType[0] == "hot"))
+						{
+							act = item.act;
 						}
 					}
-				}
-				if (actRevive != null && owner.IsPCFaction && EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList().Count > 0 && owner.UseAbility(actRevive.source.alias, owner))
-				{
-					yield return KeepRunning();
+					if (act != null)
+					{
+						List<Chara> list = (owner.IsPCParty ? EClass.pc.party.members : new List<Chara> { owner });
+						foreach (Chara item2 in list)
+						{
+							if (!((float)item2.hp > (float)item2.MaxHP * 0.75f) && owner.CanSeeLos(item2) && (!(act.source.abilityType[0] == "hot") || !item2.HasCondition<ConHOT>()))
+							{
+								owner.UseAbility(act, item2);
+								yield return KeepRunning();
+								break;
+							}
+						}
+					}
+					if (actRevive != null && owner.IsPCFaction && EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList().Count > 0 && owner.UseAbility(actRevive.source.alias, owner))
+					{
+						yield return KeepRunning();
+					}
 				}
 			}
 			if (owner.IsPCFaction && EClass._zone.IsPCFaction)

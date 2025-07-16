@@ -60,6 +60,15 @@ public class Affinity : EClass
 		return true;
 	}
 
+	public bool CanGiveCard()
+	{
+		if (!EClass.debug.marryAnytime)
+		{
+			return CurrentStage >= Stage.Love;
+		}
+		return true;
+	}
+
 	public bool CanMarry()
 	{
 		if (!EClass.debug.marryAnytime)

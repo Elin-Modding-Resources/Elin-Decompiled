@@ -17,7 +17,7 @@ public class TraitFakeBlock : Trait
 
 	public override void TrySetHeldAct(ActPlan p)
 	{
-		if (p.pos.cell._block != 0)
+		if (p.pos.cell._block != 0 && !p.pos.sourceBlock.ContainsTag("noFake"))
 		{
 			p.TrySetAct("actCopyBlock", delegate
 			{

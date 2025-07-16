@@ -3894,7 +3894,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			num2 = num3 / 10 + 1;
 			sides = num3 / num2 + 1;
 			bonus = 0;
-			dmg = dmg * 100 / (100 + num);
+			dmg = dmg * 100 / Mathf.Max(100 + num, 1);
 		}
 		int num4 = Dice.Roll(num2, sides, bonus, this);
 		dmg -= num4 * mod / 100;
