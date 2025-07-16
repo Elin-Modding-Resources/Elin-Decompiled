@@ -1,5 +1,9 @@
 var NAVTREEINDEX115 =
 {
+"classTraitClerk__Fighter.html":[1,0,1469],
+"classTraitClerk__Mage.html":[1,0,1470],
+"classTraitClerk__Merchant.html":[1,0,1471],
+"classTraitClerk__Thief.html":[1,0,1472],
 "classTraitClock.html":[1,0,1473],
 "classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1473,0],
 "classTraitCobWeb.html":[1,0,1474],
@@ -245,9 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1515,1],
 "classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1515,2],
 "classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1515,0],
-"classTraitDoorman__Mage.html":[1,0,1516],
-"classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1516,0],
-"classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1516,1],
-"classTraitDoorman__Thief.html":[1,0,1517],
-"classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1517,0]
+"classTraitDoorman__Mage.html":[1,0,1516]
 };

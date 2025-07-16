@@ -1,5 +1,9 @@
 var NAVTREEINDEX120 =
 {
+"classTraitRollingFortune.html#a56352d29ba42a40a680f1645d755a62a":[1,0,1762,2],
+"classTraitRollingFortune.html#a5997575ca14641c00633be0a788db30e":[1,0,1762,6],
+"classTraitRollingFortune.html#a8a8c01fcc9b5db9140a36c4f9230936c":[1,0,1762,3],
+"classTraitRollingFortune.html#ad1199c02254ea0e8445c5a39e1175ec2":[1,0,1762,4],
 "classTraitRollingFortune.html#ad1fa4acd27134f42ba87ad225353f236":[1,0,1762,7],
 "classTraitRollingFortune.html#af2e341b08771c804343430ec678eff4f":[1,0,1762,1],
 "classTraitRollingFortune.html#af55aa1f40dd1f0c243780187e41e154a":[1,0,1762,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitSpotStock.html":[1,0,1815],
 "classTraitSpotStock.html#af8870bb4fbba3c2111b67956e3d9d5ad":[1,0,1815,0],
 "classTraitSpotStockpile.html":[1,0,1816],
-"classTraitSpotStockpile.html#a24f33d2e704f24f7ca5675808ee6ecb2":[1,0,1816,0],
-"classTraitSpotTraining.html":[1,0,1817],
-"classTraitStairs.html":[1,0,1818],
-"classTraitStairs.html#a51b8ab589e8831b0061d5a11a82dd79f":[1,0,1818,0],
-"classTraitStairs.html#a71bc166fefebd379560d7c37a537b244":[1,0,1818,2]
+"classTraitSpotStockpile.html#a24f33d2e704f24f7ca5675808ee6ecb2":[1,0,1816,0]
 };

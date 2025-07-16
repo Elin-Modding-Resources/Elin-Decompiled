@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitBaseSpellbook.html#af56a0b5ee651e0662d694f8417859f3e":[1,0,1417,7],
+"classTraitBasketGame.html":[1,0,1418],
+"classTraitBasketGame.html#a25bbd4def567fde1fc68d5c017d129bd":[1,0,1418,0],
+"classTraitBath.html":[1,0,1419],
 "classTraitBath.html#a1fc2fd5db5f5966c5b1c4ded93794d37":[1,0,1419,0],
 "classTraitBed.html":[1,0,1421],
 "classTraitBed.html#a08547dc3eb39076ea1208a52790e84d4":[1,0,1421,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1468,0],
 "classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1468,1],
 "classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1468,3],
-"classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1468,2],
-"classTraitClerk__Fighter.html":[1,0,1469],
-"classTraitClerk__Mage.html":[1,0,1470],
-"classTraitClerk__Merchant.html":[1,0,1471],
-"classTraitClerk__Thief.html":[1,0,1472]
+"classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1468,2]
 };

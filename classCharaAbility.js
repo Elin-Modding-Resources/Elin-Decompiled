@@ -5,6 +5,7 @@ var classCharaAbility =
     [ "AddRandom", "classCharaAbility.html#ab6700b71776d339a548021bd14e5c739", null ],
     [ "BuildRandomAbilityList", "classCharaAbility.html#af0cba40d33b6f10a36477b55966f8150", null ],
     [ "GetRandomAbilityList", "classCharaAbility.html#a479e02727103d58eb0d03f2eb08c5fee", null ],
+    [ "Has", "classCharaAbility.html#af354380ffc5eea640f3ea0d50ec0df06", null ],
     [ "Refresh", "classCharaAbility.html#a22d81c4f23177d3772df0b1c64574f7c", null ],
     [ "Remove", "classCharaAbility.html#a91c8d720dcc3b4b4409361e695fc3233", null ],
     [ "list", "classCharaAbility.html#a58fc31c7f787ee00ece3c9ffed9dc7aa", null ],

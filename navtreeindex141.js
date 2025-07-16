@@ -1,5 +1,9 @@
 var NAVTREEINDEX141 =
 {
+"structB83_1_1Win32_1_1RECT.html#ac2f4b630675437979db9d20b4a1a4906":[0,4,3,0,3,2],
+"structB83_1_1Win32_1_1RECT.html#acb50eebe79fbdfc6b3e6674f41b8437f":[0,4,3,0,3,5],
+"structB83_1_1Win32_1_1RECT.html#acb50eebe79fbdfc6b3e6674f41b8437f":[1,0,3,0,3,5],
+"structBitArray32.html":[1,0,218],
 "structBitArray32.html#a0e36b9b35f6f05c9d0ee4046d0f93b91":[1,0,218,0],
 "structBitArray32.html#a1204ad7532f69f38c5d5b5405ec1f445":[1,0,218,14],
 "structBitArray32.html#a14a258c29e186dd2b80683591efb99d6":[1,0,218,11],

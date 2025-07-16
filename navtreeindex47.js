@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"classConConfuse.html":[1,0,301],
+"classConConfuse.html#a06d6f765db954815b64ef3b0e58638b4":[1,0,301,0],
+"classConConfuse.html#a4182634f64031e89c5eaf56f60016a24":[1,0,301,2],
+"classConConfuse.html#ac0e728b0a1ec777e19efdf28af9fca85":[1,0,301,3],
 "classConConfuse.html#acd9f51b2b2ec3d01d2929358e9dd3fc5":[1,0,301,1],
 "classConDeathSentense.html":[1,0,302],
 "classConDeathSentense.html#a43aab9b03d820744108fc9d28c720f62":[1,0,302,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX47 =
 "classConfigPreference.html#af01013389586f3c55a43a4bdcd949432":[1,0,317,2],
 "classConfigTactics.html":[1,0,318],
 "classConfigTactics.html#a47dffa4b1ca69a9226fa4054e1d6d405":[1,0,318,1],
-"classConfigTactics.html#a70a0db59b46e9424171d363f2ad2f188":[1,0,318,0],
-"classConfigTactics.html#a85626c285d80af5b82be7b4997c58d4d":[1,0,318,2],
-"classConsoleProDebug.html":[1,0,344],
-"classConsoleProDebug.html#a040ea11ee30655ec83b7f26b9d0d9e29":[1,0,344,0],
-"classConsoleProDebug.html#a24b01b8afcd05185b815d7f0eaf01870":[1,0,344,2]
+"classConfigTactics.html#a70a0db59b46e9424171d363f2ad2f188":[1,0,318,0]
 };

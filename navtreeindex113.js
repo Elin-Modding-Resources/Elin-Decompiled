@@ -1,5 +1,9 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#a9872b01b1767659a714eb7e9bc96e1bc":[1,0,1388,225],
+"classTrait.html#a9a7170186b04eeb2bf77273b032f5e36":[1,0,1388,207],
+"classTrait.html#a9c5b44dfa8b346bc1709cc67b6acba9f":[1,0,1388,232],
+"classTrait.html#a9c6093e2e5303e11c411d8b297e44990":[1,0,1388,199],
 "classTrait.html#a9cf5f40c0e4f7fa021b3ece8ddc83d13":[1,0,1388,171],
 "classTrait.html#a9da0751e99e26b4aeafb94c206e21e9e":[1,0,1388,70],
 "classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d":[1,0,1388,119],
@@ -245,9 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitBaseSpellbook.html#acd742b5fd8ff68f8a5b17110ce1f23d5":[1,0,1417,12],
 "classTraitBaseSpellbook.html#ad11ef848ff01b61b036d24f744b39b24":[1,0,1417,5],
 "classTraitBaseSpellbook.html#ad4db6e1d234810149a1ea4ef33b597f4":[1,0,1417,14],
-"classTraitBaseSpellbook.html#add24b2103260ee79aa1a619174732551":[1,0,1417,2],
-"classTraitBaseSpellbook.html#af56a0b5ee651e0662d694f8417859f3e":[1,0,1417,7],
-"classTraitBasketGame.html":[1,0,1418],
-"classTraitBasketGame.html#a25bbd4def567fde1fc68d5c017d129bd":[1,0,1418,0],
-"classTraitBath.html":[1,0,1419]
+"classTraitBaseSpellbook.html#add24b2103260ee79aa1a619174732551":[1,0,1417,2]
 };
