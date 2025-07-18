@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.168 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.169 Nightly</span>
    </div>
   </td>
  </tr>
@@ -398,26 +398,31 @@ $(document).ready(function(){initNavTree('CraftUtil_8cs_source.html',''); initRe
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                    {</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                        <span class="keywordflow">if</span> (isFood &amp;&amp; value3.<a class="code hl_property" href="classElement.html#ae5019c276c0163db4df1809ce8914a70">IsFoodTraitMain</a>)</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                        {</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                            product.elements.ModBase(value3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>);</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                        }</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                        {</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                            <span class="keywordtype">int</span> num5 = product.elements.Base(value3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                            <span class="keywordflow">if</span> ((num5 &lt;= 0 &amp;&amp; value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &lt; 0 &amp;&amp; value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &lt; num5) || (value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &gt; 0 &amp;&amp; value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &gt; num5))</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                            {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                                product.elements.SetTo(value3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>);</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                            }</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                        }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                    }</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                }</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                <span class="keywordflow">if</span> (isFood)</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    product.elements.ModBase(10, t.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(10) * nutFactor / 100);</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        }</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    }</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                            <span class="keywordtype">int</span> num5 = value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                            <span class="keywordflow">if</span> (product.id == <span class="stringliteral">&quot;lunch_dystopia&quot;</span>)</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                            {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                                num5 *= -1;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                            }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                            product.elements.ModBase(value3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, num5);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                        }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                        {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                            <span class="keywordtype">int</span> num6 = product.elements.Base(value3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                            <span class="keywordflow">if</span> ((num6 &lt;= 0 &amp;&amp; value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &lt; 0 &amp;&amp; value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &lt; num6) || (value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &gt; 0 &amp;&amp; value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> &gt; num6))</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                            {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                                product.elements.SetTo(value3.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, value3.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                            }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                        }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                    }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                <span class="keywordflow">if</span> (isFood)</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    product.elements.ModBase(10, t.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(10) * nutFactor / 100);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                }</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            }</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        }</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    }</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>}</div>
 <div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a></div><div class="ttdeci">CTAG</div><div class="ttdef"><b>Definition:</b> <a href="CTAG_8cs_source.html#l00001">CTAG.cs:2</a></div></div>
 <div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07af40e3d0e9577a8a2a2e9cdd1e2bcaefb"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af40e3d0e9577a8a2a2e9cdd1e2bcaefb">CTAG.noMix</a></div><div class="ttdeci">@ noMix</div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>

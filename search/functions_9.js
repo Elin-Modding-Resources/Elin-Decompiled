@@ -118,7 +118,7 @@ var searchData=
   ['isequippable_115',['IsEquippable',['../classCharaBody.html#aaeb4dc33c298701132f13f5399a680a1',1,'CharaBody']]],
   ['isequipping_116',['IsEquipping',['../classBodySlot.html#a865f4623a636e94aa12ef5d7d61047d6',1,'BodySlot']]],
   ['isescorted_117',['IsEscorted',['../classChara.html#af18486236f48c3165874a45f6ebece6d',1,'Chara']]],
-  ['isexcludefromcraft_118',['IsExcludeFromCraft',['../classCard.html#a46ce0913180a6332ffb57429e8591947',1,'Card']]],
+  ['isexcludefromcraft_118',['IsExcludeFromCraft',['../classCard.html#a2b0ae975000ba6858aa04be251024d43',1,'Card']]],
   ['isexpired_119',['IsExpired',['../classDate.html#a922d66f6ea6d2b5e5a1e3e2323cd14a6',1,'Date']]],
   ['isfactionelement_120',['IsFactionElement',['../classElement.html#a0176422320eb27feb176bf81a9a9f8e8',1,'Element']]],
   ['isfail_121',['IsFail',['../classCheckExtension.html#aa1e5dcb50de41562ff0563d79318ccfc',1,'CheckExtension']]],

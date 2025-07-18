@@ -979,7 +979,7 @@ var searchData=
   ['isether_976',['IsEther',['../classWeather.html#a1079e0c2b269a60e809190e3a01b6eb2',1,'Weather']]],
   ['isevac_977',['isEvac',['../classPlayer_1_1ReturnInfo.html#afeb69959cda4ce1588455b7a42f25b2d',1,'Player::ReturnInfo']]],
   ['isevolved_978',['isEvolved',['../classSpawnSetting.html#a16dffa2fa82e6d8e79407d4ef04f7d46',1,'SpawnSetting']]],
-  ['isexcludefromcraft_979',['IsExcludeFromCraft',['../classCard.html#a46ce0913180a6332ffb57429e8591947',1,'Card']]],
+  ['isexcludefromcraft_979',['IsExcludeFromCraft',['../classCard.html#a2b0ae975000ba6858aa04be251024d43',1,'Card']]],
   ['isexited_980',['isExited',['../classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6',1,'DramaSequence']]],
   ['isexpired_981',['IsExpired',['../classHireInfo.html#ade8146b482f384e8044b09e9b7a40411',1,'HireInfo.IsExpired()'],['../classQuest.html#a1943af00af484e18698696bc9e3afc61',1,'Quest.IsExpired()'],['../classDate.html#a922d66f6ea6d2b5e5a1e3e2323cd14a6',1,'Date.IsExpired()']]],
   ['isexplorable_982',['IsExplorable',['../classZone.html#ae3f7a5c129594ea0730071dabad60c08',1,'Zone.IsExplorable()'],['../classZone__Town.html#a79b00ab615cd6a0f6a8623739ea36b25',1,'Zone_Town.IsExplorable()']]],

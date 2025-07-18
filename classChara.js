@@ -200,7 +200,7 @@ var classChara =
     [ "RemoveCondition< T >", "classChara.html#aa5d80b670eca04fbcbcb3fc80baf817e", null ],
     [ "RemoveGlobal", "classChara.html#a1ec14b046ccec98904da6b050cbd4843", null ],
     [ "RemoveLastBodyPart", "classChara.html#a90f1d634604e049c931ba99b0a24b4f7", null ],
-    [ "RequestProtection", "classChara.html#aca643c661b6f7c3a1ae45f4cb2a7b6d9", null ],
+    [ "RequestProtection", "classChara.html#a4c8bd97369b66010eff17a0f89ad47d0", null ],
     [ "RerollHobby", "classChara.html#ab5a4e8185786c421f43dcc51a4b9fb1a", null ],
     [ "ResetBody", "classChara.html#a183b514773f7ddf9e9dbadc65dedef26", null ],
     [ "ResetUpgrade", "classChara.html#a419761ade6f0ec29a20033eb2b84576e", null ],

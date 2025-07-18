@@ -693,7 +693,7 @@ var searchData=
   ['requestcount_690',['requestCount',['../classPathManager.html#ad7344b8da82562747c63066d710b2d75',1,'PathManager']]],
   ['requestpath_691',['RequestPath',['../classPathManager.html#ab34bcc80381dba88428330c5e848aefd',1,'PathManager.RequestPath()'],['../classPathProgress.html#a74bfe76e2294507266dea4abff97083b',1,'PathProgress.RequestPath()']]],
   ['requestpathimmediate_692',['RequestPathImmediate',['../classPathManager.html#a0846a6ee9603638146d4897b3b58f333',1,'PathManager.RequestPathImmediate(PathProgress progress)'],['../classPathManager.html#ac92c5cb14be3769c642f1387c78eb896',1,'PathManager.RequestPathImmediate(Point origin, Point dest, IPathfindWalker walker, MoveType moveType=MoveType.Default, int searchLimit=-1, int destDist=0)'],['../classPathProgress.html#afcb2e596c72604b2bb59a6c2f3544985',1,'PathProgress.RequestPathImmediate()']]],
-  ['requestprotection_693',['RequestProtection',['../classChara.html#aca643c661b6f7c3a1ae45f4cb2a7b6d9',1,'Chara']]],
+  ['requestprotection_693',['RequestProtection',['../classChara.html#a4c8bd97369b66010eff17a0f89ad47d0',1,'Chara']]],
   ['requireaxisreset_694',['requireAxisReset',['../classEInput.html#a339110d5e070d2c5ea48b181d2459c4f',1,'EInput']]],
   ['requirechara_695',['RequireChara',['../classTargetTypeChara.html#aa076c608cc5f66c2a3fe56614c0a7871',1,'TargetTypeChara.RequireChara()'],['../classTargetType.html#abce955c84c87565d40da14ef0abe4d21',1,'TargetType.RequireChara()']]],
   ['requireclientinsamezone_696',['RequireClientInSameZone',['../classQuest.html#a3cf991d468757539b7030ac5e0dfaed1',1,'Quest.RequireClientInSameZone()'],['../classQuestDialog.html#a69e71483b0ec914a289d2a9f75b2ac8e',1,'QuestDialog.RequireClientInSameZone()']]],

@@ -125,7 +125,7 @@ var classCard =
     [ "Inspect", "classCard.html#ae3f045dfaf93f2c4e44b2821cdf4fd5c", null ],
     [ "Install", "classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38", null ],
     [ "IsChildOf", "classCard.html#ab6710d8d7bb9f8e556a1e59caf0f9db4", null ],
-    [ "IsExcludeFromCraft", "classCard.html#a46ce0913180a6332ffb57429e8591947", null ],
+    [ "IsExcludeFromCraft", "classCard.html#a2b0ae975000ba6858aa04be251024d43", null ],
     [ "IsInMutterDistance", "classCard.html#a82fc79b1d39d91748a11aeb3ac5fc182", null ],
     [ "IsStackable", "classCard.html#a37cb07dfceea4829e9b9da0e10e210e3", null ],
     [ "KillAnime", "classCard.html#af2d7a0b14688981da559f28d4da0a39f", null ],
