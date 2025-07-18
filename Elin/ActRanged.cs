@@ -187,6 +187,10 @@ public class ActRanged : ActThrow
 				return true;
 			}
 		}
+		Act.TC?.Chara?.RequestProtection(Act.CC, delegate(Chara c)
+		{
+			Act.TC = c;
+		});
 		Act.CC.LookAt(Act.TP);
 		int index = 0;
 		Point orgTP = Act.TP.Copy();
@@ -283,13 +287,6 @@ public class ActRanged : ActThrow
 			index++;
 			Act.TC = _tc;
 			Act.TP = _tp;
-			if (index == 1)
-			{
-				Act.TC?.Chara?.RequestProtection(Act.CC, delegate(Chara c)
-				{
-					Act.TC = c;
-				});
-			}
 			CellEffect effect = Act.TP.cell.effect;
 			if (effect != null && effect.id == 6 && EClass.rnd(2) == 0)
 			{

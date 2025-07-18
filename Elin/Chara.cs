@@ -7800,11 +7800,19 @@ public class Chara : Card, IPathfindWalker
 		t.Destroy();
 	}
 
-	public void RequestProtection(Chara attacker, Action<Chara> action)
+	public bool RequestProtection(Chara attacker, Action<Chara> action)
 	{
-		if (HasCondition<StanceTaunt>() || base.isRestrained || attacker == this || (host != null && host.isRestrained) || (base.IsPCFactionOrMinion && attacker.IsPCFactionOrMinion))
+		if (HasCondition<StanceTaunt>() || base.isRestrained || attacker == this)
 		{
-			return;
+			return false;
+		}
+		if (host != null && host.isRestrained)
+		{
+			return false;
+		}
+		if (base.IsPCFactionOrMinion && attacker.IsPCFactionOrMinion)
+		{
+			return false;
 		}
 		bool flag = false;
 		foreach (Chara chara in EClass._map.charas)
@@ -7868,6 +7876,7 @@ public class Chara : Card, IPathfindWalker
 				flag = true;
 			}
 		}
+		return flag;
 	}
 
 	public bool ShouldThrowAway(Thing t, ClearInventoryType type)

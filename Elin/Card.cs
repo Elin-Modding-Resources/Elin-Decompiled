@@ -2462,9 +2462,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return c_windowSaveData;
 	}
 
-	public bool IsExcludeFromCraft()
+	public bool IsExcludeFromCraft(Recipe.Ingredient ing)
 	{
-		if (IsUnique || c_isImportant)
+		if ((IsUnique && ing.id != id && !ing.idOther.Contains(id)) || c_isImportant)
 		{
 			return true;
 		}

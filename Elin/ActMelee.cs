@@ -111,10 +111,10 @@ public class ActMelee : ActBaseAttack
 			return true;
 		}
 		Act.CC.renderer.PlayAnime(AnimeID.Attack, Act.TC);
-		Act.TC?.Chara?.RequestProtection(Act.CC, delegate(Chara c)
+		bool intercepted = (Act.TC?.Chara?.RequestProtection(Act.CC, delegate(Chara c)
 		{
 			Act.TC = c;
-		});
+		})).GetValueOrDefault();
 		Act.TP.Set(Act.TC.pos);
 		CellEffect effect = Act.TP.cell.effect;
 		if (effect != null && effect.id == 6 && EClass.rnd(2) == 0)
@@ -176,7 +176,7 @@ public class ActMelee : ActBaseAttack
 					w = slot.thing;
 				}
 				int num = 1 + Mathf.Max(Act.CC.Evalue(666), (w != null) ? w.Evalue(666) : 0);
-				if (!UseWeaponDist || dist <= 1 || dist <= num)
+				if (!UseWeaponDist || dist <= 1 || dist <= num || intercepted)
 				{
 					int num2 = GetWeaponEnc(606, addSelfEnc: false);
 					int scatter = GetWeaponEnc(607, addSelfEnc: false);

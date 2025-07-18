@@ -304,12 +304,17 @@ public class CraftUtil : EClass
 					{
 						if (isFood && value3.IsFoodTraitMain)
 						{
-							product.elements.ModBase(value3.id, value3.Value);
+							int num5 = value3.Value;
+							if (product.id == "lunch_dystopia")
+							{
+								num5 *= -1;
+							}
+							product.elements.ModBase(value3.id, num5);
 						}
 						else
 						{
-							int num5 = product.elements.Base(value3.id);
-							if ((num5 <= 0 && value3.Value < 0 && value3.Value < num5) || (value3.Value > 0 && value3.Value > num5))
+							int num6 = product.elements.Base(value3.id);
+							if ((num6 <= 0 && value3.Value < 0 && value3.Value < num6) || (value3.Value > 0 && value3.Value > num6))
 							{
 								product.elements.SetTo(value3.id, value3.Value);
 							}

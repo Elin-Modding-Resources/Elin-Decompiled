@@ -254,7 +254,7 @@ public class Props : EClass
 			SourceCategory.Row cat = EClass.sources.categories.map[id];
 			EClass.pc.things.Foreach(delegate(Thing t)
 			{
-				if (!t.isEquipped && t.category.IsChildOf(cat.id) && !t.IsExcludeFromCraft())
+				if (!t.isEquipped && t.category.IsChildOf(cat.id) && !t.IsExcludeFromCraft(ing))
 				{
 					stack.Add(t);
 				}
@@ -264,7 +264,7 @@ public class Props : EClass
 				foreach (Thing thing2 in things)
 				{
 					Card obj = thing2.parent as Card;
-					if (obj != null && obj.c_lockLv == 0 && thing2.category.IsChildOf(cat.id) && !thing2.IsExcludeFromCraft())
+					if (obj != null && obj.c_lockLv == 0 && thing2.category.IsChildOf(cat.id) && !thing2.IsExcludeFromCraft(ing))
 					{
 						stack.Add(thing2);
 					}
@@ -273,7 +273,7 @@ public class Props : EClass
 		}
 		void TryAdd(Thing t)
 		{
-			if ((tag == null || t.Thing.material.tag.Contains(tag)) && (idMat == -1 || t.material.id == idMat) && !t.IsExcludeFromCraft())
+			if ((tag == null || t.Thing.material.tag.Contains(tag)) && (idMat == -1 || t.material.id == idMat) && !t.IsExcludeFromCraft(ing))
 			{
 				stack.Add(t.Thing);
 			}

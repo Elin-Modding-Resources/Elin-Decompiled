@@ -9,7 +9,7 @@ public class StanceSongSleep : BaseSong
 
 	public override void Tick()
 	{
-		if (owner.HasCondition<ConSilence>())
+		if (owner.HasCondition<ConSilence>() || EClass._zone.IsRegion)
 		{
 			return;
 		}

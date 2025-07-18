@@ -195,7 +195,7 @@ public class TraitBaseSpellbook : TraitScroll
 				}
 				if (!owner.c_idRefName.IsEmpty())
 				{
-					CardRow cardRow = EClass.sources.cards.map[owner.c_idRefName];
+					CardRow cardRow = EClass.sources.cards.map.TryGetValue(owner.c_idRefName, "putty");
 					c.Say("learn_weakspot", c, cardRow.GetName());
 					if (c.IsPC)
 					{
