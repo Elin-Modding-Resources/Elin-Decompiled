@@ -890,6 +890,41 @@ public static class ClassExtension
 		return "<size=" + size + ">" + s + "</size>";
 	}
 
+	public static bool HasTag(this string s, string id, char splitter = '/')
+	{
+		return s.Split(splitter).Contains(id);
+	}
+
+	public static string SetTag(this string s, string id, bool enable, char splitter = '/')
+	{
+		s = ((!enable) ? s.RemoveTag(id, splitter) : s.AddTag(id, splitter));
+		return s;
+	}
+
+	public static string AddTag(this string s, string id, char splitter = '/')
+	{
+		if (!s.HasTag(id, splitter))
+		{
+			s = s + (s.IsEmpty() ? "" : ((object)splitter))?.ToString() + id;
+		}
+		return s;
+	}
+
+	public static string RemoveTag(this string s, string id, char splitter = '/')
+	{
+		string[] array = s.Split(splitter);
+		s = "";
+		string[] array2 = array;
+		foreach (string text in array2)
+		{
+			if (!(text == id))
+			{
+				s.AddTag(text, splitter);
+			}
+		}
+		return s;
+	}
+
 	public static string GetFullFileNameWithoutExtension(this FileInfo fileInfo)
 	{
 		return fileInfo.Directory.FullName + "/" + Path.GetFileNameWithoutExtension(fileInfo.Name);
