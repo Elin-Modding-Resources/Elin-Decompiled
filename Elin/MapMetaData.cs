@@ -13,6 +13,9 @@ public class MapMetaData : EClass
 	public string type;
 
 	[JsonProperty]
+	public string tag = "";
+
+	[JsonProperty]
 	public int version;
 
 	[JsonProperty]

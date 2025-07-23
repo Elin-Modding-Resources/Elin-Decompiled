@@ -63,7 +63,7 @@ public class TraitMoongate : Trait
 			listOrg = listOrg.Where((Net.DownloadMeta m) => m.IsValidVersion()).ToList();
 			listOrg.ForeachReverse(delegate(Net.DownloadMeta m)
 			{
-				if (!AllowedCat.Split(',').Contains(m.cat.IsEmpty("Home")))
+				if (!AllowedCat.Split(',').Contains(m.cat.IsEmpty("Home")) || (EClass.core.config.net.noAdult && m.tag.HasTag("adult")))
 				{
 					listOrg.Remove(m);
 				}
@@ -79,7 +79,7 @@ public class TraitMoongate : Trait
 			{
 				foreach (Net.DownloadMeta item2 in list2)
 				{
-					if (item2.id == item.id && item2.version == item.version)
+					if ((item2.id == item.id && item2.version == item.version) || (EClass.core.config.net.noAdult && item2.tag.HasTag("adult")))
 					{
 						list2.Remove(item2);
 						break;
@@ -132,6 +132,7 @@ public class TraitMoongate : Trait
 			return;
 		}
 		Debug.Log("loading:" + m.name + "/" + m.path);
+		Debug.Log(m.tag);
 		Zone_User zone_User = EClass.game.spatials.Find((Zone_User z) => z.idUser == m.id);
 		if (zone_User == null)
 		{

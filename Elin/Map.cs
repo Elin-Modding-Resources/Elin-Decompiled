@@ -723,6 +723,7 @@ public class Map : MapBounds, IPathfindGrid
 		{
 			name = EClass._zone.Name,
 			version = BaseCore.Instance.version.GetInt(),
+			tag = (EClass._map.exportSetting?.tag ?? ""),
 			partial = partial
 		};
 		custom.id = (mapMetaData.id = id);

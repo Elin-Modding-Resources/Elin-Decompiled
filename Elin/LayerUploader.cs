@@ -35,6 +35,8 @@ public class LayerUploader : ELayer
 
 	public UIButton toggleClearLocalCharas;
 
+	public UIButton toggleAdult;
+
 	public int limitSec;
 
 	public HashSet<string> invalidIds = new HashSet<string>();
@@ -66,6 +68,11 @@ public class LayerUploader : ELayer
 		toggleClearLocalCharas.SetToggle(ex.clearLocalCharas, delegate(bool on)
 		{
 			ex.clearLocalCharas = on;
+		});
+		toggleAdult.SetToggle(ELayer._map.exportSetting.tag.HasTag("adult"), delegate(bool on)
+		{
+			ELayer._map.exportSetting.tag = ELayer._map.exportSetting.tag.SetTag("adult", on);
+			Debug.Log(ELayer._map.exportSetting.tag + " / " + ELayer._map.exportSetting.tag.HasTag("adult"));
 		});
 	}
 
@@ -144,7 +151,7 @@ public class LayerUploader : ELayer
 			string text2 = inputPassword.text;
 			SaveID();
 			ExportMap();
-			Net.UploadFile(text, text2, ELayer.pc.NameBraced, ELayer._zone.Name, savePath, Lang.langCode, (ELayer._zone is Zone_Tent) ? "Tent" : "Home");
+			Net.UploadFile(text, text2, ELayer.pc.NameBraced, ELayer._zone.Name, savePath, Lang.langCode, (ELayer._zone is Zone_Tent) ? "Tent" : "Home", ELayer._map.exportSetting.tag);
 			nextUpload = (int)Time.realtimeSinceStartup + limitSec;
 		}
 	}

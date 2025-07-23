@@ -39,6 +39,8 @@ public class Net : MonoBehaviour
 
 		public string cat;
 
+		public string tag;
+
 		public string date;
 
 		public int version;
@@ -100,7 +102,7 @@ public class Net : MonoBehaviour
 		}
 	}
 
-	public static async UniTask<bool> UploadFile(string id, string password, string name, string title, string path, string idLang, string cat = "Home")
+	public static async UniTask<bool> UploadFile(string id, string password, string name, string title, string path, string idLang, string cat = "Home", string tag = "")
 	{
 		if (isUploading)
 		{
@@ -120,6 +122,7 @@ public class Net : MonoBehaviour
 		wWWForm.AddField("name", name);
 		wWWForm.AddField("title", title);
 		wWWForm.AddField("cat", cat);
+		wWWForm.AddField("tag", tag);
 		wWWForm.AddField("idLang", idLang);
 		wWWForm.AddField("password", password);
 		wWWForm.AddField("submit", "Send");
@@ -131,6 +134,7 @@ public class Net : MonoBehaviour
 		Debug.Log(title);
 		Debug.Log(idLang);
 		Debug.Log(password);
+		Debug.Log(tag);
 		Debug.Log(array.Length);
 		using (UnityWebRequest www = UnityWebRequest.Post("http://ylva.php.xdomain.jp/script/uploader/uploader.php", wWWForm))
 		{
@@ -224,7 +228,8 @@ public class Net : MonoBehaviour
 					title = array[3],
 					cat = array[5],
 					date = array[6].Replace("\"", ""),
-					version = ((array.Length >= 9) ? array[8].ToInt() : 0)
+					version = ((array.Length >= 9) ? array[8].ToInt() : 0),
+					tag = ((array.Length >= 10) ? array[9] : "")
 				});
 			}
 		}

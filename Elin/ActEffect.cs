@@ -608,7 +608,13 @@ public class ActEffect : EClass
 					chara.hp = chara.MaxHP / 2;
 				}
 				EClass._zone.AddCard(chara, point);
-				if (!(actRef.n1 == "monster") || actRef.refThing == null)
+				if (flag)
+				{
+					Chara chara2 = chara;
+					Hostility hostility2 = (chara.c_originalHostility = Hostility.Enemy);
+					chara2.hostility = hostility2;
+				}
+				else if (!(actRef.n1 == "monster") || actRef.refThing == null)
 				{
 					chara.MakeMinion(CC);
 				}
@@ -633,14 +639,14 @@ public class ActEffect : EClass
 			}
 			CC.Say("spell_funnel", CC, element.Name.ToLower());
 			CC.PlaySound("spell_funnel");
-			Chara chara2 = CharaGen.Create("bit");
-			chara2.SetMainElement(element.source.alias, element.Value, elemental: true);
-			chara2.SetSummon(20 + power / 20 + EClass.rnd(10));
-			chara2.SetLv(power / 15);
-			chara2.interest = 0;
-			EClass._zone.AddCard(chara2, tp.GetNearestPoint(allowBlock: false, allowChara: false));
-			chara2.PlayEffect("teleport");
-			chara2.MakeMinion(CC);
+			Chara chara3 = CharaGen.Create("bit");
+			chara3.SetMainElement(element.source.alias, element.Value, elemental: true);
+			chara3.SetSummon(20 + power / 20 + EClass.rnd(10));
+			chara3.SetLv(power / 15);
+			chara3.interest = 0;
+			EClass._zone.AddCard(chara3, tp.GetNearestPoint(allowBlock: false, allowChara: false));
+			chara3.PlayEffect("teleport");
+			chara3.MakeMinion(CC);
 			return;
 		}
 		case EffectId.Breathe:
@@ -669,11 +675,11 @@ public class ActEffect : EClass
 			{
 				foreach (Point item in EClass._map.ListPointsInCircle(cc.pos, 6f, mustBeWalkable: false, los: false))
 				{
-					foreach (Chara chara3 in item.Charas)
+					foreach (Chara chara4 in item.Charas)
 					{
-						if (chara3.ResistLv(957) <= 0)
+						if (chara4.ResistLv(957) <= 0)
 						{
-							chara3.AddCondition<ConParalyze>(power);
+							chara4.AddCondition<ConParalyze>(power);
 						}
 					}
 				}

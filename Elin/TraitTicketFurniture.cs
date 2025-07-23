@@ -18,7 +18,7 @@ public class TraitTicketFurniture : Trait
 
 	public override void TrySetHeldAct(ActPlan p)
 	{
-		if (EClass._zone.GetTopZone() != zone)
+		if ((!(EClass._zone is Zone_EmbassyPalmia) || !(zone is Zone_Palmia)) && EClass._zone.GetTopZone() != zone)
 		{
 			return;
 		}

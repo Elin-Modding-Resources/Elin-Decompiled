@@ -885,6 +885,10 @@ public class FactionBranch : EClass
 										else
 										{
 											CraftUtil.MakeDish(thing4, num4 + 10, i);
+											if (thing4.id == "lunch_dystopia")
+											{
+												flag = true;
+											}
 										}
 									}
 									if (flag)

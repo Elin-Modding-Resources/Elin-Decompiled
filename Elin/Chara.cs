@@ -7580,6 +7580,13 @@ public class Chara : Card, IPathfindWalker
 		return DNA.GenerateGene(this, type);
 	}
 
+	public Thing MakeLunch()
+	{
+		Thing thing = ThingGen.Create("lunch_love");
+		thing.MakeRefFrom(this);
+		return thing;
+	}
+
 	public Thing MakeBraineCell()
 	{
 		return DNA.GenerateGene(this, DNA.Type.Brain);

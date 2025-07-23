@@ -425,6 +425,8 @@ public class CoreConfig : EClass
 		public bool receiveRealtime;
 
 		public bool password;
+
+		public bool noAdult;
 	}
 
 	[Serializable]

@@ -7,4 +7,7 @@ public class MapExportSetting
 
 	[JsonProperty]
 	public string textWelcome;
+
+	[JsonProperty]
+	public string tag = "";
 }

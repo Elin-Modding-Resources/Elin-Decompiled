@@ -33,6 +33,8 @@ public class ContentConfigGame : ContentConfig
 
 	public UIButton toggleNet;
 
+	public UIButton toggleAdult;
+
 	public UIButton toggleDisableAutoStairs;
 
 	public UIButton toggleSmoothPick;
@@ -191,6 +193,10 @@ public class ContentConfigGame : ContentConfig
 		toggleNetSend.SetToggle(base.config.net.sendEvent, delegate(bool on)
 		{
 			base.config.net.sendEvent = on;
+		});
+		toggleAdult.SetToggle(base.config.net.noAdult, delegate(bool on)
+		{
+			base.config.net.noAdult = on;
 		});
 		SetSlider(sliderWait, base.config.game.waiter, delegate(float a)
 		{

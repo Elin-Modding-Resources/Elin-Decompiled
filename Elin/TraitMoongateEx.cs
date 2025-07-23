@@ -20,6 +20,13 @@ public class TraitMoongateEx : TraitMoongate
 	public void _OnUse()
 	{
 		List<MapMetaData> list = ListSavedUserMap();
+		list.ForeachReverse(delegate(MapMetaData m)
+		{
+			if (EClass.core.config.net.noAdult && m.tag.HasTag("adult"))
+			{
+				list.Remove(m);
+			}
+		});
 		if (list.Count == 0)
 		{
 			EClass.pc.SayNothingHappans();

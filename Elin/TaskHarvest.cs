@@ -118,6 +118,10 @@ public class TaskHarvest : BaseTaskHarvest
 		bool hasDiggingTool = t != null && t.HasElement(230);
 		if (t != null)
 		{
+			if (t.trait is TraitToolBrush)
+			{
+				return null;
+			}
 			if (t.trait is TraitToolShears)
 			{
 				return null;

@@ -935,6 +935,7 @@ public class CoreDebug : EScriptable
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
+				EClass.pc.Pick(targetChara.MakeLunch());
 				EClass.pc.Pick(targetChara.MakeMilk());
 				EClass.pc.Pick(targetChara.MakeGene());
 				EClass.pc.Pick(targetChara.MakeBraineCell());
