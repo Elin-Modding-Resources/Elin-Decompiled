@@ -6,6 +6,7 @@ var classNet_1_1DownloadMeta =
     [ "id", "classNet_1_1DownloadMeta.html#a578ce5253b4fe0b274c820e1fb1e5d24", null ],
     [ "name", "classNet_1_1DownloadMeta.html#a839b3dd4ffbf6146da54a47079a81893", null ],
     [ "path", "classNet_1_1DownloadMeta.html#a021dff9baa72969d38c1ae3649bcf075", null ],
+    [ "tag", "classNet_1_1DownloadMeta.html#a5b3a0e00b7d3d938a8428e68e63c4ab3", null ],
     [ "title", "classNet_1_1DownloadMeta.html#a70259245e6a9c7d5a9c8fc96d2e34e1a", null ],
     [ "version", "classNet_1_1DownloadMeta.html#ab50b8c4bc9c9cb41b012d05a11c6cce1", null ]
 ];

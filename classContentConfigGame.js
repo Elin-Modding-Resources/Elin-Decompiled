@@ -8,6 +8,7 @@ var classContentConfigGame =
     [ "sliderBackupInterval", "classContentConfigGame.html#a5ef6b14da51e36976ea3756d4965c442", null ],
     [ "sliderBackupNum", "classContentConfigGame.html#aeacba678b7946abd3afd3071c38aa60b", null ],
     [ "sliderWait", "classContentConfigGame.html#a2c7079a8b269f6cc41bc8a41449a6d7d", null ],
+    [ "toggleAdult", "classContentConfigGame.html#ab4193d32380d76f7176a95a2181101e1", null ],
     [ "toggleAdvanceMenu", "classContentConfigGame.html#aa84d1a4d8573b468926bcb5e2bce0919", null ],
     [ "toggleAntiSpider", "classContentConfigGame.html#afd62dad3bbc94c6d1b4995d7c5419011", null ],
     [ "toggleAutoBackup", "classContentConfigGame.html#a50328ca664090a34dec47b58ba56e476", null ],

@@ -160,6 +160,7 @@ var classChara =
     [ "MakeBraineCell", "classChara.html#a3daa7128dd9631edbc6cde4568808687", null ],
     [ "MakeGene", "classChara.html#ab5de4b4e619c20cd33036d1998204a44", null ],
     [ "MakeGrave", "classChara.html#affb8e44caf4c053a96e801f235dfc5ba", null ],
+    [ "MakeLunch", "classChara.html#a5aafb66c8af5bb8d0a36cd2119986a01", null ],
     [ "MakeMinion", "classChara.html#a7603e689da29d72012f8cfcd4dd9f893", null ],
     [ "MakePartyMemeber", "classChara.html#a868468b249c3278c6ac614ed5f2ab51f", null ],
     [ "ModAffinity", "classChara.html#a354698fe941b9ea8554d778d0e14e3be", null ],

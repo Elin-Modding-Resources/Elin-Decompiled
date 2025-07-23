@@ -19,6 +19,7 @@ var classLayerUploader =
     [ "textInvalidId", "classLayerUploader.html#a746a96f283384fc5fe00fcd4afcf0391", null ],
     [ "textInvalidPass", "classLayerUploader.html#ad6aebeef23f1d88a4ffc702d17467be9", null ],
     [ "textNextUpload", "classLayerUploader.html#a8db4660aee1dd9950bb7494153252864", null ],
+    [ "toggleAdult", "classLayerUploader.html#a6191b566b98063adb47056c7e33a8f5b", null ],
     [ "toggleClearLocalCharas", "classLayerUploader.html#a70f534277ef6fa00078d850549fcbf6a", null ],
     [ "validId", "classLayerUploader.html#aab2ebf84c6201a18a84e68b78c051e74", null ],
     [ "validPass", "classLayerUploader.html#afce858b1920afcb328ea8343721dbcb6", null ],

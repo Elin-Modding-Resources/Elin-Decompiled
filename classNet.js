@@ -12,7 +12,7 @@ var classNet =
     [ "SendVote", "classNet.html#a3ae6f1ee44ce47329599a57659f236d9", null ],
     [ "ShowChat", "classNet.html#af1cb46dcbc7d6ec31c46a55d6f31a656", null ],
     [ "ShowVote", "classNet.html#a098087410828fafb0481376bf6ea78da", null ],
-    [ "UploadFile", "classNet.html#ad269270a4e27aacfa3cd86d802b3e93b", null ],
+    [ "UploadFile", "classNet.html#a954d502c53c36d9b7e5282c9210985f5", null ],
     [ "chatList", "classNet.html#a5b7483b5e23b3c3cc246a10c37e116c8", null ],
     [ "isUploading", "classNet.html#a2afe531e2065f45582467f63756e04a0", null ],
     [ "urlChat", "classNet.html#a0b1e41d5d298cfad1bb3f61246dbb855", null ],

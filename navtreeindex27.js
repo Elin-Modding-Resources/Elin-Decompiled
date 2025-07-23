@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classAM__EditMarker.html#a72e188a40cd71b949d64c26810ed063a":[1,0,138,5],
+"classAM__EditMarker.html#aaff59a36b619cd2c49b9667753c28db6":[1,0,138,1],
 "classAM__EditMarker.html#adba6dfa8cc7fe9b3d33e9bfce11f7125":[1,0,138,6],
 "classAM__EloMap.html":[1,0,139],
 "classAM__EloMap.html#a359ee33cd92ddcf9e07923bfb37f1740":[1,0,139,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "classAct.html#a139eb5308fbfdfeb8b2f9caf68ff9568":[1,0,13,33],
 "classAct.html#a16165bf29ed263491e1e1ac5903ee738":[1,0,13,15],
 "classAct.html#a24321dd5a246c6f5fa0665fde86002ac":[1,0,13,32],
-"classAct.html#a2600677b96236f286f6c755d60e07e2e":[1,0,13,12],
-"classAct.html#a2768ad54cf313de3e08674d104f00d9e":[1,0,13,29],
-"classAct.html#a2bbe355c1c37f1ac7958c5f1040400db":[1,0,13,26]
+"classAct.html#a2600677b96236f286f6c755d60e07e2e":[1,0,13,12]
 };

@@ -1641,6 +1641,7 @@ var annotated_dup =
     [ "TraitFoodEggFertilized", "classTraitFoodEggFertilized.html", "classTraitFoodEggFertilized" ],
     [ "TraitFoodFish", "classTraitFoodFish.html", "classTraitFoodFish" ],
     [ "TraitFoodFishSlice", "classTraitFoodFishSlice.html", "classTraitFoodFishSlice" ],
+    [ "TraitFoodLunchLove", "classTraitFoodLunchLove.html", "classTraitFoodLunchLove" ],
     [ "TraitFoodMeal", "classTraitFoodMeal.html", null ],
     [ "TraitFoodMeat", "classTraitFoodMeat.html", "classTraitFoodMeat" ],
     [ "TraitFoodNut", "classTraitFoodNut.html", "classTraitFoodNut" ],

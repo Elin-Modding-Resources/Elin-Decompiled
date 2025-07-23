@@ -39,7 +39,7 @@ var searchData=
   ['hasrune_36',['HasRune',['../classCard.html#a1a28353830ac60c8ebf01f599b99b0db',1,'Card']]],
   ['hassametile_37',['HasSameTile',['../classRecipe.html#a2e5fc07ff7bf8f9733181e2d03ce8f29',1,'Recipe']]],
   ['hassprite_38',['HasSprite',['../classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e',1,'SpriteReplacer']]],
-  ['hastag_39',['HasTag',['../classCard.html#a810e687225ccdc1dc342506473c87334',1,'Card.HasTag()'],['../classElement.html#a5163326f1ee817cd7b4d06165bbf30c7',1,'Element.HasTag()'],['../classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b',1,'RenderRow.HasTag()']]],
+  ['hastag_39',['HasTag',['../classCard.html#a810e687225ccdc1dc342506473c87334',1,'Card.HasTag()'],['../classElement.html#a5163326f1ee817cd7b4d06165bbf30c7',1,'Element.HasTag()'],['../classClassExtension.html#a620d2349994d1dc5b2744ad156427037',1,'ClassExtension.HasTag()'],['../classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b',1,'RenderRow.HasTag()']]],
   ['hastalk_40',['HasTalk',['../classCard.html#a8071e0b31c643a2199be2c1944a6b3d8',1,'Card']]],
   ['hastopic_41',['HasTopic',['../classDramaCustomSequence.html#ab1a85999c15f00e25476e924fa2edbb9',1,'DramaCustomSequence']]],
   ['hasvalidrangedtarget_42',['HasValidRangedTarget',['../classPlayer.html#a57831cd85ec4a7946aa793f806d3f5f2',1,'Player']]],
@@ -86,7 +86,7 @@ var searchData=
   ['hsltohsv_83',['HSLtoHSV',['../classEmpyrean_1_1Utils_1_1Colorist.html#aa3e114374a3dc5fa74dcf7f9278ae658',1,'Empyrean::Utils::Colorist']]],
   ['hsvcolor_84',['HSVColor',['../structHSVColor.html#a5c768ddf18c6019c357d254af364f6d9',1,'HSVColor']]],
   ['hsvtohsl_85',['HSVtoHSL',['../classEmpyrean_1_1Utils_1_1Colorist.html#a8fa34023600268fcdb4b5d85b1bfd760',1,'Empyrean::Utils::Colorist']]],
-  ['hsvtorgb_86',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
-  ['hsvtorgb_87',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_86',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_87',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
   ['hyphenate_88',['Hyphenate',['../classUIItem.html#a978123034ebe56fe7a9efac366812b9f',1,'UIItem']]]
 ];

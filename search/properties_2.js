@@ -17,8 +17,8 @@ var searchData=
   ['bedtype_14',['bedType',['../classListPeopleBed.html#a21d3c5400b8d6d46305693bd71d240fb',1,'ListPeopleBed']]],
   ['bestdist_15',['BestDist',['../classTraitToolRange.html#a59c8645c495c2a97be97cc1130d2804f',1,'TraitToolRange']]],
   ['beveldirectionanddepth_16',['bevelDirectionAndDepth',['../classBevel.html#a29d83030768b9cdfc5896dca3ab4946a',1,'Bevel.bevelDirectionAndDepth()'],['../classInnerBevel.html#a67fea98ff953462566e35b81f75daa64',1,'InnerBevel.bevelDirectionAndDepth()']]],
-  ['bg_17',['BG',['../classSkinConfig.html#a564d2da27f86701d95a028cdae05b207',1,'SkinConfig']]],
-  ['bg_18',['bg',['../classHoardActor.html#abdee2ff2b5dff27afb70349a151f0cc1',1,'HoardActor.bg()'],['../classSkinConfig.html#a65d26b4e33804f397715490256278a21',1,'SkinConfig.bg()']]],
+  ['bg_17',['bg',['../classHoardActor.html#abdee2ff2b5dff27afb70349a151f0cc1',1,'HoardActor.bg()'],['../classSkinConfig.html#a65d26b4e33804f397715490256278a21',1,'SkinConfig.bg()']]],
+  ['bg_18',['BG',['../classSkinConfig.html#a564d2da27f86701d95a028cdae05b207',1,'SkinConfig']]],
   ['bgcolor_19',['bgColor',['../classHotAction.html#a7b1f019b2c7efbc18bbb93028075f65a',1,'HotAction.bgColor()'],['../classSkinConfig.html#a641a0a225c5dd7b9070c8857cc4315f7',1,'SkinConfig.bgColor()'],['../classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834',1,'WidgetSideScreen.bgColor()']]],
   ['bgm_20',['BGM',['../classCardInspector.html#a8053acb77de59e47d4c705da64efdb91',1,'CardInspector']]],
   ['bgms_21',['bgms',['../classLayerEditPlaylist.html#ac89f0458c64e3ae9606cf99208cae015',1,'LayerEditPlaylist']]],
@@ -61,7 +61,7 @@ var searchData=
   ['build_58',['build',['../classPlayer_1_1Flags.html#a811f17dd221ee4a0e113edfa28500892',1,'Player::Flags']]],
   ['buildmenumode_59',['buildMenuMode',['../classActionMode.html#a9ca57bcc22509cbbc83574b17d50680a',1,'ActionMode.buildMenuMode()'],['../classAM__ViewMap.html#adb8fe1b2eec5df65b33e67e0b713b9bc',1,'AM_ViewMap.buildMenuMode()'],['../classAM__Inspect.html#a7b06dd26c9bb37b80c1f2c6aa7bde8d8',1,'AM_Inspect.buildMenuMode()'],['../classAM__EditArea.html#a8aea48b8726fa5ad966aed424c33bd20',1,'AM_EditArea.buildMenuMode()'],['../classAM__Copy.html#aa98057e601b9225ed90f7ef2f2b0159a',1,'AM_Copy.buildMenuMode()'],['../classAM__Build.html#af176d1b0c75e37c8febd395e5b59769f',1,'AM_Build.buildMenuMode()'],['../classAM__Blueprint.html#a97d1302696ed237e5cc191f6cd748895',1,'AM_Blueprint.buildMenuMode()']]],
   ['burden_60',['burden',['../classChara.html#aa093de9e35002a53b74b4fd6e0aa25e6',1,'Chara']]],
-  ['button_61',['Button',['../classDragItem.html#adf000d6a3d0826bb059003fdc23fe0c9',1,'DragItem.Button()'],['../classDragItemCard.html#a3836e2480a6b4b4a08fd7e8ba55e9fa8',1,'DragItemCard.Button()'],['../classSkinConfig.html#af50218e81fb19a315e87b4beb35d83ce',1,'SkinConfig.Button()']]],
-  ['button_62',['button',['../classSkinConfig.html#a2cbda7dcbc2b059e7034aaa6ea7bfa34',1,'SkinConfig']]],
+  ['button_61',['button',['../classSkinConfig.html#a2cbda7dcbc2b059e7034aaa6ea7bfa34',1,'SkinConfig']]],
+  ['button_62',['Button',['../classDragItem.html#adf000d6a3d0826bb059003fdc23fe0c9',1,'DragItem.Button()'],['../classDragItemCard.html#a3836e2480a6b4b4a08fd7e8ba55e9fa8',1,'DragItemCard.Button()'],['../classSkinConfig.html#af50218e81fb19a315e87b4beb35d83ce',1,'SkinConfig.Button()']]],
   ['bypassshadow_63',['bypassShadow',['../classSourcePref.html#a170b34cbef43b5040438d2edc18ea11a',1,'SourcePref']]]
 ];

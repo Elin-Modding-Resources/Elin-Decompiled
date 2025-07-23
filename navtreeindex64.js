@@ -1,5 +1,14 @@
 var NAVTREEINDEX64 =
 {
+"classGame.html#a678bda9cd7e60cd719852efe7febf5fe":[1,0,514,61],
+"classGame.html#a69977c67b81e6e151a516876c77361a4":[1,0,514,59],
+"classGame.html#a6f95f61e8f4ba88af692cc6ca0150efd":[1,0,514,5],
+"classGame.html#a768ab7c51eafee90672f1c644e66b2c0":[1,0,514,38],
+"classGame.html#a78107f466f8a2fe5f5fcc46551006d37":[1,0,514,7],
+"classGame.html#a7bbb6a47351673a98c1d24fa09325f19":[1,0,514,11],
+"classGame.html#a7e2d9e6c3760641fe15a4d5412e0524e":[1,0,514,72],
+"classGame.html#a7f59fa26eba2fef8501d590be1e34582":[1,0,514,27],
+"classGame.html#a84fa911bfcada40b45b0176fe99f04cf":[1,0,514,39],
 "classGame.html#a85b865c8c3633f0c1c186fc0ef3b5401":[1,0,514,24],
 "classGame.html#a8cfd43f8d90725c45136d2e6781ab2b6":[1,0,514,10],
 "classGame.html#a90d4eb47250a3ee9c51e1d4e802ef16d":[1,0,514,16],
@@ -240,14 +249,5 @@ var NAVTREEINDEX64 =
 "classGameSetting_1_1PassSetting.html#ab938cf6dba4731e405449d682af803da":[1,0,528,5,3],
 "classGameSetting_1_1PassSetting.html#ac814b0b0fcb53ff11a7ccb70372d0fa3":[1,0,528,5,0],
 "classGameSetting_1_1PassSetting.html#af0c4b88fce51de8efb4d147f8eb4b8fa":[1,0,528,5,2],
-"classGameSetting_1_1RenderSetting.html":[1,0,528,6],
-"classGameSetting_1_1RenderSetting.html#a023c5412236fa1a7ebaf04cb1536336d":[1,0,528,6,23],
-"classGameSetting_1_1RenderSetting.html#a030ccc125a4479871f617be782edd09d":[1,0,528,6,21],
-"classGameSetting_1_1RenderSetting.html#a05651e8aa4fa29c97c3ce0355aa4e3cf":[1,0,528,6,7],
-"classGameSetting_1_1RenderSetting.html#a079b88f914f5a085a90562b16a723016":[1,0,528,6,37],
-"classGameSetting_1_1RenderSetting.html#a13e17b3c9f111830b65dcfffce70c4ce":[1,0,528,6,40],
-"classGameSetting_1_1RenderSetting.html#a14b5229ac1c9a21328b5246e2dc9175b":[1,0,528,6,19],
-"classGameSetting_1_1RenderSetting.html#a1aa001319b607780fe69619a9971da23":[1,0,528,6,13],
-"classGameSetting_1_1RenderSetting.html#a1f651aff992051e67be775dac541b740":[1,0,528,6,33],
-"classGameSetting_1_1RenderSetting.html#a240ad6921d06b05c7fc81f4604992374":[1,0,528,6,28]
+"classGameSetting_1_1RenderSetting.html":[1,0,528,6]
 };
