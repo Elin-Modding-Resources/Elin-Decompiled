@@ -413,6 +413,10 @@ public class Biography : EClass
 		{
 			height /= 10;
 		}
+		if (c.source.tag.Contains("mini"))
+		{
+			height /= 10;
+		}
 		weight = height * height * (EClass.rnd(6) + 18) / 10000;
 	}
 

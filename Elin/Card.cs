@@ -3924,7 +3924,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (isChara && !HasElement(1241))
 		{
 			AttackSource attackSource2 = attackSource;
-			if (attackSource2 != AttackSource.Fatigue && (uint)(attackSource2 - 13) > 4u)
+			if ((uint)(attackSource2 - 3) > 1u && (uint)(attackSource2 - 13) > 4u)
 			{
 				foreach (Chara chara3 in EClass._map.charas)
 				{
@@ -4204,7 +4204,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0cdd;
+							goto IL_0cdf;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -4216,8 +4216,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0cdd;
-		IL_0cdd:
+		goto IL_0cdf;
+		IL_0cdf:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
