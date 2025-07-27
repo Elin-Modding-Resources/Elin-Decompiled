@@ -6,7 +6,10 @@ public class TraitFakeBlock : Trait
 
 	public override void OnCreate(int lv)
 	{
-		owner.refVal = 1;
+		if (owner.refVal == 0)
+		{
+			owner.refVal = 1;
+		}
 	}
 
 	public override void OnCrafted(Recipe recipe, List<Thing> ings)

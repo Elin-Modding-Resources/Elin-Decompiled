@@ -315,11 +315,32 @@ public class ActPlan : EClass
 		};
 	}
 
+	public void Order(string id)
+	{
+		EClass.player.forceTalk = true;
+		EClass.pc.SayRaw(id.lang());
+	}
+
 	public void ShowContextMenu()
 	{
 		UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
 		int num = 1;
-		_ = showOrder;
+		if (showOrder)
+		{
+			UIContextMenu uIContextMenu2 = uIContextMenu.AddChild("order_ally");
+			uIContextMenu2.AddButton("order_fight", delegate
+			{
+				Order("order_fight");
+			});
+			uIContextMenu2.AddButton("order_heal", delegate
+			{
+				Order("order_heal");
+			});
+			uIContextMenu2.AddButton("order_wait", delegate
+			{
+				Order("order_wait");
+			});
+		}
 		foreach (Item i in list)
 		{
 			string textContext = i.GetTextContext(HasMultipleTargets);
@@ -862,7 +883,7 @@ public class ActPlan : EClass
 					{
 						TrySetAct(ACT.Wait);
 					}
-					if (EClass.pc.party.members.Count > 1)
+					if (EClass.debug.enable)
 					{
 						showOrder = true;
 					}

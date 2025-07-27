@@ -23,6 +23,8 @@ public class AI_Fuck : AIAct
 
 	public int progress;
 
+	public int fails;
+
 	public int totalAffinity;
 
 	public virtual FuckType Type => FuckType.fuck;
@@ -140,7 +142,16 @@ public class AI_Fuck : AIAct
 				{
 					tc.PlaySound("brushing");
 					int num2 = cc.CHA / 2 + cc.Evalue(237) - tc.CHA * 2;
-					int num3 = ((EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) <= EClass.rnd(tc.CHA * num / 100)) ? (-5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num2 / 10, -30, 0) : 0)) : (5 + Mathf.Clamp(num2 / 20, 0, 20)));
+					int num3;
+					if (EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) > EClass.rnd(tc.CHA * num / 100))
+					{
+						num3 = 5 + Mathf.Clamp(num2 / 20, 0, 20);
+					}
+					else
+					{
+						num3 = -5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num2 / 10, -30, 0) : 0);
+						fails++;
+					}
 					int a = 20;
 					if (tc.IsPCFactionOrMinion && tc.affinity.CurrentStage >= Affinity.Stage.Love)
 					{
@@ -338,7 +349,7 @@ public class AI_Fuck : AIAct
 					chara.Say("tame_fail", chara, chara2);
 				}
 			}
-			if (num > EClass.rnd(100))
+			if (fails > 0 && num > EClass.rnd(100))
 			{
 				chara2.DoHostileAction(chara);
 				chara2.calmCheckTurn *= 3;

@@ -762,6 +762,10 @@ public class SerializedCards : EClass
 				}
 				card2.SetObj(5, null);
 			}
+			if (card2.trait is TraitFakeBlock)
+			{
+				card2._CreateRenderer();
+			}
 			if (addToZone)
 			{
 				EClass._zone.AddCard(card2, card2.pos);

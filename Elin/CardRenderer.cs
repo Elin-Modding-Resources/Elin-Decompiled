@@ -38,16 +38,13 @@ public class CardRenderer : RenderObject
 	public virtual void SetOwner(Card c)
 	{
 		owner = c;
-		if (data == null)
+		if (owner.trait is TraitFakeBlock)
 		{
-			if (owner.trait is TraitFakeBlock)
-			{
-				data = EClass.sources.blocks.map[owner.refVal].renderData;
-			}
-			else
-			{
-				data = owner.sourceCard.renderData;
-			}
+			data = EClass.sources.blocks.map[owner.refVal].renderData;
+		}
+		else if (data == null)
+		{
+			data = owner.sourceCard.renderData;
 		}
 		isChara = c.isChara;
 		usePass = data.pass != null;
@@ -269,7 +266,7 @@ public class CardRenderer : RenderObject
 			if (drawShadow && shadow != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
 			{
 				bool flag3 = ((!isChara) ? (owner.dir % 2 == 1) : (owner.dir == 1 || owner.dir == 2));
-				EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + (flag3 ? (-1f) : 1f) * renderData.offsetShadow.x, position.y + renderData.offsetShadow.y + (owner.TileType.UseMountHeight ? 0f : p.shadowFix) - RenderObject.altitudeFix * (float)owner.altitude, position.z + renderData.offsetShadow.z, ShadowData.Instance.items[shadow], pref, prefIndex, p.snow);
+				EClass.scene.screenElin.tileMap.passShadow.AddShadow(position.x + (flag3 ? (-1f) : 1f) * renderData.offsetShadow.x, position.y + renderData.offsetShadow.y + (owner.TileType.UseMountHeight ? 0f : p.shadowFix) - (owner.isChara ? 0f : (RenderObject.altitudeFix * (float)owner.altitude)), position.z + renderData.offsetShadow.z, ShadowData.Instance.items[shadow], pref, prefIndex, p.snow);
 			}
 			if (usePass)
 			{

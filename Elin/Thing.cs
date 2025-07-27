@@ -267,7 +267,7 @@ public class Thing : Card
 			{
 				if (bp.qualityBonus == 0)
 				{
-					num4 = EClass.rnd(EClass.rnd(12) + 1);
+					num4 = EClass.rnd(EClass.rnd(14) + 1);
 					if (num4 == 1 && EClass.rnd(3) != 0)
 					{
 						num4 = 0;

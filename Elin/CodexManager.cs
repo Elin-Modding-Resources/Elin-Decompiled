@@ -72,7 +72,7 @@ public class CodexManager : EClass
 		List<CardRow> list = new List<CardRow>();
 		foreach (KeyValuePair<string, CodexCreature> creature in creatures)
 		{
-			if (creature.Value.kills > 0)
+			if (creature.Value.kills > 0 || creature.Value.droppedCard)
 			{
 				CardRow cardRow = EClass.sources.cards.map.TryGetValue(creature.Key);
 				if (cardRow != null && !cardRow.HasTag(CTAG.noRandomProduct))

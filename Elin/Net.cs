@@ -62,13 +62,13 @@ public class Net : MonoBehaviour
 
 	public List<ChatLog> chatList;
 
-	private const string urlScript = "http://ylva.php.xdomain.jp/script/";
+	public static string urlScript = "http://elin.cloudfree.jp/script/";
 
-	private const string urlChat = "http://ylva.php.xdomain.jp/script/chat/";
+	public static string urlChat = urlScript + "chat/";
 
-	private const string urlVote = "http://ylva.php.xdomain.jp/script/vote/";
+	public static string urlVote = urlScript + "vote/";
 
-	private const string urlUpload = "http://ylva.php.xdomain.jp/script/uploader/";
+	public static string urlUpload = urlScript + "uploader/";
 
 	public static bool isUploading;
 
@@ -136,7 +136,7 @@ public class Net : MonoBehaviour
 		Debug.Log(password);
 		Debug.Log(tag);
 		Debug.Log(array.Length);
-		using (UnityWebRequest www = UnityWebRequest.Post("http://ylva.php.xdomain.jp/script/uploader/uploader.php", wWWForm))
+		using (UnityWebRequest www = UnityWebRequest.Post(urlUpload + "uploader.php", wWWForm))
 		{
 			try
 			{
@@ -170,7 +170,7 @@ public class Net : MonoBehaviour
 			Debug.Log("Returning Cache:" + path + fn);
 			return new FileInfo(path + fn);
 		}
-		using UnityWebRequest www = UnityWebRequest.Get("http://ylva.php.xdomain.jp/script/uploader/files/" + idLang + "/" + fn);
+		using UnityWebRequest www = UnityWebRequest.Get(urlUpload + "files/" + idLang + "/" + fn);
 		www.downloadHandler = new DownloadHandlerFile(path + fn);
 		try
 		{
@@ -197,7 +197,7 @@ public class Net : MonoBehaviour
 	public static async UniTask<List<DownloadMeta>> GetFileList(string idLang)
 	{
 		List<DownloadMeta> list = new List<DownloadMeta>();
-		using UnityWebRequest www = UnityWebRequest.Get("http://ylva.php.xdomain.jp/script/uploader/files/" + idLang + "/index.txt");
+		using UnityWebRequest www = UnityWebRequest.Get(urlUpload + "files/" + idLang + "/index.txt");
 		try
 		{
 			await www.SendWebRequest();
@@ -245,7 +245,7 @@ public class Net : MonoBehaviour
 			wWWForm.AddField("vote", id.ToString() ?? "");
 			wWWForm.AddField("idLang", idLang);
 			wWWForm.AddField("submit", "Send");
-			using UnityWebRequest www = UnityWebRequest.Post("http://ylva.php.xdomain.jp/script/vote/vote.php", wWWForm);
+			using UnityWebRequest www = UnityWebRequest.Post(urlVote + "vote.php", wWWForm);
 			await www.SendWebRequest();
 			if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
 			{
@@ -269,7 +269,7 @@ public class Net : MonoBehaviour
 		List<VoteLog> list = new List<VoteLog>();
 		try
 		{
-			string uri = $"http://ylva.php.xdomain.jp/script/vote/logs/data_{idLang}.txt";
+			string uri = string.Format(urlVote + "logs/data_{0}.txt", idLang);
 			using UnityWebRequest www = UnityWebRequest.Get(uri);
 			await www.SendWebRequest();
 			if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
@@ -336,7 +336,7 @@ public class Net : MonoBehaviour
 			wWWForm.AddField("idLang", idLang);
 			try
 			{
-				using UnityWebRequest www = UnityWebRequest.Post("http://ylva.php.xdomain.jp/script/chat/chat.php", wWWForm);
+				using UnityWebRequest www = UnityWebRequest.Post(urlChat + "chat.php", wWWForm);
 				await www.SendWebRequest();
 				if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
 				{
@@ -368,7 +368,7 @@ public class Net : MonoBehaviour
 			{
 				idLang = "DEBUG";
 			}
-			string uri = $"http://ylva.php.xdomain.jp/script/chat/logs/all_{idLang}.json";
+			string uri = string.Format(urlChat + "logs/all_{0}.json", idLang);
 			using UnityWebRequest www = UnityWebRequest.Get(uri);
 			await www.SendWebRequest();
 			if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)

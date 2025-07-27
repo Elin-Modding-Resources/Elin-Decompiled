@@ -473,9 +473,13 @@ public class AttackProcess : EClass
 			num2 += weapon.Evalue(91, ignoreGlobalElement: true);
 			num3 += weapon.Evalue(603, ignoreGlobalElement: true);
 		}
-		else if (CC.id == "rabbit_vopal")
+		else
 		{
-			list2.Add(Element.Create(6650, 100));
+			string id = CC.id;
+			if (id == "rabbit_vopal" || id == "mantis_killer")
+			{
+				list2.Add(Element.Create(6650, 100));
+			}
 		}
 		int bane;
 		if (TC?.Chara != null)
@@ -770,22 +774,22 @@ public class AttackProcess : EClass
 		}
 		void PlayHitEffect()
 		{
-			string id = "hit_default";
 			string id2 = "hit_default";
+			string id3 = "hit_default";
 			switch (attackType)
 			{
 			case AttackType.Slash:
+				id3 = "hit_slash";
 				id2 = "hit_slash";
-				id = "hit_slash";
 				break;
 			case AttackType.Spore:
+				id3 = "hit_spore";
 				id2 = "hit_spore";
-				id = "hit_spore";
 				break;
 			case AttackType.Claw:
 			case AttackType.Bite:
+				id3 = "hit_claw";
 				id2 = "hit_claw";
-				id = "hit_claw";
 				break;
 			case AttackType.Blunt:
 			case AttackType.Punch:
@@ -793,15 +797,15 @@ public class AttackProcess : EClass
 			case AttackType.Bow:
 			case AttackType.Gun:
 			case AttackType.Cane:
+				id3 = "hit_blunt";
 				id2 = "hit_blunt";
-				id = "hit_blunt";
 				break;
 			}
 			if (TC != null)
 			{
-				TC.PlayEffect(id2).SetScale(crit ? 1.25f : 0.75f);
+				TC.PlayEffect(id3).SetScale(crit ? 1.25f : 0.75f);
 			}
-			CC.PlaySound(id);
+			CC.PlaySound(id2);
 		}
 		void Proc(List<Element> list)
 		{
