@@ -6,6 +6,7 @@ var classActPlan =
     [ "Clear", "classActPlan.html#ae3bd9fae2e7cb1bd5e36bf5e5bd4dcbf", null ],
     [ "GetAction", "classActPlan.html#a8ebe666bc4613ae2e4782fcbb01a4755", null ],
     [ "GetText", "classActPlan.html#a8281967689a8d6184782190029ace744", null ],
+    [ "Order", "classActPlan.html#a8edb977f8aae795aca177348f8e04ea3", null ],
     [ "ShowContextMenu", "classActPlan.html#aba3d3cc02419d8bc030817958933ea4d", null ],
     [ "TrySetAct", "classActPlan.html#aad58710f944e166d184f0a2a54c32e55", null ],
     [ "TrySetAct", "classActPlan.html#ae4547e83c1eaea57c11c2991b0752987", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.171 Nyaightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.173 Stable</span>
    </div>
   </td>
  </tr>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('CodexManager_8cs_source.html',''); ini
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        List&lt;CardRow&gt; list = <span class="keyword">new</span> List&lt;CardRow&gt;();</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, CodexCreature&gt; creature <span class="keywordflow">in</span> <a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">if</span> (creature.Value.kills &gt; 0)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">if</span> (creature.Value.kills &gt; 0 || creature.Value.droppedCard)</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>.TryGetValue(creature.Key);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">if</span> (cardRow != <span class="keyword">null</span> &amp;&amp; !cardRow.<a class="code hl_function" href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.noRandomProduct))</div>

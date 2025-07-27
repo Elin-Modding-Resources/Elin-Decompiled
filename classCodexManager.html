@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.171 Nyaightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.173 Stable</span>
    </div>
   </td>
  </tr>
@@ -397,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00007">creatures</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06539">Chara.ShowDialog()</a>, and <a class="el" href="Card_8cs_source.html#l04823">Card.SpawnLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06539">Chara.ShowDialog()</a>, and <a class="el" href="Card_8cs_source.html#l04845">Card.SpawnLoot()</a>.</p>
 
 </div>
 </div>
@@ -442,7 +442,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00007">creatures</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00031">AddCard()</a>, <a class="el" href="CodexManager_8cs_source.html#l00055">AddKill()</a>, <a class="el" href="CodexManager_8cs_source.html#l00065">AddSpawn()</a>, <a class="el" href="CodexManager_8cs_source.html#l00060">AddWeakspot()</a>, <a class="el" href="Card_8cs_source.html#l03913">Card.DamageHP()</a>, <a class="el" href="CodexManager_8cs_source.html#l00041">MarkCardDrop()</a>, and <a class="el" href="Card_8cs_source.html#l04823">Card.SpawnLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CodexManager_8cs_source.html#l00031">AddCard()</a>, <a class="el" href="CodexManager_8cs_source.html#l00055">AddKill()</a>, <a class="el" href="CodexManager_8cs_source.html#l00065">AddSpawn()</a>, <a class="el" href="CodexManager_8cs_source.html#l00060">AddWeakspot()</a>, <a class="el" href="Card_8cs_source.html#l03917">Card.DamageHP()</a>, <a class="el" href="CodexManager_8cs_source.html#l00041">MarkCardDrop()</a>, and <a class="el" href="Card_8cs_source.html#l04845">Card.SpawnLoot()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +477,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CodexManager_8cs_source.html#l00007">creatures</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwnerChaosOffering_8cs_source.html#l00021">InvOwnerChaosOffering._OnProcess()</a>, and <a class="el" href="Card_8cs_source.html#l03913">Card.DamageHP()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwnerChaosOffering_8cs_source.html#l00021">InvOwnerChaosOffering._OnProcess()</a>, and <a class="el" href="Card_8cs_source.html#l03917">Card.DamageHP()</a>.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   72</span>        List&lt;CardRow&gt; list = <span class="keyword">new</span> List&lt;CardRow&gt;();</div>
 <div class="line"><span class="lineno">   73</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, CodexCreature&gt; creature <span class="keywordflow">in</span> <a class="code hl_variable" href="classCodexManager.html#ae8db35079ee814d97778a761a23258e1">creatures</a>)</div>
 <div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (creature.Value.kills &gt; 0)</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (creature.Value.kills &gt; 0 || creature.Value.droppedCard)</div>
 <div class="line"><span class="lineno">   76</span>            {</div>
 <div class="line"><span class="lineno">   77</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>.TryGetValue(creature.Key);</div>
 <div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (cardRow != <span class="keyword">null</span> &amp;&amp; !cardRow.<a class="code hl_function" href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.noRandomProduct))</div>
@@ -566,7 +566,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CodexCreature_8cs_source.html#l00077">CodexCreature.droppedCard</a>, and <a class="el" href="CodexManager_8cs_source.html#l00009">GetOrCreate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06539">Chara.ShowDialog()</a>, and <a class="el" href="Card_8cs_source.html#l04823">Card.SpawnLoot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06539">Chara.ShowDialog()</a>, and <a class="el" href="Card_8cs_source.html#l04845">Card.SpawnLoot()</a>.</p>
 
 </div>
 </div>

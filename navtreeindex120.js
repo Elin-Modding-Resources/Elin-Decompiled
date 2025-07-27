@@ -1,5 +1,13 @@
 var NAVTREEINDEX120 =
 {
+"classTraitRod.html#a4d6dc587f26cb9cdac46186135ea69fe":[1,0,1760,8],
+"classTraitRod.html#a553ba7f4212e4158647660a058e9bb05":[1,0,1760,4],
+"classTraitRod.html#a599c2d54b08d849110926b5ac0ec5571":[1,0,1760,13],
+"classTraitRod.html#a6397adb37ba7e3b5b6aa45426b970e4b":[1,0,1760,12],
+"classTraitRod.html#a73ef8f5b7498a07bf66abb434aef99f0":[1,0,1760,10],
+"classTraitRod.html#aa9697907e1b700824c15bf879ed0b613":[1,0,1760,0],
+"classTraitRod.html#aab9effddbfd1142ea5ef1aa065be5597":[1,0,1760,6],
+"classTraitRod.html#ac58e1831b4f7ba87963e46eb4163a47c":[1,0,1760,3],
 "classTraitRod.html#ac8932502df42a9b6cc0f1dca0430a0b7":[1,0,1760,7],
 "classTraitRod.html#acef044418c8008b74ea33cf50844c390":[1,0,1760,9],
 "classTraitRod.html#af52a1245a56862d67b8714fec9a2fba6":[1,0,1760,11],
@@ -241,13 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitSpotExit.html#a72b988c1d472fae5444c2920a3ca06b5":[1,0,1803,1],
 "classTraitSpotFarm.html":[1,0,1804],
 "classTraitSpotFarm.html#ae765c95cafe5778e91abdac984ead166":[1,0,1804,1],
-"classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1804,0],
-"classTraitSpotFish.html":[1,0,1805],
-"classTraitSpotFuel.html":[1,0,1806],
-"classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1806,0],
-"classTraitSpotGarbage.html":[1,0,1807],
-"classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1807,0],
-"classTraitSpotGuidePC.html":[1,0,1808],
-"classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1808,0],
-"classTraitSpotLight.html":[1,0,1809]
+"classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1804,0]
 };

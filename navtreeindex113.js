@@ -1,5 +1,13 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#a802f79d608e7d42e6e9d9ec36b9ea1cd":[1,0,1388,147],
+"classTrait.html#a827c6d1b5b63023d6413e724bac4a584":[1,0,1388,167],
+"classTrait.html#a828119de5defe5508d1552e59bcbc5d1":[1,0,1388,8],
+"classTrait.html#a8451f8b80b1634c825470138ad9e91eb":[1,0,1388,128],
+"classTrait.html#a8469cbf006d45ccf79d0002535bc60b1":[1,0,1388,204],
+"classTrait.html#a8471909c042646f522c65a8333832253":[1,0,1388,0],
+"classTrait.html#a8471909c042646f522c65a8333832253a3833206c4acb4ea74dca7699dbaef446":[1,0,1388,0,2],
+"classTrait.html#a8471909c042646f522c65a8333832253a6adf97f83acf6453d4a6a4b1070f3754":[1,0,1388,0,0],
 "classTrait.html#a8471909c042646f522c65a8333832253a7d74f3b92b19da5e606d737d339a9679":[1,0,1388,0,1],
 "classTrait.html#a8696de6fd22f8651b2d327ca5fb0b5fc":[1,0,1388,186],
 "classTrait.html#a87e3081da883c13375cebb4bc867d026":[1,0,1388,20],
@@ -241,13 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitBaseContainer.html#ab4b64ea541549c831bcdda278121d280":[1,0,1416,16],
 "classTraitBaseContainer.html#aba40dd7581c64fbe7d7e642f03ee9cec":[1,0,1416,11],
 "classTraitBaseContainer.html#ad47079e3d16b8620a507937ca0c5237e":[1,0,1416,12],
-"classTraitBaseContainer.html#af2be049c1e713bd8c4aa9606bce693d9":[1,0,1416,7],
-"classTraitBaseContainer.html#afc9dbd59337c35d62fc825bd8af9202a":[1,0,1416,8],
-"classTraitBaseSpellbook.html":[1,0,1417],
-"classTraitBaseSpellbook.html#a0b97be9a164b766e6256c23aab2afa1c":[1,0,1417,1],
-"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3":[1,0,1417,0],
-"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a615755cd42631ce31ff696a9891b3c2a":[1,0,1417,0,3],
-"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a968ae4f03d7e0c30fe4eb26b83c855dd":[1,0,1417,0,1],
-"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3aad05e01777549db85f26c13042db94fb":[1,0,1417,0,4],
-"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3abdf1893b54669831286b617d7dc24e27":[1,0,1417,0,0]
+"classTraitBaseContainer.html#af2be049c1e713bd8c4aa9606bce693d9":[1,0,1416,7]
 };

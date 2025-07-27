@@ -15,9 +15,9 @@ var classNet =
     [ "UploadFile", "classNet.html#a954d502c53c36d9b7e5282c9210985f5", null ],
     [ "chatList", "classNet.html#a5b7483b5e23b3c3cc246a10c37e116c8", null ],
     [ "isUploading", "classNet.html#a2afe531e2065f45582467f63756e04a0", null ],
-    [ "urlChat", "classNet.html#a0b1e41d5d298cfad1bb3f61246dbb855", null ],
-    [ "urlScript", "classNet.html#aa7147db2029de93dfb24f7978f73ffe9", null ],
-    [ "urlUpload", "classNet.html#a730c08fd47d7d6bcf281bcc9a8b2799a", null ],
-    [ "urlVote", "classNet.html#ac58780d91f46b1b914f078461b03c967", null ],
+    [ "urlChat", "classNet.html#a7676cd7dc2cce8ccb4b3893ed00a5d7b", null ],
+    [ "urlScript", "classNet.html#a2148df08d1f384b4396e31fb7c8479a4", null ],
+    [ "urlUpload", "classNet.html#aa5ed7d84afde574d3ad2116914c9ee5d", null ],
+    [ "urlVote", "classNet.html#af946cfb0865fea3ca8bf52ab64fc1e66", null ],
     [ "ShowNetError", "classNet.html#a4bfdab861eff509f28999c69b8700b89", null ]
 ];

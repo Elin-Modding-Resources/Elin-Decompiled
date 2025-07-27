@@ -74,6 +74,7 @@ var classFEAT =
     [ "featManaPrecision", "classFEAT.html#a6d7fc53b21cb00823e6cd4b333399907", null ],
     [ "featMartial", "classFEAT.html#a1283fdb2cc9815eb8edbca4ac009cea5", null ],
     [ "featMassSummoner", "classFEAT.html#a6fce93f88e1519a6fbe71ec8363b56fb", null ],
+    [ "featMeatCushion", "classFEAT.html#abd15a0eeebeb9a4c0557a789cbd81ba9", null ],
     [ "featMelilithCurse", "classFEAT.html#a318995a3d2e08f515350ea9ecbb96f2f", null ],
     [ "featMetal", "classFEAT.html#a67495792c015fbced7e56646b3644b03", null ],
     [ "featMilitant", "classFEAT.html#ae6b3e3d6709e2df6db4cf7e14b916073", null ],

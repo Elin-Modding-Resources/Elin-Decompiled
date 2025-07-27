@@ -1,5 +1,13 @@
 var NAVTREEINDEX114 =
 {
+"classTraitBaseContainer.html#afc9dbd59337c35d62fc825bd8af9202a":[1,0,1416,8],
+"classTraitBaseSpellbook.html":[1,0,1417],
+"classTraitBaseSpellbook.html#a0b97be9a164b766e6256c23aab2afa1c":[1,0,1417,1],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3":[1,0,1417,0],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a615755cd42631ce31ff696a9891b3c2a":[1,0,1417,0,3],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a968ae4f03d7e0c30fe4eb26b83c855dd":[1,0,1417,0,1],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3aad05e01777549db85f26c13042db94fb":[1,0,1417,0,4],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3abdf1893b54669831286b617d7dc24e27":[1,0,1417,0,0],
 "classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3ae0ca2db63b4b9d0cbde2f31d67376f1c":[1,0,1417,0,2],
 "classTraitBaseSpellbook.html#a361c2bf31c4146bc6e1b58d5d1afd5a3":[1,0,1417,9],
 "classTraitBaseSpellbook.html#a4b1b6489c9ded1fa63c59d6f51cd6fac":[1,0,1417,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitChestMerchant.html":[1,0,1462],
 "classTraitChestMerchant.html#aa0c655db5ffc09340129a4b1ea608f6b":[1,0,1462,0],
 "classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1462,2],
-"classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1462,1],
-"classTraitChestOyster.html":[1,0,1463],
-"classTraitChestOyster.html#ad89f91220e999eaf2bb6055adbbb012d":[1,0,1463,1],
-"classTraitChestOyster.html#afe2b414ab91f33a90cc9acf35fab0fb4":[1,0,1463,0],
-"classTraitChestPractice.html":[1,0,1464],
-"classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1464,0],
-"classTraitChestPractice.html#a22654107dd11bd30370c76a197508a63":[1,0,1464,3],
-"classTraitChestPractice.html#aa888ef024cbf4d967f1780c60ffeab9d":[1,0,1464,2],
-"classTraitChestPractice.html#ad10c89e064ae12a6d55672e2c02e0fcd":[1,0,1464,1]
+"classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1462,1]
 };

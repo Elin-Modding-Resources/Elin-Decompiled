@@ -1,5 +1,13 @@
 var NAVTREEINDEX117 =
 {
+"classTraitFridge.html#a15de8c2e1aac0bdd1fe9a2c098ebb729":[1,0,1574,1],
+"classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1574,0],
+"classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1574,2],
+"classTraitGM.html":[1,0,1594],
+"classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1594,0],
+"classTraitGM__Fighter.html":[1,0,1595],
+"classTraitGM__Mage.html":[1,0,1596],
+"classTraitGM__Merchant.html":[1,0,1597],
 "classTraitGM__Thief.html":[1,0,1598],
 "classTraitGacha.html":[1,0,1575],
 "classTraitGacha.html#a105f89d64e5997d0e6a706688b0d120b":[1,0,1575,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitLever.html":[1,0,1630],
 "classTraitLever.html#a343d426c967df37e19574864dc441bed":[1,0,1630,0],
 "classTraitLeverBreaker.html":[1,0,1631],
-"classTraitLeverBreaker.html#a4e5109c00fc272febff90aa2c012922c":[1,0,1631,1],
-"classTraitLeverBreaker.html#adbdbfa139e50e89bb679d0c80fcd9936":[1,0,1631,0],
-"classTraitLicense.html":[1,0,1632],
-"classTraitLicense.html#aa3b45b7734a06ebafb558853a858f2fe":[1,0,1632,0],
-"classTraitLight.html":[1,0,1633],
-"classTraitLight.html#a0c609f40f20874d1cdaee1cfa81c86c3":[1,0,1633,1],
-"classTraitLight.html#abce165cf51855a9f04de8a3991da0f92":[1,0,1633,0],
-"classTraitLightAlwaysAnime.html":[1,0,1634],
-"classTraitLightAlwaysAnime.html#a062bb523c1b395ab8e718d575353ae37":[1,0,1634,0]
+"classTraitLeverBreaker.html#a4e5109c00fc272febff90aa2c012922c":[1,0,1631,1]
 };

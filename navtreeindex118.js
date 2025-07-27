@@ -1,5 +1,13 @@
 var NAVTREEINDEX118 =
 {
+"classTraitLeverBreaker.html#adbdbfa139e50e89bb679d0c80fcd9936":[1,0,1631,0],
+"classTraitLicense.html":[1,0,1632],
+"classTraitLicense.html#aa3b45b7734a06ebafb558853a858f2fe":[1,0,1632,0],
+"classTraitLight.html":[1,0,1633],
+"classTraitLight.html#a0c609f40f20874d1cdaee1cfa81c86c3":[1,0,1633,1],
+"classTraitLight.html#abce165cf51855a9f04de8a3991da0f92":[1,0,1633,0],
+"classTraitLightAlwaysAnime.html":[1,0,1634],
+"classTraitLightAlwaysAnime.html#a062bb523c1b395ab8e718d575353ae37":[1,0,1634,0],
 "classTraitLightAlwaysAnime.html#ad9c21526cbf585830e8b4782043e79c5":[1,0,1634,1],
 "classTraitLightSource.html":[1,0,1635],
 "classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1635,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitMoyer.html":[1,0,1697],
 "classTraitMoyer.html#af181f1193f3ca29b31f0bfcf3cfa4da9":[1,0,1697,0],
 "classTraitMusicBox.html":[1,0,1698],
-"classTraitMusicBox.html#a0b90f5374bdc61b962aa4762c5c909c6":[1,0,1698,0],
-"classTraitMusicBox.html#a31c6d468a2be39bc1bf070a9982b8d4d":[1,0,1698,2],
-"classTraitMusicBox.html#a84c7986bf81fb4e3dfea9cfaabeb0f55":[1,0,1698,1],
-"classTraitMusicBox.html#a8aa98a1344800c53791b9242d0ec902c":[1,0,1698,4],
-"classTraitMusicBox.html#ae803ba6a0e6e2455e298588aedb625a6":[1,0,1698,3],
-"classTraitNanasu.html":[1,0,1699],
-"classTraitNanasu.html#a7e340a3b52868f4313a959f00b8c103e":[1,0,1699,0],
-"classTraitNewZone.html":[1,0,1701],
-"classTraitNewZone.html#a0b6d152161f8e45b9dd3e94af918127f":[1,0,1701,22]
+"classTraitMusicBox.html#a0b90f5374bdc61b962aa4762c5c909c6":[1,0,1698,0]
 };
