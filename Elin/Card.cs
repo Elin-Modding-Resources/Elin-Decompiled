@@ -3914,13 +3914,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		DamageHP(dmg, 0, 0, attackSource, origin);
 	}
 
-	public void DamageHP(int dmg, int ele, int eleP = 100, AttackSource attackSource = AttackSource.None, Card origin = null, bool showEffect = true, Thing weapon = null, AttackSourceSub attackSourceSub = AttackSourceSub.None)
+	public void DamageHP(int dmg, int ele, int eleP = 100, AttackSource attackSource = AttackSource.None, Card origin = null, bool showEffect = true, Thing weapon = null, Chara originalTarget = null)
 	{
 		if (hp < 0)
 		{
 			return;
 		}
-		bool flag = attackSourceSub == AttackSourceSub.FleshWall;
+		bool flag = originalTarget != null;
 		if (isChara && !HasElement(1241))
 		{
 			AttackSource attackSource2 = attackSource;
@@ -3929,9 +3929,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				foreach (Chara chara3 in EClass._map.charas)
 				{
 					int num = chara3.Evalue(1241);
-					if (num != 0 && !chara3.IsDisabled && !chara3.isRestrained && !chara3.IsDeadOrSleeping && chara3 != this && !chara3.IsHostile(Chara) && chara3.Dist(this) <= num)
+					if (num != 0 && !chara3.IsDisabled && !chara3.isRestrained && !chara3.IsDeadOrSleeping && chara3 != this && !chara3.IsHostile(Chara) && (!IsPCFactionOrMinion || chara3.IsPCFactionOrMinion) && chara3.Dist(this) <= num)
 					{
-						chara3.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, AttackSourceSub.FleshWall);
+						Say("wall_flesh", chara3, this);
+						chara3.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
 						return;
 					}
 				}
@@ -4204,7 +4205,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						if (EClass.player.invlunerable)
 						{
 							EvadeDeath();
-							goto IL_0cdf;
+							goto IL_0d0e;
 						}
 					}
 					if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -4216,8 +4217,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0cdf;
-		IL_0cdf:
+		goto IL_0d0e;
+		IL_0d0e:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4230,7 +4231,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		Chara target;
 		if (hp < 0)
 		{
-			if ((attackSource == AttackSource.Melee || attackSource == AttackSource.Range) && origin != null && (origin.isSynced || IsPC))
+			if ((attackSource == AttackSource.Melee || attackSource == AttackSource.Range) && origin != null && originalTarget == null && (origin.isSynced || IsPC))
 			{
 				string text = "";
 				if (IsPC && Lang.setting.combatTextStyle == 0)
@@ -4321,7 +4322,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isDestroyed)
 			{
-				Die(e, origin, attackSource);
+				Die(e, origin, attackSource, originalTarget);
 				if (trait.CanBeSmashedToDeath && !EClass._zone.IsUserZone)
 				{
 					Rand.SetSeed(uid);
@@ -4395,7 +4396,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			Msg.SetColor();
 		}
-		else if ((attackSource == AttackSource.Melee || attackSource == AttackSource.Range) && origin != null)
+		else if ((attackSource == AttackSource.Melee || attackSource == AttackSource.Range) && origin != null && originalTarget == null)
 		{
 			(IsPC ? EClass.pc : origin).Say("dmgMelee" + num8 + (IsPC ? "pc" : ""), origin, this);
 		}
@@ -4735,7 +4736,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public virtual void Die(Element e = null, Card origin = null, AttackSource attackSource = AttackSource.None)
+	public virtual void Die(Element e = null, Card origin = null, AttackSource attackSource = AttackSource.None, Chara originalTarget = null)
 	{
 		Card rootCard = GetRootCard();
 		Point _pos = rootCard?.pos ?? pos;

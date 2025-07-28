@@ -417,7 +417,7 @@ public class SerializedCards : EClass
 			refVal = c.refVal,
 			idSkin = c.idSkin,
 			idDeity = c.c_idDeity,
-			isEmpty = (c.things.Count == 0)
+			isEmpty = (c.things.Count == 0 && c.c_lockLv == 0)
 		};
 		if (c.c_idBacker != 0)
 		{
@@ -747,9 +747,17 @@ public class SerializedCards : EClass
 					bool isHidden = (card2.isMasked = false);
 					card3.isHidden = isHidden;
 				}
-				if (card2.IsContainer && card4.isEmpty)
+				if (card2.IsContainer)
 				{
-					card2.things.DestroyAll();
+					if (card4.isEmpty)
+					{
+						card2.things.DestroyAll();
+						card2.c_lockLv = 0;
+					}
+					else
+					{
+						card2.c_lockLv = 1;
+					}
 				}
 			}
 			if (card2.isChara)

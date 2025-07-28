@@ -24,7 +24,8 @@ public class TraitWhipEgg : TraitWhipLove
 					{
 						c.Chara.OnInsulted();
 					}
-					c.MakeEgg();
+					Thing c2 = c.MakeEgg();
+					c.Say("item_drop", c2);
 					owner.ModCharge(-1);
 					if (owner.c_charges <= 0)
 					{

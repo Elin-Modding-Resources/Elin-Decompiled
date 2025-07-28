@@ -2285,11 +2285,13 @@ public class ActEffect : EClass
 		{
 			if (!plus && EClass.rnd(2) == 0)
 			{
-				tc.MakeMilk(effect: true, 1, addToZone: true, state);
+				Thing c2 = tc.MakeMilk(effect: true, 1, addToZone: true, state);
+				tc.Say("item_drop", c2);
 			}
 			else
 			{
-				tc.MakeEgg(effect: true, 1, addToZone: true, plus ? 3 : 20, state);
+				Thing c3 = tc.MakeEgg(effect: true, 1, addToZone: true, plus ? 3 : 20, state);
+				tc.Say("item_drop", c3);
 			}
 		}
 	}

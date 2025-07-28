@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class POLICY
 {
-	public const int bed_quality = 2812;
+	public const int license_food = 2818;
 
 	public const int suite_room = 2813;
 
@@ -15,13 +15,15 @@ public class POLICY
 
 	public const int store_premium = 2817;
 
-	public const int license_food = 2818;
+	public const int bed_quality = 2812;
 
 	public const int license_furniture = 2819;
 
-	public const int celeb = 2822;
+	public const int license_slaver = 2828;
 
 	public const int legendary_heirloom = 2821;
+
+	public const int celeb = 2822;
 
 	public const int legendary_exhibition = 2823;
 
@@ -32,8 +34,6 @@ public class POLICY
 	public const int egg_fan = 2826;
 
 	public const int breed_season = 2827;
-
-	public const int license_slaver = 2828;
 
 	public const int tourist_safety = 2811;
 
@@ -107,8 +107,8 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2812, 2813, 2814, 2815, 2816, 2817, 2818, 2819, 2822, 2821,
-		2823, 2824, 2825, 2826, 2827, 2828, 2811, 2820, 2810, 2516,
+		2818, 2813, 2814, 2815, 2816, 2817, 2812, 2819, 2828, 2821,
+		2822, 2823, 2824, 2825, 2826, 2827, 2811, 2820, 2810, 2516,
 		2715, 2508, 2509, 2510, 2505, 2504, 2503, 2502, 2501, 2500,
 		2800, 2507, 2511, 2512, 2513, 2506, 2515, 2702, 2703, 2514,
 		2705, 2706, 2707, 2704, 2709, 2710, 2711, 2712, 2701, 2700,

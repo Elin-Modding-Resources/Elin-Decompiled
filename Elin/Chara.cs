@@ -931,7 +931,7 @@ public class Chara : Card, IPathfindWalker
 
 	public FactionBranch homeBranch => homeZone?.branch;
 
-	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0);
+	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242);
 
 	public int CurrentGeneSlot
 	{
@@ -4900,7 +4900,7 @@ public class Chara : Card, IPathfindWalker
 		hunger.Mod(30);
 	}
 
-	public override void Die(Element e = null, Card origin = null, AttackSource attackSource = AttackSource.None)
+	public override void Die(Element e = null, Card origin = null, AttackSource attackSource = AttackSource.None, Chara originalTarget = null)
 	{
 		combatCount = 0;
 		if (isDead || host != null)
@@ -4996,7 +4996,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			else
 			{
-				if (origin == null || !origin.isSynced || (attackSource != AttackSource.Melee && attackSource != AttackSource.Range))
+				if (originalTarget != null || origin == null || !origin.isSynced || (attackSource != AttackSource.Melee && attackSource != AttackSource.Range))
 				{
 					Msg.Say(text, this, "", text2);
 				}
