@@ -1,9 +1,5 @@
 var NAVTREEINDEX116 =
 {
-"classTraitDoorCurtain.html#a2afacb16aa5d5ef62f7c093981328ca8":[1,0,1511,0],
-"classTraitDoorCurtain.html#a6fe7f911c184a7ccbc01324566486227":[1,0,1511,2],
-"classTraitDoorCurtain.html#a89347d132b17b2750f5f8b44b1c4c09e":[1,0,1511,1],
-"classTraitDoorCurtain2.html":[1,0,1512],
 "classTraitDoorCurtain2.html#aee16732f839dd53bf7a49de2a4bcd391":[1,0,1512,0],
 "classTraitDoorFence.html":[1,0,1513],
 "classTraitDoorFence.html#a3c7c8bf4e1b60582abfe54a3dd9d70b4":[1,0,1513,0],
@@ -249,5 +245,9 @@ var NAVTREEINDEX116 =
 "classTraitFortuneBall.html":[1,0,1572],
 "classTraitFortuneCookie.html":[1,0,1573],
 "classTraitFortuneCookie.html#ac4705ba887cb9f7f6493ffc5336c80b5":[1,0,1573,0],
-"classTraitFridge.html":[1,0,1574]
+"classTraitFridge.html":[1,0,1574],
+"classTraitFridge.html#a15de8c2e1aac0bdd1fe9a2c098ebb729":[1,0,1574,1],
+"classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1574,0],
+"classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1574,2],
+"classTraitGM.html":[1,0,1594]
 };

@@ -59,7 +59,7 @@ var classChara =
     [ "DamageTempElement", "classChara.html#a050ddb397d91384b625a577b7ae43f5e", null ],
     [ "DamageTempElements", "classChara.html#ad6486662fbf918364048ff120f7588a4", null ],
     [ "DestroyPath", "classChara.html#a6f81ca71077a038b41c5e42a0070b0e9", null ],
-    [ "Die", "classChara.html#a5900f1eac59603c108558aaf4a47e065", null ],
+    [ "Die", "classChara.html#a85a6d23f34eb954e7e53dd72c353c59a", null ],
     [ "DiminishTempElements", "classChara.html#a64bfea6d3f5840355a7e4de6ef9bf56d", null ],
     [ "DoAI", "classChara.html#af877f3464245a47c6e57ac5d1a487066", null ],
     [ "DoHostileAction", "classChara.html#ac96438f85f9f30b620e68cc0348f7dda", null ],

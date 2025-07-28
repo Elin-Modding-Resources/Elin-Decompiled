@@ -1,10 +1,5 @@
 var NAVTREEINDEX54 =
 {
-"classDSVRow.html#a9929cfe2b18a76e9551fb5cb95dff257":[1,0,447,3],
-"classDSVRow.html#aaf4dae3198b3314fc836a8becc8df6c6":[1,0,447,5],
-"classDSVRow.html#abea881868b56d89bfda7235def77db04":[1,0,447,1],
-"classDSVRow_1_1Item.html":[1,0,447,0],
-"classDSVRow_1_1Item.html#a003bab314bf5d076edd21e17c44de9a3":[1,0,447,0,0],
 "classDSVRow_1_1Item.html#a235105a682ce53793f960afb53939417":[1,0,447,0,1],
 "classDamageTextRenderer.html":[1,0,414],
 "classDamageTextRenderer.html#a3ca61bdbd06e731804c1c23bd4b4871b":[1,0,414,2],
@@ -249,5 +244,10 @@ var NAVTREEINDEX54 =
 "classDramaActor.html#a94a3bd841b31f142590d4c180f8cea38":[1,0,429,1],
 "classDramaActor.html#a9c625b5c1651cc0b7315c81e38cfc14b":[1,0,429,9],
 "classDramaActor.html#ac6307f57faa1a481c54975385adbf562":[1,0,429,3],
-"classDramaActor.html#ad8d294303a2b2b25327ed8fcb0a61af9":[1,0,429,8]
+"classDramaActor.html#ad8d294303a2b2b25327ed8fcb0a61af9":[1,0,429,8],
+"classDramaActor.html#add2d49bf6ba26f5e06c5f248c1a976b2":[1,0,429,5],
+"classDramaActor.html#af4d105a979cecc1d374e44c2ab702466":[1,0,429,7],
+"classDramaChoice.html":[1,0,430],
+"classDramaChoice.html#a0389856ea3878c846bbb2852c15d2faa":[1,0,430,0],
+"classDramaChoice.html#a0412fd34eaca8675c3f7242abdd794bd":[1,0,430,2]
 };

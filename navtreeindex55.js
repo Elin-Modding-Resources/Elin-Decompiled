@@ -1,10 +1,5 @@
 var NAVTREEINDEX55 =
 {
-"classDramaActor.html#add2d49bf6ba26f5e06c5f248c1a976b2":[1,0,429,5],
-"classDramaActor.html#af4d105a979cecc1d374e44c2ab702466":[1,0,429,7],
-"classDramaChoice.html":[1,0,430],
-"classDramaChoice.html#a0389856ea3878c846bbb2852c15d2faa":[1,0,430,0],
-"classDramaChoice.html#a0412fd34eaca8675c3f7242abdd794bd":[1,0,430,2],
 "classDramaChoice.html#a053d2c1b53296e41e2a0e493b10663c6":[1,0,430,10],
 "classDramaChoice.html#a0a5d8f192034275e6bc5c37c6297034b":[1,0,430,12],
 "classDramaChoice.html#a2123aa178af8ca70fafbdb9749ea4c84":[1,0,430,1],
@@ -249,5 +244,10 @@ var NAVTREEINDEX55 =
 "classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b":[1,0,443,15],
 "classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049":[1,0,443,23],
 "classDramaSequence.html#aae1d5cd2845ca1e6397ece8a20681924":[1,0,443,4],
-"classDramaSequence.html#ab4da3e0eb4757986c1c690d43a3170dc":[1,0,443,18]
+"classDramaSequence.html#ab4da3e0eb4757986c1c690d43a3170dc":[1,0,443,18],
+"classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761":[1,0,443,24],
+"classDramaSequence.html#ab94829503185d562bfccdbca66009f5e":[1,0,443,19],
+"classDramaSequence.html#ad0a8d5bb13ec7fd65f0e2faa9e511cd7":[1,0,443,30],
+"classDramaSequence.html#ae97581cac16b3c600a0c9c6991d0ba67":[1,0,443,13],
+"classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8":[1,0,443,29]
 };

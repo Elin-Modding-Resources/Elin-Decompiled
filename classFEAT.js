@@ -37,6 +37,7 @@ var classFEAT =
     [ "featFoxBless", "classFEAT.html#ac14d2b03acaa88d5fd6d44719200d7a5", null ],
     [ "featFoxLearn", "classFEAT.html#a7cd28a2a1731732db0d45f9695e9ca10", null ],
     [ "featFoxMaid", "classFEAT.html#add322ffec264c3844624f18648e3c083", null ],
+    [ "featGeneSlot", "classFEAT.html#a307635f0f51912aa4a7dcd84563f0fdd", null ],
     [ "featGod_earth1", "classFEAT.html#adbcb5d155a036685d5cc3c8335285e6e", null ],
     [ "featGod_element1", "classFEAT.html#a34df99872771a6a3f36bb68539db5e2a", null ],
     [ "featGod_harmony1", "classFEAT.html#af376dfb4b0e28de63b4c951f76ceee9d", null ],

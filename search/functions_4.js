@@ -2,7 +2,7 @@ var searchData=
 [
   ['dailyoutcome_0',['DailyOutcome',['../classFactionBranch.html#a2b06ef27c1488f8cc19a69009d6c6ec1',1,'FactionBranch.DailyOutcome()'],['../classAIWork.html#a1766ec0c976dea1607ff4d8618dca613',1,'AIWork.DailyOutcome()']]],
   ['damageele_1',['DamageEle',['../classActEffect.html#aa7e3c236ae31446cae7736dab0d27c33',1,'ActEffect']]],
-  ['damagehp_2',['DamageHP',['../classCard.html#a2a73375a18833c19a9e05e12cd1d0202',1,'Card.DamageHP(int dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#a391c120c50eb7dbeaa39b979207f0f87',1,'Card.DamageHP(int dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true, Thing weapon=null, AttackSourceSub attackSourceSub=AttackSourceSub.None)']]],
+  ['damagehp_2',['DamageHP',['../classCard.html#a2a73375a18833c19a9e05e12cd1d0202',1,'Card.DamageHP(int dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#ac0ebe79e90b6e9f850aebd2146425b55',1,'Card.DamageHP(int dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true, Thing weapon=null, Chara originalTarget=null)']]],
   ['damagetempelement_3',['DamageTempElement',['../classChara.html#a050ddb397d91384b625a577b7ae43f5e',1,'Chara']]],
   ['damagetempelements_4',['DamageTempElements',['../classChara.html#ad6486662fbf918364048ff120f7588a4',1,'Chara']]],
   ['darken_5',['Darken',['../classEmpyrean_1_1Utils_1_1Colorist.html#a5625e1eb103cfc25cf53858c62e6d61e',1,'Empyrean::Utils::Colorist']]],
@@ -53,7 +53,7 @@ var searchData=
   ['dialogload_50',['DialogLoad',['../classWidgetManager.html#a00c4b9d53a75de01da85d40fcbf314ab',1,'WidgetManager']]],
   ['dialogsave_51',['DialogSave',['../classWidgetManager.html#a6c2d87f70e5c134ba4207ebd6dbe60fe',1,'WidgetManager']]],
   ['dice_52',['Dice',['../classDice.html#aeb5025592e24ab8800e064e32755cfa4',1,'Dice']]],
-  ['die_53',['Die',['../classCard.html#a70f68e8e29cbbb19bdcd0469c397bf8b',1,'Card.Die()'],['../classChara.html#a5900f1eac59603c108558aaf4a47e065',1,'Chara.Die(Element e=null, Card origin=null, AttackSource attackSource=AttackSource.None)']]],
+  ['die_53',['Die',['../classCard.html#a2ecaf5aa4c51d42b0f190f7e6b187cb0',1,'Card.Die()'],['../classChara.html#a85a6d23f34eb954e7e53dd72c353c59a',1,'Chara.Die(Element e=null, Card origin=null, AttackSource attackSource=AttackSource.None, Chara originalTarget=null)']]],
   ['diminishtempelements_54',['DiminishTempElements',['../classChara.html#a64bfea6d3f5840355a7e4de6ef9bf56d',1,'Chara']]],
   ['dirtostate_55',['DirToState',['../classZoneTransition.html#a9a9b35d964be80c61f3f9c2574dca9b0',1,'ZoneTransition']]],
   ['disableclose_56',['DisableClose',['../classLayer.html#a2aa756994da41e1b506d3d6d307883d2',1,'Layer']]],

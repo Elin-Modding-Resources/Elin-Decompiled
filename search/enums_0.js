@@ -10,9 +10,8 @@ var searchData=
   ['areahighlightmode_7',['AreaHighlightMode',['../AreaHighlightMode_8cs.html#a15798da014a287e7a68b371004532342',1,'AreaHighlightMode.cs']]],
   ['articlestyle_8',['ArticleStyle',['../ArticleStyle_8cs.html#aa7f4cf8991adc81403e8c4a74db37d09',1,'ArticleStyle.cs']]],
   ['attacksource_9',['AttackSource',['../AttackSource_8cs.html#a94a286604244a15021d28571897475a4',1,'AttackSource.cs']]],
-  ['attacksourcesub_10',['AttackSourceSub',['../AttackSourceSub_8cs.html#aa25c4f240c6049dccfc9eb7e9652f1d0',1,'AttackSourceSub.cs']]],
-  ['attackstyle_11',['AttackStyle',['../AttackStyle_8cs.html#ab3a1ba8ba961f9163c3dd895f7f7ffd4',1,'AttackStyle.cs']]],
-  ['attacktype_12',['AttackType',['../AttackType_8cs.html#a904b2f9c8f3951116c343784c59d6afe',1,'AttackType.cs']]],
-  ['autodumpflag_13',['AutodumpFlag',['../AutodumpFlag_8cs.html#a4d2959963559bdb2dad9ad9b4946e0f2',1,'AutodumpFlag.cs']]],
-  ['autoid_14',['AutoID',['../classSourceData.html#a1b80b7306c23020dfd08da08141308a8',1,'SourceData']]]
+  ['attackstyle_10',['AttackStyle',['../AttackStyle_8cs.html#ab3a1ba8ba961f9163c3dd895f7f7ffd4',1,'AttackStyle.cs']]],
+  ['attacktype_11',['AttackType',['../AttackType_8cs.html#a904b2f9c8f3951116c343784c59d6afe',1,'AttackType.cs']]],
+  ['autodumpflag_12',['AutodumpFlag',['../AutodumpFlag_8cs.html#a4d2959963559bdb2dad9ad9b4946e0f2',1,'AutodumpFlag.cs']]],
+  ['autoid_13',['AutoID',['../classSourceData.html#a1b80b7306c23020dfd08da08141308a8',1,'SourceData']]]
 ];

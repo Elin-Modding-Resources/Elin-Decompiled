@@ -1,9 +1,5 @@
 var NAVTREEINDEX137 =
 {
-"classZonePreEnterBout.html#a0b4e0336203a50455fd13f9f4895b88f":[1,0,2159,0],
-"classZonePreEnterBout.html#aee2f1c20d1ea1cae6c89a2158f9a9a5b":[1,0,2159,1],
-"classZonePreEnterBoutWin.html":[1,0,2160],
-"classZonePreEnterBoutWin.html#a3ceb78f0ff78c6295b40700932ece9af":[1,0,2160,1],
 "classZonePreEnterBoutWin.html#ae62ef4a7c0dfd0c15d768f11432a39ac":[1,0,2160,0],
 "classZonePreEnterDigStairs.html":[1,0,2161],
 "classZonePreEnterDigStairs.html#a092dc8608daf2ebaa641d1408cf6caab":[1,0,2161,2],
@@ -249,5 +245,9 @@ var NAVTREEINDEX137 =
 "classZone__Mysilia.html":[1,0,2100],
 "classZone__Nefu.html":[1,0,2101],
 "classZone__Nefu.html#ac7d3126cebd226c555192dd8d78ba9d0":[1,0,2101,0],
-"classZone__Noyel.html":[1,0,2102]
+"classZone__Noyel.html":[1,0,2102],
+"classZone__Noyel.html#ac05fe39e73d5a4b6a6feae01dcc5d0b5":[1,0,2102,1],
+"classZone__Noyel.html#ad5ed95d25d76088c170de57d98f394d2":[1,0,2102,0],
+"classZone__Nymelle.html":[1,0,2103],
+"classZone__Nymelle.html#a15ee179280d26cb0c7f0afb0ff3bd62a":[1,0,2103,2]
 };

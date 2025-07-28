@@ -1,9 +1,5 @@
 var NAVTREEINDEX79 =
 {
-"classLayerTravel.html#a5cd4d51d098301ff41b36dd0f0869658":[1,0,822,20],
-"classLayerTravel.html#a68e365e8e7447d8d0d5334462e5cefca":[1,0,822,0],
-"classLayerTravel.html#a6b6b88516bd0fa1a7bfa74b25cd25f19":[1,0,822,14],
-"classLayerTravel.html#a707c5048bcdf9a6b9fd051542ee48e8b":[1,0,822,5],
 "classLayerTravel.html#a7699d76da078b5d70ce0f684dce0db54":[1,0,822,21],
 "classLayerTravel.html#a84c6c38e265cb064bcc31a75c61703e1":[1,0,822,9],
 "classLayerTravel.html#a95152c94bb03ac1e8c8f15031c85544b":[1,0,822,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX79 =
 "classListPeopleExpedition.html#ad5ab5d3b3b59e4e494e3be3ced5a0784":[1,0,841,5],
 "classListPeopleRevive.html":[1,0,842],
 "classListPeopleRevive.html#a203c1c3a7446c73695de968c39447d95":[1,0,842,3],
-"classListPeopleRevive.html#a42c8a23c836101e58dc91e3112dbe6ab":[1,0,842,0]
+"classListPeopleRevive.html#a42c8a23c836101e58dc91e3112dbe6ab":[1,0,842,0],
+"classListPeopleRevive.html#ac2c87362089d236ca39d86862fd77c51":[1,0,842,1],
+"classListPeopleRevive.html#adc707b3249dc262f2a42c490630c3d41":[1,0,842,2],
+"classListPeopleSelect.html":[1,0,843],
+"classListPeopleSelect.html#a1852cb164395ca8ac4530dc0540b3bd5":[1,0,843,0]
 };
