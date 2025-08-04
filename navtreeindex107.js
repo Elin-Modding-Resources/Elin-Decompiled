@@ -1,5 +1,12 @@
 var NAVTREEINDEX107 =
 {
+"classStatsBurden.html#a29bc5415ae149e68909cf584a82382dc":[1,0,1238,0],
+"classStatsBurden.html#a34a40c0c73e07e7df0503d1ec3bbd0e6":[1,0,1238,3],
+"classStatsBurden.html#a4e41f6e1863f10b77c1db16c3f98f33c":[1,0,1238,8],
+"classStatsBurden.html#ab998dcc3460ddf99ebebf25c8f7aebfe":[1,0,1238,6],
+"classStatsBurden.html#ad0deb95864d5031492df0b74aa3c30ec":[1,0,1238,4],
+"classStatsBurden.html#aeb595480a248d86d2757c6b2b5f256c4":[1,0,1238,2],
+"classStatsBurden.html#aecdb3c30f4a5f4d7073bbe670c949551":[1,0,1238,5],
 "classStatsHunger.html":[1,0,1239],
 "classStatsHunger.html#a26858b3d5c765896736fc402a908007d":[1,0,1239,6],
 "classStatsHunger.html#a4e89f0108745365346ed5de006049f1f":[1,0,1239,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX107 =
 "classTactics.html#a069dc2818e00392d1b7515e3f3a5dd3b":[1,0,1256,8],
 "classTactics.html#a0cdc56dac52fbcabcc8678fffbd985cb":[1,0,1256,18],
 "classTactics.html#a183137ef63a14ffb97ce8bdec546306c":[1,0,1256,14],
-"classTactics.html#a4b75dcef587fc75c23f72917c51dfc1d":[1,0,1256,16],
-"classTactics.html#a51df248f18f84f1f8b446c41ba7d49e7":[1,0,1256,6],
-"classTactics.html#a5dbb92b5bf85148cacc178d8d7643f75":[1,0,1256,5],
-"classTactics.html#a7f5e4d5cecc8c50aab9a55cc0ee74dc3":[1,0,1256,11],
-"classTactics.html#a835f143a21af573d527c515521cceb67":[1,0,1256,1],
-"classTactics.html#a85c1fcd50eefde87cdd05d92d5e2c31a":[1,0,1256,10],
-"classTactics.html#a8a9acef5488b9b142e3eb395836a09b2":[1,0,1256,7],
-"classTactics.html#a8fb9e3bcde63fcc7cc5245962fd1f2b7":[1,0,1256,13]
+"classTactics.html#a4b75dcef587fc75c23f72917c51dfc1d":[1,0,1256,16]
 };

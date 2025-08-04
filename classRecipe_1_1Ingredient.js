@@ -8,6 +8,7 @@ var classRecipe_1_1Ingredient =
     [ "dye", "classRecipe_1_1Ingredient.html#ac59bbff1e717359f6bd79a131daad082", null ],
     [ "id", "classRecipe_1_1Ingredient.html#afa031387a17b7a59d5fe90441094b48f", null ],
     [ "idOther", "classRecipe_1_1Ingredient.html#a89d186c410b59192981d246077bda1ac", null ],
+    [ "ingType", "classRecipe_1_1Ingredient.html#ae81ddc91b17007409eb83c554d7f63dd", null ],
     [ "mat", "classRecipe_1_1Ingredient.html#a4dca129b30f3f4070784361ea8e7676c", null ],
     [ "optional", "classRecipe_1_1Ingredient.html#a44f06296039d29dcb759daa7da96c63b", null ],
     [ "refVal", "classRecipe_1_1Ingredient.html#a580848dba508d908a2ea969b190b7d1a", null ],

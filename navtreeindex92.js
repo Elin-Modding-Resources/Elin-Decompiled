@@ -1,5 +1,7 @@
 var NAVTREEINDEX92 =
 {
+"classQuestMeal__meat.html#a35404e9faea0dcaaca47c4a0e75b4b04":[1,0,1011,0],
+"classQuestMeal__noodle.html":[1,0,1012],
 "classQuestMeal__noodle.html#a335f3885d3817680d1dc1c37bc88dfdd":[1,0,1012,0],
 "classQuestMeal__rice.html":[1,0,1013],
 "classQuestMeal__rice.html#a1015e133d3deebf3d36f273e49218f6a":[1,0,1013,0],
@@ -237,17 +239,15 @@ var NAVTREEINDEX92 =
 "classRankedZoneManager.html#ac48597be4e453de321fecdbebb904289":[1,0,1047,0],
 "classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d":[1,0,1047,1],
 "classRecipe.html":[1,0,1048],
-"classRecipe.html#a040c3f5e15fef1caad347e061707d507":[1,0,1048,46],
-"classRecipe.html#a083683c4d4736902ce4ce7243afc4321":[1,0,1048,22],
-"classRecipe.html#a0c371359762bb5b5fc58c8451e813950":[1,0,1048,58],
-"classRecipe.html#a0eeec5c402d1fa61555dd05aa18bbaca":[1,0,1048,71],
-"classRecipe.html#a11bd1633807997a593db370fa17c96b6":[1,0,1048,1],
-"classRecipe.html#a11bd1633807997a593db370fa17c96b6a3ac705f2acd51a4613f9188c05c91d0d":[1,0,1048,1,0],
-"classRecipe.html#a11bd1633807997a593db370fa17c96b6a4bbb8f967da6d1a610596d7257179c2b":[1,0,1048,1,1],
-"classRecipe.html#a123d8acc734e50c7c492c141eddf2680":[1,0,1048,37],
-"classRecipe.html#a16d6e7a1f3e7ec064260d975ece515ec":[1,0,1048,41],
-"classRecipe.html#a17b522883cf23372db4f4228baf9bc7a":[1,0,1048,43],
-"classRecipe.html#a1d2ab89173f5d72ede008cc6eccefc3c":[1,0,1048,42],
-"classRecipe.html#a21877e57c53fd1150ce766b0e31373f3":[1,0,1048,8],
-"classRecipe.html#a21dd69360b93de59b5308d7db36b9559":[1,0,1048,52]
+"classRecipe.html#a040c3f5e15fef1caad347e061707d507":[1,0,1048,47],
+"classRecipe.html#a083683c4d4736902ce4ce7243afc4321":[1,0,1048,23],
+"classRecipe.html#a0c371359762bb5b5fc58c8451e813950":[1,0,1048,59],
+"classRecipe.html#a0eeec5c402d1fa61555dd05aa18bbaca":[1,0,1048,72],
+"classRecipe.html#a11bd1633807997a593db370fa17c96b6":[1,0,1048,2],
+"classRecipe.html#a11bd1633807997a593db370fa17c96b6a3ac705f2acd51a4613f9188c05c91d0d":[1,0,1048,2,0],
+"classRecipe.html#a11bd1633807997a593db370fa17c96b6a4bbb8f967da6d1a610596d7257179c2b":[1,0,1048,2,1],
+"classRecipe.html#a123d8acc734e50c7c492c141eddf2680":[1,0,1048,38],
+"classRecipe.html#a16d6e7a1f3e7ec064260d975ece515ec":[1,0,1048,42],
+"classRecipe.html#a17b522883cf23372db4f4228baf9bc7a":[1,0,1048,44],
+"classRecipe.html#a1d2ab89173f5d72ede008cc6eccefc3c":[1,0,1048,43]
 };

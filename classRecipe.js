@@ -1,6 +1,10 @@
 var classRecipe =
 [
     [ "Ingredient", "classRecipe_1_1Ingredient.html", "classRecipe_1_1Ingredient" ],
+    [ "IngType", "classRecipe.html#a7539264ffa02fc512e4ef1f1d213362b", [
+      [ "Default", "classRecipe.html#a7539264ffa02fc512e4ef1f1d213362ba7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "CreativeFood", "classRecipe.html#a7539264ffa02fc512e4ef1f1d213362baa242ece548d7468f6ff1ce109e5091c3", null ]
+    ] ],
     [ "State", "classRecipe.html#a11bd1633807997a593db370fa17c96b6", [
       [ "Valid", "classRecipe.html#a11bd1633807997a593db370fa17c96b6a3ac705f2acd51a4613f9188c05c91d0d", null ],
       [ "Invalid", "classRecipe.html#a11bd1633807997a593db370fa17c96b6a4bbb8f967da6d1a610596d7257179c2b", null ]

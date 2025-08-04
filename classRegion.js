@@ -20,6 +20,7 @@ var classRegion =
     [ "OnAdvanceHour", "classRegion.html#a38c45e1217a484f56c7a8f60753c4083", null ],
     [ "RenewRandomSites", "classRegion.html#a0b7df8ddbe3553e6b60c1256895e352d", null ],
     [ "UpdateRandomSites", "classRegion.html#a4450bbfabc4fc0132fb1ba75e10d26ec", null ],
+    [ "beachFix", "classRegion.html#a71127c89678b7f15ad3484107d3e5636", null ],
     [ "dateCheckSites", "classRegion.html#a69a1412cc68e055773f3926053d4f29f", null ],
     [ "elomap", "classRegion.html#a0a3cedbd3028eb6fead482e2336f58b2", null ],
     [ "BlockBorderExit", "classRegion.html#a38d314a19d06c1f4f4a4903bbaf96e18", null ],

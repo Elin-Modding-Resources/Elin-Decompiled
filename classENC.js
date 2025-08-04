@@ -20,6 +20,7 @@ var classENC =
     [ "convertImpact", "classENC.html#ad7c5a7e58005a35687e1ef71fae42585", null ],
     [ "convertLightning", "classENC.html#ab4a8db4fff771b3dc9ed9b062bac8f23", null ],
     [ "corruption", "classENC.html#a489d27762489926abebbb23e14f8d060", null ],
+    [ "creativeChef", "classENC.html#a9a4ef64e7214c844c247a51befc8e95c", null ],
     [ "eco", "classENC.html#a8985c5073f4af9fb87c5145322f65953", null ],
     [ "eheluck", "classENC.html#aa7fc17245e590db0dea62ac57a2cea30", null ],
     [ "encHit", "classENC.html#a3dc9b5f8557459c047b2f8c87aba5876", null ],

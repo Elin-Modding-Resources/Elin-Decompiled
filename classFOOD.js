@@ -1,5 +1,6 @@
 var classFOOD =
 [
+    [ "creativeDish", "classFOOD.html#a5d62ea5f1f6815f966a7135684d73c53", null ],
     [ "food_bug", "classFOOD.html#a288f52db938443ba7caa49ca386aa24a", null ],
     [ "food_cat", "classFOOD.html#a7378998540354bd7f84e9a179fa3ae76", null ],
     [ "food_CHA", "classFOOD.html#a29ae8719d0667458d64f333946336be6", null ],
