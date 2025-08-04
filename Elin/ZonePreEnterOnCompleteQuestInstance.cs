@@ -24,6 +24,7 @@ public class ZonePreEnterOnCompleteQuestInstance : ZonePreEnterEvent
 			{
 				Debug.Log(uidClient + "/" + uidQuest + "/" + fail + "/" + quest);
 				Debug.LogError("exception: quest not found:" + chara?.ToString() + "/" + chara?.quest);
+				quest.Fail();
 				return;
 			}
 			chara.Revive();

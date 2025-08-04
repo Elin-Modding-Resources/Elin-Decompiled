@@ -888,6 +888,11 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		PathManager.Instance._pathfinder.PunishChangeDirection = false;
 		isImported = false;
+		if (this is Zone_Tent && IsUnderwater)
+		{
+			EClass._map.config.idSceneProfile = "indoor_water";
+			EClass.scene.profile = SceneProfile.Load(EClass._map.config.idSceneProfile);
+		}
 		if (flag && IsTown && base.lv == 0)
 		{
 			SpawnLostItems();

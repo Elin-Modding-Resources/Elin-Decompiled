@@ -957,7 +957,17 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public bool IsMofuable => race.tag.Contains("mofu");
+	public bool IsMofuable
+	{
+		get
+		{
+			if (!race.tag.Contains("mofu"))
+			{
+				return HasElement(419);
+			}
+			return true;
+		}
+	}
 
 	public ElementContainer baseWorkElements
 	{

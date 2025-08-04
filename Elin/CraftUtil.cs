@@ -158,6 +158,7 @@ public class CraftUtil : EClass
 		bool isFood = type == MixType.Food;
 		int nutFactor = 100 - (ings.Count - 1) * 5;
 		Thing thing = ((ings.Count > 0) ? ings[0] : null);
+		bool creative = crafter?.HasElement(487) ?? false;
 		if (crafter != null && crafter.Evalue(1650) >= 3)
 		{
 			nutFactor -= 10;
@@ -266,6 +267,10 @@ public class CraftUtil : EClass
 				product.elements.SetTo(10, 1);
 			}
 		}
+		if (creative)
+		{
+			product.elements.SetBase(764, 1);
+		}
 		return product;
 		bool IsValidTrait(Element e)
 		{
@@ -308,6 +313,10 @@ public class CraftUtil : EClass
 							if (product.id == "lunch_dystopia")
 							{
 								num5 *= -1;
+							}
+							if (creative && num5 > 500)
+							{
+								num5 = 500;
 							}
 							product.elements.ModBase(value3.id, num5);
 						}

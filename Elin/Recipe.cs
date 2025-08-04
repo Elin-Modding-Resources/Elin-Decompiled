@@ -11,6 +11,12 @@ public class Recipe : EClass
 		Invalid
 	}
 
+	public enum IngType
+	{
+		Default,
+		CreativeFood
+	}
+
 	public class Ingredient : EClass
 	{
 		[JsonProperty]
@@ -33,6 +39,9 @@ public class Recipe : EClass
 
 		[JsonProperty]
 		public List<string> idOther = new List<string>();
+
+		[JsonProperty]
+		public IngType ingType;
 
 		public Thing thing;
 
@@ -125,6 +134,10 @@ public class Recipe : EClass
 
 		public bool IsValidIngredient(Thing t)
 		{
+			if (ingType == IngType.CreativeFood && t.HasElement(10))
+			{
+				return true;
+			}
 			if (useCat)
 			{
 				if (t.category.IsChildOf(id))

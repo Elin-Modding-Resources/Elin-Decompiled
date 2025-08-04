@@ -10,6 +10,8 @@ public class Zone_Tent : Zone
 
 	public override int MaxSoil => 50 + Evalue(2200) * 5;
 
+	public override bool IsUnderwater => elements.Has(3606);
+
 	public override ZoneTransition.EnterState RegionEnterState => ZoneTransition.EnterState.Bottom;
 
 	public override void OnBeforeDeactivate()

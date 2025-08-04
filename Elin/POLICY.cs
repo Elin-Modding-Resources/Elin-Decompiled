@@ -41,7 +41,7 @@ public class POLICY
 
 	public const int open_business = 2810;
 
-	public const int speed_growth = 2516;
+	public const int stop_growth = 2515;
 
 	public const int livestock_priv = 2715;
 
@@ -50,6 +50,8 @@ public class POLICY
 	public const int vaccination = 2509;
 
 	public const int ban_radio = 2510;
+
+	public const int self_sufficient = 2511;
 
 	public const int legal_drug = 2505;
 
@@ -61,13 +63,11 @@ public class POLICY
 
 	public const int faith_tax = 2501;
 
-	public const int wealth_tax = 2500;
-
 	public const int home_discount = 2800;
 
-	public const int inquisition = 2507;
+	public const int wealth_tax = 2500;
 
-	public const int self_sufficient = 2511;
+	public const int inquisition = 2507;
 
 	public const int resident_tax = 2512;
 
@@ -75,21 +75,23 @@ public class POLICY
 
 	public const int human_right = 2506;
 
-	public const int stop_growth = 2515;
+	public const int speed_growth = 2516;
+
+	public const int trash_sort = 2701;
 
 	public const int trash_no = 2702;
 
-	public const int weed_no = 2703;
-
 	public const int taxfree = 2514;
+
+	public const int border_watch = 2704;
 
 	public const int taxTransfer = 2705;
 
 	public const int demon_invocation = 2706;
 
-	public const int auto_farm = 2707;
+	public const int weed_no = 2703;
 
-	public const int border_watch = 2704;
+	public const int noDM = 2708;
 
 	public const int noAnimal = 2709;
 
@@ -99,20 +101,18 @@ public class POLICY
 
 	public const int forcePanty = 2712;
 
-	public const int trash_sort = 2701;
-
 	public const int energy_conservation = 2700;
 
-	public const int noDM = 2708;
+	public const int auto_farm = 2707;
 
 	public static readonly int[] IDS = new int[51]
 	{
 		2818, 2813, 2814, 2815, 2816, 2817, 2812, 2819, 2828, 2821,
-		2822, 2823, 2824, 2825, 2826, 2827, 2811, 2820, 2810, 2516,
-		2715, 2508, 2509, 2510, 2505, 2504, 2503, 2502, 2501, 2500,
-		2800, 2507, 2511, 2512, 2513, 2506, 2515, 2702, 2703, 2514,
-		2705, 2706, 2707, 2704, 2709, 2710, 2711, 2712, 2701, 2700,
-		2708
+		2822, 2823, 2824, 2825, 2826, 2827, 2811, 2820, 2810, 2515,
+		2715, 2508, 2509, 2510, 2511, 2505, 2504, 2503, 2502, 2501,
+		2800, 2500, 2507, 2512, 2513, 2506, 2516, 2701, 2702, 2514,
+		2704, 2705, 2706, 2703, 2708, 2709, 2710, 2711, 2712, 2700,
+		2707
 	};
 }
 public class Policy : EClass

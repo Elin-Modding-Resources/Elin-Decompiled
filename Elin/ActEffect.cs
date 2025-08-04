@@ -584,6 +584,11 @@ public class ActEffect : EClass
 				{
 					continue;
 				}
+				if (chara.rarity >= Rarity.Legendary)
+				{
+					j--;
+					continue;
+				}
 				int num6 = -1;
 				num6 = ((!(actRef.n1 == "shadow")) ? (chara.LV * (100 + power / 10) / 100 + power / 30) : (power / 10 + 1));
 				if (chara.LV < num6)

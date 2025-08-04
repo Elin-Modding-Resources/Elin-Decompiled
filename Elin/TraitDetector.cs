@@ -67,14 +67,12 @@ public class TraitDetector : TraitItem
 		}
 		else
 		{
-			EClass.pc.PlaySound("detect_" + ((num <= 1) ? "detected" : ((num < 5) ? "near" : ((num < 15) ? "medium" : ((num < 30) ? "far" : ((num < 50) ? "veryFar" : "superFar"))))));
+			string text = "detect_" + ((num <= 1) ? "detected" : ((num < 5) ? "near" : ((num < 15) ? "medium" : ((num < 30) ? "far" : ((num < 50) ? "veryFar" : "superFar")))));
+			EClass.pc.PlaySound(text);
 			interval = ((num <= 1) ? 1 : ((num < 5) ? 2 : ((num < 15) ? 4 : ((num < 30) ? 7 : 10))));
-			if (EClass.core.config.sound.volumeSFX < 0.1f || EClass.core.config.sound.volumeMaster < 0.1f)
-			{
-				WidgetMainText.ignoreStack = true;
-				Msg.Say("beep".lang());
-				WidgetMainText.ignoreStack = false;
-			}
+			WidgetMainText.ignoreStack = true;
+			Msg.Say((LangGame.Has(text) ? text : "beep").lang());
+			WidgetMainText.ignoreStack = false;
 		}
 		owner.PlayAnime(AnimeID.HitObj);
 	}

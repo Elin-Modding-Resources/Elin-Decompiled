@@ -277,13 +277,24 @@ public class ElementContainer : EClass
 		{
 			return;
 		}
-		if (!chain && a > 0 && Card != null && Card.isChara)
+		if (!chain)
 		{
-			a = a * Card.Chara.GetDaysTogetherBonus() / 100;
+			if (a > 0 && Card != null && Card.isChara)
+			{
+				a = a * Card.Chara.GetDaysTogetherBonus() / 100;
+			}
+			if (element.source.parentFactor > 0f && Card != null && !element.source.aliasParent.IsEmpty())
+			{
+				Element element2 = element.GetParent(Card);
+				if (element2.CanGainExp)
+				{
+					ModExp(element2.id, (int)Math.Max(1f, (float)a * element.source.parentFactor / (float)(100 + Mathf.Max(0, element2.ValueWithoutLink * 5))), chain: true);
+				}
+			}
 		}
-		int value = (element.UsePotential ? element.Potential : 100);
 		if (element.UseExpMod && a >= 0)
 		{
+			int value = (element.UsePotential ? element.Potential : 100);
 			float num = (float)a * (float)Mathf.Clamp(value, 10, 1000) / (float)(100 + Mathf.Max(0, element.ValueWithoutLink) * 25);
 			a = (int)num;
 			if (EClass.rndf(1f) < num % 1f)
@@ -292,14 +303,6 @@ public class ElementContainer : EClass
 			}
 		}
 		element.vExp += a;
-		if (!chain && element.source.parentFactor > 0f && Card != null && !element.source.aliasParent.IsEmpty())
-		{
-			Element element2 = element.GetParent(Card);
-			if (element2.CanGainExp)
-			{
-				ModExp(element2.id, (int)Math.Max(1f, (float)a * element.source.parentFactor / 100f), chain: true);
-			}
-		}
 		if (element.vExp >= element.ExpToNext)
 		{
 			int num2 = element.vExp - element.ExpToNext;

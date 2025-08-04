@@ -4442,13 +4442,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							ele2 = 922;
 						}
 						Say("reflect_thorne", this, origin);
-						origin.DamageHP(Mathf.Clamp(dmg / 20, 1, MaxHP / 20), ele2, Power, AttackSource.Condition);
+						origin.DamageHP(Mathf.Clamp(dmg / 10, 1, MaxHP / (origin.IsPowerful ? 200 : 20)), ele2, Power, AttackSource.Condition, this);
 					}
 					if (HasElement(1223) && num12 <= Evalue(1223))
 					{
 						int ele3 = ((Chara.MainElement == Element.Void) ? 923 : Chara.MainElement.id);
 						Say("reflect_acid", this, origin);
-						origin.DamageHP(Mathf.Clamp(dmg / 20, 1, MaxHP / 20), ele3, Power * 2, AttackSource.Condition);
+						origin.DamageHP(Mathf.Clamp(dmg / 10, 1, MaxHP / (origin.IsPowerful ? 200 : 20)), ele3, Power * 2, AttackSource.Condition, this);
 					}
 				}
 				ProcAbsorb();
@@ -5603,6 +5603,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public bool HasElementNoCopy()
 	{
+		if (HasElement(764))
+		{
+			return true;
+		}
 		if (HasElement(759))
 		{
 			return true;
@@ -6910,18 +6914,16 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			switch (currency)
 			{
 			case CurrencyType.Ecopo:
-			{
-				string text = id;
-				if (!(text == "plat"))
+				switch (id)
 				{
-					if (!(text == "whip_egg"))
-					{
-						break;
-					}
+				case "plat":
+					return 500;
+				case "whip_egg":
 					return 3000;
+				case "helm_chef":
+					return 40000;
 				}
-				return 500;
-			}
+				break;
 			case CurrencyType.Plat:
 			{
 				string text = id;
@@ -6958,6 +6960,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 3;
 				case "wrench_tent_soil":
 					return 3;
+				case "wrench_tent_seabed":
+					return 12;
 				case "wrench_bed":
 					return 3;
 				case "wrench_storage":

@@ -1,10 +1,10 @@
 public class FOOD
 {
+	public const int creativeDish = 764;
+
 	public const int food_god = 758;
 
 	public const int justcooked = 757;
-
-	public const int food_cat = 701;
 
 	public const int food_human = 708;
 
@@ -20,13 +20,15 @@ public class FOOD
 
 	public const int food_poison = 702;
 
+	public const int food_cat = 701;
+
 	public const int food_undead = 709;
 
 	public const int food_CHA = 700;
 
-	public static readonly int[] IDS = new int[12]
+	public static readonly int[] IDS = new int[13]
 	{
-		758, 757, 701, 708, 707, 706, 705, 704, 703, 702,
-		709, 700
+		764, 758, 757, 708, 707, 706, 705, 704, 703, 702,
+		701, 709, 700
 	};
 }

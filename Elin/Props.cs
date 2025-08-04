@@ -218,13 +218,18 @@ public class Props : EClass
 			{
 				FindCat(item);
 			}
-			stack.list.Sort(UIList.SortMode.ByCategory);
-			return stack;
 		}
-		Find(id2);
-		foreach (string item2 in ing.idOther)
+		else
 		{
-			Find(item2);
+			Find(id2);
+			foreach (string item2 in ing.idOther)
+			{
+				Find(item2);
+			}
+		}
+		if (ing.ingType == Recipe.IngType.CreativeFood)
+		{
+			FindAnyFood();
 		}
 		stack.list.Sort(UIList.SortMode.ByCategory);
 		return stack;
@@ -242,9 +247,29 @@ public class Props : EClass
 			{
 				foreach (Card item3 in cardMap.GetOrCreate(id))
 				{
-					if (!(item3.parent is Thing thing) || (thing.c_lockLv == 0 && thing.trait.CanUseContent))
+					if (!(item3.parent is Thing thing2) || (thing2.c_lockLv == 0 && thing2.trait.CanUseContent))
 					{
 						TryAdd(item3.Thing);
+					}
+				}
+			}
+		}
+		void FindAnyFood()
+		{
+			EClass.pc.things.Foreach(delegate(Thing t)
+			{
+				if (!t.isEquipped)
+				{
+					TryAdd(t);
+				}
+			});
+			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
+			{
+				foreach (Card item4 in all)
+				{
+					if (!(item4.parent is Thing thing) || (thing.c_lockLv == 0 && thing.trait.CanUseContent))
+					{
+						TryAdd(item4.Thing);
 					}
 				}
 			}
@@ -261,12 +286,12 @@ public class Props : EClass
 			});
 			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
 			{
-				foreach (Thing thing2 in things)
+				foreach (Thing thing3 in things)
 				{
-					Card obj = thing2.parent as Card;
-					if (obj != null && obj.c_lockLv == 0 && thing2.category.IsChildOf(cat.id) && !thing2.IsExcludeFromCraft(ing))
+					Card obj = thing3.parent as Card;
+					if (obj != null && obj.c_lockLv == 0 && thing3.category.IsChildOf(cat.id) && !thing3.IsExcludeFromCraft(ing))
 					{
-						stack.Add(thing2);
+						stack.Add(thing3);
 					}
 				}
 			}
@@ -274,6 +299,13 @@ public class Props : EClass
 		void TryAdd(Thing t)
 		{
 			if ((tag == null || t.Thing.material.tag.Contains(tag)) && (idMat == -1 || t.material.id == idMat) && !t.IsExcludeFromCraft(ing))
+			{
+				stack.Add(t.Thing);
+			}
+		}
+		void TryAdd(Thing t)
+		{
+			if (t.HasElement(10) && !(t.trait is TraitFoodMeal) && !t.IsExcludeFromCraft(ing) && !stack.list.Contains(t))
 			{
 				stack.Add(t.Thing);
 			}

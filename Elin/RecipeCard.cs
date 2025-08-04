@@ -69,7 +69,15 @@ public class RecipeCard : Recipe
 			return;
 		}
 		base.BuildIngredientList();
-		if (!EClass.core.IsGameStarted || EClass.core.game.isLoading || !isDish || EClass.pc.Evalue(1650) < 2)
+		if (!EClass.core.IsGameStarted || EClass.core.game.isLoading || !isDish)
+		{
+			return;
+		}
+		if (EClass.pc.HasElement(487))
+		{
+			ingredients[0].ingType = IngType.CreativeFood;
+		}
+		if (EClass.pc.Evalue(1650) < 2)
 		{
 			return;
 		}

@@ -1790,6 +1790,7 @@ public class Trait : EClass
 					Add("container_magic", 1, 0).ChangeMaterial("feywood").idSkin = 3;
 					Add("wrench_tent_elec", 1, 0);
 					Add("wrench_tent_soil", 1, 0);
+					Add("wrench_tent_seabed", 1, 0);
 					Add("wrench_bed", 1, 0).SetNum(20);
 					Add("wrench_storage", 1, 0).SetNum(10);
 					Add("wrench_fridge", 1, 0).SetNum(1);
@@ -1858,6 +1859,7 @@ public class Trait : EClass
 				case ShopType.Ecopo:
 					Add("ecomark", 5, 0);
 					Add("whip_egg", 1, 0);
+					Add("helm_chef", 1, 0);
 					Add("1165", 1, 0);
 					Add("plat", 100, 0);
 					AddThing(ThingGen.CreateScroll(9160).SetNum(5));

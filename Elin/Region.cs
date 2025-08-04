@@ -10,6 +10,9 @@ public class Region : Zone
 	[JsonProperty]
 	public int dateCheckSites;
 
+	[JsonProperty]
+	public bool beachFix;
+
 	public override bool WillAutoSave => false;
 
 	public override ActionMode DefaultActionMode => ActionMode.Region;
@@ -47,6 +50,25 @@ public class Region : Zone
 				elomap.SetZone(zone.x, zone.y, zone);
 			}
 		});
+		if (!beachFix)
+		{
+			Cell[,] cells = EClass._map.cells;
+			foreach (Cell cell in cells)
+			{
+				if (cell.blocked)
+				{
+					int gx = cell.x + EClass.scene.elomap.minX;
+					int gy = cell.z + EClass.scene.elomap.minY;
+					EloMap.TileInfo tileInfo = EClass.scene.elomapActor.elomap.GetTileInfo(gx, gy);
+					if (tileInfo != null && tileInfo.source != null && tileInfo.source.idBiome.IsEmpty("Plain") == "Sand")
+					{
+						cell.blocked = false;
+						cell.impassable = false;
+					}
+				}
+			}
+			beachFix = true;
+		}
 		CheckRandomSites();
 	}
 

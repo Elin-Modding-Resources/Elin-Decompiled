@@ -574,7 +574,7 @@ public class TaskHarvest : BaseTaskHarvest
 		{
 			return;
 		}
-		if (target.isCopy)
+		if (target.isCopy || target.HasElement(764))
 		{
 			text = "ash3";
 		}

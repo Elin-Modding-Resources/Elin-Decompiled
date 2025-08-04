@@ -12,6 +12,12 @@ public class TraitWrench : Trait
 		}
 		switch (ID)
 		{
+		case "tent_seabed":
+			if (t.trait is TraitTent && (t.trait as TraitTent).zone != null)
+			{
+				return !(t.trait as TraitTent).zone.IsUnderwater;
+			}
+			return false;
 		case "tent_soil":
 		{
 			if (!(t.trait is TraitTent))
@@ -56,6 +62,9 @@ public class TraitWrench : Trait
 	{
 		switch (ID)
 		{
+		case "tent_seabed":
+			(t.trait as TraitTent).zone.elements.ModBase(3606, 1);
+			break;
 		case "tent_elec":
 			(t.trait as TraitTent).zone.elements.ModBase(2201, 2);
 			break;

@@ -218,7 +218,7 @@ public class TraitBaseSpellbook : TraitScroll
 				c.AddCondition<ConFaint>();
 				if (!c.IsPC && c.faith != religion)
 				{
-					if (!c.source.faith.IsEmpty())
+					if (!c.source.faith.IsEmpty() && c.source.faith == c.faith.id)
 					{
 						c.Say("faith_stands", c);
 						break;

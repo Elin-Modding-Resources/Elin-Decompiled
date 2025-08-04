@@ -833,7 +833,7 @@ public class Element : EClass
 				text = "isProc".lang(Name);
 				flag3 = false;
 			}
-			else if (categorySub == "resist")
+			else if (categorySub == "resist" || this is Feat)
 			{
 				text = ("isResist" + (flag3 ? "Neg" : "")).lang(Name);
 			}
