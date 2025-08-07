@@ -69,7 +69,7 @@ public class CharaRenderer : CardRenderer
 			SpriteReplacer spriteReplacer = SpriteReplacer.dictSkins.TryGetValue(owner.c_idSpriteReplacer);
 			if (spriteReplacer != null)
 			{
-				data = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom");
+				data = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom_" + ((spriteReplacer.data.GetSprite().texture.height <= 128) ? "128" : "256"));
 				owner.spriteReplacer = spriteReplacer;
 			}
 		}

@@ -1860,6 +1860,7 @@ public class Trait : EClass
 					Add("ecomark", 5, 0);
 					Add("whip_egg", 1, 0);
 					Add("helm_chef", 1, 0);
+					Add("hammer_strip", 1, 0);
 					Add("1165", 1, 0);
 					Add("plat", 100, 0);
 					AddThing(ThingGen.CreateScroll(9160).SetNum(5));

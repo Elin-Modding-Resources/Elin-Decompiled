@@ -298,7 +298,7 @@ public class Faction : EClass
 
 	public bool IsWearingPanty(Chara c)
 	{
-		if ((!c.IsUnique || c.bio.gender != 2) && (c.race.IsHuman || c.race.IsFairy) && !(c.trait is TraitMerchant))
+		if ((!c.IsUnique || c.bio.gender != 2) && (c.IsHuman || c.IsFairy) && !(c.trait is TraitMerchant))
 		{
 			return true;
 		}

@@ -71,7 +71,7 @@ public class TaskDig : BaseTaskHarvest
 			owner.PlaySound(row.GetSoundImpact());
 			row.PlayHitEffect(pos);
 			row.AddBlood(pos);
-			owner.elements.ModExp(230, 5);
+			owner.elements.ModExp(230, 5f);
 			owner.renderer.NextFrame();
 			if (EClass._zone.IsCrime(owner, this))
 			{

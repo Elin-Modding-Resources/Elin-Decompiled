@@ -65,7 +65,7 @@ public class TaskPlow : TaskDesignation
 			{
 				pos.SetFloor(pos.matFloor.id, 4);
 			}
-			owner.elements.ModExp(286, 30);
+			owner.elements.ModExp(286, 30f);
 			if (owner.IsPC)
 			{
 				EClass.player.stats.plow++;

@@ -147,7 +147,7 @@ public class Policy : EClass
 
 	public void OnAdvanceHour(VirtualDate date)
 	{
-		EClass._zone.elements.ModExp(id, 10);
+		EClass._zone.elements.ModExp(id, 10f);
 	}
 
 	public void RefreshEffect(UINote note = null)

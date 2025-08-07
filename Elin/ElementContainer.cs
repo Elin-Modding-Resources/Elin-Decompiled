@@ -266,9 +266,9 @@ public class ElementContainer : EClass
 		ModTempPotential(ele, a);
 	}
 
-	public void ModExp(int ele, int a, bool chain = false)
+	public void ModExp(int ele, float a, bool chain = false)
 	{
-		if ((Card != null && Card.isChara && Card.Chara.isDead) || a == 0)
+		if ((Card != null && Card.isChara && Card.Chara.isDead) || a == 0f)
 		{
 			return;
 		}
@@ -277,39 +277,37 @@ public class ElementContainer : EClass
 		{
 			return;
 		}
-		if (!chain)
+		if (a > 0f)
 		{
-			if (a > 0 && Card != null && Card.isChara)
+			if (!chain && Card != null && Card.isChara)
 			{
-				a = a * Card.Chara.GetDaysTogetherBonus() / 100;
+				a = a * (float)Card.Chara.GetDaysTogetherBonus() / 100f;
 			}
-			if (element.source.parentFactor > 0f && Card != null && !element.source.aliasParent.IsEmpty())
+			if (element.UseExpMod)
+			{
+				a = a * (float)Mathf.Clamp(element.UsePotential ? element.Potential : 100, 10, 1000) / (float)(100 + Mathf.Max(0, element.ValueWithoutLink) * 25);
+				if (EClass.rndf(1f) < a % 1f + 0.1f)
+				{
+					a += 1f;
+				}
+			}
+			if (!chain && element.source.parentFactor > 0f && Card != null && !element.source.aliasParent.IsEmpty())
 			{
 				Element element2 = element.GetParent(Card);
 				if (element2.CanGainExp)
 				{
-					ModExp(element2.id, (int)Math.Max(1f, (float)a * element.source.parentFactor / (float)(100 + Mathf.Max(0, element2.ValueWithoutLink * 5))), chain: true);
+					ModExp(element2.id, Mathf.Clamp(a * element.source.parentFactor / 100f, 1f, 1000f), chain: true);
 				}
 			}
 		}
-		if (element.UseExpMod && a >= 0)
-		{
-			int value = (element.UsePotential ? element.Potential : 100);
-			float num = (float)a * (float)Mathf.Clamp(value, 10, 1000) / (float)(100 + Mathf.Max(0, element.ValueWithoutLink) * 25);
-			a = (int)num;
-			if (EClass.rndf(1f) < num % 1f)
-			{
-				a++;
-			}
-		}
-		element.vExp += a;
+		element.vExp += (int)a;
 		if (element.vExp >= element.ExpToNext)
 		{
-			int num2 = element.vExp - element.ExpToNext;
+			int num = element.vExp - element.ExpToNext;
 			int vBase = element.vBase;
 			ModBase(ele, 1);
 			OnLevelUp(element, vBase);
-			element.vExp = Mathf.Clamp(num2 / 2, 0, element.ExpToNext / 2);
+			element.vExp = Mathf.Clamp(num / 2, 0, element.ExpToNext / 2);
 			if (element.vTempPotential > 0)
 			{
 				element.vTempPotential -= element.vTempPotential / 4 + EClass.rnd(5) + 5;

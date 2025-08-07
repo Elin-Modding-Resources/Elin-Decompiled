@@ -79,9 +79,9 @@ public class TraitAltar : Trait
 		{
 			return true;
 		}
-		if (base.CanOffer(c) && (EClass.pc.faith.GetOfferingValue(c as Thing) > 0 || c.id == "water"))
+		if (base.CanOffer(c) && (EClass.pc.faith.GetOfferingValue(c as Thing) > 0 || c.id == "water") && !c.isCopy)
 		{
-			return !c.isCopy;
+			return !c.HasElement(764);
 		}
 		return false;
 	}

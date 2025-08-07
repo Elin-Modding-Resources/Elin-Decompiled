@@ -8,17 +8,19 @@ public class ENC
 
 	public const int r_DV = 650;
 
+	public const int r_mana = 641;
+
 	public const int mod_frustration = 624;
+
+	public const int mod_flurry = 621;
 
 	public const int mod_cleave = 622;
 
 	public const int mod_feint = 623;
 
-	public const int r_life = 640;
-
 	public const int noDamage = 654;
 
-	public const int r_mana = 641;
+	public const int r_life = 640;
 
 	public const int onlyPet = 655;
 
@@ -40,7 +42,7 @@ public class ENC
 
 	public const int convertFire = 850;
 
-	public const int mod_flurry = 621;
+	public const int mod_chaser = 620;
 
 	public const int convertImpact = 865;
 
@@ -48,11 +50,11 @@ public class ENC
 
 	public const int permaCurse = 656;
 
-	public const int mod_chaser = 620;
+	public const int mod_talisman = 609;
 
 	public const int negateFear = 423;
 
-	public const int mod_splash = 608;
+	public const int mod_scatter = 607;
 
 	public const int negateShockwave = 430;
 
@@ -94,7 +96,7 @@ public class ENC
 
 	public const int corruption = 409;
 
-	public const int mod_talisman = 609;
+	public const int mod_splash = 608;
 
 	public const int travelSpeed = 407;
 
@@ -134,7 +136,9 @@ public class ENC
 
 	public const int revealFaith = 481;
 
-	public const int mod_ammo = 600;
+	public const int deathagony = 488;
+
+	public const int mod_rapid = 602;
 
 	public const int mod_ammo_knockback = 603;
 
@@ -144,15 +148,13 @@ public class ENC
 
 	public const int mod_drill = 606;
 
-	public const int mod_scatter = 607;
-
 	public const int sustain_DEX = 442;
 
-	public const int mod_reload = 601;
+	public const int mod_ammo = 600;
 
 	public const int strongStomach = 480;
 
-	public const int mod_rapid = 602;
+	public const int mod_reload = 601;
 
 	public const int bane_fish = 467;
 
@@ -180,16 +182,17 @@ public class ENC
 
 	public const int sustain_LER = 444;
 
-	public static readonly int[] IDS = new int[90]
+	public static readonly int[] IDS = new int[91]
 	{
-		653, 652, 651, 650, 624, 622, 623, 640, 654, 641,
-		655, 851, 660, 661, 662, 663, 664, 665, 666, 850,
-		621, 865, 852, 656, 620, 423, 608, 430, 429, 428,
-		427, 426, 425, 424, 422, 421, 420, 419, 418, 417,
-		416, 415, 414, 412, 411, 410, 409, 609, 407, 406,
-		405, 404, 403, 402, 401, 400, 440, 441, 408, 443,
-		482, 483, 484, 485, 486, 487, 481, 600, 603, 604,
-		605, 606, 607, 442, 601, 480, 602, 467, 468, 445,
-		446, 447, 461, 462, 460, 463, 464, 465, 466, 444
+		653, 652, 651, 650, 641, 624, 621, 622, 623, 654,
+		640, 655, 851, 660, 661, 662, 663, 664, 665, 666,
+		850, 620, 865, 852, 656, 609, 423, 607, 430, 429,
+		428, 427, 426, 425, 424, 422, 421, 420, 419, 418,
+		417, 416, 415, 414, 412, 411, 410, 409, 608, 407,
+		406, 405, 404, 403, 402, 401, 400, 440, 441, 408,
+		443, 482, 483, 484, 485, 486, 487, 481, 488, 602,
+		603, 604, 605, 606, 442, 600, 480, 601, 467, 468,
+		445, 446, 447, 461, 462, 460, 463, 464, 465, 466,
+		444
 	};
 }

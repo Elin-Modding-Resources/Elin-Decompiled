@@ -82,7 +82,7 @@ public class TaskMine : BaseTaskHarvest
 			pos.matBlock.PlayHitEffect(pos);
 			pos.matBlock.AddBlood(pos);
 			owner.renderer.NextFrame();
-			owner.elements.ModExp(220, 5);
+			owner.elements.ModExp(220, 5f);
 			if (EClass._zone.IsCrime(owner, this))
 			{
 				owner.pos.TryWitnessCrime(owner);

@@ -441,22 +441,27 @@ public class Core : BaseCore
 						}
 						foreach (CardRow row in sources.cards.rows)
 						{
-							if (row.replacer.hasChacked && row.replacer.data != null)
+							if (row.replacer.isChecked && row.replacer.data != null)
 							{
 								row.replacer.data.GetSprite();
 							}
 						}
+						foreach (SpriteReplacer value in SpriteReplacer.dictSkins.Values)
+						{
+							value.data?.LoadPref();
+						}
+						WidgetRoster.SetDirty();
 					}
 				});
 			});
 		}
 		if (IsGameStarted && debug.enable)
 		{
-			foreach (PCC.Part value in pccs.allParts.Values)
+			foreach (PCC.Part value2 in pccs.allParts.Values)
 			{
-				foreach (ModItem<Texture2D> value2 in value.modTextures.Values)
+				foreach (ModItem<Texture2D> value3 in value2.modTextures.Values)
 				{
-					value2.ClearCache();
+					value3.ClearCache();
 				}
 			}
 			CharaActorPCC[] array = UnityEngine.Object.FindObjectsOfType<CharaActorPCC>();

@@ -37,5 +37,15 @@ public enum CTAG
 	noRandomEnc,
 	noMix,
 	bigFish,
-	noSkinRecipe
+	noSkinRecipe,
+	animal,
+	human,
+	undead,
+	machine,
+	horror,
+	fish,
+	fairy,
+	god,
+	dragon,
+	plant
 }

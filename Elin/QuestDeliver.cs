@@ -12,7 +12,7 @@ public class QuestDeliver : QuestDestZone
 
 	private static List<SourceCategory.Row> _listDeliver = new List<SourceCategory.Row>();
 
-	public virtual bool ConsumeGoods => true;
+	public virtual bool ConsumeGoods => false;
 
 	public SourceThing.Row sourceThing => EClass.sources.things.map[idThing.IsEmpty("generator_snowman")];
 
@@ -221,7 +221,18 @@ public class QuestDeliver : QuestDestZone
 			}
 			else
 			{
-				c.Pick(thing);
+				thing = c.Pick(thing);
+				if (c.CanEat(thing))
+				{
+					c.SetAIImmediate(new AI_Eat
+					{
+						target = thing
+					});
+				}
+				else
+				{
+					c.TryUse(thing);
+				}
 			}
 			EClass.game.quests.Complete(this);
 			c.quest = null;

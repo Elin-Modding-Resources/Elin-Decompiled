@@ -210,7 +210,7 @@ public class Element : EClass
 					AddFix(100, EClass.sources.elements.map[663].GetName());
 				}
 			}
-			if (!c.race.IsMachine && !(c.id == "android"))
+			if (!c.IsMachine && !(c.id == "android"))
 			{
 				return;
 			}

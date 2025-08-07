@@ -82,7 +82,7 @@ public class TaskCraft : Task
 	{
 		Element orCreateElement = owner.elements.GetOrCreateElement(recipe.source.GetReqSkill());
 		owner.PlaySound(recipe.GetMainMaterial().GetSoundCraft(recipe.renderRow));
-		owner.elements.ModExp(orCreateElement.id, 20);
+		owner.elements.ModExp(orCreateElement.id, 20f);
 	}
 
 	public override IEnumerable<Status> Run()
@@ -155,7 +155,7 @@ public class TaskCraft : Task
 				return;
 			}
 			recipe.Craft(blessed, i == 0);
-			owner.elements.ModExp(orCreateElement.id, 200);
+			owner.elements.ModExp(orCreateElement.id, 200f);
 			resources.Clear();
 		}
 		EClass.Sound.Play("craft");

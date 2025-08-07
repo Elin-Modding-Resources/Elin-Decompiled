@@ -113,11 +113,11 @@ public class AI_Fuck : AIAct
 			case FuckType.tame:
 			{
 				int num = 100;
-				if (!tc.race.IsAnimal)
+				if (!tc.IsAnimal)
 				{
 					num += 50;
 				}
-				if (tc.race.IsHuman)
+				if (tc.IsHuman)
 				{
 					num += 50;
 				}
@@ -152,15 +152,15 @@ public class AI_Fuck : AIAct
 						num3 = -5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num2 / 10, -30, 0) : 0);
 						fails++;
 					}
-					int a = 20;
+					int num4 = 20;
 					if (tc.IsPCFactionOrMinion && tc.affinity.CurrentStage >= Affinity.Stage.Love)
 					{
 						num3 = ((EClass.rnd(3) == 0) ? 4 : 0);
-						a = 10;
+						num4 = 10;
 					}
 					totalAffinity += num3;
 					tc.ModAffinity(EClass.pc, num3, show: true, showOnlyEmo: true);
-					cc.elements.ModExp(237, a);
+					cc.elements.ModExp(237, num4);
 					if (EClass.rnd(4) == 0)
 					{
 						cc.stamina.Mod(-1);

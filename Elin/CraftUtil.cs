@@ -267,7 +267,7 @@ public class CraftUtil : EClass
 				product.elements.SetTo(10, 1);
 			}
 		}
-		if (creative)
+		if (creative && isFood)
 		{
 			product.elements.SetBase(764, 1);
 		}

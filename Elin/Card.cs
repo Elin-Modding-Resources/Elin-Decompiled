@@ -24,6 +24,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public const int MaxWeight = 10000000;
 
+	public const int SocketDiv = 1000;
+
 	[JsonProperty(PropertyName = "A")]
 	public int[] _ints = new int[30];
 
@@ -2616,7 +2618,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		_ints[0] = _bits1.ToInt();
 		_ints[2] = _bits2.ToInt();
 		_placeState = placeState;
-		version = 1;
+		version = 2;
 		OnSerializing();
 	}
 
@@ -2627,6 +2629,17 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	[OnDeserialized]
 	private void _OnDeserialized(StreamingContext context)
 	{
+		if (version < 2)
+		{
+			if (sockets != null)
+			{
+				for (int i = 0; i < sockets.Count; i++)
+				{
+					sockets[i] = sockets[i] / 100 * 1000 + sockets[i] % 100;
+				}
+			}
+			version = 2;
+		}
 		_bits1.SetInt(_ints[0]);
 		_bits2.SetInt(_ints[2]);
 		placeState = _placeState;
@@ -3422,11 +3435,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			if (sockets[i] == 0)
 			{
-				if (lv >= 100)
+				if (lv >= 1000)
 				{
-					lv = 99;
+					lv = 999;
 				}
-				sockets[i] = id * 100 + lv;
+				sockets[i] = id * 1000 + lv;
 				elements.ModBase(id, lv);
 				mod?.Destroy();
 				break;
@@ -3442,8 +3455,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (num != 0)
 			{
 				Thing thing = ThingGen.Create(isCopy ? "ash3" : "mod_ranged");
-				int ele = num / 100;
-				int num2 = num % 100;
+				int ele = num / 1000;
+				int num2 = num % 1000;
 				elements.ModBase(ele, -num2);
 				if (!isCopy)
 				{
@@ -4852,7 +4865,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		bool isUserZone = EClass._zone.IsUserZone;
 		bool flag = EClass._zone is Zone_Music;
 		List<Card> list = new List<Card>();
-		SourceRace.Row race = Chara.race;
 		if (!IsPCFaction && !isUserZone && sourceCard.idActor.IsEmpty())
 		{
 			int i2 = 500;
@@ -4880,7 +4892,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		bool flag2 = Chara.race.corpse[1].ToInt() > EClass.rnd(1500) || (Chara.IsPowerful && !IsPCFaction) || EClass.debug.godFood;
 		int num = 1;
-		if (!IsMinion && Chara.race.IsAnimal && EClass.rnd(EClass._zone.IsPCFaction ? 3 : 5) == 0)
+		if (!IsMinion && Chara.IsAnimal && EClass.rnd(EClass._zone.IsPCFaction ? 3 : 5) == 0)
 		{
 			flag2 = true;
 		}
@@ -4894,11 +4906,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (!flag2 && Chara.race.corpse[1].ToInt() > EClass.rnd(150000 / (100 + (int)Mathf.Sqrt(origin.Evalue(290)) * 5)))
 			{
 				flag2 = true;
-				origin.elements.ModExp(290, 100);
+				origin.elements.ModExp(290, 100f);
 			}
 			else
 			{
-				origin.elements.ModExp(290, 5);
+				origin.elements.ModExp(290, 5f);
 			}
 		}
 		if (id == "littleOne" && IsPCFactionOrMinion)
@@ -4948,7 +4960,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					list.Add(ThingGen.Create(array[0]).SetNum((num4 < 1000) ? 1 : (num4 / 1000 + ((EClass.rnd(1000) > num4 % 1000) ? 1 : 0))));
 				}
 			}
-			if (race.IsMachine)
+			if (Chara.IsMachine)
 			{
 				if (chance(20))
 				{
@@ -4961,7 +4973,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			else
 			{
-				if (race.IsAnimal)
+				if (Chara.IsAnimal)
 				{
 					if (chance(15))
 					{
@@ -5262,11 +5274,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (flag2)
 		{
-			if (race.IsHuman)
+			if (c.Chara.IsHuman)
 			{
 				elements.SetBase(708, 1);
 			}
-			if (race.IsUndead)
+			if (c.Chara.IsUndead)
 			{
 				elements.SetBase(709, 1);
 			}
@@ -5292,7 +5304,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			Tuple<int, int> tuple = list[i];
 			elements.SetBase(tuple.Item1, tuple.Item2 * tuple.Item2 / 4);
 		}
-		if (race.IsUndead)
+		if (c.Chara.IsUndead)
 		{
 			elements.ModBase(73, -20);
 		}
@@ -6920,6 +6932,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 500;
 				case "whip_egg":
 					return 3000;
+				case "hammer_strip":
+					return 5000;
 				case "helm_chef":
 					return 40000;
 				}

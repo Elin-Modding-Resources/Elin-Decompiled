@@ -1,4 +1,8 @@
 using System;
+using System.IO;
+using System.Text;
+using IniParser;
+using IniParser.Model;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -338,5 +342,51 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 		{
 			Array.Resize(ref ints, 25);
 		}
+	}
+
+	public void WriteIni(string path)
+	{
+		FileIniDataParser fileIniDataParser = new FileIniDataParser();
+		if (File.Exists(path))
+		{
+			EClass.ui.Say("Ini file already exists.");
+			return;
+		}
+		File.CreateText(path).Close();
+		IniData iniData = fileIniDataParser.ReadFile(path, Encoding.UTF8);
+		iniData.Global["x"] = ints[4].ToString() ?? "";
+		iniData.Global["y"] = ints[5].ToString() ?? "";
+		iniData.Global["z"] = ints[2].ToString() ?? "";
+		iniData.Global["pivotX"] = pivotX.ToString() ?? "";
+		iniData.Global["pivotY"] = pivotY.ToString() ?? "";
+		iniData.Global["shadow"] = shadow.ToString() ?? "";
+		iniData.Global["shadowX"] = shadowX.ToString() ?? "";
+		iniData.Global["shadowY"] = shadowY.ToString() ?? "";
+		iniData.Global["height"] = ints[3].ToString() ?? "";
+		iniData.Global["scaleIcon"] = scaleIcon.ToString() ?? "";
+		iniData.Global["liquidMod"] = liquidMod.ToString() ?? "";
+		iniData.Global["hatY"] = ints[23].ToString() ?? "";
+		iniData.Global["flags"] = ints[1].ToString() ?? "";
+		fileIniDataParser.WriteFile(path, iniData);
+	}
+
+	public static SourcePref ReadFromIni(string path)
+	{
+		SourcePref sourcePref = new SourcePref();
+		IniData iniData = new FileIniDataParser().ReadFile(path, Encoding.UTF8);
+		sourcePref.ints[4] = iniData.Global["x"].ToInt();
+		sourcePref.ints[5] = iniData.Global["y"].ToInt();
+		sourcePref.ints[2] = iniData.Global["z"].ToInt();
+		sourcePref.pivotX = iniData.Global["pivotX"].ToInt();
+		sourcePref.pivotY = iniData.Global["pivotY"].ToInt();
+		sourcePref.shadow = iniData.Global["shadow"].ToInt();
+		sourcePref.shadowX = iniData.Global["shadowX"].ToInt();
+		sourcePref.shadowY = iniData.Global["shadowY"].ToInt();
+		sourcePref.ints[3] = iniData.Global["height"].ToInt();
+		sourcePref.scaleIcon = iniData.Global["scaleIcon"].ToInt();
+		sourcePref.liquidMod = iniData.Global["liquidMod"].ToInt();
+		sourcePref.ints[23] = iniData.Global["hatY"].ToInt();
+		sourcePref.ints[1] = iniData.Global["flags"].ToInt();
+		return sourcePref;
 	}
 }

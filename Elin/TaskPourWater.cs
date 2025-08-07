@@ -68,7 +68,7 @@ public class TaskPourWater : TaskDesignation
 			{
 				pot.owner.Dye(EClass.sources.materials.alias["void"]);
 			}
-			owner.elements.ModExp(286, 5);
+			owner.elements.ModExp(286, 5f);
 			if (EClass.rnd(3) == 0)
 			{
 				owner.stamina.Mod(-1);

@@ -74,7 +74,7 @@ public class TaskDrawWater : TaskDesignation
 				break;
 			}
 			pot.owner.ModCharge(1);
-			owner.elements.ModExp(286, 5);
+			owner.elements.ModExp(286, 5f);
 			if (EClass.rnd(3) == 0)
 			{
 				owner.stamina.Mod(-1);

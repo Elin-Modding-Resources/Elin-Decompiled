@@ -2468,7 +2468,7 @@ public class Map : MapBounds, IPathfindGrid
 		int num = 0;
 		foreach (Chara chara in charas)
 		{
-			if (!chara.IsPCFaction && chara.race.IsAnimal)
+			if (!chara.IsPCFaction && chara.IsAnimal)
 			{
 				num++;
 			}

@@ -179,7 +179,7 @@ public class FoodEffect : EClass
 					}
 					c.Say("little_eat", c);
 					c.PlaySound("ding_potential");
-					c.elements.ModExp(306, -1000);
+					c.elements.ModExp(306, -1000f);
 					c.SetInt(117, int2 + 1);
 					break;
 				}

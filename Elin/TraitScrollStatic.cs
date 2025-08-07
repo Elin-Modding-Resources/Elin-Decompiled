@@ -51,6 +51,6 @@ public class TraitScrollStatic : TraitScroll
 			n1 = N1,
 			refThing = owner.Thing
 		});
-		c.elements.ModExp(285, 50);
+		c.elements.ModExp(285, 50f);
 	}
 }

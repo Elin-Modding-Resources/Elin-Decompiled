@@ -105,7 +105,7 @@ public class AI_Slaughter : AI_TargetCard
 				}
 				if (owner != null)
 				{
-					owner.elements.ModExp(290, 200);
+					owner.elements.ModExp(290, 200f);
 				}
 				if (!EClass.pc.isDead)
 				{

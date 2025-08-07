@@ -484,17 +484,16 @@ public class AttackProcess : EClass
 		int bane;
 		if (TC?.Chara != null)
 		{
-			SourceRace.Row race = TC.Chara.race;
 			bane = 0;
 			AddBane(valid: true, 468, 50);
-			AddBane(race.IsUndead, 461, 100);
-			AddBane(race.IsAnimal, 463, 100);
-			AddBane(race.IsHuman, 464, 100);
-			AddBane(race.IsDragon, 460, 100);
-			AddBane(race.IsGod, 466, 100);
-			AddBane(race.IsMachine, 465, 100);
-			AddBane(race.IsFish, 467, 100);
-			AddBane(race.IsFairy, 462, 100);
+			AddBane(TC.Chara.IsUndead, 461, 100);
+			AddBane(TC.Chara.IsAnimal, 463, 100);
+			AddBane(TC.Chara.IsHuman, 464, 100);
+			AddBane(TC.Chara.IsDragon, 460, 100);
+			AddBane(TC.Chara.IsGod, 466, 100);
+			AddBane(TC.Chara.IsMachine, 465, 100);
+			AddBane(TC.Chara.IsFish, 467, 100);
+			AddBane(TC.Chara.IsFairy, 462, 100);
 			if (bane != 0)
 			{
 				num = num * (100 + bane * 3) / 100;

@@ -436,18 +436,18 @@ public class Thing : Card
 			for (int i = 0; i < sockets.Count; i++)
 			{
 				int num2 = sockets[i];
-				int num3 = num2 / 100;
+				int num3 = num2 / 1000;
 				if (num3 == 67 && dmgSet)
 				{
-					elements.ModBase(67, num2 % 100);
+					elements.ModBase(67, num2 % 1000);
 				}
 				if (num3 == 66 && hitSet)
 				{
-					elements.ModBase(66, num2 % 100);
+					elements.ModBase(66, num2 % 1000);
 				}
 				if (num3 == 65 && pvSet)
 				{
-					elements.ModBase(65, num2 % 100);
+					elements.ModBase(65, num2 % 1000);
 				}
 			}
 		}
@@ -1242,7 +1242,7 @@ public class Thing : Card
 			{
 				foreach (int socket in sockets)
 				{
-					AddText((socket == 0) ? "emptySocket".lang() : "socket".lang(EClass.sources.elements.map[socket / 100].GetName(), (socket % 100).ToString() ?? ""), FontColor.Gray);
+					AddText((socket == 0) ? "emptySocket".lang() : "socket".lang(EClass.sources.elements.map[socket / 1000].GetName(), (socket % 1000).ToString() ?? ""), FontColor.Gray);
 				}
 			}
 		}

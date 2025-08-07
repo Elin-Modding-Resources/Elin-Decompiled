@@ -785,7 +785,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (spriteReplacer != null)
 			{
-				return EClass.core.refs.prefs.replacer1;
+				return spriteReplacer.data?.pref ?? EClass.core.refs.prefs.replacer1;
 			}
 			if (base.idSkin > 0)
 			{
@@ -859,6 +859,126 @@ public class Chara : Card, IPathfindWalker
 
 	public bool IsInCombat => ai is GoalCombat;
 
+	public bool IsAnimal
+	{
+		get
+		{
+			if (!race.IsAnimal)
+			{
+				return HasTag(CTAG.animal);
+			}
+			return true;
+		}
+	}
+
+	public bool IsHuman
+	{
+		get
+		{
+			if (!race.IsHuman)
+			{
+				return HasTag(CTAG.human);
+			}
+			return true;
+		}
+	}
+
+	public bool IsUndead
+	{
+		get
+		{
+			if (!race.IsUndead)
+			{
+				return HasTag(CTAG.undead);
+			}
+			return true;
+		}
+	}
+
+	public bool IsMachine
+	{
+		get
+		{
+			if (!race.IsMachine)
+			{
+				return HasTag(CTAG.machine);
+			}
+			return true;
+		}
+	}
+
+	public bool IsHorror
+	{
+		get
+		{
+			if (!race.IsHorror)
+			{
+				return HasTag(CTAG.horror);
+			}
+			return true;
+		}
+	}
+
+	public bool IsFish
+	{
+		get
+		{
+			if (!race.IsFish)
+			{
+				return HasTag(CTAG.fish);
+			}
+			return true;
+		}
+	}
+
+	public bool IsFairy
+	{
+		get
+		{
+			if (!race.IsFairy)
+			{
+				return HasTag(CTAG.fairy);
+			}
+			return true;
+		}
+	}
+
+	public bool IsGod
+	{
+		get
+		{
+			if (!race.IsGod)
+			{
+				return HasTag(CTAG.god);
+			}
+			return true;
+		}
+	}
+
+	public bool IsDragon
+	{
+		get
+		{
+			if (!race.IsDragon)
+			{
+				return HasTag(CTAG.dragon);
+			}
+			return true;
+		}
+	}
+
+	public bool IsPlant
+	{
+		get
+		{
+			if (!race.IsPlant)
+			{
+				return HasTag(CTAG.plant);
+			}
+			return true;
+		}
+	}
+
 	public int DestDist => tactics.DestDist;
 
 	public bool HasNoGoal => ai.IsNoGoal;
@@ -867,15 +987,13 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
-			if (!race.IsHuman && !race.IsFairy && !race.IsGod)
+			if (!IsHuman && !IsFairy && !IsGod)
 			{
 				return race.id == "mutant";
 			}
 			return true;
 		}
 	}
-
-	public bool IsHuman => race.tag.Contains("human");
 
 	public bool IsHumanSpeak
 	{
@@ -3648,12 +3766,12 @@ public class Chara : Card, IPathfindWalker
 			if (EClass.rnd(25) == 0 && base.hp < MaxHP)
 			{
 				HealHP(EClass.rnd(Evalue(300) / 3 + 1) + 1);
-				elements.ModExp(300, 8);
+				elements.ModExp(300, 8f);
 			}
 			if (EClass.rnd(8) == 0 && mana.value < mana.max)
 			{
 				mana.Mod(EClass.rnd(Evalue(301) / 2 + 1) + 1);
-				elements.ModExp(301, 8);
+				elements.ModExp(301, 8f);
 			}
 			if (EClass.rnd(20) == 0 && !IsPC && stamina.value < stamina.max)
 			{
@@ -4869,7 +4987,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (EClass.rnd(5) == 0 && value.IsMainAttribute)
 			{
-				EClass.pc.elements.ModExp(value.id, -500);
+				EClass.pc.elements.ModExp(value.id, -500f);
 			}
 		}
 	}
@@ -5044,7 +5162,7 @@ public class Chara : Card, IPathfindWalker
 				EClass.player.stats.allyDeath++;
 			}
 		}
-		if (id == "mandrake")
+		if (id == "mandrake" || HasElement(488))
 		{
 			Say("a_scream", this);
 			ActEffect.ProcAt(EffectId.Scream, base.LV * 3 + 200, BlessedState.Normal, this, this, pos, isNeg: true);
@@ -7772,10 +7890,10 @@ public class Chara : Card, IPathfindWalker
 			{
 				Msg.Say("affinityNone", c, this);
 				t.Destroy();
-				elements.ModExp(291, 10);
+				elements.ModExp(291, 10f);
 				return;
 			}
-			elements.ModExp(291, 50);
+			elements.ModExp(291, 50f);
 		}
 		if (t.id == "statue_weird")
 		{

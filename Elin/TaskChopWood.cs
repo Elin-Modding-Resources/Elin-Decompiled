@@ -68,7 +68,7 @@ public class TaskChopWood : TaskDesignation
 			Thing thing = ThingGen.Create("plank", material.id).SetNum(1 + EClass.rnd(2));
 			CraftUtil.MixIngredients(thing, new List<Thing> { log }, CraftUtil.MixType.General, 999);
 			log.ModNum(-1);
-			owner.elements.ModExp(225, 30);
+			owner.elements.ModExp(225, 30f);
 			owner.stamina.Mod(-1);
 			EClass._map.TrySmoothPick(pos, thing, EClass.pc);
 		};

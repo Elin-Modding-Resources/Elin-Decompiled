@@ -73,7 +73,7 @@ public class RecipeCard : Recipe
 		{
 			return;
 		}
-		if (EClass.pc.HasElement(487))
+		if (EClass.pc.HasElement(487) && !EClass.scene.actionMode.IsBuildMode)
 		{
 			ingredients[0].ingType = IngType.CreativeFood;
 		}

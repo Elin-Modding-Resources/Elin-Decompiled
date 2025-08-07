@@ -320,7 +320,7 @@ public class AI_PlayMusic : AIAct
 										item2.Say("musicBad", item2, owner);
 									}
 									item2.ShowEmo(Emo.sad);
-									owner.elements.ModExp(241, 10);
+									owner.elements.ModExp(241, 10f);
 									if (EClass.rnd(5) == 0)
 									{
 										ThrowReward(item2, punish: true);

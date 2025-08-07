@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class ABILITY
 {
-	public const int ActPick = 5047;
+	public const int ActInstall = 5046;
 
 	public const int AI_Drink = 5045;
 
-	public const int ActInstall = 5046;
+	public const int ActPick = 5047;
 
 	public const int ActItem = 5048;
 
@@ -242,9 +242,9 @@ public class ABILITY
 
 	public const int ActLulwyTrick = 6902;
 
-	public const int ActKizuamiTrick = 6903;
-
 	public const int ActGazeMutation = 6622;
+
+	public const int ActKizuamiTrick = 6903;
 
 	public const int ActSwarm = 6662;
 
@@ -252,7 +252,7 @@ public class ABILITY
 
 	public static readonly int[] IDS = new int[124]
 	{
-		5047, 5045, 5046, 5048, 5049, 5050, 5051, 5052, 5053, 5054,
+		5046, 5045, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054,
 		5055, 6001, 6003, 6011, 6012, 5044, 6013, 6018, 6019, 6020,
 		6050, 6400, 6410, 6420, 6450, 6500, 6601, 6602, 6603, 6604,
 		6610, 6015, 6611, 5043, 5041, 5011, 5012, 5013, 5014, 5015,
@@ -264,7 +264,7 @@ public class ABILITY
 		5006, 5007, 5008, 5009, 5010, 50215, 50200, 50211, 6904, 6631,
 		6630, 6627, 6626, 6641, 6621, 6623, 6642, 6650, 6660, 7000,
 		6661, 6663, 6664, 6700, 6720, 6750, 6751, 6900, 6901, 6902,
-		6903, 6622, 6662, 6640
+		6622, 6903, 6662, 6640
 	};
 }
 public class Ability : Act

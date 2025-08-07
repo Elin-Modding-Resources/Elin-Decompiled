@@ -190,7 +190,7 @@ public class AI_Steal : AI_TargetCard
 					target.isStolen = true;
 				}
 				owner.Pick(target.Thing);
-				owner.elements.ModExp(281, 50);
+				owner.elements.ModExp(281, 50f);
 				if (EClass.rnd(2) == 0)
 				{
 					EClass.pc.stamina.Mod(-1);

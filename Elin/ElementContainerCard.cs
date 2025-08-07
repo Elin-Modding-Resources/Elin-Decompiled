@@ -216,7 +216,7 @@ public class ElementContainerCard : ElementContainer
 					num = num * 2 + (e.ValueWithoutLink + e.vLink);
 				}
 			}
-			if (e.id != 664 && (owner.Chara.race.IsMachine || owner.id == "android"))
+			if (e.id != 664 && (owner.Chara.IsMachine || owner.id == "android"))
 			{
 				int num4 = owner.Evalue(664);
 				if (num4 > 0)

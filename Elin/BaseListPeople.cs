@@ -340,6 +340,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 							}
 							list.Refresh();
 							SE.Click();
+							WidgetRoster.SetDirty();
 						});
 					}
 					else
@@ -364,6 +365,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 								c.renderer.OnEnterScreen();
 							}
 							list.Refresh();
+							WidgetRoster.SetDirty();
 						});
 					}
 				}

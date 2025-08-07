@@ -163,7 +163,7 @@ public class GoalCombat : Goal
 			{
 				tc.TrySetEnemy(owner);
 			}
-			if (!tc.IsMinion && EClass.rnd(10) == 0 && EClass.rnd(tc.DEX + 10) > owner.LV && tc.HasElement(1315) && !owner.HasElement(1315) && owner.race.IsMachine && owner.CanBeTempAlly(tc))
+			if (!tc.IsMinion && EClass.rnd(10) == 0 && EClass.rnd(tc.DEX + 10) > owner.LV && tc.HasElement(1315) && !owner.HasElement(1315) && owner.IsMachine && owner.CanBeTempAlly(tc))
 			{
 				owner.Say("dominate_machine", tc, owner);
 				owner.PlayEffect("boost");
@@ -173,7 +173,7 @@ public class GoalCombat : Goal
 				owner.MakeMinion(tc.IsPCParty ? EClass.pc : tc);
 				yield return Success();
 			}
-			if (EClass.rnd(5) == 0 && tc.HasElement(1325) && owner.race.IsPlant && owner.CanBeTempAlly(tc))
+			if (EClass.rnd(5) == 0 && tc.HasElement(1325) && owner.IsPlant && owner.CanBeTempAlly(tc))
 			{
 				owner.Say("dominate_plant", tc, owner);
 				owner.ShowEmo(Emo.love);
