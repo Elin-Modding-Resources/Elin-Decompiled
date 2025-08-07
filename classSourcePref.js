@@ -2,7 +2,9 @@ var classSourcePref =
 [
     [ "OnAfterDeserialize", "classSourcePref.html#a09bb523444999a4c96f7c846daf9463c", null ],
     [ "OnBeforeSerialize", "classSourcePref.html#aef34ffe5c64c1ed40d459f3f8f96d649", null ],
+    [ "ReadFromIni", "classSourcePref.html#aa604b7203b9bda39abf527c27f4e55dc", null ],
     [ "Validate", "classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923", null ],
+    [ "WriteIni", "classSourcePref.html#a6671fd44cd0fcc03c4ca9e64d83b7655", null ],
     [ "_bits1", "classSourcePref.html#ae297f0f764b20941ca54a04932546153", null ],
     [ "ints", "classSourcePref.html#ac953060b560b13354232d982721b2be7", null ],
     [ "bypassShadow", "classSourcePref.html#a170b34cbef43b5040438d2edc18ea11a", null ],

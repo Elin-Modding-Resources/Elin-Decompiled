@@ -1,5 +1,17 @@
 var NAVTREEINDEX24 =
 {
+"classAIAct.html#ac4dbf95639d8ead3488ad1481de9f98f":[1,0,111,48],
+"classAIAct.html#ac4e4e3f0bc9920af275dd4eb394eb013":[1,0,111,66],
+"classAIAct.html#ac6b22016f0841208f2826276b0a1ac79":[1,0,111,75],
+"classAIAct.html#ac93e4c4275a15fa903bd7aba64cb81c5":[1,0,111,29],
+"classAIAct.html#acd9915dea286da2db98567d0127aac37":[1,0,111,17],
+"classAIAct.html#ad3eae87fa35883d76b35d52b03c520d0":[1,0,111,55],
+"classAIAct.html#ad55c49cdbb7dc68eee758b866d30e98d":[1,0,111,16],
+"classAIAct.html#ad69a96ace451443057c8db17179025fa":[1,0,111,8],
+"classAIAct.html#add1fe45123dd4160e01c386332a3ad9b":[1,0,111,40],
+"classAIAct.html#ae0783a1b5ae5c6b6565caebbd0ad0243":[1,0,111,15],
+"classAIAct.html#ae16b1d5e90f8da276b8315966c8861e5":[1,0,111,61],
+"classAIAct.html#ae37e466b9275733fb82748efe7378bd2":[1,0,111,63],
 "classAIAct.html#ae4190e3f5fcf30bb0e936c159ef9a84e":[1,0,111,23],
 "classAIAct.html#ae58fb6887cbb8950eeb69498aaf73334":[1,0,111,3],
 "classAIAct.html#ae7b4901d2a17522d71b8e05426f16b43":[1,0,111,82],
@@ -237,17 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Idle.html#afa5679332200dd300cdd9974178e71cb":[1,0,81,0],
 "classAI__Idle.html#afa5679332200dd300cdd9974178e71cba14349043a0e387b8b33024616d9b487f":[1,0,81,0,1],
 "classAI__Idle.html#afa5679332200dd300cdd9974178e71cba7a1920d61156abc05a60135aefe8bc67":[1,0,81,0,0],
-"classAI__LeaveMap.html":[1,0,82],
-"classAI__LeaveMap.html#a79cdc545112df8e35e5b62b3007f0d97":[1,0,82,0],
-"classAI__Massage.html":[1,0,83],
-"classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd":[1,0,83,3],
-"classAI__Massage.html#a3f94ce998042516adb64b7d3eff3a28a":[1,0,83,5],
-"classAI__Massage.html#a5c36a06e3525ec420e2a45953cf3a453":[1,0,83,2],
-"classAI__Massage.html#a7962019b762b950106661f3f8a78c3f3":[1,0,83,0],
-"classAI__Massage.html#a9717c6415de8a2eb44200411849debf8":[1,0,83,1],
-"classAI__Massage.html#aba84df3216f94683a2a9afd6b90d2143":[1,0,83,4],
-"classAI__Massage.html#aefcefa016978355cf380aff8e6e6d3d3":[1,0,83,6],
-"classAI__Meditate.html":[1,0,84],
-"classAI__Meditate.html#a26599f012eea010b62ab082e044c96d1":[1,0,84,0],
-"classAI__Meditate.html#a80dcd9cb058e03cfc65deb967ea29e3b":[1,0,84,2]
+"classAI__LeaveMap.html":[1,0,82]
 };

@@ -120,7 +120,7 @@ var searchData=
   ['setcurrenthotitem_117',['SetCurrentHotItem',['../classPlayer.html#afbe334fb5e8a370af1caffdf123e585e',1,'Player']]],
   ['setcursor_118',['SetCursor',['../classCursorSystem.html#abd5473675f49b663630ff4688ee92432',1,'CursorSystem']]],
   ['setcursoronmap_119',['SetCursorOnMap',['../classActionMode.html#a9f0ac9400ace813edde81542dddbd4f4',1,'ActionMode']]],
-  ['setdata_120',['SetData',['../classSpriteReplacerAnimation.html#abbae4ce3b9dbae35c520a1f0a99ddeee',1,'SpriteReplacerAnimation.SetData()'],['../classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91',1,'UITooltip.SetData()']]],
+  ['setdata_120',['SetData',['../classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91',1,'UITooltip.SetData()'],['../classSpriteReplacerAnimation.html#abbae4ce3b9dbae35c520a1f0a99ddeee',1,'SpriteReplacerAnimation.SetData()']]],
   ['setdecal_121',['SetDecal',['../classMap.html#a4d48625150837d1ca16aad0f0c76e1ff',1,'Map']]],
   ['setdeconstruct_122',['SetDeconstruct',['../classCard.html#ae2ae4cd5927fc5d312921c9ed7b48a83',1,'Card']]],
   ['setdefaultstage_123',['SetDefaultStage',['../classGrowSystem.html#a0569eb515437fbc5dec14c12471c52ff',1,'GrowSystem']]],

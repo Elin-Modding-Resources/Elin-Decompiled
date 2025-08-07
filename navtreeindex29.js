@@ -1,5 +1,17 @@
 var NAVTREEINDEX29 =
 {
+"classActRanged.html#ae64c0e92fa6f553899a2a0475d12cb54":[1,0,47,1],
+"classActRanged.html#af0fc59d29d72d32b9630bd57625f1b84":[1,0,47,0],
+"classActRestrain.html":[1,0,49],
+"classActRestrain.html#a11c73d57f2f3c4b06f39d885f81b0f13":[1,0,49,6],
+"classActRestrain.html#a2fce38a8e1236c409e4457f31bf65fe3":[1,0,49,5],
+"classActRestrain.html#a73669c406fa831184473662f980ed69d":[1,0,49,4],
+"classActRestrain.html#a8ab728facfed233eaf1f6d6aaed1b8df":[1,0,49,3],
+"classActRestrain.html#adc830bbb76e1a14a129fb23c3e144c9e":[1,0,49,0],
+"classActRestrain.html#af748a0d763546c2512b63fe349c2a57c":[1,0,49,1],
+"classActRestrain.html#af98236f6db8d5fcf6ea1ed1a243841bd":[1,0,49,2],
+"classActRide.html":[1,0,50],
+"classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2":[1,0,50,4],
 "classActRide.html#a214b50fc04b16a8de7dbe30a69705ede":[1,0,50,1],
 "classActRide.html#a28ba2eb19315998756fd18b1c41ac47e":[1,0,50,0],
 "classActRide.html#a6121a89052bf66950444cf344143258c":[1,0,50,2],
@@ -237,17 +249,5 @@ var NAVTREEINDEX29 =
 "classActorEx.html":[1,0,41],
 "classActorEx.html#a08672f80bd657495bf0d3e12c3739c3a":[1,0,41,4],
 "classActorEx.html#a098eb9a80c94345150d480f2e712ef7b":[1,0,41,3],
-"classActorEx.html#a23d0b0c958b76eacc23b9fd5b93222d3":[1,0,41,10],
-"classActorEx.html#a24a8a2e117ad5a0082faac20961713f2":[1,0,41,0],
-"classActorEx.html#a24a8a2e117ad5a0082faac20961713f2a7a1920d61156abc05a60135aefe8bc67":[1,0,41,0,0],
-"classActorEx.html#a24a8a2e117ad5a0082faac20961713f2adc9d0aa2ac7ab1f3345178a493749ea3":[1,0,41,0,1],
-"classActorEx.html#a32ef77a07aff66a1be966897f9b82ea6":[1,0,41,6],
-"classActorEx.html#a407a78cdee4311686a4bfeb8c6ca3dd0":[1,0,41,14],
-"classActorEx.html#a49e15587e009380fd955612bdebfe3d3":[1,0,41,13],
-"classActorEx.html#a4bfc5b4b2c13f5c670a1f19be9d30b93":[1,0,41,7],
-"classActorEx.html#a69a8c654028ae46ff708a89aa102c654":[1,0,41,12],
-"classActorEx.html#a6aa441ae48170bad785530d42b34e2c6":[1,0,41,9],
-"classActorEx.html#a737ef801f9c7207db0ce984e0cfa1394":[1,0,41,1],
-"classActorEx.html#a8a5d9bdef17f4801826272d253f1f555":[1,0,41,5],
-"classActorEx.html#ab86071c915c1191bfe3dea6d6adcc2c9":[1,0,41,2]
+"classActorEx.html#a23d0b0c958b76eacc23b9fd5b93222d3":[1,0,41,10]
 };

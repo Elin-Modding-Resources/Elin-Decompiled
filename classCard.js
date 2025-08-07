@@ -262,6 +262,7 @@ var classCard =
     [ "renderer", "classCard.html#af2583c026b8a4d082a4abc0fa829a66a", null ],
     [ "reservedAct", "classCard.html#af9a055c0c0321f0617184cffc027ac06", null ],
     [ "roundTimer", "classCard.html#aa77cb0b31e55f48dea31a4b39488548a", null ],
+    [ "SocketDiv", "classCard.html#a67be0529a86b20e40ea75dc5ef7b9fcc", null ],
     [ "sockets", "classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e", null ],
     [ "sortVal", "classCard.html#a8734269e7f7106bbc00c489caddb0532", null ],
     [ "things", "classCard.html#aad0881624a8ae1acf65e28b256c8d287", null ],

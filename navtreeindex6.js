@@ -1,5 +1,15 @@
 var NAVTREEINDEX6 =
 {
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a2ccd89b67324dd915dd2d286f613332e":[2,0,0,454,0,12],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a334c4a4c42fdb79d7ebc3e73b517e6f8":[2,0,0,454,0,0],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a35393c24384b8862798716628f7bc6f4":[2,0,0,454,0,3],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a40bc2c3326dcc0c9ea95f303f2165aa0":[2,0,0,454,0,13],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a56ab24c15b72a457069c5ea42fcfc640":[2,0,0,454,0,1],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6013221752df892237d0fc99fd8a328f":[2,0,0,454,0,5],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a66126f61c9e618297a559c08ed29894a":[2,0,0,454,0,18],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6848d756da66e55b42f79c0728e351ad":[2,0,0,454,0,16],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a6aeb2ea736acae77caa2944be44c53da":[2,0,0,454,0,9],
+"Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a72672db3a8af4231cb7e984f6c09af3c":[2,0,0,454,0,2],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a9076b177927e40e81c779c41ace60dc4":[2,0,0,454,0,19],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aa8ef8de53d6ca526834d088ac2365bdd":[2,0,0,454,0,20],
 "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aaec34f6af628cb6181e5f1d975f14c3e":[2,0,0,454,0,11],
@@ -239,15 +249,5 @@ var NAVTREEINDEX6 =
 "Gender_8cs_source.html":[2,0,0,2,36],
 "GeneratedClass_8cs.html":[2,0,0,499],
 "GeneratedClass_8cs_source.html":[2,0,0,499],
-"Glitch_8cs.html":[2,0,0,3,0,2],
-"Glitch_8cs_source.html":[2,0,0,3,0,2],
-"GlobalData_8cs.html":[2,0,0,503],
-"GlobalData_8cs_source.html":[2,0,0,503],
-"GlobalGoalAdv_8cs.html":[2,0,0,505],
-"GlobalGoalAdv_8cs_source.html":[2,0,0,505],
-"GlobalGoalExplore_8cs.html":[2,0,0,506],
-"GlobalGoalExplore_8cs_source.html":[2,0,0,506],
-"GlobalGoalVisitAndStay_8cs.html":[2,0,0,507],
-"GlobalGoalVisitAndStay_8cs_source.html":[2,0,0,507],
-"GlobalGoalVisitTown_8cs.html":[2,0,0,508]
+"Glitch_8cs.html":[2,0,0,3,0,2]
 };

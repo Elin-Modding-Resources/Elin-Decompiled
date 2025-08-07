@@ -38,6 +38,16 @@ var CTAG_8cs =
       [ "noRandomEnc", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a70a990f7531362a2d795631fa1fe4079", null ],
       [ "noMix", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07af40e3d0e9577a8a2a2e9cdd1e2bcaefb", null ],
       [ "bigFish", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad984caaa8bc69d882f5bb22e22f6c03a", null ],
-      [ "noSkinRecipe", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad3c1eb435edc84ccf43f230ff7d8b37c", null ]
+      [ "noSkinRecipe", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad3c1eb435edc84ccf43f230ff7d8b37c", null ],
+      [ "animal", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a1e4483e833025ac10e6184e75cb2d19d", null ],
+      [ "human", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a99e9bae675b12967251c175696f00a70", null ],
+      [ "undead", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a7534222f8fa2c2a136aa735effc7b269", null ],
+      [ "machine", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a14754f13e5280c5d49d2ae536c2d57e2", null ],
+      [ "horror", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a4460740cd9ee7f43a4fde3a966f0787d", null ],
+      [ "fish", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a83e4a96aed96436c621b9809e258b309", null ],
+      [ "fairy", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a9820da2cacb782026943db4db6110d69", null ],
+      [ "god", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa4757d7419ff3b48e92e90596f0e7548", null ],
+      [ "dragon", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8621ffdbc5698829397d97767ac13db3", null ],
+      [ "plant", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a9ea0a36b3a20901fafe834eb519a595c", null ]
     ] ]
 ];

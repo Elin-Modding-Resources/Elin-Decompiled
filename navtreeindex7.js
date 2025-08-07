@@ -1,5 +1,15 @@
 var NAVTREEINDEX7 =
 {
+"Glitch_8cs_source.html":[2,0,0,3,0,2],
+"GlobalData_8cs.html":[2,0,0,503],
+"GlobalData_8cs_source.html":[2,0,0,503],
+"GlobalGoalAdv_8cs.html":[2,0,0,505],
+"GlobalGoalAdv_8cs_source.html":[2,0,0,505],
+"GlobalGoalExplore_8cs.html":[2,0,0,506],
+"GlobalGoalExplore_8cs_source.html":[2,0,0,506],
+"GlobalGoalVisitAndStay_8cs.html":[2,0,0,507],
+"GlobalGoalVisitAndStay_8cs_source.html":[2,0,0,507],
+"GlobalGoalVisitTown_8cs.html":[2,0,0,508],
 "GlobalGoalVisitTown_8cs_source.html":[2,0,0,508],
 "GlobalGoal_8cs.html":[2,0,0,504],
 "GlobalGoal_8cs_source.html":[2,0,0,504],
@@ -239,15 +249,5 @@ var NAVTREEINDEX7 =
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a5f420382b5c696680826073fa18d59e5":[2,0,0,2,0,0,3,0,1],
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a63fd72de043ccc2432da6f55155940b6":[2,0,0,2,0,0,3,0,0],
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a79a1f16877ad1b3fee808033de2458d4":[2,0,0,2,0,0,3,0,4],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1a8d3279204d5b528977c733ec4e9ad7b1":[2,0,0,2,0,0,3,0,11],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1a8fc3c613b78d5dede3427bdbb4f78805":[2,0,0,2,0,0,3,0,9],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1aa8e1bddfd7860327c3541355ad04d598":[2,0,0,2,0,0,3,0,7],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1ac01eee6a5abbb548d6c630068f414d52":[2,0,0,2,0,0,3,0,12],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1ac0a68e06919f50dd3c5d751d61aa65bf":[2,0,0,2,0,0,3,0,3],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1ae8cd5b1d492fa5e4e32bd3b6ab8b7ee9":[2,0,0,2,0,0,3,0,2],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1af8632d7d7352fa378048caeabf7a9f6e":[2,0,0,2,0,0,3,0,8],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1aff533d4c16523ed1a05bf5443c74dd15":[2,0,0,2,0,0,3,0,13],
-"HookType_8cs_source.html":[2,0,0,2,0,0,3],
-"Hostility_8cs.html":[2,0,0,586],
-"Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500":[2,0,0,586,0]
+"HookType_8cs.html#a627533690054d981042e076f04aa24e1a8d3279204d5b528977c733ec4e9ad7b1":[2,0,0,2,0,0,3,0,11]
 };

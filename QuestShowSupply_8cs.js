@@ -1,4 +1,4 @@
 var QuestShowSupply_8cs =
 [
-    [ "QuestShowSupply", "classQuestShowSupply.html", "classQuestShowSupply" ]
+    [ "QuestShowSupply", "classQuestShowSupply.html", null ]
 ];

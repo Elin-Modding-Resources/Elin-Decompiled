@@ -38,7 +38,7 @@ var classElementContainer =
     [ "ListLearnable", "classElementContainer.html#a229820fd172e0bea0b8c8da2e2be59e0", null ],
     [ "ListRune", "classElementContainer.html#a7c100f82acfca13f5be0b2cc247edf05", null ],
     [ "ModBase", "classElementContainer.html#aa35ecf8180a3beb037151361a5b03511", null ],
-    [ "ModExp", "classElementContainer.html#aa1c3ae499520ab53bda341dd23fa0702", null ],
+    [ "ModExp", "classElementContainer.html#a062415b9fa7bf22fc935b5d8ce063c38", null ],
     [ "ModLink", "classElementContainer.html#a3767c52eb3147f12179d1f1d9e2f0880", null ],
     [ "ModPotential", "classElementContainer.html#a3c91e4accdfee39c317570a6580bdfb2", null ],
     [ "ModTempPotential", "classElementContainer.html#a56e96745b1ef51d616e34379a670c585", null ],
