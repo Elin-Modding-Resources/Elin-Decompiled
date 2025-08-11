@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.176 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.177 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -341,6 +341,8 @@ Properties</h2></td></tr>
 <tr class="separator:a544ba25a1f805bea5b20376c291f09e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b02de0afea36d3402d6d96599ff6f1"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitTent.html#a35b02de0afea36d3402d6d96599ff6f1">CanBeHeld</a><code> [get]</code></td></tr>
 <tr class="separator:a35b02de0afea36d3402d6d96599ff6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3629e579de893335f264b21be1015f"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitTent.html#aaf3629e579de893335f264b21be1015f">CanBeShipped</a><code> [get]</code></td></tr>
+<tr class="separator:aaf3629e579de893335f264b21be1015f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0900931ea7b9e0903b1d1e1d498ef97"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitTent.html#aa0900931ea7b9e0903b1d1e1d498ef97">UseDist</a><code> [get]</code></td></tr>
 <tr class="separator:aa0900931ea7b9e0903b1d1e1d498ef97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classTraitNewZone"><td colspan="2" onclick="javascript:toggleInherit('properties_classTraitNewZone')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classTraitNewZone.html">TraitNewZone</a></td></tr>
@@ -776,28 +778,28 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a1bcc89016758ef51b5722da792d53f41">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (base.zone == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   20</span>        }</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (state == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
-<div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">children</a>.Contains(base.zone))</div>
-<div class="line"><span class="lineno">   24</span>            {</div>
-<div class="line"><span class="lineno">   25</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classSpatial.html#a2eadb92cafb481d78f96a4b1a19d6381">AddChild</a>(base.zone);</div>
-<div class="line"><span class="lineno">   26</span>            }</div>
-<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classSpatial.html#a4f667a3a67c68668dc513c8ccb4acd83">RemoveChild</a>(base.zone);</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">int</span> num = owner.Thing.source.weight + base.zone.GetInt(1) * 150 / 100;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(652))</div>
-<div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            num = num * 100 / 110;</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa467a972c6ab9250fa8e5641d9a6f901">ChangeWeight</a>(num);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00017">17</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (base.zone == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (state == <a class="code hl_enumeration" href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a>.installed)</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_variable" href="classSpatial.html#af941e4a530bb3395b3cfc663ad8be1d3">children</a>.Contains(base.zone))</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classSpatial.html#a2eadb92cafb481d78f96a4b1a19d6381">AddChild</a>(base.zone);</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classSpatial.html#a4f667a3a67c68668dc513c8ccb4acd83">RemoveChild</a>(base.zone);</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">int</span> num = owner.Thing.source.weight + base.zone.GetInt(1) * 150 / 100;</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(652))</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            num = num * 100 / 110;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aa467a972c6ab9250fa8e5641d9a6f901">ChangeWeight</a>(num);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 <div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a></div><div class="ttdeci">PlaceState</div><div class="ttdef"><b>Definition:</b> <a href="PlaceState_8cs_source.html#l00001">PlaceState.cs:2</a></div></div>
 <div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05601">Card.cs:5601</a></div></div>
 <div class="ttc" id="aclassCard_html_aa467a972c6ab9250fa8e5641d9a6f901"><div class="ttname"><a href="classCard.html#aa467a972c6ab9250fa8e5641d9a6f901">Card.ChangeWeight</a></div><div class="ttdeci">void ChangeWeight(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02502">Card.cs:2502</a></div></div>
@@ -838,13 +840,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#aed664cfcbe19bd9b7cb288461852ad46">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00038">38</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (base.zone != <span class="keyword">null</span> &amp;&amp; !base.zone.name.IsEmpty())</div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            s = s + <span class="stringliteral">&quot;(&quot;</span> + base.zone.name + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00040">40</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (base.zone != <span class="keyword">null</span> &amp;&amp; !base.zone.name.IsEmpty())</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            s = s + <span class="stringliteral">&quot;(&quot;</span> + base.zone.name + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -894,6 +896,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00011">11</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
+
+</div>
+</div>
+<a id="aaf3629e579de893335f264b21be1015f" name="aaf3629e579de893335f264b21be1015f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf3629e579de893335f264b21be1015f">&#9670;&#160;</a></span>CanBeShipped</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool TraitTent.CanBeShipped</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1015,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitTent_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitTent_8cs_source.html">TraitTent.cs</a>.</p>
 
 </div>
 </div>

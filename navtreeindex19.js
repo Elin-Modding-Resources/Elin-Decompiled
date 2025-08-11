@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitShowcase_8cs_source.html":[2,0,0,1680],
 "TraitShrine_8cs.html":[2,0,0,1681],
 "TraitShrine_8cs_source.html":[2,0,0,1681],
 "TraitSlaver_8cs.html":[2,0,0,1682],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fc":[2,0,0,1802,0],
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca1f5e8d27037d8efd95be78d7c2432373":[2,0,0,1802,0,2],
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca340b53fec301dbbc81a0301b9fa905c1":[2,0,0,1802,0,1],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca46f3ea056caa3126b91f3f70beea068c":[2,0,0,1802,0,3],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1802,0,0]
+"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca46f3ea056caa3126b91f3f70beea068c":[2,0,0,1802,0,3]
 };

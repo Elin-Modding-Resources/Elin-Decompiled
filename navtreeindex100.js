@@ -1,5 +1,14 @@
 var NAVTREEINDEX100 =
 {
+"classSkinColorProfileEx.html":[1,0,1152],
+"classSkinColorProfileEx.html#a0669ab193d313446919569f9bf146774":[1,0,1152,3],
+"classSkinColorProfileEx.html#a38b64f90524142c62ad4d42f495399a1":[1,0,1152,2],
+"classSkinColorProfileEx.html#ac6b55c8bec7ef5c7ce2d1f987ccbef28":[1,0,1152,1],
+"classSkinColorProfileEx_1_1GroupColors.html":[1,0,1152,0],
+"classSkinColorProfileEx_1_1GroupColors.html#a0c9e6cde7f8cb4207c14a92dbd06a360":[1,0,1152,0,3],
+"classSkinColorProfileEx_1_1GroupColors.html#a55a1c0eb97ab9e6aeb8053aeadd2c367":[1,0,1152,0,2],
+"classSkinColorProfileEx_1_1GroupColors.html#a76085ffbffd557e1125944ab99ffaa9c":[1,0,1152,0,1],
+"classSkinColorProfileEx_1_1GroupColors.html#aa9017faed9f64077370eae303ca7a4f9":[1,0,1152,0,0],
 "classSkinConfig.html":[1,0,1153],
 "classSkinConfig.html#a2956d12069c475a9c3ce77a0034f631c":[1,0,1153,14],
 "classSkinConfig.html#a2cbda7dcbc2b059e7034aaa6ea7bfa34":[1,0,1153,12],
@@ -240,14 +249,5 @@ var NAVTREEINDEX100 =
 "classSourceBacker_1_1Row.html#a98bccadbe2ed99396cfc2f1a1b67c1cc":[1,0,1167,0,11],
 "classSourceBacker_1_1Row.html#ab8c4b9ecc8ee2c70ec783fcd76ded477":[1,0,1167,0,20],
 "classSourceBacker_1_1Row.html#abf56fc6b676f2505f1ba20e97e95464d":[1,0,1167,0,16],
-"classSourceBacker_1_1Row.html#ac04691ab1e20b9ea57f2981310394626":[1,0,1167,0,5],
-"classSourceBacker_1_1Row.html#adf8a2785d3bbfb2b9c176d8bee108c23":[1,0,1167,0,6],
-"classSourceBacker_1_1Row.html#adf9e199291c3c8df8ee41580885cc917":[1,0,1167,0,9],
-"classSourceBacker_1_1Row.html#ae84e82f57e12ceb845403c5ad3646ed9":[1,0,1167,0,4],
-"classSourceBacker_1_1Row.html#aee9820143df9c11cfd70a8921b9036c7":[1,0,1167,0,15],
-"classSourceBacker_1_1Row.html#afba67e93bf7ef871df51e42608763e8b":[1,0,1167,0,13],
-"classSourceBlock.html":[1,0,1168],
-"classSourceBlock.html#a0c6e85fa829627efbe22831f2c1933cc":[1,0,1168,7],
-"classSourceBlock.html#a58c15e1e95b0c4ac1cbe61688542501c":[1,0,1168,1],
-"classSourceBlock.html#a5913eda1451fdd3955a1d4f6dcb8bf98":[1,0,1168,5]
+"classSourceBacker_1_1Row.html#ac04691ab1e20b9ea57f2981310394626":[1,0,1167,0,5]
 };

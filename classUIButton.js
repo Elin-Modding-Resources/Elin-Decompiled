@@ -39,7 +39,7 @@ var classUIButton =
     [ "ToggleCheck", "classUIButton.html#a1e76daa56ca8cca110c6152d54d0919d", null ],
     [ "TryHihlight", "classUIButton.html#a83a927977176e63b3ccb02bcfea548c0", null ],
     [ "TryShowTip", "classUIButton.html#af235c51f6c1cf671bb71bbdd7567668c", null ],
-    [ "TryShowTip< T >", "classUIButton.html#a1d2424ee615466342224fbd9e03568fe", null ],
+    [ "TryShowTip< T >", "classUIButton.html#ae926d1f5cdef87cabc2ed8f53235b297", null ],
     [ "UpdateButtons", "classUIButton.html#a7905c31717074433fd2562bf9de1a472", null ],
     [ "actionTooltip", "classUIButton.html#abf2414942e46ead2318cad6de141b5c3", null ],
     [ "animating", "classUIButton.html#a127a2bd3117fb1d537725fd823ee4dff", null ],

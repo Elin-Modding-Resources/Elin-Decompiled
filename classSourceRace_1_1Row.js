@@ -46,7 +46,6 @@ var classSourceRace_1_1Row =
     [ "STR", "classSourceRace_1_1Row.html#a8f931195e603958f6be8347536920c36", null ],
     [ "tag", "classSourceRace_1_1Row.html#ab6d49f5794b55bd8f91fc18160fa6dda", null ],
     [ "vigor", "classSourceRace_1_1Row.html#a1874e193304cf1df2c2b345bdecf9edd", null ],
-    [ "visibleWithTelepathy", "classSourceRace_1_1Row.html#abe86f38cddf46ac0ad8182fb9405e69f", null ],
     [ "WIL", "classSourceRace_1_1Row.html#abcb25e3af0af06044dc2bb438e187455", null ],
     [ "GetAlias", "classSourceRace_1_1Row.html#a2adf8e6c166286a4715d55913e52e846", null ],
     [ "IsAnimal", "classSourceRace_1_1Row.html#ad0a692e319fc62f0043fd04c5696e2a9", null ],

@@ -49,6 +49,7 @@ var classABILITY =
     [ "ActStealFood", "classABILITY.html#ab95389dc437e771d79daa6f848124097", null ],
     [ "ActStealMoney", "classABILITY.html#ac5ca395ab40bc3692486219c0a99b107", null ],
     [ "ActSuicide", "classABILITY.html#af0e7592d41608265e49c942239229d9e", null ],
+    [ "ActSummonSpecial", "classABILITY.html#ad02d5249d6bc6118924bd6b90d2e83b7", null ],
     [ "ActSwarm", "classABILITY.html#ac229cd50c5b3acdd9d2d5e94aad70368", null ],
     [ "ActThrow", "classABILITY.html#a06b65c5615c1221abbecd0409d773149", null ],
     [ "ActThrowPotion", "classABILITY.html#addc80d6d5bcdbd78d7b204f6c670c6c4", null ],

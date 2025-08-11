@@ -1,5 +1,15 @@
 var NAVTREEINDEX141 =
 {
+"structAct_1_1Cost.html#acf45d0fa6c98ba7460fdf5b5ac445069":[1,0,13,0,0],
+"structAlgorithms_1_1PathFinderNode.html":[1,0,0,3],
+"structAlgorithms_1_1PathFinderNode.html":[0,4,0,3],
+"structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[0,4,0,3,3],
+"structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[1,0,0,3,3],
+"structAlgorithms_1_1PathFinderNode.html#a9d142733e5e490432c66cb30a26b9f1a":[0,4,0,3,4],
+"structAlgorithms_1_1PathFinderNode.html#a9d142733e5e490432c66cb30a26b9f1a":[1,0,0,3,4],
+"structAlgorithms_1_1PathFinderNode.html#aaf258b6ea22dae2eed81c84d6e507275":[1,0,0,3,2],
+"structAlgorithms_1_1PathFinderNode.html#aaf258b6ea22dae2eed81c84d6e507275":[0,4,0,3,2],
+"structAlgorithms_1_1PathFinderNode.html#ae6d978ba911c6243806a5795f6fda2dc":[1,0,0,3,1],
 "structAlgorithms_1_1PathFinderNode.html#ae6d978ba911c6243806a5795f6fda2dc":[0,4,0,3,1],
 "structAlgorithms_1_1PathFinderNode.html#ae819d273b2dd441f25be33657cfc7103":[1,0,0,3,0],
 "structAlgorithms_1_1PathFinderNode.html#ae819d273b2dd441f25be33657cfc7103":[0,4,0,3,0],

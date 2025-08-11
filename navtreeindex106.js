@@ -1,5 +1,13 @@
 var NAVTREEINDEX106 =
 {
+"classSpatial.html#a76e41bd267f581e82f8a5592ff85c1d6":[1,0,1213,74],
+"classSpatial.html#a7811977e144299adabca3a9908a04f17":[1,0,1213,76],
+"classSpatial.html#a7ae673439c824ce2a723e36ad371342f":[1,0,1213,1],
+"classSpatial.html#a8173a182bcfaa59147bd62d5a6555248":[1,0,1213,44],
+"classSpatial.html#a839c20ec6dcb720f013f2871590f7eb3":[1,0,1213,88],
+"classSpatial.html#a8667078305385c64b1209db11f6462c9":[1,0,1213,85],
+"classSpatial.html#a872aba4f74325d925c3306f42503d569":[1,0,1213,32],
+"classSpatial.html#a8b5068efbc1d2d8e289f65d4385dc98b":[1,0,1213,90],
 "classSpatial.html#a8c6c3f1ffd0867350bc4dd763d3f485b":[1,0,1213,64],
 "classSpatial.html#a912861f4177ce608d6f35cb47e2d3139":[1,0,1213,78],
 "classSpatial.html#a91c8f9dfdd78672b104b16075f03d85c":[1,0,1213,55],
@@ -241,13 +249,5 @@ var NAVTREEINDEX106 =
 "classSpriteSheet.html#a2ef52952ee4895df41e8ea30797bf6c3":[1,0,1231,1],
 "classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02":[1,0,1231,2],
 "classSpriteSheet.html#a5d2ac436ef2dd78fdefca0873678febe":[1,0,1231,3],
-"classSpriteSheet.html#a64d65426cb6cd1bceedef51608ee1016":[1,0,1231,4],
-"classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714":[1,0,1231,5],
-"classStanceFury.html":[1,0,1232],
-"classStanceIai.html":[1,0,1233],
-"classStanceManaCost.html":[1,0,1234],
-"classStanceSongSleep.html":[1,0,1235],
-"classStanceSongSleep.html#a318d7f7de1e04b2b1f0cc9c27e4d148a":[1,0,1235,0],
-"classStanceSongSleep.html#ad14562717e3ec1e02a9b91e790c47590":[1,0,1235,1],
-"classStanceTaunt.html":[1,0,1236]
+"classSpriteSheet.html#a64d65426cb6cd1bceedef51608ee1016":[1,0,1231,4]
 };

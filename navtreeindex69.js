@@ -1,5 +1,14 @@
 var NAVTREEINDEX69 =
 {
+"classHomeResourceMedicine.html":[1,0,614],
+"classHomeResourceNature.html":[1,0,615],
+"classHomeResourceNature.html#a5b428229da7ee11a783a0e5cbed6ac7d":[1,0,615,0],
+"classHomeResourceRate.html":[1,0,616],
+"classHomeResourceRate.html#a22f42daab27eb59263a1588af488e18e":[1,0,616,0],
+"classHomeResourceRate.html#a2dab93b0d27e3a33d3e3252826dc74d8":[1,0,616,3],
+"classHomeResourceRate.html#a61abba67579e14d8a2d08e9db9d858f9":[1,0,616,4],
+"classHomeResourceRate.html#ac08726df6223660fcb26430820a16600":[1,0,616,2],
+"classHomeResourceRate.html#af37c513fbf99f330b44135cc062a43b9":[1,0,616,1],
 "classHomeResourceReknown.html":[1,0,617],
 "classHomeResourceSafety.html":[1,0,618],
 "classHomeResourceSafety.html#af74a6c9199e033b2c46e6305b06943cf":[1,0,618,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX69 =
 "classHotItemToggleLog.html#ad8b5312d094203919b8bca67a647d8ee":[1,0,643,2],
 "classHotItemToggleLog.html#aed9abfad7c3945a1c6df94049cfdc235":[1,0,643,0],
 "classHotItemTogglePage.html":[1,0,644],
-"classHotItemTogglePage.html#a256c62723022c255be04e4379bd7882a":[1,0,644,3],
-"classHotItemTogglePage.html#a4f3bb13ba02914b62d48bab157aded17":[1,0,644,1],
-"classHotItemTogglePage.html#a8831d2c5d15c624151f68e66c60b05e3":[1,0,644,2],
-"classHotItemTogglePage.html#aa9a2fb0e6b2a7738c57ff9cd5af2a8dd":[1,0,644,0],
-"classHotItemToggleVisible.html":[1,0,645],
-"classHotItemToggleVisible.html#a13eadd07f8698d8b526395993954715e":[1,0,645,6],
-"classHotItemToggleVisible.html#a23232df9e2514dc86f659b24aca67b02":[1,0,645,2],
-"classHotItemToggleVisible.html#a45829ff62184dd5aa9e32eb684d50808":[1,0,645,1],
-"classHotItemToggleVisible.html#a5562e75081be8a5dabd6362f0c8e2948":[1,0,645,4],
-"classHotItemToggleVisible.html#a6c0f21928324e6e139db15bcd1fa0dbd":[1,0,645,7]
+"classHotItemTogglePage.html#a256c62723022c255be04e4379bd7882a":[1,0,644,3]
 };

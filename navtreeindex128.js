@@ -1,5 +1,15 @@
 var NAVTREEINDEX128 =
 {
+"classUIMagicChest.html#a80e51b08ef060e02a63cbf50f5b5ae47":[1,0,1975,8],
+"classUIMagicChest.html#a86a331fb24c247690223df012225abb4":[1,0,1975,12],
+"classUIMagicChest.html#a86b7c55da660d3fa79ca407cdb6c53b7":[1,0,1975,33],
+"classUIMagicChest.html#a86e154aed468d7d710123033f1dc4b86":[1,0,1975,34],
+"classUIMagicChest.html#aa2629d6a18e21a272dc2119b5edaa247":[1,0,1975,1],
+"classUIMagicChest.html#ab80b569ec8ee7398225d5327976051c3":[1,0,1975,19],
+"classUIMagicChest.html#acb6b3242e306dd4a49931dbbb479cc3e":[1,0,1975,27],
+"classUIMagicChest.html#ace8219964939821af647f6b0d67a4323":[1,0,1975,7],
+"classUIMagicChest.html#ad46ab56ee3066096f00da7ab3269eb76":[1,0,1975,0],
+"classUIMagicChest.html#ad52b12a63a1fb39647627451da0a7874":[1,0,1975,4],
 "classUIMagicChest.html#ad608dbd6cfb2a1635236fe04618c034b":[1,0,1975,30],
 "classUIMagicChest.html#adac608423d3896b15e944ff8454d2b08":[1,0,1975,23],
 "classUIMagicChest.html#adc5bb57fa79ee896808379ba43537e6f":[1,0,1975,26],
@@ -239,15 +249,5 @@ var NAVTREEINDEX128 =
 "classUISelectableGroup.html#a34fa544402858565da3ca892704f317e":[1,0,1990,41],
 "classUISelectableGroup.html#a3630d2792445404874df7a9c98d79c96":[1,0,1990,31],
 "classUISelectableGroup.html#a40fb681685bd1b055a98b84e057acfc6":[1,0,1990,39],
-"classUISelectableGroup.html#a4c8ee586c87d146089fc66dad7e21070":[1,0,1990,24],
-"classUISelectableGroup.html#a54d829eca16f2f9468fb1e26688d641e":[1,0,1990,6],
-"classUISelectableGroup.html#a5be56d25bc304c96e32c7d85d8481905":[1,0,1990,1],
-"classUISelectableGroup.html#a60abdc33e7ea8f2bbb15226f103cd0ed":[1,0,1990,29],
-"classUISelectableGroup.html#a651dee59cb6dfce136560f22ee51997e":[1,0,1990,12],
-"classUISelectableGroup.html#a66888c89c2dbb73f9d3b6e973ec500a4":[1,0,1990,25],
-"classUISelectableGroup.html#a67db4f5f9182bcc3fac1bc3866aeb07a":[1,0,1990,34],
-"classUISelectableGroup.html#a68be7546005d8506823b246fc7631c77":[1,0,1990,22],
-"classUISelectableGroup.html#a6a92609ff371cbc92e93ef551785c208":[1,0,1990,3],
-"classUISelectableGroup.html#a8431d49abf8b519c4f2c0a9ccef3ae8f":[1,0,1990,14],
-"classUISelectableGroup.html#a86b347b9a835b68c6b26a8748c593a01":[1,0,1990,37]
+"classUISelectableGroup.html#a4c8ee586c87d146089fc66dad7e21070":[1,0,1990,24]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitMerchantFurniture_8cs.html":[2,0,0,1558],
 "TraitMerchantFurniture_8cs_source.html":[2,0,0,1558],
 "TraitMerchantGeneralExotic_8cs.html":[2,0,0,1560],
 "TraitMerchantGeneralExotic_8cs_source.html":[2,0,0,1560],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitShackle_8cs_source.html":[2,0,0,1678],
 "TraitShippingChest_8cs.html":[2,0,0,1679],
 "TraitShippingChest_8cs_source.html":[2,0,0,1679],
-"TraitShowcase_8cs.html":[2,0,0,1680],
-"TraitShowcase_8cs_source.html":[2,0,0,1680]
+"TraitShowcase_8cs.html":[2,0,0,1680]
 };

@@ -1,5 +1,15 @@
 var NAVTREEINDEX130 =
 {
+"classWidget.html#a14d3ca9a9c9b1081dc5371a38774e640":[1,0,2008,5],
+"classWidget.html#a1566722a39d0cce11507c43b3737df1a":[1,0,2008,37],
+"classWidget.html#a16f8971a6cd0e4f2c64efdc9c62f2406":[1,0,2008,36],
+"classWidget.html#a1a482a1fcd10d2a8c77f7ea75c83b55b":[1,0,2008,18],
+"classWidget.html#a1ad7837f095382884364ecba60c0a4cb":[1,0,2008,38],
+"classWidget.html#a1c419033759d11ef59031ac038af11b1":[1,0,2008,65],
+"classWidget.html#a1cd943f3cd97ce448beff32c01a341c1":[1,0,2008,45],
+"classWidget.html#a1e513e72af2c666eaa400a0b42bffc92":[1,0,2008,61],
+"classWidget.html#a215a453cb577bdbff623a5bbc0ea6291":[1,0,2008,66],
+"classWidget.html#a263ffee73ef73adc5497c8881dc113c8":[1,0,2008,25],
 "classWidget.html#a2845d6ff2975f55feb970632c99405d1":[1,0,2008,55],
 "classWidget.html#a2d7a3a96406bd5abac6506e510e5596f":[1,0,2008,62],
 "classWidget.html#a2e5c92b17553bb1e85896d7c8a6af4ec":[1,0,2008,20],
@@ -239,15 +249,5 @@ var NAVTREEINDEX130 =
 "classWidgetFeed.html#a0d370e53816b564f533907d1a8b66f88":[1,0,2019,19],
 "classWidgetFeed.html#a172f5149bfb57117d7f12c2b2900cff9":[1,0,2019,8],
 "classWidgetFeed.html#a18c6d4fa874c6872529af28e51368456":[1,0,2019,16],
-"classWidgetFeed.html#a262323bbd84039d555c3b604921ec408":[1,0,2019,5],
-"classWidgetFeed.html#a489eb7bbcc8ac7ba2e101683ddd6bd44":[1,0,2019,12],
-"classWidgetFeed.html#a498a84266c404980276c8509b31f14c5":[1,0,2019,15],
-"classWidgetFeed.html#a4ef9a48f51c28c6fd65f5fc01a0d6f27":[1,0,2019,3],
-"classWidgetFeed.html#a619e479dd796dca1f24b510b5d8a7531":[1,0,2019,6],
-"classWidgetFeed.html#a620458d38a50a5103ceab91ef08cd471":[1,0,2019,7],
-"classWidgetFeed.html#a6fccc07d6f59da3ae1614fa14c875712":[1,0,2019,13],
-"classWidgetFeed.html#a98ff2b6e0fb5e09c7833a603a000fafe":[1,0,2019,2],
-"classWidgetFeed.html#aa372f72be387b8025e42df447d1a7a93":[1,0,2019,9],
-"classWidgetFeed.html#aa91fed5d96de90a87659c62778954ef9":[1,0,2019,20],
-"classWidgetFeed.html#ab9195b62251f1996008e4e4c99db34d1":[1,0,2019,4]
+"classWidgetFeed.html#a262323bbd84039d555c3b604921ec408":[1,0,2019,5]
 };

@@ -100,6 +100,7 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae89b2cbb7d11825a67459af2249064de":[2,0,0,1057,0,42],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaee6085db6c9b85f45fd9b9b31b020f8d":[2,0,0,1057,0,7],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafe0619d5f4999e09c622e32da7e7566a":[2,0,0,1057,0,41],
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafe49251a5d107b95b09178e978c590ad":[2,0,0,1057,0,49],
 "ShopType_8cs_source.html":[2,0,0,1057],
 "ShouldSerializeContractResolver_8cs.html":[2,0,0,2,71],
 "ShouldSerializeContractResolver_8cs_source.html":[2,0,0,2,71],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "SourcePrefInspector_8cs_source.html":[2,0,0,1095],
 "SourcePrefTile_8cs.html":[2,0,0,1096],
 "SourcePrefTile_8cs_source.html":[2,0,0,1096],
-"SourcePref_8cs.html":[2,0,0,1093],
-"SourcePref_8cs_source.html":[2,0,0,1093]
+"SourcePref_8cs.html":[2,0,0,1093]
 };

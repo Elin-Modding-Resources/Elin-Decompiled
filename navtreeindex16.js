@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"TraitBaseContainer_8cs.html":[2,0,0,1305],
 "TraitBaseContainer_8cs_source.html":[2,0,0,1305],
 "TraitBaseSpellbook_8cs.html":[2,0,0,1306],
 "TraitBaseSpellbook_8cs_source.html":[2,0,0,1306],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitEureka_8cs.html":[2,0,0,1430],
 "TraitEureka_8cs_source.html":[2,0,0,1430],
 "TraitExileElder_8cs.html":[2,0,0,1431],
-"TraitExileElder_8cs_source.html":[2,0,0,1431],
-"TraitFactionBoard_8cs.html":[2,0,0,1432]
+"TraitExileElder_8cs_source.html":[2,0,0,1431]
 };

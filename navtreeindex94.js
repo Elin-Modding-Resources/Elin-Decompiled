@@ -1,5 +1,14 @@
 var NAVTREEINDEX94 =
 {
+"classRefChara.html#a9f3c00b87d81d5e040a30daa6d014f30":[1,0,1058,2],
+"classRefChara.html#ab151b5d2bb2357fed3ba938925619e09":[1,0,1058,3],
+"classRefFaction.html":[1,0,1059],
+"classRefFaction.html#a10a6111ce1db282335bc69c966930613":[1,0,1059,0],
+"classRefFaction.html#a86f73f6e511dcf9600eac1b8aa7e5a60":[1,0,1059,2],
+"classRefFaction.html#a8fe68ccb0314a99cb39fbbeee09f8487":[1,0,1059,1],
+"classRefFaction.html#a9cef092136f3d0bac362882b5b6c9ce0":[1,0,1059,3],
+"classRefFaction.html#acba300026563fba0533a60b482126be7":[1,0,1059,4],
+"classRefReligion.html":[1,0,1061],
 "classRefReligion.html#a139817779fc25ca8415f31bc4a5ceae4":[1,0,1061,2],
 "classRefReligion.html#a89db752c94ac176eb838ada6ec6e902c":[1,0,1061,1],
 "classRefReligion.html#a92820a8e83c14daa48f7443aa29da9f6":[1,0,1061,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX94 =
 "classRenderDataFish.html":[1,0,1089],
 "classRenderDataFish.html#ac7f6af7ad3eb7691ca5965ce55145de2":[1,0,1089,0],
 "classRenderDataHalfBlock.html":[1,0,1090],
-"classRenderDataHalfBlock.html#a371da5ec4225c617d4c57d2e50f158fe":[1,0,1090,1],
-"classRenderDataHalfBlock.html#a7a03fc5390299035bf7c9343c1c668e9":[1,0,1090,0],
-"classRenderDataHalfBlock.html#a9df69a1bcd9ab40ed62b2b4553e260b4":[1,0,1090,2],
-"classRenderDataLiquid.html":[1,0,1091],
-"classRenderDataLiquid.html#a3831e6fde42e3c23b753595b40653de7":[1,0,1091,2],
-"classRenderDataLiquid.html#a933fa44bae587a8f82542ef99c8f22a3":[1,0,1091,3],
-"classRenderDataLiquid.html#ad622da7147042fb25f92c7ad2e88373c":[1,0,1091,1],
-"classRenderDataLiquid.html#addf6fded813cd248bbc8d38cdd02f7be":[1,0,1091,4],
-"classRenderDataLiquid.html#ae093df1b791413fb7560d3fca2ea73ba":[1,0,1091,0],
-"classRenderDataLiquid.html#ae093df1b791413fb7560d3fca2ea73baa5635bf596d97c1c2e7afe481ed060774":[1,0,1091,0,0]
+"classRenderDataHalfBlock.html#a371da5ec4225c617d4c57d2e50f158fe":[1,0,1090,1]
 };

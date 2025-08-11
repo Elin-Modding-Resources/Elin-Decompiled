@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1802,0,0],
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fcac759964c35a97cb57dd977f4a9553ad4":[2,0,0,1802,0,4],
 "TreasureType_8cs_source.html":[2,0,0,1802],
 "Tutorial_8cs.html":[2,0,0,1803],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da20f00ebb6633254ae9a2926e07b6cd92":[2,0,0,2,0,0,10,0,74],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da21329a241a132787730ca3905c535246":[2,0,0,2,0,0,10,0,67],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da217326c89b6b334e88a6f746bbdf8a26":[2,0,0,2,0,0,10,0,108],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da228abf2d6d864ea8ba42a2c280cc0cca":[2,0,0,2,0,0,10,0,42],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da249db0eb4b616f59dfef1860bf264eb0":[2,0,0,2,0,0,10,0,16]
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da228abf2d6d864ea8ba42a2c280cc0cca":[2,0,0,2,0,0,10,0,42]
 };

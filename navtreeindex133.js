@@ -1,5 +1,15 @@
 var NAVTREEINDEX133 =
 {
+"classWidgetSideScreen.html#ade489234bc59543e5eac461867eb6fd3":[1,0,2039,12],
+"classWidgetSideScreen.html#aeeb3c4f3b49d6123b2ea81cdf7668638":[1,0,2039,7],
+"classWidgetSideScreen_1_1Extra.html":[1,0,2039,0],
+"classWidgetSideScreen_1_1Extra.html#a69e71c3539287ccf5693a7e897396fb5":[1,0,2039,0,1],
+"classWidgetSideScreen_1_1Extra.html#ab04fdeb4e944166912c7bd95ed4f183d":[1,0,2039,0,5],
+"classWidgetSideScreen_1_1Extra.html#abbaf56aec2cdf848e3642f29a428c5e9":[1,0,2039,0,0],
+"classWidgetSideScreen_1_1Extra.html#abbfdde4db274d9dfee49df874b23d1a1":[1,0,2039,0,3],
+"classWidgetSideScreen_1_1Extra.html#af3c4515bfd3a0fe9a01b49eac71528d3":[1,0,2039,0,4],
+"classWidgetSideScreen_1_1Extra.html#afc8e5944ef834eb9149236f8f39416a8":[1,0,2039,0,2],
+"classWidgetStats.html":[1,0,2040],
 "classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46":[1,0,2040,4],
 "classWidgetStats.html#a49133be2c98c939d6fb1dc3b6f114a04":[1,0,2040,3],
 "classWidgetStats.html#a644187cb9a03c4bd6c93a12e658fbb1b":[1,0,2040,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX133 =
 "classWindow.html#a722b6937308e63207318d561c181387c":[1,0,2048,107],
 "classWindow.html#a73c5162d8da3d7bc079fa1d05baf0398":[1,0,2048,84],
 "classWindow.html#a7404939441e7f91d5e8b71395a1733cd":[1,0,2048,43],
-"classWindow.html#a763214ec199dea27f052095b689bcf6b":[1,0,2048,8],
-"classWindow.html#a76455269eb10263f3435ccaf5c99ad73":[1,0,2048,25],
-"classWindow.html#a765e91461cb34851a80fc0ee4ff1b3e2":[1,0,2048,82],
-"classWindow.html#a7874d24e5702a3b21de1a1cb13b261b0":[1,0,2048,12],
-"classWindow.html#a78f7f2070ecfe48b3082d0a84efd5a2d":[1,0,2048,66],
-"classWindow.html#a793bbd4e9712eab07f79209c1152b4cd":[1,0,2048,29],
-"classWindow.html#a7aac963f7513befc6809d1e12ded77e0":[1,0,2048,80],
-"classWindow.html#a7d9e04198469fa5d473e6522bf430a3a":[1,0,2048,37],
-"classWindow.html#a8415d6fd07f9378568cb399e174e1d75":[1,0,2048,28],
-"classWindow.html#a85adbb4cbce1de4365d1fb226dfd5f1b":[1,0,2048,21],
-"classWindow.html#a8ae221837adaa7da4453c8928c9b78e1":[1,0,2048,89]
+"classWindow.html#a763214ec199dea27f052095b689bcf6b":[1,0,2048,8]
 };

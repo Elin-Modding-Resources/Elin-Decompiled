@@ -247,7 +247,7 @@ var searchData=
   ['tryshowhelp_244',['TryShowHelp',['../classELayer.html#a3f7cd1367b4c92a565a52b7f9c1b28d6',1,'ELayer']]],
   ['tryshowhint_245',['TryShowHint',['../classELayer.html#ababa7d9213510a2b674c0a395e569a12',1,'ELayer']]],
   ['tryshowtip_246',['TryShowTip',['../classUIButton.html#af235c51f6c1cf671bb71bbdd7567668c',1,'UIButton']]],
-  ['tryshowtip_3c_20t_20_3e_247',['TryShowTip&lt; T &gt;',['../classUIButton.html#a1d2424ee615466342224fbd9e03568fe',1,'UIButton']]],
+  ['tryshowtip_3c_20t_20_3e_247',['TryShowTip&lt; T &gt;',['../classUIButton.html#ae926d1f5cdef87cabc2ed8f53235b297',1,'UIButton']]],
   ['tryshowwidgetmenu_248',['TryShowWidgetMenu',['../classActionMode.html#a419b6348a87f40c0f56e3af1bfb389b0',1,'ActionMode']]],
   ['trysmoothpick_249',['TrySmoothPick',['../classMap.html#a28078ccefdbe996cd56f515b75f612aa',1,'Map.TrySmoothPick(Cell cell, Thing t, Chara c)'],['../classMap.html#a0470e8e5e289ed3a59c81a3b7adc5d20',1,'Map.TrySmoothPick(Point p, Thing t, Chara c)']]],
   ['tryspawnfollower_250',['TrySpawnFollower',['../classZone.html#ad2f95299f7ec93a2fa13719c78795590',1,'Zone']]],

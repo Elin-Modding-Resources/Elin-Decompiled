@@ -18,6 +18,7 @@ var classCINT =
     [ "dateLivestock", "classCINT.html#ac7f0b2503185d7f16b86741ff46a84cf", null ],
     [ "dateNews", "classCINT.html#a3d9e8582afc590eed158e0f6fca22b67", null ],
     [ "dateNextExpedition", "classCINT.html#ab068770e02c84e0c84e7b38ef1852a79", null ],
+    [ "dateSpecialSummon", "classCINT.html#a7ec666243739276e5928ed58843c1a7c", null ],
     [ "dateSteal", "classCINT.html#a4603db49c8142027ff6d1207a1cae002", null ],
     [ "dateStockExpire", "classCINT.html#a48c4150592597cb407c923ecc434b0b9", null ],
     [ "daysWithGod", "classCINT.html#a8cf115fea61bb75e441890c69d7b6781", null ],

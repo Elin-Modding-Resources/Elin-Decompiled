@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TraitFactionBoard_8cs.html":[2,0,0,1432],
 "TraitFactionBoard_8cs_source.html":[2,0,0,1432],
 "TraitFactory_8cs.html":[2,0,0,1433],
 "TraitFactory_8cs_source.html":[2,0,0,1433],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitMerchantFood_8cs.html":[2,0,0,1556],
 "TraitMerchantFood_8cs_source.html":[2,0,0,1556],
 "TraitMerchantFruit_8cs.html":[2,0,0,1557],
-"TraitMerchantFruit_8cs_source.html":[2,0,0,1557],
-"TraitMerchantFurniture_8cs.html":[2,0,0,1558]
+"TraitMerchantFruit_8cs_source.html":[2,0,0,1557]
 };

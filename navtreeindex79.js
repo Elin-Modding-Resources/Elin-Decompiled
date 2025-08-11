@@ -1,5 +1,14 @@
 var NAVTREEINDEX79 =
 {
+"classLayerTitle.html#a8ddb9c7585d197f7364ea5a7e1b37559":[1,0,821,32],
+"classLayerTitle.html#a917cff661afa96a7d4a6740dea5df805":[1,0,821,13],
+"classLayerTitle.html#a97a98cb92c6b1f6ddbdf9821ec0d5f5e":[1,0,821,30],
+"classLayerTitle.html#a9d68f0a64d26b07f0bd9ad0eaf92c3a3":[1,0,821,12],
+"classLayerTitle.html#a9fb745f372b3eacf6c58e1eaf94aded5":[1,0,821,25],
+"classLayerTitle.html#aa39b845d9aa388d36014981169e51ef9":[1,0,821,28],
+"classLayerTitle.html#aab8288dccaee695c2b7d019295c9efd8":[1,0,821,21],
+"classLayerTitle.html#aaf2f0d7bae6d928181aa9b634daf21f0":[1,0,821,3],
+"classLayerTitle.html#ab30b4f05ae075c1c0e033488b76e74b1":[1,0,821,34],
 "classLayerTitle.html#ab5926caead0fd5d9f966a68f4ffc09d1":[1,0,821,17],
 "classLayerTitle.html#abafd0a282c5b7aff1457c18d7bd0f975":[1,0,821,23],
 "classLayerTitle.html#ac01a2be65441ca92ba1b0240cef9c0bf":[1,0,821,26],
@@ -240,14 +249,5 @@ var NAVTREEINDEX79 =
 "classListPeopleBed.html#a480712d3223f934f305dcbcc9a940762":[1,0,837,4],
 "classListPeopleBed.html#aaa5e1fe02580aa964273a53cb22df1f7":[1,0,837,2],
 "classListPeopleBed.html#aaedab255ec9850dd3ae7978ac3b15323":[1,0,837,1],
-"classListPeopleBed.html#afe9c7702ec24c95eda2879754860a2e2":[1,0,837,0],
-"classListPeopleBuySlave.html":[1,0,838],
-"classListPeopleBuySlave.html#a1bd7a31eebc142907da48b950a19677a":[1,0,838,3],
-"classListPeopleBuySlave.html#a39f53208f122137fdd53dd14d96ec64f":[1,0,838,6],
-"classListPeopleBuySlave.html#a554213c5b956d9ca92f0216c7d681378":[1,0,838,0],
-"classListPeopleBuySlave.html#a62010b79805e89340ef0f8e050095d2b":[1,0,838,4],
-"classListPeopleBuySlave.html#a699c96c76204c9085ab90de54148b4d5":[1,0,838,1],
-"classListPeopleBuySlave.html#a711cc16f71a9e52f4a69738dbe6668ec":[1,0,838,2],
-"classListPeopleBuySlave.html#a844e35be5ae76455aee62971525ff6f0":[1,0,838,7],
-"classListPeopleBuySlave.html#a8d34614f07357673f98476c844f0ecd4":[1,0,838,5]
+"classListPeopleBed.html#afe9c7702ec24c95eda2879754860a2e2":[1,0,837,0]
 };

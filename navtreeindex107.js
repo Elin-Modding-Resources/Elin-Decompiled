@@ -1,5 +1,13 @@
 var NAVTREEINDEX107 =
 {
+"classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714":[1,0,1231,5],
+"classStanceFury.html":[1,0,1232],
+"classStanceIai.html":[1,0,1233],
+"classStanceManaCost.html":[1,0,1234],
+"classStanceSongSleep.html":[1,0,1235],
+"classStanceSongSleep.html#a318d7f7de1e04b2b1f0cc9c27e4d148a":[1,0,1235,0],
+"classStanceSongSleep.html#ad14562717e3ec1e02a9b91e790c47590":[1,0,1235,1],
+"classStanceTaunt.html":[1,0,1236],
 "classStats.html":[1,0,1237],
 "classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1237,17],
 "classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e":[1,0,1237,18],
@@ -241,13 +249,5 @@ var NAVTREEINDEX107 =
 "classTCSimpleText.html#adae167cb7636a53d8d453f4e321d3510":[1,0,1301,0],
 "classTCSimpleText.html#ae2827226ab8c3357e4160a15527eaa7d":[1,0,1301,4],
 "classTCState.html":[1,0,1302],
-"classTCState.html#a06ff5568bd369758a6f0340471465c97":[1,0,1302,5],
-"classTCState.html#a096227484931fbee83ade7fe2fcd7ac9":[1,0,1302,0],
-"classTCState.html#a2460576632f8133bfa12fe0dfef267df":[1,0,1302,2],
-"classTCState.html#a6ed5c2399593835bc1d473ad32b33af2":[1,0,1302,3],
-"classTCState.html#aa634bb2c7aa235fe49d1ca4fed2e74a8":[1,0,1302,1],
-"classTCState.html#ab8f9ea1d27ac117fc09f1d692e2f7602":[1,0,1302,4],
-"classTCState.html#ae0fc3788169c15d791921e42262ed557":[1,0,1302,6],
-"classTCText.html":[1,0,1303],
-"classTCText.html#a199a8c0ded87c7829836d203dd736b34":[1,0,1303,2]
+"classTCState.html#a06ff5568bd369758a6f0340471465c97":[1,0,1302,5]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX98 =
 {
+"classSPELL.html#ad58e5d1ce16c7003ddf700846a53eba1":[1,0,1222,78],
+"classSPELL.html#ad5b2fadf856fd28b1ac6a10eab95a80a":[1,0,1222,77],
+"classSPELL.html#ad60467d6eee60f6f3ea0cfc40d81ba6b":[1,0,1222,173],
+"classSPELL.html#ad73800969b9a93a951b1afb47dc50b15":[1,0,1222,183],
+"classSPELL.html#ad835012077bf78686acfce86ac5fbfe1":[1,0,1222,141],
+"classSPELL.html#ad927205e4392454d4cbc22d0d2fed34e":[1,0,1222,17],
+"classSPELL.html#ad94ae86987fe776e685210ec96729173":[1,0,1222,13],
+"classSPELL.html#adad38cd09387943a33fe90ee97036b2e":[1,0,1222,227],
+"classSPELL.html#adda143869e9ae482d8d13b24be22cb13":[1,0,1222,42],
 "classSPELL.html#ade5d29e5404e9d3cf9ac946bc2521598":[1,0,1222,115],
 "classSPELL.html#ae10a7db1c40c0f80ac58575fd80ddce8":[1,0,1222,0],
 "classSPELL.html#ae141d504e657366585c9742d34df60f3":[1,0,1222,107],
@@ -240,14 +249,5 @@ var NAVTREEINDEX98 =
 "classSearchContext_1_1Item.html#a81dbd84bb2fbb80a5f304db7cba582a3":[1,0,1128,0,3],
 "classSeason.html":[1,0,1129],
 "classSeason.html#a02520268f5f92417c8508b9dfb5314a3":[1,0,1129,7],
-"classSeason.html#a06fddd232fec9ebacd593ff9fb6b89d3":[1,0,1129,8],
-"classSeason.html#a8cd7bf45051abb2c2d6cfb42f0737820":[1,0,1129,2],
-"classSeason.html#a90cbed8557a1de12faccddb80c420114":[1,0,1129,1],
-"classSeason.html#aae4896ebd6d48fd349ca7c3b02612a2f":[1,0,1129,4],
-"classSeason.html#ab54862eacc1a270ce1f3f9525485d5d0":[1,0,1129,6],
-"classSeason.html#abc82df0e0dce55ca5520c23edd9bfea5":[1,0,1129,10],
-"classSeason.html#abeaf17fabb06e6a4c914cebcd8b7006c":[1,0,1129,9],
-"classSeason.html#ac4c15861571bcdbba9bc47bcf73d463b":[1,0,1129,5],
-"classSeason.html#adbef9ae5c84accd448d4d3bcb6100173":[1,0,1129,0],
-"classSeason.html#ae7038e9fba02028c9941f1f8f6170d91":[1,0,1129,3]
+"classSeason.html#a06fddd232fec9ebacd593ff9fb6b89d3":[1,0,1129,8]
 };

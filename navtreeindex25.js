@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classAI__Idle.html#afa5679332200dd300cdd9974178e71cba7a1920d61156abc05a60135aefe8bc67":[1,0,81,0,0],
+"classAI__LeaveMap.html":[1,0,82],
 "classAI__LeaveMap.html#a79cdc545112df8e35e5b62b3007f0d97":[1,0,82,0],
 "classAI__Massage.html":[1,0,83],
 "classAI__Massage.html#a2e3c640874ac8c2e3ac048eba4361ddd":[1,0,83,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classAM__Adv.html#a9c634672e2213ff2222758504dc0faa2":[1,0,121,59],
 "classAM__Adv.html#aaa03a6ac54dc547d8e346279bb26cf52":[1,0,121,23],
 "classAM__Adv.html#aaa5de71ddd9f01f28ab9c7fafacd526a":[1,0,121,38],
-"classAM__Adv.html#aaabd441e4b69e20ef37afd0ca5d791b9":[1,0,121,24],
-"classAM__Adv.html#aaec9dec8db78b17c40cdcebb76691c70":[1,0,121,18],
-"classAM__Adv.html#ab35d9513952ebb2a37ae8e0f19ab16fa":[1,0,121,31]
+"classAM__Adv.html#aaabd441e4b69e20ef37afd0ca5d791b9":[1,0,121,24]
 };
