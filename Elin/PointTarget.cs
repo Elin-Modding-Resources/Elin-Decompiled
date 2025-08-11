@@ -161,7 +161,7 @@ public class PointTarget : EClass
 			}
 			else
 			{
-				if ((!EClass.pc.hasTelepathy || !c.Chara.race.visibleWithTelepathy) && c.isHidden && !EClass.pc.canSeeInvisible)
+				if ((!EClass.pc.hasTelepathy || !c.Chara.visibleWithTelepathy) && c.isHidden && !EClass.pc.canSeeInvisible)
 				{
 					return true;
 				}

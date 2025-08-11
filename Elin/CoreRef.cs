@@ -326,6 +326,12 @@ public class CoreRef : ScriptableObject
 		public SourcePref pcc;
 
 		public SourcePref replacer1;
+
+		public SourcePref blockFence;
+
+		public SourcePref blockStairs;
+
+		public SourcePref blockWall;
 	}
 
 	public Biomes biomes;

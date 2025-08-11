@@ -6,7 +6,7 @@ public class TraitToolHammerStrip : TraitTool
 	{
 		p.pos.Things.ForEach(delegate(Thing t)
 		{
-			if (t.category.tag.Contains("enc") && t.encLV > 0)
+			if (!t.isMasked && !t.isHidden && t.category.tag.Contains("enc") && t.encLV > 0)
 			{
 				p.TrySetAct("actHammerFurniture".lang(t.Name), delegate
 				{

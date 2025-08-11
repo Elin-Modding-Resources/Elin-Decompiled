@@ -2339,7 +2339,7 @@ public class Player : EClass
 
 	public bool CanSee(Chara c)
 	{
-		if (EClass.pc.hasTelepathy && c.race.visibleWithTelepathy)
+		if (EClass.pc.hasTelepathy && c.visibleWithTelepathy)
 		{
 			return true;
 		}

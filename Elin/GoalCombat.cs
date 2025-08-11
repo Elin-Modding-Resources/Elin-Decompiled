@@ -771,6 +771,13 @@ public class GoalCombat : Goal
 				}
 				num = tactics.P_Summon;
 				break;
+			case "summonSpecial":
+				if (owner.GetInt(70) > EClass.world.date.GetRaw())
+				{
+					continue;
+				}
+				num = 1000;
+				break;
 			case "suicide":
 				if (owner.isBerserk || owner.IsPC || owner.HasCondition<ConWet>())
 				{

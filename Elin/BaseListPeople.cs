@@ -199,16 +199,16 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			{
 				for (int i = 0; i < h.source.things.Length; i += 2)
 				{
-					int num = Mathf.Max(1, h.source.things[i + 1].ToInt() * efficiency * a.homeBranch.GetProductBonus(a) / 100 / 1000);
+					float num = Mathf.Max(1f, (long)h.source.things[i + 1].ToInt() * (long)efficiency * a.homeBranch.GetProductBonus(a) / 100 / 1000);
 					string text3 = h.source.things[i];
 					string s = (text3.StartsWith("#") ? EClass.sources.categories.map[text3.Replace("#", "")].GetName() : EClass.sources.cards.map[h.source.things[i]].GetName());
 					if (h.source.alias == "Breeding")
 					{
 						num = a.race.breeder * 100 / 2500;
-						num = num * ((!(text3 == "_egg")) ? 1 : 2) / 3;
-						if (a.race.breeder > 0 && num <= 0)
+						num = num * (float)((!(text3 == "_egg")) ? 1 : 2) / 3f;
+						if (a.race.breeder > 0 && num <= 0f)
 						{
-							num = 1;
+							num = 1f;
 						}
 					}
 					t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num.ToString() ?? ""));
@@ -219,7 +219,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					{
 						SourceElement.Row row = EClass.sources.elements.map[h.source.elements[j]];
 						int num2 = h.source.elements[j + 1];
-						int num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? (num2 / 10) : Mathf.Max(0, num2 * h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
+						float num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? ((float)(num2 / 10)) : Mathf.Max(0f, (long)num2 * (long)h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
 						t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
 					}
 				}

@@ -94,8 +94,6 @@ public class SourceRace : SourceDataString<SourceRace.Row>
 
 		public string detail;
 
-		public bool visibleWithTelepathy;
-
 		public Dictionary<int, int> elementMap;
 
 		[NonSerialized]
@@ -231,7 +229,6 @@ public class SourceRace : SourceDataString<SourceRace.Row>
 			dictionary[301] = 1;
 			dictionary[306] = 1;
 			row.elementMap = Element.GetElementMap(row.elements, dictionary);
-			row.visibleWithTelepathy = !row.IsUndead && !row.IsMachine && !row.IsHorror;
 		}
 	}
 }

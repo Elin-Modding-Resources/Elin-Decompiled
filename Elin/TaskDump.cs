@@ -123,7 +123,7 @@ public class TaskDump : Task
 		}
 		static int SortVal(Thing t)
 		{
-			return t.GetWindowSaveData()?.priority ?? 0;
+			return ((t.trait is TraitShippingChest) ? EClass.game.cards.container_shipping.GetWindowSaveData() : t.GetWindowSaveData())?.priority ?? 0;
 		}
 	}
 

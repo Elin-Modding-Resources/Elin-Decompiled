@@ -10,6 +10,8 @@ public class TraitTent : TraitNewZone
 
 	public override bool CanBeHeld => true;
 
+	public override bool CanBeShipped => false;
+
 	public override int UseDist => 1;
 
 	public override void OnChangePlaceState(PlaceState state)

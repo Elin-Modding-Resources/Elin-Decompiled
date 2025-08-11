@@ -87,7 +87,7 @@ public class LayerInfo : ELayer
 		base.OnKill();
 		TweenUtil.Tween(0.2f, delegate
 		{
-			UIButton.TryShowTip<UIButton>(null, highlight: true, ignoreWhenRightClick: false);
+			UIButton.TryShowTip<UIButton>();
 		});
 	}
 

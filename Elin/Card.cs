@@ -6935,7 +6935,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				case "hammer_strip":
 					return 5000;
 				case "helm_chef":
-					return 40000;
+					return 25000;
 				}
 				break;
 			case CurrencyType.Plat:

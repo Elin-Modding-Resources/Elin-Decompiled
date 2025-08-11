@@ -50,6 +50,22 @@ public class Thing : Card
 	{
 		get
 		{
+			if (trait is TraitFakeBlock)
+			{
+				TileType tileType = EClass.sources.blocks.map[base.refVal].tileType;
+				if (tileType is TileTypeFence)
+				{
+					return EClass.core.refs.prefs.blockFence;
+				}
+				if (tileType is TileTypeStairs)
+				{
+					return EClass.core.refs.prefs.blockStairs;
+				}
+				if (tileType is TileTypeWall)
+				{
+					return EClass.core.refs.prefs.blockWall;
+				}
+			}
 			if (source.origin == null || source.pref.UsePref)
 			{
 				return source.pref;

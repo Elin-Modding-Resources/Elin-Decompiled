@@ -33,6 +33,7 @@ public class TraitBook : TraitScroll
 		{
 			owner.SetStr(53, BookList.GetRandomItem(IdCat).id);
 		}
+		owner.idSkin = Item.skin;
 	}
 
 	public override void OnImportMap()

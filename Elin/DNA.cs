@@ -601,10 +601,10 @@ public class DNA : EClass
 			if (num3 >= 0)
 			{
 				text2 = text2 + "[" + "*".Repeat(Mathf.Clamp(num3, 1, 5)) + ((num3 > 5) ? "+" : "") + "]";
-			}
-			if (EClass.debug.showExtra)
-			{
-				text2 = text2 + " " + element.Value;
+				if (EClass.debug.showExtra)
+				{
+					text2 = text2 + " (" + element.Value + ")";
+				}
 			}
 			n.AddText("gene_info".lang(element.Name.ToTitleCase(wholeText: true), text2), color2);
 		}

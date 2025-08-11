@@ -147,6 +147,8 @@ public class Chara : Card, IPathfindWalker
 
 	public bool wasInWater;
 
+	public bool visibleWithTelepathy;
+
 	public SpriteReplacer spriteReplacer;
 
 	private Faction _faction;
@@ -1207,7 +1209,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (c.isChara)
 		{
-			if (hasTelepathy && c.Chara.race.visibleWithTelepathy)
+			if (hasTelepathy && c.Chara.visibleWithTelepathy)
 			{
 				return true;
 			}
@@ -1229,7 +1231,7 @@ public class Chara : Card, IPathfindWalker
 
 	public bool CanSeeLos(Card c, int dist = -1)
 	{
-		if (c.isHidden && !canSeeInvisible && (!hasTelepathy || !c.Chara.race.visibleWithTelepathy))
+		if (c.isHidden && !canSeeInvisible && (!hasTelepathy || !c.Chara.visibleWithTelepathy))
 		{
 			return false;
 		}
@@ -1685,7 +1687,12 @@ public class Chara : Card, IPathfindWalker
 
 	public void Refresh(bool calledRecursive = false)
 	{
-		if (ride != null)
+		if (source == null)
+		{
+			Debug.LogError("source is null");
+			SetSource();
+		}
+		if (ride != null && ride.source != null)
 		{
 			ride.Refresh(calledRecursive: true);
 		}
@@ -1702,8 +1709,9 @@ public class Chara : Card, IPathfindWalker
 		{
 			base.isHidden = false;
 		}
+		visibleWithTelepathy = !IsUndead && !IsMachine && !IsHorror;
 		SetDirtySpeed();
-		if (host != null && !calledRecursive)
+		if (host != null && !calledRecursive && host.source != null)
 		{
 			host.Refresh(calledRecursive: true);
 		}
@@ -2261,6 +2269,18 @@ public class Chara : Card, IPathfindWalker
 		base.c_minionType = type;
 		master = _master;
 		Refresh();
+	}
+
+	public bool HasMinion(string id)
+	{
+		foreach (Chara chara in EClass._map.charas)
+		{
+			if (chara.c_uidMaster == base.uid)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void ReleaseMinion()
@@ -5173,6 +5193,7 @@ public class Chara : Card, IPathfindWalker
 		enemy = null;
 		_cooldowns = null;
 		base.isSale = false;
+		SetInt(70);
 		EClass._map.props.sales.Remove(this);
 		Cure(CureType.Death);
 		SetAI(new NoGoal());

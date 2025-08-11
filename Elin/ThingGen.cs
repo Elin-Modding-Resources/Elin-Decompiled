@@ -164,6 +164,7 @@ public class ThingGen : CardGen
 	{
 		Thing thing = Create("book").SetNum(num);
 		thing.SetStr(53, id);
+		thing.idSkin = (thing.trait as TraitBook).Item.skin;
 		return thing;
 	}
 

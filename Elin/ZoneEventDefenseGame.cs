@@ -85,6 +85,7 @@ public class ZoneEventDefenseGame : ZoneEventQuest
 		turns = 0;
 		EClass._zone._dangerLv += ((EClass._zone.DangerLv >= 100) ? (EClass._zone.DangerLv / 100 * 5 + 5) : 5);
 		SE.Play("warhorn");
+		Msg.Say("warhorn");
 		Msg.Say("defense_wave", wave.ToString() ?? "", EClass._zone.DangerLv.ToString() ?? "");
 		Spawn(2 + base.quest.difficulty + add);
 		AggroEnemy();
@@ -146,6 +147,7 @@ public class ZoneEventDefenseGame : ZoneEventQuest
 	public void Horn_Retreat()
 	{
 		SE.Play("warhorn");
+		Msg.Say("warhorn");
 		Msg.Say("defense_retreat");
 		retreated = true;
 		instance.status = ZoneInstance.Status.Success;
@@ -155,6 +157,7 @@ public class ZoneEventDefenseGame : ZoneEventQuest
 	public void Horn_Ally()
 	{
 		SE.Play("warhorn");
+		Msg.Say("warhorn");
 		ActEffect.ProcAt(EffectId.Summon, 100, BlessedState.Normal, EClass.pc, EClass.pc, EClass.pc.pos, isNeg: false, new ActRef
 		{
 			n1 = "special_force"

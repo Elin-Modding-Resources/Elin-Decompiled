@@ -215,12 +215,13 @@ public class QuestDeliver : QuestDestZone
 			Thing thing = t.Split(num);
 			bonusMoney += GetBonus(thing);
 			Msg.Say("deliverItem", thing);
-			if (ConsumeGoods)
+			if (ConsumeGoods || c.things.IsFull())
 			{
 				thing.Destroy();
 			}
 			else
 			{
+				thing.isGifted = true;
 				thing = c.Pick(thing);
 				if (c.CanEat(thing))
 				{

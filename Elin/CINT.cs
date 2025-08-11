@@ -106,6 +106,8 @@ public class CINT
 
 	public const int daysWithPC = 67;
 
+	public const int dateSpecialSummon = 70;
+
 	public const int fiamaPet = 100;
 
 	public const int noRestock = 101;

@@ -262,7 +262,7 @@ public class CardRenderer : RenderObject
 			}
 			p.y += pref.y;
 			int shadow = pref.shadow;
-			bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.race.visibleWithTelepathy);
+			bool flag2 = isChara && owner.isHidden && !EClass.pc.canSeeInvisible && (!EClass.pc.hasTelepathy || !owner.Chara.visibleWithTelepathy);
 			if (drawShadow && shadow != 1 && SubPassData.Current.shadow && (!flag2 || owner.IsPC))
 			{
 				bool flag3 = ((!isChara) ? (owner.dir % 2 == 1) : (owner.dir == 1 || owner.dir == 2));

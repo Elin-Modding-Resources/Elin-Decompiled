@@ -96,6 +96,7 @@ public class ActRide : Ability
 		host.SyncRide();
 		t.noMove = false;
 		host.Refresh();
+		WidgetRoster.SetDirty();
 	}
 
 	public static void Unride(Chara host, Chara mount, bool talk = true)
@@ -136,5 +137,6 @@ public class ActRide : Ability
 		{
 			chara.MoveImmediate(randomPoint);
 		}
+		WidgetRoster.SetDirty();
 	}
 }

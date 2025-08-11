@@ -932,6 +932,7 @@ public class CoreDebug : EScriptable
 			EClass.pc.Pick(ThingGen.CreateSpellbook(8550));
 			EClass.pc.Pick(ThingGen.CreatePotion(8550));
 			EClass.pc.Pick(ThingGen.CreateSpellbook(9004));
+			EClass.pc.Pick(ThingGen.CreateRedBook("advweek_1"));
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{

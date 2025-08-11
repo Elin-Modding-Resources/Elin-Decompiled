@@ -332,12 +332,12 @@ public class CharaRenderer : CardRenderer
 		}
 		RenderObject.currentParam.liquidLv = 0;
 		RenderObject.currentParam.x += 0.01f * (float)pref.equipX;
-		RenderObject.currentParam.y += num + 0.01f * (float)pref.equipY;
+		RenderObject.currentParam.y += num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
 		RenderObject.currentParam.z -= pref.hatY;
 		RenderObject.currentParam.tile = cardRow._tiles[owner.uid % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
 		cardRow.renderData.Draw(RenderObject.currentParam);
 		RenderObject.currentParam.x -= 0.01f * (float)pref.equipX;
-		RenderObject.currentParam.y -= num + 0.01f * (float)pref.equipY;
+		RenderObject.currentParam.y -= num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
 		RenderObject.currentParam.z += pref.hatY;
 		RenderObject.currentParam.liquidLv = liquidLv;
 	}

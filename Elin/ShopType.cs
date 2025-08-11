@@ -48,5 +48,6 @@ public enum ShopType
 	Plat,
 	LoytelMart,
 	StrangeGirl,
-	Sweet
+	Sweet,
+	Moyer
 }

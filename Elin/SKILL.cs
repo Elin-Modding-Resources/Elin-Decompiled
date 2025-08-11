@@ -58,7 +58,7 @@ public class SKILL
 
 	public const int weightlifting = 207;
 
-	public const int weaponStaff = 103;
+	public const int weaponAxe = 102;
 
 	public const int weaponDagger = 107;
 
@@ -104,7 +104,7 @@ public class SKILL
 
 	public const int weaponBow = 104;
 
-	public const int weaponAxe = 102;
+	public const int weaponStaff = 103;
 
 	public const int weaponSword = 101;
 
@@ -270,10 +270,10 @@ public class SKILL
 	{
 		50, 109, 110, 111, 120, 122, 123, 130, 132, 245,
 		242, 241, 240, 237, 235, 230, 227, 226, 225, 220,
-		210, 200, 152, 151, 150, 135, 134, 131, 207, 103,
+		210, 200, 152, 151, 150, 135, 134, 131, 207, 102,
 		107, 71, 70, 68, 67, 66, 65, 72, 64, 61,
 		60, 57, 56, 55, 51, 62, 73, 74, 75, 106,
-		105, 104, 102, 101, 100, 93, 92, 91, 90, 80,
+		105, 104, 103, 101, 100, 93, 92, 91, 90, 80,
 		79, 78, 77, 76, 108, 250, 133, 256, 916, 917,
 		918, 919, 920, 921, 922, 923, 924, 925, 926, 950,
 		951, 952, 915, 953, 956, 957, 958, 959, 960, 961,

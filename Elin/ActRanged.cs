@@ -108,7 +108,8 @@ public class ActRanged : ActThrow
 		int chaser = GetWeaponEnc(620);
 		if (num > 0)
 		{
-			numFire += num / 10 + ((num % 10 > EClass.rnd(10)) ? 1 : 0);
+			numFire += Mathf.Min(num / 10 + ((num % 10 > EClass.rnd(10)) ? 1 : 0), 10);
+			numFireWithoutDamageLoss += num / 100 + ((num % 100 > EClass.rnd(100)) ? 1 : 0);
 		}
 		numFire += Act.CC.Evalue(1652);
 		int num2 = numFire;
