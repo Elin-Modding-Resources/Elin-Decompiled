@@ -13,6 +13,8 @@ public class BookList
 		public string id;
 
 		public int chance = 100;
+
+		public int skin;
 	}
 
 	public static Dictionary<string, Dictionary<string, Item>> dict;
@@ -39,6 +41,7 @@ public class BookList
 						title = array[0],
 						author = ((array.Length >= 2 && !array[1].IsEmpty()) ? "nameAuthor".lang(array[1]) : "unknownAuthor".lang()),
 						chance = ((array.Length >= 3) ? array[2].ToInt() : 100),
+						skin = ((array.Length >= 4) ? array[3].ToInt() : 0),
 						id = fileInfo.Name.Replace(fileInfo.Extension, "")
 					};
 					dictionary.Add(item.id, item);

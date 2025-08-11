@@ -780,28 +780,28 @@ public class UIButton : Button, IUISkin, IPointerDownHandler, IEventSystemHandle
 		TryShowTip<UIButton>(root, highlight, ignoreWhenRightClick);
 	}
 
-	public static void TryShowTip<T>(Transform root = null, bool highlight = true, bool ignoreWhenRightClick = true) where T : UIButton
+	public static void TryShowTip<T>(Transform root = null, bool highlight = true, bool ignoreWhenRightClick = false) where T : UIButton
 	{
 		actionTooltip = delegate
 		{
 			InputModuleEX.UpdateEventData();
 			T componentOf = InputModuleEX.GetComponentOf<T>();
-			if ((bool)componentOf && componentOf.tooltip.enable)
+			if (!componentOf || !componentOf.tooltip.enable)
 			{
 				TooltipManager.Instance.HideTooltips();
-				if ((bool)componentOf && (root == null || componentOf.transform.IsChildOf(root)))
+			}
+			else if ((bool)componentOf && (root == null || componentOf.transform.IsChildOf(root)))
+			{
+				if (highlight)
 				{
-					if (highlight)
-					{
-						componentOf.DoHighlightTransition();
-					}
-					try
-					{
-						componentOf.ShowTooltipForced(ignoreWhenRightClick);
-					}
-					catch
-					{
-					}
+					componentOf.DoHighlightTransition();
+				}
+				try
+				{
+					TooltipManager.Instance.ShowTooltip(componentOf.tooltip, componentOf.transform);
+				}
+				catch
+				{
 				}
 			}
 		};
