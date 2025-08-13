@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"InvOwnerIdentify_8cs.html":[2,0,0,657],
 "InvOwnerIdentify_8cs_source.html":[2,0,0,657],
 "InvOwnerLighten_8cs.html":[2,0,0,658],
 "InvOwnerLighten_8cs_source.html":[2,0,0,658],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "Level_8cs.html":[2,0,0,773],
 "Level_8cs_source.html":[2,0,0,773],
 "LightControl2_8cs.html":[2,0,0,775],
-"LightControl2_8cs_source.html":[2,0,0,775],
-"LightControl_8cs.html":[2,0,0,774]
+"LightControl2_8cs_source.html":[2,0,0,775]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"Glitch_8cs.html":[2,0,0,3,0,2],
 "Glitch_8cs_source.html":[2,0,0,3,0,2],
 "GlobalData_8cs.html":[2,0,0,503],
 "GlobalData_8cs_source.html":[2,0,0,503],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a4a3a515130bad36c0ab6d1fc4c981cea":[2,0,0,2,0,0,3,0,14],
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a5f420382b5c696680826073fa18d59e5":[2,0,0,2,0,0,3,0,1],
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a63fd72de043ccc2432da6f55155940b6":[2,0,0,2,0,0,3,0,0],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1a79a1f16877ad1b3fee808033de2458d4":[2,0,0,2,0,0,3,0,4],
-"HookType_8cs.html#a627533690054d981042e076f04aa24e1a8d3279204d5b528977c733ec4e9ad7b1":[2,0,0,2,0,0,3,0,11]
+"HookType_8cs.html#a627533690054d981042e076f04aa24e1a79a1f16877ad1b3fee808033de2458d4":[2,0,0,2,0,0,3,0,4]
 };

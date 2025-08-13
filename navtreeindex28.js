@@ -1,5 +1,10 @@
 var NAVTREEINDEX28 =
 {
+"classAM__Visibility.html#aa7f8d5cdbcef7e00cda89d6a083e39e8":[1,0,161,5],
+"classAM__Visibility.html#af2b7e2ceb84afb7802f11ebb5f905edf":[1,0,161,1],
+"classAbility.html":[1,0,10],
+"classAbility.html#a3a131c464b975844416a8ed95fe6947a":[1,0,10,3],
+"classAbility.html#a4d1577acd36ae40bccf8f1ec33ccebc3":[1,0,10,2],
 "classAbility.html#a4e624bdc3252010fc8b0916f7c6a5cb1":[1,0,10,5],
 "classAbility.html#a89aa95f671cf3573c82d84320f895a8f":[1,0,10,4],
 "classAbility.html#adc0411882ca5c5a75719528a66cbe16e":[1,0,10,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX28 =
 "classActPray.html#afd81a647a671bba5ebfd4bf600301860":[1,0,45,2],
 "classActPray.html#aff54cfcf9f76a2c16db38007a3808d69":[1,0,45,0],
 "classActQuickCraft.html":[1,0,46],
-"classActQuickCraft.html#aad6033f738a9b7850dfe6333c402ef59":[1,0,46,0],
-"classActRanged.html":[1,0,47],
-"classActRanged.html#a49e18d617477d5a0f8c15f144f246cc9":[1,0,47,2],
-"classActRanged.html#a7acc60b2677bb55608c9c3bd22489c26":[1,0,47,6],
-"classActRanged.html#a83a06ed0196067b53fcdf25cd818a736":[1,0,47,4],
-"classActRanged.html#a8c02666044b173d29fbfab2894971150":[1,0,47,7]
+"classActQuickCraft.html#aad6033f738a9b7850dfe6333c402ef59":[1,0,46,0]
 };

@@ -11,6 +11,7 @@ var classCOBJ =
     [ "dna", "classCOBJ.html#a8b0deb434639b3f9a6f941de93fe221b", null ],
     [ "effectData", "classCOBJ.html#aeb743d1c330a94d0125cd15c3eb92b4d", null ],
     [ "houseBoardData", "classCOBJ.html#a03f0d28bb87d65b037b7503873d3f9b2", null ],
+    [ "mixedFoodData", "classCOBJ.html#a85e43c65b427eb184f3008ac0b88b1d6", null ],
     [ "roomPlateData", "classCOBJ.html#a384a447256e96248965b00dbdb5a1cad", null ],
     [ "slaverData", "classCOBJ.html#a3a43855c39f980465356bab93d16c52b", null ],
     [ "socketList", "classCOBJ.html#a8aa320b8ebd598a93a24492399b38fe0", null ],

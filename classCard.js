@@ -335,6 +335,7 @@ var classCard =
     [ "c_lockedHard", "classCard.html#a33c25c8bba209877e82be16945d2e3ca", null ],
     [ "c_lockLv", "classCard.html#a47bf1787110a3285ebb050be305c315e", null ],
     [ "c_minionType", "classCard.html#a060bc04b3db4db0f3fa5afd857e22aff", null ],
+    [ "c_mixedFoodData", "classCard.html#a664f7410a5de12531e64b362db63746c", null ],
     [ "c_note", "classCard.html#a17e901e98e4c975eaebdc821caead9c4", null ],
     [ "c_originalHostility", "classCard.html#a297effbbefc31dffa80664a049e686b6", null ],
     [ "c_priceAdd", "classCard.html#a45c223fa41bae5d81d6d8f812dbe1439", null ],

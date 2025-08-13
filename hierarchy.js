@@ -951,6 +951,7 @@ var hierarchy =
         [ "MeetingMerchant", "classMeetingMerchant.html", null ]
       ] ],
       [ "MeetingManager", "classMeetingManager.html", null ],
+      [ "MixedFoodData", "classMixedFoodData.html", null ],
       [ "ModUtil", "classModUtil.html", null ],
       [ "Msg", "classMsg.html", null ],
       [ "MsgLog", "classMsgLog.html", null ],
@@ -1642,7 +1643,6 @@ var hierarchy =
           [ "TraitFoodFish", "classTraitFoodFish.html", [
             [ "TraitFoodFishSlice", "classTraitFoodFishSlice.html", null ]
           ] ],
-          [ "TraitFoodLunchLove", "classTraitFoodLunchLove.html", null ],
           [ "TraitFoodMeat", "classTraitFoodMeat.html", null ],
           [ "TraitFoodNut", "classTraitFoodNut.html", null ],
           [ "TraitFoodPrepared", "classTraitFoodPrepared.html", [
@@ -1651,7 +1651,10 @@ var hierarchy =
           [ "TraitFoodPreparedPackage", "classTraitFoodPreparedPackage.html", null ],
           [ "TraitFoodSeasoning", "classTraitFoodSeasoning.html", null ],
           [ "TraitFoodTravel", "classTraitFoodTravel.html", null ],
-          [ "TraitFortuneCookie", "classTraitFortuneCookie.html", null ]
+          [ "TraitFortuneCookie", "classTraitFortuneCookie.html", null ],
+          [ "TraitMixedFood", "classTraitMixedFood.html", [
+            [ "TraitLunchLove", "classTraitLunchLove.html", null ]
+          ] ]
         ] ],
         [ "TraitFortuneBall", "classTraitFortuneBall.html", null ],
         [ "TraitGacha", "classTraitGacha.html", null ],
