@@ -1863,6 +1863,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public MixedFoodData c_mixedFoodData
+	{
+		get
+		{
+			return GetObj<MixedFoodData>(18);
+		}
+		set
+		{
+			SetObj(18, value);
+		}
+	}
+
 	public byte[] c_textureData
 	{
 		get
@@ -2034,7 +2046,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			if (rarity >= Rarity.Legendary || trait is TraitAdventurer)
 			{
-				return !IsPCFaction;
+				return !IsPCFactionOrMinion;
 			}
 			return false;
 		}
@@ -5195,6 +5207,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		case "egg_fertilized":
 		case "_meat":
 		case "meat_marble":
+		case "dattamono":
+		case "deadbody":
 		{
 			string text = "c_wilds";
 			if (id == "_meat" || id == "meat_marble")

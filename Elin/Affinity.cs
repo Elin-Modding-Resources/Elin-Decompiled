@@ -62,11 +62,7 @@ public class Affinity : EClass
 
 	public bool CanGiveCard()
 	{
-		if (!EClass.debug.marryAnytime)
-		{
-			return CurrentStage >= Stage.Love;
-		}
-		return true;
+		return CurrentStage >= Stage.Love;
 	}
 
 	public bool CanMarry()
@@ -85,6 +81,27 @@ public class Affinity : EClass
 			return CurrentStage >= Stage.Fond;
 		}
 		return true;
+	}
+
+	public int GetLunchChance()
+	{
+		if (!EClass.debug.enable)
+		{
+			if (CurrentStage < Stage.LoveLoveLove)
+			{
+				if (CurrentStage < Stage.LoveLove)
+				{
+					if (CurrentStage < Stage.Love)
+					{
+						return 0;
+					}
+					return 10;
+				}
+				return 25;
+			}
+			return 50;
+		}
+		return 100;
 	}
 
 	public Sprite GetIcon()

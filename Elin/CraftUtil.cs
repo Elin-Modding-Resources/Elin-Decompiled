@@ -65,7 +65,7 @@ public class CraftUtil : EClass
 		int num = Mathf.Min(EClass.rnd(lv), 50);
 		foreach (Recipe.Ingredient ingredient in recipeSource.GetIngredients())
 		{
-			Thing thing = ThingGen.Create(ingredient.id);
+			Thing thing = ThingGen.Create(ingredient.id).TryMakeRandomItem(lv);
 			TraitSeed.LevelSeed(thing, null, EClass.rnd(lv / 4) + 1);
 			thing.SetEncLv(thing.encLV / 2);
 			if (num > 0 && EClass.rnd(3) == 0)
@@ -85,6 +85,108 @@ public class CraftUtil : EClass
 			{
 				food.elements.Remove(708);
 			}
+		}
+	}
+
+	public static Thing MakeDarkSoup()
+	{
+		Thing thing = ThingGen.Create("soup_dark");
+		for (int i = 0; i < 4 + EClass.rnd(4); i++)
+		{
+			Chara c = EClass._map.charas.RandomItem();
+			AddIngredient(thing, c, GetRandomDarkSoupIngredient(c));
+		}
+		if (!EClass.debug.autoIdentify)
+		{
+			thing.c_IDTState = 1;
+		}
+		return thing;
+	}
+
+	public static Thing GetRandomDarkSoupIngredient(Chara c)
+	{
+		return ThingGen.CreateFromFilter("darksoup", c.LV);
+	}
+
+	public static Thing MakeLoveLunch(Chara c)
+	{
+		Thing thing = ThingGen.Create("lunch_love");
+		thing.MakeRefFrom(c);
+		int num = c.uid + EClass.world.date.year * 10000 + EClass.world.date.month * 100;
+		Rand.SetSeed(num);
+		int num2 = 3 + EClass.rnd(3);
+		if (!EClass.debug.autoIdentify)
+		{
+			thing.c_IDTState = 5;
+		}
+		for (int i = 0; i < num2; i++)
+		{
+			Rand.SetSeed(num + i);
+			AddIngredient(thing, c, GetRandomLoveLunchIngredient(c), writeCrafter: false);
+		}
+		Rand.SetSeed();
+		return thing;
+	}
+
+	public static Thing GetRandomLoveLunchIngredient(Chara c)
+	{
+		Thing thing = null;
+		int lV = c.LV;
+		for (int i = 0; i < 3; i++)
+		{
+			thing = ThingGen.Create("dish", -1, lV + i * 3);
+			if (!thing.HasTag(CTAG.dish_fail))
+			{
+				break;
+			}
+		}
+		MakeDish(thing, lV, c);
+		return thing;
+	}
+
+	public static void AddIngredient(Card product, Chara c, Card ing, bool writeCrafter = true)
+	{
+		if (product.c_mixedFoodData == null)
+		{
+			product.c_mixedFoodData = new MixedFoodData();
+		}
+		product.c_mixedFoodData.texts.Add(ing.Name + (writeCrafter ? "isMixedBy".lang(c.NameSimple) : ""));
+		foreach (Element value in ing.elements.dict.Values)
+		{
+			if (!IsValidTrait(value))
+			{
+				continue;
+			}
+			if (value.IsFoodTraitMain)
+			{
+				int num = value.Value;
+				if (product.id == "lunch_dystopia")
+				{
+					num *= -1;
+				}
+				product.elements.ModBase(value.id, num);
+			}
+			else
+			{
+				int num2 = product.elements.Base(value.id);
+				if ((num2 <= 0 && value.Value < 0 && value.Value < num2) || (value.Value > 0 && value.Value > num2))
+				{
+					product.elements.SetTo(value.id, value.Value);
+				}
+			}
+		}
+		product.elements.ModBase(10, ing.Evalue(10));
+		static bool IsValidTrait(Element e)
+		{
+			if (e.HasTag("noInherit"))
+			{
+				return false;
+			}
+			if (e.IsFoodTrait || e.IsTrait || e.id == 2)
+			{
+				return true;
+			}
+			return false;
 		}
 	}
 

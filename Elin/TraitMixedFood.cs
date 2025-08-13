@@ -1,4 +1,4 @@
-public class TraitFoodLunchLove : TraitFood
+public class TraitMixedFood : TraitFood
 {
 	public override bool CanSearchContent => false;
 

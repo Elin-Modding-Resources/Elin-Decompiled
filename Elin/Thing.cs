@@ -544,62 +544,44 @@ public class Thing : Card
 			{
 				text = id;
 			}
-			if (!isEquipmentOrRangedOrAmmo || !base.IsIdentified || base.rarity < Rarity.Legendary)
+			if (isEquipmentOrRangedOrAmmo && base.IsIdentified && base.rarity >= Rarity.Legendary)
 			{
-				if (source.naming == "m" || (source.naming == "ms" && base.material != source.DefaultMaterial))
+				if (base.rarity != Rarity.Artifact && !base.material.GetTextArray("altName").IsEmpty())
 				{
-					if (isEquipmentOrRangedOrAmmo)
+					text = base.material.GetTextArray("altName")[0] + Lang.space + text;
+				}
+				goto IL_0215;
+			}
+			if (source.naming == "m" || (source.naming == "ms" && base.material != source.DefaultMaterial))
+			{
+				if (isEquipmentOrRangedOrAmmo)
+				{
+					string[] textArray = base.material.GetTextArray("altName");
+					if (textArray != null && textArray.Length >= 2)
 					{
-						string[] textArray = base.material.GetTextArray("altName");
-						if (textArray != null && textArray.Length >= 2)
-						{
-							text = base.material.GetTextArray("altName")[1] + Lang.space + text;
-							goto IL_01f2;
-						}
+						text = base.material.GetTextArray("altName")[1] + Lang.space + text;
+						goto IL_01f2;
 					}
-					text = "_of2".lang(base.material.GetName(), text);
 				}
-				goto IL_01f2;
+				text = "_of2".lang(base.material.GetName(), text);
 			}
-			if (base.rarity != Rarity.Artifact && !base.material.GetTextArray("altName").IsEmpty())
-			{
-				text = base.material.GetTextArray("altName")[0] + Lang.space + text;
-			}
+			goto IL_01f2;
 		}
-		else
+		text = "unknown";
+		string idUnknown = source.GetText("unknown");
+		if (idUnknown.StartsWith("#"))
 		{
-			text = "unknown";
-			string idUnknown = source.GetText("unknown");
-			if (idUnknown.StartsWith("#"))
+			Rand.UseSeed(EClass.game.seed + (trait.CanStack ? sourceCard._index : base.uid) + base.refVal, delegate
 			{
-				Rand.UseSeed(EClass.game.seed + (trait.CanStack ? sourceCard._index : base.uid) + base.refVal, delegate
-				{
-					idUnknown = Lang.GetList(idUnknown.Remove(0, 1)).RandomItem();
-				});
-			}
-			text = idUnknown;
+				idUnknown = Lang.GetList(idUnknown.Remove(0, 1)).RandomItem();
+			});
 		}
-		goto IL_02a1;
-		IL_02a1:
-		if (!base.c_idRefCard.IsEmpty() && trait.RefCardName != RefCardName.None)
+		text = idUnknown;
+		goto IL_047d;
+		IL_047d:
+		if (GetBool(125))
 		{
-			string text7 = base.c_altName.IsEmpty(base.refCard.GetName());
-			if (!base.c_idRefCard2.IsEmpty())
-			{
-				text7 = "_and".lang(text7, base.c_altName2.IsEmpty(base.refCard2.GetName()));
-			}
-			if (!(text7 == "*r"))
-			{
-				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", base.c_extraNameRef.IsEmpty((base.refCard == null) ? text7 : (base.refCard.isChara ? base.refCard.GetName() : base.refCard.GetText()))).Replace("#1", base.c_extraNameRef.IsEmpty(text7)) : (source.naming.Contains("last") ? (text + Lang.space + text7) : (source.naming.Contains("first") ? (text7 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text7, text) : "_of".lang(text7, text)))));
-			}
-			else
-			{
-				string text8 = base.refCard.GetText("aka");
-				if (!text8.IsEmpty())
-				{
-					text = "_of".lang(text8, text);
-				}
-			}
+			text = "_halfeaten".lang(text);
 		}
 		if (base.c_bill != 0)
 		{
@@ -628,20 +610,20 @@ public class Thing : Card
 				int dMG = base.DMG;
 				if ((base.IsMeleeWeapon || base.IsRangedWeapon || base.IsAmmo || hIT != 0 || dMG != 0) && source.offense.Length != 0)
 				{
-					string text9 = "";
+					string text7 = "";
 					if (source.offense[0] != 0)
 					{
-						text9 = text9 + source.offense[0] + "d" + base.c_diceDim;
+						text7 = text7 + source.offense[0] + "d" + base.c_diceDim;
 					}
 					if (dMG != 0)
 					{
-						text9 += ((base.IsMeleeWeapon || base.IsRangedWeapon || base.IsAmmo) ? dMG.ToText() : (dMG.ToString() ?? ""));
+						text7 += ((base.IsMeleeWeapon || base.IsRangedWeapon || base.IsAmmo) ? dMG.ToText() : (dMG.ToString() ?? ""));
 					}
 					if (hIT != 0)
 					{
-						text9 = text9 + ((dMG != 0 || source.offense[0] != 0) ? ", " : "") + hIT;
+						text7 = text7 + ((dMG != 0 || source.offense[0] != 0) ? ", " : "") + hIT;
 					}
-					text2 = text2 + " (" + text9.IsEmpty(" - ") + ") ";
+					text2 = text2 + " (" + text7.IsEmpty(" - ") + ") ";
 				}
 				int dV = DV;
 				int pV = PV;
@@ -658,7 +640,7 @@ public class Thing : Card
 			}
 			else if (base.c_IDTState == 3 || base.c_IDTState == 1)
 			{
-				text2 = "(" + base.TextRarity.ToTitleCase() + ")";
+				text2 = Lang.space + "(" + base.TextRarity.ToTitleCase() + ")";
 			}
 			if (base.IsDecayed)
 			{
@@ -725,33 +707,33 @@ public class Thing : Card
 			}
 			if (!base.c_note.IsEmpty() && (!base.isBackerContent || EClass.core.config.backer.Show(base.c_note)))
 			{
-				string text10 = base.c_note;
-				if (text10.StartsWith('@'))
+				string text8 = base.c_note;
+				if (text8.StartsWith('@'))
 				{
-					text10 = Lang.Note.map.TryGetValue(text10.TrimStart('@'))?.GetText("text") ?? base.c_note;
+					text8 = Lang.Note.map.TryGetValue(text8.TrimStart('@'))?.GetText("text") ?? base.c_note;
 				}
-				string text11 = (base.category.IsChildOf("book") ? "_written" : "_engraved");
+				string text9 = (base.category.IsChildOf("book") ? "_written" : "_engraved");
 				if (id == "grave_dagger1" || id == "grave_dagger2")
 				{
-					text11 = "_daggerGrave";
+					text9 = "_daggerGrave";
 				}
-				text = ((!text10.Contains("_bracketLeft".lang())) ? text11.lang(text10, text) : (text11 + "Alt").lang(text10, text));
+				text = ((!text8.Contains("_bracketLeft".lang())) ? text9.lang(text8, text) : (text9 + "Alt").lang(text8, text));
 			}
 			text = (flag ? ((num <= 1) ? (text4 + text) : "_unit".lang(num.ToFormat() ?? "", text4 + text, text6)) : ((trait is TraitAbility) ? text.ToTitleCase(wholeText: true) : ((!text6.IsEmpty() && (base.IsIdentified || source.unknown.IsEmpty())) ? "_unit".lang((num == 1) ? "" : (num.ToFormat() ?? ""), text, (text4 + text6).AddArticle(num, style2, source.unit)) : (text4 + text).AddArticle(num, style2, source.name))));
 			if (base.rarity >= Rarity.Legendary)
 			{
 				text = text.ToTitleCase(wholeText: true);
 			}
-			string text12 = ((base.isSale && things.Count > 0) ? "forSale2".lang() : ((base.isSale || (base.parentThing != null && base.parentThing.isSale && TraitSalesTag.CanTagSale(this, insideContainer: true))) ? "forSale".lang(Lang._currency(GetPrice(CurrencyType.Money, sell: true, PriceType.PlayerShop), "money")) : ""));
+			string text10 = ((base.isSale && things.Count > 0) ? "forSale2".lang() : ((base.isSale || (base.parentThing != null && base.parentThing.isSale && TraitSalesTag.CanTagSale(this, insideContainer: true))) ? "forSale".lang(Lang._currency(GetPrice(CurrencyType.Money, sell: true, PriceType.PlayerShop), "money")) : ""));
 			if (trait is TraitSalesTag && base.isOn && !GetStr(11).IsEmpty())
 			{
-				text12 += "soldOut".lang(EClass.sources.categories.map[GetStr(11)].GetName());
+				text10 += "soldOut".lang(EClass.sources.categories.map[GetStr(11)].GetName());
 			}
 			if (GetInt(101) != 0)
 			{
 				text5 = "_limitedStock".lang(text5);
 			}
-			return text5 + text3 + text + sig + text2 + text12;
+			return text5 + text3 + text + sig + text2 + text10;
 		}
 		}
 		IL_01f2:
@@ -759,7 +741,29 @@ public class Thing : Card
 		{
 			text = base.material.GetName();
 		}
-		goto IL_02a1;
+		goto IL_0215;
+		IL_0215:
+		if (!base.c_idRefCard.IsEmpty() && trait.RefCardName != RefCardName.None)
+		{
+			string text11 = base.c_altName.IsEmpty(base.refCard.GetName());
+			if (!base.c_idRefCard2.IsEmpty())
+			{
+				text11 = "_and".lang(text11, base.c_altName2.IsEmpty(base.refCard2.GetName()));
+			}
+			if (!(text11 == "*r"))
+			{
+				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", base.c_extraNameRef.IsEmpty((base.refCard == null) ? text11 : (base.refCard.isChara ? base.refCard.GetName() : base.refCard.GetText()))).Replace("#1", base.c_extraNameRef.IsEmpty(text11)) : (source.naming.Contains("last") ? (text + Lang.space + text11) : (source.naming.Contains("first") ? (text11 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text11, text) : "_of".lang(text11, text)))));
+			}
+			else
+			{
+				string text12 = base.refCard.GetText("aka");
+				if (!text12.IsEmpty())
+				{
+					text = "_of".lang(text12, text);
+				}
+			}
+		}
+		goto IL_047d;
 	}
 
 	public override string GetHoverText()
@@ -1263,43 +1267,54 @@ public class Thing : Card
 			}
 		}
 		trait.WriteNote(n, flag2);
-		if (flag2 && showTraits)
+		if (flag2)
 		{
-			elements.AddNote(n, (Element e) => listTrait.Contains(e), null, ElementContainer.NoteMode.BonusTrait, addRaceFeat: false, delegate(Element e, string s)
+			if (showTraits)
 			{
-				string text12 = s;
-				string text13 = e.source.GetText("textExtra");
-				if (!text13.IsEmpty())
+				elements.AddNote(n, (Element e) => listTrait.Contains(e), null, ElementContainer.NoteMode.BonusTrait, addRaceFeat: false, delegate(Element e, string s)
 				{
-					string text14 = "";
-					if (e.id == 2 && mode == IInspect.NoteMode.Product)
+					string text12 = s;
+					string text13 = e.source.GetText("textExtra");
+					if (!text13.IsEmpty())
 					{
-						int num2 = recipe.GetQualityBonus() / 10;
-						if (num2 >= 0)
+						string text14 = "";
+						if (e.id == 2 && mode == IInspect.NoteMode.Product)
 						{
-							num2++;
+							int num2 = recipe.GetQualityBonus() / 10;
+							if (num2 >= 0)
+							{
+								num2++;
+							}
+							text14 = "qualityLimit".lang(num2.ToString() ?? "");
 						}
-						text14 = "qualityLimit".lang(num2.ToString() ?? "");
+						int num3 = e.Value / 10;
+						num3 = ((e.Value < 0) ? (num3 - 1) : (num3 + 1));
+						text13 = "Lv." + num3 + text14 + " " + text13;
+						if (infoMode && e.IsFoodTraitMain)
+						{
+							text13 += "traitAdditive".lang();
+						}
+						text12 += (" <size=12>" + text13 + "</size>").TagColor(FontColor.Passive);
 					}
-					int num3 = e.Value / 10;
-					num3 = ((e.Value < 0) ? (num3 - 1) : (num3 + 1));
-					text13 = "Lv." + num3 + text14 + " " + text13;
-					if (infoMode && e.IsFoodTraitMain)
-					{
-						text13 += "traitAdditive".lang();
-					}
-					text12 += (" <size=12>" + text13 + "</size>").TagColor(FontColor.Passive);
+					return text12;
+				}, delegate
+				{
+				});
+				if (listTrait.Count != list.Count)
+				{
+					AddText("traitOther".lang((list.Count - listTrait.Count).ToString() ?? ""), FontColor.Default);
 				}
-				return text12;
-			}, delegate
+			}
+			if (base.c_mixedFoodData != null)
 			{
-			});
-			if (listTrait.Count != list.Count)
-			{
-				AddText("traitOther".lang((list.Count - listTrait.Count).ToString() ?? ""), FontColor.Default);
+				n.AddHeader("isMixedFood");
+				foreach (string text15 in base.c_mixedFoodData.texts)
+				{
+					AddText("_bullet".lang() + text15, FontColor.Default);
+				}
 			}
 		}
-		if (!flag2)
+		else
 		{
 			AddText("isUnidentified".lang(), FontColor.Flavor);
 			if (base.c_IDTState == 1)

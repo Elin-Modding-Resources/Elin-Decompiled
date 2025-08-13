@@ -108,6 +108,8 @@ public class CINT
 
 	public const int dateSpecialSummon = 70;
 
+	public const int dateLunchGift = 71;
+
 	public const int fiamaPet = 100;
 
 	public const int noRestock = 101;
@@ -151,6 +153,8 @@ public class CINT
 	public const int isSleepBeside = 123;
 
 	public const int price_copy = 124;
+
+	public const int isHalfEaten = 125;
 
 	public const int dateDeathLock = 130;
 

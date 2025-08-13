@@ -33,4 +33,6 @@ public class COBJ
 	public const int corruptionHistory = 16;
 
 	public const int socketList = 17;
+
+	public const int mixedFoodData = 18;
 }

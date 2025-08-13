@@ -703,7 +703,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override bool IsMultisize => sourceCard.multisize;
 
-	public override int MaxHP => (int)Mathf.Clamp(((long)(base.END * 2 + base.STR + base.WIL / 2) * (long)Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((IsPCFaction ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100, 1f, 100000000f);
+	public override int MaxHP => (int)Mathf.Clamp(((long)(base.END * 2 + base.STR + base.WIL / 2) * (long)Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((base.IsPCFactionOrMinion ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100, 1f, 100000000f);
 
 	public override int WeightLimit => Mathf.Max((base.STR * 500 + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000, 1000);
 
@@ -1550,7 +1550,7 @@ public class Chara : Card, IPathfindWalker
 			Tuple<string, int, int> tuple = list.RandomItemWeighted((Tuple<string, int, int> a) => 10000 / (100 + (_genLv - a.Item3) * 25));
 			if (!bp.idEle.IsEmpty())
 			{
-				tuple = list.Where((Tuple<string, int, int> a) => a.Item1 == bp.idEle).FirstOrDefault() ?? tuple;
+				tuple = list.Where((Tuple<string, int, int> a) => a.Item1 == bp.idEle || "ele" + a.Item1 == bp.idEle).FirstOrDefault() ?? tuple;
 			}
 			SetMainElement(tuple.Item1, (tuple.Item2 == 0) ? 10 : tuple.Item2, elemental: true);
 			if (list.Count >= 2)
@@ -1807,6 +1807,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			ride.RefreshSpeed();
 			_Speed = ride._Speed;
+			info?.AddText("rideSpeed".lang(_Speed.ToString() ?? ""));
 		}
 		else if (host != null)
 		{
@@ -1831,7 +1832,9 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (parasite != null)
 		{
+			int speed = _Speed;
 			_Speed = _Speed * 100 / Mathf.Clamp(120 + parasite.LV * 2 - base.STR - Evalue(227) * 2, 100, 1000);
+			info?.AddText(_Speed - speed, "parasiteSpeed".lang());
 		}
 		if (_Speed < elements.ValueWithoutLink(79) / 3)
 		{
@@ -6692,40 +6695,54 @@ public class Chara : Card, IPathfindWalker
 		{
 			RemoveCondition<ConSuspend>();
 		}
-		if (IsDeadOrSleeping)
+		if (LayerDrama.forceJump == null)
 		{
-			ShowDialog("_chara", "sleep");
-		}
-		else if (EClass.pc.isHidden && !CanSee(EClass.pc))
-		{
-			ShowDialog("_chara", "invisible");
-		}
-		else if (base.isRestrained)
-		{
-			ShowDialog("_chara", "strain");
-		}
-		else if (base.IsUnique && !EClass.player.codex.DroppedCard(id) && affinity.CanGiveCard())
-		{
-			EClass.player.codex.MarkCardDrop(id);
-			ShowDialog("_chara", "give_card");
-			Thing thing = ThingGen.Create("figure");
-			thing.MakeFigureFrom(id);
-			EClass.player.DropReward(thing);
-			thing = ThingGen.Create("figure3");
-			thing.MakeFigureFrom(id);
-			EClass.player.DropReward(thing);
-		}
-		else if (IsEscorted())
-		{
-			ShowDialog("_chara", "escort");
-		}
-		else if (EClass._zone is Zone_Music)
-		{
-			ShowDialog("_chara", "party");
-		}
-		else
-		{
-			if (LayerDrama.forceJump == null && EClass.game.quests.OnShowDialog(this))
+			if (IsDeadOrSleeping)
+			{
+				ShowDialog("_chara", "sleep");
+				return;
+			}
+			if (EClass.pc.isHidden && !CanSee(EClass.pc))
+			{
+				ShowDialog("_chara", "invisible");
+				return;
+			}
+			if (!IsPC && !EClass.player.codex.DroppedCard(id) && affinity.CanGiveCard())
+			{
+				EClass.player.codex.MarkCardDrop(id);
+				ShowDialog("_chara", "give_card");
+				Thing thing = ThingGen.Create("figure");
+				thing.MakeFigureFrom(id);
+				EClass.player.DropReward(thing);
+				thing = ThingGen.Create("figure3");
+				thing.MakeFigureFrom(id);
+				EClass.player.DropReward(thing);
+				return;
+			}
+			if (GetInt(71) == -2)
+			{
+				ShowDialog("_chara", "give_lunch");
+				Thing t = CraftUtil.MakeLoveLunch(this);
+				EClass.player.DropReward(t);
+				SetInt(71, EClass.world.date.GetRaw() + 43200);
+				return;
+			}
+			if (base.isRestrained)
+			{
+				ShowDialog("_chara", "strain");
+				return;
+			}
+			if (IsEscorted())
+			{
+				ShowDialog("_chara", "escort");
+				return;
+			}
+			if (EClass._zone is Zone_Music)
+			{
+				ShowDialog("_chara", "party");
+				return;
+			}
+			if (EClass.game.quests.OnShowDialog(this))
 			{
 				return;
 			}
@@ -6837,19 +6854,19 @@ public class Chara : Card, IPathfindWalker
 				ShowDialog("guild_clerk", "main", tag2);
 				return;
 			}
-			bool flag = true;
-			if (id == "parttimer_jure" && (!EClass._zone.IsFestival || !(EClass._zone is Zone_Noyel) || EClass.pc.faith == EClass.game.religions.Healing))
-			{
-				flag = false;
-			}
-			if (flag && File.Exists(CorePath.DramaData + id + ".xlsx"))
-			{
-				ShowDialog(id);
-			}
-			else
-			{
-				ShowDialog("_chara");
-			}
+		}
+		bool flag = true;
+		if (id == "parttimer_jure" && (!EClass._zone.IsFestival || !(EClass._zone is Zone_Noyel) || EClass.pc.faith == EClass.game.religions.Healing))
+		{
+			flag = false;
+		}
+		if (flag && File.Exists(CorePath.DramaData + id + ".xlsx"))
+		{
+			ShowDialog(id);
+		}
+		else
+		{
+			ShowDialog("_chara");
 		}
 	}
 
@@ -7203,7 +7220,6 @@ public class Chara : Card, IPathfindWalker
 				PlaySound("eat");
 			}
 			FoodEffect.Proc(this, t);
-			t.ModNum(-1);
 		}
 	}
 
@@ -7536,6 +7552,10 @@ public class Chara : Card, IPathfindWalker
 		if (flag)
 		{
 			a = a * num / 100;
+			if (affinity.GetLunchChance() > EClass.rnd(100) && GetInt(71) >= 0 && GetInt(71) < EClass.world.date.GetRaw())
+			{
+				SetInt(71, -1);
+			}
 		}
 		if (show)
 		{
@@ -7611,7 +7631,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			foreach (SourceThing.Row row in EClass.sources.things.rows)
 			{
-				if (row._origin == "dish" && row.value != 0)
+				if (row._origin == "dish" && row.value != 0 && row.chance != 0)
 				{
 					_listFavFood.Add(row);
 				}
@@ -7727,13 +7747,6 @@ public class Chara : Card, IPathfindWalker
 	public Thing MakeGene(DNA.Type? type = null)
 	{
 		return DNA.GenerateGene(this, type);
-	}
-
-	public Thing MakeLunch()
-	{
-		Thing thing = ThingGen.Create("lunch_love");
-		thing.MakeRefFrom(this);
-		return thing;
 	}
 
 	public Thing MakeBraineCell()

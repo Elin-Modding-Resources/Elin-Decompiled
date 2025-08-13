@@ -1336,7 +1336,7 @@ public class DramaCustomSequence : EClass
 					SE.Pay();
 					EClass.pc.ModCurrency(-cost);
 					TempTalkTopic("food2", StepDefault);
-					FoodEffect.Proc(EClass.pc, ThingGen.Create("dish_lunch"));
+					FoodEffect.Proc(EClass.pc, ThingGen.Create("dish_lunch"), consume: false);
 					EClass.pc.hunger.value = 0;
 				}
 			});

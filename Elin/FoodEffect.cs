@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FoodEffect : EClass
 {
-	public static void Proc(Chara c, Thing food)
+	public static void Proc(Chara c, Thing food, bool consume = true)
 	{
 		food.CheckJustCooked();
 		bool flag = EClass._zone.IsPCFaction && c.IsInSpot<TraitSpotDining>();
@@ -21,14 +21,15 @@ public class FoodEffect : EClass
 		bool flag3 = food.HasElement(709);
 		bool flag4 = c.HasElement(1205);
 		bool flag5 = food.IsDecayed || flag3;
+		bool flag6 = food.trait is TraitLunchLove;
 		c.AddFoodHistory(food);
 		if (c.IsPCFaction && !c.IsPC)
 		{
 			int num6 = c.CountNumEaten(food);
-			bool flag6 = c.GetFavFood().id == food.id;
-			if (num6 < 2 || flag6)
+			bool flag7 = c.GetFavFood().id == food.id;
+			if (num6 < 2 || flag7)
 			{
-				if (num6 == 1 || flag6 || EClass.rnd(4) == 0)
+				if (num6 == 1 || flag7 || EClass.rnd(4) == 0)
 				{
 					c.Talk("foodNice");
 				}
@@ -154,11 +155,11 @@ public class FoodEffect : EClass
 				float num8 = num2 * (float)value.Value;
 				if (value.source.category == "food" && c.IsPC)
 				{
-					bool flag7 = num8 >= 0f;
-					string text = value.source.GetText(flag7 ? "textInc" : "textDec", returnNull: true);
+					bool flag8 = num8 >= 0f;
+					string text = value.source.GetText(flag8 ? "textInc" : "textDec", returnNull: true);
 					if (text != null)
 					{
-						Msg.SetColor(flag7 ? "positive" : "negative");
+						Msg.SetColor(flag8 ? "positive" : "negative");
 						c.Say(text);
 					}
 				}
@@ -181,6 +182,7 @@ public class FoodEffect : EClass
 					c.PlaySound("ding_potential");
 					c.elements.ModExp(306, -1000f);
 					c.SetInt(117, int2 + 1);
+					flag6 = false;
 					break;
 				}
 				case "exp":
@@ -244,6 +246,7 @@ public class FoodEffect : EClass
 						c.SetFeat(1230, c.elements.Base(1230) + 1);
 					}
 					c.SetInt(112, @int + 1);
+					flag6 = false;
 					break;
 				}
 				}
@@ -354,6 +357,19 @@ public class FoodEffect : EClass
 		if (food.trait is TraitDrink)
 		{
 			food.trait.OnDrink(c);
+		}
+		if (consume)
+		{
+			num7 += 5f;
+			if (flag6 && (float)food.Evalue(10) > num7 + 10f)
+			{
+				food.elements.SetTo(10, (int)Mathf.Max((float)food.Evalue(10) - num7, 1f));
+				food.SetBool(125, enable: true);
+			}
+			else
+			{
+				food.ModNum(-1);
+			}
 		}
 	}
 

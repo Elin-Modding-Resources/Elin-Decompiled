@@ -58,6 +58,13 @@ public class LayerSleep : ELayer
 			{
 				ELayer.player.SimulateFaction();
 			}
+			foreach (Chara chara in ELayer._map.charas)
+			{
+				if (chara.affinity.GetLunchChance() > ELayer.rnd(100) && chara.GetInt(71) == -1)
+				{
+					chara.SetInt(71, -2);
+				}
+			}
 			foreach (Chara member in ELayer.pc.party.members)
 			{
 				member.OnSleep(bed);

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StatsMana : Stats
 {
-	public override int max => (int)Mathf.Clamp(((long)(BaseStats.CC.MAG * 2 + BaseStats.CC.WIL + BaseStats.CC.LER / 2) * (long)Mathf.Min(BaseStats.CC.LV, 25) / 25 + BaseStats.CC.MAG + 10) * (BaseStats.CC.Evalue(61) - BaseStats.CC.Evalue(93)) / 100 * ((BaseStats.CC.IsPCFaction ? 100 : (100 + (int)BaseStats.CC.rarity * 250)) + (BaseStats.CC.IsPC ? (EClass.player.lastEmptyAlly * BaseStats.CC.Evalue(1646)) : 0)) / 100, 1f, 100000000f);
+	public override int max => (int)Mathf.Clamp(((long)(BaseStats.CC.MAG * 2 + BaseStats.CC.WIL + BaseStats.CC.LER / 2) * (long)Mathf.Min(BaseStats.CC.LV, 25) / 25 + BaseStats.CC.MAG + 10) * (BaseStats.CC.Evalue(61) - BaseStats.CC.Evalue(93)) / 100 * ((BaseStats.CC.IsPCFactionOrMinion ? 100 : (100 + (int)BaseStats.CC.rarity * 250)) + (BaseStats.CC.IsPC ? (EClass.player.lastEmptyAlly * BaseStats.CC.Evalue(1646)) : 0)) / 100, 1f, 100000000f);
 
 	public override int min => -999999;
 

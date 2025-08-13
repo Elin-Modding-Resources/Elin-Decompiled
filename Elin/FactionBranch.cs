@@ -340,7 +340,6 @@ public class FactionBranch : EClass
 						if (meal != null)
 						{
 							FoodEffect.Proc(c, meal);
-							meal.Destroy();
 						}
 						else
 						{

@@ -29,6 +29,7 @@ public class CharaAbility : EClass
 			case 5048:
 			case 6400:
 			case 6410:
+			case 6800:
 			case 8200:
 				continue;
 			}

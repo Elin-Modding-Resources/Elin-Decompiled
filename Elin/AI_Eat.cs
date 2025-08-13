@@ -127,7 +127,6 @@ public class AI_Eat : AIAct
 					owner.Say("eat_end", owner, target.GetName(NameStyle.Full, 1));
 					owner.ShowEmo(Emo.happy);
 					FoodEffect.Proc(owner, target.Thing);
-					target.ModNum(-1);
 				}
 			}
 		}.SetDuration(max, 5);

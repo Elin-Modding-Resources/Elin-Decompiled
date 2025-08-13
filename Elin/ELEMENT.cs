@@ -551,7 +551,7 @@ public class Element : EClass
 		return map;
 	}
 
-	public static SourceElement.Row GetRandomElement(int lv = 1)
+	public static SourceElement.Row GetRandomElement(int lv = 1, bool useWeight = true)
 	{
 		if (lv > 100)
 		{
@@ -576,7 +576,7 @@ public class Element : EClass
 				list.Add(new Tuple<SourceElement.Row, int>(listElement, num));
 			}
 		}
-		return list.RandomItemWeighted((Tuple<SourceElement.Row, int> a) => 10000 / (100 + (lv - a.Item2) * 25)).Item1;
+		return (useWeight ? list.RandomItemWeighted((Tuple<SourceElement.Row, int> a) => 10000 / (100 + (lv - a.Item2) * 25)) : list.RandomItem()).Item1;
 	}
 
 	public void WriteNote(UINote n, ElementContainer owner = null, Action<UINote> onWriteNote = null)

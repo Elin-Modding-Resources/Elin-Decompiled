@@ -929,14 +929,11 @@ public class CoreDebug : EScriptable
 			EClass.game.world.date.year = 3000;
 			EClass._zone.development += 10;
 			EClass._zone.development *= EClass._zone.development;
-			EClass.pc.Pick(ThingGen.CreateSpellbook(8550));
-			EClass.pc.Pick(ThingGen.CreatePotion(8550));
-			EClass.pc.Pick(ThingGen.CreateSpellbook(9004));
-			EClass.pc.Pick(ThingGen.CreateRedBook("advweek_1"));
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
-				EClass.pc.Pick(targetChara.MakeLunch());
+				EClass.pc.Pick(CraftUtil.MakeLoveLunch(targetChara));
+				EClass.pc.Pick(CraftUtil.MakeDarkSoup());
 				EClass.pc.Pick(targetChara.MakeMilk());
 				EClass.pc.Pick(targetChara.MakeGene());
 				EClass.pc.Pick(targetChara.MakeBraineCell());
@@ -979,9 +976,10 @@ public class CoreDebug : EScriptable
 			{
 				EClass.Branch.ModExp(EClass.Branch.GetNextExp());
 			}
-			foreach (Chara chara2 in EClass._map.charas)
+			foreach (Chara item in EClass._map.charas.ToList())
 			{
-				chara2.AddExp(chara2.ExpToNext);
+				item.AddExp(item.ExpToNext);
+				item.Vomit();
 			}
 			EClass.pc.PlayEffect("boost");
 			EClass.pc.PlaySound("boost");
@@ -1160,9 +1158,9 @@ public class CoreDebug : EScriptable
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
-				foreach (Card item in list)
+				foreach (Card item2 in list)
 				{
-					Debug.Log(item.Name + "/" + item.dir + "/" + item.flipX + "/" + item.angle);
+					Debug.Log(item2.Name + "/" + item2.dir + "/" + item2.flipX + "/" + item2.angle);
 				}
 			}
 			if (Input.GetMouseButtonDown(1))
@@ -1195,9 +1193,9 @@ public class CoreDebug : EScriptable
 			}
 			if (key)
 			{
-				foreach (Card item2 in EClass._map.Roaming.all)
+				foreach (Card item3 in EClass._map.Roaming.all)
 				{
-					EClass._zone.RemoveCard(item2);
+					EClass._zone.RemoveCard(item3);
 				}
 			}
 			else if (hitPoint.detail != null)
@@ -1276,9 +1274,9 @@ public class CoreDebug : EScriptable
 			{
 				break;
 			}
-			foreach (Card item3 in hitPoint.ListCards())
+			foreach (Card item4 in hitPoint.ListCards())
 			{
-				item3.renderer.PlayAnime(num5.ToEnum<AnimeID>());
+				item4.renderer.PlayAnime(num5.ToEnum<AnimeID>());
 			}
 			Debug.Log(num5.ToEnum<AnimeID>());
 			break;

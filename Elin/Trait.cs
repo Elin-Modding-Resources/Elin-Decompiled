@@ -1833,7 +1833,7 @@ public class Trait : EClass
 				{
 				case ShopType.Moyer:
 				{
-					for (int num10 = 1; num10 <= 3; num10++)
+					for (int num10 = 1; num10 <= 6; num10++)
 					{
 						AddAdvWeek(num10);
 					}

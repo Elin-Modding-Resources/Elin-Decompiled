@@ -72,6 +72,10 @@ public class TCOrbitChara : TCOrbit
 			{
 				emo = owner.trait.GetRestockedIcon();
 			}
+			else if (!owner.IsPC && ((owner.affinity.CanGiveCard() && !EMono.player.codex.DroppedCard(owner.id)) || owner.GetInt(71) == -2))
+			{
+				emo = Emo2.hintEvent;
+			}
 			else
 			{
 				bool flag = false;

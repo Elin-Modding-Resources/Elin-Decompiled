@@ -533,6 +533,7 @@ public class ActEffect : EClass
 			bool flag3 = false;
 			bool flag4 = actRef.n1 == "special";
 			int num5 = -1;
+			string text = "";
 			switch (actRef.n1)
 			{
 			case "shadow":
@@ -572,26 +573,58 @@ public class ActEffect : EClass
 					continue;
 				}
 				Chara chara = null;
+				CardBlueprint.Set(new CardBlueprint());
 				if (num5 != -1)
 				{
-					CardBlueprint.Set(new CardBlueprint
-					{
-						lv = num5
-					});
+					CardBlueprint.current.lv = num5;
 				}
-				chara = actRef.n1 switch
+				if (!text.IsEmpty())
 				{
-					"special" => (j != 0 || CC.HasMinion("imolonac") || CC.HasMinion("ygolonac")) ? CharaGen.Create("hound", 50) : CharaGen.Create((EClass.rnd(20) == 0) ? "imolonac" : "ygolonac"), 
-					"yeek" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_yeek", (SourceChara.Row r) => r.race == "yeek"), power / 10), 
-					"orc" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_orc", (SourceChara.Row r) => r.race == "orc"), power / 10), 
-					"pawn" => CharaGen.CreateFromFilter("c_pawn", power / 10), 
-					"monster" => CharaGen.CreateFromFilter("c_dungeon", power / 10), 
-					"animal" => CharaGen.CreateFromFilter("c_animal", power / 15), 
-					"fire" => CharaGen.CreateFromElement("Fire", power / 10), 
-					"fish" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_fish", (SourceChara.Row r) => r.ContainsTag("water") || r.model.Chara.race.tag.Contains("water")), power / 10), 
-					"octopus" => CharaGen.CreateFromFilter(SpawnListChara.Get("summon_octopus", (SourceChara.Row r) => r.race == "octopus"), power / 10), 
-					_ => CharaGen.Create(id3, power / 10), 
-				};
+					CardBlueprint.current.idEle = text;
+				}
+				switch (actRef.n1)
+				{
+				case "special":
+					if (j == 0 && !CC.HasMinion("imolonac") && !CC.HasMinion("ygolonac"))
+					{
+						chara = CharaGen.Create((EClass.rnd(20) == 0) ? "imolonac" : "ygolonac");
+						break;
+					}
+					Debug.Log(CardBlueprint.current.idEle);
+					chara = CharaGen.Create("hound", CC.LV);
+					if (text.IsEmpty())
+					{
+						text = chara.MainElement.source.alias;
+					}
+					break;
+				case "yeek":
+					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_yeek", (SourceChara.Row r) => r.race == "yeek"), power / 10);
+					break;
+				case "orc":
+					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_orc", (SourceChara.Row r) => r.race == "orc"), power / 10);
+					break;
+				case "pawn":
+					chara = CharaGen.CreateFromFilter("c_pawn", power / 10);
+					break;
+				case "monster":
+					chara = CharaGen.CreateFromFilter("c_dungeon", power / 10);
+					break;
+				case "animal":
+					chara = CharaGen.CreateFromFilter("c_animal", power / 15);
+					break;
+				case "fire":
+					chara = CharaGen.CreateFromElement("Fire", power / 10);
+					break;
+				case "fish":
+					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_fish", (SourceChara.Row r) => r.ContainsTag("water") || r.model.Chara.race.tag.Contains("water")), power / 10);
+					break;
+				case "octopus":
+					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_octopus", (SourceChara.Row r) => r.race == "octopus"), power / 10);
+					break;
+				default:
+					chara = CharaGen.Create(id3, power / 10);
+					break;
+				}
 				if (chara == null)
 				{
 					continue;
@@ -602,7 +635,18 @@ public class ActEffect : EClass
 					continue;
 				}
 				int num6 = -1;
-				num6 = ((!(actRef.n1 == "shadow")) ? (chara.LV * (100 + power / 10) / 100 + power / 30) : (power / 10 + 1));
+				string n = actRef.n1;
+				if (!(n == "shadow"))
+				{
+					if (!(n == "special"))
+					{
+						num6 = chara.LV * (100 + power / 10) / 100 + power / 30;
+					}
+				}
+				else
+				{
+					num6 = power / 10 + 1;
+				}
 				if (chara.LV < num6)
 				{
 					chara.SetLv(num6);
@@ -612,7 +656,7 @@ public class ActEffect : EClass
 				{
 					chara.c_fur = -1;
 				}
-				string n = actRef.n1;
+				n = actRef.n1;
 				if (!(n == "shadow"))
 				{
 					if (n == "special_force")
