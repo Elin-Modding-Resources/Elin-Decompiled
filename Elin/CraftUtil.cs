@@ -65,7 +65,12 @@ public class CraftUtil : EClass
 		int num = Mathf.Min(EClass.rnd(lv), 50);
 		foreach (Recipe.Ingredient ingredient in recipeSource.GetIngredients())
 		{
-			Thing thing = ThingGen.Create(ingredient.id).TryMakeRandomItem(lv);
+			Thing thing = ThingGen.Create(ingredient.id, -1, lv);
+			if (thing.id == "deadbody")
+			{
+				thing = ThingGen.Create("_meat");
+			}
+			thing = thing.TryMakeRandomItem(lv);
 			TraitSeed.LevelSeed(thing, null, EClass.rnd(lv / 4) + 1);
 			thing.SetEncLv(thing.encLV / 2);
 			if (num > 0 && EClass.rnd(3) == 0)

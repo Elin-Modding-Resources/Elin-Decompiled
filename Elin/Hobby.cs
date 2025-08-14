@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class Hobby : EClass
 {
@@ -22,9 +23,9 @@ public class Hobby : EClass
 	{
 		if (!source.skill.IsEmpty())
 		{
-			return c.Evalue(source.skill);
+			return Mathf.Min(c.Evalue(source.skill), 100000);
 		}
-		return c.LV;
+		return Mathf.Min(c.LV, 100000);
 	}
 
 	public int GetEfficiency(Chara c)

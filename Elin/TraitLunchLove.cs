@@ -1,3 +1,3 @@
-public class TraitLunchLove : TraitMixedFood
+public class TraitLunchLove : TraitLunch
 {
 }

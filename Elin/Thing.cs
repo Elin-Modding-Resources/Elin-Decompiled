@@ -1095,10 +1095,6 @@ public class Thing : Card
 		{
 			AddText("isNoMix", FontColor.Default);
 		}
-		if (trait is TraitFoodFishSlice)
-		{
-			AddText("isNoProcessIng", FontColor.Default);
-		}
 		if (!trait.CanBeDestroyed)
 		{
 			AddText("isIndestructable", FontColor.Default);
@@ -1210,9 +1206,17 @@ public class Thing : Card
 		{
 			AddText("isThrowWeaponEnemy", FontColor.Default);
 		}
+		if (trait is TraitFoodFishSlice)
+		{
+			AddText("isNoProcessIng", FontColor.Default);
+		}
 		if (HasElement(10))
 		{
 			AddText("isEdible", FontColor.Default);
+		}
+		if (FoodEffect.IsLeftoverable(this))
+		{
+			AddText("isLeftoverable", FontColor.Default);
 		}
 		if (HasTag(CTAG.rareResource))
 		{

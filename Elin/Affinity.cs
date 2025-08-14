@@ -97,9 +97,9 @@ public class Affinity : EClass
 					}
 					return 10;
 				}
-				return 25;
+				return 40;
 			}
-			return 50;
+			return 80;
 		}
 		return 100;
 	}

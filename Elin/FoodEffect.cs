@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class FoodEffect : EClass
 {
+	public static bool IsLeftoverable(Thing food)
+	{
+		return food.trait is TraitLunch;
+	}
+
 	public static void Proc(Chara c, Thing food, bool consume = true)
 	{
 		food.CheckJustCooked();
@@ -21,7 +26,7 @@ public class FoodEffect : EClass
 		bool flag3 = food.HasElement(709);
 		bool flag4 = c.HasElement(1205);
 		bool flag5 = food.IsDecayed || flag3;
-		bool flag6 = food.trait is TraitLunchLove;
+		bool flag6 = IsLeftoverable(food);
 		c.AddFoodHistory(food);
 		if (c.IsPCFaction && !c.IsPC)
 		{

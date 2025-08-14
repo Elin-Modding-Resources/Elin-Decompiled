@@ -830,6 +830,7 @@ public class FactionBranch : EClass
 				{
 					string text = h.source.things[j];
 					int num5 = Mathf.Max(1, h.source.things[j + 1].ToInt() * num3 / 1000);
+					Debug.Log(i.Name + "/" + num3 + "/" + num5);
 					int num6 = num5 / 1000;
 					if (num5 % 1000 > EClass.rnd(1000))
 					{

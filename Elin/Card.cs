@@ -5208,7 +5208,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		case "_meat":
 		case "meat_marble":
 		case "dattamono":
-		case "deadbody":
 		{
 			string text = "c_wilds";
 			if (id == "_meat" || id == "meat_marble")
@@ -5217,7 +5216,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			for (int i = 0; i < 20; i++)
 			{
-				CardRow cardRow = SpawnList.Get(text).Select(lv);
+				CardRow cardRow = SpawnList.Get(text).Select(lv + i);
 				if (cardRow.model.Chara.race.corpse[0] != "_meat" && id != "milk" && id != "_egg" && id != "egg_fertilized")
 				{
 					continue;
@@ -5233,8 +5232,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				{
 					MakeFoodFrom(cardRow.model);
 				}
-				break;
+				return this as Thing;
 			}
+			MakeFoodFrom(EClass.sources.charas.map.Values.Where((SourceChara.Row r) => r.chance > 0 && r.quality == 0).RandomItem().model);
 			break;
 		}
 		}
