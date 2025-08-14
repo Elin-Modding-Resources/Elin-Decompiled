@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classAM__Dig.html#a7fae0cd9241e876006af58a54631bbd5":[1,0,136,3],
+"classAM__Dig.html#a84240bf01917bdca71d6f9bb9adf5cee":[1,0,136,4],
 "classAM__Dig.html#a89d6c3c2c49cd53e7b10fcb71c625597":[1,0,136,2],
 "classAM__Dig.html#a9de31f9f0c5d476b32747e5ecf2fa6cd":[1,0,136,9],
 "classAM__Dig.html#aa3d33df6ab0e14b6a0c7bfc8e63da863":[1,0,136,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "classAM__ViewZone.html#ad62a800df722a5a8bcd9dfc2260f5e23":[1,0,160,8],
 "classAM__Visibility.html":[1,0,161],
 "classAM__Visibility.html#a30cb5e19a8b54da1e64ec52644c94858":[1,0,161,4],
-"classAM__Visibility.html#a54285f3f828523d0820d72409f84d8bf":[1,0,161,2],
-"classAM__Visibility.html#a61dda91eee3d09aecd37d97b18f7281d":[1,0,161,0],
-"classAM__Visibility.html#a93afdd826b09ab6b4a97646b9e26c489":[1,0,161,3]
+"classAM__Visibility.html#a54285f3f828523d0820d72409f84d8bf":[1,0,161,2]
 };

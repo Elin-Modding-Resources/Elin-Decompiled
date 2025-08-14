@@ -1,5 +1,8 @@
 var NAVTREEINDEX116 =
 {
+"classTraitDemitas.html#a7e2a67d683be95447a994224586670bc":[1,0,1503,0],
+"classTraitDemitas.html#a8529987bfd47cabd0a015ed4e1fd2e13":[1,0,1503,4],
+"classTraitDemitas.html#a94fa1bf6a2c34278d5d64ad061e3a33d":[1,0,1503,9],
 "classTraitDemitas.html#acbb6b4cc9b4dc7f2b093a84f98ab6d9f":[1,0,1503,6],
 "classTraitDemitas.html#ad6cacf0733e3e0535a604ff05ff92c62":[1,0,1503,8],
 "classTraitDemitas.html#ada9f74c3ed619121e97a88f0d555a842":[1,0,1503,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitFigure.html#aee15d2a35dbde8a92a90011db74f4e25":[1,0,1552,1],
 "classTraitFirework.html":[1,0,1553],
 "classTraitFirework.html#a06d38a444caed07ce0a2f20bfb886baa":[1,0,1553,4],
-"classTraitFirework.html#a457f0da0e5269b7a95c36095157d1720":[1,0,1553,1],
-"classTraitFirework.html#a61f8a1cd290b26b8f76f49e766737d5e":[1,0,1553,2],
-"classTraitFirework.html#a66ce4a7d4952fc7c36861fe39afcf8ad":[1,0,1553,0],
-"classTraitFirework.html#afd176a9ab7ca1c466c6ebf1f5277e5c1":[1,0,1553,3]
+"classTraitFirework.html#a457f0da0e5269b7a95c36095157d1720":[1,0,1553,1]
 };

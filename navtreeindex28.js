@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"classAM__Visibility.html#a61dda91eee3d09aecd37d97b18f7281d":[1,0,161,0],
+"classAM__Visibility.html#a93afdd826b09ab6b4a97646b9e26c489":[1,0,161,3],
 "classAM__Visibility.html#aa7f8d5cdbcef7e00cda89d6a083e39e8":[1,0,161,5],
 "classAM__Visibility.html#af2b7e2ceb84afb7802f11ebb5f905edf":[1,0,161,1],
 "classAbility.html":[1,0,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX28 =
 "classActPray.html#a5855ea22e8df6908833a2e7b0d2f6add":[1,0,45,3],
 "classActPray.html#a6285ddb3797a820de21835e33b631647":[1,0,45,4],
 "classActPray.html#afd81a647a671bba5ebfd4bf600301860":[1,0,45,2],
-"classActPray.html#aff54cfcf9f76a2c16db38007a3808d69":[1,0,45,0],
-"classActQuickCraft.html":[1,0,46],
-"classActQuickCraft.html#aad6033f738a9b7850dfe6333c402ef59":[1,0,46,0]
+"classActPray.html#aff54cfcf9f76a2c16db38007a3808d69":[1,0,45,0]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.178 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.179 Nightly</span>
    </div>
   </td>
  </tr>
@@ -5302,33 +5302,33 @@ $(document).ready(function(){initNavTree('Card_8cs_source.html',''); initResizab
 <div class="line"><a id="l05208" name="l05208"></a><span class="lineno"> 5208</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;_meat&quot;</span>:</div>
 <div class="line"><a id="l05209" name="l05209"></a><span class="lineno"> 5209</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;meat_marble&quot;</span>:</div>
 <div class="line"><a id="l05210" name="l05210"></a><span class="lineno"> 5210</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;dattamono&quot;</span>:</div>
-<div class="line"><a id="l05211" name="l05211"></a><span class="lineno"> 5211</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;deadbody&quot;</span>:</div>
-<div class="line"><a id="l05212" name="l05212"></a><span class="lineno"> 5212</span>        {</div>
-<div class="line"><a id="l05213" name="l05213"></a><span class="lineno"> 5213</span>            <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;c_wilds&quot;</span>;</div>
-<div class="line"><a id="l05214" name="l05214"></a><span class="lineno"> 5214</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;_meat&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;meat_marble&quot;</span>)</div>
-<div class="line"><a id="l05215" name="l05215"></a><span class="lineno"> 5215</span>            {</div>
-<div class="line"><a id="l05216" name="l05216"></a><span class="lineno"> 5216</span>                text = <span class="stringliteral">&quot;c_animal&quot;</span>;</div>
-<div class="line"><a id="l05217" name="l05217"></a><span class="lineno"> 5217</span>            }</div>
-<div class="line"><a id="l05218" name="l05218"></a><span class="lineno"> 5218</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 20; i++)</div>
-<div class="line"><a id="l05219" name="l05219"></a><span class="lineno"> 5219</span>            {</div>
-<div class="line"><a id="l05220" name="l05220"></a><span class="lineno"> 5220</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_function" href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">Get</a>(text).<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>(lv);</div>
-<div class="line"><a id="l05221" name="l05221"></a><span class="lineno"> 5221</span>                <span class="keywordflow">if</span> (cardRow.<a class="code hl_property" href="classCardRow.html#a1d6092e216580c007f8b4f773123707a">model</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.corpse[0] != <span class="stringliteral">&quot;_meat&quot;</span> &amp;&amp; <span class="keywordtype">id</span> != <span class="stringliteral">&quot;milk&quot;</span> &amp;&amp; <span class="keywordtype">id</span> != <span class="stringliteral">&quot;_egg&quot;</span> &amp;&amp; <span class="keywordtype">id</span> != <span class="stringliteral">&quot;egg_fertilized&quot;</span>)</div>
-<div class="line"><a id="l05222" name="l05222"></a><span class="lineno"> 5222</span>                {</div>
-<div class="line"><a id="l05223" name="l05223"></a><span class="lineno"> 5223</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l05224" name="l05224"></a><span class="lineno"> 5224</span>                }</div>
-<div class="line"><a id="l05225" name="l05225"></a><span class="lineno"> 5225</span>                <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;milk&quot;</span>)</div>
-<div class="line"><a id="l05226" name="l05226"></a><span class="lineno"> 5226</span>                {</div>
-<div class="line"><a id="l05227" name="l05227"></a><span class="lineno"> 5227</span>                    <span class="keywordflow">if</span> (c_idRefCard.IsEmpty())</div>
-<div class="line"><a id="l05228" name="l05228"></a><span class="lineno"> 5228</span>                    {</div>
-<div class="line"><a id="l05229" name="l05229"></a><span class="lineno"> 5229</span>                        MakeRefFrom(cardRow.<a class="code hl_property" href="classCardRow.html#a1d6092e216580c007f8b4f773123707a">model</a>);</div>
-<div class="line"><a id="l05230" name="l05230"></a><span class="lineno"> 5230</span>                    }</div>
-<div class="line"><a id="l05231" name="l05231"></a><span class="lineno"> 5231</span>                }</div>
-<div class="line"><a id="l05232" name="l05232"></a><span class="lineno"> 5232</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l05233" name="l05233"></a><span class="lineno"> 5233</span>                {</div>
-<div class="line"><a id="l05234" name="l05234"></a><span class="lineno"> 5234</span>                    MakeFoodFrom(cardRow.<a class="code hl_property" href="classCardRow.html#a1d6092e216580c007f8b4f773123707a">model</a>);</div>
-<div class="line"><a id="l05235" name="l05235"></a><span class="lineno"> 5235</span>                }</div>
-<div class="line"><a id="l05236" name="l05236"></a><span class="lineno"> 5236</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l05237" name="l05237"></a><span class="lineno"> 5237</span>            }</div>
+<div class="line"><a id="l05211" name="l05211"></a><span class="lineno"> 5211</span>        {</div>
+<div class="line"><a id="l05212" name="l05212"></a><span class="lineno"> 5212</span>            <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;c_wilds&quot;</span>;</div>
+<div class="line"><a id="l05213" name="l05213"></a><span class="lineno"> 5213</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;_meat&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;meat_marble&quot;</span>)</div>
+<div class="line"><a id="l05214" name="l05214"></a><span class="lineno"> 5214</span>            {</div>
+<div class="line"><a id="l05215" name="l05215"></a><span class="lineno"> 5215</span>                text = <span class="stringliteral">&quot;c_animal&quot;</span>;</div>
+<div class="line"><a id="l05216" name="l05216"></a><span class="lineno"> 5216</span>            }</div>
+<div class="line"><a id="l05217" name="l05217"></a><span class="lineno"> 5217</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 20; i++)</div>
+<div class="line"><a id="l05218" name="l05218"></a><span class="lineno"> 5218</span>            {</div>
+<div class="line"><a id="l05219" name="l05219"></a><span class="lineno"> 5219</span>                <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classSpawnList.html">SpawnList</a>.<a class="code hl_function" href="classSpawnList.html#a12952fcdea83c02e6751bcf16b0660d8">Get</a>(text).<a class="code hl_function" href="classSpawnList.html#a39d702c255e5e5ab91401a6bf62a7b8b">Select</a>(lv + i);</div>
+<div class="line"><a id="l05220" name="l05220"></a><span class="lineno"> 5220</span>                <span class="keywordflow">if</span> (cardRow.<a class="code hl_property" href="classCardRow.html#a1d6092e216580c007f8b4f773123707a">model</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.corpse[0] != <span class="stringliteral">&quot;_meat&quot;</span> &amp;&amp; <span class="keywordtype">id</span> != <span class="stringliteral">&quot;milk&quot;</span> &amp;&amp; <span class="keywordtype">id</span> != <span class="stringliteral">&quot;_egg&quot;</span> &amp;&amp; <span class="keywordtype">id</span> != <span class="stringliteral">&quot;egg_fertilized&quot;</span>)</div>
+<div class="line"><a id="l05221" name="l05221"></a><span class="lineno"> 5221</span>                {</div>
+<div class="line"><a id="l05222" name="l05222"></a><span class="lineno"> 5222</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l05223" name="l05223"></a><span class="lineno"> 5223</span>                }</div>
+<div class="line"><a id="l05224" name="l05224"></a><span class="lineno"> 5224</span>                <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;milk&quot;</span>)</div>
+<div class="line"><a id="l05225" name="l05225"></a><span class="lineno"> 5225</span>                {</div>
+<div class="line"><a id="l05226" name="l05226"></a><span class="lineno"> 5226</span>                    <span class="keywordflow">if</span> (c_idRefCard.IsEmpty())</div>
+<div class="line"><a id="l05227" name="l05227"></a><span class="lineno"> 5227</span>                    {</div>
+<div class="line"><a id="l05228" name="l05228"></a><span class="lineno"> 5228</span>                        MakeRefFrom(cardRow.<a class="code hl_property" href="classCardRow.html#a1d6092e216580c007f8b4f773123707a">model</a>);</div>
+<div class="line"><a id="l05229" name="l05229"></a><span class="lineno"> 5229</span>                    }</div>
+<div class="line"><a id="l05230" name="l05230"></a><span class="lineno"> 5230</span>                }</div>
+<div class="line"><a id="l05231" name="l05231"></a><span class="lineno"> 5231</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l05232" name="l05232"></a><span class="lineno"> 5232</span>                {</div>
+<div class="line"><a id="l05233" name="l05233"></a><span class="lineno"> 5233</span>                    MakeFoodFrom(cardRow.<a class="code hl_property" href="classCardRow.html#a1d6092e216580c007f8b4f773123707a">model</a>);</div>
+<div class="line"><a id="l05234" name="l05234"></a><span class="lineno"> 5234</span>                }</div>
+<div class="line"><a id="l05235" name="l05235"></a><span class="lineno"> 5235</span>                <span class="keywordflow">return</span> <span class="keyword">this</span> as <a class="code hl_class" href="classThing.html">Thing</a>;</div>
+<div class="line"><a id="l05236" name="l05236"></a><span class="lineno"> 5236</span>            }</div>
+<div class="line"><a id="l05237" name="l05237"></a><span class="lineno"> 5237</span>            MakeFoodFrom(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.map.Values.Where((<a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a> r) =&gt; r.chance &gt; 0 &amp;&amp; r.quality == 0).RandomItem().model);</div>
 <div class="line"><a id="l05238" name="l05238"></a><span class="lineno"> 5238</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l05239" name="l05239"></a><span class="lineno"> 5239</span>        }</div>
 <div class="line"><a id="l05240" name="l05240"></a><span class="lineno"> 5240</span>        }</div>
@@ -8695,6 +8695,7 @@ $(document).ready(function(){initNavTree('Card_8cs_source.html',''); initResizab
 <div class="ttc" id="aclassSourceManager_html_ab4cf7dce730d8197f24cb4da0832b5d7"><div class="ttname"><a href="classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7">SourceManager.backers</a></div><div class="ttdeci">SourceBacker backers</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00082">SourceManager.cs:82</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_ab7c0f6922403dd73dbe0c9d967c1514b"><div class="ttname"><a href="classSourceManager.html#ab7c0f6922403dd73dbe0c9d967c1514b">SourceManager.categories</a></div><div class="ttdeci">SourceCategory categories</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00036">SourceManager.cs:36</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00018">SourceManager.cs:18</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00008">SourceMaterial.cs:9</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html_a0ebc168801afa07d9d92611a141841c8"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a0ebc168801afa07d9d92611a141841c8">SourceMaterial.Row.altColor</a></div><div class="ttdeci">Color altColor</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00082">SourceMaterial.cs:82</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html_ac134d6a3e626a2e05695b105aa708ee4"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#ac134d6a3e626a2e05695b105aa708ee4">SourceMaterial.Row.matColor</a></div><div class="ttdeci">Color matColor</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00079">SourceMaterial.cs:79</a></div></div>
@@ -8737,7 +8738,7 @@ $(document).ready(function(){initNavTree('Card_8cs_source.html',''); initResizab
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 <div class="ttc" id="aclassThing_html_a1356967911bd1872c00852223aaebcd7"><div class="ttname"><a href="classThing.html#a1356967911bd1872c00852223aaebcd7">Thing.source</a></div><div class="ttdeci">SourceThing.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00011">Thing.cs:11</a></div></div>
 <div class="ttc" id="aclassThing_html_a1d1749db95ba575945fd81955bbcd364"><div class="ttname"><a href="classThing.html#a1d1749db95ba575945fd81955bbcd364">Thing.isEquipped</a></div><div class="ttdeci">bool isEquipped</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00017">Thing.cs:17</a></div></div>
-<div class="ttc" id="aclassThing_html_a6155fccd8db789c68c19eb1bf48897d8"><div class="ttname"><a href="classThing.html#a6155fccd8db789c68c19eb1bf48897d8">Thing.TryLickEnchant</a></div><div class="ttdeci">void TryLickEnchant(Chara c, bool msg=true, Chara tg=null, BodySlot slot=null)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l01951">Thing.cs:1951</a></div></div>
+<div class="ttc" id="aclassThing_html_a6155fccd8db789c68c19eb1bf48897d8"><div class="ttname"><a href="classThing.html#a6155fccd8db789c68c19eb1bf48897d8">Thing.TryLickEnchant</a></div><div class="ttdeci">void TryLickEnchant(Chara c, bool msg=true, Chara tg=null, BodySlot slot=null)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l01955">Thing.cs:1955</a></div></div>
 <div class="ttc" id="aclassThing_html_aabac9547c9e9514ea31affb4fa06cb44"><div class="ttname"><a href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">Thing.CanSearchContents</a></div><div class="ttdeci">bool CanSearchContents</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00095">Thing.cs:96</a></div></div>
 <div class="ttc" id="aclassThing_html_adc4bb311dba09b52f82071adbe7f1654"><div class="ttname"><a href="classThing.html#adc4bb311dba09b52f82071adbe7f1654">Thing.sourceCard</a></div><div class="ttdeci">override CardRow sourceCard</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00047">Thing.cs:47</a></div></div>
 <div class="ttc" id="aclassTileRow_html"><div class="ttname"><a href="classTileRow.html">TileRow</a></div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00003">TileRow.cs:4</a></div></div>

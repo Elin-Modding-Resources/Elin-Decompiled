@@ -1,5 +1,8 @@
 var NAVTREEINDEX92 =
 {
+"classQuestMain.html#ae2a4bcbf7b80dfcf5f0551eb09f5097d":[1,0,1002,11],
+"classQuestMain.html#af81a20fd66115fe5afea2578dc4db154":[1,0,1002,7],
+"classQuestManager.html":[1,0,1003],
 "classQuestManager.html#a03a85ca1ebdfbcd246547fe6d6d19213":[1,0,1003,16],
 "classQuestManager.html#a0b19e50fb38a0218c9a9a8bffc794a28":[1,0,1003,26],
 "classQuestManager.html#a102f38cc568090a09ed0169f18fd9dcf":[1,0,1003,29],
@@ -246,8 +249,5 @@ var NAVTREEINDEX92 =
 "classQuickMenu_1_1Item.html#a580edca5e4cd983217ea9256b71b8059":[1,0,1043,0,0],
 "classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568":[1,0,1043,0,2],
 "classQuickMenu_1_1Item.html#a707490cb2e6f18b026f1a90ba2cbb03b":[1,0,1043,0,3],
-"classQuickMenu_1_1Item.html#aa06b6d9fb0dec4f95d41e27381362d1e":[1,0,1043,0,4],
-"classQuickMenu_1_1Item.html#ae5324c1165222397ef0ce538241dc563":[1,0,1043,0,1],
-"classRaceBonus.html":[1,0,1044],
-"classRaceBonus.html#ada422a858396669a8d82c244a81d0fd8":[1,0,1044,0]
+"classQuickMenu_1_1Item.html#aa06b6d9fb0dec4f95d41e27381362d1e":[1,0,1043,0,4]
 };

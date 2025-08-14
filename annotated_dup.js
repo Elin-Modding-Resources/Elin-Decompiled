@@ -1720,6 +1720,7 @@ var annotated_dup =
     [ "TraitLoom", "classTraitLoom.html", "classTraitLoom" ],
     [ "TraitLoytel", "classTraitLoytel.html", "classTraitLoytel" ],
     [ "TraitLoytelMart", "classTraitLoytelMart.html", "classTraitLoytelMart" ],
+    [ "TraitLunch", "classTraitLunch.html", null ],
     [ "TraitLunchLove", "classTraitLunchLove.html", null ],
     [ "TraitMagicChest", "classTraitMagicChest.html", "classTraitMagicChest" ],
     [ "TraitMahjong", "classTraitMahjong.html", "classTraitMahjong" ],

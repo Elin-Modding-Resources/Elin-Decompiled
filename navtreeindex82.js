@@ -1,5 +1,8 @@
 var NAVTREEINDEX82 =
 {
+"classMapGenRegion.html#a7645a72bf5868cc29610f3b0f1e0cf0a":[1,0,860,1],
+"classMapGenRegion.html#a9da6b8e8bd2c7729d1170c3f4ea9851f":[1,0,860,0],
+"classMapGenRegion.html#ad008731809459f3b74a3959984cfc28a":[1,0,860,2],
 "classMapGenVariation.html":[1,0,861],
 "classMapGenVariation.html#a42e9f93ff30e76e5e2f43f55ea2b54b5":[1,0,861,9],
 "classMapGenVariation.html#a6666364efc7990097eb7c171b8cc7a94":[1,0,861,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX82 =
 "classModManager.html#a594b09f9d3d29068875fa79caa4b5ab1":[1,0,883,18],
 "classModManager.html#a72543a8d9f646fa41a019b19c5f92646":[1,0,883,19],
 "classModManager.html#a76a8d2fbb962ccaa2d1393f2719b454e":[1,0,883,16],
-"classModManager.html#a7bd714c9042cc306187915ad62ceccbe":[1,0,883,6],
-"classModManager.html#a80fd4b86d141d807723e33bfcef61576":[1,0,883,2],
-"classModManager.html#a9219aa9f35decd9d524b93f5f4263d66":[1,0,883,5],
-"classModManager.html#a9c8d6cc2333e49ae1a49627efe962e7d":[1,0,883,8]
+"classModManager.html#a7bd714c9042cc306187915ad62ceccbe":[1,0,883,6]
 };

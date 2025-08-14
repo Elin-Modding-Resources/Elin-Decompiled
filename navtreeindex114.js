@@ -1,5 +1,8 @@
 var NAVTREEINDEX114 =
 {
+"classTraitAppraiser.html#ac2667376d933a0450b99f469e1d4aa73":[1,0,1407,1],
+"classTraitAshland.html":[1,0,1408],
+"classTraitAshland.html#aec6e421de9a8108eb3ca196cd1429339":[1,0,1408,0],
 "classTraitBBQ.html":[1,0,1421],
 "classTraitBBQ.html#ae23270c3c55f5dcc8d12a295650f4f54":[1,0,1421,0],
 "classTraitBJTable.html":[1,0,1430],
@@ -246,8 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitChangingRoom.html":[1,0,1459],
 "classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1459,0],
 "classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1459,1],
-"classTraitChara.html":[1,0,1460],
-"classTraitChara.html#a082aebc8ded8a214962006a21717b046":[1,0,1460,4],
-"classTraitChara.html#a1cb2d15f296e190a9b93880a7ddbf2c1":[1,0,1460,12],
-"classTraitChara.html#a2086848ac881113e85fd2f5f2cb7dbe1":[1,0,1460,27]
+"classTraitChara.html":[1,0,1460]
 };

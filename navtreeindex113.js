@@ -1,5 +1,8 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#a4f89efebbdf3bf36c106d69f646853c5":[1,0,1389,108],
+"classTrait.html#a50ebba181dd04ca5ab9622c16c6b824b":[1,0,1389,192],
+"classTrait.html#a50ff3f794150d62da8471d3fb73b77ed":[1,0,1389,10],
 "classTrait.html#a52939bcd3cee8f5f363fdf65226c8c41":[1,0,1389,212],
 "classTrait.html#a5403dc0110848cbb7e18de734186502c":[1,0,1389,195],
 "classTrait.html#a54e7efc433bb50c88c6499d508da5044":[1,0,1389,104],
@@ -246,8 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1405,0],
 "classTraitAnvil.html":[1,0,1406],
 "classTraitAppraiser.html":[1,0,1407],
-"classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1407,0],
-"classTraitAppraiser.html#ac2667376d933a0450b99f469e1d4aa73":[1,0,1407,1],
-"classTraitAshland.html":[1,0,1408],
-"classTraitAshland.html#aec6e421de9a8108eb3ca196cd1429339":[1,0,1408,0]
+"classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1407,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX67 =
 {
+"classGradientColor.html#adffe5e9e34f579284ba8663ddf8e2be5":[1,0,563,10],
+"classGradientEffect.html":[1,0,564],
+"classGradientEffect.html#a28fa83f5c98caa4a71baa149ba9036c7":[1,0,564,5],
 "classGradientEffect.html#a399d0bce1c7f19a31b46943956e90b15":[1,0,564,8],
 "classGradientEffect.html#a3fdd0e6b754d0cb7c994cc88f962ac95":[1,0,564,4],
 "classGradientEffect.html#a574655a56da1f8c4792fc09234253722":[1,0,564,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX67 =
 "classGuildFighter.html#abff767150b3a93afed2296f18333a5c6":[1,0,590,0],
 "classGuildFighter.html#ad7d6d24de2e4d3e50810aa7b889e6d9f":[1,0,590,5],
 "classGuildMage.html":[1,0,591],
-"classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c":[1,0,591,1],
-"classGuildMage.html#a58189178f12635adea355a8199949d95":[1,0,591,0],
-"classGuildMage.html#a706f09183ecc804e3847f0e06a4134b2":[1,0,591,2],
-"classGuildMerchant.html":[1,0,592]
+"classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c":[1,0,591,1]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classConAwakening.html#a641a1a6a98615eb92075faa85f783657":[1,0,289,1],
+"classConBandage.html":[1,0,290],
 "classConBandage.html#a2976f295ec4b3f15fb08516cf0592396":[1,0,290,0],
 "classConBane.html":[1,0,291],
 "classConBerserk.html":[1,0,292],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "classConWeapon.html#a78014d205880f0aff39457469afc0272":[1,0,383,0],
 "classConWeapon.html#a83c2446cdf2064c5a5024bff09a8bfea":[1,0,383,2],
 "classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202":[1,0,383,1],
-"classConWet.html":[1,0,384],
-"classConWet.html#a06230376e3e51455384ee8e0581ff506":[1,0,384,3],
-"classConWet.html#aa3870f2c1fdbf51345e087e460013891":[1,0,384,1]
+"classConWet.html":[1,0,384]
 };

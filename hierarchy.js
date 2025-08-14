@@ -1653,7 +1653,9 @@ var hierarchy =
           [ "TraitFoodTravel", "classTraitFoodTravel.html", null ],
           [ "TraitFortuneCookie", "classTraitFortuneCookie.html", null ],
           [ "TraitMixedFood", "classTraitMixedFood.html", [
-            [ "TraitLunchLove", "classTraitLunchLove.html", null ]
+            [ "TraitLunch", "classTraitLunch.html", [
+              [ "TraitLunchLove", "classTraitLunchLove.html", null ]
+            ] ]
           ] ]
         ] ],
         [ "TraitFortuneBall", "classTraitFortuneBall.html", null ],

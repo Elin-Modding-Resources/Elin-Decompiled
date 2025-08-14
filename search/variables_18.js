@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['w_0',['w',['../classEloMap.html#a459513f30c91cbcf20ee9c3aba706306',1,'EloMap.w()'],['../classCoreConfig_1_1GraphicSetting.html#a72d8938881eeda8edbbda96dfa440ee7',1,'CoreConfig.GraphicSetting.w()']]],
+  ['w_0',['w',['../classCoreConfig_1_1GraphicSetting.html#a72d8938881eeda8edbbda96dfa440ee7',1,'CoreConfig::GraphicSetting']]],
   ['w_1',['W',['../classRenderRow.html#a430cf4dd98a65d9e4ec2458b62de39ef',1,'RenderRow']]],
-  ['w_2',['w',['../classTextureReplace.html#a5ce7dd5b241f912e2f6cbc91c305b7fc',1,'TextureReplace.w()'],['../classPartialMap.html#a75129f1547912fb4e15571b047bf898a',1,'PartialMap.w()'],['../classRoofStyle.html#a8c20ff40d296583434a1fdff43a35d9a',1,'RoofStyle.w()']]],
+  ['w_2',['w',['../classTextureReplace.html#a5ce7dd5b241f912e2f6cbc91c305b7fc',1,'TextureReplace.w()'],['../classRoofStyle.html#a8c20ff40d296583434a1fdff43a35d9a',1,'RoofStyle.w()'],['../classEloMap.html#a459513f30c91cbcf20ee9c3aba706306',1,'EloMap.w()'],['../classPartialMap.html#a75129f1547912fb4e15571b047bf898a',1,'PartialMap.w()']]],
   ['waist_3',['waist',['../classSLOT.html#a59f7f87538a64701a7e37f8c9ec1911c',1,'SLOT']]],
   ['wait_4',['wait',['../classDynamicAIAct.html#ab7fbbce1bdf65d99146fcfd8855912f3',1,'DynamicAIAct']]],
   ['wait_5',['Wait',['../classACT.html#ae497f6efe379221991822457af996b37',1,'ACT']]],
@@ -119,8 +119,8 @@ var searchData=
   ['white_116',['white',['../classEmpyrean_1_1Utils_1_1Colorist.html#a717d9560c8866b31b20ec6615e3561f3',1,'Empyrean::Utils::Colorist']]],
   ['white32_117',['white32',['../classEmpyrean_1_1Utils_1_1Colorist.html#aa94d0e82e880de600a8723ed82592f7e',1,'Empyrean::Utils::Colorist']]],
   ['whitereference_118',['WhiteReference',['../classColorConverter.html#ab35f104702f552e92c02efe265c50fc5',1,'ColorConverter']]],
-  ['widget_119',['Widget',['../classCorePath_1_1UI.html#a094a0c19abafe86a35dd1e0cc132480a',1,'CorePath::UI']]],
-  ['widget_120',['widget',['../classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e',1,'ButtonHotItem.widget()'],['../classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d',1,'LayerSkinDeco.widget()'],['../classSkinManager_1_1FontSet.html#a5b7621f3c09902689cd8f1e82d81399f',1,'SkinManager.FontSet.widget()']]],
+  ['widget_119',['widget',['../classButtonHotItem.html#a0a9f69e1f6138f2b98430160c036148e',1,'ButtonHotItem.widget()'],['../classLayerSkinDeco.html#a19d04415c274f56beb270b9d0364563d',1,'LayerSkinDeco.widget()'],['../classSkinManager_1_1FontSet.html#a5b7621f3c09902689cd8f1e82d81399f',1,'SkinManager.FontSet.widget()']]],
+  ['widget_120',['Widget',['../classCorePath_1_1UI.html#a094a0c19abafe86a35dd1e0cc132480a',1,'CorePath::UI']]],
   ['widgetholder_121',['widgetHolder',['../classLayerSkinDeco.html#a43fc0d3bc4c26db429ac8a44b46b556d',1,'LayerSkinDeco']]],
   ['widgetmetas_122',['widgetMetas',['../classGameSetting_1_1UISetting.html#ae238187d8241ceedbdbeb9cbdf1c38d6',1,'GameSetting::UISetting']]],
   ['widgets_123',['widgets',['../classUI.html#a5b3ea66477005df27fc843ec52387e84',1,'UI']]],

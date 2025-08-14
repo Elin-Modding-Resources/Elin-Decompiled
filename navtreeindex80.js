@@ -1,5 +1,8 @@
 var NAVTREEINDEX80 =
 {
+"classListOwner.html#ab42835ae58c46bf205bd18fa09bd5518":[1,0,835,12],
+"classListOwner.html#ad4da657eacbb8b1cf75c6013e7dca661":[1,0,835,14],
+"classListOwner.html#aed2d5663bbcfd432ceb0412e4dc83115":[1,0,835,6],
 "classListOwner.html#aee7a54d14a07351e8be41ac385fe5063":[1,0,835,23],
 "classListPeople.html":[1,0,836],
 "classListPeople.html#a6c167e43338f147af5a833457a97cb38":[1,0,836,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX80 =
 "classMap.html#a0470e8e5e289ed3a59c81a3b7adc5d20":[1,0,854,115],
 "classMap.html#a048307df8c1c1f6503f3b3600c6e92a6":[1,0,854,28],
 "classMap.html#a04be2f9a9088a16a895bc0a9b3fcec69":[1,0,854,83],
-"classMap.html#a04e87d8a21f3c9535dbea12ffa8a7f77":[1,0,854,74],
-"classMap.html#a058491c2e0a97bcc00be9bee16bcac36":[1,0,854,24],
-"classMap.html#a0620e75d6c2c5a0f4035e008c92bd8f8":[1,0,854,160],
-"classMap.html#a07d3fee6b37300e6b7e1e5c2a8419b44":[1,0,854,37]
+"classMap.html#a04e87d8a21f3c9535dbea12ffa8a7f77":[1,0,854,74]
 };
