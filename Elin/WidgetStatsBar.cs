@@ -57,6 +57,8 @@ public class WidgetStatsBar : Widget
 		public bool dv;
 
 		public bool fertility;
+
+		public bool elec;
 	}
 
 	public static WidgetStatsBar Instance;
@@ -94,6 +96,8 @@ public class WidgetStatsBar : Widget
 	public Sprite iconMaxMinion;
 
 	public Sprite iconFertility;
+
+	public Sprite iconElec;
 
 	private UIItem mold;
 
@@ -205,6 +209,10 @@ public class WidgetStatsBar : Widget
 				}
 				return (string)obj;
 			}, () => ((EMono.Branch == null && !(EMono._zone is Zone_Tent)) || EMono._zone.MaxSoil - EMono._zone.GetSoilCost() >= 0) ? FontColor.Default : FontColor.Bad, () => EMono._zone.IsPCFaction || EMono._zone is Zone_Tent);
+		}
+		if (extra.elec)
+		{
+			Add(null, "elec", iconElec, () => (EMono.Branch != null || EMono._zone is Zone_Tent) ? (EMono._zone.GetElectricity(cost: true) + " / " + EMono._zone.GetElectricity()) : "", () => ((EMono.Branch == null && !(EMono._zone is Zone_Tent)) || EMono._zone.GetElectricity() - EMono._zone.GetElectricity(cost: true) >= 0) ? FontColor.Default : FontColor.Bad, () => EMono._zone.IsPCFaction || EMono._zone is Zone_Tent);
 		}
 		if (extra.weight)
 		{
@@ -381,6 +389,11 @@ public class WidgetStatsBar : Widget
 		uIContextMenu.AddToggle("fertility", extra.fertility, delegate(bool a)
 		{
 			extra.fertility = a;
+			Build();
+		});
+		uIContextMenu.AddToggle("elec", extra.elec, delegate(bool a)
+		{
+			extra.elec = a;
 			Build();
 		});
 		uIContextMenu.AddToggle("invWeight", extra.weight, delegate(bool a)

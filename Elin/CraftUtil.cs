@@ -70,7 +70,7 @@ public class CraftUtil : EClass
 			{
 				thing = ThingGen.Create("_meat");
 			}
-			thing = thing.TryMakeRandomItem(lv);
+			thing = thing.TryMakeRandomItem(lv, TryMakeRandomItemSource.Cooking, crafter);
 			TraitSeed.LevelSeed(thing, null, EClass.rnd(lv / 4) + 1);
 			thing.SetEncLv(thing.encLV / 2);
 			if (num > 0 && EClass.rnd(3) == 0)
@@ -119,15 +119,20 @@ public class CraftUtil : EClass
 		thing.MakeRefFrom(c);
 		int num = c.uid + EClass.world.date.year * 10000 + EClass.world.date.month * 100;
 		Rand.SetSeed(num);
-		int num2 = 3 + EClass.rnd(3);
+		float num2 = Mathf.Clamp(1f + Mathf.Sqrt(c.Evalue(287) / 5), 2f, 6f);
 		if (!EClass.debug.autoIdentify)
 		{
 			thing.c_IDTState = 5;
 		}
-		for (int i = 0; i < num2; i++)
+		for (int i = 0; (float)i < num2; i++)
 		{
 			Rand.SetSeed(num + i);
 			AddIngredient(thing, c, GetRandomLoveLunchIngredient(c), writeCrafter: false);
+		}
+		thing.elements.SetBase(701, 0);
+		if (thing.Evalue(753) < 0)
+		{
+			thing.elements.SetBase(753, 0);
 		}
 		Rand.SetSeed();
 		return thing;

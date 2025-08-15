@@ -694,7 +694,7 @@ public class SerializedCards : EClass
 			}
 			if (version >= 2 && card4.idDyeMat != -1)
 			{
-				card2.Dye(EClass.sources.materials.rows[card4.idDyeMat]);
+				card2.Dye(EClass.sources.materials.rows.TryGet(card4.idDyeMat, 1));
 			}
 			card2.mapObj = card4.obj;
 			if (card2.mapObj?.TryGetValue(2) != null)

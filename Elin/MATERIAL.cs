@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MATERIAL : EClass
 {
+	public const byte idNull = 1;
+
 	public const byte oak = 1;
 
 	public const byte granite = 3;
@@ -29,6 +31,8 @@ public class MATERIAL : EClass
 	public const byte process = 94;
 
 	public const byte sand_sea = 97;
+
+	public const string aliasNull = "oak";
 
 	public static SourceMaterial.Row sourceSnow = EClass.sources.materials.rows[48];
 

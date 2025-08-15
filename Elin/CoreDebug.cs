@@ -938,6 +938,7 @@ public class CoreDebug : EScriptable
 				EClass.pc.Pick(targetChara.MakeGene());
 				EClass.pc.Pick(targetChara.MakeBraineCell());
 				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
+				targetChara.ModAffinity(EClass.pc, 10000);
 			}
 			if (EClass.game.quests.Get<QuestDebt>() == null)
 			{

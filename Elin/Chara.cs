@@ -9225,22 +9225,25 @@ public class Chara : Card, IPathfindWalker
 
 	public void ModHeight(int a)
 	{
-		int height = bio.height;
-		height = height * (100 + a) / 100 + ((a > 0) ? 1 : (-1));
-		if (height < 1)
+		if (!HasElement(450))
 		{
-			height = 1;
-		}
-		if (height != bio.height)
-		{
-			bio.height = height;
-			Say((a > 0) ? "height_gain" : "height_lose", this);
+			int height = bio.height;
+			height = height * (100 + a) / 100 + ((a > 0) ? 1 : (-1));
+			if (height < 1)
+			{
+				height = 1;
+			}
+			if (height != bio.height)
+			{
+				bio.height = height;
+				Say((a > 0) ? "height_gain" : "height_lose", this);
+			}
 		}
 	}
 
 	public void ModWeight(int a, bool ignoreLimit = false)
 	{
-		if (a == 0)
+		if (HasElement(450) || a == 0)
 		{
 			return;
 		}

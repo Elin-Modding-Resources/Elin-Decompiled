@@ -194,6 +194,7 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 
 	public override void BackupPref()
 	{
+		SourceAsset._SavePrefs("prefs_auto");
 		_rows.Clear();
 		foreach (Row row in rows)
 		{

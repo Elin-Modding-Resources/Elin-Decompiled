@@ -134,7 +134,7 @@ public class Recipe : EClass
 
 		public bool IsValidIngredient(Thing t)
 		{
-			if (ingType == IngType.CreativeFood && t.HasElement(10))
+			if (ingType == IngType.CreativeFood && t.HasElement(10) && !(t.trait is TraitFoodFishSlice))
 			{
 				return true;
 			}

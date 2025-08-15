@@ -219,7 +219,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 					{
 						SourceElement.Row row = EClass.sources.elements.map[h.source.elements[j]];
 						int num2 = h.source.elements[j + 1];
-						float num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? ((float)(num2 / 10)) : Mathf.Max(0f, (long)num2 * (long)h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
+						float num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? ((float)(num2 / 10)) : Mathf.Max((h.GetEfficiency(a) > 0) ? 1 : 0, (long)num2 * (long)h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
 						t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
 					}
 				}

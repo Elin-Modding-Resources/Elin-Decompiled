@@ -2981,12 +2981,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public Card ChangeMaterial(int idNew, bool ignoreFixedMaterial = false)
 	{
-		return ChangeMaterial(EClass.sources.materials.map[idNew], ignoreFixedMaterial);
+		return ChangeMaterial(EClass.sources.materials.map.TryGetValue(idNew, 1), ignoreFixedMaterial);
 	}
 
 	public Card ChangeMaterial(string idNew, bool ignoreFixedMaterial = false)
 	{
-		return ChangeMaterial(EClass.sources.materials.alias[idNew], ignoreFixedMaterial);
+		return ChangeMaterial(EClass.sources.materials.alias.TryGetValue(idNew, "oak"), ignoreFixedMaterial);
 	}
 
 	public Card ChangeMaterial(SourceMaterial.Row row, bool ignoreFixedMaterial = false)
@@ -3483,10 +3483,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public SocketData AddRune(Card rune)
 	{
-		return AddRune(rune.refVal, rune.encLV);
+		return AddRune(rune.refVal, rune.encLV, rune.trait is TraitRuneFree);
 	}
 
-	public SocketData AddRune(int idEle, int v)
+	public SocketData AddRune(int idEle, int v, bool free)
 	{
 		if (socketList == null)
 		{
@@ -3497,7 +3497,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			idEle = idEle,
 			value = v,
-			type = SocketData.Type.Rune
+			type = SocketData.Type.Rune,
+			isFree = free
 		};
 		socketList.Add(socketData);
 		if (IsWeapon || !row.IsWeaponEnc)
@@ -3522,14 +3523,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return null;
 	}
 
-	public int CountRune()
+	public int CountRune(bool countFree = true)
 	{
 		int num = 0;
 		if (socketList != null)
 		{
 			foreach (SocketData socket in socketList)
 			{
-				if (socket.type == SocketData.Type.Rune)
+				if (socket.type == SocketData.Type.Rune && (countFree || !socket.isFree))
 				{
 					num++;
 				}
@@ -3543,21 +3544,22 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return ((!IsUnique) ? 1 : 0) + Evalue(484);
 	}
 
-	public bool CanAddRune(SourceElement.Row row)
+	public bool CanAddRune(TraitMod mod)
 	{
+		SourceElement.Row source = mod.source;
 		if (category.slot == 0)
 		{
 			return false;
 		}
-		if (material.HasEnc(row.id))
+		if (material.HasEnc(source.id))
 		{
 			return false;
 		}
-		if (!IsWeapon && row.IsWeaponEnc)
+		if (!IsWeapon && source.IsWeaponEnc)
 		{
 			return false;
 		}
-		if (row.category == "resist")
+		if (source.category == "resist")
 		{
 			foreach (Element item in elements.ListElements())
 			{
@@ -3567,7 +3569,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		string encSlot = row.encSlot;
+		string encSlot = source.encSlot;
 		if (encSlot == null || encSlot.Length != 0)
 		{
 			switch (encSlot)
@@ -3575,7 +3577,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			default:
 			{
 				bool flag = false;
-				string[] array = row.encSlot.Split(',');
+				string[] array = source.encSlot.Split(',');
 				foreach (string key in array)
 				{
 					if (EClass.sources.elements.alias[key].id == category.slot)
@@ -3595,7 +3597,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				break;
 			}
 		}
-		return CountRune() < MaxRune();
+		if (mod is TraitRuneFree)
+		{
+			return true;
+		}
+		return CountRune(countFree: false) < MaxRune();
 	}
 
 	public bool HasRune()
@@ -5182,7 +5188,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public Thing TryMakeRandomItem(int lv = -1)
+	public Thing TryMakeRandomItem(int lv = -1, TryMakeRandomItemSource itemSource = TryMakeRandomItemSource.Default, Chara crafter = null)
 	{
 		if (lv == -1)
 		{
@@ -5214,10 +5220,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				text = "c_animal";
 			}
+			if (itemSource == TryMakeRandomItemSource.Cooking && crafter != null && crafter.HasElement(1205))
+			{
+				text = "c_human";
+			}
 			for (int i = 0; i < 20; i++)
 			{
 				CardRow cardRow = SpawnList.Get(text).Select(lv + i);
-				if (cardRow.model.Chara.race.corpse[0] != "_meat" && id != "milk" && id != "_egg" && id != "egg_fertilized")
+				if ((cardRow.model.Chara.race.corpse[0] != "_meat" && id != "milk" && id != "_egg" && id != "egg_fertilized") || (itemSource == TryMakeRandomItemSource.Cooking && cardRow.model.HasElement(701)))
 				{
 					continue;
 				}
@@ -6944,6 +6954,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				{
 				case "plat":
 					return 500;
+				case "rune_free":
+					return 1000;
 				case "whip_egg":
 					return 3000;
 				case "hammer_strip":

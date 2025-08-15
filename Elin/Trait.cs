@@ -1833,7 +1833,7 @@ public class Trait : EClass
 				{
 				case ShopType.Moyer:
 				{
-					for (int num10 = 1; num10 <= 7; num10++)
+					for (int num10 = 1; num10 <= 9; num10++)
 					{
 						AddAdvWeek(num10);
 					}
@@ -1872,6 +1872,7 @@ public class Trait : EClass
 					Add("1165", 1, 0);
 					Add("plat", 100, 0);
 					AddThing(ThingGen.CreateScroll(9160).SetNum(5));
+					AddThing(ThingGen.CreateRune(450, 1, free: true));
 					break;
 				case ShopType.Gun:
 					Add("bullet", 1, 0).SetNum(300 + EClass.rnd(100)).ChangeMaterial("iron");

@@ -68,13 +68,13 @@ public class TCOrbitChara : TCOrbit
 		Emo2 emo = owner.emoIcon;
 		if (emo == Emo2.none)
 		{
-			if (owner.isRestocking && (!owner.IsPCParty || EMono._zone.IsPCFaction) && owner.trait.GetRestockedIcon() != 0 && !(EMono._zone is Zone_Dungeon))
-			{
-				emo = owner.trait.GetRestockedIcon();
-			}
-			else if (!owner.IsPC && ((owner.affinity.CanGiveCard() && !EMono.player.codex.DroppedCard(owner.id)) || owner.GetInt(71) == -2))
+			if (!owner.IsPC && ((owner.affinity.CanGiveCard() && !EMono.player.codex.DroppedCard(owner.id)) || owner.GetInt(71) == -2))
 			{
 				emo = Emo2.hintEvent;
+			}
+			else if (owner.isRestocking && (!owner.IsPCParty || EMono._zone.IsPCFaction) && owner.trait.GetRestockedIcon() != 0 && !(EMono._zone is Zone_Dungeon))
+			{
+				emo = owner.trait.GetRestockedIcon();
 			}
 			else
 			{

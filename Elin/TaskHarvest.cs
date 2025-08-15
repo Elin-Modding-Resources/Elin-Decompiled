@@ -583,16 +583,23 @@ public class TaskHarvest : BaseTaskHarvest
 			fixedQuality = true
 		});
 		Thing thing = ThingGen.Create(text, 1, Mathf.Max(1, lV * 2 / 3));
-		if (thing != null)
+		if (thing == null)
 		{
-			thing.SetNum((int)num);
-			thing.ChangeMaterial(target.material);
-			thing.decay = decay;
-			if (thing.IsDecayed && thing.IsFood)
-			{
-				thing.elements.SetBase(73, -10);
-			}
-			EClass._map.TrySmoothPick(pos.IsBlocked ? owner.pos : pos, thing, EClass.pc);
+			return;
 		}
+		if (EClass._zone.IsUserZone && target.isNPCProperty && thing.trait is TraitPotionLove)
+		{
+			Msg.Say("spellbookCrumble", thing);
+			thing.Destroy();
+			return;
+		}
+		thing.SetNum((int)num);
+		thing.ChangeMaterial(target.material);
+		thing.decay = decay;
+		if (thing.IsDecayed && thing.IsFood)
+		{
+			thing.elements.SetBase(73, -10);
+		}
+		EClass._map.TrySmoothPick(pos.IsBlocked ? owner.pos : pos, thing, EClass.pc);
 	}
 }

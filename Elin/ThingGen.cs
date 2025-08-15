@@ -182,6 +182,14 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
+	public static Thing CreateRune(int ele, int v, bool free = false)
+	{
+		Thing thing = Create(free ? "rune_free" : "rune");
+		thing.refVal = ele;
+		thing.encLV = v;
+		return thing;
+	}
+
 	public static Thing CreateRod(int ele)
 	{
 		Thing thing = Create("rod");

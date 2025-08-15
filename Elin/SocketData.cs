@@ -50,6 +50,18 @@ public class SocketData : EClass
 		}
 	}
 
+	public bool isFree
+	{
+		get
+		{
+			return bits[0];
+		}
+		set
+		{
+			bits[0] = value;
+		}
+	}
+
 	[OnSerializing]
 	private void _OnSerializing(StreamingContext context)
 	{

@@ -24,7 +24,7 @@ public class QuestSupplyCat : QuestSupply
 
 	public override void SetIdThing()
 	{
-		List<SourceCategory.Row> list = EClass.sources.categories.rows.Where((SourceCategory.Row c) => c._parent == "meal").ToList();
+		List<SourceCategory.Row> list = EClass.sources.categories.rows.Where((SourceCategory.Row c) => c._parent == "meal" && c.id != "meal_lunch").ToList();
 		idCat = list.RandomItem().id;
 	}
 

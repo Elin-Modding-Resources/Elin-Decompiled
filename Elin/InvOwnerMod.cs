@@ -30,7 +30,7 @@ public class InvOwnerMod : InvOwnerDraglet
 		TraitMod traitMod = owner.trait as TraitMod;
 		if (traitMod is TraitRune)
 		{
-			if (!t.CanAddRune(traitMod.source))
+			if (!t.CanAddRune(traitMod))
 			{
 				return false;
 			}

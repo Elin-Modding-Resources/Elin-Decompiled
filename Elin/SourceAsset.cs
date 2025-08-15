@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class SourceAsset : EScriptable
@@ -34,7 +35,10 @@ public class SourceAsset : EScriptable
 
 	public static void _SavePrefs(string id = "prefs")
 	{
-		IO.CopyAs(PrefPath + id, PrefPath + id + "_bk");
+		if (File.Exists(PrefPath + id))
+		{
+			IO.CopyAs(PrefPath + id, PrefPath + id + "_bk");
+		}
 		Prefs prefs = new Prefs();
 		prefs.version = 2;
 		Debug.Log(EClass.sources.things.rows.Count);
