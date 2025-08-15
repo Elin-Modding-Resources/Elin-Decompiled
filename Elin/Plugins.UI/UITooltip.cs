@@ -44,6 +44,9 @@ public class UITooltip : MonoBehaviour
 
 	public LayoutElement layout;
 
+	[NonSerialized]
+	public float hideTimer;
+
 	private void Awake()
 	{
 		orgPivot = this.Rect().pivot;
