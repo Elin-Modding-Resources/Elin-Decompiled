@@ -1,5 +1,15 @@
 var NAVTREEINDEX98 =
 {
+"classSPELL.html#abdbddaadb8e4a489ff59f1daae5917bf":[1,0,1223,21],
+"classSPELL.html#abfed464fbf09d1213abfe362799c9feb":[1,0,1223,153],
+"classSPELL.html#ac01c4e936b4f3c16e388e88bc65b99d3":[1,0,1223,242],
+"classSPELL.html#ac178300ca7bdfd0261b0ef773550f6cb":[1,0,1223,3],
+"classSPELL.html#ac27a7028b687e1667a4aa00f72093c38":[1,0,1223,29],
+"classSPELL.html#ac400a1f4c0fb6d110f9730f3e01b6dd7":[1,0,1223,76],
+"classSPELL.html#ac4c0b4e9c2271322057dadfb0c3e2c21":[1,0,1223,118],
+"classSPELL.html#ac5c0549073c234bf2350d4a67e95c8fc":[1,0,1223,12],
+"classSPELL.html#ac5d8ffbbc1e8359376c06bf560378259":[1,0,1223,149],
+"classSPELL.html#ac69e1ed2ebc7d04a9c351df639ac73c4":[1,0,1223,11],
 "classSPELL.html#ac75b54b3bf10994c0aa31229f43f3925":[1,0,1223,221],
 "classSPELL.html#ac81ace51f8b8395e9f3391e628d191ce":[1,0,1223,201],
 "classSPELL.html#ac8debc0a56428b1e962492ac24376cab":[1,0,1223,193],
@@ -239,15 +249,5 @@ var NAVTREEINDEX98 =
 "classScreenGuide.html#a42d9143cc717c5b9886cf8c196c9915e":[1,0,1127,5],
 "classScreenGuide.html#a45f134a3bb49bc9c126c71591ec45b0f":[1,0,1127,9],
 "classScreenGuide.html#a4f09b312922ae6bad21b94225d288547":[1,0,1127,1],
-"classScreenGuide.html#a752be30d70298a2d48071668f83b8ab1":[1,0,1127,8],
-"classScreenGuide.html#a7b0dcad7fb7df3c8d082e447347d6852":[1,0,1127,0],
-"classScreenGuide.html#a7b691ad3ed84ff1b014c848ae91984fe":[1,0,1127,4],
-"classScreenGuide.html#abae9aeeca1578db7eff6d822e491eb7c":[1,0,1127,10],
-"classScreenGuide.html#abd2582d0da474b87de4f668bc34f5e8e":[1,0,1127,11],
-"classScreenGuide.html#ac02b861319d073d4bc37852a116957dc":[1,0,1127,2],
-"classScreenGuide.html#ae9c6579c9d6e4df3113c361821dc94f8":[1,0,1127,7],
-"classScreenOverlay.html":[1,0,1128],
-"classScreenOverlay.html#a27a2cf83469e176e31265e5ae73ba611":[1,0,1128,6],
-"classScreenOverlay.html#a85544cbaca43191c0fa545e57b78f9f1":[1,0,1128,3],
-"classScreenOverlay.html#a95cf4eeefcde3bc5c910939d5254e24c":[1,0,1128,2]
+"classScreenGuide.html#a752be30d70298a2d48071668f83b8ab1":[1,0,1127,8]
 };

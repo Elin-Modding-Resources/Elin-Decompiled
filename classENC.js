@@ -84,6 +84,7 @@ var classENC =
     [ "sustain_CHA", "classENC.html#ac2ae25f83ec7086b89d321c47f750688", null ],
     [ "sustain_DEX", "classENC.html#a5bdab0bafcdbabe419c7a96086b9a963", null ],
     [ "sustain_END", "classENC.html#a4735f34d9e677a10c34993e61eda97d9", null ],
+    [ "sustain_figure", "classENC.html#a0fb5ab3debb83c9598eb22394b55e053", null ],
     [ "sustain_LER", "classENC.html#addb9e8e560a42da2e500d4cdd851d3d0", null ],
     [ "sustain_MAG", "classENC.html#a93819a6e982d047839ed8bb86c67de76", null ],
     [ "sustain_PER", "classENC.html#ac5b88ce68de14ea3c461b610787d5a32", null ],

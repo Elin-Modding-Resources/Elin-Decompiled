@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.179 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.180 Nightly</span>
    </div>
   </td>
  </tr>
@@ -153,6 +153,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0d9cdcf997f2fcf9385ca78b7db80e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d8a74fdb69d210d35598766392a67f"><td class="memItemLeft" align="right" valign="top">LayoutElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUITooltip.html#a87d8a74fdb69d210d35598766392a67f">layout</a></td></tr>
 <tr class="separator:a87d8a74fdb69d210d35598766392a67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431e3d0962bd1e54d546e12081da8ce7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUITooltip.html#a431e3d0962bd1e54d546e12081da8ce7">hideTimer</a></td></tr>
+<tr class="separator:a431e3d0962bd1e54d546e12081da8ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -219,10 +221,10 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00047">47</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_variable" href="classUITooltip.html#aa76771ab58645537b09cabc1cdc41cd1">orgPivot</a> = this.Rect().pivot;</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00050">50</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_variable" href="classUITooltip.html#aa76771ab58645537b09cabc1cdc41cd1">orgPivot</a> = this.Rect().pivot;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 <div class="ttc" id="aclassUITooltip_html_aa76771ab58645537b09cabc1cdc41cd1"><div class="ttname"><a href="classUITooltip.html#aa76771ab58645537b09cabc1cdc41cd1">UITooltip.orgPivot</a></div><div class="ttdeci">Vector2 orgPivot</div><div class="ttdef"><b>Definition:</b> <a href="UITooltip_8cs_source.html#l00039">UITooltip.cs:39</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UITooltip_8cs_source.html#l00039">orgPivot</a>.</p>
@@ -253,41 +255,41 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00052">52</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a> != _data;</div>
-<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a> = _data;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#a763bb53533eda1dc5dd3715d59897bb6">note</a>)</div>
-<div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            this.Rect().sizeDelta = <span class="keyword">new</span> Vector2(500f, 0f);</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUITooltip.html#a9527fb0034bf7255955676a13ceb1338">altSkin</a> &amp;&amp; flag)</div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                SkinManager.tempSkin = <a class="code hl_class" href="classSkinManager.html">SkinManager</a>.<a class="code hl_property" href="classSkinManager.html#a2ff37db5789c4aa268525c171580332d">CurrentSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#a3b2e941c0b532d10af0e1b88c3392d11">colors</a>.<a class="code hl_variable" href="classSkinRootStatic_1_1SkinColors.html#a80b350c11291deb52c26ffb21032a59b">skinTooltip</a>;</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#a87d8a74fdb69d210d35598766392a67f">layout</a>)</div>
-<div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            layout.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#abcf032495dacda8db34046c24382cc7a">textMain</a>)</div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            textMain.text = (<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a02d27583bcaca7c0052a5201e4e9c05e">lang</a>.IsEmpty() ? data.text : <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a02d27583bcaca7c0052a5201e4e9c05e">lang</a>));</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a0c7a4208ea8a8cf2761622df863353e4">onShowTooltip</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a0c7a4208ea8a8cf2761622df863353e4">onShowTooltip</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#ac57c04ea665c7f46446f54e1b52844cd">icon</a>)</div>
-<div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="classUITooltip.html#ac57c04ea665c7f46446f54e1b52844cd">icon</a>.SetActive(<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#ab6504946b62b544a7bf5f41927846cc5">icon</a>);</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_class" href="classUIImage.html">UIImage</a>[] componentsInChildren = GetComponentsInChildren&lt;UIImage&gt;(includeInactive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
-<div class="line"><span class="lineno">   82</span>        {</div>
-<div class="line"><span class="lineno">   83</span>            componentsInChildren[i].<a class="code hl_function" href="classUIImage.html#a075a8fc2af77c124ba43355bf0f76403">ApplySkin</a>();</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        this.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00055">55</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a> != _data;</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a> = _data;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#a763bb53533eda1dc5dd3715d59897bb6">note</a>)</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            this.Rect().sizeDelta = <span class="keyword">new</span> Vector2(500f, 0f);</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUITooltip.html#a9527fb0034bf7255955676a13ceb1338">altSkin</a> &amp;&amp; flag)</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                SkinManager.tempSkin = <a class="code hl_class" href="classSkinManager.html">SkinManager</a>.<a class="code hl_property" href="classSkinManager.html#a2ff37db5789c4aa268525c171580332d">CurrentSkin</a>.<a class="code hl_variable" href="classSkinRootStatic.html#a3b2e941c0b532d10af0e1b88c3392d11">colors</a>.<a class="code hl_variable" href="classSkinRootStatic_1_1SkinColors.html#a80b350c11291deb52c26ffb21032a59b">skinTooltip</a>;</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#a87d8a74fdb69d210d35598766392a67f">layout</a>)</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            layout.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#abcf032495dacda8db34046c24382cc7a">textMain</a>)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            textMain.text = (<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a02d27583bcaca7c0052a5201e4e9c05e">lang</a>.IsEmpty() ? data.text : <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a02d27583bcaca7c0052a5201e4e9c05e">lang</a>));</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a0c7a4208ea8a8cf2761622df863353e4">onShowTooltip</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#a0c7a4208ea8a8cf2761622df863353e4">onShowTooltip</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classUITooltip.html#ac57c04ea665c7f46446f54e1b52844cd">icon</a>)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_variable" href="classUITooltip.html#ac57c04ea665c7f46446f54e1b52844cd">icon</a>.SetActive(<a class="code hl_variable" href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">data</a>.<a class="code hl_variable" href="classTooltipData.html#ab6504946b62b544a7bf5f41927846cc5">icon</a>);</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_class" href="classUIImage.html">UIImage</a>[] componentsInChildren = GetComponentsInChildren&lt;UIImage&gt;(includeInactive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            componentsInChildren[i].<a class="code hl_function" href="classUIImage.html#a075a8fc2af77c124ba43355bf0f76403">ApplySkin</a>();</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>        this.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html_a87ee4b30187ae525639ccc297e2c0823"><div class="ttname"><a href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Lang.Get</a></div><div class="ttdeci">static string Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00091">Lang.cs:91</a></div></div>
 <div class="ttc" id="aclassSkinManager_html"><div class="ttname"><a href="classSkinManager.html">SkinManager</a></div><div class="ttdef"><b>Definition:</b> <a href="SkinManager_8cs_source.html#l00006">SkinManager.cs:7</a></div></div>
@@ -327,7 +329,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00037">37</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00052">SetData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00055">SetData()</a>.</p>
 
 </div>
 </div>
@@ -345,7 +347,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00041">41</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TooltipManager_8cs_source.html#l00110">TooltipManager.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TooltipManager_8cs_source.html#l00111">TooltipManager.Update()</a>.</p>
 
 </div>
 </div>
@@ -363,7 +365,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00015">15</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TooltipManager_8cs_source.html#l00018">TooltipManager.ResetTooltips()</a>, and <a class="el" href="UITooltip_8cs_source.html#l00052">SetData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TooltipManager_8cs_source.html#l00018">TooltipManager.ResetTooltips()</a>, and <a class="el" href="UITooltip_8cs_source.html#l00055">SetData()</a>.</p>
 
 </div>
 </div>
@@ -429,7 +431,23 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00043">43</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TooltipManager_8cs_source.html#l00110">TooltipManager.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TooltipManager_8cs_source.html#l00111">TooltipManager.Update()</a>.</p>
+
+</div>
+</div>
+<a id="a431e3d0962bd1e54d546e12081da8ce7" name="a431e3d0962bd1e54d546e12081da8ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431e3d0962bd1e54d546e12081da8ce7">&#9670;&#160;</a></span>hideTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UITooltip.hideTimer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00048">48</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
 </div>
 </div>
@@ -447,7 +465,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00027">27</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00052">SetData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00055">SetData()</a>.</p>
 
 </div>
 </div>
@@ -497,7 +515,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00045">45</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00052">SetData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00055">SetData()</a>.</p>
 
 </div>
 </div>
@@ -515,7 +533,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00021">21</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00805">Element.AddEncNote()</a>, <a class="el" href="WindowChara_8cs_source.html#l00332">WindowChara.AddStatus()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00320">UICharaMaker.ListJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00266">UICharaMaker.ListRace()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00133">BuildMenu.OnActivate()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00063">BaseListPeople.OnInstantiate()</a>, <a class="el" href="ButtonElement_8cs_source.html#l00045">ButtonElement.Refresh()</a>, <a class="el" href="ItemCulture_8cs_source.html#l00015">ItemCulture.Refresh()</a>, <a class="el" href="WindowCharaMini_8cs_source.html#l00048">WindowCharaMini.Refresh()</a>, <a class="el" href="WindowCharaMini_8cs_source.html#l00289">WindowCharaMini.RefreshEquipment()</a>, <a class="el" href="WindowChara_8cs_source.html#l00397">WindowChara.RefreshEquipment()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="ContentPolicy_8cs_source.html#l00034">ContentPolicy.RefreshPolicyList()</a>, <a class="el" href="LayerPolicy_8cs_source.html#l00027">LayerPolicy.RefreshPolicyList()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00342">UIHomeInfo.RefreshReport()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00037">ButtonAbility.SetAct()</a>, <a class="el" href="GridItemCard_8cs_source.html#l00005">GridItemCard.SetButton()</a>, <a class="el" href="GridItemCardSource_8cs_source.html#l00007">GridItemCardSource.SetButton()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00184">ButtonGrid.SetCard()</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00034">ItemGachaResult.SetChara()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00590">ButtonGrid.SetCraftRecipe()</a>, <a class="el" href="UITooltip_8cs_source.html#l00052">SetData()</a>, <a class="el" href="ButtonElement_8cs_source.html#l00166">ButtonElement.SetGrid()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="ItemResearch_8cs_source.html#l00011">ItemResearch.SetPlan()</a>, <a class="el" href="ItemHomeResource_8cs_source.html#l00009">ItemHomeResource.SetResource()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00805">Element.AddEncNote()</a>, <a class="el" href="WindowChara_8cs_source.html#l00332">WindowChara.AddStatus()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00320">UICharaMaker.ListJob()</a>, <a class="el" href="UICharaMaker_8cs_source.html#l00266">UICharaMaker.ListRace()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00133">BuildMenu.OnActivate()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00063">BaseListPeople.OnInstantiate()</a>, <a class="el" href="ButtonElement_8cs_source.html#l00045">ButtonElement.Refresh()</a>, <a class="el" href="ItemCulture_8cs_source.html#l00015">ItemCulture.Refresh()</a>, <a class="el" href="WindowCharaMini_8cs_source.html#l00048">WindowCharaMini.Refresh()</a>, <a class="el" href="WindowCharaMini_8cs_source.html#l00289">WindowCharaMini.RefreshEquipment()</a>, <a class="el" href="WindowChara_8cs_source.html#l00397">WindowChara.RefreshEquipment()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="ContentPolicy_8cs_source.html#l00034">ContentPolicy.RefreshPolicyList()</a>, <a class="el" href="LayerPolicy_8cs_source.html#l00027">LayerPolicy.RefreshPolicyList()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00342">UIHomeInfo.RefreshReport()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00037">ButtonAbility.SetAct()</a>, <a class="el" href="GridItemCard_8cs_source.html#l00005">GridItemCard.SetButton()</a>, <a class="el" href="GridItemCardSource_8cs_source.html#l00007">GridItemCardSource.SetButton()</a>, <a class="el" href="GridItemRecipe_8cs_source.html#l00005">GridItemRecipe.SetButton()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00184">ButtonGrid.SetCard()</a>, <a class="el" href="ItemGachaResult_8cs_source.html#l00034">ItemGachaResult.SetChara()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00590">ButtonGrid.SetCraftRecipe()</a>, <a class="el" href="UITooltip_8cs_source.html#l00055">SetData()</a>, <a class="el" href="ButtonElement_8cs_source.html#l00166">ButtonElement.SetGrid()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="ItemResearch_8cs_source.html#l00011">ItemResearch.SetPlan()</a>, <a class="el" href="ItemHomeResource_8cs_source.html#l00009">ItemHomeResource.SetResource()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
 
 </div>
 </div>
@@ -549,7 +567,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00039">39</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00047">Awake()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UITooltip_8cs_source.html#l00050">Awake()</a>.</p>
 
 </div>
 </div>
@@ -567,7 +585,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UITooltip_8cs_source.html#l00017">17</a> of file <a class="el" href="UITooltip_8cs_source.html">UITooltip.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIQueue_8cs_source.html#l00025">UIQueue.OnAdd()</a>, and <a class="el" href="UITooltip_8cs_source.html#l00052">SetData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIQueue_8cs_source.html#l00025">UIQueue.OnAdd()</a>, and <a class="el" href="UITooltip_8cs_source.html#l00055">SetData()</a>.</p>
 
 </div>
 </div>

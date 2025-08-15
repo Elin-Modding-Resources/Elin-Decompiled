@@ -1,5 +1,17 @@
 var NAVTREEINDEX118 =
 {
+"classTraitHouseBoard_1_1Data.html#ac20790270289beaf3e2362ddff8f536d":[1,0,1616,0,3],
+"classTraitHouseBoard_1_1Data.html#ac3c871e51c30f0b4740776cb7aafe63a":[1,0,1616,0,5],
+"classTraitHouseBoard_1_1Data.html#ac7e5bb7cc0542cd42488bcd3d68e60b9":[1,0,1616,0,9],
+"classTraitHouseBoard_1_1Data.html#af821e32d51cf81d58a9da427ca06fe2b":[1,0,1616,0,12],
+"classTraitIllumination.html":[1,0,1617],
+"classTraitIllumination.html#a2943f02d7fa0fe4ab25fe2df3423fb16":[1,0,1617,1],
+"classTraitIllumination.html#ae080f2ba42627c81c2a4ae423d3a0ddb":[1,0,1617,0],
+"classTraitIncinerator.html":[1,0,1618],
+"classTraitIncubator.html":[1,0,1619],
+"classTraitIncubator.html#a01be3a4b8ab3dca322ee0eec40670aa8":[1,0,1619,6],
+"classTraitIncubator.html#a08b08410e9e46115a2b6d236b22429df":[1,0,1619,3],
+"classTraitIncubator.html#a0f85ef82f7e7f9334ecd28ec4a039598":[1,0,1619,8],
 "classTraitIncubator.html#a18699f14d54bfb2326f762d86291817d":[1,0,1619,2],
 "classTraitIncubator.html#a4b87afe6c576e76b0c0dd1f17acc1dc8":[1,0,1619,7],
 "classTraitIncubator.html#a5b87af23019200733b000010034199de":[1,0,1619,5],
@@ -237,17 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitMerchantPlan.html#ab278bfef3c363c2066ef537cbbd74984":[1,0,1681,0],
 "classTraitMerchantPlat.html":[1,0,1682],
 "classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1682,3],
-"classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1682,2],
-"classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1682,1],
-"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1682,0],
-"classTraitMerchantSeed.html":[1,0,1683],
-"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1683,0],
-"classTraitMerchantSouvenir.html":[1,0,1684],
-"classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1684,0],
-"classTraitMerchantWeapon.html":[1,0,1685],
-"classTraitMerchantWeapon.html#a39707660f853306b84cb5dd687a478e8":[1,0,1685,1],
-"classTraitMerchantWeapon.html#af0080d32bcb9f5aade5f2099b25dcd70":[1,0,1685,0],
-"classTraitMiko__Mifu.html":[1,0,1686],
-"classTraitMiko__Nefu.html":[1,0,1687],
-"classTraitMill.html":[1,0,1688]
+"classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1682,2]
 };

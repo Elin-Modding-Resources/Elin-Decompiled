@@ -1,5 +1,17 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#a4207b40678d774015cf532e1fbfa11f6":[1,0,1389,166],
+"classTrait.html#a451845a816deb9740a16121536fcd48e":[1,0,1389,129],
+"classTrait.html#a465361d0239bbdd1358d35046e4e6c87":[1,0,1389,38],
+"classTrait.html#a4737c1ce5c25f3d2f45ada2cdb1b2f19":[1,0,1389,148],
+"classTrait.html#a47b9ffd55d19fac5985c99d803d7d416":[1,0,1389,4],
+"classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6":[1,0,1389,93],
+"classTrait.html#a49cd4b6298180f400ba370f814714fbf":[1,0,1389,160],
+"classTrait.html#a4ac641a35b27784da64e13edc433d23b":[1,0,1389,72],
+"classTrait.html#a4aff3c950b25f7b4527c33c3678d3f87":[1,0,1389,209],
+"classTrait.html#a4b04ca74c54bb2fad488c295278265dd":[1,0,1389,18],
+"classTrait.html#a4b2d59088504ce0145c3096fb99645fc":[1,0,1389,11],
+"classTrait.html#a4d20dd4795d1045eba97f315560053b1":[1,0,1389,210],
 "classTrait.html#a4f89efebbdf3bf36c106d69f646853c5":[1,0,1389,108],
 "classTrait.html#a50ebba181dd04ca5ab9622c16c6b824b":[1,0,1389,192],
 "classTrait.html#a50ff3f794150d62da8471d3fb73b77ed":[1,0,1389,10],
@@ -237,17 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitAmmoTalisman.html":[1,0,1403],
 "classTraitAmmoTalisman.html#a9ca08b037ec6ff430ad79fe7ffc3c6bb":[1,0,1403,1],
 "classTraitAmmoTalisman.html#ac7d93044ac71e79131f9afe6c89cb36c":[1,0,1403,0],
-"classTraitAncientbook.html":[1,0,1404],
-"classTraitAncientbook.html#a30af98aa86c5036c1c47f7599b31f4ca":[1,0,1404,2],
-"classTraitAncientbook.html#a3af35eecff07096d675b87d386c8edb9":[1,0,1404,5],
-"classTraitAncientbook.html#a6c782d3ffd4d53048e79511abe35990a":[1,0,1404,4],
-"classTraitAncientbook.html#aa6e1c3b9dcb61283b5fa8b600ffa5806":[1,0,1404,3],
-"classTraitAncientbook.html#ae882ffdfc7ef8327868fd0c99b2d937f":[1,0,1404,0],
-"classTraitAncientbook.html#aec51bf4c2860bbb886b3a13bf244bd0f":[1,0,1404,1],
-"classTraitAnimalTamer.html":[1,0,1405],
-"classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1405,1],
-"classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1405,0],
-"classTraitAnvil.html":[1,0,1406],
-"classTraitAppraiser.html":[1,0,1407],
-"classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1407,0]
+"classTraitAncientbook.html":[1,0,1404]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.179 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.180 Nightly</span>
    </div>
   </td>
  </tr>
@@ -144,27 +144,40 @@ $(document).ready(function(){initNavTree('SocketData_8cs_source.html',''); initR
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    [OnSerializing]</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classSocketData.html#a420d39c6c11ddda5a7737f8f8fff7519">   54</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSocketData.html#a420d39c6c11ddda5a7737f8f8fff7519">_OnSerializing</a>(StreamingContext context)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="classSocketData.html#aa04b5d0b555de29e578e8954716b18a3">ints</a>[4] = (int)<a class="code hl_variable" href="classSocketData.html#a72caa4d235ea94ea12318db178177ddf">bits</a>.<a class="code hl_variable" href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">Bits</a>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    [OnDeserialized]</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classSocketData.html#ab782efc15e63f31c338c4fe15d20b5a3">   60</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSocketData.html#ab782efc15e63f31c338c4fe15d20b5a3">_OnDeserialized</a>(StreamingContext context)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        bits.Bits = (uint)<a class="code hl_variable" href="classSocketData.html#aa04b5d0b555de29e578e8954716b18a3">ints</a>[4];</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classSocketData.html#a21c65469fe46b14f25420d3c6a3fedf1">   53</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classSocketData.html#a21c65469fe46b14f25420d3c6a3fedf1">isFree</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classSocketData.html#a72caa4d235ea94ea12318db178177ddf">bits</a>[0];</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">set</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <a class="code hl_variable" href="classSocketData.html#a72caa4d235ea94ea12318db178177ddf">bits</a>[0] = <a class="code hl_property" href="classSocketData.html#a9c7d59b315581dc271438eac8774c17e">value</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    [OnSerializing]</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classSocketData.html#a420d39c6c11ddda5a7737f8f8fff7519">   66</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSocketData.html#a420d39c6c11ddda5a7737f8f8fff7519">_OnSerializing</a>(StreamingContext context)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_variable" href="classSocketData.html#aa04b5d0b555de29e578e8954716b18a3">ints</a>[4] = (int)<a class="code hl_variable" href="classSocketData.html#a72caa4d235ea94ea12318db178177ddf">bits</a>.<a class="code hl_variable" href="structBitArray32.html#a83496c94eb91a5bb1d40d561f8fdf479">Bits</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    [OnDeserialized]</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classSocketData.html#ab782efc15e63f31c338c4fe15d20b5a3">   72</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSocketData.html#ab782efc15e63f31c338c4fe15d20b5a3">_OnDeserialized</a>(StreamingContext context)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        bits.Bits = (uint)<a class="code hl_variable" href="classSocketData.html#aa04b5d0b555de29e578e8954716b18a3">ints</a>[4];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassSocketData_html"><div class="ttname"><a href="classSocketData.html">SocketData</a></div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00004">SocketData.cs:5</a></div></div>
-<div class="ttc" id="aclassSocketData_html_a420d39c6c11ddda5a7737f8f8fff7519"><div class="ttname"><a href="classSocketData.html#a420d39c6c11ddda5a7737f8f8fff7519">SocketData._OnSerializing</a></div><div class="ttdeci">void _OnSerializing(StreamingContext context)</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00054">SocketData.cs:54</a></div></div>
+<div class="ttc" id="aclassSocketData_html_a21c65469fe46b14f25420d3c6a3fedf1"><div class="ttname"><a href="classSocketData.html#a21c65469fe46b14f25420d3c6a3fedf1">SocketData.isFree</a></div><div class="ttdeci">bool isFree</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00053">SocketData.cs:54</a></div></div>
+<div class="ttc" id="aclassSocketData_html_a420d39c6c11ddda5a7737f8f8fff7519"><div class="ttname"><a href="classSocketData.html#a420d39c6c11ddda5a7737f8f8fff7519">SocketData._OnSerializing</a></div><div class="ttdeci">void _OnSerializing(StreamingContext context)</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00066">SocketData.cs:66</a></div></div>
 <div class="ttc" id="aclassSocketData_html_a62cbd4b448e647fed3bc3e3c7c3def94"><div class="ttname"><a href="classSocketData.html#a62cbd4b448e647fed3bc3e3c7c3def94">SocketData.type</a></div><div class="ttdeci">Type type</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00017">SocketData.cs:18</a></div></div>
 <div class="ttc" id="aclassSocketData_html_a72caa4d235ea94ea12318db178177ddf"><div class="ttname"><a href="classSocketData.html#a72caa4d235ea94ea12318db178177ddf">SocketData.bits</a></div><div class="ttdeci">BitArray32 bits</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00015">SocketData.cs:15</a></div></div>
 <div class="ttc" id="aclassSocketData_html_a8e1a7bf1753c4097d153ecd87301db3d"><div class="ttname"><a href="classSocketData.html#a8e1a7bf1753c4097d153ecd87301db3d">SocketData.idEle</a></div><div class="ttdeci">int idEle</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00029">SocketData.cs:30</a></div></div>
 <div class="ttc" id="aclassSocketData_html_a9c7d59b315581dc271438eac8774c17e"><div class="ttname"><a href="classSocketData.html#a9c7d59b315581dc271438eac8774c17e">SocketData.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00041">SocketData.cs:42</a></div></div>
 <div class="ttc" id="aclassSocketData_html_aa04b5d0b555de29e578e8954716b18a3"><div class="ttname"><a href="classSocketData.html#aa04b5d0b555de29e578e8954716b18a3">SocketData.ints</a></div><div class="ttdeci">int[] ints</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00013">SocketData.cs:13</a></div></div>
-<div class="ttc" id="aclassSocketData_html_ab782efc15e63f31c338c4fe15d20b5a3"><div class="ttname"><a href="classSocketData.html#ab782efc15e63f31c338c4fe15d20b5a3">SocketData._OnDeserialized</a></div><div class="ttdeci">void _OnDeserialized(StreamingContext context)</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00060">SocketData.cs:60</a></div></div>
+<div class="ttc" id="aclassSocketData_html_ab782efc15e63f31c338c4fe15d20b5a3"><div class="ttname"><a href="classSocketData.html#ab782efc15e63f31c338c4fe15d20b5a3">SocketData._OnDeserialized</a></div><div class="ttdeci">void _OnDeserialized(StreamingContext context)</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00072">SocketData.cs:72</a></div></div>
 <div class="ttc" id="aclassSocketData_html_aeacadbc58395df6f23bc076a42cfb756"><div class="ttname"><a href="classSocketData.html#aeacadbc58395df6f23bc076a42cfb756">SocketData.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="SocketData_8cs_source.html#l00006">SocketData.cs:7</a></div></div>
 <div class="ttc" id="aclassSocketData_html_aeacadbc58395df6f23bc076a42cfb756a201011842cd44b96c4ed73dcff80ac1f"><div class="ttname"><a href="classSocketData.html#aeacadbc58395df6f23bc076a42cfb756a201011842cd44b96c4ed73dcff80ac1f">SocketData.Type.Rune</a></div><div class="ttdeci">@ Rune</div></div>
 <div class="ttc" id="aclassSocketData_html_aeacadbc58395df6f23bc076a42cfb756a69f69b59aae6f4ee1a47bbc1086ecdb4"><div class="ttname"><a href="classSocketData.html#aeacadbc58395df6f23bc076a42cfb756a69f69b59aae6f4ee1a47bbc1086ecdb4">SocketData.Type.Socket</a></div><div class="ttdeci">@ Socket</div></div>

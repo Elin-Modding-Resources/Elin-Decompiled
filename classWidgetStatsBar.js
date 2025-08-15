@@ -10,6 +10,7 @@ var classWidgetStatsBar =
     [ "OnSetContextMenu", "classWidgetStatsBar.html#a7664475857e378f71e834c9353e85e44", null ],
     [ "Refresh", "classWidgetStatsBar.html#a0459069033ec702cb98022e4364e23e7", null ],
     [ "iconDvPv", "classWidgetStatsBar.html#a92ba4311a465c33b2c51ba25810bc9fb", null ],
+    [ "iconElec", "classWidgetStatsBar.html#a1d18d85a706a54b7b126b0198261cb9b", null ],
     [ "iconFame", "classWidgetStatsBar.html#a655d6b34a3d6397f6e236a44f14961d3", null ],
     [ "iconFertility", "classWidgetStatsBar.html#a9b1c4f3c6dc7b6467814033a659aabc0", null ],
     [ "iconGodMood", "classWidgetStatsBar.html#a29eb517dcc4b12f89f9c97b0239d2843", null ],

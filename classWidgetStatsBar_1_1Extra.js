@@ -2,6 +2,7 @@ var classWidgetStatsBar_1_1Extra =
 [
     [ "attributes", "classWidgetStatsBar_1_1Extra.html#a97f6df18147b4afadfbf30fa452feb74", null ],
     [ "dv", "classWidgetStatsBar_1_1Extra.html#aa7bae33a4ce59f96a11d2f8be04c3eab", null ],
+    [ "elec", "classWidgetStatsBar_1_1Extra.html#a77e478e8eb67ccb39e9fa707c565b550", null ],
     [ "fame", "classWidgetStatsBar_1_1Extra.html#ad04a3f36f7252aee23fc7cd803ba5375", null ],
     [ "fertility", "classWidgetStatsBar_1_1Extra.html#a05877221b0102c773a49978406fbff86", null ],
     [ "hearthLv", "classWidgetStatsBar_1_1Extra.html#a6072cb9491a24c51a94256852f0e5867", null ],

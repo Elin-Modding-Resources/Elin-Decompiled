@@ -15,6 +15,7 @@ var classUITooltip =
     [ "follow", "classUITooltip.html#ad7fc1c0d41906e01834248e5ea707e5f", null ],
     [ "followType", "classUITooltip.html#ac107bc8510cf735bb7ba5cf47b62b7b2", null ],
     [ "hideFunc", "classUITooltip.html#a0d9cdcf997f2fcf9385ca78b7db80e00", null ],
+    [ "hideTimer", "classUITooltip.html#a431e3d0962bd1e54d546e12081da8ce7", null ],
     [ "icon", "classUITooltip.html#ac57c04ea665c7f46446f54e1b52844cd", null ],
     [ "imageMain", "classUITooltip.html#ab627ee43255ddf80a86abfbc7a1465f8", null ],
     [ "imageSub", "classUITooltip.html#a204a247531a7940a6cfcf85d6a725d7f", null ],

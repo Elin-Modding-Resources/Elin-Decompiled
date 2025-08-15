@@ -1,5 +1,15 @@
 var NAVTREEINDEX87 =
 {
+"classPlayer.html#afe46f62cec8665ce7c77b8d0b6129644":[1,0,933,168],
+"classPlayer_1_1Flags.html":[1,0,933,0],
+"classPlayer_1_1Flags.html#a02c50b8ff75cb4ede99010a699e4a721":[1,0,933,0,7],
+"classPlayer_1_1Flags.html#a0865b4a2e04fdc5ca76200d9b7c835b2":[1,0,933,0,38],
+"classPlayer_1_1Flags.html#a0b4f75ac9a5f20e0413f0ba86e075d44":[1,0,933,0,6],
+"classPlayer_1_1Flags.html#a0b567467c683121a6480a84bd95ad1df":[1,0,933,0,44],
+"classPlayer_1_1Flags.html#a0b65973c9cfa47f91688fe51445e4189":[1,0,933,0,1],
+"classPlayer_1_1Flags.html#a0e5de12c4be974b9ba21190161d514e6":[1,0,933,0,32],
+"classPlayer_1_1Flags.html#a1104d83c8e72928436503ca03be64438":[1,0,933,0,25],
+"classPlayer_1_1Flags.html#a162b7b621a261de0baaa5d7cd3337e89":[1,0,933,0,45],
 "classPlayer_1_1Flags.html#a18363eb223e3eb3f6071db5901764bd5":[1,0,933,0,33],
 "classPlayer_1_1Flags.html#a1c49f0f9e9a93a3c6c5a7baed4d3f9e9":[1,0,933,0,5],
 "classPlayer_1_1Flags.html#a1ddf8b634e2bf98b569e26d98d6e1143":[1,0,933,0,52],
@@ -239,15 +249,5 @@ var NAVTREEINDEX87 =
 "classPoint.html#aef5453d97b5b98b6b777c823ac29cb34":[1,0,936,138],
 "classPoint.html#aef8634ffa11094d532bb1fe64fd268b7":[1,0,936,27],
 "classPoint.html#af010916d2b7b6099cd7816a50a5d24d1":[1,0,936,38],
-"classPoint.html#af2de1cdb52589d10648135dda1a63386":[1,0,936,96],
-"classPoint.html#af333b9b2df3fc703050e7a95c856ea58":[1,0,936,46],
-"classPoint.html#af4f53c5ef543798320ca855aa873dc46":[1,0,936,101],
-"classPoint.html#af7b04afb2a29ebd340f30da67a7f2a0e":[1,0,936,109],
-"classPoint.html#af88c7f8fe25b233c77721069f79ac140":[1,0,936,124],
-"classPoint.html#af969a4e115469e86076d2af955d4f223":[1,0,936,37],
-"classPoint.html#afaa1d2c5a9ec151b549aa9ca4ccd537e":[1,0,936,141],
-"classPoint.html#afc9b2ee00ac6924bda2f43201e77c8e2":[1,0,936,61],
-"classPoint.html#afdc4f950522acdbccf552a7a6cb9baa8":[1,0,936,121],
-"classPoint.html#afdd73040f1cdad07157e653686acad1d":[1,0,936,78],
-"classPoint.html#afdfaf1c8d2cc3515b536c0b2a860ab21":[1,0,936,30]
+"classPoint.html#af2de1cdb52589d10648135dda1a63386":[1,0,936,96]
 };

@@ -1,5 +1,17 @@
 var NAVTREEINDEX115 =
 {
+"classTraitCatalyst.html#a6c7acb26a8fe1a6c9b5bd83b2032344f":[1,0,1456,3],
+"classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a":[1,0,1456,0],
+"classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9":[1,0,1456,5],
+"classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1456,2],
+"classTraitCauldron.html":[1,0,1457],
+"classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1457,1],
+"classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1457,0],
+"classTraitChair.html":[1,0,1458],
+"classTraitChangingRoom.html":[1,0,1459],
+"classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1459,0],
+"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1459,1],
+"classTraitChara.html":[1,0,1460],
 "classTraitChara.html#a082aebc8ded8a214962006a21717b046":[1,0,1460,4],
 "classTraitChara.html#a1cb2d15f296e190a9b93880a7ddbf2c1":[1,0,1460,12],
 "classTraitChara.html#a2086848ac881113e85fd2f5f2cb7dbe1":[1,0,1460,27],
@@ -237,17 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1500,1],
 "classTraitDefertilizer.html":[1,0,1501],
 "classTraitDeliveryChest.html":[1,0,1502],
-"classTraitDeliveryChest.html#a120325a952af6fc337e01d0498f9d35f":[1,0,1502,1],
-"classTraitDeliveryChest.html#a43c4b7d0ba716ca6d3dab8cb0d885d4c":[1,0,1502,8],
-"classTraitDeliveryChest.html#a44ca8e83f02452ad3bd771332cc6e0e6":[1,0,1502,7],
-"classTraitDeliveryChest.html#a475ade5c2b50886a079bec421acc84aa":[1,0,1502,0],
-"classTraitDeliveryChest.html#a759e096a48919490c36935c55caa7325":[1,0,1502,4],
-"classTraitDeliveryChest.html#a774bfcf99b9683a2403e478139c6f2c4":[1,0,1502,5],
-"classTraitDeliveryChest.html#a88e74b882b4527ce73766b88eb9d4a3d":[1,0,1502,2],
-"classTraitDeliveryChest.html#acd2e19a32b93863cd10a4f510ff041a1":[1,0,1502,3],
-"classTraitDeliveryChest.html#aee7645c9838310d20e6dee885ecfbd80":[1,0,1502,6],
-"classTraitDemitas.html":[1,0,1503],
-"classTraitDemitas.html#a060c10188e2e9b6be4f12a753f313798":[1,0,1503,1],
-"classTraitDemitas.html#a0ff4e48fdcd360e4ac5111c1f89ac7ae":[1,0,1503,5],
-"classTraitDemitas.html#a6b7f513d97116cb2d65c9d549d952a99":[1,0,1503,3]
+"classTraitDeliveryChest.html#a120325a952af6fc337e01d0498f9d35f":[1,0,1502,1]
 };

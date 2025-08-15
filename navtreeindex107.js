@@ -1,5 +1,16 @@
 var NAVTREEINDEX107 =
 {
+"classSpriteData.html#affb1b500f1881b419332e6e306c03030":[1,0,1228,1],
+"classSpriteLoadOption.html":[1,0,1229],
+"classSpriteLoadOption.html#a18a90f2fd8188f92c52e6d33c4b3cb54":[1,0,1229,1],
+"classSpriteLoadOption.html#aa9f3e37c870c30096a9d1de0d11e6ee1":[1,0,1229,0],
+"classSpriteReplacer.html":[1,0,1230],
+"classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37":[1,0,1230,2],
+"classSpriteReplacer.html#a88313578a2ab905ddc3e88795168977d":[1,0,1230,4],
+"classSpriteReplacer.html#a98f1dba859ed214fdb5f9c3640865392":[1,0,1230,5],
+"classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403":[1,0,1230,3],
+"classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e":[1,0,1230,0],
+"classSpriteReplacer.html#ae80438d18cf1e6ba8a2d7c3f702f5bf6":[1,0,1230,1],
 "classSpriteReplacerAnimation.html":[1,0,1231],
 "classSpriteReplacerAnimation.html#a0a178b33ca500c108ddbc35db7be3685":[1,0,1231,4],
 "classSpriteReplacerAnimation.html#a21d5036fdbd4877031ec1d7bc4676538":[1,0,1231,5],
@@ -238,16 +249,5 @@ var NAVTREEINDEX107 =
 "classTCOrbitChara.html#a4209d81b33a346db553b33732f1de679":[1,0,1299,2],
 "classTCOrbitChara.html#a5d15423ac081ebce2421a736ab86dc5f":[1,0,1299,12],
 "classTCOrbitChara.html#a652b278ffdef9c2294c68d5b737756a7":[1,0,1299,11],
-"classTCOrbitChara.html#aa3ead05c54c745b58b6b9c0e93debc69":[1,0,1299,3],
-"classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6":[1,0,1299,4],
-"classTCOrbitChara.html#ab81202f1b685bc12aab5d3dac00ecac8":[1,0,1299,14],
-"classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8":[1,0,1299,0],
-"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1299,6],
-"classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0":[1,0,1299,5],
-"classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da":[1,0,1299,7],
-"classTCOrbitChara.html#ada37c4ed77cb850ac2235b10e83101cf":[1,0,1299,8],
-"classTCOrbitTask.html":[1,0,1300],
-"classTCOrbitTask.html#a18d4b927fa246e20c01900f95add6ced":[1,0,1300,3],
-"classTCOrbitTask.html#a88c580c2ee24e85665112a0e5f4e85cb":[1,0,1300,1],
-"classTCOrbitTask.html#acad24d37c6aa8e407a69477b3be57cc2":[1,0,1300,5]
+"classTCOrbitChara.html#aa3ead05c54c745b58b6b9c0e93debc69":[1,0,1299,3]
 };

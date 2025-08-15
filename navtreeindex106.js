@@ -1,5 +1,16 @@
 var NAVTREEINDEX106 =
 {
+"classSpatial.html#a2098034dbe53ba58869c9ed28f792036":[1,0,1214,25],
+"classSpatial.html#a23eedba5194d6f73cb944a3be1670605":[1,0,1214,19],
+"classSpatial.html#a24e389678e4b92ca1a8afc79b2e7e0a6":[1,0,1214,75],
+"classSpatial.html#a2eadb92cafb481d78f96a4b1a19d6381":[1,0,1214,3],
+"classSpatial.html#a3590547749d2565723068e27302b68f8":[1,0,1214,31],
+"classSpatial.html#a398219838e9afd65314dc12242ad4dd2":[1,0,1214,72],
+"classSpatial.html#a39b7de8edf5bbd3fc579aa743dcdc3d8":[1,0,1214,79],
+"classSpatial.html#a3d32786bb1d24d70693a1a132e44b4e1":[1,0,1214,94],
+"classSpatial.html#a3db7b7309c0983a22e7a652b28ecfd2f":[1,0,1214,68],
+"classSpatial.html#a410d73fe510cc502216125e48cc85d52":[1,0,1214,50],
+"classSpatial.html#a442dbfc6d6a43b82769b03f0635e5806":[1,0,1214,91],
 "classSpatial.html#a44feda905985f4043b4d0ed65814156b":[1,0,1214,4],
 "classSpatial.html#a48aab101430d3a0427076bcca68ea6f7":[1,0,1214,63],
 "classSpatial.html#a4b9ceece95a08942c73fd641b7c7837e":[1,0,1214,45],
@@ -238,16 +249,5 @@ var NAVTREEINDEX106 =
 "classSpriteData.html#ac960964b75a86380055b2d6cd42ab220":[1,0,1228,14],
 "classSpriteData.html#adbedf9a97764bc7bdcf20b0bfc472dab":[1,0,1228,0],
 "classSpriteData.html#adf8ba462c11d8df4f83c557ea9cc727d":[1,0,1228,15],
-"classSpriteData.html#aea2bc3f3454486ceffeb94a39217ee7b":[1,0,1228,3],
-"classSpriteData.html#affb1b500f1881b419332e6e306c03030":[1,0,1228,1],
-"classSpriteLoadOption.html":[1,0,1229],
-"classSpriteLoadOption.html#a18a90f2fd8188f92c52e6d33c4b3cb54":[1,0,1229,1],
-"classSpriteLoadOption.html#aa9f3e37c870c30096a9d1de0d11e6ee1":[1,0,1229,0],
-"classSpriteReplacer.html":[1,0,1230],
-"classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37":[1,0,1230,2],
-"classSpriteReplacer.html#a88313578a2ab905ddc3e88795168977d":[1,0,1230,4],
-"classSpriteReplacer.html#a98f1dba859ed214fdb5f9c3640865392":[1,0,1230,5],
-"classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403":[1,0,1230,3],
-"classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e":[1,0,1230,0],
-"classSpriteReplacer.html#ae80438d18cf1e6ba8a2d7c3f702f5bf6":[1,0,1230,1]
+"classSpriteData.html#aea2bc3f3454486ceffeb94a39217ee7b":[1,0,1228,3]
 };

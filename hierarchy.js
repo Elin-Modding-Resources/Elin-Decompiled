@@ -1723,7 +1723,9 @@ var hierarchy =
           [ "TraitMaterialHammer", "classTraitMaterialHammer.html", null ],
           [ "TraitMod", "classTraitMod.html", [
             [ "TraitModRanged", "classTraitModRanged.html", null ],
-            [ "TraitRune", "classTraitRune.html", null ]
+            [ "TraitRune", "classTraitRune.html", [
+              [ "TraitRuneFree", "classTraitRuneFree.html", null ]
+            ] ]
           ] ],
           [ "TraitPaintBoard", "classTraitPaintBoard.html", null ],
           [ "TraitPainter", "classTraitPainter.html", [

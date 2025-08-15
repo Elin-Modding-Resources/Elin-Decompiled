@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.179 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.180 Nightly</span>
    </div>
   </td>
  </tr>
@@ -132,103 +132,104 @@ $(document).ready(function(){initNavTree('TooltipManager_8cs_source.html',''); i
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            }</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="classUITooltip.html">UITooltip</a> uITooltip = <a class="code hl_variable" href="classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb">tooltips</a>[0];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="classUITooltip.html">UITooltip</a> t = <a class="code hl_variable" href="classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb">tooltips</a>[0];</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="classUITooltip.html">UITooltip</a>[] array = <a class="code hl_variable" href="classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb">tooltips</a>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classUITooltip.html">UITooltip</a> uITooltip2 <span class="keywordflow">in</span> array)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classUITooltip.html">UITooltip</a> uITooltip <span class="keywordflow">in</span> array)</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (uITooltip2.name == data.id)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (uITooltip.name == data.id)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                uITooltip = uITooltip2;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                t = uITooltip;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        uITooltip.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        uITooltip.<a class="code hl_function" href="classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91">SetData</a>(data);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (uITooltip.cg.alpha &lt; 0.1f)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        t.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        t.<a class="code hl_function" href="classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91">SetData</a>(data);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (t.cg.alpha &lt; 0.1f)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            uITooltip.cg.alpha = 1f;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            t.cg.alpha = 1f;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">float</span> timer = 0f;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        uITooltip.hideFunc = delegate</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        t.hideTimer = 0f;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        t.hideFunc = delegate</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">if</span> (target == <span class="keyword">null</span> || !<a class="code hl_class" href="classInputModuleEX.html">InputModuleEX</a>.<a class="code hl_function" href="classInputModuleEX.html#a90fc667fb67ebabc13df94cb23e6b90e">IsPointerOver</a>(target))</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                timer += Time.smoothDeltaTime;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">return</span> timer &gt; 0.2f;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                t.hideTimer += Time.smoothDeltaTime;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">return</span> t.hideTimer &gt; 0.2f;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            timer = 0f;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            t.hideTimer = 0f;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        };</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (uITooltip.followType == <a class="code hl_class" href="classUITooltip.html">UITooltip</a>.<a class="code hl_enumeration" href="classUITooltip.html#a3a24431c3200c3e320ce67ba14f22b4b">FollowType</a>.None)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (t.followType == <a class="code hl_class" href="classUITooltip.html">UITooltip</a>.<a class="code hl_enumeration" href="classUITooltip.html#a3a24431c3200c3e320ce67ba14f22b4b">FollowType</a>.None)</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        {</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Vector3 vector = ((uITooltip.followType == <a class="code hl_class" href="classUITooltip.html">UITooltip</a>.<a class="code hl_enumeration" href="classUITooltip.html#a3a24431c3200c3e320ce67ba14f22b4b">FollowType</a>.Mouse) ? <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a255a7f6ebc0f0e918bf321786be9f3e0">uiMousePosition</a> : target.position);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (uITooltip.followType == <a class="code hl_class" href="classUITooltip.html">UITooltip</a>.<a class="code hl_enumeration" href="classUITooltip.html#a3a24431c3200c3e320ce67ba14f22b4b">FollowType</a>.Pivot)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Vector3 vector = ((t.followType == <a class="code hl_class" href="classUITooltip.html">UITooltip</a>.<a class="code hl_enumeration" href="classUITooltip.html#a3a24431c3200c3e320ce67ba14f22b4b">FollowType</a>.Mouse) ? <a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a255a7f6ebc0f0e918bf321786be9f3e0">uiMousePosition</a> : target.position);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (t.followType == <a class="code hl_class" href="classUITooltip.html">UITooltip</a>.<a class="code hl_enumeration" href="classUITooltip.html#a3a24431c3200c3e320ce67ba14f22b4b">FollowType</a>.Pivot)</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            GameObject gameObject = target.FindTagInParents(<span class="stringliteral">&quot;PivotTooltip&quot;</span>, includeInactive: <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)gameObject)</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                uITooltip.Rect().pivot = gameObject.transform.Rect().pivot;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                t.Rect().pivot = gameObject.transform.Rect().pivot;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                vector = gameObject.transform.position;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                uITooltip.Rect().pivot = uITooltip.orgPivot;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                t.Rect().pivot = t.orgPivot;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        uITooltip.transform.position = vector + data.offset + uITooltip.offset;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_enumvalue" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.ClampToScreen(uITooltip.Rect(), 20);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        t.transform.position = vector + data.offset + t.offset;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_enumvalue" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.ClampToScreen(t.Rect(), 20);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d">   89</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTooltipManager.html#a935d52ec89bb93da431932f5cd028f5d">HideTooltips</a>(<span class="keywordtype">bool</span> immediate = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_class" href="classUITooltip.html">UITooltip</a>[] array = <a class="code hl_variable" href="classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb">tooltips</a>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classUITooltip.html">UITooltip</a> uITooltip <span class="keywordflow">in</span> array)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classUITooltip.html">UITooltip</a> t <span class="keywordflow">in</span> array)</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">if</span> (immediate)</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                uITooltip.cg.alpha = 0f;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                uITooltip.data = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                uITooltip.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordtype">float</span> timer = 0f;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            uITooltip.hideFunc = delegate</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                timer += Time.smoothDeltaTime;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <span class="keywordflow">return</span> timer &gt; 0.2f;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            };</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classTooltipManager.html#a4d01e89f42b7f486114e6f6090bd9042">  110</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTooltipManager.html#a4d01e89f42b7f486114e6f6090bd9042">Update</a>()</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f">disableTimer</a> &gt; 0f)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <a class="code hl_variable" href="classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f">disableTimer</a> -= Time.deltaTime;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_class" href="classUITooltip.html">UITooltip</a>[] array = <a class="code hl_variable" href="classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb">tooltips</a>;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classUITooltip.html">UITooltip</a> uITooltip <span class="keywordflow">in</span> array)</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">if</span> (!(uITooltip.name == <a class="code hl_variable" href="classTooltipManager.html#adca56be292c3fbc644ec72267f02a5fb">disableHide</a>) &amp;&amp; uITooltip.gameObject.activeSelf)</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">if</span> (uITooltip.<a class="code hl_variable" href="classUITooltip.html#a0d9cdcf997f2fcf9385ca78b7db80e00">hideFunc</a>())</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    uITooltip.cg.alpha -= Time.smoothDeltaTime * 5f;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    uITooltip.cg.alpha += Time.smoothDeltaTime * 5f;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <span class="keywordflow">if</span> (uITooltip.<a class="code hl_variable" href="classUITooltip.html#a630d1c392d0cfe585592c1e882919c5e">cg</a>.alpha &lt;= 0f)</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    uITooltip.data = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    uITooltip.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                }</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                t.cg.alpha = 0f;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                t.data = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                t.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                t.hideFunc = delegate</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    t.hideTimer += Time.smoothDeltaTime;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    <span class="keywordflow">return</span> t.hideTimer &gt; 0.2f;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                };</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classTooltipManager.html#a4d01e89f42b7f486114e6f6090bd9042">  111</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTooltipManager.html#a4d01e89f42b7f486114e6f6090bd9042">Update</a>()</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f">disableTimer</a> &gt; 0f)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <a class="code hl_variable" href="classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f">disableTimer</a> -= Time.deltaTime;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_class" href="classUITooltip.html">UITooltip</a>[] array = <a class="code hl_variable" href="classTooltipManager.html#a9f722dab0e19433089dd12e663ee91bb">tooltips</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classUITooltip.html">UITooltip</a> uITooltip <span class="keywordflow">in</span> array)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">if</span> (!(uITooltip.name == <a class="code hl_variable" href="classTooltipManager.html#adca56be292c3fbc644ec72267f02a5fb">disableHide</a>) &amp;&amp; uITooltip.gameObject.activeSelf)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keywordflow">if</span> (uITooltip.<a class="code hl_variable" href="classUITooltip.html#a0d9cdcf997f2fcf9385ca78b7db80e00">hideFunc</a>())</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    uITooltip.cg.alpha -= Time.smoothDeltaTime * 5f;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    uITooltip.cg.alpha += Time.smoothDeltaTime * 5f;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <span class="keywordflow">if</span> (uITooltip.<a class="code hl_variable" href="classUITooltip.html#a630d1c392d0cfe585592c1e882919c5e">cg</a>.alpha &lt;= 0f)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    uITooltip.data = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    uITooltip.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
 <div class="ttc" id="aFontColor_8cs_html_a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb"><div class="ttname"><a href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">FontColor.Util</a></div><div class="ttdeci">@ Util</div></div>
 <div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
 <div class="ttc" id="aclassEInput_html_a255a7f6ebc0f0e918bf321786be9f3e0"><div class="ttname"><a href="classEInput.html#a255a7f6ebc0f0e918bf321786be9f3e0">EInput.uiMousePosition</a></div><div class="ttdeci">static Vector3 uiMousePosition</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00369">EInput.cs:369</a></div></div>
@@ -238,7 +239,7 @@ $(document).ready(function(){initNavTree('TooltipManager_8cs_source.html',''); i
 <div class="ttc" id="aclassTooltipManager_html"><div class="ttname"><a href="classTooltipManager.html">TooltipManager</a></div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00003">TooltipManager.cs:4</a></div></div>
 <div class="ttc" id="aclassTooltipManager_html_a13e875c6fcdb82ae7d6dd55b8dc91008"><div class="ttname"><a href="classTooltipManager.html#a13e875c6fcdb82ae7d6dd55b8dc91008">TooltipManager.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00013">TooltipManager.cs:13</a></div></div>
 <div class="ttc" id="aclassTooltipManager_html_a1a9ce528a95fea6d0a96c296ddd4738b"><div class="ttname"><a href="classTooltipManager.html#a1a9ce528a95fea6d0a96c296ddd4738b">TooltipManager.ResetTooltips</a></div><div class="ttdeci">void ResetTooltips()</div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00018">TooltipManager.cs:18</a></div></div>
-<div class="ttc" id="aclassTooltipManager_html_a4d01e89f42b7f486114e6f6090bd9042"><div class="ttname"><a href="classTooltipManager.html#a4d01e89f42b7f486114e6f6090bd9042">TooltipManager.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00110">TooltipManager.cs:110</a></div></div>
+<div class="ttc" id="aclassTooltipManager_html_a4d01e89f42b7f486114e6f6090bd9042"><div class="ttname"><a href="classTooltipManager.html#a4d01e89f42b7f486114e6f6090bd9042">TooltipManager.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00111">TooltipManager.cs:111</a></div></div>
 <div class="ttc" id="aclassTooltipManager_html_a7e5c15fb299cd8a55190ab10c90b4e44"><div class="ttname"><a href="classTooltipManager.html#a7e5c15fb299cd8a55190ab10c90b4e44">TooltipManager.ShowTooltip</a></div><div class="ttdeci">void ShowTooltip(TooltipData data, Transform target)</div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00027">TooltipManager.cs:27</a></div></div>
 <div class="ttc" id="aclassTooltipManager_html_a827860af7a7443920bed563e47b8a475"><div class="ttname"><a href="classTooltipManager.html#a827860af7a7443920bed563e47b8a475">TooltipManager.Instance</a></div><div class="ttdeci">static TooltipManager Instance</div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00005">TooltipManager.cs:5</a></div></div>
 <div class="ttc" id="aclassTooltipManager_html_a829570153a0a06d01ccc869f931ebc8f"><div class="ttname"><a href="classTooltipManager.html#a829570153a0a06d01ccc869f931ebc8f">TooltipManager.disableTimer</a></div><div class="ttdeci">float disableTimer</div><div class="ttdef"><b>Definition:</b> <a href="TooltipManager_8cs_source.html#l00011">TooltipManager.cs:11</a></div></div>
@@ -253,7 +254,7 @@ $(document).ready(function(){initNavTree('TooltipManager_8cs_source.html',''); i
 <div class="ttc" id="aclassUITooltip_html_a1f586711ca8e6fd3b95fecc524e4786b"><div class="ttname"><a href="classUITooltip.html#a1f586711ca8e6fd3b95fecc524e4786b">UITooltip.data</a></div><div class="ttdeci">TooltipData data</div><div class="ttdef"><b>Definition:</b> <a href="UITooltip_8cs_source.html#l00015">UITooltip.cs:15</a></div></div>
 <div class="ttc" id="aclassUITooltip_html_a3a24431c3200c3e320ce67ba14f22b4b"><div class="ttname"><a href="classUITooltip.html#a3a24431c3200c3e320ce67ba14f22b4b">UITooltip.FollowType</a></div><div class="ttdeci">FollowType</div><div class="ttdef"><b>Definition:</b> <a href="UITooltip_8cs_source.html#l00007">UITooltip.cs:8</a></div></div>
 <div class="ttc" id="aclassUITooltip_html_a630d1c392d0cfe585592c1e882919c5e"><div class="ttname"><a href="classUITooltip.html#a630d1c392d0cfe585592c1e882919c5e">UITooltip.cg</a></div><div class="ttdeci">CanvasGroup cg</div><div class="ttdef"><b>Definition:</b> <a href="UITooltip_8cs_source.html#l00041">UITooltip.cs:41</a></div></div>
-<div class="ttc" id="aclassUITooltip_html_a7a682723315adf91c8f2bf0951a59e91"><div class="ttname"><a href="classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91">UITooltip.SetData</a></div><div class="ttdeci">void SetData(TooltipData _data)</div><div class="ttdef"><b>Definition:</b> <a href="UITooltip_8cs_source.html#l00052">UITooltip.cs:52</a></div></div>
+<div class="ttc" id="aclassUITooltip_html_a7a682723315adf91c8f2bf0951a59e91"><div class="ttname"><a href="classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91">UITooltip.SetData</a></div><div class="ttdeci">void SetData(TooltipData _data)</div><div class="ttdef"><b>Definition:</b> <a href="UITooltip_8cs_source.html#l00055">UITooltip.cs:55</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

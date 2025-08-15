@@ -9,6 +9,7 @@ var classSocketData =
     [ "bits", "classSocketData.html#a72caa4d235ea94ea12318db178177ddf", null ],
     [ "ints", "classSocketData.html#aa04b5d0b555de29e578e8954716b18a3", null ],
     [ "idEle", "classSocketData.html#a8e1a7bf1753c4097d153ecd87301db3d", null ],
+    [ "isFree", "classSocketData.html#a21c65469fe46b14f25420d3c6a3fedf1", null ],
     [ "type", "classSocketData.html#a62cbd4b448e647fed3bc3e3c7c3def94", null ],
     [ "value", "classSocketData.html#a9c7d59b315581dc271438eac8774c17e", null ]
 ];

@@ -1,5 +1,13 @@
 var NAVTREEINDEX68 =
 {
+"classGuildFighter.html#a22f91f806934e4857465d31fff28ddcf":[1,0,590,3],
+"classGuildFighter.html#a4a2f7c8e99bdd6642f4d9533d586e158":[1,0,590,4],
+"classGuildFighter.html#a507da7baf36e3e45bbe77898dd00fc2e":[1,0,590,1],
+"classGuildFighter.html#abcb58ab873d564b6f5d06ebee392cb58":[1,0,590,2],
+"classGuildFighter.html#abff767150b3a93afed2296f18333a5c6":[1,0,590,0],
+"classGuildFighter.html#ad7d6d24de2e4d3e50810aa7b889e6d9f":[1,0,590,5],
+"classGuildMage.html":[1,0,591],
+"classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c":[1,0,591,1],
 "classGuildMage.html#a58189178f12635adea355a8199949d95":[1,0,591,0],
 "classGuildMage.html#a706f09183ecc804e3847f0e06a4134b2":[1,0,591,2],
 "classGuildMerchant.html":[1,0,592],
@@ -241,13 +249,5 @@ var NAVTREEINDEX68 =
 "classHomeResourceEducation.html":[1,0,609],
 "classHomeResourceEducation.html#ae6369f86a757cc1f7a124ec8bcbf5c1f":[1,0,609,0],
 "classHomeResourceFun.html":[1,0,610],
-"classHomeResourceIndustry.html":[1,0,611],
-"classHomeResourceKarma.html":[1,0,612],
-"classHomeResourceManager.html":[1,0,613],
-"classHomeResourceManager.html#a0e1c0afb045429a5110f540dfecc0ec0":[1,0,613,13],
-"classHomeResourceManager.html#a0ebcf778f17dbaf7544165e478bb0dc1":[1,0,613,20],
-"classHomeResourceManager.html#a14ba9e45b19447f96dc74e741e37bd56":[1,0,613,6],
-"classHomeResourceManager.html#a176375943fe8575f20332ab540b1a875":[1,0,613,2],
-"classHomeResourceManager.html#a1a7e7bab011a12f1eb0486915859d4f1":[1,0,613,19],
-"classHomeResourceManager.html#a1eb3afc2a4d2a8696578005c68635f28":[1,0,613,5]
+"classHomeResourceIndustry.html":[1,0,611]
 };
