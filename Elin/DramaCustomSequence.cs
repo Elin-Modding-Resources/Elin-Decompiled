@@ -33,7 +33,7 @@ public class DramaCustomSequence : EClass
 	public void Build(Chara c)
 	{
 		bool flag = idCustom == "Unique";
-		bool flag2 = c.bio.IsUnderAge || EClass.pc.bio.IsUnderAge;
+		bool flag2 = c.bio.IsUnderAge(c) || EClass.pc.bio.IsUnderAge(EClass.pc);
 		bool isInGuild = Guild.Fighter.IsCurrentZone || Guild.Mage.IsCurrentZone || Guild.Thief.IsCurrentZone || Guild.Merchant.IsCurrentZone;
 		string bird = (flag2 ? "bird" : "tail");
 		_ = c.Name;
@@ -193,7 +193,7 @@ public class DramaCustomSequence : EClass
 						Choice2(("daCopy" + c.trait.CopyShop).lang(c.trait.NumCopyItem.ToString() ?? ""), "_copyItem").DisableSound();
 					}
 				}
-				if (c.trait.HaveNews && c.GetInt(33) + 10080 < EClass.world.date.GetRaw())
+				if (c.trait.HaveNews && c.GetInt(37) + 10080 < EClass.world.date.GetRaw())
 				{
 					Choice2("daNews", "_news");
 				}
@@ -1284,7 +1284,7 @@ public class DramaCustomSequence : EClass
 				GameLang.refDrama1 = zone.Name;
 				TempTalkTopic("news1", null);
 			}
-			c.SetInt(33, EClass.world.date.GetRaw());
+			c.SetInt(37, EClass.world.date.GetRaw());
 		});
 		Method(delegate
 		{

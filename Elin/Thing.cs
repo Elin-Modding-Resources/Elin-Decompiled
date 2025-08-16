@@ -53,6 +53,10 @@ public class Thing : Card
 			if (trait is TraitFakeBlock)
 			{
 				TileType tileType = EClass.sources.blocks.map[base.refVal].tileType;
+				if (tileType is TileTypePillar)
+				{
+					return EClass.core.refs.prefs.blockPillar;
+				}
 				if (tileType is TileTypeFence)
 				{
 					return EClass.core.refs.prefs.blockFence;
@@ -1575,13 +1579,11 @@ public class Thing : Card
 			}
 			break;
 		}
-		if (trait.IdSkin != 0)
+		if (trait.IdSkin != 0 && sourceCard.skins.Length != 0)
 		{
-			int index = trait.IdSkin - 1;
-			if (sourceCard.skins.Length != 0)
-			{
-				p.tile += ((p.tile < 0f) ? (-sourceCard.skins.TryGet(index)) : sourceCard.skins.TryGet(index));
-			}
+			int num6 = sourceCard.skins.TryGet(trait.IdSkin - 1);
+			num6 = num6 / 100 * (int)source.renderData.pass.pmesh.tiling.x + num6 % 100;
+			p.tile += ((p.tile < 0f) ? (-num6) : num6);
 		}
 	}
 

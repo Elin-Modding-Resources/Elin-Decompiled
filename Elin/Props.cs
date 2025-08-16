@@ -305,7 +305,7 @@ public class Props : EClass
 		}
 		void TryAdd(Thing t)
 		{
-			if (t.HasElement(10) && !(t.trait is TraitFoodMeal) && !(t.trait is TraitFoodFishSlice) && !t.IsExcludeFromCraft(ing) && !stack.list.Contains(t))
+			if (t.HasElement(10) && !(t.trait is TraitFoodFishSlice) && !t.category.IsChildOf("seasoning") && !t.category.IsChildOf("meal") && !t.IsExcludeFromCraft(ing) && !stack.list.Contains(t))
 			{
 				stack.Add(t.Thing);
 			}

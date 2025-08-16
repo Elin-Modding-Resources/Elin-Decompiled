@@ -294,7 +294,7 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 				Texture2D texture2D = pass.mat.GetTexture("_MainTex") as Texture2D;
 				ProceduralMesh pmesh = pass.pmesh;
 				int num = 0;
-				num = ((skin != 0) ? Mathf.Abs(array[dir] + skins[skin - 1] * ((array[dir] > 0) ? 1 : (-1))) : Mathf.Abs(array[dir]));
+				num = ((skin != 0) ? Mathf.Abs(array[dir] + (skins[skin - 1] / 100 * (int)renderData.pass.pmesh.tiling.x + skins[skin - 1] % 100) * ((array[dir] > 0) ? 1 : (-1))) : Mathf.Abs(array[dir]));
 				int num2 = (int)((float)texture2D.width / pmesh.tiling.x);
 				int num3 = (int)((float)texture2D.height / pmesh.tiling.y);
 				int num4 = (int)((float)num % pmesh.tiling.x);

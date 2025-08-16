@@ -263,26 +263,17 @@ public class Biography : EClass
 
 	public string nameBirthplace => "birthLoc2".lang(nameHome, nameLoc);
 
-	public int age
+	public bool IsUnderAge(Chara c)
 	{
-		get
-		{
-			return EClass.world.date.year - birthYear;
-		}
-		set
-		{
-			birthYear = EClass.world.date.year - value;
-		}
+		return GetAge(c) < 18;
 	}
-
-	public bool IsUnderAge => age < 18;
 
 	public string TextAge(Chara c)
 	{
 		object obj;
-		if (age < 1000)
+		if (GetAge(c) < 1000)
 		{
-			obj = (c.IsUnique ? GetOriginalAge(c) : age).ToString();
+			obj = GetAge(c).ToString();
 			if (obj == null)
 			{
 				return "";
@@ -295,14 +286,40 @@ public class Biography : EClass
 		return (string)obj;
 	}
 
-	public int GetOriginalAge(Chara c)
+	public int GetAge(Chara c)
 	{
-		string[] array = c.source.bio.Split('/');
-		if (array.Length > 1)
+		if (c.c_lockedAge != 0)
 		{
-			return int.Parse(array[1]);
+			return c.c_lockedAge;
 		}
-		return age;
+		if (c.IsUnique)
+		{
+			string[] array = c.source.bio.Split('/');
+			if (array.Length > 1)
+			{
+				return int.Parse(array[1]);
+			}
+		}
+		return EClass.world.date.year - birthYear;
+	}
+
+	public void SetAge(Chara c, int a, bool allowUnique = false)
+	{
+		if (c.IsUnique)
+		{
+			if (allowUnique)
+			{
+				c.c_lockedAge = a;
+			}
+		}
+		else if (c.c_lockedAge == 0)
+		{
+			birthYear = EClass.world.date.year - a;
+		}
+		else
+		{
+			c.c_lockedAge = a;
+		}
 	}
 
 	public void Generate(Chara c)
@@ -337,7 +354,7 @@ public class Biography : EClass
 				{
 					flag = false;
 				}
-				age = int.Parse(array[1]);
+				SetAge(c, int.Parse(array[1]));
 				c.pccData = IO.LoadFile<PCCData>(CorePath.packageCore + "Data/PCC/" + c.id + ".txt");
 			}
 			if (array.Length > 2)
@@ -365,9 +382,9 @@ public class Biography : EClass
 		{
 			SetPortrait(c);
 		}
-		if (c.id == "prostitute" && age < 15)
+		if (c.id == "prostitute" && GetAge(c) < 15)
 		{
-			age = 15;
+			SetAge(c, 15);
 		}
 		SourceThing.Row row = EClass.sources.things.rows.RandomItem();
 		idLike = row.id;
@@ -395,11 +412,11 @@ public class Biography : EClass
 		if (ageIndex != 0)
 		{
 			int num3 = (num2 - num) / 4;
-			age = Rand.Range(num + num3 * (ageIndex - 1), num + num3 * ageIndex);
+			SetAge(c, Rand.Range(num + num3 * (ageIndex - 1), num + num3 * ageIndex));
 		}
 		else
 		{
-			age = Rand.Range(num, num2);
+			SetAge(c, Rand.Range(num, num2));
 		}
 		birthDay = EClass.rnd(30) + 1;
 		birthMonth = EClass.rnd(12) + 1;

@@ -62,13 +62,15 @@ public class CINT
 
 	public const int seed = 33;
 
-	public const int dateNews = 33;
-
 	public const int dateGuestArrived = 34;
 
 	public const int taxExtra = 35;
 
 	public const int dateLivestock = 36;
+
+	public const int dateNews = 37;
+
+	public const int lockedAge = 38;
 
 	public const int lockLv = 50;
 

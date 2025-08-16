@@ -120,5 +120,7 @@ public enum EffectId
 	LovePlus = 296,
 	HairGrowth = 297,
 	Gene = 298,
-	CatSniff = 299
+	CatSniff = 299,
+	Youth = 300,
+	EternalYouth = 301
 }

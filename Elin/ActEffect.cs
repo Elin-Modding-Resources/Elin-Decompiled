@@ -1457,7 +1457,7 @@ public class ActEffect : EClass
 				break;
 			}
 			Thing thing5 = null;
-			bool flag8 = actRef.n1 == "food";
+			bool flag9 = actRef.n1 == "food";
 			if (actRef.n1 == "money")
 			{
 				int currency = TC.GetCurrency();
@@ -1471,7 +1471,7 @@ public class ActEffect : EClass
 			else
 			{
 				Func<Thing, bool> func = (Thing t) => true;
-				if (flag8)
+				if (flag9)
 				{
 					func = (Thing t) => t.IsFood;
 				}
@@ -1653,12 +1653,12 @@ public class ActEffect : EClass
 		{
 			EClass.game.religions.Trickery.Talk("ability");
 			bool hex2 = CC.IsHostile(TC);
-			List<SourceStat.Row> list3 = EClass.sources.stats.rows.Where((SourceStat.Row con) => con.tag.Contains("random") && con.group == (hex2 ? "Debuff" : "Buff")).ToList();
+			List<SourceStat.Row> list4 = EClass.sources.stats.rows.Where((SourceStat.Row con) => con.tag.Contains("random") && con.group == (hex2 ? "Debuff" : "Buff")).ToList();
 			int power2 = power;
-			for (int k = 0; k < 4 + EClass.rnd(2); k++)
+			for (int l = 0; l < 4 + EClass.rnd(2); l++)
 			{
-				SourceStat.Row row2 = list3.RandomItem();
-				list3.Remove(row2);
+				SourceStat.Row row2 = list4.RandomItem();
+				list4.Remove(row2);
 				Proc(hex2 ? EffectId.DebuffKizuami : EffectId.Buff, CC, TC, power2, new ActRef
 				{
 					n1 = row2.alias
@@ -1794,15 +1794,67 @@ public class ActEffect : EClass
 			tc.bio.SetGender(gender2);
 			tc.Say("transGender", tc, Gender.Name(tc.bio.gender));
 			tc.Talk("tail");
-			if (blessed && tc.bio.age > 1)
+			int age3 = tc.bio.GetAge(tc.Chara);
+			if (blessed && age3 > 1)
 			{
 				tc.Say("ageDown", tc);
-				tc.bio.age--;
+				tc.bio.SetAge(tc.Chara, age3 - 1, allowUnique: true);
 			}
 			else if (flag)
 			{
 				tc.Say("ageUp", tc);
-				tc.bio.age++;
+				tc.bio.SetAge(tc.Chara, age3 + 1, allowUnique: true);
+			}
+			break;
+		}
+		case EffectId.Youth:
+		{
+			tc.PlaySound("mutation");
+			tc.PlayEffect("mutation");
+			int age2 = tc.bio.GetAge(tc.Chara);
+			if (!flag && age2 <= 1)
+			{
+				tc.SayNothingHappans();
+				break;
+			}
+			age2 = Mathf.Max(1, age2 * 100 / (flag ? 75 : (blessed ? 400 : 200)));
+			tc.Say(flag ? "ageUp" : "ageDown", tc);
+			tc.bio.SetAge(tc.Chara, age2, allowUnique: true);
+			break;
+		}
+		case EffectId.EternalYouth:
+		{
+			tc.PlaySound("dropRewardXmas");
+			tc.PlaySound("mutation");
+			tc.PlayEffect("mutation");
+			if (tc.IsUnique)
+			{
+				tc.SayNothingHappans();
+				break;
+			}
+			int age = tc.bio.GetAge(tc.Chara);
+			if (flag)
+			{
+				if (tc.c_lockedAge != 0)
+				{
+					tc.Say("eternalYouth2", tc);
+					tc.c_lockedAge = 0;
+					tc.bio.SetAge(tc.Chara, age);
+				}
+				Redirect(EffectId.Youth, BlessedState.Cursed, default(ActRef));
+			}
+			else if (tc.c_lockedAge != 0)
+			{
+				tc.SayNothingHappans();
+			}
+			else
+			{
+				tc.Say("eternalYouth1", tc);
+				tc.c_lockedAge = age;
+				if (blessed)
+				{
+					Redirect(EffectId.Youth, BlessedState.Blessed, default(ActRef));
+				}
 			}
 			break;
 		}
@@ -1830,16 +1882,16 @@ public class ActEffect : EClass
 			break;
 		case EffectId.Revive:
 		{
-			List<KeyValuePair<int, Chara>> list5 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList();
+			List<KeyValuePair<int, Chara>> list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon && a.Value.c_wasInPcParty).ToList();
 			if (TC.IsPCFaction || TC.IsPCFactionMinion)
 			{
-				if (TC.IsPC && list5.Count == 0)
+				if (TC.IsPC && list3.Count == 0)
 				{
-					list5 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.CanRevive() && a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon).ToList();
+					list3 = EClass.game.cards.globalCharas.Where((KeyValuePair<int, Chara> a) => a.Value.CanRevive() && a.Value.isDead && a.Value.faction == EClass.pc.faction && !a.Value.isSummon).ToList();
 				}
-				if (list5.Count > 0)
+				if (list3.Count > 0)
 				{
-					list5.RandomItem().Value.Chara.GetRevived();
+					list3.RandomItem().Value.Chara.GetRevived();
 					break;
 				}
 			}
@@ -1867,7 +1919,7 @@ public class ActEffect : EClass
 				TC.PlaySound("debuff");
 			}
 			TC.Say(flag7 ? "damageBody" : "damageMind", TC);
-			for (int l = 0; l < num8; l++)
+			for (int k = 0; k < num8; k++)
 			{
 				TC.DamageTempElements(power, flag7, mind, id != EffectId.Weaken);
 			}
@@ -1882,16 +1934,16 @@ public class ActEffect : EClass
 		case EffectId.EnhanceBodyGreat:
 		case EffectId.EnhanceMindGreat:
 		{
-			bool flag9 = id == EffectId.EnhanceBody || id == EffectId.EnhanceBodyGreat;
+			bool flag8 = id == EffectId.EnhanceBody || id == EffectId.EnhanceBodyGreat;
 			bool mind2 = id == EffectId.EnhanceMind || id == EffectId.EnhanceMindGreat;
 			if (id != EffectId.EnhanceBody && id != EffectId.EnhanceMind)
 			{
 				EClass.rnd(4);
 			}
-			TC.Say(flag9 ? "enhanceBody" : "enhanceMind", TC);
+			TC.Say(flag8 ? "enhanceBody" : "enhanceMind", TC);
 			TC.PlayEffect("buff");
 			TC.PlaySound("buff");
-			TC.EnhanceTempElements(power, flag9, mind2, onlyRenew: true);
+			TC.EnhanceTempElements(power, flag8, mind2, onlyRenew: true);
 			break;
 		}
 		case EffectId.RestoreBody:
@@ -2210,10 +2262,10 @@ public class ActEffect : EClass
 			{
 				power /= 4;
 			}
-			List<Thing> list4 = TC.things.List((Thing t) => (t.Num <= 1 && t.IsEquipmentOrRanged && !t.IsToolbelt && !t.IsLightsource && t.isEquipped) ? true : false);
-			if (list4.Count != 0)
+			List<Thing> list5 = TC.things.List((Thing t) => (t.Num <= 1 && t.IsEquipmentOrRanged && !t.IsToolbelt && !t.IsLightsource && t.isEquipped) ? true : false);
+			if (list5.Count != 0)
 			{
-				Thing thing4 = list4.RandomItem();
+				Thing thing4 = list5.RandomItem();
 				TC.Say("acid_hit", TC);
 				if (thing4.isAcidproof)
 				{

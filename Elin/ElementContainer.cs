@@ -286,7 +286,7 @@ public class ElementContainer : EClass
 			if (element.UseExpMod)
 			{
 				a = a * (float)Mathf.Clamp(element.UsePotential ? element.Potential : 100, 10, 1000) / (float)(100 + Mathf.Max(0, element.ValueWithoutLink) * 25);
-				if (EClass.rndf(1f) < a % 1f + 0.1f)
+				if (EClass.rndf(1f) < a % 1f + ((ele == 152) ? 0.01f : 0.1f))
 				{
 					a += 1f;
 				}

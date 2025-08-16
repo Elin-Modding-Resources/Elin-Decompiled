@@ -1323,6 +1323,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int c_lockedAge
+	{
+		get
+		{
+			return GetInt(38);
+		}
+		set
+		{
+			SetInt(38, value);
+		}
+	}
+
 	public int c_containerSize
 	{
 		get

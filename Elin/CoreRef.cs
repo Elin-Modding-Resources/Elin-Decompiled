@@ -332,6 +332,8 @@ public class CoreRef : ScriptableObject
 		public SourcePref blockStairs;
 
 		public SourcePref blockWall;
+
+		public SourcePref blockPillar;
 	}
 
 	public Biomes biomes;

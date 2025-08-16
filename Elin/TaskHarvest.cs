@@ -587,7 +587,7 @@ public class TaskHarvest : BaseTaskHarvest
 		{
 			return;
 		}
-		if (EClass._zone.IsUserZone && target.isNPCProperty && thing.trait is TraitPotionLove)
+		if (EClass._zone.IsUserZone && target.isNPCProperty && (thing.trait is TraitPotionLove || thing.HasTag(CTAG.rareResource)))
 		{
 			Msg.Say("spellbookCrumble", thing);
 			thing.Destroy();
