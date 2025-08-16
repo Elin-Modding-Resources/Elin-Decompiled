@@ -1,5 +1,9 @@
 var NAVTREEINDEX52 =
 {
+"classCorePath.html#a30a23ff7741c431420ab044bf5b5fea1":[1,0,391,46],
+"classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d":[1,0,391,33],
+"classCorePath.html#a334ccf635afe31af0d5c671768b08b38":[1,0,391,22],
+"classCorePath.html#a35770bd5140c88784d90753e20554316":[1,0,391,6],
 "classCorePath.html#a3b762a62a93f085436b9ca668633b3cd":[1,0,391,42],
 "classCorePath.html#a42b27814ad28c915a43336bb0e5f8785":[1,0,391,12],
 "classCorePath.html#a433ebb5d0a3d88629f959a50e036db16":[1,0,391,53],
@@ -218,13 +222,14 @@ var NAVTREEINDEX52 =
 "classCoreRef_1_1PopperSprites.html":[1,0,392,7],
 "classCoreRef_1_1PopperSprites.html#abad464045144a14a8f8ff8acb56c6cc9":[1,0,392,7,0],
 "classCoreRef_1_1PrefData.html":[1,0,392,8],
-"classCoreRef_1_1PrefData.html#a2d49e3e3748b77feb801e5007fa0486f":[1,0,392,8,2],
-"classCoreRef_1_1PrefData.html#a3bd121ac053a201ccb564192d0aec7bd":[1,0,392,8,5],
-"classCoreRef_1_1PrefData.html#abb2925c784521e58ee670f6f327b35d4":[1,0,392,8,3],
-"classCoreRef_1_1PrefData.html#abd5cdfe7ff6a6cc7c2cb605571d9e265":[1,0,392,8,6],
+"classCoreRef_1_1PrefData.html#a2d49e3e3748b77feb801e5007fa0486f":[1,0,392,8,3],
+"classCoreRef_1_1PrefData.html#a3bd121ac053a201ccb564192d0aec7bd":[1,0,392,8,6],
+"classCoreRef_1_1PrefData.html#aa18a0112a8a5ceff140ae454fb1fc3ed":[1,0,392,8,1],
+"classCoreRef_1_1PrefData.html#abb2925c784521e58ee670f6f327b35d4":[1,0,392,8,4],
+"classCoreRef_1_1PrefData.html#abd5cdfe7ff6a6cc7c2cb605571d9e265":[1,0,392,8,7],
 "classCoreRef_1_1PrefData.html#ad7db7fa612f08485c0a32745aa6b0298":[1,0,392,8,0],
-"classCoreRef_1_1PrefData.html#ae034de7ef4bafd49425f2b0cf6ec46b0":[1,0,392,8,4],
-"classCoreRef_1_1PrefData.html#af49c9e2087e313b82ecfa202b1981c81":[1,0,392,8,1],
+"classCoreRef_1_1PrefData.html#ae034de7ef4bafd49425f2b0cf6ec46b0":[1,0,392,8,5],
+"classCoreRef_1_1PrefData.html#af49c9e2087e313b82ecfa202b1981c81":[1,0,392,8,2],
 "classCoreRef_1_1Rects.html":[1,0,392,9],
 "classCoreRef_1_1Rects.html#a0417c5bc8c3c3d2cd2babf633cbdf6bb":[1,0,392,9,4],
 "classCoreRef_1_1Rects.html#a1006b7280e3992e5d6cf76a88b3c2e11":[1,0,392,9,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX52 =
 "classCoreRef_1_1StateIcons.html":[1,0,392,11],
 "classCoreRef_1_1StateIcons.html#a75e3dfcdfc719740533845b99a4f9c20":[1,0,392,11,4],
 "classCoreRef_1_1StateIcons.html#a77e82e7d48c4d06a4ff3194b8c6b6b52":[1,0,392,11,3],
-"classCoreRef_1_1StateIcons.html#ac21d14eb764eb97cfeef3fb26e070a5d":[1,0,392,11,0],
-"classCoreRef_1_1StateIcons.html#ad0be1f92bcf9cbc8b237c088da4560dc":[1,0,392,11,1],
-"classCoreRef_1_1StateIcons.html#adf4cdd745f67d8fff6b22ecc0500db59":[1,0,392,11,2],
-"classCoreRef_1_1TCs.html":[1,0,392,12],
-"classCoreRef_1_1TCs.html#a3d5c79ee9de593c33d7b241713b22811":[1,0,392,12,1],
-"classCoreRef_1_1TCs.html#a404a8eb6636485fe09ab5be0a0931e1a":[1,0,392,12,2]
+"classCoreRef_1_1StateIcons.html#ac21d14eb764eb97cfeef3fb26e070a5d":[1,0,392,11,0]
 };

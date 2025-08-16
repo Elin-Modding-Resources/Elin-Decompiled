@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"classBodySlot.html#a6b62ce7239de2c0d7c08cea211f7189a":[1,0,221,3],
+"classBodySlot.html#a865f4623a636e94aa12ef5d7d61047d6":[1,0,221,0],
 "classBodySlot.html#aa3a02ef24b88e8c271da0c5cc0dbb2ba":[1,0,221,4],
 "classBodySlot.html#adfb8b22ac45198052bfa56cbe3a1eef7":[1,0,221,5],
 "classBookList.html":[1,0,222],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "classButtonRecipe.html":[1,0,236],
 "classButtonRecipe.html#aa49a344fa5488191e8528b28c4dd8491":[1,0,236,0],
 "classButtonRecipe.html#ab5a06e9048d04b6137a4cdc7661c0ddc":[1,0,236,1],
-"classButtonResourceTrack.html":[1,0,237],
-"classButtonResourceTrack.html#a112e680b7e0b3a6758428cb965402227":[1,0,237,0],
-"classButtonResourceTrack.html#a33af0031857d42298f534d42423a1db6":[1,0,237,3]
+"classButtonResourceTrack.html":[1,0,237]
 };

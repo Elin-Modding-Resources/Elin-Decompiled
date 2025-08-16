@@ -1,5 +1,10 @@
 var NAVTREEINDEX121 =
 {
+"classTraitSet.html#a31116c32394fefbde5691ead34f7af64":[1,0,1791,2],
+"classTraitShackle.html":[1,0,1792],
+"classTraitShackle.html#a0d385cbd1b4dbd50b850831f8ec9c49a":[1,0,1792,9],
+"classTraitShackle.html#a141ae3562c5f5c57a3a5ca23924a16eb":[1,0,1792,1],
+"classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3":[1,0,1792,7],
 "classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1792,10],
 "classTraitShackle.html#a236f46437d85f1e740a110b66484bbba":[1,0,1792,6],
 "classTraitShackle.html#a2d6c3adbbaa632d21cc6b49444b7a6f1":[1,0,1792,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitToolBelt.html#ab2a2e0da62fa874a8ac877528d825d44":[1,0,1854,0],
 "classTraitToolBrush.html":[1,0,1855],
 "classTraitToolBrush.html#a32ab5b833450060e7e76ac78a203e25f":[1,0,1855,0],
-"classTraitToolBrush.html#a3474a006dd903ebcb2ba60fc1b61e498":[1,0,1855,3],
-"classTraitToolBrush.html#a398f096eeaeafa6136a87bf26d9e63c4":[1,0,1855,1],
-"classTraitToolBrush.html#aaaa0913443854cd228cfc143adce056a":[1,0,1855,2],
-"classTraitToolBuild.html":[1,0,1856],
-"classTraitToolBuild.html#aa56fde747a277fe9cc8152fdbb7c9f71":[1,0,1856,0],
-"classTraitToolButcher.html":[1,0,1857]
+"classTraitToolBrush.html#a3474a006dd903ebcb2ba60fc1b61e498":[1,0,1855,3]
 };

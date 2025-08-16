@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"LightControl2_8cs.html":[2,0,0,775],
+"LightControl2_8cs_source.html":[2,0,0,775],
 "LightControl_8cs.html":[2,0,0,774],
 "LightControl_8cs_source.html":[2,0,0,774],
 "LightData_8cs.html":[2,0,0,2,53],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "PartyManager_8cs.html":[2,0,0,855],
 "PartyManager_8cs_source.html":[2,0,0,855],
 "Party_8cs.html":[2,0,0,854],
-"Party_8cs_source.html":[2,0,0,854],
-"PathFinderNode_8cs.html":[2,0,0,0,4],
-"PathFinderNode_8cs_source.html":[2,0,0,0,4]
+"Party_8cs_source.html":[2,0,0,854]
 };

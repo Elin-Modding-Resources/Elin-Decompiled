@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"TaskQueue_8cs.html":[2,0,0,1186],
+"TaskQueue_8cs_source.html":[2,0,0,1186],
 "TaskWater_8cs.html":[2,0,0,1187],
 "TaskWater_8cs_source.html":[2,0,0,1187],
 "Task_8cs.html":[2,0,0,1166],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "TraitBank_8cs_source.html":[2,0,0,1301],
 "TraitBanker_8cs.html":[2,0,0,1302],
 "TraitBanker_8cs_source.html":[2,0,0,1302],
-"TraitBard_8cs.html":[2,0,0,1303],
-"TraitBard_8cs_source.html":[2,0,0,1303],
-"TraitBarrelMaker_8cs.html":[2,0,0,1304]
+"TraitBard_8cs.html":[2,0,0,1303]
 };

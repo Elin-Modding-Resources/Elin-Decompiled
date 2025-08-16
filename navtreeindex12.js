@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"QuestShowSupply_8cs_source.html":[2,0,0,949],
+"QuestSubdue_8cs.html":[2,0,0,950],
 "QuestSubdue_8cs_source.html":[2,0,0,950],
 "QuestSupplyBulkJunk_8cs.html":[2,0,0,953],
 "QuestSupplyBulkJunk_8cs_source.html":[2,0,0,953],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "RoomManager_8cs_source.html":[2,0,0,1040],
 "Room_8cs.html":[2,0,0,1039],
 "Room_8cs_source.html":[2,0,0,1039],
-"SKILL_8cs.html":[2,0,0,1060],
-"SKILL_8cs_source.html":[2,0,0,1060],
-"SLOT_8cs.html":[2,0,0,1065]
+"SKILL_8cs.html":[2,0,0,1060]
 };

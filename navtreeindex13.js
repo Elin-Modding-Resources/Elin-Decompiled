@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"SKILL_8cs_source.html":[2,0,0,1060],
+"SLOT_8cs.html":[2,0,0,1065],
 "SLOT_8cs_source.html":[2,0,0,1065],
 "SPELL_8cs.html":[2,0,0,1122],
 "SPELL_8cs_source.html":[2,0,0,1122],
@@ -247,7 +249,5 @@ var NAVTREEINDEX13 =
 "SourcePerson_8cs.html":[2,0,0,1093],
 "SourcePerson_8cs_source.html":[2,0,0,1093],
 "SourcePrefCard_8cs.html":[2,0,0,1095],
-"SourcePrefCard_8cs_source.html":[2,0,0,1095],
-"SourcePrefInspector_8cs.html":[2,0,0,1096],
-"SourcePrefInspector_8cs_source.html":[2,0,0,1096]
+"SourcePrefCard_8cs_source.html":[2,0,0,1095]
 };

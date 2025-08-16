@@ -1,5 +1,10 @@
 var NAVTREEINDEX68 =
 {
+"classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5":[1,0,589,11],
+"classGuild.html#abdc43697f65c21cc26a2758131232b18":[1,0,589,9],
+"classGuild.html#ae565e3e67e2563493bcf162754b551e3":[1,0,589,5],
+"classGuild.html#ae6498e1c0c27b8ee5302f34d76560d92":[1,0,589,0],
+"classGuildFighter.html":[1,0,590],
 "classGuildFighter.html#a22f91f806934e4857465d31fff28ddcf":[1,0,590,3],
 "classGuildFighter.html#a4a2f7c8e99bdd6642f4d9533d586e158":[1,0,590,4],
 "classGuildFighter.html#a507da7baf36e3e45bbe77898dd00fc2e":[1,0,590,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX68 =
 "classHomeResource.html":[1,0,607],
 "classHomeResource.html#a0b2edad7194e282f5f95632d48fd75ca":[1,0,607,3],
 "classHomeResource.html#a4849e1c8a74e93850039470dcfb08b20":[1,0,607,4],
-"classHomeResource.html#a81912a8016c2d7f67838f7531cf2d8ec":[1,0,607,2],
-"classHomeResourceCulture.html":[1,0,608],
-"classHomeResourceEducation.html":[1,0,609],
-"classHomeResourceEducation.html#ae6369f86a757cc1f7a124ec8bcbf5c1f":[1,0,609,0],
-"classHomeResourceFun.html":[1,0,610],
-"classHomeResourceIndustry.html":[1,0,611]
+"classHomeResource.html#a81912a8016c2d7f67838f7531cf2d8ec":[1,0,607,2]
 };

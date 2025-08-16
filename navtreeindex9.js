@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"InvOwnerHotbar_8cs.html":[2,0,0,656],
+"InvOwnerHotbar_8cs_source.html":[2,0,0,656],
 "InvOwnerIdentify_8cs.html":[2,0,0,657],
 "InvOwnerIdentify_8cs_source.html":[2,0,0,657],
 "InvOwnerLighten_8cs.html":[2,0,0,658],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "LayoutMaxSize_8cs.html":[2,0,0,3,56],
 "LayoutMaxSize_8cs_source.html":[2,0,0,3,56],
 "Level_8cs.html":[2,0,0,773],
-"Level_8cs_source.html":[2,0,0,773],
-"LightControl2_8cs.html":[2,0,0,775],
-"LightControl2_8cs_source.html":[2,0,0,775]
+"Level_8cs_source.html":[2,0,0,773]
 };

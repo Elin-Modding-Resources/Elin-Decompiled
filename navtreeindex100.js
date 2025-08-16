@@ -1,5 +1,10 @@
 var NAVTREEINDEX100 =
 {
+"classSkinColorProfile.html#a6db8e4490ecb5e1f15b9d8e17145ee1e":[1,0,1152,22],
+"classSkinColorProfile.html#a7368d85bda16c06e92c8bf70e0d2145c":[1,0,1152,1],
+"classSkinColorProfile.html#a76b1e8826480c13aa47e56ed786bb477":[1,0,1152,45],
+"classSkinColorProfile.html#a7a61c51a3f9e1883fa77293e5d0c92b8":[1,0,1152,38],
+"classSkinColorProfile.html#a7f33936ed2ad48d24aa6f89cd8895528":[1,0,1152,46],
 "classSkinColorProfile.html#a831d2566709197ce0e41ef610f0c7512":[1,0,1152,10],
 "classSkinColorProfile.html#a858710178b2b27487a09f491a9a6f187":[1,0,1152,13],
 "classSkinColorProfile.html#a86090fec88c37271f538b161a02179c9":[1,0,1152,21],
@@ -244,10 +249,5 @@ var NAVTREEINDEX100 =
 "classSourceAsset.html#a74c67e6a6cb10fcc4b67401f9feb0151":[1,0,1167,7],
 "classSourceAsset.html#a82648f12e9038d523131c4b635db4421":[1,0,1167,3],
 "classSourceAsset.html#ab01aaa72e5b5139e6678499bc3588dc0":[1,0,1167,2],
-"classSourceAsset.html#ad58cc292ea018ac404b31cb6a502f8e8":[1,0,1167,6],
-"classSourceAsset_1_1PrefData.html":[1,0,1167,0],
-"classSourceAsset_1_1PrefData.html#ac8baa54709b4b916491d08c8e07616a3":[1,0,1167,0,0],
-"classSourceAsset_1_1Prefs.html":[1,0,1167,1],
-"classSourceAsset_1_1Prefs.html#a4207f6ac0c4a26465c29736ec5c08c57":[1,0,1167,1,1],
-"classSourceAsset_1_1Prefs.html#a5747059efd624786284fb102a7e6f403":[1,0,1167,1,0]
+"classSourceAsset.html#ad58cc292ea018ac404b31cb6a502f8e8":[1,0,1167,6]
 };

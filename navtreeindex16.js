@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"TraitBard_8cs_source.html":[2,0,0,1303],
+"TraitBarrelMaker_8cs.html":[2,0,0,1304],
 "TraitBarrelMaker_8cs_source.html":[2,0,0,1304],
 "TraitBartender_8cs.html":[2,0,0,1305],
 "TraitBartender_8cs_source.html":[2,0,0,1305],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TraitEquipItem_8cs_source.html":[2,0,0,1428],
 "TraitErohon_8cs.html":[2,0,0,1429],
 "TraitErohon_8cs_source.html":[2,0,0,1429],
-"TraitEspressoMachine_8cs.html":[2,0,0,1430],
-"TraitEspressoMachine_8cs_source.html":[2,0,0,1430],
-"TraitEureka_8cs.html":[2,0,0,1431]
+"TraitEspressoMachine_8cs.html":[2,0,0,1430]
 };

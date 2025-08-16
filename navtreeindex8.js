@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"HookType_8cs.html#a627533690054d981042e076f04aa24e1a63fd72de043ccc2432da6f55155940b6":[2,0,0,2,0,0,3,0,0],
+"HookType_8cs.html#a627533690054d981042e076f04aa24e1a79a1f16877ad1b3fee808033de2458d4":[2,0,0,2,0,0,3,0,4],
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a8d3279204d5b528977c733ec4e9ad7b1":[2,0,0,2,0,0,3,0,11],
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1a8fc3c613b78d5dede3427bdbb4f78805":[2,0,0,2,0,0,3,0,9],
 "HookType_8cs.html#a627533690054d981042e076f04aa24e1aa8e1bddfd7860327c3541355ad04d598":[2,0,0,2,0,0,3,0,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "InvOwnerGene_8cs.html":[2,0,0,654],
 "InvOwnerGene_8cs_source.html":[2,0,0,654],
 "InvOwnerGive_8cs.html":[2,0,0,655],
-"InvOwnerGive_8cs_source.html":[2,0,0,655],
-"InvOwnerHotbar_8cs.html":[2,0,0,656],
-"InvOwnerHotbar_8cs_source.html":[2,0,0,656]
+"InvOwnerGive_8cs_source.html":[2,0,0,655]
 };

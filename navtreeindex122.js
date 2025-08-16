@@ -1,5 +1,10 @@
 var NAVTREEINDEX122 =
 {
+"classTraitToolBrush.html#a398f096eeaeafa6136a87bf26d9e63c4":[1,0,1855,1],
+"classTraitToolBrush.html#aaaa0913443854cd228cfc143adce056a":[1,0,1855,2],
+"classTraitToolBuild.html":[1,0,1856],
+"classTraitToolBuild.html#aa56fde747a277fe9cc8152fdbb7c9f71":[1,0,1856,0],
+"classTraitToolButcher.html":[1,0,1857],
 "classTraitToolButcher.html#a0103466a2e9987634cc7f73461ec8aaa":[1,0,1857,1],
 "classTraitToolButcher.html#a3de7c0c977df29e7f3fb7309e820117f":[1,0,1857,0],
 "classTraitToolFishing.html":[1,0,1858],
@@ -244,10 +249,5 @@ var NAVTREEINDEX122 =
 "classTransAnimeData.html#a849622a1402f9af368e0c70cfea861a9":[1,0,1915,21],
 "classTransAnimeData.html#a888f1e5a027ed4147fe55f0b595f3015":[1,0,1915,2],
 "classTransAnimeData.html#a906b2728e2360672ccd4451878786801":[1,0,1915,3],
-"classTransAnimeData.html#a9092ac3201fcca7159dcbeb5afb44836":[1,0,1915,6],
-"classTransAnimeData.html#aa720b0635966caa9b268bd10efb30a90":[1,0,1915,12],
-"classTransAnimeData.html#ab12a7e105fd10fdc2caed01801bda9e7":[1,0,1915,7],
-"classTransAnimeData.html#abab3d3a27445d39c2c8976578cdf0cf9":[1,0,1915,4],
-"classTransAnimeData.html#ac33fcc847580605554b86b8a9e8ddb4c":[1,0,1915,9],
-"classTransAnimeData.html#ac4c4acba36ab6e2d0500e00f0e83f12a":[1,0,1915,0]
+"classTransAnimeData.html#a9092ac3201fcca7159dcbeb5afb44836":[1,0,1915,6]
 };

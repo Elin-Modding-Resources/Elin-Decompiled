@@ -1,5 +1,10 @@
 var NAVTREEINDEX69 =
 {
+"classHomeResourceCulture.html":[1,0,608],
+"classHomeResourceEducation.html":[1,0,609],
+"classHomeResourceEducation.html#ae6369f86a757cc1f7a124ec8bcbf5c1f":[1,0,609,0],
+"classHomeResourceFun.html":[1,0,610],
+"classHomeResourceIndustry.html":[1,0,611],
 "classHomeResourceKarma.html":[1,0,612],
 "classHomeResourceManager.html":[1,0,613],
 "classHomeResourceManager.html#a0e1c0afb045429a5110f540dfecc0ec0":[1,0,613,13],
@@ -244,10 +249,5 @@ var NAVTREEINDEX69 =
 "classHotItemThing.html#a3fb4b1c3396d408c03d37b8cbdd61ca7":[1,0,641,9],
 "classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169":[1,0,641,5],
 "classHotItemThing.html#a67a79e74de908e23bd62269a2a8896d6":[1,0,641,6],
-"classHotItemThing.html#a6d4b99931a6687e0c1e4486e4148d1f0":[1,0,641,8],
-"classHotItemThing.html#a8d3cd4dfb180184e34eddf797ed0bc15":[1,0,641,3],
-"classHotItemThing.html#aa2c253056e6c94b9efd1c154bd4a3358":[1,0,641,1],
-"classHotItemThing.html#aad549be5cac2b4376c90b5f714fd8007":[1,0,641,7],
-"classHotItemThing.html#aff293e50f60c2e63cadf5e29b83ce11a":[1,0,641,0],
-"classHotItemToggle.html":[1,0,642]
+"classHotItemThing.html#a6d4b99931a6687e0c1e4486e4148d1f0":[1,0,641,8]
 };

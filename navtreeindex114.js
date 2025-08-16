@@ -1,5 +1,10 @@
 var NAVTREEINDEX114 =
 {
+"classTraitAmmoEnergy.html":[1,0,1402],
+"classTraitAmmoTalisman.html":[1,0,1403],
+"classTraitAmmoTalisman.html#a9ca08b037ec6ff430ad79fe7ffc3c6bb":[1,0,1403,1],
+"classTraitAmmoTalisman.html#ac7d93044ac71e79131f9afe6c89cb36c":[1,0,1403,0],
+"classTraitAncientbook.html":[1,0,1404],
 "classTraitAncientbook.html#a30af98aa86c5036c1c47f7599b31f4ca":[1,0,1404,2],
 "classTraitAncientbook.html#a3af35eecff07096d675b87d386c8edb9":[1,0,1404,5],
 "classTraitAncientbook.html#a6c782d3ffd4d53048e79511abe35990a":[1,0,1404,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370":[1,0,1453,0],
 "classTraitCasinoGuard.html":[1,0,1454],
 "classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1454,0],
-"classTraitCasinoTable.html":[1,0,1455],
-"classTraitCasinoTable.html#aae4eafadaaee9f34981e5563e683d053":[1,0,1455,0],
-"classTraitCatalyst.html":[1,0,1456],
-"classTraitCatalyst.html#a59a77591fab9d39c5bd83213544e5429":[1,0,1456,6],
-"classTraitCatalyst.html#a5d315e8c2b7c8e8c9fe358627223432e":[1,0,1456,1],
-"classTraitCatalyst.html#a68c0c579c7c2d15f6350565b831b1c2d":[1,0,1456,4]
+"classTraitCasinoTable.html":[1,0,1455]
 };

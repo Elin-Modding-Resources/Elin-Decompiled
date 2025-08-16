@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"TraitEspressoMachine_8cs_source.html":[2,0,0,1430],
+"TraitEureka_8cs.html":[2,0,0,1431],
 "TraitEureka_8cs_source.html":[2,0,0,1431],
 "TraitExileElder_8cs.html":[2,0,0,1432],
 "TraitExileElder_8cs_source.html":[2,0,0,1432],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "TraitMerchantExotic_8cs_source.html":[2,0,0,1554],
 "TraitMerchantFestival_8cs.html":[2,0,0,1555],
 "TraitMerchantFestival_8cs_source.html":[2,0,0,1555],
-"TraitMerchantFireworks_8cs.html":[2,0,0,1556],
-"TraitMerchantFireworks_8cs_source.html":[2,0,0,1556],
-"TraitMerchantFish_8cs.html":[2,0,0,1557]
+"TraitMerchantFireworks_8cs.html":[2,0,0,1556]
 };

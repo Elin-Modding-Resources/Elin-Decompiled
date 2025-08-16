@@ -332,6 +332,7 @@ var classCard =
     [ "c_isPrayed", "classCard.html#a66a3741ac2251b0da7d1a181f060397d", null ],
     [ "c_isTrained", "classCard.html#ae3817ffd1c5b2fa749a7f936515ba056", null ],
     [ "c_lightColor", "classCard.html#a89f25bad181cbeed37ea814fe388682d", null ],
+    [ "c_lockedAge", "classCard.html#a032ddf5baaa732ce2d82c372c8cbbd6c", null ],
     [ "c_lockedHard", "classCard.html#a33c25c8bba209877e82be16945d2e3ca", null ],
     [ "c_lockLv", "classCard.html#a47bf1787110a3285ebb050be305c315e", null ],
     [ "c_minionType", "classCard.html#a060bc04b3db4db0f3fa5afd857e22aff", null ],

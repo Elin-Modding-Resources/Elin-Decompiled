@@ -1,5 +1,10 @@
 var NAVTREEINDEX74 =
 {
+"classLang_1_1Words.html#a11ec21d3fca661c30465f5a82fc24f57":[1,0,742,0,0],
+"classLayer.html":[1,0,752],
+"classLayer.html#a019da1bcef4b1d292929c7de29285586":[1,0,752,65],
+"classLayer.html#a06f675a7abbf8b558f1bc284b7b1064e":[1,0,752,44],
+"classLayer.html#a08d9019b41dec3b7c090b90f2d36e436":[1,0,752,70],
 "classLayer.html#a0c40d9a9531e08e133c048824619f701":[1,0,752,59],
 "classLayer.html#a0eec6ca819db19f911d8dc9ecb259d49":[1,0,752,69],
 "classLayer.html#a18e61da2c7a24182c61c15dbc8f6af1a":[1,0,752,78],
@@ -244,10 +249,5 @@ var NAVTREEINDEX74 =
 "classLayerCover.html#ab8ff572e8b819974f58b5044974e245d":[1,0,763,3],
 "classLayerCraft.html":[1,0,764],
 "classLayerCraft.html#a00421a8253c1f1821ba83f303d44346a":[1,0,764,45],
-"classLayerCraft.html#a007fa3faf304a13cad5250ab57f282a3":[1,0,764,15],
-"classLayerCraft.html#a125eeeb6c1079aa49b67850e878bd285":[1,0,764,6],
-"classLayerCraft.html#a12e4d944e822dfcfdc7c12313dc8417f":[1,0,764,32],
-"classLayerCraft.html#a1ee8ebd49165cd1d649db679a19b3e39":[1,0,764,17],
-"classLayerCraft.html#a209a92abc8043936ddd59fe8c5383653":[1,0,764,35],
-"classLayerCraft.html#a209d122805d09c7b140dccc89c9d047f":[1,0,764,7]
+"classLayerCraft.html#a007fa3faf304a13cad5250ab57f282a3":[1,0,764,15]
 };

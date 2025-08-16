@@ -1,6 +1,7 @@
 var classCoreRef_1_1PrefData =
 [
     [ "blockFence", "classCoreRef_1_1PrefData.html#ad7db7fa612f08485c0a32745aa6b0298", null ],
+    [ "blockPillar", "classCoreRef_1_1PrefData.html#aa18a0112a8a5ceff140ae454fb1fc3ed", null ],
     [ "blockStairs", "classCoreRef_1_1PrefData.html#af49c9e2087e313b82ecfa202b1981c81", null ],
     [ "blockWall", "classCoreRef_1_1PrefData.html#a2d49e3e3748b77feb801e5007fa0486f", null ],
     [ "pcc", "classCoreRef_1_1PrefData.html#abb2925c784521e58ee670f6f327b35d4", null ],

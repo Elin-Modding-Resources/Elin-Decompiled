@@ -1,5 +1,10 @@
 var NAVTREEINDEX116 =
 {
+"classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1500,0],
+"classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1500,1],
+"classTraitDefertilizer.html":[1,0,1501],
+"classTraitDeliveryChest.html":[1,0,1502],
+"classTraitDeliveryChest.html#a120325a952af6fc337e01d0498f9d35f":[1,0,1502,1],
 "classTraitDeliveryChest.html#a43c4b7d0ba716ca6d3dab8cb0d885d4c":[1,0,1502,8],
 "classTraitDeliveryChest.html#a44ca8e83f02452ad3bd771332cc6e0e6":[1,0,1502,7],
 "classTraitDeliveryChest.html#a475ade5c2b50886a079bec421acc84aa":[1,0,1502,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitFelmera.html#aa46eda79ce9179760200552dc10e728b":[1,0,1549,0],
 "classTraitFertilizer.html":[1,0,1550],
 "classTraitFertilizer.html#a037066089e1cba97f394478c7af65a98":[1,0,1550,1],
-"classTraitFertilizer.html#a36305468378b46b848d7c9720e493847":[1,0,1550,0],
-"classTraitFertilizer.html#a53cfccf0c0e7aa18f875e975f07c6b85":[1,0,1550,2],
-"classTraitFiama.html":[1,0,1551],
-"classTraitFiama.html#a01dc46e044297a2861eb68e78946263f":[1,0,1551,2],
-"classTraitFiama.html#a7751d781c82afa0fbb945d40eb713342":[1,0,1551,3],
-"classTraitFiama.html#ad6cdaf167a494de44586fd8515ae57cc":[1,0,1551,0]
+"classTraitFertilizer.html#a36305468378b46b848d7c9720e493847":[1,0,1550,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"WidgetHotbar_8cs.html":[2,0,0,1860],
+"WidgetHotbar_8cs_source.html":[2,0,0,1860],
 "WidgetInspector_8cs.html":[2,0,0,1862],
 "WidgetInspector_8cs_source.html":[2,0,0,1862],
 "WidgetMainText_8cs.html":[2,0,0,1863],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "Zone__Olvina_8cs.html":[2,0,0,1942],
 "Zone__Olvina_8cs_source.html":[2,0,0,1942],
 "Zone__Palmia_8cs.html":[2,0,0,1943],
-"Zone__Palmia_8cs_source.html":[2,0,0,1943],
-"Zone__RandomDungeonFactory_8cs.html":[2,0,0,1945],
-"Zone__RandomDungeonFactory_8cs_source.html":[2,0,0,1945]
+"Zone__Palmia_8cs_source.html":[2,0,0,1943]
 };

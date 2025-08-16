@@ -50,6 +50,7 @@ var classCINT =
     [ "isStolenFromPC", "classCINT.html#ae653809d26880c1e5cfb7d03c8ec8091", null ],
     [ "isTrained", "classCINT.html#a1aba8891d8885f93352d700b6f3d6740", null ],
     [ "lightColor", "classCINT.html#ab055a2239ed009e83468c2d5fbe709c5", null ],
+    [ "lockedAge", "classCINT.html#a82fd10ebc0e78d058c441323b51e18d7", null ],
     [ "lockLv", "classCINT.html#ab197538faf896faab84f63a54f23268c", null ],
     [ "lockType", "classCINT.html#a92bba4238e69882f02bbd1273175ccbc", null ],
     [ "mapPos", "classCINT.html#ac1a20b1fa0ad1e1165e5723b4225fa33", null ],
