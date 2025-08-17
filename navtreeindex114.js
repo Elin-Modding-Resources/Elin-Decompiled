@@ -1,5 +1,9 @@
 var NAVTREEINDEX114 =
 {
+"classTraitAmmo.html#ad2a54cfc05eb96b3682323ee18cc64ce":[1,0,1398,1],
+"classTraitAmmoArrow.html":[1,0,1399],
+"classTraitAmmoBolt.html":[1,0,1400],
+"classTraitAmmoBullet.html":[1,0,1401],
 "classTraitAmmoEnergy.html":[1,0,1402],
 "classTraitAmmoTalisman.html":[1,0,1403],
 "classTraitAmmoTalisman.html#a9ca08b037ec6ff430ad79fe7ffc3c6bb":[1,0,1403,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitCanvas.html#ae3ad3d5f043445ec51aa8c8ecabfe6d9":[1,0,1452,0],
 "classTraitCanvas.html#afa90520697e05c702fcd08d382abba35":[1,0,1452,5],
 "classTraitCard.html":[1,0,1453],
-"classTraitCard.html#a385d69ae4a39fed551482ff9a659dc85":[1,0,1453,1],
-"classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370":[1,0,1453,0],
-"classTraitCasinoGuard.html":[1,0,1454],
-"classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1454,0],
-"classTraitCasinoTable.html":[1,0,1455]
+"classTraitCard.html#a385d69ae4a39fed551482ff9a659dc85":[1,0,1453,1]
 };

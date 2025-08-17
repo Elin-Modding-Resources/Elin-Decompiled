@@ -1,5 +1,8 @@
 var NAVTREEINDEX92 =
 {
+"classQuestIntroInspector.html":[1,0,999],
+"classQuestIntroInspector.html#a9e2b1725e8742d671a5670dde1788930":[1,0,999,0],
+"classQuestLoytelFarm.html":[1,0,1000],
 "classQuestLoytelFarm.html#a255474c30a08dee1bbdc10ba62f1fe07":[1,0,1000,1],
 "classQuestLoytelFarm.html#a5de61c383ad35c495dc4d4bef86a1dee":[1,0,1000,0],
 "classQuestLumiest.html":[1,0,1001],
@@ -246,8 +249,5 @@ var NAVTREEINDEX92 =
 "classQueueList.html#a8036c1811253966374d065f3d352f009":[1,0,1041,0],
 "classQueueManager.html":[1,0,1042],
 "classQueueManager.html#a172d5f1c9a33750e6f294d1ea8da93ad":[1,0,1042,9],
-"classQueueManager.html#a5315ec5ee2b123a1ebf660f8921bf919":[1,0,1042,8],
-"classQueueManager.html#a5b0d2087347e33edf12e53b997639f22":[1,0,1042,7],
-"classQueueManager.html#a6912e3a9cc70e86b454efad6f0517fc2":[1,0,1042,3],
-"classQueueManager.html#a72e1b8dbd2f2c83a82eab62da7eb1bc5":[1,0,1042,10]
+"classQueueManager.html#a5315ec5ee2b123a1ebf660f8921bf919":[1,0,1042,8]
 };

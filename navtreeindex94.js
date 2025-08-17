@@ -1,5 +1,8 @@
 var NAVTREEINDEX94 =
 {
+"classRecipeUpdater.html#ade9645fe135cc6060607744242707bbc":[1,0,1055,2],
+"classRecipe_1_1Ingredient.html":[1,0,1049,0],
+"classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16":[1,0,1049,0,3],
 "classRecipe_1_1Ingredient.html#a0f7847f01969f81cd8cef26596fb248a":[1,0,1049,0,18],
 "classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e":[1,0,1049,0,14],
 "classRecipe_1_1Ingredient.html#a44f06296039d29dcb759daa7da96c63b":[1,0,1049,0,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX94 =
 "classRenderData.html#a805ff3d001c452809b0cfb2c9cacb4ed":[1,0,1085,25],
 "classRenderData.html#a8290a4f0de5825d44cea4409a2fb15ce":[1,0,1085,40],
 "classRenderData.html#a892794bcf0d1ecb8a905a6c320316797":[1,0,1085,13],
-"classRenderData.html#a8c1c2117491d1b6bc58cdf4dfe2edba5":[1,0,1085,5],
-"classRenderData.html#a90b6d38bdfb5f924c51adc5f09f44080":[1,0,1085,23],
-"classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5":[1,0,1085,24],
-"classRenderData.html#ab0c24dab311f1c22c8b109f201135029":[1,0,1085,27]
+"classRenderData.html#a8c1c2117491d1b6bc58cdf4dfe2edba5":[1,0,1085,5]
 };

@@ -23,6 +23,7 @@ var classFEAT =
     [ "featElderCrab", "classFEAT.html#add3318862773255912e7ed2b80be3694", null ],
     [ "featElea", "classFEAT.html#a63ffdd8c7e94450a6013e86b5d6369ce", null ],
     [ "featEND", "classFEAT.html#a4917d7c4a36576bc0da5ac95a1d96b4a", null ],
+    [ "featEternalYouth", "classFEAT.html#a2d0e8c4fd43ea30d05aa27f82c67256c", null ],
     [ "featEvade", "classFEAT.html#a23aee5ca8b74626f54ea3a3995880f1f", null ],
     [ "featExecutioner", "classFEAT.html#a40be4342dba7a23b201f741b664d5295", null ],
     [ "featFairyResist", "classFEAT.html#adaea16f09ddc042991d5a80ca1621e0d", null ],

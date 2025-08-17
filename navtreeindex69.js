@@ -1,5 +1,7 @@
 var NAVTREEINDEX69 =
 {
+"classHomeResource.html#a4849e1c8a74e93850039470dcfb08b20":[1,0,607,4],
+"classHomeResource.html#a81912a8016c2d7f67838f7531cf2d8ec":[1,0,607,2],
 "classHomeResourceCulture.html":[1,0,608],
 "classHomeResourceEducation.html":[1,0,609],
 "classHomeResourceEducation.html#ae6369f86a757cc1f7a124ec8bcbf5c1f":[1,0,609,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX69 =
 "classHotItemThing.html#a2a62e26f407f0931d84632116825c5c3":[1,0,641,4],
 "classHotItemThing.html#a300e922e2ec13b65bfe512f02934d245":[1,0,641,2],
 "classHotItemThing.html#a3fb4b1c3396d408c03d37b8cbdd61ca7":[1,0,641,9],
-"classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169":[1,0,641,5],
-"classHotItemThing.html#a67a79e74de908e23bd62269a2a8896d6":[1,0,641,6],
-"classHotItemThing.html#a6d4b99931a6687e0c1e4486e4148d1f0":[1,0,641,8]
+"classHotItemThing.html#a5dab29fe8066039e8ee0ba9861c4d169":[1,0,641,5]
 };

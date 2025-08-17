@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.181 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.182 Nightly</span>
    </div>
   </td>
  </tr>
@@ -228,6 +228,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a> (int a, int <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>)</td></tr>
 <tr class="separator:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c6ef288a7140793d6e5fb313fb72e4 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a> (long a)</td></tr>
+<tr class="separator:a62c6ef288a7140793d6e5fb313fb72e4 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a> (int a)</td></tr>
 <tr class="separator:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a160545685c1ede8a286de567dc56f5ca inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a160545685c1ede8a286de567dc56f5ca">curve</a> (int a, int start, int step, int rate=75)</td></tr>
@@ -472,7 +474,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a> != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_variable" href="classGenBounds.html#ab644bef117d94cfea7fb56215c0803b6">zone</a>.<a class="code hl_property" href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">IsUnderwater</a>)</div>
 <div class="line"><span class="lineno">  348</span>        {</div>
 <div class="line"><span class="lineno">  349</span>            thisInfo = <a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a>[1, 1];</div>
-<div class="line"><span class="lineno">  350</span>            seaDir = (thisInfo.sea ? (1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4)) : 0);</div>
+<div class="line"><span class="lineno">  350</span>            seaDir = (thisInfo.sea ? (1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4)) : 0);</div>
 <div class="line"><span class="lineno">  351</span>            _MakeNeighbor(<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a>[1, 2], <a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> / 3 + 7, <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(0, <a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> - 1), 0, -1, 3, 1);</div>
 <div class="line"><span class="lineno">  352</span>            _MakeNeighbor(<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a>[1, 0], <a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> / 3 + 7, <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(0, 0), 0, 1, 1, 3);</div>
 <div class="line"><span class="lineno">  353</span>            _MakeNeighbor(<a class="code hl_variable" href="classBaseMapGen.html#a9af30283bea884fbf2a43336dea7a8c9">bp</a>.<a class="code hl_variable" href="classZoneBlueprint.html#ad4c97cebcbbd83385da71e25455e8cc3">surrounding</a>[2, 1], <a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> / 3 + 7, <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(<a class="code hl_variable" href="classGenBounds.html#ad2f542b5fda4df5b85c92f1128d38304">Size</a> - 1, 0), -1, 0, 2, 4);</div>
@@ -490,9 +492,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  365</span>                num2--;</div>
 <div class="line"><span class="lineno">  366</span>                <span class="keywordflow">if</span> (num2 &lt; 0)</div>
 <div class="line"><span class="lineno">  367</span>                {</div>
-<div class="line"><span class="lineno">  368</span>                    num += ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  368</span>                    num += ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) == 0) ? 1 : (-1));</div>
 <div class="line"><span class="lineno">  369</span>                    num = Mathf.<a class="code hl_function" href="classPoint.html#adf369f86fc7eba0d290a45cf8c8f54c5">Clamp</a>(num, _s - 3, _s + 3);</div>
-<div class="line"><span class="lineno">  370</span>                    num2 = 2 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4);</div>
+<div class="line"><span class="lineno">  370</span>                    num2 = 2 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4);</div>
 <div class="line"><span class="lineno">  371</span>                }</div>
 <div class="line"><span class="lineno">  372</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
 <div class="line"><span class="lineno">  373</span>                {</div>
@@ -539,7 +541,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  414</span>            }</div>
 <div class="line"><span class="lineno">  415</span>        }</div>
 <div class="line"><span class="lineno">  416</span>    }</div>
-<div class="ttc" id="aclassEClass_html_a168b1097bf0c30bd077a4f88541b4c7c"><div class="ttname"><a href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">EClass.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00058">EClass.cs:58</a></div></div>
+<div class="ttc" id="aclassEClass_html_a62c6ef288a7140793d6e5fb313fb72e4"><div class="ttname"><a href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">EClass.rnd</a></div><div class="ttdeci">static int rnd(long a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00058">EClass.cs:58</a></div></div>
 <div class="ttc" id="aclassEloMap_1_1TileInfo_html"><div class="ttname"><a href="classEloMap_1_1TileInfo.html">EloMap.TileInfo</a></div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00030">EloMap.cs:31</a></div></div>
 <div class="ttc" id="aclassEloMap_1_1TileInfo_html_a6781fe70e954caf34a47ffe7aa99ed64"><div class="ttname"><a href="classEloMap_1_1TileInfo.html#a6781fe70e954caf34a47ffe7aa99ed64">EloMap.TileInfo.sea</a></div><div class="ttdeci">bool sea</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00048">EloMap.cs:48</a></div></div>
 <div class="ttc" id="aclassEloMap_1_1TileInfo_html_a8c83f79621c3defce54c7727041391ef"><div class="ttname"><a href="classEloMap_1_1TileInfo.html#a8c83f79621c3defce54c7727041391ef">EloMap.TileInfo.shore</a></div><div class="ttdeci">bool shore</div><div class="ttdef"><b>Definition:</b> <a href="EloMap_8cs_source.html#l00050">EloMap.cs:50</a></div></div>
@@ -600,7 +602,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  431</span>            {</div>
 <div class="line"><span class="lineno">  432</span>                point.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(p);</div>
 <div class="line"><span class="lineno">  433</span>                <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  434</span>                num = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2);</div>
+<div class="line"><span class="lineno">  434</span>                num = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2);</div>
 <div class="line"><span class="lineno">  435</span>                <span class="keywordflow">if</span> (vx != 0)</div>
 <div class="line"><span class="lineno">  436</span>                {</div>
 <div class="line"><span class="lineno">  437</span>                    p.x += num;</div>
@@ -694,7 +696,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  659</span>            }</div>
 <div class="line"><span class="lineno">  660</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classMapGen.html#a1b57fd1d0b317eda596be44a60f49ef5">TryMakeRiver</a>(point, point2))</div>
 <div class="line"><span class="lineno">  661</span>            {</div>
-<div class="line"><span class="lineno">  662</span>                num += 1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2);</div>
+<div class="line"><span class="lineno">  662</span>                num += 1 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2);</div>
 <div class="line"><span class="lineno">  663</span>                <span class="keywordflow">if</span> (num &gt; 10)</div>
 <div class="line"><span class="lineno">  664</span>                {</div>
 <div class="line"><span class="lineno">  665</span>                    <span class="keywordflow">break</span>;</div>
@@ -786,10 +788,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  520</span>                }</div>
 <div class="line"><span class="lineno">  521</span>                point.x += vx;</div>
 <div class="line"><span class="lineno">  522</span>                point.z += vz;</div>
-<div class="line"><span class="lineno">  523</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(30) == 0)</div>
+<div class="line"><span class="lineno">  523</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(30) == 0)</div>
 <div class="line"><span class="lineno">  524</span>                {</div>
-<div class="line"><span class="lineno">  525</span>                    point.x += ((vx == 0) ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) - 1) : 0);</div>
-<div class="line"><span class="lineno">  526</span>                    point.z += ((vz == 0) ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) - 1) : 0);</div>
+<div class="line"><span class="lineno">  525</span>                    point.x += ((vx == 0) ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(3) - 1) : 0);</div>
+<div class="line"><span class="lineno">  526</span>                    point.z += ((vz == 0) ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(3) - 1) : 0);</div>
 <div class="line"><span class="lineno">  527</span>                }</div>
 <div class="line"><span class="lineno">  528</span>            }</div>
 <div class="line"><span class="lineno">  529</span>        }</div>
@@ -845,11 +847,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  546</span>                {</div>
 <div class="line"><span class="lineno">  547</span>                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  548</span>                }</div>
-<div class="line"><span class="lineno">  549</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(500) == 0)</div>
+<div class="line"><span class="lineno">  549</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(500) == 0)</div>
 <div class="line"><span class="lineno">  550</span>                {</div>
 <div class="line"><span class="lineno">  551</span>                    flag = !flag;</div>
 <div class="line"><span class="lineno">  552</span>                }</div>
-<div class="line"><span class="lineno">  553</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
+<div class="line"><span class="lineno">  553</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(3) == 0)</div>
 <div class="line"><span class="lineno">  554</span>                {</div>
 <div class="line"><span class="lineno">  555</span>                    <span class="keywordflow">if</span> (flag)</div>
 <div class="line"><span class="lineno">  556</span>                    {</div>
@@ -860,7 +862,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  561</span>                        cell3.height = b;</div>
 <div class="line"><span class="lineno">  562</span>                    }</div>
 <div class="line"><span class="lineno">  563</span>                }</div>
-<div class="line"><span class="lineno">  564</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#aa802066b8bc5147c8dfda90c0ababa68">hSetting</a>.<a class="code hl_variable" href="classMapHeight.html#ad441ca2c0673d03738ffefbf2522a66c">smoothDownhill</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(3) == 0)</div>
+<div class="line"><span class="lineno">  564</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#aa802066b8bc5147c8dfda90c0ababa68">hSetting</a>.<a class="code hl_variable" href="classMapHeight.html#ad441ca2c0673d03738ffefbf2522a66c">smoothDownhill</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(3) == 0)</div>
 <div class="line"><span class="lineno">  565</span>                {</div>
 <div class="line"><span class="lineno">  566</span>                    <span class="keywordflow">if</span> (cell2.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &lt; b - 2)</div>
 <div class="line"><span class="lineno">  567</span>                    {</div>
@@ -874,7 +876,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  575</span>                }</div>
 <div class="line"><span class="lineno">  576</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#aa802066b8bc5147c8dfda90c0ababa68">hSetting</a>.<a class="code hl_variable" href="classMapHeight.html#af83885345c4e20f5ab294d536db39079">mod1</a> &amp;&amp; (cell2.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &gt;= b - 1 || cell3.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &gt;= b - 1))</div>
 <div class="line"><span class="lineno">  577</span>                {</div>
-<div class="line"><span class="lineno">  578</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(4) == 0 &amp;&amp; b != 0)</div>
+<div class="line"><span class="lineno">  578</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4) == 0 &amp;&amp; b != 0)</div>
 <div class="line"><span class="lineno">  579</span>                    {</div>
 <div class="line"><span class="lineno">  580</span>                        cell2.height = (cell3.height = b);</div>
 <div class="line"><span class="lineno">  581</span>                    }</div>
@@ -885,7 +887,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  586</span>                }</div>
 <div class="line"><span class="lineno">  587</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#aa802066b8bc5147c8dfda90c0ababa68">hSetting</a>.<a class="code hl_variable" href="classMapHeight.html#a894e94fec37ec029fd53caaebc722ca3">mod2</a> &amp;&amp; (cell2.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &lt; b - 1 || cell3.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &lt; b - 1))</div>
 <div class="line"><span class="lineno">  588</span>                {</div>
-<div class="line"><span class="lineno">  589</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  589</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) == 0)</div>
 <div class="line"><span class="lineno">  590</span>                    {</div>
 <div class="line"><span class="lineno">  591</span>                        cell2.height = (cell3.height = b);</div>
 <div class="line"><span class="lineno">  592</span>                    }</div>
@@ -896,7 +898,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  597</span>                }</div>
 <div class="line"><span class="lineno">  598</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseMapGen.html#aa802066b8bc5147c8dfda90c0ababa68">hSetting</a>.<a class="code hl_variable" href="classMapHeight.html#ab07576fff5b64ee0f6a2a609151938be">mod3</a> &amp;&amp; (cell2.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &gt;= b - 1 || cell3.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> &gt;= b - 1))</div>
 <div class="line"><span class="lineno">  599</span>                {</div>
-<div class="line"><span class="lineno">  600</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  600</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) == 0)</div>
 <div class="line"><span class="lineno">  601</span>                    {</div>
 <div class="line"><span class="lineno">  602</span>                        cell2.height = (cell3.height = b);</div>
 <div class="line"><span class="lineno">  603</span>                    }</div>
@@ -1544,7 +1546,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  690</span>            {</div>
 <div class="line"><span class="lineno">  691</span>                <a class="code hl_function" href="classGenBounds.html#a3900bb7ca79c125ccc73f114f014c003">SetBlock</a>(p1.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p1.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, 0, 0);</div>
 <div class="line"><span class="lineno">  692</span>                <a class="code hl_function" href="classGenBounds.html#af25058aec70f18f04698c0425d977cdb">SetFloor</a>(p1.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, p1.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, 67, 44);</div>
-<div class="line"><span class="lineno">  693</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">  693</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) == 0)</div>
 <div class="line"><span class="lineno">  694</span>                {</div>
 <div class="line"><span class="lineno">  695</span>                    <span class="keywordflow">if</span> (p1.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a> != point2.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>)</div>
 <div class="line"><span class="lineno">  696</span>                    {</div>

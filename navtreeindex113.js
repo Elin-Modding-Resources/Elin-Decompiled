@@ -1,5 +1,9 @@
 var NAVTREEINDEX113 =
 {
+"classTrait.html#a36e5910b883d1f4d4f9b318a97f6ced5":[1,0,1389,230],
+"classTrait.html#a39ace83d7e9e32e675a6cc4614497718":[1,0,1389,162],
+"classTrait.html#a3c9f561376bd9d2a64d731b08ebb587a":[1,0,1389,193],
+"classTrait.html#a3d7c708e6d4de364a10d7f3c4ee9fce4":[1,0,1389,95],
 "classTrait.html#a3dfddf8ab3a55240f886305bddba17bf":[1,0,1389,31],
 "classTrait.html#a3ec98447690dd68571b75ff355289308":[1,0,1389,60],
 "classTrait.html#a3f3b522d5f37459262eb30f511dbc667":[1,0,1389,121],
@@ -245,9 +249,5 @@ var NAVTREEINDEX113 =
 "classTraitAmmo.html#a42c9e9705bd05948c684caa21b3d1e35":[1,0,1398,2],
 "classTraitAmmo.html#a7c03a44e4d3d715a26ae0ffe8db66cd5":[1,0,1398,3],
 "classTraitAmmo.html#ab25d4ac09a41e5ebab12f2d56fbc31fa":[1,0,1398,5],
-"classTraitAmmo.html#ac834422091e2fd3f8bf11d0f100e995c":[1,0,1398,0],
-"classTraitAmmo.html#ad2a54cfc05eb96b3682323ee18cc64ce":[1,0,1398,1],
-"classTraitAmmoArrow.html":[1,0,1399],
-"classTraitAmmoBolt.html":[1,0,1400],
-"classTraitAmmoBullet.html":[1,0,1401]
+"classTraitAmmo.html#ac834422091e2fd3f8bf11d0f100e995c":[1,0,1398,0]
 };

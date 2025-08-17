@@ -1,5 +1,8 @@
 var NAVTREEINDEX84 =
 {
+"classMsgBox.html#a4438f61b000a55ee02df90974393ffaf":[1,0,889,18],
+"classMsgBox.html#a5c6fdbf781484e671294228cc66b92a9":[1,0,889,25],
+"classMsgBox.html#a65259926d8407391d69e6e64561734c6":[1,0,889,28],
 "classMsgBox.html#a65731940415c42d1c1044aba370af8af":[1,0,889,11],
 "classMsgBox.html#a74cc89a2093b5eae51d2e8a5f5ce7e5f":[1,0,889,16],
 "classMsgBox.html#a94ffdae6e026f98fb983ce8635630f21":[1,0,889,27],
@@ -246,8 +249,5 @@ var NAVTREEINDEX84 =
 "classObjectPool_1_1Item.html#afbc6b23440ee9899154589845e990969":[1,0,916,1,0],
 "classObjectPool_1_1Item.html#afbfae03289458bbada603decaa385009":[1,0,916,1,7],
 "classObjectPool_1_1Item.html#afc14568f51218d24f896190b17b3656d":[1,0,916,1,3],
-"classOutline8.html":[1,0,918],
-"classOutline8.html#a519d28a745afb06c930d467a308c49dc":[1,0,918,0],
-"classOverlayTexture.html":[1,0,919],
-"classOverlayTexture.html#a0dbed3d287a586c568652484e61d1f2b":[1,0,919,4]
+"classOutline8.html":[1,0,918]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX80 =
 {
+"classListOwner.html#a5178a4cbbfe89eff26be60051a28c149":[1,0,835,15],
+"classListOwner.html#a596e9821d4e8ed7d17017b60ea6d7d8c":[1,0,835,4],
 "classListOwner.html#a5cfd823ad83b54e27439297513bbd33c":[1,0,835,8],
 "classListOwner.html#a6094e79696b1f11fb891b7a98e272180":[1,0,835,7],
 "classListOwner.html#a6289c78362ca05fdd850f5b06a14aea3":[1,0,835,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX80 =
 "classMUTATION.html#afa470a268f2e6e51c64580e669a30292":[1,0,895,13],
 "classManlySingleton.html":[1,0,853],
 "classManlySingleton.html#a004039b47825dd581650b3c60a225d17":[1,0,853,5],
-"classManlySingleton.html#a2de8cbab7a5fd0a54bb0a06aa3f67dce":[1,0,853,1],
-"classManlySingleton.html#a42a2d2827622077f2e75908d58c899cf":[1,0,853,7],
-"classManlySingleton.html#a538b1040b509a24bff1552ea8f3c9fd5":[1,0,853,9]
+"classManlySingleton.html#a2de8cbab7a5fd0a54bb0a06aa3f67dce":[1,0,853,1]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX115 =
 {
+"classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370":[1,0,1453,0],
+"classTraitCasinoGuard.html":[1,0,1454],
+"classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1454,0],
+"classTraitCasinoTable.html":[1,0,1455],
 "classTraitCasinoTable.html#aae4eafadaaee9f34981e5563e683d053":[1,0,1455,0],
 "classTraitCatalyst.html":[1,0,1456],
 "classTraitCatalyst.html#a59a77591fab9d39c5bd83213544e5429":[1,0,1456,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitDaggerGrave.html#acacb5e09722aaf2d6cc6497bb7275b58":[1,0,1498,4],
 "classTraitDaggerGrave.html#acf147a5264c45378dd110273219aa277":[1,0,1498,0],
 "classTraitDaggerGrave.html#af35f76abd92bc5cf9735d463db3b8cc4":[1,0,1498,2],
-"classTraitDeed.html":[1,0,1499],
-"classTraitDeed.html#a89dff9f45bf4831d416c7fd49b995ff3":[1,0,1499,0],
-"classTraitDeed.html#aa67b89d49deb49ab6a97d33226616440":[1,0,1499,1],
-"classTraitDeed.html#ad3a5f615aa20d8cdd0052fe2e38b672b":[1,0,1499,2],
-"classTraitDeedRelocate.html":[1,0,1500]
+"classTraitDeed.html":[1,0,1499]
 };

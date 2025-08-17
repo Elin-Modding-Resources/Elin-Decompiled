@@ -30,6 +30,7 @@ var classMapConfig =
     [ "lutContrast", "classMapConfig.html#a6b89a023c62dd032d14b08b95e72b5aa", null ],
     [ "lutSaturation", "classMapConfig.html#a73fc9b138a5c0ec744c5b56d92c67728", null ],
     [ "retainDecal", "classMapConfig.html#a2de8dc5db98bf7d3bcfb66cdcbb97c27", null ],
+    [ "reverseRoof", "classMapConfig.html#ad8667a98de5f92fde47304a84c2511cd", null ],
     [ "seaDir", "classMapConfig.html#a78efe4b9d04b9fea47aca2ff057e6237", null ],
     [ "shadowStrength", "classMapConfig.html#aca3970bb82383da940200752590738ee", null ],
     [ "skyBlockHeight", "classMapConfig.html#a6975da84308f50dfa79dfa41abea2bb5", null ]

@@ -1,5 +1,9 @@
 var NAVTREEINDEX118 =
 {
+"classTraitHouseBoard_1_1Data.html#a5e5dab433ca2876b0dd2bea2d2d7a527":[1,0,1616,0,17],
+"classTraitHouseBoard_1_1Data.html#a655b4df697b08da44d293dcbeb60a516":[1,0,1616,0,0],
+"classTraitHouseBoard_1_1Data.html#a78c4f7d90794694fcf3db226dba9648a":[1,0,1616,0,14],
+"classTraitHouseBoard_1_1Data.html#a7b489fa568df6038dff97e64c3db7edc":[1,0,1616,0,4],
 "classTraitHouseBoard_1_1Data.html#a9e07f57568ef073f59673731aae201e4":[1,0,1616,0,11],
 "classTraitHouseBoard_1_1Data.html#aa257cd2549299f79bed4adbf331779fd":[1,0,1616,0,15],
 "classTraitHouseBoard_1_1Data.html#aae475e0f39d0f33545c1f74185ca7567":[1,0,1616,0,13],
@@ -245,9 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1678,1],
 "classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1678,0],
 "classTraitMerchantMeat.html":[1,0,1679],
-"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1679,0],
-"classTraitMerchantMilk.html":[1,0,1680],
-"classTraitMerchantMilk.html#a1425f96b7285390b82e48446a25f6e49":[1,0,1680,0],
-"classTraitMerchantPlan.html":[1,0,1681],
-"classTraitMerchantPlan.html#a8ab4c39f9b9050c042d2dddcffb8c2d0":[1,0,1681,1]
+"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1679,0]
 };
