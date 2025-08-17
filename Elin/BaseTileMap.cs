@@ -668,6 +668,10 @@ public class BaseTileMap : EMono
 		defaultBlockHeight = map.config.blockHeight;
 		noRoofMode = false;
 		bool flag = !isIndoor || EMono._zone is Zone_Tent;
+		if (EMono._map.config.reverseRoof)
+		{
+			flag = !flag;
+		}
 		if (usingHouseBoard || ActionMode.Bird.IsActive)
 		{
 			lowBlock = (hideRoomFog = (hideHang = false));
@@ -868,18 +872,18 @@ public class BaseTileMap : EMono
 		int valueOrDefault = (this.room?.lot?.idBGM).GetValueOrDefault();
 		if (valueOrDefault == 0)
 		{
-			goto IL_16b9;
+			goto IL_16d1;
 		}
 		if (!(EMono.Sound.currentPlaylist != EMono.Sound.plLot))
 		{
 			BGMData data = EMono.Sound.plLot.list[0].data;
 			if ((object)data != null && data.id == valueOrDefault)
 			{
-				goto IL_16b9;
+				goto IL_16d1;
 			}
 		}
-		goto IL_16d8;
-		IL_16e2:
+		goto IL_16f0;
+		IL_16fa:
 		if (this.room != lastRoom)
 		{
 			screen.RefreshWeather();
@@ -888,15 +892,15 @@ public class BaseTileMap : EMono
 		SoundManager.bgmVolumeMod = ((!LayerDrama.maxBGMVolume && !EMono._map.IsIndoor && this.room != null && !this.room.data.atrium && this.room.HasRoof) ? (-0.6f) : 0f);
 		screenHighlight = ScreenHighlight.None;
 		return;
-		IL_16b9:
+		IL_16d1:
 		if (valueOrDefault == 0 && EMono.Sound.currentPlaylist == EMono.Sound.plLot)
 		{
-			goto IL_16d8;
+			goto IL_16f0;
 		}
-		goto IL_16e2;
-		IL_16d8:
+		goto IL_16fa;
+		IL_16f0:
 		EMono._zone.RefreshBGM();
-		goto IL_16e2;
+		goto IL_16fa;
 	}
 
 	public void RefreshHeight()

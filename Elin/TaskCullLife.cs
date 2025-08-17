@@ -6,6 +6,8 @@ public class TaskCullLife : Task
 {
 	public Point dest;
 
+	public HashSet<Chara> listSkip = new HashSet<Chara>();
+
 	public static bool CanCull(Card c)
 	{
 		if (c.c_minionType == MinionType.Friend)
@@ -45,28 +47,30 @@ public class TaskCullLife : Task
 				fail = true;
 				return Status.Running;
 			});
-			if (!fail && target.IsAliveInCurrentZone)
+			if (fail || !target.IsAliveInCurrentZone)
 			{
-				if (owner.Dist(target) > 1)
-				{
-					yield return Cancel();
-				}
-				owner.PlaySound("shear");
-				Msg.Say("cull_life", EClass.pc, target);
-				target.Die();
-				Thing t = ThingGen.Create("ecopo").SetNum(EClass.rndHalf((int)Mathf.Sqrt(target.LV) + 5));
-				EClass.pc.Pick(t);
-				yield return KeepRunning();
+				listSkip.Add(target);
+				continue;
 			}
+			if (owner.Dist(target) > 1)
+			{
+				yield return Cancel();
+			}
+			owner.PlaySound("shear");
+			Msg.Say("cull_life", EClass.pc, target);
+			target.Die();
+			Thing t = ThingGen.Create("ecopo").SetNum(EClass.rndHalf((int)Mathf.Sqrt(target.LV) + 5));
+			EClass.pc.Pick(t);
+			yield return KeepRunning();
 		}
 	}
 
-	public static Chara GetTarget()
+	public Chara GetTarget()
 	{
 		List<Chara> list = new List<Chara>();
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (CanCull(chara))
+			if (!listSkip.Contains(chara) && CanCull(chara))
 			{
 				list.Add(chara);
 			}

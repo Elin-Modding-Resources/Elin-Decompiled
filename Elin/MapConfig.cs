@@ -44,6 +44,9 @@ public class MapConfig : EClass
 	public bool retainDecal;
 
 	[JsonProperty]
+	public bool reverseRoof;
+
+	[JsonProperty]
 	public Weather.Condition fixedCondition = Weather.Condition.None;
 
 	[JsonProperty]

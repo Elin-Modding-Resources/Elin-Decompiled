@@ -203,7 +203,7 @@ public class ActEffect : EClass
 				{
 					attackSource = AttackSource.MagicSword;
 				}
-				int num4 = 0;
+				long num4 = 0L;
 				bool isChara = CC.isChara;
 				if (id == EffectId.Suicide)
 				{
@@ -278,7 +278,7 @@ public class ActEffect : EClass
 						{
 							CC.ModExp(302, CC.IsPC ? 20 : 100);
 						}
-						if (num4 == 0)
+						if (num4 == 0L)
 						{
 							continue;
 						}
@@ -321,17 +321,21 @@ public class ActEffect : EClass
 					num4 = num4 * 100 / (100 + RapidCount * 50);
 				}
 				num4 = num4 * Act.powerMod / 100;
-				c.DamageHP(num4, e.id, power * num / 100, attackSource, chara ?? CC);
+				if (num4 > 9999999)
+				{
+					num4 = 9999999L;
+				}
+				c.DamageHP((int)num4, e.id, power * num / 100, attackSource, chara ?? CC);
 				if (c.IsAliveInCurrentZone && CC.IsAliveInCurrentZone && id == EffectId.DrainMana && c.isChara && CC.isChara && c.Chara.mana.value > 0)
 				{
-					int num6 = num4 * num / 100;
+					long num6 = num4 * num / 100;
 					Debug.Log(num4 + " v:" + num6 + " evalue:" + e.Value + " power:" + power + " elepMod:" + num);
 					if (num6 > c.Chara.mana.value)
 					{
 						num6 = c.Chara.mana.value;
 					}
-					c.Chara.mana.Mod(-num6);
-					CC.Chara.mana.Mod(num6);
+					c.Chara.mana.Mod((int)(-num6));
+					CC.Chara.mana.Mod((int)num6);
 				}
 				if (id == EffectId.Explosive && CC.trait is TraitCookerMicrowave)
 				{
@@ -1824,7 +1828,6 @@ public class ActEffect : EClass
 		}
 		case EffectId.EternalYouth:
 		{
-			tc.PlaySound("dropRewardXmas");
 			tc.PlaySound("mutation");
 			tc.PlayEffect("mutation");
 			if (tc.IsUnique)
@@ -1839,6 +1842,7 @@ public class ActEffect : EClass
 				{
 					tc.Say("eternalYouth2", tc);
 					tc.c_lockedAge = 0;
+					tc.elements.Remove(1243);
 					tc.bio.SetAge(tc.Chara, age);
 				}
 				Redirect(EffectId.Youth, BlessedState.Cursed, default(ActRef));
@@ -1849,8 +1853,10 @@ public class ActEffect : EClass
 			}
 			else
 			{
+				tc.PlaySound("dropRewardXmas");
 				tc.Say("eternalYouth1", tc);
 				tc.c_lockedAge = age;
+				tc.elements.SetBase(1243, 1);
 				if (blessed)
 				{
 					Redirect(EffectId.Youth, BlessedState.Blessed, default(ActRef));

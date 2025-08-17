@@ -129,6 +129,8 @@ public class FEAT
 
 	public const int featGeneSlot = 1242;
 
+	public const int featEternalYouth = 1243;
+
 	public const int featGod_element1 = 1300;
 
 	public const int featGod_earth1 = 1305;
@@ -165,11 +167,9 @@ public class FEAT
 
 	public const int featTourist = 1406;
 
-	public const int featPaladin = 1407;
-
 	public const int featMassSummoner = 1240;
 
-	public const int featPaladin2 = 1408;
+	public const int featPaladin = 1407;
 
 	public const int featDemon = 1239;
 
@@ -219,9 +219,11 @@ public class FEAT
 
 	public const int featElder = 1238;
 
-	public const int featBoost = 1409;
+	public const int featPaladin2 = 1408;
 
 	public const int featGod_luck1 = 1330;
+
+	public const int featReboot = 1410;
 
 	public const int featEarthStrength = 1411;
 
@@ -233,13 +235,13 @@ public class FEAT
 
 	public const int featFoxMaid = 1415;
 
-	public const int featInquisitor = 1416;
-
 	public const int featWitch = 1417;
 
-	public const int featReboot = 1410;
+	public const int featInquisitor = 1416;
 
-	public static readonly int[] IDS = new int[118]
+	public const int featBoost = 1409;
+
+	public static readonly int[] IDS = new int[119]
 	{
 		1216, 1644, 1643, 1642, 1641, 1640, 1636, 1635, 1634, 1633,
 		1632, 1631, 1630, 1645, 1629, 1627, 1626, 1625, 1624, 1623,
@@ -247,12 +249,12 @@ public class FEAT
 		1648, 1215, 1200, 1201, 1202, 1203, 1204, 1205, 1206, 1207,
 		1208, 1209, 1210, 1647, 1211, 1214, 1659, 1658, 1657, 1656,
 		1655, 1654, 1653, 1652, 1651, 1650, 1649, 1212, 1420, 1213,
-		1418, 1241, 1242, 1300, 1305, 1310, 1315, 1320, 1325, 1335,
-		1340, 1345, 1350, 1355, 1400, 1401, 1402, 1403, 1404, 1405,
-		1406, 1407, 1240, 1408, 1239, 1237, 1419, 1218, 1219, 1220,
+		1418, 1241, 1242, 1243, 1300, 1305, 1310, 1315, 1320, 1325,
+		1335, 1340, 1345, 1350, 1355, 1400, 1401, 1402, 1403, 1404,
+		1405, 1406, 1240, 1407, 1239, 1237, 1419, 1218, 1219, 1220,
 		1221, 1222, 1223, 1224, 1225, 1226, 1227, 1228, 1229, 1230,
-		1217, 1231, 1232, 1233, 1234, 1235, 1236, 1238, 1409, 1330,
-		1411, 1412, 1413, 1414, 1415, 1416, 1417, 1410
+		1217, 1231, 1232, 1233, 1234, 1235, 1236, 1238, 1408, 1330,
+		1410, 1411, 1412, 1413, 1414, 1415, 1417, 1416, 1409
 	};
 }
 public class Feat : Element

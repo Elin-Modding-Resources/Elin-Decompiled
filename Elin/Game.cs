@@ -450,6 +450,16 @@ public class Game : EClass
 			}
 		});
 		TryAddQuest("into_darkness", "exile_kettle");
+		if (version.IsBelow(0, 23, 182))
+		{
+			foreach (Chara value2 in cards.globalCharas.Values)
+			{
+				if (!value2.IsUnique && value2.c_lockedAge != 0)
+				{
+					value2.elements.SetBase(1243, 1);
+				}
+			}
+		}
 		if (version.IsBelow(0, 23, 155))
 		{
 			AddAdventurer("adv_yukiimo");
@@ -488,11 +498,11 @@ public class Game : EClass
 		}
 		if (version.IsBelow(0, 23, 72))
 		{
-			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
+			foreach (Chara value3 in EClass.game.cards.globalCharas.Values)
 			{
-				if (!value2.isDead)
+				if (!value3.isDead)
 				{
-					value2.c_wasInPcParty = false;
+					value3.c_wasInPcParty = false;
 				}
 			}
 		}
@@ -508,11 +518,11 @@ public class Game : EClass
 		}
 		if (version.IsBelow(0, 23, 51))
 		{
-			foreach (Chara value3 in EClass.game.cards.globalCharas.Values)
+			foreach (Chara value4 in EClass.game.cards.globalCharas.Values)
 			{
-				if (!(value3.id != "adv") && value3.IsPCFaction)
+				if (!(value4.id != "adv") && value4.IsPCFaction)
 				{
-					value3.idSkin = value3.uid % (value3.source._tiles.Length - 4) / 2 * 2 + ((!value3.IsMale) ? 1 : 0);
+					value4.idSkin = value4.uid % (value4.source._tiles.Length - 4) / 2 * 2 + ((!value4.IsMale) ? 1 : 0);
 				}
 			}
 		}
@@ -574,9 +584,9 @@ public class Game : EClass
 		});
 		if (version.IsBelow(0, 22, 20))
 		{
-			foreach (Chara value4 in cards.globalCharas.Values)
+			foreach (Chara value5 in cards.globalCharas.Values)
 			{
-				value4.SetBool(18, enable: false);
+				value5.SetBool(18, enable: false);
 			}
 		}
 		if (version.IsBelow(0, 22, 22))

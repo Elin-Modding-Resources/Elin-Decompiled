@@ -55,6 +55,11 @@ public class EClass
 		return result;
 	}
 
+	public static int rnd(long a)
+	{
+		return Rand.rnd((int)a);
+	}
+
 	public static int rnd(int a)
 	{
 		return Rand.rnd(a);

@@ -4345,6 +4345,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				target = EClass._map.FindChara(zoneInstanceBout.uidTarget);
 				if (target != null)
 				{
+					EClass.pc.ai.Cancel();
 					if (IsPC)
 					{
 						EClass.pc.hp = 0;

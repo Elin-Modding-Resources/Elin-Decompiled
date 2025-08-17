@@ -121,5 +121,16 @@ public class TraitMapBoard : TraitBoard
 			});
 			return false;
 		}, owner);
+		bool flag = !EClass._map.IsIndoor || EClass._zone is Zone_Tent;
+		if (EClass._map.config.reverseRoof)
+		{
+			flag = !flag;
+		}
+		p.TrySetAct("actToggleMapRoof".lang((flag ? "on" : "off").lang()), delegate
+		{
+			EClass._map.config.reverseRoof = !EClass._map.config.reverseRoof;
+			SE.ClickOk();
+			return false;
+		}, owner);
 	}
 }
