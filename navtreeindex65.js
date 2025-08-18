@@ -1,5 +1,10 @@
 var NAVTREEINDEX65 =
 {
+"classGameScreen.html":[1,0,524],
+"classGameScreen.html#a1bf813fb77452e69a516039f4ca220c8":[1,0,524,4],
+"classGameScreen.html#a570fbe6a76424e67f73f9d0b3f9ead19":[1,0,524,3],
+"classGameScreen.html#a77022f690e47870699fbb13393a0bea5":[1,0,524,0],
+"classGameScreen.html#ac3b4d019365eb5a2c37e0aa2b85ae84d":[1,0,524,1],
 "classGameScreen.html#adf782a75518942ce303a22216c9ae1ea":[1,0,524,2],
 "classGameScreenElona.html":[1,0,525],
 "classGameScreenElona.html#a3410a10bdc80308d1e2c43db7afb1a3f":[1,0,525,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX65 =
 "classGame_1_1Config.html#a6ab750a2c818ebfb36f6431bab29e03d":[1,0,514,0,10],
 "classGame_1_1Config.html#a7b5dc61de5dfb544d33fe4f1796be694":[1,0,514,0,28],
 "classGame_1_1Config.html#a7c1a1f5fb9b8f36ddaa4f6617d2845d4":[1,0,514,0,25],
-"classGame_1_1Config.html#a7dd6700660188bd4633cf111e26157ed":[1,0,514,0,4],
-"classGame_1_1Config.html#a85f33e4a6eaf002c87d69aee74bb4cdc":[1,0,514,0,26],
-"classGame_1_1Config.html#a9c7e664cdeaf74907f4878042ac64298":[1,0,514,0,16],
-"classGame_1_1Config.html#aa459616f25a0a3e3883fae1b21cae971":[1,0,514,0,22],
-"classGame_1_1Config.html#aa4efd0c08e1ee83cc0f983e6c4577b1a":[1,0,514,0,9],
-"classGame_1_1Config.html#aa69ca9da6d9a9ec6c84e2b7407ba4931":[1,0,514,0,6]
+"classGame_1_1Config.html#a7dd6700660188bd4633cf111e26157ed":[1,0,514,0,4]
 };

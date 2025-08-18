@@ -1,5 +1,11 @@
 var NAVTREEINDEX119 =
 {
+"classTraitMerchantMagic.html#aab92dce618d7f6d3998faa77a0c058c2":[1,0,1677,0],
+"classTraitMerchantMap.html":[1,0,1678],
+"classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1678,1],
+"classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1678,0],
+"classTraitMerchantMeat.html":[1,0,1679],
+"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1679,0],
 "classTraitMerchantMilk.html":[1,0,1680],
 "classTraitMerchantMilk.html#a1425f96b7285390b82e48446a25f6e49":[1,0,1680,0],
 "classTraitMerchantPlan.html":[1,0,1681],
@@ -243,11 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1743,8],
 "classTraitPotionRandom.html#a6edd071c6499d46dbdb86a912357421b":[1,0,1743,3],
 "classTraitPotionRandom.html#a6f8ad0e2c44a98bfcf172afef5aa307d":[1,0,1743,7],
-"classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1743,1],
-"classTraitPotionRandom.html#a81f51a653e3ce1a6e0a118178812daf2":[1,0,1743,10],
-"classTraitPotionRandom.html#abaae34393bf06c2aaad531ca30799516":[1,0,1743,5],
-"classTraitPotionRandom.html#adbaf7305ae19e67a415e1ac710688c4f":[1,0,1743,4],
-"classTraitPotionRandom.html#af5d2e6755f6bcfa5b0b53d091fd6473c":[1,0,1743,6],
-"classTraitPotionRandom.html#afeb385428a5da22849b31f3c55176170":[1,0,1743,2],
-"classTraitPowerStatue.html":[1,0,1744]
+"classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1743,1]
 };

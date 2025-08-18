@@ -1,5 +1,10 @@
 var NAVTREEINDEX80 =
 {
+"classListOwner.html#a0ae32cba2e7e548c21917c0e4b422cce":[1,0,835,0],
+"classListOwner.html#a226a711bd27287a56049bb01b738765f":[1,0,835,5],
+"classListOwner.html#a2c9643d77bd1893f41c5c63f052eec11":[1,0,835,22],
+"classListOwner.html#a3035a8655b49402187a544fe9ba99712":[1,0,835,9],
+"classListOwner.html#a4bfd47396ed6bc91e55233adcd82254b":[1,0,835,1],
 "classListOwner.html#a5178a4cbbfe89eff26be60051a28c149":[1,0,835,15],
 "classListOwner.html#a596e9821d4e8ed7d17017b60ea6d7d8c":[1,0,835,4],
 "classListOwner.html#a5cfd823ad83b54e27439297513bbd33c":[1,0,835,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX80 =
 "classMUTATION.html#ad8697b3b43a9af286468cafedf01f8c9":[1,0,895,3],
 "classMUTATION.html#ad9b2da0b56fa6ec5b87a52a0bb4f5322":[1,0,895,9],
 "classMUTATION.html#adb8f97b0756a5aa51147b16547aceea4":[1,0,895,39],
-"classMUTATION.html#af747982122e1a0e87cbb52ad11db0736":[1,0,895,20],
-"classMUTATION.html#af87210c711007eff708af9b89449a2cf":[1,0,895,14],
-"classMUTATION.html#afa470a268f2e6e51c64580e669a30292":[1,0,895,13],
-"classManlySingleton.html":[1,0,853],
-"classManlySingleton.html#a004039b47825dd581650b3c60a225d17":[1,0,853,5],
-"classManlySingleton.html#a2de8cbab7a5fd0a54bb0a06aa3f67dce":[1,0,853,1]
+"classMUTATION.html#af747982122e1a0e87cbb52ad11db0736":[1,0,895,20]
 };

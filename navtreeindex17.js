@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TraitEspressoMachine_8cs.html":[2,0,0,1430],
 "TraitEspressoMachine_8cs_source.html":[2,0,0,1430],
 "TraitEureka_8cs.html":[2,0,0,1431],
 "TraitEureka_8cs_source.html":[2,0,0,1431],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitMerchantExotic_8cs.html":[2,0,0,1554],
 "TraitMerchantExotic_8cs_source.html":[2,0,0,1554],
 "TraitMerchantFestival_8cs.html":[2,0,0,1555],
-"TraitMerchantFestival_8cs_source.html":[2,0,0,1555],
-"TraitMerchantFireworks_8cs.html":[2,0,0,1556]
+"TraitMerchantFestival_8cs_source.html":[2,0,0,1555]
 };

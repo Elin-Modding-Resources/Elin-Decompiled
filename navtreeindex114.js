@@ -1,5 +1,11 @@
 var NAVTREEINDEX114 =
 {
+"classTraitAmmo.html":[1,0,1398],
+"classTraitAmmo.html#a061b674e16022617b5e80d700617d7d5":[1,0,1398,4],
+"classTraitAmmo.html#a42c9e9705bd05948c684caa21b3d1e35":[1,0,1398,2],
+"classTraitAmmo.html#a7c03a44e4d3d715a26ae0ffe8db66cd5":[1,0,1398,3],
+"classTraitAmmo.html#ab25d4ac09a41e5ebab12f2d56fbc31fa":[1,0,1398,5],
+"classTraitAmmo.html#ac834422091e2fd3f8bf11d0f100e995c":[1,0,1398,0],
 "classTraitAmmo.html#ad2a54cfc05eb96b3682323ee18cc64ce":[1,0,1398,1],
 "classTraitAmmoArrow.html":[1,0,1399],
 "classTraitAmmoBolt.html":[1,0,1400],
@@ -243,11 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitCamera.html#aac8b0271af431a04632d2f4828361141":[1,0,1451,0],
 "classTraitCanvas.html":[1,0,1452],
 "classTraitCanvas.html#a4298d852681c52ee1dbe685153801ce6":[1,0,1452,2],
-"classTraitCanvas.html#a7680aece7bb9be37160bb38db93e7ac4":[1,0,1452,1],
-"classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1452,3],
-"classTraitCanvas.html#aaf23f8a6dc8c67306f1169aeb6b77a07":[1,0,1452,4],
-"classTraitCanvas.html#ae3ad3d5f043445ec51aa8c8ecabfe6d9":[1,0,1452,0],
-"classTraitCanvas.html#afa90520697e05c702fcd08d382abba35":[1,0,1452,5],
-"classTraitCard.html":[1,0,1453],
-"classTraitCard.html#a385d69ae4a39fed551482ff9a659dc85":[1,0,1453,1]
+"classTraitCanvas.html#a7680aece7bb9be37160bb38db93e7ac4":[1,0,1452,1]
 };

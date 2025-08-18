@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"Zone__Palmia_8cs_source.html":[2,0,0,1943],
 "Zone__RandomDungeonFactory_8cs.html":[2,0,0,1945],
 "Zone__RandomDungeonFactory_8cs_source.html":[2,0,0,1945],
 "Zone__RandomDungeonForest_8cs.html":[2,0,0,1946],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classAIAct.html#a85147d7713b246ae83426801e6a83715":[1,0,111,42],
 "classAIAct.html#a855291d13aa3564872b2a42ecd25c83f":[1,0,111,27],
 "classAIAct.html#a85c02a6c23799bbe6f6d2af9b4f41eee":[1,0,111,57],
-"classAIAct.html#a8b1dd5f45c4dc32fbe1cbed0316e2211":[1,0,111,4],
-"classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace":[1,0,111,54]
+"classAIAct.html#a8b1dd5f45c4dc32fbe1cbed0316e2211":[1,0,111,4]
 };

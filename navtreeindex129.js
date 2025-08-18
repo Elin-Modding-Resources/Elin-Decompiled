@@ -1,5 +1,11 @@
 var NAVTREEINDEX129 =
 {
+"classUIResourceTrack.html#a942bf98e467fdbe7b2628cec6751f89e":[1,0,1990,11],
+"classUIResourceTrack.html#a9cbabe2cfaf0d02eb82c9272e74fdd36":[1,0,1990,10],
+"classUIResourceTrack.html#aa87567739459ba0b7c4b0e83f85cc79c":[1,0,1990,3],
+"classUIResourceTrack.html#aa8e2d39004b9b8e48eecfe7190af215b":[1,0,1990,7],
+"classUIResourceTrack.html#ac4c7cd606043657cc63aca499e76807d":[1,0,1990,8],
+"classUIResourceTrack.html#aff5d363311bdcfb50a74e64ba01e9945":[1,0,1990,4],
 "classUIScaleFix.html":[1,0,1991],
 "classUIScaleFix.html#a94eae5002e8b2c0611901c32a87cb504":[1,0,1991,0],
 "classUIScreenshot.html":[1,0,1992],
@@ -243,11 +249,5 @@ var NAVTREEINDEX129 =
 "classVirtualDate.html#af9fe9097187dc50b359b4aadde2af5e8":[1,0,2007,5],
 "classVirtualRoom.html":[1,0,2008],
 "classVirtualRoom.html#a103beb23b0ce5124ff92026d42c6e3bc":[1,0,2008,0],
-"classWait.html":[1,0,2009],
-"classWeather.html":[1,0,2011],
-"classWeather.html#a0e537278203f713dfab9ace506ab3b57":[1,0,2011,12],
-"classWeather.html#a0fb2dd540f7f17249b3b15d237273b9a":[1,0,2011,6],
-"classWeather.html#a1079e0c2b269a60e809190e3a01b6eb2":[1,0,2011,21],
-"classWeather.html#a447f35f3100c4c8f97068675fc42531f":[1,0,2011,26],
-"classWeather.html#a4771e4ce588fd850c3c4c8e2bc856a7c":[1,0,2011,17]
+"classWait.html":[1,0,2009]
 };

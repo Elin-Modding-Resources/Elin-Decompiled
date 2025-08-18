@@ -1,5 +1,7 @@
 var NAVTREEINDEX38 =
 {
+"classButtonRecipe.html#ab5a06e9048d04b6137a4cdc7661c0ddc":[1,0,236,1],
+"classButtonResourceTrack.html":[1,0,237],
 "classButtonResourceTrack.html#a112e680b7e0b3a6758428cb965402227":[1,0,237,0],
 "classButtonResourceTrack.html#a33af0031857d42298f534d42423a1db6":[1,0,237,3],
 "classButtonResourceTrack.html#a4d51631eb33dd4e7c63db29843c87d9f":[1,0,237,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "classCameraSupport.html#ae745505a71694bf03ed2dd58059171f2":[1,0,244,14],
 "classCameraSupport.html#aee3b90332540886a925fde19e8a19bab":[1,0,244,5],
 "classCameraSupport.html#af2d6fbac28f1587fe2640de1c97a121e":[1,0,244,17],
-"classCameraSupport.html#af7f7b084af2dde37232480b9f9f921fe":[1,0,244,4],
-"classCanvasExt.html":[1,0,245],
-"classCanvasExt.html#ae9392d42e91e8a0297e7bb0e30970e98":[1,0,245,0]
+"classCameraSupport.html#af7f7b084af2dde37232480b9f9f921fe":[1,0,244,4]
 };

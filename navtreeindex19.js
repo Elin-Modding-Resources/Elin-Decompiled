@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitSeeker_8cs_source.html":[2,0,0,1678],
 "TraitSeesaw_8cs.html":[2,0,0,1679],
 "TraitSeesaw_8cs_source.html":[2,0,0,1679],
 "TraitSelfFactory_8cs.html":[2,0,0,1680],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitWorkbenchFuel_8cs_source.html":[2,0,0,1802],
 "TraitWorkbench_8cs.html":[2,0,0,1801],
 "TraitWorkbench_8cs_source.html":[2,0,0,1801],
-"TraitWrench_8cs.html":[2,0,0,1803],
-"TraitWrench_8cs_source.html":[2,0,0,1803]
+"TraitWrench_8cs.html":[2,0,0,1803]
 };

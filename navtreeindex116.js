@@ -1,5 +1,11 @@
 var NAVTREEINDEX116 =
 {
+"classTraitDaggerGrave.html#a4fe260b1a1e644df232832be5bae583d":[1,0,1498,3],
+"classTraitDaggerGrave.html#a9f325398c45e2274af5e891c6b8a037e":[1,0,1498,5],
+"classTraitDaggerGrave.html#acacb5e09722aaf2d6cc6497bb7275b58":[1,0,1498,4],
+"classTraitDaggerGrave.html#acf147a5264c45378dd110273219aa277":[1,0,1498,0],
+"classTraitDaggerGrave.html#af35f76abd92bc5cf9735d463db3b8cc4":[1,0,1498,2],
+"classTraitDeed.html":[1,0,1499],
 "classTraitDeed.html#a89dff9f45bf4831d416c7fd49b995ff3":[1,0,1499,0],
 "classTraitDeed.html#aa67b89d49deb49ab6a97d33226616440":[1,0,1499,1],
 "classTraitDeed.html#ad3a5f615aa20d8cdd0052fe2e38b672b":[1,0,1499,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitFarmChest.html":[1,0,1547],
 "classTraitFarmChest.html#a24ba7195fdbb804198d179484cbcc0ad":[1,0,1547,1],
 "classTraitFarmChest.html#a2e5532fbdab692f8145e0aa82a785367":[1,0,1547,3],
-"classTraitFarmChest.html#a4ca85bab37d8bcb65709d7b9365e65d1":[1,0,1547,2],
-"classTraitFarmChest.html#a76b65125860a4a94d4d0c6f5c1f59033":[1,0,1547,0],
-"classTraitFarris.html":[1,0,1548],
-"classTraitFarris.html#a4ae71d9cd578871552e27b4c0c27cd35":[1,0,1548,0],
-"classTraitFarris.html#a65a9c51ba2526509996c561d53274f26":[1,0,1548,1],
-"classTraitFelmera.html":[1,0,1549],
-"classTraitFelmera.html#a020a3c6560254c0562e09d0b99f00f9f":[1,0,1549,1]
+"classTraitFarmChest.html#a4ca85bab37d8bcb65709d7b9365e65d1":[1,0,1547,2]
 };

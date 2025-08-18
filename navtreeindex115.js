@@ -1,5 +1,11 @@
 var NAVTREEINDEX115 =
 {
+"classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1452,3],
+"classTraitCanvas.html#aaf23f8a6dc8c67306f1169aeb6b77a07":[1,0,1452,4],
+"classTraitCanvas.html#ae3ad3d5f043445ec51aa8c8ecabfe6d9":[1,0,1452,0],
+"classTraitCanvas.html#afa90520697e05c702fcd08d382abba35":[1,0,1452,5],
+"classTraitCard.html":[1,0,1453],
+"classTraitCard.html#a385d69ae4a39fed551482ff9a659dc85":[1,0,1453,1],
 "classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370":[1,0,1453,0],
 "classTraitCasinoGuard.html":[1,0,1454],
 "classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1454,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitCurtain.html#a6d171ff8fd09f46803032f43954dd416":[1,0,1497,2],
 "classTraitCurtain.html#af815915a391a32fe3f4c9f5579397147":[1,0,1497,0],
 "classTraitDaggerGrave.html":[1,0,1498],
-"classTraitDaggerGrave.html#a3d61deede7bf6c9338c372164507bd6f":[1,0,1498,1],
-"classTraitDaggerGrave.html#a4fe260b1a1e644df232832be5bae583d":[1,0,1498,3],
-"classTraitDaggerGrave.html#a9f325398c45e2274af5e891c6b8a037e":[1,0,1498,5],
-"classTraitDaggerGrave.html#acacb5e09722aaf2d6cc6497bb7275b58":[1,0,1498,4],
-"classTraitDaggerGrave.html#acf147a5264c45378dd110273219aa277":[1,0,1498,0],
-"classTraitDaggerGrave.html#af35f76abd92bc5cf9735d463db3b8cc4":[1,0,1498,2],
-"classTraitDeed.html":[1,0,1499]
+"classTraitDaggerGrave.html#a3d61deede7bf6c9338c372164507bd6f":[1,0,1498,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"WidgetHP_8cs_source.html":[2,0,0,1861],
 "WidgetHotbar_8cs.html":[2,0,0,1860],
 "WidgetHotbar_8cs_source.html":[2,0,0,1860],
 "WidgetInspector_8cs.html":[2,0,0,1862],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "Zone__OldGuild_8cs_source.html":[2,0,0,1941],
 "Zone__Olvina_8cs.html":[2,0,0,1942],
 "Zone__Olvina_8cs_source.html":[2,0,0,1942],
-"Zone__Palmia_8cs.html":[2,0,0,1943],
-"Zone__Palmia_8cs_source.html":[2,0,0,1943]
+"Zone__Palmia_8cs.html":[2,0,0,1943]
 };

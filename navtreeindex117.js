@@ -1,5 +1,11 @@
 var NAVTREEINDEX117 =
 {
+"classTraitFarmChest.html#a76b65125860a4a94d4d0c6f5c1f59033":[1,0,1547,0],
+"classTraitFarris.html":[1,0,1548],
+"classTraitFarris.html#a4ae71d9cd578871552e27b4c0c27cd35":[1,0,1548,0],
+"classTraitFarris.html#a65a9c51ba2526509996c561d53274f26":[1,0,1548,1],
+"classTraitFelmera.html":[1,0,1549],
+"classTraitFelmera.html#a020a3c6560254c0562e09d0b99f00f9f":[1,0,1549,1],
 "classTraitFelmera.html#aa46eda79ce9179760200552dc10e728b":[1,0,1549,0],
 "classTraitFertilizer.html":[1,0,1550],
 "classTraitFertilizer.html#a037066089e1cba97f394478c7af65a98":[1,0,1550,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1616,4],
 "classTraitHouseBoard.html#abc6193c35657b2ce40250ab0b4bb39fd":[1,0,1616,5],
 "classTraitHouseBoard.html#ace0ed1602bd17d6e2ca7dc8282436931":[1,0,1616,8],
-"classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1616,10],
-"classTraitHouseBoard_1_1Data.html":[1,0,1616,0],
-"classTraitHouseBoard_1_1Data.html#a0d184a64fffe2dce1b803b12f741c0c7":[1,0,1616,0,16],
-"classTraitHouseBoard_1_1Data.html#a304cc8ac79c1eacc9b120e7fb18faf23":[1,0,1616,0,7],
-"classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c":[1,0,1616,0,1],
-"classTraitHouseBoard_1_1Data.html#a5185cb25b09ff747071433ed6ecb2694":[1,0,1616,0,6],
-"classTraitHouseBoard_1_1Data.html#a59b37da647fd73e78797c7ff2ac1bbfb":[1,0,1616,0,8]
+"classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1616,10]
 };

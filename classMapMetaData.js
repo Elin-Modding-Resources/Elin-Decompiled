@@ -8,5 +8,6 @@ var classMapMetaData =
     [ "path", "classMapMetaData.html#a487062e25a4fe17177a6d9bb32a57bcf", null ],
     [ "tag", "classMapMetaData.html#af608e07331865b7eb4c470d33c6a6caf", null ],
     [ "type", "classMapMetaData.html#a977aa366736b31bccfb94a669c6b124f", null ],
+    [ "underwater", "classMapMetaData.html#a8c0b488393388c5f55335ffcb68ae703", null ],
     [ "version", "classMapMetaData.html#a090c3a7c0e741813ffaa129cd0051411", null ]
 ];

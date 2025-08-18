@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.182 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.183 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -1520,7 +1520,7 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  161</span>            <span class="keywordtype">int</span> num3 = Mathf.Clamp(<a class="code hl_variable" href="classAttackProcess.html#ae4237f7c7a259cea96ee9b17eb8914cd">weapon</a>.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>.hardness, flag ? 40 : 20, 200);</div>
 <div class="line"><span class="lineno">  162</span>            <a class="code hl_variable" href="classAttackProcess.html#ac1430965d17e21ad82ebf5b91eacc19d">weaponSkill</a> = <a class="code hl_variable" href="classAttackProcess.html#a48567651d83836e9e9b3b1ace7277839">CC</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#ad913c083fdb7f408381e27eb59835267">GetOrCreateElement</a>(108);</div>
 <div class="line"><span class="lineno">  163</span>            <a class="code hl_variable" href="classAttackProcess.html#a0d685161743f4f8d1e3604b61f1c740f">attackType</a> = <a class="code hl_enumeration" href="AttackType_8cs.html#a904b2f9c8f3951116c343784c59d6afe">AttackType</a>.Blunt;</div>
-<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="classAttackProcess.html#a1759d988ea8bc6f12c82a6da7b420008">dBonus</a> = CC.DMG + (CC.IsPCParty ? 3 : 7);</div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="classAttackProcess.html#a1759d988ea8bc6f12c82a6da7b420008">dBonus</a> = CC.DMG + (CC.IsPCParty ? 3 : 7) + Math.Min(<a class="code hl_variable" href="classAttackProcess.html#ae4237f7c7a259cea96ee9b17eb8914cd">weapon</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a>, 99);</div>
 <div class="line"><span class="lineno">  165</span>            <a class="code hl_variable" href="classAttackProcess.html#a336fc2ef1e6a81f891b4f4e667e14199">dNum</a> = 2;</div>
 <div class="line"><span class="lineno">  166</span>            <a class="code hl_variable" href="classAttackProcess.html#a1f150042446dca71a20cee9e76f672f1">dDim</a> = (((!<a class="code hl_variable" href="classAttackProcess.html#a48567651d83836e9e9b3b1ace7277839">CC</a>.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a>) ? <a class="code hl_variable" href="classAttackProcess.html#a48567651d83836e9e9b3b1ace7277839">CC</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> : 0) + CC.STR + <a class="code hl_variable" href="classAttackProcess.html#a48567651d83836e9e9b3b1ace7277839">CC</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(108)) * num2 / 100 * num3 / 100 / 2;</div>
 <div class="line"><span class="lineno">  167</span>            <a class="code hl_variable" href="classAttackProcess.html#a515716791a8a859e063ad06363fb57d9">dMulti</a> = 1f;</div>
