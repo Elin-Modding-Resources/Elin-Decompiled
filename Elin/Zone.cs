@@ -2649,10 +2649,29 @@ public class Zone : Spatial, ICardParent, IInspect
 		for (int i = 0; i < tries; i++)
 		{
 			point = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
-			if (point.IsValid && !point.cell.hasDoor && !point.IsSync && (type != SpawnPosition.Outside || (!point.cell.HasRoof && point.cell.light <= 0)))
+			if (!point.IsValid || point.cell.hasDoor || point.IsSync)
 			{
-				return point;
+				continue;
 			}
+			switch (type)
+			{
+			case SpawnPosition.Guest:
+			{
+				Room room = point.cell.room;
+				if (room != null && room.data.accessType != 0)
+				{
+					continue;
+				}
+				break;
+			}
+			case SpawnPosition.Outside:
+				if (point.cell.HasRoof || point.cell.light > 0)
+				{
+					continue;
+				}
+				break;
+			}
+			return point;
 		}
 		return null;
 	}

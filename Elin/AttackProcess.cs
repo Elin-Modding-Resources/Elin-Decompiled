@@ -161,7 +161,7 @@ public class AttackProcess : EClass
 			int num3 = Mathf.Clamp(weapon.material.hardness, flag ? 40 : 20, 200);
 			weaponSkill = CC.elements.GetOrCreateElement(108);
 			attackType = AttackType.Blunt;
-			dBonus = CC.DMG + (CC.IsPCParty ? 3 : 7);
+			dBonus = CC.DMG + (CC.IsPCParty ? 3 : 7) + Math.Min(weapon.encLV, 99);
 			dNum = 2;
 			dDim = (((!CC.IsPCParty) ? CC.LV : 0) + CC.STR + CC.Evalue(108)) * num2 / 100 * num3 / 100 / 2;
 			dMulti = 1f;

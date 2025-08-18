@@ -724,7 +724,8 @@ public class Map : MapBounds, IPathfindGrid
 			name = EClass._zone.Name,
 			version = BaseCore.Instance.version.GetInt(),
 			tag = (EClass._map.exportSetting?.tag ?? ""),
-			partial = partial
+			partial = partial,
+			underwater = EClass._zone.IsUnderwater
 		};
 		custom.id = (mapMetaData.id = id);
 		IO.SaveFile(_path + "meta", mapMetaData);

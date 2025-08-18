@@ -21,6 +21,9 @@ public class MapMetaData : EClass
 	[JsonProperty]
 	public PartialMap partial;
 
+	[JsonProperty]
+	public bool underwater;
+
 	public string path;
 
 	public DateTime date;

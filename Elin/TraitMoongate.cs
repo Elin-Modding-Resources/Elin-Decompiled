@@ -141,6 +141,10 @@ public class TraitMoongate : Trait
 			zone_User.idUser = m.id;
 			zone_User.dateExpire = EClass.world.date.GetRaw(1);
 			zone_User.name = m.name;
+			if (m.underwater)
+			{
+				zone_User.elements.SetBase(3606, 1);
+			}
 		}
 		Debug.Log(zone_User);
 		MoveZone(zone_User);

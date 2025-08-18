@@ -1110,7 +1110,7 @@ public class Cell : WeightCell, IFloodCell
 
 	public bool CanSuffocate()
 	{
-		if (EClass._zone.IsUnderwater)
+		if (EClass._zone.IsUnderwater && !EClass._zone.IsUserZone)
 		{
 			return true;
 		}

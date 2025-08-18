@@ -1,5 +1,6 @@
 public enum SpawnPosition
 {
 	Random,
-	Outside
+	Outside,
+	Guest
 }

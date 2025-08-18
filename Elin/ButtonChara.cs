@@ -47,7 +47,7 @@ public class ButtonChara : UIButton
 			textAlias.text = c.Aka;
 			if ((bool)textBio)
 			{
-				textBio.text = c.race.GetText().ToTitleCase(wholeText: true) + " " + Lang.Parse("age", c.bio.TextAge(c)) + " " + Lang._gender(c.bio.gender);
+				textBio.text = c.race.GetText().ToTitleCase(wholeText: true) + " " + c.bio.TextAge(c) + " " + Lang._gender(c.bio.gender);
 			}
 		}
 		textName.text = c.Name;

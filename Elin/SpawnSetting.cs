@@ -107,7 +107,7 @@ public class SpawnSetting
 			filterLv = lv,
 			hostility = SpawnHostility.Neutral,
 			idSpawnList = "c_guest",
-			position = SpawnPosition.Outside,
+			position = SpawnPosition.Guest,
 			rarity = Rarity.Normal
 		};
 	}

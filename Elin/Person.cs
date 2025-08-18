@@ -118,7 +118,7 @@ public class Person : EClass
 			{
 				text = text + " " + dramaText;
 			}
-			return chara.Name.ToTitleCase() + " - " + chara.race.GetText().ToTitleCase() + " " + Lang.Parse("age", bio.TextAge(chara)) + " " + Lang._gender(bio.gender) + text;
+			return chara.Name.ToTitleCase() + " - " + chara.race.GetText().ToTitleCase() + " " + bio.TextAge(chara) + " " + Lang._gender(bio.gender) + text;
 		}
 		if (Name.IsEmpty())
 		{
