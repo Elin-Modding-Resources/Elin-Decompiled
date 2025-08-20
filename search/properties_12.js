@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['race_0',['Race',['../classQuestTaskHunt.html#a8cc6a02eab3d8a3e1de5878767e581a0',1,'QuestTaskHunt']]],
-  ['race_1',['race',['../classChara.html#aff51c1a00af6403830b9d32980033a66',1,'Chara']]],
+  ['race_0',['race',['../classChara.html#aff51c1a00af6403830b9d32980033a66',1,'Chara']]],
+  ['race_1',['Race',['../classQuestTaskHunt.html#a8cc6a02eab3d8a3e1de5878767e581a0',1,'QuestTaskHunt']]],
   ['race_5frow_2',['race_row',['../classSourceChara_1_1Row.html#a608904857a5ba665d54ae72d13d2795b',1,'SourceChara::Row']]],
   ['radius_3',['radius',['../classTraitSpotStock.html#af8870bb4fbba3c2111b67956e3d9d5ad',1,'TraitSpotStock.radius()'],['../classTraitSpotStockpile.html#a24f33d2e704f24f7ca5675808ee6ecb2',1,'TraitSpotStockpile.radius()'],['../classTraitSpotSpawn.html#aa8fead14158139521f68cda9f4b16f0a',1,'TraitSpotSpawn.radius()'],['../classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921',1,'TraitSpotSearch.radius()'],['../classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f',1,'TraitSpotGuidePC.radius()'],['../classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904',1,'TraitSpotGarbage.radius()'],['../classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21',1,'TraitSpotFuel.radius()'],['../classTraitSpotExit.html#a72b988c1d472fae5444c2920a3ca06b5',1,'TraitSpotExit.radius()'],['../classTraitSpot.html#a54744d73b57e0c1880e07fac54454e50',1,'TraitSpot.radius()'],['../classTraitPillowStrange.html#a9ee8a4287f1a081d66bdffae02c0b8c8',1,'TraitPillowStrange.radius()'],['../classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7',1,'TraitLightSun.radius()']]],
   ['radius_4',['Radius',['../classAct.html#a11990d35974a3e8fea8e758384c4ee30',1,'Act']]],

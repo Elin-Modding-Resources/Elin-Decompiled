@@ -25,6 +25,7 @@ var classDramaOutcome =
     [ "If", "classDramaOutcome.html#a3a25bfc553772da30a604395c4f7644b", null ],
     [ "ListFelmeraBarter", "classDramaOutcome.html#af05b6cb2479f07d02fcb927ddda7449d", null ],
     [ "melilith_friend", "classDramaOutcome.html#a35c4d83f64349a274fb3d7cd305cda40", null ],
+    [ "nasu_join", "classDramaOutcome.html#a5cc9b89629b28b9e50a3e5ccae56d20d", null ],
     [ "nerun_gift", "classDramaOutcome.html#aacdea187ee6ec73495860876701471d1", null ],
     [ "nerun_gift2", "classDramaOutcome.html#a8dd6b5b828f3245135ed852137cc9e32", null ],
     [ "nerun_gift3", "classDramaOutcome.html#aad9b0a09b4839bf9cc6e0f9ee138b2b3", null ],

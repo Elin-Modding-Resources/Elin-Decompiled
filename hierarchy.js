@@ -1045,6 +1045,7 @@ var hierarchy =
           ] ],
           [ "QuestHome", "classQuestHome.html", null ],
           [ "QuestMain", "classQuestMain.html", null ],
+          [ "QuestNasu", "classQuestNasu.html", null ],
           [ "QuestProgression", "classQuestProgression.html", [
             [ "QuestCompanion", "classQuestCompanion.html", null ],
             [ "QuestCouncil", "classQuestCouncil.html", null ],
@@ -1188,6 +1189,7 @@ var hierarchy =
           ] ],
           [ "Zone_Dungeon", "classZone__Dungeon.html", [
             [ "Zone_CursedManorDungeon", "classZone__CursedManorDungeon.html", null ],
+            [ "Zone_DungeonFairy", "classZone__DungeonFairy.html", null ],
             [ "Zone_DungeonUnfixed", "classZone__DungeonUnfixed.html", [
               [ "Zone_DungeonPuppy", "classZone__DungeonPuppy.html", null ],
               [ "Zone_DungeonYeek", "classZone__DungeonYeek.html", null ]
@@ -1646,17 +1648,18 @@ var hierarchy =
           [ "TraitFoodMeat", "classTraitFoodMeat.html", null ],
           [ "TraitFoodNut", "classTraitFoodNut.html", null ],
           [ "TraitFoodPrepared", "classTraitFoodPrepared.html", [
-            [ "TraitFoodMeal", "classTraitFoodMeal.html", null ]
+            [ "TraitFoodMeal", "classTraitFoodMeal.html", [
+              [ "TraitMixedFood", "classTraitMixedFood.html", [
+                [ "TraitLunch", "classTraitLunch.html", [
+                  [ "TraitLunchLove", "classTraitLunchLove.html", null ]
+                ] ]
+              ] ]
+            ] ]
           ] ],
           [ "TraitFoodPreparedPackage", "classTraitFoodPreparedPackage.html", null ],
           [ "TraitFoodSeasoning", "classTraitFoodSeasoning.html", null ],
           [ "TraitFoodTravel", "classTraitFoodTravel.html", null ],
-          [ "TraitFortuneCookie", "classTraitFortuneCookie.html", null ],
-          [ "TraitMixedFood", "classTraitMixedFood.html", [
-            [ "TraitLunch", "classTraitLunch.html", [
-              [ "TraitLunchLove", "classTraitLunchLove.html", null ]
-            ] ]
-          ] ]
+          [ "TraitFortuneCookie", "classTraitFortuneCookie.html", null ]
         ] ],
         [ "TraitFortuneBall", "classTraitFortuneBall.html", null ],
         [ "TraitGacha", "classTraitGacha.html", null ],

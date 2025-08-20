@@ -1,5 +1,10 @@
 var NAVTREEINDEX69 =
 {
+"classHoard_1_1Item.html#ae34b6573748741bb84381af190ced584":[1,0,604,0,10],
+"classHobby.html":[1,0,606],
+"classHobby.html#a2edc85ad0b0315195242fdfea3a79b12":[1,0,606,5],
+"classHobby.html#a3dcaa41713653b154a3a893db7f55578":[1,0,606,1],
+"classHobby.html#a43781a1ca7ddb8705db2ac8f138c2837":[1,0,606,0],
 "classHobby.html#a84154648408afac273383efee4b7912c":[1,0,606,2],
 "classHobby.html#abac03f64d846277b26d4bb5e34c964b0":[1,0,606,4],
 "classHobby.html#ad11315063598de3a8a27936d719c5425":[1,0,606,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX69 =
 "classHotItemSpeed.html#a0f0ea5708d5036d4bfad7852692b7765":[1,0,640,0],
 "classHotItemSpeed.html#a1404a778c5ffd241596e60404b96b8cb":[1,0,640,5],
 "classHotItemSpeed.html#a156bc5e088e51f4f92a22feeff5dcae8":[1,0,640,4],
-"classHotItemSpeed.html#a23c23a1a16abcb320a62ab1d9b55691f":[1,0,640,8],
-"classHotItemSpeed.html#a3bdf2eccd8c4a3221343c81a90eff9db":[1,0,640,6],
-"classHotItemSpeed.html#a46cd600083c3c51e3cd9824db83b3432":[1,0,640,2],
-"classHotItemSpeed.html#ab00ac18276cc76fdb3a6b85c76c33f87":[1,0,640,1],
-"classHotItemSpeed.html#ad1048fee0c660cef96b9c81d7d119564":[1,0,640,3],
-"classHotItemThing.html":[1,0,641]
+"classHotItemSpeed.html#a23c23a1a16abcb320a62ab1d9b55691f":[1,0,640,8]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX64 =
 {
+"classFortuneRollData.html#a22ecdc0077174b49bead2ef0adf932c3":[1,0,511,5],
+"classFortuneRollData.html#a31e7ee6c8e1483e3993279eeade452c9":[1,0,511,11],
+"classFortuneRollData.html#a3f8f700a48b814f5dfceaee52ef78d7e":[1,0,511,4],
+"classFortuneRollData.html#a65100d3ad31d00486ea1206ed604a86b":[1,0,511,3],
+"classFortuneRollData.html#a8fbe46f9502f995c56eccd8f1a578038":[1,0,511,10],
 "classFortuneRollData.html#a9305c3afd722ab6b4e0b8e7daf3be593":[1,0,511,7],
 "classFortuneRollData.html#a9ba225f3be9ba62058dd8199b97b2624":[1,0,511,1],
 "classFortuneRollData.html#aa8a67c206994db0250ddc0bf128c2f98":[1,0,511,9],
@@ -244,10 +249,5 @@ var NAVTREEINDEX64 =
 "classGamePrincipal_1_1Item.html#a8f1320306688003e3a26b932386a39c2":[1,0,523,0,10],
 "classGamePrincipal_1_1Item.html#acb9a1e11649a3da155a960dcf8cebb5c":[1,0,523,0,5],
 "classGamePrincipal_1_1ItemSlider.html":[1,0,523,1],
-"classGamePrincipal_1_1ItemSlider.html#a3dcb980daf4d4945c58f1949422c393d":[1,0,523,1,4],
-"classGamePrincipal_1_1ItemSlider.html#a5f86d34106189a93e4f8f375602ccf25":[1,0,523,1,1],
-"classGamePrincipal_1_1ItemSlider.html#a617e79616d93ad6b769cd1666f2563ab":[1,0,523,1,2],
-"classGamePrincipal_1_1ItemSlider.html#aab5adb8c113fb162ed911c92c4d7cc07":[1,0,523,1,0],
-"classGamePrincipal_1_1ItemSlider.html#ad79f81a77a49873d870e1cee712cdeea":[1,0,523,1,3],
-"classGamePrincipal_1_1ItemSlider.html#aee071cda9121e3ee71c8091860f976dd":[1,0,523,1,5]
+"classGamePrincipal_1_1ItemSlider.html#a3dcb980daf4d4945c58f1949422c393d":[1,0,523,1,4]
 };

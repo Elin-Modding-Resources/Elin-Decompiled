@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.183 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.184 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -321,17 +321,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00086">86</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>[<a class="code hl_variable" href="classDramaSequence.html#ab94829503185d562bfccdbca66009f5e">id</a>];</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_class" href="classDramaActor.html">DramaActor</a> dramaActor = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761">manager</a>.<a class="code hl_variable" href="classDramaManager.html#aa12253f3aa4c7dcca03102bb0d4ce324">moldActor</a>, <a class="code hl_variable" href="classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761">manager</a>.<a class="code hl_variable" href="classDramaManager.html#a6b848ca60dcaabdf1dfd5b270afa3f51">actorPos</a>);</div>
-<div class="line"><span class="lineno">   93</span>        dramaActor.<a class="code hl_function" href="classDramaActor.html#a94a3bd841b31f142590d4c180f8cea38">Init</a>(<span class="keyword">this</span>, <span class="keywordtype">id</span>, person);</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.Add(<span class="keywordtype">id</span>, dramaActor);</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> dramaActor;</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00094">94</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>[<a class="code hl_variable" href="classDramaSequence.html#ab94829503185d562bfccdbca66009f5e">id</a>];</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_class" href="classDramaActor.html">DramaActor</a> dramaActor = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761">manager</a>.<a class="code hl_variable" href="classDramaManager.html#aa12253f3aa4c7dcca03102bb0d4ce324">moldActor</a>, <a class="code hl_variable" href="classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761">manager</a>.<a class="code hl_variable" href="classDramaManager.html#a6b848ca60dcaabdf1dfd5b270afa3f51">actorPos</a>);</div>
+<div class="line"><span class="lineno">  101</span>        dramaActor.<a class="code hl_function" href="classDramaActor.html#a94a3bd841b31f142590d4c180f8cea38">Init</a>(<span class="keyword">this</span>, <span class="keywordtype">id</span>, person);</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.Add(<span class="keywordtype">id</span>, dramaActor);</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">return</span> dramaActor;</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
 <div class="ttc" id="aclassDramaActor_html"><div class="ttname"><a href="classDramaActor.html">DramaActor</a></div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00005">DramaActor.cs:6</a></div></div>
 <div class="ttc" id="aclassDramaActor_html_a94a3bd841b31f142590d4c180f8cea38"><div class="ttname"><a href="classDramaActor.html#a94a3bd841b31f142590d4c180f8cea38">DramaActor.Init</a></div><div class="ttdeci">void Init(DramaSequence _sequence, string _id, Person _owner)</div><div class="ttdef"><b>Definition:</b> <a href="DramaActor_8cs_source.html#l00019">DramaActor.cs:19</a></div></div>
 <div class="ttc" id="aclassDramaManager_html_a6b848ca60dcaabdf1dfd5b270afa3f51"><div class="ttname"><a href="classDramaManager.html#a6b848ca60dcaabdf1dfd5b270afa3f51">DramaManager.actorPos</a></div><div class="ttdeci">Transform actorPos</div><div class="ttdef"><b>Definition:</b> <a href="DramaManager_8cs_source.html#l00021">DramaManager.cs:21</a></div></div>
@@ -372,23 +372,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00108">108</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (!e.<a class="code hl_variable" href="classDramaEvent.html#aca7d6b357c68f5974e92b8a02b1a934a">step</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>.Add(e.<a class="code hl_variable" href="classDramaEvent.html#aca7d6b357c68f5974e92b8a02b1a934a">step</a>, <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Count);</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        e.sequence = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Add(e);</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> e;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00116">116</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>    {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (!e.<a class="code hl_variable" href="classDramaEvent.html#aca7d6b357c68f5974e92b8a02b1a934a">step</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>.Add(e.<a class="code hl_variable" href="classDramaEvent.html#aca7d6b357c68f5974e92b8a02b1a934a">step</a>, <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Count);</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>        e.sequence = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Add(e);</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> e;</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
 <div class="ttc" id="aclassDramaEvent_html_aca7d6b357c68f5974e92b8a02b1a934a"><div class="ttname"><a href="classDramaEvent.html#aca7d6b357c68f5974e92b8a02b1a934a">DramaEvent.step</a></div><div class="ttdeci">string step</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00009">DramaEvent.cs:9</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_a3f1b215727bfe1f7580a9f5768f67e84"><div class="ttname"><a href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">DramaSequence.events</a></div><div class="ttdeci">List&lt; DramaEvent &gt; events</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00019">DramaSequence.cs:19</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_af1c885b9c694de5f216143a33fcb5d74"><div class="ttname"><a href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">DramaSequence.steps</a></div><div class="ttdeci">Dictionary&lt; string, int &gt; steps</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00015">DramaSequence.cs:15</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00019">events</a>, <a class="el" href="DramaEvent_8cs_source.html#l00009">DramaEvent.step</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00015">steps</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00984">DramaManager.AddEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00995">DramaManager.AddEvent()</a>.</p>
 
 </div>
 </div>
@@ -416,15 +416,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00098">98</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
-<div class="line"><span class="lineno">  100</span>        <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>.Add(<span class="keywordtype">id</span>, <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Count);</div>
-<div class="line"><span class="lineno">  101</span>        <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classDramaEvent.html">DramaEvent</a></div>
-<div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            sequence = <span class="keyword">this</span>,</div>
-<div class="line"><span class="lineno">  104</span>            step = <span class="keywordtype">id</span></div>
-<div class="line"><span class="lineno">  105</span>        });</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00106">106</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>.Add(<span class="keywordtype">id</span>, <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Count);</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classDramaEvent.html">DramaEvent</a></div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            sequence = <span class="keyword">this</span>,</div>
+<div class="line"><span class="lineno">  112</span>            step = <span class="keywordtype">id</span></div>
+<div class="line"><span class="lineno">  113</span>        });</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
 <div class="ttc" id="aclassDramaEvent_html"><div class="ttname"><a href="classDramaEvent.html">DramaEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00001">DramaEvent.cs:2</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00019">events</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00015">steps</a>.</p>
@@ -494,18 +494,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00172">172</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>    {</div>
-<div class="line"><span class="lineno">  174</span>        <a class="code hl_variable" href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">isExited</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  175</span>        <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  176</span>        <a class="code hl_variable" href="classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761">manager</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00180">180</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>    {</div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_variable" href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">isExited</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  183</span>        <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  184</span>        <a class="code hl_variable" href="classDramaSequence.html#ab516dac4ae56cb3c2a07ab7893a47761">manager</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
 <div class="ttc" id="aclassDramaSequence_html_a02871e29f822f4bf476f5bda64a2fbc6"><div class="ttname"><a href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">DramaSequence.isExited</a></div><div class="ttdeci">bool isExited</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00025">DramaSequence.cs:25</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_a6fe0357e79608bfc276b1437d5f7a06f"><div class="ttname"><a href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">DramaSequence.currentEvent</a></div><div class="ttdeci">DramaEvent currentEvent</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00033">DramaSequence.cs:33</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00033">currentEvent</a>, <a class="el" href="DramaSequence_8cs_source.html#l00025">isExited</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00013">manager</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00168">DramaManager.AddCustomEvents()</a>, <a class="el" href="DramaEventExit_8cs_source.html#l00003">DramaEventExit.Play()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00168">DramaManager.AddCustomEvents()</a>, <a class="el" href="DramaEventExit_8cs_source.html#l00003">DramaEventExit.Play()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>.</p>
 
 </div>
 </div>
@@ -543,22 +543,39 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   64</span>        {</div>
 <div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classDramaSequence.html#a46aed33d2c3e1831c2157312536c5358">AddActor</a>(<span class="keywordtype">id</span>, <span class="keyword">new</span> <a class="code hl_class" href="classPerson.html">Person</a>(<span class="keywordtype">id</span>));</div>
 <div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a>)</div>
 <div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classDramaSequence.html#a674a14ce0f8585d5d642d4962b9313b5">GetActor</a>(<span class="stringliteral">&quot;narrator&quot;</span>);</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.FirstItem();</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="ttc" id="aclassDramaSequence_html_a46aed33d2c3e1831c2157312536c5358"><div class="ttname"><a href="classDramaSequence.html#a46aed33d2c3e1831c2157312536c5358">DramaSequence.AddActor</a></div><div class="ttdeci">DramaActor AddActor(string id, Person person)</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00086">DramaSequence.cs:86</a></div></div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">cards</a>.<a class="code hl_variable" href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">globalCharas</a>.<a class="code hl_function" href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">Find</a>(<span class="keywordtype">id</span>) ?? <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a12e741633a9867a460ce372592e59b3a">FindChara</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classDramaSequence.html#a46aed33d2c3e1831c2157312536c5358">AddActor</a>(<span class="keywordtype">id</span>, <span class="keyword">new</span> <a class="code hl_class" href="classPerson.html">Person</a>(chara));</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classDramaSequence.html#a674a14ce0f8585d5d642d4962b9313b5">GetActor</a>(<span class="stringliteral">&quot;narrator&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classDramaSequence.html#a3be84f918c6fa2558a2032cc597d6710">actors</a>.FirstItem();</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="ttc" id="aclassCardManager_1_1GlobalCharaList_html_ab5eacf5c9f0cfe2fa9d1f9fdbf74f227"><div class="ttname"><a href="classCardManager_1_1GlobalCharaList.html#ab5eacf5c9f0cfe2fa9d1f9fdbf74f227">CardManager.GlobalCharaList.Find</a></div><div class="ttdeci">Chara Find(string id)</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00020">CardManager.cs:20</a></div></div>
+<div class="ttc" id="aclassCardManager_html_a33a9778b2b0c1018c12d90e1b572e221"><div class="ttname"><a href="classCardManager.html#a33a9778b2b0c1018c12d90e1b572e221">CardManager.globalCharas</a></div><div class="ttdeci">GlobalCharaList globalCharas</div><div class="ttdef"><b>Definition:</b> <a href="CardManager_8cs_source.html#l00046">CardManager.cs:46</a></div></div>
+<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
+<div class="ttc" id="aclassCore_html_ac31f5b0fe98a25c00ca5700c328ae460"><div class="ttname"><a href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">Core.IsGameStarted</a></div><div class="ttdeci">bool IsGameStarted</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00083">Core.cs:84</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_a46aed33d2c3e1831c2157312536c5358"><div class="ttname"><a href="classDramaSequence.html#a46aed33d2c3e1831c2157312536c5358">DramaSequence.AddActor</a></div><div class="ttdeci">DramaActor AddActor(string id, Person person)</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00094">DramaSequence.cs:94</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_a674a14ce0f8585d5d642d4962b9313b5"><div class="ttname"><a href="classDramaSequence.html#a674a14ce0f8585d5d642d4962b9313b5">DramaSequence.GetActor</a></div><div class="ttdeci">DramaActor GetActor(string id)</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00057">DramaSequence.cs:57</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00006">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassGame_html_a7f59fa26eba2fef8501d590be1e34582"><div class="ttname"><a href="classGame.html#a7f59fa26eba2fef8501d590be1e34582">Game.cards</a></div><div class="ttdeci">CardManager cards</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00155">Game.cs:155</a></div></div>
+<div class="ttc" id="aclassMap_html_a12e741633a9867a460ce372592e59b3a"><div class="ttname"><a href="classMap.html#a12e741633a9867a460ce372592e59b3a">Map.FindChara</a></div><div class="ttdeci">Chara FindChara(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l02555">Map.cs:2555</a></div></div>
 <div class="ttc" id="aclassPerson_html"><div class="ttname"><a href="classPerson.html">Person</a></div><div class="ttdef"><b>Definition:</b> <a href="Person_8cs_source.html#l00005">Person.cs:6</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a6cf700648175051766a0a9526320f771"><div class="ttname"><a href="classSourceManager.html#a6cf700648175051766a0a9526320f771">SourceManager.persons</a></div><div class="ttdeci">SourcePerson persons</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00024">SourceManager.cs:24</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00017">actors</a>, <a class="el" href="DramaSequence_8cs_source.html#l00086">AddActor()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00011">id</a>, <a class="el" href="SourceManager_8cs_source.html#l00024">SourceManager.persons</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="DramaSequence_8cs_source.html#l00017">actors</a>, <a class="el" href="DramaSequence_8cs_source.html#l00094">AddActor()</a>, <a class="el" href="Game_8cs_source.html#l00155">Game.cards</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="CardManager_8cs_source.html#l00020">CardManager.GlobalCharaList.Find()</a>, <a class="el" href="Map_8cs_source.html#l02555">Map.FindChara()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>, <a class="el" href="CardManager_8cs_source.html#l00046">CardManager.globalCharas</a>, <a class="el" href="DramaSequence_8cs_source.html#l00011">id</a>, <a class="el" href="Core_8cs_source.html#l00084">Core.IsGameStarted</a>, <a class="el" href="SourceManager_8cs_source.html#l00024">SourceManager.persons</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00979">DramaManager.AddEvent()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00990">DramaManager.AddEvent()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>.</p>
 
 </div>
 </div>
@@ -594,18 +611,18 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00074">74</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                : <a class="code hl_class" href="classDramaEvent.html">DramaEvent</a></div>
-<div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classDramaEvent.html">DramaEvent</a> @event <span class="keywordflow">in</span> <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>)</div>
-<div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (@event.<a class="code hl_variable" href="classDramaEvent.html#aca7d6b357c68f5974e92b8a02b1a934a">step</a> == idStep)</div>
-<div class="line"><span class="lineno">   79</span>            {</div>
-<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">return</span> @<span class="keyword">event</span> as T;</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00082">82</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                : <a class="code hl_class" href="classDramaEvent.html">DramaEvent</a></div>
+<div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classDramaEvent.html">DramaEvent</a> @event <span class="keywordflow">in</span> <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>)</div>
+<div class="line"><span class="lineno">   85</span>        {</div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (@event.<a class="code hl_variable" href="classDramaEvent.html#aca7d6b357c68f5974e92b8a02b1a934a">step</a> == idStep)</div>
+<div class="line"><span class="lineno">   87</span>            {</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">return</span> @<span class="keyword">event</span> as T;</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00019">events</a>, and <a class="el" href="DramaEvent_8cs_source.html#l00009">DramaEvent.step</a>.</p>
 
@@ -634,52 +651,52 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00179">179</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  180</span>    {</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>.Count &gt; 0)</div>
-<div class="line"><span class="lineno">  182</span>        {</div>
-<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>[0].<a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>() &amp;&amp; <a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>.Count &gt; 0)</div>
-<div class="line"><span class="lineno">  184</span>            {</div>
-<div class="line"><span class="lineno">  185</span>                <a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>.RemoveAt(0);</div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  189</span>        {</div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  191</span>            {</div>
-<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  193</span>            }</div>
-<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> is <a class="code hl_class" href="classDramaEventGoto.html">DramaEventGoto</a>)</div>
-<div class="line"><span class="lineno">  195</span>            {</div>
-<div class="line"><span class="lineno">  196</span>                <span class="keywordtype">string</span> text = <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a>.<a class="code hl_variable" href="classDramaEvent.html#a7216bd1c68177b121b31fb56ce7f2dce">idJump</a>;</div>
-<div class="line"><span class="lineno">  197</span>                <span class="keywordflow">if</span> (text == <span class="stringliteral">&quot;*&quot;</span>)</div>
-<div class="line"><span class="lineno">  198</span>                {</div>
-<div class="line"><span class="lineno">  199</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a333f56bc25afdf1dead8aadc50057f78">setup</a>.<a class="code hl_variable" href="classDramaSetup.html#a2eb0596b4ecd18fead26727aea0697d9">step</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">  200</span>                    {</div>
-<div class="line"><span class="lineno">  201</span>                        <a class="code hl_function" href="classDramaSequence.html#a1099bf33e79962b7261a17f094faa239">PlayNext</a>();</div>
-<div class="line"><span class="lineno">  202</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  203</span>                    }</div>
-<div class="line"><span class="lineno">  204</span>                    text = <a class="code hl_variable" href="classDramaSequence.html#a333f56bc25afdf1dead8aadc50057f78">setup</a>.<a class="code hl_variable" href="classDramaSetup.html#a2eb0596b4ecd18fead26727aea0697d9">step</a>;</div>
-<div class="line"><span class="lineno">  205</span>                }</div>
-<div class="line"><span class="lineno">  206</span>                <a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>(text);</div>
-<div class="line"><span class="lineno">  207</span>            }</div>
-<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a>.<a class="code hl_function" href="classDramaEvent.html#aaccc686b224da6e9497c9ca3caddba6d">Play</a>())</div>
-<div class="line"><span class="lineno">  209</span>            {</div>
-<div class="line"><span class="lineno">  210</span>                <a class="code hl_function" href="classDramaSequence.html#a1099bf33e79962b7261a17f094faa239">PlayNext</a>();</div>
-<div class="line"><span class="lineno">  211</span>            }</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00187">187</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>    {</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  190</span>        {</div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>[0].<a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>() &amp;&amp; <a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  192</span>            {</div>
+<div class="line"><span class="lineno">  193</span>                <a class="code hl_variable" href="classDramaSequence.html#aeae823d7c05996e1b2359904e6be56a8">tempEvents</a>.RemoveAt(0);</div>
+<div class="line"><span class="lineno">  194</span>            }</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  197</span>        {</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  199</span>            {</div>
+<div class="line"><span class="lineno">  200</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  201</span>            }</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> is <a class="code hl_class" href="classDramaEventGoto.html">DramaEventGoto</a>)</div>
+<div class="line"><span class="lineno">  203</span>            {</div>
+<div class="line"><span class="lineno">  204</span>                <span class="keywordtype">string</span> text = <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a>.<a class="code hl_variable" href="classDramaEvent.html#a7216bd1c68177b121b31fb56ce7f2dce">idJump</a>;</div>
+<div class="line"><span class="lineno">  205</span>                <span class="keywordflow">if</span> (text == <span class="stringliteral">&quot;*&quot;</span>)</div>
+<div class="line"><span class="lineno">  206</span>                {</div>
+<div class="line"><span class="lineno">  207</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a333f56bc25afdf1dead8aadc50057f78">setup</a>.<a class="code hl_variable" href="classDramaSetup.html#a2eb0596b4ecd18fead26727aea0697d9">step</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  208</span>                    {</div>
+<div class="line"><span class="lineno">  209</span>                        <a class="code hl_function" href="classDramaSequence.html#a1099bf33e79962b7261a17f094faa239">PlayNext</a>();</div>
+<div class="line"><span class="lineno">  210</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  211</span>                    }</div>
+<div class="line"><span class="lineno">  212</span>                    text = <a class="code hl_variable" href="classDramaSequence.html#a333f56bc25afdf1dead8aadc50057f78">setup</a>.<a class="code hl_variable" href="classDramaSetup.html#a2eb0596b4ecd18fead26727aea0697d9">step</a>;</div>
+<div class="line"><span class="lineno">  213</span>                }</div>
+<div class="line"><span class="lineno">  214</span>                <a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>(text);</div>
+<div class="line"><span class="lineno">  215</span>            }</div>
+<div class="line"><span class="lineno">  216</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a>.<a class="code hl_function" href="classDramaEvent.html#aaccc686b224da6e9497c9ca3caddba6d">Play</a>())</div>
+<div class="line"><span class="lineno">  217</span>            {</div>
+<div class="line"><span class="lineno">  218</span>                <a class="code hl_function" href="classDramaSequence.html#a1099bf33e79962b7261a17f094faa239">PlayNext</a>();</div>
+<div class="line"><span class="lineno">  219</span>            }</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
 <div class="ttc" id="aclassDramaEventGoto_html"><div class="ttname"><a href="classDramaEventGoto.html">DramaEventGoto</a></div><div class="ttdef"><b>Definition:</b> <a href="DramaEventGoto_8cs_source.html#l00001">DramaEventGoto.cs:2</a></div></div>
 <div class="ttc" id="aclassDramaEvent_html_a7216bd1c68177b121b31fb56ce7f2dce"><div class="ttname"><a href="classDramaEvent.html#a7216bd1c68177b121b31fb56ce7f2dce">DramaEvent.idJump</a></div><div class="ttdeci">string idJump</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00005">DramaEvent.cs:5</a></div></div>
 <div class="ttc" id="aclassDramaEvent_html_aaccc686b224da6e9497c9ca3caddba6d"><div class="ttname"><a href="classDramaEvent.html#aaccc686b224da6e9497c9ca3caddba6d">DramaEvent.Play</a></div><div class="ttdeci">virtual bool Play()</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00023">DramaEvent.cs:23</a></div></div>
-<div class="ttc" id="aclassDramaSequence_html_a1099bf33e79962b7261a17f094faa239"><div class="ttname"><a href="classDramaSequence.html#a1099bf33e79962b7261a17f094faa239">DramaSequence.PlayNext</a></div><div class="ttdeci">void PlayNext()</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00119">DramaSequence.cs:119</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_a1099bf33e79962b7261a17f094faa239"><div class="ttname"><a href="classDramaSequence.html#a1099bf33e79962b7261a17f094faa239">DramaSequence.PlayNext</a></div><div class="ttdeci">void PlayNext()</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00127">DramaSequence.cs:127</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_a333f56bc25afdf1dead8aadc50057f78"><div class="ttname"><a href="classDramaSequence.html#a333f56bc25afdf1dead8aadc50057f78">DramaSequence.setup</a></div><div class="ttdeci">DramaSetup setup</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00043">DramaSequence.cs:43</a></div></div>
-<div class="ttc" id="aclassDramaSequence_html_a8e91a52830eabf326efed83eda5790f0"><div class="ttname"><a href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">DramaSequence.Play</a></div><div class="ttdeci">void Play(string id)</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00124">DramaSequence.cs:124</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_a8e91a52830eabf326efed83eda5790f0"><div class="ttname"><a href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">DramaSequence.Play</a></div><div class="ttdeci">void Play(string id)</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00132">DramaSequence.cs:132</a></div></div>
 <div class="ttc" id="aclassDramaSetup_html_a2eb0596b4ecd18fead26727aea0697d9"><div class="ttname"><a href="classDramaSetup.html#a2eb0596b4ecd18fead26727aea0697d9">DramaSetup.step</a></div><div class="ttdeci">string step</div><div class="ttdef"><b>Definition:</b> <a href="DramaSetup_8cs_source.html#l00007">DramaSetup.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00033">currentEvent</a>, <a class="el" href="DramaEvent_8cs_source.html#l00005">DramaEvent.idJump</a>, <a class="el" href="DramaEvent_8cs_source.html#l00023">DramaEvent.Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00124">Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00119">PlayNext()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00043">setup</a>, <a class="el" href="DramaSetup_8cs_source.html#l00007">DramaSetup.step</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00031">tempEvents</a>.</p>
+<p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00033">currentEvent</a>, <a class="el" href="DramaEvent_8cs_source.html#l00005">DramaEvent.idJump</a>, <a class="el" href="DramaEvent_8cs_source.html#l00023">DramaEvent.Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00132">Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00127">PlayNext()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00043">setup</a>, <a class="el" href="DramaSetup_8cs_source.html#l00007">DramaSetup.step</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00031">tempEvents</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>, and <a class="el" href="DramaManager_8cs_source.html#l00079">DramaManager.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>, and <a class="el" href="DramaManager_8cs_source.html#l00079">DramaManager.Update()</a>.</p>
 
 </div>
 </div>
@@ -707,49 +724,49 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00137">137</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">isExited</a>)</div>
-<div class="line"><span class="lineno">  140</span>        {</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (eventID &gt;= <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Count)</div>
-<div class="line"><span class="lineno">  144</span>        {</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classDramaSequence.html#a86ea69bffdc2a8d35e3157b8171dd21a">isLoop</a>)</div>
-<div class="line"><span class="lineno">  146</span>            {</div>
-<div class="line"><span class="lineno">  147</span>                <a class="code hl_function" href="classDramaSequence.html#a25cf68e38527bcd2da57bc0e4707b03f">Exit</a>();</div>
-<div class="line"><span class="lineno">  148</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  149</span>            }</div>
-<div class="line"><span class="lineno">  150</span>            eventID = 0;</div>
-<div class="line"><span class="lineno">  151</span>        }</div>
-<div class="line"><span class="lineno">  152</span>        <a class="code hl_variable" href="classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b">currentEventID</a> = eventID;</div>
-<div class="line"><span class="lineno">  153</span>        <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> = <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>[eventID];</div>
-<div class="line"><span class="lineno">  154</span>        <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a>.<a class="code hl_function" href="classDramaEvent.html#aab197703b48752f1d0933a7e34705980">Reset</a>();</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordtype">string</span> text = eventID + <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, int&gt; step <span class="keywordflow">in</span> <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>)</div>
-<div class="line"><span class="lineno">  157</span>        {</div>
-<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">if</span> (step.Value == eventID)</div>
-<div class="line"><span class="lineno">  159</span>            {</div>
-<div class="line"><span class="lineno">  160</span>                text += step.Key;</div>
-<div class="line"><span class="lineno">  161</span>            }</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (step.Value == eventID &amp;&amp; !step.Key.StartsWith(<span class="stringliteral">&quot;flag&quot;</span>))</div>
-<div class="line"><span class="lineno">  163</span>            {</div>
-<div class="line"><span class="lineno">  164</span>                <a class="code hl_variable" href="classDramaSequence.html#a46ae58f89096f3b5d8f69e013fdee755">lastlastStep</a> = <a class="code hl_variable" href="classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049">lastStep</a>;</div>
-<div class="line"><span class="lineno">  165</span>                <a class="code hl_variable" href="classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049">lastStep</a> = step.Key;</div>
-<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  167</span>            }</div>
-<div class="line"><span class="lineno">  168</span>        }</div>
-<div class="line"><span class="lineno">  169</span>        <a class="code hl_function" href="classDramaSequence.html#a206c2fa84d81f5b93a4b32af15ed56e2">OnUpdate</a>();</div>
-<div class="line"><span class="lineno">  170</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00145">145</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaSequence.html#a02871e29f822f4bf476f5bda64a2fbc6">isExited</a>)</div>
+<div class="line"><span class="lineno">  148</span>        {</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  150</span>        }</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (eventID &gt;= <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>.Count)</div>
+<div class="line"><span class="lineno">  152</span>        {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classDramaSequence.html#a86ea69bffdc2a8d35e3157b8171dd21a">isLoop</a>)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                <a class="code hl_function" href="classDramaSequence.html#a25cf68e38527bcd2da57bc0e4707b03f">Exit</a>();</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>            eventID = 0;</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b">currentEventID</a> = eventID;</div>
+<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a> = <a class="code hl_variable" href="classDramaSequence.html#a3f1b215727bfe1f7580a9f5768f67e84">events</a>[eventID];</div>
+<div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="classDramaSequence.html#a6fe0357e79608bfc276b1437d5f7a06f">currentEvent</a>.<a class="code hl_function" href="classDramaEvent.html#aab197703b48752f1d0933a7e34705980">Reset</a>();</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordtype">string</span> text = eventID + <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, int&gt; step <span class="keywordflow">in</span> <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>)</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">if</span> (step.Value == eventID)</div>
+<div class="line"><span class="lineno">  167</span>            {</div>
+<div class="line"><span class="lineno">  168</span>                text += step.Key;</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (step.Value == eventID &amp;&amp; !step.Key.StartsWith(<span class="stringliteral">&quot;flag&quot;</span>))</div>
+<div class="line"><span class="lineno">  171</span>            {</div>
+<div class="line"><span class="lineno">  172</span>                <a class="code hl_variable" href="classDramaSequence.html#a46ae58f89096f3b5d8f69e013fdee755">lastlastStep</a> = <a class="code hl_variable" href="classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049">lastStep</a>;</div>
+<div class="line"><span class="lineno">  173</span>                <a class="code hl_variable" href="classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049">lastStep</a> = step.Key;</div>
+<div class="line"><span class="lineno">  174</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  175</span>            }</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>        <a class="code hl_function" href="classDramaSequence.html#a206c2fa84d81f5b93a4b32af15ed56e2">OnUpdate</a>();</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
 <div class="ttc" id="aclassDramaEvent_html_aab197703b48752f1d0933a7e34705980"><div class="ttname"><a href="classDramaEvent.html#aab197703b48752f1d0933a7e34705980">DramaEvent.Reset</a></div><div class="ttdeci">virtual void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00028">DramaEvent.cs:28</a></div></div>
-<div class="ttc" id="aclassDramaSequence_html_a206c2fa84d81f5b93a4b32af15ed56e2"><div class="ttname"><a href="classDramaSequence.html#a206c2fa84d81f5b93a4b32af15ed56e2">DramaSequence.OnUpdate</a></div><div class="ttdeci">void OnUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00179">DramaSequence.cs:179</a></div></div>
-<div class="ttc" id="aclassDramaSequence_html_a25cf68e38527bcd2da57bc0e4707b03f"><div class="ttname"><a href="classDramaSequence.html#a25cf68e38527bcd2da57bc0e4707b03f">DramaSequence.Exit</a></div><div class="ttdeci">void Exit()</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00172">DramaSequence.cs:172</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_a206c2fa84d81f5b93a4b32af15ed56e2"><div class="ttname"><a href="classDramaSequence.html#a206c2fa84d81f5b93a4b32af15ed56e2">DramaSequence.OnUpdate</a></div><div class="ttdeci">void OnUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00187">DramaSequence.cs:187</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_a25cf68e38527bcd2da57bc0e4707b03f"><div class="ttname"><a href="classDramaSequence.html#a25cf68e38527bcd2da57bc0e4707b03f">DramaSequence.Exit</a></div><div class="ttdeci">void Exit()</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00180">DramaSequence.cs:180</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_a46ae58f89096f3b5d8f69e013fdee755"><div class="ttname"><a href="classDramaSequence.html#a46ae58f89096f3b5d8f69e013fdee755">DramaSequence.lastlastStep</a></div><div class="ttdeci">string lastlastStep</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00041">DramaSequence.cs:41</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_a86ea69bffdc2a8d35e3157b8171dd21a"><div class="ttname"><a href="classDramaSequence.html#a86ea69bffdc2a8d35e3157b8171dd21a">DramaSequence.isLoop</a></div><div class="ttdeci">bool isLoop</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00021">DramaSequence.cs:21</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_a9cd7875e7adee721e086e9614b33e87b"><div class="ttname"><a href="classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b">DramaSequence.currentEventID</a></div><div class="ttdeci">int currentEventID</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00045">DramaSequence.cs:45</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_aa6690f8ff01ae3525767ca7c45ded049"><div class="ttname"><a href="classDramaSequence.html#aa6690f8ff01ae3525767ca7c45ded049">DramaSequence.lastStep</a></div><div class="ttdeci">string lastStep</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00039">DramaSequence.cs:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00033">currentEvent</a>, <a class="el" href="DramaSequence_8cs_source.html#l00045">currentEventID</a>, <a class="el" href="DramaSequence_8cs_source.html#l00019">events</a>, <a class="el" href="DramaSequence_8cs_source.html#l00172">Exit()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00025">isExited</a>, <a class="el" href="DramaSequence_8cs_source.html#l00021">isLoop</a>, <a class="el" href="DramaSequence_8cs_source.html#l00041">lastlastStep</a>, <a class="el" href="DramaSequence_8cs_source.html#l00039">lastStep</a>, <a class="el" href="DramaSequence_8cs_source.html#l00179">OnUpdate()</a>, <a class="el" href="DramaEvent_8cs_source.html#l00028">DramaEvent.Reset()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00015">steps</a>.</p>
+<p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00033">currentEvent</a>, <a class="el" href="DramaSequence_8cs_source.html#l00045">currentEventID</a>, <a class="el" href="DramaSequence_8cs_source.html#l00019">events</a>, <a class="el" href="DramaSequence_8cs_source.html#l00180">Exit()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00025">isExited</a>, <a class="el" href="DramaSequence_8cs_source.html#l00021">isLoop</a>, <a class="el" href="DramaSequence_8cs_source.html#l00041">lastlastStep</a>, <a class="el" href="DramaSequence_8cs_source.html#l00039">lastStep</a>, <a class="el" href="DramaSequence_8cs_source.html#l00187">OnUpdate()</a>, <a class="el" href="DramaEvent_8cs_source.html#l00028">DramaEvent.Reset()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00015">steps</a>.</p>
 
 </div>
 </div>
@@ -777,23 +794,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00124">124</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>    {</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;last&quot;</span>)</div>
-<div class="line"><span class="lineno">  127</span>        {</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">id</span> = <a class="code hl_variable" href="classDramaSequence.html#a46ae58f89096f3b5d8f69e013fdee755">lastlastStep</a>;</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">id</span>.IsEmpty() &amp;&amp; !<a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
-<div class="line"><span class="lineno">  131</span>        {</div>
-<div class="line"><span class="lineno">  132</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  133</span>        }</div>
-<div class="line"><span class="lineno">  134</span>        <a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>((!<span class="keywordtype">string</span>.IsNullOrEmpty(<span class="keywordtype">id</span>)) ? <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>[<span class="keywordtype">id</span>] : 0);</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00132">132</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>    {</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;last&quot;</span>)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordtype">id</span> = <a class="code hl_variable" href="classDramaSequence.html#a46ae58f89096f3b5d8f69e013fdee755">lastlastStep</a>;</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">id</span>.IsEmpty() &amp;&amp; !<a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  141</span>        }</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>((!<span class="keywordtype">string</span>.IsNullOrEmpty(<span class="keywordtype">id</span>)) ? <a class="code hl_variable" href="classDramaSequence.html#af1c885b9c694de5f216143a33fcb5d74">steps</a>[<span class="keywordtype">id</span>] : 0);</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="DramaSequence_8cs_source.html#l00041">lastlastStep</a>, <a class="el" href="DramaSequence_8cs_source.html#l00124">Play()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00015">steps</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="DramaSequence_8cs_source.html#l00041">lastlastStep</a>, <a class="el" href="DramaSequence_8cs_source.html#l00132">Play()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00015">steps</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00179">OnUpdate()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00023">DramaEventMethod.Play()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, <a class="el" href="DramaManager_8cs_source.html#l00087">DramaManager.Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00124">Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00119">PlayNext()</a>, and <a class="el" href="DramaCustomSequence_8cs_source.html#l01635">DramaCustomSequence.TempGoto()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00187">OnUpdate()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00023">DramaEventMethod.Play()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, <a class="el" href="DramaManager_8cs_source.html#l00087">DramaManager.Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00132">Play()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00127">PlayNext()</a>, and <a class="el" href="DramaCustomSequence_8cs_source.html#l01635">DramaCustomSequence.TempGoto()</a>.</p>
 
 </div>
 </div>
@@ -820,14 +837,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00119">119</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
-<div class="line"><span class="lineno">  121</span>        <a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>(<a class="code hl_variable" href="classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b">currentEventID</a> + 1);</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00127">127</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_function" href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">Play</a>(<a class="code hl_variable" href="classDramaSequence.html#a9cd7875e7adee721e086e9614b33e87b">currentEventID</a> + 1);</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00045">currentEventID</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00124">Play()</a>.</p>
+<p class="reference">References <a class="el" href="DramaSequence_8cs_source.html#l00045">currentEventID</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00132">Play()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00179">OnUpdate()</a>, and <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00187">OnUpdate()</a>, and <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>.</p>
 
 </div>
 </div>
@@ -846,7 +863,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00017">17</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00086">AddActor()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00094">AddActor()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>.</p>
 
 </div>
 </div>
@@ -888,7 +905,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00033">33</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00172">Exit()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00179">OnUpdate()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00180">Exit()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00187">OnUpdate()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>.</p>
 
 </div>
 </div>
@@ -914,7 +931,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00045">45</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00119">PlayNext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00127">PlayNext()</a>.</p>
 
 </div>
 </div>
@@ -932,7 +949,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00019">19</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00108">AddEvent()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00098">AddStep()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00074">GetEvent&lt; T &gt;()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00116">AddEvent()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00106">AddStep()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00082">GetEvent&lt; T &gt;()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>.</p>
 
 </div>
 </div>
@@ -986,7 +1003,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00011">11</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00086">AddActor()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00094">AddActor()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00057">GetActor()</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1021,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00025">25</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00172">Exit()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00045">LayerDrama.LateUpdate()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00180">Exit()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00045">LayerDrama.LateUpdate()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1039,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00021">21</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1057,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00041">41</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00124">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00132">Play()</a>.</p>
 
 </div>
 </div>
@@ -1058,7 +1075,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00039">39</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00137">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00145">Play()</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1093,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00013">13</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00086">AddActor()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l01660">DramaCustomSequence.Choice2()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00172">Exit()</a>, and <a class="el" href="DramaEventEndRoll_8cs_source.html#l00011">DramaEventEndRoll.Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00094">AddActor()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l01660">DramaCustomSequence.Choice2()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00180">Exit()</a>, and <a class="el" href="DramaEventEndRoll_8cs_source.html#l00011">DramaEventEndRoll.Play()</a>.</p>
 
 </div>
 </div>
@@ -1112,7 +1129,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00043">43</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00168">DramaManager.AddCustomEvents()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00179">OnUpdate()</a>, and <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaManager_8cs_source.html#l00168">DramaManager.AddCustomEvents()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00187">OnUpdate()</a>, and <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1163,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00015">15</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00108">AddEvent()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00098">AddStep()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, <a class="el" href="DramaManager_8cs_source.html#l00113">DramaManager.Load()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00124">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00116">AddEvent()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00106">AddStep()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, <a class="el" href="DramaManager_8cs_source.html#l00113">DramaManager.Load()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00132">Play()</a>.</p>
 
 </div>
 </div>
@@ -1164,7 +1181,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaSequence_8cs_source.html#l00031">31</a> of file <a class="el" href="DramaSequence_8cs_source.html">DramaSequence.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l01623">DramaCustomSequence._TempTalk()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00179">OnUpdate()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, and <a class="el" href="DramaCustomSequence_8cs_source.html#l01635">DramaCustomSequence.TempGoto()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l01623">DramaCustomSequence._TempTalk()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00049">Clear()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00187">OnUpdate()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, and <a class="el" href="DramaCustomSequence_8cs_source.html#l01635">DramaCustomSequence.TempGoto()</a>.</p>
 
 </div>
 </div>

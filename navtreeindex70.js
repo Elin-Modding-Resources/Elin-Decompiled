@@ -1,5 +1,10 @@
 var NAVTREEINDEX70 =
 {
+"classHotItemSpeed.html#a3bdf2eccd8c4a3221343c81a90eff9db":[1,0,640,6],
+"classHotItemSpeed.html#a46cd600083c3c51e3cd9824db83b3432":[1,0,640,2],
+"classHotItemSpeed.html#ab00ac18276cc76fdb3a6b85c76c33f87":[1,0,640,1],
+"classHotItemSpeed.html#ad1048fee0c660cef96b9c81d7d119564":[1,0,640,3],
+"classHotItemThing.html":[1,0,641],
 "classHotItemThing.html#a28102fdc6f129c38c0ec79e4dd2ea928":[1,0,641,10],
 "classHotItemThing.html#a2a62e26f407f0931d84632116825c5c3":[1,0,641,4],
 "classHotItemThing.html#a300e922e2ec13b65bfe512f02934d245":[1,0,641,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX70 =
 "classInnerOutline.html#ace1a3ab334f8d9f8f5547711f98f1754":[1,0,664,12],
 "classInnerOutline.html#ae34506189a54f40e911166b6425b47fa":[1,0,664,1],
 "classInnerOutline.html#ae56642e1c0fb8d7e09a2ad52097535c8":[1,0,664,6],
-"classInnerOutline.html#af38e139c991cc5b9ccd48d5cf3eda706":[1,0,664,10],
-"classInputFieldsTabSwitcher.html":[1,0,665],
-"classInputFieldsTabSwitcher.html#a08932a97481c55c41841189ff2ab5777":[1,0,665,9],
-"classInputFieldsTabSwitcher.html#a19ae6309117ff66d12b11b64c21e2a9e":[1,0,665,7],
-"classInputFieldsTabSwitcher.html#a1f14e24aae94458a60929b5f5d13d5b7":[1,0,665,5],
-"classInputFieldsTabSwitcher.html#a3c116ecaa22e70712af9748b20b61dbf":[1,0,665,6]
+"classInnerOutline.html#af38e139c991cc5b9ccd48d5cf3eda706":[1,0,664,10]
 };

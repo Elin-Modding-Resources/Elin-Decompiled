@@ -1,5 +1,10 @@
 var NAVTREEINDEX66 =
 {
+"classGame_1_1Config.html#a621b2abfc75458744c1becd5aff114fb":[1,0,514,0,11],
+"classGame_1_1Config.html#a6ab750a2c818ebfb36f6431bab29e03d":[1,0,514,0,10],
+"classGame_1_1Config.html#a7b5dc61de5dfb544d33fe4f1796be694":[1,0,514,0,28],
+"classGame_1_1Config.html#a7c1a1f5fb9b8f36ddaa4f6617d2845d4":[1,0,514,0,25],
+"classGame_1_1Config.html#a7dd6700660188bd4633cf111e26157ed":[1,0,514,0,4],
 "classGame_1_1Config.html#a85f33e4a6eaf002c87d69aee74bb4cdc":[1,0,514,0,26],
 "classGame_1_1Config.html#a9c7e664cdeaf74907f4878042ac64298":[1,0,514,0,16],
 "classGame_1_1Config.html#aa459616f25a0a3e3883fae1b21cae971":[1,0,514,0,22],
@@ -244,10 +249,5 @@ var NAVTREEINDEX66 =
 "classGodStatueData.html#a899f3c401b475c7c5f4896eee1a3705d":[1,0,562,1],
 "classGodStatueData.html#ab7cba767a1978cc56c35d82ce9c7f72f":[1,0,562,0],
 "classGradientColor.html":[1,0,563],
-"classGradientColor.html#a05b54db208268d35199eedb9d2a79a54":[1,0,563,3],
-"classGradientColor.html#a09e57cc4cdedba08c67e2147a6305741":[1,0,563,5],
-"classGradientColor.html#a1078c170f5a12e2205fe581c77552309":[1,0,563,4],
-"classGradientColor.html#a11a492e909c882ff8a75be399208d202":[1,0,563,18],
-"classGradientColor.html#a1d9316587e6e8b7509c8043cd56b0899":[1,0,563,13],
-"classGradientColor.html#a31c9c0a3299360bcc3eb1edc9bf36158":[1,0,563,6]
+"classGradientColor.html#a05b54db208268d35199eedb9d2a79a54":[1,0,563,3]
 };

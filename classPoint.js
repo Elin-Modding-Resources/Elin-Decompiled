@@ -27,7 +27,7 @@ var classPoint =
     [ "GetAngle2", "classPoint.html#ae8e5aa2a9a75d32ffebb1d7ac0f85f76", null ],
     [ "GetHashCode", "classPoint.html#abaa34f7eb632d921ef85b0a3bae7f356", null ],
     [ "GetInstalled< T >", "classPoint.html#acb138657e1ad8724939e6e8dacf59126", null ],
-    [ "GetNearestPoint", "classPoint.html#aef8634ffa11094d532bb1fe64fd268b7", null ],
+    [ "GetNearestPoint", "classPoint.html#a6a70ad1c74b7152679433eac70b113a6", null ],
     [ "GetPointTowards", "classPoint.html#a898a285093780cc79932ef8f45846bdd", null ],
     [ "GetRandomNeighbor", "classPoint.html#aec57635cca8aded3817492044375b098", null ],
     [ "GetRandomPoint", "classPoint.html#afdfaf1c8d2cc3515b536c0b2a860ab21", null ],
