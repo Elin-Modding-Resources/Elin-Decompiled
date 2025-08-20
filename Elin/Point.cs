@@ -604,62 +604,66 @@ public class Point : EClass
 		return Mathf.Atan2(to.z - z, num) * 57.29578f;
 	}
 
-	public Point GetNearestPoint(bool allowBlock = false, bool allowChara = true, bool allowInstalled = true, bool ignoreCenter = false)
+	public Point GetNearestPoint(bool allowBlock = false, bool allowChara = true, bool allowInstalled = true, bool ignoreCenter = false, int minRadius = 0)
 	{
 		Point p = new Point();
-		int num = 1;
-		int num2 = x;
-		int num3 = z;
-		if (IsValid(num2, num3))
+		int r = 1;
+		int num = x;
+		int num2 = z;
+		if (IsValid(num, num2))
 		{
 			return p;
 		}
-		if (IsValid(num2, num3 + 1))
+		if (IsValid(num, num2 + 1))
 		{
 			return p;
 		}
 		for (int i = 0; i < 30; i++)
 		{
-			for (int j = 0; j < num; j++)
+			for (int j = 0; j < r; j++)
+			{
+				num++;
+				if (IsValid(num, num2))
+				{
+					return p;
+				}
+			}
+			for (int k = 0; k < r; k++)
 			{
 				num2++;
-				if (IsValid(num2, num3))
+				if (IsValid(num, num2))
 				{
 					return p;
 				}
 			}
-			for (int k = 0; k < num; k++)
+			r++;
+			for (int l = 0; l < r; l++)
 			{
-				num3++;
-				if (IsValid(num2, num3))
+				num--;
+				if (IsValid(num, num2))
 				{
 					return p;
 				}
 			}
-			num++;
-			for (int l = 0; l < num; l++)
+			for (int m = 0; m < r; m++)
 			{
 				num2--;
-				if (IsValid(num2, num3))
+				if (IsValid(num, num2))
 				{
 					return p;
 				}
 			}
-			for (int m = 0; m < num; m++)
-			{
-				num3--;
-				if (IsValid(num2, num3))
-				{
-					return p;
-				}
-			}
-			num++;
+			r++;
 		}
 		p.Set(this);
 		return p;
 		bool IsValid(int dx, int dz)
 		{
 			p.Set(dx, dz);
+			if (minRadius > r / 2)
+			{
+				return false;
+			}
 			if (!p.IsInBounds || !map.Contains(dx, dz) || (ignoreCenter && dx == x && dz == z))
 			{
 				return false;

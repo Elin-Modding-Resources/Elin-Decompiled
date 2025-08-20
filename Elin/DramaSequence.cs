@@ -64,6 +64,14 @@ public class DramaSequence : EClass
 		{
 			return AddActor(id, new Person(id));
 		}
+		if (EClass.core.IsGameStarted)
+		{
+			Chara chara = EClass.game.cards.globalCharas.Find(id) ?? EClass._map.FindChara(id);
+			if (chara != null)
+			{
+				return AddActor(id, new Person(chara));
+			}
+		}
 		if (actors.Count <= 0)
 		{
 			return GetActor("narrator");

@@ -79,27 +79,20 @@ public class Region : Zone
 			dateCheckSites = EClass.world.date.GetRaw() + 1440;
 			UpdateRandomSites();
 		}
-		if (FindZone("foxtown_nefu") == null)
-		{
-			SpatialGen.Create("foxtown_nefu", this, register: true);
-		}
-		if (FindZone("little_garden") == null)
-		{
-			SpatialGen.Create("little_garden", this, register: true);
-		}
-		if (FindZone("cave_yeek") == null)
-		{
-			SpatialGen.Create("cave_yeek", this, register: true);
-		}
-		if (FindZone("village_exile") == null)
-		{
-			SpatialGen.Create("village_exile", this, register: true);
-		}
-		if (FindZone("temple_undersea") == null)
-		{
-			SpatialGen.Create("temple_undersea", this, register: true);
-		}
+		TryAddZone("cave_fairy");
+		TryAddZone("foxtown_nefu");
+		TryAddZone("little_garden");
+		TryAddZone("cave_yeek");
+		TryAddZone("village_exile");
+		TryAddZone("temple_undersea");
 		elomap.objmap.UpdateMeshImmediate();
+		void TryAddZone(string id)
+		{
+			if (FindZone(id) == null)
+			{
+				SpatialGen.Create(id, this, register: true);
+			}
+		}
 	}
 
 	public void RenewRandomSites()

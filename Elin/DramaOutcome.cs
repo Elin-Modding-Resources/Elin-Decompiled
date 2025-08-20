@@ -321,6 +321,14 @@ public class DramaOutcome : EMono
 		cc.ModAffinity(EMono.pc, -2);
 	}
 
+	public void nasu_join()
+	{
+		if (cc.id == "fairy_nanasu")
+		{
+			cc.MakeAlly();
+		}
+	}
+
 	public void melilith_friend()
 	{
 		if (cc.id == "melilith" && EMono.game.quests.completedIDs.Contains("melilith"))

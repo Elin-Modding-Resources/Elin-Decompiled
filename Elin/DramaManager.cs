@@ -402,6 +402,17 @@ public class DramaManager : EMono
 			flag2 = true;
 			lastTalk.AddChoice(new DramaChoice(text, jump, p2, cHECK, text4));
 			break;
+		case "addTempActor":
+		{
+			Person person = new Person(actor);
+			Chara chara = EMono.game.cards.globalCharas.Find(actor) ?? EMono._map.FindChara(actor);
+			if (chara != null)
+			{
+				person.SetChara(chara);
+			}
+			sequence.AddActor(actor, person);
+			break;
+		}
 		case "addActor":
 		{
 			if (actor == "god")
@@ -886,10 +897,10 @@ public class DramaManager : EMono
 		case "destroy":
 			AddEvent(delegate
 			{
-				Chara chara = EMono._map.FindChara(p2);
-				if (chara != null)
+				Chara chara2 = EMono._map.FindChara(p2);
+				if (chara2 != null)
 				{
-					chara.Destroy();
+					chara2.Destroy();
 				}
 				else
 				{
@@ -1079,6 +1090,12 @@ public class DramaManager : EMono
 			return EMono.player.dialogFlags.TryGetValue(array[1], 0) == 0;
 		case "hasItem":
 			return EMono.pc.things.Find(array[1]) != null;
+		case "nasuDeliver":
+			if (EMono.game.quests.GetPhase<QuestNasu>() == 2)
+			{
+				return EMono.pc.things.Find("backpack_holding") != null;
+			}
+			return false;
 		case "isCompleted":
 			return EMono.game.quests.IsCompleted(array[1]);
 		case "costRecruit":

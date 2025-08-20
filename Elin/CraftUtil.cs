@@ -175,7 +175,7 @@ public class CraftUtil : EClass
 			if (value.IsFoodTraitMain)
 			{
 				int num = value.Value;
-				if (product.id == "lunch_dystopia" && (wrapType == WrapType.Dark || num < 0))
+				if (ing.id == "lunch_dystopia" && (wrapType == WrapType.Dark || num < 0))
 				{
 					num *= -1;
 				}

@@ -5087,7 +5087,7 @@ public class Chara : Card, IPathfindWalker
 					MakeEgg();
 					if (IsPCFaction)
 					{
-						EClass.Branch.RemoveMemeber(this);
+						homeBranch.RemoveMemeber(this);
 					}
 				}
 				PlayEffect("revive");
@@ -5408,6 +5408,22 @@ public class Chara : Card, IPathfindWalker
 			EClass.Sound.StopBGM(3f);
 			EClass._zone.SetBGM(1, refresh: false);
 			break;
+		case "fairy_raina":
+		case "fairy_poina":
+		{
+			bool num2 = EClass._map.FindChara((id == "fairy_raina") ? "fairy_poina" : "fairy_raina") == null;
+			QuestNasu questNasu = EClass.game.quests.Get<QuestNasu>();
+			if (num2 && questNasu != null && questNasu.phase == 1)
+			{
+				num = 5;
+				flag = (flag2 = true);
+				EClass.Sound.StopBGM(3f);
+				EClass._zone.SetBGM(1, refresh: false);
+				EClass.player.DropReward(ThingGen.Create("backpack_holding"));
+				questNasu.NextPhase();
+			}
+			break;
+		}
 		case "isygarad":
 		{
 			num = 5;

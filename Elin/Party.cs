@@ -86,6 +86,18 @@ public class Party : EClass
 		WidgetRoster.SetDirty();
 	}
 
+	public Chara Find(string id)
+	{
+		foreach (Chara member in members)
+		{
+			if (member.id == id)
+			{
+				return member;
+			}
+		}
+		return null;
+	}
+
 	public void RemoveMember(Chara c)
 	{
 		if (c.host != null)

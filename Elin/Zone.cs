@@ -1425,7 +1425,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 				if (base.lv == 0)
 				{
-					goto IL_0499;
+					goto IL_04a1;
 				}
 				flag = base.lv <= 0;
 				break;
@@ -1464,7 +1464,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				break;
 			}
 			break;
-			IL_0499:
+			IL_04a1:
 			enterState = ZoneTransition.EnterState.Center;
 		}
 		foreach (Thing thing5 in map.things)

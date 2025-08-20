@@ -19,6 +19,10 @@ public class TraitStairsLocked : TraitItem
 		Zone.ignoreSpawnAnime = true;
 		EClass._zone.AddCard(thing, owner.pos.x, owner.pos.z);
 		thing.SetPlaceState(PlaceState.installed);
+		if (EClass._zone is Zone_DungeonFairy)
+		{
+			EClass.pc.party.Find("fairy_nanasu")?.Talk("unlock_stairs_nasu");
+		}
 		return true;
 	}
 }
