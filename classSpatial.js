@@ -52,6 +52,7 @@ var classSpatial =
     [ "CanSpawnAdv", "classSpatial.html#a1f15d296e55384bc44361e2cef2e8fae", null ],
     [ "ContentLv", "classSpatial.html#a410d73fe510cc502216125e48cc85d52", null ],
     [ "DangerLv", "classSpatial.html#ab005f3e3fcd24905d112de51b9d2d138", null ],
+    [ "DangerLvBoost", "classSpatial.html#a87c2cb49397c46756004abf6122f9198", null ],
     [ "DangerLvFix", "classSpatial.html#a70184c59fc39eccddf9036a599a398e8", null ],
     [ "dateExpire", "classSpatial.html#ad173f964691aecf8564f9363e0961263", null ],
     [ "dateHat", "classSpatial.html#a991d760abfeb5a14f448d9f55ace1cdd", null ],

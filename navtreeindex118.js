@@ -1,5 +1,17 @@
 var NAVTREEINDEX118 =
 {
+"classTraitHitchingPost.html":[1,0,1614],
+"classTraitHitchingPost.html#a1acd6d358475d841ac4b26807c3d9e4e":[1,0,1614,1],
+"classTraitHitchingPost.html#a67fe36c5fa4ee7af76cbe866b53e69c5":[1,0,1614,0],
+"classTraitHoard.html":[1,0,1615],
+"classTraitHoard.html#a44fcda1ec7d9502d611ef87112a7211d":[1,0,1615,1],
+"classTraitHoard.html#aba78e96b3f7fc52240d81450b2341f93":[1,0,1615,0],
+"classTraitHomeBoard.html":[1,0,1616],
+"classTraitHomeBoard.html#a93cb4036720951d950a46899f4bccfc5":[1,0,1616,1],
+"classTraitHomeBoard.html#af351723487e9b9d3bc546ace643e45f0":[1,0,1616,0],
+"classTraitHouseBoard.html":[1,0,1617],
+"classTraitHouseBoard.html#a34e85147354c0d16b776df906b0cd689":[1,0,1617,2],
+"classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada":[1,0,1617,1],
 "classTraitHouseBoard.html#a49c2bf1f8254a0ccbcb4ae740c468f64":[1,0,1617,7],
 "classTraitHouseBoard.html#a62d2bcfad7e4df7c42d3593de1075945":[1,0,1617,9],
 "classTraitHouseBoard.html#a73af51da5dddd87e7827fdf794ed7d65":[1,0,1617,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitMerchantFish.html":[1,0,1669],
 "classTraitMerchantFish.html#ad1f0cdfc5509de5d5e99febb5e334e67":[1,0,1669,0],
 "classTraitMerchantFood.html":[1,0,1670],
-"classTraitMerchantFood.html#a6b47417562ed2b2f388297342207fae4":[1,0,1670,0],
-"classTraitMerchantFruit.html":[1,0,1671],
-"classTraitMerchantFruit.html#aaba92ecead12dca97da2ca843790702a":[1,0,1671,0],
-"classTraitMerchantFurniture.html":[1,0,1672],
-"classTraitMerchantFurniture.html#a08c97f11acebf1b70a2f5f36f29eac80":[1,0,1672,0],
-"classTraitMerchantFurniture.html#a90edbfdc8939ed2ed27b9029a9312fcd":[1,0,1672,1],
-"classTraitMerchantGeneral.html":[1,0,1673],
-"classTraitMerchantGeneral.html#ac107905e867da0cb473e7a7821dd96c4":[1,0,1673,0],
-"classTraitMerchantGeneralExotic.html":[1,0,1674],
-"classTraitMerchantGeneralExotic.html#ad8a31536bb627922c0f4d9a31d87b96f":[1,0,1674,0],
-"classTraitMerchantGun.html":[1,0,1675],
-"classTraitMerchantGun.html#a2c20221f1b6f16180680b4baa2c86834":[1,0,1675,0],
-"classTraitMerchantGun.html#aee959c520e86875cd63de5a443bca4f0":[1,0,1675,1]
+"classTraitMerchantFood.html#a6b47417562ed2b2f388297342207fae4":[1,0,1670,0]
 };

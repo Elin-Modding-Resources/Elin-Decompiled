@@ -9,6 +9,7 @@ var searchData=
   ['visibility_6',['Visibility',['../classBaseTileMap.html#a66629ebc20794d6e0e080a7b9af6bb79a1729a56cfc89021478498fe0c89a843a',1,'BaseTileMap']]],
   ['vkeytoitem_7',['VKEYTOITEM',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da5e720b59b7c8c02318a330007fff0c2c',1,'B83::Win32']]],
   ['vmachine_8',['VMachine',['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba674b3cac45e2eef316a2dbcd7ec31be7',1,'ShopType.cs']]],
-  ['vscroll_9',['VSCROLL',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da02dc039367c8055965649d9b95864e3f',1,'B83::Win32']]],
-  ['vscrollclipboard_10',['VSCROLLCLIPBOARD',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4c39de9d4980ee83a4a24e0c106cca61',1,'B83::Win32']]]
+  ['void_9',['Void',['../ZoneScaleType_8cs.html#a7e72a69f00063c292944f6f3eacb5a95a81ceb48a978444906d80119200aa358d',1,'ZoneScaleType.cs']]],
+  ['vscroll_10',['VSCROLL',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da02dc039367c8055965649d9b95864e3f',1,'B83::Win32']]],
+  ['vscrollclipboard_11',['VSCROLLCLIPBOARD',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4c39de9d4980ee83a4a24e0c106cca61',1,'B83::Win32']]]
 ];

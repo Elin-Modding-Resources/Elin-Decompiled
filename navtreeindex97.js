@@ -1,5 +1,16 @@
 var NAVTREEINDEX97 =
 {
+"classSKILL.html#a66e9fa7b843db817d594a4ed2c845bb0":[1,0,1146,117],
+"classSKILL.html#a6780759ddcef2961a69acfefb9963d82":[1,0,1146,2],
+"classSKILL.html#a67bbda2b1d17574a0dfaeb0619bed8f3":[1,0,1146,42],
+"classSKILL.html#a684e31a44f3087914d9808865f394742":[1,0,1146,60],
+"classSKILL.html#a68f1ac191908b00022b2e1d4b1b697d0":[1,0,1146,54],
+"classSKILL.html#a6e4d69b3fee7c8320e2b0312e57d15f1":[1,0,1146,51],
+"classSKILL.html#a6e5fd4acdc87a741fee9a2546afbe443":[1,0,1146,121],
+"classSKILL.html#a6fbc944eb1a91ac7fe88a0ecf25413f7":[1,0,1146,39],
+"classSKILL.html#a70891f0f30efbda59e9b031743780ea0":[1,0,1146,7],
+"classSKILL.html#a72469a2cb6e14d8bed0f54820e167a76":[1,0,1146,65],
+"classSKILL.html#a73a732ac0dfb30894ea6cc4206c6ce21":[1,0,1146,12],
 "classSKILL.html#a7496e5ade56835be4b0950ee7c723b7a":[1,0,1146,3],
 "classSKILL.html#a74d2449d04c112fb9463f06c4f2eefa8":[1,0,1146,55],
 "classSKILL.html#a789ca8d1690cba346130103b34de4238":[1,0,1146,58],
@@ -238,16 +249,5 @@ var NAVTREEINDEX97 =
 "classSPELL.html#a985f6f389c141e7f07a619d5e3d1edd3":[1,0,1223,109],
 "classSPELL.html#a99cf83cb5d281ef80ebb7cd323db5ad4":[1,0,1223,53],
 "classSPELL.html#a99fb080620dd9606ac24b3a2938b074a":[1,0,1223,244],
-"classSPELL.html#a9a1440dd753209a8a8b97fc4be6d1f3b":[1,0,1223,24],
-"classSPELL.html#a9bbabe3edd3cb7441fb9422bd6a1b708":[1,0,1223,229],
-"classSPELL.html#a9da39085ff5fbd076238e38ae4434fc3":[1,0,1223,72],
-"classSPELL.html#a9e1eee1cff7ffc84e1d17a55ebc5a2ab":[1,0,1223,82],
-"classSPELL.html#a9e7949eee5143fddb9b67ba2364d2f32":[1,0,1223,110],
-"classSPELL.html#aa1a0bd79789874fb8005789f69616b13":[1,0,1223,146],
-"classSPELL.html#aa21fe69d1f27b85785ac95b4bebc9c48":[1,0,1223,189],
-"classSPELL.html#aa2a2b8ffedffc0dd8bf43adb521aa563":[1,0,1223,68],
-"classSPELL.html#aa315313434a26668253869773133891e":[1,0,1223,105],
-"classSPELL.html#aa3dd07caf20a200a0c7835818bda19de":[1,0,1223,123],
-"classSPELL.html#aa3fdcb2025fe3b6bc45d4e8fe0a8c1c9":[1,0,1223,87],
-"classSPELL.html#aa4583afc997268495fcbab7d99c64d54":[1,0,1223,188]
+"classSPELL.html#a9a1440dd753209a8a8b97fc4be6d1f3b":[1,0,1223,24]
 };

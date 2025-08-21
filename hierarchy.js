@@ -1188,15 +1188,19 @@ var hierarchy =
             [ "Zone_Vernis", "classZone__Vernis.html", null ]
           ] ],
           [ "Zone_Dungeon", "classZone__Dungeon.html", [
-            [ "Zone_CursedManorDungeon", "classZone__CursedManorDungeon.html", null ],
-            [ "Zone_DungeonFairy", "classZone__DungeonFairy.html", null ],
             [ "Zone_DungeonUnfixed", "classZone__DungeonUnfixed.html", [
               [ "Zone_DungeonPuppy", "classZone__DungeonPuppy.html", null ],
               [ "Zone_DungeonYeek", "classZone__DungeonYeek.html", null ]
             ] ],
-            [ "Zone_Lesimas", "classZone__Lesimas.html", null ],
-            [ "Zone_Lysanas", "classZone__Lysanas.html", null ],
-            [ "Zone_Nymelle", "classZone__Nymelle.html", null ],
+            [ "Zone_QuestDungeon", "classZone__QuestDungeon.html", [
+              [ "Zone_CursedManorDungeon", "classZone__CursedManorDungeon.html", null ],
+              [ "Zone_DungeonFairy", "classZone__DungeonFairy.html", null ],
+              [ "Zone_Lesimas", "classZone__Lesimas.html", null ],
+              [ "Zone_Lysanas", "classZone__Lysanas.html", null ],
+              [ "Zone_Nymelle", "classZone__Nymelle.html", null ],
+              [ "Zone_UnderseaTemple", "classZone__UnderseaTemple.html", null ],
+              [ "Zone_VernisMine", "classZone__VernisMine.html", null ]
+            ] ],
             [ "Zone_RandomDungeon", "classZone__RandomDungeon.html", [
               [ "Zone_CaveMonster", "classZone__CaveMonster.html", [
                 [ "Zone_Mine", "classZone__Mine.html", null ]
@@ -1209,8 +1213,6 @@ var hierarchy =
                 [ "Zone_RandomDungeonWater", "classZone__RandomDungeonWater.html", null ]
               ] ]
             ] ],
-            [ "Zone_UnderseaTemple", "classZone__UnderseaTemple.html", null ],
-            [ "Zone_VernisMine", "classZone__VernisMine.html", null ],
             [ "Zone_Void", "classZone__Void.html", null ]
           ] ],
           [ "Zone_Field", "classZone__Field.html", null ],

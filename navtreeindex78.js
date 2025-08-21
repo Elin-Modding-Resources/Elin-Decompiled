@@ -1,5 +1,15 @@
 var NAVTREEINDEX78 =
 {
+"classLayerLocation.html#a4d3805506b3b936a1fa90d421b77b3a6":[1,0,798,6],
+"classLayerLocation.html#a4d5071e2c02cf02faafc0922701fe28a":[1,0,798,3],
+"classLayerLocation.html#a787b8d3a958fda91bf779f6d6072ef5f":[1,0,798,1],
+"classLayerLocation.html#ab3e1b403704dd5b24a09284d4a27ff3b":[1,0,798,2],
+"classLayerLocation.html#acbd4dd130c9d10c97fede0c1697b206e":[1,0,798,0],
+"classLayerLocation.html#acdad2eea5ed4d57f6170def7322020cc":[1,0,798,4],
+"classLayerMapList.html":[1,0,799],
+"classLayerMapList.html#a05321b4bc2c47465b79f499c1766d9ef":[1,0,799,0],
+"classLayerMapList.html#a27e4f124fdb0513b12c1be4152537dbf":[1,0,799,1],
+"classLayerMapList.html#a923db75faff4ce34dc46aba154667e32":[1,0,799,2],
 "classLayerMiniGame.html":[1,0,800],
 "classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8":[1,0,800,6],
 "classLayerMiniGame.html#a03eb3e883e6b7e6a3611b9b43b34f21b":[1,0,800,2],
@@ -239,15 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerSleep.html#aef56dfd8ed93cfa21d2f4100e6213b4e":[1,0,816,10],
 "classLayerSleep.html#af0008dcab9b1b602b3b7f4f5d4b22cf6":[1,0,816,9],
 "classLayerSleep.html#afe4cefcdbdcb5077878ddfdbb2cbe3e3":[1,0,816,2],
-"classLayerStockpile.html":[1,0,817],
-"classLayerTactics.html":[1,0,818],
-"classLayerTactics.html#a04e7de861444b8fd47eef4742510f711":[1,0,818,0],
-"classLayerTech.html":[1,0,819],
-"classLayerTech.html#a42fd0cc46addc364b56faae0c3969b97":[1,0,819,0],
-"classLayerTech.html#a440176680a6eb5909b6a7aaa68bef5b6":[1,0,819,2],
-"classLayerTech.html#a6259a91fa0633ae3c0bfa3ad165c5891":[1,0,819,4],
-"classLayerTech.html#a9e3265d037a19892a2be8effde7eae8b":[1,0,819,3],
-"classLayerTech.html#aa70fe42a095cd7bb5fdc81c58a438b97":[1,0,819,5],
-"classLayerTech.html#af2477012071274f4a672760651eea946":[1,0,819,1],
-"classLayerTextureViewer.html":[1,0,820]
+"classLayerStockpile.html":[1,0,817]
 };

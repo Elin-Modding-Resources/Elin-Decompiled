@@ -1,5 +1,16 @@
 var NAVTREEINDEX84 =
 {
+"classMsgBlock.html#a83f6bc3d1ec4dda9b72ce7e3f09da2f0":[1,0,888,3],
+"classMsgBlock.html#aa49ddcc0455a188280b70e2a4a3f837b":[1,0,888,2],
+"classMsgBlock.html#aa7fb5d9c999b69e5e12371709ddca0bb":[1,0,888,15],
+"classMsgBlock.html#ac5389bf7833a40135f73b88036c59041":[1,0,888,0],
+"classMsgBlock.html#ad25cfb57a135145de0aa5101ec18792b":[1,0,888,1],
+"classMsgBlock.html#ad805a84190089960c082536a88e21cf6":[1,0,888,9],
+"classMsgBlock.html#ae5274364caf01236c696208e6f5cae1b":[1,0,888,12],
+"classMsgBlock.html#ae98cc8cf3739a327defa372b5adc3e5d":[1,0,888,4],
+"classMsgBlock.html#af6b22dd4fcbb670bcc3c5d864c1af0bc":[1,0,888,16],
+"classMsgBox.html":[1,0,889],
+"classMsgBox.html#a0075c4c232cfc5da0e9dd05c35cbffc7":[1,0,889,32],
 "classMsgBox.html#a06ebdfb9e310d19d5a4b56b84b29a559":[1,0,889,22],
 "classMsgBox.html#a0c02a5cd6ee0fdd559890d744a1b67c1":[1,0,889,19],
 "classMsgBox.html#a0c9dc3a0a88c140accd96a2043a39a08":[1,0,889,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX84 =
 "classObjectPool.html#a1c7d97c9434247225b9d887072110c8f":[1,0,916,13],
 "classObjectPool.html#a22e9b6d5762b9193cffeb12dd8336477":[1,0,916,4],
 "classObjectPool.html#a28b7e503afcecfb7f8ae7647c7efdff8":[1,0,916,5],
-"classObjectPool.html#a34d53fdd0a977a395ffc42e69ed99309":[1,0,916,7],
-"classObjectPool.html#a4a92449c643fea22b9504ae9c9ebb78b":[1,0,916,12],
-"classObjectPool.html#a538d3af9420f0d116d9d564da9be33f0":[1,0,916,11],
-"classObjectPool.html#a7d08fe8ce12a934f410de58fef956a4a":[1,0,916,8],
-"classObjectPool.html#a8a492d46b6230a2afe750a843e05a148":[1,0,916,14],
-"classObjectPool.html#ac7f7c5e592e12b2b9d7ed59ec64a2d6d":[1,0,916,2],
-"classObjectPool.html#adbd793a3b653ccde5196995fe3611712":[1,0,916,9],
-"classObjectPool.html#af85041dbe64efa883573f2ad8e24f852":[1,0,916,6],
-"classObjectPool.html#afd6b674fd2d20832cf244c2804e1df9a":[1,0,916,15],
-"classObjectPool_1_1Item.html":[1,0,916,1],
-"classObjectPool_1_1Item.html#a12ef7393b78fe4f44174736927d11f3c":[1,0,916,1,2],
-"classObjectPool_1_1Item.html#a6558e5a2536e51060969c987c061951c":[1,0,916,1,6]
+"classObjectPool.html#a34d53fdd0a977a395ffc42e69ed99309":[1,0,916,7]
 };

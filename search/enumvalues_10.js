@@ -7,10 +7,11 @@ var searchData=
   ['querynewpalette_4',['QUERYNEWPALETTE',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da590e889dce1111c0ced6fb0574beec5e',1,'B83::Win32']]],
   ['queryopen_5',['QUERYOPEN',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da249db0eb4b616f59dfef1860bf264eb0',1,'B83::Win32']]],
   ['queryuistate_6',['QUERYUISTATE',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da60eb2135733e12a345213d06bd2f5206',1,'B83::Win32']]],
-  ['questboard_7',['QuestBoard',['../classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9a0f4f8497bc3fb1eb8dd10066adcf8a41',1,'TCExtra']]],
-  ['questobjective_8',['QuestObjective',['../FontColor_8cs.html#a38781c7178610f85215f87793e99ed51af9e92dbf047b5b6f9ec17ab749009dd2',1,'FontColor.cs']]],
-  ['queuesync_9',['QUEUESYNC',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dae3fd11f73336b41d7e60be1a8fcff776',1,'B83::Win32']]],
-  ['quickload_10',['QuickLoad',['../EAction_8cs.html#a81d4868b129e5f45325894085a36a8a5a9a2691007df3673842172269e98d6ed5',1,'EAction.cs']]],
-  ['quicksave_11',['QuickSave',['../EAction_8cs.html#a81d4868b129e5f45325894085a36a8a5af5f9b456cc2e69d7379ce59a85e254b2',1,'EAction.cs']]],
-  ['quit_12',['QUIT',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da5dfd352dd6b7a5d118237fcf1e19fcc1',1,'B83::Win32']]]
+  ['quest_7',['Quest',['../ZoneScaleType_8cs.html#a7e72a69f00063c292944f6f3eacb5a95a07bf513a88c3df282a30cb374f8a933d',1,'ZoneScaleType.cs']]],
+  ['questboard_8',['QuestBoard',['../classTCExtra.html#a52d4bd6b4cd2a648ee025ab804cae8b9a0f4f8497bc3fb1eb8dd10066adcf8a41',1,'TCExtra']]],
+  ['questobjective_9',['QuestObjective',['../FontColor_8cs.html#a38781c7178610f85215f87793e99ed51af9e92dbf047b5b6f9ec17ab749009dd2',1,'FontColor.cs']]],
+  ['queuesync_10',['QUEUESYNC',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dae3fd11f73336b41d7e60be1a8fcff776',1,'B83::Win32']]],
+  ['quickload_11',['QuickLoad',['../EAction_8cs.html#a81d4868b129e5f45325894085a36a8a5a9a2691007df3673842172269e98d6ed5',1,'EAction.cs']]],
+  ['quicksave_12',['QuickSave',['../EAction_8cs.html#a81d4868b129e5f45325894085a36a8a5af5f9b456cc2e69d7379ce59a85e254b2',1,'EAction.cs']]],
+  ['quit_13',['QUIT',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da5dfd352dd6b7a5d118237fcf1e19fcc1',1,'B83::Win32']]]
 ];

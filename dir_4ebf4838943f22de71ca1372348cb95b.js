@@ -1946,6 +1946,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "Zone_OldGuild.cs", "Zone__OldGuild_8cs.html", "Zone__OldGuild_8cs" ],
     [ "Zone_Olvina.cs", "Zone__Olvina_8cs.html", "Zone__Olvina_8cs" ],
     [ "Zone_Palmia.cs", "Zone__Palmia_8cs.html", "Zone__Palmia_8cs" ],
+    [ "Zone_QuestDungeon.cs", "Zone__QuestDungeon_8cs.html", "Zone__QuestDungeon_8cs" ],
     [ "Zone_RandomDungeon.cs", "Zone__RandomDungeon_8cs.html", "Zone__RandomDungeon_8cs" ],
     [ "Zone_RandomDungeonFactory.cs", "Zone__RandomDungeonFactory_8cs.html", "Zone__RandomDungeonFactory_8cs" ],
     [ "Zone_RandomDungeonForest.cs", "Zone__RandomDungeonForest_8cs.html", "Zone__RandomDungeonForest_8cs" ],
@@ -2006,6 +2007,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "ZonePreEnterEvent.cs", "ZonePreEnterEvent_8cs.html", "ZonePreEnterEvent_8cs" ],
     [ "ZonePreEnterOnCompleteQuestInstance.cs", "ZonePreEnterOnCompleteQuestInstance_8cs.html", "ZonePreEnterOnCompleteQuestInstance_8cs" ],
     [ "ZoneProfile.cs", "ZoneProfile_8cs.html", "ZoneProfile_8cs" ],
+    [ "ZoneScaleType.cs", "ZoneScaleType_8cs.html", "ZoneScaleType_8cs" ],
     [ "ZoneTransition.cs", "ZoneTransition_8cs.html", "ZoneTransition_8cs" ],
     [ "ZoneUtil.cs", "ZoneUtil_8cs.html", "ZoneUtil_8cs" ]
 ];

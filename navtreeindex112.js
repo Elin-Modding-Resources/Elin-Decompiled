@@ -1,5 +1,17 @@
 var NAVTREEINDEX112 =
 {
+"classTileTypeHalfBlock.html#a323fa4d4aad1083766c09ea07111e42b":[1,0,1342,0],
+"classTileTypeHalfBlock.html#a3d577917e5db9444a9276cde45f1a193":[1,0,1342,1],
+"classTileTypeHalfBlock.html#a9889458181687b5d95ba01303f05c644":[1,0,1342,2],
+"classTileTypeIllumination.html":[1,0,1343],
+"classTileTypeIllumination.html#a74411db318ad0a1ff045c8333b3b247a":[1,0,1343,0],
+"classTileTypeInvisibleBlock.html":[1,0,1344],
+"classTileTypeInvisibleBlock.html#a84956b2f558c924344a78cc7975f95d9":[1,0,1344,3],
+"classTileTypeInvisibleBlock.html#ab86ba7b92859974b740af232bb185bca":[1,0,1344,4],
+"classTileTypeInvisibleBlock.html#ad499fbd4bcb861ea8f17dd0bc1f21927":[1,0,1344,0],
+"classTileTypeInvisibleBlock.html#adc6e78f5d2a74e3da3f2fe4b34219287":[1,0,1344,2],
+"classTileTypeInvisibleBlock.html#af1192022160d86fe319404fe5011564d":[1,0,1344,5],
+"classTileTypeInvisibleBlock.html#afe9a3f1b00379a54a2d9f8cecd10fa69":[1,0,1344,1],
 "classTileTypeLadder.html":[1,0,1345],
 "classTileTypeLadder.html#a14dc04fb9e6801f243628dee9cd19d18":[1,0,1345,1],
 "classTileTypeLadder.html#a185513029bab0e73b8963f54c7f3349a":[1,0,1345,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX112 =
 "classTrait.html#a15f92ba5eb5da6d5f4ea350658938e90":[1,0,1390,84],
 "classTrait.html#a164af9b099be75ec2ddc7d1d750727ea":[1,0,1390,12],
 "classTrait.html#a17786edaad5750bdf1424cf6dc8877b1":[1,0,1390,215],
-"classTrait.html#a17d5cd3ed1d0dcb3497e3414023cc062":[1,0,1390,27],
-"classTrait.html#a1818cb479198f314d1d390b3d382077a":[1,0,1390,219],
-"classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d":[1,0,1390,44],
-"classTrait.html#a1bc5c20004a292d57037a9556ad49d96":[1,0,1390,135],
-"classTrait.html#a1bcc89016758ef51b5722da792d53f41":[1,0,1390,50],
-"classTrait.html#a1c2daa2fd743cdd5707d254414078140":[1,0,1390,161],
-"classTrait.html#a1ef6408bcd6e52240db168e4bb4b227f":[1,0,1390,32],
-"classTrait.html#a223c5c61f9f23af4049c8f9197875c4f":[1,0,1390,48],
-"classTrait.html#a228e3c8aa5066a2ce0f371b7435a2a29":[1,0,1390,185],
-"classTrait.html#a22e147eb4b95fa88b72fa38006cb30a1":[1,0,1390,217],
-"classTrait.html#a230baa05c8fbca42690cde706f5b6f20":[1,0,1390,66],
-"classTrait.html#a23a8f240d97abe6938f4e378ded4aa0e":[1,0,1390,155],
-"classTrait.html#a24c97a21e803409ce0307f1ba8be0d21":[1,0,1390,159]
+"classTrait.html#a17d5cd3ed1d0dcb3497e3414023cc062":[1,0,1390,27]
 };

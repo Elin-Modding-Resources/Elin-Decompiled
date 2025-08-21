@@ -1,5 +1,24 @@
 var NAVTREEINDEX141 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac26450441b4379e581ad1a6693b94d1d":[0,4,3,0,8,199],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac39aa6dbe619bb8ef8187b00b686df6a":[0,4,3,0,8,2],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac9c9c146c630ca5ef9197c73c032f4a6":[0,4,3,0,8,54],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daca7163bd3e992d9f5b0ec0024c092fc2":[0,4,3,0,8,196],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dacee7fd6b791b2751c26f1eb4078fad74":[0,4,3,0,8,80],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad104b77eb1b8269d6ad67c55fea641f2":[0,4,3,0,8,44],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad2222ddc18747e01a7f1049a389ef4ee":[0,4,3,0,8,225],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad23c607e300445f857d4da1ef37fc81e":[0,4,3,0,8,45],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad27a84713a758d1ac105af3d7cdb849c":[0,4,3,0,8,98],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad315ed182aec1fbaebb66fb43463cbc9":[0,4,3,0,8,66],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad3d2a2bf91bf3ed2238d59a1627a9e5c":[0,4,3,0,8,127],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad3d4edf671dd6bcd10e4398a079d2e42":[0,4,3,0,8,128],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad433269ecda621968b24e331ae6fa51c":[0,4,3,0,8,87],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad48416ac7b6eac1578799c27f56f6750":[0,4,3,0,8,143],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad5bd5dbc2cdfd9b802f9abdb4d81fa76":[0,4,3,0,8,65],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad62e9c0c447a7a28713bd20b1550b411":[0,4,3,0,8,118],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dad77d44f0bedfec608b97cf5ad604efca":[0,4,3,0,8,141],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dadeb1894f353d6168156ba360237e90e1":[0,4,3,0,8,102],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dadf41bf718a391a0260aa567a2e4f65f1":[0,4,3,0,8,101],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dadf719517220572192a471b96491fb116":[0,4,3,0,8,95],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dae01b5485e7a615e5cf29c17a84baa8a8":[0,4,3,0,8,75],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dae3fd11f73336b41d7e60be1a8fcff776":[0,4,3,0,8,32],
@@ -224,7 +243,7 @@ var NAVTREEINDEX141 =
 "structXY.html#a671ff8952388c884c10782e46808c8b1":[1,0,2066,2],
 "structXY.html#a86ef9f95d24632f70207d603689a4b70":[1,0,2066,0],
 "structXY.html#a97f055b4700397c064faee99a9309572":[1,0,2066,1],
-"structZoneBlueprint_1_1MapGenSetting.html":[1,0,2145,0],
-"structZoneBlueprint_1_1MapGenSetting.html#ab1962805b6183a17dbfb9ce3c39917c0":[1,0,2145,0,1],
-"structZoneBlueprint_1_1MapGenSetting.html#af230cefef8174422542d920b34051381":[1,0,2145,0,0]
+"structZoneBlueprint_1_1MapGenSetting.html":[1,0,2146,0],
+"structZoneBlueprint_1_1MapGenSetting.html#ab1962805b6183a17dbfb9ce3c39917c0":[1,0,2146,0,1],
+"structZoneBlueprint_1_1MapGenSetting.html#af230cefef8174422542d920b34051381":[1,0,2146,0,0]
 };

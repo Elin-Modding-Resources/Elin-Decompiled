@@ -1,5 +1,17 @@
 var NAVTREEINDEX116 =
 {
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67":[1,0,1494,0,0],
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0":[1,0,1494,0,2],
+"classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613":[1,0,1494,3],
+"classTraitCrafter.html#afd71330988c12ddf321aab298566b69b":[1,0,1494,24],
+"classTraitCrafter.html#aff65bd2e6b1c0b1ca49985bc7e9a4e9c":[1,0,1494,19],
+"classTraitCrenel.html":[1,0,1495],
+"classTraitCrenel.html#adb6e4a2b412ecdd0c4edb7895a11d7ea":[1,0,1495,0],
+"classTraitCrenel.html#adcc43621d3918d5e8df769c1445e7136":[1,0,1495,1],
+"classTraitCurrency.html":[1,0,1496],
+"classTraitCurrency.html#a8ad4ef6f66318b88486c825e591e4082":[1,0,1496,0],
+"classTraitCurrencyMedal.html":[1,0,1497],
+"classTraitCurrencyMedal.html#a83af106650761bd1917199486fe112f2":[1,0,1497,0],
 "classTraitCurtain.html":[1,0,1498],
 "classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1498,3],
 "classTraitCurtain.html#a1f1e4de13216bc852a9ff429896d712e":[1,0,1498,1],
@@ -237,17 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitExileElder.html#a0458cf5a6732bad15e0bc70236544c11":[1,0,1544,1],
 "classTraitExileElder.html#a3310a777fbe285a2468a1b3e7b25e564":[1,0,1544,3],
 "classTraitExileElder.html#a8874bed2408145efecee11c4445176bb":[1,0,1544,2],
-"classTraitExileElder.html#acb6ae471ef906a8c79fc539c35f9bf63":[1,0,1544,0],
-"classTraitFactionBoard.html":[1,0,1545],
-"classTraitFactionBoard.html#a43bbcae6f5dad4bcf48d8ceb947eeeaa":[1,0,1545,1],
-"classTraitFactionBoard.html#a7df58def4278f8cda59745193e5b5e44":[1,0,1545,2],
-"classTraitFactionBoard.html#ad763ea52e747c125501201db1ebd885c":[1,0,1545,0],
-"classTraitFactory.html":[1,0,1546],
-"classTraitFactory.html#a17d0626f634dfcbc6e4edc89c4bc989f":[1,0,1546,0],
-"classTraitFactory.html#a30d12910241ded1d77958c042f4ae3e0":[1,0,1546,5],
-"classTraitFactory.html#a4c38f7cc3a498750a2a11c75aa87460e":[1,0,1546,4],
-"classTraitFactory.html#a4ea2e3f2fa68547ae6f8664924ec1b1a":[1,0,1546,3],
-"classTraitFactory.html#a78d67401eceea58e197ddf83824dbf5e":[1,0,1546,1],
-"classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461":[1,0,1546,2],
-"classTraitFakeBlock.html":[1,0,1547]
+"classTraitExileElder.html#acb6ae471ef906a8c79fc539c35f9bf63":[1,0,1544,0]
 };

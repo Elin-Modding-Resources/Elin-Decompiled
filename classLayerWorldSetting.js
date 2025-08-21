@@ -33,6 +33,7 @@ var classLayerWorldSetting =
     [ "toggleTax", "classLayerWorldSetting.html#afbd816fb7ac9b54eb1cc057d22238733", null ],
     [ "toggleUsermapBenefit", "classLayerWorldSetting.html#a135010f3719d38d6539d4187dd718c4a", null ],
     [ "transCustom", "classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978", null ],
+    [ "transHint", "classLayerWorldSetting.html#a2d4a131850cb7b4c6fc2bda0b609e131", null ],
     [ "transMold", "classLayerWorldSetting.html#aa3b2cb30b49efa57156fb1738726e9b5", null ],
     [ "IdxCustom", "classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e", null ],
     [ "IsEmbark", "classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d", null ]

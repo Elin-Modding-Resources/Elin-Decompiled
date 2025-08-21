@@ -1,5 +1,17 @@
 var NAVTREEINDEX119 =
 {
+"classTraitMerchantFruit.html":[1,0,1671],
+"classTraitMerchantFruit.html#aaba92ecead12dca97da2ca843790702a":[1,0,1671,0],
+"classTraitMerchantFurniture.html":[1,0,1672],
+"classTraitMerchantFurniture.html#a08c97f11acebf1b70a2f5f36f29eac80":[1,0,1672,0],
+"classTraitMerchantFurniture.html#a90edbfdc8939ed2ed27b9029a9312fcd":[1,0,1672,1],
+"classTraitMerchantGeneral.html":[1,0,1673],
+"classTraitMerchantGeneral.html#ac107905e867da0cb473e7a7821dd96c4":[1,0,1673,0],
+"classTraitMerchantGeneralExotic.html":[1,0,1674],
+"classTraitMerchantGeneralExotic.html#ad8a31536bb627922c0f4d9a31d87b96f":[1,0,1674,0],
+"classTraitMerchantGun.html":[1,0,1675],
+"classTraitMerchantGun.html#a2c20221f1b6f16180680b4baa2c86834":[1,0,1675,0],
+"classTraitMerchantGun.html#aee959c520e86875cd63de5a443bca4f0":[1,0,1675,1],
 "classTraitMerchantJunk.html":[1,0,1676],
 "classTraitMerchantJunk.html#a2a14dcd2b678a3661030049a59084151":[1,0,1676,2],
 "classTraitMerchantJunk.html#a53445cae9c33cf4de11ada9ff0d356be":[1,0,1676,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1738,0],
 "classTraitPoop.html":[1,0,1739],
 "classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1739,0],
-"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1739,1],
-"classTraitPotion.html":[1,0,1740],
-"classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0":[1,0,1740,1],
-"classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1740,0],
-"classTraitPotionAlchemy.html":[1,0,1741],
-"classTraitPotionAlchemy.html#a1fc02cad3212f3257ce98be1e74b24d2":[1,0,1741,0],
-"classTraitPotionAlchemy.html#a9b47cf772fdbc8261c42edfc8124bd35":[1,0,1741,2],
-"classTraitPotionAlchemy.html#afbe2c5dc046840f3d0e06840b81548fb":[1,0,1741,1],
-"classTraitPotionEmpty.html":[1,0,1742],
-"classTraitPotionEmpty.html#a479119429f1aad7dc8d43f3a7870aeb8":[1,0,1742,3],
-"classTraitPotionEmpty.html#a5c7c586fa312bde006e46eb2f8b3c6b3":[1,0,1742,0],
-"classTraitPotionEmpty.html#a827023eb995b6e874b6c13f1ec9dabbb":[1,0,1742,4],
-"classTraitPotionEmpty.html#aca8c5b343e5ee07e3f37bc4c937dcc06":[1,0,1742,2]
+"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1739,1]
 };

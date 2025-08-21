@@ -8,6 +8,6 @@ var classZone__RandomDungeon =
     [ "LockExit", "classZone__RandomDungeon.html#a96696331be2b7bd4a5aa891e0e42b660", null ],
     [ "LvBoss", "classZone__RandomDungeon.html#a0a7be9d55d0f9cce17fe0b3723827761", null ],
     [ "MinLv", "classZone__RandomDungeon.html#a162e212b39d284ecd4d4995802cc6dd1", null ],
-    [ "ScaleMonsterLevel", "classZone__RandomDungeon.html#a2180cba051e0719183e26f4830b304da", null ],
+    [ "ScaleType", "classZone__RandomDungeon.html#a7c19f2d7a606ae6d151280e5972e6bb7", null ],
     [ "TextWidgetDate", "classZone__RandomDungeon.html#a7814cec7c19bb525df23b686ae509209", null ]
 ];

@@ -2191,6 +2191,7 @@ var annotated_dup =
     [ "Zone_OldGuild", "classZone__OldGuild.html", "classZone__OldGuild" ],
     [ "Zone_Olvina", "classZone__Olvina.html", "classZone__Olvina" ],
     [ "Zone_Palmia", "classZone__Palmia.html", null ],
+    [ "Zone_QuestDungeon", "classZone__QuestDungeon.html", "classZone__QuestDungeon" ],
     [ "Zone_RandomDungeon", "classZone__RandomDungeon.html", "classZone__RandomDungeon" ],
     [ "Zone_RandomDungeonFactory", "classZone__RandomDungeonFactory.html", "classZone__RandomDungeonFactory" ],
     [ "Zone_RandomDungeonForest", "classZone__RandomDungeonForest.html", "classZone__RandomDungeonForest" ],

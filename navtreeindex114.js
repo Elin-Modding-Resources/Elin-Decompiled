@@ -1,5 +1,17 @@
 var NAVTREEINDEX114 =
 {
+"classTraitAltar.html#a1734a9c2ea692e0cece10e249d810d97":[1,0,1396,5],
+"classTraitAltar.html#a22ef7843576ce235a8cc1ff6035e976e":[1,0,1396,1],
+"classTraitAltar.html#a28e392dbb7012af20236cd6dd43e51a7":[1,0,1396,16],
+"classTraitAltar.html#a31ae0b0f37f6b0d0ad83c417d18cda58":[1,0,1396,11],
+"classTraitAltar.html#a4c5d5588c850748eaf15680e1cebc3f0":[1,0,1396,14],
+"classTraitAltar.html#a5b7915ae5f852b2d68d08c9ae96a3ffc":[1,0,1396,6],
+"classTraitAltar.html#a7b3d7bc4f803febf43b49ca7a7c823ea":[1,0,1396,7],
+"classTraitAltar.html#a9ba7807b70b1d35335fd06941950b02d":[1,0,1396,0],
+"classTraitAltar.html#aba8b3431e81a47fa306e204ca6b7e9c1":[1,0,1396,12],
+"classTraitAltar.html#ac631be9bc0add6867a5fb6993215df3e":[1,0,1396,8],
+"classTraitAltar.html#acce5c7d09ed1a3b0acaf4a577cbfdbc0":[1,0,1396,9],
+"classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752":[1,0,1396,4],
 "classTraitAltar.html#ae59022869e58c61830f66a53b1bdfe54":[1,0,1396,10],
 "classTraitAltar.html#ae5fd67e75b95c7edf12a6cf333c01a6d":[1,0,1396,15],
 "classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919":[1,0,1396,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitBrewery.html#af6db96e2d5003643fc59104d280777c1":[1,0,1445,7],
 "classTraitBroom.html":[1,0,1446],
 "classTraitBroom.html#a9abeb512e6bd909828dcc06921134bba":[1,0,1446,1],
-"classTraitBroom.html#abb8942a50793670e76df21f2d5f74b3f":[1,0,1446,0],
-"classTraitBroomWitch.html":[1,0,1447],
-"classTraitBuildBoard.html":[1,0,1448],
-"classTraitBuildBoard.html#a27513be20ef8e5426a7729e1525cf7b7":[1,0,1448,0],
-"classTraitBuildBoard.html#a42864a925c4d3be0cd7583e79c80e4c6":[1,0,1448,1],
-"classTraitButcher.html":[1,0,1449],
-"classTraitButcher.html#a7c70e9340a319dcaea9405e19e121223":[1,0,1449,0],
-"classTraitButcher.html#aaa2e972b3aecbd51a01b4df7e1aede2a":[1,0,1449,2],
-"classTraitButcher.html#aabe2afc5aa8883e90a78ffc9325172db":[1,0,1449,1],
-"classTraitButcher.html#ad06c72c96bc8d4520e5f41a3a11dea30":[1,0,1449,4],
-"classTraitButcher.html#af9cd246546f984180c50259ad6651217":[1,0,1449,3],
-"classTraitCage.html":[1,0,1450],
-"classTraitCage.html#ad30f8fdf75aa274c1a046adeaecc7a19":[1,0,1450,0]
+"classTraitBroom.html#abb8942a50793670e76df21f2d5f74b3f":[1,0,1446,0]
 };

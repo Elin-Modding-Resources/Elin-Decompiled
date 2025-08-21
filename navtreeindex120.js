@@ -1,5 +1,17 @@
 var NAVTREEINDEX120 =
 {
+"classTraitPotion.html":[1,0,1740],
+"classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0":[1,0,1740,1],
+"classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1740,0],
+"classTraitPotionAlchemy.html":[1,0,1741],
+"classTraitPotionAlchemy.html#a1fc02cad3212f3257ce98be1e74b24d2":[1,0,1741,0],
+"classTraitPotionAlchemy.html#a9b47cf772fdbc8261c42edfc8124bd35":[1,0,1741,2],
+"classTraitPotionAlchemy.html#afbe2c5dc046840f3d0e06840b81548fb":[1,0,1741,1],
+"classTraitPotionEmpty.html":[1,0,1742],
+"classTraitPotionEmpty.html#a479119429f1aad7dc8d43f3a7870aeb8":[1,0,1742,3],
+"classTraitPotionEmpty.html#a5c7c586fa312bde006e46eb2f8b3c6b3":[1,0,1742,0],
+"classTraitPotionEmpty.html#a827023eb995b6e874b6c13f1ec9dabbb":[1,0,1742,4],
+"classTraitPotionEmpty.html#aca8c5b343e5ee07e3f37bc4c937dcc06":[1,0,1742,2],
 "classTraitPotionEmpty.html#acf75a07b204c6897c1318f5068aefd27":[1,0,1742,5],
 "classTraitPotionEmpty.html#ae2b5d3e8d70472d582ab0bd42d9b966f":[1,0,1742,1],
 "classTraitPotionLove.html":[1,0,1743],
@@ -237,17 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitSecretary.html#a30a9225084c8540bab55047482cdd0cb":[1,0,1787,2],
 "classTraitSecretary.html#a609c1fe1754e9ba237082cdb70fa0ea6":[1,0,1787,5],
 "classTraitSecretary.html#a6110ea0c3c95006b574bc9ee6131f9d4":[1,0,1787,4],
-"classTraitSecretary.html#ac6154c708ec273c7f2daf8708b80274a":[1,0,1787,3],
-"classTraitSeed.html":[1,0,1788],
-"classTraitSeed.html#a022b05bc222961ddf02ab956699a4376":[1,0,1788,1],
-"classTraitSeed.html#a0a7364e58a3db978d861f788fcd72438":[1,0,1788,8],
-"classTraitSeed.html#a1727c60f9daf9a01e0236563a5f9996d":[1,0,1788,7],
-"classTraitSeed.html#a2fd15c009c1b0ffaf779cdeb47b687e4":[1,0,1788,16],
-"classTraitSeed.html#a346a08c0db4fdbb57b8086666608db8e":[1,0,1788,14],
-"classTraitSeed.html#a3aa16e52587f4375ef3bad7d638a09a5":[1,0,1788,0],
-"classTraitSeed.html#a4c8fc307a12d9be529fdcc916a6fa541":[1,0,1788,10],
-"classTraitSeed.html#a4e85436bb9800c6440030b79204601d9":[1,0,1788,5],
-"classTraitSeed.html#a502a7261aa65ae535c1d8299f74d353e":[1,0,1788,15],
-"classTraitSeed.html#a61ae35f26f93dc15995f201e669f1f56":[1,0,1788,12],
-"classTraitSeed.html#a846200a872efeb8f6e2d71fbf026a608":[1,0,1788,6]
+"classTraitSecretary.html#ac6154c708ec273c7f2daf8708b80274a":[1,0,1787,3]
 };

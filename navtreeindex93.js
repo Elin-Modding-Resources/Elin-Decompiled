@@ -1,5 +1,16 @@
 var NAVTREEINDEX93 =
 {
+"classQuestTrackCraft.html#a7cbe2328147f1e310cfb9337e72c8fdb":[1,0,1039,0],
+"classQuestTrackCraft.html#a8773f3458204c82174afe4ca8417c08f":[1,0,1039,2],
+"classQuestTrackCraft.html#a94f156e27741e7d560da2bbc25db2213":[1,0,1039,1],
+"classQuestTrackCraft.html#ab7ad04d609685b248b6312f34da5436d":[1,0,1039,7],
+"classQuestTrackCraft.html#ac5cc012a86527adb6082f33b1a005998":[1,0,1039,5],
+"classQuestTrackCraft.html#aefc388a00c6867fb36a8bf2953b9761f":[1,0,1039,6],
+"classQuestTrackCraft.html#aff5c4b88bd2bf521f70d5ddd49491b6a":[1,0,1039,3],
+"classQuestVernis.html":[1,0,1040],
+"classQuestVernis.html#a12d4f9482c6ac53b2d0ef412634109bd":[1,0,1040,0],
+"classQuestVernis.html#a1e2fdf252b649b99a84103ce72ec0b17":[1,0,1040,1],
+"classQuestVernis.html#a5adb13db581fadd870fcd4f35da58f8a":[1,0,1040,2],
 "classQuestVernis.html#a7139c08254711f7726d5326a64f1f103":[1,0,1040,5],
 "classQuestVernis.html#ab25e94b71d14c0e1d17f531ee38795fb":[1,0,1040,4],
 "classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1040,3],
@@ -238,16 +249,5 @@ var NAVTREEINDEX93 =
 "classRecipeSource.html#a8dd1c6fe6c4ae9fc0926236f39dc9e53":[1,0,1055,15],
 "classRecipeSource.html#a8f18d60250c94437c895922bf455293a":[1,0,1055,13],
 "classRecipeSource.html#a91b02f451d58c183747bab683a50eb14":[1,0,1055,4],
-"classRecipeSource.html#aa020ed75e904c0a435556008bb20a4d4":[1,0,1055,9],
-"classRecipeSource.html#ab70f617638ee28866d9874ff8bb7293d":[1,0,1055,20],
-"classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9":[1,0,1055,6],
-"classRecipeSource.html#ad045f951fe9f92c5fdb3c3c44e8fed08":[1,0,1055,11],
-"classRecipeSource.html#ada67fceaabc441381e2c2040571a1eb4":[1,0,1055,12],
-"classRecipeSource.html#addd0a63fa0714fc7d37f758c9c8f02e2":[1,0,1055,1],
-"classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974":[1,0,1055,7],
-"classRecipeSource.html#af505d7e0a3fd033fa5a0c4723681ec13":[1,0,1055,18],
-"classRecipeUpdater.html":[1,0,1056],
-"classRecipeUpdater.html#a0b7fca26e291a0d14086869dcc7355a7":[1,0,1056,8],
-"classRecipeUpdater.html#a2f2a79e4c28079a4b28527691b2f7cf2":[1,0,1056,5],
-"classRecipeUpdater.html#a3f03e2876c410ee5708f5f6c5b522fd3":[1,0,1056,6]
+"classRecipeSource.html#aa020ed75e904c0a435556008bb20a4d4":[1,0,1055,9]
 };

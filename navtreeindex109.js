@@ -1,5 +1,17 @@
 var NAVTREEINDEX109 =
 {
+"classTaskCraft.html":[1,0,1277],
+"classTaskCraft.html#a00292a3bbb3aa611476f851eb2cb2ccb":[1,0,1277,9],
+"classTaskCraft.html#a0d717bd179ab810f667da4bfe6e0f401":[1,0,1277,11],
+"classTaskCraft.html#a244dc6cb1ff89f60057ff520e5047020":[1,0,1277,5],
+"classTaskCraft.html#a400db612738428780a2f682a6740b68d":[1,0,1277,14],
+"classTaskCraft.html#a506799dfe78905d8a1c576c64a51e877":[1,0,1277,0],
+"classTaskCraft.html#a552e5e046b35510d23da92dd45c18e20":[1,0,1277,22],
+"classTaskCraft.html#a59d420aff4354ed8658c2304cebe40cc":[1,0,1277,1],
+"classTaskCraft.html#a5ff77727afd9263f0bbcefa0e50cd334":[1,0,1277,19],
+"classTaskCraft.html#a6072100d0eb8162cc64199df7d7be537":[1,0,1277,8],
+"classTaskCraft.html#a607918eff9586d11a4de8bd20c2fea02":[1,0,1277,7],
+"classTaskCraft.html#a62d09e2acf9a079d0fdb5e298bd54cc5":[1,0,1277,20],
 "classTaskCraft.html#a79339b48f3823f058399ea2e67b8623e":[1,0,1277,13],
 "classTaskCraft.html#a856fa238c5546700c400c0e035e077ca":[1,0,1277,16],
 "classTaskCraft.html#a85d75f752cb8d8133ac35a7582e00988":[1,0,1277,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX109 =
 "classTextConv.html":[1,0,1309],
 "classTextConv.html#a4d72e06f138460339b0147b4b5fc5395":[1,0,1309,3],
 "classTextConv.html#a625da84928d638378d2f1beab27e2f6a":[1,0,1309,6],
-"classTextConv.html#a629acd165884996a945d14809c88f0e6":[1,0,1309,8],
-"classTextConv.html#a6d71c4480a0f26e9ec232ab8b64f35d4":[1,0,1309,5],
-"classTextConv.html#a7d18d9ee6176852e73b44d845d8be1e7":[1,0,1309,9],
-"classTextConv.html#a7e441b5feed6e9e632febca39b91cbb2":[1,0,1309,1],
-"classTextConv.html#a9137939e5d0111181049b39be097adf6":[1,0,1309,10],
-"classTextConv.html#a9557c31570d84558b73d3aa790b1c072":[1,0,1309,12],
-"classTextConv.html#aa7f294abba2a06f367c01302a26183bc":[1,0,1309,11],
-"classTextConv.html#acce4ebb4461fcb08cf292d5d2019a0ab":[1,0,1309,7],
-"classTextConv.html#ad53aa1f5f2fb99d381b347580ba59ace":[1,0,1309,4],
-"classTextConv.html#ae268767087790114a74dd57dab69e2dd":[1,0,1309,2],
-"classTextConv_1_1Item.html":[1,0,1309,0],
-"classTextConv_1_1Item.html#a396c79d2afe4acf744c07e97494f1d5c":[1,0,1309,0,2],
-"classTextConv_1_1Item.html#a6b0ee0740d1281995ba51ba53811b064":[1,0,1309,0,0]
+"classTextConv.html#a629acd165884996a945d14809c88f0e6":[1,0,1309,8]
 };

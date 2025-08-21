@@ -1,5 +1,17 @@
 var NAVTREEINDEX133 =
 {
+"classWidgetRoster_1_1Extra.html#af30ee8aec1c77a57118c2853f10ca191":[1,0,2040,0,6],
+"classWidgetSceneCustomizer.html":[1,0,2041],
+"classWidgetSceneCustomizer.html#a0718e602eda84b4ba155b2a9171ccb37":[1,0,2041,1],
+"classWidgetSceneCustomizer.html#a20217afc649b963133fa459174e41d5e":[1,0,2041,5],
+"classWidgetSceneCustomizer.html#a2120e070aa065e41fc4c0b44afb6d4e9":[1,0,2041,8],
+"classWidgetSceneCustomizer.html#a344ee2edb4343950203b1898a5008355":[1,0,2041,4],
+"classWidgetSceneCustomizer.html#a4586280acae1bbda085185ac93a3c959":[1,0,2041,18],
+"classWidgetSceneCustomizer.html#a461ed15d9d198031a1dfac979b7b8598":[1,0,2041,2],
+"classWidgetSceneCustomizer.html#a46bde2fdce39a065e3d011557ba73e7f":[1,0,2041,6],
+"classWidgetSceneCustomizer.html#a5105dbe11d1769d9cda4da2b9bfbcaa9":[1,0,2041,3],
+"classWidgetSceneCustomizer.html#a56d8728cb6d0b1e9637f77ec1207b933":[1,0,2041,9],
+"classWidgetSceneCustomizer.html#a58c0933d2b429b1b269098655c9a869a":[1,0,2041,7],
 "classWidgetSceneCustomizer.html#a5e424966973dd0195cd1be50e57075af":[1,0,2041,17],
 "classWidgetSceneCustomizer.html#a7fdbcfca315e90797b218202b8727243":[1,0,2041,16],
 "classWidgetSceneCustomizer.html#a860608498af73c607b7a667ef887f040":[1,0,2041,10],
@@ -237,17 +249,5 @@ var NAVTREEINDEX133 =
 "classWidget_1_1Meta.html#a919bf3aa8824bfc442d93408afc0cd61":[1,0,2013,1,3],
 "classWidget_1_1Meta.html#ab12cd5695e46a4fb63b3b9c575abe2fb":[1,0,2013,1,5],
 "classWidget_1_1Meta.html#af372051c4862e0fb4fafe2bf0f0870e7":[1,0,2013,1,6],
-"classWindow.html":[1,0,2053],
-"classWindow.html#a01d9a8c9cb68c345db103ef73ad6c20f":[1,0,2053,127],
-"classWindow.html#a03d59531adc8159d58a0e3490b77b372":[1,0,2053,92],
-"classWindow.html#a0542dfd8da64d09ad76271d30766772d":[1,0,2053,35],
-"classWindow.html#a06f406c471d30bdbb476d99d30444da9":[1,0,2053,103],
-"classWindow.html#a07a3b89d10ab9b7b7e4f265fb6fe77de":[1,0,2053,55],
-"classWindow.html#a07fbd34441a05a98b52d2c19359928bb":[1,0,2053,62],
-"classWindow.html#a0ab5e99fd4af2fd01820be3180b47b6d":[1,0,2053,39],
-"classWindow.html#a0f13e4359530f1a2d3b781edafe2840d":[1,0,2053,149],
-"classWindow.html#a101a13514ebec0bed5086c58ded57da5":[1,0,2053,112],
-"classWindow.html#a10c920363d83fc0c71a6633590254dc8":[1,0,2053,70],
-"classWindow.html#a122069cbe0e5104faddbd4d4a59ded87":[1,0,2053,105],
-"classWindow.html#a126c5a5e437d1a577516040360c928e2":[1,0,2053,15]
+"classWindow.html":[1,0,2053]
 };

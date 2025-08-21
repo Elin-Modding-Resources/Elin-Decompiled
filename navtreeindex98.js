@@ -1,5 +1,16 @@
 var NAVTREEINDEX98 =
 {
+"classSPELL.html#a9bbabe3edd3cb7441fb9422bd6a1b708":[1,0,1223,229],
+"classSPELL.html#a9da39085ff5fbd076238e38ae4434fc3":[1,0,1223,72],
+"classSPELL.html#a9e1eee1cff7ffc84e1d17a55ebc5a2ab":[1,0,1223,82],
+"classSPELL.html#a9e7949eee5143fddb9b67ba2364d2f32":[1,0,1223,110],
+"classSPELL.html#aa1a0bd79789874fb8005789f69616b13":[1,0,1223,146],
+"classSPELL.html#aa21fe69d1f27b85785ac95b4bebc9c48":[1,0,1223,189],
+"classSPELL.html#aa2a2b8ffedffc0dd8bf43adb521aa563":[1,0,1223,68],
+"classSPELL.html#aa315313434a26668253869773133891e":[1,0,1223,105],
+"classSPELL.html#aa3dd07caf20a200a0c7835818bda19de":[1,0,1223,123],
+"classSPELL.html#aa3fdcb2025fe3b6bc45d4e8fe0a8c1c9":[1,0,1223,87],
+"classSPELL.html#aa4583afc997268495fcbab7d99c64d54":[1,0,1223,188],
 "classSPELL.html#aa4cb767aaf0dcbf50bd88ee3000618ea":[1,0,1223,1],
 "classSPELL.html#aa505c67bd3a666c3f00ba4a720c83281":[1,0,1223,15],
 "classSPELL.html#aa525e85d0b0e5bcc67a0d0abdee861ca":[1,0,1223,172],
@@ -238,16 +249,5 @@ var NAVTREEINDEX98 =
 "classSceneProfile.html#aff5c41ed79116864d74a01d770f0fcdb":[1,0,1123,3],
 "classSceneTemplate.html":[1,0,1124],
 "classSceneTemplate.html#a1e46f0d7190713741f8c8ab795add40f":[1,0,1124,1],
-"classSceneTemplate.html#a852b39e49d364431d974177908465d2b":[1,0,1124,2],
-"classSceneTemplate.html#ada8e69ce3f23212cb5fed61101074f4b":[1,0,1124,0],
-"classSchedule.html":[1,0,1125],
-"classSchedule.html#ae0a4a4df663b9423ddc6359613dce3f9":[1,0,1125,1],
-"classSchedule_1_1Item.html":[1,0,1125,0],
-"classSchedule_1_1Item.html#a5788da855884d3ee1ba0e062e405d24d":[1,0,1125,0,1],
-"classSchedule_1_1Item.html#a84faee7317c29e09297d3d869851fead":[1,0,1125,0,0],
-"classScreenEffect.html":[1,0,1126],
-"classScreenEffect.html#a1ff3b5338df72aef4a26d4910fff8ee1":[1,0,1126,4],
-"classScreenEffect.html#a23025cfebb1d68e7e2f5dc2709f6d357":[1,0,1126,0],
-"classScreenEffect.html#a65534a7b6967747a6dcbc4ad86feb038":[1,0,1126,1],
-"classScreenEffect.html#a92ddb916735490739d0a8bdebe14db17":[1,0,1126,3]
+"classSceneTemplate.html#a852b39e49d364431d974177908465d2b":[1,0,1124,2]
 };

@@ -1,5 +1,17 @@
 var NAVTREEINDEX115 =
 {
+"classTraitBroomWitch.html":[1,0,1447],
+"classTraitBuildBoard.html":[1,0,1448],
+"classTraitBuildBoard.html#a27513be20ef8e5426a7729e1525cf7b7":[1,0,1448,0],
+"classTraitBuildBoard.html#a42864a925c4d3be0cd7583e79c80e4c6":[1,0,1448,1],
+"classTraitButcher.html":[1,0,1449],
+"classTraitButcher.html#a7c70e9340a319dcaea9405e19e121223":[1,0,1449,0],
+"classTraitButcher.html#aaa2e972b3aecbd51a01b4df7e1aede2a":[1,0,1449,2],
+"classTraitButcher.html#aabe2afc5aa8883e90a78ffc9325172db":[1,0,1449,1],
+"classTraitButcher.html#ad06c72c96bc8d4520e5f41a3a11dea30":[1,0,1449,4],
+"classTraitButcher.html#af9cd246546f984180c50259ad6651217":[1,0,1449,3],
+"classTraitCage.html":[1,0,1450],
+"classTraitCage.html#ad30f8fdf75aa274c1a046adeaecc7a19":[1,0,1450,0],
 "classTraitCageBreeding.html":[1,0,1451],
 "classTraitCageBreeding.html#a779c81f89cd66f20077a888380404e22":[1,0,1451,1],
 "classTraitCageBreeding.html#aa7d49a6b01ba23fad87525861730ba91":[1,0,1451,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitCrafter.html#ae834415b06f94a32305c88d57baedfe2":[1,0,1494,28],
 "classTraitCrafter.html#aed95a974a58e7bb8cfad5ba2c462a7b0":[1,0,1494,32],
 "classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4":[1,0,1494,0],
-"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3":[1,0,1494,0,1],
-"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67":[1,0,1494,0,0],
-"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0":[1,0,1494,0,2],
-"classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613":[1,0,1494,3],
-"classTraitCrafter.html#afd71330988c12ddf321aab298566b69b":[1,0,1494,24],
-"classTraitCrafter.html#aff65bd2e6b1c0b1ca49985bc7e9a4e9c":[1,0,1494,19],
-"classTraitCrenel.html":[1,0,1495],
-"classTraitCrenel.html#adb6e4a2b412ecdd0c4edb7895a11d7ea":[1,0,1495,0],
-"classTraitCrenel.html#adcc43621d3918d5e8df769c1445e7136":[1,0,1495,1],
-"classTraitCurrency.html":[1,0,1496],
-"classTraitCurrency.html#a8ad4ef6f66318b88486c825e591e4082":[1,0,1496,0],
-"classTraitCurrencyMedal.html":[1,0,1497],
-"classTraitCurrencyMedal.html#a83af106650761bd1917199486fe112f2":[1,0,1497,0]
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3":[1,0,1494,0,1]
 };

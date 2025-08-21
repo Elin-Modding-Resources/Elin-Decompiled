@@ -1,5 +1,14 @@
 var NAVTREEINDEX53 =
 {
+"classCoreRef_1_1Rects.html#a4d5ab247f8488c8cdd85e0d1d510834d":[1,0,392,9,3],
+"classCoreRef_1_1Rects.html#a61b1d2086446d460d4fd21b2cc1172bd":[1,0,392,9,5],
+"classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5":[1,0,392,9,2],
+"classCoreRef_1_1Renderers.html":[1,0,392,10],
+"classCoreRef_1_1Renderers.html#a2fab1d50e14ff21bdcc453e9fcd7f609":[1,0,392,10,6],
+"classCoreRef_1_1Renderers.html#a3ee741db9c05d14bf2a01c6c2a2ab574":[1,0,392,10,5],
+"classCoreRef_1_1Renderers.html#a6851b96cc0194056dca4bbb0b8164c02":[1,0,392,10,2],
+"classCoreRef_1_1Renderers.html#a8450497361b48094f5b07e1d829ef4d1":[1,0,392,10,1],
+"classCoreRef_1_1Renderers.html#a8eba232bab79b1a348f421f462ef01db":[1,0,392,10,0],
 "classCoreRef_1_1Renderers.html#aa841c8e8636b2a0f7533ef04fc131f11":[1,0,392,10,3],
 "classCoreRef_1_1Renderers.html#ae8508c1ff81736ddf55703347b612f68":[1,0,392,10,4],
 "classCoreRef_1_1StateIcons.html":[1,0,392,11],
@@ -240,14 +249,5 @@ var NAVTREEINDEX53 =
 "classCurveEffect.html#af99f4432517f8b98a85e0d89ebdfe078":[1,0,411,4],
 "classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135":[1,0,411,0],
 "classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135a24f61a4979dc619f0818897243ddb6c6":[1,0,411,0,0],
-"classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135adc929a6461aceeab9137cc5fe5117421":[1,0,411,0,1],
-"classCustomAssetManager.html":[1,0,412],
-"classCustomAssetManager.html#a02e86fbc0c568acc70f19b7e46cd7d62":[1,0,412,10],
-"classCustomAssetManager.html#a054eb7b25892f4197cde0dfa42d19277":[1,0,412,2],
-"classCustomAssetManager.html#a2eb62409c6ccd420e182d23c1e83db6a":[1,0,412,0],
-"classCustomAssetManager.html#a2fa99c60d3e75b2eb48bfd41e68f26da":[1,0,412,4],
-"classCustomAssetManager.html#a38cef00e246fc2808ec86b1843ce0a78":[1,0,412,5],
-"classCustomAssetManager.html#a8d8b6fd934be92fb1951d8ed4b1d6236":[1,0,412,9],
-"classCustomAssetManager.html#ab1d0e377a3880488b866adf325cd41db":[1,0,412,8],
-"classCustomAssetManager.html#ae09b9265863659481b80dbc82ab2ca0d":[1,0,412,3]
+"classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135adc929a6461aceeab9137cc5fe5117421":[1,0,411,0,1]
 };

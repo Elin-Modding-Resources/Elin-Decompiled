@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.184 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.185 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -129,6 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a76d1630152dc1877d7542cee54171496 inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a199a1b529edcc7541de0d408c37dc13f inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a199a1b529edcc7541de0d408c37dc13f">GetDungenID</a> ()</td></tr>
 <tr class="separator:a199a1b529edcc7541de0d408c37dc13f inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622fdcf3ed72e282396fe974054477da inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a622fdcf3ed72e282396fe974054477da">ShouldScaleImportedChara</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
+<tr class="separator:a622fdcf3ed72e282396fe974054477da inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a032535cde9d0d91cf2f5a11d115794f1 inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a032535cde9d0d91cf2f5a11d115794f1">GetNewZoneID</a> (int level)</td></tr>
 <tr class="separator:a032535cde9d0d91cf2f5a11d115794f1 inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1339d73d4f6375d2f738cf2ba1c10e8b inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a1339d73d4f6375d2f738cf2ba1c10e8b">ToString</a> ()</td></tr>
@@ -405,8 +407,8 @@ Properties</h2></td></tr>
 <tr class="separator:a6ef3406e9a33ac89c4f059053302bc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab510cce2c74b00322d6efec82c495167"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone__Void.html#ab510cce2c74b00322d6efec82c495167">MinLv</a><code> [get]</code></td></tr>
 <tr class="separator:ab510cce2c74b00322d6efec82c495167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec0ebad529e1315ebb9aceab2f633b1"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone__Void.html#a0ec0ebad529e1315ebb9aceab2f633b1">ScaleMonsterLevel</a><code> [get]</code></td></tr>
-<tr class="separator:a0ec0ebad529e1315ebb9aceab2f633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5341d9971ad1b83a61f096063306f1b9"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="ZoneScaleType_8cs.html#a7e72a69f00063c292944f6f3eacb5a95">ZoneScaleType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone__Void.html#a5341d9971ad1b83a61f096063306f1b9">ScaleType</a><code> [get]</code></td></tr>
+<tr class="separator:a5341d9971ad1b83a61f096063306f1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae32d7e91e6e775463fd666e7936eafb0"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone__Void.html#ae32d7e91e6e775463fd666e7936eafb0">LockExit</a><code> [get]</code></td></tr>
 <tr class="separator:ae32d7e91e6e775463fd666e7936eafb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa867dd044043c9cd33e56fcd3ad8f9bb"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone__Void.html#aa867dd044043c9cd33e56fcd3ad8f9bb">CanUnlockExit</a><code> [get]</code></td></tr>
@@ -601,6 +603,8 @@ Properties</h2></td></tr>
 <tr class="separator:a29edd5ce6d603f47268726af34c3858b inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a338fdbb8166b189b6892518e05b85c35 inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a338fdbb8166b189b6892518e05b85c35">StartLV</a><code> [get]</code></td></tr>
 <tr class="separator:a338fdbb8166b189b6892518e05b85c35 inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4519ee38815d1c729bdaa7811eba5a0f inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="ZoneScaleType_8cs.html#a7e72a69f00063c292944f6f3eacb5a95">ZoneScaleType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a4519ee38815d1c729bdaa7811eba5a0f">ScaleType</a><code> [get]</code></td></tr>
+<tr class="separator:a4519ee38815d1c729bdaa7811eba5a0f inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad10b4db7ef893ff38b4dd7cd7d4c84f4 inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#ad10b4db7ef893ff38b4dd7cd7d4c84f4">ScaleMonsterLevel</a><code> [get]</code></td></tr>
 <tr class="separator:ad10b4db7ef893ff38b4dd7cd7d4c84f4 inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e8e1eb5ff77cdff82cc4af14ddce31 inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#ae9e8e1eb5ff77cdff82cc4af14ddce31">HiddenInRegionMap</a><code> [get]</code></td></tr>
@@ -611,6 +615,8 @@ Properties</h2></td></tr>
 <tr class="separator:a849ee99b309c291444d44715293b7e3f inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad761e4f9a5386bf686d8aaf7d60df450 inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#ad761e4f9a5386bf686d8aaf7d60df450">NameWithLevel</a><code> [get]</code></td></tr>
 <tr class="separator:ad761e4f9a5386bf686d8aaf7d60df450 inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b7e0a08f5ce3d9e3e04728629b841c inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a08b7e0a08f5ce3d9e3e04728629b841c">TextDangerLv</a><code> [get]</code></td></tr>
+<tr class="separator:a08b7e0a08f5ce3d9e3e04728629b841c inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9ef9e6916d04c2ef2cc105f590ff385 inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#ad9ef9e6916d04c2ef2cc105f590ff385">TextDeepestLv</a><code> [get]</code></td></tr>
 <tr class="separator:ad9ef9e6916d04c2ef2cc105f590ff385 inherit properties_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebf95214dc485a8ad3817af07e913d29 inherit properties_classZone"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#aebf95214dc485a8ad3817af07e913d29">CanEnterBuildMode</a><code> [get]</code></td></tr>
@@ -722,6 +728,8 @@ Properties</h2></td></tr>
 <tr class="separator:ab005f3e3fcd24905d112de51b9d2d138 inherit properties_classSpatial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70184c59fc39eccddf9036a599a398e8 inherit properties_classSpatial"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatial.html#a70184c59fc39eccddf9036a599a398e8">DangerLvFix</a><code> [get]</code></td></tr>
 <tr class="separator:a70184c59fc39eccddf9036a599a398e8 inherit properties_classSpatial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c2cb49397c46756004abf6122f9198 inherit properties_classSpatial"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatial.html#a87c2cb49397c46756004abf6122f9198">DangerLvBoost</a><code> [get]</code></td></tr>
+<tr class="separator:a87c2cb49397c46756004abf6122f9198 inherit properties_classSpatial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93b2a0741359a69c9e02c6fd110cc9a inherit properties_classSpatial"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatial.html#aa93b2a0741359a69c9e02c6fd110cc9a">VolumeSea</a><code> [get]</code></td></tr>
 <tr class="separator:aa93b2a0741359a69c9e02c6fd110cc9a inherit properties_classSpatial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a442dbfc6d6a43b82769b03f0635e5806 inherit properties_classSpatial"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpatial.html#a442dbfc6d6a43b82769b03f0635e5806">ShowDangerLv</a><code> [get]</code></td></tr>
@@ -986,7 +994,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aHostility_8cs_html_abf5e46daccde02afce5e19cb6a74c500"><div class="ttname"><a href="Hostility_8cs.html#abf5e46daccde02afce5e19cb6a74c500">Hostility</a></div><div class="ttdeci">Hostility</div><div class="ttdef"><b>Definition:</b> <a href="Hostility_8cs_source.html#l00001">Hostility.cs:2</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00043">Chara.cs:43</a></div></div>
-<div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06209">Chara.cs:6209</a></div></div>
+<div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06220">Chara.cs:6220</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
@@ -995,10 +1003,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSpawnSetting_html"><div class="ttname"><a href="classSpawnSetting.html">SpawnSetting</a></div><div class="ttdef"><b>Definition:</b> <a href="SpawnSetting_8cs_source.html#l00001">SpawnSetting.cs:2</a></div></div>
 <div class="ttc" id="aclassSpawnSetting_html_a3e9c654b0589c2f09c6b493758268039"><div class="ttname"><a href="classSpawnSetting.html#a3e9c654b0589c2f09c6b493758268039">SpawnSetting.Boss</a></div><div class="ttdeci">static SpawnSetting Boss(int filterLv, int fixedLv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="SpawnSetting_8cs_source.html#l00045">SpawnSetting.cs:45</a></div></div>
 <div class="ttc" id="aclassZone__Void_html_a8b647d9cfbc067fb54a505f785055b95"><div class="ttname"><a href="classZone__Void.html#a8b647d9cfbc067fb54a505f785055b95">Zone_Void.IsBossLV</a></div><div class="ttdeci">bool IsBossLV</div><div class="ttdef"><b>Definition:</b> <a href="Zone__Void_8cs_source.html#l00003">Zone_Void.cs:4</a></div></div>
-<div class="ttc" id="aclassZone_html_a743d6d3ff9afabf8ec22a96581f75ceb"><div class="ttname"><a href="classZone.html#a743d6d3ff9afabf8ec22a96581f75ceb">Zone.SpawnMob</a></div><div class="ttdeci">Chara SpawnMob(Point pos=null, SpawnSetting setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02679">Zone.cs:2679</a></div></div>
+<div class="ttc" id="aclassZone_html_a743d6d3ff9afabf8ec22a96581f75ceb"><div class="ttname"><a href="classZone.html#a743d6d3ff9afabf8ec22a96581f75ceb">Zone.SpawnMob</a></div><div class="ttdeci">Chara SpawnMob(Point pos=null, SpawnSetting setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02688">Zone.cs:2688</a></div></div>
 <div class="ttc" id="aclassZone_html_ac539719d05a3d41d2d23d60d2df22aff"><div class="ttname"><a href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">Zone.DangerLv</a></div><div class="ttdeci">override int DangerLv</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00106">Zone.cs:107</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aceb8447cc4ab78d2ec34cd9f11e4bed2">boss</a>, <a class="el" href="SpawnSetting_8cs_source.html#l00045">SpawnSetting.Boss()</a>, <a class="el" href="Map_8cs_source.html#l00081">Map.charas</a>, <a class="el" href="Zone_8cs_source.html#l00107">Zone.DangerLv</a>, <a class="el" href="Zone__Void_8cs_source.html#l00004">IsBossLV</a>, <a class="el" href="Chara_8cs_source.html#l06209">Chara.IsHostile()</a>, <a class="el" href="Party_8cs_source.html#l00018">Party.members</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="Zone_8cs_source.html#l02679">Zone.SpawnMob()</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aceb8447cc4ab78d2ec34cd9f11e4bed2">boss</a>, <a class="el" href="SpawnSetting_8cs_source.html#l00045">SpawnSetting.Boss()</a>, <a class="el" href="Map_8cs_source.html#l00081">Map.charas</a>, <a class="el" href="Zone_8cs_source.html#l00107">Zone.DangerLv</a>, <a class="el" href="Zone__Void_8cs_source.html#l00004">IsBossLV</a>, <a class="el" href="Chara_8cs_source.html#l06220">Chara.IsHostile()</a>, <a class="el" href="Party_8cs_source.html#l00018">Party.members</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, and <a class="el" href="Zone_8cs_source.html#l02688">Zone.SpawnMob()</a>.</p>
 
 </div>
 </div>
@@ -1102,8 +1110,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   12</span>        }</div>
 <div class="line"><span class="lineno">   13</span>    }</div>
-<div class="ttc" id="aclassZone_html_a4db1e848e7bff8b57cbc60873d15b87d"><div class="ttname"><a href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">Zone.GetTopZone</a></div><div class="ttdeci">Zone GetTopZone()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01886">Zone.cs:1886</a></div></div>
-<div class="ttc" id="aclassZone_html_a5e99d9a7d1f87129b31a866bc84644c6"><div class="ttname"><a href="classZone.html#a5e99d9a7d1f87129b31a866bc84644c6">Zone.GetDeepestLv</a></div><div class="ttdeci">int GetDeepestLv()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02957">Zone.cs:2957</a></div></div>
+<div class="ttc" id="aclassZone_html_a4db1e848e7bff8b57cbc60873d15b87d"><div class="ttname"><a href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">Zone.GetTopZone</a></div><div class="ttdeci">Zone GetTopZone()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01895">Zone.cs:1895</a></div></div>
+<div class="ttc" id="aclassZone_html_a5e99d9a7d1f87129b31a866bc84644c6"><div class="ttname"><a href="classZone.html#a5e99d9a7d1f87129b31a866bc84644c6">Zone.GetDeepestLv</a></div><div class="ttdeci">int GetDeepestLv()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02967">Zone.cs:2967</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="Zone__Void_8cs_source.html#l00057">OnGenerateMap()</a>.</p>
 
@@ -1157,8 +1165,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ec0ebad529e1315ebb9aceab2f633b1" name="a0ec0ebad529e1315ebb9aceab2f633b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ec0ebad529e1315ebb9aceab2f633b1">&#9670;&#160;</a></span>ScaleMonsterLevel</h2>
+<a id="a5341d9971ad1b83a61f096063306f1b9" name="a5341d9971ad1b83a61f096063306f1b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5341d9971ad1b83a61f096063306f1b9">&#9670;&#160;</a></span>ScaleType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1167,7 +1175,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override bool Zone_Void.ScaleMonsterLevel</td>
+          <td class="memname">override <a class="el" href="ZoneScaleType_8cs.html#a7e72a69f00063c292944f6f3eacb5a95">ZoneScaleType</a> Zone_Void.ScaleType</td>
         </tr>
       </table>
   </td>

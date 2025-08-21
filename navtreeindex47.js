@@ -1,5 +1,14 @@
 var NAVTREEINDEX47 =
 {
+"classColorProfile_1_1BlockColors.html#ad428f9dc5c1eaf63af61739acb3dfaea":[1,0,286,0,2],
+"classColorProfile_1_1BlockColors.html#ae4c84e79217e038daa119cd914ede991":[1,0,286,0,20],
+"classColorProfile_1_1PCLights.html":[1,0,286,1],
+"classColorProfile_1_1PCLights.html#a30528f180df46b944db528c60af05ad5":[1,0,286,1,1],
+"classColorProfile_1_1PCLights.html#ae3ebd6e17676b8f41eadb1d08c79bfe6":[1,0,286,1,0],
+"classColorProfile_1_1RarityColors.html":[1,0,286,2],
+"classColorProfile_1_1RarityColors.html#a26ac41b8dbadb4e9d41b9498e24c4d4b":[1,0,286,2,0],
+"classColorProfile_1_1RarityColors.html#a4a84930afe50735e9a4f9be1e84b7772":[1,0,286,2,1],
+"classColorProfile_1_1RarityColors.html#a4d5f11be82d0051ad40e8793eb9f5a0e":[1,0,286,2,4],
 "classColorProfile_1_1RarityColors.html#a5bd7eb53338b63dcee159a20a3d56479":[1,0,286,2,2],
 "classColorProfile_1_1RarityColors.html#afe6cb39b3473dd4325e2aa4aacdfdd29":[1,0,286,2,3],
 "classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,286,2,5],
@@ -240,14 +249,5 @@ var NAVTREEINDEX47 =
 "classConTorch.html":[1,0,374],
 "classConTorch.html#a257d37717596ad7d44a1f83e5f52a903":[1,0,374,2],
 "classConTorch.html#a36bb825a149846540ee834356d77e4bc":[1,0,374,0],
-"classConTorch.html#a509b747906126e35a1094d22a172cab0":[1,0,374,4],
-"classConTorch.html#a5ee0ce2caa3b79071714b14cbf509a2b":[1,0,374,3],
-"classConTorch.html#ab1487bed345a17352630c0ebb02e1d15":[1,0,374,1],
-"classConTransmute.html":[1,0,375],
-"classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a":[1,0,375,2],
-"classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013":[1,0,375,0],
-"classConTransmute.html#a54071b3bff56fc7b02e39fac45b95c2f":[1,0,375,1],
-"classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,375,3],
-"classConTransmuteBroom.html":[1,0,376],
-"classConTransmuteBroom.html#aeb7fecc8d0e9cd898c0223cf5c69563a":[1,0,376,0]
+"classConTorch.html#a509b747906126e35a1094d22a172cab0":[1,0,374,4]
 };

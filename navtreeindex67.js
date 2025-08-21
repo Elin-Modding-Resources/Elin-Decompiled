@@ -1,5 +1,15 @@
 var NAVTREEINDEX67 =
 {
+"classGoalWork.html#a98743380566d05d5a4ae2091ad139fed":[1,0,561,2],
+"classGoalWork.html#aaa51f3a65f2fe8848a8e59ce3caf5e29":[1,0,561,7],
+"classGoalWork.html#af5257e8f9c7fd0f16e2d4b14750faa87":[1,0,561,0],
+"classGoalWork.html#afa1d985e1477f615656f583a6ea948a3":[1,0,561,3],
+"classGodStatueData.html":[1,0,562],
+"classGodStatueData.html#a2d212fbe1f26d099c87f5e545bcce412":[1,0,562,2],
+"classGodStatueData.html#a899f3c401b475c7c5f4896eee1a3705d":[1,0,562,1],
+"classGodStatueData.html#ab7cba767a1978cc56c35d82ce9c7f72f":[1,0,562,0],
+"classGradientColor.html":[1,0,563],
+"classGradientColor.html#a05b54db208268d35199eedb9d2a79a54":[1,0,563,3],
 "classGradientColor.html#a09e57cc4cdedba08c67e2147a6305741":[1,0,563,5],
 "classGradientColor.html#a1078c170f5a12e2205fe581c77552309":[1,0,563,4],
 "classGradientColor.html#a11a492e909c882ff8a75be399208d202":[1,0,563,18],
@@ -239,15 +249,5 @@ var NAVTREEINDEX67 =
 "classGrowSystemWheat.html":[1,0,587],
 "classGrowSystemWheat.html#a222f7d600aa3caa55d53ee782bdae343":[1,0,587,2],
 "classGrowSystemWheat.html#a27315347780f0282b0350610a5eb7e96":[1,0,587,0],
-"classGrowSystemWheat.html#a7ca178e41b57c202760ee2d493d65116":[1,0,587,1],
-"classGrowSystemWheat.html#ab251f133fe33a8a217366fe88ac19727":[1,0,587,4],
-"classGrowSystemWheat.html#ac039e2a04188a91fd2a1a89c86d1cfef":[1,0,587,5],
-"classGrowSystemWheat.html#ad456c309a23e847bbffd289b5a6993c8":[1,0,587,3],
-"classGrowSystemWheat.html#afbbaf5f7a37669268a59346145461fb2":[1,0,587,6],
-"classGrowSystem_1_1Stage.html":[1,0,570,0],
-"classGrowSystem_1_1Stage.html#a10462949388df2fcc7fbde2c5e64671f":[1,0,570,0,6],
-"classGrowSystem_1_1Stage.html#a19180ef099b5165235ed08a45f582a91":[1,0,570,0,0],
-"classGrowSystem_1_1Stage.html#a1f2f65240a3fcdeff510ed1219665f03":[1,0,570,0,5],
-"classGrowSystem_1_1Stage.html#a2d4988f7b904ff78ee874b1a56e90d21":[1,0,570,0,7],
-"classGrowSystem_1_1Stage.html#a786feaf163f0fc39028143cae29f720e":[1,0,570,0,3]
+"classGrowSystemWheat.html#a7ca178e41b57c202760ee2d493d65116":[1,0,587,1]
 };

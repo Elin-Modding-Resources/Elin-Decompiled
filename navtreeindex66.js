@@ -1,5 +1,15 @@
 var NAVTREEINDEX66 =
 {
+"classGame_1_1Config.html#a12f4e08f88a7cdb69f4f78c89b0c3cfb":[1,0,514,0,5],
+"classGame_1_1Config.html#a1fce64db4ab4a6c0616a459e6a994ceb":[1,0,514,0,0],
+"classGame_1_1Config.html#a223530ce684d56b97afd5a7b4a7851f4":[1,0,514,0,18],
+"classGame_1_1Config.html#a297c69c5e6ebdd6457a45863c0a7d3b8":[1,0,514,0,19],
+"classGame_1_1Config.html#a46675d17b44d78c7b56b88d43e32cbcc":[1,0,514,0,14],
+"classGame_1_1Config.html#a4a0a3aaa6835cf240e90974e9427d2b3":[1,0,514,0,1],
+"classGame_1_1Config.html#a4cf7f5be30a566d0b3e9a39c4a8eb09f":[1,0,514,0,13],
+"classGame_1_1Config.html#a53124610666ff8184226167417e98371":[1,0,514,0,12],
+"classGame_1_1Config.html#a5327cc0b345e3ab1d4dce1746ce2fb43":[1,0,514,0,7],
+"classGame_1_1Config.html#a619371418ec5c480e733642b4a47c9f1":[1,0,514,0,17],
 "classGame_1_1Config.html#a621b2abfc75458744c1becd5aff114fb":[1,0,514,0,11],
 "classGame_1_1Config.html#a6ab750a2c818ebfb36f6431bab29e03d":[1,0,514,0,10],
 "classGame_1_1Config.html#a7b5dc61de5dfb544d33fe4f1796be694":[1,0,514,0,28],
@@ -239,15 +249,5 @@ var NAVTREEINDEX66 =
 "classGoalWork.html#a03f204746e3a6e6e13c5522b1f8a3a88":[1,0,561,5],
 "classGoalWork.html#a194d8c8a47325e7120eaf54e48e9212d":[1,0,561,1],
 "classGoalWork.html#a49e754ef61e57926724933f90ed13d2e":[1,0,561,6],
-"classGoalWork.html#a570b1a6c8fdd48e191a4ba6eaee1697f":[1,0,561,4],
-"classGoalWork.html#a98743380566d05d5a4ae2091ad139fed":[1,0,561,2],
-"classGoalWork.html#aaa51f3a65f2fe8848a8e59ce3caf5e29":[1,0,561,7],
-"classGoalWork.html#af5257e8f9c7fd0f16e2d4b14750faa87":[1,0,561,0],
-"classGoalWork.html#afa1d985e1477f615656f583a6ea948a3":[1,0,561,3],
-"classGodStatueData.html":[1,0,562],
-"classGodStatueData.html#a2d212fbe1f26d099c87f5e545bcce412":[1,0,562,2],
-"classGodStatueData.html#a899f3c401b475c7c5f4896eee1a3705d":[1,0,562,1],
-"classGodStatueData.html#ab7cba767a1978cc56c35d82ce9c7f72f":[1,0,562,0],
-"classGradientColor.html":[1,0,563],
-"classGradientColor.html#a05b54db208268d35199eedb9d2a79a54":[1,0,563,3]
+"classGoalWork.html#a570b1a6c8fdd48e191a4ba6eaee1697f":[1,0,561,4]
 };
