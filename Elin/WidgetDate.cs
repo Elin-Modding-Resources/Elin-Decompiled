@@ -65,6 +65,10 @@ public class WidgetDate : Widget
 		if (extra.loc)
 		{
 			text = text + " " + EMono._zone.NameWithLevel;
+			if (EMono._zone is Zone_Dungeon)
+			{
+				text += EMono._zone.TextDangerLv;
+			}
 			if (EMono._zone.isClaimable && !EMono._zone.IsPCFaction)
 			{
 				text += "(";
@@ -90,7 +94,7 @@ public class WidgetDate : Widget
 		}
 		if (EMono.debug.showExtra)
 		{
-			text = text + " (" + EMono._zone.biome.name + "/Lv:" + EMono._zone.lv + "/Danger:" + EMono._zone.DangerLv + "/_danger:" + EMono._zone._dangerLv + "/elec:" + EMono._zone.electricity + ")";
+			text = text + " <size=12>(" + EMono._zone.biome.name + "/Lv:" + EMono._zone.lv + "/Danger:" + EMono._zone.DangerLv + "/_danger:" + EMono._zone._dangerLv + "/elec:" + EMono._zone.electricity + ")</size>";
 			if (EMono._zone.IsInstance)
 			{
 				text += "Instance";

@@ -1,3 +1,3 @@
-public class Zone_Lesimas : Zone_Dungeon
+public class Zone_Lesimas : Zone_QuestDungeon
 {
 }

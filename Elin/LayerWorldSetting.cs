@@ -55,6 +55,8 @@ public class LayerWorldSetting : ELayer
 
 	public Transform transMold;
 
+	public Transform transHint;
+
 	public List<Sprite> sprites;
 
 	private bool started;
@@ -77,6 +79,7 @@ public class LayerWorldSetting : ELayer
 	{
 		buttonEmbark.SetActive(IsEmbark);
 		buttonWorkaround.SetActive(enable: true);
+		transHint.SetActive(IsEmbark);
 		if (IsEmbark)
 		{
 			ELayer.game.principal.modified.Clear();

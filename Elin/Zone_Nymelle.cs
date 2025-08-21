@@ -1,4 +1,4 @@
-public class Zone_Nymelle : Zone_Dungeon
+public class Zone_Nymelle : Zone_QuestDungeon
 {
 	public override string idExport
 	{

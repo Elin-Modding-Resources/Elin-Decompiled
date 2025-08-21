@@ -145,6 +145,9 @@ public class GamePrincipal : EClass
 	public bool disableUsermapBenefit;
 
 	[JsonProperty]
+	public bool scaleQuest;
+
+	[JsonProperty]
 	public bool realAdv;
 
 	[JsonProperty]
@@ -178,6 +181,10 @@ public class GamePrincipal : EClass
 		Add(1, Type.Oath, "disableUsermapBenefit", () => disableUsermapBenefit, delegate(bool a)
 		{
 			disableUsermapBenefit = a;
+		});
+		Add(1, Type.Oath, "scaleQuest", () => scaleQuest, delegate(bool a)
+		{
+			scaleQuest = a;
 		});
 		Add(3, Type.Oath, "permadeath", () => permadeath, delegate(bool a)
 		{

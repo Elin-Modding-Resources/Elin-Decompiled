@@ -10,7 +10,17 @@ public class Zone_RandomDungeon : Zone_Dungeon
 
 	public override int MinLv => LvBoss;
 
-	public override bool ScaleMonsterLevel => DangerLv >= 200;
+	public override ZoneScaleType ScaleType
+	{
+		get
+		{
+			if (DangerLv < 200)
+			{
+				return ZoneScaleType.None;
+			}
+			return ZoneScaleType.Void;
+		}
+	}
 
 	public override string IDPlayList
 	{

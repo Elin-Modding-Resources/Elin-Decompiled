@@ -4,7 +4,17 @@ public class Zone_Arena : Zone
 
 	public override bool AllowCriminal => true;
 
-	public override bool ScaleMonsterLevel => base._dangerLv >= 51;
+	public override ZoneScaleType ScaleType
+	{
+		get
+		{
+			if (base._dangerLv <= 50)
+			{
+				return ZoneScaleType.None;
+			}
+			return ZoneScaleType.Void;
+		}
+	}
 
 	public override bool MakeTownProperties => true;
 

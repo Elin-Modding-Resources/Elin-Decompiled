@@ -1665,6 +1665,17 @@ public class Chara : Card, IPathfindWalker
 		isCreated = true;
 	}
 
+	public Chara ScaleByPrincipal()
+	{
+		if (EClass.game.principal.scaleQuest && EClass._zone.DangerLvBoost != 0)
+		{
+			SetLv(base.LV + EClass._zone.DangerLvBoost);
+			things.DestroyAll();
+			TryRestock(onCreate: true);
+		}
+		return this;
+	}
+
 	public void SetFaith(string id)
 	{
 		SetFaith(EClass.game.religions.dictAll[id]);

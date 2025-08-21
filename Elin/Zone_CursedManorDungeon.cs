@@ -1,4 +1,4 @@
-public class Zone_CursedManorDungeon : Zone_Dungeon
+public class Zone_CursedManorDungeon : Zone_QuestDungeon
 {
 	public const int LvBoss = -6;
 

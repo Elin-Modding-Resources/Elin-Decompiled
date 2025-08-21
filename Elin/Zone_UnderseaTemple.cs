@@ -1,4 +1,4 @@
-public class Zone_UnderseaTemple : Zone_Dungeon
+public class Zone_UnderseaTemple : Zone_QuestDungeon
 {
 	public override bool IsUnderwater => true;
 

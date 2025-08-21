@@ -474,6 +474,8 @@ public class Spatial : EClass
 
 	public virtual int DangerLvFix => 0;
 
+	public virtual int DangerLvBoost => 0;
+
 	public virtual float VolumeSea
 	{
 		get

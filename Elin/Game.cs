@@ -450,6 +450,10 @@ public class Game : EClass
 			}
 		});
 		TryAddQuest("into_darkness", "exile_kettle");
+		if (version.IsBelow(0, 23, 185))
+		{
+			player.resetPrincipal = true;
+		}
 		if (version.IsBelow(0, 23, 182))
 		{
 			foreach (Chara value2 in cards.globalCharas.Values)
@@ -475,7 +479,6 @@ public class Game : EClass
 		if (version.IsBelow(0, 23, 96))
 		{
 			EClass.game.principal = IO.DeepCopy(EClass.setting.start.principals[0]);
-			player.resetPrincipal = true;
 		}
 		if (player.resetPrincipal)
 		{

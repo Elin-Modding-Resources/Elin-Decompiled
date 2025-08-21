@@ -769,6 +769,10 @@ public class SerializedCards : EClass
 					card2.ApplyBacker(card2.c_idBacker);
 				}
 				card2.SetObj(5, null);
+				if (EClass._zone.ShouldScaleImportedChara(card2.Chara))
+				{
+					card2.Chara.ScaleByPrincipal();
+				}
 			}
 			if (card2.trait is TraitFakeBlock)
 			{

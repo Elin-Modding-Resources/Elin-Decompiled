@@ -26,7 +26,7 @@ public class Zone_Void : Zone_Dungeon
 
 	public override int MinLv => -10000;
 
-	public override bool ScaleMonsterLevel => true;
+	public override ZoneScaleType ScaleType => ZoneScaleType.Void;
 
 	public override bool LockExit => IsBossLV;
 
