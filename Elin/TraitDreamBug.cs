@@ -16,7 +16,7 @@ public class TraitDreamBug : Trait
 
 	public override void OnBlend(Thing t, Chara c)
 	{
-		TraitDrink.BlendLove(EClass.pc, t, dream: true);
+		TraitDrink.BlendLove(EClass.pc, t, owner, dream: true);
 		owner.ModNum(-1);
 	}
 }

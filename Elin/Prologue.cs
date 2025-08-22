@@ -4,6 +4,8 @@ using UnityEngine;
 [Serializable]
 public class Prologue
 {
+	public GameType type;
+
 	public string idStartZone;
 
 	public int startX;

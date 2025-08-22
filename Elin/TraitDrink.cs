@@ -102,10 +102,10 @@ public class TraitDrink : Trait
 		switch (IdEffect)
 		{
 		case EffectId.Love:
-			BlendLove(c, t);
+			BlendLove(c, t, owner);
 			break;
 		case EffectId.Poison:
-			BlendPoison(c, t);
+			BlendPoison(c, t, owner);
 			break;
 		case EffectId.Acidproof:
 			c.Say("coated", t, c);
@@ -145,19 +145,19 @@ public class TraitDrink : Trait
 		owner.ModNum(-1);
 	}
 
-	public static void BlendLove(Chara c, Thing t, bool dream = false)
+	public static void BlendLove(Chara c, Thing t, Card source, bool dream = false)
 	{
 		Msg.Say("blend_love", t);
 		Thing thing = t.Split(1);
-		thing.elements.ModBase(dream ? 704 : 703, t.IsBlessed ? 15 : (t.IsCursed ? 5 : 10));
+		thing.elements.ModBase(dream ? 704 : 703, source.IsBlessed ? 15 : (source.IsCursed ? 5 : 10));
 		c.Pick(thing);
 	}
 
-	public static void BlendPoison(Chara c, Thing t)
+	public static void BlendPoison(Chara c, Thing t, Card source)
 	{
 		Msg.Say("blend_poison", t);
 		Thing thing = t.Split(1);
-		thing.elements.ModBase(702, t.IsBlessed ? 5 : (t.IsCursed ? 15 : 10));
+		thing.elements.ModBase(702, source.IsBlessed ? 5 : (source.IsCursed ? 15 : 10));
 		c.Pick(thing);
 	}
 

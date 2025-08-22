@@ -14,6 +14,11 @@ public class TraitFakeBlock : Trait
 
 	public override void OnCrafted(Recipe recipe, List<Thing> ings)
 	{
+		if (ings == null || ings.Count == 0)
+		{
+			owner.refVal = 1;
+			return;
+		}
 		TraitBlock traitBlock = ings[0].trait as TraitBlock;
 		owner.refVal = traitBlock.source.id;
 	}

@@ -1697,7 +1697,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		Debug.Log("Unloaded Map:" + this);
 	}
 
-	public void ClaimZone(bool debug = false)
+	public void ClaimZone(bool debug = false, Point pos = null)
 	{
 		EClass._map.RevealAll();
 		SetMainFaction(EClass.pc.faction);
@@ -1732,9 +1732,12 @@ public class Zone : Spatial, ICardParent, IInspect
 			EClass.Branch.Log("claimedZone");
 			EClass.Sound.Play("jingle_embark");
 			EClass.pc.PlaySound("build");
-			Effect.Get("aura_heaven").Play(EClass.pc.pos);
-			Point nearestPoint = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: true, allowInstalled: false);
-			EClass._zone.AddCard(ThingGen.Create("core_zone"), nearestPoint).SetPlaceState(PlaceState.installed);
+			if (pos == null)
+			{
+				pos = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: true, allowInstalled: false);
+			}
+			Effect.Get("aura_heaven").Play(pos);
+			EClass._zone.AddCard(ThingGen.Create("core_zone"), pos).SetPlaceState(PlaceState.installed);
 		}
 		base.idPrefix = 0;
 		if (EClass._zone == EClass.game.StartZone)

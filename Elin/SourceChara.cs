@@ -56,6 +56,8 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 
 		public int[] _tiles_snow;
 
+		public int skinAntiSpider;
+
 		[NonSerialized]
 		public SourceRace.Row _race_row;
 
@@ -98,7 +100,11 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		{
 			base.SetTiles();
 			staticSkin = HasTag(CTAG.staticSkin);
-			if ((bool)renderData && (bool)renderData.pass && (_tiles_snow == null || _tiles_snow.Length != tiles_snow.Length))
+			if (!renderData || !renderData.pass)
+			{
+				return;
+			}
+			if (_tiles_snow == null || _tiles_snow.Length != tiles_snow.Length)
 			{
 				_tiles_snow = new int[tiles_snow.Length];
 				for (int i = 0; i < tiles_snow.Length; i++)
@@ -106,6 +112,7 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 					_tiles_snow[i] = tiles_snow[i] / 100 * (int)renderData.pass.pmesh.tiling.x + tiles_snow[i] % 100;
 				}
 			}
+			skinAntiSpider = ((staticSkin && HasTag(CTAG.antiSpider)) ? 1 : 0);
 		}
 
 		public override string GetName()

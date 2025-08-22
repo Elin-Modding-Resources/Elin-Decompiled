@@ -44,7 +44,7 @@ public class TraitWaystone : Trait
 		}
 		else
 		{
-			if (!EClass._zone.parent.IsRegion || (EClass._zone.IsInstance && !EClass._zone.IsUserZone) || EClass._zone is Zone_Dungeon)
+			if (!EClass._zone.parent.IsRegion || (EClass._zone.IsInstance && !EClass._zone.IsUserZone) || EClass._zone is Zone_Dungeon || EClass._zone is Zone_StartSiteSky)
 			{
 				return;
 			}

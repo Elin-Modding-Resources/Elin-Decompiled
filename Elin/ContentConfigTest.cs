@@ -39,6 +39,8 @@ public class ContentConfigTest : ContentConfig
 
 	public UIButton toggleToolNoPick;
 
+	public UIButton toggleCompressSave;
+
 	public Slider sliderBrightness;
 
 	public override void OnInstantiate()
@@ -85,6 +87,10 @@ public class ContentConfigTest : ContentConfig
 		toggleToolNoPick.SetToggle(base.config.test.toolNoPick, delegate(bool on)
 		{
 			base.config.test.toolNoPick = on;
+		});
+		toggleCompressSave.SetToggle(base.config.test.compressSave, delegate(bool on)
+		{
+			base.config.test.compressSave = on;
 		});
 		toggleAlwaysRun.SetToggle(base.config.test.alwaysRun, delegate(bool on)
 		{

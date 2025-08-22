@@ -215,9 +215,9 @@ public class CardRenderer : RenderObject
 					}
 					else
 					{
-						if (EClass.core.config.game.antiSpider && row.race == "spider" && row._tiles.Length > 1)
+						if (EClass.core.config.game.antiSpider && row.skinAntiSpider != 0)
 						{
-							owner.refVal = 1;
+							owner.refVal = row.skinAntiSpider;
 						}
 						p.tile = row._tiles[owner.refVal % row._tiles.Length] * ((owner.dir % 2 == 0) ? 1 : (-1));
 						p.matColor = traitFigure.GetMatColor();

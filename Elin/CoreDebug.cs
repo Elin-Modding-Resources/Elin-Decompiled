@@ -46,6 +46,7 @@ public class CoreDebug : EScriptable
 	public enum StartScene
 	{
 		Title,
+		Survival,
 		Zone,
 		Home,
 		Home_Cave,
@@ -348,6 +349,9 @@ public class CoreDebug : EScriptable
 		case StartScene.Home:
 			EClass.game.world.date.hour = EClass.debug.startHour;
 			break;
+		case StartScene.Survival:
+			EClass.game.idPrologue = 3;
+			break;
 		case StartScene.Home_Cave:
 			EClass.game.idPrologue = 2;
 			break;
@@ -417,6 +421,11 @@ public class CoreDebug : EScriptable
 			break;
 		case StartLoadout.FewItem:
 		{
+			if (startScene == StartScene.Survival)
+			{
+				AddHotbar("pickaxe").ChangeMaterial(0);
+				break;
+			}
 			Thing thing = ThingGen.Create("backpack");
 			thing.AddCard(ThingGen.Create("rp_food", -1, 10).SetNum(30));
 			thing.AddCard(ThingGen.Create("rp_block", -1, 10).SetNum(30));

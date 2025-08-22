@@ -43,13 +43,13 @@ public class EffectMeteor : Effect
 				int num = 0;
 				if (num < 1000)
 				{
-					Point randomSurface = EMono._map.GetRandomSurface(center.x, center.z, radius);
+					Point point = ((radius == 0) ? center : EMono._map.GetRandomSurface(center.x, center.z, radius));
 					foreach (Point item in list)
 					{
-						randomSurface.Equals(item);
+						point.Equals(item);
 					}
-					p.Set(randomSurface);
-					list.Add(randomSurface);
+					p.Set(point);
+					list.Add(point);
 				}
 			}
 			int _i = i;

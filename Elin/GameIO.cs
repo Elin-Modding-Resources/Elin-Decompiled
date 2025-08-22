@@ -36,17 +36,7 @@ public class GameIO : EClass
 
 	public static int NumBackup => (int)MathF.Max(5f, EClass.core.config.game.numBackup);
 
-	public static bool compressSave
-	{
-		get
-		{
-			if (EClass.core.config.compressSave)
-			{
-				return !EClass.debug.dontCompressSave;
-			}
-			return false;
-		}
-	}
+	public static bool compressSave => EClass.core.config.test.compressSave;
 
 	public static void ResetTemp()
 	{

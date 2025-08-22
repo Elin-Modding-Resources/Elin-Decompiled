@@ -20,7 +20,7 @@ public class TraitFigure : Trait
 		{
 			SourceChara.Row row = EClass.sources.charas.map.TryGetValue(owner.c_idRefCard) ?? EClass.sources.charas.map["putty"];
 			Transform transform = b.Attach<Transform>("figure", rightAttach: false);
-			int idSkin = ((EClass.core.config.game.antiSpider && row.race == "spider" && row.tiles.Length > 1) ? 1 : 0);
+			int idSkin = ((EClass.core.config.game.antiSpider && row.skinAntiSpider != 0) ? row.skinAntiSpider : 0);
 			row.SetImage(transform.GetChild(0).GetComponent<Image>(), null, 0, setNativeSize: false, 0, idSkin);
 		}
 	}

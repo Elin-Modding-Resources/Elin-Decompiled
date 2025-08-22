@@ -3950,34 +3950,41 @@ public class Chara : Card, IPathfindWalker
 				EClass.player.returnInfo.turns--;
 				if (EClass.player.returnInfo.turns <= 0)
 				{
-					if (EClass.pc.burden.GetPhase() != 4 || EClass.debug.ignoreWeight)
+					if (EClass.game.Prologue.type == GameType.Survival && EClass._zone is Zone_StartSiteSky)
 					{
-						int uidDest = EClass.player.returnInfo.uidDest;
-						Zone zone = null;
-						if (uidDest != 0)
+						Msg.SayNothingHappen();
+					}
+					else
+					{
+						if (EClass.pc.burden.GetPhase() != 4 || EClass.debug.ignoreWeight)
 						{
-							zone = EClass.game.spatials.map.TryGetValue(uidDest) as Zone;
-						}
-						if (zone == null || zone.destryoed)
-						{
-							zone = EClass.world.region;
-						}
-						if (zone == EClass.game.activeZone || EClass.game.activeZone.IsRegion)
-						{
-							Msg.Say("returnFail");
-						}
-						else
-						{
-							Msg.Say("returnComplete");
-							EClass.player.uidLastTravelZone = 0;
-							EClass.pc.MoveZone(zone, ZoneTransition.EnterState.Return);
-							EClass.player.lastZonePos = null;
+							int uidDest = EClass.player.returnInfo.uidDest;
+							Zone zone = null;
+							if (uidDest != 0)
+							{
+								zone = EClass.game.spatials.map.TryGetValue(uidDest) as Zone;
+							}
+							if (zone == null || zone.destryoed)
+							{
+								zone = EClass.world.region;
+							}
+							if (zone == EClass.game.activeZone || EClass.game.activeZone.IsRegion)
+							{
+								Msg.Say("returnFail");
+							}
+							else
+							{
+								Msg.Say("returnComplete");
+								EClass.player.uidLastTravelZone = 0;
+								EClass.pc.MoveZone(zone, ZoneTransition.EnterState.Return);
+								EClass.player.lastZonePos = null;
+							}
+							EClass.player.returnInfo = null;
+							return;
 						}
 						EClass.player.returnInfo = null;
-						return;
+						Msg.Say("returnOverweight");
 					}
-					EClass.player.returnInfo = null;
-					Msg.Say("returnOverweight");
 				}
 			}
 			if ((HasNoGoal || !ai.IsRunning) && !WillConsumeTurn())
@@ -6330,9 +6337,9 @@ public class Chara : Card, IPathfindWalker
 	{
 		CardRenderer cardRenderer = renderer;
 		CharaRenderer charaRenderer = new CharaRenderer();
-		if (race.id == "spider" && source.tiles.Length > 1)
+		if (source.skinAntiSpider != 0 && EClass.core.config.game.antiSpider)
 		{
-			base.idSkin = (EClass.core.config.game.antiSpider ? 1 : 0);
+			base.idSkin = source.skinAntiSpider;
 		}
 		if (host != null)
 		{

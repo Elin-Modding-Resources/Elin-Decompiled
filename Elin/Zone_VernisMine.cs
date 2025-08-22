@@ -1,10 +1,12 @@
+using UnityEngine;
+
 public class Zone_VernisMine : Zone_QuestDungeon
 {
 	public const int LvBoss = -8;
 
 	public bool IsBossLv => base.lv == -8;
 
-	public override int DangerLv => base.DangerLv + 5;
+	public override int DangerLv => 5 + Mathf.Abs(base.lv);
 
 	public override bool LockExit
 	{

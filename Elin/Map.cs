@@ -450,26 +450,26 @@ public class Map : MapBounds, IPathfindGrid
 				num6++;
 			}
 		}
-		compression = IO.Compression.None;
-		IO.WriteLZ4(path + "objVals", array);
-		IO.WriteLZ4(path + "blocks", array2);
-		IO.WriteLZ4(path + "blockMats", array3);
-		IO.WriteLZ4(path + "floors", array4);
-		IO.WriteLZ4(path + "floorMats", array5);
-		IO.WriteLZ4(path + "objs", array6);
-		IO.WriteLZ4(path + "objMats", array7);
-		IO.WriteLZ4(path + "decal", array8);
-		IO.WriteLZ4(path + "flags", array10);
-		IO.WriteLZ4(path + "flags2", array11);
-		IO.WriteLZ4(path + "dirs", array9);
-		IO.WriteLZ4(path + "heights", array12);
-		IO.WriteLZ4(path + "bridges", array13);
-		IO.WriteLZ4(path + "bridgeMats", array14);
-		IO.WriteLZ4(path + "bridgeHeights", array15);
-		IO.WriteLZ4(path + "bridgePillars", array16);
-		IO.WriteLZ4(path + "roofBlocks", array18);
-		IO.WriteLZ4(path + "roofBlockMats", array19);
-		IO.WriteLZ4(path + "roofBlockDirs", array17);
+		compression = ((!EClass.core.config.test.compressSave) ? IO.Compression.None : IO.Compression.LZ4);
+		Write(path + "objVals", array);
+		Write(path + "blocks", array2);
+		Write(path + "blockMats", array3);
+		Write(path + "floors", array4);
+		Write(path + "floorMats", array5);
+		Write(path + "objs", array6);
+		Write(path + "objMats", array7);
+		Write(path + "decal", array8);
+		Write(path + "flags", array10);
+		Write(path + "flags2", array11);
+		Write(path + "dirs", array9);
+		Write(path + "heights", array12);
+		Write(path + "bridges", array13);
+		Write(path + "bridgeMats", array14);
+		Write(path + "bridgeHeights", array15);
+		Write(path + "bridgePillars", array16);
+		Write(path + "roofBlocks", array18);
+		Write(path + "roofBlockMats", array19);
+		Write(path + "roofBlockDirs", array17);
 		things.Sort((Thing a, Thing b) => a.stackOrder - b.stackOrder);
 		if (export == null)
 		{
@@ -526,6 +526,10 @@ public class Map : MapBounds, IPathfindGrid
 			things = list;
 		}
 		serializedCharas.Clear();
+		void Write(string _path, byte[] bytes)
+		{
+			IO.WriteLZ4(_path, bytes, compression);
+		}
 	}
 
 	public byte[] TryLoadFile(string path, string s, int size)
@@ -1884,6 +1888,15 @@ public class Map : MapBounds, IPathfindGrid
 				{
 					MineBlock(point, recoverBlock: false, c, mineObj: false);
 				}
+				if (EClass.game.Prologue.type == GameType.Survival && EClass._zone is Zone_StartSiteSky && !EClass.scene.actionMode.IsBuildMode)
+				{
+					if (TrySpawnSurvivalItem(point))
+					{
+						Rand.SetSeed();
+						return;
+					}
+					Rand.SetSeed();
+				}
 				switch (sourceObj.alias)
 				{
 				case "nest_bird":
@@ -1924,6 +1937,101 @@ public class Map : MapBounds, IPathfindGrid
 	public void MineObjSound(Point point)
 	{
 		point.PlaySound(point.cell.matObj.GetSoundDead(point.cell.sourceObj));
+	}
+
+	public bool TrySpawnSurvivalItem(Point point)
+	{
+		SourceObj.Row sourceObj = point.cell.sourceObj;
+		int searchWreck = EClass.game.survival.flags.searchWreck;
+		string[] array = new string[6] { "log", "rock", "branch", "bone", "grass", "vine" };
+		int chanceChange = 25;
+		int num = searchWreck / 50 + 3;
+		switch (sourceObj.alias)
+		{
+		case "nest_bird":
+			chanceChange = 100;
+			return Pop(ThingGen.Create((EClass.rnd(10) == 0) ? "egg_fertilized" : "_egg").TryMakeRandomItem(num));
+		case "wreck_wood":
+			array = new string[5] { "log", "log", "branch", "grass", "vine" };
+			break;
+		case "wreck_junk":
+			chanceChange = 50;
+			return Pop(ThingGen.CreateFromFilter("shop_junk", num));
+		case "wreck_stone":
+			array = new string[4] { "rock", "rock", "stone", "bone" };
+			break;
+		case "wreck_scrap":
+			chanceChange = 75;
+			array = new string[1] { "scrap" };
+			break;
+		case "wreck_cloth":
+			chanceChange = 75;
+			array = new string[1] { "fiber" };
+			break;
+		case "wreck_precious":
+			chanceChange = 100;
+			return Pop(ThingGen.CreateFromFilter("shop_magic", num));
+		default:
+			return false;
+		}
+		if (EClass.rnd(3) == 0 && EClass.game.survival.flags.spawnedFloor < 4)
+		{
+			EClass.game.survival.flags.spawnedFloor++;
+			return Pop(ThingGen.CreateFloor(40, 45).SetNum(3));
+		}
+		if (EClass.rnd(20) == 0)
+		{
+			return Pop(TraitSeed.MakeRandomSeed());
+		}
+		if (EClass.rnd(12) == 0)
+		{
+			return Pop(ThingGen.Create("money2"));
+		}
+		if (EClass.rnd(12) == 0)
+		{
+			Point pos = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
+			if (searchWreck < 50 || EClass.rnd(3) != 0)
+			{
+				EClass._zone.SpawnMob(pos, SpawnSetting.HomeWild(num));
+			}
+			else
+			{
+				EClass._zone.SpawnMob(pos, SpawnSetting.HomeEnemy(Mathf.Max(num - 5, 1)));
+			}
+		}
+		return Pop(ThingGen.Create(array.RandomItem()).SetNum(1 + EClass.rnd(3)));
+		bool Next()
+		{
+			EClass.game.survival.flags.searchWreck++;
+			Point pos2 = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
+			if (EClass.game.survival.flags.searchWreck == 20)
+			{
+				EffectMeteor.Create(pos2, 0, 1, delegate
+				{
+					EClass._zone.AddCard(ThingGen.CreateRecipe("container_shipping"), pos2);
+				});
+			}
+			NextObj();
+			return true;
+		}
+		void NextObj()
+		{
+			if (EClass.rnd(100) < chanceChange)
+			{
+				string[] source = new string[11]
+				{
+					"nest_bird", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_stone", "wreck_stone", "wreck_scrap", "wreck_junk", "wreck_cloth",
+					"wreck_precious"
+				};
+				SetObj(point.x, point.z, EClass.sources.objs.alias[source.RandomItem()].id);
+			}
+		}
+		bool Pop(Thing t)
+		{
+			TrySmoothPick(point, t, EClass.pc);
+			Next();
+			return true;
+		}
 	}
 
 	public PlantData TryGetPlant(Point p)

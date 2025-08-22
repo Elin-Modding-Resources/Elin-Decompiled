@@ -560,6 +560,8 @@ public class CoreConfig : EClass
 
 		public bool toolNoPick;
 
+		public bool compressSave;
+
 		public float brightnessNight;
 	}
 
@@ -582,8 +584,6 @@ public class CoreConfig : EClass
 	public string rewardCode;
 
 	public int maxPlayedHours;
-
-	public bool compressSave;
 
 	public bool ignoreParallelsWarning;
 

@@ -1046,6 +1046,8 @@ public class DramaManager : EMono
 		string[] array = IF.Split(',');
 		switch (array[0])
 		{
+		case "survival":
+			return EMono.game.Prologue.type == GameType.Survival;
 		case "fromBook":
 			return LayerDrama.fromBook;
 		case "!fromBook":

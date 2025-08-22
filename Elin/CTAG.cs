@@ -47,5 +47,6 @@ public enum CTAG
 	fairy,
 	god,
 	dragon,
-	plant
+	plant,
+	antiSpider
 }
