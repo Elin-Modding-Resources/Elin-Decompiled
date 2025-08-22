@@ -27,6 +27,7 @@ var classSourceChara_1_1Row =
     [ "moveAnime", "classSourceChara_1_1Row.html#af067be8c6321b01900d881434b4593ba", null ],
     [ "name_L", "classSourceChara_1_1Row.html#a63a30e52855f7fa4fb88f5ee0ca39352", null ],
     [ "race", "classSourceChara_1_1Row.html#a54ac609993fd4bfa8e2d07b8f65e5fb8", null ],
+    [ "skinAntiSpider", "classSourceChara_1_1Row.html#abbe7c20452502898c34df7ca68517ed1", null ],
     [ "staticSkin", "classSourceChara_1_1Row.html#aec9f071e94a21a89805a36a3faf52572", null ],
     [ "tactics", "classSourceChara_1_1Row.html#a883dcc56a397f0baecf5e483f9e8dbc3", null ],
     [ "tiles_snow", "classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d", null ],

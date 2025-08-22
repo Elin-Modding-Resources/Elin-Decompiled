@@ -1,5 +1,17 @@
 var NAVTREEINDEX53 =
 {
+"classCoreRef_1_1PrefData.html#a3bd121ac053a201ccb564192d0aec7bd":[1,0,392,8,6],
+"classCoreRef_1_1PrefData.html#aa18a0112a8a5ceff140ae454fb1fc3ed":[1,0,392,8,1],
+"classCoreRef_1_1PrefData.html#abb2925c784521e58ee670f6f327b35d4":[1,0,392,8,4],
+"classCoreRef_1_1PrefData.html#abd5cdfe7ff6a6cc7c2cb605571d9e265":[1,0,392,8,7],
+"classCoreRef_1_1PrefData.html#ad7db7fa612f08485c0a32745aa6b0298":[1,0,392,8,0],
+"classCoreRef_1_1PrefData.html#ae034de7ef4bafd49425f2b0cf6ec46b0":[1,0,392,8,5],
+"classCoreRef_1_1PrefData.html#af49c9e2087e313b82ecfa202b1981c81":[1,0,392,8,2],
+"classCoreRef_1_1Rects.html":[1,0,392,9],
+"classCoreRef_1_1Rects.html#a0417c5bc8c3c3d2cd2babf633cbdf6bb":[1,0,392,9,4],
+"classCoreRef_1_1Rects.html#a1006b7280e3992e5d6cf76a88b3c2e11":[1,0,392,9,1],
+"classCoreRef_1_1Rects.html#a1bb9b25c6a64ebe300ae82af5951103e":[1,0,392,9,0],
+"classCoreRef_1_1Rects.html#a2d213a0f6c0ae766b67549f8d0151233":[1,0,392,9,6],
 "classCoreRef_1_1Rects.html#a4d5ab247f8488c8cdd85e0d1d510834d":[1,0,392,9,3],
 "classCoreRef_1_1Rects.html#a61b1d2086446d460d4fd21b2cc1172bd":[1,0,392,9,5],
 "classCoreRef_1_1Rects.html#afba78bcd48689c3d66f90d5c972080e5":[1,0,392,9,2],
@@ -237,17 +249,5 @@ var NAVTREEINDEX53 =
 "classCursorSystem.html#aef5d580420f8c746eecc7d3137a2b542":[1,0,410,19],
 "classCursorSystem.html#af0be3fdfb388384d628117833e3a5c30":[1,0,410,51],
 "classCursorSystem.html#af8975fc41be5e40b35dbc1de53fde4a4":[1,0,410,26],
-"classCursorSystem.html#afd6e6c2813a93fb13fb26d1785d80467":[1,0,410,7],
-"classCurveEffect.html":[1,0,411],
-"classCurveEffect.html#a23da238be27fe6799a1794157d666f5c":[1,0,411,2],
-"classCurveEffect.html#a25c7e050fc84c8cb85c2df853f9487bc":[1,0,411,1],
-"classCurveEffect.html#a36c44031fd96679fb10f9d29283c0443":[1,0,411,8],
-"classCurveEffect.html#a4de2c00445b65ff28da37c2ed81050e0":[1,0,411,6],
-"classCurveEffect.html#abbc9ba05b616114a986f9ef6bfef2eeb":[1,0,411,3],
-"classCurveEffect.html#adf8a5fc0eeb571dbc9c62c1d26304afd":[1,0,411,7],
-"classCurveEffect.html#ae9e0987d000760780ea8c0dee5ca0af8":[1,0,411,5],
-"classCurveEffect.html#af99f4432517f8b98a85e0d89ebdfe078":[1,0,411,4],
-"classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135":[1,0,411,0],
-"classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135a24f61a4979dc619f0818897243ddb6c6":[1,0,411,0,0],
-"classCurveEffect.html#afd8a1c7d3c76486e9fbd486b7686c135adc929a6461aceeab9137cc5fe5117421":[1,0,411,0,1]
+"classCursorSystem.html#afd6e6c2813a93fb13fb26d1785d80467":[1,0,410,7]
 };

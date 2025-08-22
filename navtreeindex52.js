@@ -1,5 +1,17 @@
 var NAVTREEINDEX52 =
 {
+"classCoreDebug_1_1MatColorTest.html#ae437ef12996bdfe7a5e9ba6d02c3954a":[1,0,388,1,3],
+"classCoreDebug_1_1StartSetting.html":[1,0,388,2],
+"classCoreDebug_1_1StartSetting.html#a7f0172ab8c018e1d59a0bad50c370c07":[1,0,388,2,1],
+"classCoreDebug_1_1StartSetting.html#acdbf0aefbc7487f638aa857b63d99eb9":[1,0,388,2,0],
+"classCoreDebug_1_1StartSetting.html#ae9aafa5c1c2082432c3bedbce3c856ee":[1,0,388,2,2],
+"classCoreEmu.html":[1,0,389],
+"classCoreEmu.html#a4b106800b20b0f433295d4a97120289d":[1,0,389,0],
+"classCoreEmu.html#ab13c65dc949c59dd087aa7adca90bf7a":[1,0,389,1],
+"classCoreEmu.html#ae9d169985c1bfa505192ee17367d7ca6":[1,0,389,2],
+"classCoreExtension.html":[1,0,390],
+"classCoreExtension.html#a159725003d2a00c906ed83536a69b398":[1,0,390,1],
+"classCoreExtension.html#a184b445eb60c2552eafc9289727a077f":[1,0,390,4],
 "classCoreExtension.html#a2813e62f4e3b6a18f35ccdafb0430fd8":[1,0,390,5],
 "classCoreExtension.html#a440f00ea6b2f3f00507e5bfb4277a2f5":[1,0,390,2],
 "classCoreExtension.html#a71d44e80d0f8997765468e77dff2318e":[1,0,390,7],
@@ -237,17 +249,5 @@ var NAVTREEINDEX52 =
 "classCoreRef_1_1PopperSprites.html":[1,0,392,7],
 "classCoreRef_1_1PopperSprites.html#abad464045144a14a8f8ff8acb56c6cc9":[1,0,392,7,0],
 "classCoreRef_1_1PrefData.html":[1,0,392,8],
-"classCoreRef_1_1PrefData.html#a2d49e3e3748b77feb801e5007fa0486f":[1,0,392,8,3],
-"classCoreRef_1_1PrefData.html#a3bd121ac053a201ccb564192d0aec7bd":[1,0,392,8,6],
-"classCoreRef_1_1PrefData.html#aa18a0112a8a5ceff140ae454fb1fc3ed":[1,0,392,8,1],
-"classCoreRef_1_1PrefData.html#abb2925c784521e58ee670f6f327b35d4":[1,0,392,8,4],
-"classCoreRef_1_1PrefData.html#abd5cdfe7ff6a6cc7c2cb605571d9e265":[1,0,392,8,7],
-"classCoreRef_1_1PrefData.html#ad7db7fa612f08485c0a32745aa6b0298":[1,0,392,8,0],
-"classCoreRef_1_1PrefData.html#ae034de7ef4bafd49425f2b0cf6ec46b0":[1,0,392,8,5],
-"classCoreRef_1_1PrefData.html#af49c9e2087e313b82ecfa202b1981c81":[1,0,392,8,2],
-"classCoreRef_1_1Rects.html":[1,0,392,9],
-"classCoreRef_1_1Rects.html#a0417c5bc8c3c3d2cd2babf633cbdf6bb":[1,0,392,9,4],
-"classCoreRef_1_1Rects.html#a1006b7280e3992e5d6cf76a88b3c2e11":[1,0,392,9,1],
-"classCoreRef_1_1Rects.html#a1bb9b25c6a64ebe300ae82af5951103e":[1,0,392,9,0],
-"classCoreRef_1_1Rects.html#a2d213a0f6c0ae766b67549f8d0151233":[1,0,392,9,6]
+"classCoreRef_1_1PrefData.html#a2d49e3e3748b77feb801e5007fa0486f":[1,0,392,8,3]
 };

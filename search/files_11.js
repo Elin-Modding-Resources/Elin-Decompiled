@@ -152,5 +152,6 @@ var searchData=
   ['stocksearchmode_2ecs_149',['StockSearchMode.cs',['../StockSearchMode_8cs.html',1,'']]],
   ['strokescalemode_2ecs_150',['StrokeScaleMode.cs',['../StrokeScaleMode_8cs.html',1,'']]],
   ['strokestyle_2ecs_151',['StrokeStyle.cs',['../StrokeStyle_8cs.html',1,'']]],
-  ['subpassdata_2ecs_152',['SubPassData.cs',['../SubPassData_8cs.html',1,'']]]
+  ['subpassdata_2ecs_152',['SubPassData.cs',['../SubPassData_8cs.html',1,'']]],
+  ['survivalmanager_2ecs_153',['SurvivalManager.cs',['../SurvivalManager_8cs.html',1,'']]]
 ];

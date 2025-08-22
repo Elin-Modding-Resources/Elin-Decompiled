@@ -1,7 +1,7 @@
 var classTraitDrink =
 [
-    [ "BlendLove", "classTraitDrink.html#a0bf4419114e2e584a1e8f59c122a2cc9", null ],
-    [ "BlendPoison", "classTraitDrink.html#ad9b0a48d51f67c076e30b33b0a677834", null ],
+    [ "BlendLove", "classTraitDrink.html#a843fd880637c9cd8324e9c03a1078653", null ],
+    [ "BlendPoison", "classTraitDrink.html#a02255aa4d0c4ff1782d9f6af3cc9ddc9", null ],
     [ "CanBlend", "classTraitDrink.html#af09a4c0047023ec0dafca8e1a7b6e7fd", null ],
     [ "CanDrink", "classTraitDrink.html#aee4631f0388761dc3024f09b46ddbfe9", null ],
     [ "GetHealAction", "classTraitDrink.html#ac81b93ab0ed253932f4229fb0744186a", null ],

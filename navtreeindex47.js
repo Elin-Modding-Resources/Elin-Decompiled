@@ -1,5 +1,15 @@
 var NAVTREEINDEX47 =
 {
+"classColorProfile_1_1BlockColors.html#a8f466ea406218b6f80982703427f0ba2":[1,0,286,0,3],
+"classColorProfile_1_1BlockColors.html#a922c1abed4b5e24ced0fcc7f7c96a093":[1,0,286,0,7],
+"classColorProfile_1_1BlockColors.html#aa710acb8084309e184293e6997d411e6":[1,0,286,0,9],
+"classColorProfile_1_1BlockColors.html#aab6c06bf1f6a95e80bc7588081f4b51f":[1,0,286,0,6],
+"classColorProfile_1_1BlockColors.html#ab24bcda1e49aae1aa11c9ae235ba1079":[1,0,286,0,12],
+"classColorProfile_1_1BlockColors.html#ab81096756c4ad08282f44d7e4c14f034":[1,0,286,0,13],
+"classColorProfile_1_1BlockColors.html#ac04b9d95d2b0d7d23d5330d30a8b117f":[1,0,286,0,17],
+"classColorProfile_1_1BlockColors.html#ac9f8f58151733deda57b8a24a4a80a3f":[1,0,286,0,21],
+"classColorProfile_1_1BlockColors.html#ace5cf90f51ea489585e1ecda7ad53424":[1,0,286,0,14],
+"classColorProfile_1_1BlockColors.html#ad3ad2430d2a9d22f6c39d61d349218bd":[1,0,286,0,10],
 "classColorProfile_1_1BlockColors.html#ad428f9dc5c1eaf63af61739acb3dfaea":[1,0,286,0,2],
 "classColorProfile_1_1BlockColors.html#ae4c84e79217e038daa119cd914ede991":[1,0,286,0,20],
 "classColorProfile_1_1PCLights.html":[1,0,286,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX47 =
 "classConSuspend.html#aa8f108b9c61c24dcae845ed3e7bf9773":[1,0,348,2],
 "classConSuspend.html#aac58b70e1c4d707ec11e736c8d36a92b":[1,0,348,1],
 "classConSuspend.html#ac8b8c049184570eafc004a0fe46668c7":[1,0,348,9],
-"classConSuspend.html#acf7c42aa99b78f28a517ef0b39d59fe2":[1,0,348,3],
-"classConSuspend.html#aea94be915fd13a3408cdf828e2086446":[1,0,348,7],
-"classConSuspend.html#af248063d4451b36d58fbe11e38564635":[1,0,348,8],
-"classConSuspend.html#afc06aae70620436c5d9c08826ac010c3":[1,0,348,4],
-"classConTelepathy.html":[1,0,350],
-"classConTelepathy.html#a1cd3f50de62022a4a6df0a38e268d37c":[1,0,350,1],
-"classConTelepathy.html#ac44892bfb3d99166dbc181955a89fece":[1,0,350,0],
-"classConTorch.html":[1,0,374],
-"classConTorch.html#a257d37717596ad7d44a1f83e5f52a903":[1,0,374,2],
-"classConTorch.html#a36bb825a149846540ee834356d77e4bc":[1,0,374,0],
-"classConTorch.html#a509b747906126e35a1094d22a172cab0":[1,0,374,4]
+"classConSuspend.html#acf7c42aa99b78f28a517ef0b39d59fe2":[1,0,348,3]
 };

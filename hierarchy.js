@@ -1222,7 +1222,8 @@ var hierarchy =
           [ "Zone_SnowGrave", "classZone__SnowGrave.html", null ],
           [ "Zone_StartCave", "classZone__StartCave.html", null ],
           [ "Zone_StartSite", "classZone__StartSite.html", [
-            [ "Zone_StartSiteCave", "classZone__StartSiteCave.html", null ]
+            [ "Zone_StartSiteCave", "classZone__StartSiteCave.html", null ],
+            [ "Zone_StartSiteSky", "classZone__StartSiteSky.html", null ]
           ] ],
           [ "Zone_Tent", "classZone__Tent.html", null ],
           [ "Zone_TestMap", "classZone__TestMap.html", null ],
@@ -1239,6 +1240,8 @@ var hierarchy =
       [ "SpawnList", "classSpawnList.html", null ],
       [ "SpawnListChara", "classSpawnListChara.html", null ],
       [ "SpawnListThing", "classSpawnListThing.html", null ],
+      [ "SurvivalManager", "classSurvivalManager.html", null ],
+      [ "SurvivalManager.Flags", "classSurvivalManager_1_1Flags.html", null ],
       [ "Tactics", "classTactics.html", null ],
       [ "TalkText", "classTalkText.html", null ],
       [ "TargetType", "classTargetType.html", [

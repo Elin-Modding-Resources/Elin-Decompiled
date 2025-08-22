@@ -35,8 +35,8 @@ var searchData=
   ['singlecontent_32',['SingleContent',['../classSingleContent.html',1,'']]],
   ['singletonbase_33',['SingletonBase',['../classSingletonBase.html',1,'']]],
   ['skeweffect_34',['SkewEffect',['../classSkewEffect.html',1,'']]],
-  ['skill_35',['SKILL',['../classSKILL.html',1,'']]],
-  ['skill_36',['Skill',['../classSkill.html',1,'']]],
+  ['skill_35',['Skill',['../classSkill.html',1,'']]],
+  ['skill_36',['SKILL',['../classSKILL.html',1,'']]],
   ['skillcheck_37',['SkillCheck',['../classSkillCheck.html',1,'']]],
   ['skinasset_38',['SkinAsset',['../classSkinAsset.html',1,'']]],
   ['skinasset_5fbg_39',['SkinAsset_BG',['../classSkinAsset__BG.html',1,'']]],
@@ -201,5 +201,6 @@ var searchData=
   ['strokestyle_198',['StrokeStyle',['../classPrimitiveUI_1_1StrokeStyle.html',1,'PrimitiveUI']]],
   ['style_199',['Style',['../classBiomeProfile_1_1Style.html',1,'BiomeProfile']]],
   ['subpassdata_200',['SubPassData',['../classSubPassData.html',1,'']]],
-  ['surfaceupdater_201',['SurfaceUpdater',['../classGameUpdater_1_1SurfaceUpdater.html',1,'GameUpdater']]]
+  ['surfaceupdater_201',['SurfaceUpdater',['../classGameUpdater_1_1SurfaceUpdater.html',1,'GameUpdater']]],
+  ['survivalmanager_202',['SurvivalManager',['../classSurvivalManager.html',1,'']]]
 ];

@@ -21,5 +21,6 @@ var classTaskHarvest =
     [ "IsHostileAct", "classTaskHarvest.html#a75dbd74cabc106e2c5e558ca36c6c1dd", null ],
     [ "IsObj", "classTaskHarvest.html#a89e4aefc9b41b13365e7cf010df95fc6", null ],
     [ "IsReapSeed", "classTaskHarvest.html#a7132864d9029508b7e151ec18b9e0faa", null ],
+    [ "Loop", "classTaskHarvest.html#ad6311fe34961215f6b1fe8a042d1a730", null ],
     [ "RightHand", "classTaskHarvest.html#ad405bf13cb859075e88e96bdfb513903", null ]
 ];

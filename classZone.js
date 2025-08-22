@@ -15,7 +15,7 @@ var classZone =
     [ "AddThing", "classZone.html#a9d0747af83904298eae9b70debd3b11e", null ],
     [ "ApplyBackerPet", "classZone.html#a7e443c86235a9bddab7e55c08b732ba2", null ],
     [ "CanDestroy", "classZone.html#a3bba0e7383c0f2620f001bf10d058ba3", null ],
-    [ "ClaimZone", "classZone.html#a5e1d310933a31a3285b7d42499cf7f1b", null ],
+    [ "ClaimZone", "classZone.html#a58a2b3cf305069b0b03227a1959cec0a", null ],
     [ "ClearZones", "classZone.html#a90abf151ae957891aaf8d3fe2063ecd0", null ],
     [ "CountMinions", "classZone.html#a3b3747bd44f4714823b4ff8e795afe9b", null ],
     [ "CreateBP", "classZone.html#adc5686579bb072d1c2f9324012c11ee3", null ],

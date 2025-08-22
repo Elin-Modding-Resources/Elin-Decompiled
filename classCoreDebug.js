@@ -24,6 +24,7 @@ var classCoreDebug =
     ] ],
     [ "StartScene", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91", [
       [ "Title", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91ab78a3223503896721cca1303f776159b", null ],
+      [ "Survival", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91a521100d075c1284b944841394e157744", null ],
       [ "Zone", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91ab3ff996fe5c77610359114835baf9b38", null ],
       [ "Home", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91a8cf04a9734132302f96da8e113e80ce5", null ],
       [ "Home_Cave", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91a5d4847dad5450d2f45b2209ea30f8610", null ],
