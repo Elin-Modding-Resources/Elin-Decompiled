@@ -131,14 +131,15 @@ public class IO
 		return JsonConvert.DeserializeObject<T>(value, setting ?? jsReadGeneral);
 	}
 
-	public static void WriteLZ4(string _path, byte[] _bytes)
+	public static void WriteLZ4(string _path, byte[] _bytes, Compression compression = Compression.None)
 	{
+		byte[] bytes = ((compression == Compression.LZ4) ? LZ4Codec.Wrap(_bytes, 0, _bytes.Length) : _bytes);
 		for (int i = 0; i < 5; i++)
 		{
 			string path = _path + ((i == 0) ? "" : (".b" + i));
 			try
 			{
-				File.WriteAllBytes(path, _bytes);
+				File.WriteAllBytes(path, bytes);
 				break;
 			}
 			catch (Exception message)
@@ -159,10 +160,6 @@ public class IO
 				continue;
 			}
 			byte[] array = File.ReadAllBytes(text);
-			if (array.Length == size)
-			{
-				return array;
-			}
 			if (compression == Compression.LZ4)
 			{
 				try
@@ -173,6 +170,10 @@ public class IO
 				{
 					Debug.Log(message);
 				}
+			}
+			if (array.Length == size)
+			{
+				return array;
 			}
 		}
 		return null;
@@ -208,7 +209,11 @@ public class IO
 
 	public static void Compress(string path, string text)
 	{
-		File.WriteAllText(path, text);
+		Debug.Log("Compressing: " + path);
+		using FileStream innerStream = new FileStream(path, FileMode.Create);
+		using LZ4Stream stream = new LZ4Stream(innerStream, LZ4StreamMode.Compress);
+		using StreamWriter streamWriter = new StreamWriter(stream);
+		streamWriter.Write(text);
 	}
 
 	public static string Decompress(string path)
