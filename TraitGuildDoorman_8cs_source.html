@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.186 Nyaightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.187 Stable</span>
    </div>
   </td>
  </tr>
@@ -98,24 +98,34 @@ $(document).ready(function(){initNavTree('TraitGuildDoorman_8cs_source.html','')
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9">    5</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9">IsGuildMember</a> =&gt; <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d">CanBePushed</a> =&gt; <a class="code hl_property" href="classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9">IsGuildMember</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d">    9</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d">GiveTrial</a>()</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3">   13</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3">OnJoinGuild</a>()</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d">CanBePushed</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9">IsGuildMember</a>)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <span class="keywordflow">return</span> base.owner.IsPCFaction;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d">   19</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d">GiveTrial</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3">   23</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3">OnJoinGuild</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 <div class="ttc" id="aclassAI__Idle_html"><div class="ttname"><a href="classAI__Idle.html">AI_Idle</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Idle_8cs_source.html#l00006">AI_Idle.cs:7</a></div></div>
 <div class="ttc" id="aclassAI__Idle_html_afa5679332200dd300cdd9974178e71cb"><div class="ttname"><a href="classAI__Idle.html#afa5679332200dd300cdd9974178e71cb">AI_Idle.Behaviour</a></div><div class="ttdeci">Behaviour</div><div class="ttdef"><b>Definition:</b> <a href="AI__Idle_8cs_source.html#l00008">AI_Idle.cs:9</a></div></div>
 <div class="ttc" id="aclassTraitGuildDoorman_html"><div class="ttname"><a href="classTraitGuildDoorman.html">TraitGuildDoorman</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00001">TraitGuildDoorman.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitGuildDoorman_html_a4a661079da82fec370e7bc63e5c6063d"><div class="ttname"><a href="classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d">TraitGuildDoorman.CanBePushed</a></div><div class="ttdeci">override bool CanBePushed</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00007">TraitGuildDoorman.cs:7</a></div></div>
-<div class="ttc" id="aclassTraitGuildDoorman_html_a514f6747ba6ec846528328efa000627d"><div class="ttname"><a href="classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d">TraitGuildDoorman.GiveTrial</a></div><div class="ttdeci">virtual void GiveTrial()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00009">TraitGuildDoorman.cs:9</a></div></div>
+<div class="ttc" id="aclassTraitGuildDoorman_html_a4a661079da82fec370e7bc63e5c6063d"><div class="ttname"><a href="classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d">TraitGuildDoorman.CanBePushed</a></div><div class="ttdeci">override bool CanBePushed</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00007">TraitGuildDoorman.cs:8</a></div></div>
+<div class="ttc" id="aclassTraitGuildDoorman_html_a514f6747ba6ec846528328efa000627d"><div class="ttname"><a href="classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d">TraitGuildDoorman.GiveTrial</a></div><div class="ttdeci">virtual void GiveTrial()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00019">TraitGuildDoorman.cs:19</a></div></div>
 <div class="ttc" id="aclassTraitGuildDoorman_html_a97a6fc7ee5bc9bc14030222527aaadd9"><div class="ttname"><a href="classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9">TraitGuildDoorman.IsGuildMember</a></div><div class="ttdeci">virtual bool IsGuildMember</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00005">TraitGuildDoorman.cs:5</a></div></div>
 <div class="ttc" id="aclassTraitGuildDoorman_html_aadcfa292e43eeb2526e61af2d3fdf94b"><div class="ttname"><a href="classTraitGuildDoorman.html#aadcfa292e43eeb2526e61af2d3fdf94b">TraitGuildDoorman.IdleBehaviour</a></div><div class="ttdeci">override AI_Idle.Behaviour IdleBehaviour</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00003">TraitGuildDoorman.cs:3</a></div></div>
-<div class="ttc" id="aclassTraitGuildDoorman_html_abc0a9d3e3011f3a5ed3426d70f3542b3"><div class="ttname"><a href="classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3">TraitGuildDoorman.OnJoinGuild</a></div><div class="ttdeci">virtual void OnJoinGuild()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00013">TraitGuildDoorman.cs:13</a></div></div>
+<div class="ttc" id="aclassTraitGuildDoorman_html_abc0a9d3e3011f3a5ed3426d70f3542b3"><div class="ttname"><a href="classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3">TraitGuildDoorman.OnJoinGuild</a></div><div class="ttdeci">virtual void OnJoinGuild()</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00023">TraitGuildDoorman.cs:23</a></div></div>
 <div class="ttc" id="aclassTraitUniqueGuildPersonnel_html"><div class="ttname"><a href="classTraitUniqueGuildPersonnel.html">TraitUniqueGuildPersonnel</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitUniqueGuildPersonnel_8cs_source.html#l00001">TraitUniqueGuildPersonnel.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.186 Nyaightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.187 Stable</span>
    </div>
   </td>
  </tr>
@@ -828,9 +828,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728">TraitDoorman_Fighter</a>, <a class="el" href="classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65">TraitDoorman_Mage</a>, and <a class="el" href="classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b">TraitDoorman_Thief</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitGuildDoorman_8cs_source.html#l00009">9</a> of file <a class="el" href="TraitGuildDoorman_8cs_source.html">TraitGuildDoorman.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
-<div class="line"><span class="lineno">   11</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitGuildDoorman_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitGuildDoorman_8cs_source.html">TraitGuildDoorman.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -859,9 +859,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d">TraitDoorman_Fighter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitGuildDoorman_8cs_source.html#l00013">13</a> of file <a class="el" href="TraitGuildDoorman_8cs_source.html">TraitGuildDoorman.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitGuildDoorman_8cs_source.html#l00023">23</a> of file <a class="el" href="TraitGuildDoorman_8cs_source.html">TraitGuildDoorman.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -887,7 +887,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitGuildDoorman_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitGuildDoorman_8cs_source.html">TraitGuildDoorman.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9">IsGuildMember</a>)</div>
+<div class="line"><span class="lineno">   12</span>            {</div>
+<div class="line"><span class="lineno">   13</span>                <span class="keywordflow">return</span> base.owner.IsPCFaction;</div>
+<div class="line"><span class="lineno">   14</span>            }</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclassTraitGuildDoorman_html_a97a6fc7ee5bc9bc14030222527aaadd9"><div class="ttname"><a href="classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9">TraitGuildDoorman.IsGuildMember</a></div><div class="ttdeci">virtual bool IsGuildMember</div><div class="ttdef"><b>Definition:</b> <a href="TraitGuildDoorman_8cs_source.html#l00005">TraitGuildDoorman.cs:5</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aadcfa292e43eeb2526e61af2d3fdf94b" name="aadcfa292e43eeb2526e61af2d3fdf94b"></a>

@@ -597,7 +597,8 @@ var hierarchy =
               [ "AIWork_Farm", "classAIWork__Farm.html", null ],
               [ "AIWork_Fish", "classAIWork__Fish.html", null ],
               [ "AIWork_Lumberjack", "classAIWork__Lumberjack.html", null ],
-              [ "AIWork_Research", "classAIWork__Research.html", null ]
+              [ "AIWork_Research", "classAIWork__Research.html", null ],
+              [ "AI_Mofu", "classAI__Mofu.html", null ]
             ] ],
             [ "AI_AttackHome", "classAI__AttackHome.html", null ],
             [ "AI_Bladder", "classAI__Bladder.html", null ],
@@ -1976,6 +1977,7 @@ var hierarchy =
           [ "TraitRegionMap", "classTraitRegionMap.html", null ]
         ] ],
         [ "TraitTreeEther", "classTraitTreeEther.html", null ],
+        [ "TraitVoidgate", "classTraitVoidgate.html", null ],
         [ "TraitWaystone", "classTraitWaystone.html", null ],
         [ "TraitWell", "classTraitWell.html", [
           [ "TraitWellHoly", "classTraitWellHoly.html", null ]
@@ -2009,8 +2011,10 @@ var hierarchy =
           [ "ZoneEventSubdue", "classZoneEventSubdue.html", null ]
         ] ],
         [ "ZoneEventSiege", "classZoneEventSiege.html", [
+          [ "ZoneEventRaid", "classZoneEventRaid.html", null ],
           [ "ZoneEventSiegeGuard", "classZoneEventSiegeGuard.html", null ]
-        ] ]
+        ] ],
+        [ "ZoneEventSurvival", "classZoneEventSurvival.html", null ]
       ] ],
       [ "ZoneEventManager", "classZoneEventManager.html", null ],
       [ "ZoneExportData", "classZoneExportData.html", null ],

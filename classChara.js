@@ -130,6 +130,7 @@ var classChara =
     [ "HasCondition< T >", "classChara.html#a4267f14fd6c66cc0485802536b471f8c", null ],
     [ "HasCooldown", "classChara.html#af68fe97657f349fca5aaef5d203ef1d8", null ],
     [ "HasHigherGround", "classChara.html#a9d3b8e9505a1b39f65a07fedd064ef6e", null ],
+    [ "HasHobbyOrWork", "classChara.html#a0b1a93cc1e3537630bb33b90920193cc", null ],
     [ "HasMinion", "classChara.html#a6e5875caf8ca55282d9a709ce90ce3d0", null ],
     [ "HealAll", "classChara.html#a5b6acfb55cd01e0038b38a63ee4e10a7", null ],
     [ "HoldCard", "classChara.html#a553135218ff65af6604da6ac62df0db4", null ],

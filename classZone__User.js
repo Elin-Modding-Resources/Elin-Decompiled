@@ -8,6 +8,7 @@ var classZone__User =
     [ "IsUnderwater", "classZone__User.html#a2a32a9f8d095bc68c699b283fc3ea93a", null ],
     [ "IsUserZone", "classZone__User.html#ab921c94fc9f4c2a36fe0aa6995691a7a", null ],
     [ "MakeTownProperties", "classZone__User.html#a8529fa01cccff6955900680337dca4b3", null ],
+    [ "OreChance", "classZone__User.html#aea2de33cf164b60636d3d16e7ab95813", null ],
     [ "pathExport", "classZone__User.html#ac75e627c7b6e480d655a0542ad4f3657", null ],
     [ "RevealRoom", "classZone__User.html#af443d999081227fe61f07e3c51f9e244", null ]
 ];

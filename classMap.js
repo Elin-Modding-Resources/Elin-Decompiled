@@ -116,7 +116,6 @@ var classMap =
     [ "TryShatter", "classMap.html#a321c2a7acd036bd26832588ed88fdb49", null ],
     [ "TrySmoothPick", "classMap.html#a28078ccefdbe996cd56f515b75f612aa", null ],
     [ "TrySmoothPick", "classMap.html#a0470e8e5e289ed3a59c81a3b7adc5d20", null ],
-    [ "TrySpawnSurvivalItem", "classMap.html#a3614803a9cbce1be7e7f86fbb424be2d", null ],
     [ "UpdateMetaData", "classMap.html#a23ce45b95f1ea57c3c73161608b04806", null ],
     [ "ValidateInstalled", "classMap.html#abb12713ae209185780c6561135b21a86", null ],
     [ "ValidateVersion", "classMap.html#ae002f7973d0dda1ff4c27087e0bec3de", null ],
