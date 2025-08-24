@@ -1681,6 +1681,10 @@ public class FactionBranch : EClass
 				AddRecruit(chara);
 			}
 		}
+		if (EClass.game.IsSurvival)
+		{
+			EClass.game.survival.OnUpdateRecruit(this);
+		}
 	}
 
 	public void AddRecruit(Chara c)

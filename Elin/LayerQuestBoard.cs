@@ -47,6 +47,10 @@ public class LayerQuestBoard : ELayer
 			RefreshQuest();
 			break;
 		case 1:
+			if (ELayer.debug.enable)
+			{
+				ELayer.Branch.UpdateReqruits(clear: true);
+			}
 			RefreshHire();
 			break;
 		case 2:

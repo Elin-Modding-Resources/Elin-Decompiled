@@ -121,6 +121,10 @@ public class WidgetDate : Widget
 		{
 			text += item2.TextWidgetDate;
 		}
+		if (EMono.game.IsSurvival && EMono.game.survival.flags.raid)
+		{
+			text += (EMono.game.survival.IsInRaid ? "raid_ongoing".lang() : "raid_till".lang(EMono.world.date.GetRemainingHours(EMono.game.survival.flags.dateNextRaid).ToString() ?? ""));
+		}
 		if (EMono.Branch != null && EMono.Branch.luckyMonth)
 		{
 			text = text + " " + "lucky_month".lang().TagColor(Msg.colors.colors["save"]);

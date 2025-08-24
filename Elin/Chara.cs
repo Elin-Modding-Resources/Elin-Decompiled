@@ -3950,7 +3950,7 @@ public class Chara : Card, IPathfindWalker
 				EClass.player.returnInfo.turns--;
 				if (EClass.player.returnInfo.turns <= 0)
 				{
-					if (EClass.game.Prologue.type == GameType.Survival && EClass._zone is Zone_StartSiteSky)
+					if (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky)
 					{
 						Msg.SayNothingHappen();
 					}
@@ -8414,6 +8414,31 @@ public class Chara : Card, IPathfindWalker
 			return new GoalGraze();
 		}
 		return new GoalHobby();
+	}
+
+	public bool HasHobbyOrWork(string alias)
+	{
+		int num = EClass.sources.hobbies.alias.TryGetValue(alias)?.id ?? 0;
+		listHobby.Clear();
+		if (_works == null || _hobbies == null)
+		{
+			RerollHobby();
+		}
+		foreach (int work in _works)
+		{
+			if (work == num)
+			{
+				return true;
+			}
+		}
+		foreach (int hobby in _hobbies)
+		{
+			if (hobby == num)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void SetAIIdle()

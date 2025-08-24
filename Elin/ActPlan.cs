@@ -859,7 +859,7 @@ public class ActPlan : EClass
 						}, null, CursorSystem.Hand, 1, isHostileAct: false, localAct: false);
 					}
 				}
-				if (input == ActInput.AllAction && pos.IsSky)
+				if (input == ActInput.AllAction && pos.IsSky && !EClass.game.IsSurvival)
 				{
 					TrySetAct("actSkyJump", delegate
 					{

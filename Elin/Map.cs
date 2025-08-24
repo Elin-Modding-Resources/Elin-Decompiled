@@ -314,7 +314,7 @@ public class Map : MapBounds, IPathfindGrid
 		string id = Game.id;
 		EClass.game.Save();
 		EClass.scene.Init(Scene.Mode.None);
-		Game.Load(id, EClass.game.isCloud);
+		Game.Load(id, cloud: false);
 		RevealAll();
 		TweenUtil.Tween(0.1f, null, delegate
 		{
@@ -1888,9 +1888,9 @@ public class Map : MapBounds, IPathfindGrid
 				{
 					MineBlock(point, recoverBlock: false, c, mineObj: false);
 				}
-				if (EClass.game.Prologue.type == GameType.Survival && EClass._zone is Zone_StartSiteSky && !EClass.scene.actionMode.IsBuildMode)
+				if (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky && !EClass.scene.actionMode.IsBuildMode)
 				{
-					if (TrySpawnSurvivalItem(point))
+					if (EClass.game.survival.OnMineWreck(point))
 					{
 						Rand.SetSeed();
 						return;
@@ -1937,101 +1937,6 @@ public class Map : MapBounds, IPathfindGrid
 	public void MineObjSound(Point point)
 	{
 		point.PlaySound(point.cell.matObj.GetSoundDead(point.cell.sourceObj));
-	}
-
-	public bool TrySpawnSurvivalItem(Point point)
-	{
-		SourceObj.Row sourceObj = point.cell.sourceObj;
-		int searchWreck = EClass.game.survival.flags.searchWreck;
-		string[] array = new string[6] { "log", "rock", "branch", "bone", "grass", "vine" };
-		int chanceChange = 25;
-		int num = searchWreck / 50 + 3;
-		switch (sourceObj.alias)
-		{
-		case "nest_bird":
-			chanceChange = 100;
-			return Pop(ThingGen.Create((EClass.rnd(10) == 0) ? "egg_fertilized" : "_egg").TryMakeRandomItem(num));
-		case "wreck_wood":
-			array = new string[5] { "log", "log", "branch", "grass", "vine" };
-			break;
-		case "wreck_junk":
-			chanceChange = 50;
-			return Pop(ThingGen.CreateFromFilter("shop_junk", num));
-		case "wreck_stone":
-			array = new string[4] { "rock", "rock", "stone", "bone" };
-			break;
-		case "wreck_scrap":
-			chanceChange = 75;
-			array = new string[1] { "scrap" };
-			break;
-		case "wreck_cloth":
-			chanceChange = 75;
-			array = new string[1] { "fiber" };
-			break;
-		case "wreck_precious":
-			chanceChange = 100;
-			return Pop(ThingGen.CreateFromFilter("shop_magic", num));
-		default:
-			return false;
-		}
-		if (EClass.rnd(3) == 0 && EClass.game.survival.flags.spawnedFloor < 4)
-		{
-			EClass.game.survival.flags.spawnedFloor++;
-			return Pop(ThingGen.CreateFloor(40, 45).SetNum(3));
-		}
-		if (EClass.rnd(20) == 0)
-		{
-			return Pop(TraitSeed.MakeRandomSeed());
-		}
-		if (EClass.rnd(12) == 0)
-		{
-			return Pop(ThingGen.Create("money2"));
-		}
-		if (EClass.rnd(12) == 0)
-		{
-			Point pos = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
-			if (searchWreck < 50 || EClass.rnd(3) != 0)
-			{
-				EClass._zone.SpawnMob(pos, SpawnSetting.HomeWild(num));
-			}
-			else
-			{
-				EClass._zone.SpawnMob(pos, SpawnSetting.HomeEnemy(Mathf.Max(num - 5, 1)));
-			}
-		}
-		return Pop(ThingGen.Create(array.RandomItem()).SetNum(1 + EClass.rnd(3)));
-		bool Next()
-		{
-			EClass.game.survival.flags.searchWreck++;
-			Point pos2 = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
-			if (EClass.game.survival.flags.searchWreck == 20)
-			{
-				EffectMeteor.Create(pos2, 0, 1, delegate
-				{
-					EClass._zone.AddCard(ThingGen.CreateRecipe("container_shipping"), pos2);
-				});
-			}
-			NextObj();
-			return true;
-		}
-		void NextObj()
-		{
-			if (EClass.rnd(100) < chanceChange)
-			{
-				string[] source = new string[11]
-				{
-					"nest_bird", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_stone", "wreck_stone", "wreck_scrap", "wreck_junk", "wreck_cloth",
-					"wreck_precious"
-				};
-				SetObj(point.x, point.z, EClass.sources.objs.alias[source.RandomItem()].id);
-			}
-		}
-		bool Pop(Thing t)
-		{
-			TrySmoothPick(point, t, EClass.pc);
-			Next();
-			return true;
-		}
 	}
 
 	public PlantData TryGetPlant(Point p)

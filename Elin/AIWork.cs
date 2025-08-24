@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class AIWork : AIAct
 {
@@ -79,6 +80,10 @@ public class AIWork : AIAct
 		}
 		if (!sourceWork.destTrait.IsEmpty())
 		{
+			if (Application.isEditor && Type.GetType("Trait" + sourceWork.destTrait + ", Elin") == null)
+			{
+				Debug.Log(sourceWork.destTrait + "/" + sourceWork.alias);
+			}
 			if (destArea != null)
 			{
 				destThing = EClass._map.FindThing(Type.GetType("Trait" + sourceWork.destTrait + ", Elin"), destArea);

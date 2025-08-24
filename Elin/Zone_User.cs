@@ -21,6 +21,8 @@ public class Zone_User : Zone
 
 	public override bool RevealRoom => true;
 
+	public override float OreChance => 0f;
+
 	public override bool IsUnderwater => elements.Has(3606);
 
 	public override void OnActivate()

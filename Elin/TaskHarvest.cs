@@ -74,7 +74,7 @@ public class TaskHarvest : BaseTaskHarvest
 	{
 		get
 		{
-			if (EClass.game.Prologue.type == GameType.Survival && EClass._zone is Zone_StartSite)
+			if (EClass.game.IsSurvival && EClass._zone is Zone_StartSite)
 			{
 				return CanProgress();
 			}

@@ -83,7 +83,7 @@ public class TCOrbitChara : TCOrbit
 				{
 					flag = true;
 				}
-				else if (owner.IsUnique)
+				else if (owner.IsUnique && !EMono.game.IsSurvival)
 				{
 					string id = owner.id;
 					if (!(id == "ashland"))

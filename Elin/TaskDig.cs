@@ -96,7 +96,7 @@ public class TaskDig : BaseTaskHarvest
 				}
 				return HitResult.Default;
 			}
-			if (EClass._zone.IsSkyLevel && (pos.Installed != null || pos.Charas.Count >= 2 || (pos.HasChara && pos.FirstChara != EClass.pc)))
+			if (EClass._zone.IsSkyLevel && (pos.IsSky || pos.Installed != null || pos.Charas.Count >= 2 || (pos.HasChara && (pos.FirstChara != EClass.pc || EClass.game.IsSurvival))))
 			{
 				return HitResult.Invalid;
 			}
@@ -104,7 +104,7 @@ public class TaskDig : BaseTaskHarvest
 			{
 				return HitResult.Invalid;
 			}
-			if (!pos.HasBridge && pos.sourceFloor.id == 40)
+			if (!pos.HasBridge && !EClass._zone.IsSkyLevel && pos.sourceFloor.id == 40)
 			{
 				return HitResult.Invalid;
 			}
@@ -191,7 +191,7 @@ public class TaskDig : BaseTaskHarvest
 			{
 				EClass.player.recipes.ComeUpWithRecipe(idRecipe, 30);
 			}
-			if (owner.IsPC && owner.IsAliveInCurrentZone && EClass._zone.IsSkyLevel && owner.pos.IsSky)
+			if (owner.IsPC && owner.IsAliveInCurrentZone && EClass._zone.IsSkyLevel && !EClass.game.IsSurvival && owner.pos.IsSky)
 			{
 				EClass.pc.FallFromZone();
 			}

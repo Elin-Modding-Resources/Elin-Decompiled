@@ -269,6 +269,8 @@ public class Game : EClass
 
 	public bool altAbility => EClass.core.config.game.altAbility;
 
+	public bool IsSurvival => Prologue.type == GameType.Survival;
+
 	public Zone StartZone => spatials.Find(EClass.game.Prologue.idStartZone);
 
 	public new static void Wait(float a, Point p)

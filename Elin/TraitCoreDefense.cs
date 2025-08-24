@@ -10,6 +10,14 @@ public class TraitCoreDefense : Trait
 
 	public override void TrySetAct(ActPlan p)
 	{
+		if (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky && !EClass.game.survival.flags.raid)
+		{
+			p.TrySetAct("actWarhorn", delegate
+			{
+				EClass.game.survival.StartRaid();
+				return true;
+			});
+		}
 		ZoneEventDefenseGame ev = EClass._zone.events.GetEvent<ZoneEventDefenseGame>();
 		if (ev == null)
 		{

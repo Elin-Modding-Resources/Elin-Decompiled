@@ -4,7 +4,17 @@ public class TraitGuildDoorman : TraitUniqueGuildPersonnel
 
 	public virtual bool IsGuildMember => false;
 
-	public override bool CanBePushed => IsGuildMember;
+	public override bool CanBePushed
+	{
+		get
+		{
+			if (!IsGuildMember)
+			{
+				return base.owner.IsPCFaction;
+			}
+			return true;
+		}
+	}
 
 	public virtual void GiveTrial()
 	{

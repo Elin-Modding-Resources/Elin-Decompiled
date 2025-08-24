@@ -381,57 +381,9 @@ public class TaskBuild : TaskBaseBuild
 				}
 			});
 		}
-		if (EClass.game.Prologue.type != GameType.Survival || !(EClass._zone is Zone_StartSiteSky))
+		if (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky)
 		{
-			return;
-		}
-		int i = 0;
-		EClass._map.ForeachCell(delegate(Cell c)
-		{
-			if (!c.sourceFloor.tileType.IsSkipFloor)
-			{
-				i++;
-			}
-		});
-		if (EClass.game.survival.flags.floors < 9 && i >= 9)
-		{
-			EffectMeteor.Create(pos, 0, 1, delegate
-			{
-				EClass._zone.ClaimZone(debug: false, pos);
-			});
-			EClass.game.survival.flags.floors = 9;
-		}
-		else if (EClass.game.survival.flags.floors < 15 && i >= 15)
-		{
-			EffectMeteor.Create(pos, 0, 1, delegate
-			{
-				EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("fiama"), pos.x, pos.z).Chara);
-			});
-			EClass.game.survival.flags.floors = 15;
-		}
-		else if (EClass.game.survival.flags.floors < 25 && i >= 25)
-		{
-			EffectMeteor.Create(pos, 0, 1, delegate
-			{
-				EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("nino"), pos.x, pos.z).Chara);
-			});
-			EClass.game.survival.flags.floors = 25;
-		}
-		else if (EClass.game.survival.flags.floors < 40 && i >= 40)
-		{
-			EffectMeteor.Create(pos, 0, 1, delegate
-			{
-				EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("loytel"), pos.x, pos.z).Chara);
-			});
-			EClass.game.survival.flags.floors = 40;
-		}
-		else if (EClass.game.survival.flags.floors < 50 && i >= 50)
-		{
-			EffectMeteor.Create(pos, 0, 1, delegate
-			{
-				EClass._zone.AddCard(ThingGen.Create("core_defense"), pos).Install();
-			});
-			EClass.game.survival.flags.floors = 50;
+			EClass.game.survival.OnExpandFloor(pos);
 		}
 	}
 

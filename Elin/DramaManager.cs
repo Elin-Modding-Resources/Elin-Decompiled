@@ -1047,7 +1047,7 @@ public class DramaManager : EMono
 		switch (array[0])
 		{
 		case "survival":
-			return EMono.game.Prologue.type == GameType.Survival;
+			return EMono.game.IsSurvival;
 		case "fromBook":
 			return LayerDrama.fromBook;
 		case "!fromBook":

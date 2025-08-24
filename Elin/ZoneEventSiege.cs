@@ -8,13 +8,17 @@ public class ZoneEventSiege : ZoneEvent
 
 	public List<Chara> members = new List<Chara>();
 
+	public int lv = 10;
+
+	public int max = 10;
+
 	public override string id => "trial_siege";
 
 	public override Playlist playlist => EClass.Sound.playlistBattle;
 
 	public virtual Chara CreateChara()
 	{
-		return CharaGen.CreateFromFilter("c_wilds");
+		return CharaGen.CreateFromFilter("c_wilds", lv);
 	}
 
 	public override void OnFirstTick()
@@ -22,17 +26,19 @@ public class ZoneEventSiege : ZoneEvent
 		EClass.player.stats.sieges++;
 		Msg.Say("startSiege");
 		EClass._zone.RefreshBGM();
-		Point randomEdge = EClass._map.GetRandomEdge();
+		Point spawnPos = GetSpawnPos();
 		for (int i = 0; i < 10; i++)
 		{
 			Chara chara = CreateChara();
-			EClass._zone.AddCard(chara, EClass._map.GetRandomSurface(randomEdge.x, randomEdge.z, 6));
+			EClass._zone.AddCard(chara, EClass._map.GetRandomSurface(spawnPos.x, spawnPos.z, 6));
 			chara.hostility = Hostility.Enemy;
 			members.Add(chara);
 			uids.Add(chara.uid);
+			chara.PlayEffect("teleport");
+			chara.PlaySound("spell_funnel");
 		}
 		Thing t = ThingGen.Create("torch");
-		EClass._zone.AddCard(t, randomEdge);
+		EClass._zone.AddCard(t, spawnPos);
 		if (members.Count != 0)
 		{
 			return;
@@ -49,6 +55,11 @@ public class ZoneEventSiege : ZoneEvent
 		}
 	}
 
+	public virtual Point GetSpawnPos()
+	{
+		return EClass._map.GetRandomEdge();
+	}
+
 	public override void OnTickRound()
 	{
 		bool flag = true;
@@ -63,7 +74,7 @@ public class ZoneEventSiege : ZoneEvent
 				flag = false;
 			}
 		}
-		if (flag || EClass.Branch.IsAllDead())
+		if (flag)
 		{
 			Kill();
 		}
