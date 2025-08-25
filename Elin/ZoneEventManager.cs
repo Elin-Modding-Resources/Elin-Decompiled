@@ -18,7 +18,8 @@ public class ZoneEventManager : EClass
 		zone = _zone;
 		foreach (ZoneEvent item in list)
 		{
-			item.OnLoad(zone);
+			item.zone = zone;
+			item.OnLoad();
 		}
 	}
 
@@ -116,6 +117,14 @@ public class ZoneEventManager : EClass
 		{
 			item.OnLeaveZone();
 		}
+	}
+
+	public void OnCharaDie(Chara c)
+	{
+		list.ForeachReverse(delegate(ZoneEvent e)
+		{
+			e.OnCharaDie(c);
+		});
 	}
 
 	public void OnSimulateHour()

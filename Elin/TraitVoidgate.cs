@@ -1,5 +1,7 @@
 public class TraitVoidgate : Trait
 {
+	public override bool CanBeHeld => !owner.isOn;
+
 	public override bool CanBeDestroyed => false;
 
 	public override bool CanOnlyCarry => true;

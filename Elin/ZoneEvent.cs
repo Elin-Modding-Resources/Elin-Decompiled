@@ -107,9 +107,8 @@ public class ZoneEvent : EClass
 	{
 	}
 
-	public void OnLoad(Zone _zone)
+	public virtual void OnLoad()
 	{
-		zone = _zone;
 	}
 
 	public void Kill()

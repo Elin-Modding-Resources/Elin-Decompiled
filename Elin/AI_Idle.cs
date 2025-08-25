@@ -577,7 +577,7 @@ public class AI_Idle : AIAct
 		{
 			owner.AddCondition<ConSleep>(1000 + EClass.rnd(1000), force: true);
 		}
-		if (EClass.rnd(100) == 0 && (owner.HasHobbyOrWork("Pet") || owner.HasHobbyOrWork("Fluffy")))
+		if (EClass.rnd(100) == 0 && !owner.noMove && (owner.HasHobbyOrWork("Pet") || owner.HasHobbyOrWork("Fluffy")))
 		{
 			yield return Do(new AI_Mofu());
 		}

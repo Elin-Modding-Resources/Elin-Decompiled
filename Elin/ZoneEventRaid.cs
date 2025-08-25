@@ -1,10 +1,12 @@
+using UnityEngine;
+
 public class ZoneEventRaid : ZoneEventSiege
 {
-	public override void OnFirstTick()
+	public override void OnInit()
 	{
-		lv = 5 + EClass.game.survival.flags.raidRound * 10;
+		lv = Mathf.Max(1, EClass.game.survival.flags.raidLv);
 		max = 5 + lv / 5;
-		base.OnFirstTick();
+		base.OnInit();
 	}
 
 	public override Point GetSpawnPos()
@@ -12,20 +14,24 @@ public class ZoneEventRaid : ZoneEventSiege
 		Trait trait = EClass._map.FindThing<TraitVoidgate>();
 		if (trait != null)
 		{
-			return trait.owner.pos;
+			trait.Toggle(on: true, silent: true);
 		}
-		trait = EClass._map.FindThing<TraitCoreDefense>();
-		if (trait != null)
+		else
 		{
-			return trait.owner.pos;
+			trait = EClass._map.FindThing<TraitCoreDefense>();
 		}
-		return EClass.pc.pos;
+		Point point = ((trait != null) ? trait.owner.pos : EClass.pc.pos);
+		return point.GetNearestPoint(allowBlock: false, allowChara: false) ?? point;
 	}
 
 	public override void OnKill()
 	{
 		base.OnKill();
 		EClass.game.survival.flags.raidRound++;
+		EClass.game.survival.flags.raidLv += 5;
 		EClass.game.survival.flags.dateNextRaid = EClass.world.date.GetRaw(168);
+		Point pos = EClass.game.survival.GetRandomPoint() ?? EClass.pc.pos;
+		string text = ((EClass.game.survival.flags.raidLv >= 50 && EClass.rnd(3) == 0) ? "statue_god" : ((EClass.game.survival.flags.raidLv >= 25 && EClass.rnd(2) == 0) ? "statue_power" : "altar"));
+		EClass.game.survival.MeteorThing(pos, text, install: true);
 	}
 }

@@ -1,10 +1,11 @@
-using UnityEngine;
-
 public class ZoneEventSurvival : ZoneEvent
 {
 	public override void OnTickRound()
 	{
-		Debug.Log("tick:" + rounds);
+		if (EClass._map.cells.GetLength(0) <= 100)
+		{
+			return;
+		}
 		Cell cell = EClass._map.cells[100, 100];
 		if (!cell.HasObj)
 		{
@@ -21,9 +22,10 @@ public class ZoneEventSurvival : ZoneEvent
 			{
 				traitVoidgate.owner.isOn = EClass.game.survival.IsInRaid;
 			}
-			if (!EClass.game.survival.IsInRaid && EClass.world.date.GetRemainingHours(EClass.game.survival.flags.dateNextRaid) <= 0)
+			if (!EClass.game.survival.IsInRaid)
 			{
-				EClass._zone.events.Add(new ZoneEventRaid());
+				EClass.world.date.GetRemainingHours(EClass.game.survival.flags.dateNextRaid);
+				_ = 0;
 			}
 		}
 	}

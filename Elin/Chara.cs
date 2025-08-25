@@ -3950,8 +3950,9 @@ public class Chara : Card, IPathfindWalker
 				EClass.player.returnInfo.turns--;
 				if (EClass.player.returnInfo.turns <= 0)
 				{
-					if (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky)
+					if (EClass.game.IsSurvival && EClass._zone.GetTopZone() is Zone_StartSiteSky)
 					{
+						EClass.player.returnInfo = null;
 						Msg.SayNothingHappen();
 					}
 					else
@@ -5368,10 +5369,7 @@ public class Chara : Card, IPathfindWalker
 			chara.MakeMinion((origin.IsPCParty || origin.IsPCPartyMinion) ? EClass.pc : origin.Chara, MinionType.Friend);
 			Msg.Say("plant_pop", this, chara);
 		}
-		foreach (ZoneEvent item in EClass._zone.events.list)
-		{
-			item.OnCharaDie(this);
-		}
+		EClass._zone.events.OnCharaDie(this);
 	}
 
 	public void TryDropBossLoot()
@@ -6806,9 +6804,9 @@ public class Chara : Card, IPathfindWalker
 				break;
 			}
 			case "farris":
-				if (EClass._zone.id == "startVillage" || EClass._zone.id == "startVillage3")
+				if (EClass._zone.id == "startVillage" || EClass._zone.id == "startVillage3" || EClass.game.IsSurvival)
 				{
-					ShowDialog("_chara");
+					ShowDialog("farris");
 					return;
 				}
 				switch (EClass.game.quests.GetPhase<QuestExploration>())
@@ -6823,7 +6821,7 @@ public class Chara : Card, IPathfindWalker
 					ShowDialog("farris", "home_first");
 					break;
 				default:
-					ShowDialog("_chara");
+					ShowDialog("farris");
 					break;
 				}
 				return;
@@ -8039,13 +8037,6 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (!flag2)
 				{
-					continue;
-				}
-				if (Dist(chara) < 5)
-				{
-					chara.GoHostile(attacker);
-					chara.SetEnemy(attacker);
-					attacker.SetEnemy(chara);
 					continue;
 				}
 				Point nearestPoint = pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: true, ignoreCenter: true);

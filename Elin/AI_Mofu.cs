@@ -9,7 +9,7 @@ public class AI_Mofu : AIWork
 
 	public Chara GetMofu()
 	{
-		return EClass._map.charas.Where((Chara c) => c.IsMofuable).RandomItem();
+		return EClass._map.charas.Where((Chara c) => c.IsMofuable && c != owner).RandomItem();
 	}
 
 	public override IEnumerable<Status> Run()

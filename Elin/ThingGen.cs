@@ -190,10 +190,10 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
-	public static Thing CreateRod(int ele)
+	public static Thing CreateRod(int ele, int charge = -1)
 	{
 		Thing thing = Create("rod");
-		TraitRod.Create(thing, ele);
+		TraitRod.Create(thing, ele, charge);
 		return thing;
 	}
 

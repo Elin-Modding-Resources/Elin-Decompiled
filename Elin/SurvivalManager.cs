@@ -74,6 +74,18 @@ public class SurvivalManager : EClass
 			}
 		}
 
+		public int raidLv
+		{
+			get
+			{
+				return ints[8];
+			}
+			set
+			{
+				ints[8] = value;
+			}
+		}
+
 		public bool raid
 		{
 			get
@@ -83,6 +95,18 @@ public class SurvivalManager : EClass
 			set
 			{
 				bits[0] = value;
+			}
+		}
+
+		public bool gotTaxChest
+		{
+			get
+			{
+				return bits[1];
+			}
+			set
+			{
+				bits[1] = value;
 			}
 		}
 
@@ -117,6 +141,18 @@ public class SurvivalManager : EClass
 		});
 	}
 
+	public void MeteorThing(Point pos, string id, bool install = false)
+	{
+		Meteor(pos, delegate
+		{
+			Card card = EClass._zone.AddCard(ThingGen.Create(id), pos);
+			if (install)
+			{
+				card.Install();
+			}
+		});
+	}
+
 	public void OnExpandFloor(Point pos)
 	{
 		int i = 0;
@@ -128,23 +164,27 @@ public class SurvivalManager : EClass
 				i++;
 			}
 		});
-		Check(9, delegate
+		Check(6, delegate
 		{
 			EClass._zone.ClaimZone(debug: false, pos);
 		});
-		Check(15, delegate
+		Check(9, delegate
+		{
+			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("shojo"), pos.x, pos.z).Chara);
+		});
+		Check(20, delegate
 		{
 			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("fiama"), pos.x, pos.z).Chara);
 		});
-		Check(25, delegate
+		Check(40, delegate
 		{
 			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("nino"), pos.x, pos.z).Chara);
 		});
-		Check(40, delegate
+		Check(60, delegate
 		{
 			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("loytel"), pos.x, pos.z).Chara);
 		});
-		Check(50, delegate
+		Check(80, delegate
 		{
 			EClass._zone.AddCard(ThingGen.Create("core_defense"), pos).Install();
 		});
@@ -172,19 +212,19 @@ public class SurvivalManager : EClass
 		int num = searchWreck / 50 + 3;
 		if (searchWreck == 0)
 		{
-			Pop(ThingGen.Create("log").SetNum(6));
-			Pop(ThingGen.Create("rock").SetNum(4));
+			Thing t2 = ThingGen.CreateParcel(null, ThingGen.Create("log").SetNum(6), ThingGen.Create("rock").SetNum(4), ThingGen.Create("resin").SetNum(2), ThingGen.Create("money2").SetNum(10), ThingGen.Create("1267"), ThingGen.CreateRod(50311, 8));
+			Pop(t2);
 		}
 		switch (sourceObj.alias)
 		{
 		case "nest_bird":
-			chanceChange = 100;
+			chanceChange = 65;
 			return Pop(ThingGen.Create((EClass.rnd(10) == 0) ? "egg_fertilized" : "_egg").TryMakeRandomItem(num));
 		case "wreck_wood":
-			array = new string[6] { "log", "log", "branch", "grass", "vine", "resin" };
+			array = new string[8] { "log", "log", "branch", "grass", "vine", "resin", "leaf", "chunk" };
 			break;
 		case "wreck_junk":
-			chanceChange = 50;
+			chanceChange = 100;
 			return Pop(ThingGen.CreateFromFilter("shop_junk", num));
 		case "wreck_stone":
 			chanceChange = 30;
@@ -233,13 +273,19 @@ public class SurvivalManager : EClass
 		bool Next()
 		{
 			EClass.game.survival.flags.searchWreck++;
+			int searchWreck2 = EClass.game.survival.flags.searchWreck;
 			Point pos2 = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
-			if (EClass.game.survival.flags.searchWreck == 20)
+			if (searchWreck2 == 20)
 			{
 				Meteor(pos2, delegate
 				{
 					EClass._zone.AddCard(ThingGen.CreateRecipe("container_shipping"), pos2);
 				});
+			}
+			if (searchWreck2 > (EClass.debug.enable ? 5 : 100) && !flags.gotTaxChest)
+			{
+				MeteorThing(pos2, "chest_tax");
+				flags.gotTaxChest = true;
 			}
 			NextObj();
 			return true;
@@ -248,10 +294,10 @@ public class SurvivalManager : EClass
 		{
 			if (EClass.rnd(100) < chanceChange)
 			{
-				string[] source = new string[11]
+				string[] source = new string[12]
 				{
-					"nest_bird", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_stone", "wreck_stone", "wreck_scrap", "wreck_junk", "wreck_cloth",
-					"wreck_precious"
+					"nest_bird", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_wood", "wreck_stone", "wreck_stone", "wreck_scrap", "wreck_junk",
+					"wreck_cloth", "wreck_precious"
 				};
 				EClass._map.SetObj(point.x, point.z, EClass.sources.objs.alias[source.RandomItem()].id);
 			}
@@ -262,6 +308,25 @@ public class SurvivalManager : EClass
 			Next();
 			return true;
 		}
+	}
+
+	public Point GetRandomPoint()
+	{
+		TraitCoreZone traitCoreZone = EClass._map.FindThing<TraitCoreZone>();
+		Point point = ((traitCoreZone != null) ? traitCoreZone.owner.pos : EClass._map.GetCenterPos());
+		List<Cell> list = new List<Cell>();
+		EClass._map.ForeachSphere(point.x, point.z, 50f, delegate(Point p)
+		{
+			if (!p.IsSky && !p.IsBlocked && !p.HasObj && !p.HasThing)
+			{
+				list.Add(p.cell);
+			}
+		});
+		if (list.Count == 0)
+		{
+			return null;
+		}
+		return list.RandomItem().GetPoint();
 	}
 
 	public List<SourceChara.Row> ListUnrecruitedUniques()

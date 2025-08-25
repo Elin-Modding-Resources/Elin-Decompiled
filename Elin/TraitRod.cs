@@ -73,11 +73,11 @@ public class TraitRod : TraitTool
 		}, owner);
 	}
 
-	public static void Create(Card owner, int ele)
+	public static void Create(Card owner, int ele, int charge = -1)
 	{
 		owner.refVal = ele;
 		SourceElement.Row row = EClass.sources.elements.map[ele];
-		owner.c_charges = EClass.rnd(row.charge * 150 / 100);
+		owner.c_charges = ((charge > 0) ? charge : EClass.rnd(row.charge * 150 / 100));
 		if (row.tag.Contains("noCopy"))
 		{
 			owner.elements.SetBase(759, 10);

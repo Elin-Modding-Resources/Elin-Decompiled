@@ -7,4 +7,6 @@ public class Zone_StartSiteSky : Zone_StartSite
 	public override string IDBaseLandFeat => "bfPlain,bfFertile,bfStart";
 
 	public override bool BlockBorderExit => true;
+
+	public override string IdBiome => "Plain";
 }

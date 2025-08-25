@@ -10,13 +10,24 @@ public class TraitCoreDefense : Trait
 
 	public override void TrySetAct(ActPlan p)
 	{
-		if (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky && !EClass.game.survival.flags.raid)
+		if (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky)
 		{
-			p.TrySetAct("actWarhorn", delegate
+			if (!EClass.game.survival.flags.raid)
 			{
-				EClass.game.survival.StartRaid();
-				return true;
-			});
+				p.TrySetAct("actWarhorn", delegate
+				{
+					EClass.game.survival.StartRaid();
+					return true;
+				});
+			}
+			else if (!EClass.game.survival.IsInRaid && EClass._map.FindThing<TraitVoidgate>() != null)
+			{
+				p.TrySetAct("actWarhornRaid", delegate
+				{
+					EClass._zone.events.Add(new ZoneEventRaid());
+					return true;
+				});
+			}
 		}
 		ZoneEventDefenseGame ev = EClass._zone.events.GetEvent<ZoneEventDefenseGame>();
 		if (ev == null)

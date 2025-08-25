@@ -662,7 +662,7 @@ public class BiomeProfile : EScriptable
 
 	public SourceMaterial.Row MatSub => _matSub ?? (_matSub = ((exterior.floor.matSub == 0) ? MatFloor : EClass.sources.materials.map[exterior.floor.matSub]));
 
-	public void Populate(Point point, bool interior = false)
+	public void Populate(Point point, bool interior = false, float mtpDensity = 1f)
 	{
 		Cell cell = point.cell;
 		if (cell.obj != 0 || cell.Things.Count > 0)
@@ -677,7 +677,7 @@ public class BiomeProfile : EScriptable
 			{
 				break;
 			}
-			if (Rand.Range(0f, 1f) > cluster.density)
+			if (Rand.Range(0f, 1f) > cluster.density * mtpDensity)
 			{
 				continue;
 			}
