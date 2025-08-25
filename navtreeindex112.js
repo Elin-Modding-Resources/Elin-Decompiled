@@ -1,5 +1,11 @@
 var NAVTREEINDEX112 =
 {
+"classTileTypeBlockShip.html#a7c3cec26febc02acb1ac28fc1cf4da4d":[1,0,1333,3],
+"classTileTypeBlockShip.html#a7e39781594ca8bf401c5c3046bcfb791":[1,0,1333,1],
+"classTileTypeBoat.html":[1,0,1334],
+"classTileTypeBoat.html#a6b49d12d5388a94a1c275016b20bc9ce":[1,0,1334,0],
+"classTileTypeBoat.html#ae80ebad0268cf91ec769f3c41f6334bc":[1,0,1334,1],
+"classTileTypeBridge.html":[1,0,1335],
 "classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5":[1,0,1335,3],
 "classTileTypeBridge.html#a4eec48fa9724ee9869b274df30c06bae":[1,0,1335,1],
 "classTileTypeBridge.html#ac0654f8e915881990692038574b5a0e2":[1,0,1335,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX112 =
 "classToJOutline.html#abdd645be467c7de7217dda62090fd411":[1,0,1387,0],
 "classToJShadow.html":[1,0,1388],
 "classToJShadow.html#a0fb815bf2d0f26019977a2f727bec9ad":[1,0,1388,8],
-"classToJShadow.html#a41fc277b6731bd288872030b0f39c502":[1,0,1388,7],
-"classToJShadow.html#a52da5025ac5e707318671567735f5025":[1,0,1388,2],
-"classToJShadow.html#a52fdd69af69d08139aaeac9f065d94d3":[1,0,1388,5],
-"classToJShadow.html#a758bf6ccf70a69064cb0e1dd29d8d737":[1,0,1388,6],
-"classToJShadow.html#a7d20378b0e810f3c29192365993bfa71":[1,0,1388,9],
-"classToJShadow.html#a8c4dbbd45e0c3def795ba0216e4d295d":[1,0,1388,1],
-"classToJShadow.html#a9380cbd479a3ce54ce62b9befa00f157":[1,0,1388,4]
+"classToJShadow.html#a41fc277b6731bd288872030b0f39c502":[1,0,1388,7]
 };

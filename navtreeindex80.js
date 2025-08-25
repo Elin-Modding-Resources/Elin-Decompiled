@@ -1,5 +1,7 @@
 var NAVTREEINDEX80 =
 {
+"classLightControl.html#a0f2e4d1d43c7a38111d6fd17ae4a23f2":[1,0,830,5],
+"classLightControl.html#a1f992dd4508599b98f1ef042888842fc":[1,0,830,11],
 "classLightControl.html#a5987a64bb7b8f686d465635ba5800621":[1,0,830,1],
 "classLightControl.html#a68a096594ddd060f654ae1fd2bab3318":[1,0,830,8],
 "classLightControl.html#a72aca1c9142d94012841e225a7e9674f":[1,0,830,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX80 =
 "classMATERIAL.html#afd5af9821756345908fdda4cabfdef70":[1,0,868,19],
 "classMOD.html":[1,0,880],
 "classMOD.html#a03d79b416c4a8ac085ce6d5f31aed65a":[1,0,880,0],
-"classMOD.html#a093b63f68833e0233b7d244f2eddf77f":[1,0,880,4],
-"classMOD.html#a86d7af6281763f00f859cac6b84c8c49":[1,0,880,7],
-"classMOD.html#a9943e6985e239023ad321626064a9fdc":[1,0,880,6]
+"classMOD.html#a093b63f68833e0233b7d244f2eddf77f":[1,0,880,4]
 };

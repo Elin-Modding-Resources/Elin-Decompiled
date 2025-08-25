@@ -2,8 +2,10 @@ var classSurvivalManager =
 [
     [ "Flags", "classSurvivalManager_1_1Flags.html", "classSurvivalManager_1_1Flags" ],
     [ "GetRaidEvent", "classSurvivalManager.html#a1c8dbe122e610ef5f3edcf8fcc8cc14a", null ],
+    [ "GetRandomPoint", "classSurvivalManager.html#a1a78b549b2c369a994b349d2d4e8ed6a", null ],
     [ "ListUnrecruitedUniques", "classSurvivalManager.html#afd8337687480fb4a7d27ee928a5ff63d", null ],
     [ "Meteor", "classSurvivalManager.html#a6f542852a0873aed31d85e9e0e84c603", null ],
+    [ "MeteorThing", "classSurvivalManager.html#ac4ac5323ca99b848abb23962b01ef733", null ],
     [ "OnExpandFloor", "classSurvivalManager.html#a9ee9783ea0ccff3eafa68e830d0692b5", null ],
     [ "OnMineWreck", "classSurvivalManager.html#a101c122f0a3bb9e6d542f913c7bc0bd1", null ],
     [ "OnUpdateRecruit", "classSurvivalManager.html#a3fdbf4d79d9c65c894793e3d9a4b2e4f", null ],

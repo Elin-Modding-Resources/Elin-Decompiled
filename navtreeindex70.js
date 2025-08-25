@@ -1,5 +1,7 @@
 var NAVTREEINDEX70 =
 {
+"classHotItemHeld.html#aa32a631bfd13f1ce2db3250c7c29c1c6":[1,0,636,2],
+"classHotItemHeld.html#aa9ab57c606f79ce44cecc2635b5804a5":[1,0,636,4],
 "classHotItemHeld.html#abc897fb16cf14cf031d856c88a29b844":[1,0,636,6],
 "classHotItemHeld.html#ac366366967a975870f9db7f08ef3a53f":[1,0,636,0],
 "classHotItemHeld.html#ac498cc3932893f188e979a0aa498c3f5":[1,0,636,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX70 =
 "classIngredientAndRecipe.html#ad4f274f11c615c6e311ae7225256788c":[1,0,663,0],
 "classIngredientAndRecipe.html#aff251c139803d4168e200317c3afa9d6":[1,0,663,1],
 "classInnerBevel.html":[1,0,664],
-"classInnerBevel.html#a33480eae8b16b7ab9aacdc0bdfd661ae":[1,0,664,6],
-"classInnerBevel.html#a4109e8cf941e647da8b5a6716429ea7c":[1,0,664,17],
-"classInnerBevel.html#a4a8020969b839ed577a7cc47bc38cd47":[1,0,664,9]
+"classInnerBevel.html#a33480eae8b16b7ab9aacdc0bdfd661ae":[1,0,664,6]
 };

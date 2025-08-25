@@ -1,5 +1,11 @@
 var NAVTREEINDEX116 =
 {
+"classTraitCoreZone.html":[1,0,1494],
+"classTraitCoreZone.html#a337efef2ab458a2e6608a1efb8fda55e":[1,0,1494,5],
+"classTraitCoreZone.html#a89fc4e8244f1ae0f36d00dcb5ded7d7c":[1,0,1494,1],
+"classTraitCoreZone.html#ad4efeecbc61c1cec3ad7658f149f9e08":[1,0,1494,0],
+"classTraitCoreZone.html#ad77557735f2e01d411913b4e58de8e1f":[1,0,1494,3],
+"classTraitCoreZone.html#ae513da6d7633fcf4088e5466250c79ad":[1,0,1494,4],
 "classTraitCoreZone.html#aec8335ec7acaf160da6fd15d2f6544ba":[1,0,1494,2],
 "classTraitCorgon.html":[1,0,1495],
 "classTraitCorgon.html#a2937d7297737eb4e982e7f03320dc216":[1,0,1495,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitDyeMaker.html#a6ed9bfb581432eb63b2e1512f18c94b7":[1,0,1533,3],
 "classTraitDyeMaker.html#a78712d06530b5ae7a73bf2add6276119":[1,0,1533,5],
 "classTraitDyeMaker.html#a7c135acc1974d6adccbc799c4a185533":[1,0,1533,1],
-"classTraitDyeMaker.html#a7edd2bc306762c4cb7a352858d19e20d":[1,0,1533,2],
-"classTraitDyeMaker.html#a88229a7b49a09f265ae0781508f0eb20":[1,0,1533,6],
-"classTraitDyeMaker.html#a8f1c8a8510376215242a105f7a53982c":[1,0,1533,0],
-"classTraitDyeMaker.html#ac458ac1c27d04a528cc46219fda877a7":[1,0,1533,7],
-"classTraitDyeMaker.html#adac22b23782ac77519f4269965f3280d":[1,0,1533,4],
-"classTraitEQ.html":[1,0,1540],
-"classTraitEQFlower.html":[1,0,1541]
+"classTraitDyeMaker.html#a7edd2bc306762c4cb7a352858d19e20d":[1,0,1533,2]
 };

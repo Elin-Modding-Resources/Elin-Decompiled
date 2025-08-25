@@ -8,7 +8,7 @@ var classZoneEvent =
     [ "OnInit", "classZoneEvent.html#a7f466e1862eba663e7814c50632b23ef", null ],
     [ "OnKill", "classZoneEvent.html#adbbe4fa36aa679a05ac5f7aa9a7ffdec", null ],
     [ "OnLeaveZone", "classZoneEvent.html#a1e522bb5a600c0745a859d8fc6e61acb", null ],
-    [ "OnLoad", "classZoneEvent.html#a221a5b79ceba61972a7a03c2762ea668", null ],
+    [ "OnLoad", "classZoneEvent.html#ac2ca98d197e6dfcec678269bb3507720", null ],
     [ "OnSimulateHour", "classZoneEvent.html#a086621edb29a2174e6d8ea1585940d99", null ],
     [ "OnTick", "classZoneEvent.html#a25974d3f49a0fca91b2af94486a8819a", null ],
     [ "OnTickRound", "classZoneEvent.html#ab11d1ea53f788d62edcdd6498c1bb972", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX118 =
 {
+"classTraitGeneratorWheel.html#af4fb97465b98e6bc72d7727366bfff6e":[1,0,1591,5],
+"classTraitGeneratorWind.html":[1,0,1592],
+"classTraitGeneratorWind.html#a4c2955cf4ae5ba12e00e8ea724e1db69":[1,0,1592,0],
+"classTraitGeyser.html":[1,0,1593],
+"classTraitGiftJure.html":[1,0,1594],
+"classTraitGiftJure.html#a9ffa22a8c61e29654ee74d0c0bba405d":[1,0,1594,0],
 "classTraitGiftNewYear.html":[1,0,1595],
 "classTraitGiftNewYear.html#a14f33ead74c45e2c7618566a77de9a7b":[1,0,1595,0],
 "classTraitGiftPack.html":[1,0,1596],
@@ -243,11 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitMannequin.html#a8ebbf82ab1219140cb7656a4e6b76562":[1,0,1654,3],
 "classTraitMannequin.html#a97a6fc60e9f0d1318054b79ef4c07bc8":[1,0,1654,2],
 "classTraitMannequin.html#ade085d97dce3c7f95d85c701deb30067":[1,0,1654,4],
-"classTraitMannequin.html#ae3a609bd452a21d8c2b0eed280952dc8":[1,0,1654,0],
-"classTraitMap.html":[1,0,1655],
-"classTraitMap.html#afb99e24a093793f9d727bfa3317fc9bf":[1,0,1655,0],
-"classTraitMapBoard.html":[1,0,1656],
-"classTraitMapBoard.html#a23d8440d3eab72f9ac73480312d0f3db":[1,0,1656,1],
-"classTraitMapBoard.html#abe12bfc60877ad1432da4abdde539392":[1,0,1656,0],
-"classTraitMaterialHammer.html":[1,0,1657]
+"classTraitMannequin.html#ae3a609bd452a21d8c2b0eed280952dc8":[1,0,1654,0]
 };

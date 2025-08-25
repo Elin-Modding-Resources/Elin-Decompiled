@@ -28,7 +28,7 @@ var classBiomeProfile =
       [ "Rock", "classBiomeProfile.html#a6cffd27b89205f19d67135d383792994a4cfbb125e9878528bab91d12421134d8", null ]
     ] ],
     [ "Init", "classBiomeProfile.html#aac345c0f9d08b234dc1e84fe9bcab5ea", null ],
-    [ "Populate", "classBiomeProfile.html#ab93966d1d10cdaa3a4fe5651583ced0d", null ],
+    [ "Populate", "classBiomeProfile.html#a6aea5dad14d20169771959d3feddfd4f", null ],
     [ "Reset", "classBiomeProfile.html#ab8e7ca1ee8a19ae4f414717aa0821d3b", null ],
     [ "_exterior", "classBiomeProfile.html#ab87f757146959dbdbef50ef5c1f8e00d", null ],
     [ "_interior", "classBiomeProfile.html#af748c5337aeaa62b0a466610f11c414c", null ],

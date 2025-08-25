@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"classGoalSleep.html#ad47f4ac09ee230043fe2e8ed3d5e131d":[1,0,556,3],
+"classGoalSpot.html":[1,0,557],
 "classGoalSpot.html#a303713cf647d8b644b40d9b2f9de6bf6":[1,0,557,0],
 "classGoalTask.html":[1,0,558],
 "classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b":[1,0,558,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "classGrowSystemTree.html#a6c387dd7894c5ea8a138c7042f3ebcbd":[1,0,583,13],
 "classGrowSystemTree.html#a84d5380a61f5ff6737f614ed43c512ea":[1,0,583,4],
 "classGrowSystemTree.html#a8de59706b21afe7a4ec4a80bd1b33e3c":[1,0,583,16],
-"classGrowSystemTree.html#a968e0229a80dadc8d1b8a4350026d5f1":[1,0,583,19],
-"classGrowSystemTree.html#a96a5f8b1eeece292312cb522b5c1b215":[1,0,583,3],
-"classGrowSystemTree.html#a9ea9df87417de10c33ff5607428eb8e3":[1,0,583,20]
+"classGrowSystemTree.html#a968e0229a80dadc8d1b8a4350026d5f1":[1,0,583,19]
 };

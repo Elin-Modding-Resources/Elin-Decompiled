@@ -5,6 +5,7 @@ var classZoneEventManager =
     [ "AddPreEnter", "classZoneEventManager.html#ad91925d5b80641654ce190d9fd16da4f", null ],
     [ "Clear", "classZoneEventManager.html#a031a230e3ea08c5c08c5903fdff0cf6d", null ],
     [ "GetEvent< T >", "classZoneEventManager.html#ad83418e67cbcf8a48b6e9f487e7f64d5", null ],
+    [ "OnCharaDie", "classZoneEventManager.html#ad6eecf0bedc5a6e4d90e39c73b188b44", null ],
     [ "OnLeaveZone", "classZoneEventManager.html#ad9ceee099090c0ac51861aa2319b54f7", null ],
     [ "OnLoad", "classZoneEventManager.html#abc7f362dbeae9c3fc058b3bd24cf4c8b", null ],
     [ "OnSimulateHour", "classZoneEventManager.html#a9282808d1978796dd56b5dbed0666bdf", null ],

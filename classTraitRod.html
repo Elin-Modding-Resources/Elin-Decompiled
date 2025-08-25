@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.187 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable</span>
    </div>
   </td>
  </tr>
@@ -319,8 +319,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa9697907e1b700824c15bf879ed0b613"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitRod.html#aa9697907e1b700824c15bf879ed0b613">Create</a> (<a class="el" href="classCard.html">Card</a> <a class="el" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, int ele)</td></tr>
-<tr class="separator:aa9697907e1b700824c15bf879ed0b613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b51a17fa4ff422fbbb821bee7560dfa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitRod.html#a8b51a17fa4ff422fbbb821bee7560dfa">Create</a> (<a class="el" href="classCard.html">Card</a> <a class="el" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, int ele, int charge=-1)</td></tr>
+<tr class="separator:a8b51a17fa4ff422fbbb821bee7560dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a> (int a, int <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>)</td></tr>
 <tr class="separator:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -723,8 +723,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="TraitRod_8cs_source.html#l00001">1</a> of file <a class="el" href="TraitRod_8cs_source.html">TraitRod.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa9697907e1b700824c15bf879ed0b613" name="aa9697907e1b700824c15bf879ed0b613"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9697907e1b700824c15bf879ed0b613">&#9670;&#160;</a></span>Create()</h2>
+<a id="a8b51a17fa4ff422fbbb821bee7560dfa" name="a8b51a17fa4ff422fbbb821bee7560dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b51a17fa4ff422fbbb821bee7560dfa">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -742,7 +742,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ele</em>&#160;</td>
+          <td class="paramname"><em>ele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>charge</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -761,7 +767,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
 <div class="line"><span class="lineno">   78</span>        owner.refVal = ele;</div>
 <div class="line"><span class="lineno">   79</span>        <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele];</div>
-<div class="line"><span class="lineno">   80</span>        owner.c_charges = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a4235011c10329e428552e3f6f313c16d">charge</a> * 150 / 100);</div>
+<div class="line"><span class="lineno">   80</span>        owner.c_charges = ((charge &gt; 0) ? charge : <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a4235011c10329e428552e3f6f313c16d">charge</a> * 150 / 100));</div>
 <div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;noCopy&quot;</span>))</div>
 <div class="line"><span class="lineno">   82</span>        {</div>
 <div class="line"><span class="lineno">   83</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">SetBase</a>(759, 10);</div>

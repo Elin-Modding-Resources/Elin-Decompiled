@@ -21,7 +21,7 @@ var classThingGen =
     [ "CreateRawMaterial", "classThingGen.html#a16e0b64aeb4fa2a4762c16694c211c32", null ],
     [ "CreateRecipe", "classThingGen.html#aa30e2786f0bd455873b1e6930db41d8b", null ],
     [ "CreateRedBook", "classThingGen.html#a49e2e22eedc2d8982d2d0b6203905f6a", null ],
-    [ "CreateRod", "classThingGen.html#a33646192b21716d1878bb49a69e127b6", null ],
+    [ "CreateRod", "classThingGen.html#af2ae7a338f4f360cadf1c04e4bcc9551", null ],
     [ "CreateRune", "classThingGen.html#a1aa2b72208a9bd05bbc55994f9323218", null ],
     [ "CreateScroll", "classThingGen.html#ac776e0530919124a87091f5e0886108d", null ],
     [ "CreateSkillbook", "classThingGen.html#aaf3ff60e30aecf89c53c6204cdb8558b", null ],

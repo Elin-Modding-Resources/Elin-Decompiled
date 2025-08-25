@@ -1700,6 +1700,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitSpellbookRandom.cs", "TraitSpellbookRandom_8cs.html", "TraitSpellbookRandom_8cs" ],
     [ "TraitSpinner.cs", "TraitSpinner_8cs.html", "TraitSpinner_8cs" ],
     [ "TraitSpot.cs", "TraitSpot_8cs.html", "TraitSpot_8cs" ],
+    [ "TraitSpotBiome.cs", "TraitSpotBiome_8cs.html", "TraitSpotBiome_8cs" ],
     [ "TraitSpotDining.cs", "TraitSpotDining_8cs.html", "TraitSpotDining_8cs" ],
     [ "TraitSpotExit.cs", "TraitSpotExit_8cs.html", "TraitSpotExit_8cs" ],
     [ "TraitSpotFarm.cs", "TraitSpotFarm_8cs.html", "TraitSpotFarm_8cs" ],

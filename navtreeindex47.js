@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classColorProfile.html#ae7780e500700a2e92b5e3baf71ffb584":[1,0,287,23],
+"classColorProfile.html#ae93388ad9ef1ec9940ff1364550acd9e":[1,0,287,21],
 "classColorProfile.html#aedf78c28f8a4e6a479f5c072726394a0":[1,0,287,8],
 "classColorProfile.html#afacd6a9e118199f7bdaa4c4e707435cd":[1,0,287,9],
 "classColorProfile_1_1BlockColors.html":[1,0,287,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "classConStrife.html#a989c9b8447e9a6d540413f5d3505ad72":[1,0,346,11],
 "classConStrife.html#a9dd786341f40327a11ab2b3aa2961c1b":[1,0,346,3],
 "classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f":[1,0,346,7],
-"classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1":[1,0,346,9],
-"classConStrife.html#af24102b6046155412c350ed92c2a05cc":[1,0,346,10],
-"classConSuffocation.html":[1,0,347]
+"classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1":[1,0,346,9]
 };

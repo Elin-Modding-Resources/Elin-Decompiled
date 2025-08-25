@@ -1,5 +1,11 @@
 var NAVTREEINDEX117 =
 {
+"classTraitDyeMaker.html#a88229a7b49a09f265ae0781508f0eb20":[1,0,1533,6],
+"classTraitDyeMaker.html#a8f1c8a8510376215242a105f7a53982c":[1,0,1533,0],
+"classTraitDyeMaker.html#ac458ac1c27d04a528cc46219fda877a7":[1,0,1533,7],
+"classTraitDyeMaker.html#adac22b23782ac77519f4269965f3280d":[1,0,1533,4],
+"classTraitEQ.html":[1,0,1540],
+"classTraitEQFlower.html":[1,0,1541],
 "classTraitEQFlower.html#a5551db4aa2ba582d74b4fc80bd1bc097":[1,0,1541,1],
 "classTraitEQFlower.html#a5b4441af538d4caa2e6b9bf3ed12bcf9":[1,0,1541,0],
 "classTraitEcoMark.html":[1,0,1534],
@@ -243,11 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitGeneratorWheel.html#ad2b6b1617582de57e8cb2f73fa254953":[1,0,1591,8],
 "classTraitGeneratorWheel.html#ae5aad7532ca4914c24d3aa01bec5387f":[1,0,1591,10],
 "classTraitGeneratorWheel.html#ae9716c12090259efe078c13be975293d":[1,0,1591,9],
-"classTraitGeneratorWheel.html#af2beebf433e8d020687ff01dfbcd0c60":[1,0,1591,7],
-"classTraitGeneratorWheel.html#af4fb97465b98e6bc72d7727366bfff6e":[1,0,1591,5],
-"classTraitGeneratorWind.html":[1,0,1592],
-"classTraitGeneratorWind.html#a4c2955cf4ae5ba12e00e8ea724e1db69":[1,0,1592,0],
-"classTraitGeyser.html":[1,0,1593],
-"classTraitGiftJure.html":[1,0,1594],
-"classTraitGiftJure.html#a9ffa22a8c61e29654ee74d0c0bba405d":[1,0,1594,0]
+"classTraitGeneratorWheel.html#af2beebf433e8d020687ff01dfbcd0c60":[1,0,1591,7]
 };

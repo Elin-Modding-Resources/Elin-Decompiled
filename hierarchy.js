@@ -1867,6 +1867,7 @@ var hierarchy =
         [ "TraitSnow", "classTraitSnow.html", null ],
         [ "TraitSpot", "classTraitSpot.html", [
           [ "TraitGeyser", "classTraitGeyser.html", null ],
+          [ "TraitSpotBiome", "classTraitSpotBiome.html", null ],
           [ "TraitSpotDining", "classTraitSpotDining.html", null ],
           [ "TraitSpotFarm", "classTraitSpotFarm.html", null ],
           [ "TraitSpotFish", "classTraitSpotFish.html", null ],

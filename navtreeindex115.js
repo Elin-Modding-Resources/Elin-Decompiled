@@ -1,5 +1,11 @@
 var NAVTREEINDEX115 =
 {
+"classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb":[1,0,1440,0],
+"classTraitBoat.html#ab721257d9353859dc53a310233b183ed":[1,0,1440,2],
+"classTraitBoat.html#ac63976c5747b30504ceb563902e8f276":[1,0,1440,3],
+"classTraitBoat.html#ac97e5e8c4ae9111069e4075e2e57c7c6":[1,0,1440,1],
+"classTraitBook.html":[1,0,1441],
+"classTraitBook.html#a069d61059a15437119bb0bc6058f1a40":[1,0,1441,1],
 "classTraitBook.html#a0a1171837e959a3a759bc04126b5fec6":[1,0,1441,5],
 "classTraitBook.html#a14152139a086fc23103c02f79adef951":[1,0,1441,8],
 "classTraitBook.html#a18586bbf8c3c844aa673755a8a5bc8fd":[1,0,1441,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitCoreDefense.html#a34c134d5cd8ce7f1612e4bc7ff22aaa6":[1,0,1493,0],
 "classTraitCoreDefense.html#a5a3851f4f968c75de0aae62232384c78":[1,0,1493,4],
 "classTraitCoreDefense.html#ae35a9cef65effa18e6b95578a82cc6ca":[1,0,1493,1],
-"classTraitCoreDefense.html#afc60370b27a9b742fd571f4915e4ca5e":[1,0,1493,3],
-"classTraitCoreZone.html":[1,0,1494],
-"classTraitCoreZone.html#a337efef2ab458a2e6608a1efb8fda55e":[1,0,1494,5],
-"classTraitCoreZone.html#a89fc4e8244f1ae0f36d00dcb5ded7d7c":[1,0,1494,1],
-"classTraitCoreZone.html#ad4efeecbc61c1cec3ad7658f149f9e08":[1,0,1494,0],
-"classTraitCoreZone.html#ad77557735f2e01d411913b4e58de8e1f":[1,0,1494,3],
-"classTraitCoreZone.html#ae513da6d7633fcf4088e5466250c79ad":[1,0,1494,4]
+"classTraitCoreDefense.html#afc60370b27a9b742fd571f4915e4ca5e":[1,0,1493,3]
 };
