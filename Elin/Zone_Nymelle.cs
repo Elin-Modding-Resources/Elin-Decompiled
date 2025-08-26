@@ -97,7 +97,7 @@ public class Zone_Nymelle : Zone_QuestDungeon
 		}
 		if (IsBossLv)
 		{
-			EClass._zone.AddChara("isygarad", 40, 37);
+			EClass._zone.AddChara("isygarad", 40, 37).ScaleByPrincipal();
 			SoundManager.ForceBGM();
 			LayerDrama.ActivateMain("mono", "nymelle_boss");
 		}

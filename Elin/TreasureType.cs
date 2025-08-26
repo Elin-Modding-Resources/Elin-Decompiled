@@ -4,5 +4,6 @@ public enum TreasureType
 	BossNefia,
 	BossQuest,
 	Map,
-	RandomChest
+	RandomChest,
+	SurvivalRaid
 }

@@ -196,11 +196,10 @@ public class EloMap : EClass
 			if (cell == null)
 			{
 				Debug.Log("cell is null:" + x + "/" + y);
-				continue;
 			}
-			cell.zone = zone;
-			if (!zone.IsInstance)
+			else if (!zone.IsInstance)
 			{
+				cell.zone = zone;
 				cell.obj = zone.icon;
 			}
 		}

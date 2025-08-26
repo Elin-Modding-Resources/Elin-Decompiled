@@ -1919,9 +1919,9 @@ public class Zone : Spatial, ICardParent, IInspect
 		return AddCard(t, center);
 	}
 
-	public Card AddChara(string id, int x, int z)
+	public Chara AddChara(string id, int x, int z)
 	{
-		return AddCard(CharaGen.Create(id), x, z);
+		return AddCard(CharaGen.Create(id), x, z) as Chara;
 	}
 
 	public Card AddThing(string id, int x, int z)

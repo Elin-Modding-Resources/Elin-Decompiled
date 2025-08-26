@@ -8,9 +8,9 @@ public class TraitDemitas : TraitUniqueChara
 	{
 		get
 		{
-			if (!EClass.debug.enable)
+			if (!EClass.debug.enable && !EClass.game.quests.IsCompleted("demitas_spellwriter"))
 			{
-				return EClass.game.quests.IsCompleted("demitas_spellwriter");
+				return EClass.game.IsSurvival;
 			}
 			return true;
 		}

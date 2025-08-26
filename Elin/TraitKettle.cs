@@ -34,7 +34,7 @@ public class TraitKettle : TraitUniqueChara
 	{
 		get
 		{
-			if (!EClass.game.quests.IsCompleted("vernis_gold"))
+			if (!EClass.game.quests.IsCompleted("vernis_gold") && !EClass.game.IsSurvival)
 			{
 				return EClass.debug.enable;
 			}

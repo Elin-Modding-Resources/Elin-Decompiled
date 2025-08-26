@@ -381,7 +381,9 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 		sourcePref.pivotY = iniData.Global["pivotY"].ToInt();
 		sourcePref.shadow = iniData.Global["shadow"].ToInt();
 		sourcePref.shadowX = iniData.Global["shadowX"].ToInt();
-		sourcePref.shadowY = iniData.Global["shadowY"].ToInt();
+		sourcePref.shadowRX = -sourcePref.shadowX;
+		int num2 = (sourcePref.shadowRY = iniData.Global["shadowY"].ToInt());
+		sourcePref.shadowY = num2;
 		sourcePref.ints[3] = iniData.Global["height"].ToInt();
 		sourcePref.scaleIcon = iniData.Global["scaleIcon"].ToInt();
 		sourcePref.liquidMod = iniData.Global["liquidMod"].ToInt();

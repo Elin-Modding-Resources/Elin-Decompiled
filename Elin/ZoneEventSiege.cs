@@ -111,6 +111,6 @@ public class ZoneEventSiege : ZoneEvent
 		Msg.Say("endSiege");
 		SE.Play("kill_boss");
 		EClass._zone.RefreshBGM();
-		EClass._zone.AddCard(ThingGen.CreateTreasure("chest_boss", lv, TreasureType.BossNefia), GetSpawnPos().GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? EClass.pc.pos).Install();
+		EClass._zone.AddCard(ThingGen.CreateTreasure("chest_boss", lv, TreasureType.SurvivalRaid), GetSpawnPos().GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? EClass.pc.pos).Install();
 	}
 }

@@ -117,6 +117,10 @@ public class TaskPoint : Task, IInspect
 			{
 				AM_Adv.actCount++;
 			}
+			if (child != null && child.status == Status.Fail)
+			{
+				yield return Cancel();
+			}
 		}
 		while (Loop);
 	}

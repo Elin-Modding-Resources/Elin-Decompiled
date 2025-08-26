@@ -30,8 +30,10 @@ public class ZoneEventRaid : ZoneEventSiege
 		EClass.game.survival.flags.raidRound++;
 		EClass.game.survival.flags.raidLv += 5;
 		EClass.game.survival.flags.dateNextRaid = EClass.world.date.GetRaw(168);
+		EClass.game.survival.RefreshRewards();
 		Point pos = EClass.game.survival.GetRandomPoint() ?? EClass.pc.pos;
-		string text = ((EClass.game.survival.flags.raidLv >= 50 && EClass.rnd(3) == 0) ? "statue_god" : ((EClass.game.survival.flags.raidLv >= 25 && EClass.rnd(2) == 0) ? "statue_power" : "altar"));
-		EClass.game.survival.MeteorThing(pos, text, install: true);
+		string item = EClass.game.survival.listReward.RandomItem();
+		EClass.game.survival.listReward.Remove(item);
+		EClass.game.survival.MeteorThing(pos, item, install: true);
 	}
 }

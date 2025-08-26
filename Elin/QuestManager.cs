@@ -126,7 +126,7 @@ public class QuestManager : EClass
 
 	public bool IsAdded<T>() where T : Quest
 	{
-		if (IsStarted<T>())
+		if (IsStarted<T>() || GetPhase<T>() == 999)
 		{
 			return true;
 		}

@@ -16,7 +16,30 @@ public class ModUtil : EClass
 
 	public static void OnModsActivated()
 	{
-		RegisterSerializedTypeFallback("TrueArena", "ArenaWaveEvent", "ZoneEvent");
+	}
+
+	public static void LoadTypeFallback()
+	{
+		string text = "type_resolver.txt";
+		string[] array = new string[0];
+		if (File.Exists(CorePath.RootData + text))
+		{
+			array = IO.LoadTextArray(CorePath.RootData + text);
+		}
+		else
+		{
+			array = new string[2] { "TrueArena,ArenaWaveEvent,ZoneEvent", "Elin-GeneRecombinator,Elin_GeneRecombinator.IncubationSacrifice,Chara" };
+			IO.SaveTextArray(CorePath.RootData + text, array);
+		}
+		string[] array2 = array;
+		for (int i = 0; i < array2.Length; i++)
+		{
+			string[] array3 = array2[i].Split(',');
+			if (array3.Length >= 2)
+			{
+				RegisterSerializedTypeFallback(array3[0], array3[1], array3[2]);
+			}
+		}
 	}
 
 	public static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)

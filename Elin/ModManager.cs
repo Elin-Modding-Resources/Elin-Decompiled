@@ -204,6 +204,7 @@ public class ModManager : BaseModManager
 			}
 		}
 		ModUtil.OnModsActivated();
+		ModUtil.LoadTypeFallback();
 		BaseModManager.isInitialized = true;
 		yield return new WaitForEndOfFrame();
 		onComplete?.Invoke();

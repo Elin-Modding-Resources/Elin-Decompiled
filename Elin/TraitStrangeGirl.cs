@@ -4,7 +4,7 @@ public class TraitStrangeGirl : TraitUniqueChara
 	{
 		get
 		{
-			if (!(EClass._zone is Zone_LittleGarden))
+			if (!(EClass._zone is Zone_LittleGarden) && !EClass.game.IsSurvival)
 			{
 				return ShopType.None;
 			}

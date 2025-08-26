@@ -146,9 +146,9 @@ public class DramaOutcome : EMono
 	public void QuestDefense_0()
 	{
 		Prologue prologue = EMono.game.Prologue;
-		Card card = EMono._zone.AddChara("punk", prologue.posPunk.x, prologue.posPunk.y);
-		card.things.DestroyAll();
-		(EMono._zone.AddThing("gallows", prologue.posPunk.x, prologue.posPunk.y).Install().trait as TraitShackle).Restrain(card);
+		Chara chara = EMono._zone.AddChara("punk", prologue.posPunk.x, prologue.posPunk.y);
+		chara.things.DestroyAll();
+		(EMono._zone.AddThing("gallows", prologue.posPunk.x, prologue.posPunk.y).Install().trait as TraitShackle).Restrain(chara);
 		CardBlueprint.SetNormalRarity();
 	}
 
@@ -160,7 +160,7 @@ public class DramaOutcome : EMono
 	public void QuestDefense_1()
 	{
 		Prologue prologue = EMono.game.Prologue;
-		Card tc = EMono._zone.AddChara("boar", prologue.posPunk.x + 1, prologue.posPunk.y);
+		Chara tc = EMono._zone.AddChara("boar", prologue.posPunk.x + 1, prologue.posPunk.y);
 		(EMono._zone.AddThing("gallows", prologue.posPunk.x + 1, prologue.posPunk.y).Install().trait as TraitShackle).Restrain(tc);
 		EMono.player.DropReward(ThingGen.Create("stone").SetNum(20));
 		EMono.player.DropReward(ThingGen.Create("330").SetNum(3), silent: true).Identify(show: false);

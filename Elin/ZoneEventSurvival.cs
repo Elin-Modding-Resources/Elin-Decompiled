@@ -11,10 +11,6 @@ public class ZoneEventSurvival : ZoneEvent
 		{
 			EClass._map.SetObj(cell.x, cell.z, 46);
 		}
-		if (EClass.player.stats.days >= 10 && !EClass.game.survival.flags.raid)
-		{
-			EClass.game.survival.StartRaid();
-		}
 		if (EClass.game.survival.flags.raid)
 		{
 			TraitVoidgate traitVoidgate = EClass._map.FindThing<TraitVoidgate>();

@@ -110,6 +110,18 @@ public class SurvivalManager : EClass
 			}
 		}
 
+		public bool gotGaragara
+		{
+			get
+			{
+				return bits[2];
+			}
+			set
+			{
+				bits[2] = value;
+			}
+		}
+
 		[OnSerializing]
 		private void _OnSerializing(StreamingContext context)
 		{
@@ -125,6 +137,9 @@ public class SurvivalManager : EClass
 
 	[JsonProperty]
 	public Flags flags = new Flags();
+
+	[JsonProperty]
+	public List<string> listReward = new List<string>();
 
 	public bool IsInRaid => GetRaidEvent() != null;
 
@@ -146,11 +161,50 @@ public class SurvivalManager : EClass
 		Meteor(pos, delegate
 		{
 			Card card = EClass._zone.AddCard(ThingGen.Create(id), pos);
+			if (card.id == "rod_wish")
+			{
+				card.SetCharge(1);
+			}
 			if (install)
 			{
 				card.Install();
 			}
 		});
+	}
+
+	public void MeteorThing(Point pos, Thing t, bool install = false)
+	{
+		Meteor(pos, delegate
+		{
+			Card card = EClass._zone.AddCard(t, pos);
+			if (install)
+			{
+				card.Install();
+			}
+		});
+	}
+
+	public void RefreshRewards()
+	{
+		if (listReward.Count <= 0)
+		{
+			Add(new string[7] { "659", "758", "759", "806", "828", "1190", "1191" });
+			if (flags.raidLv < 50)
+			{
+				Add(new string[7] { "pillow_jure", "pillow_ehekatl", "pillow_opatos", "pillow_kumiromi", "pillow_lulwy", "pillow_mani", "pillow_itzpalt" });
+			}
+			else
+			{
+				Add(new string[1] { "rod_wish" });
+			}
+		}
+		void Add(string[] ids)
+		{
+			foreach (string item in ids)
+			{
+				listReward.Add(item);
+			}
+		}
 	}
 
 	public void OnExpandFloor(Point pos)
@@ -183,6 +237,7 @@ public class SurvivalManager : EClass
 		Check(60, delegate
 		{
 			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("loytel"), pos.x, pos.z).Chara);
+			CheckLoytelDebt();
 		});
 		Check(80, delegate
 		{
@@ -199,17 +254,28 @@ public class SurvivalManager : EClass
 		}
 	}
 
+	public void CheckLoytelDebt()
+	{
+		if (EClass.game.cards.globalCharas.Find("loytel") != null && !EClass.game.quests.IsAdded<QuestDebt>())
+		{
+			Quest quest = EClass.game.quests.Add("debt", "loytel");
+			EClass.game.quests.globalList.Remove(quest);
+			EClass.game.quests.Start(quest);
+		}
+	}
+
 	public bool OnMineWreck(Point point)
 	{
 		if (EClass._zone.events.GetEvent<ZoneEventSurvival>() == null)
 		{
 			EClass._zone.events.Add(new ZoneEventSurvival());
 		}
+		CheckLoytelDebt();
 		SourceObj.Row sourceObj = point.cell.sourceObj;
 		int searchWreck = EClass.game.survival.flags.searchWreck;
 		string[] array = new string[6] { "log", "rock", "branch", "bone", "grass", "vine" };
 		int chanceChange = 25;
-		int num = searchWreck / 50 + 3;
+		int num = searchWreck / 50 + 1;
 		if (searchWreck == 0)
 		{
 			Thing t2 = ThingGen.CreateParcel(null, ThingGen.Create("log").SetNum(6), ThingGen.Create("rock").SetNum(4), ThingGen.Create("resin").SetNum(2), ThingGen.Create("money2").SetNum(10), ThingGen.Create("1267"), ThingGen.CreateRod(50311, 8));
@@ -253,14 +319,26 @@ public class SurvivalManager : EClass
 		{
 			return Pop(TraitSeed.MakeRandomSeed());
 		}
-		if (EClass.rnd(12) == 0)
+		if (EClass.rnd(12 + num / 5) == 0)
 		{
 			return Pop(ThingGen.Create("money2"));
+		}
+		if (searchWreck > 10 && EClass.rnd(40 + num) == 0)
+		{
+			TreasureType treasureType = ((EClass.rnd(10) == 0) ? TreasureType.BossNefia : ((EClass.rnd(10) == 0) ? TreasureType.Map : TreasureType.RandomChest));
+			Thing t3 = ThingGen.Create(treasureType switch
+			{
+				TreasureType.Map => "chest_treasure", 
+				TreasureType.BossNefia => "chest_boss", 
+				_ => "chest3", 
+			});
+			ThingGen.CreateTreasureContent(t3, num, treasureType, clearContent: true);
+			MeteorThing(GetRandomPoint(), t3, install: true);
 		}
 		if (EClass.rnd(12) == 0)
 		{
 			Point pos = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
-			if (searchWreck < 50 || EClass.rnd(3) != 0)
+			if (searchWreck < 100 || EClass.rnd(3) != 0)
 			{
 				EClass._zone.SpawnMob(pos, SpawnSetting.HomeWild(num));
 			}
@@ -277,15 +355,21 @@ public class SurvivalManager : EClass
 			Point pos2 = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
 			if (searchWreck2 == 20)
 			{
+				Thing container = ThingGen.CreateParcel(null, ThingGen.CreateRecipe("container_shipping"), ThingGen.CreateRecipe("stonecutter"), ThingGen.CreateRecipe("workbench2"));
 				Meteor(pos2, delegate
 				{
-					EClass._zone.AddCard(ThingGen.CreateRecipe("container_shipping"), pos2);
+					EClass._zone.AddCard(container, pos2);
 				});
 			}
 			if (searchWreck2 > (EClass.debug.enable ? 5 : 100) && !flags.gotTaxChest)
 			{
 				MeteorThing(pos2, "chest_tax");
 				flags.gotTaxChest = true;
+			}
+			if (searchWreck2 > (EClass.debug.enable ? 10 : 200) && !flags.gotGaragara)
+			{
+				MeteorThing(pos2, "rolling_fortune");
+				flags.gotGaragara = true;
 			}
 			NextObj();
 			return true;
@@ -369,8 +453,6 @@ public class SurvivalManager : EClass
 
 	public void StartRaid()
 	{
-		SE.Play("warhorn");
-		Msg.Say("warhorn");
 		flags.raid = true;
 		Point pos = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? EClass.pc.pos;
 		Meteor(pos, delegate

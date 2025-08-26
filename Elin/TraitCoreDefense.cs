@@ -16,6 +16,8 @@ public class TraitCoreDefense : Trait
 			{
 				p.TrySetAct("actWarhorn", delegate
 				{
+					SE.Play("warhorn");
+					Msg.Say("warhorn");
 					EClass.game.survival.StartRaid();
 					return true;
 				});
@@ -24,6 +26,8 @@ public class TraitCoreDefense : Trait
 			{
 				p.TrySetAct("actWarhornRaid", delegate
 				{
+					SE.Play("warhorn");
+					Msg.Say("warhorn");
 					EClass._zone.events.Add(new ZoneEventRaid());
 					return true;
 				});

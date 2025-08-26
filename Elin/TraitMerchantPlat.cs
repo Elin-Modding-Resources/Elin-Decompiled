@@ -4,7 +4,7 @@ public class TraitMerchantPlat : TraitMerchant
 	{
 		get
 		{
-			if (!base.owner.IsPCFaction)
+			if (!base.owner.IsPCFaction || EClass.game.IsSurvival)
 			{
 				return ShopType.Plat;
 			}

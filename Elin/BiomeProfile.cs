@@ -560,7 +560,7 @@ public class BiomeProfile : EScriptable
 			}
 			p.SetObj(item.idObj);
 			cell.objDir = EScriptable.rnd(8);
-			if (cell.sourceObj.HasGrowth && cell.sourceObj.id != 103)
+			if (cell.sourceObj.HasGrowth && !EClass._zone.IsPCFactionOrTent && cell.sourceObj.id != 103)
 			{
 				cell.growth.SetRandomStage();
 			}
