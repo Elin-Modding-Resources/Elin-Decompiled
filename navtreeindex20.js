@@ -30,6 +30,7 @@ var NAVTREEINDEX20 =
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca46f3ea056caa3126b91f3f70beea068c":[2,0,0,1812,0,3],
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1812,0,0],
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fcac759964c35a97cb57dd977f4a9553ad4":[2,0,0,1812,0,4],
+"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fcadf95a4317694a004f296f487ad26100e":[2,0,0,1812,0,5],
 "TreasureType_8cs_source.html":[2,0,0,1812],
 "TryMakeRandomItemSource_8cs.html":[2,0,0,1813],
 "TryMakeRandomItemSource_8cs.html#abd97983f8e0f37849a5933032e27619d":[2,0,0,1813,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288":[2,0,0,1850,0],
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288a168d3e51452f6d8988f75ed882e74eb6":[2,0,0,1850,0,0],
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288a8e79e9ffded94b8fae2c23ff9793d653":[2,0,0,1850,0,3],
-"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288aa9c7b1d7219fa9d3de551ba5bc639eb6":[2,0,0,1850,0,2],
-"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288ae599161956d626eda4cb0a5ffb85271c":[2,0,0,1850,0,1]
+"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288aa9c7b1d7219fa9d3de551ba5bc639eb6":[2,0,0,1850,0,2]
 };

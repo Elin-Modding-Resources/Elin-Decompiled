@@ -1,5 +1,8 @@
 var NAVTREEINDEX91 =
 {
+"classQuest.html#a2cf3797705b05d0c633e0abe9d1fbc49":[1,0,966,22],
+"classQuest.html#a2d86589e5a70a667ab9b261ee17233b0":[1,0,966,51],
+"classQuest.html#a2e3fc93b7022943add1385a985a09321":[1,0,966,47],
 "classQuest.html#a301aa141a9bd7849cb7cf0d53e4cfdfa":[1,0,966,80],
 "classQuest.html#a318a5ca89459937ef9c13d0fd1e40842":[1,0,966,38],
 "classQuest.html#a33e9857d888452b864384d509105df73":[1,0,966,37],
@@ -246,8 +249,5 @@ var NAVTREEINDEX91 =
 "classQuestGuild.html#ae7256c497e4ec4a80548caabdd289ac3":[1,0,984,1],
 "classQuestGuildFighter.html":[1,0,985],
 "classQuestGuildFighter.html#acbf428686bef846b4d8b046584269b97":[1,0,985,1],
-"classQuestGuildFighter.html#ada3a15aaa4d703389882f616dc106c59":[1,0,985,0],
-"classQuestGuildFighter.html#af9c0366c2ab887861343083bd633a08c":[1,0,985,2],
-"classQuestGuildMage.html":[1,0,986],
-"classQuestGuildMage.html#a048cc0670babbf2cdd1cfd76d99013f0":[1,0,986,0]
+"classQuestGuildFighter.html#ada3a15aaa4d703389882f616dc106c59":[1,0,985,0]
 };

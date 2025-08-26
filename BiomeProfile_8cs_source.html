@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -654,7 +654,7 @@ $(document).ready(function(){initNavTree('BiomeProfile_8cs_source.html',''); ini
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            }</div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            p.<a class="code hl_function" href="classPoint.html#a1b776a5c157ff23d2c418ba134448d74">SetObj</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.idObj);</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>            cell.objDir = <a class="code hl_class" href="classEScriptable.html">EScriptable</a>.<a class="code hl_function" href="classEScriptable.html#a7e82765e268f34ed86f8407036038ac2">rnd</a>(8);</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.HasGrowth &amp;&amp; cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id != 103)</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.HasGrowth &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a5087a704f7346f0660ac8941e94cff0d">IsPCFactionOrTent</a> &amp;&amp; cell.<a class="code hl_property" href="classCell.html#aacc3d9e8c8c2f80f53de63b8ef1c6d03">sourceObj</a>.id != 103)</div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>            {</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>                cell.<a class="code hl_property" href="classCell.html#a868961183d859a6abe2e6cd41089167f">growth</a>.<a class="code hl_function" href="classGrowSystem.html#ab1b371c9b7bcec41814c9b256028e20f">SetRandomStage</a>();</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            }</div>
@@ -1025,6 +1025,7 @@ $(document).ready(function(){initNavTree('BiomeProfile_8cs_source.html',''); ini
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 <div class="ttc" id="aclassTileType_html_ab0e2d32e4be2c7410c69978e77037a86"><div class="ttname"><a href="classTileType.html#ab0e2d32e4be2c7410c69978e77037a86">TileType.GetDesiredDir</a></div><div class="ttdeci">virtual int GetDesiredDir(Point p, int d)</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00364">TileType.cs:364</a></div></div>
 <div class="ttc" id="aclassUDictionary_html_ae836ab30296028e217f74b11329d5475"><div class="ttname"><a href="classUDictionary.html#ae836ab30296028e217f74b11329d5475">UDictionary.Values</a></div><div class="ttdeci">ICollection&lt; TValue &gt; Values</div><div class="ttdef"><b>Definition:</b> <a href="UDictionary_8cs_source.html#l00029">UDictionary.cs:29</a></div></div>
+<div class="ttc" id="aclassZone_html_a5087a704f7346f0660ac8941e94cff0d"><div class="ttname"><a href="classZone.html#a5087a704f7346f0660ac8941e94cff0d">Zone.IsPCFactionOrTent</a></div><div class="ttdeci">bool IsPCFactionOrTent</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00472">Zone.cs:473</a></div></div>
 <div class="ttc" id="aclassZone_html_af3a7bcf0f1c645ac02c3793e85700bf9"><div class="ttname"><a href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">Zone.AddCard</a></div><div class="ttdeci">Card AddCard(Card t, Point point)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01937">Zone.cs:1937</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,5 +1,14 @@
 var NAVTREEINDEX134 =
 {
+"classWidgetStockTracker.html#a7c55895db6c03831184c5327e413e6f0":[1,0,2052,1],
+"classWidgetStockTracker.html#a9230107db13bb9c2809b9cdfc3d0f414":[1,0,2052,2],
+"classWidgetStockTracker.html#a93b02533464a77c2dc3c827d8b9d4bfd":[1,0,2052,5],
+"classWidgetStockTracker.html#aa456242d19a8919c9bb2ef39796c56b6":[1,0,2052,9],
+"classWidgetStockTracker.html#ae240edc9c33d4b85e17ac5c74fd2e6e5":[1,0,2052,6],
+"classWidgetStockTracker.html#afd4a41e0f23fe4397c8b2c3dd253928c":[1,0,2052,8],
+"classWidgetSystemIndicator.html":[1,0,2053],
+"classWidgetSystemIndicator.html#a31cdb8d30d87de9de9e204e30e6e3fed":[1,0,2053,0],
+"classWidgetSystemIndicator.html#a3e7fcc6d97015223cefee7fd0c09b6b9":[1,0,2053,5],
 "classWidgetSystemIndicator.html#aa3f3e941f11e5bb4a76bfbbf7e7cb0ae":[1,0,2053,6],
 "classWidgetSystemIndicator.html#aae9b2ecccc3f563137087ce47aae2b5c":[1,0,2053,2],
 "classWidgetSystemIndicator.html#ab0408025a004e2809a58868e80aabca8":[1,0,2053,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX134 =
 "classWindowChara.html#a35cae8664de782fd7d349be14c6ee6a6":[1,0,2058,15],
 "classWindowChara.html#a3ac300f637ef8f60d97bc5b305805c37":[1,0,2058,43],
 "classWindowChara.html#a3fa28963c21036f53d9c8b4176edc8f3":[1,0,2058,93],
-"classWindowChara.html#a3fc7f8521621125b378e9a27a4d94b7d":[1,0,2058,77],
-"classWindowChara.html#a3fd96804158d16a4b0a37b74f465b2df":[1,0,2058,84],
-"classWindowChara.html#a419c3defda2dde2d43b7a1f7d2b46e1d":[1,0,2058,53],
-"classWindowChara.html#a44580b791e1a023f39351f911f06406d":[1,0,2058,23],
-"classWindowChara.html#a49ed970123f77493ec9984f4ab40767a":[1,0,2058,24],
-"classWindowChara.html#a4a46d3a0e6ea169a0c1918256948ec27":[1,0,2058,13],
-"classWindowChara.html#a4b7492bbd60c98a9b4dedb9be947e5e7":[1,0,2058,42],
-"classWindowChara.html#a4bfe7ba6d0dc8b0476e5c31f8002460f":[1,0,2058,17],
-"classWindowChara.html#a4c8eaa43f35b454f92289347487cf571":[1,0,2058,88],
-"classWindowChara.html#a55344b853c12fbd88b039f6f2298231f":[1,0,2058,56]
+"classWindowChara.html#a3fc7f8521621125b378e9a27a4d94b7d":[1,0,2058,77]
 };

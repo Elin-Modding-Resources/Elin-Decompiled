@@ -1,5 +1,13 @@
 var NAVTREEINDEX115 =
 {
+"classTraitBlueprint.html#ae334cd0a729dcc765ac4591119ec1c53":[1,0,1438,3],
+"classTraitBoard.html":[1,0,1439],
+"classTraitBoard.html#a407b7284961e1471d7c5bbbd3e7f31e1":[1,0,1439,1],
+"classTraitBoard.html#a5ddcf4ad4fa81243fe28f07d14bc6aa5":[1,0,1439,0],
+"classTraitBoat.html":[1,0,1440],
+"classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1440,6],
+"classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045":[1,0,1440,5],
+"classTraitBoat.html#a705e954b7c448d954b7431ecd442e265":[1,0,1440,4],
 "classTraitBoat.html#ab4ce982447bae437147d059cb71f8aeb":[1,0,1440,0],
 "classTraitBoat.html#ab721257d9353859dc53a310233b183ed":[1,0,1440,2],
 "classTraitBoat.html#ac63976c5747b30504ceb563902e8f276":[1,0,1440,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitCookingPot.html#a2a431da841e83b1f79dff85d206dc808":[1,0,1491,2],
 "classTraitCookingPot.html#a690bae0528287f00cac47d2189b646a2":[1,0,1491,4],
 "classTraitCookingPot.html#a9517a115867468df7203c7edb2b703ed":[1,0,1491,0],
-"classTraitCoolerBox.html":[1,0,1492],
-"classTraitCoolerBox.html#a4276d3724bd3016236fc10863c6f5820":[1,0,1492,0],
-"classTraitCoolerBox.html#ac146b5ae0ac3e6da3201ec5fca77232c":[1,0,1492,1],
-"classTraitCoreDefense.html":[1,0,1493],
-"classTraitCoreDefense.html#a20bb574cc480d20ee51ebdd66ba81b43":[1,0,1493,2],
-"classTraitCoreDefense.html#a34c134d5cd8ce7f1612e4bc7ff22aaa6":[1,0,1493,0],
-"classTraitCoreDefense.html#a5a3851f4f968c75de0aae62232384c78":[1,0,1493,4],
-"classTraitCoreDefense.html#ae35a9cef65effa18e6b95578a82cc6ca":[1,0,1493,1],
-"classTraitCoreDefense.html#afc60370b27a9b742fd571f4915e4ca5e":[1,0,1493,3]
+"classTraitCoolerBox.html":[1,0,1492]
 };

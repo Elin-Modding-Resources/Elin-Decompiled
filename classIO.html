@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -120,6 +120,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ac15051fb75be08e9ff3dd16de65959b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa538a6b553652f8755dabb39bae4af14"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIO.html#aa538a6b553652f8755dabb39bae4af14">SaveText</a> (string path, string text)</td></tr>
 <tr class="separator:aa538a6b553652f8755dabb39bae4af14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53413f94d70f8a806038b6974752109b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIO.html#a53413f94d70f8a806038b6974752109b">SaveTextArray</a> (string path, string[] text)</td></tr>
+<tr class="separator:a53413f94d70f8a806038b6974752109b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad814d04b5c48614a935017c72f741147"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIO.html#ad814d04b5c48614a935017c72f741147">LoadFile&lt; T &gt;</a> (string path, bool compress=false, JsonSerializerSettings setting=null)</td></tr>
 <tr class="separator:ad814d04b5c48614a935017c72f741147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29f26d86ef01b9e459123aba7edfa5fd"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIO.html#a29f26d86ef01b9e459123aba7edfa5fd">LoadStreamJson&lt; T &gt;</a> (MemoryStream stream, JsonSerializerSettings setting=null)</td></tr>
@@ -271,29 +273,29 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00252">252</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>    {</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span> (funcExclude == <span class="keyword">null</span> || !funcExclude(source.Name))</div>
-<div class="line"><span class="lineno">  255</span>        {</div>
-<div class="line"><span class="lineno">  256</span>            Directory.CreateDirectory(target.FullName);</div>
-<div class="line"><span class="lineno">  257</span>            FileInfo[] files = source.GetFiles();</div>
-<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
-<div class="line"><span class="lineno">  259</span>            {</div>
-<div class="line"><span class="lineno">  260</span>                fileInfo.CopyTo(Path.Combine(target.FullName, fileInfo.Name), overwrite: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  261</span>            }</div>
-<div class="line"><span class="lineno">  262</span>            DirectoryInfo[] directories = source.GetDirectories();</div>
-<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
-<div class="line"><span class="lineno">  264</span>            {</div>
-<div class="line"><span class="lineno">  265</span>                DirectoryInfo target2 = target.CreateSubdirectory(directoryInfo.Name);</div>
-<div class="line"><span class="lineno">  266</span>                <a class="code hl_function" href="classIO.html#a6145f8140273a9c90e982bc52aab8851">_CopyDir</a>(directoryInfo, target2, funcExclude);</div>
-<div class="line"><span class="lineno">  267</span>            }</div>
-<div class="line"><span class="lineno">  268</span>        }</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-<div class="ttc" id="aclassIO_html_a6145f8140273a9c90e982bc52aab8851"><div class="ttname"><a href="classIO.html#a6145f8140273a9c90e982bc52aab8851">IO._CopyDir</a></div><div class="ttdeci">static void _CopyDir(DirectoryInfo source, DirectoryInfo target, Func&lt; string, bool &gt; funcExclude=null)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00252">IO.cs:252</a></div></div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00259">259</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  260</span>    {</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">if</span> (funcExclude == <span class="keyword">null</span> || !funcExclude(source.Name))</div>
+<div class="line"><span class="lineno">  262</span>        {</div>
+<div class="line"><span class="lineno">  263</span>            Directory.CreateDirectory(target.FullName);</div>
+<div class="line"><span class="lineno">  264</span>            FileInfo[] files = source.GetFiles();</div>
+<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
+<div class="line"><span class="lineno">  266</span>            {</div>
+<div class="line"><span class="lineno">  267</span>                fileInfo.CopyTo(Path.Combine(target.FullName, fileInfo.Name), overwrite: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  268</span>            }</div>
+<div class="line"><span class="lineno">  269</span>            DirectoryInfo[] directories = source.GetDirectories();</div>
+<div class="line"><span class="lineno">  270</span>            <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
+<div class="line"><span class="lineno">  271</span>            {</div>
+<div class="line"><span class="lineno">  272</span>                DirectoryInfo target2 = target.CreateSubdirectory(directoryInfo.Name);</div>
+<div class="line"><span class="lineno">  273</span>                <a class="code hl_function" href="classIO.html#a6145f8140273a9c90e982bc52aab8851">_CopyDir</a>(directoryInfo, target2, funcExclude);</div>
+<div class="line"><span class="lineno">  274</span>            }</div>
+<div class="line"><span class="lineno">  275</span>        }</div>
+<div class="line"><span class="lineno">  276</span>    }</div>
+<div class="ttc" id="aclassIO_html_a6145f8140273a9c90e982bc52aab8851"><div class="ttname"><a href="classIO.html#a6145f8140273a9c90e982bc52aab8851">IO._CopyDir</a></div><div class="ttdeci">static void _CopyDir(DirectoryInfo source, DirectoryInfo target, Func&lt; string, bool &gt; funcExclude=null)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00259">IO.cs:259</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00252">_CopyDir()</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00259">_CopyDir()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00252">_CopyDir()</a>, and <a class="el" href="IO_8cs_source.html#l00238">CopyDir()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00259">_CopyDir()</a>, and <a class="el" href="IO_8cs_source.html#l00245">CopyDir()</a>.</p>
 
 </div>
 </div>
@@ -331,14 +333,14 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00210">210</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  211</span>    {</div>
-<div class="line"><span class="lineno">  212</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Compressing: &quot;</span> + path);</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keyword">using </span>FileStream innerStream = <span class="keyword">new</span> FileStream(path, FileMode.Create);</div>
-<div class="line"><span class="lineno">  214</span>        <span class="keyword">using </span>LZ4Stream stream = <span class="keyword">new</span> LZ4Stream(innerStream, LZ4StreamMode.Compress);</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keyword">using </span>StreamWriter streamWriter = <span class="keyword">new</span> StreamWriter(stream);</div>
-<div class="line"><span class="lineno">  216</span>        streamWriter.Write(text);</div>
-<div class="line"><span class="lineno">  217</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00217">217</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Compressing: &quot;</span> + path);</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keyword">using </span>FileStream innerStream = <span class="keyword">new</span> FileStream(path, FileMode.Create);</div>
+<div class="line"><span class="lineno">  221</span>        <span class="keyword">using </span>LZ4Stream stream = <span class="keyword">new</span> LZ4Stream(innerStream, LZ4StreamMode.Compress);</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keyword">using </span>StreamWriter streamWriter = <span class="keyword">new</span> StreamWriter(stream);</div>
+<div class="line"><span class="lineno">  223</span>        streamWriter.Write(text);</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
@@ -381,24 +383,24 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00271">271</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  272</span>    {</div>
-<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (!File.Exists(fromPath))</div>
-<div class="line"><span class="lineno">  274</span>        {</div>
-<div class="line"><span class="lineno">  275</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;File does not exist:&quot;</span> + fromPath);</div>
-<div class="line"><span class="lineno">  276</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  277</span>        }</div>
-<div class="line"><span class="lineno">  278</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(fromPath);</div>
-<div class="line"><span class="lineno">  279</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(toPath);</div>
-<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> (!Directory.Exists(directoryInfo.FullName))</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00278">278</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  279</span>    {</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span> (!File.Exists(fromPath))</div>
 <div class="line"><span class="lineno">  281</span>        {</div>
-<div class="line"><span class="lineno">  282</span>            <a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(directoryInfo.FullName);</div>
-<div class="line"><span class="lineno">  283</span>        }</div>
-<div class="line"><span class="lineno">  284</span>        File.Copy(fileInfo.FullName, directoryInfo.FullName + <span class="stringliteral">&quot;/&quot;</span> + fileInfo.Name, overwrite: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
-<div class="ttc" id="aclassIO_html_a936ea0e43adecbf23afb5bbc53c484f9"><div class="ttname"><a href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">IO.CreateDirectory</a></div><div class="ttdeci">static void CreateDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00338">IO.cs:338</a></div></div>
+<div class="line"><span class="lineno">  282</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;File does not exist:&quot;</span> + fromPath);</div>
+<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  284</span>        }</div>
+<div class="line"><span class="lineno">  285</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(fromPath);</div>
+<div class="line"><span class="lineno">  286</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(toPath);</div>
+<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">if</span> (!Directory.Exists(directoryInfo.FullName))</div>
+<div class="line"><span class="lineno">  288</span>        {</div>
+<div class="line"><span class="lineno">  289</span>            <a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span>        File.Copy(fileInfo.FullName, directoryInfo.FullName + <span class="stringliteral">&quot;/&quot;</span> + fileInfo.Name, overwrite: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  292</span>    }</div>
+<div class="ttc" id="aclassIO_html_a936ea0e43adecbf23afb5bbc53c484f9"><div class="ttname"><a href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">IO.CreateDirectory</a></div><div class="ttdeci">static void CreateDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00345">IO.cs:345</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00338">CreateDirectory()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00345">CreateDirectory()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
 </div>
 </div>
@@ -442,26 +444,26 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00299">299</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  300</span>    {</div>
-<div class="line"><span class="lineno">  301</span>        <a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(toPath);</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordtype">string</span>[] directories = Directory.GetDirectories(fromPath, <span class="stringliteral">&quot;*&quot;</span>, SearchOption.AllDirectories);</div>
-<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; directories.Length; i++)</div>
-<div class="line"><span class="lineno">  304</span>        {</div>
-<div class="line"><span class="lineno">  305</span>            Directory.CreateDirectory(directories[i].Replace(fromPath, toPath));</div>
-<div class="line"><span class="lineno">  306</span>        }</div>
-<div class="line"><span class="lineno">  307</span>        directories = Directory.GetFiles(fromPath, <span class="stringliteral">&quot;*.*&quot;</span>, SearchOption.AllDirectories);</div>
-<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text <span class="keywordflow">in</span> directories)</div>
-<div class="line"><span class="lineno">  309</span>        {</div>
-<div class="line"><span class="lineno">  310</span>            <span class="keywordtype">string</span> text2 = text.Replace(fromPath, toPath);</div>
-<div class="line"><span class="lineno">  311</span>            <span class="keywordflow">if</span> (overwrite || !File.Exists(text2))</div>
-<div class="line"><span class="lineno">  312</span>            {</div>
-<div class="line"><span class="lineno">  313</span>                File.Copy(text, text2, overwrite: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  314</span>            }</div>
-<div class="line"><span class="lineno">  315</span>        }</div>
-<div class="line"><span class="lineno">  316</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00306">306</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>    {</div>
+<div class="line"><span class="lineno">  308</span>        <a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(toPath);</div>
+<div class="line"><span class="lineno">  309</span>        <span class="keywordtype">string</span>[] directories = Directory.GetDirectories(fromPath, <span class="stringliteral">&quot;*&quot;</span>, SearchOption.AllDirectories);</div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; directories.Length; i++)</div>
+<div class="line"><span class="lineno">  311</span>        {</div>
+<div class="line"><span class="lineno">  312</span>            Directory.CreateDirectory(directories[i].Replace(fromPath, toPath));</div>
+<div class="line"><span class="lineno">  313</span>        }</div>
+<div class="line"><span class="lineno">  314</span>        directories = Directory.GetFiles(fromPath, <span class="stringliteral">&quot;*.*&quot;</span>, SearchOption.AllDirectories);</div>
+<div class="line"><span class="lineno">  315</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text <span class="keywordflow">in</span> directories)</div>
+<div class="line"><span class="lineno">  316</span>        {</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordtype">string</span> text2 = text.Replace(fromPath, toPath);</div>
+<div class="line"><span class="lineno">  318</span>            <span class="keywordflow">if</span> (overwrite || !File.Exists(text2))</div>
+<div class="line"><span class="lineno">  319</span>            {</div>
+<div class="line"><span class="lineno">  320</span>                File.Copy(text, text2, overwrite: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  321</span>            }</div>
+<div class="line"><span class="lineno">  322</span>        }</div>
+<div class="line"><span class="lineno">  323</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00338">CreateDirectory()</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00345">CreateDirectory()</a>.</p>
 
 </div>
 </div>
@@ -499,17 +501,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00287">287</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  288</span>    {</div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">if</span> (!File.Exists(fromPath))</div>
-<div class="line"><span class="lineno">  290</span>        {</div>
-<div class="line"><span class="lineno">  291</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;File does not exist:&quot;</span> + fromPath);</div>
-<div class="line"><span class="lineno">  292</span>        }</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  294</span>        {</div>
-<div class="line"><span class="lineno">  295</span>            File.Copy(fromPath, toPath, overwrite: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  296</span>        }</div>
-<div class="line"><span class="lineno">  297</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00294">294</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  295</span>    {</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">if</span> (!File.Exists(fromPath))</div>
+<div class="line"><span class="lineno">  297</span>        {</div>
+<div class="line"><span class="lineno">  298</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;File does not exist:&quot;</span> + fromPath);</div>
+<div class="line"><span class="lineno">  299</span>        }</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  301</span>        {</div>
+<div class="line"><span class="lineno">  302</span>            File.Copy(fromPath, toPath, overwrite: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  303</span>        }</div>
+<div class="line"><span class="lineno">  304</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
@@ -555,21 +557,21 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00238">238</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  239</span>    {</div>
-<div class="line"><span class="lineno">  240</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(sourceDirectory);</div>
-<div class="line"><span class="lineno">  241</span>        DirectoryInfo target = <span class="keyword">new</span> DirectoryInfo(targetDirectory);</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">if</span> (!directoryInfo.Exists)</div>
-<div class="line"><span class="lineno">  243</span>        {</div>
-<div class="line"><span class="lineno">  244</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Source dir doesn&#39;t exist:&quot;</span> + directoryInfo.FullName);</div>
-<div class="line"><span class="lineno">  245</span>        }</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  247</span>        {</div>
-<div class="line"><span class="lineno">  248</span>            <a class="code hl_function" href="classIO.html#a6145f8140273a9c90e982bc52aab8851">_CopyDir</a>(directoryInfo, target, funcExclude);</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00245">245</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
+<div class="line"><span class="lineno">  247</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(sourceDirectory);</div>
+<div class="line"><span class="lineno">  248</span>        DirectoryInfo target = <span class="keyword">new</span> DirectoryInfo(targetDirectory);</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">if</span> (!directoryInfo.Exists)</div>
+<div class="line"><span class="lineno">  250</span>        {</div>
+<div class="line"><span class="lineno">  251</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Source dir doesn&#39;t exist:&quot;</span> + directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  252</span>        }</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  254</span>        {</div>
+<div class="line"><span class="lineno">  255</span>            <a class="code hl_function" href="classIO.html#a6145f8140273a9c90e982bc52aab8851">_CopyDir</a>(directoryInfo, target, funcExclude);</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00252">_CopyDir()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00259">_CopyDir()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
 </div>
 </div>
@@ -597,15 +599,15 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00338">338</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  339</span>    {</div>
-<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">if</span> (!Directory.Exists(path))</div>
-<div class="line"><span class="lineno">  341</span>        {</div>
-<div class="line"><span class="lineno">  342</span>            Directory.CreateDirectory(path);</div>
-<div class="line"><span class="lineno">  343</span>        }</div>
-<div class="line"><span class="lineno">  344</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00345">345</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  346</span>    {</div>
+<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (!Directory.Exists(path))</div>
+<div class="line"><span class="lineno">  348</span>        {</div>
+<div class="line"><span class="lineno">  349</span>            Directory.CreateDirectory(path);</div>
+<div class="line"><span class="lineno">  350</span>        }</div>
+<div class="line"><span class="lineno">  351</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00271">Copy()</a>, <a class="el" href="IO_8cs_source.html#l00299">CopyAll()</a>, <a class="el" href="IO_8cs_source.html#l00372">CreateTempDirectory()</a>, <a class="el" href="IO_8cs_source.html#l00089">SaveFile()</a>, and <a class="el" href="IO_8cs_source.html#l00104">SaveText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00278">Copy()</a>, <a class="el" href="IO_8cs_source.html#l00306">CopyAll()</a>, <a class="el" href="IO_8cs_source.html#l00379">CreateTempDirectory()</a>, <a class="el" href="IO_8cs_source.html#l00089">SaveFile()</a>, <a class="el" href="IO_8cs_source.html#l00104">SaveText()</a>, and <a class="el" href="IO_8cs_source.html#l00111">SaveTextArray()</a>.</p>
 
 </div>
 </div>
@@ -633,12 +635,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00372">372</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span>    {</div>
-<div class="line"><span class="lineno">  374</span>        <a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(path ?? TempPath);</div>
-<div class="line"><span class="lineno">  375</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00379">379</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  380</span>    {</div>
+<div class="line"><span class="lineno">  381</span>        <a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(path ?? TempPath);</div>
+<div class="line"><span class="lineno">  382</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00338">CreateDirectory()</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00345">CreateDirectory()</a>.</p>
 
 </div>
 </div>
@@ -666,29 +668,29 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00219">219</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  220</span>    {</div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  222</span>        {</div>
-<div class="line"><span class="lineno">  223</span>            <span class="keyword">using </span>FileStream innerStream = <span class="keyword">new</span> FileStream(path, FileMode.Open);</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keyword">using </span>LZ4Stream stream = <span class="keyword">new</span> LZ4Stream(innerStream, LZ4StreamMode.Decompress);</div>
-<div class="line"><span class="lineno">  225</span>            <span class="keyword">using </span>StreamReader streamReader = <span class="keyword">new</span> StreamReader(stream);</div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">return</span> streamReader.ReadToEnd();</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">catch</span> (Exception message)</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00226">226</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>    {</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">  229</span>        {</div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Cannot decompress:&quot;</span> + <a class="code hl_function" href="classIO.html#ad663294fae919a3485e1356b597f40be">IsCompressed</a>(path) + <span class="stringliteral">&quot;/&quot;</span> + path);</div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordtype">string</span> text = File.ReadAllText(path);</div>
-<div class="line"><span class="lineno">  234</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(text);</div>
-<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">return</span> text.IsEmpty(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  236</span>    }</div>
-<div class="ttc" id="aclassIO_html_ad663294fae919a3485e1356b597f40be"><div class="ttname"><a href="classIO.html#ad663294fae919a3485e1356b597f40be">IO.IsCompressed</a></div><div class="ttdeci">static bool IsCompressed(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00195">IO.cs:195</a></div></div>
+<div class="line"><span class="lineno">  230</span>            <span class="keyword">using </span>FileStream innerStream = <span class="keyword">new</span> FileStream(path, FileMode.Open);</div>
+<div class="line"><span class="lineno">  231</span>            <span class="keyword">using </span>LZ4Stream stream = <span class="keyword">new</span> LZ4Stream(innerStream, LZ4StreamMode.Decompress);</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keyword">using </span>StreamReader streamReader = <span class="keyword">new</span> StreamReader(stream);</div>
+<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">return</span> streamReader.ReadToEnd();</div>
+<div class="line"><span class="lineno">  234</span>        }</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">catch</span> (Exception message)</div>
+<div class="line"><span class="lineno">  236</span>        {</div>
+<div class="line"><span class="lineno">  237</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
+<div class="line"><span class="lineno">  238</span>        }</div>
+<div class="line"><span class="lineno">  239</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Cannot decompress:&quot;</span> + <a class="code hl_function" href="classIO.html#ad663294fae919a3485e1356b597f40be">IsCompressed</a>(path) + <span class="stringliteral">&quot;/&quot;</span> + path);</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordtype">string</span> text = File.ReadAllText(path);</div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(text);</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">return</span> text.IsEmpty(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  243</span>    }</div>
+<div class="ttc" id="aclassIO_html_ad663294fae919a3485e1356b597f40be"><div class="ttname"><a href="classIO.html#ad663294fae919a3485e1356b597f40be">IO.IsCompressed</a></div><div class="ttdeci">static bool IsCompressed(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00202">IO.cs:202</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="IO_8cs_source.html#l00195">IsCompressed()</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="IO_8cs_source.html#l00202">IsCompressed()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00111">LoadFile&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00118">LoadFile&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -716,10 +718,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00470">470</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  471</span>    {</div>
-<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(JsonConvert.SerializeObject(target, dpFormat, dpSetting), <a class="code hl_variable" href="classIO.html#a06289866e6a7c70e01e7b515323c71e3">dpSetting</a>);</div>
-<div class="line"><span class="lineno">  473</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00477">477</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  478</span>    {</div>
+<div class="line"><span class="lineno">  479</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(JsonConvert.SerializeObject(target, dpFormat, dpSetting), <a class="code hl_variable" href="classIO.html#a06289866e6a7c70e01e7b515323c71e3">dpSetting</a>);</div>
+<div class="line"><span class="lineno">  480</span>    }</div>
 <div class="ttc" id="aclassIO_html_a06289866e6a7c70e01e7b515323c71e3"><div class="ttname"><a href="classIO.html#a06289866e6a7c70e01e7b515323c71e3">IO.dpSetting</a></div><div class="ttdeci">static JsonSerializerSettings dpSetting</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00053">IO.cs:53</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -748,30 +750,30 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00346">346</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  347</span>    {</div>
-<div class="line"><span class="lineno">  348</span>        path = path.Replace(<span class="stringliteral">&quot;\\\\?\\&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (Directory.Exists(path))</div>
-<div class="line"><span class="lineno">  350</span>        {</div>
-<div class="line"><span class="lineno">  351</span>            DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(path);</div>
-<div class="line"><span class="lineno">  352</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  353</span>            {</div>
-<div class="line"><span class="lineno">  354</span>                <span class="keyword">new</span> FileIOPermission(FileIOPermissionAccess.AllAccess, path).Demand();</div>
-<div class="line"><span class="lineno">  355</span>            }</div>
-<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">catch</span> (SecurityException ex)</div>
-<div class="line"><span class="lineno">  357</span>            {</div>
-<div class="line"><span class="lineno">  358</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(ex.ToString());</div>
-<div class="line"><span class="lineno">  359</span>            }</div>
-<div class="line"><span class="lineno">  360</span>            <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
-<div class="line"><span class="lineno">  361</span>            {</div>
-<div class="line"><span class="lineno">  362</span>                directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  363</span>            }</div>
-<div class="line"><span class="lineno">  364</span>        }</div>
-<div class="line"><span class="lineno">  365</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00353">353</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  354</span>    {</div>
+<div class="line"><span class="lineno">  355</span>        path = path.Replace(<span class="stringliteral">&quot;\\\\?\\&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">if</span> (Directory.Exists(path))</div>
+<div class="line"><span class="lineno">  357</span>        {</div>
+<div class="line"><span class="lineno">  358</span>            DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(path);</div>
+<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  360</span>            {</div>
+<div class="line"><span class="lineno">  361</span>                <span class="keyword">new</span> FileIOPermission(FileIOPermissionAccess.AllAccess, path).Demand();</div>
+<div class="line"><span class="lineno">  362</span>            }</div>
+<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">catch</span> (SecurityException ex)</div>
+<div class="line"><span class="lineno">  364</span>            {</div>
+<div class="line"><span class="lineno">  365</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(ex.ToString());</div>
+<div class="line"><span class="lineno">  366</span>            }</div>
+<div class="line"><span class="lineno">  367</span>            <span class="keywordflow">if</span> (directoryInfo.Exists)</div>
+<div class="line"><span class="lineno">  368</span>            {</div>
+<div class="line"><span class="lineno">  369</span>                directoryInfo.Delete(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  370</span>            }</div>
+<div class="line"><span class="lineno">  371</span>        }</div>
+<div class="line"><span class="lineno">  372</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00377">DeleteTempDirectory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00384">DeleteTempDirectory()</a>.</p>
 
 </div>
 </div>
@@ -799,13 +801,13 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00318">318</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  319</span>    {</div>
-<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">if</span> (File.Exists(path))</div>
-<div class="line"><span class="lineno">  321</span>        {</div>
-<div class="line"><span class="lineno">  322</span>            File.Delete(path);</div>
-<div class="line"><span class="lineno">  323</span>        }</div>
-<div class="line"><span class="lineno">  324</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00325">325</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  326</span>    {</div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">if</span> (File.Exists(path))</div>
+<div class="line"><span class="lineno">  328</span>        {</div>
+<div class="line"><span class="lineno">  329</span>            File.Delete(path);</div>
+<div class="line"><span class="lineno">  330</span>        }</div>
+<div class="line"><span class="lineno">  331</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -833,17 +835,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00326">326</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  327</span>    {</div>
-<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">if</span> (Directory.Exists(path))</div>
-<div class="line"><span class="lineno">  329</span>        {</div>
-<div class="line"><span class="lineno">  330</span>            FileInfo[] files = <span class="keyword">new</span> DirectoryInfo(path).GetFiles();</div>
-<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; files.Length; i++)</div>
-<div class="line"><span class="lineno">  332</span>            {</div>
-<div class="line"><span class="lineno">  333</span>                files[i].Delete();</div>
-<div class="line"><span class="lineno">  334</span>            }</div>
-<div class="line"><span class="lineno">  335</span>        }</div>
-<div class="line"><span class="lineno">  336</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00333">333</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  334</span>    {</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">if</span> (Directory.Exists(path))</div>
+<div class="line"><span class="lineno">  336</span>        {</div>
+<div class="line"><span class="lineno">  337</span>            FileInfo[] files = <span class="keyword">new</span> DirectoryInfo(path).GetFiles();</div>
+<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; files.Length; i++)</div>
+<div class="line"><span class="lineno">  339</span>            {</div>
+<div class="line"><span class="lineno">  340</span>                files[i].Delete();</div>
+<div class="line"><span class="lineno">  341</span>            }</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+<div class="line"><span class="lineno">  343</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -871,13 +873,13 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00377">377</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  378</span>    {</div>
-<div class="line"><span class="lineno">  379</span>        <a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(path ?? TempPath);</div>
-<div class="line"><span class="lineno">  380</span>    }</div>
-<div class="ttc" id="aclassIO_html_a16222d71ed2dd65f9bf4470dd744b017"><div class="ttname"><a href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">IO.DeleteDirectory</a></div><div class="ttdeci">static void DeleteDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00346">IO.cs:346</a></div></div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00384">384</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  385</span>    {</div>
+<div class="line"><span class="lineno">  386</span>        <a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(path ?? TempPath);</div>
+<div class="line"><span class="lineno">  387</span>    }</div>
+<div class="ttc" id="aclassIO_html_a16222d71ed2dd65f9bf4470dd744b017"><div class="ttname"><a href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">IO.DeleteDirectory</a></div><div class="ttdeci">static void DeleteDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00353">IO.cs:353</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00346">DeleteDirectory()</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00353">DeleteDirectory()</a>.</p>
 
 </div>
 </div>
@@ -905,10 +907,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00367">367</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  368</span>    {</div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(JsonConvert.SerializeObject(t, formatting, jsWriteGeneral), <a class="code hl_variable" href="classIO.html#adce48bef3c393d1e4d2d857f978e381b">jsReadGeneral</a>);</div>
-<div class="line"><span class="lineno">  370</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00374">374</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  375</span>    {</div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(JsonConvert.SerializeObject(t, formatting, jsWriteGeneral), <a class="code hl_variable" href="classIO.html#adce48bef3c393d1e4d2d857f978e381b">jsReadGeneral</a>);</div>
+<div class="line"><span class="lineno">  377</span>    }</div>
 <div class="ttc" id="aclassIO_html_adce48bef3c393d1e4d2d857f978e381b"><div class="ttname"><a href="classIO.html#adce48bef3c393d1e4d2d857f978e381b">IO.jsReadGeneral</a></div><div class="ttdeci">static JsonSerializerSettings jsReadGeneral</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00020">IO.cs:20</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -968,22 +970,22 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00195">195</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>    {</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordtype">byte</span>[] array;</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keyword">using</span> (BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(File.OpenRead(path)))</div>
-<div class="line"><span class="lineno">  199</span>        {</div>
-<div class="line"><span class="lineno">  200</span>            binaryReader.BaseStream.Seek(0L, SeekOrigin.Begin);</div>
-<div class="line"><span class="lineno">  201</span>            array = binaryReader.ReadBytes(4);</div>
-<div class="line"><span class="lineno">  202</span>        }</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (array.Length &gt; 3 &amp;&amp; array[0] == 123 &amp;&amp; array[1] == 13 &amp;&amp; array[2] == 10 &amp;&amp; array[3] == 32)</div>
-<div class="line"><span class="lineno">  204</span>        {</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  208</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00202">202</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  203</span>    {</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordtype">byte</span>[] array;</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keyword">using</span> (BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(File.OpenRead(path)))</div>
+<div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            binaryReader.BaseStream.Seek(0L, SeekOrigin.Begin);</div>
+<div class="line"><span class="lineno">  208</span>            array = binaryReader.ReadBytes(4);</div>
+<div class="line"><span class="lineno">  209</span>        }</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (array.Length &gt; 3 &amp;&amp; array[0] == 123 &amp;&amp; array[1] == 13 &amp;&amp; array[2] == 10 &amp;&amp; array[3] == 32)</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  213</span>        }</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00219">Decompress()</a>, and <a class="el" href="IO_8cs_source.html#l00111">LoadFile&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00226">Decompress()</a>, and <a class="el" href="IO_8cs_source.html#l00118">LoadFile&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -1027,20 +1029,20 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00111">111</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (!File.Exists(path))</div>
-<div class="line"><span class="lineno">  114</span>        {</div>
-<div class="line"><span class="lineno">  115</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;File does not exist:&quot;</span> + path);</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">string</span> value = (<a class="code hl_function" href="classIO.html#ad663294fae919a3485e1356b597f40be">IsCompressed</a>(path) ? <a class="code hl_function" href="classIO.html#a6608819b60994ec51d2efcbdfa0a76d1">Decompress</a>(path) : File.ReadAllText(path));</div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;#io LoadFile;&quot;</span> + path);</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(value, setting ?? <a class="code hl_variable" href="classIO.html#adce48bef3c393d1e4d2d857f978e381b">jsReadGeneral</a>);</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="ttc" id="aclassIO_html_a6608819b60994ec51d2efcbdfa0a76d1"><div class="ttname"><a href="classIO.html#a6608819b60994ec51d2efcbdfa0a76d1">IO.Decompress</a></div><div class="ttdeci">static string Decompress(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00219">IO.cs:219</a></div></div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00118">118</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (!File.Exists(path))</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;File does not exist:&quot;</span> + path);</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">string</span> value = (<a class="code hl_function" href="classIO.html#ad663294fae919a3485e1356b597f40be">IsCompressed</a>(path) ? <a class="code hl_function" href="classIO.html#a6608819b60994ec51d2efcbdfa0a76d1">Decompress</a>(path) : File.ReadAllText(path));</div>
+<div class="line"><span class="lineno">  126</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;#io LoadFile;&quot;</span> + path);</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(value, setting ?? <a class="code hl_variable" href="classIO.html#adce48bef3c393d1e4d2d857f978e381b">jsReadGeneral</a>);</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
+<div class="ttc" id="aclassIO_html_a6608819b60994ec51d2efcbdfa0a76d1"><div class="ttname"><a href="classIO.html#a6608819b60994ec51d2efcbdfa0a76d1">IO.Decompress</a></div><div class="ttdeci">static string Decompress(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00226">IO.cs:226</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="IO_8cs_source.html#l00219">Decompress()</a>, and <a class="el" href="IO_8cs_source.html#l00195">IsCompressed()</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="IO_8cs_source.html#l00226">Decompress()</a>, and <a class="el" href="IO_8cs_source.html#l00202">IsCompressed()</a>.</p>
 
 </div>
 </div>
@@ -1117,11 +1119,11 @@ Properties</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00382">382</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  382</span>                                                                               : UnityEngine.Object</div>
-<div class="line"><span class="lineno">  383</span>    {</div>
-<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">return</span> LoadObject&lt;T&gt;(file.FullName, option);</div>
-<div class="line"><span class="lineno">  385</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00389">389</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  389</span>                                                                               : UnityEngine.Object</div>
+<div class="line"><span class="lineno">  390</span>    {</div>
+<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">return</span> LoadObject&lt;T&gt;(file.FullName, option);</div>
+<div class="line"><span class="lineno">  392</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1167,45 +1169,45 @@ Properties</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00387">387</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  387</span>                                                                              : UnityEngine.Object</div>
-<div class="line"><span class="lineno">  388</span>    {</div>
-<div class="line"><span class="lineno">  389</span>        Type typeFromHandle = typeof(T);</div>
-<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(Sprite))</div>
-<div class="line"><span class="lineno">  391</span>        {</div>
-<div class="line"><span class="lineno">  392</span>            <a class="code hl_class" href="classSpriteLoadOption.html">SpriteLoadOption</a> spriteLoadOption = option as <a class="code hl_class" href="classSpriteLoadOption.html">SpriteLoadOption</a>;</div>
-<div class="line"><span class="lineno">  393</span>            Texture2D texture2D = <a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(_path);</div>
-<div class="line"><span class="lineno">  394</span>            <span class="keywordflow">if</span> (!texture2D)</div>
-<div class="line"><span class="lineno">  395</span>            {</div>
-<div class="line"><span class="lineno">  396</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  397</span>            }</div>
-<div class="line"><span class="lineno">  398</span>            <span class="keywordflow">return</span> Sprite.Create(texture2D, <span class="keyword">new</span> Rect(0f, 0f, texture2D.width, texture2D.height), spriteLoadOption?.pivot ?? <span class="keyword">new</span> Vector2(0.5f, 0f), 100f) as T;</div>
-<div class="line"><span class="lineno">  399</span>        }</div>
-<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(Texture2D))</div>
-<div class="line"><span class="lineno">  401</span>        {</div>
-<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(_path) as T;</div>
-<div class="line"><span class="lineno">  403</span>        }</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">if</span> (typeof(<a class="code hl_class" href="classExcelData.html">ExcelData</a>).IsAssignableFrom(typeFromHandle))</div>
-<div class="line"><span class="lineno">  405</span>        {</div>
-<div class="line"><span class="lineno">  406</span>            T val = Activator.CreateInstance&lt;T&gt;();</div>
-<div class="line"><span class="lineno">  407</span>            (val as <a class="code hl_class" href="classExcelData.html">ExcelData</a>).path = _path;</div>
-<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  409</span>        }</div>
-<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(<a class="code hl_class" href="classTextData.html">TextData</a>))</div>
-<div class="line"><span class="lineno">  411</span>        {</div>
-<div class="line"><span class="lineno">  412</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classTextData.html">TextData</a></div>
-<div class="line"><span class="lineno">  413</span>            {</div>
-<div class="line"><span class="lineno">  414</span>                lines = File.ReadAllLines(_path)</div>
-<div class="line"><span class="lineno">  415</span>            } as T;</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00394">394</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  394</span>                                                                              : UnityEngine.Object</div>
+<div class="line"><span class="lineno">  395</span>    {</div>
+<div class="line"><span class="lineno">  396</span>        Type typeFromHandle = typeof(T);</div>
+<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(Sprite))</div>
+<div class="line"><span class="lineno">  398</span>        {</div>
+<div class="line"><span class="lineno">  399</span>            <a class="code hl_class" href="classSpriteLoadOption.html">SpriteLoadOption</a> spriteLoadOption = option as <a class="code hl_class" href="classSpriteLoadOption.html">SpriteLoadOption</a>;</div>
+<div class="line"><span class="lineno">  400</span>            Texture2D texture2D = <a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(_path);</div>
+<div class="line"><span class="lineno">  401</span>            <span class="keywordflow">if</span> (!texture2D)</div>
+<div class="line"><span class="lineno">  402</span>            {</div>
+<div class="line"><span class="lineno">  403</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  404</span>            }</div>
+<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">return</span> Sprite.Create(texture2D, <span class="keyword">new</span> Rect(0f, 0f, texture2D.width, texture2D.height), spriteLoadOption?.pivot ?? <span class="keyword">new</span> Vector2(0.5f, 0f), 100f) as T;</div>
+<div class="line"><span class="lineno">  406</span>        }</div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(Texture2D))</div>
+<div class="line"><span class="lineno">  408</span>        {</div>
+<div class="line"><span class="lineno">  409</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(_path) as T;</div>
+<div class="line"><span class="lineno">  410</span>        }</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">if</span> (typeof(<a class="code hl_class" href="classExcelData.html">ExcelData</a>).IsAssignableFrom(typeFromHandle))</div>
+<div class="line"><span class="lineno">  412</span>        {</div>
+<div class="line"><span class="lineno">  413</span>            T val = Activator.CreateInstance&lt;T&gt;();</div>
+<div class="line"><span class="lineno">  414</span>            (val as <a class="code hl_class" href="classExcelData.html">ExcelData</a>).path = _path;</div>
+<div class="line"><span class="lineno">  415</span>            <span class="keywordflow">return</span> val;</div>
 <div class="line"><span class="lineno">  416</span>        }</div>
-<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  418</span>    }</div>
+<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (typeFromHandle == typeof(<a class="code hl_class" href="classTextData.html">TextData</a>))</div>
+<div class="line"><span class="lineno">  418</span>        {</div>
+<div class="line"><span class="lineno">  419</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classTextData.html">TextData</a></div>
+<div class="line"><span class="lineno">  420</span>            {</div>
+<div class="line"><span class="lineno">  421</span>                lines = File.ReadAllLines(_path)</div>
+<div class="line"><span class="lineno">  422</span>            } as T;</div>
+<div class="line"><span class="lineno">  423</span>        }</div>
+<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  425</span>    }</div>
 <div class="ttc" id="aclassExcelData_html"><div class="ttname"><a href="classExcelData.html">ExcelData</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00010">ExcelData.cs:11</a></div></div>
-<div class="ttc" id="aclassIO_html_ae5e5735da261f46af4ae0e268b5bf1cf"><div class="ttname"><a href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">IO.LoadPNG</a></div><div class="ttdeci">static Texture2D LoadPNG(string _path, FilterMode filter=FilterMode.Point)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00426">IO.cs:426</a></div></div>
+<div class="ttc" id="aclassIO_html_ae5e5735da261f46af4ae0e268b5bf1cf"><div class="ttname"><a href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">IO.LoadPNG</a></div><div class="ttdeci">static Texture2D LoadPNG(string _path, FilterMode filter=FilterMode.Point)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00433">IO.cs:433</a></div></div>
 <div class="ttc" id="aclassSpriteLoadOption_html"><div class="ttname"><a href="classSpriteLoadOption.html">SpriteLoadOption</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteLoadOption_8cs_source.html#l00003">SpriteLoadOption.cs:4</a></div></div>
 <div class="ttc" id="aclassTextData_html"><div class="ttname"><a href="classTextData.html">TextData</a></div><div class="ttdef"><b>Definition:</b> <a href="TextData_8cs_source.html#l00003">TextData.cs:4</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00426">LoadPNG()</a>, and <a class="el" href="SpriteLoadOption_8cs_source.html#l00005">SpriteLoadOption.pivot</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00433">LoadPNG()</a>, and <a class="el" href="SpriteLoadOption_8cs_source.html#l00005">SpriteLoadOption.pivot</a>.</p>
 
 </div>
 </div>
@@ -1243,40 +1245,40 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00426">426</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  427</span>    {</div>
-<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">if</span> (!File.Exists(_path))</div>
-<div class="line"><span class="lineno">  429</span>        {</div>
-<div class="line"><span class="lineno">  430</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  431</span>        }</div>
-<div class="line"><span class="lineno">  432</span>        <span class="keywordtype">byte</span>[] array = <a class="code hl_function" href="classIO.html#ac4e5d89776808db06804f65d9e85a3ea">ReadPngFile</a>(_path);</div>
-<div class="line"><span class="lineno">  433</span>        <span class="keywordtype">int</span> num = 16;</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordtype">int</span> num2 = 0;</div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00433">433</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  434</span>    {</div>
+<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">if</span> (!File.Exists(_path))</div>
 <div class="line"><span class="lineno">  436</span>        {</div>
-<div class="line"><span class="lineno">  437</span>            <span class="keywordflow">if</span> (num + 1 &lt; array.Length)</div>
-<div class="line"><span class="lineno">  438</span>            {</div>
-<div class="line"><span class="lineno">  439</span>                num2 = num2 * 256 + array[num++];</div>
-<div class="line"><span class="lineno">  440</span>            }</div>
-<div class="line"><span class="lineno">  441</span>        }</div>
-<div class="line"><span class="lineno">  442</span>        <span class="keywordtype">int</span> num3 = 0;</div>
-<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 4; j++)</div>
-<div class="line"><span class="lineno">  444</span>        {</div>
-<div class="line"><span class="lineno">  445</span>            <span class="keywordflow">if</span> (num + 1 &lt; array.Length)</div>
-<div class="line"><span class="lineno">  446</span>            {</div>
-<div class="line"><span class="lineno">  447</span>                num3 = num3 * 256 + array[num++];</div>
-<div class="line"><span class="lineno">  448</span>            }</div>
-<div class="line"><span class="lineno">  449</span>        }</div>
-<div class="line"><span class="lineno">  450</span>        <a class="code hl_class" href="classTextureImportSetting_1_1Data.html">TextureImportSetting.Data</a> data = (TextureImportSetting.Instance ? TextureImportSetting.Instance.data : <a class="code hl_variable" href="classIO.html#ad983095de542badf89b25dde902fd9a6">importSetting</a>);</div>
-<div class="line"><span class="lineno">  451</span>        Texture2D texture2D = <span class="keyword">new</span> Texture2D(num2, num3, data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#aa176ad0118a718bf1f079badf0c9e518">format</a>, data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#a50c71dfe7de2926aa0cac9ab447e9416">mipmap</a>, data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#a15b1dbcd3c555a25b7b0d30ce91c1240">linear</a>);</div>
-<div class="line"><span class="lineno">  452</span>        texture2D.LoadImage(array);</div>
-<div class="line"><span class="lineno">  453</span>        texture2D.wrapMode = data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#ad4b458ffa1fda8d063ce89ba0d88b407">wrapMode</a>;</div>
-<div class="line"><span class="lineno">  454</span>        texture2D.filterMode = filter;</div>
-<div class="line"><span class="lineno">  455</span>        texture2D.anisoLevel = data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#af65a944c108b180019a3d9f00d592d25">anisoLevel</a>;</div>
-<div class="line"><span class="lineno">  456</span>        texture2D.mipMapBias = data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#ab79fac5967baecf05655fcc6e0a35159">mipmapBias</a>;</div>
-<div class="line"><span class="lineno">  457</span>        <span class="keywordflow">return</span> texture2D;</div>
-<div class="line"><span class="lineno">  458</span>    }</div>
-<div class="ttc" id="aclassIO_html_ac4e5d89776808db06804f65d9e85a3ea"><div class="ttname"><a href="classIO.html#ac4e5d89776808db06804f65d9e85a3ea">IO.ReadPngFile</a></div><div class="ttdeci">static byte[] ReadPngFile(string _path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00460">IO.cs:460</a></div></div>
+<div class="line"><span class="lineno">  437</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  438</span>        }</div>
+<div class="line"><span class="lineno">  439</span>        <span class="keywordtype">byte</span>[] array = <a class="code hl_function" href="classIO.html#ac4e5d89776808db06804f65d9e85a3ea">ReadPngFile</a>(_path);</div>
+<div class="line"><span class="lineno">  440</span>        <span class="keywordtype">int</span> num = 16;</div>
+<div class="line"><span class="lineno">  441</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
+<div class="line"><span class="lineno">  443</span>        {</div>
+<div class="line"><span class="lineno">  444</span>            <span class="keywordflow">if</span> (num + 1 &lt; array.Length)</div>
+<div class="line"><span class="lineno">  445</span>            {</div>
+<div class="line"><span class="lineno">  446</span>                num2 = num2 * 256 + array[num++];</div>
+<div class="line"><span class="lineno">  447</span>            }</div>
+<div class="line"><span class="lineno">  448</span>        }</div>
+<div class="line"><span class="lineno">  449</span>        <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 4; j++)</div>
+<div class="line"><span class="lineno">  451</span>        {</div>
+<div class="line"><span class="lineno">  452</span>            <span class="keywordflow">if</span> (num + 1 &lt; array.Length)</div>
+<div class="line"><span class="lineno">  453</span>            {</div>
+<div class="line"><span class="lineno">  454</span>                num3 = num3 * 256 + array[num++];</div>
+<div class="line"><span class="lineno">  455</span>            }</div>
+<div class="line"><span class="lineno">  456</span>        }</div>
+<div class="line"><span class="lineno">  457</span>        <a class="code hl_class" href="classTextureImportSetting_1_1Data.html">TextureImportSetting.Data</a> data = (TextureImportSetting.Instance ? TextureImportSetting.Instance.data : <a class="code hl_variable" href="classIO.html#ad983095de542badf89b25dde902fd9a6">importSetting</a>);</div>
+<div class="line"><span class="lineno">  458</span>        Texture2D texture2D = <span class="keyword">new</span> Texture2D(num2, num3, data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#aa176ad0118a718bf1f079badf0c9e518">format</a>, data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#a50c71dfe7de2926aa0cac9ab447e9416">mipmap</a>, data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#a15b1dbcd3c555a25b7b0d30ce91c1240">linear</a>);</div>
+<div class="line"><span class="lineno">  459</span>        texture2D.LoadImage(array);</div>
+<div class="line"><span class="lineno">  460</span>        texture2D.wrapMode = data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#ad4b458ffa1fda8d063ce89ba0d88b407">wrapMode</a>;</div>
+<div class="line"><span class="lineno">  461</span>        texture2D.filterMode = filter;</div>
+<div class="line"><span class="lineno">  462</span>        texture2D.anisoLevel = data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#af65a944c108b180019a3d9f00d592d25">anisoLevel</a>;</div>
+<div class="line"><span class="lineno">  463</span>        texture2D.mipMapBias = data.<a class="code hl_variable" href="classTextureImportSetting_1_1Data.html#ab79fac5967baecf05655fcc6e0a35159">mipmapBias</a>;</div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">return</span> texture2D;</div>
+<div class="line"><span class="lineno">  465</span>    }</div>
+<div class="ttc" id="aclassIO_html_ac4e5d89776808db06804f65d9e85a3ea"><div class="ttname"><a href="classIO.html#ac4e5d89776808db06804f65d9e85a3ea">IO.ReadPngFile</a></div><div class="ttdeci">static byte[] ReadPngFile(string _path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00467">IO.cs:467</a></div></div>
 <div class="ttc" id="aclassIO_html_ad983095de542badf89b25dde902fd9a6"><div class="ttname"><a href="classIO.html#ad983095de542badf89b25dde902fd9a6">IO.importSetting</a></div><div class="ttdeci">static TextureImportSetting.Data importSetting</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00051">IO.cs:51</a></div></div>
 <div class="ttc" id="aclassTextureImportSetting_1_1Data_html"><div class="ttname"><a href="classTextureImportSetting_1_1Data.html">TextureImportSetting.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="TextureImportSetting_8cs_source.html#l00007">TextureImportSetting.cs:8</a></div></div>
 <div class="ttc" id="aclassTextureImportSetting_1_1Data_html_a15b1dbcd3c555a25b7b0d30ce91c1240"><div class="ttname"><a href="classTextureImportSetting_1_1Data.html#a15b1dbcd3c555a25b7b0d30ce91c1240">TextureImportSetting.Data.linear</a></div><div class="ttdeci">bool linear</div><div class="ttdef"><b>Definition:</b> <a href="TextureImportSetting_8cs_source.html#l00015">TextureImportSetting.cs:15</a></div></div>
@@ -1286,9 +1288,9 @@ Properties</h2></td></tr>
 <div class="ttc" id="aclassTextureImportSetting_1_1Data_html_ad4b458ffa1fda8d063ce89ba0d88b407"><div class="ttname"><a href="classTextureImportSetting_1_1Data.html#ad4b458ffa1fda8d063ce89ba0d88b407">TextureImportSetting.Data.wrapMode</a></div><div class="ttdeci">TextureWrapMode wrapMode</div><div class="ttdef"><b>Definition:</b> <a href="TextureImportSetting_8cs_source.html#l00011">TextureImportSetting.cs:11</a></div></div>
 <div class="ttc" id="aclassTextureImportSetting_1_1Data_html_af65a944c108b180019a3d9f00d592d25"><div class="ttname"><a href="classTextureImportSetting_1_1Data.html#af65a944c108b180019a3d9f00d592d25">TextureImportSetting.Data.anisoLevel</a></div><div class="ttdeci">int anisoLevel</div><div class="ttdef"><b>Definition:</b> <a href="TextureImportSetting_8cs_source.html#l00023">TextureImportSetting.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TextureImportSetting_8cs_source.html#l00023">TextureImportSetting.Data.anisoLevel</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00009">TextureImportSetting.Data.format</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00015">TextureImportSetting.Data.linear</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00017">TextureImportSetting.Data.mipmap</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00025">TextureImportSetting.Data.mipmapBias</a>, <a class="el" href="IO_8cs_source.html#l00460">ReadPngFile()</a>, and <a class="el" href="TextureImportSetting_8cs_source.html#l00011">TextureImportSetting.Data.wrapMode</a>.</p>
+<p class="reference">References <a class="el" href="TextureImportSetting_8cs_source.html#l00023">TextureImportSetting.Data.anisoLevel</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00009">TextureImportSetting.Data.format</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00015">TextureImportSetting.Data.linear</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00017">TextureImportSetting.Data.mipmap</a>, <a class="el" href="TextureImportSetting_8cs_source.html#l00025">TextureImportSetting.Data.mipmapBias</a>, <a class="el" href="IO_8cs_source.html#l00467">ReadPngFile()</a>, and <a class="el" href="TextureImportSetting_8cs_source.html#l00011">TextureImportSetting.Data.wrapMode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00387">LoadObject&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00394">LoadObject&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -1326,16 +1328,16 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00123">123</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
-<div class="line"><span class="lineno">  125</span>        stream.Position = 0L;</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">string</span> value = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keyword">using</span> (StreamReader streamReader = <span class="keyword">new</span> StreamReader(stream))</div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            value = streamReader.ReadToEnd();</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(value, setting ?? <a class="code hl_variable" href="classIO.html#adce48bef3c393d1e4d2d857f978e381b">jsReadGeneral</a>);</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00130">130</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        stream.Position = 0L;</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordtype">string</span> value = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keyword">using</span> (StreamReader streamReader = <span class="keyword">new</span> StreamReader(stream))</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            value = streamReader.ReadToEnd();</div>
+<div class="line"><span class="lineno">  137</span>        }</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> JsonConvert.DeserializeObject&lt;T&gt;(value, setting ?? <a class="code hl_variable" href="classIO.html#adce48bef3c393d1e4d2d857f978e381b">jsReadGeneral</a>);</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1363,20 +1365,20 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00489">489</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  490</span>    {</div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordtype">string</span>[] array = <a class="code hl_function" href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">LoadTextArray</a>(_path);</div>
-<div class="line"><span class="lineno">  492</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  493</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
-<div class="line"><span class="lineno">  494</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text2 <span class="keywordflow">in</span> array2)</div>
-<div class="line"><span class="lineno">  495</span>        {</div>
-<div class="line"><span class="lineno">  496</span>            text = text + text2 + Environment.NewLine;</div>
-<div class="line"><span class="lineno">  497</span>        }</div>
-<div class="line"><span class="lineno">  498</span>        <span class="keywordflow">return</span> text;</div>
-<div class="line"><span class="lineno">  499</span>    }</div>
-<div class="ttc" id="aclassIO_html_a0a40c97df4bcb6632fee67504caa619d"><div class="ttname"><a href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">IO.LoadTextArray</a></div><div class="ttdeci">static string[] LoadTextArray(string _path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00475">IO.cs:475</a></div></div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00496">496</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  497</span>    {</div>
+<div class="line"><span class="lineno">  498</span>        <span class="keywordtype">string</span>[] array = <a class="code hl_function" href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">LoadTextArray</a>(_path);</div>
+<div class="line"><span class="lineno">  499</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  500</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
+<div class="line"><span class="lineno">  501</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> text2 <span class="keywordflow">in</span> array2)</div>
+<div class="line"><span class="lineno">  502</span>        {</div>
+<div class="line"><span class="lineno">  503</span>            text = text + text2 + Environment.NewLine;</div>
+<div class="line"><span class="lineno">  504</span>        }</div>
+<div class="line"><span class="lineno">  505</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">  506</span>    }</div>
+<div class="ttc" id="aclassIO_html_a0a40c97df4bcb6632fee67504caa619d"><div class="ttname"><a href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">IO.LoadTextArray</a></div><div class="ttdeci">static string[] LoadTextArray(string _path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00482">IO.cs:482</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00475">LoadTextArray()</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00482">LoadTextArray()</a>.</p>
 
 </div>
 </div>
@@ -1404,23 +1406,23 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00475">475</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  476</span>    {</div>
-<div class="line"><span class="lineno">  477</span>        <span class="keywordflow">if</span> (!File.Exists(_path))</div>
-<div class="line"><span class="lineno">  478</span>        {</div>
-<div class="line"><span class="lineno">  479</span>            _path += <span class="stringliteral">&quot;.txt&quot;</span>;</div>
-<div class="line"><span class="lineno">  480</span>            <span class="keywordflow">if</span> (!File.Exists(_path))</div>
-<div class="line"><span class="lineno">  481</span>            {</div>
-<div class="line"><span class="lineno">  482</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(_path);</div>
-<div class="line"><span class="lineno">  483</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
-<div class="line"><span class="lineno">  484</span>            }</div>
-<div class="line"><span class="lineno">  485</span>        }</div>
-<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">return</span> File.ReadAllLines(_path);</div>
-<div class="line"><span class="lineno">  487</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00482">482</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>    {</div>
+<div class="line"><span class="lineno">  484</span>        <span class="keywordflow">if</span> (!File.Exists(_path))</div>
+<div class="line"><span class="lineno">  485</span>        {</div>
+<div class="line"><span class="lineno">  486</span>            _path += <span class="stringliteral">&quot;.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">  487</span>            <span class="keywordflow">if</span> (!File.Exists(_path))</div>
+<div class="line"><span class="lineno">  488</span>            {</div>
+<div class="line"><span class="lineno">  489</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(_path);</div>
+<div class="line"><span class="lineno">  490</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
+<div class="line"><span class="lineno">  491</span>            }</div>
+<div class="line"><span class="lineno">  492</span>        }</div>
+<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">return</span> File.ReadAllLines(_path);</div>
+<div class="line"><span class="lineno">  494</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00489">LoadText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00496">LoadText()</a>.</p>
 
 </div>
 </div>
@@ -1525,18 +1527,18 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00182">182</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>    {</div>
-<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  185</span>        {</div>
-<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">return</span> LZ4Codec.Unwrap(bytes);</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">catch</span></div>
-<div class="line"><span class="lineno">  189</span>        {</div>
-<div class="line"><span class="lineno">  190</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Exception: Failed to unwrap:&quot;</span>);</div>
-<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">return</span> bytes;</div>
-<div class="line"><span class="lineno">  192</span>        }</div>
-<div class="line"><span class="lineno">  193</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00189">189</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>    {</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  192</span>        {</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span> LZ4Codec.Unwrap(bytes);</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  196</span>        {</div>
+<div class="line"><span class="lineno">  197</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Exception: Failed to unwrap:&quot;</span>);</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">return</span> bytes;</div>
+<div class="line"><span class="lineno">  199</span>        }</div>
+<div class="line"><span class="lineno">  200</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
@@ -1582,41 +1584,41 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00152">152</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
-<div class="line"><span class="lineno">  155</span>        {</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordtype">string</span> text = _path + ((i == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;.b&quot;</span> + i));</div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">if</span> (!File.Exists(text))</div>
-<div class="line"><span class="lineno">  158</span>            {</div>
-<div class="line"><span class="lineno">  159</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Couldn&#39;t find:&quot;</span> + text);</div>
-<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  161</span>            }</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordtype">byte</span>[] array = File.ReadAllBytes(text);</div>
-<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">if</span> (compression == <a class="code hl_enumeration" href="classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9">Compression</a>.LZ4)</div>
-<div class="line"><span class="lineno">  164</span>            {</div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  166</span>                {</div>
-<div class="line"><span class="lineno">  167</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="classIO.html#aa5824e04dfab93fb800b615bff7c5345">ReadLZ4</a>(array);</div>
-<div class="line"><span class="lineno">  168</span>                }</div>
-<div class="line"><span class="lineno">  169</span>                <span class="keywordflow">catch</span> (Exception message)</div>
-<div class="line"><span class="lineno">  170</span>                {</div>
-<div class="line"><span class="lineno">  171</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
-<div class="line"><span class="lineno">  172</span>                }</div>
-<div class="line"><span class="lineno">  173</span>            }</div>
-<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (array.Length == size)</div>
-<div class="line"><span class="lineno">  175</span>            {</div>
-<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">return</span> array;</div>
-<div class="line"><span class="lineno">  177</span>            }</div>
-<div class="line"><span class="lineno">  178</span>        }</div>
-<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00159">159</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordtype">string</span> text = _path + ((i == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;.b&quot;</span> + i));</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">if</span> (!File.Exists(text))</div>
+<div class="line"><span class="lineno">  165</span>            {</div>
+<div class="line"><span class="lineno">  166</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Couldn&#39;t find:&quot;</span> + text);</div>
+<div class="line"><span class="lineno">  167</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  168</span>            }</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordtype">byte</span>[] array = File.ReadAllBytes(text);</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (compression == <a class="code hl_enumeration" href="classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9">Compression</a>.LZ4)</div>
+<div class="line"><span class="lineno">  171</span>            {</div>
+<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  173</span>                {</div>
+<div class="line"><span class="lineno">  174</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="classIO.html#aa5824e04dfab93fb800b615bff7c5345">ReadLZ4</a>(array);</div>
+<div class="line"><span class="lineno">  175</span>                }</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">catch</span> (Exception message)</div>
+<div class="line"><span class="lineno">  177</span>                {</div>
+<div class="line"><span class="lineno">  178</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
+<div class="line"><span class="lineno">  179</span>                }</div>
+<div class="line"><span class="lineno">  180</span>            }</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">if</span> (array.Length == size)</div>
+<div class="line"><span class="lineno">  182</span>            {</div>
+<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">return</span> array;</div>
+<div class="line"><span class="lineno">  184</span>            }</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
 <div class="ttc" id="aclassIO_html_a0c4c8f55de9076a9eee46a8a9f1cb0a9"><div class="ttname"><a href="classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9">IO.Compression</a></div><div class="ttdeci">Compression</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00012">IO.cs:13</a></div></div>
-<div class="ttc" id="aclassIO_html_aa5824e04dfab93fb800b615bff7c5345"><div class="ttname"><a href="classIO.html#aa5824e04dfab93fb800b615bff7c5345">IO.ReadLZ4</a></div><div class="ttdeci">static byte[] ReadLZ4(string _path, int size, Compression compression)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00152">IO.cs:152</a></div></div>
+<div class="ttc" id="aclassIO_html_aa5824e04dfab93fb800b615bff7c5345"><div class="ttname"><a href="classIO.html#aa5824e04dfab93fb800b615bff7c5345">IO.ReadLZ4</a></div><div class="ttdeci">static byte[] ReadLZ4(string _path, int size, Compression compression)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00159">IO.cs:159</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="IO_8cs_source.html#l00152">ReadLZ4()</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="IO_8cs_source.html#l00159">ReadLZ4()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00152">ReadLZ4()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00159">ReadLZ4()</a>.</p>
 
 </div>
 </div>
@@ -1644,17 +1646,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00460">460</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  461</span>    {</div>
-<div class="line"><span class="lineno">  462</span>        FileStream fileStream = <span class="keyword">new</span> FileStream(_path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
-<div class="line"><span class="lineno">  463</span>        BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(fileStream);</div>
-<div class="line"><span class="lineno">  464</span>        <span class="keywordtype">byte</span>[] result = binaryReader.ReadBytes((<span class="keywordtype">int</span>)binaryReader.BaseStream.Length);</div>
-<div class="line"><span class="lineno">  465</span>        binaryReader.Close();</div>
-<div class="line"><span class="lineno">  466</span>        fileStream.Close();</div>
-<div class="line"><span class="lineno">  467</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  468</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00467">467</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  468</span>    {</div>
+<div class="line"><span class="lineno">  469</span>        FileStream fileStream = <span class="keyword">new</span> FileStream(_path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
+<div class="line"><span class="lineno">  470</span>        BinaryReader binaryReader = <span class="keyword">new</span> BinaryReader(fileStream);</div>
+<div class="line"><span class="lineno">  471</span>        <span class="keywordtype">byte</span>[] result = binaryReader.ReadBytes((<span class="keywordtype">int</span>)binaryReader.BaseStream.Length);</div>
+<div class="line"><span class="lineno">  472</span>        binaryReader.Close();</div>
+<div class="line"><span class="lineno">  473</span>        fileStream.Close();</div>
+<div class="line"><span class="lineno">  474</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  475</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00426">LoadPNG()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="IO_8cs_source.html#l00433">LoadPNG()</a>.</p>
 
 </div>
 </div>
@@ -1718,9 +1720,9 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  100</span>            File.WriteAllText(path, text);</div>
 <div class="line"><span class="lineno">  101</span>        }</div>
 <div class="line"><span class="lineno">  102</span>    }</div>
-<div class="ttc" id="aclassIO_html_ad29c1f247de4409675aa00229d9f0725"><div class="ttname"><a href="classIO.html#ad29c1f247de4409675aa00229d9f0725">IO.Compress</a></div><div class="ttdeci">static void Compress(string path, string text)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00210">IO.cs:210</a></div></div>
+<div class="ttc" id="aclassIO_html_ad29c1f247de4409675aa00229d9f0725"><div class="ttname"><a href="classIO.html#ad29c1f247de4409675aa00229d9f0725">IO.Compress</a></div><div class="ttdeci">static void Compress(string path, string text)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00217">IO.cs:217</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00210">Compress()</a>, <a class="el" href="IO_8cs_source.html#l00338">CreateDirectory()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00217">Compress()</a>, <a class="el" href="IO_8cs_source.html#l00345">CreateDirectory()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
 </div>
 </div>
@@ -1758,11 +1760,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00420">420</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  421</span>    {</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordtype">byte</span>[] bytes = tex.EncodeToPNG();</div>
-<div class="line"><span class="lineno">  423</span>        File.WriteAllBytes(_path, bytes);</div>
-<div class="line"><span class="lineno">  424</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00427">427</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  428</span>    {</div>
+<div class="line"><span class="lineno">  429</span>        <span class="keywordtype">byte</span>[] bytes = tex.EncodeToPNG();</div>
+<div class="line"><span class="lineno">  430</span>        File.WriteAllBytes(_path, bytes);</div>
+<div class="line"><span class="lineno">  431</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1807,7 +1809,52 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  108</span>        File.WriteAllText(path, text);</div>
 <div class="line"><span class="lineno">  109</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="IO_8cs_source.html#l00338">CreateDirectory()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00345">CreateDirectory()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
+
+</div>
+</div>
+<a id="a53413f94d70f8a806038b6974752109b" name="a53413f94d70f8a806038b6974752109b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53413f94d70f8a806038b6974752109b">&#9670;&#160;</a></span>SaveTextArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void IO.SaveTextArray </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00111">111</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>        <a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(Path.GetDirectoryName(path));</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;#io SaveFile;&quot;</span> + path);</div>
+<div class="line"><span class="lineno">  115</span>        File.WriteAllLines(path, text);</div>
+<div class="line"><span class="lineno">  116</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="IO_8cs_source.html#l00345">CreateDirectory()</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
 </div>
 </div>
@@ -1851,23 +1898,23 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00134">134</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">byte</span>[] bytes = ((compression == <a class="code hl_enumeration" href="classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9">Compression</a>.LZ4) ? LZ4Codec.Wrap(_bytes, 0, _bytes.Length) : _bytes);</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
-<div class="line"><span class="lineno">  138</span>        {</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordtype">string</span> path = _path + ((i == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;.b&quot;</span> + i));</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  141</span>            {</div>
-<div class="line"><span class="lineno">  142</span>                File.WriteAllBytes(path, bytes);</div>
-<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  144</span>            }</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">catch</span> (Exception message)</div>
-<div class="line"><span class="lineno">  146</span>            {</div>
-<div class="line"><span class="lineno">  147</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>        }</div>
-<div class="line"><span class="lineno">  150</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="IO_8cs_source.html#l00141">141</a> of file <a class="el" href="IO_8cs_source.html">IO.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>    {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordtype">byte</span>[] bytes = ((compression == <a class="code hl_enumeration" href="classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9">Compression</a>.LZ4) ? LZ4Codec.Wrap(_bytes, 0, _bytes.Length) : _bytes);</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; i++)</div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            <span class="keywordtype">string</span> path = _path + ((i == 0) ? <span class="stringliteral">&quot;&quot;</span> : (<span class="stringliteral">&quot;.b&quot;</span> + i));</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  148</span>            {</div>
+<div class="line"><span class="lineno">  149</span>                File.WriteAllBytes(path, bytes);</div>
+<div class="line"><span class="lineno">  150</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  151</span>            }</div>
+<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">catch</span> (Exception message)</div>
+<div class="line"><span class="lineno">  153</span>            {</div>
+<div class="line"><span class="lineno">  154</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(message);</div>
+<div class="line"><span class="lineno">  155</span>            }</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 

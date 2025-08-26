@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -112,6 +112,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a53d43df453043e0d150611ffcca62116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf1e487b6edc0d22a16aa285e3bfb307"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#abf1e487b6edc0d22a16aa285e3bfb307">OnModsActivated</a> ()</td></tr>
 <tr class="separator:abf1e487b6edc0d22a16aa285e3bfb307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb36876e5c912f025129bda3e5ebacb8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#acb36876e5c912f025129bda3e5ebacb8">LoadTypeFallback</a> ()</td></tr>
+<tr class="separator:acb36876e5c912f025129bda3e5ebacb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">RegisterSerializedTypeFallback</a> (string nameAssembly, string nameType, string nameFallbackType)</td></tr>
 <tr class="separator:a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefa809513e8a6902a3b88650a9f6bcdf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ImportExcel</a> (string pathToExcelFile, string sheetName, <a class="el" href="classSourceData.html">SourceData</a> source)</td></tr>
@@ -238,36 +240,36 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00027">27</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;ImportExcel source:&quot;</span> + source?.ToString() + <span class="stringliteral">&quot; Path:&quot;</span> + pathToExcelFile);</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keyword">using </span>FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
-<div class="line"><span class="lineno">   31</span>        XSSFWorkbook xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook.NumberOfSheets; i++)</div>
-<div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (sheetAt.SheetName != sheetName)</div>
-<div class="line"><span class="lineno">   36</span>            {</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   38</span>            }</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Importing Sheet:&quot;</span> + sheetName);</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   41</span>            {</div>
-<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (!source.<a class="code hl_function" href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">ImportData</a>(sheetAt, <span class="keyword">new</span> FileInfo(pathToExcelFile).Name, overwrite: <span class="keyword">true</span>))</div>
-<div class="line"><span class="lineno">   43</span>                {</div>
-<div class="line"><span class="lineno">   44</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_class" href="classERROR.html">ERROR</a>.<a class="code hl_variable" href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">msg</a>);</div>
-<div class="line"><span class="lineno">   45</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   46</span>                }</div>
-<div class="line"><span class="lineno">   47</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Imported &quot;</span> + sheetAt.SheetName);</div>
-<div class="line"><span class="lineno">   48</span>                source.<a class="code hl_function" href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">Reset</a>();</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">   51</span>            {</div>
-<div class="line"><span class="lineno">   52</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;[Error] Skipping import &quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot; :&quot;</span> + ex.Message + <span class="stringliteral">&quot;/&quot;</span> + ex.Source + <span class="stringliteral">&quot;/&quot;</span> + ex.StackTrace);</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00050">50</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;ImportExcel source:&quot;</span> + source?.ToString() + <span class="stringliteral">&quot; Path:&quot;</span> + pathToExcelFile);</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keyword">using </span>FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
+<div class="line"><span class="lineno">   54</span>        XSSFWorkbook xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook.NumberOfSheets; i++)</div>
+<div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (sheetAt.SheetName != sheetName)</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Importing Sheet:&quot;</span> + sheetName);</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">if</span> (!source.<a class="code hl_function" href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">ImportData</a>(sheetAt, <span class="keyword">new</span> FileInfo(pathToExcelFile).Name, overwrite: <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">   66</span>                {</div>
+<div class="line"><span class="lineno">   67</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_class" href="classERROR.html">ERROR</a>.<a class="code hl_variable" href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">msg</a>);</div>
+<div class="line"><span class="lineno">   68</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   69</span>                }</div>
+<div class="line"><span class="lineno">   70</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Imported &quot;</span> + sheetAt.SheetName);</div>
+<div class="line"><span class="lineno">   71</span>                source.<a class="code hl_function" href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">Reset</a>();</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;[Error] Skipping import &quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot; :&quot;</span> + ex.Message + <span class="stringliteral">&quot;/&quot;</span> + ex.Source + <span class="stringliteral">&quot;/&quot;</span> + ex.StackTrace);</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   77</span>            }</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassERROR_html"><div class="ttname"><a href="classERROR.html">ERROR</a></div><div class="ttdef"><b>Definition:</b> <a href="ERROR_8cs_source.html#l00001">ERROR.cs:2</a></div></div>
 <div class="ttc" id="aclassERROR_html_a874d44fb6d2d560a40be056ded3d029b"><div class="ttname"><a href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">ERROR.msg</a></div><div class="ttdeci">static string msg</div><div class="ttdef"><b>Definition:</b> <a href="ERROR_8cs_source.html#l00003">ERROR.cs:3</a></div></div>
@@ -277,6 +279,65 @@ Additional Inherited Members</h2></td></tr>
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SourceData_8cs_source.html#l00134">SourceData&lt; T, T2 &gt;.ImportData()</a>, <a class="el" href="ERROR_8cs_source.html#l00003">ERROR.msg</a>, and <a class="el" href="SourceData_8cs_source.html#l00113">SourceData&lt; T, T2 &gt;.Reset()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00012">Test()</a>.</p>
+
+</div>
+</div>
+<a id="acb36876e5c912f025129bda3e5ebacb8" name="acb36876e5c912f025129bda3e5ebacb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb36876e5c912f025129bda3e5ebacb8">&#9670;&#160;</a></span>LoadTypeFallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ModUtil.LoadTypeFallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00021">21</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;type_resolver.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (File.Exists(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text))</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            array = <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">LoadTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[2] { <span class="stringliteral">&quot;TrueArena,ArenaWaveEvent,ZoneEvent&quot;</span>, <span class="stringliteral">&quot;Elin-GeneRecombinator,Elin_GeneRecombinator.IncubationSacrifice,Chara&quot;</span> };</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a53413f94d70f8a806038b6974752109b">SaveTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text, array);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array2.Length; i++)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordtype">string</span>[] array3 = array2[i].Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (array3.Length &gt;= 2)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_function" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">RegisterSerializedTypeFallback</a>(array3[0], array3[1], array3[2]);</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
+<div class="ttc" id="aclassCorePath_html_a433ebb5d0a3d88629f959a50e036db16"><div class="ttname"><a href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">CorePath.RootData</a></div><div class="ttdeci">static string RootData</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00204">CorePath.cs:204</a></div></div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
+<div class="ttc" id="aclassIO_html_a0a40c97df4bcb6632fee67504caa619d"><div class="ttname"><a href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">IO.LoadTextArray</a></div><div class="ttdeci">static string[] LoadTextArray(string _path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00482">IO.cs:482</a></div></div>
+<div class="ttc" id="aclassIO_html_a53413f94d70f8a806038b6974752109b"><div class="ttname"><a href="classIO.html#a53413f94d70f8a806038b6974752109b">IO.SaveTextArray</a></div><div class="ttdeci">static void SaveTextArray(string path, string[] text)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00111">IO.cs:111</a></div></div>
+<div class="ttc" id="aclassModUtil_html_a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><div class="ttname"><a href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">ModUtil.RegisterSerializedTypeFallback</a></div><div class="ttdeci">static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00045">ModUtil.cs:45</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00045">RegisterSerializedTypeFallback()</a>, and <a class="el" href="CorePath_8cs_source.html#l00204">CorePath.RootData</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.RefreshMods()</a>.</p>
 
 </div>
 </div>
@@ -305,12 +366,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00017">17</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_function" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">RegisterSerializedTypeFallback</a>(<span class="stringliteral">&quot;TrueArena&quot;</span>, <span class="stringliteral">&quot;ArenaWaveEvent&quot;</span>, <span class="stringliteral">&quot;ZoneEvent&quot;</span>);</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
-<div class="ttc" id="aclassModUtil_html_a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><div class="ttname"><a href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">ModUtil.RegisterSerializedTypeFallback</a></div><div class="ttdeci">static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00022">ModUtil.cs:22</a></div></div>
+<div class="line"><span class="lineno">   19</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00022">RegisterSerializedTypeFallback()</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.RefreshMods()</a>.</p>
 
 </div>
@@ -355,15 +412,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00022">22</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
-<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[nameType] = nameFallbackType;</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00045">45</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[nameType] = nameFallbackType;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 <div class="ttc" id="aclassModUtil_html_aa27eede742d1e4dff63fa45538cada84"><div class="ttname"><a href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">ModUtil.fallbackTypes</a></div><div class="ttdeci">static Dictionary&lt; string, string &gt; fallbackTypes</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00010">ModUtil.cs:10</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00010">fallbackTypes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00017">OnModsActivated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00021">LoadTypeFallback()</a>.</p>
 
 </div>
 </div>
@@ -396,10 +453,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   15</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
-<div class="ttc" id="aclassModUtil_html_aefa809513e8a6902a3b88650a9f6bcdf"><div class="ttname"><a href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ModUtil.ImportExcel</a></div><div class="ttdeci">static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00027">ModUtil.cs:27</a></div></div>
+<div class="ttc" id="aclassModUtil_html_aefa809513e8a6902a3b88650a9f6bcdf"><div class="ttname"><a href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ModUtil.ImportExcel</a></div><div class="ttdeci">static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00050">ModUtil.cs:50</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00018">SourceManager.cs:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00018">SourceManager.charas</a>, <a class="el" href="ModUtil_8cs_source.html#l00027">ImportExcel()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00018">SourceManager.charas</a>, <a class="el" href="ModUtil_8cs_source.html#l00050">ImportExcel()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 
 </div>
 </div>
@@ -426,7 +483,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00010">10</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GameSerializationBinder_8cs_source.html#l00009">GameSerializationBinder.BindToType()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00140">GameIO.LoadGame()</a>, and <a class="el" href="ModUtil_8cs_source.html#l00022">RegisterSerializedTypeFallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GameSerializationBinder_8cs_source.html#l00009">GameSerializationBinder.BindToType()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00140">GameIO.LoadGame()</a>, and <a class="el" href="ModUtil_8cs_source.html#l00045">RegisterSerializedTypeFallback()</a>.</p>
 
 </div>
 </div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -475,15 +475,17 @@ $(document).ready(function(){initNavTree('SourcePref_8cs_source.html',''); initR
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        sourcePref.pivotY = iniData.Global[<span class="stringliteral">&quot;pivotY&quot;</span>].ToInt();</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        sourcePref.shadow = iniData.Global[<span class="stringliteral">&quot;shadow&quot;</span>].ToInt();</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        sourcePref.shadowX = iniData.Global[<span class="stringliteral">&quot;shadowX&quot;</span>].ToInt();</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        sourcePref.shadowY = iniData.Global[<span class="stringliteral">&quot;shadowY&quot;</span>].ToInt();</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        sourcePref.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[3] = iniData.Global[<span class="stringliteral">&quot;height&quot;</span>].ToInt();</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        sourcePref.scaleIcon = iniData.Global[<span class="stringliteral">&quot;scaleIcon&quot;</span>].ToInt();</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        sourcePref.liquidMod = iniData.Global[<span class="stringliteral">&quot;liquidMod&quot;</span>].ToInt();</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        sourcePref.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[23] = iniData.Global[<span class="stringliteral">&quot;hatY&quot;</span>].ToInt();</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        sourcePref.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[1] = iniData.Global[<span class="stringliteral">&quot;flags&quot;</span>].ToInt();</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keywordflow">return</span> sourcePref;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    }</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>}</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        sourcePref.shadowRX = -sourcePref.<a class="code hl_property" href="classSourcePref.html#a65354a9a01e069b4af2ee9af061ae954">shadowX</a>;</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="keywordtype">int</span> num2 = (sourcePref.shadowRY = iniData.Global[<span class="stringliteral">&quot;shadowY&quot;</span>].ToInt());</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        sourcePref.shadowY = num2;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        sourcePref.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[3] = iniData.Global[<span class="stringliteral">&quot;height&quot;</span>].ToInt();</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        sourcePref.scaleIcon = iniData.Global[<span class="stringliteral">&quot;scaleIcon&quot;</span>].ToInt();</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        sourcePref.liquidMod = iniData.Global[<span class="stringliteral">&quot;liquidMod&quot;</span>].ToInt();</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        sourcePref.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[23] = iniData.Global[<span class="stringliteral">&quot;hatY&quot;</span>].ToInt();</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        sourcePref.<a class="code hl_variable" href="classSourcePref.html#ac953060b560b13354232d982721b2be7">ints</a>[1] = iniData.Global[<span class="stringliteral">&quot;flags&quot;</span>].ToInt();</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        <span class="keywordflow">return</span> sourcePref;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    }</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>}</div>
 <div class="ttc" id="aPrefFlag_8cs_html_ac9c3f3d0eb1ed76dfc3b1896775718d3"><div class="ttname"><a href="PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3">PrefFlag</a></div><div class="ttdeci">PrefFlag</div><div class="ttdef"><b>Definition:</b> <a href="PrefFlag_8cs_source.html#l00004">PrefFlag.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>

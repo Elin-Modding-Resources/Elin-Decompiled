@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"Zone__LumiestRuin_8cs.html":[2,0,0,1937],
 "Zone__LumiestRuin_8cs_source.html":[2,0,0,1937],
 "Zone__Lumiest_8cs.html":[2,0,0,1935],
 "Zone__Lumiest_8cs_source.html":[2,0,0,1935],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classAIAct.html#a1790578546fdf5814e8fa4d7aefb6da4":[1,0,112,69],
 "classAIAct.html#a196e007d187cbc8e5fcead1d7fcb24d6":[1,0,112,62],
 "classAIAct.html#a1b9aeacb15aa4127e9180b2173823f83":[1,0,112,33],
-"classAIAct.html#a1eb16521dc10a434de63b9a697e8c42d":[1,0,112,81],
-"classAIAct.html#a20e6b5800ce4af521458d369ec4792de":[1,0,112,36]
+"classAIAct.html#a1eb16521dc10a434de63b9a697e8c42d":[1,0,112,81]
 };

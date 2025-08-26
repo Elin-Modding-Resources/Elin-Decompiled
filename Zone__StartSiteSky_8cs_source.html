@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.188 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -103,10 +103,26 @@ $(document).ready(function(){initNavTree('Zone__StartSiteSky_8cs_source.html',''
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classZone__StartSiteSky.html#ab639c59532ff2028e9bad0fcd494006b">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classZone__StartSiteSky.html#ab639c59532ff2028e9bad0fcd494006b">BlockBorderExit</a> =&gt; <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classZone__StartSiteSky.html#a1aa68131aff0d2396ada8803bbe6c150">   11</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code hl_property" href="classZone__StartSiteSky.html#a1aa68131aff0d2396ada8803bbe6c150">IdBiome</a> =&gt; <span class="stringliteral">&quot;Plain&quot;</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classZone__StartSiteSky.html#a6e1b4d18ae81a905e29faacdda775c4d">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classZone__StartSiteSky.html#a6e1b4d18ae81a905e29faacdda775c4d">ScaleMonsterLevel</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_property" href="classGame.html#a8bd84f518d7e71797404cb97c98eda3d">IsSurvival</a>)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keywordflow">return</span> EClass.game.survival.flags.raidLv &gt;= 100;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
+<div class="ttc" id="aclassGame_html_a8bd84f518d7e71797404cb97c98eda3d"><div class="ttname"><a href="classGame.html#a8bd84f518d7e71797404cb97c98eda3d">Game.IsSurvival</a></div><div class="ttdeci">bool IsSurvival</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00272">Game.cs:272</a></div></div>
 <div class="ttc" id="aclassZone__StartSiteSky_html"><div class="ttname"><a href="classZone__StartSiteSky.html">Zone_StartSiteSky</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__StartSiteSky_8cs_source.html#l00001">Zone_StartSiteSky.cs:2</a></div></div>
 <div class="ttc" id="aclassZone__StartSiteSky_html_a1aa68131aff0d2396ada8803bbe6c150"><div class="ttname"><a href="classZone__StartSiteSky.html#a1aa68131aff0d2396ada8803bbe6c150">Zone_StartSiteSky.IdBiome</a></div><div class="ttdeci">override string IdBiome</div><div class="ttdef"><b>Definition:</b> <a href="Zone__StartSiteSky_8cs_source.html#l00011">Zone_StartSiteSky.cs:11</a></div></div>
 <div class="ttc" id="aclassZone__StartSiteSky_html_a6d398a4b48493d15241410920fcec687"><div class="ttname"><a href="classZone__StartSiteSky.html#a6d398a4b48493d15241410920fcec687">Zone_StartSiteSky.IsSkyLevel</a></div><div class="ttdeci">override bool IsSkyLevel</div><div class="ttdef"><b>Definition:</b> <a href="Zone__StartSiteSky_8cs_source.html#l00005">Zone_StartSiteSky.cs:5</a></div></div>
+<div class="ttc" id="aclassZone__StartSiteSky_html_a6e1b4d18ae81a905e29faacdda775c4d"><div class="ttname"><a href="classZone__StartSiteSky.html#a6e1b4d18ae81a905e29faacdda775c4d">Zone_StartSiteSky.ScaleMonsterLevel</a></div><div class="ttdeci">override bool ScaleMonsterLevel</div><div class="ttdef"><b>Definition:</b> <a href="Zone__StartSiteSky_8cs_source.html#l00013">Zone_StartSiteSky.cs:14</a></div></div>
 <div class="ttc" id="aclassZone__StartSiteSky_html_ab639c59532ff2028e9bad0fcd494006b"><div class="ttname"><a href="classZone__StartSiteSky.html#ab639c59532ff2028e9bad0fcd494006b">Zone_StartSiteSky.BlockBorderExit</a></div><div class="ttdeci">override bool BlockBorderExit</div><div class="ttdef"><b>Definition:</b> <a href="Zone__StartSiteSky_8cs_source.html#l00009">Zone_StartSiteSky.cs:9</a></div></div>
 <div class="ttc" id="aclassZone__StartSiteSky_html_abdab0cb8574824d6fc1438f798ab309d"><div class="ttname"><a href="classZone__StartSiteSky.html#abdab0cb8574824d6fc1438f798ab309d">Zone_StartSiteSky.UseFog</a></div><div class="ttdeci">override bool UseFog</div><div class="ttdef"><b>Definition:</b> <a href="Zone__StartSiteSky_8cs_source.html#l00003">Zone_StartSiteSky.cs:3</a></div></div>
 <div class="ttc" id="aclassZone__StartSiteSky_html_af5f98394e6011ed4a85268fc879c08ca"><div class="ttname"><a href="classZone__StartSiteSky.html#af5f98394e6011ed4a85268fc879c08ca">Zone_StartSiteSky.IDBaseLandFeat</a></div><div class="ttdeci">override string IDBaseLandFeat</div><div class="ttdef"><b>Definition:</b> <a href="Zone__StartSiteSky_8cs_source.html#l00007">Zone_StartSiteSky.cs:7</a></div></div>

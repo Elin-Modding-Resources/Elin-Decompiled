@@ -36,7 +36,7 @@ var searchData=
   ['addcard_33',['AddCard',['../classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5',1,'Card.AddCard()'],['../classZone.html#a9a9d9bd06900ada6231626080c89f249',1,'Zone.AddCard(Card t, int x, int z)'],['../classZone.html#aeee9296fa3ccae7261dc9eb0def45156',1,'Zone.AddCard(Card t)'],['../classCodexManager.html#a5010eb833587e80a5e3822fa25222a29',1,'CodexManager.AddCard()'],['../classCell.html#aa76cd07ab5edd14deb987e87ada157d8',1,'Cell.AddCard()'],['../classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9',1,'Zone.AddCard()']]],
   ['addcardonactivate_34',['AddCardOnActivate',['../classMap.html#a28787b9bbf349d3fc73d8d0740b727c4',1,'Map']]],
   ['addcardsplinkle_35',['AddCardSplinkle',['../classZone.html#a804bde9872341f1e82733fd23682e4c1',1,'Zone']]],
-  ['addchara_36',['AddChara',['../classZone.html#a2ad77999854118d0ec82e8a6be064d62',1,'Zone']]],
+  ['addchara_36',['AddChara',['../classZone.html#a58b4ea50a8c4166152eedf8c87089ee8',1,'Zone']]],
   ['addchild_37',['AddChild',['../classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f',1,'UIContextMenu.AddChild()'],['../classSpatial.html#a2eadb92cafb481d78f96a4b1a19d6381',1,'Spatial.AddChild()'],['../classUIContextMenu.html#a2169dc56959d30476cc9648ecfabd731',1,'UIContextMenu.AddChild()']]],
   ['addchoice_38',['AddChoice',['../classDramaEventTalk.html#a0a26c1611dacf8b0d010fb6ed1c320c0',1,'DramaEventTalk.AddChoice()'],['../classDialogDrama.html#ac712d9c73eb36f4187c733f883919428',1,'DialogDrama.AddChoice()']]],
   ['addcollection_39',['AddCollection',['../classUIList.html#ae77a93adbbf3e2e3365bf87b0a5e5a90',1,'UIList']]],

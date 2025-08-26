@@ -8,7 +8,7 @@ var classZone =
     [ "AddCard", "classZone.html#a9a9d9bd06900ada6231626080c89f249", null ],
     [ "AddCard", "classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9", null ],
     [ "AddCardSplinkle", "classZone.html#a804bde9872341f1e82733fd23682e4c1", null ],
-    [ "AddChara", "classZone.html#a2ad77999854118d0ec82e8a6be064d62", null ],
+    [ "AddChara", "classZone.html#a58b4ea50a8c4166152eedf8c87089ee8", null ],
     [ "AddGlobalCharasOnActivate", "classZone.html#a860d7d9befb99ced3fdc0865c7794fa0", null ],
     [ "AddRandomVisitor", "classZone.html#a6b8d2cdc394162d9bae5d4ac42f90cfb", null ],
     [ "AddThing", "classZone.html#a599684bbc786c1c23b174e869f19fd78", null ],

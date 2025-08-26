@@ -1,5 +1,7 @@
 var NAVTREEINDEX72 =
 {
+"classInvOwnerChangeMaterial.html#aaad71d95f2d969e9e331e315063f5ea0":[1,0,683,3],
+"classInvOwnerChangeMaterial.html#ad7e42babf344cb86a495f313ab2550ac":[1,0,683,6],
 "classInvOwnerChangeMaterial.html#ae79ad9f8f9057d1f8f3a2f2209b26f49":[1,0,683,1],
 "classInvOwnerChangeMaterial.html#af4ed4968f5f0c22873222be5d920c07c":[1,0,683,4],
 "classInvOwnerChaosOffering.html":[1,0,684],
@@ -247,7 +249,5 @@ var NAVTREEINDEX72 =
 "classInvOwner_1_1Transaction.html#af6a4abac18ae4cd8c03875a027098250":[1,0,679,4,7],
 "classItemCulture.html":[1,0,718],
 "classItemCulture.html#a11047667cdf1442e890443c853339ca8":[1,0,718,3],
-"classItemCulture.html#a24da0c0e5ca7c16e90e4a347c7cd0482":[1,0,718,5],
-"classItemCulture.html#a918daa4b2bff4454ec670d63abf5b14a":[1,0,718,2],
-"classItemCulture.html#a9b3d292f3a0c2b10c38c6713cc8e70f9":[1,0,718,1]
+"classItemCulture.html#a24da0c0e5ca7c16e90e4a347c7cd0482":[1,0,718,5]
 };

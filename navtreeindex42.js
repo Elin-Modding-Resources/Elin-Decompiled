@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classCardRow.html#a35a6ed4c47d784b3d75501ce15b4a3d2":[1,0,255,26],
 "classCardRow.html#a3c982b8fe27f7166d45e7eed1f089095":[1,0,255,31],
 "classCardRow.html#a3feda15c3e2109092829a5bdea35f848":[1,0,255,2],
 "classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903":[1,0,255,24],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "classCellEffect.html#a40c4b8174b7cbc1521f997ce42b20187":[1,0,258,16],
 "classCellEffect.html#a548574827318445ac6fb9e51c09d2093":[1,0,258,18],
 "classCellEffect.html#a54e1a4d337ce20b591256682d5f864cf":[1,0,258,15],
-"classCellEffect.html#a57f1a43f5b3bb379abb6ffd0499b45d9":[1,0,258,14],
-"classCellEffect.html#a611b9cc2d44714b5d7625955dced5553":[1,0,258,2]
+"classCellEffect.html#a57f1a43f5b3bb379abb6ffd0499b45d9":[1,0,258,14]
 };

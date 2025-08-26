@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"WidgetCurrentTool_8cs.html":[2,0,0,1858],
 "WidgetCurrentTool_8cs_source.html":[2,0,0,1858],
 "WidgetDate_8cs.html":[2,0,0,1859],
 "WidgetDate_8cs_source.html":[2,0,0,1859],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "Zone__Lothria_8cs.html":[2,0,0,1934],
 "Zone__Lothria_8cs_source.html":[2,0,0,1934],
 "Zone__LumiestGraveyard_8cs.html":[2,0,0,1936],
-"Zone__LumiestGraveyard_8cs_source.html":[2,0,0,1936],
-"Zone__LumiestRuin_8cs.html":[2,0,0,1937]
+"Zone__LumiestGraveyard_8cs_source.html":[2,0,0,1936]
 };

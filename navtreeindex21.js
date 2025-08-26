@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288ae599161956d626eda4cb0a5ffb85271c":[2,0,0,1850,0,1],
 "VisitorState_8cs_source.html":[2,0,0,1850],
 "WM_8cs.html":[2,0,0,2,0,0,10],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3d":[2,0,0,2,0,0,10,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "WidgetBottomBar_8cs.html":[2,0,0,1856],
 "WidgetBottomBar_8cs_source.html":[2,0,0,1856],
 "WidgetCodex_8cs.html":[2,0,0,1857],
-"WidgetCodex_8cs_source.html":[2,0,0,1857],
-"WidgetCurrentTool_8cs.html":[2,0,0,1858]
+"WidgetCodex_8cs_source.html":[2,0,0,1857]
 };

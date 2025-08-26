@@ -37,6 +37,7 @@ var classIO =
     [ "SaveFile", "classIO.html#ac15051fb75be08e9ff3dd16de65959b3", null ],
     [ "SavePNG", "classIO.html#a22bfffcbf7b45378a6571cbf43377128", null ],
     [ "SaveText", "classIO.html#aa538a6b553652f8755dabb39bae4af14", null ],
+    [ "SaveTextArray", "classIO.html#a53413f94d70f8a806038b6974752109b", null ],
     [ "WriteLZ4", "classIO.html#afd2db854151f6059cc9ba4c0a42a5e59", null ],
     [ "dpFormat", "classIO.html#aeae99af248785685765c056178c82d95", null ],
     [ "dpSetting", "classIO.html#a06289866e6a7c70e01e7b515323c71e3", null ],

@@ -1,5 +1,14 @@
 var NAVTREEINDEX126 =
 {
+"classUIContextMenuManager.html":[1,0,1955],
+"classUIContextMenuManager.html#a13fa656fb9704c6abdcafe6650c01b85":[1,0,1955,3],
+"classUIContextMenuManager.html#a39e23b76011aa78414496291e49cf7f4":[1,0,1955,7],
+"classUIContextMenuManager.html#a5359e8ab76e62c1c1be6b00d35d524ab":[1,0,1955,4],
+"classUIContextMenuManager.html#abc93efb2ad84bfc79d0670f5ed45a2b7":[1,0,1955,0],
+"classUIContextMenuManager.html#ac9ca0b987dc5ee6216b48a1c05493080":[1,0,1955,1],
+"classUIContextMenuManager.html#aca0dfdc13759d927c7be2ae09a0c7195":[1,0,1955,6],
+"classUIContextMenuManager.html#ade3e184cb09a6d4a831eceb68540f4ec":[1,0,1955,5],
+"classUIContextMenuManager.html#af870141b36532bf20e85ae06236c6662":[1,0,1955,2],
 "classUIContextMenuPopper.html":[1,0,1956],
 "classUIContextMenuPopper.html#a00e586ac308b538a06badeebe9610f0d":[1,0,1956,2],
 "classUIContextMenuPopper.html#a02af504e9ee45171f5d9c572437477a1":[1,0,1956,15],
@@ -240,14 +249,5 @@ var NAVTREEINDEX126 =
 "classUIHomeInfo.html#a2144f6d8a1b1a9fa0022a7f7175a221b":[1,0,1972,14],
 "classUIHomeInfo.html#a2c9b3bd5492e71e150a7dfc54d0d7d29":[1,0,1972,35],
 "classUIHomeInfo.html#a2ca23b59dd2d70d89a583aea5c9069a9":[1,0,1972,3],
-"classUIHomeInfo.html#a36bdd05761542f007c717f5a4f8bb87a":[1,0,1972,8],
-"classUIHomeInfo.html#a3973753764aaef7f70d8468aed47316b":[1,0,1972,24],
-"classUIHomeInfo.html#a477763320c1ff549ea076a512f3df46e":[1,0,1972,4],
-"classUIHomeInfo.html#a48963e037717ae4efbba2e40649e7396":[1,0,1972,40],
-"classUIHomeInfo.html#a4c1daeb6169f257ed8d05de32d188a01":[1,0,1972,38],
-"classUIHomeInfo.html#a5ecc12e55270fd11eda6a18c31f3b21c":[1,0,1972,23],
-"classUIHomeInfo.html#a68836a05970cd5b2ecc8efb32dc6d130":[1,0,1972,17],
-"classUIHomeInfo.html#a716fe38332b5935e9b9ff4575acc668c":[1,0,1972,42],
-"classUIHomeInfo.html#a7403d064690bb70b599e96eb22cd39db":[1,0,1972,26],
-"classUIHomeInfo.html#a7bec628330179eeadeb4665156eafb5d":[1,0,1972,27]
+"classUIHomeInfo.html#a36bdd05761542f007c717f5a4f8bb87a":[1,0,1972,8]
 };

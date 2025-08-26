@@ -1,5 +1,13 @@
 var NAVTREEINDEX121 =
 {
+"classTraitSalesTag.html#ad775fb0e118436eb927e004f71c7f413":[1,0,1780,5],
+"classTraitSalesTag.html#af240bb3862ff5b8acb871e125b0ae553":[1,0,1780,2],
+"classTraitSawMill.html":[1,0,1781],
+"classTraitSawMill.html#a2c05175e641c6a8c4f1735138ecaebec":[1,0,1781,2],
+"classTraitSawMill.html#a38eb32553713219ddcd2410d4442c2f0":[1,0,1781,3],
+"classTraitSawMill.html#a8ae6d8f9e96ab3c70ecb63f0e71a85dc":[1,0,1781,1],
+"classTraitSawMill.html#ae1971cf328e9f99ba0fd3fe2992d8689":[1,0,1781,0],
+"classTraitScratchMachine.html":[1,0,1782],
 "classTraitScratchMachine.html#a07ffdf52fc643dc776ed37719159f4a4":[1,0,1782,4],
 "classTraitScratchMachine.html#a1e300ed5e281053a560c503b6c162582":[1,0,1782,0],
 "classTraitScratchMachine.html#a72df852eba74fe1aa8bd21edaa934784":[1,0,1782,1],
@@ -164,9 +172,10 @@ var NAVTREEINDEX121 =
 "classTraitSpot.html#a1990503145dd01cad1ca1e2d71656499":[1,0,1808,0],
 "classTraitSpot.html#a54744d73b57e0c1880e07fac54454e50":[1,0,1808,1],
 "classTraitSpotBiome.html":[1,0,1809],
-"classTraitSpotBiome.html#a00d8d22dc47e10f9b40c069c1f7f1e15":[1,0,1809,0],
-"classTraitSpotBiome.html#a0f68f6a92582bf8314f7bdf7debc6595":[1,0,1809,1],
-"classTraitSpotBiome.html#a58684fd795a215913bbe31116f1380ea":[1,0,1809,2],
+"classTraitSpotBiome.html#a00d8d22dc47e10f9b40c069c1f7f1e15":[1,0,1809,1],
+"classTraitSpotBiome.html#a0f68f6a92582bf8314f7bdf7debc6595":[1,0,1809,2],
+"classTraitSpotBiome.html#a1919aa54ec4ba5278caa7e1a63e35b83":[1,0,1809,0],
+"classTraitSpotBiome.html#a58684fd795a215913bbe31116f1380ea":[1,0,1809,3],
 "classTraitSpotDining.html":[1,0,1810],
 "classTraitSpotExit.html":[1,0,1811],
 "classTraitSpotExit.html#a0bb165e83e5008468261c5a0a16d60a0":[1,0,1811,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8":[1,0,1839,0],
 "classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3":[1,0,1839,1],
 "classTraitSwing.html":[1,0,1840],
-"classTraitSwing.html#a34af8b2a20141f86ae3dab5b249a0d66":[1,0,1840,0],
-"classTraitSwing.html#a65c5fe1d3a1255e1fd77e5e9ea58d015":[1,0,1840,1],
-"classTraitSwing.html#aa1119fe1adc12884e7c7c2aaf6ebbb92":[1,0,1840,5],
-"classTraitSwing.html#af6cada8c4e4bb880882b43a999a50b9a":[1,0,1840,2],
-"classTraitSwing.html#af9b30b301ce085c223344c32891c88fc":[1,0,1840,3],
-"classTraitSwing.html#affe3bc4a8f03bb9e1b6546afbfb29ceb":[1,0,1840,4],
-"classTraitSwitch.html":[1,0,1841],
-"classTraitSwitch.html#a069e285e73f58fcb14dd4ce45b058a44":[1,0,1841,5],
-"classTraitSwitch.html#a38ceb3586c4921cafed4f9cdfed87d21":[1,0,1841,10],
-"classTraitSwitch.html#a3c9509bede5f05b010e060ce84565232":[1,0,1841,12]
+"classTraitSwing.html#a34af8b2a20141f86ae3dab5b249a0d66":[1,0,1840,0]
 };
