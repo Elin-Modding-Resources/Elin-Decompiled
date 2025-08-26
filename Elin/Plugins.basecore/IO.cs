@@ -108,6 +108,13 @@ public class IO
 		File.WriteAllText(path, text);
 	}
 
+	public static void SaveTextArray(string path, string[] text)
+	{
+		CreateDirectory(Path.GetDirectoryName(path));
+		Debug.Log("#io SaveFile;" + path);
+		File.WriteAllLines(path, text);
+	}
+
 	public static T LoadFile<T>(string path, bool compress = false, JsonSerializerSettings setting = null)
 	{
 		if (!File.Exists(path))
