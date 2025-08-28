@@ -10,6 +10,7 @@ var classSpawnSetting =
     [ "HomeGuest", "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832", null ],
     [ "HomeWild", "classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967", null ],
     [ "Mob", "classSpawnSetting.html#a50f4f42f5c7d25c92d8fe0ec46b91eb3", null ],
+    [ "dangerLv", "classSpawnSetting.html#aed4a7a41bd9c0f4e5182828f41eb0b4d", null ],
     [ "Debug", "classSpawnSetting.html#a17b584515ae72d8471f7b41a5c915588", null ],
     [ "Default", "classSpawnSetting.html#a28e3c3eb950ac72d3e9111554a0b8e51", null ],
     [ "filterLv", "classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e", null ],

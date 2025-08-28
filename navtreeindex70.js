@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"classHotItemHeld.html#a646f0042adda312bf43353b31a430eeb":[1,0,636,13],
 "classHotItemHeld.html#a9b017eb578fc098fef30eb97a6ae0ece":[1,0,636,10],
 "classHotItemHeld.html#aa32a631bfd13f1ce2db3250c7c29c1c6":[1,0,636,2],
 "classHotItemHeld.html#aa9ab57c606f79ce44cecc2635b5804a5":[1,0,636,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "classImageExample_1_1DropInfo.html#afb39d9bdc1f6d389ffb6863e4f1ed0be":[1,0,661,0,0],
 "classIngredientAndRecipe.html":[1,0,663],
 "classIngredientAndRecipe.html#a03d142e47214cbdf200daf04518cacfa":[1,0,663,2],
-"classIngredientAndRecipe.html#ad4f274f11c615c6e311ae7225256788c":[1,0,663,0],
-"classIngredientAndRecipe.html#aff251c139803d4168e200317c3afa9d6":[1,0,663,1]
+"classIngredientAndRecipe.html#ad4f274f11c615c6e311ae7225256788c":[1,0,663,0]
 };

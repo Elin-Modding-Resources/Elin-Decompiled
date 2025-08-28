@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classTraitCoolerBox.html":[1,0,1492],
 "classTraitCoolerBox.html#a4276d3724bd3016236fc10863c6f5820":[1,0,1492,0],
 "classTraitCoolerBox.html#ac146b5ae0ac3e6da3201ec5fca77232c":[1,0,1492,1],
 "classTraitCoreDefense.html":[1,0,1493],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitDye.html#a0c666c22498c366ecbc81733694bee14":[1,0,1532,1],
 "classTraitDye.html#a0fed784d147a98ed68e0c97b6f3b15fa":[1,0,1532,3],
 "classTraitDye.html#a7b048cccd0c4e95a05e81833b65a0973":[1,0,1532,4],
-"classTraitDye.html#ae12263f7d8b9f94f05d3714d52e0df24":[1,0,1532,6],
-"classTraitDye.html#ae3444543e1d4eba66bbb4a3c323497bb":[1,0,1532,2]
+"classTraitDye.html#ae12263f7d8b9f94f05d3714d52e0df24":[1,0,1532,6]
 };

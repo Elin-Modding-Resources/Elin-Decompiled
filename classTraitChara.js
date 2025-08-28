@@ -34,7 +34,6 @@ var classTraitChara =
     [ "CanSellStolenGoods", "classTraitChara.html#ad48e72e12c1f6f8d871a505cda74abcd", null ],
     [ "CanServeFood", "classTraitChara.html#a2086848ac881113e85fd2f5f2cb7dbe1", null ],
     [ "CanWhore", "classTraitChara.html#a2d39a084b220d4016457b1677412c3a3", null ],
-    [ "EnableTone", "classTraitChara.html#a221201eb708345809732ec27a0280e3f", null ],
     [ "HaveNews", "classTraitChara.html#a31b8c4472e901cac25ecf2877553206c", null ],
     [ "IdAmbience", "classTraitChara.html#a4ac67453fdbd134569bb96d365ab7320", null ],
     [ "IDInvStyle", "classTraitChara.html#a77f2a76840cbdd37c2d5af53abaa7203", null ],

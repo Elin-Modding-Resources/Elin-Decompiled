@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitMannequin.html":[1,0,1654],
 "classTraitMannequin.html#a1d3663a88e58c5eab42519b42d7a1264":[1,0,1654,5],
 "classTraitMannequin.html#a3eda9d8f2da4f148b92673bbc0d529e9":[1,0,1654,1],
 "classTraitMannequin.html#a46dc077526eed5cc8c13690e85909b70":[1,0,1654,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitPainter.html":[1,0,1716],
 "classTraitPainter.html#a21a3f21c0f97fea2890a3b6dac55b8ea":[1,0,1716,1],
 "classTraitPainter.html#a676298524aad36fa4b67bfd137c69a12":[1,0,1716,3],
-"classTraitPainter.html#a804454fa49e9e95eb60096914c11a747":[1,0,1716,0],
-"classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a4802a5ac6005a6ab9c68a2fb29e30a3e":[1,0,1716,0,0]
+"classTraitPainter.html#a804454fa49e9e95eb60096914c11a747":[1,0,1716,0]
 };

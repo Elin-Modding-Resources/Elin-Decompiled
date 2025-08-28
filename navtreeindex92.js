@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classQuestGuildFighter.html#ada3a15aaa4d703389882f616dc106c59":[1,0,985,0],
 "classQuestGuildFighter.html#af9c0366c2ab887861343083bd633a08c":[1,0,985,2],
 "classQuestGuildMage.html":[1,0,986],
 "classQuestGuildMage.html#a048cc0670babbf2cdd1cfd76d99013f0":[1,0,986,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classQuestTaskHunt.html#a24e9c8ed979e3f38aba15c6236e2ebd2":[1,0,1037,7],
 "classQuestTaskHunt.html#a33b84ff07c9903578ed6bac1bd1c4a26":[1,0,1037,3],
 "classQuestTaskHunt.html#a6a3b1de5536f24abeb6a4819c770fa5e":[1,0,1037,15],
-"classQuestTaskHunt.html#a6ae0d299139e509cf382be3337db8101":[1,0,1037,4],
-"classQuestTaskHunt.html#a6d965565f4649033a0a9183929acb13f":[1,0,1037,9]
+"classQuestTaskHunt.html#a6ae0d299139e509cf382be3337db8101":[1,0,1037,4]
 };

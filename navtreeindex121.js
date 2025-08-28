@@ -1,5 +1,6 @@
 var NAVTREEINDEX121 =
 {
+"classTraitSalesTag.html#a5c87ee56f2fbd659da3f1ec1687a70b3":[1,0,1780,1],
 "classTraitSalesTag.html#ad775fb0e118436eb927e004f71c7f413":[1,0,1780,5],
 "classTraitSalesTag.html#af240bb3862ff5b8acb871e125b0ae553":[1,0,1780,2],
 "classTraitSawMill.html":[1,0,1781],
@@ -248,6 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitStrangeGirl.html":[1,0,1839],
 "classTraitStrangeGirl.html#a47843c3d723815a3eb54e726291b4db8":[1,0,1839,0],
 "classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3":[1,0,1839,1],
-"classTraitSwing.html":[1,0,1840],
-"classTraitSwing.html#a34af8b2a20141f86ae3dab5b249a0d66":[1,0,1840,0]
+"classTraitSwing.html":[1,0,1840]
 };

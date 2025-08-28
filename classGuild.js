@@ -3,6 +3,7 @@ var classGuild =
     [ "GetCurrentGuild", "classGuild.html#ae6498e1c0c27b8ee5302f34d76560d92", null ],
     [ "RefreshDevelopment", "classGuild.html#a3f93d65a828d8a78e6f4679600e65929", null ],
     [ "Current", "classGuild.html#aa02b90839a3c3cb345553aa8178f312b", null ],
+    [ "CurrentDrama", "classGuild.html#a217e6901e1885ed24f421ba7743d168b", null ],
     [ "CurrentQuest", "classGuild.html#a658c69fae9c8fdf1bca19236b84912a1", null ],
     [ "Fighter", "classGuild.html#aa52f9c395e60da9371f30fc21af7e621", null ],
     [ "IsCurrentZone", "classGuild.html#ae565e3e67e2563493bcf162754b551e3", null ],

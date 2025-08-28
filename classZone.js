@@ -219,7 +219,6 @@ var classZone =
     [ "RestrictBuild", "classZone.html#abd7b658de9f0076fee598596209752e9", null ],
     [ "RevealRoom", "classZone.html#ae4e53a0ca67a1034704676d439b493ed", null ],
     [ "RuinChance", "classZone.html#a86e3aac2e4b870ad68133138e227ed35", null ],
-    [ "ScaleMonsterLevel", "classZone.html#ad10b4db7ef893ff38b4dd7cd7d4c84f4", null ],
     [ "ScaleType", "classZone.html#a4519ee38815d1c729bdaa7811eba5a0f", null ],
     [ "ShouldAutoRevive", "classZone.html#a4d60ececc1bf1b908c08bb47f8292ecc", null ],
     [ "ShouldMakeExit", "classZone.html#aab5e98e6de491debdb5f42f270573f14", null ],
