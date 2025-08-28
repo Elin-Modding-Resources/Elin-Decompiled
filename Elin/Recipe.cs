@@ -138,6 +138,11 @@ public class Recipe : EClass
 			{
 				return true;
 			}
+			Debug.Log(t.Name + "/" + tag + "/" + t.material.tag);
+			if (!tag.IsEmpty() && !t.material.tag.Contains(tag))
+			{
+				return false;
+			}
 			if (useCat)
 			{
 				if (t.category.IsChildOf(id))

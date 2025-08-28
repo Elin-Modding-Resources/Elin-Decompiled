@@ -4774,6 +4774,10 @@ public class Chara : Card, IPathfindWalker
 		if (trait is TraitBard)
 		{
 			AddThing(ThingGen.Create("lute"));
+			if (EClass.debug.enable || EClass.rnd(50) == 0)
+			{
+				EQ_ID("shield_lute");
+			}
 		}
 	}
 

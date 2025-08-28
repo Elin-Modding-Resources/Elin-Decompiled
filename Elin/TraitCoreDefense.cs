@@ -32,6 +32,16 @@ public class TraitCoreDefense : Trait
 					return true;
 				});
 			}
+			if (EClass.debug.enable)
+			{
+				p.TrySetAct("50", delegate
+				{
+					SE.Play("warhorn");
+					Msg.Say("warhorn");
+					EClass.game.survival.flags.raidLv += 50;
+					return true;
+				});
+			}
 		}
 		ZoneEventDefenseGame ev = EClass._zone.events.GetEvent<ZoneEventDefenseGame>();
 		if (ev == null)

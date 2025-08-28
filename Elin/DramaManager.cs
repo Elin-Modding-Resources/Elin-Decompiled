@@ -969,7 +969,7 @@ public class DramaManager : EMono
 				}
 				if (tg != null && (actor == "tg" || actor.IsEmpty()))
 				{
-					text = tg.ApplyTone(text);
+					text = (enableTone ? tg.ApplyTone(text) : text);
 				}
 				return text;
 			})) as DramaEventTalk;
@@ -1055,9 +1055,9 @@ public class DramaManager : EMono
 		case "WindRest":
 			return EMono._zone is Zone_WindRest;
 		case "guild_promote":
-			return Guild.Current.relation.exp >= Guild.Current.relation.ExpToNext;
+			return Guild.CurrentDrama.relation.exp >= Guild.CurrentDrama.relation.ExpToNext;
 		case "guild_maxpromote":
-			return Guild.Current.relation.rank >= Guild.Current.relation.MaxRank;
+			return Guild.CurrentDrama.relation.rank >= Guild.CurrentDrama.relation.MaxRank;
 		case "scratch_check":
 			return EMono.game.dateScratch > EMono.game.world.date.GetRaw();
 		case "sister_money":
@@ -1077,13 +1077,13 @@ public class DramaManager : EMono
 		case "hasMelilithCurse":
 			return EMono.pc.HasElement(1206);
 		case "merchant":
-			return Guild.Current == Guild.Merchant;
+			return Guild.CurrentDrama == Guild.Merchant;
 		case "fighter":
-			return Guild.Current == Guild.Fighter;
+			return Guild.CurrentDrama == Guild.Fighter;
 		case "thief":
-			return Guild.Current == Guild.Thief;
+			return Guild.CurrentDrama == Guild.Thief;
 		case "mage":
-			return Guild.Current == Guild.Mage;
+			return Guild.CurrentDrama == Guild.Mage;
 		case "hasDLC":
 			return Steam.HasDLC(array[1].ToEnum<ID_DLC>());
 		case "hasFlag":

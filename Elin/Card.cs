@@ -6558,6 +6558,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		string key = array[0];
 		string text2 = "";
 		MOD.tones.Initialize();
+		Debug.Log(c.Name);
 		if (!Lang.setting.useTone || MOD.tones.list.Count == 0)
 		{
 			text2 = text.Replace("{", "").Replace("}", "");
@@ -6571,7 +6572,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (MOD.tones.all.ContainsKey(key))
 			{
 				StringBuilder stringBuilder = MOD.tones.ApplyTone(key, ref text, gender);
-				if (Lang.isJP && c != null && c.trait.EnableTone)
+				if (Lang.isJP && c != null)
 				{
 					if (array.Length >= 2)
 					{

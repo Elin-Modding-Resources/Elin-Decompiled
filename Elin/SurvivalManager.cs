@@ -310,10 +310,20 @@ public class SurvivalManager : EClass
 		default:
 			return false;
 		}
-		if (EClass.rnd(3) == 0 && EClass.game.survival.flags.spawnedFloor < 4)
+		if (EClass.rnd(3 + EClass.game.survival.flags.spawnedFloor * 2) == 0 && EClass.game.survival.flags.spawnedFloor < 8)
 		{
 			EClass.game.survival.flags.spawnedFloor++;
-			return Pop(ThingGen.CreateFloor(40, 45).SetNum(3));
+			switch (EClass.game.survival.flags.spawnedFloor)
+			{
+			case 5:
+			case 6:
+				return Pop(ThingGen.CreateFloor(33, 97).SetNum(3));
+			case 7:
+			case 8:
+				return Pop(ThingGen.CreateFloor(43, 66).SetNum(3));
+			default:
+				return Pop(ThingGen.CreateFloor(40, 45).SetNum(3));
+			}
 		}
 		if (EClass.rnd(20) == 0)
 		{
@@ -430,7 +440,11 @@ public class SurvivalManager : EClass
 			case "littleOne":
 				return false;
 			default:
-				return EClass.game.cards.globalCharas.Find(r.id) == null;
+				if (EClass.game.cards.globalCharas.Find(r.id) == null)
+				{
+					return r.LV < flags.raidLv + 10;
+				}
+				return false;
 			}
 		}).ToList();
 	}

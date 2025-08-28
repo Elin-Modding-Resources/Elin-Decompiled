@@ -2,6 +2,8 @@ public class SpawnSetting
 {
 	public int filterLv = -1;
 
+	public int dangerLv = -1;
+
 	public int fixedLv = -1;
 
 	public int tries = 100;

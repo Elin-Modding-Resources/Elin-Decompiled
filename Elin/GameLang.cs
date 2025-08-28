@@ -88,8 +88,8 @@ public class GameLang : EClass
 		stringBuilder.Replace("#player", EClass.player.title);
 		stringBuilder.Replace("#title", EClass.player.title);
 		stringBuilder.Replace("#zone", EClass._zone.Name);
-		stringBuilder.Replace("#guild_title", Guild.Current.relation.TextTitle);
-		stringBuilder.Replace("#guild", Guild.Current.Name);
+		stringBuilder.Replace("#guild_title", Guild.CurrentDrama.relation.TextTitle);
+		stringBuilder.Replace("#guild", Guild.CurrentDrama.Name);
 		stringBuilder.Replace("#race", EClass.pc.race.GetName());
 		stringBuilder.Replace("#pc", EClass.pc.NameSimple);
 		stringBuilder.Replace("#aka", EClass.pc.Aka);

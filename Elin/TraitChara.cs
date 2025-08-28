@@ -98,18 +98,6 @@ public class TraitChara : Trait
 
 	public virtual Adv_Type AdvType => Adv_Type.None;
 
-	public virtual bool EnableTone
-	{
-		get
-		{
-			if (IsUnique)
-			{
-				return !LayerDrama.Instance;
-			}
-			return true;
-		}
-	}
-
 	public virtual bool CanBeTamed
 	{
 		get

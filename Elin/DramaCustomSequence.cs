@@ -1486,7 +1486,6 @@ public class DramaCustomSequence : EClass
 		}
 		if (HasTopic("unique", c.id))
 		{
-			manager.enableTone = false;
 			return GetText(c, "unique", c.id);
 		}
 		if (EClass.rnd(2) == 0 && !c.trait.IDRumor.IsEmpty())
@@ -1532,7 +1531,7 @@ public class DramaCustomSequence : EClass
 			return manager.customTalkTopics[idTopic];
 		}
 		string[] dialog = Lang.GetDialog(idSheet, idTopic);
-		if (!manager.enableTone && !(idSheet == "general"))
+		if (!(idSheet != "unique"))
 		{
 			return dialog.RandomItem();
 		}

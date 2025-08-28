@@ -10,15 +10,15 @@ public class Zone_StartSiteSky : Zone_StartSite
 
 	public override string IdBiome => "Plain";
 
-	public override bool ScaleMonsterLevel
+	public override ZoneScaleType ScaleType
 	{
 		get
 		{
-			if (EClass.game.IsSurvival)
+			if (!EClass.game.IsSurvival || EClass.game.survival.flags.raidLv < 100)
 			{
-				return EClass.game.survival.flags.raidLv >= 100;
+				return ZoneScaleType.None;
 			}
-			return false;
+			return ZoneScaleType.Void;
 		}
 	}
 }

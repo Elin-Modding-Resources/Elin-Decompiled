@@ -383,7 +383,7 @@ public class DramaOutcome : EMono
 
 	public void guild_trial()
 	{
-		if (Guild.Current == EMono.game.factions.Merchant)
+		if (Guild.CurrentDrama == EMono.game.factions.Merchant)
 		{
 			EMono.game.quests.Start("guild_merchant", cc, assignQuest: false);
 		}
@@ -395,14 +395,14 @@ public class DramaOutcome : EMono
 
 	public void guild_join()
 	{
-		if (Guild.Current != EMono.game.factions.Merchant)
+		if (Guild.CurrentDrama != EMono.game.factions.Merchant)
 		{
 			(cc.trait as TraitGuildDoorman).OnJoinGuild();
 		}
-		Msg.Say("guild_join", Guild.Current.Name);
+		Msg.Say("guild_join", Guild.CurrentDrama.Name);
 		SE.Play("questComplete");
-		Guild.Current.relation.type = FactionRelation.RelationType.Member;
-		Guild.CurrentQuest.ChangePhase(10);
+		Guild.CurrentDrama.relation.type = FactionRelation.RelationType.Member;
+		Guild.CurrentDrama?.Quest.ChangePhase(10);
 	}
 
 	public void guild_mageTrial()
@@ -413,7 +413,7 @@ public class DramaOutcome : EMono
 
 	public void guild_promote()
 	{
-		Guild.Current.relation.Promote();
+		Guild.CurrentDrama.relation.Promote();
 		Guild.GetCurrentGuild()?.RefreshDevelopment();
 	}
 

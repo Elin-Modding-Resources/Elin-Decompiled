@@ -20,13 +20,16 @@ public class ZoneEventSiege : ZoneEvent
 
 	public override string id => "trial_siege";
 
-	public override float roundInterval => Mathf.Max(0.5f, 1.5f - 0.01f * (float)lv);
+	public override float roundInterval => Mathf.Max(0.1f, 1.5f - 0.01f * (float)lv);
 
 	public override Playlist playlist => EClass.Sound.playlistBattle;
 
-	public virtual Chara CreateChara(Point p, bool boss = false)
+	public virtual Chara CreateChara(Point p)
 	{
-		return EClass._zone.SpawnMob(p, boss ? SpawnSetting.Boss(lv) : SpawnSetting.DefenseEnemy(lv));
+		bool flag = idx == max - 1;
+		SpawnSetting spawnSetting = ((lv >= 50 && idx == max - 2) ? SpawnSetting.Evolved(lv) : (flag ? SpawnSetting.Boss(lv) : SpawnSetting.DefenseEnemy(lv)));
+		spawnSetting.dangerLv = lv + 1;
+		return EClass._zone.SpawnMob(p, spawnSetting);
 	}
 
 	public override void OnInit()
@@ -55,7 +58,7 @@ public class ZoneEventSiege : ZoneEvent
 	public void SpawnMob()
 	{
 		Point spawnPos = GetSpawnPos();
-		Chara chara = CreateChara(spawnPos, idx == max - 1);
+		Chara chara = CreateChara(spawnPos);
 		chara.hostility = Hostility.Enemy;
 		members.Add(chara);
 		uids.Add(chara.uid);

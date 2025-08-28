@@ -405,8 +405,6 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public virtual ZoneScaleType ScaleType => ZoneScaleType.None;
 
-	public virtual bool ScaleMonsterLevel => false;
-
 	public virtual bool HiddenInRegionMap => false;
 
 	public virtual FlockController.SpawnType FlockType => FlockController.SpawnType.Default;
@@ -2723,34 +2721,34 @@ public class Zone : Spatial, ICardParent, IInspect
 				return s.biome == biome.name || s.biome.IsEmpty();
 			}
 		}) : SpawnList.Get(biome.spawn.GetRandomCharaId())))));
-		int dangerLv = DangerLv;
+		int num = ((setting.dangerLv == -1) ? DangerLv : setting.dangerLv);
 		CardBlueprint cardBlueprint = new CardBlueprint
 		{
 			rarity = Rarity.Normal,
 			idEle = setting.idEle
 		};
-		int num = ((setting.filterLv == -1) ? dangerLv : setting.filterLv);
+		int num2 = ((setting.filterLv == -1) ? num : setting.filterLv);
 		if (ScaleType == ZoneScaleType.Void)
 		{
-			num = ((dangerLv - 1) % 50 + 5) * 150 / 100;
-			if (num >= 20 && EClass.rnd(100) < num)
+			num2 = ((num - 1) % 50 + 5) * 150 / 100;
+			if (num2 >= 20 && EClass.rnd(100) < num2)
 			{
-				num = dangerLv;
+				num2 = num;
 			}
 		}
-		CardRow cardRow = (setting.id.IsEmpty() ? spawnList.Select(num, setting.levelRange) : EClass.sources.cards.map[setting.id]);
-		int num2 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
+		CardRow cardRow = (setting.id.IsEmpty() ? spawnList.Select(num2, setting.levelRange) : EClass.sources.cards.map[setting.id]);
+		int num3 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
 		if (ScaleType == ZoneScaleType.Void)
 		{
-			num2 = (50 + cardRow.LV) * Mathf.Max(1, (dangerLv - 1) / 50);
+			num3 = (50 + cardRow.LV) * Mathf.Max(1, (num - 1) / 50);
 		}
-		num2 += DangerLvBoost;
+		num3 += DangerLvBoost;
 		if (setting.rarity == Rarity.Random)
 		{
 			if (EClass.rnd(100) == 0)
 			{
 				cardBlueprint.rarity = Rarity.Legendary;
-				num2 = num2 * 125 / 100;
+				num3 = num3 * 125 / 100;
 			}
 		}
 		else
@@ -2759,18 +2757,18 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		if (setting.isBoss)
 		{
-			num2 = num2 * 150 / 100;
+			num3 = num3 * 150 / 100;
 		}
 		if (setting.isEvolved)
 		{
-			num2 = num2 * 2 + 20;
+			num3 = num3 * 2 + 20;
 		}
-		if (num2 != cardRow.LV)
+		if (num3 != cardRow.LV)
 		{
-			cardBlueprint.lv = num2;
+			cardBlueprint.lv = num3;
 		}
 		CardBlueprint.Set(cardBlueprint);
-		Chara chara = CharaGen.Create(cardRow.id, num);
+		Chara chara = CharaGen.Create(cardRow.id, num2);
 		AddCard(chara, pos);
 		if (setting.forcedHostility.HasValue)
 		{

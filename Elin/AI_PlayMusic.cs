@@ -114,6 +114,7 @@ public class AI_PlayMusic : AIAct
 			case "harp":
 				idSong = "harp_komori";
 				break;
+			case "shield_lute":
 			case "lute":
 				idSong = "guitar_sad";
 				break;

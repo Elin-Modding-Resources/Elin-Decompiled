@@ -5,7 +5,7 @@ public class ZoneEventRaid : ZoneEventSiege
 	public override void OnInit()
 	{
 		lv = Mathf.Max(1, EClass.game.survival.flags.raidLv);
-		max = 5 + lv / 5;
+		max = 5 + lv / 4;
 		base.OnInit();
 	}
 

@@ -8,7 +8,7 @@ public class TraitMod : TraitItem
 
 	public override bool CanStack => false;
 
-	public SourceElement.Row source => EClass.sources.elements.map[owner.refVal];
+	public SourceElement.Row source => EClass.sources.elements.map.TryGetValue(owner.refVal, DefaultEnc);
 
 	public override void OnCreate(int lv)
 	{

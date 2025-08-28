@@ -24,7 +24,7 @@ public class TraitRecipe : TraitScroll
 	public override void SetName(ref string s)
 	{
 		int num = EClass.player.recipes.knownRecipes.TryGetValue(ID, 0);
-		s = "_recipe".lang(recipe.Name.ToTitleCase(), s) + ((num == 0) ? "" : "recipe_learnt".lang(num.ToString() ?? ""));
+		s = "_recipe".lang(recipe?.Name.ToTitleCase() ?? "???", s) + ((num == 0) ? "" : "recipe_learnt".lang(num.ToString() ?? ""));
 	}
 
 	public override bool CanStackTo(Thing to)

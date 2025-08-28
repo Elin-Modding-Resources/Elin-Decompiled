@@ -28,7 +28,7 @@ public class ActThrow : ActBaseAttack
 		{
 			Act.TP.Set(pcTarget.pos);
 		}
-		if (!Act.TP.IsHidden)
+		if (!Act.TP.IsHidden && !Act.TP.IsSky)
 		{
 			return Act.CC.CanSeeLos(Act.TP);
 		}
