@@ -4774,7 +4774,7 @@ public class Chara : Card, IPathfindWalker
 		if (trait is TraitBard)
 		{
 			AddThing(ThingGen.Create("lute"));
-			if (EClass.debug.enable || EClass.rnd(50) == 0)
+			if (EClass.debug.enable || EClass.rnd(100) == 0)
 			{
 				EQ_ID("shield_lute");
 			}
@@ -5927,8 +5927,8 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (attackStyle == AttackStyle.Shield)
 		{
-			num4 += 5;
-			num5 += 10 - Evalue(1654) * 4;
+			num4 += 10;
+			num5 += 20 - Evalue(1654) * 8;
 		}
 		if (isConfused)
 		{

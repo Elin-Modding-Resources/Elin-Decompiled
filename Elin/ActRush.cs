@@ -2,6 +2,8 @@ public class ActRush : ActMelee
 {
 	public override bool ShowMapHighlight => true;
 
+	public override bool ShouldRollMax => true;
+
 	public override int PerformDistance => 6;
 
 	public override void OnMarkMapHighlights()
@@ -70,6 +72,6 @@ public class ActRush : ActMelee
 		Act.CC.Say("rush", Act.CC, Act.TC);
 		Act.CC.PlaySound("rush");
 		Act.CC.pos.PlayEffect("vanish");
-		return Attack(1f + 0.1f * (float)num, maxRoll: true);
+		return Attack(1f + 0.1f * (float)num);
 	}
 }

@@ -280,6 +280,11 @@ public class Thing : Card
 				}
 			}
 		}
+		if (id == "shield_flower")
+		{
+			SourceElement.Row randomElement = Element.GetRandomElement(genLv);
+			elements.SetBase(randomElement.alias.Replace("ele", "miasma_"), 20);
+		}
 		if ((bp.rarity != 0 || bp.qualityBonus != 0) && base.rarity < Rarity.Artifact && base.category.tag.Contains("enc"))
 		{
 			int num4 = 0;

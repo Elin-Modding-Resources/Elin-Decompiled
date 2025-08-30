@@ -442,6 +442,78 @@ public class AttackProcess : EClass
 		return Mathf.Clamp(num, 0, 9999999);
 	}
 
+	public static void ProcAbility(List<Element> list, Chara CC, Card TC, int bonus, bool subAttack = false)
+	{
+		if (list == null)
+		{
+			return;
+		}
+		foreach (Element item in list)
+		{
+			ProcAbility(item, CC, TC, bonus, subAttack);
+		}
+	}
+
+	public static void ProcAbility(Element e, Chara CC, Card TC, int bonus, bool subAttack = false)
+	{
+		if (!(e is Ability))
+		{
+			return;
+		}
+		int num = 10 + e.Value / 5;
+		int power = EClass.curve((100 + e.Value * 10) * (100 + bonus) / 100, 400, 100);
+		if (num <= EClass.rnd(100))
+		{
+			return;
+		}
+		Act obj = e as Act;
+		Card card = (obj.TargetType.CanSelectSelf ? CC : TC);
+		string text = ((e.source.proc.Length >= 2) ? e.source.proc[1] : "");
+		string text2 = obj.source.abilityType.TryGet(0);
+		switch (text2)
+		{
+		case "buff":
+			if (CC.HasCondition(text))
+			{
+				return;
+			}
+			card = CC;
+			break;
+		case "debuff":
+		case "attack":
+		case "dot":
+			card = TC;
+			break;
+		}
+		if (subAttack)
+		{
+			if (card == CC)
+			{
+				return;
+			}
+			switch (text2)
+			{
+			case "summon":
+				return;
+			case "teleport":
+				return;
+			case "suicide":
+				return;
+			}
+		}
+		if (card.IsAliveInCurrentZone)
+		{
+			Card tC = Act.TC;
+			ActEffect.ProcAt(e.source.proc[0].ToEnum<EffectId>(), power, BlessedState.Normal, CC, card, card.pos, isNeg: false, new ActRef
+			{
+				n1 = text,
+				aliasEle = e.source.aliasRef,
+				noFriendlyFire = true
+			});
+			Act.TC = tC;
+		}
+	}
+
 	public bool Perform(int count, bool hasHit, float dmgMulti = 1f, bool maxRoll = false, bool subAttack = false)
 	{
 		bool flag = CC.HasCondition<ConReload>();
@@ -460,15 +532,15 @@ public class AttackProcess : EClass
 		{
 			num /= 2;
 		}
-		List<Element> list2 = new List<Element>();
+		List<Element> list = new List<Element>();
 		int num2 = CC.Evalue(91);
 		int num3 = 0;
 		if (weapon != null)
 		{
-			list2 = weapon.elements.dict.Values.ToList();
+			list = weapon.elements.dict.Values.ToList();
 			if (ammo != null && !flag)
 			{
-				list2 = list2.Concat(ammo.elements.dict.Values).ToList();
+				list = list.Concat(ammo.elements.dict.Values).ToList();
 			}
 			num2 += weapon.Evalue(91, ignoreGlobalElement: true);
 			num3 += weapon.Evalue(603, ignoreGlobalElement: true);
@@ -478,7 +550,7 @@ public class AttackProcess : EClass
 			string id = CC.id;
 			if (id == "rabbit_vopal" || id == "mantis_killer")
 			{
-				list2.Add(Element.Create(6650, 100));
+				list.Add(Element.Create(6650, 100));
 			}
 		}
 		int bane;
@@ -505,7 +577,7 @@ public class AttackProcess : EClass
 			{
 				if (value.Value > 0)
 				{
-					list2.Add(value);
+					list.Add(value);
 				}
 			}
 		}
@@ -553,7 +625,7 @@ public class AttackProcess : EClass
 				ModExpDef(150, 90);
 				ModExpDef(151, 90);
 			}
-			Proc(list2);
+			ProcAbility(list, CC, TC, weaponSkill.Value, subAttack);
 			return false;
 		}
 		if (TC.IsPC)
@@ -661,9 +733,9 @@ public class AttackProcess : EClass
 			TC.Chara.AddCondition<ConParalyze>(30 + EClass.rnd(30));
 			TC.Chara.AddCondition<ConGravity>();
 		}
-		if (list2.Count > 0 && !flag2)
+		if (list.Count > 0 && !flag2)
 		{
-			foreach (Element item in list2)
+			foreach (Element item in list)
 			{
 				if (!TC.IsAliveInCurrentZone)
 				{
@@ -683,7 +755,7 @@ public class AttackProcess : EClass
 					}
 				}
 			}
-			Proc(list2);
+			ProcAbility(list, CC, TC, weaponSkill.Value, subAttack);
 		}
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)
 		{
@@ -805,69 +877,6 @@ public class AttackProcess : EClass
 				TC.PlayEffect(id3).SetScale(crit ? 1.25f : 0.75f);
 			}
 			CC.PlaySound(id2);
-		}
-		void Proc(List<Element> list)
-		{
-			if (list == null)
-			{
-				return;
-			}
-			foreach (Element item2 in list)
-			{
-				if (item2 is Ability)
-				{
-					int num12 = 10 + item2.Value / 5;
-					int power = EClass.curve((100 + item2.Value * 10) * (100 + weaponSkill.Value) / 100, 400, 100);
-					if (num12 > EClass.rnd(100))
-					{
-						Act obj = item2 as Act;
-						Card card = (obj.TargetType.CanSelectSelf ? CC : TC);
-						string text = ((item2.source.proc.Length >= 2) ? item2.source.proc[1] : "");
-						string text2 = obj.source.abilityType.TryGet(0);
-						switch (text2)
-						{
-						case "buff":
-							if (CC.HasCondition(text))
-							{
-								continue;
-							}
-							card = CC;
-							break;
-						case "debuff":
-						case "attack":
-						case "dot":
-							card = TC;
-							break;
-						}
-						if (subAttack)
-						{
-							if (card == CC)
-							{
-								continue;
-							}
-							switch (text2)
-							{
-							case "attackArea":
-							case "summon":
-							case "teleport":
-							case "suicide":
-								continue;
-							}
-						}
-						if (card.IsAliveInCurrentZone)
-						{
-							Card tC = TC;
-							ActEffect.ProcAt(item2.source.proc[0].ToEnum<EffectId>(), power, BlessedState.Normal, CC, card, card.pos, isNeg: false, new ActRef
-							{
-								n1 = text,
-								aliasEle = item2.source.aliasRef,
-								noFriendlyFire = true
-							});
-							TC = tC;
-						}
-					}
-				}
-			}
 		}
 	}
 

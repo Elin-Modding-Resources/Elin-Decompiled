@@ -20,9 +20,9 @@ public class DOMAIN
 
 	public const int domHarmony = 815;
 
-	public const int domElement = 806;
-
 	public const int domComm = 805;
+
+	public const int domElement = 806;
 
 	public const int domHealing = 811;
 
@@ -36,8 +36,8 @@ public class DOMAIN
 
 	public static readonly int[] IDS = new int[16]
 	{
-		812, 813, 810, 809, 808, 814, 802, 807, 815, 806,
-		805, 811, 801, 803, 804, 800
+		812, 813, 810, 809, 808, 814, 802, 807, 815, 805,
+		806, 811, 801, 803, 804, 800
 	};
 }
 public class Domain : EClass

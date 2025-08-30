@@ -444,7 +444,7 @@ public class CoreDebug : EScriptable
 				{
 					thing.AddCard(thing2);
 				}
-				thing2 = ThingGen.CreateFromCategory("armor", EClass.pc.LV);
+				thing2 = ThingGen.CreateFromCategory("armor", EClass.pc.LV + 100);
 				thing2.elements.SetBase(653, 1);
 				thing.AddCard(thing2);
 			}

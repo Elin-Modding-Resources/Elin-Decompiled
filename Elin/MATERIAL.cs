@@ -44,6 +44,11 @@ public class MATERIAL : EClass
 
 	public static SourceMaterial.Row sourceWaterSea => EClass.sources.materials.rows[88];
 
+	public static SourceMaterial.Row FromElement(int id)
+	{
+		return EClass.sources.materials.alias["rubinus"];
+	}
+
 	public static SourceMaterial.Row GetRandomMaterial(int lv, string group = null, bool tryLevelMatTier = false)
 	{
 		if (group == null)

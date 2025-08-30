@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ActMelee : ActBaseAttack
 {
+	public virtual bool ShouldRollMax => false;
+
 	public virtual float BaseDmgMTP => 1f;
 
 	public virtual bool UseWeaponDist => true;
@@ -96,7 +98,7 @@ public class ActMelee : ActBaseAttack
 		return result;
 	}
 
-	public bool Attack(float dmgMulti = 1f, bool maxRoll = false)
+	public bool Attack(float dmgMulti = 1f)
 	{
 		Act.CC.combatCount = 10;
 		Act.CC.LookAt(Act.TC);
@@ -126,14 +128,21 @@ public class ActMelee : ActBaseAttack
 		bool hasHit = false;
 		bool usedWeapon = false;
 		bool usedTalisman = false;
+		bool maxRoll = ShouldRollMax;
 		int count = 0;
 		int dist = Act.CC.Dist(Act.TC);
 		Point orgPos = Act.TC.pos.Copy();
+		Chara cC = Act.CC;
 		Card orgTC = Act.TC;
 		bool safety = Act.CC.HasElement(486) && Act.CC.IsPCFactionOrMinion;
+		bool parried = false;
 		foreach (BodySlot slot in Act.CC.body.slots)
 		{
 			_Attack(slot);
+			if (parried)
+			{
+				break;
+			}
 		}
 		if (!usedWeapon)
 		{
@@ -143,13 +152,17 @@ public class ActMelee : ActBaseAttack
 		{
 			EClass.Wait(0.25f, Act.CC);
 		}
-		if (!hasHit)
-		{
-			Act.CC.PlaySound("miss");
-		}
 		if (EClass.rnd(2) == 0)
 		{
 			Act.CC.RemoveCondition<ConInvisibility>();
+		}
+		if (parried && orgTC.isChara && orgTC != cC && ACT.Melee.CanPerform(orgTC.Chara, cC))
+		{
+			new ActMeleeParry().Perform(orgTC.Chara, cC);
+		}
+		else if (!hasHit)
+		{
+			Act.CC.PlaySound("miss");
 		}
 		return true;
 		void _Attack(BodySlot slot)
@@ -206,62 +219,69 @@ public class ActMelee : ActBaseAttack
 						}
 					}
 					AttackWithFlurry(Act.TC, Act.TP, 1f, subAttack: false);
-					if (num2 > 0)
+					if (!parried)
 					{
-						foreach (Point item in list2)
+						if (num2 > 0)
 						{
-							if (!item.Equals(orgPos))
+							foreach (Point item in list2)
 							{
-								Chara firstChara = item.FirstChara;
-								if (firstChara != null && firstChara.IsHostile(Act.CC))
+								if (!item.Equals(orgPos))
 								{
-									AttackWithFlurry(firstChara, item, 1f, subAttack: false);
+									Chara firstChara = item.FirstChara;
+									if (firstChara != null && firstChara.IsHostile(Act.CC))
+									{
+										AttackWithFlurry(firstChara, item, 1f, subAttack: false);
+									}
 								}
 							}
 						}
-					}
-					else if (scatter > 0)
-					{
-						Act.TP.ForeachNeighbor(delegate(Point p)
+						else if (scatter > 0)
 						{
-							if (!p.Equals(orgPos))
+							Act.TP.ForeachNeighbor(delegate(Point p)
 							{
-								Chara firstChara2 = p.FirstChara;
-								if (firstChara2 != null && firstChara2.IsHostile(Act.CC))
+								if (!p.Equals(orgPos))
 								{
-									AttackWithFlurry(firstChara2, p, Mathf.Min(0.5f + 0.05f * Mathf.Sqrt(scatter), 1f + 0.01f * Mathf.Sqrt(scatter)), subAttack: true);
+									Chara firstChara2 = p.FirstChara;
+									if (firstChara2 != null && firstChara2.IsHostile(Act.CC))
+									{
+										AttackWithFlurry(firstChara2, p, Mathf.Min(0.5f + 0.05f * Mathf.Sqrt(scatter), 1f + 0.01f * Mathf.Sqrt(scatter)), subAttack: true);
+									}
 								}
-							}
-						});
-					}
-					else if (num3 > 0)
-					{
-						List<Point> list = new List<Point>();
-						Act.TP.ForeachNeighbor(delegate(Point p)
-						{
-							if (!p.Equals(Act.TP))
-							{
-								list.Add(p.Copy());
-							}
-						});
-						list.Shuffle();
-						int num4 = 0;
-						for (int i = 0; i < 9 && num3 > EClass.rnd(10 + (int)Mathf.Pow(3f, i + 2)); i++)
-						{
-							num4++;
+							});
 						}
-						foreach (Point item2 in list)
+						else if (num3 > 0)
 						{
-							foreach (Card item3 in item2.ListCards().Copy())
+							List<Point> list = new List<Point>();
+							Act.TP.ForeachNeighbor(delegate(Point p)
 							{
-								if (num4 <= 0 || !Act.CC.IsAliveInCurrentZone)
+								if (!p.Equals(Act.TP))
 								{
-									break;
+									list.Add(p.Copy());
 								}
-								if (item3.trait.CanBeAttacked || (item3.isChara && item3.Chara.IsHostile(Act.CC)))
+							});
+							list.Shuffle();
+							int num4 = 0;
+							for (int i = 0; i < 9 && num3 > EClass.rnd(10 + (int)Mathf.Pow(3f, i + 2)); i++)
+							{
+								num4++;
+							}
+							foreach (Point item2 in list)
+							{
+								foreach (Card item3 in item2.ListCards().Copy())
 								{
-									AttackWithFlurry(item3, item2, 1f, subAttack: true);
-									num4--;
+									if (num4 <= 0 || !Act.CC.IsAliveInCurrentZone)
+									{
+										break;
+									}
+									if (item3.trait.CanBeAttacked || (item3.isChara && item3.Chara.IsHostile(Act.CC)))
+									{
+										AttackWithFlurry(item3, item2, 1f, subAttack: true);
+										if (parried)
+										{
+											break;
+										}
+										num4--;
+									}
 								}
 							}
 						}
@@ -434,6 +454,13 @@ public class ActMelee : ActBaseAttack
 					}
 					if (!_tc.IsAliveInCurrentZone)
 					{
+						break;
+					}
+					if (!_tc.IsDisabled && _tc.Evalue(437) > 0 && EClass.rnd(100) < EClass.curve(5 + _tc.Evalue(437) / 3, 10, 3, 70))
+					{
+						_tc.Say("parry");
+						_tc.PlaySound("parry");
+						parried = true;
 						break;
 					}
 					if (m > 0)

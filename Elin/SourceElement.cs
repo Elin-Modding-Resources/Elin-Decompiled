@@ -256,16 +256,13 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			{
 				return IsWeaponEnc;
 			}
-			string text = encSlot;
-			if (!(text == "all"))
+			return encSlot switch
 			{
-				if (text == "weapon")
-				{
-					return cat.IsChildOf("weapon");
-				}
-				return encSlot.Contains(EClass.sources.elements.map[slot].alias);
-			}
-			return true;
+				"all" => true, 
+				"weapon" => cat.IsChildOf("weapon"), 
+				"shield" => cat.IsChildOf("shield"), 
+				_ => encSlot.Contains(EClass.sources.elements.map[slot].alias), 
+			};
 		}
 	}
 

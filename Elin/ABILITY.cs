@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ABILITY
 {
-	public const int ActPick = 5047;
-
 	public const int ActInstall = 5046;
+
+	public const int ActPick = 5047;
 
 	public const int ActItem = 5048;
 
@@ -254,7 +254,7 @@ public class ABILITY
 
 	public static readonly int[] IDS = new int[125]
 	{
-		5047, 5046, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055,
+		5046, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055,
 		6001, 6003, 6011, 6012, 6013, 5045, 6015, 6019, 6020, 6050,
 		6400, 6410, 6420, 6450, 6500, 6601, 6602, 6603, 6604, 6610,
 		6611, 6018, 6612, 5044, 5042, 5012, 5013, 5014, 5015, 5016,
