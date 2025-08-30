@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.189 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.190 Nightly</span>
    </div>
   </td>
  </tr>
@@ -109,6 +109,8 @@ Inheritance diagram for MATERIAL:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1dae292b04e2010c0715b181b912da36"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMATERIAL.html#a1dae292b04e2010c0715b181b912da36">FromElement</a> (int id)</td></tr>
+<tr class="separator:a1dae292b04e2010c0715b181b912da36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03fd2332ff1c8ddcf33126770d68a9b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMATERIAL.html#a03fd2332ff1c8ddcf33126770d68a9b7">GetRandomMaterial</a> (int lv, string group=null, bool tryLevelMatTier=false)</td></tr>
 <tr class="separator:a03fd2332ff1c8ddcf33126770d68a9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73ba8b2d53fde9370c47ce79c285fd6a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">GetRandomMaterialFromCategory</a> (int lv, string cat, <a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> fallback)</td></tr>
@@ -235,6 +237,42 @@ Properties</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00005">5</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1dae292b04e2010c0715b181b912da36" name="a1dae292b04e2010c0715b181b912da36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dae292b04e2010c0715b181b912da36">&#9670;&#160;</a></span>FromElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> MATERIAL.FromElement </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00047">47</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<span class="stringliteral">&quot;rubinus&quot;</span>];</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
+
+</div>
+</div>
 <a id="a03fd2332ff1c8ddcf33126770d68a9b7" name="a03fd2332ff1c8ddcf33126770d68a9b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03fd2332ff1c8ddcf33126770d68a9b7">&#9670;&#160;</a></span>GetRandomMaterial()</h2>
 
@@ -275,45 +313,44 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00047">47</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (group == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            group = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) == 0) ? <span class="stringliteral">&quot;metal&quot;</span> : <span class="stringliteral">&quot;leather&quot;</span>);</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (!(group == <span class="stringliteral">&quot;metal&quot;</span>))</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (group == <span class="stringliteral">&quot;leather&quot;</span> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(15) == 0)</div>
-<div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                group = <span class="stringliteral">&quot;metal&quot;</span>;</div>
-<div class="line"><span class="lineno">   58</span>            }</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(15) == 0)</div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            group = <span class="stringliteral">&quot;leather&quot;</span>;</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        <a class="code hl_class" href="classSourceMaterial_1_1TierList.html">SourceMaterial.TierList</a> tierList = <a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_variable" href="classSourceMaterial.html#a21fb453cba0f7257e83c7872aa06fe1b">tierMap</a>[group];</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (tryLevelMatTier)</div>
-<div class="line"><span class="lineno">   67</span>        {</div>
-<div class="line"><span class="lineno">   68</span>            num = Mathf.Clamp(lv / 15, 0, tierList.<a class="code hl_variable" href="classSourceMaterial_1_1TierList.html#a4dc3a5068fabf5aeea612d639b0c2149">tiers</a>.Length - 1);</div>
-<div class="line"><span class="lineno">   69</span>            num = Mathf.Clamp(num + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2), 0, tierList.tiers.Length - 1);</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">else</span></div>
+<p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00052">52</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (group == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            group = ((<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) == 0) ? <span class="stringliteral">&quot;metal&quot;</span> : <span class="stringliteral">&quot;leather&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (!(group == <span class="stringliteral">&quot;metal&quot;</span>))</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (group == <span class="stringliteral">&quot;leather&quot;</span> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(15) == 0)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                group = <span class="stringliteral">&quot;metal&quot;</span>;</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(15) == 0)</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            group = <span class="stringliteral">&quot;leather&quot;</span>;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_class" href="classSourceMaterial_1_1TierList.html">SourceMaterial.TierList</a> tierList = <a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_variable" href="classSourceMaterial.html#a21fb453cba0f7257e83c7872aa06fe1b">tierMap</a>[group];</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (tryLevelMatTier)</div>
 <div class="line"><span class="lineno">   72</span>        {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordtype">int</span> min = ((lv &gt;= 60) ? 2 : ((lv &gt;= 25) ? 1 : 0));</div>
-<div class="line"><span class="lineno">   74</span>            num = Mathf.Clamp(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(lv / 10 + 2) + 1) + 1), min, tierList.tiers.Length - 1);</div>
+<div class="line"><span class="lineno">   73</span>            num = Mathf.Clamp(lv / 15, 0, tierList.<a class="code hl_variable" href="classSourceMaterial_1_1TierList.html#a4dc3a5068fabf5aeea612d639b0c2149">tiers</a>.Length - 1);</div>
+<div class="line"><span class="lineno">   74</span>            num = Mathf.Clamp(num + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2), 0, tierList.tiers.Length - 1);</div>
 <div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>        <a class="code hl_class" href="classSourceMaterial_1_1Tier.html">SourceMaterial.Tier</a> obj = tierList.<a class="code hl_variable" href="classSourceMaterial_1_1TierList.html#a4dc3a5068fabf5aeea612d639b0c2149">tiers</a>[num];</div>
-<div class="line"><span class="lineno">   77</span>        <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> result = obj.<a class="code hl_function" href="classSourceMaterial_1_1Tier.html#aa61ee1045e1c4552540515ca71d25f89">Select</a>();</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (obj.<a class="code hl_variable" href="classSourceMaterial_1_1Tier.html#a97c82c51cbfc9b83fe858c45af39b221">list</a>.Count == 0)</div>
-<div class="line"><span class="lineno">   79</span>        {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(lv + <span class="stringliteral">&quot;/&quot;</span> + group + <span class="stringliteral">&quot;/&quot;</span> + num + <span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">int</span> min = ((lv &gt;= 60) ? 2 : ((lv &gt;= 25) ? 1 : 0));</div>
+<div class="line"><span class="lineno">   79</span>            num = Mathf.Clamp(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(lv / 10 + 2) + 1) + 1), min, tierList.tiers.Length - 1);</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_class" href="classSourceMaterial_1_1Tier.html">SourceMaterial.Tier</a> obj = tierList.<a class="code hl_variable" href="classSourceMaterial_1_1TierList.html#a4dc3a5068fabf5aeea612d639b0c2149">tiers</a>[num];</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> result = obj.<a class="code hl_function" href="classSourceMaterial_1_1Tier.html#aa61ee1045e1c4552540515ca71d25f89">Select</a>();</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (obj.<a class="code hl_variable" href="classSourceMaterial_1_1Tier.html#a97c82c51cbfc9b83fe858c45af39b221">list</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(lv + <span class="stringliteral">&quot;/&quot;</span> + group + <span class="stringliteral">&quot;/&quot;</span> + num + <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a62c6ef288a7140793d6e5fb313fb72e4"><div class="ttname"><a href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">EClass.rnd</a></div><div class="ttdeci">static int rnd(long a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00058">EClass.cs:58</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00008">SourceMaterial.cs:9</a></div></div>
 <div class="ttc" id="aclassSourceMaterial_1_1TierList_html"><div class="ttname"><a href="classSourceMaterial_1_1TierList.html">SourceMaterial.TierList</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00267">SourceMaterial.cs:268</a></div></div>
@@ -370,15 +407,15 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00085">85</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">GetRandomMaterialFromCategory</a>(lv, <span class="keyword">new</span> <span class="keywordtype">string</span>[1] { cat }, fallback);</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="ttc" id="aclassMATERIAL_html_a73ba8b2d53fde9370c47ce79c285fd6a"><div class="ttname"><a href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">MATERIAL.GetRandomMaterialFromCategory</a></div><div class="ttdeci">static SourceMaterial.Row GetRandomMaterialFromCategory(int lv, string cat, SourceMaterial.Row fallback)</div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00085">MATERIAL.cs:85</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00090">90</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">GetRandomMaterialFromCategory</a>(lv, <span class="keyword">new</span> <span class="keywordtype">string</span>[1] { cat }, fallback);</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassMATERIAL_html_a73ba8b2d53fde9370c47ce79c285fd6a"><div class="ttname"><a href="classMATERIAL.html#a73ba8b2d53fde9370c47ce79c285fd6a">MATERIAL.GetRandomMaterialFromCategory</a></div><div class="ttdeci">static SourceMaterial.Row GetRandomMaterialFromCategory(int lv, string cat, SourceMaterial.Row fallback)</div><div class="ttdef"><b>Definition:</b> <a href="MATERIAL_8cs_source.html#l00090">MATERIAL.cs:90</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MATERIAL_8cs_source.html#l00085">GetRandomMaterialFromCategory()</a>.</p>
+<p class="reference">References <a class="el" href="MATERIAL_8cs_source.html#l00090">GetRandomMaterialFromCategory()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MATERIAL_8cs_source.html#l00085">GetRandomMaterialFromCategory()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00012">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="Map_8cs_source.html#l01540">Map.SetObj()</a>, and <a class="el" href="Card_8cs_source.html#l05204">Card.TryMakeRandomItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MATERIAL_8cs_source.html#l00090">GetRandomMaterialFromCategory()</a>, <a class="el" href="MapGenDungen_8cs_source.html#l00012">MapGenDungen.OnGenerateTerrain()</a>, <a class="el" href="Map_8cs_source.html#l01540">Map.SetObj()</a>, and <a class="el" href="Card_8cs_source.html#l05248">Card.TryMakeRandomItem()</a>.</p>
 
 </div>
 </div>
@@ -422,20 +459,18 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00090">90</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">int</span> min = ((lv &gt;= 60) ? 2 : ((lv &gt;= 25) ? 1 : 0));</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordtype">int</span> a2 = lv / 5 + 2;</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">int</span> idTier = Mathf.Clamp(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(a2) + 1) + 1), min, 4);</div>
-<div class="line"><span class="lineno">   95</span>        List&lt;<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a>&gt; list = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows.Where((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> m) =&gt; cat.Contains(m.category) &amp;&amp; m.tier &lt;= idTier).ToList();</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span> (list.Count &gt; 0)</div>
-<div class="line"><span class="lineno">   97</span>        {</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> list.RandomItemWeighted((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> a) =&gt; a.chance * ((a.tier != idTier) ? 1 : 5));</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> fallback;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
+<p class="definition">Definition at line <a class="el" href="MATERIAL_8cs_source.html#l00095">95</a> of file <a class="el" href="MATERIAL_8cs_source.html">MATERIAL.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">int</span> min = ((lv &gt;= 60) ? 2 : ((lv &gt;= 25) ? 1 : 0));</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">int</span> a2 = lv / 5 + 2;</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">int</span> idTier = Mathf.Clamp(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(a2) + 1) + 1), min, 4);</div>
+<div class="line"><span class="lineno">  100</span>        List&lt;<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a>&gt; list = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.rows.Where((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> m) =&gt; cat.Contains(m.category) &amp;&amp; m.tier &lt;= idTier).ToList();</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (list.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> list.RandomItemWeighted((<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> a) =&gt; a.chance * ((a.tier != idTier) ? 1 : 5));</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">return</span> fallback;</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>, and <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>.</p>
 

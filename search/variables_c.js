@@ -26,13 +26,14 @@ var searchData=
   ['kills_23',['kills',['../classPlayer_1_1Stats.html#a410245742b48f2d4b6c12d227951e8e9',1,'Player.Stats.kills()'],['../classZoneEventDefenseGame.html#af3423c12780ba49e2512c1442c69f9e6',1,'ZoneEventDefenseGame.kills()']]],
   ['killtimer_24',['killTimer',['../classEffect.html#a1b8e04aa0b6f2c9d3016a986a863014b',1,'Effect.killTimer()'],['../classPopItem.html#a8f1374735fd982ec7da59742f9e040f1',1,'PopItem.killTimer()']]],
   ['kirimi_25',['kirimi',['../classFOOD.html#a2a669cd5071acede78714ae858a8012b',1,'FOOD']]],
-  ['knowledge_26',['knowledge',['../classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0',1,'UICurrency.Options.knowledge()'],['../classWidgetExpHome_1_1Extra.html#aba12f4e71d0b8bb9fa4c00572b00520c',1,'WidgetExpHome.Extra.knowledge()'],['../classWidgetExp_1_1Extra.html#ad37475f48f07f3a20e1266664dd931d7',1,'WidgetExp.Extra.knowledge()'],['../classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad',1,'HomeResourceManager.knowledge()']]],
-  ['knowledges_27',['knowledges',['../classPlayer.html#ac5722658a93bf5c4bbd6dfc2c725ac37',1,'Player']]],
-  ['knownbgms_28',['knownBGMs',['../classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe',1,'Player']]],
-  ['knowncraft_29',['knownCraft',['../classPlayer.html#a8850e5a148ca9bdc4c096716fe903379',1,'Player']]],
-  ['knowningredients_30',['knownIngredients',['../classRecipeManager.html#a5da142696079aedce2d43e94e76b964c',1,'RecipeManager']]],
-  ['knownrecipes_31',['knownRecipes',['../classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58',1,'RecipeManager']]],
-  ['knownsongs_32',['knownSongs',['../classPlayer.html#a2e7468836ed52fe57b6af28d59e217f2',1,'Player']]],
-  ['kumi_33',['kumi',['../classPlayer_1_1Stats.html#ae88dedf7e8921ddbb79b23590b8749c9',1,'Player::Stats']]],
-  ['kuwahara_34',['kuwahara',['../classCameraSupport.html#acbfd706138fa5739c631ddfbcd610411',1,'CameraSupport.kuwahara()'],['../classCoreConfig_1_1GraphicSetting.html#a4784d437212cf83d3d69a0aedf98d755',1,'CoreConfig.GraphicSetting.kuwahara()'],['../classPostEffectProfile.html#a6568bfb7c7f117fc0ce81d7b0e5c7c16',1,'PostEffectProfile.kuwahara()']]]
+  ['knightly_26',['knightly',['../classENC.html#af3b51bc84b15cfb9085df78a57adda99',1,'ENC']]],
+  ['knowledge_27',['knowledge',['../classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0',1,'UICurrency.Options.knowledge()'],['../classWidgetExpHome_1_1Extra.html#aba12f4e71d0b8bb9fa4c00572b00520c',1,'WidgetExpHome.Extra.knowledge()'],['../classWidgetExp_1_1Extra.html#ad37475f48f07f3a20e1266664dd931d7',1,'WidgetExp.Extra.knowledge()'],['../classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad',1,'HomeResourceManager.knowledge()']]],
+  ['knowledges_28',['knowledges',['../classPlayer.html#ac5722658a93bf5c4bbd6dfc2c725ac37',1,'Player']]],
+  ['knownbgms_29',['knownBGMs',['../classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe',1,'Player']]],
+  ['knowncraft_30',['knownCraft',['../classPlayer.html#a8850e5a148ca9bdc4c096716fe903379',1,'Player']]],
+  ['knowningredients_31',['knownIngredients',['../classRecipeManager.html#a5da142696079aedce2d43e94e76b964c',1,'RecipeManager']]],
+  ['knownrecipes_32',['knownRecipes',['../classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58',1,'RecipeManager']]],
+  ['knownsongs_33',['knownSongs',['../classPlayer.html#a2e7468836ed52fe57b6af28d59e217f2',1,'Player']]],
+  ['kumi_34',['kumi',['../classPlayer_1_1Stats.html#ae88dedf7e8921ddbb79b23590b8749c9',1,'Player::Stats']]],
+  ['kuwahara_35',['kuwahara',['../classCameraSupport.html#acbfd706138fa5739c631ddfbcd610411',1,'CameraSupport.kuwahara()'],['../classCoreConfig_1_1GraphicSetting.html#a4784d437212cf83d3d69a0aedf98d755',1,'CoreConfig.GraphicSetting.kuwahara()'],['../classPostEffectProfile.html#a6568bfb7c7f117fc0ce81d7b0e5c7c16',1,'PostEffectProfile.kuwahara()']]]
 ];

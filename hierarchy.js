@@ -733,6 +733,7 @@ var hierarchy =
           [ "ActBaseAttack", "classActBaseAttack.html", [
             [ "ActMelee", "classActMelee.html", [
               [ "ActMeleeBladeStorm", "classActMeleeBladeStorm.html", null ],
+              [ "ActMeleeParry", "classActMeleeParry.html", null ],
               [ "ActMeleeSwarm", "classActMeleeSwarm.html", null ],
               [ "ActRush", "classActRush.html", null ]
             ] ],
@@ -1154,6 +1155,7 @@ var hierarchy =
             [ "Zone_Asylum", "classZone__Asylum.html", null ],
             [ "Zone_Beach", "classZone__Beach.html", null ],
             [ "Zone_Casino", "classZone__Casino.html", null ],
+            [ "Zone_CurryRuin", "classZone__CurryRuin.html", null ],
             [ "Zone_CursedManor", "classZone__CursedManor.html", null ],
             [ "Zone_DerphyWhore", "classZone__DerphyWhore.html", null ],
             [ "Zone_EmbassyPalmia", "classZone__EmbassyPalmia.html", null ],
@@ -1194,6 +1196,7 @@ var hierarchy =
               [ "Zone_DungeonYeek", "classZone__DungeonYeek.html", null ]
             ] ],
             [ "Zone_QuestDungeon", "classZone__QuestDungeon.html", [
+              [ "Zone_CurryRuinDungeon", "classZone__CurryRuinDungeon.html", null ],
               [ "Zone_CursedManorDungeon", "classZone__CursedManorDungeon.html", null ],
               [ "Zone_DungeonFairy", "classZone__DungeonFairy.html", null ],
               [ "Zone_Lesimas", "classZone__Lesimas.html", null ],

@@ -10,6 +10,8 @@ var classAttackProcess =
     [ "Perform", "classAttackProcess.html#a10c9d68470c37d5cbf470c3872d648f7", null ],
     [ "PlayRangedAnime", "classAttackProcess.html#acbe14bc34d2889dfd5ef8f6ffbc94880", null ],
     [ "Prepare", "classAttackProcess.html#a103817f8718581491eec802a1320cd53", null ],
+    [ "ProcAbility", "classAttackProcess.html#ae32c41c65d4e49c363d8b67cc8753270", null ],
+    [ "ProcAbility", "classAttackProcess.html#a71d180b9f1111b644462fd1d6834acd7", null ],
     [ "ammo", "classAttackProcess.html#ad8f1dce6caad9fe881c1b1dad26b9063", null ],
     [ "attackIndex", "classAttackProcess.html#abeedb719f740a7f2d98910f97f743540", null ],
     [ "attackStyle", "classAttackProcess.html#ac9af0a64b83133044e917228c926919b", null ],

@@ -1,6 +1,6 @@
 var classActMelee =
 [
-    [ "Attack", "classActMelee.html#a2dd4e0143752bfb2806fd7d0b37d4cf9", null ],
+    [ "Attack", "classActMelee.html#a7c13335c30470c2c21199d65a344004c", null ],
     [ "CanPerform", "classActMelee.html#a54278893460b3f759aed4076f9b39859", null ],
     [ "GetCursorIcon", "classActMelee.html#a4571f273d7184f68476ea71f4088a166", null ],
     [ "GetHintText", "classActMelee.html#a6db1bd0c673ce9427062370c0f4f6113", null ],
@@ -12,5 +12,6 @@ var classActMelee =
     [ "CanPressRepeat", "classActMelee.html#a66248e05deb4c48e6de9840b14ee145f", null ],
     [ "PerformDistance", "classActMelee.html#ac184692d2c011cb8abcd99bbf0badf29", null ],
     [ "ResetAxis", "classActMelee.html#a14ac7d513d79093fd141771463eb21bc", null ],
+    [ "ShouldRollMax", "classActMelee.html#a366e2f600e65a8335ccb5e4986015a2b", null ],
     [ "UseWeaponDist", "classActMelee.html#ad5256811dd4d62af9138afd1e657ec5c", null ]
 ];
