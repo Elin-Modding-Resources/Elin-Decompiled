@@ -31,9 +31,9 @@ public class ELEMENT
 
 	public const int _void = 0;
 
-	public const int quality = 2;
-
 	public const int lv = 1;
+
+	public const int quality = 2;
 
 	public const int d = 3;
 
@@ -78,7 +78,7 @@ public class ELEMENT
 	public static readonly int[] IDS = new int[35]
 	{
 		763, 761, 751, 752, 753, 754, 755, 756, 759, 760,
-		762, 750, 0, 2, 1, 3, 5, 10, 11, 12,
+		762, 750, 0, 1, 2, 3, 5, 10, 11, 12,
 		13, 15, 16, 17, 18, 14, 21, 22, 23, 24,
 		25, 26, 29, 85, 20
 	};
@@ -929,7 +929,8 @@ public class Element : EClass
 				uIItem.image1.SetActive(enable: true);
 				uIItem.image1.sprite = sprite;
 			}
-			uIItem.image2.SetActive(source.IsWeaponEnc);
+			uIItem.image2.SetActive(source.IsWeaponEnc || source.IsShieldEnc);
+			uIItem.image2.sprite = (source.IsWeaponEnc ? EClass.core.refs.icons.enc.weaponEnc : EClass.core.refs.icons.enc.shieldEnc);
 			onAddNote?.Invoke(n, this);
 			return;
 		}

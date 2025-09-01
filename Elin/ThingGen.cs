@@ -153,10 +153,14 @@ public class ThingGen : CardGen
 		return CreateSpellbook(EClass.sources.elements.alias[alias].id, num);
 	}
 
-	public static Thing CreateSpellbook(int ele, int num = 1)
+	public static Thing CreateSpellbook(int ele, int num = 1, int charge = -1)
 	{
 		Thing thing = Create("spellbook").SetNum(num);
 		TraitSpellbook.Create(thing, ele);
+		if (charge != -1)
+		{
+			thing.SetCharge(charge);
+		}
 		return thing;
 	}
 

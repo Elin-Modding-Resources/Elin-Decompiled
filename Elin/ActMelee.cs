@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class ActMelee : ActBaseAttack
 {
+	public virtual bool AllowCounter => true;
+
+	public virtual bool AllowParry => true;
+
 	public virtual bool ShouldRollMax => false;
 
 	public virtual float BaseDmgMTP => 1f;
@@ -126,6 +130,7 @@ public class ActMelee : ActBaseAttack
 			return true;
 		}
 		bool hasHit = false;
+		bool hasMissed = false;
 		bool usedWeapon = false;
 		bool usedTalisman = false;
 		bool maxRoll = ShouldRollMax;
@@ -156,11 +161,19 @@ public class ActMelee : ActBaseAttack
 		{
 			Act.CC.RemoveCondition<ConInvisibility>();
 		}
-		if (parried && orgTC.isChara && orgTC != cC && ACT.Melee.CanPerform(orgTC.Chara, cC))
+		if (orgTC.isChara && orgTC.ExistsOnMap && orgTC != cC && !orgTC.IsRestrainedResident && ACT.Melee.CanPerform(orgTC.Chara, cC))
 		{
-			new ActMeleeParry().Perform(orgTC.Chara, cC);
+			if (parried)
+			{
+				new ActMeleeParry().Perform(orgTC.Chara, cC);
+			}
+			else if (AllowCounter && hasMissed && !cC.HasElement(439) && orgTC.HasElement(380))
+			{
+				orgTC.Say("counter");
+				new ActMeleeCounter().Perform(orgTC.Chara, cC);
+			}
 		}
-		else if (!hasHit)
+		if (!hasHit)
 		{
 			Act.CC.PlaySound("miss");
 		}
@@ -294,19 +307,35 @@ public class ActMelee : ActBaseAttack
 				Act.TC = _tc;
 				Act.TP = _tp;
 				AttackProcess.Current.Prepare(Act.CC, w, Act.TC, Act.TP, count);
-				int num5 = 1;
+				if (AllowParry && !Act.TC.IsDisabled && !Act.TC.IsRestrainedResident)
+				{
+					int num5 = Act.TC.Evalue(437);
+					if (num5 > 0 && !Act.CC.HasElement(439))
+					{
+						int num6 = EClass.curve(5 + num5 / 3, 10, 3, 70);
+						num6 = num6 * 100 / (int)Mathf.Clamp((float)AttackProcess.Current.weaponSkill.Value / (float)Act.TC.Evalue(123) * 100f, 50f, 150f);
+						if (EClass.rnd(100) < num6)
+						{
+							Act.TC.Say("parry");
+							Act.TC.PlaySound("parry");
+							parried = true;
+							return;
+						}
+					}
+				}
+				int num7 = 1;
 				if (chaser > 0)
 				{
 					for (int j = 0; j < 10; j++)
 					{
 						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, j + 2)))
 						{
-							num5++;
+							num7++;
 						}
 					}
 				}
 				bool flag = false;
-				for (int k = 0; k < num5; k++)
+				for (int k = 0; k < num7; k++)
 				{
 					if (!Act.CC.IsAliveInCurrentZone)
 					{
@@ -321,11 +350,19 @@ public class ActMelee : ActBaseAttack
 						Act.CC.Say("attack_chaser");
 					}
 					flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp * BaseDmgMTP, maxRoll, subAttack);
-					if (!flag && frustration > 0 && 10f + 2f * Mathf.Sqrt(frustration) > (float)EClass.rnd(100))
+					if (!flag && frustration > 0 && !Act.TC.HasElement(439) && 10f + 2f * Mathf.Sqrt(frustration) > (float)EClass.rnd(100))
 					{
 						AttackProcess.Current.critFury = true;
 						flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
 						AttackProcess.Current.critFury = false;
+					}
+					if (flag)
+					{
+						hasHit = true;
+					}
+					else
+					{
+						hasMissed = true;
 					}
 					if (flag || !Act.CC.IsAliveInCurrentZone || !Act.TC.IsAliveInCurrentZone)
 					{
@@ -409,9 +446,9 @@ public class ActMelee : ActBaseAttack
 				}
 				if (Act.TC.isChara && !Act.TC.HasCondition<ConGravity>() && Act.TC.ExistsOnMap && knockback > 0 && knockback * 2 + 15 > EClass.rnd(100) && !Act.TC.isRestrained)
 				{
-					Card.MoveResult num6 = Act.TC.Chara.TryMoveFrom(Act.CC.pos);
+					Card.MoveResult num8 = Act.TC.Chara.TryMoveFrom(Act.CC.pos);
 					bool flag3 = Act.CC.id == "tsunami";
-					if (num6 == Card.MoveResult.Success)
+					if (num8 == Card.MoveResult.Success)
 					{
 						Act.TC.renderer.SetFirst(first: true);
 						Act.TC.PlaySound("wave_hit_small");
@@ -438,15 +475,15 @@ public class ActMelee : ActBaseAttack
 			}
 			void AttackWithFlurry(Card _tc, Point _tp, float mtp, bool subAttack)
 			{
-				int num7 = 1;
+				int num9 = 1;
 				if (flurry > 0)
 				{
 					for (int l = 0; l < 10 && flurry > EClass.rnd(25 + (int)Mathf.Pow(5f, l + 2)); l++)
 					{
-						num7++;
+						num9++;
 					}
 				}
-				for (int m = 0; m < num7; m++)
+				for (int m = 0; m < num9; m++)
 				{
 					if (!Act.CC.IsAliveInCurrentZone)
 					{
@@ -456,18 +493,15 @@ public class ActMelee : ActBaseAttack
 					{
 						break;
 					}
-					if (!_tc.IsDisabled && _tc.Evalue(437) > 0 && EClass.rnd(100) < EClass.curve(5 + _tc.Evalue(437) / 3, 10, 3, 70))
-					{
-						_tc.Say("parry");
-						_tc.PlaySound("parry");
-						parried = true;
-						break;
-					}
 					if (m > 0)
 					{
 						Act.CC.Say("attack_flurry");
 					}
 					Attack(_tc, _tp, mtp, subAttack);
+					if (parried)
+					{
+						break;
+					}
 				}
 			}
 			int GetWeaponEnc(int ele, bool addSelfEnc)

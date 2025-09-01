@@ -184,6 +184,8 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			}
 		}
 
+		public bool IsShieldEnc => encSlot == "shield";
+
 		public override string GetName()
 		{
 			if (idMold != 0)
@@ -256,13 +258,21 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			{
 				return IsWeaponEnc;
 			}
-			return encSlot switch
+			switch (encSlot)
 			{
-				"all" => true, 
-				"weapon" => cat.IsChildOf("weapon"), 
-				"shield" => cat.IsChildOf("shield"), 
-				_ => encSlot.Contains(EClass.sources.elements.map[slot].alias), 
-			};
+			case "all":
+				return true;
+			case "weapon":
+				return cat.IsChildOf("weapon");
+			case "shield":
+				if (!cat.IsChildOf("shield"))
+				{
+					return cat.IsChildOf("martial");
+				}
+				return true;
+			default:
+				return encSlot.Contains(EClass.sources.elements.map[slot].alias);
+			}
 		}
 	}
 

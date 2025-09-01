@@ -19,5 +19,6 @@ public enum AttackSource
 	ManaBackfire,
 	DeathSentense,
 	Shockwave,
-	MagicSword
+	MagicSword,
+	MoonSpear
 }

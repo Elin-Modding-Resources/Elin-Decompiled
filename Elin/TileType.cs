@@ -204,7 +204,17 @@ public class TileType : EClass
 
 	public virtual int MinAltitude => 1;
 
-	public virtual int MaxAltitude => 10;
+	public virtual int MaxAltitude
+	{
+		get
+		{
+			if (!EInput.isShiftDown)
+			{
+				return 10;
+			}
+			return 25;
+		}
+	}
 
 	public virtual bool AltitudeAsDir => false;
 
@@ -293,6 +303,10 @@ public class TileType : EClass
 			return HitResult.Valid;
 		}
 		if (!CanBuiltOnArea && pos.HasArea)
+		{
+			return HitResult.Invalid;
+		}
+		if (pos.IsSky && !(this is TileTypeFloor))
 		{
 			return HitResult.Invalid;
 		}

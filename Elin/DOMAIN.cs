@@ -16,11 +16,11 @@ public class DOMAIN
 
 	public const int domFaith = 802;
 
-	public const int domWind = 807;
+	public const int domComm = 805;
 
 	public const int domHarmony = 815;
 
-	public const int domComm = 805;
+	public const int domWind = 807;
 
 	public const int domElement = 806;
 
@@ -36,7 +36,7 @@ public class DOMAIN
 
 	public static readonly int[] IDS = new int[16]
 	{
-		812, 813, 810, 809, 808, 814, 802, 807, 815, 805,
+		812, 813, 810, 809, 808, 814, 802, 805, 815, 807,
 		806, 811, 801, 803, 804, 800
 	};
 }

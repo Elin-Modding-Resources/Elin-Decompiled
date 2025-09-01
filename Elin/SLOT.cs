@@ -1,8 +1,8 @@
 public class SLOT
 {
-	public const int neck = 31;
-
 	public const int toolbelt = 44;
+
+	public const int neck = 31;
 
 	public const int leg = 38;
 
@@ -34,7 +34,7 @@ public class SLOT
 
 	public static readonly int[] IDS = new int[16]
 	{
-		31, 44, 38, 40, 33, 45, 34, 35, 32, 41,
+		44, 31, 38, 40, 33, 45, 34, 35, 32, 41,
 		39, 37, 42, 36, 30, 43
 	};
 }

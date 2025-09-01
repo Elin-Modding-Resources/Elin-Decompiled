@@ -1398,17 +1398,26 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public void SetFaction(Faction f)
+	public Chara SetFaction(Faction f)
 	{
 		_faction = null;
 		faction = f;
 		hostility = faction.GetHostility();
+		return this;
 	}
 
-	public void SetHomeZone(Zone zone)
+	public Chara SetHomeZone(Zone zone)
 	{
 		homeZone = zone;
 		SetGlobal();
+		return this;
+	}
+
+	public Chara SetHostility(Hostility h)
+	{
+		Hostility hostility2 = (base.c_originalHostility = h);
+		this.hostility = hostility2;
+		return this;
 	}
 
 	public void OnBanish()
@@ -4650,6 +4659,18 @@ public class Chara : Card, IPathfindWalker
 				AddThing("1071");
 			}
 			break;
+		case "lomias":
+			if (onCreate)
+			{
+				AddThing("bow_vindale");
+			}
+			break;
+		case "larnneire":
+			if (onCreate)
+			{
+				EQ_ID("EtherDagger2");
+			}
+			break;
 		case "seeker":
 			if (onCreate)
 			{
@@ -4778,6 +4799,10 @@ public class Chara : Card, IPathfindWalker
 			{
 				EQ_ID("shield_lute");
 			}
+		}
+		if (HasTag(CTAG.shield))
+		{
+			EQ_CAT("shield");
 		}
 	}
 

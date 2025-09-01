@@ -3587,7 +3587,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			switch (encSlot)
 			{
 			case "shield":
-				if (!category.IsChildOf("shield"))
+				if (!category.IsChildOf("shield") && !category.IsChildOf("martial"))
 				{
 					return false;
 				}
@@ -3970,10 +3970,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			return;
 		}
 		bool flag = originalTarget != null;
-		if (isChara && !HasElement(1241) && !flag)
+		if (isChara && !isRestrained && !HasElement(1241) && !flag)
 		{
 			AttackSource attackSource2 = attackSource;
-			if ((uint)(attackSource2 - 3) > 1u && (uint)(attackSource2 - 13) > 4u)
+			if ((uint)(attackSource2 - 3) > 2u && (uint)(attackSource2 - 13) > 4u)
 			{
 				foreach (Chara chara3 in EClass._map.charas)
 				{
@@ -3981,7 +3981,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					{
 						int num = chara3.Evalue(1241);
 						int num2 = chara3.Evalue(438);
-						if ((num != 0 || num2 != 0) && !chara3.IsDisabled && !chara3.isRestrained && (!IsPCFactionOrMinion || chara3.IsPCFactionOrMinion) && chara3.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num2 <= 0 || hp * 100 / MaxHP <= chara3.hp * 100 / chara3.MaxHP))
+						if ((num != 0 || num2 != 0) && !chara3.IsDisabled && !chara3.isRestrained && (!IsPCFactionOrMinion || chara3.IsPCFactionOrMinion) && chara3.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || hp * 100 / MaxHP <= chara3.hp * 100 / chara3.MaxHP))
 						{
 							Say((num2 == 0) ? "wall_flesh" : "wall_knightly", chara3, this);
 							chara3.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
@@ -4241,15 +4241,16 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				else
 				{
-					if (origin != null && origin != this && Evalue(436) > 0)
+					if (origin != null && origin != this && Evalue(436) > 0 && !HasCondition<ConFractured>())
 					{
 						int num13 = (HasElement(1218) ? MaxHP : (MaxHP / 2));
 						if (num10 > num13)
 						{
 							EvadeDeath();
 							flag3 = true;
+							Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 							hp = Mathf.Min(num13 * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
-							goto IL_0e2d;
+							goto IL_0e7f;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4277,7 +4278,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath();
-								goto IL_0e2d;
+								goto IL_0e7f;
 							}
 						}
 						if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
@@ -4290,8 +4291,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0e2d;
-		IL_0e2d:
+		goto IL_0e7f;
+		IL_0e7f:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4396,6 +4397,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (!isDestroyed)
 			{
+				if (attackSource == AttackSource.MoonSpear && isChara)
+				{
+					Rand.SetSeed(uid + EClass.world.date.day);
+					ActEffect.LoveMiracle(Chara, origin?.Chara, 100, EffectId.MoonSpear);
+					Rand.SetSeed();
+				}
 				Die(e, origin, attackSource, originalTarget);
 				if (trait.CanBeSmashedToDeath && !EClass._zone.IsUserZone)
 				{
@@ -4737,13 +4744,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (origin != null)
 		{
-			foreach (BodySlot slot in Chara.body.slots)
-			{
-				if (slot.elementId == 35 && slot.thing != null && slot.thing.category.IsChildOf("shield"))
-				{
-					AttackProcess.ProcAbility(slot.thing.elements.dict.Values.ToList(), Chara, origin, Evalue(123));
-				}
-			}
+			AttackProcess.ProcShieldEncs(Chara, origin);
 		}
 		if (hp < MaxHP / 3 && HasElement(1409) && !Chara.HasCooldown(1409))
 		{
@@ -7071,6 +7072,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 6;
 				case "monsterball":
 					return LV / 8;
+				case "spellbook":
+					return 6;
 				}
 				break;
 			}

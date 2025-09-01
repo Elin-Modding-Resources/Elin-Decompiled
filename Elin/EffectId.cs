@@ -122,5 +122,6 @@ public enum EffectId
 	Gene = 298,
 	CatSniff = 299,
 	Youth = 300,
-	EternalYouth = 301
+	EternalYouth = 301,
+	MoonSpear = 302
 }

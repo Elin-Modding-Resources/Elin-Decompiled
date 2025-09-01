@@ -48,5 +48,6 @@ public enum CTAG
 	god,
 	dragon,
 	plant,
-	antiSpider
+	antiSpider,
+	shield
 }

@@ -1606,7 +1606,7 @@ public class Trait : EClass
 		{
 			for (int num5 = 0; num5 < 30; num5++)
 			{
-				AddThing(ThingGen.CreateFromCategory("book"));
+				AddThing(ThingGen.CreateFromCategory((EClass.rnd(2) == 0) ? "_book" : "book"));
 			}
 			break;
 		}
@@ -1796,6 +1796,7 @@ public class Trait : EClass
 					Add("wrench_fridge", 1, 0).SetNum(1);
 					Add("wrench_extend_v", 1, 0).SetNum(2);
 					Add("wrench_extend_h", 1, 0).SetNum(2);
+					AddThing(ThingGen.CreateSpellbook(9155, 1, 3));
 					break;
 				default:
 				{

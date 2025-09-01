@@ -442,7 +442,18 @@ public class AttackProcess : EClass
 		return Mathf.Clamp(num, 0, 9999999);
 	}
 
-	public static void ProcAbility(List<Element> list, Chara CC, Card TC, int bonus, bool subAttack = false)
+	public static void ProcShieldEncs(Chara CC, Card TC, int mtpChance = 100)
+	{
+		foreach (BodySlot slot in CC.body.slots)
+		{
+			if (slot.elementId == 35 && slot.thing != null && (slot.thing.category.IsChildOf("shield") || slot.thing.category.IsChildOf("martial")))
+			{
+				ProcAbility(slot.thing.elements.dict.Values.ToList(), CC, TC, CC.Evalue(123), subAttack: false, mtpChance);
+			}
+		}
+	}
+
+	public static void ProcAbility(List<Element> list, Chara CC, Card TC, int bonus, bool subAttack = false, int mtpChance = 100)
 	{
 		if (list == null)
 		{
@@ -450,17 +461,17 @@ public class AttackProcess : EClass
 		}
 		foreach (Element item in list)
 		{
-			ProcAbility(item, CC, TC, bonus, subAttack);
+			ProcAbility(item, CC, TC, bonus, subAttack, mtpChance);
 		}
 	}
 
-	public static void ProcAbility(Element e, Chara CC, Card TC, int bonus, bool subAttack = false)
+	public static void ProcAbility(Element e, Chara CC, Card TC, int bonus, bool subAttack = false, int mtpChance = 100)
 	{
 		if (!(e is Ability))
 		{
 			return;
 		}
-		int num = 10 + e.Value / 5;
+		int num = (10 + e.Value / 5) * mtpChance / 100;
 		int power = EClass.curve((100 + e.Value * 10) * (100 + bonus) / 100, 400, 100);
 		if (num <= EClass.rnd(100))
 		{
@@ -534,6 +545,11 @@ public class AttackProcess : EClass
 		}
 		List<Element> list = new List<Element>();
 		int num2 = CC.Evalue(91);
+		string id = CC.id;
+		if ((id == "stalker" || id == "stalker_shadow") && TC.isChara && TC.Chara.CanSee(CC))
+		{
+			num2 = 0;
+		}
 		int num3 = 0;
 		if (weapon != null)
 		{
@@ -547,7 +563,7 @@ public class AttackProcess : EClass
 		}
 		else
 		{
-			string id = CC.id;
+			id = CC.id;
 			if (id == "rabbit_vopal" || id == "mantis_killer")
 			{
 				list.Add(Element.Create(6650, 100));
@@ -764,10 +780,18 @@ public class AttackProcess : EClass
 		if (!IsRanged && !flag2 && attackStyle == AttackStyle.Shield)
 		{
 			int num11 = CC.Evalue(123);
-			if (CC.elements.ValueWithoutLink(123) >= 10 && Mathf.Clamp(Mathf.Sqrt(num11) - 2f, 8f, 12f) > (float)EClass.rnd(100))
+			int num12 = CC.Evalue(381);
+			if (CC.elements.ValueWithoutLink(123) >= 10 && Mathf.Clamp(Mathf.Sqrt(num11) - 2f, 8f, 15f) + Mathf.Min(Mathf.Sqrt(num12), 25f) > (float)EClass.rnd(100))
 			{
-				num = num7 * Mathf.Min(50 + num11, 200) / 100;
-				num = TC.ApplyProtection(num);
+				num = num7 * (Mathf.Min(50 + num11 + num12, 200) + (int)Mathf.Min(Mathf.Sqrt(num12), 100f)) / 100;
+				penetration = (int)Mathf.Sqrt(num12);
+				if (penetration > 100)
+				{
+					penetration = 100;
+				}
+				num9 = num * penetration / 100;
+				num -= num9;
+				num = TC.ApplyProtection(num) + num9;
 				Debug.Log("Bash:" + num + "/" + num7);
 				CC.PlaySound("shield_bash");
 				CC.Say("shield_bash", CC, TC);
@@ -780,6 +804,7 @@ public class AttackProcess : EClass
 					}
 					TC.Chara.AddCondition<ConParalyze>(EClass.rnd(2), force: true);
 				}
+				ProcShieldEncs(CC, TC, 500 + num12);
 			}
 		}
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)

@@ -73,6 +73,8 @@ public class CoreRef : ScriptableObject
 			public Sprite mod;
 
 			public Sprite weaponEnc;
+
+			public Sprite shieldEnc;
 		}
 
 		public Sprite suspend;
