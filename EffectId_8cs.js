@@ -123,6 +123,7 @@ var EffectId_8cs =
       [ "Gene", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a624aa1a206e09836e3c81ea95502f459", null ],
       [ "CatSniff", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a07ab5fafa998d5bfa83104abb350d114", null ],
       [ "Youth", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a508d0751b4cf128f2e89e842e89c2d30", null ],
-      [ "EternalYouth", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a3f52c007b834c20b276ebb0afbd80bed", null ]
+      [ "EternalYouth", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a3f52c007b834c20b276ebb0afbd80bed", null ],
+      [ "MoonSpear", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a510b77294ea3493c0cca74c0be5e3c63", null ]
     ] ]
 ];

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.190 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.191 Nightly</span>
    </div>
   </td>
  </tr>
@@ -100,10 +100,22 @@ $(document).ready(function(){initNavTree('TileTypeBridge_8cs_source.html',''); i
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTileTypeBridge.html#ac0654f8e915881990692038574b5a0e2">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTileTypeBridge.html#ac0654f8e915881990692038574b5a0e2">CanBuiltOnWater</a> =&gt; <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5">MaxAltitude</a> =&gt; 15;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5">MaxAltitude</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">get</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a87252937274776e86b7a8ea4ea21dded">isShiftDown</a>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <span class="keywordflow">return</span> 15;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">return</span> 30;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
+<div class="ttc" id="aclassEInput_html_a87252937274776e86b7a8ea4ea21dded"><div class="ttname"><a href="classEInput.html#a87252937274776e86b7a8ea4ea21dded">EInput.isShiftDown</a></div><div class="ttdeci">static bool isShiftDown</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00261">EInput.cs:261</a></div></div>
 <div class="ttc" id="aclassTileTypeBridge_html"><div class="ttname"><a href="classTileTypeBridge.html">TileTypeBridge</a></div><div class="ttdef"><b>Definition:</b> <a href="TileTypeBridge_8cs_source.html#l00001">TileTypeBridge.cs:2</a></div></div>
-<div class="ttc" id="aclassTileTypeBridge_html_a4ca2a4321b4ca5ef9d8042a4b81bdfb5"><div class="ttname"><a href="classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5">TileTypeBridge.MaxAltitude</a></div><div class="ttdeci">override int MaxAltitude</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeBridge_8cs_source.html#l00009">TileTypeBridge.cs:9</a></div></div>
+<div class="ttc" id="aclassTileTypeBridge_html_a4ca2a4321b4ca5ef9d8042a4b81bdfb5"><div class="ttname"><a href="classTileTypeBridge.html#a4ca2a4321b4ca5ef9d8042a4b81bdfb5">TileTypeBridge.MaxAltitude</a></div><div class="ttdeci">override int MaxAltitude</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeBridge_8cs_source.html#l00009">TileTypeBridge.cs:10</a></div></div>
 <div class="ttc" id="aclassTileTypeBridge_html_a4eec48fa9724ee9869b274df30c06bae"><div class="ttname"><a href="classTileTypeBridge.html#a4eec48fa9724ee9869b274df30c06bae">TileTypeBridge.IsBridge</a></div><div class="ttdeci">override bool IsBridge</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeBridge_8cs_source.html#l00005">TileTypeBridge.cs:5</a></div></div>
 <div class="ttc" id="aclassTileTypeBridge_html_ac0654f8e915881990692038574b5a0e2"><div class="ttname"><a href="classTileTypeBridge.html#ac0654f8e915881990692038574b5a0e2">TileTypeBridge.CanBuiltOnWater</a></div><div class="ttdeci">override bool CanBuiltOnWater</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeBridge_8cs_source.html#l00007">TileTypeBridge.cs:7</a></div></div>
 <div class="ttc" id="aclassTileTypeBridge_html_af5ab25877c18302d3a41a3a31beac243"><div class="ttname"><a href="classTileTypeBridge.html#af5ab25877c18302d3a41a3a31beac243">TileTypeBridge.IsFloor</a></div><div class="ttdeci">override bool IsFloor</div><div class="ttdef"><b>Definition:</b> <a href="TileTypeBridge_8cs_source.html#l00003">TileTypeBridge.cs:3</a></div></div>

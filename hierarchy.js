@@ -485,6 +485,7 @@ var hierarchy =
             ] ],
             [ "ConAwakening", "classConAwakening.html", null ],
             [ "ConBuffStats", "classConBuffStats.html", null ],
+            [ "ConFractured", "classConFractured.html", null ],
             [ "ConFreeze", "classConFreeze.html", null ],
             [ "ConReload", "classConReload.html", null ],
             [ "ConSmoking", "classConSmoking.html", null ],
@@ -733,6 +734,7 @@ var hierarchy =
           [ "ActBaseAttack", "classActBaseAttack.html", [
             [ "ActMelee", "classActMelee.html", [
               [ "ActMeleeBladeStorm", "classActMeleeBladeStorm.html", null ],
+              [ "ActMeleeCounter", "classActMeleeCounter.html", null ],
               [ "ActMeleeParry", "classActMeleeParry.html", null ],
               [ "ActMeleeSwarm", "classActMeleeSwarm.html", null ],
               [ "ActRush", "classActRush.html", null ]

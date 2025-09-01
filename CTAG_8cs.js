@@ -49,6 +49,7 @@ var CTAG_8cs =
       [ "god", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07aa4757d7419ff3b48e92e90596f0e7548", null ],
       [ "dragon", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8621ffdbc5698829397d97767ac13db3", null ],
       [ "plant", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a9ea0a36b3a20901fafe834eb519a595c", null ],
-      [ "antiSpider", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afd80bafe2b888e3dd1bcbfefbf89ce88", null ]
+      [ "antiSpider", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afd80bafe2b888e3dd1bcbfefbf89ce88", null ],
+      [ "shield", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a28c69b4cba5681d565d3bd901684dd77", null ]
     ] ]
 ];

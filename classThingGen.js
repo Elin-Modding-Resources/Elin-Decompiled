@@ -25,7 +25,7 @@ var classThingGen =
     [ "CreateRune", "classThingGen.html#a1aa2b72208a9bd05bbc55994f9323218", null ],
     [ "CreateScroll", "classThingGen.html#ac776e0530919124a87091f5e0886108d", null ],
     [ "CreateSkillbook", "classThingGen.html#aaf3ff60e30aecf89c53c6204cdb8558b", null ],
-    [ "CreateSpellbook", "classThingGen.html#aba127b1f4a4f532feeadf4f49391fa7b", null ],
+    [ "CreateSpellbook", "classThingGen.html#ab2657f85284f6f467c4637aa798a2d0f", null ],
     [ "CreateSpellbook", "classThingGen.html#a86d8c3002203f01152938292ca40bc31", null ],
     [ "CreateTreasure", "classThingGen.html#a1fb0aa7926f8c7896be91cedcd12878f", null ],
     [ "CreateTreasureContent", "classThingGen.html#a7b17e72b7955b9b38d78615857b3fcea", null ],

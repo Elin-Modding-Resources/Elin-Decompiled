@@ -121,5 +121,5 @@ var searchData=
   ['lookat2d_118',['LookAt2D',['../classClassExtension.html#ad95cfc56e6d71bd8fde088b58b905fb4',1,'ClassExtension.LookAt2D(this Transform self, Transform target, Vector2 forward)'],['../classClassExtension.html#aff50909b244a17f06d2cc98a1ebe5fdc',1,'ClassExtension.LookAt2D(this Transform self, Vector3 target, Vector2 forward)']]],
   ['loopselectable_119',['LoopSelectable',['../classClassExtension.html#a27e7e0e7f40b62f57899de080c2d7781',1,'ClassExtension.LoopSelectable(this List&lt; Selectable &gt; sels, bool vertical=true, bool horizonal=true, bool asGroup=true)'],['../classClassExtension.html#a639a298682db007c32718c6756f01456',1,'ClassExtension.LoopSelectable(this Transform l, bool vertical=true, bool horizonal=true, bool asGroup=true)']]],
   ['looptail_3c_20t_20_3e_120',['LoopTail&lt; T &gt;',['../classClassExtension.html#a3e3e35854c26620baf4a7d12c1ac3aee',1,'ClassExtension']]],
-  ['lovemiracle_121',['LoveMiracle',['../classActEffect.html#aa2ba177a203b3f325b67672cef857881',1,'ActEffect']]]
+  ['lovemiracle_121',['LoveMiracle',['../classActEffect.html#a2fa2767bb66d306d1f23e8c975ec29ae',1,'ActEffect']]]
 ];

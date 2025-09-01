@@ -79,6 +79,7 @@ var classSourceElement_1_1Row =
     [ "type", "classSourceElement_1_1Row.html#abf32b2e2ae58e3cbec41c187bf2ac580", null ],
     [ "value", "classSourceElement_1_1Row.html#a7c90b7d633f5722cee42545faaeb3965", null ],
     [ "GetAlias", "classSourceElement_1_1Row.html#a0e1136b0bbbd340de2cf6843262df806", null ],
+    [ "IsShieldEnc", "classSourceElement_1_1Row.html#a242c1c7dae017b799641b035a00a4b6a", null ],
     [ "IsWeaponEnc", "classSourceElement_1_1Row.html#aaf6f148f0134f89a242657663bc3305e", null ],
     [ "UseAlias", "classSourceElement_1_1Row.html#aa634fd91f3c6fd1cf27ff52109e8c369", null ]
 ];
