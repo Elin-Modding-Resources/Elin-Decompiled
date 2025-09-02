@@ -173,6 +173,8 @@ public class ActMelee : ActBaseAttack
 				new ActMeleeCounter().Perform(orgTC.Chara, cC);
 			}
 		}
+		Act.TC = orgTC;
+		Act.CC = cC;
 		if (!hasHit)
 		{
 			Act.CC.PlaySound("miss");
@@ -313,7 +315,18 @@ public class ActMelee : ActBaseAttack
 					if (num5 > 0 && !Act.CC.HasElement(439))
 					{
 						int num6 = EClass.curve(5 + num5 / 3, 10, 3, 70);
-						num6 = num6 * 100 / (int)Mathf.Clamp((float)AttackProcess.Current.weaponSkill.Value / (float)Act.TC.Evalue(123) * 100f, 50f, 150f);
+						int num7 = Act.TC.Evalue(123);
+						if (Act.TC.isChara)
+						{
+							foreach (BodySlot slot2 in Act.TC.Chara.body.slots)
+							{
+								if (slot2.thing != null && slot2.thing.HasElement(437) && Act.TC.Evalue(slot2.thing.category.skill) > num7)
+								{
+									num7 = Act.TC.Evalue(slot2.thing.category.skill);
+								}
+							}
+						}
+						num6 = num6 * 100 / (int)Mathf.Clamp((float)AttackProcess.Current.weaponSkill.Value / (float)num7 * 100f, 50f, 150f);
 						if (EClass.rnd(100) < num6)
 						{
 							Act.TC.Say("parry");
@@ -323,19 +336,19 @@ public class ActMelee : ActBaseAttack
 						}
 					}
 				}
-				int num7 = 1;
+				int num8 = 1;
 				if (chaser > 0)
 				{
 					for (int j = 0; j < 10; j++)
 					{
 						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, j + 2)))
 						{
-							num7++;
+							num8++;
 						}
 					}
 				}
 				bool flag = false;
-				for (int k = 0; k < num7; k++)
+				for (int k = 0; k < num8; k++)
 				{
 					if (!Act.CC.IsAliveInCurrentZone)
 					{
@@ -446,9 +459,9 @@ public class ActMelee : ActBaseAttack
 				}
 				if (Act.TC.isChara && !Act.TC.HasCondition<ConGravity>() && Act.TC.ExistsOnMap && knockback > 0 && knockback * 2 + 15 > EClass.rnd(100) && !Act.TC.isRestrained)
 				{
-					Card.MoveResult num8 = Act.TC.Chara.TryMoveFrom(Act.CC.pos);
+					Card.MoveResult num9 = Act.TC.Chara.TryMoveFrom(Act.CC.pos);
 					bool flag3 = Act.CC.id == "tsunami";
-					if (num8 == Card.MoveResult.Success)
+					if (num9 == Card.MoveResult.Success)
 					{
 						Act.TC.renderer.SetFirst(first: true);
 						Act.TC.PlaySound("wave_hit_small");
@@ -475,15 +488,15 @@ public class ActMelee : ActBaseAttack
 			}
 			void AttackWithFlurry(Card _tc, Point _tp, float mtp, bool subAttack)
 			{
-				int num9 = 1;
+				int num10 = 1;
 				if (flurry > 0)
 				{
 					for (int l = 0; l < 10 && flurry > EClass.rnd(25 + (int)Mathf.Pow(5f, l + 2)); l++)
 					{
-						num9++;
+						num10++;
 					}
 				}
-				for (int m = 0; m < num9; m++)
+				for (int m = 0; m < num10; m++)
 				{
 					if (!Act.CC.IsAliveInCurrentZone)
 					{

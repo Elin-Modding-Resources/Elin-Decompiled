@@ -10,11 +10,11 @@ public class FACTION
 
 	public const int bfHill = 3603;
 
-	public const int bfRuin = 3702;
-
 	public const int bfSea = 3605;
 
 	public const int bfUndersea = 3606;
+
+	public const int bfRuin = 3702;
 
 	public const int bfPlain = 3600;
 
@@ -112,7 +112,7 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[53]
 	{
-		3601, 3602, 3603, 3702, 3605, 3606, 3600, 3700, 3701, 3604,
+		3601, 3602, 3603, 3605, 3606, 3702, 3600, 3700, 3701, 3604,
 		3500, 2201, 2206, 2205, 2204, 2203, 2202, 2200, 2120, 2119,
 		2117, 3703, 2118, 2207, 3704, 3805, 3706, 2115, 4006, 4005,
 		4004, 4003, 4002, 4001, 4000, 3900, 3804, 3803, 3802, 3801,

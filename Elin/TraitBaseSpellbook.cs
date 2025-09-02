@@ -21,7 +21,7 @@ public class TraitBaseSpellbook : TraitScroll
 
 	public virtual Type BookType => Type.Spell;
 
-	public virtual int Difficulty => 10 + owner.LV;
+	public virtual int Difficulty => (10 + owner.LV) * (100 + owner.Evalue(765) / 2) / 100;
 
 	public override bool CanStack => false;
 
@@ -174,7 +174,7 @@ public class TraitBaseSpellbook : TraitScroll
 		case Type.RandomSpell:
 			if (c.IsPC)
 			{
-				c.GainAbility(source.id);
+				c.GainAbility(source.id, 100, owner.Thing);
 			}
 			ModCharge(c);
 			break;

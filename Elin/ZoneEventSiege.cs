@@ -27,9 +27,31 @@ public class ZoneEventSiege : ZoneEvent
 	public virtual Chara CreateChara(Point p)
 	{
 		bool flag = idx == max - 1;
-		SpawnSetting spawnSetting = ((lv >= 50 && idx == max - 2) ? SpawnSetting.Evolved(lv) : (flag ? SpawnSetting.Boss(lv) : SpawnSetting.DefenseEnemy(lv)));
+		int num;
+		object obj;
+		if (lv >= 50)
+		{
+			num = ((idx == max - 2) ? 1 : 0);
+			if (num != 0)
+			{
+				obj = SpawnSetting.Evolved(lv);
+				goto IL_005a;
+			}
+		}
+		else
+		{
+			num = 0;
+		}
+		obj = (flag ? SpawnSetting.Boss(lv) : SpawnSetting.DefenseEnemy(lv));
+		goto IL_005a;
+		IL_005a:
+		SpawnSetting spawnSetting = (SpawnSetting)obj;
 		spawnSetting.dangerLv = lv + 1;
-		return EClass._zone.SpawnMob(p, spawnSetting);
+		if (num == 0)
+		{
+			return EClass._zone.SpawnMob(p, spawnSetting);
+		}
+		return EClass._zone.TryGenerateEvolved(force: true, p);
 	}
 
 	public override void OnInit()

@@ -113,7 +113,20 @@ public class AttackProcess : EClass
 
 	public static int GetWeaponEnc(Chara CC, Thing w, int ele, bool addSelfEnc = false)
 	{
-		return (addSelfEnc ? CC.Evalue(ele) : 0) + (w?.Evalue(ele) ?? 0) + (CC.IsPCFactionOrMinion ? EClass.pc.faction.charaElements.Value(ele) : 0);
+		int num = w?.Evalue(ele) ?? 0;
+		if (CC.body.GetAttackStyle() == AttackStyle.TwoHand)
+		{
+			num = num * (100 + Mathf.Clamp(CC.Evalue(130) / 15, 0, 2) * 25) / 100;
+		}
+		if (addSelfEnc)
+		{
+			num += CC.Evalue(ele);
+		}
+		if (CC.IsPCFactionOrMinion)
+		{
+			num += EClass.pc.faction.charaElements.Value(ele);
+		}
+		return num;
 	}
 
 	public string GetText()
@@ -448,7 +461,7 @@ public class AttackProcess : EClass
 		{
 			if (slot.elementId == 35 && slot.thing != null && (slot.thing.category.IsChildOf("shield") || slot.thing.category.IsChildOf("martial")))
 			{
-				ProcAbility(slot.thing.elements.dict.Values.ToList(), CC, TC, CC.Evalue(123), subAttack: false, mtpChance);
+				ProcAbility(slot.thing.elements.dict.Values.ToList(), CC, TC, CC.Evalue((slot.thing.category.skill == 0) ? 123 : slot.thing.category.skill), subAttack: false, mtpChance);
 			}
 		}
 	}

@@ -4274,7 +4274,7 @@ public class Chara : Card, IPathfindWalker
 				SourceElement.Row current = enumerator.Current;
 				if (IsPC)
 				{
-					GainAbility(current.id, t.c_charges * 100);
+					GainAbility(current.id, t.c_charges * 100, t);
 					flag = true;
 				}
 			}
@@ -9587,7 +9587,7 @@ public class Chara : Card, IPathfindWalker
 		return false;
 	}
 
-	public void GainAbility(int ele, int mtp = 100)
+	public void GainAbility(int ele, int mtp = 100, Thing origin = null)
 	{
 		Element orCreateElement = elements.GetOrCreateElement(ele);
 		if (orCreateElement.ValueWithoutLink == 0)
@@ -9596,12 +9596,16 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (orCreateElement is Spell)
 		{
-			int num = mtp * orCreateElement.source.charge * (100 + Evalue(307) + (HasElement(307) ? 20 : 0)) / 100 / 100;
+			int num = EClass.curve(Evalue(307), 50, 20) + (HasElement(307) ? 20 : 0);
+			int num2 = origin?.Evalue(765) ?? 0;
+			num = num * (100 - num2) / 100;
+			int a = mtp * orCreateElement.source.charge * (100 + num) / 100 / 100;
+			a = Mathf.Max(1, EClass.rndHalf(a));
 			if (orCreateElement.source.charge == 1)
 			{
-				num = 1;
+				a = 1;
 			}
-			orCreateElement.vPotential += Mathf.Max(1, num / 2 + EClass.rnd(num / 2 + 1));
+			orCreateElement.vPotential += a;
 		}
 		Say("spell_gain", this, orCreateElement.Name);
 		LayerAbility.SetDirty(orCreateElement);

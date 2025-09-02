@@ -7072,8 +7072,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 6;
 				case "monsterball":
 					return LV / 8;
-				case "spellbook":
-					return 6;
+				case "372":
+					return 3;
 				}
 				break;
 			}

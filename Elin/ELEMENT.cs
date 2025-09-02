@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
+	public const int difficulty = 765;
+
 	public const int air = 763;
 
 	public const int recharge = 761;
@@ -75,12 +77,12 @@ public class ELEMENT
 
 	public const int poison = 20;
 
-	public static readonly int[] IDS = new int[35]
+	public static readonly int[] IDS = new int[36]
 	{
-		763, 761, 751, 752, 753, 754, 755, 756, 759, 760,
-		762, 750, 0, 1, 2, 3, 5, 10, 11, 12,
-		13, 15, 16, 17, 18, 14, 21, 22, 23, 24,
-		25, 26, 29, 85, 20
+		765, 763, 761, 751, 752, 753, 754, 755, 756, 759,
+		760, 762, 750, 0, 1, 2, 3, 5, 10, 11,
+		12, 13, 15, 16, 17, 18, 14, 21, 22, 23,
+		24, 25, 26, 29, 85, 20
 	};
 }
 public class Element : EClass
