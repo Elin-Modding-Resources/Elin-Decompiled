@@ -81,7 +81,7 @@ var classChara =
     [ "FindNearestNewEnemy", "classChara.html#ac380bf82c87a326b17383e6f725e0038", null ],
     [ "FindNewEnemy", "classChara.html#a9947364af9eed6c7dbc1b2cb251a4ab1", null ],
     [ "FindRoom", "classChara.html#acf22a543366cdd87a28e4d82ff91bd84", null ],
-    [ "GainAbility", "classChara.html#aab5a3288488448fdeadf2a2675c12c1e", null ],
+    [ "GainAbility", "classChara.html#a9857b9e459195fe8983acc6ca0a93452", null ],
     [ "GetActionText", "classChara.html#aa8c9b9cb5ccf732e690de360dce680db", null ],
     [ "GetArmorSkill", "classChara.html#a3a965c024685a5c8c8c6658d8b2e9624", null ],
     [ "GetBestRangedWeapon", "classChara.html#a5d8bd7f1b41fd273587a48322786d209", null ],

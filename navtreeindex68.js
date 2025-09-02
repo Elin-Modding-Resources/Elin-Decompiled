@@ -1,5 +1,6 @@
 var NAVTREEINDEX68 =
 {
+"classGrowSystemKinoko.html#ac3ff4c25f4969ab353f963d0a2477dc9":[1,0,581,2],
 "classGrowSystemKinoko.html#ad3ecf944a2fabd71d75a486330ac08e2":[1,0,581,4],
 "classGrowSystemKinoko.html#af49878e5da59a94790ccac57ffa1ed78":[1,0,581,0],
 "classGrowSystemPasture.html":[1,0,582],
@@ -248,6 +249,5 @@ var NAVTREEINDEX68 =
 "classHitSummary.html#ab32dafa7b3387c9e4531f45dcc226203":[1,0,607,9],
 "classHitSummary.html#ac036f61ce61c4629a2bb61b0d7e91982":[1,0,607,10],
 "classHitSummary.html#ada26cee7169545ffc8333da726aafec6":[1,0,607,6],
-"classHitSummary.html#ae345253ef8a6e711e89a22a21a0783ee":[1,0,607,8],
-"classHitSummary.html#afbb5cec869f85dcbc69a8f0055672df8":[1,0,607,0]
+"classHitSummary.html#ae345253ef8a6e711e89a22a21a0783ee":[1,0,607,8]
 };

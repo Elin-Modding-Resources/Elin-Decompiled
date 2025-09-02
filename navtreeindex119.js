@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitLoytel.html#ad7f4e03ba1079b4bd6cc36e55d4ce73d":[1,0,1647,0],
 "classTraitLoytelMart.html":[1,0,1648],
 "classTraitLoytelMart.html#a029e6a9a12587279c405edfd8ab22402":[1,0,1648,3],
 "classTraitLoytelMart.html#a0c82ada3b22c9c9aa0413fb104e7ebc1":[1,0,1648,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitNewZone.html#ac01e05ddac5e41b530840b966a74d34f":[1,0,1710,7],
 "classTraitNewZone.html#acaa1d4dfbee3d5fd8953e698fa0e1b82":[1,0,1710,2],
 "classTraitNewZone.html#ad3ef2288dca8c3423c6b3abaab2b25c9":[1,0,1710,14],
-"classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1710,23],
-"classTraitNewZone.html#adcf7d96ce38bca4b635f0505de6f55bb":[1,0,1710,1]
+"classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1710,23]
 };

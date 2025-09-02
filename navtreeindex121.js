@@ -1,5 +1,6 @@
 var NAVTREEINDEX121 =
 {
+"classTraitRollingFortune.html#ad1fa4acd27134f42ba87ad225353f236":[1,0,1772,7],
 "classTraitRollingFortune.html#af2e341b08771c804343430ec678eff4f":[1,0,1772,1],
 "classTraitRollingFortune.html#af55aa1f40dd1f0c243780187e41e154a":[1,0,1772,0],
 "classTraitRoomPlate.html":[1,0,1773],
@@ -248,6 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitSpotSpawn.html#aa8fead14158139521f68cda9f4b16f0a":[1,0,1826,3],
 "classTraitSpotSpawn.html#acdce588d16b0d5e8f97614c2044fc533":[1,0,1826,0],
 "classTraitSpotStock.html":[1,0,1827],
-"classTraitSpotStock.html#af8870bb4fbba3c2111b67956e3d9d5ad":[1,0,1827,0],
-"classTraitSpotStockpile.html":[1,0,1828]
+"classTraitSpotStock.html#af8870bb4fbba3c2111b67956e3d9d5ad":[1,0,1827,0]
 };

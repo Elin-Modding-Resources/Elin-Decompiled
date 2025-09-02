@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"classGoalCombat_1_1ItemAbility.html#a8c7ec2bf97dd92ac046c4b0cf189ff7b":[1,0,549,0,1],
 "classGoalEndTurn.html":[1,0,550],
 "classGoalEndTurn.html#a207648cf696513dbca960c9c1f6adca4":[1,0,550,0],
 "classGoalEndTurn.html#afef9d655986c1e102ab5dcf79b594e68":[1,0,550,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "classGrowSystemKinoko.html#a33a9fe10b0d5adf8e706a70e9adc5621":[1,0,581,6],
 "classGrowSystemKinoko.html#a685d47708d073b638555f69323076d37":[1,0,581,1],
 "classGrowSystemKinoko.html#a8a6d487f4133d9a3529f1c81f6eee891":[1,0,581,3],
-"classGrowSystemKinoko.html#a9baf46e4f24e58cf40b755e28b55be56":[1,0,581,7],
-"classGrowSystemKinoko.html#ac3ff4c25f4969ab353f963d0a2477dc9":[1,0,581,2]
+"classGrowSystemKinoko.html#a9baf46e4f24e58cf40b755e28b55be56":[1,0,581,7]
 };

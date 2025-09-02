@@ -1,5 +1,6 @@
 var NAVTREEINDEX73 =
 {
+"classInvOwnerUncurse.html#ac8052a0c387288340e503d437d035af9":[1,0,709,2],
 "classInvOwnerUncurse.html#af590c31f3125225e136c9b824bb60110":[1,0,709,5],
 "classInvOwner_1_1ErrorMessage.html":[1,0,682,0],
 "classInvOwner_1_1ErrorMessage.html#a71ea84fc96fbc9badee45a8ec806fb50":[1,0,682,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX73 =
 "classLangExporter.html#ae001258992ec3daee4d988bd15518579":[1,0,747,0],
 "classLangGame.html":[1,0,748],
 "classLangGame.html#a31859a45fb637b0f34fdb604a24d1ccb":[1,0,748,1],
-"classLangGame.html#a649d62b8c1a6619d56924456b9868629":[1,0,748,2],
-"classLangGame.html#a9f6d49fb67608a93e4bb9c96fa23e767":[1,0,748,3]
+"classLangGame.html#a649d62b8c1a6619d56924456b9868629":[1,0,748,2]
 };

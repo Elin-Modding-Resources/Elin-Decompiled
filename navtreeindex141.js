@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da249db0eb4b616f59dfef1860bf264eb0":[0,4,3,0,8,16],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da251d80790550e2f9fd849380d2e9af8c":[0,4,3,0,8,81],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da26097a57f572fe88a7cdf80543422cb1":[0,4,3,0,8,109],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da269940bcad6fddf5c68d3e67f767c3d1":[0,4,3,0,8,195],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "structAct_1_1Cost.html#acf45d0fa6c98ba7460fdf5b5ac445069":[1,0,13,0,0],
 "structAlgorithms_1_1PathFinderNode.html":[1,0,0,3],
 "structAlgorithms_1_1PathFinderNode.html":[0,4,0,3],
-"structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[0,4,0,3,3],
-"structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[1,0,0,3,3]
+"structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[0,4,0,3,3]
 };

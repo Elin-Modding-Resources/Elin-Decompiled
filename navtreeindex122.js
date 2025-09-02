@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitSpotStockpile.html":[1,0,1828],
 "classTraitSpotStockpile.html#a24f33d2e704f24f7ca5675808ee6ecb2":[1,0,1828,0],
 "classTraitSpotTraining.html":[1,0,1829],
 "classTraitStairs.html":[1,0,1830],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,1889,1],
 "classTraitTrainingDummy.html#a4b356fb1fe2328acbd4482e2f6f3dc65":[1,0,1889,3],
 "classTraitTrainingDummy.html#a6b66cf5d030f6577f9317b14db659234":[1,0,1889,2],
-"classTraitTrainingDummyArmor.html":[1,0,1890],
-"classTraitTrainingDummyArmor.html#a1943884ccec196581f39fd3f20f40134":[1,0,1890,0]
+"classTraitTrainingDummyArmor.html":[1,0,1890]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX127 =
 {
+"classUIGameBG.html#ae12bfde635b536fbe36c44cc0e561953":[1,0,1970,3],
 "classUIGameBG.html#af83c41eb5396ccf42bd38cce7a413661":[1,0,1970,2],
 "classUIHangIcon.html":[1,0,1971],
 "classUIHangIcon.html#a0293bdcd88cf7da1cf7cd03231873eed":[1,0,1971,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX127 =
 "classUIInventory.html#aec3cc9d48fa5b9cd9515ad5739b9021f":[1,0,1981,34],
 "classUIInventory.html#aef2d21224907605004f18dc6a7713da1":[1,0,1981,5],
 "classUIInventory.html#af342998b66d837f0de8bea300c99a2dd":[1,0,1981,28],
-"classUIInventory.html#afd8d5d56d0c58679cb5c6291a852275a":[1,0,1981,45],
-"classUIInventory.html#afdff44b4060d4a2b863d6929c8f0c819":[1,0,1981,25]
+"classUIInventory.html#afd8d5d56d0c58679cb5c6291a852275a":[1,0,1981,45]
 };

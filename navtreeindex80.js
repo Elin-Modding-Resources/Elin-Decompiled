@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classLayerWorldSetting.html#afbd816fb7ac9b54eb1cc057d22238733":[1,0,830,30],
 "classLayerWorldSetting.html#afefe51c6a802ec45fec8f92efdcfb22e":[1,0,830,2],
 "classLayer_1_1Option.html":[1,0,756,0],
 "classLayer_1_1Option.html#a2e685c75caa0fcd9fbc85881ab6ddc11":[1,0,756,0,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "classLot.html#a989ad3bcdaef58d1104d1f5acda256cc":[1,0,856,11],
 "classLot.html#a9baa8f0e85d94e302bc963f1c1bc410f":[1,0,856,10],
 "classLot.html#a9e8ae8ad16b4324d3d6090aca6fd7ece":[1,0,856,8],
-"classLot.html#a9eb64a3f95f6db9cd64ecc000a0eb6c0":[1,0,856,26],
-"classLot.html#aa7f6896e671178c9748fec97fff3a486":[1,0,856,6]
+"classLot.html#a9eb64a3f95f6db9cd64ecc000a0eb6c0":[1,0,856,26]
 };

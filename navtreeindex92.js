@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classQuestDialog.html#a16079eadfe5fee4f1a3bdd3cca2533f4":[1,0,981,2],
 "classQuestDialog.html#a69e71483b0ec914a289d2a9f75b2ac8e":[1,0,981,3],
 "classQuestDialog.html#ae7224165f209219a3b85fbff25f8ab90":[1,0,981,0],
 "classQuestDummy.html":[1,0,982],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classQuestSupplyBulkJunk.html":[1,0,1034],
 "classQuestSupplyBulkJunk.html#a35501fc3adbe7e128e7279bc08130d02":[1,0,1034,1],
 "classQuestSupplyBulkJunk.html#a4dde023048c26e18661856decdd76029":[1,0,1034,0],
-"classQuestSupplyBulkResource.html":[1,0,1035],
-"classQuestSupplyBulkResource.html#a9c51f24d466a496b1e83e8d011791f7e":[1,0,1035,0]
+"classQuestSupplyBulkResource.html":[1,0,1035]
 };

@@ -6,7 +6,7 @@ var searchData=
   ['gacha_5fcoin_3',['gacha_coin',['../classQuest.html#a14a357f3949714e4cdad890ae074aaa2aee36e56adf16aadb8a21914be9d78865',1,'Quest']]],
   ['gachafilter_4',['gachaFilter',['../classSourceChara_1_1Row.html#a020f910e1df11876a5786ce9bac3a7cf',1,'SourceChara::Row']]],
   ['gachatype_5',['GachaType',['../classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9d',1,'TraitGacha']]],
-  ['gainability_6',['GainAbility',['../classChara.html#aab5a3288488448fdeadf2a2675c12c1e',1,'Chara']]],
+  ['gainability_6',['GainAbility',['../classChara.html#a9857b9e459195fe8983acc6ca0a93452',1,'Chara']]],
   ['gainexp_7',['GainExp',['../classResearchPlan.html#a955b74f680a1bbd826b71d163c3701ed',1,'ResearchPlan']]],
   ['gainres_8',['gainRes',['../classSourceStat_1_1Row.html#a2053a1161b63836fe3546b4dddcae340',1,'SourceStat::Row']]],
   ['gainresistfactor_9',['GainResistFactor',['../classBaseCondition.html#a5ed342f7a43b5d20affd6fbbe8f88155',1,'BaseCondition']]],
