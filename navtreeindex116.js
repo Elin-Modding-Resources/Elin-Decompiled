@@ -1,5 +1,8 @@
 var NAVTREEINDEX116 =
 {
+"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1481,0],
+"classTraitComputer.html":[1,0,1482],
+"classTraitContainer.html":[1,0,1483],
 "classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1483,5],
 "classTraitContainer.html#a2fb04afc28809d6e887fd259c60e89d0":[1,0,1483,0],
 "classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1483,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1524,0],
 "classTraitDoorman__Thief.html#af1532544d4d8de97f8765b22fed55b85":[1,0,1524,1],
 "classTraitDrawingPaper.html":[1,0,1527],
-"classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1527,2],
-"classTraitDrawingPaper.html#a9d3c27a16d974dcd0cef28907885c8b5":[1,0,1527,0],
-"classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1527,1],
-"classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1527,3]
+"classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1527,2]
 };

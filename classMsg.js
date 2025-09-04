@@ -2,7 +2,7 @@ var classMsg =
 [
     [ "Append", "classMsg.html#a5f18ae891fc1d8fd9b675f60c0a9b875", null ],
     [ "AquireItem", "classMsg.html#a3cc599ee5c746c98cc7dd10bc74f4736", null ],
-    [ "GetGameText", "classMsg.html#a659b5ace053812ca07f66b59c0993030", null ],
+    [ "GetGameText", "classMsg.html#a19c89446f66b40498a43cb601141c3ab", null ],
     [ "GetName", "classMsg.html#aed21ba537678ad1e7d7b3a5473a9d137", null ],
     [ "GetRawText", "classMsg.html#a9b776dcdf5d909c375e4eb620bfb9d63", null ],
     [ "GetRawText", "classMsg.html#a5e1df58aa8e5070d31f626e2e555ae68", null ],

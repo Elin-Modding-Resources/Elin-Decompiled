@@ -1,5 +1,8 @@
 var NAVTREEINDEX115 =
 {
+"classTraitBed.html#a08547dc3eb39076ea1208a52790e84d4":[1,0,1428,0],
+"classTraitBed.html#a18a6505005e68927663e333610713e19":[1,0,1428,4],
+"classTraitBed.html#a26c7c52784804d1ec6c9e557d940500b":[1,0,1428,7],
 "classTraitBed.html#a28ec384a8d046d5c6da999820f89c57b":[1,0,1428,12],
 "classTraitBed.html#a333714ba3ee1c05449866a65d5191c96":[1,0,1428,11],
 "classTraitBed.html#a34a3cbb665f0f0e11346eb701079bde7":[1,0,1428,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitClerk__Thief.html":[1,0,1479],
 "classTraitClock.html":[1,0,1480],
 "classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1480,0],
-"classTraitCobWeb.html":[1,0,1481],
-"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1481,0],
-"classTraitComputer.html":[1,0,1482],
-"classTraitContainer.html":[1,0,1483]
+"classTraitCobWeb.html":[1,0,1481]
 };

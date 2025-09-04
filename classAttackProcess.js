@@ -6,6 +6,7 @@ var classAttackProcess =
     [ "GetAttackText", "classAttackProcess.html#a2fda712ebf3fcbecbf903f6a64399ca3", null ],
     [ "GetRawDamage", "classAttackProcess.html#a7f7973f89ba8add8c33c7ddd8db4f3f3", null ],
     [ "GetText", "classAttackProcess.html#a9e4ccd90ca9eb4dcb664c0d80a50afe2", null ],
+    [ "GetTwoHandEncBonus", "classAttackProcess.html#a74cda8b0a94e4744172f26960daf7fe9", null ],
     [ "GetWeaponEnc", "classAttackProcess.html#ac75593fa0ed1e1ce631f65ebcac70a0d", null ],
     [ "Perform", "classAttackProcess.html#a10c9d68470c37d5cbf470c3872d648f7", null ],
     [ "PlayRangedAnime", "classAttackProcess.html#acbe14bc34d2889dfd5ef8f6ffbc94880", null ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX124 =
 {
+"classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c":[0,4,9,0,14],
+"classTwoDLaserPack_1_1LineBasedLaser.html#ae51187baa12c8470029eaa9d6e476bcb":[1,0,9,0,37],
+"classTwoDLaserPack_1_1LineBasedLaser.html#ae51187baa12c8470029eaa9d6e476bcb":[0,4,9,0,37],
 "classTypewriter.html":[1,0,1925],
 "classTypewriter.html#a353e062f4849d727f5b55b387b4b2496":[1,0,1925,3],
 "classTypewriter.html#a5acb0a230b3064327eaf2bf6bb750a2e":[1,0,1925,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX124 =
 "classUIBook.html#af85dc41de30ceac932bfaa0247582ae7":[1,0,1945,7],
 "classUIBook.html#aff6e130812af8ab0207d917ea68260c6":[1,0,1945,49],
 "classUIBook_1_1Item.html":[1,0,1945,0],
-"classUIBook_1_1Item.html#a63943fdcefd548f8c30429ef6c2d30ce":[1,0,1945,0,3],
-"classUIBook_1_1Item.html#aef0458f6386dd8430284ecdbc7eefb0c":[1,0,1945,0,2],
-"classUIBook_1_1Item.html#afa31d2e9ce3c2ce094c79ff86b027b46":[1,0,1945,0,1],
-"classUIBook_1_1Item.html#afd69db20c34266b995c3a860a61b32e9":[1,0,1945,0,0]
+"classUIBook_1_1Item.html#a63943fdcefd548f8c30429ef6c2d30ce":[1,0,1945,0,3]
 };

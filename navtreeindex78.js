@@ -1,5 +1,8 @@
 var NAVTREEINDEX78 =
 {
+"classLayerJournal.html#a9de89428ad5def5936a9b5d8ca79cd89":[1,0,799,0],
+"classLayerJournal.html#abc245d752abd342a9d06893660528d91":[1,0,799,5],
+"classLayerJournal.html#adf956ee85b924d587c2bd806ce4a629d":[1,0,799,3],
 "classLayerJournal.html#aebc08b3c015a165fc95928469c64538f":[1,0,799,2],
 "classLayerList.html":[1,0,800],
 "classLayerList.html#a0077af7b3c6157719ab60d99debeed4e":[1,0,800,25],
@@ -246,8 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerQuickMenu.html":[1,0,815],
 "classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25":[1,0,815,4],
 "classLayerQuickMenu.html#a0f688d2c4dfe520bc94ec6d3b6a88e89":[1,0,815,3],
-"classLayerQuickMenu.html#a59b2a450322b2407acb198b940b0079d":[1,0,815,2],
-"classLayerQuickMenu.html#ac14ccb967e640d0a90e53229e4b6a339":[1,0,815,1],
-"classLayerQuickMenu.html#ae7c3e171b808dbd5bece355920e3d8d6":[1,0,815,0],
-"classLayerRegisterHotbar.html":[1,0,816]
+"classLayerQuickMenu.html#a59b2a450322b2407acb198b940b0079d":[1,0,815,2]
 };

@@ -12,6 +12,7 @@ var classContentConfigTest =
     [ "toggleBlockOnItem", "classContentConfigTest.html#a4e181714b1bb9f528f9547d4b085b951", null ],
     [ "toggleBloom2", "classContentConfigTest.html#a0a15fc92a73c2fddfeb6c07a70ad8f4c", null ],
     [ "toggleCompressSave", "classContentConfigTest.html#ae78989735fa371997d7953b3fab93e4a", null ],
+    [ "toggledDntCancelIfZeroDamage", "classContentConfigTest.html#aa120a8c146b9300cb6ae7690784d7ea8", null ],
     [ "toggleExtraCancelMove", "classContentConfigTest.html#a115b87cda6e665611031c972cd21b058", null ],
     [ "toggleExtraRace", "classContentConfigTest.html#afa0bfc94658e06e94293daf2346e0c32", null ],
     [ "toggleExTurn", "classContentConfigTest.html#acc8834bad6839037b189665008dd14e7", null ],

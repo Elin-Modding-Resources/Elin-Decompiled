@@ -1,5 +1,8 @@
 var NAVTREEINDEX122 =
 {
+"classTraitSpotSpawn.html#acdce588d16b0d5e8f97614c2044fc533":[1,0,1826,0],
+"classTraitSpotStock.html":[1,0,1827],
+"classTraitSpotStock.html#af8870bb4fbba3c2111b67956e3d9d5ad":[1,0,1827,0],
 "classTraitSpotStockpile.html":[1,0,1828],
 "classTraitSpotStockpile.html#a24f33d2e704f24f7ca5675808ee6ecb2":[1,0,1828,0],
 "classTraitSpotTraining.html":[1,0,1829],
@@ -246,8 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitTrainer.html#aec8937bf3f03094c513dce6760306126":[1,0,1888,2],
 "classTraitTrainingDummy.html":[1,0,1889],
 "classTraitTrainingDummy.html#a1f360870dccb76ca2c5a7d7ca784cb23":[1,0,1889,0],
-"classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,1889,1],
-"classTraitTrainingDummy.html#a4b356fb1fe2328acbd4482e2f6f3dc65":[1,0,1889,3],
-"classTraitTrainingDummy.html#a6b66cf5d030f6577f9317b14db659234":[1,0,1889,2],
-"classTraitTrainingDummyArmor.html":[1,0,1890]
+"classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,1889,1]
 };
