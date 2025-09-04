@@ -169,7 +169,7 @@ public class ActMelee : ActBaseAttack
 			}
 			else if (AllowCounter && hasMissed && !cC.HasElement(439) && orgTC.HasElement(380))
 			{
-				orgTC.Say("counter");
+				orgTC.Say((orgTC.isChara && orgTC.Chara.IsHostile()) ? "counter_enemy" : "counter");
 				new ActMeleeCounter().Perform(orgTC.Chara, cC);
 			}
 		}
@@ -329,7 +329,7 @@ public class ActMelee : ActBaseAttack
 						num6 = num6 * 100 / (int)Mathf.Clamp((float)AttackProcess.Current.weaponSkill.Value / (float)num7 * 100f, 50f, 150f);
 						if (EClass.rnd(100) < num6)
 						{
-							Act.TC.Say("parry");
+							Act.TC.Say((Act.TC.isChara && Act.TC.Chara.IsHostile()) ? "parry_enemy" : "parry");
 							Act.TC.PlaySound("parry");
 							parried = true;
 							return;
@@ -369,18 +369,18 @@ public class ActMelee : ActBaseAttack
 						flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp, maxRoll, subAttack);
 						AttackProcess.Current.critFury = false;
 					}
-					if (flag)
-					{
-						hasHit = true;
-					}
-					else
-					{
-						hasMissed = true;
-					}
 					if (flag || !Act.CC.IsAliveInCurrentZone || !Act.TC.IsAliveInCurrentZone)
 					{
 						break;
 					}
+				}
+				if (flag)
+				{
+					hasHit = true;
+				}
+				else
+				{
+					hasMissed = true;
 				}
 				Act.TC = _tc;
 				Act.TP = _tp;
@@ -508,7 +508,7 @@ public class ActMelee : ActBaseAttack
 					}
 					if (m > 0)
 					{
-						Act.CC.Say("attack_flurry");
+						Act.CC.Say(Act.CC.IsHostile() ? "attack_flurry_enemy" : "attack_flurry");
 					}
 					Attack(_tc, _tp, mtp, subAttack);
 					if (parried)

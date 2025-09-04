@@ -13,10 +13,10 @@ public class TraitSpellbook : TraitBaseSpellbook
 		switch (row.id)
 		{
 		case 8430:
-			owner.elements.SetBase(765, 50);
+			owner.elements.SetBase(765, 40);
 			break;
 		case 9155:
-			owner.elements.SetBase(765, 90);
+			owner.elements.SetBase(765, 70);
 			break;
 		case 8390:
 		case 8550:

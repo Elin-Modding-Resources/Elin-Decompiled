@@ -550,6 +550,8 @@ public class CoreConfig : EClass
 
 		public bool allowBlockOnItem;
 
+		public bool dontCancelIfZeroDamage;
+
 		public bool alwaysFixCamera;
 
 		public bool ignoreBackerDestoryFlag;

@@ -263,6 +263,10 @@ public class Thing : Card
 				{
 					num2 = EClass.rnd(2) + 1;
 				}
+				if (id == "bow_vindale")
+				{
+					num2 = 4;
+				}
 				if (num2 > 0)
 				{
 					for (int j = 0; j < num2; j++)
@@ -1021,8 +1025,8 @@ public class Thing : Card
 		{
 			n.AddText("(id:" + id + " tile:" + (source.tiles.IsEmpty() ? "-" : ((object)source.tiles[0]))?.ToString() + ") lv:" + base.LV + " price:" + GetPrice());
 		}
-		Card rootCard = GetRootCard();
-		if (rootCard != null && rootCard != EClass.pc && rootCard != this && rootCard.ExistsOnMap && !((parent as Thing)?.trait is TraitChestMerchant))
+		Card root = GetRootCard();
+		if (root != null && root != EClass.pc && root != this && root.ExistsOnMap && !((parent as Thing)?.trait is TraitChestMerchant))
 		{
 			n.AddText("isChildOf".lang(GetRootCard().Name), FontColor.ItemName);
 		}
@@ -1270,7 +1274,19 @@ public class Thing : Card
 						return false;
 					}
 					return (!showEQStats || (e.id != 64 && e.id != 65 && e.id != 66 && e.id != 67)) ? true : false;
-				}, null, ElementContainer.NoteMode.Default, addRaceFeat: false, (Element e, string s) => (mode != IInspect.NoteMode.Info) ? s : (s + " (" + e.Value + ")"));
+				}, null, ElementContainer.NoteMode.Default, addRaceFeat: false, delegate(Element e, string s)
+				{
+					if (mode != IInspect.NoteMode.Info)
+					{
+						return s;
+					}
+					int num4 = e.Value;
+					if (e.source.IsWeaponEnc && !e.source.tag.Contains("modRanged") && isEquipped && root.isChara)
+					{
+						num4 = num4 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara)) / 100;
+					}
+					return s + " (" + e.Value + ((e.Value == num4) ? "" : (" → " + num4)) + ")";
+				});
 			}
 			if (sockets != null)
 			{

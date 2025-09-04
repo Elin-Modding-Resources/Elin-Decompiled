@@ -316,7 +316,7 @@ public class ActRanged : ActThrow
 						{
 							if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, k + 2 + j)))
 							{
-								Act.CC.Say("attack_chaser");
+								Act.CC.Say(Act.CC.IsHostile() ? "attack_chaser_enemy" : "attack_chaser");
 								if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
 								{
 									hasHit = true;

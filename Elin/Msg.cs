@@ -249,7 +249,7 @@ public class Msg : EClass
 		return TalkHomeMemeber(id);
 	}
 
-	public static string GetGameText(string idLang)
+	public static string GetGameText(string idLang, Card card = null)
 	{
 		LangGame.Row row = EClass.core.sources.langGame.map.TryGetValue(idLang);
 		if (row == null)

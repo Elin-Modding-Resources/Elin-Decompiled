@@ -1415,8 +1415,16 @@ public class ActEffect : EClass
 		}
 		case EffectId.Draw:
 		{
-			Point point = CC.pos.GetRandomPoint(1)?.GetNearestPoint(allowBlock: false, allowChara: false);
-			if (point == null || !CC.CanSeeLos(point) || (CC.IsPCFactionOrMinion && TC.IsPCFactionOrMinion && TC.isRestrained))
+			if (CC.Dist(TC) <= 1 || (CC.IsPCFactionOrMinion && TC.IsPCFactionOrMinion && TC.isRestrained))
+			{
+				break;
+			}
+			Point point = CC.GetFirstStep(TC.pos, PathManager.MoveType.Combat);
+			if (!point.IsValid)
+			{
+				point = CC.pos.GetRandomPoint(1)?.GetNearestPoint(allowBlock: false, allowChara: false);
+			}
+			if (point == null || !CC.CanSeeLos(point))
 			{
 				break;
 			}

@@ -41,6 +41,8 @@ public class ContentConfigTest : ContentConfig
 
 	public UIButton toggleCompressSave;
 
+	public UIButton toggledDntCancelIfZeroDamage;
+
 	public Slider sliderBrightness;
 
 	public override void OnInstantiate()
@@ -91,6 +93,10 @@ public class ContentConfigTest : ContentConfig
 		toggleCompressSave.SetToggle(base.config.test.compressSave, delegate(bool on)
 		{
 			base.config.test.compressSave = on;
+		});
+		toggledDntCancelIfZeroDamage.SetToggle(base.config.test.dontCancelIfZeroDamage, delegate(bool on)
+		{
+			base.config.test.dontCancelIfZeroDamage = on;
 		});
 		toggleAlwaysRun.SetToggle(base.config.test.alwaysRun, delegate(bool on)
 		{

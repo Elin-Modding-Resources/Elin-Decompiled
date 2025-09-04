@@ -677,6 +677,10 @@ public class WindowChara : WindowController
 						{
 							return true;
 						}
+						if (a.source.category == "enchant")
+						{
+							return true;
+						}
 					}
 					if ((a.owner == chara.elements && a.vLink == 0 && !a.IsFactionElement(chara)) || a.source.category == "resist")
 					{

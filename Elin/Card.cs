@@ -4726,7 +4726,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Chara.AddCondition<ConFear>(100 + EClass.rnd(100));
 		}
-		if (Chara.ai.Current.CancelWhenDamaged && attackSource != AttackSource.Hunger && attackSource != AttackSource.Fatigue)
+		if (Chara.ai.Current.CancelWhenDamaged && attackSource != AttackSource.Hunger && attackSource != AttackSource.Fatigue && (!EClass.core.config.test.dontCancelIfZeroDamage || dmg != 0 || !IsPC))
 		{
 			Chara.ai.Current.TryCancel(origin);
 		}

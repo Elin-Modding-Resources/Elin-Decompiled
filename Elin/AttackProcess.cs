@@ -114,19 +114,25 @@ public class AttackProcess : EClass
 	public static int GetWeaponEnc(Chara CC, Thing w, int ele, bool addSelfEnc = false)
 	{
 		int num = w?.Evalue(ele) ?? 0;
-		if (CC.body.GetAttackStyle() == AttackStyle.TwoHand)
-		{
-			num = num * (100 + Mathf.Clamp(CC.Evalue(130) / 15, 0, 2) * 25) / 100;
-		}
-		if (addSelfEnc)
-		{
-			num += CC.Evalue(ele);
-		}
 		if (CC.IsPCFactionOrMinion)
 		{
 			num += EClass.pc.faction.charaElements.Value(ele);
 		}
+		num = num * (100 + GetTwoHandEncBonus(CC)) / 100;
+		if (addSelfEnc)
+		{
+			num += CC.Evalue(ele);
+		}
 		return num;
+	}
+
+	public static int GetTwoHandEncBonus(Chara CC)
+	{
+		if (CC == null || CC.body.GetAttackStyle() != AttackStyle.TwoHand)
+		{
+			return 0;
+		}
+		return Mathf.Clamp(CC.Evalue(130) / 15, 0, 2) * 25;
 	}
 
 	public string GetText()
@@ -318,9 +324,15 @@ public class AttackProcess : EClass
 		{
 			toHit += 25 + (int)Mathf.Sqrt(Mathf.Max(0, CC.Evalue(130)) * 2);
 		}
-		else if (attackStyle == AttackStyle.TwoWield && toHit > 0)
+		else if (attackStyle == AttackStyle.TwoWield)
 		{
-			toHit = toHit * 100 / (115 + attackIndex * 15 + attackIndex * Mathf.Clamp(2000 / (20 + CC.EvalueMax(131, -10)), 0, 100));
+			int num4 = CC.EvalueMax(131, -10);
+			int num5 = ((num4 >= 25) ? 12 : 15);
+			int max = 100 + ((num4 >= 50) ? ((int)Mathf.Sqrt(num4)) : 0);
+			if (toHit > 0)
+			{
+				toHit = toHit * 100 / (100 + (attackIndex + 1) * num5 + attackIndex * Mathf.Clamp(2000 / (20 + num4), 0, max));
+			}
 		}
 		if (CC.isBlind)
 		{
@@ -486,6 +498,10 @@ public class AttackProcess : EClass
 		}
 		int num = (10 + e.Value / 5) * mtpChance / 100;
 		int power = EClass.curve((100 + e.Value * 10) * (100 + bonus) / 100, 400, 100);
+		if (e.id == 6602)
+		{
+			num = 100;
+		}
 		if (num <= EClass.rnd(100))
 		{
 			return;
@@ -654,7 +670,7 @@ public class AttackProcess : EClass
 				ModExpDef(150, 90);
 				ModExpDef(151, 90);
 			}
-			ProcAbility(list, CC, TC, weaponSkill.Value, subAttack);
+			ProcAbility(list, CC, TC, weaponSkill.Value + GetTwoHandEncBonus(CC), subAttack);
 			return false;
 		}
 		if (TC.IsPC)
@@ -773,18 +789,19 @@ public class AttackProcess : EClass
 				if (item.IsActive(weapon) && item.source.categorySub == "eleAttack")
 				{
 					int num10 = 25;
-					int dmg = EClass.rnd(num * (100 + item.Value * 10) / 500 + 5);
+					int num11 = EClass.rnd(num * (100 + item.Value * 10) / 500 + 5);
+					num11 = num11 * (100 + GetTwoHandEncBonus(CC)) / 100;
 					if (conWeapon == null && weapon != null && weapon.trait is TraitToolRangeCane)
 					{
 						num10 = 0;
 					}
 					if (num10 > EClass.rnd(100))
 					{
-						TC.DamageHP(dmg, item.id, isThrow ? (100 + item.Value * 5) : (30 + item.Value), AttackSource.WeaponEnchant, CC);
+						TC.DamageHP(num11, item.id, isThrow ? (100 + item.Value * 5) : (30 + item.Value), AttackSource.WeaponEnchant, CC);
 					}
 				}
 			}
-			ProcAbility(list, CC, TC, weaponSkill.Value, subAttack);
+			ProcAbility(list, CC, TC, weaponSkill.Value + GetTwoHandEncBonus(CC), subAttack);
 		}
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)
 		{
@@ -792,12 +809,12 @@ public class AttackProcess : EClass
 		}
 		if (!IsRanged && !flag2 && attackStyle == AttackStyle.Shield)
 		{
-			int num11 = CC.Evalue(123);
-			int num12 = CC.Evalue(381);
-			if (CC.elements.ValueWithoutLink(123) >= 10 && Mathf.Clamp(Mathf.Sqrt(num11) - 2f, 8f, 15f) + Mathf.Min(Mathf.Sqrt(num12), 25f) > (float)EClass.rnd(100))
+			int num12 = CC.Evalue(123);
+			int num13 = CC.Evalue(381);
+			if (CC.elements.ValueWithoutLink(123) >= 10 && Mathf.Clamp(Mathf.Sqrt(num12) - 2f, 8f, 15f) + Mathf.Min(Mathf.Sqrt(num13), 25f) > (float)EClass.rnd(100))
 			{
-				num = num7 * (Mathf.Min(50 + num11 + num12, 200) + (int)Mathf.Min(Mathf.Sqrt(num12), 100f)) / 100;
-				penetration = (int)Mathf.Sqrt(num12);
+				num = num7 * (Mathf.Min(50 + num12 + num13, 200) + (int)Mathf.Min(Mathf.Sqrt(num13), 100f)) / 100;
+				penetration = (int)Mathf.Sqrt(num13) + ((num13 != 0) ? 20 : 0);
 				if (penetration > 100)
 				{
 					penetration = 100;
@@ -813,11 +830,11 @@ public class AttackProcess : EClass
 				{
 					if (EClass.rnd(2) == 0)
 					{
-						TC.Chara.AddCondition<ConDim>(50 + (int)Mathf.Sqrt(num11) * 10);
+						TC.Chara.AddCondition<ConDim>(50 + (int)Mathf.Sqrt(num12) * 10);
 					}
 					TC.Chara.AddCondition<ConParalyze>(EClass.rnd(2), force: true);
 				}
-				ProcShieldEncs(CC, TC, 500 + num12);
+				ProcShieldEncs(CC, TC, 500 + num13);
 			}
 		}
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)
