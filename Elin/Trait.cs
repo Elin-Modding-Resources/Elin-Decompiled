@@ -257,6 +257,8 @@ public class Trait : EClass
 
 	public virtual bool CanBeMasked => false;
 
+	public virtual bool IsLocalAct => true;
+
 	public virtual bool IsBlendBase => false;
 
 	public virtual bool CanBeOnlyBuiltInHome => false;

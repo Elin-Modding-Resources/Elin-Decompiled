@@ -1048,6 +1048,8 @@ public class DramaManager : EMono
 		{
 		case "survival":
 			return EMono.game.IsSurvival;
+		case "!survival":
+			return !EMono.game.IsSurvival;
 		case "fromBook":
 			return LayerDrama.fromBook;
 		case "!fromBook":

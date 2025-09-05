@@ -261,6 +261,18 @@ public class SerializedCards : EClass
 			}
 		}
 
+		public int encLv
+		{
+			get
+			{
+				return ints[22];
+			}
+			set
+			{
+				ints[22] = value;
+			}
+		}
+
 		public string id
 		{
 			get
@@ -417,7 +429,8 @@ public class SerializedCards : EClass
 			refVal = c.refVal,
 			idSkin = c.idSkin,
 			idDeity = c.c_idDeity,
-			isEmpty = (c.things.Count == 0 && c.c_lockLv == 0)
+			isEmpty = (c.things.Count == 0 && c.c_lockLv == 0),
+			encLv = c.encLV
 		};
 		if (c.c_idBacker != 0)
 		{
@@ -758,6 +771,10 @@ public class SerializedCards : EClass
 					{
 						card2.c_lockLv = 1;
 					}
+				}
+				if (card4.encLv != 0)
+				{
+					card2.SetEncLv(card4.encLv);
 				}
 			}
 			if (card2.isChara)

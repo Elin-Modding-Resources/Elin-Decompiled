@@ -4250,7 +4250,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							flag3 = true;
 							Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 							hp = Mathf.Min(num13 * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
-							goto IL_0e7f;
+							goto IL_0ed7;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4278,11 +4278,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath();
-								goto IL_0e7f;
+								goto IL_0ed7;
 							}
 						}
-						if (IsPC && Evalue(1220) > 0 && Chara.stamina.value >= Chara.stamina.max / 2)
+						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
 						{
+							Say("fate", this);
+							PlaySound("revive");
+							PlayEffect("aura_heaven");
 							Chara.stamina.Mod(-Chara.stamina.max / 2);
 							Chara.AddCondition<ConInvulnerable>();
 							EvadeDeath();
@@ -4291,8 +4294,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0e7f;
-		IL_0e7f:
+		goto IL_0ed7;
+		IL_0ed7:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -5500,9 +5503,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		MakeRefFrom(id);
 	}
 
-	public void MakeRefFrom(string id)
+	public Card MakeRefFrom(string id)
 	{
 		c_idRefCard = id;
+		return this;
 	}
 
 	public void MakeRefFrom(Card c1, Card c2 = null)

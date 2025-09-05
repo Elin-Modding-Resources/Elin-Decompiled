@@ -609,7 +609,7 @@ public class Recipe : EClass
 				return true;
 			}
 		}
-		else if (IsBlock && point.matBlock == GetColorMaterial() && (point.sourceBlock == tileRow || (tileRow.tileType == point.sourceBlock.tileType && tileRow.tileType == TileType.Slope)))
+		else if (IsBlock && point.matBlock == GetColorMaterial() && (point.sourceBlock == tileRow || (tileRow != null && tileRow.tileType == point.sourceBlock.tileType && tileRow.tileType == TileType.Slope)))
 		{
 			if (point.sourceBlock.tileType.AltitudeAsDir && dir != point.cell.objDir)
 			{

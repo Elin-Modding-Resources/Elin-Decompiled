@@ -21,9 +21,15 @@ public class TraitBed : Trait
 	public override void TrySetAct(ActPlan p)
 	{
 		ValidateOwners();
+		Chara chara = owner.pos.FirstChara;
+		if (chara != null && !chara.affinity.CanSleepBeside())
+		{
+			chara = null;
+		}
 		p.TrySetAct(new AI_Sleep
 		{
-			target = owner.Thing
+			target = owner.Thing,
+			lover = chara
 		}, owner);
 		p.TrySetAct(new AI_PassTime
 		{

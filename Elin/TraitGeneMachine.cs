@@ -129,6 +129,7 @@ public class TraitGeneMachine : TraitStasisChamber
 				condition.gene = null;
 			}
 			target.RemoveCondition<ConSuspend>();
+			target.Cure(CureType.Death);
 			target.MoveNeighborDefinitely();
 			target.PlaySound("ding_potential");
 			target.pos.PlayEffect("mutation");

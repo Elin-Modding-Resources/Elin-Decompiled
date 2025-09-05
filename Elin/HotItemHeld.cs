@@ -181,7 +181,7 @@ public class HotItemHeld : HotItemThing
 		{
 			if (p.IsSelf && thing.trait.CanUse(EClass.pc))
 			{
-				return p.TrySetAct(thing.trait.LangUse, () => thing.trait.OnUse(p.cc), thing, null, -1);
+				return p.TrySetAct(thing.trait.LangUse, () => thing.trait.OnUse(p.cc), thing, null, -1, isHostileAct: false, thing.trait.IsLocalAct);
 			}
 			if (EClass.scene.mouseTarget.target is Card && thing.trait.CanUse(EClass.pc, EClass.scene.mouseTarget.target as Card))
 			{

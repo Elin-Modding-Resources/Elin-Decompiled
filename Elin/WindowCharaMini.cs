@@ -230,6 +230,7 @@ public class WindowCharaMini : WindowController
 								SE.Trash();
 								genes.Remove(chara, g);
 								Refresh(idTab);
+								chara.RemoveAllStances();
 							});
 						}
 					});

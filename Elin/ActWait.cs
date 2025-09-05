@@ -32,6 +32,7 @@ public class ActWait : Act
 			if (thing.isHidden && thing.id == "medal" && !EClass._zone.IsUserZone)
 			{
 				thing.SetHidden(hide: false);
+				thing.PlayAnime(AnimeID.Hop);
 				c.PlaySound("medal");
 				Msg.Say("spotMedal", c, thing);
 				return true;
@@ -82,6 +83,7 @@ public class ActWait : Act
 					thing.SetHidden(hide: false);
 					if (thing.id == "medal")
 					{
+						thing.PlayAnime(AnimeID.Hop);
 						c.PlaySound("medal");
 						Msg.Say("spotMedal", c, thing);
 					}

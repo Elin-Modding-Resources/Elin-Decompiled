@@ -4810,6 +4810,12 @@ public class Chara : Card, IPathfindWalker
 	{
 		switch (id)
 		{
+		case "lomias":
+			if (ShouldRestock("_meat"))
+			{
+				AddCard(ThingGen.Create("_meat").MakeRefFrom("begger"));
+			}
+			break;
 		case "fiama":
 			Restock("book_story", 1);
 			break;
@@ -4828,10 +4834,14 @@ public class Chara : Card, IPathfindWalker
 		}
 		void Restock(string id, int num)
 		{
-			if (things.Find(id) == null)
+			if (ShouldRestock(id))
 			{
 				AddCard(ThingGen.Create(id).SetNum(num));
 			}
+		}
+		bool ShouldRestock(string id)
+		{
+			return things.Find(id) == null;
 		}
 	}
 
@@ -5680,6 +5690,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			num3 = 1 + Evalue(1648);
 		}
+		Debug.Log(cost.cost + "/" + a.Value);
 		if (IsPC && cost.cost > 0 && a.Value == 0)
 		{
 			Msg.SayNothingHappen();
@@ -6442,7 +6453,7 @@ public class Chara : Card, IPathfindWalker
 				return EClass.setting.pass.subDeadPCC;
 			}
 		}
-		else if (conSleep != null && host == null && pos.Equals(EClass.pc.pos) && IsHuman && GetBool(123))
+		else if (conSleep != null && host == null && pos.Equals(EClass.pc.pos) && IsHuman && (GetBool(123) || affinity.CanSleepBeside()))
 		{
 			return EClass.setting.pass.subDead;
 		}
@@ -9152,7 +9163,8 @@ public class Chara : Card, IPathfindWalker
 				Condition condition = conditions[num];
 				if (!(condition is ConAnorexia) || type == CureType.Death)
 				{
-					if (condition.Type == ConditionType.Bad || condition.Type == ConditionType.Debuff || condition.Type == ConditionType.Disease)
+					ConditionType type2 = condition.Type;
+					if ((uint)(type2 - 2) <= 2u || type2 == ConditionType.Stance)
 					{
 						condition.Kill();
 					}
@@ -9179,6 +9191,18 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		}
+		}
+	}
+
+	public void RemoveAllStances()
+	{
+		for (int num = conditions.Count - 1; num >= 0; num--)
+		{
+			Condition condition = conditions[num];
+			if (condition.Type == ConditionType.Stance)
+			{
+				condition.Kill();
+			}
 		}
 	}
 

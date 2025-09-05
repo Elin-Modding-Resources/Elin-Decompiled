@@ -281,7 +281,7 @@ public class BuildMenu : EMono
 			}
 			EMono.pc.things.Foreach(delegate(Thing t)
 			{
-				if (t.trait.CanBeDropped && !t.trait.CanOnlyCarry && (t.source.name.Contains(s) || t.source.name_JP.Contains(s) || t.NameOne.Contains(s)))
+				if (t.trait.CanBeDropped && !t.trait.CanOnlyCarry && !t.isEquipped && (t.source.name.Contains(s) || t.source.name_JP.Contains(s) || t.NameOne.Contains(s)))
 				{
 					Recipe recipe3 = Recipe.Create(t);
 					if (recipe3 == null)
@@ -603,7 +603,7 @@ public class BuildMenu : EMono
 					}
 					EMono.pc.things.Foreach(delegate(Thing t)
 					{
-						if (!t.trait.CanOnlyCarry && t.trait.CanBeDropped && !t.c_isImportant)
+						if (!t.trait.CanOnlyCarry && t.trait.CanBeDropped && !t.c_isImportant && !t.isEquipped)
 						{
 							counts[t.trait.RecipeCat]++;
 							if (t.trait.RecipeCat == cat && t.invY != 1)

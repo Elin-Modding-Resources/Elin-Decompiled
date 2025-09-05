@@ -53,11 +53,14 @@ public class TraitDetector : TraitItem
 		int num = 999;
 		foreach (Thing thing in EClass._map.things)
 		{
-			int num2 = EClass.pc.Dist(thing);
-			if ((thing.id.ToLower().Contains(term.ToLower()) || thing.Name.ToLower().Contains(term.ToLower())) && num2 < num)
+			if (!thing.isMasked)
 			{
-				num = num2;
-				card = thing;
+				int num2 = EClass.pc.Dist(thing);
+				if ((thing.id.ToLower().Contains(term.ToLower()) || thing.Name.ToLower().Contains(term.ToLower())) && num2 < num)
+				{
+					num = num2;
+					card = thing;
+				}
 			}
 		}
 		interval = 10;
@@ -74,7 +77,7 @@ public class TraitDetector : TraitItem
 			Msg.Say((LangGame.Has(text) ? text : "beep").lang());
 			WidgetMainText.ignoreStack = false;
 		}
-		owner.PlayAnime(AnimeID.HitObj);
+		owner.PlayAnime(AnimeID.Hop);
 	}
 
 	public override void SetName(ref string s)
