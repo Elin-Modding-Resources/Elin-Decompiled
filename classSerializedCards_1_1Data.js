@@ -10,6 +10,7 @@ var classSerializedCards_1_1Data =
     [ "bits2", "classSerializedCards_1_1Data.html#a59520e8a2a1aa4e28f531f5dc0ea929a", null ],
     [ "dir", "classSerializedCards_1_1Data.html#a9bc7facb42dcd34272a0b10b13828bd8", null ],
     [ "element", "classSerializedCards_1_1Data.html#a8b669389cd8e26d66c7e074728b94dee", null ],
+    [ "encLv", "classSerializedCards_1_1Data.html#a91b94b074fd5d466176acc3e99e68573", null ],
     [ "fx", "classSerializedCards_1_1Data.html#af8524eb98c62f73b5b5b302af9c1bc69", null ],
     [ "fy", "classSerializedCards_1_1Data.html#a88b11e22734c97aa267c38472ecb9158", null ],
     [ "id", "classSerializedCards_1_1Data.html#ae9a420c7a03c3098659de8fce7f2245b", null ],

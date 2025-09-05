@@ -1161,6 +1161,7 @@ var hierarchy =
             [ "Zone_CursedManor", "classZone__CursedManor.html", null ],
             [ "Zone_DerphyWhore", "classZone__DerphyWhore.html", null ],
             [ "Zone_EmbassyPalmia", "classZone__EmbassyPalmia.html", null ],
+            [ "Zone_EternalGarden", "classZone__EternalGarden.html", null ],
             [ "Zone_Harvest", "classZone__Harvest.html", null ],
             [ "Zone_LittleGarden", "classZone__LittleGarden.html", null ],
             [ "Zone_LumiestGraveyard", "classZone__LumiestGraveyard.html", null ],

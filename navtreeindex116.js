@@ -1,5 +1,11 @@
 var NAVTREEINDEX116 =
 {
+"classTraitClerk__Mage.html":[1,0,1477],
+"classTraitClerk__Merchant.html":[1,0,1478],
+"classTraitClerk__Thief.html":[1,0,1479],
+"classTraitClock.html":[1,0,1480],
+"classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1480,0],
+"classTraitCobWeb.html":[1,0,1481],
 "classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1481,0],
 "classTraitComputer.html":[1,0,1482],
 "classTraitContainer.html":[1,0,1483],
@@ -243,11 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1522,2],
 "classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1522,0],
 "classTraitDoorman__Mage.html":[1,0,1523],
-"classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1523,0],
-"classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1523,1],
-"classTraitDoorman__Thief.html":[1,0,1524],
-"classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1524,0],
-"classTraitDoorman__Thief.html#af1532544d4d8de97f8765b22fed55b85":[1,0,1524,1],
-"classTraitDrawingPaper.html":[1,0,1527],
-"classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1527,2]
+"classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1523,0]
 };

@@ -199,6 +199,7 @@ var classChara =
     [ "RefreshSpeed", "classChara.html#ab64fc6638b91c6205fa35e8e18b590f2", null ],
     [ "RefreshWorkElements", "classChara.html#a30f7c1afe3fea2b732490af476a54b77", null ],
     [ "ReleaseMinion", "classChara.html#a4f9d8ccce19d6289d45b9e058cfd2c34", null ],
+    [ "RemoveAllStances", "classChara.html#a4050e787a5caa4a59267eabc6ef7078e", null ],
     [ "RemoveCondition< T >", "classChara.html#aa5d80b670eca04fbcbcb3fc80baf817e", null ],
     [ "RemoveGlobal", "classChara.html#a1ec14b046ccec98904da6b050cbd4843", null ],
     [ "RemoveLastBodyPart", "classChara.html#a90f1d634604e049c931ba99b0a24b4f7", null ],

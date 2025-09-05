@@ -1931,6 +1931,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "Zone_DungeonUnfixed.cs", "Zone__DungeonUnfixed_8cs.html", "Zone__DungeonUnfixed_8cs" ],
     [ "Zone_DungeonYeek.cs", "Zone__DungeonYeek_8cs.html", "Zone__DungeonYeek_8cs" ],
     [ "Zone_EmbassyPalmia.cs", "Zone__EmbassyPalmia_8cs.html", "Zone__EmbassyPalmia_8cs" ],
+    [ "Zone_EternalGarden.cs", "Zone__EternalGarden_8cs.html", "Zone__EternalGarden_8cs" ],
     [ "Zone_Exile.cs", "Zone__Exile_8cs.html", "Zone__Exile_8cs" ],
     [ "Zone_Field.cs", "Zone__Field_8cs.html", "Zone__Field_8cs" ],
     [ "Zone_Gathering.cs", "Zone__Gathering_8cs.html", "Zone__Gathering_8cs" ],

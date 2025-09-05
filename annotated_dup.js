@@ -2175,6 +2175,7 @@ var annotated_dup =
     [ "Zone_DungeonUnfixed", "classZone__DungeonUnfixed.html", "classZone__DungeonUnfixed" ],
     [ "Zone_DungeonYeek", "classZone__DungeonYeek.html", "classZone__DungeonYeek" ],
     [ "Zone_EmbassyPalmia", "classZone__EmbassyPalmia.html", "classZone__EmbassyPalmia" ],
+    [ "Zone_EternalGarden", "classZone__EternalGarden.html", null ],
     [ "Zone_Exile", "classZone__Exile.html", "classZone__Exile" ],
     [ "Zone_Field", "classZone__Field.html", "classZone__Field" ],
     [ "Zone_Gathering", "classZone__Gathering.html", "classZone__Gathering" ],

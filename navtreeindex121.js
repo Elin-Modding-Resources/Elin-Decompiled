@@ -1,5 +1,11 @@
 var NAVTREEINDEX121 =
 {
+"classTraitRodRandom.html#ac49e68a738c706fed4ac3938afa63bec":[1,0,1770,6],
+"classTraitRodRandom.html#ad191c1aa1c1861bbe451185220ccfc35":[1,0,1770,3],
+"classTraitRogue.html":[1,0,1771],
+"classTraitRollingFortune.html":[1,0,1772],
+"classTraitRollingFortune.html#a3bbf3c32a0a5900536ef45411d92097e":[1,0,1772,5],
+"classTraitRollingFortune.html#a56352d29ba42a40a680f1645d755a62a":[1,0,1772,2],
 "classTraitRollingFortune.html#a5997575ca14641c00633be0a788db30e":[1,0,1772,6],
 "classTraitRollingFortune.html#a8a8c01fcc9b5db9140a36c4f9230936c":[1,0,1772,3],
 "classTraitRollingFortune.html#ad1199c02254ea0e8445c5a39e1175ec2":[1,0,1772,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitSpotLumberjack.html":[1,0,1821],
 "classTraitSpotMeeting.html":[1,0,1822],
 "classTraitSpotPrayer.html":[1,0,1823],
-"classTraitSpotRanch.html":[1,0,1824],
-"classTraitSpotSearch.html":[1,0,1825],
-"classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1825,0],
-"classTraitSpotSpawn.html":[1,0,1826],
-"classTraitSpotSpawn.html#a51eeba704fdecd9aea102ed878ad20e8":[1,0,1826,2],
-"classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685":[1,0,1826,1],
-"classTraitSpotSpawn.html#aa8fead14158139521f68cda9f4b16f0a":[1,0,1826,3]
+"classTraitSpotRanch.html":[1,0,1824]
 };

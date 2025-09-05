@@ -192,6 +192,7 @@ var classTrait =
     [ "IsHomeItem", "classTrait.html#a766d43993e82665fc19d2623adf1b132", null ],
     [ "IsLighting", "classTrait.html#aa07fe850412601525bf13deba55fb67c", null ],
     [ "IsLightOn", "classTrait.html#a65fa9e571e5f9760c022cd73e922904c", null ],
+    [ "IsLocalAct", "classTrait.html#a1dadadbbd30fe0dc9246ab446015cb1f", null ],
     [ "IsNightOnlyLight", "classTrait.html#aceab6db1d1509b1a079539e56fc72439", null ],
     [ "IsNoShop", "classTrait.html#a69c36cb3396a41ee14cf18a07a7ed134", null ],
     [ "IsOn", "classTrait.html#ac45c76ca50bef4ccac766640350165f4", null ],

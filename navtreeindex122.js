@@ -1,5 +1,11 @@
 var NAVTREEINDEX122 =
 {
+"classTraitSpotSearch.html":[1,0,1825],
+"classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1825,0],
+"classTraitSpotSpawn.html":[1,0,1826],
+"classTraitSpotSpawn.html#a51eeba704fdecd9aea102ed878ad20e8":[1,0,1826,2],
+"classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685":[1,0,1826,1],
+"classTraitSpotSpawn.html#aa8fead14158139521f68cda9f4b16f0a":[1,0,1826,3],
 "classTraitSpotSpawn.html#acdce588d16b0d5e8f97614c2044fc533":[1,0,1826,0],
 "classTraitSpotStock.html":[1,0,1827],
 "classTraitSpotStock.html#af8870bb4fbba3c2111b67956e3d9d5ad":[1,0,1827,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitTortureHorse.html":[1,0,1887],
 "classTraitTortureHorse.html#a8dcb63efff7b452ada4ca7fe5279830e":[1,0,1887,1],
 "classTraitTortureHorse.html#ae6d2d111d134580ef0b34756e2ba6939":[1,0,1887,0],
-"classTraitTrainer.html":[1,0,1888],
-"classTraitTrainer.html#aa3957b1536c6d87265e99950340079d0":[1,0,1888,0],
-"classTraitTrainer.html#abc012cd71e222c14080302c8a60d1003":[1,0,1888,1],
-"classTraitTrainer.html#aec8937bf3f03094c513dce6760306126":[1,0,1888,2],
-"classTraitTrainingDummy.html":[1,0,1889],
-"classTraitTrainingDummy.html#a1f360870dccb76ca2c5a7d7ca784cb23":[1,0,1889,0],
-"classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,1889,1]
+"classTraitTrainer.html":[1,0,1888]
 };

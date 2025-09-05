@@ -1,5 +1,11 @@
 var NAVTREEINDEX115 =
 {
+"classTraitBaseSpellbook.html#af56a0b5ee651e0662d694f8417859f3e":[1,0,1424,7],
+"classTraitBasketGame.html":[1,0,1425],
+"classTraitBasketGame.html#a25bbd4def567fde1fc68d5c017d129bd":[1,0,1425,0],
+"classTraitBath.html":[1,0,1426],
+"classTraitBath.html#a1fc2fd5db5f5966c5b1c4ded93794d37":[1,0,1426,0],
+"classTraitBed.html":[1,0,1428],
 "classTraitBed.html#a08547dc3eb39076ea1208a52790e84d4":[1,0,1428,0],
 "classTraitBed.html#a18a6505005e68927663e333610713e19":[1,0,1428,4],
 "classTraitBed.html#a26c7c52784804d1ec6c9e557d940500b":[1,0,1428,7],
@@ -243,11 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1475,1],
 "classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1475,3],
 "classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1475,2],
-"classTraitClerk__Fighter.html":[1,0,1476],
-"classTraitClerk__Mage.html":[1,0,1477],
-"classTraitClerk__Merchant.html":[1,0,1478],
-"classTraitClerk__Thief.html":[1,0,1479],
-"classTraitClock.html":[1,0,1480],
-"classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1480,0],
-"classTraitCobWeb.html":[1,0,1481]
+"classTraitClerk__Fighter.html":[1,0,1476]
 };

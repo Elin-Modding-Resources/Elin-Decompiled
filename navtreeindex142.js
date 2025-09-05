@@ -1,5 +1,13 @@
 var NAVTREEINDEX142 =
 {
+"structActRef.html#a54effff6d79c7c53ae231d42fd0bfaa2":[1,0,50,2],
+"structActRef.html#a802f2ae4ec1339ed4a4b3119c1c12dfe":[1,0,50,1],
+"structActRef.html#abfc464fdd3e596a00bdf6800760db8e4":[1,0,50,4],
+"structActRef.html#aed660e8c81b801eb55e081280b5d53b9":[1,0,50,6],
+"structActRef.html#afc9ae67b7e1e41acdf678677ac27aff9":[1,0,50,5],
+"structAct_1_1Cost.html":[1,0,13,0],
+"structAct_1_1Cost.html#a05815cd21bc067ee8a4aee590806e187":[1,0,13,0,1],
+"structAct_1_1Cost.html#acf45d0fa6c98ba7460fdf5b5ac445069":[1,0,13,0,0],
 "structAlgorithms_1_1PathFinderNode.html":[1,0,0,3],
 "structAlgorithms_1_1PathFinderNode.html":[0,4,0,3],
 "structAlgorithms_1_1PathFinderNode.html#a06ca5af71a80e44dd76aefadaf22e915":[0,4,0,3,3],
@@ -153,7 +161,7 @@ var NAVTREEINDEX142 =
 "structXY.html#a671ff8952388c884c10782e46808c8b1":[1,0,2073,2],
 "structXY.html#a86ef9f95d24632f70207d603689a4b70":[1,0,2073,0],
 "structXY.html#a97f055b4700397c064faee99a9309572":[1,0,2073,1],
-"structZoneBlueprint_1_1MapGenSetting.html":[1,0,2156,0],
-"structZoneBlueprint_1_1MapGenSetting.html#ab1962805b6183a17dbfb9ce3c39917c0":[1,0,2156,0,1],
-"structZoneBlueprint_1_1MapGenSetting.html#af230cefef8174422542d920b34051381":[1,0,2156,0,0]
+"structZoneBlueprint_1_1MapGenSetting.html":[1,0,2157,0],
+"structZoneBlueprint_1_1MapGenSetting.html#ab1962805b6183a17dbfb9ce3c39917c0":[1,0,2157,0,1],
+"structZoneBlueprint_1_1MapGenSetting.html#af230cefef8174422542d920b34051381":[1,0,2157,0,0]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX117 =
 {
+"classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1523,1],
+"classTraitDoorman__Thief.html":[1,0,1524],
+"classTraitDoorman__Thief.html#aa3be6ee3bac2d8f2d9d6026cdf6fda9b":[1,0,1524,0],
+"classTraitDoorman__Thief.html#af1532544d4d8de97f8765b22fed55b85":[1,0,1524,1],
+"classTraitDrawingPaper.html":[1,0,1527],
+"classTraitDrawingPaper.html#a0d1677abcf50f148fc32ef462eec6ea4":[1,0,1527,2],
 "classTraitDrawingPaper.html#a9d3c27a16d974dcd0cef28907885c8b5":[1,0,1527,0],
 "classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1527,1],
 "classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1527,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitGachaBall.html#a21aa13f411fdbdad79ced829f4352fd5":[1,0,1582,0],
 "classTraitGachaBall.html#a48ed88c0c4253754c083b5c5ee1f0c36":[1,0,1582,1],
 "classTraitGainPrecious.html":[1,0,1583],
-"classTraitGainPrecious.html#aaf4de6e5938f0def1751c3b72fdbb97d":[1,0,1583,0],
-"classTraitGallows.html":[1,0,1584],
-"classTraitGallows.html#a0ded69d79de1041a109a0a649861d915":[1,0,1584,0],
-"classTraitGamble.html":[1,0,1585],
-"classTraitGamble.html#a27e68a9871ec72c0a534f2d5c5461950":[1,0,1585,5],
-"classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec":[1,0,1585,3],
-"classTraitGamble.html#a7c4ff287140ce98f429351a6f26ff8cc":[1,0,1585,2]
+"classTraitGainPrecious.html#aaf4de6e5938f0def1751c3b72fdbb97d":[1,0,1583,0]
 };

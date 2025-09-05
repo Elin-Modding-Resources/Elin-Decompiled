@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.193 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.194 Nightly</span>
    </div>
   </td>
  </tr>
@@ -92,24 +92,31 @@ $(document).ready(function(){initNavTree('TraitViewMap_8cs_source.html',''); ini
   <div class="headertitle"><div class="title">TraitViewMap.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TraitViewMap_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitViewMap.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitViewMap.html">TraitViewMap</a> : <a class="code hl_class" href="classTraitItem.html">TraitItem</a></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitViewMap.html#a030e83904573df7708d851c7661e7c9d">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitViewMap.html#a030e83904573df7708d851c7661e7c9d">CanUseInUserZone</a> =&gt; <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1">OnUse</a>(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a718bbb620f45aedfa48c9d5078fa5895">ViewMap</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>();</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    }</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+<a href="TraitViewMap_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitViewMap.html">    3</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitViewMap.html">TraitViewMap</a> : <a class="code hl_class" href="classTraitItem.html">TraitItem</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitViewMap.html#a18db1956c37d76da631fd49fe58a1804">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitViewMap.html#a18db1956c37d76da631fd49fe58a1804">IsLocalAct</a> =&gt; <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTraitViewMap.html#a030e83904573df7708d851c7661e7c9d">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitViewMap.html#a030e83904573df7708d851c7661e7c9d">CanUseInUserZone</a> =&gt; <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1">OnUse</a>(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#a718bbb620f45aedfa48c9d5078fa5895">ViewMap</a>.<a class="code hl_function" href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">Activate</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassActionMode_html"><div class="ttname"><a href="classActionMode.html">ActionMode</a></div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00005">ActionMode.cs:6</a></div></div>
 <div class="ttc" id="aclassActionMode_html_a718bbb620f45aedfa48c9d5078fa5895"><div class="ttname"><a href="classActionMode.html#a718bbb620f45aedfa48c9d5078fa5895">ActionMode.ViewMap</a></div><div class="ttdeci">static AM_ViewMap ViewMap</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00063">ActionMode.cs:63</a></div></div>
 <div class="ttc" id="aclassActionMode_html_a9b2753f2ded7065a6a1bd3534511d3e2"><div class="ttname"><a href="classActionMode.html#a9b2753f2ded7065a6a1bd3534511d3e2">ActionMode.Activate</a></div><div class="ttdeci">void Activate(bool toggle=true, bool forceActivate=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00339">ActionMode.cs:339</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassTraitItem_html"><div class="ttname"><a href="classTraitItem.html">TraitItem</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitItem_8cs_source.html#l00001">TraitItem.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitViewMap_html"><div class="ttname"><a href="classTraitViewMap.html">TraitViewMap</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitViewMap_8cs_source.html#l00001">TraitViewMap.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitViewMap_html_a030e83904573df7708d851c7661e7c9d"><div class="ttname"><a href="classTraitViewMap.html#a030e83904573df7708d851c7661e7c9d">TraitViewMap.CanUseInUserZone</a></div><div class="ttdeci">override bool CanUseInUserZone</div><div class="ttdef"><b>Definition:</b> <a href="TraitViewMap_8cs_source.html#l00003">TraitViewMap.cs:3</a></div></div>
-<div class="ttc" id="aclassTraitViewMap_html_ac8d53c46465a201126d02202b83f3be1"><div class="ttname"><a href="classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1">TraitViewMap.OnUse</a></div><div class="ttdeci">override bool OnUse(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitViewMap_8cs_source.html#l00005">TraitViewMap.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitViewMap_html"><div class="ttname"><a href="classTraitViewMap.html">TraitViewMap</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitViewMap_8cs_source.html#l00003">TraitViewMap.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitViewMap_html_a030e83904573df7708d851c7661e7c9d"><div class="ttname"><a href="classTraitViewMap.html#a030e83904573df7708d851c7661e7c9d">TraitViewMap.CanUseInUserZone</a></div><div class="ttdeci">override bool CanUseInUserZone</div><div class="ttdef"><b>Definition:</b> <a href="TraitViewMap_8cs_source.html#l00007">TraitViewMap.cs:7</a></div></div>
+<div class="ttc" id="aclassTraitViewMap_html_a18db1956c37d76da631fd49fe58a1804"><div class="ttname"><a href="classTraitViewMap.html#a18db1956c37d76da631fd49fe58a1804">TraitViewMap.IsLocalAct</a></div><div class="ttdeci">override bool IsLocalAct</div><div class="ttdef"><b>Definition:</b> <a href="TraitViewMap_8cs_source.html#l00005">TraitViewMap.cs:5</a></div></div>
+<div class="ttc" id="aclassTraitViewMap_html_ac8d53c46465a201126d02202b83f3be1"><div class="ttname"><a href="classTraitViewMap.html#ac8d53c46465a201126d02202b83f3be1">TraitViewMap.OnUse</a></div><div class="ttdeci">override bool OnUse(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitViewMap_8cs_source.html#l00009">TraitViewMap.cs:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

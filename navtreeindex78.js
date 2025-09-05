@@ -1,5 +1,9 @@
 var NAVTREEINDEX78 =
 {
+"classLayerInventory.html#afa89e25d5e47599934e64b8a442534bf":[1,0,798,28],
+"classLayerJournal.html":[1,0,799],
+"classLayerJournal.html#a3c310d1043c10e8c7881b52eb1d3cb07":[1,0,799,4],
+"classLayerJournal.html#a4e462ae6e0cbffc6c34f531b365fb875":[1,0,799,1],
 "classLayerJournal.html#a9de89428ad5def5936a9b5d8ca79cd89":[1,0,799,0],
 "classLayerJournal.html#abc245d752abd342a9d06893660528d91":[1,0,799,5],
 "classLayerJournal.html#adf956ee85b924d587c2bd806ce4a629d":[1,0,799,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerQuestBoard.html#ad9c37992ff9186550bdea7a61f72a225":[1,0,814,2],
 "classLayerQuestBoard.html#ad9fb289ee957d631cedebf50fa0b5064":[1,0,814,13],
 "classLayerQuestBoard.html#aef49334d22ec1cdfba2e86ed2b816c5f":[1,0,814,17],
-"classLayerQuestBoard.html#af32129b645529338a0f6d71b7ed6d3cc":[1,0,814,11],
-"classLayerQuickMenu.html":[1,0,815],
-"classLayerQuickMenu.html#a0e38f6f7f74ce98faca47e7c4d83bc25":[1,0,815,4],
-"classLayerQuickMenu.html#a0f688d2c4dfe520bc94ec6d3b6a88e89":[1,0,815,3],
-"classLayerQuickMenu.html#a59b2a450322b2407acb198b940b0079d":[1,0,815,2]
+"classLayerQuestBoard.html#af32129b645529338a0f6d71b7ed6d3cc":[1,0,814,11]
 };
