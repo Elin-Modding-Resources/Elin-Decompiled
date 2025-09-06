@@ -6,6 +6,7 @@ var classThingGen =
     [ "CreateBill", "classThingGen.html#ad515f56729f1976d1220c0aceee8f99c", null ],
     [ "CreateBlock", "classThingGen.html#a3d7347076c20fe199b11069611a2711d", null ],
     [ "CreateCardboardBox", "classThingGen.html#ae07aa2249e03c6738cdd93c8054a9f65", null ],
+    [ "CreateCassette", "classThingGen.html#a808918a40dd4d2d2f0bcd92dcd0fb3bf", null ],
     [ "CreateCurrency", "classThingGen.html#ae7d129df204b9092499fad5f944c750e", null ],
     [ "CreateFloor", "classThingGen.html#a9acd66525d43b1297dff782f6ce6b562", null ],
     [ "CreateFromCategory", "classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8", null ],

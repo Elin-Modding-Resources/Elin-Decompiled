@@ -48,6 +48,8 @@ var classPlayer_1_1Flags =
     [ "magicChestSent", "classPlayer_1_1Flags.html#a162b7b621a261de0baaa5d7cd3337e89", null ],
     [ "main", "classPlayer_1_1Flags.html#a3dfc167c9e36aab9b7bd9af3d0de093f", null ],
     [ "pickedMelilithTreasure", "classPlayer_1_1Flags.html#af478a3f834f95c71c3e79d0f2f03225d", null ],
+    [ "reward_gould", "classPlayer_1_1Flags.html#a9c958479727be3199b727db656feb57a", null ],
+    [ "reward_killkill", "classPlayer_1_1Flags.html#a88ed686e6328c4712543f5873f285ca0", null ],
     [ "start", "classPlayer_1_1Flags.html#a56be341f71376da615f18635efc20be1", null ],
     [ "statueShipped", "classPlayer_1_1Flags.html#ac752e751c68fed05d32dc9432c0f8486", null ],
     [ "storyFiama", "classPlayer_1_1Flags.html#a84f6a6d4937597697626388aa307243c", null ],

@@ -1,5 +1,10 @@
 var NAVTREEINDEX28 =
 {
+"classAM__Region.html#ab68cb3e702ce50247d2763660b2edf7d":[1,0,155,1],
+"classAM__RemoveDesignation.html":[1,0,156],
+"classAM__RemoveDesignation.html#a1508904f1650ad8d9357abaefabc3970":[1,0,156,1],
+"classAM__RemoveDesignation.html#a2fbd1a9ab855072d5e89358a370e2e36":[1,0,156,5],
+"classAM__RemoveDesignation.html#a49014db0dec0a809c6529965aa834d94":[1,0,156,4],
 "classAM__RemoveDesignation.html#aca990a0744e09728060738c11daf81e8":[1,0,156,0],
 "classAM__RemoveDesignation.html#ad5a7b4aefb52fab4d6f2d37477664546":[1,0,156,3],
 "classAM__RemoveDesignation.html#ade1b6c67d7b3fc9d8bed1fbd23c8ae7b":[1,0,156,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX28 =
 "classActMelee.html#ac184692d2c011cb8abcd99bbf0badf29":[1,0,33,12],
 "classActMelee.html#ad5256811dd4d62af9138afd1e657ec5c":[1,0,33,15],
 "classActMelee.html#af6157d89fe35f11db3810c102af185bf":[1,0,33,7],
-"classActMeleeBladeStorm.html":[1,0,34],
-"classActMeleeBladeStorm.html#a3da7f658946c55943455d836dba9ce11":[1,0,34,0],
-"classActMeleeCounter.html":[1,0,35],
-"classActMeleeCounter.html#a4e63df65f199c4f4c26ad46b5c184883":[1,0,35,2],
-"classActMeleeCounter.html#a6352427f6ad86e2b9034806c64d9e410":[1,0,35,3],
-"classActMeleeCounter.html#a80fcda0aa4db98f5ad749c457370530c":[1,0,35,4]
+"classActMeleeBladeStorm.html":[1,0,34]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.194 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.195 Nightly</span>
    </div>
   </td>
  </tr>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('DOMAIN_8cs_source.html',''); initResiz
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classDomain.html#ab7b3c1905cbb4e120bcbf3e2a6635e60">   47</a></span>    <span class="keyword">public</span> Sprite <a class="code hl_function" href="classDomain.html#ab7b3c1905cbb4e120bcbf3e2a6635e60">GetSprite</a>()</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">string</span> text = <a class="code hl_variable" href="classDomain.html#affa6cbb1b36f9d7b53245f4b9e3ed1e4">source</a>.alias.Remove(0, 3).ToLower();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">string</span> text = <a class="code hl_variable" href="classDomain.html#affa6cbb1b36f9d7b53245f4b9e3ed1e4">source</a>.alias.Remove(0, 3).ToLowerInvariant();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Image/Faction/&quot;</span> + text);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>

@@ -424,7 +424,9 @@ var hierarchy =
             ] ],
             [ "BaseDebuff", "classBaseDebuff.html", [
               [ "BaseBuff", "classBaseBuff.html", [
-                [ "ConBoost", "classConBoost.html", null ],
+                [ "ConBoost", "classConBoost.html", [
+                  [ "ConSevenSense", "classConSevenSense.html", null ]
+                ] ],
                 [ "ConBreath", "classConBreath.html", null ],
                 [ "ConBrightnessOfLife", "classConBrightnessOfLife.html", null ],
                 [ "ConChampagne", "classConChampagne.html", null ],
@@ -2452,6 +2454,7 @@ var hierarchy =
             [ "LayerDragGrid", "classLayerDragGrid.html", null ]
           ] ],
           [ "LayerBuild", "classLayerBuild.html", null ],
+          [ "LayerCalendar", "classLayerCalendar.html", null ],
           [ "LayerChara", "classLayerChara.html", null ],
           [ "LayerCollectible", "classLayerCollectible.html", null ],
           [ "LayerColorPicker", "classLayerColorPicker.html", null ],

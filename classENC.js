@@ -81,6 +81,7 @@ var classENC =
     [ "resMutation", "classENC.html#af70c292bf0a214569922670af367df07", null ],
     [ "resWeather", "classENC.html#a6ae415ffbcfbeb35bf6509440fd8953e", null ],
     [ "revealFaith", "classENC.html#a755ce3011d74da18e450b0795509e01a", null ],
+    [ "rusher", "classENC.html#ad571fdce0ca2a076cffd6a5cb2aa50bf", null ],
     [ "safetyMeasure", "classENC.html#a75ce9d45a34c4d41b8eb7af8bb470c23", null ],
     [ "searchRange", "classENC.html#a71b8edd67d1269d8facb7fa5cff58b04", null ],
     [ "seeInvisible", "classENC.html#a8edaeae97b0f364ec4d21a3ca879056b", null ],
