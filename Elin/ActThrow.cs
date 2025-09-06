@@ -130,7 +130,7 @@ public class ActThrow : ActBaseAttack
 			result = Effect.Get<EffectIRenderer>((t.trait is TraitBall) ? "throw_ball" : "throw").Play((c.isChara && c.Chara.host != null) ? c.Chara.host : c, t, c.pos, p, 0.2f);
 			t.renderer.SetFirst(first: false, c.renderer.position);
 		}
-		if (!t.HasElement(410))
+		if (!t.HasElement(410) || method == ThrowMethod.Punish)
 		{
 			t._Move(p);
 		}
@@ -311,6 +311,10 @@ public class ActThrow : ActBaseAttack
 		if (!flag && Act.TC != null)
 		{
 			AttackProcess.Current.Prepare(c.Chara, t, Act.TC, Act.TP, 0, _isThrow: true);
+			if (method == ThrowMethod.Punish && t.rarity >= Rarity.Legendary)
+			{
+				AttackProcess.Current.critFury = true;
+			}
 			if (AttackProcess.Current.Perform(0, hasHit: false))
 			{
 				if (Act.TC.IsAliveInCurrentZone && t.trait is TraitErohon && Act.TC.id == t.c_idRefName)

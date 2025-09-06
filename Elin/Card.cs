@@ -3970,6 +3970,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			return;
 		}
 		bool flag = originalTarget != null;
+		Action onEvade = null;
 		if (isChara && !isRestrained && !HasElement(1241) && !flag)
 		{
 			AttackSource attackSource2 = attackSource;
@@ -4017,6 +4018,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				if (attackSource == AttackSource.MagicSword)
 				{
 					num3 += 2;
+				}
+				if (attackSource == AttackSource.MagicArrow && origin != null && origin.HasElement(1244))
+				{
+					num3++;
 				}
 				dmg = Element.GetResistDamage(dmg, Evalue(e.source.aliasRef), num3);
 				dmg = dmg * 100 / (100 + Mathf.Clamp(Evalue(961) * 5, -50, 200));
@@ -4201,12 +4206,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		ZoneInstanceBout zoneInstanceBout = EClass._zone.instance as ZoneInstanceBout;
 		bool flag2 = false;
-		bool flag3 = false;
 		if (hp < 0 && Religion.recentWrath == null)
 		{
 			if (isRestrained && IsPCFaction && EClass._zone.IsPCFaction && (!IsPC || (Chara.ai is AI_Torture && Chara.ai.IsRunning)))
 			{
-				EvadeDeath();
+				EvadeDeath(null);
 				if (Chara.stamina.value > 0 && (EClass.rnd(2) == 0 || !IsPC))
 				{
 					Chara.stamina.Mod(-1);
@@ -4214,52 +4218,54 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			else if (IsInstalled && pos.HasBlock && trait.IsDoor)
 			{
-				EvadeDeath();
+				EvadeDeath(null);
 			}
 			else if (!trait.CanBeDestroyed)
 			{
-				EvadeDeath();
+				EvadeDeath(null);
 			}
 			else if (HasEditorTag(EditorTag.Invulnerable) || (HasEditorTag(EditorTag.InvulnerableToMobs) && (origin == null || !origin.IsPCParty)))
 			{
-				EvadeDeath();
+				EvadeDeath(null);
 			}
 			else if (isChara)
 			{
 				if (Chara.HasCondition<ConInvulnerable>())
 				{
-					EvadeDeath();
+					EvadeDeath(null);
 				}
 				else if (IsPC && EClass.debug.godMode)
 				{
-					EvadeDeath();
+					EvadeDeath(null);
 				}
 				else if (Chara.host != null || (weapon != null && weapon.HasElement(485)))
 				{
-					EvadeDeath();
+					EvadeDeath(null);
 					flag2 = true;
 				}
 				else
 				{
 					if (origin != null && origin != this && Evalue(436) > 0 && !HasCondition<ConFractured>())
 					{
-						int num13 = (HasElement(1218) ? MaxHP : (MaxHP / 2));
-						if (num10 > num13)
+						int half = (HasElement(1218) ? MaxHP : (MaxHP / 2));
+						if (num10 > half)
 						{
-							EvadeDeath();
-							flag3 = true;
-							Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
-							hp = Mathf.Min(num13 * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
-							goto IL_0ed7;
+							EvadeDeath(delegate
+							{
+								Say("guts", this);
+								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
+								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
+							});
+							goto IL_0e69;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
 					{
-						EvadeDeath();
+						EvadeDeath(null);
 					}
 					else if (LayerDrama.IsActive() && IsPC)
 					{
-						EvadeDeath();
+						EvadeDeath(null);
 					}
 					else
 					{
@@ -4277,25 +4283,27 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							}
 							if (EClass.player.invlunerable)
 							{
-								EvadeDeath();
-								goto IL_0ed7;
+								EvadeDeath(null);
+								goto IL_0e69;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
 						{
-							Say("fate", this);
-							PlaySound("revive");
-							PlayEffect("aura_heaven");
-							Chara.stamina.Mod(-Chara.stamina.max / 2);
-							Chara.AddCondition<ConInvulnerable>();
-							EvadeDeath();
+							EvadeDeath(delegate
+							{
+								Say("fate", this);
+								PlaySound("revive");
+								PlayEffect("aura_heaven");
+								Chara.stamina.Mod(-Chara.stamina.max / 2);
+								Chara.AddCondition<ConInvulnerable>();
+							});
 						}
 					}
 				}
 			}
 		}
-		goto IL_0ed7;
-		IL_0ed7:
+		goto IL_0e69;
+		IL_0e69:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4486,8 +4494,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else if (isChara)
 		{
-			int num14 = ((attackSource != AttackSource.Condition && attackSource != AttackSource.WeaponEnchant) ? 1 : 2);
-			if (num9 >= num14)
+			int num13 = ((attackSource != AttackSource.Condition && attackSource != AttackSource.WeaponEnchant) ? 1 : 2);
+			if (num9 >= num13)
 			{
 				if (e != Element.Void)
 				{
@@ -4499,10 +4507,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		if (flag3)
-		{
-			Say("guts", this);
-		}
+		onEvade?.Invoke();
 		if (isChara)
 		{
 			if (flag2)
@@ -4521,8 +4526,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				if (attackSource == AttackSource.Melee || attackSource == AttackSource.Range)
 				{
-					int num15 = origin.Dist(this);
-					if (attackSource == AttackSource.Melee && HasElement(1221) && num15 <= Evalue(1221))
+					int num14 = origin.Dist(this);
+					if (attackSource == AttackSource.Melee && HasElement(1221) && num14 <= Evalue(1221))
 					{
 						int ele2 = ((Chara.MainElement == Element.Void) ? 924 : Chara.MainElement.id);
 						if (id == "hedgehog_ether")
@@ -4532,7 +4537,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						Say("reflect_thorne", this, origin);
 						origin.DamageHP(Mathf.Clamp(dmg / 10, 1, MaxHP / (origin.IsPowerful ? 200 : 20)), ele2, Power, AttackSource.Condition, this);
 					}
-					if (HasElement(1223) && num15 <= Evalue(1223))
+					if (HasElement(1223) && num14 <= Evalue(1223))
 					{
 						int ele3 = ((Chara.MainElement == Element.Void) ? 923 : Chara.MainElement.id);
 						Say("reflect_acid", this, origin);
@@ -4559,17 +4564,17 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		int num16 = ((EClass.rnd(2) == 0) ? 1 : 0);
+		int num15 = ((EClass.rnd(2) == 0) ? 1 : 0);
 		if (attackSource == AttackSource.Condition)
 		{
-			num16 = 1 + EClass.rnd(2);
+			num15 = 1 + EClass.rnd(2);
 		}
-		if (num16 > 0)
+		if (num15 > 0)
 		{
-			bool flag4 = Chara.HasCondition<ConPoison>() || ((e.id == 915 || e.id == 923) && ResistLv(Evalue(955)) < 4);
-			AddBlood(num16, flag4 ? 6 : (-1));
+			bool flag3 = Chara.HasCondition<ConPoison>() || ((e.id == 915 || e.id == 923) && ResistLv(Evalue(955)) < 4);
+			AddBlood(num15, flag3 ? 6 : (-1));
 		}
-		bool flag5 = true;
+		bool flag4 = true;
 		switch (e.id)
 		{
 		case 910:
@@ -4610,14 +4615,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			break;
 		case 918:
-			flag5 = false;
+			flag4 = false;
 			if (Chance(30 + eleP / 5, 100))
 			{
 				Chara.AddCondition<ConParalyze>(eleP);
 			}
 			break;
 		case 914:
-			flag5 = false;
+			flag4 = false;
 			if (EClass.rnd(3) != 0)
 			{
 				if (Chance(30 + eleP / 5, 100))
@@ -4657,7 +4662,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			break;
 		case 920:
-			flag5 = false;
+			flag4 = false;
 			if (Chance(5 + eleP / 25, 40))
 			{
 				Chara.AddCondition<ConBlind>(eleP / 2);
@@ -4709,20 +4714,20 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			Chara.AddCondition<ConGravity>(2000);
 			Condition.ignoreEffect = false;
 		}
-		if (Chara.conSleep != null && flag5)
+		if (Chara.conSleep != null && flag4)
 		{
 			Chara.conSleep.Kill();
 		}
 		if (IsPC)
 		{
-			float num17 = (float)hp / (float)MaxHP;
+			float num16 = (float)hp / (float)MaxHP;
 			if (Evalue(1421) > 0)
 			{
-				num17 = (float)Chara.mana.value / (float)Chara.mana.max;
+				num16 = (float)Chara.mana.value / (float)Chara.mana.max;
 			}
-			if (num17 < 0.3f)
+			if (num16 < 0.3f)
 			{
-				PlaySound("heartbeat", 1f - num17 * 2f);
+				PlaySound("heartbeat", 1f - num16 * 2f);
 			}
 		}
 		if (!IsPC && hp < MaxHP / 5 && Evalue(423) <= 0 && dmg * 100 / MaxHP + 10 > EClass.rnd(IsPowerful ? 400 : 150) && !HasCondition<ConFear>())
@@ -4775,13 +4780,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			return false;
 		}
-		void EvadeDeath()
+		void EvadeDeath(Action action)
 		{
 			hp = 0;
 			if (Evalue(1421) > 0 && isChara && Chara.mana.value < 0)
 			{
 				Chara.mana.value = 0;
 			}
+			onEvade = action;
 		}
 		void Heal()
 		{
@@ -4799,29 +4805,29 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				int valueOrDefault2 = (origin.Evalue(661) + weapon?.Evalue(661, ignoreGlobalElement: true)).GetValueOrDefault();
 				if (valueOrDefault > 0 && attackSource == AttackSource.Melee && origin.isChara && !origin.Chara.ignoreSPAbsorb && Chara.IsHostile(origin as Chara))
 				{
-					int num18 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, valueOrDefault / 10));
-					origin.Chara.stamina.Mod(num18);
+					int num17 = EClass.rnd(3 + Mathf.Clamp(dmg / 100, 0, valueOrDefault / 10));
+					origin.Chara.stamina.Mod(num17);
 					if (IsAliveInCurrentZone)
 					{
-						Chara.stamina.Mod(-num18);
+						Chara.stamina.Mod(-num17);
 					}
 				}
 				if (origin.HasElement(1350) && attackSource == AttackSource.Melee)
 				{
-					int num19 = EClass.rndHalf(2 + Mathf.Clamp(dmg / 10, 0, origin.Chara.GetPietyValue() + 10));
-					origin.Chara.mana.Mod(num19);
+					int num18 = EClass.rndHalf(2 + Mathf.Clamp(dmg / 10, 0, origin.Chara.GetPietyValue() + 10));
+					origin.Chara.mana.Mod(num18);
 					if (IsAliveInCurrentZone)
 					{
-						Chara.mana.Mod(-num19);
+						Chara.mana.Mod(-num18);
 					}
 				}
 				if (valueOrDefault2 > 0 && attackSource == AttackSource.Melee)
 				{
-					int num20 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, valueOrDefault2 + 10));
-					origin.Chara.mana.Mod(num20);
+					int num19 = EClass.rnd(2 + Mathf.Clamp(dmg / 10, 0, valueOrDefault2 + 10));
+					origin.Chara.mana.Mod(num19);
 					if (IsAliveInCurrentZone)
 					{
-						Chara.mana.Mod(-num20);
+						Chara.mana.Mod(-num19);
 					}
 				}
 			}
@@ -5036,6 +5042,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				int num4 = array[1].ToInt();
 				if (num4 >= 1000 || num4 > EClass.rnd(1000) || EClass.debug.godMode)
 				{
+					CardRow cardRow = EClass.sources.cards.map[array[0]];
+					if (cardRow != null && cardRow.Category.slot != 0 && cardRow.quality == 0 && EClass.pc.Evalue(1660) * 25 > EClass.rnd(100))
+					{
+						CardBlueprint.SetRarity(Rarity.Legendary);
+					}
 					list.Add(ThingGen.Create(array[0]).SetNum((num4 < 1000) ? 1 : (num4 / 1000 + ((EClass.rnd(1000) > num4 % 1000) ? 1 : 0))));
 				}
 			}
@@ -6741,7 +6752,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Chara.bio.SetGender(row.gender);
 			Chara.bio.SetPortrait(Chara);
-			Chara.idFaith = row.deity.ToLower();
+			Chara.idFaith = row.deity.ToLowerInvariant();
 		}
 		if (row.type == 4 || row.type == 5 || row.type == 7)
 		{

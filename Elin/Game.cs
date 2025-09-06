@@ -520,6 +520,14 @@ public class Game : EClass
 			{
 			}
 		}
+		if (version.IsBelow(0, 23, 195))
+		{
+			Zone zone = spatials.Find("startVillage2");
+			if (zone != null && zone.visitCount > 0)
+			{
+				world.SendPackage(ThingGen.CreateParcel(null, ThingGen.CreateCassette(113), ThingGen.CreateCassette(12)));
+			}
+		}
 		if (version.IsBelow(0, 23, 52))
 		{
 			player.flags.toggleHotbarHighlightActivated = true;

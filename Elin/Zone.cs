@@ -1518,7 +1518,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			point = map.bounds.GetRandomSurface(centered: false, walkable: true, !IsPCFaction && !(this is Zone_Civilized)) ?? map.bounds.GetRandomPoint();
 		}
-		return point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false) ?? EClass._map.GetCenterPos();
+		return point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false) ?? EClass._map.GetCenterPos().GetNearestPoint();
 	}
 
 	public void AddGlobalCharasOnActivate()

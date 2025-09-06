@@ -209,6 +209,10 @@ public class AttackProcess : EClass
 				toHitBase = toHitBase * 75 / 100;
 			}
 			penetration = Mathf.Clamp(weaponSkill.Value / 10 + 5, 5, 20) + CC.Evalue(92);
+			if (CC.HasElement(1244))
+			{
+				penetration += 25;
+			}
 			if (IsMartialWeapon)
 			{
 				dBonus += weapon.DMG;
@@ -952,6 +956,10 @@ public class AttackProcess : EClass
 		if (critFury)
 		{
 			crit = true;
+			return true;
+		}
+		if (CC.HasElement(1244) && CC.HasCondition<ConSevenSense>())
+		{
 			return true;
 		}
 		if (TC != null)

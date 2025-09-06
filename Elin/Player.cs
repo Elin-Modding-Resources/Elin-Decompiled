@@ -646,6 +646,30 @@ public class Player : EClass
 			}
 		}
 
+		public int reward_gould
+		{
+			get
+			{
+				return ints[19];
+			}
+			set
+			{
+				ints[19] = value;
+			}
+		}
+
+		public int reward_killkill
+		{
+			get
+			{
+				return ints[20];
+			}
+			set
+			{
+				ints[20] = value;
+			}
+		}
+
 		[OnSerializing]
 		private void _OnSerializing(StreamingContext context)
 		{
@@ -1716,7 +1740,7 @@ public class Player : EClass
 			int mtp = ((num == 0) ? 100 : (75 + num * 25));
 			if (num > 0 || element2 == null || element2.vPotential == 0)
 			{
-				Msg.Say("dream_spell", EClass.sources.elements.alias[row.aliasRef].GetText("altname").Split(',')[0].ToLower());
+				Msg.Say("dream_spell", EClass.sources.elements.alias[row.aliasRef].GetText("altname").Split(',')[0].ToLowerInvariant());
 				EClass.pc.GainAbility(row.id, mtp);
 			}
 		}

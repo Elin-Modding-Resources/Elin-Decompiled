@@ -53,6 +53,13 @@ public class StatsMana : Stats
 		if (cC.IsAliveInCurrentZone)
 		{
 			cC.elements.ModExp(303, Mathf.Clamp(-a * 10, 10, 200));
+			if (cC.HasElement(1245) && !cC.HasCooldown(1245))
+			{
+				cC.AddCooldown(1245);
+				cC.AddCondition<ConSevenSense>(cC.Power);
+				cC.Cure(CureType.Boss);
+				cC.HealHP(cC.MaxHP / 2);
+			}
 		}
 	}
 }

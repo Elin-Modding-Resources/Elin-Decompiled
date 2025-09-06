@@ -20,5 +20,6 @@ public enum AttackSource
 	DeathSentense,
 	Shockwave,
 	MagicSword,
-	MoonSpear
+	MoonSpear,
+	MagicArrow
 }

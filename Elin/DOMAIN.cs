@@ -46,7 +46,7 @@ public class Domain : EClass
 
 	public Sprite GetSprite()
 	{
-		string text = source.alias.Remove(0, 3).ToLower();
+		string text = source.alias.Remove(0, 3).ToLowerInvariant();
 		return ResourceCache.Load<Sprite>("Media/Graphics/Image/Faction/" + text);
 	}
 }

@@ -1002,27 +1002,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			foreach (Chara member in EClass.pc.party.members)
-			{
-				member.InstantEat();
-				if (!member.IsPC)
-				{
-					string id = "test";
-					member.spriteReplacer = new SpriteReplacer();
-					member.spriteReplacer.HasSprite(id);
-					member._CreateRenderer();
-				}
-			}
-			for (int j = 0; j < 10; j++)
-			{
-				Thing thing2 = ThingGen.CreateFromCategory("fish", 999);
-				thing2.SetTier(EScriptable.rnd(4));
-				EClass.pc.Pick(thing2);
-				thing2 = ThingGen.Create("89");
-				thing2.SetTier(EScriptable.rnd(4));
-				EClass.pc.Pick(thing2);
-			}
-			EClass.pc.PlayEffect("phoenix");
+			EClass.ui.AddLayer<LayerCalendar>();
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))
@@ -1041,9 +1021,9 @@ public class CoreDebug : EScriptable
 		{
 			EClass.core.WaitForEndOfFrame(delegate
 			{
-				string id2 = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
+				string id = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
 				EClass.scene.Init(Scene.Mode.None);
-				Game.Load(id2, cloud: false);
+				Game.Load(id, cloud: false);
 			});
 		}
 		if (Input.GetKeyDown(KeyCode.F7))
@@ -1088,7 +1068,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int k = 0; k < advanceMin; k++)
+				for (int j = 0; j < advanceMin; j++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}
@@ -1228,8 +1208,8 @@ public class CoreDebug : EScriptable
 		{
 			for (int num4 = hitPoint.detail.things.Count - 1; num4 >= 0; num4--)
 			{
-				Thing thing3 = hitPoint.detail.things[num4];
-				Debug.Log(thing3.id + "/" + thing3.Pref.height + "/" + thing3.trait?.ToString() + "/" + thing3.source.tileType.CanStack + "/" + thing3.source.tileType?.ToString() + "/" + thing3.isSynced + "/" + RenderObject.syncList.Contains(thing3.renderer));
+				Thing thing2 = hitPoint.detail.things[num4];
+				Debug.Log(thing2.id + "/" + thing2.Pref.height + "/" + thing2.trait?.ToString() + "/" + thing2.source.tileType.CanStack + "/" + thing2.source.tileType?.ToString() + "/" + thing2.isSynced + "/" + RenderObject.syncList.Contains(thing2.renderer));
 			}
 		}
 		if (!Application.isEditor)
@@ -1305,39 +1285,39 @@ public class CoreDebug : EScriptable
 		case DebugHotkey.Item:
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				Thing thing4 = ThingGen.Create("stairsDown_cave");
-				EClass._zone.AddCard(thing4, EClass.pc.pos);
-				thing4.SetPlaceState(PlaceState.installed);
+				Thing thing3 = ThingGen.Create("stairsDown_cave");
+				EClass._zone.AddCard(thing3, EClass.pc.pos);
+				thing3.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				Thing thing5 = ThingGen.Create("stairs");
-				EClass._zone.AddCard(thing5, EClass.pc.pos);
-				thing5.SetPlaceState(PlaceState.installed);
+				Thing thing4 = ThingGen.Create("stairs");
+				EClass._zone.AddCard(thing4, EClass.pc.pos);
+				thing4.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				Thing thing6 = ThingGen.Create("sign");
-				EClass._zone.AddCard(thing6, hitPoint);
-				thing6.SetPlaceState(PlaceState.installed);
+				Thing thing5 = ThingGen.Create("sign");
+				EClass._zone.AddCard(thing5, hitPoint);
+				thing5.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 			{
-				Thing thing7 = ThingGen.Create("sign2");
-				EClass._zone.AddCard(thing7, hitPoint);
-				thing7.SetPlaceState(PlaceState.installed);
+				Thing thing6 = ThingGen.Create("sign2");
+				EClass._zone.AddCard(thing6, hitPoint);
+				thing6.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha5))
 			{
-				Thing thing8 = ThingGen.Create("well");
-				EClass._zone.AddCard(thing8, hitPoint);
-				thing8.SetPlaceState(PlaceState.installed);
+				Thing thing7 = ThingGen.Create("well");
+				EClass._zone.AddCard(thing7, hitPoint);
+				thing7.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha6))
 			{
-				Thing thing9 = ThingGen.Create("altar");
-				EClass._zone.AddCard(thing9, hitPoint);
-				thing9.SetPlaceState(PlaceState.installed);
+				Thing thing8 = ThingGen.Create("altar");
+				EClass._zone.AddCard(thing8, hitPoint);
+				thing8.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha7))
 			{
@@ -1494,7 +1474,7 @@ public class CoreDebug : EScriptable
 						}
 						break;
 					case 6:
-						if (!EClass.sources.religions.map.ContainsKey(row2.deity.ToLower()))
+						if (!EClass.sources.religions.map.ContainsKey(row2.deity.ToLowerInvariant()))
 						{
 							Debug.Log(row2.id + "/" + row2.Name + "/follower/" + row2.deity);
 						}

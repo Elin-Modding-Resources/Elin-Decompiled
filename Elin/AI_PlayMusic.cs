@@ -93,6 +93,7 @@ public class AI_PlayMusic : AIAct
 			case "piano_gould":
 				idSong = "piano_gould";
 				break;
+			case "piano_killkill":
 			case "piano2":
 				idSong = "piano_neko";
 				break;
@@ -467,6 +468,21 @@ public class AI_PlayMusic : AIAct
 			{
 				text = "casino_coin";
 			}
+			if (owner.IsPC && !EClass._zone.IsInstance)
+			{
+				if (c.LV >= 20 && EClass.rnd(10 * (int)Mathf.Pow(2f, EClass.player.flags.reward_killkill + 1)) == 0)
+				{
+					text = "piano_killkill";
+					punish = true;
+					EClass.player.flags.reward_killkill++;
+				}
+				if (c.LV >= 40 && EClass.rnd(10 * (int)Mathf.Pow(2f, EClass.player.flags.reward_gould + 1)) == 0)
+				{
+					text = "piano_gould";
+					punish = true;
+					EClass.player.flags.reward_gould++;
+				}
+			}
 		}
 		else
 		{
@@ -519,16 +535,22 @@ public class AI_PlayMusic : AIAct
 		if (!owner.IsPC && owner.things.IsFull())
 		{
 			thing.Destroy();
-			return;
 		}
-		owner.Pick(thing);
-		if (thing.id == "money" && !owner.IsPC)
+		else
 		{
-			int num2 = (owner.Evalue(241) * 10 + 100) / ((owner.IsPCFaction && owner.memberType == FactionMemberType.Default) ? 1 : 10);
-			if (owner.GetCurrency() - num2 > 0)
+			if (!owner.IsAliveInCurrentZone)
 			{
-				owner.c_allowance += num;
-				owner.ModCurrency(-num);
+				return;
+			}
+			owner.Pick(thing);
+			if (thing.id == "money" && !owner.IsPC)
+			{
+				int num2 = (owner.Evalue(241) * 10 + 100) / ((owner.IsPCFaction && owner.memberType == FactionMemberType.Default) ? 1 : 10);
+				if (owner.GetCurrency() - num2 > 0)
+				{
+					owner.c_allowance += num;
+					owner.ModCurrency(-num);
+				}
 			}
 		}
 	}

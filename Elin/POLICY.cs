@@ -5,6 +5,8 @@ public class POLICY
 {
 	public const int suite_room = 2813;
 
+	public const int license_furniture = 2819;
+
 	public const int mass_exhibition = 2814;
 
 	public const int platinum_ticket = 2815;
@@ -15,9 +17,9 @@ public class POLICY
 
 	public const int license_food = 2818;
 
-	public const int license_furniture = 2819;
-
 	public const int license_general = 2820;
+
+	public const int egg_fan = 2826;
 
 	public const int celeb = 2822;
 
@@ -26,8 +28,6 @@ public class POLICY
 	public const int license_stolen = 2824;
 
 	public const int milk_fan = 2825;
-
-	public const int egg_fan = 2826;
 
 	public const int breed_season = 2827;
 
@@ -39,7 +39,7 @@ public class POLICY
 
 	public const int tourist_safety = 2811;
 
-	public const int speed_growth = 2516;
+	public const int stop_growth = 2515;
 
 	public const int home_discount = 2800;
 
@@ -81,7 +81,7 @@ public class POLICY
 
 	public const int weed_no = 2703;
 
-	public const int stop_growth = 2515;
+	public const int speed_growth = 2516;
 
 	public const int taxTransfer = 2705;
 
@@ -107,10 +107,10 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2813, 2814, 2815, 2816, 2817, 2818, 2819, 2820, 2822, 2823,
-		2824, 2825, 2826, 2827, 2828, 2812, 2821, 2811, 2516, 2800,
+		2813, 2819, 2814, 2815, 2816, 2817, 2818, 2820, 2826, 2822,
+		2823, 2824, 2825, 2827, 2828, 2812, 2821, 2811, 2515, 2800,
 		2508, 2509, 2510, 2511, 2505, 2504, 2503, 2502, 2501, 2500,
-		2810, 2507, 2512, 2513, 2514, 2506, 2700, 2702, 2703, 2515,
+		2810, 2507, 2512, 2513, 2514, 2506, 2700, 2702, 2703, 2516,
 		2705, 2706, 2707, 2704, 2709, 2710, 2711, 2712, 2715, 2701,
 		2708
 	};

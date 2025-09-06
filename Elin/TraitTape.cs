@@ -7,7 +7,7 @@ public class TraitTape : TraitItem
 
 	public override void OnCreate(int lv)
 	{
-		if (EClass._map.plDay != null && EClass._map.plDay.list.Count > 0)
+		if (EClass.core.IsGameStarted && EClass._map.plDay != null && EClass._map.plDay.list.Count > 0)
 		{
 			owner.refVal = EClass._map.plDay.list[0].data.id;
 		}

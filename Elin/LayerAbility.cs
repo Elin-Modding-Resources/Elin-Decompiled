@@ -205,6 +205,7 @@ public class LayerAbility : ELayer, IDragParent
 			},
 			onList = delegate(UIList.SortMode m)
 			{
+				ELayer.player.pref.sortAbility = m;
 				List<Element> list = new List<Element>();
 				foreach (Element value in ELayer.pc.elements.dict.Values)
 				{

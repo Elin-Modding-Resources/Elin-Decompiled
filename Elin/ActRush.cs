@@ -72,6 +72,24 @@ public class ActRush : ActMelee
 		Act.CC.Say("rush", Act.CC, Act.TC);
 		Act.CC.PlaySound("rush");
 		Act.CC.pos.PlayEffect("vanish");
-		return Attack(1f + 0.1f * (float)num);
+		float num2 = 1f + 0.1f * (float)num;
+		num2 = num2 * (float)(100 + EClass.curve(Act.CC.Evalue(382), 50, 25, 65)) / 100f;
+		Attack(num2);
+		if (Act.TC.isChara && Act.TC.ExistsOnMap && Act.CC.HasElement(382))
+		{
+			if (!Act.TC.IsPowerful || EClass.rnd(4) == 0)
+			{
+				Act.TC.Chara.AddCondition<ConParalyze>(2, force: true);
+			}
+			if (!Act.TC.IsPowerful || EClass.rnd(3) == 0)
+			{
+				Act.TC.Chara.AddCondition<ConDim>(5, force: true);
+			}
+			if (!Act.TC.IsPowerful || EClass.rnd(2) == 0)
+			{
+				Act.TC.Chara.AddCondition<ConConfuse>(8, force: true);
+			}
+		}
+		return true;
 	}
 }

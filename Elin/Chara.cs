@@ -5585,7 +5585,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (a.source.proc.TryGet(0) == "Heal" && HasElement(1422))
+		if (a.source.proc.TryGet(0) == "Heal" && HasElement(1422) && !IsPC)
 		{
 			List<int> list = new List<int> { 8400, 8401, 8402, 8403, 8404, 8405 };
 			int num = list.IndexOf(a.id);
@@ -5690,7 +5690,6 @@ public class Chara : Card, IPathfindWalker
 		{
 			num3 = 1 + Evalue(1648);
 		}
-		Debug.Log(cost.cost + "/" + a.Value);
 		if (IsPC && cost.cost > 0 && a.Value == 0)
 		{
 			Msg.SayNothingHappen();

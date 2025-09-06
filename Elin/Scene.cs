@@ -633,7 +633,7 @@ public class Scene : EMono
 								}
 								if (EMono.game.activeZone == zone)
 								{
-									EMono.pc.Teleport(EMono._zone.GetSpawnPos(EMono.pc, ZoneTransition.EnterState.Return), silent: true, force: true);
+									EMono.pc.Teleport(EMono._zone.GetSpawnPos(EMono.pc, ZoneTransition.EnterState.Return).GetNearestPoint() ?? EMono._map.GetCenterPos(), silent: true, force: true);
 								}
 								else
 								{

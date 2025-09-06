@@ -1,28 +1,28 @@
 public class MUTATION
 {
-	public const int mutationStrN = 1521;
-
-	public const int mutationStr = 1520;
-
-	public const int mutationSpeedN = 1519;
-
-	public const int mutationRegenN = 1517;
-
-	public const int mutationDex = 1514;
-
-	public const int mutationDexN = 1515;
-
-	public const int mutationEyeN = 1513;
-
-	public const int mutationEye = 1512;
+	public const int mutationSkin = 1510;
 
 	public const int mutationSkinN = 1511;
 
-	public const int mutationSkin = 1510;
+	public const int mutationEye = 1512;
+
+	public const int mutationEyeN = 1513;
+
+	public const int mutationDexN = 1515;
 
 	public const int mutationRegen = 1516;
 
+	public const int mutationRegenN = 1517;
+
 	public const int mutationCha = 1522;
+
+	public const int mutationSpeedN = 1519;
+
+	public const int mutationStr = 1520;
+
+	public const int mutationStrN = 1521;
+
+	public const int mutationDex = 1514;
 
 	public const int mutationSpeed = 1518;
 
@@ -58,9 +58,9 @@ public class MUTATION
 
 	public const int etherEye = 1553;
 
-	public const int mutationCold = 1526;
+	public const int mutationBrainN = 1525;
 
-	public const int mutationColdN = 1527;
+	public const int mutationCold = 1526;
 
 	public const int mutationLightning = 1528;
 
@@ -68,7 +68,7 @@ public class MUTATION
 
 	public const int mutationBody = 1530;
 
-	public const int mutationBrainN = 1525;
+	public const int mutationColdN = 1527;
 
 	public const int mutationHair = 1532;
 
@@ -82,10 +82,10 @@ public class MUTATION
 
 	public static readonly int[] IDS = new int[40]
 	{
-		1521, 1520, 1519, 1517, 1514, 1515, 1513, 1512, 1511, 1510,
-		1516, 1522, 1518, 1524, 1565, 1564, 1563, 1562, 1523, 1560,
-		1559, 1558, 1557, 1556, 1555, 1554, 1561, 1552, 1553, 1526,
-		1527, 1528, 1529, 1530, 1525, 1532, 1533, 1550, 1551, 1531
+		1510, 1511, 1512, 1513, 1515, 1516, 1517, 1522, 1519, 1520,
+		1521, 1514, 1518, 1524, 1565, 1564, 1563, 1562, 1523, 1560,
+		1559, 1558, 1557, 1556, 1555, 1554, 1561, 1552, 1553, 1525,
+		1526, 1528, 1529, 1530, 1527, 1532, 1533, 1550, 1551, 1531
 	};
 }
 public class Mutation : Feat

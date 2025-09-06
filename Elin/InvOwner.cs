@@ -84,7 +84,7 @@ public class InvOwner : EClass
 			}
 		}
 
-		public string IDCurrency => currency.ToString().ToLower();
+		public string IDCurrency => currency.ToString().ToLowerInvariant();
 
 		public CurrencyType currency => Trader.currency;
 

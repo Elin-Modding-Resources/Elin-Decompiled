@@ -56,7 +56,7 @@ public class ActEffect : EClass
 			power = power * actref.refThing.material.hardness / 10;
 		}
 		string text = id.ToString();
-		string text2 = (EClass.sources.calc.map.ContainsKey(text) ? text : (EClass.sources.calc.map.ContainsKey("Sp" + text) ? ("Sp" + text) : (text.ToLower() + "_")));
+		string text2 = (EClass.sources.calc.map.ContainsKey(text) ? text : (EClass.sources.calc.map.ContainsKey("Sp" + text) ? ("Sp" + text) : (text.ToLowerInvariant() + "_")));
 		foreach (Point p in points)
 		{
 			bool flag2 = true;
@@ -210,9 +210,14 @@ public class ActEffect : EClass
 						attackSource = AttackSource.MoonSpear;
 					}
 				}
-				if (id == EffectId.Sword)
+				switch (id)
 				{
+				case EffectId.Arrow:
+					attackSource = AttackSource.MagicArrow;
+					break;
+				case EffectId.Sword:
 					attackSource = AttackSource.MagicSword;
+					break;
 				}
 				long num4 = 0L;
 				bool isChara = CC.isChara;

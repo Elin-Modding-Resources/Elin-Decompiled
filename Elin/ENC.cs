@@ -62,43 +62,47 @@ public class ENC
 
 	public const int mod_ammo_recover = 604;
 
-	public const int negateShockwave = 430;
-
-	public const int breathing = 429;
-
-	public const int allNeckHunt = 428;
-
-	public const int negateNeckHunt = 427;
-
-	public const int negateConfusion = 425;
-
-	public const int negateSleep = 424;
-
-	public const int negateFear = 423;
-
-	public const int negateParalysis = 422;
-
-	public const int negateBlind = 421;
-
-	public const int negatePoison = 420;
-
-	public const int encTail = 419;
-
-	public const int innocence = 418;
+	public const int seeInvisible = 416;
 
 	public const int loving = 417;
 
-	public const int seeInvisible = 416;
+	public const int innocence = 418;
+
+	public const int encTail = 419;
+
+	public const int negatePoison = 420;
+
+	public const int negateBlind = 421;
 
 	public const int invisibility = 415;
 
+	public const int negateParalysis = 422;
+
+	public const int negateSleep = 424;
+
+	public const int negateConfusion = 425;
+
+	public const int negateNeckHunt = 427;
+
+	public const int allNeckHunt = 428;
+
+	public const int breathing = 429;
+
+	public const int negateShockwave = 430;
+
+	public const int negateFear = 423;
+
+	public const int defense_range = 435;
+
 	public const int encHit = 414;
 
-	public const int slowCorruption = 412;
+	public const int encSpell = 411;
 
 	public const int counter = 380;
 
 	public const int basher = 381;
+
+	public const int rusher = 382;
 
 	public const int negateTeleport = 400;
 
@@ -106,11 +110,11 @@ public class ENC
 
 	public const int searchRange = 402;
 
+	public const int slowCorruption = 412;
+
 	public const int expMod = 403;
 
-	public const int defense_range = 435;
-
-	public const int weightMod = 404;
+	public const int slowDecay = 405;
 
 	public const int resMutation = 406;
 
@@ -122,9 +126,7 @@ public class ENC
 
 	public const int throwReturn = 410;
 
-	public const int encSpell = 411;
-
-	public const int slowDecay = 405;
+	public const int weightMod = 404;
 
 	public const int guts = 436;
 
@@ -170,45 +172,45 @@ public class ENC
 
 	public const int bane_animal = 463;
 
-	public const int negateParry = 439;
-
-	public const int bane_man = 464;
-
 	public const int sustain_STR = 440;
 
 	public const int sustain_END = 441;
 
 	public const int sustain_DEX = 442;
 
-	public const int sustain_LER = 444;
-
-	public const int sustain_WIL = 445;
-
 	public const int sustain_PER = 443;
 
-	public const int sustain_CHA = 447;
+	public const int sustain_LER = 444;
 
-	public const int bane_fairy = 462;
+	public const int sustain_MAG = 446;
+
+	public const int sustain_WIL = 445;
 
 	public const int sustain_figure = 450;
 
 	public const int bane_dragon = 460;
 
+	public const int negateParry = 439;
+
 	public const int bane_undead = 461;
 
-	public const int sustain_MAG = 446;
+	public const int bane_fairy = 462;
 
-	public static readonly int[] IDS = new int[99]
+	public const int sustain_CHA = 447;
+
+	public const int bane_man = 464;
+
+	public static readonly int[] IDS = new int[100]
 	{
 		651, 650, 641, 640, 624, 609, 622, 621, 608, 620,
 		652, 623, 653, 851, 655, 656, 660, 661, 662, 663,
 		664, 665, 666, 850, 607, 865, 852, 654, 606, 426,
-		604, 430, 429, 428, 427, 425, 424, 423, 422, 421,
-		420, 419, 418, 417, 416, 415, 414, 412, 380, 381,
-		400, 401, 402, 403, 435, 404, 406, 605, 408, 409,
-		410, 411, 405, 436, 407, 438, 467, 468, 480, 481,
-		482, 483, 484, 485, 486, 488, 600, 601, 602, 603,
-		437, 466, 465, 487, 463, 439, 464, 440, 441, 442,
-		444, 445, 443, 447, 462, 450, 460, 461, 446
+		604, 416, 417, 418, 419, 420, 421, 415, 422, 424,
+		425, 427, 428, 429, 430, 423, 435, 414, 411, 380,
+		381, 382, 400, 401, 402, 412, 403, 405, 406, 605,
+		408, 409, 410, 404, 436, 407, 438, 467, 468, 480,
+		481, 482, 483, 484, 485, 486, 488, 600, 601, 602,
+		603, 437, 466, 465, 487, 463, 440, 441, 442, 443,
+		444, 446, 445, 450, 460, 439, 461, 462, 447, 464
 	};
 }

@@ -215,6 +215,13 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
+	public static Thing CreateCassette(int id)
+	{
+		Thing thing = Create("856");
+		thing.refVal = id;
+		return thing;
+	}
+
 	public static Thing CreateLetter(string idLetter)
 	{
 		Thing thing = Create("letter");
