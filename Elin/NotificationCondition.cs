@@ -29,6 +29,28 @@ public class NotificationCondition : BaseNotification
 		return false;
 	}
 
+	public override int GetSortVal()
+	{
+		int num = 5;
+		switch (condition.Type)
+		{
+		case ConditionType.Stance:
+			num = 0;
+			break;
+		case ConditionType.Buff:
+			num = 10;
+			break;
+		case ConditionType.Debuff:
+			num = 11;
+			break;
+		}
+		if (condition is ConBuffStats)
+		{
+			num = 1;
+		}
+		return 8000000 + num * 100000 + condition.GetSortVal();
+	}
+
 	public override void OnClick()
 	{
 		if (condition.CanManualRemove)

@@ -1,7 +1,5 @@
 public class SKILL
 {
-	public const int fireproof = 50;
-
 	public const int weaponCrossbow = 109;
 
 	public const int weaponScythe = 110;
@@ -15,6 +13,8 @@ public class SKILL
 	public const int shield = 123;
 
 	public const int twohand = 130;
+
+	public const int fireproof = 50;
 
 	public const int tactics = 132;
 
@@ -52,7 +52,7 @@ public class SKILL
 
 	public const int strategy = 135;
 
-	public const int fishing = 245;
+	public const int eyeofmind = 134;
 
 	public const int twowield = 131;
 
@@ -60,7 +60,7 @@ public class SKILL
 
 	public const int weaponAxe = 102;
 
-	public const int weaponDagger = 107;
+	public const int throwing = 108;
 
 	public const int END = 71;
 
@@ -98,6 +98,8 @@ public class SKILL
 
 	public const int WIL = 75;
 
+	public const int weaponDagger = 107;
+
 	public const int weaponPolearm = 106;
 
 	public const int weaponGun = 105;
@@ -122,17 +124,15 @@ public class SKILL
 
 	public const int SPD = 79;
 
-	public const int LUC = 78;
-
 	public const int CHA = 77;
 
 	public const int MAG = 76;
 
-	public const int throwing = 108;
+	public const int fishing = 245;
 
 	public const int gathering = 250;
 
-	public const int eyeofmind = 134;
+	public const int LUC = 78;
 
 	public const int blacksmith = 256;
 
@@ -268,13 +268,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		50, 109, 110, 111, 120, 122, 123, 130, 132, 133,
+		109, 110, 111, 120, 122, 123, 130, 50, 132, 133,
 		242, 241, 240, 237, 235, 230, 227, 226, 225, 220,
-		210, 200, 152, 151, 150, 135, 245, 131, 207, 102,
-		107, 71, 70, 68, 67, 66, 65, 72, 64, 61,
-		60, 57, 56, 55, 51, 62, 73, 74, 75, 106,
-		105, 104, 103, 101, 100, 93, 92, 91, 90, 80,
-		79, 78, 77, 76, 108, 250, 134, 256, 916, 917,
+		210, 200, 152, 151, 150, 135, 134, 131, 207, 102,
+		108, 71, 70, 68, 67, 66, 65, 72, 64, 61,
+		60, 57, 56, 55, 51, 62, 73, 74, 75, 107,
+		106, 105, 104, 103, 101, 100, 93, 92, 91, 90,
+		80, 79, 77, 76, 245, 250, 78, 256, 916, 917,
 		918, 919, 920, 921, 922, 923, 924, 925, 926, 950,
 		951, 952, 915, 953, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 965, 970, 971, 972, 255, 954, 914,

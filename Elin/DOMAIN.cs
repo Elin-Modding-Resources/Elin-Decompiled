@@ -14,9 +14,9 @@ public class DOMAIN
 
 	public const int domOblivion = 813;
 
-	public const int domHarmony = 815;
-
 	public const int domArcane = 804;
+
+	public const int domHarmony = 815;
 
 	public const int domEyth = 814;
 
@@ -36,7 +36,7 @@ public class DOMAIN
 
 	public static readonly int[] IDS = new int[16]
 	{
-		811, 812, 809, 808, 807, 813, 815, 804, 814, 806,
+		811, 812, 809, 808, 807, 813, 804, 815, 814, 806,
 		805, 810, 801, 802, 803, 800
 	};
 }

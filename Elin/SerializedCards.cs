@@ -772,7 +772,7 @@ public class SerializedCards : EClass
 						card2.c_lockLv = 1;
 					}
 				}
-				if (card4.encLv != 0)
+				if (card4.ints.Length > 20 && card4.encLv != 0)
 				{
 					card2.SetEncLv(card4.encLv);
 				}

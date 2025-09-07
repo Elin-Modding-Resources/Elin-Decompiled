@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ABILITY
 {
-	public const int AI_Drink = 5045;
+	public const int ActChat = 5044;
 
 	public const int ActPick = 5047;
 
@@ -68,7 +68,7 @@ public class ABILITY
 
 	public const int ActTouchSleep = 6612;
 
-	public const int ActChat = 5044;
+	public const int AI_Drink = 5045;
 
 	public const int ActKick = 5042;
 
@@ -254,10 +254,10 @@ public class ABILITY
 
 	public static readonly int[] IDS = new int[125]
 	{
-		5045, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055,
+		5044, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055,
 		6001, 6003, 6011, 6012, 6013, 5046, 6015, 6019, 6020, 6050,
 		6400, 6410, 6420, 6450, 6500, 6601, 6602, 6603, 6604, 6610,
-		6611, 6018, 6612, 5044, 5042, 5012, 5013, 5014, 5015, 5016,
+		6611, 6018, 6612, 5045, 5042, 5012, 5013, 5014, 5015, 5016,
 		5017, 5018, 5019, 5020, 5021, 5022, 5023, 5024, 5025, 5043,
 		5026, 5028, 5029, 5030, 5031, 5032, 5033, 5034, 5035, 5036,
 		5037, 5038, 5039, 5040, 5041, 5027, 6613, 6600, 6621, 50203,

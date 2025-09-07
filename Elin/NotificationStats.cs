@@ -21,6 +21,11 @@ public class NotificationStats : BaseNotification
 		EClass.ui.AddLayer<LayerChara>().SetChara(EClass.pc);
 	}
 
+	public override int GetSortVal()
+	{
+		return 5000000 + stats().GetSortVal();
+	}
+
 	public override void OnRefresh()
 	{
 		BaseStats baseStats = stats();

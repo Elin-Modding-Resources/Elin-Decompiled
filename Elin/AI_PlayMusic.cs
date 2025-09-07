@@ -290,17 +290,34 @@ public class AI_PlayMusic : AIAct
 						}
 						if (!reacted.Contains(item2) && EClass.rnd(5) == 0)
 						{
+							if (tool != null)
+							{
+								foreach (Element value in tool.elements.dict.Values)
+								{
+									if (value.id == 489 && EClass.rnd(8) == 0)
+									{
+										item2.AddCondition<ConDrunk>();
+									}
+									if (value.source.categorySub == "eleAttack")
+									{
+										item2.ApplyElementEffect(value, value.Value * 10, owner);
+									}
+								}
+							}
 							if (owner.IsPCParty)
 							{
 								if (item2.interest <= 0 || (EClass._zone is Zone_Music && (item2.IsPCFaction || item2.IsPCFactionMinion)))
 								{
 									continue;
 								}
-								item2.interest -= EClass.rnd(10);
-								if (item2.interest < 0)
+								if (!item2.isDrunk)
 								{
-									item2.Talk("musicBored");
-									continue;
+									item2.interest -= EClass.rnd(10);
+									if (item2.interest < 0)
+									{
+										item2.Talk("musicBored");
+										continue;
+									}
 								}
 							}
 							if (EClass.rnd(num2 * num2) <= 30 && item2.pos.FirstChara == item2)
@@ -437,6 +454,7 @@ public class AI_PlayMusic : AIAct
 		Thing thing = null;
 		string text = "";
 		int num = 1;
+		bool flag = true;
 		if (punish)
 		{
 			text = ((EClass.rnd(5) == 0) ? "rock" : "pebble");
@@ -474,12 +492,14 @@ public class AI_PlayMusic : AIAct
 				{
 					text = "piano_killkill";
 					punish = true;
+					flag = false;
 					EClass.player.flags.reward_killkill++;
 				}
-				if (c.LV >= 40 && EClass.rnd(10 * (int)Mathf.Pow(2f, EClass.player.flags.reward_gould + 1)) == 0)
+				else if (c.LV >= 40 && EClass.rnd(10 * (int)Mathf.Pow(2f, EClass.player.flags.reward_gould + 1)) == 0)
 				{
 					text = "piano_gould";
 					punish = true;
+					flag = false;
 					EClass.player.flags.reward_gould++;
 				}
 			}
@@ -542,7 +562,10 @@ public class AI_PlayMusic : AIAct
 			{
 				return;
 			}
-			owner.Pick(thing);
+			if (flag)
+			{
+				owner.Pick(thing);
+			}
 			if (thing.id == "money" && !owner.IsPC)
 			{
 				int num2 = (owner.Evalue(241) * 10 + 100) / ((owner.IsPCFaction && owner.memberType == FactionMemberType.Default) ? 1 : 10);

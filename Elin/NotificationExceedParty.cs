@@ -12,6 +12,11 @@ public class NotificationExceedParty : BaseNotification
 		a.note.Build();
 	};
 
+	public override int GetSortVal()
+	{
+		return 2000000;
+	}
+
 	public override void OnRefresh()
 	{
 		text = "exceedParty".lang();

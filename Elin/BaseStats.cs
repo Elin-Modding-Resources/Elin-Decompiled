@@ -54,6 +54,11 @@ public class BaseStats : EClass
 		return 0;
 	}
 
+	public virtual int GetSortVal()
+	{
+		return source.id;
+	}
+
 	public virtual Sprite GetSprite()
 	{
 		return SpriteSheet.Get("Media/Graphics/Icon/Element/icon_elements", idSprite) ?? EClass.core.refs.spriteDefaultCondition;

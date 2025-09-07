@@ -4475,9 +4475,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					}
 					if (Guild.Fighter.HasBounty(Chara))
 					{
-						int a2 = EClass.rndHalf(200 + LV * 20);
-						Msg.Say("bounty", Chara, a2.ToString() ?? "");
-						EClass.pc.ModCurrency(a2);
+						int a = EClass.rndHalf(200 + LV * 20);
+						Msg.Say("bounty", Chara, a.ToString() ?? "");
+						EClass.pc.ModCurrency(a);
 						SE.Pay();
 					}
 				}
@@ -4553,14 +4553,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (dmg > 0)
 		{
-			int a3 = (int)(100L * (long)(dmg * 100 / MaxHP) / 100) + 1;
-			a3 = Mathf.Min(a3, Chara.isRestrained ? 15 : 200);
-			if (a3 > 0)
+			int a2 = (int)(100L * (long)(dmg * 100 / MaxHP) / 100) + 1;
+			a2 = Mathf.Min(a2, Chara.isRestrained ? 15 : 200);
+			if (a2 > 0)
 			{
-				elements.ModExp(GetArmorSkill(), a3);
+				elements.ModExp(GetArmorSkill(), a2);
 				if (Chara.body.GetAttackStyle() == AttackStyle.Shield)
 				{
-					elements.ModExp(123, a3);
+					elements.ModExp(123, a2);
 				}
 			}
 		}
@@ -4574,149 +4574,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			bool flag3 = Chara.HasCondition<ConPoison>() || ((e.id == 915 || e.id == 923) && ResistLv(Evalue(955)) < 4);
 			AddBlood(num15, flag3 ? 6 : (-1));
 		}
-		bool flag4 = true;
-		switch (e.id)
+		if (dmg > 0 || (origin != null && origin.HasElement(1345)))
 		{
-		case 910:
-			if (Chance(30 + eleP / 5, 100))
-			{
-				Chara.AddCondition<ConBurning>(eleP);
-			}
-			break;
-		case 911:
-			if (Chara.isWet)
-			{
-				if (Chance(30 + eleP / 10, 100))
-				{
-					Chara.AddCondition<ConFreeze>(eleP);
-				}
-			}
-			else if (Chance(50 + eleP / 10, 100))
-			{
-				Chara.AddCondition<ConWet>(eleP);
-			}
-			break;
-		case 912:
-			if (Chance(75 + eleP / 20, 100) && EClass.rnd(3) == 0)
-			{
-				Chara.AddCondition<ConParalyze>(1, force: true);
-			}
-			break;
-		case 915:
-			if (Chance(30 + eleP / 5, 100))
-			{
-				Chara.AddCondition<ConPoison>(eleP);
-			}
-			break;
-		case 913:
-			if (Chance(30 + eleP / 5, 100))
-			{
-				Chara.AddCondition<ConBlind>(eleP);
-			}
-			break;
-		case 918:
-			flag4 = false;
-			if (Chance(30 + eleP / 5, 100))
-			{
-				Chara.AddCondition<ConParalyze>(eleP);
-			}
-			break;
-		case 914:
-			flag4 = false;
-			if (EClass.rnd(3) != 0)
-			{
-				if (Chance(30 + eleP / 5, 100))
-				{
-					Chara.AddCondition<ConConfuse>(eleP);
-				}
-			}
-			else if (Chance(30 + eleP / 5, 100))
-			{
-				Chara.AddCondition<ConSleep>(eleP);
-			}
-			break;
-		case 917:
-			if (Chance(50 + eleP / 10, 100))
-			{
-				Chara.AddCondition<ConDim>(eleP);
-			}
-			break;
-		case 925:
-			if (EClass.rnd(3) == 0)
-			{
-				if (Chance(30 + eleP / 5, 100))
-				{
-					Chara.AddCondition<ConDim>(eleP);
-				}
-			}
-			else if (EClass.rnd(2) == 0)
-			{
-				if (EClass.rnd(3) == 0)
-				{
-					Chara.AddCondition<ConParalyze>(1, force: true);
-				}
-			}
-			else if (EClass.rnd(2) == 0)
-			{
-				Chara.AddCondition<ConConfuse>(1 + EClass.rnd(3), force: true);
-			}
-			break;
-		case 920:
-			flag4 = false;
-			if (Chance(5 + eleP / 25, 40))
-			{
-				Chara.AddCondition<ConBlind>(eleP / 2);
-			}
-			if (Chance(5 + eleP / 25, 40))
-			{
-				Chara.AddCondition<ConParalyze>(eleP / 2);
-			}
-			if (Chance(5 + eleP / 25, 40))
-			{
-				Chara.AddCondition<ConConfuse>(eleP / 2);
-			}
-			if (Chance(5 + eleP / 25, 40))
-			{
-				Chara.AddCondition<ConPoison>(eleP / 2);
-			}
-			if (Chance(5 + eleP / 25, 40))
-			{
-				Chara.AddCondition<ConSleep>(eleP / 2);
-			}
-			if (Chance(5 + eleP / 25, 40))
-			{
-				Chara.AddCondition<ConDim>(eleP / 2);
-			}
-			if (Chance(30 + eleP / 10, 100))
-			{
-				Chara.SAN.Mod(EClass.rnd(2));
-			}
-			break;
-		case 924:
-			if (Chance(50 + eleP / 10, 100))
-			{
-				Chara.AddCondition<ConBleed>(eleP);
-			}
-			break;
-		case 923:
-			if (Chance(50 + eleP / 10, 100) && EClass.rnd(4) == 0)
-			{
-				ActEffect.Proc(EffectId.Acid, Chara);
-			}
-			break;
-		case 922:
-			Chara.ModCorruption(EClass.rnd(eleP / 50 + 10));
-			break;
+			ApplyElementEffect(e, eleP, origin);
 		}
 		if (origin != null && origin.HasElement(1411) && !Chara.HasCondition<ConGravity>())
 		{
 			Condition.ignoreEffect = true;
 			Chara.AddCondition<ConGravity>(2000);
 			Condition.ignoreEffect = false;
-		}
-		if (Chara.conSleep != null && flag4)
-		{
-			Chara.conSleep.Kill();
 		}
 		if (IsPC)
 		{
@@ -4772,14 +4638,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				origin.Chara.TryNeckHunt(Chara, origin.Evalue(428) * 20, harvest: true);
 			}
 		}
-		bool Chance(int a, int max)
-		{
-			if (dmg > 0 || (origin != null && origin.HasElement(1345)))
-			{
-				return Mathf.Min(a, max) > EClass.rnd(100);
-			}
-			return false;
-		}
 		void EvadeDeath(Action action)
 		{
 			hp = 0;
@@ -4831,6 +4689,156 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					}
 				}
 			}
+		}
+	}
+
+	public void ApplyElementEffect(Element e, int eleP, Card origin)
+	{
+		if (!isChara)
+		{
+			return;
+		}
+		bool flag = true;
+		switch (e.id)
+		{
+		case 910:
+			if (Chance(30 + eleP / 5, 100))
+			{
+				Chara.AddCondition<ConBurning>(eleP);
+			}
+			break;
+		case 911:
+			if (Chara.isWet)
+			{
+				if (Chance(30 + eleP / 10, 100))
+				{
+					Chara.AddCondition<ConFreeze>(eleP);
+				}
+			}
+			else if (Chance(50 + eleP / 10, 100))
+			{
+				Chara.AddCondition<ConWet>(eleP);
+			}
+			break;
+		case 912:
+			if (Chance(75 + eleP / 20, 100) && EClass.rnd(3) == 0)
+			{
+				Chara.AddCondition<ConParalyze>(1, force: true);
+			}
+			break;
+		case 915:
+			if (Chance(30 + eleP / 5, 100))
+			{
+				Chara.AddCondition<ConPoison>(eleP);
+			}
+			break;
+		case 913:
+			if (Chance(30 + eleP / 5, 100))
+			{
+				Chara.AddCondition<ConBlind>(eleP);
+			}
+			break;
+		case 918:
+			flag = false;
+			if (Chance(30 + eleP / 5, 100))
+			{
+				Chara.AddCondition<ConParalyze>(eleP);
+			}
+			break;
+		case 914:
+			flag = false;
+			if (EClass.rnd(3) != 0)
+			{
+				if (Chance(30 + eleP / 5, 100))
+				{
+					Chara.AddCondition<ConConfuse>(eleP);
+				}
+			}
+			else if (Chance(30 + eleP / 5, 100))
+			{
+				Chara.AddCondition<ConSleep>(eleP);
+			}
+			break;
+		case 917:
+			if (Chance(50 + eleP / 10, 100))
+			{
+				Chara.AddCondition<ConDim>(eleP);
+			}
+			break;
+		case 925:
+			if (EClass.rnd(3) == 0)
+			{
+				if (Chance(30 + eleP / 5, 100))
+				{
+					Chara.AddCondition<ConDim>(eleP);
+				}
+			}
+			else if (EClass.rnd(2) == 0)
+			{
+				if (EClass.rnd(3) == 0)
+				{
+					Chara.AddCondition<ConParalyze>(1, force: true);
+				}
+			}
+			else if (EClass.rnd(2) == 0)
+			{
+				Chara.AddCondition<ConConfuse>(1 + EClass.rnd(3), force: true);
+			}
+			break;
+		case 920:
+			flag = false;
+			if (Chance(5 + eleP / 25, 40))
+			{
+				Chara.AddCondition<ConBlind>(eleP / 2);
+			}
+			if (Chance(5 + eleP / 25, 40))
+			{
+				Chara.AddCondition<ConParalyze>(eleP / 2);
+			}
+			if (Chance(5 + eleP / 25, 40))
+			{
+				Chara.AddCondition<ConConfuse>(eleP / 2);
+			}
+			if (Chance(5 + eleP / 25, 40))
+			{
+				Chara.AddCondition<ConPoison>(eleP / 2);
+			}
+			if (Chance(5 + eleP / 25, 40))
+			{
+				Chara.AddCondition<ConSleep>(eleP / 2);
+			}
+			if (Chance(5 + eleP / 25, 40))
+			{
+				Chara.AddCondition<ConDim>(eleP / 2);
+			}
+			if (Chance(30 + eleP / 10, 100))
+			{
+				Chara.SAN.Mod(EClass.rnd(2));
+			}
+			break;
+		case 924:
+			if (Chance(50 + eleP / 10, 100))
+			{
+				Chara.AddCondition<ConBleed>(eleP);
+			}
+			break;
+		case 923:
+			if (Chance(50 + eleP / 10, 100) && EClass.rnd(4) == 0)
+			{
+				ActEffect.Proc(EffectId.Acid, Chara);
+			}
+			break;
+		case 922:
+			Chara.ModCorruption(EClass.rnd(eleP / 50 + 10));
+			break;
+		}
+		if (Chara.conSleep != null && flag)
+		{
+			Chara.conSleep.Kill();
+		}
+		static bool Chance(int a, int max)
+		{
+			return Mathf.Min(a, max) > EClass.rnd(100);
 		}
 	}
 
@@ -4991,11 +4999,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (!flag2 && Chara.race.corpse[1].ToInt() > EClass.rnd(150000 / (100 + (int)Mathf.Sqrt(origin.Evalue(290)) * 5)))
 			{
 				flag2 = true;
-				origin.elements.ModExp(290, 100f);
+				origin.elements.ModExp(290, 150f);
 			}
 			else
 			{
-				origin.elements.ModExp(290, 5f);
+				origin.elements.ModExp(290, 25f);
 			}
 		}
 		if (id == "littleOne" && IsPCFactionOrMinion)

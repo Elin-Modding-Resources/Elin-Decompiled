@@ -6,9 +6,13 @@ public class WidgetStats : BaseWidgetNotice
 
 	public List<NotificationCondition> conditions = new List<NotificationCondition>();
 
+	public List<NotificationCooldown> cds = new List<NotificationCooldown>();
+
 	public ItemNotice moldBuff;
 
 	public ItemNotice moldStance;
+
+	public ItemNotice moldCooldown;
 
 	public static void RefreshAll()
 	{
@@ -63,6 +67,15 @@ public class WidgetStats : BaseWidgetNotice
 				dirty = true;
 			}
 		});
+		cds.ForeachReverse(delegate(NotificationCooldown a)
+		{
+			if (a.ShouldRemove())
+			{
+				cds.Remove(a);
+				Remove(a);
+				dirty = true;
+			}
+		});
 		foreach (Condition condition in EMono.pc.conditions)
 		{
 			if (!condition.ShowInWidget)
@@ -83,6 +96,32 @@ public class WidgetStats : BaseWidgetNotice
 				NotificationCondition notificationCondition = condition.CreateNotification() as NotificationCondition;
 				Add(notificationCondition);
 				conditions.Add(notificationCondition);
+			}
+		}
+		if (EMono.pc._cooldowns == null)
+		{
+			return;
+		}
+		foreach (int cooldown in EMono.pc._cooldowns)
+		{
+			int num = cooldown / 1000;
+			bool flag2 = true;
+			foreach (NotificationCooldown cd in cds)
+			{
+				if (cd.idEle == num)
+				{
+					flag2 = false;
+					break;
+				}
+			}
+			if (flag2)
+			{
+				NotificationCooldown notificationCooldown = new NotificationCooldown
+				{
+					idEle = num
+				};
+				Add(notificationCooldown);
+				cds.Add(notificationCooldown);
 			}
 		}
 	}

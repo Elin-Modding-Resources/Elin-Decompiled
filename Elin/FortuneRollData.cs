@@ -132,7 +132,7 @@ public class FortuneRollData : EClass
 		prizes.Clear();
 		Rand.SetSeed(EClass.game.seed + seed + count);
 		List<List<string>> list = GetPrizeList();
-		if (EClass._zone.IsTown && EClass._zone.lv == 0)
+		if ((EClass._zone.IsTown && EClass._zone.lv == 0) || (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky))
 		{
 			Add(3);
 			Add(2);

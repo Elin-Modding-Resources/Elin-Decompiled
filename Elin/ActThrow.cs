@@ -105,7 +105,7 @@ public class ActThrow : ActBaseAttack
 
 	public static EffectIRenderer Throw(Card c, Point p, Card target, Thing t, ThrowMethod method = ThrowMethod.Default)
 	{
-		if (t.parent != EClass._zone && !t.HasElement(410))
+		if (t.parent != EClass._zone && (!t.HasElement(410) || method == ThrowMethod.Punish))
 		{
 			EClass._zone.AddCard(t, c.pos).KillAnime();
 		}

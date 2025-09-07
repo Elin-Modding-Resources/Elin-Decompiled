@@ -64,6 +64,7 @@ public class BaseWidgetNotice : Widget
 				dirty = true;
 			});
 		}
+		Sort();
 		if (dirty)
 		{
 			layout.RebuildLayout();
@@ -72,6 +73,15 @@ public class BaseWidgetNotice : Widget
 				layout2.RebuildLayout(recursive: true);
 			}
 			dirty = false;
+		}
+	}
+
+	public void Sort()
+	{
+		list.Sort((BaseNotification a, BaseNotification b) => b.GetSortVal() - a.GetSortVal());
+		for (int i = 0; i < list.Count; i++)
+		{
+			list[i].item.transform.SetSiblingIndex(4 + i);
 		}
 	}
 
@@ -113,6 +123,7 @@ public class BaseWidgetNotice : Widget
 		if (!activating)
 		{
 			layoutGroup.RebuildLayout(recursive: true);
+			Sort();
 		}
 		return itemNotice;
 	}

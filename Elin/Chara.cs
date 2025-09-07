@@ -8324,17 +8324,22 @@ public class Chara : Card, IPathfindWalker
 
 	public bool HasCooldown(int idEle)
 	{
+		return GetCooldown(idEle) != 0;
+	}
+
+	public int GetCooldown(int idEle)
+	{
 		if (_cooldowns != null)
 		{
 			for (int i = 0; i < _cooldowns.Count; i++)
 			{
 				if (_cooldowns[i] / 1000 == idEle)
 				{
-					return true;
+					return _cooldowns[i] % 1000;
 				}
 			}
 		}
-		return false;
+		return 0;
 	}
 
 	public void TickCooldown()

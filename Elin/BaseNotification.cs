@@ -30,6 +30,11 @@ public class BaseNotification : EClass
 		return null;
 	}
 
+	public virtual int GetSortVal()
+	{
+		return 0;
+	}
+
 	public void Refresh()
 	{
 		OnRefresh();

@@ -1285,7 +1285,9 @@ public class Thing : Card
 					{
 						num4 = num4 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara)) / 100;
 					}
-					return s + " (" + e.Value + ((e.Value == num4) ? "" : (" → " + num4)) + ")";
+					string text16 = " (" + e.Value + ((e.Value == num4) ? "" : (" → " + num4)) + ")";
+					string text17 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
+					return s + text16 + " " + text17;
 				});
 			}
 			if (sockets != null)
@@ -1338,9 +1340,9 @@ public class Thing : Card
 			if (base.c_mixedFoodData != null)
 			{
 				n.AddHeader("isMixedFood");
-				foreach (string text16 in base.c_mixedFoodData.texts)
+				foreach (string text18 in base.c_mixedFoodData.texts)
 				{
-					AddText("_bullet".lang() + text16 + text2, FontColor.Default);
+					AddText("_bullet".lang() + text18 + text2, FontColor.Default);
 				}
 			}
 		}
