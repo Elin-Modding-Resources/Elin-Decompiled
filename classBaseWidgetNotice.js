@@ -12,6 +12,7 @@ var classBaseWidgetNotice =
     [ "OnSetContextMenu", "classBaseWidgetNotice.html#a8e2d65a3951d17dd8885de063b31fb88", null ],
     [ "RefreshLayout", "classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8", null ],
     [ "Remove", "classBaseWidgetNotice.html#adaea889fb21fa11dcd17203c92f674b3", null ],
+    [ "Sort", "classBaseWidgetNotice.html#ad54e4507b93eec2d5c6d7ebe26fef32b", null ],
     [ "activating", "classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8", null ],
     [ "dirty", "classBaseWidgetNotice.html#a40372d9ac62e3280f93f8b27b21d8e0b", null ],
     [ "layout", "classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d", null ],

@@ -6,6 +6,7 @@ var classBaseStats =
     [ "GetColor", "classBaseStats.html#ae0d925132e2c835f21ea29ff01c71fb3", null ],
     [ "GetPhase", "classBaseStats.html#ad0045f956ba3193c24ab30569c800440", null ],
     [ "GetPhaseStr", "classBaseStats.html#a3c56f630752e557f999a5976c1257c26", null ],
+    [ "GetSortVal", "classBaseStats.html#ae5c56258ce12348736581aa524f297dc", null ],
     [ "GetSprite", "classBaseStats.html#a38e73a81f1d5c492bc9309d49a82d94d", null ],
     [ "GetText", "classBaseStats.html#ac5a85baef6903a49b15a8cd0e2ca45c9", null ],
     [ "GetValue", "classBaseStats.html#af81b6746cd272e165340377c78f84b88", null ],

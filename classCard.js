@@ -25,6 +25,7 @@ var classCard =
     [ "AddThing", "classCard.html#a2dbf6f70d7bdc41fb0f1ee40140387f0", null ],
     [ "ApplyBacker", "classCard.html#ad56c7049d0c33cc74dc75e4cf1ca8abd", null ],
     [ "ApplyEditorTags", "classCard.html#a9c36555d9e686243a0be1ecce312ecfb", null ],
+    [ "ApplyElementEffect", "classCard.html#a0f41a1982a359dec265ef540260720cd", null ],
     [ "ApplyMaterial", "classCard.html#a77248022ffe2a6b30fad9f19d2661496", null ],
     [ "ApplyMaterialElements", "classCard.html#a1cfa179c846592644ebfe10c5d3209b1", null ],
     [ "ApplyNewLine", "classCard.html#a41c57f6ada13c99e736452a1b7430e68", null ],

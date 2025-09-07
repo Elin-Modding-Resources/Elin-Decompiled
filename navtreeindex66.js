@@ -1,5 +1,13 @@
 var NAVTREEINDEX66 =
 {
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#accf33d6fdc152f5ea7aa03465602c7aa":[1,0,533,6,1,16],
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#ad1933e20fa3129f3652c136cb8638938":[1,0,533,6,1,18],
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#adf2a149c45f94dd0446ab78c84c599c8":[1,0,533,6,1,5],
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#afcb33934e1f7abbdf29abfc7cc385752":[1,0,533,6,1,9],
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html":[1,0,533,6,2],
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#a64234aca07db0d41670f5093f87bffe7":[1,0,533,6,2,3],
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#ad1c38073b56a472b5547e04e99eac6f9":[1,0,533,6,2,2],
+"classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#aee81da98f859b0f1e9eda6b3932cb4b2":[1,0,533,6,2,0],
 "classGameSetting_1_1RenderSetting_1_1MapBGSetting.html#af73b58547aa77d7e7b968787853bce87":[1,0,533,6,2,1],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html":[1,0,533,6,3],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#a68011beb3795892b83b01c0a39662e15":[1,0,533,6,3,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX66 =
 "classGoalCombat.html":[1,0,550],
 "classGoalCombat.html#a03d26d68a72ee73e1439b0e50648bdc8":[1,0,550,11],
 "classGoalCombat.html#a0ca96bef4bc165272d07e10330e94a32":[1,0,550,4],
-"classGoalCombat.html#a0cb5be0d349d1fb3979e8f0dfd26a021":[1,0,550,9],
-"classGoalCombat.html#a0f70d88c596da098cec682836d5e7cde":[1,0,550,2],
-"classGoalCombat.html#a29a7eb89e9fe0d78d7ee1fd5a9c4314b":[1,0,550,17],
-"classGoalCombat.html#a45bd5d5fd887669969cbe4b3ac01d6dd":[1,0,550,8],
-"classGoalCombat.html#a4b0365304964156d50339dbb3c3fe5e8":[1,0,550,21],
-"classGoalCombat.html#a5e3a1a85d6b197380da42273c5a8d4b5":[1,0,550,15],
-"classGoalCombat.html#a6c8189a549709f4f7914e2f2616e6fd5":[1,0,550,5],
-"classGoalCombat.html#a7d130edf908caf0cf259a5d7f4692378":[1,0,550,18],
-"classGoalCombat.html#a9a36c7c515deec0f4d38997c7318cf03":[1,0,550,7]
+"classGoalCombat.html#a0cb5be0d349d1fb3979e8f0dfd26a021":[1,0,550,9]
 };

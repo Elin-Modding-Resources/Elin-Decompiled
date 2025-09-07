@@ -844,6 +844,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "NotificationBattle.cs", "NotificationBattle_8cs.html", "NotificationBattle_8cs" ],
     [ "NotificationBuff.cs", "NotificationBuff_8cs.html", "NotificationBuff_8cs" ],
     [ "NotificationCondition.cs", "NotificationCondition_8cs.html", "NotificationCondition_8cs" ],
+    [ "NotificationCooldown.cs", "NotificationCooldown_8cs.html", "NotificationCooldown_8cs" ],
     [ "NotificationExceedParty.cs", "NotificationExceedParty_8cs.html", "NotificationExceedParty_8cs" ],
     [ "NotificationGlobal.cs", "NotificationGlobal_8cs.html", "NotificationGlobal_8cs" ],
     [ "NotificationGuest.cs", "NotificationGuest_8cs.html", "NotificationGuest_8cs" ],

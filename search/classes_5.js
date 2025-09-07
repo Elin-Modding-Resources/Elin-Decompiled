@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['faction_0',['FACTION',['../classFACTION.html',1,'']]],
-  ['faction_1',['Faction',['../classFaction.html',1,'']]],
+  ['faction_0',['Faction',['../classFaction.html',1,'']]],
+  ['faction_1',['FACTION',['../classFACTION.html',1,'']]],
   ['factionbranch_2',['FactionBranch',['../classFactionBranch.html',1,'']]],
   ['factiongroup_3',['FactionGroup',['../classFactionGroup.html',1,'']]],
   ['factionmanager_4',['FactionManager',['../classFactionManager.html',1,'']]],

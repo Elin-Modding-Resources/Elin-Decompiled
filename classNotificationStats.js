@@ -1,5 +1,6 @@
 var classNotificationStats =
 [
+    [ "GetSortVal", "classNotificationStats.html#a425dc2de345d36324cab84c75606389d", null ],
     [ "OnClick", "classNotificationStats.html#aa0643b05b6b57039356c7526a261bc72", null ],
     [ "OnRefresh", "classNotificationStats.html#a92d7c509592028fec5be287cb599ec17", null ],
     [ "stats", "classNotificationStats.html#a01d69844cdc1fce36cbc0c04d7676ae2", null ],

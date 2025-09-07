@@ -1,5 +1,6 @@
 var classNotificationCondition =
 [
+    [ "GetSortVal", "classNotificationCondition.html#a01df072491cda0a7b75074d4eaae633f", null ],
     [ "OnClick", "classNotificationCondition.html#a11d8cd66d582b190ddbb99cb0de4c310", null ],
     [ "OnRefresh", "classNotificationCondition.html#a30c457453a75aa75af5b6cf4d08b01d3", null ],
     [ "ShouldRemove", "classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26", null ],

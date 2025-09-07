@@ -2,6 +2,7 @@ var classBaseNotification =
 [
     [ "GetLayoutGroup", "classBaseNotification.html#aadaf2a55ea4e15bf578129b267562574", null ],
     [ "GetMold", "classBaseNotification.html#a03ad07673672207ae93f4d7a3bfa6b1f", null ],
+    [ "GetSortVal", "classBaseNotification.html#a744ee75f4ec415dcb31185420ff072e4", null ],
     [ "OnClick", "classBaseNotification.html#acdb74f1045304fd4ac7752445dccd98e", null ],
     [ "OnInstantiate", "classBaseNotification.html#a8d57859dd350557885d1519c058eddac", null ],
     [ "OnRefresh", "classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702", null ],

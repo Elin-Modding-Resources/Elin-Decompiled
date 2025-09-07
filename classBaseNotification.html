@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.195 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.196 Nightly</span>
    </div>
   </td>
  </tr>
@@ -103,17 +103,18 @@ Inheritance diagram for BaseNotification:</div>
  <div class="center">
   <img src="classBaseNotification.png" usemap="#BaseNotification_map" alt=""/>
   <map id="BaseNotification_map" name="BaseNotification_map">
-<area href="classEClass.html" alt="EClass" shape="rect" coords="353,0,500,24"/>
+<area href="classEClass.html" alt="EClass" shape="rect" coords="392,0,539,24"/>
 <area href="classNotificationCondition.html" alt="NotificationCondition" shape="rect" coords="78,112,225,136"/>
-<area href="classNotificationExceedParty.html" alt="NotificationExceedParty" shape="rect" coords="235,112,382,136"/>
-<area href="classNotificationGlobal.html" alt="NotificationGlobal" shape="rect" coords="471,112,618,136"/>
-<area href="classNotificationStats.html" alt="NotificationStats" shape="rect" coords="785,112,932,136"/>
+<area href="classNotificationCooldown.html" alt="NotificationCooldown" shape="rect" coords="235,112,382,136"/>
+<area href="classNotificationExceedParty.html" alt="NotificationExceedParty" shape="rect" coords="392,112,539,136"/>
+<area href="classNotificationGlobal.html" alt="NotificationGlobal" shape="rect" coords="549,112,696,136"/>
+<area href="classNotificationStats.html" alt="NotificationStats" shape="rect" coords="863,112,1010,136"/>
 <area href="classNotificationBuff.html" alt="NotificationBuff" shape="rect" coords="0,168,147,192"/>
 <area href="classNotificationStance.html" alt="NotificationStance" shape="rect" coords="157,168,304,192"/>
-<area href="classNotificationBattle.html" alt="NotificationBattle" shape="rect" coords="314,168,461,192"/>
-<area href="classNotificationGuest.html" alt="NotificationGuest" shape="rect" coords="471,168,618,192"/>
-<area href="classNotificationHome.html" alt="NotificationHome" shape="rect" coords="628,168,775,192"/>
-<area href="classNotificationStatsMana.html" alt="NotificationStatsMana" shape="rect" coords="785,168,932,192"/>
+<area href="classNotificationBattle.html" alt="NotificationBattle" shape="rect" coords="392,168,539,192"/>
+<area href="classNotificationGuest.html" alt="NotificationGuest" shape="rect" coords="549,168,696,192"/>
+<area href="classNotificationHome.html" alt="NotificationHome" shape="rect" coords="706,168,853,192"/>
+<area href="classNotificationStatsMana.html" alt="NotificationStatsMana" shape="rect" coords="863,168,1010,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -123,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a03ad07673672207ae93f4d7a3bfa6b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadaf2a55ea4e15bf578129b267562574"><td class="memItemLeft" align="right" valign="top">virtual LayoutGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#aadaf2a55ea4e15bf578129b267562574">GetLayoutGroup</a> ()</td></tr>
 <tr class="separator:aadaf2a55ea4e15bf578129b267562574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744ee75f4ec415dcb31185420ff072e4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#a744ee75f4ec415dcb31185420ff072e4">GetSortVal</a> ()</td></tr>
+<tr class="separator:a744ee75f4ec415dcb31185420ff072e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ac4b1fd52f50ce6cd54ccd6d466331"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a> ()</td></tr>
 <tr class="separator:ae2ac4b1fd52f50ce6cd54ccd6d466331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdb74f1045304fd4ac7752445dccd98e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#acdb74f1045304fd4ac7752445dccd98e">OnClick</a> ()</td></tr>
@@ -255,14 +258,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classNotificationBuff.html#a58c15d8db84b82b5f9870d1b3e5b47fe">NotificationBuff</a>.</p>
-
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00028">28</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
 <div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   31</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
 
 </div>
 </div>
@@ -289,14 +290,48 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classNotificationBuff.html#ad168a0ae9dc76da9a5f45b214942eb60">NotificationBuff</a>, and <a class="el" href="classNotificationStance.html#a3eea49363ea353b7acc11c962c521115">NotificationStance</a>.</p>
+<p>Reimplemented in <a class="el" href="classNotificationBuff.html#ad168a0ae9dc76da9a5f45b214942eb60">NotificationBuff</a>, <a class="el" href="classNotificationCooldown.html#a8b8e59afa5b8257ee385df1f9ce18aab">NotificationCooldown</a>, and <a class="el" href="classNotificationStance.html#a3eea49363ea353b7acc11c962c521115">NotificationStance</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00023">23</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
 <div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   26</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
+
+</div>
+</div>
+<a id="a744ee75f4ec415dcb31185420ff072e4" name="a744ee75f4ec415dcb31185420ff072e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744ee75f4ec415dcb31185420ff072e4">&#9670;&#160;</a></span>GetSortVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int BaseNotification.GetSortVal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classNotificationCondition.html#a01df072491cda0a7b75074d4eaae633f">NotificationCondition</a>, <a class="el" href="classNotificationCooldown.html#af9ed8a221f104803a37b63b5d6dc343a">NotificationCooldown</a>, <a class="el" href="classNotificationExceedParty.html#a5037194dfb98b4f647c41f60b7e8613a">NotificationExceedParty</a>, and <a class="el" href="classNotificationStats.html#a425dc2de345d36324cab84c75606389d">NotificationStats</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00033">33</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00079">BaseWidgetNotice.Sort()</a>.</p>
 
 </div>
 </div>
@@ -325,10 +360,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classNotificationBattle.html#aca4a9df7e12fd1dc1d9ba9ba27ef94b7">NotificationBattle</a>, <a class="el" href="classNotificationCondition.html#a11d8cd66d582b190ddbb99cb0de4c310">NotificationCondition</a>, <a class="el" href="classNotificationGuest.html#ae974c5ee226eb03d410543f0a96d4f87">NotificationGuest</a>, <a class="el" href="classNotificationHome.html#a740df8bd342780851f71415771445b22">NotificationHome</a>, and <a class="el" href="classNotificationStats.html#aa0643b05b6b57039356c7526a261bc72">NotificationStats</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00047">47</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerJournal.html">LayerJournal</a>&gt;();</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00052">52</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerJournal.html">LayerJournal</a>&gt;();</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00016">EClass.cs:16</a></div></div>
 <div class="ttc" id="aclassLayerJournal_html"><div class="ttname"><a href="classLayerJournal.html">LayerJournal</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerJournal_8cs_source.html#l00001">LayerJournal.cs:2</a></div></div>
@@ -362,11 +397,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classNotificationBuff.html#addf32f267b0c803e69074a953fca18ad">NotificationBuff</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00061">61</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00066">66</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
 
 </div>
 </div>
@@ -393,13 +428,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classNotificationBattle.html#aeb75e0366f80e2949ec668e74cc36db7">NotificationBattle</a>, <a class="el" href="classNotificationBuff.html#a5957dda64b70b06ff3df7b90135be23e">NotificationBuff</a>, <a class="el" href="classNotificationCondition.html#a30c457453a75aa75af5b6cf4d08b01d3">NotificationCondition</a>, <a class="el" href="classNotificationExceedParty.html#ae449712febcff85dfc77c6802a9df47c">NotificationExceedParty</a>, <a class="el" href="classNotificationGuest.html#af74035b4be7b2bcb0febd0fc1b7fdda1">NotificationGuest</a>, <a class="el" href="classNotificationHome.html#af08830cb002a067956afa44b20e3c301">NotificationHome</a>, and <a class="el" href="classNotificationStats.html#a92d7c509592028fec5be287cb599ec17">NotificationStats</a>.</p>
+<p>Reimplemented in <a class="el" href="classNotificationBattle.html#aeb75e0366f80e2949ec668e74cc36db7">NotificationBattle</a>, <a class="el" href="classNotificationBuff.html#a5957dda64b70b06ff3df7b90135be23e">NotificationBuff</a>, <a class="el" href="classNotificationCondition.html#a30c457453a75aa75af5b6cf4d08b01d3">NotificationCondition</a>, <a class="el" href="classNotificationCooldown.html#a9156ce246369fef83e2e6b721db4bbf8">NotificationCooldown</a>, <a class="el" href="classNotificationExceedParty.html#ae449712febcff85dfc77c6802a9df47c">NotificationExceedParty</a>, <a class="el" href="classNotificationGuest.html#af74035b4be7b2bcb0febd0fc1b7fdda1">NotificationGuest</a>, <a class="el" href="classNotificationHome.html#af08830cb002a067956afa44b20e3c301">NotificationHome</a>, and <a class="el" href="classNotificationStats.html#a92d7c509592028fec5be287cb599ec17">NotificationStats</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00052">52</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00057">57</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseNotification_8cs_source.html#l00033">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseNotification_8cs_source.html#l00038">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -426,28 +461,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00033">33</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_function" href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">OnRefresh</a>();</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> != <a class="code hl_variable" href="classBaseNotification.html#a626ce0f7ee75298ce3ddf281ed5197b6">lastText</a>)</div>
-<div class="line"><span class="lineno">   37</span>        {</div>
-<div class="line"><span class="lineno">   38</span>            item.button.mainText.text = <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a>;</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_variable" href="classBaseNotification.html#a626ce0f7ee75298ce3ddf281ed5197b6">lastText</a> = <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a>;</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.gameObject.activeInHierarchy)</div>
-<div class="line"><span class="lineno">   41</span>            {</div>
-<div class="line"><span class="lineno">   42</span>                <a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00038">38</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_function" href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">OnRefresh</a>();</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> != <a class="code hl_variable" href="classBaseNotification.html#a626ce0f7ee75298ce3ddf281ed5197b6">lastText</a>)</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            item.button.mainText.text = <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a>;</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_variable" href="classBaseNotification.html#a626ce0f7ee75298ce3ddf281ed5197b6">lastText</a> = <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a>;</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.gameObject.activeInHierarchy)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                <a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.RebuildLayout(recursive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
 <div class="ttc" id="aclassBaseNotification_html_a626ce0f7ee75298ce3ddf281ed5197b6"><div class="ttname"><a href="classBaseNotification.html#a626ce0f7ee75298ce3ddf281ed5197b6">BaseNotification.lastText</a></div><div class="ttdeci">string lastText</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00011">BaseNotification.cs:11</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_aa8f147285c7f23a0e53b81e3fa033c40"><div class="ttname"><a href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">BaseNotification.item</a></div><div class="ttdeci">ItemNotice item</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00007">BaseNotification.cs:7</a></div></div>
-<div class="ttc" id="aclassBaseNotification_html_aba159caf72dd9cbe492fd5f1368b0702"><div class="ttname"><a href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">BaseNotification.OnRefresh</a></div><div class="ttdeci">virtual void OnRefresh()</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00052">BaseNotification.cs:52</a></div></div>
+<div class="ttc" id="aclassBaseNotification_html_aba159caf72dd9cbe492fd5f1368b0702"><div class="ttname"><a href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">BaseNotification.OnRefresh</a></div><div class="ttdeci">virtual void OnRefresh()</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00057">BaseNotification.cs:57</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_af66eccd33a7fa678c344a71f6612939a"><div class="ttname"><a href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">BaseNotification.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00009">BaseNotification.cs:9</a></div></div>
 <div class="ttc" id="aclassItemNotice_html_a281b58b4cd46a352ad804f727f5bc747"><div class="ttname"><a href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">ItemNotice.button</a></div><div class="ttdeci">UIButton button</div><div class="ttdef"><b>Definition:</b> <a href="ItemNotice_8cs_source.html#l00011">ItemNotice.cs:11</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ItemNotice_8cs_source.html#l00011">ItemNotice.button</a>, <a class="el" href="BaseNotification_8cs_source.html#l00007">item</a>, <a class="el" href="BaseNotification_8cs_source.html#l00011">lastText</a>, <a class="el" href="BaseNotification_8cs_source.html#l00052">OnRefresh()</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00009">text</a>.</p>
+<p class="reference">References <a class="el" href="ItemNotice_8cs_source.html#l00011">ItemNotice.button</a>, <a class="el" href="BaseNotification_8cs_source.html#l00007">item</a>, <a class="el" href="BaseNotification_8cs_source.html#l00011">lastText</a>, <a class="el" href="BaseNotification_8cs_source.html#l00057">OnRefresh()</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00009">text</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">BaseWidgetNotice._RefreshAll()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">BaseWidgetNotice._RefreshAll()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
 
 </div>
 </div>
@@ -474,12 +509,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26">NotificationCondition</a>.</p>
+<p>Reimplemented in <a class="el" href="classNotificationCondition.html#acbdb46bb5e7d9771b357be3e5204fa26">NotificationCondition</a>, and <a class="el" href="classNotificationCooldown.html#a01333f09880521bf29377d85d1c3a246">NotificationCooldown</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00056">56</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00061">61</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -498,7 +533,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00007">7</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">BaseWidgetNotice._RefreshAll()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00030">NotificationBuff.OnInstantiate()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00019">NotificationBuff.OnRefresh()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00050">NotificationCondition.OnRefresh()</a>, <a class="el" href="NotificationHome_8cs_source.html#l00015">NotificationHome.OnRefresh()</a>, <a class="el" href="NotificationStats_8cs_source.html#l00024">NotificationStats.OnRefresh()</a>, <a class="el" href="BaseNotification_8cs_source.html#l00033">Refresh()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00120">BaseWidgetNotice.Remove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00052">BaseWidgetNotice._RefreshAll()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00023">NotificationBuff.OnInstantiate()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00012">NotificationBuff.OnRefresh()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00072">NotificationCondition.OnRefresh()</a>, <a class="el" href="NotificationHome_8cs_source.html#l00015">NotificationHome.OnRefresh()</a>, <a class="el" href="NotificationStats_8cs_source.html#l00029">NotificationStats.OnRefresh()</a>, <a class="el" href="BaseNotification_8cs_source.html#l00038">Refresh()</a>, and <a class="el" href="BaseWidgetNotice_8cs_source.html#l00131">BaseWidgetNotice.Remove()</a>.</p>
 
 </div>
 </div>
@@ -516,7 +551,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00011">11</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseNotification_8cs_source.html#l00033">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseNotification_8cs_source.html#l00038">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +569,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00009">9</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NotificationBattle_8cs_source.html#l00015">NotificationBattle.OnRefresh()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00019">NotificationBuff.OnRefresh()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00050">NotificationCondition.OnRefresh()</a>, <a class="el" href="NotificationExceedParty_8cs_source.html#l00015">NotificationExceedParty.OnRefresh()</a>, <a class="el" href="NotificationGuest_8cs_source.html#l00017">NotificationGuest.OnRefresh()</a>, <a class="el" href="NotificationHome_8cs_source.html#l00015">NotificationHome.OnRefresh()</a>, <a class="el" href="NotificationStats_8cs_source.html#l00024">NotificationStats.OnRefresh()</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00033">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NotificationBattle_8cs_source.html#l00015">NotificationBattle.OnRefresh()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00012">NotificationBuff.OnRefresh()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00072">NotificationCondition.OnRefresh()</a>, <a class="el" href="NotificationCooldown_8cs_source.html#l00025">NotificationCooldown.OnRefresh()</a>, <a class="el" href="NotificationExceedParty_8cs_source.html#l00020">NotificationExceedParty.OnRefresh()</a>, <a class="el" href="NotificationGuest_8cs_source.html#l00017">NotificationGuest.OnRefresh()</a>, <a class="el" href="NotificationHome_8cs_source.html#l00015">NotificationHome.OnRefresh()</a>, <a class="el" href="NotificationStats_8cs_source.html#l00029">NotificationStats.OnRefresh()</a>, and <a class="el" href="BaseNotification_8cs_source.html#l00038">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -561,7 +596,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00015">15</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
 
 </div>
 </div>
@@ -587,7 +622,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00019">19</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
 
 </div>
 </div>
@@ -613,7 +648,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00021">21</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
 
 </div>
 </div>
@@ -639,7 +674,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseNotification_8cs_source.html#l00013">13</a> of file <a class="el" href="BaseNotification_8cs_source.html">BaseNotification.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00082">BaseWidgetNotice.Add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseWidgetNotice_8cs_source.html#l00092">BaseWidgetNotice.Add()</a>.</p>
 
 </div>
 </div>

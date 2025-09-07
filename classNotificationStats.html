@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.195 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.196 Nightly</span>
    </div>
   </td>
  </tr>
@@ -113,6 +113,8 @@ Inheritance diagram for NotificationStats:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0643b05b6b57039356c7526a261bc72"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNotificationStats.html#aa0643b05b6b57039356c7526a261bc72">OnClick</a> ()</td></tr>
 <tr class="separator:aa0643b05b6b57039356c7526a261bc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425dc2de345d36324cab84c75606389d"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNotificationStats.html#a425dc2de345d36324cab84c75606389d">GetSortVal</a> ()</td></tr>
+<tr class="separator:a425dc2de345d36324cab84c75606389d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92d7c509592028fec5be287cb599ec17"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNotificationStats.html#a92d7c509592028fec5be287cb599ec17">OnRefresh</a> ()</td></tr>
 <tr class="separator:a92d7c509592028fec5be287cb599ec17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBaseNotification"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBaseNotification')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBaseNotification.html">BaseNotification</a></td></tr>
@@ -120,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a03ad07673672207ae93f4d7a3bfa6b1f inherit pub_methods_classBaseNotification"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadaf2a55ea4e15bf578129b267562574 inherit pub_methods_classBaseNotification"><td class="memItemLeft" align="right" valign="top">virtual LayoutGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#aadaf2a55ea4e15bf578129b267562574">GetLayoutGroup</a> ()</td></tr>
 <tr class="separator:aadaf2a55ea4e15bf578129b267562574 inherit pub_methods_classBaseNotification"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744ee75f4ec415dcb31185420ff072e4 inherit pub_methods_classBaseNotification"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#a744ee75f4ec415dcb31185420ff072e4">GetSortVal</a> ()</td></tr>
+<tr class="separator:a744ee75f4ec415dcb31185420ff072e4 inherit pub_methods_classBaseNotification"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ac4b1fd52f50ce6cd54ccd6d466331 inherit pub_methods_classBaseNotification"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#ae2ac4b1fd52f50ce6cd54ccd6d466331">Refresh</a> ()</td></tr>
 <tr class="separator:ae2ac4b1fd52f50ce6cd54ccd6d466331 inherit pub_methods_classBaseNotification"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdb74f1045304fd4ac7752445dccd98e inherit pub_methods_classBaseNotification"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseNotification.html#acdb74f1045304fd4ac7752445dccd98e">OnClick</a> ()</td></tr>
@@ -241,6 +245,41 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="NotificationStats_8cs_source.html#l00004">4</a> of file <a class="el" href="NotificationStats_8cs_source.html">NotificationStats.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a425dc2de345d36324cab84c75606389d" name="a425dc2de345d36324cab84c75606389d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425dc2de345d36324cab84c75606389d">&#9670;&#160;</a></span>GetSortVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int NotificationStats.GetSortVal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseNotification.html#a744ee75f4ec415dcb31185420ff072e4">BaseNotification</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="NotificationStats_8cs_source.html#l00024">24</a> of file <a class="el" href="NotificationStats_8cs_source.html">NotificationStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> 5000000 + <a class="code hl_variable" href="classNotificationStats.html#a01d69844cdc1fce36cbc0c04d7676ae2">stats</a>().GetSortVal();</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassNotificationStats_html_a01d69844cdc1fce36cbc0c04d7676ae2"><div class="ttname"><a href="classNotificationStats.html#a01d69844cdc1fce36cbc0c04d7676ae2">NotificationStats.stats</a></div><div class="ttdeci">Func&lt; BaseStats &gt; stats</div><div class="ttdef"><b>Definition:</b> <a href="NotificationStats_8cs_source.html#l00006">NotificationStats.cs:6</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="NotificationStats_8cs_source.html#l00006">stats</a>.</p>
+
+</div>
+</div>
 <a id="aa0643b05b6b57039356c7526a261bc72" name="aa0643b05b6b57039356c7526a261bc72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0643b05b6b57039356c7526a261bc72">&#9670;&#160;</a></span>OnClick()</h2>
 
@@ -304,12 +343,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">BaseNotification</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="NotificationStats_8cs_source.html#l00024">24</a> of file <a class="el" href="NotificationStats_8cs_source.html">NotificationStats.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="classBaseStats.html">BaseStats</a> baseStats = <a class="code hl_variable" href="classNotificationStats.html#a01d69844cdc1fce36cbc0c04d7676ae2">stats</a>();</div>
-<div class="line"><span class="lineno">   27</span>        <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> = baseStats.<a class="code hl_function" href="classBaseStats.html#ac5a85baef6903a49b15a8cd0e2ca45c9">GetText</a>() + ((EClass.debug.showExtra &amp;&amp; !baseStats.<a class="code hl_function" href="classBaseStats.html#ac5a85baef6903a49b15a8cd0e2ca45c9">GetText</a>().IsEmpty()) ? (<span class="stringliteral">&quot;(&quot;</span> + baseStats.<a class="code hl_function" href="classBaseStats.html#af81b6746cd272e165340377c78f84b88">GetValue</a>() + <span class="stringliteral">&quot;)&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   28</span>        item.button.mainText.color = baseStats.<a class="code hl_function" href="classBaseStats.html#ada56836d099082939f930e209732a9db">GetColor</a>(<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.<a class="code hl_variable" href="classUIButton.html#a9521a13a59f1cdfc54b9298dbd1dbb37">skinRoot</a>.<a class="code hl_function" href="classBaseSkinRoot.html#afb5760ebad99816cf44a9e53dad196cd">GetButton</a>().<a class="code hl_variable" href="classSkinAsset__Button.html#a830dc206da45c49f29fdf8433be7d73a">colorProf</a>);</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NotificationStats_8cs_source.html#l00029">29</a> of file <a class="el" href="NotificationStats_8cs_source.html">NotificationStats.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="classBaseStats.html">BaseStats</a> baseStats = <a class="code hl_variable" href="classNotificationStats.html#a01d69844cdc1fce36cbc0c04d7676ae2">stats</a>();</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> = baseStats.<a class="code hl_function" href="classBaseStats.html#ac5a85baef6903a49b15a8cd0e2ca45c9">GetText</a>() + ((EClass.debug.showExtra &amp;&amp; !baseStats.<a class="code hl_function" href="classBaseStats.html#ac5a85baef6903a49b15a8cd0e2ca45c9">GetText</a>().IsEmpty()) ? (<span class="stringliteral">&quot;(&quot;</span> + baseStats.<a class="code hl_function" href="classBaseStats.html#af81b6746cd272e165340377c78f84b88">GetValue</a>() + <span class="stringliteral">&quot;)&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   33</span>        item.button.mainText.color = baseStats.<a class="code hl_function" href="classBaseStats.html#ada56836d099082939f930e209732a9db">GetColor</a>(<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.<a class="code hl_variable" href="classUIButton.html#a9521a13a59f1cdfc54b9298dbd1dbb37">skinRoot</a>.<a class="code hl_function" href="classBaseSkinRoot.html#afb5760ebad99816cf44a9e53dad196cd">GetButton</a>().<a class="code hl_variable" href="classSkinAsset__Button.html#a830dc206da45c49f29fdf8433be7d73a">colorProf</a>);</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
 <div class="ttc" id="aclassBaseNotification_html_aa8f147285c7f23a0e53b81e3fa033c40"><div class="ttname"><a href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">BaseNotification.item</a></div><div class="ttdeci">ItemNotice item</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00007">BaseNotification.cs:7</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html_af66eccd33a7fa678c344a71f6612939a"><div class="ttname"><a href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">BaseNotification.text</a></div><div class="ttdeci">string text</div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00009">BaseNotification.cs:9</a></div></div>
 <div class="ttc" id="aclassBaseSkinRoot_html_afb5760ebad99816cf44a9e53dad196cd"><div class="ttname"><a href="classBaseSkinRoot.html#afb5760ebad99816cf44a9e53dad196cd">BaseSkinRoot.GetButton</a></div><div class="ttdeci">virtual SkinAsset_Button GetButton()</div><div class="ttdef"><b>Definition:</b> <a href="BaseSkinRoot_8cs_source.html#l00028">BaseSkinRoot.cs:28</a></div></div>
@@ -318,7 +357,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassBaseStats_html_ada56836d099082939f930e209732a9db"><div class="ttname"><a href="classBaseStats.html#ada56836d099082939f930e209732a9db">BaseStats.GetColor</a></div><div class="ttdeci">virtual Color GetColor(Gradient gradient)</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00027">BaseStats.cs:27</a></div></div>
 <div class="ttc" id="aclassBaseStats_html_af81b6746cd272e165340377c78f84b88"><div class="ttname"><a href="classBaseStats.html#af81b6746cd272e165340377c78f84b88">BaseStats.GetValue</a></div><div class="ttdeci">virtual int GetValue()</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00052">BaseStats.cs:52</a></div></div>
 <div class="ttc" id="aclassItemNotice_html_a281b58b4cd46a352ad804f727f5bc747"><div class="ttname"><a href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">ItemNotice.button</a></div><div class="ttdeci">UIButton button</div><div class="ttdef"><b>Definition:</b> <a href="ItemNotice_8cs_source.html#l00011">ItemNotice.cs:11</a></div></div>
-<div class="ttc" id="aclassNotificationStats_html_a01d69844cdc1fce36cbc0c04d7676ae2"><div class="ttname"><a href="classNotificationStats.html#a01d69844cdc1fce36cbc0c04d7676ae2">NotificationStats.stats</a></div><div class="ttdeci">Func&lt; BaseStats &gt; stats</div><div class="ttdef"><b>Definition:</b> <a href="NotificationStats_8cs_source.html#l00006">NotificationStats.cs:6</a></div></div>
 <div class="ttc" id="aclassSkinAsset__Button_html_a830dc206da45c49f29fdf8433be7d73a"><div class="ttname"><a href="classSkinAsset__Button.html#a830dc206da45c49f29fdf8433be7d73a">SkinAsset_Button.colorProf</a></div><div class="ttdeci">SkinColorProfile colorProf</div><div class="ttdef"><b>Definition:</b> <a href="SkinAsset__Button_8cs_source.html#l00012">SkinAsset_Button.cs:12</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a9521a13a59f1cdfc54b9298dbd1dbb37"><div class="ttname"><a href="classUIButton.html#a9521a13a59f1cdfc54b9298dbd1dbb37">UIButton.skinRoot</a></div><div class="ttdeci">BaseSkinRoot skinRoot</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00142">UIButton.cs:142</a></div></div>
 </div><!-- fragment -->
@@ -341,7 +379,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="NotificationStats_8cs_source.html#l00006">6</a> of file <a class="el" href="NotificationStats_8cs_source.html">NotificationStats.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NotificationStats_8cs_source.html#l00024">OnRefresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NotificationStats_8cs_source.html#l00024">GetSortVal()</a>, and <a class="el" href="NotificationStats_8cs_source.html#l00029">OnRefresh()</a>.</p>
 
 </div>
 </div>

@@ -388,6 +388,7 @@ var hierarchy =
           [ "NotificationBuff", "classNotificationBuff.html", null ],
           [ "NotificationStance", "classNotificationStance.html", null ]
         ] ],
+        [ "NotificationCooldown", "classNotificationCooldown.html", null ],
         [ "NotificationExceedParty", "classNotificationExceedParty.html", null ],
         [ "NotificationGlobal", "classNotificationGlobal.html", [
           [ "NotificationBattle", "classNotificationBattle.html", null ],

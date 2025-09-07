@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"classAM__Region.html#a6c5dac88417ef94096dcfedacd8d8514":[1,0,155,0],
+"classAM__Region.html#a8080c0ce2ee0850a4102da76fd836614":[1,0,155,2],
 "classAM__Region.html#ab68cb3e702ce50247d2763660b2edf7d":[1,0,155,1],
 "classAM__RemoveDesignation.html":[1,0,156],
 "classAM__RemoveDesignation.html#a1508904f1650ad8d9357abaefabc3970":[1,0,156,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX28 =
 "classActMelee.html#ab10fd890ef2195084424749a4208469e":[1,0,33,10],
 "classActMelee.html#ab2e25cabccb8ad07efc0460ffa8cd046":[1,0,33,9],
 "classActMelee.html#ac184692d2c011cb8abcd99bbf0badf29":[1,0,33,12],
-"classActMelee.html#ad5256811dd4d62af9138afd1e657ec5c":[1,0,33,15],
-"classActMelee.html#af6157d89fe35f11db3810c102af185bf":[1,0,33,7],
-"classActMeleeBladeStorm.html":[1,0,34]
+"classActMelee.html#ad5256811dd4d62af9138afd1e657ec5c":[1,0,33,15]
 };
