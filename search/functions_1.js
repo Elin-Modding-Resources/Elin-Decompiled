@@ -204,7 +204,7 @@ var searchData=
   ['applydata_201',['ApplyData',['../classLayerEditHouse.html#a35db829c04510b9a5f8a608486e5656f',1,'LayerEditHouse.ApplyData()'],['../classTraitHouseBoard.html#a3776ba3ef43506d1a670f6119b406ada',1,'TraitHouseBoard.ApplyData()']]],
   ['applydeathpenalty_202',['ApplyDeathPenalty',['../classChara.html#ae3df6bbb79eb65fea62427bd68cf98a2',1,'Chara']]],
   ['applyeditortags_203',['ApplyEditorTags',['../classCard.html#a9c36555d9e686243a0be1ecce312ecfb',1,'Card.ApplyEditorTags()'],['../classChara.html#a145f4a6523e75ff9c6d9248b95ab01b5',1,'Chara.ApplyEditorTags()']]],
-  ['applyelementeffect_204',['ApplyElementEffect',['../classCard.html#a0f41a1982a359dec265ef540260720cd',1,'Card']]],
+  ['applyelementeffect_204',['ApplyElementEffect',['../classCard.html#a78e2a3be68ed5a2607a70ff50b0f29d4',1,'Card']]],
   ['applyelementmap_205',['ApplyElementMap',['../classElementContainer.html#abf940a8558401bbe6f0b59c1fd70fc4a',1,'ElementContainer']]],
   ['applyfont_206',['ApplyFont',['../classCoreConfig.html#a973ccb3a156fc15e2782bc024a35f7a2',1,'CoreConfig.ApplyFont()'],['../classLayerConfig.html#a2e44a831635a6c931e49c3fad7a28a7c',1,'LayerConfig.ApplyFont()']]],
   ['applyfps_207',['ApplyFPS',['../classCoreConfig.html#abadc01f5c02a15d89e59295be4841c11',1,'CoreConfig']]],
