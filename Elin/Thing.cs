@@ -1240,7 +1240,7 @@ public class Thing : Card
 		{
 			AddText("isBed".lang(traitBed.MaxHolders.ToString() ?? ""), FontColor.Default);
 		}
-		bool flag3 = base.IsEquipmentOrRangedOrAmmo || base.IsThrownWeapon;
+		bool flag3 = base.IsEquipmentOrRangedOrAmmo || base.IsThrownWeapon || trait is TraitToolMusic;
 		bool showTraits = !flag3 || base.ShowFoodEnc;
 		bool infoMode = mode == IInspect.NoteMode.Info;
 		List<Element> listTrait = ListValidTraits(isCraft: false, !infoMode);
@@ -1269,7 +1269,7 @@ public class Thing : Card
 					{
 						return false;
 					}
-					if (e.source.categorySub == "eleAttack" && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon)
+					if (e.source.categorySub == "eleAttack" && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
 					{
 						return false;
 					}

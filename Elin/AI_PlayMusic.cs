@@ -183,7 +183,7 @@ public class AI_PlayMusic : AIAct
 			Debug.Log(song.lv);
 		}
 		List<Chara> reacted = new List<Chara>();
-		Progress_Custom seq = new Progress_Custom
+		Progress_Custom progress = new Progress_Custom
 		{
 			maxProgress = 15,
 			cancelWhenMoved = false,
@@ -300,7 +300,7 @@ public class AI_PlayMusic : AIAct
 									}
 									if (value.source.categorySub == "eleAttack")
 									{
-										item2.ApplyElementEffect(value, value.Value * 10, owner);
+										item2.ApplyElementEffect(value, value.Value * 10, owner, checkHostileAct: true);
 									}
 								}
 							}
@@ -323,6 +323,7 @@ public class AI_PlayMusic : AIAct
 							if (EClass.rnd(num2 * num2) <= 30 && item2.pos.FirstChara == item2)
 							{
 								bool isMinion = item2.IsMinion;
+								p.cancelWhenDamaged = false;
 								if (num < item2.LV && EClass.rnd(2) == 0)
 								{
 									reacted.Add(item2);
@@ -370,6 +371,7 @@ public class AI_PlayMusic : AIAct
 									}
 									num2++;
 								}
+								p.cancelWhenDamaged = true;
 							}
 						}
 					}
@@ -398,7 +400,11 @@ public class AI_PlayMusic : AIAct
 				Evaluate(success: true);
 			}
 		}.SetDuration(26);
-		yield return Do(seq);
+		yield return Do(progress);
+		if (progress.status == Status.Fail)
+		{
+			yield return Cancel();
+		}
 		void LevelSong(int a)
 		{
 			if (a > 0)

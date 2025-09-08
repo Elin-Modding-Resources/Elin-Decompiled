@@ -232,7 +232,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 				}
 				return true;
 			}
-			if (!t.IsEquipmentOrRangedOrAmmo && !t.IsThrownWeapon)
+			if (!t.IsEquipmentOrRangedOrAmmo && !t.IsThrownWeapon && !(t.trait is TraitToolMusic))
 			{
 				return false;
 			}

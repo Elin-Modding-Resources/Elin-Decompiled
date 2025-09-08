@@ -4,7 +4,7 @@ public class TraitIndulgence : TraitScroll
 	{
 		c.PlaySound("holyveil");
 		c.PlayEffect("holyveil");
-		Msg.Say("skillbook_noSkill", c);
+		Msg.Say("indulgence", c);
 		if (c.IsPC)
 		{
 			EClass.player.ModKarma(20);

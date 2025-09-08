@@ -4692,19 +4692,20 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public void ApplyElementEffect(Element e, int eleP, Card origin)
+	public void ApplyElementEffect(Element e, int eleP, Card origin, bool checkHostileAct = false)
 	{
 		if (!isChara)
 		{
 			return;
 		}
 		bool flag = true;
+		bool hostile = false;
 		switch (e.id)
 		{
 		case 910:
 			if (Chance(30 + eleP / 5, 100))
 			{
-				Chara.AddCondition<ConBurning>(eleP);
+				MarkHostile().AddCondition<ConBurning>(eleP);
 			}
 			break;
 		case 911:
@@ -4729,7 +4730,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		case 915:
 			if (Chance(30 + eleP / 5, 100))
 			{
-				Chara.AddCondition<ConPoison>(eleP);
+				MarkHostile().AddCondition<ConPoison>(eleP);
 			}
 			break;
 		case 913:
@@ -4801,7 +4802,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (Chance(5 + eleP / 25, 40))
 			{
-				Chara.AddCondition<ConPoison>(eleP / 2);
+				MarkHostile().AddCondition<ConPoison>(eleP / 2);
 			}
 			if (Chance(5 + eleP / 25, 40))
 			{
@@ -4819,7 +4820,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		case 924:
 			if (Chance(50 + eleP / 10, 100))
 			{
-				Chara.AddCondition<ConBleed>(eleP);
+				MarkHostile().AddCondition<ConBleed>(eleP);
 			}
 			break;
 		case 923:
@@ -4836,9 +4837,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Chara.conSleep.Kill();
 		}
+		if (checkHostileAct && hostile && origin != null && origin.isChara)
+		{
+			origin.Chara.DoHostileAction(this);
+		}
 		static bool Chance(int a, int max)
 		{
 			return Mathf.Min(a, max) > EClass.rnd(100);
+		}
+		Chara MarkHostile()
+		{
+			hostile = true;
+			return Chara;
 		}
 	}
 
@@ -5053,9 +5063,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					CardRow cardRow = EClass.sources.cards.map[array[0]];
 					if (cardRow != null && cardRow.Category.slot != 0 && cardRow.quality == 0 && EClass.pc.Evalue(1660) * 25 > EClass.rnd(100))
 					{
-						CardBlueprint.SetRarity(Rarity.Legendary);
+						CardBlueprint.SetRarity((EClass.rnd(20) == 0) ? Rarity.Mythical : Rarity.Legendary);
 					}
-					list.Add(ThingGen.Create(array[0]).SetNum((num4 < 1000) ? 1 : (num4 / 1000 + ((EClass.rnd(1000) > num4 % 1000) ? 1 : 0))));
+					list.Add(ThingGen.Create(array[0], -1, LV).SetNum((num4 < 1000) ? 1 : (num4 / 1000 + ((EClass.rnd(1000) > num4 % 1000) ? 1 : 0))));
 				}
 			}
 			if (Chara.IsMachine)
