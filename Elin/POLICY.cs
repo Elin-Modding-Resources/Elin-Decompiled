@@ -5,9 +5,9 @@ public class POLICY
 {
 	public const int license_furniture = 2819;
 
-	public const int suite_room = 2813;
-
 	public const int mass_exhibition = 2814;
+
+	public const int suite_room = 2813;
 
 	public const int platinum_ticket = 2815;
 
@@ -39,7 +39,7 @@ public class POLICY
 
 	public const int tourist_safety = 2811;
 
-	public const int self_sufficient = 2511;
+	public const int ban_radio = 2510;
 
 	public const int home_discount = 2800;
 
@@ -47,9 +47,9 @@ public class POLICY
 
 	public const int vaccination = 2509;
 
-	public const int ban_radio = 2510;
-
 	public const int legal_drug = 2505;
+
+	public const int self_sufficient = 2511;
 
 	public const int impressment = 2504;
 
@@ -107,9 +107,9 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2819, 2813, 2814, 2815, 2816, 2817, 2818, 2820, 2827, 2822,
-		2823, 2824, 2825, 2826, 2828, 2812, 2821, 2811, 2511, 2800,
-		2508, 2509, 2510, 2505, 2504, 2503, 2502, 2501, 2500, 2810,
+		2819, 2814, 2813, 2815, 2816, 2817, 2818, 2820, 2827, 2822,
+		2823, 2824, 2825, 2826, 2828, 2812, 2821, 2811, 2510, 2800,
+		2508, 2509, 2505, 2511, 2504, 2503, 2502, 2501, 2500, 2810,
 		2512, 2507, 2513, 2514, 2515, 2506, 2700, 2702, 2704, 2516,
 		2705, 2706, 2707, 2703, 2709, 2710, 2711, 2712, 2715, 2701,
 		2708

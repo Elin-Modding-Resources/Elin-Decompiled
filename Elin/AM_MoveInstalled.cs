@@ -300,10 +300,15 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 			}
 			if (target.isThing)
 			{
+				bool isRoofItem = target.isRoofItem;
 				target.isRoofItem = IsRoofEditMode();
 				if (target.isRoofItem)
 				{
 					target.SetPlaceState(PlaceState.roaming);
+				}
+				else if (isRoofItem)
+				{
+					target.SetPlaceState(PlaceState.installed);
 				}
 				if (!target.isRoofItem)
 				{
@@ -383,20 +388,17 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 
 	public override void InputWheel(int wheel)
 	{
-		if (!EInput.isAltDown && !EInput.isCtrlDown)
+		if (target != null && target.TileType.MaxAltitude > 0)
 		{
-			if (target != null && target.TileType.MaxAltitude > 0)
-			{
-				moldCard.ChangeAltitude(wheel);
-			}
-			else if (EClass.scene.mouseTarget.CanCycle())
-			{
-				EClass.scene.mouseTarget.CycleTarget(wheel);
-			}
-			else
-			{
-				base.InputWheel(wheel);
-			}
+			moldCard.ChangeAltitude(wheel);
+		}
+		else if (EClass.scene.mouseTarget.CanCycle())
+		{
+			EClass.scene.mouseTarget.CycleTarget(wheel);
+		}
+		else
+		{
+			base.InputWheel(wheel);
 		}
 	}
 

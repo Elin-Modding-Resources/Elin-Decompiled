@@ -2,7 +2,7 @@ public class MUTATION
 {
 	public const int mutationRegen = 1516;
 
-	public const int mutationSkin = 1510;
+	public const int mutationSkinN = 1511;
 
 	public const int mutationEye = 1512;
 
@@ -14,7 +14,7 @@ public class MUTATION
 
 	public const int mutationRegenN = 1517;
 
-	public const int mutationSkinN = 1511;
+	public const int mutationSkin = 1510;
 
 	public const int mutationSpeedN = 1519;
 
@@ -82,7 +82,7 @@ public class MUTATION
 
 	public static readonly int[] IDS = new int[40]
 	{
-		1516, 1510, 1512, 1513, 1514, 1515, 1517, 1511, 1519, 1565,
+		1516, 1511, 1512, 1513, 1514, 1515, 1517, 1510, 1519, 1565,
 		1564, 1563, 1562, 1561, 1560, 1559, 1518, 1557, 1556, 1555,
 		1554, 1553, 1552, 1551, 1558, 1533, 1550, 1520, 1521, 1522,
 		1524, 1525, 1526, 1523, 1528, 1529, 1530, 1531, 1532, 1527

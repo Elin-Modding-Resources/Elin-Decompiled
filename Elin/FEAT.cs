@@ -59,7 +59,7 @@ public class FEAT
 
 	public const int featEarthStrength = 1411;
 
-	public const int featFisher = 1659;
+	public const int featLooter = 1660;
 
 	public const int featChef = 1658;
 
@@ -109,7 +109,7 @@ public class FEAT
 
 	public const int featReboot = 1410;
 
-	public const int featLooter = 1660;
+	public const int featFisher = 1659;
 
 	public const int featPaladin2 = 1408;
 
@@ -135,9 +135,9 @@ public class FEAT
 
 	public const int featRoran = 1237;
 
-	public const int featDemon = 1239;
+	public const int featUnderground = 1226;
 
-	public const int featMassSummoner = 1240;
+	public const int featDemon = 1239;
 
 	public const int featMeatCushion = 1241;
 
@@ -151,6 +151,8 @@ public class FEAT
 
 	public const int featPegasus = 1246;
 
+	public const int featLibra = 1247;
+
 	public const int featGod_element1 = 1300;
 
 	public const int featGod_earth1 = 1305;
@@ -159,11 +161,11 @@ public class FEAT
 
 	public const int featGod_machine1 = 1315;
 
-	public const int featUnderground = 1226;
+	public const int featMassSummoner = 1240;
+
+	public const int featGod_healing1 = 1320;
 
 	public const int featLoyal = 1225;
-
-	public const int featShiva = 1224;
 
 	public const int featAcidBody = 1223;
 
@@ -189,7 +191,7 @@ public class FEAT
 
 	public const int featFluffyTail = 1209;
 
-	public const int featGod_healing1 = 1320;
+	public const int featShiva = 1224;
 
 	public const int featUndead = 1210;
 
@@ -225,6 +227,8 @@ public class FEAT
 
 	public const int featGod_luck1 = 1330;
 
+	public const int featGod_oblivion1 = 1340;
+
 	public const int featGod_trickery1 = 1345;
 
 	public const int featGod_moonshadow1 = 1350;
@@ -239,31 +243,29 @@ public class FEAT
 
 	public const int featFarmer = 1403;
 
-	public const int featArcher = 1404;
-
 	public const int featPianist = 1405;
 
-	public const int featGod_oblivion1 = 1340;
+	public const int featArcher = 1404;
 
 	public const int featPaladin = 1407;
 
 	public const int featTourist = 1406;
 
-	public static readonly int[] IDS = new int[123]
+	public static readonly int[] IDS = new int[124]
 	{
 		1620, 1621, 1622, 1623, 1628, 1625, 1626, 1627, 1612, 1624,
 		1611, 1412, 1422, 1421, 1420, 1419, 1418, 1417, 1416, 1415,
-		1414, 1413, 1629, 1610, 1630, 1646, 1632, 1411, 1659, 1658,
+		1414, 1413, 1629, 1610, 1630, 1646, 1632, 1411, 1660, 1658,
 		1657, 1656, 1655, 1654, 1653, 1652, 1651, 1650, 1631, 1649,
 		1647, 1645, 1644, 1643, 1642, 1641, 1640, 1636, 1635, 1634,
-		1633, 1648, 1410, 1660, 1408, 1227, 1228, 1229, 1230, 1231,
-		1232, 1233, 1234, 1235, 1236, 1237, 1239, 1240, 1241, 1242,
-		1243, 1244, 1245, 1246, 1300, 1305, 1310, 1315, 1226, 1225,
-		1224, 1223, 1200, 1409, 1201, 1202, 1203, 1204, 1205, 1206,
-		1207, 1208, 1209, 1320, 1210, 1212, 1213, 1214, 1215, 1216,
-		1217, 1218, 1219, 1220, 1221, 1222, 1211, 1325, 1238, 1335,
-		1330, 1345, 1350, 1355, 1400, 1401, 1402, 1403, 1404, 1405,
-		1340, 1407, 1406
+		1633, 1648, 1410, 1659, 1408, 1227, 1228, 1229, 1230, 1231,
+		1232, 1233, 1234, 1235, 1236, 1237, 1226, 1239, 1241, 1242,
+		1243, 1244, 1245, 1246, 1247, 1300, 1305, 1310, 1315, 1240,
+		1320, 1225, 1223, 1200, 1409, 1201, 1202, 1203, 1204, 1205,
+		1206, 1207, 1208, 1209, 1224, 1210, 1212, 1213, 1214, 1215,
+		1216, 1217, 1218, 1219, 1220, 1221, 1222, 1211, 1325, 1238,
+		1335, 1330, 1340, 1345, 1350, 1355, 1400, 1401, 1402, 1403,
+		1405, 1404, 1407, 1406
 	};
 }
 public class Feat : Element

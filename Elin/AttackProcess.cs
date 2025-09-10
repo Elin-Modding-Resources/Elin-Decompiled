@@ -253,7 +253,14 @@ public class AttackProcess : EClass
 			toHitBase = EClass.curve((IsCane ? CC.WIL : CC.DEX) / 4 + weaponSkill.GetParent(CC).Value / 3 + weaponSkill.Value, 50, 25) + 50;
 			toHitFix = CC.HIT + weapon.HIT;
 			penetration = weapon.Penetration + CC.Evalue(92);
-			if (CC.HasElement(1244))
+			if (IsRanged)
+			{
+				if (CC.HasElement(1244))
+				{
+					penetration += 25;
+				}
+			}
+			else if (CC.HasElement(1247))
 			{
 				penetration += 25;
 			}
@@ -335,11 +342,10 @@ public class AttackProcess : EClass
 		else if (attackStyle == AttackStyle.TwoWield)
 		{
 			int num4 = CC.EvalueMax(131, -10);
-			int num5 = ((num4 >= 25) ? 12 : 15);
-			int max = 100 + ((num4 >= 50) ? ((int)Mathf.Sqrt(num4)) : 0);
+			int num5 = ((num4 >= 50) ? 10 : ((num4 >= 25) ? 12 : 15));
 			if (toHit > 0)
 			{
-				toHit = toHit * 100 / (100 + (attackIndex + 1) * num5 + attackIndex * Mathf.Clamp(2000 / (20 + num4), 0, max));
+				toHit = toHit * 100 / (100 + (attackIndex + 1) * num5 + attackIndex * Mathf.Clamp(2000 / (20 + num4), 0, 100));
 			}
 		}
 		if (CC.isBlind)
@@ -962,7 +968,7 @@ public class AttackProcess : EClass
 			crit = true;
 			return true;
 		}
-		if (CC.HasCondition<ConSevenSense>() && (CC.HasElement(1244) || CC.HasElement(1246)))
+		if (CC.HasCondition<ConSevenSense>() && (CC.HasElement(1244) || CC.HasElement(1246) || CC.HasElement(1247)))
 		{
 			return true;
 		}
