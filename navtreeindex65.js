@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"classGameDate.html#ac61c9d6a6f627c7c4aa0be76bedc8fe7":[1,0,523,4],
 "classGameDate.html#ac8efda516018be8562d4dc820780b6e9":[1,0,523,11],
 "classGameDate.html#ad4f17b8c730db29a2383e27234268ba5":[1,0,523,3],
 "classGameDate.html#ae445863035cd10ca7d2061955859ae48":[1,0,523,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a8a5d9e333d09e17f7841baccea93d5e6":[1,0,533,6,1,19],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a8bf1585615ada5599499a381e70e53b0":[1,0,533,6,1,3],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a937ca966f8decef323998b55545cc8e1":[1,0,533,6,1,1],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a98632c40cdeaa1becdbec477b7071cd0":[1,0,533,6,1,8],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a9abe6316265d0cbe6640549915a4c789":[1,0,533,6,1,14]
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a98632c40cdeaa1becdbec477b7071cd0":[1,0,533,6,1,8]
 };

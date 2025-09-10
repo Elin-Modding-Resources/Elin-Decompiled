@@ -1,5 +1,6 @@
 var NAVTREEINDEX121 =
 {
+"classTraitRecipeCat.html#aaec83cd0ffac4e729fa9444df883ba8e":[1,0,1764,3],
 "classTraitRecycle.html":[1,0,1765],
 "classTraitRecycle.html#ac78d6fcde5d0eda17bb742881ad40a66":[1,0,1765,0],
 "classTraitRegionMap.html":[1,0,1766],
@@ -248,6 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitSpecialLantern.html#a58ddab021365e756e2d448567d3f9a75":[1,0,1810,2],
 "classTraitSpecialLantern.html#a795199e2de3e0d6c420f18d19e81310c":[1,0,1810,4],
 "classTraitSpecialLantern.html#aa383a4d410b69b70f578ece7f73477ed":[1,0,1810,0],
-"classTraitSpecialLantern.html#ac9ace3040a67a973e6808a13236dc23c":[1,0,1810,3],
-"classTraitSpellbook.html":[1,0,1811]
+"classTraitSpecialLantern.html#ac9ace3040a67a973e6808a13236dc23c":[1,0,1810,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"classLayerInventory.html#a7b6d8b9341184dd77c8d7f7572563c63":[1,0,800,11],
 "classLayerInventory.html#a837957362249b856f71753279addb5ea":[1,0,800,26],
 "classLayerInventory.html#a859b8c7f75365fba1e441ce5d983d466":[1,0,800,33],
 "classLayerInventory.html#a88bc694144048fc127e8d1409764c33b":[1,0,800,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerProgress.html#aca02d7cfd441f4cbf264b2d4950e54c8":[1,0,815,9],
 "classLayerProgress.html#ad26170ee5338fa0989fd762309066cd6":[1,0,815,3],
 "classLayerProgress.html#ad5e24c39d975c7b88856110c5c86ca9e":[1,0,815,11],
-"classLayerProgress.html#af37eed653dbfdece0c0fd11b5f42b832":[1,0,815,18],
-"classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a":[1,0,815,20]
+"classLayerProgress.html#af37eed653dbfdece0c0fd11b5f42b832":[1,0,815,18]
 };

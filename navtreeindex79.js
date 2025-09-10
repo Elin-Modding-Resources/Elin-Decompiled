@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"classLayerProgress.html#afc2089a11d0bbbdadb3b20112a28a32a":[1,0,815,20],
 "classLayerQuestBoard.html":[1,0,816],
 "classLayerQuestBoard.html#a02e8d1c41e29565ccc8e8ef69c118e60":[1,0,816,14],
 "classLayerQuestBoard.html#a05c430ea41047306012e926c554e5545":[1,0,816,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "classLayerWorldSetting.html#a135010f3719d38d6539d4187dd718c4a":[1,0,832,31],
 "classLayerWorldSetting.html#a20749e29926dc4a2316fc03b17e259ff":[1,0,832,14],
 "classLayerWorldSetting.html#a2d4a131850cb7b4c6fc2bda0b609e131":[1,0,832,33],
-"classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733":[1,0,832,9],
-"classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37":[1,0,832,3]
+"classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733":[1,0,832,9]
 };

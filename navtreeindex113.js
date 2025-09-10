@@ -1,5 +1,6 @@
 var NAVTREEINDEX113 =
 {
+"classTileTypeSlopeFlat.html":[1,0,1373],
 "classTileTypeSlopeFlat.html#a361d6a6e94007bd386d720ee6332e5eb":[1,0,1373,0],
 "classTileTypeStairs.html":[1,0,1374],
 "classTileTypeStairs.html#a0d472b0cd04dd2c0c02dcdf561d2df02":[1,0,1374,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX113 =
 "classTrait.html#a73dd7e8b674d9d18531dc0f0a2cdd460":[1,0,1398,141],
 "classTrait.html#a743e216720fed0807a1150a6ae24d18e":[1,0,1398,34],
 "classTrait.html#a7588f237a51493c30d63c55f03448771":[1,0,1398,186],
-"classTrait.html#a766d43993e82665fc19d2623adf1b132":[1,0,1398,179],
-"classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79":[1,0,1398,1]
+"classTrait.html#a766d43993e82665fc19d2623adf1b132":[1,0,1398,179]
 };

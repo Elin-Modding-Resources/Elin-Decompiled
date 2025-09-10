@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitKettle.html#ad576994fdcc3f8ce00187d5e8428dab1":[1,0,1635,6],
 "classTraitKiln.html":[1,0,1636],
 "classTraitKiln.html#a3d83447c56897bfebe5d7f03d55ee5dd":[1,0,1636,0],
 "classTraitKiln.html#a53eb666e5e6feeb736c979d63bb53a76":[1,0,1636,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitMonsterBall.html#a02966e0672cf51b16f08be5b645b69dd":[1,0,1706,2],
 "classTraitMonsterBall.html#a0feadb975c72ab43e8c5a10f6b559141":[1,0,1706,0],
 "classTraitMonsterBall.html#a3fd900fc5421cfd3d6149be3710cfd7e":[1,0,1706,4],
-"classTraitMonsterBall.html#a8c077132dd854a5d52130317cb183c09":[1,0,1706,7],
-"classTraitMonsterBall.html#a8c84c59d2b629a6fe2984e8c00d94312":[1,0,1706,3]
+"classTraitMonsterBall.html#a8c077132dd854a5d52130317cb183c09":[1,0,1706,7]
 };

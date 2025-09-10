@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"classGoalCombat.html#a03d26d68a72ee73e1439b0e50648bdc8":[1,0,550,11],
 "classGoalCombat.html#a0ca96bef4bc165272d07e10330e94a32":[1,0,550,4],
 "classGoalCombat.html#a0cb5be0d349d1fb3979e8f0dfd26a021":[1,0,550,9],
 "classGoalCombat.html#a0f70d88c596da098cec682836d5e7cde":[1,0,550,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "classGrowSystemBerry.html#acee2d8d3979e44fd7d5f102a776edd14":[1,0,576,1],
 "classGrowSystemCactus.html":[1,0,577],
 "classGrowSystemCactus.html#a1210406f6f66fd1a6984407a29d0972b":[1,0,577,2],
-"classGrowSystemCactus.html#a46d34b9c6dd1aab9a5320523ca480057":[1,0,577,0],
-"classGrowSystemCactus.html#aefc7a06227d83ac8991a4cff7cfa0900":[1,0,577,1]
+"classGrowSystemCactus.html#a46d34b9c6dd1aab9a5320523ca480057":[1,0,577,0]
 };

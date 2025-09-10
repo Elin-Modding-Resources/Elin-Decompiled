@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"classQuestPuppy.html#ad8cd77a2801c88b65d3ba3f5e37c7da7":[1,0,1028,1],
 "classQuestRandom.html":[1,0,1029],
 "classQuestRandom.html#a1b45862340397c921ecb04dd215371fd":[1,0,1029,4],
 "classQuestRandom.html#a1dc12b77423d3fb0f4d2a59fb626dc9d":[1,0,1029,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "classRecipe.html#a7212f90e86b198a288669c492d35e486":[1,0,1057,56],
 "classRecipe.html#a73cefa1f99ab6e2c73df60275796f22e":[1,0,1057,28],
 "classRecipe.html#a745596979a2d034b304ddf73cd8eb8d4":[1,0,1057,6],
-"classRecipe.html#a7539264ffa02fc512e4ef1f1d213362b":[1,0,1057,1],
-"classRecipe.html#a7539264ffa02fc512e4ef1f1d213362ba7a1920d61156abc05a60135aefe8bc67":[1,0,1057,1,0]
+"classRecipe.html#a7539264ffa02fc512e4ef1f1d213362b":[1,0,1057,1]
 };

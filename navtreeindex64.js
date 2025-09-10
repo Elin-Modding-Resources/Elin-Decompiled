@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"classFactionGroup.html#a35f4168244da4a41ebc45ee1821f365b":[1,0,503,5],
 "classFactionGroup.html#a4f23395ef5832922298c01b11f24bc62":[1,0,503,2],
 "classFactionGroup.html#a66cc3d285275b3f1d8e9c4ae6bfee994":[1,0,503,1],
 "classFactionGroup.html#aad2e45030dc214b99d33ad0dfadb08e0":[1,0,503,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "classGameDate.html#a55e9ba2562daff5ed2f74ee8157e6b43":[1,0,523,0],
 "classGameDate.html#a6f7310794618760e06c10432a0cc99e1":[1,0,523,9],
 "classGameDate.html#ab23ab5ea00c8f8fe4fd353676208a07a":[1,0,523,7],
-"classGameDate.html#ac109306b1d3bf9612daf3a031e1290a7":[1,0,523,10],
-"classGameDate.html#ac61c9d6a6f627c7c4aa0be76bedc8fe7":[1,0,523,4]
+"classGameDate.html#ac109306b1d3bf9612daf3a031e1290a7":[1,0,523,10]
 };

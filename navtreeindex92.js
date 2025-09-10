@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classQuestDefenseGame.html#ad05e2dfbd03444d2650cb87280b963a1":[1,0,980,8],
 "classQuestDefenseGame.html#ada3b1dd97bafcc67414d14cc09c56660":[1,0,980,5],
 "classQuestDefenseGame.html#ae54172bb969f293d6420370870f519f9":[1,0,980,3],
 "classQuestDefenseGame2.html":[1,0,981],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classQuestProgression.html#a2000aa9e33842fd3bf72845ea5152f34":[1,0,1027,1],
 "classQuestProgression.html#a4f9c868cd12c3938138e02095412aaef":[1,0,1027,0],
 "classQuestPuppy.html":[1,0,1028],
-"classQuestPuppy.html#acb92fc942bb2ae1ca180e0f7937ed7f0":[1,0,1028,0],
-"classQuestPuppy.html#ad8cd77a2801c88b65d3ba3f5e37c7da7":[1,0,1028,1]
+"classQuestPuppy.html#acb92fc942bb2ae1ca180e0f7937ed7f0":[1,0,1028,0]
 };

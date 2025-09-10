@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4fac6860cd489a2cb3bd2612cca1da53a58":[0,4,0,6,2],
 "namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4faefe098277ee5771451a5295a2fd86f54":[0,4,0,6,4],
 "namespaceApplibot.html":[0,4,1],
 "namespaceAssets.html":[0,4,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daed0b5879a991c5490e90ba2c8aaed055":[0,4,3,0,8,112],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daee8663b5640a8d2e5baeee082b5f69ee":[0,4,3,0,8,76],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf1ba083fe5ee06aded6aa92ddb5e3f94":[0,4,3,0,8,29],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf2e496ef2eb1ec8f3dc0e75b99d52411":[0,4,3,0,8,36],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf31a13e8d68291dc936825e7093cf4d6":[0,4,3,0,8,46]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf2e496ef2eb1ec8f3dc0e75b99d52411":[0,4,3,0,8,36]
 };
