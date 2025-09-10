@@ -1,5 +1,7 @@
 public class TraitHitchingPost : TraitFloorSwitch
 {
+	public override bool IgnoreOnSteppedWhenMoving => true;
+
 	public override bool IsHomeItem => true;
 
 	public override void OnActivateTrap(Chara c)

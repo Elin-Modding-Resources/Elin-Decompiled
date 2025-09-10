@@ -209,7 +209,7 @@ public class AttackProcess : EClass
 				toHitBase = toHitBase * 75 / 100;
 			}
 			penetration = Mathf.Clamp(weaponSkill.Value / 10 + 5, 5, 20) + CC.Evalue(92);
-			if (CC.HasElement(1244))
+			if (CC.HasElement(1246))
 			{
 				penetration += 25;
 			}
@@ -253,6 +253,10 @@ public class AttackProcess : EClass
 			toHitBase = EClass.curve((IsCane ? CC.WIL : CC.DEX) / 4 + weaponSkill.GetParent(CC).Value / 3 + weaponSkill.Value, 50, 25) + 50;
 			toHitFix = CC.HIT + weapon.HIT;
 			penetration = weapon.Penetration + CC.Evalue(92);
+			if (CC.HasElement(1244))
+			{
+				penetration += 25;
+			}
 			if (IsCane)
 			{
 				toHitBase += 50;
@@ -958,7 +962,7 @@ public class AttackProcess : EClass
 			crit = true;
 			return true;
 		}
-		if (CC.HasElement(1244) && CC.HasCondition<ConSevenSense>())
+		if (CC.HasCondition<ConSevenSense>() && (CC.HasElement(1244) || CC.HasElement(1246)))
 		{
 			return true;
 		}

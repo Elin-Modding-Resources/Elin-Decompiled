@@ -215,6 +215,9 @@ public class ActEffect : EClass
 				case EffectId.Arrow:
 					attackSource = AttackSource.MagicArrow;
 					break;
+				case EffectId.Hand:
+					attackSource = AttackSource.MagicHand;
+					break;
 				case EffectId.Sword:
 					attackSource = AttackSource.MagicSword;
 					break;

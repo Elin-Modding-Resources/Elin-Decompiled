@@ -4023,6 +4023,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				{
 					num3++;
 				}
+				if (attackSource == AttackSource.MagicHand && origin != null && origin.HasElement(1246))
+				{
+					num3++;
+				}
 				dmg = Element.GetResistDamage(dmg, Evalue(e.source.aliasRef), num3);
 				dmg = dmg * 100 / (100 + Mathf.Clamp(Evalue(961) * 5, -50, 200));
 				dmg = dmg * Mathf.Max(100 - Evalue(93), 10) / 100;
@@ -4256,7 +4260,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_0e69;
+							goto IL_0e94;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4284,7 +4288,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_0e69;
+								goto IL_0e94;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4302,8 +4306,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0e69;
-		IL_0e69:
+		goto IL_0e94;
+		IL_0e94:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4626,6 +4630,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			Chara.AddCondition<ConBoost>(Power);
 			Chara.Cure(CureType.Boss);
 			Chara.HealHP(MaxHP / 2);
+			EClass.player.forceTalk = true;
 		}
 		if (origin != null && origin.isChara && attackSource != AttackSource.Finish)
 		{
@@ -4649,10 +4654,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		void Heal()
 		{
-			target.Cure(CureType.Death);
+			target.Cure(CureType.HealComplete);
 			foreach (Chara member in EClass.pc.party.members)
 			{
-				member.Cure(CureType.Death);
+				member.Cure(CureType.HealComplete);
 			}
 		}
 		void ProcAbsorb()

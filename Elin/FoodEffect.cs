@@ -214,11 +214,11 @@ public class FoodEffect : EClass
 					break;
 				case "poison":
 					ActEffect.Poison(c, EClass.pc, value.Value * 10);
-					if (c.isDead)
+					if (!c.isDead)
 					{
-						return;
+						break;
 					}
-					break;
+					goto IL_0f04;
 				case "love":
 					ActEffect.LoveMiracle(c, EClass.pc, value.Value * 10);
 					break;
@@ -363,6 +363,8 @@ public class FoodEffect : EClass
 		{
 			food.trait.OnDrink(c);
 		}
+		goto IL_0f04;
+		IL_0f04:
 		if (consume)
 		{
 			num7 += 5f;

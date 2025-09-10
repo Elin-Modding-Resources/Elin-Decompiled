@@ -47,6 +47,7 @@ public class ElementContainerCard : ElementContainer
 			TryLearn(6700, 1649, 0);
 			TryLearn(6720, 1657, 0);
 			TryLearn(6450, 132, 5);
+			TryLearn(6603, 6020, 50);
 		}
 		void TryLearn(int eleAction, int reqEle, int lqlv)
 		{

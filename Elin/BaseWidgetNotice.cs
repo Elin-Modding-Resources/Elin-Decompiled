@@ -78,6 +78,7 @@ public class BaseWidgetNotice : Widget
 
 	public void Sort()
 	{
+		IList<BaseNotification> list = this.list.Copy();
 		list.Sort((BaseNotification a, BaseNotification b) => b.GetSortVal() - a.GetSortVal());
 		for (int i = 0; i < list.Count; i++)
 		{

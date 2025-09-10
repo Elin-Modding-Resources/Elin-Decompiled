@@ -2,12 +2,18 @@ public class ConBoost : BaseBuff
 {
 	public override void OnStart()
 	{
-		owner._CreateRenderer();
+		if (!owner.IsPCC)
+		{
+			owner._CreateRenderer();
+		}
 	}
 
 	public override void OnRemoved()
 	{
-		owner._CreateRenderer();
+		if (!owner.IsPCC)
+		{
+			owner._CreateRenderer();
+		}
 	}
 
 	public override RendererReplacer GetRendererReplacer()

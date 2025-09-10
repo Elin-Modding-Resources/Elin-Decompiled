@@ -1698,7 +1698,7 @@ public class Chara : Card, IPathfindWalker
 
 	public void HealAll()
 	{
-		Cure(CureType.Death);
+		Cure(CureType.HealComplete);
 		base.hp = MaxHP;
 		mana.value = mana.max;
 		stamina.value = stamina.max;
@@ -3863,6 +3863,14 @@ public class Chara : Card, IPathfindWalker
 			{
 				pos.Things.ForeachReverse(delegate(Thing t)
 				{
+					if (t.trait.IgnoreOnSteppedWhenMoving)
+					{
+						AI_Goto aI_Goto = ai.Current as AI_Goto;
+						if ((aI_Goto == null && !(ai is GoalManualMove)) || (aI_Goto != null && !aI_Goto.dest.Equals(pos)))
+						{
+							return;
+						}
+					}
 					t.trait.OnStepped(this);
 				});
 				if (isDead)
@@ -9144,12 +9152,12 @@ public class Chara : Card, IPathfindWalker
 			}
 			CureCondition<ConWait>();
 			CureCondition<ConDisease>((EClass.rnd(20) + 10) * p / 100);
-			bool flag2 = HasCondition<ConAnorexia>();
-			base.c_vomit -= (flag2 ? 3 : 2) * p / 100;
+			bool flag3 = HasCondition<ConAnorexia>();
+			base.c_vomit -= (flag3 ? 3 : 2) * p / 100;
 			if (base.c_vomit < 0)
 			{
 				base.c_vomit = 0;
-				if (flag2)
+				if (flag3)
 				{
 					RemoveCondition<ConAnorexia>();
 				}
@@ -9161,26 +9169,38 @@ public class Chara : Card, IPathfindWalker
 		case CureType.Jure:
 		case CureType.Boss:
 		{
+			bool flag2 = type == CureType.Death;
 			CureTempElements(p * 100, body: true, mind: true);
 			for (int num = conditions.Count - 1; num >= 0; num--)
 			{
 				Condition condition = conditions[num];
-				if (!(condition is ConAnorexia) || type == CureType.Death)
+				if (condition is ConAnorexia && !flag2)
 				{
-					ConditionType type2 = condition.Type;
-					if ((uint)(type2 - 2) <= 2u || type2 == ConditionType.Stance)
+					continue;
+				}
+				switch (condition.Type)
+				{
+				case ConditionType.Bad:
+				case ConditionType.Debuff:
+				case ConditionType.Disease:
+					condition.Kill();
+					continue;
+				case ConditionType.Stance:
+					if (flag2)
 					{
 						condition.Kill();
+						continue;
 					}
-					else if (type == CureType.Death && condition.isPerfume)
-					{
-						condition.Kill();
-					}
+					break;
+				}
+				if (flag2 && condition.isPerfume)
+				{
+					condition.Kill();
 				}
 			}
 			CureCondition<ConWait>();
 			CureCondition<ConSleep>();
-			if (type == CureType.Death || type == CureType.Boss)
+			if (flag2 || type == CureType.Boss)
 			{
 				SAN.Mod(-20);
 				RemoveCondition<ConBrightnessOfLife>();
@@ -9746,13 +9766,13 @@ public class Chara : Card, IPathfindWalker
 			return;
 		}
 		faithElements = new ElementContainer();
-		SourceElement.Row row2 = EClass.sources.elements.alias.TryGetValue("featGod_" + row.id + "1");
-		if (row2 != null)
-		{
-			faithElements.SetBase(row2.id, 1);
-		}
 		if (!HasCondition<ConExcommunication>())
 		{
+			SourceElement.Row row2 = EClass.sources.elements.alias.TryGetValue("featGod_" + row.id + "1");
+			if (row2 != null)
+			{
+				faithElements.SetBase(row2.id, 1);
+			}
 			int[] array = row.elements;
 			int num = GetPietyValue() * (120 + Evalue(1407) * 15) / 100;
 			for (int i = 0; i < array.Length; i += 2)

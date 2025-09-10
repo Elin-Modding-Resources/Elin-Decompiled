@@ -43,6 +43,11 @@ public class AI_Fuck : AIAct
 
 	public override bool CancelWhenDamaged => !ntr;
 
+	public override bool ShouldAllyAttack(Chara tg)
+	{
+		return tg != target;
+	}
+
 	public override IEnumerable<Status> Run()
 	{
 		if (target == null)
@@ -293,6 +298,10 @@ public class AI_Fuck : AIAct
 			if (chara == EClass.pc || chara2 == EClass.pc)
 			{
 				EClass.player.stats.kimo++;
+			}
+			if (ntr)
+			{
+				chara2.things.Find<TraitDreamBug>()?.ModNum(-1);
 			}
 			if (!ntr || !chara.HasElement(1239) || chara2.HasElement(1216))
 			{

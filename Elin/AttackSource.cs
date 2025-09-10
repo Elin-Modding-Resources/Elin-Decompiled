@@ -21,5 +21,6 @@ public enum AttackSource
 	Shockwave,
 	MagicSword,
 	MoonSpear,
-	MagicArrow
+	MagicArrow,
+	MagicHand
 }

@@ -349,17 +349,14 @@ public class AM_Build : AM_Designation<TaskBuild>
 
 	public override void InputWheel(int wheel)
 	{
-		if (!EInput.isAltDown && !EInput.isCtrlDown)
+		if (recipe.MaxAltitude > 0)
 		{
-			if (recipe.MaxAltitude > 0)
-			{
-				ModAltitude(wheel);
-				EClass.screen.tileSelector.RefreshMouseInfo(force: true);
-			}
-			else
-			{
-				base.InputWheel(wheel);
-			}
+			ModAltitude(wheel);
+			EClass.screen.tileSelector.RefreshMouseInfo(force: true);
+		}
+		else
+		{
+			base.InputWheel(wheel);
 		}
 	}
 

@@ -195,7 +195,7 @@ public class ButtonAbility : UIButton, IMouseHint
 		{
 			EClass.player.EndTurn();
 		}
-		else if (EClass.pc.UseAbility(act.source.alias, tg, pos, flag))
+		else if (EClass.pc.UseAbility(act.source.alias, tg, pos, flag) && EClass.pc.HasNoGoal)
 		{
 			EClass.player.EndTurn();
 		}

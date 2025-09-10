@@ -367,6 +367,8 @@ public class Trait : EClass
 
 	public virtual string LangUse => "actUse";
 
+	public virtual bool IgnoreOnSteppedWhenMoving => false;
+
 	public virtual bool IsOn => owner.isOn;
 
 	public virtual bool IsAnimeOn

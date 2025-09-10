@@ -30,36 +30,36 @@ public class StatsMana : Stats
 			a /= 10;
 		}
 		_ = BaseStats.CC.ShouldShowMsg;
-		if (value >= 0)
-		{
-			return;
-		}
-		int num = -value * 400 / (100 + BaseStats.CC.EvalueMax(303, -5) * 10);
-		if (BaseStats.CC.HasElement(1201))
-		{
-			num /= 3;
-		}
-		if (!BaseStats.CC.IsPC)
-		{
-			num /= 5;
-			if (num < 10)
-			{
-				return;
-			}
-		}
-		BaseStats.CC.Say("mana_overflow", BaseStats.CC);
-		BaseStats.CC.DamageHP(num, 921, 100, AttackSource.ManaBackfire);
 		Chara cC = BaseStats.CC;
-		if (cC.IsAliveInCurrentZone)
+		if (value < 0)
 		{
-			cC.elements.ModExp(303, Mathf.Clamp(-a * 10, 10, 200));
-			if (cC.HasElement(1245) && !cC.HasCooldown(1245))
+			int num = -value * 400 / (100 + BaseStats.CC.EvalueMax(303, -5) * 10);
+			if (BaseStats.CC.HasElement(1201))
 			{
-				cC.AddCooldown(1245);
-				cC.AddCondition<ConSevenSense>(cC.Power);
-				cC.Cure(CureType.Boss);
-				cC.HealHP(cC.MaxHP / 2);
+				num /= 3;
 			}
+			if (!BaseStats.CC.IsPC)
+			{
+				num /= 5;
+				if (num < 10)
+				{
+					return;
+				}
+			}
+			BaseStats.CC.Say("mana_overflow", BaseStats.CC);
+			BaseStats.CC.DamageHP(num, 921, 100, AttackSource.ManaBackfire);
+			if (cC.IsAliveInCurrentZone)
+			{
+				cC.elements.ModExp(303, Mathf.Clamp(-a * 10, 10, 200));
+			}
+		}
+		if (value <= 0 && cC.IsAliveInCurrentZone && cC.HasElement(1245) && !cC.HasCooldown(1245))
+		{
+			cC.AddCooldown(1245);
+			cC.AddCondition<ConSevenSense>(cC.Power);
+			cC.Cure(CureType.Boss);
+			cC.HealHP(cC.MaxHP / 2);
+			EClass.player.forceTalk = true;
 		}
 	}
 }

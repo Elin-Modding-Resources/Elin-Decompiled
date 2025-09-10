@@ -1,7 +1,14 @@
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 public class WidgetStats : BaseWidgetNotice
 {
+	public class Extra
+	{
+		[JsonProperty]
+		public bool sort;
+	}
+
 	public static WidgetStats Instance;
 
 	public List<NotificationCondition> conditions = new List<NotificationCondition>();
@@ -13,6 +20,13 @@ public class WidgetStats : BaseWidgetNotice
 	public ItemNotice moldStance;
 
 	public ItemNotice moldCooldown;
+
+	public Extra extra => base.config.extra as Extra;
+
+	public override object CreateExtra()
+	{
+		return new Extra();
+	}
 
 	public static void RefreshAll()
 	{
@@ -124,5 +138,14 @@ public class WidgetStats : BaseWidgetNotice
 				cds.Add(notificationCooldown);
 			}
 		}
+	}
+
+	public override void OnSetContextMenu(UIContextMenu m)
+	{
+		m.AddChild("setting").AddToggle("sort_always", extra.sort, delegate(bool a)
+		{
+			extra.sort = a;
+		});
+		SetBaseContextMenu(m);
 	}
 }
