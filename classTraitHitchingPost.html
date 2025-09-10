@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.196 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.197 Nightly</span>
    </div>
   </td>
  </tr>
@@ -327,6 +327,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:ac9e936170ff7cff91b4fc1c1b5a802d8"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitHitchingPost.html#ac9e936170ff7cff91b4fc1c1b5a802d8">IgnoreOnSteppedWhenMoving</a><code> [get]</code></td></tr>
+<tr class="separator:ac9e936170ff7cff91b4fc1c1b5a802d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1acd6d358475d841ac4b26807c3d9e4e"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitHitchingPost.html#a1acd6d358475d841ac4b26807c3d9e4e">IsHomeItem</a><code> [get]</code></td></tr>
 <tr class="separator:a1acd6d358475d841ac4b26807c3d9e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classTraitSwitch"><td colspan="2" onclick="javascript:toggleInherit('properties_classTraitSwitch')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classTraitSwitch.html">TraitSwitch</a></td></tr>
@@ -545,6 +547,8 @@ Properties</h2></td></tr>
 <tr class="separator:a3c9f561376bd9d2a64d731b08ebb587a inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed4006f6efad2511c58e0a56d28d4312 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aed4006f6efad2511c58e0a56d28d4312">LangUse</a><code> [get]</code></td></tr>
 <tr class="separator:aed4006f6efad2511c58e0a56d28d4312 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5c9fc35b8500252b0825af49c28f09 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a4d5c9fc35b8500252b0825af49c28f09">IgnoreOnSteppedWhenMoving</a><code> [get]</code></td></tr>
+<tr class="separator:a4d5c9fc35b8500252b0825af49c28f09 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac45c76ca50bef4ccac766640350165f4 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ac45c76ca50bef4ccac766640350165f4">IsOn</a><code> [get]</code></td></tr>
 <tr class="separator:ac45c76ca50bef4ccac766640350165f4 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a827c6d1b5b63023d6413e724bac4a584 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a827c6d1b5b63023d6413e724bac4a584">IsAnimeOn</a><code> [get]</code></td></tr>
@@ -747,34 +751,34 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTraitSwitch.html#a651db8b4ca3d6c8053fd12e0b1bef17f">TraitSwitch</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitHitchingPost_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitHitchingPost_8cs_source.html">TraitHitchingPost.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
-<div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#a7c39f4085805ef81c56b538e34f16f8a">Charas</a>)</div>
-<div class="line"><span class="lineno">   14</span>            {</div>
-<div class="line"><span class="lineno">   15</span>                <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; !chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; !chara.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#a50bc2590459e3f4162d92cd0fedecbc8">CanJoinParty</a>)</div>
-<div class="line"><span class="lineno">   16</span>                {</div>
-<div class="line"><span class="lineno">   17</span>                    <a class="code hl_class" href="classActRide.html">ActRide</a>.<a class="code hl_function" href="classActRide.html#a214b50fc04b16a8de7dbe30a69705ede">Ride</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, chara);</div>
-<div class="line"><span class="lineno">   18</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   19</span>                }</div>
-<div class="line"><span class="lineno">   20</span>            }</div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;noRide&quot;</span>);</div>
-<div class="line"><span class="lineno">   22</span>            TraitSwitch.haltMove = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <a class="code hl_class" href="classChara.html">Chara</a> ride = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a>;</div>
-<div class="line"><span class="lineno">   27</span>            <a class="code hl_class" href="classActRide.html">ActRide</a>.<a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
-<div class="line"><span class="lineno">   28</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_function" href="classParty.html#a788354c34bb79aace9e073fc395f251f">RemoveMember</a>(ride);</div>
-<div class="line"><span class="lineno">   29</span>            ride.noMove = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   30</span>            ride.orgPos = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitHitchingPost_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitHitchingPost_8cs_source.html">TraitHitchingPost.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> || !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac7a26417683b0ffe3668a504b1bd6cc0">IsPCFaction</a>)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> chara <span class="keywordflow">in</span> <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#a7c39f4085805ef81c56b538e34f16f8a">Charas</a>)</div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                <span class="keywordflow">if</span> (chara.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a> &amp;&amp; !chara.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; !chara.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a> &amp;&amp; chara.<a class="code hl_property" href="classChara.html#a16699a6f035a4c14d4c846f48be7b850">trait</a>.<a class="code hl_property" href="classTraitChara.html#a50bc2590459e3f4162d92cd0fedecbc8">CanJoinParty</a>)</div>
+<div class="line"><span class="lineno">   18</span>                {</div>
+<div class="line"><span class="lineno">   19</span>                    <a class="code hl_class" href="classActRide.html">ActRide</a>.<a class="code hl_function" href="classActRide.html#a214b50fc04b16a8de7dbe30a69705ede">Ride</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, chara);</div>
+<div class="line"><span class="lineno">   20</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   21</span>                }</div>
+<div class="line"><span class="lineno">   22</span>            }</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;noRide&quot;</span>);</div>
+<div class="line"><span class="lineno">   24</span>            TraitSwitch.haltMove = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <a class="code hl_class" href="classChara.html">Chara</a> ride = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a>;</div>
+<div class="line"><span class="lineno">   29</span>            <a class="code hl_class" href="classActRide.html">ActRide</a>.<a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_function" href="classParty.html#a788354c34bb79aace9e073fc395f251f">RemoveMember</a>(ride);</div>
+<div class="line"><span class="lineno">   31</span>            ride.noMove = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   32</span>            ride.orgPos = <span class="keyword">new</span> <a class="code hl_class" href="classPoint.html">Point</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
 <div class="ttc" id="aclassActRide_html"><div class="ttname"><a href="classActRide.html">ActRide</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00003">ActRide.cs:4</a></div></div>
 <div class="ttc" id="aclassActRide_html_a214b50fc04b16a8de7dbe30a69705ede"><div class="ttname"><a href="classActRide.html#a214b50fc04b16a8de7dbe30a69705ede">ActRide.Ride</a></div><div class="ttdeci">static void Ride(Chara host, Chara t, bool parasite=false, bool talk=true)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00047">ActRide.cs:47</a></div></div>
 <div class="ttc" id="aclassActRide_html_a8fe819039661a869b9920e3c6c40c71b"><div class="ttname"><a href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">ActRide.Unride</a></div><div class="ttdeci">static void Unride(Chara host, Chara mount, bool talk=true)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00102">ActRide.cs:102</a></div></div>
@@ -803,6 +807,30 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a id="ac9e936170ff7cff91b4fc1c1b5a802d8" name="ac9e936170ff7cff91b4fc1c1b5a802d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e936170ff7cff91b4fc1c1b5a802d8">&#9670;&#160;</a></span>IgnoreOnSteppedWhenMoving</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool TraitHitchingPost.IgnoreOnSteppedWhenMoving</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TraitHitchingPost_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitHitchingPost_8cs_source.html">TraitHitchingPost.cs</a>.</p>
+
+</div>
+</div>
 <a id="a1acd6d358475d841ac4b26807c3d9e4e" name="a1acd6d358475d841ac4b26807c3d9e4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1acd6d358475d841ac4b26807c3d9e4e">&#9670;&#160;</a></span>IsHomeItem</h2>
 
@@ -823,7 +851,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitHitchingPost_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitHitchingPost_8cs_source.html">TraitHitchingPost.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitHitchingPost_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitHitchingPost_8cs_source.html">TraitHitchingPost.cs</a>.</p>
 
 </div>
 </div>

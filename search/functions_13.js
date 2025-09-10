@@ -394,7 +394,7 @@ var searchData=
   ['shippackages_391',['ShipPackages',['../classGameDate.html#a4bead563961e259897d737e78466d8ce',1,'GameDate']]],
   ['shiprandompackages_392',['ShipRandomPackages',['../classGameDate.html#a6f7310794618760e06c10432a0cc99e1',1,'GameDate']]],
   ['shortout_393',['ShortOut',['../classTraitGenerator.html#a9246204b2fd25126838aa27cf9c84f10',1,'TraitGenerator']]],
-  ['shouldallyattack_394',['ShouldAllyAttack',['../classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac',1,'AI_TendAnimal.ShouldAllyAttack()'],['../classAI__Shear.html#a4ee49ecd9ffa4e4a7f78ce90bca5e57b',1,'AI_Shear.ShouldAllyAttack()'],['../classAIAct.html#a85147d7713b246ae83426801e6a83715',1,'AIAct.ShouldAllyAttack()']]],
+  ['shouldallyattack_394',['ShouldAllyAttack',['../classAI__Shear.html#a4ee49ecd9ffa4e4a7f78ce90bca5e57b',1,'AI_Shear.ShouldAllyAttack()'],['../classAI__Fuck.html#ac82e9dfb472739c1e58d4d428dcc80b1',1,'AI_Fuck.ShouldAllyAttack()'],['../classAIAct.html#a85147d7713b246ae83426801e6a83715',1,'AIAct.ShouldAllyAttack()']]],
   ['shouldconsumeing_395',['ShouldConsumeIng',['../classTraitBarrelMaker.html#a4f5a157f88e21caf1204543b7cfffada',1,'TraitBarrelMaker.ShouldConsumeIng()'],['../classTraitCrafter.html#a48ba3e8202cfb2e57ddad797be7baa1d',1,'TraitCrafter.ShouldConsumeIng()'],['../classTraitRuneMold.html#ac6ce8e48e7e6672abaf383d4501fd6a8',1,'TraitRuneMold.ShouldConsumeIng()'],['../classTraitToolTalisman.html#adf76fbbdf82cce4f21bfefa434cac57f',1,'TraitToolTalisman.ShouldConsumeIng()']]],
   ['shouldend_396',['ShouldEnd',['../classZoneEventSiege.html#ab17967b506838dc0352971ca0c18b9b4',1,'ZoneEventSiege']]],
   ['shouldequip_397',['ShouldEquip',['../classChara.html#a6bcd4bb073098bb1f24627836cb6e492',1,'Chara']]],

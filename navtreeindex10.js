@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"LayerTactics_8cs_source.html":[2,0,0,771],
 "LayerTech_8cs.html":[2,0,0,772],
 "LayerTech_8cs_source.html":[2,0,0,772],
 "LayerTextureViewer_8cs.html":[2,0,0,773],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "Outline8_8cs_source.html":[2,0,0,3,66],
 "OutlineImage_8cs.html":[2,0,0,3,0,4],
 "OutlineImage_8cs_source.html":[2,0,0,3,0,4],
-"OverlayTexture_8cs.html":[2,0,0,3,67],
-"OverlayTexture_8cs_source.html":[2,0,0,3,67]
+"OverlayTexture_8cs.html":[2,0,0,3,67]
 };

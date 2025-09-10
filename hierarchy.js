@@ -2088,6 +2088,7 @@ var hierarchy =
     [ "WidgetRoster.Extra", "classWidgetRoster_1_1Extra.html", null ],
     [ "WidgetSearch.Extra", "classWidgetSearch_1_1Extra.html", null ],
     [ "WidgetSideScreen.Extra", "classWidgetSideScreen_1_1Extra.html", null ],
+    [ "WidgetStats.Extra", "classWidgetStats_1_1Extra.html", null ],
     [ "WidgetStatsBar.Extra", "classWidgetStatsBar_1_1Extra.html", null ],
     [ "WidgetSticky.Extra", "classWidgetSticky_1_1Extra.html", null ],
     [ "WidgetTracker.Extra", "classWidgetTracker_1_1Extra.html", null ],

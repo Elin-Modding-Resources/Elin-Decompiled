@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"Zone__EmbassyPalmia_8cs_source.html":[2,0,0,1933],
 "Zone__EternalGarden_8cs.html":[2,0,0,1934],
 "Zone__EternalGarden_8cs_source.html":[2,0,0,1934],
 "Zone__Exile_8cs.html":[2,0,0,1935],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classABILITY.html#affa3fa943efdadc3c3a65804f869e2f7":[1,0,11,80],
 "classACT.html":[1,0,12],
 "classACT.html#a1c79596228172d41a177550dc6344744":[1,0,12,10],
-"classACT.html#a2228d8ddbf56562137dac24f6745acdd":[1,0,12,9],
-"classACT.html#a24385f5cfaac4609bbc81aa8f0558d58":[1,0,12,5]
+"classACT.html#a2228d8ddbf56562137dac24f6745acdd":[1,0,12,9]
 };

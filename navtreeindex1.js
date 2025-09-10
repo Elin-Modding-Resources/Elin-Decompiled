@@ -156,6 +156,7 @@ var NAVTREEINDEX1 =
 "AttackSource_8cs.html":[2,0,0,180],
 "AttackSource_8cs.html#a94a286604244a15021d28571897475a4":[2,0,0,180,0],
 "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a0d1ec2394843e347c44cc35c8a435353":[2,0,0,180,0,10],
+"AttackSource_8cs.html#a94a286604244a15021d28571897475a4a28896b512f28ef3e4a6114dd1a6199a8":[2,0,0,180,0,22],
 "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a510b77294ea3493c0cca74c0be5e3c63":[2,0,0,180,0,20],
 "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a58fa788345ab5ac21c2cef38907d4580":[2,0,0,180,0,9],
 "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a5994ce026a62da8057fcb67f5ee60773":[2,0,0,180,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "BaseListPeople_8cs.html":[2,0,0,197],
 "BaseListPeople_8cs_source.html":[2,0,0,197],
 "BaseList_8cs.html":[2,0,0,3,11],
-"BaseList_8cs_source.html":[2,0,0,3,11],
-"BaseMapGen_8cs.html":[2,0,0,198]
+"BaseList_8cs_source.html":[2,0,0,3,11]
 };

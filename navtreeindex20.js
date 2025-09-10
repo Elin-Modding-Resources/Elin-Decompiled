@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitUsuihon_8cs.html":[2,0,0,1799],
 "TraitUsuihon_8cs_source.html":[2,0,0,1799],
 "TraitVase_8cs.html":[2,0,0,1800],
 "TraitVase_8cs_source.html":[2,0,0,1800],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "VectorDir_8cs.html":[2,0,0,2,98],
 "VectorDir_8cs.html#a67314072bd641b905b83367fc260e632":[2,0,0,2,98,0],
 "VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a334c4a4c42fdb79d7ebc3e73b517e6f8":[2,0,0,2,98,0,0],
-"VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a469bba0a564235dfceede42db14f17b0":[2,0,0,2,98,0,4],
-"VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a46c48bec0d282018b9d167eef7711b2c":[2,0,0,2,98,0,1]
+"VectorDir_8cs.html#a67314072bd641b905b83367fc260e632a469bba0a564235dfceede42db14f17b0":[2,0,0,2,98,0,4]
 };

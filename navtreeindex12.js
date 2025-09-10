@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"QuestMeal__noodle_8cs.html":[2,0,0,945],
 "QuestMeal__noodle_8cs_source.html":[2,0,0,945],
 "QuestMeal__rice_8cs.html":[2,0,0,946],
 "QuestMeal__rice_8cs_source.html":[2,0,0,946],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "Resistance_8cs.html":[2,0,0,1039],
 "Resistance_8cs_source.html":[2,0,0,1039],
 "ResourceCache_8cs.html":[2,0,0,2,68],
-"ResourceCache_8cs_source.html":[2,0,0,2,68],
-"ResourceLoadType_8cs.html":[2,0,0,2,69]
+"ResourceCache_8cs_source.html":[2,0,0,2,68]
 };

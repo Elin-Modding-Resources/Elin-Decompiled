@@ -1,5 +1,10 @@
 var NAVTREEINDEX122 =
 {
+"classTraitSpellbook.html#a5aded0d1bb1f21da0b58a96918872408":[1,0,1811,1],
+"classTraitSpellbook.html#a9f4515e19f103d74109abad62a9d54d2":[1,0,1811,0],
+"classTraitSpellbookRandom.html":[1,0,1812],
+"classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1812,2],
+"classTraitSpellbookRandom.html#a8c187a19407f57e545aca15acc6a7edc":[1,0,1812,1],
 "classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1812,0],
 "classTraitSpinner.html":[1,0,1813],
 "classTraitSpinner.html#a2e72f7c00867f08354f4eab5a4a25a69":[1,0,1813,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitToolShears.html#a06d4cdf9b914ea63e7a701f0ca3645e9":[1,0,1882,1],
 "classTraitToolShears.html#a3ee171e6c9fa1529dd76603ac02b4f6a":[1,0,1882,0],
 "classTraitToolShears.html#af647d7ff31cf1df7683bdb84cb5b3fea":[1,0,1882,2],
-"classTraitToolSickle.html":[1,0,1883],
-"classTraitToolSickle.html#aaf396ca14be0760703717610954d89b6":[1,0,1883,0],
-"classTraitToolTalisman.html":[1,0,1884],
-"classTraitToolTalisman.html#a0570fc6eaf7f97ac63265befa1c1b176":[1,0,1884,3],
-"classTraitToolTalisman.html#a2eef1c145cc21eef149e51d3068741cf":[1,0,1884,7],
-"classTraitToolTalisman.html#a3aaeea66f51cb96aea42536db2e290eb":[1,0,1884,6]
+"classTraitToolSickle.html":[1,0,1883]
 };

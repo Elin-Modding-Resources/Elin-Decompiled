@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28":[1,0,1706,8],
+"classTraitMonsterBall.html#aaeb6f9fa895248244d88d0fc00d0f8a9":[1,0,1706,1],
+"classTraitMonsterBall.html#abf8484d5fc4555b0219682768e8d0160":[1,0,1706,5],
+"classTraitMonsterBall.html#aff66f460e585dd1fde7a184789916b5d":[1,0,1706,6],
+"classTraitMoongate.html":[1,0,1707],
 "classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388":[1,0,1707,2],
 "classTraitMoongate.html#a0b42907bbe5a84a7d0ddfd39d740d58c":[1,0,1707,0],
 "classTraitMoongate.html#a4a517aab4bd4dc0df5f124fb8e81c984":[1,0,1707,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitRecipeCat.html#a0c0bd5950b3a85c62cefab479913c282":[1,0,1764,0],
 "classTraitRecipeCat.html#aa57df0e3fd9df7a7841a2435992af79d":[1,0,1764,1],
 "classTraitRecipeCat.html#aa5b1ec1dcf577ec4c81f286fcfa59ae4":[1,0,1764,2],
-"classTraitRecipeCat.html#aaec83cd0ffac4e729fa9444df883ba8e":[1,0,1764,3],
-"classTraitRecycle.html":[1,0,1765],
-"classTraitRecycle.html#ac78d6fcde5d0eda17bb742881ad40a66":[1,0,1765,0],
-"classTraitRegionMap.html":[1,0,1766],
-"classTraitResearchBoard.html":[1,0,1767],
-"classTraitResearchBoard.html#a7c2b4f4a8bc70d0f3ff0d71505e0baeb":[1,0,1767,0]
+"classTraitRecipeCat.html#aaec83cd0ffac4e729fa9444df883ba8e":[1,0,1764,3]
 };

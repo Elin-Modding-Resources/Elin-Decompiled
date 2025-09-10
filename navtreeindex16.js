@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"TraitAmmoEnergy_8cs_source.html":[2,0,0,1301],
 "TraitAmmoTalisman_8cs.html":[2,0,0,1302],
 "TraitAmmoTalisman_8cs_source.html":[2,0,0,1302],
 "TraitAmmo_8cs.html":[2,0,0,1297],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitDrinkMilkMother_8cs_source.html":[2,0,0,1425],
 "TraitDrinkMilk_8cs.html":[2,0,0,1424],
 "TraitDrinkMilk_8cs_source.html":[2,0,0,1424],
-"TraitDrink_8cs.html":[2,0,0,1423],
-"TraitDrink_8cs_source.html":[2,0,0,1423]
+"TraitDrink_8cs.html":[2,0,0,1423]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX121 =
 {
+"classTraitRecycle.html":[1,0,1765],
+"classTraitRecycle.html#ac78d6fcde5d0eda17bb742881ad40a66":[1,0,1765,0],
+"classTraitRegionMap.html":[1,0,1766],
+"classTraitResearchBoard.html":[1,0,1767],
+"classTraitResearchBoard.html#a7c2b4f4a8bc70d0f3ff0d71505e0baeb":[1,0,1767,0],
 "classTraitResidentBoard.html":[1,0,1768],
 "classTraitResidentBoard.html#a52e0407a0fcbd7e5fe9bcff3f76a0592":[1,0,1768,1],
 "classTraitResidentBoard.html#aa96f98f1aac981c69a8d7499d189f8a0":[1,0,1768,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitSpecialLantern.html#a795199e2de3e0d6c420f18d19e81310c":[1,0,1810,4],
 "classTraitSpecialLantern.html#aa383a4d410b69b70f578ece7f73477ed":[1,0,1810,0],
 "classTraitSpecialLantern.html#ac9ace3040a67a973e6808a13236dc23c":[1,0,1810,3],
-"classTraitSpellbook.html":[1,0,1811],
-"classTraitSpellbook.html#a5aded0d1bb1f21da0b58a96918872408":[1,0,1811,1],
-"classTraitSpellbook.html#a9f4515e19f103d74109abad62a9d54d2":[1,0,1811,0],
-"classTraitSpellbookRandom.html":[1,0,1812],
-"classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1812,2],
-"classTraitSpellbookRandom.html#a8c187a19407f57e545aca15acc6a7edc":[1,0,1812,1]
+"classTraitSpellbook.html":[1,0,1811]
 };

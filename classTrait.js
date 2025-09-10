@@ -174,6 +174,7 @@ var classTrait =
     [ "IdSoundToggleOn", "classTrait.html#a49cd4b6298180f400ba370f814714fbf", null ],
     [ "IdToggleExtra", "classTrait.html#a1c2daa2fd743cdd5707d254414078140", null ],
     [ "IgnoreLastStackHeight", "classTrait.html#a39ace83d7e9e32e675a6cc4614497718", null ],
+    [ "IgnoreOnSteppedWhenMoving", "classTrait.html#a4d5c9fc35b8500252b0825af49c28f09", null ],
     [ "InstallBottomPriority", "classTrait.html#af466418d509592443c205b58ec8edbf4", null ],
     [ "InvertHeldSprite", "classTrait.html#a931316468e85d9b8b1f102dd2215cb75", null ],
     [ "InvGridSize", "classTrait.html#ac7ab36c3665e29a4409d9e3390e3f2a3", null ],

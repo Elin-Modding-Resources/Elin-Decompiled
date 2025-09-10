@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classCodexManager.html#ae8db35079ee814d97778a761a23258e1":[1,0,285,10],
 "classCodexManager.html#af422093e0282cbe750a69bb3aaf4adf9":[1,0,285,1],
 "classCodexManager.html#affc405e7e04063d640026ef8117ef3e9":[1,0,285,8],
 "classCollectibleActor.html":[1,0,286],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792":[1,0,338,0],
 "classConParalyze.html#ac00d042177ea4661b0bbd36bcab711ec":[1,0,338,6],
 "classConParalyze.html#ac19f003b4deb8caeac1e7e71d1278eb3":[1,0,338,2],
-"classConParalyze.html#ac8f43ac5faa3d86f0035a01a4790c511":[1,0,338,3],
-"classConPeace.html":[1,0,339]
+"classConParalyze.html#ac8f43ac5faa3d86f0035a01a4790c511":[1,0,338,3]
 };

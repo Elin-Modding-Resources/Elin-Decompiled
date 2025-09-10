@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"classCircularRadialButton.html#adb9fd97e6d8e4ecd0b7e1271f7f2959a":[1,0,279,8],
 "classCircularRadialButton.html#ae984125d726cd7163050a0662f0745fd":[1,0,279,4],
 "classCircularRadialButton.html#ae999859e405b3c66853fcf4cdd48d134":[1,0,279,24],
 "classCircularRadialButton.html#af2539f87570f4be9ff25db9c4a73b4cd":[1,0,279,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "classCodexManager.html#a68531035a3e022514fec625604089bf8":[1,0,285,4],
 "classCodexManager.html#a918d24960c8c6bdc6792f5ad51fd44d0":[1,0,285,2],
 "classCodexManager.html#a9a446209900165399d58b5c5da0885d7":[1,0,285,5],
-"classCodexManager.html#ab668083a424525e40806af5ea1ad58f3":[1,0,285,3],
-"classCodexManager.html#ae8db35079ee814d97778a761a23258e1":[1,0,285,10]
+"classCodexManager.html#ab668083a424525e40806af5ea1ad58f3":[1,0,285,3]
 };

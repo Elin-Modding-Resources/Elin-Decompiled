@@ -6,6 +6,7 @@ var classAI__Fuck =
     ] ],
     [ "Finish", "classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449", null ],
     [ "Run", "classAI__Fuck.html#a2c79902b65680ac0345ea3d263905678", null ],
+    [ "ShouldAllyAttack", "classAI__Fuck.html#ac82e9dfb472739c1e58d4d428dcc80b1", null ],
     [ "bitch", "classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81", null ],
     [ "fails", "classAI__Fuck.html#abc1e44de819355bd27745175bf30a5ac", null ],
     [ "maxProgress", "classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d", null ],

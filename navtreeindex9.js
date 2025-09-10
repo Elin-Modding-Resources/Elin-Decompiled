@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"InvOwnerCopyShop_8cs_source.html":[2,0,0,651],
 "InvOwnerCraft_8cs.html":[2,0,0,652],
 "InvOwnerCraft_8cs_source.html":[2,0,0,652],
 "InvOwnerDeliverBox_8cs.html":[2,0,0,654],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "LayerSleep_8cs_source.html":[2,0,0,769],
 "LayerStockpile_8cs.html":[2,0,0,770],
 "LayerStockpile_8cs_source.html":[2,0,0,770],
-"LayerTactics_8cs.html":[2,0,0,771],
-"LayerTactics_8cs_source.html":[2,0,0,771]
+"LayerTactics_8cs.html":[2,0,0,771]
 };

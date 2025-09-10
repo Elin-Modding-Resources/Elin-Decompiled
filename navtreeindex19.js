@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitRune_8cs.html":[2,0,0,1669],
 "TraitRune_8cs_source.html":[2,0,0,1669],
 "TraitSack_8cs.html":[2,0,0,1675],
 "TraitSack_8cs_source.html":[2,0,0,1675],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitUniqueMonsterAdv_8cs.html":[2,0,0,1798],
 "TraitUniqueMonsterAdv_8cs_source.html":[2,0,0,1798],
 "TraitUniqueMonster_8cs.html":[2,0,0,1797],
-"TraitUniqueMonster_8cs_source.html":[2,0,0,1797],
-"TraitUsuihon_8cs.html":[2,0,0,1799]
+"TraitUniqueMonster_8cs_source.html":[2,0,0,1797]
 };

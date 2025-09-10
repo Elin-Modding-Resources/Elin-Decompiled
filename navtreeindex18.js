@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitMannequin_8cs_source.html":[2,0,0,1550],
 "TraitMapBoard_8cs.html":[2,0,0,1552],
 "TraitMapBoard_8cs_source.html":[2,0,0,1552],
 "TraitMap_8cs.html":[2,0,0,1551],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitRuneMoldSun_8cs.html":[2,0,0,1674],
 "TraitRuneMoldSun_8cs_source.html":[2,0,0,1674],
 "TraitRuneMold_8cs.html":[2,0,0,1671],
-"TraitRuneMold_8cs_source.html":[2,0,0,1671],
-"TraitRune_8cs.html":[2,0,0,1669]
+"TraitRuneMold_8cs_source.html":[2,0,0,1671]
 };

@@ -1,5 +1,15 @@
 var NAVTREEINDEX142 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf5d652839fae45649001249d8462eebd":[0,4,3,0,8,207],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf5f7fc0c7a07dcf4209f3096984cda14":[0,4,3,0,8,70],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf7f93635f8e193a924ae4a691bb66b8f":[0,4,3,0,8,3],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf81f76a27df5a93af247e99148ac175b":[0,4,3,0,8,116],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf96eee4e48ee90430f17fb3a8388507b":[0,4,3,0,8,210],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dafc89cc0c0724c4467dd3d42cebe22cda":[0,4,3,0,8,15],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dafe3c554280e3c257d73c92c6c7f203c9":[0,4,3,0,8,204],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daff4d5593d8c03948c9b0ee182d479341":[0,4,3,0,8,94],
+"namespaceB83_1_1Win32.html#abbcc32d8f3939b9df9886faed241fd01":[0,4,3,0,10],
+"namespaceB83_1_1Win32.html#afc8e6e39d7e52399fd8b254f5d6de758":[0,4,3,0,9],
 "namespaceEmpyrean.html":[0,4,5],
 "namespaceEmpyrean_1_1ColorPicker.html":[0,4,5,0],
 "namespaceEmpyrean_1_1ColorPicker.html#addae28f895c6122349f7321066b62b01":[0,4,5,0,6],

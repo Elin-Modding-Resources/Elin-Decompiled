@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"BaseMapGen_8cs.html":[2,0,0,198],
 "BaseMapGen_8cs_source.html":[2,0,0,198],
 "BaseModManager_8cs.html":[2,0,0,2,6],
 "BaseModManager_8cs_source.html":[2,0,0,2,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "CharacterSpacing_8cs_source.html":[2,0,0,3,21],
 "ChatCategory_8cs.html":[2,0,0,259],
 "ChatCategory_8cs.html#ab89d010c28ef9771a6edbf42eabca869":[2,0,0,259,0],
-"ChatCategory_8cs.html#ab89d010c28ef9771a6edbf42eabca869a0cbc6611f5540bd0809a388dc95a615b":[2,0,0,259,0,0],
-"ChatCategory_8cs.html#ab89d010c28ef9771a6edbf42eabca869a183b62c7f067711f9c5a54913c054617":[2,0,0,259,0,1]
+"ChatCategory_8cs.html#ab89d010c28ef9771a6edbf42eabca869a0cbc6611f5540bd0809a388dc95a615b":[2,0,0,259,0,0]
 };

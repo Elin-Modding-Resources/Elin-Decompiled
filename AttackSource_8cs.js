@@ -22,6 +22,7 @@ var AttackSource_8cs =
       [ "Shockwave", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a822b02e1b751097d290eaad55252eb81", null ],
       [ "MagicSword", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4ac90d60c2ea096577c43cf2ee47e58af4", null ],
       [ "MoonSpear", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a510b77294ea3493c0cca74c0be5e3c63", null ],
-      [ "MagicArrow", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4ac0e39b86ddf7e540e546a69c7b462ecb", null ]
+      [ "MagicArrow", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4ac0e39b86ddf7e540e546a69c7b462ecb", null ],
+      [ "MagicHand", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a28896b512f28ef3e4a6114dd1a6199a8", null ]
     ] ]
 ];

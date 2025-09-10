@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caabcf714c6f49bfc7a4c5468b4a0435e6":[2,0,0,590,0,16],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad0bb80aabb8619b6e35113f02e72752b":[2,0,0,590,0,13],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad35264a8ba23c39dba57b6e37c0dc650":[2,0,0,590,0,11],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9cad9e5d212320e7d96e921831554be696d":[2,0,0,590,0,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "InvOwnerChangeMaterial_8cs_source.html":[2,0,0,649],
 "InvOwnerChaosOffering_8cs.html":[2,0,0,650],
 "InvOwnerChaosOffering_8cs_source.html":[2,0,0,650],
-"InvOwnerCopyShop_8cs.html":[2,0,0,651],
-"InvOwnerCopyShop_8cs_source.html":[2,0,0,651]
+"InvOwnerCopyShop_8cs.html":[2,0,0,651]
 };

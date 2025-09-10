@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"EloMapTileSelector_8cs_source.html":[2,0,0,455],
 "EloMap_8cs.html":[2,0,0,451],
 "EloMap_8cs_source.html":[2,0,0,451],
 "EloPos_8cs.html":[2,0,0,456],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "GameSerializationBinder_8cs.html":[2,0,0,500],
 "GameSerializationBinder_8cs_source.html":[2,0,0,500],
 "GameSetting_8cs.html":[2,0,0,501],
-"GameSetting_8cs_source.html":[2,0,0,501],
-"GameType_8cs.html":[2,0,0,502]
+"GameSetting_8cs_source.html":[2,0,0,501]
 };

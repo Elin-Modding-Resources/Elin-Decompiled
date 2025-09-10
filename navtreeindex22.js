@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dafe3c554280e3c257d73c92c6c7f203c9":[2,0,0,2,0,0,10,0,204],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3daff4d5593d8c03948c9b0ee182d479341":[2,0,0,2,0,0,10,0,94],
 "WM_8cs_source.html":[2,0,0,2,0,0,10],
 "Wait_8cs.html":[2,0,0,1857],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "Zone__DungeonYeek_8cs_source.html":[2,0,0,1932],
 "Zone__Dungeon_8cs.html":[2,0,0,1928],
 "Zone__Dungeon_8cs_source.html":[2,0,0,1928],
-"Zone__EmbassyPalmia_8cs.html":[2,0,0,1933],
-"Zone__EmbassyPalmia_8cs_source.html":[2,0,0,1933]
+"Zone__EmbassyPalmia_8cs.html":[2,0,0,1933]
 };

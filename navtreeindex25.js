@@ -1,14 +1,16 @@
 var NAVTREEINDEX25 =
 {
-"classAI__Fuck.html#aa1e381a6dd59ba7946486f6c7e220059":[1,0,77,18],
-"classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d":[1,0,77,5],
-"classAI__Fuck.html#abc1e44de819355bd27745175bf30a5ac":[1,0,77,4],
-"classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360":[1,0,77,10],
+"classAI__Fuck.html#a9873b0b83b8f37c5f0061455e5d00f10":[1,0,77,7],
+"classAI__Fuck.html#aa1e381a6dd59ba7946486f6c7e220059":[1,0,77,19],
+"classAI__Fuck.html#aa63879736f2fca33309e58ad13dfbf5d":[1,0,77,6],
+"classAI__Fuck.html#abc1e44de819355bd27745175bf30a5ac":[1,0,77,5],
+"classAI__Fuck.html#ac1aa5b5f48572cad2673101e29e8d360":[1,0,77,11],
+"classAI__Fuck.html#ac82e9dfb472739c1e58d4d428dcc80b1":[1,0,77,3],
 "classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073":[1,0,77,0],
 "classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073a789d9a06ca24c82106a0329240878f66":[1,0,77,0,1],
 "classAI__Fuck.html#ada3bbaf792c5bd31716f8fc5263b0073a99754106633f94d350db34d548d6091a":[1,0,77,0,0],
-"classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c":[1,0,77,19],
-"classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81":[1,0,77,3],
+"classAI__Fuck.html#af92d56f0277d734e013ea365b2e27b9c":[1,0,77,20],
+"classAI__Fuck.html#afbe4a2fa075c977c038575bc59f47b81":[1,0,77,4],
 "classAI__Goto.html":[1,0,78],
 "classAI__Goto.html#a005341fe7609880dde211d033e869b23":[1,0,78,12],
 "classAI__Goto.html#a0413c19a31f9679c048ceb972d4fb2fa":[1,0,78,3],
@@ -231,8 +233,7 @@ var NAVTREEINDEX25 =
 "classAI__TargetThing.html":[1,0,107],
 "classAI__TargetThing.html#ad28b07f72052e88f5d7dbe3d75d31c06":[1,0,107,0],
 "classAI__TendAnimal.html":[1,0,108],
-"classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7":[1,0,108,1],
-"classAI__TendAnimal.html#a7ac2a48f58affdf083f01fedb78bfcac":[1,0,108,0],
+"classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7":[1,0,108,0],
 "classAI__Torture.html":[1,0,109],
 "classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2":[1,0,109,4],
 "classAI__Torture.html#a6f424584c46f3e4104c623bdaea8f268":[1,0,109,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Trolley.html#a2f55042573886f2af86507764830f5d5":[1,0,110,9],
 "classAI__Trolley.html#a3809c5bfdb96111fd83efb1d03399bc5":[1,0,110,7],
 "classAI__Trolley.html#a684c4ec733cb6d3f01bbd2d23337b470":[1,0,110,1],
-"classAI__Trolley.html#a870213f610c1ea42c209656366633385":[1,0,110,4],
-"classAI__Trolley.html#a91617b5e47ce8104d3f267822d6a4384":[1,0,110,2]
+"classAI__Trolley.html#a870213f610c1ea42c209656366633385":[1,0,110,4]
 };

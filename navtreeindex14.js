@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"SourceFloor_8cs_source.html":[2,0,0,1091],
 "SourceFood_8cs.html":[2,0,0,1092],
 "SourceFood_8cs_source.html":[2,0,0,1092],
 "SourceGlobalTile_8cs.html":[2,0,0,1093],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "TaskChopWood_8cs.html":[2,0,0,1179],
 "TaskChopWood_8cs_source.html":[2,0,0,1179],
 "TaskClean_8cs.html":[2,0,0,1180],
-"TaskClean_8cs_source.html":[2,0,0,1180],
-"TaskCraft_8cs.html":[2,0,0,1181]
+"TaskClean_8cs_source.html":[2,0,0,1180]
 };

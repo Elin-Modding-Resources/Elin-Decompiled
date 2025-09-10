@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"TaskCraft_8cs.html":[2,0,0,1181],
 "TaskCraft_8cs_source.html":[2,0,0,1181],
 "TaskCullLife_8cs.html":[2,0,0,1182],
 "TaskCullLife_8cs_source.html":[2,0,0,1182],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "TraitAmmoBolt_8cs_source.html":[2,0,0,1299],
 "TraitAmmoBullet_8cs.html":[2,0,0,1300],
 "TraitAmmoBullet_8cs_source.html":[2,0,0,1300],
-"TraitAmmoEnergy_8cs.html":[2,0,0,1301],
-"TraitAmmoEnergy_8cs_source.html":[2,0,0,1301]
+"TraitAmmoEnergy_8cs.html":[2,0,0,1301]
 };
