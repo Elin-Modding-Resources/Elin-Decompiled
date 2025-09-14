@@ -226,19 +226,49 @@ public class ActThrow : ActBaseAttack
 			TraitMonsterBall traitMonsterBall = t.trait as TraitMonsterBall;
 			if (traitMonsterBall.chara != null)
 			{
-				if (traitMonsterBall.IsLittleBall && !(EClass._zone is Zone_LittleGarden) && !EClass.game.IsSurvival)
+				if ((traitMonsterBall.IsLittleBall && !(EClass._zone is Zone_LittleGarden) && !EClass.game.IsSurvival) || (traitMonsterBall.IsDuponneBall && !(EClass._zone is Zone_Exile) && !EClass.game.IsSurvival))
 				{
 					break;
 				}
 				Chara _c = EClass._zone.AddCard(traitMonsterBall.chara, p).Chara;
+				if (_c.ai != null)
+				{
+					_c.ai.Cancel();
+				}
+				_c.enemy = null;
 				_c.PlayEffect("identify");
 				t.Die();
-				if (traitMonsterBall.IsLittleBall && _c.id == "littleOne")
+				if (_c.IsMultisize)
+				{
+					_c.DestroyPath(_c.pos);
+					_c.ForeachPoint(delegate(Point p2, bool first)
+					{
+						foreach (Chara item in p2.ListCharas())
+						{
+							if (item != _c)
+							{
+								_c.Kick(p2, ignoreSelf: true, checkWall: false);
+								break;
+							}
+						}
+					});
+				}
+				if (traitMonsterBall.IsDuponneBall && _c.id == "lurie_boss")
 				{
 					_c.orgPos = c.pos.Copy();
+					_c.homeZone = EClass._zone;
 					Chara chara = _c;
-					Hostility c_originalHostility = (_c.hostility = Hostility.Neutral);
+					Hostility c_originalHostility = (_c.hostility = Hostility.Friend);
 					chara.c_originalHostility = c_originalHostility;
+					EClass._zone.ModInfluence(20);
+					_c.PlaySound("chime_angel");
+				}
+				else if (traitMonsterBall.IsLittleBall && _c.id == "littleOne")
+				{
+					_c.orgPos = c.pos.Copy();
+					Chara chara2 = _c;
+					Hostility c_originalHostility = (_c.hostility = Hostility.Neutral);
+					chara2.c_originalHostility = c_originalHostility;
 					EClass._zone.ModInfluence(5);
 					_c.PlaySound("chime_angel");
 					EClass.core.actionsNextFrame.Add(delegate
@@ -260,10 +290,18 @@ public class ActThrow : ActBaseAttack
 					break;
 				}
 				Act.TC.Say("throw_hit", t, Act.TC);
-				Chara chara2 = Act.TC.Chara;
-				if (traitMonsterBall.IsLittleBall)
+				Chara chara3 = Act.TC.Chara;
+				if (traitMonsterBall.IsDuponneBall)
 				{
-					if (chara2.id != "littleOne" || chara2.IsPCFactionOrMinion || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone)
+					if (chara3.id != "lurie_boss" || chara3.IsPCFactionOrMinion || EClass._zone is Zone_Exile || EClass._zone.IsUserZone)
+					{
+						Msg.Say("monsterball_invalid");
+						break;
+					}
+				}
+				else if (traitMonsterBall.IsLittleBall)
+				{
+					if (chara3.id != "littleOne" || chara3.IsPCFactionOrMinion || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone)
 					{
 						Msg.Say("monsterball_invalid");
 						break;
@@ -271,35 +309,40 @@ public class ActThrow : ActBaseAttack
 				}
 				else
 				{
-					if (!chara2.trait.CanBeTamed || EClass._zone.IsUserZone)
+					if (!chara3.trait.CanBeTamed || EClass._zone.IsUserZone)
 					{
 						Msg.Say("monsterball_invalid");
 						break;
 					}
-					if (chara2.LV > traitMonsterBall.owner.LV)
+					if (chara3.LV > traitMonsterBall.owner.LV)
 					{
 						Msg.Say("monsterball_lv");
 						break;
 					}
-					if (!EClass.debug.enable && chara2.hp > chara2.MaxHP / 10)
+					if (!EClass.debug.enable && chara3.hp > chara3.MaxHP / 10)
 					{
 						Msg.Say("monsterball_hp");
 						break;
 					}
 				}
-				Msg.Say("monsterball_capture", c, chara2);
-				chara2.PlaySound("identify");
-				chara2.PlayEffect("identify");
+				Msg.Say("monsterball_capture", c, chara3);
+				chara3.PlaySound("identify");
+				chara3.PlayEffect("identify");
 				t.ChangeMaterial("copper");
-				if (chara2.IsLocalChara)
+				if (chara3.IsLocalChara)
 				{
-					Debug.Log("Creating Replacement NPC for:" + chara2);
-					EClass._map.deadCharas.Add(chara2.CreateReplacement());
+					Debug.Log("Creating Replacement NPC for:" + chara3);
+					EClass._map.deadCharas.Add(chara3.CreateReplacement());
 				}
-				traitMonsterBall.chara = chara2;
-				EClass._zone.RemoveCard(chara2);
-				chara2.homeZone = null;
+				traitMonsterBall.chara = chara3;
+				chara3.ReleaseMinion();
+				EClass._zone.RemoveCard(chara3);
+				chara3.homeZone = null;
 				c.ModExp(108, 100);
+				if (traitMonsterBall.IsDuponneBall && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 3)
+				{
+					EClass.game.quests.Get<QuestNegotiationDarkness>().NextPhase();
+				}
 			}
 			break;
 		}

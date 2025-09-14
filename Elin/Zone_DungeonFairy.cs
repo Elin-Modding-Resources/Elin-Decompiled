@@ -6,11 +6,11 @@ public class Zone_DungeonFairy : Zone_QuestDungeon
 	{
 		get
 		{
-			if (EClass.pc.party.Find("fairy_nanasu") != null)
+			if (EClass.pc.party.Find("fairy_nanasu") == null)
 			{
-				return EClass.game.quests.GetPhase<QuestNasu>() == 0;
+				return EClass.game.quests.IsCompleted("nasu");
 			}
-			return false;
+			return true;
 		}
 	}
 

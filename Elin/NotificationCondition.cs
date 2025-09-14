@@ -34,6 +34,7 @@ public class NotificationCondition : BaseNotification
 		int num = 5;
 		WidgetStats instance = WidgetStats.Instance;
 		bool sort = instance.extra.sort;
+		bool sort_ascend = instance.extra.sort_ascend;
 		switch (condition.Type)
 		{
 		case ConditionType.Stance:
@@ -43,7 +44,7 @@ public class NotificationCondition : BaseNotification
 			num = 10;
 			break;
 		case ConditionType.Debuff:
-			num = (sort ? 11 : 10);
+			num = ((!sort) ? 10 : (sort_ascend ? 9 : 11));
 			break;
 		}
 		if (condition is ConBuffStats)
@@ -54,7 +55,12 @@ public class NotificationCondition : BaseNotification
 		{
 			num = 2;
 		}
-		return 8000000 + num * 100000 + (sort ? condition.GetSortVal() : instance.list.IndexOf(this));
+		int num2 = (sort ? condition.GetSortVal() : instance.list.IndexOf(this));
+		if ((!sort && !sort_ascend) || (sort && sort_ascend))
+		{
+			num2 = 100000 - num2;
+		}
+		return 8000000 + num * 100000 + num2;
 	}
 
 	public override void OnClick()

@@ -2,10 +2,18 @@ public class ConBoost : BaseBuff
 {
 	public override void OnStart()
 	{
+		EClass.core.actionsNextFrame.Add(delegate
+		{
+			if (owner != null)
+			{
+				owner.Talk("awaken");
+			}
+		});
 		if (!owner.IsPCC)
 		{
 			owner._CreateRenderer();
 		}
+		owner.PlaySound("boost2");
 	}
 
 	public override void OnRemoved()

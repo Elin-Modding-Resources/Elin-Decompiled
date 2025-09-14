@@ -83,6 +83,7 @@ public class Region : Zone
 		TryAddZone("foxtown_nefu");
 		TryAddZone("little_garden");
 		TryAddZone("cave_yeek");
+		TryAddZone("cave_mino");
 		TryAddZone("village_exile");
 		TryAddZone("temple_undersea");
 		elomap.objmap.UpdateMeshImmediate();

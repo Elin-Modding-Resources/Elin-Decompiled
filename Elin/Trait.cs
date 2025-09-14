@@ -1762,8 +1762,6 @@ public class Trait : EClass
 				case ShopType.Medal:
 					NoRestock(ThingGen.Create("sword_dragon"));
 					Add("sword_dragon", 1, 0).SetReplica(on: true);
-					NoRestock(ThingGen.Create("axe_destruction"));
-					Add("axe_destruction", 1, 0).SetReplica(on: true);
 					NoRestock(ThingGen.Create("blunt_bonehammer"));
 					Add("blunt_bonehammer", 1, 0).SetReplica(on: true);
 					NoRestock(ThingGen.Create("pole_gunlance"));

@@ -358,6 +358,23 @@ public class DramaOutcome : EMono
 		EMono.game.dateScratch = EMono.world.date.GetRaw(24);
 	}
 
+	public void duponne_capture()
+	{
+		EMono.pc.things.Find("minohorn")?.ModNum(-1);
+		EMono.player.DropReward(ThingGen.Create("duponneball"));
+	}
+
+	public void duponne_reward()
+	{
+		EMono.player.DropReward(ThingGen.CreateRedBook("advweek_12"), silent: true);
+		EMono.player.DropReward(ThingGen.Create("crystal_earth"), silent: true);
+		EMono.player.DropReward(ThingGen.Create("crystal_sun"), silent: true);
+		EMono.player.DropReward(ThingGen.Create("crystal_mana"), silent: true);
+		EMono.player.DropReward(ThingGen.CreateRecipe("rune_mold_earth"), silent: true);
+		EMono.player.DropReward(ThingGen.CreateRecipe("rune_mold_sun"), silent: true);
+		EMono.player.DropReward(ThingGen.CreateRecipe("rune_mold_mana"));
+	}
+
 	public void poppy_found()
 	{
 		if (cc.id == "poppy")

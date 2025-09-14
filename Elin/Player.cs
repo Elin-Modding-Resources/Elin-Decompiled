@@ -550,6 +550,18 @@ public class Player : EClass
 			}
 		}
 
+		public bool killedDuponne
+		{
+			get
+			{
+				return bits[32];
+			}
+			set
+			{
+				bits[32] = value;
+			}
+		}
+
 		public int start
 		{
 			get

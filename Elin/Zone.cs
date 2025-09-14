@@ -1776,7 +1776,15 @@ public class Zone : Spatial, ICardParent, IInspect
 			return true;
 		}
 		bool flag = false;
-		if (id == "cave_yeek" && !(this is Zone_DungeonYeek))
+		string text = id;
+		if (!(text == "cave_yeek"))
+		{
+			if (text == "cave_mino" && !(this is Zone_DungeonMino))
+			{
+				flag = true;
+			}
+		}
+		else if (!(this is Zone_DungeonYeek))
 		{
 			flag = true;
 		}
@@ -2710,7 +2718,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			biome = ((EClass.rnd(4) != 0) ? EClass.core.refs.biomes.Water : EClass.core.refs.biomes.Sand);
 		}
 		SpawnList spawnList = null;
-		spawnList = ((setting.idSpawnList != null) ? SpawnList.Get(setting.idSpawnList) : ((EClass._zone is Zone_DungeonYeek) ? SpawnListChara.Get("dungeon_yeek", (SourceChara.Row r) => r.race == "yeek") : ((setting.hostility == SpawnHostility.Neutral || (setting.hostility != SpawnHostility.Enemy && Rand.Range(0f, 1f) < ChanceSpawnNeutral)) ? SpawnList.Get("c_neutral") : ((biome.spawn.chara.Count <= 0) ? SpawnList.Get(biome.name, "chara", new CharaFilter
+		spawnList = ((setting.idSpawnList != null) ? SpawnList.Get(setting.idSpawnList) : ((EClass._zone is Zone_DungeonYeek && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_yeek", (SourceChara.Row r) => r.race == "yeek") : ((EClass._zone is Zone_DungeonMino && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_mino", (SourceChara.Row r) => r.race == "minotaur") : ((setting.hostility == SpawnHostility.Neutral || (setting.hostility != SpawnHostility.Enemy && Rand.Range(0f, 1f) < ChanceSpawnNeutral)) ? SpawnList.Get("c_neutral") : ((biome.spawn.chara.Count <= 0) ? SpawnList.Get(biome.name, "chara", new CharaFilter
 		{
 			ShouldPass = delegate(SourceChara.Row s)
 			{
@@ -2720,7 +2728,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 				return s.biome == biome.name || s.biome.IsEmpty();
 			}
-		}) : SpawnList.Get(biome.spawn.GetRandomCharaId())))));
+		}) : SpawnList.Get(biome.spawn.GetRandomCharaId()))))));
 		int num = ((setting.dangerLv == -1) ? DangerLv : setting.dangerLv);
 		CardBlueprint cardBlueprint = new CardBlueprint
 		{

@@ -507,7 +507,7 @@ public class GoalCombat : Goal
 			ability.priority = 0;
 			ability.tg = null;
 			ability.pt = false;
-			if (EClass.rnd(100) >= ability.chance || (isBlind && ability.act.HasTag("reqSight")) || (act is Spell && owner.isBerserk))
+			if (EClass.rnd(100) >= ability.chance || (isBlind && ability.act.HasTag("reqSight")) || (owner.isBerserk && !(act is ActMelee) && !(act is ActRanged) && !(act is ActBreathe) && !(act is ActThrow)))
 			{
 				continue;
 			}
@@ -526,21 +526,13 @@ public class GoalCombat : Goal
 			switch (text)
 			{
 			case "any":
-				if (owner.isBerserk)
-				{
-					continue;
-				}
 				num = 50;
 				break;
 			case "item":
-				if (owner.isBerserk)
-				{
-					continue;
-				}
 				num = (ability.act as ActItem).BuildAct(owner);
 				break;
 			case "wait":
-				if (owner.isBerserk || owner.IsPCParty)
+				if (owner.IsPCParty)
 				{
 					continue;
 				}
@@ -548,9 +540,9 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag7 = owner.HasCondition<StanceTaunt>();
-				bool flag8 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag7 && !flag8) ? 100 : ((!flag7 && flag8) ? 100 : 0));
+				bool flag6 = owner.HasCondition<StanceTaunt>();
+				bool flag7 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag6 && !flag7) ? 100 : ((!flag6 && flag7) ? 100 : 0));
 				break;
 			}
 			case "song":
@@ -614,18 +606,10 @@ public class GoalCombat : Goal
 				}
 				break;
 			case "teleport":
-				if (owner.isBerserk)
-				{
-					continue;
-				}
 				num = 40;
 				break;
 			case "hot":
 			case "heal":
-				if (owner.isBerserk)
-				{
-					continue;
-				}
 				isHOT = text == "hot";
 				num = ForeachChara(ability, (Chara c) => HealFactor(c), isFriendlyAbility: true);
 				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
@@ -641,13 +625,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag9 = text == "dot";
-				if (flag9 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag8 = text == "dot";
+				if (flag8 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag9)
+				if (num > 0 && flag8)
 				{
 					num += 10;
 				}
@@ -663,13 +647,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag6 = ability.act is ActBolt;
+				bool flag9 = ability.act is ActBolt;
 				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}
-				GetNumEnemy(flag6 ? 6 : 5);
-				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag6 ? 6 : 5) > 0))
+				GetNumEnemy(flag9 ? 6 : 5);
+				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag9 ? 6 : 5) > 0))
 				{
 					continue;
 				}
@@ -677,10 +661,6 @@ public class GoalCombat : Goal
 				break;
 			}
 			case "buff":
-				if (owner.isBerserk)
-				{
-					continue;
-				}
 				num = ForeachChara(ability, (Chara c) => (!c.HasCondition(s.proc[1])) ? tactics.P_Buff : 0, isFriendlyAbility: true);
 				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
 				{
@@ -688,10 +668,6 @@ public class GoalCombat : Goal
 				}
 				break;
 			case "buffStats":
-				if (owner.isBerserk)
-				{
-					continue;
-				}
 				num = ForeachChara(ability, delegate(Chara c)
 				{
 					Element buffStats2 = c.GetBuffStats(s.proc[1]);
@@ -703,7 +679,7 @@ public class GoalCombat : Goal
 				}
 				break;
 			case "debuff":
-				if (owner.isBerserk || !flag)
+				if (!flag)
 				{
 					continue;
 				}
@@ -714,7 +690,7 @@ public class GoalCombat : Goal
 				}
 				break;
 			case "debuffStats":
-				if (owner.isBerserk || !flag)
+				if (!flag)
 				{
 					continue;
 				}
@@ -741,7 +717,7 @@ public class GoalCombat : Goal
 				break;
 			case "summon":
 			{
-				if (owner.isBerserk || owner.isRestrained || (tc != null && tc.IsRestrainedResident))
+				if (owner.isRestrained || (tc != null && tc.IsRestrainedResident))
 				{
 					continue;
 				}
@@ -754,7 +730,7 @@ public class GoalCombat : Goal
 				break;
 			}
 			case "summonAlly":
-				if (owner.isBerserk || owner.isRestrained || (tc != null && tc.IsRestrainedResident))
+				if (owner.isRestrained || (tc != null && tc.IsRestrainedResident))
 				{
 					continue;
 				}
@@ -779,7 +755,7 @@ public class GoalCombat : Goal
 				num = 1000;
 				break;
 			case "suicide":
-				if (owner.isBerserk || owner.IsPC || owner.HasCondition<ConWet>())
+				if (owner.IsPC || owner.HasCondition<ConWet>())
 				{
 					continue;
 				}
@@ -800,6 +776,12 @@ public class GoalCombat : Goal
 			}
 			switch (act.id)
 			{
+			case 6606:
+				if (owner.mana.value <= 0)
+				{
+					continue;
+				}
+				break;
 			case 6603:
 				if (!tc.IsPCParty || tc.Evalue(418) < 0)
 				{
@@ -927,36 +909,36 @@ public class GoalCombat : Goal
 				{
 					return 0;
 				}
-				float num6 = (float)c.hp / (float)c.MaxHP;
-				if (num6 > (isHOT ? 0.85f : 0.75f))
+				float num4 = (float)c.hp / (float)c.MaxHP;
+				if (num4 > (isHOT ? 0.85f : 0.75f))
 				{
 					return 0;
 				}
-				int num7 = tactics.P_Heal - (int)((float)tactics.P_Heal * num6) + (isHOT ? 50 : 25);
+				int num5 = tactics.P_Heal - (int)((float)tactics.P_Heal * num4) + (isHOT ? 50 : 25);
 				foreach (Condition condition in c.conditions)
 				{
 					if (condition is ConFear)
 					{
-						num7 += 10;
+						num5 += 10;
 					}
 					else if (condition is ConPoison)
 					{
-						num7 += 2;
+						num5 += 2;
 					}
 					else if (condition is ConConfuse)
 					{
-						num7 += 4;
+						num5 += 4;
 					}
 					else if (condition is ConDim)
 					{
-						num7 += 6;
+						num5 += 6;
 					}
 					else if (condition is ConBleed)
 					{
-						num7 += 8;
+						num5 += 8;
 					}
 				}
-				return num7;
+				return num5;
 			}
 		}
 		abilities.Sort((ItemAbility a, ItemAbility b) => b.priority - a.priority);
@@ -1042,8 +1024,8 @@ public class GoalCombat : Goal
 			{
 				if (chara2 != owner)
 				{
-					int num10 = owner.Dist(chara2);
-					if (num10 > sightRadius || !owner.CanSeeLos(chara2, num10))
+					int num8 = owner.Dist(chara2);
+					if (num8 > sightRadius || !owner.CanSeeLos(chara2, num8))
 					{
 						continue;
 					}
@@ -1059,11 +1041,11 @@ public class GoalCombat : Goal
 				return func(owner);
 			}
 			BuildCharaList();
-			int num4 = 0;
+			int num9 = 0;
 			foreach (Chara chara3 in charas)
 			{
-				int num5 = func(chara3);
-				if (num5 > 0)
+				int num10 = func(chara3);
+				if (num10 > 0)
 				{
 					if (isFriendlyAbility)
 					{
@@ -1080,21 +1062,21 @@ public class GoalCombat : Goal
 						}
 						if (chara3 != owner)
 						{
-							num5 += tactics.P_Party;
+							num10 += tactics.P_Party;
 						}
 					}
 					else if (!owner.IsHostile(chara3))
 					{
 						continue;
 					}
-					if (num5 >= num4)
+					if (num10 >= num9)
 					{
 						a.tg = chara3;
-						num4 = num5;
+						num9 = num10;
 					}
 				}
 			}
-			return num4;
+			return num9;
 		}
 		int GetAttackMod(Act a)
 		{
@@ -1102,30 +1084,30 @@ public class GoalCombat : Goal
 			{
 				return 0;
 			}
-			int num8 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
-			int num9 = -15 * tc.ResistLvFrom(num8);
-			switch (num8)
+			int num6 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
+			int num7 = -15 * tc.ResistLvFrom(num6);
+			switch (num6)
 			{
 			case 910:
 				if (tc.isWet)
 				{
-					num9 -= 30;
+					num7 -= 30;
 				}
 				break;
 			case 911:
 				if (tc.HasCondition<ConBurning>())
 				{
-					num9 -= 30;
+					num7 -= 30;
 				}
 				break;
 			case 912:
 				if (tc.isWet)
 				{
-					num9 += 30;
+					num7 += 30;
 				}
 				break;
 			}
-			return num9;
+			return num7;
 		}
 		void GetNumEnemy(int radius)
 		{

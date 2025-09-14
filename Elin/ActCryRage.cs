@@ -1,10 +1,5 @@
 public class ActCryRage : Ability
 {
-	public override bool CanPerform()
-	{
-		return true;
-	}
-
 	public override bool Perform()
 	{
 		Act.CC.PlaySound("warcry");

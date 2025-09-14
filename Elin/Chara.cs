@@ -4679,6 +4679,18 @@ public class Chara : Card, IPathfindWalker
 				EQ_ID("EtherDagger2");
 			}
 			break;
+		case "ungaga_pap":
+			if (onCreate)
+			{
+				EQ_ID("axe_destruction");
+			}
+			break;
+		case "lurie_boss":
+			if (onCreate)
+			{
+				EQ_ID("ribbon_duponne");
+			}
+			break;
 		case "seeker":
 			if (onCreate)
 			{
@@ -5465,6 +5477,20 @@ public class Chara : Card, IPathfindWalker
 				EClass.game.quests.Get<QuestVernis>().UpdateOnTalk();
 			}
 			break;
+		case "lurie_boss":
+			if (!(EClass._zone is Zone_Exile))
+			{
+				num = 5;
+				flag = (flag2 = true);
+				EClass.Sound.StopBGM(3f);
+				EClass._zone.SetBGM(1, refresh: false);
+				if (EClass.game.quests.IsStarted<QuestNegotiationDarkness>() && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() <= 3)
+				{
+					EClass.game.quests.Get<QuestNegotiationDarkness>().ChangePhase(4);
+					EClass.player.flags.killedDuponne = true;
+				}
+			}
+			break;
 		case "melilith_boss":
 			num = 5;
 			flag = (flag2 = true);
@@ -5528,15 +5554,15 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public void Kick(Point p, bool ignoreSelf = false)
+	public void Kick(Point p, bool ignoreSelf = false, bool checkWall = true)
 	{
 		foreach (Chara item in p.ListCharas())
 		{
-			Kick(item, ignoreSelf);
+			Kick(item, ignoreSelf, karmaLoss: true, show: true, checkWall);
 		}
 	}
 
-	public void Kick(Chara t, bool ignoreSelf = false, bool karmaLoss = true, bool show = true)
+	public void Kick(Chara t, bool ignoreSelf = false, bool karmaLoss = true, bool show = true, bool checkWall = true)
 	{
 		if (!IsAliveInCurrentZone)
 		{
@@ -5569,7 +5595,7 @@ public class Chara : Card, IPathfindWalker
 		PlaySound("kick");
 		if ((t.conSuspend == null || t.conSuspend.uidMachine != 0) && t.trait.CanBePushed && (!t.IsHostile() || EClass.rnd(2) == 0) && !t.noMove && !t.isRestrained)
 		{
-			t.MoveByForce(t.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: true, ignoreCenter: true), this, !t.pos.IsBlocked);
+			t.MoveByForce(t.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: true, ignoreCenter: true), this, checkWall && !t.pos.IsBlocked);
 		}
 		if (t.conSleep != null)
 		{
@@ -5589,7 +5615,7 @@ public class Chara : Card, IPathfindWalker
 
 	public bool UseAbility(Act a, Card tc = null, Point pos = null, bool pt = false)
 	{
-		if (!IsPC && HasCooldown(a.id))
+		if (HasCooldown(a.id))
 		{
 			return false;
 		}
@@ -5842,7 +5868,7 @@ public class Chara : Card, IPathfindWalker
 			}
 		}
 		ActEffect.RapidCount = 0;
-		if (!IsPC && a.source.cooldown > 0)
+		if (a.source.cooldown > 0 && (!IsPC || !a.source.tag.Contains("CD_npc")))
 		{
 			AddCooldown(a.id, a.source.cooldown);
 		}
@@ -7861,7 +7887,7 @@ public class Chara : Card, IPathfindWalker
 
 	public bool CanAcceptItem(Card t, int num = -1)
 	{
-		if (EClass.debug.enable)
+		if (EClass.debug.ignoreWeight)
 		{
 			return true;
 		}
@@ -9289,6 +9315,10 @@ public class Chara : Card, IPathfindWalker
 				con.power /= 5;
 			}
 			else if (200 < EClass.rnd(a))
+			{
+				con.power /= 3;
+			}
+			else if (100 < EClass.rnd(a))
 			{
 				con.power /= 2;
 			}

@@ -670,6 +670,7 @@ public class CoreDebug : EScriptable
 			EClass.game.quests.Add("exile_voice");
 			EClass.game.quests.Add("into_darkness");
 			EClass.game.quests.Add("demitas_spellwriter");
+			EClass.game.quests.Add("negotiation_darkness");
 		}
 		static Thing AddAbility(string id)
 		{
@@ -862,11 +863,11 @@ public class CoreDebug : EScriptable
 		bool key2 = Input.GetKey(KeyCode.LeftAlt);
 		bool key3 = Input.GetKey(KeyCode.LeftControl);
 		TraitStairs traitStairs = null;
-		if (Input.GetKeyDown(KeyCode.KeypadPlus))
+		if (Input.GetKeyDown(KeyCode.KeypadPlus) || (EInput.isShiftDown && Input.GetKeyDown(KeyCode.Period)))
 		{
 			traitStairs = EClass._map.FindThing<TraitStairsDown>();
 		}
-		if (Input.GetKeyDown(KeyCode.KeypadMinus))
+		if (Input.GetKeyDown(KeyCode.KeypadMinus) || (EInput.isShiftDown && Input.GetKeyDown(KeyCode.Comma)))
 		{
 			traitStairs = EClass._map.FindThing<TraitStairsUp>();
 		}

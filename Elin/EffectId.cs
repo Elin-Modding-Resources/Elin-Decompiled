@@ -123,5 +123,6 @@ public enum EffectId
 	CatSniff = 299,
 	Youth = 300,
 	EternalYouth = 301,
-	MoonSpear = 302
+	MoonSpear = 302,
+	BurnMana = 303
 }

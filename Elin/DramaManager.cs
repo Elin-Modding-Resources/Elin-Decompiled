@@ -761,6 +761,15 @@ public class DramaManager : EMono
 				});
 			}
 			break;
+		case "changePhase":
+			if (!LayerDrama.fromBook)
+			{
+				AddEvent(delegate
+				{
+					EMono.game.quests.Get(p2).ChangePhase(p3.ToInt());
+				});
+			}
+			break;
 		case "addResource":
 			AddEvent(delegate
 			{
@@ -1046,6 +1055,26 @@ public class DramaManager : EMono
 		string[] array = IF.Split(',');
 		switch (array[0])
 		{
+		case "duponne_mino":
+			return EMono.pc.things.Find("minohorn") != null;
+		case "duponne_rescued":
+			if (EMono.game.quests.GetPhase<QuestNegotiationDarkness>() == 4)
+			{
+				return EMono._map.FindChara("lurie_boss") != null;
+			}
+			return false;
+		case "duponne_gone":
+			if (EMono.game.quests.GetPhase<QuestNegotiationDarkness>() == 4 && !EMono.player.flags.killedDuponne && EMono._map.FindChara("lurie_boss") == null)
+			{
+				return EMono.pc.things.Find("duponneball") == null;
+			}
+			return false;
+		case "duponne_killed":
+			if (EMono.game.quests.GetPhase<QuestNegotiationDarkness>() == 4)
+			{
+				return EMono.player.flags.killedDuponne;
+			}
+			return false;
 		case "survival":
 			return EMono.game.IsSurvival;
 		case "!survival":

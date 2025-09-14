@@ -7,6 +7,9 @@ public class WidgetStats : BaseWidgetNotice
 	{
 		[JsonProperty]
 		public bool sort;
+
+		[JsonProperty]
+		public bool sort_ascend;
 	}
 
 	public static WidgetStats Instance;
@@ -142,9 +145,16 @@ public class WidgetStats : BaseWidgetNotice
 
 	public override void OnSetContextMenu(UIContextMenu m)
 	{
-		m.AddChild("setting").AddToggle("sort_always", extra.sort, delegate(bool a)
+		UIContextMenu uIContextMenu = m.AddChild("setting");
+		uIContextMenu.AddToggle("sort_always", extra.sort, delegate(bool a)
 		{
 			extra.sort = a;
+			RefreshAll();
+		});
+		uIContextMenu.AddToggle("sort_ascending", extra.sort_ascend, delegate(bool a)
+		{
+			extra.sort_ascend = a;
+			RefreshAll();
 		});
 		SetBaseContextMenu(m);
 	}

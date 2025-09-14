@@ -7,8 +7,6 @@ public class POLICY
 
 	public const int mass_exhibition = 2814;
 
-	public const int suite_room = 2813;
-
 	public const int platinum_ticket = 2815;
 
 	public const int store_ripoff = 2816;
@@ -19,7 +17,7 @@ public class POLICY
 
 	public const int license_general = 2820;
 
-	public const int breed_season = 2827;
+	public const int license_slaver = 2828;
 
 	public const int celeb = 2822;
 
@@ -31,25 +29,27 @@ public class POLICY
 
 	public const int egg_fan = 2826;
 
-	public const int license_slaver = 2828;
+	public const int breed_season = 2827;
 
-	public const int bed_quality = 2812;
+	public const int suite_room = 2813;
 
 	public const int legendary_heirloom = 2821;
 
-	public const int tourist_safety = 2811;
+	public const int bed_quality = 2812;
 
-	public const int ban_radio = 2510;
+	public const int resident_tax = 2512;
 
-	public const int home_discount = 2800;
+	public const int open_business = 2810;
 
 	public const int nocturnal_life = 2508;
 
 	public const int vaccination = 2509;
 
-	public const int legal_drug = 2505;
+	public const int ban_radio = 2510;
 
 	public const int self_sufficient = 2511;
+
+	public const int legal_drug = 2505;
 
 	public const int impressment = 2504;
 
@@ -61,9 +61,7 @@ public class POLICY
 
 	public const int wealth_tax = 2500;
 
-	public const int open_business = 2810;
-
-	public const int resident_tax = 2512;
+	public const int tourist_safety = 2811;
 
 	public const int inquisition = 2507;
 
@@ -77,23 +75,21 @@ public class POLICY
 
 	public const int energy_conservation = 2700;
 
-	public const int trash_no = 2702;
-
 	public const int border_watch = 2704;
-
-	public const int speed_growth = 2516;
-
-	public const int taxTransfer = 2705;
-
-	public const int demon_invocation = 2706;
-
-	public const int auto_farm = 2707;
 
 	public const int weed_no = 2703;
 
+	public const int taxTransfer = 2705;
+
+	public const int speed_growth = 2516;
+
+	public const int auto_farm = 2707;
+
+	public const int noDM = 2708;
+
 	public const int noAnimal = 2709;
 
-	public const int noMother = 2710;
+	public const int demon_invocation = 2706;
 
 	public const int incomeTransfer = 2711;
 
@@ -101,18 +97,22 @@ public class POLICY
 
 	public const int livestock_priv = 2715;
 
+	public const int home_discount = 2800;
+
+	public const int trash_no = 2702;
+
 	public const int trash_sort = 2701;
 
-	public const int noDM = 2708;
+	public const int noMother = 2710;
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2819, 2814, 2813, 2815, 2816, 2817, 2818, 2820, 2827, 2822,
-		2823, 2824, 2825, 2826, 2828, 2812, 2821, 2811, 2510, 2800,
-		2508, 2509, 2505, 2511, 2504, 2503, 2502, 2501, 2500, 2810,
-		2512, 2507, 2513, 2514, 2515, 2506, 2700, 2702, 2704, 2516,
-		2705, 2706, 2707, 2703, 2709, 2710, 2711, 2712, 2715, 2701,
-		2708
+		2819, 2814, 2815, 2816, 2817, 2818, 2820, 2828, 2822, 2823,
+		2824, 2825, 2826, 2827, 2813, 2821, 2812, 2512, 2810, 2508,
+		2509, 2510, 2511, 2505, 2504, 2503, 2502, 2501, 2500, 2811,
+		2507, 2513, 2514, 2515, 2506, 2700, 2704, 2703, 2705, 2516,
+		2707, 2708, 2709, 2706, 2711, 2712, 2715, 2800, 2702, 2701,
+		2710
 	};
 }
 public class Policy : EClass
