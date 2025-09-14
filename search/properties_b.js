@@ -6,8 +6,9 @@ var searchData=
   ['keys_3',['Keys',['../classUDictionary.html#a3fb7ff6759fc496a12439419f548ead7',1,'UDictionary.Keys()'],['../classUDictionary.html#a4f02252f56e6dde5cabe937efc544976',1,'UDictionary.Keys()']]],
   ['kick_4',['Kick',['../classCursorSystem.html#aa7085f8ad55fa490cbc0c4bcb261e9dd',1,'CursorSystem']]],
   ['killedbossinvoid_5',['KilledBossInVoid',['../classPlayer_1_1Flags.html#a0865b4a2e04fdc5ca76200d9b7c835b2',1,'Player::Flags']]],
-  ['kills_6',['kills',['../classCodexCreature.html#a909253583d6c402986b699a819754fb1',1,'CodexCreature']]],
-  ['kimo_7',['kimo',['../classPlayer_1_1Stats.html#a65588225970c26f8a09e91db9ea2a4c8',1,'Player::Stats']]],
-  ['knowfav_8',['knowFav',['../classChara.html#a3cb9c7459dee043d270b7649b69a3cb9',1,'Chara']]],
-  ['knowledge_9',['knowledge',['../classWorkSummary.html#a93b0a2ba12095d6d14d71af51bf43967',1,'WorkSummary']]]
+  ['killedduponne_6',['killedDuponne',['../classPlayer_1_1Flags.html#a318392987df64bcdf147b9b9d458bbd8',1,'Player::Flags']]],
+  ['kills_7',['kills',['../classCodexCreature.html#a909253583d6c402986b699a819754fb1',1,'CodexCreature']]],
+  ['kimo_8',['kimo',['../classPlayer_1_1Stats.html#a65588225970c26f8a09e91db9ea2a4c8',1,'Player::Stats']]],
+  ['knowfav_9',['knowFav',['../classChara.html#a3cb9c7459dee043d270b7649b69a3cb9',1,'Chara']]],
+  ['knowledge_10',['knowledge',['../classWorkSummary.html#a93b0a2ba12095d6d14d71af51bf43967',1,'WorkSummary']]]
 ];

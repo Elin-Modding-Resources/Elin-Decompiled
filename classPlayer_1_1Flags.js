@@ -39,6 +39,7 @@ var classPlayer_1_1Flags =
     [ "helpHighlightDisabled", "classPlayer_1_1Flags.html#a74a126baeb27da0fb77813e520e70da3", null ],
     [ "isShoesOff", "classPlayer_1_1Flags.html#afede34f5fce7d68e3b31ebf3f59d6c04", null ],
     [ "KilledBossInVoid", "classPlayer_1_1Flags.html#a0865b4a2e04fdc5ca76200d9b7c835b2", null ],
+    [ "killedDuponne", "classPlayer_1_1Flags.html#a318392987df64bcdf147b9b9d458bbd8", null ],
     [ "landDeedBought", "classPlayer_1_1Flags.html#a926bbf254a0a11260ee94551074192d1", null ],
     [ "little_killed", "classPlayer_1_1Flags.html#aefeb6e9d52e378c8a49a0d5fefe6f7f3", null ],
     [ "little_saved", "classPlayer_1_1Flags.html#acc7b8ca489691a8526d34707525cd9ef", null ],

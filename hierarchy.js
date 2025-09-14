@@ -714,6 +714,7 @@ var hierarchy =
           [ "Ability", "classAbility.html", [
             [ "ActBreathe", "classActBreathe.html", null ],
             [ "ActCryRage", "classActCryRage.html", null ],
+            [ "ActCrySad", "classActCrySad.html", null ],
             [ "ActDreamBug", "classActDreamBug.html", null ],
             [ "ActMultihit", "classActMultihit.html", null ],
             [ "ActNTR", "classActNTR.html", null ],
@@ -1205,6 +1206,7 @@ var hierarchy =
               [ "Zone_CurryRuinDungeon", "classZone__CurryRuinDungeon.html", null ],
               [ "Zone_CursedManorDungeon", "classZone__CursedManorDungeon.html", null ],
               [ "Zone_DungeonFairy", "classZone__DungeonFairy.html", null ],
+              [ "Zone_DungeonMino", "classZone__DungeonMino.html", null ],
               [ "Zone_Lesimas", "classZone__Lesimas.html", null ],
               [ "Zone_Lysanas", "classZone__Lysanas.html", null ],
               [ "Zone_Nymelle", "classZone__Nymelle.html", null ],
@@ -1512,6 +1514,7 @@ var hierarchy =
             [ "TraitBigSister", "classTraitBigSister.html", null ],
             [ "TraitCorgon", "classTraitCorgon.html", null ],
             [ "TraitDemitas", "classTraitDemitas.html", null ],
+            [ "TraitDuponne", "classTraitDuponne.html", null ],
             [ "TraitEureka", "classTraitEureka.html", null ],
             [ "TraitExileElder", "classTraitExileElder.html", null ],
             [ "TraitGarokk", "classTraitGarokk.html", null ],
@@ -1781,6 +1784,7 @@ var hierarchy =
         [ "TraitMiniPool", "classTraitMiniPool.html", null ],
         [ "TraitMirror", "classTraitMirror.html", null ],
         [ "TraitMonsterBall", "classTraitMonsterBall.html", [
+          [ "TraitDuponneBall", "classTraitDuponneBall.html", null ],
           [ "TraitLittleBall", "classTraitLittleBall.html", null ]
         ] ],
         [ "TraitMoongate", "classTraitMoongate.html", [

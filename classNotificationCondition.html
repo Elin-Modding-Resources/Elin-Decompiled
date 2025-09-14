@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.197 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.198 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -278,28 +278,34 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   34</span>        <span class="keywordtype">int</span> num = 5;</div>
 <div class="line"><span class="lineno">   35</span>        <a class="code hl_class" href="classWidgetStats.html">WidgetStats</a> instance = <a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>;</div>
 <div class="line"><span class="lineno">   36</span>        <span class="keywordtype">bool</span> sort = instance.<a class="code hl_property" href="classWidgetStats.html#a94ef4c15614b2cb8306d65eca6157ee0">extra</a>.<a class="code hl_variable" href="classWidgetStats_1_1Extra.html#a66c227755c1f93a3d782f26e2ea019a3">sort</a>;</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_property" href="classBaseStats.html#a3374ed503b7ec7ec516e8cf9068ac3e8">Type</a>)</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a>.Stance:</div>
-<div class="line"><span class="lineno">   40</span>            num = 0;</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a>.Buff:</div>
-<div class="line"><span class="lineno">   43</span>            num = 10;</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a>.Debuff:</div>
-<div class="line"><span class="lineno">   46</span>            num = (sort ? 11 : 10);</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a> is <a class="code hl_class" href="classConBuffStats.html">ConBuffStats</a>)</div>
-<div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            num = 1;</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a> is <a class="code hl_class" href="classConAwakening.html">ConAwakening</a>)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            num = 2;</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> 8000000 + num * 100000 + (sort ? <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classBaseStats.html#ae5c56258ce12348736581aa524f297dc">GetSortVal</a>() : instance.<a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.IndexOf(<span class="keyword">this</span>));</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">bool</span> sort_ascend = instance.<a class="code hl_property" href="classWidgetStats.html#a94ef4c15614b2cb8306d65eca6157ee0">extra</a>.<a class="code hl_variable" href="classWidgetStats_1_1Extra.html#a444b99712a40276b1021c63bd00f098d">sort_ascend</a>;</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_property" href="classBaseStats.html#a3374ed503b7ec7ec516e8cf9068ac3e8">Type</a>)</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a>.Stance:</div>
+<div class="line"><span class="lineno">   41</span>            num = 0;</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a>.Buff:</div>
+<div class="line"><span class="lineno">   44</span>            num = 10;</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a>.Debuff:</div>
+<div class="line"><span class="lineno">   47</span>            num = ((!sort) ? 10 : (sort_ascend ? 9 : 11));</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a> is <a class="code hl_class" href="classConBuffStats.html">ConBuffStats</a>)</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            num = 1;</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a> is <a class="code hl_class" href="classConAwakening.html">ConAwakening</a>)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            num = 2;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordtype">int</span> num2 = (sort ? <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classBaseStats.html#ae5c56258ce12348736581aa524f297dc">GetSortVal</a>() : instance.<a class="code hl_variable" href="classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35">list</a>.IndexOf(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> ((!sort &amp;&amp; !sort_ascend) || (sort &amp;&amp; sort_ascend))</div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            num2 = 100000 - num2;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> 8000000 + num * 100000 + num2;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
 <div class="ttc" id="aConditionType_8cs_html_a8fc1b7d50bd342b43d026ee18bece446"><div class="ttname"><a href="ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446">ConditionType</a></div><div class="ttdeci">ConditionType</div><div class="ttdef"><b>Definition:</b> <a href="ConditionType_8cs_source.html#l00001">ConditionType.cs:2</a></div></div>
 <div class="ttc" id="aclassBaseStats_html_a3374ed503b7ec7ec516e8cf9068ac3e8"><div class="ttname"><a href="classBaseStats.html#a3374ed503b7ec7ec516e8cf9068ac3e8">BaseStats.Type</a></div><div class="ttdeci">virtual ConditionType Type</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00019">BaseStats.cs:19</a></div></div>
 <div class="ttc" id="aclassBaseStats_html_ae5c56258ce12348736581aa524f297dc"><div class="ttname"><a href="classBaseStats.html#ae5c56258ce12348736581aa524f297dc">BaseStats.GetSortVal</a></div><div class="ttdeci">virtual int GetSortVal()</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00057">BaseStats.cs:57</a></div></div>
@@ -307,12 +313,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassConAwakening_html"><div class="ttname"><a href="classConAwakening.html">ConAwakening</a></div><div class="ttdef"><b>Definition:</b> <a href="ConAwakening_8cs_source.html#l00001">ConAwakening.cs:2</a></div></div>
 <div class="ttc" id="aclassConBuffStats_html"><div class="ttname"><a href="classConBuffStats.html">ConBuffStats</a></div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00004">ConBuffStats.cs:5</a></div></div>
 <div class="ttc" id="aclassNotificationCondition_html_a3ed2abf73d4dbc9d35b19d89b1c2e999"><div class="ttname"><a href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">NotificationCondition.condition</a></div><div class="ttdeci">Condition condition</div><div class="ttdef"><b>Definition:</b> <a href="NotificationCondition_8cs_source.html#l00006">NotificationCondition.cs:6</a></div></div>
+<div class="ttc" id="aclassWidgetStats_1_1Extra_html_a444b99712a40276b1021c63bd00f098d"><div class="ttname"><a href="classWidgetStats_1_1Extra.html#a444b99712a40276b1021c63bd00f098d">WidgetStats.Extra.sort_ascend</a></div><div class="ttdeci">bool sort_ascend</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00012">WidgetStats.cs:12</a></div></div>
 <div class="ttc" id="aclassWidgetStats_1_1Extra_html_a66c227755c1f93a3d782f26e2ea019a3"><div class="ttname"><a href="classWidgetStats_1_1Extra.html#a66c227755c1f93a3d782f26e2ea019a3">WidgetStats.Extra.sort</a></div><div class="ttdeci">bool sort</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00009">WidgetStats.cs:9</a></div></div>
 <div class="ttc" id="aclassWidgetStats_html"><div class="ttname"><a href="classWidgetStats.html">WidgetStats</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00004">WidgetStats.cs:5</a></div></div>
-<div class="ttc" id="aclassWidgetStats_html_a0db7bb6848b44baaba76f564d0e3fa46"><div class="ttname"><a href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">WidgetStats.Instance</a></div><div class="ttdeci">static WidgetStats Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00012">WidgetStats.cs:12</a></div></div>
-<div class="ttc" id="aclassWidgetStats_html_a94ef4c15614b2cb8306d65eca6157ee0"><div class="ttname"><a href="classWidgetStats.html#a94ef4c15614b2cb8306d65eca6157ee0">WidgetStats.extra</a></div><div class="ttdeci">Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00024">WidgetStats.cs:24</a></div></div>
+<div class="ttc" id="aclassWidgetStats_html_a0db7bb6848b44baaba76f564d0e3fa46"><div class="ttname"><a href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">WidgetStats.Instance</a></div><div class="ttdeci">static WidgetStats Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00015">WidgetStats.cs:15</a></div></div>
+<div class="ttc" id="aclassWidgetStats_html_a94ef4c15614b2cb8306d65eca6157ee0"><div class="ttname"><a href="classWidgetStats.html#a94ef4c15614b2cb8306d65eca6157ee0">WidgetStats.extra</a></div><div class="ttdeci">Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00027">WidgetStats.cs:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="NotificationCondition_8cs_source.html#l00006">condition</a>, <a class="el" href="WidgetStats_8cs_source.html#l00024">WidgetStats.extra</a>, <a class="el" href="BaseStats_8cs_source.html#l00057">BaseStats.GetSortVal()</a>, <a class="el" href="WidgetStats_8cs_source.html#l00012">WidgetStats.Instance</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">BaseWidgetNotice.list</a>, <a class="el" href="WidgetStats_8cs_source.html#l00009">WidgetStats.Extra.sort</a>, and <a class="el" href="BaseStats_8cs_source.html#l00019">BaseStats.Type</a>.</p>
+<p class="reference">References <a class="el" href="NotificationCondition_8cs_source.html#l00006">condition</a>, <a class="el" href="WidgetStats_8cs_source.html#l00027">WidgetStats.extra</a>, <a class="el" href="BaseStats_8cs_source.html#l00057">BaseStats.GetSortVal()</a>, <a class="el" href="WidgetStats_8cs_source.html#l00015">WidgetStats.Instance</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00009">BaseWidgetNotice.list</a>, <a class="el" href="WidgetStats_8cs_source.html#l00009">WidgetStats.Extra.sort</a>, <a class="el" href="WidgetStats_8cs_source.html#l00012">WidgetStats.Extra.sort_ascend</a>, and <a class="el" href="BaseStats_8cs_source.html#l00019">BaseStats.Type</a>.</p>
 
 </div>
 </div>
@@ -341,29 +348,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseNotification.html#acdb74f1045304fd4ac7752445dccd98e">BaseNotification</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="NotificationCondition_8cs_source.html#l00060">60</a> of file <a class="el" href="NotificationCondition_8cs_source.html">NotificationCondition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_property" href="classBaseCondition.html#a4b548fa5d2418b3875dcf467d30f45a7">CanManualRemove</a>)</div>
-<div class="line"><span class="lineno">   63</span>        {</div>
-<div class="line"><span class="lineno">   64</span>            SE.Trash();</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
-<div class="line"><span class="lineno">   66</span>            <a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_function" href="classWidgetStats.html#af3564ff402633d7c05bbe0ddd7e9da6f">RefreshAll</a>();</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>)</div>
-<div class="line"><span class="lineno">   68</span>            {</div>
-<div class="line"><span class="lineno">   69</span>                <a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>.<a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.RebuildLayout();</div>
-<div class="line"><span class="lineno">   70</span>            }</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            SE.Beep();</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NotificationCondition_8cs_source.html#l00066">66</a> of file <a class="el" href="NotificationCondition_8cs_source.html">NotificationCondition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_property" href="classBaseCondition.html#a4b548fa5d2418b3875dcf467d30f45a7">CanManualRemove</a>)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            SE.Trash();</div>
+<div class="line"><span class="lineno">   71</span>            <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_function" href="classWidgetStats.html#af3564ff402633d7c05bbe0ddd7e9da6f">RefreshAll</a>();</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <a class="code hl_class" href="classWidgetStats.html">WidgetStats</a>.<a class="code hl_variable" href="classWidgetStats.html#a0db7bb6848b44baaba76f564d0e3fa46">Instance</a>.<a class="code hl_variable" href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">layout</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            SE.Beep();</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
 <div class="ttc" id="aclassBaseCondition_html_a4b548fa5d2418b3875dcf467d30f45a7"><div class="ttname"><a href="classBaseCondition.html#a4b548fa5d2418b3875dcf467d30f45a7">BaseCondition.CanManualRemove</a></div><div class="ttdeci">virtual bool CanManualRemove</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00135">BaseCondition.cs:135</a></div></div>
 <div class="ttc" id="aclassBaseWidgetNotice_html_ac37c9a489ea5f2176d50fb116c0d7e8d"><div class="ttname"><a href="classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d">BaseWidgetNotice.layout</a></div><div class="ttdeci">VerticalLayoutGroup layout</div><div class="ttdef"><b>Definition:</b> <a href="BaseWidgetNotice_8cs_source.html#l00011">BaseWidgetNotice.cs:11</a></div></div>
 <div class="ttc" id="aclassCondition_html_a9441709e24ca102eed7a41b3ccaa4cee"><div class="ttname"><a href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Condition.Kill</a></div><div class="ttdeci">void Kill(bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00091">Condition.cs:91</a></div></div>
-<div class="ttc" id="aclassWidgetStats_html_af3564ff402633d7c05bbe0ddd7e9da6f"><div class="ttname"><a href="classWidgetStats.html#af3564ff402633d7c05bbe0ddd7e9da6f">WidgetStats.RefreshAll</a></div><div class="ttdeci">static void RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00031">WidgetStats.cs:31</a></div></div>
+<div class="ttc" id="aclassWidgetStats_html_af3564ff402633d7c05bbe0ddd7e9da6f"><div class="ttname"><a href="classWidgetStats.html#af3564ff402633d7c05bbe0ddd7e9da6f">WidgetStats.RefreshAll</a></div><div class="ttdeci">static void RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetStats_8cs_source.html#l00034">WidgetStats.cs:34</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00135">BaseCondition.CanManualRemove</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00006">condition</a>, <a class="el" href="WidgetStats_8cs_source.html#l00012">WidgetStats.Instance</a>, <a class="el" href="Condition_8cs_source.html#l00091">Condition.Kill()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">BaseWidgetNotice.layout</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00031">WidgetStats.RefreshAll()</a>.</p>
+<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00135">BaseCondition.CanManualRemove</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00006">condition</a>, <a class="el" href="WidgetStats_8cs_source.html#l00015">WidgetStats.Instance</a>, <a class="el" href="Condition_8cs_source.html#l00091">Condition.Kill()</a>, <a class="el" href="BaseWidgetNotice_8cs_source.html#l00011">BaseWidgetNotice.layout</a>, and <a class="el" href="WidgetStats_8cs_source.html#l00034">WidgetStats.RefreshAll()</a>.</p>
 
 </div>
 </div>
@@ -392,11 +399,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseNotification.html#aba159caf72dd9cbe492fd5f1368b0702">BaseNotification</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="NotificationCondition_8cs_source.html#l00078">78</a> of file <a class="el" href="NotificationCondition_8cs_source.html">NotificationCondition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> = <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classBaseCondition.html#a3e5e9a7a73db7f67b2e94ffd06d83758">GetText</a>() + (EClass.debug.showExtra ? (<span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_property" href="classBaseCondition.html#a7db823617df39785cbb80d25728ff46b">value</a>) : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   81</span>        item.button.mainText.color = <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classBaseCondition.html#a7a2cfa01df0129fa55c3045866180b2a">GetColor</a>(<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.<a class="code hl_variable" href="classUIButton.html#a9521a13a59f1cdfc54b9298dbd1dbb37">skinRoot</a>.<a class="code hl_function" href="classBaseSkinRoot.html#afb5760ebad99816cf44a9e53dad196cd">GetButton</a>().<a class="code hl_variable" href="classSkinAsset__Button.html#a830dc206da45c49f29fdf8433be7d73a">colorProf</a>);</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="NotificationCondition_8cs_source.html#l00084">84</a> of file <a class="el" href="NotificationCondition_8cs_source.html">NotificationCondition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_variable" href="classBaseNotification.html#af66eccd33a7fa678c344a71f6612939a">text</a> = <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classBaseCondition.html#a3e5e9a7a73db7f67b2e94ffd06d83758">GetText</a>() + (EClass.debug.showExtra ? (<span class="stringliteral">&quot; &quot;</span> + <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_property" href="classBaseCondition.html#a7db823617df39785cbb80d25728ff46b">value</a>) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   87</span>        item.button.mainText.color = <a class="code hl_variable" href="classNotificationCondition.html#a3ed2abf73d4dbc9d35b19d89b1c2e999">condition</a>.<a class="code hl_function" href="classBaseCondition.html#a7a2cfa01df0129fa55c3045866180b2a">GetColor</a>(<a class="code hl_variable" href="classBaseNotification.html#aa8f147285c7f23a0e53b81e3fa033c40">item</a>.<a class="code hl_variable" href="classItemNotice.html#a281b58b4cd46a352ad804f727f5bc747">button</a>.<a class="code hl_variable" href="classUIButton.html#a9521a13a59f1cdfc54b9298dbd1dbb37">skinRoot</a>.<a class="code hl_function" href="classBaseSkinRoot.html#afb5760ebad99816cf44a9e53dad196cd">GetButton</a>().<a class="code hl_variable" href="classSkinAsset__Button.html#a830dc206da45c49f29fdf8433be7d73a">colorProf</a>);</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 <div class="ttc" id="aclassBaseCondition_html_a3e5e9a7a73db7f67b2e94ffd06d83758"><div class="ttname"><a href="classBaseCondition.html#a3e5e9a7a73db7f67b2e94ffd06d83758">BaseCondition.GetText</a></div><div class="ttdeci">override string GetText()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00172">BaseCondition.cs:172</a></div></div>
 <div class="ttc" id="aclassBaseCondition_html_a7a2cfa01df0129fa55c3045866180b2a"><div class="ttname"><a href="classBaseCondition.html#a7a2cfa01df0129fa55c3045866180b2a">BaseCondition.GetColor</a></div><div class="ttdeci">override Color GetColor(Gradient g)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00186">BaseCondition.cs:186</a></div></div>
 <div class="ttc" id="aclassBaseCondition_html_a7db823617df39785cbb80d25728ff46b"><div class="ttname"><a href="classBaseCondition.html#a7db823617df39785cbb80d25728ff46b">BaseCondition.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00017">BaseCondition.cs:18</a></div></div>
@@ -457,7 +464,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="NotificationCondition_8cs_source.html#l00006">condition</a>, <a class="el" href="Chara_8cs_source.html#l00209">Chara.conditions</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="Core_8cs_source.html#l00084">Core.IsGameStarted</a>, <a class="el" href="Condition_8cs_source.html#l00007">Condition.IsKilled</a>, and <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetStats_8cs_source.html#l00073">WidgetStats.OnRefresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetStats_8cs_source.html#l00076">WidgetStats.OnRefresh()</a>.</p>
 
 </div>
 </div>
@@ -476,7 +483,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="NotificationCondition_8cs_source.html#l00006">6</a> of file <a class="el" href="NotificationCondition_8cs_source.html">NotificationCondition.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="NotificationCondition_8cs_source.html#l00032">GetSortVal()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00060">OnClick()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00023">NotificationBuff.OnInstantiate()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00012">NotificationBuff.OnRefresh()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00078">OnRefresh()</a>, <a class="el" href="WidgetStats_8cs_source.html#l00073">WidgetStats.OnRefresh()</a>, and <a class="el" href="NotificationCondition_8cs_source.html#l00019">ShouldRemove()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="NotificationCondition_8cs_source.html#l00032">GetSortVal()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00066">OnClick()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00023">NotificationBuff.OnInstantiate()</a>, <a class="el" href="NotificationBuff_8cs_source.html#l00012">NotificationBuff.OnRefresh()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00084">OnRefresh()</a>, <a class="el" href="WidgetStats_8cs_source.html#l00076">WidgetStats.OnRefresh()</a>, and <a class="el" href="NotificationCondition_8cs_source.html#l00019">ShouldRemove()</a>.</p>
 
 </div>
 </div>

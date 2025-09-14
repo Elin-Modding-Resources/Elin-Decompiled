@@ -6,6 +6,8 @@ var classDramaOutcome =
     [ "check_sketch", "classDramaOutcome.html#a8a694dc4758e7ac17c36ede0e772098c", null ],
     [ "check_sketch2", "classDramaOutcome.html#ade96c789e37bf1d3810b0cca78c4098f", null ],
     [ "convert_Jure", "classDramaOutcome.html#a0501d7b48e582551350392c673a36d05", null ],
+    [ "duponne_capture", "classDramaOutcome.html#a05b58967616ec7b03fe05068e2c02f20", null ],
+    [ "duponne_reward", "classDramaOutcome.html#ab17659ce0412caacec0e1d93cf38b756", null ],
     [ "event_swordkeeper", "classDramaOutcome.html#a360f0a71d6e852635e1768bed3ceb9b0", null ],
     [ "fiama_gold", "classDramaOutcome.html#a95f534e45031c500af1d9926730ed4c6", null ],
     [ "fiama_pet", "classDramaOutcome.html#a0f8229fe0fe4c4f877388fe937af6ab3", null ],
