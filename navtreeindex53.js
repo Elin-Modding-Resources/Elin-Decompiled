@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"classCoreRef.html#afed647ebedfc0205918bc6e587c95a10":[1,0,398,41],
 "classCoreRef_1_1Biomes.html":[1,0,398,0],
 "classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a":[1,0,398,0,0],
 "classCoreRef_1_1Biomes.html#a4277df483fb1c7778a23d940f84c73e6":[1,0,398,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "classCritterRandom.html#a7a60eaa6c8aae5077e8b5ddceafdbbca":[1,0,407,1],
 "classCritterRandom.html#a86c90b2aaa74a9271c6f2439265cf411":[1,0,407,0],
 "classCritterRat.html":[1,0,408],
-"classCritterRat.html#a31d966074d16810a06f684f6169fdb26":[1,0,408,3],
-"classCritterRat.html#a3bef0cbd070e9274a8352456c7022292":[1,0,408,2]
+"classCritterRat.html#a31d966074d16810a06f684f6169fdb26":[1,0,408,3]
 };

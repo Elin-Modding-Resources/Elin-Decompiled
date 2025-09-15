@@ -1,5 +1,7 @@
 var NAVTREEINDEX65 =
 {
+"classGameBlueprint.html#afae2d34c810b2af91ae9d529ec68e5c2":[1,0,521,0],
+"classGameContractResolver.html":[1,0,522],
 "classGameContractResolver.html#a9bd3abb8ca7cb07ff18d8dd0abf51790":[1,0,522,0],
 "classGameData.html":[1,0,523],
 "classGameData.html#a43977101aacc23cff46581fc74142a08":[1,0,523,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX65 =
 "classGameSetting_1_1RenderSetting.html#afb9e69dcaf23d3f8c0b32371901b05cc":[1,0,534,6,32],
 "classGameSetting_1_1RenderSetting.html#afe9f2986aef696c452909a674df94783":[1,0,534,6,30],
 "classGameSetting_1_1RenderSetting_1_1ActorSetting.html":[1,0,534,6,0],
-"classGameSetting_1_1RenderSetting_1_1ActorSetting.html#a5375e0637042f926e57088d8c13d1d57":[1,0,534,6,0,0],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html":[1,0,534,6,1],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a0931ee1c54c80aaa5d893b4b2b120287":[1,0,534,6,1,6]
+"classGameSetting_1_1RenderSetting_1_1ActorSetting.html#a5375e0637042f926e57088d8c13d1d57":[1,0,534,6,0,0]
 };

@@ -17,6 +17,7 @@ var classTaskHarvest =
     [ "wasReapSeed", "classTaskHarvest.html#a29e2c879c63a74f87999c30a1e0dd7d1", null ],
     [ "destDist", "classTaskHarvest.html#aadc9b170a07263e043c9925a4d6ada3d", null ],
     [ "harvestType", "classTaskHarvest.html#accaba1dad5a0ac1206953a03eae6d642", null ],
+    [ "IdRecipe", "classTaskHarvest.html#aeb911f5b4068f8c596bde55c74d76eeb", null ],
     [ "IsGrowth", "classTaskHarvest.html#abfb6d558aa1b945cdf4f821114989390", null ],
     [ "IsHostileAct", "classTaskHarvest.html#a75dbd74cabc106e2c5e558ca36c6c1dd", null ],
     [ "IsObj", "classTaskHarvest.html#a89e4aefc9b41b13365e7cf010df95fc6", null ],

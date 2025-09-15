@@ -1,5 +1,7 @@
 var NAVTREEINDEX69 =
 {
+"classHappinessSummary.html#ae890f4b318c7a18b60a0206a00077296":[1,0,604,5],
+"classHappinessSummary.html#af51c68fb6c0ef7030ea3f85110f816e6":[1,0,604,4],
 "classHexInput.html":[1,0,605],
 "classHexInput.html#a191c291cded070acea32406c83a3fb69":[1,0,605,8],
 "classHexInput.html#a2d527ef69e5603ec72272c987dafdd73":[1,0,605,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX69 =
 "classHotItem.html#af7819bb69ba852812357b84aca4ed137":[1,0,630,21],
 "classHotItemAct.html":[1,0,631],
 "classHotItemAct.html#a023984c939086c2371aa6808545cb58c":[1,0,631,11],
-"classHotItemAct.html#a051ae41e2813bcaa0b1cdbcf889e8ddd":[1,0,631,3],
-"classHotItemAct.html#a096de50c0b509655b2a724c3cb59bb22":[1,0,631,5],
-"classHotItemAct.html#a0a2ca728671d50aaf952c0831f30bc6f":[1,0,631,8]
+"classHotItemAct.html#a051ae41e2813bcaa0b1cdbcf889e8ddd":[1,0,631,3]
 };

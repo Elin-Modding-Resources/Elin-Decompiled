@@ -1,5 +1,7 @@
 var NAVTREEINDEX91 =
 {
+"classProgress__Custom.html#add0b16d9a33e4363218787f2feac5dbd":[1,0,964,1],
+"classProgress__Custom.html#aedc59b5a2896cf3d39aff938a560cc8d":[1,0,964,2],
 "classProgress__Custom.html#affec2c3e525ac2a72ff5aa25433567d1":[1,0,964,19],
 "classPrologue.html":[1,0,965],
 "classPrologue.html#a0fdb0997ef82d868f82ac024602e6d83":[1,0,965,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX91 =
 "classQuestDebt.html#acd5205ae7c73c0142b98c28de8f69fa3":[1,0,979,6],
 "classQuestDebt.html#af48c1af9f750cbab509edeb0c34b56a3":[1,0,979,8],
 "classQuestDefense.html":[1,0,980],
-"classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c":[1,0,980,4],
-"classQuestDefense.html#a60d78b0054890c25626e1a4acb701c31":[1,0,980,2],
-"classQuestDefense.html#a6a51cf620f36b0245510dbec7a189daa":[1,0,980,3]
+"classQuestDefense.html#a152ea981d76aa7feeccb8768be0fc36c":[1,0,980,4]
 };

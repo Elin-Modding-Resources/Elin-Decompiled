@@ -1,5 +1,7 @@
 var NAVTREEINDEX85 =
 {
+"classNewsList.html#a0f3082893aa9930fefb795ec46194271":[1,0,904,1],
+"classNewsList.html#a13dcc7976c835254cb0dbcb374982928":[1,0,904,2],
 "classNewsList.html#a8f3ffeef8e7a86a273eec6036d9a187c":[1,0,904,3],
 "classNewsList.html#ae7b4f1b8671a7cfed69a1e40a682b98b":[1,0,904,4],
 "classNewsList_1_1Item.html":[1,0,904,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX85 =
 "classPOLICY.html#aacbee4b0bc3fb356a2f2fe235493a8db":[1,0,948,4],
 "classPOLICY.html#ab47e68f3e908a4b75be56ee6c0382915":[1,0,948,17],
 "classPOLICY.html#ab744cf4dd679319bfa64eab117272c26":[1,0,948,8],
-"classPOLICY.html#ababbe800b5064c5f8765f97a2315ae8e":[1,0,948,51],
-"classPOLICY.html#ac263a49c797f08993db8f84c9d183b4b":[1,0,948,40],
-"classPOLICY.html#ac86b04ba5084d833f27c9fccc73adc9d":[1,0,948,10]
+"classPOLICY.html#ababbe800b5064c5f8765f97a2315ae8e":[1,0,948,51]
 };

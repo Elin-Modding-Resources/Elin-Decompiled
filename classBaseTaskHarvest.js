@@ -33,6 +33,7 @@ var classBaseTaskHarvest =
     [ "CanReapSeed", "classBaseTaskHarvest.html#a74c30a74e460ae416501122bb9238928", null ],
     [ "CursorIcon", "classBaseTaskHarvest.html#a1aa960d45ce4dd9531ad8c839a1cac92", null ],
     [ "harvestType", "classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b", null ],
+    [ "IdRecipe", "classBaseTaskHarvest.html#ad6fa8de7f0c45e9a70bd073ef4689ac7", null ],
     [ "IsGrowth", "classBaseTaskHarvest.html#a7f8d7ca3267d2f1d8589a1147eac6e9a", null ],
     [ "IsHarvest", "classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2", null ],
     [ "IsTooHard", "classBaseTaskHarvest.html#aaeaa45a64e3baabcbe0f4cf1e33bb4c9", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classConNightVision.html":[1,0,338],
 "classConNightVision.html#a27f5772feb74dbfe689fc8c8bd672944":[1,0,338,2],
 "classConNightVision.html#a35845c11a51a895fd4c65c2c4280087d":[1,0,338,0],
 "classConNightVision.html#aceb298b00d9f17d1ac2ac1f322c77d1d":[1,0,338,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classContentConfigGame.html#afb90ee7a0ed9bc8935d41ab5a2f6b3df":[1,0,361,37],
 "classContentConfigGame.html#afd62dad3bbc94c6d1b4995d7c5419011":[1,0,361,10],
 "classContentConfigGeneral.html":[1,0,362],
-"classContentConfigInput.html":[1,0,363],
-"classContentConfigInput.html#a0086a67270967ac52816c9e67d98b6b2":[1,0,363,15]
+"classContentConfigInput.html":[1,0,363]
 };

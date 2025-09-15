@@ -1,5 +1,10 @@
 var NAVTREEINDEX139 =
 {
+"classZone__Derphy.html":[1,0,2096],
+"classZone__Derphy.html#a04f71a2cc18aad5a78857ad3f212d8f1":[1,0,2096,0],
+"classZone__DerphyWhore.html":[1,0,2097],
+"classZone__Dungeon.html":[1,0,2098],
+"classZone__Dungeon.html#a1866eecd3a3eebe039a903b990651ff8":[1,0,2098,11],
 "classZone__Dungeon.html#a46a98ed4b8b845af3cdda793e4c7257a":[1,0,2098,6],
 "classZone__Dungeon.html#a53c7458033c3025a1941a405719a2381":[1,0,2098,9],
 "classZone__Dungeon.html#a587320df847dfb64930fc14c6a21a499":[1,0,2098,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX139 =
 "classZone__User.html#a3025bd2f1e2bcd662726f384cb4d4cea":[1,0,2157,3],
 "classZone__User.html#a39276fd8e5123d0429967d4b37a6fcc2":[1,0,2157,1],
 "classZone__User.html#a5a72848a084a95fd2575eba184c3cbef":[1,0,2157,4],
-"classZone__User.html#a8529fa01cccff6955900680337dca4b3":[1,0,2157,7],
-"classZone__User.html#ab921c94fc9f4c2a36fe0aa6995691a7a":[1,0,2157,6],
-"classZone__User.html#ac02aa2186566378632525fa711bbc1a3":[1,0,2157,2],
-"classZone__User.html#ac75e627c7b6e480d655a0542ad4f3657":[1,0,2157,9],
-"classZone__User.html#aea2de33cf164b60636d3d16e7ab95813":[1,0,2157,8],
-"classZone__User.html#af443d999081227fe61f07e3c51f9e244":[1,0,2157,10]
+"classZone__User.html#a8529fa01cccff6955900680337dca4b3":[1,0,2157,7]
 };

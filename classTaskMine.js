@@ -17,6 +17,7 @@ var classTaskMine =
     [ "destDist", "classTaskMine.html#aaa3c683ad398fe4a1936050e4db40f2d", null ],
     [ "destIgnoreConnection", "classTaskMine.html#a7503d0e0ec85e846ec200842bb911c0d", null ],
     [ "harvestType", "classTaskMine.html#ab4b65070bfbbe9cf6ff49233a54a3709", null ],
+    [ "IdRecipe", "classTaskMine.html#a7594389033a980250daaad6da0c2eeba", null ],
     [ "isBlock", "classTaskMine.html#a109f65ae62b982bea3b97177f96725eb", null ],
     [ "IsHostileAct", "classTaskMine.html#af0a68e31eb961b5151b4339124f02a77", null ],
     [ "RightHand", "classTaskMine.html#a7442710ea3fbbec16b02d7b3c35f9414", null ],

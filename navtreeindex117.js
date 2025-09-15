@@ -1,5 +1,10 @@
 var NAVTREEINDEX117 =
 {
+"classTraitDetector.html#ae5b2194d1b933c2243523c34c25db102":[1,0,1515,4],
+"classTraitDetector.html#aebd3b1f858c9274e1e3fae92aa523796":[1,0,1515,7],
+"classTraitDiary.html":[1,0,1516],
+"classTraitDiary.html#a4f501798bbec5f93bea8bf0f723cee3c":[1,0,1516,0],
+"classTraitDoor.html":[1,0,1517],
 "classTraitDoor.html#a01266a1c7b65a7c0d9e6b1d8711e1e57":[1,0,1517,14],
 "classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a":[1,0,1517,10],
 "classTraitDoor.html#a14d76135089ef809b5ad45d8dbd6a1c8":[1,0,1517,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitFlyer.html#ac1693046120ebde13b5f5b01cc96650e":[1,0,1569,0],
 "classTraitFollower.html":[1,0,1570],
 "classTraitFollower.html#a0a6bf2b7018105d4995602a1b72177a2":[1,0,1570,0],
-"classTraitFollower.html#a3e2a186ebbed1ecf19f2c75aa476317a":[1,0,1570,1],
-"classTraitFood.html":[1,0,1571],
-"classTraitFood.html#a331afa29d6fd5b7fc301dcf7c1954dc4":[1,0,1571,0],
-"classTraitFood.html#aaca54391b55287bfb1d20a09828613ff":[1,0,1571,2],
-"classTraitFood.html#af9e3980cc7461d71d4c614ae03e24f1e":[1,0,1571,1],
-"classTraitFoodDough.html":[1,0,1572]
+"classTraitFollower.html#a3e2a186ebbed1ecf19f2c75aa476317a":[1,0,1570,1]
 };

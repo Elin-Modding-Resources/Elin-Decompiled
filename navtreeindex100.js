@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"classSerializedCards_1_1Data.html#a1673d7fe6c6b09014fcd47add5b47fbf":[1,0,1143,0,0],
+"classSerializedCards_1_1Data.html#a1aafed58625fe7730555b973cdfdbca8":[1,0,1143,0,25],
 "classSerializedCards_1_1Data.html#a218d4ec2d80bb91869157c8940a87801":[1,0,1143,0,17],
 "classSerializedCards_1_1Data.html#a28388a51e1c41b04b467c3392abffaee":[1,0,1143,0,26],
 "classSerializedCards_1_1Data.html#a54f36191f9d6c057d1f7a9e0745c6106":[1,0,1143,0,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX100 =
 "classSkinDeco.html#a999f5e0e020ef8a8b4708bf51d16a5d6":[1,0,1164,15],
 "classSkinDeco.html#a9ecbb92f21cb8fbdcf6b02192dfd4fae":[1,0,1164,6],
 "classSkinDeco.html#aa3d6568d9ef4d44c5f9d03b736995fe9":[1,0,1164,12],
-"classSkinDeco.html#ab0d0f9aad4c4152e76402ec244e04e14":[1,0,1164,11],
-"classSkinDeco.html#ad9c73ab38d4e6471235ed9e387353c25":[1,0,1164,1],
-"classSkinDecoActor.html":[1,0,1165]
+"classSkinDeco.html#ab0d0f9aad4c4152e76402ec244e04e14":[1,0,1164,11]
 };

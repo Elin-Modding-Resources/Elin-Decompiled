@@ -1,5 +1,10 @@
 var NAVTREEINDEX115 =
 {
+"classTraitBank.html":[1,0,1422],
+"classTraitBank.html#a6aac890589392f8f052ed3df63dc57eb":[1,0,1422,1],
+"classTraitBank.html#ac5a210f7b83e9778db4b194d3869499f":[1,0,1422,0],
+"classTraitBanker.html":[1,0,1423],
+"classTraitBanker.html#ad5ed997437ec14e1c1e12abcc4edf112":[1,0,1423,0],
 "classTraitBanker.html#aec6a26b14dd11051efd045692b0b9f79":[1,0,1423,1],
 "classTraitBard.html":[1,0,1424],
 "classTraitBarrelMaker.html":[1,0,1425],
@@ -244,10 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitChara.html#a6a3934cb4a11d57398b6fb7117ebe58e":[1,0,1470,7],
 "classTraitChara.html#a6d86a99535256bf0e8024ad5bc54b2c2":[1,0,1470,17],
 "classTraitChara.html#a728995dd3094cb739e3a6ada46c37c76":[1,0,1470,33],
-"classTraitChara.html#a77d9f3fbc66790b72fc5f0a5d99d9465":[1,0,1470,37],
-"classTraitChara.html#a77f2a76840cbdd37c2d5af53abaa7203":[1,0,1470,31],
-"classTraitChara.html#a81f914259f059c258488bae53fa00c18":[1,0,1470,19],
-"classTraitChara.html#a87668c63e44d245f2c84f2d39aa268e2":[1,0,1470,6],
-"classTraitChara.html#a8ef368d3c80cc1f7251c7d59c13d0b45":[1,0,1470,36],
-"classTraitChara.html#a993b1d313f028c65c8f2d580fc6b0579":[1,0,1470,43]
+"classTraitChara.html#a77d9f3fbc66790b72fc5f0a5d99d9465":[1,0,1470,37]
 };

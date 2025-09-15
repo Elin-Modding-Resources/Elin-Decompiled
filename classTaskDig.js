@@ -16,6 +16,7 @@ var classTaskDig =
     [ "destDist", "classTaskDig.html#ad61bd828e515300f02d9ebad31bcc001", null ],
     [ "destIgnoreConnection", "classTaskDig.html#a713b3e0b4f64245fa0e5daa08a5f211a", null ],
     [ "harvestType", "classTaskDig.html#aa8a02ef3cd4a9cff71d4c1121fa89e79", null ],
+    [ "IdRecipe", "classTaskDig.html#a633670c7ffe4834f60e24afb9f85606f", null ],
     [ "IsHostileAct", "classTaskDig.html#acf636a8164dbb1ae3d08d0eb1c98d6b6", null ],
     [ "LocalAct", "classTaskDig.html#a89639e69790c0ffce1e14cb97641dd50", null ],
     [ "RightHand", "classTaskDig.html#ae26a0ec2878e9c350be68702521830b7", null ]

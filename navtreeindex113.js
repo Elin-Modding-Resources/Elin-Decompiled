@@ -1,5 +1,10 @@
 var NAVTREEINDEX113 =
 {
+"classTileTypeScaffold.html#a06590c71fcb15f7c85aa549fc01ab5f5":[1,0,1370,4],
+"classTileTypeScaffold.html#a20a0d04cb2c7fc55bd6eeeffa0f4058a":[1,0,1370,0],
+"classTileTypeScaffold.html#a5a91eed6f7bbabf745899c235f5ef289":[1,0,1370,5],
+"classTileTypeScaffold.html#a5d40315db16c785d146c36fdbe41c6e7":[1,0,1370,3],
+"classTileTypeScaffold.html#a93b7dedb62669367de3793f60c884325":[1,0,1370,1],
 "classTileTypeScaffold.html#ad69b3a4bb0cf312ff1b2cc95267da1c6":[1,0,1370,2],
 "classTileTypeSeed.html":[1,0,1371],
 "classTileTypeSeed.html#a173a1912aefa542246927b3b08ea386d":[1,0,1371,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX113 =
 "classTrait.html#a5f776deb99822151021ce9c1c20ed395":[1,0,1399,65],
 "classTrait.html#a600da57f2ca749e3a73f2fcc75c0536f":[1,0,1399,37],
 "classTrait.html#a63a6da2dbdf7baf6aecd4213efc8ce64":[1,0,1399,61],
-"classTrait.html#a654dbdca51dc4525768048c27d0d6030":[1,0,1399,203],
-"classTrait.html#a65d0ff0c4033dad073b840686f988bf0":[1,0,1399,89],
-"classTrait.html#a65fa9e571e5f9760c022cd73e922904c":[1,0,1399,181],
-"classTrait.html#a694ffdbe1c5b08dabbbf5d80b53e741f":[1,0,1399,189],
-"classTrait.html#a69c36cb3396a41ee14cf18a07a7ed134":[1,0,1399,184],
-"classTrait.html#a6a1ed59c8c0884a94e688053d2335973":[1,0,1399,216]
+"classTrait.html#a654dbdca51dc4525768048c27d0d6030":[1,0,1399,203]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.198 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.199 Nightly</span>
    </div>
   </td>
  </tr>
@@ -577,6 +577,8 @@ Properties</h2></td></tr>
 <tr class="separator:aaeaa45a64e3baabcbe0f4cf1e33bb4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e2b3fbcf99220ed02f0029c169108c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2">IsHarvest</a><code> [get]</code></td></tr>
 <tr class="separator:a7e2b3fbcf99220ed02f0029c169108c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fa8de7f0c45e9a70bd073ef4689ac7"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseTaskHarvest.html#ad6fa8de7f0c45e9a70bd073ef4689ac7">IdRecipe</a><code> [get]</code></td></tr>
+<tr class="separator:ad6fa8de7f0c45e9a70bd073ef4689ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74c30a74e460ae416501122bb9238928"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseTaskHarvest.html#a74c30a74e460ae416501122bb9238928">CanReapSeed</a><code> [get]</code></td></tr>
 <tr class="separator:a74c30a74e460ae416501122bb9238928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab69b6cf388fa668e55de32104158599b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a><code> [get]</code></td></tr>
@@ -978,14 +980,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTaskHarvest.html#a017a58fd465d7d4748dfb123d7e01a3f">TaskHarvest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00268">268</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  269</span>    {</div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> != <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a>)</div>
-<div class="line"><span class="lineno">  271</span>        {</div>
-<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  273</span>        }</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">return</span> base.CanProgress();</div>
-<div class="line"><span class="lineno">  275</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00274">274</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  275</span>    {</div>
+<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> != <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a>)</div>
+<div class="line"><span class="lineno">  277</span>        {</div>
+<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">return</span> base.CanProgress();</div>
+<div class="line"><span class="lineno">  281</span>    }</div>
 <div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00014">AIAct.cs:14</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_a10310572ebe3d4b46aed1b6063c90507"><div class="ttname"><a href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">BaseTaskHarvest.tool</a></div><div class="ttdeci">Thing tool</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00037">BaseTaskHarvest.cs:37</a></div></div>
 <div class="ttc" id="aclassCard_html_a425a963bc60ba8e1b76e86db0a89627f"><div class="ttname"><a href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Card.Tool</a></div><div class="ttdeci">Thing Tool</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02371">Card.cs:2372</a></div></div>
@@ -1020,12 +1022,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTaskHarvest.html#ae02d5c2ef378efe5296a325fa46f8404">TaskHarvest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00065">65</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> base.GetText(str);</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00067">67</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> base.GetText(str);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00075">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00077">GetText()</a>.</p>
 
 </div>
 </div>
@@ -1063,29 +1065,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00091">91</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        <a class="code hl_class" href="classBaseTaskHarvest.html">BaseTaskHarvest</a> task = <span class="keyword">new</span> <a class="code hl_class" href="classBaseTaskHarvest.html">BaseTaskHarvest</a></div>
-<div class="line"><span class="lineno">   94</span>        {</div>
-<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a> = p</div>
-<div class="line"><span class="lineno">   96</span>        };</div>
-<div class="line"><span class="lineno">   97</span>        task.<a class="code hl_function" href="classAIAct.html#ac490ff4e1802fb910f4037ff586ef8ed">SetOwner</a>(c);</div>
-<div class="line"><span class="lineno">   98</span>        <a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">int</span> best = 0;</div>
-<div class="line"><span class="lineno">  100</span>        c.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
-<div class="line"><span class="lineno">  101</span>        {</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitTool.html">TraitTool</a>)</div>
-<div class="line"><span class="lineno">  103</span>            {</div>
-<div class="line"><span class="lineno">  104</span>                task.SetTarget(c, t);</div>
-<div class="line"><span class="lineno">  105</span>                if (task.efficiency &gt; best)</div>
-<div class="line"><span class="lineno">  106</span>                {</div>
-<div class="line"><span class="lineno">  107</span>                    best = task.efficiency;</div>
-<div class="line"><span class="lineno">  108</span>                    tool = t;</div>
-<div class="line"><span class="lineno">  109</span>                }</div>
-<div class="line"><span class="lineno">  110</span>            }</div>
-<div class="line"><span class="lineno">  111</span>        });</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00097">97</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_class" href="classBaseTaskHarvest.html">BaseTaskHarvest</a> task = <span class="keyword">new</span> <a class="code hl_class" href="classBaseTaskHarvest.html">BaseTaskHarvest</a></div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a> = p</div>
+<div class="line"><span class="lineno">  102</span>        };</div>
+<div class="line"><span class="lineno">  103</span>        task.<a class="code hl_function" href="classAIAct.html#ac490ff4e1802fb910f4037ff586ef8ed">SetOwner</a>(c);</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_class" href="classThing.html">Thing</a> <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">int</span> best = 0;</div>
+<div class="line"><span class="lineno">  106</span>        c.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(delegate(<a class="code hl_class" href="classThing.html">Thing</a> t)</div>
+<div class="line"><span class="lineno">  107</span>        {</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitTool.html">TraitTool</a>)</div>
+<div class="line"><span class="lineno">  109</span>            {</div>
+<div class="line"><span class="lineno">  110</span>                task.SetTarget(c, t);</div>
+<div class="line"><span class="lineno">  111</span>                if (task.efficiency &gt; best)</div>
+<div class="line"><span class="lineno">  112</span>                {</div>
+<div class="line"><span class="lineno">  113</span>                    best = task.efficiency;</div>
+<div class="line"><span class="lineno">  114</span>                    tool = t;</div>
+<div class="line"><span class="lineno">  115</span>                }</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>        });</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 <div class="ttc" id="aclassAIAct_html_ac490ff4e1802fb910f4037ff586ef8ed"><div class="ttname"><a href="classAIAct.html#ac490ff4e1802fb910f4037ff586ef8ed">AIAct.SetOwner</a></div><div class="ttdeci">void SetOwner(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00179">AIAct.cs:179</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html"><div class="ttname"><a href="classBaseTaskHarvest.html">BaseTaskHarvest</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00004">BaseTaskHarvest.cs:5</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00051">Card.cs:51</a></div></div>
@@ -1123,11 +1125,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00234">234</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  235</span>    {</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordtype">string</span>[] array = _raw.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[array[0]].id;</div>
-<div class="line"><span class="lineno">  238</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00240">240</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  241</span>    {</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordtype">string</span>[] array = _raw.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[array[0]].id;</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00028">SourceManager.cs:28</a></div></div>
@@ -1162,31 +1164,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classAct.html#ad78fda455786213d477bf3acfd262968">Act</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00075">75</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   78</span>        {</div>
-<div class="line"><span class="lineno">   79</span>            <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>;</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_function" href="classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8">SetTarget</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;tHarvest&quot;</span>.lang(<a class="code hl_function" href="classBaseTaskHarvest.html#a62ecd4ceec6de056f14a9fa35c323299">GetBaseText</a>(str), (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a> == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;hand&quot;</span>.lang() : <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a>.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>, <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   83</span>        text = text + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_function" href="classBaseTaskHarvest.html#a2616631d919090f8e33e6fdd37ba0067">GetTextDifficulty</a>() + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseTaskHarvest.html#aaeaa45a64e3baabcbe0f4cf1e33bb4c9">IsTooHard</a>)</div>
-<div class="line"><span class="lineno">   85</span>        {</div>
-<div class="line"><span class="lineno">   86</span>            text = text.TagColor(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.gray);</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> text;</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00077">77</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>;</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_function" href="classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8">SetTarget</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;tHarvest&quot;</span>.lang(<a class="code hl_function" href="classBaseTaskHarvest.html#a62ecd4ceec6de056f14a9fa35c323299">GetBaseText</a>(str), (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a> == <span class="keyword">null</span>) ? <span class="stringliteral">&quot;hand&quot;</span>.lang() : <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a>.<a class="code hl_property" href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">NameSimple</a>, <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1661) &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">recipes</a>.<a class="code hl_function" href="classRecipeManager.html#a4f3e0e42268a7e779205d5c4f3d07a99">CanCeomUpWithRecipe</a>(<a class="code hl_property" href="classBaseTaskHarvest.html#ad6fa8de7f0c45e9a70bd073ef4689ac7">IdRecipe</a>))</div>
+<div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            text = text + <span class="stringliteral">&quot; &quot;</span> + <span class="stringliteral">&quot;TaskDisassemble_newrecipe&quot;</span>.lang();</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        text = text + <span class="stringliteral">&quot; (&quot;</span> + <a class="code hl_function" href="classBaseTaskHarvest.html#a2616631d919090f8e33e6fdd37ba0067">GetTextDifficulty</a>() + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseTaskHarvest.html#aaeaa45a64e3baabcbe0f4cf1e33bb4c9">IsTooHard</a>)</div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            text = text.TagColor(<a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.gray);</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
-<div class="ttc" id="aclassBaseTaskHarvest_html_a2616631d919090f8e33e6fdd37ba0067"><div class="ttname"><a href="classBaseTaskHarvest.html#a2616631d919090f8e33e6fdd37ba0067">BaseTaskHarvest.GetTextDifficulty</a></div><div class="ttdeci">string GetTextDifficulty()</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00303">BaseTaskHarvest.cs:303</a></div></div>
-<div class="ttc" id="aclassBaseTaskHarvest_html_a62ecd4ceec6de056f14a9fa35c323299"><div class="ttname"><a href="classBaseTaskHarvest.html#a62ecd4ceec6de056f14a9fa35c323299">BaseTaskHarvest.GetBaseText</a></div><div class="ttdeci">virtual string GetBaseText(string str)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00065">BaseTaskHarvest.cs:65</a></div></div>
+<div class="ttc" id="aclassBaseTaskHarvest_html_a2616631d919090f8e33e6fdd37ba0067"><div class="ttname"><a href="classBaseTaskHarvest.html#a2616631d919090f8e33e6fdd37ba0067">BaseTaskHarvest.GetTextDifficulty</a></div><div class="ttdeci">string GetTextDifficulty()</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00309">BaseTaskHarvest.cs:309</a></div></div>
+<div class="ttc" id="aclassBaseTaskHarvest_html_a62ecd4ceec6de056f14a9fa35c323299"><div class="ttname"><a href="classBaseTaskHarvest.html#a62ecd4ceec6de056f14a9fa35c323299">BaseTaskHarvest.GetBaseText</a></div><div class="ttdeci">virtual string GetBaseText(string str)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00067">BaseTaskHarvest.cs:67</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_aaeaa45a64e3baabcbe0f4cf1e33bb4c9"><div class="ttname"><a href="classBaseTaskHarvest.html#aaeaa45a64e3baabcbe0f4cf1e33bb4c9">BaseTaskHarvest.IsTooHard</a></div><div class="ttdeci">bool IsTooHard</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00039">BaseTaskHarvest.cs:40</a></div></div>
+<div class="ttc" id="aclassBaseTaskHarvest_html_ad6fa8de7f0c45e9a70bd073ef4689ac7"><div class="ttname"><a href="classBaseTaskHarvest.html#ad6fa8de7f0c45e9a70bd073ef4689ac7">BaseTaskHarvest.IdRecipe</a></div><div class="ttdeci">virtual string IdRecipe</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00053">BaseTaskHarvest.cs:53</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_adea18b53756a02dae64d6b7f378ec313"><div class="ttname"><a href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">BaseTaskHarvest.toolLv</a></div><div class="ttdeci">int toolLv</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00025">BaseTaskHarvest.cs:25</a></div></div>
-<div class="ttc" id="aclassBaseTaskHarvest_html_aee890f3c8a7df01e76f1847636ccdce8"><div class="ttname"><a href="classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8">BaseTaskHarvest.SetTarget</a></div><div class="ttdeci">void SetTarget(Chara c, Thing _tool=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00115">BaseTaskHarvest.cs:115</a></div></div>
+<div class="ttc" id="aclassBaseTaskHarvest_html_aee890f3c8a7df01e76f1847636ccdce8"><div class="ttname"><a href="classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8">BaseTaskHarvest.SetTarget</a></div><div class="ttdeci">void SetTarget(Chara c, Thing _tool=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00121">BaseTaskHarvest.cs:121</a></div></div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05725">Card.cs:5725</a></div></div>
 <div class="ttc" id="aclassCard_html_ab26296d070ce8c9c91090956c59f59b8"><div class="ttname"><a href="classCard.html#ab26296d070ce8c9c91090956c59f59b8">Card.NameSimple</a></div><div class="ttdeci">string NameSimple</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02101">Card.cs:2101</a></div></div>
+<div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00012">EClass.cs:12</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a2f9d241548781b0f2556a4d5b1c1965b"><div class="ttname"><a href="classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b">Player.recipes</a></div><div class="ttdeci">RecipeManager recipes</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01053">Player.cs:1053</a></div></div>
+<div class="ttc" id="aclassRecipeManager_html_a4f3e0e42268a7e779205d5c4f3d07a99"><div class="ttname"><a href="classRecipeManager.html#a4f3e0e42268a7e779205d5c4f3d07a99">RecipeManager.CanCeomUpWithRecipe</a></div><div class="ttdeci">bool CanCeomUpWithRecipe(string idRecipe)</div><div class="ttdef"><b>Definition:</b> <a href="RecipeManager_8cs_source.html#l00244">RecipeManager.cs:244</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00065">GetBaseText()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00303">GetTextDifficulty()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00040">IsTooHard</a>, <a class="el" href="Card_8cs_source.html#l02101">Card.NameSimple</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00115">SetTarget()</a>, <a class="el" href="Card_8cs_source.html#l02372">Card.Tool</a>, and <a class="el" href="BaseTaskHarvest_8cs_source.html#l00025">toolLv</a>.</p>
+<p class="reference">References <a class="el" href="RecipeManager_8cs_source.html#l00244">RecipeManager.CanCeomUpWithRecipe()</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00067">GetBaseText()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00309">GetTextDifficulty()</a>, <a class="el" href="Card_8cs_source.html#l05725">Card.HasElement()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00053">IdRecipe</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00040">IsTooHard</a>, <a class="el" href="Card_8cs_source.html#l02101">Card.NameSimple</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00012">EClass.player</a>, <a class="el" href="Player_8cs_source.html#l01053">Player.recipes</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00121">SetTarget()</a>, <a class="el" href="Card_8cs_source.html#l02372">Card.Tool</a>, and <a class="el" href="BaseTaskHarvest_8cs_source.html#l00025">toolLv</a>.</p>
 
 </div>
 </div>
@@ -1213,17 +1224,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00303">303</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  304</span>    {</div>
-<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#aa34e85634a016f6f433868d7d697904b">GetList</a>(<span class="stringliteral">&quot;skillDiff&quot;</span>)[<a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a>];</div>
-<div class="line"><span class="lineno">  306</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00309">309</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  310</span>    {</div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#aa34e85634a016f6f433868d7d697904b">GetList</a>(<span class="stringliteral">&quot;skillDiff&quot;</span>)[<a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a>];</div>
+<div class="line"><span class="lineno">  312</span>    }</div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_ad5039d9fa4651ae0f56084a073a7f016"><div class="ttname"><a href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">BaseTaskHarvest.difficulty</a></div><div class="ttdeci">int difficulty</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00031">BaseTaskHarvest.cs:31</a></div></div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html_aa34e85634a016f6f433868d7d697904b"><div class="ttname"><a href="classLang.html#aa34e85634a016f6f433868d7d697904b">Lang.GetList</a></div><div class="ttdeci">static string[] GetList(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00114">Lang.cs:114</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Lang_8cs_source.html#l00114">Lang.GetList()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00075">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00077">GetText()</a>.</p>
 
 </div>
 </div>
@@ -1255,10 +1266,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTaskDig.html#ab932e4175ec1ceefcd63e5d67b756eb1">TaskDig</a>, <a class="el" href="classTaskHarvest.html#a1e71abfde9afe71cf2353d43b59761bb">TaskHarvest</a>, and <a class="el" href="classTaskMine.html#ac549640d3b6d13583da99f308c979b5b">TaskMine</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00070">70</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_function" href="classCell.html#abb76e91523046fa0ceaffc31e35b4cda">GetObjName</a>();</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00072">72</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_function" href="classCell.html#abb76e91523046fa0ceaffc31e35b4cda">GetObjName</a>();</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
 <div class="ttc" id="aclassCell_html_abb76e91523046fa0ceaffc31e35b4cda"><div class="ttname"><a href="classCell.html#abb76e91523046fa0ceaffc31e35b4cda">Cell.GetObjName</a></div><div class="ttdeci">string GetObjName()</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l01604">Cell.cs:1604</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 </div><!-- fragment -->
@@ -1290,31 +1301,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00277">277</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  278</span>    {</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">switch</span> (mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">category</a>)</div>
-<div class="line"><span class="lineno">  280</span>        {</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;bone&quot;</span>:</div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 50 };</div>
-<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;ore&quot;</span>:</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;crystal&quot;</span>:</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;rock&quot;</span>:</div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;gem&quot;</span>:</div>
-<div class="line"><span class="lineno">  287</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 25 };</div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;organic&quot;</span>:</div>
-<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;skin&quot;</span>:</div>
-<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 50, 100 };</div>
-<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;grass&quot;</span>:</div>
-<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;fiber&quot;</span>:</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;wood&quot;</span>:</div>
-<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 25, 100 };</div>
-<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;soil&quot;</span>:</div>
-<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;water&quot;</span>:</div>
-<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 100 };</div>
-<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 100 };</div>
-<div class="line"><span class="lineno">  300</span>        }</div>
-<div class="line"><span class="lineno">  301</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00283">283</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  284</span>    {</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">switch</span> (mat.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">category</a>)</div>
+<div class="line"><span class="lineno">  286</span>        {</div>
+<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;bone&quot;</span>:</div>
+<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 50 };</div>
+<div class="line"><span class="lineno">  289</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;ore&quot;</span>:</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;crystal&quot;</span>:</div>
+<div class="line"><span class="lineno">  291</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;rock&quot;</span>:</div>
+<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;gem&quot;</span>:</div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 25 };</div>
+<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;organic&quot;</span>:</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;skin&quot;</span>:</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 50, 100 };</div>
+<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;grass&quot;</span>:</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;fiber&quot;</span>:</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;wood&quot;</span>:</div>
+<div class="line"><span class="lineno">  300</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 25, 100 };</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;soil&quot;</span>:</div>
+<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;water&quot;</span>:</div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 100 };</div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[2] { 100, 100 };</div>
+<div class="line"><span class="lineno">  306</span>        }</div>
+<div class="line"><span class="lineno">  307</span>    }</div>
 <div class="ttc" id="aclassSourceMaterial_1_1Row_html_a1f8dc3ef122e2c3251616a671d09e243"><div class="ttname"><a href="classSourceMaterial_1_1Row.html#a1f8dc3ef122e2c3251616a671d09e243">SourceMaterial.Row.category</a></div><div class="ttdeci">string category</div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00018">SourceMaterial.cs:18</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1353,35 +1364,34 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00240">240</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  241</span>    {</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordtype">int</span>[] toolEfficiency = <a class="code hl_function" href="classBaseTaskHarvest.html#a5c0953d7b3921a1e95fa99e670b6c5fd">GetToolEfficiency</a>(mat);</div>
-<div class="line"><span class="lineno">  243</span>        _ = <span class="keyword">new</span> <span class="keywordtype">int</span>[2];</div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(220))</div>
-<div class="line"><span class="lineno">  245</span>        {</div>
-<div class="line"><span class="lineno">  246</span>            toolEfficiency[0] = 0;</div>
-<div class="line"><span class="lineno">  247</span>        }</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(225))</div>
-<div class="line"><span class="lineno">  249</span>        {</div>
-<div class="line"><span class="lineno">  250</span>            toolEfficiency[1] = 0;</div>
-<div class="line"><span class="lineno">  251</span>        }</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolHammer.html">TraitToolHammer</a>)</div>
-<div class="line"><span class="lineno">  253</span>        {</div>
-<div class="line"><span class="lineno">  254</span>            toolEfficiency[0] = 50 + <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(261);</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordtype">int</span> num = 20;</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordtype">int</span>[] array = toolEfficiency;</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> num2 <span class="keywordflow">in</span> array)</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00246">246</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordtype">int</span>[] toolEfficiency = <a class="code hl_function" href="classBaseTaskHarvest.html#a5c0953d7b3921a1e95fa99e670b6c5fd">GetToolEfficiency</a>(mat);</div>
+<div class="line"><span class="lineno">  249</span>        _ = <span class="keyword">new</span> <span class="keywordtype">int</span>[2];</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(220))</div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>            toolEfficiency[0] = 0;</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span> (!t.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(225))</div>
+<div class="line"><span class="lineno">  255</span>        {</div>
+<div class="line"><span class="lineno">  256</span>            toolEfficiency[1] = 0;</div>
+<div class="line"><span class="lineno">  257</span>        }</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitToolHammer.html">TraitToolHammer</a>)</div>
 <div class="line"><span class="lineno">  259</span>        {</div>
-<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">if</span> (num2 &gt; num)</div>
-<div class="line"><span class="lineno">  261</span>            {</div>
-<div class="line"><span class="lineno">  262</span>                num = num2;</div>
-<div class="line"><span class="lineno">  263</span>            }</div>
-<div class="line"><span class="lineno">  264</span>        }</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  266</span>    }</div>
-<div class="ttc" id="aclassBaseTaskHarvest_html_a5c0953d7b3921a1e95fa99e670b6c5fd"><div class="ttname"><a href="classBaseTaskHarvest.html#a5c0953d7b3921a1e95fa99e670b6c5fd">BaseTaskHarvest.GetToolEfficiency</a></div><div class="ttdeci">int GetToolEfficiency(Thing t, SourceMaterial.Row mat)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00240">BaseTaskHarvest.cs:240</a></div></div>
-<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05725">Card.cs:5725</a></div></div>
+<div class="line"><span class="lineno">  260</span>            toolEfficiency[0] = 50 + <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(261);</div>
+<div class="line"><span class="lineno">  261</span>        }</div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordtype">int</span> num = 20;</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordtype">int</span>[] array = toolEfficiency;</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> num2 <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">  265</span>        {</div>
+<div class="line"><span class="lineno">  266</span>            <span class="keywordflow">if</span> (num2 &gt; num)</div>
+<div class="line"><span class="lineno">  267</span>            {</div>
+<div class="line"><span class="lineno">  268</span>                num = num2;</div>
+<div class="line"><span class="lineno">  269</span>            }</div>
+<div class="line"><span class="lineno">  270</span>        }</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  272</span>    }</div>
+<div class="ttc" id="aclassBaseTaskHarvest_html_a5c0953d7b3921a1e95fa99e670b6c5fd"><div class="ttname"><a href="classBaseTaskHarvest.html#a5c0953d7b3921a1e95fa99e670b6c5fd">BaseTaskHarvest.GetToolEfficiency</a></div><div class="ttdeci">int GetToolEfficiency(Thing t, SourceMaterial.Row mat)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00246">BaseTaskHarvest.cs:246</a></div></div>
 <div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02533">Card.cs:2533</a></div></div>
 <div class="ttc" id="aclassTraitToolHammer_html"><div class="ttname"><a href="classTraitToolHammer.html">TraitToolHammer</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitToolHammer_8cs_source.html#l00001">TraitToolHammer.cs:2</a></div></div>
 </div><!-- fragment -->
@@ -1423,124 +1433,124 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00115">115</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (c == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            c = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>;</div>
-<div class="line"><span class="lineno">  120</span>        }</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (_tool == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  122</span>        {</div>
-<div class="line"><span class="lineno">  123</span>            _tool = c.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a>;</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> = _tool;</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  127</span>        <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> row = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">switch</span> (this.<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a>)</div>
-<div class="line"><span class="lineno">  129</span>        {</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Obj:</div>
-<div class="line"><span class="lineno">  131</span>            array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a8cbb6d89c35970efddbbf75c3e976dde">sourceObj</a>.reqHarvest;</div>
-<div class="line"><span class="lineno">  132</span>            row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a4687ee3e946e6a862195b644477c353c">matObj</a>;</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Thing:</div>
-<div class="line"><span class="lineno">  135</span>            array = <a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a4d20dd4795d1045eba97f315560053b1">ReqHarvest</a>.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  136</span>            row = <a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a>.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>;</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Disassemble:</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  140</span>            {</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  142</span>            }</div>
-<div class="line"><span class="lineno">  143</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[2] { <span class="stringliteral">&quot;handicraft&quot;</span>, <span class="stringliteral">&quot;1&quot;</span> };</div>
-<div class="line"><span class="lineno">  144</span>            row = <a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a>.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>;</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Floor:</div>
-<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a3fccac88e48d7ef7007174a9955c9a6c">HasBridge</a>)</div>
-<div class="line"><span class="lineno">  148</span>            {</div>
-<div class="line"><span class="lineno">  149</span>                array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#aef5453d97b5b98b6b777c823ac29cb34">sourceBridge</a>.reqHarvest;</div>
-<div class="line"><span class="lineno">  150</span>                row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a7bbd3b698514a305a72b1de5e46adfee">matBridge</a>;</div>
-<div class="line"><span class="lineno">  151</span>            }</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  153</span>            {</div>
-<div class="line"><span class="lineno">  154</span>                array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest;</div>
-<div class="line"><span class="lineno">  155</span>                row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a098dc12fc99918cb4a0c66e817f47a57">matFloor</a>;</div>
-<div class="line"><span class="lineno">  156</span>            }</div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Block:</div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a>)</div>
-<div class="line"><span class="lineno">  160</span>            {</div>
-<div class="line"><span class="lineno">  161</span>                array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.reqHarvest;</div>
-<div class="line"><span class="lineno">  162</span>                row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a0980c1b838c69aef62bd3302b2c5e41d">matBlock</a>;</div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  164</span>            }</div>
-<div class="line"><span class="lineno">  165</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest.Length];</div>
-<div class="line"><span class="lineno">  166</span>            Array.Copy(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest, array, <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest.Length);</div>
-<div class="line"><span class="lineno">  167</span>            array[0] = <span class="stringliteral">&quot;mining&quot;</span>;</div>
-<div class="line"><span class="lineno">  168</span>            row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a098dc12fc99918cb4a0c66e817f47a57">matFloor</a>;</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> = row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac266dc507db3a5a913befe6808763f43">hardness</a>;</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a> == <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Obj)</div>
-<div class="line"><span class="lineno">  173</span>        {</div>
-<div class="line"><span class="lineno">  174</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> = <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> * ((pos.growth != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#af2de1cdb52589d10648135dda1a63386">growth</a>.<a class="code hl_function" href="classGrowSystem.html#ae3a0fe38f80327335825c56511d60212">GetHp</a>() : <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a8cbb6d89c35970efddbbf75c3e976dde">sourceObj</a>.hp) / 100;</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ad552d3abbad0e3b100a02bc0528e2824">tag</a>.Contains(<span class="stringliteral">&quot;hard&quot;</span>))</div>
-<div class="line"><span class="lineno">  177</span>        {</div>
-<div class="line"><span class="lineno">  178</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> *= 3;</div>
-<div class="line"><span class="lineno">  179</span>        }</div>
-<div class="line"><span class="lineno">  180</span>        <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a> <a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a> = this.<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a>;</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">if</span> ((uint)<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a> &lt;= 1u &amp;&amp; row.id == 0)</div>
-<div class="line"><span class="lineno">  182</span>        {</div>
-<div class="line"><span class="lineno">  183</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> *= 100;</div>
-<div class="line"><span class="lineno">  184</span>        }</div>
-<div class="line"><span class="lineno">  185</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> = (<a class="code hl_property" href="classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2">IsHarvest</a> ? 250 : <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[array[0]].id);</div>
-<div class="line"><span class="lineno">  186</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a7c121ca37a33c07556d215df5c0b8b80">reqElement</a> = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>(<a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a>);</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordtype">int</span> num = array[1].ToInt();</div>
-<div class="line"><span class="lineno">  188</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a9bbe22d508d2dd6302272759030f6386">reqLv</a> = <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> + num;</div>
-<div class="line"><span class="lineno">  189</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#aa0365fc11baecef9ea45d4acb8b9cbf2">isToolRequired</a> = ((!<a class="code hl_property" href="classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2">IsHarvest</a> &amp;&amp; <a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> != 250) ? <span class="keyword">true</span> : <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  190</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> = 0;</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  192</span>        {</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordtype">int</span> num2 = ((<a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> == 220 || <a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> == 225) ? <a class="code hl_function" href="classBaseTaskHarvest.html#a5c0953d7b3921a1e95fa99e670b6c5fd">GetToolEfficiency</a>(<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>, row) : 100);</div>
-<div class="line"><span class="lineno">  194</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> += tool.material.hardness * num2 / 100;</div>
-<div class="line"><span class="lineno">  195</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> += (int)(<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a> + <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>.<a class="code hl_property" href="classCard.html#ac999b397842ffd4252e5ae5b406a2746">blessedState</a>);</div>
-<div class="line"><span class="lineno">  196</span>        }</div>
-<div class="line"><span class="lineno">  197</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> += c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(<a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a>) * 3 / 2;</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> &lt; 0)</div>
-<div class="line"><span class="lineno">  199</span>        {</div>
-<div class="line"><span class="lineno">  200</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> = 1;</div>
-<div class="line"><span class="lineno">  201</span>        }</div>
-<div class="line"><span class="lineno">  202</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> = (<a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> + 5) * 100 / ((<a class="code hl_variable" href="classBaseTaskHarvest.html#a9bbe22d508d2dd6302272759030f6386">reqLv</a> + 5) * 140 / 100);</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> &lt; 50)</div>
-<div class="line"><span class="lineno">  204</span>        {</div>
-<div class="line"><span class="lineno">  205</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> = 50;</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseTaskHarvest.html#aaeaa45a64e3baabcbe0f4cf1e33bb4c9">IsTooHard</a>)</div>
-<div class="line"><span class="lineno">  208</span>        {</div>
-<div class="line"><span class="lineno">  209</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 3;</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> &gt; 150)</div>
-<div class="line"><span class="lineno">  212</span>        {</div>
-<div class="line"><span class="lineno">  213</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 0;</div>
-<div class="line"><span class="lineno">  214</span>        }</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> &gt; 100)</div>
-<div class="line"><span class="lineno">  216</span>        {</div>
-<div class="line"><span class="lineno">  217</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 1;</div>
-<div class="line"><span class="lineno">  218</span>        }</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  220</span>        {</div>
-<div class="line"><span class="lineno">  221</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 2;</div>
-<div class="line"><span class="lineno">  222</span>        }</div>
-<div class="line"><span class="lineno">  223</span>        <a class="code hl_class" href="classPlantData.html">PlantData</a> plantData = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a0929dc7b8015444c40a2f72630766e90">TryGetPlant</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>);</div>
-<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (this.harvestType == <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Obj &amp;&amp; <a class="code hl_property" href="classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2">IsHarvest</a> &amp;&amp; plantData != <span class="keyword">null</span> &amp;&amp; plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  225</span>        {</div>
-<div class="line"><span class="lineno">  226</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#a1cce0df3d1d99f5541ecbd46900a584d">maxProgress</a> = (int)Mathf.Clamp(<a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(8f, 10f) * (float)(100 + plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> * 100 + plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> * plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> * 30) / (float)<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a>, 2f, 1000f);</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  229</span>        {</div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#a1cce0df3d1d99f5541ecbd46900a584d">maxProgress</a> = (int)Mathf.Clamp(<a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(8f, 16f) * 100f / (float)<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a>, 2f, 30f);</div>
-<div class="line"><span class="lineno">  231</span>        }</div>
-<div class="line"><span class="lineno">  232</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00121">121</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (c == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            c = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>;</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (_tool == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            _tool = c.<a class="code hl_property" href="classCard.html#a425a963bc60ba8e1b76e86db0a89627f">Tool</a>;</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> = _tool;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_class" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> row = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">switch</span> (this.<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a>)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Obj:</div>
+<div class="line"><span class="lineno">  137</span>            array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a8cbb6d89c35970efddbbf75c3e976dde">sourceObj</a>.reqHarvest;</div>
+<div class="line"><span class="lineno">  138</span>            row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a4687ee3e946e6a862195b644477c353c">matObj</a>;</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Thing:</div>
+<div class="line"><span class="lineno">  141</span>            array = <a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a4d20dd4795d1045eba97f315560053b1">ReqHarvest</a>.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  142</span>            row = <a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a>.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>;</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Disassemble:</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  146</span>            {</div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  148</span>            }</div>
+<div class="line"><span class="lineno">  149</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[2] { <span class="stringliteral">&quot;handicraft&quot;</span>, <span class="stringliteral">&quot;1&quot;</span> };</div>
+<div class="line"><span class="lineno">  150</span>            row = <a class="code hl_variable" href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">target</a>.<a class="code hl_property" href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">material</a>;</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Floor:</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a3fccac88e48d7ef7007174a9955c9a6c">HasBridge</a>)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#aef5453d97b5b98b6b777c823ac29cb34">sourceBridge</a>.reqHarvest;</div>
+<div class="line"><span class="lineno">  156</span>                row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a7bbd3b698514a305a72b1de5e46adfee">matBridge</a>;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  159</span>            {</div>
+<div class="line"><span class="lineno">  160</span>                array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest;</div>
+<div class="line"><span class="lineno">  161</span>                row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a098dc12fc99918cb4a0c66e817f47a57">matFloor</a>;</div>
+<div class="line"><span class="lineno">  162</span>            }</div>
+<div class="line"><span class="lineno">  163</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Block:</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#adf88acccb063c764604ddcd520fe332d">HasBlock</a>)</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                array = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.reqHarvest;</div>
+<div class="line"><span class="lineno">  168</span>                row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a0980c1b838c69aef62bd3302b2c5e41d">matBlock</a>;</div>
+<div class="line"><span class="lineno">  169</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  170</span>            }</div>
+<div class="line"><span class="lineno">  171</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest.Length];</div>
+<div class="line"><span class="lineno">  172</span>            Array.Copy(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest, array, <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a9bf5fe32536e022d7e7ee717b1ed088e">sourceFloor</a>.reqHarvest.Length);</div>
+<div class="line"><span class="lineno">  173</span>            array[0] = <span class="stringliteral">&quot;mining&quot;</span>;</div>
+<div class="line"><span class="lineno">  174</span>            row = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a098dc12fc99918cb4a0c66e817f47a57">matFloor</a>;</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> = row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ac266dc507db3a5a913befe6808763f43">hardness</a>;</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (this.<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a> == <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Obj)</div>
+<div class="line"><span class="lineno">  179</span>        {</div>
+<div class="line"><span class="lineno">  180</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> = <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> * ((pos.growth != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#af2de1cdb52589d10648135dda1a63386">growth</a>.<a class="code hl_function" href="classGrowSystem.html#ae3a0fe38f80327335825c56511d60212">GetHp</a>() : <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#a8cbb6d89c35970efddbbf75c3e976dde">sourceObj</a>.hp) / 100;</div>
+<div class="line"><span class="lineno">  181</span>        }</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceMaterial_1_1Row.html#ad552d3abbad0e3b100a02bc0528e2824">tag</a>.Contains(<span class="stringliteral">&quot;hard&quot;</span>))</div>
+<div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> *= 3;</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>        <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a> <a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a> = this.<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a>;</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">if</span> ((uint)<a class="code hl_property" href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">harvestType</a> &lt;= 1u &amp;&amp; row.id == 0)</div>
+<div class="line"><span class="lineno">  188</span>        {</div>
+<div class="line"><span class="lineno">  189</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> *= 100;</div>
+<div class="line"><span class="lineno">  190</span>        }</div>
+<div class="line"><span class="lineno">  191</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> = (<a class="code hl_property" href="classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2">IsHarvest</a> ? 250 : <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[array[0]].id);</div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a7c121ca37a33c07556d215df5c0b8b80">reqElement</a> = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>(<a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a>);</div>
+<div class="line"><span class="lineno">  193</span>        <span class="keywordtype">int</span> num = array[1].ToInt();</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a9bbe22d508d2dd6302272759030f6386">reqLv</a> = <a class="code hl_variable" href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">matHardness</a> + num;</div>
+<div class="line"><span class="lineno">  195</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#aa0365fc11baecef9ea45d4acb8b9cbf2">isToolRequired</a> = ((!<a class="code hl_property" href="classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2">IsHarvest</a> &amp;&amp; <a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> != 250) ? <span class="keyword">true</span> : <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  196</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> = 0;</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  198</span>        {</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordtype">int</span> num2 = ((<a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> == 220 || <a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a> == 225) ? <a class="code hl_function" href="classBaseTaskHarvest.html#a5c0953d7b3921a1e95fa99e670b6c5fd">GetToolEfficiency</a>(<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>, row) : 100);</div>
+<div class="line"><span class="lineno">  200</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> += tool.material.hardness * num2 / 100;</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> += (int)(<a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>.<a class="code hl_property" href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">encLV</a> + <a class="code hl_variable" href="classBaseTaskHarvest.html#a10310572ebe3d4b46aed1b6063c90507">tool</a>.<a class="code hl_property" href="classCard.html#ac999b397842ffd4252e5ae5b406a2746">blessedState</a>);</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> += c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(<a class="code hl_variable" href="classBaseTaskHarvest.html#a84f175c674331100f85d50d42dfbc4d8">idEle</a>) * 3 / 2;</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> &lt; 0)</div>
+<div class="line"><span class="lineno">  205</span>        {</div>
+<div class="line"><span class="lineno">  206</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> = 1;</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="line"><span class="lineno">  208</span>        <a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> = (<a class="code hl_variable" href="classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313">toolLv</a> + 5) * 100 / ((<a class="code hl_variable" href="classBaseTaskHarvest.html#a9bbe22d508d2dd6302272759030f6386">reqLv</a> + 5) * 140 / 100);</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> &lt; 50)</div>
+<div class="line"><span class="lineno">  210</span>        {</div>
+<div class="line"><span class="lineno">  211</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> = 50;</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseTaskHarvest.html#aaeaa45a64e3baabcbe0f4cf1e33bb4c9">IsTooHard</a>)</div>
+<div class="line"><span class="lineno">  214</span>        {</div>
+<div class="line"><span class="lineno">  215</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 3;</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> &gt; 150)</div>
+<div class="line"><span class="lineno">  218</span>        {</div>
+<div class="line"><span class="lineno">  219</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 0;</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a> &gt; 100)</div>
+<div class="line"><span class="lineno">  222</span>        {</div>
+<div class="line"><span class="lineno">  223</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 1;</div>
+<div class="line"><span class="lineno">  224</span>        }</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016">difficulty</a> = 2;</div>
+<div class="line"><span class="lineno">  228</span>        }</div>
+<div class="line"><span class="lineno">  229</span>        <a class="code hl_class" href="classPlantData.html">PlantData</a> plantData = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a0929dc7b8015444c40a2f72630766e90">TryGetPlant</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>);</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> (this.harvestType == <a class="code hl_enumeration" href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">HarvestType</a>.Obj &amp;&amp; <a class="code hl_property" href="classBaseTaskHarvest.html#a7e2b3fbcf99220ed02f0029c169108c2">IsHarvest</a> &amp;&amp; plantData != <span class="keyword">null</span> &amp;&amp; plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  231</span>        {</div>
+<div class="line"><span class="lineno">  232</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#a1cce0df3d1d99f5541ecbd46900a584d">maxProgress</a> = (int)Mathf.Clamp(<a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(8f, 10f) * (float)(100 + plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> * 100 + plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> * plantData.<a class="code hl_variable" href="classPlantData.html#ad01793b3835e6543ae5b0ea904836768">size</a> * 30) / (float)<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a>, 2f, 1000f);</div>
+<div class="line"><span class="lineno">  233</span>        }</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  235</span>        {</div>
+<div class="line"><span class="lineno">  236</span>            <a class="code hl_variable" href="classBaseTaskHarvest.html#a1cce0df3d1d99f5541ecbd46900a584d">maxProgress</a> = (int)Mathf.Clamp(<a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(8f, 16f) * 100f / (float)<a class="code hl_variable" href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">efficiency</a>, 2f, 30f);</div>
+<div class="line"><span class="lineno">  237</span>        }</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_a049d0e70517d8f7d718a85b6b7f967bf"><div class="ttname"><a href="classBaseTaskHarvest.html#a049d0e70517d8f7d718a85b6b7f967bf">BaseTaskHarvest.target</a></div><div class="ttdeci">Thing target</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00015">BaseTaskHarvest.cs:15</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_a1cce0df3d1d99f5541ecbd46900a584d"><div class="ttname"><a href="classBaseTaskHarvest.html#a1cce0df3d1d99f5541ecbd46900a584d">BaseTaskHarvest.maxProgress</a></div><div class="ttdeci">int maxProgress</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00027">BaseTaskHarvest.cs:27</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_a6cf11e59f5be432d7b78ef8295675e7c"><div class="ttname"><a href="classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7c">BaseTaskHarvest.HarvestType</a></div><div class="ttdeci">HarvestType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00006">BaseTaskHarvest.cs:7</a></div></div>
@@ -1550,7 +1560,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassBaseTaskHarvest_html_a9861af52723c1ee6bdd3a4cd11815d4f"><div class="ttname"><a href="classBaseTaskHarvest.html#a9861af52723c1ee6bdd3a4cd11815d4f">BaseTaskHarvest.efficiency</a></div><div class="ttdeci">int efficiency</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00029">BaseTaskHarvest.cs:29</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_a9bbe22d508d2dd6302272759030f6386"><div class="ttname"><a href="classBaseTaskHarvest.html#a9bbe22d508d2dd6302272759030f6386">BaseTaskHarvest.reqLv</a></div><div class="ttdeci">int reqLv</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00023">BaseTaskHarvest.cs:23</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_aa0365fc11baecef9ea45d4acb8b9cbf2"><div class="ttname"><a href="classBaseTaskHarvest.html#aa0365fc11baecef9ea45d4acb8b9cbf2">BaseTaskHarvest.isToolRequired</a></div><div class="ttdeci">bool isToolRequired</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00035">BaseTaskHarvest.cs:35</a></div></div>
-<div class="ttc" id="aclassBaseTaskHarvest_html_ab69b6cf388fa668e55de32104158599b"><div class="ttname"><a href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">BaseTaskHarvest.harvestType</a></div><div class="ttdeci">virtual HarvestType harvestType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00055">BaseTaskHarvest.cs:55</a></div></div>
+<div class="ttc" id="aclassBaseTaskHarvest_html_ab69b6cf388fa668e55de32104158599b"><div class="ttname"><a href="classBaseTaskHarvest.html#ab69b6cf388fa668e55de32104158599b">BaseTaskHarvest.harvestType</a></div><div class="ttdeci">virtual HarvestType harvestType</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00057">BaseTaskHarvest.cs:57</a></div></div>
 <div class="ttc" id="aclassBaseTaskHarvest_html_add03492172277c204a2e15af6e69d1e4"><div class="ttname"><a href="classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4">BaseTaskHarvest.matHardness</a></div><div class="ttdeci">int matHardness</div><div class="ttdef"><b>Definition:</b> <a href="BaseTaskHarvest_8cs_source.html#l00019">BaseTaskHarvest.cs:19</a></div></div>
 <div class="ttc" id="aclassCard_html_a3c2f0d42f02fca18429b83ea0feed5a0"><div class="ttname"><a href="classCard.html#a3c2f0d42f02fca18429b83ea0feed5a0">Card.material</a></div><div class="ttdeci">SourceMaterial.Row material</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02013">Card.cs:2013</a></div></div>
 <div class="ttc" id="aclassCard_html_a9c3b6d0fb8ee414aecdd21c21153204b"><div class="ttname"><a href="classCard.html#a9c3b6d0fb8ee414aecdd21c21153204b">Card.encLV</a></div><div class="ttdeci">int encLV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00311">Card.cs:312</a></div></div>
@@ -1582,7 +1592,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="ELEMENT_8cs_source.html#l01100">Element.Create()</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Card_8cs_source.html#l02533">Card.Evalue()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00046">SourceMaterial.Row.hardness</a>, <a class="el" href="Card_8cs_source.html#l02013">Card.material</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Rand_8cs_source.html#l00042">Rand.Range()</a>, <a class="el" href="Trait_8cs_source.html#l00302">Trait.ReqHarvest</a>, <a class="el" href="PlantData_8cs_source.html#l00015">PlantData.size</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00020">SourceMaterial.Row.tag</a>, <a class="el" href="Card_8cs_source.html#l02372">Card.Tool</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba39ab32c5aeb56c9f5ae17f073ce31023">tool</a>, <a class="el" href="Card_8cs_source.html#l00051">Card.trait</a>, and <a class="el" href="Map_8cs_source.html#l01942">Map.TryGetPlant()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00208">TaskHarvest.CanProgress()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00075">GetText()</a>, <a class="el" href="TaskDig_8cs_source.html#l00051">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00259">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="TaskMine_8cs_source.html#l00056">TaskMine.OnCreateProgress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00218">TaskHarvest.CanProgress()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00077">GetText()</a>, <a class="el" href="TaskDig_8cs_source.html#l00063">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00269">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="TaskMine_8cs_source.html#l00058">TaskMine.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -1601,7 +1611,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00031">31</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00259">TaskHarvest.OnCreateProgress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00269">TaskHarvest.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -1619,7 +1629,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00033">33</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00259">TaskHarvest.OnCreateProgress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00269">TaskHarvest.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -1653,7 +1663,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00021">21</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00259">TaskHarvest.OnCreateProgress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00269">TaskHarvest.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -1703,7 +1713,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00027">27</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskDig_8cs_source.html#l00051">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00259">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="TaskMine_8cs_source.html#l00056">TaskMine.OnCreateProgress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskDig_8cs_source.html#l00063">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00269">TaskHarvest.OnCreateProgress()</a>, and <a class="el" href="TaskMine_8cs_source.html#l00058">TaskMine.OnCreateProgress()</a>.</p>
 
 </div>
 </div>
@@ -1753,7 +1763,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00015">15</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00208">TaskHarvest.CanProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00090">TaskHarvest.GetBaseText()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00230">TaskHarvest.GetHitResult()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00484">TaskHarvest.GetIdDismantled()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00113">TaskHarvest.GetTextSmall()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00547">TaskHarvest.HarvestThing()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00259">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00512">TaskHarvest.ShouldGenerateDismantled()</a>, and <a class="el" href="TaskHarvest_8cs_source.html#l00126">TaskHarvest.TryGetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00218">TaskHarvest.CanProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00240">TaskHarvest.GetHitResult()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00494">TaskHarvest.GetIdDismantled()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00123">TaskHarvest.GetTextSmall()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00557">TaskHarvest.HarvestThing()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00269">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00522">TaskHarvest.ShouldGenerateDismantled()</a>, and <a class="el" href="TaskHarvest_8cs_source.html#l00136">TaskHarvest.TryGetAct()</a>.</p>
 
 </div>
 </div>
@@ -1771,7 +1781,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00037">37</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00208">TaskHarvest.CanProgress()</a>, and <a class="el" href="BaseTaskHarvest_8cs_source.html#l00091">GetBestTool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskHarvest_8cs_source.html#l00218">TaskHarvest.CanProgress()</a>, and <a class="el" href="BaseTaskHarvest_8cs_source.html#l00097">GetBestTool()</a>.</p>
 
 </div>
 </div>
@@ -1789,7 +1799,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00025">25</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00075">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00077">GetText()</a>.</p>
 
 </div>
 </div>
@@ -1814,7 +1824,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00059">59</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00061">61</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
 </div>
 </div>
@@ -1838,7 +1848,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00053">53</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00055">55</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
 </div>
 </div>
@@ -1862,7 +1872,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00063">63</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00065">65</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
 </div>
 </div>
@@ -1886,7 +1896,33 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00055">55</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00057">57</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad6fa8de7f0c45e9a70bd073ef4689ac7" name="ad6fa8de7f0c45e9a70bd073ef4689ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6fa8de7f0c45e9a70bd073ef4689ac7">&#9670;&#160;</a></span>IdRecipe</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string BaseTaskHarvest.IdRecipe</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00053">53</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00077">GetText()</a>.</p>
 
 </div>
 </div>
@@ -1910,7 +1946,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00057">57</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00059">59</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
 </div>
 </div>
@@ -1970,7 +2006,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   48</span>        }</div>
 <div class="line"><span class="lineno">   49</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00075">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTaskHarvest_8cs_source.html#l00077">GetText()</a>.</p>
 
 </div>
 </div>
@@ -1994,7 +2030,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00061">61</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseTaskHarvest_8cs_source.html#l00063">63</a> of file <a class="el" href="BaseTaskHarvest_8cs_source.html">BaseTaskHarvest.cs</a>.</p>
 
 </div>
 </div>

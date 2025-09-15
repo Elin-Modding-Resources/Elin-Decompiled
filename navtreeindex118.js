@@ -1,5 +1,10 @@
 var NAVTREEINDEX118 =
 {
+"classTraitFood.html":[1,0,1571],
+"classTraitFood.html#a331afa29d6fd5b7fc301dcf7c1954dc4":[1,0,1571,0],
+"classTraitFood.html#aaca54391b55287bfb1d20a09828613ff":[1,0,1571,2],
+"classTraitFood.html#af9e3980cc7461d71d4c614ae03e24f1e":[1,0,1571,1],
+"classTraitFoodDough.html":[1,0,1572],
 "classTraitFoodDough.html#afc2e0fe000653d2556383395cfafb0b1":[1,0,1572,0],
 "classTraitFoodEgg.html":[1,0,1573],
 "classTraitFoodEgg.html#a152d63e014a05fe909cebcdcdc62f402":[1,0,1573,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitInformer.html#a45d21aa6becf3adbbe756570bcef33d2":[1,0,1633,0],
 "classTraitInformer.html#a5c83359e8a084cf42606afae00f40bc9":[1,0,1633,2],
 "classTraitInformer.html#adfc92367a39bc18656a6248b2453ea76":[1,0,1633,1],
-"classTraitInnkeeper.html":[1,0,1634],
-"classTraitInnkeeper.html#a98842eadb445c2d9f7eb61046343acb7":[1,0,1634,0],
-"classTraitItem.html":[1,0,1635],
-"classTraitItem.html#a02208ed1a7513742a9168c1d82ff04d5":[1,0,1635,0],
-"classTraitItem.html#a67c970376a20a76d3abfa1ba8382d8ac":[1,0,1635,2],
-"classTraitItem.html#a9a7e274c9ee81e0b3b2982edb7cb472f":[1,0,1635,1]
+"classTraitInnkeeper.html":[1,0,1634]
 };
