@@ -14,6 +14,8 @@ public class TaskMine : BaseTaskHarvest
 
 	public override HarvestType harvestType => HarvestType.Block;
 
+	public override string IdRecipe => pos.sourceBlock.RecipeID;
+
 	public override int destDist => 1;
 
 	public override bool isBlock => true;
@@ -133,7 +135,7 @@ public class TaskMine : BaseTaskHarvest
 
 	public override void OnProgressComplete()
 	{
-		string recipeID = pos.sourceBlock.RecipeID;
+		string idRecipe = IdRecipe;
 		int hardness = pos.matBlock.hardness;
 		switch (mode)
 		{
@@ -178,7 +180,7 @@ public class TaskMine : BaseTaskHarvest
 		}
 		if (owner != null && owner.IsPC)
 		{
-			EClass.player.recipes.ComeUpWithRecipe(recipeID, 30);
+			EClass.player.recipes.ComeUpWithRecipe(idRecipe, 30);
 		}
 		mined = true;
 	}

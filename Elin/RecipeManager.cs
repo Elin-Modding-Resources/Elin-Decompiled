@@ -267,7 +267,8 @@ public class RecipeManager : EClass
 			return;
 		}
 		RecipeSource recipeSource = Get(idRecipe);
-		if (EClass.rnd(10) != 0 && !EClass.debug.enable)
+		int num = EClass.pc.Evalue(1661);
+		if (EClass.rnd((num >= 2) ? 5 : ((num == 1) ? 8 : 10)) != 0 && !EClass.debug.enable)
 		{
 			return;
 		}

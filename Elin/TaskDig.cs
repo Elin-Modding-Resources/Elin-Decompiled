@@ -13,6 +13,18 @@ public class TaskDig : BaseTaskHarvest
 
 	public override HarvestType harvestType => HarvestType.Floor;
 
+	public override string IdRecipe
+	{
+		get
+		{
+			if (!pos.HasBridge)
+			{
+				return pos.sourceFloor.RecipeID;
+			}
+			return pos.sourceBridge.RecipeID;
+		}
+	}
+
 	public override int RightHand => 1101;
 
 	public override bool IsHostileAct => true;
@@ -136,7 +148,7 @@ public class TaskDig : BaseTaskHarvest
 
 	public override void OnProgressComplete()
 	{
-		string idRecipe = (pos.HasBridge ? pos.sourceBridge.RecipeID : pos.sourceFloor.RecipeID);
+		string idRecipe = IdRecipe;
 		int num = (pos.HasBridge ? pos.matBridge.hardness : pos.matFloor.hardness);
 		if (EClass._zone.IsRegion)
 		{

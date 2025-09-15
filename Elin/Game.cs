@@ -520,6 +520,10 @@ public class Game : EClass
 			{
 			}
 		}
+		if (version.IsBelow(0, 23, 199) && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() >= 3)
+		{
+			world.SendPackage(ThingGen.CreateParcel(null, ThingGen.Create("bone_duponne")));
+		}
 		if (version.IsBelow(0, 23, 195))
 		{
 			Zone zone = spatials.Find("startVillage2");

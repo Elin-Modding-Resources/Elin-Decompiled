@@ -50,6 +50,8 @@ public class BaseTaskHarvest : TaskDesignation
 
 	public bool IsHarvest => pos.cell.CanHarvest();
 
+	public virtual string IdRecipe => "";
+
 	public virtual bool CanReapSeed => pos.cell.CanReapSeed();
 
 	public virtual HarvestType harvestType => HarvestType.Block;
@@ -80,6 +82,10 @@ public class BaseTaskHarvest : TaskDesignation
 		}
 		SetTarget(EClass.pc);
 		string text = "tHarvest".lang(GetBaseText(str), (EClass.pc.Tool == null) ? "hand".lang() : owner.Tool.NameSimple, toolLv.ToString() ?? "");
+		if (EClass.pc.HasElement(1661) && EClass.player.recipes.CanCeomUpWithRecipe(IdRecipe))
+		{
+			text = text + " " + "TaskDisassemble_newrecipe".lang();
+		}
 		text = text + " (" + GetTextDifficulty() + ")";
 		if (IsTooHard)
 		{

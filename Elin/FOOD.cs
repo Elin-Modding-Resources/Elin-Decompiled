@@ -4,11 +4,13 @@ public class FOOD
 
 	public const int food_poison = 702;
 
-	public const int food_god = 758;
+	public const int food_love = 703;
+
+	public const int food_bug = 704;
 
 	public const int creativeDish = 764;
 
-	public const int food_love = 703;
+	public const int food_god = 758;
 
 	public const int justcooked = 757;
 
@@ -22,13 +24,11 @@ public class FOOD
 
 	public const int gainWeight = 705;
 
-	public const int food_bug = 704;
-
 	public const int food_human = 708;
 
 	public static readonly int[] IDS = new int[13]
 	{
-		701, 702, 758, 764, 703, 757, 709, 700, 707, 706,
-		705, 704, 708
+		701, 702, 703, 704, 764, 758, 757, 709, 700, 707,
+		706, 705, 708
 	};
 }

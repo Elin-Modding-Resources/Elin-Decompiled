@@ -15,9 +15,13 @@ public class ActThrow : ActBaseAttack
 	public override string GetText(string str = "")
 	{
 		string text = "";
-		if (target != null && pcTarget != null && target.trait is TraitMonsterBall && pcTarget.LV > target.LV)
+		if (target != null)
 		{
-			text = " " + "mb_invalidLV".lang();
+			TraitMonsterBall traitMonsterBall = target.trait as TraitMonsterBall;
+			if (pcTarget != null && traitMonsterBall != null && !traitMonsterBall.IsDuponneBall && !traitMonsterBall.IsLittleBall && pcTarget.LV > target.LV)
+			{
+				text = " " + "mb_invalidLV".lang();
+			}
 		}
 		return base.GetText(str) + text;
 	}

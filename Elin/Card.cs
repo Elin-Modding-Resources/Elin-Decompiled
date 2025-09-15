@@ -4092,7 +4092,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = dmg * 90 / 100;
 			}
-			if (Evalue(971) > 0)
+			if (HasElement(971))
 			{
 				dmg = dmg * 100 / Mathf.Clamp(100 + Evalue(971), 25, 1000);
 			}
