@@ -1,5 +1,7 @@
 var NAVTREEINDEX110 =
 {
+"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481":[1,0,1290,0],
+"classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a66ac5f82f03ebad0bc7e60d47e6a7317":[1,0,1290,0,2],
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a7a1920d61156abc05a60135aefe8bc67":[1,0,1290,0,0],
 "classTaskDig.html#ab2b8d6bf5a001513c31dc5627aaeb481a99b4c3afc6aaa3ab4de17c90455a55eb":[1,0,1290,0,1],
 "classTaskDig.html#ab932e4175ec1ceefcd63e5d67b756eb1":[1,0,1290,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX110 =
 "classTextureManager.html":[1,0,1322],
 "classTextureManager.html#a0afd835440eb54c263a4856e8995daf9":[1,0,1322,6],
 "classTextureManager.html#a2bd8048292a45e6a9d813087263b7995":[1,0,1322,3],
-"classTextureManager.html#a2c39b2ca7d270a2fe398e8f1d41db097":[1,0,1322,9],
-"classTextureManager.html#a711c77f3541c2de99b0ae2013933f42e":[1,0,1322,4],
-"classTextureManager.html#a78d1784c5f986f6c216fbed46e3800e3":[1,0,1322,5]
+"classTextureManager.html#a2c39b2ca7d270a2fe398e8f1d41db097":[1,0,1322,9]
 };

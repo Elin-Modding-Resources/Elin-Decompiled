@@ -1,5 +1,7 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMiral.html":[1,0,1703],
+"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1703,4],
 "classTraitMiral.html#a63e4a4dd026d96c60e4584aee3a04b0c":[1,0,1703,2],
 "classTraitMiral.html#a79d7b7af125be1f284cdee11eee50f6b":[1,0,1703,1],
 "classTraitMiral.html#aa4e80ca1b96c8498276a839bc1a0ce63":[1,0,1703,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitRadio.html":[1,0,1762],
 "classTraitRadio.html#a43d67817bab65ef41fc728a848390b69":[1,0,1762,4],
 "classTraitRadio.html#a571b7b469466d0ad6a42ba067343b9ca":[1,0,1762,0],
-"classTraitRadio.html#a6cf3c6d4ac8ff1da2527cc71eba5f9da":[1,0,1762,2],
-"classTraitRadio.html#a8c70d07c8c74e4942027a86b273e1028":[1,0,1762,3],
-"classTraitRadio.html#a9f1699069161a60811ffa207b4dc8985":[1,0,1762,1]
+"classTraitRadio.html#a6cf3c6d4ac8ff1da2527cc71eba5f9da":[1,0,1762,2]
 };

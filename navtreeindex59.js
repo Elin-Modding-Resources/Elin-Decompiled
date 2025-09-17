@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"classEffectManager.html#aa630acdf06546db552c0a50b485f50fb":[1,0,461,3],
+"classEffectManager.html#add7dab2e4dbb3a0cf494d1065f6c4de0":[1,0,461,1],
 "classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4":[1,0,461,7],
 "classEffectManager_1_1EffectList.html":[1,0,461,0],
 "classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914":[1,0,461,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "classElinEncoder.html#adcae4bbafc53a7e9ed75f2340fd167ef":[1,0,477,0],
 "classElinEncoder.html#adf755ac5a4dee28b15fdf1b9b94a3173":[1,0,477,4],
 "classEloMap.html":[1,0,478],
-"classEloMap.html#a005eb26c5c0f9be68eece6fe9238ace8":[1,0,478,22],
-"classEloMap.html#a0797d69e85c0817f04a75280fec113d7":[1,0,478,14],
-"classEloMap.html#a0d645ebe3ded1112af376834928de2d3":[1,0,478,20]
+"classEloMap.html#a005eb26c5c0f9be68eece6fe9238ace8":[1,0,478,22]
 };

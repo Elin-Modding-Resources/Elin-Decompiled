@@ -1,5 +1,7 @@
 var NAVTREEINDEX93 =
 {
+"classQuestMusic.html#a7370eb46576791cf118780f5f88302bf":[1,0,1025,11],
+"classQuestMusic.html#aa5d3625197a1422c4468509aaabeb6fa":[1,0,1025,12],
 "classQuestMusic.html#aac45ac565e800237e38f5c51d7cfea15":[1,0,1025,3],
 "classQuestMusic.html#ab1b3facc740e520a57bfbc89dcce6b6b":[1,0,1025,0],
 "classQuestMusic.html#aceb52619927f0ad0d7d8cbd06a409dff":[1,0,1025,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX93 =
 "classRecipe.html#a2e5fc07ff7bf8f9733181e2d03ce8f29":[1,0,1058,27],
 "classRecipe.html#a2f06ae614a1b3efab9a86a3bd4cfe4ce":[1,0,1058,24],
 "classRecipe.html#a32ea83feab1dd425947e10577121c615":[1,0,1058,69],
-"classRecipe.html#a359cae3060cac19f2128b923bdfa12e6":[1,0,1058,57],
-"classRecipe.html#a385282f558d5ab34d1a9c1fc9c80c349":[1,0,1058,76],
-"classRecipe.html#a39d1201966828b2a7620f1e12ee1bc4d":[1,0,1058,34]
+"classRecipe.html#a359cae3060cac19f2128b923bdfa12e6":[1,0,1058,57]
 };

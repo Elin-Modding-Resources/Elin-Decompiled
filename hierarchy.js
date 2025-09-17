@@ -1946,6 +1946,7 @@ var hierarchy =
           ] ],
           [ "TraitStethoscope", "classTraitStethoscope.html", null ],
           [ "TraitToolBrush", "classTraitToolBrush.html", null ],
+          [ "TraitToolBrushStrip", "classTraitToolBrushStrip.html", null ],
           [ "TraitToolBuild", "classTraitToolBuild.html", null ],
           [ "TraitToolButcher", "classTraitToolButcher.html", null ],
           [ "TraitToolFishing", "classTraitToolFishing.html", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX113 =
 {
+"classTileTypeRooftop.html":[1,0,1369],
+"classTileTypeScaffold.html":[1,0,1370],
 "classTileTypeScaffold.html#a06590c71fcb15f7c85aa549fc01ab5f5":[1,0,1370,4],
 "classTileTypeScaffold.html#a20a0d04cb2c7fc55bd6eeeffa0f4058a":[1,0,1370,0],
 "classTileTypeScaffold.html#a5a91eed6f7bbabf745899c235f5ef289":[1,0,1370,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX113 =
 "classTrait.html#a5c715d0d915115ba26fb9e31c5e90aee":[1,0,1399,236],
 "classTrait.html#a5d6dc393334155cc13dd176241cfd42b":[1,0,1399,150],
 "classTrait.html#a5f776deb99822151021ce9c1c20ed395":[1,0,1399,65],
-"classTrait.html#a600da57f2ca749e3a73f2fcc75c0536f":[1,0,1399,37],
-"classTrait.html#a63a6da2dbdf7baf6aecd4213efc8ce64":[1,0,1399,61],
-"classTrait.html#a654dbdca51dc4525768048c27d0d6030":[1,0,1399,203]
+"classTrait.html#a600da57f2ca749e3a73f2fcc75c0536f":[1,0,1399,37]
 };

@@ -1760,6 +1760,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitToolAlchemy.cs", "TraitToolAlchemy_8cs.html", "TraitToolAlchemy_8cs" ],
     [ "TraitToolBelt.cs", "TraitToolBelt_8cs.html", "TraitToolBelt_8cs" ],
     [ "TraitToolBrush.cs", "TraitToolBrush_8cs.html", "TraitToolBrush_8cs" ],
+    [ "TraitToolBrushStrip.cs", "TraitToolBrushStrip_8cs.html", "TraitToolBrushStrip_8cs" ],
     [ "TraitToolBuild.cs", "TraitToolBuild_8cs.html", "TraitToolBuild_8cs" ],
     [ "TraitToolButcher.cs", "TraitToolButcher_8cs.html", "TraitToolButcher_8cs" ],
     [ "TraitToolFishing.cs", "TraitToolFishing_8cs.html", "TraitToolFishing_8cs" ],

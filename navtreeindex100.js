@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"classSerializedCards_1_1Data.html#a0161517296f1f9582b985aeb08e46f41":[1,0,1143,0,33],
+"classSerializedCards_1_1Data.html#a09c7927e3ba2577a9021410cd8166c4c":[1,0,1143,0,23],
 "classSerializedCards_1_1Data.html#a1673d7fe6c6b09014fcd47add5b47fbf":[1,0,1143,0,0],
 "classSerializedCards_1_1Data.html#a1aafed58625fe7730555b973cdfdbca8":[1,0,1143,0,25],
 "classSerializedCards_1_1Data.html#a218d4ec2d80bb91869157c8940a87801":[1,0,1143,0,17],
@@ -121,12 +123,12 @@ var NAVTREEINDEX100 =
 "classSkewEffect.html#aa9cf7aacdea76a7b6fd682761ba7c2dc":[1,0,1153,8],
 "classSkewEffect.html#aaaa3aa82d34cd1bc108dbd33057abcf2":[1,0,1153,2],
 "classSkewEffect.html#ab8c1a452a189608fd3aef10a161762a1":[1,0,1153,5],
-"classSkill.html":[1,0,1154],
-"classSkill.html#a84fef8278c7af1b8900826daba9ec833":[1,0,1154,4],
-"classSkill.html#a8f0eea33cc42f37c85deca259d30e493":[1,0,1154,0],
-"classSkill.html#ab1576470cc0bed3f3194e80edf234ca6":[1,0,1154,3],
-"classSkill.html#ae8497dc40f8e0ff0303b17740e707c3a":[1,0,1154,1],
-"classSkill.html#af0062c2e2382d83c4c7122b26f8785f4":[1,0,1154,2],
+"classSkill.html":[1,0,1155],
+"classSkill.html#a84fef8278c7af1b8900826daba9ec833":[1,0,1155,4],
+"classSkill.html#a8f0eea33cc42f37c85deca259d30e493":[1,0,1155,0],
+"classSkill.html#ab1576470cc0bed3f3194e80edf234ca6":[1,0,1155,3],
+"classSkill.html#ae8497dc40f8e0ff0303b17740e707c3a":[1,0,1155,1],
+"classSkill.html#af0062c2e2382d83c4c7122b26f8785f4":[1,0,1155,2],
 "classSkillCheck.html":[1,0,1156],
 "classSkinAsset.html":[1,0,1157],
 "classSkinAsset.html#ae74d480d7367b7e9201f69465b39c378":[1,0,1157,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX100 =
 "classSkinDeco.html#a9612fcf2a1f262d8ad99a740ef344a06":[1,0,1164,5],
 "classSkinDeco.html#a9638b712f910c7db4b4301f04ac37dbb":[1,0,1164,9],
 "classSkinDeco.html#a999f5e0e020ef8a8b4708bf51d16a5d6":[1,0,1164,15],
-"classSkinDeco.html#a9ecbb92f21cb8fbdcf6b02192dfd4fae":[1,0,1164,6],
-"classSkinDeco.html#aa3d6568d9ef4d44c5f9d03b736995fe9":[1,0,1164,12],
-"classSkinDeco.html#ab0d0f9aad4c4152e76402ec244e04e14":[1,0,1164,11]
+"classSkinDeco.html#a9ecbb92f21cb8fbdcf6b02192dfd4fae":[1,0,1164,6]
 };

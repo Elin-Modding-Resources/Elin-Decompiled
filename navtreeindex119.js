@@ -1,5 +1,7 @@
 var NAVTREEINDEX119 =
 {
+"classTraitInformer.html#adfc92367a39bc18656a6248b2453ea76":[1,0,1633,1],
+"classTraitInnkeeper.html":[1,0,1634],
 "classTraitInnkeeper.html#a98842eadb445c2d9f7eb61046343acb7":[1,0,1634,0],
 "classTraitItem.html":[1,0,1635],
 "classTraitItem.html#a02208ed1a7513742a9168c1d82ff04d5":[1,0,1635,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitMineEntrance.html#a31578a4695a39b06e6d55b2c32ad8d60":[1,0,1701,2],
 "classTraitMineEntrance.html#ad4edf6ccbf323b04d581042f0d5db63f":[1,0,1701,1],
 "classTraitMiniPool.html":[1,0,1702],
-"classTraitMiniPool.html#a3da0901f8c0fb31f5bce5efde7fc5d0b":[1,0,1702,0],
-"classTraitMiral.html":[1,0,1703],
-"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1703,4]
+"classTraitMiniPool.html#a3da0901f8c0fb31f5bce5efde7fc5d0b":[1,0,1702,0]
 };

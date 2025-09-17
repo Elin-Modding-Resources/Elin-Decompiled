@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"classMap.html#a8500972a7929aca8c318bbbdb3046ed5":[1,0,861,103],
+"classMap.html#a85bdabc6d9a225e9df83254c7c315e1b":[1,0,861,124],
 "classMap.html#a862bd855ebb54475e313802c9ed0f0ac":[1,0,861,137],
 "classMap.html#a879693e06260080afe2e3647d92f30cf":[1,0,861,144],
 "classMap.html#a8a14d879b575297ce8afa424d3a38789":[1,0,861,104],
@@ -247,7 +249,5 @@ var NAVTREEINDEX82 =
 "classMeetingFarris.html#ad3e5f6c25ec39af412fabbea75a88cd2":[1,0,876,0],
 "classMeetingManager.html":[1,0,877],
 "classMeetingManager.html#a07902675971cfa0c936fc470a1015bf5":[1,0,877,9],
-"classMeetingManager.html#a09e86191e1db5f916b61218c09a016e2":[1,0,877,3],
-"classMeetingManager.html#a1d200ac5971b3df00a37c71dd47e3b84":[1,0,877,6],
-"classMeetingManager.html#a1e023b90dde3e43e51db176628678776":[1,0,877,11]
+"classMeetingManager.html#a09e86191e1db5f916b61218c09a016e2":[1,0,877,3]
 };

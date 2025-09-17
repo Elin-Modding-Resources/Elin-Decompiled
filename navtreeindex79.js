@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"classLayerProgress.html#a15e0783cbc529c2836e80cff3898210d":[1,0,816,12],
+"classLayerProgress.html#a2263859dd0cc0314db87c1dd10f94fdc":[1,0,816,16],
 "classLayerProgress.html#a2ae593c4fbcb50eea2b898c5aab54a16":[1,0,816,2],
 "classLayerProgress.html#a2bb3b9de11c4f4522510895de2c8d4fa":[1,0,816,19],
 "classLayerProgress.html#a36b993f392fd01389a884bd9c624bbae":[1,0,816,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "classLayerUploader.html#ad2ef4adbf4dd7e29e4790769d392d701":[1,0,831,23],
 "classLayerUploader.html#ad6aebeef23f1d88a4ffc702d17467be9":[1,0,831,17],
 "classLayerUploader.html#adfebce1f2f2c4885d5bb150ec2d6ab07":[1,0,831,8],
-"classLayerUploader.html#ae3c2c339bc33eca8812417e7d9acfc02":[1,0,831,9],
-"classLayerUploader.html#aeba7aca9c6d9c89d0c723c3640e19f2c":[1,0,831,0],
-"classLayerUploader.html#af2ed691a454f6e10b593d867c6760689":[1,0,831,11]
+"classLayerUploader.html#ae3c2c339bc33eca8812417e7d9acfc02":[1,0,831,9]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"classCritterRat.html":[1,0,408],
+"classCritterRat.html#a31d966074d16810a06f684f6169fdb26":[1,0,408,3],
 "classCritterRat.html#a3bef0cbd070e9274a8352456c7022292":[1,0,408,2],
 "classCritterRat.html#a86c95a12a5832c25764026dd7c98573c":[1,0,408,1],
 "classCritterRat.html#aea9879284f0dcdb449d2822bd6d5edec":[1,0,408,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "classDateHelper.html#a5954dd80e43231d36a0519e96b3e91d4":[1,0,422,3],
 "classDateHelper.html#aa20799e2a0e6904662ae65e73d4df991":[1,0,422,1],
 "classDateHelper.html#af6b12b4238d51e066e76b85ba3255bdf":[1,0,422,2],
-"classDayData.html":[1,0,423],
-"classDayData.html#a0e9b605c31006052c8aea6c44b533505":[1,0,423,1],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1":[1,0,423,0]
+"classDayData.html":[1,0,423]
 };

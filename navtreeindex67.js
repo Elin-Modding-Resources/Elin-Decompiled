@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"classGlobalGoalVisitTown.html":[1,0,548],
+"classGlobalGoalVisitTown.html#aae4b5493cc8fb73c6767d901b6ae916b":[1,0,548,0],
 "classGoal.html":[1,0,549],
 "classGoal.html#ac9b79ca4cf9a4be75f310c0b1aca7ac1":[1,0,549,0],
 "classGoal.html#af817e3d757898d516364f0181a8a5c12":[1,0,549,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "classGrowSystem.html#ad677f379ca5913d7ec456feae837f313":[1,0,576,14],
 "classGrowSystem.html#ad7e119a2cf6f160cd4c134a7011b50aa":[1,0,576,72],
 "classGrowSystem.html#ad88e991257dae3a6e4d9db3dc03b170d":[1,0,576,30],
-"classGrowSystem.html#addb245be32f028ee3707404a60170a9f":[1,0,576,15],
-"classGrowSystem.html#ade599e37dc719b61fb35ad63ff7b17f1":[1,0,576,55],
-"classGrowSystem.html#ae02c4b6e69d57442dbb1d6724228dadf":[1,0,576,41]
+"classGrowSystem.html#addb245be32f028ee3707404a60170a9f":[1,0,576,15]
 };
