@@ -7058,6 +7058,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 1000;
 				case "whip_egg":
 					return 3000;
+				case "brush_strip":
+					return 2500;
 				case "hammer_strip":
 					return 5000;
 				case "helm_chef":

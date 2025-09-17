@@ -3678,7 +3678,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					chara.RemoveBacker();
 				}
 			}
-			if ((flag && chara.race.id != "cat") || EClass.rnd((!flag) ? (draw ? 3 : 10) : (draw ? 1 : 2)) != 0)
+			if ((flag && chara.race.id != "cat") || (!EClass.debug.enable && EClass.rnd((!flag) ? (draw ? 3 : 10) : (draw ? 1 : 2)) != 0))
 			{
 				continue;
 			}

@@ -736,7 +736,7 @@ public class ActionMode : EClass
 		}
 		if (AllowGeneralInput && !EClass.ui.IsDragging)
 		{
-			if (Input.GetKeyDown(KeyCode.Tab) && !EClass.debug.debugInput && !EClass.ui.BlockInput && !EInput.waitReleaseAnyKey)
+			if (Input.GetKeyDown(KeyCode.Tab) && !EClass.debug.debugInput && !EClass.ui.BlockInput && !IsBuildMode && !EInput.waitReleaseAnyKey)
 			{
 				if (!EClass.ui.IsInventoryOpen)
 				{
@@ -761,6 +761,10 @@ public class ActionMode : EClass
 					}
 					break;
 				case EAction.MenuInventory:
+					if (!EClass.ui.IsInventoryOpen)
+					{
+						SE.PopInventory();
+					}
 					EClass.ui.ToggleInventory();
 					break;
 				}

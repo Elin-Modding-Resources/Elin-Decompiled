@@ -160,6 +160,14 @@ public class TaskHarvest : BaseTaskHarvest
 			{
 				return null;
 			}
+			if (t.trait is TraitAbility)
+			{
+				return null;
+			}
+		}
+		if (c.IsPC && EClass.player.currentHotItem is HotItemAct)
+		{
+			return null;
 		}
 		if (p.HasObj && IsValidTarget(p.sourceObj.reqHarvest))
 		{
