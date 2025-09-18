@@ -5491,6 +5491,15 @@ public class Chara : Card, IPathfindWalker
 				}
 			}
 			break;
+		case "ungaga_pap":
+			num = 5;
+			flag = (flag2 = true);
+			if (EClass._zone is Zone_DungeonMino)
+			{
+				EClass.Sound.StopBGM(3f);
+				EClass._zone.SetBGM(46, refresh: false);
+			}
+			break;
 		case "melilith_boss":
 			num = 5;
 			flag = (flag2 = true);

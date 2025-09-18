@@ -94,7 +94,7 @@ public class CardRenderer : RenderObject
 		}
 		if (isChara && owner.parent == EClass.game.activeZone)
 		{
-			if (owner.Chara.bossText && !EClass.ui.IsActive && !SplashText.Instance && (!(owner.id == "lurie_boss") || !owner.Chara.IsNeutralOrAbove()))
+			if (owner.Chara.bossText && !EClass.ui.IsActive && !SplashText.Instance && !LayerDrama.Instance && !owner.Chara.IsNeutralOrAbove())
 			{
 				SplashText splashText = Util.Instantiate<SplashText>("Media/Text/SplashText_boss2", EClass.ui.rectDynamic);
 				string text = owner.Chara.Aka.ToTitleCase(wholeText: true);
@@ -107,20 +107,28 @@ public class CardRenderer : RenderObject
 				splashText.textSmall.text = text;
 				splashText.textBig.text = text2;
 				owner.Chara.bossText = false;
-				if (owner.id == "lurie_boss")
+				string id = owner.id;
+				if (!(id == "ungaga_pap"))
 				{
-					if (EClass._zone is Zone_UnderseaTemple)
+					if (id == "lurie_boss")
 					{
-						if (EClass._map.plDay.list.Count > 0 && EClass._map.plDay.list[0].data.id != 107)
+						if (EClass._zone is Zone_UnderseaTemple)
 						{
-							EClass._zone.SetBGM(107);
+							if (EClass._map.plDay.list.Count > 0 && EClass._map.plDay.list[0].data.id != 107)
+							{
+								EClass._zone.SetBGM(107);
+							}
+							if (EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 2)
+							{
+								EClass.game.quests.Get<QuestNegotiationDarkness>().NextPhase();
+							}
 						}
-						if (EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 2)
-						{
-							EClass.game.quests.Get<QuestNegotiationDarkness>().NextPhase();
-						}
+						owner.PlaySound("warcry");
 					}
-					owner.PlaySound("warcry");
+				}
+				else if (EClass._zone is Zone_DungeonMino)
+				{
+					EClass._zone.SetBGM(107);
 				}
 			}
 			if (owner.Chara.host == null)
@@ -242,10 +250,10 @@ public class CardRenderer : RenderObject
 					if (renderData.pass != null && EClass.pc.held == owner)
 					{
 						int num = (int)renderData.pass.pmesh.tiling.x;
-						string name = renderData.pass.name;
-						if (!(name == "pass charaL"))
+						string id = renderData.pass.name;
+						if (!(id == "pass charaL"))
 						{
-							if (name == "pass charaLW")
+							if (id == "pass charaLW")
 							{
 								if (p.tile < 0f)
 								{

@@ -214,7 +214,7 @@ public class ActMelee : ActBaseAttack
 					frustration = GetWeaponEnc(624, addSelfEnc: true);
 					int num3 = GetWeaponEnc(622, addSelfEnc: true);
 					feint = GetWeaponEnc(623, addSelfEnc: true);
-					knockback = GetWeaponEnc(603, addSelfEnc: true);
+					knockback = Act.CC.Evalue(603);
 					mod_talisman = GetWeaponEnc(609, addSelfEnc: true);
 					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
 					if (w != null)

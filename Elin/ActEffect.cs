@@ -951,7 +951,7 @@ public class ActEffect : EClass
 			CC.PlaySound("fire");
 			CC.PlayEffect("Element/eleFire");
 			CC.Say("burn_mana", CC);
-			CC.mana.Mod(-CC.mana.max / 3);
+			CC.mana.Mod(-CC.mana.max / 3 - 1);
 			break;
 		case EffectId.Exterminate:
 		{

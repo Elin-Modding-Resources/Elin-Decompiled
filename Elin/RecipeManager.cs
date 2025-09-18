@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class RecipeManager : EClass
 {
+	public enum LearnState
+	{
+		Unavailable,
+		InsufficientSkill,
+		AlreadyLearned,
+		Learnable
+	}
+
 	public static bool rebuild;
 
 	public static List<RecipeSource> list = new List<RecipeSource>();
@@ -241,23 +249,27 @@ public class RecipeManager : EClass
 		}
 	}
 
-	public bool CanCeomUpWithRecipe(string idRecipe)
+	public LearnState GetRecipeLearnState(string idRecipe)
 	{
 		if (idRecipe.IsEmpty())
 		{
-			return false;
+			return LearnState.Unavailable;
 		}
 		RecipeSource recipeSource = Get(idRecipe);
-		if (recipeSource == null || EClass.player.recipes.knownRecipes.ContainsKey(idRecipe) || (!recipeSource.NeedFactory && !recipeSource.IsQuickCraft))
+		if (recipeSource == null || (!recipeSource.NeedFactory && !recipeSource.IsQuickCraft))
 		{
-			return false;
+			return LearnState.Unavailable;
+		}
+		if (EClass.player.recipes.knownRecipes.ContainsKey(idRecipe))
+		{
+			return LearnState.AlreadyLearned;
 		}
 		int id = recipeSource.GetReqSkill().id;
 		if (EClass.pc.Evalue(id) + 5 < recipeSource.row.LV)
 		{
-			return false;
+			return LearnState.InsufficientSkill;
 		}
-		return true;
+		return LearnState.Learnable;
 	}
 
 	public void ComeUpWithRecipe(string idRecipe, int chanceForRandomRecipe = 0)

@@ -3487,7 +3487,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					thing.refVal = ele;
 					thing.encLV = num2;
 				}
-				EClass._map.TrySmoothPick(pos.IsBlocked ? EClass.pc.pos : pos, thing, EClass.pc);
+				EClass._map.TrySmoothPick((!ExistsOnMap || pos.IsBlocked) ? EClass.pc.pos : pos, thing, EClass.pc);
 				sockets[i] = 0;
 			}
 		}

@@ -345,6 +345,8 @@ public class ActThrow : ActBaseAttack
 				c.ModExp(108, 100);
 				if (traitMonsterBall.IsDuponneBall && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 3)
 				{
+					EClass.Sound.StopBGM(3f);
+					EClass._zone.SetBGM(1, refresh: false);
 					EClass.game.quests.Get<QuestNegotiationDarkness>().NextPhase();
 				}
 			}

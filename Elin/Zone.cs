@@ -2900,6 +2900,14 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 	}
 
+	public void ResetPlaylist()
+	{
+		map._plDay.Clear();
+		UnityEngine.Object.DestroyImmediate(map.plDay);
+		map.plDay = null;
+		RefreshPlaylist();
+	}
+
 	public void RefreshBGM()
 	{
 		if (!EClass.pc.IsInActiveZone || EClass.player.simulatingZone)

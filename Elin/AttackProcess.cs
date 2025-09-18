@@ -684,7 +684,7 @@ public class AttackProcess : EClass
 				ModExpDef(150, 90);
 				ModExpDef(151, 90);
 			}
-			ProcAbility(list, CC, TC, weaponSkill.Value + GetTwoHandEncBonus(CC), subAttack);
+			ProcAbility(list, CC, TC, weaponSkill.Value * (100 + GetTwoHandEncBonus(CC)) / 100, subAttack);
 			return false;
 		}
 		if (TC.IsPC)
@@ -815,7 +815,7 @@ public class AttackProcess : EClass
 					}
 				}
 			}
-			ProcAbility(list, CC, TC, weaponSkill.Value + GetTwoHandEncBonus(CC), subAttack);
+			ProcAbility(list, CC, TC, weaponSkill.Value * (100 + GetTwoHandEncBonus(CC)) / 100, subAttack);
 		}
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)
 		{

@@ -82,9 +82,20 @@ public class BaseTaskHarvest : TaskDesignation
 		}
 		SetTarget(EClass.pc);
 		string text = "tHarvest".lang(GetBaseText(str), (EClass.pc.Tool == null) ? "hand".lang() : owner.Tool.NameSimple, toolLv.ToString() ?? "");
-		if (EClass.pc.HasElement(1661) && EClass.player.recipes.CanCeomUpWithRecipe(IdRecipe))
+		if (EClass.pc.HasElement(1661))
 		{
-			text = text + " " + "TaskDisassemble_newrecipe".lang();
+			RecipeManager.LearnState recipeLearnState = EClass.player.recipes.GetRecipeLearnState(IdRecipe);
+			switch (recipeLearnState)
+			{
+			case RecipeManager.LearnState.Learnable:
+				text = text + " " + "TaskDisassemble_newrecipe".lang();
+				break;
+			default:
+				text = text + " " + ("TaskDisassemble_" + recipeLearnState).lang();
+				break;
+			case RecipeManager.LearnState.Unavailable:
+				break;
+			}
 		}
 		text = text + " (" + GetTextDifficulty() + ")";
 		if (IsTooHard)

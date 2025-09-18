@@ -1086,6 +1086,10 @@ public class GoalCombat : Goal
 			}
 			int num6 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
 			int num7 = -15 * tc.ResistLvFrom(num6);
+			if (a is ActSword)
+			{
+				num7 = 0;
+			}
 			switch (num6)
 			{
 			case 910:
