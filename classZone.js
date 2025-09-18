@@ -85,6 +85,7 @@ var classZone =
     [ "RefreshPlaylist", "classZone.html#a68a67c01937768a11ea0632514dae377", null ],
     [ "RemoveCard", "classZone.html#aa6e44da68e716595633891cec9e90713", null ],
     [ "ResetHostility", "classZone.html#acd971646a7dd5f30affe1262e62c53c9", null ],
+    [ "ResetPlaylist", "classZone.html#af1547d5d53cc8e788c10f86ec0e86988", null ],
     [ "Revive", "classZone.html#a1a048b3861c9d66d63a549035beb43ab", null ],
     [ "SetBGM", "classZone.html#a020269bd2edc9313bd2d1e1a8745a32c", null ],
     [ "SetBGM", "classZone.html#a114ae1f1bbf51bd9ac9861f599264e7c", null ],

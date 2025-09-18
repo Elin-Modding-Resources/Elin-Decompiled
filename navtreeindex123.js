@@ -1,5 +1,10 @@
 var NAVTREEINDEX123 =
 {
+"classTraitToolMusic.html#a6c7c055a5a8b58dd04965de99fce74be":[1,0,1876,0],
+"classTraitToolMusic.html#a781fb5d77ac59a1293edca876030cf25":[1,0,1876,1],
+"classTraitToolMusicBig.html":[1,0,1877],
+"classTraitToolMusicBig.html#a9a2988056ad5650f7435819d06faabf9":[1,0,1877,0],
+"classTraitToolMusicMic.html":[1,0,1878],
 "classTraitToolRange.html":[1,0,1879],
 "classTraitToolRange.html#a4ceb81ef267c84bc4960ebb10c4e0777":[1,0,1879,8],
 "classTraitToolRange.html#a59c8645c495c2a97be97cc1130d2804f":[1,0,1879,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX123 =
 "classTransAnimeData.html#ac33fcc847580605554b86b8a9e8ddb4c":[1,0,1930,9],
 "classTransAnimeData.html#ac4c4acba36ab6e2d0500e00f0e83f12a":[1,0,1930,0],
 "classTransAnimeData.html#ac8afce20b382f64684dd185683299400":[1,0,1930,13],
-"classTransAnimeData.html#ace6b59c70084d142d0ef9b18da033cdd":[1,0,1930,18],
-"classTransAnimeData.html#ad2318f8a233b699c5810b7aeb363ed31":[1,0,1930,1],
-"classTransAnimeData.html#ae5b2f3bbde07a96556b05e03109a37d4":[1,0,1930,11],
-"classTransAnimeData.html#ae864ec4ac7e176a868d059645abcf852":[1,0,1930,16],
-"classTutorial.html":[1,0,1931],
-"classTutorial.html#a39aaae45ca729223dc4ee97367aee1f2":[1,0,1931,4]
+"classTransAnimeData.html#ace6b59c70084d142d0ef9b18da033cdd":[1,0,1930,18]
 };

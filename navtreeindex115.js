@@ -1,5 +1,10 @@
 var NAVTREEINDEX115 =
 {
+"classTraitBall.html#a2c60b947e7e99945839070f7418c832a":[1,0,1420,1],
+"classTraitBall.html#a5b7f38443b0af7249248a06af97ebc8c":[1,0,1420,0],
+"classTraitBananaPeel.html":[1,0,1421],
+"classTraitBananaPeel.html#a35f6bb6198d4cc5d009c42e3cec00d4e":[1,0,1421,3],
+"classTraitBananaPeel.html#a693332211aa44d8fa431813a0e52f2cb":[1,0,1421,1],
 "classTraitBananaPeel.html#ae543ae587c520f715a768884cf96bb49":[1,0,1421,0],
 "classTraitBananaPeel.html#af627480fad2384e3ff463de101b8c474":[1,0,1421,2],
 "classTraitBank.html":[1,0,1422],
@@ -244,10 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitChara.html#a370a975fa5bda2e1b1725d5996e3ca88":[1,0,1470,24],
 "classTraitChara.html#a3943c976ac2114e14e1f972306d9f2f8":[1,0,1470,9],
 "classTraitChara.html#a44f05aa73755a6598345089f4317a0fb":[1,0,1470,11],
-"classTraitChara.html#a4ac543634c2c650d9ab2e5febb6de473":[1,0,1470,32],
-"classTraitChara.html#a4ac67453fdbd134569bb96d365ab7320":[1,0,1470,30],
-"classTraitChara.html#a50bc2590459e3f4162d92cd0fedecbc8":[1,0,1470,21],
-"classTraitChara.html#a5e954dd9e54b5f0e9e9e0acbdf453152":[1,0,1470,14],
-"classTraitChara.html#a6a3934cb4a11d57398b6fb7117ebe58e":[1,0,1470,7],
-"classTraitChara.html#a6d86a99535256bf0e8024ad5bc54b2c2":[1,0,1470,17]
+"classTraitChara.html#a4ac543634c2c650d9ab2e5febb6de473":[1,0,1470,32]
 };

@@ -1,14 +1,20 @@
 var classRecipeManager =
 [
+    [ "LearnState", "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83", [
+      [ "Unavailable", "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83a453e6aa38d87b28ccae545967c53004f", null ],
+      [ "InsufficientSkill", "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83a1ffed751bd6aaec8a59eb3ad05c3e927", null ],
+      [ "AlreadyLearned", "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83a82fa3d17a2dfcc9533b6a648d499f362", null ],
+      [ "Learnable", "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83a7b128c908192468a51ed622bc50fafd7", null ]
+    ] ],
     [ "Add", "classRecipeManager.html#abfdac34700a6d0361b304d8be7008850", null ],
     [ "BuildList", "classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f", null ],
-    [ "CanCeomUpWithRecipe", "classRecipeManager.html#a4f3e0e42268a7e779205d5c4f3d07a99", null ],
     [ "ComeUpWithRandomRecipe", "classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab", null ],
     [ "ComeUpWithRecipe", "classRecipeManager.html#a26f4ff13eeb57ea9765a5c3d95eb0e88", null ],
     [ "Create", "classRecipeManager.html#a63f5bd20a49c7a39dd04505922ba8fa3", null ],
     [ "Get", "classRecipeManager.html#a4e9316f14703649f499ff90ac5fed97d", null ],
     [ "GetLearnedRecipe", "classRecipeManager.html#a5002a20288ffda7a359f02dde43384bb", null ],
     [ "GetRandomRecipe", "classRecipeManager.html#aecb1c741b6f9349424fbb084a8848615", null ],
+    [ "GetRecipeLearnState", "classRecipeManager.html#a9b6d0e155d2ff8575bfd3466b755f66d", null ],
     [ "GetSource", "classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79", null ],
     [ "GetUnlearnedRecipe", "classRecipeManager.html#a7b921412204381fc644ce0ac8abcec62", null ],
     [ "IsKnown", "classRecipeManager.html#a31d21cfdafbd1d03ddbe16cd4d9ec9d5", null ],

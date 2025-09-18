@@ -1,5 +1,10 @@
 var NAVTREEINDEX119 =
 {
+"classTraitIndulgence.html":[1,0,1632],
+"classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1632,0],
+"classTraitInformer.html":[1,0,1633],
+"classTraitInformer.html#a45d21aa6becf3adbbe756570bcef33d2":[1,0,1633,0],
+"classTraitInformer.html#a5c83359e8a084cf42606afae00f40bc9":[1,0,1633,2],
 "classTraitInformer.html#adfc92367a39bc18656a6248b2453ea76":[1,0,1633,1],
 "classTraitInnkeeper.html":[1,0,1634],
 "classTraitInnkeeper.html#a98842eadb445c2d9f7eb61046343acb7":[1,0,1634,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitMill.html#a89329c74d83b9a6c1bf84c6397bf8335":[1,0,1700,4],
 "classTraitMill.html#ac37fbb885121eb6ec53baadb4e8fb311":[1,0,1700,3],
 "classTraitMill.html#aeb92b774551bfe715e41681f9b2e3ff5":[1,0,1700,0],
-"classTraitMineEntrance.html":[1,0,1701],
-"classTraitMineEntrance.html#a27bc44d54a3a73cd844df94d22840e18":[1,0,1701,0],
-"classTraitMineEntrance.html#a31578a4695a39b06e6d55b2c32ad8d60":[1,0,1701,2],
-"classTraitMineEntrance.html#ad4edf6ccbf323b04d581042f0d5db63f":[1,0,1701,1],
-"classTraitMiniPool.html":[1,0,1702],
-"classTraitMiniPool.html#a3da0901f8c0fb31f5bce5efde7fc5d0b":[1,0,1702,0]
+"classTraitMineEntrance.html":[1,0,1701]
 };

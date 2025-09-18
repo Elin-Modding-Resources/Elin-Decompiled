@@ -1,5 +1,10 @@
 var NAVTREEINDEX118 =
 {
+"classTraitFloorSwitch.html":[1,0,1568],
+"classTraitFloorSwitch.html#a8cb9fe69f1bad95221af3b4f3282c01e":[1,0,1568,0],
+"classTraitFlyer.html":[1,0,1569],
+"classTraitFlyer.html#ac1693046120ebde13b5f5b01cc96650e":[1,0,1569,0],
+"classTraitFollower.html":[1,0,1570],
 "classTraitFollower.html#a0a6bf2b7018105d4995602a1b72177a2":[1,0,1570,0],
 "classTraitFollower.html#a3e2a186ebbed1ecf19f2c75aa476317a":[1,0,1570,1],
 "classTraitFood.html":[1,0,1571],
@@ -244,10 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitIncubator.html#a5b87af23019200733b000010034199de":[1,0,1631,5],
 "classTraitIncubator.html#a6119c378e5c66da625b8eba6ba9c4361":[1,0,1631,0],
 "classTraitIncubator.html#ac84f64d0a27de94f83fdc996b2ac5250":[1,0,1631,4],
-"classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688":[1,0,1631,1],
-"classTraitIndulgence.html":[1,0,1632],
-"classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1632,0],
-"classTraitInformer.html":[1,0,1633],
-"classTraitInformer.html#a45d21aa6becf3adbbe756570bcef33d2":[1,0,1633,0],
-"classTraitInformer.html#a5c83359e8a084cf42606afae00f40bc9":[1,0,1633,2]
+"classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688":[1,0,1631,1]
 };
