@@ -1005,7 +1005,27 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			EClass.ui.AddLayer<LayerCalendar>();
+			EClass.player.karma = EScriptable.rnd(200) - 100;
+			Msg.Say("k:" + EClass.player.karma + "  ");
+			if (EClass.player.karma < 80 && EClass.pc.HasElement(1270))
+			{
+				EClass.pc.SetFeat(1270, 0, msg: true);
+			}
+			if (EClass.player.karma > -80 && EClass.pc.HasElement(1271))
+			{
+				EClass.pc.SetFeat(1271, 0, msg: true);
+			}
+			if (EClass.player.karma >= 80)
+			{
+				if (EScriptable.rnd(EClass.debug.enable ? 1 : 5) == 0 && !EClass.pc.HasElement(1270))
+				{
+					EClass.pc.SetFeat(1270, 1, msg: true);
+				}
+			}
+			else if (EClass.player.karma <= -80 && EScriptable.rnd(EClass.debug.enable ? 1 : 2) == 0 && !EClass.pc.HasElement(1271))
+			{
+				EClass.pc.SetFeat(1271, 1, msg: true);
+			}
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))

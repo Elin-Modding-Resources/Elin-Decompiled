@@ -675,6 +675,17 @@ public class DramaManager : EMono
 		case "end":
 			AddEvent(new DramaEventExit());
 			break;
+		case "modAffinity":
+			AddEvent(delegate
+			{
+				int num = int.Parse(p2);
+				if (EMono.debug.enable)
+				{
+					num *= 10;
+				}
+				EMono.pc.ModAffinity(tg.chara, num);
+			});
+			break;
 		case "acceptQuest":
 			if (LayerDrama.fromBook)
 			{
@@ -986,7 +997,6 @@ public class DramaManager : EMono
 			break;
 		case "new":
 		case "saveBGM":
-		case "addAffinity":
 		case "checkAffinity":
 			break;
 		}

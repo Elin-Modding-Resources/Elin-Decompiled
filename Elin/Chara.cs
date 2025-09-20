@@ -9534,7 +9534,24 @@ public class Chara : Card, IPathfindWalker
 			{
 				flag = !flag;
 			}
-			PlaySound("mutation");
+			switch (id)
+			{
+			case 1270:
+				if (!flag)
+				{
+					PlaySound("chime_angel");
+				}
+				break;
+			case 1271:
+				if (!flag)
+				{
+					PlaySound("chime_devil");
+				}
+				break;
+			default:
+				PlaySound("mutation");
+				break;
+			}
 			Msg.SetColor(flag ? Msg.colors.Negative : Msg.colors.Ding);
 			Say((value > num) ? feat.source.GetText("textInc") : feat.source.GetText("textDec"), this, feat.FullName);
 		}

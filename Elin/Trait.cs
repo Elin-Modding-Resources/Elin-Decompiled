@@ -1513,9 +1513,9 @@ public class Trait : EClass
 		owner.c_dateStockExpire = EClass.world.date.GetRaw(24 * RestockDay);
 		owner.isRestocking = true;
 		t.things.DestroyAll((Thing _t) => _t.GetInt(101) != 0);
-		foreach (Thing thing8 in t.things)
+		foreach (Thing thing9 in t.things)
 		{
-			thing8.invX = -1;
+			thing9.invX = -1;
 		}
 		switch (ShopType)
 		{
@@ -1531,48 +1531,48 @@ public class Trait : EClass
 			{
 				break;
 			}
-			int num3 = 0;
-			foreach (Thing thing9 in c_copyContainer.things)
+			int num4 = 0;
+			foreach (Thing thing10 in c_copyContainer.things)
 			{
-				if (!owner.trait.CanCopy(thing9))
+				if (!owner.trait.CanCopy(thing10))
 				{
 					continue;
 				}
-				Thing thing4 = thing9.Duplicate(1);
-				thing4.isStolen = false;
-				thing4.isCopy = true;
-				thing4.c_priceFix = 0;
-				foreach (Element item in thing4.elements.dict.Values.Where((Element e) => e.HasTag("noInherit")).ToList())
+				Thing thing5 = thing10.Duplicate(1);
+				thing5.isStolen = false;
+				thing5.isCopy = true;
+				thing5.c_priceFix = 0;
+				foreach (Element item in thing5.elements.dict.Values.Where((Element e) => e.HasTag("noInherit")).ToList())
 				{
-					thing4.elements.Remove(item.id);
+					thing5.elements.Remove(item.id);
 				}
-				int num4 = 1;
+				int num5 = 1;
 				switch (owner.trait.CopyShop)
 				{
 				case CopyShopType.Item:
 				{
-					num4 = (1000 + owner.c_invest * 100) / (thing4.GetPrice(CurrencyType.Money, sell: false, PriceType.CopyShop) + 50);
+					num5 = (1000 + owner.c_invest * 100) / (thing5.GetPrice(CurrencyType.Money, sell: false, PriceType.CopyShop) + 50);
 					int[] array = new int[4] { 701, 704, 703, 702 };
 					foreach (int ele in array)
 					{
-						if (thing4.HasElement(ele))
+						if (thing5.HasElement(ele))
 						{
-							num4 = 1;
+							num5 = 1;
 						}
 					}
 					break;
 				}
 				case CopyShopType.Spellbook:
-					thing4.c_charges = thing9.c_charges;
+					thing5.c_charges = thing10.c_charges;
 					break;
 				}
-				if (num4 > 1 && thing4.trait.CanStack)
+				if (num5 > 1 && thing5.trait.CanStack)
 				{
-					thing4.SetNum(num4);
+					thing5.SetNum(num5);
 				}
-				AddThing(thing4);
-				num3++;
-				if (num3 > owner.trait.NumCopyItem)
+				AddThing(thing5);
+				num4++;
+				if (num4 > owner.trait.NumCopyItem)
 				{
 					break;
 				}
@@ -1608,7 +1608,7 @@ public class Trait : EClass
 			break;
 		case ShopType.RedBook:
 		{
-			for (int num5 = 0; num5 < 30; num5++)
+			for (int num3 = 0; num3 < 30; num3++)
 			{
 				AddThing(ThingGen.CreateFromCategory((EClass.rnd(2) == 0) ? "_book" : "book"));
 			}
@@ -1621,11 +1621,11 @@ public class Trait : EClass
 			AddThing(TraitSeed.MakeSeed("carrot")).SetNum(4 + EClass.rnd(4));
 			AddThing(TraitSeed.MakeSeed("potato")).SetNum(4 + EClass.rnd(4));
 			AddThing(TraitSeed.MakeSeed("corn")).SetNum(4 + EClass.rnd(4));
-			for (int num6 = 0; num6 < EClass.rnd(3) + 1; num6++)
+			for (int num7 = 0; num7 < EClass.rnd(3) + 1; num7++)
 			{
 				Add("462", 1, 0);
 			}
-			for (int num7 = 0; num7 < EClass.rnd(3) + 1; num7++)
+			for (int num8 = 0; num8 < EClass.rnd(3) + 1; num8++)
 			{
 				Add("1167", 1, 0);
 			}
@@ -1704,17 +1704,31 @@ public class Trait : EClass
 					if (num2)
 					{
 						Add("littleball", 10, 0);
+						if (owner.Chara.affinity.CanGiveCard())
+						{
+							if (!owner.Chara.HasElement(287))
+							{
+								owner.Chara.elements.SetBase(287, (!EClass.debug.enable) ? 1 : 50);
+							}
+							for (int l = 0; l < 20; l++)
+							{
+								owner.Chara.ModExp(287, 1000);
+							}
+							Thing thing3 = CraftUtil.MakeLoveLunch(owner.Chara);
+							thing3.elements.SetBase(1229, 1);
+							AddThing(thing3);
+						}
 						break;
 					}
-					for (int l = 0; l < 10; l++)
+					for (int m = 0; m < 10; m++)
 					{
-						Thing thing3 = ThingGen.Create(EClass._zone.IsFestival ? "1123" : ((EClass.rnd(3) == 0) ? "1169" : "1160"));
-						thing3.DyeRandom();
-						AddThing(thing3);
+						Thing thing4 = ThingGen.Create(EClass._zone.IsFestival ? "1123" : ((EClass.rnd(3) == 0) ? "1169" : "1160"));
+						thing4.DyeRandom();
+						AddThing(thing4);
 					}
 					if (EClass._zone is Zone_Exile)
 					{
-						for (int m = 0; m < 30; m++)
+						for (int n = 0; n < 30; n++)
 						{
 							Add("1235", 1, -1);
 							Add("1236", 1, -1);
@@ -1823,9 +1837,9 @@ public class Trait : EClass
 						continue;
 					}
 					string[] recipeKey = item3.row.recipeKey;
-					for (int n = 0; n < recipeKey.Length; n++)
+					for (int num6 = 0; num6 < recipeKey.Length; num6++)
 					{
-						if (recipeKey[n] == ShopType.ToString())
+						if (recipeKey[num6] == ShopType.ToString())
 						{
 							NoRestock(ThingGen.CreateRecipe(item3.id));
 							break;
@@ -1836,23 +1850,23 @@ public class Trait : EClass
 				{
 				case ShopType.Moyer:
 				{
-					for (int num10 = 1; num10 <= 12; num10++)
+					for (int num11 = 1; num11 <= 12; num11++)
 					{
-						AddAdvWeek(num10);
+						AddAdvWeek(num11);
 					}
 					break;
 				}
 				case ShopType.StrangeGirl:
 				{
-					int num11 = (EClass.debug.enable ? 20 : (EClass._zone.development / 10));
-					if (num11 > 0)
+					int num12 = (EClass.debug.enable ? 20 : (EClass._zone.development / 10));
+					if (num12 > 0)
 					{
-						Add("syringe_gene", num11, 0);
+						Add("syringe_gene", num12, 0);
 						Add("diary_little", 1, 0);
 					}
-					if (num11 > 10)
+					if (num12 > 10)
 					{
-						Add("syringe_heaven", num11 / 5, 0);
+						Add("syringe_heaven", num12 / 5, 0);
 					}
 					break;
 				}
@@ -1907,24 +1921,24 @@ public class Trait : EClass
 						Add("ticket_armpillow", 1, 0);
 						Add("ticket_champagne", 1, 0);
 					}
-					for (int num8 = 0; num8 < 3; num8++)
+					for (int num9 = 0; num9 < 3; num9++)
 					{
 						if (EClass.rnd(5) == 0)
 						{
 							TreasureType treasureType = ((EClass.rnd(10) == 0) ? TreasureType.BossNefia : ((EClass.rnd(10) == 0) ? TreasureType.Map : TreasureType.RandomChest));
-							int num9 = EClass.rnd(EClass.rnd(ShopLv + (EClass.debug.enable ? 200 : 50)) + 1) + 1;
-							Thing thing5 = ThingGen.Create(treasureType switch
+							int num10 = EClass.rnd(EClass.rnd(ShopLv + (EClass.debug.enable ? 200 : 50)) + 1) + 1;
+							Thing thing6 = ThingGen.Create(treasureType switch
 							{
 								TreasureType.Map => "chest_treasure", 
 								TreasureType.BossNefia => "chest_boss", 
 								_ => "chest3", 
 							});
-							thing5.c_lockedHard = true;
-							thing5.c_lockLv = num9;
-							thing5.c_priceAdd = 2000 + num9 * 250 * ((treasureType == TreasureType.RandomChest) ? 1 : 5);
-							thing5.c_revealLock = true;
-							ThingGen.CreateTreasureContent(thing5, num9, treasureType, clearContent: true);
-							AddThing(thing5);
+							thing6.c_lockedHard = true;
+							thing6.c_lockLv = num10;
+							thing6.c_priceAdd = 2000 + num10 * 250 * ((treasureType == TreasureType.RandomChest) ? 1 : 5);
+							thing6.c_revealLock = true;
+							ThingGen.CreateTreasureContent(thing6, num10, treasureType, clearContent: true);
+							AddThing(thing6);
 						}
 					}
 					break;
@@ -1933,7 +1947,7 @@ public class Trait : EClass
 				ShopType shopType = ShopType;
 				if (shopType == ShopType.General || shopType == ShopType.Food)
 				{
-					for (int num12 = 0; num12 < (EClass.debug.enable ? 3 : 3); num12++)
+					for (int num13 = 0; num13 < (EClass.debug.enable ? 3 : 3); num13++)
 					{
 						if (EClass.rnd(3) == 0)
 						{
@@ -1974,49 +1988,49 @@ public class Trait : EClass
 					}
 					AddThing(ThingGen.CreateScroll(8780, EClass.rndHalf(5)));
 				}
-				foreach (Thing thing10 in t.things)
+				foreach (Thing thing11 in t.things)
 				{
-					thing10.c_idBacker = 0;
+					thing11.c_idBacker = 0;
 					if (ShopType != ShopType.Copy)
 					{
-						thing10.TryMakeRandomItem(ShopLv);
-						if (thing10.Num == 1)
+						thing11.TryMakeRandomItem(ShopLv);
+						if (thing11.Num == 1)
 						{
-							thing10.SetNum(thing10.trait.DefaultStock);
+							thing11.SetNum(thing11.trait.DefaultStock);
 						}
-						if (thing10.trait is TraitFoodMeal)
+						if (thing11.trait is TraitFoodMeal)
 						{
-							CraftUtil.MakeDish(thing10, ShopLv, owner.Chara);
+							CraftUtil.MakeDish(thing11, ShopLv, owner.Chara);
 						}
-						if (thing10.IsFood && owner.id == "rodwyn")
+						if (thing11.IsFood && owner.id == "rodwyn")
 						{
 							SourceElement.Row row = EClass.sources.elements.rows.Where((SourceElement.Row e) => !e.foodEffect.IsEmpty() && e.category != "feat" && e.chance > 0).RandomItem();
-							thing10.elements.SetBase(row.id, 10 + EClass.rnd(10));
+							thing11.elements.SetBase(row.id, 10 + EClass.rnd(10));
 						}
 					}
 					if (CurrencyType == CurrencyType.Casino_coin)
 					{
-						thing10.noSell = true;
+						thing11.noSell = true;
 					}
 					if (Guild.Thief.IsCurrentZone)
 					{
-						thing10.isStolen = true;
+						thing11.isStolen = true;
 					}
-					if (!(thing10.trait is TraitErohon))
+					if (!(thing11.trait is TraitErohon))
 					{
-						thing10.c_IDTState = 0;
+						thing11.c_IDTState = 0;
 					}
-					if (CurrencyType == CurrencyType.Money && (thing10.category.IsChildOf("meal") || thing10.category.IsChildOf("preserved")) && thing10.id != "ration")
+					if (CurrencyType == CurrencyType.Money && (thing11.category.IsChildOf("meal") || thing11.category.IsChildOf("preserved")) && thing11.id != "ration")
 					{
-						thing10.c_priceFix = -70;
+						thing11.c_priceFix = -70;
 					}
-					if (thing10.trait is TraitErohon)
+					if (thing11.trait is TraitErohon)
 					{
-						thing10.c_IDTState = 5;
+						thing11.c_IDTState = 5;
 					}
-					if (thing10.IsContainer && !thing10.c_revealLock)
+					if (thing11.IsContainer && !thing11.c_revealLock)
 					{
-						thing10.RemoveThings();
+						thing11.RemoveThings();
 						t.c_lockLv = 0;
 					}
 				}
@@ -2024,11 +2038,11 @@ public class Trait : EClass
 				{
 					return;
 				}
-				int num13 = t.things.width * 10;
-				if (t.things.Count > num13)
+				int num14 = t.things.width * 10;
+				if (t.things.Count > num14)
 				{
-					int num14 = t.things.Count - num13;
-					for (int num15 = 0; num15 < num14; num15++)
+					int num15 = t.things.Count - num14;
+					for (int num16 = 0; num16 < num15; num16++)
 					{
 						t.things.LastItem().Destroy();
 					}
@@ -2037,15 +2051,15 @@ public class Trait : EClass
 				Thing Add(string id, int a, int idSkin)
 				{
 					CardBlueprint.SetNormalRarity();
-					Thing thing7 = ThingGen.Create(id, -1, ShopLv).SetNum(a);
-					thing7.idSkin = ((idSkin == -1) ? EClass.rnd(thing7.source.skins.Length + 1) : idSkin);
-					return t.AddThing(thing7);
+					Thing thing8 = ThingGen.Create(id, -1, ShopLv).SetNum(a);
+					thing8.idSkin = ((idSkin == -1) ? EClass.rnd(thing8.source.skins.Length + 1) : idSkin);
+					return t.AddThing(thing8);
 				}
 				void AddAdvWeek(int i)
 				{
-					Thing thing6 = ThingGen.CreateRedBook("advweek_" + i);
-					thing6.c_priceFix = -90;
-					AddThing(thing6);
+					Thing thing7 = ThingGen.CreateRedBook("advweek_" + i);
+					thing7.c_priceFix = -90;
+					AddThing(thing7);
 				}
 				Thing AddThing(Thing _t)
 				{

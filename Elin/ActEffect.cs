@@ -94,8 +94,9 @@ public class ActEffect : EClass
 			{
 			case EffectId.Arrow:
 			case EffectId.MoonSpear:
+			case EffectId.MoonArrow:
 			{
-				effect = Effect.Get((id == EffectId.MoonSpear) ? "spell_moonspear" : "spell_arrow");
+				effect = Effect.Get((id == EffectId.MoonSpear || id == EffectId.MoonArrow) ? "spell_moonspear" : "spell_arrow");
 				if (id == EffectId.Arrow)
 				{
 					effect.sr.color = elementRef.colorSprite;
@@ -143,7 +144,7 @@ public class ActEffect : EClass
 			}
 			if (effect != null)
 			{
-				if (id == EffectId.Arrow || id == EffectId.MoonSpear)
+				if (id == EffectId.Arrow || id == EffectId.MoonSpear || id == EffectId.MoonArrow)
 				{
 					TryDelay(delegate
 					{
@@ -196,8 +197,13 @@ public class ActEffect : EClass
 				{
 					continue;
 				}
-				if ((uint)(id - 250) <= 1u || id == EffectId.Sword || id == EffectId.MoonSpear)
+				switch (id)
 				{
+				case EffectId.Arrow:
+				case EffectId.Hand:
+				case EffectId.Sword:
+				case EffectId.MoonSpear:
+				case EffectId.MoonArrow:
 					if (c.isChara && CC.isChara)
 					{
 						c.Chara.RequestProtection(CC.Chara, delegate(Chara a)
@@ -205,10 +211,11 @@ public class ActEffect : EClass
 							c = a;
 						});
 					}
-					if (id == EffectId.MoonSpear)
+					if (id == EffectId.MoonSpear || (id == EffectId.MoonArrow && EClass.rnd(5) == 0))
 					{
 						attackSource = AttackSource.MoonSpear;
 					}
+					break;
 				}
 				switch (id)
 				{
@@ -507,6 +514,7 @@ public class ActEffect : EClass
 		}
 		case EffectId.Arrow:
 		case EffectId.MoonSpear:
+		case EffectId.MoonArrow:
 		{
 			List<Point> list = new List<Point>();
 			list.Add(tp.Copy());

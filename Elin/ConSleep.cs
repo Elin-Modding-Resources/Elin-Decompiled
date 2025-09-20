@@ -325,6 +325,27 @@ public class ConSleep : BadCondition
 				member.SAN.Mod(-15);
 			}
 		}
+		if (EClass.player.karma < 80 && EClass.pc.HasElement(1270))
+		{
+			EClass.pc.SetFeat(1270, 0, msg: true);
+		}
+		if (EClass.player.karma > -80 && EClass.pc.HasElement(1271))
+		{
+			EClass.pc.SetFeat(1271, 0, msg: true);
+		}
+		Rand.SetSeed(EClass.game.seed + EClass.player.stats.days);
+		if (EClass.player.karma >= 80)
+		{
+			if (EClass.rnd(EClass.debug.enable ? 1 : 5) == 0 && !EClass.pc.HasElement(1270))
+			{
+				EClass.pc.SetFeat(1270, 1, msg: true);
+			}
+		}
+		else if (EClass.player.karma <= -80 && EClass.rnd(EClass.debug.enable ? 1 : 2) == 0 && !EClass.pc.HasElement(1271))
+		{
+			EClass.pc.SetFeat(1271, 1, msg: true);
+		}
+		Rand.SetSeed();
 		static void TryPick(Thing t, ItemPosition pos)
 		{
 			if (t != null)

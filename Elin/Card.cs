@@ -5326,9 +5326,20 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			for (int i = 0; i < 20; i++)
 			{
 				CardRow cardRow = SpawnList.Get(text).Select(lv + i);
-				if ((cardRow.model.Chara.race.corpse[0] != "_meat" && id != "milk" && id != "_egg" && id != "egg_fertilized") || (itemSource == TryMakeRandomItemSource.Cooking && cardRow.model.HasElement(701)))
+				if (cardRow.model.Chara.race.corpse[0] != "_meat" && id != "milk" && id != "_egg" && id != "egg_fertilized")
 				{
 					continue;
+				}
+				if (itemSource == TryMakeRandomItemSource.Cooking)
+				{
+					if (cardRow.model.HasElement(701))
+					{
+						continue;
+					}
+					if (crafter != null && crafter.id == "big_sister")
+					{
+						cardRow = crafter.source;
+					}
 				}
 				if (id == "milk")
 				{
@@ -7049,6 +7060,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			switch (currency)
 			{
+			case CurrencyType.Influence:
+				if (id == "lunch_love")
+				{
+					return 10;
+				}
+				break;
 			case CurrencyType.Ecopo:
 				switch (id)
 				{

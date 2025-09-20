@@ -2570,7 +2570,8 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public Chara TryGenerateEvolved(bool force = false, Point p = null)
 	{
-		if (!force && EvolvedChance <= EClass.rndf(1f))
+		float num = EvolvedChance * (EClass.pc.HasElement(1270) ? 1.1f : 1f);
+		if (!force && num <= EClass.rndf(1f))
 		{
 			return null;
 		}
@@ -2589,7 +2590,7 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public void TryGenerateBigDaddy()
 	{
-		if (!(BigDaddyChance <= EClass.rndf(1f)))
+		if (!(BigDaddyChance * (EClass.pc.HasElement(1270) ? 1.1f : 1f) <= EClass.rndf(1f)))
 		{
 			int num = DangerLv * 125 / 100;
 			if (num >= 30)
@@ -2599,18 +2600,27 @@ public class Zone : Spatial, ICardParent, IInspect
 					lv = num
 				});
 			}
-			Chara t = CharaGen.Create("big_daddy");
-			EClass._zone.AddCard(t, GetSpawnPos(SpawnPosition.Random, 10000));
+			Chara chara = CharaGen.Create("big_daddy");
+			if (EClass.pc.HasElement(1270))
+			{
+				chara.SetHostility(Hostility.Friend);
+			}
+			else if (EClass.pc.HasElement(1271))
+			{
+				chara.SetHostility(Hostility.Enemy);
+			}
+			EClass._zone.AddCard(chara, GetSpawnPos(SpawnPosition.Random, 10000));
 			Msg.Say("sign_bigdaddy");
 		}
 	}
 
 	public void TryGenerateShrine()
 	{
+		float num = ShrineChance * (EClass.pc.HasElement(1270) ? 1.1f : 1f);
 		for (int i = 0; i < 3; i++)
 		{
 			Rand.SetSeed(base.uid + i);
-			if (ShrineChance <= EClass.rndf(1f))
+			if (num <= EClass.rndf(1f))
 			{
 				continue;
 			}
@@ -2751,9 +2761,9 @@ public class Zone : Spatial, ICardParent, IInspect
 			num3 = (50 + cardRow.LV) * Mathf.Max(1, (num - 1) / 50);
 		}
 		num3 += DangerLvBoost;
-		if (setting.rarity == Rarity.Random)
+		if (setting.rarity == Rarity.Random && cardRow.quality == 0)
 		{
-			if (EClass.rnd(100) == 0)
+			if (EClass.rnd(EClass.pc.HasElement(1271) ? 80 : 100) == 0)
 			{
 				cardBlueprint.rarity = Rarity.Legendary;
 				num3 = num3 * 125 / 100;
@@ -2782,6 +2792,25 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			Hostility c_originalHostility = (chara.hostility = setting.forcedHostility.Value);
 			chara.c_originalHostility = c_originalHostility;
+		}
+		else
+		{
+			switch (chara.id)
+			{
+			case "santa":
+			case "silverwolf":
+			case "twintail":
+			case "test17":
+				if (EClass.pc.HasElement(1270))
+				{
+					chara.SetHostility(Hostility.Friend);
+				}
+				else if (EClass.pc.HasElement(1271))
+				{
+					chara.SetHostility(Hostility.Enemy);
+				}
+				break;
+			}
 		}
 		if (setting.isBoss)
 		{

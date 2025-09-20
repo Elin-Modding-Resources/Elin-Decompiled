@@ -333,14 +333,14 @@ public class CharaRenderer : CardRenderer
 		RenderObject.currentParam.liquidLv = 0;
 		RenderObject.currentParam.x += 0.01f * (float)pref.equipX;
 		RenderObject.currentParam.y += num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
-		RenderObject.currentParam.z -= pref.hatY;
+		RenderObject.currentParam.z += 0f - pref.hatY + ((pccData != null) ? 0.4f : 0.3f);
 		RenderObject.currentParam.tile = cardRow._tiles[owner.uid % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
 		RenderObject.currentParam.mat = cardRow.DefaultMaterial;
 		RenderObject.currentParam.matColor = cardRow.GetColorInt(RenderObject.currentParam.mat);
 		cardRow.renderData.Draw(RenderObject.currentParam);
 		RenderObject.currentParam.x -= 0.01f * (float)pref.equipX;
 		RenderObject.currentParam.y -= num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
-		RenderObject.currentParam.z += pref.hatY;
+		RenderObject.currentParam.z -= 0f - pref.hatY + ((pccData != null) ? 0.4f : 0.3f);
 		RenderObject.currentParam.liquidLv = liquidLv;
 	}
 

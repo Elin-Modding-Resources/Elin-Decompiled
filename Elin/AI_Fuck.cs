@@ -301,7 +301,16 @@ public class AI_Fuck : AIAct
 			}
 			if (ntr)
 			{
-				chara2.things.Find<TraitDreamBug>()?.ModNum(-1);
+				Thing thing = chara2.things.Find<TraitDreamBug>();
+				if (thing != null)
+				{
+					thing.ModNum(-1);
+					if (chara.IsPC)
+					{
+						Msg.Say("dream_spell", EClass.sources.elements.map[9156].GetName().ToLowerInvariant());
+						EClass.pc.GainAbility(9156, EClass.rnd(2) + 1);
+					}
+				}
 			}
 			if (!ntr || !chara.HasElement(1239) || chara2.HasElement(1216))
 			{

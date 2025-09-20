@@ -218,7 +218,7 @@ public class FoodEffect : EClass
 					{
 						break;
 					}
-					goto IL_0f04;
+					goto IL_0f01;
 				case "love":
 					ActEffect.LoveMiracle(c, EClass.pc, value.Value * 10);
 					break;
@@ -251,7 +251,6 @@ public class FoodEffect : EClass
 						c.SetFeat(1230, c.elements.Base(1230) + 1);
 					}
 					c.SetInt(112, @int + 1);
-					flag6 = false;
 					break;
 				}
 				}
@@ -363,20 +362,25 @@ public class FoodEffect : EClass
 		{
 			food.trait.OnDrink(c);
 		}
-		goto IL_0f04;
-		IL_0f04:
-		if (consume)
+		goto IL_0f01;
+		IL_0f01:
+		if (!consume)
 		{
-			num7 += 5f;
-			if (flag6 && (float)food.Evalue(10) > num7 + 10f)
+			return;
+		}
+		num7 += 5f;
+		if (flag6 && (float)food.Evalue(10) > num7 + 10f)
+		{
+			food.elements.SetTo(10, (int)Mathf.Max((float)food.Evalue(10) - num7, 1f));
+			food.SetBool(125, enable: true);
+			if (food.HasElement(1229))
 			{
-				food.elements.SetTo(10, (int)Mathf.Max((float)food.Evalue(10) - num7, 1f));
-				food.SetBool(125, enable: true);
+				food.elements.Remove(1229);
 			}
-			else
-			{
-				food.ModNum(-1);
-			}
+		}
+		else
+		{
+			food.ModNum(-1);
 		}
 	}
 

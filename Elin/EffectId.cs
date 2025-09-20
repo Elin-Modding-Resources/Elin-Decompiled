@@ -124,5 +124,6 @@ public enum EffectId
 	Youth = 300,
 	EternalYouth = 301,
 	MoonSpear = 302,
-	BurnMana = 303
+	BurnMana = 303,
+	MoonArrow = 304
 }

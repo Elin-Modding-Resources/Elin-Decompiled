@@ -37,7 +37,7 @@ public class POLICY
 
 	public const int bed_quality = 2812;
 
-	public const int resident_tax = 2512;
+	public const int self_sufficient = 2511;
 
 	public const int open_business = 2810;
 
@@ -46,8 +46,6 @@ public class POLICY
 	public const int vaccination = 2509;
 
 	public const int ban_radio = 2510;
-
-	public const int self_sufficient = 2511;
 
 	public const int legal_drug = 2505;
 
@@ -63,6 +61,8 @@ public class POLICY
 
 	public const int tourist_safety = 2811;
 
+	public const int resident_tax = 2512;
+
 	public const int inquisition = 2507;
 
 	public const int resident_wanted = 2513;
@@ -75,11 +75,9 @@ public class POLICY
 
 	public const int energy_conservation = 2700;
 
-	public const int border_watch = 2704;
+	public const int taxTransfer = 2705;
 
 	public const int weed_no = 2703;
-
-	public const int taxTransfer = 2705;
 
 	public const int speed_growth = 2516;
 
@@ -105,14 +103,16 @@ public class POLICY
 
 	public const int noMother = 2710;
 
+	public const int border_watch = 2704;
+
 	public static readonly int[] IDS = new int[51]
 	{
 		2819, 2814, 2815, 2816, 2817, 2818, 2820, 2828, 2822, 2823,
-		2824, 2825, 2826, 2827, 2813, 2821, 2812, 2512, 2810, 2508,
-		2509, 2510, 2511, 2505, 2504, 2503, 2502, 2501, 2500, 2811,
-		2507, 2513, 2514, 2515, 2506, 2700, 2704, 2703, 2705, 2516,
-		2707, 2708, 2709, 2706, 2711, 2712, 2715, 2800, 2702, 2701,
-		2710
+		2824, 2825, 2826, 2827, 2813, 2821, 2812, 2511, 2810, 2508,
+		2509, 2510, 2505, 2504, 2503, 2502, 2501, 2500, 2811, 2512,
+		2507, 2513, 2514, 2515, 2506, 2700, 2705, 2703, 2516, 2707,
+		2708, 2709, 2706, 2711, 2712, 2715, 2800, 2702, 2701, 2710,
+		2704
 	};
 }
 public class Policy : EClass
