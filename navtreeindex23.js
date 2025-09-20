@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"Zone__DungeonFairy_8cs_source.html":[2,0,0,1933],
 "Zone__DungeonMino_8cs.html":[2,0,0,1934],
 "Zone__DungeonMino_8cs_source.html":[2,0,0,1934],
 "Zone__DungeonPuppy_8cs.html":[2,0,0,1935],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classABILITY.html#ae4a80dce34993ea3eec3d3fef5aa2e7a":[1,0,11,67],
 "classABILITY.html#ae7bec151e00e990eb7b948ce61db5a9b":[1,0,11,56],
 "classABILITY.html#ae879c54c90ff0a7a24708b6bf30728bb":[1,0,11,121],
-"classABILITY.html#aea9a939db95ae9c37059c9761a21c31e":[1,0,11,3],
-"classABILITY.html#aeb818e2a3d2405a2344cde18d6ede810":[1,0,11,11]
+"classABILITY.html#aea9a939db95ae9c37059c9761a21c31e":[1,0,11,3]
 };

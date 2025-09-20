@@ -1,5 +1,8 @@
 var NAVTREEINDEX89 =
 {
+"classPoolManager.html#a38f808e594445fb6a6f12f3fae5b6b56":[1,0,950,12],
+"classPoolManager.html#a3d9c5938ed50994cad47f2e8ebf68c55":[1,0,950,13],
+"classPoolManager.html#a4c7b5bdbc9b327f22f5b31002221ec6c":[1,0,950,11],
 "classPoolManager.html#a5eb5294334d45a9336bacb9bd3faef89":[1,0,950,2],
 "classPoolManager.html#a719b92449dfb223b03bb0ebc1b0218ff":[1,0,950,7],
 "classPoolManager.html#a71ecb399c2f29419382c2410f98f0b27":[1,0,950,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX89 =
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#acc841a967a7dae1f44624c0402435029":[1,0,7,0,1,6],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#affa3927cd90cd7182d88ed1b0dd2c2cf":[0,4,7,0,1,10],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#affa3927cd90cd7182d88ed1b0dd2c2cf":[1,0,7,0,1,10],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html":[1,0,7,0,2],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html":[0,4,7,0,2],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a14e41a7ddc3c2673f66243e38d5fe887":[1,0,7,0,2,5],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html#a14e41a7ddc3c2673f66243e38d5fe887":[0,4,7,0,2,5]
+"classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html":[1,0,7,0,2]
 };

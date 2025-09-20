@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TraitDrinkMilkMother_8cs_source.html":[2,0,0,1426],
 "TraitDrinkMilk_8cs.html":[2,0,0,1425],
 "TraitDrinkMilk_8cs_source.html":[2,0,0,1425],
 "TraitDrink_8cs.html":[2,0,0,1424],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitMagicChest_8cs_source.html":[2,0,0,1547],
 "TraitMahjong_8cs.html":[2,0,0,1548],
 "TraitMahjong_8cs_source.html":[2,0,0,1548],
-"TraitMaid_8cs.html":[2,0,0,1549],
-"TraitMaid_8cs_source.html":[2,0,0,1549]
+"TraitMaid_8cs.html":[2,0,0,1549]
 };

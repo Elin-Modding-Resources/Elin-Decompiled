@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classAI__Fish_1_1ProgressFish.html#ae0b1d261d717f15ce121a2f4b33132ae":[1,0,77,0,3],
 "classAI__Fuck.html":[1,0,78],
 "classAI__Fuck.html#a0e8f832ee8fb7893761d1437af94ccf7":[1,0,78,14],
 "classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449":[1,0,78,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__TendAnimal.html":[1,0,109],
 "classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7":[1,0,109,0],
 "classAI__Torture.html":[1,0,110],
-"classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2":[1,0,110,4],
-"classAI__Torture.html#a6f424584c46f3e4104c623bdaea8f268":[1,0,110,0]
+"classAI__Torture.html#a624ee4dd4b38e70c7da95848b0d8d7e2":[1,0,110,4]
 };

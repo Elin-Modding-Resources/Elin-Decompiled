@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classConMiasma.html#a0e4b16048c4c380aff9bfddd04d39273":[1,0,336,1],
 "classConMiasma.html#ab6ca61a0a078bff1f293ff276037d5d8":[1,0,336,0],
 "classConMiasma.html#af8d2f9c3fe00e2c54842693a05990307":[1,0,336,2],
 "classConNightVision.html":[1,0,338],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classContentConfigGame.html#ae114307428a9436b309c68c021f6b755":[1,0,361,27],
 "classContentConfigGame.html#aeacba678b7946abd3afd3071c38aa60b":[1,0,361,6],
 "classContentConfigGame.html#aee1520b2e99693c0065615b1048d7ed1":[1,0,361,21],
-"classContentConfigGame.html#afb90ee7a0ed9bc8935d41ab5a2f6b3df":[1,0,361,37],
-"classContentConfigGame.html#afd62dad3bbc94c6d1b4995d7c5419011":[1,0,361,10]
+"classContentConfigGame.html#afb90ee7a0ed9bc8935d41ab5a2f6b3df":[1,0,361,37]
 };

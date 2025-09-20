@@ -1,5 +1,9 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMill.html#a89329c74d83b9a6c1bf84c6397bf8335":[1,0,1700,4],
+"classTraitMill.html#ac37fbb885121eb6ec53baadb4e8fb311":[1,0,1700,3],
+"classTraitMill.html#aeb92b774551bfe715e41681f9b2e3ff5":[1,0,1700,0],
+"classTraitMineEntrance.html":[1,0,1701],
 "classTraitMineEntrance.html#a27bc44d54a3a73cd844df94d22840e18":[1,0,1701,0],
 "classTraitMineEntrance.html#a31578a4695a39b06e6d55b2c32ad8d60":[1,0,1701,2],
 "classTraitMineEntrance.html#ad4edf6ccbf323b04d581042f0d5db63f":[1,0,1701,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitPuppy.html":[1,0,1758],
 "classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1758,0],
 "classTraitQuestBoard.html":[1,0,1759],
-"classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1759,0],
-"classTraitQuestBoard.html#acc915a6236db624e9877d89ed47c9913":[1,0,1759,1],
-"classTraitQuiver.html":[1,0,1760],
-"classTraitQuru.html":[1,0,1761],
-"classTraitQuru.html#a78ee1996db80b583df7a0cc891ff6876":[1,0,1761,0]
+"classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1759,0]
 };

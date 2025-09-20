@@ -1,5 +1,8 @@
 var NAVTREEINDEX82 =
 {
+"classMap.html#a8270be4ddfbee895c502315214e1af18":[1,0,861,149],
+"classMap.html#a839eead98f5ce5bf843e1ae3760fb78f":[1,0,861,68],
+"classMap.html#a84f5d47f87dddce563ed9473f8d0fb24":[1,0,861,112],
 "classMap.html#a8500972a7929aca8c318bbbdb3046ed5":[1,0,861,103],
 "classMap.html#a85bdabc6d9a225e9df83254c7c315e1b":[1,0,861,124],
 "classMap.html#a862bd855ebb54475e313802c9ed0f0ac":[1,0,861,137],
@@ -246,8 +249,5 @@ var NAVTREEINDEX82 =
 "classMeetingFarris.html":[1,0,876],
 "classMeetingFarris.html#a3c4ffa574f70c3f6ee9dee01a1b5591a":[1,0,876,2],
 "classMeetingFarris.html#a79622873f1f989b055691a2aec25ed04":[1,0,876,1],
-"classMeetingFarris.html#ad3e5f6c25ec39af412fabbea75a88cd2":[1,0,876,0],
-"classMeetingManager.html":[1,0,877],
-"classMeetingManager.html#a07902675971cfa0c936fc470a1015bf5":[1,0,877,9],
-"classMeetingManager.html#a09e86191e1db5f916b61218c09a016e2":[1,0,877,3]
+"classMeetingFarris.html#ad3e5f6c25ec39af412fabbea75a88cd2":[1,0,876,0]
 };

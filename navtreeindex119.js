@@ -1,5 +1,9 @@
 var NAVTREEINDEX119 =
 {
+"classTraitIncubator.html#a5b87af23019200733b000010034199de":[1,0,1631,5],
+"classTraitIncubator.html#a6119c378e5c66da625b8eba6ba9c4361":[1,0,1631,0],
+"classTraitIncubator.html#ac84f64d0a27de94f83fdc996b2ac5250":[1,0,1631,4],
+"classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688":[1,0,1631,1],
 "classTraitIndulgence.html":[1,0,1632],
 "classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1632,0],
 "classTraitInformer.html":[1,0,1633],
@@ -245,9 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitMiko__Nefu.html":[1,0,1699],
 "classTraitMill.html":[1,0,1700],
 "classTraitMill.html#a2131821af05b10eddd12f4eb27e79ef1":[1,0,1700,1],
-"classTraitMill.html#a84499c7b08b7c9c36f90ecdc442490a3":[1,0,1700,2],
-"classTraitMill.html#a89329c74d83b9a6c1bf84c6397bf8335":[1,0,1700,4],
-"classTraitMill.html#ac37fbb885121eb6ec53baadb4e8fb311":[1,0,1700,3],
-"classTraitMill.html#aeb92b774551bfe715e41681f9b2e3ff5":[1,0,1700,0],
-"classTraitMineEntrance.html":[1,0,1701]
+"classTraitMill.html#a84499c7b08b7c9c36f90ecdc442490a3":[1,0,1700,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"QuestMeal__fruit_8cs.html":[2,0,0,944],
 "QuestMeal__fruit_8cs_source.html":[2,0,0,944],
 "QuestMeal__meat_8cs.html":[2,0,0,945],
 "QuestMeal__meat_8cs_source.html":[2,0,0,945],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "Resist_8cs.html#a8387139be855f5585d9e1580321896e5a9ef69f48f751342bb563666bdbc224fb":[2,0,0,1039,0,6],
 "Resist_8cs.html#a8387139be855f5585d9e1580321896e5abc1d149e056a1e8dd513e4f5397184bf":[2,0,0,1039,0,1],
 "Resist_8cs.html#a8387139be855f5585d9e1580321896e5ac43e0fd449c758dab8f891d8e19eb1a9":[2,0,0,1039,0,4],
-"Resist_8cs_source.html":[2,0,0,1039],
-"Resistance_8cs.html":[2,0,0,1040]
+"Resist_8cs_source.html":[2,0,0,1039]
 };

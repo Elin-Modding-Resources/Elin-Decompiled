@@ -1,5 +1,8 @@
 var NAVTREEINDEX85 =
 {
+"classNet_1_1VoteLog.html#a4cacbb8b39e360f2f33fa5bab597113e":[1,0,903,3,1],
+"classNet_1_1VoteLog.html#a4d1dfb5558a9dd9cc897cf26305eebc2":[1,0,903,3,3],
+"classNet_1_1VoteLog.html#a8b2a9143c0b178e34c255f6a18c536de":[1,0,903,3,2],
 "classNet_1_1VoteLog.html#ae575f75496e2ab0c5de561feb37406ce":[1,0,903,3,0],
 "classNewsList.html":[1,0,904],
 "classNewsList.html#a0f3082893aa9930fefb795ec46194271":[1,0,904,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX85 =
 "classPOLICY.html#a98c7436999d04dd43bcbde22d62f295a":[1,0,948,28],
 "classPOLICY.html#a9c4eb08b7a2a3d5dd5d3c22ad3715ae9":[1,0,948,44],
 "classPOLICY.html#a9e059e1a17c7dcd448d8d359af04584a":[1,0,948,23],
-"classPOLICY.html#aa2d84097f59f797e54b662d163c6f322":[1,0,948,7],
-"classPOLICY.html#aa86b25d772f0a765a77dc3433d801ee1":[1,0,948,41],
-"classPOLICY.html#aacbee4b0bc3fb356a2f2fe235493a8db":[1,0,948,4],
-"classPOLICY.html#ab47e68f3e908a4b75be56ee6c0382915":[1,0,948,17]
+"classPOLICY.html#aa2d84097f59f797e54b662d163c6f322":[1,0,948,7]
 };

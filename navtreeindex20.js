@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitUniqueChara_8cs.html":[2,0,0,1798],
 "TraitUniqueChara_8cs_source.html":[2,0,0,1798],
 "TraitUniqueGuildPersonnel_8cs.html":[2,0,0,1799],
 "TraitUniqueGuildPersonnel_8cs_source.html":[2,0,0,1799],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "UniqueData_8cs.html":[2,0,0,1856],
 "UniqueData_8cs_source.html":[2,0,0,1856],
 "UnityDragAndDropHook_8cs.html":[2,0,0,2,0,0,7],
-"UnityDragAndDropHook_8cs_source.html":[2,0,0,2,0,0,7],
-"UnityEventBool_8cs.html":[2,0,0,2,95]
+"UnityDragAndDropHook_8cs_source.html":[2,0,0,2,0,0,7]
 };

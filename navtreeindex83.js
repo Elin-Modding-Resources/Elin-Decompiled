@@ -1,5 +1,8 @@
 var NAVTREEINDEX83 =
 {
+"classMeetingManager.html":[1,0,877],
+"classMeetingManager.html#a07902675971cfa0c936fc470a1015bf5":[1,0,877,9],
+"classMeetingManager.html#a09e86191e1db5f916b61218c09a016e2":[1,0,877,3],
 "classMeetingManager.html#a1d200ac5971b3df00a37c71dd47e3b84":[1,0,877,6],
 "classMeetingManager.html#a1e023b90dde3e43e51db176628678776":[1,0,877,11],
 "classMeetingManager.html#a1e3f5402b39a20fe345b179148c94db0":[1,0,877,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX83 =
 "classMosframe_1_1DynamicScrollView.html#aa0efdf48cb8388f959aa702ef6323294":[0,4,6,1,22],
 "classMosframe_1_1DynamicScrollView.html#aa0efdf48cb8388f959aa702ef6323294":[1,0,6,1,22],
 "classMosframe_1_1DynamicScrollView.html#aa26cf9317506888d0bbfbe36da8e340a":[0,4,6,1,10],
-"classMosframe_1_1DynamicScrollView.html#aa26cf9317506888d0bbfbe36da8e340a":[1,0,6,1,10],
-"classMosframe_1_1DynamicScrollView.html#aa64deafefd4e01165aad013b958cc0c9":[1,0,6,1,19],
-"classMosframe_1_1DynamicScrollView.html#aa64deafefd4e01165aad013b958cc0c9":[0,4,6,1,19],
-"classMosframe_1_1DynamicScrollView.html#aaa7ff1006fb8b4a0e933d11b623e6edf":[0,4,6,1,15]
+"classMosframe_1_1DynamicScrollView.html#aa26cf9317506888d0bbfbe36da8e340a":[1,0,6,1,10]
 };

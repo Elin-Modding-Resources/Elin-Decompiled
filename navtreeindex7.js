@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GameSerializationBinder_8cs.html":[2,0,0,501],
 "GameSerializationBinder_8cs_source.html":[2,0,0,501],
 "GameSetting_8cs.html":[2,0,0,502],
 "GameSetting_8cs_source.html":[2,0,0,502],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca3f7039a836c00d92ecf87fd7d338c4db":[2,0,0,591,0,4],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca405aaff66082ffe7231d7c1f79926c17":[2,0,0,591,0,12],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca60aef5b4c954c9f7ac9016310c55aac7":[2,0,0,591,0,14],
-"HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca62506be34d574da4a0d158a67253ea99":[2,0,0,591,0,0],
-"HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca77004ea213d5fc71acf74a8c9c6795fb":[2,0,0,591,0,3]
+"HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca62506be34d574da4a0d158a67253ea99":[2,0,0,591,0,0]
 };
