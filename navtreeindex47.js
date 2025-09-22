@@ -1,5 +1,10 @@
 var NAVTREEINDEX47 =
 {
+"classCodexCreature.html#a53fc120a115da7361e65f8df05ada451":[1,0,285,8],
+"classCodexCreature.html#a58063c13c4320af8195fa35419d55d01":[1,0,285,5],
+"classCodexCreature.html#a704ac7b03e97fa4803a7e6db7bc62b5b":[1,0,285,9],
+"classCodexCreature.html#a7c4ffca759757b23c56ba8680a5f8d27":[1,0,285,10],
+"classCodexCreature.html#a81ac7ba6c24ffae71af742eb5f6d22d0":[1,0,285,3],
 "classCodexCreature.html#a8f278f37a2e35c847d54cf3a925a29fd":[1,0,285,0],
 "classCodexCreature.html#a909253583d6c402986b699a819754fb1":[1,0,285,6],
 "classCodexCreature.html#a950a88f7881ea6b652df6611beb20898":[1,0,285,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX47 =
 "classConInvisibility.html#a640e09a4fd2ff5531b2b8cfb25884aa4":[1,0,333,1],
 "classConInvisibility.html#ac25f8da9dd4d5f630b91b6d51987974c":[1,0,333,0],
 "classConInvisibility.html#af0165653c4373e4fd5f7699b34e13a4b":[1,0,333,3],
-"classConInvulnerable.html":[1,0,334],
-"classConLevitate.html":[1,0,335],
-"classConLevitate.html#a1ba1f70b88cd19584e777da183736b61":[1,0,335,1],
-"classConLevitate.html#a5ccdcd8f92a788a17ca510237f211a04":[1,0,335,0],
-"classConLevitate.html#a9948f98226735557999565a550fdf9c9":[1,0,335,2],
-"classConMiasma.html":[1,0,336]
+"classConInvulnerable.html":[1,0,334]
 };

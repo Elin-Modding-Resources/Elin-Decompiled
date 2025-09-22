@@ -47,10 +47,10 @@ var searchData=
   ['flat_44',['Flat',['../classRoofStyle.html#aaf1c9d850540f499788438ba4b98cf5ba745e3db6a7ffd50e1a72b39482f0882d',1,'RoofStyle.Flat()'],['../classTileType.html#a40fd08da6f01be4b322461238acafae5a745e3db6a7ffd50e1a72b39482f0882d',1,'TileType.Flat()']]],
   ['flatfloor_45',['FlatFloor',['../classRoofStyle.html#aaf1c9d850540f499788438ba4b98cf5ba9a9a19d646518873b14e9ee17133bd0a',1,'RoofStyle']]],
   ['flatten_46',['Flatten',['../classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289a4adae1c15e93fd1abd85fcdd8b948e10',1,'AM_Terrain']]],
-  ['flavor_47',['Flavor',['../FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a4448804864d703e8b696c3fa7713aa23',1,'FontColor.cs']]],
+  ['flavor_47',['Flavor',['../FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a4448804864d703e8b696c3fa7713aa23',1,'Flavor():&#160;FontColor.cs'],['../classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a4448804864d703e8b696c3fa7713aa23',1,'GamePrincipal.Flavor()']]],
   ['float_48',['Float',['../PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3a22ae0e2b89e5e3d477f988cc36d3272b',1,'PrefFlag.cs']]],
   ['floatunderwater_49',['FloatUnderwater',['../PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3acd89c6c781d9d83b7f88482a839f30ce',1,'PrefFlag.cs']]],
-  ['floor_50',['Floor',['../classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7caf3f6d0343d56ce88ce7958170ed05cb3',1,'BaseTaskHarvest.Floor()'],['../classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beaf3f6d0343d56ce88ce7958170ed05cb3',1,'CoreConfig.Floor()'],['../classCameraSupport.html#a764fe3119d6b3264c4981f01836076ecaf3f6d0343d56ce88ce7958170ed05cb3',1,'CameraSupport.Floor()'],['../classBaseTileSelector.html#aeb150efb90d481f6e6d19a43514de1a6af3f6d0343d56ce88ce7958170ed05cb3',1,'BaseTileSelector.Floor()']]],
+  ['floor_50',['Floor',['../classCoreConfig.html#af8cefaa44a42f8eaa135aacb9dfc14beaf3f6d0343d56ce88ce7958170ed05cb3',1,'CoreConfig.Floor()'],['../classCameraSupport.html#a764fe3119d6b3264c4981f01836076ecaf3f6d0343d56ce88ce7958170ed05cb3',1,'CameraSupport.Floor()'],['../classBaseTileSelector.html#aeb150efb90d481f6e6d19a43514de1a6af3f6d0343d56ce88ce7958170ed05cb3',1,'BaseTileSelector.Floor()'],['../classBaseTaskHarvest.html#a6cf11e59f5be432d7b78ef8295675e7caf3f6d0343d56ce88ce7958170ed05cb3',1,'BaseTaskHarvest.Floor()']]],
   ['flora_51',['flora',['../ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a979c8e8f8271e3431249f935cd7d3f4c',1,'ContainerFlag2.cs']]],
   ['flyer_52',['Flyer',['../ThrowType_8cs.html#a05c5b2190a1fd92db99fcaca11eeee80af4d889918bba79c6b2e3d343d31d8d57',1,'ThrowType.cs']]],
   ['foe_53',['Foe',['../classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58ac47f96859804ca40a97e3ec80ce85221',1,'Affinity']]],
@@ -85,7 +85,6 @@ var searchData=
   ['funnel_82',['Funnel',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a3d9f1d3463ae4fabc0f18e3f47e7a9b4',1,'EffectId.cs']]],
   ['fur_83',['fur',['../Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a40bc2c3326dcc0c9ea95f303f2165aa0',1,'Emo2.cs']]],
   ['fur2_84',['fur2',['../Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088ac6eac6d335664c1738761f747081fccc',1,'Emo2.cs']]],
-  ['furniture_85',['Furniture',['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabb3a8b2e390142074e49741a0121d623',1,'ShopType.cs']]],
-  ['furniture_86',['furniture',['../ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85bafd87f5969ecaa22eaca667dd742f916d',1,'ContainerFlag.cs']]],
-  ['furniture_87',['Furniture',['../classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9dabb3a8b2e390142074e49741a0121d623',1,'TraitGacha']]]
+  ['furniture_85',['Furniture',['../classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9dabb3a8b2e390142074e49741a0121d623',1,'TraitGacha.Furniture()'],['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabb3a8b2e390142074e49741a0121d623',1,'Furniture():&#160;ShopType.cs']]],
+  ['furniture_86',['furniture',['../ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85bafd87f5969ecaa22eaca667dd742f916d',1,'ContainerFlag.cs']]]
 ];

@@ -30,7 +30,8 @@ var classCoreConfig =
       [ "EmptyHand", "classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eacff8c6c6d3caa7fd7522bc779b8a98b2", null ],
       [ "Fire", "classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eabd2b7e5f85a6ea65065c4ebc6d7c95bb", null ],
       [ "SwitchHotbar", "classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eaa2021db39e45652ac57f56a4a6c22e0c", null ],
-      [ "PropertySearch", "classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eae7e52216047c199f16597f96fd32ac66", null ]
+      [ "PropertySearch", "classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0eae7e52216047c199f16597f96fd32ac66", null ],
+      [ "ToggleLog", "classCoreConfig.html#ad985ae8f519011ae201e8ec55758dc0ea40b5441039877630c8deff108627577c", null ]
     ] ],
     [ "GameFuncBuild", "classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8", [
       [ "None", "classCoreConfig.html#a75830db6af0286d65ccc8fea20b055f8a6adf97f83acf6453d4a6a4b1070f3754", null ],

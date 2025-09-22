@@ -1,5 +1,17 @@
 var NAVTREEINDEX119 =
 {
+"classTraitHouseBoard_1_1Data.html#ac7e5bb7cc0542cd42488bcd3d68e60b9":[1,0,1628,0,9],
+"classTraitHouseBoard_1_1Data.html#af821e32d51cf81d58a9da427ca06fe2b":[1,0,1628,0,12],
+"classTraitIllumination.html":[1,0,1629],
+"classTraitIllumination.html#a2943f02d7fa0fe4ab25fe2df3423fb16":[1,0,1629,1],
+"classTraitIllumination.html#ae080f2ba42627c81c2a4ae423d3a0ddb":[1,0,1629,0],
+"classTraitIncinerator.html":[1,0,1630],
+"classTraitIncubator.html":[1,0,1631],
+"classTraitIncubator.html#a01be3a4b8ab3dca322ee0eec40670aa8":[1,0,1631,6],
+"classTraitIncubator.html#a08b08410e9e46115a2b6d236b22429df":[1,0,1631,3],
+"classTraitIncubator.html#a0f85ef82f7e7f9334ecd28ec4a039598":[1,0,1631,8],
+"classTraitIncubator.html#a18699f14d54bfb2326f762d86291817d":[1,0,1631,2],
+"classTraitIncubator.html#a4b87afe6c576e76b0c0dd1f17acc1dc8":[1,0,1631,7],
 "classTraitIncubator.html#a5b87af23019200733b000010034199de":[1,0,1631,5],
 "classTraitIncubator.html#a6119c378e5c66da625b8eba6ba9c4361":[1,0,1631,0],
 "classTraitIncubator.html#ac84f64d0a27de94f83fdc996b2ac5250":[1,0,1631,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1694,3],
 "classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1694,2],
 "classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1694,1],
-"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1694,0],
-"classTraitMerchantSeed.html":[1,0,1695],
-"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1695,0],
-"classTraitMerchantSouvenir.html":[1,0,1696],
-"classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1696,0],
-"classTraitMerchantWeapon.html":[1,0,1697],
-"classTraitMerchantWeapon.html#a39707660f853306b84cb5dd687a478e8":[1,0,1697,1],
-"classTraitMerchantWeapon.html#af0080d32bcb9f5aade5f2099b25dcd70":[1,0,1697,0],
-"classTraitMiko__Mifu.html":[1,0,1698],
-"classTraitMiko__Nefu.html":[1,0,1699],
-"classTraitMill.html":[1,0,1700],
-"classTraitMill.html#a2131821af05b10eddd12f4eb27e79ef1":[1,0,1700,1],
-"classTraitMill.html#a84499c7b08b7c9c36f90ecdc442490a3":[1,0,1700,2]
+"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1694,0]
 };

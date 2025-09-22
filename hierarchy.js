@@ -1199,6 +1199,7 @@ var hierarchy =
           ] ],
           [ "Zone_Dungeon", "classZone__Dungeon.html", [
             [ "Zone_DungeonUnfixed", "classZone__DungeonUnfixed.html", [
+              [ "Zone_DungeonDragon", "classZone__DungeonDragon.html", null ],
               [ "Zone_DungeonPuppy", "classZone__DungeonPuppy.html", null ],
               [ "Zone_DungeonYeek", "classZone__DungeonYeek.html", null ]
             ] ],
@@ -1764,6 +1765,7 @@ var hierarchy =
           [ "TraitRecycle", "classTraitRecycle.html", null ],
           [ "TraitRope", "classTraitRope.html", null ],
           [ "TraitScrollMapTreasure", "classTraitScrollMapTreasure.html", null ],
+          [ "TraitSpit", "classTraitSpit.html", null ],
           [ "TraitStairsLocked", "classTraitStairsLocked.html", null ],
           [ "TraitTape", "classTraitTape.html", null ],
           [ "TraitTaxChest", "classTraitTaxChest.html", null ],

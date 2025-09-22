@@ -1,5 +1,16 @@
 var NAVTREEINDEX92 =
 {
+"classQuestCursedManor.html#aef99e9abb394e435091eb387e57aa37f":[1,0,978,2],
+"classQuestDebt.html":[1,0,979],
+"classQuestDebt.html#a038d7e8f0eddbee1f6fb7b802004bc33":[1,0,979,2],
+"classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,979,10],
+"classQuestDebt.html#a5ccbf960ec04b44e7634427523063cc2":[1,0,979,1],
+"classQuestDebt.html#a5d289654a81bdd243fb33a4c5487b8dd":[1,0,979,4],
+"classQuestDebt.html#a9e71514a893633df9b31c44acab9aeb4":[1,0,979,0],
+"classQuestDebt.html#aa4f5d7d6ba7e8c0b8f3a5aa48d967281":[1,0,979,3],
+"classQuestDebt.html#aae5e60657545a519189014b2d72a30a2":[1,0,979,9],
+"classQuestDebt.html#ab109ddf27deda5ac9cffa4a5af44f577":[1,0,979,5],
+"classQuestDebt.html#ab545f5a7c04a059f625c3a54e045b3ab":[1,0,979,11],
 "classQuestDebt.html#abe11dddcc881a1447e94880c83ca340a":[1,0,979,7],
 "classQuestDebt.html#acd5205ae7c73c0142b98c28de8f69fa3":[1,0,979,6],
 "classQuestDebt.html#af48c1af9f750cbab509edeb0c34b56a3":[1,0,979,8],
@@ -238,16 +249,5 @@ var NAVTREEINDEX92 =
 "classQuestMeal__fish.html#a694c9487de1da0957025a56324e2fac3":[1,0,1018,0],
 "classQuestMeal__fruit.html":[1,0,1019],
 "classQuestMeal__fruit.html#a5c8a51598aae6c96335ad33879976be7":[1,0,1019,0],
-"classQuestMeal__meat.html":[1,0,1020],
-"classQuestMeal__meat.html#a35404e9faea0dcaaca47c4a0e75b4b04":[1,0,1020,0],
-"classQuestMeal__noodle.html":[1,0,1021],
-"classQuestMeal__noodle.html#a335f3885d3817680d1dc1c37bc88dfdd":[1,0,1021,0],
-"classQuestMeal__rice.html":[1,0,1022],
-"classQuestMeal__rice.html#a1015e133d3deebf3d36f273e49218f6a":[1,0,1022,0],
-"classQuestMeal__soup.html":[1,0,1023],
-"classQuestMeal__soup.html#aa386e62112c0a240762e780650fdeee6":[1,0,1023,0],
-"classQuestMeal__vegi.html":[1,0,1024],
-"classQuestMeal__vegi.html#a7d25a63c94b9906488f96bd1362edc72":[1,0,1024,0],
-"classQuestMusic.html":[1,0,1025],
-"classQuestMusic.html#a0e6931fc5d609019254177fbd0f268ef":[1,0,1025,9]
+"classQuestMeal__meat.html":[1,0,1020]
 };

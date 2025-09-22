@@ -18,6 +18,7 @@ var classPlayer_1_1Stats =
     [ "shipMoney", "classPlayer_1_1Stats.html#a778758bfa4852628a21aeec96e63aaec", null ],
     [ "shipNum", "classPlayer_1_1Stats.html#a26af85489ec34f4af572f643c8451776", null ],
     [ "sieges", "classPlayer_1_1Stats.html#a1e4e3dc54ded755b8680167260fc2b59", null ],
+    [ "sistersDepart", "classPlayer_1_1Stats.html#a201edc7b4e0a4b61a1a0c3c408e5d9cd", null ],
     [ "slept", "classPlayer_1_1Stats.html#adaca4df27fb8d6d32f47d9c3b579f464", null ],
     [ "taxBills", "classPlayer_1_1Stats.html#a076320f325be3bf11d6d5590c395047c", null ],
     [ "taxBillsPaid", "classPlayer_1_1Stats.html#a62d0999ce40548d7d9e664d023a1517a", null ],

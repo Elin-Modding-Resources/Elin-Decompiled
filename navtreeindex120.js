@@ -1,5 +1,17 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMerchantSeed.html":[1,0,1695],
+"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1695,0],
+"classTraitMerchantSouvenir.html":[1,0,1696],
+"classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1696,0],
+"classTraitMerchantWeapon.html":[1,0,1697],
+"classTraitMerchantWeapon.html#a39707660f853306b84cb5dd687a478e8":[1,0,1697,1],
+"classTraitMerchantWeapon.html#af0080d32bcb9f5aade5f2099b25dcd70":[1,0,1697,0],
+"classTraitMiko__Mifu.html":[1,0,1698],
+"classTraitMiko__Nefu.html":[1,0,1699],
+"classTraitMill.html":[1,0,1700],
+"classTraitMill.html#a2131821af05b10eddd12f4eb27e79ef1":[1,0,1700,1],
+"classTraitMill.html#a84499c7b08b7c9c36f90ecdc442490a3":[1,0,1700,2],
 "classTraitMill.html#a89329c74d83b9a6c1bf84c6397bf8335":[1,0,1700,4],
 "classTraitMill.html#ac37fbb885121eb6ec53baadb4e8fb311":[1,0,1700,3],
 "classTraitMill.html#aeb92b774551bfe715e41681f9b2e3ff5":[1,0,1700,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1756,8],
 "classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1756,9],
 "classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1756,4],
-"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1756,1],
-"classTraitPowerStatue.html#ad4219ceac075b2bef9fd98c90c22f651":[1,0,1756,6],
-"classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1756,3],
-"classTraitPunishBall.html":[1,0,1757],
-"classTraitPunishBall.html#a7aef7ba745933c57778ad77772f5b1ea":[1,0,1757,1],
-"classTraitPunishBall.html#a8eed1e8041d764c11247005ecef42000":[1,0,1757,4],
-"classTraitPunishBall.html#a94ac158ebca677e1b6dd601c52a5232b":[1,0,1757,0],
-"classTraitPunishBall.html#aa09ba5e2e40ce2ceab7738c0967479ad":[1,0,1757,3],
-"classTraitPunishBall.html#af986d9992b08bfedf70a1ccb37add2fb":[1,0,1757,2],
-"classTraitPuppy.html":[1,0,1758],
-"classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1758,0],
-"classTraitQuestBoard.html":[1,0,1759],
-"classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1759,0]
+"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1756,1]
 };

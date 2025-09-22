@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.202 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.203 Nyaightly</span>
    </div>
   </td>
  </tr>
@@ -303,6 +303,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a2d4a131850cb7b4c6fc2bda0b609e131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4f834613c2e731ad9d8046f431d98bc"><td class="memItemLeft" align="right" valign="top">List&lt; Sprite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayerWorldSetting.html#ac4f834613c2e731ad9d8046f431d98bc">sprites</a></td></tr>
 <tr class="separator:ac4f834613c2e731ad9d8046f431d98bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc8931aff36e857a42a44ca010c8acd"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayerWorldSetting.html#a9cc8931aff36e857a42a44ca010c8acd">spriteNoToken</a></td></tr>
+<tr class="separator:a9cc8931aff36e857a42a44ca010c8acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classLayer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classLayer')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classLayer.html">Layer</a></td></tr>
 <tr class="memitem:a4e1cd829fffcba0635b5c219f23f2ea9 inherit pub_attribs_classLayer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLayer_1_1Option.html">Option</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a4e1cd829fffcba0635b5c219f23f2ea9">option</a></td></tr>
 <tr class="separator:a4e1cd829fffcba0635b5c219f23f2ea9 inherit pub_attribs_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -467,45 +469,45 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00220">220</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>    {</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>)</div>
-<div class="line"><span class="lineno">  223</span>        {</div>
-<div class="line"><span class="lineno">  224</span>            pp.modified = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">principal</a>.<a class="code hl_variable" href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">modified</a>;</div>
-<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> in <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_function" href="classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0">ListItems</a>())</div>
-<div class="line"><span class="lineno">  226</span>            {</div>
-<div class="line"><span class="lineno">  227</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsModified())</div>
-<div class="line"><span class="lineno">  228</span>                {</div>
-<div class="line"><span class="lineno">  229</span>                    <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">modified</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id);</div>
-<div class="line"><span class="lineno">  230</span>                }</div>
-<div class="line"><span class="lineno">  231</span>            }</div>
-<div class="line"><span class="lineno">  232</span>        }</div>
-<div class="line"><span class="lineno">  233</span>        ELayer.game.principal = <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>;</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">resetPrincipal</a>)</div>
-<div class="line"><span class="lineno">  235</span>        {</div>
-<div class="line"><span class="lineno">  236</span>            ELayer.player.resetPrincipal = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  237</span>        }</div>
-<div class="line"><span class="lineno">  238</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a4163c6c48f0cfe608e24a7f317988f1f">SetFeat</a>(1220, <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">permadeath</a> ? 1 : 0);</div>
-<div class="line"><span class="lineno">  239</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00223">223</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>    {</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>)</div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            pp.modified = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">principal</a>.<a class="code hl_variable" href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">modified</a>;</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> in <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_function" href="classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0">ListItems</a>())</div>
+<div class="line"><span class="lineno">  229</span>            {</div>
+<div class="line"><span class="lineno">  230</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsModified())</div>
+<div class="line"><span class="lineno">  231</span>                {</div>
+<div class="line"><span class="lineno">  232</span>                    <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">modified</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id);</div>
+<div class="line"><span class="lineno">  233</span>                }</div>
+<div class="line"><span class="lineno">  234</span>            }</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+<div class="line"><span class="lineno">  236</span>        ELayer.game.principal = <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>;</div>
+<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">resetPrincipal</a>)</div>
+<div class="line"><span class="lineno">  238</span>        {</div>
+<div class="line"><span class="lineno">  239</span>            ELayer.player.resetPrincipal = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  240</span>        }</div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classChara.html#a4163c6c48f0cfe608e24a7f317988f1f">SetFeat</a>(1220, <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">permadeath</a> ? 1 : 0);</div>
+<div class="line"><span class="lineno">  242</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassChara_html_a4163c6c48f0cfe608e24a7f317988f1f"><div class="ttname"><a href="classChara.html#a4163c6c48f0cfe608e24a7f317988f1f">Chara.SetFeat</a></div><div class="ttdeci">void SetFeat(int id, int value=1, bool msg=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09493">Chara.cs:9493</a></div></div>
 <div class="ttc" id="aclassELayer_html"><div class="ttname"><a href="classELayer.html">ELayer</a></div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00003">ELayer.cs:4</a></div></div>
 <div class="ttc" id="aclassELayer_html_a0bed0f9db2b89dfefa4893321bd461ce"><div class="ttname"><a href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">ELayer.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00015">ELayer.cs:15</a></div></div>
 <div class="ttc" id="aclassELayer_html_a16fc2381bc0e5372d0ad567076cff625"><div class="ttname"><a href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">ELayer.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00013">ELayer.cs:13</a></div></div>
 <div class="ttc" id="aclassELayer_html_a4edba9f63942defc147a2be41de40b36"><div class="ttname"><a href="classELayer.html#a4edba9f63942defc147a2be41de40b36">ELayer.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00009">ELayer.cs:9</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_1_1Item_html"><div class="ttname"><a href="classGamePrincipal_1_1Item.html">GamePrincipal.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00015">GamePrincipal.cs:16</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_1_1Item_html"><div class="ttname"><a href="classGamePrincipal_1_1Item.html">GamePrincipal.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00016">GamePrincipal.cs:17</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html"><div class="ttname"><a href="classGamePrincipal.html">GamePrincipal</a></div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00006">GamePrincipal.cs:7</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_html_a6ca40d57c29fbb485f6cc61af0fc5fa9"><div class="ttname"><a href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">GamePrincipal.permadeath</a></div><div class="ttdeci">bool permadeath</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00139">GamePrincipal.cs:139</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_html_a9e6c90c15b4c7b80ec396812a3d7c03a"><div class="ttname"><a href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">GamePrincipal.modified</a></div><div class="ttdeci">HashSet&lt; string &gt; modified</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00166">GamePrincipal.cs:166</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_html_afb2e437581753ac31a1feed7279e54b0"><div class="ttname"><a href="classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0">GamePrincipal.ListItems</a></div><div class="ttdeci">List&lt; Item &gt; ListItems()</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00170">GamePrincipal.cs:170</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_a6ca40d57c29fbb485f6cc61af0fc5fa9"><div class="ttname"><a href="classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9">GamePrincipal.permadeath</a></div><div class="ttdeci">bool permadeath</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00140">GamePrincipal.cs:140</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_a9e6c90c15b4c7b80ec396812a3d7c03a"><div class="ttname"><a href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">GamePrincipal.modified</a></div><div class="ttdeci">HashSet&lt; string &gt; modified</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00170">GamePrincipal.cs:170</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_afb2e437581753ac31a1feed7279e54b0"><div class="ttname"><a href="classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0">GamePrincipal.ListItems</a></div><div class="ttdeci">List&lt; Item &gt; ListItems()</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00174">GamePrincipal.cs:174</a></div></div>
 <div class="ttc" id="aclassGame_html_a4f1fa7c6eec10a3a8c09592da6ec95eb"><div class="ttname"><a href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">Game.principal</a></div><div class="ttdeci">GamePrincipal principal</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00221">Game.cs:221</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a758290fef22ff619dda90df7396fb3df"><div class="ttname"><a href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">LayerWorldSetting.pp</a></div><div class="ttdeci">GamePrincipal pp</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00012">LayerWorldSetting.cs:12</a></div></div>
-<div class="ttc" id="aclassLayerWorldSetting_html_ad6f97e0e01b09338b24ae7ad09f1383d"><div class="ttname"><a href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">LayerWorldSetting.IsEmbark</a></div><div class="ttdeci">bool IsEmbark</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00066">LayerWorldSetting.cs:67</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a4f4f7ced54954c4099cd6cb7531b8ed6"><div class="ttname"><a href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">Player.resetPrincipal</a></div><div class="ttdeci">bool resetPrincipal</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01133">Player.cs:1133</a></div></div>
+<div class="ttc" id="aclassLayerWorldSetting_html_ad6f97e0e01b09338b24ae7ad09f1383d"><div class="ttname"><a href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">LayerWorldSetting.IsEmbark</a></div><div class="ttdeci">bool IsEmbark</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00068">LayerWorldSetting.cs:69</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a4f4f7ced54954c4099cd6cb7531b8ed6"><div class="ttname"><a href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">Player.resetPrincipal</a></div><div class="ttdeci">bool resetPrincipal</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01154">Player.cs:1154</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00067">IsEmbark</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00170">GamePrincipal.ListItems()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00166">GamePrincipal.modified</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00139">GamePrincipal.permadeath</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="Game_8cs_source.html#l00221">Game.principal</a>, <a class="el" href="Player_8cs_source.html#l01133">Player.resetPrincipal</a>, and <a class="el" href="Chara_8cs_source.html#l09493">Chara.SetFeat()</a>.</p>
+<p class="reference">References <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00069">IsEmbark</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00174">GamePrincipal.ListItems()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00170">GamePrincipal.modified</a>, <a class="el" href="ELayer_8cs_source.html#l00015">ELayer.pc</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00140">GamePrincipal.permadeath</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="Game_8cs_source.html#l00221">Game.principal</a>, <a class="el" href="Player_8cs_source.html#l01154">Player.resetPrincipal</a>, and <a class="el" href="Chara_8cs_source.html#l09493">Chara.SetFeat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00215">OnKill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00218">OnKill()</a>.</p>
 
 </div>
 </div>
@@ -534,38 +536,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classLayer.html#a32b3729c53c0b5f20e6d5dac0f06e612">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">78</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a3852739f16940b70849c331f91b098f5">buttonEmbark</a>.SetActive(<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>);</div>
-<div class="line"><span class="lineno">   81</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733">buttonWorkaround</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a2d4a131850cb7b4c6fc2bda0b609e131">transHint</a>.SetActive(<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>);</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>)</div>
-<div class="line"><span class="lineno">   84</span>        {</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">principal</a>.<a class="code hl_variable" href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">modified</a>.Clear();</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a> = <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">principal</a>);</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#aa3b2cb30b49efa57156fb1738726e9b5">transMold</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92">buttonTemplates</a>.Count; j++)</div>
-<div class="line"><span class="lineno">   90</span>        {</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordtype">int</span> i = j;</div>
-<div class="line"><span class="lineno">   92</span>            <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = <a class="code hl_variable" href="classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92">buttonTemplates</a>[i];</div>
-<div class="line"><span class="lineno">   93</span>            uIButton.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#aa34e85634a016f6f433868d7d697904b">GetList</a>(<span class="stringliteral">&quot;pp_templates&quot;</span>)[i]);</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (i != <a class="code hl_property" href="classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e">IdxCustom</a>)</div>
-<div class="line"><span class="lineno">   95</span>            {</div>
-<div class="line"><span class="lineno">   96</span>                uIButton.refObj = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a8042811589e7e8879ae998ac4ca6f1e4">start</a>.<a class="code hl_variable" href="classGameSetting_1_1StartSetting.html#ab02132a4c8e7cec0c244444007cc2bff">principals</a>[i];</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>            uIButton.SetOnClick(delegate</div>
-<div class="line"><span class="lineno">   99</span>            {</div>
-<div class="line"><span class="lineno">  100</span>                <a class="code hl_function" href="classLayerWorldSetting.html#a7296a92365f62176b2c00a2387a64c72">SetTemplate</a>(i);</div>
-<div class="line"><span class="lineno">  101</span>            });</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733">buttonWorkaround</a>.<a class="code hl_function" href="classUIButton.html#aaf1a44b498c1ae1d46325d7d53a9fb52">SetToggle</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#ac225425dcd4292351cdc7db755f87884">showWorkaround</a>, delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  104</span>        {</div>
-<div class="line"><span class="lineno">  105</span>            ELayer.player.showWorkaround = a;</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_function" href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">Refresh</a>();</div>
-<div class="line"><span class="lineno">  107</span>        });</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_function" href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">Refresh</a>();</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">80</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a3852739f16940b70849c331f91b098f5">buttonEmbark</a>.SetActive(<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>);</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733">buttonWorkaround</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a2d4a131850cb7b4c6fc2bda0b609e131">transHint</a>.SetActive(<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>);</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a>)</div>
+<div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">principal</a>.<a class="code hl_variable" href="classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a">modified</a>.Clear();</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a> = <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a4f1fa7c6eec10a3a8c09592da6ec95eb">principal</a>);</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#aa3b2cb30b49efa57156fb1738726e9b5">transMold</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92">buttonTemplates</a>.Count; j++)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordtype">int</span> i = j;</div>
+<div class="line"><span class="lineno">   94</span>            <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = <a class="code hl_variable" href="classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92">buttonTemplates</a>[i];</div>
+<div class="line"><span class="lineno">   95</span>            uIButton.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#aa34e85634a016f6f433868d7d697904b">GetList</a>(<span class="stringliteral">&quot;pp_templates&quot;</span>)[i]);</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span> (i != <a class="code hl_property" href="classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e">IdxCustom</a>)</div>
+<div class="line"><span class="lineno">   97</span>            {</div>
+<div class="line"><span class="lineno">   98</span>                uIButton.refObj = <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a8042811589e7e8879ae998ac4ca6f1e4">start</a>.<a class="code hl_variable" href="classGameSetting_1_1StartSetting.html#ab02132a4c8e7cec0c244444007cc2bff">principals</a>[i];</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>            uIButton.SetOnClick(delegate</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                <a class="code hl_function" href="classLayerWorldSetting.html#a7296a92365f62176b2c00a2387a64c72">SetTemplate</a>(i);</div>
+<div class="line"><span class="lineno">  103</span>            });</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733">buttonWorkaround</a>.<a class="code hl_function" href="classUIButton.html#aaf1a44b498c1ae1d46325d7d53a9fb52">SetToggle</a>(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#ac225425dcd4292351cdc7db755f87884">showWorkaround</a>, delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            ELayer.player.showWorkaround = a;</div>
+<div class="line"><span class="lineno">  108</span>            <a class="code hl_function" href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">Refresh</a>();</div>
+<div class="line"><span class="lineno">  109</span>        });</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_function" href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">Refresh</a>();</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
 <div class="ttc" id="aclassELayer_html_a8425a850da931bf4ff4469f7c45880f0"><div class="ttname"><a href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">ELayer.setting</a></div><div class="ttdeci">static GameSetting setting</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00033">ELayer.cs:33</a></div></div>
 <div class="ttc" id="aclassGameSetting_1_1StartSetting_html_ab02132a4c8e7cec0c244444007cc2bff"><div class="ttname"><a href="classGameSetting_1_1StartSetting.html#ab02132a4c8e7cec0c244444007cc2bff">GameSetting.StartSetting.principals</a></div><div class="ttdeci">List&lt; GamePrincipal &gt; principals</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00244">GameSetting.cs:244</a></div></div>
 <div class="ttc" id="aclassGameSetting_html_a8042811589e7e8879ae998ac4ca6f1e4"><div class="ttname"><a href="classGameSetting.html#a8042811589e7e8879ae998ac4ca6f1e4">GameSetting.start</a></div><div class="ttdeci">StartSetting start</div><div class="ttdef"><b>Definition:</b> <a href="GameSetting_8cs_source.html#l00305">GameSetting.cs:305</a></div></div>
@@ -574,19 +576,19 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassLang_html_aa34e85634a016f6f433868d7d697904b"><div class="ttname"><a href="classLang.html#aa34e85634a016f6f433868d7d697904b">Lang.GetList</a></div><div class="ttdeci">static string[] GetList(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00114">Lang.cs:114</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a2d4a131850cb7b4c6fc2bda0b609e131"><div class="ttname"><a href="classLayerWorldSetting.html#a2d4a131850cb7b4c6fc2bda0b609e131">LayerWorldSetting.transHint</a></div><div class="ttdeci">Transform transHint</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00058">LayerWorldSetting.cs:58</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a2f0419642fb59361c66559c58d861733"><div class="ttname"><a href="classLayerWorldSetting.html#a2f0419642fb59361c66559c58d861733">LayerWorldSetting.buttonWorkaround</a></div><div class="ttdeci">UIButton buttonWorkaround</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00050">LayerWorldSetting.cs:50</a></div></div>
-<div class="ttc" id="aclassLayerWorldSetting_html_a384ed191411636117f479a8fe8ebbf37"><div class="ttname"><a href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">LayerWorldSetting.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00138">LayerWorldSetting.cs:138</a></div></div>
+<div class="ttc" id="aclassLayerWorldSetting_html_a384ed191411636117f479a8fe8ebbf37"><div class="ttname"><a href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">LayerWorldSetting.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00140">LayerWorldSetting.cs:140</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a3852739f16940b70849c331f91b098f5"><div class="ttname"><a href="classLayerWorldSetting.html#a3852739f16940b70849c331f91b098f5">LayerWorldSetting.buttonEmbark</a></div><div class="ttdeci">UIButton buttonEmbark</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00048">LayerWorldSetting.cs:48</a></div></div>
-<div class="ttc" id="aclassLayerWorldSetting_html_a4e9c5bad55b3a7d011184d55153f281e"><div class="ttname"><a href="classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e">LayerWorldSetting.IdxCustom</a></div><div class="ttdeci">int IdxCustom</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00064">LayerWorldSetting.cs:64</a></div></div>
-<div class="ttc" id="aclassLayerWorldSetting_html_a7296a92365f62176b2c00a2387a64c72"><div class="ttname"><a href="classLayerWorldSetting.html#a7296a92365f62176b2c00a2387a64c72">LayerWorldSetting.SetTemplate</a></div><div class="ttdeci">void SetTemplate(int idx)</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00111">LayerWorldSetting.cs:111</a></div></div>
+<div class="ttc" id="aclassLayerWorldSetting_html_a4e9c5bad55b3a7d011184d55153f281e"><div class="ttname"><a href="classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e">LayerWorldSetting.IdxCustom</a></div><div class="ttdeci">int IdxCustom</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00066">LayerWorldSetting.cs:66</a></div></div>
+<div class="ttc" id="aclassLayerWorldSetting_html_a7296a92365f62176b2c00a2387a64c72"><div class="ttname"><a href="classLayerWorldSetting.html#a7296a92365f62176b2c00a2387a64c72">LayerWorldSetting.SetTemplate</a></div><div class="ttdeci">void SetTemplate(int idx)</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00113">LayerWorldSetting.cs:113</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_aa3b2cb30b49efa57156fb1738726e9b5"><div class="ttname"><a href="classLayerWorldSetting.html#aa3b2cb30b49efa57156fb1738726e9b5">LayerWorldSetting.transMold</a></div><div class="ttdeci">Transform transMold</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00056">LayerWorldSetting.cs:56</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_aaac7c6e760cc75eefefb55dd28c1cc92"><div class="ttname"><a href="classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92">LayerWorldSetting.buttonTemplates</a></div><div class="ttdeci">List&lt; UIButton &gt; buttonTemplates</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00010">LayerWorldSetting.cs:10</a></div></div>
-<div class="ttc" id="aclassPlayer_html_ac225425dcd4292351cdc7db755f87884"><div class="ttname"><a href="classPlayer.html#ac225425dcd4292351cdc7db755f87884">Player.showWorkaround</a></div><div class="ttdeci">bool showWorkaround</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00957">Player.cs:957</a></div></div>
+<div class="ttc" id="aclassPlayer_html_ac225425dcd4292351cdc7db755f87884"><div class="ttname"><a href="classPlayer.html#ac225425dcd4292351cdc7db755f87884">Player.showWorkaround</a></div><div class="ttdeci">bool showWorkaround</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00978">Player.cs:978</a></div></div>
 <div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a2c91e2485c1dea09ccf8cf5865e4c4dd"><div class="ttname"><a href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">UIButton.mainText</a></div><div class="ttdeci">UIText mainText</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00102">UIButton.cs:102</a></div></div>
 <div class="ttc" id="aclassUIButton_html_aaf1a44b498c1ae1d46325d7d53a9fb52"><div class="ttname"><a href="classUIButton.html#aaf1a44b498c1ae1d46325d7d53a9fb52">UIButton.SetToggle</a></div><div class="ttdeci">void SetToggle(bool isOn, Action&lt; bool &gt; onToggle=null)</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00341">UIButton.cs:341</a></div></div>
 <div class="ttc" id="aclassUIText_html_a46e587cdfc8870d9e88cca27a620505b"><div class="ttname"><a href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">UIText.SetText</a></div><div class="ttdeci">void SetText(string s)</div><div class="ttdef"><b>Definition:</b> <a href="UIText_8cs_source.html#l00159">UIText.cs:159</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00048">buttonEmbark</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00010">buttonTemplates</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00050">buttonWorkaround</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="Lang_8cs_source.html#l00114">Lang.GetList()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00064">IdxCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00067">IsEmbark</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00166">GamePrincipal.modified</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="Game_8cs_source.html#l00221">Game.principal</a>, <a class="el" href="GameSetting_8cs_source.html#l00244">GameSetting.StartSetting.principals</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00111">SetTemplate()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, <a class="el" href="ELayer_8cs_source.html#l00033">ELayer.setting</a>, <a class="el" href="UIButton_8cs_source.html#l00341">UIButton.SetToggle()</a>, <a class="el" href="Player_8cs_source.html#l00957">Player.showWorkaround</a>, <a class="el" href="GameSetting_8cs_source.html#l00305">GameSetting.start</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00058">transHint</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00056">transMold</a>.</p>
+<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00048">buttonEmbark</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00010">buttonTemplates</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00050">buttonWorkaround</a>, <a class="el" href="ELayer_8cs_source.html#l00009">ELayer.game</a>, <a class="el" href="Lang_8cs_source.html#l00114">Lang.GetList()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00066">IdxCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00069">IsEmbark</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00170">GamePrincipal.modified</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="Game_8cs_source.html#l00221">Game.principal</a>, <a class="el" href="GameSetting_8cs_source.html#l00244">GameSetting.StartSetting.principals</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00113">SetTemplate()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, <a class="el" href="ELayer_8cs_source.html#l00033">ELayer.setting</a>, <a class="el" href="UIButton_8cs_source.html#l00341">UIButton.SetToggle()</a>, <a class="el" href="Player_8cs_source.html#l00978">Player.showWorkaround</a>, <a class="el" href="GameSetting_8cs_source.html#l00305">GameSetting.start</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00058">transHint</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00056">transMold</a>.</p>
 
 </div>
 </div>
@@ -615,13 +617,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classLayer.html#a80f8bdde0014bfeaacabe62942c9f019">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00215">215</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
-<div class="line"><span class="lineno">  217</span>        <a class="code hl_function" href="classLayerWorldSetting.html#a9e37aa25a648869cc1fb1bfff9825b65">Apply</a>();</div>
-<div class="line"><span class="lineno">  218</span>    }</div>
-<div class="ttc" id="aclassLayerWorldSetting_html_a9e37aa25a648869cc1fb1bfff9825b65"><div class="ttname"><a href="classLayerWorldSetting.html#a9e37aa25a648869cc1fb1bfff9825b65">LayerWorldSetting.Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00220">LayerWorldSetting.cs:220</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00218">218</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <a class="code hl_function" href="classLayerWorldSetting.html#a9e37aa25a648869cc1fb1bfff9825b65">Apply</a>();</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+<div class="ttc" id="aclassLayerWorldSetting_html_a9e37aa25a648869cc1fb1bfff9825b65"><div class="ttname"><a href="classLayerWorldSetting.html#a9e37aa25a648869cc1fb1bfff9825b65">LayerWorldSetting.Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00223">LayerWorldSetting.cs:223</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00220">Apply()</a>.</p>
+<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00223">Apply()</a>.</p>
 
 </div>
 </div>
@@ -648,80 +650,82 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">138</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_function" href="classLayerWorldSetting.html#ad021b5389dbef06f9a6cc59b698e49bc">RefreshTemplate</a>();</div>
-<div class="line"><span class="lineno">  141</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>.DestroyChildren();</div>
-<div class="line"><span class="lineno">  142</span>        List&lt;<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a>&gt; items = <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_function" href="classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0">ListItems</a>();</div>
-<div class="line"><span class="lineno">  143</span>        AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath);</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#ac225425dcd4292351cdc7db755f87884">showWorkaround</a>)</div>
-<div class="line"><span class="lineno">  145</span>        {</div>
-<div class="line"><span class="lineno">  146</span>            AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Workaround);</div>
-<div class="line"><span class="lineno">  147</span>            AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Legacy);</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>.RebuildLayout();</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordtype">void</span> AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a> type)</div>
-<div class="line"><span class="lineno">  151</span>        {</div>
-<div class="line"><span class="lineno">  152</span>            <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#ae542969d3002f272ca80ea014d8fdfb7">moldHeader</a>, <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>).text1.SetText((<span class="stringliteral">&quot;pp_&quot;</span> + type).lang());</div>
-<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> in items.Where((<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a> a) =&gt; a.type == type))</div>
-<div class="line"><span class="lineno">  154</span>            {</div>
-<div class="line"><span class="lineno">  155</span>                <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  156</span>                <a class="code hl_class" href="classGamePrincipal_1_1ItemSlider.html">GamePrincipal.ItemSlider</a> itemSlider = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> as <a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1ItemSlider.html">ItemSlider</a>;</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">if</span> (itemSlider == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  158</span>                {</div>
-<div class="line"><span class="lineno">  159</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  160</span>                    {</div>
-<div class="line"><span class="lineno">  161</span>                        _ = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
-<div class="line"><span class="lineno">  162</span>                        b = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#a20749e29926dc4a2316fc03b17e259ff">moldToggle</a>, <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>);</div>
-<div class="line"><span class="lineno">  163</span>                    }</div>
-<div class="line"><span class="lineno">  164</span>                }</div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  166</span>                {</div>
-<div class="line"><span class="lineno">  167</span>                    b = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#a85d943fe40dc3024c5f8145850c0d694">moldSlider</a>, <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>);</div>
-<div class="line"><span class="lineno">  168</span>                    b.GetComponentInChildren&lt;<a class="code hl_class" href="classUISlider.html">UISlider</a>&gt;().SetSlider(itemSlider.<a class="code hl_function" href="classGamePrincipal_1_1ItemSlider.html#aab5adb8c113fb162ed911c92c4d7cc07">GetInt</a>(), delegate(<span class="keywordtype">float</span> a)</div>
-<div class="line"><span class="lineno">  169</span>                    {</div>
-<div class="line"><span class="lineno">  170</span>                        itemSlider.<a class="code hl_function" href="classGamePrincipal_1_1ItemSlider.html#a5f86d34106189a93e4f8f375602ccf25">SetInt</a>((<span class="keywordtype">int</span>)a);</div>
-<div class="line"><span class="lineno">  171</span>                        <span class="keywordflow">return</span> itemSlider.<a class="code hl_variable" href="classGamePrincipal_1_1ItemSlider.html#a3dcb980daf4d4945c58f1949422c393d">funcText</a>((<span class="keywordtype">int</span>)a);</div>
-<div class="line"><span class="lineno">  172</span>                    }, 0, itemSlider.<a class="code hl_variable" href="classGamePrincipal_1_1ItemSlider.html#aee071cda9121e3ee71c8091860f976dd">max</a>, notify: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  173</span>                }</div>
-<div class="line"><span class="lineno">  174</span>                <span class="keywordtype">bool</span> flag = item.id == <span class="stringliteral">&quot;permadeath&quot;</span> &amp;&amp; !<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a> &amp;&amp; !<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.WasSealed();</div>
-<div class="line"><span class="lineno">  175</span>                b.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>((<span class="stringliteral">&quot;pp_&quot;</span> + <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id).lang());</div>
-<div class="line"><span class="lineno">  176</span>                b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetActive(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade &gt;= 0 &amp;&amp; (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed() || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.WasSealed()));</div>
-<div class="line"><span class="lineno">  177</span>                b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetAlpha(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed() ? 1f : 0.3f);</div>
-<div class="line"><span class="lineno">  178</span>                b.icon.sprite = ((item.grade &lt; 0) ? <span class="keyword">null</span> : <a class="code hl_variable" href="classLayerWorldSetting.html#ac4f834613c2e731ad9d8046f431d98bc">sprites</a>[<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade]);</div>
-<div class="line"><span class="lineno">  179</span>                b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetNativeSize();</div>
-<div class="line"><span class="lineno">  180</span>                b.GetOrCreate&lt;CanvasGroup&gt;().alpha = (flag ? 0.5f : 1f);</div>
-<div class="line"><span class="lineno">  181</span>                <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;pp_&quot;</span> + item.id + <span class="stringliteral">&quot;_hint&quot;</span>;</div>
-<div class="line"><span class="lineno">  182</span>                b.<a class="code hl_function" href="classUIButton.html#a95a16ea2188a92160e7b6a5c54206689">SetTooltipLang</a>(text);</div>
-<div class="line"><span class="lineno">  183</span>                b.tooltip.enable = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#ae13a80dd1ff1b89239a18781b2e0d2ca">Has</a>(text);</div>
-<div class="line"><span class="lineno">  184</span>                b.interactable = !flag;</div>
-<div class="line"><span class="lineno">  185</span>                b.<a class="code hl_function" href="classUIButton.html#aaf1a44b498c1ae1d46325d7d53a9fb52">SetToggle</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Get(), delegate(<span class="keywordtype">bool</span> a)</div>
-<div class="line"><span class="lineno">  186</span>                {</div>
-<div class="line"><span class="lineno">  187</span>                    <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Set(a);</div>
-<div class="line"><span class="lineno">  188</span>                    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_property" href="classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979">IsCustom</a>)</div>
-<div class="line"><span class="lineno">  189</span>                    {</div>
-<div class="line"><span class="lineno">  190</span>                        pp.id = -1;</div>
-<div class="line"><span class="lineno">  191</span>                        RefreshTemplate();</div>
-<div class="line"><span class="lineno">  192</span>                    }</div>
-<div class="line"><span class="lineno">  193</span>                    b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetActive(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade &gt;= 0 &amp;&amp; (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed() || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.WasSealed()));</div>
-<div class="line"><span class="lineno">  194</span>                    b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetAlpha(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed() ? 1f : 0.3f);</div>
-<div class="line"><span class="lineno">  195</span>                });</div>
-<div class="line"><span class="lineno">  196</span>            }</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
-<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html">GamePrincipal.ItemSlider</a></div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00090">GamePrincipal.cs:91</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_a3dcb980daf4d4945c58f1949422c393d"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#a3dcb980daf4d4945c58f1949422c393d">GamePrincipal.ItemSlider.funcText</a></div><div class="ttdeci">Func&lt; int, string &gt; funcText</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00098">GamePrincipal.cs:98</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_a5f86d34106189a93e4f8f375602ccf25"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#a5f86d34106189a93e4f8f375602ccf25">GamePrincipal.ItemSlider.SetInt</a></div><div class="ttdeci">void SetInt(int value)</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00105">GamePrincipal.cs:105</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_aab5adb8c113fb162ed911c92c4d7cc07"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#aab5adb8c113fb162ed911c92c4d7cc07">GamePrincipal.ItemSlider.GetInt</a></div><div class="ttdeci">int GetInt()</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00100">GamePrincipal.cs:100</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_aee071cda9121e3ee71c8091860f976dd"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#aee071cda9121e3ee71c8091860f976dd">GamePrincipal.ItemSlider.max</a></div><div class="ttdeci">int max</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00092">GamePrincipal.cs:92</a></div></div>
-<div class="ttc" id="aclassGamePrincipal_html_a9af39c8af7e6a46aa31f948ab88af979"><div class="ttname"><a href="classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979">GamePrincipal.IsCustom</a></div><div class="ttdeci">bool IsCustom</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00168">GamePrincipal.cs:168</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">140</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="classLayerWorldSetting.html#ad021b5389dbef06f9a6cc59b698e49bc">RefreshTemplate</a>();</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>.DestroyChildren();</div>
+<div class="line"><span class="lineno">  144</span>        List&lt;<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a>&gt; items = <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_function" href="classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0">ListItems</a>();</div>
+<div class="line"><span class="lineno">  145</span>        AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Oath);</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#ac225425dcd4292351cdc7db755f87884">showWorkaround</a>)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Workaround);</div>
+<div class="line"><span class="lineno">  149</span>            AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Legacy);</div>
+<div class="line"><span class="lineno">  150</span>            AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a>.Flavor);</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="line"><span class="lineno">  152</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>.RebuildLayout();</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordtype">void</span> AddCategory(<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_enumeration" href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">Type</a> type)</div>
+<div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#ae542969d3002f272ca80ea014d8fdfb7">moldHeader</a>, <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>).text1.SetText((<span class="stringliteral">&quot;pp_&quot;</span> + type).lang());</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> in items.Where((<a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1Item.html">Item</a> a) =&gt; a.type == type))</div>
+<div class="line"><span class="lineno">  157</span>            {</div>
+<div class="line"><span class="lineno">  158</span>                <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  159</span>                <a class="code hl_class" href="classGamePrincipal_1_1ItemSlider.html">GamePrincipal.ItemSlider</a> itemSlider = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> as <a class="code hl_class" href="classGamePrincipal.html">GamePrincipal</a>.<a class="code hl_class" href="classGamePrincipal_1_1ItemSlider.html">ItemSlider</a>;</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">if</span> (itemSlider == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  161</span>                {</div>
+<div class="line"><span class="lineno">  162</span>                    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  163</span>                    {</div>
+<div class="line"><span class="lineno">  164</span>                        _ = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
+<div class="line"><span class="lineno">  165</span>                        b = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#a20749e29926dc4a2316fc03b17e259ff">moldToggle</a>, <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>);</div>
+<div class="line"><span class="lineno">  166</span>                    }</div>
+<div class="line"><span class="lineno">  167</span>                }</div>
+<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  169</span>                {</div>
+<div class="line"><span class="lineno">  170</span>                    b = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#a85d943fe40dc3024c5f8145850c0d694">moldSlider</a>, <a class="code hl_variable" href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">transCustom</a>);</div>
+<div class="line"><span class="lineno">  171</span>                    b.GetComponentInChildren&lt;<a class="code hl_class" href="classUISlider.html">UISlider</a>&gt;().SetSlider(itemSlider.<a class="code hl_function" href="classGamePrincipal_1_1ItemSlider.html#aab5adb8c113fb162ed911c92c4d7cc07">GetInt</a>(), delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">  172</span>                    {</div>
+<div class="line"><span class="lineno">  173</span>                        itemSlider.<a class="code hl_function" href="classGamePrincipal_1_1ItemSlider.html#a5f86d34106189a93e4f8f375602ccf25">SetInt</a>((<span class="keywordtype">int</span>)a);</div>
+<div class="line"><span class="lineno">  174</span>                        <span class="keywordflow">return</span> itemSlider.<a class="code hl_variable" href="classGamePrincipal_1_1ItemSlider.html#a3dcb980daf4d4945c58f1949422c393d">funcText</a>((<span class="keywordtype">int</span>)a);</div>
+<div class="line"><span class="lineno">  175</span>                    }, 0, itemSlider.<a class="code hl_variable" href="classGamePrincipal_1_1ItemSlider.html#aee071cda9121e3ee71c8091860f976dd">max</a>, notify: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  176</span>                }</div>
+<div class="line"><span class="lineno">  177</span>                <span class="keywordtype">bool</span> flag = item.id == <span class="stringliteral">&quot;permadeath&quot;</span> &amp;&amp; !<a class="code hl_property" href="classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d">IsEmbark</a> &amp;&amp; !<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.WasSealed();</div>
+<div class="line"><span class="lineno">  178</span>                b.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>((<span class="stringliteral">&quot;pp_&quot;</span> + <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id).lang());</div>
+<div class="line"><span class="lineno">  179</span>                b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetActive(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade &lt; 0 || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed() || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.WasSealed());</div>
+<div class="line"><span class="lineno">  180</span>                b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetAlpha((<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade &lt; 0 || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed()) ? 1f : 0.3f);</div>
+<div class="line"><span class="lineno">  181</span>                b.icon.sprite = ((item.grade &lt; 0) ? <a class="code hl_variable" href="classLayerWorldSetting.html#a9cc8931aff36e857a42a44ca010c8acd">spriteNoToken</a> : <a class="code hl_variable" href="classLayerWorldSetting.html#ac4f834613c2e731ad9d8046f431d98bc">sprites</a>[<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade]);</div>
+<div class="line"><span class="lineno">  182</span>                b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetNativeSize();</div>
+<div class="line"><span class="lineno">  183</span>                b.GetOrCreate&lt;CanvasGroup&gt;().alpha = (flag ? 0.5f : 1f);</div>
+<div class="line"><span class="lineno">  184</span>                <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;pp_&quot;</span> + item.id + <span class="stringliteral">&quot;_hint&quot;</span>;</div>
+<div class="line"><span class="lineno">  185</span>                b.<a class="code hl_function" href="classUIButton.html#a95a16ea2188a92160e7b6a5c54206689">SetTooltipLang</a>(text);</div>
+<div class="line"><span class="lineno">  186</span>                b.tooltip.enable = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#ae13a80dd1ff1b89239a18781b2e0d2ca">Has</a>(text);</div>
+<div class="line"><span class="lineno">  187</span>                b.interactable = !flag;</div>
+<div class="line"><span class="lineno">  188</span>                b.<a class="code hl_function" href="classUIButton.html#aaf1a44b498c1ae1d46325d7d53a9fb52">SetToggle</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Get(), delegate(<span class="keywordtype">bool</span> a)</div>
+<div class="line"><span class="lineno">  189</span>                {</div>
+<div class="line"><span class="lineno">  190</span>                    <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Set(a);</div>
+<div class="line"><span class="lineno">  191</span>                    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_property" href="classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979">IsCustom</a>)</div>
+<div class="line"><span class="lineno">  192</span>                    {</div>
+<div class="line"><span class="lineno">  193</span>                        pp.id = -1;</div>
+<div class="line"><span class="lineno">  194</span>                        RefreshTemplate();</div>
+<div class="line"><span class="lineno">  195</span>                    }</div>
+<div class="line"><span class="lineno">  196</span>                    b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetActive(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade &lt; 0 || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed() || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.WasSealed());</div>
+<div class="line"><span class="lineno">  197</span>                    b.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetAlpha((<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.grade &lt; 0 || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsSealed()) ? 1f : 0.3f);</div>
+<div class="line"><span class="lineno">  198</span>                });</div>
+<div class="line"><span class="lineno">  199</span>            }</div>
+<div class="line"><span class="lineno">  200</span>        }</div>
+<div class="line"><span class="lineno">  201</span>    }</div>
+<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html">GamePrincipal.ItemSlider</a></div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00091">GamePrincipal.cs:92</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_a3dcb980daf4d4945c58f1949422c393d"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#a3dcb980daf4d4945c58f1949422c393d">GamePrincipal.ItemSlider.funcText</a></div><div class="ttdeci">Func&lt; int, string &gt; funcText</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00099">GamePrincipal.cs:99</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_a5f86d34106189a93e4f8f375602ccf25"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#a5f86d34106189a93e4f8f375602ccf25">GamePrincipal.ItemSlider.SetInt</a></div><div class="ttdeci">void SetInt(int value)</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00106">GamePrincipal.cs:106</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_aab5adb8c113fb162ed911c92c4d7cc07"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#aab5adb8c113fb162ed911c92c4d7cc07">GamePrincipal.ItemSlider.GetInt</a></div><div class="ttdeci">int GetInt()</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00101">GamePrincipal.cs:101</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_1_1ItemSlider_html_aee071cda9121e3ee71c8091860f976dd"><div class="ttname"><a href="classGamePrincipal_1_1ItemSlider.html#aee071cda9121e3ee71c8091860f976dd">GamePrincipal.ItemSlider.max</a></div><div class="ttdeci">int max</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00093">GamePrincipal.cs:93</a></div></div>
+<div class="ttc" id="aclassGamePrincipal_html_a9af39c8af7e6a46aa31f948ab88af979"><div class="ttname"><a href="classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979">GamePrincipal.IsCustom</a></div><div class="ttdeci">bool IsCustom</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00172">GamePrincipal.cs:172</a></div></div>
 <div class="ttc" id="aclassGamePrincipal_html_aadd8a550e2256e3893837c4d570a2b12"><div class="ttname"><a href="classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12">GamePrincipal.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00008">GamePrincipal.cs:9</a></div></div>
 <div class="ttc" id="aclassLang_html_ae13a80dd1ff1b89239a18781b2e0d2ca"><div class="ttname"><a href="classLang.html#ae13a80dd1ff1b89239a18781b2e0d2ca">Lang.Has</a></div><div class="ttdeci">static bool Has(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00100">Lang.cs:100</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a20749e29926dc4a2316fc03b17e259ff"><div class="ttname"><a href="classLayerWorldSetting.html#a20749e29926dc4a2316fc03b17e259ff">LayerWorldSetting.moldToggle</a></div><div class="ttdeci">UIButton moldToggle</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00044">LayerWorldSetting.cs:44</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a563e82107ff7103cd8b52a92ee265978"><div class="ttname"><a href="classLayerWorldSetting.html#a563e82107ff7103cd8b52a92ee265978">LayerWorldSetting.transCustom</a></div><div class="ttdeci">Transform transCustom</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00054">LayerWorldSetting.cs:54</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a85d943fe40dc3024c5f8145850c0d694"><div class="ttname"><a href="classLayerWorldSetting.html#a85d943fe40dc3024c5f8145850c0d694">LayerWorldSetting.moldSlider</a></div><div class="ttdeci">UIButton moldSlider</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00046">LayerWorldSetting.cs:46</a></div></div>
+<div class="ttc" id="aclassLayerWorldSetting_html_a9cc8931aff36e857a42a44ca010c8acd"><div class="ttname"><a href="classLayerWorldSetting.html#a9cc8931aff36e857a42a44ca010c8acd">LayerWorldSetting.spriteNoToken</a></div><div class="ttdeci">Sprite spriteNoToken</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00062">LayerWorldSetting.cs:62</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_ac4f834613c2e731ad9d8046f431d98bc"><div class="ttname"><a href="classLayerWorldSetting.html#ac4f834613c2e731ad9d8046f431d98bc">LayerWorldSetting.sprites</a></div><div class="ttdeci">List&lt; Sprite &gt; sprites</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00060">LayerWorldSetting.cs:60</a></div></div>
-<div class="ttc" id="aclassLayerWorldSetting_html_ad021b5389dbef06f9a6cc59b698e49bc"><div class="ttname"><a href="classLayerWorldSetting.html#ad021b5389dbef06f9a6cc59b698e49bc">LayerWorldSetting.RefreshTemplate</a></div><div class="ttdeci">void RefreshTemplate()</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00125">LayerWorldSetting.cs:125</a></div></div>
+<div class="ttc" id="aclassLayerWorldSetting_html_ad021b5389dbef06f9a6cc59b698e49bc"><div class="ttname"><a href="classLayerWorldSetting.html#ad021b5389dbef06f9a6cc59b698e49bc">LayerWorldSetting.RefreshTemplate</a></div><div class="ttdeci">void RefreshTemplate()</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00127">LayerWorldSetting.cs:127</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_ae542969d3002f272ca80ea014d8fdfb7"><div class="ttname"><a href="classLayerWorldSetting.html#ae542969d3002f272ca80ea014d8fdfb7">LayerWorldSetting.moldHeader</a></div><div class="ttdeci">UIItem moldHeader</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00052">LayerWorldSetting.cs:52</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a1a3f3d8365203e634319910616ad5b72"><div class="ttname"><a href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">UIButton.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00110">UIButton.cs:110</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a95a16ea2188a92160e7b6a5c54206689"><div class="ttname"><a href="classUIButton.html#a95a16ea2188a92160e7b6a5c54206689">UIButton.SetTooltipLang</a></div><div class="ttdeci">void SetTooltipLang(string lang=null)</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00373">UIButton.cs:373</a></div></div>
@@ -729,9 +733,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
 <div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GamePrincipal_8cs_source.html#l00098">GamePrincipal.ItemSlider.funcText</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00100">GamePrincipal.ItemSlider.GetInt()</a>, <a class="el" href="Lang_8cs_source.html#l00100">Lang.Has()</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00168">GamePrincipal.IsCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00067">IsEmbark</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00170">GamePrincipal.ListItems()</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00092">GamePrincipal.ItemSlider.max</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00052">moldHeader</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00046">moldSlider</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00044">moldToggle</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00125">RefreshTemplate()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00105">GamePrincipal.ItemSlider.SetInt()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, <a class="el" href="UIButton_8cs_source.html#l00341">UIButton.SetToggle()</a>, <a class="el" href="UIButton_8cs_source.html#l00373">UIButton.SetTooltipLang()</a>, <a class="el" href="Player_8cs_source.html#l00957">Player.showWorkaround</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00060">sprites</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00054">transCustom</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
+<p class="reference">References <a class="el" href="GamePrincipal_8cs_source.html#l00099">GamePrincipal.ItemSlider.funcText</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00101">GamePrincipal.ItemSlider.GetInt()</a>, <a class="el" href="Lang_8cs_source.html#l00100">Lang.Has()</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00172">GamePrincipal.IsCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00069">IsEmbark</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00174">GamePrincipal.ListItems()</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00093">GamePrincipal.ItemSlider.max</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00052">moldHeader</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00046">moldSlider</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00044">moldToggle</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00127">RefreshTemplate()</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00106">GamePrincipal.ItemSlider.SetInt()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, <a class="el" href="UIButton_8cs_source.html#l00341">UIButton.SetToggle()</a>, <a class="el" href="UIButton_8cs_source.html#l00373">UIButton.SetTooltipLang()</a>, <a class="el" href="Player_8cs_source.html#l00978">Player.showWorkaround</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00062">spriteNoToken</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00060">sprites</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00054">transCustom</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00111">SetTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00113">SetTemplate()</a>.</p>
 
 </div>
 </div>
@@ -758,26 +762,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00125">125</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>    {</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_property" href="classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979">IsCustom</a>)</div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            <a class="code hl_variable" href="classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0">groupTemplate</a>.<a class="code hl_function" href="classUISelectableGroup.html#a13f36679dec3e50c3c8b5897a1e2c8b9">Select</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92">buttonTemplates</a>.LastItem());</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  132</span>        {</div>
-<div class="line"><span class="lineno">  133</span>            <a class="code hl_variable" href="classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0">groupTemplate</a>.<a class="code hl_function" href="classUISelectableGroup.html#a13f36679dec3e50c3c8b5897a1e2c8b9">Select</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>);</div>
-<div class="line"><span class="lineno">  134</span>        }</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a7795c34d61c4167f5de9c32f6dc72aea">textDetail</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>((<span class="stringliteral">&quot;vow_&quot;</span> + <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>).lang());</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="ttc" id="aclassGamePrincipal_html_a0a68bbd1b3d3d6c7e984284c25401aef"><div class="ttname"><a href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">GamePrincipal.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00112">GamePrincipal.cs:112</a></div></div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00127">127</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_property" href="classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979">IsCustom</a>)</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_variable" href="classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0">groupTemplate</a>.<a class="code hl_function" href="classUISelectableGroup.html#a13f36679dec3e50c3c8b5897a1e2c8b9">Select</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#aaac7c6e760cc75eefefb55dd28c1cc92">buttonTemplates</a>.LastItem());</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            <a class="code hl_variable" href="classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0">groupTemplate</a>.<a class="code hl_function" href="classUISelectableGroup.html#a13f36679dec3e50c3c8b5897a1e2c8b9">Select</a>(<a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>);</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#a7795c34d61c4167f5de9c32f6dc72aea">textDetail</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>((<span class="stringliteral">&quot;vow_&quot;</span> + <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a>.<a class="code hl_variable" href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">id</a>).lang());</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="ttc" id="aclassGamePrincipal_html_a0a68bbd1b3d3d6c7e984284c25401aef"><div class="ttname"><a href="classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef">GamePrincipal.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="GamePrincipal_8cs_source.html#l00113">GamePrincipal.cs:113</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a7795c34d61c4167f5de9c32f6dc72aea"><div class="ttname"><a href="classLayerWorldSetting.html#a7795c34d61c4167f5de9c32f6dc72aea">LayerWorldSetting.textDetail</a></div><div class="ttdeci">UIText textDetail</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00038">LayerWorldSetting.cs:38</a></div></div>
 <div class="ttc" id="aclassLayerWorldSetting_html_a97ba320f505300b51d4c010dca87c7e0"><div class="ttname"><a href="classLayerWorldSetting.html#a97ba320f505300b51d4c010dca87c7e0">LayerWorldSetting.groupTemplate</a></div><div class="ttdeci">UISelectableGroup groupTemplate</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00008">LayerWorldSetting.cs:8</a></div></div>
 <div class="ttc" id="aclassUISelectableGroup_html_a13f36679dec3e50c3c8b5897a1e2c8b9"><div class="ttname"><a href="classUISelectableGroup.html#a13f36679dec3e50c3c8b5897a1e2c8b9">UISelectableGroup.Select</a></div><div class="ttdeci">void Select(UIButton button, bool check=true)</div><div class="ttdef"><b>Definition:</b> <a href="UISelectableGroup_8cs_source.html#l00188">UISelectableGroup.cs:188</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00010">buttonTemplates</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00008">groupTemplate</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00112">GamePrincipal.id</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00168">GamePrincipal.IsCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="UISelectableGroup_8cs_source.html#l00188">UISelectableGroup.Select()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00038">textDetail</a>.</p>
+<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00010">buttonTemplates</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00008">groupTemplate</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00113">GamePrincipal.id</a>, <a class="el" href="GamePrincipal_8cs_source.html#l00172">GamePrincipal.IsCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="UISelectableGroup_8cs_source.html#l00188">UISelectableGroup.Select()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00038">textDetail</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -805,23 +809,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00111">111</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
-<div class="line"><span class="lineno">  113</span>        pp.id = idx;</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (idx == <a class="code hl_property" href="classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e">IdxCustom</a>)</div>
-<div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            pp.id = -1;</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  119</span>        {</div>
-<div class="line"><span class="lineno">  120</span>            <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a> = <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a8042811589e7e8879ae998ac4ca6f1e4">start</a>.<a class="code hl_variable" href="classGameSetting_1_1StartSetting.html#ab02132a4c8e7cec0c244444007cc2bff">principals</a>[idx]);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_function" href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">Refresh</a>();</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00113">113</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>    {</div>
+<div class="line"><span class="lineno">  115</span>        pp.id = idx;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (idx == <a class="code hl_property" href="classLayerWorldSetting.html#a4e9c5bad55b3a7d011184d55153f281e">IdxCustom</a>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            pp.id = -1;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_variable" href="classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df">pp</a> = <a class="code hl_class" href="classIO.html">IO</a>.DeepCopy(<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a8425a850da931bf4ff4469f7c45880f0">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a8042811589e7e8879ae998ac4ca6f1e4">start</a>.<a class="code hl_variable" href="classGameSetting_1_1StartSetting.html#ab02132a4c8e7cec0c244444007cc2bff">principals</a>[idx]);</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_function" href="classLayerWorldSetting.html#a384ed191411636117f479a8fe8ebbf37">Refresh</a>();</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00064">IdxCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="GameSetting_8cs_source.html#l00244">GameSetting.StartSetting.principals</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>, <a class="el" href="ELayer_8cs_source.html#l00033">ELayer.setting</a>, and <a class="el" href="GameSetting_8cs_source.html#l00305">GameSetting.start</a>.</p>
+<p class="reference">References <a class="el" href="LayerWorldSetting_8cs_source.html#l00066">IdxCustom</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">pp</a>, <a class="el" href="GameSetting_8cs_source.html#l00244">GameSetting.StartSetting.principals</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>, <a class="el" href="ELayer_8cs_source.html#l00033">ELayer.setting</a>, and <a class="el" href="GameSetting_8cs_source.html#l00305">GameSetting.start</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -848,27 +852,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00200">200</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">resetPrincipal</a>)</div>
-<div class="line"><span class="lineno">  203</span>        {</div>
-<div class="line"><span class="lineno">  204</span>            <a class="code hl_function" href="classLayer.html#aea402e8b975897fa67e7ae26abfd2f7d">Close</a>();</div>
-<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#af22504fa8523cc85036798de0fd55ea2">started</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  208</span>        <a class="code hl_function" href="classLayer.html#aea402e8b975897fa67e7ae26abfd2f7d">Close</a>();</div>
-<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_variable" href="classLayerDrama.html#a41f2a2efd728c2119701cfb474a91450">Instance</a>)</div>
-<div class="line"><span class="lineno">  210</span>        {</div>
-<div class="line"><span class="lineno">  211</span>            <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a513108b517ab03c0509f6f7e43c1f2c8">ActivateMain</a>(<span class="stringliteral">&quot;mono&quot;</span>, <span class="stringliteral">&quot;1-1&quot;</span>);</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00203">203</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>    {</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">resetPrincipal</a>)</div>
+<div class="line"><span class="lineno">  206</span>        {</div>
+<div class="line"><span class="lineno">  207</span>            <a class="code hl_function" href="classLayer.html#aea402e8b975897fa67e7ae26abfd2f7d">Close</a>();</div>
+<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  209</span>        }</div>
+<div class="line"><span class="lineno">  210</span>        <a class="code hl_variable" href="classLayerWorldSetting.html#af22504fa8523cc85036798de0fd55ea2">started</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  211</span>        <a class="code hl_function" href="classLayer.html#aea402e8b975897fa67e7ae26abfd2f7d">Close</a>();</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_variable" href="classLayerDrama.html#a41f2a2efd728c2119701cfb474a91450">Instance</a>)</div>
+<div class="line"><span class="lineno">  213</span>        {</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_class" href="classLayerDrama.html">LayerDrama</a>.<a class="code hl_function" href="classLayerDrama.html#a513108b517ab03c0509f6f7e43c1f2c8">ActivateMain</a>(<span class="stringliteral">&quot;mono&quot;</span>, <span class="stringliteral">&quot;1-1&quot;</span>);</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
 <div class="ttc" id="aclassLayerDrama_html"><div class="ttname"><a href="classLayerDrama.html">LayerDrama</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00004">LayerDrama.cs:5</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html_a41f2a2efd728c2119701cfb474a91450"><div class="ttname"><a href="classLayerDrama.html#a41f2a2efd728c2119701cfb474a91450">LayerDrama.Instance</a></div><div class="ttdeci">static LayerDrama Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00020">LayerDrama.cs:20</a></div></div>
 <div class="ttc" id="aclassLayerDrama_html_a513108b517ab03c0509f6f7e43c1f2c8"><div class="ttname"><a href="classLayerDrama.html#a513108b517ab03c0509f6f7e43c1f2c8">LayerDrama.ActivateMain</a></div><div class="ttdeci">static LayerDrama ActivateMain(string idSheet, string idStep=null, Chara target=null, Card ref1=null, string tag=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="LayerDrama_8cs_source.html#l00061">LayerDrama.cs:61</a></div></div>
-<div class="ttc" id="aclassLayerWorldSetting_html_af22504fa8523cc85036798de0fd55ea2"><div class="ttname"><a href="classLayerWorldSetting.html#af22504fa8523cc85036798de0fd55ea2">LayerWorldSetting.started</a></div><div class="ttdeci">bool started</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00062">LayerWorldSetting.cs:62</a></div></div>
+<div class="ttc" id="aclassLayerWorldSetting_html_af22504fa8523cc85036798de0fd55ea2"><div class="ttname"><a href="classLayerWorldSetting.html#af22504fa8523cc85036798de0fd55ea2">LayerWorldSetting.started</a></div><div class="ttdeci">bool started</div><div class="ttdef"><b>Definition:</b> <a href="LayerWorldSetting_8cs_source.html#l00064">LayerWorldSetting.cs:64</a></div></div>
 <div class="ttc" id="aclassLayer_html_aea402e8b975897fa67e7ae26abfd2f7d"><div class="ttname"><a href="classLayer.html#aea402e8b975897fa67e7ae26abfd2f7d">Layer.Close</a></div><div class="ttdeci">virtual void Close()</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00463">Layer.cs:463</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00061">LayerDrama.ActivateMain()</a>, <a class="el" href="Layer_8cs_source.html#l00463">Layer.Close()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00020">LayerDrama.Instance</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="Player_8cs_source.html#l01133">Player.resetPrincipal</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00062">started</a>.</p>
+<p class="reference">References <a class="el" href="LayerDrama_8cs_source.html#l00061">LayerDrama.ActivateMain()</a>, <a class="el" href="Layer_8cs_source.html#l00463">Layer.Close()</a>, <a class="el" href="LayerDrama_8cs_source.html#l00020">LayerDrama.Instance</a>, <a class="el" href="ELayer_8cs_source.html#l00013">ELayer.player</a>, <a class="el" href="Player_8cs_source.html#l01154">Player.resetPrincipal</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00064">started</a>.</p>
 
 </div>
 </div>
@@ -887,7 +891,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00048">48</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -905,7 +909,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00010">10</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00125">RefreshTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00127">RefreshTemplate()</a>.</p>
 
 </div>
 </div>
@@ -923,7 +927,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00050">50</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -941,7 +945,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00008">8</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00125">RefreshTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00127">RefreshTemplate()</a>.</p>
 
 </div>
 </div>
@@ -975,7 +979,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00052">52</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -993,7 +997,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00046">46</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1015,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00044">44</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1033,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00012">12</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00220">Apply()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00125">RefreshTemplate()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00111">SetTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00223">Apply()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00127">RefreshTemplate()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00113">SetTemplate()</a>.</p>
 
 </div>
 </div>
@@ -1049,6 +1053,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a9cc8931aff36e857a42a44ca010c8acd" name="a9cc8931aff36e857a42a44ca010c8acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc8931aff36e857a42a44ca010c8acd">&#9670;&#160;</a></span>spriteNoToken</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite LayerWorldSetting.spriteNoToken</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00062">62</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
+
+</div>
+</div>
 <a id="ac4f834613c2e731ad9d8046f431d98bc" name="ac4f834613c2e731ad9d8046f431d98bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4f834613c2e731ad9d8046f431d98bc">&#9670;&#160;</a></span>sprites</h2>
 
@@ -1063,7 +1085,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00060">60</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1087,9 +1109,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00062">62</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00064">64</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00200">StartGame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00203">StartGame()</a>.</p>
 
 </div>
 </div>
@@ -1107,7 +1129,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00038">38</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00125">RefreshTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00127">RefreshTemplate()</a>.</p>
 
 </div>
 </div>
@@ -1317,7 +1339,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00054">54</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -1335,7 +1357,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00058">58</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1353,7 +1375,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00056">56</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>.</p>
 
 </div>
 </div>
@@ -1378,9 +1400,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00064">64</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00066">66</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00111">SetTemplate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00113">SetTemplate()</a>.</p>
 
 </div>
 </div>
@@ -1404,21 +1426,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00066">66</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a>)</div>
-<div class="line"><span class="lineno">   71</span>            {</div>
-<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">resetPrincipal</a>;</div>
-<div class="line"><span class="lineno">   73</span>            }</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   75</span>        }</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LayerWorldSetting_8cs_source.html#l00068">68</a> of file <a class="el" href="LayerWorldSetting_8cs_source.html">LayerWorldSetting.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">core</a>.<a class="code hl_property" href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">IsGameStarted</a>)</div>
+<div class="line"><span class="lineno">   73</span>            {</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6">resetPrincipal</a>;</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
 <div class="ttc" id="aclassCore_html_ac31f5b0fe98a25c00ca5700c328ae460"><div class="ttname"><a href="classCore.html#ac31f5b0fe98a25c00ca5700c328ae460">Core.IsGameStarted</a></div><div class="ttdeci">bool IsGameStarted</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00083">Core.cs:84</a></div></div>
 <div class="ttc" id="aclassELayer_html_a3f682f07dda761d3b9973dd7c3a31f6e"><div class="ttname"><a href="classELayer.html#a3f682f07dda761d3b9973dd7c3a31f6e">ELayer.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="ELayer_8cs_source.html#l00007">ELayer.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00220">Apply()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00078">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00138">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerWorldSetting_8cs_source.html#l00223">Apply()</a>, <a class="el" href="LayerWorldSetting_8cs_source.html#l00080">OnInit()</a>, and <a class="el" href="LayerWorldSetting_8cs_source.html#l00140">Refresh()</a>.</p>
 
 </div>
 </div>

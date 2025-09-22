@@ -17,6 +17,7 @@ var classLayerWorldSetting =
     [ "moldToggle", "classLayerWorldSetting.html#a20749e29926dc4a2316fc03b17e259ff", null ],
     [ "pp", "classLayerWorldSetting.html#a758290fef22ff619dda90df7396fb3df", null ],
     [ "sliderDropRate", "classLayerWorldSetting.html#a63bae541382c458b89737e7224f22ce0", null ],
+    [ "spriteNoToken", "classLayerWorldSetting.html#a9cc8931aff36e857a42a44ca010c8acd", null ],
     [ "sprites", "classLayerWorldSetting.html#ac4f834613c2e731ad9d8046f431d98bc", null ],
     [ "started", "classLayerWorldSetting.html#af22504fa8523cc85036798de0fd55ea2", null ],
     [ "textDetail", "classLayerWorldSetting.html#a7795c34d61c4167f5de9c32f6dc72aea", null ],

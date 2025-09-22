@@ -1,5 +1,17 @@
 var NAVTREEINDEX115 =
 {
+"classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1415,0],
+"classTraitAnvil.html":[1,0,1416],
+"classTraitAppraiser.html":[1,0,1417],
+"classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1417,0],
+"classTraitAppraiser.html#ac2667376d933a0450b99f469e1d4aa73":[1,0,1417,1],
+"classTraitAshland.html":[1,0,1418],
+"classTraitAshland.html#aec6e421de9a8108eb3ca196cd1429339":[1,0,1418,0],
+"classTraitBBQ.html":[1,0,1431],
+"classTraitBBQ.html#ae23270c3c55f5dcc8d12a295650f4f54":[1,0,1431,0],
+"classTraitBJTable.html":[1,0,1440],
+"classTraitBJTable.html#a294b8bdb971efcc60d99ff887df2b8f2":[1,0,1440,1],
+"classTraitBJTable.html#a98f8d5d6799da4249a3328f36a4220cd":[1,0,1440,0],
 "classTraitBait.html":[1,0,1419],
 "classTraitBait.html#a6b2a160c8dd590cac04bca5e1206ab0c":[1,0,1419,1],
 "classTraitBait.html#a8c0f75c77ea0f262d1f27a4b0f456420":[1,0,1419,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1466,2],
 "classTraitCauldron.html":[1,0,1467],
 "classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1467,1],
-"classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1467,0],
-"classTraitChair.html":[1,0,1468],
-"classTraitChangingRoom.html":[1,0,1469],
-"classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1469,0],
-"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1469,1],
-"classTraitChara.html":[1,0,1470],
-"classTraitChara.html#a082aebc8ded8a214962006a21717b046":[1,0,1470,4],
-"classTraitChara.html#a1cb2d15f296e190a9b93880a7ddbf2c1":[1,0,1470,12],
-"classTraitChara.html#a2086848ac881113e85fd2f5f2cb7dbe1":[1,0,1470,27],
-"classTraitChara.html#a26d1948919de92330634988e012a7e10":[1,0,1470,18],
-"classTraitChara.html#a2bd44c5e5fb7182a0450bfd8139e6fc9":[1,0,1470,3],
-"classTraitChara.html#a2d39a084b220d4016457b1677412c3a3":[1,0,1470,28],
-"classTraitChara.html#a31b8c4472e901cac25ecf2877553206c":[1,0,1470,29]
+"classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1467,0]
 };

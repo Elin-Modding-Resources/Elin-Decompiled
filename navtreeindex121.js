@@ -1,5 +1,17 @@
 var NAVTREEINDEX121 =
 {
+"classTraitPowerStatue.html#ad4219ceac075b2bef9fd98c90c22f651":[1,0,1756,6],
+"classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1756,3],
+"classTraitPunishBall.html":[1,0,1757],
+"classTraitPunishBall.html#a7aef7ba745933c57778ad77772f5b1ea":[1,0,1757,1],
+"classTraitPunishBall.html#a8eed1e8041d764c11247005ecef42000":[1,0,1757,4],
+"classTraitPunishBall.html#a94ac158ebca677e1b6dd601c52a5232b":[1,0,1757,0],
+"classTraitPunishBall.html#aa09ba5e2e40ce2ceab7738c0967479ad":[1,0,1757,3],
+"classTraitPunishBall.html#af986d9992b08bfedf70a1ccb37add2fb":[1,0,1757,2],
+"classTraitPuppy.html":[1,0,1758],
+"classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1758,0],
+"classTraitQuestBoard.html":[1,0,1759],
+"classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1759,0],
 "classTraitQuestBoard.html#acc915a6236db624e9877d89ed47c9913":[1,0,1759,1],
 "classTraitQuiver.html":[1,0,1760],
 "classTraitQuru.html":[1,0,1761],
@@ -237,17 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitShackle.html#a0d385cbd1b4dbd50b850831f8ec9c49a":[1,0,1804,9],
 "classTraitShackle.html#a141ae3562c5f5c57a3a5ca23924a16eb":[1,0,1804,1],
 "classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3":[1,0,1804,7],
-"classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1804,10],
-"classTraitShackle.html#a236f46437d85f1e740a110b66484bbba":[1,0,1804,6],
-"classTraitShackle.html#a2d6c3adbbaa632d21cc6b49444b7a6f1":[1,0,1804,0],
-"classTraitShackle.html#a3ddb785981a40e16a321f2f3edd274f6":[1,0,1804,3],
-"classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea":[1,0,1804,2],
-"classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1804,8],
-"classTraitShackle.html#ab5a93c54ff3fb2a6abcf850cb02eb3b4":[1,0,1804,4],
-"classTraitShackle.html#ae2f48b61df0b7b07d44db68f247d22d1":[1,0,1804,5],
-"classTraitShippingChest.html":[1,0,1805],
-"classTraitShippingChest.html#a09b3ee148e905787ba8af1bcecab6733":[1,0,1805,3],
-"classTraitShippingChest.html#a2ed1f077356bb246077d2ac6e95abfb3":[1,0,1805,0],
-"classTraitShippingChest.html#a6abb9e30a12c19af7c56991a502bf646":[1,0,1805,1],
-"classTraitShippingChest.html#a817267edd75c49ec3143fe4ff58f67c7":[1,0,1805,5]
+"classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1804,10]
 };

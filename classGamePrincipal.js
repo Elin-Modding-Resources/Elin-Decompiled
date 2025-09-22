@@ -5,7 +5,8 @@ var classGamePrincipal =
     [ "Type", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12", [
       [ "Oath", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a01d1d3c2f04043c035a52d9ff8f51c79", null ],
       [ "Workaround", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a7aebfa1e2291377e040de92d7f7f335f", null ],
-      [ "Legacy", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a0cc0a0507cf3d31e5089f420a4cf8b4b", null ]
+      [ "Legacy", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a0cc0a0507cf3d31e5089f420a4cf8b4b", null ],
+      [ "Flavor", "classGamePrincipal.html#aadd8a550e2256e3893837c4d570a2b12a4448804864d703e8b696c3fa7713aa23", null ]
     ] ],
     [ "ListItems", "classGamePrincipal.html#afb2e437581753ac31a1feed7279e54b0", null ],
     [ "disableDeathPenaltyProtection", "classGamePrincipal.html#afca6b1c14e3686412c9e51f5c7cc2224", null ],
@@ -19,6 +20,7 @@ var classGamePrincipal =
     [ "ignoreEvaluate", "classGamePrincipal.html#a7367a6d6ff6c977d173a412cfffc81dd", null ],
     [ "infiniteMarketFund", "classGamePrincipal.html#a32142e558ef82d06956a4711238713a4", null ],
     [ "modified", "classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a", null ],
+    [ "noAging", "classGamePrincipal.html#accbdffafb7b861f823cc099c63d50e3a", null ],
     [ "opMilk", "classGamePrincipal.html#a079f6ce555bf5e5b2a3d3467e7939ad4", null ],
     [ "permadeath", "classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9", null ],
     [ "petFeatExp", "classGamePrincipal.html#a56980908c63bf9df8a4e3982561461b6", null ],

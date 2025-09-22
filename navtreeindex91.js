@@ -1,5 +1,16 @@
 var NAVTREEINDEX91 =
 {
+"classProgress__Custom.html#a180aee1eea56965f7dd0efa4e3cd1c3c":[1,0,964,16],
+"classProgress__Custom.html#a21a9bbd98677b5fa23b08ee95d9e94dd":[1,0,964,20],
+"classProgress__Custom.html#a22adbd51efeff474c1a98cddbdf01547":[1,0,964,18],
+"classProgress__Custom.html#a3c760e3ba21fa9197cdf9d2fd7ce356a":[1,0,964,7],
+"classProgress__Custom.html#a7a85c3cadef1d2b86ac09a176d0c0e12":[1,0,964,11],
+"classProgress__Custom.html#a7cbce0f1f0ad095f3572f85d7b8d2bf7":[1,0,964,8],
+"classProgress__Custom.html#a81605ce5217048c822f8c6cc4ab57786":[1,0,964,9],
+"classProgress__Custom.html#a8badd4ffbcc1959e6ad4374262b77e80":[1,0,964,6],
+"classProgress__Custom.html#a8d542d5ffcb5bcad6970d15ab3438d9c":[1,0,964,10],
+"classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06":[1,0,964,5],
+"classProgress__Custom.html#a9fd907953c4c00ea8d4fcab4371dac61":[1,0,964,12],
 "classProgress__Custom.html#aa61ffcb9fe2c5f8515bd21b0fc21bb3c":[1,0,964,15],
 "classProgress__Custom.html#ab14a578203b73bc6b663719d20a0c6ff":[1,0,964,14],
 "classProgress__Custom.html#abb91540bcd2e141adfac3f12deb616e4":[1,0,964,4],
@@ -238,16 +249,5 @@ var NAVTREEINDEX91 =
 "classQuestCrafter.html#aa698c4059f13ba031888324e6e6bcb8d":[1,0,977,0],
 "classQuestCursedManor.html":[1,0,978],
 "classQuestCursedManor.html#acd173b4aaa88555c56d4331893485e94":[1,0,978,0],
-"classQuestCursedManor.html#ad474b52b0cb4fceee391e459a77c3a47":[1,0,978,1],
-"classQuestCursedManor.html#aef99e9abb394e435091eb387e57aa37f":[1,0,978,2],
-"classQuestDebt.html":[1,0,979],
-"classQuestDebt.html#a038d7e8f0eddbee1f6fb7b802004bc33":[1,0,979,2],
-"classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,979,10],
-"classQuestDebt.html#a5ccbf960ec04b44e7634427523063cc2":[1,0,979,1],
-"classQuestDebt.html#a5d289654a81bdd243fb33a4c5487b8dd":[1,0,979,4],
-"classQuestDebt.html#a9e71514a893633df9b31c44acab9aeb4":[1,0,979,0],
-"classQuestDebt.html#aa4f5d7d6ba7e8c0b8f3a5aa48d967281":[1,0,979,3],
-"classQuestDebt.html#aae5e60657545a519189014b2d72a30a2":[1,0,979,9],
-"classQuestDebt.html#ab109ddf27deda5ac9cffa4a5af44f577":[1,0,979,5],
-"classQuestDebt.html#ab545f5a7c04a059f625c3a54e045b3ab":[1,0,979,11]
+"classQuestCursedManor.html#ad474b52b0cb4fceee391e459a77c3a47":[1,0,978,1]
 };

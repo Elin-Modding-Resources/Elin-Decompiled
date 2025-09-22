@@ -1,5 +1,17 @@
 var NAVTREEINDEX114 =
 {
+"classTrait.html#a4b04ca74c54bb2fad488c295278265dd":[1,0,1399,18],
+"classTrait.html#a4b2d59088504ce0145c3096fb99645fc":[1,0,1399,11],
+"classTrait.html#a4d20dd4795d1045eba97f315560053b1":[1,0,1399,212],
+"classTrait.html#a4d5c9fc35b8500252b0825af49c28f09":[1,0,1399,163],
+"classTrait.html#a4f89efebbdf3bf36c106d69f646853c5":[1,0,1399,108],
+"classTrait.html#a50ebba181dd04ca5ab9622c16c6b824b":[1,0,1399,194],
+"classTrait.html#a50ff3f794150d62da8471d3fb73b77ed":[1,0,1399,10],
+"classTrait.html#a52939bcd3cee8f5f363fdf65226c8c41":[1,0,1399,214],
+"classTrait.html#a5403dc0110848cbb7e18de734186502c":[1,0,1399,197],
+"classTrait.html#a54e7efc433bb50c88c6499d508da5044":[1,0,1399,104],
+"classTrait.html#a54fb77632261c0e68b84d3952b074af6":[1,0,1399,5],
+"classTrait.html#a5503e75134664e964c38de54581de9b7":[1,0,1399,157],
 "classTrait.html#a558c95dcaa4ee0563619757b3527a7a2":[1,0,1399,137],
 "classTrait.html#a559565c2b219f365239f923cffe2b567":[1,0,1399,120],
 "classTrait.html#a5657bdba488247f19a5f983e904d82db":[1,0,1399,86],
@@ -237,17 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitAncientbook.html#ae882ffdfc7ef8327868fd0c99b2d937f":[1,0,1414,0],
 "classTraitAncientbook.html#aec51bf4c2860bbb886b3a13bf244bd0f":[1,0,1414,1],
 "classTraitAnimalTamer.html":[1,0,1415],
-"classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1415,1],
-"classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1415,0],
-"classTraitAnvil.html":[1,0,1416],
-"classTraitAppraiser.html":[1,0,1417],
-"classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1417,0],
-"classTraitAppraiser.html#ac2667376d933a0450b99f469e1d4aa73":[1,0,1417,1],
-"classTraitAshland.html":[1,0,1418],
-"classTraitAshland.html#aec6e421de9a8108eb3ca196cd1429339":[1,0,1418,0],
-"classTraitBBQ.html":[1,0,1431],
-"classTraitBBQ.html#ae23270c3c55f5dcc8d12a295650f4f54":[1,0,1431,0],
-"classTraitBJTable.html":[1,0,1440],
-"classTraitBJTable.html#a294b8bdb971efcc60d99ff887df2b8f2":[1,0,1440,1],
-"classTraitBJTable.html#a98f8d5d6799da4249a3328f36a4220cd":[1,0,1440,0]
+"classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1415,1]
 };

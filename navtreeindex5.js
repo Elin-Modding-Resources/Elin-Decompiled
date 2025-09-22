@@ -136,6 +136,7 @@ var NAVTREEINDEX5 =
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a3d9f1d3463ae4fabc0f18e3f47e7a9b4":[2,0,0,436,0,73],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a3f52c007b834c20b276ebb0afbd80bed":[2,0,0,436,0,122],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a40491db1043a93d8b94b9d94e3eda532":[2,0,0,436,0,3],
+"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a4158f274689e3ec78ca9596224771181":[2,0,0,436,0,126],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a43c0b4ec5edcd9385319524f5ddee79e":[2,0,0,436,0,99],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a4847ce807a0fc8f7e8dd2dd8ac780f9b":[2,0,0,436,0,125],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a5000019797475714106838a59c6df8cf":[2,0,0,436,0,74],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "ElementSelecter_8cs.html":[2,0,0,451],
 "ElementSelecter_8cs_source.html":[2,0,0,451],
 "ElinEncoder_8cs.html":[2,0,0,2,25],
-"ElinEncoder_8cs_source.html":[2,0,0,2,25],
-"EloMapActor_8cs.html":[2,0,0,453]
+"ElinEncoder_8cs_source.html":[2,0,0,2,25]
 };
