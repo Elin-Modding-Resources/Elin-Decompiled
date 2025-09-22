@@ -59,6 +59,8 @@ public class LayerWorldSetting : ELayer
 
 	public List<Sprite> sprites;
 
+	public Sprite spriteNoToken;
+
 	private bool started;
 
 	public int IdxCustom => 3;
@@ -145,6 +147,7 @@ public class LayerWorldSetting : ELayer
 		{
 			AddCategory(GamePrincipal.Type.Workaround);
 			AddCategory(GamePrincipal.Type.Legacy);
+			AddCategory(GamePrincipal.Type.Flavor);
 		}
 		transCustom.RebuildLayout();
 		void AddCategory(GamePrincipal.Type type)
@@ -173,9 +176,9 @@ public class LayerWorldSetting : ELayer
 				}
 				bool flag = item.id == "permadeath" && !IsEmbark && !item.WasSealed();
 				b.mainText.SetText(("pp_" + item.id).lang());
-				b.icon.SetActive(item.grade >= 0 && (item.IsSealed() || item.WasSealed()));
-				b.icon.SetAlpha(item.IsSealed() ? 1f : 0.3f);
-				b.icon.sprite = ((item.grade < 0) ? null : sprites[item.grade]);
+				b.icon.SetActive(item.grade < 0 || item.IsSealed() || item.WasSealed());
+				b.icon.SetAlpha((item.grade < 0 || item.IsSealed()) ? 1f : 0.3f);
+				b.icon.sprite = ((item.grade < 0) ? spriteNoToken : sprites[item.grade]);
 				b.icon.SetNativeSize();
 				b.GetOrCreate<CanvasGroup>().alpha = (flag ? 0.5f : 1f);
 				string text = "pp_" + item.id + "_hint";
@@ -190,8 +193,8 @@ public class LayerWorldSetting : ELayer
 						pp.id = -1;
 						RefreshTemplate();
 					}
-					b.icon.SetActive(item.grade >= 0 && (item.IsSealed() || item.WasSealed()));
-					b.icon.SetAlpha(item.IsSealed() ? 1f : 0.3f);
+					b.icon.SetActive(item.grade < 0 || item.IsSealed() || item.WasSealed());
+					b.icon.SetAlpha((item.grade < 0 || item.IsSealed()) ? 1f : 0.3f);
 				});
 			}
 		}

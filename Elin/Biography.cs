@@ -287,6 +287,10 @@ public class Biography : EClass
 				return int.Parse(array[1]);
 			}
 		}
+		if (!c.IsPC && EClass.game.principal.noAging)
+		{
+			return EClass.game.Prologue.year - birthYear;
+		}
 		return EClass.world.date.year - birthYear;
 	}
 

@@ -9,7 +9,8 @@ public class GamePrincipal : EClass
 	{
 		Oath,
 		Workaround,
-		Legacy
+		Legacy,
+		Flavor
 	}
 
 	public class Item
@@ -151,6 +152,9 @@ public class GamePrincipal : EClass
 	public bool realAdv;
 
 	[JsonProperty]
+	public bool noAging;
+
+	[JsonProperty]
 	public bool dropRate;
 
 	[JsonProperty]
@@ -211,6 +215,10 @@ public class GamePrincipal : EClass
 		Add(-1, Type.Legacy, "enableDamageReduction", () => enableDamageReduction, delegate(bool a)
 		{
 			enableDamageReduction = a;
+		});
+		Add(-1, Type.Flavor, "noAging", () => noAging, delegate(bool a)
+		{
+			noAging = a;
 		});
 		return list;
 		void Add(int grade, Type type, string id, Func<bool> _get, Action<bool> _set)

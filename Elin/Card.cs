@@ -3992,6 +3992,20 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
+		if (origin != null && origin.HasElement(1208))
+		{
+			switch (attackSource)
+			{
+			case AttackSource.MagicHand:
+				dmg = dmg * 130 / 100;
+				eleP = eleP * 150 / 100;
+				break;
+			case AttackSource.MagicSword:
+				dmg = dmg * 120 / 100;
+				eleP = eleP * 150 / 100;
+				break;
+			}
+		}
 		Element e;
 		if (ele == 0 || ele == 926)
 		{
@@ -4264,7 +4278,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_0ead;
+							goto IL_0f1d;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4292,7 +4306,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_0ead;
+								goto IL_0f1d;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4310,8 +4324,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0ead;
-		IL_0ead:
+		goto IL_0f1d;
+		IL_0f1d:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);

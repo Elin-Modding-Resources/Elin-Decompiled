@@ -125,5 +125,6 @@ public enum EffectId
 	EternalYouth = 301,
 	MoonSpear = 302,
 	BurnMana = 303,
-	MoonArrow = 304
+	MoonArrow = 304,
+	LittleSisterMigration = 305
 }

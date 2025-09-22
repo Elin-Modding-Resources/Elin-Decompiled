@@ -31,7 +31,7 @@ public class QuestSupplySpecific : QuestSupply
 		{
 			foreach (SourceThing.Row row in EClass.sources.things.rows)
 			{
-				if ((i != 0 || !(this is QuestMeal) || row.LV <= num || EClass.rnd(4) == 0) && row.category == idCat && !row.isOrigin)
+				if ((i != 0 || !(this is QuestMeal) || row.LV <= num || EClass.rnd(4) == 0) && row.category == idCat && !row.isOrigin && row.chance > 0)
 				{
 					list.Add(row);
 				}

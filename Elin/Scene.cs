@@ -309,10 +309,10 @@ public class Scene : EMono
 			{
 				EMono.pc.RecalculateFOV();
 			}
-			EMono.player.flags.OnEnterZone();
 			flock.SetSpawnType(EMono._zone.FlockType);
 			if (!EMono.player.simulatingZone)
 			{
+				EMono.player.flags.OnEnterZone();
 				if (EMono._zone == EMono.pc.homeZone)
 				{
 					EMono.pc.faith.Revelation("welcome");

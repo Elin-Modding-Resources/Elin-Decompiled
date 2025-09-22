@@ -421,6 +421,11 @@ public class Quest : EClass
 
 	public virtual void OnClickQuest()
 	{
+		Chara chara = this.chara;
+		if (chara == null && !source.drama[0].IsEmpty())
+		{
+			chara = EClass.game.cards.globalCharas.Find(source.drama[0]);
+		}
 		if (!source.drama.IsEmpty())
 		{
 			LayerDrama.currentQuest = this;

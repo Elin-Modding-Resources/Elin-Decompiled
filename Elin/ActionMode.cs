@@ -1175,6 +1175,9 @@ public class ActionMode : EClass
 			}
 			break;
 		}
+		case CoreConfig.GameFunc.ToggleLog:
+			WidgetMainText.ToggleLog();
+			break;
 		case CoreConfig.GameFunc.ShowInv:
 			EClass.ui.ToggleInventory(delay: true);
 			break;

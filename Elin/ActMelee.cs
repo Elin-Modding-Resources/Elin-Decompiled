@@ -161,7 +161,7 @@ public class ActMelee : ActBaseAttack
 		{
 			Act.CC.RemoveCondition<ConInvisibility>();
 		}
-		if (orgTC.isChara && orgTC.ExistsOnMap && orgTC != cC && !orgTC.IsRestrainedResident && ACT.Melee.CanPerform(orgTC.Chara, cC))
+		if (orgTC.isChara && orgTC.ExistsOnMap && orgTC != cC && !orgTC.IsRestrainedResident && !orgTC.IsDisabled && ACT.Melee.CanPerform(orgTC.Chara, cC))
 		{
 			if (parried)
 			{
@@ -360,7 +360,7 @@ public class ActMelee : ActBaseAttack
 					}
 					if (k > 0)
 					{
-						Act.CC.Say("attack_chaser");
+						Act.CC.Say(Act.CC.IsHostile() ? "attack_chaser_enemy" : "attack_chaser");
 					}
 					flag = AttackProcess.Current.Perform(count, hasHit, dmgMulti * mtp * BaseDmgMTP, maxRoll, subAttack);
 					if (!flag && frustration > 0 && !Act.TC.HasElement(439) && 10f + 2f * Mathf.Sqrt(frustration) > (float)EClass.rnd(100))

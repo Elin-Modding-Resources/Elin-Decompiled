@@ -28,7 +28,8 @@ public class CoreConfig : EClass
 		EmptyHand,
 		Fire,
 		SwitchHotbar,
-		PropertySearch
+		PropertySearch,
+		ToggleLog
 	}
 
 	public enum GameFuncBuild

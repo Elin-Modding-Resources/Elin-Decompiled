@@ -251,6 +251,10 @@ public class AttackProcess : EClass
 			dMulti = 0.6f + (float)(weaponSkill.GetParent(CC).Value + weaponSkill.Value / 2 + CC.Evalue(flag3 ? 304 : (IsRanged ? 133 : 132))) / 50f;
 			dMulti += 0.05f * (float)CC.Evalue(IsRanged ? 1404 : 1400);
 			toHitBase = EClass.curve((IsCane ? CC.WIL : CC.DEX) / 4 + weaponSkill.GetParent(CC).Value / 3 + weaponSkill.Value, 50, 25) + 50;
+			if (CC.HasElement(1208) && weaponSkill.id == 101)
+			{
+				toHitBase = toHitBase * 115 / 100;
+			}
 			toHitFix = CC.HIT + weapon.HIT;
 			penetration = weapon.Penetration + CC.Evalue(92);
 			if (IsRanged)

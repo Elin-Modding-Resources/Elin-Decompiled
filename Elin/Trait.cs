@@ -1867,6 +1867,7 @@ public class Trait : EClass
 					if (num12 > 10)
 					{
 						Add("syringe_heaven", num12 / 5, 0);
+						Add("1276", 1, 0);
 					}
 					break;
 				}

@@ -243,6 +243,7 @@ public class GameDate : Date
 	public void AdvanceYear()
 	{
 		base.year++;
+		EClass.player.flags.santa = 0;
 		EClass.player.wellWished = false;
 		EClass.player.nums.OnAdvanceYear();
 		EClass.world.SendPackage(ThingGen.Create("gift_newyear"));

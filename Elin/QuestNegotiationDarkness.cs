@@ -12,4 +12,9 @@ public class QuestNegotiationDarkness : QuestProgression
 	{
 		return false;
 	}
+
+	public override void ShowCompleteText()
+	{
+		Msg.Say("completeQuest", GetTitle());
+	}
 }
