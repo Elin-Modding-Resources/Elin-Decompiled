@@ -169,7 +169,7 @@ public class AI_Idle : AIAct
 						{
 							continue;
 						}
-						for (int i = 0; i < 5; i++)
+						for (int j = 0; j < 5; j++)
 						{
 							if (thing8.encLV >= 0)
 							{
@@ -378,24 +378,47 @@ public class AI_Idle : AIAct
 		{
 			owner.TryAssignBed();
 		}
-		if (owner.id == "geist" && EClass.rnd(20) == 0)
+		string text;
+		if (!EClass._zone.IsRegion)
 		{
-			Point nearestPoint = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false);
-			if (nearestPoint != null)
+			text = owner.id;
+			if (!(text == "geist"))
 			{
-				foreach (Chara item3 in nearestPoint.ListCharasInRadius(owner, 6, (Chara _c) => _c != owner && !_c.IsPCFactionOrMinion))
+				if (text == "mech_scarab" && EClass.rnd(20) == 0)
 				{
-					item3.Teleport(nearestPoint.GetNearestPoint(allowBlock: false, allowChara: false) ?? nearestPoint);
-				}
-				if (owner != null)
-				{
-					if (!owner.IsPCFactionOrMinion)
+					int i = 0;
+					owner.pos.ForeachNeighbor(delegate(Point p)
 					{
-						EClass.pc.ai.Cancel();
+						if (p.HasChara && p.FirstChara.id == "mech_scarab")
+						{
+							i++;
+						}
+					});
+					if (i <= 2)
+					{
+						EClass._zone.AddCard(owner.Duplicate(), owner.pos.GetNearestPoint(allowBlock: false, allowChara: false));
 					}
-					owner.Teleport(nearestPoint);
 				}
-				yield return Success();
+			}
+			else if (EClass.rnd(20) == 0)
+			{
+				Point nearestPoint = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false);
+				if (nearestPoint != null)
+				{
+					foreach (Chara item3 in nearestPoint.ListCharasInRadius(owner, 6, (Chara _c) => _c != owner && !_c.IsPCFactionOrMinion))
+					{
+						item3.Teleport(nearestPoint.GetNearestPoint(allowBlock: false, allowChara: false) ?? nearestPoint);
+					}
+					if (owner != null)
+					{
+						if (!owner.IsPCFactionOrMinion)
+						{
+							EClass.pc.ai.Cancel();
+						}
+						owner.Teleport(nearestPoint);
+					}
+					yield return Success();
+				}
 			}
 		}
 		if (EClass._zone.IsPCFaction)
@@ -438,10 +461,10 @@ public class AI_Idle : AIAct
 				else if (EClass.rnd(15) == 0 && EClass._zone.IsTown && owner.hostility >= Hostility.Neutral && !owner.IsPCFaction && !EClass.pc.HasCondition<ConIncognito>())
 				{
 					bool flag4 = EClass._zone is Zone_Derphy;
-					string text = ((EClass.player.karma > 10) ? ((EClass.player.karma < 90) ? "" : (flag4 ? "rumor_bad" : "rumor_good")) : (flag4 ? "rumor_good" : "rumor_bad"));
-					if (!text.IsEmpty())
+					string text2 = ((EClass.player.karma > 10) ? ((EClass.player.karma < 90) ? "" : (flag4 ? "rumor_bad" : "rumor_good")) : (flag4 ? "rumor_good" : "rumor_bad"));
+					if (!text2.IsEmpty())
 					{
-						owner.Talk(text);
+						owner.Talk(text2);
 					}
 					if ((flag4 ? (EClass.player.karma >= 90) : (EClass.player.karma <= 10)) && EClass.rnd(10) == 0)
 					{
@@ -837,7 +860,7 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(10) == 0 && !EClass._zone.IsUnderwater && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
 		{
-			for (int j = 0; j < 100; j++)
+			for (int k = 0; k < 100; k++)
 			{
 				Point randomPoint = EClass._map.GetRandomPoint();
 				if (randomPoint.IsDeepWater && !randomPoint.IsBlocked)
@@ -847,8 +870,8 @@ public class AI_Idle : AIAct
 				}
 			}
 		}
-		string aiIdle = owner.source.aiIdle;
-		if (!(aiIdle == "stand") && !(aiIdle == "root"))
+		text = owner.source.aiIdle;
+		if (!(text == "stand") && !(text == "root"))
 		{
 			if (EClass.rnd(15) == 0)
 			{
@@ -870,9 +893,9 @@ public class AI_Idle : AIAct
 		yield return Restart();
 		Point FindMovePoint(BaseArea.AccessType type)
 		{
-			for (int k = 0; k < 20; k++)
+			for (int l = 0; l < 20; l++)
 			{
-				Point randomPoint2 = owner.pos.GetRandomPoint(5 + k, requireLos: false);
+				Point randomPoint2 = owner.pos.GetRandomPoint(5 + l, requireLos: false);
 				if (randomPoint2 != null && randomPoint2.IsInBounds && (randomPoint2.cell.room == null || randomPoint2.cell.room.data.accessType == type))
 				{
 					return randomPoint2;

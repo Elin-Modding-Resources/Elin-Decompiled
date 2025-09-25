@@ -825,11 +825,22 @@ public class Player : EClass
 				PlayStory(availableStories[0]);
 				availableStories.RemoveAt(0);
 			}
-			if (!LayerDrama.Instance && !EClass.game.isLoading && EClass.debug.enable && EClass._zone.IsPCFaction && EClass.game.quests.GetPhase<QuestIntoDarkness>() == 0 && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 5)
+			if (!LayerDrama.Instance && !EClass.game.isLoading && EClass._zone.IsPCFaction)
 			{
-				EClass.game.cards.globalCharas.Find("kettle");
-				EClass.game.quests.Get<QuestNegotiationDarkness>().Complete();
-				EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+				if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 0 && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 5)
+				{
+					EClass.game.quests.Get<QuestNegotiationDarkness>().Complete();
+					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+				}
+				else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 1)
+				{
+					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+				}
+				else
+				{
+					EClass.game.quests.GetPhase<QuestIntoDarkness>();
+					_ = 2;
+				}
 			}
 		}
 

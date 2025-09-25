@@ -161,7 +161,7 @@ public class ActMelee : ActBaseAttack
 		{
 			Act.CC.RemoveCondition<ConInvisibility>();
 		}
-		if (orgTC.isChara && orgTC.ExistsOnMap && orgTC != cC && !orgTC.IsRestrainedResident && !orgTC.IsDisabled && ACT.Melee.CanPerform(orgTC.Chara, cC))
+		if (orgTC.isChara && orgTC.ExistsOnMap && orgTC != cC && !orgTC.IsRestrainedResident && !orgTC.IsDisabled && ACT.Melee.CanPerform(orgTC.Chara, cC) && (!orgTC.IsPCFactionOrMinion || !EClass._zone.isPeace))
 		{
 			if (parried)
 			{

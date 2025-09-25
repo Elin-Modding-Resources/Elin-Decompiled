@@ -287,9 +287,9 @@ public class Biography : EClass
 				return int.Parse(array[1]);
 			}
 		}
-		if (!c.IsPC && EClass.game.principal.noAging)
+		if (!c.IsPC && EClass.game.principal.noAging && EClass.world.date.year - birthYear >= 13)
 		{
-			return EClass.game.Prologue.year - birthYear;
+			return (int)MathF.Max(EClass.game.Prologue.year - birthYear, 13f);
 		}
 		return EClass.world.date.year - birthYear;
 	}

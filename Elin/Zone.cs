@@ -1776,17 +1776,26 @@ public class Zone : Spatial, ICardParent, IInspect
 			return true;
 		}
 		bool flag = false;
-		string text = id;
-		if (!(text == "cave_yeek"))
+		switch (id)
 		{
-			if (text == "cave_mino" && !(this is Zone_DungeonMino))
+		case "cave_dragon":
+			if (!(this is Zone_DungeonDragon))
 			{
 				flag = true;
 			}
-		}
-		else if (!(this is Zone_DungeonYeek))
-		{
-			flag = true;
+			break;
+		case "cave_yeek":
+			if (!(this is Zone_DungeonYeek))
+			{
+				flag = true;
+			}
+			break;
+		case "cave_mino":
+			if (!(this is Zone_DungeonMino))
+			{
+				flag = true;
+			}
+			break;
 		}
 		Zone topZone = GetTopZone();
 		if (!flag)

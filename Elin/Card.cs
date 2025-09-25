@@ -7075,8 +7075,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			switch (currency)
 			{
 			case CurrencyType.Influence:
-				if (id == "lunch_love")
+				switch (id)
 				{
+				case "ticket_fortune":
+					return 5;
+				case "medal":
+					return 5;
+				case "lunch_love":
 					return 10;
 				}
 				break;

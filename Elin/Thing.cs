@@ -1281,7 +1281,7 @@ public class Thing : Card
 						return s;
 					}
 					int num4 = e.Value;
-					if (e.source.IsWeaponEnc && !e.source.tag.Contains("modRanged") && isEquipped && root.isChara)
+					if (e.source.IsWeaponEnc && (!e.source.tag.Contains("modRanged") || e.id == 609) && isEquipped && root.isChara)
 					{
 						num4 = num4 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara)) / 100;
 					}
