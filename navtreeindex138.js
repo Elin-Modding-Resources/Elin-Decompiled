@@ -1,5 +1,9 @@
 var NAVTREEINDEX138 =
 {
+"classZoneEventManager.html#ad91925d5b80641654ce190d9fd16da4f":[1,0,2172,2],
+"classZoneEventManager.html#ad9ceee099090c0ac51861aa2319b54f7":[1,0,2172,6],
+"classZoneEventManager.html#ade91a72719cc08bc4303d34d941cbebd":[1,0,2172,10],
+"classZoneEventMusic.html":[1,0,2173],
 "classZoneEventMusic.html#a0325efde8156307ef91d1340b20fa86a":[1,0,2173,0],
 "classZoneEventMusic.html#a20903b08f801d2e294643885fcb3ff08":[1,0,2173,3],
 "classZoneEventMusic.html#a3bd946d9a3eeecf5e8b2044050bdaa36":[1,0,2173,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX138 =
 "classZone__Beach.html":[1,0,2089],
 "classZone__Casino.html":[1,0,2090],
 "classZone__Casino.html#a0e8d43bd7bddb3ebf21dc02a747e4bf9":[1,0,2090,0],
-"classZone__Casino.html#a51d4b8ef554fe208c3b0cd3ceb7fd826":[1,0,2090,1],
-"classZone__Casino.html#aa351821b7dd57fe51522a6ac4620e9df":[1,0,2090,3],
-"classZone__Casino.html#aa5b7c74c5b75a5a1ee050efa70907307":[1,0,2090,2],
-"classZone__CaveElona.html":[1,0,2091],
-"classZone__CaveElona.html#a09e7dbd0732fd994162d0bd52d798e60":[1,0,2091,1]
+"classZone__Casino.html#a51d4b8ef554fe208c3b0cd3ceb7fd826":[1,0,2090,1]
 };

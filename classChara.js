@@ -26,6 +26,7 @@ var classChara =
     [ "CanAutoPick", "classChara.html#ae9035ffb66edd868bf776ba15f0396fc", null ],
     [ "CanBeTempAlly", "classChara.html#ab95b1fb82e2016f82f54fcf62dad3acc", null ],
     [ "CanDestroyPath", "classChara.html#a47d73cebc3a2e90d93209819ccbedd7d", null ],
+    [ "CanDuplicate", "classChara.html#a93db472070a55eac2c8944ced61d227d", null ],
     [ "CanEat", "classChara.html#a82e6c3e3c3076118e32d78f0be1c7f23", null ],
     [ "CanEquipRanged", "classChara.html#af1efd211719204fbd14d4408d2d5735e", null ],
     [ "CanInsult", "classChara.html#af00d462fa174b5f510d419516ec0eb6b", null ],

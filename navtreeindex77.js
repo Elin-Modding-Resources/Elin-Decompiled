@@ -1,5 +1,8 @@
 var NAVTREEINDEX77 =
 {
+"classLayerEquip.html#ad12726cf579788835f3ddb93baef2fab":[1,0,785,1],
+"classLayerEquip.html#aebf8de79df755b9f15463104fa73a9bf":[1,0,785,3],
+"classLayerEquip.html#aff6db15dc08bee7f9a356f39fd975306":[1,0,785,5],
 "classLayerFactions.html":[1,0,786],
 "classLayerFactions.html#a13f2e69d9db6ecb11779aa862f9ba152":[1,0,786,0],
 "classLayerFactions.html#a23160cb098c157751ef0dd0c7baca98a":[1,0,786,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX77 =
 "classLayerInteraction.html#ad705b471fa345ce29e6bd3532859d3f9":[1,0,800,20],
 "classLayerInteraction.html#af47c2a1659a34529511dc8f64d429749":[1,0,800,5],
 "classLayerInteraction.html#afc94d52b93a74336fc494709d91cd761":[1,0,800,11],
-"classLayerInteraction_1_1Item.html":[1,0,800,0],
-"classLayerInteraction_1_1Item.html#a20c529b7c92aa1ee88fbe9735db33d03":[1,0,800,0,0],
-"classLayerInteraction_1_1Item.html#a37bc7e47894e572f96d9c872959ccace":[1,0,800,0,5],
-"classLayerInteraction_1_1Item.html#a52b2af58ea4850505a13e54077e92765":[1,0,800,0,8]
+"classLayerInteraction_1_1Item.html":[1,0,800,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX115 =
 {
+"classTraitAncientbook.html#aec51bf4c2860bbb886b3a13bf244bd0f":[1,0,1414,1],
+"classTraitAnimalTamer.html":[1,0,1415],
+"classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1415,1],
 "classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1415,0],
 "classTraitAnvil.html":[1,0,1416],
 "classTraitAppraiser.html":[1,0,1417],
@@ -246,8 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitCatalyst.html#a6c7acb26a8fe1a6c9b5bd83b2032344f":[1,0,1466,3],
 "classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a":[1,0,1466,0],
 "classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9":[1,0,1466,5],
-"classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1466,2],
-"classTraitCauldron.html":[1,0,1467],
-"classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1467,1],
-"classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1467,0]
+"classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1466,2]
 };

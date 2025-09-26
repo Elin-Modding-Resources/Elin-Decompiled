@@ -1,5 +1,8 @@
 var NAVTREEINDEX54 =
 {
+"classCritterFrogSmall.html":[1,0,406],
+"classCritterFrogSmall.html#a087677a264963d6bc408e3b74092ef22":[1,0,406,2],
+"classCritterFrogSmall.html#a2adac7072f6bec33bdd2289e0ea7adbc":[1,0,406,1],
 "classCritterFrogSmall.html#a2b3842a005b2c5def9723f6c2c2ca8e2":[1,0,406,3],
 "classCritterFrogSmall.html#ab55139a8b81ac4494730166ced7d7460":[1,0,406,0],
 "classCritterRandom.html":[1,0,407],
@@ -246,8 +249,5 @@ var NAVTREEINDEX54 =
 "classDate.html#aed7f72f2bd15e8402ed27fc88215c578a7a1920d61156abc05a60135aefe8bc67":[1,0,421,0,0],
 "classDate.html#aed7f72f2bd15e8402ed27fc88215c578acc9637ca3dfce10b64775c6d8e754f7e":[1,0,421,0,6],
 "classDate.html#aed7f72f2bd15e8402ed27fc88215c578ace0be71e33226e4c1db2bcea5959f16b":[1,0,421,0,1],
-"classDate.html#aefb9dd2b4cbd6a85c2bb0a0493929806":[1,0,421,44],
-"classDate.html#af554f9bf5d2025c12f84ff3e8e93d5ab":[1,0,421,11],
-"classDate.html#af5a09798bef48951e2f0b6d5da090099":[1,0,421,34],
-"classDateHelper.html":[1,0,422]
+"classDate.html#aefb9dd2b4cbd6a85c2bb0a0493929806":[1,0,421,44]
 };

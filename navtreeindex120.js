@@ -1,5 +1,8 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1694,2],
+"classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1694,1],
+"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1694,0],
 "classTraitMerchantSeed.html":[1,0,1695],
 "classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1695,0],
 "classTraitMerchantSouvenir.html":[1,0,1696],
@@ -22,7 +25,8 @@ var NAVTREEINDEX120 =
 "classTraitMiniPool.html":[1,0,1702],
 "classTraitMiniPool.html#a3da0901f8c0fb31f5bce5efde7fc5d0b":[1,0,1702,0],
 "classTraitMiral.html":[1,0,1703],
-"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1703,4],
+"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1703,5],
+"classTraitMiral.html#a377aac926d21870adbfbe70fa41b77c8":[1,0,1703,4],
 "classTraitMiral.html#a63e4a4dd026d96c60e4584aee3a04b0c":[1,0,1703,2],
 "classTraitMiral.html#a79d7b7af125be1f284cdee11eee50f6b":[1,0,1703,1],
 "classTraitMiral.html#aa4e80ca1b96c8498276a839bc1a0ce63":[1,0,1703,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18":[1,0,1756,2],
 "classTraitPowerStatue.html#a81a166b19fd010b11d7644172e5abf07":[1,0,1756,5],
 "classTraitPowerStatue.html#a9619a7baffa3cd4a949fb97c7975dd39":[1,0,1756,7],
-"classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1756,10],
-"classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1756,8],
-"classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1756,9],
-"classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1756,4],
-"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1756,1]
+"classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1756,10]
 };

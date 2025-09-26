@@ -1,5 +1,8 @@
 var NAVTREEINDEX117 =
 {
+"classTraitDeliveryChest.html#a88e74b882b4527ce73766b88eb9d4a3d":[1,0,1512,2],
+"classTraitDeliveryChest.html#acd2e19a32b93863cd10a4f510ff041a1":[1,0,1512,3],
+"classTraitDeliveryChest.html#aee7645c9838310d20e6dee885ecfbd80":[1,0,1512,6],
 "classTraitDemitas.html":[1,0,1513],
 "classTraitDemitas.html#a060c10188e2e9b6be4f12a753f313798":[1,0,1513,1],
 "classTraitDemitas.html#a0ff4e48fdcd360e4ac5111c1f89ac7ae":[1,0,1513,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitFiama.html":[1,0,1563],
 "classTraitFiama.html#a01dc46e044297a2861eb68e78946263f":[1,0,1563,2],
 "classTraitFiama.html#a7751d781c82afa0fbb945d40eb713342":[1,0,1563,3],
-"classTraitFiama.html#ad6cdaf167a494de44586fd8515ae57cc":[1,0,1563,0],
-"classTraitFiama.html#ae8917e9a855a2c6ad72b8c3cd8dac15a":[1,0,1563,1],
-"classTraitFigure.html":[1,0,1564],
-"classTraitFigure.html#a38b489e2770736b3510ef28c481c620c":[1,0,1564,2]
+"classTraitFiama.html#ad6cdaf167a494de44586fd8515ae57cc":[1,0,1563,0]
 };

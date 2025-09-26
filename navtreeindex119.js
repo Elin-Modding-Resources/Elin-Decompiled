@@ -1,5 +1,8 @@
 var NAVTREEINDEX119 =
 {
+"classTraitHouseBoard_1_1Data.html#ab59594d5fc129ceadedfad35fc7bde4d":[1,0,1628,0,2],
+"classTraitHouseBoard_1_1Data.html#ac20790270289beaf3e2362ddff8f536d":[1,0,1628,0,3],
+"classTraitHouseBoard_1_1Data.html#ac3c871e51c30f0b4740776cb7aafe63a":[1,0,1628,0,5],
 "classTraitHouseBoard_1_1Data.html#ac7e5bb7cc0542cd42488bcd3d68e60b9":[1,0,1628,0,9],
 "classTraitHouseBoard_1_1Data.html#af821e32d51cf81d58a9da427ca06fe2b":[1,0,1628,0,12],
 "classTraitIllumination.html":[1,0,1629],
@@ -246,8 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitMerchantPlan.html#a98a140c37901a065443c3f99ad755beb":[1,0,1693,2],
 "classTraitMerchantPlan.html#ab278bfef3c363c2066ef537cbbd74984":[1,0,1693,0],
 "classTraitMerchantPlat.html":[1,0,1694],
-"classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1694,3],
-"classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1694,2],
-"classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1694,1],
-"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1694,0]
+"classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1694,3]
 };

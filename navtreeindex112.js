@@ -1,5 +1,8 @@
 var NAVTREEINDEX112 =
 {
+"classTileType.html#a32d4dc3b909dd81899d393eb39eea8db":[1,0,1336,80],
+"classTileType.html#a3499b8e71b10330cf7ed8074bca232fd":[1,0,1336,99],
+"classTileType.html#a3584cf979a693049c27697a4015b1adb":[1,0,1336,64],
 "classTileType.html#a360380cc724a729db582cdaf9eb685f4":[1,0,1336,92],
 "classTileType.html#a368394c3d881628e502f8b029489ac14":[1,0,1336,23],
 "classTileType.html#a36f886c47b8fbb278dc404a888c52541":[1,0,1336,29],
@@ -246,8 +249,5 @@ var NAVTREEINDEX112 =
 "classTileTypeObjHuge.html":[1,0,1362],
 "classTileTypeObjHuge.html#ae1b1912c5e55c7c80a98ecf5ccb14659":[1,0,1362,0],
 "classTileTypeObjWater.html":[1,0,1363],
-"classTileTypeObjWater.html#ab2144541492c5cd46c2d6e56cb973b9d":[1,0,1363,0],
-"classTileTypeObjWaterTop.html":[1,0,1364],
-"classTileTypeObjWaterTop.html#a8d6293fcd44af3ff4ecbed64048446e4":[1,0,1364,0],
-"classTileTypeObjWaterTop.html#a9e9cc92f923cf09f49d6b609fc3811f4":[1,0,1364,1]
+"classTileTypeObjWater.html#ab2144541492c5cd46c2d6e56cb973b9d":[1,0,1363,0]
 };
