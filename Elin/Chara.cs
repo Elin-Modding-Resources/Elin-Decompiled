@@ -1737,6 +1737,19 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public bool CanDuplicate()
+	{
+		if (EClass._zone.IsRegion || HasCondition<ConPoison>() || HasCondition<ConConfuse>() || HasCondition<ConDim>() || HasCondition<ConParalyze>() || HasCondition<ConSleep>() || HasCondition<ConBurning>() || HasCondition<ConFreeze>() || HasCondition<ConMiasma>() || corruption >= 100)
+		{
+			return false;
+		}
+		if (id == "mech_scarab" && (isSynced || pos.cell.light > 0 || (!EClass._map.IsIndoor && !pos.cell.HasRoof && !EClass.world.date.IsNight)))
+		{
+			return false;
+		}
+		return true;
+	}
+
 	public Chara Duplicate()
 	{
 		Chara chara = CharaGen.Create(id);
@@ -4733,21 +4746,25 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		}
-		switch (equip)
+		if (onCreate || !TryEquipRanged())
 		{
-		case "archer":
-			if (onCreate || !TryEquipRanged())
+			if (id == "mech_scarab")
 			{
-				EQ_CAT((EClass.rnd(4) == 0) ? "crossbow" : "bow");
+				AddThing("gun_laser");
 			}
-			break;
-		case "inquisitor":
-		case "gunner":
-			if (onCreate || !TryEquipRanged())
+			else
 			{
-				EQ_CAT("gun");
+				switch (equip)
+				{
+				case "archer":
+					EQ_CAT((EClass.rnd(4) == 0) ? "crossbow" : "bow");
+					break;
+				case "inquisitor":
+				case "gunner":
+					EQ_CAT("gun");
+					break;
+				}
 			}
-			break;
 		}
 		int num = ((base.rarity >= Rarity.Mythical) ? (base.LV * 3) : ((base.rarity >= Rarity.Legendary) ? (base.LV * 2) : base.LV));
 		if (trait is TraitAdventurer)
@@ -5550,6 +5567,10 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (num != 0)
 		{
+			if (EClass._zone.DangerLv > EClass.player.stats.deepest)
+			{
+				EClass.player.stats.deepest = EClass._zone.DangerLv;
+			}
 			EClass.player.willAutoSave = true;
 			Thing thing = ThingGen.CreateTreasure("chest_boss", base.LV, type);
 			point.SetBlock();

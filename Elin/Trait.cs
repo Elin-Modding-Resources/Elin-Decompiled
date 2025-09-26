@@ -1788,8 +1788,8 @@ public class Trait : EClass
 					Add("dagger_fish", 1, 0).SetReplica(on: true);
 					NoRestockId("sword_zephir");
 					Add("sword_zephir", 1, 0).SetReplica(on: true);
-					NoRestockId("ribbon");
-					NoRestockId("helm_sage");
+					Add("ribbon", 1, 0);
+					Add("helm_sage", 1, 0);
 					Add("diary_sister", 1, 0);
 					Add("diary_catsister", 1, 0);
 					Add("diary_lady", 1, 0);

@@ -188,6 +188,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int genLv
+	{
+		get
+		{
+			return _ints[10];
+		}
+		set
+		{
+			_ints[10] = value;
+		}
+	}
+
 	public int refVal
 	{
 		get
@@ -2709,6 +2721,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		Num = 1;
 		autoRefuel = true;
 		EClass.game.cards.AssignUID(this);
+		this.genLv = genLv;
 		isNew = true;
 		SetSource();
 		OnBeforeCreate();
@@ -6204,6 +6217,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			num *= 4f;
 		}
 		return num;
+	}
+
+	public int GetHearingRadius()
+	{
+		return 8;
 	}
 
 	public int GetSightRadius()

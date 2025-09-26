@@ -384,7 +384,7 @@ public class AI_Idle : AIAct
 			text = owner.id;
 			if (!(text == "geist"))
 			{
-				if (text == "mech_scarab" && EClass.rnd(20) == 0)
+				if (text == "mech_scarab" && EClass.rnd(20) == 0 && owner.CanDuplicate())
 				{
 					int i = 0;
 					owner.pos.ForeachNeighbor(delegate(Point p)
@@ -394,9 +394,17 @@ public class AI_Idle : AIAct
 							i++;
 						}
 					});
-					if (i <= 2)
+					if (i < 2)
 					{
-						EClass._zone.AddCard(owner.Duplicate(), owner.pos.GetNearestPoint(allowBlock: false, allowChara: false));
+						Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 200);
+						if (randomPoint != null)
+						{
+							Card c2 = EClass._zone.AddCard(owner.Duplicate(), randomPoint);
+							if (randomPoint.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
+							{
+								Msg.Say("self_dupe", owner, c2);
+							}
+						}
 					}
 				}
 			}
@@ -862,10 +870,10 @@ public class AI_Idle : AIAct
 		{
 			for (int k = 0; k < 100; k++)
 			{
-				Point randomPoint = EClass._map.GetRandomPoint();
-				if (randomPoint.IsDeepWater && !randomPoint.IsBlocked)
+				Point randomPoint2 = EClass._map.GetRandomPoint();
+				if (randomPoint2.IsDeepWater && !randomPoint2.IsBlocked)
 				{
-					yield return DoGoto(randomPoint);
+					yield return DoGoto(randomPoint2);
 					break;
 				}
 			}
@@ -895,10 +903,10 @@ public class AI_Idle : AIAct
 		{
 			for (int l = 0; l < 20; l++)
 			{
-				Point randomPoint2 = owner.pos.GetRandomPoint(5 + l, requireLos: false);
-				if (randomPoint2 != null && randomPoint2.IsInBounds && (randomPoint2.cell.room == null || randomPoint2.cell.room.data.accessType == type))
+				Point randomPoint3 = owner.pos.GetRandomPoint(5 + l, requireLos: false);
+				if (randomPoint3 != null && randomPoint3.IsInBounds && (randomPoint3.cell.room == null || randomPoint3.cell.room.data.accessType == type))
 				{
-					return randomPoint2;
+					return randomPoint3;
 				}
 			}
 			return null;

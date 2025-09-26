@@ -1053,10 +1053,6 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public void OnVisit()
 	{
-		if (CountDeepestLevel && DangerLv > EClass.player.stats.deepest)
-		{
-			EClass.player.stats.deepest = DangerLv;
-		}
 		if (EClass.world.date.IsExpired(base.dateRevive))
 		{
 			ResetHostility();

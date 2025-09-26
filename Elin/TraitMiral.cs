@@ -9,4 +9,6 @@ public class TraitMiral : TraitUniqueMerchant
 	public override string LangBarter => "daBuyMedal";
 
 	public override string IdAmbience => "blacksmith";
+
+	public override int ShopLv => 1;
 }
