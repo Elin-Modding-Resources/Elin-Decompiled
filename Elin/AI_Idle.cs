@@ -384,7 +384,7 @@ public class AI_Idle : AIAct
 			text = owner.id;
 			if (!(text == "geist"))
 			{
-				if (text == "mech_scarab" && EClass.rnd(20) == 0 && owner.CanDuplicate())
+				if (text == "mech_scarab" && EClass.rnd(20) == 0 && owner.CanDuplicate() && !EClass._zone.IsUserZone)
 				{
 					int i = 0;
 					owner.pos.ForeachNeighbor(delegate(Point p)
@@ -396,7 +396,7 @@ public class AI_Idle : AIAct
 					});
 					if (i < 2)
 					{
-						Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 200);
+						Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
 						if (randomPoint != null)
 						{
 							Card c2 = EClass._zone.AddCard(owner.Duplicate(), randomPoint);

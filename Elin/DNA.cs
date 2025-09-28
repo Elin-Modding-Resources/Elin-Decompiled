@@ -519,7 +519,7 @@ public class DNA : EClass
 
 	public int GetDurationHour()
 	{
-		return cost * cost / 2;
+		return Mathf.Min(cost, 5000) * Mathf.Min(cost, 5000) / 2;
 	}
 
 	public Type GetRandomType()

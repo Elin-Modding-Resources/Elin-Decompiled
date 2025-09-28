@@ -1250,8 +1250,11 @@ public class ActEffect : EClass
 			cc.Say("reconstruct", cc, tc);
 			EClass.game.cards.uidNext += EClass.rnd(30);
 			int num4 = Mathf.Max(tc.genLv, tc.LV, EClass.player.stats.deepest);
-			Thing thing = ThingGen.Create(tc.id, -1, num4 * power / 100);
-			thing.SetBlessedState(state);
+			CardBlueprint.Set(new CardBlueprint
+			{
+				blesstedState = state
+			});
+			Thing thing = ThingGen.Create(tc.id, -1, (int)((long)num4 * (long)power / 400));
 			thing.genLv = num4;
 			tc.Destroy();
 			CC.Pick(thing, msg: false);

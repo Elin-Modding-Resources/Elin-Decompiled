@@ -7100,7 +7100,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				case "medal":
 					return 5;
 				case "lunch_love":
-					return 10;
+					return 20;
 				}
 				break;
 			case CurrencyType.Ecopo:
@@ -7172,6 +7172,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return LV / 8;
 				case "372":
 					return 3;
+				case "scroll_random":
+					if (refVal == 8288)
+					{
+						return 5;
+					}
+					break;
 				}
 				break;
 			}

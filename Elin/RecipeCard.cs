@@ -238,7 +238,10 @@ public class RecipeCard : Recipe
 			{
 				if (ing2.trait is TraitRune)
 				{
-					thing.AddRune(ing2);
+					if (thing.CanAddRune(ing2.trait as TraitRune))
+					{
+						thing.AddRune(ing2);
+					}
 					if (!thing.HasElement(484))
 					{
 						thing.elements.SetBase(484, 1);

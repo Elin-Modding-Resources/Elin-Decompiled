@@ -1800,6 +1800,7 @@ public class Trait : EClass
 					Add("bill_tax", 1, 0).c_bill = 1;
 					Add("bill_tax", 1, 0).c_bill = 1;
 					Add("bill_tax", 1, 0).c_bill = 1;
+					AddThing(ThingGen.CreateScroll(8288).SetNum(5));
 					Add("container_magic", 1, 0);
 					Add("container_magic", 1, 0).ChangeMaterial("iron").idSkin = 1;
 					Add("container_magic", 1, 0).ChangeMaterial("bamboo").idSkin = 2;

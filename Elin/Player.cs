@@ -836,10 +836,13 @@ public class Player : EClass
 				{
 					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
 				}
-				else
+				else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 2)
 				{
-					EClass.game.quests.GetPhase<QuestIntoDarkness>();
-					_ = 2;
+					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+				}
+				else if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 3)
+				{
+					EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
 				}
 			}
 		}

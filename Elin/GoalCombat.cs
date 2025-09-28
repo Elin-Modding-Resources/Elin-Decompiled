@@ -163,7 +163,7 @@ public class GoalCombat : Goal
 			{
 				tc.TrySetEnemy(owner);
 			}
-			if (!tc.IsMinion && EClass.rnd(10) == 0 && EClass.rnd(tc.DEX + 10) > owner.LV && tc.HasElement(1315) && !owner.HasElement(1315) && owner.IsMachine && owner.CanBeTempAlly(tc))
+			if (!tc.IsMinion && EClass.rnd(10) == 0 && EClass.rnd(tc.DEX + 10) > owner.LV && tc.HasElement(1315) && !owner.HasElement(1315) && owner.IsMachine && owner.CanBeTempAlly(tc) && owner.id != "mech_scarab")
 			{
 				owner.Say("dominate_machine", tc, owner);
 				owner.PlayEffect("boost");
