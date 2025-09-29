@@ -382,7 +382,7 @@ public class WindowChara : WindowController
 		string text = "deepestLv2".lang((chara.IsPCFaction ? EClass.player.stats.deepest : chara.LV).ToString() ?? "");
 		if (chara.IsPCFaction && EClass.player.CountKeyItem("license_void") > 0)
 		{
-			text = text + " " + "deepestLv3".lang(Mathf.Abs(EClass.game.spatials.Find("void").GetDeepestLv()).ToString() ?? "");
+			text = text + " " + "deepestLv3".lang(EClass.player.stats.deepestVoid.ToString() ?? "");
 		}
 		textDeepest.text = text;
 		textAssets.text = (chara.IsPC ? "tGameTime".lang(EClass.player.stats.days.ToFormat(), EClass.player.stats.turns.ToFormat()) : "???");

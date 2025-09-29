@@ -7136,6 +7136,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			case CurrencyType.Medal:
 				switch (id)
 				{
+				case "1282":
+					return 5;
 				case "bill_tax":
 					return 3;
 				case "water":
@@ -7175,7 +7177,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				case "scroll_random":
 					if (refVal == 8288)
 					{
-						return 5;
+						return 10;
 					}
 					break;
 				}

@@ -1795,6 +1795,7 @@ public class Trait : EClass
 					Add("diary_lady", 1, 0);
 					Add("1165", 1, 0).SetNum(5);
 					AddThing(ThingGen.CreateScroll(9160).SetNum(5));
+					Add("1282", 1, 0).SetNum(5);
 					Add("monsterball", 1, 0).SetNum(3).SetLv(20);
 					Add("monsterball", 1, 0).SetNum(3).SetLv(40);
 					Add("bill_tax", 1, 0).c_bill = 1;

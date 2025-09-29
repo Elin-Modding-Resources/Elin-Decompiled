@@ -126,5 +126,6 @@ public enum EffectId
 	MoonSpear = 302,
 	BurnMana = 303,
 	MoonArrow = 304,
-	LittleSisterMigration = 305
+	LittleSisterMigration = 305,
+	ReturnVoid = 306
 }

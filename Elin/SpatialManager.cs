@@ -45,11 +45,11 @@ public class SpatialManager : EClass
 		listDestryoed.Add(s);
 	}
 
-	public T Find<T>(Func<T, bool> func) where T : Zone
+	public T Find<T>(Func<T, bool> func = null) where T : Zone
 	{
 		foreach (Spatial value in map.Values)
 		{
-			if (value is T val && func(val))
+			if (value is T val && (func == null || func(val)))
 			{
 				return val;
 			}

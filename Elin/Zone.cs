@@ -271,9 +271,9 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public virtual bool CanUnlockExit => !LockExit;
 
-	public virtual int MaxLv => 99999;
+	public virtual int MaxLv => 99999999;
 
-	public virtual int MinLv => -99999;
+	public virtual int MinLv => -99999999;
 
 	public virtual bool AddPrefix => false;
 
@@ -3207,11 +3207,23 @@ public class Zone : Spatial, ICardParent, IInspect
 	{
 		if (IsPCFaction)
 		{
-			return -100000 + base.uid;
+			return -10000000 + base.uid;
+		}
+		if (this is Zone_SubTown)
+		{
+			return -8000000 + base.uid;
+		}
+		if (this is Zone_Town)
+		{
+			return -9000000 + base.uid;
 		}
 		if (this is Zone_Civilized)
 		{
-			return -90000 + base.uid;
+			return -7000000 + base.uid;
+		}
+		if (this is Zone_RandomDungeon)
+		{
+			return 1000000 + base.uid;
 		}
 		return base.uid;
 	}

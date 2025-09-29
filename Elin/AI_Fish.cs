@@ -311,11 +311,16 @@ public class AI_Fish : AIAct
 		Thing thing = null;
 		int num2 = 1;
 		string text = "";
+		int num3 = 0;
 		if (c.IsPC || EClass.rnd(20) == 0)
 		{
 			if (EClass.rnd(30) == 0)
 			{
 				text = "book_ancient";
+			}
+			if (EClass.rnd(40) == 0 && EClass.rnd(40) < num / 3 + 10)
+			{
+				text = "medal";
 			}
 			if (EClass.rnd(35) == 0)
 			{
@@ -335,11 +340,29 @@ public class AI_Fish : AIAct
 				if (EClass.rnd(50) == 0)
 				{
 					text = new string[7] { "659", "758", "759", "806", "828", "1190", "1191" }.RandomItem();
+					if (!c.IsPC)
+					{
+						num3 = 10;
+					}
 				}
 			}
-			if (EClass.rnd(40) == 0 && EClass.rnd(40) < num / 3 + 10)
+			if (!c.IsPC)
 			{
-				text = "medal";
+				if (text == "plat" || text == "medal")
+				{
+					num3 = 1;
+				}
+				if (num3 != 0)
+				{
+					if (EClass.rnd(EClass.player.fishArtifact + 1) <= 0)
+					{
+						EClass.player.fishArtifact += num3;
+					}
+					else
+					{
+						text = "";
+					}
+				}
 			}
 		}
 		if (!hqFever && text != "")
@@ -354,41 +377,41 @@ public class AI_Fish : AIAct
 		{
 			SetFeverSeed();
 			int lv = EClass.rnd(num * 2) + 1;
-			int num3 = 0;
+			int num4 = 0;
 			if (EClass.rnd(EClass.debug.enable ? 1 : (c.IsPC ? 5 : (c.IsPCFaction ? 250 : 2500))) == 0)
 			{
-				num3 = Mathf.Min(EClass.rnd(EClass.rnd(EClass.rnd(EClass.curve(num, 100, 50, 70) + 50))) / 50, 3);
+				num4 = Mathf.Min(EClass.rnd(EClass.rnd(EClass.rnd(EClass.curve(num, 100, 50, 70) + 50))) / 50, 3);
 			}
 			if (hqFever && ((EClass.pc.Evalue(1659) >= 2 && EClass.player.fished == 0) || EClass.rnd(5) == 0))
 			{
-				num3++;
+				num4++;
 			}
-			if (num3 > 3)
+			if (num4 > 3)
 			{
-				num3 = 3;
+				num4 = 3;
 			}
 			SetFeverSeed();
 			thing = ThingGen.Create("fish", -1, lv);
 			SetFeverSeed();
-			int num4 = Mathf.Max(1, num / (thing.source.LV * 2 + 10));
-			int num5 = 5;
+			int num5 = Mathf.Max(1, num / (thing.source.LV * 2 + 10));
+			int num6 = 5;
 			if (EClass.Branch != null)
 			{
-				num5 += EClass.Branch.Evalue(3604) * 20 + EClass.Branch.Evalue(3605) * 20 + EClass.Branch.Evalue(3606) * 20 + EClass.Branch.Evalue(3706) * 25;
+				num6 += EClass.Branch.Evalue(3604) * 20 + EClass.Branch.Evalue(3605) * 20 + EClass.Branch.Evalue(3606) * 20 + EClass.Branch.Evalue(3706) * 25;
 			}
 			if (EClass._zone is Zone_Kapul)
 			{
-				num5 = 35;
+				num6 = 35;
 			}
-			bool num6 = num5 >= EClass.rnd(100);
-			if (num6)
+			bool num7 = num6 >= EClass.rnd(100);
+			if (num7)
 			{
 				c.Say("bigCatch", c);
 			}
-			num2 = (num6 ? num4 : EClass.rnd(num4)) / (num3 + 1) + 1;
-			if (num3 != 0)
+			num2 = (num7 ? num5 : EClass.rnd(num5)) / (num4 + 1) + 1;
+			if (num4 != 0)
 			{
-				thing.SetTier(num3);
+				thing.SetTier(num4);
 			}
 			Rand.SetSeed();
 		}

@@ -111,6 +111,9 @@ public class Player : EClass
 		public int deepest;
 
 		[JsonProperty]
+		public int deepestVoid;
+
+		[JsonProperty]
 		public int gambleChest;
 
 		[JsonProperty]
@@ -957,6 +960,9 @@ public class Player : EClass
 
 	[JsonProperty]
 	public int fished;
+
+	[JsonProperty]
+	public int fishArtifact;
 
 	[JsonProperty]
 	public float angle;
@@ -2367,6 +2373,10 @@ public class Player : EClass
 		if (karma < 0 && EClass.rnd(4) == 0)
 		{
 			ModKarma(1);
+		}
+		if (fishArtifact > 0 && EClass.rnd(5) == 0)
+		{
+			fishArtifact--;
 		}
 	}
 
