@@ -1,5 +1,8 @@
 var NAVTREEINDEX138 =
 {
+"classZoneEventManager.html#ac27d19281651862f33109d225b7f44f7":[1,0,2172,15],
+"classZoneEventManager.html#ad6eecf0bedc5a6e4d90e39c73b188b44":[1,0,2172,5],
+"classZoneEventManager.html#ad83418e67cbcf8a48b6e9f487e7f64d5":[1,0,2172,4],
 "classZoneEventManager.html#ad91925d5b80641654ce190d9fd16da4f":[1,0,2172,2],
 "classZoneEventManager.html#ad9ceee099090c0ac51861aa2319b54f7":[1,0,2172,6],
 "classZoneEventManager.html#ade91a72719cc08bc4303d34d941cbebd":[1,0,2172,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX138 =
 "classZone__Arena2.html#aee348b90dbad10453fe48556ffb3a605":[1,0,2087,1],
 "classZone__Asylum.html":[1,0,2088],
 "classZone__Asylum.html#a8a8b700be96946dac961b60545aff9af":[1,0,2088,0],
-"classZone__Beach.html":[1,0,2089],
-"classZone__Casino.html":[1,0,2090],
-"classZone__Casino.html#a0e8d43bd7bddb3ebf21dc02a747e4bf9":[1,0,2090,0],
-"classZone__Casino.html#a51d4b8ef554fe208c3b0cd3ceb7fd826":[1,0,2090,1]
+"classZone__Beach.html":[1,0,2089]
 };

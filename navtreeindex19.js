@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitRuneFree_8cs.html":[2,0,0,1673],
 "TraitRuneFree_8cs_source.html":[2,0,0,1673],
 "TraitRuneMoldEarth_8cs.html":[2,0,0,1675],
 "TraitRuneMoldEarth_8cs_source.html":[2,0,0,1675],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitTreeEther_8cs.html":[2,0,0,1794],
 "TraitTreeEther_8cs_source.html":[2,0,0,1794],
 "TraitTrolleyBig_8cs.html":[2,0,0,1796],
-"TraitTrolleyBig_8cs_source.html":[2,0,0,1796],
-"TraitTrolley_8cs.html":[2,0,0,1795]
+"TraitTrolleyBig_8cs_source.html":[2,0,0,1796]
 };

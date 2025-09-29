@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classABILITY.html#ae2a90374b6ab60cd9185fcce41059a13":[1,0,11,42],
 "classABILITY.html#ae32712cf7c3fbd1d0dca4068fa97c43a":[1,0,11,21],
 "classABILITY.html#ae4a80dce34993ea3eec3d3fef5aa2e7a":[1,0,11,67],
 "classABILITY.html#ae7bec151e00e990eb7b948ce61db5a9b":[1,0,11,56],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Fish_1_1ProgressFish.html#a2cdef66e2ec5de55d8338ee96cd15c1d":[1,0,77,0,0],
 "classAI__Fish_1_1ProgressFish.html#a32746ddc86283c3ed35ad40e95c8823c":[1,0,77,0,8],
 "classAI__Fish_1_1ProgressFish.html#a3b1afd26c3fc023992dee10bed7d43fe":[1,0,77,0,10],
-"classAI__Fish_1_1ProgressFish.html#a41ec4d6a316e7755fd318a98c0d855f7":[1,0,77,0,2],
-"classAI__Fish_1_1ProgressFish.html#aa32f248698173ceacb0b3601a399699f":[1,0,77,0,6]
+"classAI__Fish_1_1ProgressFish.html#a41ec4d6a316e7755fd318a98c0d855f7":[1,0,77,0,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"Zone__DerphyWhore_8cs_source.html":[2,0,0,1932],
 "Zone__Derphy_8cs.html":[2,0,0,1931],
 "Zone__Derphy_8cs_source.html":[2,0,0,1931],
 "Zone__DungeonDragon_8cs.html":[2,0,0,1934],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classABILITY.html#adb223efed59d1869fd383358212fec62":[1,0,11,83],
 "classABILITY.html#addc80d6d5bcdbd78d7b204f6c670c6c4":[1,0,11,54],
 "classABILITY.html#adee1bb0a361529827b4b62840851aec9":[1,0,11,47],
-"classABILITY.html#ae14c21ec9a5d951cdb42382ed3defc8d":[1,0,11,93],
-"classABILITY.html#ae2a90374b6ab60cd9185fcce41059a13":[1,0,11,42]
+"classABILITY.html#ae14c21ec9a5d951cdb42382ed3defc8d":[1,0,11,93]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"TraitAmmoArrow_8cs_source.html":[2,0,0,1299],
 "TraitAmmoBolt_8cs.html":[2,0,0,1300],
 "TraitAmmoBolt_8cs_source.html":[2,0,0,1300],
 "TraitAmmoBullet_8cs.html":[2,0,0,1301],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitDrawingPaper_8cs_source.html":[2,0,0,1421],
 "TraitDreamBug_8cs.html":[2,0,0,1422],
 "TraitDreamBug_8cs_source.html":[2,0,0,1422],
-"TraitDresser_8cs.html":[2,0,0,1423],
-"TraitDresser_8cs_source.html":[2,0,0,1423]
+"TraitDresser_8cs.html":[2,0,0,1423]
 };

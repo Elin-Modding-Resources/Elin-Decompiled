@@ -1,5 +1,8 @@
 var NAVTREEINDEX115 =
 {
+"classTraitAncientbook.html#a6c782d3ffd4d53048e79511abe35990a":[1,0,1414,4],
+"classTraitAncientbook.html#aa6e1c3b9dcb61283b5fa8b600ffa5806":[1,0,1414,3],
+"classTraitAncientbook.html#ae882ffdfc7ef8327868fd0c99b2d937f":[1,0,1414,0],
 "classTraitAncientbook.html#aec51bf4c2860bbb886b3a13bf244bd0f":[1,0,1414,1],
 "classTraitAnimalTamer.html":[1,0,1415],
 "classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1415,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitCatalyst.html#a59a77591fab9d39c5bd83213544e5429":[1,0,1466,6],
 "classTraitCatalyst.html#a5d315e8c2b7c8e8c9fe358627223432e":[1,0,1466,1],
 "classTraitCatalyst.html#a68c0c579c7c2d15f6350565b831b1c2d":[1,0,1466,4],
-"classTraitCatalyst.html#a6c7acb26a8fe1a6c9b5bd83b2032344f":[1,0,1466,3],
-"classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a":[1,0,1466,0],
-"classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9":[1,0,1466,5],
-"classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1466,2]
+"classTraitCatalyst.html#a6c7acb26a8fe1a6c9b5bd83b2032344f":[1,0,1466,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"classAI__TargetThing.html":[1,0,108],
 "classAI__TargetThing.html#ad28b07f72052e88f5d7dbe3d75d31c06":[1,0,108,0],
 "classAI__TendAnimal.html":[1,0,109],
 "classAI__TendAnimal.html#a7180121574dcfa92ba514735a2b971e7":[1,0,109,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "classAM__Cinema.html#aceced69f71118a0d501cb7e1dbfefc14":[1,0,134,1],
 "classAM__Cinema.html#ad2cab20f8808e1d3346c6c2188cc1df5":[1,0,134,12],
 "classAM__Cinema.html#ad969334df35448dd2a177716a432de34":[1,0,134,0],
-"classAM__Copy.html":[1,0,135],
-"classAM__Copy.html#a0ea8651089960626a5f938784258a70c":[1,0,135,0]
+"classAM__Copy.html":[1,0,135]
 };

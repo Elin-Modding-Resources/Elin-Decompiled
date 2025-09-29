@@ -4,7 +4,7 @@ var classSpatialManager =
     [ "AssignUID", "classSpatialManager.html#a34bd1b55d88a81b155de56893d5f8e74", null ],
     [ "Find", "classSpatialManager.html#a875ee5c3dcaf21b358d1f10f402b0b17", null ],
     [ "Find", "classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519", null ],
-    [ "Find< T >", "classSpatialManager.html#a56ff4c5b6811e4d2506cac2d8823bf58", null ],
+    [ "Find< T >", "classSpatialManager.html#aef2c5ad096faa71f9f790dcb47e58326", null ],
     [ "ListReturnLocations", "classSpatialManager.html#a85f0f74f9ac6c9ed7f18c75f673f732d", null ],
     [ "Remove", "classSpatialManager.html#a425a6b8b8e4a330f5ea955d5f605d881", null ],
     [ "listDestryoed", "classSpatialManager.html#ac0eadafc4e8f266aefee812d3d0924c0", null ],

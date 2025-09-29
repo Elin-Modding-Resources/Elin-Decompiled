@@ -1,5 +1,8 @@
 var NAVTREEINDEX116 =
 {
+"classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a":[1,0,1466,0],
+"classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9":[1,0,1466,5],
+"classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1466,2],
 "classTraitCauldron.html":[1,0,1467],
 "classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1467,1],
 "classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1467,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitDeliveryChest.html":[1,0,1512],
 "classTraitDeliveryChest.html#a120325a952af6fc337e01d0498f9d35f":[1,0,1512,1],
 "classTraitDeliveryChest.html#a43c4b7d0ba716ca6d3dab8cb0d885d4c":[1,0,1512,8],
-"classTraitDeliveryChest.html#a44ca8e83f02452ad3bd771332cc6e0e6":[1,0,1512,7],
-"classTraitDeliveryChest.html#a475ade5c2b50886a079bec421acc84aa":[1,0,1512,0],
-"classTraitDeliveryChest.html#a759e096a48919490c36935c55caa7325":[1,0,1512,4],
-"classTraitDeliveryChest.html#a774bfcf99b9683a2403e478139c6f2c4":[1,0,1512,5]
+"classTraitDeliveryChest.html#a44ca8e83f02452ad3bd771332cc6e0e6":[1,0,1512,7]
 };

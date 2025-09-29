@@ -1,5 +1,8 @@
 var NAVTREEINDEX114 =
 {
+"classTrait.html#a4737c1ce5c25f3d2f45ada2cdb1b2f19":[1,0,1399,148],
+"classTrait.html#a47b9ffd55d19fac5985c99d803d7d416":[1,0,1399,4],
+"classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6":[1,0,1399,93],
 "classTrait.html#a49cd4b6298180f400ba370f814714fbf":[1,0,1399,160],
 "classTrait.html#a4ac641a35b27784da64e13edc433d23b":[1,0,1399,72],
 "classTrait.html#a4aff3c950b25f7b4527c33c3678d3f87":[1,0,1399,211],
@@ -246,8 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitAmmoTalisman.html#ac7d93044ac71e79131f9afe6c89cb36c":[1,0,1413,0],
 "classTraitAncientbook.html":[1,0,1414],
 "classTraitAncientbook.html#a30af98aa86c5036c1c47f7599b31f4ca":[1,0,1414,2],
-"classTraitAncientbook.html#a3af35eecff07096d675b87d386c8edb9":[1,0,1414,5],
-"classTraitAncientbook.html#a6c782d3ffd4d53048e79511abe35990a":[1,0,1414,4],
-"classTraitAncientbook.html#aa6e1c3b9dcb61283b5fa8b600ffa5806":[1,0,1414,3],
-"classTraitAncientbook.html#ae882ffdfc7ef8327868fd0c99b2d937f":[1,0,1414,0]
+"classTraitAncientbook.html#a3af35eecff07096d675b87d386c8edb9":[1,0,1414,5]
 };

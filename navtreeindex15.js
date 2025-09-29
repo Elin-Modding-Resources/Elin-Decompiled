@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"TaskBuild_8cs.html":[2,0,0,1179],
 "TaskBuild_8cs_source.html":[2,0,0,1179],
 "TaskChopWood_8cs.html":[2,0,0,1180],
 "TaskChopWood_8cs_source.html":[2,0,0,1180],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "TraitAltarChaos_8cs_source.html":[2,0,0,1297],
 "TraitAltar_8cs.html":[2,0,0,1295],
 "TraitAltar_8cs_source.html":[2,0,0,1295],
-"TraitAmmoArrow_8cs.html":[2,0,0,1299],
-"TraitAmmoArrow_8cs_source.html":[2,0,0,1299]
+"TraitAmmoArrow_8cs.html":[2,0,0,1299]
 };

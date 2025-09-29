@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"LayerSkinDeco_8cs_source.html":[2,0,0,769],
 "LayerSleep_8cs.html":[2,0,0,770],
 "LayerSleep_8cs_source.html":[2,0,0,770],
 "LayerStockpile_8cs.html":[2,0,0,771],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279a":[2,0,0,860,0],
 "ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aa699aed86dada6ca01ef74013a4464066":[2,0,0,860,0,1],
 "ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aa6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,860,0,0],
-"ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206":[2,0,0,860,0,2],
-"ObjValType_8cs_source.html":[2,0,0,860]
+"ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206":[2,0,0,860,0,2]
 };

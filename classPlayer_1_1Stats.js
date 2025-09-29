@@ -6,6 +6,7 @@ var classPlayer_1_1Stats =
     [ "days", "classPlayer_1_1Stats.html#ad7fe6db5d3ff138870b89de937470dde", null ],
     [ "death", "classPlayer_1_1Stats.html#aba555ea8a12aa6e4d618808f692065ef", null ],
     [ "deepest", "classPlayer_1_1Stats.html#a1b50b235ec309933c9c5a5a4e2445f6a", null ],
+    [ "deepestVoid", "classPlayer_1_1Stats.html#a91248095f0fbfca0e26d0fd01abceaf1", null ],
     [ "digs", "classPlayer_1_1Stats.html#a01d61a1358fa2e4dc5301c6535f87a6a", null ],
     [ "gambleChest", "classPlayer_1_1Stats.html#afdf6688c3453349a11a669697078077b", null ],
     [ "gambleChestOpen", "classPlayer_1_1Stats.html#a9a23525a8d3547fc02647602955f78e6", null ],

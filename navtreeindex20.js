@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitTrolley_8cs.html":[2,0,0,1795],
 "TraitTrolley_8cs_source.html":[2,0,0,1795],
 "TraitTutorialBook_8cs.html":[2,0,0,1797],
 "TraitTutorialBook_8cs_source.html":[2,0,0,1797],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "UiInputField_8cs.html":[2,0,0,3,134],
 "UiInputField_8cs_source.html":[2,0,0,3,134],
 "UndoManager_8cs.html":[2,0,0,1856],
-"UndoManager_8cs_source.html":[2,0,0,1856],
-"UniqueData_8cs.html":[2,0,0,1857]
+"UndoManager_8cs_source.html":[2,0,0,1856]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX130 =
 {
+"classUIRecipeInfo.html#afc3a82117d195a58cead990e73c28b4c":[1,0,2005,2],
+"classUIRecipeInfo_1_1RecipeVariation.html":[1,0,2005,0],
+"classUIRecipeInfo_1_1RecipeVariation.html#abaae2286d5a8f2495d03ea4e2356a416":[1,0,2005,0,1],
 "classUIRecipeInfo_1_1RecipeVariation.html#ad507821679a7c68f2dfd1e62fe179367":[1,0,2005,0,0],
 "classUIResourceTrack.html":[1,0,2006],
 "classUIResourceTrack.html#a03bc647c23de6fe87032a5d244881d44":[1,0,2006,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX130 =
 "classVirtualDate.html#a1711a5c19fc2b40850586f935555ca9e":[1,0,2023,3],
 "classVirtualDate.html#a1e0bd770f9987ee8cf0fb96010f0c962":[1,0,2023,2],
 "classVirtualDate.html#a245dff092a8887232c115730fce8d1e1":[1,0,2023,11],
-"classVirtualDate.html#a32b33fe79ab333c8cecfa47d6b21a96f":[1,0,2023,9],
-"classVirtualDate.html#a4e9439c046036b888023e37e67765f0c":[1,0,2023,4],
-"classVirtualDate.html#a5810cc5973ac547aa3b7b25926770eed":[1,0,2023,8],
-"classVirtualDate.html#a5f4735f84f049be8eebd2857ea532fe8":[1,0,2023,1]
+"classVirtualDate.html#a32b33fe79ab333c8cecfa47d6b21a96f":[1,0,2023,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"ElinEncoder_8cs_source.html":[2,0,0,2,25],
 "EloMapActor_8cs.html":[2,0,0,453],
 "EloMapActor_8cs_source.html":[2,0,0,453],
 "EloMapLight_8cs.html":[2,0,0,454],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "GameScreenElona_8cs.html":[2,0,0,499],
 "GameScreenElona_8cs_source.html":[2,0,0,499],
 "GameScreenNoMap_8cs.html":[2,0,0,500],
-"GameScreenNoMap_8cs_source.html":[2,0,0,500],
-"GameScreen_8cs.html":[2,0,0,498]
+"GameScreenNoMap_8cs_source.html":[2,0,0,500]
 };

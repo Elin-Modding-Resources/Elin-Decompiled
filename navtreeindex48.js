@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classConInvisibility.html#a640e09a4fd2ff5531b2b8cfb25884aa4":[1,0,333,1],
 "classConInvisibility.html#ac25f8da9dd4d5f630b91b6d51987974c":[1,0,333,0],
 "classConInvisibility.html#af0165653c4373e4fd5f7699b34e13a4b":[1,0,333,3],
 "classConInvulnerable.html":[1,0,334],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classContentConfigGame.html#aa939ae79120d0a226a7a8a3cecd4c12f":[1,0,361,3],
 "classContentConfigGame.html#ab4193d32380d76f7176a95a2181101e1":[1,0,361,8],
 "classContentConfigGame.html#ab47bc93f113e9bda6ccfc789088b181c":[1,0,361,36],
-"classContentConfigGame.html#ac67ba95c3a0864128ef623478a3df18e":[1,0,361,19],
-"classContentConfigGame.html#ac7e3ad9c94d43b7cd4e579c08774cfbf":[1,0,361,32]
+"classContentConfigGame.html#ac67ba95c3a0864128ef623478a3df18e":[1,0,361,19]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"classPOLICY.html#a661fed4c14eea3cbc081c3b29168f268":[1,0,947,34],
 "classPOLICY.html#a739efa6c941047f6a7a934bec87c0869":[1,0,947,49],
 "classPOLICY.html#a7af3985d20b0106fd43143248268fde9":[1,0,947,46],
 "classPOLICY.html#a7bbc18be27a9ebec93dea489808799dd":[1,0,947,19],
@@ -233,21 +234,20 @@ var NAVTREEINDEX86 =
 "classPlayer.html#a00bfe292f1f97f744fe3f64344fd6cbd":[1,0,941,49],
 "classPlayer.html#a05e4b36f17e1c61c584c242166528588":[1,0,941,76],
 "classPlayer.html#a06cba83b26ff7fcea70697aeb15bad25":[1,0,941,74],
-"classPlayer.html#a0a63241142ed4b7fb582eb50603477dc":[1,0,941,177],
+"classPlayer.html#a0a63241142ed4b7fb582eb50603477dc":[1,0,941,178],
 "classPlayer.html#a0a7f6c6b0c0cf0d2c4da4fe4f5532d36":[1,0,941,14],
-"classPlayer.html#a0a956c17206388b055c3b79b108de25d":[1,0,941,196],
+"classPlayer.html#a0a956c17206388b055c3b79b108de25d":[1,0,941,197],
 "classPlayer.html#a0ad5dbb19bad3f6aec9022b8cdea96ae":[1,0,941,11],
-"classPlayer.html#a0b855e109bdf60f785f8a4a61af5116d":[1,0,941,118],
-"classPlayer.html#a0cff1040ff0e51b872785ee541a2430b":[1,0,941,88],
+"classPlayer.html#a0b855e109bdf60f785f8a4a61af5116d":[1,0,941,119],
+"classPlayer.html#a0cff1040ff0e51b872785ee541a2430b":[1,0,941,89],
 "classPlayer.html#a0e5aba40c23ea42bc1e43d178727a3b7":[1,0,941,52],
 "classPlayer.html#a0f2e2beb314f2e026170526272a9bb74":[1,0,941,13],
 "classPlayer.html#a0f675bf9515a2cd00db093bd8ce18cab":[1,0,941,34],
-"classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138":[1,0,941,117],
+"classPlayer.html#a103cf0b4ff61eb6e494d0ff29f013138":[1,0,941,118],
 "classPlayer.html#a113356c73c16220747128536b8d9394d":[1,0,941,63],
 "classPlayer.html#a114201196b6782737d2182961d4ffc3a":[1,0,941,46],
-"classPlayer.html#a127cb89ec018035fb384cfe6bf143b83":[1,0,941,114],
-"classPlayer.html#a1470d00f4d7584a8a0001738c419f77c":[1,0,941,115],
-"classPlayer.html#a17d0049f863ab16736d417fd8eb5a823":[1,0,941,164],
-"classPlayer.html#a1a5a0a648b9048ecbb8b30019e1f27a4":[1,0,941,202],
-"classPlayer.html#a1b3617f0581b4996926e898d464aab5c":[1,0,941,136]
+"classPlayer.html#a127cb89ec018035fb384cfe6bf143b83":[1,0,941,115],
+"classPlayer.html#a1470d00f4d7584a8a0001738c419f77c":[1,0,941,116],
+"classPlayer.html#a17d0049f863ab16736d417fd8eb5a823":[1,0,941,165],
+"classPlayer.html#a1a5a0a648b9048ecbb8b30019e1f27a4":[1,0,941,203]
 };

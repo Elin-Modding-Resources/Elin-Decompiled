@@ -1,5 +1,7 @@
 var NAVTREEINDEX142 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da964af2af259188703a9dde3adce53d47":[0,4,3,0,8,138],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9bacb86ad80810707c08a9216f6ccdb3":[0,4,3,0,8,218],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9bdbe8b74f12ee43a209888b99042697":[0,4,3,0,8,208],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9ccfd2a000679641f1d16338153a58b2":[0,4,3,0,8,171],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9d087bfb809874e1b3e9adcbae8ca761":[0,4,3,0,8,57],
@@ -247,7 +249,5 @@ var NAVTREEINDEX142 =
 "structModManager_1_1SheetIndex.html#af1f6856b1d2785553212efe92b672a6c":[1,0,890,0,0],
 "structSFB_1_1ExtensionFilter.html":[1,0,8,0],
 "structSFB_1_1ExtensionFilter.html":[0,4,8,0],
-"structSFB_1_1ExtensionFilter.html#a0c42baf566fe3a626b23b92c498b0867":[1,0,8,0,1],
-"structSFB_1_1ExtensionFilter.html#a0c42baf566fe3a626b23b92c498b0867":[0,4,8,0,1],
-"structSFB_1_1ExtensionFilter.html#a18e815fda33824095d74b0952548c7e6":[1,0,8,0,0]
+"structSFB_1_1ExtensionFilter.html#a0c42baf566fe3a626b23b92c498b0867":[1,0,8,0,1]
 };

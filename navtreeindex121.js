@@ -1,5 +1,8 @@
 var NAVTREEINDEX121 =
 {
+"classTraitPowerStatue.html#a81a166b19fd010b11d7644172e5abf07":[1,0,1756,5],
+"classTraitPowerStatue.html#a9619a7baffa3cd4a949fb97c7975dd39":[1,0,1756,7],
+"classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1756,10],
 "classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1756,8],
 "classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1756,9],
 "classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1756,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitSelfFactory.html":[1,0,1802],
 "classTraitSelfFactory.html#a7286b109cc525b39fad876445a9eb246":[1,0,1802,0],
 "classTraitSet.html":[1,0,1803],
-"classTraitSet.html#a0869a9868e1b1e44353ec0a21bae1b45":[1,0,1803,1],
-"classTraitSet.html#a146a2c859b3bab3e0dfce17e7dff2f0a":[1,0,1803,0],
-"classTraitSet.html#a31116c32394fefbde5691ead34f7af64":[1,0,1803,2],
-"classTraitShackle.html":[1,0,1804]
+"classTraitSet.html#a0869a9868e1b1e44353ec0a21bae1b45":[1,0,1803,1]
 };
