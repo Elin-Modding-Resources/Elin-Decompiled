@@ -1,5 +1,10 @@
 var NAVTREEINDEX107 =
 {
+"classSpatial.html#a87c2cb49397c46756004abf6122f9198":[1,0,1223,52],
+"classSpatial.html#a8b5068efbc1d2d8e289f65d4385dc98b":[1,0,1223,91],
+"classSpatial.html#a8c6c3f1ffd0867350bc4dd763d3f485b":[1,0,1223,65],
+"classSpatial.html#a912861f4177ce608d6f35cb47e2d3139":[1,0,1223,79],
+"classSpatial.html#a91c8f9dfdd78672b104b16075f03d85c":[1,0,1223,56],
 "classSpatial.html#a93a6d0f0003398c6a21c0fa0c965396f":[1,0,1223,8],
 "classSpatial.html#a9685748962e6f2a6be5c6c040d78f3db":[1,0,1223,27],
 "classSpatial.html#a991d760abfeb5a14f448d9f55ace1cdd":[1,0,1223,55],
@@ -118,8 +123,8 @@ var NAVTREEINDEX107 =
 "classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e":[1,0,1230,13],
 "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1230,7],
 "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1230,4],
-"classSpell.html":[1,0,1232],
-"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1232,0],
+"classSpell.html":[1,0,1231],
+"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1231,0],
 "classSplashText.html":[1,0,1233],
 "classSplashText.html#a027bb81008215adcaa05044b0a2d565a":[1,0,1233,3],
 "classSplashText.html#a40d628265e563f3f7040b2e0c2b96aad":[1,0,1233,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX107 =
 "classStanceFury.html":[1,0,1242],
 "classStanceIai.html":[1,0,1243],
 "classStanceManaCost.html":[1,0,1244],
-"classStanceSongSleep.html":[1,0,1245],
-"classStanceSongSleep.html#a318d7f7de1e04b2b1f0cc9c27e4d148a":[1,0,1245,0],
-"classStanceSongSleep.html#ad14562717e3ec1e02a9b91e790c47590":[1,0,1245,1],
-"classStanceTaunt.html":[1,0,1246],
-"classStats.html":[1,0,1247],
-"classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1247,17]
+"classStanceSongSleep.html":[1,0,1245]
 };

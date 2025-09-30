@@ -1530,6 +1530,7 @@ var hierarchy =
             [ "TraitPuppy", "classTraitPuppy.html", null ],
             [ "TraitQuru", "classTraitQuru.html", null ],
             [ "TraitRaina", "classTraitRaina.html", null ],
+            [ "TraitSorin", "classTraitSorin.html", null ],
             [ "TraitStrangeGirl", "classTraitStrangeGirl.html", null ],
             [ "TraitUniqueMerchant", "classTraitUniqueMerchant.html", [
               [ "TraitClerk_Casino", "classTraitClerk__Casino.html", null ],
@@ -1542,7 +1543,8 @@ var hierarchy =
               [ "TraitNino", "classTraitNino.html", null ],
               [ "TraitNola", "classTraitNola.html", null ],
               [ "TraitSeeker", "classTraitSeeker.html", null ]
-            ] ]
+            ] ],
+            [ "TraitVesda", "classTraitVesda.html", null ]
           ] ],
           [ "TraitUniqueMonster", "classTraitUniqueMonster.html", [
             [ "TraitUniqueMonsterAdv", "classTraitUniqueMonsterAdv.html", null ]

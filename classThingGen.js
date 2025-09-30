@@ -1,6 +1,7 @@
 var classThingGen =
 [
     [ "_Create", "classThingGen.html#a0692627f83635ee2d88cbc15235ba228", null ],
+    [ "Createジュアさまの薄い本", "classThingGen.html#ab5076cf7a28f962097f3e91818009ec8", null ],
     [ "Create", "classThingGen.html#af46ce41300ca306b237398d54a00cf9c", null ],
     [ "Create", "classThingGen.html#add3fa1c442d7205c88aa4e550334c740", null ],
     [ "CreateBill", "classThingGen.html#ad515f56729f1976d1220c0aceee8f99c", null ],
@@ -30,6 +31,7 @@ var classThingGen =
     [ "CreateSpellbook", "classThingGen.html#a86d8c3002203f01152938292ca40bc31", null ],
     [ "CreateTreasure", "classThingGen.html#a1fb0aa7926f8c7896be91cedcd12878f", null ],
     [ "CreateTreasureContent", "classThingGen.html#a7b17e72b7955b9b38d78615857b3fcea", null ],
+    [ "CreateUsuihon", "classThingGen.html#addeb511548e54a7be170662ffb429f53", null ],
     [ "TestCreate", "classThingGen.html#a65deaada13fa6230027d9c214f856e95", null ],
     [ "TryLickChest", "classThingGen.html#a19a0a950b6b236c20c13270d6f8cd7ed", null ]
 ];

@@ -1,5 +1,12 @@
 var NAVTREEINDEX114 =
 {
+"classTrait.html#a3ec98447690dd68571b75ff355289308":[1,0,1399,60],
+"classTrait.html#a3f3b522d5f37459262eb30f511dbc667":[1,0,1399,121],
+"classTrait.html#a4035d731d6f901a2aa909c848d0a7627":[1,0,1399,224],
+"classTrait.html#a40e5df03dc8076fb1e9124b87dab5e4a":[1,0,1399,92],
+"classTrait.html#a4207b40678d774015cf532e1fbfa11f6":[1,0,1399,167],
+"classTrait.html#a451845a816deb9740a16121536fcd48e":[1,0,1399,129],
+"classTrait.html#a465361d0239bbdd1358d35046e4e6c87":[1,0,1399,38],
 "classTrait.html#a4737c1ce5c25f3d2f45ada2cdb1b2f19":[1,0,1399,148],
 "classTrait.html#a47b9ffd55d19fac5985c99d803d7d416":[1,0,1399,4],
 "classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6":[1,0,1399,93],
@@ -242,12 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitAmmo.html#ad2a54cfc05eb96b3682323ee18cc64ce":[1,0,1408,1],
 "classTraitAmmoArrow.html":[1,0,1409],
 "classTraitAmmoBolt.html":[1,0,1410],
-"classTraitAmmoBullet.html":[1,0,1411],
-"classTraitAmmoEnergy.html":[1,0,1412],
-"classTraitAmmoTalisman.html":[1,0,1413],
-"classTraitAmmoTalisman.html#a9ca08b037ec6ff430ad79fe7ffc3c6bb":[1,0,1413,1],
-"classTraitAmmoTalisman.html#ac7d93044ac71e79131f9afe6c89cb36c":[1,0,1413,0],
-"classTraitAncientbook.html":[1,0,1414],
-"classTraitAncientbook.html#a30af98aa86c5036c1c47f7599b31f4ca":[1,0,1414,2],
-"classTraitAncientbook.html#a3af35eecff07096d675b87d386c8edb9":[1,0,1414,5]
+"classTraitAmmoBullet.html":[1,0,1411]
 };

@@ -1,5 +1,6 @@
 var classReligionManager =
 [
+    [ "ジュアさまの薄い本をください", "classReligionManager.html#a5feaf61a148e5a86084fcb315b9cfa34", null ],
     [ "Find", "classReligionManager.html#a2b096a7b38a79e753733244a073f08c5", null ],
     [ "GetRandomReligion", "classReligionManager.html#af893c0ae38d8c0ae912d16a74e244b92", null ],
     [ "OnCreateGame", "classReligionManager.html#a31d2c73847ec475e8304680c0db13e71", null ],
