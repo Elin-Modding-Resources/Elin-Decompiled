@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using UnityEngine;
 
 public class ReligionManager : EClass
 {
@@ -93,5 +94,23 @@ public class ReligionManager : EClass
 	public Religion GetRandomReligion(bool onlyJoinable = true, bool includeMinor = false)
 	{
 		return list.Where((Religion a) => (!onlyJoinable || a.CanJoin) && (includeMinor || !a.IsMinorGod)).RandomItem();
+	}
+
+	public bool ジュアさまの薄い本をください()
+	{
+		foreach (Chara item in EClass._map.charas.Concat(EClass.game.cards.globalCharas.Values))
+		{
+			if (item.faith != Healing)
+			{
+				Thing thing = ThingGen.Createジュアさまの薄い本();
+				item.AddCard(thing);
+				if (item.ExistsOnMap)
+				{
+					item.TryUse(thing);
+				}
+			}
+		}
+		Debug.Log("hai");
+		return true;
 	}
 }

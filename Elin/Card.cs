@@ -7177,7 +7177,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				case "scroll_random":
 					if (refVal == 8288)
 					{
-						return 10;
+						return 20;
 					}
 					break;
 				}

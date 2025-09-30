@@ -438,6 +438,9 @@ public class SurvivalManager : EClass
 			case "nino":
 			case "big_daddy":
 			case "littleOne":
+			case "sorin":
+			case "vesda":
+			case "azzrasizzle":
 				return false;
 			default:
 				if (EClass.game.cards.globalCharas.Find(r.id) == null)

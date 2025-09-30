@@ -1349,12 +1349,12 @@ public class ActEffect : EClass
 		case EffectId.ReturnVoid:
 		{
 			Zone_Void root = EClass.game.spatials.Find<Zone_Void>();
-			if (EClass.game.IsSurvival || root == null || root.visitCount == 0 || EClass.player.stats.deepest < 1 || (!EClass.debug.enable && EClass.player.CountKeyItem("license_void") == 0))
+			if (EClass.game.IsSurvival || root == null || root.visitCount == 0 || EClass.player.stats.deepestVoid < 1 || (!EClass.debug.enable && EClass.player.CountKeyItem("license_void") == 0))
 			{
 				Msg.SayNothingHappen();
 				return;
 			}
-			int max = Mathf.Min(EClass.player.stats.deepest, -root.MinLv);
+			int max = Mathf.Min(EClass.player.stats.deepestVoid, -root.MinLv);
 			int destLv = 1;
 			Dialog.InputName("dialogVoidReturn".lang(max.ToString() ?? ""), max.ToString() ?? "", delegate(bool cancel, string text)
 			{

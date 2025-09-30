@@ -1005,8 +1005,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			EClass.game.quests.Start("into_darkness");
-			EClass.game.quests.Start("negotiation_darkness").ChangePhase(5);
+			EClass.game.religions.ジュアさまの薄い本をください();
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))

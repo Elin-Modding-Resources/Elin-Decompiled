@@ -186,6 +186,18 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
+	public static Thing Createジュアさまの薄い本()
+	{
+		return CreateUsuihon(EClass.game.religions.Healing);
+	}
+
+	public static Thing CreateUsuihon(Religion faith)
+	{
+		Thing thing = Create("1084");
+		thing.c_idRefName = EClass.game.religions.Healing.id;
+		return thing;
+	}
+
 	public static Thing CreateRune(int ele, int v, bool free = false)
 	{
 		Thing thing = Create(free ? "rune_free" : "rune");

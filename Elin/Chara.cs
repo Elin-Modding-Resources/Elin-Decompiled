@@ -5570,11 +5570,12 @@ public class Chara : Card, IPathfindWalker
 			if (EClass._zone.DangerLv > EClass.player.stats.deepest)
 			{
 				EClass.player.stats.deepest = EClass._zone.DangerLv;
-				if (EClass._zone is Zone_Void)
-				{
-					EClass.player.stats.deepestVoid = -EClass._zone.lv;
-				}
 				Msg.Say("update_deepest", EClass.player.stats.deepest.ToString() ?? "");
+			}
+			if (EClass._zone is Zone_Void && -EClass._zone.lv > EClass.player.stats.deepestVoid)
+			{
+				EClass.player.stats.deepestVoid = -EClass._zone.lv;
+				Msg.Say("update_deepest_void", EClass.player.stats.deepestVoid.ToString() ?? "");
 			}
 			EClass.player.willAutoSave = true;
 			Thing thing = ThingGen.CreateTreasure("chest_boss", base.LV, type);

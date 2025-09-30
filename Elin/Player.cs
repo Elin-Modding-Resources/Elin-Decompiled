@@ -2374,7 +2374,7 @@ public class Player : EClass
 		{
 			ModKarma(1);
 		}
-		if (fishArtifact > 0 && EClass.rnd(5) == 0)
+		if (fishArtifact > 0 && EClass.rnd(3) == 0)
 		{
 			fishArtifact--;
 		}
