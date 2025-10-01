@@ -735,7 +735,7 @@ public class AttackProcess : EClass
 				num5 = conWeapon.power / 2;
 				num6 = (int)Mathf.Min(40f + MathF.Sqrt(conWeapon.power), 80f);
 			}
-			if (conWeapon == null && weapon == null && (CC.MainElement != Element.Void || CC.HasElement(1565)))
+			if (conWeapon == null && (weapon == null || IsMartialWeapon) && (CC.MainElement != Element.Void || CC.HasElement(1565)))
 			{
 				num4 = (CC.HasElement(1565) ? 915 : CC.MainElement.id);
 				num5 = CC.Power / 3 + EClass.rnd(CC.Power / 2);
@@ -861,6 +861,10 @@ public class AttackProcess : EClass
 					TC.Chara.AddCondition<ConParalyze>(EClass.rnd(2), force: true);
 				}
 				ProcShieldEncs(CC, TC, 500 + num13);
+				if (CC.IsAliveInCurrentZone)
+				{
+					CC.ModExp(123, 50);
+				}
 			}
 		}
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)

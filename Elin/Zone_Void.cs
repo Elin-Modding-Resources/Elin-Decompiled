@@ -71,4 +71,13 @@ public class Zone_Void : Zone_Dungeon
 		}
 		base.OnGenerateMap();
 	}
+
+	public override void OnActivate()
+	{
+		if (base.lv == -10000 && EClass._map.FindThing<TraitStairsDown>() == null)
+		{
+			Thing t = ThingGen.Create(base.biome.style.GetIdStairs(upstairs: false), base.biome.style.matStairs);
+			AddCard(t, EClass._map.GetCenterPos().GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false)).Install();
+		}
+	}
 }

@@ -315,14 +315,16 @@ public class ActMelee : ActBaseAttack
 					if (num5 > 0 && !Act.CC.HasElement(439))
 					{
 						int num6 = EClass.curve(5 + num5 / 3, 10, 3, 70);
-						int num7 = Act.TC.Evalue(123);
+						int ele2 = 123;
+						int num7 = Act.TC.Evalue(ele2);
 						if (Act.TC.isChara)
 						{
 							foreach (BodySlot slot2 in Act.TC.Chara.body.slots)
 							{
 								if (slot2.thing != null && slot2.thing.HasElement(437) && Act.TC.Evalue(slot2.thing.category.skill) > num7)
 								{
-									num7 = Act.TC.Evalue(slot2.thing.category.skill);
+									ele2 = slot2.thing.category.skill;
+									num7 = Act.TC.Evalue(ele2);
 								}
 							}
 						}
@@ -331,6 +333,7 @@ public class ActMelee : ActBaseAttack
 						{
 							Act.TC.Say((Act.TC.isChara && Act.TC.Chara.IsHostile()) ? "parry_enemy" : "parry");
 							Act.TC.PlaySound("parry");
+							Act.TC.ModExp(ele2, 20);
 							parried = true;
 							return;
 						}

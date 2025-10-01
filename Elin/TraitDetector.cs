@@ -53,7 +53,7 @@ public class TraitDetector : TraitItem
 		int num = 999;
 		foreach (Thing thing in EClass._map.things)
 		{
-			if (!thing.isMasked)
+			if (!thing.isMasked && !thing.isRoofItem)
 			{
 				int num2 = EClass.pc.Dist(thing);
 				if ((thing.id.ToLower().Contains(term.ToLower()) || thing.Name.ToLower().Contains(term.ToLower())) && num2 < num)
