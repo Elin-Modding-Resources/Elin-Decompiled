@@ -205,9 +205,9 @@ var NAVTREEINDEX =
 "classZoneEventManager.html",
 "classZone__Arena.html#a34a1cd9398e8fb458e0a3ba38fc50907",
 "classZone__StartVillage.html",
-"interfaceAlgorithms_1_1IPriorityQueue.html#a1bc6246f656570d7364f6b7ef62ef8e9",
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8bc2da5a051e6f39345468fbc380d5ef",
-"structHSVColor.html"
+"interfaceAlgorithms_1_1IPriorityQueue.html#a15e438612e1d043157642d87b6786dea",
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8b03eecffdf9feca4f0f6b4d1ed835b9",
+"structHSLColor.html#af984d9bfd0af74ad9c7bd3618b144b86"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,6 @@
 var classZone__Void =
 [
+    [ "OnActivate", "classZone__Void.html#ad9173efa6df7bd7176174b17a4da6d02", null ],
     [ "OnGenerateMap", "classZone__Void.html#a36658f60a67d6a5abd2f81d04bbb697d", null ],
     [ "CanUnlockExit", "classZone__Void.html#aa867dd044043c9cd33e56fcd3ad8f9bb", null ],
     [ "IDPlayList", "classZone__Void.html#aa6216768bd2a3c62913a0861439143db", null ],
