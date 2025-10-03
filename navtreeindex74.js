@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classKnowledgeRecipe.html":[1,0,743],
 "classKnowledgeResearch.html":[1,0,744],
 "classKnownSong.html":[1,0,745],
 "classKnownSong.html#a8c2167f1668086f4dc715109d28d80e4":[1,0,745,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classLayer.html#afec4335761e856e36a79f53c69e578b0":[1,0,758,81],
 "classLayerAbility.html":[1,0,759],
 "classLayerAbility.html#a1b9207041dd4d3052eef1b55f1e856d7":[1,0,759,7],
-"classLayerAbility.html#a203a1c9d6b7fd0ec77646f941e9328b5":[1,0,759,4],
-"classLayerAbility.html#a230ff61e8c9771f00969b268b1c59b43":[1,0,759,9]
+"classLayerAbility.html#a203a1c9d6b7fd0ec77646f941e9328b5":[1,0,759,4]
 };

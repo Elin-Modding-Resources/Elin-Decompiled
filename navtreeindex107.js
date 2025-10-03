@@ -1,5 +1,6 @@
 var NAVTREEINDEX107 =
 {
+"classSpatial.html#a872aba4f74325d925c3306f42503d569":[1,0,1223,32],
 "classSpatial.html#a87c2cb49397c46756004abf6122f9198":[1,0,1223,52],
 "classSpatial.html#a8b5068efbc1d2d8e289f65d4385dc98b":[1,0,1223,91],
 "classSpatial.html#a8c6c3f1ffd0867350bc4dd763d3f485b":[1,0,1223,65],
@@ -248,6 +249,5 @@ var NAVTREEINDEX107 =
 "classSpriteSheet.html#a86eec185d2242b3f76cafe1a5c59a714":[1,0,1241,5],
 "classStanceFury.html":[1,0,1242],
 "classStanceIai.html":[1,0,1243],
-"classStanceManaCost.html":[1,0,1244],
-"classStanceSongSleep.html":[1,0,1245]
+"classStanceManaCost.html":[1,0,1244]
 };

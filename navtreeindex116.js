@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1464,0],
 "classTraitCasinoTable.html":[1,0,1465],
 "classTraitCasinoTable.html#aae4eafadaaee9f34981e5563e683d053":[1,0,1465,0],
 "classTraitCatalyst.html":[1,0,1466],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitDeed.html":[1,0,1509],
 "classTraitDeed.html#a89dff9f45bf4831d416c7fd49b995ff3":[1,0,1509,0],
 "classTraitDeed.html#aa67b89d49deb49ab6a97d33226616440":[1,0,1509,1],
-"classTraitDeed.html#ad3a5f615aa20d8cdd0052fe2e38b672b":[1,0,1509,2],
-"classTraitDeedRelocate.html":[1,0,1510]
+"classTraitDeed.html#ad3a5f615aa20d8cdd0052fe2e38b672b":[1,0,1509,2]
 };

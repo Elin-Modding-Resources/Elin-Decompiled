@@ -1,5 +1,6 @@
 var NAVTREEINDEX143 =
 {
+"structHSLColor.html#aea07826cdd4cc33acc8508599935f750":[1,0,656,3],
 "structHSLColor.html#af984d9bfd0af74ad9c7bd3618b144b86":[1,0,656,0],
 "structHSVColor.html":[1,0,657],
 "structHSVColor.html#a5c768ddf18c6019c357d254af364f6d9":[1,0,657,0],

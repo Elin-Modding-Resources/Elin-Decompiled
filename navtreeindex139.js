@@ -1,5 +1,6 @@
 var NAVTREEINDEX139 =
 {
+"classZone__Arena.html#a23f93026eb8b48371b37ca1c5d5644b3":[1,0,2088,1],
 "classZone__Arena.html#a34a1cd9398e8fb458e0a3ba38fc50907":[1,0,2088,0],
 "classZone__Arena.html#a5b657d752ffb0416861456d6ed94b93d":[1,0,2088,4],
 "classZone__Arena.html#a7b031408533c6fa2374f687f3a23242a":[1,0,2088,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX139 =
 "classZone__StartSiteSky.html#a64d7def24de6af7fe13c8340d824b4ad":[1,0,2151,4],
 "classZone__StartSiteSky.html#a6d398a4b48493d15241410920fcec687":[1,0,2151,3],
 "classZone__StartSiteSky.html#ab639c59532ff2028e9bad0fcd494006b":[1,0,2151,0],
-"classZone__StartSiteSky.html#abdab0cb8574824d6fc1438f798ab309d":[1,0,2151,5],
-"classZone__StartSiteSky.html#af5f98394e6011ed4a85268fc879c08ca":[1,0,2151,1]
+"classZone__StartSiteSky.html#abdab0cb8574824d6fc1438f798ab309d":[1,0,2151,5]
 };

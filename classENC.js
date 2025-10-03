@@ -79,6 +79,7 @@ var classENC =
     [ "r_life", "classENC.html#a122073e2b83abee7617e512286948a09", null ],
     [ "r_mana", "classENC.html#a3a9d110201918d2b8bda780ae9dae5c6", null ],
     [ "r_PV", "classENC.html#aad9ee5a798257d8e7fe057ebe6f1093b", null ],
+    [ "redirect_blaser", "classENC.html#a47f9ee65fa8a45ea764a6c073b66385e", null ],
     [ "resMutation", "classENC.html#af70c292bf0a214569922670af367df07", null ],
     [ "resWeather", "classENC.html#a6ae415ffbcfbeb35bf6509440fd8953e", null ],
     [ "revealFaith", "classENC.html#a755ce3011d74da18e450b0795509e01a", null ],

@@ -38,7 +38,7 @@ var searchData=
   ['playgacha_35',['PlayGacha',['../classLayerGacha.html#aea702ed5d7dd5cdc7ab9ddb79639cc1d',1,'LayerGacha.PlayGacha()'],['../classTraitGacha.html#a5ce8ca8716b11e9534475f9d495d8ab1',1,'TraitGacha.PlayGacha()'],['../classLayerGachaResult.html#a7b7eafc940305005b8e44764f15fb78f',1,'LayerGachaResult.PlayGacha()']]],
   ['playhiteffect_36',['PlayHitEffect',['../classSourceMaterial_1_1Row.html#aeb48f33fbe8be8e76490714bd83ffdc4',1,'SourceMaterial::Row']]],
   ['playnext_37',['PlayNext',['../classDramaSequence.html#a1099bf33e79962b7261a17f094faa239',1,'DramaSequence']]],
-  ['playrangedanime_38',['PlayRangedAnime',['../classAttackProcess.html#acbe14bc34d2889dfd5ef8f6ffbc94880',1,'AttackProcess']]],
+  ['playrangedanime_38',['PlayRangedAnime',['../classAttackProcess.html#ac6da2c5b898070dc09359ce76ae5e815',1,'AttackProcess']]],
   ['playsound_39',['PlaySound',['../classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871',1,'Card.PlaySound()'],['../classCollectibleActor.html#a614a1f18f3de2c5fd734de2af0de5057',1,'CollectibleActor.PlaySound()'],['../classPoint.html#a82b8f3c92de760d27d9023d6fdcd591c',1,'Point.PlaySound()']]],
   ['playsounddead_40',['PlaySoundDead',['../classCard.html#aa61e5738f1a101248b1c58f214abd83f',1,'Card']]],
   ['playsounddrop_41',['PlaySoundDrop',['../classCard.html#acd34ff2390e8b5097ffbbd9f4f849817',1,'Card']]],

@@ -1,6 +1,6 @@
 var NAVTREEINDEX33 =
 {
-"classB83_1_1Win32_1_1Window.html#af5b696a93148d4e20d8748ee5b041c07":[1,0,3,0,6,5],
+"classB83_1_1Win32_1_1Window.html#af5b696a93148d4e20d8748ee5b041c07":[0,4,3,0,6,5],
 "classBLOCK.html":[1,0,223],
 "classBLOCK.html#a23de3ab68e86d6c6057c7f8384ab47f2":[1,0,223,4],
 "classBLOCK.html#a794af3f013ea2ec4583a24a7611d493f":[1,0,223,3],

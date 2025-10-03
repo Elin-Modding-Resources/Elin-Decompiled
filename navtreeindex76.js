@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"classLayerDragGrid.html#a1d25db5058c6f93b23211fb45eeb7c23":[1,0,776,30],
 "classLayerDragGrid.html#a24882f607033e8e59d05f46879cdee58":[1,0,776,2],
 "classLayerDragGrid.html#a2811078a7b3921d8dff6a374311e23f3":[1,0,776,31],
 "classLayerDragGrid.html#a2ba9615695df14c59e7982809ec63650":[1,0,776,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "classLayerEmbark.html#aff1a960e3811556353eb4416c3631779":[1,0,784,27],
 "classLayerEquip.html":[1,0,785],
 "classLayerEquip.html#a075cf4d75cb7ec81e0f93d551483a162":[1,0,785,10],
-"classLayerEquip.html#a0a735264976aef43f70e7d264a5d1a8c":[1,0,785,4],
-"classLayerEquip.html#a43d4013b4fc63ce8a6e43b8015f7a85a":[1,0,785,8]
+"classLayerEquip.html#a0a735264976aef43f70e7d264a5d1a8c":[1,0,785,4]
 };

@@ -9,7 +9,7 @@ var classAttackProcess =
     [ "GetTwoHandEncBonus", "classAttackProcess.html#a74cda8b0a94e4744172f26960daf7fe9", null ],
     [ "GetWeaponEnc", "classAttackProcess.html#ac75593fa0ed1e1ce631f65ebcac70a0d", null ],
     [ "Perform", "classAttackProcess.html#a10c9d68470c37d5cbf470c3872d648f7", null ],
-    [ "PlayRangedAnime", "classAttackProcess.html#acbe14bc34d2889dfd5ef8f6ffbc94880", null ],
+    [ "PlayRangedAnime", "classAttackProcess.html#ac6da2c5b898070dc09359ce76ae5e815", null ],
     [ "Prepare", "classAttackProcess.html#a103817f8718581491eec802a1320cd53", null ],
     [ "ProcAbility", "classAttackProcess.html#a93ae6fe0241f88da442356d1d33f92a8", null ],
     [ "ProcAbility", "classAttackProcess.html#a318daa3a523fb4c587ec70bde146b311", null ],

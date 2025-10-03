@@ -1,5 +1,6 @@
 var NAVTREEINDEX130 =
 {
+"classUIRecipeInfo.html#a9526d8a69f1a860996381be6354644eb":[1,0,2007,34],
 "classUIRecipeInfo.html#a95adcc0175ee08597e7c72d4f299d9d1":[1,0,2007,16],
 "classUIRecipeInfo.html#a96b2dbd3e3d34d8af57b55f540d26871":[1,0,2007,19],
 "classUIRecipeInfo.html#aa1a179d2d0422620c6fb300184e22e8a":[1,0,2007,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX130 =
 "classUtil.html#adad71099766e9ad1381581caf7103d03":[1,0,2022,20],
 "classUtil.html#ae9d186d08b197b4db52dfc00c6213437":[1,0,2022,17],
 "classUtil.html#aef66c945b605b7eac1087983b5a0b25d":[1,0,2022,18],
-"classUtil.html#af5b1d53fd1069fad302f55649c323276":[1,0,2022,1],
-"classVFX.html":[1,0,2024]
+"classUtil.html#af5b1d53fd1069fad302f55649c323276":[1,0,2022,1]
 };

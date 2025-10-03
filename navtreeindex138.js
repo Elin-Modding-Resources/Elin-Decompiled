@@ -1,5 +1,6 @@
 var NAVTREEINDEX138 =
 {
+"classZoneEventHarvest.html#ae767d85669f5e489573ab6afd362bff0":[1,0,2173,5],
 "classZoneEventManager.html":[1,0,2174],
 "classZoneEventManager.html#a031a230e3ea08c5c08c5903fdff0cf6d":[1,0,2174,3],
 "classZoneEventManager.html#a2dca9c75a17911dffb7aee4afdf25861":[1,0,2174,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX138 =
 "classZone_1_1PortalReturnData.html#ae10f37390562c87054b5a9641d5b1807":[1,0,2086,0,2],
 "classZone__Aquli.html":[1,0,2087],
 "classZone__Aquli.html#accc3131e12f50fa9949721c1ecfb6228":[1,0,2087,0],
-"classZone__Arena.html":[1,0,2088],
-"classZone__Arena.html#a23f93026eb8b48371b37ca1c5d5644b3":[1,0,2088,1]
+"classZone__Arena.html":[1,0,2088]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"classRankedZoneManager.html#a869f1a8914291c2265f83fa779ce91e1":[1,0,1057,2],
 "classRankedZoneManager.html#ab95dca50e72d372a1fc0d4ed79674db8":[1,0,1057,3],
 "classRankedZoneManager.html#ac48597be4e453de321fecdbebb904289":[1,0,1057,0],
 "classRankedZoneManager.html#aff220cdd1f7b50f1c6f8e28d0bce976d":[1,0,1057,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "classRefReligion.html#a139817779fc25ca8415f31bc4a5ceae4":[1,0,1071,2],
 "classRefReligion.html#a89db752c94ac176eb838ada6ec6e902c":[1,0,1071,1],
 "classRefReligion.html#a92820a8e83c14daa48f7443aa29da9f6":[1,0,1071,3],
-"classRefReligion.html#aa130f5fb9902d124b5e2d1016175b31e":[1,0,1071,4],
-"classRefReligion.html#ad564729ab4cb89ae290ca6b125ed13d4":[1,0,1071,0]
+"classRefReligion.html#aa130f5fb9902d124b5e2d1016175b31e":[1,0,1071,4]
 };

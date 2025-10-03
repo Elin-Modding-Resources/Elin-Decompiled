@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"classQuestMeal__cake.html#a6dbd8a4ccd83395bf852d7fe1d05e045":[1,0,1014,0],
 "classQuestMeal__cat.html":[1,0,1015],
 "classQuestMeal__cookie.html":[1,0,1016],
 "classQuestMeal__cookie.html#a89f487145426f41917105c7a53ede742":[1,0,1016,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "classRankedZone.html#ad926bf010c857b7145d4ff96df8f9b63":[1,0,1056,4],
 "classRankedZone.html#adc83bdc4fc2e417493620369d67ec2ce":[1,0,1056,0],
 "classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b":[1,0,1056,3],
-"classRankedZoneManager.html":[1,0,1057],
-"classRankedZoneManager.html#a869f1a8914291c2265f83fa779ce91e1":[1,0,1057,2]
+"classRankedZoneManager.html":[1,0,1057]
 };

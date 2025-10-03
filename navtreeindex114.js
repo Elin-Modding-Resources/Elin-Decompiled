@@ -1,5 +1,6 @@
 var NAVTREEINDEX114 =
 {
+"classTrait.html#a3dfddf8ab3a55240f886305bddba17bf":[1,0,1399,31],
 "classTrait.html#a3ec98447690dd68571b75ff355289308":[1,0,1399,60],
 "classTrait.html#a3f3b522d5f37459262eb30f511dbc667":[1,0,1399,121],
 "classTrait.html#a4035d731d6f901a2aa909c848d0a7627":[1,0,1399,224],
@@ -248,6 +249,5 @@ var NAVTREEINDEX114 =
 "classTraitAmmo.html#ac834422091e2fd3f8bf11d0f100e995c":[1,0,1408,0],
 "classTraitAmmo.html#ad2a54cfc05eb96b3682323ee18cc64ce":[1,0,1408,1],
 "classTraitAmmoArrow.html":[1,0,1409],
-"classTraitAmmoBolt.html":[1,0,1410],
-"classTraitAmmoBullet.html":[1,0,1411]
+"classTraitAmmoBolt.html":[1,0,1410]
 };

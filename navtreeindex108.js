@@ -1,5 +1,6 @@
 var NAVTREEINDEX108 =
 {
+"classStanceSongSleep.html":[1,0,1245],
 "classStanceSongSleep.html#a318d7f7de1e04b2b1f0cc9c27e4d148a":[1,0,1245,0],
 "classStanceSongSleep.html#ad14562717e3ec1e02a9b91e790c47590":[1,0,1245,1],
 "classStanceTaunt.html":[1,0,1246],
@@ -248,6 +249,5 @@ var NAVTREEINDEX108 =
 "classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6":[1,0,1309,4],
 "classTCOrbitChara.html#ab81202f1b685bc12aab5d3dac00ecac8":[1,0,1309,14],
 "classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8":[1,0,1309,0],
-"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1309,6],
-"classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0":[1,0,1309,5]
+"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1309,6]
 };

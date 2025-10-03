@@ -1,5 +1,6 @@
 var NAVTREEINDEX140 =
 {
+"classZone__StartSiteSky.html#af5f98394e6011ed4a85268fc879c08ca":[1,0,2151,1],
 "classZone__StartVillage.html":[1,0,2152],
 "classZone__StartVillage.html#a252569541d83a7dd063956b6026c64d1":[1,0,2152,0],
 "classZone__StartVillage.html#ae56bd9df897118e3367abb8379ed9c9c":[1,0,2152,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX140 =
 "index.html#autotoc_md5":[2],
 "index.html#autotoc_md7":[3],
 "interfaceAlgorithms_1_1IPriorityQueue.html":[0,4,0,1],
-"interfaceAlgorithms_1_1IPriorityQueue.html":[1,0,0,1],
-"interfaceAlgorithms_1_1IPriorityQueue.html#a15e438612e1d043157642d87b6786dea":[0,4,0,1,3]
+"interfaceAlgorithms_1_1IPriorityQueue.html":[1,0,0,1]
 };

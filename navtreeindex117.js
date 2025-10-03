@@ -1,5 +1,6 @@
 var NAVTREEINDEX117 =
 {
+"classTraitDeedRelocate.html":[1,0,1510],
 "classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1510,0],
 "classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1510,1],
 "classTraitDefertilizer.html":[1,0,1511],
@@ -248,6 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitFarmChest.html#a76b65125860a4a94d4d0c6f5c1f59033":[1,0,1559,0],
 "classTraitFarris.html":[1,0,1560],
 "classTraitFarris.html#a4ae71d9cd578871552e27b4c0c27cd35":[1,0,1560,0],
-"classTraitFarris.html#a65a9c51ba2526509996c561d53274f26":[1,0,1560,1],
-"classTraitFelmera.html":[1,0,1561]
+"classTraitFarris.html#a65a9c51ba2526509996c561d53274f26":[1,0,1560,1]
 };

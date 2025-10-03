@@ -1,5 +1,6 @@
 var NAVTREEINDEX123 =
 {
+"classTraitTile.html#a021d87a98411062ce1873de501396342":[1,0,1866,5],
 "classTraitTile.html#a1339b30583409c1d761d91a46c2aa7d7":[1,0,1866,4],
 "classTraitTile.html#a38a38cdb93d68cd278187a2a70d3d693":[1,0,1866,6],
 "classTraitTile.html#a59b84285125ac0d6e09856662f404603":[1,0,1866,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitWorkbench.html":[1,0,1929],
 "classTraitWorkbenchFuel.html":[1,0,1930],
 "classTraitWorkbenchFuel.html#a65b0b18e5e4ae87520795159830a1021":[1,0,1930,1],
-"classTraitWorkbenchFuel.html#ad8077da04cad339921e6c5e0c9736afe":[1,0,1930,0],
-"classTraitWrench.html":[1,0,1931]
+"classTraitWorkbenchFuel.html#ad8077da04cad339921e6c5e0c9736afe":[1,0,1930,0]
 };

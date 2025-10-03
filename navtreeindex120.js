@@ -1,5 +1,6 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1690,0],
 "classTraitMerchantMeat.html":[1,0,1691],
 "classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1691,0],
 "classTraitMerchantMilk.html":[1,0,1692],
@@ -248,6 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1755,8],
 "classTraitPotionRandom.html#a6edd071c6499d46dbdb86a912357421b":[1,0,1755,3],
 "classTraitPotionRandom.html#a6f8ad0e2c44a98bfcf172afef5aa307d":[1,0,1755,7],
-"classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1755,1],
-"classTraitPotionRandom.html#a81f51a653e3ce1a6e0a118178812daf2":[1,0,1755,10]
+"classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1755,1]
 };

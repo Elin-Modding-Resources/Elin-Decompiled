@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitFelmera.html":[1,0,1561],
 "classTraitFelmera.html#a020a3c6560254c0562e09d0b99f00f9f":[1,0,1561,1],
 "classTraitFelmera.html#aa46eda79ce9179760200552dc10e728b":[1,0,1561,0],
 "classTraitFertilizer.html":[1,0,1562],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1628,10],
 "classTraitHouseBoard_1_1Data.html":[1,0,1628,0],
 "classTraitHouseBoard_1_1Data.html#a0d184a64fffe2dce1b803b12f741c0c7":[1,0,1628,0,16],
-"classTraitHouseBoard_1_1Data.html#a304cc8ac79c1eacc9b120e7fb18faf23":[1,0,1628,0,7],
-"classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c":[1,0,1628,0,1]
+"classTraitHouseBoard_1_1Data.html#a304cc8ac79c1eacc9b120e7fb18faf23":[1,0,1628,0,7]
 };
