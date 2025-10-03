@@ -74,7 +74,7 @@ public class Zone_Void : Zone_Dungeon
 
 	public override void OnActivate()
 	{
-		if (base.lv == -10000 && EClass._map.FindThing<TraitStairsDown>() == null)
+		if (base.lv > MinLv && EClass._map.FindThing<TraitStairsDown>() == null && EClass._map.FindThing<TraitStairsLocked>() == null)
 		{
 			Thing t = ThingGen.Create(base.biome.style.GetIdStairs(upstairs: false), base.biome.style.matStairs);
 			AddCard(t, EClass._map.GetCenterPos().GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false)).Install();

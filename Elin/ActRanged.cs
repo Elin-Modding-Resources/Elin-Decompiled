@@ -306,7 +306,39 @@ public class ActRanged : ActThrow
 				{
 					Act.TC = _tc;
 					Prepare();
-					if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
+					int num5 = 0;
+					if (weapon.trait is TraitToolRangeGunEnergy && Act.TC.isChara && Act.TC.HasElement(383))
+					{
+						if (weapon.id == "gun_laser")
+						{
+							num5 = 50;
+						}
+						num5 += Mathf.Max(25 * Act.TC.PER / Mathf.Max(1, Act.CC.PER), 50);
+						if (Act.CC.IsPowerful)
+						{
+							num5 /= 2;
+						}
+					}
+					if (num5 > EClass.rnd(100))
+					{
+						Card tC = Act.TC;
+						Chara cC = Act.CC;
+						Point point = Act.TP.Copy();
+						List<Chara> list = Act.TC.pos.ListCharasInRadius(Act.TC.Chara, Act.TC.GetSightRadius(), (Chara c) => c.IsHostile(Act.TC.Chara));
+						Chara chara = ((list.Count > 0) ? list.RandomItem() : Act.CC?.Chara);
+						Act.TC.Say((Act.TC.isChara && Act.TC.Chara.IsHostile()) ? "attack_reflect_enemy" : "attack_reflect");
+						Act.TC.PlaySound("attack_gun_laser_parry");
+						AttackProcess.Current.PlayRangedAnime(numFire, 0.1f);
+						AttackProcess.Current.CC = Act.TC?.Chara;
+						AttackProcess.Current.TC = chara;
+						AttackProcess.Current.TP.Set(chara.pos);
+						AttackProcess.Current.posRangedAnime = chara.pos;
+						AttackProcess.Current.Perform(j, hasHit, chara.IsPCFactionOrMinion ? 0.5f : 2.5f);
+						Act.TC = tC;
+						Act.CC = cC;
+						Act.TP.Set(point);
+					}
+					else if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
 					{
 						hasHit = true;
 					}

@@ -378,7 +378,7 @@ public class AttackProcess : EClass
 		}
 	}
 
-	public void PlayRangedAnime(int numFire)
+	public void PlayRangedAnime(int numFire, float delay = 0f)
 	{
 		if (weapon == null)
 		{
@@ -406,7 +406,7 @@ public class AttackProcess : EClass
 		}
 		for (int i = 0; i < numFire; i++)
 		{
-			TweenUtil.Delay((float)i * data.delay, delegate
+			TweenUtil.Delay((float)i * data.delay + delay, delegate
 			{
 				if (EClass.core.IsGameStarted && _CC.IsAliveInCurrentZone && _zone == _CC.currentZone)
 				{
