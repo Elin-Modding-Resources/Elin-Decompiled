@@ -602,6 +602,7 @@ var hierarchy =
               [ "AIWork_Fish", "classAIWork__Fish.html", null ],
               [ "AIWork_Lumberjack", "classAIWork__Lumberjack.html", null ],
               [ "AIWork_Research", "classAIWork__Research.html", null ],
+              [ "AI_Churyu", "classAI__Churyu.html", null ],
               [ "AI_Mofu", "classAI__Mofu.html", null ]
             ] ],
             [ "AI_AttackHome", "classAI__AttackHome.html", null ],
@@ -1669,6 +1670,7 @@ var hierarchy =
           [ "TraitFoodMeat", "classTraitFoodMeat.html", null ],
           [ "TraitFoodNut", "classTraitFoodNut.html", null ],
           [ "TraitFoodPrepared", "classTraitFoodPrepared.html", [
+            [ "TraitFoodChuryu", "classTraitFoodChuryu.html", null ],
             [ "TraitFoodMeal", "classTraitFoodMeal.html", [
               [ "TraitMixedFood", "classTraitMixedFood.html", [
                 [ "TraitLunch", "classTraitLunch.html", [

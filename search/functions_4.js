@@ -2,7 +2,7 @@ var searchData=
 [
   ['dailyoutcome_0',['DailyOutcome',['../classFactionBranch.html#a2b06ef27c1488f8cc19a69009d6c6ec1',1,'FactionBranch.DailyOutcome()'],['../classAIWork.html#a1766ec0c976dea1607ff4d8618dca613',1,'AIWork.DailyOutcome()']]],
   ['damageele_1',['DamageEle',['../classActEffect.html#aa7e3c236ae31446cae7736dab0d27c33',1,'ActEffect']]],
-  ['damagehp_2',['DamageHP',['../classCard.html#a2a73375a18833c19a9e05e12cd1d0202',1,'Card.DamageHP(int dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#ac0ebe79e90b6e9f850aebd2146425b55',1,'Card.DamageHP(int dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true, Thing weapon=null, Chara originalTarget=null)']]],
+  ['damagehp_2',['DamageHP',['../classCard.html#aa300fa6820d441356548a0def458aea0',1,'Card.DamageHP(long dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#a4348482c38c121f0760fe824320cf978',1,'Card.DamageHP(long dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true, Thing weapon=null, Chara originalTarget=null)']]],
   ['damagetempelement_3',['DamageTempElement',['../classChara.html#a050ddb397d91384b625a577b7ae43f5e',1,'Chara']]],
   ['damagetempelements_4',['DamageTempElements',['../classChara.html#ad6486662fbf918364048ff120f7588a4',1,'Chara']]],
   ['darken_5',['Darken',['../classEmpyrean_1_1Utils_1_1Colorist.html#a5625e1eb103cfc25cf53858c62e6d61e',1,'Empyrean::Utils::Colorist']]],

@@ -426,6 +426,7 @@ var classChara =
     [ "isAlawysVisible", "classChara.html#a1b17e7cb7754e995687e8842ff36e974", null ],
     [ "IsAliveInCurrentZone", "classChara.html#a1302b8a7d86d3b8f62d46272264a4eb6", null ],
     [ "IsAnimal", "classChara.html#a6f15bb98208a30b29ff8113f1a666610", null ],
+    [ "IsCat", "classChara.html#af713f39dcdf61f6fe59421c00a6dfc86", null ],
     [ "isChara", "classChara.html#a8cb247fc5bb52c33dc793b4ef367426d", null ],
     [ "isDead", "classChara.html#ade1b70855a0acaea042e54f55b5a9d0a", null ],
     [ "IsDeadOrSleeping", "classChara.html#a8d5d9a7d9eeaee31ed0efed30fedc4e6", null ],

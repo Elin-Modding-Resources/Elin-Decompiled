@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.210 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.211 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -376,7 +376,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Affinity_8cs_source.html#l00032">CurrentStage</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l01500">Trait.OnBarter()</a>, <a class="el" href="TCOrbitChara_8cs_source.html#l00059">TCOrbitChara.RefreshAll()</a>, and <a class="el" href="Chara_8cs_source.html#l06832">Chara.ShowDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l01500">Trait.OnBarter()</a>, <a class="el" href="TCOrbitChara_8cs_source.html#l00059">TCOrbitChara.RefreshAll()</a>, and <a class="el" href="Chara_8cs_source.html#l06867">Chara.ShowDialog()</a>.</p>
 
 </div>
 </div>
@@ -492,7 +492,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Affinity_8cs_source.html#l00032">CurrentStage</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00224">CoreDebug.marryAnytime</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06516">Chara.GetSubPassData()</a>, and <a class="el" href="TraitBed_8cs_source.html#l00021">TraitBed.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06551">Chara.GetSubPassData()</a>, and <a class="el" href="TraitBed_8cs_source.html#l00021">TraitBed.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -540,7 +540,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Affinity_8cs_source.html#l00024">CC</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, and <a class="el" href="Affinity_8cs_source.html#l00030">list</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00188">Mod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00192">Mod()</a>.</p>
 
 </div>
 </div>
@@ -650,7 +650,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Affinity_8cs_source.html#l00032">CurrentStage</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00286">CoreDebug.enable</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, and <a class="el" href="Chara_8cs_source.html#l07676">Chara.ModAffinity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerSleep_8cs_source.html#l00052">LayerSleep.Advance()</a>, and <a class="el" href="Chara_8cs_source.html#l07711">Chara.ModAffinity()</a>.</p>
 
 </div>
 </div>
@@ -678,32 +678,32 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Affinity_8cs_source.html#l00188">188</a> of file <a class="el" href="Affinity_8cs_source.html">Affinity.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  189</span>    {</div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> (a &lt; 0)</div>
-<div class="line"><span class="lineno">  191</span>        {</div>
-<div class="line"><span class="lineno">  192</span>            CC._affinity += a;</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span> a;</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
-<div class="line"><span class="lineno">  195</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; a; i++)</div>
-<div class="line"><span class="lineno">  197</span>        {</div>
-<div class="line"><span class="lineno">  198</span>            <a class="code hl_class" href="classAffinity.html">Affinity</a> affinity = <a class="code hl_function" href="classAffinity.html#a183a1ef42f8257aad70cf5ef95ca810a">Get</a>(<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>);</div>
-<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(100 + affinity.<a class="code hl_variable" href="classAffinity.html#ae704c8104beec2eb92052418ef31d5e7">difficulty</a>) &lt; 100)</div>
-<div class="line"><span class="lineno">  200</span>            {</div>
-<div class="line"><span class="lineno">  201</span>                <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_property" href="classChara.html#a110c5af79377c4017ce791e66d77a1aa">_affinity</a>++;</div>
-<div class="line"><span class="lineno">  202</span>                num++;</div>
-<div class="line"><span class="lineno">  203</span>            }</div>
-<div class="line"><span class="lineno">  204</span>        }</div>
-<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Affinity_8cs_source.html#l00192">192</a> of file <a class="el" href="Affinity_8cs_source.html">Affinity.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>    {</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (a &lt; 0)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            CC._affinity += a;</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; a; i++)</div>
+<div class="line"><span class="lineno">  201</span>        {</div>
+<div class="line"><span class="lineno">  202</span>            <a class="code hl_class" href="classAffinity.html">Affinity</a> affinity = <a class="code hl_function" href="classAffinity.html#a183a1ef42f8257aad70cf5ef95ca810a">Get</a>(<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>);</div>
+<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(100 + affinity.<a class="code hl_variable" href="classAffinity.html#ae704c8104beec2eb92052418ef31d5e7">difficulty</a>) &lt; 100)</div>
+<div class="line"><span class="lineno">  204</span>            {</div>
+<div class="line"><span class="lineno">  205</span>                <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_property" href="classChara.html#a110c5af79377c4017ce791e66d77a1aa">_affinity</a>++;</div>
+<div class="line"><span class="lineno">  206</span>                num++;</div>
+<div class="line"><span class="lineno">  207</span>            }</div>
+<div class="line"><span class="lineno">  208</span>        }</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
 <div class="ttc" id="aclassAffinity_html_a183a1ef42f8257aad70cf5ef95ca810a"><div class="ttname"><a href="classAffinity.html#a183a1ef42f8257aad70cf5ef95ca810a">Affinity.Get</a></div><div class="ttdeci">static Affinity Get(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Affinity_8cs_source.html#l00036">Affinity.cs:36</a></div></div>
 <div class="ttc" id="aclassAffinity_html_ae704c8104beec2eb92052418ef31d5e7"><div class="ttname"><a href="classAffinity.html#ae704c8104beec2eb92052418ef31d5e7">Affinity.difficulty</a></div><div class="ttdeci">int difficulty</div><div class="ttdef"><b>Definition:</b> <a href="Affinity_8cs_source.html#l00028">Affinity.cs:28</a></div></div>
 <div class="ttc" id="aclassEClass_html_a62c6ef288a7140793d6e5fb313fb72e4"><div class="ttname"><a href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">EClass.rnd</a></div><div class="ttdeci">static int rnd(long a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00058">EClass.cs:58</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Chara_8cs_source.html#l00301">Chara._affinity</a>, <a class="el" href="Affinity_8cs_source.html#l00024">CC</a>, <a class="el" href="Affinity_8cs_source.html#l00028">difficulty</a>, <a class="el" href="Affinity_8cs_source.html#l00036">Get()</a>, and <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07676">Chara.ModAffinity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07711">Chara.ModAffinity()</a>.</p>
 
 </div>
 </div>
@@ -737,59 +737,65 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  132</span>        <a class="code hl_class" href="classThing.html">Thing</a> result = <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a55d885cb83d08143f87b0406cbfef035">AddThing</a>(t.<a class="code hl_property" href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Thing</a>);</div>
 <div class="line"><span class="lineno">  133</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;build_resource&quot;</span>);</div>
 <div class="line"><span class="lineno">  134</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">bool</span> num2 = t.<a class="code hl_function" href="classCard.html#a810e687225ccdc1dc342506473c87334">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.gift);</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">bool</span> flag = t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>.IsChildOf(<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a02021f3aeb3887fcfd7a56028cd6d594">GetFavCat</a>());</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">bool</span> flag2 = t.id == <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#aa3b0ecc9125aaa9069f9073fd76698c5">GetFavFood</a>().id;</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a60a3cdc84afa9fb5640e6b35b14c509e">alwaysFavFood</a> &amp;&amp; t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitFood.html">TraitFood</a>)</div>
-<div class="line"><span class="lineno">  139</span>        {</div>
-<div class="line"><span class="lineno">  140</span>            flag2 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        num = Mathf.Clamp(t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>() / (flag2 ? 10 : (flag ? 20 : 200)), 0, 50) + (flag2 ? 20 : (flag ? 5 : 0));</div>
-<div class="line"><span class="lineno">  143</span>        num = num * (100 + (t.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(757) ? 50 : 0)) / (100 + CC.LV * 10);</div>
-<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">if</span> (num2)</div>
-<div class="line"><span class="lineno">  145</span>        {</div>
-<div class="line"><span class="lineno">  146</span>            num += 100;</div>
-<div class="line"><span class="lineno">  147</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;give_ring&quot;</span>, <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>);</div>
-<div class="line"><span class="lineno">  148</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;thanks3&quot;</span>);</div>
-<div class="line"><span class="lineno">  149</span>        }</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag2 || num &gt; 20)</div>
-<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">bool</span> flag = t.<a class="code hl_function" href="classCard.html#a810e687225ccdc1dc342506473c87334">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.gift);</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitFoodChuryu.html">TraitFoodChuryu</a> &amp;&amp; <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_property" href="classChara.html#af713f39dcdf61f6fe59421c00a6dfc86">IsCat</a>)</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordtype">bool</span> flag2 = t.<a class="code hl_property" href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">category</a>.IsChildOf(<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a02021f3aeb3887fcfd7a56028cd6d594">GetFavCat</a>());</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">bool</span> flag3 = t.id == <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#aa3b0ecc9125aaa9069f9073fd76698c5">GetFavFood</a>().id;</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a60a3cdc84afa9fb5640e6b35b14c509e">alwaysFavFood</a> &amp;&amp; t.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitFood.html">TraitFood</a>)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            flag3 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        num = Mathf.Clamp(t.<a class="code hl_function" href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">GetPrice</a>() / (flag3 ? 10 : (flag2 ? 20 : 200)), 0, 50) + (flag3 ? 20 : (flag2 ? 5 : 0));</div>
+<div class="line"><span class="lineno">  147</span>        num = num * (100 + (t.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(757) ? 50 : 0)) / (100 + CC.LV * 10);</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            num += 100;</div>
+<div class="line"><span class="lineno">  151</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;give_ring&quot;</span>, <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>);</div>
 <div class="line"><span class="lineno">  152</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;thanks3&quot;</span>);</div>
 <div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag || num &gt; 10)</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag3 || num &gt; 20)</div>
 <div class="line"><span class="lineno">  155</span>        {</div>
-<div class="line"><span class="lineno">  156</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;thanks&quot;</span>);</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;thanks3&quot;</span>);</div>
 <div class="line"><span class="lineno">  157</span>        }</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (flag2 || num &gt; 10)</div>
 <div class="line"><span class="lineno">  159</span>        {</div>
-<div class="line"><span class="lineno">  160</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;thanks2&quot;</span>);</div>
+<div class="line"><span class="lineno">  160</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;thanks&quot;</span>);</div>
 <div class="line"><span class="lineno">  161</span>        }</div>
-<div class="line"><span class="lineno">  162</span>        <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, num);</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  163</span>        {</div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(<span class="stringliteral">&quot;thanks2&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, num);</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
 <div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a></div><div class="ttdeci">CTAG</div><div class="ttdef"><b>Definition:</b> <a href="CTAG_8cs_source.html#l00001">CTAG.cs:2</a></div></div>
-<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05763">Card.cs:5763</a></div></div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05977">Card.cs:5977</a></div></div>
-<div class="ttc" id="aclassCard_html_a45caf5b5c2db91ea956fd445a85d5512"><div class="ttname"><a href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">Card.GetPrice</a></div><div class="ttdeci">virtual int GetPrice(CurrencyType currency=CurrencyType.Money, bool sell=false, PriceType priceType=PriceType.Default, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07081">Card.cs:7081</a></div></div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05767">Card.cs:5767</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05981">Card.cs:5981</a></div></div>
+<div class="ttc" id="aclassCard_html_a45caf5b5c2db91ea956fd445a85d5512"><div class="ttname"><a href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">Card.GetPrice</a></div><div class="ttdeci">virtual int GetPrice(CurrencyType currency=CurrencyType.Money, bool sell=false, PriceType priceType=PriceType.Default, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07085">Card.cs:7085</a></div></div>
 <div class="ttc" id="aclassCard_html_a55d885cb83d08143f87b0406cbfef035"><div class="ttname"><a href="classCard.html#a55d885cb83d08143f87b0406cbfef035">Card.AddThing</a></div><div class="ttdeci">Thing AddThing(string id, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03070">Card.cs:3070</a></div></div>
-<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06532">Card.cs:6532</a></div></div>
+<div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06536">Card.cs:6536</a></div></div>
 <div class="ttc" id="aclassCard_html_a810e687225ccdc1dc342506473c87334"><div class="ttname"><a href="classCard.html#a810e687225ccdc1dc342506473c87334">Card.HasTag</a></div><div class="ttdeci">bool HasTag(CTAG tag)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02569">Card.cs:2569</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00051">Card.cs:51</a></div></div>
 <div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02031">Card.cs:2032</a></div></div>
-<div class="ttc" id="aclassCard_html_ac0c460f3ed321ba77e31a8c5216b6a1c"><div class="ttname"><a href="classCard.html#ac0c460f3ed321ba77e31a8c5216b6a1c">Card.CheckJustCooked</a></div><div class="ttdeci">void CheckJustCooked()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06435">Card.cs:6435</a></div></div>
+<div class="ttc" id="aclassCard_html_ac0c460f3ed321ba77e31a8c5216b6a1c"><div class="ttname"><a href="classCard.html#ac0c460f3ed321ba77e31a8c5216b6a1c">Card.CheckJustCooked</a></div><div class="ttdeci">void CheckJustCooked()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06439">Card.cs:6439</a></div></div>
 <div class="ttc" id="aclassCard_html_ae1dbde98a747856add8519bb4e7cc688"><div class="ttname"><a href="classCard.html#ae1dbde98a747856add8519bb4e7cc688">Card.category</a></div><div class="ttdeci">SourceCategory.Row category</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02023">Card.cs:2023</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06629">Card.cs:6629</a></div></div>
-<div class="ttc" id="aclassChara_html_a02021f3aeb3887fcfd7a56028cd6d594"><div class="ttname"><a href="classChara.html#a02021f3aeb3887fcfd7a56028cd6d594">Chara.GetFavCat</a></div><div class="ttdeci">SourceCategory.Row GetFavCat()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07789">Chara.cs:7789</a></div></div>
-<div class="ttc" id="aclassChara_html_a354698fe941b9ea8554d778d0e14e3be"><div class="ttname"><a href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">Chara.ModAffinity</a></div><div class="ttdeci">void ModAffinity(Chara c, int a, bool show=true, bool showOnlyEmo=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07676">Chara.cs:7676</a></div></div>
-<div class="ttc" id="aclassChara_html_aa3b0ecc9125aaa9069f9073fd76698c5"><div class="ttname"><a href="classChara.html#aa3b0ecc9125aaa9069f9073fd76698c5">Chara.GetFavFood</a></div><div class="ttdeci">SourceThing.Row GetFavFood()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07769">Chara.cs:7769</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06633">Card.cs:6633</a></div></div>
+<div class="ttc" id="aclassChara_html_a02021f3aeb3887fcfd7a56028cd6d594"><div class="ttname"><a href="classChara.html#a02021f3aeb3887fcfd7a56028cd6d594">Chara.GetFavCat</a></div><div class="ttdeci">SourceCategory.Row GetFavCat()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07824">Chara.cs:7824</a></div></div>
+<div class="ttc" id="aclassChara_html_a354698fe941b9ea8554d778d0e14e3be"><div class="ttname"><a href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">Chara.ModAffinity</a></div><div class="ttdeci">void ModAffinity(Chara c, int a, bool show=true, bool showOnlyEmo=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07711">Chara.cs:7711</a></div></div>
+<div class="ttc" id="aclassChara_html_aa3b0ecc9125aaa9069f9073fd76698c5"><div class="ttname"><a href="classChara.html#aa3b0ecc9125aaa9069f9073fd76698c5">Chara.GetFavFood</a></div><div class="ttdeci">SourceThing.Row GetFavFood()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07804">Chara.cs:7804</a></div></div>
+<div class="ttc" id="aclassChara_html_af713f39dcdf61f6fe59421c00a6dfc86"><div class="ttname"><a href="classChara.html#af713f39dcdf61f6fe59421c00a6dfc86">Chara.IsCat</a></div><div class="ttdeci">bool IsCat</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00984">Chara.cs:985</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a60a3cdc84afa9fb5640e6b35b14c509e"><div class="ttname"><a href="classCoreDebug.html#a60a3cdc84afa9fb5640e6b35b14c509e">CoreDebug.alwaysFavFood</a></div><div class="ttdeci">bool alwaysFavFood</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00228">CoreDebug.cs:228</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
+<div class="ttc" id="aclassTraitFoodChuryu_html"><div class="ttname"><a href="classTraitFoodChuryu.html">TraitFoodChuryu</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFoodChuryu_8cs_source.html#l00001">TraitFoodChuryu.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitFood_html"><div class="ttname"><a href="classTraitFood.html">TraitFood</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFood_8cs_source.html#l00001">TraitFood.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l03070">Card.AddThing()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00228">CoreDebug.alwaysFavFood</a>, <a class="el" href="Card_8cs_source.html#l02023">Card.category</a>, <a class="el" href="Affinity_8cs_source.html#l00024">CC</a>, <a class="el" href="Card_8cs_source.html#l06435">Card.CheckJustCooked()</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Chara_8cs_source.html#l07789">Chara.GetFavCat()</a>, <a class="el" href="Chara_8cs_source.html#l07769">Chara.GetFavFood()</a>, <a class="el" href="Card_8cs_source.html#l07081">Card.GetPrice()</a>, <a class="el" href="Card_8cs_source.html#l05763">Card.HasElement()</a>, <a class="el" href="Card_8cs_source.html#l02569">Card.HasTag()</a>, <a class="el" href="Chara_8cs_source.html#l07676">Chara.ModAffinity()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05977">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l06629">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l06532">Card.Talk()</a>, <a class="el" href="Card_8cs_source.html#l02032">Card.Thing</a>, and <a class="el" href="Card_8cs_source.html#l00051">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03070">Card.AddThing()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00228">CoreDebug.alwaysFavFood</a>, <a class="el" href="Card_8cs_source.html#l02023">Card.category</a>, <a class="el" href="Affinity_8cs_source.html#l00024">CC</a>, <a class="el" href="Card_8cs_source.html#l06439">Card.CheckJustCooked()</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Chara_8cs_source.html#l07824">Chara.GetFavCat()</a>, <a class="el" href="Chara_8cs_source.html#l07804">Chara.GetFavFood()</a>, <a class="el" href="Card_8cs_source.html#l07085">Card.GetPrice()</a>, <a class="el" href="Card_8cs_source.html#l05767">Card.HasElement()</a>, <a class="el" href="Card_8cs_source.html#l02569">Card.HasTag()</a>, <a class="el" href="Chara_8cs_source.html#l00985">Chara.IsCat</a>, <a class="el" href="Chara_8cs_source.html#l07711">Chara.ModAffinity()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l05981">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l06633">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l06536">Card.Talk()</a>, <a class="el" href="Card_8cs_source.html#l02032">Card.Thing</a>, and <a class="el" href="Card_8cs_source.html#l00051">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07970">Chara.GiveGift()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08005">Chara.GiveGift()</a>.</p>
 
 </div>
 </div>
@@ -816,34 +822,34 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Affinity_8cs_source.html#l00166">166</a> of file <a class="el" href="Affinity_8cs_source.html">Affinity.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>    {</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(60 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> * 2 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(291) * 3) &gt; 50 + <a class="code hl_variable" href="classAffinity.html#ae704c8104beec2eb92052418ef31d5e7">difficulty</a> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> + 1);</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a5b861ba87b179be23ccd872c58f033d5">unlimitedInterest</a>)</div>
-<div class="line"><span class="lineno">  170</span>        {</div>
-<div class="line"><span class="lineno">  171</span>            CC.interest -= 10 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(10);</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a> &amp;&amp; <a class="code hl_property" href="classAffinity.html#a300c0a95fb0cbc9508498686ede22e62">CurrentStage</a> &gt;= <a class="code hl_enumeration" href="classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58">Stage</a>.Love)</div>
+<p class="definition">Definition at line <a class="el" href="Affinity_8cs_source.html#l00170">170</a> of file <a class="el" href="Affinity_8cs_source.html">Affinity.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>    {</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(60 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> * 2 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(291) * 3) &gt; 50 + <a class="code hl_variable" href="classAffinity.html#ae704c8104beec2eb92052418ef31d5e7">difficulty</a> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a> + 1);</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a5b861ba87b179be23ccd872c58f033d5">unlimitedInterest</a>)</div>
 <div class="line"><span class="lineno">  174</span>        {</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4) == 0)</div>
-<div class="line"><span class="lineno">  176</span>            {</div>
-<div class="line"><span class="lineno">  177</span>                <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, flag ? 1 : 0, show: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  178</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(291, 5);</div>
-<div class="line"><span class="lineno">  179</span>            }</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  182</span>        {</div>
-<div class="line"><span class="lineno">  183</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, flag ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4) + 1) : (-<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4) - 1), show: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  184</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(291, 20);</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="line"><span class="lineno">  175</span>            CC.interest -= 10 + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(10);</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a> &amp;&amp; <a class="code hl_property" href="classAffinity.html#a300c0a95fb0cbc9508498686ede22e62">CurrentStage</a> &gt;= <a class="code hl_enumeration" href="classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58">Stage</a>.Love)</div>
+<div class="line"><span class="lineno">  178</span>        {</div>
+<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4) == 0)</div>
+<div class="line"><span class="lineno">  180</span>            {</div>
+<div class="line"><span class="lineno">  181</span>                <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, flag ? 1 : 0, show: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  182</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(291, 5);</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            <a class="code hl_variable" href="classAffinity.html#a655b7c5970c6f5d31f55211d68cd0aba">CC</a>.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, flag ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4) + 1) : (-<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(4) - 1), show: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  188</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">ModExp</a>(291, 20);</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
 <div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02245">Card.cs:2246</a></div></div>
 <div class="ttc" id="aclassCard_html_a5e0535e093f8257427b9510e045b48fc"><div class="ttname"><a href="classCard.html#a5e0535e093f8257427b9510e045b48fc">Card.CHA</a></div><div class="ttdeci">int CHA</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02321">Card.cs:2321</a></div></div>
 <div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02545">Card.cs:2545</a></div></div>
 <div class="ttc" id="aclassCard_html_adac92cafa4532fae8b1c5fd0d771c6fb"><div class="ttname"><a href="classCard.html#adac92cafa4532fae8b1c5fd0d771c6fb">Card.ModExp</a></div><div class="ttdeci">void ModExp(string alias, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02622">Card.cs:2622</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a5b861ba87b179be23ccd872c58f033d5"><div class="ttname"><a href="classCoreDebug.html#a5b861ba87b179be23ccd872c58f033d5">CoreDebug.unlimitedInterest</a></div><div class="ttdeci">bool unlimitedInterest</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00220">CoreDebug.cs:220</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Affinity_8cs_source.html#l00024">CC</a>, <a class="el" href="Card_8cs_source.html#l02321">Card.CHA</a>, <a class="el" href="Affinity_8cs_source.html#l00032">CurrentStage</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Affinity_8cs_source.html#l00028">difficulty</a>, <a class="el" href="Card_8cs_source.html#l02545">Card.Evalue()</a>, <a class="el" href="Card_8cs_source.html#l02246">Card.IsPCFactionOrMinion</a>, <a class="el" href="Chara_8cs_source.html#l07676">Chara.ModAffinity()</a>, <a class="el" href="Card_8cs_source.html#l02622">Card.ModExp()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00220">CoreDebug.unlimitedInterest</a>.</p>
+<p class="reference">References <a class="el" href="Affinity_8cs_source.html#l00024">CC</a>, <a class="el" href="Card_8cs_source.html#l02321">Card.CHA</a>, <a class="el" href="Affinity_8cs_source.html#l00032">CurrentStage</a>, <a class="el" href="EClass_8cs_source.html#l00048">EClass.debug</a>, <a class="el" href="Affinity_8cs_source.html#l00028">difficulty</a>, <a class="el" href="Card_8cs_source.html#l02545">Card.Evalue()</a>, <a class="el" href="Card_8cs_source.html#l02246">Card.IsPCFactionOrMinion</a>, <a class="el" href="Chara_8cs_source.html#l07711">Chara.ModAffinity()</a>, <a class="el" href="Card_8cs_source.html#l02622">Card.ModExp()</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="EClass_8cs_source.html#l00058">EClass.rnd()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00220">CoreDebug.unlimitedInterest</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>.</p>
 
@@ -872,7 +878,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Affinity_8cs_source.html#l00024">24</a> of file <a class="el" href="Affinity_8cs_source.html">Affinity.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00036">Get()</a>, <a class="el" href="Affinity_8cs_source.html#l00107">GetIcon()</a>, <a class="el" href="Affinity_8cs_source.html#l00188">Mod()</a>, <a class="el" href="Affinity_8cs_source.html#l00129">OnGift()</a>, and <a class="el" href="Affinity_8cs_source.html#l00166">OnTalkRumor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00036">Get()</a>, <a class="el" href="Affinity_8cs_source.html#l00107">GetIcon()</a>, <a class="el" href="Affinity_8cs_source.html#l00192">Mod()</a>, <a class="el" href="Affinity_8cs_source.html#l00129">OnGift()</a>, and <a class="el" href="Affinity_8cs_source.html#l00170">OnTalkRumor()</a>.</p>
 
 </div>
 </div>
@@ -890,7 +896,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Affinity_8cs_source.html#l00028">28</a> of file <a class="el" href="Affinity_8cs_source.html">Affinity.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00188">Mod()</a>, and <a class="el" href="Affinity_8cs_source.html#l00166">OnTalkRumor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00192">Mod()</a>, and <a class="el" href="Affinity_8cs_source.html#l00170">OnTalkRumor()</a>.</p>
 
 </div>
 </div>
@@ -935,7 +941,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Affinity_8cs_source.html#l00032">32</a> of file <a class="el" href="Affinity_8cs_source.html">Affinity.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00049">CanForceTradeEquip()</a>, <a class="el" href="Affinity_8cs_source.html#l00063">CanGiveCard()</a>, <a class="el" href="Affinity_8cs_source.html#l00054">CanInvite()</a>, <a class="el" href="Affinity_8cs_source.html#l00068">CanMarry()</a>, <a class="el" href="Affinity_8cs_source.html#l00077">CanSleepBeside()</a>, <a class="el" href="TraitToolBrush_8cs_source.html#l00005">TraitToolBrush.GetHeldEmo()</a>, <a class="el" href="Affinity_8cs_source.html#l00107">GetIcon()</a>, <a class="el" href="Affinity_8cs_source.html#l00086">GetLunchChance()</a>, <a class="el" href="Affinity_8cs_source.html#l00166">OnTalkRumor()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00051">AI_Fuck.Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Affinity_8cs_source.html#l00049">CanForceTradeEquip()</a>, <a class="el" href="Affinity_8cs_source.html#l00063">CanGiveCard()</a>, <a class="el" href="Affinity_8cs_source.html#l00054">CanInvite()</a>, <a class="el" href="Affinity_8cs_source.html#l00068">CanMarry()</a>, <a class="el" href="Affinity_8cs_source.html#l00077">CanSleepBeside()</a>, <a class="el" href="TraitToolBrush_8cs_source.html#l00005">TraitToolBrush.GetHeldEmo()</a>, <a class="el" href="Affinity_8cs_source.html#l00107">GetIcon()</a>, <a class="el" href="Affinity_8cs_source.html#l00086">GetLunchChance()</a>, <a class="el" href="Affinity_8cs_source.html#l00170">OnTalkRumor()</a>, and <a class="el" href="AI__Fuck_8cs_source.html#l00051">AI_Fuck.Run()</a>.</p>
 
 </div>
 </div>

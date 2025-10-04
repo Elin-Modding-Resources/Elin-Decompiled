@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.210 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.211 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -217,7 +217,7 @@ $(document).ready(function(){initNavTree('Effect_8cs_source.html',''); initResiz
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        {</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            sr.sprite = sprite;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEffect.html#ac17c1de7ad59a2518b47c3c88e00e6cd">setColor</a>)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEffect.html#ac17c1de7ad59a2518b47c3c88e00e6cd">setColor</a> &amp;&amp; from.<a class="code hl_property" href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">IsValid</a>)</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordtype">float</span> num = 0.07f * (float)(<span class="keywordtype">int</span>)from.cell.light + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>.<a class="code hl_variable" href="classBaseTileMap.html#a6ef597efcc8c6043d68acb3d696685ac">_baseBrightness</a>;</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            num += ((from.cell.HasRoof || from.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a8eb6bdd2ac58143f604b8cf06edd784f">isShadowed</a>) ? (-0.2f) : 0f);</div>
@@ -499,6 +499,7 @@ $(document).ready(function(){initNavTree('Effect_8cs_source.html',''); initResiz
 <div class="ttc" id="aclassPoint_html_a21e74e0b4db1b6edc3e953b818510dc7"><div class="ttname"><a href="classPoint.html#a21e74e0b4db1b6edc3e953b818510dc7">Point.Position</a></div><div class="ttdeci">ref Vector3 Position(int height)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00536">Point.cs:536</a></div></div>
 <div class="ttc" id="aclassPoint_html_a3548549d3df5229465d73290f51446f5"><div class="ttname"><a href="classPoint.html#a3548549d3df5229465d73290f51446f5">Point.Copy</a></div><div class="ttdeci">Point Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00479">Point.cs:479</a></div></div>
 <div class="ttc" id="aclassPoint_html_a670abf4ecf487c58c1a7e7cf7f86272f"><div class="ttname"><a href="classPoint.html#a670abf4ecf487c58c1a7e7cf7f86272f">Point.GetRotation</a></div><div class="ttdeci">Quaternion GetRotation(Point to)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00590">Point.cs:590</a></div></div>
+<div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00087">Point.cs:88</a></div></div>
 <div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00973">Point.cs:973</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 <div class="ttc" id="aclassPoolManager_html"><div class="ttname"><a href="classPoolManager.html">PoolManager</a></div><div class="ttdef"><b>Definition:</b> <a href="PoolManager_8cs_source.html#l00004">PoolManager.cs:5</a></div></div>
