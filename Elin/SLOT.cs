@@ -1,10 +1,10 @@
 public class SLOT
 {
-	public const int tool = 40;
+	public const int lightsource = 45;
 
 	public const int torso = 32;
 
-	public const int lightsource = 45;
+	public const int tool = 40;
 
 	public const int back = 33;
 
@@ -34,7 +34,7 @@ public class SLOT
 
 	public static readonly int[] IDS = new int[16]
 	{
-		40, 32, 45, 33, 38, 34, 35, 37, 36, 31,
+		45, 32, 40, 33, 38, 34, 35, 37, 36, 31,
 		39, 44, 42, 41, 30, 43
 	};
 }

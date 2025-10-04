@@ -981,6 +981,18 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public bool IsCat
+	{
+		get
+		{
+			if (!(race.id == "cat") && !(race.id == "catsister"))
+			{
+				return race.id == "catgod";
+			}
+			return true;
+		}
+	}
+
 	public int DestDist => tactics.DestDist;
 
 	public bool HasNoGoal => ai.IsNoGoal;
@@ -4610,6 +4622,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
+		bool flag = true;
 		switch (id)
 		{
 		case "kettle":
@@ -4745,10 +4758,25 @@ public class Chara : Card, IPathfindWalker
 				EQ_ID("EtherDagger");
 			}
 			break;
+		case "mech_angel":
+			if (onCreate)
+			{
+				Thing thing = ThingGen.Create("pole_holy");
+				thing.SetReplica(on: true);
+				thing.rarity = Rarity.Normal;
+				thing.elements.SetTo(60, -15);
+				thing.elements.SetTo(418, -100);
+				thing.elements.SetTo(93, 50);
+				AddThing(thing);
+				body.Equip(thing);
+				flag = false;
+			}
+			break;
 		}
 		if (onCreate || !TryEquipRanged())
 		{
-			if (id == "mech_scarab")
+			string text = id;
+			if (text == "trooper" || text == "mech_scarab")
 			{
 				AddThing("gun_laser");
 			}
@@ -4780,19 +4808,22 @@ public class Chara : Card, IPathfindWalker
 		}
 		for (int k = 0; k < ((!(race.id == "mutant")) ? 1 : (2 + base.LV / 30)); k++)
 		{
-			if (source.ContainsTag("boxer"))
+			if (flag)
 			{
-				EQ_CAT("martial");
-			}
-			else if (!job.weapon.IsEmpty())
-			{
-				if (race.id == "mutant" || (body.slotMainHand != null && body.slotMainHand.thing == null))
+				if (source.ContainsTag("boxer"))
 				{
-					EQ_CAT(job.weapon.RandomItem());
+					EQ_CAT("martial");
 				}
-				if (race.id == "mutant" || (Evalue(131) > 0 && EClass.rnd(2) == 0))
+				else if (!job.weapon.IsEmpty())
 				{
-					EQ_CAT(job.weapon.RandomItem());
+					if (race.id == "mutant" || (body.slotMainHand != null && body.slotMainHand.thing == null))
+					{
+						EQ_CAT(job.weapon.RandomItem());
+					}
+					if (race.id == "mutant" || (Evalue(131) > 0 && EClass.rnd(2) == 0))
+					{
+						EQ_CAT(job.weapon.RandomItem());
+					}
 				}
 			}
 			EQ_CAT("torso");
@@ -5141,7 +5172,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (hunger.GetPhase() >= 4)
 		{
-			DamageHP(9999, AttackSource.Hunger);
+			DamageHP(9999L, AttackSource.Hunger);
 		}
 		hunger.Mod(30);
 	}
@@ -5528,8 +5559,12 @@ public class Chara : Card, IPathfindWalker
 		{
 			bool num2 = EClass._map.FindChara((id == "fairy_raina") ? "fairy_poina" : "fairy_raina") == null;
 			QuestNasu questNasu = EClass.game.quests.Get<QuestNasu>();
-			if (num2 && questNasu != null && questNasu.phase == 1)
+			if (num2 && questNasu != null && questNasu.phase <= 1)
 			{
+				if (questNasu.phase == 0)
+				{
+					questNasu.NextPhase();
+				}
 				num = 5;
 				flag = (flag2 = true);
 				EClass.Sound.StopBGM(3f);
@@ -6101,7 +6136,7 @@ public class Chara : Card, IPathfindWalker
 				ele = 922;
 			}
 			Say("reflect_thorne", c, this);
-			DamageHP(10, ele, Power, AttackSource.Condition);
+			DamageHP(10L, ele, Power, AttackSource.Condition);
 		}
 	}
 

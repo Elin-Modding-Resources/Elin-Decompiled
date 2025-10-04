@@ -1473,15 +1473,15 @@ public class ActEffect : EClass
 			{
 				break;
 			}
-			int hex2 = 0;
+			int num10 = 0;
 			foreach (Condition condition4 in TC.conditions)
 			{
 				if (condition4.Type == ConditionType.Debuff)
 				{
-					hex2++;
+					num10++;
 				}
 			}
-			if (hex2 == 0)
+			if (num10 == 0)
 			{
 				CC.SayNothingHappans();
 				break;
@@ -1491,23 +1491,38 @@ public class ActEffect : EClass
 			TC.pos.PlaySound("atk_eleSound");
 			TC.conditions.ForeachReverse(delegate(Condition c)
 			{
-				if (c.Type == ConditionType.Debuff)
+				if (c.Type == ConditionType.Debuff && EClass.rnd(3) == 0)
 				{
 					c.Kill();
 				}
 			});
 			TC.Say("abShutterHex", TC);
-			TC.pos.ForeachNeighbor(delegate(Point p)
+			Point center = CC.pos.Copy();
+			List<Chara> list6 = TC.pos.ListCharasInRadius(TC, 4, (Chara c) => !c.IsFriendOrAbove(CC));
+			for (int l = 0; l < num10; l++)
 			{
-				foreach (Chara item4 in p.ListCharas())
+				TweenUtil.Delay((float)l * 0.1f, delegate
 				{
-					if (!item4.IsFriendOrAbove(CC))
+					center.PlaySound("shutterhex");
+				});
+				foreach (Chara item4 in list6)
+				{
+					if (item4.ExistsOnMap)
 					{
-						int num10 = Dice.Create("SpShutterHex", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
-						item4.DamageHP(num10 * hex2, 919, power, AttackSource.None, CC);
+						Effect effect = Effect.Get("spell_moonspear");
+						TrailRenderer componentInChildren = effect.GetComponentInChildren<TrailRenderer>();
+						Color startColor = (componentInChildren.endColor = EClass.Colors.elementColors["eleHoly"]);
+						componentInChildren.startColor = startColor;
+						Point pos = item4.pos.Copy();
+						TweenUtil.Delay((float)l * 0.1f, delegate
+						{
+							effect.Play(center, 0f, pos);
+						});
+						int num11 = Dice.Create("SpShutterHex", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
+						item4.DamageHP(num11, 919, power, AttackSource.None, CC, showEffect: false);
 					}
 				}
-			});
+			}
 			break;
 		}
 		case EffectId.Draw:
@@ -1633,7 +1648,7 @@ public class ActEffect : EClass
 			{
 				break;
 			}
-			List<Thing> list8 = TC.things.List(delegate(Thing t)
+			List<Thing> list9 = TC.things.List(delegate(Thing t)
 			{
 				if (!t.isEquipped || t.blessedState == BlessedState.Doomed || t.IsToolbelt)
 				{
@@ -1641,12 +1656,12 @@ public class ActEffect : EClass
 				}
 				return (t.blessedState < BlessedState.Blessed || EClass.rnd(10) == 0) ? true : false;
 			});
-			if (list8.Count == 0)
+			if (list9.Count == 0)
 			{
 				CC.SayNothingHappans();
 				break;
 			}
-			Thing thing6 = list8.RandomItem();
+			Thing thing6 = list9.RandomItem();
 			TC.Say("curse_hit", TC, thing6);
 			thing6.SetBlessedState((thing6.blessedState == BlessedState.Cursed) ? BlessedState.Doomed : BlessedState.Cursed);
 			LayerInventory.SetDirty(thing6);
@@ -1668,26 +1683,26 @@ public class ActEffect : EClass
 			List<Thing> list = new List<Thing>();
 			TC.things.Foreach(delegate(Thing t)
 			{
-				int num11 = 0;
+				int num13 = 0;
 				if ((t.isEquipped || t.IsRangedWeapon || blessed) && t.blessedState < BlessedState.Normal)
 				{
 					if (t.blessedState == BlessedState.Cursed)
 					{
-						num11 = EClass.rnd(200);
+						num13 = EClass.rnd(200);
 					}
 					if (t.blessedState == BlessedState.Doomed)
 					{
-						num11 = EClass.rnd(1000);
+						num13 = EClass.rnd(1000);
 					}
 					if (blessed)
 					{
-						num11 /= 2;
+						num13 /= 2;
 					}
 					if (id == EffectId.UncurseEQGreater)
 					{
-						num11 /= 10;
+						num13 /= 10;
 					}
-					if (power >= num11)
+					if (power >= num13)
 					{
 						TC.Say("uncurseEQ_success", t);
 						t.SetBlessedState(BlessedState.Normal);
@@ -1755,12 +1770,12 @@ public class ActEffect : EClass
 		{
 			EClass.game.religions.Trickery.Talk("ability");
 			bool hex = CC.IsHostile(TC);
-			List<SourceStat.Row> list7 = EClass.sources.stats.rows.Where((SourceStat.Row con) => con.tag.Contains("random") && con.group == (hex ? "Debuff" : "Buff")).ToList();
+			List<SourceStat.Row> list8 = EClass.sources.stats.rows.Where((SourceStat.Row con) => con.tag.Contains("random") && con.group == (hex ? "Debuff" : "Buff")).ToList();
 			int power2 = power;
-			for (int l = 0; l < 4 + EClass.rnd(2); l++)
+			for (int m = 0; m < 4 + EClass.rnd(2); m++)
 			{
-				SourceStat.Row row2 = list7.RandomItem();
-				list7.Remove(row2);
+				SourceStat.Row row2 = list8.RandomItem();
+				list8.Remove(row2);
 				Proc(hex ? EffectId.DebuffKizuami : EffectId.Buff, CC, TC, power2, new ActRef
 				{
 					n1 = row2.alias
@@ -2199,8 +2214,8 @@ public class ActEffect : EClass
 			if (TC.HasElement(1211))
 			{
 				TC.Say("drinkSaltWater_snail", TC);
-				int dmg = ((TC.hp > 10) ? (TC.hp - EClass.rnd(10)) : 10000);
-				TC.DamageHP(dmg, AttackSource.None, CC);
+				int num12 = ((TC.hp > 10) ? (TC.hp - EClass.rnd(10)) : 10000);
+				TC.DamageHP(num12, AttackSource.None, CC);
 			}
 			else if (TC.IsPC)
 			{
@@ -2366,10 +2381,10 @@ public class ActEffect : EClass
 			{
 				power /= 4;
 			}
-			List<Thing> list6 = TC.things.List((Thing t) => (t.Num <= 1 && t.IsEquipmentOrRanged && !t.IsToolbelt && !t.IsLightsource && t.isEquipped) ? true : false);
-			if (list6.Count != 0)
+			List<Thing> list7 = TC.things.List((Thing t) => (t.Num <= 1 && t.IsEquipmentOrRanged && !t.IsToolbelt && !t.IsLightsource && t.isEquipped) ? true : false);
+			if (list7.Count != 0)
 			{
-				Thing thing5 = list6.RandomItem();
+				Thing thing5 = list7.RandomItem();
 				TC.Say("acid_hit", TC);
 				if (thing5.isAcidproof)
 				{

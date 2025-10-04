@@ -122,7 +122,7 @@ public class SKILL
 
 	public const int INT = 80;
 
-	public const int LUC = 78;
+	public const int SPD = 79;
 
 	public const int CHA = 77;
 
@@ -132,7 +132,7 @@ public class SKILL
 
 	public const int gathering = 250;
 
-	public const int SPD = 79;
+	public const int LUC = 78;
 
 	public const int blacksmith = 256;
 
@@ -274,7 +274,7 @@ public class SKILL
 		108, 71, 70, 68, 67, 66, 65, 72, 64, 61,
 		60, 57, 56, 55, 51, 62, 73, 74, 75, 107,
 		106, 105, 104, 103, 101, 100, 93, 92, 91, 90,
-		80, 78, 77, 76, 245, 250, 79, 256, 916, 917,
+		80, 79, 77, 76, 245, 250, 78, 256, 916, 917,
 		918, 920, 921, 922, 923, 924, 925, 926, 950, 951,
 		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 965, 970, 971, 972, 255, 955, 914,

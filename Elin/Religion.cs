@@ -491,7 +491,7 @@ public class Religion : EClass
 		if (c.HasCondition<ConWrath>())
 		{
 			recentWrath = this;
-			c.DamageHP(999999, AttackSource.Wrath);
+			c.DamageHP(999999L, AttackSource.Wrath);
 			recentWrath = null;
 			return;
 		}
@@ -533,7 +533,7 @@ public class Religion : EClass
 		if (c.HasCondition<ConWrath>())
 		{
 			recentWrath = this;
-			c.DamageHP(999999, AttackSource.Wrath);
+			c.DamageHP(999999L, AttackSource.Wrath);
 			recentWrath = null;
 			return;
 		}

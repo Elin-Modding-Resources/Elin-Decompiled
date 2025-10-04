@@ -837,10 +837,10 @@ public class GoalCombat : Goal
 				{
 					foreach (Chara member2 in EClass.pc.party.members)
 					{
-						float num3 = 100f - (float)(member2.mana.value * 100) / MathF.Max(1f, member2.mana.max);
-						if (num3 > (float)num)
+						float num4 = 100f - (float)(member2.mana.value * 100) / MathF.Max(1f, member2.mana.max);
+						if (num4 > (float)num)
 						{
-							num = (int)num3;
+							num = (int)num4;
 						}
 					}
 				}
@@ -856,6 +856,19 @@ public class GoalCombat : Goal
 				}
 				num = 100 - owner.hp * 100 / Mathf.Max(1, owner.MaxHP);
 				break;
+			case 9200:
+			{
+				int num3 = 0;
+				foreach (Condition condition in tc.conditions)
+				{
+					if (condition.Type == ConditionType.Debuff)
+					{
+						num3++;
+					}
+				}
+				num = num3 * 15;
+				break;
+			}
 			}
 			if (s.target == "Neighbor")
 			{
@@ -909,36 +922,36 @@ public class GoalCombat : Goal
 				{
 					return 0;
 				}
-				float num4 = (float)c.hp / (float)c.MaxHP;
-				if (num4 > (isHOT ? 0.85f : 0.75f))
+				float num5 = (float)c.hp / (float)c.MaxHP;
+				if (num5 > (isHOT ? 0.85f : 0.75f))
 				{
 					return 0;
 				}
-				int num5 = tactics.P_Heal - (int)((float)tactics.P_Heal * num4) + (isHOT ? 50 : 25);
-				foreach (Condition condition in c.conditions)
+				int num6 = tactics.P_Heal - (int)((float)tactics.P_Heal * num5) + (isHOT ? 50 : 25);
+				foreach (Condition condition2 in c.conditions)
 				{
-					if (condition is ConFear)
+					if (condition2 is ConFear)
 					{
-						num5 += 10;
+						num6 += 10;
 					}
-					else if (condition is ConPoison)
+					else if (condition2 is ConPoison)
 					{
-						num5 += 2;
+						num6 += 2;
 					}
-					else if (condition is ConConfuse)
+					else if (condition2 is ConConfuse)
 					{
-						num5 += 4;
+						num6 += 4;
 					}
-					else if (condition is ConDim)
+					else if (condition2 is ConDim)
 					{
-						num5 += 6;
+						num6 += 6;
 					}
-					else if (condition is ConBleed)
+					else if (condition2 is ConBleed)
 					{
-						num5 += 8;
+						num6 += 8;
 					}
 				}
-				return num5;
+				return num6;
 			}
 		}
 		abilities.Sort((ItemAbility a, ItemAbility b) => b.priority - a.priority);
@@ -1024,8 +1037,8 @@ public class GoalCombat : Goal
 			{
 				if (chara2 != owner)
 				{
-					int num8 = owner.Dist(chara2);
-					if (num8 > sightRadius || !owner.CanSeeLos(chara2, num8))
+					int num9 = owner.Dist(chara2);
+					if (num9 > sightRadius || !owner.CanSeeLos(chara2, num9))
 					{
 						continue;
 					}
@@ -1041,11 +1054,11 @@ public class GoalCombat : Goal
 				return func(owner);
 			}
 			BuildCharaList();
-			int num9 = 0;
+			int num10 = 0;
 			foreach (Chara chara3 in charas)
 			{
-				int num10 = func(chara3);
-				if (num10 > 0)
+				int num11 = func(chara3);
+				if (num11 > 0)
 				{
 					if (isFriendlyAbility)
 					{
@@ -1062,21 +1075,21 @@ public class GoalCombat : Goal
 						}
 						if (chara3 != owner)
 						{
-							num10 += tactics.P_Party;
+							num11 += tactics.P_Party;
 						}
 					}
 					else if (!owner.IsHostile(chara3))
 					{
 						continue;
 					}
-					if (num10 >= num9)
+					if (num11 >= num10)
 					{
 						a.tg = chara3;
-						num9 = num10;
+						num10 = num11;
 					}
 				}
 			}
-			return num9;
+			return num10;
 		}
 		int GetAttackMod(Act a)
 		{
@@ -1084,34 +1097,34 @@ public class GoalCombat : Goal
 			{
 				return 0;
 			}
-			int num6 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
-			int num7 = -15 * tc.ResistLvFrom(num6);
+			int num7 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
+			int num8 = -15 * tc.ResistLvFrom(num7);
 			if (a is ActSword)
 			{
-				num7 = 0;
+				num8 = 0;
 			}
-			switch (num6)
+			switch (num7)
 			{
 			case 910:
 				if (tc.isWet)
 				{
-					num7 -= 30;
+					num8 -= 30;
 				}
 				break;
 			case 911:
 				if (tc.HasCondition<ConBurning>())
 				{
-					num7 -= 30;
+					num8 -= 30;
 				}
 				break;
 			case 912:
 				if (tc.isWet)
 				{
-					num7 += 30;
+					num8 += 30;
 				}
 				break;
 			}
-			return num7;
+			return num8;
 		}
 		void GetNumEnemy(int radius)
 		{

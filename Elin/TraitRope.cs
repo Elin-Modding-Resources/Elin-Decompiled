@@ -5,7 +5,7 @@ public class TraitRope : TraitItem
 		Dialog.YesNo("dialog_rope", delegate
 		{
 			EClass.player.EndTurn();
-			EClass.pc.DamageHP(99999, AttackSource.Hang);
+			EClass.pc.DamageHP(99999L, AttackSource.Hang);
 		});
 		return false;
 	}

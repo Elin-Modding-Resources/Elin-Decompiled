@@ -132,26 +132,30 @@ public class Affinity : EClass
 		Thing result = CC.AddThing(t.Thing);
 		EClass.pc.PlaySound("build_resource");
 		int num = 0;
-		bool num2 = t.HasTag(CTAG.gift);
-		bool flag = t.category.IsChildOf(CC.GetFavCat());
-		bool flag2 = t.id == CC.GetFavFood().id;
+		bool flag = t.HasTag(CTAG.gift);
+		if (t.trait is TraitFoodChuryu && CC.IsCat)
+		{
+			flag = true;
+		}
+		bool flag2 = t.category.IsChildOf(CC.GetFavCat());
+		bool flag3 = t.id == CC.GetFavFood().id;
 		if (EClass.debug.alwaysFavFood && t.trait is TraitFood)
 		{
-			flag2 = true;
+			flag3 = true;
 		}
-		num = Mathf.Clamp(t.GetPrice() / (flag2 ? 10 : (flag ? 20 : 200)), 0, 50) + (flag2 ? 20 : (flag ? 5 : 0));
+		num = Mathf.Clamp(t.GetPrice() / (flag3 ? 10 : (flag2 ? 20 : 200)), 0, 50) + (flag3 ? 20 : (flag2 ? 5 : 0));
 		num = num * (100 + (t.HasElement(757) ? 50 : 0)) / (100 + CC.LV * 10);
-		if (num2)
+		if (flag)
 		{
 			num += 100;
 			CC.Say("give_ring", CC);
 			CC.Talk("thanks3");
 		}
-		else if (flag2 || num > 20)
+		else if (flag3 || num > 20)
 		{
 			CC.Talk("thanks3");
 		}
-		else if (flag || num > 10)
+		else if (flag2 || num > 10)
 		{
 			CC.Talk("thanks");
 		}

@@ -60,7 +60,7 @@ public class TaskCut : TaskDesignation
 		pos.Animate(AnimeID.HitObj);
 		if (IsToolValid() && EClass.setting.toolConsumeHP)
 		{
-			Act.TOOL.DamageHP(1);
+			Act.TOOL.DamageHP(1L);
 		}
 	}
 

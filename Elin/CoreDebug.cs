@@ -1165,7 +1165,7 @@ public class CoreDebug : EScriptable
 					{
 						if (c.IsHostile(EClass.pc))
 						{
-							c.DamageHP(9999999, AttackSource.Finish, EClass.pc);
+							c.DamageHP(9999999L, AttackSource.Finish, EClass.pc);
 						}
 					});
 				}
@@ -1173,7 +1173,7 @@ public class CoreDebug : EScriptable
 				{
 					for (int num = hitPoint.detail.charas.Count - 1; num >= 0; num--)
 					{
-						hitPoint.detail.charas[num].DamageHP(9999999, AttackSource.Finish, EClass.pc);
+						hitPoint.detail.charas[num].DamageHP(9999999L, AttackSource.Finish, EClass.pc);
 					}
 				}
 				EInput.Consume();

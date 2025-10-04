@@ -123,7 +123,7 @@ public class Effect : SceneObject
 		{
 			sr.sprite = sprite;
 		}
-		if (setColor)
+		if (setColor && from.IsValid)
 		{
 			float num = 0.07f * (float)(int)from.cell.light + EMono.core.screen.tileMap._baseBrightness;
 			num += ((from.cell.HasRoof || from.cell.isShadowed) ? (-0.2f) : 0f);

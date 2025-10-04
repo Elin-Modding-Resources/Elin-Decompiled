@@ -1464,7 +1464,7 @@ public class Map : MapBounds, IPathfindGrid
 				}
 				else
 				{
-					item.DamageHP(30, 910);
+					item.DamageHP(30L, 910);
 				}
 			}
 		}
