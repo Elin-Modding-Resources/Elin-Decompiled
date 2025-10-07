@@ -53,7 +53,7 @@ public class DamageTextRenderer : EClass
 				num = ((num > 0.5f) ? 0f : (0.6f - num));
 				c = new Color(c.r + num, c.g + num, c.b + num, 1f);
 			}
-			popper.SetText((this.num == 1) ? (sum.ToString() ?? "") : (sum + "<size=18> (x" + this.num + ")</size>"), c);
+			popper.SetText((this.num == 1) ? (sum.ToFormat() ?? "") : (sum.ToFormat() + "<size=18> (x" + this.num + ")</size>"), c);
 			sum = (this.num = 0);
 		}
 	}

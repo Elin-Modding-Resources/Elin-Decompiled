@@ -49,5 +49,6 @@ public enum ShopType
 	LoytelMart,
 	StrangeGirl,
 	Sweet,
-	Moyer
+	Moyer,
+	Curry
 }

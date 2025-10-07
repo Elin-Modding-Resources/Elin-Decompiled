@@ -217,6 +217,7 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 				C("gem");
 				break;
 			case "ore":
+				C("scrap");
 				C("cutstone");
 				C("ingot");
 				break;

@@ -2733,6 +2733,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			biome = ((EClass.rnd(4) != 0) ? EClass.core.refs.biomes.Water : EClass.core.refs.biomes.Sand);
 		}
 		SpawnList spawnList = null;
+		Debug.Log(setting.idSpawnList + "/" + biome.name + "/" + biome.id);
 		spawnList = ((setting.idSpawnList != null) ? SpawnList.Get(setting.idSpawnList) : ((EClass._zone is Zone_DungeonYeek && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_yeek", (SourceChara.Row r) => r.race == "yeek" && r.quality == 0) : ((EClass._zone is Zone_DungeonDragon && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_dragon", (SourceChara.Row r) => (r.race == "dragon" || r.race == "drake" || r.race == "wyvern" || r.race == "lizardman" || r.race == "dinosaur") && r.quality == 0) : ((EClass._zone is Zone_DungeonMino && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_mino", (SourceChara.Row r) => r.race == "minotaur" && r.quality == 0) : ((setting.hostility == SpawnHostility.Neutral || (setting.hostility != SpawnHostility.Enemy && Rand.Range(0f, 1f) < ChanceSpawnNeutral)) ? SpawnList.Get("c_neutral") : ((biome.spawn.chara.Count <= 0) ? SpawnList.Get(biome.name, "chara", new CharaFilter
 		{
 			ShouldPass = delegate(SourceChara.Row s)
@@ -3004,7 +3005,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			playlist.list.Add(new Playlist.Item
 			{
-				data = EClass.core.refs.dictBGM[item]
+				data = EClass.core.refs.dictBGM.TryGetValue(item, 1)
 			});
 		}
 		return playlist;

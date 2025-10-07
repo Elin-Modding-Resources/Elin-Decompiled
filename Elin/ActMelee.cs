@@ -453,7 +453,7 @@ public class ActMelee : ActBaseAttack
 						{
 							if ((item4.trait.CanBeAttacked || (item4.isChara && item4.Chara.IsHostile(Act.CC))) && !item4.HasElement(430))
 							{
-								int rawDamage2 = AttackProcess.Current.GetRawDamage(0.1f + 0.05f * Mathf.Sqrt(splash), crit: false, maxRoll: false);
+								long rawDamage2 = AttackProcess.Current.GetRawDamage(0.1f + 0.05f * Mathf.Sqrt(splash), crit: false, maxRoll: false);
 								rawDamage2 = item4.ApplyProtection(rawDamage2);
 								item4.DamageHP(rawDamage2, 0, 100, AttackSource.Shockwave, Act.CC);
 							}
@@ -481,7 +481,7 @@ public class ActMelee : ActBaseAttack
 						Act.TC.Chara.AddCondition<ConSuffocation>(200, force: true);
 						if (!Act.TC.HasElement(430))
 						{
-							int rawDamage = AttackProcess.Current.GetRawDamage(1f, crit: false, maxRoll: false);
+							long rawDamage = AttackProcess.Current.GetRawDamage(1f, crit: false, maxRoll: false);
 							rawDamage = Act.TC.ApplyProtection(rawDamage);
 							Act.TC.DamageHP(rawDamage, 0, 100, AttackSource.Shockwave, Act.CC);
 						}

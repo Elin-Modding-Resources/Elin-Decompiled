@@ -1013,9 +1013,9 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
-			if (!IsHuman)
+			if (!IsHuman && !race.tag.Contains("humanSpeak"))
 			{
-				return race.tag.Contains("humanSpeak");
+				return HasTag(CTAG.humanSpeak);
 			}
 			return true;
 		}
@@ -4775,13 +4775,14 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (onCreate || !TryEquipRanged())
 		{
-			string text = id;
-			if (text == "trooper" || text == "mech_scarab")
+			switch (id)
 			{
+			case "tyche":
+			case "trooper":
+			case "mech_scarab":
 				AddThing("gun_laser");
-			}
-			else
-			{
+				break;
+			default:
 				switch (equip)
 				{
 				case "archer":
@@ -4792,6 +4793,7 @@ public class Chara : Card, IPathfindWalker
 					EQ_CAT("gun");
 					break;
 				}
+				break;
 			}
 		}
 		int num = ((base.rarity >= Rarity.Mythical) ? (base.LV * 3) : ((base.rarity >= Rarity.Legendary) ? (base.LV * 2) : base.LV));
@@ -6685,7 +6687,7 @@ public class Chara : Card, IPathfindWalker
 			text2 = text2 + "Global:" + IsGlobal + "  AI:" + ai?.ToString() + " " + source.tactics.IsEmpty(EClass.sources.tactics.map.TryGetValue(id)?.id ?? EClass.sources.tactics.map.TryGetValue(job.id)?.id ?? "predator");
 			text2 += Environment.NewLine;
 			text2 = text2 + base.uid + IsMinion + "/" + base.c_uidMaster + "/" + master;
-			text2 = text2 + " dir:" + base.dir + " skin:" + base.idSkin;
+			text2 = text2 + " dir:" + base.dir + " skin:" + base.idSkin + " scaled:" + base.isScaled;
 		}
 		if (EClass.pc.held?.trait is TraitWhipLove && IsPCFaction)
 		{

@@ -630,7 +630,7 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd((owner.host != null && owner.GetInt(106) != 0) ? 1000 : 40) == 0 && owner.IsHuman)
 		{
-			DoSomethingToNearChara((Chara c) => (!c.IsPCParty || EClass.rnd(5) == 0) && c.IsMofuable && !owner.IsHostile(c) && !c.IsInCombat, delegate(Chara c)
+			DoSomethingToNearChara((Chara c) => (!c.IsPCParty || EClass.rnd(5) == 0) && c.IsMofuable && !owner.IsHostile(c) && !c.IsInCombat && owner.CanSee(c), delegate(Chara c)
 			{
 				owner.Cuddle(c);
 			});

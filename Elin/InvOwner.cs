@@ -1552,53 +1552,56 @@ public class InvOwner : EClass
 				});
 			}
 		}
-		if (trait.CanRead(EClass.pc))
+		if (!LayerChara.Instance)
 		{
-			list.Add("invRead", 110, delegate
+			if (trait.CanRead(EClass.pc))
 			{
-				t.DoAct(new AI_Read
+				list.Add("invRead", 110, delegate
 				{
-					target = t
-				});
-			}, "remove");
-		}
-		if (trait.CanUse(EClass.pc))
-		{
-			list.Add(trait.LangUse, 120, delegate
+					t.DoAct(new AI_Read
+					{
+						target = t
+					});
+				}, "remove");
+			}
+			if (trait.CanUse(EClass.pc))
 			{
-				if (trait.OnUse(EClass.pc))
+				list.Add(trait.LangUse, 120, delegate
 				{
-					EClass.player.EndTurn();
-				}
-			}, "use");
-		}
-		if (trait.CanDrink(EClass.pc))
-		{
-			list.Add("invDrink", 130, delegate
+					if (trait.OnUse(EClass.pc))
+					{
+						EClass.player.EndTurn();
+					}
+				}, "use");
+			}
+			if (trait.CanDrink(EClass.pc))
 			{
-				t.DoAct(new AI_Drink
+				list.Add("invDrink", 130, delegate
 				{
-					target = t
-				});
-			}, "remove");
-		}
-		if (trait.CanEat(EClass.pc))
-		{
-			list.Add("invFood", 140, delegate
+					t.DoAct(new AI_Drink
+					{
+						target = t
+					});
+				}, "remove");
+			}
+			if (trait.CanEat(EClass.pc))
 			{
-				t.DoAct(new AI_Eat
+				list.Add("invFood", 140, delegate
 				{
-					cook = false,
-					target = t
-				});
-			}, "remove");
-		}
-		if (trait.IsBlendBase)
-		{
-			list.Add("invBlend", 150, delegate
+					t.DoAct(new AI_Eat
+					{
+						cook = false,
+						target = t
+					});
+				}, "remove");
+			}
+			if (trait.IsBlendBase)
 			{
-				LayerDragGrid.Create(new InvOwnerBlend(t));
-			}, "blend");
+				list.Add("invBlend", 150, delegate
+				{
+					LayerDragGrid.Create(new InvOwnerBlend(t));
+				}, "blend");
+			}
 		}
 		if (!context)
 		{

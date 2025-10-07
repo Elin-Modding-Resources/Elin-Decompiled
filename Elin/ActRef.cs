@@ -14,5 +14,7 @@ public struct ActRef
 
 	public bool noFriendlyFire;
 
+	public int refVal;
+
 	public int idEle => EClass.sources.elements.alias[aliasEle].id;
 }

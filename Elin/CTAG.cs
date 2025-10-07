@@ -49,5 +49,6 @@ public enum CTAG
 	dragon,
 	plant,
 	antiSpider,
-	shield
+	shield,
+	humanSpeak
 }

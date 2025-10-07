@@ -26,6 +26,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public const int SocketDiv = 1000;
 
+	public const int DamageLimit = 99999999;
+
 	[JsonProperty(PropertyName = "A")]
 	public int[] _ints = new int[30];
 
@@ -905,6 +907,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		set
 		{
 			_bits2[8] = value;
+		}
+	}
+
+	public bool isScaled
+	{
+		get
+		{
+			return _bits2[9];
+		}
+		set
+		{
+			_bits2[9] = value;
 		}
 	}
 
@@ -2876,6 +2890,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return this;
 		}
+		isScaled = true;
 		Rand.SetSeed(uid);
 		ElementContainer elementContainer = new ElementContainer();
 		elementContainer.ApplyElementMap(uid, SourceValueType.Chara, Chara.job.elementMap, LV);
@@ -3187,6 +3202,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void PurgeDuplicateArtifact(Thing af)
 	{
+		if (af.isReplica)
+		{
+			return;
+		}
 		List<Chara> list = new List<Chara>();
 		foreach (FactionBranch child in EClass.pc.faction.GetChildren())
 		{
@@ -3205,7 +3224,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				continue;
 			}
-			List<Thing> list2 = item.things.List((Thing t) => t.id == af.id && t != af);
+			List<Thing> list2 = item.things.List((Thing t) => t.id == af.id && t != af && !t.isReplica);
 			if (list2.Count == 0)
 			{
 				continue;
@@ -3946,7 +3965,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return 0;
 	}
 
-	public virtual int ApplyProtection(int dmg, int mod = 100)
+	public virtual long ApplyProtection(long dmg, int mod = 100)
 	{
 		int armorSkill = GetArmorSkill();
 		Element orCreateElement = elements.GetOrCreateElement(armorSkill);
@@ -3966,7 +3985,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		dmg -= num4 * mod / 100;
 		if (dmg < 0)
 		{
-			dmg = 0;
+			dmg = 0L;
 		}
 		return dmg;
 	}
@@ -4110,7 +4129,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = dmg * 100 / (100 + Evalue(435) * 2);
 			}
-			dmg = (int)(dmg * Mathf.Max(0, 100 - Mathf.Min(Evalue((e == Element.Void || e.id == 926) ? 55 : 56), 100) / ((!flag) ? 1 : 2)) / 100);
+			dmg = dmg * Mathf.Max(0, 100 - Mathf.Min(Evalue((e == Element.Void || e.id == 926) ? 55 : 56), 100) / ((!flag) ? 1 : 2)) / 100;
 			if (origin != null && origin.IsPC && EClass.player.codex.Has(id))
 			{
 				dmg = dmg * (100 + Mathf.Min(10, EClass.player.codex.GetOrCreate(id).weakspot)) / 100;
@@ -4295,7 +4314,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_0f83;
+							goto IL_0f81;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4323,7 +4342,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_0f83;
+								goto IL_0f81;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4341,8 +4360,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0f83;
-		IL_0f83:
+		goto IL_0f81;
+		IL_0f81:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);

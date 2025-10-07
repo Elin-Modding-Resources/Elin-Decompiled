@@ -376,7 +376,7 @@ public class WindowChara : WindowController
 		textStyle.text = "_style".lang(Lang._weight(chara.body.GetWeight(armorOnly: true)) ?? "", chara.elements.GetOrCreateElement(chara.GetArmorSkill()).Name, ("style" + chara.body.GetAttackStyle()).lang());
 		textKarma.text = (chara.IsPC ? (EClass.player.karma.ToString() ?? "") : "???");
 		textSAN.text = chara.SAN.value.ToString() ?? "";
-		textFame.text = (chara.IsPC ? (EClass.player.fame.ToString() ?? "") : "???");
+		textFame.text = (chara.IsPC ? (EClass.player.fame.ToFormat() ?? "") : "???");
 		textMoney.text = Lang._currency(chara.GetCurrency(), showUnit: true);
 		textDeposit.text = Lang._currency(chara.IsPC ? EClass.game.cards.container_deposit.GetCurrency() : chara.c_allowance, showUnit: true);
 		string text = "deepestLv2".lang((chara.IsPCFaction ? EClass.player.stats.deepest : chara.LV).ToString() ?? "");

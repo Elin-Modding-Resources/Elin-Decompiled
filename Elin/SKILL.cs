@@ -8,7 +8,7 @@ public class SKILL
 
 	public const int weaponBlunt = 111;
 
-	public const int armorLight = 120;
+	public const int fishing = 245;
 
 	public const int armorHeavy = 122;
 
@@ -60,7 +60,7 @@ public class SKILL
 
 	public const int weaponAxe = 102;
 
-	public const int throwing = 108;
+	public const int weaponDagger = 107;
 
 	public const int END = 71;
 
@@ -98,8 +98,6 @@ public class SKILL
 
 	public const int WIL = 75;
 
-	public const int weaponDagger = 107;
-
 	public const int weaponPolearm = 106;
 
 	public const int weaponGun = 105;
@@ -124,15 +122,17 @@ public class SKILL
 
 	public const int SPD = 79;
 
+	public const int LUC = 78;
+
 	public const int CHA = 77;
 
 	public const int MAG = 76;
 
-	public const int fishing = 245;
+	public const int throwing = 108;
 
 	public const int gathering = 250;
 
-	public const int LUC = 78;
+	public const int armorLight = 120;
 
 	public const int blacksmith = 256;
 
@@ -142,7 +142,7 @@ public class SKILL
 
 	public const int eleNerve = 918;
 
-	public const int eleChaos = 920;
+	public const int eleHoly = 919;
 
 	public const int eleMagic = 921;
 
@@ -200,7 +200,7 @@ public class SKILL
 
 	public const int eleMind = 914;
 
-	public const int eleHoly = 919;
+	public const int eleChaos = 920;
 
 	public const int eleLightning = 912;
 
@@ -222,9 +222,9 @@ public class SKILL
 
 	public const int farming = 286;
 
-	public const int cooking = 287;
-
 	public const int eleDarkness = 913;
+
+	public const int building = 288;
 
 	public const int appraising = 289;
 
@@ -234,23 +234,23 @@ public class SKILL
 
 	public const int investing = 292;
 
-	public const int building = 288;
+	public const int cooking = 287;
 
 	public const int regeneration = 300;
 
-	public const int eleCold = 911;
-
 	public const int disarmTrap = 293;
+
+	public const int eleFire = 910;
 
 	public const int env = 313;
 
 	public const int fun = 312;
 
+	public const int eleCold = 911;
+
 	public const int bladder = 311;
 
 	public const int hygine = 310;
-
-	public const int eleFire = 910;
 
 	public const int faith = 306;
 
@@ -268,19 +268,19 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		50, 109, 110, 111, 120, 122, 123, 130, 132, 133,
+		50, 109, 110, 111, 245, 122, 123, 130, 132, 133,
 		242, 241, 240, 237, 235, 230, 227, 226, 225, 220,
 		207, 200, 152, 151, 150, 135, 134, 131, 210, 102,
-		108, 71, 70, 68, 67, 66, 65, 72, 64, 61,
-		60, 57, 56, 55, 51, 62, 73, 74, 75, 107,
-		106, 105, 104, 103, 101, 100, 93, 92, 91, 90,
-		80, 79, 77, 76, 245, 250, 78, 256, 916, 917,
-		918, 920, 921, 922, 923, 924, 925, 926, 950, 951,
+		107, 71, 70, 68, 67, 66, 65, 72, 64, 61,
+		60, 57, 56, 55, 51, 62, 73, 74, 75, 106,
+		105, 104, 103, 101, 100, 93, 92, 91, 90, 80,
+		79, 78, 77, 76, 108, 250, 120, 256, 916, 917,
+		918, 919, 921, 922, 923, 924, 925, 926, 950, 951,
 		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 965, 970, 971, 972, 255, 955, 914,
-		919, 912, 257, 258, 259, 260, 261, 280, 281, 285,
-		286, 287, 913, 289, 290, 291, 292, 288, 300, 911,
-		293, 313, 312, 311, 310, 910, 306, 305, 304, 303,
+		920, 912, 257, 258, 259, 260, 261, 280, 281, 285,
+		286, 913, 288, 289, 290, 291, 292, 287, 300, 293,
+		910, 313, 312, 911, 311, 310, 306, 305, 304, 303,
 		302, 301, 307
 	};
 }

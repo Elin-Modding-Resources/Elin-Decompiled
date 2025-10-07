@@ -2087,7 +2087,14 @@ public class Player : EClass
 				return;
 			}
 		}
-		fame += a;
+		if (fame > 0 && a > 0 && fame + a < 0)
+		{
+			fame = int.MaxValue;
+		}
+		else
+		{
+			fame += a;
+		}
 		if (fame < 0)
 		{
 			fame = 0;

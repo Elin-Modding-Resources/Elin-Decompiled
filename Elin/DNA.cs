@@ -583,6 +583,7 @@ public class DNA : EClass
 			string text2 = "";
 			int num3 = element.Value / 10;
 			FontColor color2 = FontColor.Good;
+			bool flag = false;
 			switch (element.source.category)
 			{
 			case "slot":
@@ -597,12 +598,15 @@ public class DNA : EClass
 				color2 = FontColor.Topic2;
 				num3 = -1;
 				break;
+			default:
+				flag = true;
+				break;
 			}
 			if (num3 >= 0)
 			{
 				text2 = text2 + "[" + "*".Repeat(Mathf.Clamp(num3, 1, 5)) + ((num3 > 5) ? "+" : "") + "]";
 			}
-			if ((bool)EClass.ui.GetLayer<LayerInfo>())
+			if (flag)
 			{
 				text2 = text2 + " (" + element.Value + ")";
 			}

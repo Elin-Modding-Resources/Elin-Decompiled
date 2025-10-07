@@ -292,6 +292,7 @@ public class AttackProcess : EClass
 		{
 			dNumAmmo = 0;
 			dDimAmmo = 0;
+			dBonusAmmo = 0;
 		}
 		if (dNum < 1)
 		{
@@ -458,10 +459,15 @@ public class AttackProcess : EClass
 		}
 	}
 
-	public int GetRawDamage(float dmgMulti, bool crit, bool maxRoll)
+	public int GetRocketPower()
+	{
+		return (50 + (dNum * dDim + dBonus) + (dNumAmmo * dDimAmmo + dBonusAmmo)) * (100 + (int)Mathf.Sqrt(weaponSkill.Value) * 10) / 100;
+	}
+
+	public long GetRawDamage(float dmgMulti, bool crit, bool maxRoll)
 	{
 		bool flag = CC.HasCondition<ConReload>();
-		int num = Dice.Roll(dNum, dDim, dBonus, CC);
+		long num = Dice.Roll(dNum, dDim, dBonus, CC);
 		if (ammo != null && !flag)
 		{
 			num += Dice.Roll(dNumAmmo, dDimAmmo, dBonusAmmo, CC);
@@ -488,9 +494,8 @@ public class AttackProcess : EClass
 		{
 			num++;
 		}
-		num = Mathf.Clamp(num, 0, 9999999);
-		num = (int)(dMulti * (float)num * dmgMulti);
-		return Mathf.Clamp(num, 0, 9999999);
+		num = (long)(dMulti * (float)num * dmgMulti);
+		return (long)Mathf.Clamp(num, 0f, 100000000f);
 	}
 
 	public static void ProcShieldEncs(Chara CC, Card TC, int mtpChance = 100)
@@ -589,7 +594,7 @@ public class AttackProcess : EClass
 		{
 			hit = true;
 		}
-		int num = GetRawDamage(dmgMulti, crit, maxRoll);
+		long num = GetRawDamage(dmgMulti, crit, maxRoll);
 		if (IsRanged && count >= numFireWithoutDamageLoss)
 		{
 			num = num * 100 / (100 + (count - numFireWithoutDamageLoss + 1) * 30);
@@ -678,7 +683,10 @@ public class AttackProcess : EClass
 		}
 		if (TC == null)
 		{
-			CC.Say(IsRanged ? "attack_air_range" : "attack_air", CC);
+			if (weapon == null || !(weapon.trait is TraitToolRangeGunRocket))
+			{
+				CC.Say(IsRanged ? "attack_air_range" : "attack_air", CC);
+			}
 			return true;
 		}
 		if (!hit)
@@ -763,10 +771,10 @@ public class AttackProcess : EClass
 				num6 = 50;
 			}
 		}
-		int num7 = num;
-		int num8 = num * num6 / 100;
+		long num7 = num;
+		long num8 = num * num6 / 100;
 		num -= num8;
-		int num9 = num * penetration / 100;
+		long num9 = num * penetration / 100;
 		num -= num9;
 		num = TC.ApplyProtection(num) + num9 + num8;
 		int weaponEnc = GetWeaponEnc(CC, weapon, 609, addSelfEnc: true);

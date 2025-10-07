@@ -345,7 +345,7 @@ public class Biography : EClass
 		if (!bio.IsEmpty())
 		{
 			string[] array = bio.Split('/');
-			SetGender((array[0] == "f") ? 1 : 2);
+			SetGender((!(array[0] == "n")) ? ((array[0] == "f") ? 1 : 2) : 0);
 			if (array.Length > 1)
 			{
 				if (!c.source.HasTag(CTAG.randomPortrait))

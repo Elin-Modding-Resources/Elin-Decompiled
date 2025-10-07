@@ -6,7 +6,7 @@ public enum BiomeID
 	Mud,
 	Water,
 	Plain,
-	Artificial,
+	Factory,
 	Snow,
 	Barren,
 	Undersea

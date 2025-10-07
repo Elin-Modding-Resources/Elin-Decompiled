@@ -1005,6 +1005,7 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
+			EClass.player.ModFame(EClass.player.fame);
 			EClass.game.religions.ジュアさまの薄い本をください();
 			return;
 		}

@@ -2,41 +2,24 @@ using UnityEngine;
 
 public class Zone_CurryRuinDungeon : Zone_QuestDungeon
 {
-	public const int LvBoss = -8;
+	public const int LvBoss = -5;
 
-	public bool IsBossLv => base.lv == -8;
+	public bool IsBossLv => base.lv == -5;
 
-	public override int DangerLv => 5 + Mathf.Abs(base.lv);
+	public override int DangerLv => 33 + Mathf.Abs(base.lv);
 
-	public override bool LockExit
-	{
-		get
-		{
-			if (base.lv == -1)
-			{
-				return EClass.game.quests.GetPhase<QuestVernis>() < 7;
-			}
-			return false;
-		}
-	}
-
-	public override float OreChance => 4f;
+	public override bool LockExit => base.lv <= -1;
 
 	public override string idExport
 	{
 		get
 		{
-			if (base.lv != -8)
+			if (base.lv != -5)
 			{
 				return base.idExport;
 			}
 			return "vernis_mine_boss";
 		}
-	}
-
-	public override string GetDungenID()
-	{
-		return "DungeonMine";
 	}
 
 	public override void OnGenerateMap()

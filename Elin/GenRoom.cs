@@ -94,7 +94,7 @@ public class GenRoom : GenBounds
 			for (int k = y; k < y + height; k++)
 			{
 				point2.Set(j, k);
-				if (!point2.cell.isModified && !point2.cell.blocked)
+				if (!point2.cell.isModified && !point2.cell.blocked && !point2.HasChara)
 				{
 					biome.Populate(point2, interior: true);
 				}

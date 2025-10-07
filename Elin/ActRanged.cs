@@ -98,6 +98,7 @@ public class ActRanged : ActThrow
 		}
 		bool flag = weapon.trait is TraitToolRangeGun;
 		bool flag2 = weapon.trait is TraitToolRangeCane;
+		bool isRocket = weapon.trait is TraitToolRangeGunRocket;
 		GameSetting.EffectData effectData = EClass.setting.effect.guns.TryGetValue(weapon.id) ?? EClass.setting.effect.guns[flag2 ? "cane" : (flag ? "gun" : "bow")];
 		bool hasHit = false;
 		int numFire = effectData.num;
@@ -305,9 +306,16 @@ public class ActRanged : ActThrow
 				for (int j = 0; j < numFire; j++)
 				{
 					Act.TC = _tc;
+					Card tC = Act.TC;
+					Chara cC = Act.CC;
+					Point point = Act.TP.Copy();
+					if (isRocket && EClass.rnd(3) == 0)
+					{
+						Act.TP.Set(Act.TP.GetRandomNeighbor());
+					}
 					Prepare();
 					int num5 = 0;
-					if (weapon.trait is TraitToolRangeGunEnergy && Act.TC.isChara && Act.TC.HasElement(383))
+					if (weapon.trait is TraitToolRangeGunEnergy && Act.TC != null && Act.TC.isChara && Act.TC.HasElement(383))
 					{
 						if (weapon.id == "gun_laser")
 						{
@@ -321,9 +329,6 @@ public class ActRanged : ActThrow
 					}
 					if (num5 > EClass.rnd(100))
 					{
-						Card tC = Act.TC;
-						Chara cC = Act.CC;
-						Point point = Act.TP.Copy();
 						List<Chara> list = Act.TC.pos.ListCharasInRadius(Act.TC.Chara, Act.TC.GetSightRadius(), (Chara c) => c.IsHostile(Act.TC.Chara));
 						Chara chara = ((list.Count > 0) ? list.RandomItem() : Act.CC?.Chara);
 						Act.TC.Say((Act.TC.isChara && Act.TC.Chara.IsHostile()) ? "attack_reflect_enemy" : "attack_reflect");
@@ -334,9 +339,6 @@ public class ActRanged : ActThrow
 						AttackProcess.Current.TP.Set(chara.pos);
 						AttackProcess.Current.posRangedAnime = chara.pos;
 						AttackProcess.Current.Perform(j, hasHit, chara.IsPCFactionOrMinion ? 0.5f : 2.5f);
-						Act.TC = tC;
-						Act.CC = cC;
-						Act.TP.Set(point);
 					}
 					else if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
 					{
@@ -357,7 +359,19 @@ public class ActRanged : ActThrow
 							}
 						}
 					}
-					if (Act.TC == null || !Act.TC.IsAliveInCurrentZone)
+					if (isRocket)
+					{
+						ActEffect.ProcAt(EffectId.Rocket, AttackProcess.Current.GetRocketPower(), BlessedState.Normal, Act.CC, null, Act.TP, isNeg: true, new ActRef
+						{
+							origin = Act.CC.Chara,
+							refThing = weapon,
+							aliasEle = "eleImpact"
+						});
+					}
+					Act.TC = tC;
+					Act.CC = cC;
+					Act.TP.Set(point);
+					if (!isRocket && (Act.TC == null || !Act.TC.IsAliveInCurrentZone))
 					{
 						break;
 					}

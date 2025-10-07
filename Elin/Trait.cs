@@ -1831,7 +1831,12 @@ public class Trait : EClass
 						Thing thing = CreateStock();
 						if ((!thing.trait.IsNoShop || (ShopType == ShopType.LoytelMart && (EClass.debug.enable || EClass.player.flags.loytelMartLv >= 2))) && (!(thing.trait is TraitRod) || thing.c_charges != 0) && thing.GetPrice() > 0)
 						{
-							t.AddThing(thing);
+							bool tryStack = true;
+							if (ShopType == ShopType.Curry)
+							{
+								tryStack = false;
+							}
+							t.AddThing(thing, tryStack);
 						}
 					}
 					break;
@@ -2126,40 +2131,40 @@ public class Trait : EClass
 					return FromFilter("shop_magic");
 				case ShopType.Ecopo:
 				{
-					Thing thing3 = TraitSeed.MakeRandomSeed(enc: true);
+					Thing thing2 = TraitSeed.MakeRandomSeed(enc: true);
 					if (EClass.rnd(2) == 0)
 					{
-						TraitSeed.LevelSeed(thing3, (thing3.trait as TraitSeed).row, 1);
+						TraitSeed.LevelSeed(thing2, (thing2.trait as TraitSeed).row, 1);
 					}
-					return thing3;
+					return thing2;
 				}
 				case ShopType.Healer:
 				{
-					Thing thing2 = null;
+					Thing thing3 = null;
 					for (int i = 0; i < 1000; i++)
 					{
-						thing2 = FromFilter("shop_healer");
-						if (thing2.trait is TraitScroll { source: not null } traitScroll)
+						thing3 = FromFilter("shop_healer");
+						if (thing3.trait is TraitScroll { source: not null } traitScroll)
 						{
 							if (!(traitScroll.source.aliasParent != "WIL") && !(traitScroll.source.categorySub == "attack"))
 							{
 								break;
 							}
 						}
-						else if (thing2.trait is TraitPotionRandom { source: not null } traitPotionRandom)
+						else if (thing3.trait is TraitPotionRandom { source: not null } traitPotionRandom)
 						{
 							if (!(traitPotionRandom.source.aliasParent != "WIL") && !(traitPotionRandom.source.categorySub == "attack"))
 							{
-								thing2.SetNum(EClass.rnd(5) + 1);
+								thing3.SetNum(EClass.rnd(5) + 1);
 								break;
 							}
 						}
-						else if (thing2.trait is TraitRodRandom { source: not null } traitRodRandom && !(traitRodRandom.source.aliasParent != "WIL") && !(traitRodRandom.source.categorySub == "attack"))
+						else if (thing3.trait is TraitRodRandom { source: not null } traitRodRandom && !(traitRodRandom.source.aliasParent != "WIL") && !(traitRodRandom.source.categorySub == "attack"))
 						{
 							break;
 						}
 					}
-					return thing2;
+					return thing3;
 				}
 				case ShopType.Milk:
 					if (EClass._zone is Zone_Nefu && EClass.rnd(2) == 0)
@@ -2235,6 +2240,12 @@ public class Trait : EClass
 						return Create("dough");
 					}
 					return FromFilter("shop_sweet");
+				case ShopType.Curry:
+					if (EClass.rnd(3) == 0)
+					{
+						return Create("seasoning");
+					}
+					return Create("693");
 				case ShopType.Food:
 					if (EClass.rnd(5) == 0)
 					{

@@ -127,5 +127,7 @@ public enum EffectId
 	BurnMana = 303,
 	MoonArrow = 304,
 	LittleSisterMigration = 305,
-	ReturnVoid = 306
+	ReturnVoid = 306,
+	Bit = 307,
+	Rocket = 308
 }

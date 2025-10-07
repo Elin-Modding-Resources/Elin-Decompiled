@@ -388,17 +388,20 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 
 	public override void InputWheel(int wheel)
 	{
-		if (target != null && target.TileType.MaxAltitude > 0)
+		if (!EClass.debug.enable || !EInput.isCtrlDown)
 		{
-			moldCard.ChangeAltitude(wheel);
-		}
-		else if (EClass.scene.mouseTarget.CanCycle())
-		{
-			EClass.scene.mouseTarget.CycleTarget(wheel);
-		}
-		else
-		{
-			base.InputWheel(wheel);
+			if (target != null && target.TileType.MaxAltitude > 0)
+			{
+				moldCard.ChangeAltitude(wheel);
+			}
+			else if (EClass.scene.mouseTarget.CanCycle())
+			{
+				EClass.scene.mouseTarget.CycleTarget(wheel);
+			}
+			else
+			{
+				base.InputWheel(wheel);
+			}
 		}
 	}
 

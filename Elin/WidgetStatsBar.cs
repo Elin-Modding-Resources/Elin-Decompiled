@@ -176,11 +176,11 @@ public class WidgetStatsBar : Widget
 		}
 		if (extra.fame)
 		{
-			Add(null, "fame", iconFame, () => EMono.player.fame.ToString() ?? "");
+			Add(null, "fame", iconFame, () => EMono.player.fame.ToFormat());
 		}
 		if (extra.influence)
 		{
-			Add(null, "influence", iconInfluence, () => EMono._zone.influence.ToString() ?? "", null, () => EMono._zone.influence != 0);
+			Add(null, "influence", iconInfluence, () => EMono._zone.influence.ToFormat(), null, () => EMono._zone.influence != 0);
 		}
 		if (extra.tourism_value)
 		{
