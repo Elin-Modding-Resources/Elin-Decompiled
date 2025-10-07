@@ -218,7 +218,7 @@ var searchData=
   ['applymodifier_215',['ApplyModifier',['../classHomeResourceSkill.html#a28a21ef47aa86a1ed56d25098e49dda6',1,'HomeResourceSkill']]],
   ['applynewline_216',['ApplyNewLine',['../classCard.html#a41c57f6ada13c99e736452a1b7430e68',1,'Card']]],
   ['applypotential_217',['ApplyPotential',['../classElementContainer.html#a0a13e0151c7377d15a898f7ea024eacc',1,'ElementContainer']]],
-  ['applyprotection_218',['ApplyProtection',['../classCard.html#a8fdd37fe2e515833807909a8a2c2ff0a',1,'Card']]],
+  ['applyprotection_218',['ApplyProtection',['../classCard.html#a8704b76b6a97f6644e414d608d6b2b7b',1,'Card']]],
   ['applyrace_219',['ApplyRace',['../classChara.html#a4ad0c17053644c72468cbf7108b9c77e',1,'Chara']]],
   ['applyresolution_220',['ApplyResolution',['../classCoreConfig.html#a6b5ea3267ffc04dfc463738796dbbaa1',1,'CoreConfig']]],
   ['applyscale_221',['ApplyScale',['../classCoreConfig.html#a749b16ee27de7858429001261a3029a8',1,'CoreConfig']]],

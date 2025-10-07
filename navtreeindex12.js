@@ -1,5 +1,8 @@
 var NAVTREEINDEX12 =
 {
+"QuestMeal__cat_8cs_source.html":[2,0,0,941],
+"QuestMeal__cookie_8cs.html":[2,0,0,942],
+"QuestMeal__cookie_8cs_source.html":[2,0,0,942],
 "QuestMeal__egg_8cs.html":[2,0,0,943],
 "QuestMeal__egg_8cs_source.html":[2,0,0,943],
 "QuestMeal__fish_8cs.html":[2,0,0,944],
@@ -246,8 +249,5 @@ var NAVTREEINDEX12 =
 "ResearchPlan_8cs_source.html":[2,0,0,1039],
 "Resist_8cs.html":[2,0,0,1040],
 "Resist_8cs.html#a8387139be855f5585d9e1580321896e5":[2,0,0,1040,0],
-"Resist_8cs.html#a8387139be855f5585d9e1580321896e5a1b792ee383abc2e8053889821dcd3382":[2,0,0,1040,0,0],
-"Resist_8cs.html#a8387139be855f5585d9e1580321896e5a63191e4ece37523c9fe6bb62a5e64d45":[2,0,0,1040,0,5],
-"Resist_8cs.html#a8387139be855f5585d9e1580321896e5a6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1040,0,2],
-"Resist_8cs.html#a8387139be855f5585d9e1580321896e5a960b44c579bc2f6818d2daaf9e4c16f0":[2,0,0,1040,0,3]
+"Resist_8cs.html#a8387139be855f5585d9e1580321896e5a1b792ee383abc2e8053889821dcd3382":[2,0,0,1040,0,0]
 };

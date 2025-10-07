@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.211 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.214 Nightly</span>
    </div>
   </td>
  </tr>
@@ -285,7 +285,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Core_8cs_source.html#l00070">Core.config</a>, <a class="el" href="EClass_8cs_source.html#l00006">EClass.core</a>, <a class="el" href="DamageTextRenderer_8cs_source.html#l00036">Flush()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00250">Element.id</a>, <a class="el" href="DamageTextRenderer_8cs_source.html#l00007">lastAttacker</a>, <a class="el" href="DamageTextRenderer_8cs_source.html#l00009">lastElement</a>, <a class="el" href="DamageTextRenderer_8cs_source.html#l00005">lastTarget</a>, <a class="el" href="DamageTextRenderer_8cs_source.html#l00013">num</a>, <a class="el" href="CoreConfig_8cs_source.html#l00534">CoreConfig.Test.stackNumbers</a>, <a class="el" href="DamageTextRenderer_8cs_source.html#l00011">sum</a>, <a class="el" href="CoreConfig_8cs_source.html#l00619">CoreConfig.test</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00238">Element.Void</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03979">Card.DamageHP()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03998">Card.DamageHP()</a>.</p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   53</span>                <a class="code hl_variable" href="classDamageTextRenderer.html#a8fd2e2316ba5ae33f0ee470a7da0a41c">num</a> = ((<a class="code hl_variable" href="classDamageTextRenderer.html#a8fd2e2316ba5ae33f0ee470a7da0a41c">num</a> &gt; 0.5f) ? 0f : (0.6f - <a class="code hl_variable" href="classDamageTextRenderer.html#a8fd2e2316ba5ae33f0ee470a7da0a41c">num</a>));</div>
 <div class="line"><span class="lineno">   54</span>                c = <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(c.r + <a class="code hl_variable" href="classDamageTextRenderer.html#a8fd2e2316ba5ae33f0ee470a7da0a41c">num</a>, c.g + <a class="code hl_variable" href="classDamageTextRenderer.html#a8fd2e2316ba5ae33f0ee470a7da0a41c">num</a>, c.b + <a class="code hl_variable" href="classDamageTextRenderer.html#a8fd2e2316ba5ae33f0ee470a7da0a41c">num</a>, 1f);</div>
 <div class="line"><span class="lineno">   55</span>            }</div>
-<div class="line"><span class="lineno">   56</span>            popper.<a class="code hl_function" href="classPopper.html#a00f0b990891548bd357eab8618122a48">SetText</a>((this.num == 1) ? (<a class="code hl_variable" href="classDamageTextRenderer.html#a8f8a687969c6c8a971f5014d09afff32">sum</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>) : (<a class="code hl_variable" href="classDamageTextRenderer.html#a8f8a687969c6c8a971f5014d09afff32">sum</a> + <span class="stringliteral">&quot;&lt;size=18&gt; (x&quot;</span> + <span class="keyword">this</span>.num + <span class="stringliteral">&quot;)&lt;/size&gt;&quot;</span>), c);</div>
+<div class="line"><span class="lineno">   56</span>            popper.<a class="code hl_function" href="classPopper.html#a00f0b990891548bd357eab8618122a48">SetText</a>((this.num == 1) ? (<a class="code hl_variable" href="classDamageTextRenderer.html#a8f8a687969c6c8a971f5014d09afff32">sum</a>.ToFormat() ?? <span class="stringliteral">&quot;&quot;</span>) : (<a class="code hl_variable" href="classDamageTextRenderer.html#a8f8a687969c6c8a971f5014d09afff32">sum</a>.ToFormat() + <span class="stringliteral">&quot;&lt;size=18&gt; (x&quot;</span> + <span class="keyword">this</span>.num + <span class="stringliteral">&quot;)&lt;/size&gt;&quot;</span>), c);</div>
 <div class="line"><span class="lineno">   57</span>            <a class="code hl_variable" href="classDamageTextRenderer.html#a8f8a687969c6c8a971f5014d09afff32">sum</a> = (this.num = 0);</div>
 <div class="line"><span class="lineno">   58</span>        }</div>
 <div class="line"><span class="lineno">   59</span>    }</div>

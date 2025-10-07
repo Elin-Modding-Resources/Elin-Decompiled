@@ -50,6 +50,7 @@ var CTAG_8cs =
       [ "dragon", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a8621ffdbc5698829397d97767ac13db3", null ],
       [ "plant", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a9ea0a36b3a20901fafe834eb519a595c", null ],
       [ "antiSpider", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afd80bafe2b888e3dd1bcbfefbf89ce88", null ],
-      [ "shield", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a28c69b4cba5681d565d3bd901684dd77", null ]
+      [ "shield", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a28c69b4cba5681d565d3bd901684dd77", null ],
+      [ "humanSpeak", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad0f42bd74e8f2e41e9de1c4635b24e34", null ]
     ] ]
 ];

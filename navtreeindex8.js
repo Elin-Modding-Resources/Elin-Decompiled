@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca02a954aad29fc4f3eb2dff2334b4226a":[2,0,0,592,0,8],
+"HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca320feace9cefcab73c6b9de1f4f13512":[2,0,0,592,0,10],
+"HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca381ff09422ad9d637f7c4677297b0303":[2,0,0,592,0,9],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca3f7039a836c00d92ecf87fd7d338c4db":[2,0,0,592,0,4],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca405aaff66082ffe7231d7c1f79926c17":[2,0,0,592,0,12],
 "HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9ca60aef5b4c954c9f7ac9016310c55aac7":[2,0,0,592,0,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "InvInteraction_8cs.html#a0f76eb8d91cf8cdc1f748080b7f049b9a0fa041c020337ec05bf02e81780aef62":[2,0,0,646,0,0],
 "InvInteraction_8cs.html#a0f76eb8d91cf8cdc1f748080b7f049b9a25830cbe9343ebf416b81cfeb10b0b5a":[2,0,0,646,0,1],
 "InvInteraction_8cs.html#a0f76eb8d91cf8cdc1f748080b7f049b9aad4e206408c1c59bfb8a057ba7857446":[2,0,0,646,0,2],
-"InvInteraction_8cs_source.html":[2,0,0,646],
-"InvOwnerAlly_8cs.html":[2,0,0,648],
-"InvOwnerAlly_8cs_source.html":[2,0,0,648],
-"InvOwnerAutoCombatBar_8cs.html":[2,0,0,649]
+"InvInteraction_8cs_source.html":[2,0,0,646]
 };

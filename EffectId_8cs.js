@@ -128,6 +128,8 @@ var EffectId_8cs =
       [ "BurnMana", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa6f8e2d0b6d67643d89a2aa5d9dab52a", null ],
       [ "MoonArrow", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a4847ce807a0fc8f7e8dd2dd8ac780f9b", null ],
       [ "LittleSisterMigration", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a4158f274689e3ec78ca9596224771181", null ],
-      [ "ReturnVoid", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a08f6466d3e4c9eb3fdc2f161b510021b", null ]
+      [ "ReturnVoid", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a08f6466d3e4c9eb3fdc2f161b510021b", null ],
+      [ "Bit", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aed98fd4f2d1aeadad43670b2d07d5b40", null ],
+      [ "Rocket", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a15e8bfff2c10ca22da244d85b2bf7d94", null ]
     ] ]
 ];

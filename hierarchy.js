@@ -1533,7 +1533,9 @@ var hierarchy =
             [ "TraitRaina", "classTraitRaina.html", null ],
             [ "TraitSorin", "classTraitSorin.html", null ],
             [ "TraitStrangeGirl", "classTraitStrangeGirl.html", null ],
+            [ "TraitTyche", "classTraitTyche.html", null ],
             [ "TraitUniqueMerchant", "classTraitUniqueMerchant.html", [
+              [ "TraitBambi", "classTraitBambi.html", null ],
               [ "TraitClerk_Casino", "classTraitClerk__Casino.html", null ],
               [ "TraitFarris", "classTraitFarris.html", null ],
               [ "TraitFelmera", "classTraitFelmera.html", null ],
@@ -1545,7 +1547,8 @@ var hierarchy =
               [ "TraitNola", "classTraitNola.html", null ],
               [ "TraitSeeker", "classTraitSeeker.html", null ]
             ] ],
-            [ "TraitVesda", "classTraitVesda.html", null ]
+            [ "TraitVesda", "classTraitVesda.html", null ],
+            [ "TraitVishnu", "classTraitVishnu.html", null ]
           ] ],
           [ "TraitUniqueMonster", "classTraitUniqueMonster.html", [
             [ "TraitUniqueMonsterAdv", "classTraitUniqueMonsterAdv.html", null ]
@@ -1707,6 +1710,7 @@ var hierarchy =
             [ "TraitAmmoBolt", "classTraitAmmoBolt.html", null ],
             [ "TraitAmmoBullet", "classTraitAmmoBullet.html", null ],
             [ "TraitAmmoEnergy", "classTraitAmmoEnergy.html", null ],
+            [ "TraitAmmoRocket", "classTraitAmmoRocket.html", null ],
             [ "TraitAmmoTalisman", "classTraitAmmoTalisman.html", null ]
           ] ],
           [ "TraitBank", "classTraitBank.html", null ],
@@ -1968,7 +1972,8 @@ var hierarchy =
             ] ],
             [ "TraitToolRangeCane", "classTraitToolRangeCane.html", null ],
             [ "TraitToolRangeGun", "classTraitToolRangeGun.html", [
-              [ "TraitToolRangeGunEnergy", "classTraitToolRangeGunEnergy.html", null ]
+              [ "TraitToolRangeGunEnergy", "classTraitToolRangeGunEnergy.html", null ],
+              [ "TraitToolRangeGunRocket", "classTraitToolRangeGunRocket.html", null ]
             ] ]
           ] ],
           [ "TraitToolShears", "classTraitToolShears.html", null ],

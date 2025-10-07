@@ -1,5 +1,9 @@
 var NAVTREEINDEX15 =
 {
+"TargetTypeSelf_8cs.html":[2,0,0,1175],
+"TargetTypeSelf_8cs_source.html":[2,0,0,1175],
+"TargetType_8cs.html":[2,0,0,1167],
+"TargetType_8cs_source.html":[2,0,0,1167],
 "TaskBaseBuild_8cs.html":[2,0,0,1179],
 "TaskBaseBuild_8cs_source.html":[2,0,0,1179],
 "TaskBuild_8cs.html":[2,0,0,1180],
@@ -245,9 +249,5 @@ var NAVTREEINDEX15 =
 "TraitAgingShelf_8cs_source.html":[2,0,0,1294],
 "TraitAlchemyBench_8cs.html":[2,0,0,1295],
 "TraitAlchemyBench_8cs_source.html":[2,0,0,1295],
-"TraitAltarAncient_8cs.html":[2,0,0,1297],
-"TraitAltarAncient_8cs_source.html":[2,0,0,1297],
-"TraitAltarChaos_8cs.html":[2,0,0,1298],
-"TraitAltarChaos_8cs_source.html":[2,0,0,1298],
-"TraitAltar_8cs.html":[2,0,0,1296]
+"TraitAltarAncient_8cs.html":[2,0,0,1297]
 };

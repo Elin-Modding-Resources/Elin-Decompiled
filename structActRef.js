@@ -7,5 +7,6 @@ var structActRef =
     [ "noFriendlyFire", "structActRef.html#abfc464fdd3e596a00bdf6800760db8e4", null ],
     [ "origin", "structActRef.html#afc9ae67b7e1e41acdf678677ac27aff9", null ],
     [ "refThing", "structActRef.html#aed660e8c81b801eb55e081280b5d53b9", null ],
+    [ "refVal", "structActRef.html#a809e3c3effcf16a4323a273007d4e61f", null ],
     [ "idEle", "structActRef.html#a4b9b674623fe3e57a333b4cbca98a28f", null ]
 ];
