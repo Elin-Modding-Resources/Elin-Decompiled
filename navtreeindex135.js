@@ -1,5 +1,7 @@
 var NAVTREEINDEX135 =
 {
+"classWidgetSystemIndicator.html#a3e7fcc6d97015223cefee7fd0c09b6b9":[1,0,2073,5],
+"classWidgetSystemIndicator.html#aa3f3e941f11e5bb4a76bfbbf7e7cb0ae":[1,0,2073,6],
 "classWidgetSystemIndicator.html#aae9b2ecccc3f563137087ce47aae2b5c":[1,0,2073,2],
 "classWidgetSystemIndicator.html#ab0408025a004e2809a58868e80aabca8":[1,0,2073,4],
 "classWidgetSystemIndicator.html#ac83ba921adc18b411cb10ca38aa9cb9c":[1,0,2073,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX135 =
 "classWindowChara.html#a4a46d3a0e6ea169a0c1918256948ec27":[1,0,2078,13],
 "classWindowChara.html#a4b7492bbd60c98a9b4dedb9be947e5e7":[1,0,2078,42],
 "classWindowChara.html#a4bfe7ba6d0dc8b0476e5c31f8002460f":[1,0,2078,17],
-"classWindowChara.html#a4c8eaa43f35b454f92289347487cf571":[1,0,2078,88],
-"classWindowChara.html#a55344b853c12fbd88b039f6f2298231f":[1,0,2078,56],
-"classWindowChara.html#a61923e5cdeadf13e25a64407bc8e6f1b":[1,0,2078,67]
+"classWindowChara.html#a4c8eaa43f35b454f92289347487cf571":[1,0,2078,88]
 };

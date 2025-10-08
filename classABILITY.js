@@ -3,6 +3,7 @@ var classABILITY =
     [ "ActAttack", "classABILITY.html#a480423be656e4071170825580acac0fe", null ],
     [ "ActBash", "classABILITY.html#abf77bd1c1befef9de38f56383d2ce637", null ],
     [ "ActBladeStorm", "classABILITY.html#a146a0ed607929f03e2a95de24f4504e6", null ],
+    [ "ActBladeStorm2", "classABILITY.html#a7edc8817641203cdfbbe45c4a51852c4", null ],
     [ "ActBurnMana", "classABILITY.html#aea9a939db95ae9c37059c9761a21c31e", null ],
     [ "ActCancelTask", "classABILITY.html#ace019e9ba722e4d94c4da89a2f125da6", null ],
     [ "ActCatHuffing", "classABILITY.html#a5cf3ddc801d7197abf955bec58a37b6f", null ],

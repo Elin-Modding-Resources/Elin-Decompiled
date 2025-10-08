@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"classCoreConfig_1_1CustomFont.html":[1,0,394,2],
 "classCoreConfig_1_1CustomFont.html#a40c781f5c9abceb5eb26e3b2b79741bb":[1,0,394,2,1],
 "classCoreConfig_1_1CustomFont.html#a611ad66b05aaf615bdb61b1ecb05c9ae":[1,0,394,2,0],
 "classCoreConfig_1_1Fix.html":[1,0,394,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "classCoreDebug.html#a3dd8759e6eb7bf73a70208c3ac52a7d0":[1,0,395,118],
 "classCoreDebug.html#a414dd42e255bbf90e35040c297c033bf":[1,0,395,77],
 "classCoreDebug.html#a4174c41a757e35f7322a88f50e442d1f":[1,0,395,88],
-"classCoreDebug.html#a4222ed6c357bc9acb5a75925915d233c":[1,0,395,85],
-"classCoreDebug.html#a45c6f601d342957a061988f460601015":[1,0,395,116]
+"classCoreDebug.html#a4222ed6c357bc9acb5a75925915d233c":[1,0,395,85]
 };

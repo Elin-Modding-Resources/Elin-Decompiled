@@ -1,5 +1,7 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMerchantBooze.html":[1,0,1675],
+"classTraitMerchantBooze.html#a8421907c2aa603915ee4f9e73ffcf0c0":[1,0,1675,0],
 "classTraitMerchantBread.html":[1,0,1676],
 "classTraitMerchantBread.html#ad8d3e750f17db5fba4fffa2b85f95d8e":[1,0,1676,0],
 "classTraitMerchantDeed.html":[1,0,1677],
@@ -247,7 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitPillowGod.html":[1,0,1740],
 "classTraitPillowGod.html#a12103e758f3a07f7cfde68d18d211303":[1,0,1740,0],
 "classTraitPillowItzpalt.html":[1,0,1741],
-"classTraitPillowItzpalt.html#a53db86df55de7a593f182c72e3b393e8":[1,0,1741,0],
-"classTraitPillowJure.html":[1,0,1742],
-"classTraitPillowJure.html#adc8f9f6ee80dbf56471f8a5f6314d8ea":[1,0,1742,0]
+"classTraitPillowItzpalt.html#a53db86df55de7a593f182c72e3b393e8":[1,0,1741,0]
 };

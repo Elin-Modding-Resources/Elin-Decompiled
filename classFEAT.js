@@ -86,6 +86,7 @@ var classFEAT =
     [ "featMelilithCurse", "classFEAT.html#a318995a3d2e08f515350ea9ecbb96f2f", null ],
     [ "featMetal", "classFEAT.html#a67495792c015fbced7e56646b3644b03", null ],
     [ "featMilitant", "classFEAT.html#ae6b3e3d6709e2df6db4cf7e14b916073", null ],
+    [ "featMiscreation", "classFEAT.html#a0a4a0be928ad7b2242152e979415ecf2", null ],
     [ "featModelBeliever", "classFEAT.html#a2af69a5227cfe8a862b423832d03a645", null ],
     [ "featNegotiate", "classFEAT.html#afdc6723070cbfd787f607e4cef09bdbe", null ],
     [ "featNirvana", "classFEAT.html#a195c2d549673ea9f76a90d9400cfabc4", null ],

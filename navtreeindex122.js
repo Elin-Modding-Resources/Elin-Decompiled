@@ -1,5 +1,7 @@
 var NAVTREEINDEX122 =
 {
+"classTraitScrollMapTreasure.html#af245a67d8ce512e3782a88bd23660eb7":[1,0,1798,4],
+"classTraitScrollMapTreasure.html#af38bfbf4f2ddaba9ed132d105c072f45":[1,0,1798,1],
 "classTraitScrollRandom.html":[1,0,1799],
 "classTraitScrollRandom.html#a08b514b9e11ff796bc1684237c39b766":[1,0,1799,5],
 "classTraitScrollRandom.html#a255d6649635ecb3991ab2016bc0f018e":[1,0,1799,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitSyringeHeaven.html#a6a425d99bf997b603378092c768b36d1":[1,0,1858,0],
 "classTraitSyringeHeaven.html#ae116be70d6483b666e6ec18323d1b57f":[1,0,1858,1],
 "classTraitTV.html":[1,0,1913],
-"classTraitTape.html":[1,0,1859],
-"classTraitTape.html#a55f53a4890e234310abe5f347103bf29":[1,0,1859,0],
-"classTraitTape.html#a639842fd0fbd83e545993a38b6319009":[1,0,1859,2]
+"classTraitTape.html":[1,0,1859]
 };

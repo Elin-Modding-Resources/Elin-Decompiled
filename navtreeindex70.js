@@ -1,5 +1,7 @@
 var NAVTREEINDEX70 =
 {
+"classHomeResourceWorth.html#ae9dcdb6b6e66397ee5b1e09cf119d9f0":[1,0,627,0],
+"classHomeResourceWorth.html#afc0ef6c94c4f21c1de0f76b4737dc433":[1,0,627,1],
 "classHomeResource_1_1Cost.html":[1,0,614,0],
 "classHomeResource_1_1Cost.html#a2313fe7e50537b17cb666952e54e2a35":[1,0,614,0,2],
 "classHomeResource_1_1Cost.html#a370a8865b902743bc2154df1d302192b":[1,0,614,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX70 =
 "classHotItemWidgetSet.html#a3e0fb1dac5d1f737584492ff5854288b":[1,0,655,5],
 "classHotItemWidgetSet.html#a40eb8c31ef81ddd262d4a3bc3f9fc40e":[1,0,655,1],
 "classHotItemWidgetSet.html#a76d19587af7bfca0e054e1a4d80c048c":[1,0,655,6],
-"classHotItemWidgetSet.html#a7798477f62113b7db87bf6b8e10fda7d":[1,0,655,3],
-"classHotItemWidgetSet.html#a8a10c2ee3ae46f69a68689dcfb6c45a7":[1,0,655,4],
-"classHotItemWidgetSet.html#ae55366a0b9aac964bde2ad38211ff7ea":[1,0,655,2]
+"classHotItemWidgetSet.html#a7798477f62113b7db87bf6b8e10fda7d":[1,0,655,3]
 };
