@@ -27,7 +27,7 @@ public class ActMultihit : Ability
 				{
 					orgTC.pos.PlayEffect("ab_bladestorm");
 				}
-				orgTC.pos.PlaySound("ab_swarm");
+				orgTC.pos.PlaySound((base.source.id == 6665) ? "ab_shred" : "ab_swarm");
 			});
 			num++;
 			new ActMeleeBladeStorm().Perform(Act.CC, orgTC);

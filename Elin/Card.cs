@@ -4417,7 +4417,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				if (HasCondition<ConRebirth>())
 				{
 					Say("rebirth", this);
-					hp = Mathf.Min(MaxHP * (int)(5f + Mathf.Sqrt(Chara.GetCondition<ConRebirth>().power)) / 100, MaxHP);
+					hp = (int)Mathf.Min((long)MaxHP * (long)(int)(5f + Mathf.Sqrt(Chara.GetCondition<ConRebirth>().power)) / 100, MaxHP);
 					Chara.AddCondition<ConInvulnerable>();
 					Chara.RemoveCondition<ConRebirth>();
 					PlayEffect("revive");

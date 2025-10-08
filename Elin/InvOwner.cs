@@ -1337,7 +1337,7 @@ public class InvOwner : EClass
 			}
 			if (flag2 && (!t.c_isImportant || !destInvOwner.DenyImportant))
 			{
-				if (!flag3 && (Trader.currency == CurrencyType.None || t.GetPrice() == 0))
+				if (!flag3 && (Trader.currency == CurrencyType.None || (Trader.currency != CurrencyType.Influence && t.GetPrice(Trader.currency, sell: false, Trader.priceType) == 0)))
 				{
 					Transaction trans2 = new Transaction(b, t.Num);
 					if (trans2.IsValid())

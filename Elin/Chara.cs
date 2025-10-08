@@ -703,7 +703,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override bool IsMultisize => sourceCard.multisize;
 
-	public override int MaxHP => (int)Mathf.Clamp(((long)(base.END * 2 + base.STR + base.WIL / 2) * (long)Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((base.IsPCFactionOrMinion ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100, 1f, 100000000f);
+	public override int MaxHP => (int)Mathf.Clamp(((long)(base.END * 2 + base.STR + base.WIL / 2) * (long)Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((base.IsPCFactionOrMinion ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100, 1f, 1E+09f);
 
 	public override int WeightLimit => Mathf.Max((base.STR * 500 + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000, 1000);
 
@@ -1603,6 +1603,10 @@ public class Chara : Card, IPathfindWalker
 			{
 				SetFeat(1644, j + 1);
 			}
+		}
+		if (id == "putty_mech")
+		{
+			SetFeat(1248, 1 + EClass.rnd(5));
 		}
 		InitStats();
 		body.SetOwner(this);
@@ -9335,7 +9339,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (TC.hp > TC.MaxHP * Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 35 : 25) / 100)
+		if (TC.hp > (long)TC.MaxHP * (long)Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 35 : 25) / 100)
 		{
 			return false;
 		}

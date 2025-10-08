@@ -1103,6 +1103,10 @@ public class GoalCombat : Goal
 			{
 				num8 = 0;
 			}
+			if (owner.HasElement(1238) && num8 < -15)
+			{
+				num8 = -15;
+			}
 			switch (num7)
 			{
 			case 910:

@@ -623,10 +623,13 @@ public class AttackProcess : EClass
 		}
 		else
 		{
-			id = CC.id;
-			if (id == "rabbit_vopal" || id == "mantis_killer")
+			switch (CC.id)
 			{
+			case "mech_death":
+			case "rabbit_vopal":
+			case "mantis_killer":
 				list.Add(Element.Create(6650, 100));
+				break;
 			}
 		}
 		int bane;

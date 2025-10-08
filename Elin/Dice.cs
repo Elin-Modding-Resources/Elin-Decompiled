@@ -16,7 +16,7 @@ public class Dice
 	{
 		int a = 1;
 		bool flag = true;
-		int num2 = 0;
+		long num2 = 0L;
 		if (card != null)
 		{
 			int num3 = card.Evalue(78);
@@ -25,16 +25,20 @@ public class Dice
 		}
 		for (int i = 0; i < Mathf.Min(a, 20); i++)
 		{
-			int num4 = Roll();
+			long num4 = Roll();
 			if (i == 0 || (flag && num4 > num2) || (!flag && num4 < num2))
 			{
 				num2 = num4;
 			}
 		}
-		return num2;
-		int Roll()
+		return (int)Mathf.Clamp(num2, -214748370f, 214748370f);
+		long Roll()
 		{
-			int num5 = 0;
+			if (num >= 100)
+			{
+				return (long)num * (long)(rnd(sides) + 1);
+			}
+			long num5 = 0L;
 			for (int j = 0; j < num; j++)
 			{
 				num5 += rnd(sides) + 1;
@@ -45,7 +49,7 @@ public class Dice
 
 	public static int RollMax(int num, int sides, int bonus = 0)
 	{
-		return num * sides + bonus;
+		return (int)Mathf.Clamp((long)num * (long)sides + bonus, -2.1474836E+09f, 2.1474836E+09f);
 	}
 
 	public static int rnd(int a)

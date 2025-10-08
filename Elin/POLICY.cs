@@ -3,29 +3,29 @@ using UnityEngine;
 
 public class POLICY
 {
-	public const int suite_room = 2813;
-
-	public const int license_food = 2818;
-
-	public const int store_premium = 2817;
+	public const int license_furniture = 2819;
 
 	public const int mass_exhibition = 2814;
 
 	public const int platinum_ticket = 2815;
 
-	public const int license_furniture = 2819;
-
 	public const int store_ripoff = 2816;
+
+	public const int store_premium = 2817;
+
+	public const int license_food = 2818;
 
 	public const int license_general = 2820;
 
-	public const int milk_fan = 2825;
+	public const int suite_room = 2813;
 
 	public const int celeb = 2822;
 
 	public const int legendary_exhibition = 2823;
 
 	public const int license_stolen = 2824;
+
+	public const int milk_fan = 2825;
 
 	public const int egg_fan = 2826;
 
@@ -37,7 +37,7 @@ public class POLICY
 
 	public const int bed_quality = 2812;
 
-	public const int speed_growth = 2516;
+	public const int energy_conservation = 2700;
 
 	public const int open_business = 2810;
 
@@ -73,7 +73,7 @@ public class POLICY
 
 	public const int human_right = 2506;
 
-	public const int energy_conservation = 2700;
+	public const int speed_growth = 2516;
 
 	public const int border_watch = 2704;
 
@@ -107,10 +107,10 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2813, 2818, 2817, 2814, 2815, 2819, 2816, 2820, 2825, 2822,
-		2823, 2824, 2826, 2827, 2828, 2821, 2812, 2516, 2810, 2508,
+		2819, 2814, 2815, 2816, 2817, 2818, 2820, 2813, 2822, 2823,
+		2824, 2825, 2826, 2827, 2828, 2821, 2812, 2700, 2810, 2508,
 		2509, 2510, 2511, 2505, 2504, 2503, 2502, 2501, 2500, 2811,
-		2507, 2512, 2513, 2514, 2506, 2700, 2704, 2703, 2705, 2515,
+		2507, 2512, 2513, 2514, 2506, 2516, 2704, 2703, 2705, 2515,
 		2707, 2708, 2709, 2706, 2711, 2712, 2715, 2800, 2702, 2701,
 		2710
 	};
