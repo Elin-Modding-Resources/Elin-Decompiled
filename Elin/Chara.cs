@@ -1537,7 +1537,6 @@ public class Chara : Card, IPathfindWalker
 			_race = null;
 			_job = null;
 			num = 10 + EClass.rnd(40);
-			ChangeMaterial(race.material, ignoreFixedMaterial: true);
 		}
 		bio = new Biography();
 		bio.Generate(this);
@@ -1593,6 +1592,8 @@ public class Chara : Card, IPathfindWalker
 		_idTimeTable = ((EClass.rnd(5) == 0) ? 1 : 0);
 		ApplyRace();
 		ApplyJob();
+		Debug.Log(source.defMat);
+		ChangeMaterial(source.defMat.IsEmpty(race.material), ignoreFixedMaterial: true);
 		if (num != source.LV)
 		{
 			SetLv(num);
@@ -1604,7 +1605,8 @@ public class Chara : Card, IPathfindWalker
 				SetFeat(1644, j + 1);
 			}
 		}
-		if (id == "putty_mech")
+		string text = id;
+		if (text == "putty_mech_b" || text == "putty_mech")
 		{
 			SetFeat(1248, 1 + EClass.rnd(5));
 		}
@@ -1617,15 +1619,6 @@ public class Chara : Card, IPathfindWalker
 		}
 		switch (id)
 		{
-		case "golem_wood":
-			ChangeMaterial("pine");
-			break;
-		case "golem_steel":
-			ChangeMaterial("steel");
-			break;
-		case "golem_gold":
-			ChangeMaterial("gold");
-			break;
 		case "dodo":
 			base.idSkin = EClass.rnd(4);
 			break;
@@ -2249,7 +2242,7 @@ public class Chara : Card, IPathfindWalker
 		base.c_idRace = idNew;
 		_race = null;
 		ApplyRace();
-		ChangeMaterial(race.material);
+		ChangeMaterial(source.defMat.IsEmpty(race.material));
 	}
 
 	public void MakePartyMemeber()
@@ -4785,6 +4778,9 @@ public class Chara : Card, IPathfindWalker
 			case "trooper":
 			case "mech_scarab":
 				AddThing("gun_laser");
+				break;
+			case "rocketman":
+				AddThing("panzerfaust");
 				break;
 			default:
 				switch (equip)

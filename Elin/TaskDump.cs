@@ -135,7 +135,7 @@ public class TaskDump : Task
 
 	public bool IsValidContainer(Thing c)
 	{
-		if ((!c.ExistsOnMap && !c.IsInstalled) || !c.CanSearchContents)
+		if (!c.ExistsOnMap || !c.IsInstalled || !c.CanSearchContents)
 		{
 			return false;
 		}

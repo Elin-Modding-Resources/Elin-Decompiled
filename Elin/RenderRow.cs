@@ -238,7 +238,7 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		{
 			useAltColor = true;
 		}
-		DefaultMaterial = sources.materials.alias[defMat];
+		DefaultMaterial = sources.materials.alias[defMat.IsEmpty("granite")];
 	}
 
 	public virtual void SetTiles()

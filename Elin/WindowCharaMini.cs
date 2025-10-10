@@ -193,10 +193,7 @@ public class WindowCharaMini : WindowController
 			note.SetActive(enable: true);
 			note.AddText("feat_pet".lang(chara.feat.ToString() ?? "", num.ToString() ?? ""));
 			note.AddText("feat_inferior".lang(chara.CurrentGeneSlot.ToString() ?? "", chara.MaxGeneSlot.ToString() ?? "", ((genes != null) ? genes.inferior : 0).ToString() ?? ""));
-			if (!chara.isScaled)
-			{
-				note.AddText("feat_pet_type1".lang());
-			}
+			note.AddText((chara.isScaled ? "feat_pet_type2" : "feat_pet_type1").lang());
 			note.Space(8);
 			foreach (CharaUpgrade.Item item6 in upgrades.items)
 			{

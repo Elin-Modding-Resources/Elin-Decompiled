@@ -18,6 +18,7 @@ public class TraitDrinkMilkMother : TraitDrinkMilk
 	{
 		if (c.Evalue(1232) > 0)
 		{
+			c.isScaled = true;
 			c.SetFeat(1232, c.Evalue(1232) - 1);
 			int uidNext = EClass.game.cards.uidNext;
 			EClass.game.cards.uidNext = 1;

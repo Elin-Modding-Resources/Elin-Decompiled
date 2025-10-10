@@ -3050,6 +3050,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			LayerInventory.SetDirty(Thing);
 		}
 		ApplyMaterial();
+		Debug.Log(id + "/" + row.alias);
 		return this;
 	}
 

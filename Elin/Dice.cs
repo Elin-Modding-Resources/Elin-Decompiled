@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Dice
@@ -12,11 +13,43 @@ public class Dice
 
 	public Card card;
 
+	public static int MaxValue => 214748364;
+
+	public static int Roll_Normal(long num, long sides, int bonus = 0)
+	{
+		double num2 = (double)(num * (sides + 1)) / 2.0;
+		double num3 = Math.Sqrt((double)(num * (sides * sides - 1)) / 12.0);
+		double d = (double)(rnd(1000000) + 1) / 1000001.0;
+		double num4 = (double)(rnd(1000000) + 1) / 1000001.0;
+		double num5 = Math.Sqrt(-2.0 * Math.Log(d)) * Math.Cos(Math.PI * 2.0 * num4);
+		long num6 = (long)Math.Floor(num2 + num3 * num5 + 0.5);
+		long num7 = num * sides;
+		if (num6 < num)
+		{
+			num6 = num;
+		}
+		if (num6 > num7)
+		{
+			num6 = num7;
+		}
+		return (int)Mathf.Clamp(num6 + bonus, -MaxValue, MaxValue);
+	}
+
+	public static int Roll_Precise(int num, int sides, int bonus = 0)
+	{
+		long num2 = 0L;
+		for (int i = 0; i < num; i++)
+		{
+			num2 += rnd(sides) + 1;
+		}
+		return (int)Mathf.Clamp(num2 + bonus, -MaxValue, MaxValue);
+	}
+
 	public static int Roll(int num, int sides, int bonus = 0, Card card = null)
 	{
 		int a = 1;
 		bool flag = true;
-		long num2 = 0L;
+		int num2 = 0;
 		if (card != null)
 		{
 			int num3 = card.Evalue(78);
@@ -25,31 +58,18 @@ public class Dice
 		}
 		for (int i = 0; i < Mathf.Min(a, 20); i++)
 		{
-			long num4 = Roll();
+			int num4 = ((num >= 10) ? Roll_Normal(num, sides, bonus) : Roll_Precise(num, sides, bonus));
 			if (i == 0 || (flag && num4 > num2) || (!flag && num4 < num2))
 			{
 				num2 = num4;
 			}
 		}
-		return (int)Mathf.Clamp(num2, -214748370f, 214748370f);
-		long Roll()
-		{
-			if (num >= 100)
-			{
-				return (long)num * (long)(rnd(sides) + 1);
-			}
-			long num5 = 0L;
-			for (int j = 0; j < num; j++)
-			{
-				num5 += rnd(sides) + 1;
-			}
-			return num5 + bonus;
-		}
+		return num2;
 	}
 
 	public static int RollMax(int num, int sides, int bonus = 0)
 	{
-		return (int)Mathf.Clamp((long)num * (long)sides + bonus, -2.1474836E+09f, 2.1474836E+09f);
+		return (int)Mathf.Clamp((long)num * (long)sides + bonus, -MaxValue, MaxValue);
 	}
 
 	public static int rnd(int a)
