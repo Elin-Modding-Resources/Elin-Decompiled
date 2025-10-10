@@ -1,11 +1,13 @@
 var NAVTREEINDEX33 =
 {
-"classB83_1_1Win32_1_1WinAPI.html#a9a888675f368835d5381a910d6ac002d":[0,4,3,0,5,6],
+"classB83_1_1Win32_1_1WinAPI.html#a788aafe4e05cd2b07acbe7b1a3c88ef0":[1,0,3,0,5,1],
+"classB83_1_1Win32_1_1WinAPI.html#a788aafe4e05cd2b07acbe7b1a3c88ef0":[0,4,3,0,5,1],
 "classB83_1_1Win32_1_1WinAPI.html#a9a888675f368835d5381a910d6ac002d":[1,0,3,0,5,6],
-"classB83_1_1Win32_1_1WinAPI.html#ac683a983c57fd196757f0e878db2856a":[0,4,3,0,5,8],
+"classB83_1_1Win32_1_1WinAPI.html#a9a888675f368835d5381a910d6ac002d":[0,4,3,0,5,6],
 "classB83_1_1Win32_1_1WinAPI.html#ac683a983c57fd196757f0e878db2856a":[1,0,3,0,5,8],
-"classB83_1_1Win32_1_1WinAPI.html#ad2e074a8d44b02eca36cadd5039dd35c":[0,4,3,0,5,2],
+"classB83_1_1Win32_1_1WinAPI.html#ac683a983c57fd196757f0e878db2856a":[0,4,3,0,5,8],
 "classB83_1_1Win32_1_1WinAPI.html#ad2e074a8d44b02eca36cadd5039dd35c":[1,0,3,0,5,2],
+"classB83_1_1Win32_1_1WinAPI.html#ad2e074a8d44b02eca36cadd5039dd35c":[0,4,3,0,5,2],
 "classB83_1_1Win32_1_1WinAPI.html#adc3077735be895222508c63aee3eecd0":[1,0,3,0,5,0],
 "classB83_1_1Win32_1_1WinAPI.html#adc3077735be895222508c63aee3eecd0":[0,4,3,0,5,0],
 "classB83_1_1Win32_1_1Window.html":[0,4,3,0,6],
@@ -24,8 +26,8 @@ var NAVTREEINDEX33 =
 "classB83_1_1Win32_1_1Window.html#ac300578e4b0af3f334770f0f3232ba94":[1,0,3,0,6,7],
 "classB83_1_1Win32_1_1Window.html#af25bdc24b43ab769e9e3948278387e34":[1,0,3,0,6,0],
 "classB83_1_1Win32_1_1Window.html#af25bdc24b43ab769e9e3948278387e34":[0,4,3,0,6,0],
-"classB83_1_1Win32_1_1Window.html#af5b696a93148d4e20d8748ee5b041c07":[0,4,3,0,6,5],
 "classB83_1_1Win32_1_1Window.html#af5b696a93148d4e20d8748ee5b041c07":[1,0,3,0,6,5],
+"classB83_1_1Win32_1_1Window.html#af5b696a93148d4e20d8748ee5b041c07":[0,4,3,0,6,5],
 "classBLOCK.html":[1,0,224],
 "classBLOCK.html#a23de3ab68e86d6c6057c7f8384ab47f2":[1,0,224,4],
 "classBLOCK.html#a794af3f013ea2ec4583a24a7611d493f":[1,0,224,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX33 =
 "classBaseGameScreen.html#a4ebaf4c324519c9d27215dfb427a4d74":[1,0,201,79],
 "classBaseGameScreen.html#a4ff4a48a3d93d16e7ecaf8252a44a8c8":[1,0,201,91],
 "classBaseGameScreen.html#a52b82b4666768ce632a0ef44ff1ce10d":[1,0,201,70],
-"classBaseGameScreen.html#a54493ba9e29fdbedf246761da6b5a1f6":[1,0,201,24],
-"classBaseGameScreen.html#a5564bfeeee5f25e859968723e0b1110a":[1,0,201,68],
-"classBaseGameScreen.html#a56d61b8e7d27f1dae8042ac3a4e3d71e":[1,0,201,48]
+"classBaseGameScreen.html#a54493ba9e29fdbedf246761da6b5a1f6":[1,0,201,24]
 };

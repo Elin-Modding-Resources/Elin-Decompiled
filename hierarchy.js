@@ -876,7 +876,9 @@ var hierarchy =
         [ "GrowSystemDeco", "classGrowSystemDeco.html", null ],
         [ "GrowSystemKinoko", "classGrowSystemKinoko.html", null ],
         [ "GrowSystemPlant", "classGrowSystemPlant.html", [
-          [ "GrowSystemFlower", "classGrowSystemFlower.html", null ],
+          [ "GrowSystemFlower", "classGrowSystemFlower.html", [
+            [ "GrowSystemSunFlower", "classGrowSystemSunFlower.html", null ]
+          ] ],
           [ "GrowSystemHerb", "classGrowSystemHerb.html", null ]
         ] ],
         [ "GrowSystemTree", "classGrowSystemTree.html", [
