@@ -1047,6 +1047,7 @@ var hierarchy =
           ] ]
         ] ],
         [ "QuestSequence", "classQuestSequence.html", [
+          [ "QuestCurry", "classQuestCurry.html", null ],
           [ "QuestCursedManor", "classQuestCursedManor.html", null ],
           [ "QuestGuild", "classQuestGuild.html", [
             [ "QuestGuildFighter", "classQuestGuildFighter.html", null ],

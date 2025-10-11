@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classAI__Eat.html#a8536f42d8c4eb6d844f9eaa1e92c8ab8":[1,0,75,0],
+"classAI__Eat.html#ab690b73b45a79070cc3064497a145f7e":[1,0,75,4],
 "classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d":[1,0,75,1],
 "classAI__Eat.html#acfde6bf6461e7ffac35078af83ee4dc9":[1,0,75,7],
 "classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27":[1,0,75,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Shopping.html#a01a70a3b3ef3975f2e9d1b3c5ab2b794":[1,0,103,0],
 "classAI__Shopping.html#a158c36d90bb5aac91c70370ce801c86f":[1,0,103,3],
 "classAI__Shopping.html#a2c01f15e38fb0fdd2af72f1fe6b33063":[1,0,103,6],
-"classAI__Shopping.html#a42cded5e30559548bc10fb69eb204036":[1,0,103,4],
-"classAI__Shopping.html#a76defeb518ece87524e36dd12a179517":[1,0,103,2],
-"classAI__Shopping.html#ac76130e6a44ded98121bff1e1a694966":[1,0,103,1]
+"classAI__Shopping.html#a42cded5e30559548bc10fb69eb204036":[1,0,103,4]
 };

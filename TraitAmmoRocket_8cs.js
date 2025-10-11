@@ -1,4 +1,4 @@
 var TraitAmmoRocket_8cs =
 [
-    [ "TraitAmmoRocket", "classTraitAmmoRocket.html", null ]
+    [ "TraitAmmoRocket", "classTraitAmmoRocket.html", "classTraitAmmoRocket" ]
 ];

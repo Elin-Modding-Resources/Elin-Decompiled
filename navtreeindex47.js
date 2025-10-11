@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classClassExtension.html#ad7e7bd1622837586607111b77df15320":[1,0,283,40],
+"classClassExtension.html#ad7efed2659de7998eb032294b17d8638":[1,0,283,81],
 "classClassExtension.html#ad83c7b04c72d726cb8bb53c139a27e55":[1,0,283,92],
 "classClassExtension.html#ad95cfc56e6d71bd8fde088b58b905fb4":[1,0,283,87],
 "classClassExtension.html#ad984248017e2e34c8a8ed1a7febdc955":[1,0,283,149],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "classConExcommunication.html#a91a2fc70525688f3aa694564f7fc8755":[1,0,318,1],
 "classConExcommunication.html#aeb4b487f70e6a73064577459f103e21d":[1,0,318,2],
 "classConFaint.html":[1,0,319],
-"classConFaint.html#ad53e4873652814051e91b7e246c506b8":[1,0,319,2],
-"classConFaint.html#ae47670ce05a674f1bf38e90f91f29332":[1,0,319,3],
-"classConFaint.html#aecd51ad518af16f3d9464e0f411e9f89":[1,0,319,1]
+"classConFaint.html#ad53e4873652814051e91b7e246c506b8":[1,0,319,2]
 };

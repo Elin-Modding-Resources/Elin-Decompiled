@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"classCoreConfig_1_1CameraConfig.html#acf02511682c5af7530c0329ba977a034":[1,0,394,1,15],
+"classCoreConfig_1_1CameraConfig.html#ad27f61137025c6319891b1fe4cbbf10f":[1,0,394,1,10],
 "classCoreConfig_1_1CameraConfig.html#ad7ff889daf5a99898924d8ef998f866d":[1,0,394,1,5],
 "classCoreConfig_1_1CameraConfig.html#af40da0879521fdac83f2640b055cd3d9":[1,0,394,1,1],
 "classCoreConfig_1_1CustomFont.html":[1,0,394,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "classCoreDebug.html#a3a05a80b89a8da322d9567378b6dd0fd":[1,0,395,23],
 "classCoreDebug.html#a3a27692b085ee18baec1e1ef4815c849":[1,0,395,64],
 "classCoreDebug.html#a3cb0d4364a0c8b5156ac890f10ecdb13":[1,0,395,53],
-"classCoreDebug.html#a3d40a73e8260db594d63b298cee1e364":[1,0,395,121],
-"classCoreDebug.html#a3dd8759e6eb7bf73a70208c3ac52a7d0":[1,0,395,118],
-"classCoreDebug.html#a414dd42e255bbf90e35040c297c033bf":[1,0,395,77]
+"classCoreDebug.html#a3d40a73e8260db594d63b298cee1e364":[1,0,395,121]
 };

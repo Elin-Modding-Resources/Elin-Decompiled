@@ -1,7 +1,7 @@
 var classCardBlueprint =
 [
     [ "Chara", "classCardBlueprint.html#a5e98cfd83c297ebdad0cf923b242d695", null ],
-    [ "Set", "classCardBlueprint.html#a18b60d165d8c871b70de666860c7489f", null ],
+    [ "Set", "classCardBlueprint.html#a564cdf8fd4f0cd93b0cdbfb450d40afb", null ],
     [ "SetNormalRarity", "classCardBlueprint.html#af242f3d605483f7d2642e85ea17e6b92", null ],
     [ "SetRarity", "classCardBlueprint.html#a35683206540567f9be046a908309be3a", null ],
     [ "_Default", "classCardBlueprint.html#ab67836bad84ab1ef8ed01509778166ee", null ],

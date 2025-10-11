@@ -1,5 +1,7 @@
 var NAVTREEINDEX26 =
 {
+"classAI__Shopping.html#a76defeb518ece87524e36dd12a179517":[1,0,103,2],
+"classAI__Shopping.html#ac76130e6a44ded98121bff1e1a694966":[1,0,103,1],
 "classAI__Shopping.html#afda40fea3bff1ec4fb73a5cf55160a7b":[1,0,103,5],
 "classAI__Slaughter.html":[1,0,104],
 "classAI__Slaughter.html#a16689423e5131b45820a096462bb7e45":[1,0,104,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX26 =
 "classAM__Build.html#a6a450ead9391efc3aa0132f148b69cfa":[1,0,134,7],
 "classAM__Build.html#a6b3bb41f72b80ba47f9ed3cbe62043eb":[1,0,134,11],
 "classAM__Build.html#a6ffe63899cd26bb278bf88a714c8d94a":[1,0,134,10],
-"classAM__Build.html#a86fd13bd62d79e7d45fc36891445082d":[1,0,134,14],
-"classAM__Build.html#a871b35969398c63b105a030299a212f6":[1,0,134,9],
-"classAM__Build.html#a92223aa73fa422cc2d2116e7f9509ff0":[1,0,134,39]
+"classAM__Build.html#a86fd13bd62d79e7d45fc36891445082d":[1,0,134,14]
 };

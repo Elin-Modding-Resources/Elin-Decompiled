@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"classAM__NewZone.html#a402fe04b0da9c143cbc3c2d008d69380":[1,0,152,0],
+"classAM__NewZone.html#a539915d1652325ee945f5de647cd8ca0":[1,0,152,1],
 "classAM__NewZone.html#a6651d994f8d13adcef4c74ec2beb261d":[1,0,152,3],
 "classAM__NewZone.html#abf5844c46d0fa2438ae229a6444ac248":[1,0,152,2],
 "classAM__NoMap.html":[1,0,153],
@@ -247,7 +249,5 @@ var NAVTREEINDEX28 =
 "classActDreamBug.html#adfab6195ef0f06f5b668cba7c4486252":[1,0,25,0],
 "classActEffect.html":[1,0,26],
 "classActEffect.html#a2cd07b7bdaa20ad3aa59e4d1e79d61ce":[1,0,26,6],
-"classActEffect.html#a2fa2767bb66d306d1f23e8c975ec29ae":[1,0,26,5],
-"classActEffect.html#a39e42ac0f851b751eea933f9b08fedd2":[1,0,26,8],
-"classActEffect.html#a494eaa0133cff03438f71b1ba8cb5e88":[1,0,26,3]
+"classActEffect.html#a2fa2767bb66d306d1f23e8c975ec29ae":[1,0,26,5]
 };
