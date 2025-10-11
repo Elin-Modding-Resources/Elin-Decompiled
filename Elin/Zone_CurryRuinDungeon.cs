@@ -10,6 +10,8 @@ public class Zone_CurryRuinDungeon : Zone_QuestDungeon
 
 	public override bool LockExit => base.lv <= -1;
 
+	public override bool CanUnlockExit => EClass.game.quests.IsStarted<QuestCurry>();
+
 	public override string idExport
 	{
 		get
@@ -18,7 +20,7 @@ public class Zone_CurryRuinDungeon : Zone_QuestDungeon
 			{
 				return base.idExport;
 			}
-			return "vernis_mine_boss";
+			return "curry_boss";
 		}
 	}
 

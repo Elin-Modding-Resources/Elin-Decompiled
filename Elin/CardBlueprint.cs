@@ -43,9 +43,9 @@ public class CardBlueprint
 		};
 	}
 
-	public static void Set(CardBlueprint _bp)
+	public static void Set(CardBlueprint _bp = null)
 	{
-		current = _bp;
+		current = _bp ?? _Default;
 	}
 
 	public static void SetNormalRarity(bool fixedMat = false)

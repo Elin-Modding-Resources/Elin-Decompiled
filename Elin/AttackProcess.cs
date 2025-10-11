@@ -411,25 +411,26 @@ public class AttackProcess : EClass
 			{
 				if (EClass.core.IsGameStarted && _CC.IsAliveInCurrentZone && _zone == _CC.currentZone)
 				{
-					string id = _weapon.id;
-					if (!(id == "gun_rail"))
+					switch (_weapon.id)
 					{
-						if (id == "gun_laser")
-						{
-							_CC.PlayEffect("laser").GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
-						}
-						else
-						{
-							Effect effect = Effect.Get("ranged_arrow")._Play(_CC.pos, _CC.isSynced ? _CC.renderer.position : _CC.pos.Position(), 0f, _TP, data.sprite);
-							if (isCane)
-							{
-								effect.sr.color = effColor;
-							}
-						}
-					}
-					else
-					{
+					case "gun_rail":
 						_CC.PlayEffect("laser_rail").GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
+						break;
+					case "gun_laser":
+						_CC.PlayEffect("laser").GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
+						break;
+					case "gun_laser_assault":
+						Effect.Get("ranged_laser")._Play(_CC.pos, _CC.isSynced ? _CC.renderer.position : _CC.pos.Position(), 0f, _TP, data.sprite);
+						break;
+					default:
+					{
+						Effect effect = Effect.Get("ranged_arrow")._Play(_CC.pos, _CC.isSynced ? _CC.renderer.position : _CC.pos.Position(), 0f, _TP, data.sprite);
+						if (isCane)
+						{
+							effect.sr.color = effColor;
+						}
+						break;
+					}
 					}
 					if (data.eject)
 					{

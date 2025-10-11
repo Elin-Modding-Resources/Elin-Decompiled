@@ -5130,13 +5130,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (Chara.IsMachine)
 			{
+				bool flag3 = Chara.HasElement(1248);
 				if (chance(20))
 				{
-					list.Add(ThingGen.Create("microchip"));
+					list.Add(ThingGen.Create(flag3 ? "scrap" : "microchip"));
 				}
 				if (chance(15))
 				{
-					list.Add(ThingGen.Create("battery"));
+					list.Add(ThingGen.Create(flag3 ? "bolt" : "battery"));
 				}
 			}
 			else

@@ -865,6 +865,14 @@ public class CoreDebug : EScriptable
 		TraitStairs traitStairs = null;
 		if (Input.GetKeyDown(KeyCode.KeypadPlus) || (EInput.isShiftDown && Input.GetKeyDown(KeyCode.Period)))
 		{
+			TraitStairsLocked traitStairsLocked = EClass._map.FindThing<TraitStairsLocked>();
+			if (traitStairsLocked != null && EClass._zone.CanUnlockExit)
+			{
+				traitStairsLocked.OnUse(EClass.pc);
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.KeypadPlus) || (EInput.isShiftDown && Input.GetKeyDown(KeyCode.Period)))
+		{
 			traitStairs = EClass._map.FindThing<TraitStairsDown>();
 		}
 		if (Input.GetKeyDown(KeyCode.KeypadMinus) || (EInput.isShiftDown && Input.GetKeyDown(KeyCode.Comma)))

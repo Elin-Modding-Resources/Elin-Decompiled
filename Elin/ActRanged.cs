@@ -221,9 +221,9 @@ public class ActRanged : ActThrow
 				if (!item2.Equals(obj))
 				{
 					Chara firstChara = item2.FirstChara;
-					if ((firstChara == null || firstChara.IsHostile(Act.CC)) && (firstChara != null || scatter != 0))
+					if ((firstChara == null || firstChara.IsHostile(Act.CC)) && (firstChara != null || scatter != 0) && (scatter <= 0 || EClass.rnd(EClass.rnd(100) + 1) <= scatter))
 					{
-						Shoot(item2.FirstChara, item2);
+						Shoot(item2.FirstChara ?? item2.FindThing<TraitTrainingDummy>()?.owner, item2);
 					}
 				}
 			}

@@ -614,14 +614,14 @@ public class ElementContainer : EClass
 	public List<Element> ListBestAttributes()
 	{
 		List<Element> obj = ListElements((Element a) => a.HasTag("primary"));
-		obj.Sort((Element a, Element b) => (b.ValueWithoutLink - a.ValueWithoutLink) * 100000 + a.id - b.id);
+		obj.Sort((Element a, Element b) => (int)((long)(b.ValueWithoutLink - a.ValueWithoutLink) * 100000L + a.id - b.id));
 		return obj;
 	}
 
 	public List<Element> ListBestSkills()
 	{
 		List<Element> obj = ListElements((Element a) => a.source.category == "skill");
-		obj.Sort((Element a, Element b) => (b.ValueWithoutLink - a.ValueWithoutLink) * 100000 + a.id - b.id);
+		obj.Sort((Element a, Element b) => (int)((long)(b.ValueWithoutLink - a.ValueWithoutLink) * 100000L + a.id - b.id));
 		return obj;
 	}
 

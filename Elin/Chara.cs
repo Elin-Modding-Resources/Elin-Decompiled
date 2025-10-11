@@ -1752,6 +1752,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
+		if (CurrentGeneSlot != 0)
+		{
+			return false;
+		}
 		if (id == "mech_scarab" && (isSynced || pos.cell.light > 0 || (!EClass._map.IsIndoor && !pos.cell.HasRoof && !EClass.world.date.IsNight)))
 		{
 			return false;
@@ -1776,6 +1780,7 @@ public class Chara : Card, IPathfindWalker
 		chara.RefreshFaithElement();
 		chara.hp = (int)Mathf.Clamp((float)chara.MaxHP * ((float)base.hp / (float)MaxHP) * 0.99f, 0f, chara.MaxHP);
 		chara.isCopy = true;
+		chara.isScaled = base.isScaled;
 		if (HaveFur())
 		{
 			chara.c_fur = -1;
@@ -4758,6 +4763,7 @@ public class Chara : Card, IPathfindWalker
 		case "mech_angel":
 			if (onCreate)
 			{
+				CardBlueprint.Set();
 				Thing thing = ThingGen.Create("pole_holy");
 				thing.SetReplica(on: true);
 				thing.rarity = Rarity.Normal;
@@ -5556,6 +5562,19 @@ public class Chara : Card, IPathfindWalker
 			EClass.Sound.StopBGM(3f);
 			EClass._zone.SetBGM(1, refresh: false);
 			break;
+		case "doga":
+		{
+			QuestCurry questCurry = EClass.game.quests.Get<QuestCurry>();
+			if (questCurry != null)
+			{
+				num = 5;
+				flag = (flag2 = true);
+				EClass.Sound.StopBGM(3f);
+				EClass._zone.SetBGM(1, refresh: false);
+				questCurry.NextPhase();
+			}
+			break;
+		}
 		case "fairy_raina":
 		case "fairy_poina":
 		{

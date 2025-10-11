@@ -1776,6 +1776,8 @@ public class Trait : EClass
 				case ShopType.Medal:
 					NoRestockId("sword_dragon");
 					Add("sword_dragon", 1, 0).SetReplica(on: true);
+					NoRestockId("point_stick");
+					Add("point_stick", 1, 0).SetReplica(on: true);
 					NoRestockId("blunt_bonehammer");
 					Add("blunt_bonehammer", 1, 0).SetReplica(on: true);
 					NoRestockId("pole_gunlance");
