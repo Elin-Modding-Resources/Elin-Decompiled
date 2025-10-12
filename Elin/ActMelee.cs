@@ -449,7 +449,7 @@ public class ActMelee : ActBaseAttack
 							p.PlayEffect("smoke_shockwave");
 							p.Copy().Animate(AnimeID.QuakeMini, animeBlock: true);
 						}
-						foreach (Card item4 in p.ListCards())
+						foreach (Card item4 in p.ListCards().Copy())
 						{
 							if ((item4.trait.CanBeAttacked || (item4.isChara && item4.Chara.IsHostile(Act.CC))) && !item4.HasElement(430))
 							{

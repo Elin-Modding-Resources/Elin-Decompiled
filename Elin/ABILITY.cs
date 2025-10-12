@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ABILITY
 {
-	public const int ActInstall = 5046;
+	public const int ActPick = 5047;
 
 	public const int ActItem = 5048;
 
@@ -50,9 +50,9 @@ public class ABILITY
 
 	public const int ActNTR = 6603;
 
-	public const int ActPick = 5047;
+	public const int ActInstall = 5046;
 
-	public const int ActDraw = 6602;
+	public const int ActEntangle = 6601;
 
 	public const int ActCrabBreathe = 6500;
 
@@ -74,13 +74,13 @@ public class ABILITY
 
 	public const int AI_TendAnimal = 5043;
 
+	public const int Ranged = 5003;
+
 	public const int Melee = 5002;
 
 	public const int ActMelee = 5001;
 
 	public const int ActWait = 5000;
-
-	public const int TaskAttack = 5015;
 
 	public const int TaskTame = 5016;
 
@@ -140,7 +140,7 @@ public class ABILITY
 
 	public const int ActTouchDrown = 6613;
 
-	public const int ActEntangle = 6601;
+	public const int ActDraw = 6602;
 
 	public const int ActGazeInsane = 6621;
 
@@ -162,9 +162,9 @@ public class ABILITY
 
 	public const int breathe_Chaos = 50210;
 
-	public const int breathe_Magic = 50211;
-
 	public const int ActGazeDim = 6620;
+
+	public const int breathe_Ether = 50212;
 
 	public const int breathe_Acid = 50213;
 
@@ -173,8 +173,6 @@ public class ABILITY
 	public const int breathe_Impact = 50215;
 
 	public const int breathe_Void = 50216;
-
-	public const int Ranged = 5003;
 
 	public const int Sleep = 5004;
 
@@ -198,11 +196,13 @@ public class ABILITY
 
 	public const int TaskPlow = 5014;
 
+	public const int TaskAttack = 5015;
+
 	public const int breathe_Cold = 50201;
 
 	public const int breathe_Fire = 50200;
 
-	public const int breathe_Ether = 50212;
+	public const int breathe_Magic = 50211;
 
 	public const int ActHeadpat = 6904;
 
@@ -236,7 +236,15 @@ public class ABILITY
 
 	public const int ActBladeStorm = 6664;
 
+	public const int ActBladeStorm2 = 6665;
+
+	public const int ActWhirlwind = 6666;
+
 	public const int ActKizuamiTrick = 6903;
+
+	public const int ActSummonSpecial = 6800;
+
+	public const int StTaunt = 6700;
 
 	public const int ActLulwyTrick = 6902;
 
@@ -244,35 +252,29 @@ public class ABILITY
 
 	public const int ActManaAbsorb = 6900;
 
-	public const int SongTulip = 6751;
-
-	public const int SongSleep = 6750;
-
 	public const int ActMultiHit = 6663;
 
 	public const int StManaCost = 6720;
 
-	public const int StTaunt = 6700;
+	public const int SongSleep = 6750;
 
-	public const int ActSummonSpecial = 6800;
+	public const int SongTulip = 6751;
 
-	public const int ActBladeStorm2 = 6665;
-
-	public static readonly int[] IDS = new int[128]
+	public static readonly int[] IDS = new int[129]
 	{
-		5046, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055, 6001,
+		5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055, 6001,
 		6003, 6011, 6012, 6013, 6015, 6018, 6019, 6020, 6611, 6610,
-		6606, 6605, 6604, 6603, 5047, 6602, 6500, 6450, 6420, 6410,
-		6400, 6050, 6600, 6612, 5045, 5043, 5002, 5001, 5000, 5015,
+		6606, 6605, 6604, 6603, 5046, 6601, 6500, 6450, 6420, 6410,
+		6400, 6050, 6600, 6612, 5045, 5043, 5003, 5002, 5001, 5000,
 		5016, 5017, 5018, 5019, 5020, 5021, 5022, 5023, 5024, 5025,
 		5026, 5027, 5028, 5042, 5041, 5040, 5039, 5038, 5037, 5044,
-		5036, 5034, 5033, 5032, 5031, 5030, 5029, 5035, 6613, 6601,
+		5036, 5034, 5033, 5032, 5031, 5030, 5029, 5035, 6613, 6602,
 		6621, 50202, 50203, 50204, 50205, 50206, 50207, 50208, 50209, 50210,
-		50211, 6620, 50213, 50214, 50215, 50216, 5003, 5004, 5005, 5006,
-		5007, 5008, 5009, 5010, 5011, 5012, 5013, 5014, 50201, 50200,
-		50212, 6904, 6623, 6626, 6627, 6630, 6631, 6640, 6641, 7000,
-		6642, 6622, 6660, 6661, 6662, 6650, 6664, 6903, 6902, 6901,
-		6900, 6751, 6750, 6663, 6720, 6700, 6800, 6665
+		6620, 50212, 50213, 50214, 50215, 50216, 5004, 5005, 5006, 5007,
+		5008, 5009, 5010, 5011, 5012, 5013, 5014, 5015, 50201, 50200,
+		50211, 6904, 6623, 6626, 6627, 6630, 6631, 6640, 6641, 7000,
+		6642, 6622, 6660, 6661, 6662, 6650, 6664, 6665, 6666, 6903,
+		6800, 6700, 6902, 6901, 6900, 6663, 6720, 6750, 6751
 	};
 }
 public class Ability : Act

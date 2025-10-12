@@ -1,11 +1,5 @@
 public class FOOD
 {
-	public const int loseWeight = 706;
-
-	public const int food_CHA = 700;
-
-	public const int food_cat = 701;
-
 	public const int food_poison = 702;
 
 	public const int food_love = 703;
@@ -14,21 +8,27 @@ public class FOOD
 
 	public const int gainWeight = 705;
 
-	public const int kirimi = 707;
+	public const int loseWeight = 706;
+
+	public const int food_human = 708;
 
 	public const int food_undead = 709;
 
 	public const int justcooked = 757;
 
-	public const int food_god = 758;
+	public const int food_cat = 701;
 
 	public const int creativeDish = 764;
 
-	public const int food_human = 708;
+	public const int kirimi = 707;
+
+	public const int food_god = 758;
+
+	public const int food_CHA = 700;
 
 	public static readonly int[] IDS = new int[13]
 	{
-		706, 700, 701, 702, 703, 704, 705, 707, 709, 757,
-		758, 764, 708
+		702, 703, 704, 705, 706, 708, 709, 757, 701, 764,
+		707, 758, 700
 	};
 }

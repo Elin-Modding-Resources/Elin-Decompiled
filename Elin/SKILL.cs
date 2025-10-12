@@ -58,7 +58,7 @@ public class SKILL
 
 	public const int spotting = 210;
 
-	public const int weaponAxe = 102;
+	public const int weaponSword = 101;
 
 	public const int weaponDagger = 107;
 
@@ -106,7 +106,7 @@ public class SKILL
 
 	public const int weaponStaff = 103;
 
-	public const int weaponSword = 101;
+	public const int weaponAxe = 102;
 
 	public const int martial = 100;
 
@@ -270,10 +270,10 @@ public class SKILL
 	{
 		50, 109, 110, 111, 245, 122, 123, 130, 132, 133,
 		242, 241, 240, 237, 235, 230, 227, 226, 225, 220,
-		207, 200, 152, 151, 150, 135, 134, 131, 210, 102,
+		207, 200, 152, 151, 150, 135, 134, 131, 210, 101,
 		107, 71, 70, 68, 67, 66, 65, 72, 64, 61,
 		60, 57, 56, 55, 51, 62, 73, 74, 75, 106,
-		105, 104, 103, 101, 100, 93, 92, 91, 90, 80,
+		105, 104, 103, 102, 100, 93, 92, 91, 90, 80,
 		79, 78, 77, 76, 108, 250, 120, 256, 916, 917,
 		918, 919, 921, 922, 923, 924, 925, 926, 950, 951,
 		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,

@@ -212,20 +212,33 @@ public class ActRanged : ActThrow
 		{
 			EClass.Wait(0.25f, Act.CC);
 		}
-		Shoot(Act.TC, Act.TP);
+		Shoot(Act.TC, Act.TP, subAttack: false);
 		if (points.Count > 0)
 		{
 			Point obj = Act.TP.Copy();
 			foreach (Point item2 in points)
 			{
-				if (!item2.Equals(obj))
+				if (item2.Equals(obj))
 				{
-					Chara firstChara = item2.FirstChara;
-					if ((firstChara == null || firstChara.IsHostile(Act.CC)) && (firstChara != null || scatter != 0) && (scatter <= 0 || EClass.rnd(EClass.rnd(100) + 1) <= scatter))
+					continue;
+				}
+				Chara firstChara = item2.FirstChara;
+				if (firstChara != null && !firstChara.IsHostile(Act.CC))
+				{
+					continue;
+				}
+				if (scatter > 0)
+				{
+					if (EClass.rnd(EClass.rnd(100) + 1) > scatter)
 					{
-						Shoot(item2.FirstChara ?? item2.FindThing<TraitTrainingDummy>()?.owner, item2);
+						continue;
 					}
 				}
+				else if (firstChara == null)
+				{
+					continue;
+				}
+				Shoot(item2.FirstChara ?? item2.FindThing<TraitTrainingDummy>()?.owner, item2, subAttack: true);
 			}
 		}
 		if (!(weapon.trait is TraitToolRangeCane))
@@ -283,7 +296,7 @@ public class ActRanged : ActThrow
 				AttackProcess.Current.ignoreAttackSound = index > 1;
 			}
 		}
-		void Shoot(Card _tc, Point _tp)
+		void Shoot(Card _tc, Point _tp, bool subAttack)
 		{
 			float dmgMulti = 1f;
 			index++;
@@ -338,9 +351,9 @@ public class ActRanged : ActThrow
 						AttackProcess.Current.TC = chara;
 						AttackProcess.Current.TP.Set(chara.pos);
 						AttackProcess.Current.posRangedAnime = chara.pos;
-						AttackProcess.Current.Perform(j, hasHit, chara.IsPCFactionOrMinion ? 0.5f : 2.5f);
+						AttackProcess.Current.Perform(j, hasHit, chara.IsPCFactionOrMinion ? 0.1f : 2.5f, maxRoll: true, subAttack: true);
 					}
-					else if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
+					else if (AttackProcess.Current.Perform(j, hasHit, dmgMulti, maxRoll: false, subAttack))
 					{
 						hasHit = true;
 					}
@@ -351,7 +364,7 @@ public class ActRanged : ActThrow
 							if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, k + 2 + j)))
 							{
 								Act.CC.Say(Act.CC.IsHostile() ? "attack_chaser_enemy" : "attack_chaser");
-								if (AttackProcess.Current.Perform(j, hasHit, dmgMulti))
+								if (AttackProcess.Current.Perform(j, hasHit, dmgMulti, maxRoll: false, subAttack))
 								{
 									hasHit = true;
 									break;
@@ -406,7 +419,7 @@ public class ActRanged : ActThrow
 		}
 		if (ammo == null)
 		{
-			if (Act.CC.IsPC)
+			if (Act.CC.IsPC && !traitToolRange.AutoRefillAmmo)
 			{
 				if (!weapon.IsMeleeWithAmmo)
 				{

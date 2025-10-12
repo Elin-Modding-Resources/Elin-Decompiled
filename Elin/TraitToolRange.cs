@@ -4,6 +4,8 @@ public class TraitToolRange : TraitTool
 
 	public virtual bool NeedAmmo => true;
 
+	public virtual bool AutoRefillAmmo => false;
+
 	public int MaxAmmo => (GetParam(1) ?? "12").ToInt() * (100 + owner.Evalue(600) * 5) / 100;
 
 	public int ReloadTurn => (GetParam(2) ?? "4").ToInt() * 100 / (100 + owner.Evalue(601) * 10);
