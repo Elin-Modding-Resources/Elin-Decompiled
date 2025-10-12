@@ -724,6 +724,7 @@ var hierarchy =
               [ "ActParasite", "classActParasite.html", null ]
             ] ],
             [ "ActSwarm", "classActSwarm.html", null ],
+            [ "ActWhirlwind", "classActWhirlwind.html", null ],
             [ "Spell", "classSpell.html", [
               [ "ActArrow", "classActArrow.html", null ],
               [ "ActBall", "classActBall.html", null ],
@@ -742,6 +743,7 @@ var hierarchy =
               [ "ActMeleeCounter", "classActMeleeCounter.html", null ],
               [ "ActMeleeParry", "classActMeleeParry.html", null ],
               [ "ActMeleeSwarm", "classActMeleeSwarm.html", null ],
+              [ "ActMeleeWhilrwind", "classActMeleeWhilrwind.html", null ],
               [ "ActRush", "classActRush.html", null ]
             ] ],
             [ "ActThrow", "classActThrow.html", [
@@ -1402,7 +1404,9 @@ var hierarchy =
           ] ]
         ] ],
         [ "TraitBath", "classTraitBath.html", null ],
-        [ "TraitBed", "classTraitBed.html", null ],
+        [ "TraitBed", "classTraitBed.html", [
+          [ "TraitBedCoffin", "classTraitBedCoffin.html", null ]
+        ] ],
         [ "TraitBill", "classTraitBill.html", null ],
         [ "TraitBlanket", "classTraitBlanket.html", [
           [ "TraitBlanketColdproof", "classTraitBlanketColdproof.html", null ],
@@ -1714,6 +1718,7 @@ var hierarchy =
             [ "TraitAmmoBullet", "classTraitAmmoBullet.html", null ],
             [ "TraitAmmoEnergy", "classTraitAmmoEnergy.html", null ],
             [ "TraitAmmoRocket", "classTraitAmmoRocket.html", null ],
+            [ "TraitAmmoStone", "classTraitAmmoStone.html", null ],
             [ "TraitAmmoTalisman", "classTraitAmmoTalisman.html", null ]
           ] ],
           [ "TraitBank", "classTraitBank.html", null ],
@@ -1933,6 +1938,7 @@ var hierarchy =
         [ "TraitSyringeGene", "classTraitSyringeGene.html", null ],
         [ "TraitSyringeHeaven", "classTraitSyringeHeaven.html", null ],
         [ "TraitThrown", "classTraitThrown.html", [
+          [ "TraitThrownConsume", "classTraitThrownConsume.html", null ],
           [ "TraitThrownExplosive", "classTraitThrownExplosive.html", null ]
         ] ],
         [ "TraitTicketFurniture", "classTraitTicketFurniture.html", null ],
@@ -1977,7 +1983,8 @@ var hierarchy =
             [ "TraitToolRangeGun", "classTraitToolRangeGun.html", [
               [ "TraitToolRangeGunEnergy", "classTraitToolRangeGunEnergy.html", null ],
               [ "TraitToolRangeGunRocket", "classTraitToolRangeGunRocket.html", null ]
-            ] ]
+            ] ],
+            [ "TraitToolRangeSling", "classTraitToolRangeSling.html", null ]
           ] ],
           [ "TraitToolShears", "classTraitToolShears.html", null ],
           [ "TraitToolSickle", "classTraitToolSickle.html", null ],
