@@ -1752,7 +1752,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (CurrentGeneSlot != 0)
+		if (!EClass.game.principal.enableGeneDupe && CurrentGeneSlot != 0)
 		{
 			return false;
 		}
@@ -4763,7 +4763,6 @@ public class Chara : Card, IPathfindWalker
 		case "mech_angel":
 			if (onCreate)
 			{
-				CardBlueprint.Set();
 				Thing thing = ThingGen.Create("pole_holy");
 				thing.SetReplica(on: true);
 				thing.rarity = Rarity.Normal;

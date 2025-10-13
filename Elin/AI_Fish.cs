@@ -174,7 +174,11 @@ public class AI_Fish : AIAct
 
 	public override bool CanPerform()
 	{
-		return Act.TP.cell.IsTopWaterAndNoSnow;
+		if (!Act.TP.cell.IsTopWaterAndNoSnow)
+		{
+			return EClass._zone.IsUnderwater;
+		}
+		return true;
 	}
 
 	public override AIProgress CreateProgress()
@@ -193,7 +197,7 @@ public class AI_Fish : AIAct
 		}
 		if (pos != null)
 		{
-			if (!pos.cell.IsTopWaterAndNoSnow)
+			if (!pos.cell.IsTopWaterAndNoSnow && !EClass._zone.IsUnderwater)
 			{
 				yield return Cancel();
 			}
@@ -208,7 +212,7 @@ public class AI_Fish : AIAct
 					yield return Cancel();
 				}
 			}
-			if (!pos.cell.IsTopWaterAndNoSnow || owner.Dist(pos) > 1)
+			if ((!pos.cell.IsTopWaterAndNoSnow && !EClass._zone.IsUnderwater) || owner.Dist(pos) > 1)
 			{
 				yield return Cancel();
 			}
@@ -247,7 +251,7 @@ public class AI_Fish : AIAct
 		List<Point> list = owner.fov.ListPoints();
 		foreach (Point p in list)
 		{
-			if (p.cell.IsTopWaterAndNoSnow)
+			if (p.cell.IsTopWaterAndNoSnow && !EClass._zone.IsUnderwater)
 			{
 				continue;
 			}
@@ -256,7 +260,7 @@ public class AI_Fish : AIAct
 				for (int _z = p.z - 1; _z <= p.z + 1; _z++)
 				{
 					Point.shared.Set(_x, _z);
-					if (Point.shared.IsValid && Point.shared.cell.IsTopWaterAndNoSnow)
+					if (Point.shared.IsValid && (EClass._zone.IsUnderwater || Point.shared.cell.IsTopWaterAndNoSnow))
 					{
 						Point dest = Point.shared.Copy();
 						yield return DoGoto(dest);
@@ -272,7 +276,7 @@ public class AI_Fish : AIAct
 	public static Point GetFishingPoint(Point p)
 	{
 		Point point = new Point();
-		if (p.cell.IsTopWaterAndNoSnow)
+		if (p.cell.IsTopWaterAndNoSnow && !EClass._zone.IsUnderwater)
 		{
 			return Point.Invalid;
 		}
@@ -281,7 +285,7 @@ public class AI_Fish : AIAct
 			for (int j = p.z - 1; j <= p.z + 1; j++)
 			{
 				point.Set(i, j);
-				if (point.IsValid && point.cell.IsTopWaterAndNoSnow)
+				if (point.IsValid && (point.cell.IsTopWaterAndNoSnow || EClass._zone.IsUnderwater))
 				{
 					return point;
 				}

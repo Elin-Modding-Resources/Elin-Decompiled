@@ -167,6 +167,9 @@ public class GamePrincipal : EClass
 	public bool enableDamageReduction;
 
 	[JsonProperty]
+	public bool enableGeneDupe;
+
+	[JsonProperty]
 	public HashSet<string> modified = new HashSet<string>();
 
 	public bool IsCustom => id == -1;
@@ -215,6 +218,10 @@ public class GamePrincipal : EClass
 		Add(-1, Type.Legacy, "enableDamageReduction", () => enableDamageReduction, delegate(bool a)
 		{
 			enableDamageReduction = a;
+		});
+		Add(-1, Type.Legacy, "enableGeneDupe", () => enableGeneDupe, delegate(bool a)
+		{
+			enableGeneDupe = a;
 		});
 		Add(-1, Type.Flavor, "noAging", () => noAging, delegate(bool a)
 		{

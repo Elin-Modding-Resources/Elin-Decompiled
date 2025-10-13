@@ -2855,7 +2855,6 @@ public class BaseTileMap : EMono
 							_actorPos.x += pref.x * (float)((!t.flipX) ? 1 : (-1));
 							_actorPos.z += pref.z;
 							thingPos.z += pref.z;
-							liquidLv -= (int)(num27 * 150f);
 							if (liquidLv < 0)
 							{
 								liquidLv = 0;
@@ -2888,7 +2887,10 @@ public class BaseTileMap : EMono
 						flag = true;
 						float num28 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
 						orgY += 0.01f * floatY - num28;
-						num24 = num27;
+						if (!t.trait.IsChangeFloorHeight)
+						{
+							num24 = num27;
+						}
 						_actorPos.y += 0.01f * floatY - num28;
 						if (liquidLv > 10)
 						{

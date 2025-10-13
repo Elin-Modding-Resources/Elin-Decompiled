@@ -363,9 +363,9 @@ public class Point : EClass
 	{
 		get
 		{
-			if (cell.IsTopWaterAndNoSnow)
+			if (cell.IsTopWaterAndNoSnow || EClass._zone.IsUnderwater)
 			{
-				if (!EClass._zone.elements.Has(3701))
+				if (!EClass.debug.enable && !EClass._zone.elements.Has(3701))
 				{
 					return IsInSpot<TraitGeyser>();
 				}

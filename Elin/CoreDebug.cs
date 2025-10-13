@@ -549,6 +549,8 @@ public class CoreDebug : EScriptable
 				thing.AddThing("book", lv);
 				thing.AddThing("parchment");
 				thing.AddThing("book_ancient");
+				thing.AddCard(ThingGen.CreateRedBook("fox_dawn"));
+				thing.AddCard(ThingGen.CreateRedBook("forgotten_gods_1"));
 			}
 			EClass.pc.AddCard(thing);
 			thing.Dye("rubinus");
@@ -1013,8 +1015,14 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			EClass.player.ModFame(EClass.player.fame);
-			EClass.game.religions.ジュアさまの薄い本をください();
+			for (int j = 0; j < 100; j++)
+			{
+				Chara chara2 = EClass._zone.SpawnMob(null, SpawnSetting.HomeEnemy(10));
+				if (chara2.IsAnimal)
+				{
+					chara2.Destroy();
+				}
+			}
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))
@@ -1080,7 +1088,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int j = 0; j < advanceMin; j++)
+				for (int k = 0; k < advanceMin; k++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}

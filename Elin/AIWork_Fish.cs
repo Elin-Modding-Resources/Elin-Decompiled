@@ -4,7 +4,11 @@ public class AIWork_Fish : AIWork
 
 	public override bool FuncWorkPoint(Point p)
 	{
-		return p.IsWater;
+		if (!p.IsWater)
+		{
+			return EClass._zone.IsUnderwater;
+		}
+		return true;
 	}
 
 	public override AIAct GetWork(Point p)

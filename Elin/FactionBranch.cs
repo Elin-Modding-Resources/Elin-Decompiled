@@ -370,7 +370,11 @@ public class FactionBranch : EClass
 			int num7 = 1 + EClass.rnd(num2 + num3 + 1);
 			for (int i = 0; i < num7; i++)
 			{
-				EClass._zone.SpawnMob(null, SpawnSetting.HomeEnemy(DangerLV));
+				Chara chara = EClass._zone.SpawnMob(null, SpawnSetting.HomeEnemy(DangerLV));
+				if (chara.IsAnimal && policies.IsActive(2709))
+				{
+					chara.Destroy();
+				}
 			}
 		}
 		if ((date.IsRealTime || num2 == 0) && num6 != 0 && EClass.rnd(num6) == 0 && EClass._map.CountWildAnimal() < num4)
@@ -388,57 +392,57 @@ public class FactionBranch : EClass
 			}
 			if (EClass._map.CountGuest() < num8)
 			{
-				Chara chara;
+				Chara chara2;
 				if (luckyMonth || (policies.IsActive(2822) && Mathf.Sqrt(Evalue(2822) / 2) + 5f >= (float)EClass.rnd(100)))
 				{
-					chara = CharaGen.CreateWealthy(ContentLV);
-					EClass._zone.AddCard(chara, EClass._zone.GetSpawnPos(SpawnPosition.Guest) ?? EClass._map.GetRandomSurface());
+					chara2 = CharaGen.CreateWealthy(ContentLV);
+					EClass._zone.AddCard(chara2, EClass._zone.GetSpawnPos(SpawnPosition.Guest) ?? EClass._map.GetRandomSurface());
 				}
 				else
 				{
-					chara = EClass._zone.SpawnMob(null, SpawnSetting.HomeGuest(ContentLV));
+					chara2 = EClass._zone.SpawnMob(null, SpawnSetting.HomeGuest(ContentLV));
 				}
-				if (chara != null && (chara.id == "nun_mother" || chara.id == "prostitute") && policies.IsActive(2710))
+				if (chara2 != null && (chara2.id == "nun_mother" || chara2.id == "prostitute") && policies.IsActive(2710))
 				{
-					chara.Destroy();
-					chara = null;
+					chara2.Destroy();
+					chara2 = null;
 				}
-				if (chara != null)
+				if (chara2 != null)
 				{
 					statistics.visitor++;
-					chara.memberType = FactionMemberType.Guest;
-					chara.SetInt(34, EClass.world.date.GetRaw());
-					chara.c_allowance = chara.LV * 100;
-					if (chara.IsWealthy)
+					chara2.memberType = FactionMemberType.Guest;
+					chara2.SetInt(34, EClass.world.date.GetRaw());
+					chara2.c_allowance = chara2.LV * 100;
+					if (chara2.IsWealthy)
 					{
-						chara.c_allowance *= 10;
+						chara2.c_allowance *= 10;
 					}
 					if (date.IsRealTime)
 					{
-						Msg.Say("guestArrive", chara.Name);
+						Msg.Say("guestArrive", chara2.Name);
 					}
 					else
 					{
-						chara.TryAssignBed();
+						chara2.TryAssignBed();
 					}
 				}
 			}
 		}
-		foreach (Chara chara3 in EClass._map.charas)
+		foreach (Chara chara4 in EClass._map.charas)
 		{
-			if (chara3.memberType != FactionMemberType.Guest || ((chara3.c_allowance > 0 || EClass.rnd(2) != 0) && chara3.GetInt(34) + 10080 >= EClass.world.date.GetRaw()))
+			if (chara4.memberType != FactionMemberType.Guest || ((chara4.c_allowance > 0 || EClass.rnd(2) != 0) && chara4.GetInt(34) + 10080 >= EClass.world.date.GetRaw()))
 			{
 				continue;
 			}
-			foreach (Chara item in EClass._zone.ListMinions(chara3))
+			foreach (Chara item in EClass._zone.ListMinions(chara4))
 			{
 				item.Destroy();
 			}
-			if (!chara3.IsGlobal)
+			if (!chara4.IsGlobal)
 			{
-				chara3.Destroy();
+				chara4.Destroy();
 			}
-			chara3.ClearBed();
+			chara4.ClearBed();
 			break;
 		}
 		if (date.hour == 5)
@@ -480,11 +484,11 @@ public class FactionBranch : EClass
 			{
 				if (EClass.rnd(20) == 0 && thing.trait is TraitFoodEggFertilized && thing.pos.FindThing<TraitBed>() != null)
 				{
-					Chara chara2 = TraitFoodEggFertilized.Incubate(thing, thing.pos);
+					Chara chara3 = TraitFoodEggFertilized.Incubate(thing, thing.pos);
 					thing.ModNum(-1);
 					if (date.IsRealTime)
 					{
-						chara2.PlaySound("egg");
+						chara3.PlaySound("egg");
 					}
 					break;
 				}

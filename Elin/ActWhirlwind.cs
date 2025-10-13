@@ -13,18 +13,17 @@ public class ActWhirlwind : Ability
 
 	public override bool Perform()
 	{
-		List<Chara> list = Act.CC.pos.ListCharasInNeighbor((Chara c) => c != Act.CC);
+		List<Chara> list = Act.CC.pos.ListCharasInNeighbor((Chara c) => !c.pos.Equals(Act.CC.pos));
 		Act.CC.PlaySound("ab_shred2");
 		Act.CC.Say("abWhirlwind", Act.CC);
 		foreach (Chara item in list.Copy())
 		{
 			Act.TC = item;
-			if (!Act.CC.IsAliveInCurrentZone || !Act.TC.IsAliveInCurrentZone)
+			if (Act.CC.IsAliveInCurrentZone && Act.TC.IsAliveInCurrentZone)
 			{
-				break;
+				Act.TC.PlayEffect("ab_bladestorm");
+				new ActMeleeWhilrwind().Perform(Act.CC, Act.TC);
 			}
-			Act.TC.PlayEffect("ab_bladestorm");
-			new ActMeleeWhilrwind().Perform(Act.CC, Act.TC);
 		}
 		return true;
 	}

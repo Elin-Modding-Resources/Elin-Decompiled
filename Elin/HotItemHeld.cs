@@ -340,7 +340,7 @@ public class HotItemHeld : HotItemThing
 			p.TrySetAct(ACT.Ranged, tc);
 			return true;
 		}
-		if (cell.IsTopWaterAndNoSnow && thing.HasElement(245) && p.TrySetAct(new AI_Fish
+		if ((cell.IsTopWaterAndNoSnow || EClass._zone.IsUnderwater) && thing.HasElement(245) && p.TrySetAct(new AI_Fish
 		{
 			pos = pos.Copy()
 		}))

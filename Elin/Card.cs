@@ -4956,7 +4956,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			EClass._zone.AddCard(ThingGen.Create((EClass.rnd(2) == 0) ? "ash" : "ash2"), _pos);
 		}
-		if (trait.ThrowType == ThrowType.Explosive)
+		if (trait.ThrowType == ThrowType.Explosive && EClass.rnd((!(trait is TraitAmmoRocket)) ? 1 : 2) == 0)
 		{
 			Explode(pos, origin);
 		}
