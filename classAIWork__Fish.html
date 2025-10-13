@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.218 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.219 Nightly</span>
    </div>
   </td>
  </tr>
@@ -760,11 +760,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="AIWork__Fish_8cs_source.html#l00005">5</a> of file <a class="el" href="AIWork__Fish_8cs_source.html">AIWork_Fish.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> p.<a class="code hl_property" href="classPoint.html#a66b485bcaf78e89889e22baaee3a941b">IsWater</a>;</div>
-<div class="line"><span class="lineno">    8</span>    }</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (!p.<a class="code hl_property" href="classPoint.html#a66b485bcaf78e89889e22baaee3a941b">IsWater</a>)</div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">IsUnderwater</a>;</div>
+<div class="line"><span class="lineno">   10</span>        }</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
 <div class="ttc" id="aclassPoint_html_a66b485bcaf78e89889e22baaee3a941b"><div class="ttname"><a href="classPoint.html#a66b485bcaf78e89889e22baaee3a941b">Point.IsWater</a></div><div class="ttdeci">bool IsWater</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00129">Point.cs:129</a></div></div>
+<div class="ttc" id="aclassZone_html_acef4329fb52efa341f2aa9c0bef7c968"><div class="ttname"><a href="classZone.html#acef4329fb52efa341f2aa9c0bef7c968">Zone.IsUnderwater</a></div><div class="ttdeci">virtual bool IsUnderwater</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00264">Zone.cs:264</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Point_8cs_source.html#l00129">Point.IsWater</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l00264">Zone.IsUnderwater</a>, and <a class="el" href="Point_8cs_source.html#l00129">Point.IsWater</a>.</p>
 
 </div>
 </div>
@@ -794,13 +801,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classAIWork.html#af2c8f02ecc6f98c9c06d8a23e9b42fd9">AIWork</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AIWork__Fish_8cs_source.html#l00010">10</a> of file <a class="el" href="AIWork__Fish_8cs_source.html">AIWork_Fish.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classAI__Fish.html">AI_Fish</a></div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            pos = p.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>()</div>
-<div class="line"><span class="lineno">   15</span>        };</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AIWork__Fish_8cs_source.html#l00014">14</a> of file <a class="el" href="AIWork__Fish_8cs_source.html">AIWork_Fish.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classAI__Fish.html">AI_Fish</a></div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            pos = p.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>()</div>
+<div class="line"><span class="lineno">   19</span>        };</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
 <div class="ttc" id="aclassAI__Fish_html"><div class="ttname"><a href="classAI__Fish.html">AI_Fish</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Fish_8cs_source.html#l00004">AI_Fish.cs:5</a></div></div>
 <div class="ttc" id="aclassPoint_html_a3548549d3df5229465d73290f51446f5"><div class="ttname"><a href="classPoint.html#a3548549d3df5229465d73290f51446f5">Point.Copy</a></div><div class="ttdeci">Point Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00479">Point.cs:479</a></div></div>
 </div><!-- fragment -->

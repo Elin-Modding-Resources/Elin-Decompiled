@@ -16,6 +16,7 @@ var classGamePrincipal =
     [ "dropRate", "classGamePrincipal.html#a3696a08c9b43124ddbb84ae05d367841", null ],
     [ "dropRateMtp", "classGamePrincipal.html#afa4f16908f61111eda9ea80a758a2fe1", null ],
     [ "enableDamageReduction", "classGamePrincipal.html#a018779ceddaf2f8332ff5215b07bd9c8", null ],
+    [ "enableGeneDupe", "classGamePrincipal.html#aa3acaf24131562501a120c3f1f0f9eb5", null ],
     [ "id", "classGamePrincipal.html#a0a68bbd1b3d3d6c7e984284c25401aef", null ],
     [ "ignoreEvaluate", "classGamePrincipal.html#a7367a6d6ff6c977d173a412cfffc81dd", null ],
     [ "infiniteMarketFund", "classGamePrincipal.html#a32142e558ef82d06956a4711238713a4", null ],

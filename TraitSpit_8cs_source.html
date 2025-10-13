@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.218 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.219 Nightly</span>
    </div>
   </td>
  </tr>
@@ -92,30 +92,11 @@ $(document).ready(function(){initNavTree('TraitSpit_8cs_source.html',''); initRe
   <div class="headertitle"><div class="title">TraitSpit.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TraitSpit_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitSpit.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitSpit.html">TraitSpit</a> : <a class="code hl_class" href="classTraitItem.html">TraitItem</a></div>
+<a href="TraitSpit_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classTraitSpit.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classTraitSpit.html">TraitSpit</a> : <a class="code hl_class" href="classTraitItemToggle.html">TraitItemToggle</a></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classTraitSpit.html#a023497412d2becd7eea9d971c5b34eea">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitSpit.html#a023497412d2becd7eea9d971c5b34eea">IsAnimeOn</a> =&gt; <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTraitSpit.html#a6f69d57a3731693990f9d013d5d69080">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a> <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a> =&gt; <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a>.Custom;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classTraitSpit.html#a653abeb884c0fa30b8f261d70555a6d1">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classTraitSpit.html#a653abeb884c0fa30b8f261d70555a6d1">CanUseFromInventory</a> =&gt; <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classTraitSpit.html#a2d6b407bbf5d8fd27ba6b35f0f55490e">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTraitSpit.html#a2d6b407bbf5d8fd27ba6b35f0f55490e">OnUse</a>(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_function" href="classTrait.html#a7bd8f3a886ad660345993fb574c37767">Toggle</a>(!<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
-<div class="ttc" id="aToggleType_8cs_html_aecee16d60b8bc0be86b35c9932813db8"><div class="ttname"><a href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a></div><div class="ttdeci">ToggleType</div><div class="ttdef"><b>Definition:</b> <a href="ToggleType_8cs_source.html#l00001">ToggleType.cs:2</a></div></div>
-<div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00541">Card.cs:542</a></div></div>
-<div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
-<div class="ttc" id="aclassTraitItem_html"><div class="ttname"><a href="classTraitItem.html">TraitItem</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitItem_8cs_source.html#l00001">TraitItem.cs:2</a></div></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>}</div>
+<div class="ttc" id="aclassTraitItemToggle_html"><div class="ttname"><a href="classTraitItemToggle.html">TraitItemToggle</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitItemToggle_8cs_source.html#l00001">TraitItemToggle.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitSpit_html"><div class="ttname"><a href="classTraitSpit.html">TraitSpit</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSpit_8cs_source.html#l00001">TraitSpit.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitSpit_html_a023497412d2becd7eea9d971c5b34eea"><div class="ttname"><a href="classTraitSpit.html#a023497412d2becd7eea9d971c5b34eea">TraitSpit.IsAnimeOn</a></div><div class="ttdeci">override bool IsAnimeOn</div><div class="ttdef"><b>Definition:</b> <a href="TraitSpit_8cs_source.html#l00003">TraitSpit.cs:3</a></div></div>
-<div class="ttc" id="aclassTraitSpit_html_a2d6b407bbf5d8fd27ba6b35f0f55490e"><div class="ttname"><a href="classTraitSpit.html#a2d6b407bbf5d8fd27ba6b35f0f55490e">TraitSpit.OnUse</a></div><div class="ttdeci">override bool OnUse(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitSpit_8cs_source.html#l00009">TraitSpit.cs:9</a></div></div>
-<div class="ttc" id="aclassTraitSpit_html_a653abeb884c0fa30b8f261d70555a6d1"><div class="ttname"><a href="classTraitSpit.html#a653abeb884c0fa30b8f261d70555a6d1">TraitSpit.CanUseFromInventory</a></div><div class="ttdeci">override bool CanUseFromInventory</div><div class="ttdef"><b>Definition:</b> <a href="TraitSpit_8cs_source.html#l00007">TraitSpit.cs:7</a></div></div>
-<div class="ttc" id="aclassTrait_html_a7bd8f3a886ad660345993fb574c37767"><div class="ttname"><a href="classTrait.html#a7bd8f3a886ad660345993fb574c37767">Trait.Toggle</a></div><div class="ttdeci">virtual void Toggle(bool on, bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l01151">Trait.cs:1151</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00027">Trait.cs:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

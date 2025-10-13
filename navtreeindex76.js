@@ -1,5 +1,14 @@
 var NAVTREEINDEX76 =
 {
+"classLayerCraft.html#a557b77dbafa48b24d68507bf3a0f7c53":[1,0,775,21],
+"classLayerCraft.html#a5a28595a37cd8246266cacb2db8dfa2b":[1,0,775,19],
+"classLayerCraft.html#a652a92fd94f647b26d3ac3877fe52c6f":[1,0,775,27],
+"classLayerCraft.html#a6cbfe72fb77ede0b4fc5670284a1c131":[1,0,775,37],
+"classLayerCraft.html#a770dc865e6fd0e0b592aa47b971d62d4":[1,0,775,47],
+"classLayerCraft.html#a7cf22d769bc9a847ab58d9f7ab5c3aeb":[1,0,775,0],
+"classLayerCraft.html#a809491b0edebcdcf9ec5b030ae5c1b2c":[1,0,775,34],
+"classLayerCraft.html#a913cd9d777241e69331663d2ad649737":[1,0,775,11],
+"classLayerCraft.html#a9203c385514e02f2cf0838eb5f5e39ee":[1,0,775,5],
 "classLayerCraft.html#a9308769a6be0d255b40cb0ad84b50d9a":[1,0,775,31],
 "classLayerCraft.html#aa03c9f26606082939e48a84767e1fa6c":[1,0,775,38],
 "classLayerCraft.html#aa0a93c044e72c0e0ad95dc80f9002edd":[1,0,775,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX76 =
 "classLayerEditSkin.html":[1,0,787],
 "classLayerEditSkin.html#a2bd725a2b6720e08a238e342bdcd4cd5":[1,0,787,5],
 "classLayerEditSkin.html#a341c206c47558098081b6eeb3083d542":[1,0,787,6],
-"classLayerEditSkin.html#a35f3b802c065ad6978c711c9098566c7":[1,0,787,8],
-"classLayerEditSkin.html#a6b87246e65790bcbf4bac01f7ad396b0":[1,0,787,3],
-"classLayerEditSkin.html#a742a67d66bd54242751001d8ed50d6c6":[1,0,787,4],
-"classLayerEditSkin.html#a834579d35036f790511e5dd3f585673b":[1,0,787,7],
-"classLayerEditSkin.html#a868fc813656f781bb62dfe94d01baf54":[1,0,787,0],
-"classLayerEditSkin.html#ad6799ee18ad109b572a2dd29aa4be31e":[1,0,787,2],
-"classLayerEditSkin.html#af27903b72bc0dd70e9bbee145f154b9d":[1,0,787,9],
-"classLayerEditSkin.html#afda1d2138740f304e3c4099551ff4fe3":[1,0,787,1],
-"classLayerEmbark.html":[1,0,788],
-"classLayerEmbark.html#a00849cde67529780182e532463e738f8":[1,0,788,35]
+"classLayerEditSkin.html#a35f3b802c065ad6978c711c9098566c7":[1,0,787,8]
 };

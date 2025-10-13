@@ -1,5 +1,14 @@
 var NAVTREEINDEX115 =
 {
+"classTrait.html#ae81e301facb283e15daed9f7191f06d7":[1,0,1404,237],
+"classTrait.html#ae871dd13fc2fdff306261be34b481058":[1,0,1404,33],
+"classTrait.html#aea1c46b47612fab453627904323922c1":[1,0,1404,39],
+"classTrait.html#aeae7706effc27faab891e9b6e10b5dd8":[1,0,1404,139],
+"classTrait.html#aeaf83db7916e730b6b27066c133b240c":[1,0,1404,204],
+"classTrait.html#aeb890fe5326f5f413cf37c724575ab78":[1,0,1404,56],
+"classTrait.html#aec66c500d685baaf243439d35e918edc":[1,0,1404,191],
+"classTrait.html#aed09cbafae7f04e4f7d4d49c2128449a":[1,0,1404,96],
+"classTrait.html#aed1730d7a524f69fb70622a724dec91d":[1,0,1404,223],
 "classTrait.html#aed4006f6efad2511c58e0a56d28d4312":[1,0,1404,198],
 "classTrait.html#aed664cfcbe19bd9b7cb288461852ad46":[1,0,1404,85],
 "classTrait.html#aedbb4e6487f4b34075571d79d531cdeb":[1,0,1404,115],
@@ -80,6 +89,7 @@ var NAVTREEINDEX115 =
 "classTraitAmmoEnergy.html":[1,0,1417],
 "classTraitAmmoRocket.html":[1,0,1418],
 "classTraitAmmoRocket.html#a78c6030477eed382e68ad8eb977c25cf":[1,0,1418,1],
+"classTraitAmmoRocket.html#ac33cc621e0f3621bf969f32a72080602":[1,0,1418,2],
 "classTraitAmmoRocket.html#ae772e78f0b785bc4b1b1c3063bf59f53":[1,0,1418,0],
 "classTraitAmmoStone.html":[1,0,1419],
 "classTraitAmmoTalisman.html":[1,0,1420],
@@ -239,15 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitBlock.html":[1,0,1453],
 "classTraitBlock.html#ae426f33158dbe2679e431c2b12875260":[1,0,1453,0],
 "classTraitBlueprint.html":[1,0,1454],
-"classTraitBlueprint.html#a4989a72401bf958df7200cfd8e709a0c":[1,0,1454,1],
-"classTraitBlueprint.html#a5869a67e01e4a14c1ed8377ebc66171c":[1,0,1454,0],
-"classTraitBlueprint.html#ae167e9f3b6ec667b7c0ebee490542bae":[1,0,1454,2],
-"classTraitBlueprint.html#ae334cd0a729dcc765ac4591119ec1c53":[1,0,1454,3],
-"classTraitBoard.html":[1,0,1455],
-"classTraitBoard.html#a407b7284961e1471d7c5bbbd3e7f31e1":[1,0,1455,1],
-"classTraitBoard.html#a5ddcf4ad4fa81243fe28f07d14bc6aa5":[1,0,1455,0],
-"classTraitBoat.html":[1,0,1456],
-"classTraitBoat.html#a2bdc2e5b15308d9d3451a3dd390ad308":[1,0,1456,6],
-"classTraitBoat.html#a5253b9184dc5a75cacd2393a3b5e8045":[1,0,1456,5],
-"classTraitBoat.html#a705e954b7c448d954b7431ecd442e265":[1,0,1456,4]
+"classTraitBlueprint.html#a4989a72401bf958df7200cfd8e709a0c":[1,0,1454,1]
 };

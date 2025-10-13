@@ -1699,6 +1699,7 @@ var hierarchy =
         [ "TraitGene", "classTraitGene.html", null ],
         [ "TraitGenerator", "classTraitGenerator.html", [
           [ "TraitGeneratorDrain", "classTraitGeneratorDrain.html", null ],
+          [ "TraitGeneratorSolar", "classTraitGeneratorSolar.html", null ],
           [ "TraitGeneratorWheel", "classTraitGeneratorWheel.html", [
             [ "TraitGeneratorChair", "classTraitGeneratorChair.html", null ]
           ] ],
@@ -1757,6 +1758,10 @@ var hierarchy =
           [ "TraitGoodsCoin", "classTraitGoodsCoin.html", null ],
           [ "TraitHat", "classTraitHat.html", null ],
           [ "TraitItemProc", "classTraitItemProc.html", null ],
+          [ "TraitItemToggle", "classTraitItemToggle.html", [
+            [ "TraitDollHouse", "classTraitDollHouse.html", null ],
+            [ "TraitSpit", "classTraitSpit.html", null ]
+          ] ],
           [ "TraitMannequin", "classTraitMannequin.html", null ],
           [ "TraitMaterialHammer", "classTraitMaterialHammer.html", null ],
           [ "TraitMod", "classTraitMod.html", [
@@ -1781,7 +1786,6 @@ var hierarchy =
           [ "TraitRecycle", "classTraitRecycle.html", null ],
           [ "TraitRope", "classTraitRope.html", null ],
           [ "TraitScrollMapTreasure", "classTraitScrollMapTreasure.html", null ],
-          [ "TraitSpit", "classTraitSpit.html", null ],
           [ "TraitStairsLocked", "classTraitStairsLocked.html", null ],
           [ "TraitTape", "classTraitTape.html", null ],
           [ "TraitTaxChest", "classTraitTaxChest.html", null ],

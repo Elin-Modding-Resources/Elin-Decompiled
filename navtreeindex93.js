@@ -1,5 +1,14 @@
 var NAVTREEINDEX93 =
 {
+"classQuestInstance.html#ae9000f657901528c780313ade8ff5e63":[1,0,1010,1],
+"classQuestIntoDarkness.html":[1,0,1011],
+"classQuestIntoDarkness.html#a3cbee115eb43665d2c3f8e057f1dedc6":[1,0,1011,2],
+"classQuestIntoDarkness.html#a68d8645cb3cdb80412f5b86fa550469b":[1,0,1011,0],
+"classQuestIntoDarkness.html#abdb2a13c591879b41c096646bfb1574e":[1,0,1011,1],
+"classQuestIntroInspector.html":[1,0,1012],
+"classQuestIntroInspector.html#a9e2b1725e8742d671a5670dde1788930":[1,0,1012,0],
+"classQuestLoytelFarm.html":[1,0,1013],
+"classQuestLoytelFarm.html#a255474c30a08dee1bbdc10ba62f1fe07":[1,0,1013,1],
 "classQuestLoytelFarm.html#a5de61c383ad35c495dc4d4bef86a1dee":[1,0,1013,0],
 "classQuestLumiest.html":[1,0,1014],
 "classQuestLumiest.html#a54cc2df6c212876a66c403ede142d19a":[1,0,1014,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestVernis.html#a5adb13db581fadd870fcd4f35da58f8a":[1,0,1053,2],
 "classQuestVernis.html#a7139c08254711f7726d5326a64f1f103":[1,0,1053,5],
 "classQuestVernis.html#ab25e94b71d14c0e1d17f531ee38795fb":[1,0,1053,4],
-"classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1053,3],
-"classQueue.html":[1,0,1054],
-"classQueue.html#a0826a0ca90fa09ad272055106f0dd4f4":[1,0,1054,0],
-"classQueue.html#a7192b39ef1a910fc2d43f15da6dc6b76":[1,0,1054,3],
-"classQueue.html#a880c95d79c34d5fb28def28b077a64bf":[1,0,1054,2],
-"classQueue.html#a98ff6d6db53787f69d2c7e2b60a12e35":[1,0,1054,1],
-"classQueue.html#ac8a7eb59c6535ae32cc5c17a3360eb49":[1,0,1054,4],
-"classQueueList.html":[1,0,1055],
-"classQueueList.html#a8036c1811253966374d065f3d352f009":[1,0,1055,0],
-"classQueueManager.html":[1,0,1056]
+"classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1053,3]
 };

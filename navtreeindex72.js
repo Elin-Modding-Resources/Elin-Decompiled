@@ -1,5 +1,14 @@
 var NAVTREEINDEX72 =
 {
+"classInspectGroup.html#a93ac6dc86385fdaa196a51c9b8de5015":[1,0,677,8],
+"classInspectGroup.html#a9605303211fdabb3f3633f29c3c70443":[1,0,677,12],
+"classInspectGroup.html#a9ab1fd64ecde12ba4c9a13ba4b262a18":[1,0,677,6],
+"classInspectGroup.html#ab3cd00d780aa75375a472718e15ace6b":[1,0,677,7],
+"classInspectGroup.html#ab8b912d7c990122e9f2614b1148af78c":[1,0,677,13],
+"classInspectGroup.html#ac0b6e11239b0837a849a4972957c23c0":[1,0,677,1],
+"classInspectGroup.html#ac91fc16b2a17aba61c1341cbfea77438":[1,0,677,11],
+"classInspectGroup.html#adabacf0d555972b4fd33fe9f1d98b5c4":[1,0,677,5],
+"classInspectGroup.html#aeb4372a9bef65deb8636140a332ccd09":[1,0,677,10],
 "classInspectGroupArea.html":[1,0,678],
 "classInspectGroupArea.html#a125eb7bb2e2bbedd7784bd4aa40fe469":[1,0,678,0],
 "classInspectGroupArea.html#ad5bae8d20dde83d1125c0ef341979ce5":[1,0,678,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX72 =
 "classInvOwnerDraglet.html#ac1959160c6b80eead92649c9a10c5098":[1,0,698,1],
 "classInvOwnerDraglet.html#ac5c98d5cd1c72e25cbac1b9197cd5694":[1,0,698,25],
 "classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77e":[1,0,698,0],
-"classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77ea6adf97f83acf6453d4a6a4b1070f3754":[1,0,698,0,0],
-"classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77ead2e0379c3a30439bfc1b6869af4408cc":[1,0,698,0,1],
-"classInvOwnerDraglet.html#acf98939bbb5817a58c85ffaa6cae8563":[1,0,698,28],
-"classInvOwnerDraglet.html#acfd36dc0270dc37cd95c97e642647c44":[1,0,698,13],
-"classInvOwnerDraglet.html#ae83ddb901c756203313ff8ac207ba460":[1,0,698,14],
-"classInvOwnerDraglet.html#af82999adf60f4bb8b564cb05ef1b9981":[1,0,698,17],
-"classInvOwnerDraglet.html#afd1941b83bce7551f0c856e960511dd1":[1,0,698,29],
-"classInvOwnerEffect.html":[1,0,699],
-"classInvOwnerEffect.html#a3dd1c3dbb20ca852849e4a9191130dd3":[1,0,699,2],
-"classInvOwnerEffect.html#a5cd4bffb9091082643c8c77c4d11dbd7":[1,0,699,3]
+"classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77ea6adf97f83acf6453d4a6a4b1070f3754":[1,0,698,0,0]
 };

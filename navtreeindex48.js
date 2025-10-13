@@ -1,5 +1,11 @@
 var NAVTREEINDEX48 =
 {
+"classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,311,3],
+"classConDrawBacker.html":[1,0,313],
+"classConDrawMetal.html":[1,0,314],
+"classConDrawMonster.html":[1,0,315],
+"classConDrug.html":[1,0,316],
+"classConDrug.html#aad090d178235bc6ab316d8d622f891d4":[1,0,316,0],
 "classConDrunk.html":[1,0,317],
 "classConDrunk.html#a11a8096e5325f42bd1391942db043b05":[1,0,317,5],
 "classConDrunk.html#a3311f419c9464a6836f5d339af696e24":[1,0,317,2],
@@ -180,10 +186,12 @@ var NAVTREEINDEX48 =
 "classConWeakResEle.html":[1,0,391],
 "classConWeakness.html":[1,0,390],
 "classConWeapon.html":[1,0,392],
-"classConWeapon.html#a67f041b4924a9b7714b9f6c23f5f71df":[1,0,392,3],
+"classConWeapon.html#a19d89d5302482a64ba0fc4ca9a5547bd":[1,0,392,3],
+"classConWeapon.html#a67f041b4924a9b7714b9f6c23f5f71df":[1,0,392,5],
 "classConWeapon.html#a78014d205880f0aff39457469afc0272":[1,0,392,0],
-"classConWeapon.html#a83c2446cdf2064c5a5024bff09a8bfea":[1,0,392,2],
-"classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202":[1,0,392,1],
+"classConWeapon.html#a83c2446cdf2064c5a5024bff09a8bfea":[1,0,392,4],
+"classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202":[1,0,392,2],
+"classConWeapon.html#afa5c3bdf235e8f8bc9e64c28ec120006":[1,0,392,1],
 "classConWet.html":[1,0,393],
 "classConWet.html#a06230376e3e51455384ee8e0581ff506":[1,0,393,3],
 "classConWet.html#aa3870f2c1fdbf51345e087e460013891":[1,0,393,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX48 =
 "classConsoleProDebug.html#a72efd852c653b7075f18612cca75a578":[1,0,353,4],
 "classConsoleProDebug.html#a90cc98bec48ef69e4bf6644640efeaac":[1,0,353,1],
 "classContainerUpgrade.html":[1,0,358],
-"classContainerUpgrade.html#a969017964cffbab4999cf0ae01c2dde5":[1,0,358,1],
-"classContainerUpgrade.html#adca1c881c13b1c2ca8aa22f2da70c4a7":[1,0,358,0],
-"classContent.html":[1,0,360],
-"classContentChronicle.html":[1,0,361],
-"classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a":[1,0,361,1],
-"classContentChronicle.html#af35eec2b514361d7050bae67d6e1a686":[1,0,361,0],
-"classContentCodex.html":[1,0,362],
-"classContentCodex.html#a007eb841fa4ad581a0b7c79c75a8e459":[1,0,362,11],
-"classContentCodex.html#a31956b743c882e5eec0c7da891c71643":[1,0,362,0]
+"classContainerUpgrade.html#a969017964cffbab4999cf0ae01c2dde5":[1,0,358,1]
 };

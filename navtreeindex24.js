@@ -1,5 +1,11 @@
 var NAVTREEINDEX24 =
 {
+"classABILITY.html#a8ce6024b8807f0cdb90e472f6a60d80d":[1,0,11,66],
+"classABILITY.html#a8d8b17d09a341f1bce1bf7f1f22fbe9e":[1,0,11,17],
+"classABILITY.html#a8ff34e6723fa1cbad5c09d1a8061ff70":[1,0,11,18],
+"classABILITY.html#a908cbc412de7ae0a328ca0feb986b987":[1,0,11,47],
+"classABILITY.html#a913bf08ddb053d10d6d11470a1a6c33f":[1,0,11,14],
+"classABILITY.html#a93f575ff59f1c5af91dd5dea9aefc27f":[1,0,11,80],
 "classABILITY.html#a95955e7cb37876d089e49d8d96eea35c":[1,0,11,111],
 "classABILITY.html#a95edf2c42717e96eccb45f0365aca7a1":[1,0,11,63],
 "classABILITY.html#a963696db205f85846cd1f9d414257856":[1,0,11,35],
@@ -243,11 +249,5 @@ var NAVTREEINDEX24 =
 "classAI__Cook.html#a1a1ed7fa2d3a325c739c0879fef383ce":[1,0,71,1],
 "classAI__Cook.html#a377c39fd6dc18d190051c73dfd8d1201":[1,0,71,3],
 "classAI__Cook.html#a76cba3e04b6a5cb002b52f7e92004ab5":[1,0,71,2],
-"classAI__Cook.html#a9f2f32f1f082f586dd25e5a52f92f951":[1,0,71,0],
-"classAI__Craft.html":[1,0,72],
-"classAI__Craft.html#a6bcd8e21ecc43e79e06ad01eb6477e73":[1,0,72,0],
-"classAI__Craft__Snowman.html":[1,0,73],
-"classAI__Craft__Snowman.html#a48e8e0bbee2071fccee63b68ca1b842c":[1,0,73,0],
-"classAI__Dance.html":[1,0,74],
-"classAI__Dance.html#aa3511119c6cec3ec51e49dfbdf5dfaf4":[1,0,74,0]
+"classAI__Cook.html#a9f2f32f1f082f586dd25e5a52f92f951":[1,0,71,0]
 };

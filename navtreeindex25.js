@@ -1,5 +1,11 @@
 var NAVTREEINDEX25 =
 {
+"classAI__Craft.html":[1,0,72],
+"classAI__Craft.html#a6bcd8e21ecc43e79e06ad01eb6477e73":[1,0,72,0],
+"classAI__Craft__Snowman.html":[1,0,73],
+"classAI__Craft__Snowman.html#a48e8e0bbee2071fccee63b68ca1b842c":[1,0,73,0],
+"classAI__Dance.html":[1,0,74],
+"classAI__Dance.html#aa3511119c6cec3ec51e49dfbdf5dfaf4":[1,0,74,0],
 "classAI__Deconstruct.html":[1,0,75],
 "classAI__Deconstruct.html#a5d2fbe673e26f5251c11e3a2edc6a6c2":[1,0,75,1],
 "classAI__Deconstruct.html#ae85b22ad1a9c98986bdfbb9d9fd194fc":[1,0,75,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Read.html#a7a71040134c92c58a8550aa7320c0e6f":[1,0,101,3],
 "classAI__Read.html#ab9abd844f3d45c948dd5e4e773dfe686":[1,0,101,0],
 "classAI__Read.html#abf176bb2cce745515adc2673258f944a":[1,0,101,2],
-"classAI__ReleaseHeld.html":[1,0,102],
-"classAI__ReleaseHeld.html#a87122c51df0e433718abd7e2611ba109":[1,0,102,1],
-"classAI__ReleaseHeld.html#ac3307266cdb37eadc1bf5db1d14b236c":[1,0,102,0],
-"classAI__SelfHarm.html":[1,0,103],
-"classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f":[1,0,103,0],
-"classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912":[1,0,103,1],
-"classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d":[1,0,103,2]
+"classAI__ReleaseHeld.html":[1,0,102]
 };
