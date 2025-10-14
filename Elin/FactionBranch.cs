@@ -1499,6 +1499,10 @@ public class FactionBranch : EClass
 		{
 			Msg.Say("banish", c, EClass._zone.Name);
 		}
+		if (c.trait.RemoveGlobalOnBanish)
+		{
+			c.RemoveGlobal();
+		}
 		if (c.IsGlobal)
 		{
 			c.OnBanish();
@@ -1518,7 +1522,10 @@ public class FactionBranch : EClass
 			c.currentZone.map.props.sales.Remove(c);
 		}
 		c.RefreshWorkElements();
-		c.RemoveGlobal();
+		if (!(c.trait is TraitUniqueChara) && !c.IsUnique && !EClass.game.cards.listAdv.Contains(c))
+		{
+			c.RemoveGlobal();
+		}
 		members.Remove(c);
 		EClass.pc.faction.charaElements.OnRemoveMember(c);
 		c.SetFaction(EClass.game.factions.Wilds);

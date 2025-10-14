@@ -13,4 +13,6 @@ public class TraitBigDaddy : TraitChara
 			return 3;
 		}
 	}
+
+	public override bool RemoveGlobalOnBanish => true;
 }

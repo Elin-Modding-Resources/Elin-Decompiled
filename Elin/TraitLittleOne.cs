@@ -5,4 +5,6 @@ public class TraitLittleOne : TraitChara
 	public override bool CanInvite => false;
 
 	public override bool IsCountAsResident => true;
+
+	public override bool RemoveGlobalOnBanish => true;
 }

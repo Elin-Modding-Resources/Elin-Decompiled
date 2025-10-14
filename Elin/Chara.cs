@@ -1492,7 +1492,7 @@ public class Chara : Card, IPathfindWalker
 
 	public void RemoveGlobal()
 	{
-		if (IsGlobal && !(trait is TraitUniqueChara) && !base.IsUnique && !EClass.game.cards.listAdv.Contains(this))
+		if (IsGlobal)
 		{
 			global = null;
 			EClass.game.cards.globalCharas.Remove(this);

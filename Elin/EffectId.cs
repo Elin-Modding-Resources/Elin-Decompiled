@@ -129,5 +129,6 @@ public enum EffectId
 	LittleSisterMigration = 305,
 	ReturnVoid = 306,
 	Bit = 307,
-	Rocket = 308
+	Rocket = 308,
+	StripBlessing = 309
 }

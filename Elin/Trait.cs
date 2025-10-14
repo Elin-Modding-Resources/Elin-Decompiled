@@ -553,6 +553,8 @@ public class Trait : EClass
 
 	public virtual string LangBarter => "daBuy";
 
+	public virtual bool RemoveGlobalOnBanish => false;
+
 	public string TextNextRestock => GetTextRestock(LangBarter, pet: false);
 
 	public string TextNextRestockPet => GetTextRestock((SlaverType == SlaverType.Slave) ? "daBuySlave" : "daBuyPet", pet: true);
