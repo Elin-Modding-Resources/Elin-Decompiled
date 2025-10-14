@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"classMapGenRegion.html#a9da6b8e8bd2c7729d1170c3f4ea9851f":[1,0,871,0],
 "classMapGenRegion.html#ad008731809459f3b74a3959984cfc28a":[1,0,871,2],
 "classMapGenVariation.html":[1,0,872],
 "classMapGenVariation.html#a42e9f93ff30e76e5e2f43f55ea2b54b5":[1,0,872,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "classModManager.html#a594b09f9d3d29068875fa79caa4b5ab1":[1,0,894,18],
 "classModManager.html#a72543a8d9f646fa41a019b19c5f92646":[1,0,894,19],
 "classModManager.html#a76a8d2fbb962ccaa2d1393f2719b454e":[1,0,894,16],
-"classModManager.html#a7bd714c9042cc306187915ad62ceccbe":[1,0,894,6],
-"classModManager.html#a80fd4b86d141d807723e33bfcef61576":[1,0,894,2]
+"classModManager.html#a7bd714c9042cc306187915ad62ceccbe":[1,0,894,6]
 };

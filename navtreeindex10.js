@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"LayerProgress_8cs_source.html":[2,0,0,767],
 "LayerQuestBoard_8cs.html":[2,0,0,768],
 "LayerQuestBoard_8cs_source.html":[2,0,0,768],
 "LayerQuickMenu_8cs.html":[2,0,0,769],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "NumLogManager_8cs_source.html":[2,0,0,859],
 "NumLogStability_8cs.html":[2,0,0,860],
 "NumLogStability_8cs_source.html":[2,0,0,860],
-"NumLogWorth_8cs.html":[2,0,0,861],
-"NumLogWorth_8cs_source.html":[2,0,0,861]
+"NumLogWorth_8cs.html":[2,0,0,861]
 };

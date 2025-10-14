@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"QuestManager_8cs.html":[2,0,0,941],
 "QuestManager_8cs_source.html":[2,0,0,941],
 "QuestMeal_8cs.html":[2,0,0,942],
 "QuestMeal_8cs_source.html":[2,0,0,942],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "RescueState_8cs.html":[2,0,0,1041],
 "RescueState_8cs.html#aba5ea12c03a9af8192233ffe3b65e773":[2,0,0,1041,0],
 "RescueState_8cs.html#aba5ea12c03a9af8192233ffe3b65e773a2f65d34f490e1576ce63d4280934d778":[2,0,0,1041,0,1],
-"RescueState_8cs.html#aba5ea12c03a9af8192233ffe3b65e773a6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1041,0,0],
-"RescueState_8cs.html#aba5ea12c03a9af8192233ffe3b65e773ac249f44a1e2706ed0336cb53ea4e6176":[2,0,0,1041,0,2]
+"RescueState_8cs.html#aba5ea12c03a9af8192233ffe3b65e773a6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1041,0,0]
 };

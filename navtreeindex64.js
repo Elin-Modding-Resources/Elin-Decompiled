@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"classFactionBranch.html#a3cd83d8a98dce7a0d193a4f381ee0d89":[1,0,506,59],
 "classFactionBranch.html#a3d22d33b18cece476fcb819b2633cea9":[1,0,506,51],
 "classFactionBranch.html#a3e346e05a0d86c15dabd982f0a972c16":[1,0,506,14],
 "classFactionBranch.html#a4322facc3ab9b2901aa2cb266e3b899d":[1,0,506,80],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "classFov.html#ab3020eea48d4c9f57089156e42d10346":[1,0,521,20],
 "classFov.html#acf56909b1dad367885911e63a669d058":[1,0,521,19],
 "classFov.html#aec29277b16468f0d30faeea187811e84":[1,0,521,21],
-"classFowProfile.html":[1,0,522],
-"classFowProfile.html#a7e5e4aea769698da500f72ee42edf78e":[1,0,522,2]
+"classFowProfile.html":[1,0,522]
 };

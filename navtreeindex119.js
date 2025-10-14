@@ -1,5 +1,9 @@
 var NAVTREEINDEX119 =
 {
+"classTraitGenerator.html#a6ed75db33a6525b9478e937bac6f9a66":[1,0,1608,2],
+"classTraitGenerator.html#a9246204b2fd25126838aa27cf9c84f10":[1,0,1608,4],
+"classTraitGenerator.html#aa05bcef831a660e2357e0b1ad967f198":[1,0,1608,5],
+"classTraitGenerator.html#aaeed88be3bbbcb72f8d455c28e9da173":[1,0,1608,1],
 "classTraitGenerator.html#acba96b8b4ecc0e5108a029eca8411ca6":[1,0,1608,3],
 "classTraitGenerator.html#aeb1f1412c770daa859af6c226c4ae24a":[1,0,1608,6],
 "classTraitGeneratorChair.html":[1,0,1609],
@@ -206,6 +210,7 @@ var NAVTREEINDEX119 =
 "classTraitLittleBall.html#a4a80b199bb3d05a702c698829c40a713":[1,0,1662,0],
 "classTraitLittleOne.html":[1,0,1663],
 "classTraitLittleOne.html#a196d3faedc31a553cf60e02e07ec8eb1":[1,0,1663,1],
+"classTraitLittleOne.html#a684a3d82f3490aaf03fa09342ca9c16f":[1,0,1663,3],
 "classTraitLittleOne.html#a6879827034676409bc8095bb301c4222":[1,0,1663,0],
 "classTraitLittleOne.html#a709fb591676b3fbde62b1c23a06c7107":[1,0,1663,2],
 "classTraitLockpick.html":[1,0,1664],
@@ -244,10 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitMagicChest.html#ac653c6cbde0047caa6f0a25a70b8aaf5":[1,0,1670,2],
 "classTraitMagicChest.html#ad29543aa0f1c1c56d6c973b27d296a49":[1,0,1670,5],
 "classTraitMahjong.html":[1,0,1671],
-"classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1671,0],
-"classTraitMahjong.html#a86d68283a84acf869c68193fddf3a198":[1,0,1671,3],
-"classTraitMahjong.html#ab0a37c49a996da5b11700a4799287790":[1,0,1671,1],
-"classTraitMahjong.html#ac0ab7deae7e14aa5ee8f1bf073126970":[1,0,1671,2],
-"classTraitMaid.html":[1,0,1672],
-"classTraitMaid.html#a3f5b42d62953fd0ee2abec62a1650b89":[1,0,1672,0]
+"classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1671,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"ZonePreEnterEvent_8cs.html":[2,0,0,2048],
 "ZonePreEnterEvent_8cs_source.html":[2,0,0,2048],
 "ZonePreEnterOnCompleteQuestInstance_8cs.html":[2,0,0,2049],
 "ZonePreEnterOnCompleteQuestInstance_8cs_source.html":[2,0,0,2049],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classABILITY.html#a88fbcb25c56366a20a3ecd09a7fa81eb":[1,0,11,42],
 "classABILITY.html#a89dc084b7ac59c79348dbc591fecb19d":[1,0,11,122],
 "classABILITY.html#a8a69010ec89e0f07900917dc392cc4cd":[1,0,11,8],
-"classABILITY.html#a8aa04d3a9cc1f091358722d97a68e788":[1,0,11,65],
-"classABILITY.html#a8b063775d3de2c44ea41df8342a19f6e":[1,0,11,76]
+"classABILITY.html#a8aa04d3a9cc1f091358722d97a68e788":[1,0,11,65]
 };

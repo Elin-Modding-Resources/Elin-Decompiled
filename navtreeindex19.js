@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitRecipeBook_8cs_source.html":[2,0,0,1670],
 "TraitRecipeCat_8cs.html":[2,0,0,1671],
 "TraitRecipeCat_8cs_source.html":[2,0,0,1671],
 "TraitRecipe_8cs.html":[2,0,0,1669],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitToolRangeSling_8cs_source.html":[2,0,0,1793],
 "TraitToolRange_8cs.html":[2,0,0,1786],
 "TraitToolRange_8cs_source.html":[2,0,0,1786],
-"TraitToolSculpture_8cs.html":[2,0,0,1794],
-"TraitToolSculpture_8cs_source.html":[2,0,0,1794]
+"TraitToolSculpture_8cs.html":[2,0,0,1794]
 };

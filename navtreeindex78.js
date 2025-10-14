@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"classLayerHomeReport.html":[1,0,800],
 "classLayerHomeReport.html#a5a644eaf2beb468f168760c4159bfe03":[1,0,800,0],
 "classLayerImage.html":[1,0,801],
 "classLayerImage.html#a0f5cc5c2c91a7acef96df60cd02cf50c":[1,0,801,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerNewspaper.html":[1,0,813],
 "classLayerNewspaper.html#a00cacba299ad97b3e4da6cfd3d446c61":[1,0,813,26],
 "classLayerNewspaper.html#a058b88fed10b7390b6b692747d194d1c":[1,0,813,19],
-"classLayerNewspaper.html#a27e4c094cbdf9e83e5cf147a2549dfcc":[1,0,813,6],
-"classLayerNewspaper.html#a2bb186920786f44ad20851466d9d44a6":[1,0,813,10]
+"classLayerNewspaper.html#a27e4c094cbdf9e83e5cf147a2549dfcc":[1,0,813,6]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX116 =
 {
+"classTraitBlock.html":[1,0,1453],
+"classTraitBlock.html#ae426f33158dbe2679e431c2b12875260":[1,0,1453,0],
+"classTraitBlueprint.html":[1,0,1454],
+"classTraitBlueprint.html#a4989a72401bf958df7200cfd8e709a0c":[1,0,1454,1],
 "classTraitBlueprint.html#a5869a67e01e4a14c1ed8377ebc66171c":[1,0,1454,0],
 "classTraitBlueprint.html#ae167e9f3b6ec667b7c0ebee490542bae":[1,0,1454,2],
 "classTraitBlueprint.html#ae334cd0a729dcc765ac4591119ec1c53":[1,0,1454,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitCookerMicrowave.html#a9a2886773a4d86f7f980c798ac022133":[1,0,1506,7],
 "classTraitCookerMicrowave.html#acbaac805d0c276d5c3e8dbf531c57391":[1,0,1506,2],
 "classTraitCookingPot.html":[1,0,1507],
-"classTraitCookingPot.html#a06eefe52d00e7052f29909e85255e6c8":[1,0,1507,3],
-"classTraitCookingPot.html#a17c2359f3abf72e61414c5ba4bdeb01a":[1,0,1507,1],
-"classTraitCookingPot.html#a2a431da841e83b1f79dff85d206dc808":[1,0,1507,2],
-"classTraitCookingPot.html#a690bae0528287f00cac47d2189b646a2":[1,0,1507,4],
-"classTraitCookingPot.html#a9517a115867468df7203c7edb2b703ed":[1,0,1507,0]
+"classTraitCookingPot.html#a06eefe52d00e7052f29909e85255e6c8":[1,0,1507,3]
 };

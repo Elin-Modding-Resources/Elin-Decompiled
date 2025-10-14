@@ -222,6 +222,7 @@ var classTrait =
     [ "radiusType", "classTrait.html#ab01fcf69a6a6bd89131cb35f5357761f", null ],
     [ "RecipeCat", "classTrait.html#a9a7170186b04eeb2bf77273b032f5e36", null ],
     [ "RefCardName", "classTrait.html#a012e64b34c6b099f2005dad5b704853a", null ],
+    [ "RemoveGlobalOnBanish", "classTrait.html#a75ad72e1325527a9cf3f5b8f460e748a", null ],
     [ "RenderExtra", "classTrait.html#a4aff3c950b25f7b4527c33c3678d3f87", null ],
     [ "ReqHarvest", "classTrait.html#a4d20dd4795d1045eba97f315560053b1", null ],
     [ "RequireFullStackCheck", "classTrait.html#a02ecf9fe3a500d122ebe1d0baeb376ec", null ],

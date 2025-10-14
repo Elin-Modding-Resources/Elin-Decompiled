@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitMahjong.html#a86d68283a84acf869c68193fddf3a198":[1,0,1671,3],
+"classTraitMahjong.html#ab0a37c49a996da5b11700a4799287790":[1,0,1671,1],
+"classTraitMahjong.html#ac0ab7deae7e14aa5ee8f1bf073126970":[1,0,1671,2],
+"classTraitMaid.html":[1,0,1672],
+"classTraitMaid.html#a3f5b42d62953fd0ee2abec62a1650b89":[1,0,1672,0],
 "classTraitMailPost.html":[1,0,1673],
 "classTraitManager.html":[1,0,1674],
 "classTraitManager.html#a067d996cb2fecff60760aac97a0b837e":[1,0,1674,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitNola.html#a7ab27b3957b1cb0c6e9d21616f9dce30":[1,0,1731,3],
 "classTraitNola.html#ae6222b9c6697d78a3afc2e25a0769477":[1,0,1731,0],
 "classTraitNote.html":[1,0,1732],
-"classTraitNote.html#a1bf55d03433108430137e481eb6b94d6":[1,0,1732,3],
-"classTraitNote.html#abd9c08d1cdcd89ce145a1efeda8c9637":[1,0,1732,0],
-"classTraitNote.html#ae64a3732578342315cb31685ec9c6d27":[1,0,1732,1],
-"classTraitNote.html#af5b43b9758d75717f8002291d2ac2628":[1,0,1732,2],
-"classTraitObj.html":[1,0,1733],
-"classTraitObj.html#a6df6be0671f391788d20d3dd6368ca32":[1,0,1733,0]
+"classTraitNote.html#a1bf55d03433108430137e481eb6b94d6":[1,0,1732,3]
 };

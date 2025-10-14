@@ -1,5 +1,9 @@
 var NAVTREEINDEX117 =
 {
+"classTraitCookingPot.html#a17c2359f3abf72e61414c5ba4bdeb01a":[1,0,1507,1],
+"classTraitCookingPot.html#a2a431da841e83b1f79dff85d206dc808":[1,0,1507,2],
+"classTraitCookingPot.html#a690bae0528287f00cac47d2189b646a2":[1,0,1507,4],
+"classTraitCookingPot.html#a9517a115867468df7203c7edb2b703ed":[1,0,1507,0],
 "classTraitCoolerBox.html":[1,0,1508],
 "classTraitCoolerBox.html#a4276d3724bd3016236fc10863c6f5820":[1,0,1508,0],
 "classTraitCoolerBox.html#ac146b5ae0ac3e6da3201ec5fca77232c":[1,0,1508,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitDryBrick.html#a4ab474cc3db6a71b31d41a0dd38da4f6":[1,0,1548,2],
 "classTraitDryBrick.html#a8091dd0c833bc8e5d2df14f7ec9deb1a":[1,0,1548,3],
 "classTraitDryBrick.html#aad88cfbd9d6750a4cede8b44c8732451":[1,0,1548,1],
-"classTraitDryBrick.html#ac86b78296636288df539f4cd5d847805":[1,0,1548,0],
-"classTraitDuponne.html":[1,0,1549],
-"classTraitDuponne.html#a2a1d43050b041451480fe1682608583c":[1,0,1549,1],
-"classTraitDuponne.html#a78f6665690c3ea7da372008c47699d8a":[1,0,1549,0],
-"classTraitDuponneBall.html":[1,0,1550]
+"classTraitDryBrick.html#ac86b78296636288df539f4cd5d847805":[1,0,1548,0]
 };

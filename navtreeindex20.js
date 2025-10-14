@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitToolSculpture_8cs_source.html":[2,0,0,1794],
 "TraitToolShears_8cs.html":[2,0,0,1795],
 "TraitToolShears_8cs_source.html":[2,0,0,1795],
 "TraitToolSickle_8cs.html":[2,0,0,1796],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "UIMagicChest_8cs_source.html":[2,0,0,1864],
 "UIMapPreview_8cs.html":[2,0,0,1865],
 "UIMapPreview_8cs_source.html":[2,0,0,1865],
-"UIMapSelector_8cs.html":[2,0,0,1866],
-"UIMapSelector_8cs_source.html":[2,0,0,1866]
+"UIMapSelector_8cs.html":[2,0,0,1866]
 };

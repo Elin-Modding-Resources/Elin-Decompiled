@@ -1,5 +1,7 @@
 var NAVTREEINDEX112 =
 {
+"classThingGen.html#a1fb0aa7926f8c7896be91cedcd12878f":[1,0,1333,29],
+"classThingGen.html#a1fcfaaabb1f0f7eb96dc74d051001139":[1,0,1333,19],
 "classThingGen.html#a281cc475b772addc30ebe918809aaa30":[1,0,1333,11],
 "classThingGen.html#a2d2ac3c0ddedbe2df8dfc7d29eae3179":[1,0,1333,14],
 "classThingGen.html#a2f535312f6f871fb91354d24de6c0e44":[1,0,1333,17],
@@ -247,7 +249,5 @@ var NAVTREEINDEX112 =
 "classTileTypeBlockShip.html#a314f14ea9394475266aef52ee2270a14":[1,0,1345,2],
 "classTileTypeBlockShip.html#a4453b23f3754e0501c2778782e9c5a83":[1,0,1345,4],
 "classTileTypeBlockShip.html#a7c3cec26febc02acb1ac28fc1cf4da4d":[1,0,1345,3],
-"classTileTypeBlockShip.html#a7e39781594ca8bf401c5c3046bcfb791":[1,0,1345,1],
-"classTileTypeBoat.html":[1,0,1346],
-"classTileTypeBoat.html#a6b49d12d5388a94a1c275016b20bc9ce":[1,0,1346,0]
+"classTileTypeBlockShip.html#a7e39781594ca8bf401c5c3046bcfb791":[1,0,1345,1]
 };

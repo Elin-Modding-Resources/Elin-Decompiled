@@ -1,6 +1,9 @@
 var NAVTREEINDEX115 =
 {
-"classTrait.html#ae81e301facb283e15daed9f7191f06d7":[1,0,1404,237],
+"classTrait.html#ae5d380383c7a829f15b19a5df441de4e":[1,0,1404,101],
+"classTrait.html#ae7904a3d49a18bacb005773863af6d66":[1,0,1404,130],
+"classTrait.html#ae7ae2dc80a9b7b484e199b4a02444b09":[1,0,1404,223],
+"classTrait.html#ae81e301facb283e15daed9f7191f06d7":[1,0,1404,238],
 "classTrait.html#ae871dd13fc2fdff306261be34b481058":[1,0,1404,33],
 "classTrait.html#aea1c46b47612fab453627904323922c1":[1,0,1404,39],
 "classTrait.html#aeae7706effc27faab891e9b6e10b5dd8":[1,0,1404,139],
@@ -8,7 +11,7 @@ var NAVTREEINDEX115 =
 "classTrait.html#aeb890fe5326f5f413cf37c724575ab78":[1,0,1404,56],
 "classTrait.html#aec66c500d685baaf243439d35e918edc":[1,0,1404,191],
 "classTrait.html#aed09cbafae7f04e4f7d4d49c2128449a":[1,0,1404,96],
-"classTrait.html#aed1730d7a524f69fb70622a724dec91d":[1,0,1404,223],
+"classTrait.html#aed1730d7a524f69fb70622a724dec91d":[1,0,1404,224],
 "classTrait.html#aed4006f6efad2511c58e0a56d28d4312":[1,0,1404,198],
 "classTrait.html#aed664cfcbe19bd9b7cb288461852ad46":[1,0,1404,85],
 "classTrait.html#aedbb4e6487f4b34075571d79d531cdeb":[1,0,1404,115],
@@ -18,7 +21,7 @@ var NAVTREEINDEX115 =
 "classTrait.html#af198baeac5df3a1a0efc771401772f0d":[1,0,1404,15],
 "classTrait.html#af1d59c5f590b372a14e5cdebbe4845cf":[1,0,1404,173],
 "classTrait.html#af2cfd467256e84bf8e266705b6714af6":[1,0,1404,7],
-"classTrait.html#af38405caf70a89696e3c6799bbc3482d":[1,0,1404,228],
+"classTrait.html#af38405caf70a89696e3c6799bbc3482d":[1,0,1404,229],
 "classTrait.html#af466418d509592443c205b58ec8edbf4":[1,0,1404,164],
 "classTrait.html#af59d1d8c9919b6620eab8ceba3956cca":[1,0,1404,126],
 "classTrait.html#af66a7e201ab652f27366a3217433831a":[1,0,1404,40],
@@ -219,6 +222,7 @@ var NAVTREEINDEX115 =
 "classTraitBeekeep.html":[1,0,1442],
 "classTraitBigDaddy.html":[1,0,1443],
 "classTraitBigDaddy.html#a1d89c88a0e42e3a8449be814cd57d1f4":[1,0,1443,0],
+"classTraitBigDaddy.html#a86364ffda6d904c62022cb9db74786d7":[1,0,1443,2],
 "classTraitBigDaddy.html#abbc0b430796cc25ded85d76091be011d":[1,0,1443,1],
 "classTraitBigSister.html":[1,0,1444],
 "classTraitBigSister.html#a2680d6d5457a13e7efbb0580b0559fb5":[1,0,1444,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1450,1],
 "classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1450,2],
 "classTraitBlanketColdproof.html":[1,0,1451],
-"classTraitBlanketFireproof.html":[1,0,1452],
-"classTraitBlock.html":[1,0,1453],
-"classTraitBlock.html#ae426f33158dbe2679e431c2b12875260":[1,0,1453,0],
-"classTraitBlueprint.html":[1,0,1454],
-"classTraitBlueprint.html#a4989a72401bf958df7200cfd8e709a0c":[1,0,1454,1]
+"classTraitBlanketFireproof.html":[1,0,1452]
 };

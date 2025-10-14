@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589deac74c1f42f141c011ca6bd8b1114fc3d0":[2,0,0,499,0,3],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589deacbb5486e85a63cdc1a3539ad3b9d5d93":[2,0,0,499,0,2],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589deaebe418ae757b121b0d636041981fc1d1":[2,0,0,499,0,6],
 "GameMode_8cs_source.html":[2,0,0,499],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HomeResourceNature_8cs_source.html":[2,0,0,590],
 "HomeResourceRate_8cs.html":[2,0,0,591],
 "HomeResourceRate_8cs_source.html":[2,0,0,591],
-"HomeResourceReknown_8cs.html":[2,0,0,592],
-"HomeResourceReknown_8cs_source.html":[2,0,0,592]
+"HomeResourceReknown_8cs.html":[2,0,0,592]
 };

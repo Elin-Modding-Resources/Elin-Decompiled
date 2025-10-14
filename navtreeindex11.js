@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"NumLogWorth_8cs_source.html":[2,0,0,861],
 "NumLog_8cs.html":[2,0,0,857],
 "NumLog_8cs_source.html":[2,0,0,857],
 "OBJ_8cs.html":[2,0,0,862],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "QuestLumiest_8cs.html":[2,0,0,939],
 "QuestLumiest_8cs_source.html":[2,0,0,939],
 "QuestMain_8cs.html":[2,0,0,940],
-"QuestMain_8cs_source.html":[2,0,0,940],
-"QuestManager_8cs.html":[2,0,0,941]
+"QuestMain_8cs_source.html":[2,0,0,940]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classGuildRankData.html#af424e08454994b0c714f4f6ce58ef695":[1,0,603,1],
 "classGuildThief.html":[1,0,604],
 "classGuildThief.html#a1fee21b6fd1926733ab0bb0472d5e6c0":[1,0,604,0],
 "classGuildThief.html#a5b8f5bd873fc29bca4c3b2c8f493da41":[1,0,604,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "classHomeResourceManager.html#a8182a62f4e21d9d941ce27595af0f8b5":[1,0,623,1],
 "classHomeResourceManager.html#a8bfb2fc0337bab37107fbd7b3fd769ad":[1,0,623,14],
 "classHomeResourceManager.html#a99867ff2e3dd1edf252f6dbadef0d80d":[1,0,623,7],
-"classHomeResourceManager.html#aaff6e7756e0dd8efab8fccea6ed88b1f":[1,0,623,10],
-"classHomeResourceManager.html#ab10c9a74d624536717e8abe8e18c6fa3":[1,0,623,9]
+"classHomeResourceManager.html#aaff6e7756e0dd8efab8fccea6ed88b1f":[1,0,623,10]
 };

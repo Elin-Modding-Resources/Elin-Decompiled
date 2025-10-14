@@ -204,6 +204,7 @@ var classSPELL =
     [ "SpSilence", "classSPELL.html#a011bfbad6dbc1b19f6f27fe078c9e513", null ],
     [ "SpSpeedDown", "classSPELL.html#a45428c873bfe109698ae93702ad8865c", null ],
     [ "SpSpeedUp", "classSPELL.html#ad73800969b9a93a951b1afb47dc50b15", null ],
+    [ "SpStripBlessing", "classSPELL.html#affd146008a5d0b0e13ac98c9b1ab30a6", null ],
     [ "SpSummon", "classSPELL.html#a46d481a3eb243763723c6b275b908ff2", null ],
     [ "SpSummonFire", "classSPELL.html#ab0adf7bf93744d25ef2b5e40f4056b3c", null ],
     [ "SpSummonFish", "classSPELL.html#a0d1607bf32d7048c2df616796c02b5dd", null ],

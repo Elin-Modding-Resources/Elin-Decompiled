@@ -1,5 +1,10 @@
 var NAVTREEINDEX121 =
 {
+"classTraitNote.html#abd9c08d1cdcd89ce145a1efeda8c9637":[1,0,1732,0],
+"classTraitNote.html#ae64a3732578342315cb31685ec9c6d27":[1,0,1732,1],
+"classTraitNote.html#af5b43b9758d75717f8002291d2ac2628":[1,0,1732,2],
+"classTraitObj.html":[1,0,1733],
+"classTraitObj.html#a6df6be0671f391788d20d3dd6368ca32":[1,0,1733,0],
 "classTraitObj.html#af34c2245958d15685d031de1f6caa17b":[1,0,1733,1],
 "classTraitOlderYoungerSister.html":[1,0,1734],
 "classTraitOlderYoungerSister.html#a4c8168d19941a13b0584ef80b2ecd090":[1,0,1734,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitRuneMold.html#a4de0834828f33388aa73f0faa28c3106":[1,0,1796,3],
 "classTraitRuneMold.html#a58cd8719287fb908e6b92d92c0287739":[1,0,1796,2],
 "classTraitRuneMold.html#a7bbec895032465484d4465ed87ef8324":[1,0,1796,5],
-"classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b":[1,0,1796,9],
-"classTraitRuneMold.html#ab9eb3f66a75f2bc7fd78b8bfa71682dd":[1,0,1796,6],
-"classTraitRuneMold.html#abc0b309c3da8ac657c67b07d2ac70a57":[1,0,1796,4],
-"classTraitRuneMold.html#ac6ce8e48e7e6672abaf383d4501fd6a8":[1,0,1796,1],
-"classTraitRuneMold.html#acbe331aca8ae318d87e2f5f54e24b1dd":[1,0,1796,7],
-"classTraitRuneMoldEarth.html":[1,0,1797]
+"classTraitRuneMold.html#ab25f3f4b37ae7fd37b510c6ac547f87b":[1,0,1796,9]
 };

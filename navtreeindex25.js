@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classAI__Cook.html#a9f2f32f1f082f586dd25e5a52f92f951":[1,0,71,0],
 "classAI__Craft.html":[1,0,72],
 "classAI__Craft.html#a6bcd8e21ecc43e79e06ad01eb6477e73":[1,0,72,0],
 "classAI__Craft__Snowman.html":[1,0,73],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Read.html#a5a80981e76be75e9f02be20ef4e8b7c4":[1,0,101,1],
 "classAI__Read.html#a7a71040134c92c58a8550aa7320c0e6f":[1,0,101,3],
 "classAI__Read.html#ab9abd844f3d45c948dd5e4e773dfe686":[1,0,101,0],
-"classAI__Read.html#abf176bb2cce745515adc2673258f944a":[1,0,101,2],
-"classAI__ReleaseHeld.html":[1,0,102]
+"classAI__Read.html#abf176bb2cce745515adc2673258f944a":[1,0,101,2]
 };

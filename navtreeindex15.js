@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"TargetTypeGround_8cs_source.html":[2,0,0,1176],
 "TargetTypeParty_8cs.html":[2,0,0,1177],
 "TargetTypeParty_8cs_source.html":[2,0,0,1177],
 "TargetTypeSelect_8cs.html":[2,0,0,1178],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "TooltipManager_8cs.html":[2,0,0,3,105],
 "TooltipManager_8cs_source.html":[2,0,0,3,105],
 "TraitAbility_8cs.html":[2,0,0,1295],
-"TraitAbility_8cs_source.html":[2,0,0,1295],
-"TraitAdventurerBacker_8cs.html":[2,0,0,1297]
+"TraitAbility_8cs_source.html":[2,0,0,1295]
 };

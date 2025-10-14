@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitLever_8cs.html":[2,0,0,1545],
 "TraitLever_8cs_source.html":[2,0,0,1545],
 "TraitLicense_8cs.html":[2,0,0,1547],
 "TraitLicense_8cs_source.html":[2,0,0,1547],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitRaina_8cs_source.html":[2,0,0,1667],
 "TraitRationMaker_8cs.html":[2,0,0,1668],
 "TraitRationMaker_8cs_source.html":[2,0,0,1668],
-"TraitRecipeBook_8cs.html":[2,0,0,1670],
-"TraitRecipeBook_8cs_source.html":[2,0,0,1670]
+"TraitRecipeBook_8cs.html":[2,0,0,1670]
 };

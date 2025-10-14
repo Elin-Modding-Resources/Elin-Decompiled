@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab3f7e4f79adba816eaf10e5f2ee5a3be":[2,0,0,2,0,0,10,0,155],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab4d54dc53465727a3532972ef49cce83":[2,0,0,2,0,0,10,0,63],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab4e850a47adfceb7045b1c9fd6b5b7fa":[2,0,0,2,0,0,10,0,200],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab4fe939e6b4f869c3ff464dc6e63345e":[2,0,0,2,0,0,10,0,223],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "ZonePreEnterDigStairs_8cs.html":[2,0,0,2046],
 "ZonePreEnterDigStairs_8cs_source.html":[2,0,0,2046],
 "ZonePreEnterEncounter_8cs.html":[2,0,0,2047],
-"ZonePreEnterEncounter_8cs_source.html":[2,0,0,2047],
-"ZonePreEnterEvent_8cs.html":[2,0,0,2048]
+"ZonePreEnterEncounter_8cs_source.html":[2,0,0,2047]
 };

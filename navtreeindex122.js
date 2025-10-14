@@ -1,5 +1,10 @@
 var NAVTREEINDEX122 =
 {
+"classTraitRuneMold.html#ab9eb3f66a75f2bc7fd78b8bfa71682dd":[1,0,1796,6],
+"classTraitRuneMold.html#abc0b309c3da8ac657c67b07d2ac70a57":[1,0,1796,4],
+"classTraitRuneMold.html#ac6ce8e48e7e6672abaf383d4501fd6a8":[1,0,1796,1],
+"classTraitRuneMold.html#acbe331aca8ae318d87e2f5f54e24b1dd":[1,0,1796,7],
+"classTraitRuneMoldEarth.html":[1,0,1797],
 "classTraitRuneMoldEarth.html#aaf5b0202412f8b854b113e089bb52a02":[1,0,1797,0],
 "classTraitRuneMoldMana.html":[1,0,1798],
 "classTraitRuneMoldMana.html#acda0f331003b839933a569cab825df3c":[1,0,1798,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitStairsUp.html":[1,0,1855],
 "classTraitStairsUp.html#a6813ba8128b9876ddf7885151e692bcd":[1,0,1855,2],
 "classTraitStairsUp.html#a72e00f0e964812447330ef7462b96fe1":[1,0,1855,1],
-"classTraitStairsUp.html#a7ebea1537e40808579a22c18b1249711":[1,0,1855,0],
-"classTraitStasisChamber.html":[1,0,1856],
-"classTraitStatue.html":[1,0,1857],
-"classTraitStatue.html#ab962c6f56d3b223ee0dae7dd6fc511ae":[1,0,1857,0],
-"classTraitStethoscope.html":[1,0,1858],
-"classTraitStethoscope.html#a1378d4c0883841197569236cedcf157e":[1,0,1858,2]
+"classTraitStairsUp.html#a7ebea1537e40808579a22c18b1249711":[1,0,1855,0]
 };

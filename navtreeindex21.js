@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"UIMapSelector_8cs_source.html":[2,0,0,1866],
 "UIMouseInfo_8cs.html":[2,0,0,3,141],
 "UIMouseInfo_8cs_source.html":[2,0,0,3,141],
 "UIMultiList_8cs.html":[2,0,0,1867],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3daaf5a690fd5ec6f789dbfc51ec6a891ba":[2,0,0,2,0,0,10,0,157],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab127d163c55a6603f3a37ce3a642c36d":[2,0,0,2,0,0,10,0,111],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab25fa566fdbfeb73dbd452d39957e4e0":[2,0,0,2,0,0,10,0,132],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab332708e4304e13c9b424e7465254954":[2,0,0,2,0,0,10,0,8],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab3f7e4f79adba816eaf10e5f2ee5a3be":[2,0,0,2,0,0,10,0,155]
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3dab332708e4304e13c9b424e7465254954":[2,0,0,2,0,0,10,0,8]
 };

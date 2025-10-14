@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"TraitAdventurerBacker_8cs.html":[2,0,0,1297],
 "TraitAdventurerBacker_8cs_source.html":[2,0,0,1297],
 "TraitAdventurer_8cs.html":[2,0,0,1296],
 "TraitAdventurer_8cs_source.html":[2,0,0,1296],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitDoorBell_8cs.html":[2,0,0,1420],
 "TraitDoorBell_8cs_source.html":[2,0,0,1420],
 "TraitDoorBoat_8cs.html":[2,0,0,1421],
-"TraitDoorBoat_8cs_source.html":[2,0,0,1421],
-"TraitDoorCurtain2_8cs.html":[2,0,0,1423]
+"TraitDoorBoat_8cs_source.html":[2,0,0,1421]
 };

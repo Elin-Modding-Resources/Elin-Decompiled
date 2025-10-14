@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1053,3],
 "classQueue.html":[1,0,1054],
 "classQueue.html#a0826a0ca90fa09ad272055106f0dd4f4":[1,0,1054,0],
 "classQueue.html#a7192b39ef1a910fc2d43f15da6dc6b76":[1,0,1054,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "classRecipeSource.html#addd0a63fa0714fc7d37f758c9c8f02e2":[1,0,1068,1],
 "classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974":[1,0,1068,7],
 "classRecipeSource.html#af505d7e0a3fd033fa5a0c4723681ec13":[1,0,1068,18],
-"classRecipeUpdater.html":[1,0,1069],
-"classRecipeUpdater.html#a0b7fca26e291a0d14086869dcc7355a7":[1,0,1069,8]
+"classRecipeUpdater.html":[1,0,1069]
 };
