@@ -49,7 +49,7 @@ public class ELEMENT
 
 	public const int hardness = 13;
 
-	public const int water = 15;
+	public const int growth = 14;
 
 	public const int heat = 16;
 
@@ -57,7 +57,7 @@ public class ELEMENT
 
 	public const int taste = 18;
 
-	public const int growth = 14;
+	public const int water = 15;
 
 	public const int fire = 21;
 
@@ -81,7 +81,7 @@ public class ELEMENT
 	{
 		765, 763, 761, 751, 752, 753, 754, 755, 756, 759,
 		760, 762, 750, 0, 2, 1, 3, 5, 10, 11,
-		12, 13, 15, 16, 17, 18, 14, 21, 22, 23,
+		12, 13, 14, 16, 17, 18, 15, 21, 22, 23,
 		24, 25, 26, 29, 85, 20
 	};
 }
@@ -821,7 +821,7 @@ public class Element : EClass
 			bool flag3 = (source.tag.Contains("neg") ? (Value > 0) : (Value < 0));
 			int num = Mathf.Abs(Value);
 			bool flag4 = Card?.ShowFoodEnc ?? false;
-			bool flag5 = Card != null && this is Ability && (Card.IsWeapon || Card.category.slot == 35);
+			bool flag5 = Card != null && this is Ability && (Card.IsWeapon || Card.IsThrownWeapon || Card.IsAmmo || Card.category.slot == 35);
 			if (IsTrait || (flag4 && IsFoodTrait))
 			{
 				string[] textArray = source.GetTextArray("textAlt");

@@ -1554,7 +1554,7 @@ public class Trait : EClass
 				case CopyShopType.Item:
 				{
 					num6 = (1000 + owner.c_invest * 100) / (thing5.GetPrice(CurrencyType.Money, sell: false, PriceType.CopyShop) + 50);
-					int[] array = new int[4] { 701, 704, 703, 702 };
+					int[] array = new int[3] { 704, 703, 702 };
 					foreach (int ele in array)
 					{
 						if (thing5.HasElement(ele))
@@ -1864,6 +1864,12 @@ public class Trait : EClass
 				}
 				switch (ShopType)
 				{
+				case ShopType.Curry:
+					if (EClass.game.quests.IsCompleted("curry"))
+					{
+						AddThing(TraitSeed.MakeSeed("redpepper").SetNum(5));
+					}
+					break;
 				case ShopType.Moyer:
 				{
 					for (int num12 = 1; num12 <= 12; num12++)

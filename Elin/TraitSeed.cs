@@ -85,6 +85,11 @@ public class TraitSeed : Trait
 		}
 	}
 
+	public static Thing MakeSeed(string id, PlantData plant = null)
+	{
+		return MakeSeed(EClass.sources.objs.alias[id], plant);
+	}
+
 	public static Thing MakeSeed(SourceObj.Row obj, PlantData plant = null)
 	{
 		Thing thing = plant?.seed;

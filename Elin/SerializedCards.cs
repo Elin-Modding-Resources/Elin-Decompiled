@@ -369,6 +369,18 @@ public class SerializedCards : EClass
 			}
 		}
 
+		public string cText
+		{
+			get
+			{
+				return strs[8];
+			}
+			set
+			{
+				strs[8] = value;
+			}
+		}
+
 		public bool isDead
 		{
 			get
@@ -430,7 +442,8 @@ public class SerializedCards : EClass
 			idSkin = c.idSkin,
 			idDeity = c.c_idDeity,
 			isEmpty = (c.things.Count == 0 && c.c_lockLv == 0),
-			encLv = c.encLV
+			encLv = c.encLV,
+			cText = c.c_refText
 		};
 		if (c.c_idBacker != 0)
 		{
@@ -637,7 +650,10 @@ public class SerializedCards : EClass
 				card2 = CharaGen.Create(text);
 				if (card4.ints.Length > 20)
 				{
-					card2.Chara.SetLv(card4.lv);
+					if (isUserZone)
+					{
+						card2.Chara.SetLv(card4.lv);
+					}
 					if (card4.element != 0)
 					{
 						card2.Chara.SetMainElement(card4.element);
@@ -700,6 +716,7 @@ public class SerializedCards : EClass
 			card2.refVal = card4.refVal;
 			card2.idSkin = card4.idSkin;
 			card2.c_idDeity = card4.idDeity;
+			card2.c_refText = card4.cText;
 			if (card4.idBacker != 0)
 			{
 				Debug.Log(card4.idBacker);

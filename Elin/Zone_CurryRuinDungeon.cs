@@ -24,10 +24,16 @@ public class Zone_CurryRuinDungeon : Zone_QuestDungeon
 		}
 	}
 
+	public override bool HasLaw => IsBossLv;
+
+	public override bool SetAlarmOnBreakLaw => IsBossLv;
+
 	public override void OnGenerateMap()
 	{
 		if (IsBossLv)
 		{
+			SetAlarm(enable: false);
+			FindChara("doga").SetHostility(Hostility.Enemy);
 			return;
 		}
 		PlaceRail();
@@ -39,5 +45,23 @@ public class Zone_CurryRuinDungeon : Zone_QuestDungeon
 			}
 		});
 		base.OnGenerateMap();
+	}
+
+	public override void SetAlarm(bool enable)
+	{
+		base.SetAlarm(enable);
+		if (!enable)
+		{
+			return;
+		}
+		foreach (Thing thing in EClass._map.things)
+		{
+			if (thing.IsInstalled && thing.id == "candle3")
+			{
+				thing.c_lightColor = 30720;
+				thing.RecalculateFOV();
+			}
+		}
+		SetBGM(110);
 	}
 }

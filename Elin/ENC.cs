@@ -10,15 +10,13 @@ public class ENC
 
 	public const int r_life = 640;
 
+	public const int mod_flurry = 621;
+
 	public const int mod_chaser = 620;
 
 	public const int mod_feint = 623;
 
-	public const int mod_talisman = 609;
-
 	public const int mod_cleave = 622;
-
-	public const int mod_flurry = 621;
 
 	public const int living = 653;
 
@@ -46,7 +44,7 @@ public class ENC
 
 	public const int convertFire = 850;
 
-	public const int mod_splash = 608;
+	public const int mod_talisman = 609;
 
 	public const int convertImpact = 865;
 
@@ -54,11 +52,11 @@ public class ENC
 
 	public const int onlyPet = 655;
 
-	public const int mod_scatter = 607;
+	public const int mod_splash = 608;
 
-	public const int allNeckHunt = 428;
+	public const int breathing = 429;
 
-	public const int mod_precision = 605;
+	public const int mod_drill = 606;
 
 	public const int seeInvisible = 416;
 
@@ -72,9 +70,9 @@ public class ENC
 
 	public const int negateBlind = 421;
 
-	public const int invisibility = 415;
-
 	public const int negateParalysis = 422;
+
+	public const int negateFear = 423;
 
 	public const int negateSleep = 424;
 
@@ -84,15 +82,17 @@ public class ENC
 
 	public const int negateNeckHunt = 427;
 
-	public const int breathing = 429;
+	public const int allNeckHunt = 428;
 
 	public const int negateShockwave = 430;
 
-	public const int negateFear = 423;
+	public const int defense_range = 435;
+
+	public const int invisibility = 415;
+
+	public const int guts = 436;
 
 	public const int encHit = 414;
-
-	public const int slowCorruption = 412;
 
 	public const int encSpell = 411;
 
@@ -116,9 +116,9 @@ public class ENC
 
 	public const int slowDecay = 405;
 
-	public const int mod_drill = 606;
+	public const int resMutation = 406;
 
-	public const int travelSpeed = 407;
+	public const int mod_scatter = 607;
 
 	public const int resWeather = 408;
 
@@ -126,15 +126,13 @@ public class ENC
 
 	public const int throwReturn = 410;
 
-	public const int defense_range = 435;
+	public const int slowCorruption = 412;
 
-	public const int guts = 436;
+	public const int parry = 437;
 
-	public const int resMutation = 406;
+	public const int travelSpeed = 407;
 
-	public const int knightly = 438;
-
-	public const int strongStomach = 480;
+	public const int negateParry = 439;
 
 	public const int revealFaith = 481;
 
@@ -152,7 +150,7 @@ public class ENC
 
 	public const int deathagony = 488;
 
-	public const int mod_ammo = 600;
+	public const int music_drunk = 489;
 
 	public const int mod_reload = 601;
 
@@ -162,60 +160,62 @@ public class ENC
 
 	public const int mod_ammo_recover = 604;
 
-	public const int parry = 437;
+	public const int mod_precision = 605;
+
+	public const int knightly = 438;
+
+	public const int strongStomach = 480;
 
 	public const int bane_all = 468;
 
-	public const int bane_fish = 467;
-
-	public const int music_drunk = 489;
-
-	public const int bane_machine = 465;
-
-	public const int negateParry = 439;
+	public const int mod_ammo = 600;
 
 	public const int bane_god = 466;
 
 	public const int sustain_STR = 440;
 
+	public const int bane_fish = 467;
+
 	public const int sustain_END = 441;
 
-	public const int sustain_PER = 443;
+	public const int sustain_DEX = 442;
 
 	public const int sustain_LER = 444;
 
 	public const int sustain_WIL = 445;
 
-	public const int sustain_DEX = 442;
+	public const int sustain_MAG = 446;
 
-	public const int sustain_CHA = 447;
+	public const int sustain_PER = 443;
 
 	public const int sustain_figure = 450;
 
 	public const int bane_dragon = 460;
 
-	public const int bane_man = 464;
-
 	public const int bane_undead = 461;
+
+	public const int bane_machine = 465;
 
 	public const int bane_fairy = 462;
 
-	public const int sustain_MAG = 446;
-
 	public const int bane_animal = 463;
+
+	public const int sustain_CHA = 447;
+
+	public const int bane_man = 464;
 
 	public static readonly int[] IDS = new int[102]
 	{
-		652, 651, 650, 641, 640, 620, 623, 609, 622, 621,
-		653, 624, 654, 851, 656, 660, 661, 662, 663, 664,
-		665, 666, 850, 608, 865, 852, 655, 607, 428, 605,
-		416, 417, 418, 419, 420, 421, 415, 422, 424, 425,
-		426, 427, 429, 430, 423, 414, 412, 411, 380, 381,
-		382, 383, 400, 401, 402, 403, 404, 405, 606, 407,
-		408, 409, 410, 435, 436, 406, 438, 480, 481, 482,
-		483, 484, 485, 486, 487, 488, 600, 601, 602, 603,
-		604, 437, 468, 467, 489, 465, 439, 466, 440, 441,
-		443, 444, 445, 442, 447, 450, 460, 464, 461, 462,
-		446, 463
+		652, 651, 650, 641, 640, 621, 620, 623, 622, 653,
+		624, 654, 851, 656, 660, 661, 662, 663, 664, 665,
+		666, 850, 609, 865, 852, 655, 608, 429, 606, 416,
+		417, 418, 419, 420, 421, 422, 423, 424, 425, 426,
+		427, 428, 430, 435, 415, 436, 414, 411, 380, 381,
+		382, 383, 400, 401, 402, 403, 404, 405, 406, 607,
+		408, 409, 410, 412, 437, 407, 439, 481, 482, 483,
+		484, 485, 486, 487, 488, 489, 601, 602, 603, 604,
+		605, 438, 480, 468, 600, 466, 440, 467, 441, 442,
+		444, 445, 446, 443, 450, 460, 461, 465, 462, 463,
+		447, 464
 	};
 }

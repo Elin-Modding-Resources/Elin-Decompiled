@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class POLICY
 {
-	public const int platinum_ticket = 2815;
-
 	public const int store_ripoff = 2816;
 
 	public const int store_premium = 2817;
@@ -23,21 +21,21 @@ public class POLICY
 
 	public const int license_stolen = 2824;
 
-	public const int mass_exhibition = 2814;
-
 	public const int egg_fan = 2826;
 
 	public const int breed_season = 2827;
 
 	public const int license_slaver = 2828;
 
+	public const int platinum_ticket = 2815;
+
 	public const int celeb = 2822;
 
-	public const int suite_room = 2813;
+	public const int mass_exhibition = 2814;
 
-	public const int trash_sort = 2701;
+	public const int weed_no = 2703;
 
-	public const int tourist_safety = 2811;
+	public const int bed_quality = 2812;
 
 	public const int resident_wanted = 2513;
 
@@ -45,7 +43,7 @@ public class POLICY
 
 	public const int inquisition = 2507;
 
-	public const int bed_quality = 2812;
+	public const int suite_room = 2813;
 
 	public const int wealth_tax = 2500;
 
@@ -75,23 +73,21 @@ public class POLICY
 
 	public const int energy_conservation = 2700;
 
-	public const int taxTransfer = 2705;
-
-	public const int border_watch = 2704;
+	public const int speed_growth = 2516;
 
 	public const int demon_invocation = 2706;
 
-	public const int speed_growth = 2516;
+	public const int auto_farm = 2707;
 
-	public const int noDM = 2708;
+	public const int taxTransfer = 2705;
 
 	public const int noAnimal = 2709;
 
 	public const int noMother = 2710;
 
-	public const int auto_farm = 2707;
+	public const int incomeTransfer = 2711;
 
-	public const int forcePanty = 2712;
+	public const int noDM = 2708;
 
 	public const int livestock_priv = 2715;
 
@@ -99,20 +95,24 @@ public class POLICY
 
 	public const int open_business = 2810;
 
-	public const int weed_no = 2703;
+	public const int tourist_safety = 2811;
+
+	public const int border_watch = 2704;
 
 	public const int trash_no = 2702;
 
-	public const int incomeTransfer = 2711;
+	public const int trash_sort = 2701;
+
+	public const int forcePanty = 2712;
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2815, 2816, 2817, 2818, 2819, 2820, 2821, 2825, 2823, 2824,
-		2814, 2826, 2827, 2828, 2822, 2813, 2701, 2811, 2513, 2512,
-		2507, 2812, 2500, 2501, 2514, 2502, 2504, 2505, 2511, 2510,
-		2509, 2508, 2503, 2515, 2506, 2700, 2705, 2704, 2706, 2516,
-		2708, 2709, 2710, 2707, 2712, 2715, 2800, 2810, 2703, 2702,
-		2711
+		2816, 2817, 2818, 2819, 2820, 2821, 2825, 2823, 2824, 2826,
+		2827, 2828, 2815, 2822, 2814, 2703, 2812, 2513, 2512, 2507,
+		2813, 2500, 2501, 2514, 2502, 2504, 2505, 2511, 2510, 2509,
+		2508, 2503, 2515, 2506, 2700, 2516, 2706, 2707, 2705, 2709,
+		2710, 2711, 2708, 2715, 2800, 2810, 2811, 2704, 2702, 2701,
+		2712
 	};
 }
 public class Policy : EClass

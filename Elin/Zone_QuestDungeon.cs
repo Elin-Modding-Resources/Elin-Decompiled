@@ -20,10 +20,6 @@ public class Zone_QuestDungeon : Zone_Dungeon
 
 	public override bool ShouldScaleImportedChara(Chara c)
 	{
-		if (ShouldScale && c.rarity >= Rarity.Legendary)
-		{
-			return c.IsHostile();
-		}
-		return false;
+		return ShouldScale;
 	}
 }

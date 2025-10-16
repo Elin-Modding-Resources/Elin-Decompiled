@@ -87,6 +87,7 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 			c.idSkin = 1;
 			break;
 		}
+		c.bio.SetAge(c, 0);
 	}
 
 	public override bool CanStackTo(Thing to)

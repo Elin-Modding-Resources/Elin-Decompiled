@@ -6,7 +6,7 @@ public class TraitContainerCompost : TraitBrewery
 
 	public override bool CanChildDecay(Card c)
 	{
-		return false;
+		return c.id == "lunch_dystopia";
 	}
 
 	public override string GetProductID(Card c)

@@ -5813,6 +5813,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return true;
 		}
+		if (HasElement(758))
+		{
+			return true;
+		}
+		if (HasElement(704))
+		{
+			return true;
+		}
 		return false;
 	}
 

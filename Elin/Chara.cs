@@ -4785,7 +4785,7 @@ public class Chara : Card, IPathfindWalker
 				AddThing("gun_laser");
 				break;
 			case "rocketman":
-				AddThing("panzerfaust");
+				AddThing("panzerfaust").c_ammo = 0;
 				break;
 			default:
 				switch (equip)
@@ -5342,15 +5342,15 @@ public class Chara : Card, IPathfindWalker
 		{
 			EClass.player.returnInfo = null;
 			EClass.player.uidLastTravelZone = 0;
-			foreach (Chara chara2 in EClass._map.charas)
+			foreach (Chara chara3 in EClass._map.charas)
 			{
-				if (chara2.IsHostile())
+				if (chara3.IsHostile())
 				{
-					chara2.hostility = chara2.OriginalHostility;
+					chara3.hostility = chara3.OriginalHostility;
 				}
-				if (chara2.enemy == EClass.pc)
+				if (chara3.enemy == EClass.pc)
 				{
-					chara2.enemy = null;
+					chara3.enemy = null;
 				}
 			}
 			if (EClass.pc.things.Find("letter_will") != null && EClass.rnd(10) == 0)
@@ -5458,9 +5458,10 @@ public class Chara : Card, IPathfindWalker
 		case "big_daddy":
 			if (!IsPCFaction)
 			{
-				Chara t2 = CharaGen.Create("littleOne");
-				EClass._zone.AddCard(t2, pos.Copy());
+				Chara chara = CharaGen.Create("littleOne");
+				EClass._zone.AddCard(chara, pos.Copy());
 				Msg.Say("little_pop");
+				chara.AddCondition<ConInvulnerable>();
 			}
 			break;
 		case "shark_sister":
@@ -5474,14 +5475,14 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (attackSource == AttackSource.Finish && origin != null && origin.Evalue(665) > 0)
 		{
-			Chara chara = CharaGen.CreateFromFilter("c_plant", base.LV);
-			EClass._zone.AddCard(chara, pos.Copy());
-			if (chara.LV < base.LV)
+			Chara chara2 = CharaGen.CreateFromFilter("c_plant", base.LV);
+			EClass._zone.AddCard(chara2, pos.Copy());
+			if (chara2.LV < base.LV)
 			{
-				chara.SetLv(base.LV);
+				chara2.SetLv(base.LV);
 			}
-			chara.MakeMinion((origin.IsPCParty || origin.IsPCPartyMinion) ? EClass.pc : origin.Chara, MinionType.Friend);
-			Msg.Say("plant_pop", this, chara);
+			chara2.MakeMinion((origin.IsPCParty || origin.IsPCPartyMinion) ? EClass.pc : origin.Chara, MinionType.Friend);
+			Msg.Say("plant_pop", this, chara2);
 		}
 		EClass._zone.events.OnCharaDie(this);
 	}
@@ -9169,6 +9170,19 @@ public class Chara : Card, IPathfindWalker
 			}
 		}
 		return null;
+	}
+
+	public int CountDebuff()
+	{
+		int num = 0;
+		foreach (Condition condition in conditions)
+		{
+			if (condition.Type == ConditionType.Debuff)
+			{
+				num++;
+			}
+		}
+		return num;
 	}
 
 	public void CureCondition<T>(int v = 99999) where T : Condition

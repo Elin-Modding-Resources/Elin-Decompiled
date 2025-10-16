@@ -243,7 +243,7 @@ public class CharaBody : EClass
 		{
 			if (thing.Evalue(656) > 0)
 			{
-				thing.blessedState = BlessedState.Cursed;
+				thing.SetBlessedState(BlessedState.Cursed);
 			}
 			if (thing.blessedState <= BlessedState.Cursed)
 			{

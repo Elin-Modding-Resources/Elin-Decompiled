@@ -130,5 +130,6 @@ public enum EffectId
 	ReturnVoid = 306,
 	Bit = 307,
 	Rocket = 308,
-	StripBlessing = 309
+	StripBlessing = 309,
+	Flare = 310
 }

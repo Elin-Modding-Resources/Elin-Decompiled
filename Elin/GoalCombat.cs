@@ -62,6 +62,10 @@ public class GoalCombat : Goal
 		bool dontWander = owner.IsPCParty && !owner.IsPC && EClass.game.config.tactics.dontWander;
 		while (true)
 		{
+			if (!EClass._zone.isAlarmSet && EClass._zone.SetAlarmOnBreakLaw && !owner.IsPCFactionOrMinion)
+			{
+				EClass._zone.SetAlarm(enable: true);
+			}
 			bool canSeeLos = false;
 			if (EClass.debug.logCombat)
 			{
@@ -540,9 +544,9 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag9 = owner.HasCondition<StanceTaunt>();
-				bool flag10 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag9 && !flag10) ? 100 : ((!flag9 && flag10) ? 100 : 0));
+				bool flag10 = owner.HasCondition<StanceTaunt>();
+				bool flag11 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag10 && !flag11) ? 100 : ((!flag10 && flag11) ? 100 : 0));
 				break;
 			}
 			case "song":
@@ -625,13 +629,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag6 = text == "dot";
-				if (flag6 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag9 = text == "dot";
+				if (flag9 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag6)
+				if (num > 0 && flag9)
 				{
 					num += 10;
 				}
@@ -647,13 +651,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag11 = ability.act is ActBolt;
+				bool flag6 = ability.act is ActBolt;
 				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}
-				GetNumEnemy(flag11 ? 6 : 5);
-				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag11 ? 6 : 5) > 0))
+				GetNumEnemy(flag6 ? 6 : 5);
+				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag6 ? 6 : 5) > 0))
 				{
 					continue;
 				}
@@ -673,6 +677,13 @@ public class GoalCombat : Goal
 					Element buffStats2 = c.GetBuffStats(s.proc[1]);
 					return (buffStats2 == null || buffStats2.Value < 0) ? tactics.P_Buff : 0;
 				}, isFriendlyAbility: true);
+				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
+				{
+					ability.pt = true;
+				}
+				break;
+			case "cure":
+				num = ForeachChara(ability, (Chara c) => c.CountDebuff() * 30, isFriendlyAbility: true);
 				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
 				{
 					ability.pt = true;
@@ -1037,8 +1048,8 @@ public class GoalCombat : Goal
 			{
 				if (chara2 != owner)
 				{
-					int num9 = owner.Dist(chara2);
-					if (num9 > sightRadius || !owner.CanSeeLos(chara2, num9))
+					int num11 = owner.Dist(chara2);
+					if (num11 > sightRadius || !owner.CanSeeLos(chara2, num11))
 					{
 						continue;
 					}
@@ -1054,11 +1065,11 @@ public class GoalCombat : Goal
 				return func(owner);
 			}
 			BuildCharaList();
-			int num10 = 0;
+			int num7 = 0;
 			foreach (Chara chara3 in charas)
 			{
-				int num11 = func(chara3);
-				if (num11 > 0)
+				int num8 = func(chara3);
+				if (num8 > 0)
 				{
 					if (isFriendlyAbility)
 					{
@@ -1075,21 +1086,21 @@ public class GoalCombat : Goal
 						}
 						if (chara3 != owner)
 						{
-							num11 += tactics.P_Party;
+							num8 += tactics.P_Party;
 						}
 					}
 					else if (!owner.IsHostile(chara3))
 					{
 						continue;
 					}
-					if (num11 >= num10)
+					if (num8 >= num7)
 					{
 						a.tg = chara3;
-						num10 = num11;
+						num7 = num8;
 					}
 				}
 			}
-			return num10;
+			return num7;
 		}
 		int GetAttackMod(Act a)
 		{
@@ -1097,38 +1108,38 @@ public class GoalCombat : Goal
 			{
 				return 0;
 			}
-			int num7 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
-			int num8 = -15 * tc.ResistLvFrom(num7);
+			int num9 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
+			int num10 = -15 * tc.ResistLvFrom(num9);
 			if (a is ActSword)
 			{
-				num8 = 0;
+				num10 = 0;
 			}
-			if (owner.HasElement(1238) && num8 < -15)
+			if (owner.HasElement(1238) && num10 < -15)
 			{
-				num8 = -15;
+				num10 = -15;
 			}
-			switch (num7)
+			switch (num9)
 			{
 			case 910:
 				if (tc.isWet)
 				{
-					num8 -= 30;
+					num10 -= 30;
 				}
 				break;
 			case 911:
 				if (tc.HasCondition<ConBurning>())
 				{
-					num8 -= 30;
+					num10 -= 30;
 				}
 				break;
 			case 912:
 				if (tc.isWet)
 				{
-					num8 += 30;
+					num10 += 30;
 				}
 				break;
 			}
-			return num8;
+			return num10;
 		}
 		void GetNumEnemy(int radius)
 		{

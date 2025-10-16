@@ -426,6 +426,18 @@ public class Spatial : EClass
 		}
 	}
 
+	public bool isAlarmSet
+	{
+		get
+		{
+			return bits[14];
+		}
+		set
+		{
+			bits[14] = value;
+		}
+	}
+
 	public Faction mainFaction
 	{
 		get

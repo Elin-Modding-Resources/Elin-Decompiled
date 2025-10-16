@@ -897,6 +897,10 @@ public class Point : EClass
 			caller.Say("calledGuard", caller);
 			chara.DoHostileAction(criminal);
 		}
+		if (!EClass._zone.isAlarmSet && EClass._zone.SetAlarmOnBreakLaw && !caller.IsPCFactionOrMinion)
+		{
+			EClass._zone.SetAlarm(enable: true);
+		}
 	}
 
 	public void SetBlock(int idMat = 0, int idBlock = 0)

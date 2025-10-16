@@ -225,6 +225,8 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public virtual bool HasLaw => false;
 
+	public virtual bool SetAlarmOnBreakLaw => false;
+
 	public virtual bool MakeEnemiesNeutral
 	{
 		get
@@ -3515,6 +3517,32 @@ public class Zone : Spatial, ICardParent, IInspect
 			if (item.trait.IsCitizen && !item.IsGlobal && !item.isSubsetCard)
 			{
 				dictCitizen[item.uid] = item.Name;
+			}
+		}
+	}
+
+	public virtual void SetAlarm(bool enable)
+	{
+		base.isAlarmSet = enable;
+		if (enable)
+		{
+			foreach (Chara chara in EClass._map.charas)
+			{
+				if (!chara.IsPCFactionOrMinion)
+				{
+					chara.SetHostility(Hostility.Enemy);
+				}
+			}
+			Msg.Say("alarm");
+			Msg.Say("alarm2");
+			SE.Play("alarm");
+			return;
+		}
+		foreach (Chara chara2 in EClass._map.charas)
+		{
+			if (!chara2.IsPCFactionOrMinion)
+			{
+				chara2.SetHostility(Hostility.Neutral);
 			}
 		}
 	}
