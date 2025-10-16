@@ -50,6 +50,7 @@ var classChara =
     [ "ClearBed", "classChara.html#acc4bb3d2b2adb9abdb29b369d3ad40b6", null ],
     [ "ClearInventory", "classChara.html#a9608b8357016cc2070350b7abdabc4ec", null ],
     [ "ClearTempElements", "classChara.html#a8988af0b1817fa3f32ef0ccf97ddcd6f", null ],
+    [ "CountDebuff", "classChara.html#a6fb5cb0f11ede427b8b7885c9e4d480b", null ],
     [ "CountNumEaten", "classChara.html#ad03aac52c1c7d48e1f086032ef9f4dbd", null ],
     [ "CreateReplacement", "classChara.html#a1f287f980922e280d5a6f05a2d6123c2", null ],
     [ "Cuddle", "classChara.html#a27e5e85c520e314f03bb351be14a11ac", null ],

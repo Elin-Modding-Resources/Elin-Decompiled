@@ -65,6 +65,7 @@ var classSpatial =
     [ "idPrefix", "classSpatial.html#aaac694765e94e45977810bc7ec417758", null ],
     [ "influence", "classSpatial.html#ae847b0cf3640d92e03e1a39fe7f1988c", null ],
     [ "investment", "classSpatial.html#a48aab101430d3a0427076bcca68ea6f7", null ],
+    [ "isAlarmSet", "classSpatial.html#a42893d3d4f98584ef5dacc8dc3e1d077", null ],
     [ "isBeach", "classSpatial.html#a8c6c3f1ffd0867350bc4dd763d3f485b", null ],
     [ "isClaimable", "classSpatial.html#aacd1406adc971196e607a0116c78d588", null ],
     [ "IsClosed", "classSpatial.html#a6962c10736c0060fbaae4257bfb15732", null ],

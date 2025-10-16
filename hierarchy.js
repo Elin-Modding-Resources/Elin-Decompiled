@@ -479,7 +479,8 @@ var hierarchy =
             ] ],
             [ "BaseStance", "classBaseStance.html", [
               [ "BaseSong", "classBaseSong.html", [
-                [ "StanceSongSleep", "classStanceSongSleep.html", null ]
+                [ "StanceSongSleep", "classStanceSongSleep.html", null ],
+                [ "StanceSongValor", "classStanceSongValor.html", null ]
               ] ],
               [ "StanceFury", "classStanceFury.html", null ],
               [ "StanceIai", "classStanceIai.html", null ],
@@ -717,6 +718,7 @@ var hierarchy =
             [ "ActCryRage", "classActCryRage.html", null ],
             [ "ActCrySad", "classActCrySad.html", null ],
             [ "ActDreamBug", "classActDreamBug.html", null ],
+            [ "ActMissileBarrage", "classActMissileBarrage.html", null ],
             [ "ActMultihit", "classActMultihit.html", null ],
             [ "ActNTR", "classActNTR.html", null ],
             [ "ActQuickCraft", "classActQuickCraft.html", null ],
@@ -729,6 +731,7 @@ var hierarchy =
               [ "ActArrow", "classActArrow.html", null ],
               [ "ActBall", "classActBall.html", null ],
               [ "ActBolt", "classActBolt.html", null ],
+              [ "ActFlare", "classActFlare.html", null ],
               [ "ActFunnel", "classActFunnel.html", null ],
               [ "ActHand", "classActHand.html", [
                 [ "ActSword", "classActSword.html", null ]
