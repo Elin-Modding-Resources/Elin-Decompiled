@@ -1,5 +1,8 @@
 var NAVTREEINDEX122 =
 {
+"classTraitRollingFortune.html#a5997575ca14641c00633be0a788db30e":[1,0,1794,6],
+"classTraitRollingFortune.html#a8a8c01fcc9b5db9140a36c4f9230936c":[1,0,1794,3],
+"classTraitRollingFortune.html#ad1199c02254ea0e8445c5a39e1175ec2":[1,0,1794,4],
 "classTraitRollingFortune.html#ad1fa4acd27134f42ba87ad225353f236":[1,0,1794,7],
 "classTraitRollingFortune.html#af2e341b08771c804343430ec678eff4f":[1,0,1794,1],
 "classTraitRollingFortune.html#af55aa1f40dd1f0c243780187e41e154a":[1,0,1794,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitSpotPrayer.html":[1,0,1847],
 "classTraitSpotRanch.html":[1,0,1848],
 "classTraitSpotSearch.html":[1,0,1849],
-"classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1849,0],
-"classTraitSpotSpawn.html":[1,0,1850],
-"classTraitSpotSpawn.html#a51eeba704fdecd9aea102ed878ad20e8":[1,0,1850,2],
-"classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685":[1,0,1850,1]
+"classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1849,0]
 };

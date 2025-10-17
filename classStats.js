@@ -9,6 +9,7 @@ var classStats =
     [ "Set", "classStats.html#abde35b2f49f5638bd47d2c79ff2b6766", null ],
     [ "Set", "classStats.html#a3e0bf3f654efb73ec6ab989119317cdc", null ],
     [ "ToString", "classStats.html#a5e7875510a50b2501ec61228cc59854a", null ],
+    [ "Validate", "classStats.html#a71fc8322d63cdc89465c7ce187acca9e", null ],
     [ "Bladder", "classStats.html#afe9cc4e64d3e96c3c61267ead11d9965", null ],
     [ "Burden", "classStats.html#a2fd603d82369cb63e193b53225a59b7c", null ],
     [ "Depression", "classStats.html#ac7a09b91e697ac88ddf21570adeb4b6c", null ],

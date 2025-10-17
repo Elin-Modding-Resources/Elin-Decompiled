@@ -8,6 +8,7 @@ var classSerializedCards_1_1Data =
     [ "altitude", "classSerializedCards_1_1Data.html#a8b2bff87cbe85b484cab79827853e280", null ],
     [ "bits1", "classSerializedCards_1_1Data.html#a8495a7769b49fd5a22e4ed1673d1c9f8", null ],
     [ "bits2", "classSerializedCards_1_1Data.html#a59520e8a2a1aa4e28f531f5dc0ea929a", null ],
+    [ "cNote", "classSerializedCards_1_1Data.html#a19a45b14ca85139a52e2c14cc311b85d", null ],
     [ "cText", "classSerializedCards_1_1Data.html#a4a71a1a29ebc64d565d34ba260850b58", null ],
     [ "dir", "classSerializedCards_1_1Data.html#a9bc7facb42dcd34272a0b10b13828bd8", null ],
     [ "element", "classSerializedCards_1_1Data.html#a8b669389cd8e26d66c7e074728b94dee", null ],

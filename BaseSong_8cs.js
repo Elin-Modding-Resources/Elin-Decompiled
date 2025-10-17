@@ -1,4 +1,4 @@
 var BaseSong_8cs =
 [
-    [ "BaseSong", "classBaseSong.html", null ]
+    [ "BaseSong", "classBaseSong.html", "classBaseSong" ]
 ];

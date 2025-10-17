@@ -292,7 +292,7 @@ var annotated_dup =
     [ "BaseModPackage", "classBaseModPackage.html", "classBaseModPackage" ],
     [ "BaseNotification", "classBaseNotification.html", "classBaseNotification" ],
     [ "BaseSkinRoot", "classBaseSkinRoot.html", "classBaseSkinRoot" ],
-    [ "BaseSong", "classBaseSong.html", null ],
+    [ "BaseSong", "classBaseSong.html", "classBaseSong" ],
     [ "BaseStance", "classBaseStance.html", "classBaseStance" ],
     [ "BaseStats", "classBaseStats.html", "classBaseStats" ],
     [ "BaseSticky", "classBaseSticky.html", "classBaseSticky" ],

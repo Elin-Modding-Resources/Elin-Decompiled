@@ -1,5 +1,8 @@
 var NAVTREEINDEX66 =
 {
+"classGameScreenElona.html#a74404ed62d6c7d461add72044df180b6":[1,0,536,0],
+"classGameScreenElona.html#a7df891f73e6c06a1062ea5831fb85076":[1,0,536,3],
+"classGameScreenElona.html#a834ad2227fc4e98735e98f36f07a3de9":[1,0,536,11],
 "classGameScreenElona.html#a8852f94f6bae41dbf52bb423b08cf7c5":[1,0,536,8],
 "classGameScreenElona.html#a9c22f3b53b91a7448ac24ebf60bd0058":[1,0,536,2],
 "classGameScreenElona.html#aba0125cfc7824f989400bdf0bc62d7b5":[1,0,536,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX66 =
 "classGame_1_1Config.html#ac832c888a78877db4d19f9c93372612e":[1,0,525,0,20],
 "classGame_1_1Config.html#ad04ad7b7aa992b3e1da1c653e3e79ed9":[1,0,525,0,29],
 "classGame_1_1Config.html#adce0cbf34ccf63de95a00b4281cc311b":[1,0,525,0,3],
-"classGame_1_1Config.html#ae31179d0309b47cf2d5a10719e03fa9c":[1,0,525,0,23],
-"classGame_1_1Config.html#af095a5927713d81d02655b6ec675880c":[1,0,525,0,8],
-"classGame_1_1Config.html#af8c5caed73637879c758c5cade0aa481":[1,0,525,0,2],
-"classGame_1_1Flags.html":[1,0,525,1]
+"classGame_1_1Config.html#ae31179d0309b47cf2d5a10719e03fa9c":[1,0,525,0,23]
 };

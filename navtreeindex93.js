@@ -1,5 +1,8 @@
 var NAVTREEINDEX93 =
 {
+"classQuestHome.html#a7afe6fffdfcb1a8b267c309e68b17dcb":[1,0,1009,5],
+"classQuestHome.html#a80acd596baf11d80b802fe1650a2c556":[1,0,1009,4],
+"classQuestHome.html#aa0e75043b73e3bd83d4c7de9bb5ff69c":[1,0,1009,1],
 "classQuestHome.html#ac1b778cb1fd48765b3fb0d3f99f02da7":[1,0,1009,3],
 "classQuestHunt.html":[1,0,1010],
 "classQuestHunt.html#a1598cd5fd1ad88429511410f3e2fcb54":[1,0,1010,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestTaskKarma.html#ac1d30ea1d45e0af4c5369e784ec1016fa2418b8049c44c6e0308e14f44140b269":[1,0,1052,0,1],
 "classQuestTaskKarma.html#ac1d30ea1d45e0af4c5369e784ec1016fa64663f4646781c9c0110838b905daa23":[1,0,1052,0,0],
 "classQuestTaskKarma.html#ac53bf9f3c8ac6fd4b44fd87f3b8238a1":[1,0,1052,4],
-"classQuestTaskKarma.html#ad13d9f985d054ce9c372cb3720da578b":[1,0,1052,8],
-"classQuestTaskKarma.html#ae3d27d298925f391100bb669d7cf0402":[1,0,1052,7],
-"classQuestTax.html":[1,0,1053],
-"classQuestTax.html#a408a7b509a7a5afbc47b6879f1acd931":[1,0,1053,2]
+"classQuestTaskKarma.html#ad13d9f985d054ce9c372cb3720da578b":[1,0,1052,8]
 };

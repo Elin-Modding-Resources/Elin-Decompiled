@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.220 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.221 Nightly</span>
    </div>
   </td>
  </tr>
@@ -814,7 +814,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
 <div class="line"><span class="lineno">  202</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTraitSeed.html#acd78e370686f4b25103602bb1ad33b67">listSeeds</a> == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  203</span>        {</div>
-<div class="line"><span class="lineno">  204</span>            <a class="code hl_variable" href="classTraitSeed.html#acd78e370686f4b25103602bb1ad33b67">listSeeds</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.rows.Where((<a class="code hl_class" href="classSourceObj.html">SourceObj</a>.<a class="code hl_class" href="classSourceObj_1_1Row.html">Row</a> s) =&gt; s.HasTag(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.seed) &amp;&amp; !s.HasTag(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.rareSeed)).ToList();</div>
+<div class="line"><span class="lineno">  204</span>            <a class="code hl_variable" href="classTraitSeed.html#acd78e370686f4b25103602bb1ad33b67">listSeeds</a> = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a38f1a362e2021aef4516d1b34101d179">objs</a>.rows.Where((<a class="code hl_class" href="classSourceObj.html">SourceObj</a>.<a class="code hl_class" href="classSourceObj_1_1Row.html">Row</a> s) =&gt; s.HasTag(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.seed) &amp;&amp; !s.HasTag(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.rareSeed) &amp;&amp; s.alias != <span class="stringliteral">&quot;redpepper&quot;</span>).ToList();</div>
 <div class="line"><span class="lineno">  205</span>        }</div>
 <div class="line"><span class="lineno">  206</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classTraitSeed.html#acd78e370686f4b25103602bb1ad33b67">listSeeds</a>.RandomItemWeighted((<a class="code hl_class" href="classSourceObj.html">SourceObj</a>.<a class="code hl_class" href="classSourceObj_1_1Row.html">Row</a> a) =&gt; a.chance);</div>
 <div class="line"><span class="lineno">  207</span>    }</div>

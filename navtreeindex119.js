@@ -1,5 +1,8 @@
 var NAVTREEINDEX119 =
 {
+"classTraitGemCutter.html#a72e42b90159f991187240f2075e47512":[1,0,1608,1],
+"classTraitGemCutter.html#a785ab711675b3b95e1fc3a4fb9d1ffd7":[1,0,1608,5],
+"classTraitGemCutter.html#ac1c1cd18138413fcfc05f88efbb3b6d8":[1,0,1608,2],
 "classTraitGemCutter.html#ad4c678718199490197cc863c8df758da":[1,0,1608,4],
 "classTraitGemCutter.html#ae2be1a78267a99786d8530c23fc9cce7":[1,0,1608,0],
 "classTraitGene.html":[1,0,1609],
@@ -246,8 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitLoytel.html":[1,0,1669],
 "classTraitLoytel.html#a5fb49eaba30736bfdf70764f2edc6450":[1,0,1669,4],
 "classTraitLoytel.html#a85070c450e7c710848975c5dc5ca317c":[1,0,1669,2],
-"classTraitLoytel.html#aadacdea2a438c67563e2ecc063c7b34a":[1,0,1669,3],
-"classTraitLoytel.html#ac53844a5ad9188df790abc3ad4db7441":[1,0,1669,1],
-"classTraitLoytel.html#ad7f4e03ba1079b4bd6cc36e55d4ce73d":[1,0,1669,0],
-"classTraitLoytelMart.html":[1,0,1670]
+"classTraitLoytel.html#aadacdea2a438c67563e2ecc063c7b34a":[1,0,1669,3]
 };

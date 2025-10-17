@@ -1,5 +1,8 @@
 var NAVTREEINDEX89 =
 {
+"classPoint.html#abff78d5dc8b5e7d00c5f46e44ada4726":[1,0,950,112],
+"classPoint.html#ac8ac3dc84283d4769a24a3de8186c9ff":[1,0,950,82],
+"classPoint.html#acb138657e1ad8724939e6e8dacf59126":[1,0,950,26],
 "classPoint.html#accb936c7f0ebccd843a2289fdab962b7":[1,0,950,95],
 "classPoint.html#accde8fb80953b8da8dbe6a39f4ef29a3":[1,0,950,113],
 "classPoint.html#acd5999e555a324bcf6f8a17216a72d76":[1,0,950,87],
@@ -246,8 +249,5 @@ var NAVTREEINDEX89 =
 "classPopperManager.html#a9b76444f8eeb1707148df0768146b1d1":[1,0,964,4],
 "classPopperManager.html#aa95633a7c28dccd9503431c6fa662aa9":[1,0,964,5],
 "classPopperManager.html#ad0b775999272767791eadf52ff2fe1df":[1,0,964,2],
-"classPopperManager.html#ae9fc9248df91965ceaabbd6f4e1e79e0":[1,0,964,3],
-"classPopupManager.html":[1,0,965],
-"classPopupManager.html#a0c11d1ab5f6d03e7b834c817eede47ec":[1,0,965,2],
-"classPopupManager.html#a2eaccec004bb43aedb2926f05a6ca810":[1,0,965,5]
+"classPopperManager.html#ae9fc9248df91965ceaabbd6f4e1e79e0":[1,0,964,3]
 };

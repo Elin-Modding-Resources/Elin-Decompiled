@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"classConBuffStats.html#afb918f93387ca79874e9952d960aa37d":[1,0,307,7],
+"classConBurning.html":[1,0,308],
+"classConBurning.html#a49c579b9b8cd5a365f10d8dbe8a62e93":[1,0,308,0],
 "classConBurning.html#a4d98096b68f3c3c4a2712deeb3174fce":[1,0,308,1],
 "classConChampagne.html":[1,0,309],
 "classConChampagne.html#a7a778187c042eced4f899ffe083214dc":[1,0,309,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "classConfigAutoCombat.html#aacec13d4e9b833426d968797e7de625c":[1,0,325,10],
 "classConfigAutoCombat.html#ab0209cb0eba377747fe1d7e04d94e192":[1,0,325,11],
 "classConfigAutoCombat.html#ab253868076b3d3f5c190b499440fdb95":[1,0,325,3],
-"classConfigAutoCombat.html#ab56fa2dd4b1caa2119ccae8c8c393038":[1,0,325,15],
-"classConfigAutoCombat.html#ab776e0a096fef7e4c928752bc41b17fb":[1,0,325,13],
-"classConfigAutoCombat.html#abe364d7de4682ae19eddb2bf478a2d58":[1,0,325,14],
-"classConfigAutoCombat.html#ace732e6dbe83ea222b75e99c22d55ea3":[1,0,325,1]
+"classConfigAutoCombat.html#ab56fa2dd4b1caa2119ccae8c8c393038":[1,0,325,15]
 };

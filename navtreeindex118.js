@@ -1,5 +1,8 @@
 var NAVTREEINDEX118 =
 {
+"classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796":[1,0,1547,16],
+"classTraitDrink.html#a79a7994ae5c96c13dfd79126692854ec":[1,0,1547,17],
+"classTraitDrink.html#a7fb1ac5d9691764a0359512f6b612150":[1,0,1547,15],
 "classTraitDrink.html#a843fd880637c9cd8324e9c03a1078653":[1,0,1547,0],
 "classTraitDrink.html#a9280301ca2bf185a8618d464d04973d6":[1,0,1547,12],
 "classTraitDrink.html#a9d8c11ed801f1209ee12913ed177e1da":[1,0,1547,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitGambleChest.html#af1855c0b9def1407b0cb0d967d4204be":[1,0,1606,0],
 "classTraitGarokk.html":[1,0,1607],
 "classTraitGemCutter.html":[1,0,1608],
-"classTraitGemCutter.html#a52e9b307ebc7ed32c541113c4a898965":[1,0,1608,3],
-"classTraitGemCutter.html#a72e42b90159f991187240f2075e47512":[1,0,1608,1],
-"classTraitGemCutter.html#a785ab711675b3b95e1fc3a4fb9d1ffd7":[1,0,1608,5],
-"classTraitGemCutter.html#ac1c1cd18138413fcfc05f88efbb3b6d8":[1,0,1608,2]
+"classTraitGemCutter.html#a52e9b307ebc7ed32c541113c4a898965":[1,0,1608,3]
 };
