@@ -381,6 +381,18 @@ public class SerializedCards : EClass
 			}
 		}
 
+		public string cNote
+		{
+			get
+			{
+				return strs[9];
+			}
+			set
+			{
+				strs[9] = value;
+			}
+		}
+
 		public bool isDead
 		{
 			get
@@ -443,7 +455,8 @@ public class SerializedCards : EClass
 			idDeity = c.c_idDeity,
 			isEmpty = (c.things.Count == 0 && c.c_lockLv == 0),
 			encLv = c.encLV,
-			cText = c.c_refText
+			cText = c.c_refText,
+			cNote = c.c_note
 		};
 		if (c.c_idBacker != 0)
 		{
@@ -717,6 +730,7 @@ public class SerializedCards : EClass
 			card2.idSkin = card4.idSkin;
 			card2.c_idDeity = card4.idDeity;
 			card2.c_refText = card4.cText;
+			card2.c_note = card4.cNote;
 			if (card4.idBacker != 0)
 			{
 				Debug.Log(card4.idBacker);

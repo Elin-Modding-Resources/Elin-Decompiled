@@ -783,7 +783,7 @@ public class ActEffect : EClass
 		case EffectId.Rocket:
 		case EffectId.Flare:
 		{
-			float radius = ((id == EffectId.Rocket) ? 3f : ((id == EffectId.Suicide) ? 3.5f : ((id == EffectId.Flare) ? 2.1f : ((float)((id == EffectId.BallBubble) ? 2 : 5)))));
+			float radius = ((id == EffectId.Rocket) ? 2.8f : ((id == EffectId.Suicide) ? 3.5f : ((id == EffectId.Flare) ? 2.1f : ((float)((id == EffectId.BallBubble) ? 2 : 5)))));
 			if ((id == EffectId.Explosive || id == EffectId.Rocket) && actRef.refThing != null)
 			{
 				radius = 2 + actRef.refThing.Evalue(666);

@@ -2906,7 +2906,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		return sum;
 	}
 
-	public void SetBGM(List<int> ids, bool refresh = true)
+	public void SetBGM(List<int> ids, bool refresh = true, float fadeDuration = 0f)
 	{
 		map._plDay.Clear();
 		if (ids.Count > 0)
@@ -2922,16 +2922,30 @@ public class Zone : Spatial, ICardParent, IInspect
 		UnityEngine.Object.DestroyImmediate(map.plDay);
 		map.plDay = null;
 		RefreshPlaylist();
-		if (refresh)
+		if (!refresh)
+		{
+			return;
+		}
+		if (fadeDuration > 0f)
+		{
+			EClass.Sound.StopBGM(fadeDuration, playLastBGM: false, delegate
+			{
+				if (EClass.core.IsGameStarted && EClass.game.activeZone == this)
+				{
+					RefreshBGM();
+				}
+			});
+		}
+		else
 		{
 			EClass.Sound.StopBGM();
 			RefreshBGM();
 		}
 	}
 
-	public void SetBGM(int id = -1, bool refresh = true)
+	public void SetBGM(int id = -1, bool refresh = true, float fadeDuration = 0f)
 	{
-		SetBGM(new List<int> { id }, refresh);
+		SetBGM(new List<int> { id }, refresh, fadeDuration);
 	}
 
 	public void RefreshPlaylist()

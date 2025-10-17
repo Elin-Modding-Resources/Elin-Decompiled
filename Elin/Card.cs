@@ -7293,6 +7293,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				p *= 0.20000000298023224;
 			}
+			if (isReplica)
+			{
+				p *= 0.20000000298023224;
+			}
 			if (currency == CurrencyType.Money && (category.IsChildOf("meal") || category.IsChildOf("preserved")))
 			{
 				p *= 0.5;

@@ -1738,7 +1738,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			base.isHidden = false;
 		}
-		visibleWithTelepathy = !IsUndead && !IsMachine && !IsHorror;
+		visibleWithTelepathy = !IsUndead && !IsMachine && !IsHorror && !IsMultisize;
 		SetDirtySpeed();
 		if (host != null && !calledRecursive && host.source != null)
 		{
@@ -5514,9 +5514,8 @@ public class Chara : Card, IPathfindWalker
 			{
 				EClass.player.stats.nefiaBeaten++;
 				EClass._zone.GetTopZone().isConquered = true;
-				EClass.Sound.StopBGM(2f);
 				SE.Play("Jingle/fanfare2");
-				EClass._zone.SetBGM(114);
+				EClass._zone.SetBGM(114, refresh: true, 3f);
 			}
 			EClass.player.ModFame(EClass.rndHalf(30 + EClass._zone.DangerLv * 2));
 			EClass.player.ModKarma(5);
@@ -5538,8 +5537,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				num = 5;
 				flag = (flag2 = true);
-				EClass.Sound.StopBGM(3f);
-				EClass._zone.SetBGM(1, refresh: false);
+				EClass._zone.SetBGM(120, refresh: true, 3f);
 				if (EClass.game.quests.IsStarted<QuestNegotiationDarkness>() && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() <= 3)
 				{
 					EClass.game.quests.Get<QuestNegotiationDarkness>().ChangePhase(4);
@@ -5552,8 +5550,7 @@ public class Chara : Card, IPathfindWalker
 			flag = (flag2 = true);
 			if (EClass._zone is Zone_DungeonMino)
 			{
-				EClass.Sound.StopBGM(3f);
-				EClass._zone.SetBGM(46, refresh: false);
+				EClass._zone.SetBGM(46, refresh: true, 3f);
 			}
 			break;
 		case "melilith_boss":

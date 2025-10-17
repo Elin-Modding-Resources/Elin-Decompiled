@@ -170,6 +170,11 @@ public class Stats : BaseStats
 		}
 	}
 
+	public virtual void Validate()
+	{
+		value = Mathf.Clamp(value, min, max);
+	}
+
 	public virtual void OnChangePhase(int phase, int lastPhase)
 	{
 		bool flag = phase > lastPhase;

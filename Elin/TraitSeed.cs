@@ -201,7 +201,7 @@ public class TraitSeed : Trait
 	{
 		if (listSeeds == null)
 		{
-			listSeeds = EClass.sources.objs.rows.Where((SourceObj.Row s) => s.HasTag(CTAG.seed) && !s.HasTag(CTAG.rareSeed)).ToList();
+			listSeeds = EClass.sources.objs.rows.Where((SourceObj.Row s) => s.HasTag(CTAG.seed) && !s.HasTag(CTAG.rareSeed) && s.alias != "redpepper").ToList();
 		}
 		return listSeeds.RandomItemWeighted((SourceObj.Row a) => a.chance);
 	}

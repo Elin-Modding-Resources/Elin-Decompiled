@@ -455,6 +455,10 @@ public class Game : EClass
 			}
 		});
 		TryAddQuest("into_darkness", "exile_kettle");
+		if (version.IsBelow(0, 23, 221) && EClass.game.quests.IsCompleted("curry"))
+		{
+			world.SendPackage(ThingGen.CreateParcel(null, ThingGen.CreateCassette(110)));
+		}
 		if (version.IsBelow(0, 23, 185))
 		{
 			player.resetPrincipal = true;

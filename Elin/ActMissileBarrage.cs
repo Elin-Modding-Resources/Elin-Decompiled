@@ -18,20 +18,21 @@ public class ActMissileBarrage : Ability
 				}
 			}
 		}
-		Act.CC.Say("abMissileBarrage", Act.CC);
 		if (list.Count > 0)
 		{
+			Act.CC.Say("abMissileBarrage", Act.CC);
+			Act.CC.PlaySound("missile");
 			Chara cC = Act.CC;
 			foreach (Point item in list)
 			{
 				Act.CC = cC;
 				Act.TP.Set(item);
-				ActEffect.ProcAt(EffectId.Rocket, GetPower(Act.CC) / 2, BlessedState.Normal, Act.CC, null, Act.TP, isNeg: true, new ActRef
+				ActEffect.ProcAt(EffectId.Rocket, GetPower(Act.CC), BlessedState.Normal, Act.CC, null, Act.TP, isNeg: true, new ActRef
 				{
 					origin = Act.CC.Chara,
 					aliasEle = "eleImpact"
 				});
-				ActEffect.RapidDelay = 0.05f;
+				ActEffect.RapidDelay = 0.075f;
 				ActEffect.RapidCount++;
 			}
 		}

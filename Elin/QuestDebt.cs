@@ -24,9 +24,8 @@ public class QuestDebt : QuestProgression
 		chara.homeZone = EClass.pc.homeBranch.owner;
 		chara.noMove = false;
 		chara.RemoveEditorTag(EditorTag.Invulnerable);
-		Thing thing = ThingGen.Create("856");
-		thing.refVal = 109;
-		EClass.pc.Pick(thing);
+		Thing t = ThingGen.CreateCassette(109);
+		EClass.pc.Pick(t);
 	}
 
 	public override bool CanUpdateOnTalk(Chara c)
