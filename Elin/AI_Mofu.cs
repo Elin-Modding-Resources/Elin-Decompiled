@@ -27,7 +27,7 @@ public class AI_Mofu : AIWork
 		{
 			yield return DoGoto(mofu);
 		}
-		if (mofu == null || !mofu.ExistsOnMap)
+		if (mofu == null || !mofu.ExistsOnMap || owner.Dist(mofu) > 1)
 		{
 			yield return Success();
 		}

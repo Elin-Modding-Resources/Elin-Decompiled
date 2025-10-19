@@ -571,6 +571,10 @@ public class TraitCrafter : Trait
 
 	public override bool CanUse(Chara c)
 	{
+		if (EClass._zone.IsUserZone && owner.isNPCProperty)
+		{
+			return false;
+		}
 		return CanUseFromInventory;
 	}
 

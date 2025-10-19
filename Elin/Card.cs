@@ -3591,7 +3591,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public bool CanAddRune(TraitMod mod)
 	{
 		SourceElement.Row source = mod.source;
-		if (category.slot == 0)
+		if (category.slot == 0 || isReplica)
 		{
 			return false;
 		}
