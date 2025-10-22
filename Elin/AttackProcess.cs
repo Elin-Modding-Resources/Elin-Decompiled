@@ -462,7 +462,7 @@ public class AttackProcess : EClass
 
 	public int GetRocketPower()
 	{
-		return (50 + (dNum * dDim + dBonus) + (dNumAmmo * dDimAmmo + dBonusAmmo)) * (100 + (int)Mathf.Sqrt(weaponSkill.Value) * 10) / 100;
+		return (30 + (dNum * dDim + dBonus) + (dNumAmmo * dDimAmmo + dBonusAmmo)) * (100 + (int)Mathf.Sqrt(weaponSkill.Value) * 8) / 100;
 	}
 
 	public long GetRawDamage(float dmgMulti, bool crit, bool maxRoll)

@@ -78,7 +78,7 @@ public class GoalAutoCombat : GoalCombat
 				{
 					return false;
 				}
-				if (t.IsRangedWeapon && (t.trait is TraitToolRangeCane || t.c_ammo > 0 || EClass.pc.FindAmmo(t) != null) && owner.CanEquipRanged(t))
+				if (t.IsRangedWeapon && (t.trait is TraitToolRangeCane || t.trait is TraitToolRangeSling || t.c_ammo > 0 || EClass.pc.FindAmmo(t) != null) && owner.CanEquipRanged(t))
 				{
 					owner.ranged = t;
 					return true;

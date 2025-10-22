@@ -2290,7 +2290,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				return LV;
 			}
-			return EClass.player.fame / 100 + 1;
+			return Mathf.Min(EClass.player.fame / 100 + 1, 21474836);
 		}
 	}
 
@@ -3585,13 +3585,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public int MaxRune()
 	{
-		return ((!IsUnique) ? 1 : 0) + Evalue(484);
+		return ((!IsUnique && !isReplica) ? 1 : 0) + Evalue(484);
 	}
 
 	public bool CanAddRune(TraitMod mod)
 	{
 		SourceElement.Row source = mod.source;
-		if (category.slot == 0 || isReplica)
+		if (category.slot == 0)
 		{
 			return false;
 		}

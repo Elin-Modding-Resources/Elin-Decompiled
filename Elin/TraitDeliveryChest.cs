@@ -14,9 +14,9 @@ public class TraitDeliveryChest : TraitContainer
 		{
 			if (owner.IsInstalled)
 			{
-				if (!EClass._zone.IsPCFaction && !EClass._zone.IsTown && !(EClass._zone is Zone_MerchantGuild))
+				if (!EClass._zone.IsPCFaction && !EClass._zone.IsTown && !(EClass._zone is Zone_MerchantGuild) && !(EClass._zone is Zone_Casino))
 				{
-					return EClass._zone is Zone_Casino;
+					return EClass._zone is Zone_CurryRuin;
 				}
 				return true;
 			}

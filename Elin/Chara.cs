@@ -4785,8 +4785,12 @@ public class Chara : Card, IPathfindWalker
 				AddThing("gun_laser");
 				break;
 			case "rocketman":
-				AddThing("panzerfaust").c_ammo = 0;
+			{
+				Thing thing2 = AddThing("panzerfaust");
+				thing2.ChangeMaterial("iron");
+				thing2.c_ammo = 0;
 				break;
+			}
 			default:
 				switch (equip)
 				{

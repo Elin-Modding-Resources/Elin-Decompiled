@@ -475,6 +475,8 @@ public class BaseTileMap : EMono
 
 	protected bool isUnderwater;
 
+	protected bool darkenOuter;
+
 	protected Vector3 thingPos;
 
 	protected Vector3 orgPos;
@@ -755,6 +757,7 @@ public class BaseTileMap : EMono
 			lowBlock = (hideRoomFog = (hideHang = false));
 			showRoof = (showFullWall = true);
 		}
+		darkenOuter = !cinemaMode && !ActionMode.Bird.IsActive && !ActionMode.ViewMap.IsActive;
 		currentLot = currentRoom?.lot ?? null;
 		Vector3 mposWorld = EInput.mposWorld;
 		mposWorld.z = 0f;
@@ -872,18 +875,18 @@ public class BaseTileMap : EMono
 		int valueOrDefault = (this.room?.lot?.idBGM).GetValueOrDefault();
 		if (valueOrDefault == 0)
 		{
-			goto IL_16d1;
+			goto IL_16fb;
 		}
 		if (!(EMono.Sound.currentPlaylist != EMono.Sound.plLot))
 		{
 			BGMData data = EMono.Sound.plLot.list[0].data;
 			if ((object)data != null && data.id == valueOrDefault)
 			{
-				goto IL_16d1;
+				goto IL_16fb;
 			}
 		}
-		goto IL_16f0;
-		IL_16fa:
+		goto IL_171a;
+		IL_1724:
 		if (this.room != lastRoom)
 		{
 			screen.RefreshWeather();
@@ -892,15 +895,15 @@ public class BaseTileMap : EMono
 		SoundManager.bgmVolumeMod = ((!LayerDrama.maxBGMVolume && !EMono._map.IsIndoor && this.room != null && !this.room.data.atrium && this.room.HasRoof) ? (-0.6f) : 0f);
 		screenHighlight = ScreenHighlight.None;
 		return;
-		IL_16d1:
+		IL_16fb:
 		if (valueOrDefault == 0 && EMono.Sound.currentPlaylist == EMono.Sound.plLot)
 		{
-			goto IL_16f0;
+			goto IL_171a;
 		}
-		goto IL_16fa;
-		IL_16f0:
+		goto IL_1724;
+		IL_171a:
 		EMono._zone.RefreshBGM();
-		goto IL_16fa;
+		goto IL_1724;
 	}
 
 	public void RefreshHeight()
@@ -1039,7 +1042,7 @@ public class BaseTileMap : EMono
 				}
 			}
 		}
-		if (this.cell.outOfBounds && !cinemaMode)
+		if (this.cell.outOfBounds && darkenOuter)
 		{
 			blockLight -= 0.1f;
 			if (fogBounds)

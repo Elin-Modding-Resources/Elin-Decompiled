@@ -1824,9 +1824,14 @@ public class Trait : EClass
 				{
 					float num = (float)(3 + Mathf.Min(ShopLv / 5, 10)) + Mathf.Sqrt(ShopLv);
 					int num2 = 300;
-					if (ShopType == ShopType.Ecopo)
+					switch (ShopType)
 					{
+					case ShopType.Ecopo:
 						num2 = 30;
+						break;
+					case ShopType.StrangeGirl:
+						num2 = 50;
+						break;
 					}
 					num = num * (float)(100 + EClass.pc.Evalue(1406) * 5) / 100f;
 					num = Mathf.Min(num, num2);

@@ -85,6 +85,18 @@ public class DNA : EClass
 		}
 	}
 
+	public bool isManiGene
+	{
+		get
+		{
+			return bits[0];
+		}
+		set
+		{
+			bits[0] = value;
+		}
+	}
+
 	[OnSerializing]
 	private void _OnSerializing(StreamingContext context)
 	{
@@ -156,6 +168,7 @@ public class DNA : EClass
 		Rand.SetSeed(owner.c_seed);
 		Thing thing = GenerateGene(r, Type.Superior, owner.LV, owner.c_seed);
 		thing.c_DNA.cost = thing.c_DNA.cost / 2;
+		thing.c_DNA.isManiGene = true;
 		thing.MakeRefFrom("mani");
 		Rand.SetSeed();
 		owner.c_seed++;

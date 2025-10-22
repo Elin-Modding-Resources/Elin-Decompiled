@@ -543,6 +543,10 @@ public class TraitCrafter : Trait
 
 	public override void TrySetAct(ActPlan p)
 	{
+		if (this is TraitRuneMold && EClass._zone.IsUserZone && owner.isNPCProperty)
+		{
+			return;
+		}
 		if (IsFactory)
 		{
 			Thing _t = owner.Thing;
