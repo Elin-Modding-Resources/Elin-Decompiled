@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"classManlySingleton.html":[1,0,866],
+"classManlySingleton.html#a004039b47825dd581650b3c60a225d17":[1,0,866,5],
 "classManlySingleton.html#a2de8cbab7a5fd0a54bb0a06aa3f67dce":[1,0,866,1],
 "classManlySingleton.html#a42a2d2827622077f2e75908d58c899cf":[1,0,866,7],
 "classManlySingleton.html#a538b1040b509a24bff1552ea8f3c9fd5":[1,0,866,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX82 =
 "classMapConfig.html#af218aa295772bdf5002eb6ddb1a3a50c":[1,0,869,18],
 "classMapConfig.html#afa57b3a79ccb9e2193a323c35194de69":[1,0,869,8],
 "classMapExportSetting.html":[1,0,870],
-"classMapExportSetting.html#abf4607b37753de01b573d490123d0bee":[1,0,870,1],
-"classMapExportSetting.html#ac11eb8da2b46f82d02a719ceaed59af6":[1,0,870,0],
-"classMapExportSetting.html#af2416c056db2e9f25e515e3865c57568":[1,0,870,2]
+"classMapExportSetting.html#abf4607b37753de01b573d490123d0bee":[1,0,870,1]
 };

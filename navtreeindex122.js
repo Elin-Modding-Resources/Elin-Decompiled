@@ -1,5 +1,7 @@
 var NAVTREEINDEX122 =
 {
+"classTraitRollingFortune.html#a3bbf3c32a0a5900536ef45411d92097e":[1,0,1794,5],
+"classTraitRollingFortune.html#a56352d29ba42a40a680f1645d755a62a":[1,0,1794,2],
 "classTraitRollingFortune.html#a5997575ca14641c00633be0a788db30e":[1,0,1794,6],
 "classTraitRollingFortune.html#a8a8c01fcc9b5db9140a36c4f9230936c":[1,0,1794,3],
 "classTraitRollingFortune.html#ad1199c02254ea0e8445c5a39e1175ec2":[1,0,1794,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitSpotLumberjack.html":[1,0,1845],
 "classTraitSpotMeeting.html":[1,0,1846],
 "classTraitSpotPrayer.html":[1,0,1847],
-"classTraitSpotRanch.html":[1,0,1848],
-"classTraitSpotSearch.html":[1,0,1849],
-"classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1849,0]
+"classTraitSpotRanch.html":[1,0,1848]
 };

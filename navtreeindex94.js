@@ -1,5 +1,7 @@
 var NAVTREEINDEX94 =
 {
+"classQuestTaskKarma.html#ac53bf9f3c8ac6fd4b44fd87f3b8238a1":[1,0,1052,4],
+"classQuestTaskKarma.html#ad13d9f985d054ce9c372cb3720da578b":[1,0,1052,8],
 "classQuestTaskKarma.html#ae3d27d298925f391100bb669d7cf0402":[1,0,1052,7],
 "classQuestTax.html":[1,0,1053],
 "classQuestTax.html#a408a7b509a7a5afbc47b6879f1acd931":[1,0,1053,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX94 =
 "classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79":[1,0,1069,10],
 "classRecipeManager.html#afc7f69001a0268922b380bc78f8f6477":[1,0,1069,23],
 "classRecipeSource.html":[1,0,1070],
-"classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0":[1,0,1070,8],
-"classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50":[1,0,1070,5],
-"classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551":[1,0,1070,3]
+"classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0":[1,0,1070,8]
 };

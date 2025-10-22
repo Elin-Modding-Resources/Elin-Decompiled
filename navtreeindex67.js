@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"classGame_1_1Config.html#adce0cbf34ccf63de95a00b4281cc311b":[1,0,525,0,3],
+"classGame_1_1Config.html#ae31179d0309b47cf2d5a10719e03fa9c":[1,0,525,0,23],
 "classGame_1_1Config.html#af095a5927713d81d02655b6ec675880c":[1,0,525,0,8],
 "classGame_1_1Config.html#af8c5caed73637879c758c5cade0aa481":[1,0,525,0,2],
 "classGame_1_1Flags.html":[1,0,525,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "classGradientColor.html#a9d4de91ebc3f6bde97a66c6b5f0a6c0d":[1,0,574,15],
 "classGradientColor.html#ab79b86c28507431398dff10faa0b817a":[1,0,574,1],
 "classGradientColor.html#ab79b86c28507431398dff10faa0b817aa06ce2a25e5d12c166a36f654dbea6012":[1,0,574,1,0],
-"classGradientColor.html#ab79b86c28507431398dff10faa0b817aac1b5fa03ecdb95d4a45dd1c40b02527f":[1,0,574,1,1],
-"classGradientColor.html#abca4107c73318e3a29b433631446fddd":[1,0,574,2],
-"classGradientColor.html#abca4107c73318e3a29b433631446fddda219f5839fffc7673d62ad8728e714403":[1,0,574,2,1]
+"classGradientColor.html#ab79b86c28507431398dff10faa0b817aac1b5fa03ecdb95d4a45dd1c40b02527f":[1,0,574,1,1]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX118 =
 {
+"classTraitDrink.html#a6068c08dba4621b9c437ecf4dd8ca80e":[1,0,1547,10],
+"classTraitDrink.html#a6f961b99b7206af0591187f7ca7b00af":[1,0,1547,13],
 "classTraitDrink.html#a72b5f8324f35951deb5bd0193d7ee796":[1,0,1547,16],
 "classTraitDrink.html#a79a7994ae5c96c13dfd79126692854ec":[1,0,1547,17],
 "classTraitDrink.html#a7fb1ac5d9691764a0359512f6b612150":[1,0,1547,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitGambleChest.html#a5a10166174b109bf73e6df8d4eabec37":[1,0,1606,2],
 "classTraitGambleChest.html#a61cea1f2dbec25aeb9030dc223efbaa3":[1,0,1606,1],
 "classTraitGambleChest.html#af1855c0b9def1407b0cb0d967d4204be":[1,0,1606,0],
-"classTraitGarokk.html":[1,0,1607],
-"classTraitGemCutter.html":[1,0,1608],
-"classTraitGemCutter.html#a52e9b307ebc7ed32c541113c4a898965":[1,0,1608,3]
+"classTraitGarokk.html":[1,0,1607]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX69 =
 {
+"classGuild.html#abbd12d65b6b73f64e1032cfdfe8aa2b5":[1,0,601,12],
+"classGuild.html#abdc43697f65c21cc26a2758131232b18":[1,0,601,10],
 "classGuild.html#ae565e3e67e2563493bcf162754b551e3":[1,0,601,6],
 "classGuild.html#ae6498e1c0c27b8ee5302f34d76560d92":[1,0,601,0],
 "classGuildFighter.html":[1,0,602],
@@ -247,7 +249,5 @@ var NAVTREEINDEX69 =
 "classHomeResource.html":[1,0,619],
 "classHomeResource.html#a0b2edad7194e282f5f95632d48fd75ca":[1,0,619,3],
 "classHomeResource.html#a4849e1c8a74e93850039470dcfb08b20":[1,0,619,4],
-"classHomeResource.html#a81912a8016c2d7f67838f7531cf2d8ec":[1,0,619,2],
-"classHomeResourceCulture.html":[1,0,620],
-"classHomeResourceEducation.html":[1,0,621]
+"classHomeResource.html#a81912a8016c2d7f67838f7531cf2d8ec":[1,0,619,2]
 };

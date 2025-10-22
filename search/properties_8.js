@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['h_0',['H',['../classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f',1,'Card']]],
+  ['h_0',['H',['../classRecipe.html#a8725308b3668823e833db7036dd5f443',1,'Recipe.H()'],['../classCard.html#ac9c5cc2a97c2cdd68faceb54bea6ff1f',1,'Card.H()']]],
   ['h_1',['h',['../classWindow_1_1SaveData.html#a25972e0af4e8b068826f50d12f7f2075',1,'Window::SaveData']]],
-  ['h_2',['H',['../classTaskMoveInstalled.html#af010736f2804ae7cb60ab1c4efd905fa',1,'TaskMoveInstalled.H()'],['../classTaskDesignation.html#abd0db3364a44feedf964f44c620fa3c8',1,'TaskDesignation.H()'],['../classRecipe.html#a8725308b3668823e833db7036dd5f443',1,'Recipe.H()'],['../classTaskBuild.html#a8382467d13d367386ed342936e17b097',1,'TaskBuild.H()']]],
+  ['h_2',['H',['../classTaskMoveInstalled.html#af010736f2804ae7cb60ab1c4efd905fa',1,'TaskMoveInstalled.H()'],['../classTaskBuild.html#a8382467d13d367386ed342936e17b097',1,'TaskBuild.H()'],['../classTaskDesignation.html#abd0db3364a44feedf964f44c620fa3c8',1,'TaskDesignation.H()']]],
   ['halfsamplecountx_3',['halfSampleCountX',['../classBoxOutline.html#a7a2b303e8572fffaf5384730964de22c',1,'BoxOutline']]],
   ['halfsamplecounty_4',['halfSampleCountY',['../classBoxOutline.html#a9c6dcbe45e4be7b977a063ffdcdc851e',1,'BoxOutline']]],
   ['haltstage_5',['HaltStage',['../classGrowSystem.html#a8f378d1da1d951e47a8883d77d002195',1,'GrowSystem']]],
@@ -91,8 +91,8 @@ var searchData=
   ['hidesubwidgets_88',['HideSubWidgets',['../classActionMode.html#abf5f4b1bc24ce06fdc3100f014db66ab',1,'ActionMode.HideSubWidgets()'],['../classAM__BaseGameMode.html#a75524f4e73112b4b93416b1219b9c666',1,'AM_BaseGameMode.HideSubWidgets()']]],
   ['highlightcolor_89',['highlightColor',['../classBevel.html#aafa81b9ef129e59aadf470a9d78d3741',1,'Bevel.highlightColor()'],['../classInnerBevel.html#a7a4dc7b0df9f88e8fb0bc0a59933d1d2',1,'InnerBevel.highlightColor()']]],
   ['highlightcolormode_90',['highlightColorMode',['../classInnerBevel.html#af81ef66565ef4b95a4ea3c7733c01a98',1,'InnerBevel']]],
-  ['hit_91',['HIT',['../classCard.html#a3ec2e5fee58de81a7c966ee7ede3c543',1,'Card']]],
-  ['hit_92',['hit',['../classAM__BaseGameMode.html#ae072c17d3643f98cd4d39dfe32a5e825',1,'AM_BaseGameMode']]],
+  ['hit_91',['hit',['../classAM__BaseGameMode.html#ae072c17d3643f98cd4d39dfe32a5e825',1,'AM_BaseGameMode']]],
+  ['hit_92',['HIT',['../classCard.html#a3ec2e5fee58de81a7c966ee7ede3c543',1,'Card']]],
   ['hith_93',['hitH',['../classActionMode.html#a35c1d4897130044d86878a1476551998',1,'ActionMode.hitH()'],['../classAM__Build.html#ae812750799c078ee31b32f2edc14579c',1,'AM_Build.hitH()'],['../classAM__MoveInstalled.html#a1ca7794b65e63e3ed4a5314dcff402fa',1,'AM_MoveInstalled.hitH()'],['../classBaseTileSelector.html#a0a22968babf21e0efdbd14d95fe6103b',1,'BaseTileSelector.hitH()']]],
   ['hitpoint_94',['HitPoint',['../classBaseTileMap.html#a26e6f3b57a4a919cce9e8d2c95b62840',1,'BaseTileMap']]],
   ['hittype_95',['hitType',['../classAM__RemoveDesignation.html#a49014db0dec0a809c6529965aa834d94',1,'AM_RemoveDesignation']]],

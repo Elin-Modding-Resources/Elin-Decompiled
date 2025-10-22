@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"classSceneColorProfile.html#ae00dbdfd754556c684f6accaf3b49a35":[1,0,1135,0],
+"classSceneColorProfile.html#aecfade1ea6375443ca044ef3715a54d2":[1,0,1135,1],
 "classSceneLightProfile.html":[1,0,1136],
 "classSceneLightProfile.html#a020dfe7f01b6eeaff686d6f0d5e4b13f":[1,0,1136,9],
 "classSceneLightProfile.html#a05b67824bfe6a13333f30d8d24ca3f4a":[1,0,1136,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX100 =
 "classShrineData.html#abbf042ce0b4e736996117ee69f24da97":[1,0,1157,0],
 "classShrineData.html#aca60c4ca64bc1f4d9ce7f10628d2b32b":[1,0,1157,3],
 "classSingleContent.html":[1,0,1158],
-"classSingleContent.html#a4138d8c7c260daf9efeb78746a5fe2fb":[1,0,1158,0],
-"classSingleContent.html#a758ce6f360eb27c80f40bfb9f4495150":[1,0,1158,1],
-"classSingletonBase.html":[1,0,1159]
+"classSingleContent.html#a4138d8c7c260daf9efeb78746a5fe2fb":[1,0,1158,0]
 };

@@ -61,6 +61,7 @@ var classBaseTileMap =
     [ "currentRoom", "classBaseTileMap.html#a7bff1011cc9b68a091cd4f33c55589f5", null ],
     [ "cx", "classBaseTileMap.html#ab58687083c672e556da3155f13debab4", null ],
     [ "cz", "classBaseTileMap.html#af33e1cc84ada92a8c17fa99db2e1fd04", null ],
+    [ "darkenOuter", "classBaseTileMap.html#a857f8ade1ec0c33945db6c7c86db8e91", null ],
     [ "defaultBlockHeight", "classBaseTileMap.html#aacb8d76d810feef4850f474ca10dc8b8", null ],
     [ "defaultInnerMode", "classBaseTileMap.html#a26daabb0c071b34cde5a6f94c70f8bad", null ],
     [ "DefColor", "classBaseTileMap.html#a555898d439d31c51188e7e97e783089e", null ],

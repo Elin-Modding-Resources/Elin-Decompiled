@@ -33,6 +33,7 @@ var classDNA =
     [ "ints", "classDNA.html#a8e2aa2e76b7a1c49808f1181677ce4b5", null ],
     [ "vals", "classDNA.html#aeab4329d699ae6c617e286b6b3b6cc20", null ],
     [ "cost", "classDNA.html#a283f5abff7ec3fcf6d7494dc8c954e4d", null ],
+    [ "isManiGene", "classDNA.html#a9db92de4de2d16a43398cc2aba03fe9c", null ],
     [ "lv", "classDNA.html#adfb34f03aed4136bc55310323f67d792", null ],
     [ "seed", "classDNA.html#a5a70a19a5e267f56c03141173cfa0213", null ],
     [ "slot", "classDNA.html#a8181373a1c6fa69902c2a9da918029cc", null ],

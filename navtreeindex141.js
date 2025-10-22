@@ -1,5 +1,7 @@
 var NAVTREEINDEX141 =
 {
+"classes.html":[1,1],
+"dir_0371084ab70e3b075313a71a837c9b7c.html":[2,0,0,3,5],
 "dir_0cd198719780437fea113b819007e81e.html":[2,0,0,2,2],
 "dir_1398deb82f2f3fb5d5d9926316c6780c.html":[2,0,0,1,0,0],
 "dir_25a584bea1ad3e9c6a0cc1d7322abe27.html":[2,0,0,3,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX141 =
 "interfaceUIList_1_1ICallback.html#ac927490c49492bddacf830a7380e912f":[1,0,2015,2,3],
 "namespaceAlgorithms.html":[0,4,0],
 "namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4f":[0,4,0,6],
-"namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4fa1834cdf9bf35ea1d737c15eef72e18c7":[0,4,0,6,0],
-"namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4fa3e43207685247008d9e1ae53ecf8cab3":[0,4,0,6,3],
-"namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4fa983a4abeb86479d3458e81e343c4afe1":[0,4,0,6,1]
+"namespaceAlgorithms.html#a53b8d14b2d24c1ec77f42620b2171e4fa1834cdf9bf35ea1d737c15eef72e18c7":[0,4,0,6,0]
 };
