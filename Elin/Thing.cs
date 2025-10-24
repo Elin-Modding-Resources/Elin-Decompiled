@@ -301,6 +301,10 @@ public class Thing : Card
 					{
 						num4 = 0;
 					}
+					if (num4 > 0)
+					{
+						num4 += EClass.rnd(Guild.Thief.FurnitureBonus());
+					}
 				}
 				else if (bp.qualityBonus < 0)
 				{

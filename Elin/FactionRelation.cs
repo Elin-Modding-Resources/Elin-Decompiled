@@ -26,7 +26,7 @@ public class FactionRelation : EClass
 
 	public int ExpToNext => 100 + rank * rank * 100;
 
-	public int MaxRank => 5;
+	public int MaxRank => 6;
 
 	public string TextTitle => Lang.GetList("guild_title")[Mathf.Min(rank / 2, 5)];
 

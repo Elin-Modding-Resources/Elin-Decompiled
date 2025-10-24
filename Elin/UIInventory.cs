@@ -921,7 +921,7 @@ public class UIInventory : EMono
 					SE.Dice();
 					EMono._zone.influence -= cost;
 					_owner.c_dateStockExpire = 0;
-					_owner.trait.OnBarter();
+					_owner.trait.OnBarter(reroll: true);
 					RefreshGrid();
 					Sort();
 					SE.Play("shop_open");

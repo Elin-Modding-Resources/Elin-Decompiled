@@ -22,4 +22,13 @@ public class GuildMage : Guild
 		}
 		return a * 100 / (120 + relation.rank / 2);
 	}
+
+	public int DomainBonus()
+	{
+		if (relation.rank < 6)
+		{
+			return 0;
+		}
+		return 1;
+	}
 }

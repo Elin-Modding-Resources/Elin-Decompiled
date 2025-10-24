@@ -53,6 +53,10 @@ public class QuestGuild : QuestSequence
 			{
 				text = text + (guild.id + "_benefit2").lang() + "\n";
 			}
+			if (num >= 3)
+			{
+				text = text + (guild.id + "_benefit3").lang() + "\n";
+			}
 			if (num >= 4)
 			{
 				text = text + "guild_benefit_feat".lang() + "\n";

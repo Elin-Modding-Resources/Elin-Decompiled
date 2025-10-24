@@ -22,4 +22,13 @@ public class GuildThief : Guild
 		}
 		return a * 100 / (190 - relation.rank * 2);
 	}
+
+	public int FurnitureBonus()
+	{
+		if (relation.rank < 6)
+		{
+			return 1;
+		}
+		return 2;
+	}
 }

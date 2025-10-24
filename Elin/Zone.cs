@@ -2768,7 +2768,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			cardRow = EClass.sources.cards.map["santa"];
 			EClass.player.flags.santa++;
 		}
-		int num3 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
+		long num3 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
 		if (ScaleType == ZoneScaleType.Void)
 		{
 			num3 = (50 + cardRow.LV) * Mathf.Max(1, (num - 1) / 50);
@@ -2796,7 +2796,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		if (num3 != cardRow.LV)
 		{
-			cardBlueprint.lv = num3;
+			cardBlueprint.lv = (int)Mathf.Min(num3, 100000000f);
 		}
 		CardBlueprint.Set(cardBlueprint);
 		Chara chara = CharaGen.Create(cardRow.id, num2);

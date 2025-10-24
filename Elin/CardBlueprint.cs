@@ -20,6 +20,8 @@ public class CardBlueprint
 
 	public bool fixedQuality;
 
+	public bool isCraft;
+
 	public static CardBlueprint current;
 
 	public static CardBlueprint _Default = new CardBlueprint();

@@ -12,4 +12,13 @@ public class GuildMerchant : Guild
 		}
 		return a * 100 / (110 + relation.rank / 2);
 	}
+
+	public int InvestBonus()
+	{
+		if (relation.rank < 6)
+		{
+			return 0;
+		}
+		return 10;
+	}
 }

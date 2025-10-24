@@ -1015,7 +1015,7 @@ public class ActEffect : EClass
 		}
 		case EffectId.LittleSisterMigration:
 		{
-			if (!(EClass._zone is Zone_LittleGarden))
+			if (!(EClass._zone is Zone_LittleGarden) && !EClass.game.IsSurvival)
 			{
 				Msg.SayNothingHappen();
 				return;

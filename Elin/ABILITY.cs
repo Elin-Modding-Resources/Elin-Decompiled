@@ -297,13 +297,13 @@ public class Ability : Act
 		return false;
 	}
 
-	public override int GetSourceValue(int v, int lv, SourceValueType type)
+	public override long GetSourceValue(long v, int lv, SourceValueType type)
 	{
 		if (type != 0)
 		{
 			return base.GetSourceValue(v, lv, type);
 		}
-		return 10 * (100 + (lv - 1) * base.source.lvFactor / 10) / 100;
+		return 10L * (long)(100 + (lv - 1) * base.source.lvFactor / 10) / 100;
 	}
 
 	public override int GetPower(Card c)

@@ -305,11 +305,12 @@ public class ActThrow : ActBaseAttack
 				}
 				else if (traitMonsterBall.IsLittleBall)
 				{
-					if (chara3.id != "littleOne" || chara3.IsPCFactionOrMinion || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone)
+					if (chara3.id != "littleOne" || chara3.IsPCFactionOrMinion || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone || chara3.GetBool(132))
 					{
 						Msg.Say("monsterball_invalid");
 						break;
 					}
+					chara3.SetBool(132, enable: true);
 				}
 				else
 				{

@@ -51,7 +51,7 @@ public class GuildFighter : Guild
 		{
 			return false;
 		}
-		if (c.uid % 2 != 0)
+		if (c.uid % ((relation.rank >= 6) ? 3 : 2) == 0)
 		{
 			return false;
 		}

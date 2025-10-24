@@ -1565,7 +1565,7 @@ public class Player : EClass
 			}
 		}, delegate(List<UIList.ButtonPair> list)
 		{
-			bool flag = EClass.player.domains.Count >= 3 + EClass.pc.Evalue(1402);
+			bool flag = EClass.player.domains.Count >= 3 + EClass.pc.Evalue(1402) + Guild.Mage.DomainBonus();
 			foreach (UIList.ButtonPair item in list)
 			{
 				UIButton button = (item.component as ItemGeneral).button1;

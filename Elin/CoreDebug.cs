@@ -1014,13 +1014,14 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			for (int j = 0; j < 100; j++)
+			for (int j = 0; j < 10; j++)
 			{
-				Chara chara2 = EClass._zone.SpawnMob(null, SpawnSetting.HomeEnemy(10));
-				if (chara2.IsAnimal)
+				EClass._zone.SpawnMob(EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false), new SpawnSetting
 				{
-					chara2.Destroy();
-				}
+					id = "gagu",
+					isBoss = true,
+					fixedLv = EClass._zone.DangerLv
+				});
 			}
 			return;
 		}
@@ -2121,6 +2122,21 @@ public class CoreDebug : EScriptable
 			return EnableCheat;
 		}
 		EClass.player.ModFame(amount);
+		return "Done.";
+	}
+
+	[ConsoleCommand("")]
+	public static string MaxFame()
+	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
+		if (EClass.player.CountKeyItem("license_adv") == 0)
+		{
+			EClass.player.ModKeyItem("license_adv");
+		}
+		EClass.player.ModFame(int.MaxValue);
 		return "Done.";
 	}
 

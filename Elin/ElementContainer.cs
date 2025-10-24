@@ -85,11 +85,19 @@ public class ElementContainer : EClass
 				{
 					orCreateElement.vSourcePotential += orCreateElement.GetSourcePotential(value) * num;
 				}
-				int num2 = orCreateElement.GetSourceValue(value, lv, type) * num;
-				orCreateElement.vSource += num2;
+				if (lv > 10000000)
+				{
+					lv = 10000000;
+				}
+				long num2 = orCreateElement.GetSourceValue(value, lv, type) * num;
+				if (num2 >= 99999999)
+				{
+					num2 = 99999999L;
+				}
+				orCreateElement.vSource += (int)num2;
 				if (applyFeat && orCreateElement is Feat)
 				{
-					(orCreateElement as Feat).Apply(num2, this);
+					(orCreateElement as Feat).Apply((int)num2, this);
 				}
 			}
 		}

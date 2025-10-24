@@ -228,7 +228,8 @@ public class RecipeCard : Recipe
 		CardBlueprint.Set(new CardBlueprint
 		{
 			qualityBonus = num3,
-			rarity = (flag ? Rarity.Crude : Rarity.Normal)
+			rarity = (flag ? Rarity.Crude : Rarity.Normal),
+			isCraft = true
 		});
 		Thing thing = (flag3 ? ThingGen.Create(key) : ThingGen.Create(key, num, num4));
 		thing.idSkin = idSkin;

@@ -161,4 +161,6 @@ public class CINT
 	public const int dateDeathLock = 130;
 
 	public const int fixedValue = 131;
+
+	public const int isAlreadyCaptured = 132;
 }

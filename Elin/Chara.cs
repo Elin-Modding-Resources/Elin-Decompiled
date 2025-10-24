@@ -6414,6 +6414,10 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (OriginalHostility >= Hostility.Friend)
 			{
+				if (hostility <= Hostility.Enemy && c.IsPCFactionOrMinion)
+				{
+					return true;
+				}
 				if (c.hostility <= Hostility.Enemy && c.OriginalHostility == Hostility.Enemy)
 				{
 					return true;

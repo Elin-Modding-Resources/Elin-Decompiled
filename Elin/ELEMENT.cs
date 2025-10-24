@@ -435,7 +435,7 @@ public class Element : EClass
 		return v * (100 + t.encLV * 10) / 100;
 	}
 
-	public virtual int GetSourceValue(int v, int lv, SourceValueType type)
+	public virtual long GetSourceValue(long v, int lv, SourceValueType type)
 	{
 		return type switch
 		{
