@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classAI__Churyu.html#af08e5986f138bdb007560b932c97e725":[1,0,71,1],
+"classAI__Clean.html":[1,0,72],
 "classAI__Clean.html#a24522f1b78e616258e0cfe9ad9194067":[1,0,72,3],
 "classAI__Clean.html#a5bdd466feb6935ff1ec5a3d7ea30f88e":[1,0,72,0],
 "classAI__Clean.html#a61a4ae94beefce4ee0e7baaa190ae975":[1,0,72,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__PracticeDummy.html#a2caa3366643ef1267b72d7b0462357e2":[1,0,101,4],
 "classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,101,2],
 "classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,101,0],
-"classAI__Pray.html":[1,0,102],
-"classAI__Pray.html#a603871972aa41989db7311054d56825f":[1,0,102,0],
-"classAI__Pray.html#a72cbc4ccf6864ede8f4dcc1f3b3ca90f":[1,0,102,2]
+"classAI__Pray.html":[1,0,102]
 };

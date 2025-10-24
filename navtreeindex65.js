@@ -1,5 +1,10 @@
 var NAVTREEINDEX65 =
 {
+"classFortuneRollData_1_1Prize.html#ab3ad6e7372e28eda08884cd160b1f004":[1,0,522,0,3],
+"classFortuneRollData_1_1Prize.html#ae43f758c559397f54481064041656267":[1,0,522,0,5],
+"classFortuneRollData_1_1Prize.html#ae4c6149332ef0ff73fe436d33dc413f2":[1,0,522,0,0],
+"classFov.html":[1,0,523],
+"classFov.html#a041de366960e1b53848784e3c0c74a5c":[1,0,523,16],
 "classFov.html#a112f8d56b579eb9811a247ed7bf46b45":[1,0,523,12],
 "classFov.html#a169fe0e2e8178411e4440ef70776797c":[1,0,523,14],
 "classFov.html#a16fd2731cfdd2a7db590975fbe211786":[1,0,523,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX65 =
 "classGameScreen.html":[1,0,535],
 "classGameScreen.html#a1bf813fb77452e69a516039f4ca220c8":[1,0,535,4],
 "classGameScreen.html#a570fbe6a76424e67f73f9d0b3f9ead19":[1,0,535,3],
-"classGameScreen.html#a77022f690e47870699fbb13393a0bea5":[1,0,535,0],
-"classGameScreen.html#ac3b4d019365eb5a2c37e0aa2b85ae84d":[1,0,535,1],
-"classGameScreen.html#adf782a75518942ce303a22216c9ae1ea":[1,0,535,2],
-"classGameScreenElona.html":[1,0,536],
-"classGameScreenElona.html#a3410a10bdc80308d1e2c43db7afb1a3f":[1,0,536,5],
-"classGameScreenElona.html#a4d423e8df1990a981499b182ab57b79a":[1,0,536,7]
+"classGameScreen.html#a77022f690e47870699fbb13393a0bea5":[1,0,535,0]
 };

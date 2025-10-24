@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.223 Nyaightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.224 Nightly</span>
    </div>
   </td>
  </tr>
@@ -116,14 +116,26 @@ $(document).ready(function(){initNavTree('GuildMage_8cs_source.html',''); initRe
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> a * 100 / (120 + relation.rank / 2);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classGuildMage.html#aa4b02b7c79b3b9af14ca4485e02fdba4">   26</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classGuildMage.html#aa4b02b7c79b3b9af14ca4485e02fdba4">DomainBonus</a>()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">relation</a>.<a class="code hl_variable" href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">rank</a> &lt; 6)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
 <div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
+<div class="ttc" id="aclassFactionRelation_html_a827af529ec3e0b535af676b52195ef52"><div class="ttname"><a href="classFactionRelation.html#a827af529ec3e0b535af676b52195ef52">FactionRelation.rank</a></div><div class="ttdeci">int rank</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00020">FactionRelation.cs:20</a></div></div>
+<div class="ttc" id="aclassFaction_html_afdbf9e47afeaa36169a0a4c467719d12"><div class="ttname"><a href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">Faction.relation</a></div><div class="ttdeci">FactionRelation relation</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00126">FACTION.cs:126</a></div></div>
 <div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00179">Game.cs:179</a></div></div>
 <div class="ttc" id="aclassGuildMage_html"><div class="ttname"><a href="classGuildMage.html">GuildMage</a></div><div class="ttdef"><b>Definition:</b> <a href="GuildMage_8cs_source.html#l00001">GuildMage.cs:2</a></div></div>
 <div class="ttc" id="aclassGuildMage_html_a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c"><div class="ttname"><a href="classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c">GuildMage.IsCurrentZone</a></div><div class="ttdeci">override bool IsCurrentZone</div><div class="ttdef"><b>Definition:</b> <a href="GuildMage_8cs_source.html#l00005">GuildMage.cs:6</a></div></div>
 <div class="ttc" id="aclassGuildMage_html_a58189178f12635adea355a8199949d95"><div class="ttname"><a href="classGuildMage.html#a58189178f12635adea355a8199949d95">GuildMage.BuySpellbookPrice</a></div><div class="ttdeci">int BuySpellbookPrice(int a)</div><div class="ttdef"><b>Definition:</b> <a href="GuildMage_8cs_source.html#l00017">GuildMage.cs:17</a></div></div>
+<div class="ttc" id="aclassGuildMage_html_aa4b02b7c79b3b9af14ca4485e02fdba4"><div class="ttname"><a href="classGuildMage.html#aa4b02b7c79b3b9af14ca4485e02fdba4">GuildMage.DomainBonus</a></div><div class="ttdeci">int DomainBonus()</div><div class="ttdef"><b>Definition:</b> <a href="GuildMage_8cs_source.html#l00026">GuildMage.cs:26</a></div></div>
 <div class="ttc" id="aclassGuild_html"><div class="ttname"><a href="classGuild.html">Guild</a></div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00001">Guild.cs:2</a></div></div>
 <div class="ttc" id="aclassQuestGuildMage_html"><div class="ttname"><a href="classQuestGuildMage.html">QuestGuildMage</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestGuildMage_8cs_source.html#l00001">QuestGuildMage.cs:2</a></div></div>
 <div class="ttc" id="aclassQuestGuild_html"><div class="ttname"><a href="classQuestGuild.html">QuestGuild</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestGuild_8cs_source.html#l00003">QuestGuild.cs:4</a></div></div>

@@ -1,5 +1,13 @@
 var NAVTREEINDEX123 =
 {
+"classTraitSpotGuidePC.html":[1,0,1843],
+"classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1843,0],
+"classTraitSpotLight.html":[1,0,1844],
+"classTraitSpotLight.html#a95a0a2863a144b62664851cefa4a6cb0":[1,0,1844,0],
+"classTraitSpotLumberjack.html":[1,0,1845],
+"classTraitSpotMeeting.html":[1,0,1846],
+"classTraitSpotPrayer.html":[1,0,1847],
+"classTraitSpotRanch.html":[1,0,1848],
 "classTraitSpotSearch.html":[1,0,1849],
 "classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1849,0],
 "classTraitSpotSpawn.html":[1,0,1850],
@@ -241,13 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitToolTorch.html":[1,0,1910],
 "classTraitToolTorch.html#a3b8c5ddcec4521177869f8001db2c9ce":[1,0,1910,2],
 "classTraitToolTorch.html#a45e6e7d7c56c08d3d5cd43458e1613fc":[1,0,1910,6],
-"classTraitToolTorch.html#a6cc92dc5258a61851812761fbb2a979a":[1,0,1910,1],
-"classTraitToolTorch.html#a931c7a1b99dc0df6a6c93c6974fc7001":[1,0,1910,0],
-"classTraitToolTorch.html#ab5053d615ebf7c39f0aa6eb4667cd935":[1,0,1910,3],
-"classTraitToolTorch.html#adf684df56eeb77da3726b1cd28a5f43e":[1,0,1910,5],
-"classTraitToolTorch.html#ae29bfdefb3cac985f29607d2f5dd8f9a":[1,0,1910,4],
-"classTraitToolWaterCan.html":[1,0,1911],
-"classTraitToolWaterCan.html#a07f978e96080744b1818ad89fe349506":[1,0,1911,1],
-"classTraitToolWaterCan.html#a09d1d0bc88cd8c7e3e9fe2cb2193f138":[1,0,1911,2],
-"classTraitToolWaterCan.html#a27144568d3cb09764d83d6127cf10b87":[1,0,1911,0]
+"classTraitToolTorch.html#a6cc92dc5258a61851812761fbb2a979a":[1,0,1910,1]
 };

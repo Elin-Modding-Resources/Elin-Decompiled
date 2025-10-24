@@ -65,6 +65,7 @@ var classCoreDebug =
     [ "LoadBroadcast", "classCoreDebug.html#a59a15e7bdb1f5f6590eedb52737577b3", null ],
     [ "Log", "classCoreDebug.html#a66900b175d07343d1ca998447cc81aab", null ],
     [ "LOG_Spatials", "classCoreDebug.html#a8cb037e819598fcc93375391dc908055", null ],
+    [ "MaxFame", "classCoreDebug.html#ab3c521557163ec01dd38094abeed4f0e", null ],
     [ "ModContribution", "classCoreDebug.html#acafbe6f8a7550f0a60e009518f66a787", null ],
     [ "ModFame", "classCoreDebug.html#a79c86c59971490037d4baa1c90bcb0a5", null ],
     [ "ModKarma", "classCoreDebug.html#a0a923408a25d3ff9e2f1f4d85ad2ee45", null ],

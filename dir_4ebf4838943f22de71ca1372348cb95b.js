@@ -1821,6 +1821,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitTV.cs", "TraitTV_8cs.html", "TraitTV_8cs" ],
     [ "TraitTyche.cs", "TraitTyche_8cs.html", "TraitTyche_8cs" ],
     [ "TraitUniqueChara.cs", "TraitUniqueChara_8cs.html", "TraitUniqueChara_8cs" ],
+    [ "TraitUniqueCharaNoJoin.cs", "TraitUniqueCharaNoJoin_8cs.html", "TraitUniqueCharaNoJoin_8cs" ],
     [ "TraitUniqueGuildPersonnel.cs", "TraitUniqueGuildPersonnel_8cs.html", "TraitUniqueGuildPersonnel_8cs" ],
     [ "TraitUniqueMerchant.cs", "TraitUniqueMerchant_8cs.html", "TraitUniqueMerchant_8cs" ],
     [ "TraitUniqueMonster.cs", "TraitUniqueMonster_8cs.html", "TraitUniqueMonster_8cs" ],

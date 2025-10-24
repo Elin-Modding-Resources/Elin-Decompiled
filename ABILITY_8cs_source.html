@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.223 Nyaightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.224 Nightly</span>
    </div>
   </td>
  </tr>
@@ -391,13 +391,13 @@ $(document).ready(function(){initNavTree('ABILITY_8cs_source.html',''); initResi
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="classAbility.html#a4d1577acd36ae40bccf8f1ec33ccebc3">  300</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAbility.html#a4d1577acd36ae40bccf8f1ec33ccebc3">GetSourceValue</a>(<span class="keywordtype">int</span> v, <span class="keywordtype">int</span> lv, <a class="code hl_enumeration" href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a> type)</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="classAbility.html#a06d83b5a738742b54e545a74e45ba988">  300</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">long</span> <a class="code hl_function" href="classAbility.html#a06d83b5a738742b54e545a74e45ba988">GetSourceValue</a>(<span class="keywordtype">long</span> v, <span class="keywordtype">int</span> lv, <a class="code hl_enumeration" href="SourceValueType_8cs.html#a35f4cafd6783c747f55b3b7ff42d7d27">SourceValueType</a> type)</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    {</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">if</span> (type != 0)</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        {</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            <span class="keywordflow">return</span> base.GetSourceValue(v, lv, type);</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">return</span> 10 * (100 + (lv - 1) * base.source.lvFactor / 10) / 100;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">return</span> 10L * (long)(100 + (lv - 1) * base.source.lvFactor / 10) / 100;</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    }</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno"><a class="line" href="classAbility.html#ae21977e06fa4d9ca2d5c44aa2adecee4">  309</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAbility.html#ae21977e06fa4d9ca2d5c44aa2adecee4">GetPower</a>(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
@@ -530,8 +530,8 @@ $(document).ready(function(){initNavTree('ABILITY_8cs_source.html',''); initResi
 <div class="ttc" id="aclassAI__Steal_html"><div class="ttname"><a href="classAI__Steal.html">AI_Steal</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Steal_8cs_source.html#l00004">AI_Steal.cs:5</a></div></div>
 <div class="ttc" id="aclassAI__TendAnimal_html"><div class="ttname"><a href="classAI__TendAnimal.html">AI_TendAnimal</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__TendAnimal_8cs_source.html#l00001">AI_TendAnimal.cs:2</a></div></div>
 <div class="ttc" id="aclassAbility_html"><div class="ttname"><a href="classAbility.html">Ability</a></div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00285">ABILITY.cs:286</a></div></div>
+<div class="ttc" id="aclassAbility_html_a06d83b5a738742b54e545a74e45ba988"><div class="ttname"><a href="classAbility.html#a06d83b5a738742b54e545a74e45ba988">Ability.GetSourceValue</a></div><div class="ttdeci">override long GetSourceValue(long v, int lv, SourceValueType type)</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00300">ABILITY.cs:300</a></div></div>
 <div class="ttc" id="aclassAbility_html_a3a131c464b975844416a8ed95fe6947a"><div class="ttname"><a href="classAbility.html#a3a131c464b975844416a8ed95fe6947a">Ability.OnChangeValue</a></div><div class="ttdeci">override void OnChangeValue()</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00328">ABILITY.cs:328</a></div></div>
-<div class="ttc" id="aclassAbility_html_a4d1577acd36ae40bccf8f1ec33ccebc3"><div class="ttname"><a href="classAbility.html#a4d1577acd36ae40bccf8f1ec33ccebc3">Ability.GetSourceValue</a></div><div class="ttdeci">override int GetSourceValue(int v, int lv, SourceValueType type)</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00300">ABILITY.cs:300</a></div></div>
 <div class="ttc" id="aclassAbility_html_a4e624bdc3252010fc8b0916f7c6a5cb1"><div class="ttname"><a href="classAbility.html#a4e624bdc3252010fc8b0916f7c6a5cb1">Ability.ShowBonuses</a></div><div class="ttdeci">override bool ShowBonuses</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00287">ABILITY.cs:287</a></div></div>
 <div class="ttc" id="aclassAbility_html_a89aa95f671cf3573c82d84320f895a8f"><div class="ttname"><a href="classAbility.html#a89aa95f671cf3573c82d84320f895a8f">Ability.CanPressRepeat</a></div><div class="ttdeci">override bool CanPressRepeat</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00289">ABILITY.cs:289</a></div></div>
 <div class="ttc" id="aclassAbility_html_adc0411882ca5c5a75719528a66cbe16e"><div class="ttname"><a href="classAbility.html#adc0411882ca5c5a75719528a66cbe16e">Ability.CanLink</a></div><div class="ttdeci">override bool CanLink(ElementContainer owner)</div><div class="ttdef"><b>Definition:</b> <a href="ABILITY_8cs_source.html#l00291">ABILITY.cs:291</a></div></div>

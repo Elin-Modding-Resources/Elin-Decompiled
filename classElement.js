@@ -26,7 +26,7 @@ var classElement =
     [ "GetSortVal", "classElement.html#a61b0f8c35a0b1d63e92b538aa8eaddb8", null ],
     [ "GetSource", "classElement.html#a35264fc9a9c32851e5ecbe30e769a39e", null ],
     [ "GetSourcePotential", "classElement.html#a493e766c0a3b64fdef982077cc49cc28", null ],
-    [ "GetSourceValue", "classElement.html#a443f04ef73f9f3e044a74ea5e8a3ad4f", null ],
+    [ "GetSourceValue", "classElement.html#a11855bcfd170541cd7f8b9f01a9a1c3f", null ],
     [ "GetSprite", "classElement.html#a0d205d7d575ee861ed54c8be0b0760cf", null ],
     [ "HasTag", "classElement.html#a5163326f1ee817cd7b4d06165bbf30c7", null ],
     [ "IsActive", "classElement.html#afd8cdc0bc0886fd7c549aadfce40ef71", null ],

@@ -14,6 +14,7 @@ var classCardBlueprint =
     [ "idEle", "classCardBlueprint.html#ad7a55d542f5e992ee5c4188ff01b73e9", null ],
     [ "idJob", "classCardBlueprint.html#a5392f064be403cde895740d58db4c916", null ],
     [ "idRace", "classCardBlueprint.html#a3d34d720a94bc988355acd4827132ef0", null ],
+    [ "isCraft", "classCardBlueprint.html#aeab6e80c4e78d9aa49049fd93f9372a0", null ],
     [ "lv", "classCardBlueprint.html#a63ef7b435ebc07ba29e026fcc17bda77", null ],
     [ "qualityBonus", "classCardBlueprint.html#a4fe21cf7f452ebaa644c881b3e566b5c", null ],
     [ "rarity", "classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc", null ],

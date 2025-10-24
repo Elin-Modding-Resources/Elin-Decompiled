@@ -1,5 +1,13 @@
 var NAVTREEINDEX94 =
 {
+"classQuestTaskKarma.html#a27e609fd7fae9ffa7688ea78fca7c8d7":[1,0,1052,9],
+"classQuestTaskKarma.html#a2d1be8b30e784e7d98a54b41872f7ca8":[1,0,1052,1],
+"classQuestTaskKarma.html#a45dfd78c1ef8e13121fea02cd2d2f043":[1,0,1052,3],
+"classQuestTaskKarma.html#a542b0f4a08fce1c28934ae3476c7640a":[1,0,1052,6],
+"classQuestTaskKarma.html#aac7c5febffc4965abdbaf66eafca700f":[1,0,1052,2],
+"classQuestTaskKarma.html#ac1d30ea1d45e0af4c5369e784ec1016f":[1,0,1052,0],
+"classQuestTaskKarma.html#ac1d30ea1d45e0af4c5369e784ec1016fa2418b8049c44c6e0308e14f44140b269":[1,0,1052,0,1],
+"classQuestTaskKarma.html#ac1d30ea1d45e0af4c5369e784ec1016fa64663f4646781c9c0110838b905daa23":[1,0,1052,0,0],
 "classQuestTaskKarma.html#ac53bf9f3c8ac6fd4b44fd87f3b8238a1":[1,0,1052,4],
 "classQuestTaskKarma.html#ad13d9f985d054ce9c372cb3720da578b":[1,0,1052,8],
 "classQuestTaskKarma.html#ae3d27d298925f391100bb669d7cf0402":[1,0,1052,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX94 =
 "classRecipeManager.html#aa562b72a517f7388895d1411ebbae69b":[1,0,1069,14],
 "classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58":[1,0,1069,20],
 "classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c":[1,0,1069,13],
-"classRecipeManager.html#abfdac34700a6d0361b304d8be7008850":[1,0,1069,1],
-"classRecipeManager.html#ac8a72b822fb5d9f56382dd698ee3e55a":[1,0,1069,15],
-"classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703":[1,0,1069,18],
-"classRecipeManager.html#aecb1c741b6f9349424fbb084a8848615":[1,0,1069,8],
-"classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab":[1,0,1069,3],
-"classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79":[1,0,1069,10],
-"classRecipeManager.html#afc7f69001a0268922b380bc78f8f6477":[1,0,1069,23],
-"classRecipeSource.html":[1,0,1070],
-"classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0":[1,0,1070,8]
+"classRecipeManager.html#abfdac34700a6d0361b304d8be7008850":[1,0,1069,1]
 };

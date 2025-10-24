@@ -39,6 +39,7 @@ var classCINT =
     [ "indexContainerIcon", "classCINT.html#ab5d729e0a28f654d4ce49223392b5a4f", null ],
     [ "insult", "classCINT.html#ae036a4765291950f0a9fb3fb7c567449", null ],
     [ "invest", "classCINT.html#aa1dce184557bac765309697e38ca33c3", null ],
+    [ "isAlreadyCaptured", "classCINT.html#a374344939e8099e1b407bc19b96ac3df", null ],
     [ "isDisableStockUse", "classCINT.html#a23a05bba9c26015d92f8ff829cfdf156", null ],
     [ "isHalfEaten", "classCINT.html#a6df9be51464f7a6d2e1684d0af219ab1", null ],
     [ "isHarvestQuestCrop", "classCINT.html#a7ad3b279d438058b8ad526a5c5acb093", null ],

@@ -1560,6 +1560,7 @@ var hierarchy =
             [ "TraitVesda", "classTraitVesda.html", null ],
             [ "TraitVishnu", "classTraitVishnu.html", null ]
           ] ],
+          [ "TraitUniqueCharaNoJoin", "classTraitUniqueCharaNoJoin.html", null ],
           [ "TraitUniqueMonster", "classTraitUniqueMonster.html", [
             [ "TraitUniqueMonsterAdv", "classTraitUniqueMonsterAdv.html", null ]
           ] ]

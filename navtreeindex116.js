@@ -1,5 +1,13 @@
 var NAVTREEINDEX116 =
 {
+"classTraitBed.html#a95a7c5c2914d6e0ba1725c21cb5274d7":[1,0,1443,6],
+"classTraitBed.html#ab28e1ac03be7c28ba707fdf36a169f80":[1,0,1443,9],
+"classTraitBed.html#ac01d84f3d0fb3e10a42cd5d4c170c4ae":[1,0,1443,1],
+"classTraitBed.html#acc9d27b2bb5a76810cbd6cb5ff646768":[1,0,1443,10],
+"classTraitBedCoffin.html":[1,0,1444],
+"classTraitBedCoffin.html#a8db00030f51e31c426311ec909e0e13a":[1,0,1444,0],
+"classTraitBeekeep.html":[1,0,1445],
+"classTraitBigDaddy.html":[1,0,1446],
 "classTraitBigDaddy.html#a1d89c88a0e42e3a8449be814cd57d1f4":[1,0,1446,0],
 "classTraitBigDaddy.html#a86364ffda6d904c62022cb9db74786d7":[1,0,1446,2],
 "classTraitBigDaddy.html#abbc0b430796cc25ded85d76091be011d":[1,0,1446,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitContainer.html#a2fb04afc28809d6e887fd259c60e89d0":[1,0,1499,0],
 "classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1499,4],
 "classTraitContainer.html#aa5c0f23169a185c1604f46194357006d":[1,0,1499,3],
-"classTraitContainer.html#abdc11f2fb221ac9d4d03f8fc368664d3":[1,0,1499,1],
-"classTraitContainer.html#afaedc61d74d0e1ac9886c0e6f1fe6dd2":[1,0,1499,2],
-"classTraitContainer.html#afbb44fbd55aecfeb76df1bce4a363cea":[1,0,1499,6],
-"classTraitContainerBook.html":[1,0,1500],
-"classTraitContainerBook.html#ac19bdaddbfbf9f4035ab4314d5e05c49":[1,0,1500,0],
-"classTraitContainerBurnable.html":[1,0,1501],
-"classTraitContainerCompost.html":[1,0,1502],
-"classTraitContainerCompost.html#a0be6317217c5debd87ce1c36394215e1":[1,0,1502,1],
-"classTraitContainerCompost.html#a5b4a67a4a23d4dda0ea44411dda071e5":[1,0,1502,3]
+"classTraitContainer.html#abdc11f2fb221ac9d4d03f8fc368664d3":[1,0,1499,1]
 };
