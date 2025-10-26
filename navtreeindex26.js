@@ -1,5 +1,7 @@
 var NAVTREEINDEX26 =
 {
+"classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,101,0],
+"classAI__Pray.html":[1,0,102],
 "classAI__Pray.html#a603871972aa41989db7311054d56825f":[1,0,102,0],
 "classAI__Pray.html#a72cbc4ccf6864ede8f4dcc1f3b3ca90f":[1,0,102,2],
 "classAI__Pray.html#a76dad0b469e00ae0458c9cf0367a4cd9":[1,0,102,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX26 =
 "classAM__Bird.html":[1,0,136],
 "classAM__Bird.html#a03b49dd20b9a39cd1481d6626a034cac":[1,0,136,2],
 "classAM__Bird.html#a3fe205a551067676de164ab92faa3412":[1,0,136,0],
-"classAM__Bird.html#a4b776cc8d26396e265d98c64e513bb9e":[1,0,136,1],
-"classAM__Blueprint.html":[1,0,137],
-"classAM__Blueprint.html#a23b7c9373eba7f93ba9e1c88a60bb5aa":[1,0,137,2]
+"classAM__Bird.html#a4b776cc8d26396e265d98c64e513bb9e":[1,0,136,1]
 };

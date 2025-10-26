@@ -1457,6 +1457,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitEquipItem.cs", "TraitEquipItem_8cs.html", "TraitEquipItem_8cs" ],
     [ "TraitErohon.cs", "TraitErohon_8cs.html", "TraitErohon_8cs" ],
     [ "TraitEspressoMachine.cs", "TraitEspressoMachine_8cs.html", "TraitEspressoMachine_8cs" ],
+    [ "TraitEternalMonument.cs", "TraitEternalMonument_8cs.html", "TraitEternalMonument_8cs" ],
     [ "TraitEureka.cs", "TraitEureka_8cs.html", "TraitEureka_8cs" ],
     [ "TraitExileElder.cs", "TraitExileElder_8cs.html", "TraitExileElder_8cs" ],
     [ "TraitFactionBoard.cs", "TraitFactionBoard_8cs.html", "TraitFactionBoard_8cs" ],

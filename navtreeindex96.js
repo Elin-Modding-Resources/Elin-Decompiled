@@ -1,5 +1,11 @@
 var NAVTREEINDEX96 =
 {
+"classReligionManager.html#af893c0ae38d8c0ae912d16a74e244b92":[1,0,1093,2],
+"classReligionMinor.html":[1,0,1094],
+"classReligionMinor.html#af3c264773bb108d66fcdf6f955e0e515":[1,0,1094,0],
+"classReligionMoonShadow.html":[1,0,1095],
+"classReligionMoonShadow.html#aafd52afe204a2425426f3a3a4dc6df93":[1,0,1095,0],
+"classReligionMoonShadow.html#ac452bc715e0a01255d5896fea8259adc":[1,0,1095,1],
 "classReligionOblivion.html":[1,0,1096],
 "classReligionOblivion.html#a5f94572db73cf58930a9c9581548407d":[1,0,1096,1],
 "classReligionOblivion.html#ac535bfdc543f8a32d4729bf7c05eb1e8":[1,0,1096,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX96 =
 "classResearchManager.html#a5cf0f4472fac717189b13611a34cf432":[1,0,1120,9],
 "classResearchManager.html#aa2f308e8b183b40c4278ebfe36630574":[1,0,1120,8],
 "classResearchManager.html#aa5864ccd01d27ab87f6fde794e166eeb":[1,0,1120,4],
-"classResearchManager.html#aa7dd8bb09cd428fac09cc007f07c97f3":[1,0,1120,0],
-"classResearchManager.html#acac5f81b36290a775d7ae448ceb9e9c2":[1,0,1120,2],
-"classResearchManager.html#acc161b56745a8def8887660b00750da4":[1,0,1120,15],
-"classResearchManager.html#acc803ccc1824897cf768fab003832f25":[1,0,1120,5],
-"classResearchManager.html#ad014e1492c25ae5576a9eb9d8521d5f7":[1,0,1120,7],
-"classResearchManager.html#adc30dc28f2b7f4fdb1882931c880d2a0":[1,0,1120,14],
-"classResearchManager.html#ae0566dbaa70306f7fdddd277b1e38206":[1,0,1120,3]
+"classResearchManager.html#aa7dd8bb09cd428fac09cc007f07c97f3":[1,0,1120,0]
 };

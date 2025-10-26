@@ -10,7 +10,7 @@ var classThing =
     [ "DoAct", "classThing.html#afb778d298b1fe406e190c3226fdcd8e7", null ],
     [ "GetDisassembles", "classThing.html#a02b0e4389f31232db0196d3b132c567a", null ],
     [ "GetEfficiency", "classThing.html#a9aa66c47f35ea862eb02615f6c6dcb98", null ],
-    [ "GetEnchant", "classThing.html#a9cdf95472d3f6e9d960a0b6b82c109a9", null ],
+    [ "GetEnchant", "classThing.html#a1a4d3904bf3cb9a0dc10ea5b0c3e73f2", null ],
     [ "GetExtraName", "classThing.html#a9782910491131abfe4908ed002f792e7", null ],
     [ "GetHoverText", "classThing.html#ad177b3c245042058a8f0745bf718a5a1", null ],
     [ "GetIngredients", "classThing.html#a0fa3660277b7c069b02e7962a4e4506d", null ],

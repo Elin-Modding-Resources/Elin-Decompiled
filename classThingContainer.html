@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.224 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.225 Nightly Patch 3</span>
    </div>
   </td>
  </tr>
@@ -275,35 +275,35 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00820">820</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  821</span>    {</div>
-<div class="line"><span class="lineno">  822</span>        <span class="keywordflow">if</span> (onlyAccessible &amp;&amp; !<a class="code hl_variable" href="classThingContainer.html#a0245366800e33e6bea8b80b68dc76214">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a451845a816deb9740a16121536fcd48e">CanSearchContent</a>)</div>
-<div class="line"><span class="lineno">  823</span>        {</div>
-<div class="line"><span class="lineno">  824</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  825</span>        }</div>
-<div class="line"><span class="lineno">  826</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
-<div class="line"><span class="lineno">  827</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">  828</span>        {</div>
-<div class="line"><span class="lineno">  829</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
-<div class="line"><span class="lineno">  830</span>            current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#acb351e9ee71a718e6d1064a7eaaf860d">_List</a>(func, onlyAccessible);</div>
-<div class="line"><span class="lineno">  831</span>            <span class="keywordflow">if</span> (func(current))</div>
-<div class="line"><span class="lineno">  832</span>            {</div>
-<div class="line"><span class="lineno">  833</span>                <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(current);</div>
-<div class="line"><span class="lineno">  834</span>            }</div>
-<div class="line"><span class="lineno">  835</span>        }</div>
-<div class="line"><span class="lineno">  836</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00824">824</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  825</span>    {</div>
+<div class="line"><span class="lineno">  826</span>        <span class="keywordflow">if</span> (onlyAccessible &amp;&amp; !<a class="code hl_variable" href="classThingContainer.html#a0245366800e33e6bea8b80b68dc76214">owner</a>.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a451845a816deb9740a16121536fcd48e">CanSearchContent</a>)</div>
+<div class="line"><span class="lineno">  827</span>        {</div>
+<div class="line"><span class="lineno">  828</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  829</span>        }</div>
+<div class="line"><span class="lineno">  830</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
+<div class="line"><span class="lineno">  831</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  832</span>        {</div>
+<div class="line"><span class="lineno">  833</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
+<div class="line"><span class="lineno">  834</span>            current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#acb351e9ee71a718e6d1064a7eaaf860d">_List</a>(func, onlyAccessible);</div>
+<div class="line"><span class="lineno">  835</span>            <span class="keywordflow">if</span> (func(current))</div>
+<div class="line"><span class="lineno">  836</span>            {</div>
+<div class="line"><span class="lineno">  837</span>                <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(current);</div>
+<div class="line"><span class="lineno">  838</span>            }</div>
+<div class="line"><span class="lineno">  839</span>        }</div>
+<div class="line"><span class="lineno">  840</span>    }</div>
 <div class="ttc" id="aclassActPlan_1_1List_html_afd0ce1c0b760d6242ed7898f5dd85d2f"><div class="ttname"><a href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">ActPlan.List.Add</a></div><div class="ttdeci">void Add(Act a, string s=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00011">ActPlan.cs:11</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00053">Card.cs:53</a></div></div>
 <div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00038">Card.cs:38</a></div></div>
 <div class="ttc" id="aclassThingContainer_html_a0245366800e33e6bea8b80b68dc76214"><div class="ttname"><a href="classThingContainer.html#a0245366800e33e6bea8b80b68dc76214">ThingContainer.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00040">ThingContainer.cs:40</a></div></div>
 <div class="ttc" id="aclassThingContainer_html_a4acba982526b37fa6ce7d272d60c7cad"><div class="ttname"><a href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">ThingContainer.tempList</a></div><div class="ttdeci">static List&lt; Thing &gt; tempList</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00047">ThingContainer.cs:47</a></div></div>
-<div class="ttc" id="aclassThingContainer_html_acb351e9ee71a718e6d1064a7eaaf860d"><div class="ttname"><a href="classThingContainer.html#acb351e9ee71a718e6d1064a7eaaf860d">ThingContainer._List</a></div><div class="ttdeci">void _List(Func&lt; Thing, bool &gt; func, bool onlyAccessible=false)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00820">ThingContainer.cs:820</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_acb351e9ee71a718e6d1064a7eaaf860d"><div class="ttname"><a href="classThingContainer.html#acb351e9ee71a718e6d1064a7eaaf860d">ThingContainer._List</a></div><div class="ttdeci">void _List(Func&lt; Thing, bool &gt; func, bool onlyAccessible=false)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00824">ThingContainer.cs:824</a></div></div>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 <div class="ttc" id="aclassTrait_html_a451845a816deb9740a16121536fcd48e"><div class="ttname"><a href="classTrait.html#a451845a816deb9740a16121536fcd48e">Trait.CanSearchContent</a></div><div class="ttdeci">virtual bool CanSearchContent</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00216">Trait.cs:217</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00820">_List()</a>, <a class="el" href="ActPlan_8cs_source.html#l00011">ActPlan.List.Add()</a>, <a class="el" href="Trait_8cs_source.html#l00217">Trait.CanSearchContent</a>, <a class="el" href="ThingContainer_8cs_source.html#l00040">owner</a>, <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>, <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00824">_List()</a>, <a class="el" href="ActPlan_8cs_source.html#l00011">ActPlan.List.Add()</a>, <a class="el" href="Trait_8cs_source.html#l00217">Trait.CanSearchContent</a>, <a class="el" href="ThingContainer_8cs_source.html#l00040">owner</a>, <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>, <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00820">_List()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00813">List()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00824">_List()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00817">List()</a>.</p>
 
 </div>
 </div>
@@ -331,29 +331,29 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00796">796</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  797</span>    {</div>
-<div class="line"><span class="lineno">  798</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
-<div class="line"><span class="lineno">  799</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">  800</span>        {</div>
-<div class="line"><span class="lineno">  801</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
-<div class="line"><span class="lineno">  802</span>            <span class="keywordflow">if</span> (current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
-<div class="line"><span class="lineno">  803</span>            {</div>
-<div class="line"><span class="lineno">  804</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a7841c80da72d10965543c9d7640c9f49">_ListCurrency</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  805</span>            }</div>
-<div class="line"><span class="lineno">  806</span>            <span class="keywordflow">if</span> (current.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="keywordtype">id</span>)</div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00800">800</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  801</span>    {</div>
+<div class="line"><span class="lineno">  802</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
+<div class="line"><span class="lineno">  803</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  804</span>        {</div>
+<div class="line"><span class="lineno">  805</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
+<div class="line"><span class="lineno">  806</span>            <span class="keywordflow">if</span> (current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
 <div class="line"><span class="lineno">  807</span>            {</div>
-<div class="line"><span class="lineno">  808</span>                <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(current);</div>
+<div class="line"><span class="lineno">  808</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a7841c80da72d10965543c9d7640c9f49">_ListCurrency</a>(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">  809</span>            }</div>
-<div class="line"><span class="lineno">  810</span>        }</div>
-<div class="line"><span class="lineno">  811</span>    }</div>
+<div class="line"><span class="lineno">  810</span>            <span class="keywordflow">if</span> (current.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  811</span>            {</div>
+<div class="line"><span class="lineno">  812</span>                <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.<a class="code hl_function" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(current);</div>
+<div class="line"><span class="lineno">  813</span>            }</div>
+<div class="line"><span class="lineno">  814</span>        }</div>
+<div class="line"><span class="lineno">  815</span>    }</div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00035">Card.cs:35</a></div></div>
-<div class="ttc" id="aclassThingContainer_html_a7841c80da72d10965543c9d7640c9f49"><div class="ttname"><a href="classThingContainer.html#a7841c80da72d10965543c9d7640c9f49">ThingContainer._ListCurrency</a></div><div class="ttdeci">void _ListCurrency(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00796">ThingContainer.cs:796</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a7841c80da72d10965543c9d7640c9f49"><div class="ttname"><a href="classThingContainer.html#a7841c80da72d10965543c9d7640c9f49">ThingContainer._ListCurrency</a></div><div class="ttdeci">void _ListCurrency(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00800">ThingContainer.cs:800</a></div></div>
 <div class="ttc" id="aclassThing_html_aabac9547c9e9514ea31affb4fa06cb44"><div class="ttname"><a href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">Thing.CanSearchContents</a></div><div class="ttdeci">bool CanSearchContents</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00099">Thing.cs:100</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00796">_ListCurrency()</a>, <a class="el" href="ActPlan_8cs_source.html#l00011">ActPlan.List.Add()</a>, <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
+<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00800">_ListCurrency()</a>, <a class="el" href="ActPlan_8cs_source.html#l00011">ActPlan.List.Add()</a>, <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00796">_ListCurrency()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00789">ListCurrency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00800">_ListCurrency()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00793">ListCurrency()</a>.</p>
 
 </div>
 </div>
@@ -441,11 +441,11 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03425">Card.cs:3425</a></div></div>
 <div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00157">Card.cs:158</a></div></div>
 <div class="ttc" id="aclassCard_html_ae8e34c12f7fdaf3c6b3a50e27e4e3090"><div class="ttname"><a href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">Card.ModNum</a></div><div class="ttdeci">void ModNum(int a, bool notify=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03445">Card.cs:3445</a></div></div>
-<div class="ttc" id="aclassThingContainer_html_a56324750df54923b9901fcc613581a73"><div class="ttname"><a href="classThingContainer.html#a56324750df54923b9901fcc613581a73">ThingContainer.ListCurrency</a></div><div class="ttdeci">List&lt; Thing &gt; ListCurrency(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00789">ThingContainer.cs:789</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a56324750df54923b9901fcc613581a73"><div class="ttname"><a href="classThingContainer.html#a56324750df54923b9901fcc613581a73">ThingContainer.ListCurrency</a></div><div class="ttdeci">List&lt; Thing &gt; ListCurrency(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00793">ThingContainer.cs:793</a></div></div>
 <div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00004">ThingGen.cs:5</a></div></div>
 <div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l03085">Card.AddThing()</a>, <a class="el" href="Card_8cs_source.html#l03022">Card.ChangeMaterial()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="ThingContainer_8cs_source.html#l00789">ListCurrency()</a>, <a class="el" href="Card_8cs_source.html#l02039">Card.material</a>, <a class="el" href="Card_8cs_source.html#l03445">Card.ModNum()</a>, <a class="el" href="Card_8cs_source.html#l00158">Card.Num</a>, <a class="el" href="ThingContainer_8cs_source.html#l00040">owner</a>, <a class="el" href="Card_8cs_source.html#l03425">Card.SetNum()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03085">Card.AddThing()</a>, <a class="el" href="Card_8cs_source.html#l03022">Card.ChangeMaterial()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="ThingContainer_8cs_source.html#l00793">ListCurrency()</a>, <a class="el" href="Card_8cs_source.html#l02039">Card.material</a>, <a class="el" href="Card_8cs_source.html#l03445">Card.ModNum()</a>, <a class="el" href="Card_8cs_source.html#l00158">Card.Num</a>, <a class="el" href="ThingContainer_8cs_source.html#l00040">owner</a>, <a class="el" href="Card_8cs_source.html#l03425">Card.SetNum()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l03891">Card.ModCurrency()</a>, and <a class="el" href="LayerGachaResult_8cs_source.html#l00030">LayerGachaResult.PlayGacha()</a>.</p>
 
@@ -475,35 +475,35 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00838">838</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  839</span>    {</div>
-<div class="line"><span class="lineno">  840</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
-<div class="line"><span class="lineno">  841</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">  842</span>        {</div>
-<div class="line"><span class="lineno">  843</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
-<div class="line"><span class="lineno">  844</span>            <span class="keywordflow">if</span> (current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
-<div class="line"><span class="lineno">  845</span>            {</div>
-<div class="line"><span class="lineno">  846</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a11654a9bb41d3eabe5bcfddb5c8f051f">AddFactory</a>(hash);</div>
-<div class="line"><span class="lineno">  847</span>            }</div>
-<div class="line"><span class="lineno">  848</span>            <span class="keywordflow">if</span> (current.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a06590eefdc1c4a805265acbe621db669">IsFactory</a>)</div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00842">842</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  843</span>    {</div>
+<div class="line"><span class="lineno">  844</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
+<div class="line"><span class="lineno">  845</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  846</span>        {</div>
+<div class="line"><span class="lineno">  847</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
+<div class="line"><span class="lineno">  848</span>            <span class="keywordflow">if</span> (current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
 <div class="line"><span class="lineno">  849</span>            {</div>
-<div class="line"><span class="lineno">  850</span>                hash.Add(current.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>);</div>
+<div class="line"><span class="lineno">  850</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a11654a9bb41d3eabe5bcfddb5c8f051f">AddFactory</a>(hash);</div>
 <div class="line"><span class="lineno">  851</span>            }</div>
-<div class="line"><span class="lineno">  852</span>            <span class="keywordflow">if</span> (current.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#ab2945a0c2a5e9345330474fd497d2054">ToggleType</a> == <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a>.Fire &amp;&amp; current.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
+<div class="line"><span class="lineno">  852</span>            <span class="keywordflow">if</span> (current.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a06590eefdc1c4a805265acbe621db669">IsFactory</a>)</div>
 <div class="line"><span class="lineno">  853</span>            {</div>
-<div class="line"><span class="lineno">  854</span>                hash.Add(<span class="stringliteral">&quot;fire&quot;</span>);</div>
+<div class="line"><span class="lineno">  854</span>                hash.Add(current.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>);</div>
 <div class="line"><span class="lineno">  855</span>            }</div>
-<div class="line"><span class="lineno">  856</span>        }</div>
-<div class="line"><span class="lineno">  857</span>    }</div>
+<div class="line"><span class="lineno">  856</span>            <span class="keywordflow">if</span> (current.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#ab2945a0c2a5e9345330474fd497d2054">ToggleType</a> == <a class="code hl_enumeration" href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a>.Fire &amp;&amp; current.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
+<div class="line"><span class="lineno">  857</span>            {</div>
+<div class="line"><span class="lineno">  858</span>                hash.Add(<span class="stringliteral">&quot;fire&quot;</span>);</div>
+<div class="line"><span class="lineno">  859</span>            }</div>
+<div class="line"><span class="lineno">  860</span>        }</div>
+<div class="line"><span class="lineno">  861</span>    }</div>
 <div class="ttc" id="aToggleType_8cs_html_aecee16d60b8bc0be86b35c9932813db8"><div class="ttname"><a href="ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8">ToggleType</a></div><div class="ttdeci">ToggleType</div><div class="ttdef"><b>Definition:</b> <a href="ToggleType_8cs_source.html#l00001">ToggleType.cs:2</a></div></div>
 <div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00541">Card.cs:542</a></div></div>
-<div class="ttc" id="aclassThingContainer_html_a11654a9bb41d3eabe5bcfddb5c8f051f"><div class="ttname"><a href="classThingContainer.html#a11654a9bb41d3eabe5bcfddb5c8f051f">ThingContainer.AddFactory</a></div><div class="ttdeci">void AddFactory(HashSet&lt; string &gt; hash)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00838">ThingContainer.cs:838</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a11654a9bb41d3eabe5bcfddb5c8f051f"><div class="ttname"><a href="classThingContainer.html#a11654a9bb41d3eabe5bcfddb5c8f051f">ThingContainer.AddFactory</a></div><div class="ttdeci">void AddFactory(HashSet&lt; string &gt; hash)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00842">ThingContainer.cs:842</a></div></div>
 <div class="ttc" id="aclassTrait_html_a06590eefdc1c4a805265acbe621db669"><div class="ttname"><a href="classTrait.html#a06590eefdc1c4a805265acbe621db669">Trait.IsFactory</a></div><div class="ttdeci">virtual bool IsFactory</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00140">Trait.cs:140</a></div></div>
 <div class="ttc" id="aclassTrait_html_ab2945a0c2a5e9345330474fd497d2054"><div class="ttname"><a href="classTrait.html#ab2945a0c2a5e9345330474fd497d2054">Trait.ToggleType</a></div><div class="ttdeci">virtual ToggleType ToggleType</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00468">Trait.cs:469</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00838">AddFactory()</a>, <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="Trait_8cs_source.html#l00140">Trait.IsFactory</a>, <a class="el" href="Card_8cs_source.html#l00542">Card.isOn</a>, <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>, <a class="el" href="Trait_8cs_source.html#l00469">Trait.ToggleType</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00842">AddFactory()</a>, <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="Trait_8cs_source.html#l00140">Trait.IsFactory</a>, <a class="el" href="Card_8cs_source.html#l00542">Card.isOn</a>, <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>, <a class="el" href="Trait_8cs_source.html#l00469">Trait.ToggleType</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00838">AddFactory()</a>, and <a class="el" href="RecipeUpdater_8cs_source.html#l00066">RecipeUpdater.RunRecipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00842">AddFactory()</a>, and <a class="el" href="RecipeUpdater_8cs_source.html#l00066">RecipeUpdater.RunRecipe()</a>.</p>
 
 </div>
 </div>
@@ -564,7 +564,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Thing_8cs_source.html#l01631">Thing.CanStackTo()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00410">GetDest()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00516">IsFull()</a>, <a class="el" href="InvOwner_8cs_source.html#l00939">InvOwner.OnShiftClick()</a>, and <a class="el" href="Zone_8cs_source.html#l02093">Zone.TryAddThingInSharedContainer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00410">GetDest()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00516">IsFull()</a>, <a class="el" href="InvOwner_8cs_source.html#l00939">InvOwner.OnShiftClick()</a>, and <a class="el" href="Zone_8cs_source.html#l02102">Zone.TryAddThingInSharedContainer()</a>.</p>
 
 </div>
 </div>
@@ -662,12 +662,12 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  577</span>            }</div>
 <div class="line"><span class="lineno">  578</span>        }</div>
 <div class="line"><span class="lineno">  579</span>    }</div>
-<div class="ttc" id="aclassCard_html_aa9ca06c4b45648bc819adef16f03c3bd"><div class="ttname"><a href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Card.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04981">Card.cs:4981</a></div></div>
+<div class="ttc" id="aclassCard_html_aa9ca06c4b45648bc819adef16f03c3bd"><div class="ttname"><a href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Card.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04996">Card.cs:4996</a></div></div>
 <div class="ttc" id="aclassThingContainer_html_a3752864600a1466b44645705c1f32445"><div class="ttname"><a href="classThingContainer.html#a3752864600a1466b44645705c1f32445">ThingContainer.grid</a></div><div class="ttdeci">List&lt; Thing &gt; grid</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00043">ThingContainer.cs:43</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l04981">Card.Destroy()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00043">grid</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l04996">Card.Destroy()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00043">grid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00244">ThingGen.CreateCardboardBox()</a>, <a class="el" href="ThingGen_8cs_source.html#l00263">ThingGen.CreateTreasureContent()</a>, <a class="el" href="Player_8cs_source.html#l02527">Player.DropReward()</a>, <a class="el" href="DNA_8cs_source.html#l00162">DNA.GenerateManiGene()</a>, <a class="el" href="TraitFoodEggFertilized_8cs_source.html#l00007">TraitFoodEggFertilized.Incubate()</a>, <a class="el" href="Trait_8cs_source.html#l01502">Trait.OnBarter()</a>, <a class="el" href="Player_8cs_source.html#l01345">Player.OnCreateGame()</a>, <a class="el" href="QuestFiamaLock_8cs_source.html#l00008">QuestFiamaLock.OnStart()</a>, <a class="el" href="Player_8cs_source.html#l01378">Player.OnStartNewGame()</a>, <a class="el" href="TraitContainer_8cs_source.html#l00057">TraitContainer.Open()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00146">DramaOutcome.QuestDefense_0()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00519">SerializedCards.Restore()</a>, <a class="el" href="Chara_8cs_source.html#l01686">Chara.ScaleByPrincipal()</a>, and <a class="el" href="Zone_8cs_source.html#l03706">Zone.SpawnLostItems()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00244">ThingGen.CreateCardboardBox()</a>, <a class="el" href="ThingGen_8cs_source.html#l00263">ThingGen.CreateTreasureContent()</a>, <a class="el" href="Player_8cs_source.html#l02527">Player.DropReward()</a>, <a class="el" href="DNA_8cs_source.html#l00162">DNA.GenerateManiGene()</a>, <a class="el" href="TraitFoodEggFertilized_8cs_source.html#l00007">TraitFoodEggFertilized.Incubate()</a>, <a class="el" href="Trait_8cs_source.html#l01502">Trait.OnBarter()</a>, <a class="el" href="Player_8cs_source.html#l01345">Player.OnCreateGame()</a>, <a class="el" href="QuestFiamaLock_8cs_source.html#l00008">QuestFiamaLock.OnStart()</a>, <a class="el" href="Player_8cs_source.html#l01378">Player.OnStartNewGame()</a>, <a class="el" href="TraitContainer_8cs_source.html#l00057">TraitContainer.Open()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00146">DramaOutcome.QuestDefense_0()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00519">SerializedCards.Restore()</a>, <a class="el" href="Chara_8cs_source.html#l01690">Chara.ScaleByPrincipal()</a>, and <a class="el" href="Zone_8cs_source.html#l03714">Zone.SpawnLostItems()</a>.</p>
 
 </div>
 </div>
@@ -785,7 +785,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="ThingContainer_8cs_source.html#l00581">Find()</a>, <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>, and <a class="el" href="Card_8cs_source.html#l00122">Card.uid</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00464">AM_Adv._OnUpdateInput()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00030">TraitGodStatue._OnUse()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">DropdownGrid.BuildIngredients()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00051">QuestCraft.CanDeliverToClient()</a>, <a class="el" href="ActNTR_8cs_source.html#l00003">ActNTR.CanPerform()</a>, <a class="el" href="QuestLoytelFarm_8cs_source.html#l00003">QuestLoytelFarm.CanUpdateOnTalk()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00204">DramaOutcome.chara_hired_ticket()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00437">DramaOutcome.check_sketch()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00613">LayerInventory.CreateBuy()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00747">FactionBranch.DailyOutcome()</a>, <a class="el" href="Chara_8cs_source.html#l05191">Chara.Die()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00361">DramaOutcome.duponne_capture()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00581">Find()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00605">Find&lt; T &gt;()</a>, <a class="el" href="Chara_8cs_source.html#l07617">Chara.FindAmmo()</a>, <a class="el" href="Card_8cs_source.html#l02654">Card.FindTool&lt; T &gt;()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00181">AI_Fuck.Finish()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01910">CoreDebug.Fix_LostCore()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00511">DramaOutcome.give_sketch_special()</a>, <a class="el" href="Chara_8cs_source.html#l08031">Chara.GiveGift()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00425">DramaOutcome.guild_mageTrial()</a>, <a class="el" href="Chara_8cs_source.html#l05108">Chara.MakeGrave()</a>, <a class="el" href="Trait_8cs_source.html#l01502">Trait.OnBarter()</a>, <a class="el" href="QuestNasu_8cs_source.html#l00003">QuestNasu.OnComplete()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00143">ShopTransaction.OnEndTransaction()</a>, <a class="el" href="ConSleep_8cs_source.html#l00228">ConSleep.OnRemoved()</a>, <a class="el" href="ConWrath_8cs_source.html#l00015">ConWrath.OnRemoved()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="HotItemActionSleep_8cs_source.html#l00007">HotItemActionSleep.Perform()</a>, <a class="el" href="HotItemEQSet_8cs_source.html#l00052">HotItemEQSet.Perform()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00334">CoreDebug.QuickStart()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00127">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="Recipe_8cs_source.html#l00068">Recipe.Ingredient.RefreshThing()</a>, <a class="el" href="Card_8cs_source.html#l06873">Card.RemoveBacker()</a>, <a class="el" href="Card_8cs_source.html#l03248">Card.RemoveThing()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00050">AI_PlayMusic.Run()</a>, <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>, <a class="el" href="ConSleep_8cs_source.html#l00172">ConSleep.SuccubusVisit()</a>, <a class="el" href="Player_8cs_source.html#l02262">Player.TryEquipBait()</a>, <a class="el" href="Zone_8cs_source.html#l02232">Zone.TryGetRestock&lt; T &gt;()</a>, <a class="el" href="Zone_8cs_source.html#l02216">Zone.TryGetThingFromSharedContainer()</a>, <a class="el" href="ActPray_8cs_source.html#l00012">ActPray.TryPray()</a>, and <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00464">AM_Adv._OnUpdateInput()</a>, <a class="el" href="TraitGodStatue_8cs_source.html#l00030">TraitGodStatue._OnUse()</a>, <a class="el" href="DropdownGrid_8cs_source.html#l00088">DropdownGrid.BuildIngredients()</a>, <a class="el" href="QuestCraft_8cs_source.html#l00051">QuestCraft.CanDeliverToClient()</a>, <a class="el" href="ActNTR_8cs_source.html#l00003">ActNTR.CanPerform()</a>, <a class="el" href="QuestLoytelFarm_8cs_source.html#l00003">QuestLoytelFarm.CanUpdateOnTalk()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00204">DramaOutcome.chara_hired_ticket()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00437">DramaOutcome.check_sketch()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00613">LayerInventory.CreateBuy()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00747">FactionBranch.DailyOutcome()</a>, <a class="el" href="Chara_8cs_source.html#l05209">Chara.Die()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00361">DramaOutcome.duponne_capture()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00581">Find()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00605">Find&lt; T &gt;()</a>, <a class="el" href="Chara_8cs_source.html#l07635">Chara.FindAmmo()</a>, <a class="el" href="Card_8cs_source.html#l02654">Card.FindTool&lt; T &gt;()</a>, <a class="el" href="AI__Fuck_8cs_source.html#l00181">AI_Fuck.Finish()</a>, <a class="el" href="CoreDebug_8cs_source.html#l01912">CoreDebug.Fix_LostCore()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00511">DramaOutcome.give_sketch_special()</a>, <a class="el" href="Chara_8cs_source.html#l08055">Chara.GiveGift()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00425">DramaOutcome.guild_mageTrial()</a>, <a class="el" href="Chara_8cs_source.html#l05126">Chara.MakeGrave()</a>, <a class="el" href="Trait_8cs_source.html#l01502">Trait.OnBarter()</a>, <a class="el" href="QuestNasu_8cs_source.html#l00003">QuestNasu.OnComplete()</a>, <a class="el" href="ShopTransaction_8cs_source.html#l00143">ShopTransaction.OnEndTransaction()</a>, <a class="el" href="ConSleep_8cs_source.html#l00228">ConSleep.OnRemoved()</a>, <a class="el" href="ConWrath_8cs_source.html#l00015">ConWrath.OnRemoved()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="HotItemActionSleep_8cs_source.html#l00007">HotItemActionSleep.Perform()</a>, <a class="el" href="HotItemEQSet_8cs_source.html#l00052">HotItemEQSet.Perform()</a>, <a class="el" href="LayerGacha_8cs_source.html#l00052">LayerGacha.PlayGacha()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00334">CoreDebug.QuickStart()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00244">UIRecipeInfo.Refresh()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00127">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="Recipe_8cs_source.html#l00068">Recipe.Ingredient.RefreshThing()</a>, <a class="el" href="Card_8cs_source.html#l06902">Card.RemoveBacker()</a>, <a class="el" href="Card_8cs_source.html#l03248">Card.RemoveThing()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="AI__PlayMusic_8cs_source.html#l00050">AI_PlayMusic.Run()</a>, <a class="el" href="HitSummary_8cs_source.html#l00030">HitSummary.SetRecipe()</a>, <a class="el" href="ConSleep_8cs_source.html#l00172">ConSleep.SuccubusVisit()</a>, <a class="el" href="Player_8cs_source.html#l02262">Player.TryEquipBait()</a>, <a class="el" href="Zone_8cs_source.html#l02241">Zone.TryGetRestock&lt; T &gt;()</a>, <a class="el" href="Zone_8cs_source.html#l02225">Zone.TryGetThingFromSharedContainer()</a>, <a class="el" href="ActPray_8cs_source.html#l00012">ActPray.TryPray()</a>, and <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>.</p>
 
 </div>
 </div>
@@ -1007,9 +1007,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  636</span>        <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.Sort((<a class="code hl_class" href="classThing.html">Thing</a> a, <a class="code hl_class" href="classThing.html">Thing</a> b) =&gt; func(b) - func(a));</div>
 <div class="line"><span class="lineno">  637</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>[0];</div>
 <div class="line"><span class="lineno">  638</span>    }</div>
-<div class="ttc" id="aclassThingContainer_html_a050b32b5812add0577b27ce8aa4dccff"><div class="ttname"><a href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">ThingContainer.List</a></div><div class="ttdeci">List&lt; Thing &gt; List(Func&lt; Thing, bool &gt; func, bool onlyAccessible=false)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00813">ThingContainer.cs:813</a></div></div>
+<div class="ttc" id="aclassThingContainer_html_a050b32b5812add0577b27ce8aa4dccff"><div class="ttname"><a href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">ThingContainer.List</a></div><div class="ttdeci">List&lt; Thing &gt; List(Func&lt; Thing, bool &gt; func, bool onlyAccessible=false)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00817">ThingContainer.cs:817</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00813">List()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00817">List()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -1107,24 +1107,24 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00859">859</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  860</span>    {</div>
-<div class="line"><span class="lineno">  861</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
-<div class="line"><span class="lineno">  862</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">  863</span>        {</div>
-<div class="line"><span class="lineno">  864</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
-<div class="line"><span class="lineno">  865</span>            <span class="keywordflow">if</span> (!onlyAccessible || current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
-<div class="line"><span class="lineno">  866</span>            {</div>
-<div class="line"><span class="lineno">  867</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(action);</div>
-<div class="line"><span class="lineno">  868</span>            }</div>
-<div class="line"><span class="lineno">  869</span>            action(current);</div>
-<div class="line"><span class="lineno">  870</span>        }</div>
-<div class="line"><span class="lineno">  871</span>    }</div>
-<div class="ttc" id="aclassThingContainer_html_a893f3830d6174aa8ef32d39b151ca647"><div class="ttname"><a href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">ThingContainer.Foreach</a></div><div class="ttdeci">void Foreach(Action&lt; Thing &gt; action, bool onlyAccessible=true)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00859">ThingContainer.cs:859</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00863">863</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  864</span>    {</div>
+<div class="line"><span class="lineno">  865</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
+<div class="line"><span class="lineno">  866</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  867</span>        {</div>
+<div class="line"><span class="lineno">  868</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
+<div class="line"><span class="lineno">  869</span>            <span class="keywordflow">if</span> (!onlyAccessible || current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
+<div class="line"><span class="lineno">  870</span>            {</div>
+<div class="line"><span class="lineno">  871</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(action);</div>
+<div class="line"><span class="lineno">  872</span>            }</div>
+<div class="line"><span class="lineno">  873</span>            action(current);</div>
+<div class="line"><span class="lineno">  874</span>        }</div>
+<div class="line"><span class="lineno">  875</span>    }</div>
+<div class="ttc" id="aclassThingContainer_html_a893f3830d6174aa8ef32d39b151ca647"><div class="ttname"><a href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">ThingContainer.Foreach</a></div><div class="ttdeci">void Foreach(Action&lt; Thing &gt; action, bool onlyAccessible=true)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00863">ThingContainer.cs:863</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="ThingContainer_8cs_source.html#l00859">Foreach()</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
+<p class="reference">References <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="ThingContainer_8cs_source.html#l00863">Foreach()</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="Card_8cs_source.html#l03090">Card.AddThing()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00859">Foreach()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00108">BaseTaskHarvest.GetBestTool()</a>, <a class="el" href="Props_8cs_source.html#l00204">Props.ListThingStack()</a>, <a class="el" href="TaskDump_8cs_source.html#l00157">TaskDump.ListThingsToPut()</a>, <a class="el" href="ZoneEventHarvest_8cs_source.html#l00073">ZoneEventHarvest.OnLeaveZone()</a>, <a class="el" href="Player_8cs_source.html#l01429">Player.OnLoad()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00344">RecipeManager.OnVersionUpdate()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="Chara_8cs_source.html#l05040">Chara.Revive()</a>, <a class="el" href="WidgetSearch_8cs_source.html#l00105">WidgetSearch.Search()</a>, <a class="el" href="Trait_8cs_source.html#l01380">Trait.TryRefuel()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00149">LayerInventory.TryShowGuide()</a>, and <a class="el" href="GoalAutoCombat_8cs_source.html#l00044">GoalAutoCombat.TryUseRanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BuildMenu_8cs_source.html#l00240">BuildMenu._Search()</a>, <a class="el" href="Card_8cs_source.html#l03090">Card.AddThing()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00863">Foreach()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00108">BaseTaskHarvest.GetBestTool()</a>, <a class="el" href="Props_8cs_source.html#l00204">Props.ListThingStack()</a>, <a class="el" href="TaskDump_8cs_source.html#l00157">TaskDump.ListThingsToPut()</a>, <a class="el" href="ZoneEventHarvest_8cs_source.html#l00073">ZoneEventHarvest.OnLeaveZone()</a>, <a class="el" href="Player_8cs_source.html#l01429">Player.OnLoad()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00344">RecipeManager.OnVersionUpdate()</a>, <a class="el" href="BuildMenu_8cs_source.html#l00491">BuildMenu.RefreshCategory()</a>, <a class="el" href="Chara_8cs_source.html#l05050">Chara.Revive()</a>, <a class="el" href="WidgetSearch_8cs_source.html#l00105">WidgetSearch.Search()</a>, <a class="el" href="Trait_8cs_source.html#l01380">Trait.TryRefuel()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00149">LayerInventory.TryShowGuide()</a>, and <a class="el" href="GoalAutoCombat_8cs_source.html#l00044">GoalAutoCombat.TryUseRanged()</a>.</p>
 
 </div>
 </div>
@@ -1162,24 +1162,24 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00873">873</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  874</span>    {</div>
-<div class="line"><span class="lineno">  875</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
-<div class="line"><span class="lineno">  876</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
-<div class="line"><span class="lineno">  877</span>        {</div>
-<div class="line"><span class="lineno">  878</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
-<div class="line"><span class="lineno">  879</span>            <span class="keywordflow">if</span> (!onlyAccessible || current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
-<div class="line"><span class="lineno">  880</span>            {</div>
-<div class="line"><span class="lineno">  881</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(action);</div>
-<div class="line"><span class="lineno">  882</span>            }</div>
-<div class="line"><span class="lineno">  883</span>            <span class="keywordflow">if</span> (action(current))</div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00877">877</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  878</span>    {</div>
+<div class="line"><span class="lineno">  879</span>        <span class="keyword">using </span>Enumerator enumerator = GetEnumerator();</div>
+<div class="line"><span class="lineno">  880</span>        <span class="keywordflow">while</span> (enumerator.MoveNext())</div>
+<div class="line"><span class="lineno">  881</span>        {</div>
+<div class="line"><span class="lineno">  882</span>            <a class="code hl_class" href="classThing.html">Thing</a> current = enumerator.Current;</div>
+<div class="line"><span class="lineno">  883</span>            <span class="keywordflow">if</span> (!onlyAccessible || current.<a class="code hl_property" href="classThing.html#aabac9547c9e9514ea31affb4fa06cb44">CanSearchContents</a>)</div>
 <div class="line"><span class="lineno">  884</span>            {</div>
-<div class="line"><span class="lineno">  885</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  885</span>                current.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647">Foreach</a>(action);</div>
 <div class="line"><span class="lineno">  886</span>            }</div>
-<div class="line"><span class="lineno">  887</span>        }</div>
-<div class="line"><span class="lineno">  888</span>    }</div>
+<div class="line"><span class="lineno">  887</span>            <span class="keywordflow">if</span> (action(current))</div>
+<div class="line"><span class="lineno">  888</span>            {</div>
+<div class="line"><span class="lineno">  889</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  890</span>            }</div>
+<div class="line"><span class="lineno">  891</span>        }</div>
+<div class="line"><span class="lineno">  892</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="ThingContainer_8cs_source.html#l00859">Foreach()</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
+<p class="reference">References <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="ThingContainer_8cs_source.html#l00863">Foreach()</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
 
 </div>
 </div>
@@ -1240,8 +1240,12 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  783</span>                }</div>
 <div class="line"><span class="lineno">  784</span>            }</div>
 <div class="line"><span class="lineno">  785</span>        }</div>
-<div class="line"><span class="lineno">  786</span>        <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno">  787</span>    }</div>
+<div class="line"><span class="lineno">  786</span>        <span class="keywordflow">if</span> (sum &lt; 0)</div>
+<div class="line"><span class="lineno">  787</span>        {</div>
+<div class="line"><span class="lineno">  788</span>            sum = <span class="keywordtype">int</span>.MaxValue;</div>
+<div class="line"><span class="lineno">  789</span>        }</div>
+<div class="line"><span class="lineno">  790</span>        <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno">  791</span>    }</div>
 <div class="ttc" id="aclassThingContainer_html_adce16823f2a090694a8bdc26955e50c1"><div class="ttname"><a href="classThingContainer.html#adce16823f2a090694a8bdc26955e50c1">ThingContainer.GetCurrency</a></div><div class="ttdeci">int GetCurrency(string id, ref int sum, SourceMaterial.Row mat=null)</div><div class="ttdef"><b>Definition:</b> <a href="ThingContainer_8cs_source.html#l00769">ThingContainer.cs:769</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="ThingContainer_8cs_source.html#l00769">GetCurrency()</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="Card_8cs_source.html#l02039">Card.material</a>, <a class="el" href="Card_8cs_source.html#l00158">Card.Num</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
@@ -1421,7 +1425,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00045">_listContainers</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00427">Window.SaveData.advDistribution</a>, <a class="el" href="Trait_8cs_source.html#l00292">Trait.CanOnlyCarry</a>, <a class="el" href="Thing_8cs_source.html#l00100">Thing.CanSearchContents</a>, <a class="el" href="ThingContainer_8cs_source.html#l00396">CanStack()</a>, <a class="el" href="Card_8cs_source.html#l02037">Card.category</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00119">Window.SaveData.cats</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00267">Window.SaveData.flag</a>, <a class="el" href="Card_8cs_source.html#l02504">Card.GetWindowSaveData()</a>, <a class="el" href="Card_8cs_source.html#l02071">Card.isChara</a>, <a class="el" href="Card_8cs_source.html#l02077">Card.IsContainer</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00498">Window.SaveData.IsFilterPass()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00290">IsFull()</a>, <a class="el" href="Card_8cs_source.html#l02131">Card.IsPC</a>, <a class="el" href="ThingContainer_8cs_source.html#l00015">ThingContainer.DestData.IsValid</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00439">Window.SaveData.noRotten</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00451">Window.SaveData.onlyRottable</a>, <a class="el" href="ThingContainer_8cs_source.html#l00040">owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.parent</a>, <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>, <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>, <a class="el" href="Chara_8cs_source.html#l00501">Chara.trait</a>, and <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l00132">Window.SaveData.userFilter</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00516">IsFull()</a>, and <a class="el" href="Card_8cs_source.html#l06820">Card.TryStack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00516">IsFull()</a>, and <a class="el" href="Card_8cs_source.html#l06849">Card.TryStack()</a>.</p>
 
 </div>
 </div>
@@ -1747,7 +1751,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00344">GetFreeGridIndex()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00050">GridSize</a>, <a class="el" href="ThingContainer_8cs_source.html#l00053">HasGrid</a>, <a class="el" href="Trait_8cs_source.html#l00126">Trait.IsFridge</a>, <a class="el" href="ThingContainer_8cs_source.html#l00056">IsMagicChest</a>, <a class="el" href="Card_8cs_source.html#l00542">Card.isOn</a>, <a class="el" href="Trait_8cs_source.html#l00244">Trait.IsSpecialContainer</a>, <a class="el" href="ThingContainer_8cs_source.html#l00060">MaxCapacity</a>, <a class="el" href="ThingContainer_8cs_source.html#l00040">owner</a>, <a class="el" href="Card_8cs_source.html#l00055">Card.parent</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00747">FactionBranch.DailyOutcome()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00202">QuestDeliver.Deliver()</a>, <a class="el" href="Props_8cs_source.html#l00365">Props.FindEmptyContainer&lt; T &gt;()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">GetDest()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01170">FactionBranch.GetMeal()</a>, <a class="el" href="InvOwner_8cs_source.html#l00912">InvOwner.GetShitDestOwner()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00516">IsFull()</a>, <a class="el" href="InvOwner_8cs_source.html#l00357">InvOwner.Transaction.IsValid()</a>, <a class="el" href="InvOwnerEquip_8cs_source.html#l00020">InvOwnerEquip.ListInteractions()</a>, <a class="el" href="FACTION_8cs_source.html#l00376">Faction.OnAdvanceMonth()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00078">AI_Fish.ProgressFish.OnProgressComplete()</a>, <a class="el" href="ActDreamBug_8cs_source.html#l00003">ActDreamBug.Perform()</a>, <a class="el" href="InvOwner_8cs_source.html#l01112">InvOwner.PutBack()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, and <a class="el" href="GameDate_8cs_source.html#l00364">GameDate.ShipPackages()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l00747">FactionBranch.DailyOutcome()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00202">QuestDeliver.Deliver()</a>, <a class="el" href="Props_8cs_source.html#l00365">Props.FindEmptyContainer&lt; T &gt;()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">GetDest()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01170">FactionBranch.GetMeal()</a>, <a class="el" href="InvOwner_8cs_source.html#l00912">InvOwner.GetShitDestOwner()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00516">IsFull()</a>, <a class="el" href="InvOwner_8cs_source.html#l00357">InvOwner.Transaction.IsValid()</a>, <a class="el" href="InvOwnerEquip_8cs_source.html#l00020">InvOwnerEquip.ListInteractions()</a>, <a class="el" href="FACTION_8cs_source.html#l00387">Faction.OnAdvanceMonth()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00078">AI_Fish.ProgressFish.OnProgressComplete()</a>, <a class="el" href="ActDreamBug_8cs_source.html#l00003">ActDreamBug.Perform()</a>, <a class="el" href="InvOwner_8cs_source.html#l01112">InvOwner.PutBack()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, and <a class="el" href="GameDate_8cs_source.html#l00364">GameDate.ShipPackages()</a>.</p>
 
 </div>
 </div>
@@ -1957,16 +1961,16 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00813">813</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  814</span>    {</div>
-<div class="line"><span class="lineno">  815</span>        <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.Clear();</div>
-<div class="line"><span class="lineno">  816</span>        <a class="code hl_function" href="classThingContainer.html#acb351e9ee71a718e6d1064a7eaaf860d">_List</a>(func, onlyAccessible);</div>
-<div class="line"><span class="lineno">  817</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>;</div>
-<div class="line"><span class="lineno">  818</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00817">817</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  818</span>    {</div>
+<div class="line"><span class="lineno">  819</span>        <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.Clear();</div>
+<div class="line"><span class="lineno">  820</span>        <a class="code hl_function" href="classThingContainer.html#acb351e9ee71a718e6d1064a7eaaf860d">_List</a>(func, onlyAccessible);</div>
+<div class="line"><span class="lineno">  821</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>;</div>
+<div class="line"><span class="lineno">  822</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00820">_List()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>.</p>
+<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00824">_List()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l01437">FactionBranch.AddMemeber()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="ZonePreEnterEncounter_8cs_source.html#l00013">ZonePreEnterEncounter.Execute()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00629">FindBest&lt; T &gt;()</a>, <a class="el" href="TraitPainter_8cs_source.html#l00025">TraitPainter.GetCanvas()</a>, <a class="el" href="TaskDig_8cs_source.html#l00136">TaskDig.GetTreasureMap()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00121">QuestDeliver.ListDestThing()</a>, <a class="el" href="Player_8cs_source.html#l02349">Player.OnAdvanceHour()</a>, <a class="el" href="Chara_8cs_source.html#l01435">Chara.OnBanish()</a>, <a class="el" href="AM__Adv_8cs_source.html#l00433">AM_Adv.OnBecomeNoGoal()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00139">ContentCodex.OnClickAddCards()</a>, <a class="el" href="Game_8cs_source.html#l00356">Game.OnLoad()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00078">AI_Fish.ProgressFish.OnProgressComplete()</a>, <a class="el" href="TraitScrollStatic_8cs_source.html#l00028">TraitScrollStatic.OnRead()</a>, <a class="el" href="ConSleep_8cs_source.html#l00228">ConSleep.OnRemoved()</a>, <a class="el" href="UI_8cs_source.html#l00649">UI.OpenFloatInv()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00209">ButtonAbility.SpecialHoldAction()</a>, <a class="el" href="Zone_8cs_source.html#l02046">Zone.TryListThingsInSpot&lt; T &gt;()</a>, and <a class="el" href="LayerDragGrid_8cs_source.html#l00451">LayerDragGrid.TryProc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FactionBranch_8cs_source.html#l01437">FactionBranch.AddMemeber()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="ZonePreEnterEncounter_8cs_source.html#l00013">ZonePreEnterEncounter.Execute()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00629">FindBest&lt; T &gt;()</a>, <a class="el" href="TraitPainter_8cs_source.html#l00025">TraitPainter.GetCanvas()</a>, <a class="el" href="TaskDig_8cs_source.html#l00136">TaskDig.GetTreasureMap()</a>, <a class="el" href="QuestDeliver_8cs_source.html#l00121">QuestDeliver.ListDestThing()</a>, <a class="el" href="Player_8cs_source.html#l02349">Player.OnAdvanceHour()</a>, <a class="el" href="Chara_8cs_source.html#l01439">Chara.OnBanish()</a>, <a class="el" href="AM__Adv_8cs_source.html#l00433">AM_Adv.OnBecomeNoGoal()</a>, <a class="el" href="ContentCodex_8cs_source.html#l00139">ContentCodex.OnClickAddCards()</a>, <a class="el" href="Game_8cs_source.html#l00356">Game.OnLoad()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00078">AI_Fish.ProgressFish.OnProgressComplete()</a>, <a class="el" href="TraitScrollStatic_8cs_source.html#l00028">TraitScrollStatic.OnRead()</a>, <a class="el" href="ConSleep_8cs_source.html#l00228">ConSleep.OnRemoved()</a>, <a class="el" href="UI_8cs_source.html#l00649">UI.OpenFloatInv()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="ButtonAbility_8cs_source.html#l00209">ButtonAbility.SpecialHoldAction()</a>, <a class="el" href="Zone_8cs_source.html#l02055">Zone.TryListThingsInSpot&lt; T &gt;()</a>, and <a class="el" href="LayerDragGrid_8cs_source.html#l00451">LayerDragGrid.TryProc()</a>.</p>
 
 </div>
 </div>
@@ -1994,14 +1998,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00789">789</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  790</span>    {</div>
-<div class="line"><span class="lineno">  791</span>        <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.Clear();</div>
-<div class="line"><span class="lineno">  792</span>        <a class="code hl_function" href="classThingContainer.html#a7841c80da72d10965543c9d7640c9f49">_ListCurrency</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  793</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>;</div>
-<div class="line"><span class="lineno">  794</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00793">793</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  794</span>    {</div>
+<div class="line"><span class="lineno">  795</span>        <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>.Clear();</div>
+<div class="line"><span class="lineno">  796</span>        <a class="code hl_function" href="classThingContainer.html#a7841c80da72d10965543c9d7640c9f49">_ListCurrency</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  797</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a>;</div>
+<div class="line"><span class="lineno">  798</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00796">_ListCurrency()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>.</p>
+<p class="reference">References <a class="el" href="ThingContainer_8cs_source.html#l00800">_ListCurrency()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00047">tempList</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00529">AddCurrency()</a>.</p>
 
@@ -2624,7 +2628,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00037">37</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00083">ChangeSize()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00541">LayerInventory.CreateContainer()</a>, <a class="el" href="Card_8cs_source.html#l07113">Card.GetPrice()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00071">SetOwner()</a>, and <a class="el" href="TraitWrench_8cs_source.html#l00061">TraitWrench.Upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00083">ChangeSize()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00541">LayerInventory.CreateContainer()</a>, <a class="el" href="Card_8cs_source.html#l07142">Card.GetPrice()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00071">SetOwner()</a>, and <a class="el" href="TraitWrench_8cs_source.html#l00061">TraitWrench.Upgrade()</a>.</p>
 
 </div>
 </div>
@@ -2692,7 +2696,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00040">40</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00820">_List()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00529">AddCurrency()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">GetDest()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00290">IsFull()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00071">SetOwner()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00368">SetSize()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00260">ShouldShowOnGrid()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00374">TryStack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00824">_List()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00529">AddCurrency()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00410">GetDest()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00290">IsFull()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00071">SetOwner()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00368">SetSize()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00260">ShouldShowOnGrid()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00374">TryStack()</a>.</p>
 
 </div>
 </div>
@@ -2718,7 +2722,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00047">47</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00820">_List()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00796">_ListCurrency()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00529">AddCurrency()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00629">FindBest&lt; T &gt;()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00813">List()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00789">ListCurrency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00824">_List()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00800">_ListCurrency()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00529">AddCurrency()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00629">FindBest&lt; T &gt;()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00817">List()</a>, and <a class="el" href="ThingContainer_8cs_source.html#l00793">ListCurrency()</a>.</p>
 
 </div>
 </div>
@@ -2736,7 +2740,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ThingContainer_8cs_source.html#l00034">34</a> of file <a class="el" href="ThingContainer_8cs_source.html">ThingContainer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00083">ChangeSize()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00541">LayerInventory.CreateContainer()</a>, <a class="el" href="Card_8cs_source.html#l07113">Card.GetPrice()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00071">SetOwner()</a>, and <a class="el" href="TraitWrench_8cs_source.html#l00061">TraitWrench.Upgrade()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00083">ChangeSize()</a>, <a class="el" href="LayerInventory_8cs_source.html#l00541">LayerInventory.CreateContainer()</a>, <a class="el" href="Card_8cs_source.html#l07142">Card.GetPrice()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00071">SetOwner()</a>, and <a class="el" href="TraitWrench_8cs_source.html#l00061">TraitWrench.Upgrade()</a>.</p>
 
 </div>
 </div>
@@ -2853,7 +2857,7 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassCard_html_a0dff0f48ba1c9b1422024a29851d981f"><div class="ttname"><a href="classCard.html#a0dff0f48ba1c9b1422024a29851d981f">Card.c_containerUpgrade</a></div><div class="ttdeci">ContainerUpgrade c_containerUpgrade</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01868">Card.cs:1869</a></div></div>
 <div class="ttc" id="aclassContainerUpgrade_html_adca1c881c13b1c2ca8aa22f2da70c4a7"><div class="ttname"><a href="classContainerUpgrade.html#adca1c881c13b1c2ca8aa22f2da70c4a7">ContainerUpgrade.cap</a></div><div class="ttdeci">int cap</div><div class="ttdef"><b>Definition:</b> <a href="ContainerUpgrade_8cs_source.html#l00006">ContainerUpgrade.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00290">IsFull()</a>, <a class="el" href="UIMagicChest_8cs_source.html#l00143">UIMagicChest.RefreshBottom()</a>, and <a class="el" href="Zone_8cs_source.html#l02093">Zone.TryAddThingInSharedContainer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingContainer_8cs_source.html#l00290">IsFull()</a>, <a class="el" href="UIMagicChest_8cs_source.html#l00143">UIMagicChest.RefreshBottom()</a>, and <a class="el" href="Zone_8cs_source.html#l02102">Zone.TryAddThingInSharedContainer()</a>.</p>
 
 </div>
 </div>

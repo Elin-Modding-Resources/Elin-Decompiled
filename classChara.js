@@ -315,7 +315,7 @@ var classChara =
     [ "_pts", "classChara.html#a0b40b07bb260a298851c1cf8bb69b431", null ],
     [ "_race", "classChara.html#a9bc434cbb5b710474fd4cabcc311e720", null ],
     [ "_sharedPos", "classChara.html#a118f63dc7e3f466048b96042e6f5a77d", null ],
-    [ "_Speed", "classChara.html#a2f4cdf93d4ea6e221c16d6c42cd3f6ea", null ],
+    [ "_Speed", "classChara.html#adf36107c7727807050bce4ab28624f0c", null ],
     [ "_strs", "classChara.html#a041fcbabf8b37fe8726ed78bd4e5ee80", null ],
     [ "_tactics", "classChara.html#a8362af562079e53d924410891c587a02", null ],
     [ "_works", "classChara.html#ae997d4eaa96867127deb8294f9ed4a18", null ],

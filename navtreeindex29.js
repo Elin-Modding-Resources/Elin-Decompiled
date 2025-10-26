@@ -1,5 +1,7 @@
 var NAVTREEINDEX29 =
 {
+"classActBolt.html#aeddc60271a10015641594df5f3a7c1f8":[1,0,18,1],
+"classActBreathe.html":[1,0,19],
 "classActBreathe.html#a36d8ee33f9accda16f48a4dd44e5d1dc":[1,0,19,2],
 "classActBreathe.html#a60457d7264e26509408ac042cc004fef":[1,0,19,0],
 "classActBreathe.html#a8f9245b9be5061b7120bb4f99f747228":[1,0,19,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX29 =
 "classActWeapon.html":[1,0,64],
 "classActWhirlwind.html":[1,0,65],
 "classActWhirlwind.html#a578015b432c70d5d6c368e80514f066d":[1,0,65,0],
-"classActWhirlwind.html#a66223804e3fe1a7d8c5375066963847e":[1,0,65,1],
-"classActZap.html":[1,0,66],
-"classActZap.html#a3973e5159698a0a439cf458724f7e472":[1,0,66,1]
+"classActWhirlwind.html#a66223804e3fe1a7d8c5375066963847e":[1,0,65,1]
 };
