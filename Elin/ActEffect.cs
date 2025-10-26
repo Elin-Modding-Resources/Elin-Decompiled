@@ -620,6 +620,9 @@ public class ActEffect : EClass
 				case "orc":
 					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_orc", (SourceChara.Row r) => r.race == "orc"), power / 10);
 					break;
+				case "dragon":
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_dragon", (SourceChara.Row r) => r.race == "dragon" || r.race == "drake" || r.race == "wyvern"), power / 5);
+					break;
 				case "pawn":
 					chara2 = CharaGen.CreateFromFilter("c_pawn", power / 10);
 					break;

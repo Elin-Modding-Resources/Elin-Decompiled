@@ -80,6 +80,22 @@ public class GameLang : EClass
 		stringBuilder.Replace("#self", newValue);
 		stringBuilder.Replace("#his", newValue2);
 		stringBuilder.Replace("#me", newValue);
+		if (int.TryParse(refDrama1, out var result))
+		{
+			refDrama1 = result.ToFormat();
+		}
+		if (int.TryParse(refDrama2, out var result2))
+		{
+			refDrama2 = result2.ToFormat();
+		}
+		if (int.TryParse(refDrama3, out var result3))
+		{
+			refDrama3 = result3.ToFormat();
+		}
+		if (int.TryParse(refDrama4, out var result4))
+		{
+			refDrama4 = result4.ToFormat();
+		}
 		stringBuilder.Replace("#1", refDrama1);
 		stringBuilder.Replace("#2", refDrama2);
 		stringBuilder.Replace("#3", refDrama3);

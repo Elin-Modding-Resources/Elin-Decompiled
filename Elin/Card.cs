@@ -4003,22 +4003,37 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		bool flag = originalTarget != null;
 		Action onEvade = null;
-		if (isChara && !isRestrained && !HasElement(1241) && !flag)
+		if (isChara && !isRestrained && !flag)
 		{
-			AttackSource attackSource2 = attackSource;
-			if ((uint)(attackSource2 - 3) > 2u && (uint)(attackSource2 - 13) > 4u)
+			if (HasElement(1249))
 			{
 				foreach (Chara chara3 in EClass._map.charas)
 				{
-					if (chara3 != this && !chara3.IsHostile(Chara))
+					if (chara3 != this && !chara3.IsHostile(Chara) && !chara3.IsDisabled && !chara3.isRestrained && (!IsPCFactionOrMinion || chara3.IsPCFactionOrMinion) && chara3.Dist(this) <= 3)
 					{
-						int num = chara3.Evalue(1241);
-						int num2 = chara3.Evalue(438);
-						if ((num != 0 || num2 != 0) && !chara3.IsDisabled && !chara3.isRestrained && (!IsPCFactionOrMinion || chara3.IsPCFactionOrMinion) && chara3.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || hp * 100 / MaxHP <= chara3.hp * 100 / chara3.MaxHP))
+						Say("wall_bond", chara3, this);
+						chara3.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
+						return;
+					}
+				}
+			}
+			if (!HasElement(1241))
+			{
+				AttackSource attackSource2 = attackSource;
+				if ((uint)(attackSource2 - 3) > 2u && (uint)(attackSource2 - 13) > 4u)
+				{
+					foreach (Chara chara4 in EClass._map.charas)
+					{
+						if (chara4 != this && !chara4.IsHostile(Chara))
 						{
-							Say((num2 == 0) ? "wall_flesh" : "wall_knightly", chara3, this);
-							chara3.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
-							return;
+							int num = chara4.Evalue(1241);
+							int num2 = chara4.Evalue(438);
+							if ((num != 0 || num2 != 0) && !chara4.IsDisabled && !chara4.isRestrained && (!IsPCFactionOrMinion || chara4.IsPCFactionOrMinion) && chara4.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || hp * 100 / MaxHP <= chara4.hp * 100 / chara4.MaxHP))
+							{
+								Say((num2 == 0) ? "wall_flesh" : "wall_knightly", chara4, this);
+								chara4.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
+								return;
+							}
 						}
 					}
 				}
@@ -4314,7 +4329,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_0f81;
+							goto IL_104d;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4342,7 +4357,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_0f81;
+								goto IL_104d;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4360,8 +4375,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_0f81;
-		IL_0f81:
+		goto IL_104d;
+		IL_104d:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4424,18 +4439,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					PlaySound("revive");
 					return;
 				}
-				foreach (Chara chara4 in EClass._map.charas)
+				foreach (Chara chara5 in EClass._map.charas)
 				{
-					if (Chara.IsFriendOrAbove(chara4) && chara4.HasElement(1408) && chara4.faith == EClass.game.religions.Healing && EClass.world.date.GetRawDay() != chara4.GetInt(58) && (!chara4.IsPCFaction || IsPCFaction))
+					if (Chara.IsFriendOrAbove(chara5) && chara5.HasElement(1408) && chara5.faith == EClass.game.religions.Healing && EClass.world.date.GetRawDay() != chara5.GetInt(58) && (!chara5.IsPCFaction || IsPCFaction))
 					{
 						Msg.alwaysVisible = true;
-						Msg.Say("layhand", chara4, this);
+						Msg.Say("layhand", chara5, this);
 						Msg.Say("pray_heal", this);
 						hp = MaxHP;
 						Chara.AddCondition<ConInvulnerable>();
 						PlayEffect("revive");
 						PlaySound("revive");
-						chara4.SetInt(58, EClass.world.date.GetRawDay());
+						chara5.SetInt(58, EClass.world.date.GetRawDay());
 						return;
 					}
 				}
@@ -5624,7 +5639,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public Thing MakeEgg(bool effect = true, int num = 1, bool addToZone = true, int fertChance = 20, BlessedState? state = null)
 	{
 		Thing thing = ThingGen.Create((EClass.rnd(EClass.debug.enable ? 1 : fertChance) == 0) ? "egg_fertilized" : "_egg").SetNum(num);
-		thing.MakeFoodFrom(this);
+		if (!EClass.debug.enable && HasElement(1290) && Evalue(418) >= 0)
+		{
+			thing.MakeFoodFrom(EClass.sources.charas.map["caladrius"].model);
+		}
+		else
+		{
+			thing.MakeFoodFrom(this);
+		}
 		thing.c_idMainElement = c_idMainElement;
 		if (state.HasValue)
 		{
@@ -5640,7 +5662,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public Thing MakeMilk(bool effect = true, int num = 1, bool addToZone = true, BlessedState? state = null)
 	{
 		Thing thing = ThingGen.Create("milk").SetNum(num);
-		thing.MakeRefFrom(this);
+		if (!EClass.debug.enable && HasElement(1290) && Evalue(418) >= 0)
+		{
+			thing.MakeRefFrom(EClass.sources.charas.map["caladrius"].model);
+		}
+		else
+		{
+			thing.MakeRefFrom(this);
+		}
 		if (state.HasValue)
 		{
 			thing.SetBlessedState(state.Value);

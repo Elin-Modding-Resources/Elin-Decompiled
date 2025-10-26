@@ -156,6 +156,6 @@ public class WidgetStats : BaseWidgetNotice
 			extra.sort_ascend = a;
 			RefreshAll();
 		});
-		SetBaseContextMenu(m);
+		base.OnSetContextMenu(m);
 	}
 }

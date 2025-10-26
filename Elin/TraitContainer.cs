@@ -33,7 +33,7 @@ public class TraitContainer : TraitBaseContainer
 
 	public void TryOpen()
 	{
-		if (owner.c_lockLv != 0)
+		if (owner.c_lockLv > 0)
 		{
 			if (owner.GetRootCard() == EClass.pc && EClass.pc.HasNoGoal && EClass.ui.layers.Count == 0)
 			{

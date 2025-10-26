@@ -167,7 +167,7 @@ public class Chara : Card, IPathfindWalker
 
 	public bool dirtySpeed = true;
 
-	private int _Speed;
+	private long _Speed;
 
 	private static Point _sharedPos = new Point();
 
@@ -1085,7 +1085,11 @@ public class Chara : Card, IPathfindWalker
 			{
 				RefreshSpeed();
 			}
-			return _Speed;
+			if (_Speed > 100000000)
+			{
+				return 100000000;
+			}
+			return (int)_Speed;
 		}
 	}
 
@@ -1861,7 +1865,7 @@ public class Chara : Card, IPathfindWalker
 			if (host.ride == this)
 			{
 				_Speed = Evalue(79);
-				_Speed = _Speed * 100 / Mathf.Clamp(100 + _Speed * ((!race.tag.Contains("noRide")) ? 1 : 5) - base.STR - host.EvalueRiding() * 2 - (race.tag.Contains("ride") ? 50 : 0), 100, 1000);
+				_Speed = _Speed * 100 / Mathf.Clamp(100 + (int)_Speed * ((!race.tag.Contains("noRide")) ? 1 : 5) - base.STR - host.EvalueRiding() * 2 - (race.tag.Contains("ride") ? 50 : 0), 100, 1000);
 			}
 			else
 			{
@@ -1874,12 +1878,12 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (body.GetSlot(37, onlyEmpty: false)?.thing != null && HasElement(1209) && !HasElement(419))
 		{
-			_Speed -= 25;
-			info?.AddText(-25, EClass.sources.elements.map[1209].GetName());
+			_Speed -= 25L;
+			info?.AddText(-25L, EClass.sources.elements.map[1209].GetName());
 		}
 		if (parasite != null)
 		{
-			int speed = _Speed;
+			long speed = _Speed;
 			_Speed = _Speed * 100 / Mathf.Clamp(120 + parasite.LV * 2 - base.STR - Evalue(227) * 2, 100, 1000);
 			info?.AddText(_Speed - speed, "parasiteSpeed".lang());
 		}
@@ -1976,12 +1980,12 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (_Speed < 10)
 		{
-			_Speed = 10;
+			_Speed = 10L;
 		}
 		_Speed = _Speed * num / 100;
 		if (_Speed < 10)
 		{
-			_Speed = 10;
+			_Speed = 10L;
 			info?.AddText("minSpeed".lang(10.ToString() ?? ""));
 		}
 		dirtySpeed = false;
@@ -4707,6 +4711,12 @@ public class Chara : Card, IPathfindWalker
 				EQ_ID("EtherDagger2");
 			}
 			break;
+		case "keeper_garden":
+			if (!body.HasWeapon())
+			{
+				EQ_ID("sword_ragnarok");
+			}
+			break;
 		case "ungaga_pap":
 			if (onCreate)
 			{
@@ -5054,6 +5064,14 @@ public class Chara : Card, IPathfindWalker
 		sleepiness.value = 0;
 		hostility = OriginalHostility;
 		RemoveCondition<StanceTaunt>();
+		if (id == "keeper_garden" && base.LV < 10000000)
+		{
+			SetLv(base.LV * 10 + 9);
+			base.hp = MaxHP;
+			mana.value = mana.max;
+			stamina.value = stamina.max;
+			bossText = true;
+		}
 		if (IsPC)
 		{
 			if (EClass.player.preventDeathPenalty)
@@ -7743,44 +7761,50 @@ public class Chara : Card, IPathfindWalker
 		if (IsPC)
 		{
 			c.ModAffinity(EClass.pc, a, show);
-			return;
 		}
-		int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase()) + (HasElement(417) ? 30 : 0) + (EClass.pc.HasCondition<ConSmoking>() ? (-30) : 0);
-		if (IsPCFaction && homeBranch != null)
+		else
 		{
-			num += (int)Mathf.Sqrt(homeBranch.Evalue(2117)) * 5;
-		}
-		bool flag = a > 0;
-		if (flag)
-		{
-			a = a * num / 100;
-			if (affinity.GetLunchChance() > EClass.rnd(100) && GetInt(71) >= 0 && GetInt(71) < EClass.world.date.GetRaw())
+			if (id == "keeper_garden")
 			{
-				SetInt(71, -1);
+				return;
 			}
-		}
-		if (show)
-		{
-			if (a == 0)
+			int num = StatsHygiene.GetAffinityMod(EClass.pc.hygiene.GetPhase()) + (HasElement(417) ? 30 : 0) + (EClass.pc.HasCondition<ConSmoking>() ? (-30) : 0);
+			if (IsPCFaction && homeBranch != null)
 			{
-				if (!showOnlyEmo)
+				num += (int)Mathf.Sqrt(homeBranch.Evalue(2117)) * 5;
+			}
+			bool flag = a > 0;
+			if (flag)
+			{
+				a = a * num / 100;
+				if (affinity.GetLunchChance() > EClass.rnd(100) && GetInt(71) >= 0 && GetInt(71) < EClass.world.date.GetRaw())
 				{
-					Say("affinityNone", this, c);
+					SetInt(71, -1);
 				}
 			}
-			else
+			if (show)
 			{
-				ShowEmo((!flag) ? Emo.angry : Emo.love);
-				c.ShowEmo(flag ? Emo.love : Emo.sad);
-				if (!showOnlyEmo)
+				if (a == 0)
 				{
-					Say(flag ? "affinityPlus" : "affinityMinus", this, c);
+					if (!showOnlyEmo)
+					{
+						Say("affinityNone", this, c);
+					}
+				}
+				else
+				{
+					ShowEmo((!flag) ? Emo.angry : Emo.love);
+					c.ShowEmo(flag ? Emo.love : Emo.sad);
+					if (!showOnlyEmo)
+					{
+						Say(flag ? "affinityPlus" : "affinityMinus", this, c);
+					}
 				}
 			}
-		}
-		if (c.IsPC)
-		{
-			a = affinity.Mod(a);
+			if (c.IsPC)
+			{
+				a = affinity.Mod(a);
+			}
 		}
 	}
 
@@ -7948,7 +7972,7 @@ public class Chara : Card, IPathfindWalker
 
 	public Thing MakeGene(DNA.Type? type = null)
 	{
-		return DNA.GenerateGene(this, type);
+		return DNA.GenerateGene((HasElement(1290) && Evalue(418) >= 0) ? EClass.sources.charas.map["caladrius"].model.Chara : this, type);
 	}
 
 	public Thing MakeBraineCell()

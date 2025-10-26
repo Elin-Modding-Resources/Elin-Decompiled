@@ -1944,11 +1944,11 @@ public class Thing : Card
 		ActionMode.Adv.SetTurbo();
 	}
 
-	public static Tuple<SourceElement.Row, int> GetEnchant(int lv, Func<SourceElement.Row, bool> func, bool neg)
+	public static Tuple<SourceElement.Row, int> GetEnchant(long lv, Func<SourceElement.Row, bool> func, bool neg)
 	{
 		List<SourceElement.Row> list = new List<SourceElement.Row>();
 		int num = 0;
-		int num2 = lv + 5 + EClass.rndSqrt(10);
+		long num2 = lv + 5 + EClass.rndSqrt(10);
 		foreach (SourceElement.Row row in EClass.sources.elements.rows)
 		{
 			if ((!neg || !row.tag.Contains("flag")) && func(row) && row.LV < num2)
@@ -1970,7 +1970,7 @@ public class Thing : Card
 			{
 				string text = EClass.sources.elements.map[item.id].category;
 				bool flag = text == "skill" || text == "attribute" || text == "resist";
-				float num5 = (float)(3 + Mathf.Min(lv / 10, 15)) + Mathf.Sqrt(lv * item.encFactor / 100);
+				float num5 = 3f + Mathf.Min(lv / 10, 15f) + Mathf.Sqrt(lv * item.encFactor / 100);
 				int num6 = (item.mtp + EClass.rnd(item.mtp + (int)num5)) / item.mtp * ((!(flag && neg)) ? 1 : (-1));
 				if (item.encFactor == 0 && num6 > 25)
 				{

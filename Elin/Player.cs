@@ -1540,7 +1540,7 @@ public class Player : EClass
 		List<SourceElement.Row> list2 = new List<SourceElement.Row>();
 		foreach (SourceElement.Row row2 in EClass.sources.elements.rows)
 		{
-			if (row2.categorySub == "eleAttack" && !row2.tag.Contains("hidden") && (!row2.tag.Contains("high") || EClass.pc.job.domain.Contains(row2.id)))
+			if (row2.categorySub == "eleAttack" && !row2.tag.Contains("hidden") && ((EClass.pc.HasElement(1402) && Guild.Mage.relation.rank >= 6 && row2.id != 925 && row2.id != 926) || !row2.tag.Contains("high") || EClass.pc.job.domain.Contains(row2.id)))
 			{
 				list2.Add(row2);
 			}
@@ -1565,7 +1565,7 @@ public class Player : EClass
 			}
 		}, delegate(List<UIList.ButtonPair> list)
 		{
-			bool flag = EClass.player.domains.Count >= 3 + EClass.pc.Evalue(1402) + Guild.Mage.DomainBonus();
+			bool flag = EClass.player.domains.Count >= ((EClass.pc.job.id == "swordsage") ? 5 : 3) + EClass.pc.Evalue(1402) + Guild.Mage.DomainBonus();
 			foreach (UIList.ButtonPair item in list)
 			{
 				UIButton button = (item.component as ItemGeneral).button1;

@@ -58,6 +58,11 @@ public class AI_Steal : AI_TargetCard
 		Chara chara = target.Chara;
 		if (chara != null)
 		{
+			if (chara.HasElement(426))
+			{
+				chara.Say("abStealNegate", chara);
+				yield return Cancel();
+			}
 			target = chara.things.FindStealable();
 			if (target == null && chara.GetInt(30) < EClass.world.date.GetRaw())
 			{

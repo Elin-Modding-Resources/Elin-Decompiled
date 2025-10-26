@@ -783,6 +783,10 @@ public class ThingContainer : List<Thing>
 				}
 			}
 		}
+		if (sum < 0)
+		{
+			sum = int.MaxValue;
+		}
 		return sum;
 	}
 

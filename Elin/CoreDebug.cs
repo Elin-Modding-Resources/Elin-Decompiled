@@ -342,6 +342,7 @@ public class CoreDebug : EScriptable
 		if (!startSetting.job.IsEmpty())
 		{
 			EClass.pc.ChangeJob(startSetting.job);
+			EClass.player.RefreshDomain();
 		}
 		switch (startScene)
 		{
@@ -438,13 +439,14 @@ public class CoreDebug : EScriptable
 			for (int j = 0; j < 30; j++)
 			{
 				CardBlueprint.Set(CardBlueprint.DebugEQ);
-				Thing thing2 = ThingGen.CreateFromCategory("weapon", EClass.pc.LV);
+				Thing thing2 = ThingGen.CreateFromCategory("weapon", int.MaxValue);
 				thing2.elements.SetBase(653, 1);
 				if (!(thing2.trait is TraitAmmo))
 				{
 					thing.AddCard(thing2);
 				}
-				thing2 = ThingGen.CreateFromCategory("armor", EClass.pc.LV + 100);
+				CardBlueprint.Set(CardBlueprint.DebugEQ);
+				thing2 = ThingGen.CreateFromCategory("armor", int.MaxValue);
 				thing2.elements.SetBase(653, 1);
 				thing.AddCard(thing2);
 			}
@@ -1182,7 +1184,7 @@ public class CoreDebug : EScriptable
 					{
 						if (c.IsHostile(EClass.pc))
 						{
-							c.DamageHP(9999999L, AttackSource.Finish, EClass.pc);
+							c.DamageHP(999999999L, AttackSource.Finish, EClass.pc);
 						}
 					});
 				}
@@ -1190,7 +1192,7 @@ public class CoreDebug : EScriptable
 				{
 					for (int num = hitPoint.detail.charas.Count - 1; num >= 0; num--)
 					{
-						hitPoint.detail.charas[num].DamageHP(9999999L, AttackSource.Finish, EClass.pc);
+						hitPoint.detail.charas[num].DamageHP(999999999L, AttackSource.Finish, EClass.pc);
 					}
 				}
 				EInput.Consume();

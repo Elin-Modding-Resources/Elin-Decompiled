@@ -375,6 +375,18 @@ public class CharaBody : EClass
 		return null;
 	}
 
+	public bool HasWeapon()
+	{
+		foreach (BodySlot slot in slots)
+		{
+			if (slot.thing != null && slot.thing.IsWeapon)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public Thing GetEquippedThing(int elementId)
 	{
 		foreach (BodySlot slot in slots)

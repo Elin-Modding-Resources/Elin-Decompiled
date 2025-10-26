@@ -33,7 +33,8 @@ public class CardBlueprint
 
 	public static CardBlueprint DebugEQ = new CardBlueprint
 	{
-		rarity = Rarity.Legendary
+		rarity = Rarity.Mythical,
+		lv = int.MaxValue
 	};
 
 	public static CardBlueprint Chara(int lv, Rarity rarity = Rarity.Normal)

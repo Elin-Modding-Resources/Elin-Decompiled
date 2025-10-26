@@ -20,7 +20,7 @@ public class GuildFighter : Guild
 		{
 			return a;
 		}
-		return a * 100 / (125 + relation.rank * 2);
+		return (int)((long)a * 100L / (125 + relation.rank * 2));
 	}
 
 	public bool CanGiveContribution(Chara c)
