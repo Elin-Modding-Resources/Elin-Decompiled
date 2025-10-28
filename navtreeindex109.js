@@ -1,5 +1,6 @@
 var NAVTREEINDEX109 =
 {
+"classStickyGacha.html":[1,0,1265],
 "classStickyGacha.html#a3911c215441cdfc8ca1db7debbeaed8b":[1,0,1265,3],
 "classStickyGacha.html#a3ca58935e9d910892e67ff54ecbeddad":[1,0,1265,4],
 "classStickyGacha.html#a5dc4656476bda8021c3e07caae9de658":[1,0,1265,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX109 =
 "classTargetType.html#a676da547d5dde78131336cbbea80d115":[1,0,1278,9],
 "classTargetType.html#a886236db9c9244417f371faf55f90a11":[1,0,1278,16],
 "classTargetType.html#a9aef14e64317e1fa4a1eb3bb9252817b":[1,0,1278,10],
-"classTargetType.html#a9f9eac6182bd24b92ef00bd3b00281ec":[1,0,1278,13],
-"classTargetType.html#aa0e0c028984089d7a8346a647e0be012":[1,0,1278,3]
+"classTargetType.html#a9f9eac6182bd24b92ef00bd3b00281ec":[1,0,1278,13]
 };

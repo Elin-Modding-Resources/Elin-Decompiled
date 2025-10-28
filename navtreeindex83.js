@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"classMapConfig.html#a989fdb46633ecbff2217cd527886bb55":[1,0,869,13],
 "classMapConfig.html#aa0b163b8988791c90fb1d434e613e21c":[1,0,869,0],
 "classMapConfig.html#ab0b6210b8712e8ac5c89f4063ce79c9e":[1,0,869,21],
 "classMapConfig.html#ab157a47c154baf35da98df24b9a12983":[1,0,869,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "classMiniGame__Blackjack.html#aa8389a8a00db37606a968f0512c20ae7":[1,0,890,1],
 "classMiniGame__Blackjack.html#acbc453da8679b03653a2dc8b35f52e5d":[1,0,890,5],
 "classMiniGame__Blackjack.html#ad3afa057dd04100a5164b9b36cc6e347":[1,0,890,0],
-"classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119":[1,0,890,2],
-"classMiniGame__Blackjack.html#aee53c1ddc658317d9b60a39fbaaf4f85":[1,0,890,3]
+"classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119":[1,0,890,2]
 };

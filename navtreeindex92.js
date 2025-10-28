@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classQuest.html#a4bfea3e8b0eccb61d83d48bcdc3e8b84":[1,0,979,15],
 "classQuest.html#a4c122f6e2407f2531daf9e7bd75156b3":[1,0,979,26],
 "classQuest.html#a4cca13714da20fa2a37a597f23a0e0a8":[1,0,979,54],
 "classQuest.html#a51882ce391a3585d218b933bf7a7b0b9":[1,0,979,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classQuestGuildOrderThief.html":[1,0,1006],
 "classQuestGuildThief.html":[1,0,1007],
 "classQuestGuildThief.html#a221dd104353ee0e4f37cda5ba5d0dc45":[1,0,1007,0],
-"classQuestGuildThief.html#aebc8de2de652bf3c53f9da414e3ae543":[1,0,1007,1],
-"classQuestHarvest.html":[1,0,1008]
+"classQuestGuildThief.html#aebc8de2de652bf3c53f9da414e3ae543":[1,0,1007,1]
 };

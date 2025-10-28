@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"classZone__User.html#afa80587830747bdba392050437c5c700":[1,0,2185,0],
 "classZone__Vernis.html":[1,0,2186],
 "classZone__Vernis.html#a62d7086f01d835d74bf433dd552e03d5":[1,0,2186,2],
 "classZone__Vernis.html#a837a98de42990fa5e02793ba2bf2bafb":[1,0,2186,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "interfaceISkinRoot.html":[1,0,727],
 "interfaceISkinRoot.html#a0aef6e38eb8a3dce387211ededc5de08":[1,0,727,1],
 "interfaceISkinRoot.html#a4295c8036903342ae9e8b4722d3d82fe":[1,0,727,0],
-"interfaceISyncScreen.html":[1,0,728],
-"interfaceISyncScreen.html#a222e465d867c73a7676b637b4610ecf0":[1,0,728,0]
+"interfaceISyncScreen.html":[1,0,728]
 };

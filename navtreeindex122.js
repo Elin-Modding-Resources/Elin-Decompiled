@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitResourceMain.html#a92606be62efbbd19829b62ff7d08aa46":[1,0,1789,0],
 "classTraitResourceMain.html#ab59869b474289f51c7da999fb01467e7":[1,0,1789,1],
 "classTraitRide.html":[1,0,1790],
 "classTraitRide.html#ab8c5391022ba9e816b3f399d86329bc4":[1,0,1790,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitSpellbookRandom.html":[1,0,1833],
 "classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1833,2],
 "classTraitSpellbookRandom.html#a8c187a19407f57e545aca15acc6a7edc":[1,0,1833,1],
-"classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1833,0],
-"classTraitSpinner.html":[1,0,1834]
+"classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1833,0]
 };

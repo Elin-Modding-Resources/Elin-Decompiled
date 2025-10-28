@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"classQuestHarvest.html":[1,0,1008],
 "classQuestHarvest.html#a05156c1d257dbf02f2db6310ca409753":[1,0,1008,10],
 "classQuestHarvest.html#a224c8f00f4286d2b99be71cacef1c87e":[1,0,1008,8],
 "classQuestHarvest.html#a2c661585ee315c7787252d68adfb1f25":[1,0,1008,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestTaskHunt.html#a911a8072f98c1d712c7b202a2e9d2287a7a1920d61156abc05a60135aefe8bc67":[1,0,1051,1,0],
 "classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98a":[1,0,1051,0],
 "classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98aa64663f4646781c9c0110838b905daa23":[1,0,1051,0,0],
-"classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98aaa6a4212acefd15c744c2bf98c31081b5":[1,0,1051,0,1],
-"classQuestTaskHunt.html#aab0a62a84d7beaca850a6f7f909299b1":[1,0,1051,11]
+"classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98aaa6a4212acefd15c744c2bf98c31081b5":[1,0,1051,0,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX96 =
 {
+"classReligionManager.html#abb35a900a1414883f71e413b177176a4":[1,0,1093,12],
 "classReligionManager.html#af893c0ae38d8c0ae912d16a74e244b92":[1,0,1093,2],
 "classReligionMinor.html":[1,0,1094],
 "classReligionMinor.html#af3c264773bb108d66fcdf6f955e0e515":[1,0,1094,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX96 =
 "classResearchManager.html#a0ba45313a230afc712f1e6361c8b8765":[1,0,1120,12],
 "classResearchManager.html#a5cf0f4472fac717189b13611a34cf432":[1,0,1120,9],
 "classResearchManager.html#aa2f308e8b183b40c4278ebfe36630574":[1,0,1120,8],
-"classResearchManager.html#aa5864ccd01d27ab87f6fde794e166eeb":[1,0,1120,4],
-"classResearchManager.html#aa7dd8bb09cd428fac09cc007f07c97f3":[1,0,1120,0]
+"classResearchManager.html#aa5864ccd01d27ab87f6fde794e166eeb":[1,0,1120,4]
 };

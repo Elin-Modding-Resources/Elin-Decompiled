@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitDoorSwing.html#a1897689db9b4c3e5831f763f276261de":[1,0,1542,2],
 "classTraitDoorSwing.html#ab03d902cf8b1d11252ef9038eacd7f1d":[1,0,1542,1],
 "classTraitDoorSwing.html#aca0158988369ad823267b50e84e975c1":[1,0,1542,3],
 "classTraitDoorSwing.html#ad93b92fd8e8cad28f6a870398bf54f2b":[1,0,1542,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1601,2],
 "classTraitGM.html":[1,0,1622],
 "classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1622,0],
-"classTraitGM__Fighter.html":[1,0,1623],
-"classTraitGM__Mage.html":[1,0,1624]
+"classTraitGM__Fighter.html":[1,0,1623]
 };

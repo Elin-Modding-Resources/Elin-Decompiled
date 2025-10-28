@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.225 Nightly Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.226 Nightly</span>
    </div>
   </td>
  </tr>
@@ -790,7 +790,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Point_8cs_source.html#l00226">Point.HasChara</a>, <a class="el" href="TileType_8cs_source.html#l00087">TileType.Illumination</a>, <a class="el" href="Card_8cs_source.html#l00530">Card.isHidden</a>, <a class="el" href="Card_8cs_source.html#l00578">Card.isRoofItem</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, <a class="el" href="Point_8cs_source.html#l00326">Point.Things</a>, and <a class="el" href="Card_8cs_source.html#l02123">Card.TileType</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00185">TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00189">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -825,9 +825,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   45</span>        }</div>
 <div class="line"><span class="lineno">   46</span>    }</div>
 <div class="ttc" id="aclassTraitDoor_html_a1defc093d2ead2e268a06889bfa905cd"><div class="ttname"><a href="classTraitDoor.html#a1defc093d2ead2e268a06889bfa905cd">TraitDoor.IsOpen</a></div><div class="ttdeci">virtual bool IsOpen()</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00099">TraitDoor.cs:99</a></div></div>
-<div class="ttc" id="aclassTraitDoor_html_a3ed605ecb95bafdea7cf9f5ebac1dc4c"><div class="ttname"><a href="classTraitDoor.html#a3ed605ecb95bafdea7cf9f5ebac1dc4c">TraitDoor.ToggleDoor</a></div><div class="ttdeci">virtual void ToggleDoor(bool sound=true, bool refresh=true)</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00149">TraitDoor.cs:149</a></div></div>
+<div class="ttc" id="aclassTraitDoor_html_a3ed605ecb95bafdea7cf9f5ebac1dc4c"><div class="ttname"><a href="classTraitDoor.html#a3ed605ecb95bafdea7cf9f5ebac1dc4c">TraitDoor.ToggleDoor</a></div><div class="ttdeci">virtual void ToggleDoor(bool sound=true, bool refresh=true)</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00153">TraitDoor.cs:153</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00149">ToggleDoor()</a>.</p>
+<p class="reference">References <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00153">ToggleDoor()</a>.</p>
 
 </div>
 </div>
@@ -858,21 +858,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00099">99</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">int</span> dir = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a>;</div>
-<div class="line"><span class="lineno">  102</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (dir == 0 || dir == 2)</div>
-<div class="line"><span class="lineno">  104</span>        {</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Front</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> || cell.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
-<div class="line"><span class="lineno">  106</span>            {</div>
-<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Left</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> || cell.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
-<div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a3180ac44a4bdba4ab185f4c0453a560b">isRoofItem</a>)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">int</span> dir = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a>;</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (dir == 0 || dir == 2)</div>
+<div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Front</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> || cell.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
+<div class="line"><span class="lineno">  110</span>            {</div>
+<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  112</span>            }</div>
 <div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cell.<a class="code hl_property" href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Left</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> || cell.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 <div class="ttc" id="aclassCard_html_acead09796e17d25d2c320e10c7da820a"><div class="ttname"><a href="classCard.html#acead09796e17d25d2c320e10c7da820a">Card.dir</a></div><div class="ttdeci">int dir</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00145">Card.cs:146</a></div></div>
 <div class="ttc" id="aclassCell_html"><div class="ttname"><a href="classCell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00006">Cell.cs:7</a></div></div>
 <div class="ttc" id="aclassCell_html_a2efac99c0e9a836198558ae1a500b416"><div class="ttname"><a href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Cell.Back</a></div><div class="ttdeci">Cell Back</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00152">Cell.cs:153</a></div></div>
@@ -882,9 +886,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCell_html_ae648840ebb47db7c2840fe398e38435b"><div class="ttname"><a href="classCell.html#ae648840ebb47db7c2840fe398e38435b">Cell.HasFullBlockOrWallOrFence</a></div><div class="ttdeci">bool HasFullBlockOrWallOrFence</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00819">Cell.cs:820</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00153">Cell.Back</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l00146">Card.dir</a>, <a class="el" href="Cell_8cs_source.html#l00129">Cell.Front</a>, <a class="el" href="Cell_8cs_source.html#l00820">Cell.HasFullBlockOrWallOrFence</a>, <a class="el" href="Cell_8cs_source.html#l00165">Cell.Left</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, and <a class="el" href="Cell_8cs_source.html#l00141">Cell.Right</a>.</p>
+<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00153">Cell.Back</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l00146">Card.dir</a>, <a class="el" href="Cell_8cs_source.html#l00129">Cell.Front</a>, <a class="el" href="Cell_8cs_source.html#l00820">Cell.HasFullBlockOrWallOrFence</a>, <a class="el" href="Card_8cs_source.html#l00578">Card.isRoofItem</a>, <a class="el" href="Cell_8cs_source.html#l00165">Cell.Left</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, and <a class="el" href="Cell_8cs_source.html#l00141">Cell.Right</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00921">BaseTileMap.DrawTile()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00040">ForceClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00048">TryOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00185">TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseTileMap_8cs_source.html#l00921">BaseTileMap.DrawTile()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00040">ForceClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00048">TryOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00189">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -912,37 +916,37 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00117">117</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>    {</div>
-<div class="line"><span class="lineno">  119</span>        _ = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a>;</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> (!cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a>)</div>
-<div class="line"><span class="lineno">  122</span>        {</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (shouldLookGood)</div>
+<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00121">121</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        _ = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a>;</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_class" href="classCell.html">Cell</a> cell = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>;</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (!cell.<a class="code hl_property" href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">HasBlock</a>)</div>
 <div class="line"><span class="lineno">  126</span>        {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence = cell.<a class="code hl_property" href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Left</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
-<div class="line"><span class="lineno">  128</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence2 = cell.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence3 = cell.<a class="code hl_property" href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Front</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence4 = cell.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (hasFullBlockOrWallOrFence &amp;&amp; hasFullBlockOrWallOrFence2)</div>
-<div class="line"><span class="lineno">  132</span>            {</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (hasFullBlockOrWallOrFence3 &amp;&amp; hasFullBlockOrWallOrFence4)</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span> (shouldLookGood)</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence = cell.<a class="code hl_property" href="classCell.html#a9cc681d863811a9662bc86bf4d8e461b">Left</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence2 = cell.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence3 = cell.<a class="code hl_property" href="classCell.html#a45b69d72e7f57fbc7116ec48f82c348d">Front</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordtype">bool</span> hasFullBlockOrWallOrFence4 = cell.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a>;</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (hasFullBlockOrWallOrFence &amp;&amp; hasFullBlockOrWallOrFence2)</div>
 <div class="line"><span class="lineno">  136</span>            {</div>
 <div class="line"><span class="lineno">  137</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  138</span>            }</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  140</span>        }</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">int</span> num = (cell.Left.HasFullBlockOrWallOrFence ? 1 : 0) + (cell.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> ? 1 : 0) + (cell.Front.HasFullBlockOrWallOrFence ? 1 : 0) + (cell.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> ? 1 : 0);</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
-<div class="line"><span class="lineno">  143</span>        {</div>
-<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">return</span> num &lt; 3;</div>
-<div class="line"><span class="lineno">  145</span>        }</div>
-<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (hasFullBlockOrWallOrFence3 &amp;&amp; hasFullBlockOrWallOrFence4)</div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">int</span> num = (cell.Left.HasFullBlockOrWallOrFence ? 1 : 0) + (cell.<a class="code hl_property" href="classCell.html#ace52b174bda4a28e6ab09bd3f5bca70b">Right</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> ? 1 : 0) + (cell.Front.HasFullBlockOrWallOrFence ? 1 : 0) + (cell.<a class="code hl_property" href="classCell.html#a2efac99c0e9a836198558ae1a500b416">Back</a>.<a class="code hl_property" href="classCell.html#ae648840ebb47db7c2840fe398e38435b">HasFullBlockOrWallOrFence</a> ? 1 : 0);</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (num &gt; 0)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span> num &lt; 3;</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
 <div class="ttc" id="aclassCell_html_a1c9c4cee0dcd497d8af3378d29214943"><div class="ttname"><a href="classCell.html#a1c9c4cee0dcd497d8af3378d29214943">Cell.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00643">Cell.cs:643</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Cell_8cs_source.html#l00153">Cell.Back</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l00146">Card.dir</a>, <a class="el" href="Cell_8cs_source.html#l00129">Cell.Front</a>, <a class="el" href="Cell_8cs_source.html#l00643">Cell.HasBlock</a>, <a class="el" href="Cell_8cs_source.html#l00820">Cell.HasFullBlockOrWallOrFence</a>, <a class="el" href="Cell_8cs_source.html#l00165">Cell.Left</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, and <a class="el" href="Cell_8cs_source.html#l00141">Cell.Right</a>.</p>
@@ -972,32 +976,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00164">164</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>    {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 0)</div>
-<div class="line"><span class="lineno">  167</span>        {</div>
-<div class="line"><span class="lineno">  168</span>            owner.dir = 1;</div>
-<div class="line"><span class="lineno">  169</span>        }</div>
-<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 1)</div>
+<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00168">168</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>    {</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 0)</div>
 <div class="line"><span class="lineno">  171</span>        {</div>
-<div class="line"><span class="lineno">  172</span>            owner.dir = 0;</div>
+<div class="line"><span class="lineno">  172</span>            owner.dir = 1;</div>
 <div class="line"><span class="lineno">  173</span>        }</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 2)</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 1)</div>
 <div class="line"><span class="lineno">  175</span>        {</div>
-<div class="line"><span class="lineno">  176</span>            owner.dir = 3;</div>
+<div class="line"><span class="lineno">  176</span>            owner.dir = 0;</div>
 <div class="line"><span class="lineno">  177</span>        }</div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#acead09796e17d25d2c320e10c7da820a">dir</a> == 2)</div>
 <div class="line"><span class="lineno">  179</span>        {</div>
-<div class="line"><span class="lineno">  180</span>            owner.dir = 2;</div>
+<div class="line"><span class="lineno">  180</span>            owner.dir = 3;</div>
 <div class="line"><span class="lineno">  181</span>        }</div>
-<div class="line"><span class="lineno">  182</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a3a6ffd1f1d8e607644d90f1b395be715">RefreshSprite</a>();</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            owner.dir = 2;</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>.<a class="code hl_function" href="classCardRenderer.html#a3a6ffd1f1d8e607644d90f1b395be715">RefreshSprite</a>();</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
 <div class="ttc" id="aclassCardRenderer_html_a3a6ffd1f1d8e607644d90f1b395be715"><div class="ttname"><a href="classCardRenderer.html#a3a6ffd1f1d8e607644d90f1b395be715">CardRenderer.RefreshSprite</a></div><div class="ttdeci">void RefreshSprite()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00389">CardRenderer.cs:389</a></div></div>
 <div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00061">Card.cs:61</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Card_8cs_source.html#l00146">Card.dir</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="CardRenderer_8cs_source.html#l00389">CardRenderer.RefreshSprite()</a>, and <a class="el" href="Card_8cs_source.html#l00061">Card.renderer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00149">ToggleDoor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00153">ToggleDoor()</a>.</p>
 
 </div>
 </div>
@@ -1037,20 +1041,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTraitDoorCurtain.html#a89347d132b17b2750f5f8b44b1c4c09e">TraitDoorCurtain</a>, <a class="el" href="classTraitDoorAutoShoji.html#abec3329e1d1e91c4294dce4e3e25b129">TraitDoorAutoShoji</a>, and <a class="el" href="classTraitDoorSwing.html#a1897689db9b4c3e5831f763f276261de">TraitDoorSwing</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00149">149</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (sound)</div>
-<div class="line"><span class="lineno">  152</span>        {</div>
-<div class="line"><span class="lineno">  153</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<a class="code hl_property" href="classTraitDoor.html#ad0b7578066367ee483762b3dacf54578">idSound</a>);</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_function" href="classTraitDoor.html#ab111722c46952bc7660035117fe42807">RotateDoor</a>();</div>
-<div class="line"><span class="lineno">  156</span>        <a class="code hl_variable" href="classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a">count</a> = 0;</div>
-<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (refresh)</div>
-<div class="line"><span class="lineno">  158</span>        {</div>
-<div class="line"><span class="lineno">  159</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a1b831479c78b746b24c8c4ed4ef8c9aa">RefreshSingleTile</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
-<div class="line"><span class="lineno">  160</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a32666c91228c0e270e7aebb053f26d7a">RefreshFOV</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
-<div class="line"><span class="lineno">  161</span>        }</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00153">153</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>    {</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (sound)</div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<a class="code hl_property" href="classTraitDoor.html#ad0b7578066367ee483762b3dacf54578">idSound</a>);</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <a class="code hl_function" href="classTraitDoor.html#ab111722c46952bc7660035117fe42807">RotateDoor</a>();</div>
+<div class="line"><span class="lineno">  160</span>        <a class="code hl_variable" href="classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a">count</a> = 0;</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (refresh)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a1b831479c78b746b24c8c4ed4ef8c9aa">RefreshSingleTile</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a32666c91228c0e270e7aebb053f26d7a">RefreshFOV</a>(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
 <div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06038">Card.cs:6038</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
@@ -1059,12 +1063,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00036">Point.cs:36</a></div></div>
 <div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00039">Point.cs:39</a></div></div>
 <div class="ttc" id="aclassTraitDoor_html_a076b1b487c1cb637130dc96034479d7a"><div class="ttname"><a href="classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a">TraitDoor.count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00003">TraitDoor.cs:3</a></div></div>
-<div class="ttc" id="aclassTraitDoor_html_ab111722c46952bc7660035117fe42807"><div class="ttname"><a href="classTraitDoor.html#ab111722c46952bc7660035117fe42807">TraitDoor.RotateDoor</a></div><div class="ttdeci">void RotateDoor()</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00164">TraitDoor.cs:164</a></div></div>
+<div class="ttc" id="aclassTraitDoor_html_ab111722c46952bc7660035117fe42807"><div class="ttname"><a href="classTraitDoor.html#ab111722c46952bc7660035117fe42807">TraitDoor.RotateDoor</a></div><div class="ttdeci">void RotateDoor()</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00168">TraitDoor.cs:168</a></div></div>
 <div class="ttc" id="aclassTraitDoor_html_ad0b7578066367ee483762b3dacf54578"><div class="ttname"><a href="classTraitDoor.html#ad0b7578066367ee483762b3dacf54578">TraitDoor.idSound</a></div><div class="ttdeci">virtual string idSound</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00033">TraitDoor.cs:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="TraitDoor_8cs_source.html#l00003">count</a>, <a class="el" href="TraitDoor_8cs_source.html#l00033">idSound</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l06038">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, <a class="el" href="Map_8cs_source.html#l00929">Map.RefreshFOV()</a>, <a class="el" href="Map_8cs_source.html#l02103">Map.RefreshSingleTile()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00164">RotateDoor()</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="TraitDoor_8cs_source.html#l00003">count</a>, <a class="el" href="TraitDoor_8cs_source.html#l00033">idSound</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l06038">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, <a class="el" href="Map_8cs_source.html#l00929">Map.RefreshFOV()</a>, <a class="el" href="Map_8cs_source.html#l02103">Map.RefreshSingleTile()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00168">RotateDoor()</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00040">ForceClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00048">TryOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00185">TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00040">ForceClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00048">TryOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00189">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -1101,7 +1105,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   80</span>    }</div>
 <div class="ttc" id="aclassTraitDoor_html_abc7aef1574c49408d97fee6d584d942d"><div class="ttname"><a href="classTraitDoor.html#abc7aef1574c49408d97fee6d584d942d">TraitDoor.CanClose</a></div><div class="ttdeci">virtual bool CanClose()</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00082">TraitDoor.cs:82</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitDoor_8cs_source.html#l00082">CanClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00003">count</a>, <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00149">ToggleDoor()</a>.</p>
+<p class="reference">References <a class="el" href="TraitDoor_8cs_source.html#l00082">CanClose()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00003">count</a>, <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00153">ToggleDoor()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00035">Update()</a>.</p>
 
@@ -1162,7 +1166,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCell_html_aea0e5c121dbaa2cab324ef726268c6a0"><div class="ttname"><a href="classCell.html#aea0e5c121dbaa2cab324ef726268c6a0">Cell.FirstThing</a></div><div class="ttdeci">Thing FirstThing</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00961">Cell.cs:962</a></div></div>
 <div class="ttc" id="aclassTrait_html_a63a6da2dbdf7baf6aecd4213efc8ce64"><div class="ttname"><a href="classTrait.html#a63a6da2dbdf7baf6aecd4213efc8ce64">Trait.OnOpenDoor</a></div><div class="ttdeci">virtual void OnOpenDoor(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l01081">Trait.cs:1081</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l02043">Card.Cell</a>, <a class="el" href="Cell_8cs_source.html#l00962">Cell.FirstThing</a>, <a class="el" href="Cell_8cs_source.html#l00129">Cell.Front</a>, <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, <a class="el" href="Trait_8cs_source.html#l01081">Trait.OnOpenDoor()</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Cell_8cs_source.html#l00141">Cell.Right</a>, <a class="el" href="Card_8cs_source.html#l06690">Card.Say()</a>, <a class="el" href="Cell_8cs_source.html#l00986">Cell.Things</a>, <a class="el" href="TraitDoor_8cs_source.html#l00149">ToggleDoor()</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02043">Card.Cell</a>, <a class="el" href="Cell_8cs_source.html#l00962">Cell.FirstThing</a>, <a class="el" href="Cell_8cs_source.html#l00129">Cell.Front</a>, <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, <a class="el" href="Trait_8cs_source.html#l01081">Trait.OnOpenDoor()</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Cell_8cs_source.html#l00141">Cell.Right</a>, <a class="el" href="Card_8cs_source.html#l06690">Card.Say()</a>, <a class="el" href="Cell_8cs_source.html#l00986">Cell.Things</a>, <a class="el" href="TraitDoor_8cs_source.html#l00153">ToggleDoor()</a>, and <a class="el" href="Card_8cs_source.html#l00053">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -1194,38 +1198,38 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTraitDoorCurtain.html#a6fe7f911c184a7ccbc01324566486227">TraitDoorCurtain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00185">185</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>)</div>
-<div class="line"><span class="lineno">  188</span>        {</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  190</span>        }</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a47bf1787110a3285ebb050be305c315e">c_lockLv</a> &gt; 0)</div>
+<p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00189">189</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>    {</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>)</div>
 <div class="line"><span class="lineno">  192</span>        {</div>
-<div class="line"><span class="lineno">  193</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__OpenLock.html">AI_OpenLock</a></div>
-<div class="line"><span class="lineno">  194</span>            {</div>
-<div class="line"><span class="lineno">  195</span>                target = owner.Thing</div>
-<div class="line"><span class="lineno">  196</span>            }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_function" href="classTraitDoor.html#a1defc093d2ead2e268a06889bfa905cd">IsOpen</a>())</div>
-<div class="line"><span class="lineno">  199</span>        {</div>
-<div class="line"><span class="lineno">  200</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actOpen&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">  201</span>            {</div>
-<div class="line"><span class="lineno">  202</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;openDoor&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
-<div class="line"><span class="lineno">  203</span>                <a class="code hl_function" href="classTraitDoor.html#a3ed605ecb95bafdea7cf9f5ebac1dc4c">ToggleDoor</a>();</div>
-<div class="line"><span class="lineno">  204</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  205</span>            }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#a16708d8e3bafb53a0d081323ba04af15">Door</a>);</div>
-<div class="line"><span class="lineno">  206</span>        }</div>
-<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="classTraitDoor.html#abc7aef1574c49408d97fee6d584d942d">CanClose</a>() &amp;&amp; p.<a class="code hl_variable" href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">altAction</a>)</div>
-<div class="line"><span class="lineno">  208</span>        {</div>
-<div class="line"><span class="lineno">  209</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actClose&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">  210</span>            {</div>
-<div class="line"><span class="lineno">  211</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;close&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
-<div class="line"><span class="lineno">  212</span>                <a class="code hl_function" href="classTraitDoor.html#a3ed605ecb95bafdea7cf9f5ebac1dc4c">ToggleDoor</a>();</div>
-<div class="line"><span class="lineno">  213</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  214</span>            }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#a16708d8e3bafb53a0d081323ba04af15">Door</a>);</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>    }</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  194</span>        }</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a47bf1787110a3285ebb050be305c315e">c_lockLv</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  196</span>        {</div>
+<div class="line"><span class="lineno">  197</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__OpenLock.html">AI_OpenLock</a></div>
+<div class="line"><span class="lineno">  198</span>            {</div>
+<div class="line"><span class="lineno">  199</span>                target = owner.Thing</div>
+<div class="line"><span class="lineno">  200</span>            }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_function" href="classTraitDoor.html#a1defc093d2ead2e268a06889bfa905cd">IsOpen</a>())</div>
+<div class="line"><span class="lineno">  203</span>        {</div>
+<div class="line"><span class="lineno">  204</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actOpen&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  205</span>            {</div>
+<div class="line"><span class="lineno">  206</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;openDoor&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
+<div class="line"><span class="lineno">  207</span>                <a class="code hl_function" href="classTraitDoor.html#a3ed605ecb95bafdea7cf9f5ebac1dc4c">ToggleDoor</a>();</div>
+<div class="line"><span class="lineno">  208</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  209</span>            }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#a16708d8e3bafb53a0d081323ba04af15">Door</a>);</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="classTraitDoor.html#abc7aef1574c49408d97fee6d584d942d">CanClose</a>() &amp;&amp; p.<a class="code hl_variable" href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">altAction</a>)</div>
+<div class="line"><span class="lineno">  212</span>        {</div>
+<div class="line"><span class="lineno">  213</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actClose&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">  214</span>            {</div>
+<div class="line"><span class="lineno">  215</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;close&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
+<div class="line"><span class="lineno">  216</span>                <a class="code hl_function" href="classTraitDoor.html#a3ed605ecb95bafdea7cf9f5ebac1dc4c">ToggleDoor</a>();</div>
+<div class="line"><span class="lineno">  217</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  218</span>            }, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>, <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#a16708d8e3bafb53a0d081323ba04af15">Door</a>);</div>
+<div class="line"><span class="lineno">  219</span>        }</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
 <div class="ttc" id="aclassAI__OpenLock_html"><div class="ttname"><a href="classAI__OpenLock.html">AI_OpenLock</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__OpenLock_8cs_source.html#l00001">AI_OpenLock.cs:2</a></div></div>
 <div class="ttc" id="aclassActPlan_html_a2d3f21e64f56c3eb51f0283aecb2916b"><div class="ttname"><a href="classActPlan.html#a2d3f21e64f56c3eb51f0283aecb2916b">ActPlan.altAction</a></div><div class="ttdeci">bool altAction</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00156">ActPlan.cs:156</a></div></div>
 <div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00366">ActPlan.cs:366</a></div></div>
@@ -1235,7 +1239,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCursorSystem_html_a16708d8e3bafb53a0d081323ba04af15"><div class="ttname"><a href="classCursorSystem.html#a16708d8e3bafb53a0d081323ba04af15">CursorSystem.Door</a></div><div class="ttdeci">static CursorInfo Door</div><div class="ttdef"><b>Definition:</b> <a href="CursorSystem_8cs_source.html#l00078">CursorSystem.cs:78</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00156">ActPlan.altAction</a>, <a class="el" href="Card_8cs_source.html#l00964">Card.c_lockLv</a>, <a class="el" href="TraitDoor_8cs_source.html#l00082">CanClose()</a>, <a class="el" href="CursorSystem_8cs_source.html#l00078">CursorSystem.Door</a>, <a class="el" href="Card_8cs_source.html#l02369">Card.IsInstalled</a>, <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l06690">Card.Say()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00149">ToggleDoor()</a>, and <a class="el" href="ActPlan_8cs_source.html#l00366">ActPlan.TrySetAct()</a>.</p>
+<p class="reference">References <a class="el" href="ActPlan_8cs_source.html#l00156">ActPlan.altAction</a>, <a class="el" href="Card_8cs_source.html#l00964">Card.c_lockLv</a>, <a class="el" href="TraitDoor_8cs_source.html#l00082">CanClose()</a>, <a class="el" href="CursorSystem_8cs_source.html#l00078">CursorSystem.Door</a>, <a class="el" href="Card_8cs_source.html#l02369">Card.IsInstalled</a>, <a class="el" href="TraitDoor_8cs_source.html#l00099">IsOpen()</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l06690">Card.Say()</a>, <a class="el" href="TraitDoor_8cs_source.html#l00153">ToggleDoor()</a>, and <a class="el" href="ActPlan_8cs_source.html#l00366">ActPlan.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1293,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00149">ToggleDoor()</a>, <a class="el" href="TraitDoorSwing_8cs_source.html#l00010">TraitDoorSwing.ToggleDoor()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00153">ToggleDoor()</a>, <a class="el" href="TraitDoorSwing_8cs_source.html#l00010">TraitDoorSwing.ToggleDoor()</a>, and <a class="el" href="TraitDoor_8cs_source.html#l00073">TryAutoClose()</a>.</p>
 
 </div>
 </div>
@@ -1436,7 +1440,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitDoor_8cs_source.html#l00033">33</a> of file <a class="el" href="TraitDoor_8cs_source.html">TraitDoor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00149">ToggleDoor()</a>, and <a class="el" href="TraitDoorSwing_8cs_source.html#l00010">TraitDoorSwing.ToggleDoor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitDoor_8cs_source.html#l00153">ToggleDoor()</a>, and <a class="el" href="TraitDoorSwing_8cs_source.html#l00010">TraitDoorSwing.ToggleDoor()</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1499,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   26</span>        }</div>
 <div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclassTraitDoor_html_adf1a3b9932603789145e294254d33fbe"><div class="ttname"><a href="classTraitDoor.html#adf1a3b9932603789145e294254d33fbe">TraitDoor.IsValid</a></div><div class="ttdeci">bool IsValid(bool shouldLookGood=true)</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00117">TraitDoor.cs:117</a></div></div>
+<div class="ttc" id="aclassTraitDoor_html_adf1a3b9932603789145e294254d33fbe"><div class="ttname"><a href="classTraitDoor.html#adf1a3b9932603789145e294254d33fbe">TraitDoor.IsValid</a></div><div class="ttdeci">bool IsValid(bool shouldLookGood=true)</div><div class="ttdef"><b>Definition:</b> <a href="TraitDoor_8cs_source.html#l00121">TraitDoor.cs:121</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

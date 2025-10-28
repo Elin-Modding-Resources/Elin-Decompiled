@@ -1,5 +1,6 @@
 var NAVTREEINDEX125 =
 {
+"classTwoDLaserPack_1_1LineBasedLaser.html#a29a6e0fea2cc60df475b7f500c02b55b":[1,0,9,0,19],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a29a6e0fea2cc60df475b7f500c02b55b":[0,4,9,0,19],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a2a712607246f623104e30eff6222f53a":[0,4,9,0,23],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a2a712607246f623104e30eff6222f53a":[1,0,9,0,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX125 =
 "classUIAutoTurn.html#abcef39991d573058bcc0908fb327a470":[1,0,1976,5],
 "classUIAutoTurn.html#abee722a5b7b460695146c1233b5b87f0":[1,0,1976,4],
 "classUIAutoTurn.html#af9a9f1e9b1f8e158c8406fda56bdbd5b":[1,0,1976,3],
-"classUIBar.html":[1,0,1977],
-"classUIBar.html#a3c949e7886cc1ce300599e586a72aceb":[1,0,1977,2]
+"classUIBar.html":[1,0,1977]
 };

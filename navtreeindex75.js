@@ -1,5 +1,6 @@
 var NAVTREEINDEX75 =
 {
+"classLangTalk_1_1Row.html#af790a6f95776e5c77e3bbde7eb4bfcf9":[1,0,762,0,0],
 "classLangWord.html":[1,0,763],
 "classLangWord.html#a3d2332dd6c71aa86647d365e1f0df31e":[1,0,763,3],
 "classLangWord.html#a552485087c5d23aaa52d58b6c8765ca4":[1,0,763,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX75 =
 "classLayerConfig.html#ad9c528b471114188bfa3a5c979a21832":[1,0,774,24],
 "classLayerConfig.html#adaf89f7eca39bf6a6ed14dbb50e37fe5":[1,0,774,20],
 "classLayerConfig.html#adba49ba8e95a44379ab7f9cfe4d1be9f":[1,0,774,46],
-"classLayerConfig.html#aded0e6c39e9f1c645560a38160c1f258":[1,0,774,1],
-"classLayerConfig.html#aea390c8917e53e5aed06220af85d080a":[1,0,774,15]
+"classLayerConfig.html#aded0e6c39e9f1c645560a38160c1f258":[1,0,774,1]
 };

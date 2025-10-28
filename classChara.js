@@ -215,6 +215,7 @@ var classChara =
     [ "RestockInventory", "classChara.html#a9eba08fa466fcf885fdf593aa79ec3ec", null ],
     [ "Revive", "classChara.html#aaa330a4b0637fecf2d0844939391557f", null ],
     [ "Rotate", "classChara.html#a1e0c85c8c82bd7a45f81a225243f2610", null ],
+    [ "SaiyanRevive", "classChara.html#ae09b9f67fc9fe4d852bd17e9ae8aafe4", null ],
     [ "ScaleByPrincipal", "classChara.html#a7338496554d876c29df4af4fb115bb7c", null ],
     [ "SetAI", "classChara.html#a596e564cd2a43240c20a500fb640d97c", null ],
     [ "SetAIAggro", "classChara.html#a850f774687ffc80d9b8f28c3331fba5b", null ],

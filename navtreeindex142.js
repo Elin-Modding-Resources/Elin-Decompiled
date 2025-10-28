@@ -1,5 +1,6 @@
 var NAVTREEINDEX142 =
 {
+"interfaceISyncScreen.html#a222e465d867c73a7676b637b4610ecf0":[1,0,728,0],
 "interfaceISyncScreen.html#aa7540e6532a46b055fd1615c95fa0e1e":[1,0,728,1],
 "interfaceISyncScreen.html#ae2f6349697ade2e30a22b1cc783d15a8":[1,0,728,2],
 "interfaceIUISkin.html":[1,0,744],
@@ -248,6 +249,5 @@ var NAVTREEINDEX142 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabc034a25a863ed8ea7d764374374dc4b":[0,4,3,0,8,122],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabce1d7adac090c010391e557b60a1f63":[0,4,3,0,8,85],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabd0e6b246504a2675364b458fb3ae452":[0,4,3,0,8,166],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabde507507026f6f5e6e4794c2527c210":[0,4,3,0,8,177],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabef302c623177fabb52887726ca4f65f":[0,4,3,0,8,77]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabde507507026f6f5e6e4794c2527c210":[0,4,3,0,8,177]
 };

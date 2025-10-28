@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.225 Nightly Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.226 Nightly</span>
    </div>
   </td>
  </tr>
@@ -882,72 +882,67 @@ $(document).ready(function(){initNavTree('FEAT_8cs_source.html',''); initResizab
 <div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>        }</div>
 <div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>        <span class="keywordtype">void</span> ModAttribute(<span class="keywordtype">int</span> ele)</div>
 <div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>        {</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>            {</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(A);</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(((A == 1) ? 2 : ((A == 2) ? 4 : 5)) * invert);</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>            }</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>            ModBase(ele, ((A == 1) ? 2 : ((A == 2) ? 4 : 5)) * invert, hide: <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(ele, a * 10);</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>        }</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>        <span class="keywordtype">void</span> ModBase(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v, <span class="keywordtype">bool</span> hide)</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>        {</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>            _ = <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>;</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>            ModBase(ele, ((A == 1) ? 2 : ((A == 2) ? 4 : 5)) * invert, hide: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(ele, a * 10);</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>        }</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>        <span class="keywordtype">void</span> ModBase(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v, <span class="keywordtype">bool</span> hide)</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>        {</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>            {</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#aa35ecf8180a3beb037151361a5b03511">ModBase</a>(ele, _v);</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>            }</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>            <span class="keywordflow">if</span> (!hide &amp;&amp; _v != 0)</div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>            {</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#aa35ecf8180a3beb037151361a5b03511">ModBase</a>(ele, _v);</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>                NoteElement(ele, _v);</div>
 <div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>            }</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>            <span class="keywordflow">if</span> (!hide &amp;&amp; _v != 0)</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>            {</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>                NoteElement(ele, _v);</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>            }</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        }</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v)</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        {</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>            {</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a3c91e4accdfee39c317570a6580bdfb2">ModPotential</a>(ele, _v);</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>            }</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>            Note(<span class="stringliteral">&quot;modPotential&quot;</span>.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele].GetName(), <span class="stringliteral">&quot;+&quot;</span> + _v + <span class="stringliteral">&quot;%&quot;</span>));</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>        }</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>        <span class="keywordtype">void</span> Note(<span class="keywordtype">string</span> s)</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>        {</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>            {</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>                <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Add(s);</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>            }</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>        }</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>        <span class="keywordtype">void</span> NoteElement(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> a)</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>        {</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>            <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele];</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>            <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;ability&quot;</span>)</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        }</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v)</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        {</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>            {</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a3c91e4accdfee39c317570a6580bdfb2">ModPotential</a>(ele, _v);</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>            }</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>            Note(<span class="stringliteral">&quot;modPotential&quot;</span>.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele].GetName(), <span class="stringliteral">&quot;+&quot;</span> + _v + <span class="stringliteral">&quot;%&quot;</span>));</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>        }</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>        <span class="keywordtype">void</span> Note(<span class="keywordtype">string</span> s)</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        {</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>            {</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>                <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Add(s);</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>            }</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        }</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        <span class="keywordtype">void</span> NoteElement(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> a)</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        {</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>            <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele];</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>            <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;ability&quot;</span>)</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>            {</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                Note(<span class="stringliteral">&quot;hintLearnAbility&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>().ToTitleCase()));</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>            }</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;flag&quot;</span>))</div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>            {</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>                Note(<span class="stringliteral">&quot;hintLearnAbility&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>().ToTitleCase()));</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>                Note(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>());</div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>            }</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;flag&quot;</span>))</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>            {</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>                Note(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>());</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>            }</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>            {</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>                <span class="keywordtype">string</span> @ref = ((a &lt; 0) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;+&quot;</span>) + a;</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>                <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;resist&quot;</span>)</div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>                {</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>                    <span class="keywordtype">int</span> num3 = 0;</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>                    @ref = ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num3, 1, 5));</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>                    Note(<span class="stringliteral">&quot;modValueRes&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>                <span class="keywordtype">string</span> @ref = ((a &lt; 0) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;+&quot;</span>) + a;</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>                <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;resist&quot;</span>)</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>                {</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>                    <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>                    @ref = ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num3, 1, 5));</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>                    Note(<span class="stringliteral">&quot;modValueRes&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>                }</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>                {</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>                    Note(<span class="stringliteral">&quot;modValue&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
 <div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>                }</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>                {</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>                    Note(<span class="stringliteral">&quot;modValue&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>                }</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>            }</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>        }</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    }</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>}</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>            }</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>        }</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    }</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>}</div>
 <div class="ttc" id="aEffectId_8cs_html_a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363"><div class="ttname"><a href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">EffectId.ModPotential</a></div><div class="ttdeci">@ ModPotential</div></div>
 <div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">Emo2.hint</a></div><div class="ttdeci">@ hint</div></div>
 <div class="ttc" id="aFontColor_8cs_html_a38781c7178610f85215f87793e99ed51"><div class="ttname"><a href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a></div><div class="ttdeci">FontColor</div><div class="ttdef"><b>Definition:</b> <a href="FontColor_8cs_source.html#l00001">FontColor.cs:2</a></div></div>
-<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02057">Card.cs:2058</a></div></div>
 <div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00385">Card.cs:386</a></div></div>
 <div class="ttc" id="aclassCharaBody_html_a5f69163ce90d4521c4303666e50bccf3"><div class="ttname"><a href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">CharaBody.UnequipAll</a></div><div class="ttdeci">void UnequipAll(int idSlot)</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00057">CharaBody.cs:57</a></div></div>
