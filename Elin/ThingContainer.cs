@@ -532,7 +532,7 @@ public class ThingContainer : List<Thing>
 		ListCurrency(id);
 		foreach (Thing temp in tempList)
 		{
-			if (!(temp.id != id) && (mat == null || temp.material == mat))
+			if (!(temp.id != id) && (mat == null || temp.material == mat) && temp.Num + num > 0)
 			{
 				if (num > 0)
 				{
@@ -555,7 +555,7 @@ public class ThingContainer : List<Thing>
 			{
 				thing.ChangeMaterial(mat);
 			}
-			owner.AddThing(thing).SetNum(num);
+			owner.AddThing(thing, tryStack: false).SetNum(num);
 		}
 	}
 

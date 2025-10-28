@@ -209,6 +209,13 @@ public class GameDate : Date
 				EClass.world.SendPackage(p);
 			}
 		}
+		if (base.day == 30 && base.month == 10 && (EClass.game.quests.IsStarted<QuestDebt>() || EClass.debug.enable))
+		{
+			Thing thing2 = ThingGen.Create("parchment");
+			thing2.SetStr(53, "letter_crimale");
+			Thing p2 = ThingGen.CreateParcel(null, ThingGen.Create("crimale2"), thing2);
+			EClass.world.SendPackage(p2);
+		}
 		if (base.day == 25 && base.month == 12)
 		{
 			EClass.world.SendPackage(ThingGen.Create("box_xmas"));

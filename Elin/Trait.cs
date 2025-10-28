@@ -1594,6 +1594,7 @@ public class Trait : EClass
 				{
 					AddThing(item2);
 				}
+				AddThing(ThingGen.Create("crimale2"));
 			}
 			else
 			{
@@ -1931,7 +1932,7 @@ public class Trait : EClass
 					Add("bullet_energy", 1, 0).SetNum(100 + EClass.rnd(100)).ChangeMaterial("iron");
 					break;
 				case ShopType.Magic:
-					if ((EClass._zone.id == "lumiest" && EClass._zone.lv == 0) || (EClass._zone.id != "lumiest" && EClass.rnd(4) == 0))
+					if (!Guild.Mage.IsMember && ((EClass._zone.id == "lumiest" && EClass._zone.lv == 0) || (EClass._zone.id != "lumiest" && EClass.rnd(4) == 0)))
 					{
 						t.AddThing(ThingGen.Create("letter_trial"));
 					}
@@ -2054,7 +2055,7 @@ public class Trait : EClass
 					{
 						thing11.c_IDTState = 0;
 					}
-					if (CurrencyType == CurrencyType.Money && (thing11.category.IsChildOf("meal") || thing11.category.IsChildOf("preserved")) && thing11.id != "ration")
+					if (CurrencyType == CurrencyType.Money && (thing11.category.IsChildOf("meal") || thing11.category.IsChildOf("preserved")) && thing11.id != "ration" && !thing11.IsUnique)
 					{
 						thing11.c_priceFix = -70;
 					}

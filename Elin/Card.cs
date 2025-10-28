@@ -2932,7 +2932,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		a = a * GetExpMtp() / 100;
 		exp += a;
-		while (exp >= ExpToNext)
+		while (exp >= ExpToNext && exp > 0 && ExpToNext > 0)
 		{
 			exp -= ExpToNext;
 			LevelUp();
@@ -5679,7 +5679,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			num2 = 0;
 		}
-		if (num2 >= 10)
+		if (num2 >= 10 && !HasElement(1290))
 		{
 			thing.SetEncLv(num2 / 10);
 		}
@@ -7153,6 +7153,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			switch (currency)
 			{
+			case CurrencyType.Money:
+				if (id == "crimale2")
+				{
+					return 6480;
+				}
+				break;
 			case CurrencyType.Influence:
 				switch (id)
 				{

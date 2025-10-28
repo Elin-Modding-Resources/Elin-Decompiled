@@ -98,6 +98,10 @@ public class TraitDoor : Trait
 
 	public virtual bool IsOpen()
 	{
+		if (owner.isRoofItem)
+		{
+			return false;
+		}
 		int dir = owner.dir;
 		Cell cell = owner.pos.cell;
 		if (dir == 0 || dir == 2)

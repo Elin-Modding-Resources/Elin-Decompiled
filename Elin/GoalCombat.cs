@@ -306,6 +306,11 @@ public class GoalCombat : Goal
 			{
 				yield return Success();
 			}
+			if (idleCount > 1 && owner.id == "keeper_garden" && owner.enemy != null)
+			{
+				owner.Teleport(owner.enemy.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: true, ignoreCenter: true, 3) ?? EClass._map.GetRandomSurface(), silent: false, force: true);
+				yield return Success();
+			}
 			if (idleCount > 2)
 			{
 				if (dontWander)

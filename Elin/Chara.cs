@@ -5064,13 +5064,9 @@ public class Chara : Card, IPathfindWalker
 		sleepiness.value = 0;
 		hostility = OriginalHostility;
 		RemoveCondition<StanceTaunt>();
-		if (id == "keeper_garden" && base.LV < 10000000)
+		if (id == "keeper_garden")
 		{
-			SetLv(base.LV * 10 + 9);
-			base.hp = MaxHP;
-			mana.value = mana.max;
-			stamina.value = stamina.max;
-			bossText = true;
+			SaiyanRevive();
 		}
 		if (IsPC)
 		{
@@ -5121,6 +5117,20 @@ public class Chara : Card, IPathfindWalker
 			}
 			SetCensored(enable: false);
 		}
+	}
+
+	public void SaiyanRevive()
+	{
+		ModCorruption(-100000);
+		if (base.LV < 10000000)
+		{
+			SetLv(base.LV * 10 + 9);
+		}
+		Refresh();
+		base.hp = MaxHP;
+		mana.value = mana.max;
+		stamina.value = stamina.max;
+		bossText = true;
 	}
 
 	public void MakeGrave(string lastword)

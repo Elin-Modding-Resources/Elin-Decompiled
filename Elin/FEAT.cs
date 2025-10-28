@@ -788,11 +788,7 @@ public class Feat : Element
 		}
 		void ModAttribute(int ele)
 		{
-			if (!hint)
-			{
-				Debug.Log(A);
-				Debug.Log(((A == 1) ? 2 : ((A == 2) ? 4 : 5)) * invert);
-			}
+			_ = hint;
 			ModBase(ele, ((A == 1) ? 2 : ((A == 2) ? 4 : 5)) * invert, hide: false);
 			ModPotential(ele, a * 10);
 		}
