@@ -9571,7 +9571,7 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (a > 0)
 		{
-			if (ResistLv(962) > 0 && EClass.rnd(ResistLv(962) + 1) != 0)
+			if (Evalue(962) >= 25 || (ResistLv(962) > 0 && EClass.rnd(ResistLv(962) + 1) != 0))
 			{
 				return;
 			}

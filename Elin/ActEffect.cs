@@ -2803,7 +2803,7 @@ public class ActEffect : EClass
 			Msg.Say("wishFail");
 			return false;
 		}
-		list.Sort((WishItem a, WishItem b) => b.score - a.score);
+		list.Sort((WishItem a, WishItem b) => (a.score != b.score) ? (b.score - a.score) : (EClass.rnd(10) - EClass.rnd(10)));
 		foreach (WishItem item2 in list)
 		{
 			Debug.Log(item2.score + "/" + s + "/" + item2.n);

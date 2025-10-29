@@ -532,7 +532,7 @@ public class ThingContainer : List<Thing>
 		ListCurrency(id);
 		foreach (Thing temp in tempList)
 		{
-			if (!(temp.id != id) && (mat == null || temp.material == mat) && temp.Num + num > 0)
+			if (!(temp.id != id) && (mat == null || temp.material == mat) && (num <= 0 || temp.Num + num > 0))
 			{
 				if (num > 0)
 				{
