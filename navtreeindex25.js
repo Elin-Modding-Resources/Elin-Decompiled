@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classAI__Churyu.html":[1,0,71],
+"classAI__Churyu.html#a3290c98339e233c7eb156b4b467b2bdd":[1,0,71,0],
 "classAI__Churyu.html#ac88e412bcf3cc506e6365624e1028a56":[1,0,71,3],
 "classAI__Churyu.html#ad6b2bade5d8862905689e75b8784f029":[1,0,71,2],
 "classAI__Churyu.html#af08e5986f138bdb007560b932c97e725":[1,0,71,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Practice.html#aff05913285defc4484ac929900b59f93":[1,0,100,3],
 "classAI__PracticeDummy.html":[1,0,101],
 "classAI__PracticeDummy.html#a03326368461ff11e6229ae15a2cd47c0":[1,0,101,3],
-"classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,101,1],
-"classAI__PracticeDummy.html#a2caa3366643ef1267b72d7b0462357e2":[1,0,101,4],
-"classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,101,2]
+"classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,101,1]
 };

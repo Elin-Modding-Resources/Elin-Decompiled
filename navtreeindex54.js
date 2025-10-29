@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"classCoreRef_1_1TextureDatas.html#af4e95e590a4c98020f25ae29b4d12cf6":[1,0,403,13,3],
+"classCoreRef_1_1TextureDatas.html#afea9e8ce9e4fff029d95f1cef8807d67":[1,0,403,13,15],
 "classCoreRef_1_1UDIconWeather.html":[1,0,403,14],
 "classCoreRef_1_1UDInvStyle.html":[1,0,403,15],
 "classCoreRef_1_1UDInvTab.html":[1,0,403,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "classDNA.html#ab8d17312383a69af22ff757f76bf5900":[1,0,434,18],
 "classDNA.html#ac4ccc343e3934157071be3433a7fe135":[1,0,434,9],
 "classDNA.html#ac8a91e1cbe7832dfde77744c4a73b8c9":[1,0,434,3],
-"classDNA.html#acbd34a14220b8e2825d5b640678faa93":[1,0,434,15],
-"classDNA.html#ad8f8df21f5bb4bba184433d24cc60ae7":[1,0,434,5],
-"classDNA.html#adf064516ae661e2fe0a29467457ffce8":[1,0,434,7]
+"classDNA.html#acbd34a14220b8e2825d5b640678faa93":[1,0,434,15]
 };

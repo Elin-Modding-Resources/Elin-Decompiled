@@ -1,5 +1,7 @@
 var NAVTREEINDEX87 =
 {
+"classPathManager.html#a4e5aa59d44fc07f796614f5c688d53e9a30ad1054cf7ad7636a26844a6f782e1f":[1,0,939,0,1],
+"classPathManager.html#a4e5aa59d44fc07f796614f5c688d53e9a7a1920d61156abc05a60135aefe8bc67":[1,0,939,0,0],
 "classPathManager.html#a78052939a882c7ea12e696e397a6a150":[1,0,939,9],
 "classPathManager.html#a80fa09e5351c73429518fbe5efd97f83":[1,0,939,5],
 "classPathManager.html#ab34bcc80381dba88428330c5e848aefd":[1,0,939,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX87 =
 "classPlayer.html#ace998cd817f7f40663a1f8883d510953":[1,0,947,129],
 "classPlayer.html#ad0da430e4e2b6e9368161c840754689a":[1,0,947,191],
 "classPlayer.html#ad14d1df620e67e467b91779eb6cdef58":[1,0,947,40],
-"classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee":[1,0,947,61],
-"classPlayer.html#ad3df2ab89636da24fcf3290d2e404535":[1,0,947,101],
-"classPlayer.html#ad76a93494d370f21817b72599571aad3":[1,0,947,159]
+"classPlayer.html#ad3cd52c1adaa2d738f19f6f259298eee":[1,0,947,61]
 };

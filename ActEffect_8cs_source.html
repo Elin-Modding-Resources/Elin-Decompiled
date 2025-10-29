@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.226 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.227 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -2897,7 +2897,7 @@ $(document).ready(function(){initNavTree('ActEffect_8cs_source.html',''); initRe
 <div class="line"><a id="l02803" name="l02803"></a><span class="lineno"> 2803</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;wishFail&quot;</span>);</div>
 <div class="line"><a id="l02804" name="l02804"></a><span class="lineno"> 2804</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l02805" name="l02805"></a><span class="lineno"> 2805</span>        }</div>
-<div class="line"><a id="l02806" name="l02806"></a><span class="lineno"> 2806</span>        list.Sort((WishItem a, WishItem b) =&gt; b.score - a.score);</div>
+<div class="line"><a id="l02806" name="l02806"></a><span class="lineno"> 2806</span>        list.Sort((WishItem a, WishItem b) =&gt; (a.score != b.score) ? (b.score - a.score) : (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(10) - <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(10)));</div>
 <div class="line"><a id="l02807" name="l02807"></a><span class="lineno"> 2807</span>        <span class="keywordflow">foreach</span> (WishItem item2 <span class="keywordflow">in</span> list)</div>
 <div class="line"><a id="l02808" name="l02808"></a><span class="lineno"> 2808</span>        {</div>
 <div class="line"><a id="l02809" name="l02809"></a><span class="lineno"> 2809</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(item2.score + <span class="stringliteral">&quot;/&quot;</span> + s + <span class="stringliteral">&quot;/&quot;</span> + item2.n);</div>

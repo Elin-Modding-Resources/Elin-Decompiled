@@ -1,5 +1,7 @@
 var NAVTREEINDEX117 =
 {
+"classTraitChopper.html#a94d6375d40d335e6b98e54be09f2185a":[1,0,1488,0],
+"classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1488,2],
 "classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1488,1],
 "classTraitCitizen.html":[1,0,1489],
 "classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1489,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitDoorCurtain2.html#aee16732f839dd53bf7a49de2a4bcd391":[1,0,1536,0],
 "classTraitDoorFence.html":[1,0,1537],
 "classTraitDoorFence.html#a3c7c8bf4e1b60582abfe54a3dd9d70b4":[1,0,1537,0],
-"classTraitDoorFrame.html":[1,0,1538],
-"classTraitDoorFrame.html#ab343e2af0b44daf071a0bbc7535dc5c5":[1,0,1538,0],
-"classTraitDoorSwing.html":[1,0,1542]
+"classTraitDoorFrame.html":[1,0,1538]
 };

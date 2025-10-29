@@ -1,5 +1,7 @@
 var NAVTREEINDEX108 =
 {
+"classSpawnSetting.html#a17b584515ae72d8471f7b41a5c915588":[1,0,1237,11],
+"classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967":[1,0,1237,8],
 "classSpawnSetting.html#a2440c0a8c9505303947061db11b3bb21":[1,0,1237,14],
 "classSpawnSetting.html#a28e3c3eb950ac72d3e9111554a0b8e51":[1,0,1237,12],
 "classSpawnSetting.html#a341d37c61d56574fcd04fd1e751e88d9":[1,0,1237,1],
@@ -21,8 +23,8 @@ var NAVTREEINDEX108 =
 "classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e":[1,0,1237,13],
 "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1237,7],
 "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1237,4],
-"classSpell.html":[1,0,1238],
-"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1238,0],
+"classSpell.html":[1,0,1239],
+"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1239,0],
 "classSplashText.html":[1,0,1240],
 "classSplashText.html#a027bb81008215adcaa05044b0a2d565a":[1,0,1240,3],
 "classSplashText.html#a40d628265e563f3f7040b2e0c2b96aad":[1,0,1240,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX108 =
 "classStickyDate.html":[1,0,1264],
 "classStickyDate.html#a09c8ee5afb2e9c5738e5a2748e5c05c7":[1,0,1264,4],
 "classStickyDate.html#a11a83f03d6c27cbe7be6d08a76b3aef0":[1,0,1264,1],
-"classStickyDate.html#a6e4ece27801c2988e8148aad8322b235":[1,0,1264,3],
-"classStickyDate.html#ac3fa1d27ee30380e0d16dc565077c0f8":[1,0,1264,0],
-"classStickyDate.html#aec983b5e8a75c181c9de433d01a32755":[1,0,1264,2]
+"classStickyDate.html#a6e4ece27801c2988e8148aad8322b235":[1,0,1264,3]
 };
