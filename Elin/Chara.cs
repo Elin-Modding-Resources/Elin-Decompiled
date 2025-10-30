@@ -705,7 +705,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override int MaxHP => (int)Mathf.Clamp(((long)(base.END * 2 + base.STR + base.WIL / 2) * (long)Mathf.Min(base.LV, 25) / 25 + base.END + 10) * Evalue(60) / 100 * ((base.IsPCFactionOrMinion ? 100 : (100 + (int)base.rarity * 300)) + (IsPC ? (EClass.player.lastEmptyAlly * Evalue(1646)) : 0)) / 100, 1f, 1E+09f);
 
-	public override int WeightLimit => Mathf.Max((base.STR * 500 + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000, 1000);
+	public override int WeightLimit => (int)Mathf.Clamp(((long)base.STR * 500L + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000, 1000f, 1.0737418E+09f);
 
 	public override int SelfWeight => bio.weight * 1000;
 
@@ -1596,7 +1596,6 @@ public class Chara : Card, IPathfindWalker
 		_idTimeTable = ((EClass.rnd(5) == 0) ? 1 : 0);
 		ApplyRace();
 		ApplyJob();
-		Debug.Log(source.defMat);
 		ChangeMaterial(source.defMat.IsEmpty(race.material), ignoreFixedMaterial: true);
 		if (num != source.LV)
 		{

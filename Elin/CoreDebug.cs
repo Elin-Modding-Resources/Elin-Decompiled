@@ -439,14 +439,14 @@ public class CoreDebug : EScriptable
 			for (int j = 0; j < 30; j++)
 			{
 				CardBlueprint.Set(CardBlueprint.DebugEQ);
-				Thing thing2 = ThingGen.CreateFromCategory("weapon", int.MaxValue);
+				Thing thing2 = ThingGen.CreateFromCategory("weapon", 214748364);
 				thing2.elements.SetBase(653, 1);
 				if (!(thing2.trait is TraitAmmo))
 				{
 					thing.AddCard(thing2);
 				}
 				CardBlueprint.Set(CardBlueprint.DebugEQ);
-				thing2 = ThingGen.CreateFromCategory("armor", int.MaxValue);
+				thing2 = ThingGen.CreateFromCategory("armor", 214748364);
 				thing2.elements.SetBase(653, 1);
 				thing.AddCard(thing2);
 			}

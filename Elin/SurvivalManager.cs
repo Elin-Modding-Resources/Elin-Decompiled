@@ -228,21 +228,32 @@ public class SurvivalManager : EClass
 		});
 		Check(20, delegate
 		{
-			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("fiama"), pos.x, pos.z).Chara);
+			AddMemeber("fiama");
 		});
 		Check(40, delegate
 		{
-			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("nino"), pos.x, pos.z).Chara);
+			AddMemeber("nino");
 		});
 		Check(60, delegate
 		{
-			EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("loytel"), pos.x, pos.z).Chara);
+			AddMemeber("loytel");
 			CheckLoytelDebt();
 		});
 		Check(80, delegate
 		{
+			AddMemeber("farris");
+		});
+		Check(100, delegate
+		{
 			EClass._zone.AddCard(ThingGen.Create("core_defense"), pos).Install();
 		});
+		void AddMemeber(string id)
+		{
+			if (EClass.game.cards.globalCharas.Find(id) == null)
+			{
+				EClass.pc.homeBranch.AddMemeber(EClass._zone.AddCard(CharaGen.Create(id), pos.x, pos.z).Chara);
+			}
+		}
 		void Check(int a, Action action)
 		{
 			if (!done && flags.floors < a && i >= a)
@@ -291,7 +302,7 @@ public class SurvivalManager : EClass
 			break;
 		case "wreck_junk":
 			chanceChange = 100;
-			return Pop(ThingGen.CreateFromFilter("shop_junk", num));
+			return Pop(ThingGen.CreateFromFilter("wreck_junk", num));
 		case "wreck_stone":
 			chanceChange = 30;
 			array = new string[4] { "rock", "rock", "stone", "bone" };
