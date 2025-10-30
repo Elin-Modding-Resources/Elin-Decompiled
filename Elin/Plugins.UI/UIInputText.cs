@@ -30,6 +30,8 @@ public class UIInputText : MonoBehaviour
 
 	private float timer;
 
+	private UIButton buttonClicked;
+
 	public int Num
 	{
 		get
@@ -134,19 +136,26 @@ public class UIInputText : MonoBehaviour
 	private void Update()
 	{
 		timer -= Time.deltaTime;
-		if (!EInput.leftMouse.pressedLong || !(timer < 0f))
+		if (EInput.leftMouse.pressedLong)
 		{
-			return;
-		}
-		timer = 0.1f;
-		UIButton componentOf = InputModuleEX.GetComponentOf<UIButton>();
-		UIButton[] array = buttons;
-		foreach (UIButton uIButton in array)
-		{
-			if (uIButton == componentOf)
+			if (!(timer < 0f))
 			{
-				uIButton.onClick.Invoke();
+				return;
 			}
+			timer = 0.1f;
+			UIButton componentOf = InputModuleEX.GetComponentOf<UIButton>();
+			UIButton[] array = buttons;
+			foreach (UIButton uIButton in array)
+			{
+				if (uIButton == componentOf && uIButton == buttonClicked)
+				{
+					uIButton.onClick.Invoke();
+				}
+			}
+		}
+		else if (EInput.leftMouse.down)
+		{
+			buttonClicked = InputModuleEX.GetComponentOf<UIButton>();
 		}
 	}
 }
