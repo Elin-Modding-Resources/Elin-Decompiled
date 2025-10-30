@@ -246,8 +246,8 @@ var NAVTREEINDEX30 =
 "classAlgorithms_1_1AuthorAttribute.html":[0,4,0,0],
 "classAlgorithms_1_1AuthorAttribute.html#a75e7e800e98e301d2ba7e8c9be6126df":[1,0,0,0,0],
 "classAlgorithms_1_1AuthorAttribute.html#a75e7e800e98e301d2ba7e8c9be6126df":[0,4,0,0,0],
-"classAlgorithms_1_1PathFinder.html":[0,4,0,2],
 "classAlgorithms_1_1PathFinder.html":[1,0,0,2],
-"classAlgorithms_1_1PathFinder.html#a040726d7e95134997f0363cc56115013":[0,4,0,2,3],
-"classAlgorithms_1_1PathFinder.html#a040726d7e95134997f0363cc56115013":[1,0,0,2,3]
+"classAlgorithms_1_1PathFinder.html":[0,4,0,2],
+"classAlgorithms_1_1PathFinder.html#a040726d7e95134997f0363cc56115013":[1,0,0,2,3],
+"classAlgorithms_1_1PathFinder.html#a040726d7e95134997f0363cc56115013":[0,4,0,2,3]
 };

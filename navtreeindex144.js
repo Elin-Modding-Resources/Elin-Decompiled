@@ -1,5 +1,6 @@
 var NAVTREEINDEX144 =
 {
+"structXY.html":[1,0,2107],
 "structXY.html#a671ff8952388c884c10782e46808c8b1":[1,0,2107,2],
 "structXY.html#a86ef9f95d24632f70207d603689a4b70":[1,0,2107,0],
 "structXY.html#a97f055b4700397c064faee99a9309572":[1,0,2107,1],

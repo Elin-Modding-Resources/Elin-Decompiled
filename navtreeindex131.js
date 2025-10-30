@@ -1,5 +1,6 @@
 var NAVTREEINDEX131 =
 {
+"classUISelectableGroup.html":[1,0,2036],
 "classUISelectableGroup.html#a000caba22c5a1bda83bcca53f1e228fe":[1,0,2036,15],
 "classUISelectableGroup.html#a082ebdf4cd5d6606642606f67efac95f":[1,0,2036,17],
 "classUISelectableGroup.html#a0fde1a1739488010c7d3cf5dce573a3e":[1,0,2036,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX131 =
 "classWeather.html#ad890cbc8b3bcbbd497a92844214ad70a":[1,0,2053,18],
 "classWeather.html#ada22dc0ea6759a44dd47e0fdf318a9b6":[1,0,2053,16],
 "classWeather.html#ae2240bac78f6818cb0fb76a3fa2412f7":[1,0,2053,10],
-"classWeather.html#ae9efd34d46619b3adc68a1ae1cd91f2f":[1,0,2053,22],
-"classWeather.html#af95a7d8d40f8d9c73c233bf7fb45e196":[1,0,2053,8]
+"classWeather.html#ae9efd34d46619b3adc68a1ae1cd91f2f":[1,0,2053,22]
 };

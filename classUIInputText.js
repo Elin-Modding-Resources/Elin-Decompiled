@@ -13,6 +13,7 @@ var classUIInputText =
     [ "SetMinMax", "classUIInputText.html#aa9603c6af8a05ff82cfaae54219c41ce", null ],
     [ "Update", "classUIInputText.html#a2582d3c43a90a8be4aac2d0690407c5a", null ],
     [ "Validate", "classUIInputText.html#abeeb5bbe9a52b037fd2c7940318d0374", null ],
+    [ "buttonClicked", "classUIInputText.html#aa23490357df30fa1fd538f405567f074", null ],
     [ "buttons", "classUIInputText.html#affaf66874f6f727e72260d3cafbd1916", null ],
     [ "field", "classUIInputText.html#a0ef61c3a66b38ba78ab1f6e90211432b", null ],
     [ "max", "classUIInputText.html#a57299c7445ea9c67189c80b75a75e583", null ],
