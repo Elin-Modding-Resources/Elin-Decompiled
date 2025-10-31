@@ -7544,6 +7544,36 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
+		if (!base.IsPCFactionOrMinion)
+		{
+			int num2 = 0;
+			foreach (Element value in t.elements.dict.Values)
+			{
+				if (value.Value <= 0)
+				{
+					int num3 = 100;
+					switch (value.id)
+					{
+					case 418:
+						num3 = 10;
+						break;
+					case 60:
+					case 61:
+					case 62:
+						num3 = 200;
+						break;
+					case 962:
+						num3 = 10000;
+						break;
+					}
+					num2 += value.Value * num3 / 100;
+				}
+			}
+			if (num2 < -40)
+			{
+				return false;
+			}
+		}
 		if (t.HasTag(CTAG.gift))
 		{
 			return false;

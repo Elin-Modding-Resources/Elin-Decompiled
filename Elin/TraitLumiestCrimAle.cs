@@ -1,5 +1,7 @@
 public class TraitLumiestCrimAle : TraitFoodMeal
 {
+	public override bool CanBeHeldAsFurniture => true;
+
 	public override bool CanDrink(Chara c)
 	{
 		return true;

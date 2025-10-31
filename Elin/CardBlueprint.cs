@@ -1,4 +1,4 @@
-public class CardBlueprint
+public class CardBlueprint : EClass
 {
 	public int lv = -999;
 
@@ -34,7 +34,8 @@ public class CardBlueprint
 	public static CardBlueprint DebugEQ = new CardBlueprint
 	{
 		rarity = Rarity.Mythical,
-		lv = int.MaxValue
+		lv = int.MaxValue,
+		blesstedState = ((EClass.rnd(3) == 0) ? BlessedState.Blessed : BlessedState.Cursed)
 	};
 
 	public static CardBlueprint Chara(int lv, Rarity rarity = Rarity.Normal)

@@ -1983,8 +1983,10 @@ public class Trait : EClass
 					break;
 				}
 				}
-				ShopType shopType = ShopType;
-				if (shopType == ShopType.General || shopType == ShopType.Food)
+				switch (ShopType)
+				{
+				case ShopType.General:
+				case ShopType.Food:
 				{
 					for (int num14 = 0; num14 < (EClass.debug.enable ? 3 : 3); num14++)
 					{
@@ -1995,6 +1997,14 @@ public class Trait : EClass
 							AddThing(t2);
 						}
 					}
+					break;
+				}
+				case ShopType.Booze:
+					if (EClass._zone is Zone_Yowyn && EClass._zone.lv == -1)
+					{
+						Add("churyu", EClass.rndHalf(10), 0);
+					}
+					break;
 				}
 				switch (owner.id)
 				{

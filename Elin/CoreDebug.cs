@@ -2165,6 +2165,20 @@ public class CoreDebug : EScriptable
 	}
 
 	[ConsoleCommand("")]
+	public static string Rust()
+	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
+		EClass.pc.things.Foreach(delegate(Thing t)
+		{
+			t.ModEncLv(-100);
+		});
+		return "Done.";
+	}
+
+	[ConsoleCommand("")]
 	public static string FlyMode()
 	{
 		EClass.pc.AddCondition<ConLevitate>();
