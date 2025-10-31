@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6":[1,0,474,51],
 "classElementContainer.html#a4e7ab415eac422fa407737bd5a90b3eb":[1,0,474,43],
 "classElementContainer.html#a56e96745b1ef51d616e34379a670c585":[1,0,474,35],
 "classElementContainer.html#a59949708ac7c1887b15b4774990cdc68":[1,0,474,14],
@@ -233,12 +234,12 @@ var NAVTREEINDEX60 =
 "classEmbarkActor.html#ae3c7e98a147e39fb9dcaa8cddee7cb9a":[1,0,488,10],
 "classEmbarkActor.html#ae4ed4818a6c187f74a71f8fc8a37e556":[1,0,488,1],
 "classEmbarkActor.html#aeaa09469456cbde1beedeb97a9ca2e62":[1,0,488,13],
-"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html":[0,4,5,0,0],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html":[1,0,5,0,0],
-"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a04d79a1a099b8557e090fdcf7ff4b467":[0,4,5,0,0,5],
+"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html":[0,4,5,0,0],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a04d79a1a099b8557e090fdcf7ff4b467":[1,0,5,0,0,5],
-"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a07af85e225b113c0559c5ebdf8b26e43":[1,0,5,0,0,20],
+"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a04d79a1a099b8557e090fdcf7ff4b467":[0,4,5,0,0,5],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a07af85e225b113c0559c5ebdf8b26e43":[0,4,5,0,0,20],
+"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a07af85e225b113c0559c5ebdf8b26e43":[1,0,5,0,0,20],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a12b5452f6661f8212d0d6321048ea09b":[1,0,5,0,0,13],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a12b5452f6661f8212d0d6321048ea09b":[0,4,5,0,0,13],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a1df4b62a0ef6e2ebda45ba8bb8bb7d70":[0,4,5,0,0,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a3752f2727403952468cf143ba7b51122":[1,0,5,0,0,4],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a3752f2727403952468cf143ba7b51122":[0,4,5,0,0,4],
 "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a394ff4ddfe8e088b9355c8749b49ae88":[1,0,5,0,0,16],
-"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a394ff4ddfe8e088b9355c8749b49ae88":[0,4,5,0,0,16],
-"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a4a677376f0e35b9a6a78bb25a525a474":[1,0,5,0,0,2]
+"classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a394ff4ddfe8e088b9355c8749b49ae88":[0,4,5,0,0,16]
 };

@@ -77,6 +77,7 @@ var classCoreDebug =
     [ "ResetPetUpgrades", "classCoreDebug.html#abeda409739a6918ff6e0d979793a9879", null ],
     [ "ResetPrincipalSeals", "classCoreDebug.html#acbd20ac8f1b35c2a6019e891ab933858", null ],
     [ "Resource", "classCoreDebug.html#a097c7abcbb31537dbef592ac8d28d937", null ],
+    [ "Rust", "classCoreDebug.html#a6f3b862755525eed93d785f375cbed6a", null ],
     [ "SetElement", "classCoreDebug.html#a68a8792ea19e2cab21d8b2997277901b", null ],
     [ "SetStartStockpile", "classCoreDebug.html#a67119fab3e23ff06d668cfa05803e99d", null ],
     [ "Spawn", "classCoreDebug.html#a710080962de63085be3884177bad6e16", null ],

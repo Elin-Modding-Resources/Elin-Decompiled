@@ -159,7 +159,6 @@ var hierarchy =
     [ "ButtonState", "classButtonState.html", null ],
     [ "CoreConfig.CameraConfig", "classCoreConfig_1_1CameraConfig.html", null ],
     [ "CanvasExt", "classCanvasExt.html", null ],
-    [ "CardBlueprint", "classCardBlueprint.html", null ],
     [ "EloMap.Cell", "classEloMap_1_1Cell.html", null ],
     [ "POIMap.Cell", "classPOIMap_1_1Cell.html", null ],
     [ "CellDetail", "classCellDetail.html", null ],
@@ -524,6 +523,7 @@ var hierarchy =
       [ "CalcGold", "classCalcGold.html", null ],
       [ "CalcMoney", "classCalcMoney.html", null ],
       [ "CalcPlat", "classCalcPlat.html", null ],
+      [ "CardBlueprint", "classCardBlueprint.html", null ],
       [ "CardFilter", "classCardFilter.html", [
         [ "CharaFilter", "classCharaFilter.html", null ],
         [ "ThingFilter", "classThingFilter.html", null ]

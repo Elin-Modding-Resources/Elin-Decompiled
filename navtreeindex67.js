@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"classGame_1_1Config.html#a619371418ec5c480e733642b4a47c9f1":[1,0,525,0,17],
 "classGame_1_1Config.html#a621b2abfc75458744c1becd5aff114fb":[1,0,525,0,11],
 "classGame_1_1Config.html#a6ab750a2c818ebfb36f6431bab29e03d":[1,0,525,0,10],
 "classGame_1_1Config.html#a7b5dc61de5dfb544d33fe4f1796be694":[1,0,525,0,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "classGodStatueData.html#a2d212fbe1f26d099c87f5e545bcce412":[1,0,573,2],
 "classGodStatueData.html#a899f3c401b475c7c5f4896eee1a3705d":[1,0,573,1],
 "classGodStatueData.html#ab7cba767a1978cc56c35d82ce9c7f72f":[1,0,573,0],
-"classGradientColor.html":[1,0,574],
-"classGradientColor.html#a05b54db208268d35199eedb9d2a79a54":[1,0,574,3]
+"classGradientColor.html":[1,0,574]
 };

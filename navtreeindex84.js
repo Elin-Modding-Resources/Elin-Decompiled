@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"classMiniGame__Blackjack.html#acbc453da8679b03653a2dc8b35f52e5d":[1,0,890,5],
 "classMiniGame__Blackjack.html#ad3afa057dd04100a5164b9b36cc6e347":[1,0,890,0],
 "classMiniGame__Blackjack.html#aeaba3b955b0c07ede7902d62511bc119":[1,0,890,2],
 "classMiniGame__Blackjack.html#aee53c1ddc658317d9b60a39fbaaf4f85":[1,0,890,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "classMsgBlock.html#a20979ff1ed42ed49640367ad1d624d5e":[1,0,901,7],
 "classMsgBlock.html#a330c5d6d74ac2f5cd76eb3d09348c327":[1,0,901,8],
 "classMsgBlock.html#a4797eae194f2873a13764ef9c1927bad":[1,0,901,5],
-"classMsgBlock.html#a6296e590ca531399146ccc56bb3078b8":[1,0,901,11],
-"classMsgBlock.html#a679f3c33669c1073b138f4e2fc4a8354":[1,0,901,14]
+"classMsgBlock.html#a6296e590ca531399146ccc56bb3078b8":[1,0,901,11]
 };

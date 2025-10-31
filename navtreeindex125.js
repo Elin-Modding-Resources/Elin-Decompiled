@@ -1,5 +1,7 @@
 var NAVTREEINDEX125 =
 {
+"classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[0,4,9,0,3],
+"classTwoDLaserPack_1_1LineBasedLaser.html#a1c96e56e82ac84817c1f58b5236a719d":[1,0,9,0,13],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a1c96e56e82ac84817c1f58b5236a719d":[0,4,9,0,13],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7":[1,0,9,0,20],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a1d5d2cdcc89564bb83789307b851baa7":[0,4,9,0,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX125 =
 "classUIAnimeSequence.html#a72ae2441bc42316e09b1dc5c82eaffc3":[1,0,1976,1],
 "classUIAnimeSequence.html#a9b022c17b14ef88b0f8947e795cf88de":[1,0,1976,0],
 "classUIAutoTurn.html":[1,0,1977],
-"classUIAutoTurn.html#a3356310faa79423f3bb949780092be1e":[1,0,1977,2],
-"classUIAutoTurn.html#a3703851d449e7db9e0f8a21e0f5348d5":[1,0,1977,6],
-"classUIAutoTurn.html#a3f035ed1236dac2ec7e7d74d4a203c0e":[1,0,1977,1]
+"classUIAutoTurn.html#a3356310faa79423f3bb949780092be1e":[1,0,1977,2]
 };

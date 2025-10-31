@@ -1,5 +1,7 @@
 var NAVTREEINDEX124 =
 {
+"classTraitToolRangeGun.html#af8d8fbc2f19b475ff5923f91a36de0c2":[1,0,1904,0],
+"classTraitToolRangeGunEnergy.html":[1,0,1905],
 "classTraitToolRangeGunEnergy.html#adfefa6f64285332e885186f31a543f8f":[1,0,1905,0],
 "classTraitToolRangeGunRocket.html":[1,0,1906],
 "classTraitToolRangeGunRocket.html#aed6c2a6e31d7e7471851bd46666426b8":[1,0,1906,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX124 =
 "classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[0,4,9,0,10],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d":[1,0,9,0,36],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d":[0,4,9,0,36],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[1,0,9,0,3],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[0,4,9,0,3],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a1c96e56e82ac84817c1f58b5236a719d":[1,0,9,0,13]
+"classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[1,0,9,0,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX108 =
 {
+"classSpawnSetting.html#a173add994ee5df417322be39c52aea79":[1,0,1237,16],
 "classSpawnSetting.html#a17b584515ae72d8471f7b41a5c915588":[1,0,1237,11],
 "classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967":[1,0,1237,8],
 "classSpawnSetting.html#a2440c0a8c9505303947061db11b3bb21":[1,0,1237,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX108 =
 "classSteam.html#af927db6236cb57cdef86a4aa75023d54":[1,0,1263,14],
 "classStickyDate.html":[1,0,1264],
 "classStickyDate.html#a09c8ee5afb2e9c5738e5a2748e5c05c7":[1,0,1264,4],
-"classStickyDate.html#a11a83f03d6c27cbe7be6d08a76b3aef0":[1,0,1264,1],
-"classStickyDate.html#a6e4ece27801c2988e8148aad8322b235":[1,0,1264,3]
+"classStickyDate.html#a11a83f03d6c27cbe7be6d08a76b3aef0":[1,0,1264,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitGM.html":[1,0,1622],
 "classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1622,0],
 "classTraitGM__Fighter.html":[1,0,1623],
 "classTraitGM__Mage.html":[1,0,1624],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitKiln.html#aecd3d2711e449d8e6af1fe2b39e3fbc4":[1,0,1656,2],
 "classTraitLeash.html":[1,0,1657],
 "classTraitLeash.html#aa9bd962d328cb4b1f442be94563b1e4c":[1,0,1657,0],
-"classTraitLetterOfWill.html":[1,0,1658],
-"classTraitLetterOfWill.html#a79a7bc90362cd73ec5c8141c00db5704":[1,0,1658,0]
+"classTraitLetterOfWill.html":[1,0,1658]
 };

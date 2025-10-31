@@ -1,5 +1,6 @@
 var NAVTREEINDEX120 =
 {
+"classTraitLetterOfWill.html#a79a7bc90362cd73ec5c8141c00db5704":[1,0,1658,0],
 "classTraitLever.html":[1,0,1659],
 "classTraitLever.html#a343d426c967df37e19574864dc441bed":[1,0,1659,0],
 "classTraitLeverBreaker.html":[1,0,1660],
@@ -52,6 +53,7 @@ var NAVTREEINDEX120 =
 "classTraitLoytelMart.html#a91d5d63bf430404d945cf7a67358579c":[1,0,1671,1],
 "classTraitLumiestCrimAle.html":[1,0,1672],
 "classTraitLumiestCrimAle.html#a16d9d819912361f0ededd117bc99c4a6":[1,0,1672,1],
+"classTraitLumiestCrimAle.html#aaad9f54120334442c777b157a1014db9":[1,0,1672,2],
 "classTraitLumiestCrimAle.html#ad3b0344bd161cc79330a38ecb67e3c8b":[1,0,1672,0],
 "classTraitLunch.html":[1,0,1673],
 "classTraitLunchLove.html":[1,0,1674],
@@ -247,7 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitMonsterBall.html#a8c84c59d2b629a6fe2984e8c00d94312":[1,0,1727,3],
 "classTraitMonsterBall.html#a92e81fe688eef43f0edd42d1e2bf7a2c":[1,0,1727,6],
 "classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28":[1,0,1727,9],
-"classTraitMonsterBall.html#aaeb6f9fa895248244d88d0fc00d0f8a9":[1,0,1727,1],
-"classTraitMonsterBall.html#abf8484d5fc4555b0219682768e8d0160":[1,0,1727,5],
-"classTraitMonsterBall.html#aff66f460e585dd1fde7a184789916b5d":[1,0,1727,7]
+"classTraitMonsterBall.html#aaeb6f9fa895248244d88d0fc00d0f8a9":[1,0,1727,1]
 };

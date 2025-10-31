@@ -1,5 +1,7 @@
 var NAVTREEINDEX123 =
 {
+"classTraitSpellbook.html":[1,0,1833],
+"classTraitSpellbook.html#a5aded0d1bb1f21da0b58a96918872408":[1,0,1833,1],
 "classTraitSpellbook.html#a9f4515e19f103d74109abad62a9d54d2":[1,0,1833,0],
 "classTraitSpellbookRandom.html":[1,0,1834],
 "classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1834,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1903,1],
 "classTraitToolRangeGun.html":[1,0,1904],
 "classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1904,1],
-"classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1904,2],
-"classTraitToolRangeGun.html#af8d8fbc2f19b475ff5923f91a36de0c2":[1,0,1904,0],
-"classTraitToolRangeGunEnergy.html":[1,0,1905]
+"classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1904,2]
 };
