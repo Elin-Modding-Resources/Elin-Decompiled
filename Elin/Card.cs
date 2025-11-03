@@ -5180,6 +5180,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				switch (id)
 				{
+				case "pumpkin":
+					if (chance(3))
+					{
+						list.Add(ThingGen.CreateFromCategory((EClass.rnd(2) == 0) ? "meal_cookie" : "meal_cake", 5 + EClass.rnd(EClass.rnd(50) + 1)));
+					}
+					break;
 				case "isca":
 					list.Add(ThingGen.Create("blood_angel"));
 					break;
@@ -5996,11 +6002,21 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (trait is TraitAbility)
 		{
 			(trait as TraitAbility).act.SetImage(image);
+			return;
 		}
-		else
+		Sprite sprite = GetSprite();
+		if (!c_idSpriteReplacer.IsEmpty())
 		{
-			sourceRenderCard.SetImage(image, GetSprite(), colorInt, setNativeSize: true, 0, 0, this);
+			SpriteReplacer spriteReplacer = SpriteReplacer.dictSkins.TryGetValue(c_idSpriteReplacer);
+			if (spriteReplacer != null)
+			{
+				RenderData renderData = ResourceCache.Load<RenderData>("Scene/Render/Data/chara_custom_" + ((spriteReplacer.data.GetSprite().texture.height <= 128) ? "128" : "256"));
+				sprite = spriteReplacer.data.GetSprite();
+				sourceRenderCard.SetImage(image, sprite, colorInt, setNativeSize: true, 0, 0, renderData, spriteReplacer.data.pref ?? Pref);
+				return;
+			}
 		}
+		sourceRenderCard.SetImage(image, sprite, colorInt, setNativeSize: true, 0, 0, this);
 	}
 
 	public void ShowEmo(Emo _emo = Emo.none, float duration = 0f, bool skipSame = true)

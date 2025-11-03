@@ -565,6 +565,12 @@ public class TaskHarvest : BaseTaskHarvest
 	public void HarvestThing()
 	{
 		string text = GetIdDismantled();
+		if (target.id == "934" || target.id == "1002")
+		{
+			Rand.SetSeed(target.uid);
+			text = ThingGen.CreateFromCategory((EClass.rnd(2) == 0) ? "meal_cookie" : "meal_cake", 5 + EClass.rnd(EClass.rnd(50) + 1)).id;
+			Rand.SetSeed();
+		}
 		float num = target.Num;
 		float num2 = 1.0999999f;
 		if (target.trait.CraftNum > 1)

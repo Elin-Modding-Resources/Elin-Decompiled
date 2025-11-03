@@ -350,6 +350,14 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 
 	public void SetImage(Image image, Sprite sprite = null, int matCol = 0, bool setNativeSize = true, int dir = 0, int idSkin = 0, Card card = null)
 	{
+		bool num = card != null && card.isChara && card.Chara.spriteReplacer != null && !card.HasHost;
+		SourcePref sourcePref = ((card != null) ? card.Pref : GetPref());
+		RenderData renderData = (num ? card.renderer.data : this.renderData);
+		SetImage(image, sprite, matCol, setNativeSize, dir, idSkin, renderData, sourcePref);
+	}
+
+	public void SetImage(Image image, Sprite sprite, int matCol, bool setNativeSize, int dir, int idSkin, RenderData _renderData, SourcePref _pref)
+	{
 		image.sprite = sprite ?? GetSprite(dir, idSkin);
 		int num = ((matCol == 0) ? 104025 : matCol);
 		float num2 = 0.02f;
@@ -357,20 +365,17 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		color.a = 1f;
 		image.color = color;
 		RectTransform rectTransform = image.Rect();
-		bool num3 = card != null && card.isChara && card.Chara.spriteReplacer != null && !card.HasHost;
-		SourcePref sourcePref = ((card != null) ? card.Pref : GetPref());
-		RenderData renderData = (num3 ? card.renderer.data : this.renderData);
-		rectTransform.pivot = renderData.imagePivot - new Vector2(0.01f * (float)sourcePref.pivotX, 0.01f * (float)sourcePref.pivotY);
+		rectTransform.pivot = _renderData.imagePivot - new Vector2(0.01f * (float)_pref.pivotX, 0.01f * (float)_pref.pivotY);
 		float x = Mathf.Abs(image.transform.localScale.x) * (float)((_tiles == null || _tiles.Length == 0 || _tiles[dir % _tiles.Length] >= 0) ? 1 : (-1));
 		float y = image.transform.localScale.y;
 		image.transform.localScale = new Vector3(x, y, image.transform.localScale.z);
-		sourcePref.Validate();
+		_pref.Validate();
 		if (setNativeSize)
 		{
 			image.SetNativeSize();
-			if (renderData.imageScale.x != 1f || renderData.imageScale.y != 1f || sourcePref.scaleIcon != 0)
+			if (_renderData.imageScale.x != 1f || _renderData.imageScale.y != 1f || _pref.scaleIcon != 0)
 			{
-				rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x * (renderData.imageScale.x + (float)sourcePref.scaleIcon * 0.01f), rectTransform.sizeDelta.y * (renderData.imageScale.y + (float)sourcePref.scaleIcon * 0.01f));
+				rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x * (_renderData.imageScale.x + (float)_pref.scaleIcon * 0.01f), rectTransform.sizeDelta.y * (_renderData.imageScale.y + (float)_pref.scaleIcon * 0.01f));
 			}
 		}
 	}

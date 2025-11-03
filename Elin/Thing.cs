@@ -1273,9 +1273,16 @@ public class Thing : Card
 					{
 						return false;
 					}
-					if (e.source.categorySub == "eleAttack" && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
+					if (!e.IsGlobalElement)
 					{
-						return false;
+						if (e.source.tag.Contains("weaponEnc") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
+						{
+							return false;
+						}
+						if (e.source.IsWeaponEnc && !base.category.IsChildOf("shield") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
+						{
+							return false;
+						}
 					}
 					return (!showEQStats || (e.id != 64 && e.id != 65 && e.id != 66 && e.id != 67)) ? true : false;
 				}, null, ElementContainer.NoteMode.Default, addRaceFeat: false, delegate(Element e, string s)

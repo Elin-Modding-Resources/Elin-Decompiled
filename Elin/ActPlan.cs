@@ -576,7 +576,7 @@ public class ActPlan : EClass
 							List<Chara> list2 = new List<Chara>();
 							foreach (Chara chara in EClass._map.charas)
 							{
-								if (chara.IsPCPartyMinion && !chara.IsEscorted())
+								if (chara.IsPCFactionMinion && !chara.IsEscorted())
 								{
 									list2.Add(chara);
 								}

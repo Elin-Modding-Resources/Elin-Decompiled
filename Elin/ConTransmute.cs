@@ -13,10 +13,18 @@ public class ConTransmute : BaseBuff
 	public override void OnStart()
 	{
 		owner._CreateRenderer();
+		if (owner.IsPCParty)
+		{
+			WidgetRoster.SetDirty();
+		}
 	}
 
 	public override void OnRemoved()
 	{
 		owner._CreateRenderer();
+		if (owner.IsPCParty)
+		{
+			WidgetRoster.SetDirty();
+		}
 	}
 }

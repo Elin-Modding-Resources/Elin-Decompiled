@@ -1770,6 +1770,10 @@ public class Trait : EClass
 					Add("714", 1, 0);
 					Add("1017", 1, 0);
 					Add("1155", 1, 0);
+					Add("1287", 1, 0);
+					Add("1288", 1, 0);
+					Add("1289", 1, 0);
+					Add("1290", 1, 0);
 					Add("1011", 1, 0);
 					AddThing(ThingGen.CreatePerfume(9500, 5));
 					AddThing(ThingGen.CreatePerfume(9501, 5));

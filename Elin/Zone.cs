@@ -1201,7 +1201,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				{
 					Msg.ignoreAll = true;
 					chara2.Cure(CureType.Boss, 20 + num * 10);
-					chara2.HealHP(Mathf.Max(1, chara2.MaxHP) * Mathf.Min(num, 20) / 20);
+					chara2.HealHP((int)((long)Mathf.Max(1, chara2.MaxHP) * (long)Mathf.Min(num, 20) / 20));
 					chara2.mana.Mod(Mathf.Max(1, chara2.mana.max) * Mathf.Min(num, 20) / 20);
 					chara2.stamina.Mod(Mathf.Max(1, chara2.stamina.max) * Mathf.Min(num, 20) / 20);
 					Msg.ignoreAll = false;

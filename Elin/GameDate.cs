@@ -209,7 +209,7 @@ public class GameDate : Date
 				EClass.world.SendPackage(p);
 			}
 		}
-		if (base.day == 30 && base.month == 10 && (EClass.game.quests.IsStarted<QuestDebt>() || EClass.debug.enable))
+		if (base.day == 1 && base.month == 11 && (EClass.game.quests.IsStarted<QuestDebt>() || EClass.debug.enable))
 		{
 			Thing thing2 = ThingGen.Create("parchment");
 			thing2.SetStr(53, "letter_crimale");

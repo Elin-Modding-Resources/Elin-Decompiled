@@ -1,4 +1,4 @@
-public class TraitLumiestCrimAle : TraitFoodMeal
+public class TraitLumiestCrimAle : TraitFoodPrepared
 {
 	public override bool CanBeHeldAsFurniture => true;
 
