@@ -1,5 +1,6 @@
 var NAVTREEINDEX123 =
 {
+"classTraitSpecialLantern.html#ac9ace3040a67a973e6808a13236dc23c":[1,0,1832,3],
 "classTraitSpellbook.html":[1,0,1833],
 "classTraitSpellbook.html#a5aded0d1bb1f21da0b58a96918872408":[1,0,1833,1],
 "classTraitSpellbook.html#a9f4515e19f103d74109abad62a9d54d2":[1,0,1833,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitToolRangeCrossbow.html#a1009ad63c3585427accd989f953d3f9c":[1,0,1903,0],
 "classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1903,1],
 "classTraitToolRangeGun.html":[1,0,1904],
-"classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1904,1],
-"classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1904,2]
+"classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1904,1]
 };

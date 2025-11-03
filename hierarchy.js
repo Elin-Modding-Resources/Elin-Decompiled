@@ -1687,13 +1687,13 @@ var hierarchy =
           [ "TraitFoodPrepared", "classTraitFoodPrepared.html", [
             [ "TraitFoodChuryu", "classTraitFoodChuryu.html", null ],
             [ "TraitFoodMeal", "classTraitFoodMeal.html", [
-              [ "TraitLumiestCrimAle", "classTraitLumiestCrimAle.html", null ],
               [ "TraitMixedFood", "classTraitMixedFood.html", [
                 [ "TraitLunch", "classTraitLunch.html", [
                   [ "TraitLunchLove", "classTraitLunchLove.html", null ]
                 ] ]
               ] ]
-            ] ]
+            ] ],
+            [ "TraitLumiestCrimAle", "classTraitLumiestCrimAle.html", null ]
           ] ],
           [ "TraitFoodPreparedPackage", "classTraitFoodPreparedPackage.html", null ],
           [ "TraitFoodSeasoning", "classTraitFoodSeasoning.html", null ],

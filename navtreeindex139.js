@@ -1,5 +1,6 @@
 var NAVTREEINDEX139 =
 {
+"classZoneEventSiege.html#a2a7a5870f96fad53bacd5fa5ff5aa71f":[1,0,2203,14],
 "classZoneEventSiege.html#a340ca4615db8a6cb4972896c8bcc15f7":[1,0,2203,12],
 "classZoneEventSiege.html#a38efb49c6bdc55afdcd0e60fa412de4f":[1,0,2203,15],
 "classZoneEventSiege.html#a3fcdb3d904089d1ddb7e91f9b7645b55":[1,0,2203,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX139 =
 "classZone__CursedManorDungeon.html#a27625f5c16b5a920337868318ef8a1cb":[1,0,2123,4],
 "classZone__CursedManorDungeon.html#a523db04f56ae645e1ad9af4cb3074306":[1,0,2123,2],
 "classZone__CursedManorDungeon.html#a6a14f2aba3851f66484214c512344554":[1,0,2123,0],
-"classZone__CursedManorDungeon.html#abf2157af362b83032c9f047732cf838d":[1,0,2123,5],
-"classZone__CursedManorDungeon.html#aeedf0e1d86871d2d6d24425bc481b834":[1,0,2123,3]
+"classZone__CursedManorDungeon.html#abf2157af362b83032c9f047732cf838d":[1,0,2123,5]
 };

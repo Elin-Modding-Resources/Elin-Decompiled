@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitDoorFence.html#a3c7c8bf4e1b60582abfe54a3dd9d70b4":[1,0,1537,0],
 "classTraitDoorFrame.html":[1,0,1538],
 "classTraitDoorFrame.html#ab343e2af0b44daf071a0bbc7535dc5c5":[1,0,1538,0],
 "classTraitDoorSwing.html":[1,0,1542],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitFortuneCookie.html#ac4705ba887cb9f7f6493ffc5336c80b5":[1,0,1600,0],
 "classTraitFridge.html":[1,0,1601],
 "classTraitFridge.html#a15de8c2e1aac0bdd1fe9a2c098ebb729":[1,0,1601,1],
-"classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1601,0],
-"classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1601,2]
+"classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1601,0]
 };

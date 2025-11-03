@@ -1,5 +1,6 @@
 var NAVTREEINDEX120 =
 {
+"classTraitLetterOfWill.html":[1,0,1658],
 "classTraitLetterOfWill.html#a79a7bc90362cd73ec5c8141c00db5704":[1,0,1658,0],
 "classTraitLever.html":[1,0,1659],
 "classTraitLever.html#a343d426c967df37e19574864dc441bed":[1,0,1659,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitMonsterBall.html#a8c077132dd854a5d52130317cb183c09":[1,0,1727,8],
 "classTraitMonsterBall.html#a8c84c59d2b629a6fe2984e8c00d94312":[1,0,1727,3],
 "classTraitMonsterBall.html#a92e81fe688eef43f0edd42d1e2bf7a2c":[1,0,1727,6],
-"classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28":[1,0,1727,9],
-"classTraitMonsterBall.html#aaeb6f9fa895248244d88d0fc00d0f8a9":[1,0,1727,1]
+"classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28":[1,0,1727,9]
 };
