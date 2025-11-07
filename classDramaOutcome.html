@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.230 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.231 Nightly</span>
    </div>
   </td>
  </tr>
@@ -196,6 +196,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aabcc2189dfa32e07a7682de214c3bcc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a360f0a71d6e852635e1768bed3ceb9b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaOutcome.html#a360f0a71d6e852635e1768bed3ceb9b0">event_swordkeeper</a> ()</td></tr>
 <tr class="separator:a360f0a71d6e852635e1768bed3ceb9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf98cad00619ed71121d0c3e1f08f17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaOutcome.html#a7cf98cad00619ed71121d0c3e1f08f17">upgrade_miscreation</a> ()</td></tr>
+<tr class="separator:a7cf98cad00619ed71121d0c3e1f08f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae14a66513238873815fbc2e3f3c6d36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaOutcome.html#aae14a66513238873815fbc2e3f3c6d36">guild_trial</a> ()</td></tr>
 <tr class="separator:aae14a66513238873815fbc2e3f3c6d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcb6ff404c2aceeec89e5ab1782e08a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaOutcome.html#adcb6ff404c2aceeec89e5ab1782e08a2">guild_join</a> ()</td></tr>
@@ -438,37 +440,37 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00437">437</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  438</span>    {</div>
-<div class="line"><span class="lineno">  439</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;sketch_old&quot;</span>);</div>
-<div class="line"><span class="lineno">  440</span>        <span class="keywordflow">if</span> (thing == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  441</span>        {</div>
-<div class="line"><span class="lineno">  442</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  443</span>        }</div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordtype">int</span> num = thing.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
-<div class="line"><span class="lineno">  445</span>        thing.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
-<div class="line"><span class="lineno">  446</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
-<div class="line"><span class="lineno">  448</span>        {</div>
-<div class="line"><span class="lineno">  449</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 5; j++)</div>
-<div class="line"><span class="lineno">  450</span>            {</div>
-<div class="line"><span class="lineno">  451</span>                <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a5782301b1b9e96942b51672f9520f707">dictSketches</a>.<a class="code hl_property" href="classUDictionary.html#a3fb7ff6759fc496a12439419f548ead7">Keys</a>.RandomItem();</div>
-<div class="line"><span class="lineno">  452</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Contains(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>))</div>
-<div class="line"><span class="lineno">  453</span>                {</div>
-<div class="line"><span class="lineno">  454</span>                    <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">  455</span>                    <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;add_sketch&quot;</span>, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  456</span>                    flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  457</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  458</span>                }</div>
-<div class="line"><span class="lineno">  459</span>            }</div>
-<div class="line"><span class="lineno">  460</span>        }</div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  462</span>        {</div>
-<div class="line"><span class="lineno">  463</span>            SE.WriteJournal();</div>
-<div class="line"><span class="lineno">  464</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  465</span>        }</div>
-<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  467</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00450">450</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  451</span>    {</div>
+<div class="line"><span class="lineno">  452</span>        <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;sketch_old&quot;</span>);</div>
+<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">if</span> (thing == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  454</span>        {</div>
+<div class="line"><span class="lineno">  455</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  456</span>        }</div>
+<div class="line"><span class="lineno">  457</span>        <span class="keywordtype">int</span> num = thing.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a>;</div>
+<div class="line"><span class="lineno">  458</span>        thing.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
+<div class="line"><span class="lineno">  459</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">  461</span>        {</div>
+<div class="line"><span class="lineno">  462</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 5; j++)</div>
+<div class="line"><span class="lineno">  463</span>            {</div>
+<div class="line"><span class="lineno">  464</span>                <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a5782301b1b9e96942b51672f9520f707">dictSketches</a>.<a class="code hl_property" href="classUDictionary.html#a3fb7ff6759fc496a12439419f548ead7">Keys</a>.RandomItem();</div>
+<div class="line"><span class="lineno">  465</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Contains(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>))</div>
+<div class="line"><span class="lineno">  466</span>                {</div>
+<div class="line"><span class="lineno">  467</span>                    <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Add(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">  468</span>                    <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;add_sketch&quot;</span>, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  469</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  470</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  471</span>                }</div>
+<div class="line"><span class="lineno">  472</span>            }</div>
+<div class="line"><span class="lineno">  473</span>        }</div>
+<div class="line"><span class="lineno">  474</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  475</span>        {</div>
+<div class="line"><span class="lineno">  476</span>            SE.WriteJournal();</div>
+<div class="line"><span class="lineno">  477</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  478</span>        }</div>
+<div class="line"><span class="lineno">  479</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  480</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCard_html_aa9ca06c4b45648bc819adef16f03c3bd"><div class="ttname"><a href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Card.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04996">Card.cs:4996</a></div></div>
 <div class="ttc" id="aclassCard_html_ae1041fe18950e805e2e9db00d64108fd"><div class="ttname"><a href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Card.Num</a></div><div class="ttdeci">int Num</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00157">Card.cs:158</a></div></div>
@@ -509,14 +511,14 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00481">481</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  482</span>    {</div>
-<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">GetFelmeraRewardIndex</a>() &gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a127cb89ec018035fb384cfe6bf143b83">lastFelmeraReward</a>;</div>
-<div class="line"><span class="lineno">  484</span>    }</div>
-<div class="ttc" id="aclassDramaOutcome_html_a031e74dc0296cd1daedce436bcfa04cf"><div class="ttname"><a href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">DramaOutcome.GetFelmeraRewardIndex</a></div><div class="ttdeci">int GetFelmeraRewardIndex()</div><div class="ttdef"><b>Definition:</b> <a href="DramaOutcome_8cs_source.html#l00469">DramaOutcome.cs:469</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00494">494</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  495</span>    {</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">GetFelmeraRewardIndex</a>() &gt; <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a127cb89ec018035fb384cfe6bf143b83">lastFelmeraReward</a>;</div>
+<div class="line"><span class="lineno">  497</span>    }</div>
+<div class="ttc" id="aclassDramaOutcome_html_a031e74dc0296cd1daedce436bcfa04cf"><div class="ttname"><a href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">DramaOutcome.GetFelmeraRewardIndex</a></div><div class="ttdeci">int GetFelmeraRewardIndex()</div><div class="ttdef"><b>Definition:</b> <a href="DramaOutcome_8cs_source.html#l00482">DramaOutcome.cs:482</a></div></div>
 <div class="ttc" id="aclassPlayer_html_a127cb89ec018035fb384cfe6bf143b83"><div class="ttname"><a href="classPlayer.html#a127cb89ec018035fb384cfe6bf143b83">Player.lastFelmeraReward</a></div><div class="ttdeci">int lastFelmeraReward</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00932">Player.cs:932</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00469">GetFelmeraRewardIndex()</a>, <a class="el" href="Player_8cs_source.html#l00932">Player.lastFelmeraReward</a>, and <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>.</p>
+<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00482">GetFelmeraRewardIndex()</a>, <a class="el" href="Player_8cs_source.html#l00932">Player.lastFelmeraReward</a>, and <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>.</p>
 
 </div>
 </div>
@@ -953,13 +955,13 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  310</span>    }</div>
 <div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00041">Card.cs:41</a></div></div>
 <div class="ttc" id="aclassCard_html_abf12e8d4318bc2da41c22b32a7347857"><div class="ttname"><a href="classCard.html#abf12e8d4318bc2da41c22b32a7347857">Card.SetNoSell</a></div><div class="ttdeci">Thing SetNoSell()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03439">Card.cs:3439</a></div></div>
-<div class="ttc" id="aclassChara_html_ac96438f85f9f30b620e68cc0348f7dda"><div class="ttname"><a href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">Chara.DoHostileAction</a></div><div class="ttdeci">void DoHostileAction(Card _tg, bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06241">Chara.cs:6241</a></div></div>
+<div class="ttc" id="aclassChara_html_ac96438f85f9f30b620e68cc0348f7dda"><div class="ttname"><a href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">Chara.DoHostileAction</a></div><div class="ttdeci">void DoHostileAction(Card _tg, bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06247">Chara.cs:6247</a></div></div>
 <div class="ttc" id="aclassDramaChoice_html"><div class="ttname"><a href="classDramaChoice.html">DramaChoice</a></div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00003">DramaChoice.cs:4</a></div></div>
 <div class="ttc" id="aclassDramaChoice_html_a6dd2bb17dfa802cc7f4776d53bcad613"><div class="ttname"><a href="classDramaChoice.html#a6dd2bb17dfa802cc7f4776d53bcad613">DramaChoice.lastChoice</a></div><div class="ttdeci">static DramaChoice lastChoice</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00005">DramaChoice.cs:5</a></div></div>
 <div class="ttc" id="aclassDramaChoice_html_af269110969ad1c0ae7696551818f2289"><div class="ttname"><a href="classDramaChoice.html#af269110969ad1c0ae7696551818f2289">DramaChoice.index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="DramaChoice_8cs_source.html#l00007">DramaChoice.cs:7</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_acc8918541c5d18ee2741762a612487b5"><div class="ttname"><a href="classElementContainer.html#acc8918541c5d18ee2741762a612487b5">ElementContainer.SetBase</a></div><div class="ttdeci">Element SetBase(string alias, int v, int potential=0)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00366">ElementContainer.cs:366</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00014">cc</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Chara_8cs_source.html#l06241">Chara.DoHostileAction()</a>, <a class="el" href="Player_8cs_source.html#l02527">Player.DropReward()</a>, <a class="el" href="Card_8cs_source.html#l00041">Card.elements</a>, <a class="el" href="DramaChoice_8cs_source.html#l00007">DramaChoice.index</a>, <a class="el" href="DramaChoice_8cs_source.html#l00005">DramaChoice.lastChoice</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="ElementContainer_8cs_source.html#l00366">ElementContainer.SetBase()</a>, <a class="el" href="Card_8cs_source.html#l03439">Card.SetNoSell()</a>, and <a class="el" href="Card_8cs_source.html#l03425">Card.SetNum()</a>.</p>
+<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00014">cc</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Chara_8cs_source.html#l06247">Chara.DoHostileAction()</a>, <a class="el" href="Player_8cs_source.html#l02527">Player.DropReward()</a>, <a class="el" href="Card_8cs_source.html#l00041">Card.elements</a>, <a class="el" href="DramaChoice_8cs_source.html#l00007">DramaChoice.index</a>, <a class="el" href="DramaChoice_8cs_source.html#l00005">DramaChoice.lastChoice</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="ElementContainer_8cs_source.html#l00366">ElementContainer.SetBase()</a>, <a class="el" href="Card_8cs_source.html#l03439">Card.SetNoSell()</a>, and <a class="el" href="Card_8cs_source.html#l03425">Card.SetNum()</a>.</p>
 
 </div>
 </div>
@@ -1024,22 +1026,22 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00469">469</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  470</span>    {</div>
-<div class="line"><span class="lineno">  471</span>        <span class="keywordtype">int</span> count = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Count;</div>
-<div class="line"><span class="lineno">  472</span>        <span class="keywordtype">int</span> num = count / 10;</div>
-<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">if</span> (num &gt;= 29)</div>
-<div class="line"><span class="lineno">  474</span>        {</div>
-<div class="line"><span class="lineno">  475</span>            num = 29;</div>
-<div class="line"><span class="lineno">  476</span>        }</div>
-<div class="line"><span class="lineno">  477</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(count + <span class="stringliteral">&quot;/&quot;</span> + num + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a127cb89ec018035fb384cfe6bf143b83">lastFelmeraReward</a>);</div>
-<div class="line"><span class="lineno">  478</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  479</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00482">482</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>    {</div>
+<div class="line"><span class="lineno">  484</span>        <span class="keywordtype">int</span> count = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Count;</div>
+<div class="line"><span class="lineno">  485</span>        <span class="keywordtype">int</span> num = count / 10;</div>
+<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">if</span> (num &gt;= 29)</div>
+<div class="line"><span class="lineno">  487</span>        {</div>
+<div class="line"><span class="lineno">  488</span>            num = 29;</div>
+<div class="line"><span class="lineno">  489</span>        }</div>
+<div class="line"><span class="lineno">  490</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(count + <span class="stringliteral">&quot;/&quot;</span> + num + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a127cb89ec018035fb384cfe6bf143b83">lastFelmeraReward</a>);</div>
+<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  492</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Player_8cs_source.html#l00932">Player.lastFelmeraReward</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, and <a class="el" href="Player_8cs_source.html#l01067">Player.sketches</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaOutcome_8cs_source.html#l00481">check_sketch2()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00499">give_sketch_reward()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00486">ListFelmeraBarter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaOutcome_8cs_source.html#l00494">check_sketch2()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00512">give_sketch_reward()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00499">ListFelmeraBarter()</a>.</p>
 
 </div>
 </div>
@@ -1066,19 +1068,19 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00499">499</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  500</span>    {</div>
-<div class="line"><span class="lineno">  501</span>        <span class="keywordtype">int</span> felmeraRewardIndex = <a class="code hl_function" href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">GetFelmeraRewardIndex</a>();</div>
-<div class="line"><span class="lineno">  502</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a127cb89ec018035fb384cfe6bf143b83">lastFelmeraReward</a>; i &lt; felmeraRewardIndex; i++)</div>
-<div class="line"><span class="lineno">  503</span>        {</div>
-<div class="line"><span class="lineno">  504</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;painting_reward&quot;</span>);</div>
-<div class="line"><span class="lineno">  505</span>            thing.idSkin = i;</div>
-<div class="line"><span class="lineno">  506</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#ac75d9ea1e3654304fd72f8161838e071">DropReward</a>(thing);</div>
-<div class="line"><span class="lineno">  507</span>        }</div>
-<div class="line"><span class="lineno">  508</span>        EMono.player.lastFelmeraReward = felmeraRewardIndex;</div>
-<div class="line"><span class="lineno">  509</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00512">512</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  513</span>    {</div>
+<div class="line"><span class="lineno">  514</span>        <span class="keywordtype">int</span> felmeraRewardIndex = <a class="code hl_function" href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">GetFelmeraRewardIndex</a>();</div>
+<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a127cb89ec018035fb384cfe6bf143b83">lastFelmeraReward</a>; i &lt; felmeraRewardIndex; i++)</div>
+<div class="line"><span class="lineno">  516</span>        {</div>
+<div class="line"><span class="lineno">  517</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;painting_reward&quot;</span>);</div>
+<div class="line"><span class="lineno">  518</span>            thing.idSkin = i;</div>
+<div class="line"><span class="lineno">  519</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_function" href="classPlayer.html#ac75d9ea1e3654304fd72f8161838e071">DropReward</a>(thing);</div>
+<div class="line"><span class="lineno">  520</span>        }</div>
+<div class="line"><span class="lineno">  521</span>        EMono.player.lastFelmeraReward = felmeraRewardIndex;</div>
+<div class="line"><span class="lineno">  522</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Player_8cs_source.html#l02527">Player.DropReward()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00469">GetFelmeraRewardIndex()</a>, <a class="el" href="Player_8cs_source.html#l00932">Player.lastFelmeraReward</a>, and <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>.</p>
+<p class="reference">References <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="Player_8cs_source.html#l02527">Player.DropReward()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00482">GetFelmeraRewardIndex()</a>, <a class="el" href="Player_8cs_source.html#l00932">Player.lastFelmeraReward</a>, and <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>.</p>
 
 </div>
 </div>
@@ -1105,19 +1107,19 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00511">511</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  512</span>    {</div>
-<div class="line"><span class="lineno">  513</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> key <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a5782301b1b9e96942b51672f9520f707">dictSketches</a>.<a class="code hl_property" href="classUDictionary.html#a3fb7ff6759fc496a12439419f548ead7">Keys</a>)</div>
-<div class="line"><span class="lineno">  514</span>        {</div>
-<div class="line"><span class="lineno">  515</span>            <span class="keywordflow">if</span> (key &gt;= 500 &amp;&amp; key &lt; 700)</div>
-<div class="line"><span class="lineno">  516</span>            {</div>
-<div class="line"><span class="lineno">  517</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Add(key);</div>
-<div class="line"><span class="lineno">  518</span>            }</div>
-<div class="line"><span class="lineno">  519</span>        }</div>
-<div class="line"><span class="lineno">  520</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;add_sketch_special&quot;</span>);</div>
-<div class="line"><span class="lineno">  521</span>        SE.WriteJournal();</div>
-<div class="line"><span class="lineno">  522</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;sketch_special&quot;</span>).<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
-<div class="line"><span class="lineno">  523</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00524">524</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  525</span>    {</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> key <span class="keywordflow">in</span> <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a5782301b1b9e96942b51672f9520f707">dictSketches</a>.<a class="code hl_property" href="classUDictionary.html#a3fb7ff6759fc496a12439419f548ead7">Keys</a>)</div>
+<div class="line"><span class="lineno">  527</span>        {</div>
+<div class="line"><span class="lineno">  528</span>            <span class="keywordflow">if</span> (key &gt;= 500 &amp;&amp; key &lt; 700)</div>
+<div class="line"><span class="lineno">  529</span>            {</div>
+<div class="line"><span class="lineno">  530</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a5ef429a90c9f0705e7ab9c6db87c2047">player</a>.<a class="code hl_variable" href="classPlayer.html#a17d0049f863ab16736d417fd8eb5a823">sketches</a>.Add(key);</div>
+<div class="line"><span class="lineno">  531</span>            }</div>
+<div class="line"><span class="lineno">  532</span>        }</div>
+<div class="line"><span class="lineno">  533</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;add_sketch_special&quot;</span>);</div>
+<div class="line"><span class="lineno">  534</span>        SE.WriteJournal();</div>
+<div class="line"><span class="lineno">  535</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;sketch_special&quot;</span>).<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
+<div class="line"><span class="lineno">  536</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="Card_8cs_source.html#l04996">Card.Destroy()</a>, <a class="el" href="CoreRef_8cs_source.html#l00413">CoreRef.dictSketches</a>, <a class="el" href="ThingContainer_8cs_source.html#l00581">ThingContainer.Find()</a>, <a class="el" href="UDictionary_8cs_source.html#l00025">UDictionary&lt; TKey, TValue &gt;.Keys</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="EMono_8cs_source.html#l00011">EMono.player</a>, <a class="el" href="Core_8cs_source.html#l00051">Core.refs</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Player_8cs_source.html#l01067">Player.sketches</a>, and <a class="el" href="Card_8cs_source.html#l00038">Card.things</a>.</p>
 
@@ -1146,17 +1148,17 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00413">413</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  414</span>    {</div>
-<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a> != <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">Merchant</a>)</div>
-<div class="line"><span class="lineno">  416</span>        {</div>
-<div class="line"><span class="lineno">  417</span>            (cc.trait as <a class="code hl_class" href="classTraitGuildDoorman.html">TraitGuildDoorman</a>).OnJoinGuild();</div>
-<div class="line"><span class="lineno">  418</span>        }</div>
-<div class="line"><span class="lineno">  419</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;guild_join&quot;</span>, <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a>.<a class="code hl_property" href="classFaction.html#a9c8e2cceae6c1c1807d23fe4c50ed40a">Name</a>);</div>
-<div class="line"><span class="lineno">  420</span>        SE.Play(<span class="stringliteral">&quot;questComplete&quot;</span>);</div>
-<div class="line"><span class="lineno">  421</span>        Guild.CurrentDrama.relation.type = <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member;</div>
-<div class="line"><span class="lineno">  422</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a>?.<a class="code hl_property" href="classGuild.html#abdc43697f65c21cc26a2758131232b18">Quest</a>.<a class="code hl_function" href="classQuest.html#acad9590a4c4f3eb6d619a4590a970e63">ChangePhase</a>(10);</div>
-<div class="line"><span class="lineno">  423</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00426">426</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  427</span>    {</div>
+<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a> != <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">Merchant</a>)</div>
+<div class="line"><span class="lineno">  429</span>        {</div>
+<div class="line"><span class="lineno">  430</span>            (cc.trait as <a class="code hl_class" href="classTraitGuildDoorman.html">TraitGuildDoorman</a>).OnJoinGuild();</div>
+<div class="line"><span class="lineno">  431</span>        }</div>
+<div class="line"><span class="lineno">  432</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;guild_join&quot;</span>, <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a>.<a class="code hl_property" href="classFaction.html#a9c8e2cceae6c1c1807d23fe4c50ed40a">Name</a>);</div>
+<div class="line"><span class="lineno">  433</span>        SE.Play(<span class="stringliteral">&quot;questComplete&quot;</span>);</div>
+<div class="line"><span class="lineno">  434</span>        Guild.CurrentDrama.relation.type = <a class="code hl_class" href="classFactionRelation.html">FactionRelation</a>.<a class="code hl_enumeration" href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">RelationType</a>.Member;</div>
+<div class="line"><span class="lineno">  435</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a>?.<a class="code hl_property" href="classGuild.html#abdc43697f65c21cc26a2758131232b18">Quest</a>.<a class="code hl_function" href="classQuest.html#acad9590a4c4f3eb6d619a4590a970e63">ChangePhase</a>(10);</div>
+<div class="line"><span class="lineno">  436</span>    }</div>
 <div class="ttc" id="aclassFactionManager_html_a1c1ff3b10ed0937e3c4dad0ea7984b16"><div class="ttname"><a href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">FactionManager.Merchant</a></div><div class="ttdeci">GuildMerchant Merchant</div><div class="ttdef"><b>Definition:</b> <a href="FactionManager_8cs_source.html#l00026">FactionManager.cs:26</a></div></div>
 <div class="ttc" id="aclassFactionRelation_html"><div class="ttname"><a href="classFactionRelation.html">FactionRelation</a></div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00004">FactionRelation.cs:5</a></div></div>
 <div class="ttc" id="aclassFactionRelation_html_a56d4934ec42f21682c66a50d43e84caf"><div class="ttname"><a href="classFactionRelation.html#a56d4934ec42f21682c66a50d43e84caf">FactionRelation.RelationType</a></div><div class="ttdeci">RelationType</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00006">FactionRelation.cs:7</a></div></div>
@@ -1195,11 +1197,11 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00425">425</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  426</span>    {</div>
-<div class="line"><span class="lineno">  427</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a658c69fae9c8fdf1bca19236b84912a1">CurrentQuest</a>.<a class="code hl_function" href="classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca">NextPhase</a>();</div>
-<div class="line"><span class="lineno">  428</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;letter_trial&quot;</span>)?.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(-1);</div>
-<div class="line"><span class="lineno">  429</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00438">438</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  439</span>    {</div>
+<div class="line"><span class="lineno">  440</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a658c69fae9c8fdf1bca19236b84912a1">CurrentQuest</a>.<a class="code hl_function" href="classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca">NextPhase</a>();</div>
+<div class="line"><span class="lineno">  441</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a203972cb9293020b40d298d968d79a52">Find</a>(<span class="stringliteral">&quot;letter_trial&quot;</span>)?.<a class="code hl_function" href="classCard.html#ae8e34c12f7fdaf3c6b3a50e27e4e3090">ModNum</a>(-1);</div>
+<div class="line"><span class="lineno">  442</span>    }</div>
 <div class="ttc" id="aclassGuild_html_a658c69fae9c8fdf1bca19236b84912a1"><div class="ttname"><a href="classGuild.html#a658c69fae9c8fdf1bca19236b84912a1">Guild.CurrentQuest</a></div><div class="ttdeci">static QuestGuild CurrentQuest</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00064">Guild.cs:64</a></div></div>
 <div class="ttc" id="aclassQuest_html_ac34a1a4c6ad6c492f7824c85d41db6ca"><div class="ttname"><a href="classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca">Quest.NextPhase</a></div><div class="ttdeci">void NextPhase()</div><div class="ttdef"><b>Definition:</b> <a href="Quest_8cs_source.html#l00572">Quest.cs:572</a></div></div>
 </div><!-- fragment -->
@@ -1230,11 +1232,11 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00431">431</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  432</span>    {</div>
-<div class="line"><span class="lineno">  433</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a>.<a class="code hl_variable" href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">relation</a>.<a class="code hl_function" href="classFactionRelation.html#ac8f6b97a12bb8ad3ea33605cdf9cb2a2">Promote</a>();</div>
-<div class="line"><span class="lineno">  434</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_function" href="classGuild.html#ae6498e1c0c27b8ee5302f34d76560d92">GetCurrentGuild</a>()?.<a class="code hl_function" href="classGuild.html#a3f93d65a828d8a78e6f4679600e65929">RefreshDevelopment</a>();</div>
-<div class="line"><span class="lineno">  435</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00444">444</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  445</span>    {</div>
+<div class="line"><span class="lineno">  446</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a>.<a class="code hl_variable" href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">relation</a>.<a class="code hl_function" href="classFactionRelation.html#ac8f6b97a12bb8ad3ea33605cdf9cb2a2">Promote</a>();</div>
+<div class="line"><span class="lineno">  447</span>        <a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_function" href="classGuild.html#ae6498e1c0c27b8ee5302f34d76560d92">GetCurrentGuild</a>()?.<a class="code hl_function" href="classGuild.html#a3f93d65a828d8a78e6f4679600e65929">RefreshDevelopment</a>();</div>
+<div class="line"><span class="lineno">  448</span>    }</div>
 <div class="ttc" id="aclassFactionRelation_html_ac8f6b97a12bb8ad3ea33605cdf9cb2a2"><div class="ttname"><a href="classFactionRelation.html#ac8f6b97a12bb8ad3ea33605cdf9cb2a2">FactionRelation.Promote</a></div><div class="ttdeci">void Promote()</div><div class="ttdef"><b>Definition:</b> <a href="FactionRelation_8cs_source.html#l00072">FactionRelation.cs:72</a></div></div>
 <div class="ttc" id="aclassFaction_html_afdbf9e47afeaa36169a0a4c467719d12"><div class="ttname"><a href="classFaction.html#afdbf9e47afeaa36169a0a4c467719d12">Faction.relation</a></div><div class="ttdeci">FactionRelation relation</div><div class="ttdef"><b>Definition:</b> <a href="FACTION_8cs_source.html#l00126">FACTION.cs:126</a></div></div>
 <div class="ttc" id="aclassGuild_html_a3f93d65a828d8a78e6f4679600e65929"><div class="ttname"><a href="classGuild.html#a3f93d65a828d8a78e6f4679600e65929">Guild.RefreshDevelopment</a></div><div class="ttdeci">void RefreshDevelopment()</div><div class="ttdef"><b>Definition:</b> <a href="Guild_8cs_source.html#l00095">Guild.cs:95</a></div></div>
@@ -1267,17 +1269,17 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00401">401</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  402</span>    {</div>
-<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a> == <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">Merchant</a>)</div>
-<div class="line"><span class="lineno">  404</span>        {</div>
-<div class="line"><span class="lineno">  405</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e">Start</a>(<span class="stringliteral">&quot;guild_merchant&quot;</span>, <a class="code hl_property" href="classDramaOutcome.html#a63bcf10f2685c1c2c12c824c50a6267f">cc</a>, assignQuest: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  406</span>        }</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  408</span>        {</div>
-<div class="line"><span class="lineno">  409</span>            (cc.trait as <a class="code hl_class" href="classTraitGuildDoorman.html">TraitGuildDoorman</a>).GiveTrial();</div>
-<div class="line"><span class="lineno">  410</span>        }</div>
-<div class="line"><span class="lineno">  411</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00414">414</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  415</span>    {</div>
+<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classGuild.html">Guild</a>.<a class="code hl_property" href="classGuild.html#a217e6901e1885ed24f421ba7743d168b">CurrentDrama</a> == <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#af485c2fceeb7286e19ca2d199cb3f20e">factions</a>.<a class="code hl_variable" href="classFactionManager.html#a1c1ff3b10ed0937e3c4dad0ea7984b16">Merchant</a>)</div>
+<div class="line"><span class="lineno">  417</span>        {</div>
+<div class="line"><span class="lineno">  418</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a788e18c7a529b55607051f27551017d3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e">Start</a>(<span class="stringliteral">&quot;guild_merchant&quot;</span>, <a class="code hl_property" href="classDramaOutcome.html#a63bcf10f2685c1c2c12c824c50a6267f">cc</a>, assignQuest: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  419</span>        }</div>
+<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  421</span>        {</div>
+<div class="line"><span class="lineno">  422</span>            (cc.trait as <a class="code hl_class" href="classTraitGuildDoorman.html">TraitGuildDoorman</a>).GiveTrial();</div>
+<div class="line"><span class="lineno">  423</span>        }</div>
+<div class="line"><span class="lineno">  424</span>    }</div>
 <div class="ttc" id="aclassGame_html_ad1aed3f11c20f40bba80db23b7aea9a1"><div class="ttname"><a href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">Game.quests</a></div><div class="ttdeci">QuestManager quests</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00179">Game.cs:179</a></div></div>
 <div class="ttc" id="aclassQuestManager_html_abcb5c423e6aa6418f34a2b81bdfbd40e"><div class="ttname"><a href="classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e">QuestManager.Start</a></div><div class="ttdeci">Quest Start(string id, string idGlobalChara)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00041">QuestManager.cs:41</a></div></div>
 </div><!-- fragment -->
@@ -1319,11 +1321,11 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00395">395</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  396</span>    {</div>
-<div class="line"><span class="lineno">  397</span>        _ = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IF.Split(<span class="charliteral">&#39;/&#39;</span>)[0] == <span class="stringliteral">&quot;costHire&quot;</span>;</div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  399</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00408">408</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  409</span>    {</div>
+<div class="line"><span class="lineno">  410</span>        _ = <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IF.Split(<span class="charliteral">&#39;/&#39;</span>)[0] == <span class="stringliteral">&quot;costHire&quot;</span>;</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  412</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.</p>
 
@@ -1354,21 +1356,21 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00486">486</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  487</span>    {</div>
-<div class="line"><span class="lineno">  488</span>        List&lt;Thing&gt; list = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
-<div class="line"><span class="lineno">  489</span>        <span class="keywordtype">int</span> felmeraRewardIndex = <a class="code hl_function" href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">GetFelmeraRewardIndex</a>();</div>
-<div class="line"><span class="lineno">  490</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; felmeraRewardIndex; i++)</div>
-<div class="line"><span class="lineno">  491</span>        {</div>
-<div class="line"><span class="lineno">  492</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;painting_reward&quot;</span>);</div>
-<div class="line"><span class="lineno">  493</span>            thing.idSkin = i;</div>
-<div class="line"><span class="lineno">  494</span>            list.<a class="code hl_function" href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Add</a>(thing);</div>
-<div class="line"><span class="lineno">  495</span>        }</div>
-<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">return</span> list;</div>
-<div class="line"><span class="lineno">  497</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00499">499</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  500</span>    {</div>
+<div class="line"><span class="lineno">  501</span>        List&lt;Thing&gt; list = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
+<div class="line"><span class="lineno">  502</span>        <span class="keywordtype">int</span> felmeraRewardIndex = <a class="code hl_function" href="classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf">GetFelmeraRewardIndex</a>();</div>
+<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; felmeraRewardIndex; i++)</div>
+<div class="line"><span class="lineno">  504</span>        {</div>
+<div class="line"><span class="lineno">  505</span>            <a class="code hl_class" href="classThing.html">Thing</a> thing = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;painting_reward&quot;</span>);</div>
+<div class="line"><span class="lineno">  506</span>            thing.idSkin = i;</div>
+<div class="line"><span class="lineno">  507</span>            list.<a class="code hl_function" href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Add</a>(thing);</div>
+<div class="line"><span class="lineno">  508</span>        }</div>
+<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><span class="lineno">  510</span>    }</div>
 <div class="ttc" id="aclassCard_html_ae037e2e92487e8c96fafc247c1761974"><div class="ttname"><a href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Card.Add</a></div><div class="ttdeci">Thing Add(string id, int num=1, int lv=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03062">Card.cs:3062</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l03062">Card.Add()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00469">GetFelmeraRewardIndex()</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03062">Card.Add()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00482">GetFelmeraRewardIndex()</a>.</p>
 
 </div>
 </div>
@@ -2199,13 +2201,13 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  321</span>        <a class="code hl_property" href="classDramaOutcome.html#a63bcf10f2685c1c2c12c824c50a6267f">cc</a>.<a class="code hl_function" href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">ModAffinity</a>(<a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>, -2);</div>
 <div class="line"><span class="lineno">  322</span>    }</div>
 <div class="ttc" id="aclassBaseCard_html_ad7c3c0cccca41404bd714fc6ec34ef98"><div class="ttname"><a href="classBaseCard.html#ad7c3c0cccca41404bd714fc6ec34ef98">BaseCard.GetInt</a></div><div class="ttdeci">int GetInt(int id, int? defaultInt=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCard_8cs_source.html#l00025">BaseCard.cs:25</a></div></div>
-<div class="ttc" id="aclassChara_html_a0219e0ff47bdfd344eed3d5238fb57f8"><div class="ttname"><a href="classChara.html#a0219e0ff47bdfd344eed3d5238fb57f8">Chara.GetRevived</a></div><div class="ttdeci">void GetRevived()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05028">Chara.cs:5028</a></div></div>
-<div class="ttc" id="aclassChara_html_a354698fe941b9ea8554d778d0e14e3be"><div class="ttname"><a href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">Chara.ModAffinity</a></div><div class="ttdeci">void ModAffinity(Chara c, int a, bool show=true, bool showOnlyEmo=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07794">Chara.cs:7794</a></div></div>
+<div class="ttc" id="aclassChara_html_a0219e0ff47bdfd344eed3d5238fb57f8"><div class="ttname"><a href="classChara.html#a0219e0ff47bdfd344eed3d5238fb57f8">Chara.GetRevived</a></div><div class="ttdeci">void GetRevived()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05034">Chara.cs:5034</a></div></div>
+<div class="ttc" id="aclassChara_html_a354698fe941b9ea8554d778d0e14e3be"><div class="ttname"><a href="classChara.html#a354698fe941b9ea8554d778d0e14e3be">Chara.ModAffinity</a></div><div class="ttdeci">void ModAffinity(Chara c, int a, bool show=true, bool showOnlyEmo=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l07800">Chara.cs:7800</a></div></div>
 <div class="ttc" id="aclassChara_html_ad5985ee50790374ee8bc017ffa5c3da8"><div class="ttname"><a href="classChara.html#ad5985ee50790374ee8bc017ffa5c3da8">Chara.homeBranch</a></div><div class="ttdeci">FactionBranch homeBranch</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01064">Chara.cs:1064</a></div></div>
 <div class="ttc" id="aclassChara_html_ade1b70855a0acaea042e54f55b5a9d0a"><div class="ttname"><a href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">Chara.isDead</a></div><div class="ttdeci">bool isDead</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00386">Chara.cs:387</a></div></div>
 <div class="ttc" id="aclassFactionBranch_html_a966a9ea7536fcd84cadd3cb2046f187b"><div class="ttname"><a href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">FactionBranch.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00122">FactionBranch.cs:122</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00014">cc</a>, <a class="el" href="BaseCard_8cs_source.html#l00025">BaseCard.GetInt()</a>, <a class="el" href="Chara_8cs_source.html#l05028">Chara.GetRevived()</a>, <a class="el" href="Chara_8cs_source.html#l01064">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l00387">Chara.isDead</a>, <a class="el" href="FactionBranch_8cs_source.html#l00122">FactionBranch.members</a>, <a class="el" href="Chara_8cs_source.html#l07794">Chara.ModAffinity()</a>, and <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>.</p>
+<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00014">cc</a>, <a class="el" href="BaseCard_8cs_source.html#l00025">BaseCard.GetInt()</a>, <a class="el" href="Chara_8cs_source.html#l05034">Chara.GetRevived()</a>, <a class="el" href="Chara_8cs_source.html#l01064">Chara.homeBranch</a>, <a class="el" href="Chara_8cs_source.html#l00387">Chara.isDead</a>, <a class="el" href="FactionBranch_8cs_source.html#l00122">FactionBranch.members</a>, <a class="el" href="Chara_8cs_source.html#l07800">Chara.ModAffinity()</a>, and <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>.</p>
 
 </div>
 </div>
@@ -2271,9 +2273,9 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  346</span>        <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_function" href="classCard.html#a96f39d6bde48b6e50faef3539a3b46c5">ModCurrency</a>(-10000);</div>
 <div class="line"><span class="lineno">  347</span>        <a class="code hl_property" href="classDramaOutcome.html#a63bcf10f2685c1c2c12c824c50a6267f">cc</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;hug&quot;</span>, <a class="code hl_property" href="classDramaOutcome.html#a63bcf10f2685c1c2c12c824c50a6267f">cc</a>, <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>);</div>
 <div class="line"><span class="lineno">  348</span>    }</div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06706">Card.cs:6706</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06710">Card.cs:6710</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00014">cc</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="Chara_8cs_source.html#l02262">Chara.MakeAlly()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.ModCurrency()</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, and <a class="el" href="Card_8cs_source.html#l06706">Card.Say()</a>.</p>
+<p class="reference">References <a class="el" href="DramaOutcome_8cs_source.html#l00014">cc</a>, <a class="el" href="Card_8cs_source.html#l00035">Card.id</a>, <a class="el" href="Chara_8cs_source.html#l02262">Chara.MakeAlly()</a>, <a class="el" href="Card_8cs_source.html#l03891">Card.ModCurrency()</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, and <a class="el" href="Card_8cs_source.html#l06710">Card.Say()</a>.</p>
 
 </div>
 </div>
@@ -2400,6 +2402,60 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7cf98cad00619ed71121d0c3e1f08f17" name="a7cf98cad00619ed71121d0c3e1f08f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf98cad00619ed71121d0c3e1f08f17">&#9670;&#160;</a></span>upgrade_miscreation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DramaOutcome.upgrade_miscreation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00395">395</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  396</span>    {</div>
+<div class="line"><span class="lineno">  397</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#a29a565a228150eb65835b48506ab6dc1">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_property" href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">members</a>.Find((<a class="code hl_class" href="classChara.html">Chara</a> c) =&gt; !c.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; c.<a class="code hl_function" href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">HasElement</a>(1248));</div>
+<div class="line"><span class="lineno">  398</span>        <span class="keywordtype">int</span> num = chara.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(1248);</div>
+<div class="line"><span class="lineno">  399</span>        chara.<a class="code hl_function" href="classChara.html#a4163c6c48f0cfe608e24a7f317988f1f">SetFeat</a>(1248, 0);</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++)</div>
+<div class="line"><span class="lineno">  401</span>        {</div>
+<div class="line"><span class="lineno">  402</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(chara.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a> + i);</div>
+<div class="line"><span class="lineno">  403</span>            <a class="code hl_class" href="classDNA.html">DNA</a>.<a class="code hl_function" href="classDNA.html#a80bd69ffa517ae2eb94941521443eee0">GenerateRandomGene</a>(chara.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> + 30, chara.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a> + i).<a class="code hl_property" href="classCard.html#adef26c6f05f6a84f211af6330f5e2700">c_DNA</a>.<a class="code hl_function" href="classDNA.html#ac8a91e1cbe7832dfde77744c4a73b8c9">Apply</a>(chara, reverse: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  404</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
+<div class="line"><span class="lineno">  405</span>        }</div>
+<div class="line"><span class="lineno">  406</span>    }</div>
+<div class="ttc" id="aclassCard_html_a2f0a86151cde4993541b7a5da468dc6c"><div class="ttname"><a href="classCard.html#a2f0a86151cde4993541b7a5da468dc6c">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, int req=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05826">Card.cs:5826</a></div></div>
+<div class="ttc" id="aclassCard_html_a8d25e3be9f6dd227a2275b64bf90bcc4"><div class="ttname"><a href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">Card.uid</a></div><div class="ttdeci">int uid</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00121">Card.cs:122</a></div></div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02559">Card.cs:2559</a></div></div>
+<div class="ttc" id="aclassCard_html_adef26c6f05f6a84f211af6330f5e2700"><div class="ttname"><a href="classCard.html#adef26c6f05f6a84f211af6330f5e2700">Card.c_DNA</a></div><div class="ttdeci">DNA c_DNA</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01880">Card.cs:1881</a></div></div>
+<div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00385">Card.cs:386</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00610">Chara.cs:610</a></div></div>
+<div class="ttc" id="aclassChara_html_a4163c6c48f0cfe608e24a7f317988f1f"><div class="ttname"><a href="classChara.html#a4163c6c48f0cfe608e24a7f317988f1f">Chara.SetFeat</a></div><div class="ttdeci">void SetFeat(int id, int value=1, bool msg=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09663">Chara.cs:9663</a></div></div>
+<div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00043">Chara.cs:43</a></div></div>
+<div class="ttc" id="aclassDNA_html"><div class="ttname"><a href="classDNA.html">DNA</a></div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00007">DNA.cs:8</a></div></div>
+<div class="ttc" id="aclassDNA_html_a80bd69ffa517ae2eb94941521443eee0"><div class="ttname"><a href="classDNA.html#a80bd69ffa517ae2eb94941521443eee0">DNA.GenerateRandomGene</a></div><div class="ttdeci">static Thing GenerateRandomGene(int lv=-1, int seed=-1)</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00150">DNA.cs:150</a></div></div>
+<div class="ttc" id="aclassDNA_html_ac8a91e1cbe7832dfde77744c4a73b8c9"><div class="ttname"><a href="classDNA.html#ac8a91e1cbe7832dfde77744c4a73b8c9">DNA.Apply</a></div><div class="ttdeci">void Apply(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="DNA_8cs_source.html#l00178">DNA.cs:178</a></div></div>
+<div class="ttc" id="aclassParty_html_ab40c9e3c6723032a277d2fd523d4ec29"><div class="ttname"><a href="classParty.html#ab40c9e3c6723032a277d2fd523d4ec29">Party.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="Party_8cs_source.html#l00017">Party.cs:18</a></div></div>
+<div class="ttc" id="aclassRand_html"><div class="ttname"><a href="classRand.html">Rand</a></div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00003">Rand.cs:4</a></div></div>
+<div class="ttc" id="aclassRand_html_aedb43adb5963433dd4098a0d2514c599"><div class="ttname"><a href="classRand.html#aedb43adb5963433dd4098a0d2514c599">Rand.SetSeed</a></div><div class="ttdeci">static void SetSeed(int a=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Rand_8cs_source.html#l00037">Rand.cs:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DNA_8cs_source.html#l00178">DNA.Apply()</a>, <a class="el" href="Card_8cs_source.html#l01881">Card.c_DNA</a>, <a class="el" href="Card_8cs_source.html#l02559">Card.Evalue()</a>, <a class="el" href="DNA_8cs_source.html#l00150">DNA.GenerateRandomGene()</a>, <a class="el" href="Card_8cs_source.html#l05826">Card.HasElement()</a>, <a class="el" href="Chara_8cs_source.html#l00610">Chara.IsPC</a>, <a class="el" href="Card_8cs_source.html#l00386">Card.LV</a>, <a class="el" href="Party_8cs_source.html#l00018">Party.members</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="EMono_8cs_source.html#l00013">EMono.pc</a>, <a class="el" href="Chara_8cs_source.html#l09663">Chara.SetFeat()</a>, <a class="el" href="Rand_8cs_source.html#l00037">Rand.SetSeed()</a>, and <a class="el" href="Card_8cs_source.html#l00122">Card.uid</a>.</p>
+
+</div>
+</div>
 <a id="a41d41dcbb226bf7da45ef3c85763180a" name="a41d41dcbb226bf7da45ef3c85763180a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41d41dcbb226bf7da45ef3c85763180a">&#9670;&#160;</a></span>WelcomeMsg()</h2>
 
@@ -2493,7 +2549,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DramaOutcome_8cs_source.html#l00014">14</a> of file <a class="el" href="DramaOutcome_8cs_source.html">DramaOutcome.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaOutcome_8cs_source.html#l00193">chara_hired()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00204">chara_hired_ticket()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00273">fiama_starter_gift()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00401">guild_trial()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00332">melilith_friend()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00324">nasu_join()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00378">poppy_found()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00087">QuestExploration_MeetFarris()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00097">QuestExploration_MeetFarris2()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00312">revive_pet()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00340">sister_friend()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaOutcome_8cs_source.html#l00193">chara_hired()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00204">chara_hired_ticket()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00273">fiama_starter_gift()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00414">guild_trial()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00332">melilith_friend()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00324">nasu_join()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00378">poppy_found()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00087">QuestExploration_MeetFarris()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00097">QuestExploration_MeetFarris2()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00312">revive_pet()</a>, and <a class="el" href="DramaOutcome_8cs_source.html#l00340">sister_friend()</a>.</p>
 
 </div>
 </div>

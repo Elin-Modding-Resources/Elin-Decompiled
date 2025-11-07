@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"LayerPeople_8cs.html":[2,0,0,766],
+"LayerPeople_8cs_source.html":[2,0,0,766],
 "LayerPixelPaint_8cs.html":[2,0,0,767],
 "LayerPixelPaint_8cs_source.html":[2,0,0,767],
 "LayerPolicy_8cs.html":[2,0,0,768],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "NotificationStatsMana_8cs.html":[2,0,0,858],
 "NotificationStatsMana_8cs_source.html":[2,0,0,858],
 "NotificationStats_8cs.html":[2,0,0,857],
-"NotificationStats_8cs_source.html":[2,0,0,857],
-"NumLogCategory_8cs.html":[2,0,0,860],
-"NumLogCategory_8cs_source.html":[2,0,0,860]
+"NotificationStats_8cs_source.html":[2,0,0,857]
 };

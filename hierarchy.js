@@ -1406,7 +1406,9 @@ var hierarchy =
             [ "TraitToolBelt", "classTraitToolBelt.html", null ]
           ] ]
         ] ],
-        [ "TraitBath", "classTraitBath.html", null ],
+        [ "TraitBath", "classTraitBath.html", [
+          [ "TraitGeyser", "classTraitGeyser.html", null ]
+        ] ],
         [ "TraitBed", "classTraitBed.html", [
           [ "TraitBedCoffin", "classTraitBedCoffin.html", null ]
         ] ],
@@ -1531,6 +1533,7 @@ var hierarchy =
             [ "TraitExileElder", "classTraitExileElder.html", null ],
             [ "TraitGarokk", "classTraitGarokk.html", null ],
             [ "TraitGriffin", "classTraitGriffin.html", null ],
+            [ "TraitKeeperOfGarden", "classTraitKeeperOfGarden.html", null ],
             [ "TraitKettle", "classTraitKettle.html", null ],
             [ "TraitMiko_Mifu", "classTraitMiko__Mifu.html", null ],
             [ "TraitMiko_Nefu", "classTraitMiko__Nefu.html", null ],
@@ -1544,6 +1547,7 @@ var hierarchy =
             [ "TraitSorin", "classTraitSorin.html", null ],
             [ "TraitStrangeGirl", "classTraitStrangeGirl.html", null ],
             [ "TraitTyche", "classTraitTyche.html", null ],
+            [ "TraitUniqueCharaNoJoin", "classTraitUniqueCharaNoJoin.html", null ],
             [ "TraitUniqueMerchant", "classTraitUniqueMerchant.html", [
               [ "TraitBambi", "classTraitBambi.html", null ],
               [ "TraitClerk_Casino", "classTraitClerk__Casino.html", null ],
@@ -1560,7 +1564,6 @@ var hierarchy =
             [ "TraitVesda", "classTraitVesda.html", null ],
             [ "TraitVishnu", "classTraitVishnu.html", null ]
           ] ],
-          [ "TraitUniqueCharaNoJoin", "classTraitUniqueCharaNoJoin.html", null ],
           [ "TraitUniqueMonster", "classTraitUniqueMonster.html", [
             [ "TraitUniqueMonsterAdv", "classTraitUniqueMonsterAdv.html", null ]
           ] ]
@@ -1907,7 +1910,6 @@ var hierarchy =
         ] ],
         [ "TraitSnow", "classTraitSnow.html", null ],
         [ "TraitSpot", "classTraitSpot.html", [
-          [ "TraitGeyser", "classTraitGeyser.html", null ],
           [ "TraitSpotBiome", "classTraitSpotBiome.html", null ],
           [ "TraitSpotDining", "classTraitSpotDining.html", null ],
           [ "TraitSpotFarm", "classTraitSpotFarm.html", null ],
@@ -1991,7 +1993,9 @@ var hierarchy =
             ] ],
             [ "TraitToolRangeCane", "classTraitToolRangeCane.html", null ],
             [ "TraitToolRangeGun", "classTraitToolRangeGun.html", [
-              [ "TraitToolRangeGunEnergy", "classTraitToolRangeGunEnergy.html", null ],
+              [ "TraitToolRangeGunEnergy", "classTraitToolRangeGunEnergy.html", [
+                [ "TraitToolRangeGunGravity", "classTraitToolRangeGunGravity.html", null ]
+              ] ],
               [ "TraitToolRangeGunRocket", "classTraitToolRangeGunRocket.html", null ]
             ] ],
             [ "TraitToolRangeSling", "classTraitToolRangeSling.html", null ]

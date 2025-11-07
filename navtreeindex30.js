@@ -1,5 +1,11 @@
 var NAVTREEINDEX30 =
 {
+"classActWater.html#aae4ae5d1b26dc7a13f55714179cabb58":[1,0,63,3],
+"classActWater.html#ac64ba64c80787f76780767f46b666db5":[1,0,63,5],
+"classActWater.html#add157b1bf508543215994cae2b588e66":[1,0,63,0],
+"classActWater.html#ae4ef679a79009a4284c8df5b8983c17b":[1,0,63,4],
+"classActWeapon.html":[1,0,64],
+"classActWhirlwind.html":[1,0,65],
 "classActWhirlwind.html#a578015b432c70d5d6c368e80514f066d":[1,0,65,0],
 "classActWhirlwind.html#a66223804e3fe1a7d8c5375066963847e":[1,0,65,1],
 "classActZap.html":[1,0,66],
@@ -243,11 +249,5 @@ var NAVTREEINDEX30 =
 "classAffinity.html#ae704c8104beec2eb92052418ef31d5e7":[1,0,67,13],
 "classAffinity.html#aeebc41560bd44b3d5f57bd617bb8ce33":[1,0,67,10],
 "classAlgorithms_1_1AuthorAttribute.html":[1,0,0,0],
-"classAlgorithms_1_1AuthorAttribute.html":[0,4,0,0],
-"classAlgorithms_1_1AuthorAttribute.html#a75e7e800e98e301d2ba7e8c9be6126df":[1,0,0,0,0],
-"classAlgorithms_1_1AuthorAttribute.html#a75e7e800e98e301d2ba7e8c9be6126df":[0,4,0,0,0],
-"classAlgorithms_1_1PathFinder.html":[1,0,0,2],
-"classAlgorithms_1_1PathFinder.html":[0,4,0,2],
-"classAlgorithms_1_1PathFinder.html#a040726d7e95134997f0363cc56115013":[1,0,0,2,3],
-"classAlgorithms_1_1PathFinder.html#a040726d7e95134997f0363cc56115013":[0,4,0,2,3]
+"classAlgorithms_1_1AuthorAttribute.html":[0,4,0,0]
 };

@@ -19,7 +19,7 @@ var searchData=
   ['hascraftbonustrait_16',['HasCraftBonusTrait',['../classCard.html#aadd31b9cfabd4a30c4611cb005fa963d',1,'Card']]],
   ['hasdlc_17',['HasDLC',['../classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9',1,'Steam']]],
   ['haseditortag_18',['HasEditorTag',['../classCard.html#aac6327d31e4aac5ec2dc1993dd98fff2',1,'Card']]],
-  ['haselement_19',['HasElement',['../classCard.html#a37fbc90ca83c36559ee295b8d0dcaf10',1,'Card.HasElement()'],['../classParty.html#a9f5e1a842ee6cf08a1ec47ba0ce607ad',1,'Party.HasElement()'],['../classCard.html#a2f0a86151cde4993541b7a5da468dc6c',1,'Card.HasElement(int ele, int req=1)']]],
+  ['haselement_19',['HasElement',['../classCard.html#a37fbc90ca83c36559ee295b8d0dcaf10',1,'Card.HasElement()'],['../classParty.html#a31a1ae3612f5a42ff30b05fbbe639e14',1,'Party.HasElement()'],['../classCard.html#a2f0a86151cde4993541b7a5da468dc6c',1,'Card.HasElement(int ele, int req=1)']]],
   ['haselementnocopy_20',['HasElementNoCopy',['../classCard.html#afe2181dcf1836617cba63b74886b4d29',1,'Card']]],
   ['hasenc_21',['HasEnc',['../classSourceMaterial_1_1Row.html#a1454dc86e0809812e3e51e6bbbe1c0b6',1,'SourceMaterial::Row']]],
   ['hasfarawayescort_22',['HasFarAwayEscort',['../classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f',1,'QuestManager']]],
@@ -40,7 +40,7 @@ var searchData=
   ['hasroomorarea_37',['HasRoomOrArea',['../classPoint.html#abe543875df5bed70d200f8d1b16d6b10',1,'Point']]],
   ['hasrune_38',['HasRune',['../classCard.html#a1a28353830ac60c8ebf01f599b99b0db',1,'Card']]],
   ['hassametile_39',['HasSameTile',['../classRecipe.html#a2e5fc07ff7bf8f9733181e2d03ce8f29',1,'Recipe']]],
-  ['hassprite_40',['HasSprite',['../classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e',1,'SpriteReplacer']]],
+  ['hassprite_40',['HasSprite',['../classSpriteReplacer.html#a3e1e07244267d344fa0b921dd7c522b1',1,'SpriteReplacer']]],
   ['hastag_41',['HasTag',['../classCard.html#a810e687225ccdc1dc342506473c87334',1,'Card.HasTag()'],['../classElement.html#a5163326f1ee817cd7b4d06165bbf30c7',1,'Element.HasTag()'],['../classClassExtension.html#a620d2349994d1dc5b2744ad156427037',1,'ClassExtension.HasTag()'],['../classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b',1,'RenderRow.HasTag()']]],
   ['hastalk_42',['HasTalk',['../classCard.html#a8071e0b31c643a2199be2c1944a6b3d8',1,'Card']]],
   ['hastopic_43',['HasTopic',['../classDramaCustomSequence.html#ab1a85999c15f00e25476e924fa2edbb9',1,'DramaCustomSequence']]],
@@ -89,7 +89,7 @@ var searchData=
   ['hsltohsv_86',['HSLtoHSV',['../classEmpyrean_1_1Utils_1_1Colorist.html#aa3e114374a3dc5fa74dcf7f9278ae658',1,'Empyrean::Utils::Colorist']]],
   ['hsvcolor_87',['HSVColor',['../structHSVColor.html#a5c768ddf18c6019c357d254af364f6d9',1,'HSVColor']]],
   ['hsvtohsl_88',['HSVtoHSL',['../classEmpyrean_1_1Utils_1_1Colorist.html#a8fa34023600268fcdb4b5d85b1bfd760',1,'Empyrean::Utils::Colorist']]],
-  ['hsvtorgb_89',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
-  ['hsvtorgb_90',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_89',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_90',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
   ['hyphenate_91',['Hyphenate',['../classUIItem.html#a978123034ebe56fe7a9efac366812b9f',1,'UIItem']]]
 ];

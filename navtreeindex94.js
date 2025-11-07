@@ -1,5 +1,14 @@
 var NAVTREEINDEX94 =
 {
+"classQuestTaskHunt.html#a6ae0d299139e509cf382be3337db8101":[1,0,1051,4],
+"classQuestTaskHunt.html#a6d965565f4649033a0a9183929acb13f":[1,0,1051,9],
+"classQuestTaskHunt.html#a7418b1cf6cd716ff14975bb64061c4b6":[1,0,1051,8],
+"classQuestTaskHunt.html#a752762a73d8b59eeebb12d57ad755726":[1,0,1051,6],
+"classQuestTaskHunt.html#a7867ae0d298b0f5c8235be31b38b8565":[1,0,1051,10],
+"classQuestTaskHunt.html#a8cc6a02eab3d8a3e1de5878767e581a0":[1,0,1051,13],
+"classQuestTaskHunt.html#a911a8072f98c1d712c7b202a2e9d2287":[1,0,1051,1],
+"classQuestTaskHunt.html#a911a8072f98c1d712c7b202a2e9d2287a4e221fc084bb69a82315a154d6dd7879":[1,0,1051,1,1],
+"classQuestTaskHunt.html#a911a8072f98c1d712c7b202a2e9d2287a7a1920d61156abc05a60135aefe8bc67":[1,0,1051,1,0],
 "classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98a":[1,0,1051,0],
 "classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98aa64663f4646781c9c0110838b905daa23":[1,0,1051,0,0],
 "classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98aaa6a4212acefd15c744c2bf98c31081b5":[1,0,1051,0,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX94 =
 "classRecipeManager.html#a02cb83c92b5674b13bb030c2f2f3c097":[1,0,1069,24],
 "classRecipeManager.html#a037a25d5cfdb8fb716e03c46c49b9be1":[1,0,1069,21],
 "classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f":[1,0,1069,2],
-"classRecipeManager.html#a24f862b11b5d3fc1701f42739236f67f":[1,0,1069,16],
-"classRecipeManager.html#a25ab43108db349acf1928eeaafd0759a":[1,0,1069,22],
-"classRecipeManager.html#a26f4ff13eeb57ea9765a5c3d95eb0e88":[1,0,1069,4],
-"classRecipeManager.html#a31d21cfdafbd1d03ddbe16cd4d9ec9d5":[1,0,1069,12],
-"classRecipeManager.html#a4e9316f14703649f499ff90ac5fed97d":[1,0,1069,6],
-"classRecipeManager.html#a5002a20288ffda7a359f02dde43384bb":[1,0,1069,7],
-"classRecipeManager.html#a55425d40b3d652e142df32604a70fb70":[1,0,1069,17],
-"classRecipeManager.html#a5da142696079aedce2d43e94e76b964c":[1,0,1069,19],
-"classRecipeManager.html#a63f5bd20a49c7a39dd04505922ba8fa3":[1,0,1069,5],
-"classRecipeManager.html#a7b921412204381fc644ce0ac8abcec62":[1,0,1069,11]
+"classRecipeManager.html#a24f862b11b5d3fc1701f42739236f67f":[1,0,1069,16]
 };

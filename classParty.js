@@ -6,7 +6,7 @@ var classParty =
     [ "Find", "classParty.html#a39ee0bb9808d4139f5ef325ad6ff579f", null ],
     [ "GetBestSkill", "classParty.html#a1b25b9ccc945c897859be453b38ff8ea", null ],
     [ "GetPartySkill", "classParty.html#a44373dd6365874ad5ea853a6a5317677", null ],
-    [ "HasElement", "classParty.html#a9f5e1a842ee6cf08a1ec47ba0ce607ad", null ],
+    [ "HasElement", "classParty.html#a31a1ae3612f5a42ff30b05fbbe639e14", null ],
     [ "IsCriticallyWounded", "classParty.html#a8c88de227aab1ef3e7bf739511182de0", null ],
     [ "ModExpPartySkill", "classParty.html#aa59edd41f5ae63cf12ec6caddcd72d8a", null ],
     [ "RemoveMember", "classParty.html#a788354c34bb79aace9e073fc395f251f", null ],

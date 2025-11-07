@@ -132,6 +132,7 @@ var classTrait =
     [ "CanBeStolen", "classTrait.html#adf5a2086db57abb7dc0133d7d13753da", null ],
     [ "CanBeTeleported", "classTrait.html#a9f5f514eb961efaa6f4f4e8ffda5692d", null ],
     [ "CanBuildInTown", "classTrait.html#a559565c2b219f365239f923cffe2b567", null ],
+    [ "CanChangeAffinity", "classTrait.html#a746ae1f398d792a341557487d2dd9a40", null ],
     [ "CanChangeHeight", "classTrait.html#a3f3b522d5f37459262eb30f511dbc667", null ],
     [ "CanCopyInBlueprint", "classTrait.html#ab1956cd682b44d4fdc61fb15c840c76d", null ],
     [ "CanExtendBuild", "classTrait.html#a04da9197dd7d1484f6ab9529a93a05b2", null ],

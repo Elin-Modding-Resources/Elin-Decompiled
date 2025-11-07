@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.230 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.231 Nightly</span>
    </div>
   </td>
  </tr>
@@ -101,8 +101,8 @@ $(document).ready(function(){initNavTree('classSpriteReplacer.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad63fa5ef4b826f6467d03efaa362316e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteReplacer.html#ad63fa5ef4b826f6467d03efaa362316e">HasSprite</a> (string id)</td></tr>
-<tr class="separator:ad63fa5ef4b826f6467d03efaa362316e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1e07244267d344fa0b921dd7c522b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteReplacer.html#a3e1e07244267d344fa0b921dd7c522b1">HasSprite</a> (string id, <a class="el" href="classRenderData.html">RenderData</a> renderData=null)</td></tr>
+<tr class="separator:a3e1e07244267d344fa0b921dd7c522b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -127,8 +127,8 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00006">6</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad63fa5ef4b826f6467d03efaa362316e" name="ad63fa5ef4b826f6467d03efaa362316e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad63fa5ef4b826f6467d03efaa362316e">&#9670;&#160;</a></span>HasSprite()</h2>
+<a id="a3e1e07244267d344fa0b921dd7c522b1" name="a3e1e07244267d344fa0b921dd7c522b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1e07244267d344fa0b921dd7c522b1">&#9670;&#160;</a></span>HasSprite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,8 +140,18 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">bool SpriteReplacer.HasSprite </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classRenderData.html">RenderData</a>&#160;</td>
+          <td class="paramname"><em>renderData</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -169,24 +179,28 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   66</span>                <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   67</span>                {</div>
 <div class="line"><span class="lineno">   68</span>                    <span class="keywordtype">string</span> text = CorePath.packageCore + <span class="stringliteral">&quot;Texture/Item/&quot;</span> + id;</div>
-<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">if</span> (File.Exists(text + <span class="stringliteral">&quot;.png&quot;</span>))</div>
+<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">if</span> (!File.Exists(text + <span class="stringliteral">&quot;.png&quot;</span>) &amp;&amp; renderData != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   70</span>                    {</div>
-<div class="line"><span class="lineno">   71</span>                        <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteData.html">SpriteData</a></div>
-<div class="line"><span class="lineno">   72</span>                        {</div>
-<div class="line"><span class="lineno">   73</span>                            path = text</div>
-<div class="line"><span class="lineno">   74</span>                        };</div>
-<div class="line"><span class="lineno">   75</span>                        <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_function" href="classSpriteData.html#a067129c7182d547ab1b051543814d315">Init</a>();</div>
-<div class="line"><span class="lineno">   76</span>                    }</div>
-<div class="line"><span class="lineno">   77</span>                }</div>
-<div class="line"><span class="lineno">   78</span>                <a class="code hl_variable" href="classSpriteReplacer.html#a98f1dba859ed214fdb5f9c3640865392">isChecked</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   79</span>            }</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">   81</span>            {</div>
-<div class="line"><span class="lineno">   82</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Error during fetching spirte:&quot;</span> + ex);</div>
+<div class="line"><span class="lineno">   71</span>                        text = CorePath.packageCore + <span class="stringliteral">&quot;Texture/Item/&quot;</span> + renderData.name;</div>
+<div class="line"><span class="lineno">   72</span>                    }</div>
+<div class="line"><span class="lineno">   73</span>                    <span class="keywordflow">if</span> (File.Exists(text + <span class="stringliteral">&quot;.png&quot;</span>))</div>
+<div class="line"><span class="lineno">   74</span>                    {</div>
+<div class="line"><span class="lineno">   75</span>                        <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteData.html">SpriteData</a></div>
+<div class="line"><span class="lineno">   76</span>                        {</div>
+<div class="line"><span class="lineno">   77</span>                            path = text</div>
+<div class="line"><span class="lineno">   78</span>                        };</div>
+<div class="line"><span class="lineno">   79</span>                        <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_function" href="classSpriteData.html#a067129c7182d547ab1b051543814d315">Init</a>();</div>
+<div class="line"><span class="lineno">   80</span>                    }</div>
+<div class="line"><span class="lineno">   81</span>                }</div>
+<div class="line"><span class="lineno">   82</span>                <a class="code hl_variable" href="classSpriteReplacer.html#a98f1dba859ed214fdb5f9c3640865392">isChecked</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Error during fetching spirte:&quot;</span> + ex);</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassSpriteData_html"><div class="ttname"><a href="classSpriteData.html">SpriteData</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00009">SpriteData.cs:10</a></div></div>
 <div class="ttc" id="aclassSpriteData_html_a067129c7182d547ab1b051543814d315"><div class="ttname"><a href="classSpriteData.html#a067129c7182d547ab1b051543814d315">SpriteData.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00031">SpriteData.cs:31</a></div></div>
@@ -284,7 +298,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00014">14</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06580">Chara.GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">RenderRow.GetSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00051">HasSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00016">ListSkins()</a>, <a class="el" href="CardActor_8cs_source.html#l00103">CardActor.OnRender()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00023">LayerEditSkin.RefreshImage()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="Card_8cs_source.html#l06000">Card.SetImage()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06586">Chara.GetSprite()</a>, <a class="el" href="RenderRow_8cs_source.html#l00261">RenderRow.GetSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00051">HasSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00016">ListSkins()</a>, <a class="el" href="CardActor_8cs_source.html#l00103">CardActor.OnRender()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00023">LayerEditSkin.RefreshImage()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="Card_8cs_source.html#l06004">Card.SetImage()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -336,7 +350,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00008">8</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00016">ListSkins()</a>, <a class="el" href="Core_8cs_source.html#l00409">Core.OnApplicationFocus()</a>, <a class="el" href="Card_8cs_source.html#l06000">Card.SetImage()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00016">ListSkins()</a>, <a class="el" href="Core_8cs_source.html#l00409">Core.OnApplicationFocus()</a>, <a class="el" href="Card_8cs_source.html#l06004">Card.SetImage()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>.</p>
 
 </div>
 </div>

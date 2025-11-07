@@ -1,5 +1,12 @@
 var NAVTREEINDEX47 =
 {
+"classClassExtension.html#a814ce01f2e4c05e00aa34a8b4274794f":[1,0,287,184],
+"classClassExtension.html#a816f8e37195b41486f2409b502cf3384":[1,0,287,164],
+"classClassExtension.html#a81acf52b332f38896179a571bcbe1a51":[1,0,287,10],
+"classClassExtension.html#a826efb0648f0f42e9aca460694436903":[1,0,287,77],
+"classClassExtension.html#a830ef43fbf3d2e1608bcba240088da34":[1,0,287,125],
+"classClassExtension.html#a846974505ce2947e853c8c480f8e7f70":[1,0,287,128],
+"classClassExtension.html#a84d0578a1ea5675b65f4862045996bc5":[1,0,287,110],
 "classClassExtension.html#a89a29a44f3c1dc79653de3498fb26080":[1,0,287,76],
 "classClassExtension.html#a8b20ae72a1598dfbe96bf7298c1109e2":[1,0,287,101],
 "classClassExtension.html#a8cfa24605431acf1538f17f5f662f518":[1,0,287,55],
@@ -242,12 +249,5 @@ var NAVTREEINDEX47 =
 "classConBoost.html#ad329f0364b8886984243b60b03360898":[1,0,304,1],
 "classConBoost.html#ad4c9c14851a7948f9a3d20b6d25a6a81":[1,0,304,0],
 "classConBreath.html":[1,0,305],
-"classConBrightnessOfLife.html":[1,0,306],
-"classConBrightnessOfLife.html#a64d974ca425dd49b06f442b0601a07d4":[1,0,306,1],
-"classConBrightnessOfLife.html#a9bd48f6074c5c31ad072d7104012a250":[1,0,306,0],
-"classConBuffStats.html":[1,0,307],
-"classConBuffStats.html#a05abf0a207f4f2a4e24d9feb16a6336d":[1,0,307,15],
-"classConBuffStats.html#a09bb73753668d087151cd27aedf3b778":[1,0,307,8],
-"classConBuffStats.html#a1768ee35bef2bba70ef27b5e5f1f952a":[1,0,307,2],
-"classConBuffStats.html#a2f2d9a660d1aa7c8483993c1d5010a70":[1,0,307,12]
+"classConBrightnessOfLife.html":[1,0,306]
 };

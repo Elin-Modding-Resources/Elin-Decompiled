@@ -1,5 +1,14 @@
 var NAVTREEINDEX66 =
 {
+"classGamePrincipal_1_1Item.html#a1cfdcd07445537080af49758160aacd7":[1,0,534,0,6],
+"classGamePrincipal_1_1Item.html#a27f6c303112ef5b9242d9d76ccf4c876":[1,0,534,0,0],
+"classGamePrincipal_1_1Item.html#a3cea37c5f094b2308ea3519afe43238d":[1,0,534,0,4],
+"classGamePrincipal_1_1Item.html#a60572eaf67076b2129f6f54046d4d5f9":[1,0,534,0,7],
+"classGamePrincipal_1_1Item.html#a74c8672543b50afce5f1f75821c2af8a":[1,0,534,0,8],
+"classGamePrincipal_1_1Item.html#a8cf2834e9dcdeec480697979f06ecec9":[1,0,534,0,1],
+"classGamePrincipal_1_1Item.html#a8f1320306688003e3a26b932386a39c2":[1,0,534,0,10],
+"classGamePrincipal_1_1Item.html#acb9a1e11649a3da155a960dcf8cebb5c":[1,0,534,0,5],
+"classGamePrincipal_1_1ItemSlider.html":[1,0,534,1],
 "classGamePrincipal_1_1ItemSlider.html#a3dcb980daf4d4945c58f1949422c393d":[1,0,534,1,4],
 "classGamePrincipal_1_1ItemSlider.html#a5f86d34106189a93e4f8f375602ccf25":[1,0,534,1,1],
 "classGamePrincipal_1_1ItemSlider.html#a617e79616d93ad6b769cd1666f2563ab":[1,0,534,1,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX66 =
 "classGameUpdater_1_1Updater.html#ab0c8af5631686412b4966f8e22cf4e0b":[1,0,540,9,6],
 "classGame_1_1Config.html":[1,0,525,0],
 "classGame_1_1Config.html#a06434c845b8ba76333441c1108988a38":[1,0,525,0,21],
-"classGame_1_1Config.html#a100b5a25d123176c7010ae68dc930e83":[1,0,525,0,24],
-"classGame_1_1Config.html#a12f4e08f88a7cdb69f4f78c89b0c3cfb":[1,0,525,0,5],
-"classGame_1_1Config.html#a1fce64db4ab4a6c0616a459e6a994ceb":[1,0,525,0,0],
-"classGame_1_1Config.html#a223530ce684d56b97afd5a7b4a7851f4":[1,0,525,0,18],
-"classGame_1_1Config.html#a297c69c5e6ebdd6457a45863c0a7d3b8":[1,0,525,0,19],
-"classGame_1_1Config.html#a46675d17b44d78c7b56b88d43e32cbcc":[1,0,525,0,14],
-"classGame_1_1Config.html#a4a0a3aaa6835cf240e90974e9427d2b3":[1,0,525,0,1],
-"classGame_1_1Config.html#a4cf7f5be30a566d0b3e9a39c4a8eb09f":[1,0,525,0,13],
-"classGame_1_1Config.html#a53124610666ff8184226167417e98371":[1,0,525,0,12],
-"classGame_1_1Config.html#a5327cc0b345e3ab1d4dce1746ce2fb43":[1,0,525,0,7]
+"classGame_1_1Config.html#a100b5a25d123176c7010ae68dc930e83":[1,0,525,0,24]
 };

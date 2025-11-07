@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"NumLogCategory_8cs.html":[2,0,0,860],
+"NumLogCategory_8cs_source.html":[2,0,0,860],
 "NumLogManager_8cs.html":[2,0,0,861],
 "NumLogManager_8cs_source.html":[2,0,0,861],
 "NumLogStability_8cs.html":[2,0,0,862],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "QuestInstance_8cs_source.html":[2,0,0,937],
 "QuestIntoDarkness_8cs.html":[2,0,0,938],
 "QuestIntoDarkness_8cs_source.html":[2,0,0,938],
-"QuestIntroInspector_8cs.html":[2,0,0,939],
-"QuestIntroInspector_8cs_source.html":[2,0,0,939],
-"QuestLoytelFarm_8cs.html":[2,0,0,940]
+"QuestIntroInspector_8cs.html":[2,0,0,939]
 };

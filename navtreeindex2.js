@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"BaseCore_8cs_source.html":[2,0,0,2,5],
 "BaseDebuff_8cs.html":[2,0,0,199],
 "BaseDebuff_8cs_source.html":[2,0,0,199],
 "BaseGameScreen_8cs.html":[2,0,0,200],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "CharaFilter_8cs_source.html":[2,0,0,259],
 "CharaGen_8cs.html":[2,0,0,260],
 "CharaGen_8cs_source.html":[2,0,0,260],
-"CharaGenes_8cs.html":[2,0,0,261],
-"CharaGenes_8cs_source.html":[2,0,0,261]
+"CharaGenes_8cs.html":[2,0,0,261]
 };

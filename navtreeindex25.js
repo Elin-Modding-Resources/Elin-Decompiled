@@ -1,5 +1,11 @@
 var NAVTREEINDEX25 =
 {
+"classAI__AttackHome.html":[1,0,69],
+"classAI__AttackHome.html#ad7ea0f6f0aa849fd444905a5cd17e9f0":[1,0,69,0],
+"classAI__Bladder.html":[1,0,70],
+"classAI__Bladder.html#a34fc6731995a1775ed05759d28659635":[1,0,70,1],
+"classAI__Bladder.html#a4f8f070534728775fe2e534ee6dc70dc":[1,0,70,0],
+"classAI__Bladder.html#a6106eb8a006de9e6ed2fc4ad39826af2":[1,0,70,2],
 "classAI__Churyu.html":[1,0,71],
 "classAI__Churyu.html#a3290c98339e233c7eb156b4b467b2bdd":[1,0,71,0],
 "classAI__Churyu.html#ac88e412bcf3cc506e6365624e1028a56":[1,0,71,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Practice.html#a4cd16ff54463bcf8cdaf8ca21b4daee1":[1,0,100,5],
 "classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,100,1],
 "classAI__Practice.html#ad938aabe2a061a66a436cbe954380af4":[1,0,100,0],
-"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,100,2],
-"classAI__Practice.html#af117dac9ba1f30d64ffae8b4466c2116":[1,0,100,4],
-"classAI__Practice.html#af511fc3b8567e3df24946eabaead7861":[1,0,100,6],
-"classAI__Practice.html#aff05913285defc4484ac929900b59f93":[1,0,100,3],
-"classAI__PracticeDummy.html":[1,0,101],
-"classAI__PracticeDummy.html#a03326368461ff11e6229ae15a2cd47c0":[1,0,101,3],
-"classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,101,1]
+"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,100,2]
 };

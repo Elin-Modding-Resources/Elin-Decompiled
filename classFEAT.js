@@ -56,6 +56,7 @@ var classFEAT =
     [ "featGod_trickery1", "classFEAT.html#a996a2893d4d012ac9a4f6d7976058150", null ],
     [ "featGod_wind1", "classFEAT.html#a857bd30e110346b9a20e59a93f42626e", null ],
     [ "featGoddess", "classFEAT.html#af268bfda72544c0fdb0b6804e0faac20", null ],
+    [ "featGoldenFinger", "classFEAT.html#acd3a32f70f870a323f1b92df9d1b4cd6", null ],
     [ "featGolem", "classFEAT.html#a59e94e708b1c016ddebb89e2d7d4da13", null ],
     [ "featGoodKarma", "classFEAT.html#a3a6fba3520068a23d57c1fc50357d255", null ],
     [ "featGourmet", "classFEAT.html#ab968a100573bd4cab5bc98de3f7737a3", null ],

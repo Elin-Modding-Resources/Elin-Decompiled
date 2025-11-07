@@ -1,5 +1,14 @@
 var NAVTREEINDEX95 =
 {
+"classRecipeManager.html#a25ab43108db349acf1928eeaafd0759a":[1,0,1069,22],
+"classRecipeManager.html#a26f4ff13eeb57ea9765a5c3d95eb0e88":[1,0,1069,4],
+"classRecipeManager.html#a31d21cfdafbd1d03ddbe16cd4d9ec9d5":[1,0,1069,12],
+"classRecipeManager.html#a4e9316f14703649f499ff90ac5fed97d":[1,0,1069,6],
+"classRecipeManager.html#a5002a20288ffda7a359f02dde43384bb":[1,0,1069,7],
+"classRecipeManager.html#a55425d40b3d652e142df32604a70fb70":[1,0,1069,17],
+"classRecipeManager.html#a5da142696079aedce2d43e94e76b964c":[1,0,1069,19],
+"classRecipeManager.html#a63f5bd20a49c7a39dd04505922ba8fa3":[1,0,1069,5],
+"classRecipeManager.html#a7b921412204381fc644ce0ac8abcec62":[1,0,1069,11],
 "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83":[1,0,1069,0],
 "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83a1ffed751bd6aaec8a59eb3ad05c3e927":[1,0,1069,0,1],
 "classRecipeManager.html#a956b89668e15b06d8aff9349826ead83a453e6aa38d87b28ccae545967c53004f":[1,0,1069,0,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX95 =
 "classReligionManager.html#a282988e7ede83a0693f9b7f042d7f58d":[1,0,1093,11],
 "classReligionManager.html#a2b096a7b38a79e753733244a073f08c5":[1,0,1093,1],
 "classReligionManager.html#a31d2c73847ec475e8304680c0db13e71":[1,0,1093,3],
-"classReligionManager.html#a3592a593ee6ad3871677de25f026fd39":[1,0,1093,15],
-"classReligionManager.html#a39f22beeef8040eac5063b9e9388dacb":[1,0,1093,9],
-"classReligionManager.html#a494746b064035d10a70cf080a9a237ea":[1,0,1093,14],
-"classReligionManager.html#a5feaf61a148e5a86084fcb315b9cfa34":[1,0,1093,0],
-"classReligionManager.html#a6413c06600ad14eb96763f5ff99d7c9c":[1,0,1093,18],
-"classReligionManager.html#a64b6c1e970d860efd2e4306d66eda169":[1,0,1093,6],
-"classReligionManager.html#a6cce1d812241193fbb838fad49b50c84":[1,0,1093,10],
-"classReligionManager.html#a72ee83cb99211d14cedcd45db4fb9266":[1,0,1093,4],
-"classReligionManager.html#a76dc8a310c6021205baa8049cb671396":[1,0,1093,16],
-"classReligionManager.html#a966f03357803b04e5947b80ef23271e0":[1,0,1093,19]
+"classReligionManager.html#a3592a593ee6ad3871677de25f026fd39":[1,0,1093,15]
 };

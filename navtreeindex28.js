@@ -1,5 +1,11 @@
 var NAVTREEINDEX28 =
 {
+"classAM__Mine.html#ae2fa680be538fd3f11de0f6fd4b7dfa9":[1,0,153,7],
+"classAM__Mine.html#aea1067114d1aa999211a08e03f2bbb4d":[1,0,153,6],
+"classAM__MiniGame.html":[1,0,154],
+"classAM__MiniGame.html#a00bcce97d902ca3e5ba88fa06782b063":[1,0,154,1],
+"classAM__MiniGame.html#a2494e88520e26f48488c18fb064099e8":[1,0,154,0],
+"classAM__MiniGame.html#a36aa1e9275ea7a58a96098dabe1285d0":[1,0,154,3],
 "classAM__MiniGame.html#a50c55c881857f40f66b50a2484041f64":[1,0,154,2],
 "classAM__MiniGame.html#ab7c2c5b8c59d76d78b3b167f5837f314":[1,0,154,4],
 "classAM__MoveInstalled.html":[1,0,155],
@@ -243,11 +249,5 @@ var NAVTREEINDEX28 =
 "classActBall.html#af57567b68aa22a0c4836faaa89927e6b":[1,0,15,1],
 "classActBall.html#af868d267b1ceecc66cea9d026508712e":[1,0,15,2],
 "classActBaseAttack.html":[1,0,16],
-"classActBash.html":[1,0,17],
-"classActBash.html#a3c263fd7d37fee8619cf006957dcf46f":[1,0,17,0],
-"classActBash.html#a83b37c1eae905d51673df4259d086f49":[1,0,17,1],
-"classActBolt.html":[1,0,18],
-"classActBolt.html#a03d8a20551ae8e5479357cb2e10c6b5d":[1,0,18,4],
-"classActBolt.html#a18d6ceb7cc1eb4d471bb93b53ef780d8":[1,0,18,5],
-"classActBolt.html#a372d79e74bd30421670e59de92b65631":[1,0,18,3]
+"classActBash.html":[1,0,17]
 };

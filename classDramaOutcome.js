@@ -53,6 +53,7 @@ var classDramaOutcome =
     [ "StartNewGame", "classDramaOutcome.html#a67a2c4cd195cfb682078b76b626d0896", null ],
     [ "StartNewGame2", "classDramaOutcome.html#aec8d631124b15eb0b364c75b198a31c5", null ],
     [ "Tutorial1", "classDramaOutcome.html#afde0716948fd98986696bb8e3330c8ec", null ],
+    [ "upgrade_miscreation", "classDramaOutcome.html#a7cf98cad00619ed71121d0c3e1f08f17", null ],
     [ "WelcomeMsg", "classDramaOutcome.html#a41d41dcbb226bf7da45ef3c85763180a", null ],
     [ "idJump", "classDramaOutcome.html#a23ed38266dd3a62161058dcb61ff35df", null ],
     [ "manager", "classDramaOutcome.html#a874b4e3e296bb4390005ae2676323da9", null ],

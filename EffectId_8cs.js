@@ -132,6 +132,7 @@ var EffectId_8cs =
       [ "Bit", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aed98fd4f2d1aeadad43670b2d07d5b40", null ],
       [ "Rocket", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a15e8bfff2c10ca22da244d85b2bf7d94", null ],
       [ "StripBlessing", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a03214fc817b15298ffbf67eca435973e", null ],
-      [ "Flare", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a38a368670cc1a53c88f52116bd063e08", null ]
+      [ "Flare", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a38a368670cc1a53c88f52116bd063e08", null ],
+      [ "GravityGun", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a7a1fbd0243efae87bb52210f6d3d7fb7", null ]
     ] ]
 ];

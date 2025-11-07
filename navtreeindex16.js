@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"ToggleType_8cs_source.html":[2,0,0,1296],
+"ToneDataList_8cs.html":[2,0,0,2,85],
 "ToneDataList_8cs_source.html":[2,0,0,2,85],
 "TooltipData_8cs.html":[2,0,0,3,104],
 "TooltipData_8cs_source.html":[2,0,0,3,104],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TraitDetector_8cs_source.html":[2,0,0,1417],
 "TraitDiary_8cs.html":[2,0,0,1418],
 "TraitDiary_8cs_source.html":[2,0,0,1418],
-"TraitDollHouse_8cs.html":[2,0,0,1419],
-"TraitDollHouse_8cs_source.html":[2,0,0,1419],
-"TraitDoorAutoShoji_8cs.html":[2,0,0,1422]
+"TraitDollHouse_8cs.html":[2,0,0,1419]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"TraitDollHouse_8cs_source.html":[2,0,0,1419],
+"TraitDoorAutoShoji_8cs.html":[2,0,0,1422],
 "TraitDoorAutoShoji_8cs_source.html":[2,0,0,1422],
 "TraitDoorAuto_8cs.html":[2,0,0,1421],
 "TraitDoorAuto_8cs_source.html":[2,0,0,1421],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "TraitItemToggle_8cs_source.html":[2,0,0,1543],
 "TraitItem_8cs.html":[2,0,0,1541],
 "TraitItem_8cs_source.html":[2,0,0,1541],
-"TraitJukeBox_8cs.html":[2,0,0,1544],
-"TraitJukeBox_8cs_source.html":[2,0,0,1544],
-"TraitKettle_8cs.html":[2,0,0,1545]
+"TraitJukeBox_8cs.html":[2,0,0,1544]
 };

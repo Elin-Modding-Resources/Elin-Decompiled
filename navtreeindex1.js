@@ -96,6 +96,7 @@ var NAVTREEINDEX1 =
 "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da720b88f90caa40caf0425beb49ceeb1c":[2,0,0,167,0,8],
 "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da7b9cf007806ed854cd12ab800c8a982b":[2,0,0,167,0,15],
 "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da84c1f72005ef1d65871a159e459e82b2":[2,0,0,167,0,6],
+"AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da8a88c39cef668fb55f188af09665bd40":[2,0,0,167,0,25],
 "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da954601796c16fa224b98f54b380855c7":[2,0,0,167,0,19],
 "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2daa45e1d32f46ddbe98028bcb9df1387d8":[2,0,0,167,0,4],
 "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2daade0d77472db3456ad417565c9f1680f":[2,0,0,167,0,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "BaseCard_8cs_source.html":[2,0,0,197],
 "BaseCondition_8cs.html":[2,0,0,198],
 "BaseCondition_8cs_source.html":[2,0,0,198],
-"BaseCore_8cs.html":[2,0,0,2,5],
-"BaseCore_8cs_source.html":[2,0,0,2,5]
+"BaseCore_8cs.html":[2,0,0,2,5]
 };
