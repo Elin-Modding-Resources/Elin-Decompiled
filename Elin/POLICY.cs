@@ -33,7 +33,7 @@ public class POLICY
 
 	public const int mass_exhibition = 2814;
 
-	public const int prohibition = 2503;
+	public const int food_for_people = 2502;
 
 	public const int bed_quality = 2812;
 
@@ -59,7 +59,7 @@ public class POLICY
 
 	public const int impressment = 2504;
 
-	public const int food_for_people = 2502;
+	public const int prohibition = 2503;
 
 	public const int wealth_tax = 2500;
 
@@ -108,8 +108,8 @@ public class POLICY
 	public static readonly int[] IDS = new int[51]
 	{
 		2816, 2817, 2818, 2819, 2820, 2821, 2824, 2823, 2825, 2826,
-		2827, 2828, 2815, 2822, 2814, 2503, 2812, 2514, 2513, 2512,
-		2511, 2510, 2509, 2515, 2508, 2506, 2505, 2504, 2502, 2500,
+		2827, 2828, 2815, 2822, 2814, 2502, 2812, 2514, 2513, 2512,
+		2511, 2510, 2509, 2515, 2508, 2506, 2505, 2504, 2503, 2500,
 		2813, 2507, 2516, 2501, 2701, 2811, 2810, 2800, 2715, 2700,
 		2711, 2710, 2712, 2708, 2707, 2706, 2705, 2704, 2703, 2702,
 		2709

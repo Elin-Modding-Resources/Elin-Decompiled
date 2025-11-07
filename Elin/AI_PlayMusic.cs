@@ -280,7 +280,7 @@ public class AI_PlayMusic : AIAct
 						}
 					}
 					List<Chara> list = owner.pos.ListWitnesses(owner, 4, WitnessType.music);
-					int num = owner.Evalue(241) * (100 + toolLv) / 100;
+					int num = (owner.Evalue(241) + tool?.Evalue(241)).Value * (100 + toolLv) / 100;
 					int num2 = 0;
 					foreach (Chara item2 in list)
 					{
@@ -574,8 +574,8 @@ public class AI_PlayMusic : AIAct
 			}
 			if (thing.id == "money" && !owner.IsPC)
 			{
-				int num2 = (owner.Evalue(241) * 10 + 100) / ((owner.IsPCFaction && owner.memberType == FactionMemberType.Default) ? 1 : 10);
-				if (owner.GetCurrency() - num2 > 0)
+				int? obj = ((owner.Evalue(241) + tool?.Evalue(241)) * 10 + 100) / ((owner.IsPCFaction && owner.memberType == FactionMemberType.Default) ? 1 : 10);
+				if (owner.GetCurrency() - obj > 0)
 				{
 					owner.c_allowance += num;
 					owner.ModCurrency(-num);

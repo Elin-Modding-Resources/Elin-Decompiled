@@ -1603,13 +1603,13 @@ public class Thing : Card
 				}
 				if (!(num >= (float)source.anime[0]))
 				{
-					p.tile += num * (float)((!flipX) ? 1 : (-1));
+					p.tile += num * (float)((!(p.tile < 0f)) ? 1 : (-1));
 				}
 			}
 			else
 			{
 				float num2 = Time.realtimeSinceStartup * 1000f / (float)source.anime[1] % (float)source.anime[0];
-				p.tile += num2 * (float)((!flipX) ? 1 : (-1));
+				p.tile += num2 * (float)((!(p.tile < 0f)) ? 1 : (-1));
 			}
 			break;
 		}

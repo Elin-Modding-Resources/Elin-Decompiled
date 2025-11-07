@@ -48,7 +48,7 @@ public class SpriteReplacer
 		return dictSkins;
 	}
 
-	public bool HasSprite(string id)
+	public bool HasSprite(string id, RenderData renderData = null)
 	{
 		if (!isChecked)
 		{
@@ -66,6 +66,10 @@ public class SpriteReplacer
 				else
 				{
 					string text = CorePath.packageCore + "Texture/Item/" + id;
+					if (!File.Exists(text + ".png") && renderData != null)
+					{
+						text = CorePath.packageCore + "Texture/Item/" + renderData.name;
+					}
 					if (File.Exists(text + ".png"))
 					{
 						data = new SpriteData

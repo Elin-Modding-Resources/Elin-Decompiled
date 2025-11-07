@@ -177,11 +177,11 @@ public class Party : EClass
 		return num;
 	}
 
-	public bool HasElement(int ele)
+	public bool HasElement(int ele, bool excludePC = false)
 	{
 		foreach (Chara member in members)
 		{
-			if (member.HasElement(ele))
+			if ((!excludePC || !member.IsPC) && member.HasElement(ele))
 			{
 				return true;
 			}

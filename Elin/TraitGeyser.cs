@@ -1,3 +1,4 @@
-public class TraitGeyser : TraitSpot
+public class TraitGeyser : TraitBath
 {
+	public override int radius => 4;
 }

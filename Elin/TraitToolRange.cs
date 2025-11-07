@@ -1,10 +1,21 @@
 public class TraitToolRange : TraitTool
 {
+	public enum HitEffect
+	{
+		None,
+		Rocket,
+		Gravity
+	}
+
+	public virtual HitEffect GroundHitEffect => HitEffect.None;
+
 	public override bool CanAutofire => true;
 
 	public virtual bool NeedAmmo => true;
 
 	public virtual bool AutoRefillAmmo => false;
+
+	public virtual int ChanceMissAim => 0;
 
 	public int MaxAmmo => (GetParam(1) ?? "12").ToInt() * (100 + owner.Evalue(600) * 5) / 100;
 

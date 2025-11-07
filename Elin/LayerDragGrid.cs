@@ -458,7 +458,7 @@ public class LayerDragGrid : LayerBaseCraft
 		int num = ((owner.count == -1) ? 1 : owner.count);
 		for (int i = 0; i < num; i++)
 		{
-			List<Thing> list = cc.things.List((Thing t) => owner.ShouldShowGuide(t));
+			List<Thing> list = cc.things.List((Thing t) => owner.ShouldShowGuide(t), onlyAccessible: true);
 			if (list.Count > 0)
 			{
 				Thing t2 = list.RandomItem();

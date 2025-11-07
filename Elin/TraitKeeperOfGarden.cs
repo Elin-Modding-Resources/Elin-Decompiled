@@ -1,4 +1,4 @@
-public class TraitUniqueCharaNoJoin : TraitUniqueChara
+public class TraitKeeperOfGarden : TraitUniqueChara
 {
 	public override bool CanInvite => false;
 

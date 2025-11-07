@@ -24,5 +24,6 @@ public enum AnimeID
 	Ride,
 	Truck,
 	PlayMusic,
-	QuakeMini
+	QuakeMini,
+	Gravity
 }

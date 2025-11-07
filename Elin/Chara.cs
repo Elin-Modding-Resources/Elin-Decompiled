@@ -4698,6 +4698,12 @@ public class Chara : Card, IPathfindWalker
 				AddThing("1071");
 			}
 			break;
+		case "namamani":
+			if (onCreate)
+			{
+				AddThing("gun_gravity2");
+			}
+			break;
 		case "lomias":
 			if (onCreate)
 			{
@@ -4784,7 +4790,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		}
-		if (onCreate || !TryEquipRanged())
+		if (!TryEquipRanged())
 		{
 			switch (id)
 			{
@@ -7803,7 +7809,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			if (id == "keeper_garden")
+			if (!trait.CanChangeAffinity)
 			{
 				return;
 			}
@@ -8255,7 +8261,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				continue;
 			}
-			bool flag2 = chara.HasElement(1225);
+			bool flag2 = chara.HasElement(1225) && !chara.GetBool(126);
 			if ((!flag2 && (flag || EClass.rnd(2) == 0 || !chara.HasCondition<StanceTaunt>())) || chara.HasCooldown(1225))
 			{
 				continue;

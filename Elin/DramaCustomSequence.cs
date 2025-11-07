@@ -331,6 +331,10 @@ public class DramaCustomSequence : EClass
 			Choice("disableMove", "_disableMove");
 		}
 		Choice((c.GetInt(123) == 0) ? "daSleepBeside" : "daSleepBeside2", "_sleepBeside");
+		if (c.HasElement(1225))
+		{
+			Choice((c.GetInt(126) == 0) ? "daDisableLoyal" : "daDisableLoyal2", "_disableLoyal");
+		}
 		if (c.GetInt(113) == 0)
 		{
 			Choice("daEquipSharedOff", "_toggleSharedEquip");
@@ -564,6 +568,13 @@ public class DramaCustomSequence : EClass
 			}
 		});
 		_Talk("tg", GetTopic(c, (c.GetInt(123) == 0) ? "ok" : "shutup"));
+		End();
+		Step("_disableLoyal");
+		Method(delegate
+		{
+			c.SetInt(126, (c.GetInt(126) == 0) ? 1 : 0);
+		});
+		_Talk("tg", GetTopic(c, (c.GetInt(126) == 0) ? "shutup" : "shutup2"));
 		End();
 		Step("_insult");
 		Method(delegate

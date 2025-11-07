@@ -812,6 +812,14 @@ public class DramaManager : EMono
 				});
 			});
 			break;
+		case "removeItem":
+			AddEvent(delegate
+			{
+				Thing thing = EMono.pc.things.Find(p2);
+				int num2 = p3.ToInt();
+				thing?.ModNum((num2 == 0) ? (-1) : (-num2));
+			});
+			break;
 		case "destroyItem":
 			AddEvent(delegate
 			{
@@ -1131,6 +1139,8 @@ public class DramaManager : EMono
 			return EMono.player.dialogFlags.TryGetValue(array[1], 0) != 0;
 		case "!hasFlag":
 			return EMono.player.dialogFlags.TryGetValue(array[1], 0) == 0;
+		case "!hasMiscreation":
+			return !EMono.pc.party.HasElement(1248, excludePC: true);
 		case "hasItem":
 			return EMono.pc.things.Find(array[1]) != null;
 		case "nasuDeliver":

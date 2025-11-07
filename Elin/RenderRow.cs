@@ -260,7 +260,7 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 
 	public Sprite GetSprite(int dir = 0, int skin = 0, bool snow = false)
 	{
-		if (replacer.HasSprite(idSprite))
+		if (replacer.HasSprite(idSprite, renderData))
 		{
 			return replacer.data.GetSprite(snow);
 		}

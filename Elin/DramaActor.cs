@@ -87,7 +87,7 @@ public class DramaActor : EMono
 			}
 			if (chara != null)
 			{
-				dialog.textAffinity.text = ((chara.c_bossType != 0) ? " - " : (chara.affinity.Name + " (" + chara._affinity + ")"));
+				dialog.textAffinity.text = ((chara.c_bossType != 0 || !chara.trait.CanChangeAffinity) ? " - " : (chara.affinity.Name + " (" + chara._affinity + ")"));
 				dialog.layoutInterest.DestroyChildren();
 				int num = chara.interest / 10 + 1;
 				if (chara.interest <= 0)

@@ -698,7 +698,7 @@ public class ThingContainer : List<Thing>
 			while (enumerator.MoveNext())
 			{
 				Thing current = enumerator.Current;
-				if (!current.IsContainer && current.trait.CanBeStolen && !current.HasTag(CTAG.gift))
+				if (!current.IsContainer && current.trait.CanBeStolen && !current.HasTag(CTAG.gift) && (!current.IsEquipmentOrRangedOrAmmo || !current.IsUnique))
 				{
 					list.Add(current);
 				}

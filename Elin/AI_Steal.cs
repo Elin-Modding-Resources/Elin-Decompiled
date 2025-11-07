@@ -56,11 +56,12 @@ public class AI_Steal : AI_TargetCard
 	public override IEnumerable<Status> Run()
 	{
 		Chara chara = target.Chara;
+		bool negate = chara != null && chara.HasElement(426);
 		if (chara != null)
 		{
-			if (chara.HasElement(426))
+			if (negate && owner.Evalue(1662) == 0)
 			{
-				chara.Say("abStealNegate", chara);
+				owner.Say("abStealNegate", chara);
 				yield return Cancel();
 			}
 			target = chara.things.FindStealable();
@@ -159,6 +160,10 @@ public class AI_Steal : AI_TargetCard
 								}
 							}
 							if (c.IsUnique)
+							{
+								num2 *= 2;
+							}
+							if (negate)
 							{
 								num2 *= 2;
 							}

@@ -21,6 +21,11 @@ public class TaskChopWood : TaskDesignation
 
 	public override HitResult GetHitResult()
 	{
+		Thing log = GetLog();
+		if (log != null && log.isNPCProperty && EClass._zone.IsUserZone && EClass.game.principal.disableUsermapBenefit)
+		{
+			return HitResult.Invalid;
+		}
 		if (GetLog() != null)
 		{
 			return HitResult.Valid;

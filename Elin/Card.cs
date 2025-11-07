@@ -5145,6 +5145,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (Chara.IsMachine)
 			{
 				bool flag3 = Chara.HasElement(1248);
+				if (chance(200))
+				{
+					list.Add(ThingGen.Create("memory_chip"));
+				}
 				if (chance(20))
 				{
 					list.Add(ThingGen.Create(flag3 ? "scrap" : "microchip"));

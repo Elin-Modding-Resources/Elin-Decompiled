@@ -392,6 +392,19 @@ public class DramaOutcome : EMono
 		EMono._zone.AddChara("swordkeeper", 45, 52);
 	}
 
+	public void upgrade_miscreation()
+	{
+		Chara chara = EMono.pc.party.members.Find((Chara c) => !c.IsPC && c.HasElement(1248));
+		int num = chara.Evalue(1248);
+		chara.SetFeat(1248, 0);
+		for (int i = 0; i < num; i++)
+		{
+			Rand.SetSeed(chara.uid + i);
+			DNA.GenerateRandomGene(chara.LV + 30, chara.uid + i).c_DNA.Apply(chara, reverse: false);
+			Rand.SetSeed();
+		}
+	}
+
 	public static bool If(DramaChoice item, Chara c)
 	{
 		_ = item.IF.Split('/')[0] == "costHire";

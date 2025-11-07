@@ -131,5 +131,6 @@ public enum EffectId
 	Bit = 307,
 	Rocket = 308,
 	StripBlessing = 309,
-	Flare = 310
+	Flare = 310,
+	GravityGun = 311
 }

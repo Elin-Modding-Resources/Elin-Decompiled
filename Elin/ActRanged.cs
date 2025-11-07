@@ -96,10 +96,9 @@ public class ActRanged : ActThrow
 		{
 			return false;
 		}
-		bool flag = weapon.trait is TraitToolRangeGun;
-		bool flag2 = weapon.trait is TraitToolRangeCane;
-		bool isRocket = weapon.trait is TraitToolRangeGunRocket;
-		GameSetting.EffectData effectData = EClass.setting.effect.guns.TryGetValue(weapon.id) ?? EClass.setting.effect.guns[flag2 ? "cane" : (flag ? "gun" : "bow")];
+		TraitToolRange traitRange = weapon.trait as TraitToolRange;
+		bool flag = weapon.trait is TraitToolRangeCane;
+		GameSetting.EffectData effectData = EClass.setting.effect.guns.TryGetValue(weapon.id) ?? EClass.setting.effect.guns[flag ? "cane" : ((weapon.trait is TraitToolRangeGun) ? "gun" : "bow")];
 		bool hasHit = false;
 		int numFire = effectData.num;
 		int numFireWithoutDamageLoss = numFire;
@@ -128,7 +127,7 @@ public class ActRanged : ActThrow
 			num3 = Mathf.Max(1, num3 * 100 / (100 + num4 * 5));
 		}
 		string missSound = ((weapon.trait is TraitToolRangeGun) ? "miss_bullet" : "miss_arrow");
-		if (weapon.trait is TraitToolRangeCane)
+		if (flag)
 		{
 			foreach (Element item in weapon.elements.dict.Values.Where((Element e) => e.source.categorySub == "eleAttack"))
 			{
@@ -322,7 +321,7 @@ public class ActRanged : ActThrow
 					Card tC = Act.TC;
 					Chara cC = Act.CC;
 					Point point = Act.TP.Copy();
-					if (isRocket && EClass.rnd(3) == 0)
+					if (traitRange.ChanceMissAim > 0 && EClass.rnd(traitRange.ChanceMissAim) == 0)
 					{
 						Act.TP.Set(Act.TP.GetRandomNeighbor());
 					}
@@ -372,19 +371,29 @@ public class ActRanged : ActThrow
 							}
 						}
 					}
-					if (isRocket)
+					switch (traitRange.GroundHitEffect)
 					{
+					case TraitToolRange.HitEffect.Rocket:
 						ActEffect.ProcAt(EffectId.Rocket, AttackProcess.Current.GetRocketPower(), BlessedState.Normal, Act.CC, null, Act.TP, isNeg: true, new ActRef
 						{
 							origin = Act.CC.Chara,
 							refThing = weapon,
 							aliasEle = "eleImpact"
 						});
+						break;
+					case TraitToolRange.HitEffect.Gravity:
+						ActEffect.ProcAt(EffectId.GravityGun, AttackProcess.Current.GetRocketPower() / 2, BlessedState.Normal, Act.CC, null, Act.TP, isNeg: true, new ActRef
+						{
+							origin = Act.CC.Chara,
+							refThing = weapon,
+							aliasEle = "eleImpact"
+						});
+						break;
 					}
 					Act.TC = tC;
 					Act.CC = cC;
 					Act.TP.Set(point);
-					if (!isRocket && (Act.TC == null || !Act.TC.IsAliveInCurrentZone))
+					if (traitRange.GroundHitEffect == TraitToolRange.HitEffect.None && (Act.TC == null || !Act.TC.IsAliveInCurrentZone))
 					{
 						break;
 					}
