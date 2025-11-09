@@ -1,5 +1,15 @@
 var NAVTREEINDEX96 =
 {
+"classReligionMachine.html":[1,0,1092],
+"classReligionMachine.html#a6d2dc837664a73ea3e4a7e87d908cc5d":[1,0,1092,0],
+"classReligionManager.html":[1,0,1093],
+"classReligionManager.html#a036902825c693160d49a77bdd20db539":[1,0,1093,20],
+"classReligionManager.html#a13ab03f6808ef49713bd40d42086a1ba":[1,0,1093,5],
+"classReligionManager.html#a1b1d6cc19725f30f99321f75c03a4302":[1,0,1093,17],
+"classReligionManager.html#a282988e7ede83a0693f9b7f042d7f58d":[1,0,1093,11],
+"classReligionManager.html#a2b096a7b38a79e753733244a073f08c5":[1,0,1093,1],
+"classReligionManager.html#a31d2c73847ec475e8304680c0db13e71":[1,0,1093,3],
+"classReligionManager.html#a3592a593ee6ad3871677de25f026fd39":[1,0,1093,15],
 "classReligionManager.html#a39f22beeef8040eac5063b9e9388dacb":[1,0,1093,9],
 "classReligionManager.html#a494746b064035d10a70cf080a9a237ea":[1,0,1093,14],
 "classReligionManager.html#a5feaf61a148e5a86084fcb315b9cfa34":[1,0,1093,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX96 =
 "classRenderRow.html#ad57ed01141ba99b76edb07d907510bc6":[1,0,1119,36],
 "classRenderRow.html#adb9686ebbfe61770f51f846de0b14d1a":[1,0,1119,27],
 "classRenderRow.html#adce2993750fa8bfc77d6de91231e1fce":[1,0,1119,7],
-"classRenderRow.html#adddb275abf4b84cdecfd290be6489365":[1,0,1119,15],
-"classRenderRow.html#ade8721fbc115f980f2166568a247c03f":[1,0,1119,23],
-"classRenderRow.html#ae20b0c2156133bf41691d46496cfa6f4":[1,0,1119,4],
-"classRenderRow.html#ae568a46541cb140778697cfbf49429ef":[1,0,1119,16],
-"classRenderRow.html#ae8b49ae679e6f97b4eff323e4357d364":[1,0,1119,29],
-"classRenderRow.html#aea949f00c2d71b1a2065f925193da56d":[1,0,1119,26],
-"classRenderRow.html#aed3ac25d06114085ec605995cd3d9171":[1,0,1119,38],
-"classRenderRow.html#aed9f55425b781368edaf43d3316bf539":[1,0,1119,47],
-"classRenderRow.html#aeef0ce3d1caad12ea1943519e9decdb7":[1,0,1119,35],
-"classRenderRow.html#af0237d9eb8b48e4d17919ed001f91c49":[1,0,1119,9],
-"classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10":[1,0,1119,41]
+"classRenderRow.html#adddb275abf4b84cdecfd290be6489365":[1,0,1119,15]
 };

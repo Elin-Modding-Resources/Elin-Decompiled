@@ -8,6 +8,7 @@ var classTraitMonsterBall =
     [ "EffectDead", "classTraitMonsterBall.html#abf8484d5fc4555b0219682768e8d0160", null ],
     [ "IsDuponneBall", "classTraitMonsterBall.html#a92e81fe688eef43f0edd42d1e2bf7a2c", null ],
     [ "IsLittleBall", "classTraitMonsterBall.html#aff66f460e585dd1fde7a184789916b5d", null ],
+    [ "IsSilvercatBall", "classTraitMonsterBall.html#a6eefb5f490ac882b1956b6103293e873", null ],
     [ "IsThrowMainAction", "classTraitMonsterBall.html#a8c077132dd854a5d52130317cb183c09", null ],
     [ "ThrowType", "classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28", null ]
 ];

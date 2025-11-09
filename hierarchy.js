@@ -1816,7 +1816,8 @@ var hierarchy =
         [ "TraitMirror", "classTraitMirror.html", null ],
         [ "TraitMonsterBall", "classTraitMonsterBall.html", [
           [ "TraitDuponneBall", "classTraitDuponneBall.html", null ],
-          [ "TraitLittleBall", "classTraitLittleBall.html", null ]
+          [ "TraitLittleBall", "classTraitLittleBall.html", null ],
+          [ "TraitSilvercatBall", "classTraitSilvercatBall.html", null ]
         ] ],
         [ "TraitMoongate", "classTraitMoongate.html", [
           [ "TraitMoongateEx", "classTraitMoongateEx.html", null ]

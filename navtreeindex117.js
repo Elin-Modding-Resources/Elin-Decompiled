@@ -1,5 +1,15 @@
 var NAVTREEINDEX117 =
 {
+"classTraitChara.html#aead06d14cb0056f03792b19cf0228ff6":[1,0,1482,16],
+"classTraitChara.html#af7fa7f221aa381be2ee34dd822ef25d3":[1,0,1482,41],
+"classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3":[1,0,1482,1],
+"classTraitChef.html":[1,0,1483],
+"classTraitChef.html#a0cb367e1a36ee27848151015571b0967":[1,0,1483,0],
+"classTraitChef.html#aabf5e2cf6a203954522b31e5398ee049":[1,0,1483,1],
+"classTraitChest.html":[1,0,1484],
+"classTraitChest.html#a844ef34ac1868307a3b79a00864d30b6":[1,0,1484,0],
+"classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1484,1],
+"classTraitChestMerchant.html":[1,0,1485],
 "classTraitChestMerchant.html#aa0c655db5ffc09340129a4b1ea608f6b":[1,0,1485,0],
 "classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1485,2],
 "classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1485,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitDoor.html#adf1a3b9932603789145e294254d33fbe":[1,0,1530,3],
 "classTraitDoor.html#ae678481c510684deb2fee593cb539b51":[1,0,1530,9],
 "classTraitDoor.html#ae97feebb4cd06140e4b276757ee8170c":[1,0,1530,12],
-"classTraitDoor.html#aefdf075fedcd96d092297ef79a8fce98":[1,0,1530,19],
-"classTraitDoorAuto.html":[1,0,1531],
-"classTraitDoorAuto.html#a421ee44da149ef2a08b3fbfa85a3e2ca":[1,0,1531,0],
-"classTraitDoorAuto.html#a7148a84f436620e642691776018b42f4":[1,0,1531,1],
-"classTraitDoorAutoShoji.html":[1,0,1532],
-"classTraitDoorAutoShoji.html#a6e3209cbb2b148f8073cfaccd5980424":[1,0,1532,1],
-"classTraitDoorAutoShoji.html#abec3329e1d1e91c4294dce4e3e25b129":[1,0,1532,0],
-"classTraitDoorBell.html":[1,0,1533],
-"classTraitDoorBell.html#a60355c6c79902899dab8139d7b7dffad":[1,0,1533,1],
-"classTraitDoorBell.html#a66facc2f3eb6cdb5c0370fa66cb27bcd":[1,0,1533,0],
-"classTraitDoorBoat.html":[1,0,1534]
+"classTraitDoor.html#aefdf075fedcd96d092297ef79a8fce98":[1,0,1530,19]
 };

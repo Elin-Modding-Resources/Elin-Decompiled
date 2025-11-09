@@ -1,5 +1,16 @@
 var NAVTREEINDEX122 =
 {
+"classTraitRationMaker.html#ad6742930d82377b349b1d82f82215bb9":[1,0,1783,4],
+"classTraitRecipe.html":[1,0,1784],
+"classTraitRecipe.html#a00fac5d4b75557ba50d7c52893e3da5f":[1,0,1784,8],
+"classTraitRecipe.html#a041a843f492448a73dc3c4f6966205be":[1,0,1784,1],
+"classTraitRecipe.html#a0df3785eee77cbd0457e3b26291e60c4":[1,0,1784,0],
+"classTraitRecipe.html#a3a09306af1b356daf7648a5c8d6422ad":[1,0,1784,9],
+"classTraitRecipe.html#a6257a9c12ae0a2b44150f40b2407f8bd":[1,0,1784,4],
+"classTraitRecipe.html#a8bc4ee4817fb8db2cd2a688c611e2337":[1,0,1784,6],
+"classTraitRecipe.html#a976f12d4a98e6009c6d41d3ca7214279":[1,0,1784,7],
+"classTraitRecipe.html#aa609c89aa917d5d61b9b3b35cb3fc6c5":[1,0,1784,3],
+"classTraitRecipe.html#aaa59f50841aa5f8763647eaa24cc1dfb":[1,0,1784,5],
 "classTraitRecipe.html#aacdc95f9c38dad8b0f60400eef441b83":[1,0,1784,2],
 "classTraitRecipe.html#ae1b45d4194d49bbe1da69881d46a743d":[1,0,1784,10],
 "classTraitRecipeBook.html":[1,0,1785],
@@ -238,16 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitShrine.html#ab254dcb70f5cf92092d05190f6bdf141":[1,0,1826,1],
 "classTraitShrine.html#ac8c9cb2a257402790886a7c4d73e4f43":[1,0,1826,6],
 "classTraitShrine.html#af0f2426934c4e0597c3bcb659657ce01":[1,0,1826,0],
-"classTraitSlaver.html":[1,0,1827],
-"classTraitSlaver.html#a0cd986ad30e4b07d9a52ae142bc9b976":[1,0,1827,2],
-"classTraitSlaver.html#a812b3511171eaf5a9bc051902cc23856":[1,0,1827,0],
-"classTraitSlaver.html#ac441dd02a62a5446ee6382966679e280":[1,0,1827,1],
-"classTraitSlotMachine.html":[1,0,1828],
-"classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628":[1,0,1828,0],
-"classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1828,2],
-"classTraitSlotMachine.html#adefe8cefa9e242e1fcdaab8dff1a0756":[1,0,1828,1],
-"classTraitSmelter.html":[1,0,1829],
-"classTraitSmelter.html#a085a6739e2464e952545e9a02f30721e":[1,0,1829,4],
-"classTraitSmelter.html#a3180454786ce77336f6f31befaec2bf5":[1,0,1829,2],
-"classTraitSmelter.html#a5bbbc27e3581ae203ed08f424adbf78a":[1,0,1829,3]
+"classTraitSilvercatBall.html":[1,0,1827]
 };

@@ -59,6 +59,7 @@ var classGame =
     [ "seed", "classGame.html#ae12b72a9348adf2fac318a403394f9be", null ],
     [ "sessionMin", "classGame.html#a15217f5de6c87ef7b23e921885a038cb", null ],
     [ "spatials", "classGame.html#a66686ed40b2f75c85ad2a7a84f839c09", null ],
+    [ "startVersion", "classGame.html#ab25d260f6837c8fad664a8d59a2697b0", null ],
     [ "survival", "classGame.html#a33b08d909a9b1324b025810711eb8996", null ],
     [ "teleports", "classGame.html#a69977c67b81e6e151a516876c77361a4", null ],
     [ "timeSinceStart", "classGame.html#add1c4d804bf54ef2718272d5c5261141", null ],

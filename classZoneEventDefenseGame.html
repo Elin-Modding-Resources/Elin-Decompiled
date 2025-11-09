@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.231 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.232 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -351,40 +351,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classZoneEventQuest.html#a7ac1502d9714ebec4d2ba4486ad97e27">ZoneEventQuest</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">94</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>    {</div>
-<div class="line"><span class="lineno">   96</span>        QuestDefenseGame.lastWave = <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a>;</div>
-<div class="line"><span class="lineno">   97</span>        QuestDefenseGame.bonus = <a class="code hl_variable" href="classZoneEventDefenseGame.html#a028f37450a45faa2f3535b271ccf4a99">bonus</a>;</div>
-<div class="line"><span class="lineno">   98</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;wave:&quot;</span> + <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> + <span class="stringliteral">&quot; turns:&quot;</span> + <a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> + <span class="stringliteral">&quot; rounds:&quot;</span> + <a class="code hl_variable" href="classZoneEvent.html#a417f85104f5164b16d4eb6af4c97797b">rounds</a>);</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a>++;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  101</span>        {</div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a>--;</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> &lt;= 3 + base.quest.difficulty)</div>
-<div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_function" href="classZoneEventQuest.html#aefad7c0301c3ee3b988375117ca9507b">Spawn</a>();</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> == 10 &amp;&amp; <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> % 5 == 0)</div>
-<div class="line"><span class="lineno">  109</span>        {</div>
-<div class="line"><span class="lineno">  110</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> + base.quest.uid);</div>
-<div class="line"><span class="lineno">  111</span>            <a class="code hl_function" href="classZoneEventQuest.html#ab2f8ead75bd396739b2fd7c43b796232">SpawnBoss</a>(((<a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> &gt;= 10) ? (<a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> * 2) : 0) &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(100));</div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> == 20)</div>
-<div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_function" href="classZoneEventDefenseGame.html#addfa0bee9b80661ff5142bc06d2e491d">NextWave</a>();</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_function" href="classZoneEventQuest.html#aa91cfd600a188d2ddf2681db5a88d55b">AggroEnemy</a>();</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a> &gt; 0)</div>
+<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">99</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        QuestDefenseGame.lastWave = <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a>;</div>
+<div class="line"><span class="lineno">  102</span>        QuestDefenseGame.bonus = <a class="code hl_variable" href="classZoneEventDefenseGame.html#a028f37450a45faa2f3535b271ccf4a99">bonus</a>;</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;wave:&quot;</span> + <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> + <span class="stringliteral">&quot; turns:&quot;</span> + <a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> + <span class="stringliteral">&quot; rounds:&quot;</span> + <a class="code hl_variable" href="classZoneEvent.html#a417f85104f5164b16d4eb6af4c97797b">rounds</a>);</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a>++;</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a>--;</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> &lt;= 3 + base.quest.difficulty)</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_function" href="classZoneEventQuest.html#aefad7c0301c3ee3b988375117ca9507b">Spawn</a>();</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> == 10 &amp;&amp; <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> % 5 == 0)</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>(<a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> + base.quest.uid);</div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_function" href="classZoneEventQuest.html#ab2f8ead75bd396739b2fd7c43b796232">SpawnBoss</a>(((<a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> &gt;= 10) ? (<a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a> * 2) : 0) &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(100));</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#aedb43adb5963433dd4098a0d2514c599">SetSeed</a>();</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> == 20)</div>
 <div class="line"><span class="lineno">  120</span>        {</div>
-<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a>--;</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a> == 0)</div>
-<div class="line"><span class="lineno">  123</span>            {</div>
-<div class="line"><span class="lineno">  124</span>                <a class="code hl_variable" href="classZoneEventDefenseGame.html#a8fe36a57970f2948e10137f3d90322a8">allyCall</a>--;</div>
-<div class="line"><span class="lineno">  125</span>            }</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_function" href="classZoneEventDefenseGame.html#addfa0bee9b80661ff5142bc06d2e491d">NextWave</a>();</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_function" href="classZoneEventQuest.html#aa91cfd600a188d2ddf2681db5a88d55b">AggroEnemy</a>();</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a>--;</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a> == 0)</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                <a class="code hl_variable" href="classZoneEventDefenseGame.html#a8fe36a57970f2948e10137f3d90322a8">allyCall</a>--;</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a62c6ef288a7140793d6e5fb313fb72e4"><div class="ttname"><a href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">EClass.rnd</a></div><div class="ttdeci">static int rnd(long a)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00058">EClass.cs:58</a></div></div>
@@ -463,28 +463,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00157">157</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>    {</div>
-<div class="line"><span class="lineno">  159</span>        SE.Play(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
-<div class="line"><span class="lineno">  160</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
-<div class="line"><span class="lineno">  161</span>        <a class="code hl_class" href="classActEffect.html">ActEffect</a>.<a class="code hl_function" href="classActEffect.html#ad702ac411d9d8f839e7fd335b6581d43">ProcAt</a>(<a class="code hl_enumeration" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a>.Summon, 100, <a class="code hl_enumeration" href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a>.Normal, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, isNeg: <span class="keyword">false</span>, <span class="keyword">new</span> <a class="code hl_struct" href="structActRef.html">ActRef</a></div>
-<div class="line"><span class="lineno">  162</span>        {</div>
-<div class="line"><span class="lineno">  163</span>            n1 = <span class="stringliteral">&quot;special_force&quot;</span></div>
-<div class="line"><span class="lineno">  164</span>        });</div>
-<div class="line"><span class="lineno">  165</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#a8fe36a57970f2948e10137f3d90322a8">allyCall</a>++;</div>
-<div class="line"><span class="lineno">  166</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a> += 100;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00162">162</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        SE.Play(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
+<div class="line"><span class="lineno">  166</span>        <a class="code hl_class" href="classActEffect.html">ActEffect</a>.<a class="code hl_function" href="classActEffect.html#ad702ac411d9d8f839e7fd335b6581d43">ProcAt</a>(<a class="code hl_enumeration" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a>.Summon, 100, <a class="code hl_enumeration" href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a>.Normal, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, isNeg: <span class="keyword">false</span>, <span class="keyword">new</span> <a class="code hl_struct" href="structActRef.html">ActRef</a></div>
+<div class="line"><span class="lineno">  167</span>        {</div>
+<div class="line"><span class="lineno">  168</span>            n1 = <span class="stringliteral">&quot;special_force&quot;</span></div>
+<div class="line"><span class="lineno">  169</span>        });</div>
+<div class="line"><span class="lineno">  170</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#a8fe36a57970f2948e10137f3d90322a8">allyCall</a>++;</div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f">allyTimer</a> += 100;</div>
+<div class="line"><span class="lineno">  172</span>    }</div>
 <div class="ttc" id="aBlessedState_8cs_html_aa145ad1e6170ce299d75ff3b3bee93e8"><div class="ttname"><a href="BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8">BlessedState</a></div><div class="ttdeci">BlessedState</div><div class="ttdef"><b>Definition:</b> <a href="BlessedState_8cs_source.html#l00001">BlessedState.cs:2</a></div></div>
 <div class="ttc" id="aEffectId_8cs_html_a984565599b06a35ad0709a8177b7ec02"><div class="ttname"><a href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a></div><div class="ttdeci">EffectId</div><div class="ttdef"><b>Definition:</b> <a href="EffectId_8cs_source.html#l00001">EffectId.cs:2</a></div></div>
 <div class="ttc" id="aclassActEffect_html"><div class="ttname"><a href="classActEffect.html">ActEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00006">ActEffect.cs:7</a></div></div>
-<div class="ttc" id="aclassActEffect_html_ad702ac411d9d8f839e7fd335b6581d43"><div class="ttname"><a href="classActEffect.html#ad702ac411d9d8f839e7fd335b6581d43">ActEffect.ProcAt</a></div><div class="ttdeci">static void ProcAt(EffectId id, int power, BlessedState state, Card cc, Card tc, Point tp, bool isNeg, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00500">ActEffect.cs:500</a></div></div>
+<div class="ttc" id="aclassActEffect_html_ad702ac411d9d8f839e7fd335b6581d43"><div class="ttname"><a href="classActEffect.html#ad702ac411d9d8f839e7fd335b6581d43">ActEffect.ProcAt</a></div><div class="ttdeci">static void ProcAt(EffectId id, int power, BlessedState state, Card cc, Card tc, Point tp, bool isNeg, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00485">ActEffect.cs:485</a></div></div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00059">Card.cs:59</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00014">EClass.cs:14</a></div></div>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
 <div class="ttc" id="astructActRef_html"><div class="ttname"><a href="structActRef.html">ActRef</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRef_8cs_source.html#l00001">ActRef.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00019">allyCall</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00022">allyTimer</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, <a class="el" href="ActEffect_8cs_source.html#l00500">ActEffect.ProcAt()</a>, and <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>.</p>
+<p class="reference">References <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00019">allyCall</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00022">allyTimer</a>, <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l00059">Card.pos</a>, <a class="el" href="ActEffect_8cs_source.html#l00485">ActEffect.ProcAt()</a>, and <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitCoreDefense_8cs_source.html#l00011">TraitCoreDefense.TrySetAct()</a>.</p>
 
@@ -513,23 +513,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00129">129</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
-<div class="line"><span class="lineno">  131</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_start&quot;</span>);</div>
-<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">int</span> add = 0;</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> &lt;= 3)</div>
-<div class="line"><span class="lineno">  134</span>        {</div>
-<div class="line"><span class="lineno">  135</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_bonus&quot;</span>, <a class="code hl_variable" href="classZoneEventDefenseGame.html#a028f37450a45faa2f3535b271ccf4a99">bonus</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a028f37450a45faa2f3535b271ccf4a99">bonus</a>++;</div>
-<div class="line"><span class="lineno">  137</span>            add = 1 + base.quest.difficulty;</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-<div class="line"><span class="lineno">  139</span>        <a class="code hl_function" href="classZoneEventDefenseGame.html#addfa0bee9b80661ff5142bc06d2e491d">NextWave</a>(add);</div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> += 10;</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> &gt; 100)</div>
-<div class="line"><span class="lineno">  142</span>        {</div>
-<div class="line"><span class="lineno">  143</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> = 100;</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00134">134</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_start&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">int</span> add = 0;</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> &lt;= 3)</div>
+<div class="line"><span class="lineno">  139</span>        {</div>
+<div class="line"><span class="lineno">  140</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_bonus&quot;</span>, <a class="code hl_variable" href="classZoneEventDefenseGame.html#a028f37450a45faa2f3535b271ccf4a99">bonus</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a028f37450a45faa2f3535b271ccf4a99">bonus</a>++;</div>
+<div class="line"><span class="lineno">  142</span>            add = 1 + base.quest.difficulty;</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_function" href="classZoneEventDefenseGame.html#addfa0bee9b80661ff5142bc06d2e491d">NextWave</a>(add);</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> += 10;</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> &gt; 100)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9">hornTimer</a> = 100;</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00025">bonus</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00013">hornTimer</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00082">NextWave()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00010">turns</a>.</p>
 
@@ -560,21 +560,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00147">147</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>    {</div>
-<div class="line"><span class="lineno">  149</span>        SE.Play(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
-<div class="line"><span class="lineno">  150</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
-<div class="line"><span class="lineno">  151</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_retreat&quot;</span>);</div>
-<div class="line"><span class="lineno">  152</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#aaa2b13d35371e4e47103717c04f1b3f0">retreated</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  153</span>        instance.status = <a class="code hl_class" href="classZoneInstance.html">ZoneInstance</a>.<a class="code hl_enumeration" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">Status</a>.Success;</div>
-<div class="line"><span class="lineno">  154</span>        <a class="code hl_class" href="classActEffect.html">ActEffect</a>.<a class="code hl_function" href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">Proc</a>(<a class="code hl_enumeration" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a>.Evac, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="ttc" id="aclassActEffect_html_aa11e7453203f08185bc4d9db277254a7"><div class="ttname"><a href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">ActEffect.Proc</a></div><div class="ttdeci">static void Proc(EffectId id, Card cc, Card tc=null, int power=100, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00999">ActEffect.cs:999</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00152">152</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  153</span>    {</div>
+<div class="line"><span class="lineno">  154</span>        SE.Play(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
+<div class="line"><span class="lineno">  156</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_retreat&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#aaa2b13d35371e4e47103717c04f1b3f0">retreated</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  158</span>        instance.status = <a class="code hl_class" href="classZoneInstance.html">ZoneInstance</a>.<a class="code hl_enumeration" href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">Status</a>.Success;</div>
+<div class="line"><span class="lineno">  159</span>        <a class="code hl_class" href="classActEffect.html">ActEffect</a>.<a class="code hl_function" href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">Proc</a>(<a class="code hl_enumeration" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02">EffectId</a>.Evac, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>);</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="ttc" id="aclassActEffect_html_aa11e7453203f08185bc4d9db277254a7"><div class="ttname"><a href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">ActEffect.Proc</a></div><div class="ttdeci">static void Proc(EffectId id, Card cc, Card tc=null, int power=100, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00984">ActEffect.cs:984</a></div></div>
 <div class="ttc" id="aclassZoneEventDefenseGame_html_aaa2b13d35371e4e47103717c04f1b3f0"><div class="ttname"><a href="classZoneEventDefenseGame.html#aaa2b13d35371e4e47103717c04f1b3f0">ZoneEventDefenseGame.retreated</a></div><div class="ttdeci">bool retreated</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00028">ZoneEventDefenseGame.cs:28</a></div></div>
 <div class="ttc" id="aclassZoneInstance_html"><div class="ttname"><a href="classZoneInstance.html">ZoneInstance</a></div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00003">ZoneInstance.cs:4</a></div></div>
 <div class="ttc" id="aclassZoneInstance_html_ab55119f115145b5956d23df71915df3e"><div class="ttname"><a href="classZoneInstance.html#ab55119f115145b5956d23df71915df3e">ZoneInstance.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="ZoneInstance_8cs_source.html#l00005">ZoneInstance.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="ActEffect_8cs_source.html#l00999">ActEffect.Proc()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00028">retreated</a>, and <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00014">EClass.pc</a>, <a class="el" href="ActEffect_8cs_source.html#l00984">ActEffect.Proc()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00028">retreated</a>, and <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitCoreDefense_8cs_source.html#l00011">TraitCoreDefense.TrySetAct()</a>.</p>
 
@@ -608,19 +608,24 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
 <div class="line"><span class="lineno">   84</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a>++;</div>
 <div class="line"><span class="lineno">   85</span>        <a class="code hl_variable" href="classZoneEventDefenseGame.html#abe0dbcf648ad690c99ca1932c8bae607">turns</a> = 0;</div>
-<div class="line"><span class="lineno">   86</span>        EClass._zone._dangerLv += ((EClass._zone.DangerLv &gt;= 100) ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a> / 100 * 5 + 5) : 5);</div>
-<div class="line"><span class="lineno">   87</span>        SE.Play(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_wave&quot;</span>, <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   90</span>        <a class="code hl_function" href="classZoneEventQuest.html#aefad7c0301c3ee3b988375117ca9507b">Spawn</a>(2 + base.quest.difficulty + add);</div>
-<div class="line"><span class="lineno">   91</span>        <a class="code hl_function" href="classZoneEventQuest.html#aa91cfd600a188d2ddf2681db5a88d55b">AggroEnemy</a>();</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">long</span> num = EClass._zone._dangerLv + ((EClass._zone.DangerLv &gt;= 100) ? (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a> / 100 * 5 + 5) : 5);</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (num &gt;= 2000000000)</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            num = 2000000000L;</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        EClass._zone._dangerLv = (int)num;</div>
+<div class="line"><span class="lineno">   92</span>        SE.Play(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;warhorn&quot;</span>);</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;defense_wave&quot;</span>, <a class="code hl_variable" href="classZoneEventDefenseGame.html#ab66e74987e358a881f4edfd4df6b05e6">wave</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">DangerLv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_function" href="classZoneEventQuest.html#aefad7c0301c3ee3b988375117ca9507b">Spawn</a>(2 + base.quest.difficulty + add);</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_function" href="classZoneEventQuest.html#aa91cfd600a188d2ddf2681db5a88d55b">AggroEnemy</a>();</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
 <div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
 <div class="ttc" id="aclassZone_html_ac539719d05a3d41d2d23d60d2df22aff"><div class="ttname"><a href="classZone.html#ac539719d05a3d41d2d23d60d2df22aff">Zone.DangerLv</a></div><div class="ttdeci">override int DangerLv</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00106">Zone.cs:107</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="ZoneEventQuest_8cs_source.html#l00052">ZoneEventQuest.AggroEnemy()</a>, <a class="el" href="Zone_8cs_source.html#l00107">Zone.DangerLv</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="ZoneEventQuest_8cs_source.html#l00020">ZoneEventQuest.Spawn()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00010">turns</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00007">wave</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00129">Horn_Next()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00063">OnVisit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00134">Horn_Next()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00063">OnVisit()</a>.</p>
 
 </div>
 </div>
@@ -650,13 +655,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classZoneEvent.html#a706cbe182de2af1c0088ca169b33663e">ZoneEvent</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00169">169</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a> &amp;&amp; !c.<a class="code hl_property" href="classChara.html#a71d60af22bd6031f045b81a34bfacea0">IsPCPartyMinion</a>)</div>
-<div class="line"><span class="lineno">  172</span>        {</div>
-<div class="line"><span class="lineno">  173</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#af3423c12780ba49e2512c1442c69f9e6">kills</a>++;</div>
-<div class="line"><span class="lineno">  174</span>        }</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00174">174</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>    {</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a> &amp;&amp; !c.<a class="code hl_property" href="classChara.html#a71d60af22bd6031f045b81a34bfacea0">IsPCPartyMinion</a>)</div>
+<div class="line"><span class="lineno">  177</span>        {</div>
+<div class="line"><span class="lineno">  178</span>            <a class="code hl_variable" href="classZoneEventDefenseGame.html#af3423c12780ba49e2512c1442c69f9e6">kills</a>++;</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
 <div class="ttc" id="aclassChara_html_a4312c7c0a71d9e4709fdfa8b163ebda1"><div class="ttname"><a href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">Chara.IsPCParty</a></div><div class="ttdeci">override bool IsPCParty</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00612">Chara.cs:613</a></div></div>
 <div class="ttc" id="aclassChara_html_a71d60af22bd6031f045b81a34bfacea0"><div class="ttname"><a href="classChara.html#a71d60af22bd6031f045b81a34bfacea0">Chara.IsPCPartyMinion</a></div><div class="ttdeci">override bool IsPCPartyMinion</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00636">Chara.cs:637</a></div></div>
 <div class="ttc" id="aclassZoneEventDefenseGame_html_af3423c12780ba49e2512c1442c69f9e6"><div class="ttname"><a href="classZoneEventDefenseGame.html#af3423c12780ba49e2512c1442c69f9e6">ZoneEventDefenseGame.kills</a></div><div class="ttdeci">int kills</div><div class="ttdef"><b>Definition:</b> <a href="ZoneEventDefenseGame_8cs_source.html#l00016">ZoneEventDefenseGame.cs:16</a></div></div>
@@ -711,7 +716,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCard_html_a26108155cef3dd565735e6d8e3bc6322"><div class="ttname"><a href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">Card.isNPCProperty</a></div><div class="ttdeci">bool isNPCProperty</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00553">Card.cs:554</a></div></div>
 <div class="ttc" id="aclassEClass_html_a012d65ced13d1cf54c6776a5d29df3c3"><div class="ttname"><a href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">EClass.game</a></div><div class="ttdeci">static Game game</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00008">EClass.cs:8</a></div></div>
 <div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
-<div class="ttc" id="aclassGame_html_a1e88abaf293cdff5a48326490572506b"><div class="ttname"><a href="classGame.html#a1e88abaf293cdff5a48326490572506b">Game.isLoading</a></div><div class="ttdeci">bool isLoading</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00238">Game.cs:238</a></div></div>
+<div class="ttc" id="aclassGame_html_a1e88abaf293cdff5a48326490572506b"><div class="ttname"><a href="classGame.html#a1e88abaf293cdff5a48326490572506b">Game.isLoading</a></div><div class="ttdeci">bool isLoading</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cs_source.html#l00241">Game.cs:241</a></div></div>
 <div class="ttc" id="aclassMapBounds_html_ac8ed9f8456dd17739dc86fe9bccc5a97"><div class="ttname"><a href="classMapBounds.html#ac8ed9f8456dd17739dc86fe9bccc5a97">MapBounds.GetCenterPos</a></div><div class="ttdeci">Point GetCenterPos()</div><div class="ttdef"><b>Definition:</b> <a href="MapBounds_8cs_source.html#l00052">MapBounds.cs:52</a></div></div>
 <div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
 <div class="ttc" id="aclassPoint_html_a6a70ad1c74b7152679433eac70b113a6"><div class="ttname"><a href="classPoint.html#a6a70ad1c74b7152679433eac70b113a6">Point.GetNearestPoint</a></div><div class="ttdeci">Point GetNearestPoint(bool allowBlock=false, bool allowChara=true, bool allowInstalled=true, bool ignoreCenter=false, int minRadius=0)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00607">Point.cs:607</a></div></div>
@@ -720,7 +725,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassZone_html_a8162581383366357abed295b18ea2fb8"><div class="ttname"><a href="classZone.html#a8162581383366357abed295b18ea2fb8">Zone.SetBGM</a></div><div class="ttdeci">void SetBGM(List&lt; int &gt; ids, bool refresh=true, float fadeDuration=0f)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02917">Zone.cs:2917</a></div></div>
 <div class="ttc" id="aclassZone_html_af3a7bcf0f1c645ac02c3793e85700bf9"><div class="ttname"><a href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">Zone.AddCard</a></div><div class="ttdeci">Card AddCard(Card t, Point point)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01959">Zone.cs:1959</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l01959">Zone.AddCard()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00025">bonus</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="MapBounds_8cs_source.html#l00052">MapBounds.GetCenterPos()</a>, <a class="el" href="Point_8cs_source.html#l00607">Point.GetNearestPoint()</a>, <a class="el" href="Game_8cs_source.html#l00238">Game.isLoading</a>, <a class="el" href="Card_8cs_source.html#l00554">Card.isNPCProperty</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00082">NextWave()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Zone_8cs_source.html#l02917">Zone.SetBGM()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00007">wave</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00018">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00020">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l01959">Zone.AddCard()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00025">bonus</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="EClass_8cs_source.html#l00008">EClass.game</a>, <a class="el" href="MapBounds_8cs_source.html#l00052">MapBounds.GetCenterPos()</a>, <a class="el" href="Point_8cs_source.html#l00607">Point.GetNearestPoint()</a>, <a class="el" href="Game_8cs_source.html#l00241">Game.isLoading</a>, <a class="el" href="Card_8cs_source.html#l00554">Card.isNPCProperty</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00082">NextWave()</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Zone_8cs_source.html#l02917">Zone.SetBGM()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00007">wave</a>.</p>
 
 </div>
 </div>
@@ -739,7 +744,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00019">19</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">_OnTickRound()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00157">Horn_Ally()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">_OnTickRound()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00162">Horn_Ally()</a>.</p>
 
 </div>
 </div>
@@ -757,7 +762,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00022">22</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">_OnTickRound()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00157">Horn_Ally()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">_OnTickRound()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00162">Horn_Ally()</a>.</p>
 
 </div>
 </div>
@@ -775,7 +780,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00025">25</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00129">Horn_Next()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00063">OnVisit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00134">Horn_Next()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00063">OnVisit()</a>.</p>
 
 </div>
 </div>
@@ -793,7 +798,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00013">13</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">_OnTickRound()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00129">Horn_Next()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">_OnTickRound()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00134">Horn_Next()</a>.</p>
 
 </div>
 </div>
@@ -811,7 +816,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00016">16</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00169">OnCharaDie()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00174">OnCharaDie()</a>.</p>
 
 </div>
 </div>
@@ -829,7 +834,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00028">28</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00147">Horn_Retreat()</a>, and <a class="el" href="TraitCoreDefense_8cs_source.html#l00011">TraitCoreDefense.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00152">Horn_Retreat()</a>, and <a class="el" href="TraitCoreDefense_8cs_source.html#l00011">TraitCoreDefense.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -847,7 +852,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00010">10</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00129">Horn_Next()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00082">NextWave()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00134">Horn_Next()</a>, and <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00082">NextWave()</a>.</p>
 
 </div>
 </div>
@@ -865,7 +870,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00007">7</a> of file <a class="el" href="ZoneEventDefenseGame_8cs_source.html">ZoneEventDefenseGame.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00094">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00082">NextWave()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00063">OnVisit()</a>, and <a class="el" href="TraitCoreDefense_8cs_source.html#l00011">TraitCoreDefense.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00099">_OnTickRound()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00082">NextWave()</a>, <a class="el" href="ZoneEventDefenseGame_8cs_source.html#l00063">OnVisit()</a>, and <a class="el" href="TraitCoreDefense_8cs_source.html#l00011">TraitCoreDefense.TrySetAct()</a>.</p>
 
 </div>
 </div>

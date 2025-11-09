@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"classConBoost.html#ad329f0364b8886984243b60b03360898":[1,0,304,1],
+"classConBoost.html#ad4c9c14851a7948f9a3d20b6d25a6a81":[1,0,304,0],
+"classConBreath.html":[1,0,305],
+"classConBrightnessOfLife.html":[1,0,306],
 "classConBrightnessOfLife.html#a64d974ca425dd49b06f442b0601a07d4":[1,0,306,1],
 "classConBrightnessOfLife.html#a9bd48f6074c5c31ad072d7104012a250":[1,0,306,0],
 "classConBuffStats.html":[1,0,307],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "classCondition.html#a015b13a793a19cc841bd0aa0240b49da":[1,0,314,4],
 "classCondition.html#a12f781860691981ddd9ea0b983c95173":[1,0,314,6],
 "classCondition.html#a29225541e1171a9d7f7fc9efbfbf6a6d":[1,0,314,2],
-"classCondition.html#a3cae0da067003b05fe8b315948664bfb":[1,0,314,11],
-"classCondition.html#a8b7112b6b6c633eb8c55b44580c3d633":[1,0,314,8],
-"classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee":[1,0,314,3],
-"classCondition.html#a9ea3c0a24f956bfe6b953fcfa6141aa7":[1,0,314,5],
-"classCondition.html#ac050c6fff565bb312f93c00371a35e83":[1,0,314,9]
+"classCondition.html#a3cae0da067003b05fe8b315948664bfb":[1,0,314,11]
 };

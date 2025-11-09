@@ -1,5 +1,13 @@
 var NAVTREEINDEX68 =
 {
+"classGoalWait.html#a2693f1b509cfb272f475ee98cb1dcb7d":[1,0,571,2],
+"classGoalWait.html#a37a23a0f98e5c02721aa8c633ca327ea":[1,0,571,1],
+"classGoalWait.html#a5dd601de88ffbc977e2d96c3a148f694":[1,0,571,0],
+"classGoalWork.html":[1,0,572],
+"classGoalWork.html#a03f204746e3a6e6e13c5522b1f8a3a88":[1,0,572,5],
+"classGoalWork.html#a194d8c8a47325e7120eaf54e48e9212d":[1,0,572,1],
+"classGoalWork.html#a49e754ef61e57926724933f90ed13d2e":[1,0,572,6],
+"classGoalWork.html#a570b1a6c8fdd48e191a4ba6eaee1697f":[1,0,572,4],
 "classGoalWork.html#a98743380566d05d5a4ae2091ad139fed":[1,0,572,2],
 "classGoalWork.html#aaa51f3a65f2fe8848a8e59ce3caf5e29":[1,0,572,7],
 "classGoalWork.html#af5257e8f9c7fd0f16e2d4b14750faa87":[1,0,572,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX68 =
 "classGrowSystemTreeSingle.html":[1,0,597],
 "classGrowSystemTreeSingle.html#a23141063b94f9a6063947340451932ac":[1,0,597,0],
 "classGrowSystemTreeSingle.html#a25579c483783340ad3b8bb762a67db4b":[1,0,597,1],
-"classGrowSystemWeed.html":[1,0,598],
-"classGrowSystemWeed.html#a1e2685f2d1ff4b3c20e0c06bb7e608db":[1,0,598,3],
-"classGrowSystemWeed.html#a468955de41143810cccb85a09a11256a":[1,0,598,1],
-"classGrowSystemWeed.html#acd013560672f9262a39c96a640f63cb7":[1,0,598,0],
-"classGrowSystemWeed.html#ae31a5d5e1bdef9271f73b82804fc09be":[1,0,598,4],
-"classGrowSystemWeed.html#ae511d372641b9a3c5e6ab8048c1647bd":[1,0,598,2],
-"classGrowSystemWheat.html":[1,0,599],
-"classGrowSystemWheat.html#a222f7d600aa3caa55d53ee782bdae343":[1,0,599,2],
-"classGrowSystemWheat.html#a27315347780f0282b0350610a5eb7e96":[1,0,599,0]
+"classGrowSystemWeed.html":[1,0,598]
 };

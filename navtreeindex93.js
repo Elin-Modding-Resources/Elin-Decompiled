@@ -1,5 +1,15 @@
 var NAVTREEINDEX93 =
 {
+"classQuestGuild.html#a6a6655200a3bc88b54b37bb36936b1c6":[1,0,998,2],
+"classQuestGuild.html#a8e8602e21598b57d7bde10839affca20":[1,0,998,7],
+"classQuestGuild.html#aa563c8cb368caf78ea879362e6ed9ae0":[1,0,998,0],
+"classQuestGuild.html#acc835a8eb505c768c2ee09ef3a556b81":[1,0,998,3],
+"classQuestGuild.html#ae7256c497e4ec4a80548caabdd289ac3":[1,0,998,1],
+"classQuestGuildFighter.html":[1,0,999],
+"classQuestGuildFighter.html#acbf428686bef846b4d8b046584269b97":[1,0,999,1],
+"classQuestGuildFighter.html#ada3a15aaa4d703389882f616dc106c59":[1,0,999,0],
+"classQuestGuildFighter.html#af9c0366c2ab887861343083bd633a08c":[1,0,999,2],
+"classQuestGuildMage.html":[1,0,1000],
 "classQuestGuildMage.html#a048cc0670babbf2cdd1cfd76d99013f0":[1,0,1000,0],
 "classQuestGuildMerchant.html":[1,0,1001],
 "classQuestGuildMerchant.html#a5fdb32d036d995bf790cbb58b08d79c1":[1,0,1001,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestTask.html#afac014ea90ab317ddeb694bb178b9091":[1,0,1049,7],
 "classQuestTaskFlyer.html":[1,0,1050],
 "classQuestTaskFlyer.html#a26ef0705b7b28806f9ec1d81e17df112":[1,0,1050,4],
-"classQuestTaskFlyer.html#a581586d87a136a65df3d459703de0145":[1,0,1050,1],
-"classQuestTaskFlyer.html#a71fab17ce78ca1e35b9a4ca3f01e22bc":[1,0,1050,3],
-"classQuestTaskFlyer.html#a7958007d00391ae2fdd8bff423703fc2":[1,0,1050,7],
-"classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853":[1,0,1050,5],
-"classQuestTaskFlyer.html#abcff73b3c86ae3a009bb869401f8e3fd":[1,0,1050,0],
-"classQuestTaskFlyer.html#ae8f4faca736c7d78e3ee4a349ec7db56":[1,0,1050,6],
-"classQuestTaskFlyer.html#af0ae57ff253af6c8feaede9e8099b905":[1,0,1050,2],
-"classQuestTaskHunt.html":[1,0,1051],
-"classQuestTaskHunt.html#a24e9c8ed979e3f38aba15c6236e2ebd2":[1,0,1051,7],
-"classQuestTaskHunt.html#a33b84ff07c9903578ed6bac1bd1c4a26":[1,0,1051,3],
-"classQuestTaskHunt.html#a6a3b1de5536f24abeb6a4819c770fa5e":[1,0,1051,15]
+"classQuestTaskFlyer.html#a581586d87a136a65df3d459703de0145":[1,0,1050,1]
 };

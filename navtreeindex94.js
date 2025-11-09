@@ -1,5 +1,15 @@
 var NAVTREEINDEX94 =
 {
+"classQuestTaskFlyer.html#a71fab17ce78ca1e35b9a4ca3f01e22bc":[1,0,1050,3],
+"classQuestTaskFlyer.html#a7958007d00391ae2fdd8bff423703fc2":[1,0,1050,7],
+"classQuestTaskFlyer.html#a88a6f2c10c5f356679c2528a5ac59853":[1,0,1050,5],
+"classQuestTaskFlyer.html#abcff73b3c86ae3a009bb869401f8e3fd":[1,0,1050,0],
+"classQuestTaskFlyer.html#ae8f4faca736c7d78e3ee4a349ec7db56":[1,0,1050,6],
+"classQuestTaskFlyer.html#af0ae57ff253af6c8feaede9e8099b905":[1,0,1050,2],
+"classQuestTaskHunt.html":[1,0,1051],
+"classQuestTaskHunt.html#a24e9c8ed979e3f38aba15c6236e2ebd2":[1,0,1051,7],
+"classQuestTaskHunt.html#a33b84ff07c9903578ed6bac1bd1c4a26":[1,0,1051,3],
+"classQuestTaskHunt.html#a6a3b1de5536f24abeb6a4819c770fa5e":[1,0,1051,15],
 "classQuestTaskHunt.html#a6ae0d299139e509cf382be3337db8101":[1,0,1051,4],
 "classQuestTaskHunt.html#a6d965565f4649033a0a9183929acb13f":[1,0,1051,9],
 "classQuestTaskHunt.html#a7418b1cf6cd716ff14975bb64061c4b6":[1,0,1051,8],
@@ -239,15 +249,5 @@ var NAVTREEINDEX94 =
 "classRecipeCard.html#ae058b3b9e128a49162277e006d0c1107":[1,0,1067,24],
 "classRecipeCard.html#ae68602dae6d23be47d31c41c7e069113":[1,0,1067,25],
 "classRecipeCard.html#ae7aa11e6f2e92e7f7a2d98c2f0b06fe6":[1,0,1067,13],
-"classRecipeCard.html#ae9f1836259fe6e4f04b50f4573e7eaba":[1,0,1067,21],
-"classRecipeCard.html#af377543126bdb0bc58970aaa9ad580e7":[1,0,1067,10],
-"classRecipeCard.html#af53b450ba76382791207621f937529fa":[1,0,1067,17],
-"classRecipeCard.html#af83dc9e60d60b465e39b7ccbcce18faf":[1,0,1067,9],
-"classRecipeCustom.html":[1,0,1068],
-"classRecipeCustom.html#a5a9682664d783ed125e83805b0c8859d":[1,0,1068,0],
-"classRecipeManager.html":[1,0,1069],
-"classRecipeManager.html#a02cb83c92b5674b13bb030c2f2f3c097":[1,0,1069,24],
-"classRecipeManager.html#a037a25d5cfdb8fb716e03c46c49b9be1":[1,0,1069,21],
-"classRecipeManager.html#a08cedf9e6be21bde401f263ff203412f":[1,0,1069,2],
-"classRecipeManager.html#a24f862b11b5d3fc1701f42739236f67f":[1,0,1069,16]
+"classRecipeCard.html#ae9f1836259fe6e4f04b50f4573e7eaba":[1,0,1067,21]
 };

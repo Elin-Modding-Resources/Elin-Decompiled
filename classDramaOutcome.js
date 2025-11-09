@@ -18,6 +18,7 @@ var classDramaOutcome =
     [ "fiama_starter_gift", "classDramaOutcome.html#aeb361c0012cc8b04404fc4446b81193e", null ],
     [ "get_scratch", "classDramaOutcome.html#af6e17351a6de04fcb7246d4c8932415b", null ],
     [ "GetFelmeraRewardIndex", "classDramaOutcome.html#a031e74dc0296cd1daedce436bcfa04cf", null ],
+    [ "give_catball_recipe", "classDramaOutcome.html#a5f0bfa546e33778a7f90da6fe75fb718", null ],
     [ "give_sketch_reward", "classDramaOutcome.html#af03b1d7cf5a96ce49af44ad4afd28d32", null ],
     [ "give_sketch_special", "classDramaOutcome.html#a563f57d436602e72a3baed5d42b3c636", null ],
     [ "guild_join", "classDramaOutcome.html#adcb6ff404c2aceeec89e5ab1782e08a2", null ],

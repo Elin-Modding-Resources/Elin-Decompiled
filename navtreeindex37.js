@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"classBevel.html#af7db24689be663fbb962cfd01ccb6ef6":[1,0,224,4],
+"classBiography.html":[1,0,225],
 "classBiography.html#a0a9b1108d0710bc270180af5853047ef":[1,0,225,27],
 "classBiography.html#a10d06fa5eb6817e0fd271b9bc1e5edb9":[1,0,225,13],
 "classBiography.html#a1a0038bd7a4a4c52b36ba573e6143ed6":[1,0,225,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "classBuildMenu.html#a42020f754bb7f8564cb3a8853597b299aa0d4fc24be3e74e5352455e7fe44c82e":[1,0,234,0,4],
 "classBuildMenu.html#a42020f754bb7f8564cb3a8853597b299ac74c1f42f141c011ca6bd8b1114fc3d0":[1,0,234,0,0],
 "classBuildMenu.html#a42020f754bb7f8564cb3a8853597b299adeec4ff19974f12ed781cb9a59064214":[1,0,234,0,3],
-"classBuildMenu.html#a43cfaf77a038874639a7ef8390da2c21":[1,0,234,47],
-"classBuildMenu.html#a4ba5ca4b2bea64c2700f84ee113fa178":[1,0,234,25],
-"classBuildMenu.html#a51a7747edd7ebfb73d3624d2ce9a06a4":[1,0,234,17]
+"classBuildMenu.html#a43cfaf77a038874639a7ef8390da2c21":[1,0,234,47]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classAI__ArmPillow.html":[1,0,68],
+"classAI__ArmPillow.html#a4cb91941e5111811013be8d8267acc2c":[1,0,68,0],
 "classAI__AttackHome.html":[1,0,69],
 "classAI__AttackHome.html#ad7ea0f6f0aa849fd444905a5cd17e9f0":[1,0,69,0],
 "classAI__Bladder.html":[1,0,70],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__PlayMusic.html#af3ddb1180da01215545e2ebca91a6483":[1,0,99,5],
 "classAI__Practice.html":[1,0,100],
 "classAI__Practice.html#a4cd16ff54463bcf8cdaf8ca21b4daee1":[1,0,100,5],
-"classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,100,1],
-"classAI__Practice.html#ad938aabe2a061a66a436cbe954380af4":[1,0,100,0],
-"classAI__Practice.html#ae8290eb0146955881fc6f4cdd11d1193":[1,0,100,2]
+"classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,100,1]
 };

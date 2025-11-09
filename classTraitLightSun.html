@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.231 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.232 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -745,23 +745,23 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00031">31</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Clear();</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (center == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            center = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>;</div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">ForeachSphere</a>(center.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, center.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, <a class="code hl_property" href="classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7">radius</a> + 1, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
-<div class="line"><span class="lineno">   39</span>        {</div>
-<div class="line"><span class="lineno">   40</span>            <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Add(p.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>());</div>
-<div class="line"><span class="lineno">   41</span>        });</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Count == 0)</div>
-<div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Add(center.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>());</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Clear();</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (center == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            center = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">ForeachSphere</a>(center.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, center.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, <a class="code hl_property" href="classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7">radius</a> + 1, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Add(p.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>());</div>
+<div class="line"><span class="lineno">   29</span>        });</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>.Add(center.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>());</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00059">Card.cs:59</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a5e6e42d05529c1e46f61791f51d08195"><div class="ttname"><a href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">EClass._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00018">EClass.cs:18</a></div></div>
@@ -805,10 +805,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a1bcc89016758ef51b5722da792d53f41">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00049">49</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        Map.isDirtySunMap = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00037">37</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        Map.isDirtySunMap = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -854,11 +854,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a5f776deb99822151021ce9c1c20ed395">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00054">54</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        base.OnRenderTile(point, result, dir);</div>
-<div class="line"><span class="lineno">   57</span>        EClass.screen.tileMap.screenHighlight = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_enumeration" href="classBaseTileMap.html#a4b1c8d463304dfb697156ac2bb9fe90b">ScreenHighlight</a>.SunMap;</div>
-<div class="line"><span class="lineno">   58</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00042">42</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        base.OnRenderTile(point, result, dir);</div>
+<div class="line"><span class="lineno">   45</span>        EClass.screen.tileMap.screenHighlight = <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_enumeration" href="classBaseTileMap.html#a4b1c8d463304dfb697156ac2bb9fe90b">ScreenHighlight</a>.SunMap;</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
 <div class="ttc" id="aclassBaseTileMap_html"><div class="ttname"><a href="classBaseTileMap.html">BaseTileMap</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00005">BaseTileMap.cs:6</a></div></div>
 <div class="ttc" id="aclassBaseTileMap_html_a4b1c8d463304dfb697156ac2bb9fe90b"><div class="ttname"><a href="classBaseTileMap.html#a4b1c8d463304dfb697156ac2bb9fe90b">BaseTileMap.ScreenHighlight</a></div><div class="ttdeci">ScreenHighlight</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00030">BaseTileMap.cs:31</a></div></div>
 </div><!-- fragment -->
@@ -885,7 +885,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00029">29</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TraitLightSun_8cs_source.html#l00017">17</a> of file <a class="el" href="TraitLightSun_8cs_source.html">TraitLightSun.cs</a>.</p>
 
 </div>
 </div>
@@ -913,34 +913,19 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
 <div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
 <div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_property" href="classMap.html#a00e94677803a80e4495ca0fb9e44d36f">IsIndoor</a>)</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a1d73fd6eedea6c16892639ebbae56c2c">electricity</a> &lt; -<a class="code hl_property" href="classTrait.html#aaea5f045bee932aa78a2d0f869e964e1">Electricity</a>)</div>
 <div class="line"><span class="lineno">   10</span>            {</div>
-<div class="line"><span class="lineno">   11</span>                <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">parent</a> is <a class="code hl_class" href="classZone.html">Zone</a>))</div>
-<div class="line"><span class="lineno">   12</span>                {</div>
-<div class="line"><span class="lineno">   13</span>                    <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classSpatial.html#a1d73fd6eedea6c16892639ebbae56c2c">electricity</a> &lt; -<a class="code hl_property" href="classTrait.html#aaea5f045bee932aa78a2d0f869e964e1">Electricity</a>)</div>
-<div class="line"><span class="lineno">   14</span>                    {</div>
-<div class="line"><span class="lineno">   15</span>                        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   16</span>                    }</div>
-<div class="line"><span class="lineno">   17</span>                    <span class="keywordflow">return</span> 6;</div>
-<div class="line"><span class="lineno">   18</span>                }</div>
-<div class="line"><span class="lineno">   19</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a>)</div>
-<div class="line"><span class="lineno">   20</span>                {</div>
-<div class="line"><span class="lineno">   21</span>                    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">   22</span>                }</div>
-<div class="line"><span class="lineno">   23</span>                <span class="keywordflow">return</span> 6;</div>
-<div class="line"><span class="lineno">   24</span>            }</div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> 6;</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclassCard_html_a5fdd419eccae9c9ab3af2c954091692c"><div class="ttname"><a href="classCard.html#a5fdd419eccae9c9ab3af2c954091692c">Card.parent</a></div><div class="ttdeci">ICardParent parent</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00055">Card.cs:55</a></div></div>
+<div class="line"><span class="lineno">   11</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   12</span>            }</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> 6;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
 <div class="ttc" id="aclassCard_html_ac47c1e60f53b25b3eefa678bda0340ba"><div class="ttname"><a href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">Card.isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00541">Card.cs:542</a></div></div>
 <div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00020">EClass.cs:20</a></div></div>
-<div class="ttc" id="aclassMap_html_a00e94677803a80e4495ca0fb9e44d36f"><div class="ttname"><a href="classMap.html#a00e94677803a80e4495ca0fb9e44d36f">Map.IsIndoor</a></div><div class="ttdeci">bool IsIndoor</div><div class="ttdef"><b>Definition:</b> <a href="Map_8cs_source.html#l00131">Map.cs:131</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a1d73fd6eedea6c16892639ebbae56c2c"><div class="ttname"><a href="classSpatial.html#a1d73fd6eedea6c16892639ebbae56c2c">Spatial.electricity</a></div><div class="ttdeci">int electricity</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00249">Spatial.cs:250</a></div></div>
 <div class="ttc" id="aclassTrait_html_aaea5f045bee932aa78a2d0f869e964e1"><div class="ttname"><a href="classTrait.html#aaea5f045bee932aa78a2d0f869e964e1">Trait.Electricity</a></div><div class="ttdeci">virtual int Electricity</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00101">Trait.cs:102</a></div></div>
-<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TraitLightSun_8cs_source.html#l00031">ListPoints()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitLightSun_8cs_source.html#l00019">ListPoints()</a>.</p>
 
 </div>
 </div>

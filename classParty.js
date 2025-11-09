@@ -2,7 +2,8 @@ var classParty =
 [
     [ "AddMemeber", "classParty.html#ac7adae19004adcdb2507606ec961fb6f", null ],
     [ "Count", "classParty.html#a804ec2bc141e603e8000aade968debde", null ],
-    [ "EValue", "classParty.html#ab89b5f09c0633ec2e091739c1c29492a", null ],
+    [ "EvalueBest", "classParty.html#ab95e130119843d94f98a383d17328ee7", null ],
+    [ "EvalueTotal", "classParty.html#a53b97b67778fedd930e777386a7f40a7", null ],
     [ "Find", "classParty.html#a39ee0bb9808d4139f5ef325ad6ff579f", null ],
     [ "GetBestSkill", "classParty.html#a1b25b9ccc945c897859be453b38ff8ea", null ],
     [ "GetPartySkill", "classParty.html#a44373dd6365874ad5ea853a6a5317677", null ],

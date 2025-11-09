@@ -67,6 +67,7 @@ var classCINT =
     [ "price_copy", "classCINT.html#a2f23d3eb1e0706d50a69917b091411e8", null ],
     [ "rescue", "classCINT.html#ac4db5ca4e811ae09278ce5aba707ce7b", null ],
     [ "revealLock", "classCINT.html#a9d7acea1038942e357c21e01e088d94a", null ],
+    [ "rosterPriority", "classCINT.html#aef353382f8795ed0e93311e3b8196519", null ],
     [ "seed", "classCINT.html#ab4cf5656bb9293b5068ddf8ec309bc86", null ],
     [ "sisterEaten", "classCINT.html#ad5bdcda652bd3e30c530c9609ead8f13", null ],
     [ "summonDuration", "classCINT.html#a63edcffbd8222afefd41f94252c9459c", null ],

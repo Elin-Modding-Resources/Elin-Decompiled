@@ -1,5 +1,15 @@
 var NAVTREEINDEX110 =
 {
+"classTactics.html#afb472ee81016a5aec1e24ec5961f9998":[1,0,1275,17],
+"classTalkDataList.html":[1,0,1276],
+"classTalkDataList.html#a0dad3e3ec163dea82e2415ba05727aa7":[1,0,1276,2],
+"classTalkDataList.html#a296b9ef78f9249aa676fe7636d87be61":[1,0,1276,1],
+"classTalkDataList.html#a313200ec86e0ec40751d28ff335df32f":[1,0,1276,3],
+"classTalkDataList.html#a52715942b0039249bdfd9a5f1932c45a":[1,0,1276,0],
+"classTalkDataList.html#a5d494f7cbde352aed62a76ec3b4a9514":[1,0,1276,4],
+"classTalkText.html":[1,0,1277],
+"classTalkText.html#a5eb886a787c22328bf1782c1cd002440":[1,0,1277,1],
+"classTalkText.html#ac064f13f119e231c6ada5327e3d32d09":[1,0,1277,0],
 "classTargetType.html":[1,0,1278],
 "classTargetType.html#a046e95e5c766351eaa12c37f122e9c25":[1,0,1278,7],
 "classTargetType.html#a09ea5bb08f9ef0018e8ed4a33c787b20":[1,0,1278,20],
@@ -239,15 +249,5 @@ var NAVTREEINDEX110 =
 "classTaskHarvest.html#aadc9b170a07263e043c9925a4d6ada3d":[1,0,1301,15],
 "classTaskHarvest.html#aba8cf8f311e6cfe665c21a63315574a5":[1,0,1301,10],
 "classTaskHarvest.html#abfb6d558aa1b945cdf4f821114989390":[1,0,1301,18],
-"classTaskHarvest.html#acb17c311cc350f649b80f7edf303b53a":[1,0,1301,3],
-"classTaskHarvest.html#accaba1dad5a0ac1206953a03eae6d642":[1,0,1301,16],
-"classTaskHarvest.html#ad405bf13cb859075e88e96bdfb513903":[1,0,1301,23],
-"classTaskHarvest.html#ad6311fe34961215f6b1fe8a042d1a730":[1,0,1301,22],
-"classTaskHarvest.html#adff9db0eca9a0421d184c2191079a310":[1,0,1301,9],
-"classTaskHarvest.html#ae02d5c2ef378efe5296a325fa46f8404":[1,0,1301,2],
-"classTaskHarvest.html#ae3991861532772da43493337e5a18f35":[1,0,1301,8],
-"classTaskHarvest.html#aeb911f5b4068f8c596bde55c74d76eeb":[1,0,1301,17],
-"classTaskHarvest.html#afb189d47cd5063a1f9621113906b4bd6":[1,0,1301,0],
-"classTaskList.html":[1,0,1302],
-"classTaskList.html#a0f2224048b3f764e54b21fe744043821":[1,0,1302,16]
+"classTaskHarvest.html#acb17c311cc350f649b80f7edf303b53a":[1,0,1301,3]
 };
