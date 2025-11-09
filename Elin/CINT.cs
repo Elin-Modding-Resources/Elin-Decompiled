@@ -36,6 +36,8 @@ public class CINT
 
 	public const int isHiredByGold = 18;
 
+	public const int rosterPriority = 19;
+
 	public const int price = 21;
 
 	public const int dateStockExpire = 22;

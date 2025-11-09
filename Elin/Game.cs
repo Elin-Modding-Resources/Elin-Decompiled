@@ -167,6 +167,9 @@ public class Game : EClass
 	public Version version;
 
 	[JsonProperty]
+	public Version startVersion;
+
+	[JsonProperty]
 	public PartyManager parties = new PartyManager();
 
 	[JsonProperty]
@@ -772,6 +775,7 @@ public class Game : EClass
 		config.autoCombat.abortOnItemLoss = true;
 		seed = EClass.rnd(10000);
 		Debug.Log("creating game: " + id + " seed:" + seed);
+		startVersion = EClass.core.version;
 		uniforms.Import();
 		religions.OnCreateGame();
 		factions.OnCreateGame();

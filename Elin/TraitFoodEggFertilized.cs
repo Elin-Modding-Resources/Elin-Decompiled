@@ -7,21 +7,25 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 	public static Chara Incubate(Thing egg, Point pos, Card incubator = null)
 	{
 		egg.SetSale(sale: false);
-		string str = "";
+		string text = "";
 		CardRow refCard = egg.refCard;
 		if (refCard != null)
 		{
-			str = refCard.id;
+			text = refCard.id;
 			if (refCard.id == "chara" || refCard.quality == 4)
 			{
-				str = "";
+				text = "";
 			}
 		}
 		if (egg.IsDecayed)
 		{
-			str = "zombie";
+			text = "zombie";
 		}
-		Chara chara = CharaGen.Create(str.IsEmpty("chicken"));
+		if (text == "cat_silver")
+		{
+			text = "cat";
+		}
+		Chara chara = CharaGen.Create(text.IsEmpty("chicken"));
 		EClass._zone.AddCard(chara, pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? EClass.pc.pos);
 		chara.SetLv(1);
 		chara.SetMainElement(egg.c_idMainElement, 10, elemental: true);

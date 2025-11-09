@@ -1575,9 +1575,9 @@ public class CoreDebug : EScriptable
 				EClass.Branch.resources.knowledge.Mod(100);
 			}
 		});
-		Add(cat2, "Add Influence", delegate
+		Add(cat2, "Remove Influence", delegate
 		{
-			EClass._zone.influence += 100;
+			EClass._zone.influence = 0;
 		});
 		Add(cat2, "Reroll Hobbies", delegate
 		{

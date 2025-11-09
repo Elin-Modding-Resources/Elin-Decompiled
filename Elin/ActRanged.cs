@@ -386,7 +386,8 @@ public class ActRanged : ActThrow
 						{
 							origin = Act.CC.Chara,
 							refThing = weapon,
-							aliasEle = "eleImpact"
+							aliasEle = "eleImpact",
+							refVal = j
 						});
 						break;
 					}

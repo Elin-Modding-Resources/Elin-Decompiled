@@ -2,23 +2,23 @@ public class ENC
 {
 	public const int innocence = 418;
 
-	public const int slowCorruption = 412;
+	public const int encTail = 419;
 
-	public const int encHit = 414;
+	public const int negateParalysis = 422;
 
 	public const int seeInvisible = 416;
 
 	public const int invisibility = 415;
 
-	public const int encTail = 419;
+	public const int negatePoison = 420;
+
+	public const int encHit = 414;
 
 	public const int loving = 417;
 
-	public const int negatePoison = 420;
+	public const int encRagnarok = 667;
 
 	public const int absorbHP = 660;
-
-	public const int meleeDistance = 666;
 
 	public const int planter = 665;
 
@@ -30,17 +30,17 @@ public class ENC
 
 	public const int absorbMP = 661;
 
-	public const int encSpell = 411;
+	public const int slowCorruption = 412;
 
 	public const int permaCurse = 656;
 
-	public const int encRagnarok = 667;
+	public const int meleeDistance = 666;
 
-	public const int throwReturn = 410;
+	public const int encSpell = 411;
 
 	public const int redirect_blaser = 383;
 
-	public const int resWeather = 408;
+	public const int corruption = 409;
 
 	public const int negateBlind = 421;
 
@@ -49,8 +49,6 @@ public class ENC
 	public const int convertLightning = 852;
 
 	public const int convertCold = 851;
-
-	public const int convertFire = 850;
 
 	public const int counter = 380;
 
@@ -76,11 +74,13 @@ public class ENC
 
 	public const int travelSpeed = 407;
 
-	public const int corruption = 409;
+	public const int resWeather = 408;
+
+	public const int throwReturn = 410;
 
 	public const int noDamage = 654;
 
-	public const int negateParalysis = 422;
+	public const int convertFire = 850;
 
 	public const int eco = 652;
 
@@ -188,11 +188,11 @@ public class ENC
 
 	public const int mod_ammo_recover = 604;
 
+	public const int creativeChef = 487;
+
 	public const int mod_ammo_knockback = 603;
 
 	public const int mod_rapid = 602;
-
-	public const int creativeChef = 487;
 
 	public const int deathagony = 488;
 
@@ -200,24 +200,24 @@ public class ENC
 
 	public const int mod_ammo = 600;
 
+	public const int mod_reload = 601;
+
 	public const int r_PV = 651;
 
 	public const int mod_precision = 605;
 
-	public const int mod_reload = 601;
-
 	public static readonly int[] IDS = new int[103]
 	{
-		418, 412, 414, 416, 415, 419, 417, 420, 660, 666,
-		665, 664, 663, 662, 661, 411, 656, 667, 410, 383,
-		408, 421, 865, 852, 851, 850, 380, 381, 382, 655,
-		400, 401, 402, 403, 404, 405, 406, 407, 409, 654,
-		422, 652, 446, 447, 450, 460, 461, 462, 463, 464,
+		418, 419, 422, 416, 415, 420, 414, 417, 667, 660,
+		665, 664, 663, 662, 661, 412, 656, 666, 411, 383,
+		409, 421, 865, 852, 851, 380, 381, 382, 655, 400,
+		401, 402, 403, 404, 405, 406, 407, 408, 410, 654,
+		850, 652, 446, 447, 450, 460, 461, 462, 463, 464,
 		465, 466, 467, 480, 481, 482, 483, 445, 484, 444,
 		442, 653, 424, 425, 426, 427, 428, 429, 430, 435,
 		436, 437, 438, 439, 440, 441, 443, 485, 468, 608,
 		623, 622, 621, 620, 609, 423, 641, 650, 486, 624,
-		607, 606, 640, 604, 603, 602, 487, 488, 489, 600,
-		651, 605, 601
+		607, 606, 640, 604, 487, 603, 602, 488, 489, 600,
+		601, 651, 605
 	};
 }

@@ -105,6 +105,9 @@ public class Player : EClass
 		public int death;
 
 		[JsonProperty]
+		public int death2;
+
+		[JsonProperty]
 		public int allyDeath;
 
 		[JsonProperty]

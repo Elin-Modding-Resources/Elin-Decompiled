@@ -1073,6 +1073,15 @@ public class DramaManager : EMono
 		string[] array = IF.Split(',');
 		switch (array[0])
 		{
+		case "garden_bloom":
+			foreach (Chara member in EMono.pc.party.members)
+			{
+				if (member.CanBloom())
+				{
+					return true;
+				}
+			}
+			return false;
 		case "duponne_mino":
 			return EMono.pc.things.Find("minohorn") != null;
 		case "duponne_rescued":
@@ -1099,6 +1108,15 @@ public class DramaManager : EMono
 			return !EMono.game.IsSurvival;
 		case "fromBook":
 			return LayerDrama.fromBook;
+		case "nerun_nadenade":
+			if (!EMono.game.startVersion.IsBelow(0, 23, 232))
+			{
+				return EMono.player.stats.death2 == 0;
+			}
+			return false;
+		case "nerun_nadenade2":
+			GameLang.refDrama1 = EMono.player.stats.death2.ToString() ?? "";
+			return EMono.player.stats.death2 >= 100;
 		case "!fromBook":
 			return !LayerDrama.fromBook;
 		case "WindRest":
@@ -1114,9 +1132,9 @@ public class DramaManager : EMono
 		case "fiamaPet":
 			if (EMono.pc.homeBranch != null)
 			{
-				foreach (Chara member in EMono.pc.homeBranch.members)
+				foreach (Chara member2 in EMono.pc.homeBranch.members)
 				{
-					if (member.isDead && member.CanRevive() && member.GetInt(100) != 0)
+					if (member2.isDead && member2.CanRevive() && member2.GetInt(100) != 0)
 					{
 						return true;
 					}

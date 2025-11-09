@@ -721,6 +721,38 @@ public class DramaCustomSequence : EClass
 			});
 			Choice("no2", StepDefault, cancel: true).SetOnClick(RumorChill);
 		});
+		Step("_bloom");
+		Method(delegate
+		{
+			TempTalkTopic("blooming1", null);
+			foreach (Chara item6 in EClass.pc.party.members.Where((Chara c2) => c2.CanBloom()))
+			{
+				Chara c4 = item6;
+				Choice("daBloom".lang(c4.Name), delegate
+				{
+					if (EClass._zone.influence < 10)
+					{
+						TempTalkTopic("blooming3", StepDefault);
+					}
+					else
+					{
+						EClass._zone.ModInfluence(-10);
+						LayerDrama.Instance.SetOnKill(delegate
+						{
+							c.Talk("goodBoy");
+							c4.Say("dingExp", c);
+							c4.Talk("tailed");
+							c4.SetFeat(1273, 1, msg: true);
+							c4.PlayEffect("aura_heaven");
+							c4.feat += 10;
+							EClass.pc.PlaySound("pray");
+						});
+						TempTalkTopic("blooming2", StepEnd);
+					}
+				});
+			}
+			Choice("no2", StepDefault, cancel: true).SetOnClick(RumorChill);
+		});
 		Step("_buy");
 		Method(delegate
 		{
@@ -781,22 +813,22 @@ public class DramaCustomSequence : EClass
 					{
 						b.button1.mainText.text = a.Name;
 						UIItem uIItem = Util.Instantiate<UIItem>("UI/Element/Item/Extra/costBarter", b.layout);
-						HomeResource.Cost c2 = new HomeResource.Cost(EClass.BranchOrHomeBranch.resources.money, a.source.money);
-						uIItem.text1.SetText(c2.cost.ToString() ?? "", (c2.resource.value >= c2.cost) ? FontColor.Good : FontColor.Bad);
-						uIItem.image1.sprite = c2.resource.Sprite;
+						HomeResource.Cost c3 = new HomeResource.Cost(EClass.BranchOrHomeBranch.resources.money, a.source.money);
+						uIItem.text1.SetText(c3.cost.ToString() ?? "", (c3.resource.value >= c3.cost) ? FontColor.Good : FontColor.Bad);
+						uIItem.image1.sprite = c3.resource.Sprite;
 						b.button1.SetTooltip(delegate(UITooltip t)
 						{
 							a.WriteNote(t.note);
 						});
 						b.button1.onClick.AddListener(delegate
 						{
-							if (c2.resource.value < c2.cost)
+							if (c3.resource.value < c3.cost)
 							{
 								SE.Beep();
 							}
 							else
 							{
-								c2.resource.Mod(-c2.cost);
+								c3.resource.Mod(-c3.cost);
 								plans.Remove(a);
 								EClass.BranchOrHomeBranch.researches.AddPlan(a);
 								SE.Pay();
@@ -807,9 +839,9 @@ public class DramaCustomSequence : EClass
 					},
 					onList = delegate
 					{
-						foreach (ResearchPlan item6 in plans)
+						foreach (ResearchPlan item7 in plans)
 						{
-							list.Add(item6);
+							list.Add(item7);
 						}
 					}
 				};
@@ -1081,7 +1113,7 @@ public class DramaCustomSequence : EClass
 					},
 					onList = delegate
 					{
-						foreach (SourceElement.Row item7 in EClass.sources.elements.rows.Where(delegate(SourceElement.Row a)
+						foreach (SourceElement.Row item8 in EClass.sources.elements.rows.Where(delegate(SourceElement.Row a)
 						{
 							if (a.tag.Contains("unused"))
 							{
@@ -1114,7 +1146,7 @@ public class DramaCustomSequence : EClass
 							return a.category == "skill" && a.categorySub == c.trait.IDTrainer;
 						}).ToList())
 						{
-							list.Add(Element.Create(item7.id));
+							list.Add(Element.Create(item8.id));
 						}
 					}
 				};
@@ -1232,10 +1264,10 @@ public class DramaCustomSequence : EClass
 					{
 						SE.Pay();
 						EClass.pc.ModCurrency(-costIdentify);
-						foreach (Thing item8 in EClass.pc.things.List((Thing t) => !t.IsIdentified, onlyAccessible: true))
+						foreach (Thing item9 in EClass.pc.things.List((Thing t) => !t.IsIdentified, onlyAccessible: true))
 						{
-							item8.Thing.Identify(show: false);
-							if (!item8.IsInstalled)
+							item9.Thing.Identify(show: false);
+							if (!item9.IsInstalled)
 							{
 								numSuperior++;
 							}

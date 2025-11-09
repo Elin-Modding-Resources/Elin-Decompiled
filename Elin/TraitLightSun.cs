@@ -6,21 +6,9 @@ public class TraitLightSun : TraitLight
 	{
 		get
 		{
-			if (EClass._map.IsIndoor)
+			if (!owner.isOn && EClass._zone.electricity < -Electricity)
 			{
-				if (!(owner.parent is Zone))
-				{
-					if (EClass._zone.electricity < -Electricity)
-					{
-						return 1;
-					}
-					return 6;
-				}
-				if (!owner.isOn)
-				{
-					return 1;
-				}
-				return 6;
+				return 0;
 			}
 			return 6;
 		}

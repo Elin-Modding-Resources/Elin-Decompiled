@@ -29,13 +29,13 @@ public class InvOwnerReconstruction : InvOwnerEffect
 		{
 			return false;
 		}
-		if (!t.IsEquipment)
-		{
-			return false;
-		}
 		if (t.isReplica)
 		{
 			return false;
+		}
+		if (!t.IsEquipmentOrRanged)
+		{
+			return t.IsThrownWeapon;
 		}
 		return true;
 	}

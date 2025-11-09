@@ -647,6 +647,10 @@ public class Scene : EMono
 									Tutorial.Reserve("death");
 								}
 								EMono.player.stats.death++;
+								if (EMono.player.stats.days <= 90)
+								{
+									EMono.player.stats.death2++;
+								}
 							}
 							else
 							{

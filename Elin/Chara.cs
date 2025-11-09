@@ -1063,7 +1063,7 @@ public class Chara : Card, IPathfindWalker
 
 	public FactionBranch homeBranch => homeZone?.branch;
 
-	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242);
+	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242) + Evalue(1273);
 
 	public int CurrentGeneSlot
 	{
@@ -8504,6 +8504,23 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public bool CanBloom()
+	{
+		if (IsPC || base.isScaled || HasElement(1273))
+		{
+			return false;
+		}
+		if (!EClass.debug.enable)
+		{
+			if (base.c_daysWithPC > 360)
+			{
+				return affinity.CanSleepBeside();
+			}
+			return false;
+		}
+		return true;
+	}
+
 	public void AddCooldown(int idEle, int turns = 0)
 	{
 		if (_cooldowns == null)
@@ -10000,7 +10017,7 @@ public class Chara : Card, IPathfindWalker
 				faithElements.SetBase(row2.id, 1);
 			}
 			int[] array = row.elements;
-			int num = GetPietyValue() * (120 + Evalue(1407) * 15) / 100;
+			int num = GetPietyValue() * (120 + Evalue(1407) * 15 + Evalue(1228) * 20) / 100;
 			for (int i = 0; i < array.Length; i += 2)
 			{
 				int num2 = array[i + 1] * num / 50;

@@ -225,7 +225,7 @@ public class AI_Idle : AIAct
 							list2.Add(member);
 						}
 					}
-					if (list2.Count > 2)
+					if (list2.Count > 2 + EClass.pc.party.EvalueTotal(1272, (Chara c) => c.IsPC || c.faith == EClass.game.religions.Harmony))
 					{
 						list2.Remove(owner);
 						owner.SetEnemy(list2.RandomItem());

@@ -1,5 +1,7 @@
 public class SKILL
 {
+	public const int twohand = 130;
+
 	public const int eyeofmind = 134;
 
 	public const int marksman = 133;
@@ -8,11 +10,9 @@ public class SKILL
 
 	public const int twowield = 131;
 
-	public const int twohand = 130;
-
 	public const int shield = 123;
 
-	public const int throwing = 108;
+	public const int weaponDagger = 107;
 
 	public const int armorLight = 120;
 
@@ -22,15 +22,15 @@ public class SKILL
 
 	public const int weaponCrossbow = 109;
 
-	public const int strategy = 135;
+	public const int throwing = 108;
 
-	public const int weaponDagger = 107;
+	public const int strategy = 135;
 
 	public const int armorHeavy = 122;
 
 	public const int evasion = 150;
 
-	public const int riding = 226;
+	public const int climbing = 242;
 
 	public const int stealth = 152;
 
@@ -43,6 +43,8 @@ public class SKILL
 	public const int mining = 220;
 
 	public const int lumberjack = 225;
+
+	public const int riding = 226;
 
 	public const int parasite = 227;
 
@@ -57,8 +59,6 @@ public class SKILL
 	public const int music = 241;
 
 	public const int weaponPolearm = 106;
-
-	public const int climbing = 242;
 
 	public const int evasionPlus = 151;
 
@@ -268,9 +268,9 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[133]
 	{
-		134, 133, 132, 131, 130, 123, 108, 120, 111, 110,
-		109, 135, 107, 122, 150, 226, 152, 200, 207, 210,
-		220, 225, 227, 230, 235, 237, 240, 241, 106, 242,
+		130, 134, 133, 132, 131, 123, 107, 120, 111, 110,
+		109, 108, 135, 122, 150, 242, 152, 200, 207, 210,
+		220, 225, 226, 227, 230, 235, 237, 240, 241, 106,
 		151, 105, 73, 103, 50, 51, 55, 56, 57, 60,
 		61, 64, 65, 66, 67, 68, 70, 71, 104, 72,
 		74, 75, 76, 77, 78, 79, 80, 90, 91, 92,

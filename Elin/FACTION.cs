@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfFish = 3706;
-
 	public const int bfLandmark4 = 3783;
 
 	public const int bfLandmark2 = 3781;
@@ -21,6 +19,8 @@ public class FACTION
 	public const int bfFreshAir = 3708;
 
 	public const int bfMonster = 3707;
+
+	public const int bfFish = 3706;
 
 	public const int bfLandmark3 = 3782;
 
@@ -94,8 +94,6 @@ public class FACTION
 
 	public const int actBuildCollect = 4004;
 
-	public const int bfGum = 3803;
-
 	public const int actBuildAnywhere = 4003;
 
 	public const int actBuildTerrain = 4002;
@@ -110,14 +108,16 @@ public class FACTION
 
 	public const int bfHunt = 3705;
 
+	public const int bfGum = 3803;
+
 	public static readonly int[] IDS = new int[53]
 	{
-		3706, 3783, 3781, 2207, 3780, 3710, 3709, 3708, 3707, 3782,
+		3783, 3781, 2207, 3780, 3710, 3709, 3708, 3707, 3706, 3782,
 		2204, 2116, 2115, 2117, 2118, 2119, 2120, 2200, 2201, 2206,
 		2202, 2203, 2205, 3784, 2003, 3800, 3804, 3802, 3801, 3600,
 		3601, 3602, 3603, 3604, 3605, 3700, 3701, 3702, 3703, 3704,
-		3606, 3500, 4006, 4005, 4004, 3803, 4003, 4002, 4001, 4000,
-		3900, 3805, 3705
+		3606, 3500, 4006, 4005, 4004, 4003, 4002, 4001, 4000, 3900,
+		3805, 3705, 3803
 	};
 }
 public class Faction : EClass

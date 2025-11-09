@@ -1812,7 +1812,7 @@ public class Map : MapBounds, IPathfindGrid
 		{
 			EClass.pc.PickOrDrop(p, t);
 		}
-		else if (c != null && (c.pos.Equals(p) || EClass.core.config.game.smoothPick || EClass._zone.IsRegion))
+		else if (c != null && c.IsPC && (c.pos.Equals(p) || EClass.core.config.game.smoothPick || EClass._zone.IsRegion))
 		{
 			c.PickOrDrop(p, t);
 		}

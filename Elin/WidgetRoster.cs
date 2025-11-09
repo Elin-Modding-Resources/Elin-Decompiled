@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
@@ -101,12 +102,20 @@ public class WidgetRoster : Widget
 		layout.startCorner = (extra.reverse ? GridLayoutGroup.Corner.LowerRight : GridLayoutGroup.Corner.UpperLeft);
 		layout.cellSize = new Vector2(extra.width * 4 / 5, extra.onlyName ? 32 : extra.width);
 		layout.spacing = new Vector2(extra.margin, extra.margin);
-		foreach (Chara member in EMono.pc.party.members)
+		List<Chara> list = EMono.pc.party.members.ToList();
+		if (!extra.pc)
 		{
-			if (member != EMono.pc || extra.pc)
-			{
-				Add(member);
-			}
+			list.Remove(EMono.pc);
+		}
+		list.Sort(delegate(Chara a, Chara b)
+		{
+			int @int = a.GetInt(19);
+			int int2 = b.GetInt(19);
+			return (@int == int2) ? (EMono.pc.party.members.IndexOf(a) - EMono.pc.party.members.IndexOf(b)) : (int2 * 1000 - @int * 1000);
+		});
+		foreach (Chara item in list)
+		{
+			Add(item);
 		}
 		if (buttons.Count == 0)
 		{
@@ -171,25 +180,13 @@ public class WidgetRoster : Widget
 	public override void OnSetContextMenu(UIContextMenu m)
 	{
 		ButtonRoster b = InputModuleEX.GetComponentOf<ButtonRoster>();
-		int index;
 		if ((bool)b)
 		{
-			index = EMono.pc.party.members.IndexOf(b.chara);
-			int count = EMono.pc.party.members.Count;
-			if (index >= 1 && index < count - 1)
+			m.AddSlider("priority_hint", (float a) => a.ToString() ?? "", b.chara.GetInt(19), delegate(float a)
 			{
-				m.AddButton("next", delegate
-				{
-					Move(1);
-				});
-			}
-			if (index >= 2)
-			{
-				m.AddButton("prev", delegate
-				{
-					Move(-1);
-				});
-			}
+				b.chara.SetInt(19, (int)a);
+				Build();
+			}, 0f, 20f, isInt: true, hideOther: false);
 		}
 		UIContextMenu uIContextMenu = m.AddChild("setting");
 		uIContextMenu.AddSlider("width", (float a) => a.ToString() ?? "", extra.width, delegate(float a)
@@ -233,10 +230,5 @@ public class WidgetRoster : Widget
 			ApplySkin();
 		}, 0f, base.config.skin.Skin.buttons.Count - 1, isInt: true);
 		SetBaseContextMenu(m);
-		void Move(int mod)
-		{
-			EMono.pc.party.Replace(b.chara, index + mod);
-			Build();
-		}
 	}
 }

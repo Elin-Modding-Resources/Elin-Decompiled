@@ -395,7 +395,12 @@ public class AI_Fish : AIAct
 				num4 = 3;
 			}
 			SetFeverSeed();
-			thing = ThingGen.Create("fish", -1, lv);
+			string text2 = "fish";
+			if (EClass._zone.id == "startVillage2")
+			{
+				text2 = "65";
+			}
+			thing = ThingGen.Create(text2, -1, lv);
 			SetFeverSeed();
 			int num5 = Mathf.Max(1, num / (thing.source.LV * 2 + 10));
 			int num6 = 5;
@@ -413,7 +418,7 @@ public class AI_Fish : AIAct
 				c.Say("bigCatch", c);
 			}
 			num2 = (num7 ? num5 : EClass.rnd(num5)) / (num4 + 1) + 1;
-			if (EClass.debug.enable || (thing.id == "65" && EClass.rnd(c.IsPC ? 8192 : 819200) == 0))
+			if (thing.id == "65" && EClass.rnd(EClass.debug.enable ? 2 : (c.IsPC ? 8192 : 819200)) == 0)
 			{
 				thing = ThingGen.Create("65_gold", -1, lv);
 				num2 = 1;

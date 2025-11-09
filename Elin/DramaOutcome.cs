@@ -387,6 +387,11 @@ public class DramaOutcome : EMono
 		cc.RemoveEditorTag(EditorTag.Invulnerable);
 	}
 
+	public void give_catball_recipe()
+	{
+		EMono.player.DropReward(ThingGen.CreateRecipe("silvercatball"));
+	}
+
 	public void event_swordkeeper()
 	{
 		EMono._zone.AddChara("swordkeeper", 45, 52);
@@ -400,9 +405,13 @@ public class DramaOutcome : EMono
 		for (int i = 0; i < num; i++)
 		{
 			Rand.SetSeed(chara.uid + i);
-			DNA.GenerateRandomGene(chara.LV + 30, chara.uid + i).c_DNA.Apply(chara, reverse: false);
-			Rand.SetSeed();
+			Thing thing = DNA.GenerateRandomGene(chara.LV + 30, chara.uid + i);
+			if (thing.c_DNA.GetInvalidFeat(chara) == null && thing.c_DNA.GetInvalidAction(chara) == null)
+			{
+				thing.c_DNA.Apply(chara, reverse: false);
+			}
 		}
+		Rand.SetSeed();
 	}
 
 	public static bool If(DramaChoice item, Chara c)

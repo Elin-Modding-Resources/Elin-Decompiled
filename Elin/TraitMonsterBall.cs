@@ -22,9 +22,11 @@ public class TraitMonsterBall : Trait
 
 	public virtual bool IsDuponneBall => false;
 
+	public virtual bool IsSilvercatBall => false;
+
 	public override void OnCreate(int lv)
 	{
-		if (!IsLittleBall && !IsDuponneBall)
+		if (!IsLittleBall && !IsDuponneBall && !IsSilvercatBall)
 		{
 			owner.SetLv(1 + EClass.rnd(lv + 10));
 		}
@@ -41,12 +43,12 @@ public class TraitMonsterBall : Trait
 
 	public override void SetName(ref string s)
 	{
-		s = ((IsDuponneBall || IsLittleBall) ? "_littleBall" : "_monsterball").lang(s, owner.LV.ToString() ?? "", (chara == null) ? "_monsterball_empty".lang() : chara.Name);
+		s = ((IsDuponneBall || IsLittleBall || IsSilvercatBall) ? "_littleBall" : "_monsterball").lang(s, owner.LV.ToString() ?? "", (chara == null) ? "_monsterball_empty".lang() : chara.Name);
 	}
 
 	public override int GetValue()
 	{
-		if (IsLittleBall || IsDuponneBall)
+		if (IsLittleBall || IsDuponneBall || IsSilvercatBall)
 		{
 			return base.GetValue();
 		}

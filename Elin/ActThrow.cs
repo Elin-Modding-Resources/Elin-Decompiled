@@ -18,7 +18,7 @@ public class ActThrow : ActBaseAttack
 		if (target != null)
 		{
 			TraitMonsterBall traitMonsterBall = target.trait as TraitMonsterBall;
-			if (pcTarget != null && traitMonsterBall != null && !traitMonsterBall.IsDuponneBall && !traitMonsterBall.IsLittleBall && pcTarget.LV > target.LV)
+			if (pcTarget != null && traitMonsterBall != null && !traitMonsterBall.IsDuponneBall && !traitMonsterBall.IsLittleBall && !traitMonsterBall.IsSilvercatBall && pcTarget.LV > target.LV)
 			{
 				text = " " + "mb_invalidLV".lang();
 			}
@@ -257,22 +257,32 @@ public class ActThrow : ActBaseAttack
 						}
 					});
 				}
-				if (traitMonsterBall.IsDuponneBall && _c.id == "lurie_boss")
+				if ((traitMonsterBall.IsSilvercatBall || _c.id == "cat_silver") && EClass._zone.id == "startVillage2")
 				{
 					_c.orgPos = c.pos.Copy();
 					_c.homeZone = EClass._zone;
 					Chara chara = _c;
 					Hostility c_originalHostility = (_c.hostility = Hostility.Friend);
 					chara.c_originalHostility = c_originalHostility;
+					EClass._zone.ModInfluence(10);
+					_c.PlaySound("chime_angel");
+				}
+				else if (traitMonsterBall.IsDuponneBall && _c.id == "lurie_boss")
+				{
+					_c.orgPos = c.pos.Copy();
+					_c.homeZone = EClass._zone;
+					Chara chara2 = _c;
+					Hostility c_originalHostility = (_c.hostility = Hostility.Friend);
+					chara2.c_originalHostility = c_originalHostility;
 					EClass._zone.ModInfluence(20);
 					_c.PlaySound("chime_angel");
 				}
 				else if (traitMonsterBall.IsLittleBall && _c.id == "littleOne")
 				{
 					_c.orgPos = c.pos.Copy();
-					Chara chara2 = _c;
+					Chara chara3 = _c;
 					Hostility c_originalHostility = (_c.hostility = Hostility.Neutral);
-					chara2.c_originalHostility = c_originalHostility;
+					chara3.c_originalHostility = c_originalHostility;
 					EClass._zone.ModInfluence(5);
 					_c.PlaySound("chime_angel");
 					EClass.core.actionsNextFrame.Add(delegate
@@ -294,10 +304,23 @@ public class ActThrow : ActBaseAttack
 					break;
 				}
 				Act.TC.Say("throw_hit", t, Act.TC);
-				Chara chara3 = Act.TC.Chara;
-				if (traitMonsterBall.IsDuponneBall)
+				Chara chara4 = Act.TC.Chara;
+				if (traitMonsterBall.IsSilvercatBall)
 				{
-					if (chara3.id != "lurie_boss" || chara3.IsPCFactionOrMinion || EClass._zone is Zone_Exile || EClass._zone.IsUserZone)
+					if (chara4.id != "cat_silver" || chara4.IsPCFactionOrMinion || EClass._zone.id == "startVillage2" || EClass._zone.IsUserZone)
+					{
+						Msg.Say("monsterball_invalid");
+						break;
+					}
+					if (chara4.LV > 10)
+					{
+						Msg.Say("monsterball_lv");
+						break;
+					}
+				}
+				else if (traitMonsterBall.IsDuponneBall)
+				{
+					if (chara4.id != "lurie_boss" || chara4.IsPCFactionOrMinion || EClass._zone is Zone_Exile || EClass._zone.IsUserZone)
 					{
 						Msg.Say("monsterball_invalid");
 						break;
@@ -305,44 +328,44 @@ public class ActThrow : ActBaseAttack
 				}
 				else if (traitMonsterBall.IsLittleBall)
 				{
-					if (chara3.id != "littleOne" || chara3.IsPCFactionOrMinion || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone || chara3.GetBool(132))
+					if (chara4.id != "littleOne" || chara4.IsPCFactionOrMinion || EClass._zone is Zone_LittleGarden || EClass._zone.IsUserZone || chara4.GetBool(132))
 					{
 						Msg.Say("monsterball_invalid");
 						break;
 					}
-					chara3.SetBool(132, enable: true);
+					chara4.SetBool(132, enable: true);
 				}
 				else
 				{
-					if (!chara3.trait.CanBeTamed || EClass._zone.IsUserZone)
+					if (!chara4.trait.CanBeTamed || EClass._zone.IsUserZone)
 					{
 						Msg.Say("monsterball_invalid");
 						break;
 					}
-					if (chara3.LV > traitMonsterBall.owner.LV)
+					if (chara4.LV > traitMonsterBall.owner.LV)
 					{
 						Msg.Say("monsterball_lv");
 						break;
 					}
-					if (!EClass.debug.enable && chara3.hp > chara3.MaxHP / 10)
+					if (!EClass.debug.enable && chara4.hp > chara4.MaxHP / 10)
 					{
 						Msg.Say("monsterball_hp");
 						break;
 					}
 				}
-				Msg.Say("monsterball_capture", c, chara3);
-				chara3.PlaySound("identify");
-				chara3.PlayEffect("identify");
+				Msg.Say("monsterball_capture", c, chara4);
+				chara4.PlaySound("identify");
+				chara4.PlayEffect("identify");
 				t.ChangeMaterial("copper");
-				if (chara3.IsLocalChara)
+				if (chara4.IsLocalChara)
 				{
-					Debug.Log("Creating Replacement NPC for:" + chara3);
-					EClass._map.deadCharas.Add(chara3.CreateReplacement());
+					Debug.Log("Creating Replacement NPC for:" + chara4);
+					EClass._map.deadCharas.Add(chara4.CreateReplacement());
 				}
-				traitMonsterBall.chara = chara3;
-				chara3.ReleaseMinion();
-				EClass._zone.RemoveCard(chara3);
-				chara3.homeZone = null;
+				traitMonsterBall.chara = chara4;
+				chara4.ReleaseMinion();
+				EClass._zone.RemoveCard(chara4);
+				chara4.homeZone = null;
 				c.ModExp(108, 100);
 				if (traitMonsterBall.IsDuponneBall && EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 3)
 				{

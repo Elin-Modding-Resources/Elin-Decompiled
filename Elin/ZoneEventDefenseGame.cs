@@ -83,7 +83,12 @@ public class ZoneEventDefenseGame : ZoneEventQuest
 	{
 		wave++;
 		turns = 0;
-		EClass._zone._dangerLv += ((EClass._zone.DangerLv >= 100) ? (EClass._zone.DangerLv / 100 * 5 + 5) : 5);
+		long num = EClass._zone._dangerLv + ((EClass._zone.DangerLv >= 100) ? (EClass._zone.DangerLv / 100 * 5 + 5) : 5);
+		if (num >= 2000000000)
+		{
+			num = 2000000000L;
+		}
+		EClass._zone._dangerLv = (int)num;
 		SE.Play("warhorn");
 		Msg.Say("warhorn");
 		Msg.Say("defense_wave", wave.ToString() ?? "", EClass._zone.DangerLv.ToString() ?? "");

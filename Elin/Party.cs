@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -164,7 +165,7 @@ public class Party : EClass
 		return false;
 	}
 
-	public int EValue(int ele)
+	public int EvalueBest(int ele)
 	{
 		int num = 0;
 		foreach (Chara member in members)
@@ -172,6 +173,19 @@ public class Party : EClass
 			if (member.Evalue(ele) > num)
 			{
 				num = member.Evalue(ele);
+			}
+		}
+		return num;
+	}
+
+	public int EvalueTotal(int ele, Func<Chara, bool> funcIf = null)
+	{
+		int num = 0;
+		foreach (Chara member in members)
+		{
+			if (funcIf == null || funcIf(member))
+			{
+				num += member.Evalue(ele);
 			}
 		}
 		return num;

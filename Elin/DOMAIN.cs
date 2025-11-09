@@ -16,9 +16,9 @@ public class DOMAIN
 
 	public const int domMiracle = 803;
 
-	public const int domHarvest = 808;
-
 	public const int domWind = 807;
+
+	public const int domHarvest = 808;
 
 	public const int domLuck = 810;
 
@@ -36,7 +36,7 @@ public class DOMAIN
 
 	public static readonly int[] IDS = new int[16]
 	{
-		805, 806, 801, 800, 804, 802, 803, 808, 807, 810,
+		805, 806, 801, 800, 804, 802, 803, 807, 808, 810,
 		811, 812, 813, 814, 815, 809
 	};
 }

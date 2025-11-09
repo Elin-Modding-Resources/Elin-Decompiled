@@ -374,40 +374,18 @@ public class ActEffect : EClass
 					switch (id)
 					{
 					case EffectId.GravityGun:
-						if (!c.isChara)
+						if (c.isChara)
 						{
-							break;
-						}
-						c.Chara.AddCondition<ConGravity>(power);
-						if (EClass.rnd(2) == 0)
-						{
-							c.Chara.AddCondition<ConEntangle>(power / 2);
-						}
-						if (EClass.rnd(4) == 0)
-						{
-							c.Chara.AddCondition<ConBlind>(power);
-						}
-						if (EClass.rnd(5) == 0)
-						{
-							c.Chara.AddCondition<ConDim>(power / 3);
-						}
-						if (EClass.rnd(3) == 0)
-						{
-							c.Chara.AddCondition<ConSupress>(power / 2);
-						}
-						if (actref.refThing != null && actref.refThing.id == "gun_gravity2")
-						{
-							if (EClass.rnd(4) == 0)
+							AddCon<ConGravity>(1, power);
+							AddCon<ConBlind>(4, power);
+							AddCon<ConDim>(5, power / 2);
+							AddCon<ConSupress>(3, power / 2);
+							if (actref.refThing != null && actref.refThing.id == "gun_gravity2")
 							{
-								c.Chara.AddCondition<ConSilence>(power / 3);
-							}
-							if (EClass.rnd(4) == 0)
-							{
-								c.Chara.AddCondition<ConWeakResEle>(power);
-							}
-							if (EClass.rnd(4) == 0)
-							{
-								c.Chara.AddCondition<ConNightmare>(power);
+								AddCon<ConEntangle>(4, power / 3);
+								AddCon<ConSilence>(4, power / 3);
+								AddCon<ConWeakResEle>(4, power);
+								AddCon<ConNightmare>(4, power);
 							}
 						}
 						break;
@@ -435,6 +413,13 @@ public class ActEffect : EClass
 					chara.DoHostileAction(c);
 				}
 				num2++;
+				void AddCon<T>(int rate, int power) where T : Condition
+				{
+					if (EClass.rnd(1 + actref.refVal) == 0 && !c.Chara.HasCondition<T>() && EClass.rnd(rate) == 0)
+					{
+						c.Chara.AddCondition<T>(power);
+					}
+				}
 			}
 			if ((id == EffectId.Explosive || id == EffectId.Suicide || id == EffectId.Rocket) && (!EClass._zone.IsPCFaction || !EClass.Branch.HasItemProtection))
 			{
@@ -447,7 +432,7 @@ public class ActEffect : EClass
 				bool flag5 = EClass._zone.HasLaw && !EClass._zone.IsPCFaction && (CC.IsPC || (id == EffectId.Explosive && actref.refThing == null)) && !(EClass._zone is Zone_Vernis);
 				if (p.HasObj && p.cell.matObj.hardness <= num7)
 				{
-					EClass._map.MineObj(p);
+					EClass._map.MineObj(p, null, CC.Chara);
 					if (flag5)
 					{
 						EClass.player.ModKarma(-1);
@@ -455,7 +440,7 @@ public class ActEffect : EClass
 				}
 				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num7)
 				{
-					EClass._map.MineBlock(p);
+					EClass._map.MineBlock(p, recoverBlock: false, CC.Chara);
 					if (flag5)
 					{
 						EClass.player.ModKarma(-1);
