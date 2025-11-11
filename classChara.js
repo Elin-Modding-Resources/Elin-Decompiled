@@ -17,6 +17,7 @@ var classChara =
     [ "ApplyEditorTags", "classChara.html#a145f4a6523e75ff9c6d9248b95ab01b5", null ],
     [ "ApplyJob", "classChara.html#aa6b1d8601e822df2dfecbdbe13f38e8d", null ],
     [ "ApplyRace", "classChara.html#a4ad0c17053644c72468cbf7108b9c77e", null ],
+    [ "Banish", "classChara.html#a575c2bebbc73ff8458c9f1b32196399f", null ],
     [ "CalcBurden", "classChara.html#afe9147bd4124bf219ca4e642303b1c2c", null ],
     [ "CalcCastingChance", "classChara.html#a6b828e3814e088187545c15ed168e599", null ],
     [ "CalculateMaxStamina", "classChara.html#a728a1359f407f60da99aae589f4897c4", null ],

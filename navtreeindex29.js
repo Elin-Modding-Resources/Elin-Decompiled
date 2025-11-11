@@ -1,5 +1,9 @@
 var NAVTREEINDEX29 =
 {
+"classActBall.html#a94eebcc06be5b13a67647766a0ace280":[1,0,15,0],
+"classActBall.html#acc2d6325d08d3dfa1796fc8b324cf659":[1,0,15,3],
+"classActBall.html#af57567b68aa22a0c4836faaa89927e6b":[1,0,15,1],
+"classActBall.html#af868d267b1ceecc66cea9d026508712e":[1,0,15,2],
 "classActBaseAttack.html":[1,0,16],
 "classActBash.html":[1,0,17],
 "classActBash.html#a3c263fd7d37fee8619cf006957dcf46f":[1,0,17,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX29 =
 "classActThrow.html#aeaadcc12898b5d7c045bc0027d8fac3b":[1,0,61,8],
 "classActWait.html":[1,0,62],
 "classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3":[1,0,62,2],
-"classActWait.html#a594976d8f67b722735d7175cf741b9e4":[1,0,62,0],
-"classActWait.html#a5d4dc6e2a74a28359b6aebcb10888278":[1,0,62,3],
-"classActWait.html#a8cf739c27e2e6e56bc679e246afabca5":[1,0,62,4],
-"classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d":[1,0,62,1],
-"classActWater.html":[1,0,63]
+"classActWait.html#a594976d8f67b722735d7175cf741b9e4":[1,0,62,0]
 };

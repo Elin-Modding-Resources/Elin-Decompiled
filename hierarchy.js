@@ -450,6 +450,7 @@ var hierarchy =
                 [ "ConTelepathy", "classConTelepathy.html", null ],
                 [ "ConTorch", "classConTorch.html", null ],
                 [ "ConTransmute", "classConTransmute.html", [
+                  [ "ConTransmuteBat", "classConTransmuteBat.html", null ],
                   [ "ConTransmuteBroom", "classConTransmuteBroom.html", null ],
                   [ "ConTransmuteCat", "classConTransmuteCat.html", null ],
                   [ "ConTransmutePutit", "classConTransmutePutit.html", null ]
@@ -1523,6 +1524,7 @@ var hierarchy =
           [ "TraitFollower", "classTraitFollower.html", null ],
           [ "TraitLittleOne", "classTraitLittleOne.html", null ],
           [ "TraitPartTimeMascot", "classTraitPartTimeMascot.html", null ],
+          [ "TraitSilvercat", "classTraitSilvercat.html", null ],
           [ "TraitUniqueChara", "classTraitUniqueChara.html", [
             [ "TraitAshland", "classTraitAshland.html", null ],
             [ "TraitBigSister", "classTraitBigSister.html", null ],

@@ -16,6 +16,7 @@ var classCardBlueprint =
     [ "idRace", "classCardBlueprint.html#a3d34d720a94bc988355acd4827132ef0", null ],
     [ "isCraft", "classCardBlueprint.html#aeab6e80c4e78d9aa49049fd93f9372a0", null ],
     [ "lv", "classCardBlueprint.html#a63ef7b435ebc07ba29e026fcc17bda77", null ],
+    [ "Original", "classCardBlueprint.html#a9b1cfe30624e10b6279aa1629ea237d2", null ],
     [ "qualityBonus", "classCardBlueprint.html#a4fe21cf7f452ebaa644c881b3e566b5c", null ],
     [ "rarity", "classCardBlueprint.html#aae9006f10bc122eeeb61657b748762dc", null ],
     [ "tryLevelMatTier", "classCardBlueprint.html#a924bbc6ea71658b7418fef929a8388e0", null ]

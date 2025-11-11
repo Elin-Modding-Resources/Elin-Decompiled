@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classAIWork__Research.html":[1,0,129],
+"classAIWork__Research.html#a0f68d6c8a5ebab557866188cbde67862":[1,0,129,0],
+"classAIWork__Research.html#a96cbb943bb6fcd928b454b3fb348e56e":[1,0,129,1],
+"classAIWork__Research.html#add975b18f52d8c68f69edb2e9c197379":[1,0,129,2],
 "classAI__ArmPillow.html":[1,0,68],
 "classAI__ArmPillow.html#a4cb91941e5111811013be8d8267acc2c":[1,0,68,0],
 "classAI__AttackHome.html":[1,0,69],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__PlayMusic.html#acbd8ed4a7bf223e0efecc2ce18e3221e":[1,0,99,2],
 "classAI__PlayMusic.html#accf2ba0f0af523cd265b8c0543cfaaea":[1,0,99,1],
 "classAI__PlayMusic.html#ad7986a2149abbd67214bcf1f0daf9188":[1,0,99,8],
-"classAI__PlayMusic.html#ae3a51a9cdf907a8b71758f85c64fa900":[1,0,99,6],
-"classAI__PlayMusic.html#af3ddb1180da01215545e2ebca91a6483":[1,0,99,5],
-"classAI__Practice.html":[1,0,100],
-"classAI__Practice.html#a4cd16ff54463bcf8cdaf8ca21b4daee1":[1,0,100,5],
-"classAI__Practice.html#a744b496701a76ccb7044d2a0356a0234":[1,0,100,1]
+"classAI__PlayMusic.html#ae3a51a9cdf907a8b71758f85c64fa900":[1,0,99,6]
 };
