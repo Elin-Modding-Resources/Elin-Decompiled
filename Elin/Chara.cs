@@ -2313,6 +2313,15 @@ public class Chara : Card, IPathfindWalker
 		return true;
 	}
 
+	public void Banish(Chara owner)
+	{
+		owner?.Say("summon_vanish", this);
+		pos.PlayEffect("vanish");
+		pos.PlaySound("vanish");
+		pos.PlayEffect("teleport");
+		Destroy();
+	}
+
 	public void MakeMinion(Chara _master, MinionType type = MinionType.Default)
 	{
 		ReleaseMinion();
@@ -9580,15 +9589,19 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (!HasElement(450))
 		{
-			int height = bio.height;
-			height = height * (100 + a) / 100 + ((a > 0) ? 1 : (-1));
-			if (height < 1)
+			long num = bio.height;
+			num = num * (100 + a) / 100 + ((a > 0) ? 1 : (-1));
+			if (num < 1)
 			{
-				height = 1;
+				num = 1L;
 			}
-			if (height != bio.height)
+			if (num > 999999999)
 			{
-				bio.height = height;
+				num = 999999999L;
+			}
+			if (num != bio.height)
+			{
+				bio.height = (int)num;
 				Say((a > 0) ? "height_gain" : "height_lose", this);
 			}
 		}
@@ -9600,20 +9613,24 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
-		int weight = bio.weight;
-		int height = bio.height;
-		int num = height * height * 18 / 25000;
-		int num2 = height * height * 24 / 10000;
-		if (ignoreLimit || (weight > num && weight < num2))
+		long num = bio.weight;
+		long num2 = bio.height;
+		long num3 = num2 * num2 * 18 / 25000;
+		long num4 = num2 * num2 * 24 / 10000;
+		if (ignoreLimit || (num > num3 && num < num4))
 		{
-			weight = weight * (100 + a) / 100 + ((a > 0) ? 1 : (-1));
-			if (weight < 1)
+			num = num * (100 + a) / 100 + ((a > 0) ? 1 : (-1));
+			if (num < 1)
 			{
-				weight = 1;
+				num = 1L;
 			}
-			if (weight != bio.weight)
+			if (num > 999999999)
 			{
-				bio.weight = weight;
+				num = 999999999L;
+			}
+			if (num != bio.weight)
+			{
+				bio.weight = (int)num;
 				Say((a > 0) ? "weight_gain" : "weight_lose", this);
 			}
 		}

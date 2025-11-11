@@ -52,6 +52,8 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 
 		public string moveAnime;
 
+		public string[] recruitItems;
+
 		public bool staticSkin;
 
 		public int[] _tiles_snow;
@@ -189,8 +191,9 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		obj.moveAnime = SourceData.GetString(44);
 		obj.factory = SourceData.GetStringArray(45);
 		obj.components = SourceData.GetStringArray(46);
-		obj.detail_JP = SourceData.GetString(47);
-		obj.detail = SourceData.GetString(48);
+		obj.recruitItems = SourceData.GetStringArray(47);
+		obj.detail_JP = SourceData.GetString(48);
+		obj.detail = SourceData.GetString(49);
 		return obj;
 	}
 

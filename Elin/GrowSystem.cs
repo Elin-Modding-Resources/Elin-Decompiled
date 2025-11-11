@@ -681,14 +681,7 @@ public class GrowSystem : EClass
 		{
 			t.SetNum(num);
 		}
-		if (c == null || EClass.player.isAutoFarming)
-		{
-			TryPick(cell, t, c);
-		}
-		else
-		{
-			c.Pick(t);
-		}
+		TryPick(cell, t, c);
 	}
 
 	public void ApplySeed(Thing t)

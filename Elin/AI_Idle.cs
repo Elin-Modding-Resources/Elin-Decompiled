@@ -429,6 +429,11 @@ public class AI_Idle : AIAct
 				}
 			}
 		}
+		if (owner.IsMinion && owner.master != null && owner.master.id == "keeper_garden" && !(owner.master.ai is GoalCombat))
+		{
+			owner.Banish(owner.master);
+			yield return Success();
+		}
 		if (EClass._zone.IsPCFaction)
 		{
 			Room room = owner.pos.cell.room;
@@ -717,14 +722,17 @@ public class AI_Idle : AIAct
 			Thing thing6 = owner.things.Find<TraitBall>();
 			if (thing6 == null)
 			{
-				owner.pos.ForeachNeighbor(delegate(Point p)
+				if (!LayerCraft.Instance && !LayerDragGrid.Instance)
 				{
-					Card card2 = p.FindThing<TraitBall>()?.owner;
-					if (card2 != null)
+					owner.pos.ForeachNeighbor(delegate(Point p)
 					{
-						owner.Pick(card2.Thing);
-					}
-				});
+						Card card2 = p.FindThing<TraitBall>()?.owner;
+						if (card2 != null)
+						{
+							owner.Pick(card2.Thing);
+						}
+					});
+				}
 			}
 			else
 			{

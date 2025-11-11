@@ -230,7 +230,7 @@ public class ActThrow : ActBaseAttack
 			TraitMonsterBall traitMonsterBall = t.trait as TraitMonsterBall;
 			if (traitMonsterBall.chara != null)
 			{
-				if ((traitMonsterBall.IsLittleBall && !(EClass._zone is Zone_LittleGarden) && !EClass.game.IsSurvival) || (traitMonsterBall.IsDuponneBall && !(EClass._zone is Zone_Exile) && !EClass.game.IsSurvival))
+				if ((traitMonsterBall.IsLittleBall && !(EClass._zone is Zone_LittleGarden) && !EClass.game.IsSurvival) || (traitMonsterBall.IsDuponneBall && !(EClass._zone is Zone_Exile) && !EClass.game.IsSurvival) || (traitMonsterBall.IsSilvercatBall && !(EClass._zone.id == "startVillage2") && !EClass.game.IsSurvival))
 				{
 					break;
 				}

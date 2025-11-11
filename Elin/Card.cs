@@ -3218,21 +3218,40 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			list.Add(chara);
 		}
-		foreach (Chara item in list)
+		if (EClass.pc.IsEyth && EClass.pc.HasElement(1228))
 		{
-			if (!item.IsPCFactionOrMinion)
+			foreach (Chara item in list)
+			{
+				if (item.IsPCFactionOrMinion)
+				{
+					List<Thing> list2 = item.things.List((Thing t) => t.HasTag(CTAG.godArtifact) && t != af && !t.isReplica && t.c_idDeity == EClass.pc.faith.id);
+					if (list2.Count != 0)
+					{
+						foreach (Thing item2 in list2)
+						{
+							Msg.Say("destroyed_inv_", item2, item);
+							item2.Destroy();
+						}
+					}
+				}
+			}
+			return;
+		}
+		foreach (Chara item3 in list)
+		{
+			if (!item3.IsPCFactionOrMinion)
 			{
 				continue;
 			}
-			List<Thing> list2 = item.things.List((Thing t) => t.id == af.id && t != af && !t.isReplica);
-			if (list2.Count == 0)
+			List<Thing> list3 = item3.things.List((Thing t) => t.id == af.id && t != af && !t.isReplica);
+			if (list3.Count == 0)
 			{
 				continue;
 			}
-			foreach (Thing item2 in list2)
+			foreach (Thing item4 in list3)
 			{
-				Msg.Say("destroyed_inv_", item2, item);
-				item2.Destroy();
+				Msg.Say("destroyed_inv_", item4, item3);
+				item4.Destroy();
 			}
 		}
 	}

@@ -418,7 +418,7 @@ public class AI_Fish : AIAct
 				c.Say("bigCatch", c);
 			}
 			num2 = (num7 ? num5 : EClass.rnd(num5)) / (num4 + 1) + 1;
-			if (thing.id == "65" && EClass.rnd(EClass.debug.enable ? 2 : (c.IsPC ? 8192 : 819200)) == 0)
+			if (thing.id == "65" && EClass.rnd(EClass.debug.enable ? 2 : (c.IsPCParty ? 8192 : 819200)) == 0)
 			{
 				thing = ThingGen.Create("65_gold", -1, lv);
 				num2 = 1;

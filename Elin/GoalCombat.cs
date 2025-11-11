@@ -866,7 +866,7 @@ public class GoalCombat : Goal
 				}
 				break;
 			case 6627:
-				if (Act.CC.GetNearbyCatToSniff() == null || Act.CC.HasCondition<ConHOT>())
+				if (owner.GetNearbyCatToSniff() == null || owner.HasCondition<ConHOT>())
 				{
 					continue;
 				}

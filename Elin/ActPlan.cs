@@ -570,7 +570,7 @@ public class ActPlan : EClass
 						{
 							TrySetAct("ActBanishSummon", delegate
 							{
-								Banish(c2);
+								c2.Banish(EClass.pc);
 								return true;
 							}, c2, null, 99);
 							List<Chara> list2 = new List<Chara>();
@@ -587,7 +587,7 @@ public class ActPlan : EClass
 								{
 									foreach (Chara item in list2)
 									{
-										Banish(item);
+										item.Banish(EClass.pc);
 									}
 									return true;
 								}, c2, null, 99);
@@ -997,14 +997,6 @@ public class ActPlan : EClass
 			{
 				WidgetCurrentTool.Instance.placer.Refresh();
 			}
-		}
-		static void Banish(Chara m)
-		{
-			EClass.pc.Say("summon_vanish", m);
-			m.pos.PlayEffect("vanish");
-			m.pos.PlaySound("vanish");
-			m.pos.PlayEffect("teleport");
-			m.Destroy();
 		}
 	}
 }

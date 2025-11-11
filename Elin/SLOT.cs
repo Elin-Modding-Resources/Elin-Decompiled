@@ -22,11 +22,11 @@ public class SLOT
 
 	public const int neck = 31;
 
-	public const int range = 41;
+	public const int head = 30;
 
 	public const int finger = 36;
 
-	public const int head = 30;
+	public const int range = 41;
 
 	public const int ammo = 42;
 
@@ -35,6 +35,6 @@ public class SLOT
 	public static readonly int[] IDS = new int[16]
 	{
 		44, 32, 39, 45, 34, 38, 37, 35, 40, 33,
-		31, 41, 36, 30, 42, 43
+		31, 30, 36, 41, 42, 43
 	};
 }

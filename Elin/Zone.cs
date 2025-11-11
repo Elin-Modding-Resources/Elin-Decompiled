@@ -2777,9 +2777,11 @@ public class Zone : Spatial, ICardParent, IInspect
 			EClass.player.flags.santa++;
 		}
 		long num3 = ((setting.fixedLv == -1) ? cardRow.LV : setting.fixedLv);
+		bool flag = setting.fixedLv != -1 || DangerLvBoost > 0;
 		if (ScaleType == ZoneScaleType.Void)
 		{
 			num3 = (50L + (long)cardRow.LV) * Mathf.Max(1, (num - 1) / 50);
+			flag = true;
 		}
 		num3 += DangerLvBoost;
 		if (setting.rarity == Rarity.Random && cardRow.quality == 0)
@@ -2808,6 +2810,10 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		CardBlueprint.Set(cardBlueprint);
 		Chara chara = CharaGen.Create(cardRow.id, num2);
+		if (!flag)
+		{
+			chara.isScaled = false;
+		}
 		AddCard(chara, pos);
 		if (setting.forcedHostility.HasValue)
 		{

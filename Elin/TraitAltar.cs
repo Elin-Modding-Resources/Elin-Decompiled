@@ -75,7 +75,7 @@ public class TraitAltar : Trait
 
 	public override bool CanOffer(Card c)
 	{
-		if (c != null && c.HasTag(CTAG.godArtifact) && c.c_idDeity == Deity.id)
+		if (c != null && c.HasTag(CTAG.godArtifact) && (c.c_idDeity == Deity.id || (EClass.pc.IsEyth && EClass.pc.HasElement(1228) && Deity == EClass.game.religions.Eyth)))
 		{
 			return true;
 		}
@@ -119,7 +119,7 @@ public class TraitAltar : Trait
 			}
 			return;
 		}
-		if (!IsBranchAltar && EClass.pc.IsEyth)
+		if (!IsBranchAltar && EClass.pc.IsEyth && !EClass.pc.HasElement(1228))
 		{
 			EClass.pc.Say("god_offerEyth", owner, t);
 			return;
@@ -151,7 +151,7 @@ public class TraitAltar : Trait
 		}
 		else
 		{
-			if (t.HasTag(CTAG.godArtifact) && t.c_idDeity == Deity.id)
+			if (t.HasTag(CTAG.godArtifact) && (t.c_idDeity == Deity.id || (EClass.pc.IsEyth && EClass.pc.HasElement(1228))))
 			{
 				_ = t.encLV;
 				t.Destroy();
@@ -164,7 +164,7 @@ public class TraitAltar : Trait
 				}
 				return;
 			}
-			if (EClass.pc.IsEyth)
+			if (EClass.pc.IsEyth && !EClass.pc.HasElement(1228))
 			{
 				Msg.Say("nothingHappens");
 				return;
@@ -172,7 +172,7 @@ public class TraitAltar : Trait
 			if (Deity != EClass.pc.faith)
 			{
 				bool flag = EClass.rnd(EClass.pc.faith.GetOfferingValue(t, t.Num)) > EClass.rnd(200);
-				if (GetParam(1) != null)
+				if (GetParam(1) != null || EClass.pc.IsEyth)
 				{
 					Msg.Say("nothingHappens");
 					return;

@@ -432,7 +432,7 @@ public class ActEffect : EClass
 				bool flag5 = EClass._zone.HasLaw && !EClass._zone.IsPCFaction && (CC.IsPC || (id == EffectId.Explosive && actref.refThing == null)) && !(EClass._zone is Zone_Vernis);
 				if (p.HasObj && p.cell.matObj.hardness <= num7)
 				{
-					EClass._map.MineObj(p, null, CC.Chara);
+					EClass._map.MineObj(p);
 					if (flag5)
 					{
 						EClass.player.ModKarma(-1);
@@ -440,7 +440,7 @@ public class ActEffect : EClass
 				}
 				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num7)
 				{
-					EClass._map.MineBlock(p, recoverBlock: false, CC.Chara);
+					EClass._map.MineBlock(p);
 					if (flag5)
 					{
 						EClass.player.ModKarma(-1);

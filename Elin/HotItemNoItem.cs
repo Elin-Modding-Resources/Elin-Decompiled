@@ -58,6 +58,7 @@ public class HotItemNoItem : HotItemGameAction
 						EClass.player.RefreshCurrentHotItem();
 						ActionMode.Adv.planRight.Update(ActionMode.Adv.mouseTarget);
 						EClass.pc.renderer.Refresh();
+						HotItemHeld.disableTool = true;
 					}
 				}
 				return true;

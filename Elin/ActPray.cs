@@ -23,7 +23,7 @@ public class ActPray : Act
 				return true;
 			}
 		}
-		if (c.faith.IsEyth)
+		if (c.faith.IsEyth && !c.HasElement(1228))
 		{
 			c.Say("pray", c);
 			if (passive && c.Evalue(1655) >= 2 && EClass.pc.party.members.Count > 1)

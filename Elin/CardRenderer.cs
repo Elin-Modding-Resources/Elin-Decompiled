@@ -225,7 +225,7 @@ public class CardRenderer : RenderObject
 			}
 			if (owner.trait is TraitFigure)
 			{
-				if (!owner.c_idRefCard.IsEmpty() && (owner.IsInstalled || EClass.pc.held == owner || !owner.ExistsOnMap || owner.isRoofItem))
+				if (!owner.c_idRefCard.IsEmpty() && (owner.IsInstalled || (EClass.pc.held != owner && !owner.ExistsOnMap) || owner.isRoofItem))
 				{
 					TraitFigure traitFigure = owner.trait as TraitFigure;
 					SourceChara.Row row = EClass.sources.charas.map.TryGetValue(owner.c_idRefCard) ?? EClass.sources.charas.map["putty"];

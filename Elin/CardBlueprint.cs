@@ -31,6 +31,11 @@ public class CardBlueprint : EClass
 		tryLevelMatTier = true
 	};
 
+	public static CardBlueprint Original = new CardBlueprint
+	{
+		blesstedState = BlessedState.Normal
+	};
+
 	public static CardBlueprint DebugEQ = new CardBlueprint
 	{
 		rarity = Rarity.Mythical,

@@ -610,7 +610,35 @@ public class DramaCustomSequence : EClass
 		{
 			if (!c.trait.CanInvite)
 			{
-				TempTalkTopic("invite2", StepDefault);
+				string[] recruitItems = c.source.recruitItems;
+				if (!recruitItems.IsEmpty())
+				{
+					string[] array3 = recruitItems[0].Split('/');
+					string reqId = array3[0];
+					int reqNum = array3[1].ToInt();
+					CardBlueprint.Set(CardBlueprint.Original);
+					GameLang.refDrama1 = ThingGen.Create(reqId).SetNum(reqNum).Name;
+					TempTalkTopic("inviteReq1", null);
+					foreach (Thing t2 in EClass.pc.things.List((Thing t) => t.id == reqId && t.Num >= reqNum, onlyAccessible: true))
+					{
+						Thing _t5 = t2;
+						Choice("daDeliver".lang("", _t5.GetName(NameStyle.Full, _t5.Num)), delegate
+						{
+							t2.ModNum(-reqNum);
+							TempTalk("hired", StepEnd);
+							EClass.Sound.Play("good");
+							c.MakeAlly();
+						}).SetOnTooltip(delegate(UITooltip a)
+						{
+							_t5.WriteNote(a.note);
+						});
+					}
+					Choice("no2", StepDefault, cancel: true).SetOnClick(RumorChill);
+				}
+				else
+				{
+					TempTalkTopic("invite2", StepDefault);
+				}
 			}
 			else if (c.GetBestAttribute() > EClass.pc.CHA && !EClass.debug.godMode)
 			{
