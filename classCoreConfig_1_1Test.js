@@ -16,6 +16,8 @@ var classCoreConfig_1_1Test =
     [ "extraTurnaround", "classCoreConfig_1_1Test.html#a847935740d464df5d95ab5a4d6a52e13", null ],
     [ "idSkin", "classCoreConfig_1_1Test.html#af11cdf6acc44b7f1f60cb0177714b289", null ],
     [ "ignoreBackerDestoryFlag", "classCoreConfig_1_1Test.html#a805a08ac8836310286b4fe9841a6bbc5", null ],
+    [ "screenExtraHeight", "classCoreConfig_1_1Test.html#a8461a502547ce1d6838dba11f6b17d71", null ],
+    [ "screenExtraWidth", "classCoreConfig_1_1Test.html#aee9a2780269b705ce20ae046dccb91bb", null ],
     [ "showNetError", "classCoreConfig_1_1Test.html#afa510c7e3b781dc922924515b6c8c94d", null ],
     [ "showNumbers", "classCoreConfig_1_1Test.html#a8fcc2fc6c7bd2b9fb9afa0d0a48dc173", null ],
     [ "showRefIcon", "classCoreConfig_1_1Test.html#ad5ea4538f8152066f72ae5577bafd645", null ],

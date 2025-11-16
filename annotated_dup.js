@@ -95,6 +95,7 @@ var annotated_dup =
     [ "ActBall", "classActBall.html", "classActBall" ],
     [ "ActBaseAttack", "classActBaseAttack.html", null ],
     [ "ActBash", "classActBash.html", "classActBash" ],
+    [ "ActBloodsuck", "classActBloodsuck.html", "classActBloodsuck" ],
     [ "ActBolt", "classActBolt.html", "classActBolt" ],
     [ "ActBreathe", "classActBreathe.html", "classActBreathe" ],
     [ "ActChat", "classActChat.html", "classActChat" ],

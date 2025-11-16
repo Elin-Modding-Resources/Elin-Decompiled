@@ -68,6 +68,7 @@ var classENC =
     [ "negateShockwave", "classENC.html#ab4e66b6632e6b960ec8fb7000bfdbf3c", null ],
     [ "negateSleep", "classENC.html#afbfe3afa9f6b7bfc3f59a59596278210", null ],
     [ "negateSteal", "classENC.html#a1e36907400d5789ffe93497a9d9c01db", null ],
+    [ "negateSunburn", "classENC.html#ab09645dabb2030086138c6b809592049", null ],
     [ "negateTeleport", "classENC.html#aa313b4266696ee6caff3a2a0d9957464", null ],
     [ "noDamage", "classENC.html#a41e2fed0096736132e4dd1db7b5ad063", null ],
     [ "nonLethal", "classENC.html#ab73de6dd8e77dcec3d7d5ee49ed1f529", null ],

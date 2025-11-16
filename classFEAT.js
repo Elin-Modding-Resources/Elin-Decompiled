@@ -128,6 +128,7 @@ var classFEAT =
     [ "featTourist", "classFEAT.html#a34b25e3f54104dc2dffd341319505944", null ],
     [ "featUndead", "classFEAT.html#adac6616e2e7dfecbebfd74fd74e1b2ee", null ],
     [ "featUnderground", "classFEAT.html#a095879a968d19f675f7eb25f87a9df0b", null ],
+    [ "featVampire", "classFEAT.html#acd3c3f81716d7275a1acdcf1242163fd", null ],
     [ "featWarrior", "classFEAT.html#acd574907e81deaca99ce488d3c85fc20", null ],
     [ "featWhiteVixen", "classFEAT.html#a9dc997249c07337520b10cab896efd32", null ],
     [ "featWIL", "classFEAT.html#ac134dad6c10293b511b8087e59e4410c", null ],

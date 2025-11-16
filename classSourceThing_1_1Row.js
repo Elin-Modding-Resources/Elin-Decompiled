@@ -8,6 +8,7 @@ var classSourceThing_1_1Row =
     [ "_altTiles", "classSourceThing_1_1Row.html#a7ae001e99b531e01a672fbce05ec73fc", null ],
     [ "altTiles", "classSourceThing_1_1Row.html#af4e89eb0693d1a3236279e2f3458a288", null ],
     [ "anime", "classSourceThing_1_1Row.html#abf6ff09cb3f6bd0022bee8884f4a6708", null ],
+    [ "animeNoSync", "classSourceThing_1_1Row.html#acf2d5357276e92697511d3112f0b92ae", null ],
     [ "attackType", "classSourceThing_1_1Row.html#ac68a0959ae6d6faf84e2c4c6e96bd98a", null ],
     [ "defense", "classSourceThing_1_1Row.html#a4a658d52bfbddbcffc8214bde4294221", null ],
     [ "detail_L", "classSourceThing_1_1Row.html#abf54be37ca218a177a1b37ce73905039", null ],

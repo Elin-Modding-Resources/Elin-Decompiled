@@ -173,6 +173,7 @@ var classCard =
     [ "PlaySoundHold", "classCard.html#a2dc54cd4b0288ec7e9ed546085b71e48", null ],
     [ "PlaySoundImpact", "classCard.html#a5cca5733a0c88e78325f6ef6c785cf04", null ],
     [ "PurgeDuplicateArtifact", "classCard.html#a0ea02beeb57823f73360fa6aade5a72c", null ],
+    [ "PurgeEythArtifact", "classCard.html#aad68ceee89ca92565541f6c4cfae0d7c", null ],
     [ "RecalculateFOV", "classCard.html#a7e5b0731b914744e0e7063b19afe5938", null ],
     [ "ReferenceId", "classCard.html#a0cde0d7dc325ad74cae8e99d2606413e", null ],
     [ "RefreshColor", "classCard.html#ab77e0235503fd040146fc88721616f61", null ],

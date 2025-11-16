@@ -242,7 +242,6 @@ var classSPELL =
     [ "SpTelepathy", "classSPELL.html#ad26198bd873e98c4b79f7da53f9277d9", null ],
     [ "SpTeleport", "classSPELL.html#a2c216df733934a7ec0ba0e50044f082d", null ],
     [ "SpTeleportShort", "classSPELL.html#a23d0a3944334cbd7b822adbd20a2c7f5", null ],
-    [ "SpTransmuteBat", "classSPELL.html#a5f84106fa923d73ad7b02665e2f2e707", null ],
     [ "SpTransmuteBroom", "classSPELL.html#a2b5797697ec8b0dbc125ed9709b9225f", null ],
     [ "SpTransmuteCat", "classSPELL.html#ac81ace51f8b8395e9f3391e628d191ce", null ],
     [ "SpTransmutePutit", "classSPELL.html#affa7deeec6e923c0df8b85eb92b24dfb", null ],

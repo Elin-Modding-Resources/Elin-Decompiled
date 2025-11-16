@@ -129,6 +129,7 @@ var classPoint =
     [ "IsInBoundsPlus", "classPoint.html#a6d2dbffa862008dc61d946a5885f381b", null ],
     [ "IsSeen", "classPoint.html#a156a0afded1c66563745baa397261a4a", null ],
     [ "IsSky", "classPoint.html#a36e0097e711f0aff188c4d453dd8f13f", null ],
+    [ "IsSunLit", "classPoint.html#a9ccaa72be908ef226df75199cc454f64", null ],
     [ "IsSync", "classPoint.html#a781887edf23af8bac5b005cd23fd8b02", null ],
     [ "IsValid", "classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e", null ],
     [ "IsWater", "classPoint.html#a66b485bcaf78e89889e22baaee3a941b", null ],
