@@ -529,6 +529,10 @@ public class CoreConfig : EClass
 
 		public int extraToneMTP;
 
+		public int screenExtraWidth;
+
+		public int screenExtraHeight;
+
 		public bool showNumbers;
 
 		public bool stackNumbers;

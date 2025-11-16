@@ -309,6 +309,21 @@ public class AI_Idle : AIAct
 						}
 					}
 				}
+				if (EClass.rnd(100) == 0 && EClass.pc.ai is AI_Fish && owner.stamina.value > 0 && owner.things.Find<TraitToolFishing>() != null)
+				{
+					Point randomPointInRadius = EClass.pc.pos.GetRandomPointInRadius(0, 3);
+					if (randomPointInRadius != null)
+					{
+						randomPointInRadius = AI_Fish.GetFishingPoint(randomPointInRadius);
+						if (randomPointInRadius.IsValid)
+						{
+							yield return Do(new AI_Fish
+							{
+								pos = randomPointInRadius
+							});
+						}
+					}
+				}
 			}
 			if (owner.c_uidMaster != 0)
 			{
@@ -649,7 +664,7 @@ public class AI_Idle : AIAct
 				yield return Do(new AI_Fuck
 				{
 					target = chara3,
-					bitch = true
+					variation = AI_Fuck.Variation.Bitch
 				});
 			}
 		}

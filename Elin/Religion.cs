@@ -254,10 +254,6 @@ public class Religion : EClass
 
 	public bool IsValidArtifact(string id)
 	{
-		if (giftRank < 2)
-		{
-			return false;
-		}
 		return id switch
 		{
 			"gun_mani" => this == EClass.game.religions.Machine, 
@@ -370,10 +366,6 @@ public class Religion : EClass
 				break;
 			}
 		}
-		if (EClass.pc.IsEyth && EClass.pc.HasElement(1228))
-		{
-			thing.c_idDeity = EClass.game.religions.Eyth.id;
-		}
 		EClass._zone.AddCard(thing, pos);
 		pos.PlayEffect("aura_heaven");
 		if (first)
@@ -447,6 +439,7 @@ public class Religion : EClass
 				EClass.screen.RefreshWeather();
 			}
 		}
+		EClass.pc.PurgeEythArtifact();
 	}
 
 	public void LeaveFaith(Chara c, Religion newFaith, ConvertType type)

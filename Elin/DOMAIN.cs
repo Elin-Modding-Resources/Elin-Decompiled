@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class DOMAIN
 {
-	public const int domComm = 805;
-
-	public const int domElement = 806;
+	public const int domFaith = 802;
 
 	public const int domSurvival = 801;
 
 	public const int domTest = 800;
 
-	public const int domArcane = 804;
-
-	public const int domFaith = 802;
+	public const int domElement = 806;
 
 	public const int domMiracle = 803;
+
+	public const int domArcane = 804;
+
+	public const int domComm = 805;
 
 	public const int domWind = 807;
 
@@ -36,7 +36,7 @@ public class DOMAIN
 
 	public static readonly int[] IDS = new int[16]
 	{
-		805, 806, 801, 800, 804, 802, 803, 807, 808, 810,
+		802, 801, 800, 806, 803, 804, 805, 807, 808, 810,
 		811, 812, 813, 814, 815, 809
 	};
 }

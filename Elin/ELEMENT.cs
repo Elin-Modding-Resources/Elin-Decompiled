@@ -33,11 +33,13 @@ public class ELEMENT
 
 	public const int _void = 0;
 
-	public const int poison = 20;
+	public const int old_antidote = 25;
+
+	public const int piety = 85;
 
 	public const int race = 29;
 
-	public const int piety = 85;
+	public const int cure = 26;
 
 	public const int old_heal = 24;
 
@@ -53,36 +55,34 @@ public class ELEMENT
 
 	public const int heat = 16;
 
-	public const int cure = 26;
-
-	public const int water = 15;
-
-	public const int hardness = 13;
-
-	public const int size = 12;
-
-	public const int weight = 11;
-
-	public const int nutrition = 10;
-
-	public const int socket = 5;
-
-	public const int d = 3;
-
-	public const int quality = 2;
-
-	public const int lv = 1;
+	public const int poison = 20;
 
 	public const int growth = 14;
 
-	public const int old_antidote = 25;
+	public const int lv = 1;
+
+	public const int water = 15;
+
+	public const int d = 3;
+
+	public const int socket = 5;
+
+	public const int quality = 2;
+
+	public const int weight = 11;
+
+	public const int size = 12;
+
+	public const int hardness = 13;
+
+	public const int nutrition = 10;
 
 	public static readonly int[] IDS = new int[36]
 	{
 		752, 753, 754, 755, 756, 762, 760, 761, 763, 765,
-		751, 759, 750, 0, 20, 29, 85, 24, 23, 22,
-		21, 18, 17, 16, 26, 15, 13, 12, 11, 10,
-		5, 3, 2, 1, 14, 25
+		751, 759, 750, 0, 25, 85, 29, 26, 24, 23,
+		22, 21, 18, 17, 16, 20, 14, 1, 15, 3,
+		5, 2, 11, 12, 13, 10
 	};
 }
 public class Element : EClass
@@ -1017,7 +1017,11 @@ public class Element : EClass
 			}
 			return id;
 		default:
-			return source.id;
+			if (source.sort == 0)
+			{
+				return source.id;
+			}
+			return source.sort;
 		}
 	}
 

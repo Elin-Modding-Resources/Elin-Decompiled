@@ -276,13 +276,15 @@ public class WidgetManager : EMono
 
 	public void Reset(bool toggleTheme)
 	{
-		if (WidgetMainText.Instance.box.isShowingLog)
-		{
-			WidgetMainText.Instance._ToggleLog();
-		}
+		MsgBox msgBox = null;
 		if ((bool)WidgetMainText.Instance)
 		{
-			(WidgetMainText.boxBk = WidgetMainText.Instance.box).transform.SetParent(base.transform.parent, worldPositionStays: false);
+			if (WidgetMainText.Instance.box.isShowingLog)
+			{
+				WidgetMainText.Instance._ToggleLog();
+			}
+			msgBox = (WidgetMainText.boxBk = WidgetMainText.Instance.box);
+			msgBox.transform.SetParent(base.transform.parent, worldPositionStays: false);
 		}
 		KillWidgets();
 		if (toggleTheme)
@@ -292,6 +294,10 @@ public class WidgetManager : EMono
 		OnGameInstantiated();
 		OnActivateZone();
 		OnChangeActionMode();
+		if (!WidgetMainText.Instance && (bool)msgBox)
+		{
+			UnityEngine.Object.Destroy(msgBox.gameObject);
+		}
 	}
 
 	public void DialogSave(Action onSave = null)

@@ -2724,7 +2724,7 @@ public class ActEffect : EClass
 				bool flag = false;
 				foreach (Religion item in EClass.game.religions.list)
 				{
-					if (item.IsValidArtifact(r.id))
+					if (item.giftRank >= 2 && item.IsValidArtifact(r.id))
 					{
 						flag = true;
 					}
@@ -2852,7 +2852,7 @@ public class ActEffect : EClass
 			Msg.Say("wishFail");
 			return false;
 		}
-		list.Sort((WishItem a, WishItem b) => (a.score != b.score) ? (b.score - a.score) : (EClass.rnd(10) - EClass.rnd(10)));
+		list.Sort((WishItem a, WishItem b) => b.score - a.score);
 		foreach (WishItem item2 in list)
 		{
 			Debug.Log(item2.score + "/" + s + "/" + item2.n);
@@ -2870,11 +2870,11 @@ public class ActEffect : EClass
 		int num = 0;
 		if (t == s)
 		{
-			num += 100;
+			num += 100 + EClass.rnd(30);
 		}
 		if (t.Contains(s))
 		{
-			num += 100;
+			num += 100 + EClass.rnd(30);
 		}
 		return num;
 	}

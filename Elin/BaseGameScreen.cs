@@ -549,8 +549,8 @@ public class BaseGameScreen : EMono
 	public void RefreshScreenSize()
 	{
 		Zoom = EMono.scene.camSupport.Zoom;
-		width = (int)((float)Screen.width / tileSize.x / Zoom) + (int)paddings.x + 2;
-		height = (int)((float)Screen.height / (tileSize.y / 2f) / Zoom) + (int)paddings.y + 4;
+		width = (int)((float)Screen.width / tileSize.x / Zoom) + (int)paddings.x + 2 + EMono.core.config.test.screenExtraWidth;
+		height = (int)((float)Screen.height / (tileSize.y / 2f) / Zoom) + (int)paddings.y + 4 + EMono.core.config.test.screenExtraHeight;
 		camSupport.divier = EMono.core.config.fix.divider;
 		camSupport.ResizeCameraToPixelPerfect();
 		Vector3 localScale = new Vector3(EMono.scene.cam.orthographicSize * ((float)Screen.width / (float)Screen.height) * 2.5f, EMono.scene.cam.orthographicSize * 2.5f, 1f);

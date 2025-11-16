@@ -9,15 +9,22 @@ public class AI_Fuck : AIAct
 		tame
 	}
 
+	public enum Variation
+	{
+		Normal,
+		Bitch,
+		Succubus,
+		NTR,
+		Bloodsuck
+	}
+
+	public Variation variation;
+
 	public Chara target;
 
 	public bool sell;
 
-	public bool bitch;
-
 	public bool succubus;
-
-	public bool ntr;
 
 	public int maxProgress;
 
@@ -39,9 +46,19 @@ public class AI_Fuck : AIAct
 
 	public override int CurrentProgress => progress;
 
-	public override bool CancelOnAggro => !ntr;
+	public override bool CancelOnAggro
+	{
+		get
+		{
+			if (variation != Variation.NTR)
+			{
+				return variation != Variation.Bloodsuck;
+			}
+			return false;
+		}
+	}
 
-	public override bool CancelWhenDamaged => !ntr;
+	public override bool CancelWhenDamaged => CancelOnAggro;
 
 	public override bool ShouldAllyAttack(Chara tg)
 	{
@@ -75,10 +92,14 @@ public class AI_Fuck : AIAct
 		{
 			cc.SetTempHand(1104, -1);
 		}
-		maxProgress = (ntr ? 10 : 25);
-		if (succubus)
+		maxProgress = ((variation == Variation.NTR || variation == Variation.Bloodsuck) ? 10 : 25);
+		if (variation == Variation.Succubus)
 		{
 			cc.Talk("seduce");
+		}
+		if (variation == Variation.Bloodsuck)
+		{
+			cc.PlaySound("bloodsuck");
 		}
 		for (int i = 0; i < maxProgress; i++)
 		{
@@ -87,7 +108,7 @@ public class AI_Fuck : AIAct
 			switch (Type)
 			{
 			case FuckType.fuck:
-				if (ntr)
+				if (variation == Variation.NTR)
 				{
 					cc.Say("ntr", cc, tc);
 				}
@@ -113,6 +134,10 @@ public class AI_Fuck : AIAct
 				if (EClass.rnd(3) == 0 || sell)
 				{
 					target.AddCondition<ConWait>(50, force: true);
+				}
+				if (variation == Variation.Bloodsuck)
+				{
+					owner.pos.TryWitnessCrime(cc, tc, 4, (Chara c) => EClass.rnd(cc.HasCondition<ConTransmuteBat>() ? 50 : 20) == 0);
 				}
 				break;
 			case FuckType.tame:
@@ -191,44 +216,66 @@ public class AI_Fuck : AIAct
 		{
 		case FuckType.fuck:
 		{
-			for (int i = 0; i < 2; i++)
+			if (variation == Variation.Bloodsuck)
 			{
-				Chara chara3 = ((i == 0) ? chara : chara2);
-				chara3.RemoveCondition<ConDrunk>();
-				if (EClass.rnd(15) == 0 && !chara3.HasElement(1216))
+				if (EClass.rnd(2) == 0)
 				{
-					chara3.AddCondition<ConDisease>(200);
+					chara2.AddCondition<ConConfuse>(500);
 				}
-				chara3.ModExp(77, 250);
-				chara3.ModExp(71, 250);
-				chara3.ModExp(75, 250);
-			}
-			if (!chara2.HasElement(1216))
-			{
-				if (EClass.rnd(5) == 0)
+				if (EClass.rnd(2) == 0)
+				{
+					chara2.AddCondition<ConDim>(500);
+				}
+				if (EClass.rnd(2) == 0)
 				{
 					chara2.AddCondition<ConParalyze>(500);
 				}
-				if (EClass.rnd(3) == 0)
+				if (EClass.rnd(10) == 0)
 				{
 					chara2.AddCondition<ConInsane>(100 + EClass.rnd(100));
 				}
 			}
-			int num3 = CalcMoney.Whore(chara2, chara);
+			else
+			{
+				for (int i = 0; i < 2; i++)
+				{
+					Chara chara3 = ((i == 0) ? chara : chara2);
+					chara3.RemoveCondition<ConDrunk>();
+					if (EClass.rnd(15) == 0 && !chara3.HasElement(1216))
+					{
+						chara3.AddCondition<ConDisease>(200);
+					}
+					chara3.ModExp(77, 250);
+					chara3.ModExp(71, 250);
+					chara3.ModExp(75, 250);
+				}
+				if (!chara2.HasElement(1216))
+				{
+					if (EClass.rnd(5) == 0)
+					{
+						chara2.AddCondition<ConParalyze>(500);
+					}
+					if (EClass.rnd(3) == 0)
+					{
+						chara2.AddCondition<ConInsane>(100 + EClass.rnd(100));
+					}
+				}
+			}
 			chara.Talk("tail_after");
 			bool flag3 = false;
-			if (succubus)
+			if (variation == Variation.Succubus)
 			{
 				chara.ShowEmo(Emo.love);
 				chara2.ShowEmo(Emo.love);
 				EClass.player.forceTalk = true;
 				chara2.Talk("seduced");
 			}
-			else if (chara != EClass.pc)
+			else if (variation != Variation.NTR && variation != Variation.Bloodsuck && chara != EClass.pc)
 			{
+				int num3 = CalcMoney.Whore(chara2, chara);
 				Chara chara4 = chara;
 				Chara chara5 = chara2;
-				if (bitch)
+				if (variation == Variation.Bitch)
 				{
 					chara = chara5;
 					chara2 = chara4;
@@ -287,32 +334,43 @@ public class AI_Fuck : AIAct
 			{
 				chara2.DoHostileAction(chara);
 			}
-			if (chara.IsPCParty || chara2.IsPCParty)
+			if (variation == Variation.Bloodsuck)
 			{
-				chara.stamina.Mod(-5 - EClass.rnd(chara.stamina.max / 10 + (succubus ? StaminaCost(chara2, chara) : 0) + 1));
-				chara2.stamina.Mod(-5 - EClass.rnd(chara2.stamina.max / 20 + (succubus ? StaminaCost(chara, chara2) : 0) + 1));
+				int value = chara.hunger.value;
+				Thing food = CraftUtil.MakeBloodMeal(chara, chara2);
+				FoodEffect.Proc(chara, food, consume: false);
+				chara2.AddCondition<ConBleed>(EClass.rndHalf(value * 20));
 			}
-			SuccubusExp(chara, chara2);
-			SuccubusExp(chara2, chara);
+			else
+			{
+				if (chara.IsPCParty || chara2.IsPCParty)
+				{
+					chara.stamina.Mod(-5 - EClass.rnd(chara.stamina.max / 10 + ((variation == Variation.Succubus) ? StaminaCost(chara2, chara) : 0) + 1));
+					chara2.stamina.Mod(-5 - EClass.rnd(chara2.stamina.max / 20 + ((variation == Variation.Succubus) ? StaminaCost(chara, chara2) : 0) + 1));
+				}
+				SuccubusExp(chara, chara2);
+				SuccubusExp(chara2, chara);
+			}
 			chara2.ModAffinity(chara, flag ? 10 : (-5));
 			if (chara == EClass.pc || chara2 == EClass.pc)
 			{
 				EClass.player.stats.kimo++;
 			}
-			if (ntr)
+			if (variation != Variation.NTR)
 			{
-				Thing thing = chara2.things.Find<TraitDreamBug>();
-				if (thing != null)
+				break;
+			}
+			Thing thing = chara2.things.Find<TraitDreamBug>();
+			if (thing != null)
+			{
+				thing.ModNum(-1);
+				if (chara.IsPC)
 				{
-					thing.ModNum(-1);
-					if (chara.IsPC)
-					{
-						Msg.Say("dream_spell", EClass.sources.elements.map[9156].GetName().ToLowerInvariant());
-						EClass.pc.GainAbility(9156, EClass.rnd(2) + 1);
-					}
+					Msg.Say("dream_spell", EClass.sources.elements.map[9156].GetName().ToLowerInvariant());
+					EClass.pc.GainAbility(9156, EClass.rnd(2) + 1);
 				}
 			}
-			if (!ntr || !chara.HasElement(1239) || chara2.HasElement(1216))
+			if (!chara.HasElement(1239) || chara2.HasElement(1216))
 			{
 				break;
 			}

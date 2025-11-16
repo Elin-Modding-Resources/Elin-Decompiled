@@ -18,6 +18,14 @@ public class TraitAltar : Trait
 
 	public bool IsEyth => idDeity == "eyth";
 
+	public override void OnSetOwner()
+	{
+		if (idDeity == "void")
+		{
+			owner.c_idDeity = "eyth";
+		}
+	}
+
 	public override void OnCreate(int lv)
 	{
 		SetDeity(GetParam(1) ?? EClass.game.religions.GetRandomReligion().id);
@@ -75,9 +83,19 @@ public class TraitAltar : Trait
 
 	public override bool CanOffer(Card c)
 	{
-		if (c != null && c.HasTag(CTAG.godArtifact) && (c.c_idDeity == Deity.id || (EClass.pc.IsEyth && EClass.pc.HasElement(1228) && Deity == EClass.game.religions.Eyth)))
+		if (c != null && c.HasTag(CTAG.godArtifact))
 		{
-			return true;
+			if (EClass.pc.IsEyth && EClass.pc.HasElement(1228))
+			{
+				if (IsEyth || Deity.IsValidArtifact(c.id))
+				{
+					return true;
+				}
+			}
+			else if (c.c_idDeity == Deity.id)
+			{
+				return true;
+			}
 		}
 		if (base.CanOffer(c) && (EClass.pc.faith.GetOfferingValue(c as Thing) > 0 || c.id == "water") && !c.isCopy)
 		{
@@ -136,7 +154,7 @@ public class TraitAltar : Trait
 		{
 			Msg.Say("nothingHappens");
 		}
-		else if (IsEyth)
+		else if (IsEyth && !EClass.pc.HasElement(1228))
 		{
 			if (EClass.pc.IsEyth)
 			{
@@ -156,6 +174,10 @@ public class TraitAltar : Trait
 				_ = t.encLV;
 				t.Destroy();
 				Thing thing = Religion.Reforge(t.id);
+				if (EClass.pc.IsEyth && EClass.pc.HasElement(1228) && IsEyth)
+				{
+					thing.c_idDeity = EClass.game.religions.Eyth.id;
+				}
 				thing.SetEncLv(t.encLV);
 				thing.SetBlessedState(t.blessedState);
 				if (t.IsIdentified)
@@ -169,7 +191,7 @@ public class TraitAltar : Trait
 				Msg.Say("nothingHappens");
 				return;
 			}
-			if (Deity != EClass.pc.faith)
+			if (Deity.id != EClass.pc.faith.id)
 			{
 				bool flag = EClass.rnd(EClass.pc.faith.GetOfferingValue(t, t.Num)) > EClass.rnd(200);
 				if (GetParam(1) != null || EClass.pc.IsEyth)

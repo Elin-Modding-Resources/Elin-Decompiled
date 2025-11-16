@@ -11,7 +11,7 @@ public class SerializedCards : EClass
 		public int[] ints = new int[30];
 
 		[JsonProperty]
-		public string[] strs = new string[10];
+		public string[] strs = new string[20];
 
 		[JsonProperty]
 		public Dictionary<int, object> obj;
@@ -273,6 +273,18 @@ public class SerializedCards : EClass
 			}
 		}
 
+		public int idtState
+		{
+			get
+			{
+				return ints[23];
+			}
+			set
+			{
+				ints[23] = value;
+			}
+		}
+
 		public string id
 		{
 			get
@@ -393,6 +405,30 @@ public class SerializedCards : EClass
 			}
 		}
 
+		public string idRefName
+		{
+			get
+			{
+				return strs[10];
+			}
+			set
+			{
+				strs[10] = value;
+			}
+		}
+
+		public string idTeleport
+		{
+			get
+			{
+				return strs[11];
+			}
+			set
+			{
+				strs[11] = value;
+			}
+		}
+
 		public bool isDead
 		{
 			get
@@ -456,7 +492,10 @@ public class SerializedCards : EClass
 			isEmpty = (c.things.Count == 0 && c.c_lockLv == 0),
 			encLv = c.encLV,
 			cText = c.c_refText,
-			cNote = c.c_note
+			cNote = c.c_note,
+			idtState = c.c_IDTState,
+			idRefName = c.c_idRefName,
+			idTeleport = c.GetStr(31)
 		};
 		if (c.c_idBacker != 0)
 		{
@@ -807,6 +846,18 @@ public class SerializedCards : EClass
 				{
 					card2.SetEncLv(card4.encLv);
 				}
+				if (card4.strs.Length > 10)
+				{
+					if (!card4.idRefName.IsEmpty())
+					{
+						card2.c_idRefName = card4.idRefName;
+					}
+					if (!card4.idTeleport.IsEmpty())
+					{
+						card2.SetStr(31, card4.idTeleport);
+					}
+				}
+				card2.c_IDTState = card4.idtState;
 			}
 			if (card2.isChara)
 			{

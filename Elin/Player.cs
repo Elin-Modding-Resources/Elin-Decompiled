@@ -1658,7 +1658,7 @@ public class Player : EClass
 		c.EQ_ID("shirt").c_IDTState = 0;
 		c.AddCard(ThingGen.CreateCurrency(1 + EClass.rnd(5)));
 		bool firstSpellbook = true;
-		switch (EClass.pc.job.id)
+		switch (c.job.id)
 		{
 		case "paladin":
 			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8400), 2));
@@ -1676,7 +1676,7 @@ public class Player : EClass
 			c.AddCard(ThingGen.Create("tool_talisman"));
 			break;
 		}
-		switch (EClass.pc.job.id)
+		switch (c.job.id)
 		{
 		case "wizard":
 		case "warmage":
@@ -1727,6 +1727,15 @@ public class Player : EClass
 		default:
 			c.AddCard(ThingGen.Create("bandage").SetNum(6 + EClass.rnd(3)));
 			break;
+		}
+		if (c.race.id == "vampire")
+		{
+			c.AddCard(ThingGen.CreateRecipe("bloodpack"));
+			if (EClass.debug.enable)
+			{
+				c.AddCard(ThingGen.Create("mixer"));
+				c.AddCard(ThingGen.Create("bloodpack").SetNum(3));
+			}
 		}
 		Thing SetSpellbook(Thing t, int charge)
 		{

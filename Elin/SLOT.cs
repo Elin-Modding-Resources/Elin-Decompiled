@@ -28,13 +28,13 @@ public class SLOT
 
 	public const int range = 41;
 
-	public const int ammo = 42;
-
 	public const int token = 43;
+
+	public const int ammo = 42;
 
 	public static readonly int[] IDS = new int[16]
 	{
 		44, 32, 39, 45, 34, 38, 37, 35, 40, 33,
-		31, 30, 36, 41, 42, 43
+		31, 30, 36, 41, 43, 42
 	};
 }

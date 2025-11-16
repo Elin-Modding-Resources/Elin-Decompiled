@@ -1582,6 +1582,7 @@ public class Thing : Card
 			}
 			break;
 		default:
+		{
 			if (source._altTiles.Length != 0 && trait.UseAltTiles)
 			{
 				p.tile = source._altTiles[base.dir % source._altTiles.Length] * ((!flipX) ? 1 : (-1));
@@ -1590,13 +1591,21 @@ public class Thing : Card
 			{
 				p.tile = sourceCard._tiles[base.dir % sourceCard._tiles.Length] * ((!flipX) ? 1 : (-1));
 			}
+			float time = Time.realtimeSinceStartup;
+			if (source.animeNoSync)
+			{
+				Rand.UseSeed(base.uid, delegate
+				{
+					time += EClass.rnd(1000);
+				});
+			}
 			if (source.anime.Length == 0 || !trait.IsAnimeOn)
 			{
 				break;
 			}
 			if (source.anime.Length > 2)
 			{
-				float num = Time.realtimeSinceStartup * 1000f / (float)source.anime[1] % (float)source.anime[2];
+				float num = time * 1000f / (float)source.anime[1] % (float)source.anime[2];
 				if ((int)num == source.anime[0] - 1 && source.anime.Length > 3)
 				{
 					PlaySound("anime_sound" + source.anime[3]);
@@ -1608,10 +1617,11 @@ public class Thing : Card
 			}
 			else
 			{
-				float num2 = Time.realtimeSinceStartup * 1000f / (float)source.anime[1] % (float)source.anime[0];
+				float num2 = time * 1000f / (float)source.anime[1] % (float)source.anime[0];
 				p.tile += num2 * (float)((!(p.tile < 0f)) ? 1 : (-1));
 			}
 			break;
+		}
 		}
 		if (trait.IdSkin != 0 && sourceCard.skins.Length != 0)
 		{

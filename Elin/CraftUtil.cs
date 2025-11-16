@@ -99,6 +99,24 @@ public class CraftUtil : EClass
 		}
 	}
 
+	public static Thing MakeBloodMeal(Chara sucker, Chara feeder)
+	{
+		int lV = feeder.LV;
+		lV = lV / 10 * 10 + 10;
+		Rand.SetSeed(EClass.game.seed + feeder.uid);
+		Thing thing = ThingGen.CreateFromCategory("meal", lV);
+		sucker.Say("food_blood", thing);
+		Rand.SetSeed(EClass.game.seed + feeder.uid);
+		MakeDish(thing, lV);
+		Rand.SetSeed();
+		if (thing.HasElement(708))
+		{
+			thing.elements.Remove(708);
+		}
+		thing.elements.ModBase(710, 1);
+		return thing;
+	}
+
 	public static Thing MakeDarkSoup()
 	{
 		Thing thing = ThingGen.Create("soup_dark");

@@ -52,6 +52,8 @@ public class SourceThing : SourceDataString<SourceThing.Row>
 
 		public bool ignoreAltFix;
 
+		public bool animeNoSync;
+
 		[NonSerialized]
 		public string name_L;
 
@@ -102,6 +104,7 @@ public class SourceThing : SourceDataString<SourceThing.Row>
 					_altTiles[i] = altTiles[i] / 100 * (int)renderData.pass.pmesh.tiling.x + altTiles[i] % 100 + num;
 				}
 			}
+			animeNoSync = tag.Contains("animeNoSync");
 		}
 
 		public override string GetName(SourceMaterial.Row mat, int sum)

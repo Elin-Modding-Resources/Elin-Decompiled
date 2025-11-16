@@ -955,13 +955,7 @@ public class CoreDebug : EScriptable
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
-				EClass.pc.Pick(CraftUtil.MakeLoveLunch(targetChara));
-				EClass.pc.Pick(CraftUtil.MakeDarkSoup());
-				EClass.pc.Pick(targetChara.MakeMilk());
-				EClass.pc.Pick(targetChara.MakeGene());
-				EClass.pc.Pick(targetChara.MakeBraineCell());
-				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
-				targetChara.ModAffinity(EClass.pc, 10000);
+				EClass.pc.Pick(CraftUtil.MakeBloodMeal(EClass.pc, targetChara));
 			}
 			targetChara.ScaleByPrincipal();
 			if (EClass.game.quests.Get<QuestDebt>() == null)

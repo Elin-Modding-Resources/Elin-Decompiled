@@ -542,7 +542,7 @@ public class ActPlan : EClass
 									TrySetAct(new AI_Fuck
 									{
 										target = c2,
-										succubus = true
+										variation = AI_Fuck.Variation.Succubus
 									}, c2);
 								}
 								TrySetAct(ACT.Chat, c2);

@@ -347,7 +347,7 @@ public class DNA : EClass
 			if (model.ability.list.items.Count != 0)
 			{
 				ActList.Item a = model.ability.list.items.RandomItem();
-				if (!(a.act.source.category != "ability"))
+				if (!(a.act.source.category != "ability") && a.act.source.geneSlot >= 0)
 				{
 					AddVal(a.act.source.id, a.chance * ((!a.pt) ? 1 : (-1)), allowStack: false, (int v) => 8 + a.act.source.cost[0] / 10 * 2);
 					action++;

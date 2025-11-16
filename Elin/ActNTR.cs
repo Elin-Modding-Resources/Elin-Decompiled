@@ -32,8 +32,7 @@ public class ActNTR : Ability
 		Act.CC.SetAI(new AI_Fuck
 		{
 			target = Act.TC.Chara,
-			bitch = true,
-			ntr = true
+			variation = AI_Fuck.Variation.NTR
 		});
 		return true;
 	}

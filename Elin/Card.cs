@@ -2668,7 +2668,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		_ints[0] = _bits1.ToInt();
 		_ints[2] = _bits2.ToInt();
 		_placeState = placeState;
-		version = 2;
 		OnSerializing();
 	}
 
@@ -2679,16 +2678,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	[OnDeserialized]
 	private void _OnDeserialized(StreamingContext context)
 	{
-		if (version < 2)
+		if (version < 2 && sockets != null)
 		{
-			if (sockets != null)
+			for (int i = 0; i < sockets.Count; i++)
 			{
-				for (int i = 0; i < sockets.Count; i++)
-				{
-					sockets[i] = sockets[i] / 100 * 1000 + sockets[i] % 100;
-				}
+				sockets[i] = sockets[i] / 100 * 1000 + sockets[i] % 100;
 			}
-			version = 2;
 		}
 		_bits1.SetInt(_ints[0]);
 		_bits2.SetInt(_ints[2]);
@@ -2708,6 +2703,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (isThing && Num <= 0)
 		{
 			isDestroyed = true;
+		}
+		if (version < 3)
+		{
+			if (version < 3 && isChara && HasElement(1210))
+			{
+				elements.ModBase(960, -5 * Evalue(1210));
+			}
+			version = 3;
 		}
 	}
 
@@ -2737,6 +2740,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		EClass.game.cards.AssignUID(this);
 		this.genLv = genLv;
 		isNew = true;
+		version = 3;
 		SetSource();
 		OnBeforeCreate();
 		if (sourceCard.quality != 0)
@@ -3252,6 +3256,38 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				Msg.Say("destroyed_inv_", item4, item3);
 				item4.Destroy();
+			}
+		}
+	}
+
+	public void PurgeEythArtifact()
+	{
+		if (!EClass.pc.IsEyth || !EClass.pc.HasElement(1228))
+		{
+			return;
+		}
+		List<Chara> list = new List<Chara>();
+		foreach (FactionBranch child in EClass.pc.faction.GetChildren())
+		{
+			foreach (Chara member in child.members)
+			{
+				list.Add(member);
+			}
+		}
+		foreach (Chara chara in EClass._map.charas)
+		{
+			list.Add(chara);
+		}
+		foreach (Chara item in list)
+		{
+			if (item.IsPCFactionOrMinion)
+			{
+				Thing thing = item.things.Find((Thing t) => t.HasTag(CTAG.godArtifact) && t.c_idDeity == "eyth");
+				if (thing != null)
+				{
+					PurgeDuplicateArtifact(thing);
+				}
+				break;
 			}
 		}
 	}
@@ -4460,7 +4496,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				foreach (Chara chara5 in EClass._map.charas)
 				{
-					if (Chara.IsFriendOrAbove(chara5) && chara5.HasElement(1408) && chara5.faith == EClass.game.religions.Healing && EClass.world.date.GetRawDay() != chara5.GetInt(58) && (!chara5.IsPCFaction || IsPCFaction))
+					if (Chara.IsFriendOrAbove(chara5) && chara5.HasElement(1408) && chara5.faith == EClass.game.religions.Healing && EClass.world.date.GetRawDay() != chara5.GetInt(58) && (!chara5.IsPCFaction || IsPCFaction) && (chara5.memberType != FactionMemberType.Livestock || Chara.memberType == FactionMemberType.Livestock))
 					{
 						Msg.alwaysVisible = true;
 						Msg.Say("layhand", chara5, this);

@@ -56,15 +56,15 @@ public class SKILL
 
 	public const int music = 241;
 
-	public const int weaponPolearm = 106;
-
 	public const int climbing = 242;
+
+	public const int weaponPolearm = 106;
 
 	public const int evasionPlus = 151;
 
 	public const int weaponGun = 105;
 
-	public const int PER = 73;
+	public const int DEX = 72;
 
 	public const int weaponStaff = 103;
 
@@ -82,7 +82,7 @@ public class SKILL
 
 	public const int mana = 61;
 
-	public const int DV = 64;
+	public const int vigor = 62;
 
 	public const int PV = 65;
 
@@ -98,7 +98,7 @@ public class SKILL
 
 	public const int weaponBow = 104;
 
-	public const int DEX = 72;
+	public const int fishing = 245;
 
 	public const int LER = 74;
 
@@ -128,11 +128,11 @@ public class SKILL
 
 	public const int weaponAxe = 102;
 
-	public const int fishing = 245;
+	public const int PER = 73;
 
 	public const int gathering = 250;
 
-	public const int vigor = 62;
+	public const int DV = 64;
 
 	public const int blacksmith = 256;
 
@@ -178,9 +178,9 @@ public class SKILL
 
 	public const int resHoly = 960;
 
-	public const int resMagic = 961;
-
 	public const int resCurse = 972;
+
+	public const int resMagic = 961;
 
 	public const int resEther = 962;
 
@@ -270,14 +270,14 @@ public class SKILL
 	{
 		134, 133, 132, 131, 130, 123, 108, 120, 111, 110,
 		109, 135, 107, 122, 150, 226, 152, 200, 207, 210,
-		220, 225, 227, 230, 235, 237, 240, 241, 106, 242,
-		151, 105, 73, 103, 50, 51, 55, 56, 57, 60,
-		61, 64, 65, 66, 67, 68, 70, 71, 104, 72,
+		220, 225, 227, 230, 235, 237, 240, 241, 242, 106,
+		151, 105, 72, 103, 50, 51, 55, 56, 57, 60,
+		61, 62, 65, 66, 67, 68, 70, 71, 104, 245,
 		74, 75, 76, 77, 78, 79, 80, 90, 91, 92,
-		93, 100, 101, 102, 245, 250, 62, 256, 916, 917,
+		93, 100, 101, 102, 73, 250, 64, 256, 916, 917,
 		918, 920, 921, 922, 923, 924, 925, 926, 950, 951,
-		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
-		972, 962, 963, 964, 965, 970, 971, 255, 955, 914,
+		952, 953, 915, 954, 956, 957, 958, 959, 960, 972,
+		961, 962, 963, 964, 965, 970, 971, 255, 955, 914,
 		919, 912, 257, 258, 259, 260, 261, 280, 281, 285,
 		286, 287, 913, 289, 290, 291, 292, 288, 300, 911,
 		910, 293, 312, 311, 310, 313, 306, 305, 304, 303,

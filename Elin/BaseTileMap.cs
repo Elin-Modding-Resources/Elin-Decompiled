@@ -766,7 +766,7 @@ public class BaseTileMap : EMono
 		mz = vector3Int.x - 1;
 		HitPoint.Set(mx, mz);
 		bool isAltDown = EInput.isAltDown;
-		for (int num3 = maxColliderCheck; num3 >= 0; num3--)
+		for (int num3 = maxColliderCheck + EMono.core.config.test.screenExtraHeight; num3 >= 0; num3--)
 		{
 			TestPoint.x = mx + num3;
 			TestPoint.z = mz - num3;
@@ -875,18 +875,18 @@ public class BaseTileMap : EMono
 		int valueOrDefault = (this.room?.lot?.idBGM).GetValueOrDefault();
 		if (valueOrDefault == 0)
 		{
-			goto IL_16fb;
+			goto IL_1710;
 		}
 		if (!(EMono.Sound.currentPlaylist != EMono.Sound.plLot))
 		{
 			BGMData data = EMono.Sound.plLot.list[0].data;
 			if ((object)data != null && data.id == valueOrDefault)
 			{
-				goto IL_16fb;
+				goto IL_1710;
 			}
 		}
-		goto IL_171a;
-		IL_1724:
+		goto IL_172f;
+		IL_1739:
 		if (this.room != lastRoom)
 		{
 			screen.RefreshWeather();
@@ -895,15 +895,15 @@ public class BaseTileMap : EMono
 		SoundManager.bgmVolumeMod = ((!LayerDrama.maxBGMVolume && !EMono._map.IsIndoor && this.room != null && !this.room.data.atrium && this.room.HasRoof) ? (-0.6f) : 0f);
 		screenHighlight = ScreenHighlight.None;
 		return;
-		IL_16fb:
+		IL_1710:
 		if (valueOrDefault == 0 && EMono.Sound.currentPlaylist == EMono.Sound.plLot)
 		{
-			goto IL_171a;
+			goto IL_172f;
 		}
-		goto IL_1724;
-		IL_171a:
+		goto IL_1739;
+		IL_172f:
 		EMono._zone.RefreshBGM();
-		goto IL_1724;
+		goto IL_1739;
 	}
 
 	public void RefreshHeight()
@@ -998,6 +998,10 @@ public class BaseTileMap : EMono
 		else if (height < currentHeight)
 		{
 			blockLight -= heightLightMod * (float)(currentHeight - height);
+		}
+		if (blockLight < 0f)
+		{
+			blockLight = 0f;
 		}
 		liquidLv = (param.liquidLv = ((!flag && !isUnderwater) ? (((this.cell.liquidLv + this.cell._bridge != 0) ? this.cell.sourceBridge.tileType.LiquidLV : sourceFloor.tileType.LiquidLV) * 10) : 0));
 		if (this.cell.shore != 0 && liquidLv > 20)
@@ -1204,7 +1208,7 @@ public class BaseTileMap : EMono
 		bool flag4 = this.cell.isSurrounded && innerMode != 0 && sourceBlock.tileType.IsFullBlock;
 		if (!(!isSeen || flag4))
 		{
-			goto IL_1683;
+			goto IL_169b;
 		}
 		bool isRoomEdge = this.cell.IsRoomEdge;
 		orgY = param.y;
@@ -1266,7 +1270,7 @@ public class BaseTileMap : EMono
 		{
 			if (isRoomEdge)
 			{
-				goto IL_1683;
+				goto IL_169b;
 			}
 			if (detail == null || !EMono.pc.hasTelepathy)
 			{
@@ -1277,235 +1281,11 @@ public class BaseTileMap : EMono
 				fogged = true;
 			}
 		}
-		goto IL_7b8d;
-		IL_6fd2:
-		if (isSnowCovered && (sourceBlock.id != 0 || this.cell.hasDoor) && !snowed && !this.cell.isClearSnow && ((!this.cell.Front.HasRoof && !this.cell.Front.HasBlock) || (!this.cell.Right.HasRoof && !this.cell.Right.HasBlock)))
-		{
-			snowed = true;
-		}
-		if (this.cell.effect != null)
-		{
-			if (this.cell.effect.IsLiquid)
-			{
-				SourceCellEffect.Row sourceEffect = this.cell.sourceEffect;
-				SourceMaterial.Row defaultMaterial = sourceEffect.DefaultMaterial;
-				tile = 4 + Rand.bytes[index % Rand.MaxBytes] % 4;
-				param.tile = tile + this.cell.sourceEffect._tiles[0];
-				param.mat = defaultMaterial;
-				param.matColor = ((this.cell.effect.color == 0) ? GetColorInt(ref defaultMaterial.matColor, sourceEffect.colorMod) : this.cell.effect.color);
-				sourceEffect.renderData.Draw(param);
-			}
-			else
-			{
-				param.tile = this.cell.effect.source._tiles[0];
-				SourceCellEffect.Row sourceEffect2 = this.cell.sourceEffect;
-				if (sourceEffect2.anime.Length != 0)
-				{
-					if (sourceEffect2.anime.Length > 2)
-					{
-						float num3 = Time.realtimeSinceStartup * 1000f / (float)sourceEffect2.anime[1] % (float)sourceEffect2.anime[2];
-						if (!(num3 >= (float)sourceEffect2.anime[0]))
-						{
-							param.tile += num3;
-						}
-					}
-					else
-					{
-						float num4 = Time.realtimeSinceStartup * 1000f / (float)sourceEffect2.anime[1] % (float)sourceEffect2.anime[0];
-						param.tile += num4;
-					}
-				}
-				if (this.cell.effect.IsFire)
-				{
-					rendererEffect.Draw(param);
-				}
-				else
-				{
-					this.cell.effect.source.renderData.Draw(param);
-				}
-			}
-		}
-		param.color = floorLight;
-		if (this.cell.critter != null)
-		{
-			Critter critter = this.cell.critter;
-			int snowTile = critter.tile;
-			if (snowed && critter.SnowTile != 0)
-			{
-				critter.x = 0.06f;
-				critter.y = -0.06f;
-				snowTile = critter.SnowTile;
-			}
-			else
-			{
-				critter.Update();
-			}
-			pass = passObjSS;
-			batch = pass.batches[pass.batchIdx];
-			batch.matrices[pass.idx].m03 = param.x + (float)(int)(critter.x * 100f) * 0.01f;
-			batch.matrices[pass.idx].m13 = param.y + (float)(int)(critter.y * 100f) * 0.01f;
-			batch.matrices[pass.idx].m23 = param.z;
-			batch.tiles[pass.idx] = snowTile * ((!critter.reverse) ? 1 : (-1));
-			batch.colors[pass.idx] = floorLight;
-			pass.idx++;
-			if (pass.idx == pass.batchSize)
-			{
-				pass.NextBatch();
-			}
-		}
-		if (detail != null)
-		{
-			TransAnime anime3 = detail.anime;
-			if (anime3 != null && !anime3.animeBlock)
-			{
-				TransAnime anime4 = detail.anime;
-				param.x += anime4.v.x;
-				param.y += anime4.v.y;
-				param.z += anime4.v.z;
-			}
-		}
-		if (this.cell.obj != 0 && !this.cell.sourceObj.renderData.SkipOnMap)
-		{
-			SourceObj.Row sourceObj = this.cell.sourceObj;
-			if (!snowed || sourceObj.snowTile <= 0)
-			{
-				param.snow = snowed;
-				param.mat = this.cell.matObj;
-				orgY = param.y;
-				if (param.liquidLv > 0)
-				{
-					if (sourceObj.pref.Float)
-					{
-						param.y += 0.01f * floatY;
-						if (liquidLv > 10)
-						{
-							liquidLv = TileType.FloorWaterShallow.LiquidLV * 10;
-						}
-						liquidLv -= (int)(floatY * 0.5f);
-						param.liquidLv = liquidLv;
-					}
-					if (sourceObj.tileType.IsWaterTop)
-					{
-						param.liquidLv = 0;
-					}
-					else
-					{
-						param.liquidLv += sourceObj.pref.liquidMod;
-						if (param.liquidLv < 1)
-						{
-							param.liquid = 1f;
-						}
-						else if (param.liquidLv > 99 + sourceObj.pref.liquidModMax)
-						{
-							param.liquidLv = 99 + sourceObj.pref.liquidModMax;
-						}
-					}
-				}
-				if (sourceObj.useAltColor)
-				{
-					param.matColor = ((sourceObj.colorMod == 0) ? 104025 : GetColorInt(ref param.mat.altColor, sourceObj.colorMod));
-				}
-				else
-				{
-					param.matColor = ((sourceObj.colorMod == 0) ? 104025 : GetColorInt(ref param.mat.matColor, sourceObj.colorMod));
-				}
-				if (sourceObj.HasGrowth)
-				{
-					this.cell.growth.OnRenderTileMap(param);
-					if (this.cell.obj == 118 && Core.fixedFrame % 10f == 0f && sourceObj.growth.IsMature)
-					{
-						EMono.scene.psFey.transform.position = new Vector3(param.x, param.y, param.z - 2f);
-						EMono.scene.psFey.Emit(1);
-					}
-				}
-				else
-				{
-					if (this.cell.autotileObj != 0)
-					{
-						param.tile = sourceObj._tiles[0] + this.cell.autotileObj;
-					}
-					else if (sourceObj.tileType.IsUseBlockDir)
-					{
-						param.tile = sourceObj._tiles[this.cell.blockDir % sourceObj._tiles.Length];
-					}
-					else
-					{
-						param.tile = sourceObj._tiles[this.cell.objDir % sourceObj._tiles.Length];
-					}
-					if (_lowblock && sourceObj.tileType.IsSkipLowBlock)
-					{
-						param.tile += ((param.tile > 0f) ? 1 : (-1)) * 3000000;
-					}
-					orgY = param.y;
-					orgZ = param.z;
-					param.y += sourceObj.pref.y;
-					param.z += sourceObj.pref.z;
-					sourceObj.renderData.Draw(param);
-					param.y = orgY;
-					param.z = orgZ;
-					int shadow3 = sourceObj.pref.shadow;
-					if (shadow3 > 1 && !this.cell.ignoreObjShadow)
-					{
-						passShadow.AddShadow(param.x + sourceObj.renderData.offsetShadow.x, param.y + sourceObj.renderData.offsetShadow.y, param.z + sourceObj.renderData.offsetShadow.z, ShadowData.Instance.items[shadow3], sourceObj.pref, 0, param.snow);
-					}
-					param.y = orgY;
-				}
-			}
-		}
-		if (this.cell.decal != 0 && sourceFloor.tileType.AllowBlood)
-		{
-			passDecal.Add(param, (int)this.cell.decal, floorLight);
-		}
-		if (highlightCells)
-		{
-			switch (ActionMode.FlagCell.mode)
-			{
-			case AM_FlagCell.Mode.flagWallPillar:
-				if (this.cell.isToggleWallPillar)
-				{
-					passArea.Add(param, 34f, 0f);
-				}
-				break;
-			case AM_FlagCell.Mode.flagSnow:
-				if (this.cell.isClearSnow)
-				{
-					passArea.Add(param, 34f, 0f);
-				}
-				break;
-			case AM_FlagCell.Mode.flagFloat:
-				if (this.cell.isForceFloat)
-				{
-					passArea.Add(param, 34f, 0f);
-				}
-				break;
-			case AM_FlagCell.Mode.flagClear:
-				if (this.cell.isClearArea)
-				{
-					passArea.Add(param, 34f, 0f);
-				}
-				break;
-			}
-		}
-		if (detail == null)
-		{
-			return;
-		}
-		if (highlightArea && detail.area != null)
-		{
-			passArea.Add(param, (int)detail.area.GetTile(index) - ((!subtleHighlightArea) ? 1 : 0), 0f);
-		}
-		if (detail.footmark != null && sourceFloor.id != 0)
-		{
-			param.tile = detail.footmark.tile;
-			param.mat = matFloor;
-			param.matColor = 104025f;
-			renderFootmark.Draw(param);
-		}
-		goto IL_7b8d;
-		IL_1683:
+		goto IL_7ba5;
+		IL_169b:
 		if (this.cell.isSlopeEdge)
 		{
-			float num5 = (float)height * _heightMod.y;
+			float num3 = (float)height * _heightMod.y;
 			orgY = param.y;
 			orgZ = param.z;
 			param.dir = this.cell.blockDir;
@@ -1535,17 +1315,17 @@ public class BaseTileMap : EMono
 					param.matColor = 104025f;
 				}
 			}
-			for (int j = 0; (float)j < num5 / heightBlockSize; j++)
+			for (int j = 0; (float)j < num3 / heightBlockSize; j++)
 			{
 				param.y += ugFix.y;
 				param.z += ugFix.z + slopeFixZ * (float)j;
 				defBlock.renderData.Draw(param);
 				if (this.cell.pcSync && EMono.player.lightPower > 0f)
 				{
-					float num6 = param.tile;
+					float num4 = param.tile;
 					param.tile = 0f;
 					rendererFov.Draw(param);
-					param.tile = num6;
+					param.tile = num4;
 				}
 			}
 			param.y = orgY;
@@ -1556,29 +1336,29 @@ public class BaseTileMap : EMono
 		{
 			orgY = param.y;
 			orgZ = param.z;
-			int num7 = 0;
+			int num5 = 0;
 			if (sourceBlock.tileType.IsFullBlock)
 			{
 				SourceBlock.Row row3 = sourceBlock;
-				num7 = sourceBlock._tiles[this.cell.blockDir % sourceBlock._tiles.Length];
+				num5 = sourceBlock._tiles[this.cell.blockDir % sourceBlock._tiles.Length];
 			}
 			else
 			{
 				SourceBlock.Row row3 = sourceFloor._defBlock;
-				num7 = row3._tiles[this.cell.blockDir % row3._tiles.Length];
+				num5 = row3._tiles[this.cell.blockDir % row3._tiles.Length];
 			}
 			if (((this.cell.Front.shore / 12) & 1) == 0 && this.cell.Front.sourceFloor.tileType.IsWater && this.cell.Front.height <= height && this.cell.Front.sourceBlock.tileType.RenderWaterBlock)
 			{
 				param.y = (float)(cz - cx) * screen.tileAlign.y - (this.cell.Front.sourceFloor.tileType.IsDeepWater ? 0.6f : 0.4f) + (float)(int)this.cell.Front.height * _heightMod.y;
 				param.z = 1000f + param.x * screen.tileWeight.x + param.y * screen.tileWeight.z;
-				param.tile = num7 + ((!this.cell.Front.sourceFloor.tileType.IsDeepWater) ? 3000000 : 0);
+				param.tile = num5 + ((!this.cell.Front.sourceFloor.tileType.IsDeepWater) ? 3000000 : 0);
 				rendererWaterBlock.Draw(param);
 			}
 			if (((this.cell.Right.shore / 12) & 8) == 0 && this.cell.Right.sourceFloor.tileType.IsWater && this.cell.Right.height <= height && this.cell.Right.sourceBlock.tileType.RenderWaterBlock)
 			{
 				param.y = (float)(cz - cx) * screen.tileAlign.y - (this.cell.Right.sourceFloor.tileType.IsDeepWater ? 0.6f : 0.4f) + (float)(int)this.cell.Right.height * _heightMod.y;
 				param.z = 1000f + param.x * screen.tileWeight.x + param.y * screen.tileWeight.z;
-				param.tile = num7 + ((!this.cell.Right.sourceFloor.tileType.IsDeepWater) ? 3000000 : 0);
+				param.tile = num5 + ((!this.cell.Right.sourceFloor.tileType.IsDeepWater) ? 3000000 : 0);
 				rendererWaterBlock.Draw(param);
 			}
 			param.y = orgY;
@@ -1676,20 +1456,20 @@ public class BaseTileMap : EMono
 					}
 					sourceFloor.renderData.Draw(param);
 				}
-				int num8 = 0;
+				int num6 = 0;
 				if (isSnowCovered && sourceFloor == FLOOR.sourceSnow && !this.cell.hasDoor)
 				{
 					if (!this.cell.Right.IsSnowTile && this.cell.Right.topHeight == this.cell.topHeight)
 					{
-						num8++;
+						num6++;
 					}
 					if (!this.cell.Front.IsSnowTile && this.cell.Front.topHeight == this.cell.topHeight)
 					{
-						num8 += 2;
+						num6 += 2;
 					}
-					if (num8 != 0)
+					if (num6 != 0)
 					{
-						param.tile = 448 + num8 + 12;
+						param.tile = 448 + num6 + 12;
 						param.z -= 0.1f;
 						sourceFloor.renderData.Draw(param);
 						param.z += 0.1f;
@@ -1760,7 +1540,7 @@ public class BaseTileMap : EMono
 						}
 					}
 				}
-				if (this.cell.autotile != 0 && sourceFloor.autotile != 0 && (!hasBridge || this.cell.bridgeHeight - this.cell.height > 3) && !this.cell.skipRender && num8 == 0)
+				if (this.cell.autotile != 0 && sourceFloor.autotile != 0 && (!hasBridge || this.cell.bridgeHeight - this.cell.height > 3) && !this.cell.skipRender && num6 == 0)
 				{
 					pass = (isWater ? passAutoTileWater : passAutoTile);
 					batch = pass.batches[pass.batchIdx];
@@ -1779,16 +1559,16 @@ public class BaseTileMap : EMono
 			}
 			if (isWater)
 			{
-				int num9 = 12;
-				int num10 = this.cell.shore / num9;
-				int num11 = this.cell.shore % num9;
+				int num7 = 12;
+				int num8 = this.cell.shore / num7;
+				int num9 = this.cell.shore % num7;
 				bool isShoreSand = this.cell.isShoreSand;
 				if (this.cell.shore != 0)
 				{
-					Cell cell = ((((uint)num10 & (true ? 1u : 0u)) != 0) ? this.cell.Back : ((((uint)num10 & 2u) != 0) ? this.cell.Right : ((((uint)num10 & 4u) != 0) ? this.cell.Front : this.cell.Left)));
+					Cell cell = ((((uint)num8 & (true ? 1u : 0u)) != 0) ? this.cell.Back : ((((uint)num8 & 2u) != 0) ? this.cell.Right : ((((uint)num8 & 4u) != 0) ? this.cell.Front : this.cell.Left)));
 					if (isShoreSand && !cell.sourceFloor.isBeach)
 					{
-						cell = ((((uint)num10 & 8u) != 0) ? this.cell.Left : ((((uint)num10 & 4u) != 0) ? this.cell.Front : ((((uint)num10 & 2u) != 0) ? this.cell.Right : this.cell.Back)));
+						cell = ((((uint)num8 & 8u) != 0) ? this.cell.Left : ((((uint)num8 & 4u) != 0) ? this.cell.Front : ((((uint)num8 & 2u) != 0) ? this.cell.Right : this.cell.Back)));
 					}
 					if (!cell.IsSnowTile)
 					{
@@ -1800,7 +1580,7 @@ public class BaseTileMap : EMono
 							batch.matrices[pass.idx].m03 = param.x;
 							batch.matrices[pass.idx].m13 = param.y;
 							batch.matrices[pass.idx].m23 = param.z;
-							batch.tiles[pass.idx] = 768 + this.cell.shore / num9;
+							batch.tiles[pass.idx] = 768 + this.cell.shore / num7;
 							batch.colors[pass.idx] = param.color;
 							batch.matColors[pass.idx] = param.matColor;
 							pass.idx++;
@@ -1808,38 +1588,38 @@ public class BaseTileMap : EMono
 							{
 								pass.NextBatch();
 							}
-							num11 = 2;
+							num9 = 2;
 						}
 						else
 						{
-							num11 = cell.sourceFloor.edge;
+							num9 = cell.sourceFloor.edge;
 						}
-						param.tile = (24 + num11 / 2) * 32 + num11 % 2 * 16 + num10;
+						param.tile = (24 + num9 / 2) * 32 + num9 % 2 * 16 + num8;
 						rendererShore.Draw(param);
 					}
 				}
-				if (this.cell.Back.isShoreSand && ((uint)(this.cell.Back.shore / num9) & 8u) != 0 && this.cell.Left.isShoreSand && ((uint)(this.cell.Left.shore / num9) & (true ? 1u : 0u)) != 0)
+				if (this.cell.Back.isShoreSand && ((uint)(this.cell.Back.shore / num7) & 8u) != 0 && this.cell.Left.isShoreSand && ((uint)(this.cell.Left.shore / num7) & (true ? 1u : 0u)) != 0)
 				{
 					param.tile = 785f;
 					param.matColor = GetColorInt(ref this.cell.BackLeft.matFloor.matColor, this.cell.BackLeft.sourceFloor.colorMod);
 					passShore.Add(param);
 					Draw(60);
 				}
-				if (this.cell.Back.isShoreSand && ((uint)(this.cell.Back.shore / num9) & 2u) != 0 && this.cell.Right.isShoreSand && ((uint)(this.cell.Right.shore / num9) & (true ? 1u : 0u)) != 0)
+				if (this.cell.Back.isShoreSand && ((uint)(this.cell.Back.shore / num7) & 2u) != 0 && this.cell.Right.isShoreSand && ((uint)(this.cell.Right.shore / num7) & (true ? 1u : 0u)) != 0)
 				{
 					param.tile = 786f;
 					param.matColor = GetColorInt(ref this.cell.BackRight.matFloor.matColor, this.cell.BackRight.sourceFloor.colorMod);
 					passShore.Add(param);
 					Draw(56);
 				}
-				if (this.cell.Front.isShoreSand && ((uint)(this.cell.Front.shore / num9) & 2u) != 0 && this.cell.Right.isShoreSand && ((uint)(this.cell.Right.shore / num9) & 4u) != 0)
+				if (this.cell.Front.isShoreSand && ((uint)(this.cell.Front.shore / num7) & 2u) != 0 && this.cell.Right.isShoreSand && ((uint)(this.cell.Right.shore / num7) & 4u) != 0)
 				{
 					param.tile = 787f;
 					param.matColor = GetColorInt(ref this.cell.FrontRight.matFloor.matColor, this.cell.FrontRight.sourceFloor.colorMod);
 					passShore.Add(param);
 					Draw(48);
 				}
-				if (this.cell.Front.isShoreSand && ((uint)(this.cell.Front.shore / num9) & 8u) != 0 && this.cell.Left.isShoreSand && ((uint)(this.cell.Left.shore / num9) & 4u) != 0)
+				if (this.cell.Front.isShoreSand && ((uint)(this.cell.Front.shore / num7) & 8u) != 0 && this.cell.Left.isShoreSand && ((uint)(this.cell.Left.shore / num7) & 4u) != 0)
 				{
 					param.tile = 788f;
 					param.matColor = GetColorInt(ref this.cell.FrontLeft.matFloor.matColor, this.cell.FrontLeft.sourceFloor.colorMod);
@@ -1865,38 +1645,38 @@ public class BaseTileMap : EMono
 				bool flag6 = false;
 				if (isShoreSand)
 				{
-					if (((uint)num10 & (true ? 1u : 0u)) != 0)
+					if (((uint)num8 & (true ? 1u : 0u)) != 0)
 					{
-						if (((uint)num10 & 8u) != 0)
+						if (((uint)num8 & 8u) != 0)
 						{
-							if ((num10 & 2) == 0 && (num10 & 4) == 0)
+							if ((num8 & 2) == 0 && (num8 & 4) == 0)
 							{
 								Draw(16);
 							}
 							flag6 = true;
 						}
-						if (((uint)num10 & 2u) != 0)
+						if (((uint)num8 & 2u) != 0)
 						{
-							if ((num10 & 8) == 0 && (num10 & 4) == 0)
+							if ((num8 & 8) == 0 && (num8 & 4) == 0)
 							{
 								Draw(20);
 							}
 							flag6 = true;
 						}
 					}
-					if (((uint)num10 & 4u) != 0)
+					if (((uint)num8 & 4u) != 0)
 					{
-						if (((uint)num10 & 8u) != 0)
+						if (((uint)num8 & 8u) != 0)
 						{
-							if ((num10 & 2) == 0 && (num10 & 1) == 0)
+							if ((num8 & 2) == 0 && (num8 & 1) == 0)
 							{
 								Draw(24);
 							}
 							flag6 = true;
 						}
-						if (((uint)num10 & 2u) != 0)
+						if (((uint)num8 & 2u) != 0)
 						{
-							if ((num10 & 8) == 0 && (num10 & 1) == 0)
+							if ((num8 & 8) == 0 && (num8 & 1) == 0)
 							{
 								Draw(28);
 							}
@@ -1923,7 +1703,7 @@ public class BaseTileMap : EMono
 						batch = pass.batches[pass.batchIdx];
 						batch.tiles[pass.idx] = 608 + waterAnimeIndex % 4;
 						batch.matColors[pass.idx] = 104025f;
-						if (((uint)(this.cell.shore / num9) & (true ? 1u : 0u)) != 0)
+						if (((uint)(this.cell.shore / num7) & (true ? 1u : 0u)) != 0)
 						{
 							if (isShoreSand)
 							{
@@ -1961,7 +1741,7 @@ public class BaseTileMap : EMono
 						batch = pass.batches[pass.batchIdx];
 						batch.tiles[pass.idx] = 612 + waterAnimeIndex % 4;
 						batch.matColors[pass.idx] = 104025f;
-						if (((uint)(this.cell.shore / num9) & 8u) != 0)
+						if (((uint)(this.cell.shore / num7) & 8u) != 0)
 						{
 							if (isShoreSand)
 							{
@@ -2077,16 +1857,16 @@ public class BaseTileMap : EMono
 				param.z += bridgeFix.z;
 				param.dir = 0;
 				SourceBlock.Row row4 = sourceBridge._bridgeBlock;
-				float num12 = (float)(this.cell.bridgeHeight - this.cell.height) * _heightMod.y;
+				float num10 = (float)(this.cell.bridgeHeight - this.cell.height) * _heightMod.y;
 				if (this.cell.sourceFloor.tileType == TileType.Sky)
 				{
-					num12 += (float)EMono._map.config.skyBlockHeight;
+					num10 += (float)EMono._map.config.skyBlockHeight;
 				}
-				int num13 = (int)(num12 / heightBlockSize) + 2;
+				int num11 = (int)(num10 / heightBlockSize) + 2;
 				if (this.cell.bridgePillar != 0)
 				{
 					row4 = EMono.sources.blocks.rows[this.cell.bridgePillar];
-					param.tile = row4._tiles[0] + ((num13 == 2) ? 32 : 0);
+					param.tile = row4._tiles[0] + ((num11 == 2) ? 32 : 0);
 					param.mat = ((sourceBridge.DefaultMaterial == row4.DefaultMaterial) ? sourceBridge.DefaultMaterial : row4.DefaultMaterial);
 					param.matColor = ((row4.colorMod == 0) ? 104025 : GetColorInt(ref param.mat.matColor, row4.colorMod));
 				}
@@ -2098,9 +1878,9 @@ public class BaseTileMap : EMono
 				}
 				param.y += ugFixBridgeTop.y;
 				param.z += ugFixBridgeTop.z;
-				for (int l = 0; l < num13; l++)
+				for (int l = 0; l < num11; l++)
 				{
-					if (l == num13 - 1)
+					if (l == num11 - 1)
 					{
 						param.y = (float)(cz - cx) * screen.tileAlign.y + (float)height * _heightMod.y + ugFixBridgeBottom.y;
 						param.z = 1000f + param.x * screen.tileWeight.x + param.y * screen.tileWeight.z + (float)height * _heightMod.z + ugFixBridgeBottom.z;
@@ -2132,7 +1912,7 @@ public class BaseTileMap : EMono
 		{
 			snowed = false;
 		}
-		int num14 = 0;
+		int num12 = 0;
 		if (sourceBlock.id != 0)
 		{
 			this.tileType = sourceBlock.tileType;
@@ -2205,8 +1985,8 @@ public class BaseTileMap : EMono
 						roomHeight = 0f;
 						break;
 					}
-					int num15 = ((this.room.data.maxHeight == 0) ? 2 : this.room.data.maxHeight);
-					roomHeight = EMono.setting.render.roomHeightMod * (float)((this.room.lot.height < num15) ? this.room.lot.height : num15) + 0.01f * (float)this.room.lot.heightFix;
+					int num13 = ((this.room.data.maxHeight == 0) ? 2 : this.room.data.maxHeight);
+					roomHeight = EMono.setting.render.roomHeightMod * (float)((this.room.lot.height < num13) ? this.room.lot.height : num13) + 0.01f * (float)this.room.lot.heightFix;
 				}
 				break;
 			case WallClipMode.ByLot:
@@ -2252,11 +2032,11 @@ public class BaseTileMap : EMono
 			}
 			if (!_lowblock && (double)roomHeight > 1.2 && this.tileType.RepeatBlock)
 			{
-				num14 = 1;
+				num12 = 1;
 			}
 			else if (lowBlock)
 			{
-				num14 = 2;
+				num12 = 2;
 			}
 			param.mat = matBlock;
 			param.dir = this.cell.blockDir;
@@ -2303,8 +2083,8 @@ public class BaseTileMap : EMono
 					}
 					if (!_lowblock)
 					{
-						int num16 = ((currentRoom.data.maxHeight == 0) ? 2 : currentRoom.data.maxHeight);
-						roomHeight = EMono.setting.render.roomHeightMod * (float)((currentRoom.lot.height < num16) ? currentRoom.lot.height : num16) + 0.01f * (float)currentRoom.lot.heightFix;
+						int num14 = ((currentRoom.data.maxHeight == 0) ? 2 : currentRoom.data.maxHeight);
+						roomHeight = EMono.setting.render.roomHeightMod * (float)((currentRoom.lot.height < num14) ? currentRoom.lot.height : num14) + 0.01f * (float)currentRoom.lot.heightFix;
 					}
 				}
 				if (flag7)
@@ -2358,12 +2138,12 @@ public class BaseTileMap : EMono
 						param.tile = EMono.sources.blocks.rows[0].ConvertTile(1000 + room.lot.idDeco2);
 						param.matColor = room.lot.colDeco2;
 						float y2 = param.y;
-						float num17 = param.z;
+						float num15 = param.z;
 						param.y += (float)room.lot.decoFix2 * 0.01f;
 						param.z += (float)room.lot.decoFix2 * 0.01f * heightModDeco;
 						rendererWallDeco.Draw(param);
 						param.y = y2;
-						param.z = num17;
+						param.z = num15;
 					}
 				}
 				room = this.cell.Right.room ?? this.cell.room;
@@ -2387,12 +2167,12 @@ public class BaseTileMap : EMono
 						param.tile = EMono.sources.blocks.rows[0].ConvertTile(1000 + room.lot.idDeco2) * -1;
 						param.matColor = room.lot.colDeco2;
 						float y4 = param.y;
-						float num18 = param.z;
+						float num16 = param.z;
 						param.y += (float)room.lot.decoFix2 * 0.01f;
 						param.z += (float)room.lot.decoFix2 * 0.01f * heightModDeco;
 						rendererWallDeco.Draw(param);
 						param.y = y4;
-						param.z = num18;
+						param.z = num16;
 					}
 				}
 				break;
@@ -2590,8 +2370,8 @@ public class BaseTileMap : EMono
 						}
 						else
 						{
-							int num19 = ((room4.data.maxHeight == 0) ? 2 : room4.data.maxHeight);
-							roomHeight = EMono.setting.render.roomHeightMod * (float)((room4.lot.height < num19) ? room4.lot.height : num19) + 0.01f * (float)room4.lot.heightFix;
+							int num17 = ((room4.data.maxHeight == 0) ? 2 : room4.data.maxHeight);
+							roomHeight = EMono.setting.render.roomHeightMod * (float)((room4.lot.height < num17) ? room4.lot.height : num17) + 0.01f * (float)room4.lot.heightFix;
 						}
 					}
 					Cell back2 = this.cell.Back;
@@ -2664,19 +2444,19 @@ public class BaseTileMap : EMono
 				RenderData renderData2 = sourceBlock.renderData;
 				param.tile = sourceBlock._tiles[this.cell.blockDir % sourceBlock._tiles.Length];
 				param.matColor = ((sourceBlock.colorMod == 0) ? 104025 : GetColorInt(ref matBlock.matColor, sourceBlock.colorMod));
-				int num20 = this.cell.objDir + ((this.cell.objDir >= 7) ? this.cell.objDir : 0) + 1;
-				if (num20 == 0)
+				int num18 = this.cell.objDir + ((this.cell.objDir >= 7) ? this.cell.objDir : 0) + 1;
+				if (num18 == 0)
 				{
 					renderData2.Draw(param);
 				}
 				else
 				{
-					renderData2.DrawRepeat(param, num20, sourceBlock.tileType.RepeatSize);
+					renderData2.DrawRepeat(param, num18, sourceBlock.tileType.RepeatSize);
 				}
 				param.tile = renderData2.idShadow;
 				SourcePref shadowPref2 = renderData2.shadowPref;
-				int shadow4 = shadowPref2.shadow;
-				passShadow.AddShadow(param.x + renderData2.offsetShadow.x, param.y + renderData2.offsetShadow.y, param.z + renderData2.offsetShadow.z, ShadowData.Instance.items[shadow4], shadowPref2, 0, param.snow);
+				int shadow3 = shadowPref2.shadow;
+				passShadow.AddShadow(param.x + renderData2.offsetShadow.x, param.y + renderData2.offsetShadow.y, param.z + renderData2.offsetShadow.z, ShadowData.Instance.items[shadow3], shadowPref2, 0, param.snow);
 				break;
 			}
 			default:
@@ -2698,31 +2478,31 @@ public class BaseTileMap : EMono
 		{
 			if (this.cell.room != null || !this.cell.IsRoomEdge || !showRoof)
 			{
-				goto IL_6f72;
+				goto IL_6f8a;
 			}
 			if (this.cell._block == 0 || !this.cell.sourceBlock.tileType.RepeatBlock)
 			{
 				Room obj = this.cell.FrontRight.room;
 				if (obj == null || !obj.HasRoof)
 				{
-					goto IL_6f72;
+					goto IL_6f8a;
 				}
 			}
 		}
-		goto IL_6fd2;
-		IL_6f72:
+		goto IL_6fea;
+		IL_6f8a:
 		if (!showRoof || !roof || this.cell.room == null || this.cell.Front.room == null || this.cell.Right.room == null)
 		{
-			param.tile = num14;
+			param.tile = num12;
 			rendererFov.Draw(param);
 		}
-		goto IL_6fd2;
-		IL_7b8d:
+		goto IL_6fea;
+		IL_7ba5:
 		if (detail.things.Count == 0 && detail.charas.Count == 0)
 		{
 			return;
 		}
-		int num21 = 0;
+		int num19 = 0;
 		thingPos.x = 0f;
 		thingPos.y = 0f;
 		thingPos.z = 0f;
@@ -2753,16 +2533,16 @@ public class BaseTileMap : EMono
 		}
 		Thing thing = null;
 		bool shadow = liquidLv == 0;
-		float num22 = 0f;
-		float num23 = 0f;
+		float num20 = 0f;
+		float num21 = 0f;
 		bool flag10 = false;
-		float num24 = 0f;
+		float num22 = 0f;
 		bool flag11 = false;
-		float num25 = 0f;
+		float num23 = 0f;
 		if (detail.things.Count > 0 && isSeen)
 		{
 			_ = zSetting.max1;
-			float num26 = 0f;
+			float num24 = 0f;
 			for (int m = 0; m < detail.things.Count; m++)
 			{
 				Thing t = detail.things[m];
@@ -2777,12 +2557,12 @@ public class BaseTileMap : EMono
 				{
 					pref = rendererObjDummy.shadowPref;
 				}
-				float num27 = ((tileType.UseMountHeight && isInstalled) ? 0f : ((pref.height < 0f) ? 0f : ((pref.height == 0f) ? 0.1f : pref.height)));
+				float num25 = ((tileType.UseMountHeight && isInstalled) ? 0f : ((pref.height < 0f) ? 0f : ((pref.height == 0f) ? 0.1f : pref.height)));
 				if (t.ignoreStackHeight)
 				{
-					thingPos.y -= num22;
+					thingPos.y -= num20;
 				}
-				shadow = thingPos.y < 0.16f && num25 < 0.16f;
+				shadow = thingPos.y < 0.16f && num23 < 0.16f;
 				_ = pref.bypassShadow;
 				param.shadowFix = 0f - thingPos.y;
 				param.liquidLv = ((thingPos.y + (float)t.altitude < 0.1f) ? liquidLv : 0);
@@ -2792,7 +2572,7 @@ public class BaseTileMap : EMono
 					SetRoofHeight(param, this.cell, cx, cz);
 					_actorPos.x = param.x;
 					_actorPos.y = param.y;
-					_actorPos.z = param.z + num26;
+					_actorPos.z = param.z + num24;
 					if (this.room != null)
 					{
 						param.color = GetRoofLight(this.room.lot);
@@ -2803,9 +2583,9 @@ public class BaseTileMap : EMono
 				else
 				{
 					param.snow = snowed;
-					_actorPos.x = orgX + num23;
+					_actorPos.x = orgX + num21;
 					_actorPos.y = orgY;
-					_actorPos.z = orgZ + num26 + thingPos.z;
+					_actorPos.z = orgZ + num24 + thingPos.z;
 					if (tileType.CanStack || !isInstalled)
 					{
 						if (thing?.id != t.id)
@@ -2815,13 +2595,13 @@ public class BaseTileMap : EMono
 						_actorPos.y += thingPos.y;
 						if (t.trait.IgnoreLastStackHeight && (thing == null || !thing.trait.IgnoreLastStackHeight))
 						{
-							thingPos.y -= num22;
+							thingPos.y -= num20;
 							if (thing != null)
 							{
 								_actorPos.z -= 0.2f;
 								thingPos.z -= 0.2f;
 							}
-							_actorPos.y -= num22;
+							_actorPos.y -= num20;
 						}
 						_actorPos.z += renderSetting.thingZ + (float)m * -0.01f + zSetting.mod1 * thingPos.y;
 					}
@@ -2838,7 +2618,7 @@ public class BaseTileMap : EMono
 							freePos.z += rampFix2.z;
 							if (!this.cell.IsTopWater || t.altitude > 0)
 							{
-								num25 += rampFix2.y;
+								num23 += rampFix2.y;
 							}
 							liquidLv -= (int)(rampFix2.y * 150f);
 							if (liquidLv < 0)
@@ -2848,12 +2628,12 @@ public class BaseTileMap : EMono
 						}
 						else if (!flag11 && t.trait.IsChangeFloorHeight && !t.ignoreStackHeight)
 						{
-							orgY += num27 + (float)t.altitude * altitudeFix.y;
+							orgY += num25 + (float)t.altitude * altitudeFix.y;
 							orgZ += (float)t.altitude * altitudeFix.z;
-							freePos.y += num27 + (float)t.altitude * altitudeFix.y;
+							freePos.y += num25 + (float)t.altitude * altitudeFix.y;
 							if (!this.cell.IsTopWater || t.altitude > 0)
 							{
-								num25 += num27 + (float)t.altitude * altitudeFix.y;
+								num23 += num25 + (float)t.altitude * altitudeFix.y;
 							}
 							_actorPos.x += pref.x * (float)((!t.flipX) ? 1 : (-1));
 							_actorPos.z += pref.z;
@@ -2865,7 +2645,7 @@ public class BaseTileMap : EMono
 						}
 						else
 						{
-							thingPos.y += num27;
+							thingPos.y += num25;
 							_actorPos.x += pref.x * (float)((!t.flipX) ? 1 : (-1));
 							_actorPos.z += pref.z;
 							if (pref.height >= 0f)
@@ -2880,7 +2660,7 @@ public class BaseTileMap : EMono
 					}
 					else
 					{
-						thingPos.y += num27;
+						thingPos.y += num25;
 						_actorPos.x += pref.x * (float)((!t.flipX) ? 1 : (-1));
 						_actorPos.z += pref.z;
 						thingPos.z += pref.z;
@@ -2888,13 +2668,13 @@ public class BaseTileMap : EMono
 					if (t.isFloating && isWater && !hasBridge && !flag)
 					{
 						flag = true;
-						float num28 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
-						orgY += 0.01f * floatY - num28;
+						float num26 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
+						orgY += 0.01f * floatY - num26;
 						if (!t.trait.IsChangeFloorHeight)
 						{
-							num24 = num27;
+							num22 = num25;
 						}
-						_actorPos.y += 0.01f * floatY - num28;
+						_actorPos.y += 0.01f * floatY - num26;
 						if (liquidLv > 10)
 						{
 							liquidLv = TileType.FloorWaterShallow.LiquidLV * 10;
@@ -2906,10 +2686,10 @@ public class BaseTileMap : EMono
 						}
 						param.liquidLv = liquidLv;
 					}
-					num22 = num27;
+					num20 = num25;
 					if (t.sourceCard.multisize && !t.trait.IsGround)
 					{
-						num26 += zSetting.multiZ;
+						num24 += zSetting.multiZ;
 					}
 					orgZ += t.renderer.data.stackZ;
 					if (param.liquidLv > 0)
@@ -2986,35 +2766,35 @@ public class BaseTileMap : EMono
 				{
 					if (iconMode != 0)
 					{
-						int num29 = 0;
+						int num27 = 0;
 						switch (iconMode)
 						{
 						case CardIconMode.Visibility:
 							if (t.isMasked)
 							{
-								num29 = 17;
+								num27 = 17;
 							}
 							break;
 						case CardIconMode.State:
 							if (t.placeState == PlaceState.installed)
 							{
-								num29 = 18;
+								num27 = 18;
 							}
 							break;
 						case CardIconMode.Deconstruct:
 							if (t.isDeconstructing)
 							{
-								num29 = 14;
+								num27 = 14;
 							}
 							break;
 						}
 						if (t.isNPCProperty && !EMono.debug.godBuild)
 						{
-							num29 = 13;
+							num27 = 13;
 						}
-						if (num29 != 0)
+						if (num27 != 0)
 						{
-							passGuideBlock.Add(_actorPos.x, _actorPos.y, _actorPos.z - 10f, num29);
+							passGuideBlock.Add(_actorPos.x, _actorPos.y, _actorPos.z - 10f, num27);
 						}
 					}
 					t.SetRenderParam(param);
@@ -3041,7 +2821,7 @@ public class BaseTileMap : EMono
 				}
 				if (isInstalled)
 				{
-					num23 += pref.stackX * (float)((!t.flipX) ? 1 : (-1));
+					num21 += pref.stackX * (float)((!t.flipX) ? 1 : (-1));
 				}
 				param.x = orgX;
 				param.y = orgY;
@@ -3054,12 +2834,12 @@ public class BaseTileMap : EMono
 				}
 			}
 		}
-		orgY += num24;
+		orgY += num22;
 		if (detail.charas.Count <= 0)
 		{
 			return;
 		}
-		param.shadowFix = 0f - num25;
+		param.shadowFix = 0f - num23;
 		param.color += 1310720f;
 		float max = zSetting.max2;
 		for (int n = 0; n < detail.charas.Count; n++)
@@ -3084,9 +2864,9 @@ public class BaseTileMap : EMono
 					{
 						Vector3 position = restrainer.owner.renderer.position;
 						float defCharaHeight = EMono.setting.render.defCharaHeight;
-						float num30 = getRestrainPos.y + defCharaHeight - ((chara.Pref.height == 0f) ? defCharaHeight : chara.source.pref.height);
+						float num28 = getRestrainPos.y + defCharaHeight - ((chara.Pref.height == 0f) ? defCharaHeight : chara.source.pref.height);
 						_actorPos.x = position.x + getRestrainPos.x * (float)((restrainer.owner.dir % 2 == 0) ? 1 : (-1));
-						_actorPos.y = position.y + num30;
+						_actorPos.y = position.y + num28;
 						_actorPos.z = position.z + getRestrainPos.z;
 						param.liquidLv = 0;
 						param.shadowFix = orgY - _actorPos.y;
@@ -3101,22 +2881,22 @@ public class BaseTileMap : EMono
 			{
 				if (chara.IsDeadOrSleeping && chara.IsPCC)
 				{
-					float num31 = chara.renderer.data.size.y * 0.3f;
+					float num29 = chara.renderer.data.size.y * 0.3f;
 					if (thingPos.y > max)
 					{
 						thingPos.y = max;
 					}
-					float num32 = thingPos.y + num31;
-					float num33 = (float)n * -0.01f;
-					if (num32 > zSetting.thresh1)
+					float num30 = thingPos.y + num29;
+					float num31 = (float)n * -0.01f;
+					if (num30 > zSetting.thresh1)
 					{
-						num33 = zSetting.mod1;
+						num31 = zSetting.mod1;
 					}
 					_actorPos.x += thingPos.x;
 					_actorPos.y += thingPos.y;
-					_actorPos.z += renderSetting.laydownZ + num33;
+					_actorPos.z += renderSetting.laydownZ + num31;
 					param.liquidLv = ((thingPos.y == 0f && liquidLv > 0) ? 90 : 0);
-					thingPos.y += num31 * 0.8f;
+					thingPos.y += num29 * 0.8f;
 					chara.renderer.Draw(param, ref _actorPos, liquidLv == 0);
 				}
 				else
@@ -3126,11 +2906,11 @@ public class BaseTileMap : EMono
 					{
 						if (chara.Pref.FloatUnderwater)
 						{
-							float num34 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
-							float num35 = floatYs[chara.uid % 10] + 10f + (float)(chara.uid % 30);
-							orgY += 0.01f * num35 - num34;
-							_actorPos.y += 0.01f * num35 - num34;
-							param.shadowFix -= 0.01f * num35 - num34;
+							float num32 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
+							float num33 = floatYs[chara.uid % 10] + 10f + (float)(chara.uid % 30);
+							orgY += 0.01f * num33 - num32;
+							_actorPos.y += 0.01f * num33 - num32;
+							param.shadowFix -= 0.01f * num33 - num32;
 						}
 					}
 					else if (liquidLv > 0)
@@ -3139,12 +2919,12 @@ public class BaseTileMap : EMono
 						{
 							if (liquidLv > 20)
 							{
-								float num36 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
-								orgY += 0.01f * floatY - num36;
-								_actorPos.y += 0.01f * floatY - num36;
-								int num37 = TileType.FloorWaterShallow.LiquidLV * 10;
-								num37 -= (int)(floatY * 0.5f);
-								param.liquidLv = num37;
+								float num34 = ((this.cell._bridge != 0) ? sourceBridge.tileType.FloorHeight : sourceFloor.tileType.FloorHeight);
+								orgY += 0.01f * floatY - num34;
+								_actorPos.y += 0.01f * floatY - num34;
+								int num35 = TileType.FloorWaterShallow.LiquidLV * 10;
+								num35 -= (int)(floatY * 0.5f);
+								param.liquidLv = num35;
 							}
 							else
 							{
@@ -3163,10 +2943,10 @@ public class BaseTileMap : EMono
 					}
 					if (!chara.IsPC && !chara.renderer.IsMoving && detail.charas.Count > 1 && (detail.charas.Count != 2 || !detail.charas[0].IsDeadOrSleeping || !detail.charas[0].IsPCC))
 					{
-						_actorPos += renderSetting.charaPos[1 + ((num21 < 4) ? num21 : 3)];
+						_actorPos += renderSetting.charaPos[1 + ((num19 < 4) ? num19 : 3)];
 					}
 					_actorPos.z += 0.01f * (float)n + renderSetting.charaZ;
-					num21++;
+					num19++;
 					if (flag10)
 					{
 						_actorPos.z += chara.renderer.data.hangedFixZ;
@@ -3178,6 +2958,231 @@ public class BaseTileMap : EMono
 			param.y = orgY;
 			param.z = orgZ;
 		}
+		return;
+		IL_6fea:
+		if (isSnowCovered && (sourceBlock.id != 0 || this.cell.hasDoor) && !snowed && !this.cell.isClearSnow && ((!this.cell.Front.HasRoof && !this.cell.Front.HasBlock) || (!this.cell.Right.HasRoof && !this.cell.Right.HasBlock)))
+		{
+			snowed = true;
+		}
+		if (this.cell.effect != null)
+		{
+			if (this.cell.effect.IsLiquid)
+			{
+				SourceCellEffect.Row sourceEffect = this.cell.sourceEffect;
+				SourceMaterial.Row defaultMaterial = sourceEffect.DefaultMaterial;
+				tile = 4 + Rand.bytes[index % Rand.MaxBytes] % 4;
+				param.tile = tile + this.cell.sourceEffect._tiles[0];
+				param.mat = defaultMaterial;
+				param.matColor = ((this.cell.effect.color == 0) ? GetColorInt(ref defaultMaterial.matColor, sourceEffect.colorMod) : this.cell.effect.color);
+				sourceEffect.renderData.Draw(param);
+			}
+			else
+			{
+				param.tile = this.cell.effect.source._tiles[0];
+				SourceCellEffect.Row sourceEffect2 = this.cell.sourceEffect;
+				if (sourceEffect2.anime.Length != 0)
+				{
+					if (sourceEffect2.anime.Length > 2)
+					{
+						float num36 = Time.realtimeSinceStartup * 1000f / (float)sourceEffect2.anime[1] % (float)sourceEffect2.anime[2];
+						if (!(num36 >= (float)sourceEffect2.anime[0]))
+						{
+							param.tile += num36;
+						}
+					}
+					else
+					{
+						float num37 = Time.realtimeSinceStartup * 1000f / (float)sourceEffect2.anime[1] % (float)sourceEffect2.anime[0];
+						param.tile += num37;
+					}
+				}
+				if (this.cell.effect.IsFire)
+				{
+					rendererEffect.Draw(param);
+				}
+				else
+				{
+					this.cell.effect.source.renderData.Draw(param);
+				}
+			}
+		}
+		param.color = floorLight;
+		if (this.cell.critter != null)
+		{
+			Critter critter = this.cell.critter;
+			int snowTile = critter.tile;
+			if (snowed && critter.SnowTile != 0)
+			{
+				critter.x = 0.06f;
+				critter.y = -0.06f;
+				snowTile = critter.SnowTile;
+			}
+			else
+			{
+				critter.Update();
+			}
+			pass = passObjSS;
+			batch = pass.batches[pass.batchIdx];
+			batch.matrices[pass.idx].m03 = param.x + (float)(int)(critter.x * 100f) * 0.01f;
+			batch.matrices[pass.idx].m13 = param.y + (float)(int)(critter.y * 100f) * 0.01f;
+			batch.matrices[pass.idx].m23 = param.z;
+			batch.tiles[pass.idx] = snowTile * ((!critter.reverse) ? 1 : (-1));
+			batch.colors[pass.idx] = floorLight;
+			pass.idx++;
+			if (pass.idx == pass.batchSize)
+			{
+				pass.NextBatch();
+			}
+		}
+		if (detail != null)
+		{
+			TransAnime anime3 = detail.anime;
+			if (anime3 != null && !anime3.animeBlock)
+			{
+				TransAnime anime4 = detail.anime;
+				param.x += anime4.v.x;
+				param.y += anime4.v.y;
+				param.z += anime4.v.z;
+			}
+		}
+		if (this.cell.obj != 0 && !this.cell.sourceObj.renderData.SkipOnMap)
+		{
+			SourceObj.Row sourceObj = this.cell.sourceObj;
+			if (!snowed || sourceObj.snowTile <= 0)
+			{
+				param.snow = snowed;
+				param.mat = this.cell.matObj;
+				orgY = param.y;
+				if (param.liquidLv > 0)
+				{
+					if (sourceObj.pref.Float)
+					{
+						param.y += 0.01f * floatY;
+						if (liquidLv > 10)
+						{
+							liquidLv = TileType.FloorWaterShallow.LiquidLV * 10;
+						}
+						liquidLv -= (int)(floatY * 0.5f);
+						param.liquidLv = liquidLv;
+					}
+					if (sourceObj.tileType.IsWaterTop)
+					{
+						param.liquidLv = 0;
+					}
+					else
+					{
+						param.liquidLv += sourceObj.pref.liquidMod;
+						if (param.liquidLv < 1)
+						{
+							param.liquid = 1f;
+						}
+						else if (param.liquidLv > 99 + sourceObj.pref.liquidModMax)
+						{
+							param.liquidLv = 99 + sourceObj.pref.liquidModMax;
+						}
+					}
+				}
+				if (sourceObj.useAltColor)
+				{
+					param.matColor = ((sourceObj.colorMod == 0) ? 104025 : GetColorInt(ref param.mat.altColor, sourceObj.colorMod));
+				}
+				else
+				{
+					param.matColor = ((sourceObj.colorMod == 0) ? 104025 : GetColorInt(ref param.mat.matColor, sourceObj.colorMod));
+				}
+				if (sourceObj.HasGrowth)
+				{
+					this.cell.growth.OnRenderTileMap(param);
+					if (this.cell.obj == 118 && Core.fixedFrame % 10f == 0f && sourceObj.growth.IsMature)
+					{
+						EMono.scene.psFey.transform.position = new Vector3(param.x, param.y, param.z - 2f);
+						EMono.scene.psFey.Emit(1);
+					}
+				}
+				else
+				{
+					if (this.cell.autotileObj != 0)
+					{
+						param.tile = sourceObj._tiles[0] + this.cell.autotileObj;
+					}
+					else if (sourceObj.tileType.IsUseBlockDir)
+					{
+						param.tile = sourceObj._tiles[this.cell.blockDir % sourceObj._tiles.Length];
+					}
+					else
+					{
+						param.tile = sourceObj._tiles[this.cell.objDir % sourceObj._tiles.Length];
+					}
+					if (_lowblock && sourceObj.tileType.IsSkipLowBlock)
+					{
+						param.tile += ((param.tile > 0f) ? 1 : (-1)) * 3000000;
+					}
+					orgY = param.y;
+					orgZ = param.z;
+					param.y += sourceObj.pref.y;
+					param.z += sourceObj.pref.z;
+					sourceObj.renderData.Draw(param);
+					param.y = orgY;
+					param.z = orgZ;
+					int shadow4 = sourceObj.pref.shadow;
+					if (shadow4 > 1 && !this.cell.ignoreObjShadow)
+					{
+						passShadow.AddShadow(param.x + sourceObj.renderData.offsetShadow.x, param.y + sourceObj.renderData.offsetShadow.y, param.z + sourceObj.renderData.offsetShadow.z, ShadowData.Instance.items[shadow4], sourceObj.pref, 0, param.snow);
+					}
+					param.y = orgY;
+				}
+			}
+		}
+		if (this.cell.decal != 0 && sourceFloor.tileType.AllowBlood)
+		{
+			passDecal.Add(param, (int)this.cell.decal, floorLight);
+		}
+		if (highlightCells)
+		{
+			switch (ActionMode.FlagCell.mode)
+			{
+			case AM_FlagCell.Mode.flagWallPillar:
+				if (this.cell.isToggleWallPillar)
+				{
+					passArea.Add(param, 34f, 0f);
+				}
+				break;
+			case AM_FlagCell.Mode.flagSnow:
+				if (this.cell.isClearSnow)
+				{
+					passArea.Add(param, 34f, 0f);
+				}
+				break;
+			case AM_FlagCell.Mode.flagFloat:
+				if (this.cell.isForceFloat)
+				{
+					passArea.Add(param, 34f, 0f);
+				}
+				break;
+			case AM_FlagCell.Mode.flagClear:
+				if (this.cell.isClearArea)
+				{
+					passArea.Add(param, 34f, 0f);
+				}
+				break;
+			}
+		}
+		if (detail == null)
+		{
+			return;
+		}
+		if (highlightArea && detail.area != null)
+		{
+			passArea.Add(param, (int)detail.area.GetTile(index) - ((!subtleHighlightArea) ? 1 : 0), 0f);
+		}
+		if (detail.footmark != null && sourceFloor.id != 0)
+		{
+			param.tile = detail.footmark.tile;
+			param.mat = matFloor;
+			param.matColor = 104025f;
+			renderFootmark.Draw(param);
+		}
+		goto IL_7ba5;
 		void Draw(int tile)
 		{
 			pass = passEdge;

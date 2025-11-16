@@ -45,6 +45,8 @@ public class ContentConfigTest : ContentConfig
 
 	public Slider sliderBrightness;
 
+	public Slider sliderExtraHeight;
+
 	public override void OnInstantiate()
 	{
 		List<SkinRootStatic> mainSkins = EClass.ui.skins.mainSkins;
@@ -151,6 +153,12 @@ public class ContentConfigTest : ContentConfig
 				EClass.screen.RefreshGrading();
 			}
 			return Lang.Get("brightnessNight") + "(" + (int)(a + 100f) + "%)";
+		});
+		SetSlider(sliderExtraHeight, base.config.test.screenExtraHeight, delegate(float a)
+		{
+			base.config.test.screenExtraHeight = (int)a;
+			base.config.ApplyGrading();
+			return Lang.Get("screenExtraHeight") + "(" + (int)a + ")";
 		});
 	}
 }

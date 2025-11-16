@@ -126,6 +126,7 @@ public class AI_PlayMusic : AIAct
 				idSong = "flute";
 				break;
 			case "taiko":
+			case "drum":
 				idSong = "taiko";
 				break;
 			case "mokugyo":

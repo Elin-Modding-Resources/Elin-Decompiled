@@ -57,7 +57,7 @@ public class FoodEffect : EClass
 			if (flag2)
 			{
 				num5 *= 2f;
-				num2 *= 1.5f;
+				num2 *= 1.3f;
 			}
 			else
 			{
@@ -71,9 +71,20 @@ public class FoodEffect : EClass
 			num5 = 0f;
 			num2 *= 0.5f;
 		}
+		if (c.HasElement(1250))
+		{
+			if (food.HasElement(710))
+			{
+				num2 *= 4f;
+			}
+			else
+			{
+				num3 /= 10;
+			}
+		}
 		if (c.HasElement(1200))
 		{
-			num2 *= 1f + (float)c.Evalue(1200) + 0.25f;
+			num2 *= 1f + (float)c.Evalue(1200) * 0.25f;
 		}
 		if (!c.IsPC)
 		{
@@ -218,7 +229,7 @@ public class FoodEffect : EClass
 					{
 						break;
 					}
-					goto IL_0f19;
+					goto IL_0f4b;
 				case "love":
 					ActEffect.LoveMiracle(c, EClass.pc, value.Value * 10);
 					break;
@@ -362,8 +373,8 @@ public class FoodEffect : EClass
 		{
 			food.trait.OnDrink(c);
 		}
-		goto IL_0f19;
-		IL_0f19:
+		goto IL_0f4b;
+		IL_0f4b:
 		if (!consume)
 		{
 			return;

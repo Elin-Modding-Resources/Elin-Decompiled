@@ -178,6 +178,18 @@ public class Point : EClass
 		}
 	}
 
+	public bool IsSunLit
+	{
+		get
+		{
+			if (EClass._map.IsIndoor || EClass.world.date.IsNight || cell.HasRoof)
+			{
+				return Map.sunMap.Contains(index);
+			}
+			return true;
+		}
+	}
+
 	public bool HasNonWallBlock
 	{
 		get

@@ -204,7 +204,7 @@ public class ConSleep : BadCondition
 			chara.SetAI(new AI_Fuck
 			{
 				target = tg,
-				succubus = true
+				variation = AI_Fuck.Variation.Succubus
 			});
 		}
 	}

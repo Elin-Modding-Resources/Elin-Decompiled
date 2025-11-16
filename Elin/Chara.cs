@@ -149,6 +149,8 @@ public class Chara : Card, IPathfindWalker
 
 	public bool visibleWithTelepathy;
 
+	public bool isWeakToSunlight;
+
 	public SpriteReplacer spriteReplacer;
 
 	private Faction _faction;
@@ -1732,6 +1734,7 @@ public class Chara : Card, IPathfindWalker
 		isWet = false;
 		_isLevitating = HasElement(401) || (ride != null && ride._isLevitating);
 		canSeeInvisible = HasElement(416);
+		isWeakToSunlight = HasElement(1250) && !HasElement(431);
 		base.isHidden = HasElement(415);
 		foreach (Condition condition in conditions)
 		{
@@ -3712,6 +3715,13 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		}
+		case 5:
+		case 30:
+			if (isWeakToSunlight && pos.IsSunLit)
+			{
+				AddCondition<ConBurning>(1000, force: true);
+			}
+			break;
 		}
 		if (turn % 200 == 0)
 		{
@@ -9546,6 +9556,7 @@ public class Chara : Card, IPathfindWalker
 
 	public void OnSleep(Thing bed = null, int days = 1)
 	{
+		bool isSunLit = pos.IsSunLit;
 		TraitPillow traitPillow = pos.FindThing<TraitPillow>();
 		int num = bed?.Power ?? 20;
 		if (traitPillow != null)
@@ -9555,11 +9566,15 @@ public class Chara : Card, IPathfindWalker
 		if (bed != null)
 		{
 			num += bed.Evalue(750) * 5;
+			if (bed.trait is TraitBedCoffin)
+			{
+				isSunLit = false;
+			}
 		}
-		OnSleep(num, days);
+		OnSleep(num, days, isSunLit);
 	}
 
-	public void OnSleep(int power, int days = 1)
+	public void OnSleep(int power, int days = 1, bool isSunLit = false)
 	{
 		if (days < 1)
 		{
@@ -9570,9 +9585,21 @@ public class Chara : Card, IPathfindWalker
 		{
 			stamina.Set(1);
 		}
-		HealHP(num);
-		stamina.Mod(10 + 25 * num / 100 * (100 + elements.GetFeatRef(1642)) / 100);
-		mana.Mod(num);
+		if (isWeakToSunlight && isSunLit)
+		{
+			base.hp = 0;
+			if (mana.value > 0)
+			{
+				mana.Set(0);
+			}
+			AddCondition<ConBurning>(1000, force: true);
+		}
+		else
+		{
+			HealHP(num);
+			stamina.Mod(10 + 25 * num / 100 * (100 + elements.GetFeatRef(1642)) / 100);
+			mana.Mod(num);
+		}
 		if (IsPCFaction)
 		{
 			hunger.Mod(20);
