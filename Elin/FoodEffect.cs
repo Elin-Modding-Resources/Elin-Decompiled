@@ -10,6 +10,11 @@ public class FoodEffect : EClass
 
 	public static void Proc(Chara c, Thing food, bool consume = true)
 	{
+		if (food.id == "bloodsample")
+		{
+			food.ModNum(-1);
+			return;
+		}
 		food.CheckJustCooked();
 		bool flag = EClass._zone.IsPCFaction && c.IsInSpot<TraitSpotDining>();
 		int num = (food.isCrafted ? ((EClass.pc.Evalue(1650) >= 3) ? 5 : 0) : 0);
@@ -75,7 +80,7 @@ public class FoodEffect : EClass
 		{
 			if (food.HasElement(710))
 			{
-				num2 *= 4f;
+				num2 = num2 * 0.1f * (float)(food.Evalue(710) + 10);
 			}
 			else
 			{
@@ -229,7 +234,7 @@ public class FoodEffect : EClass
 					{
 						break;
 					}
-					goto IL_0f4b;
+					goto IL_0f76;
 				case "love":
 					ActEffect.LoveMiracle(c, EClass.pc, value.Value * 10);
 					break;
@@ -373,8 +378,8 @@ public class FoodEffect : EClass
 		{
 			food.trait.OnDrink(c);
 		}
-		goto IL_0f4b;
-		IL_0f4b:
+		goto IL_0f76;
+		IL_0f76:
 		if (!consume)
 		{
 			return;

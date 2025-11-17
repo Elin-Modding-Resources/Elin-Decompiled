@@ -1291,14 +1291,14 @@ public class Thing : Card
 					{
 						return s;
 					}
-					int num4 = e.Value;
+					int num3 = e.Value;
 					if (e.source.IsWeaponEnc && (!e.source.tag.Contains("modRanged") || e.id == 609) && isEquipped && root.isChara)
 					{
-						num4 = num4 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara)) / 100;
+						num3 = num3 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara)) / 100;
 					}
-					string text16 = " (" + e.Value + ((e.Value == num4) ? "" : (" → " + num4)) + ")";
-					string text17 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
-					return s + text16 + " " + text17;
+					string text12 = " (" + e.Value + ((e.Value == num3) ? "" : (" → " + num3)) + ")";
+					string text13 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
+					return s + text12 + " " + text13;
 				});
 			}
 			if (sockets != null)
@@ -1314,33 +1314,7 @@ public class Thing : Card
 		{
 			if (showTraits)
 			{
-				elements.AddNote(n, (Element e) => listTrait.Contains(e), null, ElementContainer.NoteMode.BonusTrait, addRaceFeat: false, delegate(Element e, string s)
-				{
-					string text13 = s;
-					string text14 = e.source.GetText("textExtra");
-					if (!text14.IsEmpty())
-					{
-						string text15 = "";
-						if (e.id == 2 && mode == IInspect.NoteMode.Product)
-						{
-							int num2 = recipe.GetQualityBonus() / 10;
-							if (num2 >= 0)
-							{
-								num2++;
-							}
-							text15 = "qualityLimit".lang(num2.ToString() ?? "");
-						}
-						int num3 = e.Value / 10;
-						num3 = ((e.Value < 0) ? (num3 - 1) : (num3 + 1));
-						text14 = "Lv." + num3 + text15 + " " + text14;
-						if (infoMode && e.IsFoodTraitMain)
-						{
-							text14 += "traitAdditive".lang();
-						}
-						text13 += (" <size=12>" + text14 + "</size>").TagColor(FontColor.Passive);
-					}
-					return text13;
-				}, delegate
+				elements.AddNote(n, (Element e) => listTrait.Contains(e), null, ElementContainer.NoteMode.BonusTrait, addRaceFeat: false, (Element e, string s) => s + GetTextTrait(e), delegate
 				{
 				});
 				if (listTrait.Count != list.Count)
@@ -1351,9 +1325,9 @@ public class Thing : Card
 			if (base.c_mixedFoodData != null)
 			{
 				n.AddHeader("isMixedFood");
-				foreach (string text18 in base.c_mixedFoodData.texts)
+				foreach (string text14 in base.c_mixedFoodData.texts)
 				{
-					AddText("_bullet".lang() + text18 + text2, FontColor.Default);
+					AddText("_bullet".lang() + text14 + text2, FontColor.Default);
 				}
 			}
 		}
@@ -1370,24 +1344,7 @@ public class Thing : Card
 			n.AddHeader("HeaderAdditionalTrait", "additional_trait");
 			foreach (Element item in ListCraftBonusTraits())
 			{
-				item.AddEncNote(n, this, ElementContainer.NoteMode.BonusTrait, delegate(Element e, string s)
-				{
-					string text10 = s;
-					string text11 = e.source.GetText("textExtra");
-					if (!text11.IsEmpty())
-					{
-						string text12 = "";
-						int num = e.Value / 10;
-						num = ((e.Value < 0) ? (num - 1) : (num + 1));
-						text11 = "Lv." + num + text12 + " " + text11;
-						if (infoMode && e.IsFoodTraitMain)
-						{
-							text11 += "traitAdditive".lang();
-						}
-						text10 += (" <size=12>" + text11 + "</size>").TagColor(FontColor.Passive);
-					}
-					return text10;
-				});
+				item.AddEncNote(n, this, ElementContainer.NoteMode.BonusTrait, (Element e, string s) => s + GetTextTrait(e));
 			}
 		}
 		if (EClass.debug.showExtra)
@@ -1458,6 +1415,36 @@ public class Thing : Card
 			UIItem uIItem2 = n.AddText("NoteText_enc", text, col);
 			uIItem2.image1.SetActive(enable: true);
 			uIItem2.image1.sprite = sprite;
+		}
+		string GetTextTrait(Element e)
+		{
+			string text10 = e.source.GetText("textExtra");
+			if (text10.IsEmpty())
+			{
+				return "";
+			}
+			if (e.id == 710)
+			{
+				text10 = text10.Replace("#1", $"{0.1f * (float)(e.Value + 10):F1}");
+			}
+			string text11 = "";
+			if (e.id == 2 && mode == IInspect.NoteMode.Product)
+			{
+				int num = recipe.GetQualityBonus() / 10;
+				if (num >= 0)
+				{
+					num++;
+				}
+				text11 = "qualityLimit".lang(num.ToString() ?? "");
+			}
+			int num2 = e.Value / 10;
+			num2 = ((e.Value < 0) ? (num2 - 1) : (num2 + 1));
+			text10 = "Lv." + num2 + text11 + " " + text10;
+			if (infoMode && e.IsFoodTraitMain)
+			{
+				text10 += "traitAdditive".lang();
+			}
+			return (" <size=12>" + text10 + "</size>").TagColor(FontColor.Passive);
 		}
 	}
 

@@ -176,13 +176,13 @@ public class Religion : EClass
 		{
 			num = t.Num;
 		}
-		int v = 0;
+		long v = 0L;
 		if (t.source._origin == "meat")
 		{
 			v = Mathf.Clamp(t.SelfWeight / 10, 1, 1000);
 			if (t.refCard == null)
 			{
-				v /= 10;
+				v /= 10L;
 			}
 		}
 		else if (GetOfferingMtp(t) > 0)
@@ -201,17 +201,17 @@ public class Religion : EClass
 				}
 			}
 		}
-		if (v == 0)
+		if (v == 0L)
 		{
 			return 0;
 		}
 		if (t.IsDecayed)
 		{
-			v /= 10;
+			v /= 10L;
 		}
 		v = v * (100 + Mathf.Min(t.LV * 2, 100) + (t.HasElement(757) ? 50 : 0)) / 100;
-		v = Mathf.Max(v, 1) * num;
-		return v;
+		v = (int)Mathf.Clamp(Mathf.Max(v, 1f) * (float)num, 1f, 214748370f);
+		return (int)v;
 		void SetValue(SourceCategory.Row cat, int mtp)
 		{
 			v = Mathf.Clamp(t.SelfWeight / 10, 50, 1000);

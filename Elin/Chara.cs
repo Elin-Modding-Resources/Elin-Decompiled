@@ -103,6 +103,8 @@ public class Chara : Card, IPathfindWalker
 
 	public ConSuspend conSuspend;
 
+	public ConTransmute conTrans;
+
 	public Emo2 emoIcon;
 
 	public int happiness;
@@ -787,6 +789,10 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
+			if (renderer.replacer != null)
+			{
+				return renderer.replacer.pref;
+			}
 			if (spriteReplacer != null)
 			{
 				return spriteReplacer.data?.pref ?? EClass.core.refs.prefs.replacer1;
@@ -1734,7 +1740,7 @@ public class Chara : Card, IPathfindWalker
 		isWet = false;
 		_isLevitating = HasElement(401) || (ride != null && ride._isLevitating);
 		canSeeInvisible = HasElement(416);
-		isWeakToSunlight = HasElement(1250) && !HasElement(431);
+		isWeakToSunlight = HasElement(1251) && !HasElement(431);
 		base.isHidden = HasElement(415);
 		foreach (Condition condition in conditions)
 		{

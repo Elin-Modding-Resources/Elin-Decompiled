@@ -98,7 +98,7 @@ public class CharaRenderer : CardRenderer
 	public override void Draw(RenderParam p, ref Vector3 v, bool drawShadow)
 	{
 		base.Draw(p, ref v, drawShadow);
-		if ((Zone.sourceHat != null || owner.hat != null) && owner.Pref.hatY != 0f && owner.host == null)
+		if ((Zone.sourceHat != null || owner.hat != null) && owner.host == null)
 		{
 			DrawHat();
 		}
@@ -323,25 +323,28 @@ public class CharaRenderer : CardRenderer
 		}
 		CardRow cardRow = Zone.sourceHat ?? owner.hat;
 		SourcePref pref = GetPref();
-		bool flag = currentDir == 1 || currentDir == 3;
-		int liquidLv = RenderObject.currentParam.liquidLv;
-		float num = ((replacer != null) ? replacer.pref.hatY : pref.hatY);
-		if (pccData != null)
+		if (pref.hatY != 0f)
 		{
-			num += RenderObject.renderSetting.hatPos[actor.GetFrame()].y;
+			bool flag = currentDir == 1 || currentDir == 3;
+			int liquidLv = RenderObject.currentParam.liquidLv;
+			float num = ((replacer != null) ? replacer.pref.hatY : pref.hatY);
+			if (pccData != null)
+			{
+				num += RenderObject.renderSetting.hatPos[actor.GetFrame()].y;
+			}
+			RenderObject.currentParam.liquidLv = 0;
+			RenderObject.currentParam.x += 0.01f * (float)pref.equipX;
+			RenderObject.currentParam.y += num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
+			RenderObject.currentParam.z += -0.09f;
+			RenderObject.currentParam.tile = cardRow._tiles[owner.uid % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
+			RenderObject.currentParam.mat = cardRow.DefaultMaterial;
+			RenderObject.currentParam.matColor = cardRow.GetColorInt(RenderObject.currentParam.mat);
+			cardRow.renderData.Draw(RenderObject.currentParam);
+			RenderObject.currentParam.x -= 0.01f * (float)pref.equipX;
+			RenderObject.currentParam.y -= num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
+			RenderObject.currentParam.z -= -0.09f;
+			RenderObject.currentParam.liquidLv = liquidLv;
 		}
-		RenderObject.currentParam.liquidLv = 0;
-		RenderObject.currentParam.x += 0.01f * (float)pref.equipX;
-		RenderObject.currentParam.y += num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
-		RenderObject.currentParam.z += -0.09f;
-		RenderObject.currentParam.tile = cardRow._tiles[owner.uid % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
-		RenderObject.currentParam.mat = cardRow.DefaultMaterial;
-		RenderObject.currentParam.matColor = cardRow.GetColorInt(RenderObject.currentParam.mat);
-		cardRow.renderData.Draw(RenderObject.currentParam);
-		RenderObject.currentParam.x -= 0.01f * (float)pref.equipX;
-		RenderObject.currentParam.y -= num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
-		RenderObject.currentParam.z -= -0.09f;
-		RenderObject.currentParam.liquidLv = liquidLv;
 	}
 
 	public override void DrawHeld()

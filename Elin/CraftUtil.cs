@@ -58,25 +58,28 @@ public class CraftUtil : EClass
 		}
 	}
 
-	public static void MakeDish(Thing food, int lv, Chara crafter = null)
+	public static void MakeDish(Thing food, int lv, Chara crafter = null, int seed = -1)
 	{
 		RecipeManager.BuildList();
 		List<Thing> list = new List<Thing>();
 		RecipeSource recipeSource = RecipeManager.Get(food.id);
-		Debug.Log(recipeSource);
 		if (recipeSource == null)
 		{
 			return;
 		}
+		SetSeed();
 		int num = Mathf.Min(EClass.rnd(lv), 50);
 		foreach (Recipe.Ingredient ingredient in recipeSource.GetIngredients())
 		{
+			SetSeed();
 			Thing thing = ThingGen.Create(ingredient.id, -1, lv);
 			if (thing.id == "deadbody")
 			{
 				thing = ThingGen.Create("_meat");
 			}
+			SetSeed();
 			thing = thing.TryMakeRandomItem(lv, TryMakeRandomItemSource.Cooking, crafter);
+			SetSeed();
 			TraitSeed.LevelSeed(thing, null, EClass.rnd(lv / 4) + 1);
 			thing.SetEncLv(thing.encLV / 2);
 			if (num > 0 && EClass.rnd(3) == 0)
@@ -97,24 +100,55 @@ public class CraftUtil : EClass
 				food.elements.Remove(708);
 			}
 		}
+		if (seed != -1)
+		{
+			Rand.SetSeed();
+		}
+		void SetSeed()
+		{
+			if (seed != -1)
+			{
+				Rand.SetSeed(seed);
+				seed++;
+			}
+		}
 	}
 
 	public static Thing MakeBloodMeal(Chara sucker, Chara feeder)
 	{
-		int lV = feeder.LV;
-		lV = lV / 10 * 10 + 10;
 		Rand.SetSeed(EClass.game.seed + feeder.uid);
-		Thing thing = ThingGen.CreateFromCategory("meal", lV);
+		Thing thing = ThingGen.CreateFromCategory("meal", 100);
 		sucker.Say("food_blood", thing);
-		Rand.SetSeed(EClass.game.seed + feeder.uid);
-		MakeDish(thing, lV);
-		Rand.SetSeed();
+		MakeDish(thing, 100, null, EClass.game.seed + feeder.uid);
+		if (thing.HasElement(709))
+		{
+			thing.elements.Remove(709);
+		}
 		if (thing.HasElement(708))
 		{
 			thing.elements.Remove(708);
 		}
-		thing.elements.ModBase(710, 1);
+		if (thing.HasElement(701))
+		{
+			thing.elements.Remove(701);
+		}
+		thing.elements.ModBase(710, 30);
+		thing.elements.SetTo(2, Mathf.Min(EClass.curve(feeder.LV, 30, 10, 60), 200));
 		return thing;
+	}
+
+	public static Thing MakeBloodSample(Chara sucker, Chara feeder)
+	{
+		Thing thing = MakeBloodMeal(sucker, feeder);
+		Thing thing2 = ThingGen.Create("bloodsample");
+		foreach (Element value in thing.elements.dict.Values)
+		{
+			thing2.elements.SetTo(value.id, value.Value);
+		}
+		thing2.elements.SetTo(10, 0);
+		thing2.MakeRefFrom(feeder);
+		thing2.c_idRefCard = thing.id;
+		return thing2;
 	}
 
 	public static Thing MakeDarkSoup()

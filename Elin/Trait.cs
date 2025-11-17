@@ -1695,6 +1695,7 @@ public class Trait : EClass
 					Add("stethoscope", 1, 0);
 					Add("whip_love", 1, 0);
 					Add("whip_interest", 1, 0);
+					Add("syringe_blood", 20, 0);
 					if (EClass.game.IsSurvival)
 					{
 						Add("chest_tax", 1, 0);

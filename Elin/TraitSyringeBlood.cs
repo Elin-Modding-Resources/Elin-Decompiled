@@ -1,4 +1,4 @@
-public class TraitSyringeHeaven : TraitTicketChampagne.TraitSyringe
+public class TraitSyringeBlood : TraitTicketChampagne.TraitSyringe
 {
 	public override void TrySetHeldAct(ActPlan p)
 	{
@@ -10,12 +10,7 @@ public class TraitSyringeHeaven : TraitTicketChampagne.TraitSyringe
 				EClass.pc.Say("syringe", EClass.pc, c, owner.NameOne);
 				c.PlayEffect("blood").SetParticleColor(EClass.Colors.matColors[c.material.alias].main).Emit(20);
 				c.AddBlood(2 + EClass.rnd(2));
-				c.AddCondition<ConHallucination>(50);
-				if ((c.trait is TraitLittleOne) & !c.HasCondition<ConDeathSentense>())
-				{
-					EClass.player.ModKarma(3);
-					c.AddCondition<ConDeathSentense>(100, force: true);
-				}
+				EClass.pc.PickOrDrop(EClass.pc.pos, CraftUtil.MakeBloodSample(EClass.pc, c));
 				owner.ModNum(-1);
 				return false;
 			}, c);

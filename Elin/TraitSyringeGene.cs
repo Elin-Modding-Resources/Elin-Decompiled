@@ -1,7 +1,5 @@
-public class TraitSyringeGene : Trait
+public class TraitSyringeGene : TraitTicketChampagne.TraitSyringe
 {
-	public override bool CanChangeHeight => false;
-
 	public override void TrySetHeldAct(ActPlan p)
 	{
 		p.pos.Charas.ForEach(delegate(Chara c)
@@ -9,7 +7,7 @@ public class TraitSyringeGene : Trait
 			p.TrySetAct("actInject".lang("", c.Name), delegate
 			{
 				EClass.pc.PlaySound("syringe");
-				EClass.pc.Say("syringe", EClass.pc, owner.NameOne, c.Name);
+				EClass.pc.Say("syringe", EClass.pc, c, owner.NameOne);
 				c.PlayEffect("blood").SetParticleColor(EClass.Colors.matColors[c.material.alias].main).Emit(20);
 				c.AddBlood(2 + EClass.rnd(2));
 				c.AddCondition<ConHallucination>(50);

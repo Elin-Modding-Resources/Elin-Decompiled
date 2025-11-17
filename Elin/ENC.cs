@@ -50,7 +50,7 @@ public class ENC
 
 	public const int convertLightning = 852;
 
-	public const int convertCold = 851;
+	public const int convertFire = 850;
 
 	public const int counter = 380;
 
@@ -82,7 +82,7 @@ public class ENC
 
 	public const int onlyPet = 655;
 
-	public const int convertFire = 850;
+	public const int convertCold = 851;
 
 	public const int living = 653;
 
@@ -188,38 +188,38 @@ public class ENC
 
 	public const int mod_splash = 608;
 
-	public const int mod_feint = 623;
-
 	public const int mod_precision = 605;
 
 	public const int music_drunk = 489;
 
-	public const int mod_ammo_recover = 604;
-
-	public const int mod_ammo_knockback = 603;
+	public const int eco = 652;
 
 	public const int mod_ammo = 600;
 
 	public const int mod_reload = 601;
 
-	public const int eco = 652;
+	public const int mod_rapid = 602;
 
 	public const int mod_drill = 606;
 
-	public const int mod_rapid = 602;
+	public const int mod_feint = 623;
+
+	public const int mod_ammo_knockback = 603;
+
+	public const int mod_ammo_recover = 604;
 
 	public static readonly int[] IDS = new int[104]
 	{
 		421, 415, 416, 417, 418, 414, 419, 420, 422, 424,
 		666, 665, 664, 663, 662, 661, 412, 660, 667, 411,
-		400, 409, 423, 865, 852, 851, 380, 381, 382, 383,
+		400, 409, 423, 865, 852, 850, 380, 381, 382, 383,
 		656, 401, 402, 403, 404, 405, 406, 407, 408, 410,
-		655, 850, 653, 447, 450, 460, 461, 462, 463, 464,
+		655, 851, 653, 447, 450, 460, 461, 462, 463, 464,
 		465, 466, 467, 468, 480, 482, 483, 484, 446, 485,
 		445, 443, 654, 426, 427, 428, 429, 430, 431, 435,
 		436, 437, 438, 439, 440, 441, 442, 444, 486, 481,
 		488, 425, 624, 640, 641, 650, 651, 487, 621, 620,
-		609, 622, 607, 608, 623, 605, 489, 604, 603, 600,
-		601, 652, 606, 602
+		609, 622, 607, 608, 605, 489, 652, 600, 601, 602,
+		606, 623, 603, 604
 	};
 }

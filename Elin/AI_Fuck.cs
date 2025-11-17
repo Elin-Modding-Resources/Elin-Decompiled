@@ -86,7 +86,7 @@ public class AI_Fuck : AIAct
 		Chara tc = (sell ? owner : target);
 		int destDist = ((Type == FuckType.fuck) ? 1 : 1);
 		yield return DoGoto(target.pos, destDist);
-		cc.Say(Type.ToString() + "_start", cc, tc);
+		cc.Say((variation == Variation.Bloodsuck) ? "suck_start" : (Type.ToString() + "_start"), cc, tc);
 		isFail = () => !tc.IsAliveInCurrentZone || tc.Dist(owner) > 3;
 		if (Type == FuckType.tame)
 		{
@@ -339,7 +339,7 @@ public class AI_Fuck : AIAct
 				int value = chara.hunger.value;
 				Thing food = CraftUtil.MakeBloodMeal(chara, chara2);
 				FoodEffect.Proc(chara, food, consume: false);
-				chara2.AddCondition<ConBleed>(EClass.rndHalf(value * 20));
+				chara2.AddCondition<ConBleed>(EClass.rndHalf(value * 10));
 			}
 			else
 			{

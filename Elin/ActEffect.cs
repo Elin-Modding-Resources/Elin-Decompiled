@@ -668,6 +668,9 @@ public class ActEffect : EClass
 				case "dragon":
 					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_dragon", (SourceChara.Row r) => r.race == "dragon" || r.race == "drake" || r.race == "wyvern"), power / 5);
 					break;
+				case "undead":
+					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_undead", (SourceChara.Row r) => r.HasTag(CTAG.undead) || (EClass.sources.races.map.TryGetValue(r.race)?.IsUndead ?? false)), power / 5);
+					break;
 				case "pawn":
 					chara = CharaGen.CreateFromFilter("c_pawn", power / 10);
 					break;
