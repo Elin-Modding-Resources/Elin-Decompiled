@@ -334,6 +334,7 @@ var classChara =
     [ "conSleep", "classChara.html#a7c62ef16a26a92181381594392b733cb", null ],
     [ "consumeTurn", "classChara.html#a3bb4ddb91c764e42bde0ec4ed5efd51c", null ],
     [ "conSuspend", "classChara.html#a280d0df57796be6be52b5efc22dfc869", null ],
+    [ "conTrans", "classChara.html#ab335e664729470d31e4b48c303c6351c", null ],
     [ "contribution", "classChara.html#a69bec02e1668be08b51286242a64ca9d", null ],
     [ "dirtySpeed", "classChara.html#acae3b12e32fce7b063fa411d284d810d", null ],
     [ "emoIcon", "classChara.html#a6c0f9facfb0e197b3236c5265ed0517c", null ],

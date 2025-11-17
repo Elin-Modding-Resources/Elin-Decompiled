@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.234 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.235 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -407,7 +407,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00292">292</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00294">294</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a40ee44c884814f793c41b38e0764f60c" name="a40ee44c884814f793c41b38e0764f60c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40ee44c884814f793c41b38e0764f60c">&#9670;&#160;</a></span>Apply()</h2>
@@ -449,498 +449,498 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00373">373</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  374</span>    {</div>
-<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  376</span>        {</div>
-<div class="line"><span class="lineno">  377</span>            <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Clear();</div>
-<div class="line"><span class="lineno">  378</span>        }</div>
-<div class="line"><span class="lineno">  379</span>        <span class="keywordtype">int</span> value = base.Value;</div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordtype">int</span> A = Mathf.Abs(a);</div>
-<div class="line"><span class="lineno">  381</span>        <span class="keywordtype">int</span> invert = ((a &gt;= 0) ? 1 : (-1));</div>
-<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  383</span>        {</div>
-<div class="line"><span class="lineno">  384</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  385</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[1] = a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  386</span>        }</div>
-<div class="line"><span class="lineno">  387</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>;</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a>;</div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0 &amp;&amp; chara != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  390</span>        {</div>
-<div class="line"><span class="lineno">  391</span>            num = (<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a> = chara.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>);</div>
-<div class="line"><span class="lineno">  392</span>        }</div>
-<div class="line"><span class="lineno">  393</span>        <span class="keywordflow">switch</span> (<span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  394</span>        {</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">case</span> 1660:</div>
-<div class="line"><span class="lineno">  396</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 25).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  397</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordflow">case</span> 1206:</div>
-<div class="line"><span class="lineno">  399</span>            ModBase(78, -a * 10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  400</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">case</span> 1642:</div>
-<div class="line"><span class="lineno">  402</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = ((a == 1) ? 10 : ((a == 2) ? 20 : 30)).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  403</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">case</span> 1643:</div>
-<div class="line"><span class="lineno">  405</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = ((a == 1) ? 1 : ((a == 2) ? 3 : 5)).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  406</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">case</span> 1610:</div>
-<div class="line"><span class="lineno">  408</span>            ModBase(60, a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  409</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">case</span> 1611:</div>
-<div class="line"><span class="lineno">  411</span>            ModBase(61, a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  412</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">case</span> 1612:</div>
-<div class="line"><span class="lineno">  414</span>            ModBase(62, a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  415</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">case</span> 1620:</div>
-<div class="line"><span class="lineno">  417</span>            ModAttribute(70);</div>
-<div class="line"><span class="lineno">  418</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">case</span> 1621:</div>
-<div class="line"><span class="lineno">  420</span>            ModAttribute(72);</div>
-<div class="line"><span class="lineno">  421</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">case</span> 1622:</div>
-<div class="line"><span class="lineno">  423</span>            ModAttribute(71);</div>
-<div class="line"><span class="lineno">  424</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  425</span>        <span class="keywordflow">case</span> 1623:</div>
-<div class="line"><span class="lineno">  426</span>            ModAttribute(73);</div>
-<div class="line"><span class="lineno">  427</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">case</span> 1626:</div>
-<div class="line"><span class="lineno">  429</span>            ModAttribute(75);</div>
-<div class="line"><span class="lineno">  430</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  431</span>        <span class="keywordflow">case</span> 1625:</div>
-<div class="line"><span class="lineno">  432</span>            ModAttribute(76);</div>
-<div class="line"><span class="lineno">  433</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">case</span> 1627:</div>
-<div class="line"><span class="lineno">  435</span>            ModAttribute(77);</div>
-<div class="line"><span class="lineno">  436</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">case</span> 1624:</div>
-<div class="line"><span class="lineno">  438</span>            ModAttribute(74);</div>
-<div class="line"><span class="lineno">  439</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  440</span>        <span class="keywordflow">case</span> 1629:</div>
-<div class="line"><span class="lineno">  441</span>            ModBase(79, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  442</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">case</span> 1630:</div>
-<div class="line"><span class="lineno">  444</span>            ModBase(65, ((A == 1) ? 2 : ((A == 2) ? 5 : 10)) * invert, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  445</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">case</span> 1631:</div>
-<div class="line"><span class="lineno">  447</span>            ModBase(64, ((A == 1) ? 2 : ((A == 2) ? 5 : 10)) * invert, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  448</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  449</span>        <span class="keywordflow">case</span> 1632:</div>
-<div class="line"><span class="lineno">  450</span>            ModBase(150, a * 2, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  451</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  452</span>        <span class="keywordflow">case</span> 1633:</div>
-<div class="line"><span class="lineno">  453</span>            ModBase(210, a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  454</span>            ModBase(402, ((A == 3) ? 1 : 0) * invert, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  455</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  456</span>        <span class="keywordflow">case</span> 1634:</div>
-<div class="line"><span class="lineno">  457</span>            ModBase(291, a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  458</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  459</span>        <span class="keywordflow">case</span> 1635:</div>
-<div class="line"><span class="lineno">  460</span>            ModBase(100, a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  461</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  462</span>        <span class="keywordflow">case</span> 1636:</div>
-<div class="line"><span class="lineno">  463</span>            ModBase(306, a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  464</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  465</span>        <span class="keywordflow">case</span> 1628:</div>
-<div class="line"><span class="lineno">  466</span>            ModBase(78, a * 2, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  467</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  468</span>        <span class="keywordflow">case</span> 1640:</div>
-<div class="line"><span class="lineno">  469</span>            ModBase(77, a * 2, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  470</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  471</span>        <span class="keywordflow">case</span> 1400:</div>
-<div class="line"><span class="lineno">  472</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 10).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  473</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  474</span>        <span class="keywordflow">case</span> 1404:</div>
-<div class="line"><span class="lineno">  475</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 10).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  476</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  477</span>        <span class="keywordflow">case</span> 1401:</div>
-<div class="line"><span class="lineno">  478</span>            ModBase(78, a * 15, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  479</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  480</span>        <span class="keywordflow">case</span> 1406:</div>
-<div class="line"><span class="lineno">  481</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 20).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  482</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[1] = (a * 5).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  483</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  484</span>        <span class="keywordflow">case</span> 1644:</div>
-<div class="line"><span class="lineno">  485</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  486</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  487</span>            {</div>
-<div class="line"><span class="lineno">  488</span>                <span class="keywordflow">if</span> (a &gt; 0)</div>
-<div class="line"><span class="lineno">  489</span>                {</div>
-<div class="line"><span class="lineno">  490</span>                    <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>.<a class="code hl_function" href="classChara.html#aa886d61457c2581d86b52f8b0e71f6ad">AddRandomBodyPart</a>(<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>);</div>
-<div class="line"><span class="lineno">  491</span>                }</div>
-<div class="line"><span class="lineno">  492</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  493</span>                {</div>
-<div class="line"><span class="lineno">  494</span>                    _ = a;</div>
-<div class="line"><span class="lineno">  495</span>                    _ = 0;</div>
-<div class="line"><span class="lineno">  496</span>                }</div>
-<div class="line"><span class="lineno">  497</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>)</div>
-<div class="line"><span class="lineno">  498</span>                {</div>
-<div class="line"><span class="lineno">  499</span>                    <a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>.<a class="code hl_function" href="classWidgetEquip.html#a5608e558f0ab5b2bd364cc4e81b87f79">Rebuild</a>();</div>
-<div class="line"><span class="lineno">  500</span>                }</div>
-<div class="line"><span class="lineno">  501</span>            }</div>
-<div class="line"><span class="lineno">  502</span>            ModBase(60, (A &gt; 5) ? ((A - 5) * -3 * invert) : 0, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  503</span>            ModBase(79, (A &gt; 5) ? ((A - 5) * -5 * invert) : 0, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  504</span>            ModBase(77, (A &gt; 5) ? ((A - 5) * -3 * invert) : 0, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  505</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  506</span>        <span class="keywordflow">case</span> 1230:</div>
-<div class="line"><span class="lineno">  507</span>            ModBase(60, A * 2 * invert, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  508</span>            ModBase(79, A * 3 * invert, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  509</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  510</span>        <span class="keywordflow">case</span> 1204:</div>
-<div class="line"><span class="lineno">  511</span>            ModBase(64, a * 50, hide: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  512</span>            ModBase(401, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  513</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordflow">case</span> 1202:</div>
-<div class="line"><span class="lineno">  515</span>            ModBase(403, a * 20, hide: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  516</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  517</span>        <span class="keywordflow">case</span> 1210:</div>
-<div class="line"><span class="lineno">  518</span>            ModBase(955, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  519</span>            ModBase(953, a * 10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  520</span>            ModBase(958, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  521</span>            ModBase(956, a * 10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  522</span>            ModBase(950, a * -5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  523</span>            ModBase(960, a * -5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  524</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  525</span>        <span class="keywordflow">case</span> 1290:</div>
-<div class="line"><span class="lineno">  526</span>            ModBase(418, a * 100, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  527</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">case</span> 1239:</div>
-<div class="line"><span class="lineno">  529</span>            ModBase(956, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  530</span>            ModBase(959, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  531</span>            ModBase(423, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  532</span>            ModBase(424, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  533</span>            ModBase(421, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  534</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  535</span>        <span class="keywordflow">case</span> 1233:</div>
-<div class="line"><span class="lineno">  536</span>            ModBase(954, a * 10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  537</span>            ModBase(423, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  538</span>            ModBase(425, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  539</span>            ModBase(424, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  540</span>            ModBase(421, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  541</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  542</span>        <span class="keywordflow">case</span> 1226:</div>
-<div class="line"><span class="lineno">  543</span>            ModBase(955, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  544</span>            ModBase(953, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  545</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">case</span> 1212:</div>
-<div class="line"><span class="lineno">  547</span>            ModBase(961, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  548</span>            ModBase(953, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  549</span>            ModBase(958, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  550</span>            ModBase(956, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  551</span>            ModBase(954, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  552</span>            ModBase(957, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  553</span>            ModBase(959, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  554</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  555</span>        <span class="keywordflow">case</span> 1213:</div>
-<div class="line"><span class="lineno">  556</span>            ModBase(962, a * 20, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  557</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  558</span>        <span class="keywordflow">case</span> 1224:</div>
-<div class="line"><span class="lineno">  559</span>            ModBase(951, a * 15, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  560</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  561</span>        <span class="keywordflow">case</span> 1217:</div>
-<div class="line"><span class="lineno">  562</span>            ModBase(952, a * -10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  563</span>            ModBase(955, a * 20, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  564</span>            ModBase(964, a * 20, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  566</span>        <span class="keywordflow">case</span> 1218:</div>
-<div class="line"><span class="lineno">  567</span>            ModBase(950, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  568</span>            ModBase(952, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  569</span>            ModBase(955, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  570</span>            ModBase(953, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  571</span>            ModBase(958, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  572</span>            ModBase(956, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  573</span>            ModBase(954, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  574</span>            ModBase(959, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  575</span>            ModBase(964, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  576</span>            ModBase(961, a / 40, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  577</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  578</span>        <span class="keywordflow">case</span> 1221:</div>
-<div class="line"><span class="lineno">  579</span>            ModBase(964, a * 20, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  580</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  581</span>        <span class="keywordflow">case</span> 1223:</div>
-<div class="line"><span class="lineno">  582</span>            ModBase(963, a * 20, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  583</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  584</span>        <span class="keywordflow">case</span> 1216:</div>
-<div class="line"><span class="lineno">  585</span>            ModBase(6020, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  586</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">case</span> 1250:</div>
-<div class="line"><span class="lineno">  588</span>            ModBase(950, a * -10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  589</span>            ModBase(951, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  590</span>            ModBase(961, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  591</span>            ModBase(8793, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  592</span>            ModBase(6607, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  593</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  594</span>        <span class="keywordflow">case</span> 1415:</div>
-<div class="line"><span class="lineno">  595</span>            ModBase(60, a * 15, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  596</span>            ModBase(79, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  597</span>            ModBase(953, a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  598</span>            ModBase(961, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  599</span>            ModBase(960, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  600</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  601</span>        <span class="keywordflow">case</span> 1419:</div>
-<div class="line"><span class="lineno">  602</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(101, a * 50);</div>
-<div class="line"><span class="lineno">  603</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(111, a * 50);</div>
-<div class="line"><span class="lineno">  604</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(103, a * 50);</div>
-<div class="line"><span class="lineno">  605</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(106, a * 50);</div>
-<div class="line"><span class="lineno">  606</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(122, a * 50);</div>
-<div class="line"><span class="lineno">  607</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(120, a * 50);</div>
-<div class="line"><span class="lineno">  608</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(123, a * 50);</div>
-<div class="line"><span class="lineno">  609</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  610</span>        <span class="keywordflow">case</span> 1532:</div>
-<div class="line"><span class="lineno">  611</span>            ModBase(73, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  612</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">case</span> 1533:</div>
-<div class="line"><span class="lineno">  614</span>            ModBase(73, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  615</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  616</span>        <span class="keywordflow">case</span> 1510:</div>
-<div class="line"><span class="lineno">  617</span>            ModBase(65, a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  618</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  619</span>        <span class="keywordflow">case</span> 1511:</div>
-<div class="line"><span class="lineno">  620</span>            ModBase(65, -a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  621</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  622</span>        <span class="keywordflow">case</span> 1512:</div>
-<div class="line"><span class="lineno">  623</span>            ModBase(73, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  624</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  625</span>        <span class="keywordflow">case</span> 1513:</div>
-<div class="line"><span class="lineno">  626</span>            ModBase(73, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  627</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">case</span> 1514:</div>
-<div class="line"><span class="lineno">  629</span>            ModBase(72, a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  630</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  631</span>        <span class="keywordflow">case</span> 1515:</div>
-<div class="line"><span class="lineno">  632</span>            ModBase(72, -a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  633</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  634</span>        <span class="keywordflow">case</span> 1516:</div>
-<div class="line"><span class="lineno">  635</span>            ModBase(300, a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  636</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  637</span>        <span class="keywordflow">case</span> 1517:</div>
-<div class="line"><span class="lineno">  638</span>            ModBase(300, -a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  639</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  640</span>        <span class="keywordflow">case</span> 1518:</div>
-<div class="line"><span class="lineno">  641</span>            ModBase(79, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  642</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  643</span>        <span class="keywordflow">case</span> 1519:</div>
-<div class="line"><span class="lineno">  644</span>            ModBase(79, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  645</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  646</span>        <span class="keywordflow">case</span> 1520:</div>
-<div class="line"><span class="lineno">  647</span>            ModBase(70, a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  648</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  649</span>        <span class="keywordflow">case</span> 1521:</div>
-<div class="line"><span class="lineno">  650</span>            ModBase(70, -a * 3, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  651</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">case</span> 1522:</div>
-<div class="line"><span class="lineno">  653</span>            ModBase(77, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  654</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  655</span>        <span class="keywordflow">case</span> 1523:</div>
-<div class="line"><span class="lineno">  656</span>            ModBase(77, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  657</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  658</span>        <span class="keywordflow">case</span> 1524:</div>
-<div class="line"><span class="lineno">  659</span>            ModBase(307, a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  660</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  661</span>        <span class="keywordflow">case</span> 1525:</div>
-<div class="line"><span class="lineno">  662</span>            ModBase(307, -a * 4, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  663</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  664</span>        <span class="keywordflow">case</span> 1526:</div>
-<div class="line"><span class="lineno">  665</span>            ModBase(951, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  666</span>            ModBase(950, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  667</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  668</span>        <span class="keywordflow">case</span> 1527:</div>
-<div class="line"><span class="lineno">  669</span>            ModBase(951, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  670</span>            ModBase(950, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  671</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  672</span>        <span class="keywordflow">case</span> 1528:</div>
-<div class="line"><span class="lineno">  673</span>            ModBase(952, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  674</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordflow">case</span> 1529:</div>
-<div class="line"><span class="lineno">  676</span>            ModBase(952, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  677</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  678</span>        <span class="keywordflow">case</span> 1530:</div>
-<div class="line"><span class="lineno">  679</span>            ModBase(960, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  680</span>            ModBase(956, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  681</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  682</span>        <span class="keywordflow">case</span> 1531:</div>
-<div class="line"><span class="lineno">  683</span>            ModBase(960, -a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  684</span>            ModBase(956, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  685</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  686</span>        <span class="keywordflow">case</span> 1300:</div>
-<div class="line"><span class="lineno">  687</span>        <span class="keywordflow">case</span> 1305:</div>
-<div class="line"><span class="lineno">  688</span>        <span class="keywordflow">case</span> 1310:</div>
-<div class="line"><span class="lineno">  689</span>        <span class="keywordflow">case</span> 1315:</div>
-<div class="line"><span class="lineno">  690</span>        <span class="keywordflow">case</span> 1320:</div>
-<div class="line"><span class="lineno">  691</span>        <span class="keywordflow">case</span> 1325:</div>
-<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">case</span> 1330:</div>
-<div class="line"><span class="lineno">  693</span>        <span class="keywordflow">case</span> 1335:</div>
-<div class="line"><span class="lineno">  694</span>        <span class="keywordflow">case</span> 1340:</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">case</span> 1345:</div>
-<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">case</span> 1350:</div>
-<div class="line"><span class="lineno">  697</span>        <span class="keywordflow">case</span> 1355:</div>
-<div class="line"><span class="lineno">  698</span>            GodHint();</div>
-<div class="line"><span class="lineno">  699</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  700</span>        <span class="keywordflow">case</span> 1550:</div>
-<div class="line"><span class="lineno">  701</span>            ModBase(404, -a * 10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  702</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  703</span>        <span class="keywordflow">case</span> 1551:</div>
-<div class="line"><span class="lineno">  704</span>            ModBase(77, -a * (4 + num / 5), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  705</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  706</span>        <span class="keywordflow">case</span> 1552:</div>
-<div class="line"><span class="lineno">  707</span>            ModBase(79, a * Mathf.Min(30 + num / 5, 100), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  708</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0)</div>
-<div class="line"><span class="lineno">  709</span>            {</div>
-<div class="line"><span class="lineno">  710</span>                chara?.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">UnequipAll</a>(39);</div>
-<div class="line"><span class="lineno">  711</span>            }</div>
-<div class="line"><span class="lineno">  712</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  713</span>        <span class="keywordflow">case</span> 1553:</div>
-<div class="line"><span class="lineno">  714</span>            ModBase(73, a * (5 + num / 3), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  715</span>            ModBase(77, -a * (5 + num / 3), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  716</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  717</span>        <span class="keywordflow">case</span> 1554:</div>
-<div class="line"><span class="lineno">  718</span>            ModBase(404, a * 10, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  719</span>            ModBase(401, a, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  720</span>            ModBase(79, a * (10 + num / 5), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  721</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0)</div>
-<div class="line"><span class="lineno">  722</span>            {</div>
-<div class="line"><span class="lineno">  723</span>                chara?.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">UnequipAll</a>(33);</div>
-<div class="line"><span class="lineno">  724</span>            }</div>
-<div class="line"><span class="lineno">  725</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  726</span>        <span class="keywordflow">case</span> 1555:</div>
-<div class="line"><span class="lineno">  727</span>            ModBase(65, a * (12 + num), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  728</span>            ModBase(77, -a * (5 + num / 5), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  729</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0)</div>
-<div class="line"><span class="lineno">  730</span>            {</div>
-<div class="line"><span class="lineno">  731</span>                chara?.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">UnequipAll</a>(31);</div>
-<div class="line"><span class="lineno">  732</span>            }</div>
-<div class="line"><span class="lineno">  733</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  734</span>        <span class="keywordflow">case</span> 1556:</div>
-<div class="line"><span class="lineno">  735</span>            ModBase(64, -a * (10 + num), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  736</span>            ModBase(67, a * (5 + num / 2), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  737</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  738</span>        <span class="keywordflow">case</span> 1557:</div>
-<div class="line"><span class="lineno">  739</span>            ModBase(71, -a * (5 + num / 3), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  740</span>            ModBase(72, -a * (4 + num / 4), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  741</span>            ModBase(74, a * (6 + num / 2), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  742</span>            ModBase(75, a * (2 + num / 6), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  743</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  744</span>        <span class="keywordflow">case</span> 1560:</div>
-<div class="line"><span class="lineno">  745</span>            ModBase(60, -a * 15, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  746</span>            ModBase(70, -a * (4 + num / 3), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  747</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  748</span>        <span class="keywordflow">case</span> 1561:</div>
-<div class="line"><span class="lineno">  749</span>            ModBase(61, -a * 15, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  750</span>            ModBase(76, -a * (4 + num / 3), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  751</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  752</span>        <span class="keywordflow">case</span> 1562:</div>
-<div class="line"><span class="lineno">  753</span>            ModBase(65, a * (15 + num / 2), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  754</span>            ModBase(79, -a * (10 + num / 5), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  755</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  756</span>        <span class="keywordflow">case</span> 1563:</div>
-<div class="line"><span class="lineno">  757</span>            ModBase(77, -a * (3 + num / 4), hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  758</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  759</span>        <span class="keywordflow">case</span> 1564:</div>
-<div class="line"><span class="lineno">  760</span>            ModBase(961, a * 5, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  761</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  762</span>        <span class="keywordflow">case</span> 1565:</div>
-<div class="line"><span class="lineno">  763</span>            ModBase(955, a * 20, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  764</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  765</span>        }</div>
-<div class="line"><span class="lineno">  766</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  767</span>        {</div>
-<div class="line"><span class="lineno">  768</span>            <span class="keywordtype">string</span> text = base.source.GetText(<span class="stringliteral">&quot;textExtra&quot;</span>);</div>
-<div class="line"><span class="lineno">  769</span>            <span class="keywordflow">if</span> (!text.IsEmpty())</div>
-<div class="line"><span class="lineno">  770</span>            {</div>
-<div class="line"><span class="lineno">  771</span>                <span class="keywordtype">string</span> text2 = text.SplitNewline().TryGet(value - 1, 99);</div>
-<div class="line"><span class="lineno">  772</span>                <span class="keywordflow">if</span> (!text2.IsEmpty())</div>
-<div class="line"><span class="lineno">  773</span>                {</div>
-<div class="line"><span class="lineno">  774</span>                    <span class="keywordtype">int</span> num2 = 0;</div>
-<div class="line"><span class="lineno">  775</span>                    <span class="keywordtype">string</span>[] array = text2.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  776</span>                    <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> obj <span class="keywordflow">in</span> array)</div>
-<div class="line"><span class="lineno">  777</span>                    {</div>
-<div class="line"><span class="lineno">  778</span>                        <span class="keywordtype">string</span> text3 = <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[num2];</div>
-<div class="line"><span class="lineno">  779</span>                        <span class="keywordtype">string</span> text4 = obj;</div>
-<div class="line"><span class="lineno">  780</span>                        <span class="keywordflow">if</span> (text3.ToInt() &lt; 0)</div>
-<div class="line"><span class="lineno">  781</span>                        {</div>
-<div class="line"><span class="lineno">  782</span>                            text4 = text4.Replace(<span class="stringliteral">&quot;+#1&quot;</span>, text3);</div>
-<div class="line"><span class="lineno">  783</span>                        }</div>
-<div class="line"><span class="lineno">  784</span>                        text4 = text4.Replace(<span class="stringliteral">&quot;#1&quot;</span>, text3);</div>
-<div class="line"><span class="lineno">  785</span>                        <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Add(text4);</div>
-<div class="line"><span class="lineno">  786</span>                        num2++;</div>
-<div class="line"><span class="lineno">  787</span>                    }</div>
-<div class="line"><span class="lineno">  788</span>                }</div>
-<div class="line"><span class="lineno">  789</span>            }</div>
-<div class="line"><span class="lineno">  790</span>        }</div>
-<div class="line"><span class="lineno">  791</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>;</div>
-<div class="line"><span class="lineno">  792</span>        <span class="keywordtype">void</span> GodHint()</div>
-<div class="line"><span class="lineno">  793</span>        {</div>
-<div class="line"><span class="lineno">  794</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  795</span>            {</div>
-<div class="line"><span class="lineno">  796</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  797</span>            }</div>
-<div class="line"><span class="lineno">  798</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> value2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_variable" href="classChara.html#aadee7ceb25515f2d8244fd5229f2acea">faithElements</a>.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values)</div>
-<div class="line"><span class="lineno">  799</span>            {</div>
-<div class="line"><span class="lineno">  800</span>                <span class="keywordflow">if</span> (value2.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.id != <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  801</span>                {</div>
-<div class="line"><span class="lineno">  802</span>                    NoteElement(value2.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, value2.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>);</div>
-<div class="line"><span class="lineno">  803</span>                }</div>
-<div class="line"><span class="lineno">  804</span>            }</div>
-<div class="line"><span class="lineno">  805</span>        }</div>
-<div class="line"><span class="lineno">  806</span>        <span class="keywordtype">void</span> ModAttribute(<span class="keywordtype">int</span> ele)</div>
-<div class="line"><span class="lineno">  807</span>        {</div>
-<div class="line"><span class="lineno">  808</span>            _ = <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>;</div>
-<div class="line"><span class="lineno">  809</span>            ModBase(ele, ((A == 1) ? 2 : ((A == 2) ? 4 : 5)) * invert, hide: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  810</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(ele, a * 10);</div>
-<div class="line"><span class="lineno">  811</span>        }</div>
-<div class="line"><span class="lineno">  812</span>        <span class="keywordtype">void</span> ModBase(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v, <span class="keywordtype">bool</span> hide)</div>
-<div class="line"><span class="lineno">  813</span>        {</div>
-<div class="line"><span class="lineno">  814</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  815</span>            {</div>
-<div class="line"><span class="lineno">  816</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#aa35ecf8180a3beb037151361a5b03511">ModBase</a>(ele, _v);</div>
-<div class="line"><span class="lineno">  817</span>            }</div>
-<div class="line"><span class="lineno">  818</span>            <span class="keywordflow">if</span> (!hide &amp;&amp; _v != 0)</div>
-<div class="line"><span class="lineno">  819</span>            {</div>
-<div class="line"><span class="lineno">  820</span>                NoteElement(ele, _v);</div>
-<div class="line"><span class="lineno">  821</span>            }</div>
-<div class="line"><span class="lineno">  822</span>        }</div>
-<div class="line"><span class="lineno">  823</span>        <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v)</div>
-<div class="line"><span class="lineno">  824</span>        {</div>
-<div class="line"><span class="lineno">  825</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  826</span>            {</div>
-<div class="line"><span class="lineno">  827</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a3c91e4accdfee39c317570a6580bdfb2">ModPotential</a>(ele, _v);</div>
-<div class="line"><span class="lineno">  828</span>            }</div>
-<div class="line"><span class="lineno">  829</span>            Note(<span class="stringliteral">&quot;modPotential&quot;</span>.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele].GetName(), <span class="stringliteral">&quot;+&quot;</span> + _v + <span class="stringliteral">&quot;%&quot;</span>));</div>
-<div class="line"><span class="lineno">  830</span>        }</div>
-<div class="line"><span class="lineno">  831</span>        <span class="keywordtype">void</span> Note(<span class="keywordtype">string</span> s)</div>
-<div class="line"><span class="lineno">  832</span>        {</div>
-<div class="line"><span class="lineno">  833</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
-<div class="line"><span class="lineno">  834</span>            {</div>
-<div class="line"><span class="lineno">  835</span>                <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Add(s);</div>
-<div class="line"><span class="lineno">  836</span>            }</div>
-<div class="line"><span class="lineno">  837</span>        }</div>
-<div class="line"><span class="lineno">  838</span>        <span class="keywordtype">void</span> NoteElement(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> a)</div>
-<div class="line"><span class="lineno">  839</span>        {</div>
-<div class="line"><span class="lineno">  840</span>            <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele];</div>
-<div class="line"><span class="lineno">  841</span>            <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;ability&quot;</span>)</div>
-<div class="line"><span class="lineno">  842</span>            {</div>
-<div class="line"><span class="lineno">  843</span>                Note(<span class="stringliteral">&quot;hintLearnAbility&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>().ToTitleCase()));</div>
-<div class="line"><span class="lineno">  844</span>            }</div>
-<div class="line"><span class="lineno">  845</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;flag&quot;</span>))</div>
-<div class="line"><span class="lineno">  846</span>            {</div>
-<div class="line"><span class="lineno">  847</span>                Note(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>());</div>
-<div class="line"><span class="lineno">  848</span>            }</div>
-<div class="line"><span class="lineno">  849</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  850</span>            {</div>
-<div class="line"><span class="lineno">  851</span>                <span class="keywordtype">string</span> @ref = ((a &lt; 0) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;+&quot;</span>) + a;</div>
-<div class="line"><span class="lineno">  852</span>                <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;resist&quot;</span>)</div>
-<div class="line"><span class="lineno">  853</span>                {</div>
-<div class="line"><span class="lineno">  854</span>                    <span class="keywordtype">int</span> num3 = 0;</div>
-<div class="line"><span class="lineno">  855</span>                    @ref = ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num3, 1, 5));</div>
-<div class="line"><span class="lineno">  856</span>                    Note(<span class="stringliteral">&quot;modValueRes&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
-<div class="line"><span class="lineno">  857</span>                }</div>
-<div class="line"><span class="lineno">  858</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  859</span>                {</div>
-<div class="line"><span class="lineno">  860</span>                    Note(<span class="stringliteral">&quot;modValue&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
-<div class="line"><span class="lineno">  861</span>                }</div>
-<div class="line"><span class="lineno">  862</span>            }</div>
-<div class="line"><span class="lineno">  863</span>        }</div>
-<div class="line"><span class="lineno">  864</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00375">375</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  376</span>    {</div>
+<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  378</span>        {</div>
+<div class="line"><span class="lineno">  379</span>            <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Clear();</div>
+<div class="line"><span class="lineno">  380</span>        }</div>
+<div class="line"><span class="lineno">  381</span>        <span class="keywordtype">int</span> value = base.Value;</div>
+<div class="line"><span class="lineno">  382</span>        <span class="keywordtype">int</span> A = Mathf.Abs(a);</div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordtype">int</span> invert = ((a &gt;= 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  385</span>        {</div>
+<div class="line"><span class="lineno">  386</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  387</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[1] = a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  388</span>        }</div>
+<div class="line"><span class="lineno">  389</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>;</div>
+<div class="line"><span class="lineno">  390</span>        <span class="keywordtype">int</span> num = <a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a>;</div>
+<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0 &amp;&amp; chara != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  392</span>        {</div>
+<div class="line"><span class="lineno">  393</span>            num = (<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a> = chara.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>);</div>
+<div class="line"><span class="lineno">  394</span>        }</div>
+<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">switch</span> (<span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  396</span>        {</div>
+<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">case</span> 1660:</div>
+<div class="line"><span class="lineno">  398</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 25).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">case</span> 1206:</div>
+<div class="line"><span class="lineno">  401</span>            ModBase(78, -a * 10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">case</span> 1642:</div>
+<div class="line"><span class="lineno">  404</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = ((a == 1) ? 10 : ((a == 2) ? 20 : 30)).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  406</span>        <span class="keywordflow">case</span> 1643:</div>
+<div class="line"><span class="lineno">  407</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = ((a == 1) ? 1 : ((a == 2) ? 3 : 5)).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">case</span> 1610:</div>
+<div class="line"><span class="lineno">  410</span>            ModBase(60, a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  411</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  412</span>        <span class="keywordflow">case</span> 1611:</div>
+<div class="line"><span class="lineno">  413</span>            ModBase(61, a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  414</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  415</span>        <span class="keywordflow">case</span> 1612:</div>
+<div class="line"><span class="lineno">  416</span>            ModBase(62, a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  418</span>        <span class="keywordflow">case</span> 1620:</div>
+<div class="line"><span class="lineno">  419</span>            ModAttribute(70);</div>
+<div class="line"><span class="lineno">  420</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  421</span>        <span class="keywordflow">case</span> 1621:</div>
+<div class="line"><span class="lineno">  422</span>            ModAttribute(72);</div>
+<div class="line"><span class="lineno">  423</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  424</span>        <span class="keywordflow">case</span> 1622:</div>
+<div class="line"><span class="lineno">  425</span>            ModAttribute(71);</div>
+<div class="line"><span class="lineno">  426</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  427</span>        <span class="keywordflow">case</span> 1623:</div>
+<div class="line"><span class="lineno">  428</span>            ModAttribute(73);</div>
+<div class="line"><span class="lineno">  429</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">case</span> 1626:</div>
+<div class="line"><span class="lineno">  431</span>            ModAttribute(75);</div>
+<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">case</span> 1625:</div>
+<div class="line"><span class="lineno">  434</span>            ModAttribute(76);</div>
+<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  436</span>        <span class="keywordflow">case</span> 1627:</div>
+<div class="line"><span class="lineno">  437</span>            ModAttribute(77);</div>
+<div class="line"><span class="lineno">  438</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">case</span> 1624:</div>
+<div class="line"><span class="lineno">  440</span>            ModAttribute(74);</div>
+<div class="line"><span class="lineno">  441</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">case</span> 1629:</div>
+<div class="line"><span class="lineno">  443</span>            ModBase(79, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  444</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  445</span>        <span class="keywordflow">case</span> 1630:</div>
+<div class="line"><span class="lineno">  446</span>            ModBase(65, ((A == 1) ? 2 : ((A == 2) ? 5 : 10)) * invert, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  447</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">case</span> 1631:</div>
+<div class="line"><span class="lineno">  449</span>            ModBase(64, ((A == 1) ? 2 : ((A == 2) ? 5 : 10)) * invert, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  450</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  451</span>        <span class="keywordflow">case</span> 1632:</div>
+<div class="line"><span class="lineno">  452</span>            ModBase(150, a * 2, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  453</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">case</span> 1633:</div>
+<div class="line"><span class="lineno">  455</span>            ModBase(210, a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  456</span>            ModBase(402, ((A == 3) ? 1 : 0) * invert, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  457</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  458</span>        <span class="keywordflow">case</span> 1634:</div>
+<div class="line"><span class="lineno">  459</span>            ModBase(291, a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  460</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">case</span> 1635:</div>
+<div class="line"><span class="lineno">  462</span>            ModBase(100, a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  463</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">case</span> 1636:</div>
+<div class="line"><span class="lineno">  465</span>            ModBase(306, a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  466</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  467</span>        <span class="keywordflow">case</span> 1628:</div>
+<div class="line"><span class="lineno">  468</span>            ModBase(78, a * 2, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  469</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  470</span>        <span class="keywordflow">case</span> 1640:</div>
+<div class="line"><span class="lineno">  471</span>            ModBase(77, a * 2, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  472</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  473</span>        <span class="keywordflow">case</span> 1400:</div>
+<div class="line"><span class="lineno">  474</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 10).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  475</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  476</span>        <span class="keywordflow">case</span> 1404:</div>
+<div class="line"><span class="lineno">  477</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 10).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  478</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  479</span>        <span class="keywordflow">case</span> 1401:</div>
+<div class="line"><span class="lineno">  480</span>            ModBase(78, a * 15, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  481</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  482</span>        <span class="keywordflow">case</span> 1406:</div>
+<div class="line"><span class="lineno">  483</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = (a * 20).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  484</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[1] = (a * 5).ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  485</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">case</span> 1644:</div>
+<div class="line"><span class="lineno">  487</span>            <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[0] = a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  488</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  489</span>            {</div>
+<div class="line"><span class="lineno">  490</span>                <span class="keywordflow">if</span> (a &gt; 0)</div>
+<div class="line"><span class="lineno">  491</span>                {</div>
+<div class="line"><span class="lineno">  492</span>                    <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>.<a class="code hl_function" href="classChara.html#aa886d61457c2581d86b52f8b0e71f6ad">AddRandomBodyPart</a>(<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>);</div>
+<div class="line"><span class="lineno">  493</span>                }</div>
+<div class="line"><span class="lineno">  494</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  495</span>                {</div>
+<div class="line"><span class="lineno">  496</span>                    _ = a;</div>
+<div class="line"><span class="lineno">  497</span>                    _ = 0;</div>
+<div class="line"><span class="lineno">  498</span>                }</div>
+<div class="line"><span class="lineno">  499</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#addf95d9ae04f1109456cc8c2d962d287">Chara</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; (<span class="keywordtype">bool</span>)<a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>)</div>
+<div class="line"><span class="lineno">  500</span>                {</div>
+<div class="line"><span class="lineno">  501</span>                    <a class="code hl_class" href="classWidgetEquip.html">WidgetEquip</a>.<a class="code hl_variable" href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">Instance</a>.<a class="code hl_function" href="classWidgetEquip.html#a5608e558f0ab5b2bd364cc4e81b87f79">Rebuild</a>();</div>
+<div class="line"><span class="lineno">  502</span>                }</div>
+<div class="line"><span class="lineno">  503</span>            }</div>
+<div class="line"><span class="lineno">  504</span>            ModBase(60, (A &gt; 5) ? ((A - 5) * -3 * invert) : 0, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  505</span>            ModBase(79, (A &gt; 5) ? ((A - 5) * -5 * invert) : 0, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  506</span>            ModBase(77, (A &gt; 5) ? ((A - 5) * -3 * invert) : 0, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  507</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  508</span>        <span class="keywordflow">case</span> 1230:</div>
+<div class="line"><span class="lineno">  509</span>            ModBase(60, A * 2 * invert, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  510</span>            ModBase(79, A * 3 * invert, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  511</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  512</span>        <span class="keywordflow">case</span> 1204:</div>
+<div class="line"><span class="lineno">  513</span>            ModBase(64, a * 50, hide: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  514</span>            ModBase(401, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  515</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  516</span>        <span class="keywordflow">case</span> 1202:</div>
+<div class="line"><span class="lineno">  517</span>            ModBase(403, a * 20, hide: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  518</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">case</span> 1210:</div>
+<div class="line"><span class="lineno">  520</span>            ModBase(955, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  521</span>            ModBase(953, a * 10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  522</span>            ModBase(958, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  523</span>            ModBase(956, a * 10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  524</span>            ModBase(950, a * -5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  525</span>            ModBase(960, a * -5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  526</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">case</span> 1290:</div>
+<div class="line"><span class="lineno">  528</span>            ModBase(418, a * 100, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  529</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  530</span>        <span class="keywordflow">case</span> 1239:</div>
+<div class="line"><span class="lineno">  531</span>            ModBase(956, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  532</span>            ModBase(959, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  533</span>            ModBase(423, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  534</span>            ModBase(424, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  535</span>            ModBase(421, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  536</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  537</span>        <span class="keywordflow">case</span> 1233:</div>
+<div class="line"><span class="lineno">  538</span>            ModBase(954, a * 10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  539</span>            ModBase(423, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  540</span>            ModBase(425, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  541</span>            ModBase(424, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  542</span>            ModBase(421, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  543</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">case</span> 1226:</div>
+<div class="line"><span class="lineno">  545</span>            ModBase(955, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  546</span>            ModBase(953, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  547</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  548</span>        <span class="keywordflow">case</span> 1212:</div>
+<div class="line"><span class="lineno">  549</span>            ModBase(961, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  550</span>            ModBase(953, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  551</span>            ModBase(958, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  552</span>            ModBase(956, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  553</span>            ModBase(954, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  554</span>            ModBase(957, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  555</span>            ModBase(959, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  556</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">case</span> 1213:</div>
+<div class="line"><span class="lineno">  558</span>            ModBase(962, a * 20, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  559</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  560</span>        <span class="keywordflow">case</span> 1224:</div>
+<div class="line"><span class="lineno">  561</span>            ModBase(951, a * 15, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  562</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  563</span>        <span class="keywordflow">case</span> 1217:</div>
+<div class="line"><span class="lineno">  564</span>            ModBase(952, a * -10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  565</span>            ModBase(955, a * 20, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  566</span>            ModBase(964, a * 20, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  567</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  568</span>        <span class="keywordflow">case</span> 1218:</div>
+<div class="line"><span class="lineno">  569</span>            ModBase(950, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  570</span>            ModBase(952, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  571</span>            ModBase(955, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  572</span>            ModBase(953, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  573</span>            ModBase(958, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  574</span>            ModBase(956, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  575</span>            ModBase(954, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  576</span>            ModBase(959, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  577</span>            ModBase(964, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  578</span>            ModBase(961, a / 40, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  579</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  580</span>        <span class="keywordflow">case</span> 1221:</div>
+<div class="line"><span class="lineno">  581</span>            ModBase(964, a * 20, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  582</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  583</span>        <span class="keywordflow">case</span> 1223:</div>
+<div class="line"><span class="lineno">  584</span>            ModBase(963, a * 20, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  585</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  586</span>        <span class="keywordflow">case</span> 1216:</div>
+<div class="line"><span class="lineno">  587</span>            ModBase(6020, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  588</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  589</span>        <span class="keywordflow">case</span> 1250:</div>
+<div class="line"><span class="lineno">  590</span>            ModBase(950, a * -10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  591</span>            ModBase(951, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  592</span>            ModBase(961, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  593</span>            ModBase(8793, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  594</span>            ModBase(6607, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  595</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">case</span> 1415:</div>
+<div class="line"><span class="lineno">  597</span>            ModBase(60, a * 15, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  598</span>            ModBase(79, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  599</span>            ModBase(953, a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  600</span>            ModBase(961, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  601</span>            ModBase(960, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  602</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  603</span>        <span class="keywordflow">case</span> 1419:</div>
+<div class="line"><span class="lineno">  604</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(101, a * 50);</div>
+<div class="line"><span class="lineno">  605</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(111, a * 50);</div>
+<div class="line"><span class="lineno">  606</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(103, a * 50);</div>
+<div class="line"><span class="lineno">  607</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(106, a * 50);</div>
+<div class="line"><span class="lineno">  608</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(122, a * 50);</div>
+<div class="line"><span class="lineno">  609</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(120, a * 50);</div>
+<div class="line"><span class="lineno">  610</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(123, a * 50);</div>
+<div class="line"><span class="lineno">  611</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  612</span>        <span class="keywordflow">case</span> 1532:</div>
+<div class="line"><span class="lineno">  613</span>            ModBase(73, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  614</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  615</span>        <span class="keywordflow">case</span> 1533:</div>
+<div class="line"><span class="lineno">  616</span>            ModBase(73, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  617</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  618</span>        <span class="keywordflow">case</span> 1510:</div>
+<div class="line"><span class="lineno">  619</span>            ModBase(65, a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  620</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  621</span>        <span class="keywordflow">case</span> 1511:</div>
+<div class="line"><span class="lineno">  622</span>            ModBase(65, -a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  623</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">case</span> 1512:</div>
+<div class="line"><span class="lineno">  625</span>            ModBase(73, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  626</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  627</span>        <span class="keywordflow">case</span> 1513:</div>
+<div class="line"><span class="lineno">  628</span>            ModBase(73, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  629</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">case</span> 1514:</div>
+<div class="line"><span class="lineno">  631</span>            ModBase(72, a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  632</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  633</span>        <span class="keywordflow">case</span> 1515:</div>
+<div class="line"><span class="lineno">  634</span>            ModBase(72, -a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  635</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  636</span>        <span class="keywordflow">case</span> 1516:</div>
+<div class="line"><span class="lineno">  637</span>            ModBase(300, a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  638</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  639</span>        <span class="keywordflow">case</span> 1517:</div>
+<div class="line"><span class="lineno">  640</span>            ModBase(300, -a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  641</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  642</span>        <span class="keywordflow">case</span> 1518:</div>
+<div class="line"><span class="lineno">  643</span>            ModBase(79, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  644</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  645</span>        <span class="keywordflow">case</span> 1519:</div>
+<div class="line"><span class="lineno">  646</span>            ModBase(79, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  647</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  648</span>        <span class="keywordflow">case</span> 1520:</div>
+<div class="line"><span class="lineno">  649</span>            ModBase(70, a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  650</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  651</span>        <span class="keywordflow">case</span> 1521:</div>
+<div class="line"><span class="lineno">  652</span>            ModBase(70, -a * 3, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  653</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  654</span>        <span class="keywordflow">case</span> 1522:</div>
+<div class="line"><span class="lineno">  655</span>            ModBase(77, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  656</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  657</span>        <span class="keywordflow">case</span> 1523:</div>
+<div class="line"><span class="lineno">  658</span>            ModBase(77, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  659</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  660</span>        <span class="keywordflow">case</span> 1524:</div>
+<div class="line"><span class="lineno">  661</span>            ModBase(307, a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  662</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  663</span>        <span class="keywordflow">case</span> 1525:</div>
+<div class="line"><span class="lineno">  664</span>            ModBase(307, -a * 4, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  665</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">case</span> 1526:</div>
+<div class="line"><span class="lineno">  667</span>            ModBase(951, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  668</span>            ModBase(950, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  669</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  670</span>        <span class="keywordflow">case</span> 1527:</div>
+<div class="line"><span class="lineno">  671</span>            ModBase(951, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  672</span>            ModBase(950, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  673</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  674</span>        <span class="keywordflow">case</span> 1528:</div>
+<div class="line"><span class="lineno">  675</span>            ModBase(952, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  676</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  677</span>        <span class="keywordflow">case</span> 1529:</div>
+<div class="line"><span class="lineno">  678</span>            ModBase(952, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  679</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  680</span>        <span class="keywordflow">case</span> 1530:</div>
+<div class="line"><span class="lineno">  681</span>            ModBase(960, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  682</span>            ModBase(956, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  683</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  684</span>        <span class="keywordflow">case</span> 1531:</div>
+<div class="line"><span class="lineno">  685</span>            ModBase(960, -a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  686</span>            ModBase(956, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  687</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  688</span>        <span class="keywordflow">case</span> 1300:</div>
+<div class="line"><span class="lineno">  689</span>        <span class="keywordflow">case</span> 1305:</div>
+<div class="line"><span class="lineno">  690</span>        <span class="keywordflow">case</span> 1310:</div>
+<div class="line"><span class="lineno">  691</span>        <span class="keywordflow">case</span> 1315:</div>
+<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">case</span> 1320:</div>
+<div class="line"><span class="lineno">  693</span>        <span class="keywordflow">case</span> 1325:</div>
+<div class="line"><span class="lineno">  694</span>        <span class="keywordflow">case</span> 1330:</div>
+<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">case</span> 1335:</div>
+<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">case</span> 1340:</div>
+<div class="line"><span class="lineno">  697</span>        <span class="keywordflow">case</span> 1345:</div>
+<div class="line"><span class="lineno">  698</span>        <span class="keywordflow">case</span> 1350:</div>
+<div class="line"><span class="lineno">  699</span>        <span class="keywordflow">case</span> 1355:</div>
+<div class="line"><span class="lineno">  700</span>            GodHint();</div>
+<div class="line"><span class="lineno">  701</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  702</span>        <span class="keywordflow">case</span> 1550:</div>
+<div class="line"><span class="lineno">  703</span>            ModBase(404, -a * 10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  704</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  705</span>        <span class="keywordflow">case</span> 1551:</div>
+<div class="line"><span class="lineno">  706</span>            ModBase(77, -a * (4 + num / 5), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  707</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  708</span>        <span class="keywordflow">case</span> 1552:</div>
+<div class="line"><span class="lineno">  709</span>            ModBase(79, a * Mathf.Min(30 + num / 5, 100), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  710</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0)</div>
+<div class="line"><span class="lineno">  711</span>            {</div>
+<div class="line"><span class="lineno">  712</span>                chara?.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">UnequipAll</a>(39);</div>
+<div class="line"><span class="lineno">  713</span>            }</div>
+<div class="line"><span class="lineno">  714</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  715</span>        <span class="keywordflow">case</span> 1553:</div>
+<div class="line"><span class="lineno">  716</span>            ModBase(73, a * (5 + num / 3), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  717</span>            ModBase(77, -a * (5 + num / 3), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  718</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  719</span>        <span class="keywordflow">case</span> 1554:</div>
+<div class="line"><span class="lineno">  720</span>            ModBase(404, a * 10, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  721</span>            ModBase(401, a, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  722</span>            ModBase(79, a * (10 + num / 5), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  723</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0)</div>
+<div class="line"><span class="lineno">  724</span>            {</div>
+<div class="line"><span class="lineno">  725</span>                chara?.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">UnequipAll</a>(33);</div>
+<div class="line"><span class="lineno">  726</span>            }</div>
+<div class="line"><span class="lineno">  727</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  728</span>        <span class="keywordflow">case</span> 1555:</div>
+<div class="line"><span class="lineno">  729</span>            ModBase(65, a * (12 + num), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  730</span>            ModBase(77, -a * (5 + num / 5), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  731</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> &amp;&amp; a &gt; 0)</div>
+<div class="line"><span class="lineno">  732</span>            {</div>
+<div class="line"><span class="lineno">  733</span>                chara?.<a class="code hl_variable" href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">body</a>.<a class="code hl_function" href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">UnequipAll</a>(31);</div>
+<div class="line"><span class="lineno">  734</span>            }</div>
+<div class="line"><span class="lineno">  735</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  736</span>        <span class="keywordflow">case</span> 1556:</div>
+<div class="line"><span class="lineno">  737</span>            ModBase(64, -a * (10 + num), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  738</span>            ModBase(67, a * (5 + num / 2), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  739</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  740</span>        <span class="keywordflow">case</span> 1557:</div>
+<div class="line"><span class="lineno">  741</span>            ModBase(71, -a * (5 + num / 3), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  742</span>            ModBase(72, -a * (4 + num / 4), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  743</span>            ModBase(74, a * (6 + num / 2), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  744</span>            ModBase(75, a * (2 + num / 6), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  745</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  746</span>        <span class="keywordflow">case</span> 1560:</div>
+<div class="line"><span class="lineno">  747</span>            ModBase(60, -a * 15, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  748</span>            ModBase(70, -a * (4 + num / 3), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  749</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  750</span>        <span class="keywordflow">case</span> 1561:</div>
+<div class="line"><span class="lineno">  751</span>            ModBase(61, -a * 15, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  752</span>            ModBase(76, -a * (4 + num / 3), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  753</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  754</span>        <span class="keywordflow">case</span> 1562:</div>
+<div class="line"><span class="lineno">  755</span>            ModBase(65, a * (15 + num / 2), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  756</span>            ModBase(79, -a * (10 + num / 5), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  757</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  758</span>        <span class="keywordflow">case</span> 1563:</div>
+<div class="line"><span class="lineno">  759</span>            ModBase(77, -a * (3 + num / 4), hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  760</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  761</span>        <span class="keywordflow">case</span> 1564:</div>
+<div class="line"><span class="lineno">  762</span>            ModBase(961, a * 5, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  763</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  764</span>        <span class="keywordflow">case</span> 1565:</div>
+<div class="line"><span class="lineno">  765</span>            ModBase(955, a * 20, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  766</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  767</span>        }</div>
+<div class="line"><span class="lineno">  768</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  769</span>        {</div>
+<div class="line"><span class="lineno">  770</span>            <span class="keywordtype">string</span> text = base.source.GetText(<span class="stringliteral">&quot;textExtra&quot;</span>);</div>
+<div class="line"><span class="lineno">  771</span>            <span class="keywordflow">if</span> (!text.IsEmpty())</div>
+<div class="line"><span class="lineno">  772</span>            {</div>
+<div class="line"><span class="lineno">  773</span>                <span class="keywordtype">string</span> text2 = text.SplitNewline().TryGet(value - 1, 99);</div>
+<div class="line"><span class="lineno">  774</span>                <span class="keywordflow">if</span> (!text2.IsEmpty())</div>
+<div class="line"><span class="lineno">  775</span>                {</div>
+<div class="line"><span class="lineno">  776</span>                    <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  777</span>                    <span class="keywordtype">string</span>[] array = text2.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  778</span>                    <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> obj <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">  779</span>                    {</div>
+<div class="line"><span class="lineno">  780</span>                        <span class="keywordtype">string</span> text3 = <a class="code hl_variable" href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">featRef</a>[num2];</div>
+<div class="line"><span class="lineno">  781</span>                        <span class="keywordtype">string</span> text4 = obj;</div>
+<div class="line"><span class="lineno">  782</span>                        <span class="keywordflow">if</span> (text3.ToInt() &lt; 0)</div>
+<div class="line"><span class="lineno">  783</span>                        {</div>
+<div class="line"><span class="lineno">  784</span>                            text4 = text4.Replace(<span class="stringliteral">&quot;+#1&quot;</span>, text3);</div>
+<div class="line"><span class="lineno">  785</span>                        }</div>
+<div class="line"><span class="lineno">  786</span>                        text4 = text4.Replace(<span class="stringliteral">&quot;#1&quot;</span>, text3);</div>
+<div class="line"><span class="lineno">  787</span>                        <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Add(text4);</div>
+<div class="line"><span class="lineno">  788</span>                        num2++;</div>
+<div class="line"><span class="lineno">  789</span>                    }</div>
+<div class="line"><span class="lineno">  790</span>                }</div>
+<div class="line"><span class="lineno">  791</span>            }</div>
+<div class="line"><span class="lineno">  792</span>        }</div>
+<div class="line"><span class="lineno">  793</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>;</div>
+<div class="line"><span class="lineno">  794</span>        <span class="keywordtype">void</span> GodHint()</div>
+<div class="line"><span class="lineno">  795</span>        {</div>
+<div class="line"><span class="lineno">  796</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  797</span>            {</div>
+<div class="line"><span class="lineno">  798</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  799</span>            }</div>
+<div class="line"><span class="lineno">  800</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> value2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_variable" href="classChara.html#aadee7ceb25515f2d8244fd5229f2acea">faithElements</a>.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values)</div>
+<div class="line"><span class="lineno">  801</span>            {</div>
+<div class="line"><span class="lineno">  802</span>                <span class="keywordflow">if</span> (value2.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.id != <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  803</span>                {</div>
+<div class="line"><span class="lineno">  804</span>                    NoteElement(value2.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>, value2.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>);</div>
+<div class="line"><span class="lineno">  805</span>                }</div>
+<div class="line"><span class="lineno">  806</span>            }</div>
+<div class="line"><span class="lineno">  807</span>        }</div>
+<div class="line"><span class="lineno">  808</span>        <span class="keywordtype">void</span> ModAttribute(<span class="keywordtype">int</span> ele)</div>
+<div class="line"><span class="lineno">  809</span>        {</div>
+<div class="line"><span class="lineno">  810</span>            _ = <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>;</div>
+<div class="line"><span class="lineno">  811</span>            ModBase(ele, ((A == 1) ? 2 : ((A == 2) ? 4 : 5)) * invert, hide: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  812</span>            <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(ele, a * 10);</div>
+<div class="line"><span class="lineno">  813</span>        }</div>
+<div class="line"><span class="lineno">  814</span>        <span class="keywordtype">void</span> ModBase(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v, <span class="keywordtype">bool</span> hide)</div>
+<div class="line"><span class="lineno">  815</span>        {</div>
+<div class="line"><span class="lineno">  816</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  817</span>            {</div>
+<div class="line"><span class="lineno">  818</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#aa35ecf8180a3beb037151361a5b03511">ModBase</a>(ele, _v);</div>
+<div class="line"><span class="lineno">  819</span>            }</div>
+<div class="line"><span class="lineno">  820</span>            <span class="keywordflow">if</span> (!hide &amp;&amp; _v != 0)</div>
+<div class="line"><span class="lineno">  821</span>            {</div>
+<div class="line"><span class="lineno">  822</span>                NoteElement(ele, _v);</div>
+<div class="line"><span class="lineno">  823</span>            }</div>
+<div class="line"><span class="lineno">  824</span>        }</div>
+<div class="line"><span class="lineno">  825</span>        <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> _v)</div>
+<div class="line"><span class="lineno">  826</span>        {</div>
+<div class="line"><span class="lineno">  827</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  828</span>            {</div>
+<div class="line"><span class="lineno">  829</span>                <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a3c91e4accdfee39c317570a6580bdfb2">ModPotential</a>(ele, _v);</div>
+<div class="line"><span class="lineno">  830</span>            }</div>
+<div class="line"><span class="lineno">  831</span>            Note(<span class="stringliteral">&quot;modPotential&quot;</span>.lang(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele].GetName(), <span class="stringliteral">&quot;+&quot;</span> + _v + <span class="stringliteral">&quot;%&quot;</span>));</div>
+<div class="line"><span class="lineno">  832</span>        }</div>
+<div class="line"><span class="lineno">  833</span>        <span class="keywordtype">void</span> Note(<span class="keywordtype">string</span> s)</div>
+<div class="line"><span class="lineno">  834</span>        {</div>
+<div class="line"><span class="lineno">  835</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>)</div>
+<div class="line"><span class="lineno">  836</span>            {</div>
+<div class="line"><span class="lineno">  837</span>                <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>.Add(s);</div>
+<div class="line"><span class="lineno">  838</span>            }</div>
+<div class="line"><span class="lineno">  839</span>        }</div>
+<div class="line"><span class="lineno">  840</span>        <span class="keywordtype">void</span> NoteElement(<span class="keywordtype">int</span> ele, <span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">  841</span>        {</div>
+<div class="line"><span class="lineno">  842</span>            <a class="code hl_class" href="classSourceElement_1_1Row.html">SourceElement.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.map[ele];</div>
+<div class="line"><span class="lineno">  843</span>            <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;ability&quot;</span>)</div>
+<div class="line"><span class="lineno">  844</span>            {</div>
+<div class="line"><span class="lineno">  845</span>                Note(<span class="stringliteral">&quot;hintLearnAbility&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>().ToTitleCase()));</div>
+<div class="line"><span class="lineno">  846</span>            }</div>
+<div class="line"><span class="lineno">  847</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">tag</a>.Contains(<span class="stringliteral">&quot;flag&quot;</span>))</div>
+<div class="line"><span class="lineno">  848</span>            {</div>
+<div class="line"><span class="lineno">  849</span>                Note(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>());</div>
+<div class="line"><span class="lineno">  850</span>            }</div>
+<div class="line"><span class="lineno">  851</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  852</span>            {</div>
+<div class="line"><span class="lineno">  853</span>                <span class="keywordtype">string</span> @ref = ((a &lt; 0) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;+&quot;</span>) + a;</div>
+<div class="line"><span class="lineno">  854</span>                <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">category</a> == <span class="stringliteral">&quot;resist&quot;</span>)</div>
+<div class="line"><span class="lineno">  855</span>                {</div>
+<div class="line"><span class="lineno">  856</span>                    <span class="keywordtype">int</span> num3 = 0;</div>
+<div class="line"><span class="lineno">  857</span>                    @ref = ((a &gt; 0) ? <span class="stringliteral">&quot;+&quot;</span> : <span class="stringliteral">&quot;-&quot;</span>).Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num3, 1, 5));</div>
+<div class="line"><span class="lineno">  858</span>                    Note(<span class="stringliteral">&quot;modValueRes&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
+<div class="line"><span class="lineno">  859</span>                }</div>
+<div class="line"><span class="lineno">  860</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  861</span>                {</div>
+<div class="line"><span class="lineno">  862</span>                    Note(<span class="stringliteral">&quot;modValue&quot;</span>.lang(row.<a class="code hl_function" href="classSourceElement_1_1Row.html#a888c48d5c1c33af39db163eb567070f9">GetName</a>(), @ref));</div>
+<div class="line"><span class="lineno">  863</span>                }</div>
+<div class="line"><span class="lineno">  864</span>            }</div>
+<div class="line"><span class="lineno">  865</span>        }</div>
+<div class="line"><span class="lineno">  866</span>    }</div>
 <div class="ttc" id="aEffectId_8cs_html_a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363"><div class="ttname"><a href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">EffectId.ModPotential</a></div><div class="ttdeci">@ ModPotential</div></div>
 <div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">Emo2.hint</a></div><div class="ttdeci">@ hint</div></div>
 <div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02057">Card.cs:2058</a></div></div>
@@ -948,8 +948,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCharaBody_html_a5f69163ce90d4521c4303666e50bccf3"><div class="ttname"><a href="classCharaBody.html#a5f69163ce90d4521c4303666e50bccf3">CharaBody.UnequipAll</a></div><div class="ttdeci">void UnequipAll(int idSlot)</div><div class="ttdef"><b>Definition:</b> <a href="CharaBody_8cs_source.html#l00057">CharaBody.cs:57</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassChara_html_a194e03f5a6db6915dc3f4dd3b7ede4fc"><div class="ttname"><a href="classChara.html#a194e03f5a6db6915dc3f4dd3b7ede4fc">Chara.body</a></div><div class="ttdeci">CharaBody body</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00094">Chara.cs:94</a></div></div>
-<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00612">Chara.cs:612</a></div></div>
-<div class="ttc" id="aclassChara_html_aa886d61457c2581d86b52f8b0e71f6ad"><div class="ttname"><a href="classChara.html#aa886d61457c2581d86b52f8b0e71f6ad">Chara.AddRandomBodyPart</a></div><div class="ttdeci">void AddRandomBodyPart(bool msg=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02180">Chara.cs:2180</a></div></div>
+<div class="ttc" id="aclassChara_html_a36a4e7df4ea4cd8c9b5c28203e1cc80b"><div class="ttname"><a href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">Chara.IsPC</a></div><div class="ttdeci">override bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00614">Chara.cs:614</a></div></div>
+<div class="ttc" id="aclassChara_html_aa886d61457c2581d86b52f8b0e71f6ad"><div class="ttname"><a href="classChara.html#aa886d61457c2581d86b52f8b0e71f6ad">Chara.AddRandomBodyPart</a></div><div class="ttdeci">void AddRandomBodyPart(bool msg=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02186">Chara.cs:2186</a></div></div>
 <div class="ttc" id="aclassChara_html_aadee7ceb25515f2d8244fd5229f2acea"><div class="ttname"><a href="classChara.html#aadee7ceb25515f2d8244fd5229f2acea">Chara.faithElements</a></div><div class="ttdeci">ElementContainer faithElements</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00038">Chara.cs:38</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00004">EClass.cs:5</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00042">EClass.cs:42</a></div></div>
@@ -964,8 +964,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElement_html_a458fcaa631dde18afaff0d34f26d70fe"><div class="ttname"><a href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">Element.vPotential</a></div><div class="ttdeci">int vPotential</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00256">ELEMENT.cs:256</a></div></div>
 <div class="ttc" id="aclassElement_html_a4ae86959ad9952c795fc71fe4dd46e0a"><div class="ttname"><a href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">Element.owner</a></div><div class="ttdeci">ElementContainer owner</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00266">ELEMENT.cs:266</a></div></div>
 <div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00292">ELEMENT.cs:292</a></div></div>
-<div class="ttc" id="aclassFeat_html_a7eaf1e4d735f8b2ef77e63e8b3a5b5ff"><div class="ttname"><a href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">Feat.hints</a></div><div class="ttdeci">static List&lt; string &gt; hints</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00294">FEAT.cs:294</a></div></div>
-<div class="ttc" id="aclassFeat_html_a983fe1d6fb9e8dd5e01353d6ed5b075a"><div class="ttname"><a href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">Feat.featRef</a></div><div class="ttdeci">static string[] featRef</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00296">FEAT.cs:296</a></div></div>
+<div class="ttc" id="aclassFeat_html_a7eaf1e4d735f8b2ef77e63e8b3a5b5ff"><div class="ttname"><a href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">Feat.hints</a></div><div class="ttdeci">static List&lt; string &gt; hints</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00296">FEAT.cs:296</a></div></div>
+<div class="ttc" id="aclassFeat_html_a983fe1d6fb9e8dd5e01353d6ed5b075a"><div class="ttname"><a href="classFeat.html#a983fe1d6fb9e8dd5e01353d6ed5b075a">Feat.featRef</a></div><div class="ttdeci">static string[] featRef</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00298">FEAT.cs:298</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00010">SourceElement.cs:11</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_a18108bfd65294a787d6e093439761560"><div class="ttname"><a href="classSourceElement_1_1Row.html#a18108bfd65294a787d6e093439761560">SourceElement.Row.category</a></div><div class="ttdeci">string category</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00060">SourceElement.cs:60</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html_a258e55d6efca1996b0542540a95442a9"><div class="ttname"><a href="classSourceElement_1_1Row.html#a258e55d6efca1996b0542540a95442a9">SourceElement.Row.tag</a></div><div class="ttdeci">string[] tag</div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00066">SourceElement.cs:66</a></div></div>
@@ -975,9 +975,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidgetEquip_html_a1753986b456af886ef7e82f9ea10c92c"><div class="ttname"><a href="classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c">WidgetEquip.Instance</a></div><div class="ttdeci">static WidgetEquip Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetEquip_8cs_source.html#l00011">WidgetEquip.cs:11</a></div></div>
 <div class="ttc" id="aclassWidgetEquip_html_a5608e558f0ab5b2bd364cc4e81b87f79"><div class="ttname"><a href="classWidgetEquip.html#a5608e558f0ab5b2bd364cc4e81b87f79">WidgetEquip.Rebuild</a></div><div class="ttdeci">void Rebuild()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetEquip_8cs_source.html#l00053">WidgetEquip.cs:53</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l02180">Chara.AddRandomBodyPart()</a>, <a class="el" href="Chara_8cs_source.html#l00094">Chara.body</a>, <a class="el" href="ElementContainer_8cs_source.html#l00028">ElementContainer.Card</a>, <a class="el" href="SourceElement_8cs_source.html#l00060">SourceElement.Row.category</a>, <a class="el" href="Card_8cs_source.html#l02058">Card.Chara</a>, <a class="el" href="ElementContainer_8cs_source.html#l00030">ElementContainer.Chara</a>, <a class="el" href="ElementContainer_8cs_source.html#l00019">ElementContainer.dict</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Chara_8cs_source.html#l00038">Chara.faithElements</a>, <a class="el" href="FEAT_8cs_source.html#l00296">featRef</a>, <a class="el" href="SourceElement_8cs_source.html#l00189">SourceElement.Row.GetName()</a>, <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>, <a class="el" href="FEAT_8cs_source.html#l00294">hints</a>, <a class="el" href="ELEMENT_8cs_source.html#l00250">Element.id</a>, <a class="el" href="WidgetEquip_8cs_source.html#l00011">WidgetEquip.Instance</a>, <a class="el" href="Chara_8cs_source.html#l00612">Chara.IsPC</a>, <a class="el" href="Card_8cs_source.html#l00386">Card.LV</a>, <a class="el" href="ElementContainer_8cs_source.html#l00416">ElementContainer.ModBase()</a>, <a class="el" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>, <a class="el" href="ElementContainer_8cs_source.html#l00437">ElementContainer.ModPotential()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00266">Element.owner</a>, <a class="el" href="WidgetEquip_8cs_source.html#l00053">WidgetEquip.Rebuild()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00273">Element.source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="SourceElement_8cs_source.html#l00066">SourceElement.Row.tag</a>, <a class="el" href="CharaBody_8cs_source.html#l00057">CharaBody.UnequipAll()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00292">Element.Value</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00256">Element.vPotential</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l02186">Chara.AddRandomBodyPart()</a>, <a class="el" href="Chara_8cs_source.html#l00094">Chara.body</a>, <a class="el" href="ElementContainer_8cs_source.html#l00028">ElementContainer.Card</a>, <a class="el" href="SourceElement_8cs_source.html#l00060">SourceElement.Row.category</a>, <a class="el" href="Card_8cs_source.html#l02058">Card.Chara</a>, <a class="el" href="ElementContainer_8cs_source.html#l00030">ElementContainer.Chara</a>, <a class="el" href="ElementContainer_8cs_source.html#l00019">ElementContainer.dict</a>, <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Chara_8cs_source.html#l00038">Chara.faithElements</a>, <a class="el" href="FEAT_8cs_source.html#l00298">featRef</a>, <a class="el" href="SourceElement_8cs_source.html#l00189">SourceElement.Row.GetName()</a>, <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>, <a class="el" href="FEAT_8cs_source.html#l00296">hints</a>, <a class="el" href="ELEMENT_8cs_source.html#l00250">Element.id</a>, <a class="el" href="WidgetEquip_8cs_source.html#l00011">WidgetEquip.Instance</a>, <a class="el" href="Chara_8cs_source.html#l00614">Chara.IsPC</a>, <a class="el" href="Card_8cs_source.html#l00386">Card.LV</a>, <a class="el" href="ElementContainer_8cs_source.html#l00416">ElementContainer.ModBase()</a>, <a class="el" href="EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a661486358ea7ad6bce72c4f177ae2363">ModPotential</a>, <a class="el" href="ElementContainer_8cs_source.html#l00437">ElementContainer.ModPotential()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00266">Element.owner</a>, <a class="el" href="WidgetEquip_8cs_source.html#l00053">WidgetEquip.Rebuild()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00273">Element.source</a>, <a class="el" href="EClass_8cs_source.html#l00042">EClass.sources</a>, <a class="el" href="SourceElement_8cs_source.html#l00066">SourceElement.Row.tag</a>, <a class="el" href="CharaBody_8cs_source.html#l00057">CharaBody.UnequipAll()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00292">Element.Value</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00256">Element.vPotential</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FEAT_8cs_source.html#l00336">GetHint()</a>, <a class="el" href="FEAT_8cs_source.html#l00327">OnWriteNote()</a>, and <a class="el" href="Chara_8cs_source.html#l09724">Chara.SetFeat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FEAT_8cs_source.html#l00338">GetHint()</a>, <a class="el" href="FEAT_8cs_source.html#l00329">OnWriteNote()</a>, and <a class="el" href="Chara_8cs_source.html#l09730">Chara.SetFeat()</a>.</p>
 
 </div>
 </div>
@@ -1007,10 +1007,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a83c7be33ee0ea37dfaf49c393a5c2d34">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00317">317</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>    {</div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> !base.IsGlobalElement;</div>
-<div class="line"><span class="lineno">  320</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00319">319</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  320</span>    {</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">return</span> !base.IsGlobalElement;</div>
+<div class="line"><span class="lineno">  322</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1038,19 +1038,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00336">336</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  337</span>    {</div>
-<div class="line"><span class="lineno">  338</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  339</span>        <a class="code hl_function" href="classFeat.html#a40ee44c884814f793c41b38e0764f60c">Apply</a>(base.Value, <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>, <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>)</div>
-<div class="line"><span class="lineno">  341</span>        {</div>
-<div class="line"><span class="lineno">  342</span>            text = text + <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>.StripLastPun() + <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><span class="lineno">  343</span>        }</div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">return</span> text.TrimEnd(<span class="charliteral">&#39; &#39;</span>).TrimEnd(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">  345</span>    }</div>
-<div class="ttc" id="aclassFeat_html_a40ee44c884814f793c41b38e0764f60c"><div class="ttname"><a href="classFeat.html#a40ee44c884814f793c41b38e0764f60c">Feat.Apply</a></div><div class="ttdeci">List&lt; string &gt; Apply(int a, ElementContainer owner, bool hint=false)</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00373">FEAT.cs:373</a></div></div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00338">338</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  339</span>    {</div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  341</span>        <a class="code hl_function" href="classFeat.html#a40ee44c884814f793c41b38e0764f60c">Apply</a>(base.Value, <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>, <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>)</div>
+<div class="line"><span class="lineno">  343</span>        {</div>
+<div class="line"><span class="lineno">  344</span>            text = text + <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>.StripLastPun() + <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><span class="lineno">  345</span>        }</div>
+<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">return</span> text.TrimEnd(<span class="charliteral">&#39; &#39;</span>).TrimEnd(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  347</span>    }</div>
+<div class="ttc" id="aclassFeat_html_a40ee44c884814f793c41b38e0764f60c"><div class="ttname"><a href="classFeat.html#a40ee44c884814f793c41b38e0764f60c">Feat.Apply</a></div><div class="ttdeci">List&lt; string &gt; Apply(int a, ElementContainer owner, bool hint=false)</div><div class="ttdef"><b>Definition:</b> <a href="FEAT_8cs_source.html#l00375">FEAT.cs:375</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FEAT_8cs_source.html#l00373">Apply()</a>, <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>, <a class="el" href="FEAT_8cs_source.html#l00294">hints</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00266">Element.owner</a>.</p>
+<p class="reference">References <a class="el" href="FEAT_8cs_source.html#l00375">Apply()</a>, <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>, <a class="el" href="FEAT_8cs_source.html#l00296">hints</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00266">Element.owner</a>.</p>
 
 </div>
 </div>
@@ -1080,10 +1080,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a4c736532f2dbff4037fee4dfba0be948">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00322">322</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  323</span>    {</div>
-<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_function" href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">Get</a>(<span class="stringliteral">&quot;Media/Graphics/Icon/Element/icon_elements&quot;</span>, <span class="stringliteral">&quot;ele_Feat&quot;</span>);</div>
-<div class="line"><span class="lineno">  325</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00324">324</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  325</span>    {</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classSpriteSheet.html">SpriteSheet</a>.<a class="code hl_function" href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">Get</a>(<span class="stringliteral">&quot;Media/Graphics/Icon/Element/icon_elements&quot;</span>, <span class="stringliteral">&quot;ele_Feat&quot;</span>);</div>
+<div class="line"><span class="lineno">  327</span>    }</div>
 <div class="ttc" id="aclassSpriteSheet_html"><div class="ttname"><a href="classSpriteSheet.html">SpriteSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00004">SpriteSheet.cs:5</a></div></div>
 <div class="ttc" id="aclassSpriteSheet_html_a3ba485078c417ef19ea17e2f624dba02"><div class="ttname"><a href="classSpriteSheet.html#a3ba485078c417ef19ea17e2f624dba02">SpriteSheet.Get</a></div><div class="ttdeci">static Sprite Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteSheet_8cs_source.html#l00028">SpriteSheet.cs:28</a></div></div>
 </div><!-- fragment -->
@@ -1127,25 +1127,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a445488caa04fb5048418f8f1d8f770f4">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00347">347</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  348</span>    {</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (base.source.req.Length != 0)</div>
-<div class="line"><span class="lineno">  350</span>        {</div>
-<div class="line"><span class="lineno">  351</span>            <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(base.source.req[0]);</div>
-<div class="line"><span class="lineno">  352</span>            <span class="keywordflow">if</span> (element == <span class="keyword">null</span> || element.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a> &lt; ((base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp(((lv == -1 &amp;&amp; <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a> != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6">Value</a>(<span class="keywordtype">id</span>) : lv) + 1, 1, base.source.req.Length - 1)].ToInt()))</div>
-<div class="line"><span class="lineno">  353</span>            {</div>
-<div class="line"><span class="lineno">  354</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  355</span>            }</div>
-<div class="line"><span class="lineno">  356</span>        }</div>
-<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  358</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00349">349</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  350</span>    {</div>
+<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">if</span> (base.source.req.Length != 0)</div>
+<div class="line"><span class="lineno">  352</span>        {</div>
+<div class="line"><span class="lineno">  353</span>            <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(base.source.req[0]);</div>
+<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">if</span> (element == <span class="keyword">null</span> || element.<a class="code hl_property" href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">ValueWithoutLink</a> &lt; ((base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp(((lv == -1 &amp;&amp; <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a> != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6">Value</a>(<span class="keywordtype">id</span>) : lv) + 1, 1, base.source.req.Length - 1)].ToInt()))</div>
+<div class="line"><span class="lineno">  355</span>            {</div>
+<div class="line"><span class="lineno">  356</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  357</span>            }</div>
+<div class="line"><span class="lineno">  358</span>        }</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  360</span>    }</div>
 <div class="ttc" id="aclassElementContainer_html_a456b44ab11894a7747b2c39d85eb1df6"><div class="ttname"><a href="classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6">ElementContainer.Value</a></div><div class="ttdeci">int Value(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00166">ElementContainer.cs:166</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_af89e7a757ada52d39be78e0508ea17e2"><div class="ttname"><a href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">ElementContainer.GetElement</a></div><div class="ttdeci">Element GetElement(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00493">ElementContainer.cs:493</a></div></div>
 <div class="ttc" id="aclassElement_html_a1360f9020059a1c35402e1b66e8dfee4"><div class="ttname"><a href="classElement.html#a1360f9020059a1c35402e1b66e8dfee4">Element.ValueWithoutLink</a></div><div class="ttdeci">int ValueWithoutLink</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00294">ELEMENT.cs:294</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ElementContainer_8cs_source.html#l00493">ElementContainer.GetElement()</a>, <a class="el" href="ELEMENT_8cs_source.html#l00266">Element.owner</a>, <a class="el" href="ElementContainer_8cs_source.html#l00166">ElementContainer.Value()</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00294">Element.ValueWithoutLink</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09709">Chara.ListAvailabeFeats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09715">Chara.ListAvailabeFeats()</a>.</p>
 
 </div>
 </div>
@@ -1185,17 +1185,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#ac3aae5718b0149440a67667ea51dec2b">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00327">327</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  328</span>    {</div>
-<div class="line"><span class="lineno">  329</span>        <a class="code hl_function" href="classFeat.html#a40ee44c884814f793c41b38e0764f60c">Apply</a>(base.Value, <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>, <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>)</div>
-<div class="line"><span class="lineno">  331</span>        {</div>
-<div class="line"><span class="lineno">  332</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>);</div>
-<div class="line"><span class="lineno">  333</span>        }</div>
-<div class="line"><span class="lineno">  334</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00329">329</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>    {</div>
+<div class="line"><span class="lineno">  331</span>        <a class="code hl_function" href="classFeat.html#a40ee44c884814f793c41b38e0764f60c">Apply</a>(base.Value, <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>, <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classFeat.html#a7eaf1e4d735f8b2ef77e63e8b3a5b5ff">hints</a>)</div>
+<div class="line"><span class="lineno">  333</span>        {</div>
+<div class="line"><span class="lineno">  334</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;_bullet&quot;</span>.lang() + <a class="code hl_enumvalue" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>);</div>
+<div class="line"><span class="lineno">  335</span>        }</div>
+<div class="line"><span class="lineno">  336</span>    }</div>
 <div class="ttc" id="aclassUINote_html_ac98d4745e050d794de75189eb678e1a0"><div class="ttname"><a href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">UINote.AddText</a></div><div class="ttdeci">UIItem AddText(string text, FontColor color=FontColor.DontChange)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00113">UINote.cs:113</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="FEAT_8cs_source.html#l00373">Apply()</a>, <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>, <a class="el" href="FEAT_8cs_source.html#l00294">hints</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00266">Element.owner</a>.</p>
+<p class="reference">References <a class="el" href="FEAT_8cs_source.html#l00375">Apply()</a>, <a class="el" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aee2faeed038501c1deab01c7b54f2fa9">hint</a>, <a class="el" href="FEAT_8cs_source.html#l00296">hints</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00266">Element.owner</a>.</p>
 
 </div>
 </div>
@@ -1235,18 +1235,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a3eb22b38fcc665a2d253a3915bae9ee9">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00360">360</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  361</span>    {</div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">if</span> (base.source.req.Length != 0)</div>
-<div class="line"><span class="lineno">  363</span>        {</div>
-<div class="line"><span class="lineno">  364</span>            <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>(base.source.req[0], (base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp(((lv == -1 &amp;&amp; <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a> != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6">Value</a>(<span class="keywordtype">id</span>) : lv) + 1, 1, base.source.req.Length - 1)].ToInt());</div>
-<div class="line"><span class="lineno">  365</span>            <span class="keywordflow">if</span> (element != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  366</span>            {</div>
-<div class="line"><span class="lineno">  367</span>                n.<a class="code hl_function" href="classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25">AddHeader</a>(<span class="stringliteral">&quot;featReq&quot;</span>);</div>
-<div class="line"><span class="lineno">  368</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(element.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a> + <span class="stringliteral">&quot;: &quot;</span> + element.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>, <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Bad);</div>
-<div class="line"><span class="lineno">  369</span>            }</div>
-<div class="line"><span class="lineno">  370</span>        }</div>
-<div class="line"><span class="lineno">  371</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00362">362</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  363</span>    {</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">if</span> (base.source.req.Length != 0)</div>
+<div class="line"><span class="lineno">  365</span>        {</div>
+<div class="line"><span class="lineno">  366</span>            <a class="code hl_class" href="classElement.html">Element</a> element = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Create</a>(base.source.req[0], (base.source.req.Length == 1) ? 1 : base.source.req[Mathf.Clamp(((lv == -1 &amp;&amp; <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a> != <span class="keyword">null</span>) ? <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_function" href="classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6">Value</a>(<span class="keywordtype">id</span>) : lv) + 1, 1, base.source.req.Length - 1)].ToInt());</div>
+<div class="line"><span class="lineno">  367</span>            <span class="keywordflow">if</span> (element != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  368</span>            {</div>
+<div class="line"><span class="lineno">  369</span>                n.<a class="code hl_function" href="classUINote.html#a910af6ff3f10be0cdc3705c8e376ee25">AddHeader</a>(<span class="stringliteral">&quot;featReq&quot;</span>);</div>
+<div class="line"><span class="lineno">  370</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(element.<a class="code hl_property" href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Name</a> + <span class="stringliteral">&quot;: &quot;</span> + element.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>, <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Bad);</div>
+<div class="line"><span class="lineno">  371</span>            }</div>
+<div class="line"><span class="lineno">  372</span>        }</div>
+<div class="line"><span class="lineno">  373</span>    }</div>
 <div class="ttc" id="aFontColor_8cs_html_a38781c7178610f85215f87793e99ed51"><div class="ttname"><a href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a></div><div class="ttdeci">FontColor</div><div class="ttdef"><b>Definition:</b> <a href="FontColor_8cs_source.html#l00001">FontColor.cs:2</a></div></div>
 <div class="ttc" id="aclassElement_html_a7734ef86c69f106da93ae6ce425fa51a"><div class="ttname"><a href="classElement.html#a7734ef86c69f106da93ae6ce425fa51a">Element.Name</a></div><div class="ttdeci">virtual string Name</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00304">ELEMENT.cs:304</a></div></div>
 <div class="ttc" id="aclassElement_html_a7f33c59a74a6c34a37f8eee0e0cecd1e"><div class="ttname"><a href="classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e">Element.Create</a></div><div class="ttdeci">static Element Create(int id, int v=0)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l01104">ELEMENT.cs:1104</a></div></div>
@@ -1277,9 +1277,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00296">296</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00298">298</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FEAT_8cs_source.html#l00373">Apply()</a>, and <a class="el" href="ElementContainer_8cs_source.html#l00203">ElementContainer.GetFeatRef()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FEAT_8cs_source.html#l00375">Apply()</a>, and <a class="el" href="ElementContainer_8cs_source.html#l00203">ElementContainer.GetFeatRef()</a>.</p>
 
 </div>
 </div>
@@ -1303,9 +1303,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00294">294</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00296">296</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="FEAT_8cs_source.html#l00373">Apply()</a>, <a class="el" href="FEAT_8cs_source.html#l00336">GetHint()</a>, and <a class="el" href="FEAT_8cs_source.html#l00327">OnWriteNote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="FEAT_8cs_source.html#l00375">Apply()</a>, <a class="el" href="FEAT_8cs_source.html#l00338">GetHint()</a>, and <a class="el" href="FEAT_8cs_source.html#l00329">OnWriteNote()</a>.</p>
 
 </div>
 </div>
@@ -1330,7 +1330,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00315">315</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00317">317</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 
 </div>
 </div>
@@ -1354,16 +1354,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00302">302</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  303</span>    {</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  305</span>        {</div>
-<div class="line"><span class="lineno">  306</span>            <span class="keywordtype">string</span>[] array = base.source.GetText().SplitNewline();</div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">return</span> array.TryGet(base.Value - 1) + ((base.source.max &gt; 1 &amp;&amp; array.Length == 1 &amp;&amp; base.Value &gt; 1) ? (<span class="stringliteral">&quot; &quot;</span> + base.Value) : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  308</span>        }</div>
-<div class="line"><span class="lineno">  309</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00304">304</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  305</span>    {</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  307</span>        {</div>
+<div class="line"><span class="lineno">  308</span>            <span class="keywordtype">string</span>[] array = base.source.GetText().SplitNewline();</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">return</span> array.TryGet(base.Value - 1) + ((base.source.max &gt; 1 &amp;&amp; array.Length == 1 &amp;&amp; base.Value &gt; 1) ? (<span class="stringliteral">&quot; &quot;</span> + base.Value) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  310</span>        }</div>
+<div class="line"><span class="lineno">  311</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09724">Chara.SetFeat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09730">Chara.SetFeat()</a>.</p>
 
 </div>
 </div>
@@ -1387,7 +1387,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00300">300</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00302">302</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 
 </div>
 </div>
@@ -1411,7 +1411,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00298">298</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00300">300</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 
 </div>
 </div>
@@ -1435,7 +1435,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00313">313</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00315">315</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 
 </div>
 </div>
@@ -1459,7 +1459,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00311">311</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FEAT_8cs_source.html#l00313">313</a> of file <a class="el" href="FEAT_8cs_source.html">FEAT.cs</a>.</p>
 
 </div>
 </div>

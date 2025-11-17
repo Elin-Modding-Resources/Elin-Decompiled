@@ -237,6 +237,7 @@ var classSPELL =
     [ "SpSummonTentacle", "classSPELL.html#ac8debc0a56428b1e962492ac24376cab", null ],
     [ "SpSummonTidalWave", "classSPELL.html#a51ddd9bb53ea4c1b01f194c3c4a2caf8", null ],
     [ "SpSummonTrooper", "classSPELL.html#a9b728fd6a17221177930b2bf98f48b6f", null ],
+    [ "SpSummonUndead", "classSPELL.html#a5b4d0e3aa807d0fa547680c415f9b311", null ],
     [ "SpSummonUndeadSister", "classSPELL.html#a32fe80fcb8c995629eab889ed5fe0220", null ],
     [ "SpSummonYeek", "classSPELL.html#ad004a27ec02a98c542157263920a8ee3", null ],
     [ "SpTelepathy", "classSPELL.html#ad26198bd873e98c4b79f7da53f9277d9", null ],

@@ -1694,6 +1694,7 @@ var hierarchy =
           [ "TraitFoodPrepared", "classTraitFoodPrepared.html", [
             [ "TraitFoodChuryu", "classTraitFoodChuryu.html", null ],
             [ "TraitFoodMeal", "classTraitFoodMeal.html", [
+              [ "TraitBloodSample", "classTraitBloodSample.html", null ],
               [ "TraitMixedFood", "classTraitMixedFood.html", [
                 [ "TraitLunch", "classTraitLunch.html", [
                   [ "TraitLunchLove", "classTraitLunchLove.html", null ]
@@ -1952,11 +1953,14 @@ var hierarchy =
             ] ]
           ] ]
         ] ],
-        [ "TraitSyringeGene", "classTraitSyringeGene.html", null ],
-        [ "TraitSyringeHeaven", "classTraitSyringeHeaven.html", null ],
         [ "TraitThrown", "classTraitThrown.html", [
           [ "TraitThrownConsume", "classTraitThrownConsume.html", null ],
           [ "TraitThrownExplosive", "classTraitThrownExplosive.html", null ]
+        ] ],
+        [ "TraitTicketChampagne.TraitSyringe", "classTraitTicketChampagne_1_1TraitSyringe.html", [
+          [ "TraitSyringeBlood", "classTraitSyringeBlood.html", null ],
+          [ "TraitSyringeGene", "classTraitSyringeGene.html", null ],
+          [ "TraitSyringeHeaven", "classTraitSyringeHeaven.html", null ]
         ] ],
         [ "TraitTicketFurniture", "classTraitTicketFurniture.html", null ],
         [ "TraitTicketMassage", "classTraitTicketMassage.html", [

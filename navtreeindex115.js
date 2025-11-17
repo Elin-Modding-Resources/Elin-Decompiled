@@ -1,5 +1,13 @@
 var NAVTREEINDEX115 =
 {
+"classTrait.html#a5d6dc393334155cc13dd176241cfd42b":[1,0,1409,151],
+"classTrait.html#a5ded46828bb83e6d480d551d03b48bbf":[1,0,1409,48],
+"classTrait.html#a5f776deb99822151021ce9c1c20ed395":[1,0,1409,65],
+"classTrait.html#a600da57f2ca749e3a73f2fcc75c0536f":[1,0,1409,37],
+"classTrait.html#a63a6da2dbdf7baf6aecd4213efc8ce64":[1,0,1409,61],
+"classTrait.html#a654dbdca51dc4525768048c27d0d6030":[1,0,1409,204],
+"classTrait.html#a65d0ff0c4033dad073b840686f988bf0":[1,0,1409,89],
+"classTrait.html#a65fa9e571e5f9760c022cd73e922904c":[1,0,1409,182],
 "classTrait.html#a694ffdbe1c5b08dabbbf5d80b53e741f":[1,0,1409,190],
 "classTrait.html#a69c36cb3396a41ee14cf18a07a7ed134":[1,0,1409,185],
 "classTrait.html#a6a1ed59c8c0884a94e688053d2335973":[1,0,1409,218],
@@ -241,13 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitAshland.html":[1,0,1430],
 "classTraitAshland.html#aec6e421de9a8108eb3ca196cd1429339":[1,0,1430,0],
 "classTraitBBQ.html":[1,0,1444],
-"classTraitBBQ.html#ae23270c3c55f5dcc8d12a295650f4f54":[1,0,1444,0],
-"classTraitBJTable.html":[1,0,1454],
-"classTraitBJTable.html#a294b8bdb971efcc60d99ff887df2b8f2":[1,0,1454,1],
-"classTraitBJTable.html#a98f8d5d6799da4249a3328f36a4220cd":[1,0,1454,0],
-"classTraitBait.html":[1,0,1431],
-"classTraitBait.html#a6b2a160c8dd590cac04bca5e1206ab0c":[1,0,1431,1],
-"classTraitBait.html#a8c0f75c77ea0f262d1f27a4b0f456420":[1,0,1431,0],
-"classTraitBall.html":[1,0,1432],
-"classTraitBall.html#a2c60b947e7e99945839070f7418c832a":[1,0,1432,1]
+"classTraitBBQ.html#ae23270c3c55f5dcc8d12a295650f4f54":[1,0,1444,0]
 };

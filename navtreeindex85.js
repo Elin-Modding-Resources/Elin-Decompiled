@@ -1,5 +1,12 @@
 var NAVTREEINDEX85 =
 {
+"classMosframe_1_1ScrollbarHandleSize.html#a70157e91dcf7c331965964d8dc083559":[1,0,6,4,6],
+"classMosframe_1_1ScrollbarHandleSize.html#a70157e91dcf7c331965964d8dc083559":[0,4,6,4,6],
+"classMosframe_1_1ScrollbarHandleSize.html#a7136678cfa87ecc6118216e60b445a53":[1,0,6,4,1],
+"classMosframe_1_1ScrollbarHandleSize.html#a7136678cfa87ecc6118216e60b445a53":[0,4,6,4,1],
+"classMosframe_1_1ScrollbarHandleSize.html#ae078d14b2cb61eb8991df85b30e72734":[1,0,6,4,3],
+"classMosframe_1_1ScrollbarHandleSize.html#ae078d14b2cb61eb8991df85b30e72734":[0,4,6,4,3],
+"classMosframe_1_1ScrollbarHandleSize.html#ae7699ca4b0258c1c696652bf3465c43b":[1,0,6,4,0],
 "classMosframe_1_1ScrollbarHandleSize.html#ae7699ca4b0258c1c696652bf3465c43b":[0,4,6,4,0],
 "classMsg.html":[1,0,902],
 "classMsg.html#a026edeb7ff47d163fd1ec45d0f06a324":[1,0,902,7],
@@ -139,7 +146,7 @@ var NAVTREEINDEX85 =
 "classMultiSprite.html":[1,0,908],
 "classMultiSprite.html#a58f7a4dce85c7f1f6e7cb7d7dd76221a":[1,0,908,1],
 "classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789":[1,0,908,0],
-"classMutation.html":[1,0,910],
+"classMutation.html":[1,0,909],
 "classNet.html":[1,0,911],
 "classNet.html#a098087410828fafb0481376bf6ea78da":[1,0,911,11],
 "classNet.html#a121d129ee205a1872ea9fcc1feb22fda":[1,0,911,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX85 =
 "classNotificationGuest.html#a9a98bc5a883fe9733c52bbae2d7ea55c":[1,0,921,5],
 "classNotificationGuest.html#acdaa83ce055ebd1b1b2be615d8f6db0c":[1,0,921,4],
 "classNotificationGuest.html#ae974c5ee226eb03d410543f0a96d4f87":[1,0,921,0],
-"classNotificationGuest.html#af74035b4be7b2bcb0febd0fc1b7fdda1":[1,0,921,1],
-"classNotificationHome.html":[1,0,922],
-"classNotificationHome.html#a7198d2b2277afd033bac1f1f65d4fab2":[1,0,922,2],
-"classNotificationHome.html#a740df8bd342780851f71415771445b22":[1,0,922,0],
-"classNotificationHome.html#af08830cb002a067956afa44b20e3c301":[1,0,922,1],
-"classNotificationStance.html":[1,0,923],
-"classNotificationStance.html#a2d6050a923d27df4f40fda55fd58a789":[1,0,923,1],
-"classNotificationStance.html#a3eea49363ea353b7acc11c962c521115":[1,0,923,0]
+"classNotificationGuest.html#af74035b4be7b2bcb0febd0fc1b7fdda1":[1,0,921,1]
 };
