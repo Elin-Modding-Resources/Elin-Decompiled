@@ -1635,6 +1635,7 @@ var hierarchy =
           [ "TraitCurrencyMedal", "classTraitCurrencyMedal.html", null ]
         ] ],
         [ "TraitCurtain", "classTraitCurtain.html", null ],
+        [ "TraitDice", "classTraitDice.html", null ],
         [ "TraitDoor", "classTraitDoor.html", [
           [ "TraitDoorCurtain", "classTraitDoorCurtain.html", null ],
           [ "TraitDoorFence", "classTraitDoorFence.html", null ],

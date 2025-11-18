@@ -1,5 +1,8 @@
 var NAVTREEINDEX26 =
 {
+"classAI__PlayMusic.html":[1,0,100],
+"classAI__PlayMusic.html#a16736e33790a253e8c593c11f34e98d4":[1,0,100,13],
+"classAI__PlayMusic.html#a1d84a12f7185c7eebd645fc2074b7865":[1,0,100,14],
 "classAI__PlayMusic.html#a336f25aad066bdbfe7f7ae0aee7c1919":[1,0,100,15],
 "classAI__PlayMusic.html#a525e7f135d4e8418923b4257b72a1bca":[1,0,100,9],
 "classAI__PlayMusic.html#a5bcab3751e6883ea80d605ee8edade6e":[1,0,100,12],
@@ -246,8 +249,5 @@ var NAVTREEINDEX26 =
 "classAM__BaseSim.html#a847cfb4fbe04c176904cf302c2dc1e41":[1,0,134,1],
 "classAM__BaseSim.html#ac0c672960d6e5dbecadff4b64c23420b":[1,0,134,0],
 "classAM__BaseTerrain.html":[1,0,135],
-"classAM__BaseTerrain.html#a03effdd2a8583674760529665036e83f":[1,0,135,4],
-"classAM__BaseTerrain.html#a053aac41776b71fd9fe24a48f041b061":[1,0,135,9],
-"classAM__BaseTerrain.html#a09797a1d5486cd5939d31d3650db4861":[1,0,135,0],
-"classAM__BaseTerrain.html#a0e496646005f9a11fc3670af92e64b8f":[1,0,135,11]
+"classAM__BaseTerrain.html#a03effdd2a8583674760529665036e83f":[1,0,135,4]
 };

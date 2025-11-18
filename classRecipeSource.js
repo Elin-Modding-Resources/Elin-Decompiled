@@ -5,6 +5,7 @@ var classRecipeSource =
     [ "GetIngredients", "classRecipeSource.html#a33b396cd7c68721982ea0efc346a711d", null ],
     [ "GetReqSkill", "classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551", null ],
     [ "GetSPCost", "classRecipeSource.html#a91b02f451d58c183747bab683a50eb14", null ],
+    [ "IsCraftable", "classRecipeSource.html#adabde503dc30ec15563ad3b1fca88e9f", null ],
     [ "alwaysKnown", "classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50", null ],
     [ "colorIng", "classRecipeSource.html#ac27e98de62ebf616e976b385da4f1bf9", null ],
     [ "DefaultIngredients", "classRecipeSource.html#ae11d81c9ba18d94e55a283d90521d974", null ],

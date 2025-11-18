@@ -1,5 +1,11 @@
 var NAVTREEINDEX56 =
 {
+"classDialogDrama.html#a2541343dd4332be9999a81a0a7e0a67d":[1,0,434,2],
+"classDialogDrama.html#a2e9d51ad22a2f04eeba18876ad733f0f":[1,0,434,5],
+"classDialogDrama.html#a3183dc545f7a5341a3afa4241db22733":[1,0,434,4],
+"classDialogDrama.html#a31e5ba1309d89d3155bba6ee80181873":[1,0,434,7],
+"classDialogDrama.html#a43ce0389cee024f06b48215748fe7d7e":[1,0,434,13],
+"classDialogDrama.html#a4d02fdac4723ba8720070a8ec8a9df4c":[1,0,434,1],
 "classDialogDrama.html#a67489687adaefee01146e2c0fcf441cd":[1,0,434,10],
 "classDialogDrama.html#a6c4408178f2d821319fc0ddb84424120":[1,0,434,14],
 "classDialogDrama.html#a70be68a7fbd5e5cc1b650c2ca6980dac":[1,0,434,25],
@@ -34,9 +40,9 @@ var NAVTREEINDEX56 =
 "classDice.html#ab911a716776543f5ab3daef556fc0d44":[1,0,435,17],
 "classDice.html#abb71f28b7a36ecf8683a858dac37daa5":[1,0,435,4],
 "classDice.html#aeb5025592e24ab8800e064e32755cfa4":[1,0,435,0],
-"classDomain.html":[1,0,437],
-"classDomain.html#ab7b3c1905cbb4e120bcbf3e2a6635e60":[1,0,437,0],
-"classDomain.html#affa6cbb1b36f9d7b53245f4b9e3ed1e4":[1,0,437,1],
+"classDomain.html":[1,0,438],
+"classDomain.html#ab7b3c1905cbb4e120bcbf3e2a6635e60":[1,0,438,0],
+"classDomain.html#affa6cbb1b36f9d7b53245f4b9e3ed1e4":[1,0,438,1],
 "classDomainManager.html":[1,0,439],
 "classDomainManager.html#a05a132c056a8b17aa1812ab115c7515a":[1,0,439,1],
 "classDomainManager.html#a1437f20887ca0e7226012f2af528940b":[1,0,439,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX56 =
 "classDramaOutcome.html#a05b58967616ec7b03fe05068e2c02f20":[1,0,453,6],
 "classDramaOutcome.html#a0ac173850232248811ee27e009f860d7":[1,0,453,37],
 "classDramaOutcome.html#a0f8229fe0fe4c4f877388fe937af6ab3":[1,0,453,10],
-"classDramaOutcome.html#a23ed38266dd3a62161058dcb61ff35df":[1,0,453,56],
-"classDramaOutcome.html#a2916baa91e9906b8a56004aed92a03e2":[1,0,453,14],
-"classDramaOutcome.html#a341dda5dbf8c9cb78d79dbbe61c62f61":[1,0,453,50],
-"classDramaOutcome.html#a35c4d83f64349a274fb3d7cd305cda40":[1,0,453,27],
-"classDramaOutcome.html#a35e03b3363d7a47e58488094afa17689":[1,0,453,11],
-"classDramaOutcome.html#a360f0a71d6e852635e1768bed3ceb9b0":[1,0,453,8],
-"classDramaOutcome.html#a37f70ef2086ed477bb509e038b607097":[1,0,453,42]
+"classDramaOutcome.html#a23ed38266dd3a62161058dcb61ff35df":[1,0,453,56]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"classColorProfile_1_1TextColors.html#aa14831daa3137d4b7adda2546b979c2d":[1,0,296,3,1],
+"classColorProfile_1_1TextColors.html#ac2752ca3670d4965f01c6ceac9993931":[1,0,296,3,3],
+"classColorUtil.html":[1,0,297],
 "classColorUtil.html#a5e4bb0787c77ce67fa9d47d344a37fac":[1,0,297,1],
 "classColorUtil.html#adbe97b300969ed0e34892618bb8ae552":[1,0,297,0],
 "classConAnorexia.html":[1,0,298],
@@ -243,11 +246,8 @@ var NAVTREEINDEX48 =
 "classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,387,3],
 "classConTransmute.html#a8c227bf61fee244b3d011969eb82b3e8":[1,0,387,4],
 "classConTransmuteBat.html":[1,0,388],
-"classConTransmuteBat.html#a705c3e304cb445d814b0e769b7cfc5e1":[1,0,388,2],
-"classConTransmuteBat.html#a9421b7e434d8d6b3bb23419ae5e40461":[1,0,388,0],
-"classConTransmuteBat.html#af6bce2090526411e4051f15261576722":[1,0,388,1],
-"classConTransmuteBroom.html":[1,0,389],
-"classConTransmuteBroom.html#aeb7fecc8d0e9cd898c0223cf5c69563a":[1,0,389,0],
-"classConTransmuteCat.html":[1,0,390],
-"classConTransmuteCat.html#ab842625ebae9c0b7f72100ff6937f6e5":[1,0,390,0]
+"classConTransmuteBat.html#a40e38a2a79f828860140005e6dd3c3e0":[1,0,388,4],
+"classConTransmuteBat.html#a705c3e304cb445d814b0e769b7cfc5e1":[1,0,388,5],
+"classConTransmuteBat.html#a810c317e8c240f97ba56efe9952a80cb":[1,0,388,2],
+"classConTransmuteBat.html#a9421b7e434d8d6b3bb23419ae5e40461":[1,0,388,0]
 };

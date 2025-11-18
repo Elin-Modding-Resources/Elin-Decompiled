@@ -1,5 +1,11 @@
 var NAVTREEINDEX67 =
 {
+"classGameUpdater.html#a26939b67adeb7102ec5f8e4d31cf53d6":[1,0,542,11],
+"classGameUpdater.html#a2c6fd9be37800eb539f65d2f1c6d6a84":[1,0,542,23],
+"classGameUpdater.html#a44b4577f53804f1951f1c36d7b876dfc":[1,0,542,21],
+"classGameUpdater.html#a4f62707166f8ed4ce05525e5c9611e40":[1,0,542,17],
+"classGameUpdater.html#a71e218aa025b5e869a7bc64415757f25":[1,0,542,10],
+"classGameUpdater.html#a7b342c3a2c11eb9e6d82cf9b02994093":[1,0,542,26],
 "classGameUpdater.html#a81efcd48fc875f7478954e34741256ad":[1,0,542,13],
 "classGameUpdater.html#aae5fa08961aec89a712f5ba9d2b559be":[1,0,542,15],
 "classGameUpdater.html#abbc335ffe8095e996416bc4592e25470":[1,0,542,22],
@@ -243,11 +249,5 @@ var NAVTREEINDEX67 =
 "classGoalList.html#a83bd64b26b1ae4c174bdb01e782626d7":[1,0,563,1],
 "classGoalList.html#ab2b5a8983e7b12038e6aec7ae4617ccc":[1,0,563,0],
 "classGoalManualMove.html":[1,0,564],
-"classGoalManualMove.html#a1cc71c519b3d6c4d81f9d5c8eee4453f":[1,0,564,7],
-"classGoalManualMove.html#a45926398fd68138053101b4801c77725":[1,0,564,5],
-"classGoalManualMove.html#a4a0b916f79e40d828354f9b35a099aff":[1,0,564,1],
-"classGoalManualMove.html#a5b26b58fc1d4fc7b6f261c821e41e69d":[1,0,564,6],
-"classGoalManualMove.html#a6d4097a50c3e07192f4936ca9d53ba0a":[1,0,564,8],
-"classGoalManualMove.html#a77571ceeadf2dc97db63cc79df111948":[1,0,564,2],
-"classGoalManualMove.html#a7e2f30d92a142d75468303f06621fc88":[1,0,564,0]
+"classGoalManualMove.html#a1cc71c519b3d6c4d81f9d5c8eee4453f":[1,0,564,7]
 };

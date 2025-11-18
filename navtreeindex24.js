@@ -1,5 +1,8 @@
 var NAVTREEINDEX24 =
 {
+"classABILITY.html#a48936e8e4b10e56ccf6ee5e1e2c58177":[1,0,11,83],
+"classABILITY.html#a4b0d861103c165f656e1fa7873cbc70e":[1,0,11,109],
+"classABILITY.html#a4b8fde403e9c61cbeb165df2f114181e":[1,0,11,120],
 "classABILITY.html#a4e29e1b0193a96126a27deced33533cf":[1,0,11,58],
 "classABILITY.html#a4fa9dfd470a6ef5a2a0f06caf591de1b":[1,0,11,99],
 "classABILITY.html#a4facaf1bd10f190467ffba1f32b6ecb8":[1,0,11,80],
@@ -246,8 +249,5 @@ var NAVTREEINDEX24 =
 "classAIWork__Explore.html#a2677e829229a72b77b82aed8ff34a199":[1,0,126,1],
 "classAIWork__Explore.html#ab610006a0b58f9d49de8fbaf450bf9d3":[1,0,126,0],
 "classAIWork__Farm.html":[1,0,127],
-"classAIWork__Farm.html#a0a5897032beb03862f9b5e3a40908104":[1,0,127,0],
-"classAIWork__Farm.html#aa34ce7e4071416c998223e125ed9afd8":[1,0,127,1],
-"classAIWork__Fish.html":[1,0,128],
-"classAIWork__Fish.html#a2fd441c9762f335a1fbe51761388b6df":[1,0,128,1]
+"classAIWork__Farm.html#a0a5897032beb03862f9b5e3a40908104":[1,0,127,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8a90589c47f06eb971d548591f23c285af":[2,0,0,1298,0,6],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8a9914a0ce04a7b7b6a8e39bec55064b82":[2,0,0,1298,0,2],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8abd2b7e5f85a6ea65065c4ebc6d7c95bb":[2,0,0,1298,0,1],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8ae045615354060a83511b41ee31db4ae9":[2,0,0,1298,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitDeliveryChest_8cs.html":[2,0,0,1417],
 "TraitDeliveryChest_8cs_source.html":[2,0,0,1417],
 "TraitDemitas_8cs.html":[2,0,0,1418],
-"TraitDemitas_8cs_source.html":[2,0,0,1418],
-"TraitDeposit_8cs.html":[2,0,0,1419]
+"TraitDemitas_8cs_source.html":[2,0,0,1418]
 };

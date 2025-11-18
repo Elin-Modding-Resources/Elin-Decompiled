@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"classActSwarm.html":[1,0,60],
+"classActSwarm.html#a8c6e2c436a1eaf7f0f62fc38dab165b2":[1,0,60,2],
+"classActSwarm.html#a8f3bf8d4621cd4242c9d2357b498ce61":[1,0,60,1],
 "classActSwarm.html#ac72dec631d51037817b213f0404d02be":[1,0,60,0],
 "classActSword.html":[1,0,61],
 "classActThrow.html":[1,0,62],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "classAffinity.html#a183a1ef42f8257aad70cf5ef95ca810a":[1,0,68,6],
 "classAffinity.html#a19e2f81de3cca811f77553b318986011":[1,0,68,11],
 "classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58":[1,0,68,0],
-"classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58a03fdbf12e03a4cd1409b84abe2b631df":[1,0,68,0,5],
-"classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58a06f4cde50b7b51d8c3add41f7f45528d":[1,0,68,0,2],
-"classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58a4ad6c928711328d1cf0167bc87079a14":[1,0,68,0,1],
-"classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58a6f8063417ab31f38d864c28302f3de2f":[1,0,68,0,4]
+"classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58a03fdbf12e03a4cd1409b84abe2b631df":[1,0,68,0,5]
 };

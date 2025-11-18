@@ -1,5 +1,12 @@
 var NAVTREEINDEX117 =
 {
+"classTraitCatalyst.html#a6c7acb26a8fe1a6c9b5bd83b2032344f":[1,0,1481,3],
+"classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a":[1,0,1481,0],
+"classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9":[1,0,1481,5],
+"classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1481,2],
+"classTraitCauldron.html":[1,0,1482],
+"classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1482,1],
+"classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1482,0],
 "classTraitChair.html":[1,0,1483],
 "classTraitChangingRoom.html":[1,0,1484],
 "classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1484,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitDefertilizer.html":[1,0,1526],
 "classTraitDeliveryChest.html":[1,0,1527],
 "classTraitDeliveryChest.html#a120325a952af6fc337e01d0498f9d35f":[1,0,1527,1],
-"classTraitDeliveryChest.html#a43c4b7d0ba716ca6d3dab8cb0d885d4c":[1,0,1527,8],
-"classTraitDeliveryChest.html#a44ca8e83f02452ad3bd771332cc6e0e6":[1,0,1527,7],
-"classTraitDeliveryChest.html#a475ade5c2b50886a079bec421acc84aa":[1,0,1527,0],
-"classTraitDeliveryChest.html#a759e096a48919490c36935c55caa7325":[1,0,1527,4],
-"classTraitDeliveryChest.html#a774bfcf99b9683a2403e478139c6f2c4":[1,0,1527,5],
-"classTraitDeliveryChest.html#a88e74b882b4527ce73766b88eb9d4a3d":[1,0,1527,2],
-"classTraitDeliveryChest.html#acd2e19a32b93863cd10a4f510ff041a1":[1,0,1527,3],
-"classTraitDeliveryChest.html#aee7645c9838310d20e6dee885ecfbd80":[1,0,1527,6]
+"classTraitDeliveryChest.html#a43c4b7d0ba716ca6d3dab8cb0d885d4c":[1,0,1527,8]
 };
