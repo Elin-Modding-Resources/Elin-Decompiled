@@ -63,7 +63,7 @@ public class CraftUtil : EClass
 		RecipeManager.BuildList();
 		List<Thing> list = new List<Thing>();
 		RecipeSource recipeSource = RecipeManager.Get(food.id);
-		if (recipeSource == null)
+		if (recipeSource == null || !recipeSource.IsCraftable())
 		{
 			return;
 		}
@@ -132,8 +132,8 @@ public class CraftUtil : EClass
 		{
 			thing.elements.Remove(701);
 		}
-		thing.elements.ModBase(710, 30);
-		thing.elements.SetTo(2, Mathf.Min(EClass.curve(feeder.LV, 30, 10, 60), 200));
+		thing.elements.ModBase(710, 20 + (int)Mathf.Min(Mathf.Sqrt(sucker.Evalue(6607) + sucker.LER), 50f));
+		thing.elements.SetTo(2, Mathf.Min(EClass.curve(feeder.LV, 30, 10, 65), 200));
 		return thing;
 	}
 

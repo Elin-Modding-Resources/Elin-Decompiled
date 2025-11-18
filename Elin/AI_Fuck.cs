@@ -356,34 +356,36 @@ public class AI_Fuck : AIAct
 			{
 				EClass.player.stats.kimo++;
 			}
-			if (variation != Variation.NTR)
+			if (variation == Variation.NTR)
 			{
-				break;
-			}
-			Thing thing = chara2.things.Find<TraitDreamBug>();
-			if (thing != null)
-			{
-				thing.ModNum(-1);
-				if (chara.IsPC)
+				Thing thing = chara2.things.Find<TraitDreamBug>();
+				if (thing != null)
 				{
-					Msg.Say("dream_spell", EClass.sources.elements.map[9156].GetName().ToLowerInvariant());
-					EClass.pc.GainAbility(9156, EClass.rnd(2) + 1);
+					thing.ModNum(-1);
+					if (chara.IsPC)
+					{
+						Msg.Say("dream_spell", EClass.sources.elements.map[9156].GetName().ToLowerInvariant());
+						EClass.pc.GainAbility(9156, EClass.rnd(2) + 1);
+					}
+				}
+				if (chara.HasElement(1239) && !chara2.HasElement(1216))
+				{
+					if (chara2.HasElement(758))
+					{
+						if (chara.ExistsOnMap)
+						{
+							chara.stamina.Mod(-1000000);
+						}
+					}
+					else if (chara2.ExistsOnMap)
+					{
+						chara2.stamina.Mod((!chara2.IsPCFaction) ? (-10000) : (chara2.IsPC ? (-25) : (-50)));
+					}
 				}
 			}
-			if (!chara.HasElement(1239) || chara2.HasElement(1216))
+			if (variation == Variation.Bloodsuck && chara2.HasElement(758) && chara.ExistsOnMap)
 			{
-				break;
-			}
-			if (chara2.HasElement(758))
-			{
-				if (chara.ExistsOnMap)
-				{
-					chara.stamina.Mod(-1000000);
-				}
-			}
-			else if (chara2.ExistsOnMap)
-			{
-				chara2.stamina.Mod((!chara2.IsPCFaction) ? (-10000) : (chara2.IsPC ? (-25) : (-50)));
+				chara.stamina.Mod(-1000000);
 			}
 			break;
 		}

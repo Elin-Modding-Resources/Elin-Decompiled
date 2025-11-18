@@ -7,5 +7,6 @@ public enum ThrowType
 	Flyer,
 	MonsterBall,
 	Explosive,
-	Ball
+	Ball,
+	Dice
 }

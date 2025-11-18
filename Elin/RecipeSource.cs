@@ -106,6 +106,15 @@ public class RecipeSource : EClass
 		return row.GetDetail();
 	}
 
+	public bool IsCraftable()
+	{
+		if (idFactory.IsEmpty() || idFactory == "x" || idFactory == "none")
+		{
+			return false;
+		}
+		return true;
+	}
+
 	public Element GetReqSkill()
 	{
 		return Element.Create((NeedFactory ? EClass.sources.cards.GetModelCrafter(idFactory) : Trait.SelfFactory).IDReqEle(this), row.LV);

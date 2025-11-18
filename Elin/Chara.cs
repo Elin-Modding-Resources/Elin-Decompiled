@@ -103,8 +103,6 @@ public class Chara : Card, IPathfindWalker
 
 	public ConSuspend conSuspend;
 
-	public ConTransmute conTrans;
-
 	public Emo2 emoIcon;
 
 	public int happiness;
@@ -789,10 +787,6 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
-			if (renderer.replacer != null)
-			{
-				return renderer.replacer.pref;
-			}
 			if (spriteReplacer != null)
 			{
 				return spriteReplacer.data?.pref ?? EClass.core.refs.prefs.replacer1;
@@ -5970,6 +5964,10 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		bool flag2 = true;
+		if (a.source.cooldown > 0 && (!IsPC || !a.source.tag.Contains("CD_npc")))
+		{
+			AddCooldown(a.id, a.source.cooldown);
+		}
 		if (HasTalk("phrase_" + a.source.alias))
 		{
 			EClass.player.forceTalk = true;
@@ -6019,10 +6017,6 @@ public class Chara : Card, IPathfindWalker
 			}
 		}
 		ActEffect.RapidCount = 0;
-		if (a.source.cooldown > 0 && (!IsPC || !a.source.tag.Contains("CD_npc")))
-		{
-			AddCooldown(a.id, a.source.cooldown);
-		}
 		if (flag2 && !a.source.tag.Contains("keepInvisi") && EClass.rnd(2) == 0)
 		{
 			RemoveCondition<ConInvisibility>();
@@ -8561,6 +8555,39 @@ public class Chara : Card, IPathfindWalker
 		if (row.cooldown > 0)
 		{
 			_cooldowns.Add(idEle * 1000 + row.cooldown);
+		}
+	}
+
+	public void SetCooldown(int idEle, int turns = 0)
+	{
+		if (_cooldowns == null)
+		{
+			_cooldowns = new List<int>();
+		}
+		bool flag = false;
+		for (int i = 0; i < _cooldowns.Count; i++)
+		{
+			if (_cooldowns[i] / 1000 == idEle)
+			{
+				if (turns == 0)
+				{
+					_cooldowns.RemoveAt(i);
+				}
+				else
+				{
+					_cooldowns[i] = idEle * 1000 + turns;
+				}
+				flag = true;
+				break;
+			}
+		}
+		if (!flag && turns > 0)
+		{
+			AddCooldown(idEle, turns);
+		}
+		if (_cooldowns.Count == 0)
+		{
+			_cooldowns = null;
 		}
 	}
 

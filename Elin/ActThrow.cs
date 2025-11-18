@@ -183,6 +183,9 @@ public class ActThrow : ActBaseAttack
 			t.Die(null, null, AttackSource.Throw);
 			c.ModExp(108, 50);
 			break;
+		case ThrowType.Dice:
+			t.SetDir(EClass.rnd(6));
+			break;
 		case ThrowType.Snow:
 			flag = true;
 			flag2 = false;

@@ -126,19 +126,6 @@ public class AI_Eat : AIAct
 				{
 					owner.Say("eat_end", owner, target.GetName(NameStyle.Full, 1));
 					owner.ShowEmo(Emo.happy);
-					if (target.trait is TraitFoodChuryu && !owner.IsCat)
-					{
-						foreach (Chara item in owner.pos.ListCharasInRadius(owner, 5, (Chara c) => c.IsCat))
-						{
-							item.Say("angry", item);
-							item.ShowEmo(Emo.angry);
-							item.PlaySound("Animal/Cat/cat_angry");
-							if (owner.IsPC)
-							{
-								EClass.player.ModKarma(-3);
-							}
-						}
-					}
 					FoodEffect.Proc(owner, target.Thing);
 				}
 			}

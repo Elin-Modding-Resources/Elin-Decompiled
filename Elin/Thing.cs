@@ -1296,9 +1296,9 @@ public class Thing : Card
 					{
 						num3 = num3 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara)) / 100;
 					}
-					string text12 = " (" + e.Value + ((e.Value == num3) ? "" : (" → " + num3)) + ")";
-					string text13 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
-					return s + text12 + " " + text13;
+					string text13 = " (" + e.Value + ((e.Value == num3) ? "" : (" → " + num3)) + ")";
+					string text14 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
+					return s + text13 + " " + text14;
 				});
 			}
 			if (sockets != null)
@@ -1325,9 +1325,9 @@ public class Thing : Card
 			if (base.c_mixedFoodData != null)
 			{
 				n.AddHeader("isMixedFood");
-				foreach (string text14 in base.c_mixedFoodData.texts)
+				foreach (string text15 in base.c_mixedFoodData.texts)
 				{
-					AddText("_bullet".lang() + text14 + text2, FontColor.Default);
+					AddText("_bullet".lang() + text15 + text2, FontColor.Default);
 				}
 			}
 		}
@@ -1439,7 +1439,12 @@ public class Thing : Card
 			}
 			int num2 = e.Value / 10;
 			num2 = ((e.Value < 0) ? (num2 - 1) : (num2 + 1));
-			text10 = "Lv." + num2 + text11 + " " + text10;
+			string text12 = num2.ToString() ?? "";
+			if (EClass.pc.HasElement(1250) && HasElement(710) && e.IsFoodTrait && e.id != 710)
+			{
+				text12 = (int)((float)num2 * 0.1f * (float)(Evalue(710) + 10)) + " (" + num2 + ")";
+			}
+			text10 = "Lv." + text12 + text11 + " " + text10;
 			if (infoMode && e.IsFoodTraitMain)
 			{
 				text10 += "traitAdditive".lang();

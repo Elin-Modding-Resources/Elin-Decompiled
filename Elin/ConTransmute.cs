@@ -14,7 +14,6 @@ public class ConTransmute : BaseBuff
 
 	public override void OnStart()
 	{
-		owner.conTrans = this;
 		owner._CreateRenderer();
 		if (owner.IsPCParty)
 		{
@@ -24,7 +23,6 @@ public class ConTransmute : BaseBuff
 
 	public override void OnRemoved()
 	{
-		owner.conTrans = null;
 		owner._CreateRenderer();
 		if (owner.IsPCParty)
 		{

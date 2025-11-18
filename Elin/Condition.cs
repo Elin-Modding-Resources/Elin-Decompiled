@@ -97,11 +97,11 @@ public class Condition : BaseCondition
 			owner.Say(base.source.GetText("textEnd"), owner, RefString1);
 		}
 		PlayEndEffect();
-		OnRemoved();
 		if (elements != null)
 		{
 			elements.SetParent();
 		}
+		OnRemoved();
 		owner.SetDirtySpeed();
 		if (ShouldRefresh)
 		{

@@ -1735,6 +1735,9 @@ public class Player : EClass
 			{
 				c.AddCard(ThingGen.Create("mixer"));
 				c.AddCard(ThingGen.Create("bloodpack").SetNum(3));
+				Thing thing = ThingGen.Create("parchment");
+				thing.SetStr(53, "letter_vampire");
+				c.AddCard(thing);
 			}
 		}
 		Thing SetSpellbook(Thing t, int charge)

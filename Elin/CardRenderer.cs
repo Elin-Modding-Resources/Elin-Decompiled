@@ -739,6 +739,10 @@ public class CardRenderer : RenderObject
 
 	public SourcePref GetPref()
 	{
+		if (replacer != null)
+		{
+			return replacer.pref;
+		}
 		if ((owner.IsPCC && replacer == null) || (owner.HasHost && owner.Chara.host.ride == owner))
 		{
 			return EClass.core.refs.prefs.pcc;
