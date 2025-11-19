@@ -436,14 +436,18 @@ public class BaseCondition : BaseStats
 		}
 		for (int j = 0; j < base.source.elements.Length; j += 2)
 		{
-			Element element = Element.Create(GetElementSource(j).id, base.source.elements[j + 1].Calc(power, 0, P2));
-			if (elements != null && elements.Has(element.id) && elements.Value(element.id) != element.Value)
+			Element e = Element.Create(GetElementSource(j).id, base.source.elements[j + 1].Calc(power, 0, P2));
+			if (e.IsFlag)
 			{
-				list.Add("modValue".lang(element.Name, ((element.Value < 0) ? "" : "+") + elements.Value(element.id) + " (" + element.Value + ")"));
+				list.Add(e.Name.TagColorGoodBad(() => e.Value >= 0));
+			}
+			else if (elements != null && elements.Has(e.id) && elements.Value(e.id) != e.Value)
+			{
+				list.Add("modValue".lang(e.Name, ((e.Value < 0) ? "" : "+") + elements.Value(e.id) + " (" + e.Value + ")").TagColor(() => e.Value >= 0));
 			}
 			else
 			{
-				list.Add("modValue".lang(element.Name, ((element.Value < 0) ? "" : "+") + element.Value));
+				list.Add("modValue".lang(e.Name, ((e.Value < 0) ? "" : "+") + e.Value).TagColorGoodBad(() => e.Value >= 0));
 			}
 		}
 		if (list.Count <= 0)

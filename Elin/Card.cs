@@ -3222,7 +3222,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			list.Add(chara);
 		}
-		if (EClass.pc.IsEyth && EClass.pc.HasElement(1228))
+		if (EClass.pc.IsEyth && EClass.pc.HasElement(1228) && af.c_idDeity == EClass.pc.faith.id)
 		{
 			foreach (Chara item in list)
 			{

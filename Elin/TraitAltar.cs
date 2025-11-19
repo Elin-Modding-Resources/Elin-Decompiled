@@ -16,15 +16,7 @@ public class TraitAltar : Trait
 
 	public string StrDeity => Deity.NameDomain;
 
-	public bool IsEyth => idDeity == "eyth";
-
-	public override void OnSetOwner()
-	{
-		if (idDeity == "void")
-		{
-			owner.c_idDeity = "eyth";
-		}
-	}
+	public bool IsEyth => Deity.IsEyth;
 
 	public override void OnCreate(int lv)
 	{
@@ -83,6 +75,9 @@ public class TraitAltar : Trait
 
 	public override bool CanOffer(Card c)
 	{
+		Debug.Log(Deity);
+		Debug.Log(Deity.id);
+		Debug.Log(IsEyth);
 		if (c != null && c.HasTag(CTAG.godArtifact))
 		{
 			if (EClass.pc.IsEyth && EClass.pc.HasElement(1228))
