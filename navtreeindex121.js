@@ -1,6 +1,5 @@
 var NAVTREEINDEX121 =
 {
-"classTraitMerchantGeneralExotic.html#ad8a31536bb627922c0f4d9a31d87b96f":[1,0,1708,0],
 "classTraitMerchantGun.html":[1,0,1709],
 "classTraitMerchantGun.html#a2c20221f1b6f16180680b4baa2c86834":[1,0,1709,0],
 "classTraitMerchantGun.html#aee959c520e86875cd63de5a443bca4f0":[1,0,1709,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX121 =
 "classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1774,0],
 "classTraitPotionAlchemy.html":[1,0,1775],
 "classTraitPotionAlchemy.html#a1fc02cad3212f3257ce98be1e74b24d2":[1,0,1775,0],
-"classTraitPotionAlchemy.html#a9b47cf772fdbc8261c42edfc8124bd35":[1,0,1775,2]
+"classTraitPotionAlchemy.html#a9b47cf772fdbc8261c42edfc8124bd35":[1,0,1775,2],
+"classTraitPotionAlchemy.html#afbe2c5dc046840f3d0e06840b81548fb":[1,0,1775,1]
 };

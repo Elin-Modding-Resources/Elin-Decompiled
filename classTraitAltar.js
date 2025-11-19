@@ -5,7 +5,6 @@ var classTraitAltar =
     [ "OnCreate", "classTraitAltar.html#a0aca9b623b935256184f75312aa8a6f3", null ],
     [ "OnImportMap", "classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919", null ],
     [ "OnOffer", "classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752", null ],
-    [ "OnSetOwner", "classTraitAltar.html#ac827ca9b9211142f2f97a900a3bd6f8b", null ],
     [ "SetDeity", "classTraitAltar.html#a1734a9c2ea692e0cece10e249d810d97", null ],
     [ "SetName", "classTraitAltar.html#a5b7915ae5f852b2d68d08c9ae96a3ffc", null ],
     [ "TakeOver", "classTraitAltar.html#a7b3d7bc4f803febf43b49ca7a7c823ea", null ],

@@ -1,6 +1,5 @@
 var NAVTREEINDEX118 =
 {
-"classTraitDeliveryChest.html#a44ca8e83f02452ad3bd771332cc6e0e6":[1,0,1527,7],
 "classTraitDeliveryChest.html#a475ade5c2b50886a079bec421acc84aa":[1,0,1527,0],
 "classTraitDeliveryChest.html#a759e096a48919490c36935c55caa7325":[1,0,1527,4],
 "classTraitDeliveryChest.html#a774bfcf99b9683a2403e478139c6f2c4":[1,0,1527,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX118 =
 "classTraitFarris.html#a4ae71d9cd578871552e27b4c0c27cd35":[1,0,1578,0],
 "classTraitFarris.html#a65a9c51ba2526509996c561d53274f26":[1,0,1578,1],
 "classTraitFelmera.html":[1,0,1579],
-"classTraitFelmera.html#a020a3c6560254c0562e09d0b99f00f9f":[1,0,1579,1]
+"classTraitFelmera.html#a020a3c6560254c0562e09d0b99f00f9f":[1,0,1579,1],
+"classTraitFelmera.html#aa46eda79ce9179760200552dc10e728b":[1,0,1579,0]
 };
