@@ -1,5 +1,6 @@
 var NAVTREEINDEX36 =
 {
+"classBaseTileMap.html#a41301c7bc7f1bf6ced6b4e4fd82da194":[1,0,221,226],
 "classBaseTileMap.html#a41ddcc7c6282c6619835eb389b26dc15":[1,0,221,152],
 "classBaseTileMap.html#a43f754e0e96f7b1499812052c87f62dc":[1,0,221,196],
 "classBaseTileMap.html#a4441e160d98aaffe78ef7dc63226f717":[1,0,221,87],
@@ -248,6 +249,5 @@ var NAVTREEINDEX36 =
 "classBaseWidgetNotice.html#aa7e208b176c451a6ff8e0c80009cea52":[1,0,223,19],
 "classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8":[1,0,223,13],
 "classBaseWidgetNotice.html#ac1757f00ce36f0bccc27b202c28723fb":[1,0,223,3],
-"classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d":[1,0,223,15],
-"classBaseWidgetNotice.html#ac6268569832f4477dd4300f6f61837ab":[1,0,223,7]
+"classBaseWidgetNotice.html#ac37c9a489ea5f2176d50fb116c0d7e8d":[1,0,223,15]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX118 =
 {
+"classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1525,0],
+"classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1525,1],
+"classTraitDefertilizer.html":[1,0,1526],
+"classTraitDeliveryChest.html":[1,0,1527],
+"classTraitDeliveryChest.html#a120325a952af6fc337e01d0498f9d35f":[1,0,1527,1],
+"classTraitDeliveryChest.html#a43c4b7d0ba716ca6d3dab8cb0d885d4c":[1,0,1527,8],
+"classTraitDeliveryChest.html#a44ca8e83f02452ad3bd771332cc6e0e6":[1,0,1527,7],
 "classTraitDeliveryChest.html#a475ade5c2b50886a079bec421acc84aa":[1,0,1527,0],
 "classTraitDeliveryChest.html#a759e096a48919490c36935c55caa7325":[1,0,1527,4],
 "classTraitDeliveryChest.html#a774bfcf99b9683a2403e478139c6f2c4":[1,0,1527,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitFarmChest.html":[1,0,1577],
 "classTraitFarmChest.html#a24ba7195fdbb804198d179484cbcc0ad":[1,0,1577,1],
 "classTraitFarmChest.html#a2e5532fbdab692f8145e0aa82a785367":[1,0,1577,3],
-"classTraitFarmChest.html#a4ca85bab37d8bcb65709d7b9365e65d1":[1,0,1577,2],
-"classTraitFarmChest.html#a76b65125860a4a94d4d0c6f5c1f59033":[1,0,1577,0],
-"classTraitFarris.html":[1,0,1578],
-"classTraitFarris.html#a4ae71d9cd578871552e27b4c0c27cd35":[1,0,1578,0],
-"classTraitFarris.html#a65a9c51ba2526509996c561d53274f26":[1,0,1578,1],
-"classTraitFelmera.html":[1,0,1579],
-"classTraitFelmera.html#a020a3c6560254c0562e09d0b99f00f9f":[1,0,1579,1],
-"classTraitFelmera.html#aa46eda79ce9179760200552dc10e728b":[1,0,1579,0]
+"classTraitFarmChest.html#a4ca85bab37d8bcb65709d7b9365e65d1":[1,0,1577,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GameIO_8cs.html":[2,0,0,501],
 "GameIO_8cs_source.html":[2,0,0,501],
 "GameIndex_8cs.html":[2,0,0,500],
 "GameIndex_8cs_source.html":[2,0,0,500],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "HomeResourceEducation_8cs_source.html":[2,0,0,588],
 "HomeResourceFun_8cs.html":[2,0,0,589],
 "HomeResourceFun_8cs_source.html":[2,0,0,589],
-"HomeResourceIndustry_8cs.html":[2,0,0,590],
-"HomeResourceIndustry_8cs_source.html":[2,0,0,590]
+"HomeResourceIndustry_8cs.html":[2,0,0,590]
 };

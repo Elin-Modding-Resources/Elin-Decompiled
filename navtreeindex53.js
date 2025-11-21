@@ -1,5 +1,11 @@
 var NAVTREEINDEX53 =
 {
+"classCoreDebug_1_1MatColorTest.html#ab8a8b95cb6429714057afd5373637d98":[1,0,401,1,2],
+"classCoreDebug_1_1MatColorTest.html#ae437ef12996bdfe7a5e9ba6d02c3954a":[1,0,401,1,3],
+"classCoreDebug_1_1StartSetting.html":[1,0,401,2],
+"classCoreDebug_1_1StartSetting.html#a7f0172ab8c018e1d59a0bad50c370c07":[1,0,401,2,1],
+"classCoreDebug_1_1StartSetting.html#acdbf0aefbc7487f638aa857b63d99eb9":[1,0,401,2,0],
+"classCoreDebug_1_1StartSetting.html#ae9aafa5c1c2082432c3bedbce3c856ee":[1,0,401,2,2],
 "classCoreEmu.html":[1,0,402],
 "classCoreEmu.html#a4b106800b20b0f433295d4a97120289d":[1,0,402,0],
 "classCoreEmu.html#ab13c65dc949c59dd087aa7adca90bf7a":[1,0,402,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX53 =
 "classCoreRef_1_1OrbitIcons.html#acc37cf25263dffb4c25e39dd1bdf1081":[1,0,405,6,4],
 "classCoreRef_1_1OrbitIcons.html#af127023952a063fc1d366d6a0855dd41":[1,0,405,6,6],
 "classCoreRef_1_1PopperSprites.html":[1,0,405,7],
-"classCoreRef_1_1PopperSprites.html#abad464045144a14a8f8ff8acb56c6cc9":[1,0,405,7,0],
-"classCoreRef_1_1PrefData.html":[1,0,405,8],
-"classCoreRef_1_1PrefData.html#a2d49e3e3748b77feb801e5007fa0486f":[1,0,405,8,3],
-"classCoreRef_1_1PrefData.html#a3bd121ac053a201ccb564192d0aec7bd":[1,0,405,8,6],
-"classCoreRef_1_1PrefData.html#aa18a0112a8a5ceff140ae454fb1fc3ed":[1,0,405,8,1],
-"classCoreRef_1_1PrefData.html#abb2925c784521e58ee670f6f327b35d4":[1,0,405,8,4],
-"classCoreRef_1_1PrefData.html#abd5cdfe7ff6a6cc7c2cb605571d9e265":[1,0,405,8,7]
+"classCoreRef_1_1PopperSprites.html#abad464045144a14a8f8ff8acb56c6cc9":[1,0,405,7,0]
 };

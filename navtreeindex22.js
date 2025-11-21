@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da93212f6501af6724f3e70a14b688a4c8":[2,0,0,2,0,0,10,0,83],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da94089683b075eaa1d0926cd9eb66e04b":[2,0,0,2,0,0,10,0,68],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da94b510a314c374bc5a229e350c606a17":[2,0,0,2,0,0,10,0,163],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da94dfe944aa85d4b291c299f52bb0d464":[2,0,0,2,0,0,10,0,52],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "ZoneEventSiege_8cs.html":[2,0,0,2045],
 "ZoneEventSiege_8cs_source.html":[2,0,0,2045],
 "ZoneEventSubdue_8cs.html":[2,0,0,2047],
-"ZoneEventSubdue_8cs_source.html":[2,0,0,2047],
-"ZoneEventSurvival_8cs.html":[2,0,0,2048]
+"ZoneEventSubdue_8cs_source.html":[2,0,0,2047]
 };

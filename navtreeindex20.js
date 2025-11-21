@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitToolFishing_8cs.html":[2,0,0,1792],
 "TraitToolFishing_8cs_source.html":[2,0,0,1792],
 "TraitToolHammerStrip_8cs.html":[2,0,0,1794],
 "TraitToolHammerStrip_8cs_source.html":[2,0,0,1794],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "UIFollow_8cs.html":[2,0,0,3,128],
 "UIFollow_8cs_source.html":[2,0,0,3,128],
 "UIGameBG_8cs.html":[2,0,0,1874],
-"UIGameBG_8cs_source.html":[2,0,0,1874],
-"UIHangIcon_8cs.html":[2,0,0,1875]
+"UIGameBG_8cs_source.html":[2,0,0,1874]
 };

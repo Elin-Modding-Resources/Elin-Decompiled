@@ -1,5 +1,12 @@
 var NAVTREEINDEX122 =
 {
+"classTraitPotion.html":[1,0,1774],
+"classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0":[1,0,1774,1],
+"classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1774,0],
+"classTraitPotionAlchemy.html":[1,0,1775],
+"classTraitPotionAlchemy.html#a1fc02cad3212f3257ce98be1e74b24d2":[1,0,1775,0],
+"classTraitPotionAlchemy.html#a9b47cf772fdbc8261c42edfc8124bd35":[1,0,1775,2],
+"classTraitPotionAlchemy.html#afbe2c5dc046840f3d0e06840b81548fb":[1,0,1775,1],
 "classTraitPotionEmpty.html":[1,0,1776],
 "classTraitPotionEmpty.html#a479119429f1aad7dc8d43f3a7870aeb8":[1,0,1776,3],
 "classTraitPotionEmpty.html#a5c7c586fa312bde006e46eb2f8b3c6b3":[1,0,1776,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitSecretary.html#a609c1fe1754e9ba237082cdb70fa0ea6":[1,0,1821,5],
 "classTraitSecretary.html#a6110ea0c3c95006b574bc9ee6131f9d4":[1,0,1821,4],
 "classTraitSecretary.html#ac6154c708ec273c7f2daf8708b80274a":[1,0,1821,3],
-"classTraitSeed.html":[1,0,1822],
-"classTraitSeed.html#a022b05bc222961ddf02ab956699a4376":[1,0,1822,1],
-"classTraitSeed.html#a0a7364e58a3db978d861f788fcd72438":[1,0,1822,9],
-"classTraitSeed.html#a1727c60f9daf9a01e0236563a5f9996d":[1,0,1822,8],
-"classTraitSeed.html#a2fd15c009c1b0ffaf779cdeb47b687e4":[1,0,1822,17],
-"classTraitSeed.html#a346a08c0db4fdbb57b8086666608db8e":[1,0,1822,15],
-"classTraitSeed.html#a3aa16e52587f4375ef3bad7d638a09a5":[1,0,1822,0],
-"classTraitSeed.html#a4c8fc307a12d9be529fdcc916a6fa541":[1,0,1822,11]
+"classTraitSeed.html":[1,0,1822]
 };

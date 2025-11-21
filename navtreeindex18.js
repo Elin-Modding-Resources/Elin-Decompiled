@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitInformer_8cs_source.html":[2,0,0,1543],
 "TraitInnkeeper_8cs.html":[2,0,0,1544],
 "TraitInnkeeper_8cs_source.html":[2,0,0,1544],
 "TraitItemProc_8cs.html":[2,0,0,1546],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitPotionLove_8cs_source.html":[2,0,0,1667],
 "TraitPotionRandom_8cs.html":[2,0,0,1668],
 "TraitPotionRandom_8cs_source.html":[2,0,0,1668],
-"TraitPotion_8cs.html":[2,0,0,1664],
-"TraitPotion_8cs_source.html":[2,0,0,1664]
+"TraitPotion_8cs.html":[2,0,0,1664]
 };

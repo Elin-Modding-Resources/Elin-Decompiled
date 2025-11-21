@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classABILITY.html#a480423be656e4071170825580acac0fe":[1,0,11,0],
 "classABILITY.html#a48936e8e4b10e56ccf6ee5e1e2c58177":[1,0,11,83],
 "classABILITY.html#a4b0d861103c165f656e1fa7873cbc70e":[1,0,11,109],
 "classABILITY.html#a4b8fde403e9c61cbeb165df2f114181e":[1,0,11,120],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classAIWork__Explore.html":[1,0,126],
 "classAIWork__Explore.html#a2677e829229a72b77b82aed8ff34a199":[1,0,126,1],
 "classAIWork__Explore.html#ab610006a0b58f9d49de8fbaf450bf9d3":[1,0,126,0],
-"classAIWork__Farm.html":[1,0,127],
-"classAIWork__Farm.html#a0a5897032beb03862f9b5e3a40908104":[1,0,127,0]
+"classAIWork__Farm.html":[1,0,127]
 };

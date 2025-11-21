@@ -1,5 +1,12 @@
 var NAVTREEINDEX120 =
 {
+"classTraitHouseBoard.html#a981203fa4c17878393ffc22483e816ef":[1,0,1648,6],
+"classTraitHouseBoard.html#a98b5daa9a7fdacc8001d81929d513955":[1,0,1648,4],
+"classTraitHouseBoard.html#abc6193c35657b2ce40250ab0b4bb39fd":[1,0,1648,5],
+"classTraitHouseBoard.html#ace0ed1602bd17d6e2ca7dc8282436931":[1,0,1648,8],
+"classTraitHouseBoard.html#afb6fb0d73b1bb9debb2b0c0beec7793d":[1,0,1648,10],
+"classTraitHouseBoard_1_1Data.html":[1,0,1648,0],
+"classTraitHouseBoard_1_1Data.html#a0d184a64fffe2dce1b803b12f741c0c7":[1,0,1648,0,16],
 "classTraitHouseBoard_1_1Data.html#a304cc8ac79c1eacc9b120e7fb18faf23":[1,0,1648,0,7],
 "classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c":[1,0,1648,0,1],
 "classTraitHouseBoard_1_1Data.html#a5185cb25b09ff747071433ed6ecb2694":[1,0,1648,0,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitMerchantFood.html":[1,0,1704],
 "classTraitMerchantFood.html#a6b47417562ed2b2f388297342207fae4":[1,0,1704,0],
 "classTraitMerchantFruit.html":[1,0,1705],
-"classTraitMerchantFruit.html#aaba92ecead12dca97da2ca843790702a":[1,0,1705,0],
-"classTraitMerchantFurniture.html":[1,0,1706],
-"classTraitMerchantFurniture.html#a08c97f11acebf1b70a2f5f36f29eac80":[1,0,1706,0],
-"classTraitMerchantFurniture.html#a90edbfdc8939ed2ed27b9029a9312fcd":[1,0,1706,1],
-"classTraitMerchantGeneral.html":[1,0,1707],
-"classTraitMerchantGeneral.html#ac107905e867da0cb473e7a7821dd96c4":[1,0,1707,0],
-"classTraitMerchantGeneralExotic.html":[1,0,1708],
-"classTraitMerchantGeneralExotic.html#ad8a31536bb627922c0f4d9a31d87b96f":[1,0,1708,0]
+"classTraitMerchantFruit.html#aaba92ecead12dca97da2ca843790702a":[1,0,1705,0]
 };

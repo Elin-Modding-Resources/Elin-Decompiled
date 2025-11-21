@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"QuestInstance_8cs.html":[2,0,0,939],
 "QuestInstance_8cs_source.html":[2,0,0,939],
 "QuestIntoDarkness_8cs.html":[2,0,0,940],
 "QuestIntoDarkness_8cs_source.html":[2,0,0,940],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "RenderDataTile_8cs.html":[2,0,0,1040],
 "RenderDataTile_8cs_source.html":[2,0,0,1040],
 "RenderData_8cs.html":[2,0,0,1026],
-"RenderData_8cs_source.html":[2,0,0,1026],
-"RenderObject_8cs.html":[2,0,0,1042]
+"RenderData_8cs_source.html":[2,0,0,1026]
 };

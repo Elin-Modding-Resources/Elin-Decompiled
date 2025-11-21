@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"ZoneEventSurvival_8cs.html":[2,0,0,2048],
 "ZoneEventSurvival_8cs_source.html":[2,0,0,2048],
 "ZoneEvent_8cs.html":[2,0,0,2036],
 "ZoneEvent_8cs_source.html":[2,0,0,2036],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classABILITY.html#a41d12db50d89515caa2655c92440638a":[1,0,11,85],
 "classABILITY.html#a44cc2d633528019163a4abedccd57010":[1,0,11,63],
 "classABILITY.html#a4538e18f925ec54263491feb59c744be":[1,0,11,102],
-"classABILITY.html#a47d8388e5509eb1eea4cbe3651f44a86":[1,0,11,28],
-"classABILITY.html#a480423be656e4071170825580acac0fe":[1,0,11,0]
+"classABILITY.html#a47d8388e5509eb1eea4cbe3651f44a86":[1,0,11,28]
 };

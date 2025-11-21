@@ -1,5 +1,12 @@
 var NAVTREEINDEX143 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4884ca93f08e1bdf4efbd3647bd36cf9":[0,4,3,0,8,205],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4983f7d197b9065e2d6531b59009cfe0":[0,4,3,0,8,139],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4be7016f6c0f512d2a69bb8e478b4666":[0,4,3,0,8,22],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4c0d5230355f5ea9a12f9e37147da410":[0,4,3,0,8,121],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4c39de9d4980ee83a4a24e0c106cca61":[0,4,3,0,8,201],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4e31eac4e76bb7be2cf71b0703f814ce":[0,4,3,0,8,115],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4ef5048ff92116dc7d8c7c322de8700c":[0,4,3,0,8,130],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da4fc963e213bba362778f5c175eb4d5ff":[0,4,3,0,8,61],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da514ab2b78f63ec14befb2a0a9ff51aaa":[0,4,3,0,8,28],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da51b5c5be83567b53ac711fe730c59544":[0,4,3,0,8,220],
@@ -242,12 +249,5 @@ var NAVTREEINDEX143 =
 "structB83_1_1Win32_1_1CWPSTRUCT.html#a8e24bc0ca46c8e37bcafdd0e3ee8c636":[1,0,3,0,0,3],
 "structB83_1_1Win32_1_1CWPSTRUCT.html#a91198b077688209954c538a959b154bd":[0,4,3,0,0,0],
 "structB83_1_1Win32_1_1CWPSTRUCT.html#a91198b077688209954c538a959b154bd":[1,0,3,0,0,0],
-"structB83_1_1Win32_1_1MSG.html":[0,4,3,0,1],
-"structB83_1_1Win32_1_1MSG.html":[1,0,3,0,1],
-"structB83_1_1Win32_1_1MSG.html#a5c77a7436cc277884b6d5e14c632a024":[0,4,3,0,1,3],
-"structB83_1_1Win32_1_1MSG.html#a5c77a7436cc277884b6d5e14c632a024":[1,0,3,0,1,3],
-"structB83_1_1Win32_1_1MSG.html#a5e72c716655a4fe2596036e966822354":[0,4,3,0,1,4],
-"structB83_1_1Win32_1_1MSG.html#a5e72c716655a4fe2596036e966822354":[1,0,3,0,1,4],
-"structB83_1_1Win32_1_1MSG.html#a8e1b7e7cfa5e5045d5fd694226c39f0d":[0,4,3,0,1,2],
-"structB83_1_1Win32_1_1MSG.html#a8e1b7e7cfa5e5045d5fd694226c39f0d":[1,0,3,0,1,2]
+"structB83_1_1Win32_1_1MSG.html":[0,4,3,0,1]
 };

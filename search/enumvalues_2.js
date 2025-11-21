@@ -97,6 +97,6 @@ var searchData=
   ['curseeq_94',['CurseEQ',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a858071464775993491f4d4327234cb64',1,'EffectId.cs']]],
   ['curtain_95',['Curtain',['../ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8a6439bc5f8000f6038dbd95d6c677c25a',1,'ToggleType.cs']]],
   ['custom_96',['Custom',['../classLayerInteraction.html#a6e5a11d9e50dc4e14f37f1712fe2b542a90589c47f06eb971d548591f23c285af',1,'LayerInteraction.Custom()'],['../ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8a90589c47f06eb971d548591f23c285af',1,'Custom():&#160;ToggleType.cs']]],
-  ['cut_97',['cut',['../Emo_8cs.html#a3a776133b1ce94bdc19666187232d047afe47aa7c733c490d36e80508d5dc4019',1,'Emo.cs']]],
-  ['cut_98',['CUT',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da423fe970cba054599e6fea242504dfcf',1,'B83::Win32']]]
+  ['cut_97',['CUT',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da423fe970cba054599e6fea242504dfcf',1,'B83::Win32']]],
+  ['cut_98',['cut',['../Emo_8cs.html#a3a776133b1ce94bdc19666187232d047afe47aa7c733c490d36e80508d5dc4019',1,'Emo.cs']]]
 ];

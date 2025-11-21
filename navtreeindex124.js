@@ -1,5 +1,12 @@
 var NAVTREEINDEX124 =
 {
+"classTraitTent.html#ae514bc1e18c136c3f33d432d2c08acc3":[1,0,1884,5],
+"classTraitTerraGlobe.html":[1,0,1885],
+"classTraitTerraGlobe.html#a483b0a9357a7507605bc7b6ab1c484a3":[1,0,1885,6],
+"classTraitTerraGlobe.html#aaeee206f4b5cb6daa4a9b25fe8b42c0b":[1,0,1885,0],
+"classTraitTerraGlobe.html#aceed6024cb2d076657b76cb86d829126":[1,0,1885,3],
+"classTraitTerraGlobe.html#acfef8eb2a5c69d62c1129c8a3fd200e8":[1,0,1885,1],
+"classTraitTerraGlobe.html#ad8fb3a2ab6df3a32e79ffdc2442eb99c":[1,0,1885,4],
 "classTraitTerraGlobe.html#ae14402d3bd5c865d86e002d4e394b00c":[1,0,1885,2],
 "classTraitTerraGlobe.html#af86df78ae3d14388b985d7b5e4ab32c1":[1,0,1885,5],
 "classTraitThrown.html":[1,0,1886],
@@ -242,12 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitVoidgate.html#a0dd33024f319005b892d1e506906acc2":[1,0,1952,3],
 "classTraitVoidgate.html#a15cb234eb7f05463c6ee1462fa55ee6e":[1,0,1952,0],
 "classTraitVoidgate.html#a4424f407595c5299749f7ecb015f44df":[1,0,1952,2],
-"classTraitVoidgate.html#a74b88012f5b29afa0c88ac7812c0fe5b":[1,0,1952,4],
-"classTraitVoidgate.html#aa7887628cd91f54d475938b396c6a6c6":[1,0,1952,1],
-"classTraitWaystone.html":[1,0,1953],
-"classTraitWaystone.html#a173a856d66ae7c323ddf85fff382d046":[1,0,1953,2],
-"classTraitWaystone.html#a78f28c790ee85afe7636f2e07de6b3f1":[1,0,1953,0],
-"classTraitWaystone.html#abed4d138e7b2d7b3a2ebb23c800990d6":[1,0,1953,3],
-"classTraitWaystone.html#ae3d7ba66138e5baa0485d1b3a0184b67":[1,0,1953,1],
-"classTraitWell.html":[1,0,1954]
+"classTraitVoidgate.html#a74b88012f5b29afa0c88ac7812c0fe5b":[1,0,1952,4]
 };

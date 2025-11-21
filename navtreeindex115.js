@@ -1,5 +1,12 @@
 var NAVTREEINDEX115 =
 {
+"classTrait.html#a4f89efebbdf3bf36c106d69f646853c5":[1,0,1409,108],
+"classTrait.html#a50ebba181dd04ca5ab9622c16c6b824b":[1,0,1409,195],
+"classTrait.html#a50ff3f794150d62da8471d3fb73b77ed":[1,0,1409,10],
+"classTrait.html#a52939bcd3cee8f5f363fdf65226c8c41":[1,0,1409,216],
+"classTrait.html#a5403dc0110848cbb7e18de734186502c":[1,0,1409,198],
+"classTrait.html#a54e7efc433bb50c88c6499d508da5044":[1,0,1409,104],
+"classTrait.html#a54fb77632261c0e68b84d3952b074af6":[1,0,1409,5],
 "classTrait.html#a5503e75134664e964c38de54581de9b7":[1,0,1409,158],
 "classTrait.html#a558c95dcaa4ee0563619757b3527a7a2":[1,0,1409,138],
 "classTrait.html#a559565c2b219f365239f923cffe2b567":[1,0,1409,120],
@@ -242,12 +249,5 @@ var NAVTREEINDEX115 =
 "classTraitAncientbook.html#a30af98aa86c5036c1c47f7599b31f4ca":[1,0,1426,2],
 "classTraitAncientbook.html#a3af35eecff07096d675b87d386c8edb9":[1,0,1426,5],
 "classTraitAncientbook.html#a6c782d3ffd4d53048e79511abe35990a":[1,0,1426,4],
-"classTraitAncientbook.html#aa6e1c3b9dcb61283b5fa8b600ffa5806":[1,0,1426,3],
-"classTraitAncientbook.html#ae882ffdfc7ef8327868fd0c99b2d937f":[1,0,1426,0],
-"classTraitAncientbook.html#aec51bf4c2860bbb886b3a13bf244bd0f":[1,0,1426,1],
-"classTraitAnimalTamer.html":[1,0,1427],
-"classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1427,1],
-"classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1427,0],
-"classTraitAnvil.html":[1,0,1428],
-"classTraitAppraiser.html":[1,0,1429]
+"classTraitAncientbook.html#aa6e1c3b9dcb61283b5fa8b600ffa5806":[1,0,1426,3]
 };

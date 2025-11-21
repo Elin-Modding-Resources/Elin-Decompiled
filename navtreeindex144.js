@@ -1,5 +1,12 @@
 var NAVTREEINDEX144 =
 {
+"structB83_1_1Win32_1_1MSG.html":[1,0,3,0,1],
+"structB83_1_1Win32_1_1MSG.html#a5c77a7436cc277884b6d5e14c632a024":[0,4,3,0,1,3],
+"structB83_1_1Win32_1_1MSG.html#a5c77a7436cc277884b6d5e14c632a024":[1,0,3,0,1,3],
+"structB83_1_1Win32_1_1MSG.html#a5e72c716655a4fe2596036e966822354":[0,4,3,0,1,4],
+"structB83_1_1Win32_1_1MSG.html#a5e72c716655a4fe2596036e966822354":[1,0,3,0,1,4],
+"structB83_1_1Win32_1_1MSG.html#a8e1b7e7cfa5e5045d5fd694226c39f0d":[0,4,3,0,1,2],
+"structB83_1_1Win32_1_1MSG.html#a8e1b7e7cfa5e5045d5fd694226c39f0d":[1,0,3,0,1,2],
 "structB83_1_1Win32_1_1MSG.html#ac5fe0634382480c69f96018a6bb696c8":[1,0,3,0,1,0],
 "structB83_1_1Win32_1_1MSG.html#ac5fe0634382480c69f96018a6bb696c8":[0,4,3,0,1,0],
 "structB83_1_1Win32_1_1MSG.html#aeb4a314c41a40027173dd93d34ff2d95":[0,4,3,0,1,5],

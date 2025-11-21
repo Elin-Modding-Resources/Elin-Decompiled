@@ -1,6 +1,7 @@
 var classCOBJ =
 [
     [ "ammoData", "classCOBJ.html#a0aff66c0056aae1839256311754eb14f", null ],
+    [ "bloodData", "classCOBJ.html#a2d2162a04efb1086fa60829dcfe31b80", null ],
     [ "chara", "classCOBJ.html#a6c207a18020ed9aa91543a48a430940e", null ],
     [ "charaGenes", "classCOBJ.html#ab6e20ad50d1af0a854e01a326ba66137", null ],
     [ "charaList", "classCOBJ.html#a1869e2a33b12121078786151fbc3f0c3", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"EffectMeteor_8cs_source.html":[2,0,0,446],
 "EffectText_8cs.html":[2,0,0,447],
 "EffectText_8cs_source.html":[2,0,0,447],
 "Effect_8cs.html":[2,0,0,441],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "GameDate_8cs.html":[2,0,0,498],
 "GameDate_8cs_source.html":[2,0,0,498],
 "GameDifficultySetting_8cs.html":[2,0,0,499],
-"GameDifficultySetting_8cs_source.html":[2,0,0,499],
-"GameIO_8cs.html":[2,0,0,501]
+"GameDifficultySetting_8cs_source.html":[2,0,0,499]
 };

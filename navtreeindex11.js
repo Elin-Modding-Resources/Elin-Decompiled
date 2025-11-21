@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"NotificationStance_8cs_source.html":[2,0,0,858],
 "NotificationStatsMana_8cs.html":[2,0,0,860],
 "NotificationStatsMana_8cs_source.html":[2,0,0,860],
 "NotificationStats_8cs.html":[2,0,0,859],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "QuestHuntRace_8cs.html":[2,0,0,938],
 "QuestHuntRace_8cs_source.html":[2,0,0,938],
 "QuestHunt_8cs.html":[2,0,0,937],
-"QuestHunt_8cs_source.html":[2,0,0,937],
-"QuestInstance_8cs.html":[2,0,0,939]
+"QuestHunt_8cs_source.html":[2,0,0,937]
 };

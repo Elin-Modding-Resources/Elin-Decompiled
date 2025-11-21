@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"HomeResourceIndustry_8cs_source.html":[2,0,0,590],
 "HomeResourceKarma_8cs.html":[2,0,0,591],
 "HomeResourceKarma_8cs_source.html":[2,0,0,591],
 "HomeResourceManager_8cs.html":[2,0,0,592],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81da":[2,0,0,651,0],
 "Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa0959a8b663be96468a1c5c1d456243a2":[2,0,0,651,0,0],
 "Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa69266c67e75c946ef9b4144b0554326d":[2,0,0,651,0,2],
-"Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa7d793037a0760186574b0282f2f435e7":[2,0,0,651,0,3],
-"Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa99e9bae675b12967251c175696f00a70":[2,0,0,651,0,5]
+"Interest_8cs.html#a406b0c0f39662fd6ef695c1d181d81daa7d793037a0760186574b0282f2f435e7":[2,0,0,651,0,3]
 };

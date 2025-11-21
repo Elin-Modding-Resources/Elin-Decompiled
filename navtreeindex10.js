@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"LayerNewspaper_8cs_source.html":[2,0,0,764],
 "LayerPauseMenu_8cs.html":[2,0,0,767],
 "LayerPauseMenu_8cs_source.html":[2,0,0,767],
 "LayerPause_8cs.html":[2,0,0,766],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "NotificationGuest_8cs_source.html":[2,0,0,856],
 "NotificationHome_8cs.html":[2,0,0,857],
 "NotificationHome_8cs_source.html":[2,0,0,857],
-"NotificationStance_8cs.html":[2,0,0,858],
-"NotificationStance_8cs_source.html":[2,0,0,858]
+"NotificationStance_8cs.html":[2,0,0,858]
 };

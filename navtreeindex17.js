@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TraitDemitas_8cs_source.html":[2,0,0,1418],
 "TraitDeposit_8cs.html":[2,0,0,1419],
 "TraitDeposit_8cs_source.html":[2,0,0,1419],
 "TraitDetector_8cs.html":[2,0,0,1420],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitIncubator_8cs_source.html":[2,0,0,1541],
 "TraitIndulgence_8cs.html":[2,0,0,1542],
 "TraitIndulgence_8cs_source.html":[2,0,0,1542],
-"TraitInformer_8cs.html":[2,0,0,1543],
-"TraitInformer_8cs_source.html":[2,0,0,1543]
+"TraitInformer_8cs.html":[2,0,0,1543]
 };

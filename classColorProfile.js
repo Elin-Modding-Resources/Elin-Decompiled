@@ -11,6 +11,7 @@ var classColorProfile =
     [ "colorAct", "classColorProfile.html#aedf78c28f8a4e6a479f5c072726394a0", null ],
     [ "colorActCriticalWarning", "classColorProfile.html#afacd6a9e118199f7bdaa4c4e707435cd", null ],
     [ "colorActWarnning", "classColorProfile.html#a194bbc8a5ab1d6331a35866fa4677f36", null ],
+    [ "colorBlood", "classColorProfile.html#a493c8124a2f53923879620b33fe5a23d", null ],
     [ "colorBuff", "classColorProfile.html#a55c8db995709b2a68612405d1ca821d1", null ],
     [ "colorDebuff", "classColorProfile.html#a5191f53d0cb915e3ebb48bf92cfa5944", null ],
     [ "colorFriend", "classColorProfile.html#a53498a09ede057d8fb35531d2192a325", null ],

@@ -69,6 +69,7 @@ var classCINT =
     [ "revealLock", "classCINT.html#a9d7acea1038942e357c21e01e088d94a", null ],
     [ "rosterPriority", "classCINT.html#aef353382f8795ed0e93311e3b8196519", null ],
     [ "seed", "classCINT.html#ab4cf5656bb9293b5068ddf8ec309bc86", null ],
+    [ "seedBlood", "classCINT.html#ac10991aaf6565612a0b6970cf554b492", null ],
     [ "sisterEaten", "classCINT.html#ad5bdcda652bd3e30c530c9609ead8f13", null ],
     [ "summonDuration", "classCINT.html#a63edcffbd8222afefd41f94252c9459c", null ],
     [ "taxExtra", "classCINT.html#a69336b5f862df5cee13e39cb7ca32cd0", null ],

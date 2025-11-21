@@ -1,5 +1,12 @@
 var NAVTREEINDEX116 =
 {
+"classTraitAncientbook.html#ae882ffdfc7ef8327868fd0c99b2d937f":[1,0,1426,0],
+"classTraitAncientbook.html#aec51bf4c2860bbb886b3a13bf244bd0f":[1,0,1426,1],
+"classTraitAnimalTamer.html":[1,0,1427],
+"classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1427,1],
+"classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1427,0],
+"classTraitAnvil.html":[1,0,1428],
+"classTraitAppraiser.html":[1,0,1429],
 "classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1429,0],
 "classTraitAppraiser.html#ac2667376d933a0450b99f469e1d4aa73":[1,0,1429,1],
 "classTraitAshland.html":[1,0,1430],
@@ -242,12 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitCard.html#a385d69ae4a39fed551482ff9a659dc85":[1,0,1478,1],
 "classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370":[1,0,1478,0],
 "classTraitCasinoGuard.html":[1,0,1479],
-"classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1479,0],
-"classTraitCasinoTable.html":[1,0,1480],
-"classTraitCasinoTable.html#aae4eafadaaee9f34981e5563e683d053":[1,0,1480,0],
-"classTraitCatalyst.html":[1,0,1481],
-"classTraitCatalyst.html#a59a77591fab9d39c5bd83213544e5429":[1,0,1481,6],
-"classTraitCatalyst.html#a5d315e8c2b7c8e8c9fe358627223432e":[1,0,1481,1],
-"classTraitCatalyst.html#a68c0c579c7c2d15f6350565b831b1c2d":[1,0,1481,4],
-"classTraitCatalyst.html#a6c7acb26a8fe1a6c9b5bd83b2032344f":[1,0,1481,3]
+"classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1479,0]
 };

@@ -288,6 +288,7 @@ var classCard =
     [ "c_ammo", "classCard.html#a23769f359b95bd36d480b6441712761e", null ],
     [ "c_bedType", "classCard.html#ab997fc34b4e7841e89501d89982dd430", null ],
     [ "c_bill", "classCard.html#abf90c4d27b3663c5d10b0121a0f1850c", null ],
+    [ "c_bloodData", "classCard.html#a75d650ebf45fa3e8e7d3c44af8b8f74c", null ],
     [ "c_bossType", "classCard.html#aad375733e1d84005c0c9be12b026634b", null ],
     [ "c_charaList", "classCard.html#a0306eabe175e0108a72886754904097e", null ],
     [ "c_charges", "classCard.html#aedc5cea1616f2efa676ef172a05330b1", null ],

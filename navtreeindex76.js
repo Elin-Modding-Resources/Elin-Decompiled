@@ -1,5 +1,12 @@
 var NAVTREEINDEX76 =
 {
+"classLayerColorPicker.html#a7428f7de243c1336ce0ecd0fe598626d":[1,0,775,3],
+"classLayerColorPicker.html#a7994d3140cf232d2fd8e266759900c98":[1,0,775,2],
+"classLayerColorPicker.html#a7bef92c42fdcfea302d10f6efbb34713":[1,0,775,5],
+"classLayerColorPicker.html#a7dd5e4deeb0522b00c575b9c7bfe70c5":[1,0,775,8],
+"classLayerColorPicker.html#a7df720def100cee805658690d6b23ccf":[1,0,775,4],
+"classLayerColorPicker.html#a880fbf1aca4143f770d6c9d15bc372b1":[1,0,775,10],
+"classLayerColorPicker.html#a911ed5035831c6c4eb3e75442c5f8c70":[1,0,775,0],
 "classLayerColorPicker.html#a9fb7a8008515a9235a424b8d14374911":[1,0,775,9],
 "classLayerColorPicker.html#aebc0933e0af1b45c90d0eca1ea9647c8":[1,0,775,7],
 "classLayerConfig.html":[1,0,776],
@@ -242,12 +249,5 @@ var NAVTREEINDEX76 =
 "classLayerDrama.html#ad1a4e55648a94c30d54c2e42dce5d165":[1,0,785,8],
 "classLayerDrama.html#ada46697fddd0a2c44e96f81804721ed6":[1,0,785,15],
 "classLayerDrama.html#adc47f42ad02e07b6cf77eb76e1143eba":[1,0,785,20],
-"classLayerDrama.html#ae6095d5ac50545729bd6b5b4257fc1f6":[1,0,785,7],
-"classLayerDrama.html#ae8b80d157910626fdaf0c784afa07aa0":[1,0,785,21],
-"classLayerDrama.html#afb5ff4b639e2286d9be5eaa9feb02836":[1,0,785,19],
-"classLayerEditBio.html":[1,0,786],
-"classLayerEditBio.html#a23be04bac6c16d48ff88896b4d27bfb6":[1,0,786,7],
-"classLayerEditBio.html#a5c3802f8572ffb08403a9ceb836b7970":[1,0,786,3],
-"classLayerEditBio.html#a64f764cd5093dcbc53de378f2c12c641":[1,0,786,2],
-"classLayerEditBio.html#aa3bcfc795c96e7d90f67f90ff0f4ae4d":[1,0,786,4]
+"classLayerDrama.html#ae6095d5ac50545729bd6b5b4257fc1f6":[1,0,785,7]
 };

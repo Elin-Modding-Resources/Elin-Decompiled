@@ -17,6 +17,7 @@ var classCellEffect =
     [ "LiquidAmount", "classCellEffect.html#a57f1a43f5b3bb379abb6ffd0499b45d9", null ],
     [ "n1", "classCellEffect.html#a54e1a4d337ce20b591256682d5f864cf", null ],
     [ "power", "classCellEffect.html#a40c4b8174b7cbc1521f997ce42b20187", null ],
+    [ "refVal", "classCellEffect.html#aebed4bbf159e5f54f4b17d54d359a570", null ],
     [ "source", "classCellEffect.html#adae07f5cb0533fcf5607b1c22b7cb720", null ],
     [ "WillFade", "classCellEffect.html#a548574827318445ac6fb9e51c09d2093", null ]
 ];

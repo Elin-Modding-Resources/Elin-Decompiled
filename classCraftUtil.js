@@ -10,9 +10,10 @@ var classCraftUtil =
       [ "Dark", "classCraftUtil.html#a7b9a8d0121c502659dbe8a4142836694aa18366b217ebf811ad1886e4f4f865b2", null ]
     ] ],
     [ "AddRandomFoodEnc", "classCraftUtil.html#a6414ffbba2b88786b5a038f5f6805217", null ],
+    [ "GetBloodText", "classCraftUtil.html#add4dc6f639360d41149085a0df252bc5", null ],
     [ "GetRandomDarkSoupIngredient", "classCraftUtil.html#a0c93bd9f677aa06f1c994b16fcfb6b22", null ],
     [ "GetRandomLoveLunchIngredient", "classCraftUtil.html#ac0f6845b4b1d1a45632a077f4d56e480", null ],
-    [ "MakeBloodMeal", "classCraftUtil.html#afed8b26f02be941b7dfe57507394488c", null ],
+    [ "MakeBloodMeal", "classCraftUtil.html#ab91e5f5911c27b051977ad8c17570a8e", null ],
     [ "MakeBloodSample", "classCraftUtil.html#a2babaa0e229cdf7077dd7686ab79f4be", null ],
     [ "MakeDarkSoup", "classCraftUtil.html#a1b4961f4e07ca3bdb4527d844d1f1de3", null ],
     [ "MakeDish", "classCraftUtil.html#a373d25217096239cdfbc441c85f742d1", null ],

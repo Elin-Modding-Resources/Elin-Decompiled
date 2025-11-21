@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitPotion_8cs_source.html":[2,0,0,1664],
 "TraitPowerStatue_8cs.html":[2,0,0,1669],
 "TraitPowerStatue_8cs_source.html":[2,0,0,1669],
 "TraitPunishBall_8cs.html":[2,0,0,1670],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitToolBuild_8cs.html":[2,0,0,1790],
 "TraitToolBuild_8cs_source.html":[2,0,0,1790],
 "TraitToolButcher_8cs.html":[2,0,0,1791],
-"TraitToolButcher_8cs_source.html":[2,0,0,1791],
-"TraitToolFishing_8cs.html":[2,0,0,1792]
+"TraitToolButcher_8cs_source.html":[2,0,0,1791]
 };
