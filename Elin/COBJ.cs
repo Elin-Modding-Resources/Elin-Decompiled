@@ -35,4 +35,6 @@ public class COBJ
 	public const int socketList = 17;
 
 	public const int mixedFoodData = 18;
+
+	public const int bloodData = 19;
 }

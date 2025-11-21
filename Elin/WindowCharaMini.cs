@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -193,7 +194,13 @@ public class WindowCharaMini : WindowController
 			note.SetActive(enable: true);
 			note.AddText("feat_pet".lang(chara.feat.ToString() ?? "", num.ToString() ?? ""));
 			note.AddText("feat_inferior".lang(chara.CurrentGeneSlot.ToString() ?? "", chara.MaxGeneSlot.ToString() ?? "", ((genes != null) ? genes.inferior : 0).ToString() ?? ""));
-			note.AddText((chara.isScaled ? "feat_pet_type2" : "feat_pet_type1").lang());
+			HintIcon componentInChildren = note.AddText("NoteText_with_hint", (chara.isScaled ? "feat_pet_type2" : "feat_pet_type1").lang()).GetComponentInChildren<HintIcon>();
+			string text = (chara.isScaled ? "feat_pet_type2_hint" : "feat_pet_type1_hint").lang();
+			if (!chara.isScaled && !chara.HasElement(1273))
+			{
+				text = text + Environment.NewLine + (chara.CanBloom() ? "petawaken2" : "petawaken1").lang();
+			}
+			componentInChildren.tooltip.lang = text;
 			note.Space(8);
 			foreach (CharaUpgrade.Item item6 in upgrades.items)
 			{

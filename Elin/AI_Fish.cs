@@ -128,7 +128,7 @@ public class AI_Fish : AIAct
 					}
 				}
 			}
-			else
+			else if (!owner.IsPCParty)
 			{
 				foreach (Thing item in owner.things.List((Thing t) => t.source._origin == "fish"))
 				{

@@ -1913,6 +1913,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public Thing c_bloodData
+	{
+		get
+		{
+			return GetObj<Thing>(19);
+		}
+		set
+		{
+			SetObj(19, value);
+		}
+	}
+
 	public byte[] c_textureData
 	{
 		get

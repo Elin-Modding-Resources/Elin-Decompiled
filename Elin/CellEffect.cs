@@ -118,6 +118,18 @@ public class CellEffect : EClass
 		}
 	}
 
+	public int refVal
+	{
+		get
+		{
+			return ints[7];
+		}
+		set
+		{
+			ints[7] = value;
+		}
+	}
+
 	public string n1
 	{
 		get

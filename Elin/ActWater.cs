@@ -20,8 +20,10 @@ public class ActWater : Act
 		}
 		foreach (Chara chara in Act.TP.Charas)
 		{
+			bool flag = false;
 			if (chara.HasCondition<ConBurning>())
 			{
+				flag = true;
 				chara.Talk("thanks");
 			}
 			else if (!chara.IsPCParty && EClass.rnd(2) == 0)
@@ -34,7 +36,10 @@ public class ActWater : Act
 				continue;
 			}
 			chara.AddCondition<ConWet>();
-			Act.CC.DoHostileAction(chara);
+			if (!flag)
+			{
+				Act.CC.DoHostileAction(chara);
+			}
 		}
 		Act.CC.PlaySound("water_farm");
 		waterCan.owner.ModCharge(-1);

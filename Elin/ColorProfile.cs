@@ -140,6 +140,8 @@ public class ColorProfile : EScriptable
 
 	public Color colorHostile;
 
+	public Color colorBlood;
+
 	public Color colorBuff;
 
 	public Color colorDebuff;

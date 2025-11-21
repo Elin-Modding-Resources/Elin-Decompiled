@@ -114,27 +114,59 @@ public class CraftUtil : EClass
 		}
 	}
 
-	public static Thing MakeBloodMeal(Chara sucker, Chara feeder)
+	public static string GetBloodText(Chara c)
 	{
-		Rand.SetSeed(EClass.game.seed + feeder.uid);
-		Thing thing = ThingGen.CreateFromCategory("meal", 100);
-		sucker.Say("food_blood", thing);
-		MakeDish(thing, 100, null, EClass.game.seed + feeder.uid);
-		if (thing.HasElement(709))
+		string text = "";
+		List<Element> list = MakeBloodMeal(EClass.pc, c, msg: false).elements.ListElements((Element e) => e.IsFoodTraitMain, (Element a, Element b) => b.Value - a.Value);
+		int num = Mathf.Min(list.Count(), 3, EClass.debug.godMode ? 3 : (1 + EClass.pc.Evalue(6607) / 15));
+		for (int i = 0; i < num; i++)
 		{
-			thing.elements.Remove(709);
+			Element element = list[i];
+			string[] textArray = element.source.GetTextArray("textAlt");
+			int num2 = Mathf.Clamp(element.Value / 10 + 1, (element.Value < 0 || textArray.Length <= 2) ? 1 : 2, textArray.Length - 1);
+			string text2 = textArray[num2];
+			if (i != 0)
+			{
+				text += ", ";
+			}
+			text += text2;
 		}
-		if (thing.HasElement(708))
+		if (!text.IsEmpty())
 		{
-			thing.elements.Remove(708);
+			text = " (" + text + ")";
 		}
-		if (thing.HasElement(701))
+		return text;
+	}
+
+	public static Thing MakeBloodMeal(Chara sucker, Chara feeder, bool msg = true)
+	{
+		Thing c_bloodData = feeder.c_bloodData;
+		if (c_bloodData == null)
 		{
-			thing.elements.Remove(701);
+			int seed = ((feeder.GetInt(118) == 0) ? (EClass.game.seed + feeder.uid) : feeder.GetInt(118));
+			Rand.SetSeed(seed);
+			c_bloodData = ThingGen.CreateFromCategory("meal", 100);
+			if (msg)
+			{
+				sucker.Say("food_blood", c_bloodData);
+			}
+			MakeDish(c_bloodData, 100, null, seed);
+			c_bloodData.elements.SetTo(709, 0);
+			c_bloodData.elements.SetTo(708, 0);
+			c_bloodData.elements.SetTo(701, 0);
+			feeder.c_bloodData = c_bloodData.Duplicate(1);
 		}
-		thing.elements.ModBase(710, 20 + (int)Mathf.Min(Mathf.Sqrt(sucker.Evalue(6607) + Mathf.Max(sucker.LER, 0)), 50f));
-		thing.elements.SetTo(2, Mathf.Min(EClass.curve(feeder.LV, 30, 10, 65), 200));
-		return thing;
+		else
+		{
+			c_bloodData = c_bloodData.Duplicate(1);
+			if (msg)
+			{
+				sucker.Say("food_blood", c_bloodData);
+			}
+		}
+		c_bloodData.elements.SetTo(2, Mathf.Min(EClass.curve(feeder.LV, 30, 10, 65), 200));
+		c_bloodData.elements.ModBase(710, 15 + (int)Mathf.Min(Mathf.Sqrt(sucker.Evalue(6607) + Mathf.Max(sucker.LER, 0)), 50f));
+		return c_bloodData;
 	}
 
 	public static Thing MakeBloodSample(Chara sucker, Chara feeder)
@@ -148,6 +180,7 @@ public class CraftUtil : EClass
 		thing2.elements.SetTo(10, 0);
 		thing2.MakeRefFrom(feeder);
 		thing2.c_idRefCard = thing.id;
+		thing2.SetInt(118, EClass.game.seed + feeder.uid);
 		return thing2;
 	}
 
@@ -368,6 +401,11 @@ public class CraftUtil : EClass
 					num += Mathf.Clamp(ing.SelfWeight * 80 / 100, 50, 400 + ing.SelfWeight / 20);
 					int value = ing.GetValue();
 					num2 += value;
+				}
+				if (product.id == "1300" && product.GetInt(118) == 0)
+				{
+					product.SetInt(118, ing.GetInt(118));
+					product.c_idRefCard = ing.c_idRefCard;
 				}
 			}
 		}

@@ -132,5 +132,6 @@ public enum EffectId
 	Rocket = 308,
 	StripBlessing = 309,
 	Flare = 310,
-	GravityGun = 311
+	GravityGun = 311,
+	TransBlood = 312
 }

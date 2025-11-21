@@ -4195,7 +4195,8 @@ public class Chara : Card, IPathfindWalker
 				ActEffect.ProcAt(e.idEffect, e.power, e.isBlessed ? BlessedState.Blessed : (e.isCursed ? BlessedState.Cursed : BlessedState.Normal), this, this, new Point(pos), e.isHostileAct, new ActRef
 				{
 					aliasEle = EClass.sources.elements.map[e.idEle].alias,
-					n1 = e.n1
+					n1 = e.n1,
+					refVal = e.refVal
 				});
 				ClearEffect();
 			}
@@ -6743,6 +6744,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			text2 += ("(" + faith.Name + ")").TagSize(14);
 		}
+		if (EClass.pc.HasElement(1250))
+		{
+			s += CraftUtil.GetBloodText(this).TagSize(14).TagColor(EClass.Colors.colorBlood);
+		}
 		return text + text2 + s;
 	}
 
@@ -8529,7 +8534,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (!EClass.debug.enable)
+		if (!EClass.debug.godMode)
 		{
 			if (base.c_daysWithPC > 360)
 			{

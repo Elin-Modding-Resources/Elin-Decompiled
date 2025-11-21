@@ -183,7 +183,7 @@ public class TraitDrink : Trait
 		if (IdEffect != EffectId.Drink)
 		{
 			bool isHostileAct = c.IsPCParty && IsNeg;
-			EClass._map.SetLiquid(p.x, p.z, new CellEffect
+			CellEffect cellEffect = new CellEffect
 			{
 				id = 4,
 				idEffect = IdEffect,
@@ -195,7 +195,12 @@ public class TraitDrink : Trait
 				n1 = N1,
 				isBlessed = (owner.blessedState >= BlessedState.Blessed),
 				isCursed = (owner.blessedState <= BlessedState.Cursed)
-			});
+			};
+			if (IdEffect == EffectId.TransBlood)
+			{
+				cellEffect.refVal = owner.GetInt(118);
+			}
+			EClass._map.SetLiquid(p.x, p.z, cellEffect);
 		}
 		else
 		{
