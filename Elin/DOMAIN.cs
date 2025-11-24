@@ -2,23 +2,23 @@ using UnityEngine;
 
 public class DOMAIN
 {
-	public const int domFaith = 802;
-
-	public const int domSurvival = 801;
-
-	public const int domTest = 800;
-
-	public const int domElement = 806;
-
-	public const int domMiracle = 803;
+	public const int domComm = 805;
 
 	public const int domArcane = 804;
 
-	public const int domComm = 805;
+	public const int domElement = 806;
+
+	public const int domTest = 800;
+
+	public const int domMiracle = 803;
+
+	public const int domSurvival = 801;
+
+	public const int domFaith = 802;
 
 	public const int domWind = 807;
 
-	public const int domMachine = 809;
+	public const int domHarvest = 808;
 
 	public const int domLuck = 810;
 
@@ -32,12 +32,12 @@ public class DOMAIN
 
 	public const int domHarmony = 815;
 
-	public const int domHarvest = 808;
+	public const int domMachine = 809;
 
 	public static readonly int[] IDS = new int[16]
 	{
-		802, 801, 800, 806, 803, 804, 805, 807, 809, 810,
-		811, 812, 813, 814, 815, 808
+		805, 804, 806, 800, 803, 801, 802, 807, 808, 810,
+		811, 812, 813, 814, 815, 809
 	};
 }
 public class Domain : EClass

@@ -4120,6 +4120,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				break;
 			}
 		}
+		if (origin != null)
+		{
+			dmg = dmg * (100 + origin.Evalue(94)) / 100;
+		}
 		Element e;
 		if (ele == 0 || ele == 926)
 		{
@@ -4396,7 +4400,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_104d;
+							goto IL_1077;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4424,7 +4428,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_104d;
+								goto IL_1077;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4442,8 +4446,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_104d;
-		IL_104d:
+		goto IL_1077;
+		IL_1077:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -4611,11 +4615,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					EClass.player.codex.AddKill(id);
 					if (Guild.Fighter.CanGiveContribution(Chara))
 					{
-						Guild.Fighter.AddContribution(5 + LV / 5);
+						Guild.Fighter.AddContribution(10 + Mathf.Min(LV, 200) / 5);
 					}
 					if (Guild.Fighter.HasBounty(Chara))
 					{
-						int a = EClass.rndHalf(200 + LV * 20);
+						int a = EClass.rndHalf(200 + EClass.curve(LV, 20, 15) * 20);
 						Msg.Say("bounty", Chara, a.ToString() ?? "");
 						EClass.pc.ModCurrency(a);
 						SE.Pay();
@@ -4756,7 +4760,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			ActEffect.Proc(EffectId.Duplicate, this);
 		}
-		if (origin != null)
+		if (origin != null && !Chara.isRestrained)
 		{
 			AttackProcess.ProcShieldEncs(Chara, origin);
 		}

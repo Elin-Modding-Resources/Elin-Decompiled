@@ -18,6 +18,11 @@ public class ConDisease : BadCondition
 		}
 	}
 
+	public override ElementContainer GetElementContainer()
+	{
+		return ec;
+	}
+
 	public override void SetOwner(Chara _owner, bool onDeserialize = false)
 	{
 		base.SetOwner(_owner);

@@ -112,13 +112,17 @@ public class Date : EClass
 	{
 		get
 		{
-			if (hour < 19)
+			if (hour < HourNight)
 			{
-				return hour <= 5;
+				return hour <= HourMorning;
 			}
 			return true;
 		}
 	}
+
+	public int HourMorning => 5;
+
+	public int HourNight => 19;
 
 	public PeriodOfDay periodOfDay
 	{

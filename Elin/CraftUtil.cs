@@ -143,14 +143,14 @@ public class CraftUtil : EClass
 		Thing c_bloodData = feeder.c_bloodData;
 		if (c_bloodData == null)
 		{
-			int seed = ((feeder.GetInt(118) == 0) ? (EClass.game.seed + feeder.uid) : feeder.GetInt(118));
-			Rand.SetSeed(seed);
+			int num = ((feeder.GetInt(118) == 0) ? (EClass.game.seed + feeder.uid) : feeder.GetInt(118));
+			Rand.SetSeed(num);
 			c_bloodData = ThingGen.CreateFromCategory("meal", 100);
 			if (msg)
 			{
 				sucker.Say("food_blood", c_bloodData);
 			}
-			MakeDish(c_bloodData, 100, null, seed);
+			MakeDish(c_bloodData, 100, null, num + feeder.uid);
 			c_bloodData.elements.SetTo(709, 0);
 			c_bloodData.elements.SetTo(708, 0);
 			c_bloodData.elements.SetTo(701, 0);
@@ -165,7 +165,7 @@ public class CraftUtil : EClass
 			}
 		}
 		c_bloodData.elements.SetTo(2, Mathf.Min(EClass.curve(feeder.LV, 30, 10, 65), 200));
-		c_bloodData.elements.ModBase(710, 15 + (int)Mathf.Min(Mathf.Sqrt(sucker.Evalue(6607) + Mathf.Max(sucker.LER, 0)), 50f));
+		c_bloodData.elements.ModBase(710, 15 + (int)Mathf.Min(Mathf.Sqrt(sucker.Evalue(6607) + Mathf.Max(sucker.LER, 0)), 55f));
 		return c_bloodData;
 	}
 
@@ -224,6 +224,10 @@ public class CraftUtil : EClass
 		if (thing.Evalue(753) < 0)
 		{
 			thing.elements.SetBase(753, 0);
+		}
+		if (EClass.pc.HasElement(1250) && !thing.HasElement(710))
+		{
+			thing.elements.SetBase(710, 1);
 		}
 		Rand.SetSeed();
 		return thing;

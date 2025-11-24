@@ -144,6 +144,11 @@ public class BaseCondition : BaseStats
 		return true;
 	}
 
+	public virtual ElementContainer GetElementContainer()
+	{
+		return elements;
+	}
+
 	public void SetElement(int id)
 	{
 		refVal = id;
@@ -443,11 +448,11 @@ public class BaseCondition : BaseStats
 			}
 			else if (elements != null && elements.Has(e.id) && elements.Value(e.id) != e.Value)
 			{
-				list.Add("modValue".lang(e.Name, ((e.Value < 0) ? "" : "+") + elements.Value(e.id) + " (" + e.Value + ")").TagColor(() => e.Value >= 0));
+				list.Add("modValue".lang(e.Name, ((e.Value < 0) ? "" : "+") + elements.Value(e.id) + (e.source.tag.Contains("ratio") ? "%" : "") + " (" + e.Value + ")").TagColor(() => e.Value >= 0));
 			}
 			else
 			{
-				list.Add("modValue".lang(e.Name, ((e.Value < 0) ? "" : "+") + e.Value).TagColorGoodBad(() => e.Value >= 0));
+				list.Add("modValue".lang(e.Name, ((e.Value < 0) ? "" : "+") + e.Value + (e.source.tag.Contains("ratio") ? "%" : "")).TagColorGoodBad(() => e.Value >= 0));
 			}
 		}
 		if (list.Count <= 0)

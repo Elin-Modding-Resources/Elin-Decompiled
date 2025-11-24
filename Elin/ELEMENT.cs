@@ -59,30 +59,30 @@ public class ELEMENT
 
 	public const int growth = 14;
 
-	public const int lv = 1;
-
-	public const int water = 15;
-
-	public const int d = 3;
-
-	public const int socket = 5;
-
-	public const int quality = 2;
-
-	public const int weight = 11;
+	public const int hardness = 13;
 
 	public const int size = 12;
 
-	public const int hardness = 13;
+	public const int weight = 11;
 
 	public const int nutrition = 10;
+
+	public const int socket = 5;
+
+	public const int d = 3;
+
+	public const int water = 15;
+
+	public const int lv = 1;
+
+	public const int quality = 2;
 
 	public static readonly int[] IDS = new int[36]
 	{
 		752, 753, 754, 755, 756, 762, 760, 761, 763, 765,
 		751, 759, 750, 0, 25, 85, 29, 26, 24, 23,
-		22, 21, 18, 17, 16, 20, 14, 1, 15, 3,
-		5, 2, 11, 12, 13, 10
+		22, 21, 18, 17, 16, 20, 14, 13, 12, 11,
+		10, 5, 3, 15, 1, 2
 	};
 }
 public class Element : EClass
@@ -164,9 +164,9 @@ public class Element : EClass
 			}
 			foreach (Condition condition in c.conditions)
 			{
-				if (condition.elements != null)
+				if (condition.GetElementContainer() != null)
 				{
-					AddText(condition.elements.Value(id), condition.Name);
+					AddText(condition.GetElementContainer().Value(id), condition.Name);
 				}
 			}
 			if (c.tempElements != null)
@@ -1051,6 +1051,7 @@ public class Element : EClass
 				break;
 			case 6663:
 			case 6664:
+			case 6665:
 			{
 				int num2 = -2;
 				foreach (BodySlot slot in c.body.slots)

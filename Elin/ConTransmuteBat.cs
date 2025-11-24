@@ -22,7 +22,7 @@ public class ConTransmuteBat : ConTransmute
 	public override void OnRemoved()
 	{
 		base.OnRemoved();
-		owner.HealHP(owner.MaxHP / 2, HealSource.Item);
+		owner.HealHP(owner.MaxHP, HealSource.Item);
 		owner.SetCooldown(8793);
 	}
 }

@@ -4,15 +4,15 @@ public class MUTATION
 
 	public const int mutationSkin = 1510;
 
-	public const int mutationSkinN = 1511;
-
 	public const int mutationEye = 1512;
+
+	public const int mutationEyeN = 1513;
 
 	public const int mutationDex = 1514;
 
 	public const int mutationRegen = 1516;
 
-	public const int mutationEyeN = 1513;
+	public const int mutationSkinN = 1511;
 
 	public const int mutationSpeed = 1518;
 
@@ -50,9 +50,9 @@ public class MUTATION
 
 	public const int mutationHairN = 1533;
 
-	public const int mutationSpeedN = 1519;
-
 	public const int etherGravity = 1550;
+
+	public const int mutationStr = 1520;
 
 	public const int mutationStrN = 1521;
 
@@ -64,7 +64,7 @@ public class MUTATION
 
 	public const int mutationBrainN = 1525;
 
-	public const int mutationStr = 1520;
+	public const int mutationSpeedN = 1519;
 
 	public const int mutationColdN = 1527;
 
@@ -82,10 +82,10 @@ public class MUTATION
 
 	public static readonly int[] IDS = new int[40]
 	{
-		1515, 1510, 1511, 1512, 1514, 1516, 1513, 1518, 1565, 1564,
+		1515, 1510, 1512, 1513, 1514, 1516, 1511, 1518, 1565, 1564,
 		1563, 1562, 1561, 1560, 1559, 1558, 1557, 1517, 1555, 1554,
-		1553, 1552, 1551, 1556, 1533, 1519, 1550, 1521, 1522, 1523,
-		1524, 1525, 1520, 1527, 1528, 1529, 1530, 1531, 1532, 1526
+		1553, 1552, 1551, 1556, 1533, 1550, 1520, 1521, 1522, 1523,
+		1524, 1525, 1519, 1527, 1528, 1529, 1530, 1531, 1532, 1526
 	};
 }
 public class Mutation : Feat

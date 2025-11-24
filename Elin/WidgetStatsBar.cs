@@ -282,6 +282,10 @@ public class WidgetStatsBar : Widget
 					text2 = text2 + " (" + ele.ValueWithoutLink + ")";
 				}
 				int num = ((EMono.pc.tempElements != null) ? EMono.pc.tempElements.Value(ele.id) : 0);
+				foreach (Condition condition in EMono.pc.conditions)
+				{
+					num += (condition.GetElementContainer()?.GetElement(ele.id)?.Value).GetValueOrDefault();
+				}
 				if (ele.DisplayValue < ele.ValueWithoutLink || num < 0)
 				{
 					fontColor = FontColor.Bad;

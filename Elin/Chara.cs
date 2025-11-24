@@ -1610,10 +1610,13 @@ public class Chara : Card, IPathfindWalker
 				SetFeat(1644, j + 1);
 			}
 		}
-		string text = id;
-		if (text == "putty_mech_b" || text == "putty_mech")
+		switch (id)
 		{
+		case "putty_mech_b":
+		case "putty_mech":
+		case "robot":
 			SetFeat(1248, 1 + EClass.rnd(5));
+			break;
 		}
 		InitStats();
 		body.SetOwner(this);
@@ -3720,6 +3723,12 @@ public class Chara : Card, IPathfindWalker
 			if (isWeakToSunlight && pos.IsSunLit)
 			{
 				AddCondition<ConBurning>(1000, force: true);
+			}
+			break;
+		case 15:
+			if (HasElement(1250) && !HasCondition<ConVampire>())
+			{
+				AddCondition<ConVampire>();
 			}
 			break;
 		}
@@ -6744,7 +6753,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			text2 += ("(" + faith.Name + ")").TagSize(14);
 		}
-		if (EClass.pc.HasElement(1250))
+		if (EClass.pc.HasElement(6607))
 		{
 			s += CraftUtil.GetBloodText(this).TagSize(14).TagColor(EClass.Colors.colorBlood);
 		}

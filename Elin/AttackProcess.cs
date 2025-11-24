@@ -118,7 +118,7 @@ public class AttackProcess : EClass
 		{
 			num += EClass.pc.faction.charaElements.Value(ele);
 		}
-		num = num * (100 + GetTwoHandEncBonus(CC)) / 100;
+		num = num * (100 + GetTwoHandEncBonus(CC, w)) / 100;
 		if (addSelfEnc)
 		{
 			num += CC.Evalue(ele);
@@ -126,9 +126,9 @@ public class AttackProcess : EClass
 		return num;
 	}
 
-	public static int GetTwoHandEncBonus(Chara CC)
+	public static int GetTwoHandEncBonus(Chara CC, Thing w)
 	{
-		if (CC == null || CC.body.GetAttackStyle() != AttackStyle.TwoHand)
+		if (CC == null || CC.body.GetAttackStyle() != AttackStyle.TwoHand || w == null || !w.IsWeapon)
 		{
 			return 0;
 		}
@@ -708,7 +708,7 @@ public class AttackProcess : EClass
 				ModExpDef(150, 90);
 				ModExpDef(151, 90);
 			}
-			ProcAbility(list, CC, TC, weaponSkill.Value * (100 + GetTwoHandEncBonus(CC)) / 100, subAttack);
+			ProcAbility(list, CC, TC, weaponSkill.Value * (100 + GetTwoHandEncBonus(CC, weapon)) / 100, subAttack);
 			return false;
 		}
 		if (TC.IsPC)
@@ -828,7 +828,7 @@ public class AttackProcess : EClass
 				{
 					int num10 = 25;
 					int num11 = EClass.rnd(num * (100 + item.Value * 10) / 500 + 5);
-					num11 = num11 * (100 + GetTwoHandEncBonus(CC)) / 100;
+					num11 = num11 * (100 + GetTwoHandEncBonus(CC, weapon)) / 100;
 					if (conWeapon == null && weapon != null && weapon.trait is TraitToolRangeCane)
 					{
 						num10 = 0;
@@ -839,7 +839,7 @@ public class AttackProcess : EClass
 					}
 				}
 			}
-			ProcAbility(list, CC, TC, weaponSkill.Value * (100 + GetTwoHandEncBonus(CC)) / 100, subAttack);
+			ProcAbility(list, CC, TC, weaponSkill.Value * (100 + GetTwoHandEncBonus(CC, weapon)) / 100, subAttack);
 		}
 		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)
 		{
@@ -872,7 +872,10 @@ public class AttackProcess : EClass
 					}
 					TC.Chara.AddCondition<ConParalyze>(EClass.rnd(2), force: true);
 				}
-				ProcShieldEncs(CC, TC, 500 + num13);
+				if (!TC.isRestrained)
+				{
+					ProcShieldEncs(CC, TC, 500 + num13);
+				}
 				if (CC.IsAliveInCurrentZone)
 				{
 					CC.ModExp(123, 50);

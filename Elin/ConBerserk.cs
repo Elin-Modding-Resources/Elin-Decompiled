@@ -11,6 +11,5 @@ public class ConBerserk : BadCondition
 	public override void OnRemoved()
 	{
 		owner.isBerserk = false;
-		owner.ai.Cancel();
 	}
 }

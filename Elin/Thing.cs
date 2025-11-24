@@ -1294,7 +1294,11 @@ public class Thing : Card
 					int num3 = e.Value;
 					if (e.source.IsWeaponEnc && (!e.source.tag.Contains("modRanged") || e.id == 609) && isEquipped && root.isChara)
 					{
-						num3 = num3 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara)) / 100;
+						int num4 = e.id;
+						if (num4 != 482 && (uint)(num4 - 660) > 2u && num4 != 666)
+						{
+							num3 = num3 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara, this)) / 100;
+						}
 					}
 					string text13 = " (" + e.Value + ((e.Value == num3) ? "" : (" → " + num3)) + ")";
 					string text14 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();

@@ -956,6 +956,7 @@ public class CoreDebug : EScriptable
 			if (targetChara != null)
 			{
 				EClass.pc.Pick(CraftUtil.MakeBloodMeal(EClass.pc, targetChara));
+				EClass.pc.Pick(CraftUtil.MakeLoveLunch(targetChara));
 			}
 			targetChara.ScaleByPrincipal();
 			if (EClass.game.quests.Get<QuestDebt>() == null)
