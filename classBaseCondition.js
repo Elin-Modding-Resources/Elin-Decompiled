@@ -7,6 +7,7 @@ var classBaseCondition =
     [ "EvaluateTurn", "classBaseCondition.html#a7f23858771f5daa7a120966068d52c05", null ],
     [ "GetColor", "classBaseCondition.html#a7a2cfa01df0129fa55c3045866180b2a", null ],
     [ "GetDefenseAttribute", "classBaseCondition.html#a7e7d9996a7ea3e5c399f3ad7e028f8ed", null ],
+    [ "GetElementContainer", "classBaseCondition.html#a028a909cb8f0d5e950bd2a3ea6a63edf", null ],
     [ "GetElementSource", "classBaseCondition.html#a73caba75a4e1224a76a46fae1bb985f0", null ],
     [ "GetPhase", "classBaseCondition.html#af424fbf8c5f20a671768732269a12794", null ],
     [ "GetPhaseStr", "classBaseCondition.html#a839c744cb3666c758862845d49b1447c", null ],

@@ -42,6 +42,8 @@ var classDate =
     [ "YearTokenReal", "classDate.html#aa8bac7cb70ff645bd639bd80818d729a", null ],
     [ "day", "classDate.html#a88e44d6a54b8d25743f5590952e6b652", null ],
     [ "hour", "classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7", null ],
+    [ "HourMorning", "classDate.html#a6cd5c56e141f1ad774c745acdd473c08", null ],
+    [ "HourNight", "classDate.html#ae1efc33bfa019cec432932772855c0c5", null ],
     [ "IsAutumn", "classDate.html#af5a09798bef48951e2f0b6d5da090099", null ],
     [ "IsDay", "classDate.html#ab7c92cde685794bd42f7a49d96cea30b", null ],
     [ "IsNight", "classDate.html#a9606e862f9f0b724127148efb1111486", null ],

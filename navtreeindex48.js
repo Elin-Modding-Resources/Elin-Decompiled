@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"classColorProfile_1_1RarityColors.html#a4a84930afe50735e9a4f9be1e84b7772":[1,0,296,2,1],
+"classColorProfile_1_1RarityColors.html#a4d5f11be82d0051ad40e8793eb9f5a0e":[1,0,296,2,4],
+"classColorProfile_1_1RarityColors.html#a5bd7eb53338b63dcee159a20a3d56479":[1,0,296,2,2],
 "classColorProfile_1_1RarityColors.html#afe6cb39b3473dd4325e2aa4aacdfdd29":[1,0,296,2,3],
 "classColorProfile_1_1RarityColors.html#aff6edd300207163e9f504d3e19096f32":[1,0,296,2,5],
 "classColorProfile_1_1TextColors.html":[1,0,296,3],
@@ -74,11 +77,12 @@ var NAVTREEINDEX48 =
 "classConDim.html":[1,0,313],
 "classConDim.html#ab62c03810e3c03a3655c938d3e16e4f0":[1,0,313,0],
 "classConDisease.html":[1,0,314],
-"classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,314,1],
-"classConDisease.html#a77af44cc3544aac2d0cce8a9930605bf":[1,0,314,4],
-"classConDisease.html#ad8527bb782ccef1f688df0ded6e72923":[1,0,314,2],
-"classConDisease.html#adbda88b1068645fd3d15b4e84f279f92":[1,0,314,0],
-"classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,314,3],
+"classConDisease.html#a1434844620f4de148c1065529cfa3f89":[1,0,314,0],
+"classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,314,2],
+"classConDisease.html#a77af44cc3544aac2d0cce8a9930605bf":[1,0,314,5],
+"classConDisease.html#ad8527bb782ccef1f688df0ded6e72923":[1,0,314,3],
+"classConDisease.html#adbda88b1068645fd3d15b4e84f279f92":[1,0,314,1],
+"classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,314,4],
 "classConDrawBacker.html":[1,0,316],
 "classConDrawMetal.html":[1,0,317],
 "classConDrawMonster.html":[1,0,318],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "classConTorch.html#a509b747906126e35a1094d22a172cab0":[1,0,386,4],
 "classConTorch.html#a5ee0ce2caa3b79071714b14cbf509a2b":[1,0,386,3],
 "classConTorch.html#ab1487bed345a17352630c0ebb02e1d15":[1,0,386,1],
-"classConTransmute.html":[1,0,387],
-"classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a":[1,0,387,2],
-"classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013":[1,0,387,0],
-"classConTransmute.html#a54071b3bff56fc7b02e39fac45b95c2f":[1,0,387,1],
-"classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,387,3]
+"classConTransmute.html":[1,0,387]
 };

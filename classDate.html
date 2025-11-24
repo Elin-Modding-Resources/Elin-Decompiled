@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.238 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.239 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -245,6 +245,10 @@ Properties</h2></td></tr>
 <tr class="separator:ab7c92cde685794bd42f7a49d96cea30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9606e862f9f0b724127148efb1111486"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDate.html#a9606e862f9f0b724127148efb1111486">IsNight</a><code> [get]</code></td></tr>
 <tr class="separator:a9606e862f9f0b724127148efb1111486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd5c56e141f1ad774c745acdd473c08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDate.html#a6cd5c56e141f1ad774c745acdd473c08">HourMorning</a><code> [get]</code></td></tr>
+<tr class="separator:a6cd5c56e141f1ad774c745acdd473c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1efc33bfa019cec432932772855c0c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDate.html#ae1efc33bfa019cec432932772855c0c5">HourNight</a><code> [get]</code></td></tr>
+<tr class="separator:ae1efc33bfa019cec432932772855c0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb98bdb5faf495b3b5ccd09db9990d4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDate.html#adb98bdb5faf495b3b5ccd09db9990d4f">periodOfDay</a><code> [get]</code></td></tr>
 <tr class="separator:adb98bdb5faf495b3b5ccd09db9990d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c7b1df77f96d366a1c4b2861f32864e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDate.html#a5c7b1df77f96d366a1c4b2861f32864e">NameMonth</a><code> [get]</code></td></tr>
@@ -375,21 +379,21 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00225">225</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  226</span>    {</div>
-<div class="line"><span class="lineno">  227</span>        <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> += a;</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> &gt; 30)</div>
-<div class="line"><span class="lineno">  229</span>        {</div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> -= 30;</div>
-<div class="line"><span class="lineno">  231</span>            <a class="code hl_function" href="classDate.html#a516b6cc39cf6112303cef8719b00ee03">AddMonth</a>(1);</div>
-<div class="line"><span class="lineno">  232</span>        }</div>
-<div class="line"><span class="lineno">  233</span>    }</div>
-<div class="ttc" id="aclassDate_html_a516b6cc39cf6112303cef8719b00ee03"><div class="ttname"><a href="classDate.html#a516b6cc39cf6112303cef8719b00ee03">Date.AddMonth</a></div><div class="ttdeci">void AddMonth(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00235">Date.cs:235</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00229">229</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>    {</div>
+<div class="line"><span class="lineno">  231</span>        <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> += a;</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> &gt; 30)</div>
+<div class="line"><span class="lineno">  233</span>        {</div>
+<div class="line"><span class="lineno">  234</span>            <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> -= 30;</div>
+<div class="line"><span class="lineno">  235</span>            <a class="code hl_function" href="classDate.html#a516b6cc39cf6112303cef8719b00ee03">AddMonth</a>(1);</div>
+<div class="line"><span class="lineno">  236</span>        }</div>
+<div class="line"><span class="lineno">  237</span>    }</div>
+<div class="ttc" id="aclassDate_html_a516b6cc39cf6112303cef8719b00ee03"><div class="ttname"><a href="classDate.html#a516b6cc39cf6112303cef8719b00ee03">Date.AddMonth</a></div><div class="ttdeci">void AddMonth(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00239">Date.cs:239</a></div></div>
 <div class="ttc" id="aclassDate_html_a88e44d6a54b8d25743f5590952e6b652"><div class="ttname"><a href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">Date.day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00061">Date.cs:62</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00235">AddMonth()</a>, and <a class="el" href="Date_8cs_source.html#l00062">day</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00239">AddMonth()</a>, and <a class="el" href="Date_8cs_source.html#l00062">day</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00215">AddHour()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00219">AddHour()</a>.</p>
 
 </div>
 </div>
@@ -417,19 +421,19 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00215">215</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
-<div class="line"><span class="lineno">  217</span>        <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> += a;</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 24)</div>
-<div class="line"><span class="lineno">  219</span>        {</div>
-<div class="line"><span class="lineno">  220</span>            <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> -= 24;</div>
-<div class="line"><span class="lineno">  221</span>            <a class="code hl_function" href="classDate.html#ab825b083ca3e08b6936f160868d718d9">AddDay</a>(1);</div>
-<div class="line"><span class="lineno">  222</span>        }</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00219">219</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  220</span>    {</div>
+<div class="line"><span class="lineno">  221</span>        <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> += a;</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 24)</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> -= 24;</div>
+<div class="line"><span class="lineno">  225</span>            <a class="code hl_function" href="classDate.html#ab825b083ca3e08b6936f160868d718d9">AddDay</a>(1);</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="line"><span class="lineno">  227</span>    }</div>
 <div class="ttc" id="aclassDate_html_a4fbc0c424e43ae001a65ba38f3f11dc7"><div class="ttname"><a href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">Date.hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00073">Date.cs:74</a></div></div>
-<div class="ttc" id="aclassDate_html_ab825b083ca3e08b6936f160868d718d9"><div class="ttname"><a href="classDate.html#ab825b083ca3e08b6936f160868d718d9">Date.AddDay</a></div><div class="ttdeci">void AddDay(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00225">Date.cs:225</a></div></div>
+<div class="ttc" id="aclassDate_html_ab825b083ca3e08b6936f160868d718d9"><div class="ttname"><a href="classDate.html#ab825b083ca3e08b6936f160868d718d9">Date.AddDay</a></div><div class="ttdeci">void AddDay(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00229">Date.cs:229</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00225">AddDay()</a>, and <a class="el" href="Date_8cs_source.html#l00074">hour</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00229">AddDay()</a>, and <a class="el" href="Date_8cs_source.html#l00074">hour</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00206">Weather.GetForecast()</a>, <a class="el" href="Weather_8cs_source.html#l00215">Weather.GetWeatherForecast()</a>, and <a class="el" href="Weather_8cs_source.html#l00261">Weather.RefreshForecasts()</a>.</p>
 
@@ -459,21 +463,21 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00235">235</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>    {</div>
-<div class="line"><span class="lineno">  237</span>        <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> += a;</div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt; 12)</div>
-<div class="line"><span class="lineno">  239</span>        {</div>
-<div class="line"><span class="lineno">  240</span>            <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> -= 12;</div>
-<div class="line"><span class="lineno">  241</span>            <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>++;</div>
-<div class="line"><span class="lineno">  242</span>        }</div>
-<div class="line"><span class="lineno">  243</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00239">239</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>    {</div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> += a;</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt; 12)</div>
+<div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> -= 12;</div>
+<div class="line"><span class="lineno">  245</span>            <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>++;</div>
+<div class="line"><span class="lineno">  246</span>        }</div>
+<div class="line"><span class="lineno">  247</span>    }</div>
 <div class="ttc" id="aclassDate_html_a801e79ba9d915b15ddbd13aaa4b09020"><div class="ttname"><a href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">Date.month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00049">Date.cs:50</a></div></div>
 <div class="ttc" id="aclassDate_html_a8d8552788241d94c4731cb078a625a6f"><div class="ttname"><a href="classDate.html#a8d8552788241d94c4731cb078a625a6f">Date.year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00037">Date.cs:38</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00050">month</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00225">AddDay()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00115">FortuneRollData.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00229">AddDay()</a>, and <a class="el" href="FortuneRollData_8cs_source.html#l00115">FortuneRollData.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -500,18 +504,18 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00197">197</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>    {</div>
-<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDate.html">Date</a></div>
-<div class="line"><span class="lineno">  200</span>        {</div>
-<div class="line"><span class="lineno">  201</span>            <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> = <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>,</div>
-<div class="line"><span class="lineno">  202</span>            <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> = <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>,</div>
-<div class="line"><span class="lineno">  203</span>            <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> = <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>,</div>
-<div class="line"><span class="lineno">  204</span>            <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> = <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a>,</div>
-<div class="line"><span class="lineno">  205</span>            <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> = <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>,</div>
-<div class="line"><span class="lineno">  206</span>            <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> = <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a></div>
-<div class="line"><span class="lineno">  207</span>        };</div>
-<div class="line"><span class="lineno">  208</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00201">201</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>    {</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDate.html">Date</a></div>
+<div class="line"><span class="lineno">  204</span>        {</div>
+<div class="line"><span class="lineno">  205</span>            <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> = <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>,</div>
+<div class="line"><span class="lineno">  206</span>            <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> = <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>,</div>
+<div class="line"><span class="lineno">  207</span>            <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> = <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>,</div>
+<div class="line"><span class="lineno">  208</span>            <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> = <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a>,</div>
+<div class="line"><span class="lineno">  209</span>            <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> = <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>,</div>
+<div class="line"><span class="lineno">  210</span>            <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> = <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a></div>
+<div class="line"><span class="lineno">  211</span>        };</div>
+<div class="line"><span class="lineno">  212</span>    }</div>
 <div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00003">Date.cs:4</a></div></div>
 <div class="ttc" id="aclassDate_html_a4adcbe7864cca4d77f3088bd9d8bdecd"><div class="ttname"><a href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">Date.min</a></div><div class="ttdeci">int min</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00085">Date.cs:86</a></div></div>
 <div class="ttc" id="aclassDate_html_ab89288e355749cc5a52cb0dfd76efa77"><div class="ttname"><a href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">Date.sec</a></div><div class="ttdeci">int sec</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00097">Date.cs:98</a></div></div>
@@ -546,22 +550,22 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00381">381</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  382</span>    {</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[5]</div>
-<div class="line"><span class="lineno">  384</span>        {</div>
-<div class="line"><span class="lineno">  385</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> % 60,</div>
-<div class="line"><span class="lineno">  386</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 % 24,</div>
-<div class="line"><span class="lineno">  387</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 / 24 % 30,</div>
-<div class="line"><span class="lineno">  388</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 / 24 / 30 % 12,</div>
-<div class="line"><span class="lineno">  389</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 / 24 / 30 / 12</div>
-<div class="line"><span class="lineno">  390</span>        };</div>
-<div class="line"><span class="lineno">  391</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00385">385</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  386</span>    {</div>
+<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[5]</div>
+<div class="line"><span class="lineno">  388</span>        {</div>
+<div class="line"><span class="lineno">  389</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> % 60,</div>
+<div class="line"><span class="lineno">  390</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 % 24,</div>
+<div class="line"><span class="lineno">  391</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 / 24 % 30,</div>
+<div class="line"><span class="lineno">  392</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 / 24 / 30 % 12,</div>
+<div class="line"><span class="lineno">  393</span>            <a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a> / 60 / 24 / 30 / 12</div>
+<div class="line"><span class="lineno">  394</span>        };</div>
+<div class="line"><span class="lineno">  395</span>    }</div>
 <div class="ttc" id="aclassDate_html_a8878ce68add11a7d76eb315ca0d7c7a4"><div class="ttname"><a href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">Date.raw</a></div><div class="ttdeci">int[] raw</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00019">Date.cs:19</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00019">raw</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>.</p>
 
 </div>
 </div>
@@ -589,17 +593,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00352">352</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  353</span>    {</div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">if</span> (rawDate != 0)</div>
-<div class="line"><span class="lineno">  355</span>        {</div>
-<div class="line"><span class="lineno">  356</span>            <span class="keywordflow">return</span> (<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>() - rawDate) / 60;</div>
-<div class="line"><span class="lineno">  357</span>        }</div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  359</span>    }</div>
-<div class="ttc" id="aclassDate_html_a566305ea6e2769202e3adc2381f0b701"><div class="ttname"><a href="classDate.html#a566305ea6e2769202e3adc2381f0b701">Date.GetRaw</a></div><div class="ttdeci">int GetRaw(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00322">Date.cs:322</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00356">356</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  357</span>    {</div>
+<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (rawDate != 0)</div>
+<div class="line"><span class="lineno">  359</span>        {</div>
+<div class="line"><span class="lineno">  360</span>            <span class="keywordflow">return</span> (<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>() - rawDate) / 60;</div>
+<div class="line"><span class="lineno">  361</span>        }</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  363</span>    }</div>
+<div class="ttc" id="aclassDate_html_a566305ea6e2769202e3adc2381f0b701"><div class="ttname"><a href="classDate.html#a566305ea6e2769202e3adc2381f0b701">Date.GetRaw</a></div><div class="ttdeci">int GetRaw(int offsetHours=0)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00326">Date.cs:326</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l02024">Player.MoveZone()</a>.</p>
 
@@ -629,12 +633,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00347">347</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  348</span>    {</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>() - rawDate;</div>
-<div class="line"><span class="lineno">  350</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00351">351</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  352</span>    {</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>() - rawDate;</div>
+<div class="line"><span class="lineno">  354</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Weather_8cs_source.html#l00286">Weather.GetTimeSinceLastRain()</a>.</p>
 
@@ -664,14 +668,14 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00322">322</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  323</span>    {</div>
-<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + offsetHours) * 60 + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> * 1440 + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> * 43200 + <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> * 518400;</div>
-<div class="line"><span class="lineno">  325</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00326">326</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  327</span>    {</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + offsetHours) * 60 + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> * 1440 + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> * 43200 + <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> * 518400;</div>
+<div class="line"><span class="lineno">  329</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00062">day</a>, <a class="el" href="Date_8cs_source.html#l00074">hour</a>, <a class="el" href="Date_8cs_source.html#l00086">min</a>, <a class="el" href="Date_8cs_source.html#l00050">month</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="Zone_8cs_source.html#l01759">Zone.AbandonZone()</a>, <a class="el" href="Zone_8cs_source.html#l00588">Zone.Activate()</a>, <a class="el" href="MeetingManager_8cs_source.html#l00049">MeetingManager.Add()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01700">FactionBranch.AddRecruit()</a>, <a class="el" href="FACTION_8cs_source.html#l00338">Faction.AddReserve()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="Card_8cs_source.html#l06583">Card.CheckJustCooked()</a>, <a class="el" href="Region_8cs_source.html#l00075">Region.CheckRandomSites()</a>, <a class="el" href="Zone_8cs_source.html#l01705">Zone.ClaimZone()</a>, <a class="el" href="TraitSpotBiome_8cs_source.html#l00074">TraitSpotBiome.CountNotableThing()</a>, <a class="el" href="SpatialGen_8cs_source.html#l00039">SpatialGen.CreateInstance()</a>, <a class="el" href="Region_8cs_source.html#l00149">Region.CreateRandomSite()</a>, <a class="el" href="Zone_8cs_source.html#l01612">Zone.Deactivate()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00355">DramaOutcome.get_scratch()</a>, <a class="el" href="Date_8cs_source.html#l00352">GetElapsedHour()</a>, <a class="el" href="Date_8cs_source.html#l00347">GetElapsedMins()</a>, <a class="el" href="MsgLog_8cs_source.html#l00080">MsgLog.GetList()</a>, <a class="el" href="Date_8cs_source.html#l00337">GetRemainingHours()</a>, <a class="el" href="Date_8cs_source.html#l00342">GetRemainingSecs()</a>, <a class="el" href="Quest_8cs_source.html#l00335">Quest.Init()</a>, <a class="el" href="Date_8cs_source.html#l00332">IsExpired()</a>, <a class="el" href="Quest_8cs_source.html#l00292">Quest.IsVisibleOnQuestBoard()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00127">TraitMoongate.LoadMap()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00350">RecipeCard.MakeDish()</a>, <a class="el" href="Chara_8cs_source.html#l07824">Chara.ModAffinity()</a>, <a class="el" href="Player_8cs_source.html#l02024">Player.MoveZone()</a>, <a class="el" href="Trait_8cs_source.html#l01504">Trait.OnBarter()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00258">BaseListPeople.OnClick()</a>, <a class="el" href="QuestLoytelFarm_8cs_source.html#l00019">QuestLoytelFarm.OnComplete()</a>, <a class="el" href="QuestShippingChest_8cs_source.html#l00018">QuestShippingChest.OnComplete()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00087">QuestVernis.OnComplete()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00240">FactionBranch.OnCreate()</a>, <a class="el" href="QuestDialog_8cs_source.html#l00027">QuestDialog.OnDropReward()</a>, <a class="el" href="Zone__Field_8cs_source.html#l00119">Zone_Field.OnGenerateMap()</a>, <a class="el" href="ZoneEventRaid_8cs_source.html#l00027">ZoneEventRaid.OnKill()</a>, <a class="el" href="Game_8cs_source.html#l00359">Game.OnLoad()</a>, <a class="el" href="QuestIntoDarkness_8cs_source.html#l00005">QuestIntoDarkness.OnStart()</a>, <a class="el" href="Player_8cs_source.html#l01381">Player.OnStartNewGame()</a>, <a class="el" href="TraitHat_8cs_source.html#l00003">TraitHat.OnUse()</a>, <a class="el" href="Zone_8cs_source.html#l01056">Zone.OnVisit()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00011">FoodEffect.Proc()</a>, <a class="el" href="ActEffect_8cs_source.html#l00485">ActEffect.ProcAt()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00115">FortuneRollData.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="Zone_8cs_source.html#l01102">Zone.Revive()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="AI__Slaughter_8cs_source.html#l00031">AI_Slaughter.Run()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00056">AI_Steal.Run()</a>, <a class="el" href="Weather_8cs_source.html#l00308">Weather.SetCondition()</a>, <a class="el" href="GameDate_8cs_source.html#l00259">GameDate.ShipGoods()</a>, <a class="el" href="Chara_8cs_source.html#l06950">Chara.ShowDialog()</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00482">SurvivalManager.StartRaid()</a>, <a class="el" href="SlaverData_8cs_source.html#l00012">SlaverData.TryRefresh()</a>, <a class="el" href="GoalCombat_8cs_source.html#l00494">GoalCombat.TryUseAbility()</a>, <a class="el" href="Chara_8cs_source.html#l09060">Chara.TryWorkOutside()</a>, and <a class="el" href="Zone_8cs_source.html#l03597">Zone.UpdateQuests()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="InvOwnerGene_8cs_source.html#l00025">InvOwnerGene._OnProcess()</a>, <a class="el" href="Zone_8cs_source.html#l01759">Zone.AbandonZone()</a>, <a class="el" href="Zone_8cs_source.html#l00588">Zone.Activate()</a>, <a class="el" href="MeetingManager_8cs_source.html#l00049">MeetingManager.Add()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01700">FactionBranch.AddRecruit()</a>, <a class="el" href="FACTION_8cs_source.html#l00338">Faction.AddReserve()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="Card_8cs_source.html#l06587">Card.CheckJustCooked()</a>, <a class="el" href="Region_8cs_source.html#l00075">Region.CheckRandomSites()</a>, <a class="el" href="Zone_8cs_source.html#l01705">Zone.ClaimZone()</a>, <a class="el" href="TraitSpotBiome_8cs_source.html#l00074">TraitSpotBiome.CountNotableThing()</a>, <a class="el" href="SpatialGen_8cs_source.html#l00039">SpatialGen.CreateInstance()</a>, <a class="el" href="Region_8cs_source.html#l00149">Region.CreateRandomSite()</a>, <a class="el" href="Zone_8cs_source.html#l01612">Zone.Deactivate()</a>, <a class="el" href="DramaOutcome_8cs_source.html#l00355">DramaOutcome.get_scratch()</a>, <a class="el" href="Date_8cs_source.html#l00356">GetElapsedHour()</a>, <a class="el" href="Date_8cs_source.html#l00351">GetElapsedMins()</a>, <a class="el" href="MsgLog_8cs_source.html#l00080">MsgLog.GetList()</a>, <a class="el" href="Date_8cs_source.html#l00341">GetRemainingHours()</a>, <a class="el" href="Date_8cs_source.html#l00346">GetRemainingSecs()</a>, <a class="el" href="Quest_8cs_source.html#l00335">Quest.Init()</a>, <a class="el" href="Date_8cs_source.html#l00336">IsExpired()</a>, <a class="el" href="Quest_8cs_source.html#l00292">Quest.IsVisibleOnQuestBoard()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00127">TraitMoongate.LoadMap()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00350">RecipeCard.MakeDish()</a>, <a class="el" href="Chara_8cs_source.html#l07833">Chara.ModAffinity()</a>, <a class="el" href="Player_8cs_source.html#l02024">Player.MoveZone()</a>, <a class="el" href="Trait_8cs_source.html#l01504">Trait.OnBarter()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00258">BaseListPeople.OnClick()</a>, <a class="el" href="QuestLoytelFarm_8cs_source.html#l00019">QuestLoytelFarm.OnComplete()</a>, <a class="el" href="QuestShippingChest_8cs_source.html#l00018">QuestShippingChest.OnComplete()</a>, <a class="el" href="QuestVernis_8cs_source.html#l00087">QuestVernis.OnComplete()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00240">FactionBranch.OnCreate()</a>, <a class="el" href="QuestDialog_8cs_source.html#l00027">QuestDialog.OnDropReward()</a>, <a class="el" href="Zone__Field_8cs_source.html#l00119">Zone_Field.OnGenerateMap()</a>, <a class="el" href="ZoneEventRaid_8cs_source.html#l00027">ZoneEventRaid.OnKill()</a>, <a class="el" href="Game_8cs_source.html#l00359">Game.OnLoad()</a>, <a class="el" href="QuestIntoDarkness_8cs_source.html#l00005">QuestIntoDarkness.OnStart()</a>, <a class="el" href="Player_8cs_source.html#l01381">Player.OnStartNewGame()</a>, <a class="el" href="TraitHat_8cs_source.html#l00003">TraitHat.OnUse()</a>, <a class="el" href="Zone_8cs_source.html#l01056">Zone.OnVisit()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00011">FoodEffect.Proc()</a>, <a class="el" href="ActEffect_8cs_source.html#l00485">ActEffect.ProcAt()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00115">FortuneRollData.Refresh()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, <a class="el" href="Zone_8cs_source.html#l01102">Zone.Revive()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="AI__Slaughter_8cs_source.html#l00031">AI_Slaughter.Run()</a>, <a class="el" href="AI__Steal_8cs_source.html#l00056">AI_Steal.Run()</a>, <a class="el" href="Weather_8cs_source.html#l00308">Weather.SetCondition()</a>, <a class="el" href="GameDate_8cs_source.html#l00259">GameDate.ShipGoods()</a>, <a class="el" href="Chara_8cs_source.html#l06959">Chara.ShowDialog()</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00482">SurvivalManager.StartRaid()</a>, <a class="el" href="SlaverData_8cs_source.html#l00012">SlaverData.TryRefresh()</a>, <a class="el" href="GoalCombat_8cs_source.html#l00494">GoalCombat.TryUseAbility()</a>, <a class="el" href="Chara_8cs_source.html#l09069">Chara.TryWorkOutside()</a>, and <a class="el" href="Zone_8cs_source.html#l03597">Zone.UpdateQuests()</a>.</p>
 
 </div>
 </div>
@@ -698,10 +702,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00327">327</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  328</span>    {</div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> * 1440 + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> * 43200 + <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> * 518400;</div>
-<div class="line"><span class="lineno">  330</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00331">331</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>    {</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> * 1440 + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> * 43200 + <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> * 518400;</div>
+<div class="line"><span class="lineno">  334</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00062">day</a>, <a class="el" href="Date_8cs_source.html#l00050">month</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
 
@@ -731,10 +735,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00317">317</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>    {</div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + offsetHours) * 60 + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> * 1440 + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> * 46080 + <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> * 552960;</div>
-<div class="line"><span class="lineno">  320</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00321">321</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>    {</div>
+<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + offsetHours) * 60 + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> * 1440 + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> * 46080 + <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> * 552960;</div>
+<div class="line"><span class="lineno">  324</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00062">day</a>, <a class="el" href="Date_8cs_source.html#l00074">hour</a>, <a class="el" href="Date_8cs_source.html#l00086">min</a>, <a class="el" href="Date_8cs_source.html#l00050">month</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
 
@@ -766,12 +770,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00337">337</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  338</span>    {</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">return</span> (rawDeadLine - <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>()) / 60;</div>
-<div class="line"><span class="lineno">  340</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00341">341</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  342</span>    {</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">return</span> (rawDeadLine - <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>()) / 60;</div>
+<div class="line"><span class="lineno">  344</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitGeneMachine_8cs_source.html#l00033">TraitGeneMachine.GetProgress()</a>, <a class="el" href="TraitGeneMachine_8cs_source.html#l00048">TraitGeneMachine.GetProgressText()</a>, <a class="el" href="Trait_8cs_source.html#l01459">Trait.GetTextRestock()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00258">BaseListPeople.OnClick()</a>, <a class="el" href="ZoneEventSurvival_8cs_source.html#l00003">ZoneEventSurvival.OnTickRound()</a>, <a class="el" href="LayerTravel_8cs_source.html#l00096">LayerTravel.Refresh()</a>, and <a class="el" href="Zone_8cs_source.html#l00549">Zone.ToString()</a>.</p>
 
@@ -801,12 +805,12 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00342">342</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  343</span>    {</div>
-<div class="line"><span class="lineno">  344</span>        <span class="keywordflow">return</span> rawDeadLine - <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>();</div>
-<div class="line"><span class="lineno">  345</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00346">346</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>    {</div>
+<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">return</span> rawDeadLine - <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>();</div>
+<div class="line"><span class="lineno">  349</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>.</p>
 
 </div>
 </div>
@@ -834,21 +838,21 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00291">291</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  292</span>    {</div>
-<div class="line"><span class="lineno">  293</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; 0)</div>
-<div class="line"><span class="lineno">  294</span>        {</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateDayVoid&quot;</span>.lang();</div>
-<div class="line"><span class="lineno">  296</span>        }</div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt; 24)</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00295">295</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  296</span>    {</div>
+<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; 0)</div>
 <div class="line"><span class="lineno">  298</span>        {</div>
-<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateDay&quot;</span>.lang((<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> / 24).<a class="code hl_function" href="classDate.html#a7302196b3a47b2b3e9b5b8833aaaae93">ToString</a>() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  299</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateDayVoid&quot;</span>.lang();</div>
 <div class="line"><span class="lineno">  300</span>        }</div>
-<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateHour&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  302</span>    }</div>
-<div class="ttc" id="aclassDate_html_a7302196b3a47b2b3e9b5b8833aaaae93"><div class="ttname"><a href="classDate.html#a7302196b3a47b2b3e9b5b8833aaaae93">Date.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00210">Date.cs:210</a></div></div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt; 24)</div>
+<div class="line"><span class="lineno">  302</span>        {</div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateDay&quot;</span>.lang((<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> / 24).<a class="code hl_function" href="classDate.html#a7302196b3a47b2b3e9b5b8833aaaae93">ToString</a>() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  304</span>        }</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateHour&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  306</span>    }</div>
+<div class="ttc" id="aclassDate_html_a7302196b3a47b2b3e9b5b8833aaaae93"><div class="ttname"><a href="classDate.html#a7302196b3a47b2b3e9b5b8833aaaae93">Date.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00214">Date.cs:214</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00074">hour</a>, and <a class="el" href="Date_8cs_source.html#l00210">ToString()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00074">hour</a>, and <a class="el" href="Date_8cs_source.html#l00214">ToString()</a>.</p>
 
 </div>
 </div>
@@ -886,14 +890,14 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00286">286</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  287</span>    {</div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">ToDate</a>(<a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a>).<a class="code hl_function" href="classDate.html#add8563063a8cb27b243414efd92edef6">GetText</a>(format);</div>
-<div class="line"><span class="lineno">  289</span>    }</div>
-<div class="ttc" id="aclassDate_html_a853ee4cc426f96dee0a7aa61d87d6282"><div class="ttname"><a href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">Date.ToDate</a></div><div class="ttdeci">static Date ToDate(int raw)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00393">Date.cs:393</a></div></div>
-<div class="ttc" id="aclassDate_html_add8563063a8cb27b243414efd92edef6"><div class="ttname"><a href="classDate.html#add8563063a8cb27b243414efd92edef6">Date.GetText</a></div><div class="ttdeci">string GetText(TextFormat format)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00245">Date.cs:245</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00290">290</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  291</span>    {</div>
+<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">ToDate</a>(<a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a>).<a class="code hl_function" href="classDate.html#add8563063a8cb27b243414efd92edef6">GetText</a>(format);</div>
+<div class="line"><span class="lineno">  293</span>    }</div>
+<div class="ttc" id="aclassDate_html_a853ee4cc426f96dee0a7aa61d87d6282"><div class="ttname"><a href="classDate.html#a853ee4cc426f96dee0a7aa61d87d6282">Date.ToDate</a></div><div class="ttdeci">static Date ToDate(int raw)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00397">Date.cs:397</a></div></div>
+<div class="ttc" id="aclassDate_html_add8563063a8cb27b243414efd92edef6"><div class="ttname"><a href="classDate.html#add8563063a8cb27b243414efd92edef6">Date.GetText</a></div><div class="ttdeci">string GetText(TextFormat format)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00249">Date.cs:249</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00019">raw</a>, and <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00019">raw</a>, and <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>.</p>
 
 </div>
 </div>
@@ -921,54 +925,54 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00245">245</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">switch</span> (format)</div>
-<div class="line"><span class="lineno">  248</span>        {</div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.LogPlusYear:</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> + <span class="stringliteral">&quot;, &quot;</span> + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <span class="stringliteral">&quot; &quot;</span> + ((<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; 10) ? <span class="stringliteral">&quot;0&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;:&quot;</span> + ((<a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> &lt; 10) ? <span class="stringliteral">&quot;0&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>;</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Log:</div>
-<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;:&quot;</span> + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>;</div>
-<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Widget:</div>
-<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateYearMonthDay&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Schedule:</div>
-<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateSchedule&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a5c7b1df77f96d366a1c4b2861f32864e">NameMonth</a>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Travel:</div>
-<div class="line"><span class="lineno">  258</span>        {</div>
-<div class="line"><span class="lineno">  259</span>            <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;_short&quot;</span>;</div>
-<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">if</span> (format == <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Travel)</div>
-<div class="line"><span class="lineno">  261</span>            {</div>
-<div class="line"><span class="lineno">  262</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;travelDate&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  263</span>            }</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> != 0)</div>
-<div class="line"><span class="lineno">  266</span>            {</div>
-<div class="line"><span class="lineno">  267</span>                text2 = text2 + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wDay&quot;</span> + text);</div>
-<div class="line"><span class="lineno">  268</span>            }</div>
-<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> != 0)</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00249">249</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  250</span>    {</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">switch</span> (format)</div>
+<div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.LogPlusYear:</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> + <span class="stringliteral">&quot;, &quot;</span> + <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <span class="stringliteral">&quot; &quot;</span> + ((<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; 10) ? <span class="stringliteral">&quot;0&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;:&quot;</span> + ((<a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> &lt; 10) ? <span class="stringliteral">&quot;0&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>;</div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Log:</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;:&quot;</span> + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>;</div>
+<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Widget:</div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateYearMonthDay&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Schedule:</div>
+<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateSchedule&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a5c7b1df77f96d366a1c4b2861f32864e">NameMonth</a>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Travel:</div>
+<div class="line"><span class="lineno">  262</span>        {</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;_short&quot;</span>;</div>
+<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">if</span> (format == <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Travel)</div>
+<div class="line"><span class="lineno">  265</span>            {</div>
+<div class="line"><span class="lineno">  266</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;travelDate&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  267</span>            }</div>
+<div class="line"><span class="lineno">  268</span>            <span class="keywordtype">string</span> text2 = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> != 0)</div>
 <div class="line"><span class="lineno">  270</span>            {</div>
-<div class="line"><span class="lineno">  271</span>                text2 = text2 + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wHour&quot;</span> + text);</div>
+<div class="line"><span class="lineno">  271</span>                text2 = text2 + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wDay&quot;</span> + text);</div>
 <div class="line"><span class="lineno">  272</span>            }</div>
-<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> != 0)</div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> != 0)</div>
 <div class="line"><span class="lineno">  274</span>            {</div>
-<div class="line"><span class="lineno">  275</span>                text2 = text2 + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wMin&quot;</span> + text);</div>
+<div class="line"><span class="lineno">  275</span>                text2 = text2 + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wHour&quot;</span> + text);</div>
 <div class="line"><span class="lineno">  276</span>            }</div>
-<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">return</span> text2 + <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wSec&quot;</span> + text);</div>
-<div class="line"><span class="lineno">  278</span>        }</div>
-<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.YearMonthDay:</div>
-<div class="line"><span class="lineno">  280</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateYearMonthDay&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Day &quot;</span> + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;:&quot;</span> + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>;</div>
-<div class="line"><span class="lineno">  283</span>        }</div>
-<div class="line"><span class="lineno">  284</span>    }</div>
-<div class="ttc" id="aclassDate_html_a5c7b1df77f96d366a1c4b2861f32864e"><div class="ttname"><a href="classDate.html#a5c7b1df77f96d366a1c4b2861f32864e">Date.NameMonth</a></div><div class="ttdeci">string NameMonth</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00143">Date.cs:143</a></div></div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> != 0)</div>
+<div class="line"><span class="lineno">  278</span>            {</div>
+<div class="line"><span class="lineno">  279</span>                text2 = text2 + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wMin&quot;</span> + text);</div>
+<div class="line"><span class="lineno">  280</span>            }</div>
+<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">return</span> text2 + <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="stringliteral">&quot;wSec&quot;</span> + text);</div>
+<div class="line"><span class="lineno">  282</span>        }</div>
+<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.YearMonthDay:</div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;dateYearMonthDay&quot;</span>.lang(<a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  286</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Day &quot;</span> + <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> + <span class="stringliteral">&quot; &quot;</span> + <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;:&quot;</span> + <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a>;</div>
+<div class="line"><span class="lineno">  287</span>        }</div>
+<div class="line"><span class="lineno">  288</span>    }</div>
+<div class="ttc" id="aclassDate_html_a5c7b1df77f96d366a1c4b2861f32864e"><div class="ttname"><a href="classDate.html#a5c7b1df77f96d366a1c4b2861f32864e">Date.NameMonth</a></div><div class="ttdeci">string NameMonth</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00147">Date.cs:147</a></div></div>
 <div class="ttc" id="aclassDate_html_aed7f72f2bd15e8402ed27fc88215c578"><div class="ttname"><a href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">Date.TextFormat</a></div><div class="ttdeci">TextFormat</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00005">Date.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html_a87ee4b30187ae525639ccc297e2c0823"><div class="ttname"><a href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Lang.Get</a></div><div class="ttdeci">static string Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00091">Lang.cs:91</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00062">day</a>, <a class="el" href="Lang_8cs_source.html#l00091">Lang.Get()</a>, <a class="el" href="Date_8cs_source.html#l00074">hour</a>, <a class="el" href="Date_8cs_source.html#l00086">min</a>, <a class="el" href="Date_8cs_source.html#l00050">month</a>, <a class="el" href="Date_8cs_source.html#l00143">NameMonth</a>, <a class="el" href="Date_8cs_source.html#l00098">sec</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00062">day</a>, <a class="el" href="Lang_8cs_source.html#l00091">Lang.Get()</a>, <a class="el" href="Date_8cs_source.html#l00074">hour</a>, <a class="el" href="Date_8cs_source.html#l00086">min</a>, <a class="el" href="Date_8cs_source.html#l00050">month</a>, <a class="el" href="Date_8cs_source.html#l00147">NameMonth</a>, <a class="el" href="Date_8cs_source.html#l00098">sec</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">WidgetDate._Refresh()</a>, <a class="el" href="Date_8cs_source.html#l00286">GetText()</a>, <a class="el" href="Trait_8cs_source.html#l01459">Trait.GetTextRestock()</a>, <a class="el" href="Player_8cs_source.html#l02024">Player.MoveZone()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00258">BaseListPeople.OnClick()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="ItemQuest_8cs_source.html#l00023">ItemQuest.SetQuest()</a>, and <a class="el" href="Date_8cs_source.html#l00210">ToString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">WidgetDate._Refresh()</a>, <a class="el" href="Date_8cs_source.html#l00290">GetText()</a>, <a class="el" href="Trait_8cs_source.html#l01459">Trait.GetTextRestock()</a>, <a class="el" href="Player_8cs_source.html#l02024">Player.MoveZone()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00258">BaseListPeople.OnClick()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="ItemQuest_8cs_source.html#l00023">ItemQuest.SetQuest()</a>, and <a class="el" href="Date_8cs_source.html#l00214">ToString()</a>.</p>
 
 </div>
 </div>
@@ -996,18 +1000,18 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00304">304</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  305</span>    {</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; 0)</div>
-<div class="line"><span class="lineno">  307</span>        {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt; 24)</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00308">308</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>    {</div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; 0)</div>
 <div class="line"><span class="lineno">  311</span>        {</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> / 24 + <span class="stringliteral">&quot;d&quot;</span>;</div>
+<div class="line"><span class="lineno">  312</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
 <div class="line"><span class="lineno">  313</span>        }</div>
-<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;h&quot;</span>;</div>
-<div class="line"><span class="lineno">  315</span>    }</div>
+<div class="line"><span class="lineno">  314</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt; 24)</div>
+<div class="line"><span class="lineno">  315</span>        {</div>
+<div class="line"><span class="lineno">  316</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> / 24 + <span class="stringliteral">&quot;d&quot;</span>;</div>
+<div class="line"><span class="lineno">  317</span>        }</div>
+<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> + <span class="stringliteral">&quot;h&quot;</span>;</div>
+<div class="line"><span class="lineno">  319</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00074">hour</a>.</p>
 
@@ -1039,14 +1043,14 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00332">332</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  333</span>    {</div>
-<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">return</span> time - <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>() &lt; 0;</div>
-<div class="line"><span class="lineno">  335</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00336">336</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>    {</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">return</span> time - <a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>() &lt; 0;</div>
+<div class="line"><span class="lineno">  339</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00588">Zone.Activate()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="Zone_8cs_source.html#l01775">Zone.CanDestroy()</a>, <a class="el" href="Chara_8cs_source.html#l05049">Chara.CanRevive()</a>, <a class="el" href="Region_8cs_source.html#l00075">Region.CheckRandomSites()</a>, <a class="el" href="TraitSpotBiome_8cs_source.html#l00074">TraitSpotBiome.CountNotableThing()</a>, <a class="el" href="Trait_8cs_source.html#l01482">Trait.GetRestockedIcon()</a>, <a class="el" href="Trait_8cs_source.html#l01504">Trait.OnBarter()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00258">BaseListPeople.OnClick()</a>, <a class="el" href="MeetingManager_8cs_source.html#l00034">MeetingManager.OnSimulateHour()</a>, <a class="el" href="Zone_8cs_source.html#l01056">Zone.OnVisit()</a>, <a class="el" href="Zone_8cs_source.html#l01046">Zone.RefreshHat()</a>, <a class="el" href="AIWork_8cs_source.html#l00056">AIWork.SetDestination()</a>, <a class="el" href="SlaverData_8cs_source.html#l00012">SlaverData.TryRefresh()</a>, <a class="el" href="TraitCoreZone_8cs_source.html#l00021">TraitCoreZone.TrySetAct()</a>, and <a class="el" href="Chara_8cs_source.html#l09060">Chara.TryWorkOutside()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Zone_8cs_source.html#l00588">Zone.Activate()</a>, <a class="el" href="DramaCustomSequence_8cs_source.html#l00033">DramaCustomSequence.Build()</a>, <a class="el" href="Zone_8cs_source.html#l01775">Zone.CanDestroy()</a>, <a class="el" href="Chara_8cs_source.html#l05058">Chara.CanRevive()</a>, <a class="el" href="Region_8cs_source.html#l00075">Region.CheckRandomSites()</a>, <a class="el" href="TraitSpotBiome_8cs_source.html#l00074">TraitSpotBiome.CountNotableThing()</a>, <a class="el" href="Trait_8cs_source.html#l01482">Trait.GetRestockedIcon()</a>, <a class="el" href="Trait_8cs_source.html#l01504">Trait.OnBarter()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00258">BaseListPeople.OnClick()</a>, <a class="el" href="MeetingManager_8cs_source.html#l00034">MeetingManager.OnSimulateHour()</a>, <a class="el" href="Zone_8cs_source.html#l01056">Zone.OnVisit()</a>, <a class="el" href="Zone_8cs_source.html#l01046">Zone.RefreshHat()</a>, <a class="el" href="AIWork_8cs_source.html#l00056">AIWork.SetDestination()</a>, <a class="el" href="SlaverData_8cs_source.html#l00012">SlaverData.TryRefresh()</a>, <a class="el" href="TraitCoreZone_8cs_source.html#l00021">TraitCoreZone.TrySetAct()</a>, and <a class="el" href="Chara_8cs_source.html#l09069">Chara.TryWorkOutside()</a>.</p>
 
 </div>
 </div>
@@ -1074,20 +1078,20 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00366">366</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>    {</div>
-<div class="line"><span class="lineno">  368</span>        <span class="keywordtype">int</span> num = <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> / 60;</div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordtype">int</span> num2 = num / 24;</div>
-<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">if</span> (num == 0)</div>
-<div class="line"><span class="lineno">  371</span>        {</div>
-<div class="line"><span class="lineno">  372</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + <span class="stringliteral">&quot;分&quot;</span>;</div>
-<div class="line"><span class="lineno">  373</span>        }</div>
-<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">if</span> (num2 != 0)</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00370">370</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  371</span>    {</div>
+<div class="line"><span class="lineno">  372</span>        <span class="keywordtype">int</span> num = <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> / 60;</div>
+<div class="line"><span class="lineno">  373</span>        <span class="keywordtype">int</span> num2 = num / 24;</div>
+<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">if</span> (num == 0)</div>
 <div class="line"><span class="lineno">  375</span>        {</div>
-<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">return</span> num2 + <span class="stringliteral">&quot;日と&quot;</span> + num % 24 + <span class="stringliteral">&quot;時間&quot;</span>;</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> + <span class="stringliteral">&quot;分&quot;</span>;</div>
 <div class="line"><span class="lineno">  377</span>        }</div>
-<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">return</span> num + <span class="stringliteral">&quot;時間&quot;</span>;</div>
-<div class="line"><span class="lineno">  379</span>    }</div>
+<div class="line"><span class="lineno">  378</span>        <span class="keywordflow">if</span> (num2 != 0)</div>
+<div class="line"><span class="lineno">  379</span>        {</div>
+<div class="line"><span class="lineno">  380</span>            <span class="keywordflow">return</span> num2 + <span class="stringliteral">&quot;日と&quot;</span> + num % 24 + <span class="stringliteral">&quot;時間&quot;</span>;</div>
+<div class="line"><span class="lineno">  381</span>        }</div>
+<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">return</span> num + <span class="stringliteral">&quot;時間&quot;</span>;</div>
+<div class="line"><span class="lineno">  383</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00086">min</a>.</p>
 
@@ -1117,10 +1121,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00361">361</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  362</span>    {</div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> / 60 / 60 + <span class="stringliteral">&quot;時間 &quot;</span> + <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> / 60 % 60 + <span class="stringliteral">&quot;分 &quot;</span> + <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> % 60 + <span class="stringliteral">&quot;秒&quot;</span>;</div>
-<div class="line"><span class="lineno">  364</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00365">365</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  366</span>    {</div>
+<div class="line"><span class="lineno">  367</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> / 60 / 60 + <span class="stringliteral">&quot;時間 &quot;</span> + <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> / 60 % 60 + <span class="stringliteral">&quot;分 &quot;</span> + <a class="code hl_property" href="classDate.html#ab89288e355749cc5a52cb0dfd76efa77">sec</a> % 60 + <span class="stringliteral">&quot;秒&quot;</span>;</div>
+<div class="line"><span class="lineno">  368</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Date_8cs_source.html#l00098">sec</a>.</p>
 
@@ -1150,41 +1154,41 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00393">393</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  394</span>    {</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordtype">int</span>[] dateArray = <a class="code hl_function" href="classDate.html#ab1cfd86f3a6386ebabbad6f04ba7baa5">GetDateArray</a>(<a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a>);</div>
-<div class="line"><span class="lineno">  396</span>        <span class="keywordtype">int</span> num = dateArray[4];</div>
-<div class="line"><span class="lineno">  397</span>        <span class="keywordtype">int</span> num2 = dateArray[3];</div>
-<div class="line"><span class="lineno">  398</span>        <span class="keywordtype">int</span> num3 = dateArray[2];</div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">if</span> (num2 == 0)</div>
-<div class="line"><span class="lineno">  400</span>        {</div>
-<div class="line"><span class="lineno">  401</span>            num2 = 12;</div>
-<div class="line"><span class="lineno">  402</span>            num--;</div>
-<div class="line"><span class="lineno">  403</span>        }</div>
-<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">if</span> (num3 == 0)</div>
-<div class="line"><span class="lineno">  405</span>        {</div>
-<div class="line"><span class="lineno">  406</span>            num3 = 30;</div>
-<div class="line"><span class="lineno">  407</span>            num2--;</div>
-<div class="line"><span class="lineno">  408</span>        }</div>
-<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">if</span> (num2 == 0)</div>
-<div class="line"><span class="lineno">  410</span>        {</div>
-<div class="line"><span class="lineno">  411</span>            num2 = 12;</div>
-<div class="line"><span class="lineno">  412</span>            num--;</div>
-<div class="line"><span class="lineno">  413</span>        }</div>
-<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDate.html">Date</a></div>
-<div class="line"><span class="lineno">  415</span>        {</div>
-<div class="line"><span class="lineno">  416</span>            <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> = dateArray[0],</div>
-<div class="line"><span class="lineno">  417</span>            <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> = dateArray[1],</div>
-<div class="line"><span class="lineno">  418</span>            <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> = num3,</div>
-<div class="line"><span class="lineno">  419</span>            <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> = num2,</div>
-<div class="line"><span class="lineno">  420</span>            <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> = num</div>
-<div class="line"><span class="lineno">  421</span>        };</div>
-<div class="line"><span class="lineno">  422</span>    }</div>
-<div class="ttc" id="aclassDate_html_ab1cfd86f3a6386ebabbad6f04ba7baa5"><div class="ttname"><a href="classDate.html#ab1cfd86f3a6386ebabbad6f04ba7baa5">Date.GetDateArray</a></div><div class="ttdeci">static int[] GetDateArray(int raw)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00381">Date.cs:381</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00397">397</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  398</span>    {</div>
+<div class="line"><span class="lineno">  399</span>        <span class="keywordtype">int</span>[] dateArray = <a class="code hl_function" href="classDate.html#ab1cfd86f3a6386ebabbad6f04ba7baa5">GetDateArray</a>(<a class="code hl_variable" href="classDate.html#a8878ce68add11a7d76eb315ca0d7c7a4">raw</a>);</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordtype">int</span> num = dateArray[4];</div>
+<div class="line"><span class="lineno">  401</span>        <span class="keywordtype">int</span> num2 = dateArray[3];</div>
+<div class="line"><span class="lineno">  402</span>        <span class="keywordtype">int</span> num3 = dateArray[2];</div>
+<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">if</span> (num2 == 0)</div>
+<div class="line"><span class="lineno">  404</span>        {</div>
+<div class="line"><span class="lineno">  405</span>            num2 = 12;</div>
+<div class="line"><span class="lineno">  406</span>            num--;</div>
+<div class="line"><span class="lineno">  407</span>        }</div>
+<div class="line"><span class="lineno">  408</span>        <span class="keywordflow">if</span> (num3 == 0)</div>
+<div class="line"><span class="lineno">  409</span>        {</div>
+<div class="line"><span class="lineno">  410</span>            num3 = 30;</div>
+<div class="line"><span class="lineno">  411</span>            num2--;</div>
+<div class="line"><span class="lineno">  412</span>        }</div>
+<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">if</span> (num2 == 0)</div>
+<div class="line"><span class="lineno">  414</span>        {</div>
+<div class="line"><span class="lineno">  415</span>            num2 = 12;</div>
+<div class="line"><span class="lineno">  416</span>            num--;</div>
+<div class="line"><span class="lineno">  417</span>        }</div>
+<div class="line"><span class="lineno">  418</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classDate.html">Date</a></div>
+<div class="line"><span class="lineno">  419</span>        {</div>
+<div class="line"><span class="lineno">  420</span>            <a class="code hl_property" href="classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd">min</a> = dateArray[0],</div>
+<div class="line"><span class="lineno">  421</span>            <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> = dateArray[1],</div>
+<div class="line"><span class="lineno">  422</span>            <a class="code hl_property" href="classDate.html#a88e44d6a54b8d25743f5590952e6b652">day</a> = num3,</div>
+<div class="line"><span class="lineno">  423</span>            <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> = num2,</div>
+<div class="line"><span class="lineno">  424</span>            <a class="code hl_property" href="classDate.html#a8d8552788241d94c4731cb078a625a6f">year</a> = num</div>
+<div class="line"><span class="lineno">  425</span>        };</div>
+<div class="line"><span class="lineno">  426</span>    }</div>
+<div class="ttc" id="aclassDate_html_ab1cfd86f3a6386ebabbad6f04ba7baa5"><div class="ttname"><a href="classDate.html#ab1cfd86f3a6386ebabbad6f04ba7baa5">Date.GetDateArray</a></div><div class="ttdeci">static int[] GetDateArray(int raw)</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00385">Date.cs:385</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00062">day</a>, <a class="el" href="Date_8cs_source.html#l00381">GetDateArray()</a>, <a class="el" href="Date_8cs_source.html#l00074">hour</a>, <a class="el" href="Date_8cs_source.html#l00086">min</a>, <a class="el" href="Date_8cs_source.html#l00050">month</a>, <a class="el" href="Date_8cs_source.html#l00019">raw</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00062">day</a>, <a class="el" href="Date_8cs_source.html#l00385">GetDateArray()</a>, <a class="el" href="Date_8cs_source.html#l00074">hour</a>, <a class="el" href="Date_8cs_source.html#l00086">min</a>, <a class="el" href="Date_8cs_source.html#l00050">month</a>, <a class="el" href="Date_8cs_source.html#l00019">raw</a>, and <a class="el" href="Date_8cs_source.html#l00038">year</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00286">GetText()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00290">GetText()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>.</p>
 
 </div>
 </div>
@@ -1211,14 +1215,14 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00210">210</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  211</span>    {</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDate.html#add8563063a8cb27b243414efd92edef6">GetText</a>(<a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Log);</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00214">214</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>    {</div>
+<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classDate.html#add8563063a8cb27b243414efd92edef6">GetText</a>(<a class="code hl_enumeration" href="classDate.html#aed7f72f2bd15e8402ed27fc88215c578">TextFormat</a>.Log);</div>
+<div class="line"><span class="lineno">  217</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>.</p>
+<p class="reference">References <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00291">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00295">GetText()</a>.</p>
 
 </div>
 </div>
@@ -1381,7 +1385,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00019">19</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00381">GetDateArray()</a>, <a class="el" href="Date_8cs_source.html#l00286">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>, and <a class="el" href="VirtualDate_8cs_source.html#l00015">VirtualDate.VirtualDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00385">GetDateArray()</a>, <a class="el" href="Date_8cs_source.html#l00290">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>, and <a class="el" href="VirtualDate_8cs_source.html#l00015">VirtualDate.VirtualDate()</a>.</p>
 
 </div>
 </div>
@@ -1490,7 +1494,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   70</span>        }</div>
 <div class="line"><span class="lineno">   71</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00225">AddDay()</a>, <a class="el" href="Date_8cs_source.html#l00197">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00327">GetRawDay()</a>, <a class="el" href="Date_8cs_source.html#l00317">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>, <a class="el" href="Weather_8cs_source.html#l00215">Weather.GetWeatherForecast()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00342">UIHomeInfo.RefreshReport()</a>, <a class="el" href="HotItemContext_8cs_source.html#l00067">HotItemContext.Show()</a>, <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>, and <a class="el" href="Thing_8cs_source.html#l01994">Thing.TryLickEnchant()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00229">AddDay()</a>, <a class="el" href="Date_8cs_source.html#l00201">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00331">GetRawDay()</a>, <a class="el" href="Date_8cs_source.html#l00321">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>, <a class="el" href="Weather_8cs_source.html#l00215">Weather.GetWeatherForecast()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00342">UIHomeInfo.RefreshReport()</a>, <a class="el" href="HotItemContext_8cs_source.html#l00067">HotItemContext.Show()</a>, <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>, and <a class="el" href="Thing_8cs_source.html#l01998">Thing.TryLickEnchant()</a>.</p>
 
 </div>
 </div>
@@ -1526,7 +1530,55 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   82</span>        }</div>
 <div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00215">AddHour()</a>, <a class="el" href="Chara_8cs_source.html#l08638">Chara.ChooseNewGoal()</a>, <a class="el" href="Date_8cs_source.html#l00197">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00317">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00304">GetText2()</a>, <a class="el" href="WidgetArtTool_8cs_source.html#l00017">WidgetArtTool.OnActivate()</a>, <a class="el" href="Region_8cs_source.html#l00338">Region.OnAdvanceHour()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, <a class="el" href="Chara_8cs_source.html#l09039">Chara.TickWork()</a>, <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>, and <a class="el" href="Trait_8cs_source.html#l01133">Trait.TryToggle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00219">AddHour()</a>, <a class="el" href="Chara_8cs_source.html#l08647">Chara.ChooseNewGoal()</a>, <a class="el" href="Date_8cs_source.html#l00201">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00321">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00308">GetText2()</a>, <a class="el" href="WidgetArtTool_8cs_source.html#l00017">WidgetArtTool.OnActivate()</a>, <a class="el" href="Region_8cs_source.html#l00338">Region.OnAdvanceHour()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, <a class="el" href="Chara_8cs_source.html#l09048">Chara.TickWork()</a>, <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>, and <a class="el" href="Trait_8cs_source.html#l01133">Trait.TryToggle()</a>.</p>
+
+</div>
+</div>
+<a id="a6cd5c56e141f1ad774c745acdd473c08" name="a6cd5c56e141f1ad774c745acdd473c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cd5c56e141f1ad774c745acdd473c08">&#9670;&#160;</a></span>HourMorning</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Date.HourMorning</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00123">123</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae1efc33bfa019cec432932772855c0c5" name="ae1efc33bfa019cec432932772855c0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1efc33bfa019cec432932772855c0c5">&#9670;&#160;</a></span>HourNight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Date.HourNight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00125">125</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
 
 </div>
 </div>
@@ -1550,17 +1602,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00173">173</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>    {</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  176</span>        {</div>
-<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt;= 9)</div>
-<div class="line"><span class="lineno">  178</span>            {</div>
-<div class="line"><span class="lineno">  179</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 11;</div>
-<div class="line"><span class="lineno">  180</span>            }</div>
-<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  182</span>        }</div>
-<div class="line"><span class="lineno">  183</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00177">177</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>    {</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt;= 9)</div>
+<div class="line"><span class="lineno">  182</span>            {</div>
+<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 11;</div>
+<div class="line"><span class="lineno">  184</span>            }</div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  186</span>        }</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1614,15 +1666,17 @@ Properties</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
 <div class="line"><span class="lineno">  113</span>        <span class="keyword">get</span></div>
 <div class="line"><span class="lineno">  114</span>        {</div>
-<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; 19)</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt; <a class="code hl_property" href="classDate.html#ae1efc33bfa019cec432932772855c0c5">HourNight</a>)</div>
 <div class="line"><span class="lineno">  116</span>            {</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= 5;</div>
+<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= <a class="code hl_property" href="classDate.html#a6cd5c56e141f1ad774c745acdd473c08">HourMorning</a>;</div>
 <div class="line"><span class="lineno">  118</span>            }</div>
 <div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  120</span>        }</div>
 <div class="line"><span class="lineno">  121</span>    }</div>
+<div class="ttc" id="aclassDate_html_a6cd5c56e141f1ad774c745acdd473c08"><div class="ttname"><a href="classDate.html#a6cd5c56e141f1ad774c745acdd473c08">Date.HourMorning</a></div><div class="ttdeci">int HourMorning</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00123">Date.cs:123</a></div></div>
+<div class="ttc" id="aclassDate_html_ae1efc33bfa019cec432932772855c0c5"><div class="ttname"><a href="classDate.html#ae1efc33bfa019cec432932772855c0c5">Date.HourNight</a></div><div class="ttdeci">int HourNight</div><div class="ttdef"><b>Definition:</b> <a href="Date_8cs_source.html#l00125">Date.cs:125</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01755">Chara.CanDuplicate()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00921">BaseTileMap.DrawTile()</a>, <a class="el" href="Card_8cs_source.html#l06384">Card.GetLightRadius()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00587">BaseGameScreen.RefreshSky()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00976">CoreConfig.RefreshUIBrightness()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00606">BaseGameScreen.RefreshWeather()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, and <a class="el" href="Zone_8cs_source.html#l01168">Zone.Simulate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l01758">Chara.CanDuplicate()</a>, <a class="el" href="BaseTileMap_8cs_source.html#l00921">BaseTileMap.DrawTile()</a>, <a class="el" href="Card_8cs_source.html#l06388">Card.GetLightRadius()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00587">BaseGameScreen.RefreshSky()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00976">CoreConfig.RefreshUIBrightness()</a>, <a class="el" href="BaseGameScreen_8cs_source.html#l00606">BaseGameScreen.RefreshWeather()</a>, <a class="el" href="AI__Idle_8cs_source.html#l00032">AI_Idle.Run()</a>, <a class="el" href="Zone_8cs_source.html#l01168">Zone.Simulate()</a>, and <a class="el" href="ConVampire_8cs_source.html#l00024">ConVampire.Tick()</a>.</p>
 
 </div>
 </div>
@@ -1646,17 +1700,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00149">149</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  152</span>        {</div>
-<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt;= 3)</div>
-<div class="line"><span class="lineno">  154</span>            {</div>
-<div class="line"><span class="lineno">  155</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 5;</div>
-<div class="line"><span class="lineno">  156</span>            }</div>
-<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  158</span>        }</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00153">153</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>    {</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt;= 3)</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 5;</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1680,17 +1734,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00161">161</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  164</span>        {</div>
-<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt;= 6)</div>
-<div class="line"><span class="lineno">  166</span>            {</div>
-<div class="line"><span class="lineno">  167</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 8;</div>
-<div class="line"><span class="lineno">  168</span>            }</div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  170</span>        }</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00165">165</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  168</span>        {</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &gt;= 6)</div>
+<div class="line"><span class="lineno">  170</span>            {</div>
+<div class="line"><span class="lineno">  171</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 8;</div>
+<div class="line"><span class="lineno">  172</span>            }</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1714,17 +1768,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00185">185</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
-<div class="line"><span class="lineno">  187</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  188</span>        {</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt; 12)</div>
-<div class="line"><span class="lineno">  190</span>            {</div>
-<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 2;</div>
-<div class="line"><span class="lineno">  192</span>            }</div>
-<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  194</span>        }</div>
-<div class="line"><span class="lineno">  195</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00189">189</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>    {</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  192</span>        {</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt; 12)</div>
+<div class="line"><span class="lineno">  194</span>            {</div>
+<div class="line"><span class="lineno">  195</span>                <span class="keywordflow">return</span> <a class="code hl_property" href="classDate.html#a801e79ba9d915b15ddbd13aaa4b09020">month</a> &lt;= 2;</div>
+<div class="line"><span class="lineno">  196</span>            }</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="GrowSystem_8cs_source.html#l00268">GrowSystem.CanGrow()</a>, <a class="el" href="Zone_8cs_source.html#l03381">Zone.GrowPlants()</a>, and <a class="el" href="Zone_8cs_source.html#l01168">Zone.Simulate()</a>.</p>
 
@@ -1762,7 +1816,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   94</span>        }</div>
 <div class="line"><span class="lineno">   95</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00197">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00317">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00366">MinToDayAndHour()</a>, <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>, and <a class="el" href="Scene_8cs_source.html#l00770">Scene.UpdateTimeRatio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00201">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00321">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>, <a class="el" href="Date_8cs_source.html#l00370">MinToDayAndHour()</a>, <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>, and <a class="el" href="Scene_8cs_source.html#l00770">Scene.UpdateTimeRatio()</a>.</p>
 
 </div>
 </div>
@@ -1798,7 +1852,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   58</span>        }</div>
 <div class="line"><span class="lineno">   59</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00235">AddMonth()</a>, <a class="el" href="Date_8cs_source.html#l00197">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00327">GetRawDay()</a>, <a class="el" href="Date_8cs_source.html#l00317">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, and <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00239">AddMonth()</a>, <a class="el" href="Date_8cs_source.html#l00201">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00331">GetRawDay()</a>, <a class="el" href="Date_8cs_source.html#l00321">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, and <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>.</p>
 
 </div>
 </div>
@@ -1822,9 +1876,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00143">143</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00147">147</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1902,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00145">145</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00149">149</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
 
 </div>
 </div>
@@ -1872,7 +1926,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00147">147</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00151">151</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
 
 </div>
 </div>
@@ -1896,28 +1950,28 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00123">123</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">  126</span>        {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 5 &amp;&amp; <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= 6)</div>
-<div class="line"><span class="lineno">  128</span>            {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Dawn;</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 7 &amp;&amp; <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= 17)</div>
+<p class="definition">Definition at line <a class="el" href="Date_8cs_source.html#l00127">127</a> of file <a class="el" href="Date_8cs_source.html">Date.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 5 &amp;&amp; <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= 6)</div>
 <div class="line"><span class="lineno">  132</span>            {</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Day;</div>
+<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Dawn;</div>
 <div class="line"><span class="lineno">  134</span>            }</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 18 &amp;&amp; <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= 19)</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 7 &amp;&amp; <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= 17)</div>
 <div class="line"><span class="lineno">  136</span>            {</div>
-<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Dusk;</div>
+<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Day;</div>
 <div class="line"><span class="lineno">  138</span>            }</div>
-<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Night;</div>
-<div class="line"><span class="lineno">  140</span>        }</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &gt;= 18 &amp;&amp; <a class="code hl_property" href="classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7">hour</a> &lt;= 19)</div>
+<div class="line"><span class="lineno">  140</span>            {</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Dusk;</div>
+<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a>.Night;</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
 <div class="ttc" id="aPeriodOfDay_8cs_html_abff5421a579e88df702db9f9691472ee"><div class="ttname"><a href="PeriodOfDay_8cs.html#abff5421a579e88df702db9f9691472ee">PeriodOfDay</a></div><div class="ttdeci">PeriodOfDay</div><div class="ttdef"><b>Definition:</b> <a href="PeriodOfDay_8cs_source.html#l00001">PeriodOfDay.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">WidgetDate._Refresh()</a>, and <a class="el" href="Card_8cs_source.html#l06384">Card.GetLightRadius()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetDate_8cs_source.html#l00051">WidgetDate._Refresh()</a>, and <a class="el" href="Card_8cs_source.html#l06388">Card.GetLightRadius()</a>.</p>
 
 </div>
 </div>
@@ -1953,7 +2007,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  106</span>        }</div>
 <div class="line"><span class="lineno">  107</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00197">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>, and <a class="el" href="Date_8cs_source.html#l00361">SecToDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00201">Copy()</a>, <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>, and <a class="el" href="Date_8cs_source.html#l00365">SecToDate()</a>.</p>
 
 </div>
 </div>
@@ -1989,7 +2043,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   46</span>        }</div>
 <div class="line"><span class="lineno">   47</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00235">AddMonth()</a>, <a class="el" href="Date_8cs_source.html#l00197">Copy()</a>, <a class="el" href="Biography_8cs_source.html#l00276">Biography.GetAge()</a>, <a class="el" href="Date_8cs_source.html#l00322">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00327">GetRawDay()</a>, <a class="el" href="Date_8cs_source.html#l00317">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00245">GetText()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>, and <a class="el" href="Date_8cs_source.html#l00393">ToDate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Date_8cs_source.html#l00239">AddMonth()</a>, <a class="el" href="Date_8cs_source.html#l00201">Copy()</a>, <a class="el" href="Biography_8cs_source.html#l00276">Biography.GetAge()</a>, <a class="el" href="Date_8cs_source.html#l00326">GetRaw()</a>, <a class="el" href="Date_8cs_source.html#l00331">GetRawDay()</a>, <a class="el" href="Date_8cs_source.html#l00321">GetRawReal()</a>, <a class="el" href="Date_8cs_source.html#l00249">GetText()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00059">LayerNewspaper.OnInit()</a>, <a class="el" href="ContentHomeReport_8cs_source.html#l00048">ContentHomeReport.RefreshInfo()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00128">UIHomeInfo.RefreshInfo()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00148">LayerShippingResult.Show()</a>, and <a class="el" href="Date_8cs_source.html#l00397">ToDate()</a>.</p>
 
 </div>
 </div>

@@ -374,6 +374,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "ConTransmuteBroom.cs", "ConTransmuteBroom_8cs.html", "ConTransmuteBroom_8cs" ],
     [ "ConTransmuteCat.cs", "ConTransmuteCat_8cs.html", "ConTransmuteCat_8cs" ],
     [ "ConTransmutePutit.cs", "ConTransmutePutit_8cs.html", "ConTransmutePutit_8cs" ],
+    [ "ConVampire.cs", "ConVampire_8cs.html", "ConVampire_8cs" ],
     [ "ConWait.cs", "ConWait_8cs.html", "ConWait_8cs" ],
     [ "ConWardMonster.cs", "ConWardMonster_8cs.html", "ConWardMonster_8cs" ],
     [ "ConWeakness.cs", "ConWeakness_8cs.html", "ConWeakness_8cs" ],

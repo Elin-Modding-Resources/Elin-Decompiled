@@ -21,6 +21,7 @@ var classSKILL =
     [ "digging", "classSKILL.html#a828f71b3988d3a65d721d28ab032d6e0", null ],
     [ "disarmTrap", "classSKILL.html#aece341213495ae3e2614c5a4076e2d80", null ],
     [ "DMG", "classSKILL.html#acdc5ba8dab465fe2cb133d4da118c13e", null ],
+    [ "dmgDealt", "classSKILL.html#a801649f1950b7be482c3a11c9ecb4c20", null ],
     [ "DV", "classSKILL.html#adad381cb1fc754cd024dde8ea5170b46", null ],
     [ "EDR", "classSKILL.html#a03b0befbd4d0f5d282d6c4124e735bde", null ],
     [ "eleAcid", "classSKILL.html#aad2c57010807f88edcea729e1bc1afb7", null ],

@@ -494,6 +494,7 @@ var hierarchy =
             [ "ConReload", "classConReload.html", null ],
             [ "ConSmoking", "classConSmoking.html", null ],
             [ "ConSuffocation", "classConSuffocation.html", null ],
+            [ "ConVampire", "classConVampire.html", null ],
             [ "ConWait", "classConWait.html", null ],
             [ "ConWet", "classConWet.html", null ]
           ] ]
