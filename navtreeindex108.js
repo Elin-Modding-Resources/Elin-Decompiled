@@ -1,5 +1,7 @@
 var NAVTREEINDEX108 =
 {
+"classSpatial.html#a8b5068efbc1d2d8e289f65d4385dc98b":[1,0,1233,92],
+"classSpatial.html#a8c6c3f1ffd0867350bc4dd763d3f485b":[1,0,1233,66],
 "classSpatial.html#a912861f4177ce608d6f35cb47e2d3139":[1,0,1233,80],
 "classSpatial.html#a91c8f9dfdd78672b104b16075f03d85c":[1,0,1233,56],
 "classSpatial.html#a93a6d0f0003398c6a21c0fa0c965396f":[1,0,1233,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX108 =
 "classStanceIai.html":[1,0,1253],
 "classStanceManaCost.html":[1,0,1254],
 "classStanceSongSleep.html":[1,0,1255],
-"classStanceSongSleep.html#a2d21f428e025d08a5ab0a2fc76d67fe7":[1,0,1255,0],
-"classStanceSongValor.html":[1,0,1256],
-"classStanceSongValor.html#a982ec8101728814b93706e087060e3df":[1,0,1256,0]
+"classStanceSongSleep.html#a2d21f428e025d08a5ab0a2fc76d67fe7":[1,0,1255,0]
 };

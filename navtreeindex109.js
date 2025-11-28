@@ -1,5 +1,7 @@
 var NAVTREEINDEX109 =
 {
+"classStanceSongValor.html":[1,0,1256],
+"classStanceSongValor.html#a982ec8101728814b93706e087060e3df":[1,0,1256,0],
 "classStanceTaunt.html":[1,0,1257],
 "classStats.html":[1,0,1258],
 "classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1258,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX109 =
 "classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6":[1,0,1320,4],
 "classTCOrbitChara.html#ab81202f1b685bc12aab5d3dac00ecac8":[1,0,1320,14],
 "classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8":[1,0,1320,0],
-"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1320,6],
-"classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0":[1,0,1320,5],
-"classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da":[1,0,1320,7]
+"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1320,6]
 };

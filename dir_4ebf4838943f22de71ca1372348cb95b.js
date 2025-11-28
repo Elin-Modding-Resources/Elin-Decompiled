@@ -1510,6 +1510,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitGenerator.cs", "TraitGenerator_8cs.html", "TraitGenerator_8cs" ],
     [ "TraitGeneratorChair.cs", "TraitGeneratorChair_8cs.html", "TraitGeneratorChair_8cs" ],
     [ "TraitGeneratorDrain.cs", "TraitGeneratorDrain_8cs.html", "TraitGeneratorDrain_8cs" ],
+    [ "TraitGeneratorHamster.cs", "TraitGeneratorHamster_8cs.html", "TraitGeneratorHamster_8cs" ],
     [ "TraitGeneratorSolar.cs", "TraitGeneratorSolar_8cs.html", "TraitGeneratorSolar_8cs" ],
     [ "TraitGeneratorWheel.cs", "TraitGeneratorWheel_8cs.html", "TraitGeneratorWheel_8cs" ],
     [ "TraitGeneratorWind.cs", "TraitGeneratorWind_8cs.html", "TraitGeneratorWind_8cs" ],

@@ -1,5 +1,17 @@
 var NAVTREEINDEX143 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da299d15cf309338174c8ac1ff92cb9261":[0,4,3,0,8,27],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da2d89d431f58d9b88763fc10ca5b8c705":[0,4,3,0,8,154],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da2e40ad879e955201df4dedbf8d479a12":[0,4,3,0,8,227],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da2f40e9b499b9ab6a66abede273f20f8d":[0,4,3,0,8,84],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da313674d2155e32bb999a7c809ad3100c":[0,4,3,0,8,82],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da31749d08392658ed254f44a18a50e1b1":[0,4,3,0,8,119],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da317b2527f8ed66de4add59636f213597":[0,4,3,0,8,123],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da323446ea3b754e71edac6ed88109572d":[0,4,3,0,8,31],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da32a828996bbe05a2a718cccd1c63454c":[0,4,3,0,8,60],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da3369f0bc85fc8dbec059ee5905fce861":[0,4,3,0,8,180],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da338659d8addc2ef1915f6e1507099e3c":[0,4,3,0,8,187],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da33f2e3e26dfcf9be64aee18dcbc7406a":[0,4,3,0,8,106],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da34145f94c27c8a6f9b6a66525c476aff":[0,4,3,0,8,221],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da35619689f21cfa3561d4ebf93a553633":[0,4,3,0,8,120],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da36185b29455b301e9ac508c95cc6fb1f":[0,4,3,0,8,148],
@@ -237,17 +249,5 @@ var NAVTREEINDEX143 =
 "structAlgorithms_1_1PathFinderNode.html#a9d142733e5e490432c66cb30a26b9f1a":[1,0,0,3,4],
 "structAlgorithms_1_1PathFinderNode.html#a9d142733e5e490432c66cb30a26b9f1a":[0,4,0,3,4],
 "structAlgorithms_1_1PathFinderNode.html#aaf258b6ea22dae2eed81c84d6e507275":[1,0,0,3,2],
-"structAlgorithms_1_1PathFinderNode.html#aaf258b6ea22dae2eed81c84d6e507275":[0,4,0,3,2],
-"structAlgorithms_1_1PathFinderNode.html#ae6d978ba911c6243806a5795f6fda2dc":[1,0,0,3,1],
-"structAlgorithms_1_1PathFinderNode.html#ae6d978ba911c6243806a5795f6fda2dc":[0,4,0,3,1],
-"structAlgorithms_1_1PathFinderNode.html#ae819d273b2dd441f25be33657cfc7103":[0,4,0,3,0],
-"structAlgorithms_1_1PathFinderNode.html#ae819d273b2dd441f25be33657cfc7103":[1,0,0,3,0],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html":[0,4,0,2,1],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html":[1,0,0,2,1],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a13dac95468d2459640c948c53c3fbc59":[1,0,0,2,1,0],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a13dac95468d2459640c948c53c3fbc59":[0,4,0,2,1,0],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a2dea8559b73de52d6c7da460f6bf498c":[1,0,0,2,1,3],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a2dea8559b73de52d6c7da460f6bf498c":[0,4,0,2,1,3],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a3c843d0aa67b0ca40d49ca8ab334f82b":[1,0,0,2,1,4],
-"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a3c843d0aa67b0ca40d49ca8ab334f82b":[0,4,0,2,1,4]
+"structAlgorithms_1_1PathFinderNode.html#aaf258b6ea22dae2eed81c84d6e507275":[0,4,0,3,2]
 };

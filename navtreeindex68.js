@@ -1,5 +1,7 @@
 var NAVTREEINDEX68 =
 {
+"classGoalCombat_1_1ItemAbility.html#a4aeca13577ef7bbd5b102700c9255c1d":[1,0,559,0,5],
+"classGoalCombat_1_1ItemAbility.html#a5116fc5650b4369494f1290fb9e80379":[1,0,559,0,4],
 "classGoalCombat_1_1ItemAbility.html#a5b30a9350a54d8b8fde1104000a1060f":[1,0,559,0,0],
 "classGoalCombat_1_1ItemAbility.html#a8c7ec2bf97dd92ac046c4b0cf189ff7b":[1,0,559,0,1],
 "classGoalEndTurn.html":[1,0,560],
@@ -247,7 +249,5 @@ var NAVTREEINDEX68 =
 "classGrowSystemKinoko.html":[1,0,591],
 "classGrowSystemKinoko.html#a0d762e7ad7f24dd7edb6e6d28e974d98":[1,0,591,5],
 "classGrowSystemKinoko.html#a17ba0063fc4757d5e69ac11e78b43ac8":[1,0,591,8],
-"classGrowSystemKinoko.html#a33a9fe10b0d5adf8e706a70e9adc5621":[1,0,591,6],
-"classGrowSystemKinoko.html#a685d47708d073b638555f69323076d37":[1,0,591,1],
-"classGrowSystemKinoko.html#a8a6d487f4133d9a3529f1c81f6eee891":[1,0,591,3]
+"classGrowSystemKinoko.html#a33a9fe10b0d5adf8e706a70e9adc5621":[1,0,591,6]
 };

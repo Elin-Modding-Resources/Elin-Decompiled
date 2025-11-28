@@ -1697,6 +1697,7 @@ var annotated_dup =
     [ "TraitGenerator", "classTraitGenerator.html", "classTraitGenerator" ],
     [ "TraitGeneratorChair", "classTraitGeneratorChair.html", null ],
     [ "TraitGeneratorDrain", "classTraitGeneratorDrain.html", "classTraitGeneratorDrain" ],
+    [ "TraitGeneratorHamster", "classTraitGeneratorHamster.html", "classTraitGeneratorHamster" ],
     [ "TraitGeneratorSolar", "classTraitGeneratorSolar.html", "classTraitGeneratorSolar" ],
     [ "TraitGeneratorWheel", "classTraitGeneratorWheel.html", "classTraitGeneratorWheel" ],
     [ "TraitGeneratorWind", "classTraitGeneratorWind.html", "classTraitGeneratorWind" ],

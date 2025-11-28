@@ -1,7 +1,7 @@
 var classEClass =
 [
     [ "Bigger", "classEClass.html#a5fd5258d22ca6ebd120547e7b97a611b", null ],
-    [ "curve", "classEClass.html#a160545685c1ede8a286de567dc56f5ca", null ],
+    [ "curve", "classEClass.html#a16c7ae534957971551c791736eb90643", null ],
     [ "rnd", "classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c", null ],
     [ "rnd", "classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4", null ],
     [ "rndf", "classEClass.html#a859a9e1a1cbce6b89892bb19cebe1a30", null ],

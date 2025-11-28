@@ -1715,6 +1715,7 @@ var hierarchy =
         [ "TraitGene", "classTraitGene.html", null ],
         [ "TraitGenerator", "classTraitGenerator.html", [
           [ "TraitGeneratorDrain", "classTraitGeneratorDrain.html", null ],
+          [ "TraitGeneratorHamster", "classTraitGeneratorHamster.html", null ],
           [ "TraitGeneratorSolar", "classTraitGeneratorSolar.html", null ],
           [ "TraitGeneratorWheel", "classTraitGeneratorWheel.html", [
             [ "TraitGeneratorChair", "classTraitGeneratorChair.html", null ]

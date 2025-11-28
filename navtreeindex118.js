@@ -1,5 +1,7 @@
 var NAVTREEINDEX118 =
 {
+"classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1523,3],
+"classTraitCurtain.html#a1f1e4de13216bc852a9ff429896d712e":[1,0,1523,1],
 "classTraitCurtain.html#a2b50ce8f3b99e7b80da8bc908409b8f0":[1,0,1523,4],
 "classTraitCurtain.html#a6d171ff8fd09f46803032f43954dd416":[1,0,1523,2],
 "classTraitCurtain.html#af815915a391a32fe3f4c9f5579397147":[1,0,1523,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitExileElder.html#acb6ae471ef906a8c79fc539c35f9bf63":[1,0,1574,0],
 "classTraitFactionBoard.html":[1,0,1575],
 "classTraitFactionBoard.html#a43bbcae6f5dad4bcf48d8ceb947eeeaa":[1,0,1575,1],
-"classTraitFactionBoard.html#a7df58def4278f8cda59745193e5b5e44":[1,0,1575,2],
-"classTraitFactionBoard.html#ad763ea52e747c125501201db1ebd885c":[1,0,1575,0],
-"classTraitFactory.html":[1,0,1576]
+"classTraitFactionBoard.html#a7df58def4278f8cda59745193e5b5e44":[1,0,1575,2]
 };
