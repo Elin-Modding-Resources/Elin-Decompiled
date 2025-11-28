@@ -141,6 +141,9 @@ public class AI_PlayMusic : AIAct
 			case "cello":
 				idSong = "cello_prelude";
 				break;
+			case "koto":
+				idSong = "koto";
+				break;
 			case "instrument_violin":
 			case "panty":
 				idSong = "violin_chaconne";

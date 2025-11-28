@@ -302,7 +302,7 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			});
 			if (c != EClass.pc)
 			{
-				if (c.sourceCard.idActor.IsEmpty() && c.host == null)
+				if (c.sourceCard.idActor.IsEmpty())
 				{
 					if (c.pccData == null)
 					{

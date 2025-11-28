@@ -62,6 +62,10 @@ public class LayerShippingResult : ELayer
 		{
 			num = 0;
 		}
+		if (num == 3 && ELayer.game.cards.globalCharas.Find("farris") == null)
+		{
+			num = 0;
+		}
 		imageBG.sprite = spriteBG[num];
 		Rand.SetSeed();
 		base.Awake();

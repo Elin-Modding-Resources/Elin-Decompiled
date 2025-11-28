@@ -310,14 +310,9 @@ public class ActThrow : ActBaseAttack
 				Chara chara4 = Act.TC.Chara;
 				if (traitMonsterBall.IsSilvercatBall)
 				{
-					if (chara4.id != "cat_silver" || chara4.IsPCFactionOrMinion || EClass._zone.id == "startVillage2" || EClass._zone.IsUserZone)
+					if (chara4.id != "cat_silver" || chara4.IsPCFactionOrMinion || EClass._zone.id == "startVillage2" || EClass._zone.IsUserZone || EClass._zone.Boss == chara4 || chara4.c_bossType != 0)
 					{
 						Msg.Say("monsterball_invalid");
-						break;
-					}
-					if (chara4.LV > 10)
-					{
-						Msg.Say("monsterball_lv");
 						break;
 					}
 				}

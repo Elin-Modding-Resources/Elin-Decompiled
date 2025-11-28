@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using UnityEngine;
 
 [JsonObject(MemberSerialization.OptIn)]
 public class EClass
@@ -65,23 +66,23 @@ public class EClass
 		return Rand.rnd(a);
 	}
 
-	public static int curve(int a, int start, int step, int rate = 75)
+	public static int curve(int _a, int start, int step, int rate = 75)
 	{
-		if (a <= start)
+		if (_a <= start)
 		{
-			return a;
+			return _a;
 		}
+		long num = _a;
 		for (int i = 0; i < 10; i++)
 		{
-			int num = start + i * step;
-			if (a > num)
+			int num2 = start + i * step;
+			if (num <= num2)
 			{
-				a = num + (a - num) * rate / 100;
-				continue;
+				break;
 			}
-			return a;
+			num = num2 + (num - num2) * rate / 100;
 		}
-		return a;
+		return (int)Mathf.Clamp(num, -2.1474836E+09f, 2.1474836E+09f);
 	}
 
 	public static int rndHalf(int a)
