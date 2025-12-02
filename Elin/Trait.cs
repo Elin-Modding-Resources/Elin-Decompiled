@@ -98,7 +98,7 @@ public class Trait : EClass
 
 	public virtual int GuidePriotiy => 0;
 
-	public virtual int Electricity
+	public virtual int OriginalElectricity
 	{
 		get
 		{
@@ -114,6 +114,8 @@ public class Trait : EClass
 			return electricity * 100 / (100 + EClass._zone.branch.Evalue(2700) / 2);
 		}
 	}
+
+	public virtual int Electricity => OriginalElectricity;
 
 	public virtual bool IgnoreLastStackHeight => false;
 
@@ -1527,6 +1529,7 @@ public class Trait : EClass
 			NoRestock(ThingGen.Create("lucky_coin").SetNum(10));
 			NoRestock(ThingGen.CreateSkillbook(6662));
 			NoRestock(ThingGen.CreateSkillbook(6664));
+			Add("book_exp", 10, 0);
 			break;
 		case ShopType.Copy:
 		{
@@ -1893,7 +1896,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Moyer:
 				{
-					for (int num12 = 1; num12 <= 13; num12++)
+					for (int num12 = 1; num12 <= 14; num12++)
 					{
 						AddAdvWeek(num12);
 					}

@@ -1731,6 +1731,7 @@ public class Player : EClass
 		if (c.race.id == "vampire")
 		{
 			c.AddCard(ThingGen.CreateRecipe("bloodpack"));
+			c.AddCard(SetSpellbook(ThingGen.CreateSpellbook(8800), 4));
 			if (EClass.debug.enable)
 			{
 				c.AddCard(ThingGen.Create("mixer"));

@@ -523,6 +523,7 @@ public class Feat : Element
 			ModBase(956, a * 10, hide: false);
 			ModBase(950, a * -5, hide: false);
 			ModBase(960, a * -5, hide: false);
+			ModBase(423, a, hide: false);
 			break;
 		case 1290:
 			ModBase(418, a * 100, hide: false);

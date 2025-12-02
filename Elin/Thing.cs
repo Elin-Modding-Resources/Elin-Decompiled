@@ -1093,13 +1093,13 @@ public class Thing : Card
 		{
 			AddText("isAcidproof", FontColor.Default);
 		}
-		if (trait.Electricity > 0)
+		if (trait.OriginalElectricity > 0)
 		{
-			AddText("isGenerateElectricity".lang(trait.Electricity.ToString() ?? ""), FontColor.Default);
+			AddText("isGenerateElectricity".lang(trait.OriginalElectricity.ToString() ?? ""), FontColor.Default);
 		}
-		if (trait.Electricity < 0)
+		if (trait.OriginalElectricity < 0)
 		{
-			AddText("isConsumeElectricity".lang(Mathf.Abs(trait.Electricity).ToString() ?? ""), FontColor.Default);
+			AddText("isConsumeElectricity".lang(Mathf.Abs(trait.OriginalElectricity).ToString() ?? ""), FontColor.Default);
 		}
 		if (base.IsUnique)
 		{
@@ -1601,20 +1601,20 @@ public class Thing : Card
 			}
 			if (source.anime.Length > 2)
 			{
-				float num = time * 1000f / (float)source.anime[1] % (float)source.anime[2];
-				if ((int)num == source.anime[0] - 1 && source.anime.Length > 3)
+				int num = (int)(time * 1000f / (float)source.anime[1] % (float)source.anime[2]);
+				if (num == source.anime[0] - 1 && source.anime.Length > 3)
 				{
 					PlaySound("anime_sound" + source.anime[3]);
 				}
-				if (!(num >= (float)source.anime[0]))
+				if (num < source.anime[0])
 				{
-					p.tile += num * (float)((!(p.tile < 0f)) ? 1 : (-1));
+					p.tile += num * ((!(p.tile < 0f)) ? 1 : (-1));
 				}
 			}
 			else
 			{
-				float num2 = time * 1000f / (float)source.anime[1] % (float)source.anime[0];
-				p.tile += num2 * (float)((!(p.tile < 0f)) ? 1 : (-1));
+				int num2 = (int)(time * 1000f / (float)source.anime[1] % (float)source.anime[0]);
+				p.tile += num2 * ((!(p.tile < 0f)) ? 1 : (-1));
 			}
 			break;
 		}
@@ -1823,7 +1823,7 @@ public class Thing : Card
 		}
 		i.onDestroy = delegate
 		{
-			if (!buy && !i.wasCanceled)
+			if ((!buy || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !i.wasCanceled)
 			{
 				Process();
 			}
@@ -1888,22 +1888,26 @@ public class Thing : Card
 	public void ShowSplitMenu2(ButtonGrid button, string lang, Action<int> onSplit = null)
 	{
 		int count = 1;
-		UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
+		UIContextMenu i = EClass.ui.CreateContextMenuInteraction();
 		UIButton buttonBuy = null;
 		UIItem itemSlider = null;
-		itemSlider = uIContextMenu.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
+		itemSlider = i.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
 		{
 			count = (int)b;
 			UpdateButton();
 		}, 1f, base.Num, isInt: true, hideOther: false, useInput: true).GetComponent<UIItem>();
-		buttonBuy = uIContextMenu.AddButton("invBuy", delegate
+		buttonBuy = i.AddButton("invBuy", delegate
 		{
 			Process();
 		});
-		uIContextMenu.onDestroy = delegate
+		i.onDestroy = delegate
 		{
+			if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !i.wasCanceled)
+			{
+				Process();
+			}
 		};
-		uIContextMenu.Show();
+		i.Show();
 		if ((bool)buttonBuy)
 		{
 			buttonBuy.gameObject.AddComponent<CanvasGroup>();

@@ -404,6 +404,7 @@ public class ActThrow : ActBaseAttack
 		if (EClass.rnd(2) == 0)
 		{
 			c.Chara.RemoveCondition<ConInvisibility>();
+			c.Chara.RemoveCondition<ConDark>();
 		}
 		if (Act.TC != null)
 		{

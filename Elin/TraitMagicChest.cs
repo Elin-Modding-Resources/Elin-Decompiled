@@ -1,6 +1,6 @@
 public class TraitMagicChest : TraitContainer
 {
-	public override int Electricity => base.Electricity + ((IsFridge ? 50 : 0) + owner.c_containerUpgrade.cap / 5) * -1;
+	public override int OriginalElectricity => base.OriginalElectricity + ((IsFridge ? 50 : 0) + owner.c_containerUpgrade.cap / 5) * -1;
 
 	public override bool IsHomeItem => true;
 

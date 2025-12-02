@@ -4182,6 +4182,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					Say("abMistOfDarkness_step", this);
 				}
+				AddCondition<ConDark>(e.power);
 				break;
 			}
 		}
@@ -6030,6 +6031,7 @@ public class Chara : Card, IPathfindWalker
 		if (flag2 && !a.source.tag.Contains("keepInvisi") && EClass.rnd(2) == 0)
 		{
 			RemoveCondition<ConInvisibility>();
+			RemoveCondition<ConDark>();
 		}
 		return flag2;
 		void ForeachEnemy(Action<Chara> action)
@@ -7314,37 +7316,45 @@ public class Chara : Card, IPathfindWalker
 			return;
 		}
 		int num = 2;
-		int num2 = 2;
-		bool flag = GetInt(113) == 0;
+		int num2 = 1;
 		int num3 = 2;
+		bool flag = GetInt(113) == 0;
 		int num4 = 2;
 		int num5 = 2;
+		int num6 = 2;
 		if (homeBranch != null && homeBranch.HasItemProtection && !IsPCParty)
 		{
-			num4 = 0;
 			num5 = 0;
+			num6 = 0;
 		}
 		foreach (Thing thing3 in things)
 		{
 			if (CanEat(thing3, shouldEat))
 			{
-				num -= thing3.Num;
+				if (thing3.HasElement(757))
+				{
+					num2 -= thing3.Num;
+				}
+				else
+				{
+					num -= thing3.Num;
+				}
 			}
 			if (thing3.trait.GetHealAction(this) != null)
 			{
-				num2 -= thing3.Num;
+				num3 -= thing3.Num;
 			}
 			if (thing3.id == "polish_powder")
 			{
-				num3 -= thing3.Num;
+				num4 -= thing3.Num;
 			}
 			if (thing3.trait is TraitBlanketColdproof)
 			{
-				num4 -= thing3.Num;
+				num5 -= thing3.Num;
 			}
 			if (thing3.trait is TraitBlanketFireproof)
 			{
-				num5 -= thing3.Num;
+				num6 -= thing3.Num;
 			}
 		}
 		_ListItems.Clear();
@@ -7358,30 +7368,35 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (!thing4.c_isImportant && thing4.IsIdentified)
 				{
-					if (num3 > 0 && thing4.id == "polish_powder")
-					{
-						_ListItems.Add(thing4);
-						num3 -= thing4.Num;
-					}
-					else if (num4 > 0 && !HasElement(1236) && thing4.trait is TraitBlanketColdproof)
+					if (num4 > 0 && thing4.id == "polish_powder")
 					{
 						_ListItems.Add(thing4);
 						num4 -= thing4.Num;
 					}
-					else if (num5 > 0 && thing4.trait is TraitBlanketFireproof)
+					else if (num5 > 0 && !HasElement(1236) && thing4.trait is TraitBlanketColdproof)
 					{
 						_ListItems.Add(thing4);
 						num5 -= thing4.Num;
+					}
+					else if (num6 > 0 && thing4.trait is TraitBlanketFireproof)
+					{
+						_ListItems.Add(thing4);
+						num6 -= thing4.Num;
+					}
+					else if (num2 > 0 && CanEat(thing4, shouldEat) && !thing4.c_isImportant && thing4.HasElement(757))
+					{
+						_ListItems.Add(thing4);
+						num2 -= thing4.Num;
 					}
 					else if (num > 0 && CanEat(thing4, shouldEat) && !thing4.c_isImportant)
 					{
 						_ListItems.Add(thing4);
 						num -= thing4.Num;
 					}
-					else if (num2 > 0 && thing4.trait.GetHealAction(this) != null)
+					else if (num3 > 0 && thing4.trait.GetHealAction(this) != null)
 					{
 						_ListItems.Add(thing4);
-						num2 -= thing4.Num;
+						num3 -= thing4.Num;
 					}
 					else if (flag && thing4.IsEquipmentOrRanged && !thing4.HasTag(CTAG.gift) && ShouldEquip(thing4, useFav: true))
 					{
@@ -7424,7 +7439,14 @@ public class Chara : Card, IPathfindWalker
 				break;
 			}
 			Thing thing2 = listItem2.parent as Thing;
-			if (thing.Num > 2)
+			if (thing.HasElement(757))
+			{
+				if (thing.Num > 1)
+				{
+					thing = thing.Split(1);
+				}
+			}
+			else if (thing.Num > 2)
 			{
 				thing = thing.Split(2);
 			}
@@ -7456,7 +7478,7 @@ public class Chara : Card, IPathfindWalker
 		foreach (Thing item in things.List((Thing t) => CanEat(t, shouldEat: true) && !t.c_isImportant, onlyAccessible: true))
 		{
 			int num2 = CountNumEaten(item);
-			int num3 = 100 - num2;
+			int num3 = 100 - num2 + (item.HasElement(757) ? 10 : 0);
 			if (num3 > num)
 			{
 				result = item;
@@ -8119,7 +8141,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return true;
 		}
-		if (t.trait is TraitBookSecret)
+		if (t.trait is TraitBookExp)
 		{
 			return true;
 		}
@@ -9210,6 +9232,11 @@ public class Chara : Card, IPathfindWalker
 				return null;
 			}
 		}
+		int num2 = c.EvaluateTurn(c.power);
+		if (num2 == 0)
+		{
+			return null;
+		}
 		for (int j = 0; j < conditions.Count; j++)
 		{
 			if (conditions[j].id != c.id)
@@ -9225,8 +9252,12 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (conditions[j].WillOverride)
 				{
-					conditions[j].Kill(silent: true);
-					continue;
+					if (num2 > conditions[j].value)
+					{
+						conditions[j].Kill(silent: true);
+						continue;
+					}
+					return null;
 				}
 				if (CanGainConResist)
 				{
@@ -9247,11 +9278,6 @@ public class Chara : Card, IPathfindWalker
 			{
 				return null;
 			}
-		}
-		int num2 = c.EvaluateTurn(c.power);
-		if (num2 == 0)
-		{
-			return null;
 		}
 		c.value = num2;
 		conditions.Add(c);
@@ -9781,14 +9807,10 @@ public class Chara : Card, IPathfindWalker
 			num = feat.Value;
 			feat.Apply(-feat.Value, elements);
 		}
-		if (value > 0)
+		feat = elements.SetBase(id, value - (feat?.vSource ?? 0)) as Feat;
+		if (feat.Value != 0)
 		{
-			feat = elements.SetBase(id, value - (feat?.vSource ?? 0)) as Feat;
 			feat.Apply(feat.Value, elements);
-		}
-		else
-		{
-			elements.Remove(id);
 		}
 		if (EClass.core.IsGameStarted)
 		{

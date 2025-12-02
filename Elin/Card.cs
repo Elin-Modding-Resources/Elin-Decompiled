@@ -2716,13 +2716,17 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			isDestroyed = true;
 		}
-		if (version < 3)
+		if (version < 4)
 		{
 			if (version < 3 && isChara && HasElement(1210))
 			{
 				elements.ModBase(960, -5 * Evalue(1210));
 			}
-			version = 3;
+			if (version < 4 && isChara && HasElement(1210))
+			{
+				elements.ModBase(423, Evalue(1210));
+			}
+			version = 4;
 		}
 	}
 
@@ -3008,22 +3012,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Chara.SetFeat(1415, Evalue(1415) + 1, msg: true);
 		}
-		if (IsPC)
+		if (IsPC || !(Chara.race.id == "mutant"))
 		{
 			return;
 		}
-		if (Chara.race.id == "mutant")
+		int num = Mathf.Min(1 + LV / 5, 20);
+		for (int i = 0; i < num; i++)
 		{
-			int num = Mathf.Min(1 + LV / 5, 20);
-			for (int i = 0; i < num; i++)
+			if (Evalue(1644) < i + 1)
 			{
-				if (Evalue(1644) < i + 1)
-				{
-					Chara.SetFeat(1644, i + 1, msg: true);
-				}
+				Chara.SetFeat(1644, i + 1, msg: true);
 			}
 		}
-		Chara.TryUpgrade();
 	}
 
 	public virtual void ApplyMaterialElements(bool remove)
@@ -5210,7 +5210,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					{
 						CardBlueprint.SetRarity((EClass.rnd(20) == 0) ? Rarity.Mythical : Rarity.Legendary);
 					}
-					list.Add(ThingGen.Create(array[0], -1, LV).SetNum((num4 < 1000) ? 1 : (num4 / 1000 + ((EClass.rnd(1000) > num4 % 1000) ? 1 : 0))));
+					list.Add(ThingGen.Create(array[0], -1, LV).SetNum((num4 < 1000) ? 1 : (num4 / 1000 + ((EClass.rnd(1000) < num4 % 1000) ? 1 : 0))));
 				}
 			}
 			if (Chara.IsMachine)
@@ -7279,18 +7279,16 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				break;
 			case CurrencyType.Plat:
-			{
-				string text = id;
-				if (!(text == "lucky_coin"))
+				switch (id)
 				{
-					if (!(text == "book_skill"))
-					{
-						break;
-					}
+				case "lucky_coin":
+					return 100;
+				case "book_exp":
+					return 200;
+				case "book_skill":
 					return 50;
 				}
-				return 100;
-			}
+				break;
 			case CurrencyType.Medal:
 				switch (id)
 				{

@@ -70,7 +70,7 @@ public class AI_Eat : AIAct
 		{
 			yield return Cancel();
 		}
-		if (EClass._zone.IsPCFaction && !owner.IsPCParty && owner.memberType != FactionMemberType.Livestock && !owner.noMove)
+		if ((EClass._zone.IsPCFaction || EClass.rnd(4) != 0) && !owner.IsPCParty && owner.memberType != FactionMemberType.Livestock && !owner.noMove)
 		{
 			yield return DoGotoSpot<TraitSpotDining>(base.KeepRunning);
 		}
