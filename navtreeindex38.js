@@ -1,5 +1,9 @@
 var NAVTREEINDEX38 =
 {
+"classBoxOutline.html#a2f73aa9d45a23d039aeff7a33a322019":[1,0,233,0],
+"classBoxOutline.html#a77de05e318825463e8228def6621154a":[1,0,233,2],
+"classBoxOutline.html#a7a2b303e8572fffaf5384730964de22c":[1,0,233,4],
+"classBoxOutline.html#a9c6dcbe45e4be7b977a063ffdcdc851e":[1,0,233,5],
 "classBoxOutline.html#aad1d03469c1759035fafcc65692bc66b":[1,0,233,1],
 "classBoxOutline.html#ad2e5b9213d1e8d512a9b6e68eb1028b0":[1,0,233,3],
 "classBranchMap.html":[1,0,234],
@@ -245,9 +249,5 @@ var NAVTREEINDEX38 =
 "classButtonRoster.html#a640a86c461fe091fd116eac22686311c":[1,0,248,1],
 "classButtonRoster.html#a6cdafebacb3ed4fde13149b303860609":[1,0,248,10],
 "classButtonRoster.html#a82f07654456573f75014897813f0266b":[1,0,248,7],
-"classButtonRoster.html#a8be1e2ef123971ea5409d949e700dd96":[1,0,248,6],
-"classButtonRoster.html#ad644bdd47045017f562a4988227330f3":[1,0,248,11],
-"classButtonRoster.html#ada12a0c92a3eca26fe328946f0ce243f":[1,0,248,4],
-"classButtonRoster.html#adc7ab604e613ba7db6b6e3cd9af9479c":[1,0,248,9],
-"classButtonState.html":[1,0,249]
+"classButtonRoster.html#a8be1e2ef123971ea5409d949e700dd96":[1,0,248,6]
 };

@@ -489,6 +489,7 @@ var hierarchy =
             ] ],
             [ "ConAwakening", "classConAwakening.html", null ],
             [ "ConBuffStats", "classConBuffStats.html", null ],
+            [ "ConDark", "classConDark.html", null ],
             [ "ConFractured", "classConFractured.html", null ],
             [ "ConFreeze", "classConFreeze.html", null ],
             [ "ConReload", "classConReload.html", null ],
@@ -1882,7 +1883,9 @@ var hierarchy =
           [ "TraitBook", "classTraitBook.html", [
             [ "TraitParchment", "classTraitParchment.html", null ]
           ] ],
-          [ "TraitBookSecret", "classTraitBookSecret.html", null ],
+          [ "TraitBookExp", "classTraitBookExp.html", [
+            [ "TraitBookSecret", "classTraitBookSecret.html", null ]
+          ] ],
           [ "TraitBookSkill", "classTraitBookSkill.html", [
             [ "TraitBookPlan", "classTraitBookPlan.html", null ]
           ] ],

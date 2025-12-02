@@ -1,5 +1,9 @@
 var NAVTREEINDEX27 =
 {
+"classAM__BaseGameMode.html#aabe60e15ac9f78080737949d819a45f3":[1,0,133,12],
+"classAM__BaseGameMode.html#ad0b51c597e313ff1654b978334f82b2e":[1,0,133,1],
+"classAM__BaseGameMode.html#ae072c17d3643f98cd4d39dfe32a5e825":[1,0,133,8],
+"classAM__BaseGameMode.html#afadc75f79dac79c555604841928a77d0":[1,0,133,10],
 "classAM__BaseSim.html":[1,0,134],
 "classAM__BaseSim.html#a847cfb4fbe04c176904cf302c2dc1e41":[1,0,134,1],
 "classAM__BaseSim.html#ac0c672960d6e5dbecadff4b64c23420b":[1,0,134,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX27 =
 "classAM__FlagCell.html#a655dea3c75cd5e27e6592b403d530bee":[1,0,151,4],
 "classAM__FlagCell.html#a6e8e60891acfae929f907313753ce39a":[1,0,151,9],
 "classAM__FlagCell.html#a727b92ea72fd40d425a07a2b8b887ce4":[1,0,151,5],
-"classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8db":[1,0,151,0],
-"classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba1141fef99668556db182f75155817018":[1,0,151,0,5],
-"classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba4ebb923554d6457c05bec6639ff0a345":[1,0,151,0,3],
-"classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba662313e4f587f24f73ee4cdb1d3bd411":[1,0,151,0,2],
-"classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8dba70f369f3aac74e990489ea32d9459a91":[1,0,151,0,1]
+"classAM__FlagCell.html#a7ab8a562da791cd9845e0bacbc03e8db":[1,0,151,0]
 };

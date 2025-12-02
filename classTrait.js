@@ -217,6 +217,7 @@ var classTrait =
     [ "Name", "classTrait.html#afab0127cca1275cfacbc10e629be18f0", null ],
     [ "NoHeldDir", "classTrait.html#a654dbdca51dc4525768048c27d0d6030", null ],
     [ "NumCopyItem", "classTrait.html#aeaf83db7916e730b6b27066c133b240c", null ],
+    [ "OriginalElectricity", "classTrait.html#a347dc97633489ded2c1f0391b967d2f5", null ],
     [ "Params", "classTrait.html#aad2791b98fe164652fb38d929afe2750", null ],
     [ "PriceType", "classTrait.html#a8469cbf006d45ccf79d0002535bc60b1", null ],
     [ "radius", "classTrait.html#a0caa424c507858d532c559d32dbde569", null ],

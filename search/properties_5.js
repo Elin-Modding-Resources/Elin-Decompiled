@@ -10,7 +10,7 @@ var searchData=
   ['efficiency_7',['efficiency',['../classWorkSession.html#a173f8837c3d5f426371ae521a8ad51ba',1,'WorkSession']]],
   ['egghatched_8',['eggHatched',['../classPlayer_1_1Stats.html#a0d861b9b25b0efa6a81d35b30e4a9482',1,'Player::Stats']]],
   ['ele_9',['Ele',['../classPolicy.html#a1deb4d4d6b77940beeb756b4bc87ca5b',1,'Policy']]],
-  ['electricity_10',['Electricity',['../classTraitGenerator.html#aa05bcef831a660e2357e0b1ad967f198',1,'TraitGenerator.Electricity()'],['../classTraitMagicChest.html#ad29543aa0f1c1c56d6c973b27d296a49',1,'TraitMagicChest.Electricity()'],['../classTrait.html#aaea5f045bee932aa78a2d0f869e964e1',1,'Trait.Electricity()']]],
+  ['electricity_10',['Electricity',['../classTrait.html#aaea5f045bee932aa78a2d0f869e964e1',1,'Trait.Electricity()'],['../classTraitGenerator.html#aa05bcef831a660e2357e0b1ad967f198',1,'TraitGenerator.Electricity()']]],
   ['electricity_11',['electricity',['../classSpatial.html#a1d73fd6eedea6c16892639ebbae56c2c',1,'Spatial']]],
   ['element_12',['element',['../classBodySlot.html#adfb8b22ac45198052bfa56cbe3a1eef7',1,'BodySlot.element()'],['../classSerializedCards_1_1Data.html#a8b669389cd8e26d66c7e074728b94dee',1,'SerializedCards.Data.element()']]],
   ['elementpowermod_13',['ElementPowerMod',['../classAct.html#a79feeaa06b10a59de93db8e974a65877',1,'Act']]],
