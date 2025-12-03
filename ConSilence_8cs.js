@@ -1,4 +1,4 @@
 var ConSilence_8cs =
 [
-    [ "ConSilence", "classConSilence.html", null ]
+    [ "ConSilence", "classConSilence.html", "classConSilence" ]
 ];

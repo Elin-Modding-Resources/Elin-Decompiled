@@ -1,5 +1,12 @@
 var NAVTREEINDEX144 =
 {
+"structActRef.html#a54effff6d79c7c53ae231d42fd0bfaa2":[1,0,55,2],
+"structActRef.html#a802f2ae4ec1339ed4a4b3119c1c12dfe":[1,0,55,1],
+"structActRef.html#a809e3c3effcf16a4323a273007d4e61f":[1,0,55,7],
+"structActRef.html#abfc464fdd3e596a00bdf6800760db8e4":[1,0,55,4],
+"structActRef.html#aed660e8c81b801eb55e081280b5d53b9":[1,0,55,6],
+"structActRef.html#afc9ae67b7e1e41acdf678677ac27aff9":[1,0,55,5],
+"structAct_1_1Cost.html":[1,0,13,0],
 "structAct_1_1Cost.html#a05815cd21bc067ee8a4aee590806e187":[1,0,13,0,1],
 "structAct_1_1Cost.html#acf45d0fa6c98ba7460fdf5b5ac445069":[1,0,13,0,0],
 "structAlgorithms_1_1PathFinderNode.html":[0,4,0,3],

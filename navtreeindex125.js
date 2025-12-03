@@ -1,5 +1,12 @@
 var NAVTREEINDEX125 =
 {
+"classTraitTrolleyBig.html#a09dcd9bc79cac19122a973307407f0c0":[1,0,1940,0],
+"classTraitTutorialBook.html":[1,0,1941],
+"classTraitTutorialBook.html#a05430eee448599a3b9a58ec882a7244b":[1,0,1941,0],
+"classTraitTyche.html":[1,0,1943],
+"classTraitTyche.html#a034d5b80a70b0f27703a14f06cc8c95d":[1,0,1943,0],
+"classTraitUniqueChara.html":[1,0,1944],
+"classTraitUniqueChara.html#ac677a6c2395ef425343f0eb8d612b874":[1,0,1944,0],
 "classTraitUniqueCharaNoJoin.html":[1,0,1945],
 "classTraitUniqueCharaNoJoin.html#a1ab819fc489cb759d35f3b507b092966":[1,0,1945,1],
 "classTraitUniqueCharaNoJoin.html#a4c9d91526a4679bd98b99aba7fe7046a":[1,0,1945,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX125 =
 "classUD__String__Curve.html":[1,0,1976],
 "classUD__String__EffectData.html":[1,0,1977],
 "classUD__String__ElementRef.html":[1,0,1978],
-"classUD__String__Gradient.html":[1,0,1979],
-"classUD__String__LightData.html":[1,0,1980],
-"classUD__String__MatData.html":[1,0,1981],
-"classUD__String__PaintPosition.html":[1,0,1982],
-"classUD__String__String.html":[1,0,1983],
-"classUDictionary.html":[1,0,1984],
-"classUDictionary.html#a0262809083bec1a7baaf588ea91a8ff0":[1,0,1984,39],
-"classUDictionary.html#a0c17b639c82a0ddf66c8149f00d724ac":[1,0,1984,35]
+"classUD__String__Gradient.html":[1,0,1979]
 };

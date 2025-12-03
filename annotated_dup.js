@@ -431,7 +431,7 @@ var annotated_dup =
     [ "ConResEle", "classConResEle.html", null ],
     [ "ConSeeInvisible", "classConSeeInvisible.html", "classConSeeInvisible" ],
     [ "ConSevenSense", "classConSevenSense.html", null ],
-    [ "ConSilence", "classConSilence.html", null ],
+    [ "ConSilence", "classConSilence.html", "classConSilence" ],
     [ "ConSleep", "classConSleep.html", "classConSleep" ],
     [ "ConSmoking", "classConSmoking.html", "classConSmoking" ],
     [ "ConsoleProDebug", "classConsoleProDebug.html", "classConsoleProDebug" ],

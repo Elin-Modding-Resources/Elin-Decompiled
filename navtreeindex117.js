@@ -1,5 +1,11 @@
 var NAVTREEINDEX117 =
 {
+"classTraitBrewery.html#af6db96e2d5003643fc59104d280777c1":[1,0,1472,7],
+"classTraitBroom.html":[1,0,1473],
+"classTraitBroom.html#a9abeb512e6bd909828dcc06921134bba":[1,0,1473,1],
+"classTraitBroom.html#abb8942a50793670e76df21f2d5f74b3f":[1,0,1473,0],
+"classTraitBroomWitch.html":[1,0,1474],
+"classTraitBuildBoard.html":[1,0,1475],
 "classTraitBuildBoard.html#a27513be20ef8e5426a7729e1525cf7b7":[1,0,1475,0],
 "classTraitBuildBoard.html#a42864a925c4d3be0cd7583e79c80e4c6":[1,0,1475,1],
 "classTraitButcher.html":[1,0,1476],
@@ -243,11 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitCrafter.html#ad1550a5648cd24eac0d9b9c9bb068b7b":[1,0,1521,26],
 "classTraitCrafter.html#ada15d322729b7ddd06d3b5dcf8c92c9f":[1,0,1521,9],
 "classTraitCrafter.html#adda85b6e89740c5018791da335d9a024":[1,0,1521,5],
-"classTraitCrafter.html#ae834415b06f94a32305c88d57baedfe2":[1,0,1521,28],
-"classTraitCrafter.html#aed95a974a58e7bb8cfad5ba2c462a7b0":[1,0,1521,32],
-"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4":[1,0,1521,0],
-"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3":[1,0,1521,0,1],
-"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67":[1,0,1521,0,0],
-"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0":[1,0,1521,0,2],
-"classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613":[1,0,1521,3]
+"classTraitCrafter.html#ae834415b06f94a32305c88d57baedfe2":[1,0,1521,28]
 };

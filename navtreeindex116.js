@@ -1,5 +1,11 @@
 var NAVTREEINDEX116 =
 {
+"classTraitAltar.html#ae5fd67e75b95c7edf12a6cf333c01a6d":[1,0,1417,15],
+"classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919":[1,0,1417,3],
+"classTraitAltarAncient.html":[1,0,1418],
+"classTraitAltarAncient.html#a8d295ef9480c495698224054e97c41f7":[1,0,1418,0],
+"classTraitAltarAncient.html#af14e8f20f77cec9a3515d788847ae57d":[1,0,1418,1],
+"classTraitAltarChaos.html":[1,0,1419],
 "classTraitAltarChaos.html#a9ab111166b27ff5182b9f43e7e10f800":[1,0,1419,0],
 "classTraitAmmo.html":[1,0,1420],
 "classTraitAmmo.html#a061b674e16022617b5e80d700617d7d5":[1,0,1420,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614c":[1,0,1472,0],
 "classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614ca0a38e7286ebbb560354992b3ce62be67":[1,0,1472,0,0],
 "classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614ca40491db1043a93d8b94b9d94e3eda532":[1,0,1472,0,1],
-"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614cacd24882902a3d5da6e5783027a0ae3d0":[1,0,1472,0,2],
-"classTraitBrewery.html#af6db96e2d5003643fc59104d280777c1":[1,0,1472,7],
-"classTraitBroom.html":[1,0,1473],
-"classTraitBroom.html#a9abeb512e6bd909828dcc06921134bba":[1,0,1473,1],
-"classTraitBroom.html#abb8942a50793670e76df21f2d5f74b3f":[1,0,1473,0],
-"classTraitBroomWitch.html":[1,0,1474],
-"classTraitBuildBoard.html":[1,0,1475]
+"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614cacd24882902a3d5da6e5783027a0ae3d0":[1,0,1472,0,2]
 };

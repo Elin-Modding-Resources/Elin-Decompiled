@@ -1,6 +1,7 @@
 var classCharaBody =
 [
     [ "AddBodyPart", "classCharaBody.html#a3e3038aa109c21ed562d2765f846c44b", null ],
+    [ "CountWeapons", "classCharaBody.html#abd3bdd18468cf46e5ed3e24d0e67b105", null ],
     [ "Equip", "classCharaBody.html#ad3696c212b3fbb5b8a71ceec7bd750cb", null ],
     [ "GetAttackIndex", "classCharaBody.html#a6fa5613bbd6e1d5eb89412bd8356e676", null ],
     [ "GetAttackStyle", "classCharaBody.html#a9cfdd0d1f8a537ba091c626ef3dce421", null ],

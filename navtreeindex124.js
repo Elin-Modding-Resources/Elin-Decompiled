@@ -1,5 +1,12 @@
 var NAVTREEINDEX124 =
 {
+"classTraitSwitch.html#a50fc3e8ab031e0d52ff5013d70c50770":[1,0,1881,6],
+"classTraitSwitch.html#a651db8b4ca3d6c8053fd12e0b1bef17f":[1,0,1881,2],
+"classTraitSwitch.html#a9cb5bf37434e1a330c522af125640c51":[1,0,1881,3],
+"classTraitSwitch.html#ab12879a8ef9657e9d31696e76c6565e5":[1,0,1881,13],
+"classTraitSwitch.html#ab80222c9689fa6ed1b8b4b8385066677":[1,0,1881,1],
+"classTraitSwitch.html#ab8fc8a07245dfe353eae19d0008aec09":[1,0,1881,0],
+"classTraitSwitch.html#acbfaeac17f79590e525a8259d27ad43f":[1,0,1881,7],
 "classTraitSwitch.html#ad40ecb5f28a20f72ff7d7ff2df131b8c":[1,0,1881,9],
 "classTraitSyringeBlood.html":[1,0,1882],
 "classTraitSyringeBlood.html#a1812c2e13ac704bd199b8362c88cc8a8":[1,0,1882,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitTrolley.html#aa70f7ca9766fcfaf0e9fcdb1da2149dc":[1,0,1939,4],
 "classTraitTrolley.html#aac4b1624e10b00b395604662c1e0f53c":[1,0,1939,5],
 "classTraitTrolley.html#af0f060ec628470b1d81957f5bb97cfbf":[1,0,1939,2],
-"classTraitTrolleyBig.html":[1,0,1940],
-"classTraitTrolleyBig.html#a09dcd9bc79cac19122a973307407f0c0":[1,0,1940,0],
-"classTraitTutorialBook.html":[1,0,1941],
-"classTraitTutorialBook.html#a05430eee448599a3b9a58ec882a7244b":[1,0,1941,0],
-"classTraitTyche.html":[1,0,1943],
-"classTraitTyche.html#a034d5b80a70b0f27703a14f06cc8c95d":[1,0,1943,0],
-"classTraitUniqueChara.html":[1,0,1944],
-"classTraitUniqueChara.html#ac677a6c2395ef425343f0eb8d612b874":[1,0,1944,0]
+"classTraitTrolleyBig.html":[1,0,1940]
 };

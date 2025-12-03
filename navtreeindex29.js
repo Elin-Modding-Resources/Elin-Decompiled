@@ -150,8 +150,9 @@ var NAVTREEINDEX29 =
 "classActMeleeParry.html#a90890fca8331c3b48645b9c3e837c109":[1,0,39,0],
 "classActMeleeParry.html#a95cc3e0a60dd31f9525f242d1e8ef54b":[1,0,39,2],
 "classActMeleeSwarm.html":[1,0,40],
-"classActMeleeSwarm.html#a4547fe48ec3f566b20367f4b4bd34532":[1,0,40,0],
-"classActMeleeSwarm.html#aa75f7a98f68224bbc4de8221086b94f9":[1,0,40,1],
+"classActMeleeSwarm.html#a4547fe48ec3f566b20367f4b4bd34532":[1,0,40,1],
+"classActMeleeSwarm.html#a508e67e0cebac1bc280973fa88732418":[1,0,40,0],
+"classActMeleeSwarm.html#aa75f7a98f68224bbc4de8221086b94f9":[1,0,40,2],
 "classActMeleeWhilrwind.html":[1,0,41],
 "classActMeleeWhilrwind.html#a099c0ea03dd9230098dcb08178fbce99":[1,0,41,0],
 "classActMiasma.html":[1,0,42],
@@ -248,6 +249,5 @@ var NAVTREEINDEX29 =
 "classActRide.html#a214b50fc04b16a8de7dbe30a69705ede":[1,0,57,1],
 "classActRide.html#a28ba2eb19315998756fd18b1c41ac47e":[1,0,57,0],
 "classActRide.html#a6121a89052bf66950444cf344143258c":[1,0,57,2],
-"classActRide.html#a8fe819039661a869b9920e3c6c40c71b":[1,0,57,3],
-"classActRush.html":[1,0,58]
+"classActRide.html#a8fe819039661a869b9920e3c6c40c71b":[1,0,57,3]
 };

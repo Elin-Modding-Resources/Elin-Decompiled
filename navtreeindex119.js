@@ -1,5 +1,11 @@
 var NAVTREEINDEX119 =
 {
+"classTraitErohon.html":[1,0,1572],
+"classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1572,0],
+"classTraitErohon.html#a2d6396007a75f9ac916b827d6a0e8da4":[1,0,1572,2],
+"classTraitErohon.html#a6c1465509a734979f77294dc47c71369":[1,0,1572,1],
+"classTraitErohon.html#ad7141e5b654da19ff834bfe154bce6f5":[1,0,1572,3],
+"classTraitEspressoMachine.html":[1,0,1573],
 "classTraitEternalMonument.html":[1,0,1574],
 "classTraitEureka.html":[1,0,1575],
 "classTraitExileElder.html":[1,0,1576],
@@ -243,11 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitGrindstone.html#a5248c1e5c050484d5d90ac92b9bef274":[1,0,1640,5],
 "classTraitGrindstone.html#a7e6e197ab6ef77c88f6cc004b5ab5c33":[1,0,1640,2],
 "classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1640,0],
-"classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1640,6],
-"classTraitGuard.html":[1,0,1641],
-"classTraitGuard.html#a8c0a04548373303e71ed5a9d15bbd6f8":[1,0,1641,0],
-"classTraitGuard.html#ab37ae0e246f09be3190e1017ac92c948":[1,0,1641,1],
-"classTraitGuildClerk.html":[1,0,1642],
-"classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1642,0],
-"classTraitGuildClerk.html#af26f260414696aa1275acfa5775f5bda":[1,0,1642,1]
+"classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1640,6]
 };

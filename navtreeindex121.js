@@ -1,5 +1,11 @@
 var NAVTREEINDEX121 =
 {
+"classTraitMerchant.html#af444fd651a60a11d125a7094e132707a":[1,0,1695,4],
+"classTraitMerchantBlack.html":[1,0,1696],
+"classTraitMerchantBlack.html#a0c55ab4bf916652cb165aba6b61f358b":[1,0,1696,4],
+"classTraitMerchantBlack.html#a426b63b31cfd38c4f2abfcdcf43f8a89":[1,0,1696,0],
+"classTraitMerchantBlack.html#a63c10f324fc16b05a1806794b99a06f7":[1,0,1696,3],
+"classTraitMerchantBlack.html#aaaee57988bd078678deba34c5ba43121":[1,0,1696,1],
 "classTraitMerchantBlack.html#ab7b5016580ce7553776144b5b0eb64e6":[1,0,1696,2],
 "classTraitMerchantBook.html":[1,0,1697],
 "classTraitMerchantBook.html#a115cbd0d0309a7724e22ad4fdb6386f7":[1,0,1697,1],
@@ -68,10 +74,11 @@ var NAVTREEINDEX121 =
 "classTraitMerchantPlan.html#a98a140c37901a065443c3f99ad755beb":[1,0,1720,2],
 "classTraitMerchantPlan.html#ab278bfef3c363c2066ef537cbbd74984":[1,0,1720,0],
 "classTraitMerchantPlat.html":[1,0,1721],
-"classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1721,3],
+"classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1721,4],
 "classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1721,2],
 "classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1721,1],
 "classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1721,0],
+"classTraitMerchantPlat.html#adc26d42455bdacb98b2a88007aedbbed":[1,0,1721,3],
 "classTraitMerchantSeed.html":[1,0,1722],
 "classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1722,0],
 "classTraitMerchantSouvenir.html":[1,0,1723],
@@ -242,12 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitPerfume.html#ad9ec97d1c6703377b979f58036c71534":[1,0,1757,0],
 "classTraitPetHouse.html":[1,0,1758],
 "classTraitPhone.html":[1,0,1759],
-"classTraitPhone.html#a03ee09278876eda6ca5cff99e3655166":[1,0,1759,1],
-"classTraitPhone.html#a53928cb9b367df41094aba39e66ae737":[1,0,1759,0],
-"classTraitPhone.html#a9c08ee840f6c744b1add6f609f688547":[1,0,1759,2],
-"classTraitPhone.html#ade162582ff883a09c05beea2e5a45557":[1,0,1759,3],
-"classTraitPhoto.html":[1,0,1760],
-"classTraitPhoto.html#ad4c423b12256d4e26950e812ec93579e":[1,0,1760,0],
-"classTraitPillow.html":[1,0,1761],
-"classTraitPillowEhekatl.html":[1,0,1762]
+"classTraitPhone.html#a03ee09278876eda6ca5cff99e3655166":[1,0,1759,1]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX118 =
 {
+"classTraitCrafter.html#aed95a974a58e7bb8cfad5ba2c462a7b0":[1,0,1521,32],
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4":[1,0,1521,0],
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a3660cac1268fdab7b394a25c3e83ced3":[1,0,1521,0,1],
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a7a1920d61156abc05a60135aefe8bc67":[1,0,1521,0,0],
+"classTraitCrafter.html#af394d353e91fdaf6eab129c8c30cbdd4a84ed5772447182fefe3da93e536f19a0":[1,0,1521,0,2],
+"classTraitCrafter.html#af9afaebb39339754b960e6de9e0a4613":[1,0,1521,3],
 "classTraitCrafter.html#afd71330988c12ddf321aab298566b69b":[1,0,1521,24],
 "classTraitCrafter.html#aff65bd2e6b1c0b1ca49985bc7e9a4e9c":[1,0,1521,19],
 "classTraitCrenel.html":[1,0,1522],
@@ -243,11 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitEquipItem.html":[1,0,1571],
 "classTraitEquipItem.html#a82397e9b89cff4b7ac2072d96e473a1c":[1,0,1571,1],
 "classTraitEquipItem.html#af53edaf7b40c1ca5c97d977de8e475e6":[1,0,1571,2],
-"classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1571,0],
-"classTraitErohon.html":[1,0,1572],
-"classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1572,0],
-"classTraitErohon.html#a2d6396007a75f9ac916b827d6a0e8da4":[1,0,1572,2],
-"classTraitErohon.html#a6c1465509a734979f77294dc47c71369":[1,0,1572,1],
-"classTraitErohon.html#ad7141e5b654da19ff834bfe154bce6f5":[1,0,1572,3],
-"classTraitEspressoMachine.html":[1,0,1573]
+"classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1571,0]
 };
