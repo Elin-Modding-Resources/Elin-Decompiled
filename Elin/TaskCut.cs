@@ -22,7 +22,7 @@ public class TaskCut : TaskDesignation
 		{
 			return HitResult.Valid;
 		}
-		if (pos.HasDecal && EClass.debug.godBuild && (bool)BuildMenu.Instance)
+		if (pos.HasDecal && (bool)BuildMenu.Instance)
 		{
 			return HitResult.Valid;
 		}

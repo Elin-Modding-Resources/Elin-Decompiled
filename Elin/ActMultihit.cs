@@ -13,7 +13,7 @@ public class ActMultihit : Ability
 	{
 		int num = 0;
 		Card orgTC = Act.TC;
-		int num2 = 4 + EClass.rnd(6);
+		int num2 = 4 + EClass.rnd(6) + Act.CC.Evalue(1750);
 		for (int i = 0; i < num2; i++)
 		{
 			if (!Act.CC.IsAliveInCurrentZone || !orgTC.IsAliveInCurrentZone)

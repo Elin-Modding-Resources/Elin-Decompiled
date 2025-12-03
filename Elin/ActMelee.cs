@@ -320,6 +320,7 @@ public class ActMelee : ActBaseAttack
 						int num7 = Act.TC.Evalue(ele2);
 						if (Act.TC.isChara)
 						{
+							num6 += Act.TC.Evalue(1750) * 2 * ((Act.TC.Chara.body.GetAttackStyle() != AttackStyle.Shield) ? 1 : 2);
 							foreach (BodySlot slot2 in Act.TC.Chara.body.slots)
 							{
 								if (slot2.thing != null && slot2.thing.HasElement(437) && Act.TC.Evalue(slot2.thing.category.skill) > num7)

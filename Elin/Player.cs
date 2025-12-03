@@ -1657,6 +1657,10 @@ public class Player : EClass
 		c.EQ_ID("toolbelt").c_IDTState = 0;
 		c.EQ_ID("shirt").c_IDTState = 0;
 		c.AddCard(ThingGen.CreateCurrency(1 + EClass.rnd(5)));
+		if (EClass.debug.enable && c.race.id == "succubus")
+		{
+			c.AddCard(ThingGen.CreateRedBook("advweek_14"));
+		}
 		bool firstSpellbook = true;
 		switch (c.job.id)
 		{

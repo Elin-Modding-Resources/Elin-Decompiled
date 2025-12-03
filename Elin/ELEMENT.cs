@@ -1053,14 +1053,7 @@ public class Element : EClass
 			case 6664:
 			case 6665:
 			{
-				int num2 = -2;
-				foreach (BodySlot slot in c.body.slots)
-				{
-					if (slot.thing != null && slot.thing.IsMeleeWeapon)
-					{
-						num2++;
-					}
-				}
+				int num2 = -2 + c.body.CountWeapons();
 				result2.cost += num2 * 2;
 				break;
 			}

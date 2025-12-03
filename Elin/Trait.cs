@@ -1529,7 +1529,7 @@ public class Trait : EClass
 			NoRestock(ThingGen.Create("lucky_coin").SetNum(10));
 			NoRestock(ThingGen.CreateSkillbook(6662));
 			NoRestock(ThingGen.CreateSkillbook(6664));
-			Add("book_exp", 10, 0);
+			Add("book_exp", 3, 0);
 			break;
 		case ShopType.Copy:
 		{
@@ -1896,7 +1896,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Moyer:
 				{
-					for (int num12 = 1; num12 <= 14; num12++)
+					for (int num12 = 1; num12 <= 15; num12++)
 					{
 						AddAdvWeek(num12);
 					}

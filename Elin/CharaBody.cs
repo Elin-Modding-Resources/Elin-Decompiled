@@ -522,4 +522,17 @@ public class CharaBody : EClass
 			t.SetActive(enable: false);
 		}
 	}
+
+	public int CountWeapons()
+	{
+		int num = 0;
+		foreach (BodySlot slot in slots)
+		{
+			if (slot.thing != null && slot.thing.IsMeleeWeapon)
+			{
+				num++;
+			}
+		}
+		return num;
+	}
 }

@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfLandmark2 = 3781;
+	public const int bfLandmark1 = 3780;
 
 	public const int bfBreed = 3710;
-
-	public const int bfLandmark4 = 3783;
 
 	public const int bfBasin = 3709;
 
@@ -20,7 +18,9 @@ public class FACTION
 
 	public const int bfFreshAir = 3708;
 
-	public const int bfLandmark1 = 3780;
+	public const int bfLandmark2 = 3781;
+
+	public const int bfLandmark4 = 3783;
 
 	public const int fLuck = 2118;
 
@@ -112,7 +112,7 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[53]
 	{
-		3781, 3710, 3783, 3709, 3784, 3782, 3707, 3708, 3780, 2118,
+		3780, 3710, 3709, 3784, 3782, 3707, 3708, 3781, 3783, 2118,
 		2115, 2116, 2117, 2119, 2120, 2200, 2201, 2202, 2207, 2203,
 		2204, 2206, 3800, 2205, 2003, 3801, 3804, 3803, 3802, 3600,
 		3601, 3602, 3603, 3604, 3605, 3700, 3701, 3702, 3703, 3704,

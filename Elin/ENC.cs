@@ -200,13 +200,13 @@ public class ENC
 
 	public const int mod_reload = 601;
 
-	public const int mod_precision = 605;
-
 	public const int mod_rapid = 602;
 
-	public const int mod_ammo_knockback = 603;
+	public const int mod_precision = 605;
 
 	public const int mod_cleave = 622;
+
+	public const int mod_ammo_knockback = 603;
 
 	public static readonly int[] IDS = new int[104]
 	{
@@ -220,6 +220,6 @@ public class ENC
 		435, 436, 437, 438, 439, 440, 441, 443, 485, 480,
 		487, 620, 424, 623, 624, 640, 641, 486, 650, 609,
 		608, 621, 606, 607, 604, 651, 488, 489, 600, 601,
-		605, 602, 603, 622
+		602, 605, 622, 603
 	};
 }

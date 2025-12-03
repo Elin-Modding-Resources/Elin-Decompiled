@@ -17,4 +17,6 @@ public class TraitMerchantPlat : TraitMerchant
 	public override string LangBarter => "daBuyPlat";
 
 	public override bool CanInvite => false;
+
+	public override int RestockDay => 360;
 }

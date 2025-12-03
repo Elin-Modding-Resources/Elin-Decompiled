@@ -19,9 +19,9 @@ public class FEAT
 
 	public const int featEND = 1622;
 
-	public const int featDEX = 1621;
-
 	public const int featHardy = 1630;
+
+	public const int featDEX = 1621;
 
 	public const int featSPD = 1629;
 
@@ -63,6 +63,8 @@ public class FEAT
 
 	public const int featEarthStrength = 1411;
 
+	public const int featComat = 1750;
+
 	public const int featGoldenFinger = 1662;
 
 	public const int featDismantler = 1661;
@@ -83,9 +85,9 @@ public class FEAT
 
 	public const int featDreamWaker = 1653;
 
-	public const int featRapidArrow = 1652;
+	public const int featSpotting = 1633;
 
-	public const int featMagicManner = 1651;
+	public const int featRapidArrow = 1652;
 
 	public const int featGourmet = 1650;
 
@@ -111,7 +113,7 @@ public class FEAT
 
 	public const int featMartial = 1635;
 
-	public const int featSpotting = 1633;
+	public const int featMagicManner = 1651;
 
 	public const int featReboot = 1410;
 
@@ -239,6 +241,8 @@ public class FEAT
 
 	public const int featGod_machine1 = 1315;
 
+	public const int featTourist = 1406;
+
 	public const int featPianist = 1405;
 
 	public const int featArcher = 1404;
@@ -251,15 +255,15 @@ public class FEAT
 
 	public const int featWarrior = 1400;
 
-	public const int featGod_strife1 = 1355;
+	public const int featPaladin = 1407;
 
-	public const int featGod_moonshadow1 = 1350;
+	public const int featGod_strife1 = 1355;
 
 	public const int featGod_trickery1 = 1345;
 
-	public const int featGod_oblivion1 = 1340;
-
 	public const int featGod_wind1 = 1310;
+
+	public const int featGod_oblivion1 = 1340;
 
 	public const int featGod_harmony1 = 1335;
 
@@ -269,26 +273,24 @@ public class FEAT
 
 	public const int featGod_healing1 = 1320;
 
-	public const int featTourist = 1406;
+	public const int featGod_moonshadow1 = 1350;
 
-	public const int featPaladin = 1407;
-
-	public static readonly int[] IDS = new int[135]
+	public static readonly int[] IDS = new int[136]
 	{
-		1620, 1628, 1627, 1626, 1625, 1624, 1623, 1622, 1621, 1630,
+		1620, 1628, 1627, 1626, 1625, 1624, 1623, 1622, 1630, 1621,
 		1629, 1414, 1611, 1610, 1422, 1421, 1420, 1419, 1418, 1417,
 		1416, 1415, 1631, 1413, 1412, 1612, 1632, 1648, 1634, 1411,
-		1662, 1661, 1660, 1659, 1658, 1657, 1656, 1655, 1654, 1653,
-		1652, 1651, 1650, 1649, 1647, 1646, 1645, 1644, 1643, 1642,
-		1641, 1640, 1636, 1635, 1633, 1410, 1234, 1408, 1230, 1231,
-		1232, 1233, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1242,
-		1229, 1243, 1245, 1246, 1247, 1248, 1249, 1250, 1251, 1270,
-		1271, 1272, 1273, 1290, 1409, 1300, 1228, 1226, 1200, 1201,
-		1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211,
-		1227, 1212, 1214, 1215, 1216, 1217, 1218, 1219, 1220, 1221,
-		1222, 1223, 1224, 1225, 1213, 1305, 1244, 1315, 1405, 1404,
-		1403, 1402, 1401, 1400, 1355, 1350, 1345, 1340, 1310, 1335,
-		1330, 1325, 1320, 1406, 1407
+		1750, 1662, 1661, 1660, 1659, 1658, 1657, 1656, 1655, 1654,
+		1653, 1633, 1652, 1650, 1649, 1647, 1646, 1645, 1644, 1643,
+		1642, 1641, 1640, 1636, 1635, 1651, 1410, 1234, 1408, 1230,
+		1231, 1232, 1233, 1235, 1236, 1237, 1238, 1239, 1240, 1241,
+		1242, 1229, 1243, 1245, 1246, 1247, 1248, 1249, 1250, 1251,
+		1270, 1271, 1272, 1273, 1290, 1409, 1300, 1228, 1226, 1200,
+		1201, 1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210,
+		1211, 1227, 1212, 1214, 1215, 1216, 1217, 1218, 1219, 1220,
+		1221, 1222, 1223, 1224, 1225, 1213, 1305, 1244, 1315, 1406,
+		1405, 1404, 1403, 1402, 1401, 1400, 1407, 1355, 1345, 1310,
+		1340, 1335, 1330, 1325, 1320, 1350
 	};
 }
 public class Feat : Element
@@ -610,6 +612,14 @@ public class Feat : Element
 			ModPotential(120, a * 50);
 			ModPotential(123, a * 50);
 			break;
+		case 1750:
+		{
+			string[] array = featRef;
+			int num2 = a;
+			array[0] = num2.ToString() ?? "";
+			featRef[1] = (a * 2).ToString() ?? "";
+			break;
+		}
 		case 1532:
 			ModBase(73, -a * 5, hide: false);
 			break;
@@ -774,11 +784,11 @@ public class Feat : Element
 				string text2 = text.SplitNewline().TryGet(value - 1, 99);
 				if (!text2.IsEmpty())
 				{
-					int num2 = 0;
-					string[] array = text2.Split(',');
-					foreach (string obj in array)
+					int num3 = 0;
+					string[] array2 = text2.Split(',');
+					foreach (string obj in array2)
 					{
-						string text3 = featRef[num2];
+						string text3 = featRef[num3];
 						string text4 = obj;
 						if (text3.ToInt() < 0)
 						{
@@ -786,7 +796,7 @@ public class Feat : Element
 						}
 						text4 = text4.Replace("#1", text3);
 						hints.Add(text4);
-						num2++;
+						num3++;
 					}
 				}
 			}
@@ -854,8 +864,8 @@ public class Feat : Element
 				string @ref = ((a < 0) ? "" : "+") + a;
 				if (row.category == "resist")
 				{
-					int num3 = 0;
-					@ref = ((a > 0) ? "+" : "-").Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num3, 1, 5));
+					int num4 = 0;
+					@ref = ((a > 0) ? "+" : "-").Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num4, 1, 5));
 					Note("modValueRes".lang(row.GetName(), @ref));
 				}
 				else

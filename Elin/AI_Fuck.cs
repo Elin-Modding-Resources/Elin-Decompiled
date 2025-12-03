@@ -351,7 +351,7 @@ public class AI_Fuck : AIAct
 				SuccubusExp(chara, chara2);
 				SuccubusExp(chara2, chara);
 			}
-			chara2.ModAffinity(chara, flag ? 10 : (-5));
+			chara2.ModAffinity(chara, (flag || (chara.IsPC && chara2.affinity.CanSleepBeside() && EClass.rnd(10) != 0)) ? 10 : (-5));
 			if (chara == EClass.pc || chara2 == EClass.pc)
 			{
 				EClass.player.stats.kimo++;

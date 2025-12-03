@@ -18,7 +18,7 @@ public class DOMAIN
 
 	public const int domWind = 807;
 
-	public const int domHarvest = 808;
+	public const int domMachine = 809;
 
 	public const int domLuck = 810;
 
@@ -32,12 +32,12 @@ public class DOMAIN
 
 	public const int domHarmony = 815;
 
-	public const int domMachine = 809;
+	public const int domHarvest = 808;
 
 	public static readonly int[] IDS = new int[16]
 	{
-		805, 804, 806, 800, 803, 801, 802, 807, 808, 810,
-		811, 812, 813, 814, 815, 809
+		805, 804, 806, 800, 803, 801, 802, 807, 809, 810,
+		811, 812, 813, 814, 815, 808
 	};
 }
 public class Domain : EClass
