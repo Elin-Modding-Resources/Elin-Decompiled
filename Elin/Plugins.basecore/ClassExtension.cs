@@ -935,6 +935,15 @@ public static class ClassExtension
 		return new FileInfo(path).GetFullFileNameWithoutExtension();
 	}
 
+	public static string Pluralize(string s)
+	{
+		if (s == "talisman")
+		{
+			return "talismans";
+		}
+		return pluralizer.Pluralize(s);
+	}
+
 	public static string AddArticle(this string s)
 	{
 		if (!Lang.setting.addArticle || s.Length < 1)
@@ -956,7 +965,7 @@ public static class ClassExtension
 		string text = ((num >= 2) ? (num.ToFormat() + " ") : ((c == 'a' || c == 'i' || c == 'u' || c == 'e' || c == 'o') ? "an " : "a "));
 		if (num >= 2 && Lang.setting.pluralize)
 		{
-			s = ((replace.IsEmpty() || !s.Contains(replace) || s.Contains("limestone stone")) ? pluralizer.Pluralize(s) : s.Replace(replace, pluralizer.Pluralize(replace)));
+			s = ((replace.IsEmpty() || !s.Contains(replace) || s.Contains("limestone stone")) ? Pluralize(s) : s.Replace(replace, Pluralize(replace)));
 		}
 		return style switch
 		{
