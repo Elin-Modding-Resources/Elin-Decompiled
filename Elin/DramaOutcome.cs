@@ -492,9 +492,9 @@ public class DramaOutcome : EMono
 	{
 		int count = EMono.player.sketches.Count;
 		int num = count / 10;
-		if (num >= 29)
+		if (num >= 31)
 		{
-			num = 29;
+			num = 31;
 		}
 		Debug.Log(count + "/" + num + "/" + EMono.player.lastFelmeraReward);
 		return num;

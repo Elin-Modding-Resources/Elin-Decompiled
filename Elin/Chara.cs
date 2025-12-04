@@ -2777,7 +2777,7 @@ public class Chara : Card, IPathfindWalker
 					num2 += 20;
 					num *= 1.8f;
 				}
-				num2 = num2 * 100 / (100 + EvalueMax(240, -20) + EvalueMax(407, -5) * 5);
+				num2 = num2 * 100 / (100 + (int)Mathf.Sqrt(EvalueMax(240, -20) * 10) + EvalueMax(407, -5) * 5);
 				EClass.world.date.AdvanceMin(num2 * 6);
 				EClass.player.lastZonePos = null;
 				EClass.player.distanceTravel++;

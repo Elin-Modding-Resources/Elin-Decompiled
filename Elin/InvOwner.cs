@@ -231,7 +231,7 @@ public class InvOwner : EClass
 					{
 						EClass.pc.ModCurrency(-price, IDCurrency);
 					}
-					if (sell && !thing2.IsIdentified)
+					if (sell && !thing2.IsIdentified && !ShopTransaction.current.HasBought(thing2))
 					{
 						thing2.Identify(show: true, IDTSource.SuperiorIdentify);
 					}

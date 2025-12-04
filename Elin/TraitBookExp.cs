@@ -14,7 +14,7 @@ public class TraitBookExp : TraitScroll
 	{
 		EClass.player.forceTalk = true;
 		c.Talk((EClass.rnd(2) == 0) ? "nice_statue" : "disgust");
-		c.AddExp(c.ExpToNext / ((!c.IsPC) ? 1 : 4));
+		c.AddExp(c.ExpToNext / ((!c.IsPC) ? 1 : 4) * ((!c.HasElement(1273)) ? 1 : 4), applyMod: false);
 		c.PlaySound("ding_potential");
 		c.Say("spellbookCrumble", owner.Duplicate(1));
 		owner.ModNum(-1);

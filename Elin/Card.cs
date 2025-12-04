@@ -2948,9 +2948,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public void AddExp(int a)
+	public void AddExp(int a, bool applyMod = true)
 	{
-		a = a * GetExpMtp() / 100;
+		if (applyMod)
+		{
+			a = a * GetExpMtp() / 100;
+		}
 		exp += a;
 		while (exp >= ExpToNext && exp > 0 && ExpToNext > 0)
 		{
@@ -2974,7 +2977,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		return num * (100 + Evalue(1237) * 30) / 100;
+		return num * (100 + Evalue(1237) * 30 + Evalue(1273) * 50) / 100;
 	}
 
 	public int GetAffinityExpBonus()

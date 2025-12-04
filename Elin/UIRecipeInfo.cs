@@ -268,7 +268,7 @@ public class UIRecipeInfo : EMono
 		int[] tiles = recipe.renderRow.tiles;
 		if (EMono.debug.showExtra)
 		{
-			text = text + "(" + recipe.id + "  " + recipe.renderRow.idRenderData + "/" + ((tiles.Length != 0) ? tiles[0] : (-1)) + ")" + Environment.NewLine;
+			text = text + "(" + recipe.id + "  " + recipe.renderRow.idRenderData + "/" + ((tiles.Length != 0) ? tiles[0] : (-1)) + ") skin:" + recipe.idSkin + Environment.NewLine;
 		}
 		textDetail.SetActive(enable: true);
 		if (CraftMode)

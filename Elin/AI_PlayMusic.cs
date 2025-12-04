@@ -87,6 +87,7 @@ public class AI_PlayMusic : AIAct
 		{
 			switch (tool.id)
 			{
+			case "sax":
 			case "trumpet":
 				idSong = "trumpet_practice";
 				break;

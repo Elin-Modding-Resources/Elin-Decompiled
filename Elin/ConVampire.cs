@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using UnityEngine;
 
 public class ConVampire : Condition
 {
@@ -23,15 +24,15 @@ public class ConVampire : Condition
 
 	public override void Tick()
 	{
-		if (EClass._zone.IsRegion || EClass.rnd(10) != 0)
+		if (EClass.rnd(2) != 0)
 		{
 			return;
 		}
 		int num = List_Vampire.RandomItem();
 		int num2 = ec.Value(num);
+		int num3 = owner.elements.Base(num) / 7 + 5;
 		if (EClass.world.date.IsNight)
 		{
-			int num3 = owner.elements.Base(num) / 5 + 5;
 			switch (num)
 			{
 			case 60:
@@ -44,12 +45,12 @@ public class ConVampire : Condition
 			}
 			if (num2 < num3 && (float)EClass.rnd(100) >= 99f * (float)num2 / (float)num3)
 			{
-				ec.ModBase(num, 1);
+				ec.ModBase(num, Mathf.Clamp(num3 / 10, 1, num3 - num2));
 			}
 		}
 		else if (num2 > 0)
 		{
-			ec.ModBase(num, -1);
+			ec.ModBase(num, -Mathf.Clamp(num3 / 4, 1, num2));
 		}
 	}
 
