@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classTraitAltar.html#ae59022869e58c61830f66a53b1bdfe54":[1,0,1417,10],
 "classTraitAltar.html#ae5fd67e75b95c7edf12a6cf333c01a6d":[1,0,1417,15],
 "classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919":[1,0,1417,3],
 "classTraitAltarAncient.html":[1,0,1418],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitBrewery.html#ad6cfde6d0eda91cfdca50e56ac36a2c8":[1,0,1472,6],
 "classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614c":[1,0,1472,0],
 "classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614ca0a38e7286ebbb560354992b3ce62be67":[1,0,1472,0,0],
-"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614ca40491db1043a93d8b94b9d94e3eda532":[1,0,1472,0,1],
-"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614cacd24882902a3d5da6e5783027a0ae3d0":[1,0,1472,0,2]
+"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614ca40491db1043a93d8b94b9d94e3eda532":[1,0,1472,0,1]
 };

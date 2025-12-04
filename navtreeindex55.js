@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"classCursorSystem.html#a951f5ac6585bed20448f5242e9de0222":[1,0,425,46],
 "classCursorSystem.html#a95e73f19f3f1dedfb6266d38229fecc0":[1,0,425,17],
 "classCursorSystem.html#a96206c7137795b2498b6ab2eddcf47d8":[1,0,425,5],
 "classCursorSystem.html#a983f3c46276f0af445fbfac3edda9415":[1,0,425,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "classDialog.html#a3d7cad77ff99232469ae42c70613df63":[1,0,435,14],
 "classDialog.html#a43dffec293c2834cd969332a080c1133":[1,0,435,25],
 "classDialog.html#a459d3a7920920f94e9440f970c6c07ae":[1,0,435,34],
-"classDialog.html#a47dcfb621811817d15558bbf2fd69868":[1,0,435,35],
-"classDialog.html#a51bc22b2988f2180309126e953007954":[1,0,435,3]
+"classDialog.html#a47dcfb621811817d15558bbf2fd69868":[1,0,435,35]
 };

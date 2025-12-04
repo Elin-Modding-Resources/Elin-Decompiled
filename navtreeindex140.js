@@ -1,5 +1,6 @@
 var NAVTREEINDEX140 =
 {
+"classZonePreEnterBout.html#a0b4e0336203a50455fd13f9f4895b88f":[1,0,2229,0],
 "classZonePreEnterBout.html#aee2f1c20d1ea1cae6c89a2158f9a9a5b":[1,0,2229,1],
 "classZonePreEnterBoutWin.html":[1,0,2230],
 "classZonePreEnterBoutWin.html#a3ceb78f0ff78c6295b40700932ece9af":[1,0,2230,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX140 =
 "classZone__Harvest.html":[1,0,2151],
 "classZone__Harvest.html#a11b8af9c86141990bf776111443aa2ac":[1,0,2151,3],
 "classZone__Harvest.html#a1594a9f4954e066d2210fc8ab287b787":[1,0,2151,0],
-"classZone__Harvest.html#a499b964354fe656d3eabded317d0a815":[1,0,2151,2],
-"classZone__Harvest.html#ac4ea022bab05b509e0ba8ec0166f526e":[1,0,2151,1]
+"classZone__Harvest.html#a499b964354fe656d3eabded317d0a815":[1,0,2151,2]
 };

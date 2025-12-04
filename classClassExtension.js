@@ -100,6 +100,7 @@ var classClassExtension =
     [ "NextItem< TValue >", "classClassExtension.html#a973c58bb12f717fd5d0f633f908d272e", null ],
     [ "NextItem< TValue >", "classClassExtension.html#a02310110d736804fb082448a8f94c1de", null ],
     [ "Parentheses", "classClassExtension.html#a1f8d1321f4140ecda733f6fc92e64910", null ],
+    [ "Pluralize", "classClassExtension.html#a1d73cebeb6ef49a534f333be0571e39f", null ],
     [ "Plus", "classClassExtension.html#aa6750456bedfc29625c5222288a7a8a8", null ],
     [ "PlusX", "classClassExtension.html#a8b20ae72a1598dfbe96bf7298c1109e2", null ],
     [ "PlusY", "classClassExtension.html#a6fd29a0e1c35768b258de469ce9f4485", null ],

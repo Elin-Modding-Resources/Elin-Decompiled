@@ -63,7 +63,7 @@ var searchData=
   ['addeuleranglesy_60',['AddEulerAnglesY',['../classClassExtension.html#afe78902de30382be1675f4ae0319c676',1,'ClassExtension']]],
   ['addeuleranglesz_61',['AddEulerAnglesZ',['../classClassExtension.html#a49610e6de91b8fdbd8984afd5c0a30fd',1,'ClassExtension']]],
   ['addevent_62',['AddEvent',['../classDramaManager.html#add7100b4e9b0bb49e9d0a95049ec1110',1,'DramaManager.AddEvent(DramaEvent e)'],['../classDramaManager.html#a1c9c5f10dbb9fc93ed458bf4ccf73fa5',1,'DramaManager.AddEvent(Action func, float duration=0f, bool halt=false)'],['../classDramaManager.html#a70f457fc23d2ce123c8e1afd5e07dd84',1,'DramaManager.AddEvent(Action func, Func&lt; string &gt; funcJump)'],['../classDramaSequence.html#a6c208684bf0e15aa50e92de593e741cc',1,'DramaSequence.AddEvent()']]],
-  ['addexp_63',['AddExp',['../classCard.html#ae7d415efa923ec449ad2c6c320fe6f27',1,'Card']]],
+  ['addexp_63',['AddExp',['../classCard.html#af27a9a64f153f001dd5ae608b300be58',1,'Card']]],
   ['addexpinfluence_64',['AddExpInfluence',['../classPlayer.html#ae20442b83a23468301194386c2b45b2c',1,'Player']]],
   ['addexpknowledge_65',['AddExpKnowledge',['../classPlayer.html#a828bee64e85ffd06bc3e7d46f1dedb03',1,'Player']]],
   ['addextra_66',['AddExtra',['../classCardRenderer.html#a4617e74c5ffc4d5c348cee189c8a2862',1,'CardRenderer']]],

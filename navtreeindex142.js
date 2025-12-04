@@ -1,5 +1,6 @@
 var NAVTREEINDEX142 =
 {
+"functions_func_h.html":[1,3,1,8],
 "functions_func_i.html":[1,3,1,9],
 "functions_func_j.html":[1,3,1,10],
 "functions_func_k.html":[1,3,1,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX142 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da13d1f47685f6da3736d3bcb360c06e55":[0,4,3,0,8,230],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da14ae9002d12e9c2aa9e301dbdc40fb19":[0,4,3,0,8,197],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da186b4ce417b36e4b98f1be2772de5876":[0,4,3,0,8,189],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da190ffa5082531061c2686f159ae62548":[0,4,3,0,8,184],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da192ee1defe6342c5217f07029edded75":[0,4,3,0,8,182]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da190ffa5082531061c2686f159ae62548":[0,4,3,0,8,184]
 };

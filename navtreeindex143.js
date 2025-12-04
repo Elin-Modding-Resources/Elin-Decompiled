@@ -1,5 +1,6 @@
 var NAVTREEINDEX143 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da192ee1defe6342c5217f07029edded75":[0,4,3,0,8,182],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da1a652f31e7d70d7cb01a2d9fb1d8c6e0":[0,4,3,0,8,202],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da1b5e79e8098990c2786f373320ac6967":[0,4,3,0,8,176],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da1bc0f5b460eb46dbe6453b97c843be4e":[0,4,3,0,8,159],
@@ -248,6 +249,5 @@ var NAVTREEINDEX143 =
 "structAM__Picker_1_1Result.html#ae40243c092840686a33168e9c2ff1f0e":[1,0,160,0,2],
 "structActRef.html":[1,0,55],
 "structActRef.html#a174dc5cd5f7c09bd1bbda05884d7ac43":[1,0,55,3],
-"structActRef.html#a337c6c6d186e0a32c54cb6a73d4e72a4":[1,0,55,0],
-"structActRef.html#a4b9b674623fe3e57a333b4cbca98a28f":[1,0,55,8]
+"structActRef.html#a337c6c6d186e0a32c54cb6a73d4e72a4":[1,0,55,0]
 };

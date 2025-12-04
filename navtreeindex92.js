@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classPrologue.html#aec625f1293053f428a0fc5dcde96bc94":[1,0,975,8],
 "classPropSet.html":[1,0,977],
 "classPropSet.html#a2444244460db0fceadb88a389df9af57":[1,0,977,4],
 "classPropSet.html#a4fad886e79839fe81b037c0c25f28b2d":[1,0,977,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classQuestDefenseGame.html#a551d58179e2ee0b30584c2dac865f912":[1,0,992,11],
 "classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482":[1,0,992,13],
 "classQuestDefenseGame.html#a78b66992932d0fa32dbcbf17c094ddfd":[1,0,992,10],
-"classQuestDefenseGame.html#a859e1c04385585dbc327c19ee7406e27":[1,0,992,9],
-"classQuestDefenseGame.html#aa3430704375447d0efde0093a54dacff":[1,0,992,2]
+"classQuestDefenseGame.html#a859e1c04385585dbc327c19ee7406e27":[1,0,992,9]
 };

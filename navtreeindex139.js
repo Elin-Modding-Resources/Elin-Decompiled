@@ -1,5 +1,6 @@
 var NAVTREEINDEX139 =
 {
+"classZone.html#ae866846af33c4a0044b0642efb5f8dc6":[1,0,2123,214],
 "classZone.html#ae933f30f3673bc106d3568c6429c6e78":[1,0,2123,195],
 "classZone.html#ae9e8e1eb5ff77cdff82cc4af14ddce31":[1,0,2123,165],
 "classZone.html#ae9fe6424d0966988a6ffb07d5f903bf4":[1,0,2123,185],
@@ -248,6 +249,5 @@ var NAVTREEINDEX139 =
 "classZoneInstanceRandomQuest.html#adea1ed8649a3dbdb54461de055a80a59":[1,0,2227,2],
 "classZoneInstanceSubdue.html":[1,0,2228],
 "classZoneInstanceSubdue.html#a9dcf2b1058468153a750c5a3db79f745":[1,0,2228,0],
-"classZonePreEnterBout.html":[1,0,2229],
-"classZonePreEnterBout.html#a0b4e0336203a50455fd13f9f4895b88f":[1,0,2229,0]
+"classZonePreEnterBout.html":[1,0,2229]
 };

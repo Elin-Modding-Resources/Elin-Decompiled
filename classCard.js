@@ -17,7 +17,7 @@ var classCard =
     [ "AddBlood", "classCard.html#a30a5e9ed7c3fd9f7d1a054c2d0b46651", null ],
     [ "AddCard", "classCard.html#a4e28d8b3db5f7ba77e39e5995667fcc5", null ],
     [ "AddEditorTag", "classCard.html#a6727ef21c329efd8f0d4293910887883", null ],
-    [ "AddExp", "classCard.html#ae7d415efa923ec449ad2c6c320fe6f27", null ],
+    [ "AddExp", "classCard.html#af27a9a64f153f001dd5ae608b300be58", null ],
     [ "AddRune", "classCard.html#a164f43e042f81f1934f958fc02acfcb7", null ],
     [ "AddRune", "classCard.html#aee15a108e23290c277aa0e1510276d52", null ],
     [ "AddSocket", "classCard.html#a20cd997b56d456e19fe910a24f17ad6f", null ],

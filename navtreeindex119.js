@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1571,0],
 "classTraitErohon.html":[1,0,1572],
 "classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1572,0],
 "classTraitErohon.html#a2d6396007a75f9ac916b827d6a0e8da4":[1,0,1572,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitGrindstone.html#a427730a2544e57bd0df379c3c6f356ce":[1,0,1640,1],
 "classTraitGrindstone.html#a5248c1e5c050484d5d90ac92b9bef274":[1,0,1640,5],
 "classTraitGrindstone.html#a7e6e197ab6ef77c88f6cc004b5ab5c33":[1,0,1640,2],
-"classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1640,0],
-"classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1640,6]
+"classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1640,0]
 };

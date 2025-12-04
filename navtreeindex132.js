@@ -1,5 +1,6 @@
 var NAVTREEINDEX132 =
 {
+"classUIText.html#ac34527635461d202fd0a03cea0e00bf5":[1,0,2052,3],
 "classUIText.html#ae2bdc2afabc4b0887280d07f28c6d6f4":[1,0,2052,12],
 "classUITooltip.html":[1,0,2053],
 "classUITooltip.html#a0d9cdcf997f2fcf9385ca78b7db80e00":[1,0,2053,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX132 =
 "classWidgetArtTool.html#a56c7a434247ce108aba6d7d93af3c7bd":[1,0,2068,1],
 "classWidgetArtTool.html#a9dcaac3356aa9a780dc9bdfd6438f022":[1,0,2068,0],
 "classWidgetArtTool.html#aa8b79f967f2607b150088d5f03c5dfe7":[1,0,2068,4],
-"classWidgetArtTool.html#aafa71c4a1eb02bf9132d4dadd39cd4e1":[1,0,2068,6],
-"classWidgetBottomBar.html":[1,0,2069]
+"classWidgetArtTool.html#aafa71c4a1eb02bf9132d4dadd39cd4e1":[1,0,2068,6]
 };

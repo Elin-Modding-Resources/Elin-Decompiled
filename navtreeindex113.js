@@ -1,5 +1,6 @@
 var NAVTREEINDEX113 =
 {
+"classTileSelectorElona.html#aeb77de1c9d13ee89cb2dce24d46cfeef":[1,0,1347,3],
 "classTileType.html":[1,0,1348],
 "classTileType.html#a00fd56f3307c2db4269e8c07c4a5bb1e":[1,0,1348,69],
 "classTileType.html#a02813053f04f043aeb9951252f03b96e":[1,0,1348,63],
@@ -248,6 +249,5 @@ var NAVTREEINDEX113 =
 "classTileTypeLadder.html#a14dc04fb9e6801f243628dee9cd19d18":[1,0,1366,1],
 "classTileTypeLadder.html#a185513029bab0e73b8963f54c7f3349a":[1,0,1366,3],
 "classTileTypeLadder.html#a4eaa598072cdc433608eeb489b518fc5":[1,0,1366,2],
-"classTileTypeLadder.html#a8f25baf6e80ef6eadd8c0c941956b613":[1,0,1366,0],
-"classTileTypeLiquid.html":[1,0,1367]
+"classTileTypeLadder.html#a8f25baf6e80ef6eadd8c0c941956b613":[1,0,1366,0]
 };

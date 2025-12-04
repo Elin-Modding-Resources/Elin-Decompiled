@@ -1,5 +1,6 @@
 var NAVTREEINDEX124 =
 {
+"classTraitSwitch.html#a5031302790fbc9671b006da0c8e0cbb9":[1,0,1881,11],
 "classTraitSwitch.html#a50fc3e8ab031e0d52ff5013d70c50770":[1,0,1881,6],
 "classTraitSwitch.html#a651db8b4ca3d6c8053fd12e0b1bef17f":[1,0,1881,2],
 "classTraitSwitch.html#a9cb5bf37434e1a330c522af125640c51":[1,0,1881,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitTrolley.html#a8044046332f08d1dc60011a5c459e5e0":[1,0,1939,1],
 "classTraitTrolley.html#aa70f7ca9766fcfaf0e9fcdb1da2149dc":[1,0,1939,4],
 "classTraitTrolley.html#aac4b1624e10b00b395604662c1e0f53c":[1,0,1939,5],
-"classTraitTrolley.html#af0f060ec628470b1d81957f5bb97cfbf":[1,0,1939,2],
-"classTraitTrolleyBig.html":[1,0,1940]
+"classTraitTrolley.html#af0f060ec628470b1d81957f5bb97cfbf":[1,0,1939,2]
 };
