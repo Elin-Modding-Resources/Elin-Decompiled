@@ -1,5 +1,11 @@
 var NAVTREEINDEX107 =
 {
+"classSourceReligion_1_1Row.html#afc336483b6966a3b811edbf6f03c5b06":[1,0,1224,0,14],
+"classSourceResearch.html":[1,0,1225],
+"classSourceResearch.html#a7fd8c582b655d62397b26c86a083bbbb":[1,0,1225,2],
+"classSourceResearch.html#ac6d7e78bcba370b54d620bc3362361df":[1,0,1225,1],
+"classSourceResearch_1_1Row.html":[1,0,1225,0],
+"classSourceResearch_1_1Row.html#a1d27974c963fa7025f2580539b4f12f9":[1,0,1225,0,10],
 "classSourceResearch_1_1Row.html#a4592fd2e4c169c591f84b7e83ed1d984":[1,0,1225,0,0],
 "classSourceResearch_1_1Row.html#a493c59150b9c69d7e5241820503d9640":[1,0,1225,0,7],
 "classSourceResearch_1_1Row.html#a516b48f1c49dcee9eb9c6877edb60e38":[1,0,1225,0,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX107 =
 "classSpatial.html#a4eba294dd1fc5a221a599e58354ca8ce":[1,0,1234,61],
 "classSpatial.html#a4f667a3a67c68668dc513c8ccb4acd83":[1,0,1234,24],
 "classSpatial.html#a4f6c96d31ec7c12004d5d9831228c597":[1,0,1234,17],
-"classSpatial.html#a50381b7c6e8d973154172951adcced9b":[1,0,1234,71],
-"classSpatial.html#a506178689376c508717f3d70857ea8d4":[1,0,1234,97],
-"classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac":[1,0,1234,37],
-"classSpatial.html#a529beafee9281da53be36e301b5e5616":[1,0,1234,72],
-"classSpatial.html#a568e302e01de5786ce52437b1ef916ce":[1,0,1234,16],
-"classSpatial.html#a5978cf95ba97950df8f398ef6bf80045":[1,0,1234,95],
-"classSpatial.html#a5a17757afb62bdd70b8d143457c0a664":[1,0,1234,2]
+"classSpatial.html#a50381b7c6e8d973154172951adcced9b":[1,0,1234,71]
 };

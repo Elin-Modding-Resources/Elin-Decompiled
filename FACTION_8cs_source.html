@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.243 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.243 Nightly Patch 3</span>
    </div>
   </td>
  </tr>
@@ -298,7 +298,7 @@ $(document).ready(function(){initNavTree('FACTION_8cs_source.html',''); initResi
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        List&lt;FactionBranch&gt; list = <span class="keyword">new</span> List&lt;FactionBranch&gt;();</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpatial.html">Spatial</a> value <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_variable" href="classSpatialManager.html#a713f84ecf4e78c2b0150b65bbe8292c6">map</a>.Values)</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        {</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">if</span> (value.<a class="code hl_property" href="classSpatial.html#a9f1dc994f35e1206e819cfa682807b8f">mainFaction</a> == <span class="keyword">this</span>)</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">if</span> (value?.mainFaction == <span class="keyword">this</span>)</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            {</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                list.Add((value as <a class="code hl_class" href="classZone.html">Zone</a>).branch);</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            }</div>

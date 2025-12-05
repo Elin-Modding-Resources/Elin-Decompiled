@@ -111,7 +111,8 @@ var searchData=
   ['uniquedata_108',['UniqueData',['../classUniqueData.html',1,'']]],
   ['unitydraganddrophook_109',['UnityDragAndDropHook',['../classB83_1_1Win32_1_1UnityDragAndDropHook.html',1,'B83::Win32']]],
   ['unityeventbool_110',['UnityEventBool',['../classUnityEventBool.html',1,'']]],
-  ['upair_111',['UPair',['../classUPair.html',1,'']]],
-  ['updater_112',['Updater',['../classGameUpdater_1_1Updater.html',1,'GameUpdater']]],
-  ['util_113',['Util',['../classUtil.html',1,'']]]
+  ['unknowntypeplaceholder_111',['UnknownTypePlaceholder',['../classUnknownTypePlaceholder.html',1,'']]],
+  ['upair_112',['UPair',['../classUPair.html',1,'']]],
+  ['updater_113',['Updater',['../classGameUpdater_1_1Updater.html',1,'GameUpdater']]],
+  ['util_114',['Util',['../classUtil.html',1,'']]]
 ];

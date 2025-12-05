@@ -9,6 +9,8 @@ var classMATERIAL =
     [ "granite", "classMATERIAL.html#acacc2ef80b4d3af7298597cfb68bddd0", null ],
     [ "ice", "classMATERIAL.html#a056618cc7003259313ecddd224e4386d", null ],
     [ "idNull", "classMATERIAL.html#aa237a5fe030f32e3c7a1ae9586484d31", null ],
+    [ "MaxRandomTier", "classMATERIAL.html#a7f738b31a54ae987e18dcf7dc006d851", null ],
+    [ "MaxTier", "classMATERIAL.html#a7cf75e3c8457876a7c8fe3ac89d7493e", null ],
     [ "mud", "classMATERIAL.html#aec2d3979088b059a549f2fc973b33aa5", null ],
     [ "oak", "classMATERIAL.html#a70c03ea7992c0c97e95d4e88adf1f9bb", null ],
     [ "process", "classMATERIAL.html#ae180b6fddc05d92ff82c98a181d9a4b5", null ],

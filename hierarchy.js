@@ -3345,6 +3345,7 @@ var hierarchy =
     [ "UnityEvent", null, [
       [ "UnityEventBool", "classUnityEventBool.html", null ]
     ] ],
+    [ "UnknownTypePlaceholder", "classUnknownTypePlaceholder.html", null ],
     [ "UPair< T >", "classUPair.html", null ],
     [ "Util", "classUtil.html", null ],
     [ "Version", "structVersion.html", null ],

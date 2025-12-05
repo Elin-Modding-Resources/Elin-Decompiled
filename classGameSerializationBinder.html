@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.243 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.243 Nightly Patch 3</span>
    </div>
   </td>
  </tr>
@@ -159,26 +159,37 @@ Static Package Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   14</span>        }</div>
 <div class="line"><span class="lineno">   15</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
 <div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(ex.Message);</div>
-<div class="line"><span class="lineno">   18</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(assemblyName + <span class="stringliteral">&quot;/&quot;</span> + typeName);</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>.ContainsKey(typeName))</div>
-<div class="line"><span class="lineno">   20</span>            {</div>
-<div class="line"><span class="lineno">   21</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(typeName + <span class="stringliteral">&quot;/&quot;</span> + Type.GetType(<a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[typeName]));</div>
-<div class="line"><span class="lineno">   22</span>                <span class="keywordflow">return</span> Type.GetType(<a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[typeName]);</div>
-<div class="line"><span class="lineno">   23</span>            }</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (typeName.Contains(<span class="stringliteral">&quot;Quest&quot;</span>))</div>
-<div class="line"><span class="lineno">   25</span>            {</div>
-<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">return</span> typeof(<a class="code hl_class" href="classQuestDummy.html">QuestDummy</a>);</div>
-<div class="line"><span class="lineno">   27</span>            }</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> typeof(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   29</span>        }</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.Say(<span class="stringliteral">&quot;Possible Mod Error, please contact the mod auther.&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>            <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">ui</a>.Say(ex.Message);</div>
+<div class="line"><span class="lineno">   19</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(ex.Message);</div>
+<div class="line"><span class="lineno">   20</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(assemblyName + <span class="stringliteral">&quot;/&quot;</span> + typeName);</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>.ContainsKey(typeName))</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(typeName + <span class="stringliteral">&quot;/&quot;</span> + Type.GetType(<a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[typeName]));</div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordflow">return</span> Type.GetType(<a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[typeName]);</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (typeName.StartsWith(<span class="stringliteral">&quot;Quest&quot;</span>))</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">return</span> typeof(<a class="code hl_class" href="classQuestDummy.html">QuestDummy</a>);</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (typeName.StartsWith(<span class="stringliteral">&quot;Zone&quot;</span>))</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">return</span> typeof(<a class="code hl_class" href="classZone.html">Zone</a>);</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> typeof(<a class="code hl_class" href="classUnknownTypePlaceholder.html">UnknownTypePlaceholder</a>);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
+<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
+<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00015">Core.cs:15</a></div></div>
+<div class="ttc" id="aclassCore_html_acfcdec21b8065bc6731db8ac33904feb"><div class="ttname"><a href="classCore.html#acfcdec21b8065bc6731db8ac33904feb">Core.ui</a></div><div class="ttdeci">UI ui</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00063">Core.cs:63</a></div></div>
 <div class="ttc" id="aclassModUtil_html"><div class="ttname"><a href="classModUtil.html">ModUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00008">ModUtil.cs:9</a></div></div>
 <div class="ttc" id="aclassModUtil_html_aa27eede742d1e4dff63fa45538cada84"><div class="ttname"><a href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">ModUtil.fallbackTypes</a></div><div class="ttdeci">static Dictionary&lt; string, string &gt; fallbackTypes</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00010">ModUtil.cs:10</a></div></div>
 <div class="ttc" id="aclassQuestDummy_html"><div class="ttname"><a href="classQuestDummy.html">QuestDummy</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestDummy_8cs_source.html#l00001">QuestDummy.cs:2</a></div></div>
+<div class="ttc" id="aclassUnknownTypePlaceholder_html"><div class="ttname"><a href="classUnknownTypePlaceholder.html">UnknownTypePlaceholder</a></div><div class="ttdef"><b>Definition:</b> <a href="UnknownTypePlaceholder_8cs_source.html#l00001">UnknownTypePlaceholder.cs:2</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="ModUtil_8cs_source.html#l00010">ModUtil.fallbackTypes</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ModUtil_8cs_source.html#l00010">ModUtil.fallbackTypes</a>, <a class="el" href="Core_8cs_source.html#l00015">Core.Instance</a>, and <a class="el" href="Core_8cs_source.html#l00063">Core.ui</a>.</p>
 
 </div>
 </div>

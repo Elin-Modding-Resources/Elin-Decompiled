@@ -1,5 +1,11 @@
 var NAVTREEINDEX108 =
 {
+"classSpatial.html#a506178689376c508717f3d70857ea8d4":[1,0,1234,97],
+"classSpatial.html#a5265271ea102ce83fae8d126c99ee9ac":[1,0,1234,37],
+"classSpatial.html#a529beafee9281da53be36e301b5e5616":[1,0,1234,72],
+"classSpatial.html#a568e302e01de5786ce52437b1ef916ce":[1,0,1234,16],
+"classSpatial.html#a5978cf95ba97950df8f398ef6bf80045":[1,0,1234,95],
+"classSpatial.html#a5a17757afb62bdd70b8d143457c0a664":[1,0,1234,2],
 "classSpatial.html#a5a4034c9e257a5424dfd850f853d1fe2":[1,0,1234,7],
 "classSpatial.html#a6962c10736c0060fbaae4257bfb15732":[1,0,1234,68],
 "classSpatial.html#a70184c59fc39eccddf9036a599a398e8":[1,0,1234,53],
@@ -136,8 +142,8 @@ var NAVTREEINDEX108 =
 "classSpawnSetting.html#af3809a4cede32c40146309f0c344ca7e":[1,0,1241,13],
 "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1241,7],
 "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1241,4],
-"classSpell.html":[1,0,1243],
-"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1243,0],
+"classSpell.html":[1,0,1242],
+"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1242,0],
 "classSplashText.html":[1,0,1244],
 "classSplashText.html#a027bb81008215adcaa05044b0a2d565a":[1,0,1244,3],
 "classSplashText.html#a40d628265e563f3f7040b2e0c2b96aad":[1,0,1244,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX108 =
 "classSpriteReplacerAnimation.html#a0a178b33ca500c108ddbc35db7be3685":[1,0,1251,4],
 "classSpriteReplacerAnimation.html#a21d5036fdbd4877031ec1d7bc4676538":[1,0,1251,5],
 "classSpriteReplacerAnimation.html#a43452a9098cce9c27158367920da081f":[1,0,1251,9],
-"classSpriteReplacerAnimation.html#a4c5d962cd32d286f7f8fd1a7f3162811":[1,0,1251,2],
-"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eaf":[1,0,1251,0],
-"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eafa7a1920d61156abc05a60135aefe8bc67":[1,0,1251,0,0],
-"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eafaf769aafbc2b8929829c52f0df81f6421":[1,0,1251,0,1],
-"classSpriteReplacerAnimation.html#abbae4ce3b9dbae35c520a1f0a99ddeee":[1,0,1251,3],
-"classSpriteReplacerAnimation.html#adfd0818c18b61bf53bb9869b78fe6c4f":[1,0,1251,1],
-"classSpriteReplacerAnimation.html#ae1a38674a254bd2cf633460298edff71":[1,0,1251,7]
+"classSpriteReplacerAnimation.html#a4c5d962cd32d286f7f8fd1a7f3162811":[1,0,1251,2]
 };

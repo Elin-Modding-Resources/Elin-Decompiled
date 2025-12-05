@@ -1,5 +1,11 @@
 var NAVTREEINDEX119 =
 {
+"classTraitElevator.html#ab0e9634ffd686f0bf9662bfb18f567f2":[1,0,1568,2],
+"classTraitElevator.html#ae1be1942dfb0d2d5db1c4b96b9740488":[1,0,1568,3],
+"classTraitElevator.html#af62894b698bcc696ce498a4885eaa974":[1,0,1568,0],
+"classTraitEquipItem.html":[1,0,1571],
+"classTraitEquipItem.html#a82397e9b89cff4b7ac2072d96e473a1c":[1,0,1571,1],
+"classTraitEquipItem.html#af53edaf7b40c1ca5c97d977de8e475e6":[1,0,1571,2],
 "classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1571,0],
 "classTraitErohon.html":[1,0,1572],
 "classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1572,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitGriffin.html":[1,0,1638],
 "classTraitGriffin.html#aa511931a3f7b64490c5775e2c69af7da":[1,0,1638,0],
 "classTraitGrimoire.html":[1,0,1639],
-"classTraitGrindstone.html":[1,0,1640],
-"classTraitGrindstone.html#a0825341a9432d91e675cfc4b8f9d39a3":[1,0,1640,3],
-"classTraitGrindstone.html#a09a44dac87424a91646516deb6d4cca3":[1,0,1640,4],
-"classTraitGrindstone.html#a427730a2544e57bd0df379c3c6f356ce":[1,0,1640,1],
-"classTraitGrindstone.html#a5248c1e5c050484d5d90ac92b9bef274":[1,0,1640,5],
-"classTraitGrindstone.html#a7e6e197ab6ef77c88f6cc004b5ab5c33":[1,0,1640,2],
-"classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1640,0]
+"classTraitGrindstone.html":[1,0,1640]
 };

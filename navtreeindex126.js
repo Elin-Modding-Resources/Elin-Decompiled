@@ -1,5 +1,11 @@
 var NAVTREEINDEX126 =
 {
+"classUD__Biome.html":[1,0,1973],
+"classUD__Int__String.html":[1,0,1974],
+"classUD__String__Color.html":[1,0,1975],
+"classUD__String__Curve.html":[1,0,1976],
+"classUD__String__EffectData.html":[1,0,1977],
+"classUD__String__ElementRef.html":[1,0,1978],
 "classUD__String__Gradient.html":[1,0,1979],
 "classUD__String__LightData.html":[1,0,1980],
 "classUD__String__MatData.html":[1,0,1981],
@@ -243,11 +249,5 @@ var NAVTREEINDEX126 =
 "classUIButton.html#a1232f1811bf52d198ef400c06e830853":[1,0,1993,57],
 "classUIButton.html#a127a2bd3117fb1d537725fd823ee4dff":[1,0,1993,42],
 "classUIButton.html#a127ce3736e48fd7eb777f9e758d0db97":[1,0,1993,68],
-"classUIButton.html#a165c1955683017cb8a98b26f1b14ff7f":[1,0,1993,24],
-"classUIButton.html#a1a3f3d8365203e634319910616ad5b72":[1,0,1993,55],
-"classUIButton.html#a1a46f30d1fbc4c2ebce8246c17a8d5d8":[1,0,1993,82],
-"classUIButton.html#a1abcb01c5f425cc31ed94e5813a7e81c":[1,0,1993,56],
-"classUIButton.html#a1bdc66c2d5c8fe44728cb8b6dd4e592b":[1,0,1993,7],
-"classUIButton.html#a1ca782993c0335205f4f6f9c60efccd6":[1,0,1993,43],
-"classUIButton.html#a1cfc41981260c576bf3d8610c1f91131":[1,0,1993,47]
+"classUIButton.html#a165c1955683017cb8a98b26f1b14ff7f":[1,0,1993,24]
 };

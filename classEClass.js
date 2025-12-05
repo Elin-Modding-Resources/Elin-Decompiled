@@ -9,6 +9,7 @@ var classEClass =
     [ "rndSeed", "classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b", null ],
     [ "rndSqrt", "classEClass.html#a545c4413b940ef1b8afa1334aa21e97f", null ],
     [ "Smaller", "classEClass.html#a5033afff637b28a95cd12ebbf51e1805", null ],
+    [ "sqrt", "classEClass.html#acc8ed60d2a5f18a8be67b6bc837ac44e", null ],
     [ "Wait", "classEClass.html#a44f68f6f1c55b824f3684c78364abf5f", null ],
     [ "Wait", "classEClass.html#abc86a94ff74181ef4ad76960c4186df6", null ],
     [ "core", "classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3", null ],
