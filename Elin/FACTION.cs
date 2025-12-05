@@ -204,7 +204,7 @@ public class Faction : EClass
 		List<FactionBranch> list = new List<FactionBranch>();
 		foreach (Spatial value in EClass.game.spatials.map.Values)
 		{
-			if (value.mainFaction == this)
+			if (value?.mainFaction == this)
 			{
 				list.Add((value as Zone).branch);
 			}

@@ -272,7 +272,7 @@ public class Region : Zone
 		List<Zone> list = new List<Zone>();
 		foreach (Spatial value in EClass.game.spatials.map.Values)
 		{
-			if (value.CanSpawnAdv)
+			if (value != null && value.CanSpawnAdv)
 			{
 				list.Add(value as Zone);
 			}

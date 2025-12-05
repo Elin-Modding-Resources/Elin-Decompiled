@@ -85,6 +85,15 @@ public class EClass
 		return (int)Mathf.Clamp(num, -2.1474836E+09f, 2.1474836E+09f);
 	}
 
+	public static int sqrt(int a)
+	{
+		if (a >= 0)
+		{
+			return (int)Mathf.Sqrt(a);
+		}
+		return (int)(0f - Mathf.Sqrt(-a));
+	}
+
 	public static int rndHalf(int a)
 	{
 		return a / 2 + Rand.rnd(a / 2);

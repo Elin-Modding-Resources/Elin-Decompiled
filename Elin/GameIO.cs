@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using UnityEngine;
 
 public class GameIO : EClass
@@ -37,6 +38,18 @@ public class GameIO : EClass
 	public static int NumBackup => (int)MathF.Max(5f, EClass.core.config.game.numBackup);
 
 	public static bool compressSave => EClass.core.config.test.compressSave;
+
+	public static void Init()
+	{
+		JsonSerializerSettings jsonSerializerSettings = jsReadGame;
+		jsonSerializerSettings.Error = (EventHandler<Newtonsoft.Json.Serialization.ErrorEventArgs>)Delegate.Combine(jsonSerializerSettings.Error, (EventHandler<Newtonsoft.Json.Serialization.ErrorEventArgs>)delegate(object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args)
+		{
+			if (args.ErrorContext.Error.Message.Contains("UnknownTypePlaceholder"))
+			{
+				args.ErrorContext.Handled = true;
+			}
+		});
+	}
 
 	public static void ResetTemp()
 	{

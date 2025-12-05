@@ -14,6 +14,8 @@ public class GameSerializationBinder : DefaultSerializationBinder, ISerializatio
 		}
 		catch (Exception ex)
 		{
+			Core.Instance.ui.Say("Possible Mod Error, please contact the mod auther.");
+			Core.Instance.ui.Say(ex.Message);
 			Debug.LogError(ex.Message);
 			Debug.LogError(assemblyName + "/" + typeName);
 			if (ModUtil.fallbackTypes.ContainsKey(typeName))
@@ -21,11 +23,15 @@ public class GameSerializationBinder : DefaultSerializationBinder, ISerializatio
 				Debug.Log(typeName + "/" + Type.GetType(ModUtil.fallbackTypes[typeName]));
 				return Type.GetType(ModUtil.fallbackTypes[typeName]);
 			}
-			if (typeName.Contains("Quest"))
+			if (typeName.StartsWith("Quest"))
 			{
 				return typeof(QuestDummy);
 			}
-			return typeof(object);
+			if (typeName.StartsWith("Zone"))
+			{
+				return typeof(Zone);
+			}
+			return typeof(UnknownTypePlaceholder);
 		}
 	}
 }

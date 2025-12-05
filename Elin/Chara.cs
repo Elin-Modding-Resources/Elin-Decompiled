@@ -2777,7 +2777,7 @@ public class Chara : Card, IPathfindWalker
 					num2 += 20;
 					num *= 1.8f;
 				}
-				num2 = num2 * 100 / (100 + (int)Mathf.Sqrt(EvalueMax(240, -20) * 10) + EvalueMax(407, -5) * 5);
+				num2 = num2 * 100 / (100 + EClass.sqrt(EvalueMax(240, -20) * 10) + EvalueMax(407, -5) * 5);
 				EClass.world.date.AdvanceMin(num2 * 6);
 				EClass.player.lastZonePos = null;
 				EClass.player.distanceTravel++;
@@ -7784,7 +7784,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override int GetArmorSkill()
 	{
-		if (body.GetWeight(armorOnly: true) <= 30000)
+		if (body.GetWeight(armorOnly: true) <= (HasElement(1204) ? 6000 : 30000))
 		{
 			return 120;
 		}

@@ -533,6 +533,7 @@ public class Core : BaseCore
 		StartCoroutine("OnEndOfFrame");
 		InvokeRepeating("Update100ms", 0.1f, 0.1f);
 		UnityEngine.Object.DestroyImmediate(ui.layoutLang.gameObject);
+		GameIO.Init();
 		CoreConfig.Init();
 		if (config.lang.IsEmpty())
 		{

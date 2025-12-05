@@ -271,8 +271,8 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 
 		public TierList()
 		{
-			tiers = new Tier[5];
-			for (int i = 0; i < 5; i++)
+			tiers = new Tier[8];
+			for (int i = 0; i < 8; i++)
 			{
 				tiers[i] = new Tier();
 			}

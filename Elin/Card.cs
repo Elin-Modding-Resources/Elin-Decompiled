@@ -5972,7 +5972,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void DyeRandom()
 	{
-		Dye(EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.matColor.r != r.matColor.g || r.matColor.g != r.matColor.b || r.matColor.b != r.matColor.r).RandomItem().alias);
+		Dye(EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.tier <= 4 && (r.matColor.r != r.matColor.g || r.matColor.g != r.matColor.b || r.matColor.b != r.matColor.r)).RandomItem().alias);
 	}
 
 	public void Dye(string idMat)

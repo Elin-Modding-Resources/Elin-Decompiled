@@ -34,6 +34,10 @@ public class MATERIAL : EClass
 
 	public const string aliasNull = "oak";
 
+	public const int MaxRandomTier = 4;
+
+	public const int MaxTier = 7;
+
 	public static SourceMaterial.Row sourceSnow = EClass.sources.materials.rows[48];
 
 	public static SourceMaterial.Row sourceIce = EClass.sources.materials.rows[61];
@@ -70,13 +74,12 @@ public class MATERIAL : EClass
 		int num = 0;
 		if (tryLevelMatTier)
 		{
-			num = Mathf.Clamp(lv / 15, 0, tierList.tiers.Length - 1);
-			num = Mathf.Clamp(num + EClass.rnd(2) - EClass.rnd(2), 0, tierList.tiers.Length - 1);
+			num = Mathf.Clamp(lv / 15, 0, 4);
+			num = Mathf.Clamp(num + EClass.rnd(2) - EClass.rnd(2), 0, 4);
 		}
 		else
 		{
-			int min = ((lv >= 60) ? 2 : ((lv >= 25) ? 1 : 0));
-			num = Mathf.Clamp(EClass.rnd(EClass.rnd(EClass.rnd(lv / 10 + 2) + 1) + 1), min, tierList.tiers.Length - 1);
+			num = Mathf.Clamp(min: (lv >= 60) ? 2 : ((lv >= 25) ? 1 : 0), value: EClass.rnd(EClass.rnd(EClass.rnd(lv / 10 + 2) + 1) + 1), max: 4);
 		}
 		SourceMaterial.Tier obj = tierList.tiers[num];
 		SourceMaterial.Row result = obj.Select();
