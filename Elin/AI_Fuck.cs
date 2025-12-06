@@ -85,7 +85,10 @@ public class AI_Fuck : AIAct
 		Chara cc = (sell ? target : owner);
 		Chara tc = (sell ? owner : target);
 		int destDist = ((Type == FuckType.fuck) ? 1 : 1);
-		yield return DoGoto(target.pos, destDist);
+		if (owner.host != target)
+		{
+			yield return DoGoto(target.pos, destDist);
+		}
 		cc.Say((variation == Variation.Bloodsuck) ? "suck_start" : (Type.ToString() + "_start"), cc, tc);
 		isFail = () => !tc.IsAliveInCurrentZone || tc.Dist(owner) > 3;
 		if (Type == FuckType.tame)
@@ -104,7 +107,10 @@ public class AI_Fuck : AIAct
 		for (int i = 0; i < maxProgress; i++)
 		{
 			progress = i;
-			yield return DoGoto(target.pos, destDist);
+			if (owner.host != target)
+			{
+				yield return DoGoto(target.pos, destDist);
+			}
 			switch (Type)
 			{
 			case FuckType.fuck:

@@ -62,7 +62,7 @@ public class QuestDeliver : QuestDestZone
 		do
 		{
 			SourceCategory.Row r = GetDeliverCat();
-			cardRow = SpawnListThing.Get("cat_" + r.id, (SourceThing.Row s) => EClass.sources.categories.map[s.category].IsChildOf(r.id)).Select();
+			cardRow = SpawnListThing.Get("cat_" + r.id, (SourceThing.Row s) => EClass.sources.categories.map[s.category].IsChildOf(r.id) && (IsDeliver || s.model.trait.CanStack)).Select();
 		}
 		while (cardRow == null);
 		idThing = cardRow.id;

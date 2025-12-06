@@ -3725,10 +3725,27 @@ public class Chara : Card, IPathfindWalker
 				AddCondition<ConBurning>(1000, force: true);
 			}
 			break;
-		case 15:
-			if (HasElement(1250) && !HasCondition<ConVampire>())
+		case 10:
+			if (!HasElement(1250))
+			{
+				break;
+			}
+			if (!HasCondition<ConVampire>())
 			{
 				AddCondition<ConVampire>();
+			}
+			if (!IsPC && !HasCooldown(8793))
+			{
+				bool flag = false;
+				flag = ((!HasCondition<ConTransmuteBat>()) ? (!HasElement(431) && pos.IsSunLit) : (body.HasElement(431) || (EClass.world.date.IsNight && !pos.IsSunLit)));
+				if (flag && base.IsPCFactionOrMinion && !EClass._zone.IsPCFactionOrTent && EClass._zone.HasLaw && pos.ListWitnesses(this).Count > 0 && !HasCondition<ConBurning>())
+				{
+					flag = false;
+				}
+				if (flag)
+				{
+					UseAbility("SpTransmuteBat", this);
+				}
 			}
 			break;
 		}
@@ -7516,6 +7533,10 @@ public class Chara : Card, IPathfindWalker
 	public bool CanEat(Thing t, bool shouldEat = false)
 	{
 		if (t.IsDecayed && !HasElement(480))
+		{
+			return false;
+		}
+		if (HasElement(1250) && !t.HasElement(710))
 		{
 			return false;
 		}

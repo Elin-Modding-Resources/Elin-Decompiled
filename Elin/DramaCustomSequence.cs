@@ -294,6 +294,10 @@ public class DramaCustomSequence : EClass
 			{
 				Choice2("daJoinParty", "_joinParty");
 			}
+			if (!c.IsDisabled && (c.HasElement(1250) || (EClass.pc.IsMofuable && c.ability.Has(6627))))
+			{
+				Choice2("daSuck", "_suck");
+			}
 			Choice2("daFactionOther", "_factionOther");
 		}
 		if (c.trait is TraitLoytel && EClass.game.quests.Get<QuestDebt>() != null)
@@ -576,6 +580,21 @@ public class DramaCustomSequence : EClass
 		});
 		_Talk("tg", GetTopic(c, (c.GetInt(126) == 0) ? "shutup" : "shutup2"));
 		End();
+		Step("_suck");
+		_Talk("tg", GetTalk("pervert4"));
+		Method(delegate
+		{
+			if (c.HasElement(1250))
+			{
+				c.UseAbility("ActBloodsuck", EClass.pc);
+			}
+			else
+			{
+				c.Sniff(EClass.pc);
+			}
+			EClass.player.EndTurn();
+		});
+		End();
 		Step("_insult");
 		Method(delegate
 		{
@@ -769,7 +788,7 @@ public class DramaCustomSequence : EClass
 						{
 							c.Talk("goodBoy");
 							c4.Say("dingExp", c);
-							c4.Talk("tailed");
+							c4.Talk("insulted");
 							c4.SetFeat(1273, 1, msg: true);
 							c4.PlayEffect("aura_heaven");
 							c4.feat += 10;

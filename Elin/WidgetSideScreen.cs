@@ -152,7 +152,7 @@ public class WidgetSideScreen : Widget
 
 	private void OnEnable()
 	{
-		Refresh();
+		OnChangeResolution();
 	}
 
 	private void OnDisable()

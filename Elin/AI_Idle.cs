@@ -104,6 +104,24 @@ public class AI_Idle : AIAct
 						});
 					}
 				}
+				else if (!EClass._zone.IsRegion && owner.HasElement(1250))
+				{
+					Chara target = null;
+					for (int j = 0; j < 10; j++)
+					{
+						Chara chara = EClass._map.charas.RandomItem();
+						if (chara != owner && chara.Evalue(964) <= 0 && (target == null || (chara.c_bloodData != null && (target.c_bloodData == null || CraftUtil.GetFoodScore(chara.c_bloodData) > CraftUtil.GetFoodScore(target.c_bloodData)))))
+						{
+							target = chara;
+						}
+					}
+					if (target != null)
+					{
+						yield return DoGoto(target);
+						owner.UseAbility("ActBloodsuck", target);
+						yield return Success();
+					}
+				}
 			}
 			if (!EClass._zone.IsRegion)
 			{
@@ -169,7 +187,7 @@ public class AI_Idle : AIAct
 						{
 							continue;
 						}
-						for (int j = 0; j < 5; j++)
+						for (int k = 0; k < 5; k++)
 						{
 							if (thing9.encLV >= 0)
 							{
@@ -327,23 +345,23 @@ public class AI_Idle : AIAct
 			}
 			if (owner.c_uidMaster != 0)
 			{
-				Chara chara = owner.master;
-				if (chara == null || !chara.IsAliveInCurrentZone)
+				Chara chara2 = owner.master;
+				if (chara2 == null || !chara2.IsAliveInCurrentZone)
 				{
-					chara = owner.FindMaster();
+					chara2 = owner.FindMaster();
 				}
-				if (chara != null && chara.IsAliveInCurrentZone)
+				if (chara2 != null && chara2.IsAliveInCurrentZone)
 				{
 					if (owner.enemy == null)
 					{
-						owner.SetEnemy(chara.enemy);
+						owner.SetEnemy(chara2.enemy);
 					}
-					int num4 = owner.Dist(chara.pos);
+					int num4 = owner.Dist(chara2.pos);
 					if (owner.source.aiIdle != "root" && num4 > EClass.game.config.tactics.AllyDistance(owner) && EClass._zone.PetFollow && owner.c_minionType == MinionType.Default)
 					{
-						if (owner.HasAccess(chara.pos))
+						if (owner.HasAccess(chara2.pos))
 						{
-							owner.TryMoveTowards(chara.pos);
+							owner.TryMoveTowards(chara2.pos);
 						}
 						yield return KeepRunning();
 						continue;
@@ -632,14 +650,14 @@ public class AI_Idle : AIAct
 		{
 			if (EClass.rnd(3) == 0 && owner.IsCat)
 			{
-				Chara chara2 = ((EClass.rnd(5) == 0) ? EClass.pc.party.members.RandomItem() : EClass._map.charas.RandomItem());
-				Thing thing5 = chara2.things.Find<TraitFoodChuryu>();
-				if (chara2 != owner && thing5 != null)
+				Chara chara3 = ((EClass.rnd(5) == 0) ? EClass.pc.party.members.RandomItem() : EClass._map.charas.RandomItem());
+				Thing thing5 = chara3.things.Find<TraitFoodChuryu>();
+				if (chara3 != owner && thing5 != null)
 				{
 					yield return Do(new AI_Churyu
 					{
 						churyu = thing5,
-						slave = chara2
+						slave = chara3
 					});
 				}
 			}
@@ -658,12 +676,12 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(100) == 0 && owner.trait is TraitBitch)
 		{
-			Chara chara3 = DoSomethingToNearChara((Chara c) => c.IsIdle && !c.IsPCParty && !(c.trait is TraitBitch) && c.Evalue(418) <= 0);
-			if (chara3 != null)
+			Chara chara4 = DoSomethingToNearChara((Chara c) => c.IsIdle && !c.IsPCParty && !(c.trait is TraitBitch) && c.Evalue(418) <= 0);
+			if (chara4 != null)
 			{
 				yield return Do(new AI_Fuck
 				{
-					target = chara3,
+					target = chara4,
 					variation = AI_Fuck.Variation.Bitch
 				});
 			}
@@ -722,12 +740,12 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(35) == 0 && owner.id == "child" && owner.pos.cell.IsSnowTile)
 		{
-			foreach (Chara chara4 in EClass._map.charas)
+			foreach (Chara chara5 in EClass._map.charas)
 			{
-				if (EClass.rnd(3) != 0 && chara4 != owner && chara4.pos.cell.IsSnowTile && chara4.Dist(owner) <= 6 && Los.IsVisible(chara4, owner))
+				if (EClass.rnd(3) != 0 && chara5 != owner && chara5.pos.cell.IsSnowTile && chara5.Dist(owner) <= 6 && Los.IsVisible(chara5, owner))
 				{
 					Thing t3 = ThingGen.Create("snow");
-					ActThrow.Throw(owner, chara4.pos, t3);
+					ActThrow.Throw(owner, chara5.pos, t3);
 					break;
 				}
 			}
@@ -751,11 +769,11 @@ public class AI_Idle : AIAct
 			}
 			else
 			{
-				foreach (Chara chara5 in EClass._map.charas)
+				foreach (Chara chara6 in EClass._map.charas)
 				{
-					if (EClass.rnd(3) != 0 && chara5 != owner && chara5.Dist(owner) <= 6 && chara5.Dist(owner) >= 3 && Los.IsVisible(chara5, owner))
+					if (EClass.rnd(3) != 0 && chara6 != owner && chara6.Dist(owner) <= 6 && chara6.Dist(owner) >= 3 && Los.IsVisible(chara6, owner))
 					{
-						ActThrow.Throw(owner, chara5.pos, thing6);
+						ActThrow.Throw(owner, chara6.pos, thing6);
 						break;
 					}
 				}
@@ -907,7 +925,7 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(10) == 0 && !EClass._zone.IsUnderwater && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
 		{
-			for (int k = 0; k < 100; k++)
+			for (int l = 0; l < 100; l++)
 			{
 				Point randomPoint2 = EClass._map.GetRandomPoint();
 				if (randomPoint2.IsDeepWater && !randomPoint2.IsBlocked)
@@ -940,9 +958,9 @@ public class AI_Idle : AIAct
 		yield return Restart();
 		Point FindMovePoint(BaseArea.AccessType type)
 		{
-			for (int l = 0; l < 20; l++)
+			for (int m = 0; m < 20; m++)
 			{
-				Point randomPoint3 = owner.pos.GetRandomPoint(5 + l, requireLos: false);
+				Point randomPoint3 = owner.pos.GetRandomPoint(5 + m, requireLos: false);
 				if (randomPoint3 != null && randomPoint3.IsInBounds && (randomPoint3.cell.room == null || randomPoint3.cell.room.data.accessType == type))
 				{
 					return randomPoint3;

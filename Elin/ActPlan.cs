@@ -548,6 +548,14 @@ public class ActPlan : EClass
 								TrySetAct(ACT.Chat, c2);
 							}
 						}
+						if (!c2.IsPC && num <= 2 && ((c2.IsPCFaction && !c2.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
+						{
+							TrySetAct("actTrade", delegate
+							{
+								LayerInventory.CreateContainer(c2);
+								return false;
+							}, c2, null, 2);
+						}
 						if (c2.host != EClass.pc)
 						{
 							TraitShackle traitShackle = c2.pos.FindThing<TraitShackle>();
@@ -628,14 +636,6 @@ public class ActPlan : EClass
 										ride._CreateRenderer();
 									}, 0f, list.Count - 1, isInt: true, hideOther: false);
 									uIContextMenu.Show();
-									return false;
-								}, c);
-							}
-							if (!c.IsPC && ((c.IsPCFaction && !c.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
-							{
-								TrySetAct("actTrade", delegate
-								{
-									LayerInventory.CreateContainer(c);
 									return false;
 								}, c);
 							}

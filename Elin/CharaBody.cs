@@ -387,6 +387,18 @@ public class CharaBody : EClass
 		return false;
 	}
 
+	public bool HasElement(int idEle)
+	{
+		foreach (BodySlot slot in slots)
+		{
+			if (slot.thing != null && slot.thing.elements.Has(idEle))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public Thing GetEquippedThing(int elementId)
 	{
 		foreach (BodySlot slot in slots)

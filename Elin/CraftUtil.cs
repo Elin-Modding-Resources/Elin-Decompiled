@@ -138,6 +138,19 @@ public class CraftUtil : EClass
 		return text;
 	}
 
+	public static int GetFoodScore(Thing food)
+	{
+		int num = 0;
+		foreach (Element value in food.elements.dict.Values)
+		{
+			if (value.IsFoodTraitMain)
+			{
+				num += value.Value;
+			}
+		}
+		return num;
+	}
+
 	public static Thing MakeBloodMeal(Chara sucker, Chara feeder, bool msg = true)
 	{
 		Thing c_bloodData = feeder.c_bloodData;

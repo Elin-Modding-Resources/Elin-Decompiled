@@ -17,6 +17,10 @@ public class ConTransmuteBat : ConTransmute
 	{
 		base.OnStart();
 		owner.PlaySound("bat");
+		if (!EClass._zone.IsPCFactionOrTent && owner.pos.TryWitnessCrime(owner) && owner == EClass.pc)
+		{
+			EClass.player.ModKarma(-1);
+		}
 	}
 
 	public override void OnRemoved()
@@ -24,5 +28,9 @@ public class ConTransmuteBat : ConTransmute
 		base.OnRemoved();
 		owner.HealHP(owner.MaxHP, HealSource.Item);
 		owner.SetCooldown(8793);
+		if (!EClass._zone.IsPCFactionOrTent && owner.pos.TryWitnessCrime(owner) && owner == EClass.pc)
+		{
+			EClass.player.ModKarma(-1);
+		}
 	}
 }

@@ -1896,7 +1896,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Moyer:
 				{
-					for (int num12 = 1; num12 <= 16; num12++)
+					for (int num12 = 1; num12 <= 17; num12++)
 					{
 						AddAdvWeek(num12);
 					}
@@ -2152,7 +2152,7 @@ public class Trait : EClass
 				case ShopType.Dye:
 				{
 					Thing thing = ThingGen.Create("dye").SetNum(15 + EClass.rnd(30));
-					thing.ChangeMaterial(EClass.sources.materials.rows.RandomItem().alias);
+					thing.ChangeMaterial(EClass.sources.materials.rows.Where((SourceMaterial.Row r) => r.tier <= 4).RandomItem().alias);
 					return thing;
 				}
 				case ShopType.GeneralExotic:

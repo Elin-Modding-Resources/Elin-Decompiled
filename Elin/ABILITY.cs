@@ -292,6 +292,8 @@ public class Ability : Act
 
 	public override bool CanPressRepeat => base.source.tag.Contains("repeat");
 
+	public override bool LocalAct => id != 8793;
+
 	public override bool CanLink(ElementContainer owner)
 	{
 		if (owner.Card == null)

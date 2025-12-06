@@ -87,6 +87,8 @@ public class TraitFoodEggFertilized : TraitFoodEgg
 			c.idSkin = 1;
 			break;
 		}
+		c.bio.birthDay = EClass.world.date.day;
+		c.bio.birthMonth = EClass.world.date.month;
 		c.bio.SetAge(c, 0);
 	}
 

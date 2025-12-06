@@ -5897,7 +5897,20 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return Element.GetResistLv(Evalue(res));
 	}
 
-	public bool HasElement(int ele, int req = 1)
+	public bool HasElement(int ele, bool includeNagative = false)
+	{
+		if (elements.Value(ele) <= 0)
+		{
+			if (includeNagative)
+			{
+				return elements.Value(ele) < 0;
+			}
+			return false;
+		}
+		return true;
+	}
+
+	public bool HasElement(int ele, int req)
 	{
 		return elements.Value(ele) >= req;
 	}
