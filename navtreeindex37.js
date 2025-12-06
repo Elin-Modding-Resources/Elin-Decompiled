@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classBaseTileSelector.html#afdacc0744255fe8f5742b4f44f26130e":[1,0,222,32],
 "classBaseWidgetNotice.html":[1,0,223],
 "classBaseWidgetNotice.html#a026aac1affba8005e84b0f49253bcd0e":[1,0,223,4],
 "classBaseWidgetNotice.html#a35857ace33736bdf25d4a5a35c0ab3df":[1,0,223,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classBookList.html#ada84d594f324b450d1ac04aa44c9a9e8":[1,0,232,4],
 "classBookList_1_1Item.html":[1,0,232,0],
 "classBookList_1_1Item.html#a200e13ca7835bdd53ac50810e736b0bc":[1,0,232,0,3],
-"classBookList_1_1Item.html#a5b05bf6e47c50c9e797c4a2f0eaf35f6":[1,0,232,0,0],
-"classBookList_1_1Item.html#a83f5debee93575c69e04a8d7653afef9":[1,0,232,0,1]
+"classBookList_1_1Item.html#a5b05bf6e47c50c9e797c4a2f0eaf35f6":[1,0,232,0,0]
 };

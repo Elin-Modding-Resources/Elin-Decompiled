@@ -12,6 +12,7 @@ var classCharaBody =
     [ "GetSlot", "classCharaBody.html#ade0eba276f909a565a1d0ccf1c26f218", null ],
     [ "GetSortVal", "classCharaBody.html#aa9ff820ba11082738c171b45e8f1287b", null ],
     [ "GetWeight", "classCharaBody.html#ac39f1a023d4926609ec1fae7eb18510e", null ],
+    [ "HasElement", "classCharaBody.html#a4a0862042b07cdeeb06ad9e926fc770d", null ],
     [ "HasWeapon", "classCharaBody.html#a0617427fa99fc1c67c66a89961b18a7b", null ],
     [ "IsEquippable", "classCharaBody.html#aaeb4dc33c298701132f13f5399a680a1", null ],
     [ "IsTooHeavyToEquip", "classCharaBody.html#a915feb6e7e9b73b18fd2330f5c1eacae", null ],

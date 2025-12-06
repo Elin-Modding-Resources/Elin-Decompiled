@@ -5,5 +5,6 @@ var classAbility =
     [ "GetSourceValue", "classAbility.html#a06d83b5a738742b54e545a74e45ba988", null ],
     [ "OnChangeValue", "classAbility.html#a3a131c464b975844416a8ed95fe6947a", null ],
     [ "CanPressRepeat", "classAbility.html#a89aa95f671cf3573c82d84320f895a8f", null ],
+    [ "LocalAct", "classAbility.html#ada4ff70144f53339b4ac40bbe0c0f846", null ],
     [ "ShowBonuses", "classAbility.html#a4e624bdc3252010fc8b0916f7c6a5cb1", null ]
 ];

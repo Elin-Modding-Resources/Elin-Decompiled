@@ -1,5 +1,9 @@
 var NAVTREEINDEX132 =
 {
+"classUIText.html#a69a1059f6237078f7c5b63e228202e3b":[1,0,2052,5],
+"classUIText.html#a6d482e61da1ee75f2303a28d68a1cb73":[1,0,2052,14],
+"classUIText.html#a8fd9d0016615f23926adb2da804a011e":[1,0,2052,2],
+"classUIText.html#a977f823671475e2e64569a5bc5a13e3c":[1,0,2052,1],
 "classUIText.html#a978123cc84a5ccdddafc2af64e257056":[1,0,2052,18],
 "classUIText.html#a9c6fee809fbd3d368f238c6faa39b388":[1,0,2052,7],
 "classUIText.html#aa4a55d996f941a7ab47f0ddbf84bac36":[1,0,2052,20],
@@ -245,9 +249,5 @@ var NAVTREEINDEX132 =
 "classWidget.html#af07afdbb7e0dc8eb844f4b5d3a4cce37":[1,0,2068,29],
 "classWidget.html#af29235617cbca615df9192b8dadcefaa":[1,0,2068,10],
 "classWidget.html#af6693681e109d517e6c2a0d6dc68bfa2":[1,0,2068,15],
-"classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706":[1,0,2068,68],
-"classWidget.html#afabface3017c9537ea076b0fb0fdf9d3":[1,0,2068,27],
-"classWidgetArtTool.html":[1,0,2069],
-"classWidgetArtTool.html#a0d348022375378fe4a5e8bb43581f5fc":[1,0,2069,2],
-"classWidgetArtTool.html#a135f32d617c7c02f870f2153bd416437":[1,0,2069,5]
+"classWidget.html#af8da22b9a0963fc8f4611fd7d4dce706":[1,0,2068,68]
 };

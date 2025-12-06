@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classButtonRoster.html#a640a86c461fe091fd116eac22686311c":[1,0,248,1],
 "classButtonRoster.html#a6cdafebacb3ed4fde13149b303860609":[1,0,248,10],
 "classButtonRoster.html#a82f07654456573f75014897813f0266b":[1,0,248,7],
 "classButtonRoster.html#a8be1e2ef123971ea5409d949e700dd96":[1,0,248,6],
@@ -243,11 +244,10 @@ var NAVTREEINDEX39 =
 "classCanvasExt.html":[1,0,255],
 "classCanvasExt.html#ae9392d42e91e8a0297e7bb0e30970e98":[1,0,255,0],
 "classCard.html":[1,0,256],
-"classCard.html#a006bae9e5a0c97b0ec50a1c288f9895f":[1,0,256,239],
+"classCard.html#a006bae9e5a0c97b0ec50a1c288f9895f":[1,0,256,240],
 "classCard.html#a00922850aec7ee8420d09224a201418c":[1,0,256,43],
-"classCard.html#a01c9d5f5e97e0a34642cc641c7a0094f":[1,0,256,448],
-"classCard.html#a0306eabe175e0108a72886754904097e":[1,0,256,283],
-"classCard.html#a032ddf5baaa732ce2d82c372c8cbbd6c":[1,0,256,330],
-"classCard.html#a03f6f467615fc485ab28b68db7279489":[1,0,256,211],
-"classCard.html#a05dffd4f600c4a61fcabec797f77b221":[1,0,256,249]
+"classCard.html#a01c9d5f5e97e0a34642cc641c7a0094f":[1,0,256,449],
+"classCard.html#a0306eabe175e0108a72886754904097e":[1,0,256,284],
+"classCard.html#a032ddf5baaa732ce2d82c372c8cbbd6c":[1,0,256,331],
+"classCard.html#a03f6f467615fc485ab28b68db7279489":[1,0,256,212]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX119 =
 {
+"classTraitElevator.html":[1,0,1568],
+"classTraitElevator.html#a76be5d65a652a723cf990124e375fc5f":[1,0,1568,4],
+"classTraitElevator.html#a92dcd328d5551465272aa7f1fd2cd9f2":[1,0,1568,1],
+"classTraitElevator.html#aaa9bf5d3d883dc9187e983e59cd0e571":[1,0,1568,5],
 "classTraitElevator.html#ab0e9634ffd686f0bf9662bfb18f567f2":[1,0,1568,2],
 "classTraitElevator.html#ae1be1942dfb0d2d5db1c4b96b9740488":[1,0,1568,3],
 "classTraitElevator.html#af62894b698bcc696ce498a4885eaa974":[1,0,1568,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitGodStatue.html#abc0ce01bea37d901ff1893ea8576377d":[1,0,1635,4],
 "classTraitGoodsCoin.html":[1,0,1636],
 "classTraitGoodsCoin.html#a9751edccc0d9badf730cb5cca88fb87d":[1,0,1636,0],
-"classTraitGrave.html":[1,0,1637],
-"classTraitGriffin.html":[1,0,1638],
-"classTraitGriffin.html#aa511931a3f7b64490c5775e2c69af7da":[1,0,1638,0],
-"classTraitGrimoire.html":[1,0,1639],
-"classTraitGrindstone.html":[1,0,1640]
+"classTraitGrave.html":[1,0,1637]
 };

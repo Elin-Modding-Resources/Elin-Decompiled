@@ -1,5 +1,9 @@
 var NAVTREEINDEX124 =
 {
+"classTraitSwing.html#aa1119fe1adc12884e7c7c2aaf6ebbb92":[1,0,1880,5],
+"classTraitSwing.html#af6cada8c4e4bb880882b43a999a50b9a":[1,0,1880,2],
+"classTraitSwing.html#af9b30b301ce085c223344c32891c88fc":[1,0,1880,3],
+"classTraitSwing.html#affe3bc4a8f03bb9e1b6546afbfb29ceb":[1,0,1880,4],
 "classTraitSwitch.html":[1,0,1881],
 "classTraitSwitch.html#a069e285e73f58fcb14dd4ce45b058a44":[1,0,1881,5],
 "classTraitSwitch.html#a38ceb3586c4921cafed4f9cdfed87d21":[1,0,1881,10],
@@ -245,9 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitTrapSister.html":[1,0,1936],
 "classTraitTrapSister.html#aa82091c2f2f2a60a26d247a84492ccb0":[1,0,1936,1],
 "classTraitTrapSister.html#ad20ee8d751a2f9b44fed1062b5c65ff1":[1,0,1936,0],
-"classTraitTravel.html":[1,0,1937],
-"classTraitTreeEther.html":[1,0,1938],
-"classTraitTreeEther.html#a0d7a64a9033697e9374f507fe97a38b9":[1,0,1938,1],
-"classTraitTreeEther.html#adc78c50b9353d6a03d505be7dc022f77":[1,0,1938,0],
-"classTraitTrolley.html":[1,0,1939]
+"classTraitTravel.html":[1,0,1937]
 };

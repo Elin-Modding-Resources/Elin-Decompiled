@@ -1,5 +1,9 @@
 var NAVTREEINDEX111 =
 {
+"classTaskCraft.html#a85d75f752cb8d8133ac35a7582e00988":[1,0,1298,4],
+"classTaskCraft.html#a86d594048c31f6e66e8b3e68d0f225f7":[1,0,1298,2],
+"classTaskCraft.html#a92bcdaf1cd914f54bf07c805713ed535":[1,0,1298,15],
+"classTaskCraft.html#a987b8ccc58e15e194ae9619f9e2a156c":[1,0,1298,12],
 "classTaskCraft.html#aad3b2850aae023887a059383ddeb6d2b":[1,0,1298,6],
 "classTaskCraft.html#aad744773c8b2da6f8ee7ae975904260c":[1,0,1298,3],
 "classTaskCraft.html#ab44db506ceecd06b6c18a843c267fc7f":[1,0,1298,10],
@@ -245,9 +249,5 @@ var NAVTREEINDEX111 =
 "classTextConv.html#acce4ebb4461fcb08cf292d5d2019a0ab":[1,0,1330,7],
 "classTextConv.html#ad53aa1f5f2fb99d381b347580ba59ace":[1,0,1330,4],
 "classTextConv.html#ae268767087790114a74dd57dab69e2dd":[1,0,1330,2],
-"classTextConv_1_1Item.html":[1,0,1330,0],
-"classTextConv_1_1Item.html#a396c79d2afe4acf744c07e97494f1d5c":[1,0,1330,0,2],
-"classTextConv_1_1Item.html#a6b0ee0740d1281995ba51ba53811b064":[1,0,1330,0,0],
-"classTextConv_1_1Item.html#a73dc8e5746cdf748b0708c63c47656aa":[1,0,1330,0,4],
-"classTextConv_1_1Item.html#a934a83e19b624f5ba6bd48ce527a7daf":[1,0,1330,0,6]
+"classTextConv_1_1Item.html":[1,0,1330,0]
 };

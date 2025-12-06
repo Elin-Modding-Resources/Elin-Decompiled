@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"classBookList_1_1Item.html#a83f5debee93575c69e04a8d7653afef9":[1,0,232,0,1],
 "classBookList_1_1Item.html#ac849648b68f648e3c8c639c064123bd6":[1,0,232,0,2],
 "classBookList_1_1Item.html#aeb9de669a12877be3a1aeec049e4fdf7":[1,0,232,0,4],
 "classBoxOutline.html":[1,0,233],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "classButtonRoster.html#a20b10ff3ea12fed1671568ccd028e598":[1,0,248,3],
 "classButtonRoster.html#a4ba091782f077207b9bad85fa11d34c2":[1,0,248,0],
 "classButtonRoster.html#a554c4259ae7b001b941b4a8c4464af69":[1,0,248,8],
-"classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c":[1,0,248,5],
-"classButtonRoster.html#a640a86c461fe091fd116eac22686311c":[1,0,248,1]
+"classButtonRoster.html#a5d3a4edc66713d93ec8b2aa042ecca6c":[1,0,248,5]
 };

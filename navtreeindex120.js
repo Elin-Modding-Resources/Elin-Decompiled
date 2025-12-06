@@ -1,5 +1,9 @@
 var NAVTREEINDEX120 =
 {
+"classTraitGriffin.html":[1,0,1638],
+"classTraitGriffin.html#aa511931a3f7b64490c5775e2c69af7da":[1,0,1638,0],
+"classTraitGrimoire.html":[1,0,1639],
+"classTraitGrindstone.html":[1,0,1640],
 "classTraitGrindstone.html#a0825341a9432d91e675cfc4b8f9d39a3":[1,0,1640,3],
 "classTraitGrindstone.html#a09a44dac87424a91646516deb6d4cca3":[1,0,1640,4],
 "classTraitGrindstone.html#a427730a2544e57bd0df379c3c6f356ce":[1,0,1640,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitMapBoard.html":[1,0,1692],
 "classTraitMapBoard.html#a23d8440d3eab72f9ac73480312d0f3db":[1,0,1692,1],
 "classTraitMapBoard.html#abe12bfc60877ad1432da4abdde539392":[1,0,1692,0],
-"classTraitMaterialHammer.html":[1,0,1693],
-"classTraitMaterialHammer.html#a29b284213814e988700eed4866d91d88":[1,0,1693,1],
-"classTraitMaterialHammer.html#aecb35443e66b34103adc8b494ce32d52":[1,0,1693,0],
-"classTraitMayor.html":[1,0,1694],
-"classTraitMayor.html#a6a765a7ca86755cd4560397ed8aa28d2":[1,0,1694,1]
+"classTraitMaterialHammer.html":[1,0,1693]
 };

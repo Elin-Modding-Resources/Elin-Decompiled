@@ -1,5 +1,9 @@
 var NAVTREEINDEX121 =
 {
+"classTraitMaterialHammer.html#a29b284213814e988700eed4866d91d88":[1,0,1693,1],
+"classTraitMaterialHammer.html#aecb35443e66b34103adc8b494ce32d52":[1,0,1693,0],
+"classTraitMayor.html":[1,0,1694],
+"classTraitMayor.html#a6a765a7ca86755cd4560397ed8aa28d2":[1,0,1694,1],
 "classTraitMayor.html#ac622a4b6c45cf17f89d4431d0439739f":[1,0,1694,2],
 "classTraitMayor.html#ac7e6606d157a5ed5e3a66d773aaecd59":[1,0,1694,0],
 "classTraitMerchant.html":[1,0,1695],
@@ -245,9 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitParcel.html#a30f6688d244f1133c11d635e572c12b4":[1,0,1754,2],
 "classTraitParcel.html#a3ab872d0b1a4436683b647c61015c215":[1,0,1754,0],
 "classTraitParcel.html#a64392f9e69a1a046171f1809c93afd5e":[1,0,1754,1],
-"classTraitParcel.html#ab355e6d3c7d6a8c02fcc286d805530ce":[1,0,1754,3],
-"classTraitParcel.html#ae77b3e62de983fd1011245bc3b2008e7":[1,0,1754,4],
-"classTraitParchment.html":[1,0,1755],
-"classTraitPartTimeMascot.html":[1,0,1756],
-"classTraitPerfume.html":[1,0,1757]
+"classTraitParcel.html#ab355e6d3c7d6a8c02fcc286d805530ce":[1,0,1754,3]
 };

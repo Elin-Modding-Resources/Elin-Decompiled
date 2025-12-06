@@ -1,5 +1,9 @@
 var NAVTREEINDEX66 =
 {
+"classGameDifficultySetting.html#a62558f5354c52d25af5bc841e55e5a6e":[1,0,534,0],
+"classGameDifficultySetting.html#a81900ed49254e8ff819c5e927304a393":[1,0,534,5],
+"classGameDifficultySetting.html#a96c61b38070fd760960729348c670425":[1,0,534,2],
+"classGameDifficultySetting.html#ad7b4c6a05a05136014f260b5c054a750":[1,0,534,1],
 "classGameDifficultySetting.html#af74f35049a244e19f382b2de34d8ebc0":[1,0,534,3],
 "classGameIO.html":[1,0,536],
 "classGameIO.html#a01833daf0214d812ec629467fa441202":[1,0,536,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX66 =
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a98632c40cdeaa1becdbec477b7071cd0":[1,0,543,6,1,8],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a9abe6316265d0cbe6640549915a4c789":[1,0,543,6,1,14],
 "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#a9f17947abb29e183cc8e4004dd90bfb3":[1,0,543,6,1,10],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#aa1383773b9c93477ce40a068818610fc":[1,0,543,6,1,17],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#accf33d6fdc152f5ea7aa03465602c7aa":[1,0,543,6,1,16],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#ad1933e20fa3129f3652c136cb8638938":[1,0,543,6,1,18],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#adf2a149c45f94dd0446ab78c84c599c8":[1,0,543,6,1,5],
-"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#afcb33934e1f7abbdf29abfc7cc385752":[1,0,543,6,1,9]
+"classGameSetting_1_1RenderSetting_1_1AnimeSetting.html#aa1383773b9c93477ce40a068818610fc":[1,0,543,6,1,17]
 };

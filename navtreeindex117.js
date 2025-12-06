@@ -1,5 +1,9 @@
 var NAVTREEINDEX117 =
 {
+"classTraitBrewery.html#a1f4d169767688213b54380c35d8407e1":[1,0,1472,5],
+"classTraitBrewery.html#a42071de0bf383f079fa4f2b031c2091e":[1,0,1472,2],
+"classTraitBrewery.html#a5387d116dd271c6ca5690ebb7c2213d3":[1,0,1472,3],
+"classTraitBrewery.html#ab60b6997f1cd8e5cd8f0f0928b2192ea":[1,0,1472,4],
 "classTraitBrewery.html#ac6392218736e8045381c246c4b5b8dd3":[1,0,1472,1],
 "classTraitBrewery.html#ad0f183c75b466f63ce9906a5ea1ada3a":[1,0,1472,8],
 "classTraitBrewery.html#ad6cfde6d0eda91cfdca50e56ac36a2c8":[1,0,1472,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitCrafter.html#a824ce8e058c0eb2b1de4bfbb0cb7f787":[1,0,1521,13],
 "classTraitCrafter.html#a84da1cc9f16d6d4ff211ee229419f5b5":[1,0,1521,18],
 "classTraitCrafter.html#a8ee92e5d33a73f0e966bf106d4d279d6":[1,0,1521,2],
-"classTraitCrafter.html#a90216b9ee86335e10abf2f7c9d88f565":[1,0,1521,34],
-"classTraitCrafter.html#aa7ba1ba047159bd7dec7c9cedfafd755":[1,0,1521,33],
-"classTraitCrafter.html#aa97f9ea9f9bdcba7b7c1402d10ef8b4b":[1,0,1521,10],
-"classTraitCrafter.html#aade7caa6ae03de7628ab79027edbf23c":[1,0,1521,12],
-"classTraitCrafter.html#ab1f95cc464045f6811c479bad31d2325":[1,0,1521,6]
+"classTraitCrafter.html#a90216b9ee86335e10abf2f7c9d88f565":[1,0,1521,34]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX123 =
 {
+"classTraitScratchMachine.html#afd1c86f4c7b5d3f00009927806cdfc44":[1,0,1818,3],
+"classTraitScroll.html":[1,0,1819],
+"classTraitScroll.html#a0e073abdcec7d8ab46d4835511d90bc0":[1,0,1819,1],
+"classTraitScroll.html#a1373d9916e36ca2f4d2e64e9ca16261b":[1,0,1819,7],
 "classTraitScroll.html#a2da72f058b8d178c5bb4711b594a0178":[1,0,1819,2],
 "classTraitScroll.html#a446f046317c1d8fe209ee33db4d6c044":[1,0,1819,0],
 "classTraitScroll.html#a463b2bf283a2cdcc2f42e218ba9503ae":[1,0,1819,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitStrangeGirl.html#aee70f7e0a69ab6a0252070924be55ab3":[1,0,1879,1],
 "classTraitSwing.html":[1,0,1880],
 "classTraitSwing.html#a34af8b2a20141f86ae3dab5b249a0d66":[1,0,1880,0],
-"classTraitSwing.html#a65c5fe1d3a1255e1fd77e5e9ea58d015":[1,0,1880,1],
-"classTraitSwing.html#aa1119fe1adc12884e7c7c2aaf6ebbb92":[1,0,1880,5],
-"classTraitSwing.html#af6cada8c4e4bb880882b43a999a50b9a":[1,0,1880,2],
-"classTraitSwing.html#af9b30b301ce085c223344c32891c88fc":[1,0,1880,3],
-"classTraitSwing.html#affe3bc4a8f03bb9e1b6546afbfb29ceb":[1,0,1880,4]
+"classTraitSwing.html#a65c5fe1d3a1255e1fd77e5e9ea58d015":[1,0,1880,1]
 };

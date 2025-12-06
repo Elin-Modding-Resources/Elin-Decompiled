@@ -11,6 +11,7 @@ var classCraftUtil =
     ] ],
     [ "AddRandomFoodEnc", "classCraftUtil.html#a6414ffbba2b88786b5a038f5f6805217", null ],
     [ "GetBloodText", "classCraftUtil.html#add4dc6f639360d41149085a0df252bc5", null ],
+    [ "GetFoodScore", "classCraftUtil.html#a071fef6b04e735eebb33083a2589082e", null ],
     [ "GetRandomDarkSoupIngredient", "classCraftUtil.html#a0c93bd9f677aa06f1c994b16fcfb6b22", null ],
     [ "GetRandomLoveLunchIngredient", "classCraftUtil.html#ac0f6845b4b1d1a45632a077f4d56e480", null ],
     [ "MakeBloodMeal", "classCraftUtil.html#ab91e5f5911c27b051977ad8c17570a8e", null ],

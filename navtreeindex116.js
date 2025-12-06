@@ -1,5 +1,9 @@
 var NAVTREEINDEX116 =
 {
+"classTraitAltar.html#a28e392dbb7012af20236cd6dd43e51a7":[1,0,1417,16],
+"classTraitAltar.html#a31ae0b0f37f6b0d0ad83c417d18cda58":[1,0,1417,11],
+"classTraitAltar.html#a4c5d5588c850748eaf15680e1cebc3f0":[1,0,1417,14],
+"classTraitAltar.html#a5b7915ae5f852b2d68d08c9ae96a3ffc":[1,0,1417,6],
 "classTraitAltar.html#a7b3d7bc4f803febf43b49ca7a7c823ea":[1,0,1417,7],
 "classTraitAltar.html#a9ba7807b70b1d35335fd06941950b02d":[1,0,1417,0],
 "classTraitAltar.html#aba8b3431e81a47fa306e204ca6b7e9c1":[1,0,1417,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitBookSkill.html#aeffee5e08a150e1b0168e9833669ac49":[1,0,1471,9],
 "classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3":[1,0,1471,10],
 "classTraitBookSkill.html#af86dc9a98250fd3b4903ec5dace82612":[1,0,1471,1],
-"classTraitBrewery.html":[1,0,1472],
-"classTraitBrewery.html#a1f4d169767688213b54380c35d8407e1":[1,0,1472,5],
-"classTraitBrewery.html#a42071de0bf383f079fa4f2b031c2091e":[1,0,1472,2],
-"classTraitBrewery.html#a5387d116dd271c6ca5690ebb7c2213d3":[1,0,1472,3],
-"classTraitBrewery.html#ab60b6997f1cd8e5cd8f0f0928b2192ea":[1,0,1472,4]
+"classTraitBrewery.html":[1,0,1472]
 };

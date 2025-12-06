@@ -1,5 +1,9 @@
 var NAVTREEINDEX143 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0695f3b721713dc5ec030ddb23fb313e":[0,4,3,0,8,169],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0bdbb2c325525e986d55ef50ca66d056":[0,4,3,0,8,226],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0c3ca1a5a74e0d1ebbe4bf08f6a88a33":[0,4,3,0,8,103],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0d70da1ec703a6d8a63073ab9f9bf4c9":[0,4,3,0,8,78],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0d7bc7e462184a536d8a08db5d9b4b98":[0,4,3,0,8,215],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0d8409e20b71f76b28a01b86ab2dfca7":[0,4,3,0,8,59],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da114f56d2a51ba31049022de5f83a5508":[0,4,3,0,8,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX143 =
 "namespacemembers.html":[0,5,0],
 "namespacemembers_enum.html":[0,5,2],
 "namespacemembers_func.html":[0,5,1],
-"namespaces.html":[0,4],
-"pages.html":[],
-"structAM__Picker_1_1Result.html":[1,0,160,0],
-"structAM__Picker_1_1Result.html#a322c99f8d02bda6b8148572ecca6fcbb":[1,0,160,0,4],
-"structAM__Picker_1_1Result.html#a5b1a125a7a1e36e5b357360aec2d86e9":[1,0,160,0,1]
+"namespaces.html":[0,4]
 };
