@@ -87,6 +87,7 @@ var classENC =
     [ "revealFaith", "classENC.html#a755ce3011d74da18e450b0795509e01a", null ],
     [ "rusher", "classENC.html#ad571fdce0ca2a076cffd6a5cb2aa50bf", null ],
     [ "safetyMeasure", "classENC.html#a75ce9d45a34c4d41b8eb7af8bb470c23", null ],
+    [ "sanctified", "classENC.html#a9d934088093b35aafc2f3a0f930cca4d", null ],
     [ "searchRange", "classENC.html#a71b8edd67d1269d8facb7fa5cff58b04", null ],
     [ "seeInvisible", "classENC.html#a8edaeae97b0f364ec4d21a3ca879056b", null ],
     [ "slot_rune", "classENC.html#a68f58646b62c823466d2e3dfc813ecad", null ],

@@ -167,6 +167,7 @@ var NAVTREEINDEX6 =
 "FogType_8cs.html":[2,0,0,488],
 "FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4":[2,0,0,488,0],
 "FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4a1e8b2516fdcbb457e365167b8b060b47":[2,0,0,488,0,3],
+"FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4a342ff01c57e12721f6f39413093a79b0":[2,0,0,488,0,4],
 "FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4a4bcdd76c6f78447d38ac76f8258c395c":[2,0,0,488,0,2],
 "FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4a6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,488,0,0],
 "FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4aed24ff8971b1fa43a1efbb386618ce35":[2,0,0,488,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "GameBlueprint_8cs_source.html":[2,0,0,497],
 "GameContractResolver_8cs.html":[2,0,0,498],
 "GameContractResolver_8cs_source.html":[2,0,0,498],
-"GameData_8cs.html":[2,0,0,499],
-"GameData_8cs_source.html":[2,0,0,499]
+"GameData_8cs.html":[2,0,0,499]
 };

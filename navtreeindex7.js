@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"GameData_8cs_source.html":[2,0,0,499],
 "GameDate_8cs.html":[2,0,0,500],
 "GameDate_8cs_source.html":[2,0,0,500],
 "GameDifficultySetting_8cs.html":[2,0,0,501],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "Hobby_8cs.html":[2,0,0,587],
 "Hobby_8cs_source.html":[2,0,0,587],
 "HomeResourceCulture_8cs.html":[2,0,0,589],
-"HomeResourceCulture_8cs_source.html":[2,0,0,589],
-"HomeResourceEducation_8cs.html":[2,0,0,590]
+"HomeResourceCulture_8cs_source.html":[2,0,0,589]
 };

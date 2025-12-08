@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"TalkText_8cs.html":[2,0,0,1176],
 "TalkText_8cs_source.html":[2,0,0,1176],
 "TargetRange_8cs.html":[2,0,0,1177],
 "TargetRange_8cs.html#a4886aeb5c3dd1f73f1cfb8caa22afcc5":[2,0,0,1177,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "Timebuff_8cs.html":[2,0,0,1297],
 "Timebuff_8cs_source.html":[2,0,0,1297],
 "ToJOutline_8cs.html":[2,0,0,3,102],
-"ToJOutline_8cs_source.html":[2,0,0,3,102],
-"ToJShadow_8cs.html":[2,0,0,3,103]
+"ToJOutline_8cs_source.html":[2,0,0,3,102]
 };

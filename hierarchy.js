@@ -1220,6 +1220,7 @@ var hierarchy =
             [ "Zone_QuestDungeon", "classZone__QuestDungeon.html", [
               [ "Zone_CurryRuinDungeon", "classZone__CurryRuinDungeon.html", null ],
               [ "Zone_CursedManorDungeon", "classZone__CursedManorDungeon.html", null ],
+              [ "Zone_DungeonDead", "classZone__DungeonDead.html", null ],
               [ "Zone_DungeonFairy", "classZone__DungeonFairy.html", null ],
               [ "Zone_DungeonMino", "classZone__DungeonMino.html", null ],
               [ "Zone_Lesimas", "classZone__Lesimas.html", null ],
@@ -1389,6 +1390,7 @@ var hierarchy =
             ] ],
             [ "TraitChestMerchant", "classTraitChestMerchant.html", null ],
             [ "TraitChestPractice", "classTraitChestPractice.html", null ],
+            [ "TraitCoffin", "classTraitCoffin.html", null ],
             [ "TraitContainerBook", "classTraitContainerBook.html", null ],
             [ "TraitContainerBurnable", "classTraitContainerBurnable.html", null ],
             [ "TraitContainerCurrency", "classTraitContainerCurrency.html", [
@@ -1637,6 +1639,7 @@ var hierarchy =
           [ "TraitCurrencyMedal", "classTraitCurrencyMedal.html", null ]
         ] ],
         [ "TraitCurtain", "classTraitCurtain.html", null ],
+        [ "TraitDamnPool", "classTraitDamnPool.html", null ],
         [ "TraitDice", "classTraitDice.html", null ],
         [ "TraitDoor", "classTraitDoor.html", [
           [ "TraitDoorCurtain", "classTraitDoorCurtain.html", null ],

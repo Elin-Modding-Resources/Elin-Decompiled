@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"SoftShadow_8cs_source.html":[2,0,0,3,100],
 "SourceArea_8cs.html":[2,0,0,1088],
 "SourceArea_8cs_source.html":[2,0,0,1088],
 "SourceAsset_8cs.html":[2,0,0,1089],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "Tactics_8cs.html":[2,0,0,1175],
 "Tactics_8cs_source.html":[2,0,0,1175],
 "TalkDataList_8cs.html":[2,0,0,2,81],
-"TalkDataList_8cs_source.html":[2,0,0,2,81],
-"TalkText_8cs.html":[2,0,0,1176]
+"TalkDataList_8cs_source.html":[2,0,0,2,81]
 };

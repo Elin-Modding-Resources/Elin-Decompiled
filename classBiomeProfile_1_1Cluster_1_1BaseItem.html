@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.244 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.245 Nightly</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classBiomeProfile_1_1Cluster_1_1BaseIt
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="classBiomeProfile_1_1Cluster_1_1BaseItem-members.html">List of all members</a>  </div>
@@ -108,10 +109,19 @@ Inheritance diagram for BiomeProfile.Cluster.BaseItem:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a00c4b909ec141b8ab377bd1b30a8416a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a00c4b909ec141b8ab377bd1b30a8416a">GetIdMaterial</a> ()</td></tr>
+<tr class="separator:a00c4b909ec141b8ab377bd1b30a8416a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a6813b339d9b520c06f6fbc562e12aed4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a6813b339d9b520c06f6fbc562e12aed4">chance</a> = 1f</td></tr>
 <tr class="separator:a6813b339d9b520c06f6fbc562e12aed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81a62cee7647fe24d1f7eb1b47aea8a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#aa81a62cee7647fe24d1f7eb1b47aea8a">material</a></td></tr>
+<tr class="separator:aa81a62cee7647fe24d1f7eb1b47aea8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692dd1eccec39f728ddc2eb7ed20c69e"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a692dd1eccec39f728ddc2eb7ed20c69e">_material</a></td></tr>
+<tr class="separator:a692dd1eccec39f728ddc2eb7ed20c69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -178,8 +188,74 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00478">478</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00481">481</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a00c4b909ec141b8ab377bd1b30a8416a" name="a00c4b909ec141b8ab377bd1b30a8416a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c4b909ec141b8ab377bd1b30a8416a">&#9670;&#160;</a></span>GetIdMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BiomeProfile.Cluster.BaseItem.GetIdMaterial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00494">494</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  495</span>            {</div>
+<div class="line"><span class="lineno">  496</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#aa81a62cee7647fe24d1f7eb1b47aea8a">material</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  497</span>                {</div>
+<div class="line"><span class="lineno">  498</span>                    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  499</span>                }</div>
+<div class="line"><span class="lineno">  500</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a692dd1eccec39f728ddc2eb7ed20c69e">_material</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  501</span>                {</div>
+<div class="line"><span class="lineno">  502</span>                    <a class="code hl_variable" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a692dd1eccec39f728ddc2eb7ed20c69e">_material</a> = <a class="code hl_variable" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#aa81a62cee7647fe24d1f7eb1b47aea8a">material</a>.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  503</span>                }</div>
+<div class="line"><span class="lineno">  504</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">materials</a>.alias[<a class="code hl_variable" href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a692dd1eccec39f728ddc2eb7ed20c69e">_material</a>.RandomItem()].id;</div>
+<div class="line"><span class="lineno">  505</span>            }</div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_1_1BaseItem_html_a692dd1eccec39f728ddc2eb7ed20c69e"><div class="ttname"><a href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#a692dd1eccec39f728ddc2eb7ed20c69e">BiomeProfile.Cluster.BaseItem._material</a></div><div class="ttdeci">string[] _material</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00488">BiomeProfile.cs:488</a></div></div>
+<div class="ttc" id="aclassBiomeProfile_1_1Cluster_1_1BaseItem_html_aa81a62cee7647fe24d1f7eb1b47aea8a"><div class="ttname"><a href="classBiomeProfile_1_1Cluster_1_1BaseItem.html#aa81a62cee7647fe24d1f7eb1b47aea8a">BiomeProfile.Cluster.BaseItem.material</a></div><div class="ttdeci">string material</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00485">BiomeProfile.cs:485</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a0488b5ccfe4ed945c3f13e3d40e12bd3"><div class="ttname"><a href="classSourceManager.html#a0488b5ccfe4ed945c3f13e3d40e12bd3">SourceManager.materials</a></div><div class="ttdeci">SourceMaterial materials</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00038">SourceManager.cs:38</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BiomeProfile_8cs_source.html#l00488">BiomeProfile.Cluster.BaseItem._material</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00485">BiomeProfile.Cluster.BaseItem.material</a>, <a class="el" href="SourceManager_8cs_source.html#l00038">SourceManager.materials</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00604">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a692dd1eccec39f728ddc2eb7ed20c69e" name="a692dd1eccec39f728ddc2eb7ed20c69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692dd1eccec39f728ddc2eb7ed20c69e">&#9670;&#160;</a></span>_material</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] BiomeProfile.Cluster.BaseItem._material</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00488">488</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00494">BiomeProfile.Cluster.BaseItem.GetIdMaterial()</a>.</p>
+
+</div>
+</div>
 <a id="a6813b339d9b520c06f6fbc562e12aed4" name="a6813b339d9b520c06f6fbc562e12aed4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6813b339d9b520c06f6fbc562e12aed4">&#9670;&#160;</a></span>chance</h2>
 
@@ -192,9 +268,27 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00480">480</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00483">483</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00576">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00604">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
+
+</div>
+</div>
+<a id="aa81a62cee7647fe24d1f7eb1b47aea8a" name="aa81a62cee7647fe24d1f7eb1b47aea8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81a62cee7647fe24d1f7eb1b47aea8a">&#9670;&#160;</a></span>material</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string BiomeProfile.Cluster.BaseItem.material</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00485">485</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00494">BiomeProfile.Cluster.BaseItem.GetIdMaterial()</a>.</p>
 
 </div>
 </div>
@@ -219,9 +313,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00482">482</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00490">490</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00576">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00604">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
 
 </div>
 </div>
@@ -245,9 +339,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00484">484</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BiomeProfile_8cs_source.html#l00492">492</a> of file <a class="el" href="BiomeProfile_8cs_source.html">BiomeProfile.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00576">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BiomeProfile_8cs_source.html#l00604">BiomeProfile.ClusterThing.TryCreate()</a>.</p>
 
 </div>
 </div>
