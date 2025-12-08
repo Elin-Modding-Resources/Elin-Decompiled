@@ -1244,8 +1244,8 @@ public class Thing : Card
 		{
 			AddText("isBed".lang(traitBed.MaxHolders.ToString() ?? ""), FontColor.Default);
 		}
-		bool flag3 = base.IsEquipmentOrRangedOrAmmo || base.IsThrownWeapon || trait is TraitToolMusic;
-		bool showTraits = !flag3 || base.ShowFoodEnc;
+		bool showAsEquipment = base.IsEquipmentOrRangedOrAmmo || base.IsThrownWeapon || trait is TraitToolMusic;
+		bool showTraits = !showAsEquipment || base.ShowFoodEnc;
 		bool infoMode = mode == IInspect.NoteMode.Info;
 		List<Element> listTrait = ListValidTraits(isCraft: false, !infoMode);
 		List<Element> list = ListValidTraits(isCraft: false, limit: false);
@@ -1260,51 +1260,52 @@ public class Thing : Card
 			{
 				AddText("isAlive".lang(element.vBase.ToString() ?? "", (element.vExp / 10).ToString() ?? "", (element.ExpToNext / 10).ToString() ?? ""), FontColor.Great);
 			}
-			if (flag3)
+			string[] rangedSubCats = new string[2] { "eleConvert", "eleAttack" };
+			elements.AddNote(n, delegate(Element e)
 			{
-				string[] rangedSubCats = new string[2] { "eleConvert", "eleAttack" };
-				elements.AddNote(n, delegate(Element e)
+				if (!showAsEquipment && !e.HasTag("itemEnc"))
 				{
-					if (trait is TraitToolRange && base.category.slot == 0 && !(e is Ability) && !rangedSubCats.Contains(e.source.categorySub) && !e.HasTag("modRanged"))
+					return false;
+				}
+				if (trait is TraitToolRange && base.category.slot == 0 && !(e is Ability) && !rangedSubCats.Contains(e.source.categorySub) && !e.HasTag("modRanged"))
+				{
+					return false;
+				}
+				if (e.IsTrait || (showTraits && listTrait.Contains(e)))
+				{
+					return false;
+				}
+				if (!e.IsGlobalElement)
+				{
+					if (e.source.tag.Contains("weaponEnc") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
 					{
 						return false;
 					}
-					if (e.IsTrait || (showTraits && listTrait.Contains(e)))
+					if (e.source.IsWeaponEnc && !base.category.IsChildOf("shield") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
 					{
 						return false;
 					}
-					if (!e.IsGlobalElement)
-					{
-						if (e.source.tag.Contains("weaponEnc") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
-						{
-							return false;
-						}
-						if (e.source.IsWeaponEnc && !base.category.IsChildOf("shield") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
-						{
-							return false;
-						}
-					}
-					return (!showEQStats || (e.id != 64 && e.id != 65 && e.id != 66 && e.id != 67)) ? true : false;
-				}, null, ElementContainer.NoteMode.Default, addRaceFeat: false, delegate(Element e, string s)
+				}
+				return (!showEQStats || (e.id != 64 && e.id != 65 && e.id != 66 && e.id != 67)) ? true : false;
+			}, null, ElementContainer.NoteMode.Default, addRaceFeat: false, delegate(Element e, string s)
+			{
+				if (mode != IInspect.NoteMode.Info)
 				{
-					if (mode != IInspect.NoteMode.Info)
+					return s;
+				}
+				int num3 = e.Value;
+				if (e.source.IsWeaponEnc && (!e.source.tag.Contains("modRanged") || e.id == 609) && isEquipped && root.isChara)
+				{
+					int num4 = e.id;
+					if (num4 != 482 && (uint)(num4 - 660) > 2u && num4 != 666)
 					{
-						return s;
+						num3 = num3 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara, this)) / 100;
 					}
-					int num3 = e.Value;
-					if (e.source.IsWeaponEnc && (!e.source.tag.Contains("modRanged") || e.id == 609) && isEquipped && root.isChara)
-					{
-						int num4 = e.id;
-						if (num4 != 482 && (uint)(num4 - 660) > 2u && num4 != 666)
-						{
-							num3 = num3 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara, this)) / 100;
-						}
-					}
-					string text13 = " (" + e.Value + ((e.Value == num3) ? "" : (" → " + num3)) + ")";
-					string text14 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
-					return s + text13 + " " + text14;
-				});
-			}
+				}
+				string text13 = " (" + e.Value + ((e.Value == num3) ? "" : (" → " + num3)) + ")";
+				string text14 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
+				return s + text13 + " " + text14;
+			});
 			if (sockets != null)
 			{
 				foreach (int socket in sockets)

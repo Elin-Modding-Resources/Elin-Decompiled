@@ -88,9 +88,9 @@ public class TraitBaseContainer : Trait
 	{
 		get
 		{
-			if (owner.things.Count == 0)
+			if (owner.things.Count == 0 && owner.c_lockLv == 0)
 			{
-				return owner.c_lockLv == 0;
+				return !HasChara;
 			}
 			return false;
 		}

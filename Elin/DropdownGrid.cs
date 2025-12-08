@@ -155,6 +155,12 @@ public class DropdownGrid : EMono
 											break;
 										}
 									}
+									if (ingredient.thing == null && EMono.debug.godBuild)
+									{
+										Thing thing3 = ThingGen.Create(ingredient.id, num2).SetNum(999);
+										EMono.pc.AddThing(thing3);
+										ingredient.SetThing(thing3);
+									}
 								}
 								if (ingredient.thing == null)
 								{
@@ -169,9 +175,9 @@ public class DropdownGrid : EMono
 									}
 									if (EMono.debug.godBuild && ingredient.thing == null)
 									{
-										Thing thing3 = (ingredient.useCat ? ThingGen.CreateFromCategory(ingredient.id) : ThingGen.Create(ingredient.id, defaultMaterial.alias)).SetNum(99);
-										things.Add(thing3);
-										ingredient.SetThing(thing3);
+										Thing thing4 = (ingredient.useCat ? ThingGen.CreateFromCategory(ingredient.id) : ThingGen.Create(ingredient.id, defaultMaterial.alias)).SetNum(99);
+										things.Add(thing4);
+										ingredient.SetThing(thing4);
 									}
 								}
 								if (ingredient.thing == null)

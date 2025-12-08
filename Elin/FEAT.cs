@@ -3,95 +3,11 @@ using UnityEngine;
 
 public class FEAT
 {
-	public const int featSTR = 1620;
-
-	public const int featLuck = 1628;
-
-	public const int featCHA = 1627;
-
-	public const int featWIL = 1626;
-
-	public const int featMAG = 1625;
-
-	public const int featLER = 1624;
-
-	public const int featPER = 1623;
-
-	public const int featEND = 1622;
-
-	public const int featHardy = 1630;
-
-	public const int featDEX = 1621;
-
-	public const int featSPD = 1629;
-
-	public const int featWhiteVixen = 1414;
-
-	public const int featMana = 1611;
-
-	public const int featLife = 1610;
-
-	public const int featHealer = 1422;
-
-	public const int featManaMeat = 1421;
-
-	public const int featExecutioner = 1420;
-
-	public const int featMilitant = 1419;
-
-	public const int featSwordsage = 1418;
-
-	public const int featWitch = 1417;
-
-	public const int featInquisitor = 1416;
-
-	public const int featFoxMaid = 1415;
-
-	public const int featDefense = 1631;
-
-	public const int featFairysan = 1413;
-
-	public const int featLuckyCat = 1412;
-
-	public const int featStamina = 1612;
-
-	public const int featEvade = 1632;
-
-	public const int featRapidMagic = 1648;
-
-	public const int featNegotiate = 1634;
-
-	public const int featEarthStrength = 1411;
-
-	public const int featComat = 1750;
-
-	public const int featGoldenFinger = 1662;
-
-	public const int featDismantler = 1661;
-
-	public const int featLooter = 1660;
-
-	public const int featFisher = 1659;
-
-	public const int featChef = 1658;
-
-	public const int featManaCost = 1657;
-
-	public const int featScavenger = 1656;
-
-	public const int featModelBeliever = 1655;
-
-	public const int featHeavyCasting = 1654;
-
-	public const int featDreamWaker = 1653;
-
-	public const int featSpotting = 1633;
-
-	public const int featRapidArrow = 1652;
-
-	public const int featGourmet = 1650;
+	public const int featSplit = 1222;
 
 	public const int featDefender = 1649;
+
+	public const int featRapidMagic = 1648;
 
 	public const int featSummoner = 1647;
 
@@ -113,73 +29,51 @@ public class FEAT
 
 	public const int featMartial = 1635;
 
+	public const int featNegotiate = 1634;
+
+	public const int featSpotting = 1633;
+
+	public const int featGourmet = 1650;
+
+	public const int featEvade = 1632;
+
+	public const int featHardy = 1630;
+
+	public const int featSPD = 1629;
+
+	public const int featLuck = 1628;
+
+	public const int featCHA = 1627;
+
+	public const int featWIL = 1626;
+
+	public const int featMAG = 1625;
+
+	public const int featLER = 1624;
+
+	public const int featPER = 1623;
+
+	public const int featEND = 1622;
+
+	public const int featDEX = 1621;
+
+	public const int featSTR = 1620;
+
+	public const int featStamina = 1612;
+
+	public const int featMana = 1611;
+
+	public const int featLife = 1610;
+
+	public const int featDefense = 1631;
+
 	public const int featMagicManner = 1651;
 
-	public const int featReboot = 1410;
+	public const int featRapidArrow = 1652;
 
-	public const int featHeavyEater = 1234;
+	public const int featDreamWaker = 1653;
 
-	public const int featPaladin2 = 1408;
-
-	public const int featAdam = 1230;
-
-	public const int featNirvana = 1231;
-
-	public const int featBaby = 1232;
-
-	public const int featCosmicHorror = 1233;
-
-	public const int featLightEater = 1235;
-
-	public const int featNorland = 1236;
-
-	public const int featRoran = 1237;
-
-	public const int featElder = 1238;
-
-	public const int featDemon = 1239;
-
-	public const int featMassSummoner = 1240;
-
-	public const int featMeatCushion = 1241;
-
-	public const int featGeneSlot = 1242;
-
-	public const int featLittleOne = 1229;
-
-	public const int featEternalYouth = 1243;
-
-	public const int featSevenSense = 1245;
-
-	public const int featPegasus = 1246;
-
-	public const int featLibra = 1247;
-
-	public const int featMiscreation = 1248;
-
-	public const int featBloodBond = 1249;
-
-	public const int featVampire = 1250;
-
-	public const int featAshborn = 1251;
-
-	public const int featGoodKarma = 1270;
-
-	public const int featBadKarma = 1271;
-
-	public const int featPeacemaker = 1272;
-
-	public const int featBloom = 1273;
-
-	public const int featGoddess = 1290;
-
-	public const int featBoost = 1409;
-
-	public const int featGod_element1 = 1300;
-
-	public const int featDemigod = 1228;
-
-	public const int featUnderground = 1226;
+	public const int featSpike = 1221;
 
 	public const int featSlowFood = 1200;
 
@@ -205,92 +99,198 @@ public class FEAT
 
 	public const int featSnail = 1211;
 
-	public const int featServant = 1227;
-
 	public const int featFairyResist = 1212;
+
+	public const int featElea = 1213;
 
 	public const int featManaPrecision = 1214;
 
 	public const int featDwarf = 1215;
 
-	public const int featSuccubus = 1216;
+	public const int featHeavyCasting = 1654;
 
-	public const int featGolem = 1217;
+	public const int featModelBeliever = 1655;
 
-	public const int featMetal = 1218;
+	public const int featScavenger = 1656;
 
-	public const int featElderCrab = 1219;
+	public const int featManaCost = 1657;
+
+	public const int featChef = 1658;
+
+	public const int featFisher = 1659;
+
+	public const int featHealer = 1422;
+
+	public const int featLooter = 1660;
+
+	public const int featGoldenFinger = 1662;
 
 	public const int featFate = 1220;
 
-	public const int featSpike = 1221;
+	public const int featElderCrab = 1219;
 
-	public const int featSplit = 1222;
+	public const int featMetal = 1218;
 
-	public const int featAcidBody = 1223;
+	public const int featGolem = 1217;
 
-	public const int featShiva = 1224;
+	public const int featSuccubus = 1216;
 
-	public const int featLoyal = 1225;
+	public const int featDismantler = 1661;
 
-	public const int featElea = 1213;
+	public const int featManaMeat = 1421;
+
+	public const int featComat = 1750;
+
+	public const int featMilitant = 1419;
+
+	public const int featBloodBond = 1249;
+
+	public const int featVampire = 1250;
+
+	public const int featAshborn = 1251;
+
+	public const int featGoodKarma = 1270;
+
+	public const int featBadKarma = 1271;
+
+	public const int featPeacemaker = 1272;
+
+	public const int featBloom = 1273;
+
+	public const int featGoddess = 1290;
+
+	public const int featGod_element1 = 1300;
 
 	public const int featGod_earth1 = 1305;
 
-	public const int featCentaur = 1244;
+	public const int featGod_wind1 = 1310;
 
 	public const int featGod_machine1 = 1315;
 
-	public const int featTourist = 1406;
-
-	public const int featPianist = 1405;
-
-	public const int featArcher = 1404;
-
-	public const int featFarmer = 1403;
-
-	public const int featWizard = 1402;
-
-	public const int featThief = 1401;
-
-	public const int featWarrior = 1400;
-
-	public const int featPaladin = 1407;
-
-	public const int featGod_strife1 = 1355;
-
-	public const int featGod_trickery1 = 1345;
-
-	public const int featGod_wind1 = 1310;
-
-	public const int featGod_oblivion1 = 1340;
-
-	public const int featGod_harmony1 = 1335;
+	public const int featGod_harvest1 = 1325;
 
 	public const int featGod_luck1 = 1330;
 
-	public const int featGod_harvest1 = 1325;
+	public const int featGod_harmony1 = 1335;
 
-	public const int featGod_healing1 = 1320;
+	public const int featGod_oblivion1 = 1340;
+
+	public const int featGod_trickery1 = 1345;
 
 	public const int featGod_moonshadow1 = 1350;
 
+	public const int featGod_strife1 = 1355;
+
+	public const int featWarrior = 1400;
+
+	public const int featThief = 1401;
+
+	public const int featWizard = 1402;
+
+	public const int featFarmer = 1403;
+
+	public const int featMiscreation = 1248;
+
+	public const int featArcher = 1404;
+
+	public const int featLibra = 1247;
+
+	public const int featSevenSense = 1245;
+
+	public const int featAdam = 1230;
+
+	public const int featLittleOne = 1229;
+
+	public const int featExecutioner = 1420;
+
+	public const int featDemigod = 1228;
+
+	public const int featServant = 1227;
+
+	public const int featUnderground = 1226;
+
+	public const int featLoyal = 1225;
+
+	public const int featShiva = 1224;
+
+	public const int featAcidBody = 1223;
+
+	public const int featNirvana = 1231;
+
+	public const int featBaby = 1232;
+
+	public const int featCosmicHorror = 1233;
+
+	public const int featHeavyEater = 1234;
+
+	public const int featLightEater = 1235;
+
+	public const int featNorland = 1236;
+
+	public const int featRoran = 1237;
+
+	public const int featElder = 1238;
+
+	public const int featDemon = 1239;
+
+	public const int featMassSummoner = 1240;
+
+	public const int featMeatCushion = 1241;
+
+	public const int featGeneSlot = 1242;
+
+	public const int featEternalYouth = 1243;
+
+	public const int featCentaur = 1244;
+
+	public const int featPegasus = 1246;
+
+	public const int featPianist = 1405;
+
+	public const int featGod_healing1 = 1320;
+
+	public const int featPaladin = 1407;
+
+	public const int featSwordsage = 1418;
+
+	public const int featWitch = 1417;
+
+	public const int featInquisitor = 1416;
+
+	public const int featFoxMaid = 1415;
+
+	public const int featWhiteVixen = 1414;
+
+	public const int featTourist = 1406;
+
+	public const int featLuckyCat = 1412;
+
+	public const int featPaladin2 = 1408;
+
+	public const int featBoost = 1409;
+
+	public const int featFairysan = 1413;
+
+	public const int featEarthStrength = 1411;
+
+	public const int featReboot = 1410;
+
 	public static readonly int[] IDS = new int[136]
 	{
-		1620, 1628, 1627, 1626, 1625, 1624, 1623, 1622, 1630, 1621,
-		1629, 1414, 1611, 1610, 1422, 1421, 1420, 1419, 1418, 1417,
-		1416, 1415, 1631, 1413, 1412, 1612, 1632, 1648, 1634, 1411,
-		1750, 1662, 1661, 1660, 1659, 1658, 1657, 1656, 1655, 1654,
-		1653, 1633, 1652, 1650, 1649, 1647, 1646, 1645, 1644, 1643,
-		1642, 1641, 1640, 1636, 1635, 1651, 1410, 1234, 1408, 1230,
-		1231, 1232, 1233, 1235, 1236, 1237, 1238, 1239, 1240, 1241,
-		1242, 1229, 1243, 1245, 1246, 1247, 1248, 1249, 1250, 1251,
-		1270, 1271, 1272, 1273, 1290, 1409, 1300, 1228, 1226, 1200,
-		1201, 1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210,
-		1211, 1227, 1212, 1214, 1215, 1216, 1217, 1218, 1219, 1220,
-		1221, 1222, 1223, 1224, 1225, 1213, 1305, 1244, 1315, 1406,
-		1405, 1404, 1403, 1402, 1401, 1400, 1407, 1355, 1345, 1310,
-		1340, 1335, 1330, 1325, 1320, 1350
+		1222, 1649, 1648, 1647, 1646, 1645, 1644, 1643, 1642, 1641,
+		1640, 1636, 1635, 1634, 1633, 1650, 1632, 1630, 1629, 1628,
+		1627, 1626, 1625, 1624, 1623, 1622, 1621, 1620, 1612, 1611,
+		1610, 1631, 1651, 1652, 1653, 1221, 1200, 1201, 1202, 1203,
+		1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211, 1212, 1213,
+		1214, 1215, 1654, 1655, 1656, 1657, 1658, 1659, 1422, 1660,
+		1662, 1220, 1219, 1218, 1217, 1216, 1661, 1421, 1750, 1419,
+		1249, 1250, 1251, 1270, 1271, 1272, 1273, 1290, 1300, 1305,
+		1310, 1315, 1325, 1330, 1335, 1340, 1345, 1350, 1355, 1400,
+		1401, 1402, 1403, 1248, 1404, 1247, 1245, 1230, 1229, 1420,
+		1228, 1227, 1226, 1225, 1224, 1223, 1231, 1232, 1233, 1234,
+		1235, 1236, 1237, 1238, 1239, 1240, 1241, 1242, 1243, 1244,
+		1246, 1405, 1320, 1407, 1418, 1417, 1416, 1415, 1414, 1406,
+		1412, 1408, 1409, 1413, 1411, 1410
 	};
 }
 public class Feat : Element

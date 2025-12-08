@@ -12,6 +12,10 @@ public class ActBloodsuck : ActNTR
 		{
 			return false;
 		}
+		if (Act.TC.things.Find((Thing a) => a.HasElement(432)) != null)
+		{
+			return false;
+		}
 		return true;
 	}
 

@@ -1803,6 +1803,12 @@ public class Zone : Spatial, ICardParent, IInspect
 				flag = true;
 			}
 			break;
+		case "cave_dead":
+			if (!(this is Zone_DungeonDead))
+			{
+				flag = true;
+			}
+			break;
 		}
 		Zone topZone = GetTopZone();
 		if (!flag)

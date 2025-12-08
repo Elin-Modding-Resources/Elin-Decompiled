@@ -58,11 +58,21 @@ public class TraitContainer : TraitBaseContainer
 	{
 		if (base.HasChara && !EClass._zone.IsRegion)
 		{
-			Chara chara = CharaGen.Create(owner.c_idRefCard);
+			Chara c = EClass._zone.SpawnMob((owner.ExistsOnMap ? owner.pos : EClass.pc.pos).GetNearestPoint(allowBlock: false, allowChara: false), new SpawnSetting
+			{
+				id = owner.c_idRefCard
+			});
 			owner.c_idRefCard = null;
-			EClass._zone.AddCard(chara, (owner.ExistsOnMap ? owner.pos : EClass.pc.pos).GetNearestPoint(allowBlock: false, allowChara: false));
 			owner.things.DestroyAll();
-			Msg.Say("package_chara", chara, owner);
+			if (InvStyle.sound != null)
+			{
+				InvStyle.sound.Play();
+			}
+			else
+			{
+				SE.PopInventory();
+			}
+			Msg.Say("package_chara", c, owner);
 		}
 		else if (LayerInventory.CreateContainer(owner.Thing) != null)
 		{

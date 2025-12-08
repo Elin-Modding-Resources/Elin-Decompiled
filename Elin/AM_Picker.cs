@@ -88,6 +88,14 @@ public class AM_Picker : AM_BaseTileSelect
 		return result;
 	}
 
+	public Result TestObj(Point point)
+	{
+		Result result = default(Result);
+		result.mat = point.cell.matObj;
+		result.source = TryGetRecipe(point.sourceObj.RecipeID);
+		return result;
+	}
+
 	public Result TestFloor(Point point)
 	{
 		Result result = default(Result);
@@ -152,9 +160,9 @@ public class AM_Picker : AM_BaseTileSelect
 				return result2;
 			}
 		}
-		if (point.HasFloor)
+		if (EClass.debug.godBuild && point.HasObj)
 		{
-			Result result3 = TestFloor(point);
+			Result result3 = TestObj(point);
 			if (result3.IsValid)
 			{
 				if (select)
@@ -162,6 +170,18 @@ public class AM_Picker : AM_BaseTileSelect
 					Select(result3);
 				}
 				return result3;
+			}
+		}
+		if (point.HasFloor)
+		{
+			Result result4 = TestFloor(point);
+			if (result4.IsValid)
+			{
+				if (select)
+				{
+					Select(result4);
+				}
+				return result4;
 			}
 		}
 		return default(Result);

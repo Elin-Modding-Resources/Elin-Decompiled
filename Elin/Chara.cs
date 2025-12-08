@@ -2827,14 +2827,15 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPCFaction && EClass.rnd(5) == 0 && newPoint.cell.CanSuffocate())
 		{
-			ModExp(200, EClass._zone.IsRegion ? 50 : 5);
+			int num5 = Mathf.Min(5 + EClass._zone.DangerLv / 10, 200);
+			ModExp(200, EClass._zone.IsRegion ? 50 : num5);
 			if (ride != null)
 			{
-				ride.ModExp(200, EClass._zone.IsRegion ? 50 : 5);
+				ride.ModExp(200, EClass._zone.IsRegion ? 50 : num5);
 			}
 			if (parasite != null)
 			{
-				parasite.ModExp(200, EClass._zone.IsRegion ? 50 : 5);
+				parasite.ModExp(200, EClass._zone.IsRegion ? 50 : num5);
 			}
 		}
 		Chara chara = ((ride == null) ? this : ride);
@@ -3103,19 +3104,19 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPCC)
 		{
-			int num5 = Mathf.Abs(cell2.topHeight - cell.topHeight);
-			if ((num5 >= 3 && lastPos.sourceBlock.tileType.slopeHeight == 0 && newPoint.sourceBlock.tileType.slopeHeight == 0) || cell2.hasDoorBoat || cell.hasDoorBoat)
+			int num6 = Mathf.Abs(cell2.topHeight - cell.topHeight);
+			if ((num6 >= 3 && lastPos.sourceBlock.tileType.slopeHeight == 0 && newPoint.sourceBlock.tileType.slopeHeight == 0) || cell2.hasDoorBoat || cell.hasDoorBoat)
 			{
-				renderer.PlayAnime((cell2.topHeight >= cell.topHeight) ? AnimeID.JumpDown : ((num5 >= 6) ? AnimeID.Jump : AnimeID.JumpSmall));
+				renderer.PlayAnime((cell2.topHeight >= cell.topHeight) ? AnimeID.JumpDown : ((num6 >= 6) ? AnimeID.Jump : AnimeID.JumpSmall));
 			}
 			else
 			{
 				float surfaceHeight = cell2.GetSurfaceHeight();
 				float surfaceHeight2 = cell.GetSurfaceHeight();
-				num5 = (int)Mathf.Abs((surfaceHeight - surfaceHeight2) * 100f);
-				if (num5 >= 15)
+				num6 = (int)Mathf.Abs((surfaceHeight - surfaceHeight2) * 100f);
+				if (num6 >= 15)
 				{
-					renderer.PlayAnime((surfaceHeight >= surfaceHeight2) ? AnimeID.JumpDown : ((num5 >= 40) ? AnimeID.Jump : AnimeID.JumpSmall));
+					renderer.PlayAnime((surfaceHeight >= surfaceHeight2) ? AnimeID.JumpDown : ((num6 >= 40) ? AnimeID.Jump : AnimeID.JumpSmall));
 				}
 			}
 		}
@@ -7351,6 +7352,7 @@ public class Chara : Card, IPathfindWalker
 				if (thing3.HasElement(757))
 				{
 					num2 -= thing3.Num;
+					num -= thing3.Num;
 				}
 				else
 				{

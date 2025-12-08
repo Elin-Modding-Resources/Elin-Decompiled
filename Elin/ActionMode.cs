@@ -874,6 +874,32 @@ public class ActionMode : EClass
 				lastEditorMat = row2;
 				Msg.Say(row2.GetName());
 			}
+			else if (hitPoint.HasBlock)
+			{
+				SourceMaterial.Row matBlock = hitPoint.cell.matBlock;
+				List<SourceMaterial.Row> rows2 = EClass.sources.materials.rows;
+				SourceMaterial.Row row3 = (flag2 ? rows2.NextItem(matBlock) : rows2.PrevItem(matBlock));
+				if (EInput.isAltDown)
+				{
+					row3 = lastEditorMat;
+				}
+				hitPoint.cell._blockMat = (byte)row3.id;
+				lastEditorMat = row3;
+				Msg.Say(row3.GetName());
+			}
+			else
+			{
+				SourceMaterial.Row matFloor = hitPoint.cell.matFloor;
+				List<SourceMaterial.Row> rows3 = EClass.sources.materials.rows;
+				SourceMaterial.Row row4 = (flag2 ? rows3.NextItem(matFloor) : rows3.PrevItem(matFloor));
+				if (EInput.isAltDown)
+				{
+					row4 = lastEditorMat;
+				}
+				hitPoint.cell._floorMat = (byte)row4.id;
+				lastEditorMat = row4;
+				Msg.Say(row4.GetName());
+			}
 			EInput.Consume();
 		}
 		if (AllowHotbar && !IsBuildMode && EClass.debug.debugHotkeys == CoreDebug.DebugHotkey.None)

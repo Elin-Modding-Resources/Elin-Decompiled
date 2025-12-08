@@ -471,7 +471,10 @@ public class BiomeProfile : EScriptable
 			ScatterExterior = 1,
 			ScatterInterior = 2,
 			ScatterNonObstacle = 3,
-			ByWall = 10
+			ByWall = 10,
+			ByWallFace = 11,
+			Space = 20,
+			SpaceByWall = 21
 		}
 
 		[Serializable]
@@ -479,9 +482,27 @@ public class BiomeProfile : EScriptable
 		{
 			public float chance = 1f;
 
+			public string material;
+
+			[NonSerialized]
+			public string[] _material;
+
 			public virtual bool IsSpawnOnBlock => false;
 
 			public virtual bool IsSpawnOnWater => false;
+
+			public int GetIdMaterial()
+			{
+				if (material.IsEmpty())
+				{
+					return -1;
+				}
+				if (_material == null)
+				{
+					_material = material.Split(',');
+				}
+				return EClass.sources.materials.alias[_material.RandomItem()].id;
+			}
 		}
 
 		[Serializable]
@@ -510,6 +531,8 @@ public class BiomeProfile : EScriptable
 		public class ItemThing : BaseItem
 		{
 			public string id;
+
+			public bool alignDir;
 
 			public string _id
 			{
@@ -559,6 +582,11 @@ public class BiomeProfile : EScriptable
 				return false;
 			}
 			p.SetObj(item.idObj);
+			int idMaterial = item.GetIdMaterial();
+			if (idMaterial != -1)
+			{
+				cell.objMat = (byte)idMaterial;
+			}
 			cell.objDir = EScriptable.rnd(8);
 			if (cell.sourceObj.HasGrowth && !EClass._zone.IsPCFactionOrTent && cell.sourceObj.id != 103)
 			{
@@ -603,11 +631,34 @@ public class BiomeProfile : EScriptable
 			{
 				return false;
 			}
-			Thing thing = ThingGen.Create(itemThing.id);
-			int desiredDir = thing.TileType.GetDesiredDir(p, 0);
-			if (desiredDir != -1)
+			Thing thing = ThingGen.Create(itemThing.id, itemThing.GetIdMaterial());
+			int num = thing.TileType.GetDesiredDir(p, 0);
+			if (itemThing.alignDir)
 			{
-				thing.dir = desiredDir;
+				if (cell.Back.HasBlock)
+				{
+					num = 0;
+				}
+				else if (cell.Left.HasBlock)
+				{
+					num = 1;
+				}
+				else if (cell.Front.HasBlock)
+				{
+					num = 2;
+				}
+				else if (cell.Right.HasBlock)
+				{
+					num = 3;
+				}
+				if (itemThing.id == "coffin_stone")
+				{
+					num++;
+				}
+			}
+			if (num != -1)
+			{
+				thing.dir = num;
 			}
 			EClass._zone.AddCard(thing, p).Install();
 			return true;
@@ -703,6 +754,18 @@ public class BiomeProfile : EScriptable
 				break;
 			case Cluster.Type.ByWall:
 				if (cell.Left.hasDoor || cell.Right.hasDoor || cell.Front.hasDoor || cell.Back.hasDoor || (!cell.Left.HasBlock && !cell.Right.HasBlock && !cell.Front.HasBlock && !cell.Back.HasBlock))
+				{
+					continue;
+				}
+				break;
+			case Cluster.Type.ByWallFace:
+				if (cell.Left.hasDoor || cell.Right.hasDoor || cell.Front.hasDoor || cell.Back.hasDoor || (!cell.Left.HasBlock && !cell.Back.HasBlock))
+				{
+					continue;
+				}
+				break;
+			case Cluster.Type.SpaceByWall:
+				if (cell.Left.hasDoor || cell.Right.hasDoor || cell.Front.hasDoor || cell.Back.hasDoor || (!cell.Left.HasBlock && !cell.Right.HasBlock && !cell.Front.HasBlock && !cell.Back.HasBlock) || !interior)
 				{
 					continue;
 				}

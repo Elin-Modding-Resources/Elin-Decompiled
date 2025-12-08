@@ -13,14 +13,23 @@ public class ConTransmuteBat : ConTransmute
 	{
 	}
 
+	public void CheckSeen()
+	{
+		if (!EClass._zone.IsPCFactionOrTent && owner.pos.TryWitnessCrime(owner))
+		{
+			Msg.Say("transform_seen", owner);
+			if (owner == EClass.pc)
+			{
+				EClass.player.ModKarma(-1);
+			}
+		}
+	}
+
 	public override void OnStart()
 	{
 		base.OnStart();
 		owner.PlaySound("bat");
-		if (!EClass._zone.IsPCFactionOrTent && owner.pos.TryWitnessCrime(owner) && owner == EClass.pc)
-		{
-			EClass.player.ModKarma(-1);
-		}
+		CheckSeen();
 	}
 
 	public override void OnRemoved()
@@ -28,9 +37,6 @@ public class ConTransmuteBat : ConTransmute
 		base.OnRemoved();
 		owner.HealHP(owner.MaxHP, HealSource.Item);
 		owner.SetCooldown(8793);
-		if (!EClass._zone.IsPCFactionOrTent && owner.pos.TryWitnessCrime(owner) && owner == EClass.pc)
-		{
-			EClass.player.ModKarma(-1);
-		}
+		CheckSeen();
 	}
 }
