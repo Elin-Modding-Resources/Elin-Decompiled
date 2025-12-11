@@ -1,5 +1,6 @@
 var classZone__DungeonDead =
 [
+    [ "OnActivate", "classZone__DungeonDead.html#ad90f935f7bffcf4b87e86b54e1d9aeb0", null ],
     [ "OnGenerateMap", "classZone__DungeonDead.html#ac7c035e791241cee15cb3a4207bbf0e5", null ],
     [ "LvBoss", "classZone__DungeonDead.html#ae005a7204c810cbf1e620ebf1d945d89", null ],
     [ "idExport", "classZone__DungeonDead.html#ac4b9ce27179c1ac5acaf0a577ea61c1b", null ],

@@ -8,6 +8,7 @@ var classAM__Adv =
     [ "EndTurbo", "classAM__Adv.html#a3c8d5bd8a0a45c975fa63c588ceebb83", null ],
     [ "GetDefaultTile", "classAM__Adv.html#a49c5ea006d4d2cfc1e1d74a175b45bdb", null ],
     [ "HighlightWall", "classAM__Adv.html#a1d4f95c451e22ee38d7a33f82c428e54", null ],
+    [ "IsEntangled", "classAM__Adv.html#a4bdcb757f87a47977da12d3052256de4", null ],
     [ "OnActivate", "classAM__Adv.html#a01fa3bd145a8741f68f26c0621ce9616", null ],
     [ "OnAfterUpdate", "classAM__Adv.html#add9ac1bf0fa848da3ea6c39828f6d366", null ],
     [ "OnBecomeNoGoal", "classAM__Adv.html#a6aa32451de919cb95fe74e3b312e79f1", null ],

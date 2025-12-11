@@ -32,6 +32,7 @@ var classBaseCondition =
     [ "SetOwner", "classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe", null ],
     [ "SetPhase", "classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e", null ],
     [ "SetRefVal", "classBaseCondition.html#aec7a1d3e6428d478b441c206ca9dd642", null ],
+    [ "ShouldOverride", "classBaseCondition.html#adbb716dd6883676c3ed87033dce2e27c", null ],
     [ "Start", "classBaseCondition.html#a43f2848978b48514f88d601a68f24c61", null ],
     [ "Tick", "classBaseCondition.html#af0c6ea92ca1cc59ce6dec886a38868b5", null ],
     [ "ToString", "classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1", null ],
@@ -64,6 +65,5 @@ var classBaseCondition =
     [ "SyncRide", "classBaseCondition.html#a1621edf4ea484f2bb5b489f3390c8d0f", null ],
     [ "TimeBased", "classBaseCondition.html#a8a8aa6f3dfaacc8a78ced74b5358f648", null ],
     [ "UseElements", "classBaseCondition.html#a58bc98ffc4938eef9a0c1d95438e055f", null ],
-    [ "value", "classBaseCondition.html#a7db823617df39785cbb80d25728ff46b", null ],
-    [ "WillOverride", "classBaseCondition.html#a0e12433f33d10e9e0903cd53fc94ae73", null ]
+    [ "value", "classBaseCondition.html#a7db823617df39785cbb80d25728ff46b", null ]
 ];

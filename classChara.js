@@ -293,6 +293,7 @@ var classChara =
     [ "UpdateAngle", "classChara.html#a5072e866edc529645be7255c70bd563a", null ],
     [ "UpdateSight", "classChara.html#a10fd52baba3b9ca0953131cf8509a82c", null ],
     [ "UseAbility", "classChara.html#ace3cd03e6f596f9c4b5049ca88be063f", null ],
+    [ "UseAbility", "classChara.html#a9fed50821de7ff21b6e79ac3736665a4", null ],
     [ "UseAbility", "classChara.html#a06ad44122f09a4eed59d9ca9d74ea30e", null ],
     [ "ValidateWorks", "classChara.html#a20df5c7b054e93536a36f6d9c75b34a1", null ],
     [ "Vomit", "classChara.html#a7f532451c91912d6cac6bc6820b40f25", null ],

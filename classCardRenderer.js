@@ -37,6 +37,7 @@ var classCardRenderer =
     [ "SetFirst", "classCardRenderer.html#a157240fba068aaba7d0fbd5bc43b18a4", null ],
     [ "SetFirst", "classCardRenderer.html#a9bc9aa72be7ba15887aa0f4cdf3d202b", null ],
     [ "SetOwner", "classCardRenderer.html#a91d3162e3a895a25ffbd03587121b153", null ],
+    [ "ShowBossText", "classCardRenderer.html#abb063768ae69af4b8f52b4d6b1fd1872", null ],
     [ "ShowEmo", "classCardRenderer.html#a0109ed0d5ab2b4720a78c890691c9e67", null ],
     [ "SpawnSimpleText", "classCardRenderer.html#a64004d2087c800e58d95a863a2bb9f19", null ],
     [ "TrySpawnOrbit", "classCardRenderer.html#aae0897d343dad9e70111fbb76f052dd2", null ],

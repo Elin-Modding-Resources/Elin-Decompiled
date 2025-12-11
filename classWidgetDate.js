@@ -8,9 +8,12 @@ var classWidgetDate =
     [ "OnSetContextMenu", "classWidgetDate.html#a1b16a40f68a568239e8c937d5aa2cb3f", null ],
     [ "Refresh", "classWidgetDate.html#a3ce62efeefd7f08e0d9ebbeae28ff739", null ],
     [ "colorFestival", "classWidgetDate.html#a19a6a6950956690dc59c9c17ea37f133", null ],
+    [ "gridFieldEffect", "classWidgetDate.html#a72487114ce039c2c4627f5d6cd673e19", null ],
     [ "imageHour", "classWidgetDate.html#a63bede5a4cce6e87fccbe5b0d38d9a43", null ],
     [ "Instance", "classWidgetDate.html#a475e3510e56482b64a3ef3beebe8c683", null ],
+    [ "moldButtonFieldEffect", "classWidgetDate.html#a6624f02093907c73234156e01794aff2", null ],
     [ "rectClock", "classWidgetDate.html#a3783dbdaeed4a5a207cd9945374df64c", null ],
+    [ "rectFieldEffect", "classWidgetDate.html#a01e23de49361c962fe59604e158f0eb3", null ],
     [ "textLevel", "classWidgetDate.html#af78f880df03c149430cc073db1749d8b", null ],
     [ "textTime", "classWidgetDate.html#a08fdb4fd4c523cc3e2a547bf144898eb", null ],
     [ "extra", "classWidgetDate.html#a6384442f895dadaf6152df45b044c073", null ]

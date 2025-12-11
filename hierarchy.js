@@ -742,7 +742,10 @@ var hierarchy =
                 [ "ActSword", "classActSword.html", null ]
               ] ],
               [ "ActMiasma", "classActMiasma.html", null ],
-              [ "ActWeapon", "classActWeapon.html", null ]
+              [ "ActWeapon", "classActWeapon.html", null ],
+              [ "FieldEffect", "classFieldEffect.html", [
+                [ "FieldEffectSpider", "classFieldEffectSpider.html", null ]
+              ] ]
             ] ]
           ] ],
           [ "ActBaseAttack", "classActBaseAttack.html", [
@@ -794,6 +797,7 @@ var hierarchy =
         [ "ElementContainerCard", "classElementContainerCard.html", null ],
         [ "ElementContainerCondition", "classElementContainerCondition.html", null ],
         [ "ElementContainerFaction", "classElementContainerFaction.html", null ],
+        [ "ElementContainerField", "classElementContainerField.html", null ],
         [ "ElementContainerZone", "classElementContainerZone.html", null ]
       ] ],
       [ "ElementSelecter", "classElementSelecter.html", null ],
@@ -1639,7 +1643,6 @@ var hierarchy =
           [ "TraitCurrencyMedal", "classTraitCurrencyMedal.html", null ]
         ] ],
         [ "TraitCurtain", "classTraitCurtain.html", null ],
-        [ "TraitDamnPool", "classTraitDamnPool.html", null ],
         [ "TraitDice", "classTraitDice.html", null ],
         [ "TraitDoor", "classTraitDoor.html", [
           [ "TraitDoorCurtain", "classTraitDoorCurtain.html", null ],
@@ -1746,6 +1749,7 @@ var hierarchy =
           [ "TraitBank", "classTraitBank.html", null ],
           [ "TraitBookResident", "classTraitBookResident.html", null ],
           [ "TraitDaggerGrave", "classTraitDaggerGrave.html", null ],
+          [ "TraitDamnPool", "classTraitDamnPool.html", null ],
           [ "TraitDetector", "classTraitDetector.html", null ],
           [ "TraitEditPlaylist", "classTraitEditPlaylist.html", [
             [ "TraitJukeBox", "classTraitJukeBox.html", [

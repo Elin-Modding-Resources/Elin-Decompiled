@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.245 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.246 Nightly</span>
    </div>
   </td>
  </tr>
@@ -100,35 +100,39 @@ $(document).ready(function(){initNavTree('ConParalyze_8cs_source.html',''); init
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classConParalyze.html#ac8f43ac5faa3d86f0035a01a4790c511">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classConParalyze.html#ac8f43ac5faa3d86f0035a01a4790c511">ConsumeTurn</a> =&gt; <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classConParalyze.html#ac00d042177ea4661b0bbd36bcab711ec">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classConParalyze.html#ac00d042177ea4661b0bbd36bcab711ec">WillOverride</a> =&gt; <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792">   11</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792">GetPhase</a>()</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classConParalyze.html#ac19f003b4deb8caeac1e7e71d1278eb3">   16</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classConParalyze.html#ac19f003b4deb8caeac1e7e71d1278eb3">SetOwner</a>(<a class="code hl_class" href="classChara.html">Chara</a> _owner, <span class="keywordtype">bool</span> onDeserialize = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        base.SetOwner(_owner);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        owner.isParalyzed = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classConParalyze.html#a44f37375e66e4382aeb0277214b8ceb7">   22</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classConParalyze.html#a44f37375e66e4382aeb0277214b8ceb7">OnRemoved</a>()</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        owner.isParalyzed = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792">GetPhase</a>()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classConParalyze.html#a924b49370e0a06390b73216cde4ab1be">   14</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classConParalyze.html#a924b49370e0a06390b73216cde4ab1be">ShouldOverride</a>(<a class="code hl_class" href="classCondition.html">Condition</a> c)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classConParalyze.html#ac19f003b4deb8caeac1e7e71d1278eb3">   19</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classConParalyze.html#ac19f003b4deb8caeac1e7e71d1278eb3">SetOwner</a>(<a class="code hl_class" href="classChara.html">Chara</a> _owner, <span class="keywordtype">bool</span> onDeserialize = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        base.SetOwner(_owner);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        owner.isParalyzed = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classConParalyze.html#a44f37375e66e4382aeb0277214b8ceb7">   25</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classConParalyze.html#a44f37375e66e4382aeb0277214b8ceb7">OnRemoved</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        owner.isParalyzed = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
 <div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088">Emo2</a></div><div class="ttdeci">Emo2</div><div class="ttdef"><b>Definition:</b> <a href="Emo2_8cs_source.html#l00001">Emo2.cs:2</a></div></div>
 <div class="ttc" id="aclassBadCondition_html"><div class="ttname"><a href="classBadCondition.html">BadCondition</a></div><div class="ttdef"><b>Definition:</b> <a href="BadCondition_8cs_source.html#l00001">BadCondition.cs:2</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassConParalyze_html"><div class="ttname"><a href="classConParalyze.html">ConParalyze</a></div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00001">ConParalyze.cs:2</a></div></div>
-<div class="ttc" id="aclassConParalyze_html_a44f37375e66e4382aeb0277214b8ceb7"><div class="ttname"><a href="classConParalyze.html#a44f37375e66e4382aeb0277214b8ceb7">ConParalyze.OnRemoved</a></div><div class="ttdeci">override void OnRemoved()</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00022">ConParalyze.cs:22</a></div></div>
+<div class="ttc" id="aclassConParalyze_html_a44f37375e66e4382aeb0277214b8ceb7"><div class="ttname"><a href="classConParalyze.html#a44f37375e66e4382aeb0277214b8ceb7">ConParalyze.OnRemoved</a></div><div class="ttdeci">override void OnRemoved()</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00025">ConParalyze.cs:25</a></div></div>
 <div class="ttc" id="aclassConParalyze_html_a60689a1be70ade8522f6b6a3b3656cdd"><div class="ttname"><a href="classConParalyze.html#a60689a1be70ade8522f6b6a3b3656cdd">ConParalyze.PreventRegen</a></div><div class="ttdeci">override bool PreventRegen</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00005">ConParalyze.cs:5</a></div></div>
+<div class="ttc" id="aclassConParalyze_html_a924b49370e0a06390b73216cde4ab1be"><div class="ttname"><a href="classConParalyze.html#a924b49370e0a06390b73216cde4ab1be">ConParalyze.ShouldOverride</a></div><div class="ttdeci">override bool ShouldOverride(Condition c)</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00014">ConParalyze.cs:14</a></div></div>
 <div class="ttc" id="aclassConParalyze_html_a9c87701d6e6e375336388d0bcd4044d3"><div class="ttname"><a href="classConParalyze.html#a9c87701d6e6e375336388d0bcd4044d3">ConParalyze.EmoIcon</a></div><div class="ttdeci">override Emo2 EmoIcon</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00003">ConParalyze.cs:3</a></div></div>
-<div class="ttc" id="aclassConParalyze_html_aa9c27c9a521f753bc3962ba936ef2792"><div class="ttname"><a href="classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792">ConParalyze.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00011">ConParalyze.cs:11</a></div></div>
-<div class="ttc" id="aclassConParalyze_html_ac00d042177ea4661b0bbd36bcab711ec"><div class="ttname"><a href="classConParalyze.html#ac00d042177ea4661b0bbd36bcab711ec">ConParalyze.WillOverride</a></div><div class="ttdeci">override bool WillOverride</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00009">ConParalyze.cs:9</a></div></div>
-<div class="ttc" id="aclassConParalyze_html_ac19f003b4deb8caeac1e7e71d1278eb3"><div class="ttname"><a href="classConParalyze.html#ac19f003b4deb8caeac1e7e71d1278eb3">ConParalyze.SetOwner</a></div><div class="ttdeci">override void SetOwner(Chara _owner, bool onDeserialize=false)</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00016">ConParalyze.cs:16</a></div></div>
+<div class="ttc" id="aclassConParalyze_html_aa9c27c9a521f753bc3962ba936ef2792"><div class="ttname"><a href="classConParalyze.html#aa9c27c9a521f753bc3962ba936ef2792">ConParalyze.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00009">ConParalyze.cs:9</a></div></div>
+<div class="ttc" id="aclassConParalyze_html_ac19f003b4deb8caeac1e7e71d1278eb3"><div class="ttname"><a href="classConParalyze.html#ac19f003b4deb8caeac1e7e71d1278eb3">ConParalyze.SetOwner</a></div><div class="ttdeci">override void SetOwner(Chara _owner, bool onDeserialize=false)</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00019">ConParalyze.cs:19</a></div></div>
 <div class="ttc" id="aclassConParalyze_html_ac8f43ac5faa3d86f0035a01a4790c511"><div class="ttname"><a href="classConParalyze.html#ac8f43ac5faa3d86f0035a01a4790c511">ConParalyze.ConsumeTurn</a></div><div class="ttdeci">override bool ConsumeTurn</div><div class="ttdef"><b>Definition:</b> <a href="ConParalyze_8cs_source.html#l00007">ConParalyze.cs:7</a></div></div>
+<div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00003">Condition.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -32,6 +32,7 @@ var classENC =
     [ "encSpell", "classENC.html#a082acb3ccb9281afd0da55f67c959264", null ],
     [ "encTail", "classENC.html#a1bfcdad0c620c34aa12c4f0c02814440", null ],
     [ "expMod", "classENC.html#a0ce600fd7031e892c5357353d1e3487b", null ],
+    [ "farsee", "classENC.html#a95a465f9000e534d33bbe83f417b2af0", null ],
     [ "force_weapon", "classENC.html#a9f1818d1783e6c234846718c768c8596", null ],
     [ "guts", "classENC.html#a45aa142165eba75799b6a04d46f417ac", null ],
     [ "IDS", "classENC.html#a0ea03827875acf944710cf32043f6a83", null ],

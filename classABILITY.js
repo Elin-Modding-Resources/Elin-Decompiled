@@ -63,6 +63,7 @@ var classABILITY =
     [ "ActWait", "classABILITY.html#a63fcb96cc9a85af1306052e12fb2dca4", null ],
     [ "ActWeaken", "classABILITY.html#af8bd2be6670fe3dde20919c493907878", null ],
     [ "ActWhirlwind", "classABILITY.html#a7954bd3014e443e2627a4ba21e8aa992", null ],
+    [ "ActWombDark", "classABILITY.html#a67ad230e710c7891ab6afc53ff5e823e", null ],
     [ "ActZap", "classABILITY.html#a44cc2d633528019163a4abedccd57010", null ],
     [ "AI_Bladder", "classABILITY.html#af982fbebe4403534cfc058ad9e826db1", null ],
     [ "AI_Deconstruct", "classABILITY.html#a95edf2c42717e96eccb45f0365aca7a1", null ],

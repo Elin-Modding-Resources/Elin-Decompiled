@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.245 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.246 Nightly</span>
    </div>
   </td>
  </tr>
@@ -94,25 +94,28 @@ $(document).ready(function(){initNavTree('BaseDebuff_8cs_source.html',''); initR
 <div class="contents">
 <a href="BaseDebuff_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="classBaseDebuff.html">    1</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classBaseDebuff.html">BaseDebuff</a> : <a class="code hl_class" href="classCondition.html">Condition</a></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classBaseDebuff.html#a940e25502178fac4d6c4117549670126">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classBaseDebuff.html#a940e25502178fac4d6c4117549670126">WillOverride</a> =&gt; <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classBaseDebuff.html#a154d1c999dc45d255e0523ad84b0de71">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classBaseDebuff.html#a154d1c999dc45d255e0523ad84b0de71">GetPhase</a>()</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    }</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classBaseDebuff.html#a9eba42e8bd5336a6ff0344a831990be4">   10</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> <a class="code hl_function" href="classBaseDebuff.html#a9eba42e8bd5336a6ff0344a831990be4">CreateNotification</a>()</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classNotificationBuff.html">NotificationBuff</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            condition = <span class="keyword">this</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        };</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classBaseDebuff.html#a8e8592420ddc6293ef175e8c36580e52">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classBaseDebuff.html#a8e8592420ddc6293ef175e8c36580e52">ShouldOverride</a>(<a class="code hl_class" href="classCondition.html">Condition</a> c)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    }</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classBaseDebuff.html#a154d1c999dc45d255e0523ad84b0de71">    8</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classBaseDebuff.html#a154d1c999dc45d255e0523ad84b0de71">GetPhase</a>()</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classBaseDebuff.html#a9eba42e8bd5336a6ff0344a831990be4">   13</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_class" href="classBaseNotification.html">BaseNotification</a> <a class="code hl_function" href="classBaseDebuff.html#a9eba42e8bd5336a6ff0344a831990be4">CreateNotification</a>()</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classNotificationBuff.html">NotificationBuff</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            condition = <span class="keyword">this</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        };</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
 <div class="ttc" id="aclassBaseDebuff_html"><div class="ttname"><a href="classBaseDebuff.html">BaseDebuff</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00001">BaseDebuff.cs:2</a></div></div>
-<div class="ttc" id="aclassBaseDebuff_html_a154d1c999dc45d255e0523ad84b0de71"><div class="ttname"><a href="classBaseDebuff.html#a154d1c999dc45d255e0523ad84b0de71">BaseDebuff.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00005">BaseDebuff.cs:5</a></div></div>
-<div class="ttc" id="aclassBaseDebuff_html_a940e25502178fac4d6c4117549670126"><div class="ttname"><a href="classBaseDebuff.html#a940e25502178fac4d6c4117549670126">BaseDebuff.WillOverride</a></div><div class="ttdeci">override bool WillOverride</div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00003">BaseDebuff.cs:3</a></div></div>
-<div class="ttc" id="aclassBaseDebuff_html_a9eba42e8bd5336a6ff0344a831990be4"><div class="ttname"><a href="classBaseDebuff.html#a9eba42e8bd5336a6ff0344a831990be4">BaseDebuff.CreateNotification</a></div><div class="ttdeci">override BaseNotification CreateNotification()</div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00010">BaseDebuff.cs:10</a></div></div>
+<div class="ttc" id="aclassBaseDebuff_html_a154d1c999dc45d255e0523ad84b0de71"><div class="ttname"><a href="classBaseDebuff.html#a154d1c999dc45d255e0523ad84b0de71">BaseDebuff.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00008">BaseDebuff.cs:8</a></div></div>
+<div class="ttc" id="aclassBaseDebuff_html_a8e8592420ddc6293ef175e8c36580e52"><div class="ttname"><a href="classBaseDebuff.html#a8e8592420ddc6293ef175e8c36580e52">BaseDebuff.ShouldOverride</a></div><div class="ttdeci">override bool ShouldOverride(Condition c)</div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00003">BaseDebuff.cs:3</a></div></div>
+<div class="ttc" id="aclassBaseDebuff_html_a9eba42e8bd5336a6ff0344a831990be4"><div class="ttname"><a href="classBaseDebuff.html#a9eba42e8bd5336a6ff0344a831990be4">BaseDebuff.CreateNotification</a></div><div class="ttdeci">override BaseNotification CreateNotification()</div><div class="ttdef"><b>Definition:</b> <a href="BaseDebuff_8cs_source.html#l00013">BaseDebuff.cs:13</a></div></div>
 <div class="ttc" id="aclassBaseNotification_html"><div class="ttname"><a href="classBaseNotification.html">BaseNotification</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseNotification_8cs_source.html#l00005">BaseNotification.cs:6</a></div></div>
 <div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00003">Condition.cs:4</a></div></div>
 <div class="ttc" id="aclassNotificationBuff_html"><div class="ttname"><a href="classNotificationBuff.html">NotificationBuff</a></div><div class="ttdef"><b>Definition:</b> <a href="NotificationBuff_8cs_source.html#l00001">NotificationBuff.cs:2</a></div></div>

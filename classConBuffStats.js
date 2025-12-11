@@ -10,10 +10,10 @@ var classConBuffStats =
     [ "OnWriteNote", "classConBuffStats.html#afb918f93387ca79874e9952d960aa37d", null ],
     [ "PlayEffect", "classConBuffStats.html#a09bb73753668d087151cd27aedf3b778", null ],
     [ "SetOwner", "classConBuffStats.html#aca3550d9a6658613de6e23f5f6b93874", null ],
+    [ "ShouldOverride", "classConBuffStats.html#a53033a099c6b58437990d18fd1c840f8", null ],
     [ "AllowMultipleInstance", "classConBuffStats.html#af11facc3c065d7a72b0d2b70851ead63", null ],
     [ "isDebuff", "classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5", null ],
     [ "Name", "classConBuffStats.html#a2f2d9a660d1aa7c8483993c1d5010a70", null ],
     [ "Type", "classConBuffStats.html#a89aa2540012608c39824505a1ba5c378", null ],
-    [ "UseElements", "classConBuffStats.html#a6611b71184e12cc13e5eb74d70200cbe", null ],
-    [ "WillOverride", "classConBuffStats.html#a05abf0a207f4f2a4e24d9feb16a6336d", null ]
+    [ "UseElements", "classConBuffStats.html#a6611b71184e12cc13e5eb74d70200cbe", null ]
 ];

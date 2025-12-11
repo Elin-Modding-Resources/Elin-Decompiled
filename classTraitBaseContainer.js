@@ -17,7 +17,6 @@ var classTraitBaseContainer =
     [ "IDInvStyle", "classTraitBaseContainer.html#a06a4da61836ee2f4ee815842d101401e", null ],
     [ "IsContainer", "classTraitBaseContainer.html#a56db8303fcfd0eabd8d8cce9345b6646", null ],
     [ "RefCardName", "classTraitBaseContainer.html#ab4b64ea541549c831bcdda278121d280", null ],
-    [ "ShowChildrenNumber", "classTraitBaseContainer.html#a22f429db384360922e91b5642c7c0a96", null ],
     [ "ShowOpenActAsCrime", "classTraitBaseContainer.html#a483f392ced2c90f7800bb06798fdb7b0", null ],
     [ "UseAltTiles", "classTraitBaseContainer.html#a6721af720e99232fba046dd160683836", null ],
     [ "Width", "classTraitBaseContainer.html#aa5095ee548da9ab01cfa069245ac5941", null ]
