@@ -63,7 +63,7 @@ public class LayerSleep : ELayer
 				if (chara.affinity.GetLunchChance() > ELayer.rnd(100) && chara.GetInt(71) == -1)
 				{
 					chara.SetInt(71, -2);
-					if (!chara.elements.Has(287))
+					if (!chara.elements.HasBase(287))
 					{
 						chara.elements.Learn(287);
 					}

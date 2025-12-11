@@ -15,9 +15,12 @@ public class ConStrife : BaseBuff
 
 	public override string TextDuration => "Lv." + lv;
 
-	public override bool WillOverride => false;
-
 	public int ExpToNext => (lv + 1) * (lv + 1);
+
+	public override bool ShouldOverride(Condition c)
+	{
+		return false;
+	}
 
 	public override bool CanStack(Condition c)
 	{

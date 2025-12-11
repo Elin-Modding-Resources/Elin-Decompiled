@@ -19,8 +19,6 @@ public class ConBuffStats : Condition
 
 	public bool isDebuff => base.refVal2 == 222;
 
-	public override bool WillOverride => true;
-
 	public override bool AllowMultipleInstance => true;
 
 	public override bool UseElements => true;
@@ -32,6 +30,11 @@ public class ConBuffStats : Condition
 			return 7;
 		}
 		return base.EvaluateTurn(p) * ((base.refVal == 79) ? 50 : 100) / 100;
+	}
+
+	public override bool ShouldOverride(Condition c)
+	{
+		return true;
 	}
 
 	public override int GetPhase()

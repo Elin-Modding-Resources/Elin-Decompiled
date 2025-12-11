@@ -1,138 +1,138 @@
 public class SKILL
 {
-	public const int fireproof = 50;
+	public const int marksman = 133;
 
-	public const int climbing = 242;
+	public const int tactics = 132;
 
-	public const int throwing = 108;
+	public const int twowield = 131;
 
-	public const int weaponCrossbow = 109;
+	public const int twohand = 130;
+
+	public const int shield = 123;
+
+	public const int armorHeavy = 122;
 
 	public const int weaponScythe = 110;
 
 	public const int weaponBlunt = 111;
 
-	public const int armorLight = 120;
+	public const int weaponCrossbow = 109;
 
-	public const int armorHeavy = 122;
-
-	public const int twohand = 130;
-
-	public const int twowield = 131;
-
-	public const int music = 241;
-
-	public const int travel = 240;
-
-	public const int taming = 237;
-
-	public const int milking = 235;
-
-	public const int digging = 230;
-
-	public const int parasite = 227;
-
-	public const int riding = 226;
-
-	public const int lumberjack = 225;
-
-	public const int shield = 123;
-
-	public const int mining = 220;
-
-	public const int weightlifting = 207;
-
-	public const int stealth = 152;
-
-	public const int evasionPlus = 151;
-
-	public const int evasion = 150;
-
-	public const int strategy = 135;
-
-	public const int eyeofmind = 134;
-
-	public const int marksman = 133;
-
-	public const int tactics = 132;
-
-	public const int spotting = 210;
-
-	public const int swimming = 200;
-
-	public const int weaponSword = 101;
-
-	public const int weaponPolearm = 106;
-
-	public const int END = 71;
-
-	public const int STR = 70;
-
-	public const int FPV = 68;
-
-	public const int DMG = 67;
-
-	public const int HIT = 66;
-
-	public const int PV = 65;
-
-	public const int DEX = 72;
-
-	public const int DV = 64;
-
-	public const int mana = 61;
-
-	public const int life = 60;
-
-	public const int evasionPerfect = 57;
-
-	public const int EDR = 56;
-
-	public const int PDR = 55;
-
-	public const int acidproof = 51;
-
-	public const int vigor = 62;
+	public const int throwing = 108;
 
 	public const int weaponDagger = 107;
 
-	public const int PER = 73;
+	public const int eyeofmind = 134;
 
-	public const int WIL = 75;
+	public const int weaponPolearm = 106;
+
+	public const int armorLight = 120;
+
+	public const int strategy = 135;
+
+	public const int lumberjack = 225;
+
+	public const int evasionPlus = 151;
+
+	public const int stealth = 152;
+
+	public const int swimming = 200;
+
+	public const int weightlifting = 207;
+
+	public const int spotting = 210;
+
+	public const int mining = 220;
+
+	public const int riding = 226;
+
+	public const int parasite = 227;
+
+	public const int digging = 230;
+
+	public const int milking = 235;
+
+	public const int taming = 237;
+
+	public const int travel = 240;
+
+	public const int music = 241;
+
+	public const int weaponGun = 105;
+
+	public const int evasion = 150;
 
 	public const int weaponBow = 104;
 
-	public const int weaponStaff = 103;
+	public const int DEX = 72;
 
 	public const int weaponAxe = 102;
 
-	public const int martial = 100;
+	public const int fireproof = 50;
 
-	public const int dmgDealt = 94;
+	public const int acidproof = 51;
 
-	public const int antiMagic = 93;
+	public const int PDR = 55;
+
+	public const int EDR = 56;
+
+	public const int evasionPerfect = 57;
+
+	public const int life = 60;
+
+	public const int mana = 61;
+
+	public const int vigor = 62;
+
+	public const int PV = 65;
+
+	public const int HIT = 66;
+
+	public const int DMG = 67;
+
+	public const int FPV = 68;
+
+	public const int STR = 70;
+
+	public const int END = 71;
+
+	public const int weaponStaff = 103;
+
+	public const int climbing = 242;
 
 	public const int LER = 74;
 
-	public const int penetration = 92;
-
-	public const int critical = 90;
-
-	public const int INT = 80;
-
-	public const int SPD = 79;
-
-	public const int LUC = 78;
-
-	public const int CHA = 77;
+	public const int WIL = 75;
 
 	public const int MAG = 76;
 
+	public const int CHA = 77;
+
+	public const int LUC = 78;
+
+	public const int SPD = 79;
+
+	public const int INT = 80;
+
+	public const int critical = 90;
+
 	public const int vopal = 91;
+
+	public const int penetration = 92;
+
+	public const int antiMagic = 93;
+
+	public const int dmgDealt = 94;
+
+	public const int martial = 100;
+
+	public const int weaponSword = 101;
+
+	public const int PER = 73;
 
 	public const int fishing = 245;
 
-	public const int weaponGun = 105;
+	public const int DV = 64;
 
 	public const int carpentry = 255;
 
@@ -178,6 +178,8 @@ public class SKILL
 
 	public const int resHoly = 960;
 
+	public const int resCurse = 972;
+
 	public const int resMagic = 961;
 
 	public const int resEther = 962;
@@ -191,8 +193,6 @@ public class SKILL
 	public const int resDecay = 970;
 
 	public const int resDamage = 971;
-
-	public const int resCurse = 972;
 
 	public const int gathering = 250;
 
@@ -264,26 +264,26 @@ public class SKILL
 
 	public const int controlmana = 302;
 
-	public const int meditation = 301;
-
 	public const int memorization = 307;
+
+	public const int meditation = 301;
 
 	public static readonly int[] IDS = new int[134]
 	{
-		50, 242, 108, 109, 110, 111, 120, 122, 130, 131,
-		241, 240, 237, 235, 230, 227, 226, 225, 123, 220,
-		207, 152, 151, 150, 135, 134, 133, 132, 210, 200,
-		101, 106, 71, 70, 68, 67, 66, 65, 72, 64,
-		61, 60, 57, 56, 55, 51, 62, 107, 73, 75,
-		104, 103, 102, 100, 94, 93, 74, 92, 90, 80,
-		79, 78, 77, 76, 91, 245, 105, 255, 916, 917,
+		133, 132, 131, 130, 123, 122, 110, 111, 109, 108,
+		107, 134, 106, 120, 135, 225, 151, 152, 200, 207,
+		210, 220, 226, 227, 230, 235, 237, 240, 241, 105,
+		150, 104, 72, 102, 50, 51, 55, 56, 57, 60,
+		61, 62, 65, 66, 67, 68, 70, 71, 103, 242,
+		74, 75, 76, 77, 78, 79, 80, 90, 91, 92,
+		93, 94, 100, 101, 73, 245, 64, 255, 916, 917,
 		919, 920, 921, 922, 923, 924, 925, 926, 950, 951,
-		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
-		962, 963, 964, 965, 970, 971, 972, 250, 955, 914,
+		952, 953, 915, 954, 956, 957, 958, 959, 960, 972,
+		961, 962, 963, 964, 965, 970, 971, 250, 955, 914,
 		918, 912, 290, 289, 913, 287, 286, 285, 291, 281,
 		261, 260, 259, 258, 257, 256, 280, 292, 288, 300,
 		911, 910, 293, 312, 311, 310, 313, 306, 305, 304,
-		303, 302, 301, 307
+		303, 302, 307, 301
 	};
 }
 public class Skill : Element

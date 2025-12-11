@@ -33,6 +33,9 @@ public class TCText : TCUI
 		case '^':
 			p = pop.PopText(s.Substring(1), null, "PopTextBroadcast", default(Color), default(Vector3), duration);
 			break;
+		case '|':
+			p = pop.PopText(s.Substring(1), null, "PopTextAbility", default(Color), default(Vector3), duration);
+			break;
 		default:
 			p = pop.PopText(s, null, EMono.core.config.ui.balloonBG ? "PopText_alt" : "PopText", default(Color), default(Vector3), duration);
 			break;

@@ -501,10 +501,10 @@ public class ActEffect : EClass
 		{
 		case EffectId.Earthquake:
 		{
-			List<Point> list7 = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
-			if (list7.Count == 0)
+			List<Point> list = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
+			if (list.Count == 0)
 			{
-				list7.Add(CC.pos.Copy());
+				list.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_earthquake", CC, element.Name.ToLower());
 			TryDelay(delegate
@@ -516,7 +516,7 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list7, actRef, "spell_earthquake");
+			DamageEle(CC, id, power, element, list, actRef, "spell_earthquake");
 			break;
 		}
 		case EffectId.Meteor:
@@ -524,10 +524,10 @@ public class ActEffect : EClass
 			EffectMeteor.Create(cc.pos, 6, 10, delegate
 			{
 			});
-			List<Point> list = EClass._map.ListPointsInCircle(CC.pos, 10f);
-			if (list.Count == 0)
+			List<Point> list3 = EClass._map.ListPointsInCircle(CC.pos, 10f);
+			if (list3.Count == 0)
 			{
-				list.Add(CC.pos.Copy());
+				list3.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_ball", CC, element.Name.ToLower());
 			TryDelay(delegate
@@ -539,7 +539,7 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list, actRef, "spell_ball");
+			DamageEle(CC, id, power, element, list3, actRef, "spell_ball");
 			return;
 		}
 		case EffectId.Hand:
@@ -564,25 +564,45 @@ public class ActEffect : EClass
 		case EffectId.MoonSpear:
 		case EffectId.MoonArrow:
 		{
-			List<Point> list3 = new List<Point>();
-			list3.Add(tp.Copy());
+			List<Point> list7 = new List<Point>();
+			list7.Add(tp.Copy());
 			CC.Say((id == EffectId.MoonSpear) ? "spell_spear" : "spell_arrow", CC, element.Name.ToLower());
 			EClass.Wait(0.5f, CC);
 			TryDelay(delegate
 			{
 				CC.PlaySound((id == EffectId.MoonSpear) ? "spell_moonspear" : "spell_arrow");
 			});
-			DamageEle(CC, id, power, element, list3, actRef, (id == EffectId.MoonSpear) ? "spell_spear" : "spell_arrow");
+			DamageEle(CC, id, power, element, list7, actRef, (id == EffectId.MoonSpear) ? "spell_spear" : "spell_arrow");
 			return;
 		}
 		case EffectId.Summon:
 		{
-			if (actRef.n1 == "special")
+			string n = actRef.n1;
+			if (!(n == "special"))
+			{
+				if (n == "special2")
+				{
+					if (EClass._zone.HasField(10000))
+					{
+						foreach (Chara item in EClass._map.charas.Where((Chara _c) => _c.id == "cocoon").ToList())
+						{
+							item.pos.PlayEffect("darkwomb3");
+							item.HatchEgg();
+						}
+					}
+					CC.PlayEffect("darkwomb");
+					SE.Play("ab_womb");
+				}
+				else
+				{
+					CC.Say("summon_ally", CC);
+				}
+			}
+			else
 			{
 				SE.Play("warhorn");
 				Msg.Say("warhorn");
 			}
-			CC.Say("summon_ally", CC);
 			if (EClass._zone.CountMinions(CC) >= CC.MaxSummon || CC.c_uidMaster != 0)
 			{
 				CC.Say("summon_ally_fail", CC);
@@ -621,6 +641,10 @@ public class ActEffect : EClass
 				num3 = Mathf.Clamp(7 + CC.LV / 100, 4, 20);
 				num5 = CC.LV;
 				break;
+			case "special2":
+				num3 = 30;
+				num5 = CC.LV;
+				break;
 			}
 			num3 += CC.Evalue(1240);
 			for (int j = 0; j < num3; j++)
@@ -629,7 +653,8 @@ public class ActEffect : EClass
 				{
 					break;
 				}
-				Point point = tp.GetRandomPoint(radius)?.GetNearestPoint(allowBlock: false, allowChara: false);
+				Point point = null;
+				point = ((!(actRef.n1 == "special2")) ? tp.GetRandomPoint(radius)?.GetNearestPoint(allowBlock: false, allowChara: false) : EClass._map.GetRandomSurface(centered: false, walkable: true, allowWater: true)?.GetNearestPoint(allowBlock: false, allowChara: false));
 				if (point == null || !point.IsValid)
 				{
 					continue;
@@ -652,12 +677,14 @@ public class ActEffect : EClass
 						chara = CharaGen.Create((EClass.rnd(20) == 0) ? "imolonac" : "ygolonac");
 						break;
 					}
-					Debug.Log(CardBlueprint.current.idEle);
 					chara = CharaGen.Create("hound", CC.LV);
 					if (text.IsEmpty())
 					{
 						text = chara.MainElement.source.alias;
 					}
+					break;
+				case "special2":
+					chara = CharaGen.Create("cocoon");
 					break;
 				case "yeek":
 					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_yeek", (SourceChara.Row r) => r.race == "yeek"), power / 10);
@@ -706,10 +733,14 @@ public class ActEffect : EClass
 					continue;
 				}
 				int num6 = -1;
-				string n = actRef.n1;
+				n = actRef.n1;
 				if (!(n == "shadow"))
 				{
-					if (!(n == "special"))
+					if (n == "special2")
+					{
+						point.PlayEffect("darkwomb2");
+					}
+					else
 					{
 						int num7 = 1;
 						if (!CC.IsPC)
@@ -755,7 +786,7 @@ public class ActEffect : EClass
 					Hostility hostility2 = (chara.c_originalHostility = Hostility.Enemy);
 					chara2.hostility = hostility2;
 				}
-				else if (!(actRef.n1 == "monster") || actRef.refThing == null)
+				else if (!(chara.id == "cocoon") && (!(actRef.n1 == "monster") || actRef.refThing == null))
 				{
 					chara.MakeMinion(CC);
 				}
@@ -815,9 +846,9 @@ public class ActEffect : EClass
 			CC.PlaySound("scream");
 			CC.PlayEffect("scream");
 			{
-				foreach (Point item in EClass._map.ListPointsInCircle(cc.pos, 6f, mustBeWalkable: false, los: false))
+				foreach (Point item2 in EClass._map.ListPointsInCircle(cc.pos, 6f, mustBeWalkable: false, los: false))
 				{
-					foreach (Chara chara4 in item.Charas)
+					foreach (Chara chara4 in item2.Charas)
 					{
 						if (chara4.ResistLv(957) <= 0)
 						{
@@ -957,14 +988,14 @@ public class ActEffect : EClass
 			list8.Insert(0, CC);
 		}
 		bool flag6 = true;
-		foreach (Card item2 in list8)
+		foreach (Card item3 in list8)
 		{
-			if (tc == null || item2 == tc)
+			if (tc == null || item3 == tc)
 			{
-				Proc(id, power, state, CC, item2, actRef);
-				if (flag2 && item2.isChara && item2 != CC)
+				Proc(id, power, state, CC, item3, actRef);
+				if (flag2 && item3.isChara && item3 != CC)
 				{
-					CC.DoHostileAction(item2);
+					CC.DoHostileAction(item3);
 				}
 				if (actRef.refThing == null || !(actRef.refThing.trait is TraitRod))
 				{

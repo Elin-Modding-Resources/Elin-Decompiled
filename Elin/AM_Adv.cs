@@ -1111,6 +1111,10 @@ public class AM_Adv : AM_BaseGameMode
 		timerStartRunning += Core.delta;
 		EClass.player.nextMove.x = 0f;
 		EClass.player.nextMove.y = 0f;
+		if (vector != Vector2.zero && IsEntangled())
+		{
+			return;
+		}
 		Point point = EClass.pc.pos.Copy();
 		point.x += (int)vector.x;
 		point.z += (int)vector.y;
@@ -1202,9 +1206,22 @@ public class AM_Adv : AM_BaseGameMode
 		}
 	}
 
+	public bool IsEntangled()
+	{
+		if (EClass.pc.HasCondition<ConEntangle>())
+		{
+			EClass.pc.Say("entangled", EClass.pc);
+			EClass.pc.PlaySound("web");
+			EClass.pc.PlayAnime(AnimeID.Shiver);
+			EInput.WaitReleaseKey();
+			return true;
+		}
+		return false;
+	}
+
 	public bool PressedActionMove(Point pos)
 	{
-		if (EClass.player.TooHeavyToMove())
+		if (EClass.player.TooHeavyToMove() || IsEntangled())
 		{
 			return false;
 		}

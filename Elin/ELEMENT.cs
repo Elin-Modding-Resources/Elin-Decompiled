@@ -5,43 +5,69 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
-	public const int difficulty = 765;
-
-	public const int air = 763;
-
-	public const int roasted = 762;
-
-	public const int recharge = 761;
-
-	public const int purity = 759;
-
-	public const int hotspring = 756;
-
-	public const int stimulant = 760;
-
-	public const int blood = 755;
-
-	public const int nerve = 754;
+	public const int cute = 752;
 
 	public const int antidote = 753;
 
-	public const int comfort = 750;
+	public const int nerve = 754;
 
-	public const int cute = 752;
+	public const int blood = 755;
+
+	public const int hotspring = 756;
+
+	public const int roasted = 762;
+
+	public const int stimulant = 760;
+
+	public const int recharge = 761;
+
+	public const int air = 763;
+
+	public const int difficulty = 765;
 
 	public const int rare = 751;
 
+	public const int purity = 759;
+
+	public const int comfort = 750;
+
 	public const int _void = 0;
 
-	public const int quality = 2;
+	public const int old_antidote = 25;
+
+	public const int piety = 85;
+
+	public const int race = 29;
+
+	public const int cure = 26;
+
+	public const int old_heal = 24;
+
+	public const int old_detox = 23;
+
+	public const int cut = 22;
+
+	public const int fire = 21;
+
+	public const int taste = 18;
+
+	public const int decay = 17;
+
+	public const int heat = 16;
+
+	public const int poison = 20;
+
+	public const int growth = 14;
 
 	public const int lv = 1;
+
+	public const int water = 15;
 
 	public const int d = 3;
 
 	public const int socket = 5;
 
-	public const int nutrition = 10;
+	public const int quality = 2;
 
 	public const int weight = 11;
 
@@ -49,40 +75,14 @@ public class ELEMENT
 
 	public const int hardness = 13;
 
-	public const int water = 15;
-
-	public const int heat = 16;
-
-	public const int decay = 17;
-
-	public const int taste = 18;
-
-	public const int growth = 14;
-
-	public const int fire = 21;
-
-	public const int cut = 22;
-
-	public const int old_detox = 23;
-
-	public const int old_heal = 24;
-
-	public const int old_antidote = 25;
-
-	public const int cure = 26;
-
-	public const int race = 29;
-
-	public const int piety = 85;
-
-	public const int poison = 20;
+	public const int nutrition = 10;
 
 	public static readonly int[] IDS = new int[36]
 	{
-		765, 763, 762, 761, 759, 756, 760, 755, 754, 753,
-		750, 752, 751, 0, 2, 1, 3, 5, 10, 11,
-		12, 13, 15, 16, 17, 18, 14, 21, 22, 23,
-		24, 25, 26, 29, 85, 20
+		752, 753, 754, 755, 756, 762, 760, 761, 763, 765,
+		751, 759, 750, 0, 25, 85, 29, 26, 24, 23,
+		22, 21, 18, 17, 16, 20, 14, 1, 15, 3,
+		5, 2, 11, 12, 13, 10
 	};
 }
 public class Element : EClass
@@ -664,7 +664,7 @@ public class Element : EClass
 			n.Space();
 			n.AddText("isGlobalAct".lang());
 		}
-		if (cost.type == Act.CostType.None || cost.cost == 0)
+		if (cost.type == Act.CostType.None || cost.cost == 0 || act.owner is ElementContainerField)
 		{
 			return;
 		}
@@ -714,6 +714,7 @@ public class Element : EClass
 
 	public void _WriteNote(UINote n, ElementContainer owner, Action<UINote> onWriteNote, bool isRef, bool addHeader = true)
 	{
+		bool flag = this is FieldEffect && owner.Chara == null;
 		if (addHeader)
 		{
 			if (isRef)
@@ -721,7 +722,7 @@ public class Element : EClass
 				UIText.globalSizeMod = -2;
 				n.AddHeader("prevElement".lang(FullName));
 			}
-			else if (this is Act)
+			else if (this is Act && !flag)
 			{
 				AddHeaderAbility(n);
 				n.Space(8);
@@ -742,41 +743,44 @@ public class Element : EClass
 		{
 			num += EClass.pc.faction.charaElements.Value(id);
 		}
-		bool flag = ShowValue;
-		bool flag2 = ShowRelativeAttribute;
+		bool flag2 = ShowValue;
+		bool flag3 = ShowRelativeAttribute && !flag;
 		if (source.category == "landfeat")
 		{
-			flag = false;
 			flag2 = false;
+			flag3 = false;
 		}
-		if (this is Act)
+		if (!flag)
 		{
-			Act act = ACT.Create(source.id);
-			UIItem uIItem = n.AddItem("ItemAbility");
-			uIItem.text1.text = "vValue".lang(DisplayValue.ToString() ?? "", ValueWithoutLink + ((num == 0) ? "" : ((num > 0) ? (" + " + num) : (" - " + -num))));
-			uIItem.text2.text = act.TargetType.ToString().lang();
-			uIItem.text3.text = ((this is Spell) ? (owner.Chara.CalcCastingChance(owner.GetOrCreateElement(act.source.id)) + "%") : "-") ?? "";
-		}
-		else if (flag)
-		{
-			n.AddTopic("TopicLeft", "vCurrent".lang(), "vValue".lang(DisplayValue.ToString() ?? "", ValueWithoutLink + ((num == 0) ? "" : ((num > 0) ? (" + " + num) : (" - " + -num)))));
-			if (ShowPotential)
+			if (this is Act)
 			{
-				num = vTempPotential;
-				n.AddTopic("TopicLeft", "vPotential".lang(), "vValue".lang(Potential.ToString() ?? "", vPotential + vSourcePotential + MinPotential + ((num == 0) ? "" : ((num > 0) ? (" + " + num) : (" - " + -num)))));
+				Act act = ACT.Create(source.id);
+				UIItem uIItem = n.AddItem("ItemAbility");
+				uIItem.text1.text = "vValue".lang(DisplayValue.ToString() ?? "", ValueWithoutLink + ((num == 0) ? "" : ((num > 0) ? (" + " + num) : (" - " + -num))));
+				uIItem.text2.text = act.TargetType.ToString().lang();
+				uIItem.text3.text = ((this is Spell && owner.Chara != null) ? (owner.Chara.CalcCastingChance(owner.GetOrCreateElement(act.source.id)) + "%") : "-") ?? "";
 			}
-			_ = PotentialAsStock;
+			else if (flag2)
+			{
+				n.AddTopic("TopicLeft", "vCurrent".lang(), "vValue".lang(DisplayValue.ToString() ?? "", ValueWithoutLink + ((num == 0) ? "" : ((num > 0) ? (" + " + num) : (" - " + -num)))));
+				if (ShowPotential)
+				{
+					num = vTempPotential;
+					n.AddTopic("TopicLeft", "vPotential".lang(), "vValue".lang(Potential.ToString() ?? "", vPotential + vSourcePotential + MinPotential + ((num == 0) ? "" : ((num > 0) ? (" + " + num) : (" - " + -num)))));
+				}
+				_ = PotentialAsStock;
+			}
 		}
-		if (flag2 && !source.aliasParent.IsEmpty())
+		if (flag3 && !source.aliasParent.IsEmpty())
 		{
 			Element element = Create(source.aliasParent);
 			UIItem uIItem2 = n.AddItem("ItemRelativeAttribute");
 			uIItem2.text1.SetText(element.Name);
 			element.SetImage(uIItem2.image1);
-			bool flag3 = source.lvFactor > 0 && this is Act;
-			uIItem2.text2.SetActive(flag3);
-			uIItem2.text3.SetActive(flag3);
-			if (flag3)
+			bool flag4 = source.lvFactor > 0 && this is Act;
+			uIItem2.text2.SetActive(flag4);
+			uIItem2.text3.SetActive(flag4);
+			if (flag4)
 			{
 				uIItem2.text2.SetText(GetPower(EClass.pc).ToString() ?? "");
 			}

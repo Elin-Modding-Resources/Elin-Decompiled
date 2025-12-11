@@ -803,7 +803,7 @@ public class Thing : Card
 	public override string GetExtraName()
 	{
 		string text = "";
-		if (trait.ShowChildrenNumber && base.c_lockLv == 0)
+		if (trait.ShowChildrenNumber && base.c_lockLv == 0 && EClass._zone.IsPCFactionOrTent)
 		{
 			if (things.Count > 0)
 			{

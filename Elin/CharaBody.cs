@@ -89,11 +89,15 @@ public class CharaBody : EClass
 			WidgetEquip.SetDirty();
 		}
 		LayerInventory.SetDirty(thing);
-		if (slot.elementId == 45 && EClass.core.IsGameStarted)
+		if (!EClass.core.IsGameStarted)
+		{
+			return;
+		}
+		if (slot.elementId == 45 || thing.HasElement(490))
 		{
 			owner.RecalculateFOV();
 		}
-		if (refresh && owner.isCreated && EClass.core.IsGameStarted)
+		if (refresh && owner.isCreated)
 		{
 			owner.Refresh();
 			if (slot.elementId == 37 && owner.HasElement(1209) && !thing.HasElement(419))
@@ -231,13 +235,16 @@ public class CharaBody : EClass
 			LayerInventory.SetDirty(thing);
 			WidgetEquip.SetDirty();
 		}
-		if (slot.elementId == 45 && EClass.core.IsGameStarted)
+		if (EClass.core.IsGameStarted)
 		{
-			owner.RecalculateFOV();
-		}
-		if (owner.isCreated && EClass.core.IsGameStarted)
-		{
-			owner.Refresh();
+			if (slot.elementId == 45 || thing.HasElement(490))
+			{
+				owner.RecalculateFOV();
+			}
+			if (owner.isCreated)
+			{
+				owner.Refresh();
+			}
 		}
 		if (owner.isCreated)
 		{

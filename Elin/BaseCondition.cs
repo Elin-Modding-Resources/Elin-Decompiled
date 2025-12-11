@@ -92,8 +92,6 @@ public class BaseCondition : BaseStats
 
 	public virtual bool IsToggle => false;
 
-	public virtual bool WillOverride => false;
-
 	public virtual bool AllowMultipleInstance => false;
 
 	public virtual bool ConsumeTurn => false;
@@ -137,6 +135,11 @@ public class BaseCondition : BaseStats
 	public virtual bool CanStack(Condition c)
 	{
 		return true;
+	}
+
+	public virtual bool ShouldOverride(Condition c)
+	{
+		return false;
 	}
 
 	public virtual bool TryMove(Point p)

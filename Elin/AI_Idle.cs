@@ -107,7 +107,7 @@ public class AI_Idle : AIAct
 				else if (!EClass._zone.IsRegion && owner.HasElement(1250))
 				{
 					Chara target = null;
-					for (int j = 0; j < 10; j++)
+					for (int k = 0; k < 10; k++)
 					{
 						Chara chara = EClass._map.charas.RandomItem();
 						if (chara != owner && chara.Evalue(964) <= 0 && (target == null || (chara.c_bloodData != null && (target.c_bloodData == null || CraftUtil.GetFoodScore(chara.c_bloodData) > CraftUtil.GetFoodScore(target.c_bloodData)))))
@@ -187,7 +187,7 @@ public class AI_Idle : AIAct
 						{
 							continue;
 						}
-						for (int k = 0; k < 5; k++)
+						for (int l = 0; l < 5; l++)
 						{
 							if (thing9.encLV >= 0)
 							{
@@ -411,55 +411,92 @@ public class AI_Idle : AIAct
 		{
 			owner.TryAssignBed();
 		}
-		string text;
 		if (!EClass._zone.IsRegion)
 		{
-			text = owner.id;
-			if (!(text == "geist"))
+			switch (owner.id)
 			{
-				if (text == "mech_scarab" && EClass.rnd(20) == 0 && owner.CanDuplicate() && !EClass._zone.IsUserZone)
+			case "azzrasizzle":
+			case "geist":
+			{
+				if (EClass.rnd(20) != 0)
 				{
-					int i = 0;
-					owner.pos.ForeachNeighbor(delegate(Point p)
-					{
-						if (p.HasChara && p.FirstChara.id == "mech_scarab")
-						{
-							i++;
-						}
-					});
-					if (i < 2)
-					{
-						Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
-						if (randomPoint != null)
-						{
-							Card c2 = EClass._zone.AddCard(owner.Duplicate(), randomPoint);
-							if (randomPoint.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
-							{
-								Msg.Say("self_dupe", owner, c2);
-							}
-						}
-					}
+					break;
 				}
-			}
-			else if (EClass.rnd(20) == 0)
-			{
 				Point nearestPoint = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false);
-				if (nearestPoint != null)
+				if (nearestPoint == null)
 				{
-					foreach (Chara item3 in nearestPoint.ListCharasInRadius(owner, 6, (Chara _c) => _c != owner && !_c.IsPCFactionOrMinion))
-					{
-						item3.Teleport(nearestPoint.GetNearestPoint(allowBlock: false, allowChara: false) ?? nearestPoint);
-					}
-					if (owner != null)
-					{
-						if (!owner.IsPCFactionOrMinion)
-						{
-							EClass.pc.ai.Cancel();
-						}
-						owner.Teleport(nearestPoint);
-					}
-					yield return Success();
+					break;
 				}
+				foreach (Chara item3 in nearestPoint.ListCharasInRadius(owner, 6, (Chara _c) => _c != owner && !_c.IsPCFactionOrMinion && _c.id != "cocoon"))
+				{
+					item3.Teleport(nearestPoint.GetNearestPoint(allowBlock: false, allowChara: false) ?? nearestPoint);
+				}
+				if (owner != null)
+				{
+					if (!owner.IsPCFactionOrMinion)
+					{
+						EClass.pc.ai.Cancel();
+					}
+					owner.Teleport(nearestPoint);
+				}
+				yield return Success();
+				break;
+			}
+			case "spider_queen":
+			{
+				if (EClass.rnd(20) != 0 || !owner.CanDuplicate() || EClass._zone.IsUserZone)
+				{
+					break;
+				}
+				int i = 0;
+				owner.pos.ForeachNeighbor(delegate(Point p)
+				{
+					if (p.HasChara && p.FirstChara.id == "cocoon")
+					{
+						i++;
+					}
+				});
+				if (i < 2)
+				{
+					Point randomPoint2 = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
+					if (randomPoint2 != null)
+					{
+						Chara chara3 = EClass._zone.SpawnMob("cocoon", randomPoint2);
+						owner.Say("layegg", owner);
+						chara3.SetHostility(owner.OriginalHostility);
+					}
+				}
+				break;
+			}
+			case "mech_scarab":
+			{
+				if (EClass.rnd(20) != 0 || !owner.CanDuplicate() || EClass._zone.IsUserZone)
+				{
+					break;
+				}
+				int j = 0;
+				owner.pos.ForeachNeighbor(delegate(Point p)
+				{
+					if (p.HasChara && p.FirstChara.id == "mech_scarab")
+					{
+						j++;
+					}
+				});
+				if (j >= 2)
+				{
+					break;
+				}
+				Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
+				if (randomPoint != null)
+				{
+					Card c2 = EClass._zone.AddCard(owner.Duplicate(), randomPoint);
+					if (randomPoint.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
+					{
+						Msg.Say("self_dupe", owner, c2);
+					}
+				}
+				break;
+			}
 			}
 		}
 		if (owner.IsMinion && owner.master != null && owner.master.id == "keeper_garden" && !(owner.master.ai is GoalCombat))
@@ -507,10 +544,10 @@ public class AI_Idle : AIAct
 				else if (EClass.rnd(15) == 0 && EClass._zone.IsTown && owner.hostility >= Hostility.Neutral && !owner.IsPCFaction && !EClass.pc.HasCondition<ConIncognito>())
 				{
 					bool flag4 = EClass._zone is Zone_Derphy;
-					string text2 = ((EClass.player.karma > 10) ? ((EClass.player.karma < 90) ? "" : (flag4 ? "rumor_bad" : "rumor_good")) : (flag4 ? "rumor_good" : "rumor_bad"));
-					if (!text2.IsEmpty())
+					string text = ((EClass.player.karma > 10) ? ((EClass.player.karma < 90) ? "" : (flag4 ? "rumor_bad" : "rumor_good")) : (flag4 ? "rumor_good" : "rumor_bad"));
+					if (!text.IsEmpty())
 					{
-						owner.Talk(text2);
+						owner.Talk(text);
 					}
 					if ((flag4 ? (EClass.player.karma >= 90) : (EClass.player.karma <= 10)) && EClass.rnd(10) == 0)
 					{
@@ -650,14 +687,14 @@ public class AI_Idle : AIAct
 		{
 			if (EClass.rnd(3) == 0 && owner.IsCat)
 			{
-				Chara chara3 = ((EClass.rnd(5) == 0) ? EClass.pc.party.members.RandomItem() : EClass._map.charas.RandomItem());
-				Thing thing5 = chara3.things.Find<TraitFoodChuryu>();
-				if (chara3 != owner && thing5 != null)
+				Chara chara4 = ((EClass.rnd(5) == 0) ? EClass.pc.party.members.RandomItem() : EClass._map.charas.RandomItem());
+				Thing thing5 = chara4.things.Find<TraitFoodChuryu>();
+				if (chara4 != owner && thing5 != null)
 				{
 					yield return Do(new AI_Churyu
 					{
 						churyu = thing5,
-						slave = chara3
+						slave = chara4
 					});
 				}
 			}
@@ -676,12 +713,12 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(100) == 0 && owner.trait is TraitBitch)
 		{
-			Chara chara4 = DoSomethingToNearChara((Chara c) => c.IsIdle && !c.IsPCParty && !(c.trait is TraitBitch) && c.Evalue(418) <= 0);
-			if (chara4 != null)
+			Chara chara5 = DoSomethingToNearChara((Chara c) => c.IsIdle && !c.IsPCParty && !(c.trait is TraitBitch) && c.Evalue(418) <= 0);
+			if (chara5 != null)
 			{
 				yield return Do(new AI_Fuck
 				{
-					target = chara4,
+					target = chara5,
 					variation = AI_Fuck.Variation.Bitch
 				});
 			}
@@ -740,12 +777,12 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(35) == 0 && owner.id == "child" && owner.pos.cell.IsSnowTile)
 		{
-			foreach (Chara chara5 in EClass._map.charas)
+			foreach (Chara chara6 in EClass._map.charas)
 			{
-				if (EClass.rnd(3) != 0 && chara5 != owner && chara5.pos.cell.IsSnowTile && chara5.Dist(owner) <= 6 && Los.IsVisible(chara5, owner))
+				if (EClass.rnd(3) != 0 && chara6 != owner && chara6.pos.cell.IsSnowTile && chara6.Dist(owner) <= 6 && Los.IsVisible(chara6, owner))
 				{
 					Thing t3 = ThingGen.Create("snow");
-					ActThrow.Throw(owner, chara5.pos, t3);
+					ActThrow.Throw(owner, chara6.pos, t3);
 					break;
 				}
 			}
@@ -769,11 +806,11 @@ public class AI_Idle : AIAct
 			}
 			else
 			{
-				foreach (Chara chara6 in EClass._map.charas)
+				foreach (Chara chara7 in EClass._map.charas)
 				{
-					if (EClass.rnd(3) != 0 && chara6 != owner && chara6.Dist(owner) <= 6 && chara6.Dist(owner) >= 3 && Los.IsVisible(chara6, owner))
+					if (EClass.rnd(3) != 0 && chara7 != owner && chara7.Dist(owner) <= 6 && chara7.Dist(owner) >= 3 && Los.IsVisible(chara7, owner))
 					{
-						ActThrow.Throw(owner, chara6.pos, thing6);
+						ActThrow.Throw(owner, chara7.pos, thing6);
 						break;
 					}
 				}
@@ -925,18 +962,18 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(10) == 0 && !EClass._zone.IsUnderwater && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
 		{
-			for (int l = 0; l < 100; l++)
+			for (int m = 0; m < 100; m++)
 			{
-				Point randomPoint2 = EClass._map.GetRandomPoint();
-				if (randomPoint2.IsDeepWater && !randomPoint2.IsBlocked)
+				Point randomPoint3 = EClass._map.GetRandomPoint();
+				if (randomPoint3.IsDeepWater && !randomPoint3.IsBlocked)
 				{
-					yield return DoGoto(randomPoint2);
+					yield return DoGoto(randomPoint3);
 					break;
 				}
 			}
 		}
-		text = owner.source.aiIdle;
-		if (!(text == "stand") && !(text == "root"))
+		string aiIdle = owner.source.aiIdle;
+		if (!(aiIdle == "stand") && !(aiIdle == "root"))
 		{
 			if (EClass.rnd(15) == 0)
 			{
@@ -958,12 +995,12 @@ public class AI_Idle : AIAct
 		yield return Restart();
 		Point FindMovePoint(BaseArea.AccessType type)
 		{
-			for (int m = 0; m < 20; m++)
+			for (int n = 0; n < 20; n++)
 			{
-				Point randomPoint3 = owner.pos.GetRandomPoint(5 + m, requireLos: false);
-				if (randomPoint3 != null && randomPoint3.IsInBounds && (randomPoint3.cell.room == null || randomPoint3.cell.room.data.accessType == type))
+				Point randomPoint4 = owner.pos.GetRandomPoint(5 + n, requireLos: false);
+				if (randomPoint4 != null && randomPoint4.IsInBounds && (randomPoint4.cell.room == null || randomPoint4.cell.room.data.accessType == type))
 				{
-					return randomPoint3;
+					return randomPoint4;
 				}
 			}
 			return null;

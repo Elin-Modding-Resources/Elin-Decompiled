@@ -5168,6 +5168,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			flag2 = false;
 		}
+		if (Chara.race.id == "spider" && EClass._zone.HasField(10000))
+		{
+			flag2 = false;
+		}
 		if (flag2 && !isUserZone)
 		{
 			string text = Chara.race.corpse[0];
@@ -5793,6 +5797,22 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return t;
 	}
 
+	public void HatchEgg()
+	{
+		string[] array = new string[6] { "spider_queen", "spider_vampire", "spider_paralyzer", "spider_black", "spider_tarantula", "spider_spotted" };
+		int num = EClass.rnd(array.Length);
+		Point point = pos.Copy();
+		PlayEffect("blood").SetParticleColor(EClass.Colors.matColors[material.alias].main).Emit(50);
+		AddBlood(12, (uid % 2 == 0) ? (-1) : 3);
+		Say("egghatch");
+		PlaySound("egghatch");
+		Destroy();
+		for (int i = 0; i < 1 + EClass.rnd(num + 1); i++)
+		{
+			EClass._zone.SpawnMob(array[num], point.GetNearestPoint(allowBlock: false, allowChara: false));
+		}
+	}
+
 	public Card SetHidden(bool hide = true)
 	{
 		isHidden = hide;
@@ -6398,7 +6418,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return EClass.player.lightRadius;
 		}
-		return (EClass._map.IsIndoor ? 4 : 5) + (IsPCFaction ? 1 : 0);
+		return (EClass._map.IsIndoor ? 4 : 5) + (IsPCFaction ? 1 : 0) + EvalueMax(490);
 	}
 
 	public int GetLightRadius()
@@ -6498,6 +6518,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				power = EClass.scene.profile.global.playerLightPowerLimit;
 			}
 			power *= EClass.scene.profile.light.playerLightMod + (float)EClass.player.customLightMod * EClass.scene.profile.light.playerLightCustomMod;
+			radius += EvalueMax(490);
 			EClass.player.lightRadius = radius;
 			EClass.player.lightPower = power;
 		}

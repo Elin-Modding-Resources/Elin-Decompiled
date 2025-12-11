@@ -291,6 +291,8 @@ public class WidgetManager : EMono
 		{
 			EMono.player.useSubWidgetTheme = !EMono.player.useSubWidgetTheme;
 		}
+		EMono.player.hotbars.ResetHotbar(4);
+		EMono.player.hotbars.ResetHotbar(7);
 		OnGameInstantiated();
 		OnActivateZone();
 		OnChangeActionMode();

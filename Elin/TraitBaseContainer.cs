@@ -4,18 +4,6 @@ public class TraitBaseContainer : Trait
 {
 	public bool HasChara => owner.c_idRefCard != null;
 
-	public override bool ShowChildrenNumber
-	{
-		get
-		{
-			if (!HasChara)
-			{
-				return base.ShowChildrenNumber;
-			}
-			return false;
-		}
-	}
-
 	public override string IDInvStyle
 	{
 		get
@@ -145,7 +133,7 @@ public class TraitBaseContainer : Trait
 	public void PutChara(string id)
 	{
 		owner.c_idRefCard = id;
-		owner.AddCard(ThingGen.Create("junk"));
+		owner.AddCard(ThingGen.CreateFromCategory("furniture", EClass.pc.LV + 10));
 	}
 
 	public override void SetName(ref string s)

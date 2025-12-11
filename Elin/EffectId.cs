@@ -133,5 +133,6 @@ public enum EffectId
 	StripBlessing = 309,
 	Flare = 310,
 	GravityGun = 311,
-	TransBlood = 312
+	TransBlood = 312,
+	Field = 313
 }

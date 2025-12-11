@@ -25,4 +25,16 @@ public class Zone_DungeonDead : Zone_QuestDungeon
 		base.OnGenerateMap();
 		EClass._map.config.fog = FogType.CaveDeep;
 	}
+
+	public override void OnActivate()
+	{
+		if (IsBossLv)
+		{
+			SetFieldEffect(10000, 1);
+			if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 4)
+			{
+				EClass._zone.SetBGM(1);
+			}
+		}
+	}
 }

@@ -69,6 +69,49 @@ public class CardRenderer : RenderObject
 		Draw(p, ref v, drawShadow: false);
 	}
 
+	public void ShowBossText()
+	{
+		if (owner.Chara.IsNeutralOrAbove())
+		{
+			return;
+		}
+		SplashText splashText = Util.Instantiate<SplashText>("Media/Text/SplashText_boss2", EClass.ui.rectDynamic);
+		string text = owner.Chara.Aka.ToTitleCase(wholeText: true);
+		string text2 = owner.Chara.NameSimple.ToTitleCase();
+		if (!Lang.isBuiltin && Lang.langCode != "CN")
+		{
+			text = owner.Chara.source.aka.ToTitleCase(wholeText: true);
+			text2 = owner.Chara.source.name.ToTitleCase();
+		}
+		splashText.textSmall.text = text;
+		splashText.textBig.text = text2;
+		owner.Chara.bossText = false;
+		string id = owner.id;
+		if (!(id == "ungaga_pap"))
+		{
+			if (!(id == "lurie_boss"))
+			{
+				return;
+			}
+			if (EClass._zone is Zone_UnderseaTemple)
+			{
+				if (EClass._map.plDay.list.Count > 0 && EClass._map.plDay.list[0].data.id != 107)
+				{
+					EClass._zone.SetBGM(107);
+				}
+				if (EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 2)
+				{
+					EClass.game.quests.Get<QuestNegotiationDarkness>().NextPhase();
+				}
+			}
+			owner.PlaySound("warcry");
+		}
+		else if (EClass._zone is Zone_DungeonMino)
+		{
+			EClass._zone.SetBGM(107);
+		}
+	}
+
 	public override void Draw(RenderParam p, ref Vector3 v, bool drawShadow)
 	{
 		if (skip)
@@ -94,42 +137,9 @@ public class CardRenderer : RenderObject
 		}
 		if (isChara && owner.parent == EClass.game.activeZone)
 		{
-			if (owner.Chara.bossText && !EClass.ui.IsActive && !SplashText.Instance && !LayerDrama.Instance && !owner.Chara.IsNeutralOrAbove())
+			if (owner.Chara.bossText && !EClass.ui.IsActive && !SplashText.Instance && !LayerDrama.Instance)
 			{
-				SplashText splashText = Util.Instantiate<SplashText>("Media/Text/SplashText_boss2", EClass.ui.rectDynamic);
-				string text = owner.Chara.Aka.ToTitleCase(wholeText: true);
-				string text2 = owner.Chara.NameSimple.ToTitleCase();
-				if (!Lang.isBuiltin && Lang.langCode != "CN")
-				{
-					text = owner.Chara.source.aka.ToTitleCase(wholeText: true);
-					text2 = owner.Chara.source.name.ToTitleCase();
-				}
-				splashText.textSmall.text = text;
-				splashText.textBig.text = text2;
-				owner.Chara.bossText = false;
-				string id = owner.id;
-				if (!(id == "ungaga_pap"))
-				{
-					if (id == "lurie_boss")
-					{
-						if (EClass._zone is Zone_UnderseaTemple)
-						{
-							if (EClass._map.plDay.list.Count > 0 && EClass._map.plDay.list[0].data.id != 107)
-							{
-								EClass._zone.SetBGM(107);
-							}
-							if (EClass.game.quests.GetPhase<QuestNegotiationDarkness>() == 2)
-							{
-								EClass.game.quests.Get<QuestNegotiationDarkness>().NextPhase();
-							}
-						}
-						owner.PlaySound("warcry");
-					}
-				}
-				else if (EClass._zone is Zone_DungeonMino)
-				{
-					EClass._zone.SetBGM(107);
-				}
+				ShowBossText();
 			}
 			if (owner.Chara.host == null)
 			{

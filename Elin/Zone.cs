@@ -43,6 +43,9 @@ public class Zone : Spatial, ICardParent, IInspect
 	public ElementContainerZone elements = new ElementContainerZone();
 
 	[JsonProperty]
+	public ElementContainerField fieldElements = new ElementContainerField();
+
+	[JsonProperty]
 	public MapBounds bounds;
 
 	[JsonProperty]
@@ -1097,6 +1100,10 @@ public class Zone : Spatial, ICardParent, IInspect
 			base.visitCount++;
 		}
 		base.version = EClass.core.version.GetInt();
+		if (fieldElements.dict.Count() > 0)
+		{
+			Tutorial.Reserve("field");
+		}
 	}
 
 	public void Revive()
@@ -1952,6 +1959,11 @@ public class Zone : Spatial, ICardParent, IInspect
 		return AddCard(CharaGen.Create(id), x, z) as Chara;
 	}
 
+	public Chara AddChara(string id, Point p)
+	{
+		return AddChara(id, p.x, p.z);
+	}
+
 	public Card AddThing(string id, int x, int z)
 	{
 		return AddCard(ThingGen.Create(id), x, z);
@@ -2726,6 +2738,14 @@ public class Zone : Spatial, ICardParent, IInspect
 		return null;
 	}
 
+	public Chara SpawnMob(string id, Point pos = null)
+	{
+		return SpawnMob(pos, new SpawnSetting
+		{
+			id = id
+		});
+	}
+
 	public Chara SpawnMob(Point pos = null, SpawnSetting setting = null)
 	{
 		if (setting == null)
@@ -2854,6 +2874,16 @@ public class Zone : Spatial, ICardParent, IInspect
 			chara.c_bossType = BossType.Evolved;
 		}
 		return chara;
+	}
+
+	public bool HasField(int idEle)
+	{
+		return fieldElements.Has(idEle);
+	}
+
+	public void SetFieldEffect(int idEle, int a)
+	{
+		fieldElements.SetBase(idEle, a);
 	}
 
 	public void RefreshElectricity()

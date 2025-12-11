@@ -1765,7 +1765,15 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (id == "mech_scarab" && (isSynced || pos.cell.light > 0 || (!EClass._map.IsIndoor && !pos.cell.HasRoof && !EClass.world.date.IsNight)))
+		string text = id;
+		if (!(text == "mech_scarab"))
+		{
+			if (text == "spider_queen" && (pos.cell.light > 0 || pos.IsSunLit))
+			{
+				return false;
+			}
+		}
+		else if (isSynced || pos.cell.light > 0 || (!EClass._map.IsIndoor && !pos.cell.HasRoof && !EClass.world.date.IsNight))
 		{
 			return false;
 		}
@@ -3868,17 +3876,30 @@ public class Chara : Card, IPathfindWalker
 				}
 			}
 		}
-		if (id == "tsunami")
+		string text = id;
+		if (!(text == "cocoon"))
 		{
-			if (elements.Base(79) < 30)
+			if (text == "tsunami")
 			{
-				Die();
+				if (elements.Base(79) < 30)
+				{
+					Die();
+					return;
+				}
+				if (IsInCombat)
+				{
+					elements.SetTo(79, elements.Base(79) * 3 / 4);
+				}
+			}
+		}
+		else
+		{
+			if (1.0001f - (float)base.hp / (float)MaxHP > EClass.rndf(1f))
+			{
+				HatchEgg();
 				return;
 			}
-			if (IsInCombat)
-			{
-				elements.SetTo(79, elements.Base(79) * 3 / 4);
-			}
+			consumeTurn = true;
 		}
 		if (!preventRegen)
 		{
@@ -4837,6 +4858,18 @@ public class Chara : Card, IPathfindWalker
 				flag = false;
 			}
 			break;
+		case "azzrasizzle":
+			if (onCreate)
+			{
+				EQ_ID("staff_magius");
+			}
+			break;
+		case "robot":
+			if (onCreate)
+			{
+				EQ_ID("sword_katana");
+			}
+			break;
 		}
 		if (!TryEquipRanged())
 		{
@@ -5607,6 +5640,16 @@ public class Chara : Card, IPathfindWalker
 		}
 		switch (id)
 		{
+		case "azzrasizzle":
+			num = 5;
+			flag = (flag2 = true);
+			EClass.Sound.StopBGM(3f);
+			EClass._zone.SetBGM(1, refresh: false);
+			if (EClass.game.quests.GetPhase<QuestIntoDarkness>() == 5)
+			{
+				EClass.game.quests.Get<QuestIntoDarkness>().UpdateOnTalk();
+			}
+			break;
 		case "vernis_boss":
 			num = 5;
 			flag = (flag2 = true);
@@ -5780,6 +5823,11 @@ public class Chara : Card, IPathfindWalker
 			EClass.player.ModKarma(-1);
 		}
 		t.PlayEffect("kick");
+	}
+
+	public bool UseAbility(int idAct, Card tc = null, Point pos = null, bool pt = false)
+	{
+		return UseAbility(elements.GetElement(idAct)?.act ?? ACT.Create(idAct), tc, pos, pt);
 	}
 
 	public bool UseAbility(string idAct, Card tc = null, Point pos = null, bool pt = false)
@@ -6050,6 +6098,11 @@ public class Chara : Card, IPathfindWalker
 		{
 			RemoveCondition<ConInvisibility>();
 			RemoveCondition<ConDark>();
+		}
+		if (!base.IsPCFactionOrMinion && a.HasTag("specialAbility"))
+		{
+			string name = a.Name;
+			renderer.Say("| " + name + " ");
 		}
 		return flag2;
 		void ForeachEnemy(Action<Chara> action)
@@ -9273,9 +9326,9 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (conditions[j].CanStack(c))
 			{
-				if (conditions[j].WillOverride)
+				if (conditions[j].ShouldOverride(c))
 				{
-					if (num2 > conditions[j].value)
+					if (num2 > conditions[j].value || num2 * conditions[j].value < 0)
 					{
 						conditions[j].Kill(silent: true);
 						continue;

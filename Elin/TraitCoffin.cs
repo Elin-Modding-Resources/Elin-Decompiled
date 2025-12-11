@@ -9,6 +9,6 @@ public class TraitCoffin : TraitContainer
 			ThingGen.CreateTreasureContent(owner.Thing, lv, TreasureType.RandomChest, clearContent: true);
 			return;
 		}
-		owner.c_idRefCard = EClass.sources.charas.rows.Where((SourceChara.Row r) => r.race == "zombie" || r.race == "vampire").RandomItem().id;
+		PutChara(EClass.sources.charas.rows.Where((SourceChara.Row r) => r.race == "zombie" || r.race == "vampire").RandomItem().id);
 	}
 }

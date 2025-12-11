@@ -397,6 +397,31 @@ public class DramaOutcome : EMono
 		EMono._zone.AddChara("swordkeeper", 45, 52);
 	}
 
+	public void event_az()
+	{
+		Chara chara = EMono._zone.AddChara("azzrasizzle", new Point(11, 15).GetNearestPoint(allowBlock: false, allowChara: false));
+		chara.LookAt(EMono.pc);
+		for (int i = 0; i < 6; i++)
+		{
+			EMono._zone.AddChara("cocoon", chara.pos.GetRandomPointInRadius(3, 5, requireLos: false, allowChara: false)?.GetNearestPoint(allowBlock: false, allowChara: false) ?? chara.pos);
+		}
+	}
+
+	public void event_az2()
+	{
+		EMono._map.FindChara("azzrasizzle")?.TalkRaw("azaz".lang());
+	}
+
+	public void event_az3()
+	{
+		Chara chara = EMono._map.FindChara("azzrasizzle");
+		if (chara != null)
+		{
+			chara.DoHostileAction(EMono.pc);
+			chara.UseAbility(6801);
+		}
+	}
+
 	public void upgrade_miscreation()
 	{
 		Chara chara = EMono.pc.party.members.Find((Chara c) => !c.IsPC && c.HasElement(1248));

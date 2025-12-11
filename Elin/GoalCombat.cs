@@ -513,10 +513,14 @@ public class GoalCombat : Goal
 		foreach (ItemAbility ability in abilities)
 		{
 			Act act = ability.act;
+			if (act.id == 8801 && owner.race.id == "spider" && EClass._zone.HasField(10000) && !owner.IsPCFactionOrMinion)
+			{
+				ability.act = ACT.Create(50413);
+			}
 			ability.priority = 0;
 			ability.tg = null;
 			ability.pt = false;
-			if (EClass.rnd(100) >= ability.chance || (isBlind && ability.act.HasTag("reqSight")) || (owner.isBerserk && !(act is ActMelee) && !(act is ActRanged) && !(act is ActBreathe) && !(act is ActThrow)))
+			if (EClass.rnd(100) >= ability.chance || (isBlind && act.HasTag("reqSight")) || (owner.isBerserk && !(act is ActMelee) && !(act is ActRanged) && !(act is ActBreathe) && !(act is ActThrow)))
 			{
 				continue;
 			}
@@ -538,7 +542,7 @@ public class GoalCombat : Goal
 				num = 50;
 				break;
 			case "item":
-				num = (ability.act as ActItem).BuildAct(owner);
+				num = (act as ActItem).BuildAct(owner);
 				break;
 			case "wait":
 				if (owner.IsPCParty)
@@ -656,7 +660,7 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag6 = ability.act is ActBolt;
+				bool flag6 = act is ActBolt;
 				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
@@ -768,6 +772,9 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
+				num = 1000;
+				break;
+			case "summonSpecial2":
 				num = 1000;
 				break;
 			case "suicide":

@@ -737,7 +737,8 @@ public class DramaManager : EMono
 			{
 				AddEvent(delegate
 				{
-					EMono.player.ModKeyItem(p2);
+					int num2 = p3.ToInt();
+					EMono.player.ModKeyItem(p2, (num2 == 0) ? 1 : num2);
 				});
 			}
 			break;
@@ -787,6 +788,18 @@ public class DramaManager : EMono
 				EMono.BranchOrHomeBranch.resources.Get(p2).Mod(p3.ToInt());
 			});
 			break;
+		case "bossText":
+			AddEvent(delegate
+			{
+				foreach (Chara chara3 in EMono._map.charas)
+				{
+					if (chara3.bossText)
+					{
+						chara3.renderer.ShowBossText();
+					}
+				}
+			});
+			break;
 		case "shake":
 			AddEvent(delegate
 			{
@@ -816,8 +829,8 @@ public class DramaManager : EMono
 			AddEvent(delegate
 			{
 				Thing thing = EMono.pc.things.Find(p2);
-				int num2 = p3.ToInt();
-				thing?.ModNum((num2 == 0) ? (-1) : (-num2));
+				int num3 = p3.ToInt();
+				thing?.ModNum((num3 == 0) ? (-1) : (-num3));
 			});
 			break;
 		case "destroyItem":

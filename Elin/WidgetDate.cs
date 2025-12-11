@@ -30,9 +30,15 @@ public class WidgetDate : Widget
 
 	public RectTransform rectClock;
 
+	public RectTransform rectFieldEffect;
+
+	public GridLayoutGroup gridFieldEffect;
+
 	public Image imageHour;
 
 	public Color colorFestival;
+
+	public UIButton moldButtonFieldEffect;
 
 	public Extra extra => base.config.extra as Extra;
 
@@ -144,6 +150,35 @@ public class WidgetDate : Widget
 		this.Rect().SetPivot(flag ? 1 : 0, 0f);
 		rectClock.SetAnchor(flag ? 1 : 0, 1f, flag ? 1 : 0, 1f);
 		rectClock.anchoredPosition = new Vector2(flag ? (-60) : 60, -75f);
+		rectFieldEffect.SetAnchor(flag ? 1 : 0, 1f, flag ? 1 : 0, 1f);
+		rectFieldEffect.anchoredPosition = new Vector2(flag ? (-120) : 120, -75f);
+		gridFieldEffect.startCorner = (flag ? GridLayoutGroup.Corner.UpperRight : GridLayoutGroup.Corner.UpperLeft);
+		gridFieldEffect.childAlignment = (flag ? TextAnchor.UpperRight : TextAnchor.UpperLeft);
+		foreach (UIButton componentsInDirectChild in gridFieldEffect.GetComponentsInDirectChildren<UIButton>())
+		{
+			if (!(componentsInDirectChild.refObj is FieldEffect fieldEffect) || fieldEffect.owner != EMono._zone.fieldElements || fieldEffect.Value == 9)
+			{
+				UnityEngine.Object.DestroyImmediate(componentsInDirectChild.gameObject);
+			}
+		}
+		foreach (Element e in EMono._zone.fieldElements.dict.Values)
+		{
+			FieldEffect f = e as FieldEffect;
+			if (f.button == null)
+			{
+				UIButton uIButton = Util.Instantiate(moldButtonFieldEffect, gridFieldEffect);
+				f.button = uIButton;
+				uIButton.refObj = e;
+			}
+			f.button.icon.sprite = f.GetSprite();
+			f.button.SetTooltip("note", delegate(UITooltip t)
+			{
+				e.WriteNote(t.note, EMono._zone.fieldElements, delegate
+				{
+					e._WriteNote(t.note, EMono.pc, f);
+				});
+			});
+		}
 		textTime.RebuildLayout();
 	}
 

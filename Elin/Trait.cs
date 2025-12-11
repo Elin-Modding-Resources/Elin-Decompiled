@@ -1529,7 +1529,7 @@ public class Trait : EClass
 			NoRestock(ThingGen.Create("lucky_coin").SetNum(10));
 			NoRestock(ThingGen.CreateSkillbook(6662));
 			NoRestock(ThingGen.CreateSkillbook(6664));
-			Add("book_exp", 3, 0);
+			Add("book_exp", 10, 0);
 			break;
 		case ShopType.Copy:
 		{
@@ -1721,7 +1721,7 @@ public class Trait : EClass
 						{
 							break;
 						}
-						if (!owner.Chara.HasElement(287))
+						if (!owner.Chara.elements.HasBase(287))
 						{
 							owner.Chara.elements.SetBase(287, (!EClass.debug.enable) ? 1 : 50);
 						}

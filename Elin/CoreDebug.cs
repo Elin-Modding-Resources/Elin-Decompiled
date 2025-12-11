@@ -675,6 +675,10 @@ public class CoreDebug : EScriptable
 			EClass.game.quests.Add("into_darkness");
 			EClass.game.quests.Add("demitas_spellwriter");
 			EClass.game.quests.Add("negotiation_darkness");
+			EClass.game.quests.Start("into_darkness", EClass.game.cards.globalCharas.Find("kettle"));
+			EClass.game.quests.Get<QuestIntoDarkness>().phase = 4;
+			EClass.player.ModKeyItem("potion_sorin", 1, msg: false);
+			EClass.player.ModKeyItem("potion_farris", 1, msg: false);
 		}
 		static Thing AddAbility(string id)
 		{
@@ -1012,25 +1016,18 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
 		{
-			for (int j = 0; j < 10; j++)
-			{
-				EClass._zone.SpawnMob(EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false), new SpawnSetting
-				{
-					id = "gagu",
-					isBoss = true,
-					fixedLv = EClass._zone.DangerLv
-				});
-			}
+			string text2 = new string[4] { "エターナルフォースブリザード", "Eternal Force Blizzard", "ぬるぽ", "Null Pointer" }.RandomItem();
+			EClass.pc.renderer.Say("| " + text2 + " ");
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F5))
 		{
-			string text2 = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
-			if (text2 != Game.id)
+			string text3 = (Input.GetKey(KeyCode.LeftControl) ? "quick3" : (Input.GetKey(KeyCode.LeftShift) ? "quick2" : "quick"));
+			if (text3 != Game.id)
 			{
-				IO.DeleteDirectory(CorePath.RootSave + text2);
-				IO.CopyAll(CorePath.RootSave + Game.id, CorePath.RootSave + text2);
-				Game.id = text2;
+				IO.DeleteDirectory(CorePath.RootSave + text3);
+				IO.CopyAll(CorePath.RootSave + Game.id, CorePath.RootSave + text3);
+				Game.id = text3;
 			}
 			EClass.game.isCloud = false;
 			EClass.game.Save();
@@ -1086,7 +1083,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int k = 0; k < advanceMin; k++)
+				for (int j = 0; j < advanceMin; j++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}

@@ -1,6 +1,9 @@
 public class BaseDebuff : Condition
 {
-	public override bool WillOverride => true;
+	public override bool ShouldOverride(Condition c)
+	{
+		return true;
+	}
 
 	public override int GetPhase()
 	{
