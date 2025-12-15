@@ -9328,7 +9328,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (conditions[j].ShouldOverride(c))
 				{
-					if (num2 > conditions[j].value || num2 * conditions[j].value < 0)
+					if (num2 > conditions[j].value || num2 * conditions[j].value < 0 || c is ConWeapon)
 					{
 						conditions[j].Kill(silent: true);
 						continue;
