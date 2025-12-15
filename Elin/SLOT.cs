@@ -4,13 +4,15 @@ public class SLOT
 
 	public const int torso = 32;
 
-	public const int foot = 39;
-
 	public const int lightsource = 45;
 
-	public const int arm = 34;
+	public const int foot = 39;
 
 	public const int leg = 38;
+
+	public const int ammo = 42;
+
+	public const int arm = 34;
 
 	public const int waist = 37;
 
@@ -24,17 +26,15 @@ public class SLOT
 
 	public const int finger = 36;
 
+	public const int token = 43;
+
 	public const int range = 41;
 
 	public const int head = 30;
 
-	public const int token = 43;
-
-	public const int ammo = 42;
-
 	public static readonly int[] IDS = new int[16]
 	{
-		44, 32, 39, 45, 34, 38, 37, 35, 40, 33,
-		31, 36, 41, 30, 43, 42
+		44, 32, 45, 39, 38, 42, 34, 37, 35, 40,
+		33, 31, 36, 43, 41, 30
 	};
 }

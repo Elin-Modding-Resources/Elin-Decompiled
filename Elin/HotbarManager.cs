@@ -45,19 +45,26 @@ public class HotbarManager : EClass
 			{
 				id = "LayerJournal"
 			});
-			if (EClass.core.IsGameStarted && EClass._zone.CanEnterBuildModeAnywhere)
+			if (EClass.core.IsGameStarted)
 			{
-				hotbar.SetItem(new HotItemActionMode
+				if (EClass._zone.CanEnterBuildModeAnywhere)
 				{
-					id = "Inspect"
-				});
-			}
-			if (EClass.core.IsGameStarted && EClass._zone.IsRegion)
-			{
-				hotbar.SetItem(new HotItemLayer
+					hotbar.SetItem(new HotItemActionMode
+					{
+						id = "Inspect"
+					});
+				}
+				if (EClass._zone.IsRegion)
 				{
-					id = "LayerTravel"
-				});
+					hotbar.SetItem(new HotItemLayer
+					{
+						id = "LayerTravel"
+					});
+				}
+				if (EClass._zone.IsUserZone)
+				{
+					hotbar.SetItem(new HotItemActionExitMap());
+				}
 			}
 			break;
 		case 3:

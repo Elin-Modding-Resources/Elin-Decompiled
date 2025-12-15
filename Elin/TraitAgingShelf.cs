@@ -11,6 +11,9 @@ public class TraitAgingShelf : TraitBrewery
 
 	public override void OnProduce(Card c)
 	{
-		c.elements.SetTo(73, -10);
+		if (c.Evalue(73) >= -30)
+		{
+			c.elements.SetTo(73, -10);
+		}
 	}
 }

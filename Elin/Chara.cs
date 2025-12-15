@@ -3894,7 +3894,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			if (1.0001f - (float)base.hp / (float)MaxHP > EClass.rndf(1f))
+			if (!EClass._zone.IsRegion && !IsDisabled && 1.0001f - (float)base.hp / (float)MaxHP > EClass.rndf(1f) && !pos.IsSunLit)
 			{
 				HatchEgg();
 				return;
@@ -7869,7 +7869,7 @@ public class Chara : Card, IPathfindWalker
 
 	public bool TryUse(Thing t)
 	{
-		if (t.id == "338")
+		if (t.id == "338" && t.blessedState >= BlessedState.Normal)
 		{
 			Thing thing = things.Find((Thing a) => a.IsEquipmentOrRanged && !a.isAcidproof);
 			if (thing != null)

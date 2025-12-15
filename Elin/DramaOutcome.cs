@@ -400,6 +400,7 @@ public class DramaOutcome : EMono
 	public void event_az()
 	{
 		Chara chara = EMono._zone.AddChara("azzrasizzle", new Point(11, 15).GetNearestPoint(allowBlock: false, allowChara: false));
+		chara.ScaleByPrincipal();
 		chara.LookAt(EMono.pc);
 		for (int i = 0; i < 6; i++)
 		{

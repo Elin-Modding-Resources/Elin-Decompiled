@@ -5594,7 +5594,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (c.Chara.IsUndead)
 		{
-			elements.ModBase(73, -20);
+			elements.ModBase(73, (c.Chara.race.id == "undeadgod") ? (-90) : (-20));
 		}
 		isWeightChanged = true;
 		c_weight = race.height * 4 + 100;
@@ -5806,7 +5806,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		AddBlood(12, (uid % 2 == 0) ? (-1) : 3);
 		Say("egghatch");
 		PlaySound("egghatch");
-		Destroy();
+		if (c_bossType == BossType.none)
+		{
+			Destroy();
+		}
+		if (!isDestroyed)
+		{
+			Die();
+			if (isChara && !Chara.isDead)
+			{
+				hp = 0;
+				Chara.AddCondition<ConFaint>(1000, force: true);
+			}
+		}
 		for (int i = 0; i < 1 + EClass.rnd(num + 1); i++)
 		{
 			EClass._zone.SpawnMob(array[num], point.GetNearestPoint(allowBlock: false, allowChara: false));

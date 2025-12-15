@@ -70,43 +70,13 @@ public class Tactics : EClass
 
 	public int P_Party => source.party;
 
-	public int P_Melee
-	{
-		get
-		{
-			if (!owner.IsPC)
-			{
-				return 50;
-			}
-			return source.melee;
-		}
-	}
+	public int P_Melee => source.melee;
 
-	public int P_Range
-	{
-		get
-		{
-			if (!owner.IsPC)
-			{
-				return 50;
-			}
-			return source.range;
-		}
-	}
+	public int P_Range => source.range;
 
 	public int P_Heal => source.heal;
 
-	public int P_Spell
-	{
-		get
-		{
-			if (!owner.IsPC)
-			{
-				return 50;
-			}
-			return source.spell;
-		}
-	}
+	public int P_Spell => source.spell;
 
 	public int P_Buff => source.buff;
 

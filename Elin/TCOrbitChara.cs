@@ -10,6 +10,8 @@ public class TCOrbitChara : TCOrbit
 
 	public SpriteRenderer barHP;
 
+	public SpriteRenderer bgMP;
+
 	public SpriteRenderer bgHP;
 
 	public SpriteRenderer barHP2;
@@ -132,10 +134,21 @@ public class TCOrbitChara : TCOrbit
 			iconStatus.sprite = EMono.core.refs.spritesEmo[(int)emo];
 		}
 		iconStatus.SetActive(showIcon);
+		bool flag2 = owner.isChara && owner.HasElement(1421);
 		float num = (float)owner.hp / (float)owner.MaxHP;
+		if (flag2)
+		{
+			num = (float)(owner.hp + owner.mana.value) / (float)(owner.MaxHP + owner.mana.max);
+		}
 		showHP = num < 0.9f && (owner.IsPCParty || owner.IsHostile() || (owner.enemy != null && owner.enemy.IsPCParty));
 		if (showHP)
 		{
+			if (flag2)
+			{
+				float x = (float)owner.mana.max / (float)(owner.mana.max + owner.MaxHP);
+				bgMP.SetActive(flag2);
+				bgMP.transform.localScale = new Vector3(x, 1f, 1f);
+			}
 			barHP.transform.SetLocalScaleX(Mathf.Max(0f, num));
 			barHP.SetActive(enable: true);
 			bgHP.SetActive(enable: true);
@@ -144,6 +157,10 @@ public class TCOrbitChara : TCOrbit
 		{
 			barHP.SetActive(enable: false);
 			bgHP.SetActive(enable: false);
+			if ((bool)bgMP)
+			{
+				bgMP.SetActive(enable: false);
+			}
 		}
 		if ((bool)barHP2)
 		{

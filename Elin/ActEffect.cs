@@ -586,8 +586,11 @@ public class ActEffect : EClass
 					{
 						foreach (Chara item in EClass._map.charas.Where((Chara _c) => _c.id == "cocoon").ToList())
 						{
-							item.pos.PlayEffect("darkwomb3");
-							item.HatchEgg();
+							if (!item.pos.IsSunLit)
+							{
+								item.pos.PlayEffect("darkwomb3");
+								item.HatchEgg();
+							}
 						}
 					}
 					CC.PlayEffect("darkwomb");

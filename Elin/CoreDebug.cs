@@ -961,6 +961,7 @@ public class CoreDebug : EScriptable
 			{
 				EClass.pc.Pick(CraftUtil.MakeBloodMeal(EClass.pc, targetChara));
 				EClass.pc.Pick(CraftUtil.MakeLoveLunch(targetChara));
+				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
 				TraitFoodEggFertilized.Incubate(targetChara.MakeEgg(effect: false, 1, addToZone: false, 100), targetChara.pos.GetNearestPoint(allowBlock: false, allowChara: false));
 			}
 			targetChara.ScaleByPrincipal();
