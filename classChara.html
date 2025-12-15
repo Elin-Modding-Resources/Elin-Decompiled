@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.247 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.247 Stable Patch 1</span>
    </div>
   </td>
  </tr>
@@ -3366,7 +3366,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 9328</span>            {</div>
 <div class="line"><span class="lineno"> 9329</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>[j].ShouldOverride(c))</div>
 <div class="line"><span class="lineno"> 9330</span>                {</div>
-<div class="line"><span class="lineno"> 9331</span>                    <span class="keywordflow">if</span> (num2 &gt; <a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>[j].value || num2 * <a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>[j].value &lt; 0)</div>
+<div class="line"><span class="lineno"> 9331</span>                    <span class="keywordflow">if</span> (num2 &gt; <a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>[j].value || num2 * <a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>[j].value &lt; 0 || c is <a class="code hl_class" href="classConWeapon.html">ConWeapon</a>)</div>
 <div class="line"><span class="lineno"> 9332</span>                    {</div>
 <div class="line"><span class="lineno"> 9333</span>                        <a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>[j].Kill(silent: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 9334</span>                        <span class="keywordflow">continue</span>;</div>
@@ -3454,6 +3454,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassChara_html_ad385d988902ef0fdac6b1cb15c7cb3a0"><div class="ttname"><a href="classChara.html#ad385d988902ef0fdac6b1cb15c7cb3a0">Chara.ResistCon</a></div><div class="ttdeci">void ResistCon(Condition con)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09668">Chara.cs:9668</a></div></div>
 <div class="ttc" id="aclassConBleed_html"><div class="ttname"><a href="classConBleed.html">ConBleed</a></div><div class="ttdef"><b>Definition:</b> <a href="ConBleed_8cs_source.html#l00003">ConBleed.cs:4</a></div></div>
 <div class="ttc" id="aclassConBurning_html"><div class="ttname"><a href="classConBurning.html">ConBurning</a></div><div class="ttdef"><b>Definition:</b> <a href="ConBurning_8cs_source.html#l00001">ConBurning.cs:2</a></div></div>
+<div class="ttc" id="aclassConWeapon_html"><div class="ttname"><a href="classConWeapon.html">ConWeapon</a></div><div class="ttdef"><b>Definition:</b> <a href="ConWeapon_8cs_source.html#l00003">ConWeapon.cs:4</a></div></div>
 <div class="ttc" id="aclassCondition_html_ae7c191812d0bdea935181dfe736e6db1"><div class="ttname"><a href="classCondition.html#ae7c191812d0bdea935181dfe736e6db1">Condition.Create</a></div><div class="ttdeci">static Condition Create(string alias, int power=100, Action&lt; Condition &gt; onCreate=null)</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00046">Condition.cs:46</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00088">ELEMENT.cs:89</a></div></div>
