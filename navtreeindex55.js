@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"classCurrency.html#a2eaa29e45ed9339b13f687be2450c6ae":[1,0,423,0],
+"classCursorInfo.html":[1,0,424],
 "classCursorInfo.html#a46b3bba4ad12c46ef0110575288a045b":[1,0,424,2],
 "classCursorInfo.html#a5caa7f76305fa9d935692a5ea31bf9c0":[1,0,424,0],
 "classCursorInfo.html#ab7943f2dfcc9678b312d452f329c9c6a":[1,0,424,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "classDepthEffect.html#a3677df6dc4fa7268bf25ac6e41ec01cd":[1,0,433,6],
 "classDepthEffect.html#a697d6aaf58b43a007ed77f6657a529fb":[1,0,433,15],
 "classDepthEffect.html#a7a550a1c7c397650dfbecef557e05176":[1,0,433,1],
-"classDepthEffect.html#a7d7027d8f65c192f9327000e56c0140a":[1,0,433,8],
-"classDepthEffect.html#a7dc1de040191ffa5a9778dc8950fdbff":[1,0,433,13],
-"classDepthEffect.html#a92fd0d81274122782c83bc0dc26c0075":[1,0,433,2]
+"classDepthEffect.html#a7d7027d8f65c192f9327000e56c0140a":[1,0,433,8]
 };

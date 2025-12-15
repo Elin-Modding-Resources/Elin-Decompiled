@@ -613,6 +613,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "HotItem.cs", "HotItem_8cs.html", "HotItem_8cs" ],
     [ "HotItemAct.cs", "HotItemAct_8cs.html", "HotItemAct_8cs" ],
     [ "HotItemActionAudoDump.cs", "HotItemActionAudoDump_8cs.html", "HotItemActionAudoDump_8cs" ],
+    [ "HotItemActionExitMap.cs", "HotItemActionExitMap_8cs.html", "HotItemActionExitMap_8cs" ],
     [ "HotItemActionMode.cs", "HotItemActionMode_8cs.html", "HotItemActionMode_8cs" ],
     [ "HotItemActionSleep.cs", "HotItemActionSleep_8cs.html", "HotItemActionSleep_8cs" ],
     [ "HotItemChara.cs", "HotItemChara_8cs.html", "HotItemChara_8cs" ],

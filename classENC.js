@@ -62,6 +62,7 @@ var classENC =
     [ "negateBlind", "classENC.html#a517d56a3f192912ced970e20a5acbef8", null ],
     [ "negateConfusion", "classENC.html#a180bb6befe36295721edb545931f5436", null ],
     [ "negateFear", "classENC.html#a5efdf5b041dc0829e9d547bf399ef9dc", null ],
+    [ "negateGravity", "classENC.html#a44a247de3a69519a739a2625a38d3add", null ],
     [ "negateNeckHunt", "classENC.html#a4e721b575d3389b927ec9adb481d4ca8", null ],
     [ "negateParalysis", "classENC.html#a33873a23355fa4e75368a61a08ecbc92", null ],
     [ "negateParry", "classENC.html#a4a46f93dc4c5469570aa05a730b60861", null ],

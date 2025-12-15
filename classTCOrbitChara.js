@@ -7,6 +7,7 @@ var classTCOrbitChara =
     [ "barHP2", "classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6", null ],
     [ "bgHP", "classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0", null ],
     [ "bgHP2", "classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433", null ],
+    [ "bgMP", "classTCOrbitChara.html#a2191486c0e8efed6e3c712dda260c41d", null ],
     [ "goIcon", "classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da", null ],
     [ "iconRelation", "classTCOrbitChara.html#ada37c4ed77cb850ac2235b10e83101cf", null ],
     [ "iconStatus", "classTCOrbitChara.html#a07328f0dedbf3fea135eee217dfe16be", null ],

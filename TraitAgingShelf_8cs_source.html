@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.246 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.247 Stable</span>
    </div>
   </td>
  </tr>
@@ -105,11 +105,15 @@ $(document).ready(function(){initNavTree('TraitAgingShelf_8cs_source.html',''); 
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classTraitAgingShelf.html#a1ab8af62a74e72888e1abc8108c02a31">   12</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classTraitAgingShelf.html#a1ab8af62a74e72888e1abc8108c02a31">OnProduce</a>(<a class="code hl_class" href="classCard.html">Card</a> c)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc1f57c6a3ce32eb35a41af7c528cee6">SetTo</a>(73, -10);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">if</span> (c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(73) &gt;= -30)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            c.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#acc1f57c6a3ce32eb35a41af7c528cee6">SetTo</a>(73, -10);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00041">Card.cs:41</a></div></div>
+<div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02571">Card.cs:2571</a></div></div>
 <div class="ttc" id="aclassElementContainer_html_acc1f57c6a3ce32eb35a41af7c528cee6"><div class="ttname"><a href="classElementContainer.html#acc1f57c6a3ce32eb35a41af7c528cee6">ElementContainer.SetTo</a></div><div class="ttdeci">void SetTo(int id, int v)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00389">ElementContainer.cs:389</a></div></div>
 <div class="ttc" id="aclassTraitAgingShelf_html"><div class="ttname"><a href="classTraitAgingShelf.html">TraitAgingShelf</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitAgingShelf_8cs_source.html#l00001">TraitAgingShelf.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitAgingShelf_html_a1ab8af62a74e72888e1abc8108c02a31"><div class="ttname"><a href="classTraitAgingShelf.html#a1ab8af62a74e72888e1abc8108c02a31">TraitAgingShelf.OnProduce</a></div><div class="ttdeci">override void OnProduce(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitAgingShelf_8cs_source.html#l00012">TraitAgingShelf.cs:12</a></div></div>

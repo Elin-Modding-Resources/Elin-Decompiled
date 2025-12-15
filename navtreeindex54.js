@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"classCoreRef_1_1Icons.html#a5732fe0109865f65a8ac54f1763f5bfe":[1,0,407,4,5],
+"classCoreRef_1_1Icons.html#a5c8295a7830b12a4a0882a2c2df175d7":[1,0,407,4,11],
 "classCoreRef_1_1Icons.html#a6ac3d6db421a2c20f52940426ff58ce7":[1,0,407,4,6],
 "classCoreRef_1_1Icons.html#a6ca2f24f966e857e84bb85b8d24fac13":[1,0,407,4,15],
 "classCoreRef_1_1Icons.html#a72b8475b72cbdd7966298502f91e1be9":[1,0,407,4,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "classCritterRoachSmall.html#a5a58f1a53b6fd34c599409545326998e":[1,0,420,0],
 "classCritterRoachSmall.html#ab1639e877d259f9af25a0a8d99c97ca5":[1,0,420,2],
 "classCulture.html":[1,0,422],
-"classCurrency.html":[1,0,423],
-"classCurrency.html#a2eaa29e45ed9339b13f687be2450c6ae":[1,0,423,0],
-"classCursorInfo.html":[1,0,424]
+"classCurrency.html":[1,0,423]
 };

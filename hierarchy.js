@@ -2473,6 +2473,7 @@ var hierarchy =
       [ "HotItem", "classHotItem.html", [
         [ "HotAction", "classHotAction.html", [
           [ "HotItemActionAudoDump", "classHotItemActionAudoDump.html", null ],
+          [ "HotItemActionExitMap", "classHotItemActionExitMap.html", null ],
           [ "HotItemActionSleep", "classHotItemActionSleep.html", null ],
           [ "HotItemEQSet", "classHotItemEQSet.html", null ],
           [ "HotItemFocusPos", "classHotItemFocusPos.html", null ],
