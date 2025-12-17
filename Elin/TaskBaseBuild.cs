@@ -15,7 +15,7 @@ public class TaskBaseBuild : TaskDesignation
 			}
 			foreach (Thing thing in pos.Things)
 			{
-				if (thing.trait is T)
+				if (thing != c && thing.trait is T)
 				{
 					return false;
 				}

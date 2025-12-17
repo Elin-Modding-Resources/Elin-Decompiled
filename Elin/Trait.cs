@@ -2357,7 +2357,7 @@ public class Trait : EClass
 					}
 					return Create("firework");
 				case ShopType.Festival:
-					if (EClass.rnd(3) == 0)
+					if (EClass.rnd(3) != 0)
 					{
 						if (IsFestival("olvina"))
 						{
@@ -2369,7 +2369,11 @@ public class Trait : EClass
 						}
 						if (IsFestival("noyel"))
 						{
-							return Create(new string[9] { "1127", "1128", "xmas_sled", "xmas_bigbag", "xmas_bigbox", "xmas_blackcat", "xmas_blackcat", "xmas_jure", "xmas_crown" }.RandomItem());
+							return Create(new string[13]
+							{
+								"1127", "1128", "xmas_sled", "xmas_bigbag", "xmas_bigbox", "xmas_blackcat", "xmas_blackcat", "xmas_jure", "xmas_crown", "xmas_ball",
+								"xmas_ball", "xmas_ball", "xmas_string"
+							}.RandomItem());
 						}
 					}
 					if (EClass.rnd(2) == 0)

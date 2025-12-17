@@ -119,8 +119,13 @@ public class DramaOutcome : EMono
 		quest.ChangePhase(5);
 		Chara chara = EMono.game.cards.globalCharas.Find("fiama");
 		EMono._zone.AddCard(ThingGen.CreateScroll(8220).Identify(show: false), chara.pos);
-		chara.MoveZone(EMono.game.StartZone);
+		chara.MoveHome(EMono.game.StartZone);
 		chara.RemoveEditorTag(EditorTag.AINoMove);
+		chara = EMono.game.cards.globalCharas.Find("ashland");
+		EMono.ui.Say("Possible mod bug: 404 Ashland Not Found");
+		chara = CharaGen.Create("ashland");
+		chara.SetGlobal();
+		chara.MoveHome(EMono.game.StartZone);
 	}
 
 	public void QuestExploration_AfterComplete()

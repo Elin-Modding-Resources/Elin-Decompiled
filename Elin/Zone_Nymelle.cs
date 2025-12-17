@@ -104,6 +104,12 @@ public class Zone_Nymelle : Zone_QuestDungeon
 		if (IsCrystalLv)
 		{
 			Chara chara = EClass.game.cards.globalCharas.Find("fiama");
+			if (chara == null)
+			{
+				EClass.ui.Say("Possible mod bug: 404 Fiama Not Found");
+				chara = CharaGen.Create("fiama");
+				chara.SetGlobal();
+			}
 			chara.MoveHome(EClass._zone, 43, 67);
 			chara.AddEditorTag(EditorTag.AINoMove);
 		}

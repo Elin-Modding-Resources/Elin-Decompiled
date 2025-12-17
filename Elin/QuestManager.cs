@@ -104,6 +104,11 @@ public class QuestManager : EClass
 	{
 		foreach (Quest item in list)
 		{
+			if (!item.person.hasChara && item is QuestExploration && item.phase == 5 && c.id == "ashland")
+			{
+				EClass.ui.Say("Bug: Quest Ash not found");
+				item.person.uidChara = c.uid;
+			}
 			if (item.person.chara == c && (item.CanUpdateOnTalk(c) || (item.CanAutoAdvance && EClass.debug.autoAdvanceQuest)))
 			{
 				return item.UpdateOnTalk();
