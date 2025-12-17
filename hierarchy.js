@@ -1375,6 +1375,7 @@ var hierarchy =
       ] ],
       [ "TimeTable", "classTimeTable.html", null ],
       [ "Trait", "classTrait.html", [
+        [ "TraitASMR", "classTraitASMR.html", null ],
         [ "TraitAltar", "classTraitAltar.html", [
           [ "TraitAltarAncient", "classTraitAltarAncient.html", null ]
         ] ],

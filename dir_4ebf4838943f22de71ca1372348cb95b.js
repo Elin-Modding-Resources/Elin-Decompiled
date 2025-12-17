@@ -1327,6 +1327,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitAnvil.cs", "TraitAnvil_8cs.html", "TraitAnvil_8cs" ],
     [ "TraitAppraiser.cs", "TraitAppraiser_8cs.html", "TraitAppraiser_8cs" ],
     [ "TraitAshland.cs", "TraitAshland_8cs.html", "TraitAshland_8cs" ],
+    [ "TraitASMR.cs", "TraitASMR_8cs.html", "TraitASMR_8cs" ],
     [ "TraitBait.cs", "TraitBait_8cs.html", "TraitBait_8cs" ],
     [ "TraitBall.cs", "TraitBall_8cs.html", "TraitBall_8cs" ],
     [ "TraitBambi.cs", "TraitBambi_8cs.html", "TraitBambi_8cs" ],

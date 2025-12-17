@@ -1,5 +1,7 @@
 var NAVTREEINDEX90 =
 {
+"classPolicy.html#a0bf7def019b4a281a1f021527b13f3be":[1,0,961,10],
+"classPolicy.html#a19649b133ce3076a1bb18eaa44088ed8":[1,0,961,12],
 "classPolicy.html#a1d46c98afc4faf7b1dc8ee1b5747f1fe":[1,0,961,3],
 "classPolicy.html#a1deb4d4d6b77940beeb756b4bc87ca5b":[1,0,961,11],
 "classPolicy.html#a4b7ff60de211ec5f277fffad12eb0c2a":[1,0,961,9],
@@ -241,13 +243,11 @@ var NAVTREEINDEX90 =
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a20afde2f58f74f7d1926887b6101bd75":[0,4,7,0,0,1],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a74bef68ed4cc6f366907525076bc1ac9":[1,0,7,0,0,3],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a74bef68ed4cc6f366907525076bc1ac9":[0,4,7,0,0,3],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a76b5c37843d7bd3b6ac830f2cccbc1f8":[1,0,7,0,0,0],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a76b5c37843d7bd3b6ac830f2cccbc1f8":[0,4,7,0,0,0],
+"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a76b5c37843d7bd3b6ac830f2cccbc1f8":[1,0,7,0,0,0],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#ad4da7e08fc1774625802bb2ff7e3a9e1":[0,4,7,0,0,2],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#ad4da7e08fc1774625802bb2ff7e3a9e1":[1,0,7,0,0,2],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html":[0,4,7,0,1],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html":[1,0,7,0,1],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[0,4,7,0,1,9],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[1,0,7,0,1,9],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0e86818a95b0f513ff99193459dc7205":[0,4,7,0,1,5]
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[1,0,7,0,1,9]
 };

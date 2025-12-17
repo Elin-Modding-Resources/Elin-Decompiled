@@ -1,5 +1,7 @@
 var NAVTREEINDEX101 =
 {
+"classScreenEffect.html#abb8f89d0c208acb7612acaa4dcaea131":[1,0,1149,6],
+"classScreenEffect.html#aca83400a93b77ce6f3d4b3ea13bd0d07":[1,0,1149,8],
 "classScreenEffect.html#af39001dd6113b3e240c5b372ab266c8c":[1,0,1149,5],
 "classScreenFlash.html":[1,0,1150],
 "classScreenFlash.html#a198d9d42465af3fa45cdbb7eecc211ce":[1,0,1150,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX101 =
 "classSkinAsset__Sprite.html#a12ec7940d34fa4aca8744097c2b40045":[1,0,1175,3],
 "classSkinAsset__Sprite.html#a3fd415e67cf20d3aea93bb042ed4332a":[1,0,1175,2],
 "classSkinAsset__Sprite.html#abc500a418678baf5ab7ddafee4d32f51":[1,0,1175,1],
-"classSkinAsset__Sprite.html#ae4b80c7ef5936b62435cbe0b3c89c960":[1,0,1175,0],
-"classSkinColorProfile.html":[1,0,1176],
-"classSkinColorProfile.html#a0199ea2fe8d1f7530b962c2370ec5e3b":[1,0,1176,26]
+"classSkinAsset__Sprite.html#ae4b80c7ef5936b62435cbe0b3c89c960":[1,0,1175,0]
 };

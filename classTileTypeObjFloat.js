@@ -1,5 +1,6 @@
 var classTileTypeObjFloat =
 [
+    [ "GetMountHeight", "classTileTypeObjFloat.html#abbe90a542794c288c9a9e50daadc5c61", null ],
     [ "AlwaysShowShadow", "classTileTypeObjFloat.html#a826d536093919053f59622be446098f1", null ],
     [ "CanBuiltOnBlock", "classTileTypeObjFloat.html#a4405740c8f2aef82ed0866dc3666d7f3", null ],
     [ "CanStack", "classTileTypeObjFloat.html#aea003124e2651580c1357e6702d013da", null ],
