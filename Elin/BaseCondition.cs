@@ -142,6 +142,11 @@ public class BaseCondition : BaseStats
 		return false;
 	}
 
+	public virtual bool IsOverrideConditionMet(Condition c, int turn)
+	{
+		return turn > value;
+	}
+
 	public virtual bool TryMove(Point p)
 	{
 		return true;

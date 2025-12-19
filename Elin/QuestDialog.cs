@@ -46,7 +46,7 @@ public class QuestDialog : QuestProgression
 			EClass.game.quests.Add("exile_meet", "quru").startDate = EClass.world.date.GetRaw() + 43200;
 			break;
 		case "exile_meet":
-			EClass.Branch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("demitas"), EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false)) as Chara);
+			AddResident("demitas");
 			EClass.game.quests.Add("exile_quru", "quru").startDate = EClass.world.date.GetRaw() + 1440;
 			break;
 		case "exile_quru":
@@ -75,8 +75,8 @@ public class QuestDialog : QuestProgression
 			EClass.game.quests.Add("kettle_join", "loytel").startDate = EClass.world.date.GetRaw() + 1440;
 			break;
 		case "kettle_join":
-			EClass.Branch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("kettle"), EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false)) as Chara);
-			EClass.Branch.AddMemeber(EClass._zone.AddCard(CharaGen.Create("quru"), EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false)) as Chara);
+			AddResident("kettle");
+			AddResident("quru");
 			EClass.game.quests.Add("quru_morning", "loytel").startDate = EClass.world.date.GetRaw() + 1440;
 			break;
 		case "quru_morning":

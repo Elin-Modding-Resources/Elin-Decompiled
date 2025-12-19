@@ -23,6 +23,15 @@ public class ConBuffStats : Condition
 
 	public override bool UseElements => true;
 
+	public override bool IsOverrideConditionMet(Condition c, int turn)
+	{
+		if ((c as ConBuffStats).isDebuff == isDebuff)
+		{
+			return base.IsOverrideConditionMet(c, turn);
+		}
+		return true;
+	}
+
 	public override int EvaluateTurn(int p)
 	{
 		if (base.refVal2 == 268)

@@ -9,6 +9,15 @@ public class QuestIntoDarkness : QuestProgression
 
 	public override bool CanUpdateOnTalk(Chara c)
 	{
+		if (phase == 6)
+		{
+			return EClass._zone.IsPCFaction;
+		}
 		return false;
+	}
+
+	public override void OnComplete()
+	{
+		AddResident("sorin");
 	}
 }

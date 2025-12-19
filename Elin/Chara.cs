@@ -4864,6 +4864,12 @@ public class Chara : Card, IPathfindWalker
 				EQ_ID("staff_magius");
 			}
 			break;
+		case "sorin":
+			if (onCreate)
+			{
+				EQ_ID("staff_insanity");
+			}
+			break;
 		case "robot":
 			if (onCreate)
 			{
@@ -9328,7 +9334,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (conditions[j].ShouldOverride(c))
 				{
-					if (num2 > conditions[j].value || num2 * conditions[j].value < 0 || c is ConWeapon)
+					if (conditions[j].IsOverrideConditionMet(c, num2))
 					{
 						conditions[j].Kill(silent: true);
 						continue;

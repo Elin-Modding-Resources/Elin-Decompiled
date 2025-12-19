@@ -9,6 +9,11 @@ public class ConWeapon : BaseBuff
 
 	public override int P2 => cha;
 
+	public override bool IsOverrideConditionMet(Condition c, int turn)
+	{
+		return true;
+	}
+
 	public override void Tick()
 	{
 	}

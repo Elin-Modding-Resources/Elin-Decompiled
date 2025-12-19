@@ -86,10 +86,7 @@ public class QuestVernis : QuestProgression
 
 	public override void OnComplete()
 	{
-		Chara chara = CharaGen.Create("corgon");
-		chara.SetInt(100, 1);
-		EClass._zone.AddCard(chara, EClass.pc.pos.GetNearestPoint());
-		EClass.Branch.AddMemeber(chara);
+		AddResident("corgon").SetInt(100, 1);
 		EClass.game.quests.Add("mokyu", "corgon").startDate = EClass.world.date.GetRaw() + 14400;
 		EClass.game.quests.Add("pre_debt", "farris").startDate = EClass.world.date.GetRaw() + 28800;
 	}

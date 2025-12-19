@@ -712,4 +712,12 @@ public class Quest : EClass
 	{
 		return false;
 	}
+
+	public Chara AddResident(string id)
+	{
+		Chara chara = CharaGen.Create(id);
+		EClass.Branch.AddMemeber(EClass._zone.AddCard(chara, EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false)) as Chara);
+		Msg.Say("hire".langGame(chara.Name));
+		return chara;
+	}
 }

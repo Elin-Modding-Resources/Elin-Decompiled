@@ -2767,7 +2767,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			rarity = bp.rarity;
 		}
-		else if (category.slot != 0 && category.slot != 45 && category.slot != 44)
+		else if ((category.slot != 0 && category.slot != 45 && category.slot != 44) || IsRangedWeapon)
 		{
 			if (EClass.rnd(10) == 0)
 			{
