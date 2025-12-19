@@ -16,6 +16,7 @@ var classQuest =
       [ "money2", "classQuest.html#a14a357f3949714e4cdad890ae074aaa2a072f2184f07fc315bbc1009984014609", null ],
       [ "ticket_furniture", "classQuest.html#a14a357f3949714e4cdad890ae074aaa2ab076720bf810da4be557169fb0168c6f", null ]
     ] ],
+    [ "AddResident", "classQuest.html#a3da8e06cfed751c1e25acf50f0e14e3c", null ],
     [ "CanDeliverToBox", "classQuest.html#a7099de87257532329118ecf06d833331", null ],
     [ "CanDeliverToClient", "classQuest.html#a91e004c677c3612ba6cc385891a5ec8a", null ],
     [ "CanStartQuest", "classQuest.html#a52a40ae32e2d7dbea5da494677e24212", null ],

@@ -1,5 +1,12 @@
 var NAVTREEINDEX119 =
 {
+"classTraitDrinkMilk.html#a42ec8032a5883de2bde8cbd078071b20":[1,0,1562,1],
+"classTraitDrinkMilk.html#ad4722d05a7bac696af384e99756298db":[1,0,1562,0],
+"classTraitDrinkMilkMother.html":[1,0,1563],
+"classTraitDrinkMilkMother.html#a16a30fdc27db3435a19878321aa8f6cd":[1,0,1563,1],
+"classTraitDrinkMilkMother.html#a65c076dde2e98216a7c036e08d90e167":[1,0,1563,0],
+"classTraitDrinkMilkMother.html#ab9e55698aaa3407f02bdd751d8364fcf":[1,0,1563,2],
+"classTraitDrug.html":[1,0,1564],
 "classTraitDryBrick.html":[1,0,1565],
 "classTraitDryBrick.html#a4ab474cc3db6a71b31d41a0dd38da4f6":[1,0,1565,2],
 "classTraitDryBrick.html#a8091dd0c833bc8e5d2df14f7ec9deb1a":[1,0,1565,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitGene.html#a8e6b1c7317611d1cf438e56d285a37af":[1,0,1624,6],
 "classTraitGene.html#aaac1b8bb856a544a6550160fe9e76d90":[1,0,1624,5],
 "classTraitGene.html#aad06c098417be0e93df7d983f89cb51e":[1,0,1624,2],
-"classTraitGeneMachine.html":[1,0,1625],
-"classTraitGeneMachine.html#a03b1dc06acc9e6af7a7bedc69f820523":[1,0,1625,2],
-"classTraitGeneMachine.html#a18fc33579f038949f461da6fbc04ac49":[1,0,1625,3],
-"classTraitGeneMachine.html#a1f7be56595047759e8b9b61ae3f3a148":[1,0,1625,7],
-"classTraitGeneMachine.html#a2a1d11ad60083a0503ea8e179290c04a":[1,0,1625,1],
-"classTraitGeneMachine.html#a30f763812a2f54de86e466b44e7bcc4e":[1,0,1625,6],
-"classTraitGeneMachine.html#aaba778eaed8a003cd53f8b1f995546b9":[1,0,1625,8],
-"classTraitGeneMachine.html#abc5664c3b0f81910c90a5edabae3fa6f":[1,0,1625,0]
+"classTraitGeneMachine.html":[1,0,1625]
 };

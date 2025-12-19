@@ -1,5 +1,8 @@
 var NAVTREEINDEX90 =
 {
+"classPointTarget.html#afa337a1c357bb4eaa0982d2c8a948eb0":[1,0,960,9],
+"classPolicy.html":[1,0,961],
+"classPolicy.html#a030bd4ecf0279bb385be0c472e959cc9":[1,0,961,1],
 "classPolicy.html#a0bf7def019b4a281a1f021527b13f3be":[1,0,961,10],
 "classPolicy.html#a19649b133ce3076a1bb18eaa44088ed8":[1,0,961,12],
 "classPolicy.html#a1d46c98afc4faf7b1dc8ee1b5747f1fe":[1,0,961,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX90 =
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a76b5c37843d7bd3b6ac830f2cccbc1f8":[0,4,7,0,0,0],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a76b5c37843d7bd3b6ac830f2cccbc1f8":[1,0,7,0,0,0],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#ad4da7e08fc1774625802bb2ff7e3a9e1":[0,4,7,0,0,2],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#ad4da7e08fc1774625802bb2ff7e3a9e1":[1,0,7,0,0,2],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html":[0,4,7,0,1],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html":[1,0,7,0,1],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[1,0,7,0,1,9]
+"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#ad4da7e08fc1774625802bb2ff7e3a9e1":[1,0,7,0,0,2]
 };

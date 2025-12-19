@@ -2,8 +2,8 @@ var searchData=
 [
   ['gainresistfactor_0',['GainResistFactor',['../classBaseCondition.html#a5ed342f7a43b5d20affd6fbbe8f88155',1,'BaseCondition']]],
   ['game_1',['game',['../classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3',1,'EClass.game()'],['../classEMono.html#a788e18c7a529b55607051f27551017d3',1,'EMono.game()'],['../classELayer.html#a4edba9f63942defc147a2be41de40b36',1,'ELayer.game()']]],
-  ['gamedata_2',['gamedata',['../classEClass.html#a2533de71120ba0cbfc79189af08cc26f',1,'EClass.gamedata()'],['../classEMono.html#a29da9fe3acedced7348d537cb00a9f5c',1,'EMono.gamedata()']]],
-  ['gamedata_3',['GameData',['../classGameIndex.html#aeeb8881417fbc072913e7470116d496e',1,'GameIndex']]],
+  ['gamedata_2',['GameData',['../classGameIndex.html#aeeb8881417fbc072913e7470116d496e',1,'GameIndex']]],
+  ['gamedata_3',['gamedata',['../classEClass.html#a2533de71120ba0cbfc79189af08cc26f',1,'EClass.gamedata()'],['../classEMono.html#a29da9fe3acedced7348d537cb00a9f5c',1,'EMono.gamedata()']]],
   ['gamespeed_4',['gameSpeed',['../classActionMode.html#adcfbc9ac50366e79643e381f2a7ddf64',1,'ActionMode.gameSpeed()'],['../classAM__Adv.html#a5131211b082ee5c9d3390f4994e77288',1,'AM_Adv.gameSpeed()']]],
   ['gathercount_5',['gatherCount',['../classCell.html#ae9ec692df4fb057a56e014314649a529',1,'Cell']]],
   ['gender_6',['gender',['../classBiography.html#ad30fca890328c9ff7ec6685b1a84b83c',1,'Biography']]],

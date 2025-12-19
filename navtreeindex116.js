@@ -1,5 +1,10 @@
 var NAVTREEINDEX116 =
 {
+"classTrait.html#aec66c500d685baaf243439d35e918edc":[1,0,1415,192],
+"classTrait.html#aed09cbafae7f04e4f7d4d49c2128449a":[1,0,1415,96],
+"classTrait.html#aed1730d7a524f69fb70622a724dec91d":[1,0,1415,226],
+"classTrait.html#aed4006f6efad2511c58e0a56d28d4312":[1,0,1415,199],
+"classTrait.html#aed664cfcbe19bd9b7cb288461852ad46":[1,0,1415,85],
 "classTrait.html#aedbb4e6487f4b34075571d79d531cdeb":[1,0,1415,115],
 "classTrait.html#aeeea731f58b474de02f8639b599c564f":[1,0,1415,106],
 "classTrait.html#aef470520c2d44b2e03ad228b868b5c27":[1,0,1415,178],
@@ -15,9 +20,11 @@ var NAVTREEINDEX116 =
 "classTrait.html#afc6dee1e32d290bdace9512dbb7df397":[1,0,1415,102],
 "classTrait.html#afe04c35d6a7b1cb37e81944261583702":[1,0,1415,49],
 "classTraitASMR.html":[1,0,1437],
-"classTraitASMR.html#a4961a7777cc7e7c99867d2dc354b44c7":[1,0,1437,2],
-"classTraitASMR.html#aaf0acf5e64fddc815ba6c6d5226e1f13":[1,0,1437,0],
-"classTraitASMR.html#aed11bbe035eaeccb784d57739203736c":[1,0,1437,1],
+"classTraitASMR.html#a2d056facd31c9a748e96a128c4d2a466":[1,0,1437,0],
+"classTraitASMR.html#a4961a7777cc7e7c99867d2dc354b44c7":[1,0,1437,4],
+"classTraitASMR.html#a6cc2964e302bff468ca05c89a017483f":[1,0,1437,1],
+"classTraitASMR.html#aaf0acf5e64fddc815ba6c6d5226e1f13":[1,0,1437,2],
+"classTraitASMR.html#aed11bbe035eaeccb784d57739203736c":[1,0,1437,3],
 "classTraitAbility.html":[1,0,1416],
 "classTraitAbility.html#a2da4cca35e5e2e466d75a02d6712c7be":[1,0,1416,6],
 "classTraitAbility.html#a3badd2ca0e7d5fb05b21ccfe4f61b46a":[1,0,1416,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX116 =
 "classTraitBlock.html":[1,0,1465],
 "classTraitBlock.html#ae426f33158dbe2679e431c2b12875260":[1,0,1465,0],
 "classTraitBloodSample.html":[1,0,1466],
-"classTraitBloodSample.html#aaa835b9b5d827da5e73d4f787e58a7bc":[1,0,1466,0],
-"classTraitBlueprint.html":[1,0,1467],
-"classTraitBlueprint.html#a4989a72401bf958df7200cfd8e709a0c":[1,0,1467,1],
-"classTraitBlueprint.html#a5869a67e01e4a14c1ed8377ebc66171c":[1,0,1467,0],
-"classTraitBlueprint.html#ae167e9f3b6ec667b7c0ebee490542bae":[1,0,1467,2],
-"classTraitBlueprint.html#ae334cd0a729dcc765ac4591119ec1c53":[1,0,1467,3],
-"classTraitBoard.html":[1,0,1468],
-"classTraitBoard.html#a407b7284961e1471d7c5bbbd3e7f31e1":[1,0,1468,1]
+"classTraitBloodSample.html#aaa835b9b5d827da5e73d4f787e58a7bc":[1,0,1466,0]
 };

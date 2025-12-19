@@ -1,5 +1,12 @@
 var NAVTREEINDEX124 =
 {
+"classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1861,0],
+"classTraitSpotGarbage.html":[1,0,1862],
+"classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1862,0],
+"classTraitSpotGuidePC.html":[1,0,1863],
+"classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1863,0],
+"classTraitSpotLight.html":[1,0,1864],
+"classTraitSpotLight.html#a95a0a2863a144b62664851cefa4a6cb0":[1,0,1864,0],
 "classTraitSpotLumberjack.html":[1,0,1865],
 "classTraitSpotMeeting.html":[1,0,1866],
 "classTraitSpotPrayer.html":[1,0,1867],
@@ -242,12 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitToolShears.html#af647d7ff31cf1df7683bdb84cb5b3fea":[1,0,1929,2],
 "classTraitToolSickle.html":[1,0,1930],
 "classTraitToolSickle.html#aaf396ca14be0760703717610954d89b6":[1,0,1930,0],
-"classTraitToolTalisman.html":[1,0,1931],
-"classTraitToolTalisman.html#a0570fc6eaf7f97ac63265befa1c1b176":[1,0,1931,3],
-"classTraitToolTalisman.html#a2eef1c145cc21eef149e51d3068741cf":[1,0,1931,7],
-"classTraitToolTalisman.html#a3aaeea66f51cb96aea42536db2e290eb":[1,0,1931,6],
-"classTraitToolTalisman.html#a591bc7510cb9e9f810701c33e8aa115e":[1,0,1931,5],
-"classTraitToolTalisman.html#a641e5ad30e9b0a4efe916c0a0a9eddcc":[1,0,1931,4],
-"classTraitToolTalisman.html#a7b02272526c9469e10b7da1a773daab5":[1,0,1931,10],
-"classTraitToolTalisman.html#a935ef1ade21756e75c9f91e20e84bb4d":[1,0,1931,9]
+"classTraitToolTalisman.html":[1,0,1931]
 };

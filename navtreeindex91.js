@@ -1,5 +1,8 @@
 var NAVTREEINDEX91 =
 {
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html":[0,4,7,0,1],
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html":[1,0,7,0,1],
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[1,0,7,0,1,9],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[0,4,7,0,1,9],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0e86818a95b0f513ff99193459dc7205":[1,0,7,0,1,5],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0e86818a95b0f513ff99193459dc7205":[0,4,7,0,1,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX91 =
 "classPrimitiveUI_1_1StrokeStyle.html#a727668dcf704f92eaec5513c33fdc898":[1,0,7,2,1],
 "classPrimitiveUI_1_1StrokeStyle.html#a727668dcf704f92eaec5513c33fdc898":[0,4,7,2,1],
 "classPrimitiveUI_1_1StrokeStyle.html#a7ec988e27cd881a41dab71fc0ec2dbcc":[0,4,7,2,0],
-"classPrimitiveUI_1_1StrokeStyle.html#a7ec988e27cd881a41dab71fc0ec2dbcc":[1,0,7,2,0],
-"classPrimitiveUI_1_1StrokeStyle.html#a9eaca2e2787e7306312fa5be13570ff1":[1,0,7,2,2],
-"classPrimitiveUI_1_1StrokeStyle.html#a9eaca2e2787e7306312fa5be13570ff1":[0,4,7,2,2],
-"classPrimitiveUI_1_1StrokeStyle.html#abb4854e8df760a655a72578fb788bebb":[0,4,7,2,4]
+"classPrimitiveUI_1_1StrokeStyle.html#a7ec988e27cd881a41dab71fc0ec2dbcc":[1,0,7,2,0]
 };

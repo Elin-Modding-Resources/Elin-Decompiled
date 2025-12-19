@@ -16,6 +16,7 @@ var classBaseCondition =
     [ "GetText", "classBaseCondition.html#a3e5e9a7a73db7f67b2e94ffd06d83758", null ],
     [ "GetValue", "classBaseCondition.html#a8847e4db4699fca6e5701146e4081356", null ],
     [ "IsNullPhase", "classBaseCondition.html#a03d9ff9095ca1b99de3105ee55bdc36b", null ],
+    [ "IsOverrideConditionMet", "classBaseCondition.html#a0e6b43ef597e14e08d7a759a4b31c5d4", null ],
     [ "Mod", "classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea", null ],
     [ "OnBeforeStart", "classBaseCondition.html#af67f6ff3e9f992f221d0018d8ef5d0a2", null ],
     [ "OnChangePhase", "classBaseCondition.html#a0079bf7e071e4d6295ad8f87159b1f6e", null ],

@@ -1,5 +1,12 @@
 var NAVTREEINDEX118 =
 {
+"classTraitCookingPot.html":[1,0,1522],
+"classTraitCookingPot.html#a06eefe52d00e7052f29909e85255e6c8":[1,0,1522,3],
+"classTraitCookingPot.html#a17c2359f3abf72e61414c5ba4bdeb01a":[1,0,1522,1],
+"classTraitCookingPot.html#a2a431da841e83b1f79dff85d206dc808":[1,0,1522,2],
+"classTraitCookingPot.html#a690bae0528287f00cac47d2189b646a2":[1,0,1522,4],
+"classTraitCookingPot.html#a9517a115867468df7203c7edb2b703ed":[1,0,1522,0],
+"classTraitCoolerBox.html":[1,0,1523],
 "classTraitCoolerBox.html#a4276d3724bd3016236fc10863c6f5820":[1,0,1523,0],
 "classTraitCoolerBox.html#ac146b5ae0ac3e6da3201ec5fca77232c":[1,0,1523,1],
 "classTraitCoreDefense.html":[1,0,1524],
@@ -242,12 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitDrink.html#ae71cd26e116c46e80fdbb5d13f27048f":[1,0,1561,19],
 "classTraitDrink.html#aee4631f0388761dc3024f09b46ddbfe9":[1,0,1561,3],
 "classTraitDrink.html#af09a4c0047023ec0dafca8e1a7b6e7fd":[1,0,1561,2],
-"classTraitDrinkMilk.html":[1,0,1562],
-"classTraitDrinkMilk.html#a42ec8032a5883de2bde8cbd078071b20":[1,0,1562,1],
-"classTraitDrinkMilk.html#ad4722d05a7bac696af384e99756298db":[1,0,1562,0],
-"classTraitDrinkMilkMother.html":[1,0,1563],
-"classTraitDrinkMilkMother.html#a16a30fdc27db3435a19878321aa8f6cd":[1,0,1563,1],
-"classTraitDrinkMilkMother.html#a65c076dde2e98216a7c036e08d90e167":[1,0,1563,0],
-"classTraitDrinkMilkMother.html#ab9e55698aaa3407f02bdd751d8364fcf":[1,0,1563,2],
-"classTraitDrug.html":[1,0,1564]
+"classTraitDrinkMilk.html":[1,0,1562]
 };

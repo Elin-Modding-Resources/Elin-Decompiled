@@ -7,6 +7,7 @@ var classConBuffStats =
     [ "GetPhase", "classConBuffStats.html#acaa10b9aa1f326df5a9150643878f330", null ],
     [ "GetPhaseStr", "classConBuffStats.html#ac4737a6c3e8cbe1bac169da4f6c69cc1", null ],
     [ "GetText", "classConBuffStats.html#aeb332106512f4814085c3f06d7930637", null ],
+    [ "IsOverrideConditionMet", "classConBuffStats.html#a2bb83b485c763a513157d482ec19d802", null ],
     [ "OnWriteNote", "classConBuffStats.html#afb918f93387ca79874e9952d960aa37d", null ],
     [ "PlayEffect", "classConBuffStats.html#a09bb73753668d087151cd27aedf3b778", null ],
     [ "SetOwner", "classConBuffStats.html#aca3550d9a6658613de6e23f5f6b93874", null ],

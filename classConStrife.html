@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.248 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.249 Nightly</span>
    </div>
   </td>
  </tr>
@@ -162,6 +162,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15631ed2272e1ae304dd7e173ef6dfcc inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbb716dd6883676c3ed87033dce2e27c inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#adbb716dd6883676c3ed87033dce2e27c">ShouldOverride</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
 <tr class="separator:adbb716dd6883676c3ed87033dce2e27c inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6b43ef597e14e08d7a759a4b31c5d4 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a0e6b43ef597e14e08d7a759a4b31c5d4">IsOverrideConditionMet</a> (<a class="el" href="classCondition.html">Condition</a> c, int turn)</td></tr>
+<tr class="separator:a0e6b43ef597e14e08d7a759a4b31c5d4 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6688dd33cf3e2acc1215f3448aa241b1 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a6688dd33cf3e2acc1215f3448aa241b1">TryMove</a> (<a class="el" href="classPoint.html">Point</a> p)</td></tr>
 <tr class="separator:a6688dd33cf3e2acc1215f3448aa241b1 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a028a909cb8f0d5e950bd2a3ea6a63edf inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classElementContainer.html">ElementContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a028a909cb8f0d5e950bd2a3ea6a63edf">GetElementContainer</a> ()</td></tr>
@@ -608,10 +610,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
 <div class="line"><span class="lineno">   85</span>        list.Add(<span class="stringliteral">&quot;hintStrife&quot;</span>.lang(<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_property" href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ExpToNext</a>, <a class="code hl_function" href="classConStrife.html#a0bd3313d4b821926528d4d4e9a0447d8">GetDice</a>().<a class="code hl_function" href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">ToString</a>()));</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00175">BaseCondition.cs:175</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00180">BaseCondition.cs:180</a></div></div>
 <div class="ttc" id="aclassConStrife_html_a0bd3313d4b821926528d4d4e9a0447d8"><div class="ttname"><a href="classConStrife.html#a0bd3313d4b821926528d4d4e9a0447d8">ConStrife.GetDice</a></div><div class="ttdeci">Dice GetDice()</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00055">ConStrife.cs:55</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00018">ExpToNext</a>, <a class="el" href="ConStrife_8cs_source.html#l00055">GetDice()</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00175">BaseCondition.ToString()</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00018">ExpToNext</a>, <a class="el" href="ConStrife_8cs_source.html#l00055">GetDice()</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00180">BaseCondition.ToString()</a>.</p>
 
 </div>
 </div>

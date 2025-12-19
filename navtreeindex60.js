@@ -1,5 +1,8 @@
 var NAVTREEINDEX60 =
 {
+"classEffectManager.html#a70e6a751653a5a515397763c4624bc68":[1,0,470,6],
+"classEffectManager.html#aa630acdf06546db552c0a50b485f50fb":[1,0,470,3],
+"classEffectManager.html#add7dab2e4dbb3a0cf494d1065f6c4de0":[1,0,470,1],
 "classEffectManager.html#ae6de3323bdb74af958a58a41e822d8a4":[1,0,470,7],
 "classEffectManager_1_1EffectList.html":[1,0,470,0],
 "classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914":[1,0,470,0,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX60 =
 "classElinEncoder.html#aa30f23a81a1ef8bc6e84576e8f4d5a35":[1,0,487,5],
 "classElinEncoder.html#ac473e79d5a335f479800f2b2e3206cc3":[1,0,487,6],
 "classElinEncoder.html#adcae4bbafc53a7e9ed75f2340fd167ef":[1,0,487,0],
-"classElinEncoder.html#adf755ac5a4dee28b15fdf1b9b94a3173":[1,0,487,4],
-"classEloMap.html":[1,0,488],
-"classEloMap.html#a005eb26c5c0f9be68eece6fe9238ace8":[1,0,488,22],
-"classEloMap.html#a0797d69e85c0817f04a75280fec113d7":[1,0,488,14]
+"classElinEncoder.html#adf755ac5a4dee28b15fdf1b9b94a3173":[1,0,487,4]
 };

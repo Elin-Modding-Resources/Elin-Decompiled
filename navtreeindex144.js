@@ -1,5 +1,12 @@
 var NAVTREEINDEX144 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dab8260a02d375aeecb43cf0da63c88186":[0,4,3,0,8,117],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dab8ba9860e5cb3f59a024b9a46eb2cbc5":[0,4,3,0,8,131],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabb21eabbaf867f6215925b28c46cd478":[0,4,3,0,8,79],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabb96947c2f934efb5ed83af51165d8bd":[0,4,3,0,8,156],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabc034a25a863ed8ea7d764374374dc4b":[0,4,3,0,8,122],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabce1d7adac090c010391e557b60a1f63":[0,4,3,0,8,85],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabd0e6b246504a2675364b458fb3ae452":[0,4,3,0,8,166],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabde507507026f6f5e6e4794c2527c210":[0,4,3,0,8,177],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dabef302c623177fabb52887726ca4f65f":[0,4,3,0,8,77],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dac038919ed7c94c0aaa1a11939c3107b7":[0,4,3,0,8,114],
@@ -242,12 +249,5 @@ var NAVTREEINDEX144 =
 "structWall.html":[1,0,2073],
 "structWall.html#a11c9b51929524d3b2c9ab454b12d0e09":[1,0,2073,1],
 "structWall.html#a1c0fe7808ce21e297f493431ac9bdb77":[1,0,2073,4],
-"structWall.html#a4c1cc881759c2018ef92d4dd5d77e2a3":[1,0,2073,0],
-"structWall.html#a74796500b179b084fe4083d0fa51179f":[1,0,2073,2],
-"structWall.html#a93fa4ecba6562c944603f63ca2591cc0":[1,0,2073,3],
-"structXY.html":[1,0,2128],
-"structXY.html#a671ff8952388c884c10782e46808c8b1":[1,0,2128,2],
-"structXY.html#a86ef9f95d24632f70207d603689a4b70":[1,0,2128,0],
-"structXY.html#a97f055b4700397c064faee99a9309572":[1,0,2128,1],
-"structZoneBlueprint_1_1MapGenSetting.html":[1,0,2215,0]
+"structWall.html#a4c1cc881759c2018ef92d4dd5d77e2a3":[1,0,2073,0]
 };

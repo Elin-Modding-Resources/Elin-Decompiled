@@ -1,5 +1,9 @@
 var NAVTREEINDEX93 =
 {
+"classQuestCraft.html":[1,0,990],
+"classQuestCraft.html#a1728c066dcb9f4bfcbb1d8c1b0cab352":[1,0,990,2],
+"classQuestCraft.html#a1aaab314c325c2d31ce2a7bcc1776887":[1,0,990,11],
+"classQuestCraft.html#a253a3b28ea272548acff965616acc638":[1,0,990,9],
 "classQuestCraft.html#a301db165bd8e654de9876b3016923986":[1,0,990,12],
 "classQuestCraft.html#a307dbbf912f19717456c093b9d9474b4":[1,0,990,13],
 "classQuestCraft.html#a47338f4e498b24116eb74dd0be655a3f":[1,0,990,14],
@@ -200,9 +204,10 @@ var NAVTREEINDEX93 =
 "classQuestInstance.html#ab08e6217237e395d11fb643a82559ae5":[1,0,1020,7],
 "classQuestInstance.html#ae9000f657901528c780313ade8ff5e63":[1,0,1020,1],
 "classQuestIntoDarkness.html":[1,0,1021],
-"classQuestIntoDarkness.html#a3cbee115eb43665d2c3f8e057f1dedc6":[1,0,1021,2],
+"classQuestIntoDarkness.html#a3cbee115eb43665d2c3f8e057f1dedc6":[1,0,1021,3],
 "classQuestIntoDarkness.html#a68d8645cb3cdb80412f5b86fa550469b":[1,0,1021,0],
-"classQuestIntoDarkness.html#abdb2a13c591879b41c096646bfb1574e":[1,0,1021,1],
+"classQuestIntoDarkness.html#a6ae95776848173b44b9e5fc0b1c6662b":[1,0,1021,1],
+"classQuestIntoDarkness.html#abdb2a13c591879b41c096646bfb1574e":[1,0,1021,2],
 "classQuestIntroInspector.html":[1,0,1022],
 "classQuestIntroInspector.html#a9e2b1725e8742d671a5670dde1788930":[1,0,1022,0],
 "classQuestLoytelFarm.html":[1,0,1023],
@@ -244,10 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestManager.html#a839c0037753f5365f4d2b2f5d3abe5b8":[1,0,1026,33],
 "classQuestManager.html#a8479a539eef4eee1c8a392d3cec51e60":[1,0,1026,3],
 "classQuestManager.html#a88f3254faeb7458eea94753c61a98862":[1,0,1026,19],
-"classQuestManager.html#a97a7034ff180be698309ee4b1b3e7dda":[1,0,1026,1],
-"classQuestManager.html#a9ad1b8ca3a88be592802f01b0342e38a":[1,0,1026,30],
-"classQuestManager.html#aa44ff8125708c05a2616e89fb03fbbed":[1,0,1026,13],
-"classQuestManager.html#aa792725892a946a4527c8a006b2209dd":[1,0,1026,25],
-"classQuestManager.html#ab651e7c02717adeaa6e1ac0652dbd39b":[1,0,1026,8],
-"classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e":[1,0,1026,24]
+"classQuestManager.html#a97a7034ff180be698309ee4b1b3e7dda":[1,0,1026,1]
 };

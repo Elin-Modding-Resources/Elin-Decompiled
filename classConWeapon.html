@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.248 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.249 Nightly</span>
    </div>
   </td>
  </tr>
@@ -114,6 +114,8 @@ Inheritance diagram for ConWeapon:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae39082a80649916c8d37d8f6ceaea2b8"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConWeapon.html#ae39082a80649916c8d37d8f6ceaea2b8">IsOverrideConditionMet</a> (<a class="el" href="classCondition.html">Condition</a> c, int turn)</td></tr>
+<tr class="separator:ae39082a80649916c8d37d8f6ceaea2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae56b62ab1b833b2c37e0188105a7b202"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202">Tick</a> ()</td></tr>
 <tr class="separator:ae56b62ab1b833b2c37e0188105a7b202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78014d205880f0aff39457469afc0272"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConWeapon.html#a78014d205880f0aff39457469afc0272">CanStack</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
@@ -154,6 +156,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15631ed2272e1ae304dd7e173ef6dfcc inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbb716dd6883676c3ed87033dce2e27c inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#adbb716dd6883676c3ed87033dce2e27c">ShouldOverride</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
 <tr class="separator:adbb716dd6883676c3ed87033dce2e27c inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6b43ef597e14e08d7a759a4b31c5d4 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a0e6b43ef597e14e08d7a759a4b31c5d4">IsOverrideConditionMet</a> (<a class="el" href="classCondition.html">Condition</a> c, int turn)</td></tr>
+<tr class="separator:a0e6b43ef597e14e08d7a759a4b31c5d4 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6688dd33cf3e2acc1215f3448aa241b1 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a6688dd33cf3e2acc1215f3448aa241b1">TryMove</a> (<a class="el" href="classPoint.html">Point</a> p)</td></tr>
 <tr class="separator:a6688dd33cf3e2acc1215f3448aa241b1 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a028a909cb8f0d5e950bd2a3ea6a63edf inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classElementContainer.html">ElementContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a028a909cb8f0d5e950bd2a3ea6a63edf">GetElementContainer</a> ()</td></tr>
@@ -465,10 +469,53 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseBuff.html#a2e5de72784437fef24958bad1063eaf2">BaseBuff</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00016">16</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00021">21</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae39082a80649916c8d37d8f6ceaea2b8" name="ae39082a80649916c8d37d8f6ceaea2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39082a80649916c8d37d8f6ceaea2b8">&#9670;&#160;</a></span>IsOverrideConditionMet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool ConWeapon.IsOverrideConditionMet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCondition.html">Condition</a>&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classBaseCondition.html#a0e6b43ef597e14e08d7a759a4b31c5d4">BaseCondition</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00012">12</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -508,14 +555,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00021">21</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (!onDeserialize)</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="classConWeapon.html#a19d89d5302482a64ba0fc4ca9a5547bd">cha</a> = _owner.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a>;</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
-<div class="line"><span class="lineno">   27</span>        base.SetOwner(_owner, onDeserialize);</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00026">26</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (!onDeserialize)</div>
+<div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="classConWeapon.html#a19d89d5302482a64ba0fc4ca9a5547bd">cha</a> = _owner.<a class="code hl_property" href="classCard.html#a5e0535e093f8257427b9510e045b48fc">CHA</a>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>        base.SetOwner(_owner, onDeserialize);</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
 <div class="ttc" id="aclassCard_html_a5e0535e093f8257427b9510e045b48fc"><div class="ttname"><a href="classCard.html#a5e0535e093f8257427b9510e045b48fc">Card.CHA</a></div><div class="ttdeci">int CHA</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02347">Card.cs:2347</a></div></div>
 <div class="ttc" id="aclassConWeapon_html_a19d89d5302482a64ba0fc4ca9a5547bd"><div class="ttname"><a href="classConWeapon.html#a19d89d5302482a64ba0fc4ca9a5547bd">ConWeapon.cha</a></div><div class="ttdeci">int cha</div><div class="ttdef"><b>Definition:</b> <a href="ConWeapon_8cs_source.html#l00006">ConWeapon.cs:6</a></div></div>
 </div><!-- fragment -->
@@ -548,9 +595,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCondition.html#ac050c6fff565bb312f93c00371a35e83">Condition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00012">12</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00017">17</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -569,7 +616,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ConWeapon_8cs_source.html#l00006">6</a> of file <a class="el" href="ConWeapon_8cs_source.html">ConWeapon.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConWeapon_8cs_source.html#l00021">SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConWeapon_8cs_source.html#l00026">SetOwner()</a>.</p>
 
 </div>
 </div>
