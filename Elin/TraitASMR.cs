@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TraitASMR : Trait
 {
 	public int tick;
@@ -8,7 +6,8 @@ public class TraitASMR : Trait
 
 	public override void OnCreate(int lv)
 	{
-		owner.c_idRefCard = GetParam(1) ?? ((EClass.rnd(EClass.debug.enable ? 2 : 10) == 0) ? "opatos" : ((EClass.rnd(2) == 0) ? "jure" : ""));
+		ExcelData.Sheet dialogSheet = Lang.GetDialogSheet("asmr");
+		owner.c_idRefCard = GetParam(1) ?? ((EClass.rnd(EClass.debug.enable ? 2 : 10) != 0) ? "jure" : dialogSheet.map.RandomItem()["id"]);
 	}
 
 	public override void OnImportMap()
@@ -28,7 +27,6 @@ public class TraitASMR : Trait
 		tick++;
 		if (tick % 5 == 0)
 		{
-			Debug.Log(owner.c_idRefCard);
 			string[] dialog = Lang.GetDialog("asmr", owner.c_idRefCard.IsEmpty("eyth"));
 			if (dialog.IsEmpty())
 			{

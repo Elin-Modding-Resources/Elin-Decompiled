@@ -2767,7 +2767,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			rarity = bp.rarity;
 		}
-		else if ((category.slot != 0 && category.slot != 45 && category.slot != 44) || IsRangedWeapon)
+		else if ((category.slot != 0 && category.slot != 45 && category.slot != 44) || category.tag.Contains("randomRarity"))
 		{
 			if (EClass.rnd(10) == 0)
 			{
@@ -4250,7 +4250,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						num6++;
 					}
 				}
-				if (IsPCParty)
+				if (IsPCFactionOrMinion)
 				{
 					dmg = dmg * 100 / Mathf.Min(100 + num5 * 5, 120);
 				}
@@ -6785,6 +6785,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			text = text.Replace("#2", ref2);
 		}
 		HostRenderer.Say(ApplyNewLine(text));
+		text = StripTalkSpeiclaCharacters(text);
 		bool flag = text.StartsWith("*");
 		Msg.SetColor(text.StartsWith("(") ? Msg.colors.Thinking : (flag ? Msg.colors.Ono : Msg.colors.Talk));
 		if (!flag)
@@ -6792,6 +6793,25 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			text = text.Bracket();
 		}
 		Msg.Say(text.Replace("&", ""));
+	}
+
+	public string StripTalkSpeiclaCharacters(string text)
+	{
+		switch (text[0])
+		{
+		case '@':
+		{
+			if (text.Length > 1 && int.TryParse(text[1].ToString() ?? "", out var _))
+			{
+				return text.Substring(2);
+			}
+			break;
+		}
+		case '^':
+		case '|':
+			return text.Substring(1);
+		}
+		return text;
 	}
 
 	public string ApplyNewLine(string text)

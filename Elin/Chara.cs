@@ -7013,7 +7013,7 @@ public class Chara : Card, IPathfindWalker
 		topicText = ApplyTone(topicText);
 		topicText = topicText.Replace("~", "*");
 		Msg.SetColor(flag2 ? Msg.colors.Thinking : (flag3 ? Msg.colors.Talk : Msg.colors.Ono));
-		Msg.Say(topicText.Replace("&", ""));
+		Msg.Say(StripTalkSpeiclaCharacters(topicText.Replace("&", "")));
 		if (topic == "dead")
 		{
 			EClass.ui.popGame.PopText(ApplyNewLine(topicText.StripBrackets()), null, "PopTextDead", default(Color), pos.Position() + EClass.setting.render.tc.textPosDead);
@@ -7444,7 +7444,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			foreach (Thing thing4 in container.things)
 			{
-				if (!thing4.c_isImportant && thing4.IsIdentified)
+				if (!thing4.c_isImportant && thing4.IsIdentified && thing4 != EClass.pc.held)
 				{
 					if (num4 > 0 && thing4.id == "polish_powder")
 					{

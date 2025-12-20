@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TCText : TCUI
 {
-	public static string[] popIDs = new string[2] { "PopTextSys", "PopTextGod" };
+	public static string[] popIDs = new string[4] { "PopTextSys", "PopTextGod", "PopTextASMR", "PopTextOPA" };
 
 	public PopManager pop;
 
@@ -28,6 +28,10 @@ public class TCText : TCUI
 		{
 			int num = int.Parse(s[1].ToString());
 			p = pop.PopText(s.Substring(2), null, popIDs[num], default(Color), default(Vector3), duration);
+			if (num == 3)
+			{
+				Shaker.ShakeCam("opa");
+			}
 			break;
 		}
 		case '^':

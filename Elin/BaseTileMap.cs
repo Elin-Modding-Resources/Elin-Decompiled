@@ -2648,16 +2648,53 @@ public class BaseTileMap : EMono
 						else
 						{
 							thingPos.y += num26;
+							if (tileType.UseMountHeight)
+							{
+								if (tileType != TileType.Illumination || !this.cell.HasObj)
+								{
+									if (noRoofMode && currentRoom == null && t.altitude >= lowWallObjAltitude)
+									{
+										continue;
+									}
+									if (hideHang && (this.cell.room?.lot != currentLot || (!this.cell.lotWall && this.cell.room != currentRoom)))
+									{
+										Room room5 = ((t.dir == 0) ? this.cell.Back.room : this.cell.Left.room);
+										if (t.trait.AlwaysHideOnLowWall)
+										{
+											if (room5 == null || !room5.data.showWallItem)
+											{
+												continue;
+											}
+										}
+										else if (t.altitude >= lowWallObjAltitude)
+										{
+											continue;
+										}
+									}
+								}
+								if (tileType.UseHangZFix)
+								{
+									flag10 = true;
+								}
+								tileType.GetMountHeight(ref _actorPos, Point.shared.Set(index), t.dir, t);
+								shadow = false;
+								param.liquidLv = 0;
+								if (t.freePos)
+								{
+									_actorPos.x += t.fx;
+									_actorPos.y += t.fy;
+								}
+							}
+							else
+							{
+								thingPos.y += (float)t.altitude * altitudeFix.y;
+								thingPos.z += (float)t.altitude * altitudeFix.z;
+							}
 							_actorPos.x += pref.x * (float)((!t.flipX) ? 1 : (-1));
 							_actorPos.z += pref.z;
 							if (pref.height >= 0f)
 							{
 								thingPos.z += pref.z;
-							}
-							if (!t.TileType.UseMountHeight)
-							{
-								thingPos.y += (float)t.altitude * altitudeFix.y;
-								thingPos.z += (float)t.altitude * altitudeFix.z;
 							}
 						}
 						if (!tileType.UseMountHeight && m > 10)
@@ -2712,44 +2749,7 @@ public class BaseTileMap : EMono
 						}
 					}
 				}
-				if (isInstalled && tileType.UseMountHeight)
-				{
-					if (tileType != TileType.Illumination || !this.cell.HasObj)
-					{
-						if (noRoofMode && currentRoom == null && t.altitude >= lowWallObjAltitude)
-						{
-							continue;
-						}
-						if (hideHang && (this.cell.room?.lot != currentLot || (!this.cell.lotWall && this.cell.room != currentRoom)))
-						{
-							Room room5 = ((t.dir == 0) ? this.cell.Back.room : this.cell.Left.room);
-							if (t.trait.AlwaysHideOnLowWall)
-							{
-								if (room5 == null || !room5.data.showWallItem)
-								{
-									continue;
-								}
-							}
-							else if (t.altitude >= lowWallObjAltitude)
-							{
-								continue;
-							}
-						}
-					}
-					if (tileType.UseHangZFix)
-					{
-						flag10 = true;
-					}
-					tileType.GetMountHeight(ref _actorPos, Point.shared.Set(index), t.dir, t);
-					shadow = false;
-					param.liquidLv = 0;
-					if (t.freePos)
-					{
-						_actorPos.x += t.fx;
-						_actorPos.y += t.fy;
-					}
-				}
-				else
+				if (!isInstalled || !tileType.UseMountHeight)
 				{
 					if (t.altitude != 0)
 					{
