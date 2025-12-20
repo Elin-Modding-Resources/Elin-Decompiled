@@ -202,7 +202,7 @@ public class Lang
 		return prev + " ⇒ " + now;
 	}
 
-	public static string[] GetDialog(string idSheet, string idTopic)
+	public static ExcelData.Sheet GetDialogSheet(string idSheet)
 	{
 		if (excelDialog == null)
 		{
@@ -211,9 +211,14 @@ public class Lang
 			excelDialog.path = path;
 		}
 		excelDialog.BuildMap(idSheet);
-		ExcelData.Sheet sheet = excelDialog.sheets[idSheet];
+		return excelDialog.sheets[idSheet];
+	}
+
+	public static string[] GetDialog(string idSheet, string idTopic)
+	{
+		ExcelData.Sheet dialogSheet = GetDialogSheet(idSheet);
 		string key = "text" + (isBuiltin ? ("_" + langCode) : "");
-		Dictionary<string, string> dictionary = sheet.map.TryGetValue(idTopic);
+		Dictionary<string, string> dictionary = dialogSheet.map.TryGetValue(idTopic);
 		if (dictionary == null || !dictionary.ContainsKey(key))
 		{
 			return new string[1] { idTopic };
