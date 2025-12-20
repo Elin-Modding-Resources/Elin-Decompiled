@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.249 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.250 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -149,6 +149,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a39ace10124f41a64b71985a927a29b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a72d143604f35bb107e8807921da4c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#a66a72d143604f35bb107e8807921da4c">_ChangeNum</a> (int prev, int now)</td></tr>
 <tr class="separator:a66a72d143604f35bb107e8807921da4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9572fda51f74a1f05d75153c5e82da0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classExcelData_1_1Sheet.html">ExcelData.Sheet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#ac9572fda51f74a1f05d75153c5e82da0">GetDialogSheet</a> (string idSheet)</td></tr>
+<tr class="separator:ac9572fda51f74a1f05d75153c5e82da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2219227ad84bf1322cd12ede5dbe1a2e"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLang.html#a2219227ad84bf1322cd12ede5dbe1a2e">GetDialog</a> (string idSheet, string idTopic)</td></tr>
 <tr class="separator:a2219227ad84bf1322cd12ede5dbe1a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -659,6 +661,58 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00217">217</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        <a class="code hl_class" href="classExcelData_1_1Sheet.html">ExcelData.Sheet</a> dialogSheet = <a class="code hl_function" href="classLang.html#ac9572fda51f74a1f05d75153c5e82da0">GetDialogSheet</a>(idSheet);</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordtype">string</span> key = <span class="stringliteral">&quot;text&quot;</span> + (<a class="code hl_variable" href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">isBuiltin</a> ? (<span class="stringliteral">&quot;_&quot;</span> + <a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>) : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  221</span>        Dictionary&lt;string, string&gt; dictionary = dialogSheet.<a class="code hl_variable" href="classExcelData_1_1Sheet.html#afc6168c34e9e32d7ecc5f025f0657a6d">map</a>.TryGetValue(idTopic);</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (dictionary == <span class="keyword">null</span> || !dictionary.ContainsKey(key))</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[1] { idTopic };</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordtype">string</span> text = dictionary[key];</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
+<div class="line"><span class="lineno">  228</span>        {</div>
+<div class="line"><span class="lineno">  229</span>            text = dictionary[<span class="stringliteral">&quot;text_EN&quot;</span>];</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">return</span> text.Split(<span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;\r\n&quot;</span>, <span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;\n&quot;</span> }, StringSplitOptions.None);</div>
+<div class="line"><span class="lineno">  232</span>    }</div>
+<div class="ttc" id="aclassExcelData_1_1Sheet_html"><div class="ttname"><a href="classExcelData_1_1Sheet.html">ExcelData.Sheet</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00012">ExcelData.cs:13</a></div></div>
+<div class="ttc" id="aclassExcelData_1_1Sheet_html_afc6168c34e9e32d7ecc5f025f0657a6d"><div class="ttname"><a href="classExcelData_1_1Sheet.html#afc6168c34e9e32d7ecc5f025f0657a6d">ExcelData.Sheet.map</a></div><div class="ttdeci">Dictionary&lt; string, Dictionary&lt; string, string &gt; &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00014">ExcelData.cs:14</a></div></div>
+<div class="ttc" id="aclassLang_html_aa1952bedb7f38df2ae3e130ee1d5d659"><div class="ttname"><a href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">Lang.langCode</a></div><div class="ttdeci">static string langCode</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00028">Lang.cs:28</a></div></div>
+<div class="ttc" id="aclassLang_html_ac9572fda51f74a1f05d75153c5e82da0"><div class="ttname"><a href="classLang.html#ac9572fda51f74a1f05d75153c5e82da0">Lang.GetDialogSheet</a></div><div class="ttdeci">static ExcelData.Sheet GetDialogSheet(string idSheet)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00205">Lang.cs:205</a></div></div>
+<div class="ttc" id="aclassLang_html_ada42353e8636a1085ec2f851e7b3c403"><div class="ttname"><a href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">Lang.isBuiltin</a></div><div class="ttdeci">static bool isBuiltin</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00042">Lang.cs:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Lang_8cs_source.html#l00205">GetDialogSheet()</a>, <a class="el" href="Lang_8cs_source.html#l00042">isBuiltin</a>, <a class="el" href="Lang_8cs_source.html#l00028">langCode</a>, and <a class="el" href="ExcelData_8cs_source.html#l00014">ExcelData.Sheet.map</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l01617">DramaCustomSequence.GetText()</a>, <a class="el" href="TraitFortuneCookie_8cs_source.html#l00003">TraitFortuneCookie.OnEat()</a>, and <a class="el" href="TraitASMR_8cs_source.html#l00021">TraitASMR.Update()</a>.</p>
+
+</div>
+</div>
+<a id="ac9572fda51f74a1f05d75153c5e82da0" name="ac9572fda51f74a1f05d75153c5e82da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9572fda51f74a1f05d75153c5e82da0">&#9670;&#160;</a></span>GetDialogSheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classExcelData_1_1Sheet.html">ExcelData.Sheet</a> Lang.GetDialogSheet </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>idSheet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00205">205</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
 <div class="line"><span class="lineno">  207</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classLang.html#aa84c85d24328a98729ac206b2ac15d84">excelDialog</a> == <span class="keyword">null</span>)</div>
@@ -668,32 +722,16 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  211</span>            excelDialog.path = path;</div>
 <div class="line"><span class="lineno">  212</span>        }</div>
 <div class="line"><span class="lineno">  213</span>        <a class="code hl_variable" href="classLang.html#aa84c85d24328a98729ac206b2ac15d84">excelDialog</a>.<a class="code hl_function" href="classExcelData.html#acaa9864c84e90871423cbcc3a9200de3">BuildMap</a>(idSheet);</div>
-<div class="line"><span class="lineno">  214</span>        <a class="code hl_class" href="classExcelData_1_1Sheet.html">ExcelData.Sheet</a> sheet = <a class="code hl_variable" href="classLang.html#aa84c85d24328a98729ac206b2ac15d84">excelDialog</a>.<a class="code hl_variable" href="classExcelData.html#aa8148744c893c504d24a8d4520677e5d">sheets</a>[idSheet];</div>
-<div class="line"><span class="lineno">  215</span>        <span class="keywordtype">string</span> key = <span class="stringliteral">&quot;text&quot;</span> + (<a class="code hl_variable" href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">isBuiltin</a> ? (<span class="stringliteral">&quot;_&quot;</span> + <a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>) : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  216</span>        Dictionary&lt;string, string&gt; dictionary = sheet.<a class="code hl_variable" href="classExcelData_1_1Sheet.html#afc6168c34e9e32d7ecc5f025f0657a6d">map</a>.TryGetValue(idTopic);</div>
-<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">if</span> (dictionary == <span class="keyword">null</span> || !dictionary.ContainsKey(key))</div>
-<div class="line"><span class="lineno">  218</span>        {</div>
-<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[1] { idTopic };</div>
-<div class="line"><span class="lineno">  220</span>        }</div>
-<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">string</span> text = dictionary[key];</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (text.IsEmpty())</div>
-<div class="line"><span class="lineno">  223</span>        {</div>
-<div class="line"><span class="lineno">  224</span>            text = dictionary[<span class="stringliteral">&quot;text_EN&quot;</span>];</div>
-<div class="line"><span class="lineno">  225</span>        }</div>
-<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">return</span> text.Split(<span class="keyword">new</span> <span class="keywordtype">string</span>[3] { <span class="stringliteral">&quot;\r\n&quot;</span>, <span class="stringliteral">&quot;\r&quot;</span>, <span class="stringliteral">&quot;\n&quot;</span> }, StringSplitOptions.None);</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
-<div class="ttc" id="aclassExcelData_1_1Sheet_html"><div class="ttname"><a href="classExcelData_1_1Sheet.html">ExcelData.Sheet</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00012">ExcelData.cs:13</a></div></div>
-<div class="ttc" id="aclassExcelData_1_1Sheet_html_afc6168c34e9e32d7ecc5f025f0657a6d"><div class="ttname"><a href="classExcelData_1_1Sheet.html#afc6168c34e9e32d7ecc5f025f0657a6d">ExcelData.Sheet.map</a></div><div class="ttdeci">Dictionary&lt; string, Dictionary&lt; string, string &gt; &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00014">ExcelData.cs:14</a></div></div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classLang.html#aa84c85d24328a98729ac206b2ac15d84">excelDialog</a>.<a class="code hl_variable" href="classExcelData.html#aa8148744c893c504d24a8d4520677e5d">sheets</a>[idSheet];</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
 <div class="ttc" id="aclassExcelData_html"><div class="ttname"><a href="classExcelData.html">ExcelData</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00010">ExcelData.cs:11</a></div></div>
 <div class="ttc" id="aclassExcelData_html_aa8148744c893c504d24a8d4520677e5d"><div class="ttname"><a href="classExcelData.html#aa8148744c893c504d24a8d4520677e5d">ExcelData.sheets</a></div><div class="ttdeci">Dictionary&lt; string, Sheet &gt; sheets</div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00025">ExcelData.cs:25</a></div></div>
 <div class="ttc" id="aclassExcelData_html_acaa9864c84e90871423cbcc3a9200de3"><div class="ttname"><a href="classExcelData.html#acaa9864c84e90871423cbcc3a9200de3">ExcelData.BuildMap</a></div><div class="ttdeci">virtual void BuildMap(string sheetName=&quot;_default&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00077">ExcelData.cs:77</a></div></div>
-<div class="ttc" id="aclassLang_html_aa1952bedb7f38df2ae3e130ee1d5d659"><div class="ttname"><a href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">Lang.langCode</a></div><div class="ttdeci">static string langCode</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00028">Lang.cs:28</a></div></div>
 <div class="ttc" id="aclassLang_html_aa84c85d24328a98729ac206b2ac15d84"><div class="ttname"><a href="classLang.html#aa84c85d24328a98729ac206b2ac15d84">Lang.excelDialog</a></div><div class="ttdeci">static ExcelData excelDialog</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00060">Lang.cs:60</a></div></div>
-<div class="ttc" id="aclassLang_html_ada42353e8636a1085ec2f851e7b3c403"><div class="ttname"><a href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">Lang.isBuiltin</a></div><div class="ttdeci">static bool isBuiltin</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00042">Lang.cs:42</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelData_8cs_source.html#l00077">ExcelData.BuildMap()</a>, <a class="el" href="Lang_8cs_source.html#l00060">excelDialog</a>, <a class="el" href="Lang_8cs_source.html#l00042">isBuiltin</a>, <a class="el" href="Lang_8cs_source.html#l00028">langCode</a>, <a class="el" href="ExcelData_8cs_source.html#l00014">ExcelData.Sheet.map</a>, and <a class="el" href="ExcelData_8cs_source.html#l00025">ExcelData.sheets</a>.</p>
+<p class="reference">References <a class="el" href="ExcelData_8cs_source.html#l00077">ExcelData.BuildMap()</a>, <a class="el" href="Lang_8cs_source.html#l00060">excelDialog</a>, and <a class="el" href="ExcelData_8cs_source.html#l00025">ExcelData.sheets</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaCustomSequence_8cs_source.html#l01617">DramaCustomSequence.GetText()</a>, <a class="el" href="TraitFortuneCookie_8cs_source.html#l00003">TraitFortuneCookie.OnEat()</a>, and <a class="el" href="TraitASMR_8cs_source.html#l00022">TraitASMR.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Lang_8cs_source.html#l00217">GetDialog()</a>, and <a class="el" href="TraitASMR_8cs_source.html#l00007">TraitASMR.OnCreate()</a>.</p>
 
 </div>
 </div>
@@ -1171,7 +1209,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00022">22</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="Card_8cs_source.html#l07788">Card.SecondaryCompare()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00155">LayerEditPCC.SetPortraitSlider()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="Card_8cs_source.html#l07808">Card.SecondaryCompare()</a>, and <a class="el" href="LayerEditPCC_8cs_source.html#l00155">LayerEditPCC.SetPortraitSlider()</a>.</p>
 
 </div>
 </div>
@@ -1197,7 +1235,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00060">60</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Lang_8cs_source.html#l00205">GetDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Lang_8cs_source.html#l00205">GetDialogSheet()</a>.</p>
 
 </div>
 </div>
@@ -1223,7 +1261,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00048">48</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LangGame_8cs_source.html#l00046">LangGame.Has()</a>, <a class="el" href="AI__Idle_8cs_source.html#l01010">AI_Idle.IdleActText()</a>, <a class="el" href="ClassExtension_8cs_source.html#l00040">ClassExtension.langGame()</a>, <a class="el" href="ZoneEventPhone_8cs_source.html#l00020">ZoneEventPhone.OnTickRound()</a>, and <a class="el" href="Card_8cs_source.html#l06830">Card.Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LangGame_8cs_source.html#l00046">LangGame.Has()</a>, <a class="el" href="AI__Idle_8cs_source.html#l01010">AI_Idle.IdleActText()</a>, <a class="el" href="ClassExtension_8cs_source.html#l00040">ClassExtension.langGame()</a>, <a class="el" href="ZoneEventPhone_8cs_source.html#l00020">ZoneEventPhone.OnTickRound()</a>, and <a class="el" href="Card_8cs_source.html#l06850">Card.Say()</a>.</p>
 
 </div>
 </div>
@@ -1275,7 +1313,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00042">42</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceLang_8cs_source.html#l00012">SourceLang&lt; T &gt;.Get()</a>, <a class="el" href="Lang_8cs_source.html#l00205">GetDialog()</a>, <a class="el" href="LangList_8cs_source.html#l00042">LangList.GetList()</a>, <a class="el" href="SourceData_8cs_source.html#l00553">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="SourceData_8cs_source.html#l00571">SourceData&lt; T, T2 &gt;.BaseRow.GetTextArray()</a>, <a class="el" href="Core_8cs_source.html#l00530">Core.Init()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="DramaManager_8cs_source.html#l00113">DramaManager.Load()</a>, <a class="el" href="TraitStoryBook_8cs_source.html#l00007">TraitStoryBook.OnRead()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, and <a class="el" href="CardRenderer_8cs_source.html#l00072">CardRenderer.ShowBossText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceLang_8cs_source.html#l00012">SourceLang&lt; T &gt;.Get()</a>, <a class="el" href="Lang_8cs_source.html#l00217">GetDialog()</a>, <a class="el" href="LangList_8cs_source.html#l00042">LangList.GetList()</a>, <a class="el" href="SourceData_8cs_source.html#l00553">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="SourceData_8cs_source.html#l00571">SourceData&lt; T, T2 &gt;.BaseRow.GetTextArray()</a>, <a class="el" href="Core_8cs_source.html#l00530">Core.Init()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="DramaManager_8cs_source.html#l00113">DramaManager.Load()</a>, <a class="el" href="TraitStoryBook_8cs_source.html#l00007">TraitStoryBook.OnRead()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, and <a class="el" href="CardRenderer_8cs_source.html#l00072">CardRenderer.ShowBossText()</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1365,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00038">38</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIText_8cs_source.html#l00038">UIText.ApplySkin()</a>, <a class="el" href="Card_8cs_source.html#l06882">Card.ApplyTone()</a>, <a class="el" href="SourceLang_8cs_source.html#l00012">SourceLang&lt; T &gt;.Get()</a>, <a class="el" href="LangList_8cs_source.html#l00042">LangList.GetList()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00058">ToneDataList.GetToneID()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="Scene_8cs_source.html#l00167">Scene.TryWarnLinuxMod()</a>, and <a class="el" href="Scene_8cs_source.html#l00156">Scene.TryWarnMacScreen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIText_8cs_source.html#l00038">UIText.ApplySkin()</a>, <a class="el" href="Card_8cs_source.html#l06902">Card.ApplyTone()</a>, <a class="el" href="SourceLang_8cs_source.html#l00012">SourceLang&lt; T &gt;.Get()</a>, <a class="el" href="LangList_8cs_source.html#l00042">LangList.GetList()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00058">ToneDataList.GetToneID()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="Scene_8cs_source.html#l00167">Scene.TryWarnLinuxMod()</a>, and <a class="el" href="Scene_8cs_source.html#l00156">Scene.TryWarnMacScreen()</a>.</p>
 
 </div>
 </div>
@@ -1353,7 +1391,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00028">28</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIBook_8cs_source.html#l00039">UIBook.Page.BuildNote()</a>, <a class="el" href="UIBook_8cs_source.html#l00493">UIBook.BuildPages()</a>, <a class="el" href="Lang_8cs_source.html#l00205">GetDialog()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="SkinManager_8cs_source.html#l00109">SkinManager.InitFont()</a>, <a class="el" href="BaseModManager_8cs_source.html#l00052">BaseModManager.InitLang()</a>, <a class="el" href="TraitStoryBook_8cs_source.html#l00007">TraitStoryBook.OnRead()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00192">LayerNewspaper.RefreshChat()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00216">LayerNewspaper.RefreshVote()</a>, <a class="el" href="Core_8cs_source.html#l00705">Core.SetLang()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00449">CoreConfig.BackerContentConfig.Show()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00072">CardRenderer.ShowBossText()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00805">CoreDebug.UpdateAlways()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00127">LayerUploader.Upload()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00047">TraitMoongate.UseMoongate()</a>, and <a class="el" href="ActEffect_8cs_source.html#l02758">ActEffect.Wish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIBook_8cs_source.html#l00039">UIBook.Page.BuildNote()</a>, <a class="el" href="UIBook_8cs_source.html#l00493">UIBook.BuildPages()</a>, <a class="el" href="Lang_8cs_source.html#l00217">GetDialog()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="SkinManager_8cs_source.html#l00109">SkinManager.InitFont()</a>, <a class="el" href="BaseModManager_8cs_source.html#l00052">BaseModManager.InitLang()</a>, <a class="el" href="TraitStoryBook_8cs_source.html#l00007">TraitStoryBook.OnRead()</a>, <a class="el" href="DramaManager_8cs_source.html#l00203">DramaManager.ParseLine()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00192">LayerNewspaper.RefreshChat()</a>, <a class="el" href="LayerNewspaper_8cs_source.html#l00216">LayerNewspaper.RefreshVote()</a>, <a class="el" href="Core_8cs_source.html#l00705">Core.SetLang()</a>, <a class="el" href="CoreConfig_8cs_source.html#l00449">CoreConfig.BackerContentConfig.Show()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00072">CardRenderer.ShowBossText()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00805">CoreDebug.UpdateAlways()</a>, <a class="el" href="LayerUploader_8cs_source.html#l00127">LayerUploader.Upload()</a>, <a class="el" href="TraitMoongate_8cs_source.html#l00047">TraitMoongate.UseMoongate()</a>, and <a class="el" href="ActEffect_8cs_source.html#l02758">ActEffect.Wish()</a>.</p>
 
 </div>
 </div>
@@ -1529,7 +1567,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Lang_8cs_source.html#l00054">54</a> of file <a class="el" href="Lang_8cs_source.html">Lang.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ClassExtension_8cs_source.html#l00947">ClassExtension.AddArticle()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00098">WidgetMainText.Append()</a>, <a class="el" href="Card_8cs_source.html#l06882">Card.ApplyTone()</a>, <a class="el" href="SourceThing_8cs_source.html#l00123">SourceThing.Row.GetName()</a>, <a class="el" href="UIItem_8cs_source.html#l00045">UIItem.Hyphenate()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="SkinManager_8cs_source.html#l00109">SkinManager.InitFont()</a>, <a class="el" href="ClassExtension_8cs_source.html#l00024">ClassExtension.langPlural()</a>, <a class="el" href="GameLang_8cs_source.html#l00141">GameLang.Parse()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, and <a class="el" href="ClassExtension_8cs_source.html#l00978">ClassExtension.ToTitleCase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ClassExtension_8cs_source.html#l00947">ClassExtension.AddArticle()</a>, <a class="el" href="WidgetMainText_8cs_source.html#l00098">WidgetMainText.Append()</a>, <a class="el" href="Card_8cs_source.html#l06902">Card.ApplyTone()</a>, <a class="el" href="SourceThing_8cs_source.html#l00123">SourceThing.Row.GetName()</a>, <a class="el" href="UIItem_8cs_source.html#l00045">UIItem.Hyphenate()</a>, <a class="el" href="Lang_8cs_source.html#l00071">Init()</a>, <a class="el" href="SkinManager_8cs_source.html#l00109">SkinManager.InitFont()</a>, <a class="el" href="ClassExtension_8cs_source.html#l00024">ClassExtension.langPlural()</a>, <a class="el" href="GameLang_8cs_source.html#l00141">GameLang.Parse()</a>, <a class="el" href="UIText_8cs_source.html#l00159">UIText.SetText()</a>, and <a class="el" href="ClassExtension_8cs_source.html#l00978">ClassExtension.ToTitleCase()</a>.</p>
 
 </div>
 </div>

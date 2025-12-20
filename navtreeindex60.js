@@ -1,5 +1,8 @@
 var NAVTREEINDEX60 =
 {
+"classEffectManager.html#a13c7125e32225b39851ff3e7ce60a484":[1,0,470,4],
+"classEffectManager.html#a360d1e3dc3e5c5ae72aac8d507e69c9c":[1,0,470,2],
+"classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4":[1,0,470,5],
 "classEffectManager.html#a70e6a751653a5a515397763c4624bc68":[1,0,470,6],
 "classEffectManager.html#aa630acdf06546db552c0a50b485f50fb":[1,0,470,3],
 "classEffectManager.html#add7dab2e4dbb3a0cf494d1065f6c4de0":[1,0,470,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX60 =
 "classElinEncoder.html#a08422fb5975092a3023b0ccfd35f965d":[1,0,487,2],
 "classElinEncoder.html#a267d9a1f8a681636e8b2f2fc845c5613":[1,0,487,1],
 "classElinEncoder.html#a3c48a92d4df406136594e6769f44bb44":[1,0,487,3],
-"classElinEncoder.html#aa30f23a81a1ef8bc6e84576e8f4d5a35":[1,0,487,5],
-"classElinEncoder.html#ac473e79d5a335f479800f2b2e3206cc3":[1,0,487,6],
-"classElinEncoder.html#adcae4bbafc53a7e9ed75f2340fd167ef":[1,0,487,0],
-"classElinEncoder.html#adf755ac5a4dee28b15fdf1b9b94a3173":[1,0,487,4]
+"classElinEncoder.html#aa30f23a81a1ef8bc6e84576e8f4d5a35":[1,0,487,5]
 };

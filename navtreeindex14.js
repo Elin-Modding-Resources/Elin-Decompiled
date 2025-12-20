@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"SliderType_8cs.html#addae28f895c6122349f7321066b62b01a13c7d2d737f81f7bf89aed9fbcd0ad55":[2,0,0,3,2,0,6,0,5],
+"SliderType_8cs.html#addae28f895c6122349f7321066b62b01a5988c20a047cfe063999787584b0aca7":[2,0,0,3,2,0,6,0,6],
 "SliderType_8cs.html#addae28f895c6122349f7321066b62b01a6132295fcf5570fb8b0a944ef322a598":[2,0,0,3,2,0,6,0,3],
 "SliderType_8cs.html#addae28f895c6122349f7321066b62b01a9594eec95be70e7b1710f730fdda33d9":[2,0,0,3,2,0,6,0,2],
 "SliderType_8cs.html#addae28f895c6122349f7321066b62b01ad382816a3cbeed082c9e216e7392eed1":[2,0,0,3,2,0,6,0,1],
@@ -8,8 +10,8 @@ var NAVTREEINDEX14 =
 "SliderType_8cs_source.html":[2,0,0,3,2,0,6],
 "SocketData_8cs.html":[2,0,0,1091],
 "SocketData_8cs_source.html":[2,0,0,1091],
-"SoftShadow_8cs.html":[2,0,0,3,100],
-"SoftShadow_8cs_source.html":[2,0,0,3,100],
+"SoftShadow_8cs.html":[2,0,0,3,101],
+"SoftShadow_8cs_source.html":[2,0,0,3,101],
 "SourceArea_8cs.html":[2,0,0,1092],
 "SourceArea_8cs_source.html":[2,0,0,1092],
 "SourceAsset_8cs.html":[2,0,0,1093],
@@ -145,8 +147,8 @@ var NAVTREEINDEX14 =
 "SplashText_8cs_source.html":[2,0,0,1148],
 "SpriteAnimation_8cs.html":[2,0,0,2,77],
 "SpriteAnimation_8cs_source.html":[2,0,0,2,77],
-"SpriteAsset_8cs.html":[2,0,0,3,101],
-"SpriteAsset_8cs_source.html":[2,0,0,3,101],
+"SpriteAsset_8cs.html":[2,0,0,3,102],
+"SpriteAsset_8cs_source.html":[2,0,0,3,102],
 "SpriteBasedLaser_8cs.html":[2,0,0,1149],
 "SpriteBasedLaser_8cs_source.html":[2,0,0,1149],
 "SpriteData_8cs.html":[2,0,0,1150],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "TCSimpleText_8cs_source.html":[2,0,0,1224],
 "TCState_8cs.html":[2,0,0,1225],
 "TCState_8cs_source.html":[2,0,0,1225],
-"TCText_8cs.html":[2,0,0,1226],
-"TCText_8cs_source.html":[2,0,0,1226],
-"TCUI_8cs.html":[2,0,0,1227]
+"TCText_8cs.html":[2,0,0,1226]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"TraitCorgon_8cs_source.html":[2,0,0,1416],
+"TraitCrafter_8cs.html":[2,0,0,1417],
 "TraitCrafter_8cs_source.html":[2,0,0,1417],
 "TraitCrenel_8cs.html":[2,0,0,1418],
 "TraitCrenel_8cs_source.html":[2,0,0,1418],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "TraitGuildClerk_8cs_source.html":[2,0,0,1539],
 "TraitGuildDoorman_8cs.html":[2,0,0,1540],
 "TraitGuildDoorman_8cs_source.html":[2,0,0,1540],
-"TraitGuildPersonnel_8cs.html":[2,0,0,1541],
-"TraitGuildPersonnel_8cs_source.html":[2,0,0,1541],
-"TraitHarvest_8cs.html":[2,0,0,1542]
+"TraitGuildPersonnel_8cs.html":[2,0,0,1541]
 };

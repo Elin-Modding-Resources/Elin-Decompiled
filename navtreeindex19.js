@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"TraitPillowStrange_8cs_source.html":[2,0,0,1667],
+"TraitPillow_8cs.html":[2,0,0,1658],
 "TraitPillow_8cs_source.html":[2,0,0,1658],
 "TraitPlamoBox_8cs.html":[2,0,0,1669],
 "TraitPlamoBox_8cs_source.html":[2,0,0,1669],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "TraitTerraGlobe_8cs.html":[2,0,0,1787],
 "TraitTerraGlobe_8cs_source.html":[2,0,0,1787],
 "TraitThrownConsume_8cs.html":[2,0,0,1789],
-"TraitThrownConsume_8cs_source.html":[2,0,0,1789],
-"TraitThrownExplosive_8cs.html":[2,0,0,1790],
-"TraitThrownExplosive_8cs_source.html":[2,0,0,1790]
+"TraitThrownConsume_8cs_source.html":[2,0,0,1789]
 };

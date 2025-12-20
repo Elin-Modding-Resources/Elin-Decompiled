@@ -2863,6 +2863,7 @@ var hierarchy =
       [ "PrimitiveUI.Examples.PUIExampleCharts", "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html", null ],
       [ "PrimitiveUI.Examples.PUIExampleRPGStats", "classPrimitiveUI_1_1Examples_1_1PUIExampleRPGStats.html", null ],
       [ "PrimitiveUI.Examples.PUIExampleSineWaves", "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html", null ],
+      [ "RainbowTextColor", "classRainbowTextColor.html", null ],
       [ "RandomPositionMover", "classRandomPositionMover.html", null ],
       [ "RenderCamUpscaler", "classRenderCamUpscaler.html", null ],
       [ "SelectedColorController", "classSelectedColorController.html", null ],

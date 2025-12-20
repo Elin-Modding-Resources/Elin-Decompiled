@@ -17,6 +17,7 @@ var classLang =
     [ "_weight", "classLang.html#a14a43d614cfd7b532f5d52113e68d321", null ],
     [ "Get", "classLang.html#a87ee4b30187ae525639ccc297e2c0823", null ],
     [ "GetDialog", "classLang.html#a2219227ad84bf1322cd12ede5dbe1a2e", null ],
+    [ "GetDialogSheet", "classLang.html#ac9572fda51f74a1f05d75153c5e82da0", null ],
     [ "GetList", "classLang.html#aa34e85634a016f6f433868d7d697904b", null ],
     [ "Has", "classLang.html#ae13a80dd1ff1b89239a18781b2e0d2ca", null ],
     [ "Init", "classLang.html#ad2cd6f38059597f486fa74b4c4d246e2", null ],

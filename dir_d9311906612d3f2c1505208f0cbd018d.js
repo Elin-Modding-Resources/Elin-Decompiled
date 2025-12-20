@@ -77,6 +77,7 @@ var dir_d9311906612d3f2c1505208f0cbd018d =
     [ "PopManager.cs", "PopManager_8cs.html", "PopManager_8cs" ],
     [ "Popper.cs", "Popper_8cs.html", "Popper_8cs" ],
     [ "PopperManager.cs", "PopperManager_8cs.html", "PopperManager_8cs" ],
+    [ "RainbowTextColor.cs", "RainbowTextColor_8cs.html", "RainbowTextColor_8cs" ],
     [ "RectTransformExt.cs", "RectTransformExt_8cs.html", "RectTransformExt_8cs" ],
     [ "RenderCamUpscaler.cs", "RenderCamUpscaler_8cs.html", "RenderCamUpscaler_8cs" ],
     [ "SearchContext.cs", "SearchContext_8cs.html", "SearchContext_8cs" ],

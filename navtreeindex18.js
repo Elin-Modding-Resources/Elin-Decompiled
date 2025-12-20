@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"TraitGuildPersonnel_8cs_source.html":[2,0,0,1541],
+"TraitHarvest_8cs.html":[2,0,0,1542],
 "TraitHarvest_8cs_source.html":[2,0,0,1542],
 "TraitHat_8cs.html":[2,0,0,1543],
 "TraitHat_8cs_source.html":[2,0,0,1543],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "TraitPillowMani_8cs_source.html":[2,0,0,1665],
 "TraitPillowOpatos_8cs.html":[2,0,0,1666],
 "TraitPillowOpatos_8cs_source.html":[2,0,0,1666],
-"TraitPillowStrange_8cs.html":[2,0,0,1667],
-"TraitPillowStrange_8cs_source.html":[2,0,0,1667],
-"TraitPillow_8cs.html":[2,0,0,1658]
+"TraitPillowStrange_8cs.html":[2,0,0,1667]
 };

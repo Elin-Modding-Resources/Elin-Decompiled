@@ -225,6 +225,7 @@ var classCard =
     [ "ShowEmo", "classCard.html#a9381cbefabfa31e73a65c0046c3256d9", null ],
     [ "SpawnLoot", "classCard.html#af42a16ea18ec7c9d0ec0c901ac5fa988", null ],
     [ "Split", "classCard.html#a1ea44a484859724ae36b61a781fe1774", null ],
+    [ "StripTalkSpeiclaCharacters", "classCard.html#a55fd8dd21f835c1fa98996bd8701cba7", null ],
     [ "Talk", "classCard.html#a57e842daf7d0e710ec61331486eed749", null ],
     [ "TalkRaw", "classCard.html#af6991e38e39a648e4b28f7ea03157c31", null ],
     [ "Teleport", "classCard.html#a0c83d3ef213dbf0870b76d4b1ae3561e", null ],

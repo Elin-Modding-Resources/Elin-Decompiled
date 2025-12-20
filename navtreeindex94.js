@@ -1,5 +1,9 @@
 var NAVTREEINDEX94 =
 {
+"classQuestManager.html#a839c0037753f5365f4d2b2f5d3abe5b8":[1,0,1026,33],
+"classQuestManager.html#a8479a539eef4eee1c8a392d3cec51e60":[1,0,1026,3],
+"classQuestManager.html#a88f3254faeb7458eea94753c61a98862":[1,0,1026,19],
+"classQuestManager.html#a97a7034ff180be698309ee4b1b3e7dda":[1,0,1026,1],
 "classQuestManager.html#a9ad1b8ca3a88be592802f01b0342e38a":[1,0,1026,30],
 "classQuestManager.html#aa44ff8125708c05a2616e89fb03fbbed":[1,0,1026,13],
 "classQuestManager.html#aa792725892a946a4527c8a006b2209dd":[1,0,1026,25],
@@ -237,17 +241,13 @@ var NAVTREEINDEX94 =
 "classRaceBonus.html#ada422a858396669a8d82c244a81d0fd8":[1,0,1068,0],
 "classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09":[1,0,1068,1],
 "classRaceBonus.html#ae31a97330bd51599ea755f680f14d8a2":[1,0,1068,2],
-"classRand.html":[1,0,1069],
-"classRand.html#a07e7911615d9e9fa579859b4cd8f47f9":[1,0,1069,1],
-"classRand.html#a116307e9f0d536f3c83e7828acc25ec5":[1,0,1069,13],
-"classRand.html#a187db907a68b67bec2ae3bef8d07a856":[1,0,1069,6],
-"classRand.html#a1de36df486bb18a602c5a05805608b59":[1,0,1069,4],
-"classRand.html#a282c83e91a97bd9694962b6a481addf8":[1,0,1069,11],
-"classRand.html#a44fdf2659f22f6db38549d8966a22599":[1,0,1069,12],
-"classRand.html#a62c6616c6d0a3cd94e553b72dabd8809":[1,0,1069,7],
-"classRand.html#a6cc0599974b496e07844cbeb25e755ad":[1,0,1069,2],
-"classRand.html#a712aa6912dadf7b16716168002f18c6e":[1,0,1069,0],
-"classRand.html#a830d4d30ba870344c9be961357746a04":[1,0,1069,10],
-"classRand.html#aa735bbc1a2bc75d7dddcb3df67e15858":[1,0,1069,5],
-"classRand.html#aba2b35e463fa4da60254342180a4f55a":[1,0,1069,8]
+"classRainbowTextColor.html":[1,0,1069],
+"classRainbowTextColor.html#a001276cd204fcb6a06097d877aebb85f":[1,0,1069,0],
+"classRainbowTextColor.html#a03cf2d93f3bbaaba88e1ce39d575cd6b":[1,0,1069,15],
+"classRainbowTextColor.html#a1e250bde79f230936530258b7bb08b13":[1,0,1069,8],
+"classRainbowTextColor.html#a22f898fe1cd4b93b133d61e20bf48dd4":[1,0,1069,2],
+"classRainbowTextColor.html#a4476135c40f02722cb8ef2773b618d36":[1,0,1069,11],
+"classRainbowTextColor.html#a539b3f16b9f45a1cc573532cf219184f":[1,0,1069,9],
+"classRainbowTextColor.html#a5405aaf893b8f0e2c4ca946157ba1fd3":[1,0,1069,1],
+"classRainbowTextColor.html#a66bc95781d36573b3ae26295cdddc09f":[1,0,1069,12]
 };

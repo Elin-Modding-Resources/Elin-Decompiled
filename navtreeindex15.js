@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"TCText_8cs_source.html":[2,0,0,1226],
+"TCUI_8cs.html":[2,0,0,1227],
 "TCUI_8cs_source.html":[2,0,0,1227],
 "TC_8cs.html":[2,0,0,1215],
 "TC_8cs_source.html":[2,0,0,1215],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "TileTypeWater_8cs_source.html":[2,0,0,1296],
 "TileTypeWaterfall_8cs.html":[2,0,0,1298],
 "TileTypeWaterfall_8cs_source.html":[2,0,0,1298],
-"TileTypeWindow_8cs.html":[2,0,0,1300],
-"TileTypeWindow_8cs_source.html":[2,0,0,1300],
-"TileType_8cs.html":[2,0,0,1246]
+"TileTypeWindow_8cs.html":[2,0,0,1300]
 };

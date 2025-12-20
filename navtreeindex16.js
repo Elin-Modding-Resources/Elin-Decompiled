@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"TileTypeWindow_8cs_source.html":[2,0,0,1300],
+"TileType_8cs.html":[2,0,0,1246],
 "TileType_8cs_source.html":[2,0,0,1246],
 "TimeDebuff_8cs.html":[2,0,0,1302],
 "TimeDebuff_8cs_source.html":[2,0,0,1302],
@@ -7,10 +9,10 @@ var NAVTREEINDEX16 =
 "TimeTable_8cs_source.html":[2,0,0,1303],
 "Timebuff_8cs.html":[2,0,0,1301],
 "Timebuff_8cs_source.html":[2,0,0,1301],
-"ToJOutline_8cs.html":[2,0,0,3,102],
-"ToJOutline_8cs_source.html":[2,0,0,3,102],
-"ToJShadow_8cs.html":[2,0,0,3,103],
-"ToJShadow_8cs_source.html":[2,0,0,3,103],
+"ToJOutline_8cs.html":[2,0,0,3,103],
+"ToJOutline_8cs_source.html":[2,0,0,3,103],
+"ToJShadow_8cs.html":[2,0,0,3,104],
+"ToJShadow_8cs_source.html":[2,0,0,3,104],
 "ToggleType_8cs.html":[2,0,0,1304],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8":[2,0,0,1304,0],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8a6439bc5f8000f6038dbd95d6c677c25a":[2,0,0,1304,0,3],
@@ -23,10 +25,10 @@ var NAVTREEINDEX16 =
 "ToggleType_8cs_source.html":[2,0,0,1304],
 "ToneDataList_8cs.html":[2,0,0,2,85],
 "ToneDataList_8cs_source.html":[2,0,0,2,85],
-"TooltipData_8cs.html":[2,0,0,3,104],
-"TooltipData_8cs_source.html":[2,0,0,3,104],
-"TooltipManager_8cs.html":[2,0,0,3,105],
-"TooltipManager_8cs_source.html":[2,0,0,3,105],
+"TooltipData_8cs.html":[2,0,0,3,105],
+"TooltipData_8cs_source.html":[2,0,0,3,105],
+"TooltipManager_8cs.html":[2,0,0,3,106],
+"TooltipManager_8cs_source.html":[2,0,0,3,106],
 "TraitASMR_8cs.html":[2,0,0,1327],
 "TraitASMR_8cs_source.html":[2,0,0,1327],
 "TraitAbility_8cs.html":[2,0,0,1306],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TraitCoreDefense_8cs_source.html":[2,0,0,1414],
 "TraitCoreZone_8cs.html":[2,0,0,1415],
 "TraitCoreZone_8cs_source.html":[2,0,0,1415],
-"TraitCorgon_8cs.html":[2,0,0,1416],
-"TraitCorgon_8cs_source.html":[2,0,0,1416],
-"TraitCrafter_8cs.html":[2,0,0,1417]
+"TraitCorgon_8cs.html":[2,0,0,1416]
 };
