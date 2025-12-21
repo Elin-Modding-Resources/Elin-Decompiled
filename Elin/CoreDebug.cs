@@ -959,12 +959,11 @@ public class CoreDebug : EScriptable
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
-				EClass.pc.Pick(CraftUtil.MakeBloodMeal(EClass.pc, targetChara));
-				EClass.pc.Pick(CraftUtil.MakeLoveLunch(targetChara));
 				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
+				EClass.pc.Pick(targetChara.MakeGene());
 				TraitFoodEggFertilized.Incubate(targetChara.MakeEgg(effect: false, 1, addToZone: false, 100), targetChara.pos.GetNearestPoint(allowBlock: false, allowChara: false));
+				targetChara.ScaleByPrincipal();
 			}
-			targetChara.ScaleByPrincipal();
 			if (EClass.game.quests.Get<QuestDebt>() == null)
 			{
 				Chara chara = CharaGen.Create("loytel");

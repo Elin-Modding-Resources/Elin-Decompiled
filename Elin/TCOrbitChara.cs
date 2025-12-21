@@ -146,12 +146,12 @@ public class TCOrbitChara : TCOrbit
 			if (flag2)
 			{
 				float x = (float)owner.mana.max / (float)(owner.mana.max + owner.MaxHP);
-				bgMP.SetActive(flag2);
 				bgMP.transform.localScale = new Vector3(x, 1f, 1f);
 			}
 			barHP.transform.SetLocalScaleX(Mathf.Max(0f, num));
 			barHP.SetActive(enable: true);
 			bgHP.SetActive(enable: true);
+			bgMP.SetActive(flag2);
 		}
 		else
 		{

@@ -52,6 +52,11 @@ public class TraitMonsterBall : Trait
 		{
 			return base.GetValue();
 		}
-		return base.GetValue() * (100 + owner.LV * 15) / 100;
+		long num = (long)base.GetValue() * (long)(100 + owner.LV * 15) / 100;
+		if (num > 214748364)
+		{
+			num = 214748364L;
+		}
+		return (int)num;
 	}
 }

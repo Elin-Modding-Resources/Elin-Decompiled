@@ -69,6 +69,10 @@ public class Thing : Card
 				{
 					return EClass.core.refs.prefs.blockWall;
 				}
+				if (tileType is TileTypeSlope)
+				{
+					return EClass.core.refs.prefs.blockStairs;
+				}
 			}
 			if (source.origin == null || source.pref.UsePref)
 			{

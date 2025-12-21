@@ -631,10 +631,19 @@ public class DNA : EClass
 		for (int i = 0; i < vals.Count; i += 2)
 		{
 			Element element = Element.Create(vals[i], vals[i + 1]);
-			if (element.source.category == "feat" && c.Evalue(element.id) >= element.source.max)
+			if (!(element.source.category == "feat"))
 			{
-				return element;
+				continue;
 			}
+			if (c.Evalue(element.id) < element.source.max)
+			{
+				Element orCreateElement = c.elements.GetOrCreateElement(element.id);
+				if (orCreateElement != null && orCreateElement.vLink == 0)
+				{
+					continue;
+				}
+			}
+			return element;
 		}
 		return null;
 	}

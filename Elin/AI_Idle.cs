@@ -69,9 +69,9 @@ public class AI_Idle : AIAct
 						owner.Pick(thing);
 					}
 				}
-				if (thing == null && !owner.IsPCParty)
+				if (thing == null && !owner.IsPCFaction)
 				{
-					if (!owner.IsPCFaction && EClass.rnd(8) != 0)
+					if (EClass.rnd(8) != 0)
 					{
 						owner.hunger.Mod(-30);
 					}
