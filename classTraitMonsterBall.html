@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.250 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.251 Nightly</span>
    </div>
   </td>
  </tr>
@@ -790,13 +790,18 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   52</span>        {</div>
 <div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span> base.GetValue();</div>
 <div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> base.GetValue() * (100 + owner.LV * 15) / 100;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordtype">long</span> num = (long)base.GetValue() * (long)(100 + <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> * 15) / 100;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> (num &gt; 214748364)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            num = 214748364L;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)num;</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
 <div class="ttc" id="aclassTraitMonsterBall_html_a6eefb5f490ac882b1956b6103293e873"><div class="ttname"><a href="classTraitMonsterBall.html#a6eefb5f490ac882b1956b6103293e873">TraitMonsterBall.IsSilvercatBall</a></div><div class="ttdeci">virtual bool IsSilvercatBall</div><div class="ttdef"><b>Definition:</b> <a href="TraitMonsterBall_8cs_source.html#l00025">TraitMonsterBall.cs:25</a></div></div>
 <div class="ttc" id="aclassTraitMonsterBall_html_a92e81fe688eef43f0edd42d1e2bf7a2c"><div class="ttname"><a href="classTraitMonsterBall.html#a92e81fe688eef43f0edd42d1e2bf7a2c">TraitMonsterBall.IsDuponneBall</a></div><div class="ttdeci">virtual bool IsDuponneBall</div><div class="ttdef"><b>Definition:</b> <a href="TraitMonsterBall_8cs_source.html#l00023">TraitMonsterBall.cs:23</a></div></div>
 <div class="ttc" id="aclassTraitMonsterBall_html_aff66f460e585dd1fde7a184789916b5d"><div class="ttname"><a href="classTraitMonsterBall.html#aff66f460e585dd1fde7a184789916b5d">TraitMonsterBall.IsLittleBall</a></div><div class="ttdeci">virtual bool IsLittleBall</div><div class="ttdef"><b>Definition:</b> <a href="TraitMonsterBall_8cs_source.html#l00021">TraitMonsterBall.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitMonsterBall_8cs_source.html#l00023">IsDuponneBall</a>, <a class="el" href="TraitMonsterBall_8cs_source.html#l00021">IsLittleBall</a>, and <a class="el" href="TraitMonsterBall_8cs_source.html#l00025">IsSilvercatBall</a>.</p>
+<p class="reference">References <a class="el" href="TraitMonsterBall_8cs_source.html#l00023">IsDuponneBall</a>, <a class="el" href="TraitMonsterBall_8cs_source.html#l00021">IsLittleBall</a>, <a class="el" href="TraitMonsterBall_8cs_source.html#l00025">IsSilvercatBall</a>, <a class="el" href="Card_8cs_source.html#l00386">Card.LV</a>, and <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>.</p>
 
 </div>
 </div>
