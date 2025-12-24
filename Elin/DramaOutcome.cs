@@ -122,10 +122,13 @@ public class DramaOutcome : EMono
 		chara.MoveHome(EMono.game.StartZone);
 		chara.RemoveEditorTag(EditorTag.AINoMove);
 		chara = EMono.game.cards.globalCharas.Find("ashland");
-		EMono.ui.Say("Possible mod bug: 404 Ashland Not Found");
-		chara = CharaGen.Create("ashland");
-		chara.SetGlobal();
-		chara.MoveHome(EMono.game.StartZone);
+		if (chara == null)
+		{
+			EMono.ui.Say("Possible mod bug: 404 Ashland Not Found");
+			chara = CharaGen.Create("ashland");
+			chara.SetGlobal();
+			chara.MoveHome(EMono.game.StartZone);
+		}
 	}
 
 	public void QuestExploration_AfterComplete()

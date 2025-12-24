@@ -1937,11 +1937,34 @@ public class CoreDebug : EScriptable
 		if (list.Count > 1)
 		{
 			Chara chara = list[1];
+			chara.RemoveGlobal();
 			chara.homeBranch.BanishMember(chara);
 			chara.Destroy();
 			return "Demitas Removed!";
 		}
 		return "Not enough Demitas!";
+	}
+
+	[ConsoleCommand("")]
+	public static string Fix_RemoveAshland()
+	{
+		List<Chara> list = new List<Chara>();
+		foreach (Chara value in EClass.game.cards.globalCharas.Values)
+		{
+			if (value.id == "ashland")
+			{
+				list.Add(value);
+			}
+		}
+		if (list.Count > 1)
+		{
+			Chara chara = list[1];
+			chara.RemoveGlobal();
+			chara.homeBranch.BanishMember(chara);
+			chara.Destroy();
+			return "Ashland Removed!";
+		}
+		return "Not enough Ashland!";
 	}
 
 	[ConsoleCommand("")]

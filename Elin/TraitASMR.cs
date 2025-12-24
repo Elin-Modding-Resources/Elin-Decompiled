@@ -7,7 +7,7 @@ public class TraitASMR : Trait
 	public override void OnCreate(int lv)
 	{
 		ExcelData.Sheet dialogSheet = Lang.GetDialogSheet("asmr");
-		owner.c_idRefCard = GetParam(1) ?? ((EClass.rnd(EClass.debug.enable ? 2 : 10) != 0) ? "jure" : dialogSheet.map.RandomItem()["id"]);
+		owner.c_idRefCard = GetParam(1) ?? ((EClass.rnd(2) != 0) ? "jure" : dialogSheet.map.RandomItem()["id"]);
 	}
 
 	public override void OnImportMap()

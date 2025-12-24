@@ -6300,7 +6300,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void SetFreePos(Point point)
 	{
-		freePos = EClass.game.config.FreePos && isThing && TileType.FreeStyle && !sourceCard.multisize && !EClass.scene.actionMode.IsRoofEditMode(this);
+		freePos = EClass.game.config.FreePos && isThing && TileType.FreeStyle;
 		if (freePos)
 		{
 			Vector3 vector = point.Position();
@@ -6349,7 +6349,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			v.y = renderParam.y;
 			v.z = renderParam.z;
 		}
-		if (TileType.UseMountHeight && !EClass.scene.actionMode.IsRoofEditMode(this))
+		else if (TileType.UseMountHeight)
 		{
 			TileType.GetMountHeight(ref v, point, this.dir, this);
 		}
