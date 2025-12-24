@@ -1,5 +1,6 @@
 var NAVTREEINDEX95 =
 {
+"classRainbowTextColor.html#a66bc95781d36573b3ae26295cdddc09f":[1,0,1069,12],
 "classRainbowTextColor.html#a79fcdf93e2b31ab8d4529cafc20d5455":[1,0,1069,5],
 "classRainbowTextColor.html#a93aae7efdb866f06489220d343bfc00e":[1,0,1069,4],
 "classRainbowTextColor.html#ac1a00922beb966c030a0eeb9d1dfa36f":[1,0,1069,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX95 =
 "classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e":[1,0,1074,0,14],
 "classRecipe_1_1Ingredient.html#a44f06296039d29dcb759daa7da96c63b":[1,0,1074,0,10],
 "classRecipe_1_1Ingredient.html#a4dca129b30f3f4070784361ea8e7676c":[1,0,1074,0,9],
-"classRecipe_1_1Ingredient.html#a50857f57552484b9f35820590ccbf500":[1,0,1074,0,15],
-"classRecipe_1_1Ingredient.html#a580848dba508d908a2ea969b190b7d1a":[1,0,1074,0,11]
+"classRecipe_1_1Ingredient.html#a50857f57552484b9f35820590ccbf500":[1,0,1074,0,15]
 };

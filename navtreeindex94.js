@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"classQuestManager.html#a7cdc92970800a3c53ee591364fe8495d":[1,0,1026,12],
 "classQuestManager.html#a839c0037753f5365f4d2b2f5d3abe5b8":[1,0,1026,33],
 "classQuestManager.html#a8479a539eef4eee1c8a392d3cec51e60":[1,0,1026,3],
 "classQuestManager.html#a88f3254faeb7458eea94753c61a98862":[1,0,1026,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "classRainbowTextColor.html#a22f898fe1cd4b93b133d61e20bf48dd4":[1,0,1069,2],
 "classRainbowTextColor.html#a4476135c40f02722cb8ef2773b618d36":[1,0,1069,11],
 "classRainbowTextColor.html#a539b3f16b9f45a1cc573532cf219184f":[1,0,1069,9],
-"classRainbowTextColor.html#a5405aaf893b8f0e2c4ca946157ba1fd3":[1,0,1069,1],
-"classRainbowTextColor.html#a66bc95781d36573b3ae26295cdddc09f":[1,0,1069,12]
+"classRainbowTextColor.html#a5405aaf893b8f0e2c4ca946157ba1fd3":[1,0,1069,1]
 };

@@ -50,6 +50,7 @@ var classCoreDebug =
     [ "FirstAdventurer", "classCoreDebug.html#a506f8281fdf879f01c51a8802827a25f", null ],
     [ "Fix_EtherDisease", "classCoreDebug.html#a22256c592fdb210a509a5d747fe8d040", null ],
     [ "Fix_LostCore", "classCoreDebug.html#ad8fd0fde65f710c7a6ea864e52b72c50", null ],
+    [ "Fix_RemoveAshland", "classCoreDebug.html#ae002ba6a1f2dbd22bbd5a770d194a8db", null ],
     [ "Fix_RemoveDemitas", "classCoreDebug.html#a7bf4a83b527529ae371924df5af92ea9", null ],
     [ "Fix_RemoveDesignations", "classCoreDebug.html#a3a05a80b89a8da322d9567378b6dd0fd", null ],
     [ "Fix_RemoveDuplicateUnique", "classCoreDebug.html#ae6f3db70e5a4fb0f525180f92318841e", null ],

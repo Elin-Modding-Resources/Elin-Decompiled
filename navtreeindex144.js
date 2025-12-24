@@ -1,5 +1,6 @@
 var NAVTREEINDEX144 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daa6112ad70c6cfb9fe6db66679cbf80ee":[0,4,3,0,8,125],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daa768a3ee787893f843fb8cb8489ec561":[0,4,3,0,8,48],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daa84cc046d48610b05c21fd3670d0c829":[0,4,3,0,8,92],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daa89a8fd9820d4256f0b101626b40e6a7":[0,4,3,0,8,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX144 =
 "structThingContainer_1_1DestData.html#ac731ec918cccfca92cf1ad1edd3c1fae":[1,0,1343,0,1],
 "structUIList_1_1ButtonPair.html":[1,0,2039,0],
 "structUIList_1_1ButtonPair.html#a0878383aceddeac69e6b600576686ad0":[1,0,2039,0,1],
-"structUIList_1_1ButtonPair.html#a5b4946148b7fee6d9794ac1c8e23be00":[1,0,2039,0,0],
-"structVersion.html":[1,0,2069]
+"structUIList_1_1ButtonPair.html#a5b4946148b7fee6d9794ac1c8e23be00":[1,0,2039,0,0]
 };

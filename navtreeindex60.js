@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"classEffectManager.html":[1,0,470],
 "classEffectManager.html#a13c7125e32225b39851ff3e7ce60a484":[1,0,470,4],
 "classEffectManager.html#a360d1e3dc3e5c5ae72aac8d507e69c9c":[1,0,470,2],
 "classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4":[1,0,470,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "classElinEncoder.html":[1,0,487],
 "classElinEncoder.html#a08422fb5975092a3023b0ccfd35f965d":[1,0,487,2],
 "classElinEncoder.html#a267d9a1f8a681636e8b2f2fc845c5613":[1,0,487,1],
-"classElinEncoder.html#a3c48a92d4df406136594e6769f44bb44":[1,0,487,3],
-"classElinEncoder.html#aa30f23a81a1ef8bc6e84576e8f4d5a35":[1,0,487,5]
+"classElinEncoder.html#a3c48a92d4df406136594e6769f44bb44":[1,0,487,3]
 };

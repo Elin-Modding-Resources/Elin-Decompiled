@@ -1,5 +1,6 @@
 var NAVTREEINDEX142 =
 {
+"classZone__Town.html#ad10b97c1fff097611d051d5b1c416058":[1,0,2205,4],
 "classZone__TruceGround.html":[1,0,2206],
 "classZone__TruceGround.html#acd95161ed33a202914ec10488724e5b0":[1,0,2206,0],
 "classZone__TruceGround.html#ae2d8ad9a977834fd27063071a4c3653a":[1,0,2206,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX142 =
 "interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c":[1,0,679,2],
 "interfaceIInspect.html#a93639b982be73f68a6a9d27f6fb7044e":[1,0,679,5],
 "interfaceIInspect.html#aae89fd529e6603011da5cc9a070fc9e3":[1,0,679,4],
-"interfaceIInspect.html#ac021b1fbf3aee07a35d65d436a4bcd4f":[1,0,679,3],
-"interfaceIInspect.html#ac1ff8db98a0e48a20ab4b46bdd6e1be3":[1,0,679,6]
+"interfaceIInspect.html#ac021b1fbf3aee07a35d65d436a4bcd4f":[1,0,679,3]
 };

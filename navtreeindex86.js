@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789":[1,0,914,0],
 "classMutation.html":[1,0,916],
 "classNet.html":[1,0,917],
 "classNet.html#a098087410828fafb0481376bf6ea78da":[1,0,917,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "classPOIMap_1_1Cell.html#abca543f79cc7b3a77a34cc2aa991fd65":[1,0,957,0,3],
 "classPOIMap_1_1Cell.html#af09db278e788d8ce46737cc291df9ef0":[1,0,957,0,2],
 "classPOLICY.html":[1,0,962],
-"classPOLICY.html#a08da5ca358461ba7a9fd1ac9a654c324":[1,0,962,36],
-"classPOLICY.html#a09d7c2eb36531840688b111106185a57":[1,0,962,18]
+"classPOLICY.html#a08da5ca358461ba7a9fd1ac9a654c324":[1,0,962,36]
 };

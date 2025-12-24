@@ -1,5 +1,6 @@
 var NAVTREEINDEX91 =
 {
+"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a74bef68ed4cc6f366907525076bc1ac9":[0,4,7,0,0,3],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a76b5c37843d7bd3b6ac830f2cccbc1f8":[1,0,7,0,0,0],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a76b5c37843d7bd3b6ac830f2cccbc1f8":[0,4,7,0,0,0],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#ad4da7e08fc1774625802bb2ff7e3a9e1":[0,4,7,0,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX91 =
 "classPrimitiveUI_1_1StrokeStyle.html":[1,0,7,2],
 "classPrimitiveUI_1_1StrokeStyle.html#a16a6f9fe46b6e3d2895ae566855dfa81":[0,4,7,2,5],
 "classPrimitiveUI_1_1StrokeStyle.html#a16a6f9fe46b6e3d2895ae566855dfa81":[1,0,7,2,5],
-"classPrimitiveUI_1_1StrokeStyle.html#a288f9fbbb464437b8442446a3822fc7e":[0,4,7,2,3],
-"classPrimitiveUI_1_1StrokeStyle.html#a288f9fbbb464437b8442446a3822fc7e":[1,0,7,2,3]
+"classPrimitiveUI_1_1StrokeStyle.html#a288f9fbbb464437b8442446a3822fc7e":[0,4,7,2,3]
 };

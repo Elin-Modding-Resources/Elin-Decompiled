@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitContainerCurrency.html#ac5d783d294fc8c6ea1df54dd5f86cdb9":[1,0,1516,0],
 "classTraitContainerPurse.html":[1,0,1517],
 "classTraitContainerPurse.html#a9c4a857406e55a4b88e6a2b1989e2c36":[1,0,1517,0],
 "classTraitContainerShared.html":[1,0,1518],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitDreamBug.html#a312a1c5a153424c12d45ce5e5c1872fc":[1,0,1560,1],
 "classTraitDreamBug.html#a52f951b18784825907d82d82bfa5b351":[1,0,1560,3],
 "classTraitDreamBug.html#ad56606394c6e097a292ec3e7377c1714":[1,0,1560,4],
-"classTraitDresser.html":[1,0,1561],
-"classTraitDrink.html":[1,0,1562]
+"classTraitDresser.html":[1,0,1561]
 };

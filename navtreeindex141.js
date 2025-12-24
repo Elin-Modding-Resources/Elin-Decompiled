@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"classZone__CurryRuinDungeon.html#ae4ca84f6a0de0717081820449bdd6bf7":[1,0,2143,6],
 "classZone__CursedManor.html":[1,0,2144],
 "classZone__CursedManor.html#a121b9fe5f94519d85ea40c5b7265f6bb":[1,0,2144,1],
 "classZone__CursedManor.html#aa150c9205a532a69a04e4b6689f447ea":[1,0,2144,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "classZone__Town.html#a1b85d1e8a15a86d4409abf44b8d7603f":[1,0,2205,1],
 "classZone__Town.html#a1e86e8ab9035a69df4d7c3c926fb6f37":[1,0,2205,2],
 "classZone__Town.html#a563f2f2382e94fe5f17c487f4b9e6132":[1,0,2205,0],
-"classZone__Town.html#a79b00ab615cd6a0f6a8623739ea36b25":[1,0,2205,3],
-"classZone__Town.html#ad10b97c1fff097611d051d5b1c416058":[1,0,2205,4]
+"classZone__Town.html#a79b00ab615cd6a0f6a8623739ea36b25":[1,0,2205,3]
 };

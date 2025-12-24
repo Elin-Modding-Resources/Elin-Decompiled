@@ -1,5 +1,6 @@
 var NAVTREEINDEX108 =
 {
+"classSourceZone.html#adcb5841d27206f3bfd94a87afbdad3aa":[1,0,1237,1],
 "classSourceZoneAffix.html":[1,0,1238],
 "classSourceZoneAffix.html#a357d2b022f59bab65ac09192a135d452":[1,0,1238,1],
 "classSourceZoneAffix.html#ab4677edb6d08c0147cf2b585e1273fd6":[1,0,1238,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX108 =
 "classSpriteAsset.html#ab18dbe7515397156ccca0a43563d3add":[1,0,1251,3],
 "classSpriteAsset.html#ae1944cbe4e830bd5746c6b4364a7242f":[1,0,1251,0],
 "classSpriteAsset.html#af5b11a4cf065b381dccdca36bdd3abb4":[1,0,1251,4],
-"classSpriteBasedLaser.html":[1,0,1252],
-"classSpriteBasedLaser.html#a164e0d5e9bc0ef440f42203630f2b6c1":[1,0,1252,36]
+"classSpriteBasedLaser.html":[1,0,1252]
 };

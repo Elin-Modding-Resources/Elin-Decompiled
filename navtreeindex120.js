@@ -1,5 +1,6 @@
 var NAVTREEINDEX120 =
 {
+"classTraitGambleChest.html":[1,0,1622],
 "classTraitGambleChest.html#a56658f6dfd99173f5e66cde54417c3cf":[1,0,1622,3],
 "classTraitGambleChest.html#a5a10166174b109bf73e6df8d4eabec37":[1,0,1622,2],
 "classTraitGambleChest.html#a61cea1f2dbec25aeb9030dc223efbaa3":[1,0,1622,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitLightAlwaysAnime.html#ad9c21526cbf585830e8b4782043e79c5":[1,0,1680,1],
 "classTraitLightSource.html":[1,0,1681],
 "classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1681,0],
-"classTraitLightSun.html":[1,0,1682],
-"classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1682,2]
+"classTraitLightSun.html":[1,0,1682]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"classQuestCompanion.html#a0fd0ab3dda80cc5f73fe3189a044ea23":[1,0,988,0],
 "classQuestCompanion.html#a26b20844888ffd508e0adeeb69f7382d":[1,0,988,2],
 "classQuestCompanion.html#a7715303ba7f4689c79af3c74419883a5":[1,0,988,1],
 "classQuestCouncil.html":[1,0,989],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestManager.html#a688d83673f3e81bc41f0d42ff2de22a7":[1,0,1026,0],
 "classQuestManager.html#a7233bb8ad954f99ec478d42b05dab2b9":[1,0,1026,21],
 "classQuestManager.html#a75cb96c6052c6c8fe65f40aba5e7621f":[1,0,1026,5],
-"classQuestManager.html#a796bfd042c4175b7748bc25e926d4743":[1,0,1026,32],
-"classQuestManager.html#a7cdc92970800a3c53ee591364fe8495d":[1,0,1026,12]
+"classQuestManager.html#a796bfd042c4175b7748bc25e926d4743":[1,0,1026,32]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX127 =
 {
+"classUIAnimeSequence.html#a71c6dbd8a093ac371c4b8fb81f23471e":[1,0,1997,3],
 "classUIAnimeSequence.html#a72ae2441bc42316e09b1dc5c82eaffc3":[1,0,1997,1],
 "classUIAnimeSequence.html#a9b022c17b14ef88b0f8947e795cf88de":[1,0,1997,0],
 "classUIAutoTurn.html":[1,0,1998],
@@ -248,6 +249,5 @@ var NAVTREEINDEX127 =
 "classUICharaMaker.html#a551b5f27cdf4571cc5fe4774ee8a9a7e":[1,0,2006,6],
 "classUICharaMaker.html#a5555a1b1c12f056551864a56606aa02f":[1,0,2006,53],
 "classUICharaMaker.html#a5ce8b644a317c23c0a0ba7ebd93d7ade":[1,0,2006,18],
-"classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad":[1,0,2006,12],
-"classUICharaMaker.html#a6ae7bc9ed375b2a446217e9428bfcbd4":[1,0,2006,46]
+"classUICharaMaker.html#a5e47ca0c67a6548a2fcca799936d1dad":[1,0,2006,12]
 };

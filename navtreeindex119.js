@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitDrink.html":[1,0,1562],
 "classTraitDrink.html#a02255aa4d0c4ff1782d9f6af3cc9ddc9":[1,0,1562,1],
 "classTraitDrink.html#a180d6de63303acbbf3ff132db664fc3f":[1,0,1562,9],
 "classTraitDrink.html#a455aa1d0f6ec5f3e7799065a8d68337c":[1,0,1562,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitGamble.html#a7c4ff287140ce98f429351a6f26ff8cc":[1,0,1621,2],
 "classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d":[1,0,1621,1],
 "classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6":[1,0,1621,4],
-"classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65":[1,0,1621,0],
-"classTraitGambleChest.html":[1,0,1622]
+"classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65":[1,0,1621,0]
 };

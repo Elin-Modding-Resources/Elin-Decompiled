@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"classCoreRef_1_1DefaultRoof.html":[1,0,407,3],
 "classCoreRef_1_1DefaultRoof.html#a3cc0237df76fb76749cc467ee65cb79d":[1,0,407,3,1],
 "classCoreRef_1_1DefaultRoof.html#abcfc821a2a856282b572b67c4e2af2ee":[1,0,407,3,0],
 "classCoreRef_1_1Icons.html":[1,0,407,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "classCritterRatSmall.html#abede702e92acef26938471005cf884ff":[1,0,418,1],
 "classCritterRoach.html":[1,0,419],
 "classCritterRoach.html#a0a968b234dda354e49d8cda058f9d9e5":[1,0,419,0],
-"classCritterRoach.html#a5ac122ba4a69b5d66358ebcb18347c53":[1,0,419,3],
-"classCritterRoach.html#a9b00b3ae5b5e1cea02e175d60403fe21":[1,0,419,1]
+"classCritterRoach.html#a5ac122ba4a69b5d66358ebcb18347c53":[1,0,419,3]
 };

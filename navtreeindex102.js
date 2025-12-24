@@ -1,5 +1,6 @@
 var NAVTREEINDEX102 =
 {
+"classSkill.html#ab1576470cc0bed3f3194e80edf234ca6":[1,0,1171,3],
 "classSkill.html#ae8497dc40f8e0ff0303b17740e707c3a":[1,0,1171,1],
 "classSkill.html#af0062c2e2382d83c4c7122b26f8785f4":[1,0,1171,2],
 "classSkillCheck.html":[1,0,1172],
@@ -248,6 +249,5 @@ var NAVTREEINDEX102 =
 "classSlaverData.html":[1,0,1187],
 "classSlaverData.html#a43ffae8134178b1a8548cfb91d1136e6":[1,0,1187,1],
 "classSlaverData.html#a5e91250a1136c7d4642d5bb91d962d9a":[1,0,1187,2],
-"classSlaverData.html#a69b3714ce515571ca353d616ec11e94b":[1,0,1187,0],
-"classSocketData.html":[1,0,1189]
+"classSlaverData.html#a69b3714ce515571ca353d616ec11e94b":[1,0,1187,0]
 };
