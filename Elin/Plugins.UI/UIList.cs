@@ -67,6 +67,10 @@ public class UIList : BaseList
 
 		public UIList list;
 
+		public Action<T1, int> onDragReorder;
+
+		public Func<T1, bool> canDragReorder;
+
 		public bool useSort => onSort != null;
 
 		public bool useOnClick => onClick != null;
@@ -105,6 +109,12 @@ public class UIList : BaseList
 			if (onInstantiate != null)
 			{
 				onInstantiate((T1)obj, val);
+			}
+			if (onDragReorder != null)
+			{
+				UIListDragItem orCreate = val.GetOrCreate<UIListDragItem>();
+				orCreate.list = list;
+				orCreate.item = obj;
 			}
 			return val;
 		}
@@ -146,6 +156,23 @@ public class UIList : BaseList
 			}
 		}
 
+		public void OnDragReorder(object obj, int a)
+		{
+			if (onDragReorder != null)
+			{
+				onDragReorder((T1)obj, a);
+			}
+		}
+
+		public bool CanDragReorder(object obj)
+		{
+			if (canDragReorder != null)
+			{
+				return canDragReorder((T1)obj);
+			}
+			return false;
+		}
+
 		public Component GetComponent(Transform t)
 		{
 			return t.GetComponent<T2>();
@@ -177,6 +204,10 @@ public class UIList : BaseList
 		int OnSort(object obj, SortMode mode);
 
 		void OnRefresh();
+
+		void OnDragReorder(object obj, int a);
+
+		bool CanDragReorder(object obj);
 	}
 
 	public struct ButtonPair
@@ -271,6 +302,24 @@ public class UIList : BaseList
 
 	private int highlightIndex;
 
+	private object dragTarget;
+
+	private int dragBeginIndex;
+
+	private int dragHoverIndex;
+
+	[NonSerialized]
+	public UIScrollView dragScrollView;
+
+	[NonSerialized]
+	public RectTransform dragViewport;
+
+	[NonSerialized]
+	public float dragEdgeSize;
+
+	[NonSerialized]
+	public float dragScrollSpeed = 2.5f;
+
 	public LayoutGroup layoutItems => _layoutItems ?? (_layoutItems = GetComponent<LayoutGroup>());
 
 	public GridLayoutGroup gridLayout => layoutItems as GridLayoutGroup;
@@ -290,6 +339,8 @@ public class UIList : BaseList
 			return parent.Root;
 		}
 	}
+
+	public bool IsDragging => dragTarget != null;
 
 	public void AddCollection(ICollection collection)
 	{
@@ -802,5 +853,70 @@ public class UIList : BaseList
 			}
 		}
 		layoutItems.DestroyChildren();
+	}
+
+	public void BeginItemDrag(UIListDragItem drag)
+	{
+		if (callbacks.CanDragReorder(drag.item))
+		{
+			dragTarget = drag.item;
+			dragBeginIndex = drag.transform.GetSiblingIndex();
+		}
+	}
+
+	public void EndItemDrag(UIListDragItem drag)
+	{
+		if (dragTarget != null)
+		{
+			int num = dragHoverIndex - dragBeginIndex;
+			dragTarget = null;
+			if (num != 0)
+			{
+				callbacks.OnDragReorder(drag.item, num);
+			}
+		}
+	}
+
+	public void UpdateItemDragHover(UIListDragItem drag)
+	{
+		if (callbacks.CanDragReorder(drag.item) && dragTarget != null && dragTarget != drag.item)
+		{
+			dragHoverIndex = drag.transform.GetSiblingIndex();
+			GetPair(dragTarget).component?.transform.SetSiblingIndex(dragHoverIndex);
+		}
+	}
+
+	private void Update()
+	{
+		if (IsDragging)
+		{
+			AutoScrollWhileDragging();
+		}
+	}
+
+	private void AutoScrollWhileDragging()
+	{
+		if ((bool)dragViewport && (bool)dragScrollView)
+		{
+			RectTransformUtility.ScreenPointToLocalPointInRectangle(dragViewport, Input.mousePosition, null, out var localPoint);
+			float y = localPoint.y;
+			float num = dragViewport.rect.height * 0.5f;
+			float num2 = 0f;
+			if (y < 0f - num + dragEdgeSize)
+			{
+				float num3 = Mathf.InverseLerp(0f - num + dragEdgeSize, 0f - num, y);
+				num2 = (0f - dragScrollSpeed) * num3;
+			}
+			else if (y > num - dragEdgeSize)
+			{
+				float num4 = Mathf.InverseLerp(num - dragEdgeSize, num, y);
+				num2 = dragScrollSpeed * num4;
+			}
+			if (num2 != 0f)
+			{
+				float verticalNormalizedPosition = dragScrollView.verticalNormalizedPosition;
+				dragScrollView.verticalNormalizedPosition = Mathf.Clamp01(verticalNormalizedPosition + num2 * Time.unscaledDeltaTime);
+			}
+		}
 	}
 }
