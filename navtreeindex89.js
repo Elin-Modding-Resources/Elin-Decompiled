@@ -1,5 +1,8 @@
 var NAVTREEINDEX89 =
 {
+"classPlayer_1_1Flags.html#aa75283882080d6da9cb9b71773020787":[1,0,955,0,8],
+"classPlayer_1_1Flags.html#aade2c4bf438cde2bc5d80aac7f9bd8b8":[1,0,955,0,35],
+"classPlayer_1_1Flags.html#ab9cb96de2bfcda59bb4d3685e64974a6":[1,0,955,0,20],
 "classPlayer_1_1Flags.html#abade3aafcada0c7665add1976e454bb7":[1,0,955,0,18],
 "classPlayer_1_1Flags.html#abdcc642033cf7f2922df1d135f3fad2e":[1,0,955,0,19],
 "classPlayer_1_1Flags.html#ac29eb4ec0213c206ff2b5622e0b17a86":[1,0,955,0,28],
@@ -246,8 +249,5 @@ var NAVTREEINDEX89 =
 "classPointTarget.html#a67d87a195940dc5bda448c6af397dba0":[1,0,960,10],
 "classPointTarget.html#a6b5fbaed00b249d00a5080383157b441":[1,0,960,1],
 "classPointTarget.html#a707b924c5bb05e5c3765d2900416f784":[1,0,960,15],
-"classPointTarget.html#a77437e0c404be1e592e2943e83ff4f9c":[1,0,960,6],
-"classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c":[1,0,960,20],
-"classPointTarget.html#ab656a254066668829acd3e3f436aed91":[1,0,960,13],
-"classPointTarget.html#ac46814161b98425b11dcce2f6473b63d":[1,0,960,7]
+"classPointTarget.html#a77437e0c404be1e592e2943e83ff4f9c":[1,0,960,6]
 };

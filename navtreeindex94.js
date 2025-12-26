@@ -1,5 +1,8 @@
 var NAVTREEINDEX94 =
 {
+"classQuestManager.html#a7233bb8ad954f99ec478d42b05dab2b9":[1,0,1026,21],
+"classQuestManager.html#a75cb96c6052c6c8fe65f40aba5e7621f":[1,0,1026,5],
+"classQuestManager.html#a796bfd042c4175b7748bc25e926d4743":[1,0,1026,32],
 "classQuestManager.html#a7cdc92970800a3c53ee591364fe8495d":[1,0,1026,12],
 "classQuestManager.html#a839c0037753f5365f4d2b2f5d3abe5b8":[1,0,1026,33],
 "classQuestManager.html#a8479a539eef4eee1c8a392d3cec51e60":[1,0,1026,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX94 =
 "classRainbowTextColor.html#a001276cd204fcb6a06097d877aebb85f":[1,0,1069,0],
 "classRainbowTextColor.html#a03cf2d93f3bbaaba88e1ce39d575cd6b":[1,0,1069,15],
 "classRainbowTextColor.html#a1e250bde79f230936530258b7bb08b13":[1,0,1069,8],
-"classRainbowTextColor.html#a22f898fe1cd4b93b133d61e20bf48dd4":[1,0,1069,2],
-"classRainbowTextColor.html#a4476135c40f02722cb8ef2773b618d36":[1,0,1069,11],
-"classRainbowTextColor.html#a539b3f16b9f45a1cc573532cf219184f":[1,0,1069,9],
-"classRainbowTextColor.html#a5405aaf893b8f0e2c4ca946157ba1fd3":[1,0,1069,1]
+"classRainbowTextColor.html#a22f898fe1cd4b93b133d61e20bf48dd4":[1,0,1069,2]
 };

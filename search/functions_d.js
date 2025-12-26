@@ -97,7 +97,7 @@ var searchData=
   ['modtempelement_94',['ModTempElement',['../classChara.html#a2935f50c12de98aa7b7b741c07b54069',1,'Chara']]],
   ['modtemppotential_95',['ModTempPotential',['../classElementContainer.html#a56e96745b1ef51d616e34379a670c585',1,'ElementContainer']]],
   ['modweight_96',['ModWeight',['../classChara.html#abbb829a0cdd210941b0d3ec8688d6dff',1,'Chara']]],
-  ['move_97',['Move',['../classLayerFaith.html#a90fbbf1a606dd5132e78bb7fa76fa15c',1,'LayerFaith']]],
+  ['move_97',['Move',['../classLayerFaith.html#a90fbbf1a606dd5132e78bb7fa76fa15c',1,'LayerFaith.Move()'],['../classLayerMod.html#a5676fbdc1be755ef42b9d104e39feeca',1,'LayerMod.Move()']]],
   ['move_3c_20tvalue_20_3e_98',['Move&lt; TValue &gt;',['../classClassExtension.html#a9a07c7633f0e3ff0c6baa3f93ac97bf8',1,'ClassExtension']]],
   ['movebyforce_99',['MoveByForce',['../classChara.html#a992321b36191f1af347057042a192960',1,'Chara']]],
   ['movecard_100',['MoveCard',['../classMap.html#a3911b9929e97f18523241a8fc0ac87f2',1,'Map']]],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX121 =
 {
+"classTraitLightSource.html":[1,0,1681],
+"classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1681,0],
+"classTraitLightSun.html":[1,0,1682],
 "classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1682,2],
 "classTraitLightSun.html#ab57619e493c8a4fd38d34dc931603829":[1,0,1682,1],
 "classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1682,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitMoongate.html#aba9864fda611aa8dec3924f9ed4cf402":[1,0,1745,5],
 "classTraitMoongate.html#ac4325da59139f85cb656e9e14ce3d641":[1,0,1745,4],
 "classTraitMoongate.html#afd09a26672dfa5dcd038bafbc90a36e2":[1,0,1745,7],
-"classTraitMoongateEx.html":[1,0,1746],
-"classTraitMoongateEx.html#abb1c819810acbb4a69aa3e67a450763d":[1,0,1746,1],
-"classTraitMoongateEx.html#af1cb535215ab7b75a8bed16754776eac":[1,0,1746,0],
-"classTraitMoyer.html":[1,0,1747]
+"classTraitMoongateEx.html":[1,0,1746]
 };

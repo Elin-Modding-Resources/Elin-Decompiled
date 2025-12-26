@@ -1,5 +1,8 @@
 var NAVTREEINDEX123 =
 {
+"classTraitRoadSign.html#a10cba1948948bbbf1d4de95edcadecf0":[1,0,1809,1],
+"classTraitRoadSign.html#a6be75d52a70c36f003be0beacc3cbfee":[1,0,1809,0],
+"classTraitRod.html":[1,0,1810],
 "classTraitRod.html#a2411edf6b63fa4124b28123ab0aed177":[1,0,1810,5],
 "classTraitRod.html#a3709ad6158356e4693d1a8899adc152d":[1,0,1810,2],
 "classTraitRod.html#a48898a54329e500bc7196234392f3834":[1,0,1810,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitSpellbook.html#a5aded0d1bb1f21da0b58a96918872408":[1,0,1852,1],
 "classTraitSpellbook.html#a9f4515e19f103d74109abad62a9d54d2":[1,0,1852,0],
 "classTraitSpellbookRandom.html":[1,0,1853],
-"classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1853,2],
-"classTraitSpellbookRandom.html#a8c187a19407f57e545aca15acc6a7edc":[1,0,1853,1],
-"classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1853,0],
-"classTraitSpinner.html":[1,0,1854]
+"classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1853,2]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX120 =
 {
+"classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d":[1,0,1621,1],
+"classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6":[1,0,1621,4],
+"classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65":[1,0,1621,0],
 "classTraitGambleChest.html":[1,0,1622],
 "classTraitGambleChest.html#a56658f6dfd99173f5e66cde54417c3cf":[1,0,1622,3],
 "classTraitGambleChest.html#a5a10166174b109bf73e6df8d4eabec37":[1,0,1622,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitLight.html#abce165cf51855a9f04de8a3991da0f92":[1,0,1679,0],
 "classTraitLightAlwaysAnime.html":[1,0,1680],
 "classTraitLightAlwaysAnime.html#a062bb523c1b395ab8e718d575353ae37":[1,0,1680,0],
-"classTraitLightAlwaysAnime.html#ad9c21526cbf585830e8b4782043e79c5":[1,0,1680,1],
-"classTraitLightSource.html":[1,0,1681],
-"classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1681,0],
-"classTraitLightSun.html":[1,0,1682]
+"classTraitLightAlwaysAnime.html#ad9c21526cbf585830e8b4782043e79c5":[1,0,1680,1]
 };

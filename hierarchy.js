@@ -2196,6 +2196,9 @@ var hierarchy =
     [ "UIHighlight.Highlight", "classUIHighlight_1_1Highlight.html", null ],
     [ "HSLColor", "structHSLColor.html", null ],
     [ "HSVColor", "structHSVColor.html", null ],
+    [ "IBeginDragHandler", null, [
+      [ "UIListDragItem", "classUIListDragItem.html", null ]
+    ] ],
     [ "UIList.ICallback", "interfaceUIList_1_1ICallback.html", [
       [ "UIList.Callback< T1, T2 >", "classUIList_1_1Callback.html", null ]
     ] ],
@@ -2278,11 +2281,15 @@ var hierarchy =
       [ "ButtonGridDrag", "classButtonGridDrag.html", null ],
       [ "Empyrean.ColorPicker.ColorPalette", "classEmpyrean_1_1ColorPicker_1_1ColorPalette.html", null ],
       [ "UIDragPanel", "classUIDragPanel.html", null ],
+      [ "UIListDragItem", "classUIListDragItem.html", null ],
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
     [ "IDragParent", "interfaceIDragParent.html", [
       [ "LayerAbility", "classLayerAbility.html", null ],
       [ "WidgetHotbar", "classWidgetHotbar.html", null ]
+    ] ],
+    [ "IEndDragHandler", null, [
+      [ "UIListDragItem", "classUIListDragItem.html", null ]
     ] ],
     [ "IEnumerable", null, [
       [ "UDictionary< TKey, TValue >", "classUDictionary.html", null ]
@@ -2299,6 +2306,7 @@ var hierarchy =
       [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ],
       [ "UIDragPanel", "classUIDragPanel.html", null ],
       [ "UIEventUtil", "classUIEventUtil.html", null ],
+      [ "UIListDragItem", "classUIListDragItem.html", null ],
       [ "WidgetMinimap", "classWidgetMinimap.html", null ]
     ] ],
     [ "IFloodCell", null, [
@@ -2376,7 +2384,8 @@ var hierarchy =
       [ "ButtonRoster", "classButtonRoster.html", null ],
       [ "UIContextMenu", "classUIContextMenu.html", null ],
       [ "UIContextMenuPopper", "classUIContextMenuPopper.html", null ],
-      [ "UIEventUtil", "classUIEventUtil.html", null ]
+      [ "UIEventUtil", "classUIEventUtil.html", null ],
+      [ "UIListDragItem", "classUIListDragItem.html", null ]
     ] ],
     [ "IPointerExitHandler", null, [
       [ "ButtonRoster", "classButtonRoster.html", null ],
@@ -2910,6 +2919,7 @@ var hierarchy =
         [ "ItemGeneral", "classItemGeneral.html", null ],
         [ "ItemResearch", "classItemResearch.html", null ]
       ] ],
+      [ "UIListDragItem", "classUIListDragItem.html", null ],
       [ "UIListTopbar", "classUIListTopbar.html", null ],
       [ "UIMouseInfo", "classUIMouseInfo.html", null ],
       [ "UIMultiList", "classUIMultiList.html", null ],

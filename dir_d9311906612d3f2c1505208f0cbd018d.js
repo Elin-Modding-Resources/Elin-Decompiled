@@ -140,6 +140,7 @@ var dir_d9311906612d3f2c1505208f0cbd018d =
     [ "UIItem.cs", "UIItem_8cs.html", "UIItem_8cs" ],
     [ "UIItemList.cs", "UIItemList_8cs.html", "UIItemList_8cs" ],
     [ "UIList.cs", "UIList_8cs.html", "UIList_8cs" ],
+    [ "UIListDragItem.cs", "UIListDragItem_8cs.html", "UIListDragItem_8cs" ],
     [ "UIListEx.cs", "UIListEx_8cs.html", "UIListEx_8cs" ],
     [ "UIListTopbar.cs", "UIListTopbar_8cs.html", "UIListTopbar_8cs" ],
     [ "UIMouseInfo.cs", "UIMouseInfo_8cs.html", "UIMouseInfo_8cs" ],

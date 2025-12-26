@@ -1,5 +1,8 @@
 var NAVTREEINDEX124 =
 {
+"classTraitSpellbookRandom.html#a8c187a19407f57e545aca15acc6a7edc":[1,0,1853,1],
+"classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1853,0],
+"classTraitSpinner.html":[1,0,1854],
 "classTraitSpinner.html#a2e72f7c00867f08354f4eab5a4a25a69":[1,0,1854,1],
 "classTraitSpinner.html#a6fcfd08ab2adec32c51025c3cb0edd52":[1,0,1854,3],
 "classTraitSpinner.html#ac2c70fe7adf2c3a358e7384e118b443a":[1,0,1854,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitToolRangeCane.html#abbd804478bfa5892305e96947fdab944":[1,0,1922,0],
 "classTraitToolRangeCrossbow.html":[1,0,1923],
 "classTraitToolRangeCrossbow.html#a1009ad63c3585427accd989f953d3f9c":[1,0,1923,0],
-"classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1923,1],
-"classTraitToolRangeGun.html":[1,0,1924],
-"classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1924,1],
-"classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1924,2]
+"classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1923,1]
 };

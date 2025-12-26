@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.252 Stable Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.253 Nightly</span>
    </div>
   </td>
  </tr>
@@ -826,15 +826,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   32</span>            {</div>
 <div class="line"><span class="lineno">   33</span>                dialog = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a2219227ad84bf1322cd12ede5dbe1a2e">GetDialog</a>(<span class="stringliteral">&quot;asmr&quot;</span>, <span class="stringliteral">&quot;eyth&quot;</span>);</div>
 <div class="line"><span class="lineno">   34</span>            }</div>
-<div class="line"><span class="lineno">   35</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#af6991e38e39a648e4b28f7ea03157c31">TalkRaw</a>(dialog.RandomItem());</div>
-<div class="line"><span class="lineno">   36</span>        }</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="ttc" id="aclassCard_html_af6991e38e39a648e4b28f7ea03157c31"><div class="ttname"><a href="classCard.html#af6991e38e39a648e4b28f7ea03157c31">Card.TalkRaw</a></div><div class="ttdeci">void TalkRaw(string text, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06772">Card.cs:6772</a></div></div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordtype">string</span> text = dialog.RandomItem();</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#af6991e38e39a648e4b28f7ea03157c31">TalkRaw</a>((text.StartsWith(<span class="stringliteral">&quot;@&quot;</span>) ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;@2&quot;</span>) + text);</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+<div class="ttc" id="aclassCard_html_af6991e38e39a648e4b28f7ea03157c31"><div class="ttname"><a href="classCard.html#af6991e38e39a648e4b28f7ea03157c31">Card.TalkRaw</a></div><div class="ttdeci">void TalkRaw(string text, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06773">Card.cs:6773</a></div></div>
 <div class="ttc" id="aclassLang_html_a2219227ad84bf1322cd12ede5dbe1a2e"><div class="ttname"><a href="classLang.html#a2219227ad84bf1322cd12ede5dbe1a2e">Lang.GetDialog</a></div><div class="ttdeci">static string[] GetDialog(string idSheet, string idTopic)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00217">Lang.cs:217</a></div></div>
 <div class="ttc" id="aclassTraitASMR_html_aed11bbe035eaeccb784d57739203736c"><div class="ttname"><a href="classTraitASMR.html#aed11bbe035eaeccb784d57739203736c">TraitASMR.tick</a></div><div class="ttdeci">int tick</div><div class="ttdef"><b>Definition:</b> <a href="TraitASMR_8cs_source.html#l00003">TraitASMR.cs:3</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac45c76ca50bef4ccac766640350165f4"><div class="ttname"><a href="classTrait.html#ac45c76ca50bef4ccac766640350165f4">Trait.IsOn</a></div><div class="ttdeci">virtual bool IsOn</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00374">Trait.cs:374</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01737">Card.c_idRefCard</a>, <a class="el" href="Lang_8cs_source.html#l00217">Lang.GetDialog()</a>, <a class="el" href="Trait_8cs_source.html#l00374">Trait.IsOn</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l06772">Card.TalkRaw()</a>, and <a class="el" href="TraitASMR_8cs_source.html#l00003">tick</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01737">Card.c_idRefCard</a>, <a class="el" href="Lang_8cs_source.html#l00217">Lang.GetDialog()</a>, <a class="el" href="Trait_8cs_source.html#l00374">Trait.IsOn</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="Card_8cs_source.html#l06773">Card.TalkRaw()</a>, and <a class="el" href="TraitASMR_8cs_source.html#l00003">tick</a>.</p>
 
 </div>
 </div>

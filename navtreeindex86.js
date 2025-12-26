@@ -1,5 +1,8 @@
 var NAVTREEINDEX86 =
 {
+"classMsgLog_1_1Data.html#ad11a6e2f6285488a77b6bc0d0b0f9ac1":[1,0,913,0,0],
+"classMultiSprite.html":[1,0,914],
+"classMultiSprite.html#a58f7a4dce85c7f1f6e7cb7d7dd76221a":[1,0,914,1],
 "classMultiSprite.html#a5f0a913acf7835d3bb742f38ceb04789":[1,0,914,0],
 "classMutation.html":[1,0,916],
 "classNet.html":[1,0,917],
@@ -246,8 +249,5 @@ var NAVTREEINDEX86 =
 "classPOIMap_1_1Cell.html":[1,0,957,0],
 "classPOIMap_1_1Cell.html#a45e9ede9b960a00adb1bc6324a83ac1f":[1,0,957,0,0],
 "classPOIMap_1_1Cell.html#a540473ebe596fa99ab1eb447e5f323da":[1,0,957,0,1],
-"classPOIMap_1_1Cell.html#abca543f79cc7b3a77a34cc2aa991fd65":[1,0,957,0,3],
-"classPOIMap_1_1Cell.html#af09db278e788d8ce46737cc291df9ef0":[1,0,957,0,2],
-"classPOLICY.html":[1,0,962],
-"classPOLICY.html#a08da5ca358461ba7a9fd1ac9a654c324":[1,0,962,36]
+"classPOIMap_1_1Cell.html#abca543f79cc7b3a77a34cc2aa991fd65":[1,0,957,0,3]
 };

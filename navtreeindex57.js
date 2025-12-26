@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"classDramaEventMethod.html#aa99525ea6c76f8e0df4d9739531e9505":[1,0,451,0],
+"classDramaEventMethod.html#aac6ca7c0508b9b105622517f96fa0f62":[1,0,451,4],
 "classDramaEventMethod.html#ad1f82f769e8f2d5f6df6ac1d5b135e30":[1,0,451,3],
 "classDramaEventMethod.html#af287f94da37e842dd5b9ad1ed8e1f5c7":[1,0,451,6],
 "classDramaEventTalk.html":[1,0,452],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "classDynamicAct.html":[1,0,463],
 "classDynamicAct.html#a28ba85510e9d679dc17ddb86461f704c":[1,0,463,16],
 "classDynamicAct.html#a30d398978c8fd49d079464b7f61c082b":[1,0,463,11],
-"classDynamicAct.html#a3d839c77221ba43b48ace04af9931244":[1,0,463,9],
-"classDynamicAct.html#a3e50d8f91755e4a713c4dd88b64fa0f6":[1,0,463,17],
-"classDynamicAct.html#a462e2ee2e4da20aa761ef4a5c072ee87":[1,0,463,14]
+"classDynamicAct.html#a3d839c77221ba43b48ace04af9931244":[1,0,463,9]
 };

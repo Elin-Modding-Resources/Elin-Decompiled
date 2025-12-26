@@ -1,5 +1,8 @@
 var NAVTREEINDEX90 =
 {
+"classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c":[1,0,960,20],
+"classPointTarget.html#ab656a254066668829acd3e3f436aed91":[1,0,960,13],
+"classPointTarget.html#ac46814161b98425b11dcce2f6473b63d":[1,0,960,7],
 "classPointTarget.html#ae1ac0dc08e53bbb8e6227cb1305b916d":[1,0,960,0],
 "classPointTarget.html#ae7124fcc36d21e8d881d1148cbe09d57":[1,0,960,23],
 "classPointTarget.html#ae885048f22809140bea3fb88f1124971":[1,0,960,21],
@@ -246,8 +249,5 @@ var NAVTREEINDEX90 =
 "classPrefabFix.html#a3b0e700b29bc5edcc721fe5139550876":[1,0,976,1],
 "classPrefabFix.html#a5b331022c69760c436960c2a94eba01d":[1,0,976,0],
 "classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html":[0,4,7,0,0],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html":[1,0,7,0,0],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a20afde2f58f74f7d1926887b6101bd75":[1,0,7,0,0,1],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a20afde2f58f74f7d1926887b6101bd75":[0,4,7,0,0,1],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html#a74bef68ed4cc6f366907525076bc1ac9":[1,0,7,0,0,3]
+"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html":[1,0,7,0,0]
 };
