@@ -14,6 +14,22 @@ public class LayerMod : ELayer
 
 	public ModManager manager => ELayer.core.mods;
 
+	private void Move(BaseModPackage p, ItemMod b, int a)
+	{
+		List<BaseModPackage> packages = ELayer.core.mods.packages;
+		int num = packages.IndexOf(p);
+		if (num + a < 0 || num + a >= packages.Count || packages[num + a].builtin)
+		{
+			SE.BeepSmall();
+			return;
+		}
+		packages.Move(p, a);
+		SE.Tab();
+		textRestart.SetActive(enable: true);
+		ELayer.core.mods.SaveLoadOrder();
+		list.List();
+	}
+
 	public override void OnInit()
 	{
 		textRestart.SetActive(enable: false);
@@ -24,6 +40,9 @@ public class LayerMod : ELayer
 			textRestart.SetActive(enable: true);
 		});
 		Instance = this;
+		list.dragScrollView = GetComponentInChildren<UIScrollView>();
+		list.dragViewport = windows[0].Rect();
+		list.dragEdgeSize = 34f;
 		UIList uIList = list;
 		UIList uIList2 = list2;
 		UIList.Callback<BaseModPackage, ItemMod> obj = new UIList.Callback<BaseModPackage, ItemMod>
@@ -94,10 +113,7 @@ public class LayerMod : ELayer
 					});
 					uIContextMenu.Show();
 				});
-				b.buttonLock.onClick.AddListener(delegate
-				{
-					Refresh();
-				});
+				b.buttonLock.onClick.AddListener(Refresh);
 			},
 			onList = delegate
 			{
@@ -113,30 +129,23 @@ public class LayerMod : ELayer
 					}
 				}
 			},
-			onRefresh = Refresh
+			onRefresh = Refresh,
+			onDragReorder = delegate(BaseModPackage p, int a)
+			{
+				BaseCore.Instance.FreezeScreen(0.1f);
+				manager.packages.Move(p, a);
+				SE.Tab();
+				textRestart.SetActive(enable: true);
+				ELayer.core.mods.SaveLoadOrder();
+				list.List();
+			},
+			canDragReorder = (BaseModPackage p) => !p.builtin
 		};
 		UIList.ICallback callbacks = obj;
 		uIList2.callbacks = obj;
 		uIList.callbacks = callbacks;
 		list.List();
 		list2.List();
-		void Move(BaseModPackage p, ItemMod b, int a)
-		{
-			List<BaseModPackage> packages = ELayer.core.mods.packages;
-			int num = packages.IndexOf(p);
-			if (num + a < 0 || num + a >= packages.Count || packages[num + a].builtin)
-			{
-				SE.BeepSmall();
-			}
-			else
-			{
-				packages.Move(p, a);
-				SE.Tab();
-				textRestart.SetActive(enable: true);
-				ELayer.core.mods.SaveLoadOrder();
-				list.List();
-			}
-		}
 	}
 
 	public void Refresh()

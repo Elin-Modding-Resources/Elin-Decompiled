@@ -1580,15 +1580,15 @@ public class ActEffect : EClass
 			break;
 		case EffectId.StripBlessing:
 		{
-			List<Condition> list10 = new List<Condition>();
+			List<Condition> list9 = new List<Condition>();
 			foreach (Condition condition4 in TC.conditions)
 			{
 				if (GetBlessingDifficulty(condition4) > 0 && EClass.rnd(GetBlessingDifficulty(condition4)) == 0)
 				{
-					list10.Add(condition4);
+					list9.Add(condition4);
 				}
 			}
-			if (list10.Count == 0)
+			if (list9.Count == 0)
 			{
 				CC.SayNothingHappans();
 				break;
@@ -1596,9 +1596,9 @@ public class ActEffect : EClass
 			TC.pos.PlayEffect("holyveil");
 			TC.pos.PlaySound("holyveil");
 			TC.Say("unpolluted", TC);
-			list10.Shuffle();
+			list9.Shuffle();
 			{
-				foreach (Condition item4 in list10)
+				foreach (Condition item4 in list9)
 				{
 					item4.Kill();
 					if (CC.IsHostile(TC))
@@ -1640,14 +1640,14 @@ public class ActEffect : EClass
 			});
 			TC.Say("abShutterHex", TC);
 			Point center = CC.pos.Copy();
-			List<Chara> list9 = TC.pos.ListCharasInRadius(TC, 4, (Chara c) => c == TC || c.IsHostile(CC));
+			List<Chara> list10 = TC.pos.ListCharasInRadius(TC, 4, (Chara c) => c == TC || c.IsHostile(CC));
 			for (int m = 0; m < num12; m++)
 			{
 				TweenUtil.Delay((float)m * 0.1f, delegate
 				{
 					center.PlaySound("shutterhex");
 				});
-				foreach (Chara item5 in list9)
+				foreach (Chara item5 in list10)
 				{
 					if (item5.ExistsOnMap)
 					{
@@ -2053,16 +2053,16 @@ public class ActEffect : EClass
 			tc.bio.SetGender(gender2);
 			tc.Say("transGender", tc, Gender.Name(tc.bio.gender));
 			tc.Talk("tail");
-			int age2 = tc.bio.GetAge(tc.Chara);
-			if (blessed && age2 > 1)
+			int age = tc.bio.GetAge(tc.Chara);
+			if (blessed && age > 1)
 			{
 				tc.Say("ageDown", tc);
-				tc.bio.SetAge(tc.Chara, age2 - 1);
+				tc.bio.SetAge(tc.Chara, age - 1);
 			}
 			else if (flag)
 			{
 				tc.Say("ageUp", tc);
-				tc.bio.SetAge(tc.Chara, age2 + 1);
+				tc.bio.SetAge(tc.Chara, age + 1);
 			}
 			break;
 		}
@@ -2090,15 +2090,15 @@ public class ActEffect : EClass
 		{
 			tc.PlaySound("mutation");
 			tc.PlayEffect("mutation");
-			int age = tc.bio.GetAge(tc.Chara);
-			if (!flag && age <= 0)
+			int age3 = tc.bio.GetAge(tc.Chara);
+			if (!flag && age3 <= 0)
 			{
 				tc.SayNothingHappans();
 				break;
 			}
-			age = Mathf.Max(0, age * 100 / (flag ? 75 : (blessed ? 400 : 200))) + (flag ? 1 : 0);
+			age3 = Mathf.Max(0, age3 * 100 / (flag ? 75 : (blessed ? 400 : 200))) + (flag ? 1 : 0);
 			tc.Say(flag ? "ageUp" : "ageDown", tc);
-			tc.bio.SetAge(tc.Chara, age);
+			tc.bio.SetAge(tc.Chara, age3);
 			break;
 		}
 		case EffectId.EternalYouth:
@@ -2110,7 +2110,7 @@ public class ActEffect : EClass
 				tc.SayNothingHappans();
 				break;
 			}
-			int age3 = tc.bio.GetAge(tc.Chara);
+			int age2 = tc.bio.GetAge(tc.Chara);
 			if (flag)
 			{
 				if (tc.c_lockedAge != 0)
@@ -2118,7 +2118,7 @@ public class ActEffect : EClass
 					tc.Say("eternalYouth2", tc);
 					tc.c_lockedAge = 0;
 					tc.elements.Remove(1243);
-					tc.bio.SetAge(tc.Chara, age3);
+					tc.bio.SetAge(tc.Chara, age2);
 				}
 				Redirect(EffectId.Youth, BlessedState.Cursed, default(ActRef));
 			}
@@ -2130,7 +2130,7 @@ public class ActEffect : EClass
 			{
 				tc.PlaySound("dropRewardXmas");
 				tc.Say("eternalYouth1", tc);
-				tc.c_lockedAge = age3 + 1;
+				tc.c_lockedAge = age2 + 1;
 				tc.elements.SetBase(1243, 1);
 				if (blessed)
 				{
@@ -2257,10 +2257,6 @@ public class ActEffect : EClass
 			if (id == EffectId.JureHeal)
 			{
 				EClass.game.religions.Healing.Talk("ability");
-			}
-			if (actRef.act != null)
-			{
-				Debug.Log(actRef.act.id);
 			}
 			int num10 = Dice.Create((actRef.act != null && EClass.sources.calc.map.ContainsKey(actRef.act.ID)) ? actRef.act.ID : "SpHealLight", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
 			if (actRef.refThing != null)
@@ -2645,6 +2641,10 @@ public class ActEffect : EClass
 		int GetBlessingDifficulty(Condition c)
 		{
 			if (c.Type != ConditionType.Buff)
+			{
+				return 0;
+			}
+			if (c is ConTransmuteBat && TC.HasCooldown(8793))
 			{
 				return 0;
 			}

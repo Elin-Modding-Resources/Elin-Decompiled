@@ -5407,6 +5407,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				continue;
 			}
 			item4.isHidden = false;
+			item4.isNPCProperty = false;
 			item4.SetInt(116);
 			EClass._zone.AddCard(item4, nearestPoint);
 			if (!item4.IsEquipment || item4.rarity < Rarity.Superior || item4.IsCursed)

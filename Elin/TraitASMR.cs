@@ -32,7 +32,8 @@ public class TraitASMR : Trait
 			{
 				dialog = Lang.GetDialog("asmr", "eyth");
 			}
-			owner.TalkRaw(dialog.RandomItem());
+			string text = dialog.RandomItem();
+			owner.TalkRaw((text.StartsWith("@") ? "" : "@2") + text);
 		}
 	}
 }
