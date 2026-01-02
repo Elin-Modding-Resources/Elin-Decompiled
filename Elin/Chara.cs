@@ -6007,7 +6007,7 @@ public class Chara : Card, IPathfindWalker
 		switch (cost.type)
 		{
 		case Act.CostType.MP:
-			if (Evalue(1421) >= 2 && base.hp <= MaxHP / (9 - Evalue(1421) * 2))
+			if (Evalue(1421) >= 2 && base.hp <= MaxHP / Mathf.Max(1, 9 - Evalue(1421) * 2))
 			{
 				num6 /= 2;
 			}

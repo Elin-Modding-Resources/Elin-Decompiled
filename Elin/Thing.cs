@@ -277,12 +277,15 @@ public class Thing : Card
 					{
 						AddSocket();
 					}
-					for (int k = 0; k < EClass.rnd(num2 + 1); k++)
+					if (!bp.isCraft)
 					{
-						Tuple<SourceElement.Row, int> enchant = GetEnchant(genLv, (SourceElement.Row r) => r.tag.Contains("modRanged"), neg: false);
-						if (enchant != null && InvOwnerMod.IsValidRangedMod(this, enchant.Item1))
+						for (int k = 0; k < EClass.rnd(num2 + 1); k++)
 						{
-							ApplySocket(enchant.Item1.id, enchant.Item2);
+							Tuple<SourceElement.Row, int> enchant = GetEnchant(genLv, (SourceElement.Row r) => r.tag.Contains("modRanged"), neg: false);
+							if (enchant != null && InvOwnerMod.IsValidRangedMod(this, enchant.Item1))
+							{
+								ApplySocket(enchant.Item1.id, enchant.Item2);
+							}
 						}
 					}
 				}

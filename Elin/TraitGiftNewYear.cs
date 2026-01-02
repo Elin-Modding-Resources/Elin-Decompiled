@@ -11,6 +11,7 @@ public class TraitGiftNewYear : TraitGiftPack
 		SE.Play("dropReward");
 		EClass.pc.Pick(ThingGen.Create("kagamimochi"));
 		EClass.pc.Pick(ThingGen.Create("1134"));
+		EClass.pc.Pick(ThingGen.CreateRecipe("1310"));
 		Chara chara = CharaGen.Create("putty_snow");
 		EClass._zone.AddCard(chara, (owner.ExistsOnMap ? owner.pos : EClass.pc.pos).GetNearestPoint(allowBlock: false, allowChara: false));
 		Msg.Say("package_chara", chara, owner);

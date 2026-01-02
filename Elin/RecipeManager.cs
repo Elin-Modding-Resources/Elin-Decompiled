@@ -308,7 +308,7 @@ public class RecipeManager : EClass
 		List<RecipeSource> list = new List<RecipeSource>();
 		foreach (RecipeSource item in RecipeManager.list)
 		{
-			if (!item.alwaysKnown && (item.NeedFactory || item.IsQuickCraft) && (cat == null || item.row.Category.IsChildOf(cat)) && (!onlyUnlearned || !EClass.player.recipes.knownRecipes.ContainsKey(item.id)) && EClass.pc.Evalue(item.GetReqSkill().id) + 5 + lvBonus >= item.row.LV && !item.row.ContainsTag("hiddenRecipe"))
+			if (!item.alwaysKnown && !item.noRandomRecipe && (item.NeedFactory || item.IsQuickCraft) && (cat == null || item.row.Category.IsChildOf(cat)) && (!onlyUnlearned || !EClass.player.recipes.knownRecipes.ContainsKey(item.id)) && EClass.pc.Evalue(item.GetReqSkill().id) + 5 + lvBonus >= item.row.LV && !item.row.ContainsTag("hiddenRecipe"))
 			{
 				list.Add(item);
 			}
@@ -322,7 +322,7 @@ public class RecipeManager : EClass
 		foreach (string key in EClass.player.recipes.knownRecipes.Keys)
 		{
 			RecipeSource recipeSource = Get(key);
-			if (recipeSource != null && recipeSource.row is SourceThing.Row && (recipeSource.NeedFactory || recipeSource.IsQuickCraft) && (cat == null || recipeSource.row.Category.IsChildOf(cat)))
+			if (recipeSource != null && recipeSource.row is SourceThing.Row && !recipeSource.noRandomRecipe && (recipeSource.NeedFactory || recipeSource.IsQuickCraft) && (cat == null || recipeSource.row.Category.IsChildOf(cat)))
 			{
 				list.Add(recipeSource);
 			}

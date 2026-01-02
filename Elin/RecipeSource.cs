@@ -22,6 +22,8 @@ public class RecipeSource : EClass
 
 	public bool alwaysKnown;
 
+	public bool noRandomRecipe;
+
 	public static List<Recipe.Ingredient> DefaultIngredients = new List<Recipe.Ingredient>
 	{
 		new Recipe.Ingredient
@@ -134,9 +136,16 @@ public class RecipeSource : EClass
 		{
 			return DefaultIngredients;
 		}
-		if (row.recipeKey.Length != 0 && row.recipeKey[0] == "*")
+		if (row.recipeKey.Length != 0)
 		{
-			alwaysKnown = true;
+			if (row.recipeKey[0] == "*")
+			{
+				alwaysKnown = true;
+			}
+			else if (row.recipeKey[0] == "-")
+			{
+				noRandomRecipe = true;
+			}
 		}
 		string[] components = row.components;
 		List<Recipe.Ingredient> list = new List<Recipe.Ingredient>();
@@ -162,10 +171,10 @@ public class RecipeSource : EClass
 						array3[0] = array3[0].Remove(0, 1);
 						break;
 					case '+':
-						goto IL_0142;
+						goto IL_0164;
 					}
 					break;
-					IL_0142:
+					IL_0164:
 					optional = true;
 					array3[0] = array3[0].Remove(0, 1);
 				}
