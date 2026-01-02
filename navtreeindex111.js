@@ -1,5 +1,6 @@
 var NAVTREEINDEX111 =
 {
+"classTask.html#a566417e0b3898a00a155880434b5fea8":[1,0,1298,9],
 "classTask.html#a851835295fef27feb6695e34ac69c5ee":[1,0,1298,8],
 "classTask.html#a87d745feab7d94b31bbf96750f8ebe18":[1,0,1298,15],
 "classTask.html#a9774966f217d14e6bc8c7715613ddf7a":[1,0,1298,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX111 =
 "classTaskMoveInstalled.html#a5ffb9ced8887ecf4a4c6000a073e1c4f":[1,0,1314,0],
 "classTaskMoveInstalled.html#a95b40679a87262c442bd9bd450342c6e":[1,0,1314,5],
 "classTaskMoveInstalled.html#aaf33d4b65cdc1e65570489c4f013d621":[1,0,1314,2],
-"classTaskMoveInstalled.html#ae1365a859b9e0a373e6a90815fdc7b23":[1,0,1314,3],
-"classTaskMoveInstalled.html#aedd062cf1829f208c6f683a6837687a7":[1,0,1314,7]
+"classTaskMoveInstalled.html#ae1365a859b9e0a373e6a90815fdc7b23":[1,0,1314,3]
 };

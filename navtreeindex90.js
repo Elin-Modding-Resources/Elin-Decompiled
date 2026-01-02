@@ -248,6 +248,6 @@ var NAVTREEINDEX90 =
 "classPrefabFix.html":[1,0,976],
 "classPrefabFix.html#a3b0e700b29bc5edcc721fe5139550876":[1,0,976,1],
 "classPrefabFix.html#a5b331022c69760c436960c2a94eba01d":[1,0,976,0],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html":[0,4,7,0,0],
-"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html":[1,0,7,0,0]
+"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html":[1,0,7,0,0],
+"classPrimitiveUI_1_1Examples_1_1ControlBoxScaler.html":[0,4,7,0,0]
 };

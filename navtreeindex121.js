@@ -1,5 +1,6 @@
 var NAVTREEINDEX121 =
 {
+"classTraitLightAlwaysAnime.html#ad9c21526cbf585830e8b4782043e79c5":[1,0,1680,1],
 "classTraitLightSource.html":[1,0,1681],
 "classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1681,0],
 "classTraitLightSun.html":[1,0,1682],
@@ -248,6 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitMoongate.html#a6904ec6f73d14f1204481714bb72414f":[1,0,1745,1],
 "classTraitMoongate.html#aba9864fda611aa8dec3924f9ed4cf402":[1,0,1745,5],
 "classTraitMoongate.html#ac4325da59139f85cb656e9e14ce3d641":[1,0,1745,4],
-"classTraitMoongate.html#afd09a26672dfa5dcd038bafbc90a36e2":[1,0,1745,7],
-"classTraitMoongateEx.html":[1,0,1746]
+"classTraitMoongate.html#afd09a26672dfa5dcd038bafbc90a36e2":[1,0,1745,7]
 };

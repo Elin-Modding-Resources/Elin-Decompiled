@@ -1,5 +1,6 @@
 var NAVTREEINDEX133 =
 {
+"classVirtualRoom.html#a103beb23b0ce5124ff92026d42c6e3bc":[1,0,2073,0],
 "classWait.html":[1,0,2074],
 "classWeather.html":[1,0,2076],
 "classWeather.html#a0e537278203f713dfab9ace506ab3b57":[1,0,2076,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX133 =
 "classWidgetEquip.html#a070fb5f269975b380ced798fcac13245":[1,0,2084,1],
 "classWidgetEquip.html#a0df072dad30410cadf8da618a76906e0":[1,0,2084,13],
 "classWidgetEquip.html#a1753986b456af886ef7e82f9ea10c92c":[1,0,2084,15],
-"classWidgetEquip.html#a26447c3d121b272a80e99134dee261f0":[1,0,2084,3],
-"classWidgetEquip.html#a2d5764b6a202f1ac235385d9c798e393":[1,0,2084,12]
+"classWidgetEquip.html#a26447c3d121b272a80e99134dee261f0":[1,0,2084,3]
 };

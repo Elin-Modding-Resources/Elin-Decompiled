@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.253 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.254 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -6101,7 +6101,7 @@ $(document).ready(function(){initNavTree('Chara_8cs_source.html',''); initResiza
 <div class="line"><a id="l06007" name="l06007"></a><span class="lineno"> 6007</span>        <span class="keywordflow">switch</span> (cost.<a class="code hl_variable" href="structAct_1_1Cost.html#a05815cd21bc067ee8a4aee590806e187">type</a>)</div>
 <div class="line"><a id="l06008" name="l06008"></a><span class="lineno"> 6008</span>        {</div>
 <div class="line"><a id="l06009" name="l06009"></a><span class="lineno"> 6009</span>        <span class="keywordflow">case</span> <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_enumeration" href="classAct.html#a0756316fcd4405ff0d88cde345a290c1">CostType</a>.MP:</div>
-<div class="line"><a id="l06010" name="l06010"></a><span class="lineno"> 6010</span>            <span class="keywordflow">if</span> (Evalue(1421) &gt;= 2 &amp;&amp; base.hp &lt;= MaxHP / (9 - Evalue(1421) * 2))</div>
+<div class="line"><a id="l06010" name="l06010"></a><span class="lineno"> 6010</span>            <span class="keywordflow">if</span> (Evalue(1421) &gt;= 2 &amp;&amp; base.hp &lt;= MaxHP / Mathf.Max(1, 9 - Evalue(1421) * 2))</div>
 <div class="line"><a id="l06011" name="l06011"></a><span class="lineno"> 6011</span>            {</div>
 <div class="line"><a id="l06012" name="l06012"></a><span class="lineno"> 6012</span>                num6 /= 2;</div>
 <div class="line"><a id="l06013" name="l06013"></a><span class="lineno"> 6013</span>            }</div>
@@ -11890,10 +11890,10 @@ $(document).ready(function(){initNavTree('Chara_8cs_source.html',''); initResiza
 <div class="ttc" id="aclassThing_html_a1356967911bd1872c00852223aaebcd7"><div class="ttname"><a href="classThing.html#a1356967911bd1872c00852223aaebcd7">Thing.source</a></div><div class="ttdeci">SourceThing.Row source</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00011">Thing.cs:11</a></div></div>
 <div class="ttc" id="aclassThing_html_a1d1749db95ba575945fd81955bbcd364"><div class="ttname"><a href="classThing.html#a1d1749db95ba575945fd81955bbcd364">Thing.isEquipped</a></div><div class="ttdeci">bool isEquipped</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00017">Thing.cs:17</a></div></div>
 <div class="ttc" id="aclassThing_html_a7d3fbab62156d48349b1a12f6427dabd"><div class="ttname"><a href="classThing.html#a7d3fbab62156d48349b1a12f6427dabd">Thing.SelfWeight</a></div><div class="ttdeci">override int SelfWeight</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00085">Thing.cs:86</a></div></div>
-<div class="ttc" id="aclassThing_html_abf919b04ba952974c2778a7f50ab647c"><div class="ttname"><a href="classThing.html#abf919b04ba952974c2778a7f50ab647c">Thing.GetName</a></div><div class="ttdeci">override string GetName(NameStyle style, int _num=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00535">Thing.cs:535</a></div></div>
+<div class="ttc" id="aclassThing_html_abf919b04ba952974c2778a7f50ab647c"><div class="ttname"><a href="classThing.html#abf919b04ba952974c2778a7f50ab647c">Thing.GetName</a></div><div class="ttdeci">override string GetName(NameStyle style, int _num=-1)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00538">Thing.cs:538</a></div></div>
 <div class="ttc" id="aclassThing_html_ad7d980832173b0b964780289a849398d"><div class="ttname"><a href="classThing.html#ad7d980832173b0b964780289a849398d">Thing.Pref</a></div><div class="ttdeci">override SourcePref Pref</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00049">Thing.cs:50</a></div></div>
 <div class="ttc" id="aclassThing_html_aef1ed7c3783852abe0cea99f348037eb"><div class="ttname"><a href="classThing.html#aef1ed7c3783852abe0cea99f348037eb">Thing.IsSharedContainer</a></div><div class="ttdeci">bool IsSharedContainer</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00115">Thing.cs:116</a></div></div>
-<div class="ttc" id="aclassThing_html_afce2b7cab7c06b8e01034535a23fa07a"><div class="ttname"><a href="classThing.html#afce2b7cab7c06b8e01034535a23fa07a">Thing.Identify</a></div><div class="ttdeci">Thing Identify(bool show=true, IDTSource idtSource=IDTSource.Identify)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l02074">Thing.cs:2074</a></div></div>
+<div class="ttc" id="aclassThing_html_afce2b7cab7c06b8e01034535a23fa07a"><div class="ttname"><a href="classThing.html#afce2b7cab7c06b8e01034535a23fa07a">Thing.Identify</a></div><div class="ttdeci">Thing Identify(bool show=true, IDTSource idtSource=IDTSource.Identify)</div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l02077">Thing.cs:2077</a></div></div>
 <div class="ttc" id="aclassThirstPersonInfo_html_ae61396f3ff10dec9989ce483e5e65bbd"><div class="ttname"><a href="classThirstPersonInfo.html#ae61396f3ff10dec9989ce483e5e65bbd">ThirstPersonInfo.Set</a></div><div class="ttdeci">void Set(string n)</div><div class="ttdef"><b>Definition:</b> <a href="ThirstPersonInfo_8cs_source.html#l00017">ThirstPersonInfo.cs:17</a></div></div>
 <div class="ttc" id="aclassTileRow_html"><div class="ttname"><a href="classTileRow.html">TileRow</a></div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00003">TileRow.cs:4</a></div></div>
 <div class="ttc" id="aclassTileRow_html_a2b91024d771c3b36647342e5a3112d9f"><div class="ttname"><a href="classTileRow.html#a2b91024d771c3b36647342e5a3112d9f">TileRow.ignoreSnow</a></div><div class="ttdeci">bool ignoreSnow</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00006">TileRow.cs:6</a></div></div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX124 =
 {
+"classTraitSpellbookRandom.html#a353b9411b6f8cb86791b14a0fa087f1b":[1,0,1853,2],
 "classTraitSpellbookRandom.html#a8c187a19407f57e545aca15acc6a7edc":[1,0,1853,1],
 "classTraitSpellbookRandom.html#ab689141e4bc31eef6745984457efb554":[1,0,1853,0],
 "classTraitSpinner.html":[1,0,1854],
@@ -248,6 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitToolRangeCane.html#a7b757ba61df2d3441f3699dfeedb4012":[1,0,1922,3],
 "classTraitToolRangeCane.html#abbd804478bfa5892305e96947fdab944":[1,0,1922,0],
 "classTraitToolRangeCrossbow.html":[1,0,1923],
-"classTraitToolRangeCrossbow.html#a1009ad63c3585427accd989f953d3f9c":[1,0,1923,0],
-"classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1923,1]
+"classTraitToolRangeCrossbow.html#a1009ad63c3585427accd989f953d3f9c":[1,0,1923,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"classZone__Beach.html":[1,0,2138],
 "classZone__Casino.html":[1,0,2139],
 "classZone__Casino.html#a0e8d43bd7bddb3ebf21dc02a747e4bf9":[1,0,2139,0],
 "classZone__Casino.html#a51d4b8ef554fe208c3b0cd3ceb7fd826":[1,0,2139,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "classZone__StartSiteSky.html#a64d7def24de6af7fe13c8340d824b4ad":[1,0,2199,4],
 "classZone__StartSiteSky.html#a6d398a4b48493d15241410920fcec687":[1,0,2199,3],
 "classZone__StartSiteSky.html#ab639c59532ff2028e9bad0fcd494006b":[1,0,2199,0],
-"classZone__StartSiteSky.html#abdab0cb8574824d6fc1438f798ab309d":[1,0,2199,5],
-"classZone__StartSiteSky.html#af5f98394e6011ed4a85268fc879c08ca":[1,0,2199,1]
+"classZone__StartSiteSky.html#abdab0cb8574824d6fc1438f798ab309d":[1,0,2199,5]
 };

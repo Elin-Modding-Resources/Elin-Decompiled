@@ -1,5 +1,6 @@
 var NAVTREEINDEX132 =
 {
+"classUIResourceTrack.html#a80bae6be26f6b896b479af786ca37384":[1,0,2054,9],
 "classUIResourceTrack.html#a942bf98e467fdbe7b2628cec6751f89e":[1,0,2054,11],
 "classUIResourceTrack.html#a9cbabe2cfaf0d02eb82c9272e74fdd36":[1,0,2054,10],
 "classUIResourceTrack.html#aa87567739459ba0b7c4b0e83f85cc79c":[1,0,2054,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX132 =
 "classVirtualDate.html#ad68e6f510ce1df2e43e95598bd544e94":[1,0,2072,10],
 "classVirtualDate.html#adb39e98c6d64b59086e86ce07f7625be":[1,0,2072,7],
 "classVirtualDate.html#af9fe9097187dc50b359b4aadde2af5e8":[1,0,2072,5],
-"classVirtualRoom.html":[1,0,2073],
-"classVirtualRoom.html#a103beb23b0ce5124ff92026d42c6e3bc":[1,0,2073,0]
+"classVirtualRoom.html":[1,0,2073]
 };

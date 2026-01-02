@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitContainerCompost.html#afb9bdd7f54292c14235380bd61f90649":[1,0,1515,2],
 "classTraitContainerCurrency.html":[1,0,1516],
 "classTraitContainerCurrency.html#a20aecfb494ee77aaa8b2f1e6f02f8ded":[1,0,1516,1],
 "classTraitContainerCurrency.html#a9a9f5a71c54e46d2aa9a9f2395ce5290":[1,0,1516,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1559,3],
 "classTraitDreamBug.html":[1,0,1560],
 "classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1560,2],
-"classTraitDreamBug.html#a18d492d340ab5615e331d005f5e9d818":[1,0,1560,0],
-"classTraitDreamBug.html#a312a1c5a153424c12d45ce5e5c1872fc":[1,0,1560,1]
+"classTraitDreamBug.html#a18d492d340ab5615e331d005f5e9d818":[1,0,1560,0]
 };

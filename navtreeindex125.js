@@ -1,5 +1,6 @@
 var NAVTREEINDEX125 =
 {
+"classTraitToolRangeCrossbow.html#a68e80ea0bd649dfe388fac71ecf05791":[1,0,1923,1],
 "classTraitToolRangeGun.html":[1,0,1924],
 "classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1924,1],
 "classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1924,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX125 =
 "classTutorial.html":[1,0,1979],
 "classTutorial.html#a39aaae45ca729223dc4ee97367aee1f2":[1,0,1979,4],
 "classTutorial.html#a7a855d15511d9a0ccb8eae2afe1aa66b":[1,0,1979,3],
-"classTutorial.html#aa538aa010806489d96924e8005aec0c2":[1,0,1979,2],
-"classTutorial.html#aad010e98af70d4cafa738f43205e4887":[1,0,1979,0]
+"classTutorial.html#aa538aa010806489d96924e8005aec0c2":[1,0,1979,2]
 };

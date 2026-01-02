@@ -1,5 +1,6 @@
 var NAVTREEINDEX144 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8965d0c7ca748786b5230a1cec80c90c":[0,4,3,0,8,89],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8a82931127bb25f55405a05d0eb63562":[0,4,3,0,8,168],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8a96b4531b140cd79283c61dfd2cee8d":[0,4,3,0,8,62],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da8b03eecffdf9feca4f0f6b4d1ed835b9":[0,4,3,0,8,50],
@@ -248,6 +249,5 @@ var NAVTREEINDEX144 =
 "structFov_1_1LevelPoint.html#acdbb1cafbf4a5014d80012938c463acc":[1,0,530,0,1],
 "structGross_1_1Mod.html":[1,0,587,0],
 "structHSLColor.html":[1,0,670],
-"structHSLColor.html#a15d2fe4ed376b8cf326e60ff8b959060":[1,0,670,4],
-"structHSLColor.html#a175ffabce46c35d56060ac39f6e4a7cb":[1,0,670,2]
+"structHSLColor.html#a15d2fe4ed376b8cf326e60ff8b959060":[1,0,670,4]
 };

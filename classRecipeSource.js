@@ -15,6 +15,7 @@ var classRecipeSource =
     [ "isChara", "classRecipeSource.html#ad045f951fe9f92c5fdb3c3c44e8fed08", null ],
     [ "isRandom", "classRecipeSource.html#ada67fceaabc441381e2c2040571a1eb4", null ],
     [ "noListing", "classRecipeSource.html#a8f18d60250c94437c895922bf455293a", null ],
+    [ "noRandomRecipe", "classRecipeSource.html#a9e668f7cd163535a8b6fcaaed979e6fa", null ],
     [ "row", "classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d", null ],
     [ "type", "classRecipeSource.html#a8dd1c6fe6c4ae9fc0926236f39dc9e53", null ],
     [ "idFactory", "classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7", null ],
