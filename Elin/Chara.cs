@@ -9548,12 +9548,12 @@ public class Chara : Card, IPathfindWalker
 			}
 			CureCondition<ConWait>();
 			CureCondition<ConDisease>((EClass.rnd(20) + 10) * p / 100);
-			bool flag3 = HasCondition<ConAnorexia>();
-			base.c_vomit -= (flag3 ? 3 : 2) * p / 100;
+			bool flag2 = HasCondition<ConAnorexia>();
+			base.c_vomit -= (flag2 ? 3 : 2) * p / 100;
 			if (base.c_vomit < 0)
 			{
 				base.c_vomit = 0;
-				if (flag3)
+				if (flag2)
 				{
 					RemoveCondition<ConAnorexia>();
 				}
@@ -9564,13 +9564,13 @@ public class Chara : Card, IPathfindWalker
 		case CureType.Death:
 		case CureType.Jure:
 		case CureType.Boss:
+		case CureType.Unicorn:
 		{
-			bool flag2 = type == CureType.Death;
 			CureTempElements(p * 100, body: true, mind: true);
 			for (int num = conditions.Count - 1; num >= 0; num--)
 			{
 				Condition condition = conditions[num];
-				if (condition is ConAnorexia && !flag2)
+				if (condition is ConAnorexia && type != CureType.Death && type != CureType.Unicorn && type != CureType.Jure)
 				{
 					continue;
 				}
@@ -9582,32 +9582,39 @@ public class Chara : Card, IPathfindWalker
 					condition.Kill();
 					continue;
 				case ConditionType.Stance:
-					if (flag2)
+					if (type == CureType.Death)
 					{
 						condition.Kill();
 						continue;
 					}
 					break;
 				}
-				if (flag2 && condition.isPerfume)
+				if (type == CureType.Death && condition.isPerfume)
 				{
 					condition.Kill();
 				}
 			}
 			CureCondition<ConWait>();
 			CureCondition<ConSleep>();
-			if (flag2 || type == CureType.Boss)
+			switch (type)
 			{
+			case CureType.Death:
+			case CureType.Boss:
+			case CureType.Unicorn:
 				SAN.Mod(-20);
 				RemoveCondition<ConBrightnessOfLife>();
-			}
-			if (type == CureType.Jure)
-			{
+				break;
+			case CureType.Jure:
 				SAN.Mod(-999);
 				if (HasElement(1206))
 				{
 					SetFeat(1206, 0, msg: true);
 				}
+				break;
+			case CureType.CureBody:
+			case CureType.CureMind:
+			case CureType.Prayer:
+				break;
 			}
 			break;
 		}
@@ -9990,7 +9997,10 @@ public class Chara : Card, IPathfindWalker
 			SourceElement.Row row = ie.RandomItem();
 			if (i == 0 && vec < 0 && ether && base.c_corruptionHistory != null && base.c_corruptionHistory.Count > 0)
 			{
-				row = EClass.sources.elements.map[base.c_corruptionHistory.LastItem()];
+				if (EClass.sources.elements.map.ContainsKey(base.c_corruptionHistory.LastItem()))
+				{
+					row = EClass.sources.elements.map[base.c_corruptionHistory.LastItem()];
+				}
 				base.c_corruptionHistory.RemoveAt(base.c_corruptionHistory.Count - 1);
 				if (base.c_corruptionHistory.Count == 0)
 				{

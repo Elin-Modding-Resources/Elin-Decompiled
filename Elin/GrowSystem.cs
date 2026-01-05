@@ -190,7 +190,7 @@ public class GrowSystem : EClass
 		return -1;
 	}
 
-	public virtual void OnRenderTileMap(RenderParam p)
+	public virtual void OnRenderTileMap(RenderParam p, bool drawShadow = true)
 	{
 		int num = cell.objVal / 30;
 		currentStage = stages[num];
@@ -228,7 +228,12 @@ public class GrowSystem : EClass
 		}
 		p.y = y;
 		p.z = z;
-		if (num >= ShadowStage)
+		if (cell.obj == 118 && Core.fixedFrame % 10f == 0f && IsMature)
+		{
+			EClass.scene.psFey.transform.position = new Vector3(p.x, p.y, p.z - 2f);
+			EClass.scene.psFey.Emit(1);
+		}
+		if (drawShadow && num >= ShadowStage)
 		{
 			int shadow = GetShadow(num);
 			if (shadow == -1)

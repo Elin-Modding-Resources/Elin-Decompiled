@@ -1,4 +1,4 @@
-public class TraitSyringeHeaven : TraitTicketChampagne.TraitSyringe
+public class TraitSyringeHeaven : TraitSyringe
 {
 	public override void TrySetHeldAct(ActPlan p)
 	{
@@ -6,10 +6,7 @@ public class TraitSyringeHeaven : TraitTicketChampagne.TraitSyringe
 		{
 			p.TrySetAct("actInject".lang("", c.Name), delegate
 			{
-				EClass.pc.PlaySound("syringe");
-				EClass.pc.Say("syringe", EClass.pc, c, owner.NameOne);
-				c.PlayEffect("blood").SetParticleColor(EClass.Colors.matColors[c.material.alias].main).Emit(20);
-				c.AddBlood(2 + EClass.rnd(2));
+				EffectInject(EClass.pc, c);
 				c.AddCondition<ConHallucination>(50);
 				if ((c.trait is TraitLittleOne) & !c.HasCondition<ConDeathSentense>())
 				{
@@ -17,7 +14,7 @@ public class TraitSyringeHeaven : TraitTicketChampagne.TraitSyringe
 					c.AddCondition<ConDeathSentense>(100, force: true);
 				}
 				owner.ModNum(-1);
-				return false;
+				return true;
 			}, c);
 		});
 	}

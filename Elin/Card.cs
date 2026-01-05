@@ -2132,6 +2132,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public virtual CardRow sourceRenderCard => sourceCard;
 
+	public virtual RenderRow TileRow => sourceCard;
+
 	public TileType TileType => sourceCard.tileType;
 
 	public string Name => GetName(NameStyle.Full);
@@ -3785,7 +3787,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			this.placeState = newState;
 		}
-		if (trait is TraitFakeBlock)
+		if (trait is TraitFakeTile)
 		{
 			_CreateRenderer();
 		}
@@ -6039,11 +6041,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			if (isDyed)
 			{
-				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.matColor, sourceRenderCard.colorMod);
+				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.matColor, TileRow.colorMod);
 			}
 			else if (isElemental)
 			{
-				_colorInt = BaseTileMap.GetColorInt(ref EClass.setting.elements[Chara.MainElement.source.alias].colorSprite, sourceRenderCard.colorMod);
+				_colorInt = BaseTileMap.GetColorInt(ref EClass.setting.elements[Chara.MainElement.source.alias].colorSprite, TileRow.colorMod);
 			}
 			else
 			{
@@ -6052,26 +6054,26 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else if (isDyed)
 		{
-			if (sourceRenderCard.useAltColor)
+			if (TileRow.useAltColor)
 			{
-				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.altColor, sourceRenderCard.colorMod);
+				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.altColor, TileRow.colorMod);
 			}
 			else
 			{
-				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.matColor, sourceRenderCard.colorMod);
+				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.matColor, TileRow.colorMod);
 			}
 		}
 		else if (sourceRenderCard.useRandomColor)
 		{
-			_colorInt = BaseTileMap.GetColorInt(ref GetRandomColor(), sourceRenderCard.colorMod);
+			_colorInt = BaseTileMap.GetColorInt(ref GetRandomColor(), TileRow.colorMod);
 		}
 		else if (sourceRenderCard.useAltColor)
 		{
-			_colorInt = BaseTileMap.GetColorInt(ref material.altColor, sourceRenderCard.colorMod);
+			_colorInt = BaseTileMap.GetColorInt(ref material.altColor, TileRow.colorMod);
 		}
 		else
 		{
-			_colorInt = BaseTileMap.GetColorInt(ref material.matColor, sourceRenderCard.colorMod);
+			_colorInt = BaseTileMap.GetColorInt(ref material.matColor, TileRow.colorMod);
 		}
 	}
 
@@ -6104,6 +6106,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public virtual Sprite GetSprite(int dir = 0)
 	{
+		if (trait is TraitFakeTile)
+		{
+			if (trait is TraitFakeBlock)
+			{
+				return EClass.sources.blocks.map[refVal].GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
+			}
+			return EClass.sources.objs.map[refVal].GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
+		}
 		if (trait is TraitAbility)
 		{
 			return (trait as TraitAbility).CreateAct()?.GetSprite() ?? EClass.core.refs.icons.defaultAbility;
@@ -6260,6 +6270,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (TileType == TileType.Door)
 		{
 			num = 2;
+		}
+		if (trait is TraitFakeObj)
+		{
+			num = (trait as TraitFakeObj).GetMaxDir();
 		}
 		if (reverse)
 		{

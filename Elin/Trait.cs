@@ -12,7 +12,8 @@ public class Trait : EClass
 		Illumination,
 		DefaultNoAnime,
 		SignalAnime,
-		FakeBlock
+		FakeBlock,
+		FakeObj
 	}
 
 	public enum CopyShopType
@@ -579,6 +580,16 @@ public class Trait : EClass
 			return Params[i].ToInt();
 		}
 		return def;
+	}
+
+	public virtual SourcePref GetPref()
+	{
+		return null;
+	}
+
+	public virtual RenderData GetRenderData()
+	{
+		return null;
 	}
 
 	public virtual bool Contains(RecipeSource r)

@@ -873,7 +873,7 @@ public class SerializedCards : EClass
 					card2.Chara.ScaleByPrincipal();
 				}
 			}
-			if (card2.trait is TraitFakeBlock)
+			if (card2.trait is TraitFakeTile)
 			{
 				card2._CreateRenderer();
 			}

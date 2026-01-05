@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -656,6 +657,13 @@ public class Game : EClass
 			if (global2 is QuestSequence && !EClass.sources.quests.map.ContainsKey(global2.idSource))
 			{
 				global2.phase = 0;
+			}
+		}
+		foreach (KeyValuePair<int, Spatial> item7 in EClass.game.spatials.map.ToList())
+		{
+			if (item7.Value == null)
+			{
+				EClass.game.spatials.map.Remove(item7.Key);
 			}
 		}
 		void TryAddQuest(string idQuest, string idReqQuest)

@@ -147,6 +147,7 @@ public class RecipeCard : Recipe
 		_mold.dir = _dir;
 		_mold.altitude = ActionMode.Build.altitude;
 		_mold.idSkin = idSkin;
+		_mold._CreateRenderer();
 		return _mold;
 	}
 

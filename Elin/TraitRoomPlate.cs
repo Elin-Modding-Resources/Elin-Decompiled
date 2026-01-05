@@ -24,7 +24,7 @@ public class TraitRoomPlate : TraitBoard
 
 	public override void TrySetAct(ActPlan p)
 	{
-		if ((!EClass.debug.enable && !EClass._zone.IsPCFaction) || !owner.IsInstalled || owner.pos.cell.room == null)
+		if ((!EClass.debug.enable && !EClass._zone.IsPCFactionOrTent) || !owner.IsInstalled || owner.pos.cell.room == null)
 		{
 			return;
 		}

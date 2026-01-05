@@ -1,4 +1,4 @@
-public class TraitSyringeGene : TraitTicketChampagne.TraitSyringe
+public class TraitSyringeGene : TraitSyringe
 {
 	public override void TrySetHeldAct(ActPlan p)
 	{
@@ -6,10 +6,7 @@ public class TraitSyringeGene : TraitTicketChampagne.TraitSyringe
 		{
 			p.TrySetAct("actInject".lang("", c.Name), delegate
 			{
-				EClass.pc.PlaySound("syringe");
-				EClass.pc.Say("syringe", EClass.pc, c, owner.NameOne);
-				c.PlayEffect("blood").SetParticleColor(EClass.Colors.matColors[c.material.alias].main).Emit(20);
-				c.AddBlood(2 + EClass.rnd(2));
+				EffectInject(EClass.pc, c);
 				c.AddCondition<ConHallucination>(50);
 				TraitGeneMachine traitGeneMachine = c.pos.FindThing<TraitGeneMachine>();
 				if (traitGeneMachine != null && traitGeneMachine.GetTarget() == c)
@@ -29,7 +26,7 @@ public class TraitSyringeGene : TraitTicketChampagne.TraitSyringe
 					c.ModCorruption(-50);
 				}
 				owner.ModNum(-1);
-				return false;
+				return true;
 			}, c);
 		});
 	}

@@ -8,5 +8,6 @@ public enum CureType
 	CureMind,
 	Jure,
 	Prayer,
-	Boss
+	Boss,
+	Unicorn
 }

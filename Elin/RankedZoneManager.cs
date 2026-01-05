@@ -49,7 +49,7 @@ public class RankedZoneManager : EClass
 		List<RankedZone> list = new List<RankedZone>();
 		foreach (Spatial z in EClass.game.spatials.map.Values)
 		{
-			if ((z.source.value <= 0 || z.lv != 0) && !z.IsPlayerFaction)
+			if ((z == null || z.source.value <= 0 || z.lv != 0) && !z.IsPlayerFaction)
 			{
 				continue;
 			}

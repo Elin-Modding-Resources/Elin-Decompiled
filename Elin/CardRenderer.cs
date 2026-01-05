@@ -38,13 +38,9 @@ public class CardRenderer : RenderObject
 	public virtual void SetOwner(Card c)
 	{
 		owner = c;
-		if (owner.trait is TraitFakeBlock)
+		if (data == null)
 		{
-			data = EClass.sources.blocks.map[owner.refVal].renderData;
-		}
-		else if (data == null)
-		{
-			data = owner.sourceCard.renderData;
+			data = owner.trait.GetRenderData() ?? owner.sourceCard.renderData;
 		}
 		isChara = c.isChara;
 		usePass = data.pass != null;
@@ -171,6 +167,15 @@ public class CardRenderer : RenderObject
 		if (anime != null)
 		{
 			anime.Update();
+		}
+		if (owner.trait is TraitFakeObj)
+		{
+			TraitFakeObj traitFakeObj = owner.trait as TraitFakeObj;
+			if (traitFakeObj.growth != null)
+			{
+				traitFakeObj.growth?.OnRenderTileMap(p, owner.IsInstalled && owner.altitude == 0 && owner.pos.FirstThing == owner);
+				return;
+			}
 		}
 		if (!isChara && !owner.IsInstalled && owner.category.tileDummy != 0 && !owner.isRoofItem && owner.ExistsOnMap && owner.trait.UseDummyTile)
 		{

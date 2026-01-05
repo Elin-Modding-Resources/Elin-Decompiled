@@ -50,35 +50,16 @@ public class Thing : Card
 	{
 		get
 		{
-			if (trait is TraitFakeBlock)
+			SourcePref pref = trait.GetPref();
+			if (pref == null)
 			{
-				TileType tileType = EClass.sources.blocks.map[base.refVal].tileType;
-				if (tileType is TileTypePillar)
+				if (source.origin == null || source.pref.UsePref)
 				{
-					return EClass.core.refs.prefs.blockPillar;
+					return source.pref;
 				}
-				if (tileType is TileTypeFence)
-				{
-					return EClass.core.refs.prefs.blockFence;
-				}
-				if (tileType is TileTypeStairs)
-				{
-					return EClass.core.refs.prefs.blockStairs;
-				}
-				if (tileType is TileTypeWall)
-				{
-					return EClass.core.refs.prefs.blockWall;
-				}
-				if (tileType is TileTypeSlope)
-				{
-					return EClass.core.refs.prefs.blockStairs;
-				}
+				pref = source.origin.pref;
 			}
-			if (source.origin == null || source.pref.UsePref)
-			{
-				return source.pref;
-			}
-			return source.origin.pref;
+			return pref;
 		}
 	}
 
@@ -98,7 +79,23 @@ public class Thing : Card
 		}
 	}
 
-	public override int[] Tiles => sourceCard._tiles;
+	public override int[] Tiles => TileRow._tiles;
+
+	public override RenderRow TileRow
+	{
+		get
+		{
+			if (trait is TraitFakeTile)
+			{
+				if (trait is TraitFakeBlock)
+				{
+					return EClass.sources.blocks.map[base.refVal];
+				}
+				return EClass.sources.objs.map[base.refVal];
+			}
+			return base.TileRow;
+		}
+	}
 
 	public bool CanSearchContents
 	{
@@ -1515,8 +1512,17 @@ public class Thing : Card
 			break;
 		case Trait.TileMode.FakeBlock:
 		{
-			p.color += 1572864f;
-			SourceBlock.Row row = EClass.sources.blocks.map[base.refVal];
+			SourceBlock.Row row2 = EClass.sources.blocks.map[base.refVal];
+			p.tile = row2._tiles[base.dir % row2._tiles.Length];
+			if (row2.tileType.IsFullBlock)
+			{
+				p.color += 1572864f;
+			}
+			break;
+		}
+		case Trait.TileMode.FakeObj:
+		{
+			SourceObj.Row row = EClass.sources.objs.map[base.refVal];
 			p.tile = row._tiles[base.dir % row._tiles.Length];
 			break;
 		}

@@ -160,6 +160,7 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 		{
 			moldCard = target.Duplicate(1);
 			moldCard.placeState = PlaceState.installed;
+			moldCard._CreateRenderer();
 		}
 		else
 		{

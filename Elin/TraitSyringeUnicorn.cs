@@ -1,4 +1,4 @@
-public class TraitSyringeBlood : TraitSyringe
+public class TraitSyringeUnicorn : TraitSyringe
 {
 	public override void TrySetHeldAct(ActPlan p)
 	{
@@ -7,7 +7,9 @@ public class TraitSyringeBlood : TraitSyringe
 			p.TrySetAct("actInject".lang("", c.Name), delegate
 			{
 				EffectInject(EClass.pc, c);
-				EClass.pc.PickOrDrop(EClass.pc.pos, CraftUtil.MakeBloodSample(EClass.pc, c));
+				c.PlayEffect("heal");
+				c.PlaySound("heal_tick");
+				c.CureHost(CureType.Unicorn, 100, owner.blessedState);
 				owner.ModNum(-1);
 				return true;
 			}, c);

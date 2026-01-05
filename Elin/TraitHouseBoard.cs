@@ -104,7 +104,7 @@ public class TraitHouseBoard : TraitBoard
 
 	public override void TrySetAct(ActPlan p)
 	{
-		if (!EClass.debug.enable && !EClass._zone.IsPCFaction)
+		if (!EClass.debug.enable && !EClass._zone.IsPCFactionOrTent)
 		{
 			return;
 		}
