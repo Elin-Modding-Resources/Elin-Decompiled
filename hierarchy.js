@@ -1682,7 +1682,10 @@ var hierarchy =
         [ "TraitEcoMark", "classTraitEcoMark.html", null ],
         [ "TraitEditorSign", "classTraitEditorSign.html", null ],
         [ "TraitEternalMonument", "classTraitEternalMonument.html", null ],
-        [ "TraitFakeBlock", "classTraitFakeBlock.html", null ],
+        [ "TraitFakeTile", "classTraitFakeTile.html", [
+          [ "TraitFakeBlock", "classTraitFakeBlock.html", null ],
+          [ "TraitFakeObj", "classTraitFakeObj.html", null ]
+        ] ],
         [ "TraitFertilizer", "classTraitFertilizer.html", [
           [ "TraitDefertilizer", "classTraitDefertilizer.html", null ]
         ] ],
@@ -1967,14 +1970,15 @@ var hierarchy =
             ] ]
           ] ]
         ] ],
+        [ "TraitSyringe", "classTraitSyringe.html", [
+          [ "TraitSyringeBlood", "classTraitSyringeBlood.html", null ],
+          [ "TraitSyringeGene", "classTraitSyringeGene.html", null ],
+          [ "TraitSyringeHeaven", "classTraitSyringeHeaven.html", null ],
+          [ "TraitSyringeUnicorn", "classTraitSyringeUnicorn.html", null ]
+        ] ],
         [ "TraitThrown", "classTraitThrown.html", [
           [ "TraitThrownConsume", "classTraitThrownConsume.html", null ],
           [ "TraitThrownExplosive", "classTraitThrownExplosive.html", null ]
-        ] ],
-        [ "TraitTicketChampagne.TraitSyringe", "classTraitTicketChampagne_1_1TraitSyringe.html", [
-          [ "TraitSyringeBlood", "classTraitSyringeBlood.html", null ],
-          [ "TraitSyringeGene", "classTraitSyringeGene.html", null ],
-          [ "TraitSyringeHeaven", "classTraitSyringeHeaven.html", null ]
         ] ],
         [ "TraitTicketFurniture", "classTraitTicketFurniture.html", null ],
         [ "TraitTicketMassage", "classTraitTicketMassage.html", [

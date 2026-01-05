@@ -1,5 +1,15 @@
 var NAVTREEINDEX54 =
 {
+"classCoreRef_1_1Biomes.html#a4277df483fb1c7778a23d940f84c73e6":[1,0,407,0,3],
+"classCoreRef_1_1Biomes.html#aca559167d7a556680efbce71ba52bbf4":[1,0,407,0,1],
+"classCoreRef_1_1Biomes.html#acc770985d1ab4ae10cdc194d09da7c16":[1,0,407,0,2],
+"classCoreRef_1_1ButtonAssets.html":[1,0,407,1],
+"classCoreRef_1_1ButtonAssets.html#a1e41b3fd13a988af3f0e216eb525ea81":[1,0,407,1,2],
+"classCoreRef_1_1ButtonAssets.html#a546613bdd0337f3c185ca40f09ad89b0":[1,0,407,1,3],
+"classCoreRef_1_1ButtonAssets.html#aaab07c8e7ce6ecf2bcbf52142c82a827":[1,0,407,1,0],
+"classCoreRef_1_1ButtonAssets.html#abc2aaee8582256c0a1134f5fb46eb383":[1,0,407,1,4],
+"classCoreRef_1_1ButtonAssets.html#adae1c42b762ca3848081e9bbdff01758":[1,0,407,1,5],
+"classCoreRef_1_1ButtonAssets.html#aef31978ca318e37fd965a8da0089e23a":[1,0,407,1,1],
 "classCoreRef_1_1Crawlers.html":[1,0,407,2],
 "classCoreRef_1_1Crawlers.html#a0f580821e6dd27b290d0f9575ff53dbe":[1,0,407,2,0],
 "classCoreRef_1_1DefaultRoof.html":[1,0,407,3],
@@ -239,15 +249,5 @@ var NAVTREEINDEX54 =
 "classCritterRandom.html#a2a26268ebfef43ebfcff7e23c25c463c":[1,0,416,2],
 "classCritterRandom.html#a7a60eaa6c8aae5077e8b5ddceafdbbca":[1,0,416,1],
 "classCritterRandom.html#a86c90b2aaa74a9271c6f2439265cf411":[1,0,416,0],
-"classCritterRat.html":[1,0,417],
-"classCritterRat.html#a31d966074d16810a06f684f6169fdb26":[1,0,417,3],
-"classCritterRat.html#a3bef0cbd070e9274a8352456c7022292":[1,0,417,2],
-"classCritterRat.html#a86c95a12a5832c25764026dd7c98573c":[1,0,417,1],
-"classCritterRat.html#aea9879284f0dcdb449d2822bd6d5edec":[1,0,417,0],
-"classCritterRatSmall.html":[1,0,418],
-"classCritterRatSmall.html#a1c1d63eb88744cb11e057b061ec0a58c":[1,0,418,3],
-"classCritterRatSmall.html#a65a24607e665bfb509f045d7fbc2a833":[1,0,418,2],
-"classCritterRatSmall.html#aa6bbe8dc3373baf82b42c4710462b897":[1,0,418,0],
-"classCritterRatSmall.html#abede702e92acef26938471005cf884ff":[1,0,418,1],
-"classCritterRoach.html":[1,0,419]
+"classCritterRat.html":[1,0,417]
 };

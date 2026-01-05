@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"LayerList_8cs.html":[2,0,0,764],
 "LayerList_8cs_source.html":[2,0,0,764],
 "LayerLoadGame_8cs.html":[2,0,0,765],
 "LayerLoadGame_8cs_source.html":[2,0,0,765],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "NoticeManager_8cs.html":[2,0,0,855],
 "NoticeManager_8cs_source.html":[2,0,0,855],
 "NotificationBattle_8cs.html":[2,0,0,856],
-"NotificationBattle_8cs_source.html":[2,0,0,856],
-"NotificationBuff_8cs.html":[2,0,0,857]
+"NotificationBattle_8cs_source.html":[2,0,0,856]
 };

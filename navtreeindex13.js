@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"RenderDataObjAdd_8cs_source.html":[2,0,0,1041],
 "RenderDataObjDummy_8cs.html":[2,0,0,1042],
 "RenderDataObjDummy_8cs_source.html":[2,0,0,1042],
 "RenderDataObjV_8cs.html":[2,0,0,1043],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "SlaverType_8cs_source.html":[2,0,0,1089],
 "SliderBackgroundController_8cs.html":[2,0,0,3,2,0,5],
 "SliderBackgroundController_8cs_source.html":[2,0,0,3,2,0,5],
-"SliderType_8cs.html":[2,0,0,3,2,0,6],
-"SliderType_8cs.html#addae28f895c6122349f7321066b62b01":[2,0,0,3,2,0,6,0]
+"SliderType_8cs.html":[2,0,0,3,2,0,6]
 };

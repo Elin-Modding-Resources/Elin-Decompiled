@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"TileTypeWindow_8cs.html":[2,0,0,1300],
 "TileTypeWindow_8cs_source.html":[2,0,0,1300],
 "TileType_8cs.html":[2,0,0,1246],
 "TileType_8cs_source.html":[2,0,0,1246],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitCoreDefense_8cs.html":[2,0,0,1414],
 "TraitCoreDefense_8cs_source.html":[2,0,0,1414],
 "TraitCoreZone_8cs.html":[2,0,0,1415],
-"TraitCoreZone_8cs_source.html":[2,0,0,1415],
-"TraitCorgon_8cs.html":[2,0,0,1416]
+"TraitCoreZone_8cs_source.html":[2,0,0,1415]
 };

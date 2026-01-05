@@ -1,5 +1,14 @@
 var NAVTREEINDEX25 =
 {
+"classAIProgress.html#a38940bcea4286b76e54ec5cce0e1bb2b":[1,0,122,4],
+"classAIProgress.html#a4367076f373732e8a356e739de587962":[1,0,122,2],
+"classAIProgress.html#a50d1942f8132bc300213fbd2e50ac267":[1,0,122,0],
+"classAIProgress.html#a6839cb804b6a013053000f4a9466b3a2":[1,0,122,3],
+"classAIProgress.html#a700f07b056a3b4b19455a3d530fa0bd5":[1,0,122,5],
+"classAIProgress.html#a77b31ffb7379281b78eb35f14ff85a65":[1,0,122,9],
+"classAIProgress.html#aa8feb070bee5afd1fe3f53ebbf9c0a08":[1,0,122,6],
+"classAIProgress.html#ae2e9e3f0e73f628c6008106f73243751":[1,0,122,8],
+"classAIProgress.html#af3cf75cd38c68befaae09a30ecb4bb7e":[1,0,122,10],
 "classAIProgress.html#af4afe1ea2821d62d67544fb72f6f9e3a":[1,0,122,7],
 "classAIWork.html":[1,0,123],
 "classAIWork.html#a14b7a8534cdbb2c0ce938e86a701c38f":[1,0,123,14],
@@ -240,14 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Meditate.html#acb19b8576d1f61068ee45d14f45c74f6":[1,0,93,1],
 "classAI__Mofu.html":[1,0,94],
 "classAI__Mofu.html#a3f7f0ac1e84cb2acbaeddb59bb585654":[1,0,94,3],
-"classAI__Mofu.html#a5e71f9daf472e9ad939b5d2af36dc9b3":[1,0,94,0],
-"classAI__Mofu.html#a87a6bef406adac66497648ebfe20999e":[1,0,94,2],
-"classAI__Mofu.html#aab8a1276894a5e6aae79a84f1ef17857":[1,0,94,1],
-"classAI__Offer.html":[1,0,95],
-"classAI__Offer.html#a2f99b82da9dd2959034b3108d14b818d":[1,0,95,2],
-"classAI__Offer.html#a64e70f4c7d519819e21905f9dab7e199":[1,0,95,3],
-"classAI__Offer.html#ab3f633b09048472bfc0a7a3d30889eef":[1,0,95,0],
-"classAI__Offer.html#ac9397be49a7952b967ddd54274db56f8":[1,0,95,1],
-"classAI__OpenGambleChest.html":[1,0,96],
-"classAI__OpenGambleChest.html#a2220127eca513fa4deb0bf7b1d4ebad8":[1,0,96,3]
+"classAI__Mofu.html#a5e71f9daf472e9ad939b5d2af36dc9b3":[1,0,94,0]
 };

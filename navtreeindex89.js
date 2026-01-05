@@ -1,5 +1,15 @@
 var NAVTREEINDEX89 =
 {
+"classPlayer_1_1Flags.html#a811f17dd221ee4a0e113edfa28500892":[1,0,955,0,24],
+"classPlayer_1_1Flags.html#a84f6a6d4937597697626388aa307243c":[1,0,955,0,54],
+"classPlayer_1_1Flags.html#a86424e33b47f24b20df37e202d691558":[1,0,955,0,9],
+"classPlayer_1_1Flags.html#a88ed686e6328c4712543f5873f285ca0":[1,0,955,0,50],
+"classPlayer_1_1Flags.html#a89a50dba533bbcde88a0535a01c0ce9d":[1,0,955,0,34],
+"classPlayer_1_1Flags.html#a926bbf254a0a11260ee94551074192d1":[1,0,955,0,40],
+"classPlayer_1_1Flags.html#a9bf99b7308f0fa3b89744658f9db141a":[1,0,955,0,2],
+"classPlayer_1_1Flags.html#a9c958479727be3199b727db656feb57a":[1,0,955,0,49],
+"classPlayer_1_1Flags.html#a9f986cd1e9ca77d5ceeb22a141f9e5de":[1,0,955,0,21],
+"classPlayer_1_1Flags.html#aa1975c83cb89b53e76c0811ed575d776":[1,0,955,0,55],
 "classPlayer_1_1Flags.html#aa75283882080d6da9cb9b71773020787":[1,0,955,0,8],
 "classPlayer_1_1Flags.html#aade2c4bf438cde2bc5d80aac7f9bd8b8":[1,0,955,0,35],
 "classPlayer_1_1Flags.html#ab9cb96de2bfcda59bb4d3685e64974a6":[1,0,955,0,20],
@@ -239,15 +249,5 @@ var NAVTREEINDEX89 =
 "classPointTarget.html#a20a92fc73e23255960e484f57c73b40c":[1,0,960,3],
 "classPointTarget.html#a3b44e409bf0209864a93e08decf70391":[1,0,960,22],
 "classPointTarget.html#a3fe29e675234117970c5a9570b37933f":[1,0,960,18],
-"classPointTarget.html#a41aceb0d268610c958dcab2d1bc09d7d":[1,0,960,11],
-"classPointTarget.html#a47c906b979b535d1c102a308f43d607a":[1,0,960,12],
-"classPointTarget.html#a4c3b98d3c1e47c91a92aa2a71ce7f38f":[1,0,960,17],
-"classPointTarget.html#a5604f0713b7b23fcc6294d5fd7403765":[1,0,960,4],
-"classPointTarget.html#a5c716fdd1b39a4e6675fbf6747f2388c":[1,0,960,2],
-"classPointTarget.html#a5d42bde567c99bc6e9fa4d3baec046ac":[1,0,960,5],
-"classPointTarget.html#a64c09f621c3a58a52cc3b6d6b7387ad5":[1,0,960,8],
-"classPointTarget.html#a67d87a195940dc5bda448c6af397dba0":[1,0,960,10],
-"classPointTarget.html#a6b5fbaed00b249d00a5080383157b441":[1,0,960,1],
-"classPointTarget.html#a707b924c5bb05e5c3765d2900416f784":[1,0,960,15],
-"classPointTarget.html#a77437e0c404be1e592e2943e83ff4f9c":[1,0,960,6]
+"classPointTarget.html#a41aceb0d268610c958dcab2d1bc09d7d":[1,0,960,11]
 };

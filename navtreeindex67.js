@@ -1,5 +1,15 @@
 var NAVTREEINDEX67 =
 {
+"classGameSetting_1_1RenderSetting.html#a05651e8aa4fa29c97c3ce0355aa4e3cf":[1,0,546,6,7],
+"classGameSetting_1_1RenderSetting.html#a079b88f914f5a085a90562b16a723016":[1,0,546,6,37],
+"classGameSetting_1_1RenderSetting.html#a13e17b3c9f111830b65dcfffce70c4ce":[1,0,546,6,40],
+"classGameSetting_1_1RenderSetting.html#a14b5229ac1c9a21328b5246e2dc9175b":[1,0,546,6,19],
+"classGameSetting_1_1RenderSetting.html#a1aa001319b607780fe69619a9971da23":[1,0,546,6,13],
+"classGameSetting_1_1RenderSetting.html#a1f651aff992051e67be775dac541b740":[1,0,546,6,33],
+"classGameSetting_1_1RenderSetting.html#a240ad6921d06b05c7fc81f4604992374":[1,0,546,6,28],
+"classGameSetting_1_1RenderSetting.html#a2962ec49976352472ea560591afc5324":[1,0,546,6,26],
+"classGameSetting_1_1RenderSetting.html#a2f3613c92a9081dc58832db858ac0145":[1,0,546,6,34],
+"classGameSetting_1_1RenderSetting.html#a3ac111a8067a63e300d15732a4efd145":[1,0,546,6,17],
 "classGameSetting_1_1RenderSetting.html#a3bebce8fd64a95c0096bd4ed9c59c489":[1,0,546,6,24],
 "classGameSetting_1_1RenderSetting.html#a3c01deda3421eadbc1fcbdf15a275a71":[1,0,546,6,39],
 "classGameSetting_1_1RenderSetting.html#a42f89db4180b00cb7f16d8741d30817e":[1,0,546,6,9],
@@ -239,15 +249,5 @@ var NAVTREEINDEX67 =
 "classGenRoom.html#a5e19c073f1c78f0a86d19dc1fd5025cb":[1,0,552,1],
 "classGenRoom.html#a5e222caa7076e07b5833914ede15ebf6":[1,0,552,12],
 "classGenRoom.html#a69694505518ac9b47b51ae504addc2a7":[1,0,552,3],
-"classGenRoom.html#a7822a61afce18702c4f0a14a49b77bad":[1,0,552,8],
-"classGenRoom.html#ab16e6092dfe4091407eeea5aabcc03f4":[1,0,552,6],
-"classGenRoom.html#ab2ce5e1b0c7fef5259b10b302f152879":[1,0,552,7],
-"classGenRoomBig.html":[1,0,553],
-"classGenRoomBig.html#ac068322065cf11bab9e9bdc65b1b8f49":[1,0,553,0],
-"classGenRoomMonsterHouse.html":[1,0,554],
-"classGenRoomMonsterHouse.html#a93d6224c369b776cc2f69e1a18076db1":[1,0,554,0],
-"classGender.html":[1,0,550],
-"classGender.html#a4e2a057c4856ed63dbc0bd6abfa9577f":[1,0,550,4],
-"classGender.html#a5e5ac6c93493c292aa478d8b2f648272":[1,0,550,1],
-"classGender.html#a5e65110a5dddefc6fcb4902b3d3ea028":[1,0,550,0]
+"classGenRoom.html#a7822a61afce18702c4f0a14a49b77bad":[1,0,552,8]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"HoardActor_8cs.html":[2,0,0,589],
 "HoardActor_8cs_source.html":[2,0,0,589],
 "Hoard_8cs.html":[2,0,0,588],
 "Hoard_8cs_source.html":[2,0,0,588],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "InspectGroupObj_8cs.html":[2,0,0,652],
 "InspectGroupObj_8cs_source.html":[2,0,0,652],
 "InspectGroupTask_8cs.html":[2,0,0,653],
-"InspectGroupTask_8cs_source.html":[2,0,0,653],
-"InspectGroupThing_8cs.html":[2,0,0,654]
+"InspectGroupTask_8cs_source.html":[2,0,0,653]
 };

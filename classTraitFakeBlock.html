@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.254 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.255 Nightly Patch 3</span>
    </div>
   </td>
  </tr>
@@ -90,8 +90,6 @@ $(document).ready(function(){initNavTree('classTraitFakeBlock.html',''); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#properties">Properties</a> &#124;
 <a href="classTraitFakeBlock-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TraitFakeBlock Class Reference</div></div>
 </div><!--header-->
@@ -102,24 +100,50 @@ Inheritance diagram for TraitFakeBlock:</div>
  <div class="center">
   <img src="classTraitFakeBlock.png" usemap="#TraitFakeBlock_map" alt=""/>
   <map id="TraitFakeBlock_map" name="TraitFakeBlock_map">
+<area href="classTraitFakeTile.html" alt="TraitFakeTile" shape="rect" coords="0,112,96,136"/>
 <area href="classTrait.html" alt="Trait" shape="rect" coords="0,56,96,80"/>
 <area href="classEClass.html" alt="EClass" shape="rect" coords="0,0,96,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aab2d793fad7461bfca0aed15e9bcd12d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeBlock.html#aab2d793fad7461bfca0aed15e9bcd12d">OnCreate</a> (int lv)</td></tr>
-<tr class="separator:aab2d793fad7461bfca0aed15e9bcd12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4a3e424bf5cc8995ba82894283a5be3"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeBlock.html#ad4a3e424bf5cc8995ba82894283a5be3">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
-<tr class="separator:ad4a3e424bf5cc8995ba82894283a5be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab96fa4695f209719be50b7d6cf7f0070"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeBlock.html#ab96fa4695f209719be50b7d6cf7f0070">TrySetHeldAct</a> (<a class="el" href="classActPlan.html">ActPlan</a> p)</td></tr>
-<tr class="separator:ab96fa4695f209719be50b7d6cf7f0070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
+<tr class="memitem:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79">TileMode</a> { <br />
+&#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a7a1920d61156abc05a60135aefe8bc67">Default</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af44e14d49cd011d1e873d9fe0c4624f1">Door</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79aa4869d0be7226ce32aa8c89c79a0dc4f">Illumination</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1">DefaultNoAnime</a>
+, <br />
+&#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90">SignalAnime</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0">FakeBlock</a>
+, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a1edef5966b9ca5fb18c4ec40fff0bebb">FakeObj</a>
+<br />
+ }</td></tr>
+<tr class="separator:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8471909c042646f522c65a8333832253 inherit pub_types_classTrait"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253">CopyShopType</a> { <a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253a6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253a7d74f3b92b19da5e606d737d339a9679">Item</a>
+, <a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253a3833206c4acb4ea74dca7699dbaef446">Spellbook</a>
+ }</td></tr>
+<tr class="separator:a8471909c042646f522c65a8333832253 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classTraitFakeTile"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTraitFakeTile')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTraitFakeTile.html">TraitFakeTile</a></td></tr>
+<tr class="memitem:afbdb02dd08e9fbc41fad11da8061b1f3 inherit pub_methods_classTraitFakeTile"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classRenderData.html">RenderData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeTile.html#afbdb02dd08e9fbc41fad11da8061b1f3">GetRenderData</a> ()</td></tr>
+<tr class="separator:afbdb02dd08e9fbc41fad11da8061b1f3 inherit pub_methods_classTraitFakeTile"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257b5bd18839da5463e66187aaf0b091 inherit pub_methods_classTraitFakeTile"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classSourcePref.html">SourcePref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeTile.html#a257b5bd18839da5463e66187aaf0b091">GetPref</a> ()</td></tr>
+<tr class="separator:a257b5bd18839da5463e66187aaf0b091 inherit pub_methods_classTraitFakeTile"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f4895620e4a96622b0757e8d02d6aa inherit pub_methods_classTraitFakeTile"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeTile.html#aa6f4895620e4a96622b0757e8d02d6aa">OnCrafted</a> (<a class="el" href="classRecipe.html">Recipe</a> recipe, List&lt; <a class="el" href="classThing.html">Thing</a> &gt; ings)</td></tr>
+<tr class="separator:aa6f4895620e4a96622b0757e8d02d6aa inherit pub_methods_classTraitFakeTile"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62aa8fa1db81812d697998be2201dcd inherit pub_methods_classTraitFakeTile"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeTile.html#ab62aa8fa1db81812d697998be2201dcd">TrySetHeldAct</a> (<a class="el" href="classActPlan.html">ActPlan</a> p)</td></tr>
+<tr class="separator:ab62aa8fa1db81812d697998be2201dcd inherit pub_methods_classTraitFakeTile"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
 <tr class="memitem:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a> (int i, string def=null)</td></tr>
 <tr class="separator:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3168125392bb7c9efbd0dfe51f9aa205 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a3168125392bb7c9efbd0dfe51f9aa205">GetParamInt</a> (int i, int def)</td></tr>
 <tr class="separator:a3168125392bb7c9efbd0dfe51f9aa205 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60db4b9d0b97aebd2f885d7a019accb inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSourcePref.html">SourcePref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ab60db4b9d0b97aebd2f885d7a019accb">GetPref</a> ()</td></tr>
+<tr class="separator:ab60db4b9d0b97aebd2f885d7a019accb inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cde0a2c9818e8a65635ba3a90ecd43c inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRenderData.html">RenderData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a1cde0a2c9818e8a65635ba3a90ecd43c">GetRenderData</a> ()</td></tr>
+<tr class="separator:a1cde0a2c9818e8a65635ba3a90ecd43c inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c3194e6082d54219d469ab26bc27ee7 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2c3194e6082d54219d469ab26bc27ee7">Contains</a> (<a class="el" href="classRecipeSource.html">RecipeSource</a> r)</td></tr>
 <tr class="separator:a2c3194e6082d54219d469ab26bc27ee7 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a465361d0239bbdd1358d35046e4e6c87 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a465361d0239bbdd1358d35046e4e6c87">GetValue</a> ()</td></tr>
@@ -310,11 +334,46 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ded46828bb83e6d480d551d03b48bbf inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b04ca74c54bb2fad488c295278265dd inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classThing.html">Thing</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a4b04ca74c54bb2fad488c295278265dd">CreateStock</a> ()</td></tr>
 <tr class="separator:a4b04ca74c54bb2fad488c295278265dd inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:a36f00256c3556718c3a184fbba4c6d55"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79">TileMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeBlock.html#a36f00256c3556718c3a184fbba4c6d55">tileMode</a><code> [get]</code></td></tr>
-<tr class="separator:a36f00256c3556718c3a184fbba4c6d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
+<tr class="memitem:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a> (int a, int <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>)</td></tr>
+<tr class="separator:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c6ef288a7140793d6e5fb313fb72e4 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a> (long a)</td></tr>
+<tr class="separator:a62c6ef288a7140793d6e5fb313fb72e4 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a> (int a)</td></tr>
+<tr class="separator:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c7ae534957971551c791736eb90643 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a16c7ae534957971551c791736eb90643">curve</a> (int _a, int start, int step, int rate=75)</td></tr>
+<tr class="separator:a16c7ae534957971551c791736eb90643 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8ed60d2a5f18a8be67b6bc837ac44e inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#acc8ed60d2a5f18a8be67b6bc837ac44e">sqrt</a> (int a)</td></tr>
+<tr class="separator:acc8ed60d2a5f18a8be67b6bc837ac44e inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab84d4222ba97e33775a9b7f3a2785dd inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a> (int a)</td></tr>
+<tr class="separator:aab84d4222ba97e33775a9b7f3a2785dd inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859a9e1a1cbce6b89892bb19cebe1a30 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a859a9e1a1cbce6b89892bb19cebe1a30">rndf</a> (float a)</td></tr>
+<tr class="separator:a859a9e1a1cbce6b89892bb19cebe1a30 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545c4413b940ef1b8afa1334aa21e97f inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a545c4413b940ef1b8afa1334aa21e97f">rndSqrt</a> (int a)</td></tr>
+<tr class="separator:a545c4413b940ef1b8afa1334aa21e97f inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44f68f6f1c55b824f3684c78364abf5f inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a44f68f6f1c55b824f3684c78364abf5f">Wait</a> (float a, <a class="el" href="classCard.html">Card</a> c)</td></tr>
+<tr class="separator:a44f68f6f1c55b824f3684c78364abf5f inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc86a94ff74181ef4ad76960c4186df6 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#abc86a94ff74181ef4ad76960c4186df6">Wait</a> (float a, <a class="el" href="classPoint.html">Point</a> p)</td></tr>
+<tr class="separator:abc86a94ff74181ef4ad76960c4186df6 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd5258d22ca6ebd120547e7b97a611b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a5fd5258d22ca6ebd120547e7b97a611b">Bigger</a> (int a, int b)</td></tr>
+<tr class="separator:a5fd5258d22ca6ebd120547e7b97a611b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5033afff637b28a95cd12ebbf51e1805 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a5033afff637b28a95cd12ebbf51e1805">Smaller</a> (int a, int b)</td></tr>
+<tr class="separator:a5033afff637b28a95cd12ebbf51e1805 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
+<tr class="memitem:ac0d6248b0468917710ad9bc9020f8e35 inherit pub_attribs_classTrait"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCard.html">Card</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a></td></tr>
+<tr class="separator:ac0d6248b0468917710ad9bc9020f8e35 inherit pub_attribs_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classTrait')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
+<tr class="memitem:ae5d380383c7a829f15b19a5df441de4e inherit pub_static_attribs_classTrait"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTraitSelfFactory.html">TraitSelfFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">SelfFactory</a> = new <a class="el" href="classTraitSelfFactory.html">TraitSelfFactory</a>()</td></tr>
+<tr class="separator:ae5d380383c7a829f15b19a5df441de4e inherit pub_static_attribs_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
+<tr class="memitem:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCore.html">Core</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a></td></tr>
+<tr class="separator:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classTrait')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
+<tr class="memitem:ac6d6b78a5f0cce2e23db272f130c3a79 inherit pro_static_attribs_classTrait"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classPoint.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a> = new List&lt;<a class="el" href="classPoint.html">Point</a>&gt;()</td></tr>
+<tr class="separator:ac6d6b78a5f0cce2e23db272f130c3a79 inherit pro_static_attribs_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_classTraitFakeTile"><td colspan="2" onclick="javascript:toggleInherit('properties_classTraitFakeTile')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classTraitFakeTile.html">TraitFakeTile</a></td></tr>
+<tr class="memitem:a78976e2f1250fb1f2119052c5aaf7c94 inherit properties_classTraitFakeTile"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79">TileMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFakeTile.html#a78976e2f1250fb1f2119052c5aaf7c94">tileMode</a><code> [get]</code></td></tr>
+<tr class="separator:a78976e2f1250fb1f2119052c5aaf7c94 inherit properties_classTraitFakeTile"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classTrait"><td colspan="2" onclick="javascript:toggleInherit('properties_classTrait')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
 <tr class="memitem:aad2791b98fe164652fb38d929afe2750 inherit properties_classTrait"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#aad2791b98fe164652fb38d929afe2750">Params</a><code> [get]</code></td></tr>
 <tr class="separator:aad2791b98fe164652fb38d929afe2750 inherit properties_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -637,245 +696,11 @@ Properties</h2></td></tr>
 <tr class="separator:af170c2fbde2a903f1c288b48a96566e6 inherit properties_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0467a0392813c1e8e5215fde409da07 inherit properties_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCoreDebug.html">CoreDebug</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a><code> [get]</code></td></tr>
 <tr class="separator:af0467a0392813c1e8e5215fde409da07 inherit properties_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
-<tr class="memitem:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79">TileMode</a> { <br />
-&#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a7a1920d61156abc05a60135aefe8bc67">Default</a>
-, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af44e14d49cd011d1e873d9fe0c4624f1">Door</a>
-, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79aa4869d0be7226ce32aa8c89c79a0dc4f">Illumination</a>
-, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1">DefaultNoAnime</a>
-, <br />
-&#160;&#160;<a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90">SignalAnime</a>
-, <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0">FakeBlock</a>
-<br />
- }</td></tr>
-<tr class="separator:a769ea50a0bf1186e71d185f5a83e4d79 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8471909c042646f522c65a8333832253 inherit pub_types_classTrait"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253">CopyShopType</a> { <a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253a6adf97f83acf6453d4a6a4b1070f3754">None</a>
-, <a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253a7d74f3b92b19da5e606d737d339a9679">Item</a>
-, <a class="el" href="classTrait.html#a8471909c042646f522c65a8333832253a3833206c4acb4ea74dca7699dbaef446">Spellbook</a>
- }</td></tr>
-<tr class="separator:a8471909c042646f522c65a8333832253 inherit pub_types_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
-<tr class="memitem:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a> (int a, int <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>)</td></tr>
-<tr class="separator:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c6ef288a7140793d6e5fb313fb72e4 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a> (long a)</td></tr>
-<tr class="separator:a62c6ef288a7140793d6e5fb313fb72e4 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a> (int a)</td></tr>
-<tr class="separator:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c7ae534957971551c791736eb90643 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a16c7ae534957971551c791736eb90643">curve</a> (int _a, int start, int step, int rate=75)</td></tr>
-<tr class="separator:a16c7ae534957971551c791736eb90643 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc8ed60d2a5f18a8be67b6bc837ac44e inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#acc8ed60d2a5f18a8be67b6bc837ac44e">sqrt</a> (int a)</td></tr>
-<tr class="separator:acc8ed60d2a5f18a8be67b6bc837ac44e inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab84d4222ba97e33775a9b7f3a2785dd inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a> (int a)</td></tr>
-<tr class="separator:aab84d4222ba97e33775a9b7f3a2785dd inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a859a9e1a1cbce6b89892bb19cebe1a30 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a859a9e1a1cbce6b89892bb19cebe1a30">rndf</a> (float a)</td></tr>
-<tr class="separator:a859a9e1a1cbce6b89892bb19cebe1a30 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a545c4413b940ef1b8afa1334aa21e97f inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a545c4413b940ef1b8afa1334aa21e97f">rndSqrt</a> (int a)</td></tr>
-<tr class="separator:a545c4413b940ef1b8afa1334aa21e97f inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f68f6f1c55b824f3684c78364abf5f inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a44f68f6f1c55b824f3684c78364abf5f">Wait</a> (float a, <a class="el" href="classCard.html">Card</a> c)</td></tr>
-<tr class="separator:a44f68f6f1c55b824f3684c78364abf5f inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc86a94ff74181ef4ad76960c4186df6 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#abc86a94ff74181ef4ad76960c4186df6">Wait</a> (float a, <a class="el" href="classPoint.html">Point</a> p)</td></tr>
-<tr class="separator:abc86a94ff74181ef4ad76960c4186df6 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fd5258d22ca6ebd120547e7b97a611b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a5fd5258d22ca6ebd120547e7b97a611b">Bigger</a> (int a, int b)</td></tr>
-<tr class="separator:a5fd5258d22ca6ebd120547e7b97a611b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5033afff637b28a95cd12ebbf51e1805 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a5033afff637b28a95cd12ebbf51e1805">Smaller</a> (int a, int b)</td></tr>
-<tr class="separator:a5033afff637b28a95cd12ebbf51e1805 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
-<tr class="memitem:ac0d6248b0468917710ad9bc9020f8e35 inherit pub_attribs_classTrait"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCard.html">Card</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a></td></tr>
-<tr class="separator:ac0d6248b0468917710ad9bc9020f8e35 inherit pub_attribs_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classTrait')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
-<tr class="memitem:ae5d380383c7a829f15b19a5df441de4e inherit pub_static_attribs_classTrait"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTraitSelfFactory.html">TraitSelfFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">SelfFactory</a> = new <a class="el" href="classTraitSelfFactory.html">TraitSelfFactory</a>()</td></tr>
-<tr class="separator:ae5d380383c7a829f15b19a5df441de4e inherit pub_static_attribs_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
-<tr class="memitem:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCore.html">Core</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a></td></tr>
-<tr class="separator:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classTrait')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
-<tr class="memitem:ac6d6b78a5f0cce2e23db272f130c3a79 inherit pro_static_attribs_classTrait"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classPoint.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ac6d6b78a5f0cce2e23db272f130c3a79">listRadiusPoints</a> = new List&lt;<a class="el" href="classPoint.html">Point</a>&gt;()</td></tr>
-<tr class="separator:ac6d6b78a5f0cce2e23db272f130c3a79 inherit pro_static_attribs_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="TraitFakeBlock_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitFakeBlock_8cs_source.html">TraitFakeBlock.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad4a3e424bf5cc8995ba82894283a5be3" name="ad4a3e424bf5cc8995ba82894283a5be3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4a3e424bf5cc8995ba82894283a5be3">&#9670;&#160;</a></span>OnCrafted()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void TraitFakeBlock.OnCrafted </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classRecipe.html">Recipe</a>&#160;</td>
-          <td class="paramname"><em>recipe</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">List&lt; <a class="el" href="classThing.html">Thing</a> &gt;&#160;</td>
-          <td class="paramname"><em>ings</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classTrait.html#adc7c088d718de5c6d150975a3f8606a8">Trait</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="TraitFakeBlock_8cs_source.html#l00015">15</a> of file <a class="el" href="TraitFakeBlock_8cs_source.html">TraitFakeBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (ings == <span class="keyword">null</span> || ings.Count == 0)</div>
-<div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            owner.refVal = 1;</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   21</span>        }</div>
-<div class="line"><span class="lineno">   22</span>        <a class="code hl_class" href="classTraitBlock.html">TraitBlock</a> traitBlock = ings[0].trait as <a class="code hl_class" href="classTraitBlock.html">TraitBlock</a>;</div>
-<div class="line"><span class="lineno">   23</span>        owner.refVal = traitBlock.<a class="code hl_property" href="classTraitBlock.html#ae426f33158dbe2679e431c2b12875260">source</a>.<a class="code hl_variable" href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">id</a>;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclassTileRow_html_acb04f9c5a77567a445c994b5e8a82e30"><div class="ttname"><a href="classTileRow.html#acb04f9c5a77567a445c994b5e8a82e30">TileRow.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="TileRow_8cs_source.html#l00008">TileRow.cs:8</a></div></div>
-<div class="ttc" id="aclassTraitBlock_html"><div class="ttname"><a href="classTraitBlock.html">TraitBlock</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitBlock_8cs_source.html#l00001">TraitBlock.cs:2</a></div></div>
-<div class="ttc" id="aclassTraitBlock_html_ae426f33158dbe2679e431c2b12875260"><div class="ttname"><a href="classTraitBlock.html#ae426f33158dbe2679e431c2b12875260">TraitBlock.source</a></div><div class="ttdeci">override TileRow source</div><div class="ttdef"><b>Definition:</b> <a href="TraitBlock_8cs_source.html#l00003">TraitBlock.cs:3</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>, and <a class="el" href="TraitBlock_8cs_source.html#l00003">TraitBlock.source</a>.</p>
-
-</div>
-</div>
-<a id="aab2d793fad7461bfca0aed15e9bcd12d" name="aab2d793fad7461bfca0aed15e9bcd12d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab2d793fad7461bfca0aed15e9bcd12d">&#9670;&#160;</a></span>OnCreate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void TraitFakeBlock.OnCreate </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>lv</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classTrait.html#aa93666c96d1a63bd8f3848561a11873d">Trait</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="TraitFakeBlock_8cs_source.html#l00007">7</a> of file <a class="el" href="TraitFakeBlock_8cs_source.html">TraitFakeBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a> == 0)</div>
-<div class="line"><span class="lineno">   10</span>        {</div>
-<div class="line"><span class="lineno">   11</span>            owner.refVal = 1;</div>
-<div class="line"><span class="lineno">   12</span>        }</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="ttc" id="aclassCard_html_a92374cf656cfe9b1314fdafa8dd1c0cb"><div class="ttname"><a href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">Card.refVal</a></div><div class="ttdeci">int refVal</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00205">Card.cs:206</a></div></div>
-<div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00027">Trait.cs:27</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l00206">Card.refVal</a>.</p>
-
-</div>
-</div>
-<a id="ab96fa4695f209719be50b7d6cf7f0070" name="ab96fa4695f209719be50b7d6cf7f0070"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab96fa4695f209719be50b7d6cf7f0070">&#9670;&#160;</a></span>TrySetHeldAct()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override void TraitFakeBlock.TrySetHeldAct </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classActPlan.html">ActPlan</a>&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6">Trait</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="TraitFakeBlock_8cs_source.html#l00026">26</a> of file <a class="el" href="TraitFakeBlock_8cs_source.html">TraitFakeBlock.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">_block</a> != 0 &amp;&amp; !p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.ContainsTag(<span class="stringliteral">&quot;noFake&quot;</span>))</div>
-<div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actCopyBlock&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   31</span>            {</div>
-<div class="line"><span class="lineno">   32</span>                <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Dye</a>(p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#a0980c1b838c69aef62bd3302b2c5e41d">matBlock</a>);</div>
-<div class="line"><span class="lineno">   33</span>                <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a92374cf656cfe9b1314fdafa8dd1c0cb">refVal</a> = p.<a class="code hl_variable" href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">pos</a>.<a class="code hl_property" href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">sourceBlock</a>.id;</div>
-<div class="line"><span class="lineno">   34</span>                SE.Play(<span class="stringliteral">&quot;offering&quot;</span>);</div>
-<div class="line"><span class="lineno">   35</span>                <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#a512dd36bae12dc67bfa06a6a69aa51dc">_CreateRenderer</a>();</div>
-<div class="line"><span class="lineno">   36</span>                <a class="code hl_class" href="classHotItemHeld.html">HotItemHeld</a>.<a class="code hl_variable" href="classHotItemHeld.html#a646f0042adda312bf43353b31a430eeb">recipe</a> = <a class="code hl_function" href="classTrait.html#a1ef6408bcd6e52240db168e4bb4b227f">GetRecipe</a>();</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   38</span>            });</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="ttc" id="aclassActPlan_html_a8ddbcee2030a2f7c6c7a461b3ca23a3d"><div class="ttname"><a href="classActPlan.html#a8ddbcee2030a2f7c6c7a461b3ca23a3d">ActPlan.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00150">ActPlan.cs:150</a></div></div>
-<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00366">ActPlan.cs:366</a></div></div>
-<div class="ttc" id="aclassCard_html_a512dd36bae12dc67bfa06a6a69aa51dc"><div class="ttname"><a href="classCard.html#a512dd36bae12dc67bfa06a6a69aa51dc">Card._CreateRenderer</a></div><div class="ttdeci">virtual CardRenderer _CreateRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05986">Card.cs:5986</a></div></div>
-<div class="ttc" id="aclassCard_html_a906b277a3846a92dbce5df5bd9f79f8b"><div class="ttname"><a href="classCard.html#a906b277a3846a92dbce5df5bd9f79f8b">Card.Dye</a></div><div class="ttdeci">void Dye(string idMat)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06024">Card.cs:6024</a></div></div>
-<div class="ttc" id="aclassCell_html_a00dcc9aa5469cc15cabbfcb6c3d4e329"><div class="ttname"><a href="classCell.html#a00dcc9aa5469cc15cabbfcb6c3d4e329">Cell._block</a></div><div class="ttdeci">byte _block</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00030">Cell.cs:30</a></div></div>
-<div class="ttc" id="aclassHotItemHeld_html"><div class="ttname"><a href="classHotItemHeld.html">HotItemHeld</a></div><div class="ttdef"><b>Definition:</b> <a href="HotItemHeld_8cs_source.html#l00003">HotItemHeld.cs:4</a></div></div>
-<div class="ttc" id="aclassHotItemHeld_html_a646f0042adda312bf43353b31a430eeb"><div class="ttname"><a href="classHotItemHeld.html#a646f0042adda312bf43353b31a430eeb">HotItemHeld.recipe</a></div><div class="ttdeci">static Recipe recipe</div><div class="ttdef"><b>Definition:</b> <a href="HotItemHeld_8cs_source.html#l00009">HotItemHeld.cs:9</a></div></div>
-<div class="ttc" id="aclassPoint_html_a0980c1b838c69aef62bd3302b2c5e41d"><div class="ttname"><a href="classPoint.html#a0980c1b838c69aef62bd3302b2c5e41d">Point.matBlock</a></div><div class="ttdeci">SourceMaterial.Row matBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00055">Point.cs:55</a></div></div>
-<div class="ttc" id="aclassPoint_html_a165696883baa9d38143b4e5dce302b1d"><div class="ttname"><a href="classPoint.html#a165696883baa9d38143b4e5dce302b1d">Point.sourceBlock</a></div><div class="ttdeci">SourceBlock.Row sourceBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00063">Point.cs:63</a></div></div>
-<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
-<div class="ttc" id="aclassTrait_html_a1ef6408bcd6e52240db168e4bb4b227f"><div class="ttname"><a href="classTrait.html#a1ef6408bcd6e52240db168e4bb4b227f">Trait.GetRecipe</a></div><div class="ttdeci">virtual Recipe GetRecipe()</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00809">Trait.cs:809</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="Cell_8cs_source.html#l00030">Cell._block</a>, <a class="el" href="Card_8cs_source.html#l05986">Card._CreateRenderer()</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l06024">Card.Dye()</a>, <a class="el" href="Trait_8cs_source.html#l00809">Trait.GetRecipe()</a>, <a class="el" href="Point_8cs_source.html#l00055">Point.matBlock</a>, <a class="el" href="Trait_8cs_source.html#l00027">Trait.owner</a>, <a class="el" href="ActPlan_8cs_source.html#l00150">ActPlan.pos</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00009">HotItemHeld.recipe</a>, <a class="el" href="Card_8cs_source.html#l00206">Card.refVal</a>, <a class="el" href="Point_8cs_source.html#l00063">Point.sourceBlock</a>, and <a class="el" href="ActPlan_8cs_source.html#l00366">ActPlan.TrySetAct()</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="a36f00256c3556718c3a184fbba4c6d55" name="a36f00256c3556718c3a184fbba4c6d55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36f00256c3556718c3a184fbba4c6d55">&#9670;&#160;</a></span>tileMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">override <a class="el" href="classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79">TileMode</a> TraitFakeBlock.tileMode</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="TraitFakeBlock_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitFakeBlock_8cs_source.html">TraitFakeBlock.cs</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="TraitFakeBlock_8cs_source.html#l00001">1</a> of file <a class="el" href="TraitFakeBlock_8cs_source.html">TraitFakeBlock.cs</a>.</p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Elin/<a class="el" href="TraitFakeBlock_8cs_source.html">TraitFakeBlock.cs</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,5 +1,15 @@
 var NAVTREEINDEX51 =
 {
+"classCore.html#a109ff8bad337801d937c5c268a68f862":[1,0,401,48],
+"classCore.html#a168e097296f05b2b34e7945701741826":[1,0,401,10],
+"classCore.html#a174ab976ba96dbcd610d5219de4a85cb":[1,0,401,53],
+"classCore.html#a177018324b0a8085746d77c8fafb40d5":[1,0,401,49],
+"classCore.html#a20162a176725e9c73a1f252614c8b79f":[1,0,401,16],
+"classCore.html#a22c024f5e9c815f605b3daae8430d92e":[1,0,401,44],
+"classCore.html#a22ecdafa785f776b58c4059fcfa0a1ea":[1,0,401,14],
+"classCore.html#a23f118d951da98e4d7fcb3f1691c59c5":[1,0,401,40],
+"classCore.html#a27bf8bda2b4969496e21cfef911fbe46":[1,0,401,17],
+"classCore.html#a2aa809c9366da231e8bd66b3cca1d6c1":[1,0,401,58],
 "classCore.html#a2d39761249f595322bce4336d6c5a038":[1,0,401,11],
 "classCore.html#a318dec94661672febef10dbc4fcd594c":[1,0,401,3],
 "classCore.html#a358b8707c3dc0b2a95c864e7f7d5f1e4":[1,0,401,26],
@@ -239,15 +249,5 @@ var NAVTREEINDEX51 =
 "classCoreConfig_1_1GameConfig.html#a99fb8e4a75b303827a682cf1efb6a85c":[1,0,402,5,15],
 "classCoreConfig_1_1GameConfig.html#a9e0212a8ef049cae899df09c3b9c47de":[1,0,402,5,10],
 "classCoreConfig_1_1GameConfig.html#aa32b5132314d9cb66da0253291ac9a7f":[1,0,402,5,37],
-"classCoreConfig_1_1GameConfig.html#aa77e48a52c60bfe22633bad6ac70ca10":[1,0,402,5,6],
-"classCoreConfig_1_1GameConfig.html#aaefee1abe9d2e49c23c342b4f7c25ef3":[1,0,402,5,43],
-"classCoreConfig_1_1GameConfig.html#ab0533f2e99c721b6eaa3f0723608a0bf":[1,0,402,5,3],
-"classCoreConfig_1_1GameConfig.html#ab18006cdd748f69c9aa06f92f1b9a7ed":[1,0,402,5,25],
-"classCoreConfig_1_1GameConfig.html#ab97e51b14e7a047ca6012abb565589e4":[1,0,402,5,50],
-"classCoreConfig_1_1GameConfig.html#ac152d85ca99ffc2bef29f47b56becf13":[1,0,402,5,32],
-"classCoreConfig_1_1GameConfig.html#accfb0e21b95f30f1b2f5502ae4f904c1":[1,0,402,5,42],
-"classCoreConfig_1_1GameConfig.html#acdd5c8cc79f0ebd5ca99573741d1ac34":[1,0,402,5,1],
-"classCoreConfig_1_1GameConfig.html#ad0a43fed377da813a29ff9a5e6cc9545":[1,0,402,5,39],
-"classCoreConfig_1_1GameConfig.html#ad7511766afc944becfa1ac16f93c23c8":[1,0,402,5,23],
-"classCoreConfig_1_1GameConfig.html#adbf18e576c9c9d12f78014fa204c0ae6":[1,0,402,5,24]
+"classCoreConfig_1_1GameConfig.html#aa77e48a52c60bfe22633bad6ac70ca10":[1,0,402,5,6]
 };

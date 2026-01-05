@@ -9,6 +9,7 @@ var CureType_8cs =
       [ "CureMind", "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5937991d743765b3d1684fae61f5c13c", null ],
       [ "Jure", "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5e8a407fd55a2cd13d462390bd849531", null ],
       [ "Prayer", "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba10a51ece9386182d96378516741203f6", null ],
-      [ "Boss", "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5859831e2b3db23528c710b1451e13fc", null ]
+      [ "Boss", "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5859831e2b3db23528c710b1451e13fc", null ],
+      [ "Unicorn", "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba393eb74047bb90c8d80dea54218430ee", null ]
     ] ]
 ];

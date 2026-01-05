@@ -1,5 +1,15 @@
 var NAVTREEINDEX94 =
 {
+"classQuestManager.html#a281c23ba4522ebc66a200b6f66348eb6":[1,0,1026,10],
+"classQuestManager.html#a2d53433827d15c28403cf19cb228bf68":[1,0,1026,18],
+"classQuestManager.html#a320593473ea4f2341f4bb694f1f8f0f8":[1,0,1026,2],
+"classQuestManager.html#a34f440d972f18a3f08aa22d599b2d192":[1,0,1026,15],
+"classQuestManager.html#a36e3f2c6539f00ef3bee387ba8044db0":[1,0,1026,6],
+"classQuestManager.html#a41fe6931071bd075992ef0cefa233c8b":[1,0,1026,4],
+"classQuestManager.html#a459732d0ac5fe3750f7ca51783e80ff8":[1,0,1026,22],
+"classQuestManager.html#a5d501673549d7813200a6c40c21b8e80":[1,0,1026,23],
+"classQuestManager.html#a674eb778bb9f31809236125ae7b30532":[1,0,1026,31],
+"classQuestManager.html#a688d83673f3e81bc41f0d42ff2de22a7":[1,0,1026,0],
 "classQuestManager.html#a7233bb8ad954f99ec478d42b05dab2b9":[1,0,1026,21],
 "classQuestManager.html#a75cb96c6052c6c8fe65f40aba5e7621f":[1,0,1026,5],
 "classQuestManager.html#a796bfd042c4175b7748bc25e926d4743":[1,0,1026,32],
@@ -239,15 +249,5 @@ var NAVTREEINDEX94 =
 "classQuickMenu_1_1Item.html#a580edca5e4cd983217ea9256b71b8059":[1,0,1067,0,0],
 "classQuickMenu_1_1Item.html#a6945a95ecabc7db22f831eaa83ba6568":[1,0,1067,0,2],
 "classQuickMenu_1_1Item.html#a707490cb2e6f18b026f1a90ba2cbb03b":[1,0,1067,0,3],
-"classQuickMenu_1_1Item.html#aa06b6d9fb0dec4f95d41e27381362d1e":[1,0,1067,0,4],
-"classQuickMenu_1_1Item.html#ae5324c1165222397ef0ce538241dc563":[1,0,1067,0,1],
-"classRaceBonus.html":[1,0,1068],
-"classRaceBonus.html#ada422a858396669a8d82c244a81d0fd8":[1,0,1068,0],
-"classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09":[1,0,1068,1],
-"classRaceBonus.html#ae31a97330bd51599ea755f680f14d8a2":[1,0,1068,2],
-"classRainbowTextColor.html":[1,0,1069],
-"classRainbowTextColor.html#a001276cd204fcb6a06097d877aebb85f":[1,0,1069,0],
-"classRainbowTextColor.html#a03cf2d93f3bbaaba88e1ce39d575cd6b":[1,0,1069,15],
-"classRainbowTextColor.html#a1e250bde79f230936530258b7bb08b13":[1,0,1069,8],
-"classRainbowTextColor.html#a22f898fe1cd4b93b133d61e20bf48dd4":[1,0,1069,2]
+"classQuickMenu_1_1Item.html#aa06b6d9fb0dec4f95d41e27381362d1e":[1,0,1067,0,4]
 };

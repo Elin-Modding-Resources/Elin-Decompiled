@@ -145,6 +145,7 @@ var NAVTREEINDEX4 =
 "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba10a51ece9386182d96378516741203f6":[2,0,0,404,0,7],
 "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba1a64e51f78ade395484b8e509060f4fa":[2,0,0,404,0,1],
 "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba243924bfd56a682be235638b53961e09":[2,0,0,404,0,2],
+"CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba393eb74047bb90c8d80dea54218430ee":[2,0,0,404,0,9],
 "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba55fea7052bfccd9a15e9c95e04910965":[2,0,0,404,0,4],
 "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5859831e2b3db23528c710b1451e13fc":[2,0,0,404,0,8],
 "CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5937991d743765b3d1684fae61f5c13c":[2,0,0,404,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "DropdownRecipe_8cs_source.html":[2,0,0,437],
 "Dropper_8cs.html":[2,0,0,3,2,0,2],
 "Dropper_8cs_source.html":[2,0,0,3,2,0,2],
-"DynamicAIAct_8cs.html":[2,0,0,439],
-"DynamicAIAct_8cs_source.html":[2,0,0,439]
+"DynamicAIAct_8cs.html":[2,0,0,439]
 };

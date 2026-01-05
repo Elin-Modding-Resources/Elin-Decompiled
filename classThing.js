@@ -44,5 +44,6 @@ var classThing =
     [ "range", "classThing.html#a4e9917cda0d74387393a4085eeacafbd", null ],
     [ "SelfWeight", "classThing.html#a7d3fbab62156d48349b1a12f6427dabd", null ],
     [ "sourceCard", "classThing.html#adc4bb311dba09b52f82071adbe7f1654", null ],
+    [ "TileRow", "classThing.html#ae2b09eccd21aaf7a21cba4621eb0befe", null ],
     [ "Tiles", "classThing.html#a336526adf26a703f1aabdb47fb7b3cb8", null ]
 ];

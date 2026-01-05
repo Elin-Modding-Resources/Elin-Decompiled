@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"NotificationBuff_8cs.html":[2,0,0,857],
 "NotificationBuff_8cs_source.html":[2,0,0,857],
 "NotificationCondition_8cs.html":[2,0,0,858],
 "NotificationCondition_8cs_source.html":[2,0,0,858],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "QuestGuildOrderMage_8cs_source.html":[2,0,0,937],
 "QuestGuildOrderMerchant_8cs.html":[2,0,0,938],
 "QuestGuildOrderMerchant_8cs_source.html":[2,0,0,938],
-"QuestGuildOrderThief_8cs.html":[2,0,0,939],
-"QuestGuildOrderThief_8cs_source.html":[2,0,0,939]
+"QuestGuildOrderThief_8cs.html":[2,0,0,939]
 };

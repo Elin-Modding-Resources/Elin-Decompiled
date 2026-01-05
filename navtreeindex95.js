@@ -1,5 +1,15 @@
 var NAVTREEINDEX95 =
 {
+"classQuickMenu_1_1Item.html#ae5324c1165222397ef0ce538241dc563":[1,0,1067,0,1],
+"classRaceBonus.html":[1,0,1068],
+"classRaceBonus.html#ada422a858396669a8d82c244a81d0fd8":[1,0,1068,0],
+"classRaceBonus.html#ae2f672d7fb76ca041e5c8c461477ef09":[1,0,1068,1],
+"classRaceBonus.html#ae31a97330bd51599ea755f680f14d8a2":[1,0,1068,2],
+"classRainbowTextColor.html":[1,0,1069],
+"classRainbowTextColor.html#a001276cd204fcb6a06097d877aebb85f":[1,0,1069,0],
+"classRainbowTextColor.html#a03cf2d93f3bbaaba88e1ce39d575cd6b":[1,0,1069,15],
+"classRainbowTextColor.html#a1e250bde79f230936530258b7bb08b13":[1,0,1069,8],
+"classRainbowTextColor.html#a22f898fe1cd4b93b133d61e20bf48dd4":[1,0,1069,2],
 "classRainbowTextColor.html#a4476135c40f02722cb8ef2773b618d36":[1,0,1069,11],
 "classRainbowTextColor.html#a539b3f16b9f45a1cc573532cf219184f":[1,0,1069,9],
 "classRainbowTextColor.html#a5405aaf893b8f0e2c4ca946157ba1fd3":[1,0,1069,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX95 =
 "classRecipeUpdater.html#a57252fbe9e499087ad2aa344ffaf20fa":[1,0,1080,12],
 "classRecipeUpdater.html#a5bcac1ed22a71d2d16884482e21c583b":[1,0,1080,0],
 "classRecipeUpdater.html#a5bcac1ed22a71d2d16884482e21c583ba43f6615bbb2c40a5306ff804094420b1":[1,0,1080,0,1],
-"classRecipeUpdater.html#a5bcac1ed22a71d2d16884482e21c583baad3d06d03d94223fa652babc913de686":[1,0,1080,0,2],
-"classRecipeUpdater.html#a5bcac1ed22a71d2d16884482e21c583baf80bc338b6146b566004a046f8137c85":[1,0,1080,0,0],
-"classRecipeUpdater.html#a60760c73f0a3e1deaf76ed27ca5da63d":[1,0,1080,4],
-"classRecipeUpdater.html#a6f140c65332c46917ae33529b8fc3097":[1,0,1080,9],
-"classRecipeUpdater.html#a7d543febda95b5729ab0d1053f54777d":[1,0,1080,10],
-"classRecipeUpdater.html#aa2ea7ff8068ac977f162e7d01ba1c3c1":[1,0,1080,3],
-"classRecipeUpdater.html#aaebcb9fc50d8c69a6861a1f884269c76":[1,0,1080,14],
-"classRecipeUpdater.html#ade9645fe135cc6060607744242707bbc":[1,0,1080,2],
-"classRecipe_1_1Ingredient.html":[1,0,1074,0],
-"classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16":[1,0,1074,0,3],
-"classRecipe_1_1Ingredient.html#a0f7847f01969f81cd8cef26596fb248a":[1,0,1074,0,18]
+"classRecipeUpdater.html#a5bcac1ed22a71d2d16884482e21c583baad3d06d03d94223fa652babc913de686":[1,0,1080,0,2]
 };

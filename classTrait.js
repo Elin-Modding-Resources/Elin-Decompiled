@@ -11,7 +11,8 @@ var classTrait =
       [ "Illumination", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79aa4869d0be7226ce32aa8c89c79a0dc4f", null ],
       [ "DefaultNoAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a10f805f91ce1361c5cdbf6f149175fb1", null ],
       [ "SignalAnime", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79af749f882593d9d058d26f2b7f5b35a90", null ],
-      [ "FakeBlock", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0", null ]
+      [ "FakeBlock", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a06a7a70e181fa76a148555be9d8264e0", null ],
+      [ "FakeObj", "classTrait.html#a769ea50a0bf1186e71d185f5a83e4d79a1edef5966b9ca5fb18c4ec40fff0bebb", null ]
     ] ],
     [ "CanBlend", "classTrait.html#ad545a68adbba6e0deffc3ceef163ceb9", null ],
     [ "CanBuiltAt", "classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff", null ],
@@ -42,10 +43,12 @@ var classTrait =
     [ "GetParam", "classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af", null ],
     [ "GetParamInt", "classTrait.html#a3168125392bb7c9efbd0dfe51f9aa205", null ],
     [ "GetPoint", "classTrait.html#a8a455e8ed66ed90362c14cd1ceb2f84b", null ],
+    [ "GetPref", "classTrait.html#ab60db4b9d0b97aebd2f885d7a019accb", null ],
     [ "GetRandomPoint", "classTrait.html#a3dfddf8ab3a55240f886305bddba17bf", null ],
     [ "GetRecipe", "classTrait.html#a1ef6408bcd6e52240db168e4bb4b227f", null ],
     [ "GetRefElement", "classTrait.html#ae871dd13fc2fdff306261be34b481058", null ],
     [ "GetRefSprite", "classTrait.html#a743e216720fed0807a1150a6ae24d18e", null ],
+    [ "GetRenderData", "classTrait.html#a1cde0a2c9818e8a65635ba3a90ecd43c", null ],
     [ "GetRestockedIcon", "classTrait.html#ab2f027f6bdfec4a4aa8a1badd3278b2c", null ],
     [ "GetSortVal", "classTrait.html#a2a96ed454081d641245531100eb1835e", null ],
     [ "GetTextRestock", "classTrait.html#a600da57f2ca749e3a73f2fcc75c0536f", null ],

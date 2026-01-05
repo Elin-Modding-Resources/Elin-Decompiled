@@ -1,5 +1,15 @@
 var NAVTREEINDEX55 =
 {
+"classCritterRat.html#a31d966074d16810a06f684f6169fdb26":[1,0,417,3],
+"classCritterRat.html#a3bef0cbd070e9274a8352456c7022292":[1,0,417,2],
+"classCritterRat.html#a86c95a12a5832c25764026dd7c98573c":[1,0,417,1],
+"classCritterRat.html#aea9879284f0dcdb449d2822bd6d5edec":[1,0,417,0],
+"classCritterRatSmall.html":[1,0,418],
+"classCritterRatSmall.html#a1c1d63eb88744cb11e057b061ec0a58c":[1,0,418,3],
+"classCritterRatSmall.html#a65a24607e665bfb509f045d7fbc2a833":[1,0,418,2],
+"classCritterRatSmall.html#aa6bbe8dc3373baf82b42c4710462b897":[1,0,418,0],
+"classCritterRatSmall.html#abede702e92acef26938471005cf884ff":[1,0,418,1],
+"classCritterRoach.html":[1,0,419],
 "classCritterRoach.html#a0a968b234dda354e49d8cda058f9d9e5":[1,0,419,0],
 "classCritterRoach.html#a5ac122ba4a69b5d66358ebcb18347c53":[1,0,419,3],
 "classCritterRoach.html#a9b00b3ae5b5e1cea02e175d60403fe21":[1,0,419,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX55 =
 "classDateHelper.html#a0f7b78d8d96ed9f42b353cd78abbcd6c":[1,0,431,5],
 "classDateHelper.html#a16d9623eba4b4a959562e1cf7fc9e7de":[1,0,431,4],
 "classDateHelper.html#a5954dd80e43231d36a0519e96b3e91d4":[1,0,431,3],
-"classDateHelper.html#aa20799e2a0e6904662ae65e73d4df991":[1,0,431,1],
-"classDateHelper.html#af6b12b4238d51e066e76b85ba3255bdf":[1,0,431,2],
-"classDayData.html":[1,0,432],
-"classDayData.html#a0e9b605c31006052c8aea6c44b533505":[1,0,432,1],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1":[1,0,432,0],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a0c6ad70beb3a7e76c3fc7adab7c46acc":[1,0,432,0,2],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a38c8201af2d71215dda2ca7bd21e481b":[1,0,432,0,5],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a63191e4ece37523c9fe6bb62a5e64d45":[1,0,432,0,1],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a68ef004de6166492c1d668eb8efe09bd":[1,0,432,0,0],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1a7ff3e75ce6aca348bc513ed3d5882946":[1,0,432,0,4],
-"classDayData.html#a6e21e42558518ebb28e71f634dc4bec1ab1897515d548a960afe49ecf66a29021":[1,0,432,0,3]
+"classDateHelper.html#aa20799e2a0e6904662ae65e73d4df991":[1,0,431,1]
 };
