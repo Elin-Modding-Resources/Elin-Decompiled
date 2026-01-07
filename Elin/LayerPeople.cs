@@ -135,7 +135,7 @@ public class LayerPeople : ELayer
 		});
 		layerPeople.multi.AddOwner(1, new ListPeopleBed
 		{
-			textHeader = "listBedHolder".lang(bed.MaxHolders.ToString() ?? ""),
+			funcHeader = () => "listBedHolder".lang(bed.CountHolders() + " / " + bed.MaxHolders),
 			bed = bed
 		});
 		ELayer.ui.AddLayer(layerPeople);

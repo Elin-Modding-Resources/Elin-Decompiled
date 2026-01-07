@@ -2850,6 +2850,12 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			switch (chara.id)
 			{
+			case "unicorn":
+				if (EClass.pc.HasElement(1216))
+				{
+					chara.SetHostility(Hostility.Enemy);
+				}
+				break;
 			case "santa":
 			case "silverwolf":
 			case "twintail":

@@ -8,6 +8,8 @@ public class CardFilter : EClass
 	{
 		public bool exclude;
 
+		public bool supersede;
+
 		public string name;
 	}
 
@@ -103,18 +105,28 @@ public class CardFilter : EClass
 		for (int i = 0; i < tags.Count; i++)
 		{
 			FilterItem filterItem = tags[i];
-			if (filterItem.exclude)
+			if (filterItem.supersede)
+			{
+				if (ContainsTag(source, filterItem.name))
+				{
+					flag = true;
+					break;
+				}
+			}
+			else if (filterItem.exclude)
 			{
 				if (ContainsTag(source, filterItem.name))
 				{
 					return false;
 				}
-				continue;
 			}
-			flag2 = true;
-			if (!flag && ContainsTag(source, filterItem.name))
+			else
 			{
-				flag = true;
+				flag2 = true;
+				if (!flag && ContainsTag(source, filterItem.name))
+				{
+					flag = true;
+				}
 			}
 		}
 		if (flag2 && !flag)
@@ -124,6 +136,10 @@ public class CardFilter : EClass
 		for (int j = 0; j < filters.Count; j++)
 		{
 			FilterItem filterItem2 = filters[j];
+			if (filterItem2.supersede)
+			{
+				break;
+			}
 			if (filterItem2.exclude)
 			{
 				if (source.filter.Contains(filterItem2.name))
@@ -168,22 +184,32 @@ public class CardFilter : EClass
 
 	public void BuildList(List<FilterItem> list, string[] strs)
 	{
-		if (strs != null)
+		if (strs == null)
 		{
-			foreach (string text in strs)
+			return;
+		}
+		foreach (string text in strs)
+		{
+			if (text.Length != 0)
 			{
-				list.Add(GetFilterItem(text));
+				FilterItem filterItem = new FilterItem();
+				_ = text[0];
+				switch (text[0])
+				{
+				case '*':
+					filterItem.supersede = true;
+					filterItem.name = text.Substring(1);
+					break;
+				case '-':
+					filterItem.exclude = true;
+					filterItem.name = text.Substring(1);
+					break;
+				default:
+					filterItem.name = text;
+					break;
+				}
+				list.Add(filterItem);
 			}
 		}
-	}
-
-	public static FilterItem GetFilterItem(string text)
-	{
-		bool flag = text.StartsWith("-");
-		return new FilterItem
-		{
-			exclude = flag,
-			name = (flag ? text.Substring(1) : text)
-		};
 	}
 }

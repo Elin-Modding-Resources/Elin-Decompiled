@@ -157,6 +157,11 @@ public class TraitBed : Trait
 		return c_charaList.list.Count > 0;
 	}
 
+	public int CountHolders()
+	{
+		return owner.c_charaList?.Get().Count ?? 0;
+	}
+
 	public bool CanAssign(Chara c)
 	{
 		CharaList c_charaList = owner.c_charaList;

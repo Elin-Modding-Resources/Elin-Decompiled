@@ -529,13 +529,14 @@ public class LayerDragGrid : LayerBaseCraft
 		});
 	}
 
-	public static LayerDragGrid CreateReconstruction(Chara cc, BlessedState state = BlessedState.Normal, int price = 0, int count = 1)
+	public static LayerDragGrid CreateReconstruction(Chara cc, BlessedState state = BlessedState.Normal, int power = 100, int price = 0, int count = 1)
 	{
 		return TryProc(cc, new InvOwnerReconstruction
 		{
 			state = state,
 			price = price,
-			count = count
+			count = count,
+			power = power
 		});
 	}
 }

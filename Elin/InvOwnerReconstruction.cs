@@ -42,6 +42,6 @@ public class InvOwnerReconstruction : InvOwnerEffect
 
 	public override void _OnProcess(Thing t)
 	{
-		ActEffect.Proc(EffectId.Reconstruction, 100, state, t.GetRootCard(), t);
+		ActEffect.Proc(EffectId.Reconstruction, power, state, t.GetRootCard(), t);
 	}
 }

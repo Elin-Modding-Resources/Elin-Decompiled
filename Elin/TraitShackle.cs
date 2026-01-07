@@ -8,6 +8,8 @@ public class TraitShackle : Trait
 
 	public override bool CanBeHeld => !IsRestraining();
 
+	public override bool CanBeDisassembled => !IsRestraining();
+
 	public override string LangUse => "ActRestrain";
 
 	public virtual bool AllowTraining => true;

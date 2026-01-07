@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class POLICY
 {
+	public const int legendary_heirloom = 2821;
+
 	public const int store_premium = 2817;
 
 	public const int license_food = 2818;
@@ -11,19 +13,17 @@ public class POLICY
 
 	public const int license_general = 2820;
 
-	public const int legendary_heirloom = 2821;
-
 	public const int celeb = 2822;
 
-	public const int egg_fan = 2826;
+	public const int license_slaver = 2828;
 
 	public const int license_stolen = 2824;
 
 	public const int milk_fan = 2825;
 
-	public const int breed_season = 2827;
+	public const int egg_fan = 2826;
 
-	public const int license_slaver = 2828;
+	public const int breed_season = 2827;
 
 	public const int store_ripoff = 2816;
 
@@ -107,8 +107,8 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2817, 2818, 2819, 2820, 2821, 2822, 2826, 2824, 2825, 2827,
-		2828, 2816, 2823, 2815, 2702, 2813, 2514, 2513, 2505, 2814,
+		2821, 2817, 2818, 2819, 2820, 2822, 2828, 2824, 2825, 2826,
+		2827, 2816, 2823, 2815, 2702, 2813, 2514, 2513, 2505, 2814,
 		2500, 2501, 2512, 2502, 2503, 2511, 2510, 2509, 2508, 2507,
 		2506, 2515, 2516, 2504, 2701, 2706, 2707, 2705, 2700, 2709,
 		2710, 2711, 2708, 2715, 2800, 2810, 2811, 2812, 2704, 2703,

@@ -1,3 +1,5 @@
+using System;
+
 public class ListOwner<T1, T2> : ListOwner
 {
 	public virtual void OnClick(T1 a, T2 b)
@@ -36,6 +38,8 @@ public class ListOwner : EClass
 
 	public int index;
 
+	public Func<string> funcHeader;
+
 	public ListOwner Main
 	{
 		get
@@ -58,11 +62,15 @@ public class ListOwner : EClass
 	{
 		get
 		{
-			if (!textHeader.IsEmpty())
+			if (funcHeader == null)
 			{
-				return textHeader.lang();
+				if (!textHeader.IsEmpty())
+				{
+					return textHeader.lang();
+				}
+				return "";
 			}
-			return "";
+			return funcHeader();
 		}
 	}
 
@@ -82,7 +90,12 @@ public class ListOwner : EClass
 		{
 			window.SetTitles(IdTitle, IdHeaderRow);
 		}
-		if (!textHeader.IsEmpty())
+		RefreshCaption();
+	}
+
+	public void RefreshCaption()
+	{
+		if (!TextHeader.IsEmpty())
 		{
 			window.SetCaption(TextHeader);
 		}
@@ -105,5 +118,7 @@ public class ListOwner : EClass
 		other.List();
 		list.RebuildLayoutTo(layer);
 		SE.Resource();
+		RefreshCaption();
+		other.RefreshCaption();
 	}
 }

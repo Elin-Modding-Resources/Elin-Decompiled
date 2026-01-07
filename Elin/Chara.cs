@@ -1906,13 +1906,19 @@ public class Chara : Card, IPathfindWalker
 			info?.AddText("minSpeed".lang((elements.ValueWithoutLink(79) / 3).ToString() ?? ""));
 		}
 		int num = 100;
-		if (EClass._zone.map != null && EClass._zone.IsUnderwater)
+		if (EClass._zone.map != null && (EClass._zone.IsUnderwater || (base.Cell.IsTopWater && !base.Cell.isFloating)))
 		{
 			int num2 = Evalue(200);
-			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5 - EClass._zone.DangerLv / 50, 0, 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
+			int num3 = Evalue(1252);
+			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5 - EClass._zone.DangerLv / 50, (num3 > 0) ? 50 : 0, 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
 			if (info != null && num != 100)
 			{
 				info.AddFix(num - 100, EClass.sources.elements.map[200].GetName().ToTitleCase());
+			}
+			if (num3 > 0)
+			{
+				num += num3 * 20;
+				info?.AddFix(num3 * 20, EClass.sources.elements.map[1252].GetName().ToTitleCase());
 			}
 		}
 		if (IsPCFaction)
@@ -3164,6 +3170,12 @@ public class Chara : Card, IPathfindWalker
 				EClass.pc.Say("shoes_off", EClass.pc);
 				EClass.pc.SetPCCState(PCCState.ShoesOff);
 			}
+		}
+		bool flag6 = flag4 || EClass._zone.IsUnderwater;
+		if (wasInWater != flag6)
+		{
+			wasInWater = flag6;
+			RefreshSpeed();
 		}
 		hasMovedThisTurn = true;
 		return MoveResult.Success;
@@ -6568,6 +6580,10 @@ public class Chara : Card, IPathfindWalker
 			{
 				return true;
 			}
+		}
+		if (id == "unicorn" && c.HasElement(1216))
+		{
+			return true;
 		}
 		return false;
 	}
