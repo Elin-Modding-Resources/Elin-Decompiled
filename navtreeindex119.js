@@ -1,5 +1,10 @@
 var NAVTREEINDEX119 =
 {
+"classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1558,0],
+"classTraitDoorman__Fighter.html":[1,0,1554],
+"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1554,1],
+"classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1554,2],
+"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1554,0],
 "classTraitDoorman__Mage.html":[1,0,1555],
 "classTraitDoorman__Mage.html#a6c6ca84361741f39b70c967b420e2b65":[1,0,1555,0],
 "classTraitDoorman__Mage.html#aa726db80b1c76b644d1277c972ab5d15":[1,0,1555,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitFortuneCookie.html":[1,0,1617],
 "classTraitFortuneCookie.html#ac4705ba887cb9f7f6493ffc5336c80b5":[1,0,1617,0],
 "classTraitFridge.html":[1,0,1618],
-"classTraitFridge.html#a15de8c2e1aac0bdd1fe9a2c098ebb729":[1,0,1618,1],
-"classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1618,0],
-"classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1618,2],
-"classTraitGM.html":[1,0,1640],
-"classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1640,0],
-"classTraitGM__Fighter.html":[1,0,1641]
+"classTraitFridge.html#a15de8c2e1aac0bdd1fe9a2c098ebb729":[1,0,1618,1]
 };

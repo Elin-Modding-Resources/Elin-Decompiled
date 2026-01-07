@@ -1,5 +1,10 @@
 var NAVTREEINDEX118 =
 {
+"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1509,0],
+"classTraitCoffin.html":[1,0,1510],
+"classTraitCoffin.html#a6e2277b00dc1174a525ab5b05022f553":[1,0,1510,0],
+"classTraitComputer.html":[1,0,1511],
+"classTraitContainer.html":[1,0,1512],
 "classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1512,5],
 "classTraitContainer.html#a2fb04afc28809d6e887fd259c60e89d0":[1,0,1512,0],
 "classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1512,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitDoorSwing.html#ab03d902cf8b1d11252ef9038eacd7f1d":[1,0,1557,1],
 "classTraitDoorSwing.html#aca0158988369ad823267b50e84e975c1":[1,0,1557,3],
 "classTraitDoorSwing.html#ad93b92fd8e8cad28f6a870398bf54f2b":[1,0,1557,0],
-"classTraitDoorSwingGrass.html":[1,0,1558],
-"classTraitDoorSwingGrass.html#ae98f11df8e174a3fb45b546076b1c413":[1,0,1558,0],
-"classTraitDoorman__Fighter.html":[1,0,1554],
-"classTraitDoorman__Fighter.html#a1ee6b99b683cce444ce1ea89bc33a88d":[1,0,1554,1],
-"classTraitDoorman__Fighter.html#a74d192f97f1eb7d6898b37fb3a1545c8":[1,0,1554,2],
-"classTraitDoorman__Fighter.html#aac48cf5fdb7706af4c6ba6f706634728":[1,0,1554,0]
+"classTraitDoorSwingGrass.html":[1,0,1558]
 };

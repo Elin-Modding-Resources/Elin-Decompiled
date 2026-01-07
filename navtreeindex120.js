@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitFridge.html#a5255ce398d48106f9bbc5e95be25ea2a":[1,0,1618,0],
+"classTraitFridge.html#abfa736a87b1f390b4f41f3b6f08bd5ca":[1,0,1618,2],
+"classTraitGM.html":[1,0,1640],
+"classTraitGM.html#aa8e7a66e367d27dbcc15c57aa35d89cf":[1,0,1640,0],
+"classTraitGM__Fighter.html":[1,0,1641],
 "classTraitGM__Mage.html":[1,0,1642],
 "classTraitGM__Merchant.html":[1,0,1643],
 "classTraitGM__Thief.html":[1,0,1644],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitKeeperOfGarden.html#a9b2caec811559b74d3e2ab69589589ea":[1,0,1673,1],
 "classTraitKettle.html":[1,0,1674],
 "classTraitKettle.html#a06864ce8ba5d803f0b7c463086dd50be":[1,0,1674,0],
-"classTraitKettle.html#a33374215107213d73f52df9ce041331b":[1,0,1674,8],
-"classTraitKettle.html#a3d81c25abb48955fa7aba166c881c756":[1,0,1674,2],
-"classTraitKettle.html#a87f74459a7a4845567b22b7fb626d02c":[1,0,1674,1],
-"classTraitKettle.html#ab28c7087c28817390dd30f8ca9e00178":[1,0,1674,7],
-"classTraitKettle.html#ab4c80c01c1125e6111420740696b9d0d":[1,0,1674,5],
-"classTraitKettle.html#abad08e8eb2d56f33009395c62f660ca7":[1,0,1674,4]
+"classTraitKettle.html#a33374215107213d73f52df9ce041331b":[1,0,1674,8]
 };

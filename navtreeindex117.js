@@ -1,8 +1,13 @@
 var NAVTREEINDEX117 =
 {
-"classTraitBed.html#ab28e1ac03be7c28ba707fdf36a169f80":[1,0,1453,9],
+"classTraitBed.html#a560cbcda92f36fd65f2da4e6b5f208c7":[1,0,1453,2],
+"classTraitBed.html#a7d20b131e4fc7cccdae60a2e19788efd":[1,0,1453,4],
+"classTraitBed.html#a89c9557454b47a7f30b3af53e30679bc":[1,0,1453,6],
+"classTraitBed.html#a95a7c5c2914d6e0ba1725c21cb5274d7":[1,0,1453,7],
+"classTraitBed.html#ab28e1ac03be7c28ba707fdf36a169f80":[1,0,1453,10],
 "classTraitBed.html#ac01d84f3d0fb3e10a42cd5d4c170c4ae":[1,0,1453,1],
-"classTraitBed.html#acc9d27b2bb5a76810cbd6cb5ff646768":[1,0,1453,10],
+"classTraitBed.html#acc9d27b2bb5a76810cbd6cb5ff646768":[1,0,1453,11],
+"classTraitBed.html#ad92ddc87aafebdedf361f47d92a6ef4f":[1,0,1453,3],
 "classTraitBedCoffin.html":[1,0,1454],
 "classTraitBedCoffin.html#a8db00030f51e31c426311ec909e0e13a":[1,0,1454,0],
 "classTraitBeekeep.html":[1,0,1455],
@@ -244,10 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitClerk__Thief.html":[1,0,1507],
 "classTraitClock.html":[1,0,1508],
 "classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1508,0],
-"classTraitCobWeb.html":[1,0,1509],
-"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1509,0],
-"classTraitCoffin.html":[1,0,1510],
-"classTraitCoffin.html#a6e2277b00dc1174a525ab5b05022f553":[1,0,1510,0],
-"classTraitComputer.html":[1,0,1511],
-"classTraitContainer.html":[1,0,1512]
+"classTraitCobWeb.html":[1,0,1509]
 };

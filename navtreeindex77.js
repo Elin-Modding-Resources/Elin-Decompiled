@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"classLayerCraftFloat.html#a3d8914bf5167815a63c494a48a74f5d8":[1,0,786,5],
+"classLayerCraftFloat.html#a4ff7cd3807c27deaf3c0d08e28b668f8":[1,0,786,9],
 "classLayerCraftFloat.html#a561b01e041ed54ab9f82af120afe29e0":[1,0,786,4],
 "classLayerCraftFloat.html#a60de2618f3a93e331acc4cbc88c7f45b":[1,0,786,2],
 "classLayerCraftFloat.html#a6c79c229401868adfd6b213a310f2bcd":[1,0,786,10],
@@ -68,6 +70,7 @@ var NAVTREEINDEX77 =
 "classLayerDragGrid.html#aba7c9ddeadca46aede8c0a80aa65ba46":[1,0,790,27],
 "classLayerDragGrid.html#aca8b860baedb8410ef41010deefdf3d3":[1,0,790,54],
 "classLayerDragGrid.html#acab974ac8e4d37681b4f69688c3cc998":[1,0,790,21],
+"classLayerDragGrid.html#acc19f7c068152352e2ec7aa093835e56":[1,0,790,14],
 "classLayerDragGrid.html#ad370a45c2735f61cb03f6e22f94e2f80":[1,0,790,49],
 "classLayerDragGrid.html#ad43080edc99ba783f5832fcd3eb8237c":[1,0,790,5],
 "classLayerDragGrid.html#ad855c43dd77ea424a6fecb8f8bf47d60":[1,0,790,15],
@@ -76,7 +79,6 @@ var NAVTREEINDEX77 =
 "classLayerDragGrid.html#aeab4a72fddc1e45f378adb74845738f9":[1,0,790,40],
 "classLayerDragGrid.html#aebd8182ba46fe14d20b17dd0393e1b29":[1,0,790,39],
 "classLayerDragGrid.html#af510c4804d6e05ba552a4bb849ae5098":[1,0,790,6],
-"classLayerDragGrid.html#af5ed50c4e186ad9d0682b7558682d567":[1,0,790,14],
 "classLayerDragGrid.html#afe016137ce9b9807dd8f4355b7df31e5":[1,0,790,11],
 "classLayerDragGrid_1_1PutbackInfo.html":[1,0,790,0],
 "classLayerDragGrid_1_1PutbackInfo.html#a7a0886cc9050a9ead8fb8e99778e2a2f":[1,0,790,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "classLayerEmbark.html#a64a0952806e056616fe186e9debfc4ce":[1,0,798,37],
 "classLayerEmbark.html#a672153a8d1421fed472e6c9a18037814":[1,0,798,19],
 "classLayerEmbark.html#a736933b9adc6697e42d1c6b15ec9937d":[1,0,798,1],
-"classLayerEmbark.html#a7faf6f1b83a4f57e3c0746f80b85efcf":[1,0,798,16],
-"classLayerEmbark.html#a8f69b50c95b6b1df767c34312f5eda4a":[1,0,798,47],
-"classLayerEmbark.html#a994ba24afabc61b715d028ccabe2bd5b":[1,0,798,23]
+"classLayerEmbark.html#a7faf6f1b83a4f57e3c0746f80b85efcf":[1,0,798,16]
 };

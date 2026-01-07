@@ -8,6 +8,7 @@ var classTraitShackle =
     [ "TrySetHeldAct", "classTraitShackle.html#ae2f48b61df0b7b07d44db68f247d22d1", null ],
     [ "AllowTraining", "classTraitShackle.html#a236f46437d85f1e740a110b66484bbba", null ],
     [ "animeId", "classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3", null ],
+    [ "CanBeDisassembled", "classTraitShackle.html#a2302085849eb57620fb091e66dcd8a51", null ],
     [ "CanBeHeld", "classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26", null ],
     [ "GetRestrainPos", "classTraitShackle.html#a0d385cbd1b4dbd50b850831f8ec9c49a", null ],
     [ "LangUse", "classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583", null ]

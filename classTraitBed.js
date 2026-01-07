@@ -3,6 +3,7 @@ var classTraitBed =
     [ "AddHolder", "classTraitBed.html#a08547dc3eb39076ea1208a52790e84d4", null ],
     [ "CanAssign", "classTraitBed.html#ac01d84f3d0fb3e10a42cd5d4c170c4ae", null ],
     [ "ClearHolders", "classTraitBed.html#a560cbcda92f36fd65f2da4e6b5f208c7", null ],
+    [ "CountHolders", "classTraitBed.html#ad92ddc87aafebdedf361f47d92a6ef4f", null ],
     [ "GetHoverText", "classTraitBed.html#a7d20b131e4fc7cccdae60a2e19788efd", null ],
     [ "HasHolder", "classTraitBed.html#a18a6505005e68927663e333610713e19", null ],
     [ "IsFull", "classTraitBed.html#a89c9557454b47a7f30b3af53e30679bc", null ],

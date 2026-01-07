@@ -1,5 +1,6 @@
 var NAVTREEINDEX71 =
 {
+"classHomeResource_1_1CostList.html":[1,0,626,1],
 "classHomeResource_1_1CostList.html#a3fcd36b068759465d655cec896d0ddb5":[1,0,626,1,1],
 "classHomeResource_1_1CostList.html#a6d583ac41393fd42d8b0a3edd7772279":[1,0,626,1,0],
 "classHomeResource_1_1CostList.html#a80ba665b4a0209f5e916555108dfc168":[1,0,626,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX71 =
 "classHotItemWidgetSet.html#a76d19587af7bfca0e054e1a4d80c048c":[1,0,668,6],
 "classHotItemWidgetSet.html#a7798477f62113b7db87bf6b8e10fda7d":[1,0,668,3],
 "classHotItemWidgetSet.html#a8a10c2ee3ae46f69a68689dcfb6c45a7":[1,0,668,4],
-"classHotItemWidgetSet.html#ae55366a0b9aac964bde2ad38211ff7ea":[1,0,668,2],
-"classHotItemWidgetSet.html#aebfc09619121d481b92d901ec386074f":[1,0,668,0]
+"classHotItemWidgetSet.html#ae55366a0b9aac964bde2ad38211ff7ea":[1,0,668,2]
 };

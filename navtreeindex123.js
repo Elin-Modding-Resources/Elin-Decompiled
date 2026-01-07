@@ -1,5 +1,10 @@
 var NAVTREEINDEX123 =
 {
+"classTraitRecipe.html#a976f12d4a98e6009c6d41d3ca7214279":[1,0,1802,7],
+"classTraitRecipe.html#aa609c89aa917d5d61b9b3b35cb3fc6c5":[1,0,1802,3],
+"classTraitRecipe.html#aaa59f50841aa5f8763647eaa24cc1dfb":[1,0,1802,5],
+"classTraitRecipe.html#aacdc95f9c38dad8b0f60400eef441b83":[1,0,1802,2],
+"classTraitRecipe.html#ae1b45d4194d49bbe1da69881d46a743d":[1,0,1802,10],
 "classTraitRecipeBook.html":[1,0,1803],
 "classTraitRecipeBook.html#a3c7199d1029f0a0631a8ab0a13082f2e":[1,0,1803,3],
 "classTraitRecipeBook.html#a5cdacf7787d5988dd7905523e6c2a642":[1,0,1803,1],
@@ -205,15 +210,16 @@ var NAVTREEINDEX123 =
 "classTraitSet.html#a146a2c859b3bab3e0dfce17e7dff2f0a":[1,0,1840,0],
 "classTraitSet.html#a31116c32394fefbde5691ead34f7af64":[1,0,1840,2],
 "classTraitShackle.html":[1,0,1841],
-"classTraitShackle.html#a0d385cbd1b4dbd50b850831f8ec9c49a":[1,0,1841,9],
+"classTraitShackle.html#a0d385cbd1b4dbd50b850831f8ec9c49a":[1,0,1841,10],
 "classTraitShackle.html#a141ae3562c5f5c57a3a5ca23924a16eb":[1,0,1841,1],
 "classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3":[1,0,1841,7],
-"classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1841,10],
+"classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1841,11],
+"classTraitShackle.html#a2302085849eb57620fb091e66dcd8a51":[1,0,1841,8],
 "classTraitShackle.html#a236f46437d85f1e740a110b66484bbba":[1,0,1841,6],
 "classTraitShackle.html#a2d6c3adbbaa632d21cc6b49444b7a6f1":[1,0,1841,0],
 "classTraitShackle.html#a3ddb785981a40e16a321f2f3edd274f6":[1,0,1841,3],
 "classTraitShackle.html#a73afae1bd9ceb07d9073834574bea8ea":[1,0,1841,2],
-"classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1841,8],
+"classTraitShackle.html#a83f658a3ca5cc47231a9bce6f11e3f26":[1,0,1841,9],
 "classTraitShackle.html#ab5a93c54ff3fb2a6abcf850cb02eb3b4":[1,0,1841,4],
 "classTraitShackle.html#ae2f48b61df0b7b07d44db68f247d22d1":[1,0,1841,5],
 "classTraitShippingChest.html":[1,0,1842],
@@ -243,11 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitSilvercat.html#aa5b0b9936bfa33b44c3dc8c3a193bc4e":[1,0,1845,2],
 "classTraitSilvercatBall.html":[1,0,1846],
 "classTraitSilvercatBall.html#aa24b62f76ac7a6d9e33a96598a50b7c2":[1,0,1846,0],
-"classTraitSlaver.html":[1,0,1847],
-"classTraitSlaver.html#a0cd986ad30e4b07d9a52ae142bc9b976":[1,0,1847,2],
-"classTraitSlaver.html#a812b3511171eaf5a9bc051902cc23856":[1,0,1847,0],
-"classTraitSlaver.html#ac441dd02a62a5446ee6382966679e280":[1,0,1847,1],
-"classTraitSlotMachine.html":[1,0,1848],
-"classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628":[1,0,1848,0],
-"classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1848,2]
+"classTraitSlaver.html":[1,0,1847]
 };

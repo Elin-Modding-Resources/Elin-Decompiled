@@ -11,7 +11,6 @@ var classCardFilter =
     [ "_ShouldPass", "classCardFilter.html#a50b43a8a5510da88d29906e428f5ae3e", null ],
     [ "BuildList", "classCardFilter.html#a6d9a5c7b0582a86da753f509215fb8ac", null ],
     [ "ContainsTag", "classCardFilter.html#a9ca3fd1b4c47228af5672c212e33195b", null ],
-    [ "GetFilterItem", "classCardFilter.html#a1f4c06a21cf3f08426176c569ba3fed8", null ],
     [ "Init", "classCardFilter.html#a59f09d7b3199460c98567f4156f0a553", null ],
     [ "Pass", "classCardFilter.html#aeda37fe4a83d5df9611a37568fa1c7fe", null ],
     [ "ToString", "classCardFilter.html#ad20c2933fa0ce9a44ae6747f28d6662a", null ],
