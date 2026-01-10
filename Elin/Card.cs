@@ -13,7 +13,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		Fail,
 		Success,
-		Door
+		Door,
+		Event
 	}
 
 	public enum MoveType
@@ -2718,18 +2719,34 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			isDestroyed = true;
 		}
-		if (version < 4)
+		if (version >= 5)
 		{
-			if (version < 3 && isChara && HasElement(1210))
-			{
-				elements.ModBase(960, -5 * Evalue(1210));
-			}
-			if (version < 4 && isChara && HasElement(1210))
-			{
-				elements.ModBase(423, Evalue(1210));
-			}
-			version = 4;
+			return;
 		}
+		if (version < 3 && isChara && HasElement(1210))
+		{
+			elements.ModBase(960, -5 * Evalue(1210));
+		}
+		if (version < 4 && isChara && HasElement(1210))
+		{
+			elements.ModBase(423, Evalue(1210));
+		}
+		if (version < 5)
+		{
+			if (isChara && Chara.race.id == "horse" && Chara.body.GetSlot(30, onlyEmpty: false) == null)
+			{
+				Chara.body.AddBodyPart(30);
+				Chara.body.RefreshBodyParts();
+			}
+			if (isChara && Chara.race.id == "bike" && id != "bike_cub")
+			{
+				Rand.SetSeed(uid);
+				Chara.body.AddBodyPart(30);
+				Chara.SetFeat(1423, 1 + EClass.rnd(10));
+				Rand.SetSeed();
+			}
+		}
+		version = 5;
 	}
 
 	protected virtual void OnDeserialized()
@@ -2758,7 +2775,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		EClass.game.cards.AssignUID(this);
 		this.genLv = genLv;
 		isNew = true;
-		version = 3;
+		version = 5;
 		SetSource();
 		OnBeforeCreate();
 		if (sourceCard.quality != 0)
@@ -3243,20 +3260,26 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			foreach (Chara item in list)
 			{
-				if (item.IsPCFactionOrMinion)
+				if (!item.IsPCFactionOrMinion)
 				{
-					List<Thing> list2 = item.things.List((Thing t) => t.HasTag(CTAG.godArtifact) && t != af && !t.isReplica && t.c_idDeity == EClass.pc.faith.id);
-					if (list2.Count != 0)
+					continue;
+				}
+				List<Thing> list2 = item.things.List((Thing t) => t.HasTag(CTAG.godArtifact) && t != af && !t.isReplica && t.c_idDeity == EClass.pc.faith.id);
+				if (list2.Count == 0)
+				{
+					continue;
+				}
+				foreach (Thing item2 in list2)
+				{
+					Religion artifactDeity = Religion.GetArtifactDeity(item2.id);
+					if (item2.isEquipped)
 					{
-						foreach (Thing item2 in list2)
-						{
-							Msg.Say("destroyed_inv_", item2, item);
-							item2.Destroy();
-						}
+						item.body.Unequip(item2);
 					}
+					item2.c_idDeity = artifactDeity?.id ?? null;
+					Msg.Say("waterCurse", item2);
 				}
 			}
-			return;
 		}
 		foreach (Chara item3 in list)
 		{
@@ -4659,6 +4682,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		onEvade?.Invoke();
 		if (isChara)
 		{
+			if (Chara.mimicry != null)
+			{
+				Chara.RemoveCondition<ConTransmuteMimic>();
+			}
+			foreach (Condition condition3 in Chara.conditions)
+			{
+				(condition3 as ConPeaky)?.OnHit();
+			}
 			if (flag2)
 			{
 				if (!Chara.HasCondition<ConFaint>())

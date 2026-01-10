@@ -37,6 +37,10 @@ public class ActRush : ActMelee
 		{
 			return false;
 		}
+		if (Act.TC.Chara?.mimicry != null)
+		{
+			return false;
+		}
 		Act.TP.Set(flag ? EClass.scene.mouseTarget.pos : Act.TC.pos);
 		if (Act.CC.isRestrained || Act.CC.HasCondition<ConEntangle>())
 		{

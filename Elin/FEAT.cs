@@ -33,43 +33,45 @@ public class FEAT
 
 	public const int featNegotiate = 1634;
 
-	public const int featMagicManner = 1651;
-
 	public const int featSpotting = 1633;
-
-	public const int featDefense = 1631;
-
-	public const int featHardy = 1630;
-
-	public const int featSPD = 1629;
-
-	public const int featLuck = 1628;
-
-	public const int featCHA = 1627;
-
-	public const int featWIL = 1626;
-
-	public const int featMAG = 1625;
-
-	public const int featLER = 1624;
-
-	public const int featPER = 1623;
-
-	public const int featEND = 1622;
-
-	public const int featDEX = 1621;
-
-	public const int featSTR = 1620;
-
-	public const int featStamina = 1612;
-
-	public const int featMana = 1611;
 
 	public const int featEvade = 1632;
 
-	public const int featRapidArrow = 1652;
+	public const int featDefense = 1631;
 
-	public const int featDreamWaker = 1653;
+	public const int featLife = 1610;
+
+	public const int featMana = 1611;
+
+	public const int featStamina = 1612;
+
+	public const int featSTR = 1620;
+
+	public const int featDEX = 1621;
+
+	public const int featEND = 1622;
+
+	public const int featMagicManner = 1651;
+
+	public const int featPER = 1623;
+
+	public const int featMAG = 1625;
+
+	public const int featWIL = 1626;
+
+	public const int featCHA = 1627;
+
+	public const int featLuck = 1628;
+
+	public const int featSPD = 1629;
+
+	public const int featHardy = 1630;
+
+	public const int featLER = 1624;
+
+	public const int featPeaky = 1423;
+
+	public const int featRapidArrow = 1652;
 
 	public const int featHeavyCasting = 1654;
 
@@ -119,7 +121,7 @@ public class FEAT
 
 	public const int featLooter = 1660;
 
-	public const int featLife = 1610;
+	public const int featDreamWaker = 1653;
 
 	public const int featDismantler = 1661;
 
@@ -277,22 +279,22 @@ public class FEAT
 
 	public const int featEarthStrength = 1411;
 
-	public static readonly int[] IDS = new int[137]
+	public static readonly int[] IDS = new int[138]
 	{
 		1223, 1650, 1649, 1648, 1647, 1646, 1645, 1644, 1643, 1642,
-		1641, 1640, 1636, 1635, 1634, 1651, 1633, 1631, 1630, 1629,
-		1628, 1627, 1626, 1625, 1624, 1623, 1622, 1621, 1620, 1612,
-		1611, 1632, 1652, 1653, 1654, 1222, 1200, 1201, 1202, 1203,
-		1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211, 1212, 1213,
-		1214, 1215, 1655, 1656, 1657, 1658, 1659, 1660, 1610, 1661,
-		1221, 1220, 1219, 1218, 1217, 1216, 1662, 1422, 1750, 1420,
-		1251, 1252, 1270, 1271, 1272, 1273, 1290, 1300, 1305, 1310,
-		1315, 1320, 1330, 1335, 1340, 1345, 1350, 1355, 1400, 1401,
-		1402, 1403, 1404, 1250, 1249, 1248, 1247, 1232, 1231, 1421,
-		1230, 1229, 1228, 1227, 1226, 1225, 1224, 1233, 1405, 1234,
-		1236, 1237, 1238, 1239, 1240, 1241, 1242, 1243, 1244, 1245,
-		1246, 1235, 1406, 1325, 1408, 1419, 1418, 1417, 1416, 1415,
-		1407, 1413, 1409, 1410, 1414, 1412, 1411
+		1641, 1640, 1636, 1635, 1634, 1633, 1632, 1631, 1610, 1611,
+		1612, 1620, 1621, 1622, 1651, 1623, 1625, 1626, 1627, 1628,
+		1629, 1630, 1624, 1423, 1652, 1654, 1222, 1200, 1201, 1202,
+		1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211, 1212,
+		1213, 1214, 1215, 1655, 1656, 1657, 1658, 1659, 1660, 1653,
+		1661, 1221, 1220, 1219, 1218, 1217, 1216, 1662, 1422, 1750,
+		1420, 1251, 1252, 1270, 1271, 1272, 1273, 1290, 1300, 1305,
+		1310, 1315, 1320, 1330, 1335, 1340, 1345, 1350, 1355, 1400,
+		1401, 1402, 1403, 1404, 1250, 1249, 1248, 1247, 1232, 1231,
+		1421, 1230, 1229, 1228, 1227, 1226, 1225, 1224, 1233, 1405,
+		1234, 1236, 1237, 1238, 1239, 1240, 1241, 1242, 1243, 1244,
+		1245, 1246, 1235, 1406, 1325, 1408, 1419, 1418, 1417, 1416,
+		1415, 1407, 1413, 1409, 1410, 1414, 1412, 1411
 	};
 }
 public class Feat : Element

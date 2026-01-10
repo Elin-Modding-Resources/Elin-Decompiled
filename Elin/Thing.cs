@@ -925,7 +925,7 @@ public class Thing : Card
 				SetImage(uIItem.image2);
 				uIItem.image2.Rect().pivot = new Vector2(0.5f, 0.5f);
 				string text5 = base.Num.ToFormat() ?? "";
-				string text6 = (Mathf.Ceil(0.01f * (float)base.ChildrenAndSelfWeight) * 0.1f).ToString("F1") + "s";
+				string text6 = (0.01f * (float)base.ChildrenAndSelfWeight * 0.1f).ToString((base.ChildrenAndSelfWeight == 0) ? "F0" : ((base.ChildrenAndSelfWeight >= 1000) ? "F1" : "F2")) + "s";
 				if (things.Count > 0)
 				{
 					text5 = text5 + " (" + things.Count + ")";
@@ -935,6 +935,10 @@ public class Thing : Card
 					text6 = text6 + " (" + (Mathf.Ceil(0.01f * (float)SelfWeight) * 0.1f).ToString("F1") + "s)";
 				}
 				text3 = "_quantity".lang(text5 ?? "", text6);
+				if (EClass.debug.showExtra)
+				{
+					text3 = text3 + "(" + base.ChildrenAndSelfWeight + ")";
+				}
 				if (flag && recipe != null && (bool)LayerCraft.Instance)
 				{
 					text3 = text3 + "  " + "_recipe_lv".lang(recipe.RecipeLv.ToString() ?? "");

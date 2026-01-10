@@ -368,6 +368,10 @@ public class AI_Idle : AIAct
 					}
 				}
 			}
+			if (!EClass._zone.IsRegion && owner.id == "mimic" && EClass.rnd(5) == 0 && owner.mimicry == null)
+			{
+				owner.UseAbility(8794, owner);
+			}
 			Party party = owner.party;
 			if (party == null || party.leader == owner || !party.leader.IsAliveInCurrentZone || owner.host != null || !EClass._zone.PetFollow)
 			{
@@ -975,7 +979,7 @@ public class AI_Idle : AIAct
 		string aiIdle = owner.source.aiIdle;
 		if (!(aiIdle == "stand") && !(aiIdle == "root"))
 		{
-			if (EClass.rnd(15) == 0)
+			if (EClass.rnd(15) == 0 && owner.mimicry == null)
 			{
 				owner.MoveRandom();
 			}

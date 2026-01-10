@@ -129,7 +129,7 @@ public class AI_Goto : AIAct
 			{
 				return Status.Running;
 			}
-			if (moveResult == Card.MoveResult.Fail || moveResult == Card.MoveResult.Door)
+			if (moveResult == Card.MoveResult.Fail || (uint)(moveResult - 2) <= 1u)
 			{
 				if (owner.IsPC && ActionMode.IsAdv)
 				{

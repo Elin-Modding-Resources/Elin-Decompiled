@@ -16,6 +16,11 @@ public class HotItemNoItem : HotItemGameAction
 		Card tg = null;
 		p.pos.ListVisibleCards().ForeachReverse(delegate(Card a)
 		{
+			if (a.isChara && a.Chara.mimicry != null)
+			{
+				tg = a;
+				return true;
+			}
 			if (a.TileType.CanBeHeld && a.trait.CanBeHeld && a.isThing && !a.isNPCProperty && a.isThing && a.TileType.CanBeHeld)
 			{
 				tg = a;
@@ -29,6 +34,11 @@ public class HotItemNoItem : HotItemGameAction
 			{
 				if (tg.ExistsOnMap)
 				{
+					if (tg.isChara && tg.Chara.mimicry != null)
+					{
+						tg.Chara.mimicry.RevealMimicry(EClass.pc, surprise: true);
+						return true;
+					}
 					if (!EClass.pc.CanLift(tg))
 					{
 						EClass.pc.Say("tooHeavy", tg);

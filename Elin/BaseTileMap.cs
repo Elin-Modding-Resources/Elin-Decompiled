@@ -1659,9 +1659,23 @@ public class BaseTileMap : EMono
 		for (int k = 0; k < detail.charas.Count; k++)
 		{
 			Chara chara = detail.charas[k];
-			if (chara.host != null || (chara != EMono.pc && chara != LayerDrama.alwaysVisible && (flag3 || fogged || (!showAllCards && !EMono.player.CanSee(chara)))))
+			if (chara.host != null)
 			{
 				continue;
+			}
+			if (chara != EMono.pc && chara != LayerDrama.alwaysVisible)
+			{
+				if (chara.mimicry != null)
+				{
+					if (flag3 || fogged || !this.cell.isSeen)
+					{
+						continue;
+					}
+				}
+				else if (flag3 || fogged || (!showAllCards && !EMono.player.CanSee(chara)))
+				{
+					continue;
+				}
 			}
 			_actorPos.x = orgX;
 			_actorPos.y = orgY;

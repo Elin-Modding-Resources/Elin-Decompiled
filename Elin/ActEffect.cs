@@ -1110,18 +1110,18 @@ public class ActEffect : EClass
 				return;
 			}
 			List<Chara> list3 = new List<Chara>();
-			bool flag5 = false;
+			bool flag6 = false;
 			foreach (Chara chara2 in EClass._map.charas)
 			{
 				if (!chara2.IsPCFactionOrMinion && chara2.id == "littleOne")
 				{
-					if (flag5)
+					if (flag6)
 					{
-						flag5 = false;
+						flag6 = false;
 						continue;
 					}
 					list3.Add(chara2);
-					flag5 = true;
+					flag6 = true;
 				}
 			}
 			if (list3.Count == 0)
@@ -1193,9 +1193,9 @@ public class ActEffect : EClass
 			TC.PlaySound("curse3");
 			TC.PlayEffect("curse");
 			TC.Say("forgetItems", TC);
-			int num5 = power / 50 + 1 + EClass.rnd(3);
+			int num4 = power / 50 + 1 + EClass.rnd(3);
 			List<Thing> source = TC.things.List((Thing t) => t.c_IDTState == 0);
-			for (int j = 0; j < num5; j++)
+			for (int j = 0; j < num4; j++)
 			{
 				source.RandomItem().c_IDTState = 5;
 			}
@@ -1207,10 +1207,10 @@ public class ActEffect : EClass
 		case EffectId.EnchantArmorGreat:
 		{
 			bool armor = id == EffectId.EnchantArmor || id == EffectId.EnchantArmorGreat;
-			bool flag4 = id == EffectId.EnchantWeaponGreat || id == EffectId.EnchantArmorGreat;
+			bool flag5 = id == EffectId.EnchantWeaponGreat || id == EffectId.EnchantArmorGreat;
 			if (!tc.isThing)
 			{
-				LayerDragGrid.CreateEnchant(CC, armor, flag4, state);
+				LayerDragGrid.CreateEnchant(CC, armor, flag5, state);
 				return;
 			}
 			cc.PlaySound("identify");
@@ -1221,8 +1221,8 @@ public class ActEffect : EClass
 				tc.ModEncLv(-1);
 				break;
 			}
-			int num4 = (flag4 ? 4 : 2) + (blessed ? 1 : 0);
-			if (tc.encLV >= num4)
+			int num5 = (flag5 ? 4 : 2) + (blessed ? 1 : 0);
+			if (tc.encLV >= num5)
 			{
 				cc.Say("enc_resist", tc);
 				break;
@@ -1234,21 +1234,21 @@ public class ActEffect : EClass
 		case EffectId.Identify:
 		case EffectId.GreaterIdentify:
 		{
-			bool flag6 = id == EffectId.GreaterIdentify;
+			bool flag3 = id == EffectId.GreaterIdentify;
 			if (flag)
 			{
-				Redirect(EffectId.ForgetItems, flag6 ? BlessedState.Cursed : BlessedState.Normal, default(ActRef));
+				Redirect(EffectId.ForgetItems, flag3 ? BlessedState.Cursed : BlessedState.Normal, default(ActRef));
 				break;
 			}
 			if (!tc.isThing)
 			{
-				int count = ((!blessed) ? 1 : (flag6 ? (2 + EClass.rnd(2)) : (3 + EClass.rnd(3))));
-				LayerDragGrid.CreateIdentify(CC, flag6, state, 0, count);
+				int count = ((!blessed) ? 1 : (flag3 ? (2 + EClass.rnd(2)) : (3 + EClass.rnd(3))));
+				LayerDragGrid.CreateIdentify(CC, flag3, state, 0, count);
 				return;
 			}
 			cc.PlaySound("identify");
 			cc.PlayEffect("identify");
-			tc.Thing.Identify(cc.IsPCParty, (!flag6) ? IDTSource.Identify : IDTSource.SuperiorIdentify);
+			tc.Thing.Identify(cc.IsPCParty, (!flag3) ? IDTSource.Identify : IDTSource.SuperiorIdentify);
 			break;
 		}
 		case EffectId.Uncurse:
@@ -1290,16 +1290,16 @@ public class ActEffect : EClass
 			Element orCreateElement2 = tc.elements.GetOrCreateElement(65);
 			Element orCreateElement3 = tc.elements.GetOrCreateElement(67);
 			Element orCreateElement4 = tc.elements.GetOrCreateElement(66);
-			bool flag3 = tc.IsEquipmentOrRangedOrAmmo || tc.IsThrownWeapon;
+			bool flag4 = tc.IsEquipmentOrRangedOrAmmo || tc.IsThrownWeapon;
 			if (flag)
 			{
 				num3 = (int)(0.01f * (float)num3 * (float)power * 0.75f + 500f);
 				if (num3 < 0 || num3 > 10000000)
 				{
 					num3 = 10000000;
-					flag3 = false;
+					flag4 = false;
 				}
-				if (flag3)
+				if (flag4)
 				{
 					if (tc.IsWeapon || tc.IsThrownWeapon || tc.IsAmmo)
 					{
@@ -1321,7 +1321,7 @@ public class ActEffect : EClass
 				{
 					power /= 4;
 				}
-				if (flag3)
+				if (flag4)
 				{
 					if (tc.IsWeapon || tc.IsThrownWeapon || tc.IsAmmo)
 					{
@@ -1349,7 +1349,7 @@ public class ActEffect : EClass
 		{
 			if (!tc.isThing)
 			{
-				LayerDragGrid.CreateReconstruction(CC, state, power);
+				LayerDragGrid.CreateReconstruction(CC, state, power / ((!(blessed || flag)) ? 1 : 2));
 				return;
 			}
 			if (tc.Num > 1)

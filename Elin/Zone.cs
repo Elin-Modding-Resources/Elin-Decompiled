@@ -2851,7 +2851,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			switch (chara.id)
 			{
 			case "unicorn":
-				if (EClass.pc.HasElement(1216))
+				if (EClass.pc.HasElement(1216) && EClass.pc.Evalue(418) < 1)
 				{
 					chara.SetHostility(Hostility.Enemy);
 				}

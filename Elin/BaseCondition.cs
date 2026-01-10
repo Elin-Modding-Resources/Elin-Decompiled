@@ -130,6 +130,8 @@ public class BaseCondition : BaseStats
 		}
 	}
 
+	public virtual bool ShouldTryNullify => base.source.nullify.Length != 0;
+
 	public virtual bool CanManualRemove => false;
 
 	public virtual bool CanStack(Condition c)
@@ -249,7 +251,7 @@ public class BaseCondition : BaseStats
 		OnStart();
 		OnStartOrStack();
 		PlayEffect();
-		if (base.source.nullify.Length == 0)
+		if (!ShouldTryNullify)
 		{
 			return;
 		}
@@ -262,7 +264,7 @@ public class BaseCondition : BaseStats
 		}
 	}
 
-	public bool TryNullify(Condition c)
+	public virtual bool TryNullify(Condition c)
 	{
 		if (base.source.nullify.Length == 0)
 		{

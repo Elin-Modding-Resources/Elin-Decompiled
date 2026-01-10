@@ -1961,6 +1961,10 @@ public class Trait : EClass
 					{
 						t.AddThing(ThingGen.Create("letter_trial"));
 					}
+					AddThing(ThingGen.CreateScroll(8220, 4 + EClass.rnd(6)));
+					AddThing(ThingGen.CreateScroll(8221, 4 + EClass.rnd(6)));
+					AddThing(ThingGen.CreateScroll(8200, 4 + EClass.rnd(6)));
+					AddThing(ThingGen.CreateScroll(8201, 4 + EClass.rnd(6)));
 					break;
 				case ShopType.Festival:
 					if (EClass._zone.IsFestival)
@@ -2033,6 +2037,7 @@ public class Trait : EClass
 					AddThing(ThingGen.CreateSpellbook(8790));
 					AddThing(ThingGen.CreatePotion(8791).SetNum(3 + EClass.rnd(3)));
 					AddThing(ThingGen.CreatePotion(8792).SetNum(3 + EClass.rnd(3)));
+					AddThing(ThingGen.CreatePotion(8794).SetNum(3 + EClass.rnd(3)));
 					break;
 				case "girl_blue":
 					Add("779", 1 + EClass.rnd(3), 0);

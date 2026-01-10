@@ -24,17 +24,17 @@ public class SLOT
 
 	public const int neck = 31;
 
+	public const int head = 30;
+
 	public const int finger = 36;
 
 	public const int token = 43;
 
 	public const int range = 41;
 
-	public const int head = 30;
-
 	public static readonly int[] IDS = new int[16]
 	{
 		44, 32, 45, 39, 38, 42, 34, 37, 35, 40,
-		33, 31, 36, 43, 41, 30
+		33, 31, 30, 36, 43, 41
 	};
 }

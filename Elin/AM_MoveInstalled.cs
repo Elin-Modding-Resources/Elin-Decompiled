@@ -178,11 +178,19 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 
 	public bool CanPutAway()
 	{
+		if (target == null)
+		{
+			return false;
+		}
+		if (target.HasTag(CTAG.godArtifact))
+		{
+			return false;
+		}
 		if (EClass.debug.ignoreBuildRule)
 		{
 			return true;
 		}
-		if (target == null || target.isChara || target.trait.CanOnlyCarry)
+		if (target.isChara || target.trait.CanOnlyCarry)
 		{
 			return false;
 		}

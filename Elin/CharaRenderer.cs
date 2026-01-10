@@ -158,6 +158,10 @@ public class CharaRenderer : CardRenderer
 			movePoint.Set(owner.pos);
 			orgPos = position;
 			actTime = owner.actTime;
+			if (isPC && EClass.player.renderExtraTime > 0f)
+			{
+				actTime += EClass.player.renderExtraTime;
+			}
 			RefreshSprite();
 			step = 1;
 			if (!isMoving)

@@ -489,6 +489,8 @@ public class Biography : EClass
 		case "sister":
 		case "sister_shark":
 		case "sister_penguin":
+		case "imotoroid":
+		case "imotoroid_origin":
 			c.c_idPortrait = Portrait.GetRandomPortrait("special_f-littlesister");
 			break;
 		case "citizen_exile":

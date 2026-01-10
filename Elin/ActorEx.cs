@@ -37,7 +37,7 @@ public class ActorEx : Actor
 		{
 			data = EMono.core.refs.dictBGM.TryGetValue(owner.refVal);
 		}
-		if ((bool)audioSource)
+		if ((bool)audioSource && (bool)data)
 		{
 			audioSource.clip = data.clip;
 			audioSource.pitch = data.pitch * (1f + ((data.randomPitch == 0f) ? 0f : Rand.Range(0f - data.randomPitch, data.randomPitch)));
@@ -90,6 +90,10 @@ public class ActorEx : Actor
 
 	public void Refresh()
 	{
+		if (!data)
+		{
+			return;
+		}
 		if (owner.parent != EMono.pc.currentZone)
 		{
 			Debug.LogWarning(owner);

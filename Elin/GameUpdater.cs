@@ -250,8 +250,13 @@ public class GameUpdater : EClass
 				return;
 			}
 			List<Chara> charas = EClass._map.charas;
-			SetUpdatesPerFrame(charas.Count, 0.05f);
 			float gameDelta = Core.gameDelta;
+			EClass.player.renderExtraTime -= delta * EClass.scene.actionMode.gameSpeed;
+			if (EClass.player.renderExtraTime > 0f)
+			{
+				return;
+			}
+			SetUpdatesPerFrame(charas.Count, 0.05f);
 			for (int i = 0; i < charas.Count; i++)
 			{
 				Chara chara = charas[i];

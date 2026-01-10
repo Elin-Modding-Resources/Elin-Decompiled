@@ -1200,6 +1200,8 @@ public class Player : EClass
 
 	public float pickupDelay = 2f;
 
+	public float renderExtraTime;
+
 	public Chara chara;
 
 	public Chara focusedchara;

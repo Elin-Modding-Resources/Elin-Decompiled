@@ -528,77 +528,87 @@ public class ActPlan : EClass
 					int num = c2.Dist(EClass.pc);
 					if (num <= 1 || !EClass.pc.isBlind)
 					{
-						if (!EClass.pc.isBlind && !c2.IsHostile() && (input == ActInput.AllAction || !(c2.IsPCParty || c2.IsMinion || isKey)) && (input == ActInput.AllAction || !c2.IsNeutral() || c2.quest != null || EClass.game.quests.IsDeliverTarget(c2)) && c2.isSynced && num <= 2)
+						if (c2.mimicry != null)
 						{
-							bool flag5 = !c2.HasCondition<ConSuspend>() && (!c2.isRestrained || !c2.IsPCFaction);
-							if (EClass._zone.instance is ZoneInstanceMusic && !c2.IsPCFactionOrMinion)
+							if (num <= 1)
 							{
-								flag5 = false;
-							}
-							if (flag5 || altAction)
-							{
-								if (EClass.pc.HasElement(1216) && c2.HasCondition<ConSleep>())
-								{
-									TrySetAct(new AI_Fuck
-									{
-										target = c2,
-										variation = AI_Fuck.Variation.Succubus
-									}, c2);
-								}
-								TrySetAct(ACT.Chat, c2);
+								c2.mimicry.TrySetAct(this);
 							}
 						}
-						if (!c2.IsPC && num <= 2 && ((c2.IsPCFaction && !c2.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
+						else
 						{
-							TrySetAct("actTrade", delegate
+							if (!EClass.pc.isBlind && !c2.IsHostile() && (input == ActInput.AllAction || !(c2.IsPCParty || c2.IsMinion || isKey)) && (input == ActInput.AllAction || !c2.IsNeutral() || c2.quest != null || EClass.game.quests.IsDeliverTarget(c2)) && c2.isSynced && num <= 2)
 							{
-								LayerInventory.CreateContainer(c2);
-								return false;
-							}, c2, null, 2);
-						}
-						if (c2.host != EClass.pc)
-						{
-							TraitShackle traitShackle = c2.pos.FindThing<TraitShackle>();
-							if (c2.IsRestrainedResident)
-							{
-								if (traitShackle != null && traitShackle.AllowTraining)
+								bool flag5 = !c2.HasCondition<ConSuspend>() && (!c2.isRestrained || !c2.IsPCFaction);
+								if (EClass._zone.instance is ZoneInstanceMusic && !c2.IsPCFactionOrMinion)
 								{
-									TrySetAct(new AI_PracticeDummy
-									{
-										target = c2
-									});
+									flag5 = false;
 								}
-							}
-							else if ((c2.IsHostile() || altAction || c2.isRestrained) && c2.IsAliveInCurrentZone)
-							{
-								TrySetAct(ACT.Melee, c2);
-							}
-						}
-						if (c2.IsPCPartyMinion && !c2.Chara.IsEscorted() && altAction)
-						{
-							TrySetAct("ActBanishSummon", delegate
-							{
-								c2.Banish(EClass.pc);
-								return true;
-							}, c2, null, 99);
-							List<Chara> list2 = new List<Chara>();
-							foreach (Chara chara in EClass._map.charas)
-							{
-								if (chara.IsPCFactionMinion && !chara.IsEscorted())
+								if (flag5 || altAction)
 								{
-									list2.Add(chara);
-								}
-							}
-							if (list2.Count > 1)
-							{
-								TrySetAct("ActBanishSummonAll", delegate
-								{
-									foreach (Chara item in list2)
+									if (EClass.pc.HasElement(1216) && c2.HasCondition<ConSleep>())
 									{
-										item.Banish(EClass.pc);
+										TrySetAct(new AI_Fuck
+										{
+											target = c2,
+											variation = AI_Fuck.Variation.Succubus
+										}, c2);
 									}
+									TrySetAct(ACT.Chat, c2);
+								}
+							}
+							if (!c2.IsPC && num <= 2 && ((c2.IsPCFaction && !c2.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
+							{
+								TrySetAct("actTrade", delegate
+								{
+									LayerInventory.CreateContainer(c2);
+									return false;
+								}, c2, null, 2);
+							}
+							if (c2.host != EClass.pc)
+							{
+								TraitShackle traitShackle = c2.pos.FindThing<TraitShackle>();
+								if (c2.IsRestrainedResident)
+								{
+									if (traitShackle != null && traitShackle.AllowTraining)
+									{
+										TrySetAct(new AI_PracticeDummy
+										{
+											target = c2
+										});
+									}
+								}
+								else if ((c2.IsHostile() || altAction || c2.isRestrained) && c2.IsAliveInCurrentZone)
+								{
+									TrySetAct(ACT.Melee, c2);
+								}
+							}
+							if (c2.IsPCPartyMinion && !c2.Chara.IsEscorted() && altAction)
+							{
+								TrySetAct("ActBanishSummon", delegate
+								{
+									c2.Banish(EClass.pc);
 									return true;
 								}, c2, null, 99);
+								List<Chara> list2 = new List<Chara>();
+								foreach (Chara chara in EClass._map.charas)
+								{
+									if (chara.IsPCFactionMinion && !chara.IsEscorted())
+									{
+										list2.Add(chara);
+									}
+								}
+								if (list2.Count > 1)
+								{
+									TrySetAct("ActBanishSummonAll", delegate
+									{
+										foreach (Chara item in list2)
+										{
+											item.Banish(EClass.pc);
+										}
+										return true;
+									}, c2, null, 99);
+								}
 							}
 						}
 					}
@@ -613,7 +623,7 @@ public class ActPlan : EClass
 				items.ForeachReverse(delegate(Card _c)
 				{
 					Chara c = _c.Chara;
-					if (c != null)
+					if (c != null && c.mimicry == null)
 					{
 						bool flag3 = EClass.pc.CanSee(c);
 						if (flag3)
@@ -947,7 +957,7 @@ public class ActPlan : EClass
 			{
 				hotItem.TrySetAct(this);
 			}
-			bool flag = EClass.game.config.autoCombat.enable && EClass.scene.mouseTarget.TargetChara != null;
+			bool flag = EClass.game.config.autoCombat.enable && EClass.scene.mouseTarget.TargetChara != null && EClass.scene.mouseTarget.TargetChara.mimicry == null;
 			if (hotItem.Thing != null && hotItem.Thing.trait.DisableAutoCombat)
 			{
 				flag = false;

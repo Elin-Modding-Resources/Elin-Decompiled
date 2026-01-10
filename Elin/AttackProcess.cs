@@ -998,10 +998,13 @@ public class AttackProcess : EClass
 
 	public bool CalcHit()
 	{
+		if (CC.HasCondition<ConAmbush>())
+		{
+			return Crit();
+		}
 		if (critFury)
 		{
-			crit = true;
-			return true;
+			return Crit();
 		}
 		if (CC.HasCondition<ConSevenSense>() && (CC.HasElement(1244) || CC.HasElement(1246) || CC.HasElement(1247)))
 		{
@@ -1034,9 +1037,17 @@ public class AttackProcess : EClass
 					return EvadePlus();
 				}
 			}
-			if (TC.Evalue(57) > EClass.rnd(100))
+			int num3 = TC.Evalue(57);
+			if (num3 > 0)
 			{
-				return EvadePlus();
+				if (num3 > EClass.rnd(100))
+				{
+					return EvadePlus();
+				}
+			}
+			else if (num3 < 0 && num3 * -1 > EClass.rnd(100))
+			{
+				return true;
 			}
 		}
 		if (EClass.rnd(20) == 0)
@@ -1069,8 +1080,8 @@ public class AttackProcess : EClass
 		}
 		if (CC.Evalue(1420) > 0)
 		{
-			int num3 = Mathf.Min(100, 100 - CC.hp * 100 / CC.MaxHP) * (50 + CC.Evalue(1420) * 50) / 100;
-			if (num3 >= 50 && num3 * num3 * num3 * num3 / 3 > EClass.rnd(100000000))
+			int num4 = Mathf.Min(100, 100 - CC.hp * 100 / CC.MaxHP) * (50 + CC.Evalue(1420) * 50) / 100;
+			if (num4 >= 50 && num4 * num4 * num4 * num4 / 3 > EClass.rnd(100000000))
 			{
 				return Crit();
 			}

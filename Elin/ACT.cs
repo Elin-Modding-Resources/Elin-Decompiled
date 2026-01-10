@@ -200,7 +200,7 @@ public class Act : Element
 
 	public virtual bool IsValidTC(Card c)
 	{
-		if (!c.isChara)
+		if (!c.isChara || c.Chara.mimicry != null)
 		{
 			return c.trait.CanBeAttacked;
 		}
@@ -345,7 +345,7 @@ public class Act : Element
 				}
 			}
 		}
-		if (!(this is ActMelee) && tt.Range == TargetRange.Chara && (TC == null || !CC.CanSee(TC)))
+		if (!(this is ActMelee) && tt.Range == TargetRange.Chara && (TC == null || !CC.CanSee(TC) || TC.Chara?.mimicry != null))
 		{
 			return false;
 		}

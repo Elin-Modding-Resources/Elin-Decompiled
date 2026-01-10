@@ -252,24 +252,29 @@ public class Religion : EClass
 		return false;
 	}
 
-	public bool IsValidArtifact(string id)
+	public static Religion GetArtifactDeity(string id)
 	{
 		return id switch
 		{
-			"gun_mani" => this == EClass.game.religions.Machine, 
-			"cloak_mani" => this == EClass.game.religions.Machine, 
-			"scythe_kumi" => this == EClass.game.religions.Harvest, 
-			"blunt_earth" => this == EClass.game.religions.Earth, 
-			"luckydagger" => this == EClass.game.religions.Luck, 
-			"staff_element" => this == EClass.game.religions.Element, 
-			"windbow" => this == EClass.game.religions.Wind, 
-			"shirt_wind" => this == EClass.game.religions.Wind, 
-			"pole_holy" => this == EClass.game.religions.Healing, 
-			"sword_muramasa2" => this == EClass.game.religions.MoonShadow, 
-			"kogitsunemaru" => this == EClass.game.religions.Trickery, 
-			"warmonger" => this == EClass.game.religions.Strife, 
-			_ => false, 
+			"gun_mani" => EClass.game.religions.Machine, 
+			"cloak_mani" => EClass.game.religions.Machine, 
+			"scythe_kumi" => EClass.game.religions.Harvest, 
+			"blunt_earth" => EClass.game.religions.Earth, 
+			"luckydagger" => EClass.game.religions.Luck, 
+			"staff_element" => EClass.game.religions.Element, 
+			"windbow" => EClass.game.religions.Wind, 
+			"shirt_wind" => EClass.game.religions.Wind, 
+			"pole_holy" => EClass.game.religions.Healing, 
+			"sword_muramasa2" => EClass.game.religions.MoonShadow, 
+			"kogitsunemaru" => EClass.game.religions.Trickery, 
+			"warmonger" => EClass.game.religions.Strife, 
+			_ => null, 
 		};
+	}
+
+	public bool IsValidArtifact(string id)
+	{
+		return this == GetArtifactDeity(id);
 	}
 
 	public static Thing Reforge(string id, Point pos = null, bool first = true)

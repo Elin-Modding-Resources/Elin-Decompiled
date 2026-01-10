@@ -103,6 +103,8 @@ public class Chara : Card, IPathfindWalker
 
 	public ConSuspend conSuspend;
 
+	public ConTransmuteMimic mimicry;
+
 	public Emo2 emoIcon;
 
 	public int happiness;
@@ -1356,6 +1358,10 @@ public class Chara : Card, IPathfindWalker
 
 	public override string GetName(NameStyle style, int num = -1)
 	{
+		if (mimicry != null)
+		{
+			return mimicry.thing.GetName(style, num);
+		}
 		if (base.isBackerContent && EClass.core.config.backer.Show(base.c_idBacker))
 		{
 			if (id == "follower" && !IsGlobal)
@@ -1747,7 +1753,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			base.isHidden = false;
 		}
-		visibleWithTelepathy = !IsUndead && !IsMachine && !IsHorror && !IsMultisize;
+		visibleWithTelepathy = mimicry == null && !IsUndead && !IsMachine && !IsHorror && !IsMultisize;
 		SetDirtySpeed();
 		if (host != null && !calledRecursive && host.source != null)
 		{
@@ -1878,7 +1884,9 @@ public class Chara : Card, IPathfindWalker
 			if (host.ride == this)
 			{
 				_Speed = Evalue(79);
-				_Speed = _Speed * 100 / Mathf.Clamp(100 + (int)_Speed * ((!race.tag.Contains("noRide")) ? 1 : 5) - base.STR - host.EvalueRiding() * 2 - (race.tag.Contains("ride") ? 50 : 0), 100, 1000);
+				int a = Evalue(1423);
+				int value = 100 + (int)_Speed * ((!race.tag.Contains("noRide")) ? 1 : 5) * Mathf.Max(a, 1) - base.STR - host.EvalueRiding() * 2 - (race.tag.Contains("ride") ? 50 : 0);
+				_Speed = _Speed * 100 / Mathf.Clamp(value, 100, 1000);
 			}
 			else
 			{
@@ -2262,6 +2270,10 @@ public class Chara : Card, IPathfindWalker
 		}
 		body.RefreshBodyParts();
 		elements.ApplyElementMap(base.uid, SourceValueType.Chara, race.elementMap, base.DefaultLV, remove, applyFeat: true);
+		if (!remove && race.id == "bike" && id != "bike_cub")
+		{
+			SetFeat(1423, (id == "chara" || id == "player") ? 10 : (1 + EClass.rnd(10)));
+		}
 	}
 
 	public void ChangeRace(string idNew)
@@ -2506,7 +2518,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				foreach (Chara chara in p.detail.charas)
 				{
-					if (chara.IsHostile(this) || chara.IsHostile() || !chara.trait.CanBePushed)
+					if (chara.mimicry == null && (chara.IsHostile(this) || chara.IsHostile() || !chara.trait.CanBePushed))
 					{
 						if (cancelAI && EClass.pc.ai is GoalManualMove)
 						{
@@ -2894,13 +2906,25 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPC)
 		{
+			EClass.player.renderExtraTime = 0f;
 			if (EClass._zone.IsRegion)
 			{
 				actTime *= EClass.setting.render.anime.regionSpeed;
 			}
 			else if ((newPoint.x > pos.x && newPoint.z > pos.z) || (newPoint.x < pos.x && newPoint.z < pos.z))
 			{
-				actTime += actTime * EClass.setting.render.anime.diagonalSpeed;
+				EClass.player.renderExtraTime = actTime * EClass.setting.render.anime.diagonalSpeed;
+			}
+		}
+		if (newPoint.HasChara)
+		{
+			foreach (Chara item in newPoint.ListCharas())
+			{
+				if (item.mimicry != null && item.IsHostile(this))
+				{
+					item.mimicry.RevealMimicry(this, surprise: true);
+					return MoveResult.Event;
+				}
 			}
 		}
 		if (newPoint.cell.hasDoor)
@@ -3046,30 +3070,30 @@ public class Chara : Card, IPathfindWalker
 			PlaySound("Footstep/Extra/pcfootstep");
 			if (pos.HasThing)
 			{
-				foreach (Card item in pos.ListCards())
+				foreach (Card item2 in pos.ListCards())
 				{
-					if (!item.isThing || item.placeState != 0 || item.ignoreAutoPick)
+					if (!item2.isThing || item2.placeState != 0 || item2.ignoreAutoPick)
 					{
 						continue;
 					}
 					if (EClass.core.config.game.advancedMenu)
 					{
 						Window.SaveData dataPick = EClass.player.dataPick;
-						ContainerFlag containerFlag = item.category.GetRoot().id.ToEnum<ContainerFlag>();
+						ContainerFlag containerFlag = item2.category.GetRoot().id.ToEnum<ContainerFlag>();
 						if (containerFlag == ContainerFlag.none)
 						{
 							containerFlag = ContainerFlag.other;
 						}
-						if ((dataPick.noRotten && item.IsDecayed) || (dataPick.onlyRottable && item.trait.Decay == 0))
+						if ((dataPick.noRotten && item2.IsDecayed) || (dataPick.onlyRottable && item2.trait.Decay == 0))
 						{
 							continue;
 						}
 						if (dataPick.userFilter)
 						{
-							switch (dataPick.IsFilterPass(item.GetName(NameStyle.Full, 1)))
+							switch (dataPick.IsFilterPass(item2.GetName(NameStyle.Full, 1)))
 							{
 							case Window.SaveData.FilterResult.PassWithoutFurtherTest:
-								Pick(item.Thing);
+								Pick(item2.Thing);
 								continue;
 							case Window.SaveData.FilterResult.Block:
 								continue;
@@ -3079,20 +3103,20 @@ public class Chara : Card, IPathfindWalker
 						{
 							foreach (int cat in dataPick.cats)
 							{
-								if (item.category.uid == cat)
+								if (item2.category.uid == cat)
 								{
-									Pick(item.Thing);
+									Pick(item2.Thing);
 								}
 							}
 						}
 						else if (!dataPick.flag.HasFlag(containerFlag))
 						{
-							Pick(item.Thing);
+							Pick(item2.Thing);
 						}
 					}
 					else
 					{
-						Pick(item.Thing);
+						Pick(item2.Thing);
 					}
 				}
 			}
@@ -3747,26 +3771,29 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		case 10:
-			if (!HasElement(1250))
+			if (HasElement(1250))
 			{
-				break;
-			}
-			if (!HasCondition<ConVampire>())
-			{
-				AddCondition<ConVampire>();
-			}
-			if (!IsPC && !HasCooldown(8793))
-			{
-				bool flag = false;
-				flag = ((!HasCondition<ConTransmuteBat>()) ? (!HasElement(431) && pos.IsSunLit) : (body.HasElement(431) || (EClass.world.date.IsNight && !pos.IsSunLit)));
-				if (flag && base.IsPCFactionOrMinion && !EClass._zone.IsPCFactionOrTent && EClass._zone.HasLaw && pos.ListWitnesses(this).Count > 0 && !HasCondition<ConBurning>())
+				if (!HasCondition<ConVampire>())
 				{
-					flag = false;
+					AddCondition<ConVampire>();
 				}
-				if (flag)
+				if (!IsPC && !HasCooldown(8793))
 				{
-					UseAbility("SpTransmuteBat", this);
+					bool flag = false;
+					flag = ((!HasCondition<ConTransmuteBat>()) ? (!HasElement(431) && pos.IsSunLit) : (body.HasElement(431) || (EClass.world.date.IsNight && !pos.IsSunLit)));
+					if (flag && base.IsPCFactionOrMinion && !EClass._zone.IsPCFactionOrTent && EClass._zone.HasLaw && pos.ListWitnesses(this).Count > 0 && !HasCondition<ConBurning>())
+					{
+						flag = false;
+					}
+					if (flag)
+					{
+						UseAbility("SpTransmuteBat", this);
+					}
 				}
+			}
+			if (HasElement(1423) && !HasCondition<ConPeaky>())
+			{
+				AddCondition<ConPeaky>();
 			}
 			break;
 		}
@@ -5841,6 +5868,7 @@ public class Chara : Card, IPathfindWalker
 			EClass.player.ModKarma(-1);
 		}
 		t.PlayEffect("kick");
+		t.mimicry?.RevealMimicry(this, surprise: false);
 	}
 
 	public bool UseAbility(int idAct, Card tc = null, Point pos = null, bool pt = false)
@@ -6023,7 +6051,10 @@ public class Chara : Card, IPathfindWalker
 			{
 				num6 /= 2;
 			}
-			PlayEffect("cast");
+			if (isSynced)
+			{
+				PlayEffect("cast");
+			}
 			mana.Mod(-num6);
 			if (isDead)
 			{
@@ -6475,6 +6506,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
+		if (mimicry != null)
+		{
+			return false;
+		}
 		bool flag = enemy != null || ai is GoalCombat;
 		int num = (base.PER + Evalue(210) * 2) * ((!flag) ? 1 : 2);
 		bool flag2 = IsPCParty && !IsPC && EClass.game.config.tactics.dontWander;
@@ -6484,7 +6519,7 @@ public class Chara : Card, IPathfindWalker
 		for (int i = 0; i < EClass._map.charas.Count; i++)
 		{
 			Chara chara2 = EClass._map.charas[i];
-			if (chara2 == this || !IsHostile(chara2) || !CanSee(chara2))
+			if (chara2 == this || !IsHostile(chara2) || !CanSee(chara2) || chara2.mimicry != null)
 			{
 				continue;
 			}
@@ -6531,7 +6566,7 @@ public class Chara : Card, IPathfindWalker
 		for (int i = 0; i < EClass._map.charas.Count; i++)
 		{
 			Chara chara = EClass._map.charas[i];
-			if (chara != this && chara != enemy && IsHostile(chara) && Dist(chara) <= 1 && CanInteractTo(chara.pos))
+			if (chara != this && chara != enemy && chara.mimicry == null && IsHostile(chara) && Dist(chara) <= 1 && CanInteractTo(chara.pos))
 			{
 				DoHostileAction(chara);
 				enemy = chara;
@@ -6581,7 +6616,7 @@ public class Chara : Card, IPathfindWalker
 				return true;
 			}
 		}
-		if (id == "unicorn" && c.HasElement(1216))
+		if (id == "unicorn" && (Evalue(418) < 0 || (c.HasElement(1216) && c.Evalue(418) < 1)))
 		{
 			return true;
 		}
@@ -6758,6 +6793,12 @@ public class Chara : Card, IPathfindWalker
 		if (renderer.replacer != null)
 		{
 			p.tile = renderer.replacer.tile * ((!flipX) ? 1 : (-1));
+			if (renderer.replacer.mat != -1)
+			{
+				p.mat = EClass.sources.materials.rows.TryGet(renderer.replacer.mat, 0);
+				p.matColor = BaseTileMap.GetColorInt(ref p.mat.matColor, 100);
+				p.color -= 1048576f;
+			}
 		}
 		else if (source._tiles_snow.Length != 0 && EClass._zone.IsSnowCovered)
 		{
@@ -6785,6 +6826,10 @@ public class Chara : Card, IPathfindWalker
 
 	public override string GetHoverText()
 	{
+		if (mimicry != null)
+		{
+			return mimicry.thing.GetHoverText();
+		}
 		string text = base.Name;
 		if (IsFriendOrAbove())
 		{
@@ -6857,6 +6902,10 @@ public class Chara : Card, IPathfindWalker
 
 	public override string GetHoverText2()
 	{
+		if (mimicry != null)
+		{
+			return mimicry.thing.GetHoverText2();
+		}
 		string text = "";
 		if (knowFav)
 		{
