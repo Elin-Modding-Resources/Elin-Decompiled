@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.256 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.257 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -183,8 +183,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a73caba75a4e1224a76a46fae1bb985f0 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f2848978b48514f88d601a68f24c61 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a43f2848978b48514f88d601a68f24c61">Start</a> ()</td></tr>
 <tr class="separator:a43f2848978b48514f88d601a68f24c61 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86dae97e12d1c97fa2b693f528ea2bb7 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a86dae97e12d1c97fa2b693f528ea2bb7">TryNullify</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
-<tr class="separator:a86dae97e12d1c97fa2b693f528ea2bb7 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadc3dae2ff663a7640ef343f97681c5 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#adadc3dae2ff663a7640ef343f97681c5">TryNullify</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
+<tr class="separator:adadc3dae2ff663a7640ef343f97681c5 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67f6ff3e9f992f221d0018d8ef5d0a2 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#af67f6ff3e9f992f221d0018d8ef5d0a2">OnBeforeStart</a> ()</td></tr>
 <tr class="separator:af67f6ff3e9f992f221d0018d8ef5d0a2 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b906e1dde65d20a17f961c9fe57ba03 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a5b906e1dde65d20a17f961c9fe57ba03">OnStart</a> ()</td></tr>
@@ -323,6 +323,8 @@ Properties</h2></td></tr>
 <tr class="separator:afaf2494eaf8d9e427a88f248d0e77142 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68c88f07a0d161a580dbee29aa406a8f inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">RefString1</a><code> [get]</code></td></tr>
 <tr class="separator:a68c88f07a0d161a580dbee29aa406a8f inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429bf85324fbbeacbb1608449ccfade4 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a429bf85324fbbeacbb1608449ccfade4">ShouldTryNullify</a><code> [get]</code></td></tr>
+<tr class="separator:a429bf85324fbbeacbb1608449ccfade4 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b548fa5d2418b3875dcf467d30f45a7 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a4b548fa5d2418b3875dcf467d30f45a7">CanManualRemove</a><code> [get]</code></td></tr>
 <tr class="separator:a4b548fa5d2418b3875dcf467d30f45a7 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classBaseStats"><td colspan="2" onclick="javascript:toggleInherit('properties_classBaseStats')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classBaseStats.html">BaseStats</a></td></tr>
@@ -795,10 +797,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
 <div class="line"><span class="lineno">  123</span>        list.Add((<a class="code hl_property" href="classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5">isDebuff</a> ? <span class="stringliteral">&quot;hintDebuffStats&quot;</span> : <span class="stringliteral">&quot;hintBuffStats&quot;</span>).lang(base.sourceElement.GetName(), <a class="code hl_function" href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">CalcValue</a>().<a class="code hl_function" href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">ToString</a>() ?? <span class="stringliteral">&quot;&quot;</span>));</div>
 <div class="line"><span class="lineno">  124</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00180">BaseCondition.cs:180</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00182">BaseCondition.cs:182</a></div></div>
 <div class="ttc" id="aclassConBuffStats_html_ab6f75831ff23bb346c6511979b5282e1"><div class="ttname"><a href="classConBuffStats.html#ab6f75831ff23bb346c6511979b5282e1">ConBuffStats.CalcValue</a></div><div class="ttdeci">int CalcValue()</div><div class="ttdef"><b>Definition:</b> <a href="ConBuffStats_8cs_source.html#l00108">ConBuffStats.cs:108</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00108">CalcValue()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00180">BaseCondition.ToString()</a>.</p>
+<p class="reference">References <a class="el" href="ConBuffStats_8cs_source.html#l00108">CalcValue()</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00182">BaseCondition.ToString()</a>.</p>
 
 </div>
 </div>
@@ -837,13 +839,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   89</span>        }</div>
 <div class="line"><span class="lineno">   90</span>    }</div>
 <div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06188">Card.cs:6188</a></div></div>
-<div class="ttc" id="aclassCard_html_a8e3d176eebbdd8df4f5868aa199d488a"><div class="ttname"><a href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">Card.PlayEffect</a></div><div class="ttdeci">Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06222">Card.cs:6222</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06865">Card.cs:6865</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06219">Card.cs:6219</a></div></div>
+<div class="ttc" id="aclassCard_html_a8e3d176eebbdd8df4f5868aa199d488a"><div class="ttname"><a href="classCard.html#a8e3d176eebbdd8df4f5868aa199d488a">Card.PlayEffect</a></div><div class="ttdeci">Effect PlayEffect(string id, bool useRenderPos=true, float range=0f, Vector3 fix=default(Vector3))</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06253">Card.cs:6253</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06896">Card.cs:6896</a></div></div>
 <div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00003">Condition.cs:4</a></div></div>
 <div class="ttc" id="aclassCondition_html_af8cb90dd6a953a82fe961d90ac7dfc7d"><div class="ttname"><a href="classCondition.html#af8cb90dd6a953a82fe961d90ac7dfc7d">Condition.ignoreEffect</a></div><div class="ttdeci">static bool ignoreEffect</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00005">Condition.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Condition_8cs_source.html#l00005">Condition.ignoreEffect</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Card_8cs_source.html#l06222">Card.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l06188">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l06865">Card.Say()</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00028">SourceManager.elements</a>, <a class="el" href="Condition_8cs_source.html#l00005">Condition.ignoreEffect</a>, <a class="el" href="ConBuffStats_8cs_source.html#l00020">isDebuff</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="Card_8cs_source.html#l06253">Card.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l06219">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l06896">Card.Say()</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
 
 </div>
 </div>

@@ -368,6 +368,7 @@ var classChara =
     [ "listHobby", "classChara.html#a6b05baee646475f11afc681d7339f386", null ],
     [ "master", "classChara.html#aa95e9700d410907e1714d11da5bfa3e3", null ],
     [ "memberType", "classChara.html#a99afe3a20d2ad672773a2258b535019f", null ],
+    [ "mimicry", "classChara.html#a6c4440624d5de3420592d1fb22ffd082", null ],
     [ "nextUse", "classChara.html#abddbec21656e77b307bf4f4cf20a2e13", null ],
     [ "orgPos", "classChara.html#a6b3bda177de9d869b6cca048c120f8d5", null ],
     [ "parasite", "classChara.html#aa8259f2ad32636b6813004383ed0ce32", null ],

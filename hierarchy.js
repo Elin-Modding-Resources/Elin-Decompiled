@@ -453,6 +453,7 @@ var hierarchy =
                   [ "ConTransmuteBat", "classConTransmuteBat.html", null ],
                   [ "ConTransmuteBroom", "classConTransmuteBroom.html", null ],
                   [ "ConTransmuteCat", "classConTransmuteCat.html", null ],
+                  [ "ConTransmuteMimic", "classConTransmuteMimic.html", null ],
                   [ "ConTransmutePutit", "classConTransmutePutit.html", null ]
                 ] ],
                 [ "ConWardMonster", "classConWardMonster.html", null ],
@@ -487,11 +488,13 @@ var hierarchy =
               [ "StanceManaCost", "classStanceManaCost.html", null ],
               [ "StanceTaunt", "classStanceTaunt.html", null ]
             ] ],
+            [ "ConAmbush", "classConAmbush.html", null ],
             [ "ConAwakening", "classConAwakening.html", null ],
             [ "ConBuffStats", "classConBuffStats.html", null ],
             [ "ConDark", "classConDark.html", null ],
             [ "ConFractured", "classConFractured.html", null ],
             [ "ConFreeze", "classConFreeze.html", null ],
+            [ "ConPeaky", "classConPeaky.html", null ],
             [ "ConReload", "classConReload.html", null ],
             [ "ConSmoking", "classConSmoking.html", null ],
             [ "ConSuffocation", "classConSuffocation.html", null ],

@@ -4,6 +4,7 @@ var classReligion =
       [ "Default", "classReligion.html#a3c46dfed1d15abea8c396e60c614e989a7a1920d61156abc05a60135aefe8bc67", null ],
       [ "Campaign", "classReligion.html#a3c46dfed1d15abea8c396e60c614e989af00a1d99f6f47917006e88a803ecde1f", null ]
     ] ],
+    [ "GetArtifactDeity", "classReligion.html#ae6df81a74156128af9ccde9e4fdb6341", null ],
     [ "GetFeat", "classReligion.html#a478a09bb7605f21efdd4b0017a7d8c2f", null ],
     [ "GetGodTalk", "classReligion.html#a3660c094a3499a71f47913645d74271a", null ],
     [ "GetOfferingMtp", "classReligion.html#a2ef23d6b84414b974d5ee47ddc532682", null ],

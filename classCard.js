@@ -3,7 +3,8 @@ var classCard =
     [ "MoveResult", "classCard.html#aabbc08144392c5bdbcc8c0d78c69cd63", [
       [ "Fail", "classCard.html#aabbc08144392c5bdbcc8c0d78c69cd63aceaa0734f0b3c738120c67344d8f3ec1", null ],
       [ "Success", "classCard.html#aabbc08144392c5bdbcc8c0d78c69cd63a505a83f220c02df2f85c3810cd9ceb38", null ],
-      [ "Door", "classCard.html#aabbc08144392c5bdbcc8c0d78c69cd63af44e14d49cd011d1e873d9fe0c4624f1", null ]
+      [ "Door", "classCard.html#aabbc08144392c5bdbcc8c0d78c69cd63af44e14d49cd011d1e873d9fe0c4624f1", null ],
+      [ "Event", "classCard.html#aabbc08144392c5bdbcc8c0d78c69cd63aa4ecfc70574394990cf17bd83df499f7", null ]
     ] ],
     [ "MoveType", "classCard.html#a9e6ab56836dd8becc6efdecaf9855fe7", [
       [ "Walk", "classCard.html#a9e6ab56836dd8becc6efdecaf9855fe7a7a16a854f32231a8df9326136b09ee62", null ],

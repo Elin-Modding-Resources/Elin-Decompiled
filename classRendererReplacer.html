@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.256 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.257 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -108,8 +108,8 @@ Inheritance diagram for RendererReplacer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4bb42157cc0bc9febd221bb1dec755bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRendererReplacer.html">RendererReplacer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRendererReplacer.html#a4bb42157cc0bc9febd221bb1dec755bb">CreateFrom</a> (string id, int shift=0)</td></tr>
-<tr class="separator:a4bb42157cc0bc9febd221bb1dec755bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5af171a00c2f76c7b6aede233db48c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRendererReplacer.html">RendererReplacer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRendererReplacer.html#aae5af171a00c2f76c7b6aede233db48c">CreateFrom</a> (string id, int shift=0, int <a class="el" href="classRendererReplacer.html#a56d7fb254aa01e5743608947534bd987">mat</a>=-1)</td></tr>
+<tr class="separator:aae5af171a00c2f76c7b6aede233db48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a> (int a, int <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>)</td></tr>
 <tr class="separator:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +140,8 @@ Static Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a6de41ed1230d912a184d3e7155c86486"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRendererReplacer.html#a6de41ed1230d912a184d3e7155c86486">tile</a> = 1820</td></tr>
 <tr class="separator:a6de41ed1230d912a184d3e7155c86486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d7fb254aa01e5743608947534bd987"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRendererReplacer.html#a56d7fb254aa01e5743608947534bd987">mat</a> = -1</td></tr>
+<tr class="separator:a56d7fb254aa01e5743608947534bd987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a701474efeade4ddbf373c31c0ee28d56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderData.html">RenderData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRendererReplacer.html#a701474efeade4ddbf373c31c0ee28d56">data</a></td></tr>
 <tr class="separator:a701474efeade4ddbf373c31c0ee28d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08c872144159c8e182f95783dfa633b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourcePref.html">SourcePref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRendererReplacer.html#a08c872144159c8e182f95783dfa633b3">pref</a></td></tr>
@@ -198,8 +200,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00001">1</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4bb42157cc0bc9febd221bb1dec755bb" name="a4bb42157cc0bc9febd221bb1dec755bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bb42157cc0bc9febd221bb1dec755bb">&#9670;&#160;</a></span>CreateFrom()</h2>
+<a id="aae5af171a00c2f76c7b6aede233db48c" name="aae5af171a00c2f76c7b6aede233db48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5af171a00c2f76c7b6aede233db48c">&#9670;&#160;</a></span>CreateFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +219,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>shift</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>shift</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mat</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -232,31 +240,34 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00009">9</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>    {</div>
-<div class="line"><span class="lineno">   11</span>        <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[id];</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classRendererReplacer.html">RendererReplacer</a></div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            <a class="code hl_variable" href="classRendererReplacer.html#a6de41ed1230d912a184d3e7155c86486">tile</a> = cardRow.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[0] + shift,</div>
-<div class="line"><span class="lineno">   15</span>            <a class="code hl_variable" href="classRendererReplacer.html#a701474efeade4ddbf373c31c0ee28d56">data</a> = cardRow.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>,</div>
-<div class="line"><span class="lineno">   16</span>            <a class="code hl_variable" href="classRendererReplacer.html#a08c872144159c8e182f95783dfa633b3">pref</a> = cardRow.pref</div>
-<div class="line"><span class="lineno">   17</span>        };</div>
-<div class="line"><span class="lineno">   18</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00011">11</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_class" href="classCardRow.html">CardRow</a> cardRow = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">cards</a>.<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[id];</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classRendererReplacer.html">RendererReplacer</a></div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <a class="code hl_variable" href="classRendererReplacer.html#a6de41ed1230d912a184d3e7155c86486">tile</a> = cardRow.<a class="code hl_variable" href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">_tiles</a>[0] + shift,</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_variable" href="classRendererReplacer.html#a701474efeade4ddbf373c31c0ee28d56">data</a> = cardRow.<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>,</div>
+<div class="line"><span class="lineno">   18</span>            <a class="code hl_variable" href="classRendererReplacer.html#a08c872144159c8e182f95783dfa633b3">pref</a> = cardRow.<a class="code hl_variable" href="classRenderRow.html#a51d3045368a420940208487ea3ed1d63">pref</a>,</div>
+<div class="line"><span class="lineno">   19</span>            <a class="code hl_variable" href="classRendererReplacer.html#a56d7fb254aa01e5743608947534bd987">mat</a> = <a class="code hl_variable" href="classRendererReplacer.html#a56d7fb254aa01e5743608947534bd987">mat</a></div>
+<div class="line"><span class="lineno">   20</span>        };</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 <div class="ttc" id="aclassCardRow_html"><div class="ttname"><a href="classCardRow.html">CardRow</a></div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00005">CardRow.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a2a871b97e038c6b15e02a011aa4d27b4"><div class="ttname"><a href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">RenderRow.renderData</a></div><div class="ttdeci">RenderData renderData</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00071">RenderRow.cs:71</a></div></div>
+<div class="ttc" id="aclassRenderRow_html_a51d3045368a420940208487ea3ed1d63"><div class="ttname"><a href="classRenderRow.html#a51d3045368a420940208487ea3ed1d63">RenderRow.pref</a></div><div class="ttdeci">SourcePref pref</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00068">RenderRow.cs:68</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_aaf53f4aef5e43b0f322eedfdb1537954"><div class="ttname"><a href="classRenderRow.html#aaf53f4aef5e43b0f322eedfdb1537954">RenderRow._tiles</a></div><div class="ttdeci">int[] _tiles</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00012">RenderRow.cs:12</a></div></div>
 <div class="ttc" id="aclassRendererReplacer_html"><div class="ttname"><a href="classRendererReplacer.html">RendererReplacer</a></div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00001">RendererReplacer.cs:2</a></div></div>
-<div class="ttc" id="aclassRendererReplacer_html_a08c872144159c8e182f95783dfa633b3"><div class="ttname"><a href="classRendererReplacer.html#a08c872144159c8e182f95783dfa633b3">RendererReplacer.pref</a></div><div class="ttdeci">SourcePref pref</div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00007">RendererReplacer.cs:7</a></div></div>
+<div class="ttc" id="aclassRendererReplacer_html_a08c872144159c8e182f95783dfa633b3"><div class="ttname"><a href="classRendererReplacer.html#a08c872144159c8e182f95783dfa633b3">RendererReplacer.pref</a></div><div class="ttdeci">SourcePref pref</div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00009">RendererReplacer.cs:9</a></div></div>
+<div class="ttc" id="aclassRendererReplacer_html_a56d7fb254aa01e5743608947534bd987"><div class="ttname"><a href="classRendererReplacer.html#a56d7fb254aa01e5743608947534bd987">RendererReplacer.mat</a></div><div class="ttdeci">int mat</div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00005">RendererReplacer.cs:5</a></div></div>
 <div class="ttc" id="aclassRendererReplacer_html_a6de41ed1230d912a184d3e7155c86486"><div class="ttname"><a href="classRendererReplacer.html#a6de41ed1230d912a184d3e7155c86486">RendererReplacer.tile</a></div><div class="ttdeci">int tile</div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00003">RendererReplacer.cs:3</a></div></div>
-<div class="ttc" id="aclassRendererReplacer_html_a701474efeade4ddbf373c31c0ee28d56"><div class="ttname"><a href="classRendererReplacer.html#a701474efeade4ddbf373c31c0ee28d56">RendererReplacer.data</a></div><div class="ttdeci">RenderData data</div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00005">RendererReplacer.cs:5</a></div></div>
+<div class="ttc" id="aclassRendererReplacer_html_a701474efeade4ddbf373c31c0ee28d56"><div class="ttname"><a href="classRendererReplacer.html#a701474efeade4ddbf373c31c0ee28d56">RendererReplacer.data</a></div><div class="ttdeci">RenderData data</div><div class="ttdef"><b>Definition:</b> <a href="RendererReplacer_8cs_source.html#l00007">RendererReplacer.cs:7</a></div></div>
 <div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceManager_html_a2adcab4aff68d4e38937ed852de5f75c"><div class="ttname"><a href="classSourceManager.html#a2adcab4aff68d4e38937ed852de5f75c">SourceManager.cards</a></div><div class="ttdeci">SourceCard cards</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00016">SourceManager.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">RenderRow._tiles</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00005">data</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00007">pref</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">RenderRow.renderData</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, and <a class="el" href="RendererReplacer_8cs_source.html#l00003">tile</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00012">RenderRow._tiles</a>, <a class="el" href="SourceManager_8cs_source.html#l00016">SourceManager.cards</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00007">data</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">SourceCard.map</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00005">mat</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00009">pref</a>, <a class="el" href="RenderRow_8cs_source.html#l00068">RenderRow.pref</a>, <a class="el" href="RenderRow_8cs_source.html#l00071">RenderRow.renderData</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, and <a class="el" href="RendererReplacer_8cs_source.html#l00003">tile</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ConBoost_8cs_source.html#l00027">ConBoost.GetRendererReplacer()</a>, <a class="el" href="ConTransmuteBat_8cs_source.html#l00007">ConTransmuteBat.GetRendererReplacer()</a>, <a class="el" href="ConTransmuteBroom_8cs_source.html#l00003">ConTransmuteBroom.GetRendererReplacer()</a>, <a class="el" href="ConTransmuteCat_8cs_source.html#l00003">ConTransmuteCat.GetRendererReplacer()</a>, and <a class="el" href="ConTransmutePutit_8cs_source.html#l00003">ConTransmutePutit.GetRendererReplacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ConBoost_8cs_source.html#l00027">ConBoost.GetRendererReplacer()</a>, <a class="el" href="ConTransmuteBat_8cs_source.html#l00007">ConTransmuteBat.GetRendererReplacer()</a>, <a class="el" href="ConTransmuteBroom_8cs_source.html#l00003">ConTransmuteBroom.GetRendererReplacer()</a>, <a class="el" href="ConTransmuteCat_8cs_source.html#l00003">ConTransmuteCat.GetRendererReplacer()</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00011">ConTransmuteMimic.GetRendererReplacer()</a>, and <a class="el" href="ConTransmutePutit_8cs_source.html#l00003">ConTransmutePutit.GetRendererReplacer()</a>.</p>
 
 </div>
 </div>
@@ -273,9 +284,27 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00007">7</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06696">Chara._CreateRenderer()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00011">CreateFrom()</a>, and <a class="el" href="CardRenderer_8cs_source.html#l00111">CardRenderer.Draw()</a>.</p>
+
+</div>
+</div>
+<a id="a56d7fb254aa01e5743608947534bd987" name="a56d7fb254aa01e5743608947534bd987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d7fb254aa01e5743608947534bd987">&#9670;&#160;</a></span>mat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RendererReplacer.mat = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00005">5</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06661">Chara._CreateRenderer()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00009">CreateFrom()</a>, and <a class="el" href="CardRenderer_8cs_source.html#l00111">CardRenderer.Draw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RendererReplacer_8cs_source.html#l00011">CreateFrom()</a>.</p>
 
 </div>
 </div>
@@ -291,9 +320,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00007">7</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00009">9</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RendererReplacer_8cs_source.html#l00009">CreateFrom()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00111">CardRenderer.Draw()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00311">CharaRenderer.DrawHat()</a>, and <a class="el" href="CardRenderer_8cs_source.html#l00755">CardRenderer.GetPref()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RendererReplacer_8cs_source.html#l00011">CreateFrom()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00111">CardRenderer.Draw()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00315">CharaRenderer.DrawHat()</a>, and <a class="el" href="CardRenderer_8cs_source.html#l00755">CardRenderer.GetPref()</a>.</p>
 
 </div>
 </div>
@@ -311,7 +340,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="RendererReplacer_8cs_source.html#l00003">3</a> of file <a class="el" href="RendererReplacer_8cs_source.html">RendererReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RendererReplacer_8cs_source.html#l00009">CreateFrom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RendererReplacer_8cs_source.html#l00011">CreateFrom()</a>.</p>
 
 </div>
 </div>

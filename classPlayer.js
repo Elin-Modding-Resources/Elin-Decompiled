@@ -153,6 +153,7 @@ var classPlayer =
     [ "realHour", "classPlayer.html#a847eca8ad13b87f908d49fe156965345", null ],
     [ "recipes", "classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b", null ],
     [ "regionMoveWarned", "classPlayer.html#acc824bd3378d38301b502ed9df34dccb", null ],
+    [ "renderExtraTime", "classPlayer.html#a4fce0a3605aaa9478d6a296e314c023f", null ],
     [ "renderThing", "classPlayer.html#ac97ee5c8658ef3885a3c4566aa411263", null ],
     [ "resetPrincipal", "classPlayer.html#a4f4f7ced54954c4099cd6cb7531b8ed6", null ],
     [ "returnInfo", "classPlayer.html#aca11b4083e157b789d15a1f3a43d9d98", null ],

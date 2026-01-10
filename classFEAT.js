@@ -102,6 +102,7 @@ var classFEAT =
     [ "featPaladin2", "classFEAT.html#a4dbab794a14ba3da41e6fe6f6aa8242e", null ],
     [ "featParty", "classFEAT.html#aec3f27b35372b4ef526d44d7ea5b4a09", null ],
     [ "featPeacemaker", "classFEAT.html#af536fcd2888198288560d83a810b2f63", null ],
+    [ "featPeaky", "classFEAT.html#a8585a4901e266c209e5426ca79f8ebb2", null ],
     [ "featPegasus", "classFEAT.html#ae0c7bd4b295f25b9f89904dd932bcc58", null ],
     [ "featPER", "classFEAT.html#a906dc281e34e3cd019db88580c10ff86", null ],
     [ "featPianist", "classFEAT.html#aecfc7d5f4c15993c4c8509bd4aee90c9", null ],

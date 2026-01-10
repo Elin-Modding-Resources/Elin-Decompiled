@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.256 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.257 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -188,8 +188,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a73caba75a4e1224a76a46fae1bb985f0 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f2848978b48514f88d601a68f24c61 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a43f2848978b48514f88d601a68f24c61">Start</a> ()</td></tr>
 <tr class="separator:a43f2848978b48514f88d601a68f24c61 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86dae97e12d1c97fa2b693f528ea2bb7 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a86dae97e12d1c97fa2b693f528ea2bb7">TryNullify</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
-<tr class="separator:a86dae97e12d1c97fa2b693f528ea2bb7 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadc3dae2ff663a7640ef343f97681c5 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#adadc3dae2ff663a7640ef343f97681c5">TryNullify</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
+<tr class="separator:adadc3dae2ff663a7640ef343f97681c5 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67f6ff3e9f992f221d0018d8ef5d0a2 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#af67f6ff3e9f992f221d0018d8ef5d0a2">OnBeforeStart</a> ()</td></tr>
 <tr class="separator:af67f6ff3e9f992f221d0018d8ef5d0a2 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b906e1dde65d20a17f961c9fe57ba03 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a5b906e1dde65d20a17f961c9fe57ba03">OnStart</a> ()</td></tr>
@@ -348,6 +348,8 @@ Properties</h2></td></tr>
 <tr class="separator:afaf2494eaf8d9e427a88f248d0e77142 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68c88f07a0d161a580dbee29aa406a8f inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">RefString1</a><code> [get]</code></td></tr>
 <tr class="separator:a68c88f07a0d161a580dbee29aa406a8f inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429bf85324fbbeacbb1608449ccfade4 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a429bf85324fbbeacbb1608449ccfade4">ShouldTryNullify</a><code> [get]</code></td></tr>
+<tr class="separator:a429bf85324fbbeacbb1608449ccfade4 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b548fa5d2418b3875dcf467d30f45a7 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a4b548fa5d2418b3875dcf467d30f45a7">CanManualRemove</a><code> [get]</code></td></tr>
 <tr class="separator:a4b548fa5d2418b3875dcf467d30f45a7 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classBaseStats"><td colspan="2" onclick="javascript:toggleInherit('properties_classBaseStats')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classBaseStats.html">BaseStats</a></td></tr>
@@ -501,14 +503,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   51</span>        }</div>
 <div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">SetTurn</a>();</div>
 <div class="line"><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02273">Card.cs:2274</a></div></div>
-<div class="ttc" id="aclassChara_html_a66914ec8271cc214ffcf6076e62ed02c"><div class="ttname"><a href="classChara.html#a66914ec8271cc214ffcf6076e62ed02c">Chara.IsMinion</a></div><div class="ttdeci">override bool IsMinion</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00626">Chara.cs:627</a></div></div>
+<div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02274">Card.cs:2275</a></div></div>
+<div class="ttc" id="aclassChara_html_a66914ec8271cc214ffcf6076e62ed02c"><div class="ttname"><a href="classChara.html#a66914ec8271cc214ffcf6076e62ed02c">Chara.IsMinion</a></div><div class="ttdeci">override bool IsMinion</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00628">Chara.cs:629</a></div></div>
 <div class="ttc" id="aclassConStrife_html_a60912300dfc3352f3ff76405302d505d"><div class="ttname"><a href="classConStrife.html#a60912300dfc3352f3ff76405302d505d">ConStrife.SetTurn</a></div><div class="ttdeci">void SetTurn()</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00060">ConStrife.cs:60</a></div></div>
 <div class="ttc" id="aclassConStrife_html_a71cd2425655059e841c7637990211202"><div class="ttname"><a href="classConStrife.html#a71cd2425655059e841c7637990211202">ConStrife.exp</a></div><div class="ttdeci">int exp</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00008">ConStrife.cs:8</a></div></div>
 <div class="ttc" id="aclassConStrife_html_ae805c1f0d6f0c9a395852acf1830d06f"><div class="ttname"><a href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">ConStrife.lv</a></div><div class="ttdeci">int lv</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00011">ConStrife.cs:11</a></div></div>
 <div class="ttc" id="aclassConStrife_html_af091639ae8ccbfb31b4090b57b9814e1"><div class="ttname"><a href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ConStrife.ExpToNext</a></div><div class="ttdeci">int ExpToNext</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00018">ConStrife.cs:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00018">ExpToNext</a>, <a class="el" href="Chara_8cs_source.html#l00627">Chara.IsMinion</a>, <a class="el" href="Card_8cs_source.html#l02274">Card.IsPCFactionOrMinion</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="ConStrife_8cs_source.html#l00060">SetTurn()</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00018">ExpToNext</a>, <a class="el" href="Chara_8cs_source.html#l00629">Chara.IsMinion</a>, <a class="el" href="Card_8cs_source.html#l02275">Card.IsPCFactionOrMinion</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="ConStrife_8cs_source.html#l00060">SetTurn()</a>.</p>
 
 </div>
 </div>
@@ -610,10 +612,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
 <div class="line"><span class="lineno">   85</span>        list.Add(<span class="stringliteral">&quot;hintStrife&quot;</span>.lang(<a class="code hl_variable" href="classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f">lv</a>.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="classConStrife.html#a71cd2425655059e841c7637990211202">exp</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_property" href="classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1">ExpToNext</a>, <a class="code hl_function" href="classConStrife.html#a0bd3313d4b821926528d4d4e9a0447d8">GetDice</a>().<a class="code hl_function" href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">ToString</a>()));</div>
 <div class="line"><span class="lineno">   86</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00180">BaseCondition.cs:180</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_af2342c63f5d3cd99e89fda90363160d1"><div class="ttname"><a href="classBaseCondition.html#af2342c63f5d3cd99e89fda90363160d1">BaseCondition.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00182">BaseCondition.cs:182</a></div></div>
 <div class="ttc" id="aclassConStrife_html_a0bd3313d4b821926528d4d4e9a0447d8"><div class="ttname"><a href="classConStrife.html#a0bd3313d4b821926528d4d4e9a0447d8">ConStrife.GetDice</a></div><div class="ttdeci">Dice GetDice()</div><div class="ttdef"><b>Definition:</b> <a href="ConStrife_8cs_source.html#l00055">ConStrife.cs:55</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00018">ExpToNext</a>, <a class="el" href="ConStrife_8cs_source.html#l00055">GetDice()</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00180">BaseCondition.ToString()</a>.</p>
+<p class="reference">References <a class="el" href="ConStrife_8cs_source.html#l00008">exp</a>, <a class="el" href="ConStrife_8cs_source.html#l00018">ExpToNext</a>, <a class="el" href="ConStrife_8cs_source.html#l00055">GetDice()</a>, <a class="el" href="ConStrife_8cs_source.html#l00011">lv</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00182">BaseCondition.ToString()</a>.</p>
 
 </div>
 </div>

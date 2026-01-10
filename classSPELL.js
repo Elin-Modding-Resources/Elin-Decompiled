@@ -246,6 +246,7 @@ var classSPELL =
     [ "SpTeleportShort", "classSPELL.html#a23d0a3944334cbd7b822adbd20a2c7f5", null ],
     [ "SpTransmuteBroom", "classSPELL.html#a2b5797697ec8b0dbc125ed9709b9225f", null ],
     [ "SpTransmuteCat", "classSPELL.html#ac81ace51f8b8395e9f3391e628d191ce", null ],
+    [ "SpTransmuteMimic", "classSPELL.html#a0b1fcb74e7fbeadbb8f2081eb4e2d72f", null ],
     [ "SpTransmutePutit", "classSPELL.html#affa7deeec6e923c0df8b85eb92b24dfb", null ],
     [ "SpUncurse", "classSPELL.html#a1ed8a3d5cc637bd209ca64e6d33d461d", null ],
     [ "SpUncurseG", "classSPELL.html#a6920d467844f030a1352ae3676567269", null ],

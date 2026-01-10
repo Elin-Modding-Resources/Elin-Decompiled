@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.256 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.257 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -182,8 +182,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a73caba75a4e1224a76a46fae1bb985f0 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f2848978b48514f88d601a68f24c61 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a43f2848978b48514f88d601a68f24c61">Start</a> ()</td></tr>
 <tr class="separator:a43f2848978b48514f88d601a68f24c61 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86dae97e12d1c97fa2b693f528ea2bb7 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a86dae97e12d1c97fa2b693f528ea2bb7">TryNullify</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
-<tr class="separator:a86dae97e12d1c97fa2b693f528ea2bb7 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadc3dae2ff663a7640ef343f97681c5 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#adadc3dae2ff663a7640ef343f97681c5">TryNullify</a> (<a class="el" href="classCondition.html">Condition</a> c)</td></tr>
+<tr class="separator:adadc3dae2ff663a7640ef343f97681c5 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67f6ff3e9f992f221d0018d8ef5d0a2 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#af67f6ff3e9f992f221d0018d8ef5d0a2">OnBeforeStart</a> ()</td></tr>
 <tr class="separator:af67f6ff3e9f992f221d0018d8ef5d0a2 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b906e1dde65d20a17f961c9fe57ba03 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a5b906e1dde65d20a17f961c9fe57ba03">OnStart</a> ()</td></tr>
@@ -338,6 +338,8 @@ Properties</h2></td></tr>
 <tr class="separator:afaf2494eaf8d9e427a88f248d0e77142 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68c88f07a0d161a580dbee29aa406a8f inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">RefString1</a><code> [get]</code></td></tr>
 <tr class="separator:a68c88f07a0d161a580dbee29aa406a8f inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429bf85324fbbeacbb1608449ccfade4 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a429bf85324fbbeacbb1608449ccfade4">ShouldTryNullify</a><code> [get]</code></td></tr>
+<tr class="separator:a429bf85324fbbeacbb1608449ccfade4 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b548fa5d2418b3875dcf467d30f45a7 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a4b548fa5d2418b3875dcf467d30f45a7">CanManualRemove</a><code> [get]</code></td></tr>
 <tr class="separator:a4b548fa5d2418b3875dcf467d30f45a7 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classBaseStats"><td colspan="2" onclick="javascript:toggleInherit('properties_classBaseStats')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classBaseStats.html">BaseStats</a></td></tr>
@@ -563,10 +565,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   31</span>        }</div>
 <div class="line"><span class="lineno">   32</span>        base.SetOwner(_owner, onDeserialize);</div>
 <div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclassCard_html_a5e0535e093f8257427b9510e045b48fc"><div class="ttname"><a href="classCard.html#a5e0535e093f8257427b9510e045b48fc">Card.CHA</a></div><div class="ttdeci">int CHA</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02349">Card.cs:2349</a></div></div>
+<div class="ttc" id="aclassCard_html_a5e0535e093f8257427b9510e045b48fc"><div class="ttname"><a href="classCard.html#a5e0535e093f8257427b9510e045b48fc">Card.CHA</a></div><div class="ttdeci">int CHA</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02350">Card.cs:2350</a></div></div>
 <div class="ttc" id="aclassConWeapon_html_a19d89d5302482a64ba0fc4ca9a5547bd"><div class="ttname"><a href="classConWeapon.html#a19d89d5302482a64ba0fc4ca9a5547bd">ConWeapon.cha</a></div><div class="ttdeci">int cha</div><div class="ttdef"><b>Definition:</b> <a href="ConWeapon_8cs_source.html#l00006">ConWeapon.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l02349">Card.CHA</a>, and <a class="el" href="ConWeapon_8cs_source.html#l00006">cha</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l02350">Card.CHA</a>, and <a class="el" href="ConWeapon_8cs_source.html#l00006">cha</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,12 @@
 var NAVTREEINDEX37 =
 {
+"classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1fa6adf97f83acf6453d4a6a4b1070f3754":[1,0,222,3,2],
+"classBaseTileSelector.html#a126c209eb9b08ada2549a86c6fc6dd1faa0bf169f2539e893e00d7b1296bc4d8e":[1,0,222,3,1],
+"classBaseTileSelector.html#a1b957fec671af36a81feeaf0be5bb386":[1,0,222,20],
+"classBaseTileSelector.html#a1eb3304c4b9c85f4516ad2403d7cd6c0":[1,0,222,10],
+"classBaseTileSelector.html#a20b4478f25f4e4928cbf272b34ee095a":[1,0,222,18],
+"classBaseTileSelector.html#a2a511bcc6789bf36f4a33e82486f368a":[1,0,222,21],
+"classBaseTileSelector.html#a316c924dc300646124eadf1c068c9641":[1,0,222,28],
 "classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244b":[1,0,222,0],
 "classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244ba3cfce651e667ab85486dd42a8185f98a":[1,0,222,0,0],
 "classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244bafa1124a61230804809a9b5fc57932b40":[1,0,222,0,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX37 =
 "classBiomeProfile_1_1Style.html#a91000127ca4e93af9b8a1b9ba2eefca1":[1,0,227,9,3],
 "classBiomeProfile_1_1Style.html#a918232cd209c893bc586aa272ba63b16":[1,0,227,9,5],
 "classBiomeProfile_1_1Style.html#a9956ee0fc56f4160169f12765941c4d0":[1,0,227,9,8],
-"classBiomeProfile_1_1Style.html#a9cd06ab5d59a26d5dde34e67bc964488":[1,0,227,9,4],
-"classBiomeProfile_1_1Style.html#ac46f8c498ed451fc38d2dbffc36a0825":[1,0,227,9,10],
-"classBiomeProfile_1_1Style.html#ac79abfd748c78dda71beb3377ce93dfe":[1,0,227,9,0],
-"classBiomeProfile_1_1Style.html#ae25273318844ca7fd6e0a454ac7084d4":[1,0,227,9,2],
-"classBiomeProfile_1_1Style.html#afe32cfbfda489fff8da633d29f65db6a":[1,0,227,9,6],
-"classBiomeProfile_1_1Tile.html":[1,0,227,10],
-"classBiomeProfile_1_1Tile.html#a1fc0c7959cb667cbac383c3901438f3e":[1,0,227,10,7],
-"classBiomeProfile_1_1Tile.html#a30003e7d11d27ef5b1d01b1acf99f9c8":[1,0,227,10,8]
+"classBiomeProfile_1_1Style.html#a9cd06ab5d59a26d5dde34e67bc964488":[1,0,227,9,4]
 };
