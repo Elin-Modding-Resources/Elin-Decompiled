@@ -1,5 +1,13 @@
 var NAVTREEINDEX145 =
 {
+"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a3c843d0aa67b0ca40d49ca8ab334f82b":[0,4,0,2,1,4],
+"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a3c843d0aa67b0ca40d49ca8ab334f82b":[1,0,0,2,1,4],
+"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a4c9d581b96222792bb7c7d115fa76426":[0,4,0,2,1,1],
+"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a4c9d581b96222792bb7c7d115fa76426":[1,0,0,2,1,1],
+"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#ae32607abb76765bb8f0d9a9b5128979c":[0,4,0,2,1,2],
+"structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#ae32607abb76765bb8f0d9a9b5128979c":[1,0,0,2,1,2],
+"structB83_1_1Win32_1_1CWPSTRUCT.html":[1,0,3,0,0],
+"structB83_1_1Win32_1_1CWPSTRUCT.html":[0,4,3,0,0],
 "structB83_1_1Win32_1_1CWPSTRUCT.html#a2de5f14602a71936bbf97aaa08a34e34":[1,0,3,0,0,1],
 "structB83_1_1Win32_1_1CWPSTRUCT.html#a2de5f14602a71936bbf97aaa08a34e34":[0,4,3,0,0,1],
 "structB83_1_1Win32_1_1CWPSTRUCT.html#a862b4a63b808e7715e0dcb6c6dac721c":[1,0,3,0,0,2],

@@ -1,5 +1,13 @@
 var NAVTREEINDEX123 =
 {
+"classTraitPowerStatue.html#a81a166b19fd010b11d7644172e5abf07":[1,0,1796,5],
+"classTraitPowerStatue.html#a9619a7baffa3cd4a949fb97c7975dd39":[1,0,1796,7],
+"classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1796,10],
+"classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1796,8],
+"classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1796,9],
+"classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1796,4],
+"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1796,1],
+"classTraitPowerStatue.html#ad4219ceac075b2bef9fd98c90c22f651":[1,0,1796,6],
 "classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3":[1,0,1796,3],
 "classTraitPunishBall.html":[1,0,1797],
 "classTraitPunishBall.html#a7aef7ba745933c57778ad77772f5b1ea":[1,0,1797,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitSeesaw.html#a889c15329db166f80a71e35ffa51b9b0":[1,0,1841,1],
 "classTraitSelfFactory.html":[1,0,1842],
 "classTraitSelfFactory.html#a7286b109cc525b39fad876445a9eb246":[1,0,1842,0],
-"classTraitSet.html":[1,0,1843],
-"classTraitSet.html#a0869a9868e1b1e44353ec0a21bae1b45":[1,0,1843,1],
-"classTraitSet.html#a146a2c859b3bab3e0dfce17e7dff2f0a":[1,0,1843,0],
-"classTraitSet.html#a31116c32394fefbde5691ead34f7af64":[1,0,1843,2],
-"classTraitShackle.html":[1,0,1844],
-"classTraitShackle.html#a0d385cbd1b4dbd50b850831f8ec9c49a":[1,0,1844,10],
-"classTraitShackle.html#a141ae3562c5f5c57a3a5ca23924a16eb":[1,0,1844,1],
-"classTraitShackle.html#a15d46448b2dc3ebcd67dba416f64c1e3":[1,0,1844,7],
-"classTraitShackle.html#a21f028eeb203e4b84236c68e1e812583":[1,0,1844,11]
+"classTraitSet.html":[1,0,1843]
 };

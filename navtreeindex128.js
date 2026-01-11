@@ -1,5 +1,13 @@
 var NAVTREEINDEX128 =
 {
+"classUIButton.html#af235c51f6c1cf671bb71bbdd7567668c":[1,0,2008,38],
+"classUIButton.html#af7d9161a76d6a8973fe99c290333c50f":[1,0,2008,8],
+"classUIButton.html#afa913c0d00a0816f0fea174f9cfe5025":[1,0,2008,59],
+"classUIButton.html#afc734e4d75bb8511fcf170192096df78":[1,0,2008,17],
+"classUIButton.html#afe5e249c90a44fb5c9dafc5b8b48c58d":[1,0,2008,21],
+"classUIButtonHighlighter.html":[1,0,2009],
+"classUIButtonHighlighter.html#a321e579e5ef11fe4cc9a65852d3501b7":[1,0,2009,3],
+"classUIButtonHighlighter.html#a48fe0afbb2f8416c4377df0abab242e6":[1,0,2009,4],
 "classUIButtonHighlighter.html#a5bbeca3b75c2c794167b20add1e9642a":[1,0,2009,2],
 "classUIButtonHighlighter.html#a5c665b6cc86d6db4f1ec58ffb7bd7c5a":[1,0,2009,0],
 "classUIButtonHighlighter.html#a9fe3dd8a576671f89f904dd8b8975879":[1,0,2009,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX128 =
 "classUICurrency_1_1Item.html#a6862711ea043fc07790c94845b39fb4a":[1,0,2022,0,0],
 "classUICurrency_1_1Item.html#ad5b5dcca3d5e950ca008ffd3ecaa243e":[1,0,2022,0,1],
 "classUICurrency_1_1Options.html":[1,0,2022,1],
-"classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0":[1,0,2022,1,8],
-"classUICurrency_1_1Options.html#a69b5d9247671bbbbd91c1449a9e2f54f":[1,0,2022,1,4],
-"classUICurrency_1_1Options.html#a733eb4143c788d78a73809faa1a3fee4":[1,0,2022,1,3],
-"classUICurrency_1_1Options.html#a82d6d6f53efb6d1b32a58e77462329d4":[1,0,2022,1,12],
-"classUICurrency_1_1Options.html#a8bba5f36557129345ac0e86912a02fe5":[1,0,2022,1,13],
-"classUICurrency_1_1Options.html#a8e3a8daab9898807a4ed4b0769cf0f5e":[1,0,2022,1,1],
-"classUICurrency_1_1Options.html#a8f0559b289a0f6325df1a9425142ef03":[1,0,2022,1,2],
-"classUICurrency_1_1Options.html#a9fa0f16bd746f20e84db23910961dc08":[1,0,2022,1,6],
-"classUICurrency_1_1Options.html#aaa5dcd3d25b4f362c4d0e0bfd65cad8a":[1,0,2022,1,0]
+"classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0":[1,0,2022,1,8]
 };

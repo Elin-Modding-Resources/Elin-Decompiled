@@ -19,5 +19,6 @@ var classAI__Goto =
     [ "CancelWhenMoved", "classAI__Goto.html#aaad7450c1778f846f601b1e617745346", null ],
     [ "InformCancel", "classAI__Goto.html#ab7d24195583ade86364a7f0a290d62b1", null ],
     [ "PushChara", "classAI__Goto.html#a242dfc9e55093eb278b52e9565e0afcf", null ],
+    [ "ShouldEndMimicry", "classAI__Goto.html#a4dc525dd6b04d093816937aef3c015c5", null ],
     [ "UseTurbo", "classAI__Goto.html#a81c07626932463e90b1bed36c0946644", null ]
 ];

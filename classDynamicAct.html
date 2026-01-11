@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.257 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.258 Nightly</span>
    </div>
   </td>
  </tr>
@@ -307,6 +307,8 @@ Properties</h2></td></tr>
 <tr class="separator:a3e50d8f91755e4a713c4dd88b64fa0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa51f40535179832357a3a0f21f08d14d"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classCursorInfo.html">CursorInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDynamicAct.html#aa51f40535179832357a3a0f21f08d14d">CursorIcon</a><code> [get]</code></td></tr>
 <tr class="separator:aa51f40535179832357a3a0f21f08d14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9e17f1355e3f7a98cefc5b1bb0dfd8"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDynamicAct.html#a5a9e17f1355e3f7a98cefc5b1bb0dfd8">ShouldEndMimicry</a><code> [get]</code></td></tr>
+<tr class="separator:a5a9e17f1355e3f7a98cefc5b1bb0dfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a462e2ee2e4da20aa761ef4a5c072ee87"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDynamicAct.html#a462e2ee2e4da20aa761ef4a5c072ee87">CloseLayers</a><code> [get]</code></td></tr>
 <tr class="separator:a462e2ee2e4da20aa761ef4a5c072ee87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5836943eb65241c58f1139db5a101ff6"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDynamicAct.html#a5836943eb65241c58f1139db5a101ff6">PerformDistance</a><code> [get]</code></td></tr>
@@ -358,6 +360,8 @@ Properties</h2></td></tr>
 <tr class="separator:a6907e0e77355bfb4343b92a54c75c6ab inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b19e8b1c1c68a229ee473e134f8eb01 inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#a8b19e8b1c1c68a229ee473e134f8eb01">HideRightInfo</a><code> [get]</code></td></tr>
 <tr class="separator:a8b19e8b1c1c68a229ee473e134f8eb01 inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb620f052897d747d5ec5d45e6c448f inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#afdb620f052897d747d5ec5d45e6c448f">ShouldEndMimicry</a><code> [get]</code></td></tr>
+<tr class="separator:afdb620f052897d747d5ec5d45e6c448f inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac656d6f66d0e2b01101e77be466d2f3e inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#ac656d6f66d0e2b01101e77be466d2f3e">HaveLongPressAction</a><code> [get]</code></td></tr>
 <tr class="separator:ac656d6f66d0e2b01101e77be466d2f3e inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11990d35974a3e8fea8e758384c4ee30 inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#a11990d35974a3e8fea8e758384c4ee30">Radius</a><code> [get]</code></td></tr>
@@ -593,13 +597,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00066">66</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">id</span> = _id;</div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_variable" href="classDynamicAct.html#a5f5cc9d285224eda3b9f7f04f9d554af">onPerform</a> = _onPerform;</div>
-<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="classDynamicAct.html#a9c44da9a490902cc2db47b25d14a0406">closeLayers</a> = _closeLayers;</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="classDynamicAct.html#a9ca6738f69967ba3c22ae7c0d7353c13">lastAct</a> = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00068">68</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordtype">id</span> = _id;</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="classDynamicAct.html#a5f5cc9d285224eda3b9f7f04f9d554af">onPerform</a> = _onPerform;</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="classDynamicAct.html#a9c44da9a490902cc2db47b25d14a0406">closeLayers</a> = _closeLayers;</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_variable" href="classDynamicAct.html#a9ca6738f69967ba3c22ae7c0d7353c13">lastAct</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
 <div class="ttc" id="aclassDynamicAct_html_a5f5cc9d285224eda3b9f7f04f9d554af"><div class="ttname"><a href="classDynamicAct.html#a5f5cc9d285224eda3b9f7f04f9d554af">DynamicAct.onPerform</a></div><div class="ttdeci">Func&lt; bool &gt; onPerform</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAct_8cs_source.html#l00009">DynamicAct.cs:9</a></div></div>
 <div class="ttc" id="aclassDynamicAct_html_a9c44da9a490902cc2db47b25d14a0406"><div class="ttname"><a href="classDynamicAct.html#a9c44da9a490902cc2db47b25d14a0406">DynamicAct.closeLayers</a></div><div class="ttdeci">bool closeLayers</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAct_8cs_source.html#l00013">DynamicAct.cs:13</a></div></div>
 <div class="ttc" id="aclassDynamicAct_html_a9ca6738f69967ba3c22ae7c0d7353c13"><div class="ttname"><a href="classDynamicAct.html#a9ca6738f69967ba3c22ae7c0d7353c13">DynamicAct.lastAct</a></div><div class="ttdeci">static DynamicAct lastAct</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAct_8cs_source.html#l00005">DynamicAct.cs:5</a></div></div>
@@ -635,10 +639,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classAct.html#ad78fda455786213d477bf3acfd262968">Act</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00061">61</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00063">63</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Get</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
 <div class="ttc" id="aclassLang_html_a87ee4b30187ae525639ccc297e2c0823"><div class="ttname"><a href="classLang.html#a87ee4b30187ae525639ccc297e2c0823">Lang.Get</a></div><div class="ttdeci">static string Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00091">Lang.cs:91</a></div></div>
 </div><!-- fragment -->
@@ -671,14 +675,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classAct.html#a16165bf29ed263491e1e1ac5903ee738">Act</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00074">74</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDynamicAct.html#a5f5cc9d285224eda3b9f7f04f9d554af">onPerform</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classDynamicAct.html#a5f5cc9d285224eda3b9f7f04f9d554af">onPerform</a>();</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00076">76</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDynamicAct.html#a5f5cc9d285224eda3b9f7f04f9d554af">onPerform</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classDynamicAct.html#a5f5cc9d285224eda3b9f7f04f9d554af">onPerform</a>();</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DynamicAct_8cs_source.html#l00009">onPerform</a>.</p>
 
@@ -731,7 +735,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00013">13</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DynamicAct_8cs_source.html#l00066">DynamicAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DynamicAct_8cs_source.html#l00068">DynamicAct()</a>.</p>
 
 </div>
 </div>
@@ -821,7 +825,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00005">5</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DynamicAct_8cs_source.html#l00066">DynamicAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DynamicAct_8cs_source.html#l00068">DynamicAct()</a>.</p>
 
 </div>
 </div>
@@ -855,7 +859,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00009">9</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DynamicAct_8cs_source.html#l00066">DynamicAct()</a>, and <a class="el" href="DynamicAct_8cs_source.html#l00074">Perform()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DynamicAct_8cs_source.html#l00068">DynamicAct()</a>, and <a class="el" href="DynamicAct_8cs_source.html#l00076">Perform()</a>.</p>
 
 </div>
 </div>
@@ -880,17 +884,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00037">37</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDynamicAct.html#ab0dbc659ad059d030834ccac2c5067af">canRepeat</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   42</span>            {</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classDynamicAct.html#ab0dbc659ad059d030834ccac2c5067af">canRepeat</a>();</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00039">39</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDynamicAct.html#ab0dbc659ad059d030834ccac2c5067af">canRepeat</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   44</span>            {</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classDynamicAct.html#ab0dbc659ad059d030834ccac2c5067af">canRepeat</a>();</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
 <div class="ttc" id="aclassDynamicAct_html_ab0dbc659ad059d030834ccac2c5067af"><div class="ttname"><a href="classDynamicAct.html#ab0dbc659ad059d030834ccac2c5067af">DynamicAct.canRepeat</a></div><div class="ttdeci">Func&lt; bool &gt; canRepeat</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAct_8cs_source.html#l00011">DynamicAct.cs:11</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -915,7 +919,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00033">33</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00035">35</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
 
 </div>
 </div>
@@ -1011,17 +1015,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00049">49</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   52</span>        {</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (!(<span class="keywordtype">id</span> == <span class="stringliteral">&quot;actNewZone&quot;</span>))</div>
-<div class="line"><span class="lineno">   54</span>            {</div>
-<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classDynamicAct.html#a30d398978c8fd49d079464b7f61c082b">localAct</a>;</div>
-<div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00051">51</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (!(<span class="keywordtype">id</span> == <span class="stringliteral">&quot;actNewZone&quot;</span>))</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classDynamicAct.html#a30d398978c8fd49d079464b7f61c082b">localAct</a>;</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
 <div class="ttc" id="aclassDynamicAct_html_a30d398978c8fd49d079464b7f61c082b"><div class="ttname"><a href="classDynamicAct.html#a30d398978c8fd49d079464b7f61c082b">DynamicAct.localAct</a></div><div class="ttdeci">bool localAct</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAct_8cs_source.html#l00017">DynamicAct.cs:17</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1046,7 +1050,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00035">35</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00037">37</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5a9e17f1355e3f7a98cefc5b1bb0dfd8" name="a5a9e17f1355e3f7a98cefc5b1bb0dfd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9e17f1355e3f7a98cefc5b1bb0dfd8">&#9670;&#160;</a></span>ShouldEndMimicry</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool DynamicAct.ShouldEndMimicry</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DynamicAct_8cs_source.html#l00033">33</a> of file <a class="el" href="DynamicAct_8cs_source.html">DynamicAct.cs</a>.</p>
 
 </div>
 </div>

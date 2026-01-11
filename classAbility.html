@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.257 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.258 Nightly</span>
    </div>
   </td>
  </tr>
@@ -278,6 +278,8 @@ Properties</h2></td></tr>
 <tr class="separator:a6907e0e77355bfb4343b92a54c75c6ab inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b19e8b1c1c68a229ee473e134f8eb01 inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#a8b19e8b1c1c68a229ee473e134f8eb01">HideRightInfo</a><code> [get]</code></td></tr>
 <tr class="separator:a8b19e8b1c1c68a229ee473e134f8eb01 inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb620f052897d747d5ec5d45e6c448f inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#afdb620f052897d747d5ec5d45e6c448f">ShouldEndMimicry</a><code> [get]</code></td></tr>
+<tr class="separator:afdb620f052897d747d5ec5d45e6c448f inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac656d6f66d0e2b01101e77be466d2f3e inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#ac656d6f66d0e2b01101e77be466d2f3e">HaveLongPressAction</a><code> [get]</code></td></tr>
 <tr class="separator:ac656d6f66d0e2b01101e77be466d2f3e inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11990d35974a3e8fea8e758384c4ee30 inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#a11990d35974a3e8fea8e758384c4ee30">Radius</a><code> [get]</code></td></tr>
@@ -612,15 +614,20 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  330</span>        {</div>
 <div class="line"><span class="lineno">  331</span>            a = a * Mathf.Max(100 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(411) - c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(93), 1) / 100;</div>
 <div class="line"><span class="lineno">  332</span>        }</div>
-<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">return</span> a;</div>
-<div class="line"><span class="lineno">  334</span>    }</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classActBreathe.html">ActBreathe</a>)</div>
+<div class="line"><span class="lineno">  334</span>        {</div>
+<div class="line"><span class="lineno">  335</span>            a = a * Mathf.Max(100 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(411), 1) / 100;</div>
+<div class="line"><span class="lineno">  336</span>        }</div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  338</span>    }</div>
+<div class="ttc" id="aclassActBreathe_html"><div class="ttname"><a href="classActBreathe.html">ActBreathe</a></div><div class="ttdef"><b>Definition:</b> <a href="ActBreathe_8cs_source.html#l00001">ActBreathe.cs:2</a></div></div>
 <div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02274">Card.cs:2275</a></div></div>
 <div class="ttc" id="aclassCard_html_aafbb34c9bea4b056ef8c3e8981604870"><div class="ttname"><a href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">Card.IsPC</a></div><div class="ttdeci">virtual bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02146">Card.cs:2146</a></div></div>
 <div class="ttc" id="aclassCard_html_abc8aac2488d18ebc899393231f7032c8"><div class="ttname"><a href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Card.Evalue</a></div><div class="ttdeci">int Evalue(int ele)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02574">Card.cs:2574</a></div></div>
 <div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00386">Card.cs:387</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a16c7ae534957971551c791736eb90643"><div class="ttname"><a href="classEClass.html#a16c7ae534957971551c791736eb90643">EClass.curve</a></div><div class="ttdeci">static int curve(int _a, int start, int step, int rate=75)</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00069">EClass.cs:69</a></div></div>
-<div class="ttc" id="aclassSpell_html"><div class="ttname"><a href="classSpell.html">Spell</a></div><div class="ttdef"><b>Definition:</b> <a href="SPELL_8cs_source.html#l00621">SPELL.cs:622</a></div></div>
+<div class="ttc" id="aclassSpell_html"><div class="ttname"><a href="classSpell.html">Spell</a></div><div class="ttdef"><b>Definition:</b> <a href="SPELL_8cs_source.html#l00623">SPELL.cs:624</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EClass_8cs_source.html#l00069">EClass.curve()</a>, <a class="el" href="Card_8cs_source.html#l02574">Card.Evalue()</a>, <a class="el" href="Card_8cs_source.html#l02146">Card.IsPC</a>, <a class="el" href="Card_8cs_source.html#l02275">Card.IsPCFactionOrMinion</a>, and <a class="el" href="Card_8cs_source.html#l00387">Card.LV</a>.</p>
 
@@ -706,14 +713,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a1053d168a082abeb846bc292994a01e0">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00336">336</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  337</span>    {</div>
-<div class="line"><span class="lineno">  338</span>        <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a>;</div>
-<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>._IsPC)</div>
-<div class="line"><span class="lineno">  340</span>        {</div>
-<div class="line"><span class="lineno">  341</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_function" href="classLayerAbility.html#a8e373b2c45f472eca51146d9e191155a">SetDirty</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  342</span>        }</div>
-<div class="line"><span class="lineno">  343</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00340">340</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>    {</div>
+<div class="line"><span class="lineno">  342</span>        <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a>;</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>._IsPC)</div>
+<div class="line"><span class="lineno">  344</span>        {</div>
+<div class="line"><span class="lineno">  345</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_function" href="classLayerAbility.html#a8e373b2c45f472eca51146d9e191155a">SetDirty</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  346</span>        }</div>
+<div class="line"><span class="lineno">  347</span>    }</div>
 <div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassLayerAbility_html"><div class="ttname"><a href="classLayerAbility.html">LayerAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00005">LayerAbility.cs:6</a></div></div>

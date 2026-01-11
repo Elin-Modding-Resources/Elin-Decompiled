@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.257 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.258 Nightly</span>
    </div>
   </td>
  </tr>
@@ -96,120 +96,123 @@ $(document).ready(function(){initNavTree('ActWait_8cs_source.html',''); initResi
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classActWait.html#a5d4dc6e2a74a28359b6aebcb10888278">    3</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classActWait.html#a5d4dc6e2a74a28359b6aebcb10888278">CanPressRepeat</a> =&gt; <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classActWait.html#a8cf739c27e2e6e56bc679e246afabca5">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_class" href="classCursorInfo.html">CursorInfo</a> <a class="code hl_property" href="classActWait.html#a8cf739c27e2e6e56bc679e246afabca5">CursorIcon</a> =&gt; <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#aca93c166e0621b7830ccb5cad5b30ac9">Wait</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classActWait.html#a2a77424557d558ef0475d340da4bbe20">    5</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="classActWait.html#a2a77424557d558ef0475d340da4bbe20">ShouldEndMimicry</a> =&gt; <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classActWait.html#a594976d8f67b722735d7175cf741b9e4">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classActWait.html#a594976d8f67b722735d7175cf741b9e4">Perform</a>()</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a>)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <a class="code hl_enumvalue" href="ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba13348442cc6a27032d2b4aa28b75a5d3">Search</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, manual: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3">   20</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3">SearchMedal</a>(<a class="code hl_class" href="classChara.html">Chara</a> c, <a class="code hl_class" href="classPoint.html">Point</a> p)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#ac9bbd5a4dcf26788aa4c91c9250fe2f8">isBlind</a>)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a> == <span class="keyword">null</span> || !c.<a class="code hl_function" href="classChara.html#ac9fdaea4b007d9fefc5f891f88d21d50">CanSeeSimple</a>(p))</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> p.detail.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">if</span> (thing.<a class="code hl_property" href="classCard.html#ac1c9cc77266e08fe518fc6dc4ac0ea95">isHidden</a> &amp;&amp; thing.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;medal&quot;</span> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">IsUserZone</a>)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                thing.<a class="code hl_function" href="classCard.html#ab188048630cbc3853d60cd4997981c65">SetHidden</a>(hide: <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                thing.<a class="code hl_function" href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Hop);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                c.PlaySound(<span class="stringliteral">&quot;medal&quot;</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;spotMedal&quot;</span>, c, thing);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d">   44</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d">Search</a>(<a class="code hl_class" href="classChara.html">Chara</a> c, <span class="keywordtype">bool</span> manual = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#ac9bbd5a4dcf26788aa4c91c9250fe2f8">isBlind</a>)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">int</span> num = 2 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(402);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">ForeachSphere</a>(c.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, c.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, num, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a> == <span class="keyword">null</span> || !c.<a class="code hl_function" href="classChara.html#ac9fdaea4b007d9fefc5f891f88d21d50">CanSeeSimple</a>(p))</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                return;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            foreach (<a class="code hl_class" href="classThing.html">Thing</a> thing in p.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a>.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                if (thing.isHidden)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    int num2 = EClass.pc.Dist(p);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    if (thing.id == <span class="stringliteral">&quot;medal&quot;</span>)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        if (!manual || EClass._zone.IsUserZone)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                        {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                            continue;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        if (num2 != 0)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                            Msg.Say(<span class="stringliteral">&quot;spotMedalNear&quot;</span>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                            continue;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    else</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                        if (EClass.rnd(c.Evalue(210) * 15 + 20 + c.PER) * ((!manual) ? 1 : 2) &lt;= EClass.rnd(EClass._zone.DangerLv * 8 + 60))</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                        {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                            continue;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                        }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        c.ModExp(210, EClass._zone.DangerLv * 3 / 2 + 100);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    bool flag = thing.trait is TraitTrap;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    thing.SetHidden(hide: false);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    if (thing.id == <span class="stringliteral">&quot;medal&quot;</span>)</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                        thing.PlayAnime(AnimeID.Hop);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                        c.PlaySound(<span class="stringliteral">&quot;medal&quot;</span>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                        Msg.Say(<span class="stringliteral">&quot;spotMedal&quot;</span>, c, thing);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    else</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                        if (flag)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                        {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                            c.PlaySound(<span class="stringliteral">&quot;spot_trap&quot;</span>);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                            if (EClass.core.config.game.haltOnSpotTrap)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                            {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                EClass.player.haltMove = true;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                            }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                        }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                        else</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                            c.PlaySound(<span class="stringliteral">&quot;spot&quot;</span>);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                        }</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                        Msg.Say(<span class="stringliteral">&quot;spotHidden&quot;</span>, c, thing);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        });</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classActWait.html#a8cf739c27e2e6e56bc679e246afabca5">    7</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_class" href="classCursorInfo.html">CursorInfo</a> <a class="code hl_property" href="classActWait.html#a8cf739c27e2e6e56bc679e246afabca5">CursorIcon</a> =&gt; <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#aca93c166e0621b7830ccb5cad5b30ac9">Wait</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classActWait.html#a594976d8f67b722735d7175cf741b9e4">    9</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classActWait.html#a594976d8f67b722735d7175cf741b9e4">Perform</a>()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a4312c7c0a71d9e4709fdfa8b163ebda1">IsPCParty</a>)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <a class="code hl_enumvalue" href="ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba13348442cc6a27032d2b4aa28b75a5d3">Search</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, manual: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3">   22</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3">SearchMedal</a>(<a class="code hl_class" href="classChara.html">Chara</a> c, <a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#ac9bbd5a4dcf26788aa4c91c9250fe2f8">isBlind</a>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a> == <span class="keyword">null</span> || !c.<a class="code hl_function" href="classChara.html#ac9fdaea4b007d9fefc5f891f88d21d50">CanSeeSimple</a>(p))</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> p.detail.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (thing.<a class="code hl_property" href="classCard.html#ac1c9cc77266e08fe518fc6dc4ac0ea95">isHidden</a> &amp;&amp; thing.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;medal&quot;</span> &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a7a2728e8894a1803eeba17ffc4c9f735">IsUserZone</a>)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                thing.<a class="code hl_function" href="classCard.html#ab188048630cbc3853d60cd4997981c65">SetHidden</a>(hide: <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                thing.<a class="code hl_function" href="classCard.html#ae1b2bd10695eb7422474797d6dbe222f">PlayAnime</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Hop);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                c.PlaySound(<span class="stringliteral">&quot;medal&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;spotMedal&quot;</span>, c, thing);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d">   46</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d">Search</a>(<a class="code hl_class" href="classChara.html">Chara</a> c, <span class="keywordtype">bool</span> manual = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (c.<a class="code hl_variable" href="classChara.html#ac9bbd5a4dcf26788aa4c91c9250fe2f8">isBlind</a>)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">int</span> num = 2 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(402);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#a09c1df49e3d0b39ff98627b436211ab1">ForeachSphere</a>(c.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, c.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, num, delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a> == <span class="keyword">null</span> || !c.<a class="code hl_function" href="classChara.html#ac9fdaea4b007d9fefc5f891f88d21d50">CanSeeSimple</a>(p))</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                return;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            foreach (<a class="code hl_class" href="classThing.html">Thing</a> thing in p.<a class="code hl_property" href="classPoint.html#a57750a64b9d2677905e55c987f55981f">detail</a>.<a class="code hl_variable" href="classCellDetail.html#a9a165bd9e433245e9357e517e7f13591">things</a>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                if (thing.isHidden)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    int num2 = EClass.pc.Dist(p);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    if (thing.id == <span class="stringliteral">&quot;medal&quot;</span>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        if (!manual || EClass._zone.IsUserZone)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                            continue;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                        if (num2 != 0)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                        {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                            Msg.Say(<span class="stringliteral">&quot;spotMedalNear&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                            continue;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    else</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                        if (EClass.rnd(c.Evalue(210) * 15 + 20 + c.PER) * ((!manual) ? 1 : 2) &lt;= EClass.rnd(EClass._zone.DangerLv * 8 + 60))</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                        {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                            continue;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                        c.ModExp(210, EClass._zone.DangerLv * 3 / 2 + 100);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    bool flag = thing.trait is TraitTrap;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    thing.SetHidden(hide: false);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    if (thing.id == <span class="stringliteral">&quot;medal&quot;</span>)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                        thing.PlayAnime(AnimeID.Hop);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                        c.PlaySound(<span class="stringliteral">&quot;medal&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                        Msg.Say(<span class="stringliteral">&quot;spotMedal&quot;</span>, c, thing);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    else</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                        if (flag)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                            c.PlaySound(<span class="stringliteral">&quot;spot_trap&quot;</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                            if (EClass.core.config.game.haltOnSpotTrap)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                            {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                EClass.player.haltMove = true;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                            }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                        else</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                        {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                            c.PlaySound(<span class="stringliteral">&quot;spot&quot;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                        }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                        Msg.Say(<span class="stringliteral">&quot;spotHidden&quot;</span>, c, thing);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        });</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
 <div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00001">AnimeID.cs:2</a></div></div>
 <div class="ttc" id="aExpeditionType_8cs_html_a4c3eb6ed68e40ee7dc281d4dc7aede6ba13348442cc6a27032d2b4aa28b75a5d3"><div class="ttname"><a href="ExpeditionType_8cs.html#a4c3eb6ed68e40ee7dc281d4dc7aede6ba13348442cc6a27032d2b4aa28b75a5d3">ExpeditionType.Search</a></div><div class="ttdeci">@ Search</div></div>
 <div class="ttc" id="aclassActWait_html"><div class="ttname"><a href="classActWait.html">ActWait</a></div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00001">ActWait.cs:2</a></div></div>
-<div class="ttc" id="aclassActWait_html_a3f2ae3bb5eafcc14899e1cb1cf5c76c3"><div class="ttname"><a href="classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3">ActWait.SearchMedal</a></div><div class="ttdeci">static bool SearchMedal(Chara c, Point p)</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00020">ActWait.cs:20</a></div></div>
-<div class="ttc" id="aclassActWait_html_a594976d8f67b722735d7175cf741b9e4"><div class="ttname"><a href="classActWait.html#a594976d8f67b722735d7175cf741b9e4">ActWait.Perform</a></div><div class="ttdeci">override bool Perform()</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00007">ActWait.cs:7</a></div></div>
+<div class="ttc" id="aclassActWait_html_a2a77424557d558ef0475d340da4bbe20"><div class="ttname"><a href="classActWait.html#a2a77424557d558ef0475d340da4bbe20">ActWait.ShouldEndMimicry</a></div><div class="ttdeci">override bool ShouldEndMimicry</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00005">ActWait.cs:5</a></div></div>
+<div class="ttc" id="aclassActWait_html_a3f2ae3bb5eafcc14899e1cb1cf5c76c3"><div class="ttname"><a href="classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3">ActWait.SearchMedal</a></div><div class="ttdeci">static bool SearchMedal(Chara c, Point p)</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00022">ActWait.cs:22</a></div></div>
+<div class="ttc" id="aclassActWait_html_a594976d8f67b722735d7175cf741b9e4"><div class="ttname"><a href="classActWait.html#a594976d8f67b722735d7175cf741b9e4">ActWait.Perform</a></div><div class="ttdeci">override bool Perform()</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00009">ActWait.cs:9</a></div></div>
 <div class="ttc" id="aclassActWait_html_a5d4dc6e2a74a28359b6aebcb10888278"><div class="ttname"><a href="classActWait.html#a5d4dc6e2a74a28359b6aebcb10888278">ActWait.CanPressRepeat</a></div><div class="ttdeci">override bool CanPressRepeat</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00003">ActWait.cs:3</a></div></div>
-<div class="ttc" id="aclassActWait_html_a8cf739c27e2e6e56bc679e246afabca5"><div class="ttname"><a href="classActWait.html#a8cf739c27e2e6e56bc679e246afabca5">ActWait.CursorIcon</a></div><div class="ttdeci">override CursorInfo CursorIcon</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00005">ActWait.cs:5</a></div></div>
-<div class="ttc" id="aclassActWait_html_a9d00849eff197e96fd6ab30aa8eff07d"><div class="ttname"><a href="classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d">ActWait.Search</a></div><div class="ttdeci">static void Search(Chara c, bool manual=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00044">ActWait.cs:44</a></div></div>
+<div class="ttc" id="aclassActWait_html_a8cf739c27e2e6e56bc679e246afabca5"><div class="ttname"><a href="classActWait.html#a8cf739c27e2e6e56bc679e246afabca5">ActWait.CursorIcon</a></div><div class="ttdeci">override CursorInfo CursorIcon</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00007">ActWait.cs:7</a></div></div>
+<div class="ttc" id="aclassActWait_html_a9d00849eff197e96fd6ab30aa8eff07d"><div class="ttname"><a href="classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d">ActWait.Search</a></div><div class="ttdeci">static void Search(Chara c, bool manual=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActWait_8cs_source.html#l00046">ActWait.cs:46</a></div></div>
 <div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00061">ACT.cs:62</a></div></div>
 <div class="ttc" id="aclassAct_html_aaee36f292832814173c67d44df115a5a"><div class="ttname"><a href="classAct.html#aaee36f292832814173c67d44df115a5a">Act.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00077">ACT.cs:77</a></div></div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00036">Card.cs:36</a></div></div>

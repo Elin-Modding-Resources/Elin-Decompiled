@@ -228,6 +228,7 @@ var classSPELL =
     [ "SpSummonDragon", "classSPELL.html#a5020e31849fe01436f4096a16f1a15db", null ],
     [ "SpSummonFire", "classSPELL.html#ab0adf7bf93744d25ef2b5e40f4056b3c", null ],
     [ "SpSummonFish", "classSPELL.html#a0d1607bf32d7048c2df616796c02b5dd", null ],
+    [ "SpSummonImotoroid", "classSPELL.html#a8647dfcb178103a16442b94addebd532", null ],
     [ "SpSummonMachine", "classSPELL.html#a1dac78d7f048736a80680b7076ce59ca", null ],
     [ "SpSummonMonster", "classSPELL.html#ad1dc4dc56f9d4af54f0234ad3e5beb5c", null ],
     [ "SpSummonOrc", "classSPELL.html#aa4583afc997268495fcbab7d99c64d54", null ],

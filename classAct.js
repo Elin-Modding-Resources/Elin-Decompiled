@@ -56,6 +56,7 @@ var classAct =
     [ "RequireTool", "classAct.html#af12202f571b71c7c84a24673ff86c7e6", null ],
     [ "ResetAxis", "classAct.html#aed2346babcab195d05adba634b22c7ac", null ],
     [ "RightHand", "classAct.html#a8a6bec2a89ab31933d46f72de2be42a0", null ],
+    [ "ShouldEndMimicry", "classAct.html#afdb620f052897d747d5ec5d45e6c448f", null ],
     [ "ShowAuto", "classAct.html#a34fc85b1072a6dd77e6e7579032da6ea", null ],
     [ "ShowMapHighlight", "classAct.html#a6cf09c7b4e8dff2c81a72cd2056cfc7b", null ],
     [ "ShowMapHighlightBlock", "classAct.html#a54c5e837ccf53aba7533bd9344d4a9c8", null ],

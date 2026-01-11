@@ -4,5 +4,6 @@ var classActWait =
     [ "Search", "classActWait.html#a9d00849eff197e96fd6ab30aa8eff07d", null ],
     [ "SearchMedal", "classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3", null ],
     [ "CanPressRepeat", "classActWait.html#a5d4dc6e2a74a28359b6aebcb10888278", null ],
-    [ "CursorIcon", "classActWait.html#a8cf739c27e2e6e56bc679e246afabca5", null ]
+    [ "CursorIcon", "classActWait.html#a8cf739c27e2e6e56bc679e246afabca5", null ],
+    [ "ShouldEndMimicry", "classActWait.html#a2a77424557d558ef0475d340da4bbe20", null ]
 ];

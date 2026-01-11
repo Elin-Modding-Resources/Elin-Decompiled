@@ -1,5 +1,12 @@
 var NAVTREEINDEX94 =
 {
+"classQuestHunt.html#ac73d4784ea8b167465940699f29dd3d0":[1,0,1021,2],
+"classQuestHunt.html#acf88238adffeafd24f4ebad3cb190a37":[1,0,1021,1],
+"classQuestHuntRace.html":[1,0,1022],
+"classQuestHuntRace.html#a02d4b1847150d94f5291e715a8dc7e21":[1,0,1022,1],
+"classQuestHuntRace.html#a9f1e717fdd77bc8feb1b5399b7797d82":[1,0,1022,2],
+"classQuestHuntRace.html#abaaf01d783333a63a01a356f1c13bde4":[1,0,1022,0],
+"classQuestInstance.html":[1,0,1023],
 "classQuestInstance.html#a06c78d308fdb929b44072dad8a5511d3":[1,0,1023,6],
 "classQuestInstance.html#a1bc147452da579116cd81d6de13d9df6":[1,0,1023,3],
 "classQuestInstance.html#a39292eeac27a18f419442782674905fb":[1,0,1023,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX94 =
 "classQuestTax.html#a408a7b509a7a5afbc47b6879f1acd931":[1,0,1064,2],
 "classQuestTax.html#a599b682d2bdcb090143f65ba8714d518":[1,0,1064,0],
 "classQuestTax.html#abb4afca1736765beac816119e2c38445":[1,0,1064,1],
-"classQuestTrackCraft.html":[1,0,1065],
-"classQuestTrackCraft.html#a125d77fdfa1c785c67ac91e239b80b96":[1,0,1065,4],
-"classQuestTrackCraft.html#a7cbe2328147f1e310cfb9337e72c8fdb":[1,0,1065,0],
-"classQuestTrackCraft.html#a8773f3458204c82174afe4ca8417c08f":[1,0,1065,2],
-"classQuestTrackCraft.html#a94f156e27741e7d560da2bbc25db2213":[1,0,1065,1],
-"classQuestTrackCraft.html#ab7ad04d609685b248b6312f34da5436d":[1,0,1065,7],
-"classQuestTrackCraft.html#ac5cc012a86527adb6082f33b1a005998":[1,0,1065,5],
-"classQuestTrackCraft.html#aefc388a00c6867fb36a8bf2953b9761f":[1,0,1065,6]
+"classQuestTrackCraft.html":[1,0,1065]
 };

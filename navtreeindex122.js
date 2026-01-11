@@ -1,5 +1,13 @@
 var NAVTREEINDEX122 =
 {
+"classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1734,4],
+"classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1734,2],
+"classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1734,1],
+"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1734,0],
+"classTraitMerchantPlat.html#adc26d42455bdacb98b2a88007aedbbed":[1,0,1734,3],
+"classTraitMerchantSeed.html":[1,0,1735],
+"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1735,0],
+"classTraitMerchantSouvenir.html":[1,0,1736],
 "classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1736,0],
 "classTraitMerchantWeapon.html":[1,0,1737],
 "classTraitMerchantWeapon.html#a39707660f853306b84cb5dd687a478e8":[1,0,1737,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitPotionRandom.html#afeb385428a5da22849b31f3c55176170":[1,0,1795,2],
 "classTraitPowerStatue.html":[1,0,1796],
 "classTraitPowerStatue.html#a7875940fd840ee1f9a491e61234594a8":[1,0,1796,0],
-"classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18":[1,0,1796,2],
-"classTraitPowerStatue.html#a81a166b19fd010b11d7644172e5abf07":[1,0,1796,5],
-"classTraitPowerStatue.html#a9619a7baffa3cd4a949fb97c7975dd39":[1,0,1796,7],
-"classTraitPowerStatue.html#a99fce41332750e792a49f5424108fdf2":[1,0,1796,10],
-"classTraitPowerStatue.html#ab907a81cc262616e36772cdb632b0845":[1,0,1796,8],
-"classTraitPowerStatue.html#ab90bbb3524ed9a6d8555c64838c8dab2":[1,0,1796,9],
-"classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c":[1,0,1796,4],
-"classTraitPowerStatue.html#ad28a85a987b0c7c70a0a66560c9f5f17":[1,0,1796,1],
-"classTraitPowerStatue.html#ad4219ceac075b2bef9fd98c90c22f651":[1,0,1796,6]
+"classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18":[1,0,1796,2]
 };

@@ -184,9 +184,10 @@ var NAVTREEINDEX25 =
 "classAI__Goto.html#a37dd7e2fde685c5434dc42dcc0d9b829":[1,0,85,1],
 "classAI__Goto.html#a414b85dccb5af775f446263cf592207b":[1,0,85,11],
 "classAI__Goto.html#a44e5afd9a6c8dc6750d8f462d98fa370":[1,0,85,8],
+"classAI__Goto.html#a4dc525dd6b04d093816937aef3c015c5":[1,0,85,19],
 "classAI__Goto.html#a581db6974a2896ec887e1a15fafda2ce":[1,0,85,10],
 "classAI__Goto.html#a6158ec03eacadeff668075cb27c8c00f":[1,0,85,0],
-"classAI__Goto.html#a81c07626932463e90b1bed36c0946644":[1,0,85,19],
+"classAI__Goto.html#a81c07626932463e90b1bed36c0946644":[1,0,85,20],
 "classAI__Goto.html#a9214afc43314ebfeae94fb7b2c4fa4e4":[1,0,85,5],
 "classAI__Goto.html#a9d325bbd72cbce259c87291ec59f6b6a":[1,0,85,9],
 "classAI__Goto.html#aa307518533ab1e73c678db6b18eafcc4":[1,0,85,13],
@@ -228,6 +229,7 @@ var NAVTREEINDEX25 =
 "classAI__Idle.html#a3e0b9c0687b8df2f8ef63ab803e97bce":[1,0,90,8],
 "classAI__Idle.html#a657186d6904d6ed805ddd7c28fbc8911":[1,0,90,6],
 "classAI__Idle.html#a68b379a99d5f52f496e3db76c09bd380":[1,0,90,14],
+"classAI__Idle.html#a7ce6447e1a98929db634b364cf7f639d":[1,0,90,16],
 "classAI__Idle.html#a89a0d04e1756287745bcdd0445fce1d5":[1,0,90,13],
 "classAI__Idle.html#a8f914490444fc91f766939e894cced4b":[1,0,90,1],
 "classAI__Idle.html#a9ae4bf104e1503d8ab4e918ed95097db":[1,0,90,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classAI__Massage.html#a5c36a06e3525ec420e2a45953cf3a453":[1,0,92,2],
 "classAI__Massage.html#a7962019b762b950106661f3f8a78c3f3":[1,0,92,0],
 "classAI__Massage.html#a9717c6415de8a2eb44200411849debf8":[1,0,92,1],
-"classAI__Massage.html#aba84df3216f94683a2a9afd6b90d2143":[1,0,92,4],
-"classAI__Massage.html#aefcefa016978355cf380aff8e6e6d3d3":[1,0,92,6],
-"classAI__Meditate.html":[1,0,93]
+"classAI__Massage.html#aba84df3216f94683a2a9afd6b90d2143":[1,0,92,4]
 };

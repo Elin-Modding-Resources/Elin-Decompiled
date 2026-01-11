@@ -1,5 +1,12 @@
 var NAVTREEINDEX95 =
 {
+"classQuestTrackCraft.html#a125d77fdfa1c785c67ac91e239b80b96":[1,0,1065,4],
+"classQuestTrackCraft.html#a7cbe2328147f1e310cfb9337e72c8fdb":[1,0,1065,0],
+"classQuestTrackCraft.html#a8773f3458204c82174afe4ca8417c08f":[1,0,1065,2],
+"classQuestTrackCraft.html#a94f156e27741e7d560da2bbc25db2213":[1,0,1065,1],
+"classQuestTrackCraft.html#ab7ad04d609685b248b6312f34da5436d":[1,0,1065,7],
+"classQuestTrackCraft.html#ac5cc012a86527adb6082f33b1a005998":[1,0,1065,5],
+"classQuestTrackCraft.html#aefc388a00c6867fb36a8bf2953b9761f":[1,0,1065,6],
 "classQuestTrackCraft.html#aff5c4b88bd2bf521f70d5ddd49491b6a":[1,0,1065,3],
 "classQuestVernis.html":[1,0,1066],
 "classQuestVernis.html#a12d4f9482c6ac53b2d0ef412634109bd":[1,0,1066,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX95 =
 "classRecipeManager.html#a9b6d0e155d2ff8575bfd3466b755f66d":[1,0,1081,9],
 "classRecipeManager.html#aa562b72a517f7388895d1411ebbae69b":[1,0,1081,14],
 "classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58":[1,0,1081,20],
-"classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c":[1,0,1081,13],
-"classRecipeManager.html#abfdac34700a6d0361b304d8be7008850":[1,0,1081,1],
-"classRecipeManager.html#ac8a72b822fb5d9f56382dd698ee3e55a":[1,0,1081,15],
-"classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703":[1,0,1081,18],
-"classRecipeManager.html#aecb1c741b6f9349424fbb084a8848615":[1,0,1081,8],
-"classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab":[1,0,1081,3],
-"classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79":[1,0,1081,10],
-"classRecipeManager.html#afc7f69001a0268922b380bc78f8f6477":[1,0,1081,23]
+"classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c":[1,0,1081,13]
 };

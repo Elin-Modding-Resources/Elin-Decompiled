@@ -20,5 +20,6 @@ var classDynamicAct =
     [ "IsHostileAct", "classDynamicAct.html#a3e50d8f91755e4a713c4dd88b64fa0f6", null ],
     [ "LocalAct", "classDynamicAct.html#a687d80d99513391f48ff8fdd605958bf", null ],
     [ "PerformDistance", "classDynamicAct.html#a5836943eb65241c58f1139db5a101ff6", null ],
+    [ "ShouldEndMimicry", "classDynamicAct.html#a5a9e17f1355e3f7a98cefc5b1bb0dfd8", null ],
     [ "TargetType", "classDynamicAct.html#a6137f9d216007e087edc72031ea3b2a8", null ]
 ];

@@ -1,5 +1,13 @@
 var NAVTREEINDEX125 =
 {
+"classTraitTicketFurniture.html#ada74a4ace463f5923278d818f7cfecbf":[1,0,1910,3],
+"classTraitTicketFurniture.html#adf26d3791bd374d651c28c4e43d0275c":[1,0,1910,0],
+"classTraitTicketFurniture.html#ae04c967da650a7d7cb9ff368dbdbda5c":[1,0,1910,5],
+"classTraitTicketFurniture.html#afc196e658ba172b5492d740cc0c8dd69":[1,0,1910,4],
+"classTraitTicketMassage.html":[1,0,1911],
+"classTraitTile.html":[1,0,1912],
+"classTraitTile.html#a021d87a98411062ce1873de501396342":[1,0,1912,5],
+"classTraitTile.html#a1339b30583409c1d761d91a46c2aa7d7":[1,0,1912,4],
 "classTraitTile.html#a38a38cdb93d68cd278187a2a70d3d693":[1,0,1912,6],
 "classTraitTile.html#a59b84285125ac0d6e09856662f404603":[1,0,1912,3],
 "classTraitTile.html#a987ac06392217f7222915d9266d6d3bf":[1,0,1912,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitWhipEgg.html":[1,0,1975],
 "classTraitWhipEgg.html#ab223c93b3249453b9e0a2cf6ec7b03d9":[1,0,1975,1],
 "classTraitWhipEgg.html#ae6161200fdfa65150762066cf6e88a26":[1,0,1975,0],
-"classTraitWhipInterest.html":[1,0,1976],
-"classTraitWhipLove.html":[1,0,1977],
-"classTraitWhipLove.html#a11614644a618aa6bd7adab84ea63ed26":[1,0,1977,1],
-"classTraitWhipLove.html#a448accef964c73a7cfd4fc7565c69370":[1,0,1977,0],
-"classTraitWhipLove.html#ae46661061bbfd94fc8380c2f39b89b44":[1,0,1977,2],
-"classTraitWhistlePeace.html":[1,0,1978],
-"classTraitWhistlePeace.html#a4361b8d1c18544bdfc53d83e6d122591":[1,0,1978,0],
-"classTraitWhistlePeace.html#aac8be37376522065fd73e92110963bad":[1,0,1978,1],
-"classTraitWhistlePeace.html#abed2bfb734498ed0371f0c28dfbecb09":[1,0,1978,2]
+"classTraitWhipInterest.html":[1,0,1976]
 };

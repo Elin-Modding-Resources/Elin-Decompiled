@@ -18,5 +18,6 @@ var classAI__Idle =
     [ "moveFailCount", "classAI__Idle.html#a14c93cd7eba4d5475c5ea84bd8e7af71", null ],
     [ "InformCancel", "classAI__Idle.html#a89a0d04e1756287745bcdd0445fce1d5", null ],
     [ "IsIdle", "classAI__Idle.html#a68b379a99d5f52f496e3db76c09bd380", null ],
-    [ "MaxRestart", "classAI__Idle.html#ab7548e1708eb222da7468fe50a96e1e6", null ]
+    [ "MaxRestart", "classAI__Idle.html#ab7548e1708eb222da7468fe50a96e1e6", null ],
+    [ "ShouldEndMimicry", "classAI__Idle.html#a7ce6447e1a98929db634b364cf7f639d", null ]
 ];
