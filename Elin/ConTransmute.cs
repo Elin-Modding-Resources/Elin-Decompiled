@@ -25,7 +25,13 @@ public class ConTransmute : BaseBuff
 
 	public override void OnRemoved()
 	{
+		bool isSynced = owner.isSynced;
 		owner._CreateRenderer();
+		if (isSynced)
+		{
+			EClass.scene.syncList.Add(owner.renderer);
+			owner.renderer.OnEnterScreen();
+		}
 		if (owner.IsPCParty)
 		{
 			WidgetRoster.SetDirty();

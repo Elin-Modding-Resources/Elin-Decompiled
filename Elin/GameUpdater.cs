@@ -251,11 +251,6 @@ public class GameUpdater : EClass
 			}
 			List<Chara> charas = EClass._map.charas;
 			float gameDelta = Core.gameDelta;
-			EClass.player.renderExtraTime -= delta * EClass.scene.actionMode.gameSpeed;
-			if (EClass.player.renderExtraTime > 0f)
-			{
-				return;
-			}
 			SetUpdatesPerFrame(charas.Count, 0.05f);
 			for (int i = 0; i < charas.Count; i++)
 			{
@@ -441,7 +436,7 @@ public class GameUpdater : EClass
 	public void FixedUpdate()
 	{
 		recipe.FixedUpdate();
-		if (!EClass.scene.paused)
+		if (!EClass.scene.paused && !(EClass.player.renderExtraTime > 0f))
 		{
 			if (all == null)
 			{
@@ -522,6 +517,11 @@ public class GameUpdater : EClass
 			return;
 		}
 		delta = Core.gameDelta;
+		EClass.player.renderExtraTime -= delta;
+		if (EClass.player.renderExtraTime > 0f)
+		{
+			return;
+		}
 		EClass._zone.events.Tick(delta);
 		dateTimer += delta;
 		if (dateTimer > EClass.setting.secsPerHour / 60f)

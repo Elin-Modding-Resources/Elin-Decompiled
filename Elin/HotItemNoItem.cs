@@ -16,7 +16,7 @@ public class HotItemNoItem : HotItemGameAction
 		Card tg = null;
 		p.pos.ListVisibleCards().ForeachReverse(delegate(Card a)
 		{
-			if (a.isChara && a.Chara.mimicry != null)
+			if (a.isChara && a.Chara.mimicry != null && !a.IsPC)
 			{
 				tg = a;
 				return true;

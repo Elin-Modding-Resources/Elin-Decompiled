@@ -218,6 +218,10 @@ public class AIAct : Act
 				owner.PickHeld();
 			}
 		}
+		if (owner.mimicry != null && ShouldEndMimicry)
+		{
+			owner.mimicry.Kill();
+		}
 		if (RightHand != 0)
 		{
 			owner.SetTempHand(RightHand, LeftHand);

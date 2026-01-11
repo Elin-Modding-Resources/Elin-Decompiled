@@ -23,6 +23,8 @@ public class AI_Idle : AIAct
 
 	public override int MaxRestart => maxRepeat;
 
+	public override bool ShouldEndMimicry => false;
+
 	public override void OnStart()
 	{
 		owner.SetTempHand(-1, -1);

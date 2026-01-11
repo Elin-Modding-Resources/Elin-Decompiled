@@ -30,6 +30,8 @@ public class DynamicAct : Act
 
 	public override CursorInfo CursorIcon => cursor;
 
+	public override bool ShouldEndMimicry => false;
+
 	public override bool CloseLayers => closeLayers;
 
 	public override int PerformDistance => dist;

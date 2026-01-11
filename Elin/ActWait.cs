@@ -2,6 +2,8 @@ public class ActWait : Act
 {
 	public override bool CanPressRepeat => true;
 
+	public override bool ShouldEndMimicry => false;
+
 	public override CursorInfo CursorIcon => CursorSystem.Wait;
 
 	public override bool Perform()

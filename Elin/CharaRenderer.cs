@@ -167,7 +167,10 @@ public class CharaRenderer : CardRenderer
 			if (!isMoving)
 			{
 				isMoving = true;
-				nextframeTimer = (RenderObject.animeSetting.nextFrameInterval + actTime / 4f) / 2f;
+				if (!isPC || EClass.player.renderExtraTime <= 0f)
+				{
+					nextframeTimer = (RenderObject.animeSetting.nextFrameInterval + actTime / 4f) / 2f;
+				}
 			}
 			moveTimer = 0f;
 		}

@@ -390,6 +390,7 @@ public class Religion : EClass
 		{
 			c.faith = this;
 			c.RefreshFaithElement();
+			EClass.pc.faction.charaElements.OnJoinFaith();
 			EClass.Sound.Play("worship");
 			Msg.Say("changeFaith", c, Name);
 			return;
@@ -449,27 +450,26 @@ public class Religion : EClass
 
 	public void LeaveFaith(Chara c, Religion newFaith, ConvertType type)
 	{
-		if (IsEyth)
+		if (!IsEyth)
 		{
-			return;
-		}
-		bool flag = (newFaith == EClass.game.religions.Trickery && this == EClass.game.religions.MoonShadow) || (newFaith == EClass.game.religions.MoonShadow && this == EClass.game.religions.Trickery);
-		if (c.IsPC)
-		{
-			Msg.Say("worship2");
-			if (!flag && type != ConvertType.Campaign)
+			bool flag = (newFaith == EClass.game.religions.Trickery && this == EClass.game.religions.MoonShadow) || (newFaith == EClass.game.religions.MoonShadow && this == EClass.game.religions.Trickery);
+			if (c.IsPC)
 			{
-				Punish(c);
+				Msg.Say("worship2");
+				if (!flag && type != ConvertType.Campaign)
+				{
+					Punish(c);
+				}
 			}
-		}
-		if (flag)
-		{
-			Talk("regards");
-			c.elements.SetBase(85, c.Evalue(85) / 2);
-		}
-		else
-		{
-			c.elements.SetBase(85, 0);
+			if (flag)
+			{
+				Talk("regards");
+				c.elements.SetBase(85, c.Evalue(85) / 2);
+			}
+			else
+			{
+				c.elements.SetBase(85, 0);
+			}
 		}
 		if (c.IsPC)
 		{
@@ -481,6 +481,10 @@ public class Religion : EClass
 
 	public void Punish(Chara c)
 	{
+		if (c.mimicry != null)
+		{
+			c.mimicry.Kill();
+		}
 		Talk("wrath");
 		if (c.Evalue(1228) > 0)
 		{
@@ -517,6 +521,10 @@ public class Religion : EClass
 
 	public void PunishTakeOver(Chara c)
 	{
+		if (c.mimicry != null)
+		{
+			c.mimicry.Kill();
+		}
 		Talk("takeoverFail");
 		if (c.Evalue(1228) > 0)
 		{

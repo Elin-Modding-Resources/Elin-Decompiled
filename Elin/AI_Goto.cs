@@ -27,6 +27,8 @@ public class AI_Goto : AIAct
 
 	public override bool PushChara => parent?.PushChara ?? true;
 
+	public override bool ShouldEndMimicry => false;
+
 	public override bool CanManualCancel()
 	{
 		return true;

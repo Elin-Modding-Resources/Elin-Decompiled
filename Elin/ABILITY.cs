@@ -330,6 +330,10 @@ public class Ability : Act
 		{
 			a = a * Mathf.Max(100 + c.Evalue(411) - c.Evalue(93), 1) / 100;
 		}
+		else if (this is ActBreathe)
+		{
+			a = a * Mathf.Max(100 + c.Evalue(411), 1) / 100;
+		}
 		return a;
 	}
 

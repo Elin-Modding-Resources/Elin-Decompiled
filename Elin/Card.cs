@@ -2741,7 +2741,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (isChara && Chara.race.id == "bike" && id != "bike_cub")
 			{
 				Rand.SetSeed(uid);
-				Chara.body.AddBodyPart(30);
+				Chara.body.AddBodyPart(33);
 				Chara.SetFeat(1423, 1 + EClass.rnd(10));
 				Rand.SetSeed();
 			}
@@ -3256,7 +3256,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			list.Add(chara);
 		}
-		if (EClass.pc.IsEyth && EClass.pc.HasElement(1228) && af.c_idDeity == EClass.pc.faith.id)
+		if (EClass.pc.HasElement(1228) && af.c_idDeity == EClass.game.religions.Eyth.id)
 		{
 			foreach (Chara item in list)
 			{
@@ -3264,7 +3264,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				{
 					continue;
 				}
-				List<Thing> list2 = item.things.List((Thing t) => t.HasTag(CTAG.godArtifact) && t != af && !t.isReplica && t.c_idDeity == EClass.pc.faith.id);
+				List<Thing> list2 = item.things.List((Thing t) => t.HasTag(CTAG.godArtifact) && t != af && !t.isReplica && t.c_idDeity == EClass.game.religions.Eyth.id);
 				if (list2.Count == 0)
 				{
 					continue;

@@ -130,6 +130,8 @@ public class Act : Element
 
 	public virtual bool HideRightInfo => false;
 
+	public virtual bool ShouldEndMimicry => true;
+
 	public virtual bool HaveLongPressAction => TargetType.CanSelectParty;
 
 	public virtual float Radius => base.source.radius;
@@ -307,11 +309,15 @@ public class Act : Element
 
 	public bool Perform(Chara _cc, Card _tc = null, Point _tp = null)
 	{
-		if (CanPerform(_cc, _tc, _tp))
+		if (!CanPerform(_cc, _tc, _tp))
 		{
-			return Perform();
+			return false;
 		}
-		return false;
+		if (_cc.mimicry != null && ShouldEndMimicry)
+		{
+			_cc.mimicry.Kill();
+		}
+		return Perform();
 	}
 
 	public bool CanPerform(Chara _cc, Card _tc = null, Point _tp = null)

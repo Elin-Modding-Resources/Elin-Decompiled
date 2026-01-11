@@ -31,7 +31,7 @@ public class POLICY
 
 	public const int platinum_ticket = 2815;
 
-	public const int trash_no = 2702;
+	public const int trash_sort = 2701;
 
 	public const int suite_room = 2813;
 
@@ -71,7 +71,7 @@ public class POLICY
 
 	public const int impressment = 2504;
 
-	public const int trash_sort = 2701;
+	public const int trash_no = 2702;
 
 	public const int demon_invocation = 2706;
 
@@ -108,9 +108,9 @@ public class POLICY
 	public static readonly int[] IDS = new int[51]
 	{
 		2821, 2817, 2818, 2819, 2820, 2822, 2828, 2824, 2825, 2826,
-		2827, 2816, 2823, 2815, 2702, 2813, 2514, 2513, 2505, 2814,
+		2827, 2816, 2823, 2815, 2701, 2813, 2514, 2513, 2505, 2814,
 		2500, 2501, 2512, 2502, 2503, 2511, 2510, 2509, 2508, 2507,
-		2506, 2515, 2516, 2504, 2701, 2706, 2707, 2705, 2700, 2709,
+		2506, 2515, 2516, 2504, 2702, 2706, 2707, 2705, 2700, 2709,
 		2710, 2711, 2708, 2715, 2800, 2810, 2811, 2812, 2704, 2703,
 		2712
 	};

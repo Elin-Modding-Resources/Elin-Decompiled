@@ -22,15 +22,15 @@ public class FOOD
 
 	public const int food_bug = 704;
 
-	public const int food_god = 758;
+	public const int justcooked = 757;
 
 	public const int creativeDish = 764;
 
-	public const int justcooked = 757;
+	public const int food_god = 758;
 
 	public static readonly int[] IDS = new int[14]
 	{
 		701, 702, 703, 710, 705, 706, 700, 707, 708, 709,
-		704, 758, 764, 757
+		704, 757, 764, 758
 	};
 }
