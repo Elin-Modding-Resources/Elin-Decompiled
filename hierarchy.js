@@ -738,6 +738,7 @@ var hierarchy =
             [ "Spell", "classSpell.html", [
               [ "ActArrow", "classActArrow.html", null ],
               [ "ActBall", "classActBall.html", null ],
+              [ "ActBit", "classActBit.html", null ],
               [ "ActBolt", "classActBolt.html", null ],
               [ "ActFlare", "classActFlare.html", null ],
               [ "ActFunnel", "classActFunnel.html", null ],
@@ -745,6 +746,7 @@ var hierarchy =
                 [ "ActSword", "classActSword.html", null ]
               ] ],
               [ "ActMiasma", "classActMiasma.html", null ],
+              [ "ActPuddle", "classActPuddle.html", null ],
               [ "ActWeapon", "classActWeapon.html", null ],
               [ "FieldEffect", "classFieldEffect.html", [
                 [ "FieldEffectSpider", "classFieldEffectSpider.html", null ]

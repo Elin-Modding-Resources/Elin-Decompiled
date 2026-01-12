@@ -18,6 +18,6 @@ var searchData=
   ['outlinethickness_15',['outlineThickness',['../classInnerOutline.html#a5b0aaf6f9cb62089774e3c900b033c7f',1,'InnerOutline']]],
   ['outofbounds_16',['outOfBounds',['../classCell.html#ac627e18c885b5b224b205bfd945dea09',1,'Cell']]],
   ['overlaytexture_17',['overlayTexture',['../classOverlayTexture.html#a2ee248ebab93933bdc716e606aa605b9',1,'OverlayTexture']]],
-  ['owner_18',['Owner',['../classBaseCondition.html#a289b434221238da225dd256cdcdd52d5',1,'BaseCondition.Owner()'],['../classBaseStats.html#ae093e1477ed8e467bfca936d3543a7a9',1,'BaseStats.Owner()']]],
-  ['owner_19',['owner',['../classTC.html#ab25b328fe38941cc5548522f7176de44',1,'TC.owner()'],['../classTraitChara.html#acd41bf1785e6918b297a392c75f7befc',1,'TraitChara.owner()'],['../classUIInventory.html#a29b1e9bd88e19073f6636bd83e1610fb',1,'UIInventory.owner()']]]
+  ['owner_18',['owner',['../classTC.html#ab25b328fe38941cc5548522f7176de44',1,'TC.owner()'],['../classTraitChara.html#acd41bf1785e6918b297a392c75f7befc',1,'TraitChara.owner()'],['../classUIInventory.html#a29b1e9bd88e19073f6636bd83e1610fb',1,'UIInventory.owner()']]],
+  ['owner_19',['Owner',['../classBaseCondition.html#a289b434221238da225dd256cdcdd52d5',1,'BaseCondition.Owner()'],['../classBaseStats.html#ae093e1477ed8e467bfca936d3543a7a9',1,'BaseStats.Owner()']]]
 ];
