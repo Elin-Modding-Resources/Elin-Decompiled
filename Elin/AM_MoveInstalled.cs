@@ -182,15 +182,11 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 		{
 			return false;
 		}
-		if (target.HasTag(CTAG.godArtifact))
-		{
-			return false;
-		}
 		if (EClass.debug.ignoreBuildRule)
 		{
 			return true;
 		}
-		if (target.isChara || target.trait.CanOnlyCarry)
+		if (target.isChara || !target.trait.CanPutAway)
 		{
 			return false;
 		}

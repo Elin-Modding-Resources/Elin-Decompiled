@@ -7,11 +7,11 @@ public class ELEMENT
 {
 	public const int difficulty = 765;
 
+	public const int recharge = 761;
+
 	public const int air = 763;
 
 	public const int roasted = 762;
-
-	public const int recharge = 761;
 
 	public const int purity = 759;
 
@@ -33,9 +33,9 @@ public class ELEMENT
 
 	public const int _void = 0;
 
-	public const int lv = 1;
-
 	public const int quality = 2;
+
+	public const int lv = 1;
 
 	public const int d = 3;
 
@@ -79,8 +79,8 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[36]
 	{
-		765, 763, 762, 761, 759, 756, 755, 760, 754, 753,
-		750, 752, 751, 0, 1, 2, 3, 5, 10, 11,
+		765, 761, 763, 762, 759, 756, 755, 760, 754, 753,
+		750, 752, 751, 0, 2, 1, 3, 5, 10, 11,
 		12, 13, 15, 16, 17, 18, 14, 21, 22, 23,
 		24, 25, 26, 29, 85, 20
 	};
@@ -177,10 +177,15 @@ public class Element : EClass
 			{
 				if (c.faithElements != null)
 				{
+					int num2 = c.faithElements.Value(id);
 					Element element2 = c.elements.GetElement("featGod_" + c.faith.id + "1");
 					if (element2 != null)
 					{
-						AddText(c.faithElements.Value(id), element2.Name);
+						AddText(num2, element2.Name);
+					}
+					else if (num2 != 0)
+					{
+						AddText(num2, EClass.sources.elements.map[1228].GetName());
 					}
 				}
 			}
@@ -202,10 +207,10 @@ public class Element : EClass
 			}
 			if (id == 78 && c.IsPCFactionOrMinion)
 			{
-				int num2 = EClass.player.CountKeyItem("lucky_coin");
-				if (num2 > 0)
+				int num3 = EClass.player.CountKeyItem("lucky_coin");
+				if (num3 > 0)
 				{
-					AddText(EClass.sources.keyItems.alias["lucky_coin"].GetName() + " (+" + num2 * 2 + ")", FontColor.Great);
+					AddText(EClass.sources.keyItems.alias["lucky_coin"].GetName() + " (+" + num3 * 2 + ")", FontColor.Great);
 				}
 				if (EClass.pc.faction.charaElements.Has(663))
 				{
@@ -216,17 +221,17 @@ public class Element : EClass
 			{
 				return;
 			}
-			int num3 = c.Evalue(664);
-			if (num3 > 0)
+			int num4 = c.Evalue(664);
+			if (num4 > 0)
 			{
 				switch (id)
 				{
 				case 64:
 				case 65:
-					AddFix(num3 / 2, EClass.sources.elements.map[664].GetName());
+					AddFix(num4 / 2, EClass.sources.elements.map[664].GetName());
 					break;
 				case 79:
-					AddFix(num3, EClass.sources.elements.map[664].GetName());
+					AddFix(num4, EClass.sources.elements.map[664].GetName());
 					break;
 				}
 			}

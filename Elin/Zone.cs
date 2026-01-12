@@ -2626,7 +2626,7 @@ public class Zone : Spatial, ICardParent, IInspect
 	{
 		if (!(BigDaddyChance * (EClass.pc.HasElement(1270) ? 1.1f : 1f) <= EClass.rndf(1f)))
 		{
-			int num = DangerLv * 125 / 100;
+			int num = (int)((long)DangerLv * 125L / 100);
 			if (num >= 30)
 			{
 				CardBlueprint.Set(new CardBlueprint

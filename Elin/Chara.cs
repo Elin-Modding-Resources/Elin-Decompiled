@@ -1918,7 +1918,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			int num2 = Evalue(200);
 			int num3 = Evalue(1252);
-			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5 - EClass._zone.DangerLv / 50, (num3 > 0) ? 50 : 0, 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
+			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5 - EClass._zone.DangerLv / 50, (num3 > 0) ? 50 : ((base.IsPowerful || IsMultisize) ? 40 : 0), 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
 			if (info != null && num != 100)
 			{
 				info.AddFix(num - 100, EClass.sources.elements.map[200].GetName().ToTitleCase());

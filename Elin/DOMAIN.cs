@@ -20,9 +20,9 @@ public class DOMAIN
 
 	public const int domElement = 806;
 
-	public const int domComm = 805;
-
 	public const int domSurvival = 801;
+
+	public const int domComm = 805;
 
 	public const int domArcane = 804;
 
@@ -36,8 +36,8 @@ public class DOMAIN
 
 	public static readonly int[] IDS = new int[16]
 	{
-		815, 812, 811, 810, 809, 808, 800, 807, 806, 805,
-		801, 804, 803, 802, 814, 813
+		815, 812, 811, 810, 809, 808, 800, 807, 806, 801,
+		805, 804, 803, 802, 814, 813
 	};
 }
 public class Domain : EClass

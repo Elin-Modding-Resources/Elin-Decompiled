@@ -390,7 +390,6 @@ public class Religion : EClass
 		{
 			c.faith = this;
 			c.RefreshFaithElement();
-			EClass.pc.faction.charaElements.OnJoinFaith();
 			EClass.Sound.Play("worship");
 			Msg.Say("changeFaith", c, Name);
 			return;

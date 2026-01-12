@@ -351,7 +351,7 @@ public class Act : Element
 				}
 			}
 		}
-		if (!(this is ActMelee) && tt.Range == TargetRange.Chara && (TC == null || !CC.CanSee(TC) || TC.Chara?.mimicry != null))
+		if (!(this is ActMelee) && tt.Range == TargetRange.Chara && (TC == null || !CC.CanSee(TC) || (TC.Chara?.mimicry != null && CC != TC)))
 		{
 			return false;
 		}

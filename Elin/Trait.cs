@@ -146,7 +146,17 @@ public class Trait : EClass
 
 	public virtual bool CanName => false;
 
-	public virtual bool CanPutAway => true;
+	public virtual bool CanPutAway
+	{
+		get
+		{
+			if (!CanOnlyCarry)
+			{
+				return !owner.HasTag(CTAG.godArtifact);
+			}
+			return false;
+		}
+	}
 
 	public virtual bool CanChangeHeight => true;
 
