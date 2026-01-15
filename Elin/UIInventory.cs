@@ -524,7 +524,7 @@ public class UIInventory : EMono
 				bool flag4 = (!con2.isNPCProperty && !con2.isChara && (con2.trait is TraitShippingChest || (con2.GetRoot() is Zone && EMono._zone.IsPCFaction) || con2.GetRootCard() == EMono.pc)) || EMono._zone is Zone_Tent;
 				if (con2.IsPC)
 				{
-					flag4 = true;
+					flag4 = false;
 				}
 				if (con2.trait is TraitChestMerchant)
 				{

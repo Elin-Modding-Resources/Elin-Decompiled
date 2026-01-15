@@ -19,6 +19,8 @@ public class GoalCombat : Goal
 		public bool pt;
 
 		public bool aiPt;
+
+		public bool aiSelf;
 	}
 
 	public Chara destEnemy;

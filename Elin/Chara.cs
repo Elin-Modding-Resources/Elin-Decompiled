@@ -3745,11 +3745,11 @@ public class Chara : Card, IPathfindWalker
 		case 2:
 			if (parasite != null)
 			{
-				ModExp(227, (EClass._zone.IsRegion ? 5 : 40) * 100 / Mathf.Max(100, 100 + (elements.Base(227) - parasite.LV) * 25));
+				ModExp(227, (int)((EClass._zone.IsRegion ? 5 : 40) + parasite.affinity.CurrentStage));
 			}
 			if (ride != null)
 			{
-				ModExp(226, (EClass._zone.IsRegion ? 5 : 40) * 100 / Mathf.Max(100, 100 + (elements.Base(226) - ride.LV) * 25));
+				ModExp(226, (int)((EClass._zone.IsRegion ? 5 : 40) + ride.affinity.CurrentStage));
 			}
 			break;
 		case 3:

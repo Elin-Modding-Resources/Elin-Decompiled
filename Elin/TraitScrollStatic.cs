@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class TraitScrollStatic : TraitScroll
 {
 	public override SourceElement.Row source
@@ -19,6 +21,15 @@ public class TraitScrollStatic : TraitScroll
 	public virtual string AliasEle => owner.sourceCard.vals.TryGet(3, returnNull: true);
 
 	public virtual string N1 => owner.sourceCard.vals.TryGet(4);
+
+	public override Sprite GetRefSprite()
+	{
+		if (idEffect == EffectId.Ally)
+		{
+			return EClass.sources.elements.alias["ActSummonSpecial"].GetSprite();
+		}
+		return base.GetRefSprite();
+	}
 
 	public override bool CanRead(Chara c)
 	{

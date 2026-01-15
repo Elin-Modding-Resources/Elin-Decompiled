@@ -394,7 +394,7 @@ public class DramaCustomSequence : EClass
 				c.MoveZone(c.homeZone);
 			}
 		});
-		Goto("_bye");
+		Goto("_end");
 		Step("_banish");
 		Goto("_bye");
 		Step("_makeLivestock");
@@ -1529,6 +1529,8 @@ public class DramaCustomSequence : EClass
 		{
 			c.Talk("bye");
 		});
+		End();
+		Step("_end");
 		End();
 		void BackChill()
 		{

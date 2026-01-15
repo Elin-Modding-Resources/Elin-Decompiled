@@ -109,7 +109,6 @@ public class TraitSeed : Trait
 				}
 			}
 			thing2.SetEncLv(thing.encLV);
-			thing2.elements.SetBase(2, EClass.curve(thing2.encLV, 50, 10, 80));
 			thing2.c_refText = thing.c_refText;
 			thing2.c_seed = thing.c_seed;
 			int num = plant?.water ?? 0;
@@ -136,6 +135,7 @@ public class TraitSeed : Trait
 					EClass.pc.PlaySound("seed_level");
 				}
 			}
+			thing2.elements.SetBase(2, EClass.curve(thing2.encLV, 50, 10, 80));
 			Rand.SetSeed();
 		}
 		thing2.SetBlessedState(BlessedState.Normal);
