@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"classGuildMerchant.html#aa83fc693d9b81792f954d319b7b9c452":[1,0,616,1],
 "classGuildRankData.html":[1,0,617],
 "classGuildRankData.html#ac30df4712bdd809645df1aa715b0b441":[1,0,617,0],
 "classGuildRankData.html#acd460ee5840491cac11074c18d9ea07d":[1,0,617,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "classHomeResourceManager.html#a3242633e908c805e41c16dbecbc6c143":[1,0,637,4],
 "classHomeResourceManager.html#a32a4450387cec1df853555b28f120165":[1,0,637,18],
 "classHomeResourceManager.html#a37f7c8ee2d1fe1866ffa8e489bd575e1":[1,0,637,16],
-"classHomeResourceManager.html#a5b08cf3b2a7e3e302fd35b51bab6c7f0":[1,0,637,8],
-"classHomeResourceManager.html#a5e33fa3c9c0bad08598a0a2e526e20dc":[1,0,637,12]
+"classHomeResourceManager.html#a5b08cf3b2a7e3e302fd35b51bab6c7f0":[1,0,637,8]
 };

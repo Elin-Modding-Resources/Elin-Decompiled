@@ -1,6 +1,7 @@
 var classTraitScrollStatic =
 [
     [ "CanRead", "classTraitScrollStatic.html#a9e01940fa32300d27a385f9c23872960", null ],
+    [ "GetRefSprite", "classTraitScrollStatic.html#a1fb834c8adfa0f69cc2946e0942f9ca3", null ],
     [ "OnRead", "classTraitScrollStatic.html#a7e5f2840a9fb5dcff27c942baf0acf97", null ],
     [ "AliasEle", "classTraitScrollStatic.html#afe20ba20c3509dd52b314b300fc71d4f", null ],
     [ "idEffect", "classTraitScrollStatic.html#a49463a03524cead49370860a97f0a913", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX125 =
 {
+"classTraitThrownExplosive.html":[1,0,1909],
+"classTraitThrownExplosive.html#a5c0197caa76da42e635848ca65439097":[1,0,1909,0],
 "classTraitThrownExplosive.html#a98e390f9d299283a1f55f5dbc959df7d":[1,0,1909,1],
 "classTraitTicketArmPillow.html":[1,0,1910],
 "classTraitTicketChampagne.html":[1,0,1911],
@@ -247,7 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitWell.html#aa06297ee620590d4afd9e1fb203baa6a":[1,0,1975,8],
 "classTraitWell.html#aa268ec87deda1603ca0cdb7c74707eff":[1,0,1975,4],
 "classTraitWell.html#aa706d5cd69551cc52e5281f8fd88c2f9":[1,0,1975,7],
-"classTraitWell.html#ac68b92f93d5db86ba39c7f3911ae47aa":[1,0,1975,2],
-"classTraitWell.html#ae2b4bf33123a1f3c0b46675ffe02d681":[1,0,1975,3],
-"classTraitWell.html#ae97735786b491042ebc9680c1fed4317":[1,0,1975,12]
+"classTraitWell.html#ac68b92f93d5db86ba39c7f3911ae47aa":[1,0,1975,2]
 };

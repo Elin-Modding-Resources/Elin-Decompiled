@@ -1,5 +1,7 @@
 var NAVTREEINDEX141 =
 {
+"classZoneProfile.html#a3c3333a94388a6e75d89f35f933b3206":[1,0,2255,22],
+"classZoneProfile.html#a432e39212f2399ae30982fe406303f77":[1,0,2255,14],
 "classZoneProfile.html#a52243c4f97943f94876be4973f045130":[1,0,2255,3],
 "classZoneProfile.html#a5c1314fe960624d14c215e59a30cfd7d":[1,0,2255,5],
 "classZoneProfile.html#a6dda7bd1a4456c9c04e594ae5d16db2c":[1,0,2255,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX141 =
 "classZone__MerchantGuild.html":[1,0,2181],
 "classZone__MerchantGuild.html#afb127fdade7c76f3bbad0bb18f3eef6b":[1,0,2181,0],
 "classZone__Mifu.html":[1,0,2182],
-"classZone__Mifu.html#a41ea8368c27d7f375fc884025fbf9119":[1,0,2182,0],
-"classZone__Mine.html":[1,0,2183],
-"classZone__Mine.html#aa37b5481ac8a902463e85aeb743bad95":[1,0,2183,0]
+"classZone__Mifu.html#a41ea8368c27d7f375fc884025fbf9119":[1,0,2182,0]
 };

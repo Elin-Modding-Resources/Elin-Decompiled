@@ -1,5 +1,6 @@
 var NAVTREEINDEX120 =
 {
+"classTraitFloorSwitch.html":[1,0,1604],
 "classTraitFloorSwitch.html#a8cb9fe69f1bad95221af3b4f3282c01e":[1,0,1604,0],
 "classTraitFlyer.html":[1,0,1605],
 "classTraitFlyer.html#ac1693046120ebde13b5f5b01cc96650e":[1,0,1605,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitHouseBoard_1_1Data.html#ac20790270289beaf3e2362ddff8f536d":[1,0,1667,0,3],
 "classTraitHouseBoard_1_1Data.html#ac3c871e51c30f0b4740776cb7aafe63a":[1,0,1667,0,5],
 "classTraitHouseBoard_1_1Data.html#ac7e5bb7cc0542cd42488bcd3d68e60b9":[1,0,1667,0,9],
-"classTraitHouseBoard_1_1Data.html#af821e32d51cf81d58a9da427ca06fe2b":[1,0,1667,0,12],
-"classTraitIllumination.html":[1,0,1668]
+"classTraitHouseBoard_1_1Data.html#af821e32d51cf81d58a9da427ca06fe2b":[1,0,1667,0,12]
 };

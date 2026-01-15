@@ -1,5 +1,6 @@
 var NAVTREEINDEX107 =
 {
+"classSourceQuest.html":[1,0,1231],
 "classSourceQuest.html#a92f82c4c94b972e81e80e42fa2586409":[1,0,1231,3],
 "classSourceQuest.html#afcadd8efdf28c58d2223a1d7934b5930":[1,0,1231,2],
 "classSourceQuest.html#afde8bf1fd3d0cdd162b0b4ea2b74f13d":[1,0,1231,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX107 =
 "classSourceTactics_1_1Row.html#a6d4a2d3c8ec0842590b7dfaff5a5be37":[1,0,1239,0,12],
 "classSourceTactics_1_1Row.html#a8f4f377b2ab35f60db964960995543f3":[1,0,1239,0,9],
 "classSourceTactics_1_1Row.html#a92a54a904c7e41f95a7331aac45cc079":[1,0,1239,0,3],
-"classSourceTactics_1_1Row.html#a95e0a37dcb6521284c202839a3672b15":[1,0,1239,0,15],
-"classSourceTactics_1_1Row.html#aa253a8f1cb580dc890859fb9ca9dc44b":[1,0,1239,0,2]
+"classSourceTactics_1_1Row.html#a95e0a37dcb6521284c202839a3672b15":[1,0,1239,0,15]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX145 =
 {
+"structAlgorithms_1_1PathFinderNode.html#ae819d273b2dd441f25be33657cfc7103":[0,4,0,3,0],
+"structAlgorithms_1_1PathFinderNode.html#ae819d273b2dd441f25be33657cfc7103":[1,0,0,3,0],
 "structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html":[1,0,0,2,1],
 "structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html":[0,4,0,2,1],
 "structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html#a13dac95468d2459640c948c53c3fbc59":[0,4,0,2,1,0],

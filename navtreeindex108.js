@@ -1,5 +1,6 @@
 var NAVTREEINDEX108 =
 {
+"classSourceTactics_1_1Row.html#aa253a8f1cb580dc890859fb9ca9dc44b":[1,0,1239,0,2],
 "classSourceTactics_1_1Row.html#aa3431dec3066e835f8b67199a468cfa5":[1,0,1239,0,11],
 "classSourceTactics_1_1Row.html#aaca20ed08e1636cd4bd6edb8376af3d5":[1,0,1239,0,21],
 "classSourceTactics_1_1Row.html#aafcb448d3258f8b237e4455876afbcdd":[1,0,1239,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX108 =
 "classSpawnList.html#a41e6fcf0c2a8abd329f14cf7853056a5":[1,0,1248,2],
 "classSpawnList.html#a42196007e10f710e467dac045b76bb2e":[1,0,1248,6],
 "classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38":[1,0,1248,10],
-"classSpawnList.html#a4a16374107c2972f88dbaf5eee915927":[1,0,1248,5],
-"classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3":[1,0,1248,9]
+"classSpawnList.html#a4a16374107c2972f88dbaf5eee915927":[1,0,1248,5]
 };

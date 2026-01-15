@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitDoor.html":[1,0,1550],
 "classTraitDoor.html#a01266a1c7b65a7c0d9e6b1d8711e1e57":[1,0,1550,14],
 "classTraitDoor.html#a076b1b487c1cb637130dc96034479d7a":[1,0,1550,10],
 "classTraitDoor.html#a14d76135089ef809b5ad45d8dbd6a1c8":[1,0,1550,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitFireworkLauncher.html":[1,0,1602],
 "classTraitFireworkLauncher.html#a468cd690355d2d97b7f5a4c20618cf63":[1,0,1602,0],
 "classTraitFloor.html":[1,0,1603],
-"classTraitFloor.html#af9e55926693097bb563d2332b0b5b5b9":[1,0,1603,0],
-"classTraitFloorSwitch.html":[1,0,1604]
+"classTraitFloor.html#af9e55926693097bb563d2332b0b5b5b9":[1,0,1603,0]
 };
