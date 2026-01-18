@@ -148,6 +148,10 @@ public class ActThrow : ActBaseAttack
 		{
 			Msg.Say("shatter");
 		}
+		if (Act.TC != null && Act.TC.isChara && Act.TC.Chara.mimicry != null)
+		{
+			Act.TC.Chara.mimicry.RevealMimicry(c, surprise: false);
+		}
 		bool flag = method == ThrowMethod.Reward;
 		bool flag2 = method == ThrowMethod.Default;
 		switch (t.trait.ThrowType)

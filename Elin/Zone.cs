@@ -1080,6 +1080,16 @@ public class Zone : Spatial, ICardParent, IInspect
 				item.Destroy();
 			}
 		}
+		if (!EClass.game.isLoading)
+		{
+			foreach (Chara chara2 in EClass._map.charas)
+			{
+				if (chara2.HasCondition<ConDeathSentense>())
+				{
+					chara2.RemoveCondition<ConDeathSentense>();
+				}
+			}
+		}
 		RefreshCriminal();
 		EClass._map.rooms.AssignCharas();
 		events.OnVisit();
@@ -1103,6 +1113,17 @@ public class Zone : Spatial, ICardParent, IInspect
 		if (fieldElements.dict.Count() > 0)
 		{
 			Tutorial.Reserve("field");
+		}
+	}
+
+	public void OnCharaDie()
+	{
+		foreach (Chara chara in EClass._map.charas)
+		{
+			if (chara.HasCondition<ConDeathSentense>())
+			{
+				chara.GetCondition<ConDeathSentense>().TryRemove();
+			}
 		}
 	}
 

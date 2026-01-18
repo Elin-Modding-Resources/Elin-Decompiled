@@ -80,6 +80,8 @@ public class TileType : EClass
 
 	public static TileTypeObjFloat ObjFloat = new TileTypeObjFloat();
 
+	public static TileTypeObjFloat ObjFloatWaterfall = new TileTypeObjFloatWaterfall();
+
 	public static TileTypeObjWater ObjWater = new TileTypeObjWater();
 
 	public static TileTypeObjWaterTop ObjWaterTop = new TileTypeObjWaterTop();
@@ -251,6 +253,8 @@ public class TileType : EClass
 	public virtual bool ShowPillar => true;
 
 	public virtual bool AlwaysShowShadow => false;
+
+	public virtual bool AlwaysShow => false;
 
 	public virtual bool RepeatBlock => false;
 

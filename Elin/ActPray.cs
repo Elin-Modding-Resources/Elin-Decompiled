@@ -111,6 +111,7 @@ public class ActPray : Act
 			_c.HealHP(999999);
 			_c.mana.Mod(999999);
 			_c.Cure(CureType.Prayer, 999999);
+			_c.RemoveCondition<ConDeathSentense>();
 		}
 	}
 }

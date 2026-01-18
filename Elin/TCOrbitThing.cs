@@ -40,7 +40,7 @@ public class TCOrbitThing : TCOrbit
 		}
 	}
 
-	public void RefreshAll()
+	public override void RefreshAll()
 	{
 		_ = EMono.core.refs.orbitIcons;
 		Emo2 emo = Emo2.none;

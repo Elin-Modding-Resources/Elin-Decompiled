@@ -21,5 +21,6 @@ public enum Emo2
 	brush_like,
 	brush_like2,
 	brush_like3,
-	hintEvent
+	hintEvent,
+	death
 }

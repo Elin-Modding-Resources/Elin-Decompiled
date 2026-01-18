@@ -1955,6 +1955,7 @@ public class ActEffect : EClass
 			TC.AddCondition(Condition.Create(n, power, delegate(Condition con)
 			{
 				con.givenByPcParty = CC.IsPCParty;
+				(con as ConDeathSentense)?.SetChara(CC);
 				if (!actRef.aliasEle.IsEmpty())
 				{
 					con.SetElement(EClass.sources.elements.alias[actRef.aliasEle].id);

@@ -622,16 +622,9 @@ public class AttackProcess : EClass
 			num2 += weapon.Evalue(91, ignoreGlobalElement: true);
 			num3 += weapon.Evalue(603, ignoreGlobalElement: true);
 		}
-		else
+		if (CC.HasElement(1426))
 		{
-			switch (CC.id)
-			{
-			case "mech_death":
-			case "rabbit_vopal":
-			case "mantis_killer":
-				list.Add(Element.Create(6650, 100));
-				break;
-			}
+			list.Add(Element.Create(6650, 100));
 		}
 		int bane;
 		if (TC?.Chara != null)

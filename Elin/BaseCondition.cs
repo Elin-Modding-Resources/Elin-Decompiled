@@ -207,10 +207,7 @@ public class BaseCondition : BaseStats
 	{
 		owner = _owner;
 		phase = GetPhase();
-		if (EmoIcon > owner.emoIcon)
-		{
-			owner.emoIcon = EmoIcon;
-		}
+		RefreshEmoIcon();
 		if (UseElements)
 		{
 			elements = new ElementContainerCondition();
@@ -226,6 +223,14 @@ public class BaseCondition : BaseStats
 		if (onDeserialize)
 		{
 			OnChangePhase(phase, phase);
+		}
+	}
+
+	public void RefreshEmoIcon()
+	{
+		if (EmoIcon > owner.emoIcon)
+		{
+			owner.emoIcon = EmoIcon;
 		}
 	}
 

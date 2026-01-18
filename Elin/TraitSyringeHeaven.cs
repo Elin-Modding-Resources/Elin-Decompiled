@@ -8,10 +8,13 @@ public class TraitSyringeHeaven : TraitSyringe
 			{
 				EffectInject(EClass.pc, c);
 				c.AddCondition<ConHallucination>(50);
-				if ((c.trait is TraitLittleOne) & !c.HasCondition<ConDeathSentense>())
+				if (c.trait is TraitLittleOne && !c.HasCondition<ConDeathSentense>())
 				{
 					EClass.player.ModKarma(3);
-					c.AddCondition<ConDeathSentense>(100, force: true);
+					c.AddCondition(Condition.Create(100, delegate(ConDeathSentense con)
+					{
+						con.euthanasia = true;
+					}), force: true);
 				}
 				owner.ModNum(-1);
 				return true;

@@ -4115,7 +4115,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (!HasElement(1241))
 			{
 				AttackSource attackSource2 = attackSource;
-				if ((uint)(attackSource2 - 3) > 2u && (uint)(attackSource2 - 13) > 4u)
+				if ((uint)(attackSource2 - 3) > 2u && (uint)(attackSource2 - 13) > 5u)
 				{
 					foreach (Chara chara4 in EClass._map.charas)
 					{
@@ -5847,11 +5847,6 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (!isDestroyed)
 		{
 			Die();
-			if (isChara && !Chara.isDead)
-			{
-				hp = 0;
-				Chara.AddCondition<ConFaint>(1000, force: true);
-			}
 		}
 		for (int i = 0; i < 1 + EClass.rnd(num + 1); i++)
 		{

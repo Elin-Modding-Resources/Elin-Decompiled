@@ -64,9 +64,9 @@ public class ConTransmuteMimic : ConTransmute
 		}
 	}
 
-	public virtual void RevealMimicry(Chara c, bool surprise)
+	public virtual void RevealMimicry(Card c, bool surprise)
 	{
-		if (owner.IsHostile(c))
+		if (owner.IsHostile(c.Chara))
 		{
 			owner.DoHostileAction(c, immediate: true);
 		}

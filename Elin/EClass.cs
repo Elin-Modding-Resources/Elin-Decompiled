@@ -66,11 +66,11 @@ public class EClass
 		return Rand.rnd(a);
 	}
 
-	public static int curve(int _a, int start, int step, int rate = 75)
+	public static int curve(long _a, int start, int step, int rate = 75)
 	{
 		if (_a <= start)
 		{
-			return _a;
+			return (int)_a;
 		}
 		long num = _a;
 		for (int i = 0; i < 10; i++)

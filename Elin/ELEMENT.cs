@@ -23,13 +23,13 @@ public class ELEMENT
 
 	public const int nerve = 754;
 
-	public const int antidote = 753;
-
 	public const int comfort = 750;
 
-	public const int cute = 752;
-
 	public const int rare = 751;
+
+	public const int antidote = 753;
+
+	public const int cute = 752;
 
 	public const int _void = 0;
 
@@ -79,8 +79,8 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[36]
 	{
-		765, 761, 763, 762, 759, 756, 755, 760, 754, 753,
-		750, 752, 751, 0, 2, 1, 3, 5, 10, 11,
+		765, 761, 763, 762, 759, 756, 755, 760, 754, 750,
+		751, 753, 752, 0, 2, 1, 3, 5, 10, 11,
 		12, 13, 15, 16, 17, 18, 14, 21, 22, 23,
 		24, 25, 26, 29, 85, 20
 	};

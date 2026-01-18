@@ -133,6 +133,12 @@ public class GoalAutoCombat : GoalCombat
 			Msg.Say("abort_idle");
 			return true;
 		}
+		ConDeathSentense condition = owner.GetCondition<ConDeathSentense>();
+		if (condition != null && condition.value <= 3)
+		{
+			Msg.Say("abort_sentense");
+			return true;
+		}
 		return false;
 	}
 }

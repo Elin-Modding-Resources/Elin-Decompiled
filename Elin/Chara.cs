@@ -1914,7 +1914,7 @@ public class Chara : Card, IPathfindWalker
 			info?.AddText("minSpeed".lang((elements.ValueWithoutLink(79) / 3).ToString() ?? ""));
 		}
 		int num = 100;
-		if (EClass._zone.map != null && (EClass._zone.IsUnderwater || (base.Cell.IsTopWater && !base.Cell.isFloating)))
+		if (EClass._zone.map != null && (EClass._zone.IsUnderwater || (base.Cell.IsTopWaterAndNoSnow && !base.Cell.isFloating)))
 		{
 			int num2 = Evalue(200);
 			int num3 = Evalue(1252);
@@ -5350,9 +5350,19 @@ public class Chara : Card, IPathfindWalker
 	public override void Die(Element e = null, Card origin = null, AttackSource attackSource = AttackSource.None, Chara originalTarget = null)
 	{
 		combatCount = 0;
-		if (isDead || host != null)
+		if (isDead)
 		{
 			return;
+		}
+		if (host != null)
+		{
+			base.hp = -1;
+			if ((uint)(attackSource - 17) > 1u)
+			{
+				AddCondition<ConFaint>(200, force: true);
+				return;
+			}
+			ActRide.Unride(host, this);
 		}
 		bool isInActiveZone = IsInActiveZone;
 		if (isInActiveZone)
@@ -5376,9 +5386,9 @@ public class Chara : Card, IPathfindWalker
 				Destroy();
 				return;
 			}
-			if (attackSource == AttackSource.DeathSentense)
+			if ((uint)(attackSource - 17) <= 1u)
 			{
-				if (trait is TraitLittleOne)
+				if (attackSource == AttackSource.Euthanasia && trait is TraitLittleOne)
 				{
 					MakeEgg();
 					if (IsPCFaction)
@@ -5437,7 +5447,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (isInActiveZone)
 		{
-			if (attackSource == AttackSource.DeathSentense)
+			if (attackSource == AttackSource.DeathSentense || attackSource == AttackSource.Euthanasia)
 			{
 				Msg.Say("goto_heaven", this);
 			}
@@ -5612,7 +5622,7 @@ public class Chara : Card, IPathfindWalker
 		switch (id)
 		{
 		case "littleOne":
-			if (attackSource != AttackSource.DeathSentense && !IsPCFaction)
+			if (attackSource != AttackSource.Euthanasia && !IsPCFaction)
 			{
 				EClass.player.flags.little_killed = true;
 				EClass.player.little_dead++;
@@ -5647,6 +5657,7 @@ public class Chara : Card, IPathfindWalker
 			chara2.MakeMinion((origin.IsPCParty || origin.IsPCPartyMinion) ? EClass.pc : origin.Chara, MinionType.Friend);
 			Msg.Say("plant_pop", this, chara2);
 		}
+		EClass._zone.OnCharaDie();
 		EClass._zone.events.OnCharaDie(this);
 	}
 
@@ -9668,6 +9679,7 @@ public class Chara : Card, IPathfindWalker
 			case CureType.Unicorn:
 				SAN.Mod(-20);
 				RemoveCondition<ConBrightnessOfLife>();
+				RemoveCondition<ConDeathSentense>();
 				break;
 			case CureType.Jure:
 				SAN.Mod(-999);
@@ -9675,6 +9687,8 @@ public class Chara : Card, IPathfindWalker
 				{
 					SetFeat(1206, 0, msg: true);
 				}
+				RemoveCondition<ConBrightnessOfLife>();
+				RemoveCondition<ConDeathSentense>();
 				break;
 			case CureType.CureBody:
 			case CureType.CureMind:
@@ -9704,7 +9718,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (TC.hp > (long)TC.MaxHP * (long)Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 35 : 25) / 100)
+		if (TC.hp > (long)TC.MaxHP * (long)(Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 35 : 25) + Evalue(1426) * 5) / 100)
 		{
 			return false;
 		}

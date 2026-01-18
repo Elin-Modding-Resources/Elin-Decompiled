@@ -7,5 +7,6 @@ public enum ConditionType
 	Disease,
 	Wrath,
 	Buff,
-	Stance
+	Stance,
+	Sentense
 }

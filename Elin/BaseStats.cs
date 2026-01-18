@@ -99,7 +99,8 @@ public class BaseStats : EClass
 	{
 		n.Clear();
 		n.AddHeader(source.GetName());
-		n.AddText("NoteText_flavor_element", source.GetDetail());
+		string text = (Lang.Has("contype_" + Type) ? ("(" + ("contype_" + Type).lang() + ") ") : "");
+		n.AddText("NoteText_flavor_element", text + source.GetDetail());
 		_WriteNote(n);
 		n.Build();
 	}

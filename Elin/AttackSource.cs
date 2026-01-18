@@ -18,6 +18,7 @@ public enum AttackSource
 	Wrath,
 	ManaBackfire,
 	DeathSentense,
+	Euthanasia,
 	Shockwave,
 	MagicSword,
 	MoonSpear,

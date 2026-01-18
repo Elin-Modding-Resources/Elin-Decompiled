@@ -33,6 +33,10 @@ public class TraitWhipEgg : TraitWhipLove
 						owner.Destroy();
 					}
 					EClass.player.ModKarma(-1);
+					if (c.isChara && c.Chara.mimicry != null)
+					{
+						c.Chara.mimicry.RevealMimicry(EClass.pc, surprise: false);
+					}
 					return true;
 				}, c);
 			}

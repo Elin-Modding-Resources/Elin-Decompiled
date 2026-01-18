@@ -370,7 +370,7 @@ public class AI_Idle : AIAct
 					}
 				}
 			}
-			if (!EClass._zone.IsRegion && owner.id == "mimic" && EClass.rnd(5) == 0 && owner.mimicry == null)
+			if (!EClass._zone.IsRegion && owner.HasElement(1425) && EClass.rnd(5) == 0 && owner.mimicry == null)
 			{
 				owner.UseAbility(8794, owner);
 			}

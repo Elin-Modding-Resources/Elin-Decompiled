@@ -1444,7 +1444,7 @@ public class BaseTileMap : EMono
 							thingPos.y += num12;
 							if (tileType.UseMountHeight)
 							{
-								if (tileType != TileType.Illumination || !this.cell.HasObj)
+								if ((tileType != TileType.Illumination || !this.cell.HasObj) && !tileType.AlwaysShow)
 								{
 									if (noRoofMode && currentRoom == null && t.altitude >= lowWallObjAltitude && tileType != TileType.ObjFloat)
 									{

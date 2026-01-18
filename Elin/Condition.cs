@@ -102,6 +102,15 @@ public class Condition : BaseCondition
 			elements.SetParent();
 		}
 		OnRemoved();
+		if (EmoIcon != 0 && owner.emoIcon == EmoIcon)
+		{
+			owner.emoIcon = Emo2.none;
+			foreach (Condition condition in owner.conditions)
+			{
+				condition.RefreshEmoIcon();
+			}
+			owner.renderer?.orbit?.RefreshAll();
+		}
 		owner.SetDirtySpeed();
 		if (ShouldRefresh)
 		{

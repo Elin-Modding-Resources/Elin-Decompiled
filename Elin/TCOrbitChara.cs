@@ -58,7 +58,7 @@ public class TCOrbitChara : TCOrbit
 		}
 	}
 
-	public void RefreshAll()
+	public override void RefreshAll()
 	{
 		showHP = (showHP2 = (showIcon = false));
 		if (owner.isDead || owner.host != null)
