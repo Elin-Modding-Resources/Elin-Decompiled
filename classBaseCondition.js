@@ -29,6 +29,7 @@ var classBaseCondition =
     [ "PhaseMsg", "classBaseCondition.html#aca9f2d03c9aaec4aba4c25465d51ba06", null ],
     [ "PlayEffect", "classBaseCondition.html#a4727ef4556b886b91eec62a3f3585fbc", null ],
     [ "PlayEndEffect", "classBaseCondition.html#adc2afd810b0ce0a62481218449231929", null ],
+    [ "RefreshEmoIcon", "classBaseCondition.html#a10d26d960382d8fef3bb13edc8dd507c", null ],
     [ "SetElement", "classBaseCondition.html#a10e9a12bab5d695ae5111d7e1b9eae42", null ],
     [ "SetOwner", "classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe", null ],
     [ "SetPhase", "classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e", null ],

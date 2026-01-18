@@ -13,6 +13,7 @@ var classABILITY =
     [ "ActCryRage", "classABILITY.html#a54e9ead91c89fe70b94e7d11b92565a5", null ],
     [ "ActCrySad", "classABILITY.html#a7fe21cf5c3b63b205753b1e7c387b28e", null ],
     [ "ActCurse", "classABILITY.html#ab98578bfc8d31ef0a1913eb90a81657b", null ],
+    [ "ActDeathSentense", "classABILITY.html#a17a028f60f242cd8081ce4fa326facb1", null ],
     [ "ActDrainBlood", "classABILITY.html#aeb818e2a3d2405a2344cde18d6ede810", null ],
     [ "ActDraw", "classABILITY.html#ad2991d6041a5db20299cc95eecab2501", null ],
     [ "ActDreamBug", "classABILITY.html#a913bf08ddb053d10d6d11470a1a6c33f", null ],

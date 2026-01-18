@@ -63,6 +63,7 @@ var classZone =
     [ "OnAfterSimulate", "classZone.html#a2d62eb40454eb5d68326cf34f73cf4f8", null ],
     [ "OnBeforeDeactivate", "classZone.html#a48856558baee920c2e3c839f42438c08", null ],
     [ "OnBeforeSimulate", "classZone.html#a6d06cd1e48021af090614339fe84a318", null ],
+    [ "OnCharaDie", "classZone.html#ac7efc45de51e712d8db6098c823c9011", null ],
     [ "OnChildNumChange", "classZone.html#a0a0aac1a5bf2cf15b78c072cd0adc7f4", null ],
     [ "OnCreate", "classZone.html#a5fd99fe5c651502e812edb88871cc526", null ],
     [ "OnCreateBP", "classZone.html#acf0e267fde2e566878e4a1bd8e6c148b", null ],

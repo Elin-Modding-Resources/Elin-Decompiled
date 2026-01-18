@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"BaseBuff_8cs.html":[2,0,0,199],
 "BaseBuff_8cs_source.html":[2,0,0,199],
 "BaseCard_8cs.html":[2,0,0,200],
 "BaseCard_8cs_source.html":[2,0,0,200],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "CharaActorPCC_8cs.html":[2,0,0,260],
 "CharaActorPCC_8cs_source.html":[2,0,0,260],
 "CharaActor_8cs.html":[2,0,0,259],
-"CharaActor_8cs_source.html":[2,0,0,259],
-"CharaBody_8cs.html":[2,0,0,261]
+"CharaActor_8cs_source.html":[2,0,0,259]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX7 =
 {
+"Footmark_8cs_source.html":[2,0,0,499],
+"FortuneRollData_8cs.html":[2,0,0,500],
+"FortuneRollData_8cs_source.html":[2,0,0,500],
 "Fov_8cs.html":[2,0,0,501],
 "Fov_8cs_source.html":[2,0,0,501],
 "FowProfile_8cs.html":[2,0,0,502],
@@ -246,8 +249,5 @@ var NAVTREEINDEX7 =
 "Hide_8cs.html":[2,0,0,2,37],
 "Hide_8cs_source.html":[2,0,0,2,37],
 "HintIcon_8cs.html":[2,0,0,3,42],
-"HintIcon_8cs_source.html":[2,0,0,3,42],
-"HireInfo_8cs.html":[2,0,0,590],
-"HireInfo_8cs_source.html":[2,0,0,590],
-"HitResult_8cs.html":[2,0,0,591]
+"HintIcon_8cs_source.html":[2,0,0,3,42]
 };

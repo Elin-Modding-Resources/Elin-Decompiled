@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"DramaProp_8cs_source.html":[2,0,0,437],
+"DramaSequence_8cs.html":[2,0,0,439],
 "DramaSequence_8cs_source.html":[2,0,0,439],
 "DramaSetup_8cs.html":[2,0,0,440],
 "DramaSetup_8cs_source.html":[2,0,0,440],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ad78a1701177a08aebfbccceb9f1eb63a":[2,0,0,450,0,20],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02adf2da70719acb96b4702c5abf1ffc993":[2,0,0,450,0,110],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ae0a67c8c63f8f7362917abef6ca24c6b":[2,0,0,450,0,60],
-"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ae0d82e282fe79fc4b85d807f8acfd14a":[2,0,0,450,0,59],
-"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ae7067a8cdc396e4c168db56633c6ba01":[2,0,0,450,0,39],
-"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ae7f88ae03dba148b8660029cbdfddee3":[2,0,0,450,0,68]
+"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ae0d82e282fe79fc4b85d807f8acfd14a":[2,0,0,450,0,59]
 };

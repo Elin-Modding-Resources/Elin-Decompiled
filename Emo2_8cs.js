@@ -22,6 +22,7 @@ var Emo2_8cs =
       [ "brush_like", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a66126f61c9e618297a559c08ed29894a", null ],
       [ "brush_like2", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a9076b177927e40e81c779c41ace60dc4", null ],
       [ "brush_like3", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088aa8ef8de53d6ca526834d088ac2365bdd", null ],
-      [ "hintEvent", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a5a19baa8e217da416bfdf695c042a30d", null ]
+      [ "hintEvent", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a5a19baa8e217da416bfdf695c042a30d", null ],
+      [ "death", "Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a2e8d6dbf9112a879d4ceb15403d10a78", null ]
     ] ]
 ];

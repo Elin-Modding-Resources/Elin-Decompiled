@@ -1,5 +1,8 @@
 var NAVTREEINDEX12 =
 {
+"QuestGuildFighter_8cs.html":[2,0,0,937],
+"QuestGuildFighter_8cs_source.html":[2,0,0,937],
+"QuestGuildMage_8cs.html":[2,0,0,938],
 "QuestGuildMage_8cs_source.html":[2,0,0,938],
 "QuestGuildMerchant_8cs.html":[2,0,0,939],
 "QuestGuildMerchant_8cs_source.html":[2,0,0,939],
@@ -246,8 +249,5 @@ var NAVTREEINDEX12 =
 "RenderCamUpscaler_8cs.html":[2,0,0,3,79],
 "RenderCamUpscaler_8cs_source.html":[2,0,0,3,79],
 "RenderDataCard_8cs.html":[2,0,0,1038],
-"RenderDataCard_8cs_source.html":[2,0,0,1038],
-"RenderDataChara_8cs.html":[2,0,0,1039],
-"RenderDataChara_8cs_source.html":[2,0,0,1039],
-"RenderDataCrate_8cs.html":[2,0,0,1040]
+"RenderDataCard_8cs_source.html":[2,0,0,1038]
 };

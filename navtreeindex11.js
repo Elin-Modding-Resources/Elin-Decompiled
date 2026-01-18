@@ -1,5 +1,8 @@
 var NAVTREEINDEX11 =
 {
+"NameStyle_8cs_source.html":[2,0,0,856],
+"Net_8cs.html":[2,0,0,857],
+"Net_8cs_source.html":[2,0,0,857],
 "NewsList_8cs.html":[2,0,0,858],
 "NewsList_8cs_source.html":[2,0,0,858],
 "NoGoal_8cs.html":[2,0,0,859],
@@ -246,8 +249,5 @@ var NAVTREEINDEX11 =
 "QuestFarrisSister_8cs.html":[2,0,0,934],
 "QuestFarrisSister_8cs_source.html":[2,0,0,934],
 "QuestFiamaLock_8cs.html":[2,0,0,935],
-"QuestFiamaLock_8cs_source.html":[2,0,0,935],
-"QuestGuildFighter_8cs.html":[2,0,0,937],
-"QuestGuildFighter_8cs_source.html":[2,0,0,937],
-"QuestGuildMage_8cs.html":[2,0,0,938]
+"QuestFiamaLock_8cs_source.html":[2,0,0,935]
 };

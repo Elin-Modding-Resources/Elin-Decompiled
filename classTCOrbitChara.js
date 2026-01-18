@@ -2,7 +2,7 @@ var classTCOrbitChara =
 [
     [ "OnSetOwner", "classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8", null ],
     [ "Refresh", "classTCOrbitChara.html#a34c1fc086a84fc890aa0e8dee5352ea7", null ],
-    [ "RefreshAll", "classTCOrbitChara.html#a4209d81b33a346db553b33732f1de679", null ],
+    [ "RefreshAll", "classTCOrbitChara.html#a1837722e0463626ad470db6e39bc6108", null ],
     [ "barHP", "classTCOrbitChara.html#aa3ead05c54c745b58b6b9c0e93debc69", null ],
     [ "barHP2", "classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6", null ],
     [ "bgHP", "classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0", null ],

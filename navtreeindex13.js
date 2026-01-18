@@ -1,5 +1,8 @@
 var NAVTREEINDEX13 =
 {
+"RenderDataChara_8cs.html":[2,0,0,1039],
+"RenderDataChara_8cs_source.html":[2,0,0,1039],
+"RenderDataCrate_8cs.html":[2,0,0,1040],
 "RenderDataCrate_8cs_source.html":[2,0,0,1040],
 "RenderDataEffect_8cs.html":[2,0,0,1041],
 "RenderDataEffect_8cs_source.html":[2,0,0,1041],
@@ -246,8 +249,5 @@ var NAVTREEINDEX13 =
 "SkinType_8cs.html#ac693d9b19ef67d14831cb92f6a1e4469a7a1920d61156abc05a60135aefe8bc67":[2,0,0,3,100,0,0],
 "SkinType_8cs.html#ac693d9b19ef67d14831cb92f6a1e4469a9914a0ce04a7b7b6a8e39bec55064b82":[2,0,0,3,100,0,1],
 "SkinType_8cs.html#ac693d9b19ef67d14831cb92f6a1e4469aa18366b217ebf811ad1886e4f4f865b2":[2,0,0,3,100,0,2],
-"SkinType_8cs.html#ac693d9b19ef67d14831cb92f6a1e4469ab78a3223503896721cca1303f776159b":[2,0,0,3,100,0,4],
-"SkinType_8cs.html#ac693d9b19ef67d14831cb92f6a1e4469ac983077ca27977bb5cb4b6398f144166":[2,0,0,3,100,0,3],
-"SkinType_8cs_source.html":[2,0,0,3,100],
-"SlaverData_8cs.html":[2,0,0,1093]
+"SkinType_8cs.html#ac693d9b19ef67d14831cb92f6a1e4469ab78a3223503896721cca1303f776159b":[2,0,0,3,100,0,4]
 };

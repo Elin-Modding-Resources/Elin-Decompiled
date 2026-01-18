@@ -1461,6 +1461,7 @@ var annotated_dup =
     [ "TileTypeObjBig", "classTileTypeObjBig.html", "classTileTypeObjBig" ],
     [ "TileTypeObjCeil", "classTileTypeObjCeil.html", "classTileTypeObjCeil" ],
     [ "TileTypeObjFloat", "classTileTypeObjFloat.html", "classTileTypeObjFloat" ],
+    [ "TileTypeObjFloatWaterfall", "classTileTypeObjFloatWaterfall.html", "classTileTypeObjFloatWaterfall" ],
     [ "TileTypeObjHuge", "classTileTypeObjHuge.html", "classTileTypeObjHuge" ],
     [ "TileTypeObjWater", "classTileTypeObjWater.html", "classTileTypeObjWater" ],
     [ "TileTypeObjWaterTop", "classTileTypeObjWaterTop.html", "classTileTypeObjWaterTop" ],

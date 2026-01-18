@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.260 Stable Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.261 Nightly Patch 3</span>
    </div>
   </td>
  </tr>
@@ -189,6 +189,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7a2cfa01df0129fa55c3045866180b2a inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26434ddc3787d11f66f72160d5991fe inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe">SetOwner</a> (<a class="el" href="classChara.html">Chara</a> _owner, bool onDeserialize=false)</td></tr>
 <tr class="separator:ad26434ddc3787d11f66f72160d5991fe inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d26d960382d8fef3bb13edc8dd507c inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a10d26d960382d8fef3bb13edc8dd507c">RefreshEmoIcon</a> ()</td></tr>
+<tr class="separator:a10d26d960382d8fef3bb13edc8dd507c inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73caba75a4e1224a76a46fae1bb985f0 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceElement_1_1Row.html">SourceElement.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a73caba75a4e1224a76a46fae1bb985f0">GetElementSource</a> (int i)</td></tr>
 <tr class="separator:a73caba75a4e1224a76a46fae1bb985f0 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43f2848978b48514f88d601a68f24c61 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a43f2848978b48514f88d601a68f24c61">Start</a> ()</td></tr>
@@ -412,8 +414,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a62c6ef288a7140793d6e5fb313fb72e4 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a168b1097bf0c30bd077a4f88541b4c7c">rnd</a> (int a)</td></tr>
 <tr class="separator:a168b1097bf0c30bd077a4f88541b4c7c inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c7ae534957971551c791736eb90643 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a16c7ae534957971551c791736eb90643">curve</a> (int _a, int start, int step, int rate=75)</td></tr>
-<tr class="separator:a16c7ae534957971551c791736eb90643 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045b2d6bbccbb6edaa12afe340176867 inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a045b2d6bbccbb6edaa12afe340176867">curve</a> (long _a, int start, int step, int rate=75)</td></tr>
+<tr class="separator:a045b2d6bbccbb6edaa12afe340176867 inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc8ed60d2a5f18a8be67b6bc837ac44e inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#acc8ed60d2a5f18a8be67b6bc837ac44e">sqrt</a> (int a)</td></tr>
 <tr class="separator:acc8ed60d2a5f18a8be67b6bc837ac44e inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab84d4222ba97e33775a9b7f3a2785dd inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#aab84d4222ba97e33775a9b7f3a2785dd">rndHalf</a> (int a)</td></tr>
@@ -580,11 +582,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   41</span>    }</div>
 <div class="ttc" id="aHealSource_8cs_html_a3111b7c56697622ac9831636c9d40f0b"><div class="ttname"><a href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0b">HealSource</a></div><div class="ttdeci">HealSource</div><div class="ttdef"><b>Definition:</b> <a href="HealSource_8cs_source.html#l00001">HealSource.cs:2</a></div></div>
 <div class="ttc" id="aclassCard_html_a4b66715cfdd6e3a9835fb6806a8ef9be"><div class="ttname"><a href="classCard.html#a4b66715cfdd6e3a9835fb6806a8ef9be">Card.HealHP</a></div><div class="ttdeci">virtual void HealHP(int a, HealSource origin=HealSource.None)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l04028">Card.cs:4028</a></div></div>
-<div class="ttc" id="aclassChara_html_a7f58fa0f7a0c720a9b89eb680ec86284"><div class="ttname"><a href="classChara.html#a7f58fa0f7a0c720a9b89eb680ec86284">Chara.SetCooldown</a></div><div class="ttdeci">void SetCooldown(int idEle, int turns=0)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08744">Chara.cs:8744</a></div></div>
+<div class="ttc" id="aclassChara_html_a7f58fa0f7a0c720a9b89eb680ec86284"><div class="ttname"><a href="classChara.html#a7f58fa0f7a0c720a9b89eb680ec86284">Chara.SetCooldown</a></div><div class="ttdeci">void SetCooldown(int idEle, int turns=0)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08755">Chara.cs:8755</a></div></div>
 <div class="ttc" id="aclassChara_html_a8a4be3d17b1563a969c61ae6a6cb9b2c"><div class="ttname"><a href="classChara.html#a8a4be3d17b1563a969c61ae6a6cb9b2c">Chara.MaxHP</a></div><div class="ttdeci">override int MaxHP</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00710">Chara.cs:710</a></div></div>
 <div class="ttc" id="aclassConTransmuteBat_html_ab8fbdef7a0f2ec15ca7afbf81002b386"><div class="ttname"><a href="classConTransmuteBat.html#ab8fbdef7a0f2ec15ca7afbf81002b386">ConTransmuteBat.CheckSeen</a></div><div class="ttdeci">void CheckSeen()</div><div class="ttdef"><b>Definition:</b> <a href="ConTransmuteBat_8cs_source.html#l00016">ConTransmuteBat.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConTransmuteBat_8cs_source.html#l00016">CheckSeen()</a>, <a class="el" href="Card_8cs_source.html#l04028">Card.HealHP()</a>, <a class="el" href="Chara_8cs_source.html#l00710">Chara.MaxHP</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, and <a class="el" href="Chara_8cs_source.html#l08744">Chara.SetCooldown()</a>.</p>
+<p class="reference">References <a class="el" href="ConTransmuteBat_8cs_source.html#l00016">CheckSeen()</a>, <a class="el" href="Card_8cs_source.html#l04028">Card.HealHP()</a>, <a class="el" href="Chara_8cs_source.html#l00710">Chara.MaxHP</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, and <a class="el" href="Chara_8cs_source.html#l08755">Chara.SetCooldown()</a>.</p>
 
 </div>
 </div>
@@ -619,9 +621,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;bat&quot;</span>);</div>
 <div class="line"><span class="lineno">   32</span>        <a class="code hl_function" href="classConTransmuteBat.html#ab8fbdef7a0f2ec15ca7afbf81002b386">CheckSeen</a>();</div>
 <div class="line"><span class="lineno">   33</span>    }</div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06219">Card.cs:6219</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06214">Card.cs:6214</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConTransmuteBat_8cs_source.html#l00016">CheckSeen()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, and <a class="el" href="Card_8cs_source.html#l06219">Card.PlaySound()</a>.</p>
+<p class="reference">References <a class="el" href="ConTransmuteBat_8cs_source.html#l00016">CheckSeen()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, and <a class="el" href="Card_8cs_source.html#l06214">Card.PlaySound()</a>.</p>
 
 </div>
 </div>

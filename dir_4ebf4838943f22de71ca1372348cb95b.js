@@ -1277,6 +1277,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TileTypeObjBig.cs", "TileTypeObjBig_8cs.html", "TileTypeObjBig_8cs" ],
     [ "TileTypeObjCeil.cs", "TileTypeObjCeil_8cs.html", "TileTypeObjCeil_8cs" ],
     [ "TileTypeObjFloat.cs", "TileTypeObjFloat_8cs.html", "TileTypeObjFloat_8cs" ],
+    [ "TileTypeObjFloatWaterfall.cs", "TileTypeObjFloatWaterfall_8cs.html", "TileTypeObjFloatWaterfall_8cs" ],
     [ "TileTypeObjHuge.cs", "TileTypeObjHuge_8cs.html", "TileTypeObjHuge_8cs" ],
     [ "TileTypeObjWater.cs", "TileTypeObjWater_8cs.html", "TileTypeObjWater_8cs" ],
     [ "TileTypeObjWaterTop.cs", "TileTypeObjWaterTop_8cs.html", "TileTypeObjWaterTop_8cs" ],

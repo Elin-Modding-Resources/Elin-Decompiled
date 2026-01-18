@@ -1359,7 +1359,8 @@ var hierarchy =
           ] ],
           [ "TileTypeObjCeil", "classTileTypeObjCeil.html", null ],
           [ "TileTypeObjFloat", "classTileTypeObjFloat.html", [
-            [ "TileTypeIllumination", "classTileTypeIllumination.html", null ]
+            [ "TileTypeIllumination", "classTileTypeIllumination.html", null ],
+            [ "TileTypeObjFloatWaterfall", "classTileTypeObjFloatWaterfall.html", null ]
           ] ],
           [ "TileTypeObjWater", "classTileTypeObjWater.html", null ],
           [ "TileTypeObjWaterTop", "classTileTypeObjWaterTop.html", null ],
