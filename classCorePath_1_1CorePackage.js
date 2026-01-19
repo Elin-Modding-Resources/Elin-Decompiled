@@ -2,6 +2,7 @@ var classCorePath_1_1CorePackage =
 [
     [ "Background", "classCorePath_1_1CorePackage.html#a1a2637ec27489eae0b7534660d789263", null ],
     [ "Book", "classCorePath_1_1CorePackage.html#acf24e60867e099517271c0f30d377629", null ],
+    [ "ETC", "classCorePath_1_1CorePackage.html#a0da531e2e4a8d23f62d821b47f414bfd", null ],
     [ "Help", "classCorePath_1_1CorePackage.html#a188e8df72f21a0d553815855be0c7a8c", null ],
     [ "HelpEN", "classCorePath_1_1CorePackage.html#a83201af5274f2d9e53ad19891efcda4e", null ],
     [ "LangImportMod", "classCorePath_1_1CorePackage.html#af382cd3012624e7dd2fde1deb4cc0f99", null ],

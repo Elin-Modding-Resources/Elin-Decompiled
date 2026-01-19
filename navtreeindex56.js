@@ -1,5 +1,12 @@
 var NAVTREEINDEX56 =
 {
+"classDate.html#a150b36a881d005c12d144a20ed082b3c":[1,0,435,25],
+"classDate.html#a19520a1bcc84eb1dba46bd6f13637ac7":[1,0,435,13],
+"classDate.html#a1c5cb00619c4fd1cccfd798a11f14e12":[1,0,435,6],
+"classDate.html#a1eb381fbf4e8155d80cd9250f26599ec":[1,0,435,30],
+"classDate.html#a2a485ddfbf16eec432a65830d8161842":[1,0,435,27],
+"classDate.html#a33f411bda2d7024f8ef2f554233e9d1e":[1,0,435,14],
+"classDate.html#a44dd24f490b71fbe885031ce99ba7d25":[1,0,435,4],
 "classDate.html#a4adcbe7864cca4d77f3088bd9d8bdecd":[1,0,435,42],
 "classDate.html#a4fbc0c424e43ae001a65ba38f3f11dc7":[1,0,435,33],
 "classDate.html#a516b6cc39cf6112303cef8719b00ee03":[1,0,435,3],
@@ -186,9 +193,9 @@ var NAVTREEINDEX56 =
 "classDice.html#ab911a716776543f5ab3daef556fc0d44":[1,0,442,17],
 "classDice.html#abb71f28b7a36ecf8683a858dac37daa5":[1,0,442,4],
 "classDice.html#aeb5025592e24ab8800e064e32755cfa4":[1,0,442,0],
-"classDomain.html":[1,0,444],
-"classDomain.html#ab7b3c1905cbb4e120bcbf3e2a6635e60":[1,0,444,0],
-"classDomain.html#affa6cbb1b36f9d7b53245f4b9e3ed1e4":[1,0,444,1],
+"classDomain.html":[1,0,445],
+"classDomain.html#ab7b3c1905cbb4e120bcbf3e2a6635e60":[1,0,445,0],
+"classDomain.html#affa6cbb1b36f9d7b53245f4b9e3ed1e4":[1,0,445,1],
 "classDomainManager.html":[1,0,446],
 "classDomainManager.html#a05a132c056a8b17aa1812ab115c7515a":[1,0,446,1],
 "classDomainManager.html#a1437f20887ca0e7226012f2af528940b":[1,0,446,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX56 =
 "classDramaChoice.html#a2123aa178af8ca70fafbdb9749ea4c84":[1,0,450,1],
 "classDramaChoice.html#a3d0f02fbfcd6840baf979a94f9caaf07":[1,0,450,16],
 "classDramaChoice.html#a4a5208e5c480f24f9c1887b9b26f6c29":[1,0,450,5],
-"classDramaChoice.html#a66d8d95232a8c8ae63a8cab77c49c58f":[1,0,450,4],
-"classDramaChoice.html#a6dd2bb17dfa802cc7f4776d53bcad613":[1,0,450,14],
-"classDramaChoice.html#a7886c95adc949e6d05f0ccce4c1671ff":[1,0,450,18],
-"classDramaChoice.html#a8798b04b02c96435f712780bde0e06fc":[1,0,450,6],
-"classDramaChoice.html#a9b2f3063ad8dd65f7ad737954160e8ba":[1,0,450,7],
-"classDramaChoice.html#aa117eade2a79e4bf4829e284e587bc0d":[1,0,450,3],
-"classDramaChoice.html#aa14e9374a58a58d96784414d23307974":[1,0,450,11],
-"classDramaChoice.html#aa7d3313adfb18b7b0b7d7442a98763e5":[1,0,450,15]
+"classDramaChoice.html#a66d8d95232a8c8ae63a8cab77c49c58f":[1,0,450,4]
 };

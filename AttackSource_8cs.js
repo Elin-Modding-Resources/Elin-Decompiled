@@ -18,7 +18,7 @@ var AttackSource_8cs =
       [ "Hang", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4aab2455e33b8ddb6a9d2d41107a2ed4f6", null ],
       [ "Wrath", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a9b1271f437c566a7fb4836696ee65de6", null ],
       [ "ManaBackfire", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4acf1f35969f6a3c7ed59147c80cd28b2b", null ],
-      [ "DeathSentense", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a5d9327984009eebc1a21c8cef38dbc8b", null ],
+      [ "DeathSentence", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a81825500564af41ad366d4958c2a09a4", null ],
       [ "Euthanasia", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a9fa3f1ba4b3f85d648a428e03ca5384c", null ],
       [ "Shockwave", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4a822b02e1b751097d290eaad55252eb81", null ],
       [ "MagicSword", "AttackSource_8cs.html#a94a286604244a15021d28571897475a4ac90d60c2ea096577c43cf2ee47e58af4", null ],

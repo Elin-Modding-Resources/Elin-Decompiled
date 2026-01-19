@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"classCircularRadialButton.html#ab9c8bef473a5ada7b9b8d964d79073d5":[1,0,288,9],
+"classCircularRadialButton.html#ac4d56c9f9f9fbad7c5d63ea5071c733a":[1,0,288,10],
+"classCircularRadialButton.html#ace30bee9a0253bc0138e91663dd35043":[1,0,288,13],
+"classCircularRadialButton.html#ace5c1edd846a9d920a1c32da24c8da52":[1,0,288,0],
 "classCircularRadialButton.html#acf96615f6ef73a54088105016fc35e7f":[1,0,288,2],
 "classCircularRadialButton.html#ad85d17590a648823d0043dd9200af6ba":[1,0,288,27],
 "classCircularRadialButton.html#adb9fd97e6d8e4ecd0b7e1271f7f2959a":[1,0,288,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX47 =
 "classCodexCreature.html#ac6b694c12306573a3537e09971e9e061":[1,0,293,11],
 "classCodexCreature.html#ace1c6e37028a9e373ece50bb2390248c":[1,0,293,4],
 "classCodexManager.html":[1,0,294],
-"classCodexManager.html#a090560d6cd3e55d4c3eeb6b446e0d059":[1,0,294,6],
-"classCodexManager.html#a47cf7e585dbf82fa2696c6302d91639a":[1,0,294,9],
-"classCodexManager.html#a4bf09472d891b02212fac9ffa739a0bd":[1,0,294,7],
-"classCodexManager.html#a5010eb833587e80a5e3822fa25222a29":[1,0,294,0],
-"classCodexManager.html#a68531035a3e022514fec625604089bf8":[1,0,294,4]
+"classCodexManager.html#a090560d6cd3e55d4c3eeb6b446e0d059":[1,0,294,6]
 };

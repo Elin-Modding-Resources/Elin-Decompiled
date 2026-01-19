@@ -13,6 +13,8 @@ var classContentGallery =
     [ "imageBig", "classContentGallery.html#ae3fad2799f3ccf65ebd17292661e3fa3", null ],
     [ "lastPage", "classContentGallery.html#a11e35d71d1d7fcd7f3a75d9bbe402d11", null ],
     [ "listMode", "classContentGallery.html#a0117f358435e05e7121363164fdecd6f", null ],
+    [ "sprites", "classContentGallery.html#a6eb98472510cfbc6ea6bc72e9327afb4", null ],
+    [ "spritesFull", "classContentGallery.html#aad79172d204c31428b0478ae8cdca239", null ],
     [ "textCollected", "classContentGallery.html#af1f4e876918e20e8bb333fd1ebe125b0", null ],
     [ "transBig", "classContentGallery.html#a23e2776de8e0ace978fe6abab79c2f13", null ]
 ];

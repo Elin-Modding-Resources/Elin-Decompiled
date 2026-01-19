@@ -28,7 +28,7 @@ var searchData=
   ['selfharm_25',['selfHarm',['../classAI__PassTime.html#a9e8f7e41abd4555fc3b3ca802fa0958eae1e87761b01848aa72e4135478fd219f',1,'AI_PassTime']]],
   ['sell_26',['Sell',['../classUIInventory.html#a1060581fa9fb2ff479cfcb45088aff15a3068c5a98c003498f1fec0c489212e8b',1,'UIInventory']]],
   ['sellattown_27',['SellAtTown',['../ClearInventoryType_8cs.html#ac2369609a8ebd07f4a1ac011e6db2648a465f8ab76d2c7ff648dc6e5be26f08e5',1,'ClearInventoryType.cs']]],
-  ['sentense_28',['Sentense',['../ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a0e69c934f14a4be11e4894d817d6f4cc',1,'ConditionType.cs']]],
+  ['sentence_28',['Sentence',['../ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a0667fab375c18f4a0f29beec635b1b87',1,'ConditionType.cs']]],
   ['setcursor_29',['SETCURSOR',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3daf1ba083fe5ee06aded6aa92ddb5e3f94',1,'B83::Win32']]],
   ['setfocus_30',['SETFOCUS',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da114f56d2a51ba31049022de5f83a5508',1,'B83::Win32']]],
   ['setfont_31',['SETFONT',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7f88a6403be9520e5c139897d604ebb4',1,'B83::Win32']]],

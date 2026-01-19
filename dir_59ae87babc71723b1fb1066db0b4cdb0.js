@@ -41,6 +41,7 @@ var dir_59ae87babc71723b1fb1066db0b4cdb0 =
     [ "IChangeLanguage.cs", "IChangeLanguage_8cs.html", "IChangeLanguage_8cs" ],
     [ "IChangeResolution.cs", "IChangeResolution_8cs.html", "IChangeResolution_8cs" ],
     [ "ImageExample.cs", "ImageExample_8cs.html", "ImageExample_8cs" ],
+    [ "ImageLoader.cs", "ImageLoader_8cs.html", "ImageLoader_8cs" ],
     [ "IntColor.cs", "IntColor_8cs.html", "IntColor_8cs" ],
     [ "IO.cs", "IO_8cs.html", "IO_8cs" ],
     [ "IPoolObject.cs", "IPoolObject_8cs.html", "IPoolObject_8cs" ],

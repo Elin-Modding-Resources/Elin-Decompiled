@@ -13,7 +13,7 @@ var searchData=
   ['deadchar_10',['DEADCHAR',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da64551183be9279bb30c50f53136c4c94',1,'B83::Win32']]],
   ['death_11',['Death',['../CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba6097f89e3092d4ccd249c9d479785c1f',1,'CureType.cs']]],
   ['death_12',['death',['../Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088a2e8d6dbf9112a879d4ceb15403d10a78',1,'Emo2.cs']]],
-  ['deathsentense_13',['DeathSentense',['../AttackSource_8cs.html#a94a286604244a15021d28571897475a4a5d9327984009eebc1a21c8cef38dbc8b',1,'AttackSource.cs']]],
+  ['deathsentence_13',['DeathSentence',['../AttackSource_8cs.html#a94a286604244a15021d28571897475a4a81825500564af41ad366d4958c2a09a4',1,'AttackSource.cs']]],
   ['debuff_14',['Debuff',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a941c9c4ecaa0bb3ab530f13b0078be01',1,'Debuff():&#160;EffectId.cs'],['../ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a941c9c4ecaa0bb3ab530f13b0078be01',1,'Debuff():&#160;ConditionType.cs']]],
   ['debuffkizuami_15',['DebuffKizuami',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a7412edccb0bbaae66c178887a1299392',1,'EffectId.cs']]],
   ['debuffstats_16',['DebuffStats',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ab5a3c34ba1af3cbb77665c327daf3920',1,'EffectId.cs']]],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.261 Nightly Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.262 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -420,10 +420,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   53</span>        <a class="code hl_variable" href="classWidgetSideScreen.html#a423f774f23e2f37a4802dbd13295521d">Instance</a> = <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   54</span>    }</div>
 <div class="ttc" id="aclassWidgetSideScreen_html_a423f774f23e2f37a4802dbd13295521d"><div class="ttname"><a href="classWidgetSideScreen.html#a423f774f23e2f37a4802dbd13295521d">WidgetSideScreen.Instance</a></div><div class="ttdeci">static WidgetSideScreen Instance</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00021">WidgetSideScreen.cs:21</a></div></div>
-<div class="ttc" id="aclassWidgetSideScreen_html_a558f249678565869f7a22b40a5469e07"><div class="ttname"><a href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">WidgetSideScreen.OnChangeResolution</a></div><div class="ttdeci">override void OnChangeResolution()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00096">WidgetSideScreen.cs:96</a></div></div>
-<div class="ttc" id="aclassWidgetSideScreen_html_aeeb3c4f3b49d6123b2ea81cdf7668638"><div class="ttname"><a href="classWidgetSideScreen.html#aeeb3c4f3b49d6123b2ea81cdf7668638">WidgetSideScreen.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00091">WidgetSideScreen.cs:91</a></div></div>
+<div class="ttc" id="aclassWidgetSideScreen_html_a558f249678565869f7a22b40a5469e07"><div class="ttname"><a href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">WidgetSideScreen.OnChangeResolution</a></div><div class="ttdeci">override void OnChangeResolution()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00091">WidgetSideScreen.cs:91</a></div></div>
+<div class="ttc" id="aclassWidgetSideScreen_html_aeeb3c4f3b49d6123b2ea81cdf7668638"><div class="ttname"><a href="classWidgetSideScreen.html#aeeb3c4f3b49d6123b2ea81cdf7668638">WidgetSideScreen.Refresh</a></div><div class="ttdeci">void Refresh()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00086">WidgetSideScreen.cs:86</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00021">Instance</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">Refresh()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00021">Instance</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">OnChangeResolution()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00086">Refresh()</a>.</p>
 
 </div>
 </div>
@@ -452,69 +452,59 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classWidget.html#a263ffee73ef73adc5497c8881dc113c8">Widget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">96</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>    {</div>
-<div class="line"><span class="lineno">   98</span>        base.OnChangeResolution();</div>
-<div class="line"><span class="lineno">   99</span>        RectTransform rectTransform = this.Rect();</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">float</span> x = 0.01f * (float)Screen.width * (<span class="keywordtype">float</span>)extra.width / EMono.core.uiScale + 50f;</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">float</span> num = (float)Screen.height / <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_property" href="classCore.html#a0adecdbfe97eb888046531f358f94804">uiScale</a> + 50f;</div>
-<div class="line"><span class="lineno">  102</span>        rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(x, num);</div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#af3c4515bfd3a0fe9a01b49eac71528d3">reverse</a>)</div>
+<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">91</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        base.OnChangeResolution();</div>
+<div class="line"><span class="lineno">   94</span>        RectTransform rectTransform = this.Rect();</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">float</span> x = 0.01f * (float)Screen.width * (<span class="keywordtype">float</span>)extra.width / EMono.core.uiScale + 50f;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordtype">float</span> y = (float)Screen.height / <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_property" href="classCore.html#a0adecdbfe97eb888046531f358f94804">uiScale</a> + 50f;</div>
+<div class="line"><span class="lineno">   97</span>        rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(x, y);</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#af3c4515bfd3a0fe9a01b49eac71528d3">reverse</a>)</div>
+<div class="line"><span class="lineno">   99</span>        {</div>
+<div class="line"><span class="lineno">  100</span>            rectTransform.SetAnchor(0f, 0.5f, 0f, 0.5f);</div>
+<div class="line"><span class="lineno">  101</span>            rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x * 0.5f, 0f);</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  104</span>        {</div>
-<div class="line"><span class="lineno">  105</span>            rectTransform.SetAnchor(0f, 0.5f, 0f, 0.5f);</div>
-<div class="line"><span class="lineno">  106</span>            rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x * 0.5f, 0f);</div>
+<div class="line"><span class="lineno">  105</span>            rectTransform.SetAnchor(1f, 0.5f, 1f, 0.5f);</div>
+<div class="line"><span class="lineno">  106</span>            rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x * -0.5f, 0f);</div>
 <div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  109</span>        {</div>
-<div class="line"><span class="lineno">  110</span>            rectTransform.SetAnchor(1f, 0.5f, 1f, 0.5f);</div>
-<div class="line"><span class="lineno">  111</span>            rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x * -0.5f, 0f);</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_function" href="classWidgetSideScreen.html#aeeb3c4f3b49d6123b2ea81cdf7668638">Refresh</a>();</div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="classWidgetSideScreen.html#a464f6d0552104b1c814c4033c036a074">imagePic</a>.SetActive(<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#abbfdde4db274d9dfee49df874b23d1a1">idImage</a> &gt; 0);</div>
-<div class="line"><span class="lineno">  115</span>        Sprite sprite = <a class="code hl_variable" href="classWidgetSideScreen.html#a7b6ccb6f00d8fab652127929764f33c0">sprites</a>[<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#abbfdde4db274d9dfee49df874b23d1a1">idImage</a>];</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite)</div>
-<div class="line"><span class="lineno">  117</span>        {</div>
-<div class="line"><span class="lineno">  118</span>            imagePic.sprite = sprite;</div>
-<div class="line"><span class="lineno">  119</span>            imagePic.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(num * (<span class="keywordtype">float</span>)sprite.texture.width / (<span class="keywordtype">float</span>)sprite.texture.height, num);</div>
-<div class="line"><span class="lineno">  120</span>            imagePic.color = <a class="code hl_property" href="classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834">bgColor</a>;</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#abbaf56aec2cdf848e3642f29a428c5e9">alignUI</a>)</div>
-<div class="line"><span class="lineno">  123</span>        {</div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#af3c4515bfd3a0fe9a01b49eac71528d3">reverse</a>)</div>
-<div class="line"><span class="lineno">  125</span>            {</div>
-<div class="line"><span class="lineno">  126</span>                EMono.ui.rectLayers.anchoredPosition = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x / 2f, 0f);</div>
-<div class="line"><span class="lineno">  127</span>                EMono.ui.rectLayers.sizeDelta = <span class="keyword">new</span> Vector2(0f - rectTransform.sizeDelta.x, 0f);</div>
-<div class="line"><span class="lineno">  128</span>                <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(rectTransform.sizeDelta.x);</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  131</span>            {</div>
-<div class="line"><span class="lineno">  132</span>                EMono.ui.rectLayers.anchoredPosition = <span class="keyword">new</span> Vector2((0f - rectTransform.sizeDelta.x) / 2f, 0f);</div>
-<div class="line"><span class="lineno">  133</span>                EMono.ui.rectLayers.sizeDelta = <span class="keyword">new</span> Vector2(0f - rectTransform.sizeDelta.x, 0f);</div>
-<div class="line"><span class="lineno">  134</span>                <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(0f - rectTransform.sizeDelta.x);</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  138</span>        {</div>
-<div class="line"><span class="lineno">  139</span>            EMono.ui.rectLayers.anchoredPosition = Vector2.zero;</div>
-<div class="line"><span class="lineno">  140</span>            EMono.ui.rectLayers.sizeDelta = Vector2.zero;</div>
-<div class="line"><span class="lineno">  141</span>            <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(0f);</div>
-<div class="line"><span class="lineno">  142</span>        }</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_function" href="classWidgetSideScreen.html#aeeb3c4f3b49d6123b2ea81cdf7668638">Refresh</a>();</div>
+<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="classWidgetSideScreen.html#a464f6d0552104b1c814c4033c036a074">imagePic</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#abbaf56aec2cdf848e3642f29a428c5e9">alignUI</a>)</div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#af3c4515bfd3a0fe9a01b49eac71528d3">reverse</a>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                EMono.ui.rectLayers.anchoredPosition = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x / 2f, 0f);</div>
+<div class="line"><span class="lineno">  115</span>                EMono.ui.rectLayers.sizeDelta = <span class="keyword">new</span> Vector2(0f - rectTransform.sizeDelta.x, 0f);</div>
+<div class="line"><span class="lineno">  116</span>                <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(rectTransform.sizeDelta.x);</div>
+<div class="line"><span class="lineno">  117</span>            }</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  119</span>            {</div>
+<div class="line"><span class="lineno">  120</span>                EMono.ui.rectLayers.anchoredPosition = <span class="keyword">new</span> Vector2((0f - rectTransform.sizeDelta.x) / 2f, 0f);</div>
+<div class="line"><span class="lineno">  121</span>                EMono.ui.rectLayers.sizeDelta = <span class="keyword">new</span> Vector2(0f - rectTransform.sizeDelta.x, 0f);</div>
+<div class="line"><span class="lineno">  122</span>                <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(0f - rectTransform.sizeDelta.x);</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            EMono.ui.rectLayers.anchoredPosition = Vector2.zero;</div>
+<div class="line"><span class="lineno">  128</span>            EMono.ui.rectLayers.sizeDelta = Vector2.zero;</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(0f);</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
 <div class="ttc" id="aclassCore_html_a0adecdbfe97eb888046531f358f94804"><div class="ttname"><a href="classCore.html#a0adecdbfe97eb888046531f358f94804">Core.uiScale</a></div><div class="ttdeci">override float uiScale</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00095">Core.cs:95</a></div></div>
 <div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
 <div class="ttc" id="aclassEMono_html_a250c92b5796155e2c5ffb40475a86ae2"><div class="ttname"><a href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">EMono.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00005">EMono.cs:5</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_1_1Extra_html_abbaf56aec2cdf848e3642f29a428c5e9"><div class="ttname"><a href="classWidgetSideScreen_1_1Extra.html#abbaf56aec2cdf848e3642f29a428c5e9">WidgetSideScreen.Extra.alignUI</a></div><div class="ttdeci">bool alignUI</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00018">WidgetSideScreen.cs:18</a></div></div>
-<div class="ttc" id="aclassWidgetSideScreen_1_1Extra_html_abbfdde4db274d9dfee49df874b23d1a1"><div class="ttname"><a href="classWidgetSideScreen_1_1Extra.html#abbfdde4db274d9dfee49df874b23d1a1">WidgetSideScreen.Extra.idImage</a></div><div class="ttdeci">int idImage</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00012">WidgetSideScreen.cs:12</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_1_1Extra_html_af3c4515bfd3a0fe9a01b49eac71528d3"><div class="ttname"><a href="classWidgetSideScreen_1_1Extra.html#af3c4515bfd3a0fe9a01b49eac71528d3">WidgetSideScreen.Extra.reverse</a></div><div class="ttdeci">bool reverse</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00016">WidgetSideScreen.cs:16</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_html_a17d58dfa41b0a4fbaaf6b532e83359af"><div class="ttname"><a href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">WidgetSideScreen.extra</a></div><div class="ttdeci">Extra extra</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00029">WidgetSideScreen.cs:29</a></div></div>
-<div class="ttc" id="aclassWidgetSideScreen_html_a28255c84392d96791cef19f696a9b834"><div class="ttname"><a href="classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834">WidgetSideScreen.bgColor</a></div><div class="ttdeci">Color bgColor</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00031">WidgetSideScreen.cs:32</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_html_a464f6d0552104b1c814c4033c036a074"><div class="ttname"><a href="classWidgetSideScreen.html#a464f6d0552104b1c814c4033c036a074">WidgetSideScreen.imagePic</a></div><div class="ttdeci">Image imagePic</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00025">WidgetSideScreen.cs:25</a></div></div>
-<div class="ttc" id="aclassWidgetSideScreen_html_a75e61b8155054cffb71ef233644d5fb0"><div class="ttname"><a href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">WidgetSideScreen.SlideMiniGame</a></div><div class="ttdeci">void SlideMiniGame(float w)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00145">WidgetSideScreen.cs:145</a></div></div>
-<div class="ttc" id="aclassWidgetSideScreen_html_a7b6ccb6f00d8fab652127929764f33c0"><div class="ttname"><a href="classWidgetSideScreen.html#a7b6ccb6f00d8fab652127929764f33c0">WidgetSideScreen.sprites</a></div><div class="ttdeci">Sprite[] sprites</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00023">WidgetSideScreen.cs:23</a></div></div>
+<div class="ttc" id="aclassWidgetSideScreen_html_a75e61b8155054cffb71ef233644d5fb0"><div class="ttname"><a href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">WidgetSideScreen.SlideMiniGame</a></div><div class="ttdeci">void SlideMiniGame(float w)</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00133">WidgetSideScreen.cs:133</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00018">WidgetSideScreen.Extra.alignUI</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00032">bgColor</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00029">extra</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00012">WidgetSideScreen.Extra.idImage</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00025">imagePic</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">Refresh()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00016">WidgetSideScreen.Extra.reverse</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00145">SlideMiniGame()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00023">sprites</a>, and <a class="el" href="Core_8cs_source.html#l00095">Core.uiScale</a>.</p>
+<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00018">WidgetSideScreen.Extra.alignUI</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00029">extra</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00025">imagePic</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00086">Refresh()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00016">WidgetSideScreen.Extra.reverse</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00133">SlideMiniGame()</a>, and <a class="el" href="Core_8cs_source.html#l00095">Core.uiScale</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00322">Game.Load()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00048">OnActivate()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00153">OnEnable()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">OnSetContextMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Game_8cs_source.html#l00322">Game.Load()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00048">OnActivate()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00141">OnEnable()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -541,15 +531,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00158">158</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
-<div class="line"><span class="lineno">  160</span>        EMono.scene.cam.rect = <span class="keyword">new</span> Rect(0f, 0f, 1f, 1f);</div>
-<div class="line"><span class="lineno">  161</span>        EMono.ui.rectLayers.anchoredPosition = Vector2.zero;</div>
-<div class="line"><span class="lineno">  162</span>        EMono.ui.rectLayers.sizeDelta = Vector2.zero;</div>
-<div class="line"><span class="lineno">  163</span>        <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(0f);</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00146">146</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        EMono.scene.cam.rect = <span class="keyword">new</span> Rect(0f, 0f, 1f, 1f);</div>
+<div class="line"><span class="lineno">  149</span>        EMono.ui.rectLayers.anchoredPosition = Vector2.zero;</div>
+<div class="line"><span class="lineno">  150</span>        EMono.ui.rectLayers.sizeDelta = Vector2.zero;</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_function" href="classWidgetSideScreen.html#a75e61b8155054cffb71ef233644d5fb0">SlideMiniGame</a>(0f);</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00145">SlideMiniGame()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00133">SlideMiniGame()</a>.</p>
 
 </div>
 </div>
@@ -576,12 +566,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00153">153</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>    {</div>
-<div class="line"><span class="lineno">  155</span>        <a class="code hl_function" href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">OnChangeResolution</a>();</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00141">141</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>    {</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_function" href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">OnChangeResolution</a>();</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>.</p>
+<p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">OnChangeResolution()</a>.</p>
 
 </div>
 </div>
@@ -630,21 +620,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   72</span>            extra.width = (int)a;</div>
 <div class="line"><span class="lineno">   73</span>            <a class="code hl_function" href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">OnChangeResolution</a>();</div>
 <div class="line"><span class="lineno">   74</span>        }, 10f, 50f, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   75</span>        uIContextMenu.<a class="code hl_function" href="classUIContextMenu.html#a75c796a9dd17902e8a8f710e8c8760f6">AddSlider</a>(<span class="stringliteral">&quot;image&quot;</span>, (<span class="keywordtype">float</span> a) =&gt; a.ToString() ?? <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#abbfdde4db274d9dfee49df874b23d1a1">idImage</a>, delegate(<span class="keywordtype">float</span> a)</div>
+<div class="line"><span class="lineno">   75</span>        uIContextMenu.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;colorBG&quot;</span>, delegate</div>
 <div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            extra.idImage = (int)a;</div>
-<div class="line"><span class="lineno">   78</span>            <a class="code hl_function" href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">OnChangeResolution</a>();</div>
-<div class="line"><span class="lineno">   79</span>        }, 0f, sprites.Length - 1, isInt: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   80</span>        uIContextMenu.<a class="code hl_function" href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">AddButton</a>(<span class="stringliteral">&quot;colorBG&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(<a class="code hl_property" href="classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834">bgColor</a>, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
-<div class="line"><span class="lineno">   83</span>            {</div>
-<div class="line"><span class="lineno">   84</span>                <a class="code hl_property" href="classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834">bgColor</a> = _c;</div>
-<div class="line"><span class="lineno">   85</span>                <a class="code hl_function" href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">OnChangeResolution</a>();</div>
-<div class="line"><span class="lineno">   86</span>            });</div>
-<div class="line"><span class="lineno">   87</span>        });</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">ui</a>.AddLayer&lt;<a class="code hl_class" href="classLayerColorPicker.html">LayerColorPicker</a>&gt;().SetColor(<a class="code hl_property" href="classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834">bgColor</a>, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>.white, delegate(<a class="code hl_enumeration" href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a> state, <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> _c)</div>
+<div class="line"><span class="lineno">   78</span>            {</div>
+<div class="line"><span class="lineno">   79</span>                <a class="code hl_property" href="classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834">bgColor</a> = _c;</div>
+<div class="line"><span class="lineno">   80</span>                <a class="code hl_function" href="classWidgetSideScreen.html#a558f249678565869f7a22b40a5469e07">OnChangeResolution</a>();</div>
+<div class="line"><span class="lineno">   81</span>            });</div>
+<div class="line"><span class="lineno">   82</span>        });</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_function" href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">SetBaseContextMenu</a>(m);</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aPickerState_8cs_html_af0e8d951c8c06a49198f86a4ca1ca437"><div class="ttname"><a href="PickerState_8cs.html#af0e8d951c8c06a49198f86a4ca1ca437">PickerState</a></div><div class="ttdeci">PickerState</div><div class="ttdef"><b>Definition:</b> <a href="PickerState_8cs_source.html#l00001">PickerState.cs:2</a></div></div>
 <div class="ttc" id="aclassEMono_html_aa3ed12cac32a967066a2bf21f507fcaa"><div class="ttname"><a href="classEMono.html#aa3ed12cac32a967066a2bf21f507fcaa">EMono.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00015">EMono.cs:15</a></div></div>
@@ -655,9 +640,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUIContextMenu_html_aeaebfa725324dc28ca41babf4a8e429a"><div class="ttname"><a href="classUIContextMenu.html#aeaebfa725324dc28ca41babf4a8e429a">UIContextMenu.AddButton</a></div><div class="ttdeci">void AddButton(Func&lt; string &gt; funcText, UnityAction action=null)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00273">UIContextMenu.cs:273</a></div></div>
 <div class="ttc" id="aclassUIContextMenu_html_afa1c5174bdbdf88aeacd6407a9840b1f"><div class="ttname"><a href="classUIContextMenu.html#afa1c5174bdbdf88aeacd6407a9840b1f">UIContextMenu.AddChild</a></div><div class="ttdeci">UIContextMenu AddChild(string idLang, TextAnchor anchor)</div><div class="ttdef"><b>Definition:</b> <a href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.cs:496</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_1_1Extra_html_ab04fdeb4e944166912c7bd95ed4f183d"><div class="ttname"><a href="classWidgetSideScreen_1_1Extra.html#ab04fdeb4e944166912c7bd95ed4f183d">WidgetSideScreen.Extra.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00008">WidgetSideScreen.cs:8</a></div></div>
+<div class="ttc" id="aclassWidgetSideScreen_html_a28255c84392d96791cef19f696a9b834"><div class="ttname"><a href="classWidgetSideScreen.html#a28255c84392d96791cef19f696a9b834">WidgetSideScreen.bgColor</a></div><div class="ttdeci">Color bgColor</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00031">WidgetSideScreen.cs:32</a></div></div>
 <div class="ttc" id="aclassWidget_html_a1566722a39d0cce11507c43b3737df1a"><div class="ttname"><a href="classWidget.html#a1566722a39d0cce11507c43b3737df1a">Widget.SetBaseContextMenu</a></div><div class="ttdeci">void SetBaseContextMenu(UIContextMenu m)</div><div class="ttdef"><b>Definition:</b> <a href="Widget_8cs_source.html#l00608">Widget.cs:608</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00273">UIContextMenu.AddButton()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.AddChild()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00316">UIContextMenu.AddToggle()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00018">WidgetSideScreen.Extra.alignUI</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00032">bgColor</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00029">extra</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00012">WidgetSideScreen.Extra.idImage</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00016">WidgetSideScreen.Extra.reverse</a>, <a class="el" href="Widget_8cs_source.html#l00608">Widget.SetBaseContextMenu()</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00008">WidgetSideScreen.Extra.width</a>.</p>
+<p class="reference">References <a class="el" href="UIContextMenu_8cs_source.html#l00273">UIContextMenu.AddButton()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00496">UIContextMenu.AddChild()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00329">UIContextMenu.AddSlider()</a>, <a class="el" href="UIContextMenu_8cs_source.html#l00316">UIContextMenu.AddToggle()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00018">WidgetSideScreen.Extra.alignUI</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00032">bgColor</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00029">extra</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">OnChangeResolution()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00016">WidgetSideScreen.Extra.reverse</a>, <a class="el" href="Widget_8cs_source.html#l00608">Widget.SetBaseContextMenu()</a>, <a class="el" href="EMono_8cs_source.html#l00015">EMono.ui</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00008">WidgetSideScreen.Extra.width</a>.</p>
 
 </div>
 </div>
@@ -684,14 +670,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">91</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        EMono.scene.cam.rect = (extra.reverse ? <span class="keyword">new</span> Rect(0.01f * (<span class="keywordtype">float</span>)<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#ab04fdeb4e944166912c7bd95ed4f183d">width</a>, 0f, 1f + 0.01f * (<span class="keywordtype">float</span>)<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#ab04fdeb4e944166912c7bd95ed4f183d">width</a>, 1f) : new Rect(-0.01f * (float)<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.width, 0f, 1f, 1f));</div>
-<div class="line"><span class="lineno">   94</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00086">86</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        EMono.scene.cam.rect = (extra.reverse ? <span class="keyword">new</span> Rect(0.01f * (<span class="keywordtype">float</span>)<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#ab04fdeb4e944166912c7bd95ed4f183d">width</a>, 0f, 1f + 0.01f * (<span class="keywordtype">float</span>)<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.<a class="code hl_variable" href="classWidgetSideScreen_1_1Extra.html#ab04fdeb4e944166912c7bd95ed4f183d">width</a>, 1f) : new Rect(-0.01f * (float)<a class="code hl_property" href="classWidgetSideScreen.html#a17d58dfa41b0a4fbaaf6b532e83359af">extra</a>.width, 0f, 1f, 1f));</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="WidgetSideScreen_8cs_source.html#l00029">extra</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00008">WidgetSideScreen.Extra.width</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00048">OnActivate()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00048">OnActivate()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">OnChangeResolution()</a>.</p>
 
 </div>
 </div>
@@ -719,13 +705,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00145">145</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>    {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classLayerMiniGame.html">LayerMiniGame</a>.<a class="code hl_variable" href="classLayerMiniGame.html#a0f8ed404b4bbbd9c621286b07a99c563">Instance</a>)</div>
-<div class="line"><span class="lineno">  148</span>        {</div>
-<div class="line"><span class="lineno">  149</span>            <a class="code hl_class" href="classLayerMiniGame.html">LayerMiniGame</a>.<a class="code hl_variable" href="classLayerMiniGame.html#a0f8ed404b4bbbd9c621286b07a99c563">Instance</a>.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a>.<a class="code hl_function" href="classMiniGame.html#afcda7ba48b8833a6b0ef1f1c512843f3">SlidePosition</a>(w * <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_property" href="classCore.html#a0adecdbfe97eb888046531f358f94804">uiScale</a>);</div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00133">133</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_class" href="classLayerMiniGame.html">LayerMiniGame</a>.<a class="code hl_variable" href="classLayerMiniGame.html#a0f8ed404b4bbbd9c621286b07a99c563">Instance</a>)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_class" href="classLayerMiniGame.html">LayerMiniGame</a>.<a class="code hl_variable" href="classLayerMiniGame.html#a0f8ed404b4bbbd9c621286b07a99c563">Instance</a>.<a class="code hl_variable" href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">mini</a>.<a class="code hl_function" href="classMiniGame.html#afcda7ba48b8833a6b0ef1f1c512843f3">SlidePosition</a>(w * <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_variable" href="classEMono.html#a250c92b5796155e2c5ffb40475a86ae2">core</a>.<a class="code hl_property" href="classCore.html#a0adecdbfe97eb888046531f358f94804">uiScale</a>);</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
 <div class="ttc" id="aclassLayerMiniGame_html"><div class="ttname"><a href="classLayerMiniGame.html">LayerMiniGame</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerMiniGame_8cs_source.html#l00003">LayerMiniGame.cs:4</a></div></div>
 <div class="ttc" id="aclassLayerMiniGame_html_a017680bed039c9f492ed608fa2c396e8"><div class="ttname"><a href="classLayerMiniGame.html#a017680bed039c9f492ed608fa2c396e8">LayerMiniGame.mini</a></div><div class="ttdeci">MiniGame mini</div><div class="ttdef"><b>Definition:</b> <a href="LayerMiniGame_8cs_source.html#l00007">LayerMiniGame.cs:7</a></div></div>
 <div class="ttc" id="aclassLayerMiniGame_html_a0f8ed404b4bbbd9c621286b07a99c563"><div class="ttname"><a href="classLayerMiniGame.html#a0f8ed404b4bbbd9c621286b07a99c563">LayerMiniGame.Instance</a></div><div class="ttdeci">static LayerMiniGame Instance</div><div class="ttdef"><b>Definition:</b> <a href="LayerMiniGame_8cs_source.html#l00005">LayerMiniGame.cs:5</a></div></div>
@@ -733,7 +719,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00005">LayerMiniGame.Instance</a>, <a class="el" href="LayerMiniGame_8cs_source.html#l00007">LayerMiniGame.mini</a>, <a class="el" href="MiniGame_8cs_source.html#l00080">MiniGame.SlidePosition()</a>, and <a class="el" href="Core_8cs_source.html#l00095">Core.uiScale</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00158">OnDisable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">OnChangeResolution()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00146">OnDisable()</a>.</p>
 
 </div>
 </div>
@@ -752,7 +738,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00025">25</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">OnChangeResolution()</a>.</p>
 
 </div>
 </div>
@@ -795,8 +781,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00023">23</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>.</p>
 
 </div>
 </div>
@@ -861,7 +845,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassIntColor_html_aa1896d3a2fb16365e35456ad6c0d516b"><div class="ttname"><a href="classIntColor.html#aa1896d3a2fb16365e35456ad6c0d516b">IntColor.FromInt</a></div><div class="ttdeci">static Color32 FromInt(int i)</div><div class="ttdef"><b>Definition:</b> <a href="IntColor_8cs_source.html#l00015">IntColor.cs:15</a></div></div>
 <div class="ttc" id="aclassWidgetSideScreen_1_1Extra_html_a69e71c3539287ccf5693a7e897396fb5"><div class="ttname"><a href="classWidgetSideScreen_1_1Extra.html#a69e71c3539287ccf5693a7e897396fb5">WidgetSideScreen.Extra.bgColor</a></div><div class="ttdeci">int bgColor</div><div class="ttdef"><b>Definition:</b> <a href="WidgetSideScreen_8cs_source.html#l00014">WidgetSideScreen.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">OnSetContextMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">OnSetContextMenu()</a>.</p>
 
 </div>
 </div>
@@ -887,7 +871,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WidgetSideScreen_8cs_source.html#l00029">29</a> of file <a class="el" href="WidgetSideScreen_8cs_source.html">WidgetSideScreen.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00096">OnChangeResolution()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">OnSetContextMenu()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WidgetSideScreen_8cs_source.html#l00091">OnChangeResolution()</a>, <a class="el" href="WidgetSideScreen_8cs_source.html#l00056">OnSetContextMenu()</a>, and <a class="el" href="WidgetSideScreen_8cs_source.html#l00086">Refresh()</a>.</p>
 
 </div>
 </div>

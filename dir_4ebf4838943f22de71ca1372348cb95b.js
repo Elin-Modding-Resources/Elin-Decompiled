@@ -504,6 +504,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "Fov.cs", "Fov_8cs.html", "Fov_8cs" ],
     [ "FowProfile.cs", "FowProfile_8cs.html", "FowProfile_8cs" ],
     [ "FOWType.cs", "FOWType_8cs.html", "FOWType_8cs" ],
+    [ "GalleryFlattenAndRename.cs", "GalleryFlattenAndRename_8cs.html", "GalleryFlattenAndRename_8cs" ],
     [ "Game.cs", "Game_8cs.html", "Game_8cs" ],
     [ "GameBlueprint.cs", "GameBlueprint_8cs.html", "GameBlueprint_8cs" ],
     [ "GameContractResolver.cs", "GameContractResolver_8cs.html", "GameContractResolver_8cs" ],

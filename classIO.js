@@ -33,7 +33,6 @@ var classIO =
     [ "PrintLog", "classIO.html#a8bd6788298e0ac7c5e3a068b59df6b3b", null ],
     [ "ReadLZ4", "classIO.html#a3ea92adda6c4b7746151dad95aa75b5c", null ],
     [ "ReadLZ4", "classIO.html#aa5824e04dfab93fb800b615bff7c5345", null ],
-    [ "ReadPngFile", "classIO.html#ac4e5d89776808db06804f65d9e85a3ea", null ],
     [ "SaveFile", "classIO.html#ac15051fb75be08e9ff3dd16de65959b3", null ],
     [ "SavePNG", "classIO.html#a22bfffcbf7b45378a6571cbf43377128", null ],
     [ "SaveText", "classIO.html#aa538a6b553652f8755dabb39bae4af14", null ],

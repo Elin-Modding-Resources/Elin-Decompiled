@@ -34,6 +34,7 @@ var classCoreRef =
     [ "defaultRoofs", "classCoreRef.html#ae5efd0b0bf8d7427c01bfd6622c3c716", null ],
     [ "dictBGM", "classCoreRef.html#a23b6310cd88ac8985687addfd36327df", null ],
     [ "dictSketches", "classCoreRef.html#a5782301b1b9e96942b51672f9520f707", null ],
+    [ "dictSketches2", "classCoreRef.html#a553b3778c95bd0da693523dfd063321a", null ],
     [ "fireworks", "classCoreRef.html#a364c439f8bb64d76aa8fe6a552b72142", null ],
     [ "icon_HotItem", "classCoreRef.html#acaf7660e7db592c1a9d2542c769608a3", null ],
     [ "icons", "classCoreRef.html#a52546c5617153fd210e634ad96c7eae7", null ],

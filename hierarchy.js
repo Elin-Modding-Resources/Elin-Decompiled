@@ -2184,6 +2184,7 @@ var hierarchy =
     [ "Footmark", "classFootmark.html", null ],
     [ "InvOwner.ForceGiveData", "classInvOwner_1_1ForceGiveData.html", null ],
     [ "Weather.Forecast", "classWeather_1_1Forecast.html", null ],
+    [ "GalleryFlattenAndRename", "classGalleryFlattenAndRename.html", null ],
     [ "CoreConfig.GameConfig", "classCoreConfig_1_1GameConfig.html", null ],
     [ "Gender", "classGender.html", null ],
     [ "GeneratedClass", "classGeneratedClass.html", null ],
@@ -2347,6 +2348,7 @@ var hierarchy =
     [ "Image", null, [
       [ "UIImage", "classUIImage.html", null ]
     ] ],
+    [ "ImageLoader", "classImageLoader.html", null ],
     [ "IMaterialModifier", null, [
       [ "Applibot.CustomImageBase", "classApplibot_1_1CustomImageBase.html", [
         [ "Applibot.DissolveImage", "classApplibot_1_1DissolveImage.html", null ],

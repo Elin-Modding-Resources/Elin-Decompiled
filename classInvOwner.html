@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.261 Nightly Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.262 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -1804,33 +1804,33 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1427</span>        }</div>
 <div class="line"><span class="lineno"> 1428</span>        <span class="keywordflow">if</span> (context)</div>
 <div class="line"><span class="lineno"> 1429</span>        {</div>
-<div class="line"><span class="lineno"> 1430</span>            <span class="keywordtype">bool</span> flag4 = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1431</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classInvOwner.html#a5014bd17168004464d28efe84cbe7cab">AllowHold</a>(t) &amp;&amp; !<a class="code hl_variable" href="classInvOwner.html#a58977460ae601624d9d350ee9a36f97f">Container</a>.<a class="code hl_property" href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">isNPCProperty</a>)</div>
-<div class="line"><span class="lineno"> 1432</span>            {</div>
-<div class="line"><span class="lineno"> 1433</span>                <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; 1)</div>
-<div class="line"><span class="lineno"> 1434</span>                {</div>
-<div class="line"><span class="lineno"> 1435</span>                    listInteraction.Add(<span class="stringliteral">&quot;actSplit&quot;</span>, 50, delegate</div>
-<div class="line"><span class="lineno"> 1436</span>                    {</div>
-<div class="line"><span class="lineno"> 1437</span>                        t.<a class="code hl_function" href="classThing.html#a2fb20f638e539dc2dbe4bcc4fd4c0f38">ShowSplitMenu</a>(b, (<a class="code hl_property" href="classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64">HasTrader</a> &amp;&amp; <a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a> != 0 &amp;&amp; !<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>) ? <span class="keyword">new</span> Transaction(b) : <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno"> 1438</span>                    });</div>
-<div class="line"><span class="lineno"> 1439</span>                }</div>
-<div class="line"><span class="lineno"> 1440</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>)</div>
-<div class="line"><span class="lineno"> 1441</span>                {</div>
-<div class="line"><span class="lineno"> 1442</span>                    flag4 = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1443</span>                    listInteraction.Add(t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a> ? <span class="stringliteral">&quot;important_off&quot;</span> : <span class="stringliteral">&quot;important_on&quot;</span>, 299, delegate</div>
-<div class="line"><span class="lineno"> 1444</span>                    {</div>
-<div class="line"><span class="lineno"> 1445</span>                        t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a> = !t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a>;</div>
-<div class="line"><span class="lineno"> 1446</span>                        <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a742d3a9ed80e448bf2e0053e8bb23b48">SetDirty</a>(t);</div>
-<div class="line"><span class="lineno"> 1447</span>                        SE.ClickOk();</div>
-<div class="line"><span class="lineno"> 1448</span>                    });</div>
-<div class="line"><span class="lineno"> 1449</span>                    <span class="keywordflow">if</span> (<a class="code hl_function" href="classInvOwner.html#ab28976dfe3f1c7ccd2fda9dd4f400259">AllowDrop</a>(t))</div>
-<div class="line"><span class="lineno"> 1450</span>                    {</div>
-<div class="line"><span class="lineno"> 1451</span>                        listInteraction.Add(flag ? <span class="stringliteral">&quot;dragForget&quot;</span> : <span class="stringliteral">&quot;actDrop&quot;</span>, 300, delegate</div>
-<div class="line"><span class="lineno"> 1452</span>                        {</div>
-<div class="line"><span class="lineno"> 1453</span>                            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ac4913066e4dd9655a7532dda429563d6">DropThing</a>(t);</div>
-<div class="line"><span class="lineno"> 1454</span>                        });</div>
-<div class="line"><span class="lineno"> 1455</span>                    }</div>
-<div class="line"><span class="lineno"> 1456</span>                }</div>
+<div class="line"><span class="lineno"> 1430</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classInvOwner.html#a5014bd17168004464d28efe84cbe7cab">AllowHold</a>(t) &amp;&amp; !<a class="code hl_variable" href="classInvOwner.html#a58977460ae601624d9d350ee9a36f97f">Container</a>.<a class="code hl_property" href="classCard.html#a26108155cef3dd565735e6d8e3bc6322">isNPCProperty</a>)</div>
+<div class="line"><span class="lineno"> 1431</span>            {</div>
+<div class="line"><span class="lineno"> 1432</span>                <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#ae1041fe18950e805e2e9db00d64108fd">Num</a> &gt; 1)</div>
+<div class="line"><span class="lineno"> 1433</span>                {</div>
+<div class="line"><span class="lineno"> 1434</span>                    listInteraction.Add(<span class="stringliteral">&quot;actSplit&quot;</span>, 50, delegate</div>
+<div class="line"><span class="lineno"> 1435</span>                    {</div>
+<div class="line"><span class="lineno"> 1436</span>                        t.<a class="code hl_function" href="classThing.html#a2fb20f638e539dc2dbe4bcc4fd4c0f38">ShowSplitMenu</a>(b, (<a class="code hl_property" href="classInvOwner.html#a3e5f66224e5c3e183203f8e564f0fc64">HasTrader</a> &amp;&amp; <a class="code hl_variable" href="classInvOwner.html#a947d136801ebfa0545976485202e13e6">currency</a> != 0 &amp;&amp; !<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>) ? <span class="keyword">new</span> Transaction(b) : <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno"> 1437</span>                    });</div>
+<div class="line"><span class="lineno"> 1438</span>                }</div>
+<div class="line"><span class="lineno"> 1439</span>                <span class="keywordflow">if</span> ((<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a> || <a class="code hl_variable" href="classInvOwner.html#a58977460ae601624d9d350ee9a36f97f">Container</a>.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a>) &amp;&amp; <a class="code hl_function" href="classInvOwner.html#ab28976dfe3f1c7ccd2fda9dd4f400259">AllowDrop</a>(t))</div>
+<div class="line"><span class="lineno"> 1440</span>                {</div>
+<div class="line"><span class="lineno"> 1441</span>                    listInteraction.Add(flag ? <span class="stringliteral">&quot;dragForget&quot;</span> : <span class="stringliteral">&quot;actDrop&quot;</span>, 300, delegate</div>
+<div class="line"><span class="lineno"> 1442</span>                    {</div>
+<div class="line"><span class="lineno"> 1443</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#ac4913066e4dd9655a7532dda429563d6">DropThing</a>(t);</div>
+<div class="line"><span class="lineno"> 1444</span>                    });</div>
+<div class="line"><span class="lineno"> 1445</span>                }</div>
+<div class="line"><span class="lineno"> 1446</span>            }</div>
+<div class="line"><span class="lineno"> 1447</span>            <span class="keywordtype">bool</span> flag4 = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1448</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classInvOwner.html#a2bc2abb661daacba5097b1fbf31988c9">owner</a>.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a> || <a class="code hl_variable" href="classInvOwner.html#a58977460ae601624d9d350ee9a36f97f">Container</a>.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a>)</div>
+<div class="line"><span class="lineno"> 1449</span>            {</div>
+<div class="line"><span class="lineno"> 1450</span>                flag4 = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1451</span>                listInteraction.Add(t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a> ? <span class="stringliteral">&quot;important_off&quot;</span> : <span class="stringliteral">&quot;important_on&quot;</span>, 299, delegate</div>
+<div class="line"><span class="lineno"> 1452</span>                {</div>
+<div class="line"><span class="lineno"> 1453</span>                    t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a> = !t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a>;</div>
+<div class="line"><span class="lineno"> 1454</span>                    <a class="code hl_class" href="classLayerInventory.html">LayerInventory</a>.<a class="code hl_function" href="classLayerInventory.html#a742d3a9ed80e448bf2e0053e8bb23b48">SetDirty</a>(t);</div>
+<div class="line"><span class="lineno"> 1455</span>                    SE.ClickOk();</div>
+<div class="line"><span class="lineno"> 1456</span>                });</div>
 <div class="line"><span class="lineno"> 1457</span>            }</div>
 <div class="line"><span class="lineno"> 1458</span>            <span class="keywordflow">if</span> (!flag4 &amp;&amp; t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a>)</div>
 <div class="line"><span class="lineno"> 1459</span>            {</div>
@@ -1844,6 +1844,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1467</span>        }</div>
 <div class="line"><span class="lineno"> 1468</span>        <span class="keywordflow">return</span> listInteraction;</div>
 <div class="line"><span class="lineno"> 1469</span>    }</div>
+<div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02274">Card.cs:2275</a></div></div>
 <div class="ttc" id="aclassCard_html_a45caf5b5c2db91ea956fd445a85d5512"><div class="ttname"><a href="classCard.html#a45caf5b5c2db91ea956fd445a85d5512">Card.GetPrice</a></div><div class="ttdeci">virtual int GetPrice(CurrencyType currency=CurrencyType.Money, bool sell=false, PriceType priceType=PriceType.Default, Chara c=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07343">Card.cs:7343</a></div></div>
 <div class="ttc" id="aclassCard_html_a7e5b0731b914744e0e7063b19afe5938"><div class="ttname"><a href="classCard.html#a7e5b0731b914744e0e7063b19afe5938">Card.RecalculateFOV</a></div><div class="ttdeci">void RecalculateFOV()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06430">Card.cs:6430</a></div></div>
 <div class="ttc" id="aclassCard_html_aab7876b07bbc37cc23c4bcf8c94dc6e6"><div class="ttname"><a href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">Card.c_isImportant</a></div><div class="ttdeci">bool c_isImportant</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01024">Card.cs:1025</a></div></div>

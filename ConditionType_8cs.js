@@ -9,6 +9,6 @@ var ConditionType_8cs =
       [ "Wrath", "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a9b1271f437c566a7fb4836696ee65de6", null ],
       [ "Buff", "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a536e1a5d9f4fe868e6ea5ff628f51f25", null ],
       [ "Stance", "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a62d82e4571f18a05f3a85c95479265dc", null ],
-      [ "Sentense", "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a0e69c934f14a4be11e4894d817d6f4cc", null ]
+      [ "Sentence", "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a0667fab375c18f4a0f29beec635b1b87", null ]
     ] ]
 ];
