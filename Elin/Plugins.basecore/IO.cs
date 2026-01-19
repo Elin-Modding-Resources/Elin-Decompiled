@@ -432,46 +432,7 @@ public class IO
 
 	public static Texture2D LoadPNG(string _path, FilterMode filter = FilterMode.Point)
 	{
-		if (!File.Exists(_path))
-		{
-			return null;
-		}
-		byte[] array = ReadPngFile(_path);
-		int num = 16;
-		int num2 = 0;
-		for (int i = 0; i < 4; i++)
-		{
-			if (num + 1 < array.Length)
-			{
-				num2 = num2 * 256 + array[num++];
-			}
-		}
-		int num3 = 0;
-		for (int j = 0; j < 4; j++)
-		{
-			if (num + 1 < array.Length)
-			{
-				num3 = num3 * 256 + array[num++];
-			}
-		}
-		TextureImportSetting.Data data = (TextureImportSetting.Instance ? TextureImportSetting.Instance.data : importSetting);
-		Texture2D texture2D = new Texture2D(num2, num3, data.format, data.mipmap, data.linear);
-		texture2D.LoadImage(array);
-		texture2D.wrapMode = data.wrapMode;
-		texture2D.filterMode = filter;
-		texture2D.anisoLevel = data.anisoLevel;
-		texture2D.mipMapBias = data.mipmapBias;
-		return texture2D;
-	}
-
-	public static byte[] ReadPngFile(string _path)
-	{
-		FileStream fileStream = new FileStream(_path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-		BinaryReader binaryReader = new BinaryReader(fileStream);
-		byte[] result = binaryReader.ReadBytes((int)binaryReader.BaseStream.Length);
-		binaryReader.Close();
-		fileStream.Close();
-		return result;
+		return ImageLoader.LoadPNG(_path, filter);
 	}
 
 	public static T DeepCopy<T>(T target)

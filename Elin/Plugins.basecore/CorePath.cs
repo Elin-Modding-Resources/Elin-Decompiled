@@ -80,6 +80,8 @@ public class CorePath
 
 		public static string Background => Text + "Background/";
 
+		public static string ETC => packageCore + "ETC/";
+
 		public static string Playlist => packageCore + "Sound/Playlist/";
 
 		public static string LangImportMod => Lang.setting.dir + "Game/";
