@@ -622,7 +622,7 @@ public class AttackProcess : EClass
 			num2 += weapon.Evalue(91, ignoreGlobalElement: true);
 			num3 += weapon.Evalue(603, ignoreGlobalElement: true);
 		}
-		if (CC.HasElement(1426))
+		if (!IsRanged && !isThrow && CC.HasElement(1426))
 		{
 			list.Add(Element.Create(6650, 100));
 		}

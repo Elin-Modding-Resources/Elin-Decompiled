@@ -5447,7 +5447,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (isInActiveZone)
 		{
-			if (attackSource == AttackSource.DeathSentense || attackSource == AttackSource.Euthanasia)
+			if (attackSource == AttackSource.DeathSentence || attackSource == AttackSource.Euthanasia)
 			{
 				Msg.Say("goto_heaven", this);
 			}
@@ -7429,7 +7429,7 @@ public class Chara : Card, IPathfindWalker
 		Thing bestRangedWeapon = GetBestRangedWeapon();
 		foreach (Thing thing in things)
 		{
-			if (!thing.IsAmmo)
+			if (!thing.IsAmmo && !thing.c_isImportant)
 			{
 				if (thing.category.slot != 0 && !thing.isEquipped && !thing.HasTag(CTAG.gift))
 				{
@@ -8546,7 +8546,7 @@ public class Chara : Card, IPathfindWalker
 				return false;
 			}
 		}
-		if (t.isEquipped || t.rarity >= Rarity.Legendary || !t.trait.CanBeDestroyed)
+		if (t.isEquipped || t.rarity >= Rarity.Legendary || !t.trait.CanBeDestroyed || t.c_isImportant)
 		{
 			return false;
 		}
@@ -9718,7 +9718,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (TC.hp > (long)TC.MaxHP * (long)(Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 35 : 25) + Evalue(1426) * 5) / 100)
+		if (TC.hp > (long)TC.MaxHP * (long)(Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 30 : 20) + Evalue(1426) * 5) / (TC.IsPowerful ? 250 : 100))
 		{
 			return false;
 		}

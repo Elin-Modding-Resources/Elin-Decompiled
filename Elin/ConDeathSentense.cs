@@ -22,11 +22,11 @@ public class ConDeathSentense : BaseDebuff
 			owner.Say("death_sentense", owner);
 			if (!euthanasia && owner.IsPowerful)
 			{
-				owner.DamageHP(owner.MaxHP / (EClass.debug.enable ? 1 : 13) + 1, AttackSource.DeathSentense);
+				owner.DamageHP(owner.MaxHP / (EClass.debug.enable ? 1 : 13) + 1, AttackSource.DeathSentence);
 			}
 			else
 			{
-				owner.Die(null, null, euthanasia ? AttackSource.Euthanasia : AttackSource.DeathSentense);
+				owner.Die(null, null, euthanasia ? AttackSource.Euthanasia : AttackSource.DeathSentence);
 			}
 		}
 	}

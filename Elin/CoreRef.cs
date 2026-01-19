@@ -412,6 +412,8 @@ public class CoreRef : ScriptableObject
 
 	public UD_Int_String dictSketches;
 
+	public UD_Int_String dictSketches2;
+
 	public PrefData prefs;
 
 	public float testColor;
@@ -472,18 +474,7 @@ public class CoreRef : ScriptableObject
 
 	public void RebuildSketchList()
 	{
-		dictSketches.Clear();
-		for (int i = 0; i < 10; i++)
-		{
-			Sprite[] array = Resources.LoadAll<Sprite>("Media/Gallery/" + GetArtDir(i * 100));
-			foreach (Sprite sprite in array)
-			{
-				int key = sprite.name.Split('_')[0].ToInt();
-				dictSketches[key] = sprite.name;
-				Debug.Log(key + " " + sprite.name);
-			}
-		}
-		Debug.Log("Sketches rebuilt:" + dictSketches.Count());
+		dictSketches2 = GalleryFlattenAndRename.Run();
 	}
 
 	public static string GetArtDir(int a)

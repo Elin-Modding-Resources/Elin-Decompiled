@@ -528,7 +528,7 @@ public class ActPlan : EClass
 					int num = c2.Dist(EClass.pc);
 					if (num <= 1 || !EClass.pc.isBlind)
 					{
-						if (c2.mimicry != null)
+						if (c2.mimicry != null && !c2.IsPCParty)
 						{
 							if (num <= 1)
 							{
@@ -623,7 +623,7 @@ public class ActPlan : EClass
 				items.ForeachReverse(delegate(Card _c)
 				{
 					Chara c = _c.Chara;
-					if (c != null && c.mimicry == null)
+					if (c != null && (c.mimicry == null || c.IsPCParty))
 					{
 						bool flag3 = EClass.pc.CanSee(c);
 						if (flag3)

@@ -251,7 +251,7 @@ public class InvOwner : EClass
 				destInv.owner.Chara.Talk("tooHeavy");
 				return false;
 			}
-			if (thing2.c_isImportant && !destInv.owner.IsPC && destInv.DenyImportant)
+			if (thing2.c_isImportant && destInv != inv && !destInv.owner.IsPC && destInv.DenyImportant)
 			{
 				Msg.Say("markedImportant");
 				return false;
@@ -1427,7 +1427,6 @@ public class InvOwner : EClass
 		}
 		if (context)
 		{
-			bool flag4 = false;
 			if (AllowHold(t) && !Container.isNPCProperty)
 			{
 				if (t.Num > 1)
@@ -1437,23 +1436,24 @@ public class InvOwner : EClass
 						t.ShowSplitMenu(b, (HasTrader && currency != 0 && !owner.IsPC) ? new Transaction(b) : null);
 					});
 				}
-				if (owner.IsPC)
+				if ((owner.IsPC || Container.IsPCFactionOrMinion) && AllowDrop(t))
 				{
-					flag4 = true;
-					listInteraction.Add(t.c_isImportant ? "important_off" : "important_on", 299, delegate
+					listInteraction.Add(flag ? "dragForget" : "actDrop", 300, delegate
 					{
-						t.c_isImportant = !t.c_isImportant;
-						LayerInventory.SetDirty(t);
-						SE.ClickOk();
+						EClass.pc.DropThing(t);
 					});
-					if (AllowDrop(t))
-					{
-						listInteraction.Add(flag ? "dragForget" : "actDrop", 300, delegate
-						{
-							EClass.pc.DropThing(t);
-						});
-					}
 				}
+			}
+			bool flag4 = false;
+			if (owner.IsPC || Container.IsPCFactionOrMinion)
+			{
+				flag4 = true;
+				listInteraction.Add(t.c_isImportant ? "important_off" : "important_on", 299, delegate
+				{
+					t.c_isImportant = !t.c_isImportant;
+					LayerInventory.SetDirty(t);
+					SE.ClickOk();
+				});
 			}
 			if (!flag4 && t.c_isImportant)
 			{

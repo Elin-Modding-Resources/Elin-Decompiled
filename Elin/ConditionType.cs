@@ -8,5 +8,5 @@ public enum ConditionType
 	Wrath,
 	Buff,
 	Stance,
-	Sentense
+	Sentence
 }

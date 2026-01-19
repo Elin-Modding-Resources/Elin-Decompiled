@@ -17,7 +17,7 @@ public enum AttackSource
 	Hang,
 	Wrath,
 	ManaBackfire,
-	DeathSentense,
+	DeathSentence,
 	Euthanasia,
 	Shockwave,
 	MagicSword,

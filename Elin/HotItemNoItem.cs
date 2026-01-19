@@ -16,7 +16,7 @@ public class HotItemNoItem : HotItemGameAction
 		Card tg = null;
 		p.pos.ListVisibleCards().ForeachReverse(delegate(Card a)
 		{
-			if (a.isChara && a.Chara.mimicry != null && !a.IsPC)
+			if (a.isChara && a.Chara.mimicry != null && !a.IsPCParty)
 			{
 				tg = a;
 				return true;
@@ -34,7 +34,7 @@ public class HotItemNoItem : HotItemGameAction
 			{
 				if (tg.ExistsOnMap)
 				{
-					if (tg.isChara && tg.Chara.mimicry != null)
+					if (tg.isChara && tg.Chara.mimicry != null && !tg.IsPCParty)
 					{
 						tg.Chara.mimicry.RevealMimicry(EClass.pc, surprise: true);
 						return true;

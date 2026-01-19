@@ -735,7 +735,7 @@ public class ActEffect : EClass
 					j--;
 					continue;
 				}
-				int num6 = -1;
+				long num6 = -1L;
 				n = actRef.n1;
 				if (!(n == "shadow"))
 				{
@@ -750,10 +750,17 @@ public class ActEffect : EClass
 						{
 							num7 = (CC.IsPCFactionOrMinion ? (CC.LV / 2) : (CC.LV / 3 * 2));
 						}
-						num6 = chara.LV * (100 + power / 10) / 100 + power / 30;
+						if (num5 == -1)
+						{
+							num6 = chara.LV * (100 + power / 10) / 100 + power / 30;
+						}
 						if (num6 < num7)
 						{
 							num6 = num7;
+						}
+						if (num6 > 99999999)
+						{
+							num6 = 99999999L;
 						}
 					}
 				}
@@ -763,7 +770,7 @@ public class ActEffect : EClass
 				}
 				if (chara.LV < num6)
 				{
-					chara.SetLv(num6);
+					chara.SetLv((int)num6);
 				}
 				chara.interest = 0;
 				if (chara.HaveFur())

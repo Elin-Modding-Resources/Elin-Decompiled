@@ -330,7 +330,7 @@ public class HotItemHeld : HotItemThing
 			Card tc = null;
 			foreach (Chara item in pos.ListVisibleCharas())
 			{
-				if (item.isSynced && item.IsAliveInCurrentZone && item.mimicry == null)
+				if (item.isSynced && item.IsAliveInCurrentZone && (item.mimicry == null || item.IsPCParty))
 				{
 					tc = item;
 					break;

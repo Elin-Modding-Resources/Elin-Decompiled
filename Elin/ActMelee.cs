@@ -511,6 +511,10 @@ public class ActMelee : ActBaseAttack
 					{
 						break;
 					}
+					if ((bool)LayerDrama.Instance)
+					{
+						break;
+					}
 					if (m > 0)
 					{
 						Act.CC.Say(Act.CC.IsHostile() ? "attack_flurry_enemy" : "attack_flurry");

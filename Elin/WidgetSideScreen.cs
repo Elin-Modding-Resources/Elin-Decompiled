@@ -72,11 +72,6 @@ public class WidgetSideScreen : Widget
 			extra.width = (int)a;
 			OnChangeResolution();
 		}, 10f, 50f, isInt: true);
-		uIContextMenu.AddSlider("image", (float a) => a.ToString() ?? "", extra.idImage, delegate(float a)
-		{
-			extra.idImage = (int)a;
-			OnChangeResolution();
-		}, 0f, sprites.Length - 1, isInt: true);
 		uIContextMenu.AddButton("colorBG", delegate
 		{
 			EMono.ui.AddLayer<LayerColorPicker>().SetColor(bgColor, Color.white, delegate(PickerState state, Color _c)
@@ -98,8 +93,8 @@ public class WidgetSideScreen : Widget
 		base.OnChangeResolution();
 		RectTransform rectTransform = this.Rect();
 		float x = 0.01f * (float)Screen.width * (float)extra.width / EMono.core.uiScale + 50f;
-		float num = (float)Screen.height / EMono.core.uiScale + 50f;
-		rectTransform.sizeDelta = new Vector2(x, num);
+		float y = (float)Screen.height / EMono.core.uiScale + 50f;
+		rectTransform.sizeDelta = new Vector2(x, y);
 		if (extra.reverse)
 		{
 			rectTransform.SetAnchor(0f, 0.5f, 0f, 0.5f);
@@ -111,14 +106,7 @@ public class WidgetSideScreen : Widget
 			rectTransform.anchoredPosition = new Vector2(rectTransform.sizeDelta.x * -0.5f, 0f);
 		}
 		Refresh();
-		imagePic.SetActive(extra.idImage > 0);
-		Sprite sprite = sprites[extra.idImage];
-		if ((bool)sprite)
-		{
-			imagePic.sprite = sprite;
-			imagePic.rectTransform.sizeDelta = new Vector2(num * (float)sprite.texture.width / (float)sprite.texture.height, num);
-			imagePic.color = bgColor;
-		}
+		imagePic.SetActive(enable: false);
 		if (extra.alignUI)
 		{
 			if (extra.reverse)

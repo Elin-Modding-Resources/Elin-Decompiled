@@ -10,8 +10,6 @@ public class ContentGallery : EContent
 		public class Item
 		{
 			public int id;
-
-			public Sprite sprite;
 		}
 
 		public List<string> ids = new List<string>();
@@ -21,14 +19,28 @@ public class ContentGallery : EContent
 			foreach (string id in ids)
 			{
 				UIItem uIItem = n.AddItem("ItemGallery");
-				int num = id.ToInt();
-				Sprite sprite = Resources.Load<Sprite>("Media/Gallery/" + CoreRef.GetArtDir(num) + "/" + EClass.core.refs.dictSketches[num]);
+				int idx = id.ToInt();
+				string path = EClass.core.refs.dictSketches2[idx];
+				Sprite sprite = sprites.TryGetValue(idx);
+				if (!sprite)
+				{
+					Texture2D texture2D = IO.LoadPNG(path + "_t");
+					sprite = Sprite.Create(texture2D, new Rect(0f, 0f, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+					sprites[idx] = sprite;
+				}
 				uIItem.image1.sprite = sprite;
 				uIItem.text1.text = "#" + id;
 				uIItem.button1.SetOnClick(delegate
 				{
 					SE.Play("click_recipe");
-					EClass.ui.AddLayer<LayerImage>().SetImage(sprite);
+					Sprite sprite2 = spritesFull.TryGetValue(idx);
+					if (!sprite2)
+					{
+						Texture2D texture2D2 = IO.LoadPNG(path);
+						sprite2 = Sprite.Create(texture2D2, new Rect(0f, 0f, texture2D2.width, texture2D2.height), new Vector2(0.5f, 0.5f));
+						spritesFull[idx] = sprite2;
+					}
+					EClass.ui.AddLayer<LayerImage>().SetImage(sprite2);
 				});
 			}
 		}
@@ -37,6 +49,10 @@ public class ContentGallery : EContent
 	public static int lastPage;
 
 	public static bool listMode;
+
+	public static Dictionary<int, Sprite> sprites = new Dictionary<int, Sprite>();
+
+	public static Dictionary<int, Sprite> spritesFull = new Dictionary<int, Sprite>();
 
 	public Transform transBig;
 
@@ -61,7 +77,7 @@ public class ContentGallery : EContent
 		if (EClass.debug.allArt)
 		{
 			EClass.player.sketches.Clear();
-			foreach (int key in EClass.core.refs.dictSketches.Keys)
+			foreach (int key in EClass.core.refs.dictSketches2.Keys)
 			{
 				EClass.player.sketches.Add(key);
 			}
@@ -96,7 +112,7 @@ public class ContentGallery : EContent
 		}
 		book.currentPage = lastPage;
 		book.Show();
-		textCollected.SetText("sketch_collected".lang((list.Count * 100 / EClass.core.refs.dictSketches.Count()).ToString() ?? ""));
+		textCollected.SetText("sketch_collected".lang((list.Count * 100 / EClass.core.refs.dictSketches2.Count()).ToString() ?? ""));
 	}
 
 	public void OnClickHelp()
@@ -115,5 +131,12 @@ public class ContentGallery : EContent
 	private void OnDestroy()
 	{
 		lastPage = book.currentPage;
+		foreach (Sprite item in sprites.Values.Concat(spritesFull.Values))
+		{
+			Object.Destroy(item.texture);
+			Object.Destroy(item);
+		}
+		sprites.Clear();
+		spritesFull.Clear();
 	}
 }

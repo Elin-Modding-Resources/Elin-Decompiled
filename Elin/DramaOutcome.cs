@@ -504,7 +504,7 @@ public class DramaOutcome : EMono
 		{
 			for (int j = 0; j < 5; j++)
 			{
-				int item = EMono.core.refs.dictSketches.Keys.RandomItem();
+				int item = EMono.core.refs.dictSketches2.Keys.RandomItem();
 				if (!EMono.player.sketches.Contains(item))
 				{
 					EMono.player.sketches.Add(item);
@@ -566,7 +566,7 @@ public class DramaOutcome : EMono
 
 	public void give_sketch_special()
 	{
-		foreach (int key in EMono.core.refs.dictSketches.Keys)
+		foreach (int key in EMono.core.refs.dictSketches2.Keys)
 		{
 			if (key >= 500 && key < 700)
 			{
