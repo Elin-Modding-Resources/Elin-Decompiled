@@ -818,24 +818,45 @@ public static class ClassExtension
 
 	public static string ToShortNumber(this int a)
 	{
-		string text;
+		if (a < 0)
+		{
+			string text;
+			if (a > -1000000)
+			{
+				if (a <= -1000)
+				{
+					return a / 1000 + "K";
+				}
+				text = a.ToString();
+				if (text == null)
+				{
+					return "";
+				}
+			}
+			else
+			{
+				text = a / 1000000 + "M";
+			}
+			return text;
+		}
+		string text2;
 		if (a < 1000000)
 		{
 			if (a >= 1000)
 			{
 				return a / 1000 + "K";
 			}
-			text = a.ToString();
-			if (text == null)
+			text2 = a.ToString();
+			if (text2 == null)
 			{
 				return "";
 			}
 		}
 		else
 		{
-			text = a / 1000000 + "M";
+			text2 = a / 1000000 + "M";
 		}
-		return text;
+		return text2;
 	}
 
 	public static string ToFormat(this int a)
