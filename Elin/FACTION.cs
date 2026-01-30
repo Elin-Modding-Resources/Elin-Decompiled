@@ -50,7 +50,7 @@ public class FACTION
 
 	public const int bfTranquil = 3703;
 
-	public const int fRation = 2207;
+	public const int fAttraction = 2206;
 
 	public const int bfVolcano = 3704;
 
@@ -108,16 +108,16 @@ public class FACTION
 
 	public const int fConstruction = 2003;
 
-	public const int fAttraction = 2206;
+	public const int fRation = 2207;
 
 	public static readonly int[] IDS = new int[53]
 	{
 		3601, 3602, 3603, 3604, 3700, 3606, 3701, 3600, 3702, 3605,
 		3500, 2120, 2205, 2204, 2203, 2202, 2116, 2201, 2200, 2119,
-		2118, 2117, 3703, 2207, 3704, 4000, 3706, 2115, 4006, 4005,
+		2118, 2117, 3703, 2206, 3704, 4000, 3706, 2115, 4006, 4005,
 		4004, 4003, 4002, 4001, 3900, 3805, 3804, 3803, 3802, 3801,
 		3800, 3784, 3783, 3782, 3781, 3780, 3710, 3709, 3708, 3707,
-		3705, 2003, 2206
+		3705, 2003, 2207
 	};
 }
 public class Faction : EClass

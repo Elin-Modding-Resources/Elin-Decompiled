@@ -32,7 +32,9 @@ public class TCOrbitChara : TCOrbit
 	{
 		owner = base.owner as Chara;
 		RenderData data = owner.renderer.data;
-		goIcon.transform.SetLocalPositionY(data.offset.y + data.size.y + 0.32f);
+		goIcon.transform.SetLocalPositionY(data.offset.y + data.size.y + 0.32f + owner.Pref.heightFix);
+		timer = 0f;
+		Refresh();
 		RefreshAll();
 	}
 
@@ -70,7 +72,7 @@ public class TCOrbitChara : TCOrbit
 		Emo2 emo = owner.emoIcon;
 		if (emo == Emo2.none)
 		{
-			if (!owner.IsPC && ((owner.affinity.CanGiveCard() && !EMono.player.codex.DroppedCard(owner.id)) || owner.GetInt(71) == -2))
+			if (!owner.IsPC && !owner.IsHostile() && ((owner.affinity.CanGiveCard() && !EMono.player.codex.DroppedCard(owner.id)) || owner.GetInt(71) == -2))
 			{
 				emo = Emo2.hintEvent;
 			}

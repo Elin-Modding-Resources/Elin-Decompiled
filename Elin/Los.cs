@@ -87,7 +87,7 @@ public class Los : EClass
 		return flag;
 	}
 
-	public static List<Point> ListVisible(Point p1, Point p2, int radius, Action<Point, bool> _onVisit = null)
+	public static List<Point> ListVisible(Point p1, Point p2, int radius, Action<Point, bool> _onVisit = null, bool returnOnBlocked = true)
 	{
 		List<Point> list = new List<Point>();
 		List<Point> vecs = new List<Point>();
@@ -114,7 +114,7 @@ public class Los : EClass
 		}
 		IsVisible(p1.x, point.x, p1.z, point.z, delegate(Point p, bool blocked)
 		{
-			if (!blocked)
+			if (!blocked || !returnOnBlocked)
 			{
 				list.Add(p.Copy());
 			}
@@ -122,7 +122,7 @@ public class Los : EClass
 			{
 				_onVisit(p, blocked);
 			}
-		});
+		}, returnOnBlocked);
 		return list;
 	}
 

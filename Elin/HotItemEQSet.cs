@@ -65,7 +65,7 @@ public class HotItemEQSet : HotAction
 			Card card = null;
 			foreach (int i in ids)
 			{
-				Thing thing = EClass.pc.things.Find((Thing t) => t.uid == i && !t.isEquipped);
+				Thing thing = EClass.pc.things.Find((Thing t) => t.uid == i && !t.isEquipped && t.invY != 1);
 				if (thing == null)
 				{
 					continue;

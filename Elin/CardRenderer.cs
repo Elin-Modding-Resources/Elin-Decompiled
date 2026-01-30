@@ -32,7 +32,7 @@ public class CardRenderer : RenderObject
 
 	public Vector3 PositionCenter()
 	{
-		return new Vector3(position.x + data.size.x + data.offset.x * 0.5f, position.y + data.size.y + data.offset.y, position.z);
+		return new Vector3(position.x + data.size.x + data.offset.x * 0.5f, position.y + data.size.y + data.offset.y + owner.Pref.heightFix, position.z);
 	}
 
 	public virtual void SetOwner(Card c)
@@ -123,14 +123,6 @@ public class CardRenderer : RenderObject
 			OnEnterScreen();
 			RenderObject.syncList.Add(this);
 		}
-		if ((bool)orbit)
-		{
-			orbit.Refresh();
-		}
-		else
-		{
-			TrySpawnOrbit();
-		}
 		if (isChara && owner.parent == EClass.game.activeZone)
 		{
 			if (owner.Chara.bossText && !EClass.ui.IsActive && !SplashText.Instance && !LayerDrama.Instance)
@@ -150,6 +142,10 @@ public class CardRenderer : RenderObject
 					{
 						actor.SetActive(enable: false);
 					}
+					if ((bool)orbit)
+					{
+						orbit.Refresh();
+					}
 					return;
 				}
 			}
@@ -163,6 +159,14 @@ public class CardRenderer : RenderObject
 			p.x = (position.x = v.x);
 			p.y = (position.y = v.y);
 			p.z = (position.z = v.z);
+		}
+		if ((bool)orbit)
+		{
+			orbit.Refresh();
+		}
+		else
+		{
+			TrySpawnOrbit();
 		}
 		if (anime != null)
 		{
@@ -362,7 +366,7 @@ public class CardRenderer : RenderObject
 		if (listTC.Count > 0)
 		{
 			RenderObject.tempV = position;
-			RenderObject.tempV.y += data.offset.y + data.size.y;
+			RenderObject.tempV.y += data.offset.y + data.size.y + owner.Pref.heightFix;
 			for (int num = listTC.Count - 1; num >= 0; num--)
 			{
 				listTC[num].OnDraw(ref RenderObject.tempV);

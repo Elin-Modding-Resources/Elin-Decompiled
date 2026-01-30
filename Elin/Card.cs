@@ -5948,6 +5948,106 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public MoveResult TryMoveFrom(Point p)
+	{
+		if (IsPC && EClass.player.TooHeavyToMove())
+		{
+			return MoveResult.Fail;
+		}
+		Point point = p.Copy();
+		int num = p.x - pos.x;
+		int num2 = p.z - pos.z;
+		if (num > 1)
+		{
+			num = 1;
+		}
+		else if (num < -1)
+		{
+			num = -1;
+		}
+		if (num2 > 1)
+		{
+			num2 = 1;
+		}
+		else if (num2 < -1)
+		{
+			num2 = -1;
+		}
+		if (num == 0 && num2 == 0)
+		{
+			num = EClass.rnd(3) - 1;
+			num2 = EClass.rnd(3) - 1;
+		}
+		point.Set(pos);
+		point.x -= num;
+		point.z -= num2;
+		if (point.IsValid && !point.HasChara)
+		{
+			return TryMove(point, allowDestroyPath: false);
+		}
+		return MoveResult.Fail;
+	}
+
+	public virtual MoveResult TryMove(Point newPoint, bool allowDestroyPath = true)
+	{
+		return _Move(newPoint);
+	}
+
+	public void Kick(Point p, bool ignoreSelf = false, bool checkWall = true)
+	{
+		foreach (Chara item in p.ListCharas())
+		{
+			Kick(item, ignoreSelf, karmaLoss: true, show: true, checkWall);
+		}
+	}
+
+	public void Kick(Chara t, bool ignoreSelf = false, bool karmaLoss = true, bool show = true, bool checkWall = true)
+	{
+		if (!IsAliveInCurrentZone)
+		{
+			return;
+		}
+		if (t.IsPC)
+		{
+			ActionMode.Adv.ClearPlans();
+		}
+		if (t.host != null)
+		{
+			return;
+		}
+		if (t == this)
+		{
+			if (!ignoreSelf)
+			{
+				Debug.Log(t.pos.GetNearestPoint());
+				if (TryMove(t.pos.GetNearestPoint()) != MoveResult.Success)
+				{
+					t.MoveImmediate(pos.GetNearestPoint() ?? t.pos);
+				}
+			}
+			return;
+		}
+		if (show)
+		{
+			Say("kick", this, t);
+		}
+		PlaySound("kick");
+		if ((t.conSuspend == null || t.conSuspend.uidMachine != 0) && t.trait.CanBePushed && (!t.IsHostile() || EClass.rnd(2) == 0) && !t.noMove && !t.isRestrained)
+		{
+			t.MoveByForce(t.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: true, ignoreCenter: true), this, checkWall && !t.pos.IsBlocked);
+		}
+		if (t.conSleep != null)
+		{
+			t.conSleep.Kill();
+		}
+		if (IsPC && t.IsFriendOrAbove() && !t.IsPCFactionOrMinion && karmaLoss)
+		{
+			EClass.player.ModKarma(-1);
+		}
+		t.PlayEffect("kick");
+		t.mimicry?.RevealMimicry(this, surprise: false);
+	}
+
 	public int ResistLvFrom(int ele)
 	{
 		return ResistLv(EClass.sources.elements.alias.TryGetValue(EClass.sources.elements.map[ele].aliasRef)?.id ?? 0);
@@ -7859,7 +7959,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (num == 0)
 		{
-			num = Lang.comparer.Compare(GetName(NameStyle.Full, 1), c.GetName(NameStyle.Full, 1));
+			num = Lang.comparer.Compare(c.GetName(NameStyle.Full, 1), GetName(NameStyle.Full, 1));
 		}
 		if (num == 0)
 		{
@@ -7938,6 +8038,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public virtual bool HasCondition<T>() where T : Condition
 	{
 		return false;
+	}
+
+	public virtual T GetCondition<T>() where T : Condition
+	{
+		return null;
 	}
 
 	public bool HaveFur()

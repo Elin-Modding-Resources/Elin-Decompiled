@@ -6,7 +6,7 @@ public class TraitToolButcher : TraitTool
 	{
 		foreach (Chara chara in p.pos.Charas)
 		{
-			if (!chara.IsPCFaction || chara.IsPC)
+			if (!chara.IsPCFaction || chara.IsPC || chara.host != null)
 			{
 				continue;
 			}
@@ -19,9 +19,9 @@ public class TraitToolButcher : TraitTool
 					{
 						target = _c
 					});
-				});
+				}, _c);
 				return false;
-			}, chara);
+			}, _c);
 		}
 	}
 }

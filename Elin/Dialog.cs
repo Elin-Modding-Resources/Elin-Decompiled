@@ -358,7 +358,7 @@ public class Dialog : ELayer
 		}
 	}
 
-	public static void TryWarnSlaughter(Action action)
+	public static void TryWarnSlaughter(Action action, Chara c)
 	{
 		if (ELayer.core.config.game.ignoreWarnSlaughter)
 		{
@@ -369,7 +369,7 @@ public class Dialog : ELayer
 		}
 		else
 		{
-			TryWarn("warn_slaughter", action);
+			TryWarn("warn_slaughter".lang(c.Name), action);
 		}
 	}
 

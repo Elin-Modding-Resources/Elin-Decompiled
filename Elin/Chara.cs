@@ -711,7 +711,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override int WeightLimit => (int)Mathf.Clamp(((long)base.STR * 500L + base.END * 250 + Evalue(207) * 2000) * ((!HasElement(1411)) ? 1 : 5) + 45000, 1000f, 1.0737418E+09f);
 
-	public override int SelfWeight => bio.weight * 1000;
+	public override int SelfWeight => ((bio.weight > 2000000) ? 2000000 : bio.weight) * 1000;
 
 	public int MaxSummon => Mathf.Max((int)Mathf.Sqrt(base.CHA), 1) + Evalue(1647) + ((!base.IsPCFactionOrMinion) ? ((int)base.rarity * 5) : 0);
 
@@ -2693,47 +2693,7 @@ public class Chara : Card, IPathfindWalker
 		return MoveResult.Fail;
 	}
 
-	public MoveResult TryMoveFrom(Point p)
-	{
-		if (IsPC && EClass.player.TooHeavyToMove())
-		{
-			return MoveResult.Fail;
-		}
-		Point point = p.Copy();
-		int num = p.x - pos.x;
-		int num2 = p.z - pos.z;
-		if (num > 1)
-		{
-			num = 1;
-		}
-		else if (num < -1)
-		{
-			num = -1;
-		}
-		if (num2 > 1)
-		{
-			num2 = 1;
-		}
-		else if (num2 < -1)
-		{
-			num2 = -1;
-		}
-		if (num == 0 && num2 == 0)
-		{
-			num = EClass.rnd(3) - 1;
-			num2 = EClass.rnd(3) - 1;
-		}
-		point.Set(pos);
-		point.x -= num;
-		point.z -= num2;
-		if (point.IsValid && !point.HasChara)
-		{
-			return TryMove(point, allowDestroyPath: false);
-		}
-		return MoveResult.Fail;
-	}
-
-	public MoveResult TryMove(Point newPoint, bool allowDestroyPath = true)
+	public override MoveResult TryMove(Point newPoint, bool allowDestroyPath = true)
 	{
 		foreach (Condition condition in conditions)
 		{
@@ -3016,7 +2976,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (flag2 || flag4)
 			{
-				Effect.Get("ripple").Play(0.4f * actTime * EClass.scene.actionMode.gameSpeed, newPoint);
+				Effect.Get("ripple").Play(newPoint);
 			}
 		}
 		lastPos.Set(pos);
@@ -4457,11 +4417,11 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public void TryPickGroundItem()
+	public void TryPickGroundItem(Func<Card, bool> func = null)
 	{
 		foreach (Card item in pos.ListCards())
 		{
-			if ((IsPC || !(EClass.pc.ai is AI_UseCrafter aI_UseCrafter) || !aI_UseCrafter.ings.Contains(item)) && item.isThing && item.placeState == PlaceState.roaming && CanPick(item))
+			if ((IsPC || !(EClass.pc.ai is AI_UseCrafter aI_UseCrafter) || !aI_UseCrafter.ings.Contains(item)) && item.isThing && item.placeState == PlaceState.roaming && CanPick(item) && (func == null || func(item)))
 			{
 				Thing thing = Pick(item.Thing);
 				if (thing != null && !IsPC)
@@ -5825,61 +5785,6 @@ public class Chara : Card, IPathfindWalker
 		{
 			EClass._zone.AddCard(ThingGen.CreateScroll(8221), pos);
 		}
-	}
-
-	public void Kick(Point p, bool ignoreSelf = false, bool checkWall = true)
-	{
-		foreach (Chara item in p.ListCharas())
-		{
-			Kick(item, ignoreSelf, karmaLoss: true, show: true, checkWall);
-		}
-	}
-
-	public void Kick(Chara t, bool ignoreSelf = false, bool karmaLoss = true, bool show = true, bool checkWall = true)
-	{
-		if (!IsAliveInCurrentZone)
-		{
-			return;
-		}
-		if (t.IsPC)
-		{
-			ActionMode.Adv.ClearPlans();
-		}
-		if (t.host != null)
-		{
-			return;
-		}
-		if (t == this)
-		{
-			if (!ignoreSelf)
-			{
-				Debug.Log(t.pos.GetNearestPoint());
-				if (TryMove(t.pos.GetNearestPoint()) != MoveResult.Success)
-				{
-					t.MoveImmediate(pos.GetNearestPoint() ?? t.pos);
-				}
-			}
-			return;
-		}
-		if (show)
-		{
-			Say("kick", this, t);
-		}
-		PlaySound("kick");
-		if ((t.conSuspend == null || t.conSuspend.uidMachine != 0) && t.trait.CanBePushed && (!t.IsHostile() || EClass.rnd(2) == 0) && !t.noMove && !t.isRestrained)
-		{
-			t.MoveByForce(t.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: true, ignoreCenter: true), this, checkWall && !t.pos.IsBlocked);
-		}
-		if (t.conSleep != null)
-		{
-			t.conSleep.Kill();
-		}
-		if (IsPC && t.IsFriendOrAbove() && !t.IsPCFactionOrMinion && karmaLoss)
-		{
-			EClass.player.ModKarma(-1);
-		}
-		t.PlayEffect("kick");
-		t.mimicry?.RevealMimicry(this, surprise: false);
 	}
 
 	public bool UseAbility(int idAct, Card tc = null, Point pos = null, bool pt = false)
@@ -8264,7 +8169,7 @@ public class Chara : Card, IPathfindWalker
 		return true;
 	}
 
-	public bool CanAcceptItem(Card t, int num = -1)
+	public bool CanAcceptItem(Card t, int num = -1, bool skipImportantCheck = false)
 	{
 		if (EClass.debug.ignoreWeight)
 		{
@@ -8274,7 +8179,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (t.c_isImportant)
+		if (!skipImportantCheck && t.c_isImportant)
 		{
 			return false;
 		}
@@ -9539,7 +9444,7 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public T GetCondition<T>() where T : Condition
+	public override T GetCondition<T>()
 	{
 		for (int i = 0; i < conditions.Count; i++)
 		{
@@ -9718,7 +9623,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (TC.hp > (long)TC.MaxHP * (long)(Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 30 : 20) + Evalue(1426) * 5) / (TC.IsPowerful ? 250 : 100))
+		if (TC.hp > (long)TC.MaxHP * (long)(Mathf.Min(5 + (int)Mathf.Sqrt(power), harvest ? 35 : 25) + Evalue(1426) * 5) / (TC.IsPowerful ? 200 : 100))
 		{
 			return false;
 		}

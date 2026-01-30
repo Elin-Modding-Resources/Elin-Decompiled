@@ -14,7 +14,9 @@ public class TCOrbitThing : TCOrbit
 	{
 		owner = base.owner as Thing;
 		RenderData data = owner.renderer.data;
-		goIcon.transform.SetLocalPositionY(data.offset.y + data.size.y + 0.32f);
+		goIcon.transform.SetLocalPositionY(data.offset.y + data.size.y + 0.32f + owner.Pref.heightFix);
+		timer = 0f;
+		Refresh();
 		RefreshAll();
 	}
 

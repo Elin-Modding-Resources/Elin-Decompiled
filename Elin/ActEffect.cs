@@ -169,6 +169,13 @@ public class ActEffect : EClass
 						effect.Play(p).Flip(p.x > CC.pos.x);
 					});
 				}
+				if (id == EffectId.Flare)
+				{
+					TryDelay(delegate
+					{
+						Effect.Get("flare2").Play(EClass.rndf(0.5f), p);
+					});
+				}
 			}
 			bool flag3 = false;
 			if (CC.IsPCFactionOrMinion && (CC.HasElement(1651) || EClass.pc.Evalue(1651) >= 2))

@@ -15,7 +15,7 @@ public static class GalleryFlattenAndRename
 	public static UD_Int_String Run()
 	{
 		dict = new UD_Int_String();
-		int num = MoveAllFilesUnderSubfoldersToRoot(root);
+		MoveAllFilesUnderSubfoldersToRoot(root);
 		string[] array = Directory.GetDirectories(root, "*", SearchOption.AllDirectories).ToArray();
 		for (int i = 0; i < array.Length; i++)
 		{
@@ -39,41 +39,43 @@ public static class GalleryFlattenAndRename
 			}
 		}
 		CreateThumbnailsSameFolder(root, 360, 240);
-		Debug.Log("[Gallery] Done. Total:" + num + "/" + dict.Count);
+		Debug.Log("[Gallery] Done. Total:" + dict.Count);
 		return dict;
 	}
 
-	private static int MoveAllFilesUnderSubfoldersToRoot(string root)
+	private static void MoveAllFilesUnderSubfoldersToRoot(string root)
 	{
 		string[] directories = Directory.GetDirectories(root, "*", SearchOption.AllDirectories);
-		int num = 0;
-		string[] array = directories;
-		for (int i = 0; i < array.Length; i++)
+		for (int i = 0; i < directories.Length; i++)
 		{
-			string[] files = Directory.GetFiles(array[i], "*", SearchOption.TopDirectoryOnly);
+			string[] files = Directory.GetFiles(directories[i], "*", SearchOption.TopDirectoryOnly);
 			foreach (string text in files)
 			{
 				string text2 = Path.Combine(root, Path.GetFileName(text));
-				File.Move(text, text2);
-				if (!text2.EndsWith("meta"))
+				if (!File.Exists(text2))
 				{
-					num++;
+					File.Move(text, text2);
 				}
 			}
 		}
-		return num;
 	}
 
 	private static void RenameAllFilesToLeadingNumber(string root)
 	{
 		string[] files = Directory.GetFiles(root, "*", SearchOption.TopDirectoryOnly);
-		foreach (string obj in files)
+		foreach (string text in files)
 		{
-			string extension = Path.GetExtension(obj);
-			string text = Path.GetFileNameWithoutExtension(obj).Split('_')[0];
-			string text2 = Path.Combine(root, text + extension);
-			File.Move(obj, text2);
-			dict[text.ToInt()] = text2;
+			string extension = Path.GetExtension(text);
+			if (IsImageExt(extension))
+			{
+				string text2 = Path.GetFileNameWithoutExtension(text).Split('_')[0];
+				string text3 = Path.Combine(root, text2 + extension);
+				if (text != text3)
+				{
+					File.Move(text, text3);
+				}
+				dict[text2.ToInt()] = text2 + extension;
+			}
 		}
 	}
 
@@ -83,6 +85,11 @@ public static class GalleryFlattenAndRename
 		foreach (string text in files)
 		{
 			if (text.EndsWith(".meta"))
+			{
+				continue;
+			}
+			string path = text + "_t";
+			if (File.Exists(path))
 			{
 				continue;
 			}
@@ -108,7 +115,6 @@ public static class GalleryFlattenAndRename
 			int w = Mathf.Max(1, Mathf.RoundToInt((float)width * num));
 			int h = Mathf.Max(1, Mathf.RoundToInt((float)height * num));
 			Texture2D texture2D2 = ResizeTo(texture2D, w, h);
-			string path = text + "_t";
 			byte[] bytes = ((!(text2 == ".png")) ? texture2D2.EncodeToJPG(90) : texture2D2.EncodeToPNG());
 			File.WriteAllBytes(path, bytes);
 			Object.DestroyImmediate(texture2D);

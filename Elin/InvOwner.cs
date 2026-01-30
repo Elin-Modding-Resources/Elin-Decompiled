@@ -246,7 +246,7 @@ public class InvOwner : EClass
 					}
 				}
 			}
-			if (destInv.Container.isChara && !destInv.owner.IsPC && !destInv.owner.Chara.CanAcceptItem(thing2))
+			if (destInv.Container.isChara && !destInv.owner.IsPC && !destInv.owner.Chara.CanAcceptItem(thing2, -1, dragItemCard.from.container == destInv.owner))
 			{
 				destInv.owner.Chara.Talk("tooHeavy");
 				return false;

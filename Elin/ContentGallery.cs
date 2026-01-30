@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,9 +19,19 @@ public class ContentGallery : EContent
 		{
 			foreach (string id in ids)
 			{
-				UIItem uIItem = n.AddItem("ItemGallery");
 				int idx = id.ToInt();
-				string path = EClass.core.refs.dictSketches2[idx];
+				string path = GalleryFlattenAndRename.root + "/" + EClass.core.refs.dictSketches2[idx];
+				if (!File.Exists(path))
+				{
+					EClass.ui.Say("Full Image not found: " + path);
+					continue;
+				}
+				if (!File.Exists(path + "_t"))
+				{
+					EClass.ui.Say("Thumbnail not found: " + path);
+					continue;
+				}
+				UIItem uIItem = n.AddItem("ItemGallery");
 				Sprite sprite = sprites.TryGetValue(idx);
 				if (!sprite)
 				{
@@ -32,11 +43,12 @@ public class ContentGallery : EContent
 				uIItem.text1.text = "#" + id;
 				uIItem.button1.SetOnClick(delegate
 				{
+					Debug.Log(path);
 					SE.Play("click_recipe");
 					Sprite sprite2 = spritesFull.TryGetValue(idx);
 					if (!sprite2)
 					{
-						Texture2D texture2D2 = IO.LoadPNG(path);
+						Texture2D texture2D2 = IO.LoadPNG(path, FilterMode.Trilinear);
 						sprite2 = Sprite.Create(texture2D2, new Rect(0f, 0f, texture2D2.width, texture2D2.height), new Vector2(0.5f, 0.5f));
 						spritesFull[idx] = sprite2;
 					}

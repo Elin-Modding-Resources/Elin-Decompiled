@@ -41,7 +41,7 @@ public class TraitCatalyst : TraitTool
 		{
 			return;
 		}
-		p.TrySetAct(act.source.GetName(), delegate
+		p.TrySetAct(((EClass.pc.elements.GetElement(act.id) as Act) ?? act).GetText(), delegate
 		{
 			if (tg != null && !tg.ExistsOnMap)
 			{

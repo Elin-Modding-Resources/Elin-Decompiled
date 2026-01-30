@@ -13,4 +13,11 @@ public class TraitGrindstone : TraitCrafter
 	public override int numIng => 2;
 
 	public override bool StopSoundProgress => true;
+
+	public override bool IsConsumeIng => false;
+
+	public override bool ShouldConsumeIng(SourceRecipe.Row item, int index)
+	{
+		return false;
+	}
 }

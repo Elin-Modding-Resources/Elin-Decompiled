@@ -178,8 +178,6 @@ public class Act : Element
 
 	public virtual bool ShowAuto => false;
 
-	public virtual bool IsCrime => EClass._zone.IsCrime(EClass.pc, this);
-
 	public virtual CursorInfo GetCursorIcon(Card c)
 	{
 		return CursorIcon;
@@ -258,7 +256,7 @@ public class Act : Element
 
 	public virtual Color GetActPlanColor()
 	{
-		if (!IsCrime)
+		if (!EClass._zone.IsCrime(EClass.pc, this))
 		{
 			return EClass.Colors.colorAct;
 		}

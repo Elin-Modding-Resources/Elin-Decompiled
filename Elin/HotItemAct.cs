@@ -69,7 +69,7 @@ public class HotItemAct : HotItemGameAction
 		{
 			return false;
 		}
-		p.TrySetAct(source.GetName(), delegate
+		p.TrySetAct(((EClass.pc.elements.GetElement(act.id) as Act) ?? act).GetText(), delegate
 		{
 			if (tg != null && !tg.ExistsOnMap)
 			{

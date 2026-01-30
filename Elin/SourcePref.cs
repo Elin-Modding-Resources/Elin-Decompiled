@@ -299,6 +299,18 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 		}
 	}
 
+	public float heightFix
+	{
+		get
+		{
+			return (float)ints[24] * 0.01f;
+		}
+		set
+		{
+			ints[24] = (int)(value * 100f);
+		}
+	}
+
 	public bool bypassShadow
 	{
 		get

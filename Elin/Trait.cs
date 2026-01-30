@@ -1639,7 +1639,7 @@ public class Trait : EClass
 		{
 			for (int num7 = 0; num7 < 30; num7++)
 			{
-				AddThing(ThingGen.CreateFromCategory((EClass.rnd(2) == 0) ? "_book" : "book"));
+				AddThing(ThingGen.CreateFromFilter("shop_seeker"));
 			}
 			break;
 		}

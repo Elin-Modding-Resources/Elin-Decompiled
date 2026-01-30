@@ -18,8 +18,8 @@ public class Resistance : Element
 		return SpriteSheet.Get("Media/Graphics/Icon/Element/icon_elements", "ele_" + base.source.alias) ?? SpriteSheet.Get("Media/Graphics/Icon/Element/icon_elements", "ele_resist");
 	}
 
-	public override void SetTextValue(UIText text)
+	public override void SetTextValue(UIText text, bool shorten = false)
 	{
-		text.text = "なし";
+		text.text = "";
 	}
 }

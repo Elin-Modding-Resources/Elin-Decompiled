@@ -6,9 +6,9 @@ public class InvOwnerCraft : InvOwnerDraglet
 	{
 		get
 		{
-			if (!(crafter is TraitToolTalisman))
+			if (!(crafter is TraitToolTalisman) && !(crafter is TraitRuneMold) && !(crafter is TraitGrindstone))
 			{
-				return crafter is TraitRuneMold;
+				return crafter is TraitBarrelMaker;
 			}
 			return true;
 		}

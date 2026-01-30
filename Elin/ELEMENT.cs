@@ -1080,7 +1080,7 @@ public class Element : EClass
 		return 100;
 	}
 
-	public virtual void SetTextValue(UIText text)
+	public virtual void SetTextValue(UIText text, bool shorten = false)
 	{
 		string text2 = DisplayValue.ToString() ?? "";
 		if (ShowXP)
@@ -1089,7 +1089,7 @@ public class Element : EClass
 		}
 		if (vLink != 0)
 		{
-			string text3 = ((vLink > 0) ? "+" : "") + vLink;
+			string text3 = ((vLink > 0) ? "+" : "") + (shorten ? vLink.ToShortNumber() : ((object)vLink));
 			text2 = "<color=" + ((DisplayValue > ValueWithoutLink) ? SkinManager.CurrentColors.textGood : SkinManager.CurrentColors.textBad).ToHex() + ">" + text2 + (" (" + text3 + ")").TagSize(13) + "</color>";
 		}
 		text.text = text2;

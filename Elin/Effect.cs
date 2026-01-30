@@ -103,6 +103,8 @@ public class Effect : SceneObject
 		Point _to = to?.Copy() ?? null;
 		TweenUtil.Tween(delay, delegate
 		{
+		}, delegate
+		{
 			Play(_from, fixY, _to, sprite);
 		});
 	}

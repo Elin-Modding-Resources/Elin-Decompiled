@@ -119,8 +119,8 @@ public class ButtonElement : UIButton
 			}
 			break;
 		case Mode.Attribute:
-			mainText.SetText(text + e.Name, FontColor.Default);
-			e.SetTextValue(subText);
+			mainText.SetText(text + e.source.GetText("textExtra"), FontColor.Default);
+			e.SetTextValue(subText, shorten: true);
 			break;
 		case Mode.OnlyValue:
 			e.SetTextValue(subText);
@@ -207,7 +207,7 @@ public class ButtonElement : UIButton
 				uIItem.text1.SetActive(enable: false);
 				uIItem.image1.color = Color.white.SetAlpha(0.5f);
 			}
-			text = (e.IsFlag ? "✓" : (Mathf.Abs(num).ToString() ?? ""));
+			text = (e.IsFlag ? "✓" : Mathf.Abs(num).ToShortNumber());
 			FontColor c2 = ((num >= 0) ? FontColor.Good : FontColor.Bad);
 			if (element != null)
 			{

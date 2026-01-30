@@ -2323,9 +2323,9 @@ public class Map : MapBounds, IPathfindGrid
 		return list;
 	}
 
-	public List<Point> ListPointsInLine(Point center, Point to, int radius)
+	public List<Point> ListPointsInLine(Point center, Point to, int radius, bool returnOnBlocked = true)
 	{
-		return Los.ListVisible(center, to, radius);
+		return Los.ListVisible(center, to, radius, null, returnOnBlocked);
 	}
 
 	public void SetBounds(int size)

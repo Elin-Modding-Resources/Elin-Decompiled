@@ -30,7 +30,7 @@ public class QuestTaskHunt : QuestTask
 
 	public Setup setup;
 
-	public SourceRace.Row Race => EClass.sources.races.map[idRace];
+	public SourceRace.Row Race => EClass.sources.races.map.TryGetValue(idRace, "yeek");
 
 	public override string RefDrama2
 	{

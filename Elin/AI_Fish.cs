@@ -193,7 +193,7 @@ public class AI_Fish : AIAct
 	{
 		if (!owner.IsPC)
 		{
-			owner.TryPickGroundItem();
+			owner.TryPickGroundItem((Card t) => t.category.IsChildOf("fish") || t.SelfWeight <= 1000);
 		}
 		if (pos != null)
 		{
@@ -235,7 +235,7 @@ public class AI_Fish : AIAct
 			{
 				if (!owner.IsPC)
 				{
-					owner.TryPickGroundItem();
+					owner.TryPickGroundItem((Card t) => t.category.IsChildOf("fish") || t.SelfWeight <= 1000);
 				}
 				if (owner.IsPCFaction && !owner.IsPCParty)
 				{

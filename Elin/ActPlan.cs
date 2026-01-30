@@ -58,6 +58,7 @@ public class ActPlan : EClass
 			if (AM_Adv.actCount == 0 && !Dialog.warned)
 			{
 				warning = true;
+				Card lastMouseCard = EClass.scene.mouseTarget.card;
 				Chara _CC = Act.CC;
 				Card _TC = Act.TC;
 				Point _TP = new Point(Act.TP);
@@ -68,6 +69,7 @@ public class ActPlan : EClass
 						Act.CC = _CC;
 						Act.TC = _TC;
 						Act.TP.Set(_TP);
+						EClass.scene.mouseTarget.card = lastMouseCard;
 						if (Perform())
 						{
 							EClass.player.EndTurn();
