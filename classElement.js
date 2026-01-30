@@ -35,7 +35,7 @@ var classElement =
     [ "OnChangeValue", "classElement.html#a1053d168a082abeb846bc292994a01e0", null ],
     [ "OnWriteNote", "classElement.html#ac3aae5718b0149440a67667ea51dec2b", null ],
     [ "SetImage", "classElement.html#a69bc2b3845ec48a71e764f603e7e1914", null ],
-    [ "SetTextValue", "classElement.html#a74b986a3a4646f015dfdccfd74836ab8", null ],
+    [ "SetTextValue", "classElement.html#ae27013520199a4de765187af68b4f0bb", null ],
     [ "SortVal", "classElement.html#aff3eb71f147171d357ad77c34b0cf709", null ],
     [ "WriteNote", "classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c", null ],
     [ "WriteNoteWithRef", "classElement.html#a701a6b7e77c12ea134418265f0d8e649", null ],

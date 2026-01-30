@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.262 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.264 Nightly</span>
    </div>
   </td>
  </tr>
@@ -301,8 +301,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ef0315fd456856fc442d460c5f7e310 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68cfe23ce1ce41da21b7ce89d260ea73 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">GetPower</a> (<a class="el" href="classCard.html">Card</a> c)</td></tr>
 <tr class="separator:a68cfe23ce1ce41da21b7ce89d260ea73 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74b986a3a4646f015dfdccfd74836ab8 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a74b986a3a4646f015dfdccfd74836ab8">SetTextValue</a> (<a class="el" href="classUIText.html">UIText</a> text)</td></tr>
-<tr class="separator:a74b986a3a4646f015dfdccfd74836ab8 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27013520199a4de765187af68b4f0bb inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ae27013520199a4de765187af68b4f0bb">SetTextValue</a> (<a class="el" href="classUIText.html">UIText</a> text, bool shorten=false)</td></tr>
+<tr class="separator:ae27013520199a4de765187af68b4f0bb inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a445488caa04fb5048418f8f1d8f770f4 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a445488caa04fb5048418f8f1d8f770f4">IsPurchaseFeatReqMet</a> (<a class="el" href="classElementContainer.html">ElementContainer</a> <a class="el" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>, int lv=-1)</td></tr>
 <tr class="separator:a445488caa04fb5048418f8f1d8f770f4 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb22b38fcc665a2d253a3915bae9ee9 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a3eb22b38fcc665a2d253a3915bae9ee9">WritePurchaseReq</a> (<a class="el" href="classUINote.html">UINote</a> n, int lv=1)</td></tr>
@@ -564,8 +564,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:acdf795224d8935bcf4a0b447d1396886 inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34fc85b1072a6dd77e6e7579032da6ea inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#a34fc85b1072a6dd77e6e7579032da6ea">ShowAuto</a><code> [get]</code></td></tr>
 <tr class="separator:a34fc85b1072a6dd77e6e7579032da6ea inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c1986f83f7c97b2984fe21439659c0f inherit properties_classAct"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAct.html#a8c1986f83f7c97b2984fe21439659c0f">IsCrime</a><code> [get]</code></td></tr>
-<tr class="separator:a8c1986f83f7c97b2984fe21439659c0f inherit properties_classAct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classElement"><td colspan="2" onclick="javascript:toggleInherit('properties_classElement')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classElement.html">Element</a></td></tr>
 <tr class="memitem:a3eb853993ffbe07f393e80bcf4e0f5c6 inherit properties_classElement"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceElement_1_1Row.html">SourceElement.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a><code> [get]</code></td></tr>
 <tr class="separator:a3eb853993ffbe07f393e80bcf4e0f5c6 inherit properties_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -719,12 +717,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassAIAct_html_ad69a96ace451443057c8db17179025fa"><div class="ttname"><a href="classAIAct.html#ad69a96ace451443057c8db17179025fa">AIAct.DoGoto</a></div><div class="ttdeci">Status DoGoto(Point pos, int dist=0, bool ignoreConnection=false, Func&lt; Status &gt; _onChildFail=null)</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00436">AIAct.cs:436</a></div></div>
 <div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02070">Card.cs:2071</a></div></div>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
-<div class="ttc" id="aclassChara_html_ac96438f85f9f30b620e68cc0348f7dda"><div class="ttname"><a href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">Chara.DoHostileAction</a></div><div class="ttdeci">void DoHostileAction(Card _tg, bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06409">Chara.cs:6409</a></div></div>
+<div class="ttc" id="aclassChara_html_ac96438f85f9f30b620e68cc0348f7dda"><div class="ttname"><a href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">Chara.DoHostileAction</a></div><div class="ttdeci">void DoHostileAction(Card _tg, bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06314">Chara.cs:6314</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a8f1e1e1a054339f58a2eecd62c4f3612"><div class="ttname"><a href="classEClass.html#a8f1e1e1a054339f58a2eecd62c4f3612">EClass.Branch</a></div><div class="ttdeci">static FactionBranch Branch</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00023">EClass.cs:23</a></div></div>
 <div class="ttc" id="aclassFactionBranch_html_a966a9ea7536fcd84cadd3cb2046f187b"><div class="ttname"><a href="classFactionBranch.html#a966a9ea7536fcd84cadd3cb2046f187b">FactionBranch.members</a></div><div class="ttdeci">List&lt; Chara &gt; members</div><div class="ttdef"><b>Definition:</b> <a href="FactionBranch_8cs_source.html#l00122">FactionBranch.cs:122</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00023">EClass.Branch</a>, <a class="el" href="Card_8cs_source.html#l02071">Card.Chara</a>, <a class="el" href="AIAct_8cs_source.html#l00436">AIAct.DoGoto()</a>, <a class="el" href="Chara_8cs_source.html#l06409">Chara.DoHostileAction()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00122">FactionBranch.members</a>, and <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00023">EClass.Branch</a>, <a class="el" href="Card_8cs_source.html#l02071">Card.Chara</a>, <a class="el" href="AIAct_8cs_source.html#l00436">AIAct.DoGoto()</a>, <a class="el" href="Chara_8cs_source.html#l06314">Chara.DoHostileAction()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00122">FactionBranch.members</a>, and <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>.</p>
 
 </div>
 </div>

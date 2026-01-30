@@ -48,7 +48,7 @@ var classMap =
     [ "ListCharasInCircle", "classMap.html#a56b0edb3fe910585ee6984c670bd5b4b", null ],
     [ "ListPointsInArc", "classMap.html#a339974beb91872e3095a6c1ad0b435d9", null ],
     [ "ListPointsInCircle", "classMap.html#ae0d570611322d47b16a2caa180bd4b19", null ],
-    [ "ListPointsInLine", "classMap.html#a644007691d41aff3d62bba34d565ee63", null ],
+    [ "ListPointsInLine", "classMap.html#ad9edbe8e7b77b16f351bb0e4c11a987b", null ],
     [ "ListThing< T >", "classMap.html#a60ffcd91d59b14d07d3499bf2c2c5ddf", null ],
     [ "Load", "classMap.html#ad374b94267ddd46c0015aeaf963fcf7f", null ],
     [ "MineBlock", "classMap.html#a51bbbcb951eb4d3c64498ea00d50aa37", null ],

@@ -7,7 +7,7 @@ var classLos =
     [ "IsVisible", "classLos.html#a336add5f394e2b47a573ba38d1e62587", null ],
     [ "IsVisible", "classLos.html#a03e5f3577103f25dba564d70482ad1c1", null ],
     [ "IsVisible", "classLos.html#a437fe060bc316f89755c7fbac25084ab", null ],
-    [ "ListVisible", "classLos.html#a259be5b8a24c430279a576d3634adb24", null ],
+    [ "ListVisible", "classLos.html#a09d134039b02c7bbb084e3e89777c563", null ],
     [ "MAX", "classLos.html#a005a8440a5909b791dc87fc53f193aa2", null ],
     [ "ZSGN", "classLos.html#a83273d2e11526f88ca8f827b55122bb3", null ],
     [ "onVisit", "classLos.html#ad490c2ffb80dd240df7fef7a5860e159", null ],

@@ -488,6 +488,7 @@ var hierarchy =
               [ "StanceManaCost", "classStanceManaCost.html", null ],
               [ "StanceTaunt", "classStanceTaunt.html", null ]
             ] ],
+            [ "ConATField", "classConATField.html", null ],
             [ "ConAmbush", "classConAmbush.html", null ],
             [ "ConAwakening", "classConAwakening.html", null ],
             [ "ConBuffStats", "classConBuffStats.html", null ],
@@ -747,6 +748,7 @@ var hierarchy =
               ] ],
               [ "ActMiasma", "classActMiasma.html", null ],
               [ "ActPuddle", "classActPuddle.html", null ],
+              [ "ActTelekinesis", "classActTelekinesis.html", null ],
               [ "ActWeapon", "classActWeapon.html", null ],
               [ "FieldEffect", "classFieldEffect.html", [
                 [ "FieldEffectSpider", "classFieldEffectSpider.html", null ]

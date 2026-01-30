@@ -15,6 +15,7 @@ var classSourcePref =
     [ "FloatUnderwater", "classSourcePref.html#a25c6a521e16837149a27c1efc12aa720", null ],
     [ "hatY", "classSourcePref.html#af67e02842a49ab3c996a057f9ed8dca3", null ],
     [ "height", "classSourcePref.html#a4cee251f54b7eb88c74f600ac6c25db1", null ],
+    [ "heightFix", "classSourcePref.html#ab8922285eb7b6be52cbcf23b0208672c", null ],
     [ "liquidMod", "classSourcePref.html#a6edb24d8a86d724c4647430c87eab33b", null ],
     [ "liquidModMax", "classSourcePref.html#a2034be12ae8c8bcd067f97f14f577c12", null ],
     [ "pivotX", "classSourcePref.html#a1eb1308badc480c80270846cc913a19c", null ],

@@ -242,6 +242,7 @@ var classSPELL =
     [ "SpSummonUndead", "classSPELL.html#a5b4d0e3aa807d0fa547680c415f9b311", null ],
     [ "SpSummonUndeadSister", "classSPELL.html#a32fe80fcb8c995629eab889ed5fe0220", null ],
     [ "SpSummonYeek", "classSPELL.html#ad004a27ec02a98c542157263920a8ee3", null ],
+    [ "SpTelekinesis", "classSPELL.html#a0827c85b06db1364741bc7f080deafe2", null ],
     [ "SpTelepathy", "classSPELL.html#ad26198bd873e98c4b79f7da53f9277d9", null ],
     [ "SpTeleport", "classSPELL.html#a2c216df733934a7ec0ba0e50044f082d", null ],
     [ "SpTeleportShort", "classSPELL.html#a23d0a3944334cbd7b822adbd20a2c7f5", null ],

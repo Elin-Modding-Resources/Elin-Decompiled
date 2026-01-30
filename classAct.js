@@ -44,7 +44,6 @@ var classAct =
     [ "HideRightInfo", "classAct.html#a8b19e8b1c1c68a229ee473e134f8eb01", null ],
     [ "ID", "classAct.html#ab23b897b03c141fb81b2914efb87408a", null ],
     [ "IsAct", "classAct.html#a672ab1d9d656ac8cfe8b1cf60db02270", null ],
-    [ "IsCrime", "classAct.html#a8c1986f83f7c97b2984fe21439659c0f", null ],
     [ "IsHostileAct", "classAct.html#a6907e0e77355bfb4343b92a54c75c6ab", null ],
     [ "LeftHand", "classAct.html#ac1f87f9f06c2d1fe1020db8c745141a9", null ],
     [ "LocalAct", "classAct.html#a500995532864367830e20593687d4fde", null ],

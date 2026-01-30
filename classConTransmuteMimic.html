@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.262 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.264 Nightly</span>
    </div>
   </td>
  </tr>
@@ -540,28 +540,33 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00024">24</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        List&lt;Thing&gt; list = <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">List</a>((<a class="code hl_class" href="classThing.html">Thing</a> t) =&gt; !t.<a class="code hl_property" href="classCard.html#a0e7c89c955500ed272f9389f073f4358">IsMultisize</a> &amp;&amp; !t.<a class="code hl_property" href="classThing.html#a1d1749db95ba575945fd81955bbcd364">isEquipped</a>, onlyAccessible: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (list.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   26</span>        List&lt;Thing&gt; list = <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">List</a>((<a class="code hl_class" href="classThing.html">Thing</a> t) =&gt; !t.<a class="code hl_property" href="classCard.html#a0e7c89c955500ed272f9389f073f4358">IsMultisize</a> &amp;&amp; t.<a class="code hl_property" href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">c_isImportant</a>, onlyAccessible: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (list.Count == 0)</div>
 <div class="line"><span class="lineno">   28</span>        {</div>
-<div class="line"><span class="lineno">   29</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a> = list.RandomItem().<a class="code hl_function" href="classCard.html#aca4e14461077d01feec476e398b5e874">Duplicate</a>(1);</div>
+<div class="line"><span class="lineno">   29</span>            list = <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.<a class="code hl_function" href="classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff">List</a>((<a class="code hl_class" href="classThing.html">Thing</a> t) =&gt; !t.<a class="code hl_property" href="classCard.html#a0e7c89c955500ed272f9389f073f4358">IsMultisize</a> &amp;&amp; !t.<a class="code hl_property" href="classThing.html#a1d1749db95ba575945fd81955bbcd364">isEquipped</a>, onlyAccessible: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   30</span>        }</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(3) == 0)</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (list.Count &gt; 0)</div>
 <div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a> = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;chest3&quot;</span>, -1, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a15cbd0f49e1a92fd599b20dc5d8f8d7b">ContentLv</a>);</div>
-<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a>.<a class="code hl_function" href="classCard.html#a3eae190e531a614ec5656fe514476910">ChangeMaterial</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a4dfe2c58004679c77c43f1ae287138d1">biome</a>.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#afe32cfbfda489fff8da633d29f65db6a">matDoor</a>);</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   37</span>        {</div>
-<div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a> = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#a281cc475b772addc30ebe918809aaa30">CreateFromFilter</a>(<span class="stringliteral">&quot;dungeon&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a15cbd0f49e1a92fd599b20dc5d8f8d7b">ContentLv</a>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(1);</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a> = list.RandomItem().<a class="code hl_function" href="classCard.html#aca4e14461077d01feec476e398b5e874">Duplicate</a>(1);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(3) == 0)</div>
+<div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a> = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">Create</a>(<span class="stringliteral">&quot;chest3&quot;</span>, -1, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a15cbd0f49e1a92fd599b20dc5d8f8d7b">ContentLv</a>);</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a>.<a class="code hl_function" href="classCard.html#a3eae190e531a614ec5656fe514476910">ChangeMaterial</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a4dfe2c58004679c77c43f1ae287138d1">biome</a>.<a class="code hl_variable" href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">style</a>.<a class="code hl_variable" href="classBiomeProfile_1_1Style.html#afe32cfbfda489fff8da633d29f65db6a">matDoor</a>);</div>
 <div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        base.OnBeforeStart();</div>
-<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a> = <a class="code hl_class" href="classThingGen.html">ThingGen</a>.<a class="code hl_function" href="classThingGen.html#a281cc475b772addc30ebe918809aaa30">CreateFromFilter</a>(<span class="stringliteral">&quot;dungeon&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_property" href="classZone.html#a15cbd0f49e1a92fd599b20dc5d8f8d7b">ContentLv</a>).<a class="code hl_function" href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">SetNum</a>(1);</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        base.OnBeforeStart();</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
 <div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
 <div class="ttc" id="aclassBiomeProfile_1_1Style_html_afe32cfbfda489fff8da633d29f65db6a"><div class="ttname"><a href="classBiomeProfile_1_1Style.html#afe32cfbfda489fff8da633d29f65db6a">BiomeProfile.Style.matDoor</a></div><div class="ttdeci">int matDoor</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00304">BiomeProfile.cs:304</a></div></div>
 <div class="ttc" id="aclassBiomeProfile_html_a32891f1ce9580400bef123ee4bf4253f"><div class="ttname"><a href="classBiomeProfile.html#a32891f1ce9580400bef123ee4bf4253f">BiomeProfile.style</a></div><div class="ttdeci">Style style</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00682">BiomeProfile.cs:682</a></div></div>
 <div class="ttc" id="aclassCard_html_a0e7c89c955500ed272f9389f073f4358"><div class="ttname"><a href="classCard.html#a0e7c89c955500ed272f9389f073f4358">Card.IsMultisize</a></div><div class="ttdeci">virtual bool IsMultisize</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02160">Card.cs:2161</a></div></div>
 <div class="ttc" id="aclassCard_html_a3eae190e531a614ec5656fe514476910"><div class="ttname"><a href="classCard.html#a3eae190e531a614ec5656fe514476910">Card.ChangeMaterial</a></div><div class="ttdeci">Card ChangeMaterial(int idNew, bool ignoreFixedMaterial=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03060">Card.cs:3060</a></div></div>
 <div class="ttc" id="aclassCard_html_a6960a5a7ffbd3ecb14e17bda21c86d3e"><div class="ttname"><a href="classCard.html#a6960a5a7ffbd3ecb14e17bda21c86d3e">Card.SetNum</a></div><div class="ttdeci">Thing SetNum(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03520">Card.cs:3520</a></div></div>
+<div class="ttc" id="aclassCard_html_aab7876b07bbc37cc23c4bcf8c94dc6e6"><div class="ttname"><a href="classCard.html#aab7876b07bbc37cc23c4bcf8c94dc6e6">Card.c_isImportant</a></div><div class="ttdeci">bool c_isImportant</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01024">Card.cs:1025</a></div></div>
 <div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00039">Card.cs:39</a></div></div>
 <div class="ttc" id="aclassCard_html_aca4e14461077d01feec476e398b5e874"><div class="ttname"><a href="classCard.html#aca4e14461077d01feec476e398b5e874">Card.Duplicate</a></div><div class="ttdeci">Thing Duplicate(int num)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03469">Card.cs:3469</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
@@ -576,7 +581,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassZone_html_a15cbd0f49e1a92fd599b20dc5d8f8d7b"><div class="ttname"><a href="classZone.html#a15cbd0f49e1a92fd599b20dc5d8f8d7b">Zone.ContentLv</a></div><div class="ttdeci">override int ContentLv</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00097">Zone.cs:98</a></div></div>
 <div class="ttc" id="aclassZone_html_a4dfe2c58004679c77c43f1ae287138d1"><div class="ttname"><a href="classZone.html#a4dfe2c58004679c77c43f1ae287138d1">Zone.biome</a></div><div class="ttdeci">BiomeProfile biome</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00129">Zone.cs:129</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00021">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l00129">Zone.biome</a>, <a class="el" href="Card_8cs_source.html#l03060">Card.ChangeMaterial()</a>, <a class="el" href="Zone_8cs_source.html#l00098">Zone.ContentLv</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00063">ThingGen.CreateFromFilter()</a>, <a class="el" href="Card_8cs_source.html#l03469">Card.Duplicate()</a>, <a class="el" href="Thing_8cs_source.html#l00017">Thing.isEquipped</a>, <a class="el" href="Card_8cs_source.html#l02161">Card.IsMultisize</a>, <a class="el" href="ThingContainer_8cs_source.html#l00817">ThingContainer.List()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00304">BiomeProfile.Style.matDoor</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="EClass_8cs_source.html#l00059">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l03520">Card.SetNum()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00682">BiomeProfile.style</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00007">thing</a>, and <a class="el" href="Card_8cs_source.html#l00039">Card.things</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00021">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l00129">Zone.biome</a>, <a class="el" href="Card_8cs_source.html#l01025">Card.c_isImportant</a>, <a class="el" href="Card_8cs_source.html#l03060">Card.ChangeMaterial()</a>, <a class="el" href="Zone_8cs_source.html#l00098">Zone.ContentLv</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="ThingGen_8cs_source.html#l00063">ThingGen.CreateFromFilter()</a>, <a class="el" href="Card_8cs_source.html#l03469">Card.Duplicate()</a>, <a class="el" href="Thing_8cs_source.html#l00017">Thing.isEquipped</a>, <a class="el" href="Card_8cs_source.html#l02161">Card.IsMultisize</a>, <a class="el" href="ThingContainer_8cs_source.html#l00817">ThingContainer.List()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00304">BiomeProfile.Style.matDoor</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="EClass_8cs_source.html#l00059">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l03520">Card.SetNum()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00682">BiomeProfile.style</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00007">thing</a>, and <a class="el" href="Card_8cs_source.html#l00039">Card.things</a>.</p>
 
 </div>
 </div>
@@ -605,11 +610,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013">ConTransmute</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00049">49</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        owner.mimicry = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   52</span>        base.OnRemoved();</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00053">53</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        owner.mimicry = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   56</span>        base.OnRemoved();</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -647,28 +652,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00067">67</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">IsHostile</a>(c.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>))</div>
-<div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">DoHostileAction</a>(c, immediate: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (surprise)</div>
+<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00071">71</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">IsHostile</a>(c.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>))</div>
 <div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConAmbush.html">ConAmbush</a>&gt;();</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">DoHostileAction</a>(c, immediate: <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>        <a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (surprise)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">AddCondition</a>&lt;<a class="code hl_class" href="classConAmbush.html">ConAmbush</a>&gt;();</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
 <div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02070">Card.cs:2071</a></div></div>
-<div class="ttc" id="aclassChara_html_a31d9d4007deda6846d34ae070a3efaae"><div class="ttname"><a href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">Chara.AddCondition</a></div><div class="ttdeci">Condition AddCondition(string id, int p=100, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09326">Chara.cs:9326</a></div></div>
-<div class="ttc" id="aclassChara_html_ac96438f85f9f30b620e68cc0348f7dda"><div class="ttname"><a href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">Chara.DoHostileAction</a></div><div class="ttdeci">void DoHostileAction(Card _tg, bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06409">Chara.cs:6409</a></div></div>
-<div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06590">Chara.cs:6590</a></div></div>
+<div class="ttc" id="aclassChara_html_a31d9d4007deda6846d34ae070a3efaae"><div class="ttname"><a href="classChara.html#a31d9d4007deda6846d34ae070a3efaae">Chara.AddCondition</a></div><div class="ttdeci">Condition AddCondition(string id, int p=100, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09231">Chara.cs:9231</a></div></div>
+<div class="ttc" id="aclassChara_html_ac96438f85f9f30b620e68cc0348f7dda"><div class="ttname"><a href="classChara.html#ac96438f85f9f30b620e68cc0348f7dda">Chara.DoHostileAction</a></div><div class="ttdeci">void DoHostileAction(Card _tg, bool immediate=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06314">Chara.cs:6314</a></div></div>
+<div class="ttc" id="aclassChara_html_adcb7aae9f832765cd8c0b8d147c6c471"><div class="ttname"><a href="classChara.html#adcb7aae9f832765cd8c0b8d147c6c471">Chara.IsHostile</a></div><div class="ttdeci">bool IsHostile()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06495">Chara.cs:6495</a></div></div>
 <div class="ttc" id="aclassConAmbush_html"><div class="ttname"><a href="classConAmbush.html">ConAmbush</a></div><div class="ttdef"><b>Definition:</b> <a href="ConAmbush_8cs_source.html#l00001">ConAmbush.cs:2</a></div></div>
 <div class="ttc" id="aclassCondition_html_a9441709e24ca102eed7a41b3ccaa4cee"><div class="ttname"><a href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Condition.Kill</a></div><div class="ttdeci">void Kill(bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00091">Condition.cs:91</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l09326">Chara.AddCondition()</a>, <a class="el" href="Card_8cs_source.html#l02071">Card.Chara</a>, <a class="el" href="Chara_8cs_source.html#l06409">Chara.DoHostileAction()</a>, <a class="el" href="Chara_8cs_source.html#l06590">Chara.IsHostile()</a>, <a class="el" href="Condition_8cs_source.html#l00091">Condition.Kill()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l09231">Chara.AddCondition()</a>, <a class="el" href="Card_8cs_source.html#l02071">Card.Chara</a>, <a class="el" href="Chara_8cs_source.html#l06314">Chara.DoHostileAction()</a>, <a class="el" href="Chara_8cs_source.html#l06495">Chara.IsHostile()</a>, <a class="el" href="Condition_8cs_source.html#l00091">Condition.Kill()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l05838">Chara.Kick()</a>, <a class="el" href="ActThrow_8cs_source.html#l00110">ActThrow.Throw()</a>, and <a class="el" href="ConTransmuteMimic_8cs_source.html#l00055">TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06004">Card.Kick()</a>, <a class="el" href="ActThrow_8cs_source.html#l00110">ActThrow.Throw()</a>, and <a class="el" href="ConTransmuteMimic_8cs_source.html#l00059">TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -708,11 +713,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00043">43</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        base.SetOwner(_owner);</div>
-<div class="line"><span class="lineno">   46</span>        owner.mimicry = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00047">47</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        base.SetOwner(_owner);</div>
+<div class="line"><span class="lineno">   50</span>        owner.mimicry = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -771,27 +776,27 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00055">55</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a>.<a class="code hl_property" href="classCard.html#aeb832c8a6247d20c5bdc926686a5e85d">IsContainer</a>)</div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actContainer&quot;</span>, delegate</div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                <a class="code hl_function" href="classConTransmuteMimic.html#a1ebdc4ed96b979622c48fbd5769bb8a1">RevealMimicry</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, surprise: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   63</span>            }, <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#a5803b9a543ffc534b6d0218d71397828">Container</a>);</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00366">ActPlan.cs:366</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00059">59</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classConTransmuteMimic.html#a60213430ad649143f6352a9a3bbe2fe6">thing</a>.<a class="code hl_property" href="classCard.html#aeb832c8a6247d20c5bdc926686a5e85d">IsContainer</a>)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            p.<a class="code hl_function" href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">TrySetAct</a>(<span class="stringliteral">&quot;actContainer&quot;</span>, delegate</div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                <a class="code hl_function" href="classConTransmuteMimic.html#a1ebdc4ed96b979622c48fbd5769bb8a1">RevealMimicry</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>, surprise: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   67</span>            }, <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, <a class="code hl_class" href="classCursorSystem.html">CursorSystem</a>.<a class="code hl_property" href="classCursorSystem.html#a5803b9a543ffc534b6d0218d71397828">Container</a>);</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="ttc" id="aclassActPlan_html_ae4547e83c1eaea57c11c2991b0752987"><div class="ttname"><a href="classActPlan.html#ae4547e83c1eaea57c11c2991b0752987">ActPlan.TrySetAct</a></div><div class="ttdeci">bool TrySetAct(string lang, Func&lt; bool &gt; onPerform, Card tc, CursorInfo cursor=null, int dist=1, bool isHostileAct=false, bool localAct=true, bool canRepeat=false)</div><div class="ttdef"><b>Definition:</b> <a href="ActPlan_8cs_source.html#l00368">ActPlan.cs:368</a></div></div>
 <div class="ttc" id="aclassCard_html_aeb832c8a6247d20c5bdc926686a5e85d"><div class="ttname"><a href="classCard.html#aeb832c8a6247d20c5bdc926686a5e85d">Card.IsContainer</a></div><div class="ttdeci">bool IsContainer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02090">Card.cs:2090</a></div></div>
-<div class="ttc" id="aclassConTransmuteMimic_html_a1ebdc4ed96b979622c48fbd5769bb8a1"><div class="ttname"><a href="classConTransmuteMimic.html#a1ebdc4ed96b979622c48fbd5769bb8a1">ConTransmuteMimic.RevealMimicry</a></div><div class="ttdeci">virtual void RevealMimicry(Card c, bool surprise)</div><div class="ttdef"><b>Definition:</b> <a href="ConTransmuteMimic_8cs_source.html#l00067">ConTransmuteMimic.cs:67</a></div></div>
+<div class="ttc" id="aclassConTransmuteMimic_html_a1ebdc4ed96b979622c48fbd5769bb8a1"><div class="ttname"><a href="classConTransmuteMimic.html#a1ebdc4ed96b979622c48fbd5769bb8a1">ConTransmuteMimic.RevealMimicry</a></div><div class="ttdeci">virtual void RevealMimicry(Card c, bool surprise)</div><div class="ttdef"><b>Definition:</b> <a href="ConTransmuteMimic_8cs_source.html#l00071">ConTransmuteMimic.cs:71</a></div></div>
 <div class="ttc" id="aclassCursorSystem_html"><div class="ttname"><a href="classCursorSystem.html">CursorSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="CursorSystem_8cs_source.html#l00004">CursorSystem.cs:5</a></div></div>
 <div class="ttc" id="aclassCursorSystem_html_a5803b9a543ffc534b6d0218d71397828"><div class="ttname"><a href="classCursorSystem.html#a5803b9a543ffc534b6d0218d71397828">CursorSystem.Container</a></div><div class="ttdeci">static CursorInfo Container</div><div class="ttdef"><b>Definition:</b> <a href="CursorSystem_8cs_source.html#l00082">CursorSystem.cs:82</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00015">EClass.cs:15</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CursorSystem_8cs_source.html#l00082">CursorSystem.Container</a>, <a class="el" href="Card_8cs_source.html#l02090">Card.IsContainer</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00067">RevealMimicry()</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00007">thing</a>, and <a class="el" href="ActPlan_8cs_source.html#l00366">ActPlan.TrySetAct()</a>.</p>
+<p class="reference">References <a class="el" href="CursorSystem_8cs_source.html#l00082">CursorSystem.Container</a>, <a class="el" href="Card_8cs_source.html#l02090">Card.IsContainer</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00071">RevealMimicry()</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00007">thing</a>, and <a class="el" href="ActPlan_8cs_source.html#l00368">ActPlan.TrySetAct()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ActPlan_8cs_source.html#l00467">ActPlan._Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ActPlan_8cs_source.html#l00469">ActPlan._Update()</a>.</p>
 
 </div>
 </div>
@@ -810,7 +815,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ConTransmuteMimic_8cs_source.html#l00007">7</a> of file <a class="el" href="ConTransmuteMimic_8cs_source.html">ConTransmuteMimic.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06838">Chara.GetHoverText()</a>, <a class="el" href="Chara_8cs_source.html#l06914">Chara.GetHoverText2()</a>, <a class="el" href="Chara_8cs_source.html#l01359">Chara.GetName()</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00011">GetRendererReplacer()</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00024">OnBeforeStart()</a>, and <a class="el" href="ConTransmuteMimic_8cs_source.html#l00055">TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06743">Chara.GetHoverText()</a>, <a class="el" href="Chara_8cs_source.html#l06819">Chara.GetHoverText2()</a>, <a class="el" href="Chara_8cs_source.html#l01359">Chara.GetName()</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00011">GetRendererReplacer()</a>, <a class="el" href="ConTransmuteMimic_8cs_source.html#l00024">OnBeforeStart()</a>, and <a class="el" href="ConTransmuteMimic_8cs_source.html#l00059">TrySetAct()</a>.</p>
 
 </div>
 </div>

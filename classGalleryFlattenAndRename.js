@@ -2,7 +2,7 @@ var classGalleryFlattenAndRename =
 [
     [ "CreateThumbnailsSameFolder", "classGalleryFlattenAndRename.html#abf2d0b7e3a76c001aab315ddb806830c", null ],
     [ "IsImageExt", "classGalleryFlattenAndRename.html#ac48851e922d04b1371940ebcf20cfed2", null ],
-    [ "MoveAllFilesUnderSubfoldersToRoot", "classGalleryFlattenAndRename.html#a788e994e59a606d0685596e0e846e6d8", null ],
+    [ "MoveAllFilesUnderSubfoldersToRoot", "classGalleryFlattenAndRename.html#aa7bcb0efcc09c3bbfbe19bef3d7703e2", null ],
     [ "RenameAllFilesToLeadingNumber", "classGalleryFlattenAndRename.html#ae3fe1946f29019ca49c154a031beb732", null ],
     [ "ResizeTo", "classGalleryFlattenAndRename.html#a154310be76bb2631d8685e346d87de18", null ],
     [ "Run", "classGalleryFlattenAndRename.html#aa6feb7bf3529c03097b1f277e0047cb9", null ],
