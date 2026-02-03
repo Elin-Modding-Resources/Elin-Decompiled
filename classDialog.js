@@ -25,7 +25,7 @@ var classDialog =
     [ "OnKill", "classDialog.html#a107c44a87bd2917fa3bf93f813229706", null ],
     [ "OnUpdateInput", "classDialog.html#a9e0bd57ec07c2b95f5df6e51ac2e0d92", null ],
     [ "Recipe", "classDialog.html#afd5d26dcb4f8531db3b896ae66349343", null ],
-    [ "TryWarn", "classDialog.html#a2f9fcc0f7032f40c6557c4bfd42fed21", null ],
+    [ "TryWarn", "classDialog.html#a48072981826558727453fba97c057826", null ],
     [ "TryWarnCrime", "classDialog.html#aaec971ae4a50064f72b54fd99db8c48e", null ],
     [ "TryWarnDisassemble", "classDialog.html#a8ba44a1f9ead2832edfe62e439a96fd1", null ],
     [ "TryWarnMana", "classDialog.html#aaf2f87fb54da1c5a4e6005c0aaa8a1bf", null ],

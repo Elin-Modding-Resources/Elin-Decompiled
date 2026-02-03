@@ -125,7 +125,7 @@ var classPlayer =
     [ "layerAbilityConfig", "classPlayer.html#aeb66c6f1096637128ad665410499bf84", null ],
     [ "lightPower", "classPlayer.html#a4bcdbe235a3416b80587eadbf2403036", null ],
     [ "lightRadius", "classPlayer.html#a4e07327cecd3558679de3cc30c0f6d2d", null ],
-    [ "listSummon", "classPlayer.html#ab84cd42b1c7b17c4e57f661a40f38934", null ],
+    [ "listCarryoverMap", "classPlayer.html#a71deac6a656989384c4ef6169b4aeaee", null ],
     [ "little_dead", "classPlayer.html#a747b297ed23aa184b894e4b5b2ca7417", null ],
     [ "little_saved", "classPlayer.html#aecce22c783d38ac05c67b384c8ae259a", null ],
     [ "luckycoin", "classPlayer.html#a960909597b2f57b1d8888f52269a3620", null ],

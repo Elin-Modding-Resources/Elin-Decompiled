@@ -272,7 +272,7 @@ var searchData=
   ['tryuse_269',['TryUse',['../classButtonAbility.html#aa5a7387f40975e2615d4e696357ddb4e',1,'ButtonAbility.TryUse()'],['../classChara.html#a201a7cc5e0800a12523ccd5fc073090b',1,'Chara.TryUse()'],['../classWidgetHotbar.html#aa4d5af0b66b41511efdf6750c1d3ebb6',1,'WidgetHotbar.TryUse()']]],
   ['tryuseability_270',['TryUseAbility',['../classGoalCombat.html#aa9f4b721863857c3dc5c85e55bd74785',1,'GoalCombat']]],
   ['tryuseranged_271',['TryUseRanged',['../classGoalAutoCombat.html#a8670de62624c60f547ca7d4bc9cf0641',1,'GoalAutoCombat.TryUseRanged()'],['../classGoalCombat.html#a03d26d68a72ee73e1439b0e50648bdc8',1,'GoalCombat.TryUseRanged()']]],
-  ['trywarn_272',['TryWarn',['../classDialog.html#a2f9fcc0f7032f40c6557c4bfd42fed21',1,'Dialog']]],
+  ['trywarn_272',['TryWarn',['../classDialog.html#a48072981826558727453fba97c057826',1,'Dialog']]],
   ['trywarncrime_273',['TryWarnCrime',['../classDialog.html#aaec971ae4a50064f72b54fd99db8c48e',1,'Dialog']]],
   ['trywarndisassemble_274',['TryWarnDisassemble',['../classDialog.html#a8ba44a1f9ead2832edfe62e439a96fd1',1,'Dialog']]],
   ['trywarnlinuxmod_275',['TryWarnLinuxMod',['../classScene.html#a76e64af9460b76839584210b8b343447',1,'Scene']]],
