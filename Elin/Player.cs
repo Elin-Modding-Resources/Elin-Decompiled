@@ -1220,7 +1220,7 @@ public class Player : EClass
 
 	public PlayingSong playingSong;
 
-	public List<Chara> listSummon = new List<Chara>();
+	public List<Chara> listCarryoverMap = new List<Chara>();
 
 	public int autoCombatStartHP;
 

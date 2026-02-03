@@ -872,6 +872,10 @@ public class SerializedCards : EClass
 				{
 					card2.Chara.ScaleByPrincipal();
 				}
+				if (isUserZone)
+				{
+					card2.isNPCProperty = true;
+				}
 			}
 			if (card2.trait is TraitFakeTile)
 			{

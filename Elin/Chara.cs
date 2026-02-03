@@ -3394,8 +3394,18 @@ public class Chara : Card, IPathfindWalker
 			{
 				EClass._zone.RemoveCard(item);
 			}
-			EClass.player.listSummon = EClass._map.charas.Where((Chara c) => c.c_uidMaster != 0 && c.FindMaster() == EClass.pc && c.c_minionType == MinionType.Default).ToList();
-			foreach (Chara item2 in EClass.player.listSummon)
+			EClass.player.listCarryoverMap = EClass._map.charas.Where((Chara c) => c.c_uidMaster != 0 && c.FindMaster() == EClass.pc && c.c_minionType == MinionType.Default).ToList();
+			if (!z.IsRegion && (z is Zone_Tent || currentZone is Zone_Tent))
+			{
+				foreach (Chara chara in EClass._map.charas)
+				{
+					if (chara.c_uidMaster == 0 && !chara.IsGlobal && !chara.isNPCProperty && (chara.id == "reaper" || chara.id == "messenger_death") && ((chara.enemy != null && chara.enemy.IsPCFactionOrMinion) || chara.Dist(EClass.pc) < 5))
+					{
+						EClass.player.listCarryoverMap.Add(chara);
+					}
+				}
+			}
+			foreach (Chara item2 in EClass.player.listCarryoverMap)
 			{
 				EClass._zone.RemoveCard(item2);
 			}
@@ -5617,7 +5627,7 @@ public class Chara : Card, IPathfindWalker
 			chara2.MakeMinion((origin.IsPCParty || origin.IsPCPartyMinion) ? EClass.pc : origin.Chara, MinionType.Friend);
 			Msg.Say("plant_pop", this, chara2);
 		}
-		EClass._zone.OnCharaDie();
+		EClass._zone.RefreshDeathSentense();
 		EClass._zone.events.OnCharaDie(this);
 	}
 

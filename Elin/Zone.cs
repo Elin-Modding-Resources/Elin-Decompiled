@@ -824,7 +824,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			foreach (Chara c3 in map.serializedCharas)
 			{
-				if (c3.c_uidMaster == 0 || EClass.player.listSummon.Find((Chara c2) => c2.uid == c3.uid) == null)
+				if (c3.c_uidMaster == 0 || EClass.player.listCarryoverMap.Find((Chara c2) => c2.uid == c3.uid) == null)
 				{
 					map.charas.Add(c3);
 					map.AddCardOnActivate(c3);
@@ -1082,13 +1082,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		if (!EClass.game.isLoading)
 		{
-			foreach (Chara chara2 in EClass._map.charas)
-			{
-				if (chara2.HasCondition<ConDeathSentense>())
-				{
-					chara2.RemoveCondition<ConDeathSentense>();
-				}
-			}
+			RefreshDeathSentense();
 		}
 		RefreshCriminal();
 		EClass._map.rooms.AssignCharas();
@@ -1116,7 +1110,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 	}
 
-	public void OnCharaDie()
+	public void RefreshDeathSentense()
 	{
 		foreach (Chara chara in EClass._map.charas)
 		{
@@ -1626,7 +1620,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				map.AddCardOnActivate(c);
 			}
 		}
-		foreach (Chara item in EClass.player.listSummon)
+		foreach (Chara item in EClass.player.listCarryoverMap)
 		{
 			Point nearestPoint = spawnPosPC.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: true, ignoreCenter: true);
 			item.enemy = null;
@@ -1634,7 +1628,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			map.charas.Add(item);
 			map.AddCardOnActivate(item);
 		}
-		EClass.player.listSummon.Clear();
+		EClass.player.listCarryoverMap.Clear();
 	}
 
 	public void Deactivate()

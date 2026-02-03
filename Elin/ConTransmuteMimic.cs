@@ -23,10 +23,10 @@ public class ConTransmuteMimic : ConTransmute
 
 	public override void OnBeforeStart()
 	{
-		List<Thing> list = owner.things.List((Thing t) => !t.IsMultisize && t.c_isImportant, onlyAccessible: true);
+		List<Thing> list = owner.things.List((Thing t) => !t.source.multisize && t.c_isImportant, onlyAccessible: true);
 		if (list.Count == 0)
 		{
-			list = owner.things.List((Thing t) => !t.IsMultisize && !t.isEquipped, onlyAccessible: true);
+			list = owner.things.List((Thing t) => !t.source.multisize && !t.isEquipped, onlyAccessible: true);
 		}
 		if (list.Count > 0)
 		{

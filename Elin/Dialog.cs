@@ -287,10 +287,10 @@ public class Dialog : ELayer
 		return d;
 	}
 
-	public static void TryWarn(string lang, Action action, bool yes = true)
+	public static void TryWarn(string lang, Action action, bool yes = true, string text = null)
 	{
 		Dialog d = Layer.Create<Dialog>();
-		d.textDetail.SetText(lang.lang() + " ");
+		d.textDetail.SetText(text ?? (lang.lang() + " "));
 		d.SetOnKill(delegate
 		{
 			ELayer.core.actionsNextFrame.Add(delegate
@@ -334,10 +334,10 @@ public class Dialog : ELayer
 		{
 			d.list.AddButton(null, Lang.Get("no_dontask"), delegate
 			{
-				string text = lang;
-				if (!(text == "warn_parallels"))
+				string text2 = lang;
+				if (!(text2 == "warn_parallels"))
 				{
-					if (text == "warn_linuxMod")
+					if (text2 == "warn_linuxMod")
 					{
 						ELayer.core.config.ignoreLinuxModWarning = true;
 					}
@@ -369,7 +369,7 @@ public class Dialog : ELayer
 		}
 		else
 		{
-			TryWarn("warn_slaughter".lang(c.Name), action);
+			TryWarn("warn_slaughter", action, yes: true, "warn_slaughter".lang(c.Name));
 		}
 	}
 

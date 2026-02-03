@@ -391,6 +391,7 @@ public class RecipeCard : Recipe
 			"meal_egg" => "fail_egg", 
 			"meal_rice" => "fail_rice", 
 			"meal_soup" => "fail_drink", 
+			"meal_cookie" => "fail_nuts", 
 			_ => "fail_dish", 
 		};
 	}
