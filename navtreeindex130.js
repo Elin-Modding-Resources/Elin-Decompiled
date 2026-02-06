@@ -1,5 +1,6 @@
 var NAVTREEINDEX130 =
 {
+"classUIHangIcon.html#aa31ccaed03422ca1a98265f05601cd46":[1,0,2040,0],
 "classUIHeader.html":[1,0,2041],
 "classUIHeader.html#a0220df3e915d9c2aefb3cda008e80839":[1,0,2041,3],
 "classUIHeader.html#a16aea7018cd1995d430a5f2bdb307880":[1,0,2041,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX130 =
 "classUIInventory_1_1Tab.html#af03d41f6c51a97d8461629ffb269cdea":[1,0,2050,0,4],
 "classUIInventory_1_1Transaction.html":[1,0,2050,1],
 "classUIInventory_1_1Transaction.html#a0f1db66676ee744acf07e4cd58fa2ead":[1,0,2050,1,2],
-"classUIInventory_1_1Transaction.html#a27322f7632d4de0e5ed01d7704a6cead":[1,0,2050,1,4],
-"classUIInventory_1_1Transaction.html#a2bdcefb4123726c5b040b26501b22a7a":[1,0,2050,1,1]
+"classUIInventory_1_1Transaction.html#a27322f7632d4de0e5ed01d7704a6cead":[1,0,2050,1,4]
 };

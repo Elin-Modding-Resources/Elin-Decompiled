@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitMerchant.html#a2281763a5cfa3c85ebf5e674f9622079":[1,0,1715,1],
 "classTraitMerchant.html#abfb294a520a3b4f6fa0dc806e776344c":[1,0,1715,0],
 "classTraitMerchant.html#ac785b13ae49732f62e5c6494e0bd2d96":[1,0,1715,2],
 "classTraitMerchant.html#af444fd651a60a11d125a7094e132707a":[1,0,1715,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitPerfume.html#a44af00dc25af7b63e520aac54a3621e5":[1,0,1777,2],
 "classTraitPerfume.html#a8a2dd71e42b790ecd858cc97e58cd624":[1,0,1777,3],
 "classTraitPerfume.html#ad1358859d7c5b49bf9333a3a4fd2c38d":[1,0,1777,1],
-"classTraitPerfume.html#ad9ec97d1c6703377b979f58036c71534":[1,0,1777,0],
-"classTraitPetHouse.html":[1,0,1778]
+"classTraitPerfume.html#ad9ec97d1c6703377b979f58036c71534":[1,0,1777,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitCageBreeding.html#aa7d49a6b01ba23fad87525861730ba91":[1,0,1494,0],
 "classTraitCamera.html":[1,0,1495],
 "classTraitCamera.html#aac8b0271af431a04632d2f4828361141":[1,0,1495,0],
 "classTraitCanvas.html":[1,0,1496],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitCurrency.html#a8ad4ef6f66318b88486c825e591e4082":[1,0,1540,0],
 "classTraitCurrencyMedal.html":[1,0,1541],
 "classTraitCurrencyMedal.html#a83af106650761bd1917199486fe112f2":[1,0,1541,0],
-"classTraitCurtain.html":[1,0,1542],
-"classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1542,3]
+"classTraitCurtain.html":[1,0,1542]
 };

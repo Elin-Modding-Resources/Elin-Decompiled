@@ -1,5 +1,6 @@
 var NAVTREEINDEX143 =
 {
+"classelona_1_1MsgPlain.html":[1,0,4,0],
 "classes.html":[1,1],
 "dir_0371084ab70e3b075313a71a837c9b7c.html":[2,0,0,3,5],
 "dir_0cd198719780437fea113b819007e81e.html":[2,0,0,2,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX143 =
 "interfaceUIList_1_1ICallback.html#ac27ed04328245488d2240f378a5d576f":[1,0,2053,2,5],
 "interfaceUIList_1_1ICallback.html#ac927490c49492bddacf830a7380e912f":[1,0,2053,2,4],
 "interfaceUIList_1_1ICallback.html#ad0f041a3dc39c960478b0f067c948495":[1,0,2053,2,6],
-"interfaceUIList_1_1ICallback.html#ad3b6bca22c9b6b8807cc517f37ec1b9b":[1,0,2053,2,0],
-"namespaceAlgorithms.html":[0,4,0]
+"interfaceUIList_1_1ICallback.html#ad3b6bca22c9b6b8807cc517f37ec1b9b":[1,0,2053,2,0]
 };

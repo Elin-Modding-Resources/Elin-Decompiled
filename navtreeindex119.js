@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1542,3],
 "classTraitCurtain.html#a1f1e4de13216bc852a9ff429896d712e":[1,0,1542,1],
 "classTraitCurtain.html#a2b50ce8f3b99e7b80da8bc908409b8f0":[1,0,1542,4],
 "classTraitCurtain.html#a6d171ff8fd09f46803032f43954dd416":[1,0,1542,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitEspressoMachine.html":[1,0,1591],
 "classTraitEternalMonument.html":[1,0,1592],
 "classTraitEureka.html":[1,0,1593],
-"classTraitExileElder.html":[1,0,1594],
-"classTraitExileElder.html#a0458cf5a6732bad15e0bc70236544c11":[1,0,1594,1]
+"classTraitExileElder.html":[1,0,1594]
 };

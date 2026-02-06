@@ -1,5 +1,6 @@
 var NAVTREEINDEX115 =
 {
+"classTileTypePaint.html":[1,0,1392],
 "classTileTypePillar.html":[1,0,1393],
 "classTileTypePillar.html#a1893034971c996660ac169886debb3fd":[1,0,1393,3],
 "classTileTypePillar.html#a1e0458313e2e1a618f323e9026b8d80a":[1,0,1393,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX115 =
 "classTrait.html#a47b9ffd55d19fac5985c99d803d7d416":[1,0,1426,4],
 "classTrait.html#a49489e6c24562c2cb261f1f2f7a52bc6":[1,0,1426,95],
 "classTrait.html#a49cd4b6298180f400ba370f814714fbf":[1,0,1426,163],
-"classTrait.html#a4ac641a35b27784da64e13edc433d23b":[1,0,1426,74],
-"classTrait.html#a4aff3c950b25f7b4527c33c3678d3f87":[1,0,1426,216]
+"classTrait.html#a4ac641a35b27784da64e13edc433d23b":[1,0,1426,74]
 };

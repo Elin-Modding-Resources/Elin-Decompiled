@@ -1,5 +1,6 @@
 var NAVTREEINDEX127 =
 {
+"classTypewriter.html#afb6b7d1b6d909367801dc9ce052d534c":[1,0,1994,6],
 "classUD__Biome.html":[1,0,1995],
 "classUD__Int__String.html":[1,0,1996],
 "classUD__String__Color.html":[1,0,1997],
@@ -248,6 +249,5 @@ var NAVTREEINDEX127 =
 "classUIButton.html#a10a4a23f8ba9ba48bbc816473430a424":[1,0,2015,9],
 "classUIButton.html#a1232f1811bf52d198ef400c06e830853":[1,0,2015,57],
 "classUIButton.html#a127a2bd3117fb1d537725fd823ee4dff":[1,0,2015,42],
-"classUIButton.html#a127ce3736e48fd7eb777f9e758d0db97":[1,0,2015,68],
-"classUIButton.html#a165c1955683017cb8a98b26f1b14ff7f":[1,0,2015,24]
+"classUIButton.html#a127ce3736e48fd7eb777f9e758d0db97":[1,0,2015,68]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX120 =
 {
+"classTraitExileElder.html#a0458cf5a6732bad15e0bc70236544c11":[1,0,1594,1],
 "classTraitExileElder.html#a3310a777fbe285a2468a1b3e7b25e564":[1,0,1594,3],
 "classTraitExileElder.html#a8874bed2408145efecee11c4445176bb":[1,0,1594,2],
 "classTraitExileElder.html#acb6ae471ef906a8c79fc539c35f9bf63":[1,0,1594,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitGrindstone.html#a427730a2544e57bd0df379c3c6f356ce":[1,0,1660,2],
 "classTraitGrindstone.html#a5248c1e5c050484d5d90ac92b9bef274":[1,0,1660,7],
 "classTraitGrindstone.html#a6ebcb007ced428b98495a0c5a1d59b65":[1,0,1660,6],
-"classTraitGrindstone.html#a7e6e197ab6ef77c88f6cc004b5ab5c33":[1,0,1660,3],
-"classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1660,1]
+"classTraitGrindstone.html#a7e6e197ab6ef77c88f6cc004b5ab5c33":[1,0,1660,3]
 };

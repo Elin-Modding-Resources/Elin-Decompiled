@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.265 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.267 Stable Patch 1</span>
    </div>
   </td>
  </tr>
@@ -714,66 +714,67 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  419</span>            {</div>
 <div class="line"><span class="lineno">  420</span>                <span class="keywordflow">if</span> (!directoryInfo.Name.StartsWith(<span class="stringliteral">&quot;_&quot;</span>) &amp;&amp; !TryAddLang(directoryInfo, isNew: <span class="keyword">false</span>))</div>
 <div class="line"><span class="lineno">  421</span>                {</div>
-<div class="line"><span class="lineno">  422</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Generating Language Mod Contents:&quot;</span> + directoryInfo.FullName);</div>
-<div class="line"><span class="lineno">  423</span>                    <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/EN&quot;</span>, directoryInfo.FullName);</div>
-<div class="line"><span class="lineno">  424</span>                    Directory.CreateDirectory(directoryInfo.FullName + <span class="stringliteral">&quot;/Dialog&quot;</span>);</div>
-<div class="line"><span class="lineno">  425</span>                    <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/_Dialog&quot;</span>, directoryInfo.FullName + <span class="stringliteral">&quot;/Dialog&quot;</span>);</div>
-<div class="line"><span class="lineno">  426</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#adc4074582e665456917187a477d18831">ExportSourceTexts</a>(directoryInfo.FullName + <span class="stringliteral">&quot;/Game&quot;</span>);</div>
-<div class="line"><span class="lineno">  427</span>                    <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a39ececd8ad6c21905b517fb2ab3a8c2c">Copy</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/lang.ini&quot;</span>, directoryInfo.FullName + <span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><span class="lineno">  428</span>                    TryAddLang(directoryInfo, isNew: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  429</span>                }</div>
-<div class="line"><span class="lineno">  430</span>            }</div>
-<div class="line"><span class="lineno">  431</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  432</span>        }</div>
+<div class="line"><span class="lineno">  422</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#a74ca8efaabc1b44566387ccc6a663362">Init</a>();</div>
+<div class="line"><span class="lineno">  423</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Generating Language Mod Contents:&quot;</span> + directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  424</span>                    <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/EN&quot;</span>, directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  425</span>                    Directory.CreateDirectory(directoryInfo.FullName + <span class="stringliteral">&quot;/Dialog&quot;</span>);</div>
+<div class="line"><span class="lineno">  426</span>                    <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/_Dialog&quot;</span>, directoryInfo.FullName + <span class="stringliteral">&quot;/Dialog&quot;</span>);</div>
+<div class="line"><span class="lineno">  427</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#adc4074582e665456917187a477d18831">ExportSourceTexts</a>(directoryInfo.FullName + <span class="stringliteral">&quot;/Game&quot;</span>);</div>
+<div class="line"><span class="lineno">  428</span>                    <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a39ececd8ad6c21905b517fb2ab3a8c2c">Copy</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/lang.ini&quot;</span>, directoryInfo.FullName + <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><span class="lineno">  429</span>                    TryAddLang(directoryInfo, isNew: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  430</span>                }</div>
+<div class="line"><span class="lineno">  431</span>            }</div>
+<div class="line"><span class="lineno">  432</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  433</span>        }</div>
-<div class="line"><span class="lineno">  434</span>        <span class="keywordtype">bool</span> TryAddLang(DirectoryInfo dirLang, <span class="keywordtype">bool</span> isNew)</div>
-<div class="line"><span class="lineno">  435</span>        {</div>
-<div class="line"><span class="lineno">  436</span>            <span class="keywordtype">string</span> name = dirLang.Name;</div>
-<div class="line"><span class="lineno">  437</span>            FileInfo[] files2 = dirLang.GetFiles();</div>
-<div class="line"><span class="lineno">  438</span>            <span class="keywordflow">foreach</span> (FileInfo fileInfo7 <span class="keywordflow">in</span> files2)</div>
-<div class="line"><span class="lineno">  439</span>            {</div>
-<div class="line"><span class="lineno">  440</span>                <span class="keywordflow">if</span> (fileInfo7.Name == <span class="stringliteral">&quot;lang.ini&quot;</span>)</div>
-<div class="line"><span class="lineno">  441</span>                {</div>
-<div class="line"><span class="lineno">  442</span>                    <a class="code hl_class" href="classLangSetting.html">LangSetting</a> langSetting = <span class="keyword">new</span> <a class="code hl_class" href="classLangSetting.html">LangSetting</a>(fileInfo7.FullName)</div>
-<div class="line"><span class="lineno">  443</span>                    {</div>
-<div class="line"><span class="lineno">  444</span>                        <span class="keywordtype">id</span> = name,</div>
-<div class="line"><span class="lineno">  445</span>                        dir = dirLang.FullName + <span class="stringliteral">&quot;/&quot;</span></div>
-<div class="line"><span class="lineno">  446</span>                    };</div>
-<div class="line"><span class="lineno">  447</span>                    <span class="keywordflow">if</span> (isNew)</div>
-<div class="line"><span class="lineno">  448</span>                    {</div>
-<div class="line"><span class="lineno">  449</span>                        langSetting.<a class="code hl_function" href="classLangSetting.html#a5f8605f1f2bd5cbe8ba1edb406d6536b">SetVersion</a>();</div>
-<div class="line"><span class="lineno">  450</span>                    }</div>
-<div class="line"><span class="lineno">  451</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((Application.isEditor || <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#a872a117479ba549fe7080413604d9304">runUpdate</a>) &amp;&amp; !<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a62604d712ea1b1d63013c4b4e0a9a6d2">IsBuiltin</a>(dirLang.Name) &amp;&amp; langSetting.<a class="code hl_function" href="classLangSetting.html#a7763b02657d3532724f04ebb52dda643">GetVersion</a>() != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_function" href="structVersion.html#a98e033ae057b79c228009593de93d313">GetInt</a>())</div>
-<div class="line"><span class="lineno">  452</span>                    {</div>
-<div class="line"><span class="lineno">  453</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#a74ca8efaabc1b44566387ccc6a663362">Init</a>();</div>
+<div class="line"><span class="lineno">  434</span>        }</div>
+<div class="line"><span class="lineno">  435</span>        <span class="keywordtype">bool</span> TryAddLang(DirectoryInfo dirLang, <span class="keywordtype">bool</span> isNew)</div>
+<div class="line"><span class="lineno">  436</span>        {</div>
+<div class="line"><span class="lineno">  437</span>            <span class="keywordtype">string</span> name = dirLang.Name;</div>
+<div class="line"><span class="lineno">  438</span>            FileInfo[] files2 = dirLang.GetFiles();</div>
+<div class="line"><span class="lineno">  439</span>            <span class="keywordflow">foreach</span> (FileInfo fileInfo7 <span class="keywordflow">in</span> files2)</div>
+<div class="line"><span class="lineno">  440</span>            {</div>
+<div class="line"><span class="lineno">  441</span>                <span class="keywordflow">if</span> (fileInfo7.Name == <span class="stringliteral">&quot;lang.ini&quot;</span>)</div>
+<div class="line"><span class="lineno">  442</span>                {</div>
+<div class="line"><span class="lineno">  443</span>                    <a class="code hl_class" href="classLangSetting.html">LangSetting</a> langSetting = <span class="keyword">new</span> <a class="code hl_class" href="classLangSetting.html">LangSetting</a>(fileInfo7.FullName)</div>
+<div class="line"><span class="lineno">  444</span>                    {</div>
+<div class="line"><span class="lineno">  445</span>                        <span class="keywordtype">id</span> = name,</div>
+<div class="line"><span class="lineno">  446</span>                        dir = dirLang.FullName + <span class="stringliteral">&quot;/&quot;</span></div>
+<div class="line"><span class="lineno">  447</span>                    };</div>
+<div class="line"><span class="lineno">  448</span>                    <span class="keywordflow">if</span> (isNew)</div>
+<div class="line"><span class="lineno">  449</span>                    {</div>
+<div class="line"><span class="lineno">  450</span>                        langSetting.<a class="code hl_function" href="classLangSetting.html#a5f8605f1f2bd5cbe8ba1edb406d6536b">SetVersion</a>();</div>
+<div class="line"><span class="lineno">  451</span>                    }</div>
+<div class="line"><span class="lineno">  452</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((Application.isEditor || <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#a872a117479ba549fe7080413604d9304">runUpdate</a>) &amp;&amp; !<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#a62604d712ea1b1d63013c4b4e0a9a6d2">IsBuiltin</a>(dirLang.Name) &amp;&amp; langSetting.<a class="code hl_function" href="classLangSetting.html#a7763b02657d3532724f04ebb52dda643">GetVersion</a>() != <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_function" href="structVersion.html#a98e033ae057b79c228009593de93d313">GetInt</a>())</div>
+<div class="line"><span class="lineno">  453</span>                    {</div>
 <div class="line"><span class="lineno">  454</span>                        Log.system = <span class="stringliteral">&quot;Updated Language Files:&quot;</span> + Environment.NewLine + Environment.NewLine;</div>
 <div class="line"><span class="lineno">  455</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Language:&quot;</span> + langSetting.<a class="code hl_variable" href="classLangSetting.html#a30fd2a8614725c09fc8a7a598e8ed9ae">name</a> + <span class="stringliteral">&quot;/&quot;</span> + langSetting.<a class="code hl_function" href="classLangSetting.html#a7763b02657d3532724f04ebb52dda643">GetVersion</a>() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">version</a>.<a class="code hl_function" href="structVersion.html#a98e033ae057b79c228009593de93d313">GetInt</a>());</div>
-<div class="line"><span class="lineno">  456</span>                        <span class="keywordtype">string</span> text = dirLang.FullName + <span class="stringliteral">&quot;/Game&quot;</span>;</div>
-<div class="line"><span class="lineno">  457</span>                        Directory.Move(text, text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  458</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#adc4074582e665456917187a477d18831">ExportSourceTexts</a>(text);</div>
-<div class="line"><span class="lineno">  459</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#a57a471351f436e88ecc0ec51a07e0e1f">UpdateSourceTexts</a>(text);</div>
-<div class="line"><span class="lineno">  460</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  461</span>                        text = dirLang.FullName + <span class="stringliteral">&quot;/Dialog&quot;</span>;</div>
-<div class="line"><span class="lineno">  462</span>                        Directory.Move(text, text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  463</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/_Dialog&quot;</span>, text);</div>
-<div class="line"><span class="lineno">  464</span>                        <a class="code hl_function" href="classModManager.html#aad8b21fdb70eb79a7b0835683e99bb03">UpdateDialogs</a>(<span class="keyword">new</span> DirectoryInfo(text), text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  465</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  466</span>                        text = dirLang.FullName + <span class="stringliteral">&quot;/Data&quot;</span>;</div>
-<div class="line"><span class="lineno">  467</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(text, text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  468</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a39ececd8ad6c21905b517fb2ab3a8c2c">Copy</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/EN/Data/god_talk.xlsx&quot;</span>, text);</div>
-<div class="line"><span class="lineno">  469</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a39ececd8ad6c21905b517fb2ab3a8c2c">Copy</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/EN/Data/chara_talk.xlsx&quot;</span>, text);</div>
-<div class="line"><span class="lineno">  470</span>                        <a class="code hl_function" href="classModManager.html#a3002875761fefa7e78d8ae644cf096f7">UpdateTalks</a>(<span class="keyword">new</span> DirectoryInfo(text), text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  471</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
-<div class="line"><span class="lineno">  472</span>                        langSetting.<a class="code hl_function" href="classLangSetting.html#a5f8605f1f2bd5cbe8ba1edb406d6536b">SetVersion</a>();</div>
-<div class="line"><span class="lineno">  473</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#aa538a6b553652f8755dabb39bae4af14">SaveText</a>(dirLang.FullName + <span class="stringliteral">&quot;/update.txt&quot;</span>, <a class="code hl_class" href="classLog.html">Log</a>.<a class="code hl_variable" href="classLog.html#ac5b6aa12cab4ba41b16ae2c8477147f2">system</a>);</div>
-<div class="line"><span class="lineno">  474</span>                    }</div>
-<div class="line"><span class="lineno">  475</span>                    <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ad43925def27c6120e24dd26883f31ff3">langs</a>[name] = langSetting;</div>
-<div class="line"><span class="lineno">  476</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  477</span>                }</div>
-<div class="line"><span class="lineno">  478</span>            }</div>
-<div class="line"><span class="lineno">  479</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  480</span>        }</div>
-<div class="line"><span class="lineno">  481</span>    }</div>
+<div class="line"><span class="lineno">  456</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#a74ca8efaabc1b44566387ccc6a663362">Init</a>();</div>
+<div class="line"><span class="lineno">  457</span>                        <span class="keywordtype">string</span> text = dirLang.FullName + <span class="stringliteral">&quot;/Game&quot;</span>;</div>
+<div class="line"><span class="lineno">  458</span>                        Directory.Move(text, text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  459</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#adc4074582e665456917187a477d18831">ExportSourceTexts</a>(text);</div>
+<div class="line"><span class="lineno">  460</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_function" href="classSourceManager.html#a57a471351f436e88ecc0ec51a07e0e1f">UpdateSourceTexts</a>(text);</div>
+<div class="line"><span class="lineno">  461</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  462</span>                        text = dirLang.FullName + <span class="stringliteral">&quot;/Dialog&quot;</span>;</div>
+<div class="line"><span class="lineno">  463</span>                        Directory.Move(text, text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  464</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/_Dialog&quot;</span>, text);</div>
+<div class="line"><span class="lineno">  465</span>                        <a class="code hl_function" href="classModManager.html#aad8b21fdb70eb79a7b0835683e99bb03">UpdateDialogs</a>(<span class="keyword">new</span> DirectoryInfo(text), text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  466</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  467</span>                        text = dirLang.FullName + <span class="stringliteral">&quot;/Data&quot;</span>;</div>
+<div class="line"><span class="lineno">  468</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#afc24a81174b8b7dfa6ff6e1d4dbd3e00">CopyDir</a>(text, text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  469</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a39ececd8ad6c21905b517fb2ab3a8c2c">Copy</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/EN/Data/god_talk.xlsx&quot;</span>, text);</div>
+<div class="line"><span class="lineno">  470</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a39ececd8ad6c21905b517fb2ab3a8c2c">Copy</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Lang/EN/Data/chara_talk.xlsx&quot;</span>, text);</div>
+<div class="line"><span class="lineno">  471</span>                        <a class="code hl_function" href="classModManager.html#a3002875761fefa7e78d8ae644cf096f7">UpdateTalks</a>(<span class="keyword">new</span> DirectoryInfo(text), text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  472</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a16222d71ed2dd65f9bf4470dd744b017">DeleteDirectory</a>(text + <span class="stringliteral">&quot;_temp&quot;</span>);</div>
+<div class="line"><span class="lineno">  473</span>                        langSetting.<a class="code hl_function" href="classLangSetting.html#a5f8605f1f2bd5cbe8ba1edb406d6536b">SetVersion</a>();</div>
+<div class="line"><span class="lineno">  474</span>                        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#aa538a6b553652f8755dabb39bae4af14">SaveText</a>(dirLang.FullName + <span class="stringliteral">&quot;/update.txt&quot;</span>, <a class="code hl_class" href="classLog.html">Log</a>.<a class="code hl_variable" href="classLog.html#ac5b6aa12cab4ba41b16ae2c8477147f2">system</a>);</div>
+<div class="line"><span class="lineno">  475</span>                    }</div>
+<div class="line"><span class="lineno">  476</span>                    <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ad43925def27c6120e24dd26883f31ff3">langs</a>[name] = langSetting;</div>
+<div class="line"><span class="lineno">  477</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  478</span>                }</div>
+<div class="line"><span class="lineno">  479</span>            }</div>
+<div class="line"><span class="lineno">  480</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  481</span>        }</div>
+<div class="line"><span class="lineno">  482</span>    }</div>
 <div class="ttc" id="aclassBaseCore_html_aa560bb8f25eb2a78768fe250b772c470"><div class="ttname"><a href="classBaseCore.html#aa560bb8f25eb2a78768fe250b772c470">BaseCore.version</a></div><div class="ttdeci">Version version</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00017">BaseCore.cs:17</a></div></div>
 <div class="ttc" id="aclassCorePath_html_a7b6aa77a287630c4a6000cdcea156118"><div class="ttname"><a href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">CorePath.packageCore</a></div><div class="ttdeci">static string packageCore</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00159">CorePath.cs:159</a></div></div>
 <div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:7</a></div></div>
@@ -798,9 +799,9 @@ Private Member Functions</h2></td></tr>
 <div class="ttc" id="aclassMOD_html_af5d400f232b2c4ef9c548521df7541b4"><div class="ttname"><a href="classMOD.html#af5d400f232b2c4ef9c548521df7541b4">MOD.listMaps</a></div><div class="ttdeci">static List&lt; FileInfo &gt; listMaps</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00020">MOD.cs:20</a></div></div>
 <div class="ttc" id="aclassMOD_html_af8ab386eec652c6fee6b10ab265e1e05"><div class="ttname"><a href="classMOD.html#af8ab386eec652c6fee6b10ab265e1e05">MOD.listPartialMaps</a></div><div class="ttdeci">static List&lt; FileInfo &gt; listPartialMaps</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00022">MOD.cs:22</a></div></div>
 <div class="ttc" id="aclassModItemList_html_a70e96ae02b07d5d4543cf6b47f342825"><div class="ttname"><a href="classModItemList.html#a70e96ae02b07d5d4543cf6b47f342825">ModItemList.Add</a></div><div class="ttdeci">void Add(FileInfo fi, string path=null, string prefix=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ModItemList_8cs_source.html#l00085">ModItemList.cs:85</a></div></div>
-<div class="ttc" id="aclassModManager_html_a3002875761fefa7e78d8ae644cf096f7"><div class="ttname"><a href="classModManager.html#a3002875761fefa7e78d8ae644cf096f7">ModManager.UpdateTalks</a></div><div class="ttdeci">void UpdateTalks(DirectoryInfo dir, string dirTemp)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00500">ModManager.cs:500</a></div></div>
+<div class="ttc" id="aclassModManager_html_a3002875761fefa7e78d8ae644cf096f7"><div class="ttname"><a href="classModManager.html#a3002875761fefa7e78d8ae644cf096f7">ModManager.UpdateTalks</a></div><div class="ttdeci">void UpdateTalks(DirectoryInfo dir, string dirTemp)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00501">ModManager.cs:501</a></div></div>
 <div class="ttc" id="aclassModManager_html_a76a8d2fbb962ccaa2d1393f2719b454e"><div class="ttname"><a href="classModManager.html#a76a8d2fbb962ccaa2d1393f2719b454e">ModManager.replaceFiles</a></div><div class="ttdeci">List&lt; FileInfo &gt; replaceFiles</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00027">ModManager.cs:27</a></div></div>
-<div class="ttc" id="aclassModManager_html_aad8b21fdb70eb79a7b0835683e99bb03"><div class="ttname"><a href="classModManager.html#aad8b21fdb70eb79a7b0835683e99bb03">ModManager.UpdateDialogs</a></div><div class="ttdeci">void UpdateDialogs(DirectoryInfo dir, string dirTemp)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00483">ModManager.cs:483</a></div></div>
+<div class="ttc" id="aclassModManager_html_aad8b21fdb70eb79a7b0835683e99bb03"><div class="ttname"><a href="classModManager.html#aad8b21fdb70eb79a7b0835683e99bb03">ModManager.UpdateDialogs</a></div><div class="ttdeci">void UpdateDialogs(DirectoryInfo dir, string dirTemp)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00484">ModManager.cs:484</a></div></div>
 <div class="ttc" id="aclassPortrait_html"><div class="ttname"><a href="classPortrait.html">Portrait</a></div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00006">Portrait.cs:7</a></div></div>
 <div class="ttc" id="aclassPortrait_html_a0de72798be328261c73607c51a1ac540"><div class="ttname"><a href="classPortrait.html#a0de72798be328261c73607c51a1ac540">Portrait.modPortraitBGFs</a></div><div class="ttdeci">static ModItemList&lt; Sprite &gt; modPortraitBGFs</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00008">Portrait.cs:8</a></div></div>
 <div class="ttc" id="aclassPortrait_html_a396b6a9b9b4c06f86e64021bb04a0519"><div class="ttname"><a href="classPortrait.html#a396b6a9b9b4c06f86e64021bb04a0519">Portrait.modPortraitBGs</a></div><div class="ttdeci">static ModItemList&lt; Sprite &gt; modPortraitBGs</div><div class="ttdef"><b>Definition:</b> <a href="Portrait_8cs_source.html#l00010">Portrait.cs:10</a></div></div>
@@ -817,7 +818,7 @@ Private Member Functions</h2></td></tr>
 <div class="ttc" id="aclassTalkText_html_ac064f13f119e231c6ada5327e3d32d09"><div class="ttname"><a href="classTalkText.html#ac064f13f119e231c6ada5327e3d32d09">TalkText.modList</a></div><div class="ttdeci">static List&lt; ExcelData &gt; modList</div><div class="ttdef"><b>Definition:</b> <a href="TalkText_8cs_source.html#l00005">TalkText.cs:5</a></div></div>
 <div class="ttc" id="astructVersion_html_a98e033ae057b79c228009593de93d313"><div class="ttname"><a href="structVersion.html#a98e033ae057b79c228009593de93d313">Version.GetInt</a></div><div class="ttdeci">int GetInt()</div><div class="ttdef"><b>Definition:</b> <a href="Version_8cs_source.html#l00021">Version.cs:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModItemList_8cs_source.html#l00085">ModItemList&lt; T &gt;.Add()</a>, <a class="el" href="Portrait_8cs_source.html#l00020">Portrait.allIds</a>, <a class="el" href="BaseModPackage_8cs_source.html#l00026">BaseModPackage.builtin</a>, <a class="el" href="EClass_8cs_source.html#l00007">EClass.core</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00010">SpriteReplacer.dictModItems</a>, <a class="el" href="SourceManager_8cs_source.html#l00175">SourceManager.ExportSourceTexts()</a>, <a class="el" href="Version_8cs_source.html#l00021">Version.GetInt()</a>, <a class="el" href="LangSetting_8cs_source.html#l00100">LangSetting.GetVersion()</a>, <a class="el" href="SourceManager_8cs_source.html#l00115">SourceManager.Init()</a>, <a class="el" href="Lang_8cs_source.html#l00062">Lang.IsBuiltin()</a>, <a class="el" href="MOD_8cs_source.html#l00008">MOD.langs</a>, <a class="el" href="MOD_8cs_source.html#l00020">MOD.listMaps</a>, <a class="el" href="MOD_8cs_source.html#l00022">MOD.listPartialMaps</a>, <a class="el" href="Portrait_8cs_source.html#l00016">Portrait.modFull</a>, <a class="el" href="TalkText_8cs_source.html#l00005">TalkText.modList</a>, <a class="el" href="Portrait_8cs_source.html#l00014">Portrait.modOverlays</a>, <a class="el" href="Portrait_8cs_source.html#l00008">Portrait.modPortraitBGFs</a>, <a class="el" href="Portrait_8cs_source.html#l00010">Portrait.modPortraitBGs</a>, <a class="el" href="Portrait_8cs_source.html#l00012">Portrait.modPortraits</a>, <a class="el" href="LangSetting_8cs_source.html#l00024">LangSetting.name</a>, <a class="el" href="CorePath_8cs_source.html#l00159">CorePath.packageCore</a>, <a class="el" href="ModManager_8cs_source.html#l00027">replaceFiles</a>, <a class="el" href="Lang_8cs_source.html#l00024">Lang.runUpdate</a>, <a class="el" href="LangSetting_8cs_source.html#l00114">LangSetting.SetVersion()</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, <a class="el" href="Log_8cs_source.html#l00005">Log.system</a>, <a class="el" href="ModManager_8cs_source.html#l00483">UpdateDialogs()</a>, <a class="el" href="SourceManager_8cs_source.html#l00183">SourceManager.UpdateSourceTexts()</a>, <a class="el" href="ModManager_8cs_source.html#l00500">UpdateTalks()</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
+<p class="reference">References <a class="el" href="ModItemList_8cs_source.html#l00085">ModItemList&lt; T &gt;.Add()</a>, <a class="el" href="Portrait_8cs_source.html#l00020">Portrait.allIds</a>, <a class="el" href="BaseModPackage_8cs_source.html#l00026">BaseModPackage.builtin</a>, <a class="el" href="EClass_8cs_source.html#l00007">EClass.core</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00010">SpriteReplacer.dictModItems</a>, <a class="el" href="SourceManager_8cs_source.html#l00175">SourceManager.ExportSourceTexts()</a>, <a class="el" href="Version_8cs_source.html#l00021">Version.GetInt()</a>, <a class="el" href="LangSetting_8cs_source.html#l00100">LangSetting.GetVersion()</a>, <a class="el" href="SourceManager_8cs_source.html#l00115">SourceManager.Init()</a>, <a class="el" href="Lang_8cs_source.html#l00062">Lang.IsBuiltin()</a>, <a class="el" href="MOD_8cs_source.html#l00008">MOD.langs</a>, <a class="el" href="MOD_8cs_source.html#l00020">MOD.listMaps</a>, <a class="el" href="MOD_8cs_source.html#l00022">MOD.listPartialMaps</a>, <a class="el" href="Portrait_8cs_source.html#l00016">Portrait.modFull</a>, <a class="el" href="TalkText_8cs_source.html#l00005">TalkText.modList</a>, <a class="el" href="Portrait_8cs_source.html#l00014">Portrait.modOverlays</a>, <a class="el" href="Portrait_8cs_source.html#l00008">Portrait.modPortraitBGFs</a>, <a class="el" href="Portrait_8cs_source.html#l00010">Portrait.modPortraitBGs</a>, <a class="el" href="Portrait_8cs_source.html#l00012">Portrait.modPortraits</a>, <a class="el" href="LangSetting_8cs_source.html#l00024">LangSetting.name</a>, <a class="el" href="CorePath_8cs_source.html#l00159">CorePath.packageCore</a>, <a class="el" href="ModManager_8cs_source.html#l00027">replaceFiles</a>, <a class="el" href="Lang_8cs_source.html#l00024">Lang.runUpdate</a>, <a class="el" href="LangSetting_8cs_source.html#l00114">LangSetting.SetVersion()</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, <a class="el" href="Log_8cs_source.html#l00005">Log.system</a>, <a class="el" href="ModManager_8cs_source.html#l00484">UpdateDialogs()</a>, <a class="el" href="SourceManager_8cs_source.html#l00183">SourceManager.UpdateSourceTexts()</a>, <a class="el" href="ModManager_8cs_source.html#l00501">UpdateTalks()</a>, and <a class="el" href="BaseCore_8cs_source.html#l00017">BaseCore.version</a>.</p>
 
 </div>
 </div>
@@ -1090,27 +1091,27 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00483">483</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  484</span>    {</div>
-<div class="line"><span class="lineno">  485</span>        DirectoryInfo[] directories = dir.GetDirectories();</div>
-<div class="line"><span class="lineno">  486</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
-<div class="line"><span class="lineno">  487</span>        {</div>
-<div class="line"><span class="lineno">  488</span>            <a class="code hl_function" href="classModManager.html#aad8b21fdb70eb79a7b0835683e99bb03">UpdateDialogs</a>(directoryInfo, dirTemp + <span class="stringliteral">&quot;/&quot;</span> + directoryInfo.Name);</div>
-<div class="line"><span class="lineno">  489</span>        }</div>
-<div class="line"><span class="lineno">  490</span>        FileInfo[] files = dir.GetFiles();</div>
-<div class="line"><span class="lineno">  491</span>        <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
-<div class="line"><span class="lineno">  492</span>        {</div>
-<div class="line"><span class="lineno">  493</span>            <span class="keywordflow">if</span> (fileInfo.Name.EndsWith(<span class="stringliteral">&quot;xlsx&quot;</span>))</div>
-<div class="line"><span class="lineno">  494</span>            {</div>
-<div class="line"><span class="lineno">  495</span>                <a class="code hl_function" href="classModManager.html#ae00b54fc688de1d015c9163fa2dc3fd5">UpdateExcelBook</a>(fileInfo, dirTemp, updateOnlyText: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  496</span>            }</div>
-<div class="line"><span class="lineno">  497</span>        }</div>
-<div class="line"><span class="lineno">  498</span>    }</div>
-<div class="ttc" id="aclassModManager_html_ae00b54fc688de1d015c9163fa2dc3fd5"><div class="ttname"><a href="classModManager.html#ae00b54fc688de1d015c9163fa2dc3fd5">ModManager.UpdateExcelBook</a></div><div class="ttdeci">void UpdateExcelBook(FileInfo f, string dirTemp, bool updateOnlyText)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00512">ModManager.cs:512</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00484">484</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  485</span>    {</div>
+<div class="line"><span class="lineno">  486</span>        DirectoryInfo[] directories = dir.GetDirectories();</div>
+<div class="line"><span class="lineno">  487</span>        <span class="keywordflow">foreach</span> (DirectoryInfo directoryInfo <span class="keywordflow">in</span> directories)</div>
+<div class="line"><span class="lineno">  488</span>        {</div>
+<div class="line"><span class="lineno">  489</span>            <a class="code hl_function" href="classModManager.html#aad8b21fdb70eb79a7b0835683e99bb03">UpdateDialogs</a>(directoryInfo, dirTemp + <span class="stringliteral">&quot;/&quot;</span> + directoryInfo.Name);</div>
+<div class="line"><span class="lineno">  490</span>        }</div>
+<div class="line"><span class="lineno">  491</span>        FileInfo[] files = dir.GetFiles();</div>
+<div class="line"><span class="lineno">  492</span>        <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
+<div class="line"><span class="lineno">  493</span>        {</div>
+<div class="line"><span class="lineno">  494</span>            <span class="keywordflow">if</span> (fileInfo.Name.EndsWith(<span class="stringliteral">&quot;xlsx&quot;</span>))</div>
+<div class="line"><span class="lineno">  495</span>            {</div>
+<div class="line"><span class="lineno">  496</span>                <a class="code hl_function" href="classModManager.html#ae00b54fc688de1d015c9163fa2dc3fd5">UpdateExcelBook</a>(fileInfo, dirTemp, updateOnlyText: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  497</span>            }</div>
+<div class="line"><span class="lineno">  498</span>        }</div>
+<div class="line"><span class="lineno">  499</span>    }</div>
+<div class="ttc" id="aclassModManager_html_ae00b54fc688de1d015c9163fa2dc3fd5"><div class="ttname"><a href="classModManager.html#ae00b54fc688de1d015c9163fa2dc3fd5">ModManager.UpdateExcelBook</a></div><div class="ttdeci">void UpdateExcelBook(FileInfo f, string dirTemp, bool updateOnlyText)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00513">ModManager.cs:513</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00483">UpdateDialogs()</a>, and <a class="el" href="ModManager_8cs_source.html#l00512">UpdateExcelBook()</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00484">UpdateDialogs()</a>, and <a class="el" href="ModManager_8cs_source.html#l00513">UpdateExcelBook()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00311">ParseExtra()</a>, and <a class="el" href="ModManager_8cs_source.html#l00483">UpdateDialogs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00311">ParseExtra()</a>, and <a class="el" href="ModManager_8cs_source.html#l00484">UpdateDialogs()</a>.</p>
 
 </div>
 </div>
@@ -1154,48 +1155,48 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00512">512</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  513</span>    {</div>
-<div class="line"><span class="lineno">  514</span>        <span class="keywordtype">string</span> path = dirTemp + <span class="stringliteral">&quot;/&quot;</span> + f.Name;</div>
-<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">if</span> (!File.Exists(path))</div>
-<div class="line"><span class="lineno">  516</span>        {</div>
-<div class="line"><span class="lineno">  517</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  518</span>        }</div>
-<div class="line"><span class="lineno">  519</span>        XSSFWorkbook xSSFWorkbook;</div>
-<div class="line"><span class="lineno">  520</span>        <span class="keyword">using</span> (FileStream @is = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))</div>
-<div class="line"><span class="lineno">  521</span>        {</div>
-<div class="line"><span class="lineno">  522</span>            xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
-<div class="line"><span class="lineno">  523</span>        }</div>
-<div class="line"><span class="lineno">  524</span>        XSSFWorkbook xSSFWorkbook2;</div>
-<div class="line"><span class="lineno">  525</span>        <span class="keyword">using</span> (FileStream is2 = File.Open(f.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))</div>
-<div class="line"><span class="lineno">  526</span>        {</div>
-<div class="line"><span class="lineno">  527</span>            xSSFWorkbook2 = <span class="keyword">new</span> XSSFWorkbook((Stream)is2);</div>
-<div class="line"><span class="lineno">  528</span>        }</div>
-<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook2.NumberOfSheets; i++)</div>
-<div class="line"><span class="lineno">  530</span>        {</div>
-<div class="line"><span class="lineno">  531</span>            ISheet sheetAt = xSSFWorkbook2.GetSheetAt(i);</div>
-<div class="line"><span class="lineno">  532</span>            ISheet sheet = xSSFWorkbook.GetSheet(sheetAt.SheetName);</div>
-<div class="line"><span class="lineno">  533</span>            <span class="keywordflow">if</span> (sheet == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  534</span>            {</div>
-<div class="line"><span class="lineno">  535</span>                Log.system = Log.system + <span class="stringliteral">&quot;Old sheet not found:&quot;</span> + sheetAt.SheetName + Environment.NewLine;</div>
-<div class="line"><span class="lineno">  536</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  537</span>            }</div>
-<div class="line"><span class="lineno">  538</span>            <span class="keywordtype">int</span> num = <a class="code hl_function" href="classModManager.html#af4f8501eabe9e526161b7baeea13b97c">UpdateExcelSheet</a>(sheetAt, sheet, updateOnlyText);</div>
-<div class="line"><span class="lineno">  539</span>            Log.system = Log.system + ((num == 0) ? <span class="stringliteral">&quot;(No Changes) &quot;</span> : <span class="stringliteral">&quot;(Updated) &quot;</span>) + f.FullName + <span class="stringliteral">&quot;(&quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot;)&quot;</span> + Environment.NewLine;</div>
-<div class="line"><span class="lineno">  540</span>            <span class="keywordflow">if</span> (num != 0)</div>
-<div class="line"><span class="lineno">  541</span>            {</div>
-<div class="line"><span class="lineno">  542</span>                Log.system = Log.system + num + Environment.NewLine;</div>
-<div class="line"><span class="lineno">  543</span>            }</div>
-<div class="line"><span class="lineno">  544</span>            Log.system += Environment.NewLine;</div>
-<div class="line"><span class="lineno">  545</span>        }</div>
-<div class="line"><span class="lineno">  546</span>        <span class="keyword">using </span>FileStream stream = <span class="keyword">new</span> FileStream(f.FullName, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);</div>
-<div class="line"><span class="lineno">  547</span>        xSSFWorkbook2.Write(stream);</div>
-<div class="line"><span class="lineno">  548</span>    }</div>
-<div class="ttc" id="aclassModManager_html_af4f8501eabe9e526161b7baeea13b97c"><div class="ttname"><a href="classModManager.html#af4f8501eabe9e526161b7baeea13b97c">ModManager.UpdateExcelSheet</a></div><div class="ttdeci">int UpdateExcelSheet(ISheet destSheet, ISheet oldSheet, bool updateOnlytext)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00550">ModManager.cs:550</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00513">513</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  514</span>    {</div>
+<div class="line"><span class="lineno">  515</span>        <span class="keywordtype">string</span> path = dirTemp + <span class="stringliteral">&quot;/&quot;</span> + f.Name;</div>
+<div class="line"><span class="lineno">  516</span>        <span class="keywordflow">if</span> (!File.Exists(path))</div>
+<div class="line"><span class="lineno">  517</span>        {</div>
+<div class="line"><span class="lineno">  518</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  519</span>        }</div>
+<div class="line"><span class="lineno">  520</span>        XSSFWorkbook xSSFWorkbook;</div>
+<div class="line"><span class="lineno">  521</span>        <span class="keyword">using</span> (FileStream @is = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))</div>
+<div class="line"><span class="lineno">  522</span>        {</div>
+<div class="line"><span class="lineno">  523</span>            xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
+<div class="line"><span class="lineno">  524</span>        }</div>
+<div class="line"><span class="lineno">  525</span>        XSSFWorkbook xSSFWorkbook2;</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keyword">using</span> (FileStream is2 = File.Open(f.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))</div>
+<div class="line"><span class="lineno">  527</span>        {</div>
+<div class="line"><span class="lineno">  528</span>            xSSFWorkbook2 = <span class="keyword">new</span> XSSFWorkbook((Stream)is2);</div>
+<div class="line"><span class="lineno">  529</span>        }</div>
+<div class="line"><span class="lineno">  530</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook2.NumberOfSheets; i++)</div>
+<div class="line"><span class="lineno">  531</span>        {</div>
+<div class="line"><span class="lineno">  532</span>            ISheet sheetAt = xSSFWorkbook2.GetSheetAt(i);</div>
+<div class="line"><span class="lineno">  533</span>            ISheet sheet = xSSFWorkbook.GetSheet(sheetAt.SheetName);</div>
+<div class="line"><span class="lineno">  534</span>            <span class="keywordflow">if</span> (sheet == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  535</span>            {</div>
+<div class="line"><span class="lineno">  536</span>                Log.system = Log.system + <span class="stringliteral">&quot;Old sheet not found:&quot;</span> + sheetAt.SheetName + Environment.NewLine;</div>
+<div class="line"><span class="lineno">  537</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  538</span>            }</div>
+<div class="line"><span class="lineno">  539</span>            <span class="keywordtype">int</span> num = <a class="code hl_function" href="classModManager.html#af4f8501eabe9e526161b7baeea13b97c">UpdateExcelSheet</a>(sheetAt, sheet, updateOnlyText);</div>
+<div class="line"><span class="lineno">  540</span>            Log.system = Log.system + ((num == 0) ? <span class="stringliteral">&quot;(No Changes) &quot;</span> : <span class="stringliteral">&quot;(Updated) &quot;</span>) + f.FullName + <span class="stringliteral">&quot;(&quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot;)&quot;</span> + Environment.NewLine;</div>
+<div class="line"><span class="lineno">  541</span>            <span class="keywordflow">if</span> (num != 0)</div>
+<div class="line"><span class="lineno">  542</span>            {</div>
+<div class="line"><span class="lineno">  543</span>                Log.system = Log.system + num + Environment.NewLine;</div>
+<div class="line"><span class="lineno">  544</span>            }</div>
+<div class="line"><span class="lineno">  545</span>            Log.system += Environment.NewLine;</div>
+<div class="line"><span class="lineno">  546</span>        }</div>
+<div class="line"><span class="lineno">  547</span>        <span class="keyword">using </span>FileStream stream = <span class="keyword">new</span> FileStream(f.FullName, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);</div>
+<div class="line"><span class="lineno">  548</span>        xSSFWorkbook2.Write(stream);</div>
+<div class="line"><span class="lineno">  549</span>    }</div>
+<div class="ttc" id="aclassModManager_html_af4f8501eabe9e526161b7baeea13b97c"><div class="ttname"><a href="classModManager.html#af4f8501eabe9e526161b7baeea13b97c">ModManager.UpdateExcelSheet</a></div><div class="ttdeci">int UpdateExcelSheet(ISheet destSheet, ISheet oldSheet, bool updateOnlytext)</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00551">ModManager.cs:551</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00550">UpdateExcelSheet()</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00551">UpdateExcelSheet()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00483">UpdateDialogs()</a>, and <a class="el" href="ModManager_8cs_source.html#l00500">UpdateTalks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00484">UpdateDialogs()</a>, and <a class="el" href="ModManager_8cs_source.html#l00501">UpdateTalks()</a>.</p>
 
 </div>
 </div>
@@ -1239,145 +1240,145 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00550">550</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  551</span>    {</div>
-<div class="line"><span class="lineno">  552</span>        Dictionary&lt;string, string[]&gt; dictionary = <span class="keyword">new</span> Dictionary&lt;string, string[]&gt;();</div>
-<div class="line"><span class="lineno">  553</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">  554</span>        <span class="keywordtype">int</span> num2 = 0;</div>
-<div class="line"><span class="lineno">  555</span>        <span class="keywordtype">int</span> num3 = 10;</div>
-<div class="line"><span class="lineno">  556</span>        IRow row2 = destSheet.GetRow(0);</div>
-<div class="line"><span class="lineno">  557</span>        IRow row3 = oldSheet.GetRow(0);</div>
-<div class="line"><span class="lineno">  558</span>        List&lt;SheetIndex&gt; list = <span class="keyword">new</span> List&lt;SheetIndex&gt;();</div>
-<div class="line"><span class="lineno">  559</span>        <span class="keywordtype">int</span> cellnum = FindField(row2, <span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><span class="lineno">  560</span>        <span class="keywordtype">int</span> cellnum2 = FindField(row3, <span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><span class="lineno">  561</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; row2.LastCellNum; i++)</div>
-<div class="line"><span class="lineno">  562</span>        {</div>
-<div class="line"><span class="lineno">  563</span>            ICell cell = row2.GetCell(i);</div>
-<div class="line"><span class="lineno">  564</span>            <span class="keywordflow">if</span> (cell == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  565</span>            {</div>
-<div class="line"><span class="lineno">  566</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  567</span>            }</div>
-<div class="line"><span class="lineno">  568</span>            <span class="keywordtype">string</span> stringCellValue = cell.StringCellValue;</div>
-<div class="line"><span class="lineno">  569</span>            <span class="keywordflow">if</span> (stringCellValue == <span class="stringliteral">&quot;id&quot;</span> || (updateOnlytext &amp;&amp; stringCellValue != <span class="stringliteral">&quot;text&quot;</span>))</div>
-<div class="line"><span class="lineno">  570</span>            {</div>
-<div class="line"><span class="lineno">  571</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  572</span>            }</div>
-<div class="line"><span class="lineno">  573</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; row3.LastCellNum; j++)</div>
-<div class="line"><span class="lineno">  574</span>            {</div>
-<div class="line"><span class="lineno">  575</span>                cell = row3.GetCell(j);</div>
-<div class="line"><span class="lineno">  576</span>                <span class="keywordflow">if</span> (cell == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  577</span>                {</div>
-<div class="line"><span class="lineno">  578</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  579</span>                }</div>
-<div class="line"><span class="lineno">  580</span>                <span class="keywordflow">if</span> (cell.StringCellValue == stringCellValue)</div>
-<div class="line"><span class="lineno">  581</span>                {</div>
-<div class="line"><span class="lineno">  582</span>                    list.Add(<span class="keyword">new</span> SheetIndex</div>
-<div class="line"><span class="lineno">  583</span>                    {</div>
-<div class="line"><span class="lineno">  584</span>                        dest = i,</div>
-<div class="line"><span class="lineno">  585</span>                        old = j</div>
-<div class="line"><span class="lineno">  586</span>                    });</div>
-<div class="line"><span class="lineno">  587</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(destSheet.SheetName + <span class="stringliteral">&quot;/&quot;</span> + stringCellValue + <span class="stringliteral">&quot;/&quot;</span> + i + <span class="stringliteral">&quot;/&quot;</span> + j);</div>
-<div class="line"><span class="lineno">  588</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  589</span>                }</div>
-<div class="line"><span class="lineno">  590</span>            }</div>
-<div class="line"><span class="lineno">  591</span>        }</div>
-<div class="line"><span class="lineno">  592</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 2; k &lt;= oldSheet.LastRowNum; k++)</div>
-<div class="line"><span class="lineno">  593</span>        {</div>
-<div class="line"><span class="lineno">  594</span>            IRow row4 = oldSheet.GetRow(k);</div>
-<div class="line"><span class="lineno">  595</span>            <span class="keywordflow">if</span> (row4 == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  596</span>            {</div>
-<div class="line"><span class="lineno">  597</span>                <span class="keywordflow">if</span> (num2 &gt;= num3)</div>
-<div class="line"><span class="lineno">  598</span>                {</div>
-<div class="line"><span class="lineno">  599</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  600</span>                }</div>
-<div class="line"><span class="lineno">  601</span>                num2++;</div>
-<div class="line"><span class="lineno">  602</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  603</span>            }</div>
-<div class="line"><span class="lineno">  604</span>            num2 = 0;</div>
-<div class="line"><span class="lineno">  605</span>            ICell cell2 = row4.GetCell(cellnum2);</div>
-<div class="line"><span class="lineno">  606</span>            <span class="keywordflow">if</span> (cell2 == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  607</span>            {</div>
-<div class="line"><span class="lineno">  608</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  609</span>            }</div>
-<div class="line"><span class="lineno">  610</span>            <span class="keywordtype">string</span> text = ((cell2.CellType == CellType.Numeric) ? cell2.NumericCellValue.ToString() : cell2.StringCellValue);</div>
-<div class="line"><span class="lineno">  611</span>            <span class="keywordflow">if</span> (text.IsEmpty())</div>
-<div class="line"><span class="lineno">  612</span>            {</div>
-<div class="line"><span class="lineno">  613</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  614</span>            }</div>
-<div class="line"><span class="lineno">  615</span>            <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[list.Count];</div>
-<div class="line"><span class="lineno">  616</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; list.Count; l++)</div>
-<div class="line"><span class="lineno">  617</span>            {</div>
-<div class="line"><span class="lineno">  618</span>                ICell cell3 = row4.GetCell(list[l].old);</div>
-<div class="line"><span class="lineno">  619</span>                <span class="keywordflow">if</span> (cell3 != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  620</span>                {</div>
-<div class="line"><span class="lineno">  621</span>                    <span class="keywordtype">string</span> stringCellValue2 = cell3.StringCellValue;</div>
-<div class="line"><span class="lineno">  622</span>                    <span class="keywordflow">if</span> (!stringCellValue2.IsEmpty())</div>
-<div class="line"><span class="lineno">  623</span>                    {</div>
-<div class="line"><span class="lineno">  624</span>                        array[l] = stringCellValue2;</div>
-<div class="line"><span class="lineno">  625</span>                    }</div>
-<div class="line"><span class="lineno">  626</span>                }</div>
-<div class="line"><span class="lineno">  627</span>            }</div>
-<div class="line"><span class="lineno">  628</span>            dictionary.Add(text, array);</div>
-<div class="line"><span class="lineno">  629</span>        }</div>
-<div class="line"><span class="lineno">  630</span>        num2 = 0;</div>
-<div class="line"><span class="lineno">  631</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 2; m &lt;= destSheet.LastRowNum; m++)</div>
-<div class="line"><span class="lineno">  632</span>        {</div>
-<div class="line"><span class="lineno">  633</span>            IRow row5 = destSheet.GetRow(m);</div>
-<div class="line"><span class="lineno">  634</span>            <span class="keywordflow">if</span> (row5 == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  635</span>            {</div>
-<div class="line"><span class="lineno">  636</span>                <span class="keywordflow">if</span> (num2 &gt;= num3)</div>
-<div class="line"><span class="lineno">  637</span>                {</div>
-<div class="line"><span class="lineno">  638</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  639</span>                }</div>
-<div class="line"><span class="lineno">  640</span>                num2++;</div>
-<div class="line"><span class="lineno">  641</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  642</span>            }</div>
-<div class="line"><span class="lineno">  643</span>            num2 = 0;</div>
-<div class="line"><span class="lineno">  644</span>            ICell cell4 = row5.GetCell(cellnum);</div>
-<div class="line"><span class="lineno">  645</span>            <span class="keywordflow">if</span> (cell4 == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  646</span>            {</div>
-<div class="line"><span class="lineno">  647</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  648</span>            }</div>
-<div class="line"><span class="lineno">  649</span>            <span class="keywordtype">string</span> text2 = ((cell4.CellType == CellType.Numeric) ? cell4.NumericCellValue.ToString() : cell4.StringCellValue);</div>
-<div class="line"><span class="lineno">  650</span>            <span class="keywordflow">if</span> (text2.IsEmpty() || !dictionary.ContainsKey(text2))</div>
-<div class="line"><span class="lineno">  651</span>            {</div>
-<div class="line"><span class="lineno">  652</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  653</span>            }</div>
-<div class="line"><span class="lineno">  654</span>            <span class="keywordtype">string</span>[] array2 = dictionary[text2];</div>
-<div class="line"><span class="lineno">  655</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; list.Count; n++)</div>
-<div class="line"><span class="lineno">  656</span>            {</div>
-<div class="line"><span class="lineno">  657</span>                ICell cell5 = row5.GetCell(list[n].dest) ?? row5.CreateCell(list[n].dest, CellType.String);</div>
-<div class="line"><span class="lineno">  658</span>                <span class="keywordflow">if</span> (cell5 != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  659</span>                {</div>
-<div class="line"><span class="lineno">  660</span>                    cell5.SetCellValue(array2[n]);</div>
-<div class="line"><span class="lineno">  661</span>                    cell5.SetCellType(CellType.String);</div>
-<div class="line"><span class="lineno">  662</span>                    cell5.SetAsActiveCell();</div>
-<div class="line"><span class="lineno">  663</span>                    num++;</div>
-<div class="line"><span class="lineno">  664</span>                }</div>
-<div class="line"><span class="lineno">  665</span>            }</div>
-<div class="line"><span class="lineno">  666</span>        }</div>
-<div class="line"><span class="lineno">  667</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  668</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> FindField(IRow row, <span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  669</span>        {</div>
-<div class="line"><span class="lineno">  670</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num4 = 0; num4 &lt; row.LastCellNum; num4++)</div>
-<div class="line"><span class="lineno">  671</span>            {</div>
-<div class="line"><span class="lineno">  672</span>                ICell cell6 = row.GetCell(num4);</div>
-<div class="line"><span class="lineno">  673</span>                <span class="keywordflow">if</span> (cell6 == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  674</span>                {</div>
-<div class="line"><span class="lineno">  675</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  676</span>                }</div>
-<div class="line"><span class="lineno">  677</span>                <span class="keywordflow">if</span> (cell6.StringCellValue == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  678</span>                {</div>
-<div class="line"><span class="lineno">  679</span>                    <span class="keywordflow">return</span> num4;</div>
-<div class="line"><span class="lineno">  680</span>                }</div>
-<div class="line"><span class="lineno">  681</span>            }</div>
-<div class="line"><span class="lineno">  682</span>            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  683</span>        }</div>
-<div class="line"><span class="lineno">  684</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00551">551</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  552</span>    {</div>
+<div class="line"><span class="lineno">  553</span>        Dictionary&lt;string, string[]&gt; dictionary = <span class="keyword">new</span> Dictionary&lt;string, string[]&gt;();</div>
+<div class="line"><span class="lineno">  554</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">  555</span>        <span class="keywordtype">int</span> num2 = 0;</div>
+<div class="line"><span class="lineno">  556</span>        <span class="keywordtype">int</span> num3 = 10;</div>
+<div class="line"><span class="lineno">  557</span>        IRow row2 = destSheet.GetRow(0);</div>
+<div class="line"><span class="lineno">  558</span>        IRow row3 = oldSheet.GetRow(0);</div>
+<div class="line"><span class="lineno">  559</span>        List&lt;SheetIndex&gt; list = <span class="keyword">new</span> List&lt;SheetIndex&gt;();</div>
+<div class="line"><span class="lineno">  560</span>        <span class="keywordtype">int</span> cellnum = FindField(row2, <span class="stringliteral">&quot;id&quot;</span>);</div>
+<div class="line"><span class="lineno">  561</span>        <span class="keywordtype">int</span> cellnum2 = FindField(row3, <span class="stringliteral">&quot;id&quot;</span>);</div>
+<div class="line"><span class="lineno">  562</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; row2.LastCellNum; i++)</div>
+<div class="line"><span class="lineno">  563</span>        {</div>
+<div class="line"><span class="lineno">  564</span>            ICell cell = row2.GetCell(i);</div>
+<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">if</span> (cell == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  566</span>            {</div>
+<div class="line"><span class="lineno">  567</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  568</span>            }</div>
+<div class="line"><span class="lineno">  569</span>            <span class="keywordtype">string</span> stringCellValue = cell.StringCellValue;</div>
+<div class="line"><span class="lineno">  570</span>            <span class="keywordflow">if</span> (stringCellValue == <span class="stringliteral">&quot;id&quot;</span> || (updateOnlytext &amp;&amp; stringCellValue != <span class="stringliteral">&quot;text&quot;</span>))</div>
+<div class="line"><span class="lineno">  571</span>            {</div>
+<div class="line"><span class="lineno">  572</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  573</span>            }</div>
+<div class="line"><span class="lineno">  574</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; row3.LastCellNum; j++)</div>
+<div class="line"><span class="lineno">  575</span>            {</div>
+<div class="line"><span class="lineno">  576</span>                cell = row3.GetCell(j);</div>
+<div class="line"><span class="lineno">  577</span>                <span class="keywordflow">if</span> (cell == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  578</span>                {</div>
+<div class="line"><span class="lineno">  579</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  580</span>                }</div>
+<div class="line"><span class="lineno">  581</span>                <span class="keywordflow">if</span> (cell.StringCellValue == stringCellValue)</div>
+<div class="line"><span class="lineno">  582</span>                {</div>
+<div class="line"><span class="lineno">  583</span>                    list.Add(<span class="keyword">new</span> SheetIndex</div>
+<div class="line"><span class="lineno">  584</span>                    {</div>
+<div class="line"><span class="lineno">  585</span>                        dest = i,</div>
+<div class="line"><span class="lineno">  586</span>                        old = j</div>
+<div class="line"><span class="lineno">  587</span>                    });</div>
+<div class="line"><span class="lineno">  588</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(destSheet.SheetName + <span class="stringliteral">&quot;/&quot;</span> + stringCellValue + <span class="stringliteral">&quot;/&quot;</span> + i + <span class="stringliteral">&quot;/&quot;</span> + j);</div>
+<div class="line"><span class="lineno">  589</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  590</span>                }</div>
+<div class="line"><span class="lineno">  591</span>            }</div>
+<div class="line"><span class="lineno">  592</span>        }</div>
+<div class="line"><span class="lineno">  593</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 2; k &lt;= oldSheet.LastRowNum; k++)</div>
+<div class="line"><span class="lineno">  594</span>        {</div>
+<div class="line"><span class="lineno">  595</span>            IRow row4 = oldSheet.GetRow(k);</div>
+<div class="line"><span class="lineno">  596</span>            <span class="keywordflow">if</span> (row4 == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  597</span>            {</div>
+<div class="line"><span class="lineno">  598</span>                <span class="keywordflow">if</span> (num2 &gt;= num3)</div>
+<div class="line"><span class="lineno">  599</span>                {</div>
+<div class="line"><span class="lineno">  600</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  601</span>                }</div>
+<div class="line"><span class="lineno">  602</span>                num2++;</div>
+<div class="line"><span class="lineno">  603</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  604</span>            }</div>
+<div class="line"><span class="lineno">  605</span>            num2 = 0;</div>
+<div class="line"><span class="lineno">  606</span>            ICell cell2 = row4.GetCell(cellnum2);</div>
+<div class="line"><span class="lineno">  607</span>            <span class="keywordflow">if</span> (cell2 == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  608</span>            {</div>
+<div class="line"><span class="lineno">  609</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  610</span>            }</div>
+<div class="line"><span class="lineno">  611</span>            <span class="keywordtype">string</span> text = ((cell2.CellType == CellType.Numeric) ? cell2.NumericCellValue.ToString() : cell2.StringCellValue);</div>
+<div class="line"><span class="lineno">  612</span>            <span class="keywordflow">if</span> (text.IsEmpty())</div>
+<div class="line"><span class="lineno">  613</span>            {</div>
+<div class="line"><span class="lineno">  614</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  615</span>            }</div>
+<div class="line"><span class="lineno">  616</span>            <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[list.Count];</div>
+<div class="line"><span class="lineno">  617</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> l = 0; l &lt; list.Count; l++)</div>
+<div class="line"><span class="lineno">  618</span>            {</div>
+<div class="line"><span class="lineno">  619</span>                ICell cell3 = row4.GetCell(list[l].old);</div>
+<div class="line"><span class="lineno">  620</span>                <span class="keywordflow">if</span> (cell3 != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  621</span>                {</div>
+<div class="line"><span class="lineno">  622</span>                    <span class="keywordtype">string</span> stringCellValue2 = cell3.StringCellValue;</div>
+<div class="line"><span class="lineno">  623</span>                    <span class="keywordflow">if</span> (!stringCellValue2.IsEmpty())</div>
+<div class="line"><span class="lineno">  624</span>                    {</div>
+<div class="line"><span class="lineno">  625</span>                        array[l] = stringCellValue2;</div>
+<div class="line"><span class="lineno">  626</span>                    }</div>
+<div class="line"><span class="lineno">  627</span>                }</div>
+<div class="line"><span class="lineno">  628</span>            }</div>
+<div class="line"><span class="lineno">  629</span>            dictionary.Add(text, array);</div>
+<div class="line"><span class="lineno">  630</span>        }</div>
+<div class="line"><span class="lineno">  631</span>        num2 = 0;</div>
+<div class="line"><span class="lineno">  632</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 2; m &lt;= destSheet.LastRowNum; m++)</div>
+<div class="line"><span class="lineno">  633</span>        {</div>
+<div class="line"><span class="lineno">  634</span>            IRow row5 = destSheet.GetRow(m);</div>
+<div class="line"><span class="lineno">  635</span>            <span class="keywordflow">if</span> (row5 == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  636</span>            {</div>
+<div class="line"><span class="lineno">  637</span>                <span class="keywordflow">if</span> (num2 &gt;= num3)</div>
+<div class="line"><span class="lineno">  638</span>                {</div>
+<div class="line"><span class="lineno">  639</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  640</span>                }</div>
+<div class="line"><span class="lineno">  641</span>                num2++;</div>
+<div class="line"><span class="lineno">  642</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  643</span>            }</div>
+<div class="line"><span class="lineno">  644</span>            num2 = 0;</div>
+<div class="line"><span class="lineno">  645</span>            ICell cell4 = row5.GetCell(cellnum);</div>
+<div class="line"><span class="lineno">  646</span>            <span class="keywordflow">if</span> (cell4 == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  647</span>            {</div>
+<div class="line"><span class="lineno">  648</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  649</span>            }</div>
+<div class="line"><span class="lineno">  650</span>            <span class="keywordtype">string</span> text2 = ((cell4.CellType == CellType.Numeric) ? cell4.NumericCellValue.ToString() : cell4.StringCellValue);</div>
+<div class="line"><span class="lineno">  651</span>            <span class="keywordflow">if</span> (text2.IsEmpty() || !dictionary.ContainsKey(text2))</div>
+<div class="line"><span class="lineno">  652</span>            {</div>
+<div class="line"><span class="lineno">  653</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  654</span>            }</div>
+<div class="line"><span class="lineno">  655</span>            <span class="keywordtype">string</span>[] array2 = dictionary[text2];</div>
+<div class="line"><span class="lineno">  656</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 0; n &lt; list.Count; n++)</div>
+<div class="line"><span class="lineno">  657</span>            {</div>
+<div class="line"><span class="lineno">  658</span>                ICell cell5 = row5.GetCell(list[n].dest) ?? row5.CreateCell(list[n].dest, CellType.String);</div>
+<div class="line"><span class="lineno">  659</span>                <span class="keywordflow">if</span> (cell5 != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  660</span>                {</div>
+<div class="line"><span class="lineno">  661</span>                    cell5.SetCellValue(array2[n]);</div>
+<div class="line"><span class="lineno">  662</span>                    cell5.SetCellType(CellType.String);</div>
+<div class="line"><span class="lineno">  663</span>                    cell5.SetAsActiveCell();</div>
+<div class="line"><span class="lineno">  664</span>                    num++;</div>
+<div class="line"><span class="lineno">  665</span>                }</div>
+<div class="line"><span class="lineno">  666</span>            }</div>
+<div class="line"><span class="lineno">  667</span>        }</div>
+<div class="line"><span class="lineno">  668</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  669</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> FindField(IRow row, <span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  670</span>        {</div>
+<div class="line"><span class="lineno">  671</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> num4 = 0; num4 &lt; row.LastCellNum; num4++)</div>
+<div class="line"><span class="lineno">  672</span>            {</div>
+<div class="line"><span class="lineno">  673</span>                ICell cell6 = row.GetCell(num4);</div>
+<div class="line"><span class="lineno">  674</span>                <span class="keywordflow">if</span> (cell6 == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  675</span>                {</div>
+<div class="line"><span class="lineno">  676</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  677</span>                }</div>
+<div class="line"><span class="lineno">  678</span>                <span class="keywordflow">if</span> (cell6.StringCellValue == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  679</span>                {</div>
+<div class="line"><span class="lineno">  680</span>                    <span class="keywordflow">return</span> num4;</div>
+<div class="line"><span class="lineno">  681</span>                }</div>
+<div class="line"><span class="lineno">  682</span>            }</div>
+<div class="line"><span class="lineno">  683</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  684</span>        }</div>
+<div class="line"><span class="lineno">  685</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00512">UpdateExcelBook()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00513">UpdateExcelBook()</a>.</p>
 
 </div>
 </div>
@@ -1415,19 +1416,19 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00500">500</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  501</span>    {</div>
-<div class="line"><span class="lineno">  502</span>        FileInfo[] files = dir.GetFiles();</div>
-<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
-<div class="line"><span class="lineno">  504</span>        {</div>
-<div class="line"><span class="lineno">  505</span>            <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;god_talk.xlsx&quot;</span> || fileInfo.Name == <span class="stringliteral">&quot;chara_talk.xlsx&quot;</span>)</div>
-<div class="line"><span class="lineno">  506</span>            {</div>
-<div class="line"><span class="lineno">  507</span>                <a class="code hl_function" href="classModManager.html#ae00b54fc688de1d015c9163fa2dc3fd5">UpdateExcelBook</a>(fileInfo, dirTemp, updateOnlyText: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  508</span>            }</div>
-<div class="line"><span class="lineno">  509</span>        }</div>
-<div class="line"><span class="lineno">  510</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ModManager_8cs_source.html#l00501">501</a> of file <a class="el" href="ModManager_8cs_source.html">ModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  502</span>    {</div>
+<div class="line"><span class="lineno">  503</span>        FileInfo[] files = dir.GetFiles();</div>
+<div class="line"><span class="lineno">  504</span>        <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
+<div class="line"><span class="lineno">  505</span>        {</div>
+<div class="line"><span class="lineno">  506</span>            <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;god_talk.xlsx&quot;</span> || fileInfo.Name == <span class="stringliteral">&quot;chara_talk.xlsx&quot;</span>)</div>
+<div class="line"><span class="lineno">  507</span>            {</div>
+<div class="line"><span class="lineno">  508</span>                <a class="code hl_function" href="classModManager.html#ae00b54fc688de1d015c9163fa2dc3fd5">UpdateExcelBook</a>(fileInfo, dirTemp, updateOnlyText: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  509</span>            }</div>
+<div class="line"><span class="lineno">  510</span>        }</div>
+<div class="line"><span class="lineno">  511</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00512">UpdateExcelBook()</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00513">UpdateExcelBook()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00311">ParseExtra()</a>.</p>
 

@@ -1,8 +1,8 @@
 var NAVTREEINDEX32 =
 {
-"classAlgorithms_1_1WeightCell.html#a61a4d0a95c8de2bdbd763e5974fedaa0":[1,0,0,5,0],
-"classAlgorithms_1_1WeightCell.html#a8d81e4a1a7d1d2c74ced5f73110add48":[0,4,0,5,1],
+"classAlgorithms_1_1WeightCell.html#a61a4d0a95c8de2bdbd763e5974fedaa0":[0,4,0,5,0],
 "classAlgorithms_1_1WeightCell.html#a8d81e4a1a7d1d2c74ced5f73110add48":[1,0,0,5,1],
+"classAlgorithms_1_1WeightCell.html#a8d81e4a1a7d1d2c74ced5f73110add48":[0,4,0,5,1],
 "classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843":[0,4,0,5,3],
 "classAlgorithms_1_1WeightCell.html#ab4a78bd9fec44ccd71d1264027a59843":[1,0,0,5,3],
 "classAnimationFrame.html":[1,0,175],

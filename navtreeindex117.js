@@ -1,5 +1,6 @@
 var NAVTREEINDEX117 =
 {
+"classTraitAmmoRocket.html":[1,0,1440],
 "classTraitAmmoRocket.html#a78c6030477eed382e68ad8eb977c25cf":[1,0,1440,1],
 "classTraitAmmoRocket.html#ac33cc621e0f3621bf969f32a72080602":[1,0,1440,2],
 "classTraitAmmoRocket.html#ae772e78f0b785bc4b1b1c3063bf59f53":[1,0,1440,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitCage.html":[1,0,1493],
 "classTraitCage.html#ad30f8fdf75aa274c1a046adeaecc7a19":[1,0,1493,0],
 "classTraitCageBreeding.html":[1,0,1494],
-"classTraitCageBreeding.html#a779c81f89cd66f20077a888380404e22":[1,0,1494,1],
-"classTraitCageBreeding.html#aa7d49a6b01ba23fad87525861730ba91":[1,0,1494,0]
+"classTraitCageBreeding.html#a779c81f89cd66f20077a888380404e22":[1,0,1494,1]
 };

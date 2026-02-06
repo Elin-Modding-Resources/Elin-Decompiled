@@ -1,5 +1,6 @@
 var NAVTREEINDEX121 =
 {
+"classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1660,1],
 "classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1660,8],
 "classTraitGrindstone.html#ae008eb99c52e7011b65067ebd018fe2d":[1,0,1660,0],
 "classTraitGuard.html":[1,0,1661],
@@ -248,6 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitMayor.html#ac622a4b6c45cf17f89d4431d0439739f":[1,0,1714,2],
 "classTraitMayor.html#ac7e6606d157a5ed5e3a66d773aaecd59":[1,0,1714,0],
 "classTraitMerchant.html":[1,0,1715],
-"classTraitMerchant.html#a1ee6cb78e5ddfe35d4236ccf5b42bcb4":[1,0,1715,3],
-"classTraitMerchant.html#a2281763a5cfa3c85ebf5e674f9622079":[1,0,1715,1]
+"classTraitMerchant.html#a1ee6cb78e5ddfe35d4236ccf5b42bcb4":[1,0,1715,3]
 };
