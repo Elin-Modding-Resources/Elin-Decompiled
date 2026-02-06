@@ -93,6 +93,10 @@ public class GameDate : Date
 		EClass.player.OnAdvanceHour();
 		EClass.game.quests.OnAdvanceHour();
 		EClass._zone.OnAdvanceHour();
+		if (EClass.game.IsSurvival)
+		{
+			EClass.game.survival.OnAdvanceHour();
+		}
 		if (EClass._zone.IsRegion)
 		{
 			EClass._zone.Region.CheckRandomSites();

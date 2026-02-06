@@ -184,6 +184,18 @@ public class SurvivalManager : EClass
 		});
 	}
 
+	public void OnAdvanceHour()
+	{
+		if (EClass._zone is Zone_StartSiteSky)
+		{
+			Point point = new Point(EClass._map.CenterX + 1, EClass._map.CenterZ + 1);
+			if (!point.HasObj)
+			{
+				point.SetObj(46);
+			}
+		}
+	}
+
 	public void RefreshRewards()
 	{
 		if (listReward.Count <= 0)

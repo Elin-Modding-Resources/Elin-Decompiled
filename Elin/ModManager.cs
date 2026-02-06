@@ -419,6 +419,7 @@ public class ModManager : BaseModManager
 			{
 				if (!directoryInfo.Name.StartsWith("_") && !TryAddLang(directoryInfo, isNew: false))
 				{
+					EClass.sources.Init();
 					Debug.Log("Generating Language Mod Contents:" + directoryInfo.FullName);
 					IO.CopyDir(CorePath.packageCore + "Lang/EN", directoryInfo.FullName);
 					Directory.CreateDirectory(directoryInfo.FullName + "/Dialog");
@@ -450,9 +451,9 @@ public class ModManager : BaseModManager
 					}
 					else if ((Application.isEditor || Lang.runUpdate) && !Lang.IsBuiltin(dirLang.Name) && langSetting.GetVersion() != EClass.core.version.GetInt())
 					{
-						EClass.sources.Init();
 						Log.system = "Updated Language Files:" + Environment.NewLine + Environment.NewLine;
 						Debug.Log("Updating Language:" + langSetting.name + "/" + langSetting.GetVersion() + "/" + EClass.core.version.GetInt());
+						EClass.sources.Init();
 						string text = dirLang.FullName + "/Game";
 						Directory.Move(text, text + "_temp");
 						EClass.sources.ExportSourceTexts(text);
