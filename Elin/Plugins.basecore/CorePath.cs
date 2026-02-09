@@ -70,6 +70,8 @@ public class CorePath
 
 		public static string Book => Text + "Book/";
 
+		public static string BottleMessage => Text + "Bottle/";
+
 		public static string Scroll => Text + "Scroll/";
 
 		public static string Help => Text + "Help/";
