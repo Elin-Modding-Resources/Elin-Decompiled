@@ -8,5 +8,5 @@ var classTraitBook =
     [ "IdCat", "classTraitBook.html#a0a1171837e959a3a759bc04126b5fec6", null ],
     [ "IdItem", "classTraitBook.html#ab8f2a6b72ddd8dde717f425e076ca20c", null ],
     [ "IsParchment", "classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e", null ],
-    [ "Item", "classTraitBook.html#a14152139a086fc23103c02f79adef951", null ]
+    [ "Item", "classTraitBook.html#abcc6a9c538ad2a8ea014d3697b088ede", null ]
 ];

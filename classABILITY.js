@@ -117,6 +117,7 @@ var classABILITY =
     [ "SongValor", "classABILITY.html#a5704d8fbdac84442ce9e797bc55c0346", null ],
     [ "SpTransmuteBat", "classABILITY.html#a907615124a9fb16fb1b70b4724114aa9", null ],
     [ "SpTransmuteMimic", "classABILITY.html#a3ccdd7ddb19beac5f4ad3fc187d6197d", null ],
+    [ "SpTransmuteShadow", "classABILITY.html#afe62ecb412d5c272b1dd621bf99f3595", null ],
     [ "StManaCost", "classABILITY.html#aa74f8fa720ebd9ab23d4e1be983183d8", null ],
     [ "StTaunt", "classABILITY.html#a95955e7cb37876d089e49d8d96eea35c", null ],
     [ "TaskAttack", "classABILITY.html#a5e5613f46539c790b830307b8a2ab9ad", null ],

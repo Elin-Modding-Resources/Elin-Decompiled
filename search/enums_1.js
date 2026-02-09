@@ -6,7 +6,8 @@ var searchData=
   ['biomeid_3',['BiomeID',['../BiomeID_8cs.html#aa75ddb94ecf17a52a3d06d148a327d5a',1,'BiomeID.cs']]],
   ['blessedstate_4',['BlessedState',['../BlessedState_8cs.html#aa145ad1e6170ce299d75ff3b3bee93e8',1,'BlessedState.cs']]],
   ['blockrendermode_5',['BlockRenderMode',['../BlockRenderMode_8cs.html#a55e0dd4145fbc0c069fa1c911b39fd3e',1,'BlockRenderMode.cs']]],
-  ['bosstype_6',['BossType',['../BossType_8cs.html#af75f53750ffcde869545d08348fb7f96',1,'BossType.cs']]],
-  ['boxtype_7',['BoxType',['../classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244b',1,'BaseTileSelector']]],
-  ['buttontype_8',['ButtonType',['../ButtonType_8cs.html#ae2d5c50fae96a83cc4f5974af78e6943',1,'ButtonType.cs']]]
+  ['bookcategory_6',['BookCategory',['../BookCategory_8cs.html#a756783b028f9ceebe0e9dad28ca38480',1,'BookCategory.cs']]],
+  ['bosstype_7',['BossType',['../BossType_8cs.html#af75f53750ffcde869545d08348fb7f96',1,'BossType.cs']]],
+  ['boxtype_8',['BoxType',['../classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244b',1,'BaseTileSelector']]],
+  ['buttontype_9',['ButtonType',['../ButtonType_8cs.html#ae2d5c50fae96a83cc4f5974af78e6943',1,'ButtonType.cs']]]
 ];

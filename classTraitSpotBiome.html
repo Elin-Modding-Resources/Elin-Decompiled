@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.267 Stable Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.268 Nightly</span>
    </div>
   </td>
  </tr>
@@ -734,60 +734,60 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TraitSpotBiome_8cs_source.html#l00074">74</a> of file <a class="el" href="TraitSpotBiome_8cs_source.html">TraitSpotBiome.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   77</span>        List&lt;Thing&gt; listRemove = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_function" href="classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d">ListPoints</a>(<span class="keyword">null</span>, onlyPassable: <span class="keyword">false</span>))</div>
-<div class="line"><span class="lineno">   79</span>        {</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.HasThing)</div>
-<div class="line"><span class="lineno">   81</span>            {</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Things)</div>
-<div class="line"><span class="lineno">   85</span>            {</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">if</span> (!thing.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>)</div>
-<div class="line"><span class="lineno">   87</span>                {</div>
-<div class="line"><span class="lineno">   88</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   89</span>                }</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitAltar.html">TraitAltar</a>)</div>
-<div class="line"><span class="lineno">   91</span>                {</div>
-<div class="line"><span class="lineno">   92</span>                    num++;</div>
-<div class="line"><span class="lineno">   93</span>                    <span class="keywordflow">if</span> (tryRemove &amp;&amp; thing.<a class="code hl_property" href="classCard.html#a06b07c0605236205f9aa55509dc98bab">c_priceFix</a> == -100)</div>
-<div class="line"><span class="lineno">   94</span>                    {</div>
-<div class="line"><span class="lineno">   95</span>                        TryRemove(thing, 4);</div>
-<div class="line"><span class="lineno">   96</span>                    }</div>
-<div class="line"><span class="lineno">   97</span>                }</div>
-<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitPowerStatue.html">TraitPowerStatue</a>)</div>
-<div class="line"><span class="lineno">   99</span>                {</div>
-<div class="line"><span class="lineno">  100</span>                    num++;</div>
-<div class="line"><span class="lineno">  101</span>                    <span class="keywordflow">if</span> (tryRemove &amp;&amp; !thing.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a> &amp;&amp; thing.<a class="code hl_property" href="classCard.html#a06b07c0605236205f9aa55509dc98bab">c_priceFix</a> == -100)</div>
-<div class="line"><span class="lineno">  102</span>                    {</div>
-<div class="line"><span class="lineno">  103</span>                        TryRemove(thing, 2);</div>
-<div class="line"><span class="lineno">  104</span>                    }</div>
-<div class="line"><span class="lineno">  105</span>                }</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (tryRemove)</div>
-<div class="line"><span class="lineno">  109</span>        {</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item2 <span class="keywordflow">in</span> listRemove)</div>
-<div class="line"><span class="lineno">  111</span>            {</div>
-<div class="line"><span class="lineno">  112</span>                item2.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
-<div class="line"><span class="lineno">  113</span>            }</div>
-<div class="line"><span class="lineno">  114</span>        }</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">void</span> TryRemove(<a class="code hl_class" href="classThing.html">Thing</a> t, <span class="keywordtype">int</span> h)</div>
-<div class="line"><span class="lineno">  117</span>        {</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aa59df174a7bfdb6f3f5117282989287f">c_dateStockExpire</a> == 0)</div>
-<div class="line"><span class="lineno">  119</span>            {</div>
-<div class="line"><span class="lineno">  120</span>                t.c_dateStockExpire = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>(h);</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a922d66f6ea6d2b5e5a1e3e2323cd14a6">IsExpired</a>(t.<a class="code hl_property" href="classCard.html#aa59df174a7bfdb6f3f5117282989287f">c_dateStockExpire</a>))</div>
-<div class="line"><span class="lineno">  123</span>            {</div>
-<div class="line"><span class="lineno">  124</span>                listRemove.Add(t);</div>
-<div class="line"><span class="lineno">  125</span>            }</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitSpotBiome_8cs_source.html#l00092">92</a> of file <a class="el" href="TraitSpotBiome_8cs_source.html">TraitSpotBiome.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   95</span>        List&lt;Thing&gt; listRemove = <span class="keyword">new</span> List&lt;Thing&gt;();</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_function" href="classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d">ListPoints</a>(<span class="keyword">null</span>, onlyPassable: <span class="keyword">false</span>))</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.HasThing)</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  101</span>            }</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing <span class="keywordflow">in</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Things)</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">if</span> (!thing.<a class="code hl_property" href="classCard.html#aadea8879b1297e3bd6bae341b8be33c7">IsInstalled</a>)</div>
+<div class="line"><span class="lineno">  105</span>                {</div>
+<div class="line"><span class="lineno">  106</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  107</span>                }</div>
+<div class="line"><span class="lineno">  108</span>                <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitAltar.html">TraitAltar</a>)</div>
+<div class="line"><span class="lineno">  109</span>                {</div>
+<div class="line"><span class="lineno">  110</span>                    num++;</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">if</span> (tryRemove &amp;&amp; thing.<a class="code hl_property" href="classCard.html#a06b07c0605236205f9aa55509dc98bab">c_priceFix</a> == -100)</div>
+<div class="line"><span class="lineno">  112</span>                    {</div>
+<div class="line"><span class="lineno">  113</span>                        TryRemove(thing, 4);</div>
+<div class="line"><span class="lineno">  114</span>                    }</div>
+<div class="line"><span class="lineno">  115</span>                }</div>
+<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (thing.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitPowerStatue.html">TraitPowerStatue</a>)</div>
+<div class="line"><span class="lineno">  117</span>                {</div>
+<div class="line"><span class="lineno">  118</span>                    num++;</div>
+<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">if</span> (tryRemove &amp;&amp; !thing.<a class="code hl_property" href="classCard.html#ac47c1e60f53b25b3eefa678bda0340ba">isOn</a> &amp;&amp; thing.<a class="code hl_property" href="classCard.html#a06b07c0605236205f9aa55509dc98bab">c_priceFix</a> == -100)</div>
+<div class="line"><span class="lineno">  120</span>                    {</div>
+<div class="line"><span class="lineno">  121</span>                        TryRemove(thing, 2);</div>
+<div class="line"><span class="lineno">  122</span>                    }</div>
+<div class="line"><span class="lineno">  123</span>                }</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (tryRemove)</div>
+<div class="line"><span class="lineno">  127</span>        {</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> item2 <span class="keywordflow">in</span> listRemove)</div>
+<div class="line"><span class="lineno">  129</span>            {</div>
+<div class="line"><span class="lineno">  130</span>                item2.<a class="code hl_function" href="classCard.html#aa9ca06c4b45648bc819adef16f03c3bd">Destroy</a>();</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordtype">void</span> TryRemove(<a class="code hl_class" href="classThing.html">Thing</a> t, <span class="keywordtype">int</span> h)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classCard.html#aa59df174a7bfdb6f3f5117282989287f">c_dateStockExpire</a> == 0)</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>                t.c_dateStockExpire = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a566305ea6e2769202e3adc2381f0b701">GetRaw</a>(h);</div>
+<div class="line"><span class="lineno">  139</span>            }</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a55cea92739455d0aa460e2a7a1503f8a">world</a>.<a class="code hl_variable" href="classWorld.html#a6b892261ab3162c68042c42ee0183984">date</a>.<a class="code hl_function" href="classDate.html#a922d66f6ea6d2b5e5a1e3e2323cd14a6">IsExpired</a>(t.<a class="code hl_property" href="classCard.html#aa59df174a7bfdb6f3f5117282989287f">c_dateStockExpire</a>))</div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                listRemove.Add(t);</div>
+<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCard_html_a06b07c0605236205f9aa55509dc98bab"><div class="ttname"><a href="classCard.html#a06b07c0605236205f9aa55509dc98bab">Card.c_priceFix</a></div><div class="ttdeci">int c_priceFix</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01137">Card.cs:1138</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00054">Card.cs:54</a></div></div>
@@ -885,25 +885,44 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   54</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   55</span>            }</div>
 <div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(5) == 0)</div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_property" href="classGame.html#a8bd84f518d7e71797404cb97c98eda3d">IsSurvival</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a33b08d909a9b1324b025810711eb8996">survival</a>.<a class="code hl_variable" href="classSurvivalManager.html#a366e4da0d7ad7e17b0021411117a3184">flags</a>.<a class="code hl_property" href="classSurvivalManager_1_1Flags.html#a78c2d65f0df6624e267b41d71390cf53">raidLv</a> &lt; 20)</div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aa44fb2552d98d46bd6c280431a2a325d">SpawnMob</a>(randomPoint, <a class="code hl_class" href="classSpawnSetting.html">SpawnSetting</a>.<a class="code hl_function" href="classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967">HomeWild</a>(1));</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aa44fb2552d98d46bd6c280431a2a325d">SpawnMob</a>(randomPoint);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            randomPoint.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a5ee355446dce77cb46674a1651c9c604">biome</a>.<a class="code hl_function" href="classBiomeProfile.html#a6aea5dad14d20169771959d3feddfd4f">Populate</a>(randomPoint, interior: <span class="keyword">false</span>, 100f);</div>
-<div class="line"><span class="lineno">   71</span>        }</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordtype">bool</span> valid = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a560e61313723030ac4c0eb88e8a8c064">ForeachNeighbor</a>(delegate(<a class="code hl_class" href="classPoint.html">Point</a> p)</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (valid)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classThing.html">Thing</a> thing3 <span class="keywordflow">in</span> p.<a class="code hl_property" href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Things</a>)</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    <span class="keywordflow">if</span> (thing3 != <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a> &amp;&amp; thing3.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitSpotBiome.html">TraitSpotBiome</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(2) == 0)</div>
+<div class="line"><span class="lineno">   65</span>                    {</div>
+<div class="line"><span class="lineno">   66</span>                        valid = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   67</span>                    }</div>
+<div class="line"><span class="lineno">   68</span>                }</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>        });</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (!valid)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a62c6ef288a7140793d6e5fb313fb72e4">rnd</a>(5) == 0)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_property" href="classGame.html#a8bd84f518d7e71797404cb97c98eda3d">IsSurvival</a> &amp;&amp; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#a33b08d909a9b1324b025810711eb8996">survival</a>.<a class="code hl_variable" href="classSurvivalManager.html#a366e4da0d7ad7e17b0021411117a3184">flags</a>.<a class="code hl_property" href="classSurvivalManager_1_1Flags.html#a78c2d65f0df6624e267b41d71390cf53">raidLv</a> &lt; 20)</div>
+<div class="line"><span class="lineno">   78</span>            {</div>
+<div class="line"><span class="lineno">   79</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aa44fb2552d98d46bd6c280431a2a325d">SpawnMob</a>(randomPoint, <a class="code hl_class" href="classSpawnSetting.html">SpawnSetting</a>.<a class="code hl_function" href="classSpawnSetting.html#a1cec84a086f6c5e03f5f8aafc9d21967">HomeWild</a>(1));</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#aa44fb2552d98d46bd6c280431a2a325d">SpawnMob</a>(randomPoint);</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            randomPoint.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a5ee355446dce77cb46674a1651c9c604">biome</a>.<a class="code hl_function" href="classBiomeProfile.html#a6aea5dad14d20169771959d3feddfd4f">Populate</a>(randomPoint, interior: <span class="keyword">false</span>, 100f);</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
 <div class="ttc" id="aclassBiomeProfile_html_a6aea5dad14d20169771959d3feddfd4f"><div class="ttname"><a href="classBiomeProfile.html#a6aea5dad14d20169771959d3feddfd4f">BiomeProfile.Populate</a></div><div class="ttdeci">void Populate(Point point, bool interior=false, float mtpDensity=1f)</div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00716">BiomeProfile.cs:716</a></div></div>
 <div class="ttc" id="aclassCardBlueprint_html"><div class="ttname"><a href="classCardBlueprint.html">CardBlueprint</a></div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00001">CardBlueprint.cs:2</a></div></div>
 <div class="ttc" id="aclassCardBlueprint_html_a564cdf8fd4f0cd93b0cdbfb450d40afb"><div class="ttname"><a href="classCardBlueprint.html#a564cdf8fd4f0cd93b0cdbfb450d40afb">CardBlueprint.Set</a></div><div class="ttdeci">static void Set(CardBlueprint _bp=null)</div><div class="ttdef"><b>Definition:</b> <a href="CardBlueprint_8cs_source.html#l00055">CardBlueprint.cs:55</a></div></div>
+<div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00060">Card.cs:60</a></div></div>
 <div class="ttc" id="aclassCard_html_ac66b9c1eebf09725d0048c4b1a1b1866"><div class="ttname"><a href="classCard.html#ac66b9c1eebf09725d0048c4b1a1b1866">Card.SetPriceFix</a></div><div class="ttdeci">Thing SetPriceFix(int a)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07338">Card.cs:7338</a></div></div>
 <div class="ttc" id="aclassCard_html_ad4cc8d8221b24490cd8d45ddfd04bf38"><div class="ttname"><a href="classCard.html#ad4cc8d8221b24490cd8d45ddfd04bf38">Card.Install</a></div><div class="ttdeci">Card Install()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03766">Card.cs:3766</a></div></div>
 <div class="ttc" id="aclassCell_html_a08f807559626eeda17f411b6a038665f"><div class="ttname"><a href="classCell.html#a08f807559626eeda17f411b6a038665f">Cell.room</a></div><div class="ttdeci">Room room</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00102">Cell.cs:102</a></div></div>
@@ -922,6 +941,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
 <div class="ttc" id="aclassPoint_html_a36e0097e711f0aff188c4d453dd8f13f"><div class="ttname"><a href="classPoint.html#a36e0097e711f0aff188c4d453dd8f13f">Point.IsSky</a></div><div class="ttdeci">bool IsSky</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00223">Point.cs:224</a></div></div>
+<div class="ttc" id="aclassPoint_html_a560e61313723030ac4c0eb88e8a8c064"><div class="ttname"><a href="classPoint.html#a560e61313723030ac4c0eb88e8a8c064">Point.ForeachNeighbor</a></div><div class="ttdeci">void ForeachNeighbor(Action&lt; Point &gt; action, bool diagonal=true)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01397">Point.cs:1397</a></div></div>
+<div class="ttc" id="aclassPoint_html_a683b8213ae7243d6f8531fc0e90e70e7"><div class="ttname"><a href="classPoint.html#a683b8213ae7243d6f8531fc0e90e70e7">Point.Things</a></div><div class="ttdeci">List&lt; Thing &gt; Things</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00338">Point.cs:338</a></div></div>
 <div class="ttc" id="aclassPoint_html_a8c088e2f6ed71551750b02814a6032d4"><div class="ttname"><a href="classPoint.html#a8c088e2f6ed71551750b02814a6032d4">Point.HasThing</a></div><div class="ttdeci">bool HasThing</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00250">Point.cs:251</a></div></div>
 <div class="ttc" id="aclassPoint_html_abd8d973186ba376ea92ca7563dd98231"><div class="ttname"><a href="classPoint.html#abd8d973186ba376ea92ca7563dd98231">Point.HasObj</a></div><div class="ttdeci">bool HasObj</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00137">Point.cs:137</a></div></div>
 <div class="ttc" id="aclassPoint_html_adf88acccb063c764604ddcd520fe332d"><div class="ttname"><a href="classPoint.html#adf88acccb063c764604ddcd520fe332d">Point.HasBlock</a></div><div class="ttdeci">bool HasBlock</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00141">Point.cs:141</a></div></div>
@@ -935,14 +956,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassThingGen_html"><div class="ttname"><a href="classThingGen.html">ThingGen</a></div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00004">ThingGen.cs:5</a></div></div>
 <div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 <div class="ttc" id="aclassTraitSpotBiome_html"><div class="ttname"><a href="classTraitSpotBiome.html">TraitSpotBiome</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSpotBiome_8cs_source.html#l00003">TraitSpotBiome.cs:4</a></div></div>
-<div class="ttc" id="aclassTraitSpotBiome_html_a1919aa54ec4ba5278caa7e1a63e35b83"><div class="ttname"><a href="classTraitSpotBiome.html#a1919aa54ec4ba5278caa7e1a63e35b83">TraitSpotBiome.CountNotableThing</a></div><div class="ttdeci">int CountNotableThing(bool tryRemove=true)</div><div class="ttdef"><b>Definition:</b> <a href="TraitSpotBiome_8cs_source.html#l00074">TraitSpotBiome.cs:74</a></div></div>
+<div class="ttc" id="aclassTraitSpotBiome_html_a1919aa54ec4ba5278caa7e1a63e35b83"><div class="ttname"><a href="classTraitSpotBiome.html#a1919aa54ec4ba5278caa7e1a63e35b83">TraitSpotBiome.CountNotableThing</a></div><div class="ttdeci">int CountNotableThing(bool tryRemove=true)</div><div class="ttdef"><b>Definition:</b> <a href="TraitSpotBiome_8cs_source.html#l00092">TraitSpotBiome.cs:92</a></div></div>
 <div class="ttc" id="aclassTrait_html_a3dfddf8ab3a55240f886305bddba17bf"><div class="ttname"><a href="classTrait.html#a3dfddf8ab3a55240f886305bddba17bf">Trait.GetRandomPoint</a></div><div class="ttdeci">Point GetRandomPoint(Func&lt; Point, bool &gt; func=null, Chara accessChara=null)</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00761">Trait.cs:761</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00028">Trait.cs:28</a></div></div>
 <div class="ttc" id="aclassZone_html_a5087a704f7346f0660ac8941e94cff0d"><div class="ttname"><a href="classZone.html#a5087a704f7346f0660ac8941e94cff0d">Zone.IsPCFactionOrTent</a></div><div class="ttdeci">bool IsPCFactionOrTent</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00475">Zone.cs:476</a></div></div>
-<div class="ttc" id="aclassZone_html_aa44fb2552d98d46bd6c280431a2a325d"><div class="ttname"><a href="classZone.html#aa44fb2552d98d46bd6c280431a2a325d">Zone.SpawnMob</a></div><div class="ttdeci">Chara SpawnMob(string id, Point pos=null)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02756">Zone.cs:2756</a></div></div>
+<div class="ttc" id="aclassZone_html_aa44fb2552d98d46bd6c280431a2a325d"><div class="ttname"><a href="classZone.html#aa44fb2552d98d46bd6c280431a2a325d">Zone.SpawnMob</a></div><div class="ttdeci">Chara SpawnMob(string id, Point pos=null)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l02764">Zone.cs:2764</a></div></div>
 <div class="ttc" id="aclassZone_html_af3a7bcf0f1c645ac02c3793e85700bf9"><div class="ttname"><a href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">Zone.AddCard</a></div><div class="ttdeci">Card AddCard(Card t, Point point)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01992">Zone.cs:1992</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00019">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00021">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l01992">Zone.AddCard()</a>, <a class="el" href="Cell_8cs_source.html#l01075">Cell.biome</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="TraitSpotBiome_8cs_source.html#l00074">CountNotableThing()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="CharaGen_8cs_source.html#l00017">CharaGen.Create()</a>, <a class="el" href="Map_8cs_source.html#l02568">Map.FindChara()</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00139">SurvivalManager.flags</a>, <a class="el" href="EClass_8cs_source.html#l00009">EClass.game</a>, <a class="el" href="Trait_8cs_source.html#l00761">Trait.GetRandomPoint()</a>, <a class="el" href="Point_8cs_source.html#l00141">Point.HasBlock</a>, <a class="el" href="Point_8cs_source.html#l00137">Point.HasObj</a>, <a class="el" href="Point_8cs_source.html#l00251">Point.HasThing</a>, <a class="el" href="SpawnSetting_8cs_source.html#l00093">SpawnSetting.HomeWild()</a>, <a class="el" href="Card_8cs_source.html#l03766">Card.Install()</a>, <a class="el" href="PropsManager_8cs_source.html#l00008">PropsManager.installed</a>, <a class="el" href="Card_8cs_source.html#l02384">Card.IsInstalled</a>, <a class="el" href="Zone_8cs_source.html#l00476">Zone.IsPCFactionOrTent</a>, <a class="el" href="Point_8cs_source.html#l00224">Point.IsSky</a>, <a class="el" href="Game_8cs_source.html#l00276">Game.IsSurvival</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00716">BiomeProfile.Populate()</a>, <a class="el" href="Map_8cs_source.html#l00091">Map.props</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00078">SurvivalManager.Flags.raidLv</a>, <a class="el" href="EClass_8cs_source.html#l00059">EClass.rnd()</a>, <a class="el" href="Cell_8cs_source.html#l00102">Cell.room</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="CardBlueprint_8cs_source.html#l00055">CardBlueprint.Set()</a>, <a class="el" href="Card_8cs_source.html#l07338">Card.SetPriceFix()</a>, <a class="el" href="Zone_8cs_source.html#l02756">Zone.SpawnMob()</a>, <a class="el" href="Game_8cs_source.html#l00228">Game.survival</a>, <a class="el" href="Props_8cs_source.html#l00020">Props.things</a>, and <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00019">EClass._map</a>, <a class="el" href="EClass_8cs_source.html#l00021">EClass._zone</a>, <a class="el" href="Zone_8cs_source.html#l01992">Zone.AddCard()</a>, <a class="el" href="Cell_8cs_source.html#l01075">Cell.biome</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="TraitSpotBiome_8cs_source.html#l00092">CountNotableThing()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="CharaGen_8cs_source.html#l00017">CharaGen.Create()</a>, <a class="el" href="Map_8cs_source.html#l02568">Map.FindChara()</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00139">SurvivalManager.flags</a>, <a class="el" href="Point_8cs_source.html#l01397">Point.ForeachNeighbor()</a>, <a class="el" href="EClass_8cs_source.html#l00009">EClass.game</a>, <a class="el" href="Trait_8cs_source.html#l00761">Trait.GetRandomPoint()</a>, <a class="el" href="Point_8cs_source.html#l00141">Point.HasBlock</a>, <a class="el" href="Point_8cs_source.html#l00137">Point.HasObj</a>, <a class="el" href="Point_8cs_source.html#l00251">Point.HasThing</a>, <a class="el" href="SpawnSetting_8cs_source.html#l00093">SpawnSetting.HomeWild()</a>, <a class="el" href="Card_8cs_source.html#l03766">Card.Install()</a>, <a class="el" href="PropsManager_8cs_source.html#l00008">PropsManager.installed</a>, <a class="el" href="Card_8cs_source.html#l02384">Card.IsInstalled</a>, <a class="el" href="Zone_8cs_source.html#l00476">Zone.IsPCFactionOrTent</a>, <a class="el" href="Point_8cs_source.html#l00224">Point.IsSky</a>, <a class="el" href="Game_8cs_source.html#l00276">Game.IsSurvival</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00716">BiomeProfile.Populate()</a>, <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>, <a class="el" href="Map_8cs_source.html#l00091">Map.props</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00078">SurvivalManager.Flags.raidLv</a>, <a class="el" href="EClass_8cs_source.html#l00059">EClass.rnd()</a>, <a class="el" href="Cell_8cs_source.html#l00102">Cell.room</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="CardBlueprint_8cs_source.html#l00055">CardBlueprint.Set()</a>, <a class="el" href="Card_8cs_source.html#l07338">Card.SetPriceFix()</a>, <a class="el" href="Zone_8cs_source.html#l02764">Zone.SpawnMob()</a>, <a class="el" href="Game_8cs_source.html#l00228">Game.survival</a>, <a class="el" href="Point_8cs_source.html#l00338">Point.Things</a>, <a class="el" href="Props_8cs_source.html#l00020">Props.things</a>, and <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>.</p>
 
 </div>
 </div>

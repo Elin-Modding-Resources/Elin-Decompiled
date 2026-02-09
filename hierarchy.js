@@ -132,7 +132,9 @@ var hierarchy =
     [ "BLOCK", "classBLOCK.html", null ],
     [ "ColorProfile.BlockColors", "classColorProfile_1_1BlockColors.html", null ],
     [ "Element.BonusInfo", "classElement_1_1BonusInfo.html", null ],
+    [ "Net.BookData", "classNet_1_1BookData.html", null ],
     [ "BookList", "classBookList.html", null ],
+    [ "BottleMessageList", "classBottleMessageList.html", null ],
     [ "Window.Setting.BottomAction", "classWindow_1_1Setting_1_1BottomAction.html", null ],
     [ "Button", null, [
       [ "UIButton", "classUIButton.html", [
@@ -454,7 +456,8 @@ var hierarchy =
                   [ "ConTransmuteBroom", "classConTransmuteBroom.html", null ],
                   [ "ConTransmuteCat", "classConTransmuteCat.html", null ],
                   [ "ConTransmuteMimic", "classConTransmuteMimic.html", null ],
-                  [ "ConTransmutePutit", "classConTransmutePutit.html", null ]
+                  [ "ConTransmutePutit", "classConTransmutePutit.html", null ],
+                  [ "ConTransmuteShadow", "classConTransmuteShadow.html", null ]
                 ] ],
                 [ "ConWardMonster", "classConWardMonster.html", null ],
                 [ "ConWeapon", "classConWeapon.html", null ],
@@ -1900,7 +1903,9 @@ var hierarchy =
           ] ],
           [ "TraitBlueprint", "classTraitBlueprint.html", null ],
           [ "TraitBook", "classTraitBook.html", [
-            [ "TraitParchment", "classTraitParchment.html", null ]
+            [ "TraitParchment", "classTraitParchment.html", [
+              [ "TraitParchmentBottle", "classTraitParchmentBottle.html", null ]
+            ] ]
           ] ],
           [ "TraitBookExp", "classTraitBookExp.html", [
             [ "TraitBookSecret", "classTraitBookSecret.html", null ]
