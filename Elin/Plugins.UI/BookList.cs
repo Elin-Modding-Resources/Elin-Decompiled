@@ -6,11 +6,15 @@ public class BookList
 {
 	public class Item
 	{
+		public string[] lines;
+
 		public string title;
 
 		public string author;
 
 		public string id;
+
+		public string cat;
 
 		public int chance = 100;
 
@@ -21,9 +25,12 @@ public class BookList
 
 	public static void Init()
 	{
-		dict = new Dictionary<string, Dictionary<string, Item>>();
-		AddDir("Book", CorePath.CorePackage.Book);
-		AddDir("Scroll", CorePath.CorePackage.Scroll);
+		if (dict == null)
+		{
+			dict = new Dictionary<string, Dictionary<string, Item>>();
+			AddDir("Book", CorePath.CorePackage.Book);
+			AddDir("Scroll", CorePath.CorePackage.Scroll);
+		}
 		static void AddDir(string id, string path)
 		{
 			DirectoryInfo directoryInfo = new DirectoryInfo(path);
@@ -38,6 +45,7 @@ public class BookList
 					string[] array = streamReader.ReadLine().Split(',');
 					Item item = new Item
 					{
+						cat = id,
 						title = array[0],
 						author = ((array.Length >= 2 && !array[1].IsEmpty()) ? "nameAuthor".lang(array[1]) : "unknownAuthor".lang()),
 						chance = ((array.Length >= 3) ? array[2].ToInt() : 100),
@@ -53,12 +61,14 @@ public class BookList
 
 	public static Item GetRandomItem(string idCat = "Book")
 	{
-		return dict[idCat].Where((KeyValuePair<string, Item> p) => p.Value.chance != 0).ToList().RandomItem()
+		Init();
+		return dict[idCat].Where((KeyValuePair<string, Item> p) => p.Value.chance != 0).ToList().RandomItemWeighted((KeyValuePair<string, Item> p) => p.Value.chance)
 			.Value;
 	}
 
 	public static Item GetItem(string id, string idCat = "Book")
 	{
+		Init();
 		return dict[idCat].TryGetValue(id) ?? dict["Book"]["_default"];
 	}
 }
