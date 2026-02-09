@@ -259,6 +259,7 @@ public class Core : BaseCore
 				if (debug.enable || !SteamAPI.IsSteamRunning())
 				{
 					BookList.dict = null;
+					BottleMessageList.list = null;
 					ui.ShowLang();
 					return;
 				}
@@ -268,6 +269,7 @@ public class Core : BaseCore
 					if (!(currentGameLanguage == "japanese"))
 					{
 						BookList.dict = null;
+						BottleMessageList.list = null;
 						ui.ShowLang();
 						return;
 					}
@@ -524,6 +526,7 @@ public class Core : BaseCore
 		WordGen.initialized = false;
 		RecipeManager.rebuild = true;
 		BookList.dict = null;
+		BottleMessageList.list = null;
 		SpawnList.allList.Clear();
 	}
 

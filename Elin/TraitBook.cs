@@ -16,7 +16,7 @@ public class TraitBook : TraitScroll
 		}
 	}
 
-	public BookList.Item Item => BookList.GetItem(IdItem, IdCat);
+	public virtual BookList.Item Item => BookList.GetItem(IdItem, IdCat);
 
 	public override bool CanStackTo(Thing to)
 	{

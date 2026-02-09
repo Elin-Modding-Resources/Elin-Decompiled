@@ -9,10 +9,6 @@ public class ConTransmuteBat : ConTransmute
 		return RendererReplacer.CreateFrom("bat_trans");
 	}
 
-	public override void Tick()
-	{
-	}
-
 	public void CheckSeen()
 	{
 		if (!EClass._zone.IsPCFactionOrTent && owner.pos.TryWitnessCrime(owner))

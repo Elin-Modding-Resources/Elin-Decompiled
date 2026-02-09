@@ -7,29 +7,29 @@ public class ELEMENT
 {
 	public const int difficulty = 765;
 
-	public const int recharge = 761;
-
 	public const int air = 763;
 
 	public const int roasted = 762;
 
-	public const int purity = 759;
-
-	public const int hotspring = 756;
-
-	public const int blood = 755;
-
 	public const int stimulant = 760;
-
-	public const int nerve = 754;
 
 	public const int comfort = 750;
 
 	public const int rare = 751;
 
+	public const int cute = 752;
+
 	public const int antidote = 753;
 
-	public const int cute = 752;
+	public const int nerve = 754;
+
+	public const int blood = 755;
+
+	public const int hotspring = 756;
+
+	public const int purity = 759;
+
+	public const int recharge = 761;
 
 	public const int _void = 0;
 
@@ -49,7 +49,7 @@ public class ELEMENT
 
 	public const int hardness = 13;
 
-	public const int water = 15;
+	public const int growth = 14;
 
 	public const int heat = 16;
 
@@ -57,7 +57,7 @@ public class ELEMENT
 
 	public const int taste = 18;
 
-	public const int growth = 14;
+	public const int water = 15;
 
 	public const int fire = 21;
 
@@ -79,9 +79,9 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[36]
 	{
-		765, 761, 763, 762, 759, 756, 755, 760, 754, 750,
-		751, 753, 752, 0, 2, 1, 3, 5, 10, 11,
-		12, 13, 15, 16, 17, 18, 14, 21, 22, 23,
+		765, 763, 762, 760, 750, 751, 752, 753, 754, 755,
+		756, 759, 761, 0, 2, 1, 3, 5, 10, 11,
+		12, 13, 14, 16, 17, 18, 15, 21, 22, 23,
 		24, 25, 26, 29, 85, 20
 	};
 }

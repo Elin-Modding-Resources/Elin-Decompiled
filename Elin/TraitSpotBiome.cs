@@ -54,6 +54,24 @@ public class TraitSpotBiome : TraitSpot
 				return;
 			}
 		}
+		bool valid = true;
+		owner.pos.ForeachNeighbor(delegate(Point p)
+		{
+			if (valid)
+			{
+				foreach (Thing thing3 in p.Things)
+				{
+					if (thing3 != owner && thing3.trait is TraitSpotBiome && EClass.rnd(2) == 0)
+					{
+						valid = false;
+					}
+				}
+			}
+		});
+		if (!valid)
+		{
+			return;
+		}
 		if (EClass.rnd(5) == 0)
 		{
 			if (EClass.game.IsSurvival && EClass.game.survival.flags.raidLv < 20)

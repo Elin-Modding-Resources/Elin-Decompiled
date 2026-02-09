@@ -748,7 +748,6 @@ public class Game : EClass
 		HotItemHeld.taskBuild = null;
 		InvOwner.Trader = (InvOwner.Main = null);
 		LayerDrama.currentQuest = null;
-		BookList.Init();
 		ContentGallery.lastPage = 0;
 		ContentGallery.listMode = false;
 		if (!Application.isEditor || !EClass.debug.enable)

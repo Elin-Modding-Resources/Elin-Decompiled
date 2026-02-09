@@ -17,10 +17,6 @@ public class ConTransmuteMimic : ConTransmute
 		return RendererReplacer.CreateFrom(thing.id, 0, thing.material.id);
 	}
 
-	public override void Tick()
-	{
-	}
-
 	public override void OnBeforeStart()
 	{
 		List<Thing> list = owner.things.List((Thing t) => !t.source.multisize && t.c_isImportant, onlyAccessible: true);

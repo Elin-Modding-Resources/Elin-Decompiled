@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class AI_OpenGambleChest : AIAct
 {
@@ -55,7 +56,7 @@ public class AI_OpenGambleChest : AIAct
 				{
 					owner.PlaySound("money");
 					owner.PlayAnime(AnimeID.Jump);
-					Thing thing = ThingGen.Create("money").SetNum(EClass.rndHalf(50 * (100 + target.c_lockLv * 10)));
+					Thing thing = ThingGen.Create("money").SetNum(EClass.rndHalf(50 * (100 + Mathf.Min(target.c_lockLv, 10000000) * 10)));
 					owner.Pick(thing, msg: false);
 					owner.Say("gambleChest_win", thing);
 				}

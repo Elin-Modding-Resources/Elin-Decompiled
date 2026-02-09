@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ABILITY
 {
-	public const int ActZap = 5051;
+	public const int ActBash = 5052;
 
 	public const int ActDreamBug = 6020;
 
@@ -28,17 +28,19 @@ public class ABILITY
 
 	public const int TaskHarvest = 5053;
 
-	public const int ActBash = 5052;
+	public const int ActZap = 5051;
 
 	public const int AI_Sleep = 5050;
 
 	public const int AI_Meditate = 6003;
 
-	public const int AI_OpenLock = 5049;
-
 	public const int ActEscape = 6400;
 
+	public const int ActSuicide = 6410;
+
 	public const int ActDuplicate = 6420;
+
+	public const int ActGazeInsane = 6621;
 
 	public const int ActGazeDim = 6620;
 
@@ -52,9 +54,9 @@ public class ABILITY
 
 	public const int ActBloodsuck = 6607;
 
-	public const int ActSuicide = 6410;
+	public const int ActCrySad = 6605;
 
-	public const int ActBurnMana = 6606;
+	public const int ActCryRage = 6604;
 
 	public const int ActNTR = 6603;
 
@@ -68,11 +70,11 @@ public class ABILITY
 
 	public const int ActRush = 6450;
 
-	public const int ActCryRage = 6604;
+	public const int AI_OpenLock = 5049;
+
+	public const int ActGazeMutation = 6622;
 
 	public const int ActItem = 5048;
-
-	public const int ActPick = 5047;
 
 	public const int ActInstall = 5046;
 
@@ -84,15 +86,13 @@ public class ABILITY
 
 	public const int TaskGoOut = 5023;
 
-	public const int TaskSleepOnBed = 5022;
-
 	public const int ActWait = 5000;
-
-	public const int GoalSleep = 5027;
 
 	public const int ActMelee = 5001;
 
-	public const int Ranged = 5003;
+	public const int GoalSleep = 5027;
+
+	public const int Melee = 5002;
 
 	public const int Sleep = 5004;
 
@@ -104,7 +104,9 @@ public class ABILITY
 
 	public const int General = 5008;
 
-	public const int Melee = 5002;
+	public const int TaskMine = 5009;
+
+	public const int Ranged = 5003;
 
 	public const int ActReleaseHeld = 5028;
 
@@ -142,13 +144,13 @@ public class ABILITY
 
 	public const int AI_Deconstruct = 5031;
 
-	public const int ActGazeInsane = 6621;
+	public const int ActPick = 5047;
 
-	public const int ActGazeMutation = 6622;
+	public const int ActGazeMana = 6623;
 
-	public const int ActCrySad = 6605;
+	public const int ActBurnMana = 6606;
 
-	public const int ActDrainBlood = 6626;
+	public const int ActCatHuffing = 6627;
 
 	public const int breathe_Cold = 50201;
 
@@ -168,7 +170,7 @@ public class ABILITY
 
 	public const int breathe_Holy = 50209;
 
-	public const int ActGazeMana = 6623;
+	public const int ActDrainBlood = 6626;
 
 	public const int breathe_Magic = 50211;
 
@@ -181,8 +183,6 @@ public class ABILITY
 	public const int breathe_Impact = 50215;
 
 	public const int breathe_Void = 50216;
-
-	public const int TaskMine = 5009;
 
 	public const int TaskDig = 5010;
 
@@ -208,17 +208,15 @@ public class ABILITY
 
 	public const int TaskTrain = 5021;
 
+	public const int TaskSleepOnBed = 5022;
+
 	public const int breathe_Fire = 50200;
 
-	public const int SpTransmuteMimic = 8794;
+	public const int SpTransmuteShadow = 8795;
 
 	public const int breathe_Chaos = 50210;
 
-	public const int breathe_ = 7000;
-
-	public const int ActCatHuffing = 6627;
-
-	public const int ActInsult = 6630;
+	public const int ActSwarm = 6662;
 
 	public const int ActScream = 6631;
 
@@ -232,11 +230,11 @@ public class ABILITY
 
 	public const int ActDropMine = 6660;
 
-	public const int SpTransmuteBat = 8793;
+	public const int ActThrowPotion = 6661;
 
-	public const int ActSwarm = 6662;
+	public const int SpTransmuteMimic = 8794;
 
-	public const int ActMultiHit = 6663;
+	public const int ActInsult = 6630;
 
 	public const int ActBladeStorm = 6664;
 
@@ -244,13 +242,21 @@ public class ABILITY
 
 	public const int ActWhirlwind = 6666;
 
-	public const int ActThrowPotion = 6661;
+	public const int ActMissileBarrage = 6667;
 
 	public const int ActSummonSpecial = 6800;
 
+	public const int ActMultiHit = 6663;
+
+	public const int ActDeathSentense = 6802;
+
+	public const int SpTransmuteBat = 8793;
+
+	public const int breathe_ = 7000;
+
 	public const int ActHeadpat = 6904;
 
-	public const int ActMissileBarrage = 6667;
+	public const int ActKizuamiTrick = 6903;
 
 	public const int ActLulwyTrick = 6902;
 
@@ -258,38 +264,34 @@ public class ABILITY
 
 	public const int ActManaAbsorb = 6900;
 
+	public const int ActWombDark = 6801;
+
 	public const int SongValor = 6752;
 
 	public const int SongTulip = 6751;
 
-	public const int SongSleep = 6750;
-
-	public const int ActKizuamiTrick = 6903;
-
 	public const int StTaunt = 6700;
-
-	public const int ActWombDark = 6801;
-
-	public const int ActDeathSentense = 6802;
 
 	public const int StManaCost = 6720;
 
-	public static readonly int[] IDS = new int[136]
+	public const int SongSleep = 6750;
+
+	public static readonly int[] IDS = new int[137]
 	{
-		5051, 6020, 6019, 6018, 6015, 6013, 6012, 6050, 6011, 6001,
-		5055, 5054, 5053, 5052, 5050, 6003, 5049, 6400, 6420, 6620,
-		6613, 6612, 6611, 6610, 6607, 6410, 6606, 6603, 6602, 6601,
-		6600, 6500, 6450, 6604, 5048, 5047, 5046, 5026, 5025, 5024,
-		5023, 5022, 5000, 5027, 5001, 5003, 5004, 5005, 5006, 5007,
-		5008, 5002, 5028, 5029, 5030, 5045, 5044, 5043, 5042, 5041,
-		5040, 5039, 5038, 5037, 5036, 5035, 5034, 5033, 5032, 5031,
-		6621, 6622, 6605, 6626, 50201, 50202, 50203, 50204, 50205, 50206,
-		50207, 50208, 50209, 6623, 50211, 50212, 50213, 50214, 50215, 50216,
-		5009, 5010, 5011, 5012, 5013, 5014, 5015, 5016, 5017, 5018,
-		5019, 5020, 5021, 50200, 8794, 50210, 7000, 6627, 6630, 6631,
-		6640, 6641, 6642, 6650, 6660, 8793, 6662, 6663, 6664, 6665,
-		6666, 6661, 6800, 6904, 6667, 6902, 6901, 6900, 6752, 6751,
-		6750, 6903, 6700, 6801, 6802, 6720
+		5052, 6020, 6019, 6018, 6015, 6013, 6012, 6050, 6011, 6001,
+		5055, 5054, 5053, 5051, 5050, 6003, 6400, 6410, 6420, 6621,
+		6620, 6613, 6612, 6611, 6610, 6607, 6605, 6604, 6603, 6602,
+		6601, 6600, 6500, 6450, 5049, 6622, 5048, 5046, 5026, 5025,
+		5024, 5023, 5000, 5001, 5027, 5002, 5004, 5005, 5006, 5007,
+		5008, 5009, 5003, 5028, 5029, 5030, 5045, 5044, 5043, 5042,
+		5041, 5040, 5039, 5038, 5037, 5036, 5035, 5034, 5033, 5032,
+		5031, 5047, 6623, 6606, 6627, 50201, 50202, 50203, 50204, 50205,
+		50206, 50207, 50208, 50209, 6626, 50211, 50212, 50213, 50214, 50215,
+		50216, 5010, 5011, 5012, 5013, 5014, 5015, 5016, 5017, 5018,
+		5019, 5020, 5021, 5022, 50200, 8795, 50210, 6662, 6631, 6640,
+		6641, 6642, 6650, 6660, 6661, 8794, 6630, 6664, 6665, 6666,
+		6667, 6800, 6663, 6802, 8793, 7000, 6904, 6903, 6902, 6901,
+		6900, 6801, 6752, 6751, 6700, 6720, 6750
 	};
 }
 public class Ability : Act

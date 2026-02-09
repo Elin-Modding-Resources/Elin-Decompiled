@@ -2404,10 +2404,18 @@ public class Zone : Spatial, ICardParent, IInspect
 					EClass._zone.AddCard(ThingGen.Create("70", -1, ContentLv), randomSurface2);
 				}
 			}
+			for (int k = 0; k < EClass.rnd(EClass.rnd(base.isBeach ? 5 : 3) + 1); k++)
+			{
+				Point randomSurface3 = EClass._map.bounds.GetRandomSurface(centered: false, walkable: true, allowWater: true);
+				if (!randomSurface3.HasObj)
+				{
+					EClass._zone.AddCard(ThingGen.Create("bottle_message"), randomSurface3);
+				}
+			}
 		}
 		if (IsUnderwater)
 		{
-			for (int k = 0; k < 30 + EClass.rnd(30); k++)
+			for (int l = 0; l < 30 + EClass.rnd(30); l++)
 			{
 				SpawnMob(null, SpawnSetting.Fish());
 			}
@@ -2472,13 +2480,13 @@ public class Zone : Spatial, ICardParent, IInspect
 			if (EClass.rnd(3) == 0)
 			{
 				int num4 = EClass.rnd(2);
-				for (int l = 0; l < num4; l++)
+				for (int m = 0; m < num4; m++)
 				{
-					Point randomSurface3 = EClass._map.bounds.GetRandomSurface();
-					if (!randomSurface3.HasObj && !randomSurface3.HasThing)
+					Point randomSurface4 = EClass._map.bounds.GetRandomSurface();
+					if (!randomSurface4.HasObj && !randomSurface4.HasThing)
 					{
 						Card t2 = ThingGen.Create("chest3").ChangeMaterial(biome.style.matDoor);
-						EClass._zone.AddCard(t2, randomSurface3).Install();
+						EClass._zone.AddCard(t2, randomSurface4).Install();
 					}
 				}
 			}
@@ -2893,6 +2901,10 @@ public class Zone : Spatial, ICardParent, IInspect
 		if (setting.isEvolved)
 		{
 			chara.c_bossType = BossType.Evolved;
+		}
+		if (DangerLv >= 20 && !IsPCFaction && !IsTown && EClass.rnd(200) == 0)
+		{
+			chara.AddCondition<ConTransmuteShadow>();
 		}
 		return chara;
 	}

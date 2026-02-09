@@ -832,7 +832,7 @@ public class CoreDebug : EScriptable
 			}
 			NewsList.dict = null;
 			BookList.dict = null;
-			BookList.Init();
+			BottleMessageList.list = null;
 		}
 		if (EClass.core.IsGameStarted)
 		{
@@ -954,26 +954,13 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F2))
 		{
-			EClass._zone.development += 10;
-			EClass._zone.development *= EClass._zone.development;
-			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
-			if (targetChara != null)
+			if (Input.GetKey(KeyCode.LeftShift))
 			{
-				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
-				EClass.pc.Pick(targetChara.MakeGene());
-				TraitFoodEggFertilized.Incubate(targetChara.MakeEgg(effect: false, 1, addToZone: false, 100), targetChara.pos.GetNearestPoint(allowBlock: false, allowChara: false));
-				targetChara.ScaleByPrincipal();
+				Net.SendBook("test", "msg", BookCategory.Bottle, Lang.langCode, "msg2", "msg3", "msg4");
 			}
-			if (EClass.game.quests.Get<QuestDebt>() == null)
+			else
 			{
-				Chara chara = CharaGen.Create("loytel");
-				EClass._zone.AddCard(chara, EClass.pc.pos);
-				chara.SetGlobal();
-				Quest q = EClass.game.quests.Add("debt", "loytel");
-				EClass.game.quests.Start(q);
-				EClass.pc.party.RemoveMember(chara);
-				Hostility hostility2 = (chara.c_originalHostility = Hostility.Ally);
-				chara.hostility = hostility2;
+				RefreshChat();
 			}
 			return;
 		}
@@ -1441,6 +1428,11 @@ public class CoreDebug : EScriptable
 		if (Input.GetKeyDown(KeyCode.Keypad9))
 		{
 			card.renderer.PlayAnime(AnimeID.Attack, animeDest);
+		}
+		static async void RefreshChat()
+		{
+			List<Net.BookData> list2 = await Net.GetBook(BookCategory.Bottle, Lang.langCode);
+			Debug.Log(list2[0].name + "/" + list2[0].msg + "/" + list2[0].msg2 + "/" + list2[0].msg3 + "/" + list2[0].msg4);
 		}
 	}
 

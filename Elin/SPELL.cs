@@ -1,6 +1,6 @@
 public class SPELL
 {
-	public const int hand_Impact = 50415;
+	public const int bolt_Impact = 50315;
 
 	public const int flare_Sound = 51207;
 
@@ -140,17 +140,19 @@ public class SPELL
 
 	public const int sword_Holy = 51009;
 
+	public const int weapon_Ether = 50812;
+
 	public const int puddle_Ether = 50912;
 
 	public const int sword_Ether = 51012;
 
-	public const int bit_Ether = 51112;
-
 	public const int hand_Mind = 50404;
+
+	public const int flare_Ether = 51212;
 
 	public const int ball_Acid = 50113;
 
-	public const int weapon_Impact = 50815;
+	public const int miasma_Impact = 50715;
 
 	public const int bolt_Acid = 50313;
 
@@ -172,11 +174,7 @@ public class SPELL
 
 	public const int flare_Acid = 51213;
 
-	public const int ball_Cut = 50114;
-
-	public const int bolt_Impact = 50315;
-
-	public const int funnel_Impact = 50615;
+	public const int arrow_Impact = 50515;
 
 	public const int ball_Impact = 50115;
 
@@ -186,11 +184,11 @@ public class SPELL
 
 	public const int sword_Cut = 51014;
 
-	public const int weapon_Ether = 50812;
-
 	public const int puddle_Cut = 50914;
 
-	public const int miasma_Cut = 50714;
+	public const int miasma_Ether = 50712;
+
+	public const int weapon_Cut = 50814;
 
 	public const int funnel_Cut = 50614;
 
@@ -200,19 +198,21 @@ public class SPELL
 
 	public const int bolt_Cut = 50314;
 
-	public const int miasma_Impact = 50715;
+	public const int funnel_Impact = 50615;
 
-	public const int weapon_Cut = 50814;
+	public const int ball_Cut = 50114;
 
-	public const int miasma_Ether = 50712;
+	public const int miasma_Cut = 50714;
 
 	public const int funnel_Ether = 50612;
 
 	public const int arrow_Ether = 50512;
 
-	public const int sword_Chaos = 51010;
+	public const int hand_Ether = 50412;
 
 	public const int puddle_Chaos = 50910;
+
+	public const int sword_Impact = 51015;
 
 	public const int bit_Impact = 51115;
 
@@ -222,7 +222,7 @@ public class SPELL
 
 	public const int miasma_Chaos = 50710;
 
-	public const int bit_Chaos = 51110;
+	public const int sword_Chaos = 51010;
 
 	public const int funnel_Chaos = 50610;
 
@@ -240,17 +240,15 @@ public class SPELL
 
 	public const int arrow_Chaos = 50510;
 
-	public const int arrow_Impact = 50515;
+	public const int hand_Impact = 50415;
 
-	public const int flare_Chaos = 51210;
+	public const int bit_Chaos = 51110;
 
-	public const int sword_Impact = 51015;
-
-	public const int hand_Ether = 50412;
+	public const int ball_Magic = 50111;
 
 	public const int bolt_Ether = 50312;
 
-	public const int puddle_Impact = 50915;
+	public const int weapon_Impact = 50815;
 
 	public const int ball_Ether = 50112;
 
@@ -258,11 +256,11 @@ public class SPELL
 
 	public const int bit_Magic = 51111;
 
-	public const int ball_Magic = 50111;
-
 	public const int sword_Magic = 51011;
 
-	public const int weapon_Magic = 50811;
+	public const int flare_Chaos = 51210;
+
+	public const int puddle_Magic = 50911;
 
 	public const int miasma_Magic = 50711;
 
@@ -274,9 +272,11 @@ public class SPELL
 
 	public const int bolt_Magic = 50311;
 
-	public const int puddle_Magic = 50911;
+	public const int puddle_Impact = 50915;
 
-	public const int flare_Ether = 51212;
+	public const int weapon_Magic = 50811;
+
+	public const int bit_Ether = 51112;
 
 	public const int hand_Cold = 50401;
 
@@ -588,20 +588,20 @@ public class SPELL
 
 	public static readonly int[] IDS = new int[293]
 	{
-		50415, 51207, 51107, 51007, 50907, 50807, 50707, 50607, 50507, 50407,
+		50315, 51207, 51107, 51007, 50907, 50807, 50707, 50607, 50507, 50407,
 		50307, 50416, 50107, 51206, 50108, 50316, 50308, 50408, 50508, 50608,
 		50708, 50808, 50908, 51008, 51108, 51208, 50109, 50309, 50409, 50509,
 		50609, 50516, 50709, 51106, 51006, 50504, 50604, 50704, 50804, 50904,
 		51004, 51104, 51204, 50105, 51016, 50916, 50305, 50405, 50505, 50605,
 		50705, 50805, 50906, 50806, 50706, 50606, 50506, 50406, 50616, 50306,
 		50816, 50106, 51205, 51105, 51005, 50905, 50716, 50809, 50909, 51009,
-		50912, 51012, 51112, 50404, 50113, 50815, 50313, 50413, 50513, 50613,
-		50713, 50813, 50913, 51013, 51113, 51213, 50114, 50315, 50615, 50115,
-		51214, 51114, 51014, 50812, 50914, 50714, 50614, 50514, 50414, 50314,
-		50715, 50814, 50712, 50612, 50512, 51010, 50910, 51115, 51215, 50810,
-		50710, 51110, 50610, 50410, 50310, 50116, 50110, 51209, 51109, 50510,
-		50515, 51210, 51015, 50412, 50312, 50915, 50112, 51211, 51111, 50111,
-		51011, 50811, 50711, 50611, 50511, 50411, 50311, 50911, 51212, 50401,
+		50812, 50912, 51012, 50404, 51212, 50113, 50715, 50313, 50413, 50513,
+		50613, 50713, 50813, 50913, 51013, 51113, 51213, 50515, 50115, 51214,
+		51114, 51014, 50914, 50712, 50814, 50614, 50514, 50414, 50314, 50615,
+		50114, 50714, 50612, 50512, 50412, 50910, 51015, 51115, 51215, 50810,
+		50710, 51010, 50610, 50410, 50310, 50116, 50110, 51209, 51109, 50510,
+		50415, 51110, 50111, 50312, 50815, 50112, 51211, 51111, 51011, 51210,
+		50911, 50711, 50611, 50511, 50411, 50311, 50915, 50811, 51112, 50401,
 		50104, 8504, 8503, 8502, 8501, 8500, 8491, 8490, 8480, 8471,
 		8470, 8450, 8430, 8406, 8405, 8404, 8506, 8403, 8507, 8550,
 		8791, 8790, 8780, 8776, 8775, 8770, 8710, 8708, 8707, 8706,

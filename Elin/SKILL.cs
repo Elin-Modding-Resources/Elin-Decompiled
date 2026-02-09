@@ -188,13 +188,13 @@ public class SKILL
 
 	public const int resImpact = 965;
 
-	public const int resDecay = 970;
-
 	public const int gathering = 250;
 
 	public const int resCurse = 972;
 
 	public const int resDamage = 971;
+
+	public const int resDecay = 970;
 
 	public const int resPoison = 955;
 
@@ -256,13 +256,13 @@ public class SKILL
 
 	public const int hygine = 310;
 
-	public const int eleFire = 910;
+	public const int env = 313;
 
 	public const int bladder = 311;
 
-	public const int fun = 312;
+	public const int eleFire = 910;
 
-	public const int env = 313;
+	public const int fun = 312;
 
 	public const int eleCold = 911;
 
@@ -279,11 +279,11 @@ public class SKILL
 		79, 78, 77, 76, 91, 245, 106, 255, 916, 917,
 		918, 919, 921, 922, 923, 924, 925, 926, 950, 951,
 		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
-		962, 963, 964, 965, 970, 250, 972, 971, 955, 914,
+		962, 963, 964, 965, 250, 972, 971, 970, 955, 914,
 		920, 912, 290, 289, 288, 287, 913, 285, 291, 281,
 		261, 260, 259, 258, 257, 256, 280, 292, 286, 300,
-		301, 302, 303, 304, 305, 306, 307, 310, 910, 311,
-		312, 313, 911, 293
+		301, 302, 303, 304, 305, 306, 307, 310, 313, 311,
+		910, 312, 911, 293
 	};
 }
 public class Skill : Element

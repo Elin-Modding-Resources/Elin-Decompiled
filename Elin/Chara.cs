@@ -1371,6 +1371,10 @@ public class Chara : Card, IPathfindWalker
 			return EClass.sources.backers.map[base.c_idBacker].Name;
 		}
 		string text = base.c_altName ?? source.GetName(this);
+		if (HasCondition<ConTransmuteShadow>())
+		{
+			text = EClass.sources.charas.map["shade"].GetName(this);
+		}
 		text = text.Replace("#ele5", MainElement.source.GetAltname(3)).Replace("#ele4", MainElement.source.GetAltname(2)).Replace("#ele3", MainElement.source.GetAltname(1))
 			.Replace("#ele2", MainElement.source.GetAltname(0))
 			.Replace("#ele", MainElement.source.GetName().ToLower());

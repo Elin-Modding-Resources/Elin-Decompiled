@@ -3,25 +3,25 @@ using UnityEngine;
 
 public class POLICY
 {
-	public const int legendary_heirloom = 2821;
-
 	public const int license_food = 2818;
 
 	public const int license_furniture = 2819;
 
 	public const int license_general = 2820;
 
+	public const int legendary_heirloom = 2821;
+
 	public const int celeb = 2822;
 
-	public const int license_slaver = 2828;
+	public const int egg_fan = 2826;
 
 	public const int license_stolen = 2824;
 
 	public const int milk_fan = 2825;
 
-	public const int egg_fan = 2826;
-
 	public const int breed_season = 2827;
+
+	public const int license_slaver = 2828;
 
 	public const int store_premium = 2817;
 
@@ -29,7 +29,7 @@ public class POLICY
 
 	public const int store_ripoff = 2816;
 
-	public const int weed_no = 2703;
+	public const int border_watch = 2704;
 
 	public const int mass_exhibition = 2814;
 
@@ -99,7 +99,7 @@ public class POLICY
 
 	public const int taxTransfer = 2705;
 
-	public const int border_watch = 2704;
+	public const int weed_no = 2703;
 
 	public const int trash_no = 2702;
 
@@ -107,11 +107,11 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2821, 2818, 2819, 2820, 2822, 2828, 2824, 2825, 2826, 2827,
-		2817, 2823, 2816, 2703, 2814, 2514, 2513, 2505, 2815, 2500,
+		2818, 2819, 2820, 2821, 2822, 2826, 2824, 2825, 2827, 2828,
+		2817, 2823, 2816, 2704, 2814, 2514, 2513, 2505, 2815, 2500,
 		2501, 2502, 2512, 2503, 2511, 2510, 2509, 2508, 2507, 2506,
 		2515, 2516, 2504, 2701, 2700, 2707, 2708, 2706, 2709, 2711,
-		2712, 2715, 2710, 2810, 2811, 2812, 2813, 2705, 2704, 2702,
+		2712, 2715, 2710, 2810, 2811, 2812, 2813, 2705, 2703, 2702,
 		2800
 	};
 }

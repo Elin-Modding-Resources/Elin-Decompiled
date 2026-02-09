@@ -16,6 +16,19 @@ public class Net : MonoBehaviour
 		public string msg;
 	}
 
+	public class BookData
+	{
+		public string name;
+
+		public string msg;
+
+		public string msg2;
+
+		public string msg3;
+
+		public string msg4;
+	}
+
 	public class VoteLog
 	{
 		public string name;
@@ -63,6 +76,8 @@ public class Net : MonoBehaviour
 	public List<ChatLog> chatList;
 
 	public static string urlScript = "http://elin.cloudfree.jp/script/";
+
+	public static string urlBook = urlScript + "book/";
 
 	public static string urlChat = urlScript + "chat/";
 
@@ -381,6 +396,88 @@ public class Net : MonoBehaviour
 				list.Add(item.ToObject<ChatLog>());
 			}
 			foreach (ChatLog item2 in list)
+			{
+				item2.msg = item2.msg.Replace("\n", "").Replace("\r", "").Replace("&quot;", "\"")
+					.ToTitleCase();
+			}
+			list.Reverse();
+			return list;
+		}
+		catch
+		{
+			return list;
+		}
+	}
+
+	public static async UniTask<bool> SendBook(string name, string msg, BookCategory cat, string idLang, string msg2, string msg3, string msg4)
+	{
+		if (EClass.core.version.demo)
+		{
+			return false;
+		}
+		try
+		{
+			if (EClass.debug.enable)
+			{
+				idLang = "DEBUG";
+			}
+			Debug.Log("Start Sending Book:");
+			WWWForm wWWForm = new WWWForm();
+			wWWForm.AddField("submit", "Send");
+			wWWForm.AddField("name", name);
+			wWWForm.AddField("msg", msg);
+			wWWForm.AddField("cat", cat.ToString());
+			wWWForm.AddField("idLang", idLang);
+			wWWForm.AddField("msg2", msg2);
+			wWWForm.AddField("msg3", msg3);
+			wWWForm.AddField("msg4", msg4);
+			try
+			{
+				using UnityWebRequest www = UnityWebRequest.Post(urlBook + "book.php", wWWForm);
+				await www.SendWebRequest();
+				if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+				{
+					if (ShowNetError)
+					{
+						EClass.ui.Say(www.error);
+					}
+					return false;
+				}
+				Debug.Log(www.downloadHandler.text);
+				return true;
+			}
+			catch
+			{
+			}
+		}
+		catch
+		{
+		}
+		return false;
+	}
+
+	public static async UniTask<List<BookData>> GetBook(BookCategory cat, string idLang)
+	{
+		List<BookData> list = new List<BookData>();
+		try
+		{
+			if (EClass.debug.enable)
+			{
+				idLang = "DEBUG";
+			}
+			string uri = string.Format(urlBook + "logs/all_{0}.json", idLang);
+			using UnityWebRequest www = UnityWebRequest.Get(uri);
+			await www.SendWebRequest();
+			if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+			{
+				return null;
+			}
+			Debug.Log("Download Book: Success");
+			foreach (JToken item in (JArray)JsonConvert.DeserializeObject(www.downloadHandler.text))
+			{
+				list.Add(item.ToObject<BookData>());
+			}
+			foreach (BookData item2 in list)
 			{
 				item2.msg = item2.msg.Replace("\n", "").Replace("\r", "").Replace("&quot;", "\"")
 					.ToTitleCase();
