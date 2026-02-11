@@ -47,9 +47,9 @@ public class POLICY
 
 	public const int food_for_people = 2502;
 
-	public const int resident_tax = 2512;
-
 	public const int prohibition = 2503;
+
+	public const int resident_tax = 2512;
 
 	public const int self_sufficient = 2511;
 
@@ -109,7 +109,7 @@ public class POLICY
 	{
 		2818, 2819, 2820, 2821, 2822, 2826, 2824, 2825, 2827, 2828,
 		2817, 2823, 2816, 2704, 2814, 2514, 2513, 2505, 2815, 2500,
-		2501, 2502, 2512, 2503, 2511, 2510, 2509, 2508, 2507, 2506,
+		2501, 2502, 2503, 2512, 2511, 2510, 2509, 2508, 2507, 2506,
 		2515, 2516, 2504, 2701, 2700, 2707, 2708, 2706, 2709, 2711,
 		2712, 2715, 2710, 2810, 2811, 2812, 2813, 2705, 2703, 2702,
 		2800

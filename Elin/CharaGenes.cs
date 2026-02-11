@@ -9,12 +9,17 @@ public class CharaGenes : EClass
 	[JsonProperty]
 	public int inferior;
 
-	public void Remove(Chara c, DNA item)
+	public static void Remove(Chara c, DNA item)
 	{
-		items.Remove(item);
-		c.feat += item.cost;
-		item.Apply(c, reverse: true);
-		c.Refresh();
+		if (c.c_genes != null)
+		{
+			c.c_genes.items.Remove(item);
+			c.feat += item.cost * c.GeneCostMTP / 100;
+			item.Apply(c, reverse: true);
+			c.Refresh();
+			c.RemoveAllStances();
+			Msg.Say("dna_loss", c, item.GetText());
+		}
 	}
 
 	public int GetTotalCost()

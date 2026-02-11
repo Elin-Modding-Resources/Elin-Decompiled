@@ -85,20 +85,7 @@ public class InvOwnerGene : InvOwnerDraglet
 	{
 		if (ShouldShowGuide(t))
 		{
-			n.AddHeader("HeaderAdditionalTrait", "gene_hint");
-			_ = tg.c_genes;
-			int num = t.c_DNA.slot;
-			if (num > 1 && tg.HasElement(1237))
-			{
-				num--;
-			}
-			int num2 = tg.MaxGeneSlot - tg.CurrentGeneSlot;
-			int num3 = num2 - num;
-			int maxGeneSlot = tg.MaxGeneSlot;
-			n.AddText("gene_hint_slot".lang(num2.ToString() ?? "", num3.ToString() ?? "", maxGeneSlot.ToString() ?? ""), (num3 >= 0) ? FontColor.Good : FontColor.Bad);
-			int cost = t.c_DNA.cost;
-			int num4 = tg.feat - cost;
-			n.AddText("gene_hint_cost".lang(tg.feat.ToString() ?? "", cost + ((cost == t.c_DNA.cost) ? "" : ("(" + t.c_DNA.cost + ")")), num4.ToString() ?? ""), (num4 >= 0) ? FontColor.Good : FontColor.Bad);
+			t.c_DNA.WriteNoteExtra(n, tg);
 		}
 	}
 }

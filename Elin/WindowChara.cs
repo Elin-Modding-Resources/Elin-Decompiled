@@ -526,6 +526,41 @@ public class WindowChara : WindowController
 				List("availableFeats_attribute", "attribute");
 				return;
 			}
+			if (chara.IsPC && chara.HasElement(1274) && chara.c_genes != null && chara.c_genes.items.Count > 0)
+			{
+				Header("genes", null);
+				ListFeat();
+				list.callbacks = new UIList.Callback<DNA, ButtonElement>
+				{
+					onClick = delegate
+					{
+						SE.Beep();
+					},
+					onInstantiate = delegate(DNA a, ButtonElement b)
+					{
+						b.mainText.SetText(a.GetText());
+						b.SetTooltip(delegate(UITooltip t)
+						{
+							UINote uINote = t.note;
+							uINote.Clear();
+							uINote.AddHeader(a.GetText());
+							a.WriteNote(uINote);
+							t.note.Build();
+						});
+						b.subText.text = "(+" + a.slot + ")";
+						b.subText.SetActive(enable: true);
+						b.imagePotential.SetActive(enable: false);
+					},
+					onList = delegate
+					{
+						foreach (DNA item in chara.c_genes.items)
+						{
+							list.Add(item);
+						}
+					}
+				};
+				list.List();
+			}
 			Header("mutation", null);
 			ListFeat();
 			list.callbacks = new UIList.Callback<Feat, ButtonElement>
@@ -541,9 +576,9 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item in chara.elements.ListElements((Element a) => a.source.category == "mutation" && a.Value != 0))
+					foreach (Element item2 in chara.elements.ListElements((Element a) => a.source.category == "mutation" && a.Value != 0))
 					{
-						list.Add(item);
+						list.Add(item2);
 					}
 				}
 			};
@@ -568,9 +603,9 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item2 in chara.elements.ListElements((Element a) => a.source.category == "ether" && a.Value != 0))
+					foreach (Element item3 in chara.elements.ListElements((Element a) => a.source.category == "ether" && a.Value != 0))
 					{
-						list.Add(item2);
+						list.Add(item3);
 					}
 				}
 			};
@@ -595,9 +630,9 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item3 in chara.elements.ListElements((Element a) => a.source.category == "feat" && a.HasTag("innate") && a.Value != 0))
+					foreach (Element item4 in chara.elements.ListElements((Element a) => a.source.category == "feat" && a.HasTag("innate") && a.Value != 0))
 					{
-						list.Add(item3);
+						list.Add(item4);
 					}
 				}
 			};
@@ -617,9 +652,9 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item4 in chara.elements.ListElements((Element a) => a.source.category == "feat" && !a.HasTag("innate") && a.Value != 0))
+					foreach (Element item5 in chara.elements.ListElements((Element a) => a.source.category == "feat" && !a.HasTag("innate") && a.Value != 0))
 					{
-						list.Add(item4);
+						list.Add(item5);
 					}
 				},
 				onSort = (Feat a, UIList.SortMode m) => a.GetSortVal(m)
@@ -640,9 +675,9 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (SourceElement.Row item5 in EClass.sources.elements.rows.Where((SourceElement.Row a) => a.category == "resist" && ((!a.tag.Contains("hidden") && !a.tag.Contains("high")) || chara.Evalue(a.id) != 0)))
+					foreach (SourceElement.Row item6 in EClass.sources.elements.rows.Where((SourceElement.Row a) => a.category == "resist" && ((!a.tag.Contains("hidden") && !a.tag.Contains("high")) || chara.Evalue(a.id) != 0)))
 					{
-						list.Add(chara.elements.GetOrCreateElement(item5.id));
+						list.Add(chara.elements.GetOrCreateElement(item6.id));
 					}
 				}
 			};
@@ -702,11 +737,11 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item6 in eles)
+					foreach (Element item7 in eles)
 					{
-						if (!skillCats.Contains(item6.source.categorySub))
+						if (!skillCats.Contains(item7.source.categorySub))
 						{
-							list.Add(item6);
+							list.Add(item7);
 						}
 					}
 				}
@@ -722,11 +757,11 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item7 in eles)
+					foreach (Element item8 in eles)
 					{
-						if (skillCats.Contains(item7.source.categorySub))
+						if (skillCats.Contains(item8.source.categorySub))
 						{
-							list.Add(item7);
+							list.Add(item8);
 						}
 					}
 				}
@@ -773,9 +808,9 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item8 in chara.elements.ListElements((Element a) => (a.Value != 0 || a.ValueWithoutLink != 0 || a.vSource > 0) && a.source.category == "skill" && cats.Contains(a.source.categorySub)))
+					foreach (Element item9 in chara.elements.ListElements((Element a) => (a.Value != 0 || a.ValueWithoutLink != 0 || a.vSource > 0) && a.source.category == "skill" && cats.Contains(a.source.categorySub)))
 					{
-						list.Add(item8);
+						list.Add(item9);
 					}
 				},
 				onSort = (Element c, UIList.SortMode m) => EClass.sources.elements.alias[c.source.aliasParent].id * -10000 - c.id
@@ -819,11 +854,11 @@ public class WindowChara : WindowController
 				},
 				onList = delegate
 				{
-					foreach (Element item9 in chara.ListAvailabeFeats(pet: false, EClass.game.config.showAllFeat))
+					foreach (Element item10 in chara.ListAvailabeFeats(pet: false, EClass.game.config.showAllFeat))
 					{
-						if (item9.source.categorySub == idSubCat)
+						if (item10.source.categorySub == idSubCat)
 						{
-							_list.Add(item9);
+							_list.Add(item10);
 						}
 					}
 				}

@@ -1069,6 +1069,18 @@ public class Chara : Card, IPathfindWalker
 
 	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242) + Evalue(1273);
 
+	public int GeneCostMTP
+	{
+		get
+		{
+			if (!IsPC)
+			{
+				return 100;
+			}
+			return 20;
+		}
+	}
+
 	public int CurrentGeneSlot
 	{
 		get
@@ -6271,7 +6283,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				ele = 922;
 			}
-			Say("reflect_thorne", c, this);
+			Say("reflect_thorne", this, c);
 			DamageHP(10L, ele, Power, AttackSource.Condition);
 		}
 	}

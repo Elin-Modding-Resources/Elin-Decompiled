@@ -23,7 +23,19 @@ public class AI_Eat : AIAct
 
 	public bool IsValidTarget(Card c)
 	{
-		return c?.trait.CanEat(owner) ?? false;
+		if (c != null)
+		{
+			if (!c.trait.CanEat(owner))
+			{
+				if (c.trait is TraitGene && owner.IsPC)
+				{
+					return owner.HasElement(1274);
+				}
+				return false;
+			}
+			return true;
+		}
+		return false;
 	}
 
 	public override bool CanManualCancel()

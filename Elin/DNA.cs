@@ -187,7 +187,7 @@ public class DNA : EClass
 			c.c_genes.inferior++;
 			return;
 		}
-		c.feat -= cost;
+		c.feat -= cost * c.GeneCostMTP / 100;
 		Apply(c, reverse: false);
 		c_genes.items.Add(this);
 	}
@@ -216,6 +216,10 @@ public class DNA : EClass
 					c.body.AddBodyPart(row.id);
 				}
 				c.body.RefreshBodyParts();
+				if (c.IsPC && (bool)WidgetEquip.Instance)
+				{
+					WidgetEquip.Instance.Rebuild();
+				}
 				break;
 			case "feat":
 				c.SetFeat(num, c.elements.ValueWithoutLink(num) + ((!reverse) ? 1 : (-1)), !reverse);
@@ -626,11 +630,33 @@ public class DNA : EClass
 		}
 	}
 
+	public void WriteNoteExtra(UINote n, Chara tg)
+	{
+		n.AddHeader("HeaderAdditionalTrait", "gene_hint");
+		_ = tg.c_genes;
+		int num = slot;
+		if (num > 1 && tg.HasElement(1237))
+		{
+			num--;
+		}
+		int num2 = tg.MaxGeneSlot - tg.CurrentGeneSlot;
+		int num3 = num2 - num;
+		int maxGeneSlot = tg.MaxGeneSlot;
+		n.AddText("gene_hint_slot".lang(num2.ToString() ?? "", num3.ToString() ?? "", maxGeneSlot.ToString() ?? ""), (num3 >= 0) ? FontColor.Good : FontColor.Bad);
+		int num4 = cost * tg.GeneCostMTP / 100;
+		int num5 = tg.feat - num4;
+		n.AddText("gene_hint_cost".lang(tg.feat.ToString() ?? "", num4 + ((num4 == cost) ? "" : ("(" + cost + ")")), num5.ToString() ?? ""), (num5 >= 0) ? FontColor.Good : FontColor.Bad);
+	}
+
 	public Element GetInvalidFeat(Chara c)
 	{
 		for (int i = 0; i < vals.Count; i += 2)
 		{
 			Element element = Element.Create(vals[i], vals[i + 1]);
+			if (c.IsPC && element.id == 1415)
+			{
+				return element;
+			}
 			if (!(element.source.category == "feat"))
 			{
 				continue;

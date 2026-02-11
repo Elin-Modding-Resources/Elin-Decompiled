@@ -21,15 +21,64 @@ public class TraitGene : Trait
 	{
 		if (owner.c_DNA != null)
 		{
+			bool flag = EClass.pc.HasElement(1274) && !LayerDragGrid.Instance;
 			if (owner.c_DNA.cost > 0)
 			{
-				n.AddText("isCostFeatPoint".lang(owner.c_DNA.cost.ToString() ?? ""));
+				n.AddText("isCostFeatPoint".lang((flag ? (owner.c_DNA.cost * EClass.pc.GeneCostMTP / 100 + " (" + owner.c_DNA.cost + ")") : ((object)owner.c_DNA.cost))?.ToString() ?? ""));
 			}
 			if (EClass.debug.showExtra)
 			{
 				n.AddText("duration:" + owner.c_DNA.GetDurationHour());
 			}
 			owner.c_DNA.WriteNote(n);
+			if (flag)
+			{
+				owner.c_DNA.WriteNoteExtra(n, EClass.pc);
+			}
+		}
+	}
+
+	public override void TrySetHeldAct(ActPlan p)
+	{
+		if (!p.pos.Equals(EClass.pc.pos) || !EClass.pc.HasElement(1274))
+		{
+			return;
+		}
+		Element invalidFeat = owner.c_DNA.GetInvalidFeat(EClass.pc);
+		Element invalidAction = owner.c_DNA.GetInvalidAction(EClass.pc);
+		if (owner.c_DNA.cost * EClass.pc.GeneCostMTP / 100 > EClass.pc.feat)
+		{
+			p.TrySetAct("invFood", delegate
+			{
+				SE.Beep();
+				Msg.Say("notEnoughFeatPoint");
+				return false;
+			});
+		}
+		else if (invalidFeat != null)
+		{
+			p.TrySetAct("invFood", delegate
+			{
+				SE.Beep();
+				Msg.Say("invalidGeneFeat", EClass.pc, invalidFeat.Name.ToTitleCase());
+				return false;
+			});
+		}
+		else if (invalidAction != null)
+		{
+			p.TrySetAct("invFood", delegate
+			{
+				SE.Beep();
+				Msg.Say("invalidGeneAction", EClass.pc, invalidAction.Name.ToTitleCase());
+				return false;
+			});
+		}
+		else
+		{
+			p.TrySetAct(new AI_Eat
+			{
+				target = owner
+			});
 		}
 	}
 

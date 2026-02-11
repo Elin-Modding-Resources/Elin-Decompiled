@@ -51,6 +51,20 @@ public class TraitBook : TraitScroll
 
 	public override void OnRead(Chara c)
 	{
+		if (owner.c_lockLv > 0)
+		{
+			owner.c_lockLv = 0;
+			c.Say("unseal", c, owner);
+			c.PlaySound("open_bottle");
+			if (owner.things.Count == 0)
+			{
+				c.Say("empty");
+			}
+			else
+			{
+				EClass.pc.PickOrDrop(EClass.pc.pos, owner.things[0]);
+			}
+		}
 		BookList.Item item = Item;
 		EClass.ui.AddLayer<LayerHelp>(IsParchment ? "LayerParchment" : "LayerBook").book.Show((IsParchment ? "Scroll/" : "Book/") + item.id, null, item.title, item);
 	}

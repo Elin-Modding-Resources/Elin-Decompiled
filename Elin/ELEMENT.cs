@@ -902,6 +902,10 @@ public class Element : EClass
 			{
 				color = FontColor.FoodQuality;
 			}
+			if (id == 484 && owner != null && owner.Card != null && owner.Card.CountRune(countFree: false) >= owner.Card.MaxRune())
+			{
+				color = FontColor.Gray;
+			}
 			if (funcText != null)
 			{
 				text = funcText(this, text);

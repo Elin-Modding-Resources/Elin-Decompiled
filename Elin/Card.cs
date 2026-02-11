@@ -4714,7 +4714,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						{
 							ele2 = 922;
 						}
-						Say("reflect_thorne", this, origin);
+						Say("reflect_thorne", origin, this);
 						origin.DamageHP((int)Mathf.Clamp(dmg / 10, 1f, MaxHP / (origin.IsPowerful ? 200 : 20)), ele2, Power, AttackSource.Condition, this);
 					}
 					if (HasElement(1223) && num14 <= Evalue(1223))

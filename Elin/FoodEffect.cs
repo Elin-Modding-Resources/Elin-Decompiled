@@ -398,19 +398,55 @@ public class FoodEffect : EClass
 				food.ModNum(-1);
 			}
 		}
-		if (c2.IsCat || !(food.trait is TraitFoodChuryu))
+		if (!c2.IsCat && food.trait is TraitFoodChuryu)
+		{
+			foreach (Chara item in c2.pos.ListCharasInRadius(c2, 5, (Chara c) => c.IsCat))
+			{
+				item.Say("angry", item);
+				item.ShowEmo(Emo.angry);
+				item.PlaySound("Animal/Cat/cat_angry");
+				if (c2.IsPC)
+				{
+					EClass.player.ModKarma(-3);
+				}
+			}
+		}
+		if (!(food.trait is TraitGene) || !c2.IsPC || !c2.HasElement(1274))
 		{
 			return;
 		}
-		foreach (Chara item in c2.pos.ListCharasInRadius(c2, 5, (Chara c) => c.IsCat))
+		DNA c_DNA = food.c_DNA;
+		int slot = c_DNA.slot;
+		CharaGenes genes = c2.c_genes;
+		int excess = c2.CurrentGeneSlot + slot - c2.MaxGeneSlot;
+		switch (c_DNA.type)
 		{
-			item.Say("angry", item);
-			item.ShowEmo(Emo.angry);
-			item.PlaySound("Animal/Cat/cat_angry");
-			if (c2.IsPC)
+		case DNA.Type.Inferior:
+			if (genes != null)
 			{
-				EClass.player.ModKarma(-3);
+				RemoveOldestDNA();
 			}
+			return;
+		case DNA.Type.Brain:
+			return;
+		}
+		if (excess > 0)
+		{
+			while (excess > 0 && genes != null && genes.items.Count != 0)
+			{
+				RemoveOldestDNA();
+			}
+		}
+		c_DNA.Apply(c2);
+		c2.Say("little_eat", c2);
+		c2.PlaySound("ding_potential");
+		SE.Play("mutation");
+		c2.PlayEffect("identify");
+		void RemoveOldestDNA()
+		{
+			DNA dNA = genes.items[0];
+			CharaGenes.Remove(c2, dNA);
+			excess -= dNA.slot;
 		}
 	}
 

@@ -94,7 +94,7 @@ public class SKILL
 
 	public const int vigor = 62;
 
-	public const int weaponDagger = 107;
+	public const int weaponPolearm = 106;
 
 	public const int PER = 73;
 
@@ -132,7 +132,7 @@ public class SKILL
 
 	public const int fishing = 245;
 
-	public const int weaponPolearm = 106;
+	public const int weaponDagger = 107;
 
 	public const int carpentry = 255;
 
@@ -274,9 +274,9 @@ public class SKILL
 		241, 240, 237, 235, 230, 227, 226, 225, 123, 220,
 		200, 152, 151, 150, 135, 134, 133, 132, 210, 207,
 		100, 105, 71, 70, 68, 67, 66, 65, 72, 64,
-		61, 60, 57, 56, 55, 51, 62, 107, 73, 75,
+		61, 60, 57, 56, 55, 51, 62, 106, 73, 75,
 		104, 103, 102, 101, 94, 93, 74, 92, 90, 80,
-		79, 78, 77, 76, 91, 245, 106, 255, 916, 917,
+		79, 78, 77, 76, 91, 245, 107, 255, 916, 917,
 		918, 919, 921, 922, 923, 924, 925, 926, 950, 951,
 		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 965, 250, 972, 971, 970, 955, 914,
