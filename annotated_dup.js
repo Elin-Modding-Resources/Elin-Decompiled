@@ -1615,6 +1615,7 @@ var annotated_dup =
     [ "TraitCookingPot", "classTraitCookingPot.html", "classTraitCookingPot" ],
     [ "TraitCoolerBox", "classTraitCoolerBox.html", "classTraitCoolerBox" ],
     [ "TraitCoreDefense", "classTraitCoreDefense.html", "classTraitCoreDefense" ],
+    [ "TraitCoreUser", "classTraitCoreUser.html", null ],
     [ "TraitCoreZone", "classTraitCoreZone.html", "classTraitCoreZone" ],
     [ "TraitCorgon", "classTraitCorgon.html", "classTraitCorgon" ],
     [ "TraitCrafter", "classTraitCrafter.html", "classTraitCrafter" ],

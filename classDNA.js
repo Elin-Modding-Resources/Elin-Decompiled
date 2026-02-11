@@ -28,6 +28,7 @@ var classDNA =
     [ "GetText", "classDNA.html#ae29fc11fc9ad9d17f219bae082d6f00b", null ],
     [ "GetType", "classDNA.html#a8971b32e6116f452319e919f954154b4", null ],
     [ "WriteNote", "classDNA.html#af0736d0fab53a7f55a3ea84a8f17ef5a", null ],
+    [ "WriteNoteExtra", "classDNA.html#a1831724365209c7223e4d9b9a3f943e9", null ],
     [ "bits", "classDNA.html#a9ddd01e83b7ca731a900ba3300a706be", null ],
     [ "id", "classDNA.html#a0806a6e1c4622f8db7dfcffeac0dfe87", null ],
     [ "ints", "classDNA.html#a8e2aa2e76b7a1c49808f1181677ce4b5", null ],

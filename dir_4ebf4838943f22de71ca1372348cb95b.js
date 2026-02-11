@@ -1426,6 +1426,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitCookingPot.cs", "TraitCookingPot_8cs.html", "TraitCookingPot_8cs" ],
     [ "TraitCoolerBox.cs", "TraitCoolerBox_8cs.html", "TraitCoolerBox_8cs" ],
     [ "TraitCoreDefense.cs", "TraitCoreDefense_8cs.html", "TraitCoreDefense_8cs" ],
+    [ "TraitCoreUser.cs", "TraitCoreUser_8cs.html", "TraitCoreUser_8cs" ],
     [ "TraitCoreZone.cs", "TraitCoreZone_8cs.html", "TraitCoreZone_8cs" ],
     [ "TraitCorgon.cs", "TraitCorgon_8cs.html", "TraitCorgon_8cs" ],
     [ "TraitCrafter.cs", "TraitCrafter_8cs.html", "TraitCrafter_8cs" ],

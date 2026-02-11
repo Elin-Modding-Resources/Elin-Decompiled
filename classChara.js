@@ -414,6 +414,7 @@ var classChara =
     [ "faction", "classChara.html#a34adc7979fac5d829240e53c7da2e5b8", null ],
     [ "faith", "classChara.html#ac3123758210191c800b2d93178d521c4", null ],
     [ "flipX", "classChara.html#a77617f7e5dda52ecd6fea582766033a4", null ],
+    [ "GeneCostMTP", "classChara.html#a84972d550706544753f686599913ab2c", null ],
     [ "goalListType", "classChara.html#a386d7fa4c3a894d2d821dd3ae406c10c", null ],
     [ "HasHost", "classChara.html#a6e71752f6be5bd76b8aac6df1bc94057", null ],
     [ "HasNoGoal", "classChara.html#ac3a94b99896802674865cfd6e4109e80", null ],

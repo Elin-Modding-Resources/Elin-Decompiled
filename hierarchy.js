@@ -1595,6 +1595,7 @@ var hierarchy =
         [ "TraitClock", "classTraitClock.html", null ],
         [ "TraitComputer", "classTraitComputer.html", null ],
         [ "TraitCoreDefense", "classTraitCoreDefense.html", null ],
+        [ "TraitCoreUser", "classTraitCoreUser.html", null ],
         [ "TraitCoreZone", "classTraitCoreZone.html", null ],
         [ "TraitCrafter", "classTraitCrafter.html", [
           [ "TraitBarrelMaker", "classTraitBarrelMaker.html", null ],

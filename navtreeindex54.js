@@ -1,5 +1,8 @@
 var NAVTREEINDEX54 =
 {
+"classCorePath.html#acd3cd089c086cdde9ceb05dfeabc7259":[1,0,415,11],
+"classCorePath.html#aceb353c0c84151cf679c4765d4bad59f":[1,0,415,61],
+"classCorePath.html#acf26b2767bab700797e697e1fab7f2fc":[1,0,415,63],
 "classCorePath.html#acfb2421158015d8415024f55e9fdf2e0":[1,0,415,50],
 "classCorePath.html#ad0b98610666b3a6b67e5e142dbc75641":[1,0,415,25],
 "classCorePath.html#ad49546400b0ee7415636918602c1ea72":[1,0,415,62],
@@ -246,8 +249,5 @@ var NAVTREEINDEX54 =
 "classCoreRef_1_1UDIconWeather.html":[1,0,416,14],
 "classCoreRef_1_1UDInvStyle.html":[1,0,416,15],
 "classCoreRef_1_1UDInvTab.html":[1,0,416,16],
-"classCraftUtil.html":[1,0,417],
-"classCraftUtil.html#a071fef6b04e735eebb33083a2589082e":[1,0,417,4],
-"classCraftUtil.html#a0c93bd9f677aa06f1c994b16fcfb6b22":[1,0,417,5],
-"classCraftUtil.html#a1082d9fae227ecaaa5f39a75f0d37246":[1,0,417,12]
+"classCraftUtil.html":[1,0,417]
 };

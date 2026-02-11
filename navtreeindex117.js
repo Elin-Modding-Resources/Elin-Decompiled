@@ -1,5 +1,10 @@
 var NAVTREEINDEX117 =
 {
+"classTraitAlchemyBench.html#ab900bd086c143a551e7e783dd4867849":[1,0,1433,1],
+"classTraitAltar.html":[1,0,1434],
+"classTraitAltar.html#a0aca9b623b935256184f75312aa8a6f3":[1,0,1434,2],
+"classTraitAltar.html#a0b72c0f51194b41e7fe5cfec94fb6f77":[1,0,1434,13],
+"classTraitAltar.html#a1734a9c2ea692e0cece10e249d810d97":[1,0,1434,5],
 "classTraitAltar.html#a22ef7843576ce235a8cc1ff6035e976e":[1,0,1434,1],
 "classTraitAltar.html#a28e392dbb7012af20236cd6dd43e51a7":[1,0,1434,16],
 "classTraitAltar.html#a31ae0b0f37f6b0d0ad83c417d18cda58":[1,0,1434,11],
@@ -244,10 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitBookSkill.html#aa47b45c43d6da0c4173c2d940ac8f8bc":[1,0,1489,11],
 "classTraitBookSkill.html#aa63d4580da4a1a76951bc9dd84cc4c3e":[1,0,1489,7],
 "classTraitBookSkill.html#ab3e4b473d66fa8fc0f70eb0c086c5f53":[1,0,1489,3],
-"classTraitBookSkill.html#ab6713c7b1e8deecda697aaefff9b5626":[1,0,1489,4],
-"classTraitBookSkill.html#ac695a7d658deb3806341d2dfcfd68d87":[1,0,1489,8],
-"classTraitBookSkill.html#ac6d82d6df069e06c6f51430ad202e7b5":[1,0,1489,2],
-"classTraitBookSkill.html#aeffee5e08a150e1b0168e9833669ac49":[1,0,1489,9],
-"classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3":[1,0,1489,10],
-"classTraitBookSkill.html#af86dc9a98250fd3b4903ec5dace82612":[1,0,1489,1]
+"classTraitBookSkill.html#ab6713c7b1e8deecda697aaefff9b5626":[1,0,1489,4]
 };

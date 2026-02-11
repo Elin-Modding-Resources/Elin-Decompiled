@@ -1,5 +1,10 @@
 var NAVTREEINDEX101 =
 {
+"classSPELL.html#ae4bf281a8b4dc4f5a861180f23ceb9e9":[1,0,1258,193],
+"classSPELL.html#ae5281170542b7b1a18840d479643f0c9":[1,0,1258,172],
+"classSPELL.html#aeb9234ee73510198dae4e30aeb24a1cf":[1,0,1258,96],
+"classSPELL.html#aed77ec62ef52223e96feb7943fa6d023":[1,0,1258,181],
+"classSPELL.html#aef7f60d0b5ed95024150a78e50b85e36":[1,0,1258,170],
 "classSPELL.html#af098c3018d1e038df1b2f9804275ddce":[1,0,1258,26],
 "classSPELL.html#af10a86717b071b5f2edb290c2f48ed8b":[1,0,1258,19],
 "classSPELL.html#af163bc35410b18f8ff18720e602893e0":[1,0,1258,63],
@@ -244,10 +249,5 @@ var NAVTREEINDEX101 =
 "classSeason.html#abeaf17fabb06e6a4c914cebcd8b7006c":[1,0,1166,9],
 "classSeason.html#ac4c15861571bcdbba9bc47bcf73d463b":[1,0,1166,5],
 "classSeason.html#adbef9ae5c84accd448d4d3bcb6100173":[1,0,1166,0],
-"classSeason.html#ae7038e9fba02028c9941f1f8f6170d91":[1,0,1166,3],
-"classSelectedColorController.html":[1,0,1167],
-"classSelectedColorController.html#a1ec98ff6e005bf5af7c36b3d77d0c2e4":[1,0,1167,7],
-"classSelectedColorController.html#a21cc6ca3c90d9335b87940cc3995ef85":[1,0,1167,5],
-"classSelectedColorController.html#a2519eb5df226b3583cc307bb8525ba7a":[1,0,1167,8],
-"classSelectedColorController.html#a2cae136b40f51753d411d78848f32b1e":[1,0,1167,3]
+"classSeason.html#ae7038e9fba02028c9941f1f8f6170d91":[1,0,1166,3]
 };

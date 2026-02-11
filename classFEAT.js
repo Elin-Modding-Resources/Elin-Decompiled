@@ -119,6 +119,7 @@ var classFEAT =
     [ "featSevenSense", "classFEAT.html#aaaf062d051281d062e67f1db98f2e0ec", null ],
     [ "featShiva", "classFEAT.html#a0e5babbb4964b1a9c9f871e842b22222", null ],
     [ "featSleeper", "classFEAT.html#ac5e7852fa2a6ab1d52a85524a406ac66", null ],
+    [ "featSlimeEvolution", "classFEAT.html#ad26ba0bf760312544a884f80a0f9a3bc", null ],
     [ "featSlowFood", "classFEAT.html#af7cf09ca5f1a9de81b16e083e7ad029b", null ],
     [ "featSnail", "classFEAT.html#a1987e286534ac57e53d265964c882839", null ],
     [ "featSorter", "classFEAT.html#a9a24d8cae8aa9e9afe88e2e02f5e60a8", null ],
