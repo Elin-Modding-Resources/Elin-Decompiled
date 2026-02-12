@@ -1,5 +1,6 @@
 var NAVTREEINDEX114 =
 {
+"classTileSelectorElona.html#aa8cb50c7bab42e013ca20c2ca6b6423f":[1,0,1363,10],
 "classTileSelectorElona.html#ac1221d31561dbd737683a6cc3d27d623":[1,0,1363,12],
 "classTileSelectorElona.html#ae8751c3b719e7aef78bbc928d42b0fbf":[1,0,1363,0],
 "classTileSelectorElona.html#aeb77de1c9d13ee89cb2dce24d46cfeef":[1,0,1363,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX114 =
 "classTileTypeInvisibleBlock.html#ad499fbd4bcb861ea8f17dd0bc1f21927":[1,0,1381,0],
 "classTileTypeInvisibleBlock.html#adc6e78f5d2a74e3da3f2fe4b34219287":[1,0,1381,2],
 "classTileTypeInvisibleBlock.html#af1192022160d86fe319404fe5011564d":[1,0,1381,5],
-"classTileTypeInvisibleBlock.html#afe9a3f1b00379a54a2d9f8cecd10fa69":[1,0,1381,1],
-"classTileTypeLadder.html":[1,0,1382]
+"classTileTypeInvisibleBlock.html#afe9a3f1b00379a54a2d9f8cecd10fa69":[1,0,1381,1]
 };

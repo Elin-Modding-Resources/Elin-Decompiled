@@ -1,5 +1,6 @@
 var NAVTREEINDEX110 =
 {
+"classSpriteReplacerAnimation.html#afc86c16c91d75a7138b2015cda61270c":[1,0,1267,8],
 "classSpriteSheet.html":[1,0,1268],
 "classSpriteSheet.html#a05dff4385d92835230dd33b766dadadb":[1,0,1268,0],
 "classSpriteSheet.html#a2ef52952ee4895df41e8ea30797bf6c3":[1,0,1268,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX110 =
 "classTCExtraProgress.html#ad430e6222bd25395256dd5de7174e0dc":[1,0,1334,1],
 "classTCExtraProgress.html#af23095d9860b97a9903b3f826318e8ae":[1,0,1334,5],
 "classTCExtraUI.html":[1,0,1335],
-"classTCOrbit.html":[1,0,1336],
-"classTCOrbit.html#a31d1630788c38e82d1004040c15ffa0a":[1,0,1336,0]
+"classTCOrbit.html":[1,0,1336]
 };

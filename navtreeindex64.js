@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"classExpeditionManager.html#a913a03e2f259507b14864064dbc6b91f":[1,0,518,0],
 "classExpeditionManager.html#ac2906321a85bea107c632981745a87a7":[1,0,518,3],
 "classExpeditionManager.html#af21a70c98bc17ec868a054b4d390b1e8":[1,0,518,4],
 "classExtraHint.html":[1,0,519],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "classFaction.html#a0fbbcc93f973d9dc9d933dfddaf11ca8":[1,0,520,12],
 "classFaction.html#a0feb646017df04891d945c9a0242d80b":[1,0,520,1],
 "classFaction.html#a146046424a50eceeb1c1fc683dc7740c":[1,0,520,10],
-"classFaction.html#a1aba0f91ac19a9bb1b85816be24692df":[1,0,520,45],
-"classFaction.html#a1b34df7d18b957867edae88d72282499":[1,0,520,35]
+"classFaction.html#a1aba0f91ac19a9bb1b85816be24692df":[1,0,520,45]
 };

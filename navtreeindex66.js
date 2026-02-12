@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"classFileDragAndDrop.html#a95a9036443517bc291dcdd28a033da59":[1,0,532,0],
 "classFileDragAndDrop.html#af8baf403dc5fac2852e1456f1e4bd8f7":[1,0,532,3],
 "classFontSource.html":[1,0,534],
 "classFontSource.html#a27c5c2767e18cfa2d467820d7ae7a010":[1,0,534,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "classGameLang.html#ac5deecc95235c5bff0d8507dd1b4c306":[1,0,550,1],
 "classGameLang.html#ae341ec060ca10168983b2d13a4172a8e":[1,0,550,3],
 "classGameLang.html#ae46dc7985b95a70e651fa0f9c5cf529c":[1,0,550,4],
-"classGameLang.html#affe6372b5bb02ac74901bf87b8f738e9":[1,0,550,7],
-"classGamePrincipal.html":[1,0,551]
+"classGameLang.html#affe6372b5bb02ac74901bf87b8f738e9":[1,0,550,7]
 };

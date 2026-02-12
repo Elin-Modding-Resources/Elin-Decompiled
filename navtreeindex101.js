@@ -1,5 +1,6 @@
 var NAVTREEINDEX101 =
 {
+"classSPELL.html#ae21fcec0007b397cdf2066b41bbf4153":[1,0,1258,79],
 "classSPELL.html#ae4bf281a8b4dc4f5a861180f23ceb9e9":[1,0,1258,193],
 "classSPELL.html#ae5281170542b7b1a18840d479643f0c9":[1,0,1258,172],
 "classSPELL.html#aeb9234ee73510198dae4e30aeb24a1cf":[1,0,1258,96],
@@ -248,6 +249,5 @@ var NAVTREEINDEX101 =
 "classSeason.html#abc82df0e0dce55ca5520c23edd9bfea5":[1,0,1166,10],
 "classSeason.html#abeaf17fabb06e6a4c914cebcd8b7006c":[1,0,1166,9],
 "classSeason.html#ac4c15861571bcdbba9bc47bcf73d463b":[1,0,1166,5],
-"classSeason.html#adbef9ae5c84accd448d4d3bcb6100173":[1,0,1166,0],
-"classSeason.html#ae7038e9fba02028c9941f1f8f6170d91":[1,0,1166,3]
+"classSeason.html#adbef9ae5c84accd448d4d3bcb6100173":[1,0,1166,0]
 };

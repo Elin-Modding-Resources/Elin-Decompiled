@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.269 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.269 Nightly Patch 3</span>
    </div>
   </td>
  </tr>
@@ -140,11 +140,27 @@ $(document).ready(function(){initNavTree('CharaGenes_8cs_source.html',''); initR
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> num;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classCharaGenes.html#a970dc312c5bc8f6fa32d5ec433ca22b6">   50</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classDNA.html">DNA</a> <a class="code hl_function" href="classCharaGenes.html#a970dc312c5bc8f6fa32d5ec433ca22b6">GetDNA</a>(<span class="keywordtype">int</span> idEle)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classDNA.html">DNA</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classCharaGenes.html#af445bcca2559e486add700acd4645353">items</a>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.vals.Count; i += 2)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.vals[i] == idEle)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassCard_html_aa3c3d753e44ae7a28fe2d9e3a4a774d3"><div class="ttname"><a href="classCard.html#aa3c3d753e44ae7a28fe2d9e3a4a774d3">Card.c_genes</a></div><div class="ttdeci">CharaGenes c_genes</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01845">Card.cs:1846</a></div></div>
 <div class="ttc" id="aclassCharaGenes_html"><div class="ttname"><a href="classCharaGenes.html">CharaGenes</a></div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00004">CharaGenes.cs:5</a></div></div>
 <div class="ttc" id="aclassCharaGenes_html_a698512e86665271bb7aa79e2800f0d31"><div class="ttname"><a href="classCharaGenes.html#a698512e86665271bb7aa79e2800f0d31">CharaGenes.inferior</a></div><div class="ttdeci">int inferior</div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00010">CharaGenes.cs:10</a></div></div>
+<div class="ttc" id="aclassCharaGenes_html_a970dc312c5bc8f6fa32d5ec433ca22b6"><div class="ttname"><a href="classCharaGenes.html#a970dc312c5bc8f6fa32d5ec433ca22b6">CharaGenes.GetDNA</a></div><div class="ttdeci">DNA GetDNA(int idEle)</div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00050">CharaGenes.cs:50</a></div></div>
 <div class="ttc" id="aclassCharaGenes_html_ab713318600866c3c801445026737d288"><div class="ttname"><a href="classCharaGenes.html#ab713318600866c3c801445026737d288">CharaGenes.GetTotalCost</a></div><div class="ttdeci">int GetTotalCost()</div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00025">CharaGenes.cs:25</a></div></div>
 <div class="ttc" id="aclassCharaGenes_html_ad745fb60d9e590961e80c95f5b51d05e"><div class="ttname"><a href="classCharaGenes.html#ad745fb60d9e590961e80c95f5b51d05e">CharaGenes.Remove</a></div><div class="ttdeci">static void Remove(Chara c, DNA item)</div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00012">CharaGenes.cs:12</a></div></div>
 <div class="ttc" id="aclassCharaGenes_html_af445bcca2559e486add700acd4645353"><div class="ttname"><a href="classCharaGenes.html#af445bcca2559e486add700acd4645353">CharaGenes.items</a></div><div class="ttdeci">List&lt; DNA &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="CharaGenes_8cs_source.html#l00007">CharaGenes.cs:7</a></div></div>

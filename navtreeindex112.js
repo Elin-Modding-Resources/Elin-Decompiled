@@ -1,5 +1,6 @@
 var NAVTREEINDEX112 =
 {
+"classTaskCraft.html#ad8057717fb85591f82d011588078905f":[1,0,1314,18],
 "classTaskCraft.html#ad8479f1fde2944b43e95302a03d3e968":[1,0,1314,17],
 "classTaskCullLife.html":[1,0,1315],
 "classTaskCullLife.html#a2ade604b3aaaf39eb856bb8d6a0129ce":[1,0,1315,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX112 =
 "classTextConv_1_1Item.html#aa16e1aed1525ce8639944798032a1509":[1,0,1346,0,1],
 "classTextConv_1_1Item.html#aa2922338ae7f3107b594a0f440637ef4":[1,0,1346,0,7],
 "classTextConv_1_1Item.html#aae368eff44f0943ebef396dd795f4e2d":[1,0,1346,0,3],
-"classTextConv_1_1Item.html#aecf21df06cadb11c400ac2a81ee879ab":[1,0,1346,0,5],
-"classTextData.html":[1,0,1347]
+"classTextConv_1_1Item.html#aecf21df06cadb11c400ac2a81ee879ab":[1,0,1346,0,5]
 };

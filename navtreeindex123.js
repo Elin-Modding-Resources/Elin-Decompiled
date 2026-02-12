@@ -1,5 +1,6 @@
 var NAVTREEINDEX123 =
 {
+"classTraitObj.html":[1,0,1770],
 "classTraitObj.html#a6df6be0671f391788d20d3dd6368ca32":[1,0,1770,0],
 "classTraitObj.html#af34c2245958d15685d031de1f6caa17b":[1,0,1770,1],
 "classTraitOlderYoungerSister.html":[1,0,1771],
@@ -248,6 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitRuneFree.html":[1,0,1833],
 "classTraitRuneMold.html":[1,0,1834],
 "classTraitRuneMold.html#a0e9a7e9012a365c20c2297ce477847d9":[1,0,1834,8],
-"classTraitRuneMold.html#a37f968d4735a5f78b1ea5cdadc7adb6a":[1,0,1834,0],
-"classTraitRuneMold.html#a4de0834828f33388aa73f0faa28c3106":[1,0,1834,3]
+"classTraitRuneMold.html#a37f968d4735a5f78b1ea5cdadc7adb6a":[1,0,1834,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitMailPost.html":[1,0,1710],
 "classTraitManager.html":[1,0,1711],
 "classTraitManager.html#a067d996cb2fecff60760aac97a0b837e":[1,0,1711,2],
 "classTraitManager.html#a081802c5d65cca165bcb166eace19913":[1,0,1711,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitNote.html#a1bf55d03433108430137e481eb6b94d6":[1,0,1769,3],
 "classTraitNote.html#abd9c08d1cdcd89ce145a1efeda8c9637":[1,0,1769,0],
 "classTraitNote.html#ae64a3732578342315cb31685ec9c6d27":[1,0,1769,1],
-"classTraitNote.html#af5b43b9758d75717f8002291d2ac2628":[1,0,1769,2],
-"classTraitObj.html":[1,0,1770]
+"classTraitNote.html#af5b43b9758d75717f8002291d2ac2628":[1,0,1769,2]
 };

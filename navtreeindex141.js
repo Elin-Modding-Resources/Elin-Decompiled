@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"classZoneEventSiege.html#a82dadfa900a145e1c652f8996aa0f50d":[1,0,2245,10],
 "classZoneEventSiege.html#a8e3d4aebbbb7009f9bb4399fcdbfef89":[1,0,2245,3],
 "classZoneEventSiege.html#a9836f1f8c2a78f484eca18e8dd1a51c6":[1,0,2245,2],
 "classZoneEventSiege.html#aa6c27299cae5c999374a727a90cbb571":[1,0,2245,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "classZone__Dungeon.html":[1,0,2167],
 "classZone__Dungeon.html#a1866eecd3a3eebe039a903b990651ff8":[1,0,2167,11],
 "classZone__Dungeon.html#a46a98ed4b8b845af3cdda793e4c7257a":[1,0,2167,6],
-"classZone__Dungeon.html#a53c7458033c3025a1941a405719a2381":[1,0,2167,9],
-"classZone__Dungeon.html#a587320df847dfb64930fc14c6a21a499":[1,0,2167,4]
+"classZone__Dungeon.html#a53c7458033c3025a1941a405719a2381":[1,0,2167,9]
 };

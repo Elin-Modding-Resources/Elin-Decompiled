@@ -1,10 +1,11 @@
 var NAVTREEINDEX127 =
 {
 "classTwoDLaserPack_1_1LineBasedLaser.html#a8d176050c08c5635142bcb6349b24b11":[0,4,9,0,4],
+"classTwoDLaserPack_1_1LineBasedLaser.html#a8d176050c08c5635142bcb6349b24b11":[1,0,9,0,4],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[0,4,9,0,0],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[1,0,9,0,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[1,0,9,0,35],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[0,4,9,0,35],
+"classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[1,0,9,0,35],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869":[1,0,9,0,24],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869":[0,4,9,0,24],
 "classTwoDLaserPack_1_1LineBasedLaser.html#aa0dbe66bdb5cae641922809c28d072a0":[0,4,9,0,6],
@@ -19,14 +20,14 @@ var NAVTREEINDEX127 =
 "classTwoDLaserPack_1_1LineBasedLaser.html#ab8f6ec984104168a6910ebb761b84aae":[1,0,9,0,2],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286":[1,0,9,0,5],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286":[0,4,9,0,5],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2":[1,0,9,0,1],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2":[0,4,9,0,1],
+"classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2":[1,0,9,0,1],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac4ad369585782f0ecae9eac897ca3da7":[0,4,9,0,25],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac4ad369585782f0ecae9eac897ca3da7":[1,0,9,0,25],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac89749270158f78eab9768e7ff9d9fe3":[1,0,9,0,15],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac89749270158f78eab9768e7ff9d9fe3":[0,4,9,0,15],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff":[0,4,9,0,32],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff":[1,0,9,0,32],
+"classTwoDLaserPack_1_1LineBasedLaser.html#ad8aafe5b1642b7610bfcc2db0df7f9ff":[0,4,9,0,32],
 "classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c":[1,0,9,0,14],
 "classTwoDLaserPack_1_1LineBasedLaser.html#adf2f8345db94eb4f90c5a67c2e7ac51c":[0,4,9,0,14],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ae51187baa12c8470029eaa9d6e476bcb":[1,0,9,0,37],
@@ -248,6 +249,5 @@ var NAVTREEINDEX127 =
 "classUIBook.html#a6c3b04ba81215938af7c2aa03426bef1":[1,0,2018,3],
 "classUIBook.html#a6e3c03f65a60b344af92c047147288dc":[1,0,2018,24],
 "classUIBook.html#a774a0601d33f46f9fc56dbe455b7a1c4":[1,0,2018,5],
-"classUIBook.html#a7de33900da0dd17a6ac0c36e6967a3df":[1,0,2018,4],
-"classUIBook.html#a84479b8b598ca4a7f467d67455a06143":[1,0,2018,17]
+"classUIBook.html#a7de33900da0dd17a6ac0c36e6967a3df":[1,0,2018,4]
 };

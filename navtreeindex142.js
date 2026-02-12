@@ -1,5 +1,6 @@
 var NAVTREEINDEX142 =
 {
+"classZone__Dungeon.html#a587320df847dfb64930fc14c6a21a499":[1,0,2167,4],
 "classZone__Dungeon.html#a5fe8ab15c2de66244d24a922f10a0564":[1,0,2167,18],
 "classZone__Dungeon.html#a7a803fd94070c4fafa2dc01e10d16028":[1,0,2167,13],
 "classZone__Dungeon.html#a89426432734a283e5165c7e89e9e3bf0":[1,0,2167,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX142 =
 "classZone__UnderseaTemple.html#af6ca2b5a2875bdff71cbaa5034fd6136":[1,0,2227,1],
 "classZone__UnderseaTemple.html#afc7c619b0b3318b6e03a499701414444":[1,0,2227,0],
 "classZone__User.html":[1,0,2228],
-"classZone__User.html#a2a32a9f8d095bc68c699b283fc3ea93a":[1,0,2228,5],
-"classZone__User.html#a3025bd2f1e2bcd662726f384cb4d4cea":[1,0,2228,3]
+"classZone__User.html#a2a32a9f8d095bc68c699b283fc3ea93a":[1,0,2228,5]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classInvOwnerAutoCombatBar.html#a099ff71b2f522df2fc17e08e59d9ffb5":[1,0,711,8],
 "classInvOwnerAutoCombatBar.html#a2505b4c5a20b596c54b86661f930dec7":[1,0,711,7],
 "classInvOwnerAutoCombatBar.html#a298997a28c1adeb6a856284c13053119":[1,0,711,3],
 "classInvOwnerAutoCombatBar.html#a371161fb6b4832b98a6d018e97698f41":[1,0,711,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classInvOwner_1_1ListInteraction.html#a74cbb987397e9788c05fd10ddf670886":[1,0,709,3,1],
 "classInvOwner_1_1ListInteraction.html#a9347b55760ccac85f47dda97ad8b6154":[1,0,709,3,0],
 "classInvOwner_1_1Transaction.html":[1,0,709,4],
-"classInvOwner_1_1Transaction.html#a048377434dd77cc4e56964b09e0458d0":[1,0,709,4,16],
-"classInvOwner_1_1Transaction.html#a0b8402931c705614ee30bd7725584892":[1,0,709,4,3]
+"classInvOwner_1_1Transaction.html#a048377434dd77cc4e56964b09e0458d0":[1,0,709,4,16]
 };

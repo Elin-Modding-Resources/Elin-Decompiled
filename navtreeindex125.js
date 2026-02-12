@@ -1,5 +1,6 @@
 var NAVTREEINDEX125 =
 {
+"classTraitStairsCover.html":[1,0,1892],
 "classTraitStairsDown.html":[1,0,1893],
 "classTraitStairsDown.html#a3ae245a45e8494eca70ba666f2acb9fb":[1,0,1893,0],
 "classTraitStairsDown.html#a5d2246814305160e9b411f0f996d911b":[1,0,1893,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitToolWaterCan.html#a07f978e96080744b1818ad89fe349506":[1,0,1952,1],
 "classTraitToolWaterCan.html#a09d1d0bc88cd8c7e3e9fe2cb2193f138":[1,0,1952,2],
 "classTraitToolWaterCan.html#a27144568d3cb09764d83d6127cf10b87":[1,0,1952,0],
-"classTraitToolWaterPot.html":[1,0,1953],
-"classTraitToolWaterPot.html#a07b8c602597e3f079049f11183af3234":[1,0,1953,3]
+"classTraitToolWaterPot.html":[1,0,1953]
 };

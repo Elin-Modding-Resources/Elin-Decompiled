@@ -1,5 +1,6 @@
 var NAVTREEINDEX128 =
 {
+"classUIBook.html#a84479b8b598ca4a7f467d67455a06143":[1,0,2018,17],
 "classUIBook.html#a89f50e0bf4fc18d9bc92cc8823eccb33":[1,0,2018,38],
 "classUIBook.html#a8ee37da1145660160d4ac5a2caa44732":[1,0,2018,9],
 "classUIBook.html#a966ff0af71ece994f7ab84e439216fb4":[1,0,2018,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX128 =
 "classUIColorPicker.html#a1804fe62325b955935f91ae28b0ed4b8":[1,0,2026,4],
 "classUIColorPicker.html#a5effafad3e61dc734ab69582a37c209f":[1,0,2026,1],
 "classUIColorPicker.html#a5f8e327900f2b7beae087e365fd4d489":[1,0,2026,0],
-"classUIColorPicker.html#acfa5223df12ba29d494e7edeaed8a1fc":[1,0,2026,2],
-"classUIColorPicker.html#af449fe92dc914b6fe2662fea75062bb6":[1,0,2026,3]
+"classUIColorPicker.html#acfa5223df12ba29d494e7edeaed8a1fc":[1,0,2026,2]
 };

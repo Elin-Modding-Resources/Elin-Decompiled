@@ -1,5 +1,6 @@
 var NAVTREEINDEX72 =
 {
+"classHotItemFocusPos.html#afab578ff132fd625a0061ec17dfd3838":[1,0,663,1],
 "classHotItemGameAction.html":[1,0,664],
 "classHotItemGameAction.html#a53bdbc7305f11f24bd8b2451690732f3":[1,0,664,3],
 "classHotItemGameAction.html#a76fcc1add8d0ea9ad3c538ab8e040921":[1,0,664,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX72 =
 "classIO.html#afd2db854151f6059cc9ba4c0a42a5e59":[1,0,737,34],
 "classImageExample.html":[1,0,690],
 "classImageExample.html#a1eb61f8b18b4965f3d639a3801826e82":[1,0,690,4],
-"classImageExample.html#a6e43ded5e09e52d4c30fc272c6e3b579":[1,0,690,7],
-"classImageExample.html#a819e59796add39485b5b3303889a5839":[1,0,690,3]
+"classImageExample.html#a6e43ded5e09e52d4c30fc272c6e3b579":[1,0,690,7]
 };

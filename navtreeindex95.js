@@ -1,5 +1,6 @@
 var NAVTREEINDEX95 =
 {
+"classQuestShippingChest.html":[1,0,1059],
 "classQuestShippingChest.html#a8c61733f0f8c5b508b1f457200ce7787":[1,0,1059,0],
 "classQuestShippingChest.html#ac2648e6ab85f8b1c949ab4d975ffe0cc":[1,0,1059,1],
 "classQuestShowSupply.html":[1,0,1060],
@@ -248,6 +249,5 @@ var NAVTREEINDEX95 =
 "classRecipe.html#a7212f90e86b198a288669c492d35e486":[1,0,1085,56],
 "classRecipe.html#a73cefa1f99ab6e2c73df60275796f22e":[1,0,1085,28],
 "classRecipe.html#a745596979a2d034b304ddf73cd8eb8d4":[1,0,1085,6],
-"classRecipe.html#a7539264ffa02fc512e4ef1f1d213362b":[1,0,1085,1],
-"classRecipe.html#a7539264ffa02fc512e4ef1f1d213362ba7a1920d61156abc05a60135aefe8bc67":[1,0,1085,1,0]
+"classRecipe.html#a7539264ffa02fc512e4ef1f1d213362b":[1,0,1085,1]
 };
