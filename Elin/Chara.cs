@@ -1077,7 +1077,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				return 100;
 			}
-			return 20;
+			return 5;
 		}
 	}
 
@@ -5934,7 +5934,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			num3 = 1 + Evalue(1648);
 		}
-		if (IsPC && cost.cost > 0 && a.Value == 0)
+		if (IsPC && cost.cost > 0 && a.Value == 0 && !ability.Has(a.id))
 		{
 			Msg.SayNothingHappen();
 			return false;
@@ -5946,7 +5946,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				Say(race.castStyle.IsEmpty("cast"), this, a.source.GetName().ToLower(), s.lang());
 			}
-			if (IsPC)
+			if (IsPC && !ability.Has(a.id))
 			{
 				_ = (i + 1) / 2;
 				if (a.vPotential < i)

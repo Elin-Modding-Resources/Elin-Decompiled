@@ -248,14 +248,17 @@ public class DNA : EClass
 		}
 	}
 
-	public bool CanRemove()
+	public bool CanRemove(Chara c)
 	{
 		for (int i = 0; i < vals.Count; i += 2)
 		{
-			int num = vals[i];
-			if (num == 1237 || num == 1415)
+			switch (vals[i])
 			{
+			case 1237:
+			case 1415:
 				return false;
+			case 1228:
+				return !c.IsPC;
 			}
 		}
 		return true;
@@ -561,13 +564,13 @@ public class DNA : EClass
 		return "gene".lang(text.ToTitleCase(), cost.ToString() ?? "");
 	}
 
-	public void WriteNote(UINote n)
+	public void WriteNote(UINote n, Chara tg = null)
 	{
 		if (slot >= 1)
 		{
 			n.AddText("isGeneReqSlots".lang(slot.ToString() ?? ""), FontColor.Warning);
 		}
-		if (!CanRemove())
+		if (!CanRemove(tg))
 		{
 			n.AddText("isPermaGene".lang(), FontColor.Warning);
 		}
@@ -653,7 +656,7 @@ public class DNA : EClass
 		for (int i = 0; i < vals.Count; i += 2)
 		{
 			Element element = Element.Create(vals[i], vals[i + 1]);
-			if (c.IsPC && element.id == 1415)
+			if (c.IsPC && !CanRemove(c))
 			{
 				return element;
 			}

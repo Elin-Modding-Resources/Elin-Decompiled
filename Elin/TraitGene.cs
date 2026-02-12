@@ -30,7 +30,7 @@ public class TraitGene : Trait
 			{
 				n.AddText("duration:" + owner.c_DNA.GetDurationHour());
 			}
-			owner.c_DNA.WriteNote(n);
+			owner.c_DNA.WriteNote(n, flag ? EClass.pc : null);
 			if (flag)
 			{
 				owner.c_DNA.WriteNoteExtra(n, EClass.pc);

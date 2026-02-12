@@ -117,13 +117,7 @@ public class GoalAutoCombat : GoalCombat
 	public override void BuildAbilityList()
 	{
 		GetAbilities((Element e) => e.source.abilityType.Length != 0);
-		AddAbility(ACT.Ranged);
-		AddAbility(ACT.Melee);
-		AddAbility(ACT.Item);
-		if (owner.HasCondition<ConBrightnessOfLife>())
-		{
-			TryAddAbility(6410);
-		}
+		base.BuildAbilityList();
 	}
 
 	public override bool TryAbortCombat()

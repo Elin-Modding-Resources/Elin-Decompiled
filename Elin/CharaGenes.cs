@@ -46,4 +46,19 @@ public class CharaGenes : EClass
 		}
 		return num;
 	}
+
+	public DNA GetDNA(int idEle)
+	{
+		foreach (DNA item in items)
+		{
+			for (int i = 0; i < item.vals.Count; i += 2)
+			{
+				if (item.vals[i] == idEle)
+				{
+					return item;
+				}
+			}
+		}
+		return null;
+	}
 }

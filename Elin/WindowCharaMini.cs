@@ -226,7 +226,7 @@ public class WindowCharaMini : WindowController
 					});
 					uIItem.button2.SetOnClick(delegate
 					{
-						if (!g.CanRemove())
+						if (!g.CanRemove(chara))
 						{
 							SE.Beep();
 						}

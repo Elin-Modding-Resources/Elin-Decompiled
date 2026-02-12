@@ -915,7 +915,7 @@ public class GoalCombat : Goal
 			{
 				if (owner.IsPC)
 				{
-					if (act.vPotential <= 0)
+					if (act.vPotential <= 0 && !owner.ability.Has(act.id))
 					{
 						continue;
 					}
@@ -988,7 +988,7 @@ public class GoalCombat : Goal
 			}
 			if (EClass.debug.logCombat && owner.IsPC)
 			{
-				Debug.Log(ability2.act.Name + "/" + ability2.priority);
+				Debug.Log(ability2.act.Name + "/" + ability2.priority + "/" + ability2.act.CanPerform(owner, ability2.tg ?? tc));
 			}
 			if (ability2.act.source.alias == "ActRanged")
 			{
@@ -1045,7 +1045,7 @@ public class GoalCombat : Goal
 			Debug.Log(owner.Name + "/" + abilities.Count);
 			foreach (ItemAbility ability3 in abilities)
 			{
-				Debug.Log(ability3.act.Name + "/" + ability3.priority);
+				Debug.Log(ability3.act.Name + "/" + ability3.priority + "/" + ability3.act.CanPerform(owner, ability3.tg ?? tc));
 			}
 		}
 		return false;
