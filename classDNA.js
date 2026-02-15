@@ -27,6 +27,7 @@ var classDNA =
     [ "GetRandomType", "classDNA.html#a72de04b5db8d67d810222658885796be", null ],
     [ "GetText", "classDNA.html#ae29fc11fc9ad9d17f219bae082d6f00b", null ],
     [ "GetType", "classDNA.html#a8971b32e6116f452319e919f954154b4", null ],
+    [ "MakeSlimeFood", "classDNA.html#a4799859606ffb9e1f8e06c5e58a0e11c", null ],
     [ "WriteNote", "classDNA.html#a440ceea1f5d954d7fb5ce9aeaaef0a88", null ],
     [ "WriteNoteExtra", "classDNA.html#a1831724365209c7223e4d9b9a3f943e9", null ],
     [ "bits", "classDNA.html#a9ddd01e83b7ca731a900ba3300a706be", null ],

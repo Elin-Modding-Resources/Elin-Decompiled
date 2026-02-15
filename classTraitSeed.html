@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.269 Nightly Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.270 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -916,7 +916,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CraftUtil_8cs_source.html#l00043">CraftUtil.AddRandomFoodEnc()</a>, <a class="el" href="Card_8cs_source.html#l01306">Card.c_seed</a>, <a class="el" href="Card_8cs_source.html#l00327">Card.encLV</a>, <a class="el" href="Card_8cs_source.html#l03871">Card.ModEncLv()</a>, <a class="el" href="CraftUtil_8cs_source.html#l00022">CraftUtil.ModRandomFoodEnc()</a>, and <a class="el" href="Rand_8cs_source.html#l00037">Rand.SetSeed()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00271">TraitCrafter.Craft()</a>, <a class="el" href="Trait_8cs_source.html#l02175">Trait.CreateStock()</a>, <a class="el" href="Zone_8cs_source.html#l02373">Zone.Generate()</a>, <a class="el" href="CraftUtil_8cs_source.html#l00061">CraftUtil.MakeDish()</a>, and <a class="el" href="TraitSeed_8cs_source.html#l00093">MakeSeed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitCrafter_8cs_source.html#l00271">TraitCrafter.Craft()</a>, <a class="el" href="Trait_8cs_source.html#l02191">Trait.CreateStock()</a>, <a class="el" href="Zone_8cs_source.html#l02373">Zone.Generate()</a>, <a class="el" href="CraftUtil_8cs_source.html#l00061">CraftUtil.MakeDish()</a>, and <a class="el" href="TraitSeed_8cs_source.html#l00093">MakeSeed()</a>.</p>
 
 </div>
 </div>
@@ -960,7 +960,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TraitSeed_8cs_source.html#l00174">ApplySeed()</a>, <a class="el" href="ThingGen_8cs_source.html#l00053">ThingGen.Create()</a>, <a class="el" href="TraitSeed_8cs_source.html#l00200">GetRandomSeedObj()</a>, and <a class="el" href="TileRow_8cs_source.html#l00008">TileRow.id</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l02175">Trait.CreateStock()</a>, <a class="el" href="Card_8cs_source.html#l06786">Card.Decay()</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00290">SurvivalManager.OnMineWreck()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00729">CoreDebug.SetStartStockpile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Trait_8cs_source.html#l02191">Trait.CreateStock()</a>, <a class="el" href="Card_8cs_source.html#l06786">Card.Decay()</a>, <a class="el" href="SurvivalManager_8cs_source.html#l00290">SurvivalManager.OnMineWreck()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00729">CoreDebug.SetStartStockpile()</a>.</p>
 
 </div>
 </div>
@@ -1393,31 +1393,31 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   39</span>            {</div>
 <div class="line"><span class="lineno">   40</span>                num = <a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>._growth[4].ToInt();</div>
 <div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;isHarvestCrop&quot;</span>.lang(num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">   42</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;NoteText_enc&quot;</span>, <span class="stringliteral">&quot;isHarvestCrop&quot;</span>.lang(num.ToString() ?? <span class="stringliteral">&quot;&quot;</span>));</div>
 <div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;isConsumeFertility&quot;</span>.lang((0.1f * (<span class="keywordtype">float</span>)<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.costSoil).ToString() ?? <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">   44</span>        n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;NoteText_enc&quot;</span>, <span class="stringliteral">&quot;isConsumeFertility&quot;</span>.lang((0.1f * (<span class="keywordtype">float</span>)<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.costSoil).ToString() ?? <span class="stringliteral">&quot;&quot;</span>));</div>
 <div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.tag.Contains(<span class="stringliteral">&quot;flood&quot;</span>))</div>
 <div class="line"><span class="lineno">   46</span>        {</div>
-<div class="line"><span class="lineno">   47</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;isWaterCrop&quot;</span>);</div>
+<div class="line"><span class="lineno">   47</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;NoteText_enc&quot;</span>, <span class="stringliteral">&quot;isWaterCrop&quot;</span>);</div>
 <div class="line"><span class="lineno">   48</span>        }</div>
 <div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.growth != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   50</span>        {</div>
 <div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.growth.GrowOnLand)</div>
 <div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;isGrowOnLand&quot;</span>);</div>
+<div class="line"><span class="lineno">   53</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;NoteText_enc&quot;</span>, <span class="stringliteral">&quot;isGrowOnLand&quot;</span>);</div>
 <div class="line"><span class="lineno">   54</span>            }</div>
 <div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.growth.GrowUndersea)</div>
 <div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;isGrowUndersea&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;NoteText_enc&quot;</span>, <span class="stringliteral">&quot;isGrowUndersea&quot;</span>);</div>
 <div class="line"><span class="lineno">   58</span>            }</div>
 <div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.growth.NeedSunlight)</div>
 <div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;isNeedSun&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>                n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;NoteText_enc&quot;</span>, <span class="stringliteral">&quot;isNeedSun&quot;</span>);</div>
 <div class="line"><span class="lineno">   62</span>            }</div>
 <div class="line"><span class="lineno">   63</span>        }</div>
 <div class="line"><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.growth == <span class="keyword">null</span> || !<a class="code hl_property" href="classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95">row</a>.growth.CanLevelSeed)</div>
 <div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;isDecoSeed&quot;</span>, <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Warning);</div>
+<div class="line"><span class="lineno">   66</span>            n.<a class="code hl_function" href="classUINote.html#ac98d4745e050d794de75189eb678e1a0">AddText</a>(<span class="stringliteral">&quot;NoteText_enc&quot;</span>, <span class="stringliteral">&quot;isDecoSeed&quot;</span>, <a class="code hl_enumeration" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a>.Warning);</div>
 <div class="line"><span class="lineno">   67</span>        }</div>
 <div class="line"><span class="lineno">   68</span>    }</div>
 <div class="ttc" id="aFontColor_8cs_html_a38781c7178610f85215f87793e99ed51"><div class="ttname"><a href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a></div><div class="ttdeci">FontColor</div><div class="ttdef"><b>Definition:</b> <a href="FontColor_8cs_source.html#l00001">FontColor.cs:2</a></div></div>

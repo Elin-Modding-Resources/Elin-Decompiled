@@ -483,6 +483,7 @@ var hierarchy =
             ] ],
             [ "BaseStance", "classBaseStance.html", [
               [ "BaseSong", "classBaseSong.html", [
+                [ "StanceSongEnd", "classStanceSongEnd.html", null ],
                 [ "StanceSongSleep", "classStanceSongSleep.html", null ],
                 [ "StanceSongValor", "classStanceSongValor.html", null ]
               ] ],
@@ -731,7 +732,8 @@ var hierarchy =
             [ "ActMissileBarrage", "classActMissileBarrage.html", null ],
             [ "ActMultihit", "classActMultihit.html", null ],
             [ "ActNTR", "classActNTR.html", [
-              [ "ActBloodsuck", "classActBloodsuck.html", null ]
+              [ "ActBloodsuck", "classActBloodsuck.html", null ],
+              [ "ActSlime", "classActSlime.html", null ]
             ] ],
             [ "ActQuickCraft", "classActQuickCraft.html", null ],
             [ "ActRide", "classActRide.html", [
@@ -1580,6 +1582,7 @@ var hierarchy =
               [ "TraitFiama", "classTraitFiama.html", null ],
               [ "TraitLoytel", "classTraitLoytel.html", null ],
               [ "TraitMerchantMap", "classTraitMerchantMap.html", null ],
+              [ "TraitMimu", "classTraitMimu.html", null ],
               [ "TraitMiral", "classTraitMiral.html", null ],
               [ "TraitNino", "classTraitNino.html", null ],
               [ "TraitNola", "classTraitNola.html", null ],

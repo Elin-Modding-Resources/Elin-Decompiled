@@ -9,7 +9,9 @@ var classAI__Fuck =
       [ "Bitch", "classAI__Fuck.html#a993980e05dedec148820d1f9c505e901a52366536b6e96f74acf4b59b8ba22823", null ],
       [ "Succubus", "classAI__Fuck.html#a993980e05dedec148820d1f9c505e901a9e69cc181383238a97f3e6fa52e5d42c", null ],
       [ "NTR", "classAI__Fuck.html#a993980e05dedec148820d1f9c505e901afef099d912ec636f224fac89f6380dc9", null ],
-      [ "Bloodsuck", "classAI__Fuck.html#a993980e05dedec148820d1f9c505e901a0b7df20c03479f69d3bd89a3931a159b", null ]
+      [ "Bloodsuck", "classAI__Fuck.html#a993980e05dedec148820d1f9c505e901a0b7df20c03479f69d3bd89a3931a159b", null ],
+      [ "Slime", "classAI__Fuck.html#a993980e05dedec148820d1f9c505e901aa537a3d7d5ede5718f2b597568233925", null ],
+      [ "Tentacle", "classAI__Fuck.html#a993980e05dedec148820d1f9c505e901a84cfc292abe0b7004aad4286421e2bbd", null ]
     ] ],
     [ "Finish", "classAI__Fuck.html#a1079aecc7edc9692d84ac0b03d284449", null ],
     [ "Run", "classAI__Fuck.html#a2c79902b65680ac0345ea3d263905678", null ],

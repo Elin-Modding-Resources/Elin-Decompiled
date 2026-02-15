@@ -10,6 +10,7 @@ var classQuestManager =
     [ "Get", "classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12", null ],
     [ "Get< T >", "classQuestManager.html#ab651e7c02717adeaa6e1ac0652dbd39b", null ],
     [ "GetGlobal", "classQuestManager.html#aee656082e2037dfef69293944f3fc838", null ],
+    [ "GetPhase", "classQuestManager.html#a74a0969213ef6505cac5c065012486ce", null ],
     [ "GetPhase< T >", "classQuestManager.html#a281c23ba4522ebc66a200b6f66348eb6", null ],
     [ "HasFarAwayEscort", "classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f", null ],
     [ "IsAdded< T >", "classQuestManager.html#a7cdc92970800a3c53ee591364fe8495d", null ],
