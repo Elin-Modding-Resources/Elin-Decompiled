@@ -36,7 +36,7 @@ public class TraitRecipe : TraitScroll
 	{
 		if (recipe.NeedFactory)
 		{
-			n.AddText("isCraftedAt".lang(recipe.NameFactory.ToTitleCase(wholeText: true)));
+			n.AddText("NoteText_enc", "isCraftedAt".lang(recipe.NameFactory.ToTitleCase(wholeText: true)));
 		}
 	}
 

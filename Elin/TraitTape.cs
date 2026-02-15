@@ -1,8 +1,20 @@
 public class TraitTape : TraitItem
 {
+	public bool IsCollected
+	{
+		get
+		{
+			if (owner.refVal != 0)
+			{
+				return EClass.player.knownBGMs.Contains(owner.refVal);
+			}
+			return true;
+		}
+	}
+
 	public override void SetName(ref string s)
 	{
-		s = "_tape".lang(owner.refVal.ToString() ?? "", s);
+		s = "_tape".lang(owner.refVal.ToString() ?? "", s, EClass.core.refs.dictBGM[owner.refVal]._name);
 	}
 
 	public override void OnCreate(int lv)
@@ -19,7 +31,12 @@ public class TraitTape : TraitItem
 
 	public override bool OnUse(Chara c)
 	{
-		if (owner.refVal == 0 || EClass.player.knownBGMs.Contains(owner.refVal))
+		if (EClass._zone.IsUserZone)
+		{
+			Msg.SayCannotUseHere();
+			return false;
+		}
+		if (IsCollected)
 		{
 			Msg.Say("songAlreayKnown");
 		}
@@ -30,6 +47,14 @@ public class TraitTape : TraitItem
 		}
 		EClass.Sound.Play("tape");
 		owner.ModNum(-1);
-		return false;
+		return true;
+	}
+
+	public override void WriteNote(UINote n, bool identified)
+	{
+		if (IsCollected)
+		{
+			n.AddText("NoteText_enc", "isCollected", FontColor.Warning);
+		}
 	}
 }

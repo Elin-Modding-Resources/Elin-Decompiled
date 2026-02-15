@@ -4901,6 +4901,12 @@ public class Chara : Card, IPathfindWalker
 				EQ_ID("sword_katana");
 			}
 			break;
+		case "mimu":
+			if (onCreate)
+			{
+				EQ_ID("staff_leek");
+			}
+			break;
 		}
 		if (!TryEquipRanged())
 		{

@@ -15,7 +15,9 @@ public class AI_Fuck : AIAct
 		Bitch,
 		Succubus,
 		NTR,
-		Bloodsuck
+		Bloodsuck,
+		Slime,
+		Tentacle
 	}
 
 	public Variation variation;
@@ -50,9 +52,9 @@ public class AI_Fuck : AIAct
 	{
 		get
 		{
-			if (variation != Variation.NTR)
+			if (variation != Variation.NTR && variation != Variation.Bloodsuck)
 			{
-				return variation != Variation.Bloodsuck;
+				return variation != Variation.Slime;
 			}
 			return false;
 		}
@@ -89,20 +91,25 @@ public class AI_Fuck : AIAct
 		{
 			yield return DoGoto(target.pos, destDist);
 		}
-		cc.Say((variation == Variation.Bloodsuck) ? "suck_start" : (Type.ToString() + "_start"), cc, tc);
+		cc.Say((variation == Variation.Slime) ? "slime_start" : ((variation == Variation.Bloodsuck) ? "suck_start" : (Type.ToString() + "_start")), cc, tc);
 		isFail = () => !tc.IsAliveInCurrentZone || tc.Dist(owner) > 3;
 		if (Type == FuckType.tame)
 		{
 			cc.SetTempHand(1104, -1);
 		}
 		maxProgress = ((variation == Variation.NTR || variation == Variation.Bloodsuck) ? 10 : 25);
-		if (variation == Variation.Succubus)
+		switch (variation)
 		{
+		case Variation.Succubus:
 			cc.Talk("seduce");
-		}
-		if (variation == Variation.Bloodsuck)
-		{
+			break;
+		case Variation.Bloodsuck:
 			cc.PlaySound("bloodsuck");
+			break;
+		case Variation.Slime:
+			cc.PlaySound("slime");
+			target.AddCondition<ConEntangle>(500, force: true);
+			break;
 		}
 		for (int i = 0; i < maxProgress; i++)
 		{
@@ -139,9 +146,16 @@ public class AI_Fuck : AIAct
 				}
 				if (EClass.rnd(3) == 0 || sell)
 				{
-					target.AddCondition<ConWait>(50, force: true);
+					if (variation == Variation.Slime)
+					{
+						target.AddCondition<ConSupress>(200, force: true);
+					}
+					else
+					{
+						target.AddCondition<ConWait>(50, force: true);
+					}
 				}
-				if (variation == Variation.Bloodsuck)
+				if (variation == Variation.Bloodsuck || variation == Variation.Slime)
 				{
 					owner.pos.TryWitnessCrime(cc, tc, 4, (Chara c) => EClass.rnd(cc.HasCondition<ConTransmuteBat>() ? 50 : 20) == 0);
 				}
@@ -222,7 +236,7 @@ public class AI_Fuck : AIAct
 		{
 		case FuckType.fuck:
 		{
-			if (variation == Variation.Bloodsuck)
+			if (variation == Variation.Bloodsuck || variation == Variation.Slime)
 			{
 				if (EClass.rnd(2) == 0)
 				{
@@ -276,7 +290,7 @@ public class AI_Fuck : AIAct
 				EClass.player.forceTalk = true;
 				chara2.Talk("seduced");
 			}
-			else if (variation != Variation.NTR && variation != Variation.Bloodsuck && chara != EClass.pc)
+			else if (variation != Variation.NTR && variation != Variation.Bloodsuck && variation != Variation.Slime && chara != EClass.pc)
 			{
 				int num3 = CalcMoney.Whore(chara2, chara);
 				Chara chara4 = chara;
@@ -362,36 +376,63 @@ public class AI_Fuck : AIAct
 			{
 				EClass.player.stats.kimo++;
 			}
-			if (variation == Variation.NTR)
+			switch (variation)
 			{
-				Thing thing = chara2.things.Find<TraitDreamBug>();
-				if (thing != null)
+			case Variation.NTR:
+			{
+				Thing thing2 = chara2.things.Find<TraitDreamBug>();
+				if (thing2 != null)
 				{
-					thing.ModNum(-1);
+					thing2.ModNum(-1);
 					if (chara.IsPC)
 					{
 						Msg.Say("dream_spell", EClass.sources.elements.map[9156].GetName().ToLowerInvariant());
 						EClass.pc.GainAbility(9156, EClass.rnd(2) + 1);
 					}
 				}
-				if (chara.HasElement(1239) && !chara2.HasElement(1216))
+				if (!chara.HasElement(1239) || chara2.HasElement(1216))
 				{
-					if (chara2.HasElement(758))
+					break;
+				}
+				if (chara2.HasElement(758))
+				{
+					if (chara.ExistsOnMap)
 					{
-						if (chara.ExistsOnMap)
-						{
-							chara.stamina.Mod(-1000000);
-						}
-					}
-					else if (chara2.ExistsOnMap)
-					{
-						chara2.stamina.Mod((!chara2.IsPCFaction) ? (-10000) : (chara2.IsPC ? (-25) : (-50)));
+						chara.stamina.Mod(-1000000);
 					}
 				}
+				else if (chara2.ExistsOnMap)
+				{
+					chara2.stamina.Mod((!chara2.IsPCFaction) ? (-10000) : (chara2.IsPC ? (-25) : (-50)));
+				}
+				break;
 			}
-			if (variation == Variation.Bloodsuck && chara2.HasElement(758) && chara.ExistsOnMap)
+			case Variation.Bloodsuck:
+				if (chara2.HasElement(758) && chara.ExistsOnMap)
+				{
+					chara.stamina.Mod(-1000000);
+				}
+				break;
+			case Variation.Slime:
 			{
-				chara.stamina.Mod(-1000000);
+				Thing thing = null;
+				for (int j = 0; j < 10; j++)
+				{
+					thing = target.MakeGene(DNA.Type.Superior);
+					thing.c_DNA.MakeSlimeFood(chara);
+					if (thing.c_DNA.GetInvalidAction(chara) != null || thing.c_DNA.GetInvalidFeat(chara) != null)
+					{
+						thing.c_DNA.vals.Clear();
+						continue;
+					}
+					thing.elements.ModBase(10, 200);
+					thing.elements.ModBase(18, 100);
+					break;
+				}
+				FoodEffect.Proc(chara, thing, consume: false);
+				chara.elements.ModExp(6608, 1000f);
+				break;
+			}
 			}
 			break;
 		}

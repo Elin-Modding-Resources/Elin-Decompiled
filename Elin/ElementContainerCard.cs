@@ -41,6 +41,7 @@ public class ElementContainerCard : ElementContainer
 	{
 		if (owner.IsPC)
 		{
+			TryLearn(6608, 1274, 0);
 			TryLearn(6011, 281, 0);
 			TryLearn(6018, 226, 0);
 			TryLearn(6019, 227, 0);

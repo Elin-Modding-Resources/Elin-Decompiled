@@ -24,11 +24,11 @@ public class TraitGene : Trait
 			bool flag = EClass.pc.HasElement(1274) && !LayerDragGrid.Instance;
 			if (owner.c_DNA.cost > 0)
 			{
-				n.AddText("isCostFeatPoint".lang((flag ? (owner.c_DNA.cost * EClass.pc.GeneCostMTP / 100 + " (" + owner.c_DNA.cost + ")") : ((object)owner.c_DNA.cost))?.ToString() ?? ""));
+				n.AddText("NoteText_enc", "isCostFeatPoint".lang((flag ? (owner.c_DNA.cost * EClass.pc.GeneCostMTP / 100 + " (" + owner.c_DNA.cost + ")") : ((object)owner.c_DNA.cost))?.ToString() ?? ""));
 			}
 			if (EClass.debug.showExtra)
 			{
-				n.AddText("duration:" + owner.c_DNA.GetDurationHour());
+				n.AddText("NoteText_enc", "duration:" + owner.c_DNA.GetDurationHour());
 			}
 			owner.c_DNA.WriteNote(n, flag ? EClass.pc : null);
 			if (flag)

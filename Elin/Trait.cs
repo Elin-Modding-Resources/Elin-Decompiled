@@ -1559,48 +1559,48 @@ public class Trait : EClass
 			{
 				break;
 			}
-			int num3 = 0;
+			int num4 = 0;
 			foreach (Thing thing10 in c_copyContainer.things)
 			{
 				if (!owner.trait.CanCopy(thing10))
 				{
 					continue;
 				}
-				Thing thing3 = thing10.Duplicate(1);
-				thing3.isStolen = false;
-				thing3.isCopy = true;
-				thing3.c_priceFix = 0;
-				foreach (Element item in thing3.elements.dict.Values.Where((Element e) => e.HasTag("noInherit")).ToList())
+				Thing thing5 = thing10.Duplicate(1);
+				thing5.isStolen = false;
+				thing5.isCopy = true;
+				thing5.c_priceFix = 0;
+				foreach (Element item in thing5.elements.dict.Values.Where((Element e) => e.HasTag("noInherit")).ToList())
 				{
-					thing3.elements.Remove(item.id);
+					thing5.elements.Remove(item.id);
 				}
-				int num4 = 1;
+				int num5 = 1;
 				switch (owner.trait.CopyShop)
 				{
 				case CopyShopType.Item:
 				{
-					num4 = (1000 + owner.c_invest * 100) / (thing3.GetPrice(CurrencyType.Money, sell: false, PriceType.CopyShop) + 50);
+					num5 = (1000 + owner.c_invest * 100) / (thing5.GetPrice(CurrencyType.Money, sell: false, PriceType.CopyShop) + 50);
 					int[] array = new int[3] { 704, 703, 702 };
 					foreach (int ele in array)
 					{
-						if (thing3.HasElement(ele))
+						if (thing5.HasElement(ele))
 						{
-							num4 = 1;
+							num5 = 1;
 						}
 					}
 					break;
 				}
 				case CopyShopType.Spellbook:
-					thing3.c_charges = thing10.c_charges;
+					thing5.c_charges = thing10.c_charges;
 					break;
 				}
-				if (num4 > 1 && thing3.trait.CanStack)
+				if (num5 > 1 && thing5.trait.CanStack)
 				{
-					thing3.SetNum(num4);
+					thing5.SetNum(num5);
 				}
-				AddThing(thing3);
-				num3++;
-				if (num3 > owner.trait.NumCopyItem)
+				AddThing(thing5);
+				num4++;
+				if (num4 > owner.trait.NumCopyItem)
 				{
 					break;
 				}
@@ -1608,26 +1608,35 @@ public class Trait : EClass
 			break;
 		}
 		case ShopType.Specific:
-		{
-			string id2 = owner.id;
-			if (!(id2 == "mogu"))
+			switch (owner.id)
 			{
-				if (!(id2 == "felmera"))
-				{
-					break;
-				}
+			case "mogu":
+				AddThing(ThingGen.Create("casino_coin").SetNum(5000));
+				break;
+			case "felmera":
 				foreach (Thing item2 in new DramaOutcome().ListFelmeraBarter())
 				{
 					AddThing(item2);
 				}
 				AddThing(ThingGen.Create("crimale2"));
-			}
-			else
-			{
-				AddThing(ThingGen.Create("casino_coin").SetNum(5000));
+				break;
+			case "mimu":
+				AddCassette(10, null, 999);
+				AddCassette(15, null, 999);
+				AddCassette(17, null, 999);
+				AddCassette(29, null, 999);
+				AddCassette(40, null, 999);
+				AddCassette(46, null, 999);
+				AddCassette(47, null, 999);
+				AddCassette(52, null, 999);
+				AddCassette(54, null, 999);
+				AddCassette(59, null, 999);
+				AddCassette(65, null, 999);
+				AddCassette(109, "debt", 0);
+				AddCassette(110, "curry", 999);
+				break;
 			}
 			break;
-		}
 		case ShopType.Deed:
 			Add("deed", 1, 0);
 			Add("deed_move", 2 + EClass.rnd(5), 0);
@@ -1733,9 +1742,9 @@ public class Trait : EClass
 					break;
 				case ShopType.Influence:
 				{
-					bool num5 = owner.id == "big_sister";
-					TraitTicketFurniture.SetZone(num5 ? EClass.game.spatials.Find("little_garden") : EClass._zone, Add("ticket_furniture", 1, 0).SetNum(99));
-					if (num5)
+					bool num3 = owner.id == "big_sister";
+					TraitTicketFurniture.SetZone(num3 ? EClass.game.spatials.Find("little_garden") : EClass._zone, Add("ticket_furniture", 1, 0).SetNum(99));
+					if (num3)
 					{
 						Add("littleball", 10, 0);
 						if (!owner.Chara.affinity.CanGiveCard())
@@ -1748,25 +1757,25 @@ public class Trait : EClass
 						}
 						if (!reroll)
 						{
-							for (int m = 0; m < 20; m++)
+							for (int l = 0; l < 20; l++)
 							{
 								owner.Chara.ModExp(287, 1000);
 							}
 						}
-						Thing thing4 = CraftUtil.MakeLoveLunch(owner.Chara);
-						thing4.elements.SetBase(1229, 1);
-						AddThing(thing4);
+						Thing thing3 = CraftUtil.MakeLoveLunch(owner.Chara);
+						thing3.elements.SetBase(1229, 1);
+						AddThing(thing3);
 						break;
 					}
-					for (int n = 0; n < 10; n++)
+					for (int m = 0; m < 10; m++)
 					{
-						Thing thing5 = ThingGen.Create(EClass._zone.IsFestival ? "1123" : ((EClass.rnd(3) == 0) ? "1169" : "1160"));
-						thing5.DyeRandom();
-						AddThing(thing5);
+						Thing thing4 = ThingGen.Create(EClass._zone.IsFestival ? "1123" : ((EClass.rnd(3) == 0) ? "1169" : "1160"));
+						thing4.DyeRandom();
+						AddThing(thing4);
 					}
 					if (EClass._zone is Zone_Exile)
 					{
-						for (int num6 = 0; num6 < 30; num6++)
+						for (int n = 0; n < 30; n++)
 						{
 							Add("1235", 1, -1);
 							Add("1236", 1, -1);
@@ -1899,9 +1908,9 @@ public class Trait : EClass
 						continue;
 					}
 					string[] recipeKey = item3.row.recipeKey;
-					for (int l = 0; l < recipeKey.Length; l++)
+					for (int num6 = 0; num6 < recipeKey.Length; num6++)
 					{
-						if (recipeKey[l] == ShopType.ToString())
+						if (recipeKey[num6] == ShopType.ToString())
 						{
 							NoRestock(ThingGen.CreateRecipe(item3.id));
 							break;
@@ -2146,6 +2155,13 @@ public class Trait : EClass
 					Thing thing7 = ThingGen.CreateRedBook("advweek_" + i);
 					thing7.c_priceFix = -90;
 					AddThing(thing7);
+				}
+				void AddCassette(int idCas, string idQuest, int phase)
+				{
+					if (idQuest == null || EClass.game.quests.GetPhase(idQuest) >= phase)
+					{
+						AddThing(ThingGen.CreateCassette(idCas));
+					}
 				}
 				Thing AddThing(Thing _t)
 				{

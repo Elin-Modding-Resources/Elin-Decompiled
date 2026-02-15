@@ -30,7 +30,7 @@ public class Zone_Yowyn : Zone_Town
 		{
 			if (!IsFestival)
 			{
-				return null;
+				return base.IDHat;
 			}
 			return "hat_mushroom";
 		}

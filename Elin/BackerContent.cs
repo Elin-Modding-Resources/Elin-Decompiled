@@ -19,21 +19,29 @@ public class BackerContent : EClass
 
 	public static void GakiConvert(ref string text, string idLang = "zako")
 	{
-		if (!text.IsEmpty())
+		if (text.IsEmpty())
 		{
-			if (!text.StartsWith("("))
+			return;
+		}
+		if (!text.StartsWith("("))
+		{
+			text = idLang.lang().Split(',').RandomItem() + " (" + text + ")";
+		}
+		else
+		{
+			switch (idLang)
 			{
-				text = idLang.lang().Split(',').RandomItem() + " (" + text + ")";
-			}
-			else if (idLang == "mokyu" || idLang == "babu")
-			{
+			case "mokyu":
+			case "babu":
+			case "mimu":
 				text = idLang.lang().Split(',').RandomItem() + " " + text;
+				break;
 			}
-			text = text.Replace("。)", ")");
-			if (text.EndsWith("」"))
-			{
-				text = text.Substring(0, text.Length - 1);
-			}
+		}
+		text = text.Replace("。)", ")");
+		if (text.EndsWith("」"))
+		{
+			text = text.Substring(0, text.Length - 1);
 		}
 	}
 }

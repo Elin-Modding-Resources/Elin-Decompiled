@@ -6894,17 +6894,17 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else
 		{
-			string text2 = id;
-			if (!(text2 == "adv_gaki"))
+			switch (id)
 			{
-				if (text2 == "corgon")
-				{
-					BackerContent.GakiConvert(ref text, "mokyu");
-				}
-			}
-			else
-			{
+			case "adv_gaki":
 				BackerContent.GakiConvert(ref text);
+				break;
+			case "corgon":
+				BackerContent.GakiConvert(ref text, "mokyu");
+				break;
+			case "mimu":
+				BackerContent.GakiConvert(ref text, "mimu");
+				break;
 			}
 		}
 		TalkRaw(text, ref1, ref2, forceSync);

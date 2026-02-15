@@ -235,7 +235,7 @@ public class FoodEffect : EClass
 					{
 						break;
 					}
-					goto IL_0f76;
+					goto IL_0f84;
 				case "love":
 					ActEffect.LoveMiracle(c2, EClass.pc, value.Value * 10);
 					break;
@@ -282,6 +282,7 @@ public class FoodEffect : EClass
 		num4 += (float)food.Evalue(440);
 		num4 += (float)(food.Evalue(445) / 2);
 		num4 -= (float)food.Evalue(71);
+		num4 += (float)food.Evalue(18);
 		num4 += (float)(num3 / 2);
 		num4 *= num5;
 		if (idTaste.IsEmpty())
@@ -379,8 +380,8 @@ public class FoodEffect : EClass
 		{
 			food.trait.OnDrink(c2);
 		}
-		goto IL_0f76;
-		IL_0f76:
+		goto IL_0f84;
+		IL_0f84:
 		if (consume)
 		{
 			num7 += 5f;

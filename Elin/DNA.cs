@@ -568,11 +568,11 @@ public class DNA : EClass
 	{
 		if (slot >= 1)
 		{
-			n.AddText("isGeneReqSlots".lang(slot.ToString() ?? ""), FontColor.Warning);
+			n.AddText("NoteText_enc", "isGeneReqSlots".lang(slot.ToString() ?? ""), FontColor.Warning);
 		}
 		if (!CanRemove(tg))
 		{
-			n.AddText("isPermaGene".lang(), FontColor.Warning);
+			n.AddText("NoteText_enc", "isPermaGene".lang(), FontColor.Warning);
 		}
 		n.Space(4);
 		if (type == Type.Brain)
@@ -581,7 +581,7 @@ public class DNA : EClass
 			if (row != null)
 			{
 				string key = row.tactics.IsEmpty(EClass.sources.tactics.map.TryGetValue(row.id)?.id ?? EClass.sources.tactics.map.TryGetValue(row.job)?.id ?? "predator");
-				n.AddText("gene_info".lang(EClass.sources.tactics.map[key].GetName().ToTitleCase(), ""), FontColor.ButtonGeneral);
+				n.AddText("NoteText_enc", "gene_info".lang(EClass.sources.tactics.map[key].GetName().ToTitleCase(), ""), FontColor.ButtonGeneral);
 			}
 			for (int i = 0; i < vals.Count; i += 2)
 			{
@@ -592,7 +592,7 @@ public class DNA : EClass
 				string text = "";
 				num2 = Mathf.Abs(num2 / 20) + 1;
 				text = text + "[" + "*".Repeat(Mathf.Clamp(num2, 1, 5)) + ((num2 > 5) ? "+" : "") + "]";
-				n.AddText("gene_info_brain".lang(@ref, text), color);
+				n.AddText("NoteText_enc", "gene_info_brain".lang(@ref, text), color);
 			}
 			return;
 		}
@@ -629,7 +629,7 @@ public class DNA : EClass
 			{
 				text2 = text2 + " (" + element.Value + ")";
 			}
-			n.AddText("gene_info".lang(element.Name.ToTitleCase(wholeText: true), text2), color2);
+			n.AddText("NoteText_enc", "gene_info".lang(element.Name.ToTitleCase(wholeText: true), text2), color2);
 		}
 	}
 
@@ -695,5 +695,19 @@ public class DNA : EClass
 			}
 		}
 		return null;
+	}
+
+	public void MakeSlimeFood(Chara c)
+	{
+		int num = c.Evalue(6608) + 10;
+		for (int i = 0; i < vals.Count; i += 2)
+		{
+			Element element = Element.Create(vals[i], vals[i + 1]);
+			if ((element.source.category == "attribute" || element.source.category == "skill") && vals[i + 1] > num)
+			{
+				vals[i + 1] = num;
+			}
+		}
+		cost = 0;
 	}
 }

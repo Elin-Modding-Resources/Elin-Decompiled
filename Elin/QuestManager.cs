@@ -166,6 +166,22 @@ public class QuestManager : EClass
 		return -1;
 	}
 
+	public int GetPhase(string id)
+	{
+		if (IsCompleted(id))
+		{
+			return 999;
+		}
+		foreach (Quest item in list)
+		{
+			if (item.id == id)
+			{
+				return item.phase;
+			}
+		}
+		return -1;
+	}
+
 	public T Get<T>() where T : Quest
 	{
 		foreach (Quest item in list)

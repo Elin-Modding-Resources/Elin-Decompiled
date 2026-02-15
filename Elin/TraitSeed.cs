@@ -39,31 +39,31 @@ public class TraitSeed : Trait
 			{
 				num = row._growth[4].ToInt();
 			}
-			n.AddText("isHarvestCrop".lang(num.ToString() ?? ""));
+			n.AddText("NoteText_enc", "isHarvestCrop".lang(num.ToString() ?? ""));
 		}
-		n.AddText("isConsumeFertility".lang((0.1f * (float)row.costSoil).ToString() ?? ""));
+		n.AddText("NoteText_enc", "isConsumeFertility".lang((0.1f * (float)row.costSoil).ToString() ?? ""));
 		if (row.tag.Contains("flood"))
 		{
-			n.AddText("isWaterCrop");
+			n.AddText("NoteText_enc", "isWaterCrop");
 		}
 		if (row.growth != null)
 		{
 			if (row.growth.GrowOnLand)
 			{
-				n.AddText("isGrowOnLand");
+				n.AddText("NoteText_enc", "isGrowOnLand");
 			}
 			if (row.growth.GrowUndersea)
 			{
-				n.AddText("isGrowUndersea");
+				n.AddText("NoteText_enc", "isGrowUndersea");
 			}
 			if (row.growth.NeedSunlight)
 			{
-				n.AddText("isNeedSun");
+				n.AddText("NoteText_enc", "isNeedSun");
 			}
 		}
 		if (row.growth == null || !row.growth.CanLevelSeed)
 		{
-			n.AddText("isDecoSeed", FontColor.Warning);
+			n.AddText("NoteText_enc", "isDecoSeed", FontColor.Warning);
 		}
 	}
 

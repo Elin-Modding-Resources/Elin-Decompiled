@@ -26,7 +26,7 @@ public class TraitItem : Trait
 		if (!langNote.IsEmpty())
 		{
 			n.Space(20);
-			n.AddText(langNote.lang(), FontColor.Good);
+			n.AddText("NoteText_enc", langNote.lang(), FontColor.Good);
 		}
 	}
 }
