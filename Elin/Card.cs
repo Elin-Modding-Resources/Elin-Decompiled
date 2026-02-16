@@ -3034,6 +3034,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Chara.SetFeat(1415, Evalue(1415) + 1, msg: true);
 		}
+		if (IsPC && HasElement(1274) && Evalue(1274) < 8 && LV >= Evalue(1274) * 5)
+		{
+			Chara.SetFeat(1274, Evalue(1274) + 1, msg: true);
+		}
 		if (IsPC || !(Chara.race.id == "mutant"))
 		{
 			return;

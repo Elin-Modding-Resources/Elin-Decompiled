@@ -528,7 +528,7 @@ public class WindowChara : WindowController
 			}
 			if (chara.IsPC && chara.HasElement(1274) && chara.c_genes != null && chara.c_genes.items.Count > 0)
 			{
-				Header("genes", null);
+				Header("genes".lang() + "  " + EClass.pc.CurrentGeneSlot + "/" + EClass.pc.MaxGeneSlot, null);
 				ListFeat();
 				list.callbacks = new UIList.Callback<DNA, ButtonElement>
 				{
@@ -547,7 +547,7 @@ public class WindowChara : WindowController
 							a.WriteNote(uINote);
 							t.note.Build();
 						});
-						b.subText.text = "(+" + a.slot + ")";
+						b.subText.text = "(" + a.slot + ")";
 						b.subText.SetActive(enable: true);
 						b.imagePotential.SetActive(enable: false);
 					},

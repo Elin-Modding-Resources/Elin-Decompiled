@@ -144,6 +144,10 @@ public class AI_Fuck : AIAct
 					}
 					break;
 				}
+				if (variation == Variation.Slime)
+				{
+					owner.DoHostileAction(target);
+				}
 				if (EClass.rnd(3) == 0 || sell)
 				{
 					if (variation == Variation.Slime)
@@ -418,11 +422,12 @@ public class AI_Fuck : AIAct
 				Thing thing = null;
 				for (int j = 0; j < 10; j++)
 				{
-					thing = target.MakeGene(DNA.Type.Superior);
+					thing = target.MakeGene((j < 3) ? DNA.Type.Superior : DNA.Type.Default);
 					thing.c_DNA.MakeSlimeFood(chara);
 					if (thing.c_DNA.GetInvalidAction(chara) != null || thing.c_DNA.GetInvalidFeat(chara) != null)
 					{
 						thing.c_DNA.vals.Clear();
+						thing.c_DNA.type = DNA.Type.Inferior;
 						continue;
 					}
 					thing.elements.ModBase(10, 200);

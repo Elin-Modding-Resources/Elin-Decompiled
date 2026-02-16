@@ -158,7 +158,7 @@ public class ElementContainer : EClass
 		{
 			if (value.HasTag("primary"))
 			{
-				value.vTempPotential = (value.ValueWithoutLink - ((mode != 2) ? 7 : 0)) * 5;
+				value.vTempPotential = Mathf.Max(30, (value.ValueWithoutLink - ((mode != 2) ? 8 : 0)) * 7);
 			}
 		}
 	}

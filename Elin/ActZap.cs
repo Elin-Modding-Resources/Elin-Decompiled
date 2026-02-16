@@ -20,6 +20,7 @@ public class ActZap : Act
 			trait.owner.ModCharge(-1);
 			Act.CC.PlayEffect("rod");
 			Act.CC.PlaySound("rod");
+			Act.CC.RemoveCondition<ConInvisibility>();
 			Act.TC = Act.CC;
 			EffectId idEffect = trait.IdEffect;
 			int power = trait.Power * (100 + Act.CC.Evalue(305) * 10 + Act.CC.MAG / 2 + Act.CC.PER / 2) / 100;

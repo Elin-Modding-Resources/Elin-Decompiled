@@ -10,9 +10,9 @@ public class StanceSongEnd : BaseSong
 			{
 				break;
 			}
-			if ((item.IsPowerful ? 15 : 30) * Mathf.Min(base.power / 4, 100) / 100 > EClass.rnd(100))
+			if (30 * Mathf.Min(base.power / 4, 100) / 100 > EClass.rnd(100))
 			{
-				ActEffect.ProcAt(EffectId.Hand, owner.Power, BlessedState.Normal, owner, item, item.pos, isNeg: true, new ActRef
+				ActEffect.ProcAt(EffectId.Hand, new ActHand().GetPower(owner), BlessedState.Normal, owner, item, item.pos, isNeg: true, new ActRef
 				{
 					aliasEle = ((EClass.rnd(2) == 0) ? "eleLightning" : ((EClass.rnd(2) == 0) ? "eleCold" : "eleFire"))
 				});

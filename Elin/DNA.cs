@@ -258,6 +258,7 @@ public class DNA : EClass
 			case 1415:
 				return false;
 			case 1228:
+			case 1414:
 				return !c.IsPC;
 			}
 		}
@@ -561,7 +562,7 @@ public class DNA : EClass
 		{
 			text = "???";
 		}
-		return "gene".lang(text.ToTitleCase(), cost.ToString() ?? "");
+		return "gene".lang(text.ToTitleCase(), (cost == 0) ? "" : (cost.ToString() ?? ""));
 	}
 
 	public void WriteNote(UINote n, Chara tg = null)

@@ -1067,7 +1067,7 @@ public class Chara : Card, IPathfindWalker
 
 	public FactionBranch homeBranch => homeZone?.branch;
 
-	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242) + Evalue(1273);
+	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242) + Evalue(1273) + ((IsPC && HasElement(1274)) ? (Evalue(1274) - 7) : 0);
 
 	public int GeneCostMTP
 	{
@@ -1627,7 +1627,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (base.LV > 5 && race.id == "mutant")
 		{
-			for (int j = 0; j < Mathf.Min(1 + base.LV / 5, 22); j++)
+			for (int j = 0; j < Mathf.Min(1 + base.LV / 5, 20); j++)
 			{
 				SetFeat(1644, j + 1);
 			}
@@ -4905,6 +4905,12 @@ public class Chara : Card, IPathfindWalker
 			if (onCreate)
 			{
 				EQ_ID("staff_leek");
+			}
+			break;
+		case "kumatan":
+			if (onCreate)
+			{
+				EQ_ID("dagger_hocho");
 			}
 			break;
 		}

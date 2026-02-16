@@ -625,6 +625,9 @@ public class Feat : Element
 			ModPotential(120, a * 50);
 			ModPotential(123, a * 50);
 			break;
+		case 1274:
+			featRef[3] = (a - 7).ToString() ?? "";
+			break;
 		case 1750:
 		{
 			string[] array = featRef;
