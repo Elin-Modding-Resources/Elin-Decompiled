@@ -812,13 +812,9 @@ public class CoreDebug : EScriptable
 		{
 			UIButton.TryShowTip();
 		}
-		if (Input.GetKeyDown(KeyCode.O))
-		{
-			Steam.GetAchievement(ID_Achievement.test);
-		}
 		if (Input.GetKeyDown(KeyCode.P))
 		{
-			Steam.GetAchievement(ID_Achievement.mew);
+			Steam.GetAchievement(ID_Achievement.LOMIAS);
 		}
 		if (Input.GetKeyDown(KeyCode.F11))
 		{

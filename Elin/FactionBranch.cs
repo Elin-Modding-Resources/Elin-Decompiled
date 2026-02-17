@@ -1480,6 +1480,10 @@ public class FactionBranch : EClass
 		{
 			uidMaid = c.uid;
 		}
+		if (c.id == "lomias")
+		{
+			Steam.GetAchievement(ID_Achievement.LOMIAS2);
+		}
 	}
 
 	public void ChangeMemberType(Chara c, FactionMemberType type)

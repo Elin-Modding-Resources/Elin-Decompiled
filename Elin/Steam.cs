@@ -48,20 +48,19 @@ public class Steam : MonoBehaviour
 
 	public static void GetAchievement(ID_Achievement id)
 	{
-		string text = "acv_" + id;
 		foreach (AchievementObject achievement in Instance.steamworks.settings.achievements)
 		{
-			if (achievement.Id == text)
+			if (achievement.Id == id.ToString())
 			{
 				if (!achievement.IsAchieved)
 				{
 					achievement.Unlock();
-					EClass.ui.Say("sys_acv".lang(text.lang()), Resources.Load<Sprite>("Media/Graphics/Icon/Achievement/" + text));
+					EClass.ui.Say("sys_acv".lang(achievement.Name), Resources.Load<Sprite>("Media/Graphics/Icon/Achievement/acv_" + id));
 				}
 				return;
 			}
 		}
-		Debug.Log("Achievement not found:" + text);
+		Debug.Log("Achievement not found:" + id);
 	}
 
 	public void TestHasDLC()

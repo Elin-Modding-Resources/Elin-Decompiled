@@ -430,7 +430,8 @@ public class AI_Fuck : AIAct
 						thing.c_DNA.type = DNA.Type.Inferior;
 						continue;
 					}
-					thing.elements.ModBase(10, 200);
+					thing.MakeFoodFrom(target);
+					thing.elements.ModBase(10, 20);
 					thing.elements.ModBase(18, 100);
 					break;
 				}

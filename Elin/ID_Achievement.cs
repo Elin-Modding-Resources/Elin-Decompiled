@@ -1,5 +1,6 @@
 public enum ID_Achievement
 {
-	test,
-	mew
+	TEST,
+	LOMIAS,
+	LOMIAS2
 }

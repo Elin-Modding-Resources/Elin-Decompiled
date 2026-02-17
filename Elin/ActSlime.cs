@@ -4,10 +4,6 @@ public class ActSlime : ActNTR
 
 	public override bool CanPerform()
 	{
-		if (Act.CC.hunger.GetPhase() < 3 && !EClass.debug.enable)
-		{
-			return false;
-		}
 		if (Act.TC == null || Act.TC == Act.CC)
 		{
 			return false;
@@ -17,6 +13,11 @@ public class ActSlime : ActNTR
 
 	public override bool Perform()
 	{
+		if (Act.CC.hunger.GetPhase() < 3 && !EClass.debug.enable)
+		{
+			Msg.Say("not_hungry");
+			return false;
+		}
 		Act.CC.SetAI(new AI_Fuck
 		{
 			target = Act.TC.Chara,

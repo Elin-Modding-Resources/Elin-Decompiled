@@ -7248,6 +7248,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			step = "pc";
 		}
+		if (id == "lomias")
+		{
+			Steam.GetAchievement(ID_Achievement.LOMIAS);
+		}
 		return LayerDrama.Activate(book, sheet, step, this, null, tag);
 	}
 

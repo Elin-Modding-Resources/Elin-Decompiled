@@ -5571,7 +5571,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		bool flag = id == "meat_marble";
 		int num2 = 1;
 		bool flag2 = category.IsChildOf("meat");
-		bool flag3 = category.IsChildOf("egg");
+		bool flag3 = category.IsChildOf("egg") || trait is TraitGene;
 		if (flag)
 		{
 			num += 100;
