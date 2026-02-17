@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"SkinDecoActor_8cs.html":[2,0,0,3,96],
 "SkinDecoActor_8cs_source.html":[2,0,0,3,96],
 "SkinDeco_8cs.html":[2,0,0,3,95],
 "SkinDeco_8cs_source.html":[2,0,0,3,95],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "StickyTutorial_8cs_source.html":[2,0,0,1186],
 "StickyWelcome_8cs.html":[2,0,0,1187],
 "StickyWelcome_8cs_source.html":[2,0,0,1187],
-"StockSearchMode_8cs.html":[2,0,0,1188],
-"StockSearchMode_8cs.html#a7fdea07efaba9992c7d1fbb0549aa128":[2,0,0,1188,0]
+"StockSearchMode_8cs.html":[2,0,0,1188]
 };

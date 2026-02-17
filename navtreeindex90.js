@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"classPlayer_1_1Stats.html#afdf6688c3453349a11a669697078077b":[1,0,967,3,9],
 "classPlayingSong.html":[1,0,968],
 "classPlayingSong.html#a1c9823e9ed9866885b724cad90b3fe29":[1,0,968,3],
 "classPlayingSong.html#a5742d972fdb8b2fb2435d1316119f08d":[1,0,968,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "classPopItem.html#a7f686b6b7afb97ba720d32a85b287f36":[1,0,980,3],
 "classPopItem.html#a8f1374735fd982ec7da59742f9e040f1":[1,0,980,7],
 "classPopItem.html#aadf3305689fec10b905b2425e63c0165":[1,0,980,8],
-"classPopItem.html#abe95a31b3ebff215b06ea767c4d61483":[1,0,980,1],
-"classPopItem.html#aedbe9435695de3d20c84f8b225951099":[1,0,980,0]
+"classPopItem.html#abe95a31b3ebff215b06ea767c4d61483":[1,0,980,1]
 };

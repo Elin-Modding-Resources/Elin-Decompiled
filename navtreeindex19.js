@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitNote_8cs_source.html":[2,0,0,1660],
 "TraitObj_8cs.html":[2,0,0,1661],
 "TraitObj_8cs_source.html":[2,0,0,1661],
 "TraitOlderYoungerSister_8cs.html":[2,0,0,1662],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitSpot_8cs.html":[2,0,0,1764],
 "TraitSpot_8cs_source.html":[2,0,0,1764],
 "TraitStairsCover_8cs.html":[2,0,0,1784],
-"TraitStairsCover_8cs_source.html":[2,0,0,1784],
-"TraitStairsDown_8cs.html":[2,0,0,1785]
+"TraitStairsCover_8cs_source.html":[2,0,0,1784]
 };

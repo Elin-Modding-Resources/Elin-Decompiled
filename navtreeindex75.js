@@ -1,5 +1,6 @@
 var NAVTREEINDEX75 =
 {
+"classInvOwner_1_1ErrorMessage.html#ad48a969cd50b06b068ca14f1f43c5646":[1,0,710,0,3],
 "classInvOwner_1_1ForceGiveData.html":[1,0,710,1],
 "classInvOwner_1_1ForceGiveData.html#ab4cf57772d86144d2e44850db2391875":[1,0,710,1,0],
 "classInvOwner_1_1ForceGiveData.html#adbd6cda38f6abc8f0f0f89153dd443e1":[1,0,710,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX75 =
 "classLangGame_1_1Row.html":[1,0,776,0],
 "classLangGame_1_1Row.html#a4d95fa3685f6ce006ef3f561dae73135":[1,0,776,0,5],
 "classLangGame_1_1Row.html#a8deacbbaac8d06399c90f8b4d2f00215":[1,0,776,0,7],
-"classLangGame_1_1Row.html#a9956849b596f07d758ab7144adfae49d":[1,0,776,0,0],
-"classLangGame_1_1Row.html#aa5015e9512b5b236310d70fd0db9a96f":[1,0,776,0,6]
+"classLangGame_1_1Row.html#a9956849b596f07d758ab7144adfae49d":[1,0,776,0,0]
 };

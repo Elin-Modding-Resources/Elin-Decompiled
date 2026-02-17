@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitLunchLove.html":[1,0,1708],
 "classTraitMagicChest.html":[1,0,1709],
 "classTraitMagicChest.html#a0736e3bf06a16e5ce69336ee2553301d":[1,0,1709,9],
 "classTraitMagicChest.html#a31e5a90eb8e0c2878af32d7a140207ec":[1,0,1709,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1769,23],
 "classTraitNewZone.html#adcf7d96ce38bca4b635f0505de6f55bb":[1,0,1769,1],
 "classTraitNewZone.html#ae002023845fe236526177b3d14615923":[1,0,1769,4],
-"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1769,19],
-"classTraitNewZone.html#ae0df02573fce410f2e3dab1fc991c1fe":[1,0,1769,5]
+"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1769,19]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classClassExtension.html#ad701e59133d7ae94acd052a3a5ebe0d6":[1,0,293,14],
 "classClassExtension.html#ad7e7bd1622837586607111b77df15320":[1,0,293,40],
 "classClassExtension.html#ad7efed2659de7998eb032294b17d8638":[1,0,293,81],
 "classClassExtension.html#ad83c7b04c72d726cb8bb53c139a27e55":[1,0,293,92],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classConDrawMetal.html":[1,0,325],
 "classConDrawMonster.html":[1,0,326],
 "classConDrug.html":[1,0,327],
-"classConDrug.html#aad090d178235bc6ab316d8d622f891d4":[1,0,327,0],
-"classConDrunk.html":[1,0,328]
+"classConDrug.html#aad090d178235bc6ab316d8d622f891d4":[1,0,327,0]
 };

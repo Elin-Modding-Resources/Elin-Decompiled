@@ -1,5 +1,6 @@
 var NAVTREEINDEX134 =
 {
+"classWeather.html#aa6b3688c6e602502cf6163abaddf9a1ca9add2d084f84f8e471818d2adec279c8":[1,0,2097,2,3],
 "classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cab46d3c8ee8032551c011745d587705cc":[1,0,2097,2,4],
 "classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cade4eda51f409f7799a728d8725b340cd":[1,0,2097,2,2],
 "classWeather.html#aa6b3688c6e602502cf6163abaddf9a1cae3a1a93fc29abede6c0f3ceade99fdc0":[1,0,2097,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX134 =
 "classWidgetExp.html#a7684151ba05013a67783da116df7e800":[1,0,2106,1],
 "classWidgetExp.html#a8d32c2328b50bd94f3bd164ce73830f0":[1,0,2106,3],
 "classWidgetExp.html#a9803cbce7a55b3c712c64ddd5cea7ee1":[1,0,2106,6],
-"classWidgetExp.html#aa31e619e48d495b6d372397316f08e46":[1,0,2106,8],
-"classWidgetExp.html#ab62a52437a865af492ff2461ae2f88e3":[1,0,2106,2]
+"classWidgetExp.html#aa31e619e48d495b6d372397316f08e46":[1,0,2106,8]
 };

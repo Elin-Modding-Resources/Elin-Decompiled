@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TraitClock_8cs_source.html":[2,0,0,1410],
 "TraitCobWeb_8cs.html":[2,0,0,1411],
 "TraitCobWeb_8cs_source.html":[2,0,0,1411],
 "TraitCoffin_8cs.html":[2,0,0,1412],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitGarokk_8cs_source.html":[2,0,0,1528],
 "TraitGemCutter_8cs.html":[2,0,0,1529],
 "TraitGemCutter_8cs_source.html":[2,0,0,1529],
-"TraitGeneMachine_8cs.html":[2,0,0,1531],
-"TraitGeneMachine_8cs_source.html":[2,0,0,1531]
+"TraitGeneMachine_8cs.html":[2,0,0,1531]
 };

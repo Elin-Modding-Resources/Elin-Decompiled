@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitStairsDown_8cs.html":[2,0,0,1785],
 "TraitStairsDown_8cs_source.html":[2,0,0,1785],
 "TraitStairsLocked_8cs.html":[2,0,0,1786],
 "TraitStairsLocked_8cs_source.html":[2,0,0,1786],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "UD__String__MatData_8cs.html":[2,0,0,2,92],
 "UD__String__MatData_8cs_source.html":[2,0,0,2,92],
 "UD__String__PaintPosition_8cs.html":[2,0,0,2,93],
-"UD__String__PaintPosition_8cs_source.html":[2,0,0,2,93],
-"UD__String__String_8cs.html":[2,0,0,2,94]
+"UD__String__PaintPosition_8cs_source.html":[2,0,0,2,93]
 };

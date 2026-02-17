@@ -1,5 +1,6 @@
 var NAVTREEINDEX121 =
 {
+"classTraitGeneratorChair.html":[1,0,1645],
 "classTraitGeneratorDrain.html":[1,0,1646],
 "classTraitGeneratorDrain.html#a23e8cb93bc3ba370049dcf147335f9cb":[1,0,1646,0],
 "classTraitGeneratorHamster.html":[1,0,1647],
@@ -248,6 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitLumiestCrimAle.html#a16d9d819912361f0ededd117bc99c4a6":[1,0,1706,1],
 "classTraitLumiestCrimAle.html#aaad9f54120334442c777b157a1014db9":[1,0,1706,2],
 "classTraitLumiestCrimAle.html#ad3b0344bd161cc79330a38ecb67e3c8b":[1,0,1706,0],
-"classTraitLunch.html":[1,0,1707],
-"classTraitLunchLove.html":[1,0,1708]
+"classTraitLunch.html":[1,0,1707]
 };

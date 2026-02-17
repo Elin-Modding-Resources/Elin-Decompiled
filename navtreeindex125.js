@@ -1,5 +1,6 @@
 var NAVTREEINDEX125 =
 {
+"classTraitSpotGuidePC.html":[1,0,1883],
 "classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1883,0],
 "classTraitSpotLight.html":[1,0,1884],
 "classTraitSpotLight.html#a95a0a2863a144b62664851cefa4a6cb0":[1,0,1884,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitToolShears.html#a06d4cdf9b914ea63e7a701f0ca3645e9":[1,0,1951,1],
 "classTraitToolShears.html#a3ee171e6c9fa1529dd76603ac02b4f6a":[1,0,1951,0],
 "classTraitToolShears.html#af647d7ff31cf1df7683bdb84cb5b3fea":[1,0,1951,2],
-"classTraitToolSickle.html":[1,0,1952],
-"classTraitToolSickle.html#aaf396ca14be0760703717610954d89b6":[1,0,1952,0]
+"classTraitToolSickle.html":[1,0,1952]
 };

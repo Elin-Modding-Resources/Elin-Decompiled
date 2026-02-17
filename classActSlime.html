@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.271 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.271 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -558,26 +558,17 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ActSlime_8cs_source.html#l00005">5</a> of file <a class="el" href="ActSlime_8cs_source.html">ActSlime.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">hunger</a>.<a class="code hl_function" href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">GetPhase</a>() &lt; 3 &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> == <span class="keyword">null</span> || <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> == <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>)</div>
 <div class="line"><span class="lineno">    8</span>        {</div>
 <div class="line"><span class="lineno">    9</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   10</span>        }</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> == <span class="keyword">null</span> || <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a> == <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>)</div>
-<div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   14</span>        }</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
 <div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00061">ACT.cs:62</a></div></div>
 <div class="ttc" id="aclassAct_html_a2bbe355c1c37f1ac7958c5f1040400db"><div class="ttname"><a href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">Act.TC</a></div><div class="ttdeci">static Card TC</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00079">ACT.cs:79</a></div></div>
 <div class="ttc" id="aclassAct_html_aaee36f292832814173c67d44df115a5a"><div class="ttname"><a href="classAct.html#aaee36f292832814173c67d44df115a5a">Act.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00077">ACT.cs:77</a></div></div>
-<div class="ttc" id="aclassChara_html_a656f24c70feae5fb0f8ccf9c6d0578fe"><div class="ttname"><a href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">Chara.hunger</a></div><div class="ttdeci">Stats hunger</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01156">Chara.cs:1156</a></div></div>
-<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00286">CoreDebug.cs:286</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00049">EClass.cs:49</a></div></div>
-<div class="ttc" id="aclassStats_html_a45b380a6cf18d7b29e4a8d46048e4df4"><div class="ttname"><a href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">Stats.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00117">Stats.cs:117</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ACT_8cs_source.html#l00077">Act.CC</a>, <a class="el" href="EClass_8cs_source.html#l00049">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00286">CoreDebug.enable</a>, <a class="el" href="Stats_8cs_source.html#l00117">Stats.GetPhase()</a>, <a class="el" href="Chara_8cs_source.html#l01156">Chara.hunger</a>, and <a class="el" href="ACT_8cs_source.html#l00079">Act.TC</a>.</p>
+<p class="reference">References <a class="el" href="ACT_8cs_source.html#l00077">Act.CC</a>, and <a class="el" href="ACT_8cs_source.html#l00079">Act.TC</a>.</p>
 
 </div>
 </div>
@@ -606,20 +597,32 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classActNTR.html#ab7a2b9ffd7081edd34763efb8e5ef13b">ActNTR</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ActSlime_8cs_source.html#l00018">18</a> of file <a class="el" href="ActSlime_8cs_source.html">ActSlime.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Fuck.html">AI_Fuck</a></div>
-<div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>            target = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>,</div>
-<div class="line"><span class="lineno">   23</span>            variation = AI_Fuck.Variation.Slime</div>
-<div class="line"><span class="lineno">   24</span>        });</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ActSlime_8cs_source.html#l00014">14</a> of file <a class="el" href="ActSlime_8cs_source.html">ActSlime.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_property" href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">hunger</a>.<a class="code hl_function" href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">GetPhase</a>() &lt; 3 &amp;&amp; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a>)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;not_hungry&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_function" href="classChara.html#a596e564cd2a43240c20a500fb640d97c">SetAI</a>(<span class="keyword">new</span> <a class="code hl_class" href="classAI__Fuck.html">AI_Fuck</a></div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            target = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a2bbe355c1c37f1ac7958c5f1040400db">TC</a>.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>,</div>
+<div class="line"><span class="lineno">   24</span>            variation = AI_Fuck.Variation.Slime</div>
+<div class="line"><span class="lineno">   25</span>        });</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
 <div class="ttc" id="aclassAI__Fuck_html"><div class="ttname"><a href="classAI__Fuck.html">AI_Fuck</a></div><div class="ttdef"><b>Definition:</b> <a href="AI__Fuck_8cs_source.html#l00004">AI_Fuck.cs:5</a></div></div>
 <div class="ttc" id="aclassCard_html_a1ca33299efe88b19d8da701454a3e444"><div class="ttname"><a href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Card.Chara</a></div><div class="ttdeci">virtual Chara Chara</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02070">Card.cs:2071</a></div></div>
-<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08899">Chara.cs:8899</a></div></div>
+<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l08903">Chara.cs:8903</a></div></div>
+<div class="ttc" id="aclassChara_html_a656f24c70feae5fb0f8ccf9c6d0578fe"><div class="ttname"><a href="classChara.html#a656f24c70feae5fb0f8ccf9c6d0578fe">Chara.hunger</a></div><div class="ttdeci">Stats hunger</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01156">Chara.cs:1156</a></div></div>
+<div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00286">CoreDebug.cs:286</a></div></div>
+<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00049">EClass.cs:49</a></div></div>
+<div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
+<div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
+<div class="ttc" id="aclassStats_html_a45b380a6cf18d7b29e4a8d46048e4df4"><div class="ttname"><a href="classStats.html#a45b380a6cf18d7b29e4a8d46048e4df4">Stats.GetPhase</a></div><div class="ttdeci">override int GetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="Stats_8cs_source.html#l00117">Stats.cs:117</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ACT_8cs_source.html#l00077">Act.CC</a>, <a class="el" href="Card_8cs_source.html#l02071">Card.Chara</a>, <a class="el" href="Chara_8cs_source.html#l08899">Chara.SetAI()</a>, and <a class="el" href="ACT_8cs_source.html#l00079">Act.TC</a>.</p>
+<p class="reference">References <a class="el" href="ACT_8cs_source.html#l00077">Act.CC</a>, <a class="el" href="Card_8cs_source.html#l02071">Card.Chara</a>, <a class="el" href="EClass_8cs_source.html#l00049">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00286">CoreDebug.enable</a>, <a class="el" href="Stats_8cs_source.html#l00117">Stats.GetPhase()</a>, <a class="el" href="Chara_8cs_source.html#l01156">Chara.hunger</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Chara_8cs_source.html#l08903">Chara.SetAI()</a>, and <a class="el" href="ACT_8cs_source.html#l00079">Act.TC</a>.</p>
 
 </div>
 </div>

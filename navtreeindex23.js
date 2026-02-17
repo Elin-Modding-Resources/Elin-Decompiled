@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"WidgetStatsBar_8cs_source.html":[2,0,0,1965],
 "WidgetStats_8cs.html":[2,0,0,1964],
 "WidgetStats_8cs_source.html":[2,0,0,1964],
 "WidgetSticky_8cs.html":[2,0,0,1966],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "Zone__RandomDungeonWater_8cs_source.html":[2,0,0,2041],
 "Zone__RandomDungeon_8cs.html":[2,0,0,2036],
 "Zone__RandomDungeon_8cs_source.html":[2,0,0,2036],
-"Zone__Seeker_8cs.html":[2,0,0,2042],
-"Zone__Seeker_8cs_source.html":[2,0,0,2042]
+"Zone__Seeker_8cs.html":[2,0,0,2042]
 };

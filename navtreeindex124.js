@@ -1,5 +1,6 @@
 var NAVTREEINDEX124 =
 {
+"classTraitRollingFortune.html#a56352d29ba42a40a680f1645d755a62a":[1,0,1832,2],
 "classTraitRollingFortune.html#a5997575ca14641c00633be0a788db30e":[1,0,1832,6],
 "classTraitRollingFortune.html#a8a8c01fcc9b5db9140a36c4f9230936c":[1,0,1832,3],
 "classTraitRollingFortune.html#ad1199c02254ea0e8445c5a39e1175ec2":[1,0,1832,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitSpotFuel.html":[1,0,1881],
 "classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1881,0],
 "classTraitSpotGarbage.html":[1,0,1882],
-"classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1882,0],
-"classTraitSpotGuidePC.html":[1,0,1883]
+"classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1882,0]
 };

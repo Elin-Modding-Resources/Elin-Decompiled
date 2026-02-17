@@ -1,5 +1,6 @@
 var NAVTREEINDEX72 =
 {
+"classHotItemFocusChara.html":[1,0,663],
 "classHotItemFocusChara.html#a0375d90512ea6282c613a8ecb61771f0":[1,0,663,7],
 "classHotItemFocusChara.html#a8d36523ea8061a2edd0e4029bf3981e4":[1,0,663,6],
 "classHotItemFocusChara.html#a98c1045e1c25ed1117f9c3b79fab3bb6":[1,0,663,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX72 =
 "classIO.html#ab3687aeb28134dabd6cd4863977a7180":[1,0,738,15],
 "classIO.html#abbc5c820f23424c346ec426a508b6240":[1,0,738,13],
 "classIO.html#ac15051fb75be08e9ff3dd16de65959b3":[1,0,738,30],
-"classIO.html#ac6ae5794b64c8ee57f0c759d7ab860ff":[1,0,738,14],
-"classIO.html#ac8599f05d496cb87e6142bdaac40fdad":[1,0,738,24]
+"classIO.html#ac6ae5794b64c8ee57f0c759d7ab860ff":[1,0,738,14]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"ReligionManager_8cs.html":[2,0,0,1036],
 "ReligionManager_8cs_source.html":[2,0,0,1036],
 "ReligionMinor_8cs.html":[2,0,0,1037],
 "ReligionMinor_8cs_source.html":[2,0,0,1037],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "SkinColorProfile_8cs.html":[2,0,0,3,92],
 "SkinColorProfile_8cs_source.html":[2,0,0,3,92],
 "SkinConfig_8cs.html":[2,0,0,3,94],
-"SkinConfig_8cs_source.html":[2,0,0,3,94],
-"SkinDecoActor_8cs.html":[2,0,0,3,96]
+"SkinConfig_8cs_source.html":[2,0,0,3,94]
 };
