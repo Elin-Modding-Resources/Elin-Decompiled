@@ -1,5 +1,9 @@
 var NAVTREEINDEX112 =
 {
+"classTaskClean.html#af823d83f202abff30a4b0b181b5ad124":[1,0,1315,4],
+"classTaskCraft.html":[1,0,1316],
+"classTaskCraft.html#a00292a3bbb3aa611476f851eb2cb2ccb":[1,0,1316,9],
+"classTaskCraft.html#a0d717bd179ab810f667da4bfe6e0f401":[1,0,1316,11],
 "classTaskCraft.html#a244dc6cb1ff89f60057ff520e5047020":[1,0,1316,5],
 "classTaskCraft.html#a400db612738428780a2f682a6740b68d":[1,0,1316,14],
 "classTaskCraft.html#a506799dfe78905d8a1c576c64a51e877":[1,0,1316,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX112 =
 "classTerrainMenu.html#a312444a36c35f2189ac1e40db3264e1e":[1,0,1347,5],
 "classTerrainMenu.html#a8b28773c33000a5c8ef3e16e85c0da81":[1,0,1347,2],
 "classTerrainMenu.html#a96894c83c943f1729dd1a03715bdec3e":[1,0,1347,1],
-"classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e":[1,0,1347,3],
-"classTerrainMenu.html#adb27949ecd88a0379d29246e85f11394":[1,0,1347,4],
-"classTextConv.html":[1,0,1348],
-"classTextConv.html#a4d72e06f138460339b0147b4b5fc5395":[1,0,1348,3],
-"classTextConv.html#a625da84928d638378d2f1beab27e2f6a":[1,0,1348,6]
+"classTerrainMenu.html#ab9a549ee98f635063ccc50e8f269211e":[1,0,1347,3]
 };

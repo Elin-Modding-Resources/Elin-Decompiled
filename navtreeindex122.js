@@ -1,5 +1,12 @@
 var NAVTREEINDEX122 =
 {
+"classTraitLoytelMart.html#a8b9bf8210dd4b20439d69ec381794ef7":[1,0,1705,6],
+"classTraitLoytelMart.html#a91d5d63bf430404d945cf7a67358579c":[1,0,1705,1],
+"classTraitLumiestCrimAle.html":[1,0,1706],
+"classTraitLumiestCrimAle.html#a16d9d819912361f0ededd117bc99c4a6":[1,0,1706,1],
+"classTraitLumiestCrimAle.html#aaad9f54120334442c777b157a1014db9":[1,0,1706,2],
+"classTraitLumiestCrimAle.html#ad3b0344bd161cc79330a38ecb67e3c8b":[1,0,1706,0],
+"classTraitLunch.html":[1,0,1707],
 "classTraitLunchLove.html":[1,0,1708],
 "classTraitMagicChest.html":[1,0,1709],
 "classTraitMagicChest.html#a0736e3bf06a16e5ce69336ee2553301d":[1,0,1709,9],
@@ -242,12 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitNewZone.html#a5f8428fdd28fd867be7661ae1d58bbca":[1,0,1769,13],
 "classTraitNewZone.html#a6d51d58a5467a29e9e731ef2ae798066":[1,0,1769,20],
 "classTraitNewZone.html#a9a63a7b8b415c696689644ae43329e6f":[1,0,1769,6],
-"classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984":[1,0,1769,26],
-"classTraitNewZone.html#ac01e05ddac5e41b530840b966a74d34f":[1,0,1769,7],
-"classTraitNewZone.html#acaa1d4dfbee3d5fd8953e698fa0e1b82":[1,0,1769,2],
-"classTraitNewZone.html#ad3ef2288dca8c3423c6b3abaab2b25c9":[1,0,1769,14],
-"classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1769,23],
-"classTraitNewZone.html#adcf7d96ce38bca4b635f0505de6f55bb":[1,0,1769,1],
-"classTraitNewZone.html#ae002023845fe236526177b3d14615923":[1,0,1769,4],
-"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1769,19]
+"classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984":[1,0,1769,26]
 };

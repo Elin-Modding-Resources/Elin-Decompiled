@@ -1,5 +1,6 @@
 var NAVTREEINDEX29 =
 {
+"classAM__Terrain.html#ab6db2668c2636af9c231c5d1c7b67065":[1,0,171,3],
 "classAM__Terrain.html#ae9294a087283a8e2006d2a6edd7e6a11":[1,0,171,1],
 "classAM__Terrain.html#aeba597c1b91a778c6fd38d2237040ecd":[1,0,171,6],
 "classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289":[1,0,171,0],
@@ -162,7 +163,8 @@ var NAVTREEINDEX29 =
 "classActDrawWater.html#ab97d1593ad4cfd18625852130734fa1d":[1,0,26,4],
 "classActDrawWater.html#ae6ef9af287045a5c27f538005e6a830e":[1,0,26,3],
 "classActDreamBug.html":[1,0,27],
-"classActDreamBug.html#adfab6195ef0f06f5b668cba7c4486252":[1,0,27,0],
+"classActDreamBug.html#a2bf0022ed94807b3cf299e0a2f833d13":[1,0,27,0],
+"classActDreamBug.html#adfab6195ef0f06f5b668cba7c4486252":[1,0,27,1],
 "classActEffect.html":[1,0,28],
 "classActEffect.html#a2cd07b7bdaa20ad3aa59e4d1e79d61ce":[1,0,28,6],
 "classActEffect.html#a2fa2767bb66d306d1f23e8c975ec29ae":[1,0,28,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX29 =
 "classActMeleeWhilrwind.html#a099c0ea03dd9230098dcb08178fbce99":[1,0,42,0],
 "classActMiasma.html":[1,0,43],
 "classActMiasma.html#a64fcca62a52cce6959d23270928482b5":[1,0,43,0],
-"classActMissileBarrage.html":[1,0,44],
-"classActMissileBarrage.html#acbb23980755044493eabd8a3d70fcc39":[1,0,44,0],
-"classActMultihit.html":[1,0,45]
+"classActMissileBarrage.html":[1,0,44]
 };

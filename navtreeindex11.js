@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a40085574ffe68d3214bf81845239eefc":[2,0,0,858,0,1],
 "MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a55dcdf017b51fc96f7b5f9d63013b95d":[2,0,0,858,0,2],
 "MsgCat_8cs_source.html":[2,0,0,858],
 "MsgColors_8cs.html":[2,0,0,3,64],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "QuestCursedManor_8cs_source.html":[2,0,0,929],
 "QuestDebt_8cs.html":[2,0,0,930],
 "QuestDebt_8cs_source.html":[2,0,0,930],
-"QuestDefenseGame2_8cs.html":[2,0,0,933],
-"QuestDefenseGame2_8cs_source.html":[2,0,0,933]
+"QuestDefenseGame2_8cs.html":[2,0,0,933]
 };

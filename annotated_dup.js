@@ -1679,7 +1679,7 @@ var annotated_dup =
     [ "TraitExileElder", "classTraitExileElder.html", "classTraitExileElder" ],
     [ "TraitFactionBoard", "classTraitFactionBoard.html", "classTraitFactionBoard" ],
     [ "TraitFactory", "classTraitFactory.html", "classTraitFactory" ],
-    [ "TraitFakeBlock", "classTraitFakeBlock.html", null ],
+    [ "TraitFakeBlock", "classTraitFakeBlock.html", "classTraitFakeBlock" ],
     [ "TraitFakeObj", "classTraitFakeObj.html", "classTraitFakeObj" ],
     [ "TraitFakeTile", "classTraitFakeTile.html", "classTraitFakeTile" ],
     [ "TraitFarmChest", "classTraitFarmChest.html", "classTraitFarmChest" ],

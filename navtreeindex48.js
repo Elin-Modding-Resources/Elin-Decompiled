@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"classClassExtension.html#ad58e3cbfd32dd184b79d365327ef89bb":[1,0,293,24],
+"classClassExtension.html#ad5f446079b02d9f2f85df46872c3c83c":[1,0,293,19],
+"classClassExtension.html#ad68e706d8b3bfa2dd091249fc285e19c":[1,0,293,118],
 "classClassExtension.html#ad701e59133d7ae94acd052a3a5ebe0d6":[1,0,293,14],
 "classClassExtension.html#ad7e7bd1622837586607111b77df15320":[1,0,293,40],
 "classClassExtension.html#ad7efed2659de7998eb032294b17d8638":[1,0,293,81],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "classConDisease.html#adbda88b1068645fd3d15b4e84f279f92":[1,0,322,1],
 "classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,322,4],
 "classConDrawBacker.html":[1,0,324],
-"classConDrawMetal.html":[1,0,325],
-"classConDrawMonster.html":[1,0,326],
-"classConDrug.html":[1,0,327],
-"classConDrug.html#aad090d178235bc6ab316d8d622f891d4":[1,0,327,0]
+"classConDrawMetal.html":[1,0,325]
 };

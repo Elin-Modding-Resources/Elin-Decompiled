@@ -1,5 +1,8 @@
 var NAVTREEINDEX81 =
 {
+"classLayerRegisterHotbar.html#a4305507b4771debd711fb1dcbafaae53":[1,0,845,8],
+"classLayerRegisterHotbar.html#a55bba61c764765ea70a60252066c50fe":[1,0,845,1],
+"classLayerRegisterHotbar.html#a5ad0bfb4ce8249f2ee53e14c5c78535f":[1,0,845,10],
 "classLayerRegisterHotbar.html#a6815e6048478483ed048ea8bdfd2734a":[1,0,845,9],
 "classLayerRegisterHotbar.html#a7860e70b08f60db791ec69cd26db0afc":[1,0,845,4],
 "classLayerRegisterHotbar.html#a9a0ec87fcc2d8074448b91b45d839cd1":[1,0,845,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX81 =
 "classLayerWorldSetting.html#acfaecf8506ab691c2400bbb1dbb4ac86":[1,0,859,26],
 "classLayerWorldSetting.html#ad021b5389dbef06f9a6cc59b698e49bc":[1,0,859,4],
 "classLayerWorldSetting.html#ad6f97e0e01b09338b24ae7ad09f1383d":[1,0,859,37],
-"classLayerWorldSetting.html#ae542969d3002f272ca80ea014d8fdfb7":[1,0,859,12],
-"classLayerWorldSetting.html#af22504fa8523cc85036798de0fd55ea2":[1,0,859,19],
-"classLayerWorldSetting.html#afbd816fb7ac9b54eb1cc057d22238733":[1,0,859,31],
-"classLayerWorldSetting.html#afefe51c6a802ec45fec8f92efdcfb22e":[1,0,859,2]
+"classLayerWorldSetting.html#ae542969d3002f272ca80ea014d8fdfb7":[1,0,859,12]
 };

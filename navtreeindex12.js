@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"QuestDefenseGame2_8cs_source.html":[2,0,0,933],
 "QuestDefenseGame_8cs.html":[2,0,0,932],
 "QuestDefenseGame_8cs_source.html":[2,0,0,932],
 "QuestDefense_8cs.html":[2,0,0,931],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "ReligionHealing_8cs_source.html":[2,0,0,1033],
 "ReligionLuck_8cs.html":[2,0,0,1034],
 "ReligionLuck_8cs_source.html":[2,0,0,1034],
-"ReligionMachine_8cs.html":[2,0,0,1035],
-"ReligionMachine_8cs_source.html":[2,0,0,1035]
+"ReligionMachine_8cs.html":[2,0,0,1035]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX94 =
 {
+"classQuestDefenseGame.html#ae54172bb969f293d6420370870f519f9":[1,0,1008,3],
+"classQuestDefenseGame2.html":[1,0,1009],
+"classQuestDefenseGame2.html#a88e0d1c99259bd6a9101fab78a8efab0":[1,0,1009,0],
+"classQuestDeliver.html":[1,0,1010],
 "classQuestDeliver.html#a0b8240ffad8f11b5dd07fb5d8c7ee51b":[1,0,1010,5],
 "classQuestDeliver.html#a16573e6c587dbc6ddf0e709eeb5f672e":[1,0,1010,18],
 "classQuestDeliver.html#a2606808fa82745dea4432af7b9030409":[1,0,1010,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX94 =
 "classQuestNegotiationDarkness.html#a7f50d02dc7f93dbea5923e4f734f5b0e":[1,0,1054,1],
 "classQuestNegotiationDarkness.html#aa28bb6b7d7d08d20463dec9ad1dc796a":[1,0,1054,5],
 "classQuestNegotiationDarkness.html#ae7141cb2935bcbf1baa2d95eb584cefe":[1,0,1054,2],
-"classQuestProgression.html":[1,0,1055],
-"classQuestProgression.html#a2000aa9e33842fd3bf72845ea5152f34":[1,0,1055,1],
-"classQuestProgression.html#a4f9c868cd12c3938138e02095412aaef":[1,0,1055,0],
-"classQuestPuppy.html":[1,0,1056],
-"classQuestPuppy.html#acb92fc942bb2ae1ca180e0f7937ed7f0":[1,0,1056,0]
+"classQuestProgression.html":[1,0,1055]
 };

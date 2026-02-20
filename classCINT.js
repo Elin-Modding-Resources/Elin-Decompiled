@@ -42,6 +42,7 @@ var classCINT =
     [ "isAlreadyCaptured", "classCINT.html#a374344939e8099e1b407bc19b96ac3df", null ],
     [ "isDisableLoyal", "classCINT.html#afca62bb57f80478ecf0137fec1615a1a", null ],
     [ "isDisableStockUse", "classCINT.html#a23a05bba9c26015d92f8ff829cfdf156", null ],
+    [ "isFiamaChest", "classCINT.html#a6a2c043701e2c5d37b5a84cb86c3544d", null ],
     [ "isHalfEaten", "classCINT.html#a6df9be51464f7a6d2e1684d0af219ab1", null ],
     [ "isHarvestQuestCrop", "classCINT.html#a7ad3b279d438058b8ad526a5c5acb093", null ],
     [ "isHiredByGold", "classCINT.html#adbc84daa6675a3b147a9c09ad77c0e42", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"StockSearchMode_8cs.html":[2,0,0,1188],
 "StockSearchMode_8cs.html#a7fdea07efaba9992c7d1fbb0549aa128":[2,0,0,1188,0],
 "StockSearchMode_8cs.html#a7fdea07efaba9992c7d1fbb0549aa128a09050a14eb61e3df5cfde9959c6d84ed":[2,0,0,1188,0,1],
 "StockSearchMode_8cs.html#a7fdea07efaba9992c7d1fbb0549aa128ab1c94ca2fbc3e78fc30069c8d0f01680":[2,0,0,1188,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "TileTypeRooftop_8cs.html":[2,0,0,1292],
 "TileTypeRooftop_8cs_source.html":[2,0,0,1292],
 "TileTypeScaffold_8cs.html":[2,0,0,1293],
-"TileTypeScaffold_8cs_source.html":[2,0,0,1293],
-"TileTypeSeed_8cs.html":[2,0,0,1294]
+"TileTypeScaffold_8cs_source.html":[2,0,0,1293]
 };
