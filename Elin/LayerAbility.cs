@@ -210,7 +210,7 @@ public class LayerAbility : ELayer, IDragParent
 				foreach (Element value in ELayer.pc.elements.dict.Values)
 				{
 					string categorySub = value.source.categorySub;
-					if (value.Value != 0 && (!config.hideDepletedSpell || !value.PotentialAsStock || value.vPotential > 0))
+					if (value.Value != 0 && (!config.hideDepletedSpell || !value.PotentialAsStock || value.vPotential > 0) && (value.id != 6020 || ELayer.pc.HasElement(1216)))
 					{
 						if (id == "favAbility" && ELayer.player.favAbility.Contains(value.id))
 						{

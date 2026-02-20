@@ -56,6 +56,8 @@ public class Steam : MonoBehaviour
 				{
 					achievement.Unlock();
 					EClass.ui.Say("sys_acv".lang(achievement.Name), Resources.Load<Sprite>("Media/Graphics/Icon/Achievement/acv_" + id));
+					SE.Play("achievement");
+					achievement.Store();
 				}
 				return;
 			}

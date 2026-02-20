@@ -4,7 +4,7 @@ public class ActSlime : ActNTR
 
 	public override bool CanPerform()
 	{
-		if (Act.TC == null || Act.TC == Act.CC)
+		if (Act.TC == null || !Act.TC.isChara || Act.TC == Act.CC)
 		{
 			return false;
 		}

@@ -15,6 +15,7 @@ public class QuestFiamaLock : QuestProgression
 		thing.things.DestroyAll();
 		thing.AddCard(ThingGen.Create("1172"));
 		thing.AddCard(ThingGen.Create("amulet_begger"));
+		thing.SetBool(127, enable: true);
 		Card card = thing.AddCard(ThingGen.Create("_meat").MakeFoodFrom("begger"));
 		card.decay = card.MaxDecay + 1;
 		thing.Install();

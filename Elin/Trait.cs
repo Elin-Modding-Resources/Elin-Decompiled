@@ -958,6 +958,10 @@ public class Trait : EClass
 				EClass.player.ModKarma(-8);
 			}
 			owner.isLostProperty = false;
+			if (owner.GetBool(127))
+			{
+				Steam.GetAchievement(ID_Achievement.FIAMA_CHEST);
+			}
 			return LockOpenState.Success;
 		}
 		cc.PlaySound("lock");

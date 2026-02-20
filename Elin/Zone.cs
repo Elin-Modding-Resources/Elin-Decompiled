@@ -2383,7 +2383,8 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		map.SetZone(this);
 		Zone_Field zone_Field = this as Zone_Field;
-		if (IdBiome == "Sand" || IdBiome == "Water" || IsUnderwater)
+		bool flag = IdBiome == "Sand" || IdBiome == "Water" || IsUnderwater;
+		if (flag)
 		{
 			int num = 1 + EClass.rnd((IdBiome == "Water") ? 3 : 2);
 			for (int i = 0; i < num; i++)
@@ -2421,7 +2422,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			Crawler crawler = Crawler.Create("pasture");
 			int num2 = (EClass.debug.enable ? 3 : EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(5) + 1) + 1) + 1));
-			bool flag = this is Zone_Field;
+			bool flag2 = this is Zone_Field;
 			Thing seed = null;
 			if (IsNefia)
 			{
@@ -2435,7 +2436,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					seed.elements.SetBase(2, EClass.curve(seed.encLV, 50, 10, 80));
 				}
 			}
-			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), num2 + (flag ? 4 : 0), delegate(Crawler.Result r)
+			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), num2 + (flag2 ? 4 : 0), delegate(Crawler.Result r)
 			{
 				int num6 = 137;
 				foreach (Point point in r.points)
@@ -2453,7 +2454,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 				return false;
 			});
-			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(5) + 1) + 1 + (flag ? 20 : 0), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(5) + 1) + 1 + (flag2 ? 20 : 0), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 			{
 				int num5 = 136;
 				foreach (Point point2 in r.points)
@@ -2465,7 +2466,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 				return false;
 			});
-			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(10) + 1) + 3 + (flag ? 40 : 0), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
+			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(10) + 1) + 3 + (flag2 ? 40 : 0), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 			{
 				int idFloor = 121;
 				foreach (Point point3 in r.points)
@@ -2495,6 +2496,14 @@ public class Zone : Spatial, ICardParent, IInspect
 				SpawnAltar();
 			}
 			TrySpawnFollower();
+			if (!flag && EClass.rnd(EClass.debug.enable ? 1 : 10) == 0)
+			{
+				Point randomSurface5 = EClass._map.bounds.GetRandomSurface();
+				if (randomSurface5.IsValid)
+				{
+					EClass._zone.AddCard(CharaGen.Create("priest"), randomSurface5);
+				}
+			}
 		}
 		map.plDay = CreatePlaylist(ref map._plDay, EClass.Sound.GetPlaylist(IDPlayList) ?? EClass.Sound.GetPlaylist("Day"));
 	}

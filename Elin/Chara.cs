@@ -5967,7 +5967,7 @@ public class Chara : Card, IPathfindWalker
 					EInput.Consume();
 					return false;
 				}
-				if (num4 > 0 && a.vPotential >= i * 2)
+				if (num4 > 0 && (a.vPotential >= i * 2 || ability.Has(a.id)))
 				{
 					a.vPotential -= i * 2;
 					num6 = num6 * (100 - num4 * 20) / 100;

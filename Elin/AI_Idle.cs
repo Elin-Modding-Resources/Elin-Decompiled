@@ -134,31 +134,47 @@ public class AI_Idle : AIAct
 				}
 				if (EClass.rnd(3) == 0 && owner.mana.value > 0)
 				{
-					Act act = null;
+					Act actHeal = null;
 					Act actRevive = null;
 					foreach (ActList.Item item in owner.ability.list.items)
 					{
-						Act act2 = item.act;
-						if (act2.id == 8430)
+						Act act = item.act;
+						if (act.id == 8430)
 						{
-							actRevive = act2;
+							actRevive = act;
 						}
-						string[] abilityType = act2.source.abilityType;
+						string[] abilityType = act.source.abilityType;
 						if (!abilityType.IsEmpty() && (abilityType[0] == "heal" || abilityType[0] == "hot"))
 						{
-							act = item.act;
+							actHeal = item.act;
 						}
 					}
-					if (act != null)
+					if (actHeal != null)
 					{
 						List<Chara> list = (owner.IsPCParty ? EClass.pc.party.members : new List<Chara> { owner });
 						foreach (Chara item2 in list)
 						{
-							if (!((float)item2.hp > (float)item2.MaxHP * 0.75f) && owner.CanSeeLos(item2) && (!(act.source.abilityType[0] == "hot") || !item2.HasCondition<ConHOT>()))
+							if (!((float)item2.hp > (float)item2.MaxHP * 0.75f) && owner.CanSeeLos(item2) && (!(actHeal.source.abilityType[0] == "hot") || !item2.HasCondition<ConHOT>()))
 							{
-								owner.UseAbility(act, item2);
+								owner.UseAbility(actHeal, item2);
 								yield return KeepRunning();
 								break;
+							}
+						}
+						if (owner.id == "priest" && !owner.IsPCParty && owner.Dist(EClass.pc) <= 4)
+						{
+							if (EClass.pc.hp < EClass.pc.MaxHP)
+							{
+								if (owner.UseAbility(actHeal, EClass.pc, null, pt: true))
+								{
+									owner.AddCooldown(actHeal.id, 5);
+									owner.Talk("no_problem");
+								}
+							}
+							else if (!EClass.pc.HasCondition<ConHolyVeil>() && owner.UseAbility(8500, EClass.pc, null, pt: true))
+							{
+								owner.AddCooldown(8500, 30);
+								owner.Talk("no_problem");
 							}
 						}
 					}

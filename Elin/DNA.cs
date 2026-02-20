@@ -259,7 +259,11 @@ public class DNA : EClass
 				return false;
 			case 1228:
 			case 1414:
-				return !c.IsPC;
+				if (c != null)
+				{
+					return !c.IsPC;
+				}
+				return true;
 			}
 		}
 		return true;

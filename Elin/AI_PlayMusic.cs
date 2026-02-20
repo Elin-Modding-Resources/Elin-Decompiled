@@ -107,6 +107,9 @@ public class AI_PlayMusic : AIAct
 			case "guitar_ash":
 				idSong = "guitar_caccini";
 				break;
+			case "ocarina":
+				idSong = "ocarina_lulu";
+				break;
 			case "guitar_efrond":
 				idSong = "guitar_dusk";
 				break;

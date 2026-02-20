@@ -9,32 +9,6 @@ public class TraitFakeTile : Trait
 		return EClass.sources.blocks.map[owner.refVal].renderData;
 	}
 
-	public override SourcePref GetPref()
-	{
-		TileType tileType = EClass.sources.blocks.map[owner.refVal].tileType;
-		if (!(tileType is TileTypePillar))
-		{
-			if (!(tileType is TileTypeFence))
-			{
-				if (!(tileType is TileTypeStairs))
-				{
-					if (!(tileType is TileTypeWall))
-					{
-						if (tileType is TileTypeSlope)
-						{
-							return EClass.core.refs.prefs.blockStairs;
-						}
-						return null;
-					}
-					return EClass.core.refs.prefs.blockWall;
-				}
-				return EClass.core.refs.prefs.blockStairs;
-			}
-			return EClass.core.refs.prefs.blockFence;
-		}
-		return EClass.core.refs.prefs.blockPillar;
-	}
-
 	public override void OnCrafted(Recipe recipe, List<Thing> ings)
 	{
 		owner.refVal = 0;

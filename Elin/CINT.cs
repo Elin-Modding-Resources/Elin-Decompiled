@@ -164,6 +164,8 @@ public class CINT
 
 	public const int isDisableLoyal = 126;
 
+	public const int isFiamaChest = 127;
+
 	public const int dateDeathLock = 130;
 
 	public const int fixedValue = 131;

@@ -18,7 +18,7 @@ public class TraitFakeObj : TraitFakeTile
 		}
 	}
 
-	public SourceObj.Row obj => EClass.sources.objs.map[owner.refVal];
+	public SourceObj.Row obj => EClass.sources.objs.map.TryGetValue(owner.refVal, 0);
 
 	public override TileMode tileMode => TileMode.FakeObj;
 
@@ -39,5 +39,14 @@ public class TraitFakeObj : TraitFakeTile
 			return growth.StageLength;
 		}
 		return obj._tiles.Length;
+	}
+
+	public override string GetName()
+	{
+		if (owner.refVal != 0)
+		{
+			return "_fakeblock".lang(obj.GetName().ToLower());
+		}
+		return base.GetName();
 	}
 }
