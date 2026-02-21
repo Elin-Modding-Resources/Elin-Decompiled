@@ -30,6 +30,7 @@ var classDramaOutcome =
     [ "guild_trial", "classDramaOutcome.html#aae14a66513238873815fbc2e3f3c6d36", null ],
     [ "If", "classDramaOutcome.html#a3a25bfc553772da30a604395c4f7644b", null ],
     [ "ListFelmeraBarter", "classDramaOutcome.html#af05b6cb2479f07d02fcb927ddda7449d", null ],
+    [ "marry", "classDramaOutcome.html#af27ebd8a52e4885561f1124fe3268cfa", null ],
     [ "melilith_friend", "classDramaOutcome.html#a35c4d83f64349a274fb3d7cd305cda40", null ],
     [ "nasu_join", "classDramaOutcome.html#a5cc9b89629b28b9e50a3e5ccae56d20d", null ],
     [ "nerun_gift", "classDramaOutcome.html#aacdea187ee6ec73495860876701471d1", null ],

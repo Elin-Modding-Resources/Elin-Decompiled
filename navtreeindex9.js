@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"ImageLoader_8cs_source.html":[2,0,0,2,41],
+"ImageType_8cs.html":[2,0,0,3,48],
+"ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0":[2,0,0,3,48,0],
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0a0fbdb9911ca52c165e1925b62eed6b61":[2,0,0,3,48,0,3],
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0a41d5dfd24e1fba833cc03516a8627465":[2,0,0,3,48,0,2],
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0a4803e6b9e63dabf04de980788d6a13c4":[2,0,0,3,48,0,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "LayerEditPortrait_8cs_source.html":[2,0,0,754],
 "LayerEditSkin_8cs.html":[2,0,0,755],
 "LayerEditSkin_8cs_source.html":[2,0,0,755],
-"LayerEmbark_8cs.html":[2,0,0,756],
-"LayerEmbark_8cs_source.html":[2,0,0,756],
-"LayerEquip_8cs.html":[2,0,0,757],
-"LayerEquip_8cs_source.html":[2,0,0,757]
+"LayerEmbark_8cs.html":[2,0,0,756]
 };

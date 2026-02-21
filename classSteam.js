@@ -9,6 +9,8 @@ var classSteam =
     [ "GetAchievement", "classSteam.html#a288fc6f71e08467fecbe0559de6ccc32", null ],
     [ "HasDLC", "classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9", null ],
     [ "Init", "classSteam.html#a97a5dc96771772c2d6aa9326f22fd65a", null ],
+    [ "ResetAchievement", "classSteam.html#a39d10fbb39e03c39d1f509fb2e75d392", null ],
+    [ "ResetAllAchievement", "classSteam.html#a611e6d30df5e4f3179483fa6b0e543e5", null ],
     [ "TestHasDLC", "classSteam.html#a9a3517abe94edb870b327fbb128ee3a7", null ],
     [ "UpdateUserContent", "classSteam.html#a18718c8872733ffe0e2d561c94abcc6f", null ],
     [ "currentPackage", "classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247", null ],

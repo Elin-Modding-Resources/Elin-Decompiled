@@ -10,6 +10,7 @@ var classDialogDrama =
     [ "goAffinity", "classDialogDrama.html#a31e5ba1309d89d3155bba6ee80181873", null ],
     [ "hypen", "classDialogDrama.html#ab428f2035ea94018af9d36cd4cb4b585", null ],
     [ "iconNext", "classDialogDrama.html#a09f89bac0f3ac21dbfeebfa385557a9b", null ],
+    [ "imageBgAdv", "classDialogDrama.html#a6b17a38f05711ed2696aedfc6286ce3d", null ],
     [ "layoutInterest", "classDialogDrama.html#a67489687adaefee01146e2c0fcf441cd", null ],
     [ "moldButton", "classDialogDrama.html#adc04e520527a7d5a8b41b800c8321e7e", null ],
     [ "moldInterest", "classDialogDrama.html#a215422963f7d49aac3a5af2d6752bc73", null ],

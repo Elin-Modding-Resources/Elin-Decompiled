@@ -976,6 +976,7 @@ var hierarchy =
       ] ],
       [ "Los", "classLos.html", null ],
       [ "Lot", "classLot.html", null ],
+      [ "LoveData", "classLoveData.html", null ],
       [ "MATERIAL", "classMATERIAL.html", null ],
       [ "MapBounds", "classMapBounds.html", [
         [ "Map", "classMap.html", null ]

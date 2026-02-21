@@ -8,5 +8,6 @@ var classGameLang =
     [ "refDrama1", "classGameLang.html#a3ea40c71215ff8c0a4f54a0be30cffad", null ],
     [ "refDrama2", "classGameLang.html#a40623a31eb4b8758c7fd37cbff3617c5", null ],
     [ "refDrama3", "classGameLang.html#affe6372b5bb02ac74901bf87b8f738e9", null ],
-    [ "refDrama4", "classGameLang.html#a77c1ca25923800f51f5d0f98eaed876f", null ]
+    [ "refDrama4", "classGameLang.html#a77c1ca25923800f51f5d0f98eaed876f", null ],
+    [ "refDrama5", "classGameLang.html#ace261571a82e57be9de5c1196e700a12", null ]
 ];

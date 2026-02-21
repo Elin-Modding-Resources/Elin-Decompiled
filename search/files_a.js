@@ -116,5 +116,6 @@ var searchData=
   ['logicalpoint_2ecs_113',['LogicalPoint.cs',['../LogicalPoint_8cs.html',1,'']]],
   ['logicalpointmanager_2ecs_114',['LogicalPointManager.cs',['../LogicalPointManager_8cs.html',1,'']]],
   ['los_2ecs_115',['Los.cs',['../Los_8cs.html',1,'']]],
-  ['lot_2ecs_116',['Lot.cs',['../Lot_8cs.html',1,'']]]
+  ['lot_2ecs_116',['Lot.cs',['../Lot_8cs.html',1,'']]],
+  ['lovedata_2ecs_117',['LoveData.cs',['../LoveData_8cs.html',1,'']]]
 ];

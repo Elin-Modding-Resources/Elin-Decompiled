@@ -124,5 +124,6 @@ var searchData=
   ['logicalpointmanager_121',['LogicalPointManager',['../classLogicalPointManager.html',1,'']]],
   ['logicupdater_122',['LogicUpdater',['../classGameUpdater_1_1LogicUpdater.html',1,'GameUpdater']]],
   ['los_123',['Los',['../classLos.html',1,'']]],
-  ['lot_124',['Lot',['../classLot.html',1,'']]]
+  ['lot_124',['Lot',['../classLot.html',1,'']]],
+  ['lovedata_125',['LoveData',['../classLoveData.html',1,'']]]
 ];

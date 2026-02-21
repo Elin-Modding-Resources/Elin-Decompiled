@@ -74,6 +74,7 @@ var classCINT =
     [ "sisterEaten", "classCINT.html#ad5bdcda652bd3e30c530c9609ead8f13", null ],
     [ "summonDuration", "classCINT.html#a63edcffbd8222afefd41f94252c9459c", null ],
     [ "taxExtra", "classCINT.html#a69336b5f862df5cee13e39cb7ca32cd0", null ],
+    [ "uidAttune", "classCINT.html#a2db451d4915f16df87170fb224c78544", null ],
     [ "uidLastEnemy", "classCINT.html#aee519c3bcb35359775abc1c6cb045622", null ],
     [ "uidMaster", "classCINT.html#aaa767951a95a611a479aee0f35a5b190", null ],
     [ "uidPackageZone", "classCINT.html#ad1d6a00de688e4d8924386ab2b485de6", null ],

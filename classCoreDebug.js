@@ -75,6 +75,8 @@ var classCoreDebug =
     [ "QuickStart", "classCoreDebug.html#a813ced8e0bd435e48dcfd6089bfeb6c1", null ],
     [ "RegenerateNames", "classCoreDebug.html#a80cee7d7a2576162c5faa6c4cceb74f6", null ],
     [ "Reset_LoytelDebt", "classCoreDebug.html#a5390ab2096b1e78219772e585ad958ee", null ],
+    [ "ResetAchievement", "classCoreDebug.html#a001f72dc1c87241a3e192122f36183a8", null ],
+    [ "ResetAllAchievement", "classCoreDebug.html#a15adf266294be42f33b3c345b92411ec", null ],
     [ "ResetPetUpgrades", "classCoreDebug.html#abeda409739a6918ff6e0d979793a9879", null ],
     [ "ResetPrincipalSeals", "classCoreDebug.html#acbd20ac8f1b35c2a6019e891ab933858", null ],
     [ "Resource", "classCoreDebug.html#a097c7abcbb31537dbef592ac8d28d937", null ],

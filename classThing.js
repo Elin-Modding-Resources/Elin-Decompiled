@@ -4,6 +4,7 @@ var classThing =
     [ "AddEnchant", "classThing.html#a90597cd544211f9fc84982daeb7675dd", null ],
     [ "ApplyMaterial", "classThing.html#acafb75d5142136825d8d05c6c656d213", null ],
     [ "ApplyMaterialElements", "classThing.html#a96fa1ab262f75500f886c299627e9e8f", null ],
+    [ "Attune", "classThing.html#ae19b698f58e4e53a2351e669f3e029ce", null ],
     [ "CanAutoFire", "classThing.html#aed816643d3606b87872fb274511625a8", null ],
     [ "CanStackTo", "classThing.html#aee1df4abe2d7c40bbf16c94850628b08", null ],
     [ "Disassemble", "classThing.html#a44c1c1761f7d3e9aced67f45eeed68ad", null ],

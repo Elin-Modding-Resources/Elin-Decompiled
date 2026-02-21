@@ -1,5 +1,10 @@
 var NAVTREEINDEX30 =
 {
+"classActMeleeWhilrwind.html":[1,0,42],
+"classActMeleeWhilrwind.html#a099c0ea03dd9230098dcb08178fbce99":[1,0,42,0],
+"classActMiasma.html":[1,0,43],
+"classActMiasma.html#a64fcca62a52cce6959d23270928482b5":[1,0,43,0],
+"classActMissileBarrage.html":[1,0,44],
 "classActMissileBarrage.html#acbb23980755044493eabd8a3d70fcc39":[1,0,44,0],
 "classActMultihit.html":[1,0,45],
 "classActMultihit.html#a374cdb568d902102960a4ee76a715adf":[1,0,45,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX30 =
 "classActionMode.html#a6ee5399bbdad2a038b637ea1d40b8ba5":[1,0,33,152],
 "classActionMode.html#a71450cbdb462b951ff04a2f8c9e1d7d6":[1,0,33,142],
 "classActionMode.html#a718bbb620f45aedfa48c9d5078fa5895":[1,0,33,104],
-"classActionMode.html#a7335fbf31ec3d83f85d57e5e68ba5180":[1,0,33,62],
-"classActionMode.html#a7336e0d2d984efbbaad0df9acb461e05":[1,0,33,150],
-"classActionMode.html#a74f34d5258aab237f632b504d44af0c5":[1,0,33,73],
-"classActionMode.html#a776e1f7a04431da5c37b476b46fe053d":[1,0,33,68],
-"classActionMode.html#a79ea0cca5cf7decd8368e8770b8cba40":[1,0,33,147],
-"classActionMode.html#a7b84314951cac5da9792d3b66ce5283e":[1,0,33,113]
+"classActionMode.html#a7335fbf31ec3d83f85d57e5e68ba5180":[1,0,33,62]
 };

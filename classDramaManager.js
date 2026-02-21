@@ -47,5 +47,6 @@ var classDramaManager =
     [ "textReplace", "classDramaManager.html#a2aa2f66cbe2ad568bd205509e376a50f", null ],
     [ "TG", "classDramaManager.html#ae0ae922c134cec005735b244f023b1ae", null ],
     [ "tg", "classDramaManager.html#a8376359d700874e947c3ee3c853783df", null ],
+    [ "keepAmbientBGM", "classDramaManager.html#ac46b40a28457e2d6e688e32cd43e4f43", null ],
     [ "tgActor", "classDramaManager.html#afe040050db19d7c35bbd833e2f3b4ffa", null ]
 ];

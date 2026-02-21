@@ -54,6 +54,7 @@ var classDate =
     [ "month", "classDate.html#a801e79ba9d915b15ddbd13aaa4b09020", null ],
     [ "NameMonth", "classDate.html#a5c7b1df77f96d366a1c4b2861f32864e", null ],
     [ "NameMonthShort", "classDate.html#a79d07a513be9325e909b5d61558cba14", null ],
+    [ "NameSeason", "classDate.html#af0433181e2eaaa83ea82413091f9c9e6", null ],
     [ "NameTime", "classDate.html#aefb9dd2b4cbd6a85c2bb0a0493929806", null ],
     [ "periodOfDay", "classDate.html#adb98bdb5faf495b3b5ccd09db9990d4f", null ],
     [ "sec", "classDate.html#ab89288e355749cc5a52cb0dfd76efa77", null ],

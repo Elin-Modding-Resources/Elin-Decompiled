@@ -1,5 +1,17 @@
 var NAVTREEINDEX47 =
 {
+"classCharaUpgrade.html#ac9c485bbf435292562d1241c8140897a":[1,0,285,2],
+"classCharaUpgrade.html#ade2e5aa42e072fc90bb369ae84d164b6":[1,0,285,5],
+"classCharaUpgrade_1_1Item.html":[1,0,285,0],
+"classCharaUpgrade_1_1Item.html#a17df5062d7e6d83663d73afd26092921":[1,0,285,0,3],
+"classCharaUpgrade_1_1Item.html#a243d79864c1fd1d052c4832a31809f2d":[1,0,285,0,1],
+"classCharaUpgrade_1_1Item.html#a2691f4b6ff0784c4ebba4ccdb2d5c4ee":[1,0,285,0,2],
+"classCharaUpgrade_1_1Item.html#a3e51ad5d92a3a2cc3ff75b29b67471c4":[1,0,285,0,4],
+"classCharaUpgrade_1_1Item.html#a76de416eba9ed68a99c6d8c9c9e8a346":[1,0,285,0,0],
+"classCharacterSpacing.html":[1,0,279],
+"classCharacterSpacing.html#a07f1d00ca00b5f032c1684e41c223028":[1,0,279,1],
+"classCharacterSpacing.html#a519b5dd6027889ebc4b6251546d8d88b":[1,0,279,2],
+"classCharacterSpacing.html#a687be84a8b5621631b6856e50664bcfd":[1,0,279,5],
 "classCharacterSpacing.html#a8a0b0e7ef6d5fa2644029d5ce27d275f":[1,0,279,6],
 "classCharacterSpacing.html#ab67992f2c546b5ee753dcc6553fe1d3e":[1,0,279,3],
 "classCharacterSpacing.html#ab81b47ba7652c0385b6c2de08c720e3f":[1,0,279,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX47 =
 "classClassExtension.html#abefa31424f889079b9dbfbed8d6c7bda":[1,0,293,70],
 "classClassExtension.html#abf8a1722cb0aac7d3d5c446ab0a35812":[1,0,293,177],
 "classClassExtension.html#ac3ac91287d29c44d61c3662fbeb0bc16":[1,0,293,121],
-"classClassExtension.html#ac63590887628a25774fc62aa61500dc9":[1,0,293,60],
-"classClassExtension.html#ac95b693e393c83a23af2560bc327855e":[1,0,293,191],
-"classClassExtension.html#ac98139e842f15247ddd69a0e2e4f020e":[1,0,293,156],
-"classClassExtension.html#aca73a5848a2a9b1c97baa7f1216c8a6e":[1,0,293,187],
-"classClassExtension.html#acaa2a168cfbd79f74b2e6b0c163c5232":[1,0,293,197],
-"classClassExtension.html#acb16bcac176e1062529f57abd99f76cc":[1,0,293,0],
-"classClassExtension.html#acb7905237b5a384411f76018546adeb6":[1,0,293,112],
-"classClassExtension.html#acbc30abbb1b47f6f3554c17c6eac3071":[1,0,293,107],
-"classClassExtension.html#acc573af25bd9869ebddbd4bb2b7d07fa":[1,0,293,163],
-"classClassExtension.html#acdc8790488704e79e35b348d89b52367":[1,0,293,58],
-"classClassExtension.html#ad14b0ef3870c216f8bad5b42560211ee":[1,0,293,138],
-"classClassExtension.html#ad309bff0659b70c36dbcec64044140b0":[1,0,293,117],
-"classClassExtension.html#ad322ab1f8fc3732e690932b7044a8599":[1,0,293,152]
+"classClassExtension.html#ac63590887628a25774fc62aa61500dc9":[1,0,293,60]
 };
