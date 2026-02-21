@@ -92,7 +92,7 @@ public class Religion : EClass
 
 	public string GetTextBenefit()
 	{
-		string text = "";
+		string text = "<color=green>";
 		for (int i = 0; i < source.elements.Length; i += 2)
 		{
 			if (i != 0)
@@ -101,7 +101,8 @@ public class Religion : EClass
 			}
 			text += EClass.sources.elements.map[source.elements[i]].GetName();
 		}
-		return source.GetText("textBenefit") + (IsEyth ? "" : "textBenefit".lang(text));
+		text += "</color>";
+		return source.GetText("textBenefit") + Environment.NewLine + Environment.NewLine + (IsEyth ? "" : "textBenefit".lang(text));
 	}
 
 	public string GetTextTemper(int _temper = -99999)

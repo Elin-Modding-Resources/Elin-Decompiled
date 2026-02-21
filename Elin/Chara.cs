@@ -607,6 +607,18 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public bool IsMarried
+	{
+		get
+		{
+			if (base.c_love != null)
+			{
+				return base.c_love.dateMarriage != 0;
+			}
+			return false;
+		}
+	}
+
 	public override bool IsMoving => idleTimer > 0f;
 
 	public override bool IsGlobal => global != null;
@@ -5365,6 +5377,10 @@ public class Chara : Card, IPathfindWalker
 		bool isInActiveZone = IsInActiveZone;
 		if (isInActiveZone)
 		{
+			if (id == "putty" && origin != null && origin.IsPCParty)
+			{
+				Steam.GetAchievement(ID_Achievement.PUTIT);
+			}
 			if (IsPC)
 			{
 				EClass._zone.ResetHostility();
@@ -7740,7 +7756,7 @@ public class Chara : Card, IPathfindWalker
 				return false;
 			}
 		}
-		if (t.HasTag(CTAG.gift))
+		if (t.HasTag(CTAG.gift) && t.c_uidAttune != base.uid)
 		{
 			return false;
 		}
@@ -8094,6 +8110,29 @@ public class Chara : Card, IPathfindWalker
 			r = _listFavCat.RandomItem();
 		});
 		return r;
+	}
+
+	public void Marry(Chara c)
+	{
+		if (base.c_love == null)
+		{
+			base.c_love = new LoveData();
+		}
+		base.c_love.dateMarriage = EClass.world.date.GetRaw();
+		base.c_love.uidZoneMarriage = EClass._zone.uid;
+		base.c_love.nameZoneMarriage = EClass._zone.Name;
+		SetFeat(1275, 1, msg: true);
+		EClass.player.stats.married++;
+	}
+
+	public void Divorce(Chara c)
+	{
+		if (base.c_love != null)
+		{
+			base.c_love.dateMarriage = 0;
+			SetFeat(1275, 0, msg: true);
+			EClass.player.stats.divorced++;
+		}
 	}
 
 	public Chara GetNearbyCatToSniff()

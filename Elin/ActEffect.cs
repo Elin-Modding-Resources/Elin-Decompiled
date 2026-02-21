@@ -2785,7 +2785,6 @@ public class ActEffect : EClass
 	{
 		Msg.thirdPerson1.Set(EClass.pc);
 		string netMsg = GameLang.Parse("wish".langGame(), thirdPerson: true, name, s);
-		bool net = EClass.core.config.net.enable && EClass.core.config.net.sendEvent;
 		List<WishItem> list = new List<WishItem>();
 		int wishLv = 10 + power / 4;
 		int wishValue = 5000 + power * 50;
@@ -2917,10 +2916,7 @@ public class ActEffect : EClass
 						EClass._zone.AddCard(thing, EClass.pc.pos);
 					}
 					netMsg = netMsg + Lang.space + GameLang.Parse("wishNet".langGame(), Msg.IsThirdPerson(thing), Msg.GetName(thing).ToTitleCase());
-					if (net)
-					{
-						Net.SendChat(name, netMsg, ChatCategory.Wish, Lang.langCode);
-					}
+					Net.SendChat(name, netMsg, ChatCategory.Wish, Lang.langCode);
 					Msg.Say("dropReward");
 				}
 			});
@@ -2928,10 +2924,7 @@ public class ActEffect : EClass
 		if (list.Count == 0)
 		{
 			netMsg = netMsg + Lang.space + "wishFail".langGame();
-			if (net)
-			{
-				Net.SendChat(name, netMsg, ChatCategory.Wish, Lang.langCode);
-			}
+			Net.SendChat(name, netMsg, ChatCategory.Wish, Lang.langCode);
 			Msg.Say("wishFail");
 			return false;
 		}

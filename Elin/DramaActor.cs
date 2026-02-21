@@ -244,7 +244,7 @@ public class DramaActor : EMono
 		if (currentReligion != null)
 		{
 			stringBuilder.Replace("#god_name", currentReligion.Name);
-			stringBuilder.Replace("#god_desc", currentReligion.source.GetDetail());
+			stringBuilder.Replace("#god_desc", "<i>" + currentReligion.source.GetDetail() + "</i>");
 			stringBuilder.Replace("#god_benefit", currentReligion.GetTextBenefit());
 			stringBuilder.Replace("#godtalk_worship", currentReligion.GetGodTalk("worship"));
 		}

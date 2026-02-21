@@ -47,7 +47,7 @@ public class ActorEx : Actor
 
 	public float GetVolume()
 	{
-		if (!EMono._zone.isStarted || !owner.IsInstalled)
+		if (!EMono._zone.isStarted || !owner.IsInstalled || ((bool)LayerDrama.Instance && !LayerDrama.Instance.drama.keepAmbientBGM))
 		{
 			return 0f;
 		}

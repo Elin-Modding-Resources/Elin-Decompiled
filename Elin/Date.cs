@@ -144,7 +144,9 @@ public class Date : EClass
 		}
 	}
 
-	public string NameMonth => month.ToString() ?? "";
+	public string NameMonth => Lang.GetList("name_month")[month - 1];
+
+	public string NameSeason => Lang.GetList("name_season")[(int)EClass.world.season.Current];
 
 	public string NameMonthShort => month.ToString() ?? "";
 
@@ -257,7 +259,7 @@ public class Date : EClass
 		case TextFormat.Widget:
 			return "dateYearMonthDay".lang(year.ToString() ?? "", month.ToString() ?? "", day.ToString() ?? "");
 		case TextFormat.Schedule:
-			return "dateSchedule".lang(NameMonth, day.ToString() ?? "");
+			return "dateSchedule".lang(NameMonthShort, day.ToString() ?? "");
 		case TextFormat.Travel:
 		{
 			string text = "_short";

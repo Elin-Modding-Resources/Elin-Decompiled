@@ -3,15 +3,36 @@ using Newtonsoft.Json;
 [JsonObject(MemberSerialization.OptIn)]
 public class Season : EClass
 {
-	public const int Spring = 1;
-
-	public const int Summer = 2;
-
-	public const int Autumn = 3;
-
-	public const int Winter = 4;
+	public enum ID
+	{
+		Spring,
+		Summer,
+		Autumn,
+		Winter
+	}
 
 	public GameDate date => EClass.world.date;
+
+	public ID Current
+	{
+		get
+		{
+			int month = date.month;
+			if (month >= 3 && month <= 5)
+			{
+				return ID.Spring;
+			}
+			if (month >= 6 && month <= 8)
+			{
+				return ID.Summer;
+			}
+			if (month >= 9 && month <= 11)
+			{
+				return ID.Autumn;
+			}
+			return ID.Winter;
+		}
+	}
 
 	public bool isSpring
 	{

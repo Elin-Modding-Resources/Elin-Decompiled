@@ -839,7 +839,7 @@ public class Point : EClass
 			}
 			foreach (Chara item2 in list2)
 			{
-				if (item2 == criminal || item2.IsPC || (item2 != target && !item2.CanWitness) || (item2.HasCondition<ConDim>() && EClass.rnd(2) == 0) || item2.conSuspend != null || item2.isParalyzed || item2.IsDisabled)
+				if (item2 == criminal || item2.IsPC || (item2.HasCondition<ConDim>() && EClass.rnd(2) == 0) || item2.conSuspend != null || item2.isParalyzed || item2.IsDisabled || (type != 0 && type != WitnessType.ally && item2 != target && !item2.CanWitness))
 				{
 					continue;
 				}

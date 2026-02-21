@@ -171,4 +171,6 @@ public class CINT
 	public const int fixedValue = 131;
 
 	public const int isAlreadyCaptured = 132;
+
+	public const int uidAttune = 133;
 }

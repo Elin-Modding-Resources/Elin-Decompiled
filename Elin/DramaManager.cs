@@ -74,6 +74,8 @@ public class DramaManager : EMono
 
 	public static Dictionary<string, ExcelData> dictCache = new Dictionary<string, ExcelData>();
 
+	public bool keepAmbientBGM => !bgmChanged;
+
 	public DramaActor tgActor => sequence.GetActor("tg");
 
 	private void Update()
@@ -475,6 +477,20 @@ public class DramaManager : EMono
 			AddEvent(delegate
 			{
 				Util.Instantiate<Transform>("Media/Graphics/Image/Drama/" + p2, layer).SetAsFirstSibling();
+			});
+			break;
+		case "setAdvBG":
+			AddEvent(delegate
+			{
+				if (p2.IsEmpty())
+				{
+					dialog.imageBgAdv.enabled = false;
+				}
+				else
+				{
+					dialog.imageBgAdv.enabled = true;
+					dialog.imageBgAdv.sprite = Resources.Load<Sprite>("Media/Graphics/Image/Drama/" + p2);
+				}
 			});
 			break;
 		case "glitch":

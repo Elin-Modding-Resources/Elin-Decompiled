@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using HeathenEngineering.SteamworksIntegration;
 using HeathenEngineering.SteamworksIntegration.API;
 using Steamworks;
@@ -63,6 +64,25 @@ public class Steam : MonoBehaviour
 			}
 		}
 		Debug.Log("Achievement not found:" + id);
+	}
+
+	public static void ResetAllAchievement()
+	{
+		foreach (AchievementObject achievement in Instance.steamworks.settings.achievements)
+		{
+			achievement.ClearAchievement();
+			achievement.Store();
+		}
+	}
+
+	public static void ResetAchievement(ID_Achievement id)
+	{
+		AchievementObject achievementObject = Instance.steamworks.settings.achievements.First((AchievementObject a) => a.Id == id.ToString());
+		if (achievementObject != null)
+		{
+			achievementObject.ClearAchievement();
+			achievementObject.Store();
+		}
 	}
 
 	public void TestHasDLC()

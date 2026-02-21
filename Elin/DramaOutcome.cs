@@ -395,6 +395,28 @@ public class DramaOutcome : EMono
 		cc.RemoveEditorTag(EditorTag.Invulnerable);
 	}
 
+	public void marry()
+	{
+		Chara tc = manager.tg.chara;
+		SE.Play("dropRewardXmas");
+		tc.Marry(EMono.pc);
+		EMono.pc.ShowEmo(Emo.love);
+		EMono.pc.PlayEffect("revive");
+		tc.ShowEmo(Emo.love);
+		tc.PlayEffect("revive");
+		EMono.pc.pos.TalkWitnesses(EMono.pc, (EMono.rnd(2) == 0) ? "musicGood" : "ding_other", 8, WitnessType.everyone, (Chara c) => c != tc);
+		foreach (Chara chara in EMono._map.charas)
+		{
+			if (chara != EMono.pc && chara != tc && chara.IsMarried)
+			{
+				Chara enemy = ((EMono.rnd(2) == 0) ? tc : EMono.pc);
+				chara.Say("angry", chara);
+				chara.SetEnemy(enemy);
+				chara.calmCheckTurn = 10000;
+			}
+		}
+	}
+
 	public void give_catball_recipe()
 	{
 		EMono.player.DropReward(ThingGen.CreateRecipe("silvercatball"));

@@ -37,4 +37,6 @@ public class COBJ
 	public const int mixedFoodData = 18;
 
 	public const int bloodData = 19;
+
+	public const int loveData = 20;
 }

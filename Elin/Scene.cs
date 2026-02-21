@@ -591,10 +591,7 @@ public class Scene : EMono
 					}
 					Player obj = EMono.player;
 					obj.deathMsg = obj.deathMsg + Lang.space + lastWord.Bracket(1);
-					if (EMono.core.config.net.enable && EMono.core.config.net.sendEvent)
-					{
-						Net.SendChat(EMono.pc.NameTitled, EMono.player.deathMsg, ChatCategory.Dead, Lang.langCode);
-					}
+					Net.SendChat(EMono.pc.NameTitled, EMono.player.deathMsg, ChatCategory.Dead, Lang.langCode);
 					Debug.Log(lastWord);
 					Msg.SetColor(Msg.colors.Talk);
 					Msg.Say(lastWord.Bracket(1));

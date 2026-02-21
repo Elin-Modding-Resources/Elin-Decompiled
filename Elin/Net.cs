@@ -336,6 +336,10 @@ public class Net : MonoBehaviour
 		{
 			return false;
 		}
+		if (!EClass.core.config.net.enable || !EClass.core.config.net.sendEvent)
+		{
+			return false;
+		}
 		try
 		{
 			if (EClass.debug.enable)

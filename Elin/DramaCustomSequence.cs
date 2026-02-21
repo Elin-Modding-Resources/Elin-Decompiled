@@ -100,14 +100,14 @@ public class DramaCustomSequence : EClass
 			QuestDeliver questDeliver = _quest as QuestDeliver;
 			foreach (Thing item2 in questDeliver.ListDestThing())
 			{
-				Thing _t4 = item2;
-				Choice2("daDeliver".lang(item.GetTitle() ?? "", _t4.GetName(NameStyle.Full, questDeliver.num)), "_deliver").SetOnClick(delegate
+				Thing _t5 = item2;
+				Choice2("daDeliver".lang(item.GetTitle() ?? "", _t5.GetName(NameStyle.Full, questDeliver.num)), "_deliver").SetOnClick(delegate
 				{
-					destThing = _t4;
+					destThing = _t5;
 					destQuest = _quest;
 				}).SetOnTooltip(delegate(UITooltip a)
 				{
-					_t4.WriteNote(a.note);
+					_t5.WriteNote(a.note);
 				});
 			}
 		}
@@ -201,7 +201,7 @@ public class DramaCustomSequence : EClass
 				{
 					Choice2("daBout", "_bout");
 				}
-				if (c.isDrunk || EClass.debug.enable)
+				if (c.isDrunk || c.HasElement(1275) || EClass.debug.enable)
 				{
 					Choice2(flag2 ? "daBird" : "daTail", "_tail");
 				}
@@ -254,10 +254,10 @@ public class DramaCustomSequence : EClass
 					}
 					foreach (Thing item4 in EClass.pc.things.List((Thing a) => a.c_lockLv > 0, onlyAccessible: true))
 					{
-						Thing _t3 = item4;
-						Choice2("daPicklock".lang(_t3.Name), "_picklock").SetOnClick(delegate
+						Thing _t4 = item4;
+						Choice2("daPicklock".lang(_t4.Name), "_picklock").SetOnClick(delegate
 						{
-							destThing = _t3;
+							destThing = _t4;
 						});
 					}
 				}
@@ -333,6 +333,17 @@ public class DramaCustomSequence : EClass
 		else if (!c.noMove)
 		{
 			Choice("disableMove", "_disableMove");
+		}
+		if (!c.IsMarried)
+		{
+			foreach (Thing item5 in EClass.pc.things.List((Thing a) => !a.c_isImportant && !a.isEquipped && a.c_uidAttune == 0 && (a.id == "amulet_engagement" || a.id == "ring_engagement")))
+			{
+				Thing _t3 = item5;
+				Choice("daMarry".lang(item5.Name), "_marry").SetOnClick(delegate
+				{
+					destThing = _t3;
+				});
+			}
 		}
 		Choice((c.GetInt(123) == 0) ? "daSleepBeside" : "daSleepBeside2", "_sleepBeside");
 		if (c.HasElement(1225))
@@ -500,9 +511,9 @@ public class DramaCustomSequence : EClass
 			QuestSupply supply = c.quest as QuestSupply;
 			if (supply != null)
 			{
-				foreach (Thing item5 in supply.ListDestThing())
+				foreach (Thing item6 in supply.ListDestThing())
 				{
-					Thing _t2 = item5;
+					Thing _t2 = item6;
 					Choice("daDeliver".lang(supply.GetTitle() ?? "", _t2.GetName(NameStyle.Full, supply.num)), "_deliver").SetOnClick(delegate
 					{
 						EClass.game.quests.Start(c.quest);
@@ -573,6 +584,33 @@ public class DramaCustomSequence : EClass
 		});
 		_Talk("tg", GetTopic(c, (c.GetInt(123) == 0) ? "ok" : "shutup"));
 		End();
+		Step("_marry");
+		Method(delegate
+		{
+			if (!c.affinity.CanMarry())
+			{
+				TempTalkTopic("refuse", StepEnd);
+			}
+		});
+		_Talk("tg", GetTopic(c, "marry"));
+		Method(delegate
+		{
+			manager.layer.SetOnKill(delegate
+			{
+				destThing.Attune(c);
+				destThing.elements.ModBase(484, 3);
+				c.AddCard(destThing);
+				c.TryEquip(destThing);
+				GameLang.refDrama1 = EClass.world.date.year.ToString() ?? "";
+				GameLang.refDrama2 = EClass.world.date.NameMonth ?? "";
+				GameLang.refDrama3 = EClass._zone.Name;
+				GameLang.refDrama4 = EClass.pc.NameBraced;
+				GameLang.refDrama5 = c.NameBraced;
+				LayerDrama.Activate("_adv", "general", "marry", c);
+				Net.SendChat(EClass.pc.NameTitled, "net_marriage".lang(EClass.pc.NameBraced, EClass._zone.Name, c.NameBraced), ChatCategory.Marriage, Lang.langCode);
+			});
+		});
+		End();
 		Step("_disableLoyal");
 		Method(delegate
 		{
@@ -640,8 +678,8 @@ public class DramaCustomSequence : EClass
 					TempTalkTopic("inviteReq1", null);
 					foreach (Thing t2 in EClass.pc.things.List((Thing t) => t.id == reqId && t.Num >= reqNum, onlyAccessible: true))
 					{
-						Thing _t5 = t2;
-						Choice("daDeliver".lang("", _t5.GetName(NameStyle.Full, _t5.Num)), delegate
+						Thing _t6 = t2;
+						Choice("daDeliver".lang("", _t6.GetName(NameStyle.Full, _t6.Num)), delegate
 						{
 							t2.ModNum(-reqNum);
 							TempTalk("hired", StepEnd);
@@ -649,7 +687,7 @@ public class DramaCustomSequence : EClass
 							c.MakeAlly();
 						}).SetOnTooltip(delegate(UITooltip a)
 						{
-							_t5.WriteNote(a.note);
+							_t6.WriteNote(a.note);
 						});
 					}
 					Choice("no2", StepDefault, cancel: true).SetOnClick(RumorChill);
@@ -772,9 +810,9 @@ public class DramaCustomSequence : EClass
 		Method(delegate
 		{
 			TempTalkTopic("blooming1", null);
-			foreach (Chara item6 in EClass.pc.party.members.Where((Chara c2) => c2.CanBloom()))
+			foreach (Chara item7 in EClass.pc.party.members.Where((Chara c2) => c2.CanBloom()))
 			{
-				Chara c4 = item6;
+				Chara c4 = item7;
 				Choice("daBloom".lang(c4.Name), delegate
 				{
 					if (EClass._zone.influence < 10)
@@ -886,9 +924,9 @@ public class DramaCustomSequence : EClass
 					},
 					onList = delegate
 					{
-						foreach (ResearchPlan item7 in plans)
+						foreach (ResearchPlan item8 in plans)
 						{
-							list.Add(item7);
+							list.Add(item8);
 						}
 					}
 				};
@@ -1160,7 +1198,7 @@ public class DramaCustomSequence : EClass
 					},
 					onList = delegate
 					{
-						foreach (SourceElement.Row item8 in EClass.sources.elements.rows.Where(delegate(SourceElement.Row a)
+						foreach (SourceElement.Row item9 in EClass.sources.elements.rows.Where(delegate(SourceElement.Row a)
 						{
 							if (a.tag.Contains("unused"))
 							{
@@ -1193,7 +1231,7 @@ public class DramaCustomSequence : EClass
 							return a.category == "skill" && a.categorySub == c.trait.IDTrainer;
 						}).ToList())
 						{
-							list.Add(Element.Create(item8.id));
+							list.Add(Element.Create(item9.id));
 						}
 					}
 				};
@@ -1311,10 +1349,10 @@ public class DramaCustomSequence : EClass
 					{
 						SE.Pay();
 						EClass.pc.ModCurrency(-costIdentify);
-						foreach (Thing item9 in EClass.pc.things.List((Thing t) => !t.IsIdentified, onlyAccessible: true))
+						foreach (Thing item10 in EClass.pc.things.List((Thing t) => !t.IsIdentified, onlyAccessible: true))
 						{
-							item9.Thing.Identify(show: false);
-							if (!item9.IsInstalled)
+							item10.Thing.Identify(show: false);
+							if (!item10.IsInstalled)
 							{
 								numSuperior++;
 							}

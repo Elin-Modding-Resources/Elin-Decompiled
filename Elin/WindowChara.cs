@@ -939,6 +939,7 @@ public class WindowChara : WindowController
 		text = text + " / " + ("style" + chara.GetFavAttackStyle()).lang();
 		n.AddTopic("TopicDomain", "attackStyle".lang(), text);
 		n.AddTopic("TopicDomain", "armorStyle".lang(), chara.GetFavArmorSkill()?.Name ?? Element.Get(120).GetText());
+		bool textAdded = false;
 		if (chara.IsPC && EClass.pc.c_daysWithGod > 0)
 		{
 			AddText("info_daysWithGod".lang(EClass.pc.c_daysWithGod.ToString() ?? "", EClass.pc.faith.Name));
@@ -968,6 +969,30 @@ public class WindowChara : WindowController
 				AddText("info_daysWithPC".lang(chara.c_daysWithPC.ToString() ?? "") + Environment.NewLine + "daystogether_bonus".lang(((num > 0) ? "+" : "") + num));
 			}
 		}
+		if (chara.IsPC)
+		{
+			List<Chara> list = new List<Chara>();
+			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
+			{
+				if (value2.IsMarried)
+				{
+					list.Add(value2);
+				}
+			}
+			if (list.Count > 0)
+			{
+				if (textAdded)
+				{
+					n.Space(12);
+				}
+				n.AddTopic("TopicDomain", "history_marriage".lang(), "");
+				foreach (Chara item in list)
+				{
+					Date date = Date.ToDate(item.c_love.dateMarriage);
+					AddText("item_marriage".lang(item.NameBraced, date.year.ToString() ?? "", date.month.ToString() ?? "", item.c_love.nameZoneMarriage));
+				}
+			}
+		}
 		if (EClass.debug.showExtra)
 		{
 			n.AddText("LV:" + chara.LV + "  exp:" + chara.exp + " next:" + chara.ExpToNext);
@@ -982,6 +1007,7 @@ public class WindowChara : WindowController
 		void AddText(string s)
 		{
 			n.AddText(" ・ " + s);
+			textAdded = true;
 		}
 	}
 }

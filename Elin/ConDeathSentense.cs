@@ -24,6 +24,10 @@ public class ConDeathSentense : BaseDebuff
 			{
 				owner.DamageHP(owner.MaxHP / (EClass.debug.enable ? 1 : 13) + 1, AttackSource.DeathSentence);
 			}
+			else if (owner.HasCondition<ConRebirth>())
+			{
+				owner.RemoveCondition<ConRebirth>();
+			}
 			else
 			{
 				owner.Die(null, null, euthanasia ? AttackSource.Euthanasia : AttackSource.DeathSentence);

@@ -1182,6 +1182,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public int c_uidAttune
+	{
+		get
+		{
+			return GetInt(133);
+		}
+		set
+		{
+			Mod();
+			SetInt(133, value);
+		}
+	}
+
 	public int c_dyeMat
 	{
 		get
@@ -1842,6 +1855,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public LoveData c_love
+	{
+		get
+		{
+			return GetObj<LoveData>(20);
+		}
+		set
+		{
+			SetObj(20, value);
+		}
+	}
+
 	public CharaGenes c_genes
 	{
 		get
@@ -2006,7 +2031,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public int ExpToNext => (50 + LV * 30) * (100 - Evalue(403)) / 100;
+	public int ExpToNext => (int)Math.Min((50 + (long)LV * 30L) * (100 - Evalue(403)) / 100, 99999999L);
 
 	public int DefaultLV => sourceCard.LV;
 
@@ -2996,7 +3021,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		return num * (100 + Evalue(1237) * 30 + Evalue(1273) * 50) / 100;
+		return num * (100 + Evalue(1237) * 30 + Evalue(1273) * 50 + Evalue(1275) * 50) / 100;
 	}
 
 	public int GetAffinityExpBonus()

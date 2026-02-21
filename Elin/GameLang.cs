@@ -11,6 +11,8 @@ public class GameLang : EClass
 
 	public static string refDrama4;
 
+	public static string refDrama5;
+
 	public static string ConvertDrama(string text, Chara c = null)
 	{
 		if (!EClass.core.IsGameStarted)
@@ -96,10 +98,30 @@ public class GameLang : EClass
 		{
 			refDrama4 = result4.ToFormat();
 		}
-		stringBuilder.Replace("#1", refDrama1);
-		stringBuilder.Replace("#2", refDrama2);
-		stringBuilder.Replace("#3", refDrama3);
-		stringBuilder.Replace("#4", refDrama4);
+		if (int.TryParse(refDrama5, out var result5))
+		{
+			refDrama5 = result5.ToFormat();
+		}
+		if (!refDrama1.IsEmpty())
+		{
+			stringBuilder.Replace("#1", refDrama1);
+		}
+		if (!refDrama2.IsEmpty())
+		{
+			stringBuilder.Replace("#2", refDrama2);
+		}
+		if (!refDrama3.IsEmpty())
+		{
+			stringBuilder.Replace("#3", refDrama3);
+		}
+		if (!refDrama4.IsEmpty())
+		{
+			stringBuilder.Replace("#4", refDrama4);
+		}
+		if (!refDrama5.IsEmpty())
+		{
+			stringBuilder.Replace("#5", refDrama5);
+		}
 		stringBuilder.Replace("#god", name);
 		stringBuilder.Replace("#player", EClass.player.title);
 		stringBuilder.Replace("#title", EClass.player.title);

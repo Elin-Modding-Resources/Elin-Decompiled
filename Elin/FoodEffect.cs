@@ -412,6 +412,17 @@ public class FoodEffect : EClass
 				}
 			}
 		}
+		if (c2.IsPC && EClass._zone is Zone_Lothria)
+		{
+			switch (food.id)
+			{
+			case "681":
+			case "pie_meat":
+			case "pie_fish":
+				Steam.GetAchievement(ID_Achievement.ASHLAND_PIE);
+				break;
+			}
+		}
 		if (!(food.trait is TraitGene) || !c2.IsPC || !c2.HasElement(1274))
 		{
 			return;

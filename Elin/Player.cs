@@ -126,6 +126,12 @@ public class Player : EClass
 		public int sistersDepart;
 
 		[JsonProperty]
+		public int married;
+
+		[JsonProperty]
+		public int divorced;
+
+		[JsonProperty]
 		public long shipMoney;
 
 		public int lastShippingExp;
@@ -2532,6 +2538,7 @@ public class Player : EClass
 				EClass.pc.pos.TryWitnessCrime(EClass.pc);
 				EClass._zone.RefreshCriminal();
 				Tutorial.Reserve("criminal");
+				Steam.GetAchievement(ID_Achievement.NERUN);
 			}
 			if (karma >= 0 && flag)
 			{

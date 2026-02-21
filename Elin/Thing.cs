@@ -1138,6 +1138,11 @@ public class Thing : Card
 			Religion religion = EClass.game.religions.Find(base.c_idDeity) ?? EClass.game.religions.Eyth;
 			AddText("isDeity".lang(religion.Name), FontColor.Myth);
 		}
+		if (base.c_uidAttune != 0)
+		{
+			Chara chara = EClass.game.cards.globalCharas.Find(base.c_uidAttune);
+			AddText("isAttuned".lang((chara == null) ? "???" : chara.NameSimple), FontColor.Ether);
+		}
 		if (base.isGifted && GetRoot() != EClass.pc)
 		{
 			AddText("isGifted", FontColor.Ether);
@@ -1379,19 +1384,19 @@ public class Thing : Card
 		}
 		if (flag2 && mode != IInspect.NoteMode.Product)
 		{
-			Chara chara = GetRootCard() as Chara;
+			Chara chara2 = GetRootCard() as Chara;
 			if (base.parentCard?.trait is TraitChestMerchant)
 			{
-				chara = null;
+				chara2 = null;
 			}
-			if (base.c_equippedSlot != 0 && base.category.slot == 35 && chara != null)
+			if (base.c_equippedSlot != 0 && base.category.slot == 35 && chara2 != null)
 			{
-				AddAttackEvaluation(n, chara, this);
+				AddAttackEvaluation(n, chara2, this);
 			}
 			if (base.IsThrownWeapon || base.IsRangedWeapon || (base.IsMeleeWeapon && base.c_equippedSlot == 0))
 			{
 				n.AddHeader("headerAttackEval");
-				AttackProcess.Current.Prepare(chara ?? EClass.pc, this, null, null, 0, base.IsThrownWeapon);
+				AttackProcess.Current.Prepare(chara2 ?? EClass.pc, this, null, null, 0, base.IsThrownWeapon);
 				string text9 = AttackProcess.Current.GetText();
 				text9 = text9.TagColor(() => true);
 				n.AddText(text9);
@@ -2082,6 +2087,12 @@ public class Thing : Card
 
 	public void RemoveEnchant()
 	{
+	}
+
+	public void Attune(Chara c)
+	{
+		Msg.Say("attuned", this, c);
+		base.c_uidAttune = c.uid;
 	}
 
 	public Thing Identify(bool show = true, IDTSource idtSource = IDTSource.Identify)

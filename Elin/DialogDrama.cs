@@ -48,6 +48,8 @@ public class DialogDrama : EMono
 
 	public Glitch glitch;
 
+	public Image imageBgAdv;
+
 	private bool warned;
 
 	private void Awake()

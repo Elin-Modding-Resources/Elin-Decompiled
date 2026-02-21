@@ -119,6 +119,7 @@ public class Portrait : UIButton
 
 	public void SetPerson(Person p)
 	{
+		base.gameObject.SetActive(value: true);
 		if (p.hasChara)
 		{
 			SetChara(p.chara);
@@ -129,9 +130,13 @@ public class Portrait : UIButton
 			SetPortrait(p.idPortrait, PCCManager.current.GetBodySet("female").map["hair"].GetRandomColor());
 			Rand.SetSeed();
 		}
-		else
+		else if (p.source != null)
 		{
 			SetPortrait(p.source.portrait);
+		}
+		else
+		{
+			base.gameObject.SetActive(value: false);
 		}
 	}
 

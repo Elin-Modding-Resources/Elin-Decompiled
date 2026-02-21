@@ -324,6 +324,10 @@ public class ConSleep : BadCondition
 			{
 				member.SAN.Mod(-15);
 			}
+			if (member.HasElement(1275) && !member.HasCondition<ConRebirth>())
+			{
+				member.AddCondition<ConRebirth>();
+			}
 		}
 		if (EClass.player.karma < 80 && EClass.pc.HasElement(1270))
 		{

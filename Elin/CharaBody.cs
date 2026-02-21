@@ -138,6 +138,14 @@ public class CharaBody : EClass
 		{
 			return CannotEquip();
 		}
+		if (thing.c_uidAttune != 0 && thing.c_uidAttune != owner.uid)
+		{
+			if (text)
+			{
+				Msg.Say("unequipCursed", thing);
+			}
+			return false;
+		}
 		if (IsTooHeavyToEquip(thing))
 		{
 			if (EClass.core.IsGameStarted && owner.IsPC && text)

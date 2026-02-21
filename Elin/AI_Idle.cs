@@ -251,21 +251,40 @@ public class AI_Idle : AIAct
 						});
 					}
 				}
-				if (EClass.rnd(100) == 0 && !EClass._zone.IsRegion && owner.HasElement(1227))
+				if (!EClass._zone.IsRegion)
 				{
-					List<Chara> list2 = new List<Chara>();
-					foreach (Chara member in EClass.pc.party.members)
+					if (EClass.rnd(100) == 0 && owner.HasElement(1227))
 					{
-						if (member.Evalue(1227) > 0)
+						List<Chara> list2 = new List<Chara>();
+						foreach (Chara member in EClass.pc.party.members)
 						{
-							list2.Add(member);
+							if (member.Evalue(1227) > 0)
+							{
+								list2.Add(member);
+							}
+						}
+						if (list2.Count > 2 + EClass.pc.party.EvalueTotal(1272, (Chara c) => c.IsPC || c.faith == EClass.game.religions.Harmony))
+						{
+							list2.Remove(owner);
+							owner.SetEnemy(list2.RandomItem());
+							yield return Success();
 						}
 					}
-					if (list2.Count > 2 + EClass.pc.party.EvalueTotal(1272, (Chara c) => c.IsPC || c.faith == EClass.game.religions.Harmony))
+					if (EClass.rnd(20) == 0 && owner.IsMarried)
 					{
-						list2.Remove(owner);
-						owner.SetEnemy(list2.RandomItem());
-						yield return Success();
+						List<Chara> list3 = new List<Chara>();
+						foreach (Chara member2 in EClass.pc.party.members)
+						{
+							if (member2 != owner && member2.IsMarried)
+							{
+								list3.Add(member2);
+							}
+						}
+						if (list3.Count > EClass.pc.Evalue(1276))
+						{
+							owner.SetEnemy(list3.RandomItem());
+							yield return Success();
+						}
 					}
 				}
 				if (EClass.rnd(150) == 0 && owner.host != null && owner.host.parasite == owner && owner.GetInt(108) == 1)
@@ -302,9 +321,9 @@ public class AI_Idle : AIAct
 					bool flag = EClass._zone.IsTown;
 					if (EClass._zone.IsPCFaction)
 					{
-						foreach (Chara member2 in EClass._zone.branch.members)
+						foreach (Chara member3 in EClass._zone.branch.members)
 						{
-							if (member2.ExistsOnMap && member2.trait is TraitTrainer)
+							if (member3.ExistsOnMap && member3.trait is TraitTrainer)
 							{
 								flag = true;
 							}
@@ -887,11 +906,11 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				List<Thing> list3 = owner.things.List((Thing a) => a.parent == owner && (a.category.id == "spellbook" || a.category.id == "ancientbook" || a.category.id == "skillbook"), onlyAccessible: true);
+				List<Thing> list4 = owner.things.List((Thing a) => a.parent == owner && (a.category.id == "spellbook" || a.category.id == "ancientbook" || a.category.id == "skillbook"), onlyAccessible: true);
 				Thing thing7 = null;
-				if (list3.Count > 0)
+				if (list4.Count > 0)
 				{
-					thing7 = list3.RandomItem();
+					thing7 = list4.RandomItem();
 					if (!thing7.trait.CanRead(owner))
 					{
 						thing7 = null;

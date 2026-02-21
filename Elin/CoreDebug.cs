@@ -2239,6 +2239,20 @@ public class CoreDebug : EScriptable
 	}
 
 	[ConsoleCommand("")]
+	public static string ResetAllAchievement()
+	{
+		Steam.ResetAllAchievement();
+		return "Done.";
+	}
+
+	[ConsoleCommand("")]
+	public static string ResetAchievement(ID_Achievement id)
+	{
+		Steam.ResetAchievement(id);
+		return "Done.";
+	}
+
+	[ConsoleCommand("")]
 	public static string ChangeJob(string id = "?")
 	{
 		if (EClass.sources.jobs.map.ContainsKey(id))

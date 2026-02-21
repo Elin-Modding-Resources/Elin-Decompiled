@@ -3,5 +3,8 @@ public enum ID_Achievement
 	TEST,
 	LOMIAS,
 	LOMIAS2,
-	FIAMA_CHEST
+	FIAMA_CHEST,
+	NERUN,
+	PUTIT,
+	ASHLAND_PIE
 }
