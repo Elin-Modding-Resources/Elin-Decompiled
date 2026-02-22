@@ -1,5 +1,8 @@
 var NAVTREEINDEX64 =
 {
+"classExcelParser.html#a82d5f4ed7662c25c91b7520174e98f63":[1,0,516,3],
+"classExcelParser.html#a9fe7f3b6689dd30cb2b4ec42a36c8105":[1,0,516,2],
+"classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216":[1,0,516,8],
 "classExcelParser.html#ae63e60747368cc51143b58c4e83eab1b":[1,0,516,4],
 "classExcelParser.html#af509e35ce4810039a877603cde638c36":[1,0,516,9],
 "classExcelParser.html#aff9c1f02feb564b967a6b0193e39a15c":[1,0,516,11],
@@ -246,8 +249,5 @@ var NAVTREEINDEX64 =
 "classFEAT.html#af8ec5f4c7afb855ddb055a38eafdc08b":[1,0,529,57],
 "classFEAT.html#af9887b12675531f0a4ea73b48e17b52b":[1,0,529,40],
 "classFEAT.html#afdc6723070cbfd787f607e4cef09bdbe":[1,0,529,100],
-"classFLOOR.html":[1,0,534],
-"classFLOOR.html#a0c699d808dc7d6f7e3facead96e02681":[1,0,534,15],
-"classFLOOR.html#a12b44bd4ad7cf389c52ac4af24fc2876":[1,0,534,10],
-"classFLOOR.html#a19735be9e261d559d92115405dc87cde":[1,0,534,18]
+"classFLOOR.html":[1,0,534]
 };

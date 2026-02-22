@@ -1203,6 +1203,7 @@ var hierarchy =
             [ "Zone_MerchantGuild", "classZone__MerchantGuild.html", null ],
             [ "Zone_MiralGarok", "classZone__MiralGarok.html", null ],
             [ "Zone_Music", "classZone__Music.html", null ],
+            [ "Zone_OldChurch", "classZone__OldChurch.html", null ],
             [ "Zone_OldGuild", "classZone__OldGuild.html", null ],
             [ "Zone_Seeker", "classZone__Seeker.html", null ],
             [ "Zone_SisterHouse", "classZone__SisterHouse.html", null ],

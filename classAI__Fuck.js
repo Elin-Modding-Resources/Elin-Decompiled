@@ -28,6 +28,7 @@ var classAI__Fuck =
     [ "CancelWhenDamaged", "classAI__Fuck.html#a0e8f832ee8fb7893761d1437af94ccf7", null ],
     [ "CurrentProgress", "classAI__Fuck.html#a6d056d125a3cc691fc94e90565ae7b11", null ],
     [ "IsAutoTurn", "classAI__Fuck.html#a251188988566088a6d4b25fc21de8a5c", null ],
+    [ "IsSacredLovemaking", "classAI__Fuck.html#afd45c20df62762293506834f1db81d27", null ],
     [ "MaxProgress", "classAI__Fuck.html#a507d4a10c59c1a6b0a04babbf5b3549b", null ],
     [ "PushChara", "classAI__Fuck.html#a412857eedd747e9ba9f850063907f17b", null ],
     [ "TargetType", "classAI__Fuck.html#aa1e381a6dd59ba7946486f6c7e220059", null ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX124 =
 {
+"classTraitRecycle.html#ac78d6fcde5d0eda17bb742881ad40a66":[1,0,1823,0],
+"classTraitRegionMap.html":[1,0,1824],
+"classTraitResearchBoard.html":[1,0,1825],
 "classTraitResearchBoard.html#a7c2b4f4a8bc70d0f3ff0d71505e0baeb":[1,0,1825,0],
 "classTraitResidentBoard.html":[1,0,1826],
 "classTraitResidentBoard.html#a52e0407a0fcbd7e5fe9bcff3f76a0592":[1,0,1826,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitSmelter.html#a947b1d267be4a146fa476811b48b6638":[1,0,1867,0],
 "classTraitSnow.html":[1,0,1868],
 "classTraitSnow.html#a521e55acbe1bcdfc18f3cf6728b18e94":[1,0,1868,2],
-"classTraitSnow.html#a7e56f341e87a9bdc4b8fb9064b6b5718":[1,0,1868,0],
-"classTraitSnow.html#ac0420a0ba3539ee8be4738478c0dce8d":[1,0,1868,1],
-"classTraitSofa.html":[1,0,1869],
-"classTraitSorin.html":[1,0,1870]
+"classTraitSnow.html#a7e56f341e87a9bdc4b8fb9064b6b5718":[1,0,1868,0]
 };

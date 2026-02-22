@@ -2033,6 +2033,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "Zone_Nefu.cs", "Zone__Nefu_8cs.html", "Zone__Nefu_8cs" ],
     [ "Zone_Noyel.cs", "Zone__Noyel_8cs.html", "Zone__Noyel_8cs" ],
     [ "Zone_Nymelle.cs", "Zone__Nymelle_8cs.html", "Zone__Nymelle_8cs" ],
+    [ "Zone_OldChurch.cs", "Zone__OldChurch_8cs.html", "Zone__OldChurch_8cs" ],
     [ "Zone_OldGuild.cs", "Zone__OldGuild_8cs.html", "Zone__OldGuild_8cs" ],
     [ "Zone_Olvina.cs", "Zone__Olvina_8cs.html", "Zone__Olvina_8cs" ],
     [ "Zone_Palmia.cs", "Zone__Palmia_8cs.html", "Zone__Palmia_8cs" ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX94 =
 {
+"classQuestDebt.html#a5ccbf960ec04b44e7634427523063cc2":[1,0,1007,1],
+"classQuestDebt.html#a5d289654a81bdd243fb33a4c5487b8dd":[1,0,1007,4],
+"classQuestDebt.html#a9e71514a893633df9b31c44acab9aeb4":[1,0,1007,0],
 "classQuestDebt.html#aa4f5d7d6ba7e8c0b8f3a5aa48d967281":[1,0,1007,3],
 "classQuestDebt.html#aae5e60657545a519189014b2d72a30a2":[1,0,1007,9],
 "classQuestDebt.html#ab109ddf27deda5ac9cffa4a5af44f577":[1,0,1007,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX94 =
 "classQuestMeal__fruit.html#a5c8a51598aae6c96335ad33879976be7":[1,0,1047,0],
 "classQuestMeal__meat.html":[1,0,1048],
 "classQuestMeal__meat.html#a35404e9faea0dcaaca47c4a0e75b4b04":[1,0,1048,0],
-"classQuestMeal__noodle.html":[1,0,1049],
-"classQuestMeal__noodle.html#a335f3885d3817680d1dc1c37bc88dfdd":[1,0,1049,0],
-"classQuestMeal__rice.html":[1,0,1050],
-"classQuestMeal__rice.html#a1015e133d3deebf3d36f273e49218f6a":[1,0,1050,0]
+"classQuestMeal__noodle.html":[1,0,1049]
 };

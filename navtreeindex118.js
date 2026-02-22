@@ -1,5 +1,8 @@
 var NAVTREEINDEX118 =
 {
+"classTraitBlanket.html#a782f100d552308d63b1ddac41ca4cf87":[1,0,1478,0],
+"classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1478,1],
+"classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1478,2],
 "classTraitBlanketColdproof.html":[1,0,1479],
 "classTraitBlanketFireproof.html":[1,0,1480],
 "classTraitBlock.html":[1,0,1481],
@@ -246,8 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitCooker.html#a67e9ed5046f389a1c664d41ed6193c51":[1,0,1536,3],
 "classTraitCooker.html#a8b4cce75ee58cbab2725611a4dc60ce6":[1,0,1536,0],
 "classTraitCooker.html#a912c97e1cccd75a289d656cfaa78a9fe":[1,0,1536,2],
-"classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1536,4],
-"classTraitCookerMicrowave.html":[1,0,1537],
-"classTraitCookerMicrowave.html#a09995ff5750a6aafd9db13aaf8649805":[1,0,1537,5],
-"classTraitCookerMicrowave.html#a0af22d1d7b9228b6dee6c5a8b7d454cd":[1,0,1537,1]
+"classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1536,4]
 };

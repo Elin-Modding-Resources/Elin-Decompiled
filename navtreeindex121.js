@@ -1,5 +1,8 @@
 var NAVTREEINDEX121 =
 {
+"classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65":[1,0,1639,0],
+"classTraitGambleChest.html":[1,0,1640],
+"classTraitGambleChest.html#a56658f6dfd99173f5e66cde54417c3cf":[1,0,1640,3],
 "classTraitGambleChest.html#a5a10166174b109bf73e6df8d4eabec37":[1,0,1640,2],
 "classTraitGambleChest.html#a61cea1f2dbec25aeb9030dc223efbaa3":[1,0,1640,1],
 "classTraitGambleChest.html#af1855c0b9def1407b0cb0d967d4204be":[1,0,1640,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitLight.html#a0c609f40f20874d1cdaee1cfa81c86c3":[1,0,1697,1],
 "classTraitLight.html#abce165cf51855a9f04de8a3991da0f92":[1,0,1697,0],
 "classTraitLightAlwaysAnime.html":[1,0,1698],
-"classTraitLightAlwaysAnime.html#a062bb523c1b395ab8e718d575353ae37":[1,0,1698,0],
-"classTraitLightAlwaysAnime.html#ad9c21526cbf585830e8b4782043e79c5":[1,0,1698,1],
-"classTraitLightSource.html":[1,0,1699],
-"classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1699,0]
+"classTraitLightAlwaysAnime.html#a062bb523c1b395ab8e718d575353ae37":[1,0,1698,0]
 };

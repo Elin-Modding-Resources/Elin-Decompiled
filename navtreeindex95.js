@@ -1,5 +1,8 @@
 var NAVTREEINDEX95 =
 {
+"classQuestMeal__noodle.html#a335f3885d3817680d1dc1c37bc88dfdd":[1,0,1049,0],
+"classQuestMeal__rice.html":[1,0,1050],
+"classQuestMeal__rice.html#a1015e133d3deebf3d36f273e49218f6a":[1,0,1050,0],
 "classQuestMeal__soup.html":[1,0,1051],
 "classQuestMeal__soup.html#aa386e62112c0a240762e780650fdeee6":[1,0,1051,0],
 "classQuestMeal__vegi.html":[1,0,1052],
@@ -246,8 +249,5 @@ var NAVTREEINDEX95 =
 "classRankedZone.html#a36f64a25e78ed426219474558fb361cf":[1,0,1085,5],
 "classRankedZone.html#a95d27a1e31b864b09d02760ece22aeac":[1,0,1085,1],
 "classRankedZone.html#ab40e314009b6ea7d7ee01e8938f10500":[1,0,1085,2],
-"classRankedZone.html#abc23a020cbc55143362876c8cf0879f7":[1,0,1085,6],
-"classRankedZone.html#ad926bf010c857b7145d4ff96df8f9b63":[1,0,1085,4],
-"classRankedZone.html#adc83bdc4fc2e417493620369d67ec2ce":[1,0,1085,0],
-"classRankedZone.html#aded6624a749beaee385e9f6a8f791e9b":[1,0,1085,3]
+"classRankedZone.html#abc23a020cbc55143362876c8cf0879f7":[1,0,1085,6]
 };

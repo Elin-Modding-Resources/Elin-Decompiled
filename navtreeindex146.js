@@ -1,5 +1,11 @@
 var NAVTREEINDEX146 =
 {
+"structB83_1_1Win32_1_1RECT.html#acb50eebe79fbdfc6b3e6674f41b8437f":[0,4,3,0,3,5],
+"structBitArray32.html":[1,0,232],
+"structBitArray32.html#a0e36b9b35f6f05c9d0ee4046d0f93b91":[1,0,232,0],
+"structBitArray32.html#a1204ad7532f69f38c5d5b5405ec1f445":[1,0,232,14],
+"structBitArray32.html#a14a258c29e186dd2b80683591efb99d6":[1,0,232,11],
+"structBitArray32.html#a2c4a15cea9f0f82794194104c94c0154":[1,0,232,6],
 "structBitArray32.html#a3fbf1cc5cf1c5c8424746ddf55d6003a":[1,0,232,5],
 "structBitArray32.html#a40b66f93c11b398df9251ca302c0b44b":[1,0,232,15],
 "structBitArray32.html#a4a10d3dc43df7b0bd831291ee621f199":[1,0,232,2],
@@ -76,7 +82,7 @@ var NAVTREEINDEX146 =
 "structXY.html#a671ff8952388c884c10782e46808c8b1":[1,0,2152,2],
 "structXY.html#a86ef9f95d24632f70207d603689a4b70":[1,0,2152,0],
 "structXY.html#a97f055b4700397c064faee99a9309572":[1,0,2152,1],
-"structZoneBlueprint_1_1MapGenSetting.html":[1,0,2239,0],
-"structZoneBlueprint_1_1MapGenSetting.html#ab1962805b6183a17dbfb9ce3c39917c0":[1,0,2239,0,1],
-"structZoneBlueprint_1_1MapGenSetting.html#af230cefef8174422542d920b34051381":[1,0,2239,0,0]
+"structZoneBlueprint_1_1MapGenSetting.html":[1,0,2240,0],
+"structZoneBlueprint_1_1MapGenSetting.html#ab1962805b6183a17dbfb9ce3c39917c0":[1,0,2240,0,1],
+"structZoneBlueprint_1_1MapGenSetting.html#af230cefef8174422542d920b34051381":[1,0,2240,0,0]
 };

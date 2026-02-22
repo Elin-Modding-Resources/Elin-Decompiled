@@ -1,5 +1,8 @@
 var NAVTREEINDEX117 =
 {
+"classTrait.html#ae7904a3d49a18bacb005773863af6d66":[1,0,1431,133],
+"classTrait.html#ae7ae2dc80a9b7b484e199b4a02444b09":[1,0,1431,227],
+"classTrait.html#ae81e301facb283e15daed9f7191f06d7":[1,0,1431,242],
 "classTrait.html#ae871dd13fc2fdff306261be34b481058":[1,0,1431,34],
 "classTrait.html#aea1c46b47612fab453627904323922c1":[1,0,1431,41],
 "classTrait.html#aeae7706effc27faab891e9b6e10b5dd8":[1,0,1431,142],
@@ -246,8 +249,5 @@ var NAVTREEINDEX117 =
 "classTraitBitchDancer.html#aaff86ca2a1ba915a96df9dd919145bd8":[1,0,1476,0],
 "classTraitBitchDancer.html#abb15b7f0168a14d8acb7617e06963571":[1,0,1476,1],
 "classTraitBlanket.html":[1,0,1478],
-"classTraitBlanket.html#a53d27637cc556e3c125c466cc8ac652c":[1,0,1478,3],
-"classTraitBlanket.html#a782f100d552308d63b1ddac41ca4cf87":[1,0,1478,0],
-"classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1478,1],
-"classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1478,2]
+"classTraitBlanket.html#a53d27637cc556e3c125c466cc8ac652c":[1,0,1478,3]
 };

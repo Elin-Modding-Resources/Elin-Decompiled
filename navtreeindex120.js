@@ -1,5 +1,8 @@
 var NAVTREEINDEX120 =
 {
+"classTraitDrink.html#a9d8c11ed801f1209ee12913ed177e1da":[1,0,1578,6],
+"classTraitDrink.html#ac81b93ab0ed253932f4229fb0744186a":[1,0,1578,4],
+"classTraitDrink.html#ac9316effb1a1788edbd7f22da1483e31":[1,0,1578,7],
 "classTraitDrink.html#ad0b2f8aaf39451418c80ed052118d03e":[1,0,1578,14],
 "classTraitDrink.html#ad2425ac00054de2ab0c68036cdc852e4":[1,0,1578,11],
 "classTraitDrink.html#adcd5e846d9fdd1e3cfbe692ad2fcb84d":[1,0,1578,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitGamble.html#a6aeb957f18a603d9f09b23c5ed1fb2ec":[1,0,1639,3],
 "classTraitGamble.html#a7c4ff287140ce98f429351a6f26ff8cc":[1,0,1639,2],
 "classTraitGamble.html#a866837dcdc624afd4f6866cf9bb2601d":[1,0,1639,1],
-"classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6":[1,0,1639,4],
-"classTraitGamble.html#ac3e2d3c5207f76802bd45515b0ed4d65":[1,0,1639,0],
-"classTraitGambleChest.html":[1,0,1640],
-"classTraitGambleChest.html#a56658f6dfd99173f5e66cde54417c3cf":[1,0,1640,3]
+"classTraitGamble.html#abd2ca5ba5edde04b8f272b48475998a6":[1,0,1639,4]
 };

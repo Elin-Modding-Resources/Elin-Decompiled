@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"classActMeleeSwarm.html#a4547fe48ec3f566b20367f4b4bd34532":[1,0,41,1],
+"classActMeleeSwarm.html#a508e67e0cebac1bc280973fa88732418":[1,0,41,0],
+"classActMeleeSwarm.html#aa75f7a98f68224bbc4de8221086b94f9":[1,0,41,2],
 "classActMeleeWhilrwind.html":[1,0,42],
 "classActMeleeWhilrwind.html#a099c0ea03dd9230098dcb08178fbce99":[1,0,42,0],
 "classActMiasma.html":[1,0,43],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "classActionMode.html#a6c8a651c51f526c19ca46e235ced71ef":[1,0,33,99],
 "classActionMode.html#a6e844f52bedbed9e38b96ab6146330df":[1,0,33,110],
 "classActionMode.html#a6ecfafac9c6889b9cc53af302b20d533":[1,0,33,51],
-"classActionMode.html#a6ee5399bbdad2a038b637ea1d40b8ba5":[1,0,33,152],
-"classActionMode.html#a71450cbdb462b951ff04a2f8c9e1d7d6":[1,0,33,142],
-"classActionMode.html#a718bbb620f45aedfa48c9d5078fa5895":[1,0,33,104],
-"classActionMode.html#a7335fbf31ec3d83f85d57e5e68ba5180":[1,0,33,62]
+"classActionMode.html#a6ee5399bbdad2a038b637ea1d40b8ba5":[1,0,33,152]
 };

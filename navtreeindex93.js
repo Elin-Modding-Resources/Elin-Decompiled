@@ -1,5 +1,8 @@
 var NAVTREEINDEX93 =
 {
+"classProgress__Custom.html#a8badd4ffbcc1959e6ad4374262b77e80":[1,0,991,6],
+"classProgress__Custom.html#a8d542d5ffcb5bcad6970d15ab3438d9c":[1,0,991,10],
+"classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06":[1,0,991,5],
 "classProgress__Custom.html#a9fd907953c4c00ea8d4fcab4371dac61":[1,0,991,12],
 "classProgress__Custom.html#aa61ffcb9fe2c5f8515bd21b0fc21bb3c":[1,0,991,15],
 "classProgress__Custom.html#ab14a578203b73bc6b663719d20a0c6ff":[1,0,991,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestCursedManor.html#aef99e9abb394e435091eb387e57aa37f":[1,0,1006,2],
 "classQuestDebt.html":[1,0,1007],
 "classQuestDebt.html#a038d7e8f0eddbee1f6fb7b802004bc33":[1,0,1007,2],
-"classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,1007,10],
-"classQuestDebt.html#a5ccbf960ec04b44e7634427523063cc2":[1,0,1007,1],
-"classQuestDebt.html#a5d289654a81bdd243fb33a4c5487b8dd":[1,0,1007,4],
-"classQuestDebt.html#a9e71514a893633df9b31c44acab9aeb4":[1,0,1007,0]
+"classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,1007,10]
 };

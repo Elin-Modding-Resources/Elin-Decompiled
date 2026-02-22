@@ -1,5 +1,8 @@
 var NAVTREEINDEX116 =
 {
+"classToJShadow.html#af51c7ead4ae452f6bb848e2317efeb3d":[1,0,1427,3],
+"classToneDataList.html":[1,0,1428],
+"classToneDataList.html#a7c35f8b58a70841bf7ca043907c57dae":[1,0,1428,0],
 "classToneDataList.html#ac1ede95e937c1caa5be2206dcb2d5f02":[1,0,1428,2],
 "classToneDataList.html#aeb12580b326ad3ca57c2ff992c25c1b3":[1,0,1428,1],
 "classTooltipData.html":[1,0,1429],
@@ -246,8 +249,5 @@ var NAVTREEINDEX116 =
 "classTrait.html#ae345e0e8d44aeac0f2cf22ed173825b5":[1,0,1431,57],
 "classTrait.html#ae35752993470738d5e850ad75016e9bd":[1,0,1431,23],
 "classTrait.html#ae5233ec2fda4f1b464b58c0d2451b164":[1,0,1431,159],
-"classTrait.html#ae5d380383c7a829f15b19a5df441de4e":[1,0,1431,103],
-"classTrait.html#ae7904a3d49a18bacb005773863af6d66":[1,0,1431,133],
-"classTrait.html#ae7ae2dc80a9b7b484e199b4a02444b09":[1,0,1431,227],
-"classTrait.html#ae81e301facb283e15daed9f7191f06d7":[1,0,1431,242]
+"classTrait.html#ae5d380383c7a829f15b19a5df441de4e":[1,0,1431,103]
 };
