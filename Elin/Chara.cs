@@ -5974,21 +5974,25 @@ public class Chara : Card, IPathfindWalker
 			{
 				Say(race.castStyle.IsEmpty("cast"), this, a.source.GetName().ToLower(), s.lang());
 			}
-			if (IsPC && !ability.Has(a.id))
+			if (IsPC)
 			{
 				_ = (i + 1) / 2;
-				if (a.vPotential < i)
+				bool flag2 = ability.Has(a.id);
+				if (a.vPotential < i && !flag2)
 				{
 					Msg.Say("noSpellStock");
 					EInput.Consume();
 					return false;
 				}
-				if (num4 > 0 && (a.vPotential >= i * 2 || ability.Has(a.id)))
+				if (num4 > 0 && (a.vPotential >= i * 2 || flag2))
 				{
-					a.vPotential -= i * 2;
+					if (!flag2)
+					{
+						a.vPotential -= i * 2;
+					}
 					num6 = num6 * (100 - num4 * 20) / 100;
 				}
-				else
+				else if (!flag2)
 				{
 					a.vPotential -= i;
 				}
@@ -6059,7 +6063,7 @@ public class Chara : Card, IPathfindWalker
 			RemoveCondition<ConInvisibility>();
 			return true;
 		}
-		bool flag2 = true;
+		bool flag3 = true;
 		if (a.source.cooldown > 0 && (!IsPC || !a.source.tag.Contains("CD_npc")))
 		{
 			AddCooldown(a.id, a.source.cooldown);
@@ -6098,10 +6102,10 @@ public class Chara : Card, IPathfindWalker
 				}
 				ActEffect.RapidCount = j;
 				ActEffect.RapidDelay = a.RapidDelay;
-				flag2 = a.Perform(this, tc, pos);
+				flag3 = a.Perform(this, tc, pos);
 			}
 		}
-		if (flag2 && !isDead)
+		if (flag3 && !isDead)
 		{
 			if (cost.cost > 0 && a.source.lvFactor > 0)
 			{
@@ -6113,7 +6117,7 @@ public class Chara : Card, IPathfindWalker
 			}
 		}
 		ActEffect.RapidCount = 0;
-		if (flag2 && !a.source.tag.Contains("keepInvisi") && EClass.rnd(2) == 0)
+		if (flag3 && !a.source.tag.Contains("keepInvisi") && EClass.rnd(2) == 0)
 		{
 			RemoveCondition<ConInvisibility>();
 			RemoveCondition<ConDark>();
@@ -6123,7 +6127,7 @@ public class Chara : Card, IPathfindWalker
 			string name = a.Name;
 			renderer.Say("| " + name + " ");
 		}
-		return flag2;
+		return flag3;
 		void ForeachEnemy(Action<Chara> action)
 		{
 			if (_pts.Count == 0)

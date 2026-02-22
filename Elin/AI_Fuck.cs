@@ -38,6 +38,22 @@ public class AI_Fuck : AIAct
 
 	public virtual FuckType Type => FuckType.fuck;
 
+	public bool IsSacredLovemaking
+	{
+		get
+		{
+			if (variation == Variation.Normal && owner != null && target != null && target != owner && (owner == EClass.pc || owner.IsMarried))
+			{
+				if (target != EClass.pc)
+				{
+					return target.IsMarried;
+				}
+				return true;
+			}
+			return false;
+		}
+	}
+
 	public override bool PushChara => false;
 
 	public override bool IsAutoTurn => true;
@@ -296,63 +312,70 @@ public class AI_Fuck : AIAct
 			}
 			else if (variation != Variation.NTR && variation != Variation.Bloodsuck && variation != Variation.Slime && chara != EClass.pc)
 			{
-				int num3 = CalcMoney.Whore(chara2, chara);
-				Chara chara4 = chara;
-				Chara chara5 = chara2;
-				if (variation == Variation.Bitch)
+				if (IsSacredLovemaking)
 				{
-					chara = chara5;
-					chara2 = chara4;
-				}
-				Debug.Log("buyer:" + chara.Name + " seller:" + chara2.Name + " money:" + num3);
-				if (!chara.IsPC)
-				{
-					chara.ModCurrency(EClass.rndHalf(num3));
-				}
-				if (!chara2.IsPC && chara.GetCurrency() < num3 && EClass.rnd(2) == 0)
-				{
-					num3 = chara.GetCurrency();
-				}
-				Debug.Log("money:" + num3 + " buyer:" + chara.GetCurrency());
-				if (chara.GetCurrency() >= num3)
-				{
-					chara.Talk("tail_pay");
+					flag = true;
 				}
 				else
 				{
-					chara.Talk("tail_nomoney");
-					num3 = chara.GetCurrency();
-					chara2.Say("angry", chara2);
-					chara2.Talk("angry");
-					flag = (sell ? true : false);
-					if (EClass.rnd(chara.IsPC ? 2 : 20) == 0)
+					int num3 = CalcMoney.Whore(chara2, chara);
+					Chara chara4 = chara;
+					Chara chara5 = chara2;
+					if (variation == Variation.Bitch)
 					{
-						flag3 = true;
+						chara = chara5;
+						chara2 = chara4;
 					}
-				}
-				chara.ModCurrency(-num3);
-				if (chara2 == EClass.pc)
-				{
-					if (num3 > 0)
+					Debug.Log("buyer:" + chara.Name + " seller:" + chara2.Name + " money:" + num3);
+					if (!chara.IsPC)
 					{
-						EClass.player.DropReward(ThingGen.Create("money").SetNum(num3));
-						EClass.player.ModKarma(-1);
+						chara.ModCurrency(EClass.rndHalf(num3));
 					}
-				}
-				else
-				{
-					int num4 = (chara2.CHA * 10 + 100) / ((chara2.IsPCFaction && chara2.memberType == FactionMemberType.Default) ? 1 : 10);
-					if (chara2.GetCurrency() - num4 > 0)
+					if (!chara2.IsPC && chara.GetCurrency() < num3 && EClass.rnd(2) == 0)
 					{
-						chara2.c_allowance += num3;
+						num3 = chara.GetCurrency();
+					}
+					Debug.Log("money:" + num3 + " buyer:" + chara.GetCurrency());
+					if (chara.GetCurrency() >= num3)
+					{
+						chara.Talk("tail_pay");
 					}
 					else
 					{
-						chara2.ModCurrency(num3);
+						chara.Talk("tail_nomoney");
+						num3 = chara.GetCurrency();
+						chara2.Say("angry", chara2);
+						chara2.Talk("angry");
+						flag = (sell ? true : false);
+						if (EClass.rnd(chara.IsPC ? 2 : 20) == 0)
+						{
+							flag3 = true;
+						}
 					}
+					chara.ModCurrency(-num3);
+					if (chara2 == EClass.pc)
+					{
+						if (num3 > 0)
+						{
+							EClass.player.DropReward(ThingGen.Create("money").SetNum(num3));
+							EClass.player.ModKarma(-1);
+						}
+					}
+					else
+					{
+						int num4 = (chara2.CHA * 10 + 100) / ((chara2.IsPCFaction && chara2.memberType == FactionMemberType.Default) ? 1 : 10);
+						if (chara2.GetCurrency() - num4 > 0)
+						{
+							chara2.c_allowance += num3;
+						}
+						else
+						{
+							chara2.ModCurrency(num3);
+						}
+					}
+					chara = chara4;
+					chara2 = chara5;
 				}
-				chara = chara4;
-				chara2 = chara5;
 			}
 			if (flag3)
 			{
@@ -439,6 +462,10 @@ public class AI_Fuck : AIAct
 				chara.elements.ModExp(6608, 1000f);
 				break;
 			}
+			}
+			if (IsSacredLovemaking)
+			{
+				chara.Say("tender_hug", chara, chara2);
 			}
 			break;
 		}

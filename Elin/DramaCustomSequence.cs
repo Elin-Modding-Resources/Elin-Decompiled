@@ -201,7 +201,7 @@ public class DramaCustomSequence : EClass
 				{
 					Choice2("daBout", "_bout");
 				}
-				if (c.isDrunk || c.HasElement(1275) || EClass.debug.enable)
+				if (c.isDrunk || c.IsMarried || EClass.debug.enable)
 				{
 					Choice2(flag2 ? "daBird" : "daTail", "_tail");
 				}
@@ -732,7 +732,7 @@ public class DramaCustomSequence : EClass
 		Step("_tail");
 		Method(delegate
 		{
-			TempTalkTopic(bird + "1", null);
+			TempTalkTopic(c.IsMarried ? "tail4" : (bird + "1"), null);
 			Choice("yes2", delegate
 			{
 				TempTalkTopic(bird + "2", StepEnd);

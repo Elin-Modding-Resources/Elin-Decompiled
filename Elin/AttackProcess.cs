@@ -7,15 +7,15 @@ public class AttackProcess : EClass
 {
 	public static AttackProcess Current = new AttackProcess();
 
+	public long toHit;
+
+	public long toHitBase;
+
 	public int dNum;
 
 	public int dDim;
 
 	public int dBonus;
-
-	public int toHit;
-
-	public int toHitBase;
 
 	public int toHitFix;
 
@@ -270,7 +270,7 @@ public class AttackProcess : EClass
 			}
 			if (IsCane)
 			{
-				toHitBase += 50;
+				toHitBase += 50L;
 			}
 		}
 		if (ammo != null && !(ammo.trait is TraitAmmoTalisman))
@@ -359,7 +359,7 @@ public class AttackProcess : EClass
 		}
 		if (CC.isConfused || CC.HasCondition<ConDim>())
 		{
-			toHit /= 2;
+			toHit /= 2L;
 		}
 		if (TC != null)
 		{
@@ -1016,16 +1016,16 @@ public class AttackProcess : EClass
 			int num = TC.Evalue(151);
 			if (num != 0 && toHit < num * 10)
 			{
-				int num2 = evasion * 100 / Mathf.Clamp(toHit, 1, toHit);
-				if (num2 > 300 && EClass.rnd(num + 250) > 100)
+				float num2 = (float)(evasion * 100) / Mathf.Clamp(toHit, 1f, toHit);
+				if (num2 > 300f && EClass.rnd(num + 250) > 100)
 				{
 					return EvadePlus();
 				}
-				if (num2 > 200 && EClass.rnd(num + 250) > 150)
+				if (num2 > 200f && EClass.rnd(num + 250) > 150)
 				{
 					return EvadePlus();
 				}
-				if (num2 > 150 && EClass.rnd(num + 250) > 200)
+				if (num2 > 150f && EClass.rnd(num + 250) > 200)
 				{
 					return EvadePlus();
 				}

@@ -1638,6 +1638,11 @@ public class Trait : EClass
 				AddCassette(65, null, 999);
 				AddCassette(109, "debt", 0);
 				AddCassette(110, "curry", 999);
+				if (EClass.player.stats.married > 0)
+				{
+					AddCassette(122, null, 999);
+					AddCassette(123, null, 999);
+				}
 				break;
 			}
 			break;
