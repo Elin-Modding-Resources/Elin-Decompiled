@@ -1,5 +1,15 @@
 var NAVTREEINDEX72 =
 {
+"classHotItemActionSleep.html":[1,0,659],
+"classHotItemActionSleep.html#a35f232db76a9e002999ef137ab9b8b50":[1,0,659,0],
+"classHotItemActionSleep.html#a54080deecce2463c4e4ef3b50964bcd1":[1,0,659,1],
+"classHotItemActionSleep.html#ace388731b3b2496a15d9316b3bed2741":[1,0,659,2],
+"classHotItemChara.html":[1,0,660],
+"classHotItemChara.html#a03e20b009ccbb6d12e444bb60a85ac71":[1,0,660,2],
+"classHotItemChara.html#a4b7d14505bbfc9e22d6d231a6bef77ce":[1,0,660,6],
+"classHotItemChara.html#a55a0fc7f7580c854f2d2a2336998df52":[1,0,660,4],
+"classHotItemChara.html#a8499308601cbf31caa2b886b33e34e74":[1,0,660,0],
+"classHotItemChara.html#acd35cb21382dc885eb30b4f2e5f68afd":[1,0,660,3],
 "classHotItemChara.html#adc641f9a3c89c3ee272d967ddc42976c":[1,0,660,1],
 "classHotItemChara.html#aded6039f442dc1f3ce1b78b7328019d9":[1,0,660,5],
 "classHotItemChara.html#aecb66a5f4f81d519b7481914d2250aff":[1,0,660,7],
@@ -239,15 +249,5 @@ var NAVTREEINDEX72 =
 "classHyphenationJpn.html#acd3a22835cf63235256cef1a4b4651db":[1,0,684,17],
 "classHyphenationJpn.html#ace0cbd15f2b3ade1d301c3c70a9792d0":[1,0,684,14],
 "classHyphenationJpn.html#ad510c17b2bf37a55dec1cbed076684a6":[1,0,684,9],
-"classHyphenationJpn.html#ad60ea4f5a6385192305a27a3b6237f8f":[1,0,684,13],
-"classHyphenationJpn.html#ade5d331277a58febca65826bd2426727":[1,0,684,12],
-"classHyphenationJpn.html#ae0fd5dc6db3cfdb3c02774e0435e1736":[1,0,684,15],
-"classHyphenationJpn.html#ae31cb9a081488960ac00e00e8d7cc1bf":[1,0,684,16],
-"classIO.html":[1,0,738],
-"classIO.html#a027d18f80b45d2adf531c9e64af20bd7":[1,0,738,8],
-"classIO.html#a06289866e6a7c70e01e7b515323c71e3":[1,0,738,36],
-"classIO.html#a0a40c97df4bcb6632fee67504caa619d":[1,0,738,25],
-"classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9":[1,0,738,0],
-"classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9a6adf97f83acf6453d4a6a4b1070f3754":[1,0,738,0,1],
-"classIO.html#a0c4c8f55de9076a9eee46a8a9f1cb0a9aca0c64c0de8f56bc573828ea6d764594":[1,0,738,0,0]
+"classHyphenationJpn.html#ad60ea4f5a6385192305a27a3b6237f8f":[1,0,684,13]
 };

@@ -1,5 +1,15 @@
 var NAVTREEINDEX67 =
 {
+"classGameIO.html#a41128f17f082ef1ab651945f44fb461b":[1,0,550,0],
+"classGameIO.html#a472e51294a31ce7706182f850aabaa5e":[1,0,550,18],
+"classGameIO.html#a4fb7c20872f155827f9b2ada4b215202":[1,0,550,15],
+"classGameIO.html#a5422e6cfccdb3834126b407f625294b7":[1,0,550,13],
+"classGameIO.html#a59fefb2d671a202312d30e9d1ba03140":[1,0,550,16],
+"classGameIO.html#a64c870593f1e4353c5e8eb1e5e7bc3c5":[1,0,550,1],
+"classGameIO.html#a8ac1d1a919de145a5cf5fd40fcf5b5e8":[1,0,550,17],
+"classGameIO.html#a9ca0d21de188a86eec9cd75e968070b8":[1,0,550,8],
+"classGameIO.html#aa56d67ab180aa7edcd4668093ce465cb":[1,0,550,6],
+"classGameIO.html#aa9b974d115b51a7a1205d669f579603b":[1,0,550,10],
 "classGameIO.html#ad7589836bc7a84cf144f13bbb60738ea":[1,0,550,14],
 "classGameIO.html#aef1620f3b5ef554fe1f19364ae46f71d":[1,0,550,11],
 "classGameIO.html#aef236f0db1092bfdb7867749f09f9e3b":[1,0,550,22],
@@ -239,15 +249,5 @@ var NAVTREEINDEX67 =
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html":[1,0,557,6,3],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#a68011beb3795892b83b01c0a39662e15":[1,0,557,6,3,3],
 "classGameSetting_1_1RenderSetting_1_1TCSetting.html#a6d6bd456bc0d6eccd6fbda73dd2f8eb2":[1,0,557,6,3,4],
-"classGameSetting_1_1RenderSetting_1_1TCSetting.html#a8042f490018718ba6a69f28ed34230da":[1,0,557,6,3,2],
-"classGameSetting_1_1RenderSetting_1_1TCSetting.html#aadeb796c757a7dddefcac8af544451e3":[1,0,557,6,3,0],
-"classGameSetting_1_1RenderSetting_1_1TCSetting.html#ab376ae129417c9faa2800057cde5101b":[1,0,557,6,3,1],
-"classGameSetting_1_1RenderSetting_1_1UD__FogSetting.html":[1,0,557,6,4],
-"classGameSetting_1_1RenderSetting_1_1UD__MapBGSetting.html":[1,0,557,6,5],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html":[1,0,557,6,6],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html#a13dc98707ea47b9832b77fadfe31e5b5":[1,0,557,6,6,7],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html#a4c43dc24b11706f0fb4d30adf8cd7ed3":[1,0,557,6,6,4],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html#a57f46cbb0a0b6a7b22b145936824394c":[1,0,557,6,6,2],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html#a6d000c657537e285123b00ae84fae07d":[1,0,557,6,6,3],
-"classGameSetting_1_1RenderSetting_1_1ZSetting.html#a76eabbdae7ec83c119a70974dfb5d9b3":[1,0,557,6,6,1]
+"classGameSetting_1_1RenderSetting_1_1TCSetting.html#a8042f490018718ba6a69f28ed34230da":[1,0,557,6,3,2]
 };

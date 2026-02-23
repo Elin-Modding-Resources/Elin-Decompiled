@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"LayerEditSkin_8cs_source.html":[2,0,0,755],
+"LayerEmbark_8cs.html":[2,0,0,756],
 "LayerEmbark_8cs_source.html":[2,0,0,756],
 "LayerEquip_8cs.html":[2,0,0,757],
 "LayerEquip_8cs_source.html":[2,0,0,757],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "ModUtil_8cs.html":[2,0,0,857],
 "ModUtil_8cs_source.html":[2,0,0,857],
 "ModifiedShadow_8cs.html":[2,0,0,3,61],
-"ModifiedShadow_8cs_source.html":[2,0,0,3,61],
-"MsgBlock_8cs.html":[2,0,0,3,62],
-"MsgBlock_8cs_source.html":[2,0,0,3,62]
+"ModifiedShadow_8cs_source.html":[2,0,0,3,61]
 };

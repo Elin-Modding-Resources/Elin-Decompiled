@@ -6,6 +6,6 @@ var searchData=
   ['quest_3',['quest',['../classZoneEventQuest.html#aaaaa91cea2892428cfc748ebc94b4b77',1,'ZoneEventQuest']]],
   ['questharvest_4',['questHarvest',['../classZoneEventHarvest.html#a7409e3dfa803cc3c08993b7906d6b201',1,'ZoneEventHarvest']]],
   ['question_5',['Question',['../classCursorSystem.html#a83a4b696402b5fd828eadbf5251f0820',1,'CursorSystem']]],
-  ['questmusic_6',['questMusic',['../classZoneEventMusic.html#a20903b08f801d2e294643885fcb3ff08',1,'ZoneEventMusic']]],
+  ['questmusic_6',['questMusic',['../classZoneEventMusic.html#a20903b08f801d2e294643885fcb3ff08',1,'ZoneEventMusic.questMusic()'],['../classZoneEventWedding.html#af0bd37454fd5999af62445eedcc137f3',1,'ZoneEventWedding.questMusic()']]],
   ['queues_7',['queues',['../classUIQueue.html#af96047e27da0b9cb8c970843e7d812c7',1,'UIQueue']]]
 ];

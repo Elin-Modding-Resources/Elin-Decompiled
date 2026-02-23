@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"MsgBlock_8cs.html":[2,0,0,3,62],
+"MsgBlock_8cs_source.html":[2,0,0,3,62],
 "MsgBox_8cs.html":[2,0,0,3,63],
 "MsgBox_8cs_source.html":[2,0,0,3,63],
 "MsgCat_8cs.html":[2,0,0,859],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "QuestCraft_8cs.html":[2,0,0,927],
 "QuestCraft_8cs_source.html":[2,0,0,927],
 "QuestCrafter_8cs.html":[2,0,0,928],
-"QuestCrafter_8cs_source.html":[2,0,0,928],
-"QuestCurry_8cs.html":[2,0,0,929],
-"QuestCurry_8cs_source.html":[2,0,0,929]
+"QuestCrafter_8cs_source.html":[2,0,0,928]
 };

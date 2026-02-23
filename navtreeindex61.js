@@ -1,5 +1,15 @@
 var NAVTREEINDEX61 =
 {
+"classElement.html#a7f33c59a74a6c34a37f8eee0e0cecd1e":[1,0,487,7],
+"classElement.html#a83c7be33ee0ea37dfaf49c393a5c2d34":[1,0,487,5],
+"classElement.html#a8e023837b993e171e9795795c1a60573":[1,0,487,52],
+"classElement.html#a8ef0315fd456856fc442d460c5f7e310":[1,0,487,10],
+"classElement.html#a8f3cb9cd4f2d298d0349f2ef52a1dce2":[1,0,487,80],
+"classElement.html#a9372537b2867ca5fc9ab1215ab928c0e":[1,0,487,17],
+"classElement.html#a9868184c0479a1057bc22c73286c2d2c":[1,0,487,48],
+"classElement.html#a9b30a5bac9df19d822115383ad5761d3":[1,0,487,79],
+"classElement.html#a9dd0afbc97aed40e9e9ca267e72ce398":[1,0,487,77],
+"classElement.html#aa338b9285029cacfdf8d08b291ee9051":[1,0,487,55],
 "classElement.html#aa4bf612a89ba65848dfa1cb60df72a3c":[1,0,487,37],
 "classElement.html#aa5fd377f6540bc972b237363b2f5fe37":[1,0,487,53],
 "classElement.html#aa8ebce9af32971e77880546e81b0f9a2":[1,0,487,88],
@@ -239,15 +249,5 @@ var NAVTREEINDEX61 =
 "classEloMap_1_1TileInfo.html":[1,0,498,1],
 "classEloMap_1_1TileInfo.html#a0bdb7dc823359d019bfb94d2b83c5e22":[1,0,498,1,17],
 "classEloMap_1_1TileInfo.html#a17d9a819e3ce35816be6ca54a81b41c7":[1,0,498,1,15],
-"classEloMap_1_1TileInfo.html#a2403f9c4ce29e4e76285d43dce6093d0":[1,0,498,1,3],
-"classEloMap_1_1TileInfo.html#a32240e50dc2e871e40b0c8ca2057b062":[1,0,498,1,13],
-"classEloMap_1_1TileInfo.html#a37b49c48c4c9bc90fdc911727d7ada17":[1,0,498,1,6],
-"classEloMap_1_1TileInfo.html#a38df796210ef918ff765f67934db9420":[1,0,498,1,5],
-"classEloMap_1_1TileInfo.html#a41ce1734947c5a382dad8aab2297b31b":[1,0,498,1,16],
-"classEloMap_1_1TileInfo.html#a6781fe70e954caf34a47ffe7aa99ed64":[1,0,498,1,7],
-"classEloMap_1_1TileInfo.html#a8963fc6b82367d5d31bfb6ceef514226":[1,0,498,1,0],
-"classEloMap_1_1TileInfo.html#a8b227e5e42ed72e5f3a3f7048e02d7c1":[1,0,498,1,1],
-"classEloMap_1_1TileInfo.html#a8c83f79621c3defce54c7727041391ef":[1,0,498,1,8],
-"classEloMap_1_1TileInfo.html#a972066a28046286f2d37617b1b606e81":[1,0,498,1,9],
-"classEloMap_1_1TileInfo.html#aac5427fde8180374fa74b3c25e96e13d":[1,0,498,1,14]
+"classEloMap_1_1TileInfo.html#a2403f9c4ce29e4e76285d43dce6093d0":[1,0,498,1,3]
 };

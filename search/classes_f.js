@@ -77,9 +77,10 @@ var searchData=
   ['questtax_74',['QuestTax',['../classQuestTax.html',1,'']]],
   ['questtrackcraft_75',['QuestTrackCraft',['../classQuestTrackCraft.html',1,'']]],
   ['questvernis_76',['QuestVernis',['../classQuestVernis.html',1,'']]],
-  ['queue_77',['Queue',['../classQueue.html',1,'']]],
-  ['queuelist_78',['QueueList',['../classQueueList.html',1,'']]],
-  ['queuelist_3c_20taskcraft_20_3e_79',['QueueList&lt; TaskCraft &gt;',['../classQueueList.html',1,'']]],
-  ['queuemanager_80',['QueueManager',['../classQueueManager.html',1,'']]],
-  ['quickmenu_81',['QuickMenu',['../classQuickMenu.html',1,'']]]
+  ['questwedding_77',['QuestWedding',['../classQuestWedding.html',1,'']]],
+  ['queue_78',['Queue',['../classQueue.html',1,'']]],
+  ['queuelist_79',['QueueList',['../classQueueList.html',1,'']]],
+  ['queuelist_3c_20taskcraft_20_3e_80',['QueueList&lt; TaskCraft &gt;',['../classQueueList.html',1,'']]],
+  ['queuemanager_81',['QueueManager',['../classQueueManager.html',1,'']]],
+  ['quickmenu_82',['QuickMenu',['../classQuickMenu.html',1,'']]]
 ];

@@ -7,6 +7,8 @@ var ID__Achievement_8cs =
       [ "FIAMA_CHEST", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a4d1e427533afb86bf6211d10c00ddec0", null ],
       [ "NERUN", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9adab7d960de8d9fbbfbf150648be4775a", null ],
       [ "PUTIT", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9aef7732cab9cef780d543168bbb2d83db", null ],
-      [ "ASHLAND_PIE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9abc2b9c13be58c6efb53e6dc6d1e3839a", null ]
+      [ "ASHLAND_PIE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9abc2b9c13be58c6efb53e6dc6d1e3839a", null ],
+      [ "JURE_WATER", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a0f8bbfb0a0cc33d3bacbfa99a2308403", null ],
+      [ "WINDOW_CHARM", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9adf6d4eb91d161134d00bda44732baeb6", null ]
     ] ]
 ];

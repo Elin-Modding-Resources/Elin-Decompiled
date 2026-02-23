@@ -1,5 +1,15 @@
 var NAVTREEINDEX89 =
 {
+"classPlayer.html#a2d6b723453add2e1b272341c38451262":[1,0,968,185],
+"classPlayer.html#a2d9ebad9ffd03c5c048be0bf60bb33fa":[1,0,968,27],
+"classPlayer.html#a2e06523e8de651cc1bdde1793e7d7e26":[1,0,968,9],
+"classPlayer.html#a2e7468836ed52fe57b6af28d59e217f2":[1,0,968,112],
+"classPlayer.html#a2ecdee2adf50989894ce308042807457":[1,0,968,48],
+"classPlayer.html#a2f9d241548781b0f2556a4d5b1c1965b":[1,0,968,151],
+"classPlayer.html#a310ee7d3f3c78ff48fe1878b40fa0190":[1,0,968,135],
+"classPlayer.html#a31437dc24a9f2bf66c7c6f5f4baef228":[1,0,968,145],
+"classPlayer.html#a31497c929d1e935516cb12e059af6a5c":[1,0,968,57],
+"classPlayer.html#a32eea09b622f81f3ad2afe9ea4fcb55d":[1,0,968,209],
 "classPlayer.html#a33de1eae7c1cabc30cafd41148f4ed5a":[1,0,968,73],
 "classPlayer.html#a3609bf4c85562d1cbfcd07c4b8977071":[1,0,968,191],
 "classPlayer.html#a3654552eef9f19f722bc7821445a78a0":[1,0,968,183],
@@ -239,15 +249,5 @@ var NAVTREEINDEX89 =
 "classPlayer_1_1Pref.html#a6917a26b0fb476334cc8dddb8c919927":[1,0,968,1,8],
 "classPlayer_1_1Pref.html#a79b6347fb5b7f4cbb1f8cc8a18d34f6c":[1,0,968,1,4],
 "classPlayer_1_1Pref.html#a843b9c8a3d7f6b7a33839e3d66ae3cae":[1,0,968,1,1],
-"classPlayer_1_1Pref.html#a994b298760755cab63b99c3d740ff304":[1,0,968,1,6],
-"classPlayer_1_1Pref.html#aa711ac06574d18de07944abac5d9e595":[1,0,968,1,9],
-"classPlayer_1_1Pref.html#abe5c193ef996ca500d577b51b331154f":[1,0,968,1,11],
-"classPlayer_1_1Pref.html#adbc8ace2fe184d39e10d7a4bf12050ea":[1,0,968,1,15],
-"classPlayer_1_1Pref.html#adc0264bf8dac985c56561993061311e7":[1,0,968,1,13],
-"classPlayer_1_1Pref.html#ae2bc2d26c2eb1a9947b646a388072a29":[1,0,968,1,0],
-"classPlayer_1_1ReturnInfo.html":[1,0,968,2],
-"classPlayer_1_1ReturnInfo.html#a7c43189933f3f253469e0b3e9c0840ea":[1,0,968,2,3],
-"classPlayer_1_1ReturnInfo.html#aacdb2470673cbc1df0819124749cef6d":[1,0,968,2,0],
-"classPlayer_1_1ReturnInfo.html#ac7ecf410bda2c55c27c4ee51f8c1bbee":[1,0,968,2,2],
-"classPlayer_1_1ReturnInfo.html#afeb69959cda4ce1588455b7a42f25b2d":[1,0,968,2,1]
+"classPlayer_1_1Pref.html#a994b298760755cab63b99c3d740ff304":[1,0,968,1,6]
 };

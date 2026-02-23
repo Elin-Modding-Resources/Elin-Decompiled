@@ -5,6 +5,7 @@ var classUIHangIcon =
     [ "OnClickCorner", "classUIHangIcon.html#a24f48c566ca56b3f2fb82a1d9443efb7", null ],
     [ "Refresh", "classUIHangIcon.html#a3e52ee7f54e620f0d6a358649d65ee0f", null ],
     [ "button", "classUIHangIcon.html#a19b076d9254c91ecfe3bfb0eda049bd0", null ],
+    [ "clicked", "classUIHangIcon.html#a0462dc748dc79c385cab06dbd6f983fe", null ],
     [ "id", "classUIHangIcon.html#a833e866ec0848eea0fcd7ba151235738", null ],
     [ "image", "classUIHangIcon.html#a9429430aec8291789f361f714b3a9353", null ],
     [ "lastCorner", "classUIHangIcon.html#a0293bdcd88cf7da1cf7cd03231873eed", null ],

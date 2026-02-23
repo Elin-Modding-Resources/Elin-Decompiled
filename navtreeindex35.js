@@ -1,5 +1,15 @@
 var NAVTREEINDEX35 =
 {
+"classBaseGameScreen.html#a88241bf85fd17eee34fd4653406b13e0":[1,0,210,14],
+"classBaseGameScreen.html#a8b075cf10c64e4c4d647bf0a8125abf9":[1,0,210,35],
+"classBaseGameScreen.html#a8e2ef0156c8b4dcf4fb51ba944ab528b":[1,0,210,101],
+"classBaseGameScreen.html#a90fb25f54bf190d822d653ce84c28a00":[1,0,210,11],
+"classBaseGameScreen.html#a92379235a4d6fbca6fc53ebdc9131bd7":[1,0,210,17],
+"classBaseGameScreen.html#a94b0cc44b9446149cbe3b66bfd3c97be":[1,0,210,75],
+"classBaseGameScreen.html#a957dc03dc0d29e230bc7c861929c6742":[1,0,210,86],
+"classBaseGameScreen.html#a98bd0955c3c30f2b076bb7c6d81dc631":[1,0,210,108],
+"classBaseGameScreen.html#a99d05a44fb51c31414a2767804bbc495":[1,0,210,65],
+"classBaseGameScreen.html#a9d786a495da071cef21deb5de748d3d0":[1,0,210,55],
 "classBaseGameScreen.html#aa00d0863bb7d4073239e1efe29432f03":[1,0,210,105],
 "classBaseGameScreen.html#aa0bef21fb06da3399a033731932f29ae":[1,0,210,62],
 "classBaseGameScreen.html#aa6765379dcc1770b527f52dab5c84fe6":[1,0,210,71],
@@ -239,15 +249,5 @@ var NAVTREEINDEX35 =
 "classBaseSong.html#a68f05b988a0b756bc9f05cfda6d14928":[1,0,220,2],
 "classBaseStance.html":[1,0,221],
 "classBaseStance.html#a61ec727803b748944a5388fcd661d394":[1,0,221,2],
-"classBaseStance.html#a892a79a7176e84c6aa8c413863ca6672":[1,0,221,3],
-"classBaseStance.html#ab84cca4f9b5abab1cd6de985189259e4":[1,0,221,0],
-"classBaseStance.html#ad5fd23efe2679f4e583ebefc7e419f14":[1,0,221,1],
-"classBaseStats.html":[1,0,222],
-"classBaseStats.html#a3374ed503b7ec7ec516e8cf9068ac3e8":[1,0,222,21],
-"classBaseStats.html#a385d692c28b2c6dfee48f182dbf43e5d":[1,0,222,0],
-"classBaseStats.html#a38e73a81f1d5c492bc9309d49a82d94d":[1,0,222,7],
-"classBaseStats.html#a3af9dd2d9cc1fbcf00f34b85f82355db":[1,0,222,1],
-"classBaseStats.html#a3c56f630752e557f999a5976c1257c26":[1,0,222,5],
-"classBaseStats.html#a4da77ec34ae05f409223843341bdc3fb":[1,0,222,11],
-"classBaseStats.html#a4f4f7d9a5d99b11556a64e2f83144f63":[1,0,222,14]
+"classBaseStance.html#a892a79a7176e84c6aa8c413863ca6672":[1,0,221,3]
 };

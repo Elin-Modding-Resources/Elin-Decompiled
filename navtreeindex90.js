@@ -1,5 +1,15 @@
 var NAVTREEINDEX90 =
 {
+"classPlayer_1_1Pref.html#aa711ac06574d18de07944abac5d9e595":[1,0,968,1,9],
+"classPlayer_1_1Pref.html#abe5c193ef996ca500d577b51b331154f":[1,0,968,1,11],
+"classPlayer_1_1Pref.html#adbc8ace2fe184d39e10d7a4bf12050ea":[1,0,968,1,15],
+"classPlayer_1_1Pref.html#adc0264bf8dac985c56561993061311e7":[1,0,968,1,13],
+"classPlayer_1_1Pref.html#ae2bc2d26c2eb1a9947b646a388072a29":[1,0,968,1,0],
+"classPlayer_1_1ReturnInfo.html":[1,0,968,2],
+"classPlayer_1_1ReturnInfo.html#a7c43189933f3f253469e0b3e9c0840ea":[1,0,968,2,3],
+"classPlayer_1_1ReturnInfo.html#aacdb2470673cbc1df0819124749cef6d":[1,0,968,2,0],
+"classPlayer_1_1ReturnInfo.html#ac7ecf410bda2c55c27c4ee51f8c1bbee":[1,0,968,2,2],
+"classPlayer_1_1ReturnInfo.html#afeb69959cda4ce1588455b7a42f25b2d":[1,0,968,2,1],
 "classPlayer_1_1Stats.html":[1,0,968,3],
 "classPlayer_1_1Stats.html#a01d61a1358fa2e4dc5301c6535f87a6a":[1,0,968,3,8],
 "classPlayer_1_1Stats.html#a076320f325be3bf11d6d5590c395047c":[1,0,968,3,24],
@@ -239,15 +249,5 @@ var NAVTREEINDEX90 =
 "classPolicyManager.html#a2fbbe478978208503b47cccc563e7f02":[1,0,976,8],
 "classPolicyManager.html#a332360c727a51e03190e1e99f68d4bb9":[1,0,976,3],
 "classPolicyManager.html#a412a4ca24a22cd22211c1419481fb6f3":[1,0,976,1],
-"classPolicyManager.html#a6e36235690fcb1f725c4713674c647cb":[1,0,976,13],
-"classPolicyManager.html#a8b22547f2d8a6bbf9100a3b657ab38f4":[1,0,976,4],
-"classPolicyManager.html#a8db10d9757785b7183f2095beed61ba4":[1,0,976,0],
-"classPolicyManager.html#aa1f897049f576005914afcc527bb261d":[1,0,976,2],
-"classPolicyManager.html#abb8c5915395e73cea689ac06feb94695":[1,0,976,12],
-"classPolicyManager.html#acb8dd718e174450a4b9d5695b12b3bf2":[1,0,976,11],
-"classPolicyManager.html#ad004dc51246314ff7e5cf29f74567f75":[1,0,976,5],
-"classPolicyManager.html#ad346f6d61bffbb9da8987aec33ab99fd":[1,0,976,9],
-"classPolicyManager.html#ad9905f801b1049fd3b5858789e5bbe3e":[1,0,976,6],
-"classPolicyManager.html#ada3563337140ad536e41d074dddc3921":[1,0,976,7],
-"classPolicyManager.html#ada77c66837873c30b5b71efc3808ab15":[1,0,976,10]
+"classPolicyManager.html#a6e36235690fcb1f725c4713674c647cb":[1,0,976,13]
 };

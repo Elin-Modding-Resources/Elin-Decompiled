@@ -1,5 +1,15 @@
 var NAVTREEINDEX37 =
 {
+"classBaseTileMap.html#aadea2108888e68854f6f3bb45fa755a7":[1,0,225,211],
+"classBaseTileMap.html#ab0314a1f51e6eb46b7248896197549a0":[1,0,225,53],
+"classBaseTileMap.html#ab08d2a535fa398e02b597e8a64a59e49":[1,0,225,142],
+"classBaseTileMap.html#ab1bc3cbb521155a508732718b202545d":[1,0,225,26],
+"classBaseTileMap.html#ab211777d16eae0438e7a312798ff2756":[1,0,225,134],
+"classBaseTileMap.html#ab370dc4428028462e41671740a342410":[1,0,225,221],
+"classBaseTileMap.html#ab4409e44ddb055a46f29fb77fe1fccd4":[1,0,225,160],
+"classBaseTileMap.html#ab480ad978fd51ce632ab03a650007d52":[1,0,225,212],
+"classBaseTileMap.html#ab58687083c672e556da3155f13debab4":[1,0,225,42],
+"classBaseTileMap.html#ab5c0ef910c6d4502e9467e3ad71da71a":[1,0,225,130],
 "classBaseTileMap.html#ab6d341a4f6b54e73e76ac106192a4447":[1,0,225,145],
 "classBaseTileMap.html#ab8e099a5e9bcf727940cf71f5634505d":[1,0,225,203],
 "classBaseTileMap.html#ab8ecae607505b9b004df69b70f5c65dc":[1,0,225,25],
@@ -239,15 +249,5 @@ var NAVTREEINDEX37 =
 "classBiomeProfile.html#ac113bdc1e452f529c5299cab28d327d5":[1,0,231,32],
 "classBiomeProfile.html#ae22257229b8d8461c5cbb94c898cb907":[1,0,231,28],
 "classBiomeProfile.html#af748c5337aeaa62b0a466610f11c414c":[1,0,231,20],
-"classBiomeProfile.html#af8281898d926369d2b0ca142d0fdb2a7":[1,0,231,35],
-"classBiomeProfile_1_1BaseTile.html":[1,0,231,0],
-"classBiomeProfile_1_1BaseTile.html#a0bcfa09a11a6032fff9b9c4b077901c1":[1,0,231,0,11],
-"classBiomeProfile_1_1BaseTile.html#a1186448caae3fb234d5b6033e5ab9de1":[1,0,231,0,6],
-"classBiomeProfile_1_1BaseTile.html#a1e589cdf5b8a5c176a60f1a74bf45fcc":[1,0,231,0,8],
-"classBiomeProfile_1_1BaseTile.html#a21731e0120bf7c63e2d982235a992da2":[1,0,231,0,3],
-"classBiomeProfile_1_1BaseTile.html#a38763a4c2ef8c93c3d75835e43dd9da4":[1,0,231,0,14],
-"classBiomeProfile_1_1BaseTile.html#a3e932d73181824513cf48ddf7df426ed":[1,0,231,0,17],
-"classBiomeProfile_1_1BaseTile.html#a50fd35e12f0a18384eff2234b2ec9bc8":[1,0,231,0,9],
-"classBiomeProfile_1_1BaseTile.html#a61f4bde1fabcd7db92d2611966fc8f30":[1,0,231,0,5],
-"classBiomeProfile_1_1BaseTile.html#a68f812f93c36336fb7b80370e74af781":[1,0,231,0,19]
+"classBiomeProfile.html#af8281898d926369d2b0ca142d0fdb2a7":[1,0,231,35]
 };

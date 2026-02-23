@@ -24,7 +24,7 @@ var classQuest =
     [ "ChangePhase", "classQuest.html#acad9590a4c4f3eb6d619a4590a970e63", null ],
     [ "Complete", "classQuest.html#adfb2530144545afdc990ba10d276309c", null ],
     [ "CompleteTask", "classQuest.html#a5c97a4d00f72332b535f754e42ed80ed", null ],
-    [ "Create", "classQuest.html#af77068e8fb1546a55b985b222ad255b4", null ],
+    [ "Create", "classQuest.html#a5bb5c76661a5036ef0be539da18a4b53", null ],
     [ "CreateInstanceZone", "classQuest.html#ae6161450c1a3daeceed6508a2f2d94c1", null ],
     [ "Deliver", "classQuest.html#ae2b197c08198e01bc0acd8366a286df9", null ],
     [ "DropReward", "classQuest.html#a838757ef59c19e36004864b5a9eb81d0", null ],

@@ -1,5 +1,15 @@
 var NAVTREEINDEX93 =
 {
+"classProgress__Custom.html#a03ad598f3fc07d37861ae540a86beac0":[1,0,991,21],
+"classProgress__Custom.html#a0def6c44c654e86e3704aa9162dcde3c":[1,0,991,13],
+"classProgress__Custom.html#a16119402328d6696e6ff010770ce965f":[1,0,991,3],
+"classProgress__Custom.html#a180aee1eea56965f7dd0efa4e3cd1c3c":[1,0,991,16],
+"classProgress__Custom.html#a21a9bbd98677b5fa23b08ee95d9e94dd":[1,0,991,20],
+"classProgress__Custom.html#a22adbd51efeff474c1a98cddbdf01547":[1,0,991,18],
+"classProgress__Custom.html#a3c760e3ba21fa9197cdf9d2fd7ce356a":[1,0,991,7],
+"classProgress__Custom.html#a7a85c3cadef1d2b86ac09a176d0c0e12":[1,0,991,11],
+"classProgress__Custom.html#a7cbce0f1f0ad095f3572f85d7b8d2bf7":[1,0,991,8],
+"classProgress__Custom.html#a81605ce5217048c822f8c6cc4ab57786":[1,0,991,9],
 "classProgress__Custom.html#a8badd4ffbcc1959e6ad4374262b77e80":[1,0,991,6],
 "classProgress__Custom.html#a8d542d5ffcb5bcad6970d15ab3438d9c":[1,0,991,10],
 "classProgress__Custom.html#a9c399dedace1a2eb051b2aadc687ce06":[1,0,991,5],
@@ -140,6 +150,7 @@ var NAVTREEINDEX93 =
 "classQuest.html#a575a49b6c3cb97536289824b2d140787":[1,0,1000,71],
 "classQuest.html#a58f6e2f8f35f7c6dc6614a57cf255474":[1,0,1000,72],
 "classQuest.html#a59e4bc1164356da0209cc14f98dd7237":[1,0,1000,19],
+"classQuest.html#a5bb5c76661a5036ef0be539da18a4b53":[1,0,1000,10],
 "classQuest.html#a5c97a4d00f72332b535f754e42ed80ed":[1,0,1000,9],
 "classQuest.html#a5e83e784bf91143022997645bac94966":[1,0,1000,41],
 "classQuest.html#a5ef91434eb7f4417c32190382e9a6110":[1,0,1000,50],
@@ -208,7 +219,6 @@ var NAVTREEINDEX93 =
 "classQuest.html#ae676a9d88015f1c7ce4c563346c52d46":[1,0,1000,100],
 "classQuest.html#aeaa8b4d53768b7c3ecb34c0a78f17b96":[1,0,1000,68],
 "classQuest.html#af5d4b1838e2ff8298b458352da6ce89b":[1,0,1000,98],
-"classQuest.html#af77068e8fb1546a55b985b222ad255b4":[1,0,1000,10],
 "classQuest.html#af81b809e290fdbe9fbf0d218090403de":[1,0,1000,102],
 "classQuest.html#afdb84778eac5d79659f29d92af572204":[1,0,1000,44],
 "classQuestCompanion.html":[1,0,1001],
@@ -239,15 +249,5 @@ var NAVTREEINDEX93 =
 "classQuestCraft_1_1Req.html#af769acbc82faf22ef62213d979d53612":[1,0,1003,0,2],
 "classQuestCraft_1_1Req.html#afcb4d5eebbb33b29e77b3b4c96ab5db4":[1,0,1003,0,1],
 "classQuestCrafter.html":[1,0,1004],
-"classQuestCrafter.html#a27e7ccdd053b70ef96915ca712eedb02":[1,0,1004,1],
-"classQuestCrafter.html#aa698c4059f13ba031888324e6e6bcb8d":[1,0,1004,0],
-"classQuestCurry.html":[1,0,1005],
-"classQuestCurry.html#ad426c7594a57960a728e78c0fbad6739":[1,0,1005,0],
-"classQuestCursedManor.html":[1,0,1006],
-"classQuestCursedManor.html#acd173b4aaa88555c56d4331893485e94":[1,0,1006,0],
-"classQuestCursedManor.html#ad474b52b0cb4fceee391e459a77c3a47":[1,0,1006,1],
-"classQuestCursedManor.html#aef99e9abb394e435091eb387e57aa37f":[1,0,1006,2],
-"classQuestDebt.html":[1,0,1007],
-"classQuestDebt.html#a038d7e8f0eddbee1f6fb7b802004bc33":[1,0,1007,2],
-"classQuestDebt.html#a5182080e0859dc3064e34070bf04c39e":[1,0,1007,10]
+"classQuestCrafter.html#a27e7ccdd053b70ef96915ca712eedb02":[1,0,1004,1]
 };

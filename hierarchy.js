@@ -1070,7 +1070,8 @@ var hierarchy =
             ] ],
             [ "QuestHarvest", "classQuestHarvest.html", null ],
             [ "QuestMusic", "classQuestMusic.html", null ],
-            [ "QuestSubdue", "classQuestSubdue.html", null ]
+            [ "QuestSubdue", "classQuestSubdue.html", null ],
+            [ "QuestWedding", "classQuestWedding.html", null ]
           ] ]
         ] ],
         [ "QuestSequence", "classQuestSequence.html", [
@@ -1227,7 +1228,8 @@ var hierarchy =
               ] ],
               [ "Zone_Yowyn", "classZone__Yowyn.html", null ]
             ] ],
-            [ "Zone_Vernis", "classZone__Vernis.html", null ]
+            [ "Zone_Vernis", "classZone__Vernis.html", null ],
+            [ "Zone_Wedding", "classZone__Wedding.html", null ]
           ] ],
           [ "Zone_Dungeon", "classZone__Dungeon.html", [
             [ "Zone_DungeonUnfixed", "classZone__DungeonUnfixed.html", [
@@ -2104,7 +2106,8 @@ var hierarchy =
           [ "ZoneEventDefenseGame", "classZoneEventDefenseGame.html", null ],
           [ "ZoneEventHarvest", "classZoneEventHarvest.html", null ],
           [ "ZoneEventMusic", "classZoneEventMusic.html", null ],
-          [ "ZoneEventSubdue", "classZoneEventSubdue.html", null ]
+          [ "ZoneEventSubdue", "classZoneEventSubdue.html", null ],
+          [ "ZoneEventWedding", "classZoneEventWedding.html", null ]
         ] ],
         [ "ZoneEventSiege", "classZoneEventSiege.html", [
           [ "ZoneEventRaid", "classZoneEventRaid.html", null ],
@@ -2120,7 +2123,8 @@ var hierarchy =
         [ "ZoneInstanceRandomQuest", "classZoneInstanceRandomQuest.html", [
           [ "ZoneInstanceDefense", "classZoneInstanceDefense.html", null ],
           [ "ZoneInstanceMusic", "classZoneInstanceMusic.html", null ],
-          [ "ZoneInstanceSubdue", "classZoneInstanceSubdue.html", null ]
+          [ "ZoneInstanceSubdue", "classZoneInstanceSubdue.html", null ],
+          [ "ZoneInstanceWedding", "classZoneInstanceWedding.html", null ]
         ] ]
       ] ],
       [ "ZonePreEnterEvent", "classZonePreEnterEvent.html", [

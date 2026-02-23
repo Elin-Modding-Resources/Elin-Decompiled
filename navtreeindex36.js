@@ -1,5 +1,15 @@
 var NAVTREEINDEX36 =
 {
+"classBaseStance.html#ab84cca4f9b5abab1cd6de985189259e4":[1,0,221,0],
+"classBaseStance.html#ad5fd23efe2679f4e583ebefc7e419f14":[1,0,221,1],
+"classBaseStats.html":[1,0,222],
+"classBaseStats.html#a3374ed503b7ec7ec516e8cf9068ac3e8":[1,0,222,21],
+"classBaseStats.html#a385d692c28b2c6dfee48f182dbf43e5d":[1,0,222,0],
+"classBaseStats.html#a38e73a81f1d5c492bc9309d49a82d94d":[1,0,222,7],
+"classBaseStats.html#a3af9dd2d9cc1fbcf00f34b85f82355db":[1,0,222,1],
+"classBaseStats.html#a3c56f630752e557f999a5976c1257c26":[1,0,222,5],
+"classBaseStats.html#a4da77ec34ae05f409223843341bdc3fb":[1,0,222,11],
+"classBaseStats.html#a4f4f7d9a5d99b11556a64e2f83144f63":[1,0,222,14],
 "classBaseStats.html#a60ba584df9da577e0c28b60dd446c5de":[1,0,222,12],
 "classBaseStats.html#a6d9162ac678445f9256bb8599c96ad01":[1,0,222,13],
 "classBaseStats.html#a74c6775ee0f1ef718d393ff01f62395e":[1,0,222,19],
@@ -239,15 +249,5 @@ var NAVTREEINDEX36 =
 "classBaseTileMap.html#aa82d72078c4f061d10ccd3c93e437fd3":[1,0,225,227],
 "classBaseTileMap.html#aaad0b66de3b0e3a8e2bfebdbd10b0c49":[1,0,225,179],
 "classBaseTileMap.html#aab1d3c4690fdce0e1d643dec3ddb84e5":[1,0,225,67],
-"classBaseTileMap.html#aacb8d76d810feef4850f474ca10dc8b8":[1,0,225,45],
-"classBaseTileMap.html#aadea2108888e68854f6f3bb45fa755a7":[1,0,225,211],
-"classBaseTileMap.html#ab0314a1f51e6eb46b7248896197549a0":[1,0,225,53],
-"classBaseTileMap.html#ab08d2a535fa398e02b597e8a64a59e49":[1,0,225,142],
-"classBaseTileMap.html#ab1bc3cbb521155a508732718b202545d":[1,0,225,26],
-"classBaseTileMap.html#ab211777d16eae0438e7a312798ff2756":[1,0,225,134],
-"classBaseTileMap.html#ab370dc4428028462e41671740a342410":[1,0,225,221],
-"classBaseTileMap.html#ab4409e44ddb055a46f29fb77fe1fccd4":[1,0,225,160],
-"classBaseTileMap.html#ab480ad978fd51ce632ab03a650007d52":[1,0,225,212],
-"classBaseTileMap.html#ab58687083c672e556da3155f13debab4":[1,0,225,42],
-"classBaseTileMap.html#ab5c0ef910c6d4502e9467e3ad71da71a":[1,0,225,130]
+"classBaseTileMap.html#aacb8d76d810feef4850f474ca10dc8b8":[1,0,225,45]
 };
