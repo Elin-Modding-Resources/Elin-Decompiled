@@ -546,7 +546,7 @@ public class UI : ELayer
 
 	public void Say(string text, Sprite sprite = null)
 	{
-		popSystem.PopText(text.lang(), sprite, "PopAchievement");
+		popSystem.PopText(text.lang(), sprite, sprite ? "PopUIAchievement" : "PopUI");
 		Debug.Log(text);
 	}
 

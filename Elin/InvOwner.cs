@@ -251,7 +251,7 @@ public class InvOwner : EClass
 				destInv.owner.Chara.Talk("tooHeavy");
 				return false;
 			}
-			if (thing2.c_isImportant && destInv != inv && !destInv.owner.IsPC && destInv.DenyImportant)
+			if (thing2.c_isImportant && destInv != inv && !destInv.owner.IsPC && destInv.DenyImportant && thing2.c_uidAttune != destInv.owner.uid)
 			{
 				Msg.Say("markedImportant");
 				return false;

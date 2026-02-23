@@ -168,6 +168,10 @@ public class TraitDrink : Trait
 			c.RemoveCondition<ConAwakening>();
 			return;
 		}
+		if (owner.id == "water_jure")
+		{
+			Steam.GetAchievement(ID_Achievement.JURE_WATER);
+		}
 		ActEffect.Proc(IdEffect, Power, owner.blessedState, c, null, new ActRef
 		{
 			n1 = N1,

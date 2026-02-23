@@ -20,6 +20,6 @@ public class AI_Sleep : AI_TargetThing
 		{
 			owner._Move(base.target.pos);
 		}
-		owner.Sleep(base.target);
+		owner.Sleep(base.target, base.target.pos.FindThing<TraitPillow>()?.owner as Thing);
 	}
 }

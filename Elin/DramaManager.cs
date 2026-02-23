@@ -983,6 +983,12 @@ public class DramaManager : EMono
 				});
 			});
 			break;
+		case "moveZone":
+			AddEvent(delegate
+			{
+				EMono.player.MoveZone(EMono.pc.currentZone);
+			});
+			break;
 		case "save":
 			AddEvent(delegate
 			{

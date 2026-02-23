@@ -6,5 +6,7 @@ public enum ID_Achievement
 	FIAMA_CHEST,
 	NERUN,
 	PUTIT,
-	ASHLAND_PIE
+	ASHLAND_PIE,
+	JURE_WATER,
+	WINDOW_CHARM
 }

@@ -975,39 +975,8 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
-			for (int i = 0; i < 10; i++)
-			{
-				Thing thing = ThingGen.Create("egg_fertilized");
-				thing.TryMakeRandomItem(40);
-				thing.SetEncLv(200);
-				EClass.pc.Pick(thing);
-			}
-			foreach (Chara deadChara in EClass._map.deadCharas)
-			{
-				Debug.Log(deadChara);
-			}
-			EClass.core.steam.CheckUpdate();
-			EClass.player.flags.loytelMartLv++;
-			Msg.Say("loytelmart:" + EClass.player.flags.loytelMartLv);
-			Guild.Fighter.relation.rank = 20;
-			Guild.Mage.relation.rank = 20;
-			Guild.Thief.relation.rank = 20;
-			Guild.Merchant.relation.rank = 20;
-			if (EClass.Branch != null)
-			{
-				EClass.Branch.ModExp(EClass.Branch.GetNextExp());
-			}
-			foreach (Chara item in EClass._map.charas.ToList())
-			{
-				item.AddExp(item.ExpToNext);
-				item.Vomit();
-			}
-			EClass.pc.PlayEffect("boost");
-			EClass.pc.PlaySound("boost");
-			EClass.pc.elements.SetBase(306, 100);
-			EClass.pc.elements.SetBase(85, 100);
-			EClass.pc.feat += 10;
-			EClass.player.totalFeat += 10;
+			EClass.ui.Say("dawedadwwdaadwawdawd");
+			EClass.ui.Say("fsefsefsefesf", EClass.core.refs.spriteNoIng);
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
@@ -1079,7 +1048,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int j = 0; j < advanceMin; j++)
+				for (int i = 0; i < advanceMin; i++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}
@@ -1160,9 +1129,9 @@ public class CoreDebug : EScriptable
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
-				foreach (Card item2 in list)
+				foreach (Card item in list)
 				{
-					Debug.Log(item2.Name + "/" + item2.dir + "/" + item2.flipX + "/" + item2.angle);
+					Debug.Log(item.Name + "/" + item.dir + "/" + item.flipX + "/" + item.angle);
 				}
 			}
 			if (Input.GetMouseButtonDown(1))
@@ -1195,9 +1164,9 @@ public class CoreDebug : EScriptable
 			}
 			if (key)
 			{
-				foreach (Card item3 in EClass._map.Roaming.all)
+				foreach (Card item2 in EClass._map.Roaming.all)
 				{
-					EClass._zone.RemoveCard(item3);
+					EClass._zone.RemoveCard(item2);
 				}
 			}
 			else if (hitPoint.detail != null)
@@ -1219,8 +1188,8 @@ public class CoreDebug : EScriptable
 		{
 			for (int num4 = hitPoint.detail.things.Count - 1; num4 >= 0; num4--)
 			{
-				Thing thing2 = hitPoint.detail.things[num4];
-				Debug.Log(thing2.id + "/" + thing2.Pref.height + "/" + thing2.trait?.ToString() + "/" + thing2.source.tileType.CanStack + "/" + thing2.source.tileType?.ToString() + "/" + thing2.isSynced + "/" + RenderObject.syncList.Contains(thing2.renderer));
+				Thing thing = hitPoint.detail.things[num4];
+				Debug.Log(thing.id + "/" + thing.Pref.height + "/" + thing.trait?.ToString() + "/" + thing.source.tileType.CanStack + "/" + thing.source.tileType?.ToString() + "/" + thing.isSynced + "/" + RenderObject.syncList.Contains(thing.renderer));
 			}
 		}
 		if (!Application.isEditor)
@@ -1276,9 +1245,9 @@ public class CoreDebug : EScriptable
 			{
 				break;
 			}
-			foreach (Card item4 in hitPoint.ListCards())
+			foreach (Card item3 in hitPoint.ListCards())
 			{
-				item4.renderer.PlayAnime(num5.ToEnum<AnimeID>());
+				item3.renderer.PlayAnime(num5.ToEnum<AnimeID>());
 			}
 			Debug.Log(num5.ToEnum<AnimeID>());
 			break;
@@ -1296,39 +1265,39 @@ public class CoreDebug : EScriptable
 		case DebugHotkey.Item:
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				Thing thing3 = ThingGen.Create("stairsDown_cave");
-				EClass._zone.AddCard(thing3, EClass.pc.pos);
-				thing3.SetPlaceState(PlaceState.installed);
+				Thing thing2 = ThingGen.Create("stairsDown_cave");
+				EClass._zone.AddCard(thing2, EClass.pc.pos);
+				thing2.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				Thing thing4 = ThingGen.Create("stairs");
-				EClass._zone.AddCard(thing4, EClass.pc.pos);
-				thing4.SetPlaceState(PlaceState.installed);
+				Thing thing3 = ThingGen.Create("stairs");
+				EClass._zone.AddCard(thing3, EClass.pc.pos);
+				thing3.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				Thing thing5 = ThingGen.Create("sign");
-				EClass._zone.AddCard(thing5, hitPoint);
-				thing5.SetPlaceState(PlaceState.installed);
+				Thing thing4 = ThingGen.Create("sign");
+				EClass._zone.AddCard(thing4, hitPoint);
+				thing4.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 			{
-				Thing thing6 = ThingGen.Create("sign2");
-				EClass._zone.AddCard(thing6, hitPoint);
-				thing6.SetPlaceState(PlaceState.installed);
+				Thing thing5 = ThingGen.Create("sign2");
+				EClass._zone.AddCard(thing5, hitPoint);
+				thing5.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha5))
 			{
-				Thing thing7 = ThingGen.Create("well");
-				EClass._zone.AddCard(thing7, hitPoint);
-				thing7.SetPlaceState(PlaceState.installed);
+				Thing thing6 = ThingGen.Create("well");
+				EClass._zone.AddCard(thing6, hitPoint);
+				thing6.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha6))
 			{
-				Thing thing8 = ThingGen.Create("altar");
-				EClass._zone.AddCard(thing8, hitPoint);
-				thing8.SetPlaceState(PlaceState.installed);
+				Thing thing7 = ThingGen.Create("altar");
+				EClass._zone.AddCard(thing7, hitPoint);
+				thing7.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha7))
 			{

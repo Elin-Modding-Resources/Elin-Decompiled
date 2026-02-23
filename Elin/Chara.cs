@@ -2816,7 +2816,11 @@ public class Chara : Card, IPathfindWalker
 				}
 				if (newPoint.cell.CanSuffocate())
 				{
-					AddCondition<ConSuffocation>((EClass.pc.Evalue(200) != 0) ? (2000 / (100 + EvalueMax(200, -5) * 10)) : 30, force: true);
+					bool flag = HasElement(1252);
+					if (!flag)
+					{
+						AddCondition<ConSuffocation>((Evalue(200) != 0) ? (2000 / (100 + EvalueMax(200, -5) * 10)) : 30, force: true);
+					}
 					int num4 = GetCondition<ConSuffocation>()?.GetPhase() ?? 0;
 					if (num4 >= 2)
 					{
@@ -2824,7 +2828,7 @@ public class Chara : Card, IPathfindWalker
 					}
 					if (!isDead && !HasElement(429))
 					{
-						ModExp(200, 1 + num4 * 12);
+						ModExp(200, ((!flag) ? 1 : 10) + num4 * 12);
 					}
 				}
 				EClass.player.regionMoveWarned = false;
@@ -2855,12 +2859,12 @@ public class Chara : Card, IPathfindWalker
 		Chara chara = ((ride == null) ? this : ride);
 		if (!EClass._zone.IsRegion || chara.IsPC)
 		{
-			bool flag = (chara.isConfused && EClass.rnd(2) == 0) || (chara.isDrunk && EClass.rnd(IsIdle ? 2 : 8) == 0 && !chara.HasElement(1215));
+			bool flag2 = (chara.isConfused && EClass.rnd(2) == 0) || (chara.isDrunk && EClass.rnd(IsIdle ? 2 : 8) == 0 && !chara.HasElement(1215));
 			if (host != null && host.ride == this && ((host.isConfused && EClass.rnd(2) == 0) || (host.isDrunk && EClass.rnd(IsIdle ? 2 : 8) == 0 && !host.HasElement(1215))))
 			{
-				flag = true;
+				flag2 = true;
 			}
-			if (flag && newPoint.Distance(pos) <= 1)
+			if (flag2 && newPoint.Distance(pos) <= 1)
 			{
 				Point randomNeighbor = pos.GetRandomNeighbor();
 				if (CanMoveTo(randomNeighbor, allowDestroyPath: false))
@@ -2932,22 +2936,22 @@ public class Chara : Card, IPathfindWalker
 		}
 		Cell cell = newPoint.cell;
 		Cell cell2 = pos.cell;
-		bool flag2 = cell.HasLiquid && !IsLevitating;
+		bool flag3 = cell.HasLiquid && !IsLevitating;
 		bool hasBridge = cell.HasBridge;
 		bool hasRamp = cell.HasRamp;
-		bool flag3 = EClass._zone.IsSnowCovered && !cell.HasRoof && !cell.isClearSnow;
+		bool flag4 = EClass._zone.IsSnowCovered && !cell.HasRoof && !cell.isClearSnow;
 		TileRow tileRow = (hasRamp ? ((TileRow)cell.sourceBlock) : ((TileRow)(hasBridge ? cell.sourceBridge : cell.sourceFloor)));
 		SourceMaterial.Row row = (hasRamp ? cell.matBlock : (hasBridge ? cell.matBridge : cell.matFloor));
-		bool flag4 = cell.IsTopWater && !cell.isFloating;
+		bool flag5 = cell.IsTopWater && !cell.isFloating;
 		if (!EClass._zone.IsRegion)
 		{
 			if (cell.hasDoorBoat)
 			{
 				tileRow = FLOOR.sourceWood;
 				row = MATERIAL.sourceOak;
-				flag4 = false;
+				flag5 = false;
 			}
-			else if (flag3 && !tileRow.ignoreSnow)
+			else if (flag4 && !tileRow.ignoreSnow)
 			{
 				if (tileRow.tileType.IsWater)
 				{
@@ -2959,7 +2963,7 @@ public class Chara : Card, IPathfindWalker
 					tileRow = FLOOR.sourceSnow;
 					row = MATERIAL.sourceSnow;
 				}
-				flag4 = false;
+				flag5 = false;
 			}
 		}
 		if ((pos.sourceFloor.isBeach || cell2.IsSnowTile) && !pos.HasObj)
@@ -2968,7 +2972,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (isSynced)
 		{
-			string text = ((flag2 || flag4) ? "water" : tileRow.soundFoot.IsEmpty(row.soundFoot.IsEmpty("default")));
+			string text = ((flag3 || flag5) ? "water" : tileRow.soundFoot.IsEmpty(row.soundFoot.IsEmpty("default")));
 			if (cell.obj != 0 && cell.sourceObj.tileType.IsPlayFootSound && !cell.matObj.soundFoot.IsEmpty())
 			{
 				text = cell.matObj.soundFoot;
@@ -2988,21 +2992,21 @@ public class Chara : Card, IPathfindWalker
 				SoundManager.altLastData = IsPC;
 				PlaySound("Footstep/" + text, IsPC ? 1f : 0.9f);
 			}
-			if (!flag4)
+			if (!flag5)
 			{
 				Scene scene = EClass.scene;
 				PCOrbit pcOrbit = EClass.screen.pcOrbit;
-				bool flag5 = scene.actionMode.gameSpeed > 1f;
+				bool flag6 = scene.actionMode.gameSpeed > 1f;
 				scene.psFoot.transform.position = renderer.position + pcOrbit.footPos;
 				scene.psFoot.startColor = row.matColor;
-				scene.psFoot.Emit(pcOrbit.emitFoot * ((!flag5) ? 1 : 2));
-				if (flag5 && IsPC)
+				scene.psFoot.Emit(pcOrbit.emitFoot * ((!flag6) ? 1 : 2));
+				if (flag6 && IsPC)
 				{
 					scene.psSmoke.transform.position = renderer.position + pcOrbit.smokePos;
 					scene.psSmoke.Emit(pcOrbit.emitSmoke);
 				}
 			}
-			if (flag2 || flag4)
+			if (flag3 || flag5)
 			{
 				Effect.Get("ripple").Play(newPoint);
 			}
@@ -3183,10 +3187,10 @@ public class Chara : Card, IPathfindWalker
 				EClass.pc.SetPCCState(PCCState.ShoesOff);
 			}
 		}
-		bool flag6 = flag4 || EClass._zone.IsUnderwater;
-		if (wasInWater != flag6)
+		bool flag7 = flag5 || EClass._zone.IsUnderwater;
+		if (wasInWater != flag7)
 		{
-			wasInWater = flag6;
+			wasInWater = flag7;
 			RefreshSpeed();
 		}
 		hasMovedThisTurn = true;
@@ -4220,7 +4224,7 @@ public class Chara : Card, IPathfindWalker
 				hygiene.Mod(2);
 			}
 		}
-		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate() && !EClass.debug.godMode)
+		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate() && !EClass.debug.godMode && !HasElement(1252))
 		{
 			AddCondition<ConSuffocation>(800 / (100 + EvalueMax(200, -5) * 10), force: true);
 		}
@@ -5873,6 +5877,7 @@ public class Chara : Card, IPathfindWalker
 		int i = 1;
 		int num4 = 0;
 		bool flag = a.IsTargetHostileParty();
+		bool flag2 = ability.Has(a.id);
 		if (IsPC && HasCondition<StanceManaCost>())
 		{
 			num4 = Evalue(1657);
@@ -5900,7 +5905,7 @@ public class Chara : Card, IPathfindWalker
 				});
 			}
 		}
-		if (a is Spell && IsPC && a.vPotential < i)
+		if (a is Spell && IsPC && a.vPotential < i && !flag2)
 		{
 			i = 1;
 			_pts.Clear();
@@ -5962,7 +5967,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			num3 = 1 + Evalue(1648);
 		}
-		if (IsPC && cost.cost > 0 && a.Value == 0 && !ability.Has(a.id))
+		if (IsPC && cost.cost > 0 && a.Value == 0 && !flag2)
 		{
 			Msg.SayNothingHappen();
 			return false;
@@ -5977,7 +5982,6 @@ public class Chara : Card, IPathfindWalker
 			if (IsPC)
 			{
 				_ = (i + 1) / 2;
-				bool flag2 = ability.Has(a.id);
 				if (a.vPotential < i && !flag2)
 				{
 					Msg.Say("noSpellStock");
@@ -6107,6 +6111,10 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (flag3 && !isDead)
 		{
+			if (IsPC && flag2 && a.vBase == 0 && a.PotentialAsStock)
+			{
+				elements.ModBase(a.id, 1);
+			}
 			if (cost.cost > 0 && a.source.lvFactor > 0)
 			{
 				ModExp(a.id, spellExp);

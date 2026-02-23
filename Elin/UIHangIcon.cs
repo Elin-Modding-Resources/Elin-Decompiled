@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class UIHangIcon : EMono
 {
+	public static int clicked;
+
 	public Image image;
 
 	public UIButton button;
@@ -33,6 +35,12 @@ public class UIHangIcon : EMono
 
 	public void OnClickCorner()
 	{
+		clicked++;
+		Debug.Log(clicked);
+		if (clicked >= 50)
+		{
+			Steam.GetAchievement(ID_Achievement.WINDOW_CHARM);
+		}
 		SE.Play("Ambience/Random/windchime1");
 	}
 

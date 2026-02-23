@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FoodEffect : EClass
@@ -436,17 +437,24 @@ public class FoodEffect : EClass
 		case DNA.Type.Inferior:
 			if (genes != null)
 			{
-				RemoveOldestDNA();
+				RemoveDNA(fromOldest: false);
 			}
 			return;
 		case DNA.Type.Brain:
+			if (genes != null)
+			{
+				genes.items.Shuffle();
+				Msg.Say("reconstruct", c2);
+				c2.Say("food_mind", c2);
+				c2.AddCondition<ConHallucination>();
+			}
 			return;
 		}
 		if (excess > 0)
 		{
 			while (excess > 0 && genes != null && genes.items.Count != 0)
 			{
-				RemoveOldestDNA();
+				RemoveDNA(fromOldest: true);
 			}
 		}
 		c_DNA.Apply(c2);
@@ -454,9 +462,9 @@ public class FoodEffect : EClass
 		c2.PlaySound("ding_potential");
 		SE.Play("mutation");
 		c2.PlayEffect("identify");
-		void RemoveOldestDNA()
+		void RemoveDNA(bool fromOldest)
 		{
-			DNA dNA = genes.items[0];
+			DNA dNA = (fromOldest ? genes.items[0] : genes.items.Last());
 			CharaGenes.Remove(c2, dNA);
 			excess -= dNA.slot;
 		}

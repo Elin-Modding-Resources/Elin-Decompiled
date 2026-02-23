@@ -1326,7 +1326,7 @@ public class ActEffect : EClass
 						tc.elements.ModBase(64, -Mathf.Clamp(orCreateElement.vBase * power / 1000, 1, 5));
 					}
 				}
-				cc.Say("lighten_curse", cc, tc);
+				cc.Say("lighten_curse", tc);
 			}
 			else
 			{
@@ -1348,7 +1348,7 @@ public class ActEffect : EClass
 						tc.elements.ModBase(64, Mathf.Clamp(orCreateElement.vBase * power / 1000, 1, 5));
 					}
 				}
-				cc.Say("lighten", cc, tc);
+				cc.Say("lighten", tc);
 			}
 			tc.c_weight = num5;
 			tc.SetDirtyWeight();
@@ -1372,7 +1372,7 @@ public class ActEffect : EClass
 			}
 			cc.PlaySound("mutation");
 			cc.PlayEffect("identify");
-			cc.Say("reconstruct", cc, tc);
+			cc.Say("reconstruct", tc);
 			EClass.game.cards.uidNext += EClass.rnd(30);
 			int num6 = Mathf.Max(tc.genLv, tc.LV, EClass.player.stats.deepest);
 			CardBlueprint.Set(new CardBlueprint

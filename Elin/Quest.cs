@@ -238,7 +238,7 @@ public class Quest : EClass
 
 	public virtual string NameDeliver => "";
 
-	public static Quest Create(string _id, string _idPerson = null, Chara c = null)
+	public static Quest Create(string _id, string _idPerson = null, Chara c = null, bool assignQuest = true)
 	{
 		Quest quest = ClassCache.Create<Quest>(EClass.sources.quests.map[_id].type.IsEmpty("Quest"), "Elin");
 		quest.id = _id;
@@ -250,7 +250,7 @@ public class Quest : EClass
 		}
 		if (c != null)
 		{
-			quest.SetClient(c);
+			quest.SetClient(c, assignQuest);
 		}
 		quest.Init();
 		return quest;

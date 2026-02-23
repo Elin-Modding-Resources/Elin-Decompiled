@@ -311,6 +311,21 @@ public class DramaCustomSequence : EClass
 		}
 		Step("_factionOther");
 		Talk("what", StepDefault);
+		if (!c.IsMarried)
+		{
+			foreach (Thing item5 in EClass.pc.things.List((Thing a) => !a.c_isImportant && !a.isEquipped && a.c_uidAttune == 0 && (a.id == "amulet_engagement" || a.id == "ring_engagement")))
+			{
+				Thing _t3 = item5;
+				Choice("daMarry".lang(item5.Name), "_marry").SetOnClick(delegate
+				{
+					destThing = _t3;
+				});
+			}
+		}
+		if (c.IsMarried && EClass.debug.enable)
+		{
+			Choice("daWed", "_wed");
+		}
 		if (c.trait is TraitLoytel)
 		{
 			QuestDebt questDebt = EClass.game.quests.Get<QuestDebt>();
@@ -333,17 +348,6 @@ public class DramaCustomSequence : EClass
 		else if (!c.noMove)
 		{
 			Choice("disableMove", "_disableMove");
-		}
-		if (!c.IsMarried)
-		{
-			foreach (Thing item5 in EClass.pc.things.List((Thing a) => !a.c_isImportant && !a.isEquipped && a.c_uidAttune == 0 && (a.id == "amulet_engagement" || a.id == "ring_engagement")))
-			{
-				Thing _t3 = item5;
-				Choice("daMarry".lang(item5.Name), "_marry").SetOnClick(delegate
-				{
-					destThing = _t3;
-				});
-			}
 		}
 		Choice((c.GetInt(123) == 0) ? "daSleepBeside" : "daSleepBeside2", "_sleepBeside");
 		if (c.HasElement(1225))
@@ -533,8 +537,8 @@ public class DramaCustomSequence : EClass
 		_Talk("tg", GetTopic(c, "questAccept"));
 		Method(delegate
 		{
-			Zone z2 = c.quest.CreateInstanceZone(c);
-			EClass.pc.MoveZone(z2, ZoneTransition.EnterState.Center);
+			Zone z3 = c.quest.CreateInstanceZone(c);
+			EClass.pc.MoveZone(z3, ZoneTransition.EnterState.Center);
 		}, null, StepEnd);
 		Step("_questFull");
 		_Talk("tg", GetTopic(c, "questFull"), text);
@@ -609,6 +613,26 @@ public class DramaCustomSequence : EClass
 				LayerDrama.Activate("_adv", "general", "marry", c);
 				Net.SendChat(EClass.pc.NameTitled, "net_marriage".lang(EClass.pc.NameBraced, EClass._zone.Name, c.NameBraced), ChatCategory.Marriage, Lang.langCode);
 			});
+		});
+		End();
+		Step("_wed");
+		Method(delegate
+		{
+			TempTalkTopic(c.IsMarried ? "tail4" : (bird + "1"), null);
+			Choice("yes2", delegate
+			{
+				TempTalkTopic(bird + "2", "_wed2");
+			});
+			Choice("no2", StepDefault, cancel: true).SetOnClick(RumorChill);
+		});
+		Step("_wed2");
+		Method(delegate
+		{
+			Quest quest = Quest.Create("wedding", null, c, assignQuest: false);
+			EClass.game.quests.Start(quest);
+			Zone z2 = quest.CreateInstanceZone(c);
+			EClass.pc.MoveZone(z2, ZoneTransition.EnterState.Center);
+			LayerDrama.Activate("_adv", "general", "wedding", c);
 		});
 		End();
 		Step("_disableLoyal");

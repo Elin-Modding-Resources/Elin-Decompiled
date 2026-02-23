@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using HeathenEngineering.SteamworksIntegration;
@@ -49,19 +50,35 @@ public class Steam : MonoBehaviour
 
 	public static void GetAchievement(ID_Achievement id)
 	{
-		foreach (AchievementObject achievement in Instance.steamworks.settings.achievements)
+		try
 		{
-			if (achievement.Id == id.ToString())
+			foreach (AchievementObject achievement in Instance.steamworks.settings.achievements)
 			{
-				if (!achievement.IsAchieved)
+				if (achievement.Id == id.ToString())
 				{
-					achievement.Unlock();
-					EClass.ui.Say("sys_acv".lang(achievement.Name), Resources.Load<Sprite>("Media/Graphics/Icon/Achievement/acv_" + id));
-					SE.Play("achievement");
-					achievement.Store();
+					if (achievement.IsAchieved)
+					{
+						return;
+					}
+					try
+					{
+						achievement.Unlock();
+						EClass.ui.Say("sys_acv".lang(achievement.Name), Resources.Load<Sprite>("Media/Graphics/Icon/Achievement/acv_" + id));
+						SE.Play("achievement");
+						achievement.Store();
+						return;
+					}
+					catch (Exception ex)
+					{
+						Debug.LogError("Error Achievement 1:" + ex);
+						return;
+					}
 				}
-				return;
 			}
+		}
+		catch (Exception ex2)
+		{
+			Debug.LogError("Error Achievement 2:" + ex2);
 		}
 		Debug.Log("Achievement not found:" + id);
 	}
