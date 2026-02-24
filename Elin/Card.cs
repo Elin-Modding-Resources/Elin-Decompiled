@@ -3021,7 +3021,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		return num * (100 + Evalue(1237) * 30 + Evalue(1273) * 50 + Evalue(1275) * 50) / 100;
+		return num * (100 + Evalue(1237) * 30 + Evalue(1273) * 50 + ((Evalue(1275) >= 2) ? 50 : 0)) / 100;
 	}
 
 	public int GetAffinityExpBonus()
@@ -5775,14 +5775,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return this;
 	}
 
-	public void MakeRefFrom(Card c1, Card c2 = null)
+	public void MakeRefFrom(Card c1, Card c2 = null, bool simple = false)
 	{
 		c_idRefCard = c1.id;
-		c_altName = (c1.IsPC ? c1.c_altName : c1.GetName(NameStyle.Ref, (!c1.isChara) ? 1 : 0));
+		c_altName = (c1.IsPC ? c1.c_altName : c1.GetName((!simple) ? NameStyle.Ref : NameStyle.Simple, (!c1.isChara) ? 1 : 0));
 		if (c2 != null)
 		{
 			c_idRefCard2 = c2.id;
-			c_altName2 = (c2.IsPC ? c2.c_altName : c2.GetName(NameStyle.Ref, (!c2.isChara) ? 1 : 0));
+			c_altName2 = (c2.IsPC ? c2.c_altName : c2.GetName((!simple) ? NameStyle.Ref : NameStyle.Simple, (!c2.isChara) ? 1 : 0));
 		}
 		c_extraNameRef = (c1.IsPC ? EClass.pc.c_altName : c1.c_extraNameRef);
 	}
@@ -6600,7 +6600,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return EClass.player.lightRadius;
 		}
-		return (EClass._map.IsIndoor ? 4 : 5) + (IsPCFaction ? 1 : 0) + EvalueMax(490);
+		return (EClass._map.IsIndoor ? 4 : 5) + (IsPCFaction ? 1 : 0) + EvalueMax(490) + EClass._zone.SightRadiusBonus;
 	}
 
 	public int GetLightRadius()
@@ -6700,7 +6700,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				power = EClass.scene.profile.global.playerLightPowerLimit;
 			}
 			power *= EClass.scene.profile.light.playerLightMod + (float)EClass.player.customLightMod * EClass.scene.profile.light.playerLightCustomMod;
-			radius += EvalueMax(490);
+			radius += EvalueMax(490) + EClass._zone.SightRadiusBonus;
 			EClass.player.lightRadius = radius;
 			EClass.player.lightPower = power;
 		}

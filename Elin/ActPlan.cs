@@ -730,6 +730,13 @@ public class ActPlan : EClass
 						if (!EClass.pc.isBlind)
 						{
 							Thing t = _c.Thing;
+							if (EClass._zone.HasField(10001) && t.trait.CanEat(EClass.pc))
+							{
+								TrySetAct(new AI_Eat
+								{
+									target = t
+								}, t);
+							}
 							if (input == ActInput.AllAction)
 							{
 								if ((EClass.debug.enable || EClass.player.HasKeyItem("license_illumination")) && t.LightData != null)

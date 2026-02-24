@@ -3358,7 +3358,7 @@ public class BaseTileMap : EMono
 
 	public int GetApproximateBlocklight(Cell cell)
 	{
-		float num = _baseBrightness + 0.05f;
+		float num = _baseBrightness + 0.38f;
 		num = ((!cell.IsSnowTile) ? ((float)((int)(num * 50f) * 262144 + ((cell.lightR >= 64) ? 63 : cell.lightR) * 4096 + ((cell.lightG >= 64) ? 63 : cell.lightG) * 64 + ((cell.lightB >= 64) ? 63 : cell.lightB))) : ((float)((int)(num * 50f) * 262144 + (int)((float)((cell.lightR >= 50) ? 50 : cell.lightR) * snowColor) * 4096 + (int)((float)((cell.lightG >= 50) ? 50 : cell.lightG) * snowColor) * 64 + (int)((float)((cell.lightB >= 50) ? 50 : cell.lightB) * snowColor) + snowColorToken)));
 		return (int)num;
 	}

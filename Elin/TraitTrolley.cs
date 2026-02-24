@@ -64,10 +64,14 @@ public class TraitTrolley : TraitFloorSwitch
 
 	public virtual string GetIdSound()
 	{
-		if (owner.idSkin != 7)
+		if (!(owner.id == "play_ride_kin"))
 		{
-			return "ride_trolley";
+			if (owner.idSkin != 7)
+			{
+				return "ride_trolley";
+			}
+			return "ride_bike";
 		}
-		return "ride_bike";
+		return "ride_kin";
 	}
 }

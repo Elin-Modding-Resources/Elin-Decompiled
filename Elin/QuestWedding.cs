@@ -1,23 +1,8 @@
-using Newtonsoft.Json;
-
 public class QuestWedding : QuestInstance
 {
-	[JsonProperty]
-	public int score;
-
-	[JsonProperty]
-	public int destScore = 10;
-
-	[JsonProperty]
-	public int sumMoney;
-
 	public override DifficultyType difficultyType => DifficultyType.Music;
 
 	public override string IdZone => "instance_wedding";
-
-	public override string RewardSuffix => "Music";
-
-	public override string RefDrama2 => destScore.ToString() ?? "";
 
 	public override int KarmaOnFail => 0;
 
@@ -33,17 +18,20 @@ public class QuestWedding : QuestInstance
 
 	public override string GetTextProgress()
 	{
-		return "progressMusic".lang(score.ToString() ?? "", destScore.ToString() ?? "");
+		return "progressWedding".lang();
 	}
 
-	public override int GetRewardPlat(int money)
+	public override void OnDropReward()
 	{
-		return difficulty + EClass.rnd(2);
-	}
-
-	public override void OnInit()
-	{
-		destScore = difficulty * 150;
-		destScore += EClass.rnd(destScore / 5);
+		Thing thing = ThingGen.Create("milkcan");
+		thing.MakeRefFrom(person.chara);
+		EClass.player.DropReward(thing);
+		thing = ThingGen.Create("musicbox_memory");
+		thing.MakeRefFrom(person.chara, EClass.pc, simple: true);
+		DropReward(thing);
+		if (!EClass.pc.elements.Has(6628))
+		{
+			EClass.pc.elements.Learn(6628);
+		}
 	}
 }

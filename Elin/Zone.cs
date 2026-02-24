@@ -130,6 +130,8 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public virtual string IdBiome => map.config.idBiome.IsEmpty(base.source.idBiome);
 
+	public virtual int SightRadiusBonus => 0;
+
 	public virtual string IDGenerator => null;
 
 	public virtual string TextWidgetDate => "";

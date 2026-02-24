@@ -13,6 +13,11 @@ public class GameLang : EClass
 
 	public static string refDrama5;
 
+	public static void ClearDramaRef()
+	{
+		refDrama1 = (refDrama2 = (refDrama3 = (refDrama3 = (refDrama5 = null))));
+	}
+
 	public static string ConvertDrama(string text, Chara c = null)
 	{
 		if (!EClass.core.IsGameStarted)
@@ -22,12 +27,14 @@ public class GameLang : EClass
 		StringBuilder stringBuilder = new StringBuilder();
 		string newValue = "";
 		string newValue2 = "";
+		string newValue3 = "";
 		string name = EClass.game.religions.GetRandomReligion(onlyJoinable: false).Name;
 		string @ref = "-";
 		if (c != null)
 		{
 			newValue = c.NameBraced;
 			newValue2 = (c.IsMale ? "his" : "her").lang();
+			newValue3 = (c.IsMale ? "him" : "her").lang();
 			name = c.faith.Name;
 			@ref = CalcGold.Hire(c).ToString() ?? "";
 		}
@@ -81,6 +88,7 @@ public class GameLang : EClass
 		stringBuilder.Replace("#costHire", "costHire".lang(@ref));
 		stringBuilder.Replace("#self", newValue);
 		stringBuilder.Replace("#his", newValue2);
+		stringBuilder.Replace("#him", newValue3);
 		stringBuilder.Replace("#me", newValue);
 		if (int.TryParse(refDrama1, out var result))
 		{
@@ -129,6 +137,7 @@ public class GameLang : EClass
 		stringBuilder.Replace("#guild_title", Guild.CurrentDrama.relation.TextTitle);
 		stringBuilder.Replace("#guild", Guild.CurrentDrama.Name);
 		stringBuilder.Replace("#race", EClass.pc.race.GetName());
+		stringBuilder.Replace("#pc_full", EClass.pc.NameBraced);
 		stringBuilder.Replace("#pc", EClass.pc.NameSimple);
 		stringBuilder.Replace("#aka", EClass.pc.Aka);
 		stringBuilder.Replace("#bigdaddy", "bigdaddy".lang());

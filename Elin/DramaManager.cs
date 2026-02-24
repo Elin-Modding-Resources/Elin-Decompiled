@@ -502,7 +502,7 @@ public class DramaManager : EMono
 		case "setDialog":
 			AddEvent(delegate
 			{
-				SetDialog(p2);
+				SetDialog(p2.IsEmpty("Default"));
 			});
 			break;
 		case "Playlist":
@@ -833,11 +833,7 @@ public class DramaManager : EMono
 			{
 				LayerDrama.Instance.SetOnKill(delegate
 				{
-					tg.chara.PlaySound("whip");
-					tg.chara.Say("slap", tg.chara, EMono.pc);
-					EMono.pc.PlayAnime(AnimeID.Shiver);
-					EMono.pc.DamageHP(5 + EClass.rndHalf(EMono.pc.MaxHP / 3), 919, 100, AttackSource.Condition);
-					EMono.pc.OnInsulted();
+					tg.chara.Slap(EMono.pc);
 				});
 			});
 			break;
@@ -1116,6 +1112,8 @@ public class DramaManager : EMono
 					return true;
 				}
 			}
+			return false;
+		case "wedding_whoring":
 			return false;
 		case "duponne_mino":
 			return EMono.pc.things.Find("minohorn") != null;

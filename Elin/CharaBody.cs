@@ -217,6 +217,13 @@ public class CharaBody : EClass
 			Unequip(slot, refresh: false);
 		}
 		Unequip(thing, refresh: false);
+		if (thing.c_uidAttune != 0)
+		{
+			foreach (Thing item in owner.things.List((Thing a) => a.isEquipped && a.c_uidAttune != 0 && (a.id == "amulet_engagement" || a.id == "ring_engagement")))
+			{
+				Unequip(item);
+			}
+		}
 		if (thing.parent != owner)
 		{
 			if (msg && owner.IsPC && thing.parent is Thing)

@@ -37,6 +37,7 @@ public class LayerQuestBoard : ELayer
 			ELayer._zone.branch.UpdateReqruits();
 		}
 		windows[0].setting.tabs[1].disable = !ELayer._zone.IsPCFaction;
+		GameLang.ClearDramaRef();
 	}
 
 	public override void OnSwitchContent(Window window)

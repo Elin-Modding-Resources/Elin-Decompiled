@@ -975,8 +975,10 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
-			EClass.ui.Say("dawedadwwdaadwawdawd");
-			EClass.ui.Say("fsefsefsefesf", EClass.core.refs.spriteNoIng);
+			Chara c2 = EClass._map.charas.RandomItem();
+			Thing thing = ThingGen.Create("musicbox_memory");
+			thing.MakeRefFrom(c2, EClass.pc, simple: true);
+			EClass.pc.Pick(thing);
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
@@ -1188,8 +1190,8 @@ public class CoreDebug : EScriptable
 		{
 			for (int num4 = hitPoint.detail.things.Count - 1; num4 >= 0; num4--)
 			{
-				Thing thing = hitPoint.detail.things[num4];
-				Debug.Log(thing.id + "/" + thing.Pref.height + "/" + thing.trait?.ToString() + "/" + thing.source.tileType.CanStack + "/" + thing.source.tileType?.ToString() + "/" + thing.isSynced + "/" + RenderObject.syncList.Contains(thing.renderer));
+				Thing thing2 = hitPoint.detail.things[num4];
+				Debug.Log(thing2.id + "/" + thing2.Pref.height + "/" + thing2.trait?.ToString() + "/" + thing2.source.tileType.CanStack + "/" + thing2.source.tileType?.ToString() + "/" + thing2.isSynced + "/" + RenderObject.syncList.Contains(thing2.renderer));
 			}
 		}
 		if (!Application.isEditor)
@@ -1265,39 +1267,39 @@ public class CoreDebug : EScriptable
 		case DebugHotkey.Item:
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				Thing thing2 = ThingGen.Create("stairsDown_cave");
-				EClass._zone.AddCard(thing2, EClass.pc.pos);
-				thing2.SetPlaceState(PlaceState.installed);
-			}
-			if (Input.GetKeyDown(KeyCode.Alpha2))
-			{
-				Thing thing3 = ThingGen.Create("stairs");
+				Thing thing3 = ThingGen.Create("stairsDown_cave");
 				EClass._zone.AddCard(thing3, EClass.pc.pos);
 				thing3.SetPlaceState(PlaceState.installed);
 			}
-			if (Input.GetKeyDown(KeyCode.Alpha3))
+			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				Thing thing4 = ThingGen.Create("sign");
-				EClass._zone.AddCard(thing4, hitPoint);
+				Thing thing4 = ThingGen.Create("stairs");
+				EClass._zone.AddCard(thing4, EClass.pc.pos);
 				thing4.SetPlaceState(PlaceState.installed);
 			}
-			if (Input.GetKeyDown(KeyCode.Alpha4))
+			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				Thing thing5 = ThingGen.Create("sign2");
+				Thing thing5 = ThingGen.Create("sign");
 				EClass._zone.AddCard(thing5, hitPoint);
 				thing5.SetPlaceState(PlaceState.installed);
 			}
-			if (Input.GetKeyDown(KeyCode.Alpha5))
+			if (Input.GetKeyDown(KeyCode.Alpha4))
 			{
-				Thing thing6 = ThingGen.Create("well");
+				Thing thing6 = ThingGen.Create("sign2");
 				EClass._zone.AddCard(thing6, hitPoint);
 				thing6.SetPlaceState(PlaceState.installed);
 			}
-			if (Input.GetKeyDown(KeyCode.Alpha6))
+			if (Input.GetKeyDown(KeyCode.Alpha5))
 			{
-				Thing thing7 = ThingGen.Create("altar");
+				Thing thing7 = ThingGen.Create("well");
 				EClass._zone.AddCard(thing7, hitPoint);
 				thing7.SetPlaceState(PlaceState.installed);
+			}
+			if (Input.GetKeyDown(KeyCode.Alpha6))
+			{
+				Thing thing8 = ThingGen.Create("altar");
+				EClass._zone.AddCard(thing8, hitPoint);
+				thing8.SetPlaceState(PlaceState.installed);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha7))
 			{

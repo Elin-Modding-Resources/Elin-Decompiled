@@ -55,7 +55,7 @@ public class QuestEscort : QuestDestZone
 	{
 		if (target != null)
 		{
-			target.ReleaseMinion();
+			target.UnmakeMinion();
 			if (EClass._zone.IsRegion)
 			{
 				target.Destroy();

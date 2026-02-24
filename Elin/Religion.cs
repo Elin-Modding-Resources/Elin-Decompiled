@@ -153,11 +153,8 @@ public class Religion : EClass
 
 	public void Talk(string idTalk, Card c = null, Card agent = null)
 	{
-		if (!IsEyth)
-		{
-			Msg.SetColor(Msg.colors.TalkGod);
-			Msg.Say("<i>" + GetGodTalk(idTalk) + " </i>", c ?? EClass.pc);
-		}
+		Msg.SetColor(Msg.colors.TalkGod);
+		Msg.Say("<i>" + GetGodTalk(idTalk) + " </i>", c ?? EClass.pc);
 	}
 
 	public string GetGodTalk(string suffix)

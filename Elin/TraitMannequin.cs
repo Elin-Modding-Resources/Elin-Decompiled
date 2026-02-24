@@ -18,9 +18,9 @@ public class TraitMannequin : TraitItem
 	{
 		if (base.CanUse(c))
 		{
-			if (!EClass._zone.IsPCFaction)
+			if (!EClass._zone.IsPCFaction && !(EClass._zone is Zone_Tent))
 			{
-				return EClass._zone is Zone_Tent;
+				return EClass.debug.enable;
 			}
 			return true;
 		}

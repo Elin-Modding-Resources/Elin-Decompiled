@@ -1143,6 +1143,10 @@ public class Thing : Card
 			Chara chara = EClass.game.cards.globalCharas.Find(base.c_uidAttune);
 			AddText("isAttuned".lang((chara == null) ? "???" : chara.NameSimple), FontColor.Ether);
 		}
+		if (GetBool(128))
+		{
+			AddText("isPartyFood", FontColor.Ether);
+		}
 		if (base.isGifted && GetRoot() != EClass.pc)
 		{
 			AddText("isGifted", FontColor.Ether);

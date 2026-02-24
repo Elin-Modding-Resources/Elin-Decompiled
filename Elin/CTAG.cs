@@ -50,5 +50,6 @@ public enum CTAG
 	plant,
 	antiSpider,
 	shield,
-	humanSpeak
+	humanSpeak,
+	throwBall
 }

@@ -324,7 +324,7 @@ public class ConSleep : BadCondition
 			{
 				member.SAN.Mod(-15);
 			}
-			if (member.HasElement(1275) && !member.HasCondition<ConRebirth>())
+			if (member.Evalue(1275) >= 2 && !member.HasCondition<ConRebirth>())
 			{
 				member.AddCondition<ConRebirth>();
 			}

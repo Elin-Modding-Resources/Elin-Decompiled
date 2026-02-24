@@ -124,10 +124,6 @@ public class LayerDrama : ELayer
 		alwaysVisible = null;
 		EInput.requireConfirmReset = true;
 		maxBGMVolume = false;
-		GameLang.refDrama1 = "";
-		GameLang.refDrama2 = "";
-		GameLang.refDrama3 = "";
-		GameLang.refDrama4 = "";
-		GameLang.refDrama5 = "";
+		GameLang.ClearDramaRef();
 	}
 }

@@ -76,7 +76,7 @@ public class TCOrbitChara : TCOrbit
 			{
 				emo = Emo2.hintEvent;
 			}
-			else if (owner.isRestocking && (!owner.IsPCParty || EMono._zone.IsPCFaction) && owner.trait.GetRestockedIcon() != 0 && !(EMono._zone is Zone_Dungeon))
+			else if (owner.isRestocking && (!owner.IsPCParty || EMono._zone.IsPCFaction) && owner.trait.GetRestockedIcon() != 0 && !(EMono._zone is Zone_Dungeon) && !EMono._zone.IsInstance)
 			{
 				emo = owner.trait.GetRestockedIcon();
 			}

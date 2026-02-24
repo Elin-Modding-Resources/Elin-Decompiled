@@ -557,7 +557,7 @@ public class AI_PlayMusic : AIAct
 		}
 		if (thing == null)
 		{
-			thing = ThingGen.Create(text).SetNum(num);
+			thing = ThingGen.Create(text, -1, owner.LV).SetNum(num);
 		}
 		ignoreDamage = true;
 		ActThrow.Throw(c, owner.pos, thing, (!punish) ? ThrowMethod.Reward : ThrowMethod.Punish);

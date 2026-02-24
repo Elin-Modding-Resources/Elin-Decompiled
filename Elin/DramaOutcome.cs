@@ -417,6 +417,38 @@ public class DramaOutcome : EMono
 		}
 	}
 
+	public void wedding_setup()
+	{
+		Chara chara = tg.chara;
+		chara.MoveImmediate(new Point(51, 54), focus: false);
+		EMono.pc.LookAt(chara);
+		chara.LookAt(EMono.pc);
+		chara.SetFeat(1275, 2);
+	}
+
+	public void wedding_fail()
+	{
+		LayerDrama.Instance.SetOnKill(delegate
+		{
+			tg.chara.Slap(EMono.pc, slapToDeath: true);
+		});
+	}
+
+	public void wedding_kiss()
+	{
+		EMono.pc.Kiss(tg.chara);
+		tg.chara.Kiss(EMono.pc);
+	}
+
+	public void wedding_success()
+	{
+		EMono.pc.PlayEffect("aura_heaven");
+		tg.chara.PlayEffect("aura_heaven");
+		EMono.pc.PlaySound("godbless");
+		EMono.pc.Say("married", EMono.pc, tg.chara);
+		EMono.pc.faith.Talk("wedding");
+	}
+
 	public void give_catball_recipe()
 	{
 		EMono.player.DropReward(ThingGen.CreateRecipe("silvercatball"));

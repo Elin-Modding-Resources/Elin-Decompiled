@@ -13,4 +13,6 @@ public class LoveData : EClass
 
 	[JsonProperty]
 	public string nameZoneMarriage;
+
+	public bool IsWed => dateWedding != 0;
 }

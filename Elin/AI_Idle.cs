@@ -199,20 +199,20 @@ public class AI_Idle : AIAct
 				Thing thing2 = owner.things.Find("polish_powder");
 				if (thing2 != null && EClass._map.props.installed.Find<TraitGrindstone>() != null)
 				{
-					foreach (Thing thing9 in owner.things)
+					foreach (Thing thing10 in owner.things)
 					{
-						if (!thing9.IsEquipment || thing9.encLV >= 0)
+						if (!thing10.IsEquipment || thing10.encLV >= 0)
 						{
 							continue;
 						}
 						for (int l = 0; l < 5; l++)
 						{
-							if (thing9.encLV >= 0)
+							if (thing10.encLV >= 0)
 							{
 								break;
 							}
-							owner.Say("polish", owner, thing9);
-							thing9.ModEncLv(1);
+							owner.Say("polish", owner, thing10);
+							thing10.ModEncLv(1);
 							thing2.ModNum(-1);
 							if (thing2.isDestroyed)
 							{
@@ -342,25 +342,25 @@ public class AI_Idle : AIAct
 						}
 						if (flag2)
 						{
-							int num = owner.GetCurrency();
-							if (num >= 20000)
+							int num2 = owner.GetCurrency();
+							if (num2 >= 20000)
 							{
-								num = 20000;
+								num2 = 20000;
 							}
 							owner.PlaySound("pay");
-							int num2 = num / 200;
+							int num3 = num2 / 200;
 							foreach (Element value2 in owner.elements.dict.Values)
 							{
 								if (!(value2.source.category != "skill"))
 								{
-									int num3 = num2 * 100 / (100 + (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) * (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) / 100);
-									num3 += 1 + EClass.rnd(3);
-									owner.elements.ModTempPotential(value2.id, Mathf.Max(1, num3), 9999);
+									int num4 = num3 * 100 / (100 + (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) * (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) / 100);
+									num4 += 1 + EClass.rnd(3);
+									owner.elements.ModTempPotential(value2.id, Mathf.Max(1, num4), 9999);
 								}
 							}
-							Msg.Say("party_train", owner, Lang._currency(num));
+							Msg.Say("party_train", owner, Lang._currency(num2));
 							owner.PlaySound("ding_potential");
-							owner.ModCurrency(-num);
+							owner.ModCurrency(-num2);
 						}
 					}
 				}
@@ -393,8 +393,8 @@ public class AI_Idle : AIAct
 					{
 						owner.SetEnemy(chara2.enemy);
 					}
-					int num4 = owner.Dist(chara2.pos);
-					if (owner.source.aiIdle != "root" && num4 > EClass.game.config.tactics.AllyDistance(owner) && EClass._zone.PetFollow && owner.c_minionType == MinionType.Default)
+					int num5 = owner.Dist(chara2.pos);
+					if (owner.source.aiIdle != "root" && num5 > EClass.game.config.tactics.AllyDistance(owner) && EClass._zone.PetFollow && owner.c_minionType == MinionType.Default)
 					{
 						if (owner.HasAccess(chara2.pos))
 						{
@@ -565,6 +565,8 @@ public class AI_Idle : AIAct
 				}
 			}
 		}
+		string id;
+		int num;
 		if (owner.isSynced && !owner.IsPCParty)
 		{
 			if (owner.IsPCFaction && owner.GetInt(32) + 4320 < EClass.world.date.GetRaw())
@@ -578,7 +580,63 @@ public class AI_Idle : AIAct
 			}
 			else if (EClass.player.stats.turns > owner.turnLastSeen + 50 && Los.IsVisible(EClass.pc, owner) && owner.CanSee(EClass.pc))
 			{
-				if (EClass.rnd(5) == 0 && owner.hostility >= Hostility.Neutral && EClass.pc.IsPCC && EClass.pc.pccData.state == PCCState.Undie && !EClass.pc.pos.cell.IsTopWaterAndNoSnow)
+				if (EClass._zone is Zone_Wedding)
+				{
+					id = "money";
+					num = EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(500)))) + 1;
+					string[] strs = new string[4] { "1294", "1294", "1130", "1131" };
+					ThrowMethod throwMethod = ThrowMethod.Reward;
+					if (owner.affinity.CurrentStage <= Affinity.Stage.Hate || owner.IsMarried || (EClass.debug.enable && EClass.rnd(10) == 0))
+					{
+						owner.Talk("curse_wed");
+						throwMethod = ThrowMethod.Punish;
+						SetId("stone", 1);
+						if (EClass.rnd(3) == 0)
+						{
+							SetId("shuriken", 1);
+						}
+						if (EClass.rnd(3) == 0)
+						{
+							SetId("explosive", 1);
+						}
+						if (EClass.rnd(3) == 0)
+						{
+							SetId("explosive_mega", 1);
+						}
+						if (EClass.rnd(3) == 0)
+						{
+							SetId("rock", 1);
+						}
+					}
+					else
+					{
+						if (EClass.rnd(2) == 0)
+						{
+							owner.PlaySound((EClass.rnd(3) == 0) ? "clap1" : ((EClass.rnd(2) == 0) ? "clap2" : "clap3"));
+						}
+						owner.Talk("grats_wed");
+						if (EClass.rnd(5) == 0)
+						{
+							SetId("money2", 1);
+						}
+						if (EClass.rnd(4) == 0)
+						{
+							SetId("plat", 1);
+						}
+						if (EClass.rnd(3) == 0)
+						{
+							SetId(strs.RandomItem(), 1);
+						}
+					}
+					Thing thing4 = ThingGen.Create(id, -1, owner.LV).SetNum(num);
+					thing4.SetRandomDir();
+					ActThrow.Throw(owner, EClass.pc.pos, thing4, throwMethod);
+					if (EClass.pc.IsAliveInCurrentZone && throwMethod == ThrowMethod.Reward && thing4.ExistsOnMap && thing4.pos.Equals(EClass.pc.pos) && !strs.Contains(thing4.id))
+					{
+						EClass.pc.Pick(thing4);
+					}
+				}
+				else if (EClass.rnd(5) == 0 && owner.hostility >= Hostility.Neutral && EClass.pc.IsPCC && EClass.pc.pccData.state == PCCState.Undie && !EClass.pc.pos.cell.IsTopWaterAndNoSnow)
 				{
 					owner.Talk("pervert3");
 				}
@@ -592,7 +650,7 @@ public class AI_Idle : AIAct
 					}
 					if ((flag4 ? (EClass.player.karma >= 90) : (EClass.player.karma <= 10)) && EClass.rnd(10) == 0)
 					{
-						Thing t2 = ThingGen.Create("stone");
+						Thing t2 = ThingGen.Create("stone", -1, owner.LV);
 						AI_PlayMusic.ignoreDamage = true;
 						ActThrow.Throw(owner, EClass.pc.pos, t2, ThrowMethod.Punish);
 						AI_PlayMusic.ignoreDamage = false;
@@ -616,9 +674,9 @@ public class AI_Idle : AIAct
 			{
 				if (owner.noMove)
 				{
-					foreach (Thing thing10 in owner.pos.Things)
+					foreach (Thing thing11 in owner.pos.Things)
 					{
-						if (thing10.IsInstalled && thing10.trait is TraitGeneratorWheel)
+						if (thing11.IsInstalled && thing11.trait is TraitGeneratorWheel)
 						{
 							owner.Talk("labor");
 							owner.PlayAnime(AnimeID.Shiver);
@@ -666,26 +724,26 @@ public class AI_Idle : AIAct
 			}
 			EClass.Sound.PlayAmbience(owner.trait.IdAmbience, owner.pos.Position(), mtp);
 		}
-		if (EClass.rnd(2000) == 0 && owner.IsHuman && (owner.host == null || owner.host.ride != owner))
+		if (EClass.rnd((EClass._zone is Zone_Wedding && !owner.HasCondition<ConDrunk>()) ? 30 : 2000) == 0 && owner.IsHuman && (owner.host == null || owner.host.ride != owner))
 		{
-			Thing thing4 = owner.things.Find((Thing a) => !a.IsNegativeGift && a.trait.CanDrink(owner), recursive: false);
-			if (thing4 != null && thing4.trait is TraitPotion && owner.IsPCParty)
+			Thing thing5 = owner.things.Find((Thing a) => !a.IsNegativeGift && a.trait.CanDrink(owner), recursive: false);
+			if (thing5 != null && thing5.trait is TraitPotion && owner.IsPCParty)
 			{
-				thing4 = null;
+				thing5 = null;
 			}
 			bool flag5 = EClass.Branch != null && EClass.Branch.policies.IsActive(2503);
 			if (owner.homeBranch != null && owner.homeBranch.policies.IsActive(2503))
 			{
 				flag5 = true;
 			}
-			if (thing4 == null && !flag5)
+			if (thing5 == null && !flag5)
 			{
-				thing4 = ThingGen.Create("crimAle");
-				owner.Drink(thing4);
+				thing5 = ThingGen.Create("crimAle");
+				owner.Drink(thing5);
 			}
-			if (thing4 != null && !thing4.isDestroyed)
+			if (thing5 != null && !thing5.isDestroyed)
 			{
-				owner.TryUse(thing4);
+				owner.TryUse(thing5);
 				yield return Restart();
 			}
 		}
@@ -729,12 +787,12 @@ public class AI_Idle : AIAct
 			if (EClass.rnd(3) == 0 && owner.IsCat)
 			{
 				Chara chara4 = ((EClass.rnd(5) == 0) ? EClass.pc.party.members.RandomItem() : EClass._map.charas.RandomItem());
-				Thing thing5 = chara4.things.Find<TraitFoodChuryu>();
-				if (chara4 != owner && thing5 != null)
+				Thing thing6 = chara4.things.Find<TraitFoodChuryu>();
+				if (chara4 != owner && thing6 != null)
 				{
 					yield return Do(new AI_Churyu
 					{
-						churyu = thing5,
+						churyu = thing6,
 						slave = chara4
 					});
 				}
@@ -830,8 +888,8 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(EClass.debug.enable ? 3 : 30) == 0)
 		{
-			Thing thing6 = owner.things.Find<TraitBall>();
-			if (thing6 == null)
+			Thing thing7 = owner.things.Find<TraitBall>();
+			if (thing7 == null)
 			{
 				if (!LayerCraft.Instance && !LayerDragGrid.Instance)
 				{
@@ -851,7 +909,7 @@ public class AI_Idle : AIAct
 				{
 					if (EClass.rnd(3) != 0 && chara7 != owner && chara7.Dist(owner) <= 6 && chara7.Dist(owner) >= 3 && Los.IsVisible(chara7, owner))
 					{
-						ActThrow.Throw(owner, chara7.pos, thing6);
+						ActThrow.Throw(owner, chara7.pos, thing7);
 						break;
 					}
 				}
@@ -907,25 +965,25 @@ public class AI_Idle : AIAct
 					break;
 				}
 				List<Thing> list4 = owner.things.List((Thing a) => a.parent == owner && (a.category.id == "spellbook" || a.category.id == "ancientbook" || a.category.id == "skillbook"), onlyAccessible: true);
-				Thing thing7 = null;
+				Thing thing8 = null;
 				if (list4.Count > 0)
 				{
-					thing7 = list4.RandomItem();
-					if (!thing7.trait.CanRead(owner))
+					thing8 = list4.RandomItem();
+					if (!thing8.trait.CanRead(owner))
 					{
-						thing7 = null;
+						thing8 = null;
 					}
 				}
-				if (thing7 == null)
+				if (thing8 == null)
 				{
 					if (owner.things.IsFull())
 					{
 						break;
 					}
-					thing7 = ThingGen.CreateFromCategory((EClass.rnd(5) != 0) ? "spellbook" : "ancientbook");
-					thing7.isNPCProperty = true;
+					thing8 = ThingGen.CreateFromCategory((EClass.rnd(5) != 0) ? "spellbook" : "ancientbook");
+					thing8.isNPCProperty = true;
 				}
-				if (!(thing7.id == "1084") || !owner.IsPCFaction)
+				if (!(thing8.id == "1084") || !owner.IsPCFaction)
 				{
 					if (!owner.HasElement(285))
 					{
@@ -933,7 +991,7 @@ public class AI_Idle : AIAct
 					}
 					yield return Do(new AI_Read
 					{
-						target = thing7
+						target = thing8
 					});
 				}
 				break;
@@ -995,10 +1053,10 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(100) == 0 && owner.id == "bee")
 		{
-			Thing thing8 = EClass._map.ListThing<TraitBeekeep>()?.RandomItem();
-			if (thing8 != null)
+			Thing thing9 = EClass._map.ListThing<TraitBeekeep>()?.RandomItem();
+			if (thing9 != null)
 			{
-				yield return DoGoto(thing8.pos);
+				yield return DoGoto(thing9.pos);
 			}
 		}
 		if (EClass.rnd(10) == 0 && !EClass._zone.IsUnderwater && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
@@ -1045,6 +1103,11 @@ public class AI_Idle : AIAct
 				}
 			}
 			return null;
+		}
+		void SetId(string _id, int _num)
+		{
+			id = _id;
+			num = _num;
 		}
 	}
 

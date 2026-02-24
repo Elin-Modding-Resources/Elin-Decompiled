@@ -2355,7 +2355,7 @@ public class Chara : Card, IPathfindWalker
 		orgPos = null;
 		base.c_summonDuration = 0;
 		base.isSummon = false;
-		ReleaseMinion();
+		UnmakeMinion();
 		SetInt(32);
 		Refresh();
 	}
@@ -2384,7 +2384,7 @@ public class Chara : Card, IPathfindWalker
 
 	public void MakeMinion(Chara _master, MinionType type = MinionType.Default)
 	{
-		ReleaseMinion();
+		UnmakeMinion();
 		Hostility hostility2 = (base.c_originalHostility = (_master.IsPCFaction ? Hostility.Ally : _master.hostility));
 		this.hostility = hostility2;
 		base.c_uidMaster = _master.uid;
@@ -2393,19 +2393,7 @@ public class Chara : Card, IPathfindWalker
 		Refresh();
 	}
 
-	public bool HasMinion(string id)
-	{
-		foreach (Chara chara in EClass._map.charas)
-		{
-			if (chara.c_uidMaster == base.uid)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public void ReleaseMinion()
+	public void UnmakeMinion()
 	{
 		base.c_uidMaster = 0;
 		master = null;
@@ -2420,6 +2408,34 @@ public class Chara : Card, IPathfindWalker
 		}
 		ai.Cancel();
 		Refresh();
+	}
+
+	public void BanishAllMinions()
+	{
+		List<Chara> list = new List<Chara>();
+		foreach (Chara chara in EClass._map.charas)
+		{
+			if (chara.IsMinion && chara.master == this)
+			{
+				list.Add(chara);
+			}
+		}
+		foreach (Chara item in list)
+		{
+			item.Banish(this);
+		}
+	}
+
+	public bool HasMinion(string id)
+	{
+		foreach (Chara chara in EClass._map.charas)
+		{
+			if (chara.c_uidMaster == base.uid)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void SetSummon(int duration)
@@ -5428,6 +5444,10 @@ public class Chara : Card, IPathfindWalker
 			renderer.RefreshStateIcon();
 			ClearFOV();
 		}
+		if (base.hp >= 0)
+		{
+			base.hp = -1;
+		}
 		string text = "";
 		"dead_in".langGame(EClass._zone.Name);
 		string text2 = ((origin == null) ? "" : origin.GetName(NameStyle.Full));
@@ -6328,6 +6348,44 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public void Kiss(Chara c)
+	{
+		EClass.player.forceTalk = true;
+		Talk("kiss", null, null, IsPC);
+		PlaySound("kiss");
+		int num = 2 + EClass.rnd(4) + ((!c.IsPC && c.affinity.CurrentStage < Affinity.Stage.Fond) ? (-EClass.rnd(10)) : 0);
+		c.ShowEmo((num > 0) ? Emo.love : Emo.sad);
+		if (num > 0 && EClass.rnd(IsPC ? 100 : 5000) == 0)
+		{
+			c.MakeEgg();
+		}
+		if (IsPC && this != c)
+		{
+			if (c.interest > 0)
+			{
+				c.ModAffinity(EClass.pc, num);
+				c.interest -= 20 + EClass.rnd(10);
+			}
+			else
+			{
+				c.Say("affinityNone", c, EClass.pc);
+			}
+		}
+	}
+
+	public void Slap(Chara c, bool slapToDeath = false)
+	{
+		PlaySound("whip");
+		Say("slap", this, c);
+		c.PlayAnime(AnimeID.Shiver);
+		c.DamageHP(slapToDeath ? (c.MaxHP * 2) : (5 + EClass.rndHalf(EClass.pc.MaxHP / 3)), 919, 100, AttackSource.Condition);
+		c.OnInsulted();
+		if (slapToDeath && c.IsAliveInCurrentZone)
+		{
+			c.Die();
+		}
+	}
+
 	public Chara SetEnemy(Chara c = null)
 	{
 		enemy = c;
@@ -7131,7 +7189,7 @@ public class Chara : Card, IPathfindWalker
 				ShowDialog("_chara", "escort");
 				return;
 			}
-			if (EClass._zone is Zone_Music)
+			if (EClass._zone is Zone_Music || EClass._zone is Zone_Wedding)
 			{
 				ShowDialog("_chara", "party");
 				return;
@@ -8142,7 +8200,7 @@ public class Chara : Card, IPathfindWalker
 		if (base.c_love != null)
 		{
 			base.c_love.dateMarriage = 0;
-			SetFeat(1275, 0, msg: true);
+			SetFeat(1275, 0);
 			EClass.player.stats.divorced++;
 		}
 	}

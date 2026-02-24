@@ -201,7 +201,7 @@ public class DramaCustomSequence : EClass
 				{
 					Choice2("daBout", "_bout");
 				}
-				if (c.isDrunk || c.IsMarried || EClass.debug.enable)
+				if (c.isDrunk || c.HasElement(1275) || EClass.debug.enable)
 				{
 					Choice2(flag2 ? "daBird" : "daTail", "_tail");
 				}
@@ -311,7 +311,7 @@ public class DramaCustomSequence : EClass
 		}
 		Step("_factionOther");
 		Talk("what", StepDefault);
-		if (!c.IsMarried)
+		if (!c.IsMarried || EClass.debug.enable)
 		{
 			foreach (Thing item5 in EClass.pc.things.List((Thing a) => !a.c_isImportant && !a.isEquipped && a.c_uidAttune == 0 && (a.id == "amulet_engagement" || a.id == "ring_engagement")))
 			{
@@ -322,7 +322,7 @@ public class DramaCustomSequence : EClass
 				});
 			}
 		}
-		if (c.IsMarried && EClass.debug.enable)
+		if ((c.IsMarried && !c.c_love.IsWed) || EClass.debug.enable)
 		{
 			Choice("daWed", "_wed");
 		}
@@ -618,20 +618,62 @@ public class DramaCustomSequence : EClass
 		Step("_wed");
 		Method(delegate
 		{
-			TempTalkTopic(c.IsMarried ? "tail4" : (bird + "1"), null);
-			Choice("yes2", delegate
+			Thing deed = EClass.pc.things.Find("deed_wedding");
+			if (deed == null && !EClass.debug.enable)
 			{
-				TempTalkTopic(bird + "2", "_wed2");
-			});
-			Choice("no2", StepDefault, cancel: true).SetOnClick(RumorChill);
+				TempTalkTopic("wedding_deed", StepDefault);
+			}
+			else if (EClass._zone.IsInstance || !EClass._zone.IsPCFaction)
+			{
+				TempTalkTopic("wedding_zone", StepDefault);
+			}
+			else
+			{
+				TempTalkTopic("wedding_confirm", null);
+				Choice("yes", delegate
+				{
+					TempTalkTopic("wedding_accept", null);
+					if (deed != null)
+					{
+						deed.ModNum(-1);
+					}
+					if (c.c_love != null)
+					{
+						c.c_love.dateWedding = EClass.world.date.GetRaw();
+					}
+				});
+				Choice("no", StepDefault, cancel: true).SetOnClick(RumorChill);
+			}
 		});
 		Step("_wed2");
 		Method(delegate
 		{
+			EClass.pc.BanishAllMinions();
+			c.BanishAllMinions();
+			if (!c.IsPCParty)
+			{
+				EClass.pc.party.AddMemeber(c);
+			}
+			foreach (Chara item7 in EClass.pc.party.members.ToList())
+			{
+				if (item7 != EClass.pc && item7 != c)
+				{
+					EClass.pc.party.RemoveMember(item7);
+				}
+			}
+			if (c.host != null)
+			{
+				ActRide.Unride(EClass.pc, c == EClass.pc.parasite, talk: false);
+			}
 			Quest quest = Quest.Create("wedding", null, c, assignQuest: false);
 			EClass.game.quests.Start(quest);
 			Zone z2 = quest.CreateInstanceZone(c);
-			EClass.pc.MoveZone(z2, ZoneTransition.EnterState.Center);
+			EClass.pc.MoveZone(z2, new ZoneTransition
+			{
+				state = ZoneTransition.EnterState.Exact,
+				x = 50,
+				z = 53
+			});
 			LayerDrama.Activate("_adv", "general", "wedding", c);
 		});
 		End();
@@ -834,9 +876,9 @@ public class DramaCustomSequence : EClass
 		Method(delegate
 		{
 			TempTalkTopic("blooming1", null);
-			foreach (Chara item7 in EClass.pc.party.members.Where((Chara c2) => c2.CanBloom()))
+			foreach (Chara item8 in EClass.pc.party.members.Where((Chara c2) => c2.CanBloom()))
 			{
-				Chara c4 = item7;
+				Chara c4 = item8;
 				Choice("daBloom".lang(c4.Name), delegate
 				{
 					if (EClass._zone.influence < 10)
@@ -948,9 +990,9 @@ public class DramaCustomSequence : EClass
 					},
 					onList = delegate
 					{
-						foreach (ResearchPlan item8 in plans)
+						foreach (ResearchPlan item9 in plans)
 						{
-							list.Add(item8);
+							list.Add(item9);
 						}
 					}
 				};
@@ -1222,7 +1264,7 @@ public class DramaCustomSequence : EClass
 					},
 					onList = delegate
 					{
-						foreach (SourceElement.Row item9 in EClass.sources.elements.rows.Where(delegate(SourceElement.Row a)
+						foreach (SourceElement.Row item10 in EClass.sources.elements.rows.Where(delegate(SourceElement.Row a)
 						{
 							if (a.tag.Contains("unused"))
 							{
@@ -1255,7 +1297,7 @@ public class DramaCustomSequence : EClass
 							return a.category == "skill" && a.categorySub == c.trait.IDTrainer;
 						}).ToList())
 						{
-							list.Add(Element.Create(item9.id));
+							list.Add(Element.Create(item10.id));
 						}
 					}
 				};
@@ -1373,10 +1415,10 @@ public class DramaCustomSequence : EClass
 					{
 						SE.Pay();
 						EClass.pc.ModCurrency(-costIdentify);
-						foreach (Thing item10 in EClass.pc.things.List((Thing t) => !t.IsIdentified, onlyAccessible: true))
+						foreach (Thing item11 in EClass.pc.things.List((Thing t) => !t.IsIdentified, onlyAccessible: true))
 						{
-							item10.Thing.Identify(show: false);
-							if (!item10.IsInstalled)
+							item11.Thing.Identify(show: false);
+							if (!item11.IsInstalled)
 							{
 								numSuperior++;
 							}

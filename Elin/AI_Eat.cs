@@ -13,9 +13,9 @@ public class AI_Eat : AIAct
 	{
 		get
 		{
-			if (target != null)
+			if (target != null && target.isNPCProperty)
 			{
-				return target.isNPCProperty;
+				return !EClass._zone.HasField(10001);
 			}
 			return false;
 		}
@@ -88,6 +88,7 @@ public class AI_Eat : AIAct
 		}
 		int max = ((target.SelfWeight < 100) ? 1 : (2 + (int)Mathf.Sqrt(target.SelfWeight * 2 / 3)));
 		int turn = 0;
+		bool isFeastFood = EClass._zone.HasField(10001) && target.GetBool(128);
 		Progress_Custom seq = new Progress_Custom
 		{
 			cancelWhenMoved = false,
@@ -100,7 +101,7 @@ public class AI_Eat : AIAct
 			onProgress = delegate(Progress_Custom p)
 			{
 				target.PlayAnime(AnimeID.Eat);
-				if (turn == 1 && owner.IsPC && owner.hunger.GetPhase() == 0 && !EClass.debug.godFood)
+				if (turn == 1 && owner.IsPC && owner.hunger.GetPhase() == 0 && !EClass.debug.godFood && !isFeastFood)
 				{
 					owner.Say("eat_full");
 					p.Cancel();
@@ -130,7 +131,7 @@ public class AI_Eat : AIAct
 			},
 			onProgressComplete = delegate
 			{
-				if (owner.IsPC && owner.hunger.GetPhase() == 0 && !EClass.debug.godFood)
+				if (owner.IsPC && owner.hunger.GetPhase() == 0 && !EClass.debug.godFood && !isFeastFood)
 				{
 					owner.Say("eat_full");
 				}

@@ -34,14 +34,15 @@ public class FoodEffect : EClass
 		bool flag4 = c2.HasElement(1205);
 		bool flag5 = food.IsDecayed || flag3;
 		bool flag6 = IsLeftoverable(food);
+		bool flag7 = EClass._zone.HasField(10001) && food.GetBool(128);
 		c2.AddFoodHistory(food);
 		if (c2.IsPCFaction && !c2.IsPC)
 		{
 			int num6 = c2.CountNumEaten(food);
-			bool flag7 = c2.GetFavFood().id == food.id;
-			if (num6 < 2 || flag7)
+			bool flag8 = c2.GetFavFood().id == food.id;
+			if (num6 < 2 || flag8)
 			{
-				if (num6 == 1 || flag7 || EClass.rnd(4) == 0)
+				if (num6 == 1 || flag8 || EClass.rnd(4) == 0)
 				{
 					c2.Talk("foodNice");
 				}
@@ -143,7 +144,7 @@ public class FoodEffect : EClass
 				break;
 			}
 		}
-		float num7 = Mathf.Min(c2.hunger.value, num3);
+		float num7 = (flag7 ? num3 : Mathf.Min(c2.hunger.value, num3));
 		if (c2.hunger.GetPhase() >= 3)
 		{
 			num7 *= 1.1f;
@@ -178,11 +179,11 @@ public class FoodEffect : EClass
 				float num8 = num2 * (float)value.Value;
 				if (value.source.category == "food" && c2.IsPC)
 				{
-					bool flag8 = num8 >= 0f;
-					string text = value.source.GetText(flag8 ? "textInc" : "textDec", returnNull: true);
+					bool flag9 = num8 >= 0f;
+					string text = value.source.GetText(flag9 ? "textInc" : "textDec", returnNull: true);
 					if (text != null)
 					{
-						Msg.SetColor(flag8 ? "positive" : "negative");
+						Msg.SetColor(flag9 ? "positive" : "negative");
 						c2.Say(text);
 					}
 				}
@@ -236,7 +237,7 @@ public class FoodEffect : EClass
 					{
 						break;
 					}
-					goto IL_0f84;
+					goto IL_0fad;
 				case "love":
 					ActEffect.LoveMiracle(c2, EClass.pc, value.Value * 10);
 					break;
@@ -381,8 +382,8 @@ public class FoodEffect : EClass
 		{
 			food.trait.OnDrink(c2);
 		}
-		goto IL_0f84;
-		IL_0f84:
+		goto IL_0fad;
+		IL_0fad:
 		if (consume)
 		{
 			num7 += 5f;
