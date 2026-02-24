@@ -24,7 +24,7 @@ var searchData=
   ['makepair_21',['MakePair',['../classHoardActor.html#af046c1af572b2e80df89d1c4238e0d13',1,'HoardActor.MakePair(CollectibleActor a, CollectibleActor b, float dist=0.26f)'],['../classHoardActor.html#a7419861936af882edb6f407b72b54313',1,'HoardActor.MakePair(CollectibleActor a, CollectibleActor b, Vector3 v)']]],
   ['makepartymemeber_22',['MakePartyMemeber',['../classChara.html#a868468b249c3278c6ac614ed5f2ab51f',1,'Chara']]],
   ['makerandomseed_23',['MakeRandomSeed',['../classTraitSeed.html#a923f82176e5f262b290f9ec55038f5d2',1,'TraitSeed']]],
-  ['makereffrom_24',['MakeRefFrom',['../classCard.html#a407fad867b97e97f9b5d76cfbc3eeb6b',1,'Card.MakeRefFrom(string id)'],['../classCard.html#a7475db722f1b780bee7b6fe70ffe7a07',1,'Card.MakeRefFrom(Card c1, Card c2=null)']]],
+  ['makereffrom_24',['MakeRefFrom',['../classCard.html#a407fad867b97e97f9b5d76cfbc3eeb6b',1,'Card.MakeRefFrom(string id)'],['../classCard.html#a40499d7b2ef1f4ac9299cdfeec421712',1,'Card.MakeRefFrom(Card c1, Card c2=null, bool simple=false)']]],
   ['makereward_25',['MakeReward',['../classAI__OpenGambleChest.html#add0c2ebdc6ffd7ca4be3916dc6f54a10',1,'AI_OpenGambleChest']]],
   ['makeriver_26',['MakeRiver',['../classMapGen.html#a959aa2d3343610fbd153e512b44f9461',1,'MapGen']]],
   ['makeroad_27',['MakeRoad',['../classMapGen.html#a14231af60d94910288cefc15ea6240f7',1,'MapGen']]],

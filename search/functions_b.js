@@ -8,5 +8,6 @@ var searchData=
   ['killall_5',['KillAll',['../classEffectManager.html#a360d1e3dc3e5c5ae72aac8d507e69c9c',1,'EffectManager.KillAll()'],['../classPopManager.html#ac31fa09a706c6ed9c5b0136ce8a0befc',1,'PopManager.KillAll()'],['../classPopperManager.html#a76b01778fa913d650f623ed749f75c16',1,'PopperManager.KillAll()']]],
   ['killanime_6',['KillAnime',['../classCard.html#af2d7a0b14688981da559f28d4da0a39f',1,'Card.KillAnime()'],['../classCardRenderer.html#a235b8f8e50dbc47192acdb910c1981b8',1,'CardRenderer.KillAnime()']]],
   ['killchildren_7',['KillChildren',['../classUIList.html#a8e93b3c4369eb634ab6541b17d61199e',1,'UIList']]],
-  ['killwidgets_8',['KillWidgets',['../classWidgetManager.html#af6ce22bb8a0ebb5b54264e7f19e55e04',1,'WidgetManager']]]
+  ['killwidgets_8',['KillWidgets',['../classWidgetManager.html#af6ce22bb8a0ebb5b54264e7f19e55e04',1,'WidgetManager']]],
+  ['kiss_9',['Kiss',['../classChara.html#a58bf470074acfd6659821d9e5e6da1da',1,'Chara']]]
 ];

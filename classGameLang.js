@@ -1,5 +1,6 @@
 var classGameLang =
 [
+    [ "ClearDramaRef", "classGameLang.html#a7e5124f3c2beb6e51db3f68f2f42ee6d", null ],
     [ "Convert", "classGameLang.html#a5f9ec2b9809b7c775f07fa5bb4e126e0", null ],
     [ "Convert", "classGameLang.html#ac5deecc95235c5bff0d8507dd1b4c306", null ],
     [ "ConvertDrama", "classGameLang.html#a3e58d5fcdd3b345d8af675fe08cfa90a", null ],

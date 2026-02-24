@@ -72,6 +72,7 @@ var classSPELL =
     [ "bolt_Poison", "classSPELL.html#a0a8701d59f8778a816f0cfc524db4113", null ],
     [ "bolt_Sound", "classSPELL.html#a47150c4a2f1a6c0874aa197c6e1ba338", null ],
     [ "bolt_Void", "classSPELL.html#a99cf83cb5d281ef80ebb7cd323db5ad4", null ],
+    [ "FieldFeast", "classSPELL.html#a80c6f70552f9622fb59a695827e3c80b", null ],
     [ "FieldSpider", "classSPELL.html#aa4e805206e3df1f4eca4c387758bba82", null ],
     [ "flare_", "classSPELL.html#a954218af26af0533d71a717e59f63e39", null ],
     [ "flare_Acid", "classSPELL.html#a46c7b66c9a0fe3386daa3c7062610d82", null ],

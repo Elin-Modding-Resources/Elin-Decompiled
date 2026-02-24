@@ -47,6 +47,7 @@ var classCINT =
     [ "isHarvestQuestCrop", "classCINT.html#a7ad3b279d438058b8ad526a5c5acb093", null ],
     [ "isHiredByGold", "classCINT.html#adbc84daa6675a3b147a9c09ad77c0e42", null ],
     [ "isImportant", "classCINT.html#a9eb7e07bd8b0065662428037f58a4811", null ],
+    [ "isPartyFood", "classCINT.html#af1d7475a0ae8f008a8e4f48bccf31c7a", null ],
     [ "IsPC", "classCINT.html#ae9a4b61c748bd25883e191c551a235c7", null ],
     [ "isPrayed", "classCINT.html#aa32d355d466359304c3539a08ed6c0bc", null ],
     [ "isSleepBeside", "classCINT.html#a67bcdeee2e8e208ea1459de67dbb12df", null ],

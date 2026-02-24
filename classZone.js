@@ -234,6 +234,7 @@ var classZone =
     [ "ShouldRegenerate", "classZone.html#ad3fb901190afceea44a99f4d440dd06c", null ],
     [ "ShowEnemyOnMinimap", "classZone.html#ab5044c026204b70c452ed4b0c131a1d6", null ],
     [ "ShrineChance", "classZone.html#af8570fe7ae4db1016c0d7e3a0aedc43b", null ],
+    [ "SightRadiusBonus", "classZone.html#a893ea071649dc4495289693e393ae887", null ],
     [ "StartLV", "classZone.html#a338fdbb8166b189b6892518e05b85c35", null ],
     [ "TextDangerLv", "classZone.html#a08b7e0a08f5ce3d9e3e04728629b841c", null ],
     [ "TextDeepestLv", "classZone.html#ad9ef9e6916d04c2ef2cc105f590ff385", null ],

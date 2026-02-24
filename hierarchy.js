@@ -549,6 +549,8 @@ var hierarchy =
       [ "CharaBody", "classCharaBody.html", null ],
       [ "CharaGenes", "classCharaGenes.html", null ],
       [ "CharaList", "classCharaList.html", null ],
+      [ "CharaMassTransfer", "classCharaMassTransfer.html", null ],
+      [ "CharaOriginalPositionData", "classCharaOriginalPositionData.html", null ],
       [ "CharaUpgrade", "classCharaUpgrade.html", null ],
       [ "CharaUpgrade.Item", "classCharaUpgrade_1_1Item.html", null ],
       [ "Check", "classCheck.html", [
@@ -729,10 +731,12 @@ var hierarchy =
             [ "ActCryRage", "classActCryRage.html", null ],
             [ "ActCrySad", "classActCrySad.html", null ],
             [ "ActDreamBug", "classActDreamBug.html", null ],
+            [ "ActKiss", "classActKiss.html", null ],
             [ "ActMissileBarrage", "classActMissileBarrage.html", null ],
             [ "ActMultihit", "classActMultihit.html", null ],
             [ "ActNTR", "classActNTR.html", [
               [ "ActBloodsuck", "classActBloodsuck.html", null ],
+              [ "ActDeepKiss", "classActDeepKiss.html", null ],
               [ "ActSlime", "classActSlime.html", null ]
             ] ],
             [ "ActQuickCraft", "classActQuickCraft.html", null ],
@@ -756,6 +760,7 @@ var hierarchy =
               [ "ActTelekinesis", "classActTelekinesis.html", null ],
               [ "ActWeapon", "classActWeapon.html", null ],
               [ "FieldEffect", "classFieldEffect.html", [
+                [ "FieldEffectFeast", "classFieldEffectFeast.html", null ],
                 [ "FieldEffectSpider", "classFieldEffectSpider.html", null ]
               ] ]
             ] ]
@@ -1663,6 +1668,7 @@ var hierarchy =
           [ "TraitCurrencyMedal", "classTraitCurrencyMedal.html", null ]
         ] ],
         [ "TraitCurtain", "classTraitCurtain.html", null ],
+        [ "TraitDeedWedding", "classTraitDeedWedding.html", null ],
         [ "TraitDice", "classTraitDice.html", null ],
         [ "TraitDoor", "classTraitDoor.html", [
           [ "TraitDoorCurtain", "classTraitDoorCurtain.html", null ],
@@ -2019,6 +2025,7 @@ var hierarchy =
           [ "TraitCatalyst", "classTraitCatalyst.html", [
             [ "TraitAbility", "classTraitAbility.html", null ]
           ] ],
+          [ "TraitDeedDivorce", "classTraitDeedDivorce.html", null ],
           [ "TraitLeash", "classTraitLeash.html", null ],
           [ "TraitRod", "classTraitRod.html", [
             [ "TraitRodRandom", "classTraitRodRandom.html", null ]
