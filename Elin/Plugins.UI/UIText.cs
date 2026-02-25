@@ -27,10 +27,14 @@ public class UIText : Text, IUISkin
 	public float orgSpacing;
 
 	[NonSerialized]
+	public int orgSize;
+
+	[NonSerialized]
 	public Color orgColor = Color.white;
 
 	protected override void Awake()
 	{
+		orgSize = size;
 		ApplySkin();
 		base.Awake();
 	}
