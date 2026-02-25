@@ -1,5 +1,9 @@
 var NAVTREEINDEX69 =
 {
+"classGlobalGoal.html#afeaafaf50c4aa90c1bf01fdc681f9b37":[1,0,572,0],
+"classGlobalGoalAdv.html":[1,0,573],
+"classGlobalGoalAdv.html#a4b10fb5369a0b97b50f052d91fcf845e":[1,0,573,0],
+"classGlobalGoalExplore.html":[1,0,574],
 "classGlobalGoalExplore.html#a689769ea5b7cf54a36d8bfd8cefca1ca":[1,0,574,0],
 "classGlobalGoalVisitAndStay.html":[1,0,575],
 "classGlobalGoalVisitAndStay.html#a162170fc0af8541f55bfc026cd3e29d4":[1,0,575,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX69 =
 "classGrowSystem.html#aa2e9cb8324ddddfe04cdb43106bd7262":[1,0,604,27],
 "classGrowSystem.html#aa46c003453fd64f10cc86ef34afc242b":[1,0,604,24],
 "classGrowSystem.html#aaac640d5d5b782e7e162d203da14d509":[1,0,604,11],
-"classGrowSystem.html#aac16c85bac86ae5a9825baeb66520e6f":[1,0,604,16],
-"classGrowSystem.html#aac6278e9765227e16e062e1d79f598c6":[1,0,604,57],
-"classGrowSystem.html#aad7964ae6bf55495bdabdafba3cc5c6f":[1,0,604,66],
-"classGrowSystem.html#ab028808110e94251906390f66f446389":[1,0,604,20],
-"classGrowSystem.html#ab1b371c9b7bcec41814c9b256028e20f":[1,0,604,35]
+"classGrowSystem.html#aac16c85bac86ae5a9825baeb66520e6f":[1,0,604,16]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX142 =
 {
+"classZonePreEnterEncounter.html":[1,0,2277],
+"classZonePreEnterEncounter.html#a48cec96c0c7702f2468231e0d06289f8":[1,0,2277,1],
+"classZonePreEnterEncounter.html#a52effcc58e9e09ba6362beb8b81b0752":[1,0,2277,2],
+"classZonePreEnterEncounter.html#a85200862a1b5ad7a0cd4adfb239d549c":[1,0,2277,0],
+"classZonePreEnterEncounter.html#ac618f0e8ecdb94a6d73014baa9cb46e3":[1,0,2277,3],
+"classZonePreEnterEvent.html":[1,0,2278],
+"classZonePreEnterEvent.html#a118d9bdbab769bf48d36b0946f7c568d":[1,0,2278,0],
 "classZonePreEnterOnCompleteQuestInstance.html":[1,0,2279],
 "classZonePreEnterOnCompleteQuestInstance.html#a2234b4676c6fe5efa5180b27ef1aa8cc":[1,0,2279,1],
 "classZonePreEnterOnCompleteQuestInstance.html#a3de4fd8131223ac8f6e3cabeb84d563f":[1,0,2279,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX142 =
 "classZone__Harvest.html#a11b8af9c86141990bf776111443aa2ac":[1,0,2192,3],
 "classZone__Harvest.html#a1594a9f4954e066d2210fc8ab287b787":[1,0,2192,0],
 "classZone__Harvest.html#a499b964354fe656d3eabded317d0a815":[1,0,2192,2],
-"classZone__Harvest.html#ac4ea022bab05b509e0ba8ec0166f526e":[1,0,2192,1],
-"classZone__Hospital.html":[1,0,2193],
-"classZone__Kapul.html":[1,0,2194],
-"classZone__Kapul.html#a80844c906ea0d6a015db93ff47e95796":[1,0,2194,2],
-"classZone__Kapul.html#ac9191cb8c40af574dcf6b043f895cee6":[1,0,2194,0],
-"classZone__Kapul.html#acc5b93dc5565309e4e9ad04ba7b63a37":[1,0,2194,1],
-"classZone__Lesimas.html":[1,0,2195],
-"classZone__LittleGarden.html":[1,0,2196]
+"classZone__Harvest.html#ac4ea022bab05b509e0ba8ec0166f526e":[1,0,2192,1]
 };

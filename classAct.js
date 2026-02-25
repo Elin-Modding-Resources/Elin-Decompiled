@@ -26,6 +26,7 @@ var classAct =
     [ "SetTool", "classAct.html#a8f73376c04ef1c7b67a1c45e318b6f37", null ],
     [ "ShouldMapHighlight", "classAct.html#aa770e74e4b54c29dcd0ac1c418393b02", null ],
     [ "ShowMouseHint", "classAct.html#a6375223c76382529f113aad1c31d8b1f", null ],
+    [ "ValidatePerform", "classAct.html#ad10d9f9ef9e3e6867a5ebda79b7b9ff2", null ],
     [ "CC", "classAct.html#aaee36f292832814173c67d44df115a5a", null ],
     [ "CurrentAct", "classAct.html#a85d8f0640f0172e8bffc51cbd34cefad", null ],
     [ "forcePt", "classAct.html#a8e57c15f7a6c45035be1f0ae087543f8", null ],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX123 =
 {
+"classTraitMerchantPlat.html#adc26d42455bdacb98b2a88007aedbbed":[1,0,1755,3],
+"classTraitMerchantSeed.html":[1,0,1756],
+"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1756,0],
+"classTraitMerchantSouvenir.html":[1,0,1757],
 "classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1757,0],
 "classTraitMerchantWeapon.html":[1,0,1758],
 "classTraitMerchantWeapon.html#a39707660f853306b84cb5dd687a478e8":[1,0,1758,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1818,8],
 "classTraitPotionRandom.html#a6edd071c6499d46dbdb86a912357421b":[1,0,1818,3],
 "classTraitPotionRandom.html#a6f8ad0e2c44a98bfcf172afef5aa307d":[1,0,1818,7],
-"classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1818,1],
-"classTraitPotionRandom.html#a81f51a653e3ce1a6e0a118178812daf2":[1,0,1818,10],
-"classTraitPotionRandom.html#abaae34393bf06c2aaad531ca30799516":[1,0,1818,5],
-"classTraitPotionRandom.html#adbaf7305ae19e67a415e1ac710688c4f":[1,0,1818,4],
-"classTraitPotionRandom.html#af5d2e6755f6bcfa5b0b53d091fd6473c":[1,0,1818,6]
+"classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1818,1]
 };

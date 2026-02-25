@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitSpotGuidePC_8cs.html":[2,0,0,1781],
 "TraitSpotGuidePC_8cs_source.html":[2,0,0,1781],
 "TraitSpotLight_8cs.html":[2,0,0,1782],
 "TraitSpotLight_8cs_source.html":[2,0,0,1782],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "TreasureType_8cs_source.html":[2,0,0,1898],
 "TryMakeRandomItemSource_8cs.html":[2,0,0,1899],
 "TryMakeRandomItemSource_8cs.html#abd97983f8e0f37849a5933032e27619d":[2,0,0,1899,0],
-"TryMakeRandomItemSource_8cs.html#abd97983f8e0f37849a5933032e27619da3b962574887f124e78bfd9b4685f3b39":[2,0,0,1899,0,1],
-"TryMakeRandomItemSource_8cs.html#abd97983f8e0f37849a5933032e27619da7a1920d61156abc05a60135aefe8bc67":[2,0,0,1899,0,0]
+"TryMakeRandomItemSource_8cs.html#abd97983f8e0f37849a5933032e27619da3b962574887f124e78bfd9b4685f3b39":[2,0,0,1899,0,1]
 };

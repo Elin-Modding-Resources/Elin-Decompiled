@@ -1,5 +1,9 @@
 var NAVTREEINDEX112 =
 {
+"classTargetTypeAny.html":[1,0,1308],
+"classTargetTypeAny.html#a2c2d96b3a11af91492b11ee777732272":[1,0,1308,0],
+"classTargetTypeCard.html":[1,0,1309],
+"classTargetTypeChara.html":[1,0,1310],
 "classTargetTypeChara.html#a106859ec6c5eaae48d7bdc0ad7081248":[1,0,1310,0],
 "classTargetTypeChara.html#aa076c608cc5f66c2a3fe56614c0a7871":[1,0,1310,1],
 "classTargetTypeEnemy.html":[1,0,1311],
@@ -245,9 +249,5 @@ var NAVTREEINDEX112 =
 "classTaskManager.html#a582373a8a8090fb23ace874a28c1d61c":[1,0,1332,1],
 "classTaskManager.html#aaa878b4dc22ec710917b414e66c741f0":[1,0,1332,2],
 "classTaskManager.html#afa1f0197007e41524f4bcc59ebee7615":[1,0,1332,3],
-"classTaskManager_1_1Designations.html":[1,0,1332,0],
-"classTaskManager_1_1Designations.html#a04b1c8e57ac0597ea351c6ad52c7bb30":[1,0,1332,0,9],
-"classTaskManager_1_1Designations.html#a0e95758f58fb783cfc6a3eadcfa7614f":[1,0,1332,0,1],
-"classTaskManager_1_1Designations.html#a33ece8fe7d4e12d34276af1fd03bebcb":[1,0,1332,0,3],
-"classTaskManager_1_1Designations.html#a43bd2a42344872f04cdaadc19ef24071":[1,0,1332,0,4]
+"classTaskManager_1_1Designations.html":[1,0,1332,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"WidgetMenuPanel_8cs_source.html":[2,0,0,1960],
 "WidgetMinimap_8cs.html":[2,0,0,1961],
 "WidgetMinimap_8cs_source.html":[2,0,0,1961],
 "WidgetMouseover_8cs.html":[2,0,0,1962],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "Zone__Mine_8cs_source.html":[2,0,0,2034],
 "Zone__MiralGarok_8cs.html":[2,0,0,2035],
 "Zone__MiralGarok_8cs_source.html":[2,0,0,2035],
-"Zone__Music_8cs.html":[2,0,0,2036],
-"Zone__Music_8cs_source.html":[2,0,0,2036]
+"Zone__Music_8cs.html":[2,0,0,2036]
 };

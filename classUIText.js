@@ -18,6 +18,7 @@ var classUIText =
     [ "hyphenation", "classUIText.html#a58e5e88cf5ffb954cdd86db91904b8ef", null ],
     [ "lang", "classUIText.html#a27925d9d037d3be267ef11b25eb6c481", null ],
     [ "orgColor", "classUIText.html#a170d3a498d1e4ed6a8065d11796e8f73", null ],
+    [ "orgSize", "classUIText.html#a9064f0c945c83793f1ec2beb85ce1c8b", null ],
     [ "orgSpacing", "classUIText.html#a978123cc84a5ccdddafc2af64e257056", null ],
     [ "size", "classUIText.html#a005e5d0643acb271e250c80424e8980b", null ],
     [ "skinRoot", "classUIText.html#aa4a55d996f941a7ab47f0ddbf84bac36", null ],

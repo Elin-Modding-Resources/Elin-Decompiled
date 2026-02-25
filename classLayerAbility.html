@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.276 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.277 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -931,7 +931,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LayerAbility_8cs_source.html#l00243">_Redraw()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00021">Instance</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ElementContainerCard_8cs_source.html#l00040">ElementContainerCard.CheckSkillActions()</a>, and <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00151">TraitBaseSpellbook.OnRead()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CharaAbility_8cs_source.html#l00132">CharaAbility.Add()</a>, <a class="el" href="ElementContainerCard_8cs_source.html#l00040">ElementContainerCard.CheckSkillActions()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00151">TraitBaseSpellbook.OnRead()</a>, and <a class="el" href="CharaAbility_8cs_source.html#l00168">CharaAbility.Remove()</a>.</p>
 
 </div>
 </div>
@@ -1038,7 +1038,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  210</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classElement.html">Element</a> value <span class="keywordflow">in</span> <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_variable" href="classElementContainer.html#a0d1183d1c663248e22bfee5d6884d018">dict</a>.Values)</div>
 <div class="line"><span class="lineno">  211</span>                {</div>
 <div class="line"><span class="lineno">  212</span>                    <span class="keywordtype">string</span> categorySub = value.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.categorySub;</div>
-<div class="line"><span class="lineno">  213</span>                    <span class="keywordflow">if</span> (value.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> != 0 &amp;&amp; (!<a class="code hl_property" href="classLayerAbility.html#ae1d61d07b1b38780b8888e7ac0599f5e">config</a>.<a class="code hl_variable" href="classLayerAbility_1_1Config.html#ae7d7ef647882571dca1d7296f551f7be">hideDepletedSpell</a> || !value.<a class="code hl_property" href="classElement.html#a9dd0afbc97aed40e9e9ca267e72ce398">PotentialAsStock</a> || value.<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a> &gt; 0) &amp;&amp; (value.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a> != 6020 || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classCard.html#af4616290fa0dd51fa1a94efd843eb68f">HasElement</a>(1216)))</div>
+<div class="line"><span class="lineno">  213</span>                    <span class="keywordflow">if</span> (value.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a> != 0 &amp;&amp; (!<a class="code hl_property" href="classLayerAbility.html#ae1d61d07b1b38780b8888e7ac0599f5e">config</a>.<a class="code hl_variable" href="classLayerAbility_1_1Config.html#ae7d7ef647882571dca1d7296f551f7be">hideDepletedSpell</a> || ((!value.<a class="code hl_property" href="classElement.html#a9dd0afbc97aed40e9e9ca267e72ce398">PotentialAsStock</a> || value.<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a> &gt; 0) &amp;&amp; value.<a class="code hl_variable" href="classElement.html#a458fcaa631dde18afaff0d34f26d70fe">vPotential</a> &gt;= 0)) &amp;&amp; (value.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a> != 6020 || <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_function" href="classCard.html#af4616290fa0dd51fa1a94efd843eb68f">HasElement</a>(1216)))</div>
 <div class="line"><span class="lineno">  214</span>                    {</div>
 <div class="line"><span class="lineno">  215</span>                        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;favAbility&quot;</span> &amp;&amp; <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a16fc2381bc0e5372d0ad567076cff625">player</a>.<a class="code hl_variable" href="classPlayer.html#a9f5205a935f87557f969deca18fa3d84">favAbility</a>.Contains(value.<a class="code hl_variable" href="classElement.html#a3616aee54a980974d7cc43b7f8d94abc">id</a>))</div>
 <div class="line"><span class="lineno">  216</span>                        {</div>
@@ -1156,7 +1156,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIList_8cs_source.html#l00275">UIList.buttons</a>, <a class="el" href="BaseList_8cs_source.html#l00013">BaseList.callbacks</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00024">ButtonGrid.card</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00026">ButtonGrid.index</a>, <a class="el" href="LayerAbility_8cs_source.html#l00021">Instance</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00020">WidgetCurrentTool.Instance</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="LayerAbility_8cs_source.html#l00025">list</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00030">WidgetCurrentTool.list</a>, <a class="el" href="LayerInventory_8cs_source.html#l00007">LayerInventory.listInv</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00230">UIDynamicList.Redraw()</a>, <a class="el" href="WidgetCurrentTool_8cs_source.html#l00171">WidgetCurrentTool.RefreshCurrentHotItem()</a>, and <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l10221">Chara.GainAbility()</a>, <a class="el" href="ABILITY_8cs_source.html#l00359">Ability.OnChangeValue()</a>, and <a class="el" href="Chara_8cs_source.html#l05878">Chara.UseAbility()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l10239">Chara.GainAbility()</a>, <a class="el" href="ABILITY_8cs_source.html#l00359">Ability.OnChangeValue()</a>, and <a class="el" href="Chara_8cs_source.html#l05881">Chara.UseAbility()</a>.</p>
 
 </div>
 </div>

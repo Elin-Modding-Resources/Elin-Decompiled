@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"TileTypeObjFloat_8cs_source.html":[2,0,0,1290],
 "TileTypeObjHuge_8cs.html":[2,0,0,1292],
 "TileTypeObjHuge_8cs_source.html":[2,0,0,1292],
 "TileTypeObjWaterTop_8cs.html":[2,0,0,1294],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitChef_8cs_source.html":[2,0,0,1404],
 "TraitChestMerchant_8cs.html":[2,0,0,1406],
 "TraitChestMerchant_8cs_source.html":[2,0,0,1406],
-"TraitChestOyster_8cs.html":[2,0,0,1407],
-"TraitChestOyster_8cs_source.html":[2,0,0,1407]
+"TraitChestOyster_8cs.html":[2,0,0,1407]
 };

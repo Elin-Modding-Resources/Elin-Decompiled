@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitMixer_8cs_source.html":[2,0,0,1656],
 "TraitModRanged_8cs.html":[2,0,0,1658],
 "TraitModRanged_8cs_source.html":[2,0,0,1658],
 "TraitMod_8cs.html":[2,0,0,1657],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitSpotFuel_8cs.html":[2,0,0,1779],
 "TraitSpotFuel_8cs_source.html":[2,0,0,1779],
 "TraitSpotGarbage_8cs.html":[2,0,0,1780],
-"TraitSpotGarbage_8cs_source.html":[2,0,0,1780],
-"TraitSpotGuidePC_8cs.html":[2,0,0,1781]
+"TraitSpotGarbage_8cs_source.html":[2,0,0,1780]
 };

@@ -9,7 +9,8 @@ var searchData=
   ['keyup_6',['KEYUP',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3dadf719517220572192a471b96491fb116',1,'B83::Win32']]],
   ['kick_7',['Kick',['../AttackType_8cs.html#a904b2f9c8f3951116c343784c59d6afea3e07960fcc45408894cf1402257bd9fd',1,'AttackType.cs']]],
   ['killfocus_8',['KILLFOCUS',['../namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da58907d01434ecbd6e71cc234726febdf',1,'B83::Win32']]],
-  ['kizuamitrick_9',['KizuamiTrick',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a819e594bcc278a551d96eddd2c8410cd',1,'EffectId.cs']]],
-  ['knowledge_10',['knowledge',['../HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caa542e9b744bedcfd874129ab0f98c4ff',1,'HomeResourceType.cs']]],
-  ['knowquality_11',['KnowQuality',['../IDTLevel_8cs.html#a66623f98fb27a22b62d4066dfd3f8319abf48cbc0f8cd26309b393f20f72e60d8',1,'IDTLevel.cs']]]
+  ['kiss_9',['Kiss',['../AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dad61fad2618362cf5c2392d4880e3f4b4',1,'AnimeID.cs']]],
+  ['kizuamitrick_10',['KizuamiTrick',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a819e594bcc278a551d96eddd2c8410cd',1,'EffectId.cs']]],
+  ['knowledge_11',['knowledge',['../HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caa542e9b744bedcfd874129ab0f98c4ff',1,'HomeResourceType.cs']]],
+  ['knowquality_12',['KnowQuality',['../IDTLevel_8cs.html#a66623f98fb27a22b62d4066dfd3f8319abf48cbc0f8cd26309b393f20f72e60d8',1,'IDTLevel.cs']]]
 ];

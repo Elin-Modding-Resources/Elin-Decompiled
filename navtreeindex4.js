@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"ConditionType_8cs.html":[2,0,0,309],
 "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446":[2,0,0,309,0],
 "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a0667fab375c18f4a0f29beec635b1b87":[2,0,0,309,0,8],
 "ConditionType_8cs.html#a8fc1b7d50bd342b43d026ee18bece446a452a7601dbc6f2c38aa89e68bda8b603":[2,0,0,309,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "DragItem_8cs.html":[2,0,0,432],
 "DragItem_8cs_source.html":[2,0,0,432],
 "DramaActor_8cs.html":[2,0,0,434],
-"DramaActor_8cs_source.html":[2,0,0,434],
-"DramaChoice_8cs.html":[2,0,0,435]
+"DramaActor_8cs_source.html":[2,0,0,434]
 };

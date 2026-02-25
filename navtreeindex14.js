@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"SkillCheck_8cs_source.html":[2,0,0,1104],
 "SkinAssetRedirect_8cs.html":[2,0,0,3,91],
 "SkinAssetRedirect_8cs.html#abde730ba51957d5537649bf37baaf00d":[2,0,0,3,91,0],
 "SkinAssetRedirect_8cs.html#abde730ba51957d5537649bf37baaf00da510651725fb738f091df7dcea9e1769b":[2,0,0,3,91,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "StatsSAN_8cs_source.html":[2,0,0,1183],
 "StatsSleepiness_8cs.html":[2,0,0,1184],
 "StatsSleepiness_8cs_source.html":[2,0,0,1184],
-"StatsStamina_8cs.html":[2,0,0,1185],
-"StatsStamina_8cs_source.html":[2,0,0,1185]
+"StatsStamina_8cs.html":[2,0,0,1185]
 };

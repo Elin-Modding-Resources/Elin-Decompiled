@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"ModItem_8cs.html":[2,0,0,2,59],
 "ModItem_8cs_source.html":[2,0,0,2,59],
 "ModManager_8cs.html":[2,0,0,859],
 "ModManager_8cs_source.html":[2,0,0,859],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "PropsManager_8cs.html":[2,0,0,926],
 "PropsManager_8cs_source.html":[2,0,0,926],
 "PropsRoaming_8cs.html":[2,0,0,927],
-"PropsRoaming_8cs_source.html":[2,0,0,927],
-"PropsStocked_8cs.html":[2,0,0,928]
+"PropsRoaming_8cs_source.html":[2,0,0,927]
 };

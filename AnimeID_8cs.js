@@ -26,6 +26,7 @@ var AnimeID_8cs =
       [ "Truck", "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da6f13850d3346c949c10c7bae79479ebd", null ],
       [ "PlayMusic", "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da3ca5198311a43109b20147e063a288b0", null ],
       [ "QuakeMini", "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da61a83badd50aa72556828c52cffaa7b3", null ],
-      [ "Gravity", "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da8a88c39cef668fb55f188af09665bd40", null ]
+      [ "Gravity", "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2da8a88c39cef668fb55f188af09665bd40", null ],
+      [ "Kiss", "AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dad61fad2618362cf5c2392d4880e3f4b4", null ]
     ] ]
 ];

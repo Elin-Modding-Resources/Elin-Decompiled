@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitGM_8cs_source.html":[2,0,0,1552],
 "TraitGM__Fighter_8cs.html":[2,0,0,1553],
 "TraitGM__Fighter_8cs_source.html":[2,0,0,1553],
 "TraitGM__Mage_8cs.html":[2,0,0,1554],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitMirror_8cs_source.html":[2,0,0,1654],
 "TraitMixedFood_8cs.html":[2,0,0,1655],
 "TraitMixedFood_8cs_source.html":[2,0,0,1655],
-"TraitMixer_8cs.html":[2,0,0,1656],
-"TraitMixer_8cs_source.html":[2,0,0,1656]
+"TraitMixer_8cs.html":[2,0,0,1656]
 };

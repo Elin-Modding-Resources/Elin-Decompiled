@@ -1,5 +1,9 @@
 var NAVTREEINDEX118 =
 {
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3aad05e01777549db85f26c13042db94fb":[1,0,1470,0,4],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3abdf1893b54669831286b617d7dc24e27":[1,0,1470,0,0],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3ae0ca2db63b4b9d0cbde2f31d67376f1c":[1,0,1470,0,2],
+"classTraitBaseSpellbook.html#a361c2bf31c4146bc6e1b58d5d1afd5a3":[1,0,1470,9],
 "classTraitBaseSpellbook.html#a4b1b6489c9ded1fa63c59d6f51cd6fac":[1,0,1470,3],
 "classTraitBaseSpellbook.html#a4d64058d240d2f7efd88628a447ef1af":[1,0,1470,11],
 "classTraitBaseSpellbook.html#a5d102c34e32611f13f7a4db5f2c30c05":[1,0,1470,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitChest.html#a844ef34ac1868307a3b79a00864d30b6":[1,0,1517,0],
 "classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1517,1],
 "classTraitChestMerchant.html":[1,0,1518],
-"classTraitChestMerchant.html#aa0c655db5ffc09340129a4b1ea608f6b":[1,0,1518,0],
-"classTraitChestMerchant.html#aa5e8eb3d05439d1651f30d5653756cd1":[1,0,1518,2],
-"classTraitChestMerchant.html#ab5f6e29343837d0bf4d664a64810a077":[1,0,1518,1],
-"classTraitChestOyster.html":[1,0,1519],
-"classTraitChestOyster.html#ad89f91220e999eaf2bb6055adbbb012d":[1,0,1519,1]
+"classTraitChestMerchant.html#aa0c655db5ffc09340129a4b1ea608f6b":[1,0,1518,0]
 };

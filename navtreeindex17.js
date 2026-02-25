@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TraitChestOyster_8cs_source.html":[2,0,0,1407],
 "TraitChestPractice_8cs.html":[2,0,0,1408],
 "TraitChestPractice_8cs_source.html":[2,0,0,1408],
 "TraitChest_8cs.html":[2,0,0,1405],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitFortuneCookie_8cs_source.html":[2,0,0,1529],
 "TraitFridge_8cs.html":[2,0,0,1530],
 "TraitFridge_8cs_source.html":[2,0,0,1530],
-"TraitGM_8cs.html":[2,0,0,1552],
-"TraitGM_8cs_source.html":[2,0,0,1552]
+"TraitGM_8cs.html":[2,0,0,1552]
 };
