@@ -10,6 +10,12 @@ public class WidgetHP : Widget
 		public int layout;
 
 		[JsonProperty]
+		public int spacing;
+
+		[JsonProperty]
+		public int fontSize;
+
+		[JsonProperty]
 		public bool showGauge;
 
 		[JsonProperty]
@@ -74,19 +80,23 @@ public class WidgetHP : Widget
 				EMono.pc.stamina.value = EMono.pc.stamina.max;
 			}
 		}
+		grid.spacing = new Vector2(extra.spacing, 0f);
 		gaugeHP.hideBar = !extra.showGauge;
 		gaugeMP.hideBar = !extra.showGauge;
 		gaugeStamina.hideBar = !extra.showGauge;
 		gaugeStamina.SetActive(extra.stamina);
+		gaugeHP.textNow.SetSize(gaugeHP.textNow.orgSize + extra.fontSize);
+		gaugeMP.textNow.SetSize(gaugeMP.textNow.orgSize + extra.fontSize);
+		gaugeStamina.textNow.SetSize(gaugeStamina.textNow.orgSize + extra.fontSize);
 		gaugeHP.UpdateValue(EMono.pc.hp, EMono.pc.MaxHP);
 		gaugeMP.UpdateValue(EMono.pc.mana.value, EMono.pc.mana.max);
 		gaugeStamina.UpdateValue(EMono.pc.stamina.value, EMono.pc.stamina.max);
 		Color c = EMono.Colors.Dark.gradientHP.Evaluate((float)EMono.pc.hp / (float)EMono.pc.MaxHP);
-		gaugeHP.textNow.text = "".TagColor(c, EMono.pc.hp.ToString() ?? "") + (extra.showMax ? ("/" + EMono.pc.MaxHP) : "");
+		gaugeHP.textNow.text = "".TagColor(c, EMono.pc.hp.ToString() ?? "") + (extra.showMax ? (" / " + EMono.pc.MaxHP) : "");
 		c = EMono.Colors.Dark.gradientMP.Evaluate((float)EMono.pc.mana.value / (float)EMono.pc.mana.max);
-		gaugeMP.textNow.text = "".TagColor(c, EMono.pc.mana.value.ToString() ?? "") + (extra.showMax ? ("/" + EMono.pc.mana.max) : "");
+		gaugeMP.textNow.text = "".TagColor(c, EMono.pc.mana.value.ToString() ?? "") + (extra.showMax ? (" / " + EMono.pc.mana.max) : "");
 		c = EMono.Colors.Dark.gradientSP.Evaluate((float)EMono.pc.stamina.value / (float)EMono.pc.stamina.max);
-		gaugeStamina.textNow.text = "".TagColor(c, EMono.pc.stamina.value.ToString() ?? "") + (extra.showMax ? ("/" + EMono.pc.stamina.max) : "");
+		gaugeStamina.textNow.text = "".TagColor(c, EMono.pc.stamina.value.ToString() ?? "") + (extra.showMax ? (" / " + EMono.pc.stamina.max) : "");
 		goBarrier.SetActive(value: false);
 		textBarrier.text = "10";
 	}
@@ -100,6 +110,14 @@ public class WidgetHP : Widget
 			Rebuild();
 			ClampToScreen();
 		}, 0f, 2f, isInt: true);
+		uIContextMenu.AddSlider("spacing", (float n) => n.ToString() ?? "", extra.spacing, delegate(float a)
+		{
+			extra.spacing = (int)a;
+		}, 0f, 100f, isInt: true);
+		uIContextMenu.AddSlider("fontSize", (float n) => n.ToString() ?? "", extra.fontSize, delegate(float a)
+		{
+			extra.fontSize = (int)a;
+		}, -2f, 5f, isInt: true);
 		uIContextMenu.AddToggle("showGauge", extra.showGauge, delegate(bool a)
 		{
 			extra.showGauge = a;

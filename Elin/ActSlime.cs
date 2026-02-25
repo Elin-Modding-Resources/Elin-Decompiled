@@ -11,13 +11,18 @@ public class ActSlime : ActNTR
 		return true;
 	}
 
-	public override bool Perform()
+	public override bool ValidatePerform(Chara _cc, Card _tc, Point _tp)
 	{
-		if (Act.CC.hunger.GetPhase() < 3 && !EClass.debug.enable)
+		if (Act.CC.hunger.GetPhase() < 3 && !EClass.debug.godFood)
 		{
 			Msg.Say("not_hungry");
 			return false;
 		}
+		return true;
+	}
+
+	public override bool Perform()
+	{
 		Act.CC.SetAI(new AI_Fuck
 		{
 			target = Act.TC.Chara,

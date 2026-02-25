@@ -92,7 +92,7 @@ public class FoodEffect : EClass
 		}
 		if (c2.HasElement(1200))
 		{
-			num2 *= 1f + (float)c2.Evalue(1200) * 0.25f;
+			num2 *= 1f + (float)c2.Evalue(1200) * 0.3f;
 		}
 		if (!c2.IsPC)
 		{

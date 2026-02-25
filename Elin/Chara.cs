@@ -4530,8 +4530,11 @@ public class Chara : Card, IPathfindWalker
 		if (IsPC && t.isNPCProperty)
 		{
 			t.isNPCProperty = false;
-			EClass.player.ModKarma(-1);
-			pos.TryWitnessCrime(this);
+			if (!t.GetBool(128))
+			{
+				EClass.player.ModKarma(-1);
+				pos.TryWitnessCrime(this);
+			}
 		}
 		PickHeld();
 		if (t.isChara)
@@ -5881,6 +5884,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
+		if (!a.ValidatePerform(this, tc, pos))
+		{
+			return false;
+		}
 		if (a.source.proc.TryGet(0) == "Heal" && HasElement(1422) && !IsPC)
 		{
 			List<int> list = new List<int> { 8400, 8401, 8402, 8403, 8404, 8405 };
@@ -6023,23 +6030,32 @@ public class Chara : Card, IPathfindWalker
 				LayerAbility.SetDirty(a);
 			}
 		}
-		else if (a.source.langAct.Length != 0 && tc != null)
+		else
 		{
-			string text = a.source.langAct[0];
-			string text2 = ((a.source.langAct.Length >= 2) ? a.source.langAct[1] : "");
-			if (text == "spell_hand")
+			if (IsPC && HasElement(1274) && a.vPotential < 0 && !flag2)
 			{
-				string[] list2 = Lang.GetList("attack" + race.meleeStyle.IsEmpty("Touch"));
-				string @ref = text2.lang(list2[4]);
-				Say(tc.IsPCParty ? "cast_hand_ally" : "cast_hand", this, tc, @ref, tc.IsPCParty ? list2[1] : list2[2]);
+				Msg.Say("noSpellStock");
+				EInput.Consume();
+				return false;
 			}
-			else
+			if (a.source.langAct.Length != 0 && tc != null)
 			{
-				Say(text, this, tc, text2.IsEmpty() ? "" : text2.lang());
-			}
-			if (a.source.id == 6630)
-			{
-				Talk("insult_" + (base.IsMale ? "m" : "f"));
+				string text = a.source.langAct[0];
+				string text2 = ((a.source.langAct.Length >= 2) ? a.source.langAct[1] : "");
+				if (text == "spell_hand")
+				{
+					string[] list2 = Lang.GetList("attack" + race.meleeStyle.IsEmpty("Touch"));
+					string @ref = text2.lang(list2[4]);
+					Say(tc.IsPCParty ? "cast_hand_ally" : "cast_hand", this, tc, @ref, tc.IsPCParty ? list2[1] : list2[2]);
+				}
+				else
+				{
+					Say(text, this, tc, text2.IsEmpty() ? "" : text2.lang());
+				}
+				if (a.source.id == 6630)
+				{
+					Talk("insult_" + (base.IsMale ? "m" : "f"));
+				}
 			}
 		}
 		switch (cost.type)
@@ -6131,7 +6147,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (flag3 && !isDead)
 		{
-			if (IsPC && flag2 && a.vBase == 0 && a.PotentialAsStock)
+			if (IsPC && flag2 && elements.Base(a.id) == 0 && a.PotentialAsStock)
 			{
 				elements.ModBase(a.id, 1);
 			}
@@ -6353,6 +6369,7 @@ public class Chara : Card, IPathfindWalker
 		EClass.player.forceTalk = true;
 		Talk("kiss", null, null, IsPC);
 		PlaySound("kiss");
+		renderer.PlayAnime(AnimeID.Kiss, c);
 		int num = 2 + EClass.rnd(4) + ((!c.IsPC && c.affinity.CurrentStage < Affinity.Stage.Fond) ? (-EClass.rnd(10)) : 0);
 		c.ShowEmo((num > 0) ? Emo.love : Emo.sad);
 		if (num > 0 && EClass.rnd(IsPC ? 100 : 5000) == 0)
@@ -6371,6 +6388,7 @@ public class Chara : Card, IPathfindWalker
 				c.Say("affinityNone", c, EClass.pc);
 			}
 		}
+		Effect.Get("love")._Play(pos, isSynced ? renderer.position : pos.Position(), 0f, c.pos);
 	}
 
 	public void Slap(Chara c, bool slapToDeath = false)
@@ -7191,7 +7209,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (EClass._zone is Zone_Music || EClass._zone is Zone_Wedding)
 			{
-				ShowDialog("_chara", "party");
+				ShowDialog("_chara", (!(EClass._zone is Zone_Wedding)) ? "party" : (IsPCParty ? "wedding_love" : "wedding"));
 				return;
 			}
 			if (EClass.game.quests.OnShowDialog(this))

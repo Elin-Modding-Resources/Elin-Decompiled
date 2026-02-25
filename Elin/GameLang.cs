@@ -76,6 +76,12 @@ public class GameLang : EClass
 				stringBuilder.Append(text[i]);
 			}
 		}
+		if ((bool)LayerDrama.Instance && LayerDrama.Instance.drama.tg != null)
+		{
+			int gender = LayerDrama.Instance.drama.tg.gender;
+			stringBuilder.Replace("#tg_his", ((gender == 2) ? "his" : "her").lang());
+			stringBuilder.Replace("#tg_him", ((gender == 2) ? "him" : "her").lang());
+		}
 		if (DramaManager.TG != null)
 		{
 			stringBuilder.Replace("#tg", DramaManager.TG.Name);

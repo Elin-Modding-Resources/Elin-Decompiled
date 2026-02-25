@@ -3,23 +3,23 @@ using UnityEngine;
 
 public class POLICY
 {
+	public const int celeb = 2822;
+
 	public const int license_general = 2820;
 
 	public const int legendary_heirloom = 2821;
 
-	public const int celeb = 2822;
-
 	public const int legendary_exhibition = 2823;
 
-	public const int breed_season = 2827;
+	public const int license_furniture = 2819;
 
 	public const int milk_fan = 2825;
 
 	public const int egg_fan = 2826;
 
-	public const int license_slaver = 2828;
+	public const int breed_season = 2827;
 
-	public const int license_furniture = 2819;
+	public const int license_slaver = 2828;
 
 	public const int license_stolen = 2824;
 
@@ -107,7 +107,7 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2820, 2821, 2822, 2823, 2827, 2825, 2826, 2828, 2819, 2824,
+		2822, 2820, 2821, 2823, 2819, 2825, 2826, 2827, 2828, 2824,
 		2818, 2500, 2816, 2516, 2515, 2514, 2513, 2512, 2511, 2510,
 		2700, 2509, 2507, 2506, 2505, 2504, 2502, 2501, 2817, 2508,
 		2701, 2503, 2703, 2702, 2815, 2814, 2812, 2811, 2810, 2800,

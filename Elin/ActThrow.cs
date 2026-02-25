@@ -131,7 +131,7 @@ public class ActThrow : ActBaseAttack
 		EffectIRenderer result = null;
 		if (c.isSynced || p.IsSync)
 		{
-			result = Effect.Get<EffectIRenderer>((t.trait is TraitBall || t.HasTag(CTAG.throwBall)) ? "throw_ball" : "throw").Play((c.isChara && c.Chara.host != null) ? c.Chara.host : c, t, c.pos, p, 0.2f);
+			result = Effect.Get<EffectIRenderer>((t.trait is TraitBall || t.HasTag(CTAG.throwBall) || method == ThrowMethod.Reward) ? "throw_ball" : "throw").Play((c.isChara && c.Chara.host != null) ? c.Chara.host : c, t, c.pos, p, 0.2f);
 			t.renderer.SetFirst(first: false, c.renderer.position);
 		}
 		if (!t.HasElement(410) || method == ThrowMethod.Punish)

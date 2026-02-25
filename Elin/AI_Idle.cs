@@ -503,7 +503,7 @@ public class AI_Idle : AIAct
 					if (randomPoint2 != null)
 					{
 						Chara chara3 = EClass._zone.SpawnMob("cocoon", randomPoint2);
-						owner.Say("layegg", owner);
+						owner.Say("egglay", owner);
 						chara3.SetHostility(owner.OriginalHostility);
 					}
 				}

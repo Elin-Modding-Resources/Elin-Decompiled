@@ -86,9 +86,14 @@ public class AI_Eat : AIAct
 		{
 			yield return DoGotoSpot<TraitSpotDining>(base.KeepRunning);
 		}
-		int max = ((target.SelfWeight < 100) ? 1 : (2 + (int)Mathf.Sqrt(target.SelfWeight * 2 / 3)));
+		int num = ((target.SelfWeight < 100) ? 1 : (2 + (int)Mathf.Sqrt(target.SelfWeight * 2 / 3)));
 		int turn = 0;
 		bool isFeastFood = EClass._zone.HasField(10001) && target.GetBool(128);
+		num = num * 100 / (100 + owner.Evalue(1663) * 100);
+		if (num < 1)
+		{
+			num = 1;
+		}
 		Progress_Custom seq = new Progress_Custom
 		{
 			cancelWhenMoved = false,
@@ -142,7 +147,7 @@ public class AI_Eat : AIAct
 					FoodEffect.Proc(owner, target.Thing);
 				}
 			}
-		}.SetDuration(max, 5);
+		}.SetDuration(num, 5);
 		yield return Do(seq);
 	}
 }

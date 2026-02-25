@@ -300,11 +300,6 @@ public class Act : Element
 		return true;
 	}
 
-	public virtual bool CanPerform()
-	{
-		return true;
-	}
-
 	public bool Perform(Chara _cc, Card _tc = null, Point _tp = null)
 	{
 		if (!CanPerform(_cc, _tc, _tp))
@@ -316,6 +311,16 @@ public class Act : Element
 			_cc.mimicry.Kill();
 		}
 		return Perform();
+	}
+
+	public virtual bool ValidatePerform(Chara _cc, Card _tc, Point _tp)
+	{
+		return true;
+	}
+
+	public virtual bool CanPerform()
+	{
+		return true;
 	}
 
 	public bool CanPerform(Chara _cc, Card _tc = null, Point _tp = null)

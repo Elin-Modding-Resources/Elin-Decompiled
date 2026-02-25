@@ -509,7 +509,7 @@ public class Biography : EClass
 
 	public string TextBio2(Chara c)
 	{
-		return Lang.Parse("heightWeight", height.ToString() ?? "", weight.ToString() ?? "") + " " + ((c.material.alias == "meat") ? "" : c.material.GetName().ToTitleCase(wholeText: true));
+		return Lang.Parse("heightWeight", height.ToFormat(), weight.ToFormat()) + " " + ((c.material.alias == "meat") ? "" : c.material.GetName().ToTitleCase(wholeText: true));
 	}
 
 	public string TextBioSlave(Chara c)
@@ -524,6 +524,6 @@ public class Biography : EClass
 
 	public string TextAppearance()
 	{
-		return Lang.Parse("heightWeight", height.ToString() ?? "", weight.ToString() ?? "");
+		return Lang.Parse("heightWeight", height.ToFormat(), weight.ToFormat());
 	}
 }

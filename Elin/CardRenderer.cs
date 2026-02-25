@@ -545,6 +545,7 @@ public class CardRenderer : RenderObject
 		if (transAnimeData == null)
 		{
 			anime = null;
+			Debug.Log("Anime not found:" + id);
 			return;
 		}
 		anime = new TransAnime
@@ -552,7 +553,7 @@ public class CardRenderer : RenderObject
 			data = transAnimeData,
 			renderer = this
 		}.Init();
-		if (id == AnimeID.Attack || (uint)(id - 18) <= 1u)
+		if (id == AnimeID.Attack || (uint)(id - 18) <= 1u || id == AnimeID.Kiss)
 		{
 			anime.dest = dest;
 		}
