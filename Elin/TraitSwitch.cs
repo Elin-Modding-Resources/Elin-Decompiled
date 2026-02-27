@@ -59,11 +59,7 @@ public class TraitSwitch : Trait
 			c.Say("disarm_success", c, owner);
 			owner.PlaySound("disarm");
 			c.ModExp(293, 50 + TrapLv);
-			int num = (EClass.debug.enable ? 10 : EClass.pc.Evalue(1656));
-			if (!c.IsPCParty)
-			{
-				num = 0;
-			}
+			int num = (EClass.debug.enable ? 10 : (c.IsPCFactionOrMinion ? EClass.pc.Evalue(1656) : 0));
 			if (!IsLaidByDog && num > 0 && num + 2 > EClass.rnd(10))
 			{
 				string id = "scrap";
@@ -106,7 +102,7 @@ public class TraitSwitch : Trait
 		c.Say("disarm_fail", c, owner);
 		c.PlaySound("disarm_fail");
 		c.ModExp(293, 20 + TrapLv / 3);
-		if (c.IsPCFaction)
+		if (c.IsPCParty)
 		{
 			int @int = owner.GetInt(60);
 			owner.SetInt(60, @int + 1);

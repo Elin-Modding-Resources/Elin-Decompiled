@@ -586,7 +586,7 @@ public class AI_Idle : AIAct
 					num = EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(500)))) + 1;
 					string[] strs = new string[4] { "1294", "1294", "1130", "1131" };
 					ThrowMethod throwMethod = ThrowMethod.Reward;
-					if (owner.affinity.CurrentStage <= Affinity.Stage.Hate || owner.IsMarried || (EClass.debug.enable && EClass.rnd(10) == 0))
+					if (owner.affinity.IsWeddingHater || owner.IsMarried || (EClass.debug.enable && EClass.rnd(10) == 0))
 					{
 						owner.Talk("curse_wed");
 						throwMethod = ThrowMethod.Punish;

@@ -1,5 +1,7 @@
 public class BaseSong : BaseStance
 {
+	public virtual int IdAbility => -1;
+
 	public override void OnStart()
 	{
 		owner.ShowEmo(Emo.happy);
@@ -8,17 +10,21 @@ public class BaseSong : BaseStance
 
 	public override void Tick()
 	{
-		if (!EClass._zone.IsRegion)
+		if (EClass._zone.IsRegion)
 		{
-			if (owner.HasCondition<ConSilence>())
-			{
-				Kill();
-			}
-			else
-			{
-				TickSong();
-			}
+			return;
 		}
+		if (owner.HasCondition<ConSilence>())
+		{
+			Kill();
+			return;
+		}
+		Element element = owner.elements.GetElement(IdAbility);
+		if (element != null)
+		{
+			owner.elements.ModExp(element.id, 20f);
+		}
+		TickSong();
 	}
 
 	public virtual void TickSong()

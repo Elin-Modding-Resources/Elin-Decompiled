@@ -132,6 +132,9 @@ public class Player : EClass
 		public int divorced;
 
 		[JsonProperty]
+		public int angryCats;
+
+		[JsonProperty]
 		public long shipMoney;
 
 		public int lastShippingExp;
@@ -706,6 +709,18 @@ public class Player : EClass
 			set
 			{
 				ints[20] = value;
+			}
+		}
+
+		public int fishStolen
+		{
+			get
+			{
+				return ints[21];
+			}
+			set
+			{
+				ints[21] = value;
 			}
 		}
 

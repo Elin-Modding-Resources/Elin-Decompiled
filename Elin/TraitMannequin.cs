@@ -8,7 +8,17 @@ public class TraitMannequin : TraitItem
 
 	public override bool CanUseContent => false;
 
-	public override bool UseAltTiles => owner.things.Count > 0;
+	public override bool UseAltTiles
+	{
+		get
+		{
+			if (owner.things.Count <= 0)
+			{
+				return owner.c_lockLv != 0;
+			}
+			return true;
+		}
+	}
 
 	public override bool CanUseFromInventory => false;
 

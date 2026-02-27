@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class StanceSongEnd : BaseSong
 {
+	public override int IdAbility => 6753;
+
 	public override void TickSong()
 	{
 		foreach (Chara item in owner.pos.ListCharasInRadius(owner, 4, (Chara c) => !c.IsDeadOrSleeping && c.IsHostile(owner)))

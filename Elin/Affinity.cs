@@ -33,6 +33,8 @@ public class Affinity : EClass
 
 	public string Name => Lang.GetList("affinity").TryGet(list.IndexOf(this), list.Count - 1);
 
+	public bool IsWeddingHater => CurrentStage <= Stage.Hate;
+
 	public static Affinity Get(Chara c)
 	{
 		CC = c;

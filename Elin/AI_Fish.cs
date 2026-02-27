@@ -113,7 +113,20 @@ public class AI_Fish : AIAct
 			{
 				thing.isHidden = false;
 			}
-			if (owner.IsPC)
+			if (EClass.rnd(EClass.debug.enable ? 2 : 100) == 0 && thing.category.IsChildOf("fish"))
+			{
+				owner.Say("fish_ehe");
+				owner.Say("fish_ehe2");
+				owner.PlaySound("escape");
+				owner.PlayEffect("fizzle");
+				thing.Destroy();
+				if (owner.IsPC)
+				{
+					EClass.player.flags.fishStolen++;
+					Steam.GetAchievement(ID_Achievement.EHE_FISH);
+				}
+			}
+			else if (owner.IsPC)
 			{
 				if (EClass.game.config.preference.pickFish)
 				{

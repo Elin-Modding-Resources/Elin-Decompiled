@@ -251,11 +251,7 @@ public class TraitAltar : Trait
 		int value = orCreateElement.Value;
 		c.elements.ModExp(orCreateElement.id, offeringValue * 2 / 3);
 		int num2 = 4;
-		if (orCreateElement.vBase >= num)
-		{
-			c.elements.SetBase(orCreateElement.id, num);
-		}
-		else
+		if (orCreateElement.vBase < num)
 		{
 			num2 = Mathf.Clamp(orCreateElement.vBase * 100 / num / 25, 0, 3);
 		}

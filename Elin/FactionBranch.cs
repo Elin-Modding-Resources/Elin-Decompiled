@@ -1480,9 +1480,17 @@ public class FactionBranch : EClass
 		{
 			uidMaid = c.uid;
 		}
-		if (c.id == "lomias")
+		switch (c.id)
 		{
+		case "lomias":
 			Steam.GetAchievement(ID_Achievement.LOMIAS2);
+			break;
+		case "larnneire":
+			Steam.GetAchievement(ID_Achievement.LARNNEIRE2);
+			break;
+		case "melilith":
+			Steam.GetAchievement(ID_Achievement.MELILITH);
+			break;
 		}
 	}
 

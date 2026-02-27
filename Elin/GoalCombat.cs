@@ -176,7 +176,7 @@ public class GoalCombat : Goal
 				owner.PlaySound("boost");
 				owner.ShowEmo(Emo.love);
 				owner.lastEmo = Emo.angry;
-				owner.MakeMinion(tc.IsPCParty ? EClass.pc : tc);
+				owner.MakeMinion(tc);
 				yield return Success();
 			}
 			if (EClass.rnd(5) == 0 && tc.HasElement(1325) && owner.IsPlant && owner.CanBeTempAlly(tc))

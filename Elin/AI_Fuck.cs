@@ -160,6 +160,10 @@ public class AI_Fuck : AIAct
 					}
 					break;
 				}
+				if (((cc.HasElement(1216) || tc.HasElement(1216)) ? 100 : 20) > EClass.rnd(100))
+				{
+					((EClass.rnd(2) == 0) ? cc : tc).PlayEffect("love2");
+				}
 				if (variation == Variation.Slime)
 				{
 					owner.DoHostileAction(target);

@@ -403,6 +403,7 @@ public class FoodEffect : EClass
 		}
 		if (!c2.IsCat && food.trait is TraitFoodChuryu)
 		{
+			int num10 = 0;
 			foreach (Chara item in c2.pos.ListCharasInRadius(c2, 5, (Chara c) => c.IsCat))
 			{
 				item.Say("angry", item);
@@ -412,6 +413,13 @@ public class FoodEffect : EClass
 				{
 					EClass.player.ModKarma(-3);
 				}
+				num10++;
+			}
+			EClass.player.stats.angryCats += num10;
+			Debug.Log(num10 + "/" + EClass.player.stats.angryCats);
+			if (num10 >= 10)
+			{
+				Steam.GetAchievement(ID_Achievement.CHURYU);
 			}
 		}
 		if (c2.IsPC && EClass._zone is Zone_Lothria)

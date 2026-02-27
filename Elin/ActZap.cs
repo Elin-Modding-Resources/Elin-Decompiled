@@ -23,8 +23,8 @@ public class ActZap : Act
 			Act.CC.RemoveCondition<ConInvisibility>();
 			Act.TC = Act.CC;
 			EffectId idEffect = trait.IdEffect;
-			int power = trait.Power * (100 + Act.CC.Evalue(305) * 10 + Act.CC.MAG / 2 + Act.CC.PER / 2) / 100;
-			ActEffect.ProcAt(idEffect, power, trait.owner.blessedState, Act.CC, null, Act.TP, trait.IsNegative, new ActRef
+			long a = trait.Power * (100 + (long)Act.CC.Evalue(305) * 10L + Act.CC.MAG / 2 + Act.CC.PER / 2) / 100;
+			ActEffect.ProcAt(idEffect, MathEx.Min(a), trait.owner.blessedState, Act.CC, null, Act.TP, trait.IsNegative, new ActRef
 			{
 				refThing = trait.owner.Thing,
 				aliasEle = trait.aliasEle,

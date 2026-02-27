@@ -7209,7 +7209,14 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (EClass._zone is Zone_Music || EClass._zone is Zone_Wedding)
 			{
-				ShowDialog("_chara", (!(EClass._zone is Zone_Wedding)) ? "party" : (IsPCParty ? "wedding_love" : "wedding"));
+				string step = ((!(EClass._zone is Zone_Wedding)) ? "party" : (IsPCParty ? "wedding_love" : ((IsMarried || affinity.IsWeddingHater) ? "wedding_hater" : "wedding")));
+				if (EClass._zone is Zone_Wedding && IsPCParty && base.c_love != null && !base.c_love.gaveCutter)
+				{
+					step = "wedding_cutter";
+					EClass.player.DropReward(ThingGen.Create("dagger_cakecutter"));
+					base.c_love.gaveCutter = true;
+				}
+				ShowDialog("_chara", step);
 				return;
 			}
 			if (EClass.game.quests.OnShowDialog(this))

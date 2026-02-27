@@ -2313,6 +2313,7 @@ public class ActEffect : EClass
 			TC.Say("heal_jure", TC);
 			break;
 		case EffectId.Headpat:
+			CC.PlaySound("headpat");
 			CC.Cuddle(TC, headpat: true);
 			break;
 		case EffectId.RemoveHex:

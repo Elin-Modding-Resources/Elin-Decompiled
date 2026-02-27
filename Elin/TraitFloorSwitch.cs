@@ -9,7 +9,7 @@ public class TraitFloorSwitch : TraitSwitch
 			{
 				owner.Say("levitating");
 			}
-			else if (!CanDisarmTrap || (!TryDisarmTrap(c) && EClass.pc.Evalue(1656) < 3))
+			else if (!CanDisarmTrap || (!TryDisarmTrap(c) && (!c.IsPCFactionOrMinion || EClass.pc.Evalue(1656) < 3)))
 			{
 				ActivateTrap(c);
 			}

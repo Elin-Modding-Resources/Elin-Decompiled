@@ -859,6 +859,10 @@ public class SerializedCards : EClass
 				}
 				card2.c_IDTState = card4.idtState;
 			}
+			else if (card2.trait is TraitMannequin)
+			{
+				card2.c_lockLv = 1;
+			}
 			if (card2.isChara)
 			{
 				card2.Chara.homeZone = EClass._zone;
