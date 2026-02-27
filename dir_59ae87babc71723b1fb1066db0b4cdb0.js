@@ -58,6 +58,7 @@ var dir_59ae87babc71723b1fb1066db0b4cdb0 =
     [ "LoadingScreen.cs", "LoadingScreen_8cs.html", "LoadingScreen_8cs" ],
     [ "Log.cs", "Log_8cs.html", "Log_8cs" ],
     [ "MatColors.cs", "MatColors_8cs.html", "MatColors_8cs" ],
+    [ "MathEx.cs", "MathEx_8cs.html", "MathEx_8cs" ],
     [ "MOD.cs", "MOD_8cs.html", "MOD_8cs" ],
     [ "ModItem.cs", "ModItem_8cs.html", "ModItem_8cs" ],
     [ "ModItemList.cs", "ModItemList_8cs.html", "ModItemList_8cs" ],

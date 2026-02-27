@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.277 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.278 Nightly</span>
    </div>
   </td>
  </tr>
@@ -1085,7 +1085,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  109</span>                if (EClass.player.CountKeyItem(<span class="stringliteral">&quot;well_wish&quot;</span>) &gt; 0)</div>
 <div class="line"><span class="lineno">  110</span>                {</div>
 <div class="line"><span class="lineno">  111</span>                    EClass.player.ModKeyItem(<span class="stringliteral">&quot;well_wish&quot;</span>, -1);</div>
-<div class="line"><span class="lineno">  112</span>                    ActEffect.Proc(EffectId.Wish, EClass.pc, null, 50 + EClass.player.CountKeyItem(<span class="stringliteral">&quot;well_enhance&quot;</span>) * 50);</div>
+<div class="line"><span class="lineno">  112</span>                    ActEffect.Proc(EffectId.Wish, EClass.pc, null, 50 + EClass.player.CountKeyItem(<span class="stringliteral">&quot;well_enhance&quot;</span>) * 50 + EClass.player.flags.fishStolen * 20);</div>
 <div class="line"><span class="lineno">  113</span>                    EClass.player.wellWished = true;</div>
 <div class="line"><span class="lineno">  114</span>                }</div>
 <div class="line"><span class="lineno">  115</span>                <span class="keywordflow">else</span></div>
@@ -1114,10 +1114,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00286">CoreDebug.cs:286</a></div></div>
 <div class="ttc" id="aclassEClass_html_aaf17e3ff62e9e834064c5d4b782a84cb"><div class="ttname"><a href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">EClass.player</a></div><div class="ttdeci">static Player player</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00013">EClass.cs:13</a></div></div>
 <div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00049">EClass.cs:49</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a61969a4ade79b2dfe141815b9c1b7491"><div class="ttname"><a href="classPlayer.html#a61969a4ade79b2dfe141815b9c1b7491">Player.wellWished</a></div><div class="ttdeci">bool wellWished</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00989">Player.cs:989</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a61969a4ade79b2dfe141815b9c1b7491"><div class="ttname"><a href="classPlayer.html#a61969a4ade79b2dfe141815b9c1b7491">Player.wellWished</a></div><div class="ttdeci">bool wellWished</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01004">Player.cs:1004</a></div></div>
 <div class="ttc" id="aclassTraitWell_html_a227abc4c403af92c9f4495bb61c2c538"><div class="ttname"><a href="classTraitWell.html#a227abc4c403af92c9f4495bb61c2c538">TraitWell.BadEffect</a></div><div class="ttdeci">static void BadEffect(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitWell_8cs_source.html#l00143">TraitWell.cs:143</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitWell_8cs_source.html#l00143">BadEffect()</a>, <a class="el" href="TraitWell_8cs_source.html#l00014">Charges</a>, <a class="el" href="EClass_8cs_source.html#l00049">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00286">CoreDebug.enable</a>, <a class="el" href="UIBook_8cs_source.html#l00627">if()</a>, <a class="el" href="TraitWell_8cs_source.html#l00003">IsHoly</a>, <a class="el" href="TraitWell_8cs_source.html#l00134">ModCharges()</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l06362">Card.PlayAnime()</a>, <a class="el" href="EClass_8cs_source.html#l00013">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l06343">Card.PlaySound()</a>, <a class="el" href="TraitWell_8cs_source.html#l00036">polluted</a>, <a class="el" href="EClass_8cs_source.html#l00059">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l07020">Card.Say()</a>, <a class="el" href="ActPlan_8cs_source.html#l00368">ActPlan.TrySetAct()</a>, and <a class="el" href="Player_8cs_source.html#l00989">Player.wellWished</a>.</p>
+<p class="reference">References <a class="el" href="TraitWell_8cs_source.html#l00143">BadEffect()</a>, <a class="el" href="TraitWell_8cs_source.html#l00014">Charges</a>, <a class="el" href="EClass_8cs_source.html#l00049">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00286">CoreDebug.enable</a>, <a class="el" href="UIBook_8cs_source.html#l00627">if()</a>, <a class="el" href="TraitWell_8cs_source.html#l00003">IsHoly</a>, <a class="el" href="TraitWell_8cs_source.html#l00134">ModCharges()</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l06362">Card.PlayAnime()</a>, <a class="el" href="EClass_8cs_source.html#l00013">EClass.player</a>, <a class="el" href="Card_8cs_source.html#l06343">Card.PlaySound()</a>, <a class="el" href="TraitWell_8cs_source.html#l00036">polluted</a>, <a class="el" href="EClass_8cs_source.html#l00059">EClass.rnd()</a>, <a class="el" href="Card_8cs_source.html#l07020">Card.Say()</a>, <a class="el" href="ActPlan_8cs_source.html#l00368">ActPlan.TrySetAct()</a>, and <a class="el" href="Player_8cs_source.html#l01004">Player.wellWished</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1165,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>        }</div>
 <div class="line"><span class="lineno">   34</span>    }</div>
 <div class="ttc" id="aclassCard_html_aedc5cea1616f2efa676ef172a05330b1"><div class="ttname"><a href="classCard.html#aedc5cea1616f2efa676ef172a05330b1">Card.c_charges</a></div><div class="ttdeci">int c_charges</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01282">Card.cs:1283</a></div></div>
-<div class="ttc" id="aclassPlayer_html_a7fbb0663c8d16f4e683ab28efb978ae0"><div class="ttname"><a href="classPlayer.html#a7fbb0663c8d16f4e683ab28efb978ae0">Player.holyWell</a></div><div class="ttdeci">int holyWell</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00923">Player.cs:923</a></div></div>
+<div class="ttc" id="aclassPlayer_html_a7fbb0663c8d16f4e683ab28efb978ae0"><div class="ttname"><a href="classPlayer.html#a7fbb0663c8d16f4e683ab28efb978ae0">Player.holyWell</a></div><div class="ttdeci">int holyWell</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00938">Player.cs:938</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="TraitWell_8cs_source.html#l00043">OnBlend()</a>, <a class="el" href="TraitPotionEmpty_8cs_source.html#l00019">TraitPotionEmpty.OnUse()</a>, and <a class="el" href="TraitWell_8cs_source.html#l00083">TrySetAct()</a>.</p>
 

@@ -1,5 +1,12 @@
 var NAVTREEINDEX20 =
 {
+"TraitSpotFarm_8cs_source.html":[2,0,0,1777],
+"TraitSpotFish_8cs.html":[2,0,0,1778],
+"TraitSpotFish_8cs_source.html":[2,0,0,1778],
+"TraitSpotFuel_8cs.html":[2,0,0,1779],
+"TraitSpotFuel_8cs_source.html":[2,0,0,1779],
+"TraitSpotGarbage_8cs.html":[2,0,0,1780],
+"TraitSpotGarbage_8cs_source.html":[2,0,0,1780],
 "TraitSpotGuidePC_8cs.html":[2,0,0,1781],
 "TraitSpotGuidePC_8cs_source.html":[2,0,0,1781],
 "TraitSpotLight_8cs.html":[2,0,0,1782],
@@ -242,12 +249,5 @@ var NAVTREEINDEX20 =
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fc":[2,0,0,1898,0],
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca1f5e8d27037d8efd95be78d7c2432373":[2,0,0,1898,0,2],
 "TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca340b53fec301dbbc81a0301b9fa905c1":[2,0,0,1898,0,1],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca46f3ea056caa3126b91f3f70beea068c":[2,0,0,1898,0,3],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1898,0,0],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fcac759964c35a97cb57dd977f4a9553ad4":[2,0,0,1898,0,4],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fcadf95a4317694a004f296f487ad26100e":[2,0,0,1898,0,5],
-"TreasureType_8cs_source.html":[2,0,0,1898],
-"TryMakeRandomItemSource_8cs.html":[2,0,0,1899],
-"TryMakeRandomItemSource_8cs.html#abd97983f8e0f37849a5933032e27619d":[2,0,0,1899,0],
-"TryMakeRandomItemSource_8cs.html#abd97983f8e0f37849a5933032e27619da3b962574887f124e78bfd9b4685f3b39":[2,0,0,1899,0,1]
+"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca46f3ea056caa3126b91f3f70beea068c":[2,0,0,1898,0,3]
 };

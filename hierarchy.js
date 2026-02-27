@@ -2688,6 +2688,7 @@ var hierarchy =
     ] ],
     [ "MatColors", "classMatColors.html", null ],
     [ "CoreDebug.MatColorTest", "classCoreDebug_1_1MatColorTest.html", null ],
+    [ "MathEx", "classMathEx.html", null ],
     [ "Crawler.Member", "classCrawler_1_1Member.html", null ],
     [ "LayerInspect.MenuItem", "classLayerInspect_1_1MenuItem.html", null ],
     [ "MeshBatch", "classMeshBatch.html", null ],

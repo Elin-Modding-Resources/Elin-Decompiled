@@ -1,5 +1,12 @@
 var NAVTREEINDEX23 =
 {
+"WidgetManager_8cs.html":[2,0,0,1957],
+"WidgetManager_8cs_source.html":[2,0,0,1957],
+"WidgetMascot_8cs.html":[2,0,0,1958],
+"WidgetMascot_8cs_source.html":[2,0,0,1958],
+"WidgetMemo_8cs.html":[2,0,0,1959],
+"WidgetMemo_8cs_source.html":[2,0,0,1959],
+"WidgetMenuPanel_8cs.html":[2,0,0,1960],
 "WidgetMenuPanel_8cs_source.html":[2,0,0,1960],
 "WidgetMinimap_8cs.html":[2,0,0,1961],
 "WidgetMinimap_8cs_source.html":[2,0,0,1961],
@@ -242,12 +249,5 @@ var NAVTREEINDEX23 =
 "Zone__Lysanas_8cs.html":[2,0,0,2031],
 "Zone__Lysanas_8cs_source.html":[2,0,0,2031],
 "Zone__MerchantGuild_8cs.html":[2,0,0,2032],
-"Zone__MerchantGuild_8cs_source.html":[2,0,0,2032],
-"Zone__Mifu_8cs.html":[2,0,0,2033],
-"Zone__Mifu_8cs_source.html":[2,0,0,2033],
-"Zone__Mine_8cs.html":[2,0,0,2034],
-"Zone__Mine_8cs_source.html":[2,0,0,2034],
-"Zone__MiralGarok_8cs.html":[2,0,0,2035],
-"Zone__MiralGarok_8cs_source.html":[2,0,0,2035],
-"Zone__Music_8cs.html":[2,0,0,2036]
+"Zone__MerchantGuild_8cs_source.html":[2,0,0,2032]
 };

@@ -3,6 +3,7 @@ var classPlayer_1_1Stats =
     [ "GetShippingBonus", "classPlayer_1_1Stats.html#a7ea7dd5fee508438475b04643b52a86d", null ],
     [ "_longs", "classPlayer_1_1Stats.html#ada6b14866ee7fc79fa32cfe4ee13510d", null ],
     [ "allyDeath", "classPlayer_1_1Stats.html#ab85ff926e445e3a4aea392a745684295", null ],
+    [ "angryCats", "classPlayer_1_1Stats.html#a880c56672bfc8671c2216cee460d042f", null ],
     [ "days", "classPlayer_1_1Stats.html#ad7fe6db5d3ff138870b89de937470dde", null ],
     [ "death", "classPlayer_1_1Stats.html#aba555ea8a12aa6e4d618808f692065ef", null ],
     [ "death2", "classPlayer_1_1Stats.html#ac567143dafb4bb30e525e9f059b64b0a", null ],

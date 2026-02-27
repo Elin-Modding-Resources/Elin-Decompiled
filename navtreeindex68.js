@@ -1,5 +1,14 @@
 var NAVTREEINDEX68 =
 {
+"classGameSetting_1_1RenderSetting.html#a59a993c39fa2211745cabc04ace204a1":[1,0,562,6,12],
+"classGameSetting_1_1RenderSetting.html#a67a662d7364f6d980c1922f231ae81e6":[1,0,562,6,43],
+"classGameSetting_1_1RenderSetting.html#a79975fcfd56af7a47cdbee9909b2467a":[1,0,562,6,41],
+"classGameSetting_1_1RenderSetting.html#a82f492719e4f108dc60a71c6f3c0420c":[1,0,562,6,22],
+"classGameSetting_1_1RenderSetting.html#a8ac8de9786944f77a3994abfb79a26a5":[1,0,562,6,29],
+"classGameSetting_1_1RenderSetting.html#a8dcc0eb730d7f0e6971c0eb8951aa9ce":[1,0,562,6,15],
+"classGameSetting_1_1RenderSetting.html#a9260efeaba25bb5478b8ecb5f0cb8dc0":[1,0,562,6,20],
+"classGameSetting_1_1RenderSetting.html#a9b828825465662205097c1aec6556d7a":[1,0,562,6,31],
+"classGameSetting_1_1RenderSetting.html#aaa4a92a8577c9983becff5303f554d8b":[1,0,562,6,36],
 "classGameSetting_1_1RenderSetting.html#aadecc4b136e6da5d36cf499efc8aa5fc":[1,0,562,6,38],
 "classGameSetting_1_1RenderSetting.html#aae3f12482b5d262e0b6a67fc3646fb1f":[1,0,562,6,10],
 "classGameSetting_1_1RenderSetting.html#ab82773e6fb0da4187fc608bdef94f362":[1,0,562,6,16],
@@ -240,14 +249,5 @@ var NAVTREEINDEX68 =
 "classGlobalData.html":[1,0,571],
 "classGlobalData.html#a242d899c028f3d1898099f275ac7dd3d":[1,0,571,0],
 "classGlobalData.html#abc84da135a04acf4ce7076d70692cec0":[1,0,571,1],
-"classGlobalGoal.html":[1,0,572],
-"classGlobalGoal.html#a067e369e656c2c2f2590e7cd49502586":[1,0,572,7],
-"classGlobalGoal.html#a42fff510e744d3de87825e7713d4b735":[1,0,572,3],
-"classGlobalGoal.html#a5291f5bf8d264177135bc1cffe4e541f":[1,0,572,1],
-"classGlobalGoal.html#a5c2048b56e976d1e86601a6fd0299ada":[1,0,572,2],
-"classGlobalGoal.html#a6de3df5d326eb08614a42a65fdde49d0":[1,0,572,4],
-"classGlobalGoal.html#a9ac4b8ed5f324bc100e6dd06f4b51e71":[1,0,572,9],
-"classGlobalGoal.html#aa9264f11678dea51f4dbd69390f59c29":[1,0,572,8],
-"classGlobalGoal.html#adddd8a0f1a96851f123e72e4728a77bf":[1,0,572,5],
-"classGlobalGoal.html#ade51c0ca2782e364d8cb48bf66b2a542":[1,0,572,6]
+"classGlobalGoal.html":[1,0,572]
 };

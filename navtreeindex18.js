@@ -1,5 +1,12 @@
 var NAVTREEINDEX18 =
 {
+"TraitFortuneBall_8cs.html":[2,0,0,1528],
+"TraitFortuneBall_8cs_source.html":[2,0,0,1528],
+"TraitFortuneCookie_8cs.html":[2,0,0,1529],
+"TraitFortuneCookie_8cs_source.html":[2,0,0,1529],
+"TraitFridge_8cs.html":[2,0,0,1530],
+"TraitFridge_8cs_source.html":[2,0,0,1530],
+"TraitGM_8cs.html":[2,0,0,1552],
 "TraitGM_8cs_source.html":[2,0,0,1552],
 "TraitGM__Fighter_8cs.html":[2,0,0,1553],
 "TraitGM__Fighter_8cs_source.html":[2,0,0,1553],
@@ -242,12 +249,5 @@ var NAVTREEINDEX18 =
 "TraitMineEntrance_8cs.html":[2,0,0,1651],
 "TraitMineEntrance_8cs_source.html":[2,0,0,1651],
 "TraitMiniPool_8cs.html":[2,0,0,1652],
-"TraitMiniPool_8cs_source.html":[2,0,0,1652],
-"TraitMiral_8cs.html":[2,0,0,1653],
-"TraitMiral_8cs_source.html":[2,0,0,1653],
-"TraitMirror_8cs.html":[2,0,0,1654],
-"TraitMirror_8cs_source.html":[2,0,0,1654],
-"TraitMixedFood_8cs.html":[2,0,0,1655],
-"TraitMixedFood_8cs_source.html":[2,0,0,1655],
-"TraitMixer_8cs.html":[2,0,0,1656]
+"TraitMiniPool_8cs_source.html":[2,0,0,1652]
 };

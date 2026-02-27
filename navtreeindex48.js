@@ -1,5 +1,14 @@
 var NAVTREEINDEX48 =
 {
+"classClassExtension.html#a75a7b6969704a7897edef464ce374e06":[1,0,297,176],
+"classClassExtension.html#a75c5360c0d554235ac2762f8c6681d01":[1,0,297,18],
+"classClassExtension.html#a75d22574432bcc5b4d00014d0f7bc487":[1,0,297,127],
+"classClassExtension.html#a78c8cd0298ca4c97d12e93f30160595c":[1,0,297,4],
+"classClassExtension.html#a796e6fb7f048cebc6124350e61bdae7c":[1,0,297,41],
+"classClassExtension.html#a7a64b366b7528991c1f17207b6a72ffb":[1,0,297,37],
+"classClassExtension.html#a7a9b217186d53f3eac70bef527c5ae22":[1,0,297,75],
+"classClassExtension.html#a7b68da4bff230f2500a9122b2d324c7b":[1,0,297,167],
+"classClassExtension.html#a7bd6d8869bfde526c073d49e8d7404c6":[1,0,297,194],
 "classClassExtension.html#a7d2e73fae3c30355dddc4d7db7d32ac2":[1,0,297,109],
 "classClassExtension.html#a7e4da730ecdc1f49e8fda8bb23bcb9f4":[1,0,297,170],
 "classClassExtension.html#a7f4dce8e67b06d0bc9685fabc098fdaf":[1,0,297,190],
@@ -240,14 +249,5 @@ var NAVTREEINDEX48 =
 "classConAwakening.html#a641a1a6a98615eb92075faa85f783657":[1,0,310,1],
 "classConBandage.html":[1,0,311],
 "classConBandage.html#a2976f295ec4b3f15fb08516cf0592396":[1,0,311,0],
-"classConBane.html":[1,0,312],
-"classConBerserk.html":[1,0,313],
-"classConBerserk.html#a8f402a21e7811b9ffb1cfb4221937691":[1,0,313,0],
-"classConBerserk.html#aaf59926504504c9e0472f5155d03e53a":[1,0,313,2],
-"classConBerserk.html#ac8409e2c9ccaac75632276f4250b1b56":[1,0,313,1],
-"classConBleed.html":[1,0,314],
-"classConBleed.html#a29a4a85f0042eff5c3296755d9f059b5":[1,0,314,0],
-"classConBleed.html#a703ec033ac8c2dba8a099fd9678cde05":[1,0,314,1],
-"classConBlind.html":[1,0,315],
-"classConBlind.html#a0bb5bd276601227948d85bac57b0369e":[1,0,315,1]
+"classConBane.html":[1,0,312]
 };

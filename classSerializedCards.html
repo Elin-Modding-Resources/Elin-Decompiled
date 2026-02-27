@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.277 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.278 Nightly</span>
    </div>
   </td>
  </tr>
@@ -730,57 +730,61 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  859</span>                }</div>
 <div class="line"><span class="lineno">  860</span>                card2.c_IDTState = card4.idtState;</div>
 <div class="line"><span class="lineno">  861</span>            }</div>
-<div class="line"><span class="lineno">  862</span>            <span class="keywordflow">if</span> (card2.<a class="code hl_property" href="classCard.html#ab75ffdacfe8891e42eec65abdc40648c">isChara</a>)</div>
+<div class="line"><span class="lineno">  862</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (card2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitMannequin.html">TraitMannequin</a>)</div>
 <div class="line"><span class="lineno">  863</span>            {</div>
-<div class="line"><span class="lineno">  864</span>                card2.Chara.homeZone = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>;</div>
-<div class="line"><span class="lineno">  865</span>                card2.Chara.uidEditor = card4.uidEditor;</div>
-<div class="line"><span class="lineno">  866</span>                <span class="keywordflow">if</span> (card2.<a class="code hl_property" href="classCard.html#af81080c0752fbeb9b07afa0632cc88b1">isBackerContent</a>)</div>
-<div class="line"><span class="lineno">  867</span>                {</div>
-<div class="line"><span class="lineno">  868</span>                    card2.<a class="code hl_function" href="classCard.html#ad56c7049d0c33cc74dc75e4cf1ca8abd">ApplyBacker</a>(card2.<a class="code hl_property" href="classCard.html#aa6e5a7c846b35a7daf8a804ba0515b76">c_idBacker</a>);</div>
-<div class="line"><span class="lineno">  869</span>                }</div>
-<div class="line"><span class="lineno">  870</span>                card2.<a class="code hl_function" href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">SetObj</a>(5, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  871</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a622fdcf3ed72e282396fe974054477da">ShouldScaleImportedChara</a>(card2.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>))</div>
-<div class="line"><span class="lineno">  872</span>                {</div>
-<div class="line"><span class="lineno">  873</span>                    card2.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_function" href="classChara.html#a7338496554d876c29df4af4fb115bb7c">ScaleByPrincipal</a>();</div>
-<div class="line"><span class="lineno">  874</span>                }</div>
-<div class="line"><span class="lineno">  875</span>                <span class="keywordflow">if</span> (isUserZone)</div>
+<div class="line"><span class="lineno">  864</span>                card2.c_lockLv = 1;</div>
+<div class="line"><span class="lineno">  865</span>            }</div>
+<div class="line"><span class="lineno">  866</span>            <span class="keywordflow">if</span> (card2.<a class="code hl_property" href="classCard.html#ab75ffdacfe8891e42eec65abdc40648c">isChara</a>)</div>
+<div class="line"><span class="lineno">  867</span>            {</div>
+<div class="line"><span class="lineno">  868</span>                card2.Chara.homeZone = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>;</div>
+<div class="line"><span class="lineno">  869</span>                card2.Chara.uidEditor = card4.uidEditor;</div>
+<div class="line"><span class="lineno">  870</span>                <span class="keywordflow">if</span> (card2.<a class="code hl_property" href="classCard.html#af81080c0752fbeb9b07afa0632cc88b1">isBackerContent</a>)</div>
+<div class="line"><span class="lineno">  871</span>                {</div>
+<div class="line"><span class="lineno">  872</span>                    card2.<a class="code hl_function" href="classCard.html#ad56c7049d0c33cc74dc75e4cf1ca8abd">ApplyBacker</a>(card2.<a class="code hl_property" href="classCard.html#aa6e5a7c846b35a7daf8a804ba0515b76">c_idBacker</a>);</div>
+<div class="line"><span class="lineno">  873</span>                }</div>
+<div class="line"><span class="lineno">  874</span>                card2.<a class="code hl_function" href="classBaseCard.html#a27a8dbca89eb27a56b60b86c69195adc">SetObj</a>(5, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  875</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a622fdcf3ed72e282396fe974054477da">ShouldScaleImportedChara</a>(card2.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>))</div>
 <div class="line"><span class="lineno">  876</span>                {</div>
-<div class="line"><span class="lineno">  877</span>                    card2.isNPCProperty = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  877</span>                    card2.<a class="code hl_property" href="classCard.html#a1ca33299efe88b19d8da701454a3e444">Chara</a>.<a class="code hl_function" href="classChara.html#a7338496554d876c29df4af4fb115bb7c">ScaleByPrincipal</a>();</div>
 <div class="line"><span class="lineno">  878</span>                }</div>
-<div class="line"><span class="lineno">  879</span>            }</div>
-<div class="line"><span class="lineno">  880</span>            <span class="keywordflow">if</span> (card2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitFakeTile.html">TraitFakeTile</a>)</div>
-<div class="line"><span class="lineno">  881</span>            {</div>
-<div class="line"><span class="lineno">  882</span>                card2.<a class="code hl_function" href="classCard.html#a512dd36bae12dc67bfa06a6a69aa51dc">_CreateRenderer</a>();</div>
+<div class="line"><span class="lineno">  879</span>                <span class="keywordflow">if</span> (isUserZone)</div>
+<div class="line"><span class="lineno">  880</span>                {</div>
+<div class="line"><span class="lineno">  881</span>                    card2.isNPCProperty = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  882</span>                }</div>
 <div class="line"><span class="lineno">  883</span>            }</div>
-<div class="line"><span class="lineno">  884</span>            <span class="keywordflow">if</span> (addToZone)</div>
+<div class="line"><span class="lineno">  884</span>            <span class="keywordflow">if</span> (card2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitFakeTile.html">TraitFakeTile</a>)</div>
 <div class="line"><span class="lineno">  885</span>            {</div>
-<div class="line"><span class="lineno">  886</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(card2, card2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
-<div class="line"><span class="lineno">  887</span>                <span class="keywordflow">if</span> (card2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a779d6dc323fb8414562afc9cc2fe3406">IsDoor</a>)</div>
-<div class="line"><span class="lineno">  888</span>                {</div>
-<div class="line"><span class="lineno">  889</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#ad1d514008cbe7a41abbc14fcf6411537">OnSetBlockOrDoor</a>(card2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, card2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
-<div class="line"><span class="lineno">  890</span>                }</div>
-<div class="line"><span class="lineno">  891</span>                <span class="keywordflow">if</span> (partial != <span class="keyword">null</span> &amp;&amp; !card2.<a class="code hl_property" href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">sourceCard</a>.<a class="code hl_variable" href="classCardRow.html#aeb29c7fcfc596df7166516f5073a311f">lightData</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  886</span>                card2.<a class="code hl_function" href="classCard.html#a512dd36bae12dc67bfa06a6a69aa51dc">_CreateRenderer</a>();</div>
+<div class="line"><span class="lineno">  887</span>            }</div>
+<div class="line"><span class="lineno">  888</span>            <span class="keywordflow">if</span> (addToZone)</div>
+<div class="line"><span class="lineno">  889</span>            {</div>
+<div class="line"><span class="lineno">  890</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#af3a7bcf0f1c645ac02c3793e85700bf9">AddCard</a>(card2, card2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  891</span>                <span class="keywordflow">if</span> (card2.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_property" href="classTrait.html#a779d6dc323fb8414562afc9cc2fe3406">IsDoor</a>)</div>
 <div class="line"><span class="lineno">  892</span>                {</div>
-<div class="line"><span class="lineno">  893</span>                    partial.result.hasLight = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  893</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a5e6e42d05529c1e46f61791f51d08195">_map</a>.<a class="code hl_function" href="classMap.html#ad1d514008cbe7a41abbc14fcf6411537">OnSetBlockOrDoor</a>(card2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, card2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>);</div>
 <div class="line"><span class="lineno">  894</span>                }</div>
-<div class="line"><span class="lineno">  895</span>            }</div>
-<div class="line"><span class="lineno">  896</span>            <a class="code hl_variable" href="classSerializedCards.html#a6d073d49812c1c814a4fc2eae9da2649">importedCards</a>.Add(card2);</div>
-<div class="line"><span class="lineno">  897</span>        }</div>
-<div class="line"><span class="lineno">  898</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> importedCard <span class="keywordflow">in</span> <a class="code hl_variable" href="classSerializedCards.html#a6d073d49812c1c814a4fc2eae9da2649">importedCards</a>)</div>
-<div class="line"><span class="lineno">  899</span>        {</div>
-<div class="line"><span class="lineno">  900</span>            <span class="keywordflow">if</span> (importedCard.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitShackle.html">TraitShackle</a>)</div>
-<div class="line"><span class="lineno">  901</span>            {</div>
-<div class="line"><span class="lineno">  902</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> importedCard2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classSerializedCards.html#a6d073d49812c1c814a4fc2eae9da2649">importedCards</a>)</div>
-<div class="line"><span class="lineno">  903</span>                {</div>
-<div class="line"><span class="lineno">  904</span>                    <span class="keywordflow">if</span> (importedCard2.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; importedCard2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(importedCard.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>))</div>
-<div class="line"><span class="lineno">  905</span>                    {</div>
-<div class="line"><span class="lineno">  906</span>                        importedCard.c_uidRefCard = importedCard2.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
-<div class="line"><span class="lineno">  907</span>                    }</div>
-<div class="line"><span class="lineno">  908</span>                }</div>
-<div class="line"><span class="lineno">  909</span>            }</div>
-<div class="line"><span class="lineno">  910</span>            importedCard.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a01114b762877593444f784e64c4421de">OnImportMap</a>();</div>
-<div class="line"><span class="lineno">  911</span>        }</div>
-<div class="line"><span class="lineno">  912</span>    }</div>
+<div class="line"><span class="lineno">  895</span>                <span class="keywordflow">if</span> (partial != <span class="keyword">null</span> &amp;&amp; !card2.<a class="code hl_property" href="classCard.html#ad9d564e3ce51804be4c393b6d0534168">sourceCard</a>.<a class="code hl_variable" href="classCardRow.html#aeb29c7fcfc596df7166516f5073a311f">lightData</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">  896</span>                {</div>
+<div class="line"><span class="lineno">  897</span>                    partial.result.hasLight = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  898</span>                }</div>
+<div class="line"><span class="lineno">  899</span>            }</div>
+<div class="line"><span class="lineno">  900</span>            <a class="code hl_variable" href="classSerializedCards.html#a6d073d49812c1c814a4fc2eae9da2649">importedCards</a>.Add(card2);</div>
+<div class="line"><span class="lineno">  901</span>        }</div>
+<div class="line"><span class="lineno">  902</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> importedCard <span class="keywordflow">in</span> <a class="code hl_variable" href="classSerializedCards.html#a6d073d49812c1c814a4fc2eae9da2649">importedCards</a>)</div>
+<div class="line"><span class="lineno">  903</span>        {</div>
+<div class="line"><span class="lineno">  904</span>            <span class="keywordflow">if</span> (importedCard.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a> is <a class="code hl_class" href="classTraitShackle.html">TraitShackle</a>)</div>
+<div class="line"><span class="lineno">  905</span>            {</div>
+<div class="line"><span class="lineno">  906</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCard.html">Card</a> importedCard2 <span class="keywordflow">in</span> <a class="code hl_variable" href="classSerializedCards.html#a6d073d49812c1c814a4fc2eae9da2649">importedCards</a>)</div>
+<div class="line"><span class="lineno">  907</span>                {</div>
+<div class="line"><span class="lineno">  908</span>                    <span class="keywordflow">if</span> (importedCard2.<a class="code hl_property" href="classCard.html#a330dfeedb08c341b8f9337fec2e3af64">isRestrained</a> &amp;&amp; importedCard2.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(importedCard.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>))</div>
+<div class="line"><span class="lineno">  909</span>                    {</div>
+<div class="line"><span class="lineno">  910</span>                        importedCard.c_uidRefCard = importedCard2.<a class="code hl_property" href="classCard.html#a8d25e3be9f6dd227a2275b64bf90bcc4">uid</a>;</div>
+<div class="line"><span class="lineno">  911</span>                    }</div>
+<div class="line"><span class="lineno">  912</span>                }</div>
+<div class="line"><span class="lineno">  913</span>            }</div>
+<div class="line"><span class="lineno">  914</span>            importedCard.<a class="code hl_variable" href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">trait</a>.<a class="code hl_function" href="classTrait.html#a01114b762877593444f784e64c4421de">OnImportMap</a>();</div>
+<div class="line"><span class="lineno">  915</span>        }</div>
+<div class="line"><span class="lineno">  916</span>    }</div>
 <div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aEditorTag_8cs_html_a7b3cfa89f51b26ee271d8a6a9e909245"><div class="ttname"><a href="EditorTag_8cs.html#a7b3cfa89f51b26ee271d8a6a9e909245">EditorTag</a></div><div class="ttdeci">EditorTag</div><div class="ttdef"><b>Definition:</b> <a href="EditorTag_8cs_source.html#l00001">EditorTag.cs:2</a></div></div>
 <div class="ttc" id="aPlaceState_8cs_html_a748f6e5d1af057b9209e32457333c348"><div class="ttname"><a href="PlaceState_8cs.html#a748f6e5d1af057b9209e32457333c348">PlaceState</a></div><div class="ttdeci">PlaceState</div><div class="ttdef"><b>Definition:</b> <a href="PlaceState_8cs_source.html#l00001">PlaceState.cs:2</a></div></div>
@@ -864,6 +868,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassThingGen_html_af46ce41300ca306b237398d54a00cf9c"><div class="ttname"><a href="classThingGen.html#af46ce41300ca306b237398d54a00cf9c">ThingGen.Create</a></div><div class="ttdeci">static Thing Create(string id, int idMat=-1, int lv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="ThingGen_8cs_source.html#l00053">ThingGen.cs:53</a></div></div>
 <div class="ttc" id="aclassTraitCoreZone_html"><div class="ttname"><a href="classTraitCoreZone.html">TraitCoreZone</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCoreZone_8cs_source.html#l00003">TraitCoreZone.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitFakeTile_html"><div class="ttname"><a href="classTraitFakeTile.html">TraitFakeTile</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFakeTile_8cs_source.html#l00003">TraitFakeTile.cs:4</a></div></div>
+<div class="ttc" id="aclassTraitMannequin_html"><div class="ttname"><a href="classTraitMannequin.html">TraitMannequin</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitMannequin_8cs_source.html#l00003">TraitMannequin.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitShackle_html"><div class="ttname"><a href="classTraitShackle.html">TraitShackle</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitShackle_8cs_source.html#l00003">TraitShackle.cs:4</a></div></div>
 <div class="ttc" id="aclassTraitWaystone_html"><div class="ttname"><a href="classTraitWaystone.html">TraitWaystone</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitWaystone_8cs_source.html#l00003">TraitWaystone.cs:4</a></div></div>
 <div class="ttc" id="aclassTrait_html_a01114b762877593444f784e64c4421de"><div class="ttname"><a href="classTrait.html#a01114b762877593444f784e64c4421de">Trait.OnImportMap</a></div><div class="ttdeci">virtual void OnImportMap()</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00678">Trait.cs:678</a></div></div>

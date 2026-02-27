@@ -31,6 +31,7 @@ var classPlayer_1_1Flags =
     [ "elinGift", "classPlayer_1_1Flags.html#ac29eb4ec0213c206ff2b5622e0b17a86", null ],
     [ "fiamaFirstDream", "classPlayer_1_1Flags.html#aded06c5f4f0388591401b14a1fb1e4a6", null ],
     [ "fiamaStoryBookGiven", "classPlayer_1_1Flags.html#ad562e8c3ff18d18ade5b1f883ca704d3", null ],
+    [ "fishStolen", "classPlayer_1_1Flags.html#a2c380e3f43afd785c454dacbed814030", null ],
     [ "gotClickReward", "classPlayer_1_1Flags.html#a3bcac4246cb62687ae8dd0940717e8ce", null ],
     [ "gotEtherDisease", "classPlayer_1_1Flags.html#a0e5de12c4be974b9ba21190161d514e6", null ],
     [ "gotJurePillow", "classPlayer_1_1Flags.html#a18363eb223e3eb3f6071db5901764bd5", null ],

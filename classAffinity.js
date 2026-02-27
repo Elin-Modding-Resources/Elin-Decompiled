@@ -29,6 +29,7 @@ var classAffinity =
     [ "difficulty", "classAffinity.html#ae704c8104beec2eb92052418ef31d5e7", null ],
     [ "value", "classAffinity.html#ae0f9b65acdbd8daf06fb136595c49bc4", null ],
     [ "CurrentStage", "classAffinity.html#a300c0a95fb0cbc9508498686ede22e62", null ],
+    [ "IsWeddingHater", "classAffinity.html#ac51210655c4bb1e930ec829767a854cd", null ],
     [ "list", "classAffinity.html#aa5338f84a8760649d1a3996cf677e307", null ],
     [ "Name", "classAffinity.html#a16ef025808ce3a1594b2ef11b8db9daf", null ]
 ];

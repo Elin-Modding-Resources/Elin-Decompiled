@@ -1,5 +1,12 @@
 var NAVTREEINDEX16 =
 {
+"TileTypeObjBig_8cs.html":[2,0,0,1288],
+"TileTypeObjBig_8cs_source.html":[2,0,0,1288],
+"TileTypeObjCeil_8cs.html":[2,0,0,1289],
+"TileTypeObjCeil_8cs_source.html":[2,0,0,1289],
+"TileTypeObjFloatWaterfall_8cs.html":[2,0,0,1291],
+"TileTypeObjFloatWaterfall_8cs_source.html":[2,0,0,1291],
+"TileTypeObjFloat_8cs.html":[2,0,0,1290],
 "TileTypeObjFloat_8cs_source.html":[2,0,0,1290],
 "TileTypeObjHuge_8cs.html":[2,0,0,1292],
 "TileTypeObjHuge_8cs_source.html":[2,0,0,1292],
@@ -83,8 +90,8 @@ var NAVTREEINDEX16 =
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8ae045615354060a83511b41ee31db4ae9":[2,0,0,1324,0,5],
 "ToggleType_8cs.html#aecee16d60b8bc0be86b35c9932813db8aee3c6e8ed9c27c45f161ea416c997df8":[2,0,0,1324,0,4],
 "ToggleType_8cs_source.html":[2,0,0,1324],
-"ToneDataList_8cs.html":[2,0,0,2,86],
-"ToneDataList_8cs_source.html":[2,0,0,2,86],
+"ToneDataList_8cs.html":[2,0,0,2,87],
+"ToneDataList_8cs_source.html":[2,0,0,2,87],
 "TooltipData_8cs.html":[2,0,0,3,106],
 "TooltipData_8cs_source.html":[2,0,0,3,106],
 "TooltipManager_8cs.html":[2,0,0,3,107],
@@ -242,12 +249,5 @@ var NAVTREEINDEX16 =
 "TraitChair_8cs.html":[2,0,0,1401],
 "TraitChair_8cs_source.html":[2,0,0,1401],
 "TraitChangingRoom_8cs.html":[2,0,0,1402],
-"TraitChangingRoom_8cs_source.html":[2,0,0,1402],
-"TraitChara_8cs.html":[2,0,0,1403],
-"TraitChara_8cs_source.html":[2,0,0,1403],
-"TraitChef_8cs.html":[2,0,0,1404],
-"TraitChef_8cs_source.html":[2,0,0,1404],
-"TraitChestMerchant_8cs.html":[2,0,0,1406],
-"TraitChestMerchant_8cs_source.html":[2,0,0,1406],
-"TraitChestOyster_8cs.html":[2,0,0,1407]
+"TraitChangingRoom_8cs_source.html":[2,0,0,1402]
 };

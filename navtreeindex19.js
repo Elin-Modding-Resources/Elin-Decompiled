@@ -1,5 +1,12 @@
 var NAVTREEINDEX19 =
 {
+"TraitMiral_8cs.html":[2,0,0,1653],
+"TraitMiral_8cs_source.html":[2,0,0,1653],
+"TraitMirror_8cs.html":[2,0,0,1654],
+"TraitMirror_8cs_source.html":[2,0,0,1654],
+"TraitMixedFood_8cs.html":[2,0,0,1655],
+"TraitMixedFood_8cs_source.html":[2,0,0,1655],
+"TraitMixer_8cs.html":[2,0,0,1656],
 "TraitMixer_8cs_source.html":[2,0,0,1656],
 "TraitModRanged_8cs.html":[2,0,0,1658],
 "TraitModRanged_8cs_source.html":[2,0,0,1658],
@@ -242,12 +249,5 @@ var NAVTREEINDEX19 =
 "TraitSpotDining_8cs_source.html":[2,0,0,1775],
 "TraitSpotExit_8cs.html":[2,0,0,1776],
 "TraitSpotExit_8cs_source.html":[2,0,0,1776],
-"TraitSpotFarm_8cs.html":[2,0,0,1777],
-"TraitSpotFarm_8cs_source.html":[2,0,0,1777],
-"TraitSpotFish_8cs.html":[2,0,0,1778],
-"TraitSpotFish_8cs_source.html":[2,0,0,1778],
-"TraitSpotFuel_8cs.html":[2,0,0,1779],
-"TraitSpotFuel_8cs_source.html":[2,0,0,1779],
-"TraitSpotGarbage_8cs.html":[2,0,0,1780],
-"TraitSpotGarbage_8cs_source.html":[2,0,0,1780]
+"TraitSpotFarm_8cs.html":[2,0,0,1777]
 };

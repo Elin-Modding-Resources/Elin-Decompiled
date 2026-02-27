@@ -984,6 +984,7 @@ var annotated_dup =
     [ "MapSubset", "classMapSubset.html", "classMapSubset" ],
     [ "MatColors", "classMatColors.html", "classMatColors" ],
     [ "MATERIAL", "classMATERIAL.html", "classMATERIAL" ],
+    [ "MathEx", "classMathEx.html", "classMathEx" ],
     [ "Meeting", "classMeeting.html", "classMeeting" ],
     [ "MeetingFarris", "classMeetingFarris.html", "classMeetingFarris" ],
     [ "MeetingManager", "classMeetingManager.html", "classMeetingManager" ],

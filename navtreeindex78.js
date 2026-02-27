@@ -1,5 +1,14 @@
 var NAVTREEINDEX78 =
 {
+"classLayerCraftFloat.html#ad1df82067e31e183fcdf9c822ba18285":[1,0,803,13],
+"classLayerCraftFloat.html#ad3407107107859da2e28eeb718d9927c":[1,0,803,7],
+"classLayerCraftFloat.html#ae5f635d4f49d9c85e936b9435b134f44":[1,0,803,15],
+"classLayerCraftFloat.html#ae7bb1dd7436a4bf1b31f86618fbc0b6c":[1,0,803,8],
+"classLayerCraftFloat.html#af937b171e1d1554aa2e70963833cc5cb":[1,0,803,11],
+"classLayerCredit.html":[1,0,804],
+"classLayerCredit.html#a32d248c3dafd34b0a1d034ae0e206abb":[1,0,804,0],
+"classLayerDebug.html":[1,0,805],
+"classLayerDebug.html#a18a1e3cfe9dfcc17f2362b5d68fba493":[1,0,805,0],
 "classLayerDebug.html#a7324f4f4bcb0c4b79d5f15c451ef4c05":[1,0,805,1],
 "classLayerDistribution.html":[1,0,806],
 "classLayerDistribution.html#a2c3d8739b96352560ec40050de86f5a1":[1,0,806,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerEmbark.html#aafe48fee5ad7b8ef2d998e9df1b95c75":[1,0,815,0],
 "classLayerEmbark.html#aafe48fee5ad7b8ef2d998e9df1b95c75a1d78dc8ed51214e518b5114fe24490ae":[1,0,815,0,3],
 "classLayerEmbark.html#aafe48fee5ad7b8ef2d998e9df1b95c75a8ec35c1dcbcb79f913f79c6343c4d010":[1,0,815,0,1],
-"classLayerEmbark.html#aafe48fee5ad7b8ef2d998e9df1b95c75aaa08769cdcb26674c6706093503ff0a3":[1,0,815,0,2],
-"classLayerEmbark.html#aafe48fee5ad7b8ef2d998e9df1b95c75ab28354b543375bfa94dabaeda722927f":[1,0,815,0,0],
-"classLayerEmbark.html#ab28894878dbeab8c8e633b1de3691438":[1,0,815,42],
-"classLayerEmbark.html#ab5a5fa5b4fa7578803abe10b04cfcbca":[1,0,815,32],
-"classLayerEmbark.html#ab6acc1f59a8954a7773bd286fd93133a":[1,0,815,24],
-"classLayerEmbark.html#ab7a9a9f004f61677df6f09f11b962188":[1,0,815,25],
-"classLayerEmbark.html#abbb1e673cc6dbb19b59ac8ca7ec34bf4":[1,0,815,18],
-"classLayerEmbark.html#ac221cff61b606daac4d583e6a90ba5ac":[1,0,815,11],
-"classLayerEmbark.html#ad0066cb73caeed4770d6ec2e530fb793":[1,0,815,30],
-"classLayerEmbark.html#ad0cf63304fbc24830d49a7b3348c9a70":[1,0,815,33]
+"classLayerEmbark.html#aafe48fee5ad7b8ef2d998e9df1b95c75aaa08769cdcb26674c6706093503ff0a3":[1,0,815,0,2]
 };
