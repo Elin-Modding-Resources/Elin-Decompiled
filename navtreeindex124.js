@@ -1,5 +1,6 @@
 var NAVTREEINDEX124 =
 {
+"classTraitPotionAlchemy.html#a1fc02cad3212f3257ce98be1e74b24d2":[1,0,1816,0],
 "classTraitPotionAlchemy.html#a9b47cf772fdbc8261c42edfc8124bd35":[1,0,1816,2],
 "classTraitPotionAlchemy.html#afbe2c5dc046840f3d0e06840b81548fb":[1,0,1816,1],
 "classTraitPotionEmpty.html":[1,0,1817],
@@ -248,6 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitSeed.html":[1,0,1863],
 "classTraitSeed.html#a022b05bc222961ddf02ab956699a4376":[1,0,1863,1],
 "classTraitSeed.html#a0a7364e58a3db978d861f788fcd72438":[1,0,1863,9],
-"classTraitSeed.html#a1727c60f9daf9a01e0236563a5f9996d":[1,0,1863,8],
-"classTraitSeed.html#a2fd15c009c1b0ffaf779cdeb47b687e4":[1,0,1863,17]
+"classTraitSeed.html#a1727c60f9daf9a01e0236563a5f9996d":[1,0,1863,8]
 };

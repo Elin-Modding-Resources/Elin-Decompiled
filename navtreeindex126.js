@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitTent.html#a544ba25a1f805bea5b20376c291f09e8":[1,0,1927,6],
 "classTraitTent.html#a7ec5517cfd11495cda5fcd94dff7390d":[1,0,1927,7],
 "classTraitTent.html#a8d4081b3982e8685c49cb73b78ef421b":[1,0,1927,1],
 "classTraitTent.html#aa0900931ea7b9e0903b1d1e1d498ef97":[1,0,1927,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitVishnu.html":[1,0,1994],
 "classTraitVishnu.html#a2c4b465266cd8ec2e166edca68940c07":[1,0,1994,0],
 "classTraitVoidgate.html":[1,0,1995],
-"classTraitVoidgate.html#a0dd33024f319005b892d1e506906acc2":[1,0,1995,3],
-"classTraitVoidgate.html#a15cb234eb7f05463c6ee1462fa55ee6e":[1,0,1995,0]
+"classTraitVoidgate.html#a0dd33024f319005b892d1e506906acc2":[1,0,1995,3]
 };

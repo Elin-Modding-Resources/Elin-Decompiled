@@ -1,5 +1,6 @@
 var NAVTREEINDEX123 =
 {
+"classTraitMerchantMagic.html":[1,0,1751],
 "classTraitMerchantMagic.html#aab92dce618d7f6d3998faa77a0c058c2":[1,0,1751,0],
 "classTraitMerchantMap.html":[1,0,1752],
 "classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1752,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitPotion.html":[1,0,1815],
 "classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0":[1,0,1815,1],
 "classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1815,0],
-"classTraitPotionAlchemy.html":[1,0,1816],
-"classTraitPotionAlchemy.html#a1fc02cad3212f3257ce98be1e74b24d2":[1,0,1816,0]
+"classTraitPotionAlchemy.html":[1,0,1816]
 };

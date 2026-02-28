@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitHouseBoard_1_1Data.html#aae475e0f39d0f33545c1f74185ca7567":[1,0,1687,0,13],
 "classTraitHouseBoard_1_1Data.html#aae695a0628fdfebbf9b163044ba07be4":[1,0,1687,0,10],
 "classTraitHouseBoard_1_1Data.html#ab59594d5fc129ceadedfad35fc7bde4d":[1,0,1687,0,2],
 "classTraitHouseBoard_1_1Data.html#ac20790270289beaf3e2362ddff8f536d":[1,0,1687,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitMerchantJunk.html#a697a7628e397f4411127bdb3a5281182":[1,0,1749,1],
 "classTraitMerchantLamp.html":[1,0,1750],
 "classTraitMerchantLamp.html#a46f5cef42a3727aa84dac84ecd84cd74":[1,0,1750,0],
-"classTraitMerchantLamp.html#aa394c90f3e0cecdaedc87ec80690f7da":[1,0,1750,1],
-"classTraitMerchantMagic.html":[1,0,1751]
+"classTraitMerchantLamp.html#aa394c90f3e0cecdaedc87ec80690f7da":[1,0,1750,1]
 };

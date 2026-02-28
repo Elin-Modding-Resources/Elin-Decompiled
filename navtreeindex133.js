@@ -1,5 +1,6 @@
 var NAVTREEINDEX133 =
 {
+"classUINote.html#a247b601c386327df595f74c41175eb5c":[1,0,2079,25],
 "classUINote.html#a26d44a98c0515d2a28aae0f2f6969e3f":[1,0,2079,30],
 "classUINote.html#a2c575724ed5912978c7b79ab1525bc19":[1,0,2079,2],
 "classUINote.html#a2f9d7048945b147a14b4aa5ebbe2c74b":[1,0,2079,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX133 =
 "classUITooltip.html#a630d1c392d0cfe585592c1e882919c5e":[1,0,2093,4],
 "classUITooltip.html#a6c331708354e4cf58b90cc6e626d3672":[1,0,2093,16],
 "classUITooltip.html#a763bb53533eda1dc5dd3715d59897bb6":[1,0,2093,15],
-"classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91":[1,0,2093,2],
-"classUITooltip.html#a7d66f9b45874d83c1b87ffe649deed09":[1,0,2093,19]
+"classUITooltip.html#a7a682723315adf91c8f2bf0951a59e91":[1,0,2093,2]
 };
