@@ -113,18 +113,24 @@ public class AI_Fish : AIAct
 			{
 				thing.isHidden = false;
 			}
-			if (EClass.rnd(EClass.debug.enable ? 2 : 100) == 0 && thing.category.IsChildOf("fish"))
+			if (EClass.rnd(EClass.debug.enable ? 2 : 1000) == 0 && thing.category.IsChildOf("fish"))
 			{
-				owner.Say("fish_ehe");
-				owner.Say("fish_ehe2");
 				owner.PlaySound("escape");
 				owner.PlayEffect("fizzle");
-				thing.Destroy();
 				if (owner.IsPC)
 				{
+					owner.Say("fish_ehe");
+					owner.Say("fish_ehe2");
+					owner.Say("fish_ehe3");
 					EClass.player.flags.fishStolen++;
 					Steam.GetAchievement(ID_Achievement.EHE_FISH);
+					if (EClass.rnd(777) == 0)
+					{
+						EClass.pc.AddCondition<ConInvulnerable>();
+						ActEffect.Proc(EffectId.Wish, EClass.pc, null, 50 + EClass.player.CountKeyItem("well_enhance") * 50 + EClass.player.flags.fishStolen * 50);
+					}
 				}
+				thing.Destroy();
 			}
 			else if (owner.IsPC)
 			{

@@ -75,9 +75,6 @@ public class TraitAltar : Trait
 
 	public override bool CanOffer(Card c)
 	{
-		Debug.Log(Deity);
-		Debug.Log(Deity.id);
-		Debug.Log(IsEyth);
 		if (c != null && c.HasTag(CTAG.godArtifact))
 		{
 			if (EClass.pc.IsEyth && EClass.pc.HasElement(1228))
@@ -220,7 +217,7 @@ public class TraitAltar : Trait
 	{
 		bool @bool = t.GetBool(115);
 		int offeringValue = Deity.GetOfferingValue(t, t.Num);
-		offeringValue = offeringValue * (c.HasElement(1228) ? 130 : 100) / 100;
+		offeringValue = offeringValue * (EClass.debug.enable ? 1000 : (c.HasElement(1228) ? 130 : 100)) / 100;
 		if (takeoverMod == 0)
 		{
 			if (offeringValue >= 200)
@@ -249,7 +246,14 @@ public class TraitAltar : Trait
 		int num = Mathf.Max(c.Evalue(306), 1);
 		Element orCreateElement = c.elements.GetOrCreateElement(85);
 		int value = orCreateElement.Value;
-		c.elements.ModExp(orCreateElement.id, offeringValue * 2 / 3);
+		if (orCreateElement.vBase < num)
+		{
+			c.elements.ModExp(orCreateElement.id, offeringValue * 2 / 3);
+			if (orCreateElement.vBase >= num)
+			{
+				c.elements.SetBase(orCreateElement.id, num);
+			}
+		}
 		int num2 = 4;
 		if (orCreateElement.vBase < num)
 		{
@@ -265,6 +269,10 @@ public class TraitAltar : Trait
 			c.elements.ModExp(306, offeringValue / 5);
 		}
 		c.RefreshFaithElement();
+		if (c.faith.GetGiftRank() != -1)
+		{
+			c.faith.Talk("like");
+		}
 		if (@bool)
 		{
 			EClass.player.ModKarma(-1);

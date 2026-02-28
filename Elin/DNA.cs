@@ -455,37 +455,40 @@ public class DNA : EClass
 		}
 		void AddVal(int id, int v, bool allowStack, Func<int, int> funcCost)
 		{
-			bool flag = false;
-			int num = EClass.curve(v, 20, 10, 90);
-			if (v < -100)
+			if (v >= 0)
 			{
-				num = EClass.curve(Mathf.Abs(v + 100), 20, 10, 90);
-			}
-			v = EClass.curve(v, 20, 10, 80);
-			for (int k = 0; k < vals.Count; k += 2)
-			{
-				if (vals[k] == id)
+				bool flag = false;
+				int num = EClass.curve(v, 20, 10, 90);
+				if (v < -100)
 				{
-					if (allowStack)
+					num = EClass.curve(Mathf.Abs(v + 100), 20, 10, 90);
+				}
+				v = EClass.curve(v, 20, 10, 80);
+				for (int k = 0; k < vals.Count; k += 2)
+				{
+					if (vals[k] == id)
 					{
-						v /= 2;
-						num /= 2;
-						vals[k + 1] += v;
-						Debug.Log(vals[k + 1] + ": " + v + "/" + num);
-						flag = true;
-						break;
+						if (allowStack)
+						{
+							v /= 2;
+							num /= 2;
+							vals[k + 1] += v;
+							Debug.Log(vals[k + 1] + ": " + v + "/" + num);
+							flag = true;
+							break;
+						}
+						return;
 					}
-					return;
 				}
-			}
-			if (v != 0)
-			{
-				if (!flag)
+				if (v != 0)
 				{
-					vals.Add(id);
-					vals.Add(v);
+					if (!flag)
+					{
+						vals.Add(id);
+						vals.Add(v);
+					}
+					cost += Mathf.Max(0, funcCost(num));
 				}
-				cost += Mathf.Max(0, funcCost(num));
 			}
 		}
 	}

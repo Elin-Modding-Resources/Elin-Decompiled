@@ -217,15 +217,35 @@ public class Religion : EClass
 		}
 	}
 
-	public bool TryGetGift()
+	public int GetGiftRank()
 	{
 		if (IsEyth || source.rewards.Length == 0)
+		{
+			return -1;
+		}
+		int num = EClass.pc.Evalue(85);
+		if (giftRank == 0 && (num >= 15 || EClass.debug.enable))
+		{
+			return 1;
+		}
+		if (source.rewards.Length >= 2 && giftRank == 1 && (num >= 30 || EClass.debug.enable))
+		{
+			return 2;
+		}
+		return -1;
+	}
+
+	public bool TryGetGift()
+	{
+		int num = GetGiftRank();
+		if (num == -1)
 		{
 			return false;
 		}
 		Point point = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false) ?? EClass.pc.pos;
-		int num = EClass.pc.Evalue(85);
-		if (giftRank == 0 && (num >= 15 || EClass.debug.enable))
+		switch (num)
+		{
+		case 1:
 		{
 			Talk("pet");
 			Chara chara = CharaGen.Create(source.rewards[0]);
@@ -235,7 +255,7 @@ public class Religion : EClass
 			giftRank = 1;
 			return true;
 		}
-		if (source.rewards.Length >= 2 && giftRank == 1 && (num >= 30 || EClass.debug.enable))
+		case 2:
 		{
 			Talk("gift");
 			string[] array = source.rewards[1].Split('|');
@@ -247,7 +267,9 @@ public class Religion : EClass
 			giftRank = 2;
 			return true;
 		}
-		return false;
+		default:
+			return false;
+		}
 	}
 
 	public static Religion GetArtifactDeity(string id)

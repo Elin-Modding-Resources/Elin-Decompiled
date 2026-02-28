@@ -832,7 +832,7 @@ public class ActEffect : EClass
 			Chara chara3 = CharaGen.Create((id == EffectId.Bit) ? "bit2" : "bit");
 			chara3.SetMainElement(element.source.alias, element.Value, elemental: true);
 			chara3.SetSummon(20 + power / 20 + EClass.rnd(10));
-			chara3.SetLv(power / 15);
+			chara3.SetLv(Mathf.Abs(power) / 15);
 			chara3.interest = 0;
 			EClass._zone.AddCard(chara3, tp.GetNearestPoint(allowBlock: false, allowChara: false));
 			chara3.PlayEffect("teleport");
