@@ -187,13 +187,19 @@ public class EInput : MonoBehaviour
 			action = EAction.Search
 		};
 
+		public KeyMap chat = new KeyMap
+		{
+			action = EAction.Chat
+		};
+
 		public List<KeyMap> List()
 		{
 			return new List<KeyMap>
 			{
 				axisUp, axisDown, axisLeft, axisRight, axisUpLeft, axisUpRight, axisDownLeft, axisDownRight, journal, chara,
-				inventory, ability, log, fire, wait, mouseLeft, mouseMiddle, mouseRight, report, quickSave,
-				quickLoad, autoCombat, emptyHand, switchHotbar, examine, getAll, dump, mute, meditate, search
+				inventory, ability, log, fire, chat, wait, mouseLeft, mouseMiddle, mouseRight, report,
+				quickSave, quickLoad, autoCombat, emptyHand, switchHotbar, examine, getAll, dump, mute, meditate,
+				search
 			};
 		}
 	}
@@ -1056,6 +1062,10 @@ public class EInput : MonoBehaviour
 		if (Input.GetKeyDown(keys.search.key))
 		{
 			return EAction.Search;
+		}
+		if (Input.GetKeyDown(keys.chat.key))
+		{
+			return EAction.Chat;
 		}
 		if (keyFire.Update())
 		{
