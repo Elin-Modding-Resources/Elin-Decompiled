@@ -2308,6 +2308,12 @@ public class CoreDebug : EScriptable
 	}
 
 	[ConsoleCommand("")]
+	public static string Stats()
+	{
+		return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat("" + "Fish Stolen: " + EClass.player.flags.fishStolen + Environment.NewLine, "Little Saved: ", EClass.player.little_saved.ToString(), Environment.NewLine), "Little Lost: ", EClass.player.little_dead.ToString(), Environment.NewLine), "Angry Cats: ", EClass.player.stats.angryCats.ToString(), Environment.NewLine), "Love Made: ", EClass.player.stats.kimo.ToString(), Environment.NewLine), "Nefia Beaten: ", EClass.player.stats.nefiaBeaten.ToString(), Environment.NewLine), "Sheared: ", EClass.player.stats.shear.ToString(), Environment.NewLine), "Brushed: ", EClass.player.stats.brush.ToString(), Environment.NewLine), "Egg Hatched: ", EClass.player.stats.eggHatched.ToString(), Environment.NewLine), "Plowed: ", EClass.player.stats.plow.ToString(), Environment.NewLine), "Cleaned: ", EClass.player.stats.clean.ToString(), Environment.NewLine), "Unpaid Bill: ", EClass.player.unpaidBill.ToString(), Environment.NewLine), "Statue Shipped: ", EClass.player.flags.statueShipped.ToString(), Environment.NewLine);
+	}
+
+	[ConsoleCommand("")]
 	public static string AllRecipe(bool forget = false)
 	{
 		if (!CheatEnabled())

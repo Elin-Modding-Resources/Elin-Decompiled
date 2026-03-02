@@ -1821,8 +1821,11 @@ public class Chara : Card, IPathfindWalker
 		chara.stamina.value = stamina.value;
 		foreach (KeyValuePair<int, Element> item in elements.dict)
 		{
-			Element orCreateElement = chara.elements.GetOrCreateElement(item.Key);
-			orCreateElement.vBase = item.Value.ValueWithoutLink - orCreateElement.vSource;
+			if (item.Key != 1275)
+			{
+				Element orCreateElement = chara.elements.GetOrCreateElement(item.Key);
+				orCreateElement.vBase = item.Value.ValueWithoutLink - orCreateElement.vSource;
+			}
 		}
 		chara.SetFaith(faith);
 		chara.bio = IO.DeepCopy(bio);

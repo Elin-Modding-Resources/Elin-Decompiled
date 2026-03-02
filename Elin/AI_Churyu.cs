@@ -12,6 +12,12 @@ public class AI_Churyu : AIWork
 	{
 		if (restartCount == 0)
 		{
+			Thing thing = EClass.pc.things.Find<TraitFoodChuryu>();
+			if (thing != null)
+			{
+				churyu = thing;
+				slave = EClass.pc;
+			}
 			EClass.player.UpdateNyan();
 		}
 		if (!slave.ExistsOnMap || churyu.GetRootCard() != slave)

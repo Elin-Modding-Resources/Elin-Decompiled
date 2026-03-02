@@ -18,6 +18,11 @@ public class ActSlime : ActNTR
 			Msg.Say("not_hungry");
 			return false;
 		}
+		if (Act.CC.HasCondition<ConAnorexia>())
+		{
+			Act.CC.Say("dmg_elePoison", Act.CC);
+			return false;
+		}
 		return true;
 	}
 
