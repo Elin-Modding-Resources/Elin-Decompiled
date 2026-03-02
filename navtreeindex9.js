@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"IPoolObject_8cs_source.html":[2,0,0,2,44],
+"IPrefImage_8cs.html":[2,0,0,707],
+"IPrefImage_8cs_source.html":[2,0,0,707],
 "IPriorityQueue_8cs.html":[2,0,0,0,2],
 "IPriorityQueue_8cs_source.html":[2,0,0,0,2],
 "IRenderSource_8cs.html":[2,0,0,709],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "LayerCraftFloat_8cs_source.html":[2,0,0,749],
 "LayerCraft_8cs.html":[2,0,0,748],
 "LayerCraft_8cs_source.html":[2,0,0,748],
-"LayerCredit_8cs.html":[2,0,0,750],
-"LayerCredit_8cs_source.html":[2,0,0,750],
-"LayerDebug_8cs.html":[2,0,0,751],
-"LayerDebug_8cs_source.html":[2,0,0,751]
+"LayerCredit_8cs.html":[2,0,0,750]
 };

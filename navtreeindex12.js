@@ -1,5 +1,8 @@
 var NAVTREEINDEX12 =
 {
+"PropSet_8cs.html":[2,0,0,923],
+"PropSet_8cs_source.html":[2,0,0,923],
+"Properties_2AssemblyInfo_8cs.html":[2,0,0,4,0],
 "Properties_2AssemblyInfo_8cs_source.html":[2,0,0,4,0],
 "PropsInstalled_8cs.html":[2,0,0,925],
 "PropsInstalled_8cs_source.html":[2,0,0,925],
@@ -246,8 +249,5 @@ var NAVTREEINDEX12 =
 "RefReligion_8cs.html":[2,0,0,1028],
 "RefReligion_8cs_source.html":[2,0,0,1028],
 "RefZone_8cs.html":[2,0,0,1029],
-"RefZone_8cs_source.html":[2,0,0,1029],
-"RefractionProfile_8cs.html":[2,0,0,1027],
-"RefractionProfile_8cs_source.html":[2,0,0,1027],
-"RegionPoint_8cs.html":[2,0,0,1031]
+"RefZone_8cs_source.html":[2,0,0,1029]
 };

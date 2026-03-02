@@ -1,5 +1,8 @@
 var NAVTREEINDEX16 =
 {
+"TileTypeMarker_8cs_source.html":[2,0,0,1285],
+"TileTypeNone_8cs.html":[2,0,0,1286],
+"TileTypeNone_8cs_source.html":[2,0,0,1286],
 "TileTypeObjBig_8cs.html":[2,0,0,1288],
 "TileTypeObjBig_8cs_source.html":[2,0,0,1288],
 "TileTypeObjCeil_8cs.html":[2,0,0,1289],
@@ -246,8 +249,5 @@ var NAVTREEINDEX16 =
 "TraitCatalyst_8cs_source.html":[2,0,0,1399],
 "TraitCauldron_8cs.html":[2,0,0,1400],
 "TraitCauldron_8cs_source.html":[2,0,0,1400],
-"TraitChair_8cs.html":[2,0,0,1401],
-"TraitChair_8cs_source.html":[2,0,0,1401],
-"TraitChangingRoom_8cs.html":[2,0,0,1402],
-"TraitChangingRoom_8cs_source.html":[2,0,0,1402]
+"TraitChair_8cs.html":[2,0,0,1401]
 };

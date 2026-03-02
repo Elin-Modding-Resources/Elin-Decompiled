@@ -55,6 +55,7 @@ var classPlayer =
     [ "TooHeavyToMove", "classPlayer.html#a0e5aba40c23ea42bc1e43d178727a3b7", null ],
     [ "TryAbortAutoCombat", "classPlayer.html#ae27cb1a3eb8a9d534b41069e17ecd023", null ],
     [ "TryEquipBait", "classPlayer.html#a87866bb2ea5defa71bce46e2b77c7a61", null ],
+    [ "UpdateNyan", "classPlayer.html#adc7fc9cff4a4233876807a2088db7e06", null ],
     [ "_agent", "classPlayer.html#a56a22032984bf2dc57774de8366746c4", null ],
     [ "altHeldPos", "classPlayer.html#af469dc130e6e1ae724769754172ea736", null ],
     [ "angle", "classPlayer.html#a31497c929d1e935516cb12e059af6a5c", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.279 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -564,48 +564,53 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00007">7</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        List&lt;Chara&gt; list = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a965804b59f2be20290d5d14ceeda6625">ListCharas</a>();</div>
-<div class="line"><span class="lineno">   10</span>        list.Reverse();</div>
-<div class="line"><span class="lineno">   11</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.host != <span class="keyword">null</span> || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsMultisize)</div>
-<div class="line"><span class="lineno">   15</span>            {</div>
-<div class="line"><span class="lineno">   16</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   17</span>            }</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> == <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>)</div>
-<div class="line"><span class="lineno">   19</span>            {</div>
-<div class="line"><span class="lineno">   20</span>                <span class="keywordflow">if</span> ((<a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> != <span class="keyword">null</span>) || (!<a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> != <span class="keyword">null</span>))</div>
-<div class="line"><span class="lineno">   21</span>                {</div>
-<div class="line"><span class="lineno">   22</span>                    <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a>);</div>
-<div class="line"><span class="lineno">   23</span>                    flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   24</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   25</span>                }</div>
-<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   27</span>            }</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.trait.CanJoinPartyResident)</div>
-<div class="line"><span class="lineno">   29</span>            {</div>
-<div class="line"><span class="lineno">   30</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_req&quot;</span>);</div>
-<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a> is <a class="code hl_class" href="classZone__Wedding.html">Zone_Wedding</a>)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#ac1c593741fe4cc96d0f2314d36ff8763">SayInvalidAction</a>();</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+<div class="line"><span class="lineno">   14</span>        List&lt;Chara&gt; list = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a965804b59f2be20290d5d14ceeda6625">ListCharas</a>();</div>
+<div class="line"><span class="lineno">   15</span>        list.Reverse();</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordtype">bool</span> flag = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classChara.html">Chara</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.host != <span class="keyword">null</span> || <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsMultisize)</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   22</span>            }</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> == <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>)</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span> ((<a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> != <span class="keyword">null</span>) || (!<a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a> &amp;&amp; <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> != <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a>);</div>
+<div class="line"><span class="lineno">   28</span>                    flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   29</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   30</span>                }</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">   32</span>            }</div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.memberType == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default &amp;&amp; (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsPCFaction &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.trait.CanJoinParty)))</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.trait.CanJoinPartyResident)</div>
 <div class="line"><span class="lineno">   34</span>            {</div>
-<div class="line"><span class="lineno">   35</span>                <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">Ride</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a>);</div>
-<div class="line"><span class="lineno">   36</span>                flag = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   38</span>            }</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span> (!flag)</div>
-<div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;noTargetFound&quot;</span>);</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="line"><span class="lineno">   35</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_req&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.memberType == <a class="code hl_enumeration" href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a>.Default &amp;&amp; (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">enable</a> || (<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.IsPCFaction &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.trait.CanJoinParty)))</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_enumvalue" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">Ride</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="code hl_property" href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">IsParasite</a>);</div>
+<div class="line"><span class="lineno">   41</span>                flag = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;noTargetFound&quot;</span>);</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
 <div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">AnimeID.Ride</a></div><div class="ttdeci">@ Ride</div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aFactionMemberType_8cs_html_a6d203178a9f49879779911e4cf8ea9c9"><div class="ttname"><a href="FactionMemberType_8cs.html#a6d203178a9f49879779911e4cf8ea9c9">FactionMemberType</a></div><div class="ttdeci">FactionMemberType</div><div class="ttdef"><b>Definition:</b> <a href="FactionMemberType_8cs_source.html#l00001">FactionMemberType.cs:2</a></div></div>
 <div class="ttc" id="aclassActRide_html_a1df7eb3390d05cb7e58286a5fefac5b2"><div class="ttname"><a href="classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2">ActRide.IsParasite</a></div><div class="ttdeci">virtual bool IsParasite</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00005">ActRide.cs:5</a></div></div>
-<div class="ttc" id="aclassActRide_html_a8fe819039661a869b9920e3c6c40c71b"><div class="ttname"><a href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">ActRide.Unride</a></div><div class="ttdeci">static void Unride(Chara host, Chara mount, bool talk=true)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00102">ActRide.cs:102</a></div></div>
+<div class="ttc" id="aclassActRide_html_a8fe819039661a869b9920e3c6c40c71b"><div class="ttname"><a href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">ActRide.Unride</a></div><div class="ttdeci">static void Unride(Chara host, Chara mount, bool talk=true)</div><div class="ttdef"><b>Definition:</b> <a href="ActRide_8cs_source.html#l00107">ActRide.cs:107</a></div></div>
 <div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00061">ACT.cs:62</a></div></div>
 <div class="ttc" id="aclassAct_html_a87d86f3edab9b6107a74d29921b81d32"><div class="ttname"><a href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">Act.TP</a></div><div class="ttdeci">static Point TP</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00081">ACT.cs:81</a></div></div>
 <div class="ttc" id="aclassAct_html_aaee36f292832814173c67d44df115a5a"><div class="ttname"><a href="classAct.html#aaee36f292832814173c67d44df115a5a">Act.CC</a></div><div class="ttdeci">static Chara CC</div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00077">ACT.cs:77</a></div></div>
@@ -614,12 +619,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassChara_html_aacacd9208c527916a9562aa7ad2b32ef"><div class="ttname"><a href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">Chara.ride</a></div><div class="ttdeci">Chara ride</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00027">Chara.cs:27</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a82b820078e1cf1bb70a502e39aa73bd3"><div class="ttname"><a href="classCoreDebug.html#a82b820078e1cf1bb70a502e39aa73bd3">CoreDebug.enable</a></div><div class="ttdeci">bool enable</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00286">CoreDebug.cs:286</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
+<div class="ttc" id="aclassEClass_html_a4d6bdfd2b69bc49a9b29f1199877ebd9"><div class="ttname"><a href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">EClass._zone</a></div><div class="ttdeci">static Zone _zone</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00021">EClass.cs:21</a></div></div>
 <div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00049">EClass.cs:49</a></div></div>
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
+<div class="ttc" id="aclassMsg_html_ac1c593741fe4cc96d0f2314d36ff8763"><div class="ttname"><a href="classMsg.html#ac1c593741fe4cc96d0f2314d36ff8763">Msg.SayInvalidAction</a></div><div class="ttdeci">static string SayInvalidAction()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00106">Msg.cs:106</a></div></div>
 <div class="ttc" id="aclassMsg_html_af754e42595234a352535cb995fa72367"><div class="ttname"><a href="classMsg.html#af754e42595234a352535cb995fa72367">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00058">Msg.cs:58</a></div></div>
 <div class="ttc" id="aclassPoint_html_a965804b59f2be20290d5d14ceeda6625"><div class="ttname"><a href="classPoint.html#a965804b59f2be20290d5d14ceeda6625">Point.ListCharas</a></div><div class="ttdeci">List&lt; Chara &gt; ListCharas()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01171">Point.cs:1171</a></div></div>
+<div class="ttc" id="aclassZone__Wedding_html"><div class="ttname"><a href="classZone__Wedding.html">Zone_Wedding</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone__Wedding_8cs_source.html#l00001">Zone_Wedding.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ACT_8cs_source.html#l00077">Act.CC</a>, <a class="el" href="EClass_8cs_source.html#l00049">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00286">CoreDebug.enable</a>, <a class="el" href="ActRide_8cs_source.html#l00005">IsParasite</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Point_8cs_source.html#l01171">Point.ListCharas()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">Ride</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="ACT_8cs_source.html#l00081">Act.TP</a>, and <a class="el" href="ActRide_8cs_source.html#l00102">Unride()</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00021">EClass._zone</a>, <a class="el" href="ACT_8cs_source.html#l00077">Act.CC</a>, <a class="el" href="EClass_8cs_source.html#l00049">EClass.debug</a>, <a class="el" href="CoreDebug_8cs_source.html#l00286">CoreDebug.enable</a>, <a class="el" href="ActRide_8cs_source.html#l00005">IsParasite</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Point_8cs_source.html#l01171">Point.ListCharas()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2dafcf46fae32b17897b7d12e3a80c781e4">Ride</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Msg_8cs_source.html#l00106">Msg.SayInvalidAction()</a>, <a class="el" href="ACT_8cs_source.html#l00081">Act.TP</a>, and <a class="el" href="ActRide_8cs_source.html#l00107">Unride()</a>.</p>
 
 </div>
 </div>
@@ -669,60 +677,60 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00047">47</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (parasite)</div>
-<div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(host, parasite: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
-<div class="line"><span class="lineno">   55</span>            host.parasite = t;</div>
-<div class="line"><span class="lineno">   56</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;parasite&quot;</span>, host, t);</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   61</span>            {</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(host);</div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>            host.ride = t;</div>
-<div class="line"><span class="lineno">   65</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride&quot;</span>, host, t);</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (!t.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a>)</div>
-<div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            t.<a class="code hl_function" href="classChara.html#a90c17ce565460d91da2803db50747f2d">MakeAlly</a>();</div>
-<div class="line"><span class="lineno">   70</span>        }</div>
-<div class="line"><span class="lineno">   71</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_function" href="classParty.html#ac7adae19004adcdb2507606ec961fb6f">AddMemeber</a>(t);</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (!parasite)</div>
+<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00052">52</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (parasite)</div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(host, parasite: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>            host.parasite = t;</div>
+<div class="line"><span class="lineno">   61</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;parasite&quot;</span>, host, t);</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(host);</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            host.ride = t;</div>
+<div class="line"><span class="lineno">   70</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride&quot;</span>, host, t);</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (!t.<a class="code hl_property" href="classChara.html#a71660401378323eae2838aee20ec92c0">IsPCFaction</a>)</div>
 <div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.tag.Contains(<span class="stringliteral">&quot;ride&quot;</span>))</div>
-<div class="line"><span class="lineno">   75</span>            {</div>
-<div class="line"><span class="lineno">   76</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_good&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>            }</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.tag.Contains(<span class="stringliteral">&quot;noRide&quot;</span>))</div>
-<div class="line"><span class="lineno">   79</span>            {</div>
-<div class="line"><span class="lineno">   80</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_bad&quot;</span>);</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (host.<a class="code hl_function" href="classCard.html#af4616290fa0dd51fa1a94efd843eb68f">HasElement</a>(1417) &amp;&amp; t.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConTransmuteBroom.html">ConTransmuteBroom</a>&gt;())</div>
-<div class="line"><span class="lineno">   83</span>            {</div>
-<div class="line"><span class="lineno">   84</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_broom&quot;</span>);</div>
-<div class="line"><span class="lineno">   85</span>            }</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>        t.host = host;</div>
-<div class="line"><span class="lineno">   88</span>        t.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (talk)</div>
-<div class="line"><span class="lineno">   90</span>        {</div>
-<div class="line"><span class="lineno">   91</span>            host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
-<div class="line"><span class="lineno">   92</span>            t.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite&quot;</span> : <span class="stringliteral">&quot;ride&quot;</span>);</div>
-<div class="line"><span class="lineno">   93</span>        }</div>
-<div class="line"><span class="lineno">   94</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">   95</span>        t.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">   96</span>        host.<a class="code hl_function" href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">SyncRide</a>();</div>
-<div class="line"><span class="lineno">   97</span>        t.noMove = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   98</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">   74</span>            t.<a class="code hl_function" href="classChara.html#a90c17ce565460d91da2803db50747f2d">MakeAlly</a>();</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">party</a>.<a class="code hl_function" href="classParty.html#ac7adae19004adcdb2507606ec961fb6f">AddMemeber</a>(t);</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (!parasite)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.tag.Contains(<span class="stringliteral">&quot;ride&quot;</span>))</div>
+<div class="line"><span class="lineno">   80</span>            {</div>
+<div class="line"><span class="lineno">   81</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_good&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (t.<a class="code hl_property" href="classChara.html#aff51c1a00af6403830b9d32980033a66">race</a>.tag.Contains(<span class="stringliteral">&quot;noRide&quot;</span>))</div>
+<div class="line"><span class="lineno">   84</span>            {</div>
+<div class="line"><span class="lineno">   85</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_bad&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">if</span> (host.<a class="code hl_function" href="classCard.html#af4616290fa0dd51fa1a94efd843eb68f">HasElement</a>(1417) &amp;&amp; t.<a class="code hl_function" href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">HasCondition</a>&lt;<a class="code hl_class" href="classConTransmuteBroom.html">ConTransmuteBroom</a>&gt;())</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                <a class="code hl_class" href="classMsg.html">Msg</a>.<a class="code hl_function" href="classMsg.html#af754e42595234a352535cb995fa72367">Say</a>(<span class="stringliteral">&quot;ride_broom&quot;</span>);</div>
+<div class="line"><span class="lineno">   90</span>            }</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>        t.host = host;</div>
+<div class="line"><span class="lineno">   93</span>        t.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (talk)</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>            t.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite&quot;</span> : <span class="stringliteral">&quot;ride&quot;</span>);</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">  100</span>        t.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">  101</span>        host.<a class="code hl_function" href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">SyncRide</a>();</div>
+<div class="line"><span class="lineno">  102</span>        t.noMove = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  103</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
+<div class="line"><span class="lineno">  104</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
 <div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06343">Card.cs:6343</a></div></div>
 <div class="ttc" id="aclassCard_html_a57e842daf7d0e710ec61331486eed749"><div class="ttname"><a href="classCard.html#a57e842daf7d0e710ec61331486eed749">Card.Talk</a></div><div class="ttdeci">void Talk(string idTopic, string ref1=null, string ref2=null, bool forceSync=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06903">Card.cs:6903</a></div></div>
 <div class="ttc" id="aclassCard_html_af4616290fa0dd51fa1a94efd843eb68f"><div class="ttname"><a href="classCard.html#af4616290fa0dd51fa1a94efd843eb68f">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, bool includeNagative=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06090">Card.cs:6090</a></div></div>
@@ -730,11 +738,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassChara_html_a072be17eb82fa2059622c2d9c45a9673"><div class="ttname"><a href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Chara.Refresh</a></div><div class="ttdeci">void Refresh(bool calledRecursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01759">Chara.cs:1759</a></div></div>
 <div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01893">Chara.cs:1893</a></div></div>
 <div class="ttc" id="aclassChara_html_a460c079e864192ca8e5d335a0036ccfa"><div class="ttname"><a href="classChara.html#a460c079e864192ca8e5d335a0036ccfa">Chara.party</a></div><div class="ttdeci">Party party</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00043">Chara.cs:43</a></div></div>
-<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09568">Chara.cs:9568</a></div></div>
-<div class="ttc" id="aclassChara_html_a6fb5cf442c222746306ffc3f86030d0f"><div class="ttname"><a href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">Chara._CreateRenderer</a></div><div class="ttdeci">override CardRenderer _CreateRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06754">Chara.cs:6754</a></div></div>
+<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09578">Chara.cs:9578</a></div></div>
+<div class="ttc" id="aclassChara_html_a6fb5cf442c222746306ffc3f86030d0f"><div class="ttname"><a href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">Chara._CreateRenderer</a></div><div class="ttdeci">override CardRenderer _CreateRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l06760">Chara.cs:6760</a></div></div>
 <div class="ttc" id="aclassChara_html_a71660401378323eae2838aee20ec92c0"><div class="ttname"><a href="classChara.html#a71660401378323eae2838aee20ec92c0">Chara.IsPCFaction</a></div><div class="ttdeci">override bool IsPCFaction</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00684">Chara.cs:685</a></div></div>
 <div class="ttc" id="aclassChara_html_a90c17ce565460d91da2803db50747f2d"><div class="ttname"><a href="classChara.html#a90c17ce565460d91da2803db50747f2d">Chara.MakeAlly</a></div><div class="ttdeci">void MakeAlly(bool msg=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l02322">Chara.cs:2322</a></div></div>
-<div class="ttc" id="aclassChara_html_ac8f54a5f626357bf7d7fca198a2b44b4"><div class="ttname"><a href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">Chara.SyncRide</a></div><div class="ttdeci">void SyncRide()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03980">Chara.cs:3980</a></div></div>
+<div class="ttc" id="aclassChara_html_ac8f54a5f626357bf7d7fca198a2b44b4"><div class="ttname"><a href="classChara.html#ac8f54a5f626357bf7d7fca198a2b44b4">Chara.SyncRide</a></div><div class="ttdeci">void SyncRide()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l03986">Chara.cs:3986</a></div></div>
 <div class="ttc" id="aclassChara_html_aff51c1a00af6403830b9d32980033a66"><div class="ttname"><a href="classChara.html#aff51c1a00af6403830b9d32980033a66">Chara.race</a></div><div class="ttdeci">SourceRace.Row race</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00466">Chara.cs:466</a></div></div>
 <div class="ttc" id="aclassConTransmuteBroom_html"><div class="ttname"><a href="classConTransmuteBroom.html">ConTransmuteBroom</a></div><div class="ttdef"><b>Definition:</b> <a href="ConTransmuteBroom_8cs_source.html#l00001">ConTransmuteBroom.cs:2</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00015">EClass.cs:15</a></div></div>
@@ -742,7 +750,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassWidgetRoster_html"><div class="ttname"><a href="classWidgetRoster.html">WidgetRoster</a></div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00008">WidgetRoster.cs:9</a></div></div>
 <div class="ttc" id="aclassWidgetRoster_html_a0c4514a6d43393de6538d206d0087d15"><div class="ttname"><a href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">WidgetRoster.SetDirty</a></div><div class="ttdeci">static void SetDirty()</div><div class="ttdef"><b>Definition:</b> <a href="WidgetRoster_8cs_source.html#l00130">WidgetRoster.cs:130</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l06754">Chara._CreateRenderer()</a>, <a class="el" href="Party_8cs_source.html#l00057">Party.AddMemeber()</a>, <a class="el" href="Chara_8cs_source.html#l09568">Chara.HasCondition()</a>, <a class="el" href="Card_8cs_source.html#l06090">Card.HasElement()</a>, <a class="el" href="Chara_8cs_source.html#l00685">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l02322">Chara.MakeAlly()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l06343">Card.PlaySound()</a>, <a class="el" href="Chara_8cs_source.html#l00466">Chara.race</a>, <a class="el" href="Chara_8cs_source.html#l01759">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l07020">Card.Say()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00130">WidgetRoster.SetDirty()</a>, <a class="el" href="Chara_8cs_source.html#l01893">Chara.SetDirtySpeed()</a>, <a class="el" href="Chara_8cs_source.html#l03980">Chara.SyncRide()</a>, <a class="el" href="Card_8cs_source.html#l06903">Card.Talk()</a>, and <a class="el" href="ActRide_8cs_source.html#l00102">Unride()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l06760">Chara._CreateRenderer()</a>, <a class="el" href="Party_8cs_source.html#l00057">Party.AddMemeber()</a>, <a class="el" href="Chara_8cs_source.html#l09578">Chara.HasCondition()</a>, <a class="el" href="Card_8cs_source.html#l06090">Card.HasElement()</a>, <a class="el" href="Chara_8cs_source.html#l00685">Chara.IsPCFaction</a>, <a class="el" href="Chara_8cs_source.html#l02322">Chara.MakeAlly()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Chara_8cs_source.html#l00043">Chara.party</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="Card_8cs_source.html#l06343">Card.PlaySound()</a>, <a class="el" href="Chara_8cs_source.html#l00466">Chara.race</a>, <a class="el" href="Chara_8cs_source.html#l01759">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Msg_8cs_source.html#l00058">Msg.Say()</a>, <a class="el" href="Card_8cs_source.html#l07020">Card.Say()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00130">WidgetRoster.SetDirty()</a>, <a class="el" href="Chara_8cs_source.html#l01893">Chara.SetDirtySpeed()</a>, <a class="el" href="Chara_8cs_source.html#l03986">Chara.SyncRide()</a>, <a class="el" href="Card_8cs_source.html#l06903">Card.Talk()</a>, and <a class="el" href="ActRide_8cs_source.html#l00107">Unride()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitHitchingPost_8cs_source.html#l00007">TraitHitchingPost.OnActivateTrap()</a>, and <a class="el" href="ConSleep_8cs_source.html#l00228">ConSleep.OnRemoved()</a>.</p>
 
@@ -788,44 +796,44 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00110">110</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
-<div class="line"><span class="lineno">  112</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (parasite)</div>
-<div class="line"><span class="lineno">  114</span>        {</div>
-<div class="line"><span class="lineno">  115</span>            chara = host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a>;</div>
-<div class="line"><span class="lineno">  116</span>            host.parasite = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  117</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;parasite_unride&quot;</span>, host, chara);</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  120</span>        {</div>
-<div class="line"><span class="lineno">  121</span>            chara = host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a>;</div>
-<div class="line"><span class="lineno">  122</span>            host.ride = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  123</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride_unride&quot;</span>, host, chara);</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        chara.host = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  126</span>        chara.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (talk)</div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite_unride&quot;</span> : <span class="stringliteral">&quot;ride_unride&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, forceSync: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
-<div class="line"><span class="lineno">  132</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">  133</span>        chara.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">  134</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_class" href="classPoint.html">Point</a> randomPoint = host.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#afdfaf1c8d2cc3515b536c0b2a860ab21">GetRandomPoint</a>(1);</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (randomPoint != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  137</span>        {</div>
-<div class="line"><span class="lineno">  138</span>            chara.<a class="code hl_function" href="classCard.html#ac26839ce1faec3c1226002eb5303606d">MoveImmediate</a>(randomPoint);</div>
-<div class="line"><span class="lineno">  139</span>        }</div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
-<div class="line"><span class="lineno">  141</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00115">115</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        <a class="code hl_class" href="classChara.html">Chara</a> chara = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">if</span> (parasite)</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            chara = host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a>;</div>
+<div class="line"><span class="lineno">  121</span>            host.parasite = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  122</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;parasite_unride&quot;</span>, host, chara);</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  125</span>        {</div>
+<div class="line"><span class="lineno">  126</span>            chara = host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a>;</div>
+<div class="line"><span class="lineno">  127</span>            host.ride = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  128</span>            host.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;ride_unride&quot;</span>, host, chara);</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>        chara.host = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  131</span>        chara.<a class="code hl_function" href="classChara.html#a6fb5cf442c222746306ffc3f86030d0f">_CreateRenderer</a>();</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (talk)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            chara.<a class="code hl_function" href="classCard.html#a57e842daf7d0e710ec61331486eed749">Talk</a>(parasite ? <span class="stringliteral">&quot;parasite_unride&quot;</span> : <span class="stringliteral">&quot;ride_unride&quot;</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, forceSync: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        host.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;ride&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>        host.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">  138</span>        chara.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">  139</span>        host.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_class" href="classPoint.html">Point</a> randomPoint = host.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#afdfaf1c8d2cc3515b536c0b2a860ab21">GetRandomPoint</a>(1);</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (randomPoint != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  142</span>        {</div>
+<div class="line"><span class="lineno">  143</span>            chara.<a class="code hl_function" href="classCard.html#ac26839ce1faec3c1226002eb5303606d">MoveImmediate</a>(randomPoint);</div>
+<div class="line"><span class="lineno">  144</span>        }</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_class" href="classWidgetRoster.html">WidgetRoster</a>.<a class="code hl_function" href="classWidgetRoster.html#a0c4514a6d43393de6538d206d0087d15">SetDirty</a>();</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00060">Card.cs:60</a></div></div>
 <div class="ttc" id="aclassCard_html_ac26839ce1faec3c1226002eb5303606d"><div class="ttname"><a href="classCard.html#ac26839ce1faec3c1226002eb5303606d">Card.MoveImmediate</a></div><div class="ttdeci">void MoveImmediate(Point p, bool focus=true, bool cancelAI=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05903">Card.cs:5903</a></div></div>
 <div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
 <div class="ttc" id="aclassPoint_html_afdfaf1c8d2cc3515b536c0b2a860ab21"><div class="ttname"><a href="classPoint.html#afdfaf1c8d2cc3515b536c0b2a860ab21">Point.GetRandomPoint</a></div><div class="ttdeci">Point GetRandomPoint(int radius, bool requireLos=true, bool allowChara=true, bool allowBlocked=false, int tries=100)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00769">Point.cs:769</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l06754">Chara._CreateRenderer()</a>, <a class="el" href="Point_8cs_source.html#l00769">Point.GetRandomPoint()</a>, <a class="el" href="Card_8cs_source.html#l05903">Card.MoveImmediate()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Card_8cs_source.html#l06343">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>, <a class="el" href="Chara_8cs_source.html#l01759">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Card_8cs_source.html#l07020">Card.Say()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00130">WidgetRoster.SetDirty()</a>, <a class="el" href="Chara_8cs_source.html#l01893">Chara.SetDirtySpeed()</a>, and <a class="el" href="Card_8cs_source.html#l06903">Card.Talk()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l06760">Chara._CreateRenderer()</a>, <a class="el" href="Point_8cs_source.html#l00769">Point.GetRandomPoint()</a>, <a class="el" href="Card_8cs_source.html#l05903">Card.MoveImmediate()</a>, <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Card_8cs_source.html#l06343">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>, <a class="el" href="Chara_8cs_source.html#l01759">Chara.Refresh()</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, <a class="el" href="Card_8cs_source.html#l07020">Card.Say()</a>, <a class="el" href="WidgetRoster_8cs_source.html#l00130">WidgetRoster.SetDirty()</a>, <a class="el" href="Chara_8cs_source.html#l01893">Chara.SetDirtySpeed()</a>, and <a class="el" href="Card_8cs_source.html#l06903">Card.Talk()</a>.</p>
 
 </div>
 </div>
@@ -869,17 +877,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00102">102</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (host != <span class="keyword">null</span> &amp;&amp; (host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> == mount || host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> == mount))</div>
-<div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(host, host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> == mount, talk);</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ActRide_8cs_source.html#l00107">107</a> of file <a class="el" href="ActRide_8cs_source.html">ActRide.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (host != <span class="keyword">null</span> &amp;&amp; (host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> == mount || host.<a class="code hl_variable" href="classChara.html#aacacd9208c527916a9562aa7ad2b32ef">ride</a> == mount))</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_function" href="classActRide.html#a8fe819039661a869b9920e3c6c40c71b">Unride</a>(host, host.<a class="code hl_variable" href="classChara.html#aa8259f2ad32636b6813004383ed0ce32">parasite</a> == mount, talk);</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, and <a class="el" href="ActRide_8cs_source.html#l00102">Unride()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00030">Chara.parasite</a>, <a class="el" href="Chara_8cs_source.html#l00027">Chara.ride</a>, and <a class="el" href="ActRide_8cs_source.html#l00107">Unride()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l05383">Chara.Die()</a>, <a class="el" href="TraitHitchingPost_8cs_source.html#l00007">TraitHitchingPost.OnActivateTrap()</a>, <a class="el" href="ActRide_8cs_source.html#l00007">Perform()</a>, <a class="el" href="Party_8cs_source.html#l00102">Party.RemoveMember()</a>, <a class="el" href="ActRide_8cs_source.html#l00047">Ride()</a>, <a class="el" href="AI__Slaughter_8cs_source.html#l00031">AI_Slaughter.Run()</a>, <a class="el" href="ConSleep_8cs_source.html#l00062">ConSleep.Tick()</a>, and <a class="el" href="ActRide_8cs_source.html#l00102">Unride()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l05389">Chara.Die()</a>, <a class="el" href="TraitHitchingPost_8cs_source.html#l00007">TraitHitchingPost.OnActivateTrap()</a>, <a class="el" href="ActRide_8cs_source.html#l00007">Perform()</a>, <a class="el" href="Party_8cs_source.html#l00102">Party.RemoveMember()</a>, <a class="el" href="ActRide_8cs_source.html#l00052">Ride()</a>, <a class="el" href="AI__Slaughter_8cs_source.html#l00031">AI_Slaughter.Run()</a>, <a class="el" href="ConSleep_8cs_source.html#l00062">ConSleep.Tick()</a>, and <a class="el" href="ActRide_8cs_source.html#l00107">Unride()</a>.</p>
 
 </div>
 </div>

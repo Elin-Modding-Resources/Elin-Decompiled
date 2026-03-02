@@ -15,6 +15,7 @@ var classPlayer_1_1Stats =
     [ "gambleChestOpen", "classPlayer_1_1Stats.html#a9a23525a8d3547fc02647602955f78e6", null ],
     [ "kills", "classPlayer_1_1Stats.html#a410245742b48f2d4b6c12d227951e8e9", null ],
     [ "kumi", "classPlayer_1_1Stats.html#ae88dedf7e8921ddbb79b23590b8749c9", null ],
+    [ "lastChuryu", "classPlayer_1_1Stats.html#adcb20b2f964476e38ab2ede7b20ea052", null ],
     [ "lastShippingExp", "classPlayer_1_1Stats.html#a99ddbf0bf5fe620d4c828714d494c6b0", null ],
     [ "lastShippingExpMax", "classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007", null ],
     [ "married", "classPlayer_1_1Stats.html#a406a77e1cff89214cd931bcceac374f6", null ],

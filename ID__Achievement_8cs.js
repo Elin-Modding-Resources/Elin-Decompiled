@@ -14,6 +14,9 @@ var ID__Achievement_8cs =
       [ "CHURYU", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a97dec4fd0691d55e1f08b5b7a4bc55fa", null ],
       [ "MELILITH", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a6984259277fdd257e6b13463581c5d54", null ],
       [ "LARNNEIRE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ae0637625c2584f14302581b929729b07", null ],
-      [ "LARNNEIRE2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af263257b0f6db21fcccf9fd2e3a99b9a", null ]
+      [ "LARNNEIRE2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af263257b0f6db21fcccf9fd2e3a99b9a", null ],
+      [ "CHURYU2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ac500a47519a7142e770321eec2099628", null ],
+      [ "NINO", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a73936a4ecf75f38c994292becfd8157d", null ],
+      [ "CHURYU3", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9aeaf5ba2395856426a6b6f35e4562719a", null ]
     ] ]
 ];

@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"LayerCredit_8cs_source.html":[2,0,0,750],
+"LayerDebug_8cs.html":[2,0,0,751],
+"LayerDebug_8cs_source.html":[2,0,0,751],
 "LayerDistribution_8cs.html":[2,0,0,752],
 "LayerDistribution_8cs_source.html":[2,0,0,752],
 "LayerDragGrid_8cs.html":[2,0,0,753],
@@ -246,8 +249,5 @@ var NAVTREEINDEX10 =
 "MiniGame_8cs_source.html":[2,0,0,854],
 "MiniGame__Basket_8cs.html":[2,0,0,855],
 "MiniGame__Basket_8cs_source.html":[2,0,0,855],
-"MiniGame__Blackjack_8cs.html":[2,0,0,856],
-"MiniGame__Blackjack_8cs_source.html":[2,0,0,856],
-"MinionType_8cs.html":[2,0,0,857],
-"MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298":[2,0,0,857,0]
+"MiniGame__Blackjack_8cs.html":[2,0,0,856]
 };

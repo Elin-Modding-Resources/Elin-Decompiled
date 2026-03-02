@@ -1,5 +1,8 @@
 var NAVTREEINDEX19 =
 {
+"TraitMineEntrance_8cs_source.html":[2,0,0,1651],
+"TraitMiniPool_8cs.html":[2,0,0,1652],
+"TraitMiniPool_8cs_source.html":[2,0,0,1652],
 "TraitMiral_8cs.html":[2,0,0,1653],
 "TraitMiral_8cs_source.html":[2,0,0,1653],
 "TraitMirror_8cs.html":[2,0,0,1654],
@@ -246,8 +249,5 @@ var NAVTREEINDEX19 =
 "TraitSpotBiome_8cs.html":[2,0,0,1774],
 "TraitSpotBiome_8cs_source.html":[2,0,0,1774],
 "TraitSpotDining_8cs.html":[2,0,0,1775],
-"TraitSpotDining_8cs_source.html":[2,0,0,1775],
-"TraitSpotExit_8cs.html":[2,0,0,1776],
-"TraitSpotExit_8cs_source.html":[2,0,0,1776],
-"TraitSpotFarm_8cs.html":[2,0,0,1777]
+"TraitSpotDining_8cs_source.html":[2,0,0,1775]
 };

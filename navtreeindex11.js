@@ -1,5 +1,8 @@
 var NAVTREEINDEX11 =
 {
+"MiniGame__Blackjack_8cs_source.html":[2,0,0,856],
+"MinionType_8cs.html":[2,0,0,857],
+"MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298":[2,0,0,857,0],
 "MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298a7a1920d61156abc05a60135aefe8bc67":[2,0,0,857,0,0],
 "MinionType_8cs.html#ab076d75dd251fea18d48b2d6b246f298a930a91848917f92cf7e2f8d744fa4177":[2,0,0,857,0,1],
 "MinionType_8cs_source.html":[2,0,0,857],
@@ -246,8 +249,5 @@ var NAVTREEINDEX11 =
 "Prologue_8cs.html":[2,0,0,921],
 "Prologue_8cs_source.html":[2,0,0,921],
 "PropSetCategory_8cs.html":[2,0,0,924],
-"PropSetCategory_8cs_source.html":[2,0,0,924],
-"PropSet_8cs.html":[2,0,0,923],
-"PropSet_8cs_source.html":[2,0,0,923],
-"Properties_2AssemblyInfo_8cs.html":[2,0,0,4,0]
+"PropSetCategory_8cs_source.html":[2,0,0,924]
 };

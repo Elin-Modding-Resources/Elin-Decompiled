@@ -1,5 +1,8 @@
 var NAVTREEINDEX24 =
 {
+"Zone__Lysanas_8cs_source.html":[2,0,0,2031],
+"Zone__MerchantGuild_8cs.html":[2,0,0,2032],
+"Zone__MerchantGuild_8cs_source.html":[2,0,0,2032],
 "Zone__Mifu_8cs.html":[2,0,0,2033],
 "Zone__Mifu_8cs_source.html":[2,0,0,2033],
 "Zone__Mine_8cs.html":[2,0,0,2034],
@@ -246,8 +249,5 @@ var NAVTREEINDEX24 =
 "classACT.html#ac02237de965af1a9ce4c5f088f0e62c2":[1,0,12,0],
 "classACT.html#aca3f2523b3e18567ee9fc6e3dd0149cc":[1,0,12,3],
 "classACT.html#ae3710ca7caaac359479dcd7aa76ff0d5":[1,0,12,4],
-"classACT.html#ae497f6efe379221991822457af996b37":[1,0,12,12],
-"classACT.html#aea0141bde6c0b31c278719807b503d77":[1,0,12,7],
-"classACT.html#af4e228039af3bb3cca4373b0bc08ab3a":[1,0,12,8],
-"classACT.html#af9e8c516c352d391b4bb97f4a538dba4":[1,0,12,6]
+"classACT.html#ae497f6efe379221991822457af996b37":[1,0,12,12]
 };

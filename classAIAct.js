@@ -22,6 +22,7 @@ var classAIAct =
     [ "DoIdle", "classAIAct.html#ae0783a1b5ae5c6b6565caebbd0ad0243", null ],
     [ "DoProgress", "classAIAct.html#ad55c49cdbb7dc68eee758b866d30e98d", null ],
     [ "DoWait", "classAIAct.html#acd9915dea286da2db98567d0127aac37", null ],
+    [ "GetChild< T >", "classAIAct.html#afd7f850ea97e34b5efd7a69d144a6424", null ],
     [ "GetCurrentActionText", "classAIAct.html#ae84fac4a43c6f61460465a808a77361a", null ],
     [ "GetDestination", "classAIAct.html#af6602b11673920207abb838724799900", null ],
     [ "GetProgress", "classAIAct.html#a3538bc0553d901b97900b18f09783176", null ],

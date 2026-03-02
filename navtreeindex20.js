@@ -1,5 +1,8 @@
 var NAVTREEINDEX20 =
 {
+"TraitSpotExit_8cs.html":[2,0,0,1776],
+"TraitSpotExit_8cs_source.html":[2,0,0,1776],
+"TraitSpotFarm_8cs.html":[2,0,0,1777],
 "TraitSpotFarm_8cs_source.html":[2,0,0,1777],
 "TraitSpotFish_8cs.html":[2,0,0,1778],
 "TraitSpotFish_8cs_source.html":[2,0,0,1778],
@@ -246,8 +249,5 @@ var NAVTREEINDEX20 =
 "TransAnime_8cs.html":[2,0,0,1896],
 "TransAnime_8cs_source.html":[2,0,0,1896],
 "TreasureType_8cs.html":[2,0,0,1898],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fc":[2,0,0,1898,0],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca1f5e8d27037d8efd95be78d7c2432373":[2,0,0,1898,0,2],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca340b53fec301dbbc81a0301b9fa905c1":[2,0,0,1898,0,1],
-"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fca46f3ea056caa3126b91f3f70beea068c":[2,0,0,1898,0,3]
+"TreasureType_8cs.html#adc99aa804b10c6b27aecda75d74067fc":[2,0,0,1898,0]
 };

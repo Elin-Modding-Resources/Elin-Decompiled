@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"classConAwakening.html#a641a1a6a98615eb92075faa85f783657":[1,0,310,1],
+"classConBandage.html":[1,0,311],
+"classConBandage.html#a2976f295ec4b3f15fb08516cf0592396":[1,0,311,0],
+"classConBane.html":[1,0,312],
 "classConBerserk.html":[1,0,313],
 "classConBerserk.html#a8f402a21e7811b9ffb1cfb4221937691":[1,0,313,0],
 "classConBerserk.html#aaf59926504504c9e0472f5155d03e53a":[1,0,313,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "classConTorch.html#a509b747906126e35a1094d22a172cab0":[1,0,399,4],
 "classConTorch.html#a5ee0ce2caa3b79071714b14cbf509a2b":[1,0,399,3],
 "classConTorch.html#ab1487bed345a17352630c0ebb02e1d15":[1,0,399,1],
-"classConTransmute.html":[1,0,400],
-"classConTransmute.html#a17566eca301e64b086b959ab0d0aafa8":[1,0,400,3],
-"classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a":[1,0,400,2],
-"classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013":[1,0,400,0],
-"classConTransmute.html#a54071b3bff56fc7b02e39fac45b95c2f":[1,0,400,1]
+"classConTransmute.html":[1,0,400]
 };

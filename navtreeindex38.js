@@ -1,5 +1,9 @@
 var NAVTREEINDEX38 =
 {
+"classBiography.html#ae0cabb9739b853ba8d8fe69074f52aa6":[1,0,232,18],
+"classBiography.html#aeadefe4a493224f2abaf744a10255202":[1,0,232,2],
+"classBiography.html#af6fffb81f0987adf9c2c3f9cabdcdb96":[1,0,232,35],
+"classBiography.html#af9a949773f625a38725a62c9e304ee20":[1,0,232,26],
 "classBiography.html#af9c3cbbb8b6bea54824c108ebdb28ea9":[1,0,232,28],
 "classBiomeProfile.html":[1,0,233],
 "classBiomeProfile.html#a05a1ea940e7d601b35e0dbb80cf1310b":[1,0,233,14],
@@ -245,9 +249,5 @@ var NAVTREEINDEX38 =
 "classBuildMenu.html#aeaa6f30064346b08cdb41f45af1913a6":[1,0,242,51],
 "classBuildMenu.html#aeb7e7a708a550b8e08d21b1415329398":[1,0,242,49],
 "classBuildMenu.html#aebb9aca4eb1a551da20f64bd3f5e1039":[1,0,242,33],
-"classBuildMenu.html#aeffde3e09384df6fe8ecb970e94a83a4":[1,0,242,28],
-"classBuildMenu.html#af5b01ce1b176e15824591a1941c0633d":[1,0,242,20],
-"classBuildMenu.html#af7bd4757e54b93086788e6b66ced16f9":[1,0,242,42],
-"classBuildMenu.html#afb74038c9fcc3551ed218af667a8c5a9":[1,0,242,26],
-"classBuildMenu.html#afc9aab7829b3ee4892e20cb863b1d016":[1,0,242,14]
+"classBuildMenu.html#aeffde3e09384df6fe8ecb970e94a83a4":[1,0,242,28]
 };

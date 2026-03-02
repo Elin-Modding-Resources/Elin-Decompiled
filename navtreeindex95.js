@@ -1,5 +1,13 @@
 var NAVTREEINDEX95 =
 {
+"classQuestIntoDarkness.html#a3cbee115eb43665d2c3f8e057f1dedc6":[1,0,1040,3],
+"classQuestIntoDarkness.html#a68d8645cb3cdb80412f5b86fa550469b":[1,0,1040,0],
+"classQuestIntoDarkness.html#a6ae95776848173b44b9e5fc0b1c6662b":[1,0,1040,1],
+"classQuestIntoDarkness.html#abdb2a13c591879b41c096646bfb1574e":[1,0,1040,2],
+"classQuestIntroInspector.html":[1,0,1041],
+"classQuestIntroInspector.html#a9e2b1725e8742d671a5670dde1788930":[1,0,1041,0],
+"classQuestLoytelFarm.html":[1,0,1042],
+"classQuestLoytelFarm.html#a255474c30a08dee1bbdc10ba62f1fe07":[1,0,1042,1],
 "classQuestLoytelFarm.html#a5de61c383ad35c495dc4d4bef86a1dee":[1,0,1042,0],
 "classQuestLumiest.html":[1,0,1043],
 "classQuestLumiest.html#a54cc2df6c212876a66c403ede142d19a":[1,0,1043,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX95 =
 "classQuestVernis.html#a5adb13db581fadd870fcd4f35da58f8a":[1,0,1082,2],
 "classQuestVernis.html#a7139c08254711f7726d5326a64f1f103":[1,0,1082,5],
 "classQuestVernis.html#ab25e94b71d14c0e1d17f531ee38795fb":[1,0,1082,4],
-"classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1082,3],
-"classQuestWedding.html":[1,0,1083],
-"classQuestWedding.html#a06575bdc7645ae71b0e907ac01f1d9a3":[1,0,1083,2],
-"classQuestWedding.html#a0ccad7c8863027ff89ea46cc02dbf434":[1,0,1083,5],
-"classQuestWedding.html#a3932adb00d59568666bc71f020f5bf1d":[1,0,1083,6],
-"classQuestWedding.html#a5a470ba43ecb60e8fe15ac3725efdd47":[1,0,1083,0],
-"classQuestWedding.html#a9999e38c7edae2bb0bfa789f94f00918":[1,0,1083,1],
-"classQuestWedding.html#ad3a2606da7e7ca7031edcc674215bfb9":[1,0,1083,3],
-"classQuestWedding.html#aedf25a2ba28152fd92f1ad1986a5511d":[1,0,1083,4]
+"classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1082,3]
 };

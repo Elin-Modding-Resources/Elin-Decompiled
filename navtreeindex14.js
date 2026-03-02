@@ -1,5 +1,8 @@
 var NAVTREEINDEX14 =
 {
+"ShouldSerializeContractResolver_8cs_source.html":[2,0,0,2,73],
+"ShrineData_8cs.html":[2,0,0,1102],
+"ShrineData_8cs_source.html":[2,0,0,1102],
 "SingleContent_8cs.html":[2,0,0,2,74],
 "SingleContent_8cs_source.html":[2,0,0,2,74],
 "SingletonBase_8cs.html":[2,0,0,3,85],
@@ -246,8 +249,5 @@ var NAVTREEINDEX14 =
 "StandaloneFileBrowser_8cs_source.html":[2,0,0,2,2,2],
 "StatsBurden_8cs.html":[2,0,0,1179],
 "StatsBurden_8cs_source.html":[2,0,0,1179],
-"StatsHunger_8cs.html":[2,0,0,1180],
-"StatsHunger_8cs_source.html":[2,0,0,1180],
-"StatsHygiene_8cs.html":[2,0,0,1181],
-"StatsHygiene_8cs_source.html":[2,0,0,1181]
+"StatsHunger_8cs.html":[2,0,0,1180]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX13 =
 {
+"RefractionProfile_8cs.html":[2,0,0,1027],
+"RefractionProfile_8cs_source.html":[2,0,0,1027],
+"RegionPoint_8cs.html":[2,0,0,1031],
 "RegionPoint_8cs_source.html":[2,0,0,1031],
 "Region_8cs.html":[2,0,0,1030],
 "Region_8cs_source.html":[2,0,0,1030],
@@ -246,8 +249,5 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafe0619d5f4999e09c622e32da7e7566a":[2,0,0,1101,0,41],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafe49251a5d107b95b09178e978c590ad":[2,0,0,1101,0,49],
 "ShopType_8cs_source.html":[2,0,0,1101],
-"ShouldSerializeContractResolver_8cs.html":[2,0,0,2,73],
-"ShouldSerializeContractResolver_8cs_source.html":[2,0,0,2,73],
-"ShrineData_8cs.html":[2,0,0,1102],
-"ShrineData_8cs_source.html":[2,0,0,1102]
+"ShouldSerializeContractResolver_8cs.html":[2,0,0,2,73]
 };

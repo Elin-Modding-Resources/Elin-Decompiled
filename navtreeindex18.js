@@ -1,5 +1,8 @@
 var NAVTREEINDEX18 =
 {
+"TraitFoodTravel_8cs_source.html":[2,0,0,1527],
+"TraitFood_8cs.html":[2,0,0,1514],
+"TraitFood_8cs_source.html":[2,0,0,1514],
 "TraitFortuneBall_8cs.html":[2,0,0,1528],
 "TraitFortuneBall_8cs_source.html":[2,0,0,1528],
 "TraitFortuneCookie_8cs.html":[2,0,0,1529],
@@ -246,8 +249,5 @@ var NAVTREEINDEX18 =
 "TraitMill_8cs_source.html":[2,0,0,1649],
 "TraitMimu_8cs.html":[2,0,0,1650],
 "TraitMimu_8cs_source.html":[2,0,0,1650],
-"TraitMineEntrance_8cs.html":[2,0,0,1651],
-"TraitMineEntrance_8cs_source.html":[2,0,0,1651],
-"TraitMiniPool_8cs.html":[2,0,0,1652],
-"TraitMiniPool_8cs_source.html":[2,0,0,1652]
+"TraitMineEntrance_8cs.html":[2,0,0,1651]
 };

@@ -21,6 +21,7 @@ var classMsg =
     [ "SayCannotUseHere", "classMsg.html#acb553e39d554028af866ef4e20ea22ee", null ],
     [ "SayGod", "classMsg.html#a391daaba1e29bf9345d679e9b34672d4", null ],
     [ "SayHomeMember", "classMsg.html#a6b95e7cf090ddba4dc24de88e8ef003d", null ],
+    [ "SayInvalidAction", "classMsg.html#ac1c593741fe4cc96d0f2314d36ff8763", null ],
     [ "SayNothingHappen", "classMsg.html#aecd2169a069c87c9eca10d3a04249b54", null ],
     [ "SayPic", "classMsg.html#aa5b2c871d4d8bd9eda6ece2fbed24309", null ],
     [ "SayPic", "classMsg.html#ac0fc351ed4d88a205de569824502b707", null ],

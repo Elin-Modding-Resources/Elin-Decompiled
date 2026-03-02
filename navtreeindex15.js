@@ -1,5 +1,8 @@
 var NAVTREEINDEX15 =
 {
+"StatsHunger_8cs_source.html":[2,0,0,1180],
+"StatsHygiene_8cs.html":[2,0,0,1181],
+"StatsHygiene_8cs_source.html":[2,0,0,1181],
 "StatsMana_8cs.html":[2,0,0,1182],
 "StatsMana_8cs_source.html":[2,0,0,1182],
 "StatsSAN_8cs.html":[2,0,0,1183],
@@ -246,8 +249,5 @@ var NAVTREEINDEX15 =
 "TileTypeLadder_8cs_source.html":[2,0,0,1283],
 "TileTypeLiquid_8cs.html":[2,0,0,1284],
 "TileTypeLiquid_8cs_source.html":[2,0,0,1284],
-"TileTypeMarker_8cs.html":[2,0,0,1285],
-"TileTypeMarker_8cs_source.html":[2,0,0,1285],
-"TileTypeNone_8cs.html":[2,0,0,1286],
-"TileTypeNone_8cs_source.html":[2,0,0,1286]
+"TileTypeMarker_8cs.html":[2,0,0,1285]
 };

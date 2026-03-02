@@ -1,5 +1,8 @@
 var NAVTREEINDEX23 =
 {
+"WidgetInspector_8cs_source.html":[2,0,0,1955],
+"WidgetMainText_8cs.html":[2,0,0,1956],
+"WidgetMainText_8cs_source.html":[2,0,0,1956],
 "WidgetManager_8cs.html":[2,0,0,1957],
 "WidgetManager_8cs_source.html":[2,0,0,1957],
 "WidgetMascot_8cs.html":[2,0,0,1958],
@@ -246,8 +249,5 @@ var NAVTREEINDEX23 =
 "Zone__LumiestRuin_8cs_source.html":[2,0,0,2030],
 "Zone__Lumiest_8cs.html":[2,0,0,2028],
 "Zone__Lumiest_8cs_source.html":[2,0,0,2028],
-"Zone__Lysanas_8cs.html":[2,0,0,2031],
-"Zone__Lysanas_8cs_source.html":[2,0,0,2031],
-"Zone__MerchantGuild_8cs.html":[2,0,0,2032],
-"Zone__MerchantGuild_8cs_source.html":[2,0,0,2032]
+"Zone__Lysanas_8cs.html":[2,0,0,2031]
 };

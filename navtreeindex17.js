@@ -1,5 +1,8 @@
 var NAVTREEINDEX17 =
 {
+"TraitChair_8cs_source.html":[2,0,0,1401],
+"TraitChangingRoom_8cs.html":[2,0,0,1402],
+"TraitChangingRoom_8cs_source.html":[2,0,0,1402],
 "TraitChara_8cs.html":[2,0,0,1403],
 "TraitChara_8cs_source.html":[2,0,0,1403],
 "TraitChef_8cs.html":[2,0,0,1404],
@@ -246,8 +249,5 @@ var NAVTREEINDEX17 =
 "TraitFoodPrepared_8cs_source.html":[2,0,0,1524],
 "TraitFoodSeasoning_8cs.html":[2,0,0,1526],
 "TraitFoodSeasoning_8cs_source.html":[2,0,0,1526],
-"TraitFoodTravel_8cs.html":[2,0,0,1527],
-"TraitFoodTravel_8cs_source.html":[2,0,0,1527],
-"TraitFood_8cs.html":[2,0,0,1514],
-"TraitFood_8cs_source.html":[2,0,0,1514]
+"TraitFoodTravel_8cs.html":[2,0,0,1527]
 };
