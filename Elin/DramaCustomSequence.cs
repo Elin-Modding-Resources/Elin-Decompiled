@@ -274,6 +274,10 @@ public class DramaCustomSequence : EClass
 					Choice2("daBlessing", "_blessing");
 				}
 			}
+			else if (c.isDrunk || c.HasElement(1275) || EClass.debug.enable)
+			{
+				Choice2(flag2 ? "daBird" : "daTail", "_tail");
+			}
 		}
 		if (c.IsHomeMember())
 		{
@@ -603,6 +607,10 @@ public class DramaCustomSequence : EClass
 			{
 				destThing.Attune(c);
 				destThing.elements.ModBase(484, 3);
+				if (destThing.rarity < Rarity.Mythical)
+				{
+					destThing.rarity = Rarity.Mythical;
+				}
 				c.AddCard(destThing);
 				c.TryEquip(destThing);
 				GameLang.refDrama1 = EClass.world.date.year.ToString() ?? "";

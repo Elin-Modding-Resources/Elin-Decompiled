@@ -360,7 +360,7 @@ public class DNA : EClass
 				ActList.Item a = model.ability.list.items.RandomItem();
 				if (!(a.act.source.category != "ability") && a.act.source.geneSlot >= 0)
 				{
-					AddVal(a.act.source.id, a.chance * ((!a.pt) ? 1 : (-1)), allowStack: false, (int v) => 8 + a.act.source.cost[0] / 10 * 2);
+					AddVal(a.act.source.id, a.chance * ((!a.pt) ? 1 : (-1)), allowStack: false, (int v) => 8 + a.act.source.cost[0] / 10 * 2, allowNegative: true);
 					action++;
 				}
 			}
@@ -368,7 +368,7 @@ public class DNA : EClass
 		void AddAttribute()
 		{
 			Element element = listAttb[EClass.rnd(3)];
-			AddVal(element.id, EClass.rndHalf(element.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1);
+			AddVal(element.id, EClass.rndHalf(element.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1, allowNegative: false);
 		}
 		void AddBody()
 		{
@@ -386,7 +386,7 @@ public class DNA : EClass
 				}
 				if (bodySlot != null)
 				{
-					AddVal(bodySlot.elementId, 1, allowStack: false, (int v) => 20);
+					AddVal(bodySlot.elementId, 1, allowStack: false, (int v) => 20, allowNegative: false);
 					body++;
 				}
 			}
@@ -403,7 +403,7 @@ public class DNA : EClass
 					{
 						maxSlot = e.source.geneSlot;
 					}
-					AddVal(e.id, 1, allowStack: false, (int v) => e.source.cost[0] * 5);
+					AddVal(e.id, 1, allowStack: false, (int v) => e.source.cost[0] * 5, allowNegative: false);
 				}
 			}
 		}
@@ -428,7 +428,7 @@ public class DNA : EClass
 		void AddSkill()
 		{
 			Element element2 = listSkill[Mathf.Clamp(EClass.rnd(6), 0, listSkill.Count - 1)];
-			AddVal(element2.id, EClass.rndHalf(element2.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1);
+			AddVal(element2.id, EClass.rndHalf(element2.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1, allowNegative: false);
 		}
 		void AddSpecial()
 		{
@@ -453,9 +453,9 @@ public class DNA : EClass
 				AddAttribute();
 			}
 		}
-		void AddVal(int id, int v, bool allowStack, Func<int, int> funcCost)
+		void AddVal(int id, int v, bool allowStack, Func<int, int> funcCost, bool allowNegative)
 		{
-			if (v >= 0)
+			if (v >= 0 || allowNegative)
 			{
 				bool flag = false;
 				int num = EClass.curve(v, 20, 10, 90);

@@ -122,7 +122,7 @@ public class Dialog : ELayer
 
 	public override void OnUpdateInput()
 	{
-		if ((bool)input && option.canClose && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
+		if ((bool)input && option.canClose && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && keymap == null)
 		{
 			isInputEnter = true;
 			Close();
@@ -150,10 +150,8 @@ public class Dialog : ELayer
 				KeyCode.Mouse3,
 				KeyCode.Mouse4,
 				KeyCode.Escape,
-				KeyCode.Return,
 				KeyCode.LeftShift,
-				KeyCode.Delete,
-				KeyCode.Backspace
+				KeyCode.Delete
 			};
 			if (Input.GetKeyDown(KeyCode.Delete))
 			{

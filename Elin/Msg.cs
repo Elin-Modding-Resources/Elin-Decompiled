@@ -103,6 +103,11 @@ public class Msg : EClass
 		return Say("cannot_use_here");
 	}
 
+	public static string SayInvalidAction()
+	{
+		return Say("invalidAction");
+	}
+
 	public static void SayGod(string s, Card owner = null)
 	{
 		SetColor(colors.TalkGod);

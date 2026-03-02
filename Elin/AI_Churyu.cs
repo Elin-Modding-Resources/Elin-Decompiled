@@ -10,6 +10,10 @@ public class AI_Churyu : AIWork
 
 	public override IEnumerable<Status> Run()
 	{
+		if (restartCount == 0)
+		{
+			EClass.player.UpdateNyan();
+		}
 		if (!slave.ExistsOnMap || churyu.GetRootCard() != slave)
 		{
 			yield return Success();

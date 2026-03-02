@@ -3781,6 +3781,12 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		}
+		case 4:
+			if (IsPC)
+			{
+				EClass.player.UpdateNyan();
+			}
+			break;
 		case 5:
 		case 30:
 			if (isWeakToSunlight && pos.IsSunLit)
@@ -7222,6 +7228,10 @@ public class Chara : Card, IPathfindWalker
 			if (EClass.game.quests.OnShowDialog(this))
 			{
 				return;
+			}
+			if (id == "nino")
+			{
+				Steam.GetAchievement(ID_Achievement.NINO);
 			}
 			switch (id)
 			{

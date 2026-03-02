@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class AM_Adv : AM_BaseGameMode
@@ -823,6 +824,37 @@ public class AM_Adv : AM_BaseGameMode
 		}
 		switch (EInput.action)
 		{
+		case EAction.Chat:
+			Dialog.InputName("", "", delegate(bool cancel, string text)
+			{
+				if (!cancel && !text.IsEmpty())
+				{
+					Chara chara = EClass.pc;
+					if ((text[0] == '@' || text[0] == '＠') && text.Length > 1 && int.TryParse(text[1].ToString().Normalize(NormalizationForm.FormKC), out var result))
+					{
+						text = text.Substring(2);
+						chara = EClass.pc.party.members.TryGet(result);
+					}
+					if (text.StartsWith('@'))
+					{
+						text = text.Substring(1);
+					}
+					chara.SayRaw(text);
+					Msg.SetColor("ono");
+					string text2 = text;
+					if (!text.StartsWith('*') && !text.StartsWith('(') && !text.StartsWith('（'))
+					{
+						text = text.Bracket();
+					}
+					Msg.Say(text, chara);
+					if (text2 == "nyan")
+					{
+						Msg.SetColor("save");
+						Msg.Say("*" + EClass.player.stats.lastChuryu + " nyan*");
+					}
+				}
+			}, Dialog.InputType.None);
+			break;
 		case EAction.Search:
 			EClass.ui.widgets.Toggle("Search")?.SoundActivate();
 			break;

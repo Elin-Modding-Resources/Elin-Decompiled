@@ -172,6 +172,16 @@ public class AIAct : Act
 		return false;
 	}
 
+	public T GetChild<T>() where T : AIAct
+	{
+		if (this is T)
+		{
+			return this as T;
+		}
+		AIAct aIAct = child;
+		return ((aIAct != null) ? aIAct.GetChild<T>() : null) ?? null;
+	}
+
 	public virtual void OnStart()
 	{
 	}

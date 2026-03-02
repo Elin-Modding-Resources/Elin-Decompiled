@@ -685,7 +685,7 @@ public class Element : EClass
 			if (c.IsPC && c.HasCondition<StanceManaCost>())
 			{
 				int num2 = c.Evalue(1657);
-				if (num2 > 0 && vPotential >= 2)
+				if (num2 > 0 && (vPotential >= 2 || c.ability.Has(act.id)))
 				{
 					num = num * (100 - num2 * 20) / 100;
 				}

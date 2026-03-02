@@ -115,10 +115,10 @@ public class AI_Fish : AIAct
 			}
 			if (EClass.rnd(EClass.debug.enable ? 2 : 1000) == 0 && thing.category.IsChildOf("fish"))
 			{
-				owner.PlaySound("escape");
 				owner.PlayEffect("fizzle");
 				if (owner.IsPC)
 				{
+					owner.PlaySound("escape");
 					owner.Say("fish_ehe");
 					owner.Say("fish_ehe2");
 					owner.Say("fish_ehe3");

@@ -697,6 +697,10 @@ public class CoreConfig : EClass
 		{
 			coreConfig.ui.balloonBG = true;
 		}
+		if (coreConfig.version.IsBelow(0, 23, 282))
+		{
+			coreConfig.input.keys.chat.key = KeyCode.Return;
+		}
 		return coreConfig;
 	}
 

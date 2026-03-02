@@ -141,6 +141,8 @@ public class Player : EClass
 
 		public int lastShippingExpMax;
 
+		public int lastChuryu;
+
 		public long nefiaBeaten
 		{
 			get
@@ -2427,6 +2429,28 @@ public class Player : EClass
 		if (fishArtifact > 0 && EClass.rnd(3) == 0)
 		{
 			fishArtifact--;
+		}
+	}
+
+	public void UpdateNyan()
+	{
+		int num = 0;
+		foreach (Chara chara in EClass._map.charas)
+		{
+			AI_Churyu child = chara.ai.GetChild<AI_Churyu>();
+			if (child != null && child.slave == EClass.pc)
+			{
+				num++;
+			}
+		}
+		EClass.player.stats.lastChuryu = num;
+		if (num >= 20)
+		{
+			Steam.GetAchievement(ID_Achievement.CHURYU2);
+		}
+		if (num >= 50)
+		{
+			Steam.GetAchievement(ID_Achievement.CHURYU3);
 		}
 	}
 

@@ -182,7 +182,7 @@ public class CardActor : Actor
 		}
 		base.transform.position = tempV;
 		base.transform.localScale = tempV2;
-		destLiquid = Mathf.Lerp(destLiquid, p.liquidLv, Core.gameDelta * (float)((destLiquid > (float)p.liquidLv) ? 90 : 20));
+		destLiquid = Mathf.Lerp(destLiquid, p.liquidLv, Core.gameDeltaNoPause * (float)((destLiquid > (float)p.liquidLv) ? 90 : 20));
 		mpb.SetFloat("_MatColor", p.matColor);
 		mpb.SetFloat("_Color", p.color);
 		mpb.SetFloat("_Liquid", destLiquid);

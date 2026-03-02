@@ -6,6 +6,11 @@ public class ActRide : Ability
 
 	public override bool Perform()
 	{
+		if (EClass._zone is Zone_Wedding)
+		{
+			Msg.SayInvalidAction();
+			return false;
+		}
 		List<Chara> list = Act.TP.ListCharas();
 		list.Reverse();
 		bool flag = false;
