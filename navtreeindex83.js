@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"classListPeopleExpedition.html#a2b78b11d4fcc625fa6f8341c9e3d672b":[1,0,879,6],
 "classListPeopleExpedition.html#a3fc5aab4f17db42a97edcaf11bcd8430":[1,0,879,3],
 "classListPeopleExpedition.html#a7d06ce16936fbb15f88df1aefc75dfa8":[1,0,879,4],
 "classListPeopleExpedition.html#aaf7def1776c0b0109f74c87c5f39ac83":[1,0,879,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "classMap.html#a28078ccefdbe996cd56f515b75f612aa":[1,0,893,114],
 "classMap.html#a28787b9bbf349d3fc73d8d0740b727c4":[1,0,893,4],
 "classMap.html#a30e3b9b3c5a2807fe3458bff41f9b5e7":[1,0,893,25],
-"classMap.html#a3141eb612cbca31e1d8cff4becd458fc":[1,0,893,127],
-"classMap.html#a321c2a7acd036bd26832588ed88fdb49":[1,0,893,113]
+"classMap.html#a3141eb612cbca31e1d8cff4becd458fc":[1,0,893,127]
 };

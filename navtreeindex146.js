@@ -1,5 +1,6 @@
 var NAVTREEINDEX146 =
 {
+"namespaceEmpyrean.html":[0,4,5],
 "namespaceEmpyrean_1_1ColorPicker.html":[0,4,5,0],
 "namespaceEmpyrean_1_1ColorPicker.html#addae28f895c6122349f7321066b62b01":[0,4,5,0,6],
 "namespaceEmpyrean_1_1ColorPicker.html#addae28f895c6122349f7321066b62b01a13c7d2d737f81f7bf89aed9fbcd0ad55":[0,4,5,0,6,5],

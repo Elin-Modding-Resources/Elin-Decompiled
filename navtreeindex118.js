@@ -1,5 +1,6 @@
 var NAVTREEINDEX118 =
 {
+"classTraitBartender.html#aeeacdcb705762625e896099b94921168":[1,0,1469,0],
 "classTraitBaseContainer.html":[1,0,1470],
 "classTraitBaseContainer.html#a06a4da61836ee2f4ee815842d101401e":[1,0,1470,14],
 "classTraitBaseContainer.html#a108b467afcf5f01d16fa1a6481f34c67":[1,0,1470,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitChara.html#aa5f6cea5a8b978621195da121fd22a0c":[1,0,1516,13],
 "classTraitChara.html#aa8acc03026142a26aa61aca0e8d060ab":[1,0,1516,2],
 "classTraitChara.html#aa8b742c242e488b36fb4347f10ad5e48":[1,0,1516,35],
-"classTraitChara.html#aaef443538554e3085ff0e7ba7497de95":[1,0,1516,25],
-"classTraitChara.html#ab272d6e7385371505f00ab2644b3b222":[1,0,1516,34]
+"classTraitChara.html#aaef443538554e3085ff0e7ba7497de95":[1,0,1516,25]
 };

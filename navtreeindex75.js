@@ -1,5 +1,6 @@
 var NAVTREEINDEX75 =
 {
+"classInvOwnerGene.html#a6e694cb44d3593e74c2b590d8398527c":[1,0,730,2],
 "classInvOwnerGene.html#aa1bb5348178cf77b55df68908de4274f":[1,0,730,0],
 "classInvOwnerGene.html#aaf53f10e73a3353c9a4f4bb02a266ba8":[1,0,730,1],
 "classInvOwnerGene.html#aed12a70e220a15cebc04f90e16f45676":[1,0,730,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX75 =
 "classItemQuestTracker.html#af0b8b2d68ed9489c792912ac4ae6e7c9":[1,0,765,4],
 "classItemResearch.html":[1,0,766],
 "classItemResearch.html#a2dac9538028d9f677d57001776a6de94":[1,0,766,0],
-"classItemResearch.html#a41ba72351f85cb89e6f4e59d142465bd":[1,0,766,3],
-"classItemResearch.html#a6a7aaaaa4dc831dd162f90a0344f1d7d":[1,0,766,2]
+"classItemResearch.html#a41ba72351f85cb89e6f4e59d142465bd":[1,0,766,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX123 =
 {
+"classTraitMerchantGun.html#a2c20221f1b6f16180680b4baa2c86834":[1,0,1748,0],
 "classTraitMerchantGun.html#aee959c520e86875cd63de5a443bca4f0":[1,0,1748,1],
 "classTraitMerchantJunk.html":[1,0,1749],
 "classTraitMerchantJunk.html#a2a14dcd2b678a3661030049a59084151":[1,0,1749,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitPoina.html":[1,0,1811],
 "classTraitPolicyBoard.html":[1,0,1812],
 "classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1812,1],
-"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1812,0],
-"classTraitPoolTable.html":[1,0,1813]
+"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1812,0]
 };

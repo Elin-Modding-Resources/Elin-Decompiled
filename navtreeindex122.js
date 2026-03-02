@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitHouseBoard_1_1Data.html#a3e943eef195b0f105276a96bcc108a1c":[1,0,1687,0,1],
 "classTraitHouseBoard_1_1Data.html#a5185cb25b09ff747071433ed6ecb2694":[1,0,1687,0,6],
 "classTraitHouseBoard_1_1Data.html#a59b37da647fd73e78797c7ff2ac1bbfb":[1,0,1687,0,8],
 "classTraitHouseBoard_1_1Data.html#a5e5dab433ca2876b0dd2bea2d2d7a527":[1,0,1687,0,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitMerchantGeneral.html#ac107905e867da0cb473e7a7821dd96c4":[1,0,1746,0],
 "classTraitMerchantGeneralExotic.html":[1,0,1747],
 "classTraitMerchantGeneralExotic.html#ad8a31536bb627922c0f4d9a31d87b96f":[1,0,1747,0],
-"classTraitMerchantGun.html":[1,0,1748],
-"classTraitMerchantGun.html#a2c20221f1b6f16180680b4baa2c86834":[1,0,1748,0]
+"classTraitMerchantGun.html":[1,0,1748]
 };

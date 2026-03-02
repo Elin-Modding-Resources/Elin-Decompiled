@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitTeleporter.html#a85b6f65d9f8b96139c21a3b03ad6dc14":[1,0,1926,5],
 "classTraitTeleporter.html#a91f2defe17affc5b2a09a427fbaf8677":[1,0,1926,8],
 "classTraitTeleporter.html#ac640175e9667a4a9572ee4d239acd0a9":[1,0,1926,11],
 "classTraitTeleporter.html#ad3defe9a22e6e69fec6d3d6142b3fded":[1,0,1926,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitVendingMachine.html#ab466c22e9734fc8ef713a6679e0ad1d6":[1,0,1991,3],
 "classTraitVendingMachine.html#ad895e9e7d4ed9691d63b363ee1bb5be7":[1,0,1991,0],
 "classTraitVendingMachine.html#ae1aba46863971c17f143c85fe8774f15":[1,0,1991,2],
-"classTraitVesda.html":[1,0,1992],
-"classTraitVesda.html#a60c972ad303028b29983c6b57727bc44":[1,0,1992,0]
+"classTraitVesda.html":[1,0,1992]
 };

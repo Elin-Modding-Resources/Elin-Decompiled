@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"classLayerCraftFloat.html#a561b01e041ed54ab9f82af120afe29e0":[1,0,803,4],
 "classLayerCraftFloat.html#a60de2618f3a93e331acc4cbc88c7f45b":[1,0,803,2],
 "classLayerCraftFloat.html#a6c79c229401868adfd6b213a310f2bcd":[1,0,803,10],
 "classLayerCraftFloat.html#a76f5129a1779244dccc8de0475d0bb62":[1,0,803,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "classLayerEmbark.html#a736933b9adc6697e42d1c6b15ec9937d":[1,0,815,1],
 "classLayerEmbark.html#a7faf6f1b83a4f57e3c0746f80b85efcf":[1,0,815,16],
 "classLayerEmbark.html#a8f69b50c95b6b1df767c34312f5eda4a":[1,0,815,47],
-"classLayerEmbark.html#a994ba24afabc61b715d028ccabe2bd5b":[1,0,815,23],
-"classLayerEmbark.html#a99bd7cd0e7253ea2ae8f3a0b3dfad568":[1,0,815,2]
+"classLayerEmbark.html#a994ba24afabc61b715d028ccabe2bd5b":[1,0,815,23]
 };

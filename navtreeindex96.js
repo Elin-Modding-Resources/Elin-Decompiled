@@ -1,5 +1,6 @@
 var NAVTREEINDEX96 =
 {
+"classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1082,3],
 "classQuestWedding.html":[1,0,1083],
 "classQuestWedding.html#a06575bdc7645ae71b0e907ac01f1d9a3":[1,0,1083,2],
 "classQuestWedding.html#a0ccad7c8863027ff89ea46cc02dbf434":[1,0,1083,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX96 =
 "classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703":[1,0,1098,18],
 "classRecipeManager.html#aecb1c741b6f9349424fbb084a8848615":[1,0,1098,8],
 "classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab":[1,0,1098,3],
-"classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79":[1,0,1098,10],
-"classRecipeManager.html#afc7f69001a0268922b380bc78f8f6477":[1,0,1098,23]
+"classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79":[1,0,1098,10]
 };

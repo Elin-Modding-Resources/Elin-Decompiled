@@ -1,5 +1,6 @@
 var NAVTREEINDEX98 =
 {
+"classReligionOblivion.html#a5f94572db73cf58930a9c9581548407d":[1,0,1125,1],
 "classReligionOblivion.html#ac535bfdc543f8a32d4729bf7c05eb1e8":[1,0,1125,0],
 "classReligionStrife.html":[1,0,1126],
 "classReligionStrife.html#a7579f63b88cc23f159b17db0dfe40dec":[1,0,1126,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX98 =
 "classResearchManager.html#acc161b56745a8def8887660b00750da4":[1,0,1149,15],
 "classResearchManager.html#acc803ccc1824897cf768fab003832f25":[1,0,1149,5],
 "classResearchManager.html#ad014e1492c25ae5576a9eb9d8521d5f7":[1,0,1149,7],
-"classResearchManager.html#adc30dc28f2b7f4fdb1882931c880d2a0":[1,0,1149,14],
-"classResearchManager.html#ae0566dbaa70306f7fdddd277b1e38206":[1,0,1149,3]
+"classResearchManager.html#adc30dc28f2b7f4fdb1882931c880d2a0":[1,0,1149,14]
 };

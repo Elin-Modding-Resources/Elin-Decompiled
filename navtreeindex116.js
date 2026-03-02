@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classTileTypeWall.html#a2557ded76d251d2c26a155fcd131d625":[1,0,1419,4],
 "classTileTypeWall.html#a26bafd462b0afe0c20c32f588fad5f4c":[1,0,1419,6],
 "classTileTypeWall.html#a6f609f9d45f262de09c376c8686a7fbc":[1,0,1419,1],
 "classTileTypeWall.html#a8450929aafe9e81c441b9321e182d5b4":[1,0,1419,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classTrait.html#a773ff35de469eff01a2dbe0b165d32a5":[1,0,1438,47],
 "classTrait.html#a779d6dc323fb8414562afc9cc2fe3406":[1,0,1438,177],
 "classTrait.html#a7a3637e38ace8063cd066648552195cc":[1,0,1438,49],
-"classTrait.html#a7b460aa0c3d30a75e6d20162a3ec9313":[1,0,1438,128],
-"classTrait.html#a7bd8f3a886ad660345993fb574c37767":[1,0,1438,90]
+"classTrait.html#a7b460aa0c3d30a75e6d20162a3ec9313":[1,0,1438,128]
 };
