@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -124,36 +124,41 @@ $(document).ready(function(){initNavTree('ClassCache_8cs_source.html',''); initR
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classClassCache.html#aa5bbaaaa25f300b9824a68f9fd6ab08b">   31</a></span>    <span class="keyword">public</span> T <a class="code hl_function" href="classClassCache.html#aadd0435eb1c482213dd796ac70c39a5f">Create&lt;T2&gt;</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> assembly)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        Type type = Type.GetType(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;, &quot;</span> + assembly);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (type == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        Func&lt;T&gt; func = <a class="code hl_variable" href="classClassCache.html#ae2c182b27c8e4eb3b74d99a416f10d1a">dict</a>.TryGetValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (func != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> assembly2 <span class="keywordflow">in</span> <a class="code hl_class" href="classClassCache.html">ClassCache</a>.<a class="code hl_variable" href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">assemblies</a>)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                type = Type.GetType(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;, &quot;</span> + assembly2);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="keywordflow">if</span> (type != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classClassCache.html#aadd0435eb1c482213dd796ac70c39a5f">Create&lt;T2&gt;</a>(type);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classClassCache.html">ClassCache</a></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">   50</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classClassCache.html">ClassCache&lt;object&gt;</a> <a class="code hl_variable" href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">caches</a> = <span class="keyword">new</span> <a class="code hl_class" href="classClassCache.html">ClassCache&lt;object&gt;</a>();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">   52</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> HashSet&lt;string&gt; <a class="code hl_variable" href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">assemblies</a> = <span class="keyword">new</span> HashSet&lt;string&gt;();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classClassCache.html#a99f737e56efa1b9411d0f2fdcf4df786">   54</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="classClassCache.html#a99f737e56efa1b9411d0f2fdcf4df786">Create&lt;T&gt;</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> assembly = <span class="stringliteral">&quot;Assembly-CSharp&quot;</span>)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> (T)<a class="code hl_variable" href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">caches</a>.Create&lt;T&gt;(id, assembly);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span> func();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        Type type = Type.GetType(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;, &quot;</span> + assembly);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">if</span> (type == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> assembly2 <span class="keywordflow">in</span> <a class="code hl_class" href="classClassCache.html">ClassCache</a>.<a class="code hl_variable" href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">assemblies</a>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                type = Type.GetType(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;, &quot;</span> + assembly2);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="keywordflow">if</span> (type != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classClassCache.html#aadd0435eb1c482213dd796ac70c39a5f">Create&lt;T2&gt;</a>(type);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classClassCache.html">ClassCache</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">   55</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classClassCache.html">ClassCache&lt;object&gt;</a> <a class="code hl_variable" href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">caches</a> = <span class="keyword">new</span> <a class="code hl_class" href="classClassCache.html">ClassCache&lt;object&gt;</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">   57</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> HashSet&lt;string&gt; <a class="code hl_variable" href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">assemblies</a> = <span class="keyword">new</span> HashSet&lt;string&gt;();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classClassCache.html#a99f737e56efa1b9411d0f2fdcf4df786">   59</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="classClassCache.html#a99f737e56efa1b9411d0f2fdcf4df786">Create&lt;T&gt;</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> assembly = <span class="stringliteral">&quot;Assembly-CSharp&quot;</span>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> (T)<a class="code hl_variable" href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">caches</a>.Create&lt;T&gt;(id, assembly);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
 <div class="ttc" id="aclassClassCache_html"><div class="ttname"><a href="classClassCache.html">ClassCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00006">ClassCache.cs:7</a></div></div>
-<div class="ttc" id="aclassClassCache_html_a4b956480e24124d9c12acaf83ae9a58f"><div class="ttname"><a href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">ClassCache.caches</a></div><div class="ttdeci">static ClassCache&lt; object &gt; caches</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00050">ClassCache.cs:50</a></div></div>
-<div class="ttc" id="aclassClassCache_html_a7a130179b409895401a1f64b0dc3bfce"><div class="ttname"><a href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">ClassCache.assemblies</a></div><div class="ttdeci">static HashSet&lt; string &gt; assemblies</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00052">ClassCache.cs:52</a></div></div>
-<div class="ttc" id="aclassClassCache_html_a99f737e56efa1b9411d0f2fdcf4df786"><div class="ttname"><a href="classClassCache.html#a99f737e56efa1b9411d0f2fdcf4df786">ClassCache.Create&lt; T &gt;</a></div><div class="ttdeci">static T Create&lt; T &gt;(string id, string assembly=&quot;Assembly-CSharp&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00054">ClassCache.cs:54</a></div></div>
+<div class="ttc" id="aclassClassCache_html_a4b956480e24124d9c12acaf83ae9a58f"><div class="ttname"><a href="classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f">ClassCache.caches</a></div><div class="ttdeci">static ClassCache&lt; object &gt; caches</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00055">ClassCache.cs:55</a></div></div>
+<div class="ttc" id="aclassClassCache_html_a7a130179b409895401a1f64b0dc3bfce"><div class="ttname"><a href="classClassCache.html#a7a130179b409895401a1f64b0dc3bfce">ClassCache.assemblies</a></div><div class="ttdeci">static HashSet&lt; string &gt; assemblies</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00057">ClassCache.cs:57</a></div></div>
+<div class="ttc" id="aclassClassCache_html_a99f737e56efa1b9411d0f2fdcf4df786"><div class="ttname"><a href="classClassCache.html#a99f737e56efa1b9411d0f2fdcf4df786">ClassCache.Create&lt; T &gt;</a></div><div class="ttdeci">static T Create&lt; T &gt;(string id, string assembly=&quot;Assembly-CSharp&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00059">ClassCache.cs:59</a></div></div>
 <div class="ttc" id="aclassClassCache_html_aadd0435eb1c482213dd796ac70c39a5f"><div class="ttname"><a href="classClassCache.html#aadd0435eb1c482213dd796ac70c39a5f">ClassCache.Create&lt; T2 &gt;</a></div><div class="ttdeci">T Create&lt; T2 &gt;(Type type)</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00010">ClassCache.cs:10</a></div></div>
 <div class="ttc" id="aclassClassCache_html_ae2c182b27c8e4eb3b74d99a416f10d1a"><div class="ttname"><a href="classClassCache.html#ae2c182b27c8e4eb3b74d99a416f10d1a">ClassCache.dict</a></div><div class="ttdeci">Dictionary&lt; string, Func&lt; T &gt; &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="ClassCache_8cs_source.html#l00008">ClassCache.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

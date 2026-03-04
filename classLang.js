@@ -30,6 +30,7 @@ var classLang =
     [ "articlesToRemove", "classLang.html#a5820dd6cf4c726e69818537ddd1fa2e9", null ],
     [ "comparer", "classLang.html#a2a05f05f2a109dd992cf0e0c67bb5baa", null ],
     [ "excelDialog", "classLang.html#aa84c85d24328a98729ac206b2ac15d84", null ],
+    [ "extraExcelDialogs", "classLang.html#ace4b10d493558a4b48e9662c0b0ec1d8", null ],
     [ "Game", "classLang.html#ac72c791b12dc4fd790e4054a3fb20d1c", null ],
     [ "General", "classLang.html#a2adf65b7539776ce02ae7819590e4120", null ],
     [ "isBuiltin", "classLang.html#ada42353e8636a1085ec2f851e7b3c403", null ],

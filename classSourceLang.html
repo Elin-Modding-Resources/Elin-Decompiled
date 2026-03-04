@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -137,6 +137,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b736ea60443f7cbcbe0ab56a8d8b61d inherit pub_methods_classSourceData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a4b58f656b62e6bf22e4d707c8b5473 inherit pub_methods_classSourceData"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData.html#a2a4b58f656b62e6bf22e4d707c8b5473">CreateRow</a> ()</td></tr>
 <tr class="separator:a2a4b58f656b62e6bf22e4d707c8b5473 inherit pub_methods_classSourceData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ada1241aa0c5efa92179f55a8e92e3 inherit pub_methods_classSourceData"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData.html#a98ada1241aa0c5efa92179f55a8e92e3">ImportRows</a> (IEnumerable&lt; BaseRow &gt; sourceRows)</td></tr>
+<tr class="separator:a98ada1241aa0c5efa92179f55a8e92e3 inherit pub_methods_classSourceData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67ea3d263f74395735473d44f78369d inherit pub_methods_classSourceData"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData.html#ad67ea3d263f74395735473d44f78369d">ImportRows</a> (IEnumerable&lt; BaseRow &gt; sourceRows)</td></tr>
+<tr class="separator:ad67ea3d263f74395735473d44f78369d inherit pub_methods_classSourceData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a2a9cd59a28a2a242daf667f46b911 inherit pub_methods_classSourceData"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData.html#a82a2a9cd59a28a2a242daf667f46b911">RemoveDuplicateRows</a> ()</td></tr>
+<tr class="separator:a82a2a9cd59a28a2a242daf667f46b911 inherit pub_methods_classSourceData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51ea452838ecd2bdfb1145213658ff9e inherit pub_methods_classSourceData"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData.html#a51ea452838ecd2bdfb1145213658ff9e">BackupSource</a> ()</td></tr>
 <tr class="separator:a51ea452838ecd2bdfb1145213658ff9e inherit pub_methods_classSourceData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37a05430ff654270940b087e508934e5 inherit pub_methods_classSourceData"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData.html#a37a05430ff654270940b087e508934e5">BackupSource</a> ()</td></tr>
@@ -308,14 +314,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   30</span>        }</div>
 <div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> val.text_JP;</div>
 <div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
-<div class="ttc" id="aclassLang_html_ada42353e8636a1085ec2f851e7b3c403"><div class="ttname"><a href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">Lang.isBuiltin</a></div><div class="ttdeci">static bool isBuiltin</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00042">Lang.cs:42</a></div></div>
-<div class="ttc" id="aclassLang_html_ae68ced98bb5ad8d8f206f4905b790653"><div class="ttname"><a href="classLang.html#ae68ced98bb5ad8d8f206f4905b790653">Lang.isJP</a></div><div class="ttdeci">static bool isJP</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00038">Lang.cs:38</a></div></div>
+<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00006">Lang.cs:7</a></div></div>
+<div class="ttc" id="aclassLang_html_ada42353e8636a1085ec2f851e7b3c403"><div class="ttname"><a href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">Lang.isBuiltin</a></div><div class="ttdeci">static bool isBuiltin</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00043">Lang.cs:43</a></div></div>
+<div class="ttc" id="aclassLang_html_ae68ced98bb5ad8d8f206f4905b790653"><div class="ttname"><a href="classLang.html#ae68ced98bb5ad8d8f206f4905b790653">Lang.isJP</a></div><div class="ttdeci">static bool isJP</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00039">Lang.cs:39</a></div></div>
 <div class="ttc" id="aclassSourceData_html_af4ab86ac1918265b2c7428f58b88a4ae"><div class="ttname"><a href="classSourceData.html#af4ab86ac1918265b2c7428f58b88a4ae">SourceData&lt; T, string &gt;::map</a></div><div class="ttdeci">Dictionary&lt; T2, T &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00063">SourceData.cs:63</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Lang_8cs_source.html#l00042">Lang.isBuiltin</a>, <a class="el" href="Lang_8cs_source.html#l00038">Lang.isJP</a>, and <a class="el" href="SourceData_8cs_source.html#l00063">SourceData&lt; T, string &gt;.map</a>.</p>
+<p class="reference">References <a class="el" href="Lang_8cs_source.html#l00043">Lang.isBuiltin</a>, <a class="el" href="Lang_8cs_source.html#l00039">Lang.isJP</a>, and <a class="el" href="SourceData_8cs_source.html#l00063">SourceData&lt; T, string &gt;.map</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Lang_8cs_source.html#l00091">Lang.Get()</a>, <a class="el" href="ClassExtension_8cs_source.html#l00040">ClassExtension.langGame()</a>, <a class="el" href="ZoneEventPhone_8cs_source.html#l00020">ZoneEventPhone.OnTickRound()</a>, and <a class="el" href="SourceLang_8cs_source.html#l00043">SourceLang&lt; T &gt;.Parse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Lang_8cs_source.html#l00094">Lang.Get()</a>, <a class="el" href="ClassExtension_8cs_source.html#l00041">ClassExtension.langGame()</a>, <a class="el" href="ZoneEventPhone_8cs_source.html#l00020">ZoneEventPhone.OnTickRound()</a>, and <a class="el" href="SourceLang_8cs_source.html#l00043">SourceLang&lt; T &gt;.Parse()</a>.</p>
 
 </div>
 </div>
@@ -428,7 +434,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceLang_8cs_source.html#l00012">SourceLang&lt; T &gt;.Get()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ClassExtension_8cs_source.html#l00045">ClassExtension.langGame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ClassExtension_8cs_source.html#l00046">ClassExtension.langGame()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +483,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00063">SourceData&lt; T, string &gt;.map</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07020">Card.Say()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07036">Card.Say()</a>.</p>
 
 </div>
 </div>

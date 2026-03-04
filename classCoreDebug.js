@@ -86,6 +86,7 @@ var classCoreDebug =
     [ "Spawn", "classCoreDebug.html#a710080962de63085be3884177bad6e16", null ],
     [ "SpawnBoss", "classCoreDebug.html#adf46e253b79065cecd1500cc45ffb977", null ],
     [ "SpawnCheatContainer", "classCoreDebug.html#ae513c73abecea8acf9b064dd6cdb5c2d", null ],
+    [ "SpawnFigure", "classCoreDebug.html#ad4f7b6ad15f0e62d959ef49fb1a7cfa1", null ],
     [ "Stats", "classCoreDebug.html#a980320f5c405f63a9bcff973753c0a6e", null ],
     [ "Test_Filter", "classCoreDebug.html#a3cb0d4364a0c8b5156ac890f10ecdb13", null ],
     [ "Test_GodTalk", "classCoreDebug.html#aaeff154d80b13414a94f4c38c175fb53", null ],

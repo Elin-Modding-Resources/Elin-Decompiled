@@ -93,7 +93,7 @@ var classMap =
     [ "SetBlockDir", "classMap.html#a43e29067fe5769a1a86c698711043fd5", null ],
     [ "SetBounds", "classMap.html#a494fa4e96005d28cef557561e32c7129", null ],
     [ "SetBounds", "classMap.html#a7d4fbbb06323f111e12465125c769f04", null ],
-    [ "SetBridge", "classMap.html#a1be88f65b7a791898ee102012e099faf", null ],
+    [ "SetBridge", "classMap.html#a2425953e7c96cfab67a413d00452863a", null ],
     [ "SetDecal", "classMap.html#a4d48625150837d1ca16aad0f0c76e1ff", null ],
     [ "SetEffect", "classMap.html#ac5d55bb35f14a266aa8d689b1bdafb3c", null ],
     [ "SetFloor", "classMap.html#a57af5946455529198d758a83f6672256", null ],

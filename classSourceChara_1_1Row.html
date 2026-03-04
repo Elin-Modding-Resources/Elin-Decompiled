@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -167,6 +167,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e21e8fd472ec7cb4b810bbb94532071 inherit pub_methods_classRenderRow"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html#a1e21e8fd472ec7cb4b810bbb94532071">GetColorInt</a> (<a class="el" href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a> mat)</td></tr>
 <tr class="separator:a1e21e8fd472ec7cb4b810bbb94532071 inherit pub_methods_classRenderRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSourceData_1_1BaseRow"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSourceData_1_1BaseRow')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSourceData_1_1BaseRow.html">SourceData&lt; T, T2 &gt;.BaseRow</a></td></tr>
+<tr class="memitem:aef4a7dd03a4f653003c28835f48d0983 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="classSourceData_1_1FieldInfo.html">FieldInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a> ()</td></tr>
+<tr class="separator:aef4a7dd03a4f653003c28835f48d0983 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75c7482d88c201d26098c4a2d1a6279b inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a75c7482d88c201d26098c4a2d1a6279b">GetName</a> ()</td></tr>
 <tr class="separator:a75c7482d88c201d26098c4a2d1a6279b inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e2b122f2061738b17564cc3df06cb18 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a1e2b122f2061738b17564cc3df06cb18">GetDetail</a> ()</td></tr>
@@ -181,6 +183,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a61821d93866cb83a7a6ed1f4ecfff433 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad49e6e06e0d10b9eeff10d278feb111d inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#ad49e6e06e0d10b9eeff10d278feb111d">OnImportData</a> (<a class="el" href="classSourceData.html">SourceData</a> data)</td></tr>
 <tr class="separator:ad49e6e06e0d10b9eeff10d278feb111d inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b7a0cd0fbec8b2b6b4573faf2b698a inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual IDictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#a93b7a0cd0fbec8b2b6b4573faf2b698a">ExportTexts</a> (string idField=&quot;id&quot;)</td></tr>
+<tr class="separator:a93b7a0cd0fbec8b2b6b4573faf2b698a inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79424cf006c400c2defe5f18f37b420 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceData_1_1BaseRow.html#ad79424cf006c400c2defe5f18f37b420">ImportTexts</a> (IReadOnlyDictionary&lt; string, string &gt; texts, string idField=&quot;id&quot;)</td></tr>
+<tr class="separator:ad79424cf006c400c2defe5f18f37b420 inherit pub_methods_classSourceData_1_1BaseRow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -463,25 +469,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classCardRow.html#af57ade00d4c8ccf5b79966c13401819c">CardRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00120">120</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordtype">string</span> text = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>();</div>
-<div class="line"><span class="lineno">  123</span>            text = text.Replace(<span class="stringliteral">&quot;#ele5&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;#ele4&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;#ele3&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  124</span>                .Replace(<span class="stringliteral">&quot;#ele2&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  125</span>                .Replace(<span class="stringliteral">&quot;#ele&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">if</span> (text == <span class="stringliteral">&quot;*r&quot;</span>)</div>
-<div class="line"><span class="lineno">  127</span>            {</div>
-<div class="line"><span class="lineno">  128</span>                text = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>(<span class="stringliteral">&quot;aka&quot;</span>);</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (text[0] == <span class="charliteral">&#39; &#39;</span>)</div>
-<div class="line"><span class="lineno">  131</span>            {</div>
-<div class="line"><span class="lineno">  132</span>                text = text.TrimStart(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno">  133</span>            }</div>
-<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">return</span> text.Replace(<span class="stringliteral">&quot;  &quot;</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><span class="lineno">  135</span>        }</div>
-<div class="ttc" id="aclassSourceData_1_1BaseRow_html_a8512b7966929e9046ae37773fd30aac0"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">SourceData.BaseRow.GetText</a></div><div class="ttdeci">string GetText(string id=&quot;name&quot;, bool returnNull=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00553">SourceData.cs:553</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00134">134</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordtype">string</span> text = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>();</div>
+<div class="line"><span class="lineno">  137</span>            text = text.Replace(<span class="stringliteral">&quot;#ele5&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;#ele4&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).Replace(<span class="stringliteral">&quot;#ele3&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  138</span>                .Replace(<span class="stringliteral">&quot;#ele2&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  139</span>                .Replace(<span class="stringliteral">&quot;#ele&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">if</span> (text == <span class="stringliteral">&quot;*r&quot;</span>)</div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                text = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>(<span class="stringliteral">&quot;aka&quot;</span>);</div>
+<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">if</span> (text[0] == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><span class="lineno">  145</span>            {</div>
+<div class="line"><span class="lineno">  146</span>                text = text.TrimStart(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno">  147</span>            }</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span> text.Replace(<span class="stringliteral">&quot;  &quot;</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="ttc" id="aclassSourceData_1_1BaseRow_html_a8512b7966929e9046ae37773fd30aac0"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">SourceData.BaseRow.GetText</a></div><div class="ttdeci">string GetText(string id=&quot;name&quot;, bool returnNull=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00622">SourceData.cs:622</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00553">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00622">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>.</p>
 
 </div>
 </div>
@@ -511,30 +517,30 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRenderRow.html#aa8870920d19affb19b96dd7bd8ce444a">RenderRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00083">83</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>        {</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordtype">object</span> obj;</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (!jp)</div>
-<div class="line"><span class="lineno">   87</span>            {</div>
-<div class="line"><span class="lineno">   88</span>                obj = <a class="code hl_variable" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a>;</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   90</span>                {</div>
-<div class="line"><span class="lineno">   91</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a> = (<a class="code hl_variable" href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">name</a>.StartsWith(<span class="stringliteral">&quot;*&quot;</span>) ? <a class="code hl_variable" href="classSourceChara_1_1Row.html#ac64c27b2f815e8a2726697566f08b2bd">aka</a> : <a class="code hl_variable" href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">name</a>).ToLower();</div>
-<div class="line"><span class="lineno">   92</span>                }</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   95</span>            {</div>
-<div class="line"><span class="lineno">   96</span>                obj = <a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> ?? (<a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> = (<a class="code hl_variable" href="classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10">name_JP</a>.StartsWith(<span class="stringliteral">&quot;*&quot;</span>) ? <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>(<span class="stringliteral">&quot;aka&quot;</span>) : <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>()).ToLower());</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00097">97</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordtype">object</span> obj;</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (!jp)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                obj = <a class="code hl_variable" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a>;</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  104</span>                {</div>
+<div class="line"><span class="lineno">  105</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">_nameSearch</a> = (<a class="code hl_variable" href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">name</a>.StartsWith(<span class="stringliteral">&quot;*&quot;</span>) ? <a class="code hl_variable" href="classSourceChara_1_1Row.html#ac64c27b2f815e8a2726697566f08b2bd">aka</a> : <a class="code hl_variable" href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">name</a>).ToLower();</div>
+<div class="line"><span class="lineno">  106</span>                }</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  109</span>            {</div>
+<div class="line"><span class="lineno">  110</span>                obj = <a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> ?? (<a class="code hl_variable" href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">_nameSearchJP</a> = (<a class="code hl_variable" href="classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10">name_JP</a>.StartsWith(<span class="stringliteral">&quot;*&quot;</span>) ? <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>(<span class="stringliteral">&quot;aka&quot;</span>) : <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>()).ToLower());</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> (<span class="keywordtype">string</span>)obj;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
 <div class="ttc" id="aclassRenderRow_html_a756eb9dabeef0b2dab6819bd83f91ba0"><div class="ttname"><a href="classRenderRow.html#a756eb9dabeef0b2dab6819bd83f91ba0">RenderRow._nameSearch</a></div><div class="ttdeci">string _nameSearch</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00092">RenderRow.cs:92</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a85103e4c2e585d0cea563def6cfc42c7"><div class="ttname"><a href="classRenderRow.html#a85103e4c2e585d0cea563def6cfc42c7">RenderRow.name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00030">RenderRow.cs:30</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_acbad842b2a43c3f64ccaa573b7327682"><div class="ttname"><a href="classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682">RenderRow._nameSearchJP</a></div><div class="ttdeci">string _nameSearchJP</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00095">RenderRow.cs:95</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_afc7861d8294f1449cd46eeaa1f4ccc10"><div class="ttname"><a href="classRenderRow.html#afc7861d8294f1449cd46eeaa1f4ccc10">RenderRow.name_JP</a></div><div class="ttdeci">string name_JP</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00032">RenderRow.cs:32</a></div></div>
 <div class="ttc" id="aclassSourceChara_1_1Row_html_ac64c27b2f815e8a2726697566f08b2bd"><div class="ttname"><a href="classSourceChara_1_1Row.html#ac64c27b2f815e8a2726697566f08b2bd">SourceChara.Row.aka</a></div><div class="ttdeci">string aka</div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00013">SourceChara.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00092">RenderRow._nameSearch</a>, <a class="el" href="RenderRow_8cs_source.html#l00095">RenderRow._nameSearchJP</a>, <a class="el" href="SourceChara_8cs_source.html#l00013">SourceChara.Row.aka</a>, <a class="el" href="SourceData_8cs_source.html#l00553">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="RenderRow_8cs_source.html#l00030">RenderRow.name</a>, and <a class="el" href="RenderRow_8cs_source.html#l00032">RenderRow.name_JP</a>.</p>
+<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00092">RenderRow._nameSearch</a>, <a class="el" href="RenderRow_8cs_source.html#l00095">RenderRow._nameSearchJP</a>, <a class="el" href="SourceChara_8cs_source.html#l00013">SourceChara.Row.aka</a>, <a class="el" href="SourceData_8cs_source.html#l00622">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="RenderRow_8cs_source.html#l00030">RenderRow.name</a>, and <a class="el" href="RenderRow_8cs_source.html#l00032">RenderRow.name_JP</a>.</p>
 
 </div>
 </div>
@@ -563,24 +569,24 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRenderRow.html#adddb275abf4b84cdecfd290be6489365">RenderRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00101">101</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            base.SetTiles();</div>
-<div class="line"><span class="lineno">  104</span>            <a class="code hl_variable" href="classSourceChara_1_1Row.html#aec9f071e94a21a89805a36a3faf52572">staticSkin</a> = <a class="code hl_function" href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.staticSkin);</div>
-<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> || !<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>)</div>
-<div class="line"><span class="lineno">  106</span>            {</div>
-<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a>.Length != <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>.Length)</div>
-<div class="line"><span class="lineno">  110</span>            {</div>
-<div class="line"><span class="lineno">  111</span>                <a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>.Length];</div>
-<div class="line"><span class="lineno">  112</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>.Length; i++)</div>
-<div class="line"><span class="lineno">  113</span>                {</div>
-<div class="line"><span class="lineno">  114</span>                    <a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a>[i] = <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>[i] / 100 * (int)<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">pmesh</a>.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>[i] % 100;</div>
-<div class="line"><span class="lineno">  115</span>                }</div>
-<div class="line"><span class="lineno">  116</span>            }</div>
-<div class="line"><span class="lineno">  117</span>            <a class="code hl_variable" href="classSourceChara_1_1Row.html#abbe7c20452502898c34df7ca68517ed1">skinAntiSpider</a> = ((<a class="code hl_variable" href="classSourceChara_1_1Row.html#aec9f071e94a21a89805a36a3faf52572">staticSkin</a> &amp;&amp; <a class="code hl_function" href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.antiSpider)) ? 1 : 0);</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00115">115</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            base.SetTiles();</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_variable" href="classSourceChara_1_1Row.html#aec9f071e94a21a89805a36a3faf52572">staticSkin</a> = <a class="code hl_function" href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.staticSkin);</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a> || !<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>)</div>
+<div class="line"><span class="lineno">  120</span>            {</div>
+<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a> == <span class="keyword">null</span> || <a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a>.Length != <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>.Length)</div>
+<div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                <a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[<a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>.Length];</div>
+<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>.Length; i++)</div>
+<div class="line"><span class="lineno">  127</span>                {</div>
+<div class="line"><span class="lineno">  128</span>                    <a class="code hl_variable" href="classSourceChara_1_1Row.html#a5e0ab1c8c36616e6d5596197a3a9d936">_tiles_snow</a>[i] = <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>[i] / 100 * (int)<a class="code hl_variable" href="classRenderRow.html#a2a871b97e038c6b15e02a011aa4d27b4">renderData</a>.<a class="code hl_variable" href="classRenderData.html#af031b3f320b3afc746c88242b7269b70">pass</a>.<a class="code hl_variable" href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">pmesh</a>.<a class="code hl_variable" href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">tiling</a>.x + <a class="code hl_variable" href="classSourceChara_1_1Row.html#a674a46ba566c6009a5fcff153391436d">tiles_snow</a>[i] % 100;</div>
+<div class="line"><span class="lineno">  129</span>                }</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_variable" href="classSourceChara_1_1Row.html#abbe7c20452502898c34df7ca68517ed1">skinAntiSpider</a> = ((<a class="code hl_variable" href="classSourceChara_1_1Row.html#aec9f071e94a21a89805a36a3faf52572">staticSkin</a> &amp;&amp; <a class="code hl_function" href="classRenderRow.html#a6762676c70a7cbff08d3dfcbb462d37b">HasTag</a>(<a class="code hl_enumeration" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a>.antiSpider)) ? 1 : 0);</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
 <div class="ttc" id="aCTAG_8cs_html_ada23f0d8c8d5928ed3a5b964e931bc07"><div class="ttname"><a href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07">CTAG</a></div><div class="ttdeci">CTAG</div><div class="ttdef"><b>Definition:</b> <a href="CTAG_8cs_source.html#l00001">CTAG.cs:2</a></div></div>
 <div class="ttc" id="aclassMeshPass_html_a409c185361b62f271f198d999a8ed4ae"><div class="ttname"><a href="classMeshPass.html#a409c185361b62f271f198d999a8ed4ae">MeshPass.pmesh</a></div><div class="ttdeci">ProceduralMesh pmesh</div><div class="ttdef"><b>Definition:</b> <a href="MeshPass_8cs_source.html#l00025">MeshPass.cs:25</a></div></div>
 <div class="ttc" id="aclassProceduralMesh_html_aedaad433ecb7daf2d7e8518ca6710840"><div class="ttname"><a href="classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840">ProceduralMesh.tiling</a></div><div class="ttdeci">Vector2 tiling</div><div class="ttdef"><b>Definition:</b> <a href="ProceduralMesh_8cs_source.html#l00006">ProceduralMesh.cs:6</a></div></div>
@@ -643,7 +649,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00059">59</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06852">Chara.SetRenderParam()</a>, and <a class="el" href="SourceChara_8cs_source.html#l00101">SourceChara.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06852">Chara.SetRenderParam()</a>, and <a class="el" href="SourceChara_8cs_source.html#l00115">SourceChara.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -725,7 +731,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00013">13</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceChara_8cs_source.html#l00083">SourceChara.Row.GetSearchName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceChara_8cs_source.html#l00097">SourceChara.Row.GetSearchName()</a>.</p>
 
 </div>
 </div>
@@ -873,7 +879,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00049">49</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09274">Chara.RerollHobby()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09275">Chara.RerollHobby()</a>.</p>
 
 </div>
 </div>
@@ -1027,7 +1033,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00061">61</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06763">Chara._CreateRenderer()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00111">CardRenderer.Draw()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00017">TraitFigure.OnSetCardGrid()</a>, and <a class="el" href="SourceChara_8cs_source.html#l00101">SourceChara.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06763">Chara._CreateRenderer()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00111">CardRenderer.Draw()</a>, <a class="el" href="TraitFigure_8cs_source.html#l00019">TraitFigure.OnSetCardGrid()</a>, and <a class="el" href="SourceChara_8cs_source.html#l00115">SourceChara.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1051,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00057">57</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06812">Chara.GetSprite()</a>, <a class="el" href="Chara_8cs_source.html#l06852">Chara.SetRenderParam()</a>, and <a class="el" href="SourceChara_8cs_source.html#l00101">SourceChara.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06812">Chara.GetSprite()</a>, <a class="el" href="Chara_8cs_source.html#l06852">Chara.SetRenderParam()</a>, and <a class="el" href="SourceChara_8cs_source.html#l00115">SourceChara.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1087,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00015">15</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceChara_8cs_source.html#l00101">SourceChara.Row.SetTiles()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceChara_8cs_source.html#l00115">SourceChara.Row.SetTiles()</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1121,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00047">47</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09274">Chara.RerollHobby()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l09275">Chara.RerollHobby()</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1171,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00079">79</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> row = <a class="code hl_variable" href="classSourceChara_1_1Row.html#a2b7a7462654a39fe7d87af296c8af426">_race_row</a>;</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">if</span> (row == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   85</span>                {</div>
+<div class="line"><span class="lineno">   86</span>                    <a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> obj = base.sources.races.map.TryGetValue(<a class="code hl_variable" href="classSourceChara_1_1Row.html#a54ac609993fd4bfa8e2d07b8f65e5fb8">race</a>) ?? base.sources.races.map[<span class="stringliteral">&quot;norland&quot;</span>];</div>
+<div class="line"><span class="lineno">   87</span>                    <a class="code hl_class" href="classSourceRace_1_1Row.html">SourceRace.Row</a> row2 = obj;</div>
+<div class="line"><span class="lineno">   88</span>                    <a class="code hl_variable" href="classSourceChara_1_1Row.html#a2b7a7462654a39fe7d87af296c8af426">_race_row</a> = obj;</div>
+<div class="line"><span class="lineno">   89</span>                    row = row2;</div>
+<div class="line"><span class="lineno">   90</span>                }</div>
+<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">return</span> row;</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="ttc" id="aclassSourceChara_1_1Row_html_a2b7a7462654a39fe7d87af296c8af426"><div class="ttname"><a href="classSourceChara_1_1Row.html#a2b7a7462654a39fe7d87af296c8af426">SourceChara.Row._race_row</a></div><div class="ttdeci">SourceRace.Row _race_row</div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00064">SourceChara.cs:64</a></div></div>
+<div class="ttc" id="aclassSourceChara_1_1Row_html_a54ac609993fd4bfa8e2d07b8f65e5fb8"><div class="ttname"><a href="classSourceChara_1_1Row.html#a54ac609993fd4bfa8e2d07b8f65e5fb8">SourceChara.Row.race</a></div><div class="ttdeci">string race</div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00021">SourceChara.cs:21</a></div></div>
+<div class="ttc" id="aclassSourceRace_1_1Row_html"><div class="ttname"><a href="classSourceRace_1_1Row.html">SourceRace.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceRace_8cs_source.html#l00007">SourceRace.cs:8</a></div></div>
+</div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="CharaFilter_8cs_source.html#l00021">CharaFilter.ContainsTag()</a>, and <a class="el" href="TraitCrafter_8cs_source.html#l00099">TraitCrafter.IsIngredient()</a>.</p>
 
 </div>
@@ -1190,7 +1213,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00081">81</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceChara_8cs_source.html#l00095">95</a> of file <a class="el" href="SourceChara_8cs_source.html">SourceChara.cs</a>.</p>
 
 </div>
 </div>

@@ -14,6 +14,7 @@ var classEInput_1_1KeyMapManager =
     [ "cancel", "classEInput_1_1KeyMapManager.html#ad9857a412403bf8b76d42b8fa5c124dc", null ],
     [ "chara", "classEInput_1_1KeyMapManager.html#a68cf2006078e9a2c31ca7dacd5b4d377", null ],
     [ "chat", "classEInput_1_1KeyMapManager.html#a13892708d1357e1d74e1fa56c2d00a6f", null ],
+    [ "console", "classEInput_1_1KeyMapManager.html#a87b2f420aba6935cdbc0bb3b075e394b", null ],
     [ "dump", "classEInput_1_1KeyMapManager.html#abfdc3369a6b290ba6380332d3cc980cd", null ],
     [ "emptyHand", "classEInput_1_1KeyMapManager.html#a96330499a7d23f633f2e3e981ef461ef", null ],
     [ "examine", "classEInput_1_1KeyMapManager.html#aa5aab35b10ee842b7bff05c485cf4f97", null ],

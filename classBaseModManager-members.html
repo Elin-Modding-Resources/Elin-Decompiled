@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -95,7 +95,9 @@ $(document).ready(function(){initNavTree('classBaseModManager.html',''); initRes
 
 <p>This is the complete list of members for <a class="el" href="classBaseModManager.html">BaseModManager</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#ae64a4add340a2fb429e9d961ad5549c7">dirWorkshop</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#ae64a4add340a2fb429e9d961ad5549c7">dirWorkshop</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#acb410d57c834f630ff04e4abe66edc1e">HasEventSubscriber</a>(string eventId)</td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#a054c1085862cfbeb5c1b53dabf06278d">Init</a>(string path, string defaultPackage=&quot;_Elona&quot;)</td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#a5f75932e2c64d87262bde02a9c6b1c19">InitLang</a>()</td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#a79597600494f24efddb8893d62feef8c">Instance</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
@@ -104,8 +106,11 @@ $(document).ready(function(){initNavTree('classBaseModManager.html',''); initRes
   <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#a03b72ff29a606112d5c3dad3f02537a3">packages</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#a69d0509478dbc42112ec1a5a1c6451c1">ParseExtra</a>(DirectoryInfo dir, BaseModPackage package)</td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#a276696d36f52145d9b2d1333dbe3a21d">priorityIndex</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">rootDefaultPacakge</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">rootMod</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">PublishEvent</a>(string eventId, object data=null)</td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">rootDefaultPacakge</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">rootMod</a></td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseModManager.html#acae7f54f391c14cd9bf1542e26774c71">SubscribeEvent</a>(string eventId, Action&lt; object &gt; handler)</td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classBaseModManager.html#a2cbf9e6cba9780e8b7889e9b90266535">UnsubscribeEvent</a>(string eventId, Action&lt; object &gt; handler)</td><td class="entry"><a class="el" href="classBaseModManager.html">BaseModManager</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

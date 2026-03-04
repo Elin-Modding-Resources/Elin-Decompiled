@@ -37,6 +37,7 @@ var classDramaManager =
     [ "imageCover", "classDramaManager.html#aa19052aece44745fe7a3268c30ccca92", null ],
     [ "lastIF", "classDramaManager.html#ab5a10b7dd287f2fdb358b1d4ed9e02e3", null ],
     [ "lastIF2", "classDramaManager.html#a19c6f7654a4a873ccb7a760eb36844f7", null ],
+    [ "lastSound", "classDramaManager.html#a93ac8743d63fc7f7112c4f784d070f70", null ],
     [ "lastTalk", "classDramaManager.html#ab15dde7112231f855678c603d3ce7a80", null ],
     [ "layer", "classDramaManager.html#a3547229cdb0a2d82d6deb4e1d206bbc1", null ],
     [ "listCredit", "classDramaManager.html#a78c34a6e9cd08d43ca48f6d48c71abf6", null ],

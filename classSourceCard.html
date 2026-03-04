@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -202,7 +202,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00004">4</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00005">5</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acc78bdb0c389c4a920787c9e58752652" name="acc78bdb0c389c4a920787c9e58752652"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc78bdb0c389c4a920787c9e58752652">&#9670;&#160;</a></span>AddRow()</h2>
@@ -238,44 +238,53 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00032">32</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;assf&quot;</span>);</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>        row.isChara = isChara;</div>
-<div class="line"><span class="lineno">   40</span>        row.elementMap = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">GetElementMap</a>(row.<a class="code hl_variable" href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">elements</a>);</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classCardRow.html#a94c8f00b803f934ae3aeb3c125097ebf">isChara</a>)</div>
-<div class="line"><span class="lineno">   42</span>        {</div>
-<div class="line"><span class="lineno">   43</span>            (row as <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>).tileType = <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#a7d85f99f690fdb92006f25d18dc2ad7e">Obj</a>;</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   46</span>        {</div>
-<div class="line"><span class="lineno">   47</span>            <a class="code hl_class" href="classSourceThing_1_1Row.html">SourceThing.Row</a> row2 = row as <a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>;</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (row2.<a class="code hl_variable" href="classRenderRow.html#a5fe79d39cf1e304e7eaa217195723982">_tileType</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   49</span>            {</div>
-<div class="line"><span class="lineno">   50</span>                row2.tileType = <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#a7d85f99f690fdb92006f25d18dc2ad7e">Obj</a>;</div>
-<div class="line"><span class="lineno">   51</span>            }</div>
-<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   53</span>            {</div>
-<div class="line"><span class="lineno">   54</span>                row2.tileType = <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">dict</a>[row2.<a class="code hl_variable" href="classRenderRow.html#a5fe79d39cf1e304e7eaa217195723982">_tileType</a>];</div>
-<div class="line"><span class="lineno">   55</span>            }</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (!row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>.IsEmpty())</div>
-<div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            row.origin = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.map[row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>];</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSourceCard.html#a94a2121577b68620a65c87660f6ee3c7">firstVariations</a>.ContainsKey(row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>))</div>
-<div class="line"><span class="lineno">   61</span>            {</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="classSourceCard.html#a94a2121577b68620a65c87660f6ee3c7">firstVariations</a>[row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>] = row;</div>
-<div class="line"><span class="lineno">   63</span>            }</div>
-<div class="line"><span class="lineno">   64</span>            row.origin.isOrigin = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   65</span>        }</div>
-<div class="line"><span class="lineno">   66</span>        row.<a class="code hl_function" href="classRenderRow.html#ab65ea9cd24798f115b3628ac3833c255">SetRenderData</a>();</div>
-<div class="line"><span class="lineno">   67</span>        <a class="code hl_variable" href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">rows</a>.Add(row);</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[row.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>] = row;</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00037">37</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;assf&quot;</span>);</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="line"><span class="lineno">   44</span>        row.isChara = isChara;</div>
+<div class="line"><span class="lineno">   45</span>        row.elementMap = <a class="code hl_class" href="classElement.html">Element</a>.<a class="code hl_function" href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">GetElementMap</a>(row.<a class="code hl_variable" href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">elements</a>);</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (row.<a class="code hl_variable" href="classCardRow.html#a94c8f00b803f934ae3aeb3c125097ebf">isChara</a>)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            (row as <a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a>).tileType = <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#a7d85f99f690fdb92006f25d18dc2ad7e">Obj</a>;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <a class="code hl_class" href="classSourceThing_1_1Row.html">SourceThing.Row</a> row2 = row as <a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a>;</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (row2.<a class="code hl_variable" href="classRenderRow.html#a5fe79d39cf1e304e7eaa217195723982">_tileType</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                row2.tileType = <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#a7d85f99f690fdb92006f25d18dc2ad7e">Obj</a>;</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                row2.tileType = <a class="code hl_class" href="classTileType.html">TileType</a>.<a class="code hl_variable" href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">dict</a>[row2.<a class="code hl_variable" href="classRenderRow.html#a5fe79d39cf1e304e7eaa217195723982">_tileType</a>];</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (!row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>.IsEmpty())</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            row.origin = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.map[row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>];</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSourceCard.html#a94a2121577b68620a65c87660f6ee3c7">firstVariations</a>.ContainsKey(row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>))</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <a class="code hl_variable" href="classSourceCard.html#a94a2121577b68620a65c87660f6ee3c7">firstVariations</a>[row.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>] = row;</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            row.origin.isOrigin = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            row.<a class="code hl_function" href="classRenderRow.html#ab65ea9cd24798f115b3628ac3833c255">SetRenderData</a>();</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">rows</a>.Add(row);</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[row.<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>] = row;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">catch</span> (Exception arg2)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <a class="code hl_class" href="classModPackage.html">ModPackage</a> arg = <a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_function" href="classModUtil.html#ab12f8dcd83e8d82039b8ab2bb8aaab00">FindSourceRowPackage</a>(row);</div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#source failed to set render data for &#39;{row.id}&#39; - {arg}\n{arg2}&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00085">ModManager.cs:85</a></div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassCardRow_html_a43b9c7857c1d3a76e37178bdeed9e502"><div class="ttname"><a href="classCardRow.html#a43b9c7857c1d3a76e37178bdeed9e502">CardRow.elements</a></div><div class="ttdeci">int[] elements</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00021">CardRow.cs:21</a></div></div>
 <div class="ttc" id="aclassCardRow_html_a898f4f59778bd1120e31aa5768ec4f3d"><div class="ttname"><a href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">CardRow._origin</a></div><div class="ttdeci">string _origin</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00015">CardRow.cs:15</a></div></div>
@@ -285,23 +294,26 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
 <div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00088">ELEMENT.cs:89</a></div></div>
 <div class="ttc" id="aclassElement_html_a7a35d5e595e6d1c73365f84fa7c37cc0"><div class="ttname"><a href="classElement.html#a7a35d5e595e6d1c73365f84fa7c37cc0">Element.GetElementMap</a></div><div class="ttdeci">static Dictionary&lt; int, int &gt; GetElementMap(int[] list)</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00536">ELEMENT.cs:536</a></div></div>
+<div class="ttc" id="aclassModPackage_html"><div class="ttname"><a href="classModPackage.html">ModPackage</a></div><div class="ttdef"><b>Definition:</b> <a href="ModPackage_8cs_source.html#l00009">ModPackage.cs:10</a></div></div>
+<div class="ttc" id="aclassModUtil_html"><div class="ttname"><a href="classModUtil.html">ModUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00013">ModUtil.cs:14</a></div></div>
+<div class="ttc" id="aclassModUtil_html_ab12f8dcd83e8d82039b8ab2bb8aaab00"><div class="ttname"><a href="classModUtil.html#ab12f8dcd83e8d82039b8ab2bb8aaab00">ModUtil.FindSourceRowPackage</a></div><div class="ttdeci">static ModPackage FindSourceRowPackage(SourceData.BaseRow row)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00090">ModUtil.cs:90</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a5fe79d39cf1e304e7eaa217195723982"><div class="ttname"><a href="classRenderRow.html#a5fe79d39cf1e304e7eaa217195723982">RenderRow._tileType</a></div><div class="ttdeci">string _tileType</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00040">RenderRow.cs:40</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_ab65ea9cd24798f115b3628ac3833c255"><div class="ttname"><a href="classRenderRow.html#ab65ea9cd24798f115b3628ac3833c255">RenderRow.SetRenderData</a></div><div class="ttdeci">void SetRenderData()</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00169">RenderRow.cs:169</a></div></div>
-<div class="ttc" id="aclassSourceCard_html_a018040ba7dad38f3bddf9b25a65ba8e6"><div class="ttname"><a href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">SourceCard.rows</a></div><div class="ttdeci">List&lt; CardRow &gt; rows</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00006">SourceCard.cs:6</a></div></div>
-<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00008">SourceCard.cs:8</a></div></div>
-<div class="ttc" id="aclassSourceCard_html_a94a2121577b68620a65c87660f6ee3c7"><div class="ttname"><a href="classSourceCard.html#a94a2121577b68620a65c87660f6ee3c7">SourceCard.firstVariations</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; firstVariations</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00010">SourceCard.cs:10</a></div></div>
+<div class="ttc" id="aclassSourceCard_html_a018040ba7dad38f3bddf9b25a65ba8e6"><div class="ttname"><a href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">SourceCard.rows</a></div><div class="ttdeci">List&lt; CardRow &gt; rows</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00007">SourceCard.cs:7</a></div></div>
+<div class="ttc" id="aclassSourceCard_html_a04c0c78774ff977328ff918b7223033e"><div class="ttname"><a href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">SourceCard.map</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; map</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00009">SourceCard.cs:9</a></div></div>
+<div class="ttc" id="aclassSourceCard_html_a94a2121577b68620a65c87660f6ee3c7"><div class="ttname"><a href="classSourceCard.html#a94a2121577b68620a65c87660f6ee3c7">SourceCard.firstVariations</a></div><div class="ttdeci">Dictionary&lt; string, CardRow &gt; firstVariations</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00011">SourceCard.cs:11</a></div></div>
 <div class="ttc" id="aclassSourceChara_1_1Row_html"><div class="ttname"><a href="classSourceChara_1_1Row.html">SourceChara.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00007">SourceChara.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceChara_html"><div class="ttname"><a href="classSourceChara.html">SourceChara</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceChara_8cs_source.html#l00004">SourceChara.cs:5</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_a3a3a04bed405a720e9528d2bce9d99ca"><div class="ttname"><a href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">SourceManager.things</a></div><div class="ttdeci">SourceThing things</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00026">SourceManager.cs:26</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_a3a3a04bed405a720e9528d2bce9d99ca"><div class="ttname"><a href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">SourceManager.things</a></div><div class="ttdeci">SourceThing things</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00027">SourceManager.cs:27</a></div></div>
 <div class="ttc" id="aclassSourceThing_1_1Row_html"><div class="ttname"><a href="classSourceThing_1_1Row.html">SourceThing.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00007">SourceThing.cs:8</a></div></div>
 <div class="ttc" id="aclassSourceThing_html"><div class="ttname"><a href="classSourceThing.html">SourceThing</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceThing_8cs_source.html#l00004">SourceThing.cs:5</a></div></div>
 <div class="ttc" id="aclassTileType_html"><div class="ttname"><a href="classTileType.html">TileType</a></div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00005">TileType.cs:6</a></div></div>
 <div class="ttc" id="aclassTileType_html_a7d85f99f690fdb92006f25d18dc2ad7e"><div class="ttname"><a href="classTileType.html#a7d85f99f690fdb92006f25d18dc2ad7e">TileType.Obj</a></div><div class="ttdeci">static TileTypeObj Obj</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00073">TileType.cs:73</a></div></div>
 <div class="ttc" id="aclassTileType_html_aa22c79ec23d1fab819fc6069da8592bb"><div class="ttname"><a href="classTileType.html#aa22c79ec23d1fab819fc6069da8592bb">TileType.dict</a></div><div class="ttdeci">static Dictionary&lt; string, TileType &gt; dict</div><div class="ttdef"><b>Definition:</b> <a href="TileType_8cs_source.html#l00123">TileType.cs:123</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CardRow_8cs_source.html#l00015">CardRow._origin</a>, <a class="el" href="RenderRow_8cs_source.html#l00040">RenderRow._tileType</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="TileType_8cs_source.html#l00123">TileType.dict</a>, <a class="el" href="CardRow_8cs_source.html#l00021">CardRow.elements</a>, <a class="el" href="SourceCard_8cs_source.html#l00010">firstVariations</a>, <a class="el" href="ELEMENT_8cs_source.html#l00536">Element.GetElementMap()</a>, <a class="el" href="CardRow_8cs_source.html#l00007">CardRow.id</a>, <a class="el" href="CardRow_8cs_source.html#l00055">CardRow.isChara</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">map</a>, <a class="el" href="TileType_8cs_source.html#l00073">TileType.Obj</a>, <a class="el" href="SourceCard_8cs_source.html#l00006">rows</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">RenderRow.SetRenderData()</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00026">SourceManager.things</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, <a class="el" href="CardRow_8cs_source.html#l00015">CardRow._origin</a>, <a class="el" href="RenderRow_8cs_source.html#l00040">RenderRow._tileType</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="TileType_8cs_source.html#l00123">TileType.dict</a>, <a class="el" href="CardRow_8cs_source.html#l00021">CardRow.elements</a>, <a class="el" href="ModUtil_8cs_source.html#l00090">ModUtil.FindSourceRowPackage()</a>, <a class="el" href="SourceCard_8cs_source.html#l00011">firstVariations</a>, <a class="el" href="ELEMENT_8cs_source.html#l00536">Element.GetElementMap()</a>, <a class="el" href="CardRow_8cs_source.html#l00007">CardRow.id</a>, <a class="el" href="CardRow_8cs_source.html#l00055">CardRow.isChara</a>, <a class="el" href="SourceCard_8cs_source.html#l00009">map</a>, <a class="el" href="TileType_8cs_source.html#l00073">TileType.Obj</a>, <a class="el" href="SourceCard_8cs_source.html#l00007">rows</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">RenderRow.SetRenderData()</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00027">SourceManager.things</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00014">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00015">Init()</a>.</p>
 
 </div>
 </div>
@@ -329,16 +341,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00027">27</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceCard.html#a6dc73b6d666bff43ef257344d2b26275">crafters</a>.GetOrCreate(<span class="keywordtype">id</span>, () =&gt; (<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[<span class="keywordtype">id</span>].model.trait as <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>) ?? <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">SelfFactory</a>);</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
-<div class="ttc" id="aclassSourceCard_html_a6dc73b6d666bff43ef257344d2b26275"><div class="ttname"><a href="classSourceCard.html#a6dc73b6d666bff43ef257344d2b26275">SourceCard.crafters</a></div><div class="ttdeci">Dictionary&lt; string, TraitCrafter &gt; crafters</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00012">SourceCard.cs:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00032">32</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceCard.html#a6dc73b6d666bff43ef257344d2b26275">crafters</a>.GetOrCreate(<span class="keywordtype">id</span>, () =&gt; (<a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>[<span class="keywordtype">id</span>].model.trait as <a class="code hl_class" href="classTraitCrafter.html">TraitCrafter</a>) ?? <a class="code hl_class" href="classTrait.html">Trait</a>.<a class="code hl_variable" href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">SelfFactory</a>);</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassSourceCard_html_a6dc73b6d666bff43ef257344d2b26275"><div class="ttname"><a href="classSourceCard.html#a6dc73b6d666bff43ef257344d2b26275">SourceCard.crafters</a></div><div class="ttdeci">Dictionary&lt; string, TraitCrafter &gt; crafters</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00013">SourceCard.cs:13</a></div></div>
 <div class="ttc" id="aclassTraitCrafter_html"><div class="ttname"><a href="classTraitCrafter.html">TraitCrafter</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitCrafter_8cs_source.html#l00004">TraitCrafter.cs:5</a></div></div>
 <div class="ttc" id="aclassTrait_html"><div class="ttname"><a href="classTrait.html">Trait</a></div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00006">Trait.cs:7</a></div></div>
 <div class="ttc" id="aclassTrait_html_ae5d380383c7a829f15b19a5df441de4e"><div class="ttname"><a href="classTrait.html#ae5d380383c7a829f15b19a5df441de4e">Trait.SelfFactory</a></div><div class="ttdeci">static TraitSelfFactory SelfFactory</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00026">Trait.cs:26</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceCard_8cs_source.html#l00012">crafters</a>, <a class="el" href="SourceCard_8cs_source.html#l00008">map</a>, and <a class="el" href="Trait_8cs_source.html#l00026">Trait.SelfFactory</a>.</p>
+<p class="reference">References <a class="el" href="SourceCard_8cs_source.html#l00013">crafters</a>, <a class="el" href="SourceCard_8cs_source.html#l00009">map</a>, and <a class="el" href="Trait_8cs_source.html#l00026">Trait.SelfFactory</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RecipeSource_8cs_source.html#l00120">RecipeSource.GetReqSkill()</a>.</p>
 
@@ -367,24 +379,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00014">14</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows)</div>
-<div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            <a class="code hl_function" href="classSourceCard.html#acc78bdb0c389c4a920787c9e58752652">AddRow</a>(row);</div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a> row2 in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.rows)</div>
-<div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>            <a class="code hl_function" href="classSourceCard.html#acc78bdb0c389c4a920787c9e58752652">AddRow</a>(row2, isChara: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        SourceChara.rowDefaultPCC = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.map[<span class="stringliteral">&quot;chara&quot;</span>];</div>
-<div class="line"><span class="lineno">   25</span>    }</div>
-<div class="ttc" id="aclassSourceCard_html_acc78bdb0c389c4a920787c9e58752652"><div class="ttname"><a href="classSourceCard.html#acc78bdb0c389c4a920787c9e58752652">SourceCard.AddRow</a></div><div class="ttdeci">void AddRow(CardRow row, bool isChara=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00032">SourceCard.cs:32</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00018">SourceManager.cs:18</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00015">15</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="classSourceCard.html#a018040ba7dad38f3bddf9b25a65ba8e6">rows</a>.Clear();</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="classSourceCard.html#a04c0c78774ff977328ff918b7223033e">map</a>.Clear();</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="classSourceCard.html#a94a2121577b68620a65c87660f6ee3c7">firstVariations</a>.Clear();</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_variable" href="classSourceCard.html#a6dc73b6d666bff43ef257344d2b26275">crafters</a>.Clear();</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> row in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <a class="code hl_function" href="classSourceCard.html#acc78bdb0c389c4a920787c9e58752652">AddRow</a>(row);</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSourceChara.html">SourceChara</a>.<a class="code hl_class" href="classSourceChara_1_1Row.html">Row</a> row2 in <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.rows)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_function" href="classSourceCard.html#acc78bdb0c389c4a920787c9e58752652">AddRow</a>(row2, isChara: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="line"><span class="lineno">   29</span>        SourceChara.rowDefaultPCC = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>.map[<span class="stringliteral">&quot;chara&quot;</span>];</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="aclassSourceCard_html_acc78bdb0c389c4a920787c9e58752652"><div class="ttname"><a href="classSourceCard.html#acc78bdb0c389c4a920787c9e58752652">SourceCard.AddRow</a></div><div class="ttdeci">void AddRow(CardRow row, bool isChara=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceCard_8cs_source.html#l00037">SourceCard.cs:37</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00019">SourceManager.cs:19</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceCard_8cs_source.html#l00032">AddRow()</a>, <a class="el" href="SourceManager_8cs_source.html#l00018">SourceManager.charas</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00026">SourceManager.things</a>.</p>
+<p class="reference">References <a class="el" href="SourceCard_8cs_source.html#l00037">AddRow()</a>, <a class="el" href="SourceManager_8cs_source.html#l00019">SourceManager.charas</a>, <a class="el" href="SourceCard_8cs_source.html#l00013">crafters</a>, <a class="el" href="SourceCard_8cs_source.html#l00011">firstVariations</a>, <a class="el" href="SourceCard_8cs_source.html#l00009">map</a>, <a class="el" href="SourceCard_8cs_source.html#l00007">rows</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, and <a class="el" href="SourceManager_8cs_source.html#l00027">SourceManager.things</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00115">SourceManager.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceManager_8cs_source.html#l00116">SourceManager.Init()</a>.</p>
 
 </div>
 </div>
@@ -401,9 +417,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00012">12</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00013">13</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00027">GetModelCrafter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00032">GetModelCrafter()</a>, and <a class="el" href="SourceCard_8cs_source.html#l00015">Init()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +435,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00010">10</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00011">11</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00032">AddRow()</a>, and <a class="el" href="Thing_8cs_source.html#l00167">Thing.SetSource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00037">AddRow()</a>, <a class="el" href="SourceCard_8cs_source.html#l00015">Init()</a>, and <a class="el" href="Thing_8cs_source.html#l00167">Thing.SetSource()</a>.</p>
 
 </div>
 </div>
@@ -437,9 +453,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00008">8</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00009">9</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00006">ThingGen._Create()</a>, <a class="el" href="WidgetStockTracker_8cs_source.html#l00033">WidgetStockTracker._Refresh()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="SourceCard_8cs_source.html#l00032">AddRow()</a>, <a class="el" href="PartialMap_8cs_source.html#l00112">PartialMap.Apply()</a>, <a class="el" href="UICurrency_8cs_source.html#l00085">UICurrency.Build()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00271">TraitCrafter.Craft()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00154">RecipeCard.Craft()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00011">RendererReplacer.CreateFrom()</a>, <a class="el" href="SpawnList_8cs_source.html#l00064">SpawnList.CreateMaster()</a>, <a class="el" href="Recipe_8cs_source.html#l00365">Recipe.DropIngredients()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00337">BiomeProfile.Style.GetIdLight()</a>, <a class="el" href="SourceCard_8cs_source.html#l00027">GetModelCrafter()</a>, <a class="el" href="Recipe_8cs_source.html#l00105">Recipe.Ingredient.GetName()</a>, <a class="el" href="DNA_8cs_source.html#l00565">DNA.GetText()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00719">ThingContainer.GetThingStack()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="CodexManager_8cs_source.html#l00070">CodexManager.ListKills()</a>, <a class="el" href="Props_8cs_source.html#l00204">Props.ListThingStack()</a>, <a class="el" href="Card_8cs_source.html#l05581">Card.MakeFoodFrom()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00277">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00151">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00070">ResearchPlan.ParseReward()</a>, <a class="el" href="Dialog_8cs_source.html#l00460">Dialog.Recipe()</a>, <a class="el" href="Zone_8cs_source.html#l01051">Zone.RefreshHat()</a>, <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00558">SerializedCards.Restore()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="TraitBloodSample_8cs_source.html#l00003">TraitBloodSample.SetName()</a>, <a class="el" href="ButtonResourceTrack_8cs_source.html#l00011">ButtonResourceTrack.SetProp()</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">RenderRow.SetRenderData()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00530">TaskHarvest.ShouldGenerateDismantled()</a>, <a class="el" href="Card_8cs_source.html#l05172">Card.SpawnLoot()</a>, <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>, <a class="el" href="ActEffect_8cs_source.html#l02800">ActEffect.Wish()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00006">ThingGen._Create()</a>, <a class="el" href="WidgetStockTracker_8cs_source.html#l00033">WidgetStockTracker._Refresh()</a>, <a class="el" href="FortuneRollData_8cs_source.html#l00065">FortuneRollData.Prize.AddNote()</a>, <a class="el" href="SourceCard_8cs_source.html#l00037">AddRow()</a>, <a class="el" href="PartialMap_8cs_source.html#l00112">PartialMap.Apply()</a>, <a class="el" href="UICurrency_8cs_source.html#l00085">UICurrency.Build()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00271">TraitCrafter.Craft()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00154">RecipeCard.Craft()</a>, <a class="el" href="RendererReplacer_8cs_source.html#l00011">RendererReplacer.CreateFrom()</a>, <a class="el" href="SpawnList_8cs_source.html#l00064">SpawnList.CreateMaster()</a>, <a class="el" href="Recipe_8cs_source.html#l00365">Recipe.DropIngredients()</a>, <a class="el" href="BiomeProfile_8cs_source.html#l00337">BiomeProfile.Style.GetIdLight()</a>, <a class="el" href="SourceCard_8cs_source.html#l00032">GetModelCrafter()</a>, <a class="el" href="Recipe_8cs_source.html#l00105">Recipe.Ingredient.GetName()</a>, <a class="el" href="DNA_8cs_source.html#l00565">DNA.GetText()</a>, <a class="el" href="ThingContainer_8cs_source.html#l00719">ThingContainer.GetThingStack()</a>, <a class="el" href="SourceCard_8cs_source.html#l00015">Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00043">UIDragGridInfo.Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="CodexManager_8cs_source.html#l00070">CodexManager.ListKills()</a>, <a class="el" href="Props_8cs_source.html#l00204">Props.ListThingStack()</a>, <a class="el" href="Card_8cs_source.html#l05597">Card.MakeFoodFrom()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00277">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TraitBaseSpellbook_8cs_source.html#l00151">TraitBaseSpellbook.OnRead()</a>, <a class="el" href="ResearchPlan_8cs_source.html#l00070">ResearchPlan.ParseReward()</a>, <a class="el" href="Dialog_8cs_source.html#l00470">Dialog.Recipe()</a>, <a class="el" href="Zone_8cs_source.html#l01051">Zone.RefreshHat()</a>, <a class="el" href="WindowChara_8cs_source.html#l00478">WindowChara.RefreshInfo()</a>, <a class="el" href="UIRecipeInfo_8cs_source.html#l00398">UIRecipeInfo.RefreshList()</a>, <a class="el" href="SerializedCards_8cs_source.html#l00558">SerializedCards.Restore()</a>, <a class="el" href="ButtonGrid_8cs_source.html#l00435">ButtonGrid.SetIngredient()</a>, <a class="el" href="TraitBloodSample_8cs_source.html#l00003">TraitBloodSample.SetName()</a>, <a class="el" href="ButtonResourceTrack_8cs_source.html#l00011">ButtonResourceTrack.SetProp()</a>, <a class="el" href="RenderRow_8cs_source.html#l00169">RenderRow.SetRenderData()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00530">TaskHarvest.ShouldGenerateDismantled()</a>, <a class="el" href="Card_8cs_source.html#l05188">Card.SpawnLoot()</a>, <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00861">CoreDebug.UpdateInput()</a>, <a class="el" href="ActEffect_8cs_source.html#l02800">ActEffect.Wish()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
 
 </div>
 </div>
@@ -455,9 +471,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00006">6</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceCard_8cs_source.html#l00007">7</a> of file <a class="el" href="SourceCard_8cs_source.html">SourceCard.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00006">ThingGen._Create()</a>, <a class="el" href="SourceCard_8cs_source.html#l00032">AddRow()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00039">RecipeManager.BuildList()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="Core_8cs_source.html#l00411">Core.OnApplicationFocus()</a>, <a class="el" href="ActEffect_8cs_source.html#l02800">ActEffect.Wish()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ThingGen_8cs_source.html#l00006">ThingGen._Create()</a>, <a class="el" href="SourceCard_8cs_source.html#l00037">AddRow()</a>, <a class="el" href="RecipeManager_8cs_source.html#l00039">RecipeManager.BuildList()</a>, <a class="el" href="SourceCard_8cs_source.html#l00015">Init()</a>, <a class="el" href="UIDragGridInfo_8cs_source.html#l00155">UIDragGridInfo.InitFuel()</a>, <a class="el" href="Core_8cs_source.html#l00411">Core.OnApplicationFocus()</a>, <a class="el" href="ActEffect_8cs_source.html#l02800">ActEffect.Wish()</a>, and <a class="el" href="BaseListPeople_8cs_source.html#l00152">BaseListPeople.WriteHobbies()</a>.</p>
 
 </div>
 </div>

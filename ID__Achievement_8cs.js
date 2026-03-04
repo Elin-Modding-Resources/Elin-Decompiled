@@ -17,6 +17,8 @@ var ID__Achievement_8cs =
       [ "LARNNEIRE2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af263257b0f6db21fcccf9fd2e3a99b9a", null ],
       [ "CHURYU2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ac500a47519a7142e770321eec2099628", null ],
       [ "NINO", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a73936a4ecf75f38c994292becfd8157d", null ],
-      [ "CHURYU3", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9aeaf5ba2395856426a6b6f35e4562719a", null ]
+      [ "CHURYU3", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9aeaf5ba2395856426a6b6f35e4562719a", null ],
+      [ "DEMITAS", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a7ba5df844826d6b467d74f615890388d", null ],
+      [ "KETTLE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af1e659c34ad06a8cc89931551e6b97e0", null ]
     ] ]
 ];

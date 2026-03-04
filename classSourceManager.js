@@ -5,6 +5,7 @@ var classSourceManager =
     [ "Init", "classSourceManager.html#a74ca8efaabc1b44566387ccc6a663362", null ],
     [ "InitLang", "classSourceManager.html#a963f0805a7d67bbed8d1a6918a29a654", null ],
     [ "OnChangeLang", "classSourceManager.html#ad7aa8bf1cf013ed0e33767a5cfe80caf", null ],
+    [ "Reload", "classSourceManager.html#a4d0a6da2a403b6c964d62a37ea667094", null ],
     [ "UpdateSourceTexts", "classSourceManager.html#a57a471351f436e88ecc0ec51a07e0e1f", null ],
     [ "ValidateLang", "classSourceManager.html#a23abb970eaf823a7ca14209fb1f37434", null ],
     [ "_dataGodTalk", "classSourceManager.html#a79c33d8b216b3a0e846ad4fa2f4fe4a2", null ],

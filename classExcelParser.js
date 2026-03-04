@@ -13,6 +13,9 @@ var classExcelParser =
     [ "GetString", "classExcelParser.html#a6dcc6701826d8b7d1d068ba2eb858c60", null ],
     [ "GetStringArray", "classExcelParser.html#aff9c1f02feb564b967a6b0193e39a15c", null ],
     [ "IsNull", "classExcelParser.html#a5faa0b2de4364d0352768e30d73d3658", null ],
+    [ "ReportIllFormat< T >", "classExcelParser.html#a13a8bead9fc565a2873e746783d3aa01", null ],
+    [ "ToLetterId", "classExcelParser.html#a2bbe64eb4c0ae3211e8c8dc0f445f76e", null ],
+    [ "path", "classExcelParser.html#a9c8b87ac73dbebf9015f999cf1e5c24c", null ],
     [ "row", "classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b", null ],
     [ "rowDefault", "classExcelParser.html#a373376895ea848135feb8708be6c3873", null ]
 ];

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('classModUtil.html',''); initResizable(
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="classModUtil-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ModUtil Class Reference</div></div>
 </div><!--header-->
@@ -108,8 +109,6 @@ Inheritance diagram for ModUtil:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a53d43df453043e0d150611ffcca62116"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a53d43df453043e0d150611ffcca62116">Test</a> ()</td></tr>
-<tr class="separator:a53d43df453043e0d150611ffcca62116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf1e487b6edc0d22a16aa285e3bfb307"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#abf1e487b6edc0d22a16aa285e3bfb307">OnModsActivated</a> ()</td></tr>
 <tr class="separator:abf1e487b6edc0d22a16aa285e3bfb307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb36876e5c912f025129bda3e5ebacb8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#acb36876e5c912f025129bda3e5ebacb8">LoadTypeFallback</a> ()</td></tr>
@@ -118,6 +117,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefa809513e8a6902a3b88650a9f6bcdf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ImportExcel</a> (string pathToExcelFile, string sheetName, <a class="el" href="classSourceData.html">SourceData</a> source)</td></tr>
 <tr class="separator:aefa809513e8a6902a3b88650a9f6bcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12f8dcd83e8d82039b8ab2bb8aaab00"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classModPackage.html">ModPackage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#ab12f8dcd83e8d82039b8ab2bb8aaab00">FindSourceRowPackage</a> (<a class="el" href="classSourceData_1_1BaseRow.html">SourceData.BaseRow</a> row)</td></tr>
+<tr class="separator:ab12f8dcd83e8d82039b8ab2bb8aaab00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212dd865a3e48ab848ee24fce3fb4326"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classModPackage.html">ModPackage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a212dd865a3e48ab848ee24fce3fb4326">GetModPackage</a> (string modId)</td></tr>
+<tr class="separator:a212dd865a3e48ab848ee24fce3fb4326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4f385335427f4154c36b09ebb0d3cc"><td class="memItemLeft" align="right" valign="top">static SerializableSoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a4d4f385335427f4154c36b09ebb0d3cc">GetSoundMeta</a> (string soundPath)</td></tr>
+<tr class="separator:a4d4f385335427f4154c36b09ebb0d3cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ba10f41ba488756158380558ea91b9"><td class="memItemLeft" align="right" valign="top">static AudioType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">GetAudioType</a> (string extension)</td></tr>
+<tr class="separator:a31ba10f41ba488756158380558ea91b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d092261fe4ebefa745f3a38c602253e"><td class="memItemLeft" align="right" valign="top">static SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">LoadSoundData</a> (string soundId)</td></tr>
+<tr class="separator:a0d092261fe4ebefa745f3a38c602253e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab21eb1b2ab0065fa0e40e578e1be5217"><td class="memItemLeft" align="right" valign="top">static SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#ab21eb1b2ab0065fa0e40e578e1be5217">LoadSoundData</a> (FileInfo soundFile)</td></tr>
+<tr class="separator:ab21eb1b2ab0065fa0e40e578e1be5217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a> (int a, int <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>)</td></tr>
 <tr class="separator:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,14 +157,18 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2af737667dd4cb0d3fb420c8ca7f37d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSourceImporter.html">SourceImporter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a2af737667dd4cb0d3fb420c8ca7f37d8">sourceImporter</a> = new <a class="el" href="classSourceImporter.html">SourceImporter</a>(<a class="el" href="classModUtil.html#a1828dbd4faebae5c3d6489efb7b1a441">SourceMapping</a>)</td></tr>
+<tr class="separator:a2af737667dd4cb0d3fb420c8ca7f37d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27eede742d1e4dff63fa45538cada84"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a> = new Dictionary&lt;string, string&gt;()</td></tr>
 <tr class="separator:aa27eede742d1e4dff63fa45538cada84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCore.html">Core</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a></td></tr>
 <tr class="separator:a43ff00755aa7d34b91ab7f9dbbe922c3 inherit pub_static_attribs_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a1828dbd4faebae5c3d6489efb7b1a441"><td class="memItemLeft" align="right" valign="top">static IReadOnlyDictionary&lt; string, <a class="el" href="classSourceData.html">SourceData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModUtil.html#a1828dbd4faebae5c3d6489efb7b1a441">SourceMapping</a><code> [get]</code></td></tr>
+<tr class="separator:a1828dbd4faebae5c3d6489efb7b1a441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classEClass"><td colspan="2" onclick="javascript:toggleInherit('properties_classEClass')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a012d65ced13d1cf54c6776a5d29df3c3 inherit properties_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGame.html">Game</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a><code> [get]</code></td></tr>
 <tr class="separator:a012d65ced13d1cf54c6776a5d29df3c3 inherit properties_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,8 +215,171 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00008">8</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00013">13</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab12f8dcd83e8d82039b8ab2bb8aaab00" name="ab12f8dcd83e8d82039b8ab2bb8aaab00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab12f8dcd83e8d82039b8ab2bb8aaab00">&#9670;&#160;</a></span>FindSourceRowPackage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classModPackage.html">ModPackage</a> ModUtil.FindSourceRowPackage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSourceData_1_1BaseRow.html">SourceData::BaseRow</a>&#160;</td>
+          <td class="paramname"><em>row</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00090">90</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.MappedPackages.Values.FirstOrDefault((EMod p) =&gt; p.sourceRows.Contains(row)) as <a class="code hl_class" href="classModPackage.html">ModPackage</a>;</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassModPackage_html"><div class="ttname"><a href="classModPackage.html">ModPackage</a></div><div class="ttdef"><b>Definition:</b> <a href="ModPackage_8cs_source.html#l00009">ModPackage.cs:10</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="SourceCard_8cs_source.html#l00037">SourceCard.AddRow()</a>.</p>
+
+</div>
+</div>
+<a id="a31ba10f41ba488756158380558ea91b9" name="a31ba10f41ba488756158380558ea91b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ba10f41ba488756158380558ea91b9">&#9670;&#160;</a></span>GetAudioType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static AudioType ModUtil.GetAudioType </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>extension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00128">128</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> extension.ToLowerInvariant().Trim() <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            <span class="stringliteral">&quot;.acc&quot;</span> =&gt; AudioType.ACC, </div>
+<div class="line"><span class="lineno">  133</span>            <span class="stringliteral">&quot;.mp3&quot;</span> =&gt; AudioType.MPEG, </div>
+<div class="line"><span class="lineno">  134</span>            <span class="stringliteral">&quot;.ogg&quot;</span> =&gt; AudioType.OGGVORBIS, </div>
+<div class="line"><span class="lineno">  135</span>            <span class="stringliteral">&quot;.wav&quot;</span> =&gt; AudioType.WAV, </div>
+<div class="line"><span class="lineno">  136</span>            _ =&gt; AudioType.UNKNOWN, </div>
+<div class="line"><span class="lineno">  137</span>        };</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00149">LoadSoundData()</a>, and <a class="el" href="ModPackage_8cs_source.html#l00168">ModPackage.ParseSound()</a>.</p>
+
+</div>
+</div>
+<a id="a212dd865a3e48ab848ee24fce3fb4326" name="a212dd865a3e48ab848ee24fce3fb4326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a212dd865a3e48ab848ee24fce3fb4326">&#9670;&#160;</a></span>GetModPackage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classModPackage.html">ModPackage</a> ModUtil.GetModPackage </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>modId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00095">95</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.MappedPackages.GetValueOrDefault(modId) as <a class="code hl_class" href="classModPackage.html">ModPackage</a>;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4d4f385335427f4154c36b09ebb0d3cc" name="a4d4f385335427f4154c36b09ebb0d3cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4f385335427f4154c36b09ebb0d3cc">&#9670;&#160;</a></span>GetSoundMeta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SerializableSoundData ModUtil.GetSoundMeta </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>soundPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00100">100</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>    {</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">string</span> path = Path.ChangeExtension(soundPath, <span class="stringliteral">&quot;.json&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>        SerializableSoundData serializableSoundData;</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (File.Exists(path))</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                serializableSoundData = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;SerializableSoundData&gt;(path);</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">if</span> (serializableSoundData.dataVersion == SerializableSoundData.SoundDataMetaVersion.V1)</div>
+<div class="line"><span class="lineno">  110</span>                {</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">return</span> serializableSoundData;</div>
+<div class="line"><span class="lineno">  112</span>                }</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        serializableSoundData = <span class="keyword">new</span> SerializableSoundData();</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (soundPath.NormalizePath().Contains(<span class="stringliteral">&quot;/Sound/BGM/&quot;</span>))</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            serializableSoundData.type = SoundData.Type.BGM;</div>
+<div class="line"><span class="lineno">  122</span>            serializableSoundData.bgmDataOptional = <span class="keyword">new</span> SerializableBGMData();</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">SaveFile</a>(path, serializableSoundData);</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> serializableSoundData;</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
+<div class="ttc" id="aclassIO_html_ac15051fb75be08e9ff3dd16de65959b3"><div class="ttname"><a href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">IO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj, bool compress=false, JsonSerializerSettings setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00089">IO.cs:89</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00149">LoadSoundData()</a>.</p>
+
+</div>
+</div>
 <a id="aefa809513e8a6902a3b88650a9f6bcdf" name="aefa809513e8a6902a3b88650a9f6bcdf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefa809513e8a6902a3b88650a9f6bcdf">&#9670;&#160;</a></span>ImportExcel()</h2>
 
@@ -242,45 +420,159 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00050">50</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;ImportExcel source:&quot;</span> + source?.ToString() + <span class="stringliteral">&quot; Path:&quot;</span> + pathToExcelFile);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keyword">using </span>FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
-<div class="line"><span class="lineno">   54</span>        XSSFWorkbook xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook.NumberOfSheets; i++)</div>
-<div class="line"><span class="lineno">   56</span>        {</div>
-<div class="line"><span class="lineno">   57</span>            ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (sheetAt.SheetName != sheetName)</div>
-<div class="line"><span class="lineno">   59</span>            {</div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Importing Sheet:&quot;</span> + sheetName);</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">if</span> (!source.<a class="code hl_function" href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">ImportData</a>(sheetAt, <span class="keyword">new</span> FileInfo(pathToExcelFile).Name, overwrite: <span class="keyword">true</span>))</div>
-<div class="line"><span class="lineno">   66</span>                {</div>
-<div class="line"><span class="lineno">   67</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_class" href="classERROR.html">ERROR</a>.<a class="code hl_variable" href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">msg</a>);</div>
-<div class="line"><span class="lineno">   68</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   69</span>                }</div>
-<div class="line"><span class="lineno">   70</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Imported &quot;</span> + sheetAt.SheetName);</div>
-<div class="line"><span class="lineno">   71</span>                source.<a class="code hl_function" href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">Reset</a>();</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">   74</span>            {</div>
-<div class="line"><span class="lineno">   75</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;[Error] Skipping import &quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot; :&quot;</span> + ex.Message + <span class="stringliteral">&quot;/&quot;</span> + ex.Source + <span class="stringliteral">&quot;/&quot;</span> + ex.StackTrace);</div>
-<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   77</span>            }</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
-<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00058">58</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        UnityEngine.Debug.Log(<span class="stringliteral">&quot;ImportExcel source:&quot;</span> + source?.ToString() + <span class="stringliteral">&quot; Path:&quot;</span> + pathToExcelFile);</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keyword">using </span>FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
+<div class="line"><span class="lineno">   62</span>        XSSFWorkbook xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook.NumberOfSheets; i++)</div>
+<div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (sheetAt.SheetName != sheetName)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>            UnityEngine.Debug.Log(<span class="stringliteral">&quot;Importing Sheet:&quot;</span> + sheetName);</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                ExcelParser.path = pathToExcelFile;</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (!source.<a class="code hl_function" href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">ImportData</a>(sheetAt, <span class="keyword">new</span> FileInfo(pathToExcelFile).Name, overwrite: <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">   75</span>                {</div>
+<div class="line"><span class="lineno">   76</span>                    UnityEngine.Debug.LogError(<a class="code hl_class" href="classERROR.html">ERROR</a>.<a class="code hl_variable" href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">msg</a>);</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   78</span>                }</div>
+<div class="line"><span class="lineno">   79</span>                UnityEngine.Debug.Log(<span class="stringliteral">&quot;Imported &quot;</span> + sheetAt.SheetName);</div>
+<div class="line"><span class="lineno">   80</span>                source.<a class="code hl_function" href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">Reset</a>();</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                UnityEngine.Debug.LogError(<span class="stringliteral">&quot;[Error] Skipping import &quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot; :&quot;</span> + ex.Message + <span class="stringliteral">&quot;/&quot;</span> + ex.Source + <span class="stringliteral">&quot;/&quot;</span> + ex.StackTrace);</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 <div class="ttc" id="aclassERROR_html"><div class="ttname"><a href="classERROR.html">ERROR</a></div><div class="ttdef"><b>Definition:</b> <a href="ERROR_8cs_source.html#l00001">ERROR.cs:2</a></div></div>
 <div class="ttc" id="aclassERROR_html_a874d44fb6d2d560a40be056ded3d029b"><div class="ttname"><a href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">ERROR.msg</a></div><div class="ttdeci">static string msg</div><div class="ttdef"><b>Definition:</b> <a href="ERROR_8cs_source.html#l00003">ERROR.cs:3</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a0e0897d3fefeaef5b5e50291a2845f89"><div class="ttname"><a href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">SourceData.ImportData</a></div><div class="ttdeci">override bool ImportData(ISheet sheet, string bookname, bool overwrite=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00134">SourceData.cs:134</a></div></div>
-<div class="ttc" id="aclassSourceData_html_ab0d3e367fad8f5515b6df6f0eb5597ad"><div class="ttname"><a href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">SourceData.Reset</a></div><div class="ttdeci">override void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00113">SourceData.cs:113</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a0e0897d3fefeaef5b5e50291a2845f89"><div class="ttname"><a href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">SourceData.ImportData</a></div><div class="ttdeci">override bool ImportData(ISheet sheet, string bookname, bool overwrite=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00136">SourceData.cs:136</a></div></div>
+<div class="ttc" id="aclassSourceData_html_ab0d3e367fad8f5515b6df6f0eb5597ad"><div class="ttname"><a href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">SourceData.Reset</a></div><div class="ttdeci">override void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00115">SourceData.cs:115</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SourceData_8cs_source.html#l00134">SourceData&lt; T, T2 &gt;.ImportData()</a>, <a class="el" href="ERROR_8cs_source.html#l00003">ERROR.msg</a>, and <a class="el" href="SourceData_8cs_source.html#l00113">SourceData&lt; T, T2 &gt;.Reset()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00136">SourceData&lt; T, T2 &gt;.ImportData()</a>, <a class="el" href="ERROR_8cs_source.html#l00003">ERROR.msg</a>, and <a class="el" href="SourceData_8cs_source.html#l00115">SourceData&lt; T, T2 &gt;.Reset()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00012">Test()</a>.</p>
+</div>
+</div>
+<a id="ab21eb1b2ab0065fa0e40e578e1be5217" name="ab21eb1b2ab0065fa0e40e578e1be5217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab21eb1b2ab0065fa0e40e578e1be5217">&#9670;&#160;</a></span>LoadSoundData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SoundData ModUtil.LoadSoundData </td>
+          <td>(</td>
+          <td class="paramtype">FileInfo&#160;</td>
+          <td class="paramname"><em>soundFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00149">149</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">string</span> fileNameWithoutExtension = Path.GetFileNameWithoutExtension(soundFile.FullName);</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordtype">string</span> fullName = soundFile.FullName;</div>
+<div class="line"><span class="lineno">  153</span>        AudioType audioType = <a class="code hl_function" href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">GetAudioType</a>(soundFile.Extension);</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordtype">bool</span> stream = fileNameWithoutExtension.StartsWith(<span class="stringliteral">&quot;BGM/&quot;</span>) &amp;&amp; audioType == AudioType.OGGVORBIS;</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keyword">using </span>UnityWebRequest unityWebRequest = AudioClipStream.GetAudioClip(<span class="stringliteral">&quot;file://&quot;</span> + fullName, audioType, compressed: <span class="keyword">false</span>, stream);</div>
+<div class="line"><span class="lineno">  156</span>        unityWebRequest.SendWebRequest();</div>
+<div class="line"><span class="lineno">  157</span>        Stopwatch stopwatch = Stopwatch.StartNew();</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">while</span> (!unityWebRequest.isDone &amp;&amp; stopwatch.ElapsedMilliseconds &lt; 5000)</div>
+<div class="line"><span class="lineno">  159</span>        {</div>
+<div class="line"><span class="lineno">  160</span>            Thread.Sleep(1);</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span> (unityWebRequest.result != UnityWebRequest.Result.Success)</div>
+<div class="line"><span class="lineno">  163</span>        {</div>
+<div class="line"><span class="lineno">  164</span>            UnityEngine.Debug.LogError(<span class="stringliteral">&quot;#sound &#39;&quot;</span> + fileNameWithoutExtension + <span class="stringliteral">&quot;&#39; failed to load: &quot;</span> + unityWebRequest.error.IsEmpty(<span class="stringliteral">&quot;timeout&quot;</span>));</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span>        AudioClip content = DownloadHandlerAudioClip.GetContent(unityWebRequest);</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordtype">int</span>? num = content?.samples;</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (!num.HasValue || num.GetValueOrDefault() &lt;= 0)</div>
+<div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            UnityEngine.Debug.LogError(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound &#39;{fileNameWithoutExtension}&#39; sample is null: {audioType}&quot;</span>);</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>        content.name = fileNameWithoutExtension;</div>
+<div class="line"><span class="lineno">  175</span>        SoundData soundData = <a class="code hl_function" href="classModUtil.html#a4d4f385335427f4154c36b09ebb0d3cc">GetSoundMeta</a>(fullName).ToSoundData();</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (soundData is BGMData bGMData)</div>
+<div class="line"><span class="lineno">  177</span>        {</div>
+<div class="line"><span class="lineno">  178</span>            bGMData._name = Path.GetFileNameWithoutExtension(fullName);</div>
+<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">if</span> (bGMData.song == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  180</span>            {</div>
+<div class="line"><span class="lineno">  181</span>                bGMData.song = <span class="keyword">new</span> BGMData.SongData();</div>
+<div class="line"><span class="lineno">  182</span>                bGMData.song.parts.Add(<span class="keyword">new</span> BGMData.Part());</div>
+<div class="line"><span class="lineno">  183</span>            }</div>
+<div class="line"><span class="lineno">  184</span>        }</div>
+<div class="line"><span class="lineno">  185</span>        soundData.clip = content;</div>
+<div class="line"><span class="lineno">  186</span>        soundData.name = fileNameWithoutExtension;</div>
+<div class="line"><span class="lineno">  187</span>        UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound &#39;{fileNameWithoutExtension}&#39; loaded: {audioType}/{content.length}s&quot;</span>);</div>
+<div class="line"><span class="lineno">  188</span>        SoundManager.current.dictData[fileNameWithoutExtension] = soundData;</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> soundData;</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00085">ModManager.cs:85</a></div></div>
+<div class="ttc" id="aclassModUtil_html_a31ba10f41ba488756158380558ea91b9"><div class="ttname"><a href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">ModUtil.GetAudioType</a></div><div class="ttdeci">static AudioType GetAudioType(string extension)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00128">ModUtil.cs:128</a></div></div>
+<div class="ttc" id="aclassModUtil_html_a4d4f385335427f4154c36b09ebb0d3cc"><div class="ttname"><a href="classModUtil.html#a4d4f385335427f4154c36b09ebb0d3cc">ModUtil.GetSoundMeta</a></div><div class="ttdeci">static SerializableSoundData GetSoundMeta(string soundPath)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00100">ModUtil.cs:100</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, <a class="el" href="ModUtil_8cs_source.html#l00128">GetAudioType()</a>, and <a class="el" href="ModUtil_8cs_source.html#l00100">GetSoundMeta()</a>.</p>
+
+</div>
+</div>
+<a id="a0d092261fe4ebefa745f3a38c602253e" name="a0d092261fe4ebefa745f3a38c602253e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d092261fe4ebefa745f3a38c602253e">&#9670;&#160;</a></span>LoadSoundData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static SoundData ModUtil.LoadSoundData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>soundId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00140">140</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ae4a6fee83088f66bec4fa7cde78f985b">sounds</a>.TryGetValue(soundId, out var value) || !value.Exists)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">LoadSoundData</a>(value);</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="aclassMOD_html"><div class="ttname"><a href="classMOD.html">MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00006">MOD.cs:7</a></div></div>
+<div class="ttc" id="aclassMOD_html_ae4a6fee83088f66bec4fa7cde78f985b"><div class="ttname"><a href="classMOD.html#ae4a6fee83088f66bec4fa7cde78f985b">MOD.sounds</a></div><div class="ttdeci">static Dictionary&lt; string, FileInfo &gt; sounds</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00024">MOD.cs:24</a></div></div>
+<div class="ttc" id="aclassModUtil_html_a0d092261fe4ebefa745f3a38c602253e"><div class="ttname"><a href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">ModUtil.LoadSoundData</a></div><div class="ttdeci">static SoundData LoadSoundData(string soundId)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00140">ModUtil.cs:140</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00140">LoadSoundData()</a>, and <a class="el" href="MOD_8cs_source.html#l00024">MOD.sounds</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00140">LoadSoundData()</a>, and <a class="el" href="ModUtil_8cs_source.html#l00023">OnModsActivated()</a>.</p>
 
 </div>
 </div>
@@ -307,39 +599,38 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00021">21</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;type_resolver.txt&quot;</span>;</div>
-<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (File.Exists(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text))</div>
-<div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            array = <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">LoadTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text);</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[2] { <span class="stringliteral">&quot;TrueArena,ArenaWaveEvent,ZoneEvent&quot;</span>, <span class="stringliteral">&quot;Elin-GeneRecombinator,Elin_GeneRecombinator.IncubationSacrifice,Chara&quot;</span> };</div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a53413f94d70f8a806038b6974752109b">SaveTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text, array);</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array2.Length; i++)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordtype">string</span>[] array3 = array2[i].Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (array3.Length &gt;= 2)</div>
-<div class="line"><span class="lineno">   39</span>            {</div>
-<div class="line"><span class="lineno">   40</span>                <a class="code hl_function" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">RegisterSerializedTypeFallback</a>(array3[0], array3[1], array3[2]);</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00029">29</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;type_resolver.txt&quot;</span>;</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (File.Exists(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text))</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            array = <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">LoadTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[2] { <span class="stringliteral">&quot;TrueArena,ArenaWaveEvent,ZoneEvent&quot;</span>, <span class="stringliteral">&quot;Elin-GeneRecombinator,Elin_GeneRecombinator.IncubationSacrifice,Chara&quot;</span> };</div>
+<div class="line"><span class="lineno">   40</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a53413f94d70f8a806038b6974752109b">SaveTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text, array);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array2.Length; i++)</div>
+<div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">string</span>[] array3 = array2[i].Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (array3.Length &gt;= 2)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                <a class="code hl_function" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">RegisterSerializedTypeFallback</a>(array3[0], array3[1], array3[2]);</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
 <div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
 <div class="ttc" id="aclassCorePath_html_a433ebb5d0a3d88629f959a50e036db16"><div class="ttname"><a href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">CorePath.RootData</a></div><div class="ttdeci">static string RootData</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00208">CorePath.cs:208</a></div></div>
-<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
 <div class="ttc" id="aclassIO_html_a0a40c97df4bcb6632fee67504caa619d"><div class="ttname"><a href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">IO.LoadTextArray</a></div><div class="ttdeci">static string[] LoadTextArray(string _path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00443">IO.cs:443</a></div></div>
 <div class="ttc" id="aclassIO_html_a53413f94d70f8a806038b6974752109b"><div class="ttname"><a href="classIO.html#a53413f94d70f8a806038b6974752109b">IO.SaveTextArray</a></div><div class="ttdeci">static void SaveTextArray(string path, string[] text)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00111">IO.cs:111</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><div class="ttname"><a href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">ModUtil.RegisterSerializedTypeFallback</a></div><div class="ttdeci">static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00045">ModUtil.cs:45</a></div></div>
+<div class="ttc" id="aclassModUtil_html_a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><div class="ttname"><a href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">ModUtil.RegisterSerializedTypeFallback</a></div><div class="ttdeci">static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00053">ModUtil.cs:53</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00045">RegisterSerializedTypeFallback()</a>, and <a class="el" href="CorePath_8cs_source.html#l00208">CorePath.RootData</a>.</p>
+<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00053">RegisterSerializedTypeFallback()</a>, and <a class="el" href="CorePath_8cs_source.html#l00208">CorePath.RootData</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.RefreshMods()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00482">ModManager.ActivatePackages()</a>.</p>
 
 </div>
 </div>
@@ -366,11 +657,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00017">17</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00023">23</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        SoundManager.current.soundLoaders.Add(<a class="code hl_function" href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">LoadSoundData</a>);</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="classBaseModManager.html">BaseModManager</a>.<a class="code hl_function" href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">PublishEvent</a>(<span class="stringliteral">&quot;elin.mods.activated&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="ttc" id="aclassBaseModManager_html"><div class="ttname"><a href="classBaseModManager.html">BaseModManager</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00007">BaseModManager.cs:8</a></div></div>
+<div class="ttc" id="aclassBaseModManager_html_a9ea8d96cc9a903415e9ed9b62b47a7ab"><div class="ttname"><a href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">BaseModManager.PublishEvent</a></div><div class="ttdeci">static void PublishEvent(string eventId, object data=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00114">BaseModManager.cs:114</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.RefreshMods()</a>.</p>
+<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00140">LoadSoundData()</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00114">BaseModManager.PublishEvent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00482">ModManager.ActivatePackages()</a>.</p>
 
 </div>
 </div>
@@ -414,51 +711,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00045">45</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[nameType] = nameFallbackType;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-<div class="ttc" id="aclassModUtil_html_aa27eede742d1e4dff63fa45538cada84"><div class="ttname"><a href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">ModUtil.fallbackTypes</a></div><div class="ttdeci">static Dictionary&lt; string, string &gt; fallbackTypes</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00010">ModUtil.cs:10</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00053">53</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[nameType] = nameFallbackType;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aclassModUtil_html_aa27eede742d1e4dff63fa45538cada84"><div class="ttname"><a href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">ModUtil.fallbackTypes</a></div><div class="ttdeci">static Dictionary&lt; string, string &gt; fallbackTypes</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00017">ModUtil.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00010">fallbackTypes</a>.</p>
+<p class="reference">References <a class="el" href="ModUtil_8cs_source.html#l00017">fallbackTypes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00021">LoadTypeFallback()</a>.</p>
-
-</div>
-</div>
-<a id="a53d43df453043e0d150611ffcca62116" name="a53d43df453043e0d150611ffcca62116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53d43df453043e0d150611ffcca62116">&#9670;&#160;</a></span>Test()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void ModUtil.Test </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00012">12</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
-<div class="line"><span class="lineno">   14</span>        <a class="code hl_function" href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ImportExcel</a>(<span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">charas</a>);</div>
-<div class="line"><span class="lineno">   15</span>    }</div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
-<div class="ttc" id="aclassModUtil_html_aefa809513e8a6902a3b88650a9f6bcdf"><div class="ttname"><a href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ModUtil.ImportExcel</a></div><div class="ttdeci">static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00050">ModUtil.cs:50</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_aca9c1475f46110ebb2c22df786a21ddc"><div class="ttname"><a href="classSourceManager.html#aca9c1475f46110ebb2c22df786a21ddc">SourceManager.charas</a></div><div class="ttdeci">SourceChara charas</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00018">SourceManager.cs:18</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00018">SourceManager.charas</a>, <a class="el" href="ModUtil_8cs_source.html#l00050">ImportExcel()</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModUtil_8cs_source.html#l00029">LoadTypeFallback()</a>.</p>
 
 </div>
 </div>
@@ -483,9 +744,60 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00010">10</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00017">17</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GameSerializationBinder_8cs_source.html#l00009">GameSerializationBinder.BindToType()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00153">GameIO.LoadGame()</a>, and <a class="el" href="ModUtil_8cs_source.html#l00045">RegisterSerializedTypeFallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GameSerializationBinder_8cs_source.html#l00009">GameSerializationBinder.BindToType()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00153">GameIO.LoadGame()</a>, and <a class="el" href="ModUtil_8cs_source.html#l00053">RegisterSerializedTypeFallback()</a>.</p>
+
+</div>
+</div>
+<a id="a2af737667dd4cb0d3fb420c8ca7f37d8" name="a2af737667dd4cb0d3fb420c8ca7f37d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af737667dd4cb0d3fb420c8ca7f37d8">&#9670;&#160;</a></span>sourceImporter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSourceImporter.html">SourceImporter</a> ModUtil.sourceImporter = new <a class="el" href="classSourceImporter.html">SourceImporter</a>(<a class="el" href="classModUtil.html#a1828dbd4faebae5c3d6489efb7b1a441">SourceMapping</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00015">15</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00193">ModManager.ImportAllModSourceSheets()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a1828dbd4faebae5c3d6489efb7b1a441" name="a1828dbd4faebae5c3d6489efb7b1a441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1828dbd4faebae5c3d6489efb7b1a441">&#9670;&#160;</a></span>SourceMapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IReadOnlyDictionary&lt;string, <a class="el" href="classSourceData.html">SourceData</a>&gt; ModUtil.SourceMapping</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModUtil_8cs_source.html#l00019">19</a> of file <a class="el" href="ModUtil_8cs_source.html">ModUtil.cs</a>.</p>
 
 </div>
 </div>

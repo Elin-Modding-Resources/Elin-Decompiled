@@ -9,7 +9,7 @@ var classParty =
     [ "GetPartySkill", "classParty.html#a44373dd6365874ad5ea853a6a5317677", null ],
     [ "HasElement", "classParty.html#a31a1ae3612f5a42ff30b05fbbe639e14", null ],
     [ "IsCriticallyWounded", "classParty.html#a8c88de227aab1ef3e7bf739511182de0", null ],
-    [ "ModExpPartySkill", "classParty.html#aa59edd41f5ae63cf12ec6caddcd72d8a", null ],
+    [ "ModExp", "classParty.html#a79069ec25178f10c310439805b49e65d", null ],
     [ "RemoveMember", "classParty.html#a788354c34bb79aace9e073fc395f251f", null ],
     [ "Replace", "classParty.html#a6193a79fe03465e70a645403dbf39c09", null ],
     [ "SetLeader", "classParty.html#af223fdbe82be421705b1e9b3411be8db", null ],

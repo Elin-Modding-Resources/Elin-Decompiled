@@ -14,6 +14,7 @@ var classAM__Adv =
     [ "OnBecomeNoGoal", "classAM__Adv.html#a6aa32451de919cb95fe74e3b312e79f1", null ],
     [ "OnBeforeUpdate", "classAM__Adv.html#a2980b33d253c94125498c52140a34973", null ],
     [ "OnDeactivate", "classAM__Adv.html#a1f11ac4ec658095c6bc19ce942ce218b", null ],
+    [ "OnEnterChat", "classAM__Adv.html#a85e7f9ca0ed9737ed0b50306de3c9b5f", null ],
     [ "OnRenderTile", "classAM__Adv.html#a8a5948fcad54ecf35bc1836afbdf5cb8", null ],
     [ "OnUpdateCursor", "classAM__Adv.html#a6c4035ccdfcb331e62f45c725b03f539", null ],
     [ "PressedActionMove", "classAM__Adv.html#a123d578b086fed1c1fc51b9734313f3d", null ],

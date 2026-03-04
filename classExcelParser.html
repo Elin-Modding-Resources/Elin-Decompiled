@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -125,9 +125,15 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:af509e35ce4810039a877603cde638c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac98b9c4c7bf5efe1f49038004406a216"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a> (int id, bool useDefault=false)</td></tr>
 <tr class="separator:ac98b9c4c7bf5efe1f49038004406a216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bbe64eb4c0ae3211e8c8dc0f445f76e"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelParser.html#a2bbe64eb4c0ae3211e8c8dc0f445f76e">ToLetterId</a> (int id)</td></tr>
+<tr class="separator:a2bbe64eb4c0ae3211e8c8dc0f445f76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a8bead9fc565a2873e746783d3aa01"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelParser.html#a13a8bead9fc565a2873e746783d3aa01">ReportIllFormat&lt; T &gt;</a> (int id)</td></tr>
+<tr class="separator:a13a8bead9fc565a2873e746783d3aa01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:a9c8b87ac73dbebf9015f999cf1e5c24c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelParser.html#a9c8b87ac73dbebf9015f999cf1e5c24c">path</a></td></tr>
+<tr class="separator:a9c8b87ac73dbebf9015f999cf1e5c24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e037f830a26aa5b027bd155e21ae83b"><td class="memItemLeft" align="right" valign="top">static IRow&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a></td></tr>
 <tr class="separator:a5e037f830a26aa5b027bd155e21ae83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a373376895ea848135feb8708be6c3873"><td class="memItemLeft" align="right" valign="top">static IRow&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelParser.html#a373376895ea848135feb8708be6c3873">rowDefault</a></td></tr>
@@ -135,7 +141,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00004">4</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00006">6</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4fafadc15b084d07ec965f16607a9793" name="a4fafadc15b084d07ec965f16607a9793"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4fafadc15b084d07ec965f16607a9793">&#9670;&#160;</a></span>GetBool() <span class="overload">[1/2]</span></h2>
@@ -171,15 +177,15 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00046">46</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = _row;</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#a1223faafd18b79471da489cae63d46e7">GetBool</a>(col);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclassExcelParser_html_a1223faafd18b79471da489cae63d46e7"><div class="ttname"><a href="classExcelParser.html#a1223faafd18b79471da489cae63d46e7">ExcelParser.GetBool</a></div><div class="ttdeci">static bool GetBool(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00034">ExcelParser.cs:34</a></div></div>
-<div class="ttc" id="aclassExcelParser_html_a5e037f830a26aa5b027bd155e21ae83b"><div class="ttname"><a href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">ExcelParser.row</a></div><div class="ttdeci">static IRow row</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00006">ExcelParser.cs:6</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00056">56</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = _row;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#a1223faafd18b79471da489cae63d46e7">GetBool</a>(col);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="ttc" id="aclassExcelParser_html_a1223faafd18b79471da489cae63d46e7"><div class="ttname"><a href="classExcelParser.html#a1223faafd18b79471da489cae63d46e7">ExcelParser.GetBool</a></div><div class="ttdeci">static bool GetBool(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00043">ExcelParser.cs:43</a></div></div>
+<div class="ttc" id="aclassExcelParser_html_a5e037f830a26aa5b027bd155e21ae83b"><div class="ttname"><a href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">ExcelParser.row</a></div><div class="ttdeci">static IRow row</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00010">ExcelParser.cs:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00034">GetBool()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00006">row</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00043">GetBool()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00010">row</a>.</p>
 
 </div>
 </div>
@@ -207,22 +213,23 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00034">34</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> str <span class="keywordflow">switch</span></div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="stringliteral">&quot;0&quot;</span> =&gt; <span class="keyword">false</span>, </div>
-<div class="line"><span class="lineno">   40</span>            <span class="stringliteral">&quot;1&quot;</span> =&gt; <span class="keyword">true</span>, </div>
-<div class="line"><span class="lineno">   41</span>            <span class="keyword">null</span> =&gt; <span class="keyword">false</span>, </div>
-<div class="line"><span class="lineno">   42</span>            _ =&gt; <span class="keywordtype">bool</span>.Parse(str), </div>
-<div class="line"><span class="lineno">   43</span>        };</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="aclassExcelParser_html_ac98b9c4c7bf5efe1f49038004406a216"><div class="ttname"><a href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">ExcelParser.GetStr</a></div><div class="ttdeci">static string GetStr(int id, bool useDefault=false)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00113">ExcelParser.cs:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00043">43</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordtype">bool</span> result;</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> str <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keyword">null</span> =&gt; <span class="keyword">false</span>, </div>
+<div class="line"><span class="lineno">   50</span>            <span class="stringliteral">&quot;1&quot;</span> =&gt; <span class="keyword">true</span>, </div>
+<div class="line"><span class="lineno">   51</span>            <span class="stringliteral">&quot;0&quot;</span> =&gt; <span class="keyword">false</span>, </div>
+<div class="line"><span class="lineno">   52</span>            _ =&gt; <span class="keywordtype">bool</span>.TryParse(str, out result) &amp;&amp; result, </div>
+<div class="line"><span class="lineno">   53</span>        };</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclassExcelParser_html_ac98b9c4c7bf5efe1f49038004406a216"><div class="ttname"><a href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">ExcelParser.GetStr</a></div><div class="ttdeci">static string GetStr(int id, bool useDefault=false)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00151">ExcelParser.cs:151</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00046">GetBool()</a>, <a class="el" href="SourceData_8cs_source.html#l00716">SourceData&lt; T, T2 &gt;.GetBool()</a>, and <a class="el" href="TextConv_8cs_source.html#l00024">TextConv.Item.Item()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00056">GetBool()</a>, <a class="el" href="SourceData_8cs_source.html#l00886">SourceData&lt; T, T2 &gt;.GetBool()</a>, and <a class="el" href="TextConv_8cs_source.html#l00024">TextConv.Item.Item()</a>.</p>
 
 </div>
 </div>
@@ -250,19 +257,23 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00052">52</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   56</span>        {</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> <span class="keywordtype">double</span>.Parse(str);</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00062">62</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (str.IsEmpty())</div>
+<div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">double</span>.TryParse(str, out var result))</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            ReportIllFormat&lt;double&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00721">SourceData&lt; T, T2 &gt;.GetDouble()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00891">SourceData&lt; T, T2 &gt;.GetDouble()</a>.</p>
 
 </div>
 </div>
@@ -290,19 +301,23 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00062">62</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> <span class="keywordtype">float</span>.Parse(str);</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> 0f;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00076">76</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (str.IsEmpty())</div>
+<div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">float</span>.TryParse(str, out var result))</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            ReportIllFormat&lt;float&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00726">SourceData&lt; T, T2 &gt;.GetFloat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00896">SourceData&lt; T, T2 &gt;.GetFloat()</a>.</p>
 
 </div>
 </div>
@@ -330,19 +345,29 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00072">72</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">return</span> Array.ConvertAll(str.Split(<span class="charliteral">&#39;,&#39;</span>), <span class="keywordtype">float</span>.Parse);</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">float</span>[0];</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00090">90</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">if</span> (str.IsEmpty())</div>
+<div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">return</span> Array.Empty&lt;<span class="keywordtype">float</span>&gt;();</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">string</span>[] array = str.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">float</span>[] array2 = <span class="keyword">new</span> <span class="keywordtype">float</span>[array.Length];</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">float</span>.TryParse(array[i], out array2[i]))</div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                ReportIllFormat&lt;float&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  104</span>                array2[i] = 0f;</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> array2;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00731">SourceData&lt; T, T2 &gt;.GetFloatArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00901">SourceData&lt; T, T2 &gt;.GetFloatArray()</a>.</p>
 
 </div>
 </div>
@@ -380,14 +405,14 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00028">28</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = _row;</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#a55d3bd78cbe12814fc7beb83b4ce7b37">GetInt</a>(col);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclassExcelParser_html_a55d3bd78cbe12814fc7beb83b4ce7b37"><div class="ttname"><a href="classExcelParser.html#a55d3bd78cbe12814fc7beb83b4ce7b37">ExcelParser.GetInt</a></div><div class="ttdeci">static int GetInt(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00019">ExcelParser.cs:19</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00037">37</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = _row;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#a55d3bd78cbe12814fc7beb83b4ce7b37">GetInt</a>(col);</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="ttc" id="aclassExcelParser_html_a55d3bd78cbe12814fc7beb83b4ce7b37"><div class="ttname"><a href="classExcelParser.html#a55d3bd78cbe12814fc7beb83b4ce7b37">ExcelParser.GetInt</a></div><div class="ttdeci">static int GetInt(int id)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00023">ExcelParser.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00019">GetInt()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00006">row</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00023">GetInt()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00010">row</a>.</p>
 
 </div>
 </div>
@@ -415,18 +440,23 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00019">19</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (<span class="keywordtype">int</span>.TryParse(<a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>), out var result))</div>
-<div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00023">23</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (str.IsEmpty())</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">int</span>.TryParse(str, out var result))</div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            ReportIllFormat&lt;int&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TextConv_8cs_source.html#l00147">TextConv.BuildMap()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00028">GetInt()</a>, and <a class="el" href="SourceData_8cs_source.html#l00711">SourceData&lt; T, T2 &gt;.GetInt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TextConv_8cs_source.html#l00147">TextConv.BuildMap()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00037">GetInt()</a>, and <a class="el" href="SourceData_8cs_source.html#l00881">SourceData&lt; T, T2 &gt;.GetInt()</a>.</p>
 
 </div>
 </div>
@@ -454,19 +484,29 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00082">82</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">return</span> Array.ConvertAll(str.Split(<span class="charliteral">&#39;,&#39;</span>), <span class="keywordtype">int</span>.Parse);</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[0];</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00110">110</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (str.IsEmpty())</div>
+<div class="line"><span class="lineno">  114</span>        {</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">return</span> Array.Empty&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">string</span>[] array = str.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">int</span>[] array2 = <span class="keyword">new</span> <span class="keywordtype">int</span>[array.Length];</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">int</span>.TryParse(array[i], out array2[i]))</div>
+<div class="line"><span class="lineno">  122</span>            {</div>
+<div class="line"><span class="lineno">  123</span>                ReportIllFormat&lt;int&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  124</span>                array2[i] = 0;</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> array2;</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00736">SourceData&lt; T, T2 &gt;.GetIntArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00906">SourceData&lt; T, T2 &gt;.GetIntArray()</a>.</p>
 
 </div>
 </div>
@@ -504,44 +544,44 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00113">113</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>    {</div>
-<div class="line"><span class="lineno">  115</span>        IRow <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = (useDefault ? <a class="code hl_variable" href="classExcelParser.html#a373376895ea848135feb8708be6c3873">rowDefault</a> : <a class="code hl_class" href="classExcelParser.html">ExcelParser</a>.<a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>);</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  117</span>        {</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (!useDefault)</div>
-<div class="line"><span class="lineno">  119</span>            {</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>, useDefault: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  123</span>        }</div>
-<div class="line"><span class="lineno">  124</span>        ICell cell = <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>.GetCell(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classExcelParser.html#a5faa0b2de4364d0352768e30d73d3658">IsNull</a>(cell))</div>
-<div class="line"><span class="lineno">  126</span>        {</div>
-<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">if</span> (!useDefault)</div>
-<div class="line"><span class="lineno">  128</span>            {</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>, useDefault: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  130</span>            }</div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  132</span>        }</div>
-<div class="line"><span class="lineno">  133</span>        cell.SetCellType(CellType.String);</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (cell.StringCellValue == <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  135</span>        {</div>
-<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> (!useDefault)</div>
-<div class="line"><span class="lineno">  137</span>            {</div>
-<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>, useDefault: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  139</span>            }</div>
-<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> cell.StringCellValue;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="ttc" id="aclassExcelParser_html"><div class="ttname"><a href="classExcelParser.html">ExcelParser</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00004">ExcelParser.cs:5</a></div></div>
-<div class="ttc" id="aclassExcelParser_html_a373376895ea848135feb8708be6c3873"><div class="ttname"><a href="classExcelParser.html#a373376895ea848135feb8708be6c3873">ExcelParser.rowDefault</a></div><div class="ttdeci">static IRow rowDefault</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00008">ExcelParser.cs:8</a></div></div>
-<div class="ttc" id="aclassExcelParser_html_a5faa0b2de4364d0352768e30d73d3658"><div class="ttname"><a href="classExcelParser.html#a5faa0b2de4364d0352768e30d73d3658">ExcelParser.IsNull</a></div><div class="ttdeci">static bool IsNull(ICell cell)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00010">ExcelParser.cs:10</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00151">151</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>    {</div>
+<div class="line"><span class="lineno">  153</span>        IRow <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = (useDefault ? <a class="code hl_variable" href="classExcelParser.html#a373376895ea848135feb8708be6c3873">rowDefault</a> : <a class="code hl_class" href="classExcelParser.html">ExcelParser</a>.<a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>);</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (!useDefault)</div>
+<div class="line"><span class="lineno">  157</span>            {</div>
+<div class="line"><span class="lineno">  158</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>, useDefault: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  159</span>            }</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        ICell cell = <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>.GetCell(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classExcelParser.html#a5faa0b2de4364d0352768e30d73d3658">IsNull</a>(cell))</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">if</span> (!useDefault)</div>
+<div class="line"><span class="lineno">  166</span>            {</div>
+<div class="line"><span class="lineno">  167</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>, useDefault: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  168</span>            }</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span>        cell.SetCellType(CellType.String);</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span> (cell.StringCellValue == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  173</span>        {</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (!useDefault)</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>, useDefault: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> cell.StringCellValue;</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="ttc" id="aclassExcelParser_html"><div class="ttname"><a href="classExcelParser.html">ExcelParser</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00006">ExcelParser.cs:7</a></div></div>
+<div class="ttc" id="aclassExcelParser_html_a373376895ea848135feb8708be6c3873"><div class="ttname"><a href="classExcelParser.html#a373376895ea848135feb8708be6c3873">ExcelParser.rowDefault</a></div><div class="ttdeci">static IRow rowDefault</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00012">ExcelParser.cs:12</a></div></div>
+<div class="ttc" id="aclassExcelParser_html_a5faa0b2de4364d0352768e30d73d3658"><div class="ttname"><a href="classExcelParser.html#a5faa0b2de4364d0352768e30d73d3658">ExcelParser.IsNull</a></div><div class="ttdeci">static bool IsNull(ICell cell)</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00014">ExcelParser.cs:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00010">IsNull()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00006">row</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00008">rowDefault</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00014">IsNull()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00010">row</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00012">rowDefault</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00034">GetBool()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00052">GetDouble()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00062">GetFloat()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00072">GetFloatArray()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00019">GetInt()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00082">GetIntArray()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>, <a class="el" href="SourceData_8cs_source.html#l00751">SourceData&lt; T, T2 &gt;.GetStr()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00102">GetString()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00092">GetStringArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00043">GetBool()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00062">GetDouble()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00076">GetFloat()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00090">GetFloatArray()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00023">GetInt()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00110">GetIntArray()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>, <a class="el" href="SourceData_8cs_source.html#l00921">SourceData&lt; T, T2 &gt;.GetStr()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00140">GetString()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00130">GetStringArray()</a>.</p>
 
 </div>
 </div>
@@ -579,13 +619,13 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00107">107</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  108</span>    {</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = _row;</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(col);</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00145">145</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a> = _row;</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(col);</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00006">row</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00010">row</a>.</p>
 
 </div>
 </div>
@@ -613,14 +653,14 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00102">102</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>) ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  105</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00140">140</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>) ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00746">SourceData&lt; T, T2 &gt;.GetString()</a>, and <a class="el" href="ExcelData_8cs_source.html#l00151">ExcelData.Override()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00916">SourceData&lt; T, T2 &gt;.GetString()</a>, and <a class="el" href="ExcelData_8cs_source.html#l00151">ExcelData.Override()</a>.</p>
 
 </div>
 </div>
@@ -648,19 +688,19 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00092">92</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   96</span>        {</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> str.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00130">130</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">string</span> str = <a class="code hl_function" href="classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216">GetStr</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">return</span> str.Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><span class="lineno">  136</span>        }</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">return</span> Array.Empty&lt;<span class="keywordtype">string</span>&gt;();</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">References <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00741">SourceData&lt; T, T2 &gt;.GetStringArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00911">SourceData&lt; T, T2 &gt;.GetStringArray()</a>.</p>
 
 </div>
 </div>
@@ -688,20 +728,127 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00010">10</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (cell != <span class="keyword">null</span> &amp;&amp; cell.CellType != CellType.Blank)</div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> cell.CellType == CellType.Unknown;</div>
-<div class="line"><span class="lineno">   15</span>        }</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   17</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00014">14</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">if</span> (cell != <span class="keyword">null</span> &amp;&amp; cell.CellType != CellType.Blank)</div>
+<div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> cell.CellType == CellType.Unknown;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
 </div>
 </div>
+<a id="a13a8bead9fc565a2873e746783d3aa01" name="a13a8bead9fc565a2873e746783d3aa01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a8bead9fc565a2873e746783d3aa01">&#9670;&#160;</a></span>ReportIllFormat&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ExcelParser.ReportIllFormat&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00195">195</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordtype">string</span> name = typeof(T).Name;</div>
+<div class="line"><span class="lineno">  199</span>        ICell cell = <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>.Cells.TryGet(<span class="keywordtype">id</span>, returnNull: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordtype">string</span> value = ((row.RowNum &lt; 3) ? <span class="stringliteral">&quot;, SourceData begins at the 4th row. 3rd row is the default value row.&quot;</span> : <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;, default:&#39;{rowDefault.Cells.TryGet(id, returnNull: true)}&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>        stringBuilder.AppendLine(<span class="stringliteral">&quot;$source ill-format file: &quot;</span> + <a class="code hl_variable" href="classExcelParser.html#a9c8b87ac73dbebf9015f999cf1e5c24c">path</a>);</div>
+<div class="line"><span class="lineno">  202</span>        stringBuilder.Append(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;row#{row.RowNum + 1}, cell&#39;{id + 1}&#39;/&#39;{ToLetterId(id)}&#39;, expected:&#39;{name}&#39;, read:&#39;{cell}&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  203</span>        stringBuilder.AppendLine(value);</div>
+<div class="line"><span class="lineno">  204</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(stringBuilder);</div>
+<div class="line"><span class="lineno">  205</span>    }</div>
+<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00085">ModManager.cs:85</a></div></div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
+<div class="ttc" id="aclassExcelParser_html_a9c8b87ac73dbebf9015f999cf1e5c24c"><div class="ttname"><a href="classExcelParser.html#a9c8b87ac73dbebf9015f999cf1e5c24c">ExcelParser.path</a></div><div class="ttdeci">static string path</div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00008">ExcelParser.cs:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ExcelParser_8cs_source.html#l00008">path</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00010">row</a>.</p>
+
+</div>
+</div>
+<a id="a2bbe64eb4c0ae3211e8c8dc0f445f76e" name="a2bbe64eb4c0ae3211e8c8dc0f445f76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bbe64eb4c0ae3211e8c8dc0f445f76e">&#9670;&#160;</a></span>ToLetterId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string ExcelParser.ToLetterId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00183">183</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>    {</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">while</span> (<span class="keywordtype">id</span> &gt;= 0)</div>
+<div class="line"><span class="lineno">  187</span>        {</div>
+<div class="line"><span class="lineno">  188</span>            text = (char)(<span class="keywordtype">id</span> % 26 + 65) + text;</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordtype">id</span> /= 26;</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordtype">id</span>--;</div>
+<div class="line"><span class="lineno">  191</span>        }</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9c8b87ac73dbebf9015f999cf1e5c24c" name="a9c8b87ac73dbebf9015f999cf1e5c24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c8b87ac73dbebf9015f999cf1e5c24c">&#9670;&#160;</a></span>path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ExcelParser.path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00008">8</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00195">ReportIllFormat&lt; T &gt;()</a>.</p>
+
+</div>
+</div>
 <a id="a5e037f830a26aa5b027bd155e21ae83b" name="a5e037f830a26aa5b027bd155e21ae83b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e037f830a26aa5b027bd155e21ae83b">&#9670;&#160;</a></span>row</h2>
 
@@ -722,9 +869,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00006">6</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00010">10</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00046">GetBool()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00028">GetInt()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00107">GetString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00056">GetBool()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00037">GetInt()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>, <a class="el" href="ExcelParser_8cs_source.html#l00145">GetString()</a>, and <a class="el" href="ExcelParser_8cs_source.html#l00195">ReportIllFormat&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -748,9 +895,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00008">8</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ExcelParser_8cs_source.html#l00012">12</a> of file <a class="el" href="ExcelParser_8cs_source.html">ExcelParser.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00113">GetStr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExcelParser_8cs_source.html#l00151">GetStr()</a>.</p>
 
 </div>
 </div>

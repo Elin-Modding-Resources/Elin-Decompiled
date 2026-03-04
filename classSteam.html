@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -256,8 +256,6 @@ Private Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
 <div class="line"><span class="lineno">   34</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l00861">CoreDebug.UpdateInput()</a>.</p>
-
 </div>
 </div>
 <a id="ad02beae41acbf0ce08577d502edfb641" name="ad02beae41acbf0ce08577d502edfb641"></a>
@@ -284,39 +282,39 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00197">197</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  198</span>    {</div>
-<div class="line"><span class="lineno">  199</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName + <span class="stringliteral">&quot;/preview.jpg&quot;</span>);</div>
-<div class="line"><span class="lineno">  200</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName);</div>
-<div class="line"><span class="lineno">  201</span>        WorkshopItemData workshopItemData = <span class="keywordflow">default</span>(WorkshopItemData);</div>
-<div class="line"><span class="lineno">  202</span>        workshopItemData.appId = <a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId;</div>
-<div class="line"><span class="lineno">  203</span>        workshopItemData.title = p.<a class="code hl_variable" href="classBaseModPackage.html#af7e9ef827bae0391356fc343de2ce63e">title</a>;</div>
-<div class="line"><span class="lineno">  204</span>        workshopItemData.description = p.<a class="code hl_variable" href="classBaseModPackage.html#af237d8eedaa4198ca8715b9c135374c8">description</a>;</div>
-<div class="line"><span class="lineno">  205</span>        workshopItemData.content = directoryInfo;</div>
-<div class="line"><span class="lineno">  206</span>        workshopItemData.preview = fileInfo;</div>
-<div class="line"><span class="lineno">  207</span>        workshopItemData.metadata = p.id ?? <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  208</span>        workshopItemData.tags = p.<a class="code hl_variable" href="classBaseModPackage.html#a563934f48e99a229420164d09e366f9a">tags</a>;</div>
-<div class="line"><span class="lineno">  209</span>        workshopItemData.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic;</div>
-<div class="line"><span class="lineno">  210</span>        WorkshopItemData result = workshopItemData;</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">switch</span> (p.<a class="code hl_variable" href="classBaseModPackage.html#a5631997e1a7639c5162d468254ca34b3">visibility</a>)</div>
-<div class="line"><span class="lineno">  212</span>        {</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Unlisted&quot;</span>:</div>
-<div class="line"><span class="lineno">  214</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityUnlisted;</div>
-<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Private&quot;</span>:</div>
-<div class="line"><span class="lineno">  217</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate;</div>
-<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;FriendsOnly&quot;</span>:</div>
-<div class="line"><span class="lineno">  220</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityFriendsOnly;</div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  222</span>        }</div>
-<div class="line"><span class="lineno">  223</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(App.Client.Owner.id);</div>
-<div class="line"><span class="lineno">  224</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(result.appId);</div>
-<div class="line"><span class="lineno">  225</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(p.<a class="code hl_variable" href="classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412">id</a>);</div>
-<div class="line"><span class="lineno">  226</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(directoryInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + directoryInfo.FullName);</div>
-<div class="line"><span class="lineno">  227</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(fileInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + fileInfo.FullName);</div>
-<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00201">201</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>    {</div>
+<div class="line"><span class="lineno">  203</span>        FileInfo fileInfo = <span class="keyword">new</span> FileInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName + <span class="stringliteral">&quot;/preview.jpg&quot;</span>);</div>
+<div class="line"><span class="lineno">  204</span>        DirectoryInfo directoryInfo = <span class="keyword">new</span> DirectoryInfo(p.<a class="code hl_variable" href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">dirInfo</a>.FullName);</div>
+<div class="line"><span class="lineno">  205</span>        WorkshopItemData workshopItemData = <span class="keywordflow">default</span>(WorkshopItemData);</div>
+<div class="line"><span class="lineno">  206</span>        workshopItemData.appId = <a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.applicationId;</div>
+<div class="line"><span class="lineno">  207</span>        workshopItemData.title = p.<a class="code hl_variable" href="classBaseModPackage.html#af7e9ef827bae0391356fc343de2ce63e">title</a>;</div>
+<div class="line"><span class="lineno">  208</span>        workshopItemData.description = p.<a class="code hl_variable" href="classBaseModPackage.html#af237d8eedaa4198ca8715b9c135374c8">description</a>;</div>
+<div class="line"><span class="lineno">  209</span>        workshopItemData.content = directoryInfo;</div>
+<div class="line"><span class="lineno">  210</span>        workshopItemData.preview = fileInfo;</div>
+<div class="line"><span class="lineno">  211</span>        workshopItemData.metadata = p.id ?? <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  212</span>        workshopItemData.tags = p.<a class="code hl_variable" href="classBaseModPackage.html#a563934f48e99a229420164d09e366f9a">tags</a>;</div>
+<div class="line"><span class="lineno">  213</span>        workshopItemData.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic;</div>
+<div class="line"><span class="lineno">  214</span>        WorkshopItemData result = workshopItemData;</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">switch</span> (p.<a class="code hl_variable" href="classBaseModPackage.html#a5631997e1a7639c5162d468254ca34b3">visibility</a>)</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Unlisted&quot;</span>:</div>
+<div class="line"><span class="lineno">  218</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityUnlisted;</div>
+<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;Private&quot;</span>:</div>
+<div class="line"><span class="lineno">  221</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate;</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  223</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;FriendsOnly&quot;</span>:</div>
+<div class="line"><span class="lineno">  224</span>            result.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityFriendsOnly;</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="line"><span class="lineno">  227</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(App.Client.Owner.id);</div>
+<div class="line"><span class="lineno">  228</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(result.appId);</div>
+<div class="line"><span class="lineno">  229</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(p.<a class="code hl_variable" href="classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412">id</a>);</div>
+<div class="line"><span class="lineno">  230</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(directoryInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + directoryInfo.FullName);</div>
+<div class="line"><span class="lineno">  231</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(fileInfo.Exists + <span class="stringliteral">&quot;/&quot;</span> + fileInfo.FullName);</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  233</span>    }</div>
 <div class="ttc" id="aclassBaseModPackage_html_a160bcff3504827d3ff76e373f60a1a67"><div class="ttname"><a href="classBaseModPackage.html#a160bcff3504827d3ff76e373f60a1a67">BaseModPackage.dirInfo</a></div><div class="ttdeci">DirectoryInfo dirInfo</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00046">BaseModPackage.cs:46</a></div></div>
 <div class="ttc" id="aclassBaseModPackage_html_a1d33fc6f588633432b4f2fadce10d412"><div class="ttname"><a href="classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412">BaseModPackage.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00018">BaseModPackage.cs:18</a></div></div>
 <div class="ttc" id="aclassBaseModPackage_html_a5631997e1a7639c5162d468254ca34b3"><div class="ttname"><a href="classBaseModPackage.html#a5631997e1a7639c5162d468254ca34b3">BaseModPackage.visibility</a></div><div class="ttdeci">string visibility</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00022">BaseModPackage.cs:22</a></div></div>
@@ -327,7 +325,7 @@ Private Member Functions</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="BaseModPackage_8cs_source.html#l00020">BaseModPackage.description</a>, <a class="el" href="BaseModPackage_8cs_source.html#l00046">BaseModPackage.dirInfo</a>, <a class="el" href="BaseModPackage_8cs_source.html#l00018">BaseModPackage.id</a>, <a class="el" href="Steam_8cs_source.html#l00013">steamworks</a>, <a class="el" href="BaseModPackage_8cs_source.html#l00024">BaseModPackage.tags</a>, <a class="el" href="BaseModPackage_8cs_source.html#l00012">BaseModPackage.title</a>, and <a class="el" href="BaseModPackage_8cs_source.html#l00022">BaseModPackage.visibility</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00123">CreateUserContent2()</a>, and <a class="el" href="Steam_8cs_source.html#l00174">UpdateUserContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00127">CreateUserContent2()</a>, and <a class="el" href="Steam_8cs_source.html#l00178">UpdateUserContent()</a>.</p>
 
 </div>
 </div>
@@ -355,25 +353,25 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00111">111</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>    {</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_function" href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">Start</a>(<span class="stringliteral">&quot;Uploading&quot;</span>).<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a> = delegate</div>
-<div class="line"><span class="lineno">  114</span>        {</div>
-<div class="line"><span class="lineno">  115</span>        };</div>
-<div class="line"><span class="lineno">  116</span>        p.<a class="code hl_function" href="classBaseModPackage.html#a2c2fffb215cd4d11cba9c200563d1ade">UpdateMeta</a>(updateOnly: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a> = p;</div>
-<div class="line"><span class="lineno">  118</span>        UgcQuery myPublished = UgcQuery.GetMyPublished();</div>
-<div class="line"><span class="lineno">  119</span>        myPublished.SetReturnKeyValueTags(tags: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  120</span>        myPublished.Execute(<a class="code hl_function" href="classSteam.html#ad9a90afb6714ac496ac55895ebc2a139">CreateUserContent2</a>);</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00115">115</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        <a class="code hl_class" href="classLayerProgress.html">LayerProgress</a>.<a class="code hl_function" href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">Start</a>(<span class="stringliteral">&quot;Uploading&quot;</span>).<a class="code hl_variable" href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">onCancel</a> = delegate</div>
+<div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>        };</div>
+<div class="line"><span class="lineno">  120</span>        p.<a class="code hl_function" href="classBaseModPackage.html#a2c2fffb215cd4d11cba9c200563d1ade">UpdateMeta</a>(updateOnly: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a> = p;</div>
+<div class="line"><span class="lineno">  122</span>        UgcQuery myPublished = UgcQuery.GetMyPublished();</div>
+<div class="line"><span class="lineno">  123</span>        myPublished.SetReturnKeyValueTags(tags: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  124</span>        myPublished.Execute(<a class="code hl_function" href="classSteam.html#ad9a90afb6714ac496ac55895ebc2a139">CreateUserContent2</a>);</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
 <div class="ttc" id="aclassBaseModPackage_html_a2c2fffb215cd4d11cba9c200563d1ade"><div class="ttname"><a href="classBaseModPackage.html#a2c2fffb215cd4d11cba9c200563d1ade">BaseModPackage.UpdateMeta</a></div><div class="ttdeci">void UpdateMeta(bool updateOnly=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00065">BaseModPackage.cs:65</a></div></div>
 <div class="ttc" id="aclassLayerProgress_html"><div class="ttname"><a href="classLayerProgress.html">LayerProgress</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00008">LayerProgress.cs:9</a></div></div>
 <div class="ttc" id="aclassLayerProgress_html_a0b1344b3c0c9b2b18a4b2102f8126b85"><div class="ttname"><a href="classLayerProgress.html#a0b1344b3c0c9b2b18a4b2102f8126b85">LayerProgress.onCancel</a></div><div class="ttdeci">Action onCancel</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00034">LayerProgress.cs:34</a></div></div>
 <div class="ttc" id="aclassLayerProgress_html_a8b560e07065b5164a6bc68750bce6c78"><div class="ttname"><a href="classLayerProgress.html#a8b560e07065b5164a6bc68750bce6c78">LayerProgress.Start</a></div><div class="ttdeci">static LayerProgress Start(string text, Action onComplete=null)</div><div class="ttdef"><b>Definition:</b> <a href="LayerProgress_8cs_source.html#l00100">LayerProgress.cs:100</a></div></div>
 <div class="ttc" id="aclassSteam_html_a9655d73df0490d47b8a9b8fa3db6d247"><div class="ttname"><a href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">Steam.currentPackage</a></div><div class="ttdeci">BaseModPackage currentPackage</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00019">Steam.cs:19</a></div></div>
-<div class="ttc" id="aclassSteam_html_ad9a90afb6714ac496ac55895ebc2a139"><div class="ttname"><a href="classSteam.html#ad9a90afb6714ac496ac55895ebc2a139">Steam.CreateUserContent2</a></div><div class="ttdeci">void CreateUserContent2(UgcQuery query)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00123">Steam.cs:123</a></div></div>
+<div class="ttc" id="aclassSteam_html_ad9a90afb6714ac496ac55895ebc2a139"><div class="ttname"><a href="classSteam.html#ad9a90afb6714ac496ac55895ebc2a139">Steam.CreateUserContent2</a></div><div class="ttdeci">void CreateUserContent2(UgcQuery query)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00127">Steam.cs:127</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00123">CreateUserContent2()</a>, <a class="el" href="Steam_8cs_source.html#l00019">currentPackage</a>, <a class="el" href="LayerProgress_8cs_source.html#l00034">LayerProgress.onCancel</a>, <a class="el" href="LayerProgress_8cs_source.html#l00100">LayerProgress.Start()</a>, and <a class="el" href="BaseModPackage_8cs_source.html#l00065">BaseModPackage.UpdateMeta()</a>.</p>
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00127">CreateUserContent2()</a>, <a class="el" href="Steam_8cs_source.html#l00019">currentPackage</a>, <a class="el" href="LayerProgress_8cs_source.html#l00034">LayerProgress.onCancel</a>, <a class="el" href="LayerProgress_8cs_source.html#l00100">LayerProgress.Start()</a>, and <a class="el" href="BaseModPackage_8cs_source.html#l00065">BaseModPackage.UpdateMeta()</a>.</p>
 
 </div>
 </div>
@@ -401,67 +399,67 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00123">123</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>    {</div>
-<div class="line"><span class="lineno">  125</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content2&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> baseModPackage = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (query.ResultsList != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(query.ResultsList.Count);</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">foreach</span> (WorkshopItem results <span class="keywordflow">in</span> query.ResultsList)</div>
+<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00127">127</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content2&quot;</span>);</div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> baseModPackage = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span> (query.ResultsList != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  132</span>        {</div>
-<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> (results.keyValueTags == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  134</span>            {</div>
-<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  136</span>            }</div>
-<div class="line"><span class="lineno">  137</span>            StringKeyValuePair[] keyValueTags = results.keyValueTags;</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; keyValueTags.Length; i++)</div>
-<div class="line"><span class="lineno">  139</span>            {</div>
-<div class="line"><span class="lineno">  140</span>                StringKeyValuePair stringKeyValuePair = keyValueTags[i];</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">if</span> (stringKeyValuePair.key == <span class="stringliteral">&quot;id&quot;</span> &amp;&amp; stringKeyValuePair.value == baseModPackage.<a class="code hl_variable" href="classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412">id</a> &amp;&amp; results.Owner.id == App.Client.Owner.id)</div>
-<div class="line"><span class="lineno">  142</span>                {</div>
-<div class="line"><span class="lineno">  143</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
-<div class="line"><span class="lineno">  144</span>                    <a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(results.FileId);</div>
-<div class="line"><span class="lineno">  145</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  146</span>                }</div>
-<div class="line"><span class="lineno">  147</span>            }</div>
-<div class="line"><span class="lineno">  148</span>        }</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content&quot;</span>);</div>
-<div class="line"><span class="lineno">  150</span>        <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(baseModPackage).Create(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">new</span> WorkshopItemKeyValueTag[1]</div>
-<div class="line"><span class="lineno">  151</span>        {</div>
-<div class="line"><span class="lineno">  152</span>            <span class="keyword">new</span> WorkshopItemKeyValueTag</div>
-<div class="line"><span class="lineno">  153</span>            {</div>
-<div class="line"><span class="lineno">  154</span>                key = <span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line"><span class="lineno">  155</span>                value = baseModPackage.id</div>
-<div class="line"><span class="lineno">  156</span>            }</div>
-<div class="line"><span class="lineno">  157</span>        }, delegate(WorkshopItemDataCreateStatus result)</div>
-<div class="line"><span class="lineno">  158</span>        {</div>
-<div class="line"><span class="lineno">  159</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (result.hasError)</div>
-<div class="line"><span class="lineno">  161</span>            {</div>
-<div class="line"><span class="lineno">  162</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_publish_error&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(result.errorMessage);</div>
-<div class="line"><span class="lineno">  164</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
-<div class="line"><span class="lineno">  165</span>            }</div>
-<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  167</span>            {</div>
-<div class="line"><span class="lineno">  168</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_created&quot;</span>);</div>
-<div class="line"><span class="lineno">  169</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;created&quot;</span>);</div>
-<div class="line"><span class="lineno">  170</span>            }</div>
-<div class="line"><span class="lineno">  171</span>        });</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<div class="line"><span class="lineno">  133</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(query.ResultsList.Count);</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">foreach</span> (WorkshopItem results <span class="keywordflow">in</span> query.ResultsList)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">if</span> (results.keyValueTags == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  138</span>            {</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+<div class="line"><span class="lineno">  141</span>            StringKeyValuePair[] keyValueTags = results.keyValueTags;</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; keyValueTags.Length; i++)</div>
+<div class="line"><span class="lineno">  143</span>            {</div>
+<div class="line"><span class="lineno">  144</span>                StringKeyValuePair stringKeyValuePair = keyValueTags[i];</div>
+<div class="line"><span class="lineno">  145</span>                <span class="keywordflow">if</span> (stringKeyValuePair.key == <span class="stringliteral">&quot;id&quot;</span> &amp;&amp; stringKeyValuePair.value == baseModPackage.<a class="code hl_variable" href="classBaseModPackage.html#a1d33fc6f588633432b4f2fadce10d412">id</a> &amp;&amp; results.Owner.id == App.Client.Owner.id)</div>
+<div class="line"><span class="lineno">  146</span>                {</div>
+<div class="line"><span class="lineno">  147</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
+<div class="line"><span class="lineno">  148</span>                    <a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(results.FileId);</div>
+<div class="line"><span class="lineno">  149</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  150</span>                }</div>
+<div class="line"><span class="lineno">  151</span>            }</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Creating Content&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>        <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(baseModPackage).Create(<span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">new</span> WorkshopItemKeyValueTag[1]</div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keyword">new</span> WorkshopItemKeyValueTag</div>
+<div class="line"><span class="lineno">  157</span>            {</div>
+<div class="line"><span class="lineno">  158</span>                key = <span class="stringliteral">&quot;id&quot;</span>,</div>
+<div class="line"><span class="lineno">  159</span>                value = baseModPackage.id</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>        }, delegate(WorkshopItemDataCreateStatus result)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">if</span> (result.hasError)</div>
+<div class="line"><span class="lineno">  165</span>            {</div>
+<div class="line"><span class="lineno">  166</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_publish_error&quot;</span>);</div>
+<div class="line"><span class="lineno">  167</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(result.errorMessage);</div>
+<div class="line"><span class="lineno">  168</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  171</span>            {</div>
+<div class="line"><span class="lineno">  172</span>                <a class="code hl_class" href="classDialog.html">Dialog</a>.<a class="code hl_function" href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Ok</a>(<span class="stringliteral">&quot;mod_created&quot;</span>);</div>
+<div class="line"><span class="lineno">  173</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;created&quot;</span>);</div>
+<div class="line"><span class="lineno">  174</span>            }</div>
+<div class="line"><span class="lineno">  175</span>        });</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
 <div class="ttc" id="aclassBaseModPackage_html"><div class="ttname"><a href="classBaseModPackage.html">BaseModPackage</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseModPackage_8cs_source.html#l00006">BaseModPackage.cs:7</a></div></div>
 <div class="ttc" id="aclassDialog_html"><div class="ttname"><a href="classDialog.html">Dialog</a></div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00006">Dialog.cs:7</a></div></div>
-<div class="ttc" id="aclassDialog_html_a8cf00750d0a8ed4e4212aa3956dead48"><div class="ttname"><a href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Dialog.Ok</a></div><div class="ttdeci">static Dialog Ok(string langDetail, Action action=null)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00220">Dialog.cs:220</a></div></div>
+<div class="ttc" id="aclassDialog_html_a8cf00750d0a8ed4e4212aa3956dead48"><div class="ttname"><a href="classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48">Dialog.Ok</a></div><div class="ttdeci">static Dialog Ok(string langDetail, Action action=null)</div><div class="ttdef"><b>Definition:</b> <a href="Dialog_8cs_source.html#l00230">Dialog.cs:230</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00017">EClass.cs:17</a></div></div>
-<div class="ttc" id="aclassSteam_html_a18718c8872733ffe0e2d561c94abcc6f"><div class="ttname"><a href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">Steam.UpdateUserContent</a></div><div class="ttdeci">void UpdateUserContent(PublishedFileId_t fileId)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00174">Steam.cs:174</a></div></div>
-<div class="ttc" id="aclassSteam_html_ad02beae41acbf0ce08577d502edfb641"><div class="ttname"><a href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">Steam.CreateItemData</a></div><div class="ttdeci">WorkshopItemData CreateItemData(BaseModPackage p)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00197">Steam.cs:197</a></div></div>
+<div class="ttc" id="aclassSteam_html_a18718c8872733ffe0e2d561c94abcc6f"><div class="ttname"><a href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">Steam.UpdateUserContent</a></div><div class="ttdeci">void UpdateUserContent(PublishedFileId_t fileId)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00178">Steam.cs:178</a></div></div>
+<div class="ttc" id="aclassSteam_html_ad02beae41acbf0ce08577d502edfb641"><div class="ttname"><a href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">Steam.CreateItemData</a></div><div class="ttdeci">WorkshopItemData CreateItemData(BaseModPackage p)</div><div class="ttdef"><b>Definition:</b> <a href="Steam_8cs_source.html#l00201">Steam.cs:201</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00197">CreateItemData()</a>, <a class="el" href="Steam_8cs_source.html#l00019">currentPackage</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Dialog_8cs_source.html#l00220">Dialog.Ok()</a>, <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>, and <a class="el" href="Steam_8cs_source.html#l00174">UpdateUserContent()</a>.</p>
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00201">CreateItemData()</a>, <a class="el" href="Steam_8cs_source.html#l00019">currentPackage</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Dialog_8cs_source.html#l00230">Dialog.Ok()</a>, <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>, and <a class="el" href="Steam_8cs_source.html#l00178">UpdateUserContent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00111">CreateUserContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00115">CreateUserContent()</a>.</p>
 
 </div>
 </div>
@@ -491,40 +489,46 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00051">51</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classBaseCore.html">BaseCore</a>.<a class="code hl_variable" href="classBaseCore.html#a45471b02b87fd352f4ff62aeddaa01a3">IsOffline</a>)</div>
 <div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">foreach</span> (AchievementObject achievement <span class="keywordflow">in</span> <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements)</div>
-<div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (achievement.Id == <span class="keywordtype">id</span>.ToString())</div>
-<div class="line"><span class="lineno">   58</span>                {</div>
-<div class="line"><span class="lineno">   59</span>                    <span class="keywordflow">if</span> (achievement.IsAchieved)</div>
-<div class="line"><span class="lineno">   60</span>                    {</div>
-<div class="line"><span class="lineno">   61</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   62</span>                    }</div>
-<div class="line"><span class="lineno">   63</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">foreach</span> (AchievementObject achievement <span class="keywordflow">in</span> <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">if</span> (achievement.Id == <span class="keywordtype">id</span>.ToString())</div>
+<div class="line"><span class="lineno">   62</span>                {</div>
+<div class="line"><span class="lineno">   63</span>                    <span class="keywordflow">if</span> (achievement.IsAchieved)</div>
 <div class="line"><span class="lineno">   64</span>                    {</div>
-<div class="line"><span class="lineno">   65</span>                        achievement.Unlock();</div>
-<div class="line"><span class="lineno">   66</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_acv&quot;</span>.lang(achievement.Name), Resources.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Icon/Achievement/acv_&quot;</span> + <span class="keywordtype">id</span>));</div>
-<div class="line"><span class="lineno">   67</span>                        SE.Play(<span class="stringliteral">&quot;achievement&quot;</span>);</div>
-<div class="line"><span class="lineno">   68</span>                        achievement.Store();</div>
-<div class="line"><span class="lineno">   69</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   70</span>                    }</div>
-<div class="line"><span class="lineno">   71</span>                    <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">   72</span>                    {</div>
-<div class="line"><span class="lineno">   73</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;Error Achievement 1:&quot;</span> + ex);</div>
-<div class="line"><span class="lineno">   74</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   75</span>                    }</div>
-<div class="line"><span class="lineno">   76</span>                }</div>
-<div class="line"><span class="lineno">   77</span>            }</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">catch</span> (Exception ex2)</div>
-<div class="line"><span class="lineno">   80</span>        {</div>
-<div class="line"><span class="lineno">   81</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;Error Achievement 2:&quot;</span> + ex2);</div>
+<div class="line"><span class="lineno">   65</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   66</span>                    }</div>
+<div class="line"><span class="lineno">   67</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   68</span>                    {</div>
+<div class="line"><span class="lineno">   69</span>                        achievement.Unlock();</div>
+<div class="line"><span class="lineno">   70</span>                        achievement.Store();</div>
+<div class="line"><span class="lineno">   71</span>                        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.Say(<span class="stringliteral">&quot;sys_acv&quot;</span>.lang(achievement.Name), Resources.Load&lt;Sprite&gt;(<span class="stringliteral">&quot;Media/Graphics/Icon/Achievement/acv_&quot;</span> + <span class="keywordtype">id</span>));</div>
+<div class="line"><span class="lineno">   72</span>                        SE.Play(<span class="stringliteral">&quot;achievement&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   74</span>                    }</div>
+<div class="line"><span class="lineno">   75</span>                    <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">   76</span>                    {</div>
+<div class="line"><span class="lineno">   77</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;Error Achievement 1:&quot;</span> + ex);</div>
+<div class="line"><span class="lineno">   78</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   79</span>                    }</div>
+<div class="line"><span class="lineno">   80</span>                }</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
 <div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Achievement not found:&quot;</span> + <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">catch</span> (Exception ex2)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;Error Achievement 2:&quot;</span> + ex2);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Achievement not found:&quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="ttc" id="aclassBaseCore_html"><div class="ttname"><a href="classBaseCore.html">BaseCore</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00007">BaseCore.cs:8</a></div></div>
+<div class="ttc" id="aclassBaseCore_html_a45471b02b87fd352f4ff62aeddaa01a3"><div class="ttname"><a href="classBaseCore.html#a45471b02b87fd352f4ff62aeddaa01a3">BaseCore.IsOffline</a></div><div class="ttdeci">static bool IsOffline</div><div class="ttdef"><b>Definition:</b> <a href="BaseCore_8cs_source.html#l00009">BaseCore.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Steam_8cs_source.html#l00011">Instance</a>, <a class="el" href="Steam_8cs_source.html#l00013">steamworks</a>, and <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="Steam_8cs_source.html#l00011">Instance</a>, <a class="el" href="BaseCore_8cs_source.html#l00009">BaseCore.IsOffline</a>, <a class="el" href="Steam_8cs_source.html#l00013">steamworks</a>, and <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07368">Chara._ShowDialog()</a>, <a class="el" href="FactionBranch_8cs_source.html#l01437">FactionBranch.AddMemeber()</a>, <a class="el" href="Chara_8cs_source.html#l05392">Chara.Die()</a>, <a class="el" href="Player_8cs_source.html#l02563">Player.ModKarma()</a>, <a class="el" href="UIHangIcon_8cs_source.html#l00036">UIHangIcon.OnClickCorner()</a>, <a class="el" href="TraitDrink_8cs_source.html#l00164">TraitDrink.OnDrink()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00078">AI_Fish.ProgressFish.OnProgressComplete()</a>, <a class="el" href="FoodEffect_8cs_source.html#l00012">FoodEffect.Proc()</a>, <a class="el" href="Chara_8cs_source.html#l07170">Chara.ShowDialog()</a>, <a class="el" href="Trait_8cs_source.html#l00919">Trait.TryOpenLock()</a>, <a class="el" href="CoreDebug_8cs_source.html#l00806">CoreDebug.UpdateAlways()</a>, and <a class="el" href="Player_8cs_source.html#l02435">Player.UpdateNyan()</a>.</p>
 
@@ -569,7 +573,7 @@ Private Member Functions</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Core_8cs_source.html#l00070">Core.config</a>, <a class="el" href="EClass_8cs_source.html#l00007">EClass.core</a>, and <a class="el" href="CoreConfig_8cs_source.html#l00741">CoreConfig.HasBackerRewardCode()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00036">CheckDLC()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00716">FactionBranch.ReceivePackages()</a>, and <a class="el" href="Steam_8cs_source.html#l00105">TestHasDLC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00036">CheckDLC()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00716">FactionBranch.ReceivePackages()</a>, and <a class="el" href="Steam_8cs_source.html#l00109">TestHasDLC()</a>.</p>
 
 </div>
 </div>
@@ -630,19 +634,19 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00095">95</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
-<div class="line"><span class="lineno">   97</span>        AchievementObject achievementObject = <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements.First((AchievementObject a) =&gt; a.Id == <span class="keywordtype">id</span>.ToString());</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (achievementObject != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   99</span>        {</div>
-<div class="line"><span class="lineno">  100</span>            achievementObject.ClearAchievement();</div>
-<div class="line"><span class="lineno">  101</span>            achievementObject.Store();</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00099">99</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        AchievementObject achievementObject = <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements.First((AchievementObject a) =&gt; a.Id == <span class="keywordtype">id</span>.ToString());</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (achievementObject != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  103</span>        {</div>
+<div class="line"><span class="lineno">  104</span>            achievementObject.ClearAchievement();</div>
+<div class="line"><span class="lineno">  105</span>            achievementObject.Store();</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Steam_8cs_source.html#l00011">Instance</a>, and <a class="el" href="Steam_8cs_source.html#l00013">steamworks</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l02250">CoreDebug.ResetAchievement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l02248">CoreDebug.ResetAchievement()</a>.</p>
 
 </div>
 </div>
@@ -669,18 +673,18 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00086">86</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">foreach</span> (AchievementObject achievement <span class="keywordflow">in</span> <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements)</div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            achievement.ClearAchievement();</div>
-<div class="line"><span class="lineno">   91</span>            achievement.Store();</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00090">90</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">foreach</span> (AchievementObject achievement <span class="keywordflow">in</span> <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            achievement.ClearAchievement();</div>
+<div class="line"><span class="lineno">   95</span>            achievement.Store();</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Steam_8cs_source.html#l00011">Instance</a>, and <a class="el" href="Steam_8cs_source.html#l00013">steamworks</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l02243">CoreDebug.ResetAllAchievement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CoreDebug_8cs_source.html#l02241">CoreDebug.ResetAllAchievement()</a>.</p>
 
 </div>
 </div>
@@ -707,11 +711,11 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00105">105</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_function" href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">HasDLC</a>(<a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.Test));</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_function" href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">HasDLC</a>(<a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.CursedManor));</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00109">109</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_function" href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">HasDLC</a>(<a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.Test));</div>
+<div class="line"><span class="lineno">  112</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_function" href="classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9">HasDLC</a>(<a class="code hl_enumeration" href="ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9">ID_DLC</a>.CursedManor));</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="Steam_8cs_source.html#l00041">HasDLC()</a>.</p>
 
@@ -741,32 +745,32 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00174">174</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>    {</div>
-<div class="line"><span class="lineno">  176</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
-<div class="line"><span class="lineno">  177</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
-<div class="line"><span class="lineno">  178</span>        WorkshopItemData workshopItemData = <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(p);</div>
-<div class="line"><span class="lineno">  179</span>        workshopItemData.publishedFileId = fileId;</div>
-<div class="line"><span class="lineno">  180</span>        workshopItemData.Update(delegate(WorkshopItemDataUpdateStatus result)</div>
-<div class="line"><span class="lineno">  181</span>        {</div>
-<div class="line"><span class="lineno">  182</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (result.hasError)</div>
-<div class="line"><span class="lineno">  184</span>            {</div>
-<div class="line"><span class="lineno">  185</span>                Dialog.Ok(<span class="stringliteral">&quot;mod_publish_error&quot;</span>);</div>
-<div class="line"><span class="lineno">  186</span>                EClass.ui.Say(result.errorMessage);</div>
-<div class="line"><span class="lineno">  187</span>                Debug.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
-<div class="line"><span class="lineno">  188</span>            }</div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  190</span>            {</div>
-<div class="line"><span class="lineno">  191</span>                Dialog.Ok(<span class="stringliteral">&quot;mod_updated&quot;</span>);</div>
-<div class="line"><span class="lineno">  192</span>                Debug.Log(<span class="stringliteral">&quot;updated&quot;</span>);</div>
-<div class="line"><span class="lineno">  193</span>            }</div>
-<div class="line"><span class="lineno">  194</span>        });</div>
-<div class="line"><span class="lineno">  195</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00178">178</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>    {</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
+<div class="line"><span class="lineno">  181</span>        <a class="code hl_class" href="classBaseModPackage.html">BaseModPackage</a> p = <a class="code hl_variable" href="classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247">currentPackage</a>;</div>
+<div class="line"><span class="lineno">  182</span>        WorkshopItemData workshopItemData = <a class="code hl_function" href="classSteam.html#ad02beae41acbf0ce08577d502edfb641">CreateItemData</a>(p);</div>
+<div class="line"><span class="lineno">  183</span>        workshopItemData.publishedFileId = fileId;</div>
+<div class="line"><span class="lineno">  184</span>        workshopItemData.Update(delegate(WorkshopItemDataUpdateStatus result)</div>
+<div class="line"><span class="lineno">  185</span>        {</div>
+<div class="line"><span class="lineno">  186</span>            LayerProgress.completed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (result.hasError)</div>
+<div class="line"><span class="lineno">  188</span>            {</div>
+<div class="line"><span class="lineno">  189</span>                Dialog.Ok(<span class="stringliteral">&quot;mod_publish_error&quot;</span>);</div>
+<div class="line"><span class="lineno">  190</span>                EClass.ui.Say(result.errorMessage);</div>
+<div class="line"><span class="lineno">  191</span>                Debug.Log(<span class="stringliteral">&quot;error:&quot;</span> + result.errorMessage);</div>
+<div class="line"><span class="lineno">  192</span>            }</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  194</span>            {</div>
+<div class="line"><span class="lineno">  195</span>                Dialog.Ok(<span class="stringliteral">&quot;mod_updated&quot;</span>);</div>
+<div class="line"><span class="lineno">  196</span>                Debug.Log(<span class="stringliteral">&quot;updated&quot;</span>);</div>
+<div class="line"><span class="lineno">  197</span>            }</div>
+<div class="line"><span class="lineno">  198</span>        });</div>
+<div class="line"><span class="lineno">  199</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00197">CreateItemData()</a>, <a class="el" href="Steam_8cs_source.html#l00019">currentPackage</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
+<p class="reference">References <a class="el" href="Steam_8cs_source.html#l00201">CreateItemData()</a>, <a class="el" href="Steam_8cs_source.html#l00019">currentPackage</a>, and <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00123">CreateUserContent2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00127">CreateUserContent2()</a>.</p>
 
 </div>
 </div>
@@ -785,7 +789,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00019">19</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00111">CreateUserContent()</a>, <a class="el" href="Steam_8cs_source.html#l00123">CreateUserContent2()</a>, and <a class="el" href="Steam_8cs_source.html#l00174">UpdateUserContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00115">CreateUserContent()</a>, <a class="el" href="Steam_8cs_source.html#l00127">CreateUserContent2()</a>, and <a class="el" href="Steam_8cs_source.html#l00178">UpdateUserContent()</a>.</p>
 
 </div>
 </div>
@@ -811,7 +815,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00011">11</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00021">Awake()</a>, <a class="el" href="Steam_8cs_source.html#l00051">GetAchievement()</a>, <a class="el" href="Steam_8cs_source.html#l00095">ResetAchievement()</a>, and <a class="el" href="Steam_8cs_source.html#l00086">ResetAllAchievement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Steam_8cs_source.html#l00021">Awake()</a>, <a class="el" href="Steam_8cs_source.html#l00051">GetAchievement()</a>, <a class="el" href="Steam_8cs_source.html#l00099">ResetAchievement()</a>, and <a class="el" href="Steam_8cs_source.html#l00090">ResetAllAchievement()</a>.</p>
 
 </div>
 </div>
@@ -829,7 +833,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00013">13</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00097">Core.Awake()</a>, <a class="el" href="Steam_8cs_source.html#l00197">CreateItemData()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02274">CoreDebug.FirstAdventurer()</a>, <a class="el" href="Steam_8cs_source.html#l00051">GetAchievement()</a>, <a class="el" href="Steam_8cs_source.html#l00095">ResetAchievement()</a>, and <a class="el" href="Steam_8cs_source.html#l00086">ResetAllAchievement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00097">Core.Awake()</a>, <a class="el" href="Steam_8cs_source.html#l00201">CreateItemData()</a>, <a class="el" href="CoreDebug_8cs_source.html#l02276">CoreDebug.FirstAdventurer()</a>, <a class="el" href="Steam_8cs_source.html#l00051">GetAchievement()</a>, <a class="el" href="Steam_8cs_source.html#l00099">ResetAchievement()</a>, and <a class="el" href="Steam_8cs_source.html#l00090">ResetAllAchievement()</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,8 @@ var classDialog =
       [ "Default", "classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aa7a1920d61156abc05a60135aefe8bc67", null ],
       [ "Password", "classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aadc647eb65e6711e155375218212b3964", null ],
       [ "Item", "classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aa7d74f3b92b19da5e606d737d339a9679", null ],
-      [ "DistributionFilter", "classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aa5f4241719722b69286c10381948d1731", null ]
+      [ "DistributionFilter", "classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aa5f4241719722b69286c10381948d1731", null ],
+      [ "Chat", "classDialog.html#aaf9f0f8f050b7944063f51a1b9cf878aa55dcdf017b51fc96f7b5f9d63013b95d", null ]
     ] ],
     [ "_Confetti", "classDialog.html#ad4e317d738a1b574e1af2a505ba79d2c", null ],
     [ "AddButton", "classDialog.html#a3b8557d60be3ff8d56634a93fd63f236", null ],
@@ -21,6 +22,7 @@ var classDialog =
     [ "List< TValue >", "classDialog.html#a2f377332fb98f9e875ab996ba015aae0", null ],
     [ "Ok", "classDialog.html#a8cf00750d0a8ed4e4212aa3956dead48", null ],
     [ "OnAfterInit", "classDialog.html#a3d7cad77ff99232469ae42c70613df63", null ],
+    [ "OnBack", "classDialog.html#a5886f88c998d69ac64e79876f9d66afb", null ],
     [ "OnEnterInput", "classDialog.html#a1cebc91d0b166e445785fee41e97ce00", null ],
     [ "OnKill", "classDialog.html#a107c44a87bd2917fa3bf93f813229706", null ],
     [ "OnUpdateInput", "classDialog.html#a9e0bd57ec07c2b95f5df6e51ac2e0d92", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.282 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
    </div>
   </td>
  </tr>
@@ -92,21 +92,14 @@ $(document).ready(function(){initNavTree('classBaseModManager.html',''); initRes
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classBaseModManager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BaseModManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for BaseModManager:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classBaseModManager.png" usemap="#BaseModManager_map" alt=""/>
-  <map id="BaseModManager_map" name="BaseModManager_map">
-<area href="classModManager.html" alt="ModManager" shape="rect" coords="0,56,116,80"/>
-  </map>
-</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -121,6 +114,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5f75932e2c64d87262bde02a9c6b1c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69d0509478dbc42112ec1a5a1c6451c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseModManager.html#a69d0509478dbc42112ec1a5a1c6451c1">ParseExtra</a> (DirectoryInfo dir, <a class="el" href="classBaseModPackage.html">BaseModPackage</a> package)</td></tr>
 <tr class="separator:a69d0509478dbc42112ec1a5a1c6451c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:acae7f54f391c14cd9bf1542e26774c71"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseModManager.html#acae7f54f391c14cd9bf1542e26774c71">SubscribeEvent</a> (string eventId, Action&lt; object &gt; handler)</td></tr>
+<tr class="separator:acae7f54f391c14cd9bf1542e26774c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cbf9e6cba9780e8b7889e9b90266535"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseModManager.html#a2cbf9e6cba9780e8b7889e9b90266535">UnsubscribeEvent</a> (string eventId, Action&lt; object &gt; handler)</td></tr>
+<tr class="separator:a2cbf9e6cba9780e8b7889e9b90266535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea8d96cc9a903415e9ed9b62b47a7ab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">PublishEvent</a> (string eventId, object data=null)</td></tr>
+<tr class="separator:a9ea8d96cc9a903415e9ed9b62b47a7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb410d57c834f630ff04e4abe66edc1e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseModManager.html#acb410d57c834f630ff04e4abe66edc1e">HasEventSubscriber</a> (string eventId)</td></tr>
+<tr class="separator:acb410d57c834f630ff04e4abe66edc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -143,11 +147,55 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a5cf34211285c2b20eb3ac55b32c199e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb5746b81e7ddb52e6dd72a3ed79008b"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseModManager.html#abb5746b81e7ddb52e6dd72a3ed79008b">listChainLoad</a> = new List&lt;string&gt;()</td></tr>
 <tr class="separator:abb5746b81e7ddb52e6dd72a3ed79008b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a04a8d4c078408d5eaf60d64533d9c023"><td class="memItemLeft" align="right" valign="top">static readonly Dictionary&lt; string, HashSet&lt; Action&lt; object &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a> = new Dictionary&lt;string, HashSet&lt;Action&lt;object&gt;&gt;&gt;()</td></tr>
+<tr class="separator:a04a8d4c078408d5eaf60d64533d9c023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00006">6</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00007">7</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="acb410d57c834f630ff04e4abe66edc1e" name="acb410d57c834f630ff04e4abe66edc1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb410d57c834f630ff04e4abe66edc1e">&#9670;&#160;</a></span>HasEventSubscriber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool BaseModManager.HasEventSubscriber </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>eventId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00133">133</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">int</span>? num = <a class="code hl_variable" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a>.GetValueOrDefault(eventId)?.Count;</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (num.HasValue)</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span> num.GetValueOrDefault() &gt; 0;</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="ttc" id="aclassBaseModManager_html_a04a8d4c078408d5eaf60d64533d9c023"><div class="ttname"><a href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">BaseModManager._eventHandlers</a></div><div class="ttdeci">static readonly Dictionary&lt; string, HashSet&lt; Action&lt; object &gt; &gt; &gt; _eventHandlers</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00035">BaseModManager.cs:35</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseModManager_8cs_source.html#l00035">_eventHandlers</a>.</p>
+
+</div>
+</div>
 <a id="a054c1085862cfbeb5c1b53dabf06278d" name="a054c1085862cfbeb5c1b53dabf06278d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a054c1085862cfbeb5c1b53dabf06278d">&#9670;&#160;</a></span>Init()</h2>
 
@@ -182,24 +230,22 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classModManager.html#a9219aa9f35decd9d524b93f5f4263d66">ModManager</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00041">41</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Initializing ModManager:&quot;</span> + defaultPackage + <span class="stringliteral">&quot;/&quot;</span> + path);</div>
-<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="classBaseModManager.html#a79597600494f24efddb8893d62feef8c">Instance</a> = <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">rootMod</a> = (<a class="code hl_variable" href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">rootDefaultPacakge</a> = path);</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (!defaultPackage.IsEmpty())</div>
-<div class="line"><span class="lineno">   47</span>        {</div>
-<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">rootDefaultPacakge</a> = <a class="code hl_variable" href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">rootMod</a> + defaultPackage + <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00044">44</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Initializing ModManager:&quot;</span> + defaultPackage + <span class="stringliteral">&quot;/&quot;</span> + path);</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classBaseModManager.html#a79597600494f24efddb8893d62feef8c">Instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">rootMod</a> = (<a class="code hl_variable" href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">rootDefaultPacakge</a> = path);</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!defaultPackage.IsEmpty())</div>
+<div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_variable" href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">rootDefaultPacakge</a> = <a class="code hl_variable" href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">rootMod</a> + defaultPackage + <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
-<div class="ttc" id="aclassBaseModManager_html_a67bc5f7993c2b0fb5f795f36e52359f2"><div class="ttname"><a href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">BaseModManager.rootDefaultPacakge</a></div><div class="ttdeci">static string rootDefaultPacakge</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00028">BaseModManager.cs:28</a></div></div>
-<div class="ttc" id="aclassBaseModManager_html_a79597600494f24efddb8893d62feef8c"><div class="ttname"><a href="classBaseModManager.html#a79597600494f24efddb8893d62feef8c">BaseModManager.Instance</a></div><div class="ttdeci">static BaseModManager Instance</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00024">BaseModManager.cs:24</a></div></div>
-<div class="ttc" id="aclassBaseModManager_html_a7b47062ac69716f5b954279a805220dc"><div class="ttname"><a href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">BaseModManager.rootMod</a></div><div class="ttdeci">static string rootMod</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00026">BaseModManager.cs:26</a></div></div>
+<div class="ttc" id="aclassBaseModManager_html_a67bc5f7993c2b0fb5f795f36e52359f2"><div class="ttname"><a href="classBaseModManager.html#a67bc5f7993c2b0fb5f795f36e52359f2">BaseModManager.rootDefaultPacakge</a></div><div class="ttdeci">static string rootDefaultPacakge</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00029">BaseModManager.cs:29</a></div></div>
+<div class="ttc" id="aclassBaseModManager_html_a79597600494f24efddb8893d62feef8c"><div class="ttname"><a href="classBaseModManager.html#a79597600494f24efddb8893d62feef8c">BaseModManager.Instance</a></div><div class="ttdeci">static BaseModManager Instance</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00025">BaseModManager.cs:25</a></div></div>
+<div class="ttc" id="aclassBaseModManager_html_a7b47062ac69716f5b954279a805220dc"><div class="ttname"><a href="classBaseModManager.html#a7b47062ac69716f5b954279a805220dc">BaseModManager.rootMod</a></div><div class="ttdeci">static string rootMod</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00027">BaseModManager.cs:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="BaseModManager_8cs_source.html#l00024">Instance</a>, <a class="el" href="BaseModManager_8cs_source.html#l00028">rootDefaultPacakge</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00026">rootMod</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="BaseModManager_8cs_source.html#l00025">Instance</a>, <a class="el" href="BaseModManager_8cs_source.html#l00029">rootDefaultPacakge</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00027">rootMod</a>.</p>
 
 </div>
 </div>
@@ -226,53 +272,51 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00052">52</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Initializing Langs: &quot;</span> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>);</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLangSetting.html">LangSetting</a> value <span class="keywordflow">in</span> <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ad43925def27c6120e24dd26883f31ff3">langs</a>.Values)</div>
-<div class="line"><span class="lineno">   56</span>        {</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (value.<a class="code hl_variable" href="classLangSetting.html#abcb98457be827fb37adf73b094f3b629">id</a> != <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>)</div>
-<div class="line"><span class="lineno">   58</span>            {</div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   60</span>            }</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keyword">new</span> DirectoryInfo(value.<a class="code hl_variable" href="classLangSetting.html#a84d1662e7297d58ad14f273a4a6cdf91">dir</a>);</div>
-<div class="line"><span class="lineno">   62</span>            FileInfo[] files = <span class="keyword">new</span> DirectoryInfo(value.<a class="code hl_variable" href="classLangSetting.html#a84d1662e7297d58ad14f273a4a6cdf91">dir</a> + <span class="stringliteral">&quot;Data&quot;</span>).GetFiles();</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;Alias.xlsx&quot;</span>)</div>
-<div class="line"><span class="lineno">   66</span>                {</div>
-<div class="line"><span class="lineno">   67</span>                    Lang.alias = <span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName);</div>
-<div class="line"><span class="lineno">   68</span>                }</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;Name.xlsx&quot;</span>)</div>
-<div class="line"><span class="lineno">   70</span>                {</div>
-<div class="line"><span class="lineno">   71</span>                    Lang.names = <span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName);</div>
-<div class="line"><span class="lineno">   72</span>                }</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;chara_talk.xlsx&quot;</span>)</div>
-<div class="line"><span class="lineno">   74</span>                {</div>
-<div class="line"><span class="lineno">   75</span>                    <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#a093b63f68833e0233b7d244f2eddf77f">listTalk</a>.<a class="code hl_variable" href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">items</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName));</div>
-<div class="line"><span class="lineno">   76</span>                }</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;chara_tone.xlsx&quot;</span>)</div>
-<div class="line"><span class="lineno">   78</span>                {</div>
-<div class="line"><span class="lineno">   79</span>                    <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#a86d7af6281763f00f859cac6b84c8c49">tones</a>.<a class="code hl_variable" href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">items</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName));</div>
-<div class="line"><span class="lineno">   80</span>                }</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00055">55</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Initializing Langs: &quot;</span> + <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>);</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLangSetting.html">LangSetting</a> value <span class="keywordflow">in</span> <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ad43925def27c6120e24dd26883f31ff3">langs</a>.Values)</div>
+<div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (value.<a class="code hl_variable" href="classLangSetting.html#abcb98457be827fb37adf73b094f3b629">id</a> != <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keyword">new</span> DirectoryInfo(value.<a class="code hl_variable" href="classLangSetting.html#a84d1662e7297d58ad14f273a4a6cdf91">dir</a>);</div>
+<div class="line"><span class="lineno">   65</span>            FileInfo[] files = <span class="keyword">new</span> DirectoryInfo(value.<a class="code hl_variable" href="classLangSetting.html#a84d1662e7297d58ad14f273a4a6cdf91">dir</a> + <span class="stringliteral">&quot;Data&quot;</span>).GetFiles();</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">foreach</span> (FileInfo fileInfo <span class="keywordflow">in</span> files)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;Alias.xlsx&quot;</span>)</div>
+<div class="line"><span class="lineno">   69</span>                {</div>
+<div class="line"><span class="lineno">   70</span>                    Lang.alias = <span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName);</div>
+<div class="line"><span class="lineno">   71</span>                }</div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;Name.xlsx&quot;</span>)</div>
+<div class="line"><span class="lineno">   73</span>                {</div>
+<div class="line"><span class="lineno">   74</span>                    Lang.names = <span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName);</div>
+<div class="line"><span class="lineno">   75</span>                }</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;chara_talk.xlsx&quot;</span>)</div>
+<div class="line"><span class="lineno">   77</span>                {</div>
+<div class="line"><span class="lineno">   78</span>                    <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#a093b63f68833e0233b7d244f2eddf77f">listTalk</a>.<a class="code hl_variable" href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">items</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName));</div>
+<div class="line"><span class="lineno">   79</span>                }</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (fileInfo.Name == <span class="stringliteral">&quot;chara_tone.xlsx&quot;</span>)</div>
+<div class="line"><span class="lineno">   81</span>                {</div>
+<div class="line"><span class="lineno">   82</span>                    <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#a86d7af6281763f00f859cac6b84c8c49">tones</a>.<a class="code hl_variable" href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">items</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="classExcelData.html">ExcelData</a>(fileInfo.FullName));</div>
+<div class="line"><span class="lineno">   83</span>                }</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclassExcelDataList_html_a16deb200dd45f2905399065bdc1b6a67"><div class="ttname"><a href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">ExcelDataList.items</a></div><div class="ttdeci">List&lt; ExcelData &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00006">ExcelDataList.cs:6</a></div></div>
 <div class="ttc" id="aclassExcelData_html"><div class="ttname"><a href="classExcelData.html">ExcelData</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00010">ExcelData.cs:11</a></div></div>
 <div class="ttc" id="aclassLangSetting_html"><div class="ttname"><a href="classLangSetting.html">LangSetting</a></div><div class="ttdef"><b>Definition:</b> <a href="LangSetting_8cs_source.html#l00009">LangSetting.cs:10</a></div></div>
 <div class="ttc" id="aclassLangSetting_html_a84d1662e7297d58ad14f273a4a6cdf91"><div class="ttname"><a href="classLangSetting.html#a84d1662e7297d58ad14f273a4a6cdf91">LangSetting.dir</a></div><div class="ttdeci">string dir</div><div class="ttdef"><b>Definition:</b> <a href="LangSetting_8cs_source.html#l00028">LangSetting.cs:28</a></div></div>
 <div class="ttc" id="aclassLangSetting_html_abcb98457be827fb37adf73b094f3b629"><div class="ttname"><a href="classLangSetting.html#abcb98457be827fb37adf73b094f3b629">LangSetting.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="LangSetting_8cs_source.html#l00022">LangSetting.cs:22</a></div></div>
-<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00005">Lang.cs:6</a></div></div>
-<div class="ttc" id="aclassLang_html_aa1952bedb7f38df2ae3e130ee1d5d659"><div class="ttname"><a href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">Lang.langCode</a></div><div class="ttdeci">static string langCode</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00028">Lang.cs:28</a></div></div>
+<div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00006">Lang.cs:7</a></div></div>
+<div class="ttc" id="aclassLang_html_aa1952bedb7f38df2ae3e130ee1d5d659"><div class="ttname"><a href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">Lang.langCode</a></div><div class="ttdeci">static string langCode</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00029">Lang.cs:29</a></div></div>
 <div class="ttc" id="aclassMOD_html"><div class="ttname"><a href="classMOD.html">MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00006">MOD.cs:7</a></div></div>
 <div class="ttc" id="aclassMOD_html_a093b63f68833e0233b7d244f2eddf77f"><div class="ttname"><a href="classMOD.html#a093b63f68833e0233b7d244f2eddf77f">MOD.listTalk</a></div><div class="ttdeci">static TalkDataList listTalk</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00010">MOD.cs:10</a></div></div>
 <div class="ttc" id="aclassMOD_html_a86d7af6281763f00f859cac6b84c8c49"><div class="ttname"><a href="classMOD.html#a86d7af6281763f00f859cac6b84c8c49">MOD.tones</a></div><div class="ttdeci">static ToneDataList tones</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00012">MOD.cs:12</a></div></div>
 <div class="ttc" id="aclassMOD_html_ad43925def27c6120e24dd26883f31ff3"><div class="ttname"><a href="classMOD.html#ad43925def27c6120e24dd26883f31ff3">MOD.langs</a></div><div class="ttdeci">static Dictionary&lt; string, LangSetting &gt; langs</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00008">MOD.cs:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="LangSetting_8cs_source.html#l00028">LangSetting.dir</a>, <a class="el" href="LangSetting_8cs_source.html#l00022">LangSetting.id</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00006">ExcelDataList.items</a>, <a class="el" href="Lang_8cs_source.html#l00028">Lang.langCode</a>, <a class="el" href="MOD_8cs_source.html#l00008">MOD.langs</a>, <a class="el" href="MOD_8cs_source.html#l00010">MOD.listTalk</a>, and <a class="el" href="MOD_8cs_source.html#l00012">MOD.tones</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Core_8cs_source.html#l00533">Core.Init()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l02286">CoreDebug.RegenerateNames()</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="LangSetting_8cs_source.html#l00028">LangSetting.dir</a>, <a class="el" href="LangSetting_8cs_source.html#l00022">LangSetting.id</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00006">ExcelDataList.items</a>, <a class="el" href="Lang_8cs_source.html#l00029">Lang.langCode</a>, <a class="el" href="MOD_8cs_source.html#l00008">MOD.langs</a>, <a class="el" href="MOD_8cs_source.html#l00010">MOD.listTalk</a>, and <a class="el" href="MOD_8cs_source.html#l00012">MOD.tones</a>.</p>
 
 </div>
 </div>
@@ -310,17 +354,202 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classModManager.html#a1bd198bc658375ff23809ba654dd7d34">ModManager</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00085">85</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00088">88</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="BaseModPackage_8cs_source.html#l00155">BaseModPackage.Parse()</a>.</p>
 
 </div>
 </div>
+<a id="a9ea8d96cc9a903415e9ed9b62b47a7ab" name="a9ea8d96cc9a903415e9ed9b62b47a7ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea8d96cc9a903415e9ed9b62b47a7ab">&#9670;&#160;</a></span>PublishEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BaseModManager.PublishEvent </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>eventId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>data</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00114">114</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a>.TryGetValue(eventId, out var value))</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">foreach</span> (Action&lt;object&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> value.ToList())</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  123</span>            {</div>
+<div class="line"><span class="lineno">  124</span>                <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>(data);</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">catch</span> (Exception arg)</div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#event &#39;{eventId}&#39; throws error in one of the handlers\n{arg}&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
+<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00085">ModManager.cs:85</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, <a class="el" href="BaseModManager_8cs_source.html#l00035">_eventHandlers</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, and <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02734">Card._OnDeserialized()</a>, <a class="el" href="FEAT_8cs_source.html#l00396">Feat.Apply()</a>, <a class="el" href="Card_8cs_source.html#l02801">Card.Create()</a>, <a class="el" href="SourceManager_8cs_source.html#l00116">SourceManager.Init()</a>, <a class="el" href="Scene_8cs_source.html#l00178">Scene.Init()</a>, <a class="el" href="Game_8cs_source.html#l00322">Game.Load()</a>, <a class="el" href="ModUtil_8cs_source.html#l00023">ModUtil.OnModsActivated()</a>, <a class="el" href="Game_8cs_source.html#l01040">Game.Save()</a>, <a class="el" href="Core_8cs_source.html#l00708">Core.SetLang()</a>, and <a class="el" href="Game_8cs_source.html#l00806">Game.StartNewGame()</a>.</p>
+
+</div>
+</div>
+<a id="acae7f54f391c14cd9bf1542e26774c71" name="acae7f54f391c14cd9bf1542e26774c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae7f54f391c14cd9bf1542e26774c71">&#9670;&#160;</a></span>SubscribeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BaseModManager.SubscribeEvent </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>eventId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; object &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00092">92</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a>.TryGetValue(eventId, out var value))</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            value = <span class="keyword">new</span> HashSet&lt;Action&lt;object&gt;&gt;();</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_variable" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a>[eventId] = value;</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>        value.Add(handler);</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseModManager_8cs_source.html#l00035">_eventHandlers</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00034">ModManager.Init()</a>.</p>
+
+</div>
+</div>
+<a id="a2cbf9e6cba9780e8b7889e9b90266535" name="a2cbf9e6cba9780e8b7889e9b90266535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cbf9e6cba9780e8b7889e9b90266535">&#9670;&#160;</a></span>UnsubscribeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BaseModManager.UnsubscribeEvent </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>eventId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; object &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00102">102</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a>.TryGetValue(eventId, out var value))</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            value.Remove(handler);</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (value.Count == 0)</div>
+<div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <a class="code hl_variable" href="classBaseModManager.html#a04a8d4c078408d5eaf60d64533d9c023">_eventHandlers</a>.Remove(eventId);</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="BaseModManager_8cs_source.html#l00035">_eventHandlers</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a04a8d4c078408d5eaf60d64533d9c023" name="a04a8d4c078408d5eaf60d64533d9c023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a8d4c078408d5eaf60d64533d9c023">&#9670;&#160;</a></span>_eventHandlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;string, HashSet&lt;Action&lt;object&gt; &gt; &gt; BaseModManager._eventHandlers = new Dictionary&lt;string, HashSet&lt;Action&lt;object&gt;&gt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00035">35</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseModManager_8cs_source.html#l00133">HasEventSubscriber()</a>, <a class="el" href="BaseModManager_8cs_source.html#l00114">PublishEvent()</a>, <a class="el" href="BaseModManager_8cs_source.html#l00092">SubscribeEvent()</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00102">UnsubscribeEvent()</a>.</p>
+
+</div>
+</div>
 <a id="ae64a4add340a2fb429e9d961ad5549c7" name="ae64a4add340a2fb429e9d961ad5549c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae64a4add340a2fb429e9d961ad5549c7">&#9670;&#160;</a></span>dirWorkshop</h2>
 
@@ -333,9 +562,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00034">34</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00035">ModManager.Init()</a>, and <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.RefreshMods()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00037">37</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -359,9 +586,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00024">24</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00025">25</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseModManager_8cs_source.html#l00041">Init()</a>, and <a class="el" href="BaseModPackage_8cs_source.html#l00155">BaseModPackage.Parse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseModManager_8cs_source.html#l00044">Init()</a>, and <a class="el" href="BaseModPackage_8cs_source.html#l00155">BaseModPackage.Parse()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +612,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00030">30</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00031">31</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -409,9 +636,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00032">32</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00033">33</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.RefreshMods()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00482">ModManager.ActivatePackages()</a>.</p>
 
 </div>
 </div>
@@ -427,9 +654,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00039">39</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00266">ModManager.AddPackage()</a>, <a class="el" href="ModManager_8cs_source.html#l00280">ModManager.AddWorkshopPackage()</a>, <a class="el" href="ModManager_8cs_source.html#l00298">ModManager.CountUserMod()</a>, <a class="el" href="ModManager_8cs_source.html#l00035">ModManager.Init()</a>, <a class="el" href="ModManager_8cs_source.html#l00236">ModManager.LoadLoadOrder()</a>, <a class="el" href="LayerMod_8cs_source.html#l00017">LayerMod.Move()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00067">LayerFeedback.OnInit()</a>, <a class="el" href="LayerMod_8cs_source.html#l00033">LayerMod.OnInit()</a>, <a class="el" href="ModManager_8cs_source.html#l00095">ModManager.RefreshMods()</a>, <a class="el" href="ModManager_8cs_source.html#l00218">ModManager.SaveLoadOrder()</a>, and <a class="el" href="LayerFeedback_8cs_source.html#l00295">LayerFeedback.Submit()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00042">42</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -445,9 +670,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00036">36</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00266">ModManager.AddPackage()</a>, and <a class="el" href="ModManager_8cs_source.html#l00280">ModManager.AddWorkshopPackage()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00039">39</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
 </div>
 </div>
@@ -471,9 +694,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00028">28</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00029">29</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00035">ModManager.Init()</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00041">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00034">ModManager.Init()</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00044">Init()</a>.</p>
 
 </div>
 </div>
@@ -497,9 +720,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00026">26</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BaseModManager_8cs_source.html#l00027">27</a> of file <a class="el" href="BaseModManager_8cs_source.html">BaseModManager.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00035">ModManager.Init()</a>, and <a class="el" href="BaseModManager_8cs_source.html#l00041">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModManager_8cs_source.html#l00034">ModManager.Init()</a>, <a class="el" href="BaseModManager_8cs_source.html#l00044">Init()</a>, and <a class="el" href="ModManager_8cs_source.html#l00361">ModManager.LoadLocalPackages()</a>.</p>
 
 </div>
 </div>

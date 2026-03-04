@@ -50,12 +50,8 @@ var hierarchy =
       [ "SkewEffect", "classSkewEffect.html", null ],
       [ "ToJShadow", "classToJShadow.html", null ]
     ] ],
-    [ "BaseModManager", "classBaseModManager.html", [
-      [ "ModManager", "classModManager.html", null ]
-    ] ],
-    [ "BaseModPackage", "classBaseModPackage.html", [
-      [ "ModPackage", "classModPackage.html", null ]
-    ] ],
+    [ "BaseModManager", "classBaseModManager.html", null ],
+    [ "BaseModPackage", "classBaseModPackage.html", null ],
     [ "BaseModManager.BaseResource", "classBaseModManager_1_1BaseResource.html", null ],
     [ "BaseRow", null, [
       [ "LangList.Row", "classLangList_1_1Row.html", null ],
@@ -1182,6 +1178,7 @@ var hierarchy =
       [ "SocketData", "classSocketData.html", null ],
       [ "SourceCard", "classSourceCard.html", null ],
       [ "SourceExtension", "classSourceExtension.html", null ],
+      [ "SourceImporter", "classSourceImporter.html", null ],
       [ "SourcePref", "classSourcePref.html", [
         [ "SourcePrefCard", "classSourcePrefCard.html", null ],
         [ "SourcePrefTile", "classSourcePrefTile.html", null ]
@@ -2026,6 +2023,7 @@ var hierarchy =
             [ "TraitAbility", "classTraitAbility.html", null ]
           ] ],
           [ "TraitDeedDivorce", "classTraitDeedDivorce.html", null ],
+          [ "TraitDeedLostRing", "classTraitDeedLostRing.html", null ],
           [ "TraitLeash", "classTraitLeash.html", null ],
           [ "TraitRod", "classTraitRod.html", [
             [ "TraitRodRandom", "classTraitRodRandom.html", null ]
@@ -2149,10 +2147,21 @@ var hierarchy =
     [ "ElementOrigin", "classElementOrigin.html", null ],
     [ "ElementRef", "classElementRef.html", null ],
     [ "ElinEncoder", "classElinEncoder.html", null ],
+    [ "EVENT.ElinEventArgs< T >", "classEVENT_1_1ElinEventArgs.html", null ],
+    [ "EVENT.ElinEventArgs< int >", "classEVENT_1_1ElinEventArgs.html", [
+      [ "EVENT.ElinFeatApplyEventArgs", "classEVENT_1_1ElinFeatApplyEventArgs.html", null ]
+    ] ],
+    [ "EVENT.ElinEventArgs< string >", "classEVENT_1_1ElinEventArgs.html", [
+      [ "EVENT.ElinDramaParseActionEventArgs", "classEVENT_1_1ElinDramaParseActionEventArgs.html", null ]
+    ] ],
+    [ "EMod", null, [
+      [ "ModPackage", "classModPackage.html", null ]
+    ] ],
     [ "CoreRef.Icons.Enc", "classCoreRef_1_1Icons_1_1Enc.html", null ],
     [ "ENC", "classENC.html", null ],
     [ "ERROR", "classERROR.html", null ],
     [ "InvOwner.ErrorMessage", "classInvOwner_1_1ErrorMessage.html", null ],
+    [ "EVENT", "classEVENT.html", null ],
     [ "ExcelBookImportSetting", "classExcelBookImportSetting.html", null ],
     [ "ExcelData", "classExcelData.html", [
       [ "TextConv", "classTextConv.html", null ]
@@ -2704,6 +2713,9 @@ var hierarchy =
     [ "ModItem< T >", "classModItem.html", null ],
     [ "ModItemList< T >", "classModItemList.html", null ],
     [ "ModItemList< Sprite >", "classModItemList.html", null ],
+    [ "ModManagerCore", null, [
+      [ "ModManager", "classModManager.html", null ]
+    ] ],
     [ "ModMinigame< Blackjack >", "classModMinigame.html", [
       [ "MiniGame_Blackjack", "classMiniGame__Blackjack.html", null ]
     ] ],
@@ -3160,7 +3172,7 @@ var hierarchy =
       [ "ToJOutline", "classToJOutline.html", null ]
     ] ],
     [ "ExcelData.Sheet", "classExcelData_1_1Sheet.html", null ],
-    [ "ModManager.SheetIndex", "structModManager_1_1SheetIndex.html", null ],
+    [ "ModPackage.SheetIndex", "structModPackage_1_1SheetIndex.html", null ],
     [ "SKILL", "classSKILL.html", null ],
     [ "SkinRootStatic.SkinColors", "classSkinRootStatic_1_1SkinColors.html", null ],
     [ "SkinConfig", "classSkinConfig.html", null ],
