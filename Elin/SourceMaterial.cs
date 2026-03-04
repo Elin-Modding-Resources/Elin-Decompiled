@@ -113,6 +113,25 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 		public void Init()
 		{
 			MatColors matColors = Core.Instance.Colors.matColors.TryGetValue(alias);
+			if (matColors == null)
+			{
+				matColors = new MatColors();
+				string[] array = tag;
+				foreach (string text in array)
+				{
+					if (text.StartsWith("addCol"))
+					{
+						if (text.Contains("_Main"))
+						{
+							matColors.main = text.ExtractInBetween('(', ')').ToColor();
+						}
+						if (text.Contains("_Alt"))
+						{
+							matColors.alt = text.ExtractInBetween('(', ')').ToColor();
+						}
+					}
+				}
+			}
 			matColor = matColors.main;
 			altColor = matColors.alt;
 			SetTiles();

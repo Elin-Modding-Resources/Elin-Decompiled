@@ -221,6 +221,10 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 				pref = sources.cards.map[aliasPref].pref;
 			}
 		}
+		if (pref == null)
+		{
+			pref = new SourcePref();
+		}
 		if (!this.renderData.initialized)
 		{
 			this.renderData.Init();
@@ -238,7 +242,13 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		{
 			useAltColor = true;
 		}
-		DefaultMaterial = sources.materials.alias[defMat.IsEmpty("granite")];
+		Dictionary<string, SourceMaterial.Row> alias = sources.materials.alias;
+		if (!alias.TryGetValue(defMat.IsEmpty("granite"), out var defaultMaterial))
+		{
+			defaultMaterial = alias["granite"];
+			Debug.LogError($"#source failed to set def mat '{defMat}' - {ModUtil.FindSourceRowPackage(this)}");
+		}
+		DefaultMaterial = defaultMaterial;
 	}
 
 	public virtual void SetTiles()

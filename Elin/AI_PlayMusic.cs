@@ -156,7 +156,7 @@ public class AI_PlayMusic : AIAct
 				idSong = "violin_furusato";
 				break;
 			default:
-				idSong = "violin_chaconne";
+				idSong = ((EClass.Sound.GetData("Instrument/" + tool.id) is BGMData) ? tool.id : "violin_chaconne");
 				break;
 			}
 			if (owner.IsPC && EClass.player.knownSongs.ContainsKey(idSong))
@@ -181,9 +181,9 @@ public class AI_PlayMusic : AIAct
 				EClass.player.playingSong = playing;
 			}
 		}
-		if (owner.IsPC)
+		if (owner.IsPC && EClass.Sound.GetData("Instrument/" + idSong) is BGMData bGMData)
 		{
-			(EClass.Sound.GetData("Instrument/" + idSong) as BGMData).song.index = playing.index;
+			bGMData.song.index = playing.index;
 		}
 		if (Application.isEditor && owner.IsPC)
 		{

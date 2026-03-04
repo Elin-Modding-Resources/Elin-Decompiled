@@ -824,36 +824,40 @@ public class AM_Adv : AM_BaseGameMode
 		}
 		switch (EInput.action)
 		{
+		case EAction.Console:
+			EClass.ui.AddLayer<LayerConsole>();
+			break;
 		case EAction.Chat:
 			Dialog.InputName("", "", delegate(bool cancel, string text)
 			{
 				if (!cancel && !text.IsEmpty())
 				{
-					Chara chara = EClass.pc;
-					if ((text[0] == '@' || text[0] == '＠') && text.Length > 1 && int.TryParse(text[1].ToString().Normalize(NormalizationForm.FormKC), out var result))
+					string[] array = text.SplitByNewline();
+					foreach (string obj in array)
 					{
-						text = text.Substring(2);
-						chara = EClass.pc.party.members.TryGet(result);
-					}
-					if (text.StartsWith('@'))
-					{
-						text = text.Substring(1);
-					}
-					chara.SayRaw(text);
-					Msg.SetColor("ono");
-					string text2 = text;
-					if (!text.StartsWith('*') && !text.StartsWith('(') && !text.StartsWith('（'))
-					{
-						text = text.Bracket();
-					}
-					Msg.Say(text, chara);
-					if (text2 == "nyan")
-					{
-						Msg.SetColor("save");
-						Msg.Say("*" + EClass.player.stats.lastChuryu + " nyan*");
+						Chara chara = EClass.pc;
+						string text2 = obj;
+						if ((text2[0] == '@' || text2[0] == '＠') && text2.Length > 1 && int.TryParse(text2[1].ToString().Normalize(NormalizationForm.FormKC), out var result))
+						{
+							text2 = text2.Substring(2);
+							chara = EClass.pc.party.members.TryGet(result);
+						}
+						if (text2.StartsWith('@'))
+						{
+							text2 = text2.Substring(1);
+						}
+						chara.SayRaw(text2);
+						string text3 = text2;
+						Msg.SetColor("ono");
+						if (!text2.StartsWith('*') && !text2.StartsWith('(') && !text2.StartsWith('（'))
+						{
+							text2 = text2.Bracket();
+						}
+						Msg.Say(text2.RemoveAllTags(), chara);
+						OnEnterChat(text3);
 					}
 				}
-			}, Dialog.InputType.None);
+			}, Dialog.InputType.Chat);
 			break;
 		case EAction.Search:
 			EClass.ui.widgets.Toggle("Search")?.SoundActivate();
@@ -1040,6 +1044,15 @@ public class AM_Adv : AM_BaseGameMode
 				}
 			}
 			break;
+		}
+	}
+
+	public virtual void OnEnterChat(string text)
+	{
+		if (text == "nyan")
+		{
+			Msg.SetColor("save");
+			Msg.Say("*" + EClass.player.stats.lastChuryu + " nyan*");
 		}
 	}
 

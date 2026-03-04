@@ -976,39 +976,12 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F3))
 		{
-			for (int i = 0; i < 10; i++)
+			Thing thing = EClass._map.things.First((Thing _t) => _t.id == "cloud");
+			if (thing != null)
 			{
-				Thing thing = ThingGen.Create("egg_fertilized");
-				thing.TryMakeRandomItem(40);
-				thing.SetEncLv(200);
-				EClass.pc.Pick(thing);
+				Debug.Log(EClass.sources.cards.map["cloud"].pref == thing.Pref);
+				Debug.Log(EClass.sources.cards.map["cloud"].pref == thing.renderer.GetPref());
 			}
-			foreach (Chara deadChara in EClass._map.deadCharas)
-			{
-				Debug.Log(deadChara);
-			}
-			EClass.core.steam.CheckUpdate();
-			EClass.player.flags.loytelMartLv++;
-			Msg.Say("loytelmart:" + EClass.player.flags.loytelMartLv);
-			Guild.Fighter.relation.rank = 20;
-			Guild.Mage.relation.rank = 20;
-			Guild.Thief.relation.rank = 20;
-			Guild.Merchant.relation.rank = 20;
-			if (EClass.Branch != null)
-			{
-				EClass.Branch.ModExp(EClass.Branch.GetNextExp());
-			}
-			foreach (Chara item in EClass._map.charas.ToList())
-			{
-				item.AddExp(item.ExpToNext);
-				item.Vomit();
-			}
-			EClass.pc.PlayEffect("boost");
-			EClass.pc.PlaySound("boost");
-			EClass.pc.elements.SetBase(306, 100);
-			EClass.pc.elements.SetBase(85, 100);
-			EClass.pc.feat += 10;
-			EClass.player.totalFeat += 10;
 			return;
 		}
 		if (Input.GetKeyDown(KeyCode.F4))
@@ -1080,7 +1053,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int j = 0; j < advanceMin; j++)
+				for (int i = 0; i < advanceMin; i++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}
@@ -1161,9 +1134,9 @@ public class CoreDebug : EScriptable
 		{
 			if (Input.GetMouseButtonDown(0))
 			{
-				foreach (Card item2 in list)
+				foreach (Card item in list)
 				{
-					Debug.Log(item2.Name + "/" + item2.dir + "/" + item2.flipX + "/" + item2.angle);
+					Debug.Log(item.Name + "/" + item.dir + "/" + item.flipX + "/" + item.angle);
 				}
 			}
 			if (Input.GetMouseButtonDown(1))
@@ -1196,9 +1169,9 @@ public class CoreDebug : EScriptable
 			}
 			if (key)
 			{
-				foreach (Card item3 in EClass._map.Roaming.all)
+				foreach (Card item2 in EClass._map.Roaming.all)
 				{
-					EClass._zone.RemoveCard(item3);
+					EClass._zone.RemoveCard(item2);
 				}
 			}
 			else if (hitPoint.detail != null)
@@ -1277,9 +1250,9 @@ public class CoreDebug : EScriptable
 			{
 				break;
 			}
-			foreach (Card item4 in hitPoint.ListCards())
+			foreach (Card item3 in hitPoint.ListCards())
 			{
-				item4.renderer.PlayAnime(num5.ToEnum<AnimeID>());
+				item3.renderer.PlayAnime(num5.ToEnum<AnimeID>());
 			}
 			Debug.Log(num5.ToEnum<AnimeID>());
 			break;
@@ -2054,6 +2027,7 @@ public class CoreDebug : EScriptable
 			EClass._zone.AddCard(thing, EClass.pc.pos);
 			return "Spawned " + thing.Name;
 		}
+		_ = EClass.sources.charas.map;
 		if (EClass.sources.charas.map.ContainsKey(id))
 		{
 			Chara chara = CharaGen.Create(id);
@@ -2065,6 +2039,26 @@ public class CoreDebug : EScriptable
 			return "Spawned " + chara.Name;
 		}
 		return "'" + id + "' does not exist in the database.";
+	}
+
+	[ConsoleCommand("")]
+	public static string SpawnFigure(string id)
+	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
+		if (!EClass.sources.charas.map.ContainsKey(id))
+		{
+			return "'" + id + "' does not exist in the database.";
+		}
+		Thing thing = ThingGen.Create("figure");
+		Thing thing2 = ThingGen.Create("figure3");
+		string c_idRefCard = (thing2.c_idRefCard = id);
+		thing.c_idRefCard = c_idRefCard;
+		EClass.pc.DropThing(thing);
+		EClass.pc.DropThing(thing2);
+		return "Spawned figures for '" + id + "'";
 	}
 
 	[ConsoleCommand("")]
@@ -2201,6 +2195,10 @@ public class CoreDebug : EScriptable
 	[ConsoleCommand("")]
 	public static string ChangeRace(string id = "?")
 	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
 		if (EClass.sources.races.map.ContainsKey(id))
 		{
 			Thing thing = null;
@@ -2256,6 +2254,10 @@ public class CoreDebug : EScriptable
 	[ConsoleCommand("")]
 	public static string ChangeJob(string id = "?")
 	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
 		if (EClass.sources.jobs.map.ContainsKey(id))
 		{
 			EClass.pc.ChangeJob(id);

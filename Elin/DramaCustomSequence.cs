@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using UnityEngine;
 
@@ -1717,15 +1716,7 @@ public class DramaCustomSequence : EClass
 
 	public bool HasTopic(string idSheet, string idTopic)
 	{
-		string path = CorePath.CorePackage.TextDialog + "dialog.xlsx";
-		if (!File.Exists(path))
-		{
-			return false;
-		}
-		ExcelData excelData = new ExcelData();
-		excelData.path = path;
-		excelData.BuildMap(idSheet);
-		return excelData.sheets[idSheet].map.ContainsKey(idTopic);
+		return Lang.GetDialogSheet(idSheet).map.ContainsKey(idTopic);
 	}
 
 	public string GetText(Chara c, string idSheet, string idTopic)

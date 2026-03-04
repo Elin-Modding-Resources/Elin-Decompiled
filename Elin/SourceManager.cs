@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Reflection;
+using UnityEngine;
 
 public class SourceManager : EMono
 {
@@ -114,6 +115,7 @@ public class SourceManager : EMono
 
 	public void Init()
 	{
+		Debug.Log("SourceManager Init");
 		if (initialized)
 		{
 			return;
@@ -127,6 +129,11 @@ public class SourceManager : EMono
 			{
 				list.Add((SourceData)fieldInfo.GetValue(this));
 			}
+		}
+		BaseModManager.PublishEvent("elin.source.importing");
+		if (ModManagerCore.enableSheetLoading)
+		{
+			ModManager.Instance.ImportAllModSourceSheets();
 		}
 		elements.Init();
 		materials.Init();
@@ -165,11 +172,23 @@ public class SourceManager : EMono
 		keyItems.Init();
 		ACT.Init();
 		TimeTable.Init();
-		Element.ListAttackElements.Clear();
+		List<SourceElement.Row> listAttackElements = Element.ListAttackElements;
+		listAttackElements.Clear();
 		for (int j = 910; j < 927; j++)
 		{
-			Element.ListAttackElements.Add(EMono.sources.elements.map[j]);
+			listAttackElements.Add(EMono.sources.elements.map[j]);
 		}
+		BaseModManager.PublishEvent("elin.source.imported");
+	}
+
+	public void Reload()
+	{
+		initialized = false;
+		foreach (SourceData item in list)
+		{
+			item.Reset();
+		}
+		Init();
 	}
 
 	public void ExportSourceTexts(string path)

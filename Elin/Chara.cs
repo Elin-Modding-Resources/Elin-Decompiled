@@ -7350,7 +7350,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			flag = false;
 		}
-		if (flag && File.Exists(CorePath.DramaData + id + ".xlsx"))
+		if (flag && File.Exists(PackageIterator.GetFiles("Dialog/Drama/" + id + ".xlsx").LastOrDefault()?.FullName ?? (CorePath.DramaData + id + ".xlsx")))
 		{
 			ShowDialog(id);
 		}
@@ -8238,6 +8238,7 @@ public class Chara : Card, IPathfindWalker
 		if (base.c_love != null)
 		{
 			base.c_love.dateMarriage = 0;
+			base.c_love.dateWedding = 0;
 			SetFeat(1275, 0);
 			EClass.player.stats.divorced++;
 		}

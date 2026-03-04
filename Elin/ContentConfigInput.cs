@@ -306,6 +306,7 @@ public class ContentConfigInput : ContentConfigGame
 				uIList.Add(keys.mute);
 				uIList.Add(keys.meditate);
 				uIList.Add(keys.chat);
+				uIList.Add(keys.console);
 			}
 		};
 		_refreshList();

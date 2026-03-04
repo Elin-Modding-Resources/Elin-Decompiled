@@ -11,7 +11,7 @@ public class LayerConsole : ELayer
 
 	public override void OnUpdateInput()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) || EInput.action == EAction.Console)
 		{
 			Close();
 		}

@@ -50,6 +50,10 @@ public class Steam : MonoBehaviour
 
 	public static void GetAchievement(ID_Achievement id)
 	{
+		if (BaseCore.IsOffline)
+		{
+			return;
+		}
 		try
 		{
 			foreach (AchievementObject achievement in Instance.steamworks.settings.achievements)
@@ -63,9 +67,9 @@ public class Steam : MonoBehaviour
 					try
 					{
 						achievement.Unlock();
+						achievement.Store();
 						EClass.ui.Say("sys_acv".lang(achievement.Name), Resources.Load<Sprite>("Media/Graphics/Icon/Achievement/acv_" + id));
 						SE.Play("achievement");
-						achievement.Store();
 						return;
 					}
 					catch (Exception ex)

@@ -5,7 +5,7 @@ public class Hobby : EClass
 {
 	public int id;
 
-	public SourceHobby.Row source => EClass.sources.hobbies.map[id];
+	public SourceHobby.Row source => EClass.sources.hobbies.map.TryGetValue(id) ?? EClass.sources.hobbies.alias["Walk"];
 
 	public string Name => source.GetName();
 

@@ -58,6 +58,8 @@ public class DramaManager : EMono
 
 	private string lastIF2;
 
+	private SoundSource lastSound;
+
 	public DramaEventTalk lastTalk;
 
 	public bool enableTone;
@@ -123,7 +125,7 @@ public class DramaManager : EMono
 			sequence.AddActor("tg", tg);
 		}
 		sequence.AddActor("pc", new Person(EMono.pc));
-		string text = CorePath.DramaData + setup.book + ".xlsx";
+		string text = PackageIterator.GetFiles("Dialog/Drama/" + setup.book + ".xlsx").LastOrDefault()?.FullName ?? (CorePath.DramaData + setup.book + ".xlsx");
 		ExcelData excelData = dictCache.TryGetValue(text);
 		if (excelData != null && excelData.IsModified())
 		{
@@ -141,13 +143,19 @@ public class DramaManager : EMono
 			foreach (Dictionary<string, string> item in new ExcelData
 			{
 				maxEmptyRows = 10,
-				path = CorePath.DramaDataLocal + setup.book + ".xlsx"
+				path = (PackageIterator.GetFiles("Dialog/Drama/" + setup.book + ".xlsx").LastOrDefault()?.FullName ?? (CorePath.DramaDataLocal + setup.book + ".xlsx"))
 			}.BuildList(setup.sheet))
 			{
 				string text2 = item["id"];
-				if (!text2.IsEmpty() && !item["text"].IsEmpty())
+				if (!text2.IsEmpty())
 				{
-					dictLocalize.Add(text2, item["text"]);
+					string text3 = item.TryGetValue("text_" + Lang.langCode) ?? item["text"];
+					if (!dictLocalize.TryAdd(text2, text3))
+					{
+						string text4 = dictLocalize[text2];
+						dictLocalize[text2] = ("[DUPLICATE ID '" + text2 + "']\n").TagColor(Color.red) + text4;
+						Debug.LogError("#drama duplicate id '" + text2 + "' at " + text + "\n" + text4 + " -> " + text3);
+					}
 				}
 			}
 		}
@@ -562,7 +570,8 @@ public class DramaManager : EMono
 				{
 					SoundManager.current.MuteBGMFor(float.Parse(p3, CultureInfo.InvariantCulture));
 				}
-				EMono.Sound.Play(p2);
+				lastSound?.Stop();
+				lastSound = EMono.Sound.Play(p2);
 			});
 			break;
 		case "haltPlaylist":
@@ -1015,6 +1024,18 @@ public class DramaManager : EMono
 			});
 			break;
 		default:
+		{
+			EVENT.ElinDramaParseActionEventArgs elinDramaParseActionEventArgs = new EVENT.ElinDramaParseActionEventArgs
+			{
+				dm = this,
+				line = item
+			};
+			elinDramaParseActionEventArgs.SetData(action);
+			BaseModManager.PublishEvent("elin.drama.parse_action", elinDramaParseActionEventArgs);
+			if (elinDramaParseActionEventArgs.IsUsed)
+			{
+				return;
+			}
 			if (!flag)
 			{
 				break;
@@ -1034,6 +1055,7 @@ public class DramaManager : EMono
 			})) as DramaEventTalk;
 			lastTalk.center = p2 == "center";
 			break;
+		}
 		case "new":
 		case "saveBGM":
 		case "checkAffinity":

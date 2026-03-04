@@ -682,12 +682,15 @@ public class Recipe : EClass
 			EClass._map.SetFloor(pos.x, pos.z, mat, tileRow.id, dir);
 			break;
 		case "Bridge":
+		{
 			if (pos.sourceObj.tileType.RemoveOnFloorChange)
 			{
 				EClass._map.SetObj(pos.x, pos.z);
 			}
-			EClass._map.SetBridge(pos.x, pos.z, Mathf.Clamp(bridgeHeight + altitude, 0, 255), mat, tileRow.id, dir);
+			byte idPillar = (byte)((tileRow.id == 130) ? 255u : 0u);
+			EClass._map.SetBridge(pos.x, pos.z, Mathf.Clamp(bridgeHeight + altitude, 0, 255), mat, tileRow.id, dir, idPillar);
 			break;
+		}
 		case "Obj":
 			EClass._map.SetObj(pos.x, pos.z, mat, tileRow.id, 1, dir, ignoreRandomMat: true);
 			if (tileType.ChangeBlockDir || pos.growth is GrowSystemTreeSingle)

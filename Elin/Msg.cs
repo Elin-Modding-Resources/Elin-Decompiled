@@ -265,9 +265,9 @@ public class Msg : EClass
 		{
 			mainText.Append(mainText.spriteDestroy);
 		}
-		if (!row.color.IsEmpty())
+		if (!row.color.IsEmpty() && colors.colors.TryGetValue(row.color, out var value))
 		{
-			SetColor(colors.colors[row.color]);
+			SetColor(value);
 		}
 		if (!row.sound.IsEmpty())
 		{

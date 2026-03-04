@@ -969,13 +969,13 @@ public class Map : MapBounds, IPathfindGrid
 		RefreshNeighborTiles(x, z);
 	}
 
-	public void SetBridge(int x, int z, int height = 0, int idMat = 0, int idBridge = 0, int dir = 0)
+	public void SetBridge(int x, int z, int height = 0, int idMat = 0, int idBridge = 0, int dir = 0, byte idPillar = 0)
 	{
 		Cell cell = cells[x, z];
 		cell.bridgeHeight = (byte)height;
 		cell._bridgeMat = (byte)idMat;
 		cell._bridge = (byte)idBridge;
-		cell.bridgePillar = 0;
+		cell.bridgePillar = idPillar;
 		cell.floorDir = dir;
 		if (cell.room != null)
 		{
@@ -1764,7 +1764,7 @@ public class Map : MapBounds, IPathfindGrid
 		if (point.cell.HasBridge && removePlatform)
 		{
 			DropBlockComponent(EClass.pc.pos, point.sourceBridge, point.matBridge, recoverBlock, isPlatform: true, c);
-			EClass._map.SetBridge(point.x, point.z);
+			EClass._map.SetBridge(point.x, point.z, 0, 0, 0, 0, 0);
 			if (point.IsSky)
 			{
 				EClass.pc.Kick(point, ignoreSelf: true);

@@ -136,8 +136,12 @@ public class Party : EClass
 		return GetBestSkill(ele);
 	}
 
-	public void ModExpPartySkill(int ele, int a)
+	public void ModExp(int ele, int a)
 	{
+		foreach (Chara member in members)
+		{
+			member.ModExp(ele, a);
+		}
 	}
 
 	public Element GetBestSkill(int ele)

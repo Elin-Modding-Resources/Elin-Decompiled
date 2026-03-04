@@ -652,11 +652,13 @@ public class GrowSystem : EClass
 		}
 		ApplySeed(t);
 		PlantData plantData = EClass._map.TryGetPlant(cell);
+		bool flag = false;
 		if (plantData != null && plantData.size > 0)
 		{
 			t.c_weight = t.SelfWeight * (80 + plantData.size * plantData.size * 100) / 100;
 			t.SetBool(115, enable: true);
 			t.isWeightChanged = true;
+			flag = true;
 		}
 		t.SetBlessedState(BlessedState.Normal);
 		if (source._growth.Length > 4)
@@ -687,6 +689,10 @@ public class GrowSystem : EClass
 			t.SetNum(num);
 		}
 		TryPick(cell, t, c);
+		if (flag)
+		{
+			c.ModExpParty(207, Mathf.Min(t.c_weight / 100, 500));
+		}
 	}
 
 	public void ApplySeed(Thing t)

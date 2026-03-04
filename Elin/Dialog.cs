@@ -11,7 +11,8 @@ public class Dialog : ELayer
 		Default,
 		Password,
 		Item,
-		DistributionFilter
+		DistributionFilter,
+		Chat
 	}
 
 	public Text textConfetti;
@@ -118,6 +119,15 @@ public class Dialog : ELayer
 		{
 			Close();
 		}
+	}
+
+	public override bool OnBack()
+	{
+		if (keymap != null && (!EInput.rightMouse.pressing || EInput.rightMouse.usedKey))
+		{
+			return false;
+		}
+		return base.OnBack();
 	}
 
 	public override void OnUpdateInput()
@@ -531,6 +541,9 @@ public class Dialog : ELayer
 		d.note.AddText(langDetail.lang()).text1.alignment = TextAnchor.MiddleCenter;
 		switch (inputType)
 		{
+		case InputType.Chat:
+			d.input.field.characterLimit = 500;
+			break;
 		case InputType.DistributionFilter:
 			d.input.field.characterLimit = 100;
 			break;

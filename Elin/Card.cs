@@ -2686,6 +2686,21 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public void ModExpParty(int ele, int a)
+	{
+		if (isChara)
+		{
+			if (Chara.party == null)
+			{
+				elements.ModExp(ele, a);
+			}
+			else
+			{
+				Chara.party.ModExp(ele, a);
+			}
+		}
+	}
+
 	public bool IsChildOf(Card c)
 	{
 		return GetRootCard() == c;
@@ -2744,34 +2759,34 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			isDestroyed = true;
 		}
-		if (version >= 5)
-		{
-			return;
-		}
-		if (version < 3 && isChara && HasElement(1210))
-		{
-			elements.ModBase(960, -5 * Evalue(1210));
-		}
-		if (version < 4 && isChara && HasElement(1210))
-		{
-			elements.ModBase(423, Evalue(1210));
-		}
 		if (version < 5)
 		{
-			if (isChara && Chara.race.id == "horse" && Chara.body.GetSlot(30, onlyEmpty: false) == null)
+			if (version < 3 && isChara && HasElement(1210))
 			{
-				Chara.body.AddBodyPart(30);
-				Chara.body.RefreshBodyParts();
+				elements.ModBase(960, -5 * Evalue(1210));
 			}
-			if (isChara && Chara.race.id == "bike" && id != "bike_cub")
+			if (version < 4 && isChara && HasElement(1210))
 			{
-				Rand.SetSeed(uid);
-				Chara.body.AddBodyPart(33);
-				Chara.SetFeat(1423, 1 + EClass.rnd(10));
-				Rand.SetSeed();
+				elements.ModBase(423, Evalue(1210));
 			}
+			if (version < 5)
+			{
+				if (isChara && Chara.race.id == "horse" && Chara.body.GetSlot(30, onlyEmpty: false) == null)
+				{
+					Chara.body.AddBodyPart(30);
+					Chara.body.RefreshBodyParts();
+				}
+				if (isChara && Chara.race.id == "bike" && id != "bike_cub")
+				{
+					Rand.SetSeed(uid);
+					Chara.body.AddBodyPart(33);
+					Chara.SetFeat(1423, 1 + EClass.rnd(10));
+					Rand.SetSeed();
+				}
+			}
+			version = 5;
 		}
-		version = 5;
+		BaseModManager.PublishEvent(isChara ? "elin.chara_created" : "elin.thing_created", this);
 	}
 
 	protected virtual void OnDeserialized()
@@ -2886,6 +2901,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			SetHidden();
 		}
 		isFloating = Pref.Float;
+		BaseModManager.PublishEvent(isChara ? "elin.chara_created" : "elin.thing_created", this);
 	}
 
 	public virtual void OnBeforeCreate()

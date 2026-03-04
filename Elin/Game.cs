@@ -328,6 +328,8 @@ public class Game : EClass
 			EClass.game.Kill();
 		}
 		OnBeforeInstantiate();
+		GameIOContext data = new GameIOContext(text);
+		BaseModManager.PublishEvent("elin.game.pre_load", data);
 		EClass.core.game = GameIO.LoadGame(id, text, cloud);
 		EClass.game.isCloud = cloud;
 		EClass.game.isLoading = true;
@@ -355,6 +357,7 @@ public class Game : EClass
 			WidgetSideScreen.Instance.OnChangeResolution();
 		}
 		EClass.game.isLoading = false;
+		BaseModManager.PublishEvent("elin.game.post_load", data);
 	}
 
 	public void OnLoad()
@@ -953,6 +956,8 @@ public class Game : EClass
 		AddAdventurers();
 		player.OnStartNewGame();
 		EClass.scene.Init(Scene.Mode.StartGame);
+		GameIOContext data = new GameIOContext((isCloud ? CorePath.RootSaveCloud : CorePath.RootSave) + id);
+		BaseModManager.PublishEvent("elin.game.start_new", data);
 	}
 
 	public void AddAdventurers()
@@ -1061,8 +1066,11 @@ public class Game : EClass
 		GameIndex gameIndex = null;
 		try
 		{
+			GameIOContext data = new GameIOContext(GameIO.pathCurrentSave);
+			BaseModManager.PublishEvent("elin.game.pre_save", data);
 			OnBeforeSave();
 			gameIndex = GameIO.SaveGame();
+			BaseModManager.PublishEvent("elin.game.post_save", data);
 		}
 		catch (Exception ex)
 		{

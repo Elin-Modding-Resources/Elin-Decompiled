@@ -399,6 +399,15 @@ public class Feat : Element
 		{
 			hints.Clear();
 		}
+		EVENT.ElinFeatApplyEventArgs elinFeatApplyEventArgs = new EVENT.ElinFeatApplyEventArgs
+		{
+			feat = this,
+			owner = owner,
+			hint = hint
+		};
+		elinFeatApplyEventArgs.SetData(a);
+		BaseModManager.PublishEvent("elin.feat.apply", elinFeatApplyEventArgs);
+		a = elinFeatApplyEventArgs.data;
 		int value = base.Value;
 		int A = Mathf.Abs(a);
 		int invert = ((a >= 0) ? 1 : (-1));

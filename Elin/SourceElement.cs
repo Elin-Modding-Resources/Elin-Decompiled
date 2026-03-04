@@ -279,6 +279,9 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 	[NonSerialized]
 	public List<Row> hobbies = new List<Row>();
 
+	[NonSerialized]
+	public Dictionary<string, string> fuzzyAlias = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
 	public override string[] ImportFields => new string[8] { "altname", "textPhase", "textExtra", "textInc", "textDec", "textAlt", "adjective", "levelBonus" };
 
 	public override Row CreateRow()
@@ -351,6 +354,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 
 	public override void OnInit()
 	{
+		hobbies.Clear();
 		foreach (Row row in rows)
 		{
 			if (row.id >= 100 && row.id < 400)
@@ -362,6 +366,11 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			row.isSkill = row.category == "skill";
 			row.isSpell = row.categorySub == "spell";
 			row.isTrait = row.tag.Contains("trait");
+		}
+		fuzzyAlias.Clear();
+		foreach (string key in alias.Keys)
+		{
+			fuzzyAlias[key] = key;
 		}
 	}
 
@@ -396,25 +405,25 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 
 	public void AddRow(Row ele, int id, string idOrg)
 	{
-		if (Application.isEditor || !map.ContainsKey(id))
+		if (map.ContainsKey(id))
 		{
-			Row row = EClass.sources.elements.alias[idOrg];
-			System.Reflection.FieldInfo[] fields = row.GetType().GetFields();
-			Row row2 = new Row();
-			System.Reflection.FieldInfo[] array = fields;
-			foreach (System.Reflection.FieldInfo fieldInfo in array)
-			{
-				row2.SetField(fieldInfo.Name, row.GetField<object>(fieldInfo.Name));
-			}
-			row2.id = id;
-			row2.idMold = row.id;
-			row2.alias = row.alias + ele.alias.Remove(0, 3);
-			row2.aliasRef = ele.alias;
-			row2.aliasParent = ele.aliasParent;
-			row2.chance = row.chance * ele.chance / 100;
-			row2.LV = row.LV;
-			row2.OnImportData(EClass.sources.elements);
-			rows.Add(row2);
+			return;
 		}
+		Row row = EClass.sources.elements.alias[idOrg];
+		Dictionary<string, System.Reflection.FieldInfo> rowFields = row.GetRowFields();
+		Row row2 = new Row();
+		foreach (System.Reflection.FieldInfo value in rowFields.Values)
+		{
+			value.SetValue(row2, value.GetValue(row));
+		}
+		row2.id = id;
+		row2.idMold = row.id;
+		row2.alias = row.alias + ele.alias.Remove(0, 3);
+		row2.aliasRef = ele.alias;
+		row2.aliasParent = ele.aliasParent;
+		row2.chance = row.chance * ele.chance / 100;
+		row2.LV = row.LV;
+		row2.OnImportData(EClass.sources.elements);
+		rows.Add(row2);
 	}
 }

@@ -250,22 +250,37 @@ public class CardRenderer : RenderObject
 					SourceChara.Row row = EClass.sources.charas.map.TryGetValue(owner.c_idRefCard) ?? EClass.sources.charas.map["putty"];
 					renderData = row.renderData;
 					pref = row.pref;
+					int matColor = traitFigure.GetMatColor();
+					drawShadow = traitFigure.ShowShadow;
 					if (row._tiles.Length == 0 || data.pass == null)
 					{
-						renderData = owner.sourceCard.renderData;
-						pref = owner.sourceCard.pref;
-					}
-					else
-					{
-						if (EClass.core.config.game.antiSpider && row.skinAntiSpider != 0)
+						if (traitFigure.extraRenderer == null)
 						{
-							owner.refVal = row.skinAntiSpider;
+							traitFigure.extraRenderer = new CharaRenderer();
+							traitFigure.extraRenderer.SetOwner(CharaGen.Create(row.id));
 						}
-						p.tile = row._tiles[owner.refVal % row._tiles.Length] * ((owner.dir % 2 == 0) ? 1 : (-1));
-						p.matColor = traitFigure.GetMatColor();
-						drawShadow = traitFigure.ShowShadow;
-						pref = row.pref;
+						if (matColor >= -3)
+						{
+							if (matColor == -3)
+							{
+								MatColors matColors = EClass.core.Colors.matColors["ether"];
+								p.matColor = BaseTileMap.GetColorInt(ref matColors.main, 100) * -1;
+							}
+						}
+						else
+						{
+							p.matColor = matColor;
+						}
+						traitFigure.extraRenderer.Draw(p, ref v, drawShadow);
+						return;
 					}
+					if (EClass.core.config.game.antiSpider && row.skinAntiSpider != 0)
+					{
+						owner.refVal = row.skinAntiSpider;
+					}
+					p.tile = row._tiles[owner.refVal % row._tiles.Length] * ((owner.dir % 2 == 0) ? 1 : (-1));
+					p.matColor = matColor;
+					pref = row.pref;
 					p.x += pref.x * (float)((owner.dir % 2 == 0) ? 1 : (-1));
 					p.y += pref.y;
 					p.z += pref.z;

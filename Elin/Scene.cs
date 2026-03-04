@@ -181,6 +181,7 @@ public class Scene : EMono
 		EMono.ui.RemoveLayers();
 		BuildMenu.Deactivate();
 		ScreenFlash.Reset();
+		BaseModManager.PublishEvent("elin.scene.pre_init", newMode);
 		mode = newMode;
 		switch (newMode)
 		{
@@ -336,6 +337,7 @@ public class Scene : EMono
 		}
 		etherBlossom.SetActive(mode == Mode.Zone && EMono._zone is Zone_WindRest);
 		bubble.SetActive(mode == Mode.Zone && EMono._zone.IsUnderwater);
+		BaseModManager.PublishEvent("elin.scene.post_init", newMode);
 	}
 
 	public void OnKillGame()

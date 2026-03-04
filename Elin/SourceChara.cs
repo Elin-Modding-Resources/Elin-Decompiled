@@ -76,7 +76,21 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 
 		public override string GetAlias => "n";
 
-		public SourceRace.Row race_row => _race_row ?? (_race_row = base.sources.races.map[race]);
+		public SourceRace.Row race_row
+		{
+			get
+			{
+				SourceRace.Row row = _race_row;
+				if (row == null)
+				{
+					SourceRace.Row obj = base.sources.races.map.TryGetValue(race) ?? base.sources.races.map["norland"];
+					SourceRace.Row row2 = obj;
+					_race_row = obj;
+					row = row2;
+				}
+				return row;
+			}
+		}
 
 		public override string RecipeID => id;
 

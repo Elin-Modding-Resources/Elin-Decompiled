@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class TraitFigure : Trait
 {
+	public CardRenderer extraRenderer;
+
 	public override bool CanBeHallucinated => false;
 
 	public CardRow source => EClass.sources.cards.map.TryGetValue(owner.c_idRefCard);

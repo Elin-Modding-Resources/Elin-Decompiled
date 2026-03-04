@@ -719,6 +719,7 @@ public class Core : BaseCore
 				game.Kill();
 			}
 			config.OnSetLang();
+			BaseModManager.PublishEvent("elin.source.lang_set", langCode);
 		}
 	}
 
@@ -750,10 +751,18 @@ public class Core : BaseCore
 		{
 			sourceElement.Init();
 		}
-		if (!sourceElement.alias.TryGetValue(id ?? "_void", out var value))
+		if (!sourceElement.alias.TryGetValue(id ?? (id = "_void"), out var value))
 		{
-			Debug.LogError("exception:" + id);
-			value = sourceElement.rows[0];
+			if (sourceElement.fuzzyAlias.TryGetValue(id, out var value2))
+			{
+				Debug.Log("#element lookup: " + id + " -> " + value2);
+				value = sourceElement.alias[value2];
+			}
+			else
+			{
+				Debug.LogError("#element not found: " + id);
+				value = sourceElement.rows[0];
+			}
 		}
 		return value.id;
 	}

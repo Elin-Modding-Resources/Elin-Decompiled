@@ -100,17 +100,20 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 		{
 			dictionary[row2.id] = row2;
 		}
-		System.Reflection.FieldInfo[] fields = EClass.sources.things.rows[0].GetType().GetFields();
+		Dictionary<string, System.Reflection.FieldInfo> rowFields = new SourceThing.Row().GetRowFields();
 		foreach (Row row3 in rows)
 		{
 			SourceThing.Row row = new SourceThing.Row();
-			SourceThing.Row o = dictionary[row3._origin];
-			System.Reflection.FieldInfo[] array = fields;
-			foreach (System.Reflection.FieldInfo fieldInfo in array)
+			SourceThing.Row obj = dictionary[row3._origin];
+			string key;
+			foreach (KeyValuePair<string, System.Reflection.FieldInfo> item in rowFields)
 			{
-				if (!(fieldInfo.Name == "parse"))
+				item.Deconstruct(out key, out var value);
+				string text = key;
+				System.Reflection.FieldInfo fieldInfo = value;
+				if (!(text == "parse"))
 				{
-					row.SetField(fieldInfo.Name, o.GetField<object>(fieldInfo.Name));
+					fieldInfo.SetValue(row, fieldInfo.GetValue(obj));
 				}
 			}
 			row.id = row3.id;
@@ -198,7 +201,8 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 			row.recipeKey = row3.recipeKey;
 			if (!row3.parse.IsEmpty())
 			{
-				switch (row3._origin)
+				key = row3._origin;
+				switch (key)
 				{
 				case "lamp_ceil2":
 				case "window":
@@ -210,58 +214,58 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 					string[] parse = row3.parse;
 					for (int i = 0; i < parse.Length; i++)
 					{
-						string[] array2 = parse[i].Split('/');
-						switch (array2[0])
+						string[] array = parse[i].Split('/');
+						switch (array[0])
 						{
 						case "elec":
-							row.electricity = array2[1].ToInt();
+							row.electricity = array[1].ToInt();
 							break;
 						case "render":
-							row._idRenderData = array2[1];
+							row._idRenderData = array[1];
 							break;
 						case "tiletype":
-							row._tileType = array2[1];
+							row._tileType = array[1];
 							break;
 						case "anime":
-							row.anime = ((array2.Length <= 4) ? ((array2.Length <= 3) ? new int[2]
+							row.anime = ((array.Length <= 4) ? ((array.Length <= 3) ? new int[2]
 							{
-								array2[1].ToInt(),
-								array2[2].ToInt()
+								array[1].ToInt(),
+								array[2].ToInt()
 							} : new int[3]
 							{
-								array2[1].ToInt(),
-								array2[2].ToInt(),
-								array2[3].ToInt()
+								array[1].ToInt(),
+								array[2].ToInt(),
+								array[3].ToInt()
 							}) : new int[4]
 							{
-								array2[1].ToInt(),
-								array2[2].ToInt(),
-								array2[3].ToInt(),
-								array2[4].ToInt()
+								array[1].ToInt(),
+								array[2].ToInt(),
+								array[3].ToInt(),
+								array[4].ToInt()
 							});
 							break;
 						case "skin":
 						{
-							string[] array3 = array2[1].Split('|');
-							row.skins = new int[array3.Length];
-							for (int j = 0; j < array3.Length; j++)
+							string[] array2 = array[1].Split('|');
+							row.skins = new int[array2.Length];
+							for (int j = 0; j < array2.Length; j++)
 							{
-								row.skins[j] = array3[j].ToInt();
+								row.skins[j] = array2[j].ToInt();
 							}
 							break;
 						}
 						case "alt":
-							row.altTiles = new int[1] { array2[1].ToInt() };
+							row.altTiles = new int[1] { array[1].ToInt() };
 							row.ignoreAltFix = true;
 							break;
 						case "naming":
-							row.naming = array2[1];
+							row.naming = array[1];
 							break;
 						case "ex":
-							row.idActorEx = array2[1];
+							row.idActorEx = array[1];
 							break;
 						case "sound":
-							row.idSound = array2[1];
+							row.idSound = array[1];
 							break;
 						case "color":
 							row.colorMod = 100;
@@ -276,8 +280,8 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 						{
 							int[] second = new int[2]
 							{
-								Core.GetCurrent().sources.elements.alias[array2[1]].id,
-								array2[2].ToInt()
+								Core.GetCurrent().sources.elements.alias[array[1]].id,
+								array[2].ToInt()
 							};
 							row.elements = row.elements.Concat(second).ToArray();
 							break;

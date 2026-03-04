@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,10 @@ public class SourceCard : EClass
 
 	public void Init()
 	{
+		rows.Clear();
+		map.Clear();
+		firstVariations.Clear();
+		crafters.Clear();
 		foreach (SourceThing.Row row in EClass.sources.things.rows)
 		{
 			AddRow(row);
@@ -63,8 +68,16 @@ public class SourceCard : EClass
 			}
 			row.origin.isOrigin = true;
 		}
-		row.SetRenderData();
-		rows.Add(row);
-		map[row.id] = row;
+		try
+		{
+			row.SetRenderData();
+			rows.Add(row);
+			map[row.id] = row;
+		}
+		catch (Exception arg2)
+		{
+			ModPackage arg = ModUtil.FindSourceRowPackage(row);
+			Debug.LogError($"#source failed to set render data for '{row.id}' - {arg}\n{arg2}");
+		}
 	}
 }

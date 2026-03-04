@@ -16,5 +16,7 @@ public enum ID_Achievement
 	LARNNEIRE2,
 	CHURYU2,
 	NINO,
-	CHURYU3
+	CHURYU3,
+	DEMITAS,
+	KETTLE
 }

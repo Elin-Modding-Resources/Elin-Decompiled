@@ -15,6 +15,10 @@ public class TCText : TCUI
 
 	public void Say(string s, float duration = 0f)
 	{
+		if (s.IsEmpty())
+		{
+			return;
+		}
 		PopItem p;
 		switch (s[0])
 		{

@@ -175,7 +175,7 @@ public class TaskDig : BaseTaskHarvest
 		switch (mode)
 		{
 		case Mode.Default:
-			EClass._map.SetBridge(pos.x, pos.z);
+			EClass._map.SetBridge(pos.x, pos.z, 0, 0, 0, 0, 0);
 			break;
 		case Mode.RemoveFloor:
 			EClass._map.MineFloor(pos, owner);

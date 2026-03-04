@@ -2,41 +2,40 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using HeathenEngineering.SteamworksIntegration;
 using HeathenEngineering.SteamworksIntegration.API;
 using IniParser.Model;
-using NPOI.SS.UserModel;
-using NPOI.XSSF.UserModel;
+using Newtonsoft.Json;
 using Steamworks;
 using UnityEngine;
 
 [Serializable]
-public class ModManager : BaseModManager
+public class ModManager : ModManagerCore
 {
-	public struct SheetIndex
-	{
-		public int dest;
-
-		public int old;
-	}
-
 	public static List<object> ListPluginObject = new List<object>();
 
-	public static bool disableMod = false;
+	public static bool disableMod;
+
+	private LoadingScreen _loading;
 
 	public List<FileInfo> replaceFiles = new List<FileInfo>();
 
+	private Action ImportModGodTalks;
+
 	public static List<string> ListChainLoad => BaseModManager.listChainLoad;
 
-	public static DirectoryInfo DirWorkshop => BaseModManager.Instance.dirWorkshop;
+	public static DirectoryInfo DirWorkshop => Instance.dirWorkshop;
+
+	public new static ModManager Instance => (ModManager)BaseModManager.Instance;
 
 	public static bool IsInitialized => BaseModManager.isInitialized;
 
 	public override void Init(string path, string defaultPackage = "_Elona")
 	{
 		base.Init(path, defaultPackage);
-		IniData elinIni = Core.GetElinIni();
 		Debug.Log("IsOffline:" + BaseCore.IsOffline);
+		IniData elinIni = Core.GetElinIni();
 		if (elinIni != null)
 		{
 			if (BaseCore.IsOffline)
@@ -49,188 +48,38 @@ public class ModManager : BaseModManager
 			}
 			else
 			{
-				DirectoryInfo parent = new DirectoryInfo(App.Client.GetAppInstallDirectory(SteamSettings.behaviour.settings.applicationId)).Parent.Parent;
-				dirWorkshop = new DirectoryInfo(parent.FullName + "/workshop/content/2135150");
-				elinIni.Global["path_workshop"] = dirWorkshop.FullName ?? "";
+				string path2 = Path.Combine(App.Client.GetAppInstallDirectory(SteamSettings.behaviour.settings.applicationId), "../../workshop/content/2135150");
+				dirWorkshop = new DirectoryInfo(path2);
+				elinIni.Global["path_workshop"] = dirWorkshop.FullName;
 				Core.SaveElinIni(elinIni);
 			}
 		}
-		if (dirWorkshop != null && !dirWorkshop.Exists)
+		if (!dirWorkshop.Exists)
 		{
 			dirWorkshop = null;
 		}
-		Debug.Log("dirWorkshop:" + dirWorkshop);
-		Debug.Log("Mod Init:" + BaseModManager.rootDefaultPacakge);
-		packages.Clear();
-		DirectoryInfo[] directories = new DirectoryInfo(BaseModManager.rootMod).GetDirectories();
-		Array.Reverse(directories);
-		DirectoryInfo[] array = directories;
-		foreach (DirectoryInfo directoryInfo in array)
+		Debug.Log("Workshop:" + dirWorkshop);
+		Debug.Log("Packages:" + BaseModManager.rootMod);
+		Debug.Log("Core Mod:" + BaseModManager.rootDefaultPacakge);
+		BaseModManager.SubscribeEvent("elin.source.lang_set", delegate(object lang)
 		{
-			if (!EClass.debug.skipMod || !Application.isEditor || !(directoryInfo.Name != "_Elona"))
+			if (ModManagerCore.useLocalizations)
 			{
-				AddPackage(directoryInfo, isInPackages: true);
+				ImportSourceLocalizations(lang as string);
 			}
-		}
-		DirectoryInfo[] directories2 = new DirectoryInfo(CorePath.custom).GetDirectories();
-		ModPackage package = new ModPackage();
-		array = directories2;
-		foreach (DirectoryInfo dir in array)
-		{
-			ParseExtra(dir, package);
-		}
-	}
-
-	private void HandleResults(UgcQuery query)
-	{
-		foreach (WorkshopItem results in query.ResultsList)
-		{
-			if (results.IsSubscribed)
-			{
-				AddWorkshopPackage(results);
-			}
-		}
-	}
-
-	public IEnumerator RefreshMods(Action onComplete, bool syncMods)
-	{
-		bool sync = !BaseCore.IsOffline && syncMods && UserGeneratedContent.Client.GetNumSubscribedItems() != 0;
-		LoadingScreen loading = (sync ? Util.Instantiate<LoadingScreen>("LoadingScreen") : null);
-		if (!disableMod && (!EClass.debug.skipMod || !Application.isEditor))
-		{
-			if (sync)
-			{
-				UgcQuery activeQuery = UgcQuery.GetSubscribed(withLongDescription: false, withMetadata: false, withKeyValueTags: false, withAdditionalPreviews: false, 0u);
-				activeQuery.Execute(HandleResults);
-				loading?.Log("Fetching subscribed Mods...(Hit ESC to cancel)");
-				while (activeQuery.handle != UGCQueryHandle_t.Invalid && !UnityEngine.Input.GetKey(KeyCode.Escape))
-				{
-					yield return new WaitForEndOfFrame();
-				}
-			}
-			else
-			{
-				loading?.Log("Fetching offline Mods.");
-				if (dirWorkshop != null)
-				{
-					DirectoryInfo[] directories = dirWorkshop.GetDirectories();
-					foreach (DirectoryInfo dir in directories)
-					{
-						AddPackage(dir);
-					}
-				}
-			}
-		}
-		if (sync)
-		{
-			bool valid = false;
-			while (!valid)
-			{
-				valid = true;
-				foreach (BaseModPackage package in packages)
-				{
-					WorkshopItem workshopItem = package.item as WorkshopItem;
-					if (!package.installed && workshopItem != null && !workshopItem.IsBanned)
-					{
-						valid = false;
-						string text = "Downloading " + workshopItem.Title + ": ";
-						if (!package.progressText)
-						{
-							package.progressText = loading.Log(text);
-						}
-						if (package.downloadStarted && workshopItem.DownloadCompletion >= 1f)
-						{
-							package.progressText.text = text + "Done!";
-							package.installed = true;
-						}
-						else if (workshopItem.IsDownloading || workshopItem.IsDownloadPending)
-						{
-							package.progressText.text = text + (int)(workshopItem.DownloadCompletion * 100f) + "%";
-						}
-						else if (!package.downloadStarted)
-						{
-							package.downloadStarted = true;
-							workshopItem.DownloadItem(highPriority: true);
-							Debug.Log("start downloading:" + workshopItem.Title + "/" + workshopItem.IsInstalled + "/" + package.installed + "/" + workshopItem.IsDownloading + "/" + workshopItem.IsDownloadPending + "/" + workshopItem.DownloadCompletion);
-						}
-					}
-				}
-				if (!valid && UnityEngine.Input.GetKey(KeyCode.Escape))
-				{
-					break;
-				}
-				yield return new WaitForEndOfFrame();
-			}
-		}
-		foreach (BaseModPackage package2 in packages)
-		{
-			package2.Init();
-			Debug.Log(package2.title + "/" + package2.id + "/" + package2.installed + "/" + package2.dirInfo.FullName);
-		}
-		LoadLoadOrder();
-		packages.Sort((BaseModPackage a, BaseModPackage b) => a.loadPriority - b.loadPriority);
-		foreach (BaseModPackage package3 in packages)
-		{
-			if (package3.isInPackages || !package3.willActivate)
-			{
-				continue;
-			}
-			foreach (BaseModPackage package4 in packages)
-			{
-				if (package4.isInPackages && package3.id == package4.id)
-				{
-					package4.hasPublishedPackage = true;
-				}
-			}
-		}
-		loading?.Log("Total number of Mods:" + packages.Count);
-		if ((bool)loading)
-		{
-			loading.Log("Activating Mods...");
-			yield return new WaitForEndOfFrame();
-			yield return new WaitForEndOfFrame();
-		}
-		BaseModManager.listChainLoad.Clear();
-		ListPluginObject.Clear();
-		foreach (BaseModPackage package5 in packages)
-		{
-			if (package5.IsValidVersion() && (!disableMod || package5.builtin))
-			{
-				package5.Activate();
-				if (package5.activated)
-				{
-					BaseModManager.listChainLoad.Add(package5.dirInfo.FullName);
-				}
-			}
-		}
-		ModUtil.OnModsActivated();
-		ModUtil.LoadTypeFallback();
-		BaseModManager.isInitialized = true;
-		yield return new WaitForEndOfFrame();
-		onComplete?.Invoke();
-		if ((bool)loading)
-		{
-			UnityEngine.Object.Destroy(loading.gameObject);
-		}
-		yield return null;
+			ImportModDialogs();
+		});
 	}
 
 	public void SaveLoadOrder()
 	{
-		if (disableMod)
+		if (!disableMod)
 		{
-			return;
+			List<string> contents = (from p in packages
+				where !p.builtin && p.dirInfo.Exists
+				select $"{p.dirInfo.FullName},{(p.willActivate ? 1 : 0)}").ToList();
+			File.WriteAllLines(CorePath.rootExe + "loadorder.txt", contents);
 		}
-		List<string> list = new List<string>();
-		foreach (BaseModPackage package in packages)
-		{
-			if (!package.builtin && Directory.Exists(package.dirInfo.FullName))
-			{
-				string item = package.dirInfo.FullName + "," + (package.willActivate ? 1 : 0);
-				list.Add(item);
-			}
-		}
-		File.WriteAllLines(CorePath.rootExe + "loadorder.txt", list);
 	}
 
 	public void LoadLoadOrder()
@@ -253,14 +102,227 @@ public class ModManager : BaseModManager
 		for (int i = 0; i < array.Length; i++)
 		{
 			string[] array2 = array[i].Split(',');
-			if (dictionary.ContainsKey(array2[0]))
+			if (dictionary.TryGetValue(array2[0], out var value))
 			{
-				BaseModPackage baseModPackage = dictionary[array2[0]];
-				baseModPackage.loadPriority = num;
-				baseModPackage.willActivate = array2[1] == "1";
+				value.loadPriority = num;
+				value.willActivate = array2[1] == "1";
 			}
 			num++;
 		}
+	}
+
+	public void ImportSourceLocalizations(string lang)
+	{
+		string text = lang + "/SourceLocalization.json";
+		(FileInfo file, EMod package)[] filesEx = PackageIterator.GetFilesEx(text);
+		SortedDictionary<string, string> sortedDictionary = new SortedDictionary<string, string>();
+		Dictionary<string, SortedDictionary<string, string>> dictionary = new Dictionary<string, SortedDictionary<string, string>>();
+		(FileInfo, EMod)[] array = filesEx;
+		string key;
+		string value;
+		for (int i = 0; i < array.Length; i++)
+		{
+			var (fileInfo, eMod) = array[i];
+			try
+			{
+				SortedDictionary<string, string> sortedDictionary2 = IO.LoadFile<SortedDictionary<string, string>>(fileInfo.FullName);
+				foreach (KeyValuePair<string, string> item in sortedDictionary2)
+				{
+					item.Deconstruct(out key, out value);
+					string key2 = key;
+					string value2 = value;
+					sortedDictionary[key2] = value2;
+				}
+				dictionary[eMod.id] = sortedDictionary2;
+			}
+			catch (Exception arg)
+			{
+				Debug.LogError($"#source localization failed to load {fileInfo.ShortPath()}\n{arg}");
+			}
+		}
+		JsonSerializerSettings setting = new JsonSerializerSettings
+		{
+			PreserveReferencesHandling = PreserveReferencesHandling.None,
+			NullValueHandling = NullValueHandling.Ignore
+		};
+		foreach (EMod value4 in base.MappedPackages.Values)
+		{
+			if (!(value4 is ModPackage modPackage) || value4.builtin || !value4.activated)
+			{
+				continue;
+			}
+			HashSet<SourceData.BaseRow> sourceRows = value4.sourceRows;
+			if (sourceRows == null || sourceRows.Count <= 0)
+			{
+				continue;
+			}
+			modPackage.ImportSourceLocalizations(sortedDictionary);
+			if (!ModManagerCore.generateLocalizations || (!modPackage.isInPackages && !Application.isEditor))
+			{
+				continue;
+			}
+			if (Lang.IsBuiltin(modPackage.Mapping.SourceLangMod) && Lang.IsBuiltin(lang))
+			{
+				break;
+			}
+			try
+			{
+				SortedDictionary<string, string> sortedDictionary3 = dictionary.GetValueOrDefault(modPackage.id) ?? new SortedDictionary<string, string>();
+				SortedDictionary<string, string> sortedDictionary4 = modPackage.ExportSourceLocalizations();
+				SortedDictionary<string, string> final = new SortedDictionary<string, string>();
+				foreach (KeyValuePair<string, string> item2 in sortedDictionary4)
+				{
+					item2.Deconstruct(out value, out key);
+					string key3 = value;
+					string defaultValue = key;
+					final[key3] = sortedDictionary3.GetValueOrDefault(key3, defaultValue);
+				}
+				if (sortedDictionary3.Count != final.Count || sortedDictionary3.Any((KeyValuePair<string, string> kv) => !final.TryGetValue(kv.Key, out var value3) || value3 != kv.Value))
+				{
+					IO.SaveFile(Path.Combine(modPackage.dirInfo.FullName, "LangMod", text), final, compress: false, setting);
+					Debug.Log($"#source localization updated {text} / {modPackage}");
+				}
+			}
+			catch (Exception arg2)
+			{
+				Debug.LogError($"#source localization failed to generate {modPackage}\n{arg2}");
+			}
+		}
+	}
+
+	public void ImportAllModSourceSheets()
+	{
+		try
+		{
+			SourceImporter.HotInit(new SourceData[2]
+			{
+				EClass.sources.elements,
+				EClass.sources.materials
+			});
+			List<string> list = new List<string>();
+			foreach (EMod value in base.MappedPackages.Values)
+			{
+				if (value.builtin || !value.activated)
+				{
+					continue;
+				}
+				foreach (FileInfo sourceSheet in value.Mapping.SourceSheets)
+				{
+					if (!sourceSheet.Name.StartsWith(".") && !sourceSheet.Name.Contains("~"))
+					{
+						ModUtil.sourceImporter.fileProviders[sourceSheet.FullName] = value;
+						list.Add(sourceSheet.FullName);
+					}
+				}
+			}
+			ModUtil.sourceImporter.ImportFilesCached(list);
+		}
+		catch (Exception message)
+		{
+			Debug.LogError(message);
+		}
+		Debug.Log("#source finished importing workbooks");
+	}
+
+	public void ImportModDialogs()
+	{
+		Lang.extraExcelDialogs = new HashSet<string>(PathComparer.Default);
+		Lang.excelDialog = null;
+		FileInfo[] files = PackageIterator.GetFiles("Dialog/dialog.xlsx");
+		foreach (FileInfo fileInfo in files)
+		{
+			Lang.extraExcelDialogs.Add(fileInfo.FullName);
+			Debug.Log("#dialog loaded " + fileInfo.ShortPath());
+		}
+	}
+
+	public void ImportAllModGodTalks()
+	{
+		if (Lang.setting?.dir == null)
+		{
+			return;
+		}
+		Dictionary<string, Dictionary<string, string>> map = EClass.sources.dataGodTalk.sheets["_default"].map;
+		foreach (ExcelData item in from f in PackageIterator.GetFiles("Data/god_talk.xlsx")
+			select new ExcelData(f.FullName, 3))
+		{
+			foreach (KeyValuePair<string, Dictionary<string, string>> item2 in map)
+			{
+				item2.Deconstruct(out var key, out var _);
+				string text = key;
+				if (text.IsEmpty())
+				{
+					continue;
+				}
+				Dictionary<string, string> valueOrDefault = item.sheets["_default"].map.GetValueOrDefault(text);
+				if (valueOrDefault == null)
+				{
+					continue;
+				}
+				foreach (KeyValuePair<string, string> item3 in valueOrDefault)
+				{
+					item3.Deconstruct(out key, out var value2);
+					string text2 = key;
+					string value3 = value2;
+					if (text2 != "id")
+					{
+						map[text][text2] = value3;
+					}
+				}
+			}
+			Debug.Log("#dialog loaded " + item.path.ShortPath());
+		}
+	}
+
+	public IEnumerator RefreshMods(Action onComplete, bool syncMods)
+	{
+		bool flag = !BaseCore.IsOffline && syncMods && UserGeneratedContent.Client.GetNumSubscribedItems() != 0;
+		_loading = Util.Instantiate<LoadingScreen>("LoadingScreen");
+		WaitForEndOfFrame awaiter = new WaitForEndOfFrame();
+		packages.Clear();
+		disableMod |= Application.isEditor && EClass.debug.skipMod;
+		LoadLocalPackages();
+		LoadCustomPackage();
+		if (!disableMod)
+		{
+			_loading.Log("Loading workshop contents...");
+			if (flag)
+			{
+				yield return LoadWorkshopPackages();
+			}
+			else if (dirWorkshop != null)
+			{
+				DirectoryInfo[] directories = dirWorkshop.GetDirectories();
+				foreach (DirectoryInfo dir in directories)
+				{
+					AddPackage(dir);
+				}
+			}
+		}
+		InitPackagesMeta();
+		LoadLoadOrder();
+		packages.Sort((BaseModPackage a, BaseModPackage b) => a.loadPriority - b.loadPriority);
+		foreach (BaseModPackage item in packages.Where((BaseModPackage p) => !p.isInPackages && p.willActivate))
+		{
+			if (mappedPackages.TryGetValue(item.id, out var value) && value.isInPackages)
+			{
+				value.hasPublishedPackage = true;
+				mappedPackages[item.id] = item as ModPackage;
+			}
+		}
+		packages.RemoveAll((BaseModPackage p) => p.hasPublishedPackage);
+		_loading.Log($"Total number of mods:{packages.Count}");
+		_loading.Log("Activating Mods...");
+		yield return awaiter;
+		ActivatePackages();
+		BaseModManager.isInitialized = true;
+		yield return awaiter;
+		onComplete?.Invoke();
+		if ((bool)_loading)
+		{
+			UnityEngine.Object.Destroy(_loading.gameObject);
+		}
+		yield return null;
 	}
 
 	public ModPackage AddPackage(DirectoryInfo dir, bool isInPackages = false)
@@ -268,419 +330,220 @@ public class ModManager : BaseModManager
 		ModPackage modPackage = new ModPackage
 		{
 			dirInfo = dir,
-			installed = true
+			installed = true,
+			isInPackages = isInPackages,
+			loadPriority = priorityIndex,
+			Mapping = new FileMapping(dir)
 		};
 		packages.Add(modPackage);
-		modPackage.isInPackages = isInPackages;
-		modPackage.loadPriority = priorityIndex;
 		priorityIndex++;
 		return modPackage;
 	}
 
 	public ModPackage AddWorkshopPackage(WorkshopItem item, bool isInPackages = false)
 	{
-		UserGeneratedContent.Client.GetItemInstallInfo(item.FileId, out var _, out var folderPath, out var _);
-		DirectoryInfo directoryInfo = new DirectoryInfo(folderPath);
-		ModPackage modPackage = new ModPackage
-		{
-			item = item,
-			dirInfo = directoryInfo,
-			installed = directoryInfo.Exists,
-			banned = item.IsBanned
-		};
-		packages.Add(modPackage);
-		modPackage.isInPackages = isInPackages;
-		modPackage.loadPriority = priorityIndex;
-		priorityIndex++;
+		ulong sizeOnDisk;
+		string folderPath;
+		DateTime timeStamp;
+		bool itemInstallInfo = UserGeneratedContent.Client.GetItemInstallInfo(item.FileId, out sizeOnDisk, out folderPath, out timeStamp);
+		DirectoryInfo dir = new DirectoryInfo(folderPath);
+		ModPackage modPackage = AddPackage(dir, isInPackages);
+		modPackage.installed = itemInstallInfo;
+		modPackage.banned = item.IsBanned;
 		return modPackage;
 	}
 
 	public int CountUserMod()
 	{
-		int num = 0;
-		foreach (BaseModPackage package in packages)
+		return packages.Count((BaseModPackage p) => !p.builtin);
+	}
+
+	public void LoadLocalPackages()
+	{
+		_loading.Log("Loading local Package...");
+		DirectoryInfo[] directories = new DirectoryInfo(BaseModManager.rootMod).GetDirectories();
+		Array.Reverse(directories);
+		DirectoryInfo[] array = directories;
+		foreach (DirectoryInfo directoryInfo in array)
 		{
-			if (!package.builtin)
+			if (!disableMod || !(directoryInfo.Name != "_Elona") || !(directoryInfo.Name != "_Lang_Chinese"))
 			{
-				num++;
+				AddPackage(directoryInfo, isInPackages: true);
 			}
 		}
-		return num;
+	}
+
+	public void LoadCustomPackage()
+	{
+		_loading.Log("Loading user Custom...");
+		DirectoryInfo[] directories = new DirectoryInfo(CorePath.custom).GetDirectories();
+		ModPackage package = new ModPackage();
+		DirectoryInfo[] array = directories;
+		foreach (DirectoryInfo dir in array)
+		{
+			ParseExtra(dir, package);
+		}
+	}
+
+	public IEnumerator LoadWorkshopPackages()
+	{
+		WaitForEndOfFrame awaiter = new WaitForEndOfFrame();
+		UgcQuery activeQuery = UgcQuery.GetSubscribed(withLongDescription: false, withMetadata: false, withKeyValueTags: false, withAdditionalPreviews: false, 0u);
+		activeQuery.Execute(HandleWorkshopQuery);
+		_loading.Log("Fetching subscriptions...(Hit ESC to cancel)");
+		while (activeQuery.handle != UGCQueryHandle_t.Invalid && !UnityEngine.Input.GetKey(KeyCode.Escape))
+		{
+			yield return awaiter;
+		}
+		yield return UpdateWorkshopPackages();
+		void HandleWorkshopQuery(UgcQuery query)
+		{
+			foreach (WorkshopItem results in query.ResultsList)
+			{
+				AddWorkshopPackage(results);
+			}
+		}
+	}
+
+	private IEnumerator UpdateWorkshopPackages()
+	{
+		_loading?.Log("Updating subscriptions...");
+		WaitForEndOfFrame awaiter = new WaitForEndOfFrame();
+		while (true)
+		{
+			bool flag = false;
+			foreach (BaseModPackage item in packages.Where((BaseModPackage p) => !p.installed))
+			{
+				if (!(item.item is WorkshopItem { IsBanned: false } workshopItem))
+				{
+					continue;
+				}
+				flag = true;
+				string text = "Downloading " + workshopItem.Title + ": ";
+				BaseModPackage baseModPackage = item;
+				if ((object)baseModPackage.progressText == null)
+				{
+					baseModPackage.progressText = _loading?.Log(text);
+				}
+				if (item.downloadStarted && workshopItem.DownloadCompletion >= 1f)
+				{
+					item.installed = true;
+					if ((bool)item.progressText)
+					{
+						item.progressText.text = text + "Done!";
+					}
+				}
+				else if (workshopItem.IsDownloading || workshopItem.IsDownloadPending)
+				{
+					int num = Mathf.FloorToInt(workshopItem.DownloadCompletion * 100f);
+					if ((bool)item.progressText)
+					{
+						item.progressText.text = text + num + "%";
+					}
+				}
+				else if (!item.downloadStarted)
+				{
+					item.downloadStarted = true;
+					workshopItem.DownloadItem(highPriority: true);
+					Debug.Log("Start downloading: " + workshopItem.Title + " | " + $"Installed={workshopItem.IsInstalled}, " + $"Downloading={workshopItem.IsDownloading}, " + $"Pending={workshopItem.IsDownloadPending}");
+				}
+			}
+			if (!flag)
+			{
+				yield break;
+			}
+			if (UnityEngine.Input.GetKey(KeyCode.Escape))
+			{
+				break;
+			}
+			yield return awaiter;
+		}
+		Debug.Log("Workshop updating cancelled");
+	}
+
+	public void InitPackagesMeta()
+	{
+		foreach (BaseModPackage package in packages)
+		{
+			try
+			{
+				package.Init();
+				mappedPackages[package.id] = package as ModPackage;
+				_loading?.Log(package.ToString());
+			}
+			catch (Exception ex)
+			{
+				package.willActivate = false;
+				_loading?.Log("Mod " + package.title + "/" + package.id + " has failed to initialize, reason: " + ex.Message);
+			}
+		}
+	}
+
+	public void ActivatePackages()
+	{
+		BaseModManager.listChainLoad.Clear();
+		ListPluginObject.Clear();
+		foreach (ModPackage package in packages)
+		{
+			if ((disableMod && !package.builtin) || !package.IsValidVersion())
+			{
+				continue;
+			}
+			try
+			{
+				package.Activate();
+				if (package.activated)
+				{
+					BaseModManager.listChainLoad.Add(package.dirInfo.FullName);
+				}
+			}
+			catch (Exception ex)
+			{
+				_loading.Log("Failed to activate mod: " + package.title + ", reason: " + ex.Message);
+			}
+		}
+		ModUtil.OnModsActivated();
+		ModUtil.LoadTypeFallback();
 	}
 
 	public override void ParseExtra(DirectoryInfo dir, BaseModPackage package)
 	{
+		ModPackage modPackage = (ModPackage)package;
 		switch (dir.Name)
 		{
 		case "TalkText":
-		{
-			FileInfo[] files = dir.GetFiles();
-			foreach (FileInfo fileInfo in files)
-			{
-				if (fileInfo.Name.EndsWith(".xlsx"))
-				{
-					TalkText.modList.Add(new ExcelData(fileInfo.FullName));
-				}
-			}
+			modPackage.ParseTalkText(dir);
 			break;
-		}
 		case "Map":
-		{
-			if (package.builtin)
+			if (!package.builtin)
 			{
-				break;
-			}
-			FileInfo[] files = dir.GetFiles();
-			foreach (FileInfo fileInfo5 in files)
-			{
-				if (fileInfo5.Name.EndsWith(".z"))
-				{
-					MOD.listMaps.Add(fileInfo5);
-				}
+				modPackage.ParseMap(dir);
 			}
 			break;
-		}
 		case "Map Piece":
-		{
-			if (package.builtin)
+			if (!package.builtin)
 			{
-				break;
-			}
-			FileInfo[] files = dir.GetFiles();
-			foreach (FileInfo fileInfo3 in files)
-			{
-				if (fileInfo3.Name.EndsWith(".mp"))
-				{
-					MOD.listPartialMaps.Add(fileInfo3);
-				}
+				modPackage.ParseMapPiece(dir);
 			}
 			break;
-		}
 		case "Texture Replace":
-		{
-			FileInfo[] files = dir.GetFiles();
-			foreach (FileInfo fileInfo6 in files)
-			{
-				if (fileInfo6.Name.EndsWith(".png"))
-				{
-					replaceFiles.Add(fileInfo6);
-				}
-			}
+			replaceFiles.AddRange(modPackage.ParseTextureReplace(dir));
 			break;
-		}
 		case "Texture":
-		{
-			FileInfo[] files = dir.GetFiles();
-			foreach (FileInfo fileInfo4 in files)
-			{
-				if (fileInfo4.Name.EndsWith(".png"))
-				{
-					SpriteReplacer.dictModItems[fileInfo4.Name.Replace(".png", "")] = fileInfo4.GetFullFileNameWithoutExtension();
-				}
-			}
+			modPackage.ParseTexture(dir);
 			break;
-		}
 		case "Portrait":
-		{
-			FileInfo[] files = dir.GetFiles();
-			foreach (FileInfo fileInfo2 in files)
-			{
-				if (fileInfo2.Name.EndsWith(".png"))
-				{
-					if (fileInfo2.Name.StartsWith("BG_"))
-					{
-						Portrait.modPortraitBGs.Add(fileInfo2);
-					}
-					else if (fileInfo2.Name.StartsWith("BGF_"))
-					{
-						Portrait.modPortraitBGFs.Add(fileInfo2);
-					}
-					else if (fileInfo2.Name.EndsWith("-full.png"))
-					{
-						Portrait.modFull.Add(fileInfo2);
-					}
-					else if (fileInfo2.Name.EndsWith("-overlay.png"))
-					{
-						Portrait.modOverlays.Add(fileInfo2);
-					}
-					else
-					{
-						Portrait.modPortraits.Add(fileInfo2);
-					}
-					Portrait.allIds.Add(fileInfo2.Name);
-				}
-			}
+			modPackage.ParsePortrait(dir);
 			break;
-		}
+		case "LangMod":
+			modPackage.ParseLangMod(dir);
+			break;
+		case "Sound":
+			modPackage.ParseSound(dir);
+			break;
 		case "Lang":
-		{
-			DirectoryInfo[] directories = dir.GetDirectories();
-			foreach (DirectoryInfo directoryInfo in directories)
-			{
-				if (!directoryInfo.Name.StartsWith("_") && !TryAddLang(directoryInfo, isNew: false))
-				{
-					EClass.sources.Init();
-					Debug.Log("Generating Language Mod Contents:" + directoryInfo.FullName);
-					IO.CopyDir(CorePath.packageCore + "Lang/EN", directoryInfo.FullName);
-					Directory.CreateDirectory(directoryInfo.FullName + "/Dialog");
-					IO.CopyDir(CorePath.packageCore + "Lang/_Dialog", directoryInfo.FullName + "/Dialog");
-					EClass.sources.ExportSourceTexts(directoryInfo.FullName + "/Game");
-					IO.Copy(CorePath.packageCore + "Lang/lang.ini", directoryInfo.FullName + "/");
-					TryAddLang(directoryInfo, isNew: true);
-				}
-			}
+			modPackage.AddOrUpdateLang(dir);
 			break;
-		}
-		}
-		bool TryAddLang(DirectoryInfo dirLang, bool isNew)
-		{
-			string name = dirLang.Name;
-			FileInfo[] files2 = dirLang.GetFiles();
-			foreach (FileInfo fileInfo7 in files2)
-			{
-				if (fileInfo7.Name == "lang.ini")
-				{
-					LangSetting langSetting = new LangSetting(fileInfo7.FullName)
-					{
-						id = name,
-						dir = dirLang.FullName + "/"
-					};
-					if (isNew)
-					{
-						langSetting.SetVersion();
-					}
-					else if ((Application.isEditor || Lang.runUpdate) && !Lang.IsBuiltin(dirLang.Name) && langSetting.GetVersion() != EClass.core.version.GetInt())
-					{
-						Log.system = "Updated Language Files:" + Environment.NewLine + Environment.NewLine;
-						Debug.Log("Updating Language:" + langSetting.name + "/" + langSetting.GetVersion() + "/" + EClass.core.version.GetInt());
-						EClass.sources.Init();
-						string text = dirLang.FullName + "/Game";
-						Directory.Move(text, text + "_temp");
-						EClass.sources.ExportSourceTexts(text);
-						EClass.sources.UpdateSourceTexts(text);
-						IO.DeleteDirectory(text + "_temp");
-						text = dirLang.FullName + "/Dialog";
-						Directory.Move(text, text + "_temp");
-						IO.CopyDir(CorePath.packageCore + "Lang/_Dialog", text);
-						UpdateDialogs(new DirectoryInfo(text), text + "_temp");
-						IO.DeleteDirectory(text + "_temp");
-						text = dirLang.FullName + "/Data";
-						IO.CopyDir(text, text + "_temp");
-						IO.Copy(CorePath.packageCore + "Lang/EN/Data/god_talk.xlsx", text);
-						IO.Copy(CorePath.packageCore + "Lang/EN/Data/chara_talk.xlsx", text);
-						UpdateTalks(new DirectoryInfo(text), text + "_temp");
-						IO.DeleteDirectory(text + "_temp");
-						langSetting.SetVersion();
-						IO.SaveText(dirLang.FullName + "/update.txt", Log.system);
-					}
-					MOD.langs[name] = langSetting;
-					return true;
-				}
-			}
-			return false;
-		}
-	}
-
-	public void UpdateDialogs(DirectoryInfo dir, string dirTemp)
-	{
-		DirectoryInfo[] directories = dir.GetDirectories();
-		foreach (DirectoryInfo directoryInfo in directories)
-		{
-			UpdateDialogs(directoryInfo, dirTemp + "/" + directoryInfo.Name);
-		}
-		FileInfo[] files = dir.GetFiles();
-		foreach (FileInfo fileInfo in files)
-		{
-			if (fileInfo.Name.EndsWith("xlsx"))
-			{
-				UpdateExcelBook(fileInfo, dirTemp, updateOnlyText: true);
-			}
-		}
-	}
-
-	public void UpdateTalks(DirectoryInfo dir, string dirTemp)
-	{
-		FileInfo[] files = dir.GetFiles();
-		foreach (FileInfo fileInfo in files)
-		{
-			if (fileInfo.Name == "god_talk.xlsx" || fileInfo.Name == "chara_talk.xlsx")
-			{
-				UpdateExcelBook(fileInfo, dirTemp, updateOnlyText: false);
-			}
-		}
-	}
-
-	public void UpdateExcelBook(FileInfo f, string dirTemp, bool updateOnlyText)
-	{
-		string path = dirTemp + "/" + f.Name;
-		if (!File.Exists(path))
-		{
-			return;
-		}
-		XSSFWorkbook xSSFWorkbook;
-		using (FileStream @is = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-		{
-			xSSFWorkbook = new XSSFWorkbook((Stream)@is);
-		}
-		XSSFWorkbook xSSFWorkbook2;
-		using (FileStream is2 = File.Open(f.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-		{
-			xSSFWorkbook2 = new XSSFWorkbook((Stream)is2);
-		}
-		for (int i = 0; i < xSSFWorkbook2.NumberOfSheets; i++)
-		{
-			ISheet sheetAt = xSSFWorkbook2.GetSheetAt(i);
-			ISheet sheet = xSSFWorkbook.GetSheet(sheetAt.SheetName);
-			if (sheet == null)
-			{
-				Log.system = Log.system + "Old sheet not found:" + sheetAt.SheetName + Environment.NewLine;
-				continue;
-			}
-			int num = UpdateExcelSheet(sheetAt, sheet, updateOnlyText);
-			Log.system = Log.system + ((num == 0) ? "(No Changes) " : "(Updated) ") + f.FullName + "(" + sheetAt.SheetName + ")" + Environment.NewLine;
-			if (num != 0)
-			{
-				Log.system = Log.system + num + Environment.NewLine;
-			}
-			Log.system += Environment.NewLine;
-		}
-		using FileStream stream = new FileStream(f.FullName, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-		xSSFWorkbook2.Write(stream);
-	}
-
-	public int UpdateExcelSheet(ISheet destSheet, ISheet oldSheet, bool updateOnlytext)
-	{
-		Dictionary<string, string[]> dictionary = new Dictionary<string, string[]>();
-		int num = 0;
-		int num2 = 0;
-		int num3 = 10;
-		IRow row2 = destSheet.GetRow(0);
-		IRow row3 = oldSheet.GetRow(0);
-		List<SheetIndex> list = new List<SheetIndex>();
-		int cellnum = FindField(row2, "id");
-		int cellnum2 = FindField(row3, "id");
-		for (int i = 0; i < row2.LastCellNum; i++)
-		{
-			ICell cell = row2.GetCell(i);
-			if (cell == null)
-			{
-				break;
-			}
-			string stringCellValue = cell.StringCellValue;
-			if (stringCellValue == "id" || (updateOnlytext && stringCellValue != "text"))
-			{
-				continue;
-			}
-			for (int j = 0; j < row3.LastCellNum; j++)
-			{
-				cell = row3.GetCell(j);
-				if (cell == null)
-				{
-					break;
-				}
-				if (cell.StringCellValue == stringCellValue)
-				{
-					list.Add(new SheetIndex
-					{
-						dest = i,
-						old = j
-					});
-					Debug.Log(destSheet.SheetName + "/" + stringCellValue + "/" + i + "/" + j);
-					break;
-				}
-			}
-		}
-		for (int k = 2; k <= oldSheet.LastRowNum; k++)
-		{
-			IRow row4 = oldSheet.GetRow(k);
-			if (row4 == null)
-			{
-				if (num2 >= num3)
-				{
-					break;
-				}
-				num2++;
-				continue;
-			}
-			num2 = 0;
-			ICell cell2 = row4.GetCell(cellnum2);
-			if (cell2 == null)
-			{
-				continue;
-			}
-			string text = ((cell2.CellType == CellType.Numeric) ? cell2.NumericCellValue.ToString() : cell2.StringCellValue);
-			if (text.IsEmpty())
-			{
-				continue;
-			}
-			string[] array = new string[list.Count];
-			for (int l = 0; l < list.Count; l++)
-			{
-				ICell cell3 = row4.GetCell(list[l].old);
-				if (cell3 != null)
-				{
-					string stringCellValue2 = cell3.StringCellValue;
-					if (!stringCellValue2.IsEmpty())
-					{
-						array[l] = stringCellValue2;
-					}
-				}
-			}
-			dictionary.Add(text, array);
-		}
-		num2 = 0;
-		for (int m = 2; m <= destSheet.LastRowNum; m++)
-		{
-			IRow row5 = destSheet.GetRow(m);
-			if (row5 == null)
-			{
-				if (num2 >= num3)
-				{
-					break;
-				}
-				num2++;
-				continue;
-			}
-			num2 = 0;
-			ICell cell4 = row5.GetCell(cellnum);
-			if (cell4 == null)
-			{
-				continue;
-			}
-			string text2 = ((cell4.CellType == CellType.Numeric) ? cell4.NumericCellValue.ToString() : cell4.StringCellValue);
-			if (text2.IsEmpty() || !dictionary.ContainsKey(text2))
-			{
-				continue;
-			}
-			string[] array2 = dictionary[text2];
-			for (int n = 0; n < list.Count; n++)
-			{
-				ICell cell5 = row5.GetCell(list[n].dest) ?? row5.CreateCell(list[n].dest, CellType.String);
-				if (cell5 != null)
-				{
-					cell5.SetCellValue(array2[n]);
-					cell5.SetCellType(CellType.String);
-					cell5.SetAsActiveCell();
-					num++;
-				}
-			}
-		}
-		return num;
-		static int FindField(IRow row, string id)
-		{
-			for (int num4 = 0; num4 < row.LastCellNum; num4++)
-			{
-				ICell cell6 = row.GetCell(num4);
-				if (cell6 == null)
-				{
-					break;
-				}
-				if (cell6.StringCellValue == id)
-				{
-					return num4;
-				}
-			}
-			return -1;
 		}
 	}
 }
