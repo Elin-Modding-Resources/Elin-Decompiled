@@ -43,5 +43,6 @@ public enum EAction
 	CancelUI = 53,
 	Dump = 54,
 	Mute = 55,
-	Meditate = 56
+	Meditate = 56,
+	Console = 57
 }

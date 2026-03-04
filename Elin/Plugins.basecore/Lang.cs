@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 public class Lang
@@ -58,6 +59,8 @@ public class Lang
 	public static ExcelData names;
 
 	public static ExcelData excelDialog;
+
+	public static HashSet<string> extraExcelDialogs = new HashSet<string>();
 
 	public static bool IsBuiltin(string id)
 	{
@@ -206,24 +209,43 @@ public class Lang
 	{
 		if (excelDialog == null)
 		{
-			string path = CorePath.CorePackage.TextDialog + "dialog.xlsx";
-			excelDialog = new ExcelData();
-			excelDialog.path = path;
+			excelDialog = new ExcelData(CorePath.CorePackage.TextDialog + "dialog.xlsx");
+			excelDialog.LoadBook();
+			for (int i = 0; i < excelDialog.book.NumberOfSheets; i++)
+			{
+				string sheetName = excelDialog.book.GetSheetAt(i).SheetName;
+				excelDialog.BuildMap(sheetName);
+				foreach (ExcelData item in extraExcelDialogs.Select((string f) => new ExcelData(f)))
+				{
+					item.BuildMap(sheetName);
+					ExcelData.Sheet sheet = item.sheets[sheetName];
+					if (item.book.GetSheet(sheetName) == null)
+					{
+						sheet.list.Clear();
+						sheet.map.Clear();
+					}
+					foreach (var (text2, value) in sheet.map)
+					{
+						if (!text2.IsEmpty())
+						{
+							excelDialog.sheets[sheetName].map[text2] = value;
+						}
+					}
+				}
+			}
 		}
-		excelDialog.BuildMap(idSheet);
 		return excelDialog.sheets[idSheet];
 	}
 
 	public static string[] GetDialog(string idSheet, string idTopic)
 	{
-		ExcelData.Sheet dialogSheet = GetDialogSheet(idSheet);
-		string key = "text" + (isBuiltin ? ("_" + langCode) : "");
-		Dictionary<string, string> dictionary = dialogSheet.map.TryGetValue(idTopic);
-		if (dictionary == null || !dictionary.ContainsKey(key))
+		Dictionary<string, string> dictionary = GetDialogSheet(idSheet).map.TryGetValue(idTopic);
+		if (dictionary == null)
 		{
 			return new string[1] { idTopic };
 		}
-		string text = dictionary[key];
+		string key = "text_" + langCode;
+		string text = dictionary.GetValueOrDefault(key) ?? dictionary.GetValueOrDefault("text");
 		if (text.IsEmpty())
 		{
 			text = dictionary["text_EN"];

@@ -81,6 +81,7 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 
 	public override void Init()
 	{
+		Debug.Log("Initializing:" + base.name);
 		if (initialized)
 		{
 			Debug.Log("#init Skipping sourceData.Init:" + base.name);
@@ -88,6 +89,7 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 		}
 		initialized = true;
 		editorListString.Clear();
+		RemoveDuplicateRows();
 		int num = 0;
 		foreach (T row in rows)
 		{
@@ -169,6 +171,55 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 	public virtual T CreateRow()
 	{
 		return null;
+	}
+
+	public override int ImportRows(IEnumerable<BaseRow> sourceRows)
+	{
+		int num = 0;
+		foreach (BaseRow sourceRow in sourceRows)
+		{
+			if (sourceRow is T val)
+			{
+				val.OnImportData(this);
+				rows.Add(val);
+				num++;
+			}
+		}
+		OnAfterImportData();
+		initialized = false;
+		return num;
+	}
+
+	public virtual void RemoveDuplicateRows()
+	{
+		HashSet<T2> hashSet = new HashSet<T2>();
+		List<T> list = new List<T>(rows.Count);
+		bool flag = typeof(T).DeclaringType.Name.Contains("Lang");
+		string arg = GetType().Name;
+		System.Reflection.FieldInfo field = typeof(T).GetField("id");
+		if (field.FieldType != typeof(T2))
+		{
+			Debug.LogError($"#source override: {arg} id field mismatch {field.FieldType} != {typeof(T2)}");
+		}
+		for (int num = rows.Count - 1; num >= 0; num--)
+		{
+			T val = rows[num];
+			T2 val2 = (T2)field.GetValue(val);
+			if (hashSet.Add(val2))
+			{
+				list.Add(val);
+			}
+			else if (!flag)
+			{
+				Debug.Log($"#source override: {arg} {val2}");
+			}
+		}
+		if (rows.Count != list.Count)
+		{
+			Debug.Log($"#source override: {arg} total/{rows.Count} -> unique/{list.Count}");
+			list.Reverse();
+			rows = list;
+		}
 	}
 
 	public override void BackupSource()
@@ -529,11 +580,29 @@ public class SourceData : ScriptableObject
 	[Serializable]
 	public class BaseRow
 	{
+		private static readonly Dictionary<Type, Dictionary<string, FieldInfo>> _fieldCache = new Dictionary<Type, Dictionary<string, FieldInfo>>();
+
 		public int _index;
 
 		public virtual bool UseAlias => false;
 
 		public virtual string GetAlias => "";
+
+		public Dictionary<string, FieldInfo> GetRowFields()
+		{
+			Type type = GetType();
+			if (_fieldCache.TryGetValue(type, out var value))
+			{
+				return value;
+			}
+			value = new Dictionary<string, FieldInfo>();
+			FieldInfo[] fields = type.GetFields(BindingFlags.Instance | BindingFlags.Public);
+			foreach (FieldInfo fieldInfo in fields)
+			{
+				value[fieldInfo.Name] = fieldInfo;
+			}
+			return _fieldCache[type] = value;
+		}
 
 		public virtual string GetName()
 		{
@@ -552,34 +621,42 @@ public class SourceData : ScriptableObject
 
 		public string GetText(string id = "name", bool returnNull = false)
 		{
-			FieldInfo field = GetType().GetField(id + LangSuffix);
-			if (!Lang.isBuiltin && (field == null || (field.GetValue(this) as string).IsEmpty()))
+			Dictionary<string, FieldInfo> rowFields = GetRowFields();
+			if (rowFields.TryGetValue(id + LangSuffix, out var value))
 			{
-				FieldInfo field2 = GetType().GetField(id);
-				if (field2 != null && !(field2.GetValue(this) as string).IsEmpty())
+				string text = value.GetValue(this) as string;
+				if (!text.IsEmpty())
 				{
-					return field2.GetValue(this) as string;
+					return text;
 				}
 			}
-			if (field != null)
+			if (!Lang.isBuiltin && rowFields.TryGetValue(id, out var value2))
 			{
-				return (field.GetValue(this) as string).IsEmpty(returnNull ? null : "");
+				string text2 = value2.GetValue(this) as string;
+				if (!text2.IsEmpty())
+				{
+					return text2;
+				}
 			}
-			return "";
+			if (!returnNull)
+			{
+				return "";
+			}
+			return null;
 		}
 
 		public string[] GetTextArray(string id)
 		{
-			if (!Lang.isBuiltin)
+			Dictionary<string, FieldInfo> rowFields = GetRowFields();
+			if (rowFields.TryGetValue(id + LangSuffix, out var value) && value.GetValue(this) is string[] { Length: >0 } array)
 			{
-				FieldInfo field = GetType().GetField(id + Lang.suffix);
-				if (field != null && field.GetValue(this) is string[] array && array.Length != 0)
-				{
-					return array;
-				}
-				return GetType().GetField(id).GetValue(this) as string[];
+				return array;
 			}
-			return GetType().GetField(id + Lang.suffix).GetValue(this) as string[];
+			if (!Lang.isBuiltin && rowFields.TryGetValue(id, out var value2) && value2.GetValue(this) is string[] { Length: >0 } array2)
+			{
+				return array2;
+			}
+			return Array.Empty<string>();
 		}
 
 		public virtual void SetID(ref int count)
@@ -590,6 +667,94 @@ public class SourceData : ScriptableObject
 
 		public virtual void OnImportData(SourceData data)
 		{
+		}
+
+		public virtual IDictionary<string, string> ExportTexts(string idField = "id")
+		{
+			Dictionary<string, FieldInfo> rowFields = GetRowFields();
+			object obj = rowFields.GetValueOrDefault(idField)?.GetValue(this);
+			SortedDictionary<string, string> sortedDictionary = new SortedDictionary<string, string>();
+			if (obj == null)
+			{
+				return sortedDictionary;
+			}
+			string name = GetType().DeclaringType.Name;
+			foreach (var (text2, jp2) in rowFields)
+			{
+				if (!text2.EndsWith("_JP"))
+				{
+					continue;
+				}
+				string text3 = text2[..^3];
+				if (rowFields.TryGetValue(text3, out var value) && rowFields.ContainsKey(text3 + "_L"))
+				{
+					string text4 = GetFieldText(jp2, value);
+					if (!text4.IsEmpty())
+					{
+						sortedDictionary[$"{name}.{obj}.{text3}"] = text4;
+					}
+				}
+			}
+			return sortedDictionary;
+			string GetFieldText(FieldInfo jp, FieldInfo en)
+			{
+				object obj2 = jp.GetValue(this);
+				object obj3 = en.GetValue(this);
+				if (!Lang.isJP)
+				{
+					object obj4 = obj2;
+					object obj5 = obj3;
+					obj3 = obj4;
+					obj2 = obj5;
+				}
+				if (obj2 is string str)
+				{
+					return str.IsEmpty(obj3 as string);
+				}
+				if (obj2 is string[] array)
+				{
+					return string.Join(',', (array.Length != 0) ? array : (obj3 as string[]));
+				}
+				return null;
+			}
+		}
+
+		public virtual void ImportTexts(IReadOnlyDictionary<string, string> texts, string idField = "id")
+		{
+			Dictionary<string, FieldInfo> rowFields = GetRowFields();
+			object obj = rowFields.GetValueOrDefault(idField)?.GetValue(this);
+			if (obj == null)
+			{
+				return;
+			}
+			string name = GetType().DeclaringType.Name;
+			foreach (var (text2, fieldInfo2) in rowFields)
+			{
+				if (!text2.EndsWith("_L"))
+				{
+					continue;
+				}
+				string text3 = text2[..^2];
+				if (rowFields.ContainsKey(text3) && rowFields.ContainsKey(text3 + "_JP"))
+				{
+					fieldInfo2.SetValue(this, null);
+					if (texts.TryGetValue($"{name}.{obj}.{text3}", out var value2) && !value2.IsEmpty())
+					{
+						SetFieldText(fieldInfo2, value2);
+					}
+				}
+			}
+			void SetFieldText(FieldInfo l, string value)
+			{
+				if (l.FieldType == typeof(string))
+				{
+					l.SetValue(this, value);
+				}
+				else if (l.FieldType == typeof(string[]))
+				{
+					l.SetValue(this, value.IsEmpty() ? Array.Empty<string>() : value.Split(','));
+				}
+			}
 		}
 	}
 
@@ -665,6 +830,11 @@ public class SourceData : ScriptableObject
 	public virtual bool ImportData(ISheet sheet, string bookname, bool overwrite = false)
 	{
 		return false;
+	}
+
+	public virtual int ImportRows(IEnumerable<BaseRow> sourceRows)
+	{
+		return 0;
 	}
 
 	public virtual void BackupSource()

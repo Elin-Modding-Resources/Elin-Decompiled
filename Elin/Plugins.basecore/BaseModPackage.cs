@@ -146,7 +146,7 @@ public class BaseModPackage
 	{
 		if (!hasPublishedPackage && installed && dirInfo.Exists && willActivate)
 		{
-			Debug.Log("Activating(" + loadPriority + ") :" + title + "/" + id);
+			Debug.Log("Activating(" + loadPriority + ") : " + title + "/" + id);
 			activated = true;
 			Parse();
 		}

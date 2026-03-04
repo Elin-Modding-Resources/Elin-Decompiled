@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using Pluralize.NET;
 using UnityEngine;
 using UnityEngine.Events;
@@ -638,6 +639,33 @@ public static class ClassExtension
 		{
 			dic[item.Key] = item.Value;
 		}
+	}
+
+	public static string[] SplitByNewline(this string text)
+	{
+		if (string.IsNullOrEmpty(text))
+		{
+			return new string[0];
+		}
+		return text.Split(new string[3] { "\r\n", "\n", "\r" }, StringSplitOptions.None);
+	}
+
+	public static string RemoveNewline(this string text)
+	{
+		if (string.IsNullOrEmpty(text))
+		{
+			return text;
+		}
+		return text.Replace("\r", "").Replace("\n", "");
+	}
+
+	public static string RemoveAllTags(this string text)
+	{
+		if (string.IsNullOrEmpty(text))
+		{
+			return text;
+		}
+		return Regex.Replace(text, "<.*?>", "");
 	}
 
 	public static int Calc(this string str, int power = 0, int ele = 0, int p2 = 0)

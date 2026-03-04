@@ -20,4 +20,6 @@ public class MOD
 	public static List<FileInfo> listMaps = new List<FileInfo>();
 
 	public static List<FileInfo> listPartialMaps = new List<FileInfo>();
+
+	public static Dictionary<string, FileInfo> sounds = new Dictionary<string, FileInfo>();
 }

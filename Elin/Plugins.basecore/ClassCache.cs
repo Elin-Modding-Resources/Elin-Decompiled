@@ -30,6 +30,11 @@ public class ClassCache<T>
 
 	public T Create<T2>(string id, string assembly)
 	{
+		Func<T> func = dict.TryGetValue(id);
+		if (func != null)
+		{
+			return func();
+		}
 		Type type = Type.GetType(id + ", " + assembly);
 		if (type == null)
 		{
