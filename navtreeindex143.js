@@ -1,5 +1,7 @@
 var NAVTREEINDEX143 =
 {
+"classZone__Arena2.html#aee348b90dbad10453fe48556ffb3a605":[1,0,2170,1],
+"classZone__Asylum.html":[1,0,2171],
 "classZone__Asylum.html#a8a8b700be96946dac961b60545aff9af":[1,0,2171,0],
 "classZone__Beach.html":[1,0,2172],
 "classZone__Casino.html":[1,0,2173],
@@ -247,7 +249,5 @@ var NAVTREEINDEX143 =
 "classZone__StartSite.html#a8fcddf2588515c21a69c0cb885c407c3":[1,0,2232,2],
 "classZone__StartSite.html#ae24d1e90e115f1b5ad892fb055e13fda":[1,0,2232,3],
 "classZone__StartSiteCave.html":[1,0,2233],
-"classZone__StartSiteCave.html#a2106dc0e66e389e282195e3ff6aaede7":[1,0,2233,1],
-"classZone__StartSiteCave.html#a5a5ab353838208ee74c22cf1a777c29e":[1,0,2233,0],
-"classZone__StartSiteSky.html":[1,0,2234]
+"classZone__StartSiteCave.html#a2106dc0e66e389e282195e3ff6aaede7":[1,0,2233,1]
 };

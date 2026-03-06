@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"TraitWindow_8cs_source.html":[2,0,0,1894],
+"TraitWoodMill_8cs.html":[2,0,0,1895],
 "TraitWoodMill_8cs_source.html":[2,0,0,1895],
 "TraitWorkbenchFuel_8cs.html":[2,0,0,1897],
 "TraitWorkbenchFuel_8cs_source.html":[2,0,0,1897],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288ae599161956d626eda4cb0a5ffb85271c":[2,0,0,1940,0,1],
 "VisitorState_8cs_source.html":[2,0,0,1940],
 "WM_8cs.html":[2,0,0,2,0,0,10],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3d":[2,0,0,2,0,0,10,0],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da00fbb0efe65c1695a9a2019b7daefa9d":[2,0,0,2,0,0,10,0,110],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da027acd3aa6b1dd7f26119d3cf0f9a063":[2,0,0,2,0,0,10,0,96]
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3d":[2,0,0,2,0,0,10,0]
 };

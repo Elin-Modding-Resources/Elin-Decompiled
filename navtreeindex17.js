@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"TraitCamera_8cs.html":[2,0,0,1396],
+"TraitCamera_8cs_source.html":[2,0,0,1396],
 "TraitCanvas_8cs.html":[2,0,0,1397],
 "TraitCanvas_8cs_source.html":[2,0,0,1397],
 "TraitCard_8cs.html":[2,0,0,1398],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "TraitFoodEggFertilized_8cs.html":[2,0,0,1521],
 "TraitFoodEggFertilized_8cs_source.html":[2,0,0,1521],
 "TraitFoodEgg_8cs.html":[2,0,0,1520],
-"TraitFoodEgg_8cs_source.html":[2,0,0,1520],
-"TraitFoodFishSlice_8cs.html":[2,0,0,1523],
-"TraitFoodFishSlice_8cs_source.html":[2,0,0,1523]
+"TraitFoodEgg_8cs_source.html":[2,0,0,1520]
 };

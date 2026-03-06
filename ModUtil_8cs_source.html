@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -245,7 +245,7 @@ $(document).ready(function(){initNavTree('ModUtil_8cs_source.html',''); initResi
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordtype">string</span> fileNameWithoutExtension = Path.GetFileNameWithoutExtension(soundFile.FullName);</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordtype">string</span> fullName = soundFile.FullName;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        AudioType audioType = <a class="code hl_function" href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">GetAudioType</a>(soundFile.Extension);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordtype">bool</span> stream = fileNameWithoutExtension.StartsWith(<span class="stringliteral">&quot;BGM/&quot;</span>) &amp;&amp; audioType == AudioType.OGGVORBIS;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordtype">bool</span> stream = fullName.NormalizePath().Contains(<span class="stringliteral">&quot;/BGM/&quot;</span>) &amp;&amp; audioType == AudioType.OGGVORBIS;</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">using </span>UnityWebRequest unityWebRequest = AudioClipStream.GetAudioClip(<span class="stringliteral">&quot;file://&quot;</span> + fullName, audioType, compressed: <span class="keyword">false</span>, stream);</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        unityWebRequest.SendWebRequest();</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        Stopwatch stopwatch = Stopwatch.StartNew();</div>
@@ -309,7 +309,7 @@ $(document).ready(function(){initNavTree('ModUtil_8cs_source.html',''); initResi
 <div class="ttc" id="aclassModUtil_html_abf1e487b6edc0d22a16aa285e3bfb307"><div class="ttname"><a href="classModUtil.html#abf1e487b6edc0d22a16aa285e3bfb307">ModUtil.OnModsActivated</a></div><div class="ttdeci">static void OnModsActivated()</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00023">ModUtil.cs:23</a></div></div>
 <div class="ttc" id="aclassModUtil_html_acb36876e5c912f025129bda3e5ebacb8"><div class="ttname"><a href="classModUtil.html#acb36876e5c912f025129bda3e5ebacb8">ModUtil.LoadTypeFallback</a></div><div class="ttdeci">static void LoadTypeFallback()</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00029">ModUtil.cs:29</a></div></div>
 <div class="ttc" id="aclassModUtil_html_aefa809513e8a6902a3b88650a9f6bcdf"><div class="ttname"><a href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ModUtil.ImportExcel</a></div><div class="ttdeci">static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00058">ModUtil.cs:58</a></div></div>
-<div class="ttc" id="aclassSourceData_1_1BaseRow_html"><div class="ttname"><a href="classSourceData_1_1BaseRow.html">SourceData.BaseRow</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00581">SourceData.cs:582</a></div></div>
+<div class="ttc" id="aclassSourceData_1_1BaseRow_html"><div class="ttname"><a href="classSourceData_1_1BaseRow.html">SourceData.BaseRow</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00585">SourceData.cs:586</a></div></div>
 <div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00010">SourceData.cs:11</a></div></div>
 <div class="ttc" id="aclassSourceData_html_a0e0897d3fefeaef5b5e50291a2845f89"><div class="ttname"><a href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">SourceData.ImportData</a></div><div class="ttdeci">override bool ImportData(ISheet sheet, string bookname, bool overwrite=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00136">SourceData.cs:136</a></div></div>
 <div class="ttc" id="aclassSourceData_html_ab0d3e367fad8f5515b6df6f0eb5597ad"><div class="ttname"><a href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">SourceData.Reset</a></div><div class="ttdeci">override void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00115">SourceData.cs:115</a></div></div>

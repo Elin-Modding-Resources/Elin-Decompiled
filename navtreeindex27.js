@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classAI__TargetCard.html#a59b7ee93e112ce624549a4f4b56cb672":[1,0,118,0],
+"classAI__TargetCard.html#aa6e302a0d0dfa18d3264a1072d6c8c72":[1,0,118,5],
 "classAI__TargetCard.html#ad845f0d46d38890de19c213b65b5da7a":[1,0,118,4],
 "classAI__TargetChara.html":[1,0,119],
 "classAI__TargetChara.html#ad56469a28809f815dc31cd04c8aa705b":[1,0,119,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "classAM__Cinema.html#a3a03039ee823f84da812bb5c96f7fd70":[1,0,146,9],
 "classAM__Cinema.html#a462fcd22cf090aed9d0d4848592efa5d":[1,0,146,3],
 "classAM__Cinema.html#a66c97dd18aa05b99e4ae700b5022bc52":[1,0,146,11],
-"classAM__Cinema.html#a7600c3d0ec653fde2c2e9b88fe84236f":[1,0,146,7],
-"classAM__Cinema.html#aaae9ea0c06664eb416279e1e132be12a":[1,0,146,2],
-"classAM__Cinema.html#ac56c1ff4f82f286a5f85a0d778a494c7":[1,0,146,5]
+"classAM__Cinema.html#a7600c3d0ec653fde2c2e9b88fe84236f":[1,0,146,7]
 };

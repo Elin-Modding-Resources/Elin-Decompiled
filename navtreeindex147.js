@@ -1,5 +1,7 @@
 var NAVTREEINDEX147 =
 {
+"structBitArray32.html#ad13ad65a02be635ed4fbc16120568e4b":[1,0,234,12],
+"structBitArray32.html#ad24ef4922fe039f4fd833826ed4f0c82":[1,0,234,8],
 "structBitArray32.html#ae5854b1038d07a1dd92cfe9ba9cb7666":[1,0,234,3],
 "structBitArray32.html#aec3f1ed36ffbcbb610eaf50bb1d291f7":[1,0,234,10],
 "structBitArray32.html#af1c823fc2ad0746fe1f552574be231f3":[1,0,234,9],

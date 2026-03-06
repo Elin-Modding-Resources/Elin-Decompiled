@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"IPathfindGrid_8cs.html":[2,0,0,706],
+"IPathfindGrid_8cs_source.html":[2,0,0,706],
 "IPathfindWalker_8cs.html":[2,0,0,707],
 "IPathfindWalker_8cs_source.html":[2,0,0,707],
 "IPathfinder_8cs.html":[2,0,0,705],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "LayerConfig_8cs.html":[2,0,0,746],
 "LayerConfig_8cs_source.html":[2,0,0,746],
 "LayerConsole_8cs.html":[2,0,0,747],
-"LayerConsole_8cs_source.html":[2,0,0,747],
-"LayerCover_8cs.html":[2,0,0,748],
-"LayerCover_8cs_source.html":[2,0,0,748]
+"LayerConsole_8cs_source.html":[2,0,0,747]
 };

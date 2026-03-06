@@ -1,5 +1,7 @@
 var NAVTREEINDEX126 =
 {
+"classTraitSpotExit.html#a0bb165e83e5008468261c5a0a16d60a0":[1,0,1891,0],
+"classTraitSpotExit.html#a72b988c1d472fae5444c2920a3ca06b5":[1,0,1891,1],
 "classTraitSpotFarm.html":[1,0,1892],
 "classTraitSpotFarm.html#ae765c95cafe5778e91abdac984ead166":[1,0,1892,1],
 "classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1892,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitToolRangeGunRocket.html#ac010dd19efab2c4f1ce0ff89dc747a52":[1,0,1961,2],
 "classTraitToolRangeGunRocket.html#aed6c2a6e31d7e7471851bd46666426b8":[1,0,1961,0],
 "classTraitToolRangeGunRocket.html#af298d82048c2f9b5642cfa6ed0537b8e":[1,0,1961,1],
-"classTraitToolRangeSling.html":[1,0,1962],
-"classTraitToolRangeSling.html#a0b4addecb4bd6a330418abe350b5eb25":[1,0,1962,1],
-"classTraitToolRangeSling.html#a9fd893013d95169a944c3ac06cf5dfc1":[1,0,1962,0]
+"classTraitToolRangeSling.html":[1,0,1962]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX121 =
 {
+"classTraitDye.html#ae7ff1087f1342e5054280725cd8829d0":[1,0,1597,5],
+"classTraitDyeMaker.html":[1,0,1598],
 "classTraitDyeMaker.html#a042fa7dcb7f2511922650036ef02ed9e":[1,0,1598,8],
 "classTraitDyeMaker.html#a6ed9bfb581432eb63b2e1512f18c94b7":[1,0,1598,3],
 "classTraitDyeMaker.html#a78712d06530b5ae7a73bf2add6276119":[1,0,1598,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitGeneMachine.html#aaba778eaed8a003cd53f8b1f995546b9":[1,0,1656,8],
 "classTraitGeneMachine.html#abc5664c3b0f81910c90a5edabae3fa6f":[1,0,1656,0],
 "classTraitGeneMachine.html#acd96fe02bc2700863076918aa3dabcc7":[1,0,1656,5],
-"classTraitGeneMachine.html#af1ad39a68f732324fc81ce0d0963e0b8":[1,0,1656,4],
-"classTraitGenerator.html":[1,0,1657],
-"classTraitGenerator.html#a11a723c61164373246f873d3c26d06be":[1,0,1657,7]
+"classTraitGeneMachine.html#af1ad39a68f732324fc81ce0d0963e0b8":[1,0,1656,4]
 };

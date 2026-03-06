@@ -1,5 +1,7 @@
 var NAVTREEINDEX20 =
 {
+"TraitSofa_8cs_source.html":[2,0,0,1769],
+"TraitSorin_8cs.html":[2,0,0,1770],
 "TraitSorin_8cs_source.html":[2,0,0,1770],
 "TraitSpecialLantern_8cs.html":[2,0,0,1771],
 "TraitSpecialLantern_8cs_source.html":[2,0,0,1771],
@@ -247,7 +249,5 @@ var NAVTREEINDEX20 =
 "TraitWhipLove_8cs_source.html":[2,0,0,1892],
 "TraitWhistlePeace_8cs.html":[2,0,0,1893],
 "TraitWhistlePeace_8cs_source.html":[2,0,0,1893],
-"TraitWindow_8cs.html":[2,0,0,1894],
-"TraitWindow_8cs_source.html":[2,0,0,1894],
-"TraitWoodMill_8cs.html":[2,0,0,1895]
+"TraitWindow_8cs.html":[2,0,0,1894]
 };

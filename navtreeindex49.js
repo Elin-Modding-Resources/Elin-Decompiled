@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"classColorProfile_1_1PCLights.html#a30528f180df46b944db528c60af05ad5":[1,0,305,1,1],
+"classColorProfile_1_1PCLights.html#ae3ebd6e17676b8f41eadb1d08c79bfe6":[1,0,305,1,0],
 "classColorProfile_1_1RarityColors.html":[1,0,305,2],
 "classColorProfile_1_1RarityColors.html#a26ac41b8dbadb4e9d41b9498e24c4d4b":[1,0,305,2,0],
 "classColorProfile_1_1RarityColors.html#a4a84930afe50735e9a4f9be1e84b7772":[1,0,305,2,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "classConStrife.html#ae805c1f0d6f0c9a395852acf1830d06f":[1,0,370,8],
 "classConStrife.html#af091639ae8ccbfb31b4090b57b9814e1":[1,0,370,10],
 "classConStrife.html#af24102b6046155412c350ed92c2a05cc":[1,0,370,11],
-"classConSuffocation.html":[1,0,371],
-"classConSuffocation.html#a155fd41a6ccf66063d3016ab4ab64eeb":[1,0,371,3],
-"classConSuffocation.html#a491553122d58258cb1fb7725f8b582c5":[1,0,371,2]
+"classConSuffocation.html":[1,0,371]
 };

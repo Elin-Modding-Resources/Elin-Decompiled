@@ -1,5 +1,7 @@
 var NAVTREEINDEX71 =
 {
+"classGuildMage.html#a58189178f12635adea355a8199949d95":[1,0,627,0],
+"classGuildMage.html#a706f09183ecc804e3847f0e06a4134b2":[1,0,627,3],
 "classGuildMage.html#aa4b02b7c79b3b9af14ca4485e02fdba4":[1,0,627,1],
 "classGuildMerchant.html":[1,0,628],
 "classGuildMerchant.html#a0ef1a80f571838ee3fa235da23d455ac":[1,0,628,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX71 =
 "classHomeResourceManager.html":[1,0,649],
 "classHomeResourceManager.html#a0e1c0afb045429a5110f540dfecc0ec0":[1,0,649,13],
 "classHomeResourceManager.html#a0ebcf778f17dbaf7544165e478bb0dc1":[1,0,649,20],
-"classHomeResourceManager.html#a14ba9e45b19447f96dc74e741e37bd56":[1,0,649,6],
-"classHomeResourceManager.html#a176375943fe8575f20332ab540b1a875":[1,0,649,2],
-"classHomeResourceManager.html#a1a7e7bab011a12f1eb0486915859d4f1":[1,0,649,19]
+"classHomeResourceManager.html#a14ba9e45b19447f96dc74e741e37bd56":[1,0,649,6]
 };

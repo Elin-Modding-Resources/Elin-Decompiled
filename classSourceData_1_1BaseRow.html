@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -163,7 +163,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00581">581</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00585">585</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a93b7a0cd0fbec8b2b6b4573faf2b698a" name="a93b7a0cd0fbec8b2b6b4573faf2b698a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93b7a0cd0fbec8b2b6b4573faf2b698a">&#9670;&#160;</a></span>ExportTexts()</h2>
@@ -189,61 +189,61 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00672">672</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  673</span>        {</div>
-<div class="line"><span class="lineno">  674</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
-<div class="line"><span class="lineno">  675</span>            <span class="keywordtype">object</span> obj = rowFields.GetValueOrDefault(idField)?.GetValue(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  676</span>            SortedDictionary&lt;string, string&gt; sortedDictionary = <span class="keyword">new</span> SortedDictionary&lt;string, string&gt;();</div>
-<div class="line"><span class="lineno">  677</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  678</span>            {</div>
-<div class="line"><span class="lineno">  679</span>                <span class="keywordflow">return</span> sortedDictionary;</div>
-<div class="line"><span class="lineno">  680</span>            }</div>
-<div class="line"><span class="lineno">  681</span>            <span class="keywordtype">string</span> name = GetType().DeclaringType.Name;</div>
-<div class="line"><span class="lineno">  682</span>            <span class="keywordflow">foreach</span> (var (text2, jp2) in rowFields)</div>
-<div class="line"><span class="lineno">  683</span>            {</div>
-<div class="line"><span class="lineno">  684</span>                <span class="keywordflow">if</span> (!text2.EndsWith(<span class="stringliteral">&quot;_JP&quot;</span>))</div>
-<div class="line"><span class="lineno">  685</span>                {</div>
-<div class="line"><span class="lineno">  686</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  687</span>                }</div>
-<div class="line"><span class="lineno">  688</span>                <span class="keywordtype">string</span> text3 = text2[..^3];</div>
-<div class="line"><span class="lineno">  689</span>                <span class="keywordflow">if</span> (rowFields.TryGetValue(text3, out var value) &amp;&amp; rowFields.ContainsKey(text3 + <span class="stringliteral">&quot;_L&quot;</span>))</div>
-<div class="line"><span class="lineno">  690</span>                {</div>
-<div class="line"><span class="lineno">  691</span>                    <span class="keywordtype">string</span> text4 = GetFieldText(jp2, value);</div>
-<div class="line"><span class="lineno">  692</span>                    <span class="keywordflow">if</span> (!text4.IsEmpty())</div>
-<div class="line"><span class="lineno">  693</span>                    {</div>
-<div class="line"><span class="lineno">  694</span>                        sortedDictionary[<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>] = text4;</div>
-<div class="line"><span class="lineno">  695</span>                    }</div>
-<div class="line"><span class="lineno">  696</span>                }</div>
-<div class="line"><span class="lineno">  697</span>            }</div>
-<div class="line"><span class="lineno">  698</span>            <span class="keywordflow">return</span> sortedDictionary;</div>
-<div class="line"><span class="lineno">  699</span>            <span class="keywordtype">string</span> GetFieldText(FieldInfo jp, FieldInfo en)</div>
-<div class="line"><span class="lineno">  700</span>            {</div>
-<div class="line"><span class="lineno">  701</span>                <span class="keywordtype">object</span> obj2 = jp.GetValue(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  702</span>                <span class="keywordtype">object</span> obj3 = en.GetValue(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  703</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ae68ced98bb5ad8d8f206f4905b790653">isJP</a>)</div>
-<div class="line"><span class="lineno">  704</span>                {</div>
-<div class="line"><span class="lineno">  705</span>                    <span class="keywordtype">object</span> obj4 = obj2;</div>
-<div class="line"><span class="lineno">  706</span>                    <span class="keywordtype">object</span> obj5 = obj3;</div>
-<div class="line"><span class="lineno">  707</span>                    obj3 = obj4;</div>
-<div class="line"><span class="lineno">  708</span>                    obj2 = obj5;</div>
-<div class="line"><span class="lineno">  709</span>                }</div>
-<div class="line"><span class="lineno">  710</span>                <span class="keywordflow">if</span> (obj2 is <span class="keywordtype">string</span> str)</div>
-<div class="line"><span class="lineno">  711</span>                {</div>
-<div class="line"><span class="lineno">  712</span>                    <span class="keywordflow">return</span> str.IsEmpty(obj3 as <span class="keywordtype">string</span>);</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00676">676</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  677</span>        {</div>
+<div class="line"><span class="lineno">  678</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
+<div class="line"><span class="lineno">  679</span>            <span class="keywordtype">object</span> obj = rowFields.GetValueOrDefault(idField)?.GetValue(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  680</span>            SortedDictionary&lt;string, string&gt; sortedDictionary = <span class="keyword">new</span> SortedDictionary&lt;string, string&gt;();</div>
+<div class="line"><span class="lineno">  681</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  682</span>            {</div>
+<div class="line"><span class="lineno">  683</span>                <span class="keywordflow">return</span> sortedDictionary;</div>
+<div class="line"><span class="lineno">  684</span>            }</div>
+<div class="line"><span class="lineno">  685</span>            <span class="keywordtype">string</span> name = GetType().DeclaringType.Name;</div>
+<div class="line"><span class="lineno">  686</span>            <span class="keywordflow">foreach</span> (var (text2, jp2) in rowFields)</div>
+<div class="line"><span class="lineno">  687</span>            {</div>
+<div class="line"><span class="lineno">  688</span>                <span class="keywordflow">if</span> (!text2.EndsWith(<span class="stringliteral">&quot;_JP&quot;</span>))</div>
+<div class="line"><span class="lineno">  689</span>                {</div>
+<div class="line"><span class="lineno">  690</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  691</span>                }</div>
+<div class="line"><span class="lineno">  692</span>                <span class="keywordtype">string</span> text3 = text2[..^3];</div>
+<div class="line"><span class="lineno">  693</span>                <span class="keywordflow">if</span> (rowFields.TryGetValue(text3, out var value) &amp;&amp; rowFields.ContainsKey(text3 + <span class="stringliteral">&quot;_L&quot;</span>))</div>
+<div class="line"><span class="lineno">  694</span>                {</div>
+<div class="line"><span class="lineno">  695</span>                    <span class="keywordtype">string</span> text4 = GetFieldText(jp2, value);</div>
+<div class="line"><span class="lineno">  696</span>                    <span class="keywordflow">if</span> (!text4.IsEmpty())</div>
+<div class="line"><span class="lineno">  697</span>                    {</div>
+<div class="line"><span class="lineno">  698</span>                        sortedDictionary[<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>] = text4;</div>
+<div class="line"><span class="lineno">  699</span>                    }</div>
+<div class="line"><span class="lineno">  700</span>                }</div>
+<div class="line"><span class="lineno">  701</span>            }</div>
+<div class="line"><span class="lineno">  702</span>            <span class="keywordflow">return</span> sortedDictionary;</div>
+<div class="line"><span class="lineno">  703</span>            <span class="keywordtype">string</span> GetFieldText(FieldInfo jp, FieldInfo en)</div>
+<div class="line"><span class="lineno">  704</span>            {</div>
+<div class="line"><span class="lineno">  705</span>                <span class="keywordtype">object</span> obj2 = jp.GetValue(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  706</span>                <span class="keywordtype">object</span> obj3 = en.GetValue(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  707</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ae68ced98bb5ad8d8f206f4905b790653">isJP</a>)</div>
+<div class="line"><span class="lineno">  708</span>                {</div>
+<div class="line"><span class="lineno">  709</span>                    <span class="keywordtype">object</span> obj4 = obj2;</div>
+<div class="line"><span class="lineno">  710</span>                    <span class="keywordtype">object</span> obj5 = obj3;</div>
+<div class="line"><span class="lineno">  711</span>                    obj3 = obj4;</div>
+<div class="line"><span class="lineno">  712</span>                    obj2 = obj5;</div>
 <div class="line"><span class="lineno">  713</span>                }</div>
-<div class="line"><span class="lineno">  714</span>                <span class="keywordflow">if</span> (obj2 is <span class="keywordtype">string</span>[] array)</div>
+<div class="line"><span class="lineno">  714</span>                <span class="keywordflow">if</span> (obj2 is <span class="keywordtype">string</span> str)</div>
 <div class="line"><span class="lineno">  715</span>                {</div>
-<div class="line"><span class="lineno">  716</span>                    <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Join(<span class="charliteral">&#39;,&#39;</span>, (array.Length != 0) ? array : (obj3 as <span class="keywordtype">string</span>[]));</div>
+<div class="line"><span class="lineno">  716</span>                    <span class="keywordflow">return</span> str.IsEmpty(obj3 as <span class="keywordtype">string</span>);</div>
 <div class="line"><span class="lineno">  717</span>                }</div>
-<div class="line"><span class="lineno">  718</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  719</span>            }</div>
-<div class="line"><span class="lineno">  720</span>        }</div>
+<div class="line"><span class="lineno">  718</span>                <span class="keywordflow">if</span> (obj2 is <span class="keywordtype">string</span>[] array)</div>
+<div class="line"><span class="lineno">  719</span>                {</div>
+<div class="line"><span class="lineno">  720</span>                    <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Join(<span class="charliteral">&#39;,&#39;</span>, (array.Length != 0) ? array : (obj3 as <span class="keywordtype">string</span>[]));</div>
+<div class="line"><span class="lineno">  721</span>                }</div>
+<div class="line"><span class="lineno">  722</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  723</span>            }</div>
+<div class="line"><span class="lineno">  724</span>        }</div>
 <div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00085">ModManager.cs:85</a></div></div>
 <div class="ttc" id="aclassLang_html"><div class="ttname"><a href="classLang.html">Lang</a></div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00006">Lang.cs:7</a></div></div>
 <div class="ttc" id="aclassLang_html_ae68ced98bb5ad8d8f206f4905b790653"><div class="ttname"><a href="classLang.html#ae68ced98bb5ad8d8f206f4905b790653">Lang.isJP</a></div><div class="ttdeci">static bool isJP</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00039">Lang.cs:39</a></div></div>
-<div class="ttc" id="aclassSourceData_1_1BaseRow_html_aef4a7dd03a4f653003c28835f48d0983"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">SourceData.BaseRow.GetRowFields</a></div><div class="ttdeci">Dictionary&lt; string, FieldInfo &gt; GetRowFields()</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00591">SourceData.cs:591</a></div></div>
+<div class="ttc" id="aclassSourceData_1_1BaseRow_html_aef4a7dd03a4f653003c28835f48d0983"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">SourceData.BaseRow.GetRowFields</a></div><div class="ttdeci">Dictionary&lt; string, FieldInfo &gt; GetRowFields()</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00595">SourceData.cs:595</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, <a class="el" href="SourceData_8cs_source.html#l00591">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="SourceData_8cs_source.html#l00026">SourceData&lt; T, T2 &gt;.FieldInfo.GetValue()</a>, and <a class="el" href="Lang_8cs_source.html#l00039">Lang.isJP</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="SourceData_8cs_source.html#l00026">SourceData&lt; T, T2 &gt;.FieldInfo.GetValue()</a>, and <a class="el" href="Lang_8cs_source.html#l00039">Lang.isJP</a>.</p>
 
 </div>
 </div>
@@ -270,13 +270,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00612">612</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  613</span>        {</div>
-<div class="line"><span class="lineno">  614</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>(<span class="stringliteral">&quot;detail&quot;</span>);</div>
-<div class="line"><span class="lineno">  615</span>        }</div>
-<div class="ttc" id="aclassSourceData_1_1BaseRow_html_a8512b7966929e9046ae37773fd30aac0"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">SourceData.BaseRow.GetText</a></div><div class="ttdeci">string GetText(string id=&quot;name&quot;, bool returnNull=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00622">SourceData.cs:622</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00616">616</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  617</span>        {</div>
+<div class="line"><span class="lineno">  618</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>(<span class="stringliteral">&quot;detail&quot;</span>);</div>
+<div class="line"><span class="lineno">  619</span>        }</div>
+<div class="ttc" id="aclassSourceData_1_1BaseRow_html_a8512b7966929e9046ae37773fd30aac0"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">SourceData.BaseRow.GetText</a></div><div class="ttdeci">string GetText(string id=&quot;name&quot;, bool returnNull=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00626">SourceData.cs:626</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00622">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00626">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RecipeCard_8cs_source.html#l00041">RecipeCard.GetDetail()</a>, and <a class="el" href="RecipeSource_8cs_source.html#l00106">RecipeSource.GetDetail()</a>.</p>
 
@@ -307,10 +307,10 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classCardRow.html#a779878b5866edfda0f4775242df2b60d">CardRow</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00617">617</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  618</span>        {</div>
-<div class="line"><span class="lineno">  619</span>            <span class="keywordflow">return</span> this.GetField&lt;int&gt;(<span class="stringliteral">&quot;id&quot;</span>) + <span class="stringliteral">&quot;-&quot;</span> + this.GetField&lt;string&gt;(<span class="stringliteral">&quot;alias&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + this.GetField&lt;string&gt;(<span class="stringliteral">&quot;name_JP&quot;</span>) + <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><span class="lineno">  620</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00621">621</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  622</span>        {</div>
+<div class="line"><span class="lineno">  623</span>            <span class="keywordflow">return</span> this.GetField&lt;int&gt;(<span class="stringliteral">&quot;id&quot;</span>) + <span class="stringliteral">&quot;-&quot;</span> + this.GetField&lt;string&gt;(<span class="stringliteral">&quot;alias&quot;</span>) + <span class="stringliteral">&quot;(&quot;</span> + this.GetField&lt;string&gt;(<span class="stringliteral">&quot;name_JP&quot;</span>) + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><span class="lineno">  624</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -339,12 +339,12 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classCardRow.html#af57ade00d4c8ccf5b79966c13401819c">CardRow</a>, <a class="el" href="classSourceChara_1_1Row.html#a6efb4ffd2718641dae0d34a1cb4638af">SourceChara.Row</a>, and <a class="el" href="classSourceThing_1_1Row.html#a8f95c90698639f26a04f0f9ce76601e4">SourceThing.Row</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00607">607</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  608</span>        {</div>
-<div class="line"><span class="lineno">  609</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>();</div>
-<div class="line"><span class="lineno">  610</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00611">611</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  612</span>        {</div>
+<div class="line"><span class="lineno">  613</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classSourceData_1_1BaseRow.html#a8512b7966929e9046ae37773fd30aac0">GetText</a>();</div>
+<div class="line"><span class="lineno">  614</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00622">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00626">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TraitTile_8cs_source.html#l00011">TraitTile.SetName()</a>.</p>
 
@@ -373,26 +373,26 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00591">591</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  592</span>        {</div>
-<div class="line"><span class="lineno">  593</span>            Type type = GetType();</div>
-<div class="line"><span class="lineno">  594</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceData_1_1BaseRow.html#ab6037e19e19cdc00217c6933c07fee88">_fieldCache</a>.TryGetValue(type, out var value))</div>
-<div class="line"><span class="lineno">  595</span>            {</div>
-<div class="line"><span class="lineno">  596</span>                <span class="keywordflow">return</span> value;</div>
-<div class="line"><span class="lineno">  597</span>            }</div>
-<div class="line"><span class="lineno">  598</span>            value = <span class="keyword">new</span> Dictionary&lt;string, FieldInfo&gt;();</div>
-<div class="line"><span class="lineno">  599</span>            FieldInfo[] fields = type.GetFields(BindingFlags.Instance | BindingFlags.Public);</div>
-<div class="line"><span class="lineno">  600</span>            <span class="keywordflow">foreach</span> (FieldInfo fieldInfo <span class="keywordflow">in</span> fields)</div>
-<div class="line"><span class="lineno">  601</span>            {</div>
-<div class="line"><span class="lineno">  602</span>                value[fieldInfo.Name] = fieldInfo;</div>
-<div class="line"><span class="lineno">  603</span>            }</div>
-<div class="line"><span class="lineno">  604</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceData_1_1BaseRow.html#ab6037e19e19cdc00217c6933c07fee88">_fieldCache</a>[type] = value;</div>
-<div class="line"><span class="lineno">  605</span>        }</div>
-<div class="ttc" id="aclassSourceData_1_1BaseRow_html_ab6037e19e19cdc00217c6933c07fee88"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#ab6037e19e19cdc00217c6933c07fee88">SourceData.BaseRow._fieldCache</a></div><div class="ttdeci">static readonly Dictionary&lt; Type, Dictionary&lt; string, FieldInfo &gt; &gt; _fieldCache</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00583">SourceData.cs:583</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00595">595</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  596</span>        {</div>
+<div class="line"><span class="lineno">  597</span>            Type type = GetType();</div>
+<div class="line"><span class="lineno">  598</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSourceData_1_1BaseRow.html#ab6037e19e19cdc00217c6933c07fee88">_fieldCache</a>.TryGetValue(type, out var value))</div>
+<div class="line"><span class="lineno">  599</span>            {</div>
+<div class="line"><span class="lineno">  600</span>                <span class="keywordflow">return</span> value;</div>
+<div class="line"><span class="lineno">  601</span>            }</div>
+<div class="line"><span class="lineno">  602</span>            value = <span class="keyword">new</span> Dictionary&lt;string, FieldInfo&gt;();</div>
+<div class="line"><span class="lineno">  603</span>            FieldInfo[] fields = type.GetFields(BindingFlags.Instance | BindingFlags.Public);</div>
+<div class="line"><span class="lineno">  604</span>            <span class="keywordflow">foreach</span> (FieldInfo fieldInfo <span class="keywordflow">in</span> fields)</div>
+<div class="line"><span class="lineno">  605</span>            {</div>
+<div class="line"><span class="lineno">  606</span>                value[fieldInfo.Name] = fieldInfo;</div>
+<div class="line"><span class="lineno">  607</span>            }</div>
+<div class="line"><span class="lineno">  608</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceData_1_1BaseRow.html#ab6037e19e19cdc00217c6933c07fee88">_fieldCache</a>[type] = value;</div>
+<div class="line"><span class="lineno">  609</span>        }</div>
+<div class="ttc" id="aclassSourceData_1_1BaseRow_html_ab6037e19e19cdc00217c6933c07fee88"><div class="ttname"><a href="classSourceData_1_1BaseRow.html#ab6037e19e19cdc00217c6933c07fee88">SourceData.BaseRow._fieldCache</a></div><div class="ttdeci">static readonly Dictionary&lt; Type, Dictionary&lt; string, FieldInfo &gt; &gt; _fieldCache</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00587">SourceData.cs:587</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00583">SourceData&lt; T, T2 &gt;.BaseRow._fieldCache</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00587">SourceData&lt; T, T2 &gt;.BaseRow._fieldCache</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00672">SourceData&lt; T, T2 &gt;.BaseRow.ExportTexts()</a>, <a class="el" href="SourceData_8cs_source.html#l00622">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="SourceData_8cs_source.html#l00648">SourceData&lt; T, T2 &gt;.BaseRow.GetTextArray()</a>, <a class="el" href="SourceData_8cs_source.html#l00722">SourceData&lt; T, T2 &gt;.BaseRow.ImportTexts()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00676">SourceData&lt; T, T2 &gt;.BaseRow.ExportTexts()</a>, <a class="el" href="SourceData_8cs_source.html#l00626">SourceData&lt; T, T2 &gt;.BaseRow.GetText()</a>, <a class="el" href="SourceData_8cs_source.html#l00652">SourceData&lt; T, T2 &gt;.BaseRow.GetTextArray()</a>, <a class="el" href="SourceData_8cs_source.html#l00726">SourceData&lt; T, T2 &gt;.BaseRow.ImportTexts()</a>, and <a class="el" href="SourceThingV_8cs_source.html#l00096">SourceThingV.OnAfterImportData()</a>.</p>
 
 </div>
 </div>
@@ -430,37 +430,37 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00622">622</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  623</span>        {</div>
-<div class="line"><span class="lineno">  624</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
-<div class="line"><span class="lineno">  625</span>            <span class="keywordflow">if</span> (rowFields.TryGetValue(<span class="keywordtype">id</span> + <a class="code hl_variable" href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">LangSuffix</a>, out var value))</div>
-<div class="line"><span class="lineno">  626</span>            {</div>
-<div class="line"><span class="lineno">  627</span>                <span class="keywordtype">string</span> text = value.GetValue(<span class="keyword">this</span>) as string;</div>
-<div class="line"><span class="lineno">  628</span>                <span class="keywordflow">if</span> (!text.IsEmpty())</div>
-<div class="line"><span class="lineno">  629</span>                {</div>
-<div class="line"><span class="lineno">  630</span>                    <span class="keywordflow">return</span> text;</div>
-<div class="line"><span class="lineno">  631</span>                }</div>
-<div class="line"><span class="lineno">  632</span>            }</div>
-<div class="line"><span class="lineno">  633</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">isBuiltin</a> &amp;&amp; rowFields.TryGetValue(<span class="keywordtype">id</span>, out var value2))</div>
-<div class="line"><span class="lineno">  634</span>            {</div>
-<div class="line"><span class="lineno">  635</span>                <span class="keywordtype">string</span> text2 = value2.GetValue(<span class="keyword">this</span>) as string;</div>
-<div class="line"><span class="lineno">  636</span>                <span class="keywordflow">if</span> (!text2.IsEmpty())</div>
-<div class="line"><span class="lineno">  637</span>                {</div>
-<div class="line"><span class="lineno">  638</span>                    <span class="keywordflow">return</span> text2;</div>
-<div class="line"><span class="lineno">  639</span>                }</div>
-<div class="line"><span class="lineno">  640</span>            }</div>
-<div class="line"><span class="lineno">  641</span>            <span class="keywordflow">if</span> (!returnNull)</div>
-<div class="line"><span class="lineno">  642</span>            {</div>
-<div class="line"><span class="lineno">  643</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00626">626</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  627</span>        {</div>
+<div class="line"><span class="lineno">  628</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
+<div class="line"><span class="lineno">  629</span>            <span class="keywordflow">if</span> (rowFields.TryGetValue(<span class="keywordtype">id</span> + <a class="code hl_variable" href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">LangSuffix</a>, out var value))</div>
+<div class="line"><span class="lineno">  630</span>            {</div>
+<div class="line"><span class="lineno">  631</span>                <span class="keywordtype">string</span> text = value.GetValue(<span class="keyword">this</span>) as string;</div>
+<div class="line"><span class="lineno">  632</span>                <span class="keywordflow">if</span> (!text.IsEmpty())</div>
+<div class="line"><span class="lineno">  633</span>                {</div>
+<div class="line"><span class="lineno">  634</span>                    <span class="keywordflow">return</span> text;</div>
+<div class="line"><span class="lineno">  635</span>                }</div>
+<div class="line"><span class="lineno">  636</span>            }</div>
+<div class="line"><span class="lineno">  637</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">isBuiltin</a> &amp;&amp; rowFields.TryGetValue(<span class="keywordtype">id</span>, out var value2))</div>
+<div class="line"><span class="lineno">  638</span>            {</div>
+<div class="line"><span class="lineno">  639</span>                <span class="keywordtype">string</span> text2 = value2.GetValue(<span class="keyword">this</span>) as string;</div>
+<div class="line"><span class="lineno">  640</span>                <span class="keywordflow">if</span> (!text2.IsEmpty())</div>
+<div class="line"><span class="lineno">  641</span>                {</div>
+<div class="line"><span class="lineno">  642</span>                    <span class="keywordflow">return</span> text2;</div>
+<div class="line"><span class="lineno">  643</span>                }</div>
 <div class="line"><span class="lineno">  644</span>            }</div>
-<div class="line"><span class="lineno">  645</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  646</span>        }</div>
+<div class="line"><span class="lineno">  645</span>            <span class="keywordflow">if</span> (!returnNull)</div>
+<div class="line"><span class="lineno">  646</span>            {</div>
+<div class="line"><span class="lineno">  647</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  648</span>            }</div>
+<div class="line"><span class="lineno">  649</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  650</span>        }</div>
 <div class="ttc" id="aclassLang_html_ada42353e8636a1085ec2f851e7b3c403"><div class="ttname"><a href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">Lang.isBuiltin</a></div><div class="ttdeci">static bool isBuiltin</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00043">Lang.cs:43</a></div></div>
-<div class="ttc" id="aclassSourceData_html_abe8bece61bdd9360f411c3e51a899c50"><div class="ttname"><a href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">SourceData.LangSuffix</a></div><div class="ttdeci">static string LangSuffix</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00761">SourceData.cs:761</a></div></div>
+<div class="ttc" id="aclassSourceData_html_abe8bece61bdd9360f411c3e51a899c50"><div class="ttname"><a href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">SourceData.LangSuffix</a></div><div class="ttdeci">static string LangSuffix</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00765">SourceData.cs:765</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00591">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00043">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00761">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00043">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00765">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02653">Card.GetDetail()</a>, <a class="el" href="SourceData_8cs_source.html#l00612">SourceData&lt; T, T2 &gt;.BaseRow.GetDetail()</a>, <a class="el" href="Recipe_8cs_source.html#l00802">Recipe.GetDetail()</a>, <a class="el" href="Msg_8cs_source.html#l00257">Msg.GetGameText()</a>, <a class="el" href="SourceData_8cs_source.html#l00607">SourceData&lt; T, T2 &gt;.BaseRow.GetName()</a>, <a class="el" href="Recipe_8cs_source.html#l00780">Recipe.GetName()</a>, <a class="el" href="SourceChara_8cs_source.html#l00134">SourceChara.Row.GetName()</a>, <a class="el" href="SourceThing_8cs_source.html#l00123">SourceThing.Row.GetName()</a>, <a class="el" href="Trait_8cs_source.html#l00718">Trait.GetName()</a>, <a class="el" href="TraitGene_8cs_source.html#l00011">TraitGene.GetName()</a>, <a class="el" href="CardRow_8cs_source.html#l00115">CardRow.GetName()</a>, <a class="el" href="RenderRow_8cs_source.html#l00130">RenderRow.GetSearchName()</a>, <a class="el" href="SourceChara_8cs_source.html#l00097">SourceChara.Row.GetSearchName()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00137">SourceThing.Row.GetSearchName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02653">Card.GetDetail()</a>, <a class="el" href="SourceData_8cs_source.html#l00616">SourceData&lt; T, T2 &gt;.BaseRow.GetDetail()</a>, <a class="el" href="Recipe_8cs_source.html#l00802">Recipe.GetDetail()</a>, <a class="el" href="Msg_8cs_source.html#l00257">Msg.GetGameText()</a>, <a class="el" href="SourceData_8cs_source.html#l00611">SourceData&lt; T, T2 &gt;.BaseRow.GetName()</a>, <a class="el" href="Recipe_8cs_source.html#l00780">Recipe.GetName()</a>, <a class="el" href="SourceChara_8cs_source.html#l00134">SourceChara.Row.GetName()</a>, <a class="el" href="SourceThing_8cs_source.html#l00123">SourceThing.Row.GetName()</a>, <a class="el" href="Trait_8cs_source.html#l00718">Trait.GetName()</a>, <a class="el" href="TraitGene_8cs_source.html#l00011">TraitGene.GetName()</a>, <a class="el" href="CardRow_8cs_source.html#l00115">CardRow.GetName()</a>, <a class="el" href="RenderRow_8cs_source.html#l00130">RenderRow.GetSearchName()</a>, <a class="el" href="SourceChara_8cs_source.html#l00097">SourceChara.Row.GetSearchName()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00137">SourceThing.Row.GetSearchName()</a>.</p>
 
 </div>
 </div>
@@ -488,21 +488,21 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00648">648</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  649</span>        {</div>
-<div class="line"><span class="lineno">  650</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
-<div class="line"><span class="lineno">  651</span>            <span class="keywordflow">if</span> (rowFields.TryGetValue(<span class="keywordtype">id</span> + <a class="code hl_variable" href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">LangSuffix</a>, out var value) &amp;&amp; value.GetValue(<span class="keyword">this</span>) is <span class="keywordtype">string</span>[] { Length: &gt;0 } array)</div>
-<div class="line"><span class="lineno">  652</span>            {</div>
-<div class="line"><span class="lineno">  653</span>                <span class="keywordflow">return</span> array;</div>
-<div class="line"><span class="lineno">  654</span>            }</div>
-<div class="line"><span class="lineno">  655</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">isBuiltin</a> &amp;&amp; rowFields.TryGetValue(<span class="keywordtype">id</span>, out var value2) &amp;&amp; value2.GetValue(<span class="keyword">this</span>) is <span class="keywordtype">string</span>[] { Length: &gt;0 } array2)</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00652">652</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  653</span>        {</div>
+<div class="line"><span class="lineno">  654</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
+<div class="line"><span class="lineno">  655</span>            <span class="keywordflow">if</span> (rowFields.TryGetValue(<span class="keywordtype">id</span> + <a class="code hl_variable" href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">LangSuffix</a>, out var value) &amp;&amp; value.GetValue(<span class="keyword">this</span>) is <span class="keywordtype">string</span>[] { Length: &gt;0 } array)</div>
 <div class="line"><span class="lineno">  656</span>            {</div>
-<div class="line"><span class="lineno">  657</span>                <span class="keywordflow">return</span> array2;</div>
+<div class="line"><span class="lineno">  657</span>                <span class="keywordflow">return</span> array;</div>
 <div class="line"><span class="lineno">  658</span>            }</div>
-<div class="line"><span class="lineno">  659</span>            <span class="keywordflow">return</span> Array.Empty&lt;<span class="keywordtype">string</span>&gt;();</div>
-<div class="line"><span class="lineno">  660</span>        }</div>
+<div class="line"><span class="lineno">  659</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">isBuiltin</a> &amp;&amp; rowFields.TryGetValue(<span class="keywordtype">id</span>, out var value2) &amp;&amp; value2.GetValue(<span class="keyword">this</span>) is <span class="keywordtype">string</span>[] { Length: &gt;0 } array2)</div>
+<div class="line"><span class="lineno">  660</span>            {</div>
+<div class="line"><span class="lineno">  661</span>                <span class="keywordflow">return</span> array2;</div>
+<div class="line"><span class="lineno">  662</span>            }</div>
+<div class="line"><span class="lineno">  663</span>            <span class="keywordflow">return</span> Array.Empty&lt;<span class="keywordtype">string</span>&gt;();</div>
+<div class="line"><span class="lineno">  664</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00591">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00043">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00761">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00043">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00765">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
 
 </div>
 </div>
@@ -540,45 +540,45 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00722">722</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  723</span>        {</div>
-<div class="line"><span class="lineno">  724</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
-<div class="line"><span class="lineno">  725</span>            <span class="keywordtype">object</span> obj = rowFields.GetValueOrDefault(idField)?.GetValue(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  726</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  727</span>            {</div>
-<div class="line"><span class="lineno">  728</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  729</span>            }</div>
-<div class="line"><span class="lineno">  730</span>            <span class="keywordtype">string</span> name = GetType().DeclaringType.Name;</div>
-<div class="line"><span class="lineno">  731</span>            <span class="keywordflow">foreach</span> (var (text2, fieldInfo2) in rowFields)</div>
-<div class="line"><span class="lineno">  732</span>            {</div>
-<div class="line"><span class="lineno">  733</span>                <span class="keywordflow">if</span> (!text2.EndsWith(<span class="stringliteral">&quot;_L&quot;</span>))</div>
-<div class="line"><span class="lineno">  734</span>                {</div>
-<div class="line"><span class="lineno">  735</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  736</span>                }</div>
-<div class="line"><span class="lineno">  737</span>                <span class="keywordtype">string</span> text3 = text2[..^2];</div>
-<div class="line"><span class="lineno">  738</span>                <span class="keywordflow">if</span> (rowFields.ContainsKey(text3) &amp;&amp; rowFields.ContainsKey(text3 + <span class="stringliteral">&quot;_JP&quot;</span>))</div>
-<div class="line"><span class="lineno">  739</span>                {</div>
-<div class="line"><span class="lineno">  740</span>                    fieldInfo2.SetValue(<span class="keyword">this</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  741</span>                    <span class="keywordflow">if</span> (texts.TryGetValue(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>, out var value2) &amp;&amp; !value2.IsEmpty())</div>
-<div class="line"><span class="lineno">  742</span>                    {</div>
-<div class="line"><span class="lineno">  743</span>                        SetFieldText(fieldInfo2, value2);</div>
-<div class="line"><span class="lineno">  744</span>                    }</div>
-<div class="line"><span class="lineno">  745</span>                }</div>
-<div class="line"><span class="lineno">  746</span>            }</div>
-<div class="line"><span class="lineno">  747</span>            <span class="keywordtype">void</span> SetFieldText(FieldInfo l, <span class="keywordtype">string</span> value)</div>
-<div class="line"><span class="lineno">  748</span>            {</div>
-<div class="line"><span class="lineno">  749</span>                <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>))</div>
-<div class="line"><span class="lineno">  750</span>                {</div>
-<div class="line"><span class="lineno">  751</span>                    l.SetValue(<span class="keyword">this</span>, value);</div>
-<div class="line"><span class="lineno">  752</span>                }</div>
-<div class="line"><span class="lineno">  753</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>[]))</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00726">726</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  727</span>        {</div>
+<div class="line"><span class="lineno">  728</span>            Dictionary&lt;string, FieldInfo&gt; rowFields = <a class="code hl_function" href="classSourceData_1_1BaseRow.html#aef4a7dd03a4f653003c28835f48d0983">GetRowFields</a>();</div>
+<div class="line"><span class="lineno">  729</span>            <span class="keywordtype">object</span> obj = rowFields.GetValueOrDefault(idField)?.GetValue(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  730</span>            <span class="keywordflow">if</span> (obj == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  731</span>            {</div>
+<div class="line"><span class="lineno">  732</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  733</span>            }</div>
+<div class="line"><span class="lineno">  734</span>            <span class="keywordtype">string</span> name = GetType().DeclaringType.Name;</div>
+<div class="line"><span class="lineno">  735</span>            <span class="keywordflow">foreach</span> (var (text2, fieldInfo2) in rowFields)</div>
+<div class="line"><span class="lineno">  736</span>            {</div>
+<div class="line"><span class="lineno">  737</span>                <span class="keywordflow">if</span> (!text2.EndsWith(<span class="stringliteral">&quot;_L&quot;</span>))</div>
+<div class="line"><span class="lineno">  738</span>                {</div>
+<div class="line"><span class="lineno">  739</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  740</span>                }</div>
+<div class="line"><span class="lineno">  741</span>                <span class="keywordtype">string</span> text3 = text2[..^2];</div>
+<div class="line"><span class="lineno">  742</span>                <span class="keywordflow">if</span> (rowFields.ContainsKey(text3) &amp;&amp; rowFields.ContainsKey(text3 + <span class="stringliteral">&quot;_JP&quot;</span>))</div>
+<div class="line"><span class="lineno">  743</span>                {</div>
+<div class="line"><span class="lineno">  744</span>                    fieldInfo2.SetValue(<span class="keyword">this</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  745</span>                    <span class="keywordflow">if</span> (texts.TryGetValue(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>, out var value2) &amp;&amp; !value2.IsEmpty())</div>
+<div class="line"><span class="lineno">  746</span>                    {</div>
+<div class="line"><span class="lineno">  747</span>                        SetFieldText(fieldInfo2, value2);</div>
+<div class="line"><span class="lineno">  748</span>                    }</div>
+<div class="line"><span class="lineno">  749</span>                }</div>
+<div class="line"><span class="lineno">  750</span>            }</div>
+<div class="line"><span class="lineno">  751</span>            <span class="keywordtype">void</span> SetFieldText(FieldInfo l, <span class="keywordtype">string</span> value)</div>
+<div class="line"><span class="lineno">  752</span>            {</div>
+<div class="line"><span class="lineno">  753</span>                <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>))</div>
 <div class="line"><span class="lineno">  754</span>                {</div>
-<div class="line"><span class="lineno">  755</span>                    l.SetValue(<span class="keyword">this</span>, value.IsEmpty() ? Array.Empty&lt;<span class="keywordtype">string</span>&gt;() : value.Split(<span class="charliteral">&#39;,&#39;</span>));</div>
+<div class="line"><span class="lineno">  755</span>                    l.SetValue(<span class="keyword">this</span>, value);</div>
 <div class="line"><span class="lineno">  756</span>                }</div>
-<div class="line"><span class="lineno">  757</span>            }</div>
-<div class="line"><span class="lineno">  758</span>        }</div>
+<div class="line"><span class="lineno">  757</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>[]))</div>
+<div class="line"><span class="lineno">  758</span>                {</div>
+<div class="line"><span class="lineno">  759</span>                    l.SetValue(<span class="keyword">this</span>, value.IsEmpty() ? Array.Empty&lt;<span class="keywordtype">string</span>&gt;() : value.Split(<span class="charliteral">&#39;,&#39;</span>));</div>
+<div class="line"><span class="lineno">  760</span>                }</div>
+<div class="line"><span class="lineno">  761</span>            }</div>
+<div class="line"><span class="lineno">  762</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, and <a class="el" href="SourceData_8cs_source.html#l00591">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00085">$</a>, and <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>.</p>
 
 </div>
 </div>
@@ -608,9 +608,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classCardRow.html#ada1cc51d3a4911e2ec66efd6cd07ab2e">CardRow</a>, <a class="el" href="classRenderRow.html#af0237d9eb8b48e4d17919ed001f91c49">RenderRow</a>, and <a class="el" href="classSourceThing_1_1Row.html#aa752fcafa080cdade0efcd7e1bf5d6e0">SourceThing.Row</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00668">668</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  669</span>        {</div>
-<div class="line"><span class="lineno">  670</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00672">672</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  673</span>        {</div>
+<div class="line"><span class="lineno">  674</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -638,11 +638,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00662">662</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  663</span>        {</div>
-<div class="line"><span class="lineno">  664</span>            this.SetField(<span class="stringliteral">&quot;id&quot;</span>, count);</div>
-<div class="line"><span class="lineno">  665</span>            count++;</div>
-<div class="line"><span class="lineno">  666</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00666">666</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  667</span>        {</div>
+<div class="line"><span class="lineno">  668</span>            this.SetField(<span class="stringliteral">&quot;id&quot;</span>, count);</div>
+<div class="line"><span class="lineno">  669</span>            count++;</div>
+<div class="line"><span class="lineno">  670</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -667,9 +667,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00583">583</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00587">587</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00591">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>.</p>
 
 </div>
 </div>
@@ -685,9 +685,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00585">585</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00589">589</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00535">Thing.GetName()</a>, <a class="el" href="Trait_8cs_source.html#l00984">Trait.GetSortVal()</a>, <a class="el" href="Chara_8cs_source.html#l07427">Chara.SetSortVal()</a>, and <a class="el" href="Thing_8cs_source.html#l02029">Thing.TryLickEnchant()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00535">Thing.GetName()</a>, <a class="el" href="Trait_8cs_source.html#l00984">Trait.GetSortVal()</a>, <a class="el" href="Chara_8cs_source.html#l07434">Chara.SetSortVal()</a>, and <a class="el" href="Thing_8cs_source.html#l02029">Thing.TryLickEnchant()</a>.</p>
 
 </div>
 </div>
@@ -712,7 +712,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00589">589</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00593">593</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
 
 </div>
 </div>
@@ -736,7 +736,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00587">587</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00591">591</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
 
 </div>
 </div>

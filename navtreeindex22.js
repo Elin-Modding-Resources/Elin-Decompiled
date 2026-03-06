@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da00fbb0efe65c1695a9a2019b7daefa9d":[2,0,0,2,0,0,10,0,110],
+"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da027acd3aa6b1dd7f26119d3cf0f9a063":[2,0,0,2,0,0,10,0,96],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da02dc039367c8055965649d9b95864e3f":[2,0,0,2,0,0,10,0,113],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da02fe48387ff216163f3b9cfb5cefc1c1":[2,0,0,2,0,0,10,0,209],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da0468e4e5bcaffcbb4f112b922e976344":[2,0,0,2,0,0,10,0,55],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "WidgetCurrentTool_8cs.html":[2,0,0,1948],
 "WidgetCurrentTool_8cs_source.html":[2,0,0,1948],
 "WidgetDate_8cs.html":[2,0,0,1949],
-"WidgetDate_8cs_source.html":[2,0,0,1949],
-"WidgetDebug_8cs.html":[2,0,0,1950],
-"WidgetDebug_8cs_source.html":[2,0,0,1950]
+"WidgetDate_8cs_source.html":[2,0,0,1949]
 };

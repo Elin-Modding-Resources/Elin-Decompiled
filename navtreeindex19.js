@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"TraitMerchantSeed_8cs.html":[2,0,0,1647],
+"TraitMerchantSeed_8cs_source.html":[2,0,0,1647],
 "TraitMerchantSouvenir_8cs.html":[2,0,0,1648],
 "TraitMerchantSouvenir_8cs_source.html":[2,0,0,1648],
 "TraitMerchantWeapon_8cs.html":[2,0,0,1649],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "TraitSmelter_8cs_source.html":[2,0,0,1767],
 "TraitSnow_8cs.html":[2,0,0,1768],
 "TraitSnow_8cs_source.html":[2,0,0,1768],
-"TraitSofa_8cs.html":[2,0,0,1769],
-"TraitSofa_8cs_source.html":[2,0,0,1769],
-"TraitSorin_8cs.html":[2,0,0,1770]
+"TraitSofa_8cs.html":[2,0,0,1769]
 };

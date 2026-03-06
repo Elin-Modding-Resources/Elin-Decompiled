@@ -1,5 +1,7 @@
 var NAVTREEINDEX35 =
 {
+"classBaseGameScreen.html#a0e3b224e000b9c6e5f33d1b2728b56f2":[1,0,212,67],
+"classBaseGameScreen.html#a0f27eafbffc56baa929d18974c1ea94f":[1,0,212,13],
 "classBaseGameScreen.html#a11851e78c2434a235c09470fe9fb8df7":[1,0,212,41],
 "classBaseGameScreen.html#a14973e4940b4c46aeeee11f96d8186ab":[1,0,212,103],
 "classBaseGameScreen.html#a15a6c4a377286612db12fa4963dea0d4":[1,0,212,83],
@@ -247,7 +249,5 @@ var NAVTREEINDEX35 =
 "classBaseModManager_1_1BaseResource.html":[1,0,218,0],
 "classBaseModManager_1_1BaseResource.html#a588903f409388715609f167442ce0922":[1,0,218,0,1],
 "classBaseModManager_1_1BaseResource.html#acb03d5939efae682a3448aeb8be5978c":[1,0,218,0,0],
-"classBaseModManager_1_1BaseResource.html#aea5a1db4372d1867defdaf3e11c63721":[1,0,218,0,2],
-"classBaseModPackage.html":[1,0,219],
-"classBaseModPackage.html#a040e855d04e225e02abb1da7ca244be4":[1,0,219,2]
+"classBaseModManager_1_1BaseResource.html#aea5a1db4372d1867defdaf3e11c63721":[1,0,218,0,2]
 };

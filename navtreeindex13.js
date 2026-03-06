@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"RefCardName_8cs.html":[2,0,0,1025],
+"RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bf":[2,0,0,1025,0],
 "RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bfa6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,1025,0,1],
 "RefCardName_8cs.html#a70c3c526d307e67a7bae3f5598f069bfa7a1920d61156abc05a60135aefe8bc67":[2,0,0,1025,0,0],
 "RefCardName_8cs_source.html":[2,0,0,1025],
@@ -247,7 +249,5 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9aa969112e78614681f82bfa2c717532":[2,0,0,1102,0,47],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9b2cfa29e7882e3649d5f3b9921afdb0":[2,0,0,1102,0,3],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9d9ef66602c769c6b3ac7cacf678642b":[2,0,0,1102,0,8],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbab7beed125a75ff65d74424407f05e8b1":[2,0,0,1102,0,45],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabb3a8b2e390142074e49741a0121d623":[2,0,0,1102,0,13],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabc41f23d09a7ce1b7b00ea49558889b6":[2,0,0,1102,0,24]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbab7beed125a75ff65d74424407f05e8b1":[2,0,0,1102,0,45]
 };

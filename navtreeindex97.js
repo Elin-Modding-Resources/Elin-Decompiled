@@ -1,5 +1,7 @@
 var NAVTREEINDEX97 =
 {
+"classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774":[1,0,1095,71],
+"classRecipe.html#aaca107e87e971d14e807700fa068fc62":[1,0,1095,3],
 "classRecipe.html#aae5e1cf4c47a6af6408a78b1e5823cdb":[1,0,1095,67],
 "classRecipe.html#aaf0287ad0853492fa83f914d96790753":[1,0,1095,21],
 "classRecipe.html#aafb5390a0ac2628926555cd006229cde":[1,0,1095,70],
@@ -247,7 +249,5 @@ var NAVTREEINDEX97 =
 "classRelationManager.html#ac04421b2b113ba0d0f25a228fa7a27df":[1,0,1113,2],
 "classReligion.html":[1,0,1114],
 "classReligion.html#a04afdf1f175dda7105994797d9e2975b":[1,0,1114,40],
-"classReligion.html#a0e19eeccc662ba4eab5ce7fbd47a67f5":[1,0,1114,39],
-"classReligion.html#a0f4c9dd49de96a8c0354290c9be03d99":[1,0,1114,36],
-"classReligion.html#a16c5d953e8c01159a3c4542ebdb06f52":[1,0,1114,45]
+"classReligion.html#a0e19eeccc662ba4eab5ce7fbd47a67f5":[1,0,1114,39]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"classLayerMiniGame.html#a328589b85712ce9d356635f3551d16e3":[1,0,839,7],
+"classLayerMiniGame.html#a49cebdfb0a9fa323d10bc531e2a48c60":[1,0,839,1],
 "classLayerMiniGame.html#a83a03f7e10b9161c9925594deb7a1330":[1,0,839,0],
 "classLayerMiniGame.html#af0cc4ac8a642f69d7b312bd92cbb22e0":[1,0,839,4],
 "classLayerMod.html":[1,0,840],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "classLayerTextureViewer.html#a027e204389c830fe21d4451cee837abc":[1,0,859,19],
 "classLayerTextureViewer.html#a16fe35776804b0d2c77cb8926be365af":[1,0,859,10],
 "classLayerTextureViewer.html#a189e535214252ee932b8739b8bdbcf68":[1,0,859,14],
-"classLayerTextureViewer.html#a243122798733a7e5aed89f7e3b9fed0b":[1,0,859,12],
-"classLayerTextureViewer.html#a2930e0cb430bccd0848a288a0e4a1e6a":[1,0,859,0],
-"classLayerTextureViewer.html#a2d3834df56bff7fcabae2e45a1382c60":[1,0,859,13]
+"classLayerTextureViewer.html#a243122798733a7e5aed89f7e3b9fed0b":[1,0,859,12]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"StanceSongEnd_8cs.html":[2,0,0,1176],
+"StanceSongEnd_8cs_source.html":[2,0,0,1176],
 "StanceSongSleep_8cs.html":[2,0,0,1177],
 "StanceSongSleep_8cs_source.html":[2,0,0,1177],
 "StanceSongValor_8cs.html":[2,0,0,1178],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "TileTypeFenceClosed_8cs.html":[2,0,0,1279],
 "TileTypeFenceClosed_8cs_source.html":[2,0,0,1279],
 "TileTypeFence_8cs.html":[2,0,0,1278],
-"TileTypeFence_8cs_source.html":[2,0,0,1278],
-"TileTypeFloorScaffold_8cs.html":[2,0,0,1281],
-"TileTypeFloorScaffold_8cs_source.html":[2,0,0,1281]
+"TileTypeFence_8cs_source.html":[2,0,0,1278]
 };

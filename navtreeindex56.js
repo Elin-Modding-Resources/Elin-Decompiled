@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"classCritterRoachSmall.html#ab1639e877d259f9af25a0a8d99c97ca5":[1,0,434,2],
+"classCulture.html":[1,0,436],
 "classCurrency.html":[1,0,437],
 "classCurrency.html#a2eaa29e45ed9339b13f687be2450c6ae":[1,0,437,0],
 "classCursorInfo.html":[1,0,438],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "classDayData.html#ace4443356d6c8c966b711be045727c62":[1,0,446,2],
 "classDepthEffect.html":[1,0,447],
 "classDepthEffect.html#a15814809bc70384ac0ce749a7c61e2a2":[1,0,447,4],
-"classDepthEffect.html#a20e16620d2de174996d2df99f9d91f0e":[1,0,447,11],
-"classDepthEffect.html#a3415d89e6aef2efef3ba411792b2a5dd":[1,0,447,9],
-"classDepthEffect.html#a34ef388082dbbd55a7ccddad260874c2":[1,0,447,5]
+"classDepthEffect.html#a20e16620d2de174996d2df99f9d91f0e":[1,0,447,11]
 };

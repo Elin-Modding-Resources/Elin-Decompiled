@@ -1,5 +1,7 @@
 var NAVTREEINDEX145 =
 {
+"globals_enum.html":[2,1,3],
+"globals_func.html":[2,1,1],
 "globals_vars.html":[2,1,2],
 "hierarchy.html":[1,2],
 "index.html":[],
@@ -247,7 +249,5 @@ var NAVTREEINDEX145 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7286293c9125ac7d7bace94c190bc16d":[0,4,3,0,8,14],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da73518eb0ce4c933f8060c5a80a5456a0":[0,4,3,0,8,69],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da766eaf058c1c7728388be2df1c4451ad":[0,4,3,0,8,181],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7a8237f29ea95d63b5904982ed3835a9":[0,4,3,0,8,164],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7f1ea5c880e282a9c69dd494a8664bb2":[0,4,3,0,8,219],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7f384cf2b1eb28d399281bd52fd374e7":[0,4,3,0,8,47]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7a8237f29ea95d63b5904982ed3835a9":[0,4,3,0,8,164]
 };

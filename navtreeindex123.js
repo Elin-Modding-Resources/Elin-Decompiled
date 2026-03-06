@@ -1,5 +1,7 @@
 var NAVTREEINDEX123 =
 {
+"classTraitLoytelMart.html#a495ada5a08f0db13418719695f1ea152":[1,0,1718,2],
+"classTraitLoytelMart.html#a557cbbf9da138a89bdf9ffafccaa73e5":[1,0,1718,0],
 "classTraitLoytelMart.html#a5c4e5e4a9a60e8f1024750474a33aea8":[1,0,1718,8],
 "classTraitLoytelMart.html#a8b9bf8210dd4b20439d69ec381794ef7":[1,0,1718,6],
 "classTraitLoytelMart.html#a91d5d63bf430404d945cf7a67358579c":[1,0,1718,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitNewZone.html#a45833a46b03a511f9110591fee764b98":[1,0,1782,21],
 "classTraitNewZone.html#a4a5f6b919a184a1459c0035f13c43df0":[1,0,1782,11],
 "classTraitNewZone.html#a5ec3b0aa83460646d6c6c283b1d8a384":[1,0,1782,17],
-"classTraitNewZone.html#a5f8428fdd28fd867be7661ae1d58bbca":[1,0,1782,13],
-"classTraitNewZone.html#a6d51d58a5467a29e9e731ef2ae798066":[1,0,1782,20],
-"classTraitNewZone.html#a9a63a7b8b415c696689644ae43329e6f":[1,0,1782,6]
+"classTraitNewZone.html#a5f8428fdd28fd867be7661ae1d58bbca":[1,0,1782,13]
 };

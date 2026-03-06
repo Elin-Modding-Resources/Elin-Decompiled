@@ -1,5 +1,7 @@
 var NAVTREEINDEX94 =
 {
+"classProps.html#aed1de55a86964048f4268ffcc3a39a74":[1,0,1000,13],
+"classPropsInstalled.html":[1,0,1003],
 "classPropsInstalled.html#a0b85cc038d55bbd0c836c8357bca31ac":[1,0,1003,0],
 "classPropsInstalled.html#a390a80d5599dd944b6c19d4bbb7bedb0":[1,0,1003,1],
 "classPropsManager.html":[1,0,1004],
@@ -247,7 +249,5 @@ var NAVTREEINDEX94 =
 "classQuestDestZone.html#af47591d2f0c501395a52ab0ca16940d3":[1,0,1019,4],
 "classQuestDialog.html":[1,0,1020],
 "classQuestDialog.html#a09436b53d302a25aa780fc7cf5871d10":[1,0,1020,1],
-"classQuestDialog.html#a16079eadfe5fee4f1a3bdd3cca2533f4":[1,0,1020,2],
-"classQuestDialog.html#a69e71483b0ec914a289d2a9f75b2ac8e":[1,0,1020,3],
-"classQuestDialog.html#ae7224165f209219a3b85fbff25f8ab90":[1,0,1020,0]
+"classQuestDialog.html#a16079eadfe5fee4f1a3bdd3cca2533f4":[1,0,1020,2]
 };

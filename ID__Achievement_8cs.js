@@ -19,6 +19,8 @@ var ID__Achievement_8cs =
       [ "NINO", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a73936a4ecf75f38c994292becfd8157d", null ],
       [ "CHURYU3", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9aeaf5ba2395856426a6b6f35e4562719a", null ],
       [ "DEMITAS", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a7ba5df844826d6b467d74f615890388d", null ],
-      [ "KETTLE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af1e659c34ad06a8cc89931551e6b97e0", null ]
+      [ "KETTLE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af1e659c34ad06a8cc89931551e6b97e0", null ],
+      [ "FAITH_HEALING", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9aaaec0554441458aff110a49799fc00c2", null ],
+      [ "ONEV", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ab0df544e1508a4b6b5cf66af8e1f5cd5", null ]
     ] ]
 ];

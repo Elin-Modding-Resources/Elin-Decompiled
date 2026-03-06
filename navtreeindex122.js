@@ -1,5 +1,7 @@
 var NAVTREEINDEX122 =
 {
+"classTraitGenerator.html":[1,0,1657],
+"classTraitGenerator.html#a11a723c61164373246f873d3c26d06be":[1,0,1657,7],
 "classTraitGenerator.html#a4f1bf038188ad91be9ad5df2e5fc66a6":[1,0,1657,8],
 "classTraitGenerator.html#a5be285cfd5a23ffd594bcaf6348404ac":[1,0,1657,0],
 "classTraitGenerator.html#a6ed75db33a6525b9478e937bac6f9a66":[1,0,1657,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitLoytelMart.html#a029e6a9a12587279c405edfd8ab22402":[1,0,1718,3],
 "classTraitLoytelMart.html#a0c82ada3b22c9c9aa0413fb104e7ebc1":[1,0,1718,4],
 "classTraitLoytelMart.html#a2c3f989012a1bbbabc467c7794e66c6c":[1,0,1718,5],
-"classTraitLoytelMart.html#a3a3cb3daed684b4a9afd4bb9c6d3cbf8":[1,0,1718,7],
-"classTraitLoytelMart.html#a495ada5a08f0db13418719695f1ea152":[1,0,1718,2],
-"classTraitLoytelMart.html#a557cbbf9da138a89bdf9ffafccaa73e5":[1,0,1718,0]
+"classTraitLoytelMart.html#a3a3cb3daed684b4a9afd4bb9c6d3cbf8":[1,0,1718,7]
 };

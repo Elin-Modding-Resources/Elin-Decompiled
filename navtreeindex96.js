@@ -1,5 +1,7 @@
 var NAVTREEINDEX96 =
 {
+"classQuestSupplyBulk.html#ae9c70032ec3542d36fb1f3f52f5c346d":[1,0,1072,2],
+"classQuestSupplyBulkJunk.html":[1,0,1073],
 "classQuestSupplyBulkJunk.html#a35501fc3adbe7e128e7279bc08130d02":[1,0,1073,1],
 "classQuestSupplyBulkJunk.html#a4dde023048c26e18661856decdd76029":[1,0,1073,0],
 "classQuestSupplyBulkResource.html":[1,0,1074],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "classRecipe.html#a9932bd1827900b57b226098b032a5408":[1,0,1095,66],
 "classRecipe.html#aa314244ec75b63a41483cde74ad282bb":[1,0,1095,63],
 "classRecipe.html#aa54363ea2a0041efd9385d588a0fddd8":[1,0,1095,40],
-"classRecipe.html#aa71081158bfbc8117bab4ac25dfa68b0":[1,0,1095,41],
-"classRecipe.html#aa7db47ecf58fbca2ce34c2250595b774":[1,0,1095,71],
-"classRecipe.html#aaca107e87e971d14e807700fa068fc62":[1,0,1095,3]
+"classRecipe.html#aa71081158bfbc8117bab4ac25dfa68b0":[1,0,1095,41]
 };

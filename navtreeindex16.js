@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"TileTypeFloorScaffold_8cs.html":[2,0,0,1281],
+"TileTypeFloorScaffold_8cs_source.html":[2,0,0,1281],
 "TileTypeFloor_8cs.html":[2,0,0,1280],
 "TileTypeFloor_8cs_source.html":[2,0,0,1280],
 "TileTypeHalfBlock_8cs.html":[2,0,0,1282],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TraitCageBreeding_8cs.html":[2,0,0,1395],
 "TraitCageBreeding_8cs_source.html":[2,0,0,1395],
 "TraitCage_8cs.html":[2,0,0,1394],
-"TraitCage_8cs_source.html":[2,0,0,1394],
-"TraitCamera_8cs.html":[2,0,0,1396],
-"TraitCamera_8cs_source.html":[2,0,0,1396]
+"TraitCage_8cs_source.html":[2,0,0,1394]
 };

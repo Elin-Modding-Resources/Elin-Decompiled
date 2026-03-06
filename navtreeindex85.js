@@ -1,5 +1,7 @@
 var NAVTREEINDEX85 =
 {
+"classMapConfig.html#a813cde5a1e6209ab7cf0f6ae58bee672":[1,0,896,5],
+"classMapConfig.html#a829a5f8a0532a5cde14546660e0d7daa":[1,0,896,26],
 "classMapConfig.html#a89a476e6fee05fbf4f0fa14a9ccf37c7":[1,0,896,6],
 "classMapConfig.html#a989fdb46633ecbff2217cd527886bb55":[1,0,896,13],
 "classMapConfig.html#aa0b163b8988791c90fb1d434e613e21c":[1,0,896,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX85 =
 "classMiniGame__Basket.html#a785a18d26793cf02ec49d95e5aa284d6":[1,0,917,1],
 "classMiniGame__Basket.html#a97f37b74b9f4c1b0cfb451fb6fe9e026":[1,0,917,3],
 "classMiniGame__Basket.html#aebcbc2cebb258e17bd28564df05a5746":[1,0,917,4],
-"classMiniGame__Blackjack.html":[1,0,918],
-"classMiniGame__Blackjack.html#a09c339f0f4ba29c91a60fcec7dd47b5e":[1,0,918,4],
-"classMiniGame__Blackjack.html#aa8389a8a00db37606a968f0512c20ae7":[1,0,918,1]
+"classMiniGame__Blackjack.html":[1,0,918]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX115 =
 {
+"classTileMapElona.html#a52cd769879119ed7960a1b287c85e076":[1,0,1372,1],
+"classTileRow.html":[1,0,1373],
 "classTileRow.html#a0169ed80d4cf6db68dbe0cfc6d3f4d9b":[1,0,1373,3],
 "classTileRow.html#a2b91024d771c3b36647342e5a3112d9f":[1,0,1373,5],
 "classTileRow.html#a2e956f83baa2b038696bc3253a6d8b14":[1,0,1373,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX115 =
 "classTileTypeFloor.html#a542b7a0a47ce9e409a8299467d7916b6":[1,0,1389,0],
 "classTileTypeFloor.html#a6c0a0b9184d6ccd7b56b459601e36d5f":[1,0,1389,4],
 "classTileTypeFloor.html#a9d327a91e53411a78d00750b89fefd43":[1,0,1389,9],
-"classTileTypeFloor.html#ab84056be784a22ca5d5fc5e97dbb9a59":[1,0,1389,1],
-"classTileTypeFloor.html#abae1365e1acc2fc35128b67d0197a765":[1,0,1389,10],
-"classTileTypeFloor.html#acfa0152b5e4dbcd5048f497a45373cd8":[1,0,1389,8]
+"classTileTypeFloor.html#ab84056be784a22ca5d5fc5e97dbb9a59":[1,0,1389,1]
 };

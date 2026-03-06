@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"Zone__Hospital_8cs.html":[2,0,0,2026],
+"Zone__Hospital_8cs_source.html":[2,0,0,2026],
 "Zone__Kapul_8cs.html":[2,0,0,2027],
 "Zone__Kapul_8cs_source.html":[2,0,0,2027],
 "Zone__Lesimas_8cs.html":[2,0,0,2028],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "classABILITY.html#af22fd628853a09f4e3c2844229da0911":[1,0,11,38],
 "classABILITY.html#af23957d1a9cb6b367fdbb7ee9cf90b16":[1,0,11,39],
 "classABILITY.html#af70e981394fdd0c0db920d0939a471d0":[1,0,11,132],
-"classABILITY.html#af86e3d06d85f1416980e16d8d967e71e":[1,0,11,139],
-"classABILITY.html#af8bd2be6670fe3dde20919c493907878":[1,0,11,65],
-"classABILITY.html#af982fbebe4403534cfc058ad9e826db1":[1,0,11,69]
+"classABILITY.html#af86e3d06d85f1416980e16d8d967e71e":[1,0,11,139]
 };

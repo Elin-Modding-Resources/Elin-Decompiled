@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"classAM__Cinema.html#aaae9ea0c06664eb416279e1e132be12a":[1,0,146,2],
+"classAM__Cinema.html#ac56c1ff4f82f286a5f85a0d778a494c7":[1,0,146,5],
 "classAM__Cinema.html#aceaa0a6f569081529f858b05bc81ca2b":[1,0,146,4],
 "classAM__Cinema.html#aceced69f71118a0d501cb7e1dbfefc14":[1,0,146,1],
 "classAM__Cinema.html#ad2cab20f8808e1d3346c6c2188cc1df5":[1,0,146,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX28 =
 "classAM__Paint.html#aab494308789d86a2cde72b21da8cb100":[1,0,165,7],
 "classAM__Paint.html#abb62f2f5d9119cf517193e041443c32e":[1,0,165,8],
 "classAM__Paint.html#ad53d8b200721c27dbf3f48d8486f6e17":[1,0,165,0],
-"classAM__Paint.html#adad4d2466bb1569ab3c9e8c4c340da7e":[1,0,165,9],
-"classAM__Picker.html":[1,0,166],
-"classAM__Picker.html#a1b7419b17364a816d0f8ca7766bfef46":[1,0,166,2]
+"classAM__Paint.html#adad4d2466bb1569ab3c9e8c4c340da7e":[1,0,165,9]
 };

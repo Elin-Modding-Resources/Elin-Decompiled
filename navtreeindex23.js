@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"WidgetDebug_8cs.html":[2,0,0,1950],
+"WidgetDebug_8cs_source.html":[2,0,0,1950],
 "WidgetEquip_8cs.html":[2,0,0,1951],
 "WidgetEquip_8cs_source.html":[2,0,0,1951],
 "WidgetExpHome_8cs.html":[2,0,0,1953],
@@ -247,7 +249,5 @@ var NAVTREEINDEX23 =
 "Zone__Gathering_8cs.html":[2,0,0,2024],
 "Zone__Gathering_8cs_source.html":[2,0,0,2024],
 "Zone__Harvest_8cs.html":[2,0,0,2025],
-"Zone__Harvest_8cs_source.html":[2,0,0,2025],
-"Zone__Hospital_8cs.html":[2,0,0,2026],
-"Zone__Hospital_8cs_source.html":[2,0,0,2026]
+"Zone__Harvest_8cs_source.html":[2,0,0,2025]
 };

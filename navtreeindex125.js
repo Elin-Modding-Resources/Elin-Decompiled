@@ -1,5 +1,7 @@
 var NAVTREEINDEX125 =
 {
+"classTraitRodRandom.html#a2abd9cd9db7ff93eff8f9abca88712d5":[1,0,1843,7],
+"classTraitRodRandom.html#a6d23212fa2b4556152d277f60fd8036a":[1,0,1843,8],
 "classTraitRodRandom.html#a9bbca82e139f77f17433bc35bc258d72":[1,0,1843,4],
 "classTraitRodRandom.html#a9d68e3da8cd8a318207247b7b9b87893":[1,0,1843,0],
 "classTraitRodRandom.html#ab71f6c55e74cd9bdf3db450fd59fe749":[1,0,1843,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitSpotBiome.html#a1919aa54ec4ba5278caa7e1a63e35b83":[1,0,1889,0],
 "classTraitSpotBiome.html#a58684fd795a215913bbe31116f1380ea":[1,0,1889,3],
 "classTraitSpotDining.html":[1,0,1890],
-"classTraitSpotExit.html":[1,0,1891],
-"classTraitSpotExit.html#a0bb165e83e5008468261c5a0a16d60a0":[1,0,1891,0],
-"classTraitSpotExit.html#a72b988c1d472fae5444c2920a3ca06b5":[1,0,1891,1]
+"classTraitSpotExit.html":[1,0,1891]
 };

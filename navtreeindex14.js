@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabb3a8b2e390142074e49741a0121d623":[2,0,0,1102,0,13],
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbabc41f23d09a7ce1b7b00ea49558889b6":[2,0,0,1102,0,24],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbad2ed16ac4449c60a82b5a4512ef06528":[2,0,0,1102,0,15],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbad35a98028cca23c2a745a0bba43a90ff":[2,0,0,1102,0,32],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbadba005190e58b252f9b5375cdf5655d9":[2,0,0,1102,0,34],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "StanceIai_8cs.html":[2,0,0,1174],
 "StanceIai_8cs_source.html":[2,0,0,1174],
 "StanceManaCost_8cs.html":[2,0,0,1175],
-"StanceManaCost_8cs_source.html":[2,0,0,1175],
-"StanceSongEnd_8cs.html":[2,0,0,1176],
-"StanceSongEnd_8cs_source.html":[2,0,0,1176]
+"StanceManaCost_8cs_source.html":[2,0,0,1175]
 };

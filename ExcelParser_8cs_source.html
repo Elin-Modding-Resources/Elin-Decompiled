@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -290,14 +290,22 @@ $(document).ready(function(){initNavTree('ExcelParser_8cs_source.html',''); init
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordtype">string</span> name = typeof(T).Name;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        ICell cell = <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>.Cells.TryGet(<span class="keywordtype">id</span>, returnNull: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordtype">string</span> value = ((row.RowNum &lt; 3) ? <span class="stringliteral">&quot;, SourceData begins at the 4th row. 3rd row is the default value row.&quot;</span> : <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;, default:&#39;{rowDefault.Cells.TryGet(id, returnNull: true)}&#39;&quot;</span>);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        stringBuilder.AppendLine(<span class="stringliteral">&quot;$source ill-format file: &quot;</span> + <a class="code hl_variable" href="classExcelParser.html#a9c8b87ac73dbebf9015f999cf1e5c24c">path</a>);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        stringBuilder.Append(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;row#{row.RowNum + 1}, cell&#39;{id + 1}&#39;/&#39;{ToLetterId(id)}&#39;, expected:&#39;{name}&#39;, read:&#39;{cell}&#39;&quot;</span>);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        stringBuilder.AppendLine(value);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(stringBuilder);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        ICell cell = <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>?.Cells.TryGet(<span class="keywordtype">id</span>, returnNull: <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        IRow obj = <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordtype">string</span> value = ((obj != <span class="keyword">null</span> &amp;&amp; obj.RowNum &gt;= 3) ? <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;, default:&#39;{rowDefault?.Cells.TryGet(id, returnNull: true)}&#39;&quot;</span> : <span class="stringliteral">&quot;, SourceData begins at the 4th row. 3rd row is the default value row.&quot;</span>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        stringBuilder.AppendLine(<span class="stringliteral">&quot;$source ill-format file: &quot;</span> + <a class="code hl_variable" href="classExcelParser.html#a9c8b87ac73dbebf9015f999cf1e5c24c">path</a>);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordtype">object</span>[] array = <span class="keyword">new</span> <span class="keywordtype">object</span>[5];</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        IRow obj2 = <a class="code hl_variable" href="classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b">row</a>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        array[0] = ((obj2 != <span class="keyword">null</span>) ? <span class="keyword">new</span> <span class="keywordtype">int</span>?(obj2.RowNum + 1) : <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        array[1] = <span class="keywordtype">id</span> + 1;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        array[2] = <a class="code hl_function" href="classExcelParser.html#a2bbe64eb4c0ae3211e8c8dc0f445f76e">ToLetterId</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        array[3] = name;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        array[4] = cell;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        stringBuilder.Append(<span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;row#{0}, cell&#39;{1}&#39;/&#39;{2}&#39;, expected:&#39;{3}&#39;, read:&#39;{4}&#39;&quot;</span>, array));</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        stringBuilder.AppendLine(value);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(stringBuilder);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
 <div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00085">ModManager.cs:85</a></div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassExcelParser_html"><div class="ttname"><a href="classExcelParser.html">ExcelParser</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelParser_8cs_source.html#l00006">ExcelParser.cs:7</a></div></div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX142 =
 {
+"classZoneEventMusic.html#a0325efde8156307ef91d1340b20fa86a":[1,0,2259,0],
+"classZoneEventMusic.html#a20903b08f801d2e294643885fcb3ff08":[1,0,2259,3],
 "classZoneEventMusic.html#a3bd946d9a3eeecf5e8b2044050bdaa36":[1,0,2259,5],
 "classZoneEventMusic.html#a4c23d8a249b7ab3304aa5cc74821b8df":[1,0,2259,2],
 "classZoneEventMusic.html#a7fa7e1a5b5edfc0d270efd8cf32aa218":[1,0,2259,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX142 =
 "classZone__Arena.html#ab3d8a0106bdadf316735e15ca2aa3974":[1,0,2169,3],
 "classZone__Arena2.html":[1,0,2170],
 "classZone__Arena2.html#a603f243a7ab6f6ff69262ca571aca7bf":[1,0,2170,2],
-"classZone__Arena2.html#a8b7ecb177fe1fb7a5b6ca27beb4dfe84":[1,0,2170,0],
-"classZone__Arena2.html#aee348b90dbad10453fe48556ffb3a605":[1,0,2170,1],
-"classZone__Asylum.html":[1,0,2171]
+"classZone__Arena2.html#a8b7ecb177fe1fb7a5b6ca27beb4dfe84":[1,0,2170,0]
 };
