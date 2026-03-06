@@ -67,7 +67,7 @@ public class ModManager : ModManagerCore
 			{
 				ImportSourceLocalizations(lang as string);
 			}
-			ImportModDialogs();
+			ImportAllModDialogs();
 		});
 	}
 
@@ -161,7 +161,7 @@ public class ModManager : ModManagerCore
 			{
 				continue;
 			}
-			if (Lang.IsBuiltin(modPackage.Mapping.SourceLangMod) && Lang.IsBuiltin(lang))
+			if (Lang.IsBuiltin(lang))
 			{
 				break;
 			}
@@ -194,6 +194,7 @@ public class ModManager : ModManagerCore
 	{
 		try
 		{
+			SourceCache.InvalidateCacheVersion();
 			SourceImporter.HotInit(new SourceData[2]
 			{
 				EClass.sources.elements,
@@ -216,6 +217,9 @@ public class ModManager : ModManagerCore
 				}
 			}
 			ModUtil.sourceImporter.ImportFilesCached(list);
+			SourceCache.FinalizeCache();
+			SourceCache.InvalidateCacheBlobs();
+			SourceCache.ClearDetail();
 		}
 		catch (Exception message)
 		{
@@ -224,7 +228,7 @@ public class ModManager : ModManagerCore
 		Debug.Log("#source finished importing workbooks");
 	}
 
-	public void ImportModDialogs()
+	public void ImportAllModDialogs()
 	{
 		Lang.extraExcelDialogs = new HashSet<string>(PathComparer.Default);
 		Lang.excelDialog = null;
@@ -307,14 +311,19 @@ public class ModManager : ModManagerCore
 			if (mappedPackages.TryGetValue(item.id, out var value) && value.isInPackages)
 			{
 				value.hasPublishedPackage = true;
-				mappedPackages[item.id] = item as ModPackage;
 			}
 		}
-		packages.RemoveAll((BaseModPackage p) => p.hasPublishedPackage);
 		_loading.Log($"Total number of mods:{packages.Count}");
 		_loading.Log("Activating Mods...");
 		yield return awaiter;
 		ActivatePackages();
+		foreach (BaseModPackage package in packages)
+		{
+			if (package.activated)
+			{
+				mappedPackages[package.id] = package as ModPackage;
+			}
+		}
 		BaseModManager.isInitialized = true;
 		yield return awaiter;
 		onComplete?.Invoke();

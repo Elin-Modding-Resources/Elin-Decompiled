@@ -1651,6 +1651,7 @@ public class Trait : EClass
 			Add("deed_move", 2 + EClass.rnd(5), 0);
 			Add("deed_wedding", 1, 0);
 			Add("deed_divorce", 1, 0);
+			Add("deed_lostring", 1, 0);
 			Add("license_illumination", 1, 0);
 			Add("license_void", 1, 0);
 			Add("license_adv", 1, 0);

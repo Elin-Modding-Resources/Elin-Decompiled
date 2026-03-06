@@ -18,5 +18,7 @@ public enum ID_Achievement
 	NINO,
 	CHURYU3,
 	DEMITAS,
-	KETTLE
+	KETTLE,
+	FAITH_HEALING,
+	ONEV
 }

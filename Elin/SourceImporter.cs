@@ -176,8 +176,6 @@ public class SourceImporter : EClass
 				hashSet.Add(sourceData2);
 			}
 		}
-		SourceCache.FinalizeCache();
-		SourceCache.ClearDetail();
 		if (resetData)
 		{
 			HotInit(hashSet);

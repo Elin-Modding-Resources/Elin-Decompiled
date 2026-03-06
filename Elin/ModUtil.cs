@@ -151,7 +151,7 @@ public class ModUtil : EClass
 		string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(soundFile.FullName);
 		string fullName = soundFile.FullName;
 		AudioType audioType = GetAudioType(soundFile.Extension);
-		bool stream = fileNameWithoutExtension.StartsWith("BGM/") && audioType == AudioType.OGGVORBIS;
+		bool stream = fullName.NormalizePath().Contains("/BGM/") && audioType == AudioType.OGGVORBIS;
 		using UnityWebRequest unityWebRequest = AudioClipStream.GetAudioClip("file://" + fullName, audioType, compressed: false, stream);
 		unityWebRequest.SendWebRequest();
 		Stopwatch stopwatch = Stopwatch.StartNew();

@@ -24,12 +24,17 @@ public class ConPeaky : Condition
 		}
 		int num = ec.Value(79);
 		int num2 = owner.Evalue(1423) * 10;
-		if (num < num2)
+		if (num >= num2)
 		{
-			ec.ModBase(79, Mathf.Clamp(num2 / 10, 1, num2 - num));
-			if (ec.Value(79) == num2)
+			return;
+		}
+		ec.ModBase(79, Mathf.Clamp(num2 / 10, 1, num2 - num));
+		if (ec.Value(79) == num2)
+		{
+			owner.PlaySound("bike_kick");
+			if (owner.host != null)
 			{
-				owner.PlaySound("bike_kick");
+				owner.host.ModExp((owner.host.ride == owner) ? 226 : 227, owner.Evalue(1423) * 20);
 			}
 		}
 	}

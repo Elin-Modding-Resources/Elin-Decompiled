@@ -2301,9 +2301,16 @@ public class Chara : Card, IPathfindWalker
 		}
 		body.RefreshBodyParts();
 		elements.ApplyElementMap(base.uid, SourceValueType.Chara, race.elementMap, base.DefaultLV, remove, applyFeat: true);
-		if (!remove && race.id == "bike" && id != "bike_cub")
+		if (!remove)
 		{
-			SetFeat(1423, (id == "chara" || id == "player") ? 10 : (1 + EClass.rnd(10)));
+			if (race.id == "bike" && id != "bike_cub")
+			{
+				SetFeat(1423, (id == "chara" || id == "player") ? 10 : (1 + EClass.rnd(10)));
+			}
+			if (race.id == "horse" && EClass.rnd(5) == 0)
+			{
+				SetFeat(1423, 1 + EClass.rnd(5));
+			}
 		}
 	}
 

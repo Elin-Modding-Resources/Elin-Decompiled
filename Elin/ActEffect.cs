@@ -2058,10 +2058,9 @@ public class ActEffect : EClass
 				tc.Say("faith_bless", tc, faith.Name);
 			}
 			tc.ModExp(306, power * 10);
-			tc.ModExp(85, power * 10);
-			if (tc.elements.Base(85) >= tc.elements.Value(306))
+			if (tc.elements.Base(85) < tc.elements.Value(306))
 			{
-				tc.elements.SetBase(85, tc.elements.Value(306));
+				tc.ModExp(85, power * 10);
 			}
 			break;
 		}
@@ -2483,7 +2482,7 @@ public class ActEffect : EClass
 			{
 				Redirect(EffectId.BuffStats, BlessedState.Cursed, new ActRef
 				{
-					aliasEle = "STR"
+					n1 = "STR"
 				});
 			}
 			break;
