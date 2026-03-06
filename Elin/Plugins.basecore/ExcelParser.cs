@@ -196,10 +196,18 @@ public class ExcelParser
 	{
 		StringBuilder stringBuilder = new StringBuilder();
 		string name = typeof(T).Name;
-		ICell cell = row.Cells.TryGet(id, returnNull: true);
-		string value = ((row.RowNum < 3) ? ", SourceData begins at the 4th row. 3rd row is the default value row." : $", default:'{rowDefault.Cells.TryGet(id, returnNull: true)}'");
+		ICell cell = row?.Cells.TryGet(id, returnNull: true);
+		IRow obj = row;
+		string value = ((obj != null && obj.RowNum >= 3) ? $", default:'{rowDefault?.Cells.TryGet(id, returnNull: true)}'" : ", SourceData begins at the 4th row. 3rd row is the default value row.");
 		stringBuilder.AppendLine("$source ill-format file: " + path);
-		stringBuilder.Append($"row#{row.RowNum + 1}, cell'{id + 1}'/'{ToLetterId(id)}', expected:'{name}', read:'{cell}'");
+		object[] array = new object[5];
+		IRow obj2 = row;
+		array[0] = ((obj2 != null) ? new int?(obj2.RowNum + 1) : null);
+		array[1] = id + 1;
+		array[2] = ToLetterId(id);
+		array[3] = name;
+		array[4] = cell;
+		stringBuilder.Append(string.Format("row#{0}, cell'{1}'/'{2}', expected:'{3}', read:'{4}'", array));
 		stringBuilder.AppendLine(value);
 		Debug.LogError(stringBuilder);
 	}

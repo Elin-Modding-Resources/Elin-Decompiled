@@ -201,17 +201,49 @@ public class IO
 
 	public static bool IsCompressed(string path)
 	{
-		byte[] array;
-		using (BinaryReader binaryReader = new BinaryReader(File.OpenRead(path)))
-		{
-			binaryReader.BaseStream.Seek(0L, SeekOrigin.Begin);
-			array = binaryReader.ReadBytes(4);
-		}
-		if (array.Length > 3 && array[0] == 123 && array[1] == 13 && array[2] == 10 && array[3] == 32)
+		using FileStream fileStream = File.OpenRead(path);
+		if (fileStream.Length == 0L)
 		{
 			return false;
 		}
-		return true;
+		bool flag;
+		while (true)
+		{
+			switch (fileStream.ReadByte())
+			{
+			case 9:
+			case 10:
+			case 13:
+			case 32:
+				continue;
+			case -1:
+				return false;
+			case 34:
+			case 45:
+			case 48:
+			case 49:
+			case 50:
+			case 51:
+			case 52:
+			case 53:
+			case 54:
+			case 55:
+			case 56:
+			case 57:
+			case 91:
+			case 102:
+			case 110:
+			case 116:
+			case 123:
+				flag = true;
+				break;
+			default:
+				flag = false;
+				break;
+			}
+			break;
+		}
+		return !flag;
 	}
 
 	public static void Compress(string path, string text)

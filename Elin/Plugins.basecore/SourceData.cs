@@ -194,9 +194,13 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 	{
 		HashSet<T2> hashSet = new HashSet<T2>();
 		List<T> list = new List<T>(rows.Count);
-		bool flag = typeof(T).DeclaringType.Name.Contains("Lang");
 		string arg = GetType().Name;
 		System.Reflection.FieldInfo field = typeof(T).GetField("id");
+		bool flag = typeof(LangRow).IsAssignableFrom(typeof(T));
+		if (field == null)
+		{
+			return;
+		}
 		if (field.FieldType != typeof(T2))
 		{
 			Debug.LogError($"#source override: {arg} id field mismatch {field.FieldType} != {typeof(T2)}");
