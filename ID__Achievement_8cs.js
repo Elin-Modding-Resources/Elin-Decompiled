@@ -21,6 +21,8 @@ var ID__Achievement_8cs =
       [ "DEMITAS", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a7ba5df844826d6b467d74f615890388d", null ],
       [ "KETTLE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af1e659c34ad06a8cc89931551e6b97e0", null ],
       [ "FAITH_HEALING", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9aaaec0554441458aff110a49799fc00c2", null ],
-      [ "ONEV", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ab0df544e1508a4b6b5cf66af8e1f5cd5", null ]
+      [ "ONEV", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ab0df544e1508a4b6b5cf66af8e1f5cd5", null ],
+      [ "JURE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a4df96777ae95a6062e20c841a7a4051d", null ],
+      [ "BELL", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ae25524800989ebde09d7f9a3633368e9", null ]
     ] ]
 ];

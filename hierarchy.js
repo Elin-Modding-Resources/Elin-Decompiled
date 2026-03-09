@@ -273,6 +273,7 @@ var hierarchy =
           ] ],
           [ "ListPeopleBuySlave", "classListPeopleBuySlave.html", null ],
           [ "ListPeopleCallReserve", "classListPeopleCallReserve.html", null ],
+          [ "ListPeopleParty", "classListPeopleParty.html", null ],
           [ "ListPeopleRevive", "classListPeopleRevive.html", null ],
           [ "ListPeopleSelect", "classListPeopleSelect.html", null ]
         ] ]
@@ -1454,6 +1455,7 @@ var hierarchy =
           [ "TraitHomeBoard", "classTraitHomeBoard.html", null ],
           [ "TraitHouseBoard", "classTraitHouseBoard.html", null ],
           [ "TraitMapBoard", "classTraitMapBoard.html", null ],
+          [ "TraitPartyBoard", "classTraitPartyBoard.html", null ],
           [ "TraitQuestBoard", "classTraitQuestBoard.html", null ],
           [ "TraitResearchBoard", "classTraitResearchBoard.html", null ],
           [ "TraitResidentBoard", "classTraitResidentBoard.html", null ],

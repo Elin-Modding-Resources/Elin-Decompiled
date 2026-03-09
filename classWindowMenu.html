@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.283 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.284 Nightly Patch 2</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a63818015b5c819a2f227ca817554a4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3340a1f287153598ff32c455b302c6a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindowMenu.html#a3340a1f287153598ff32c455b302c6a7">Clear</a> ()</td></tr>
 <tr class="separator:a3340a1f287153598ff32c455b302c6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58245acf499fb6b9ad67120aab2eee66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindowMenu.html#a58245acf499fb6b9ad67120aab2eee66">AddHeader</a> (string idLang, Sprite sprite=null)</td></tr>
+<tr class="separator:a58245acf499fb6b9ad67120aab2eee66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6285b2e45392b0389594e816a43e31bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindowMenu.html#a6285b2e45392b0389594e816a43e31bc">AddSpace</a> (float height=30f)</td></tr>
+<tr class="separator:a6285b2e45392b0389594e816a43e31bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84c4bce691c133f487590bb24e5a1dac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindowMenu.html#a84c4bce691c133f487590bb24e5a1dac">AddButton</a> (string idLang, Action&lt; <a class="el" href="classUIButton.html">UIButton</a> &gt; onClick, Sprite sprite=null, string idButton=&quot;Default&quot;)</td></tr>
 <tr class="separator:a84c4bce691c133f487590bb24e5a1dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac175d50c1c884b81907ca57155f71549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindowMenu.html#ac175d50c1c884b81907ca57155f71549">AddButtonSimple</a> (Func&lt; string &gt; funcText, Action&lt; <a class="el" href="classUIButton.html">UIButton</a> &gt; onClick=null, Sprite sprite=null, string idButton=&quot;Simple&quot;)</td></tr>
@@ -259,21 +263,21 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00113">113</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>    {</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;(<span class="stringliteral">&quot;UI/Window/Base/Element/ButtonWindowMenu_&quot;</span> + idButton, <a class="code hl_variable" href="classWindowMenu.html#a112b26405bde686a64ad076cc0a85650">layout</a>);</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite)</div>
-<div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            uIButton.icon.sprite = sprite;</div>
-<div class="line"><span class="lineno">  120</span>            uIButton.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
-<div class="line"><span class="lineno">  123</span>        {</div>
-<div class="line"><span class="lineno">  124</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  125</span>        }</div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> uIButton;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00126">126</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> uIButton = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;<a class="code hl_class" href="classUIButton.html">UIButton</a>&gt;(<span class="stringliteral">&quot;UI/Window/Base/Element/ButtonWindowMenu_&quot;</span> + idButton, <a class="code hl_variable" href="classWindowMenu.html#a112b26405bde686a64ad076cc0a85650">layout</a>);</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite)</div>
+<div class="line"><span class="lineno">  131</span>        {</div>
+<div class="line"><span class="lineno">  132</span>            uIButton.icon.sprite = sprite;</div>
+<div class="line"><span class="lineno">  133</span>            uIButton.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
+<div class="line"><span class="lineno">  136</span>        {</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> uIButton;</div>
+<div class="line"><span class="lineno">  140</span>    }</div>
 <div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a1a3f3d8365203e634319910616ad5b72"><div class="ttname"><a href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">UIButton.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00110">UIButton.cs:110</a></div></div>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
@@ -283,7 +287,7 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00011">layout</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00054">AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00091">AddButton2Line()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00070">AddButtonSimple()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00067">AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00104">AddButton2Line()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00083">AddButtonSimple()</a>.</p>
 
 </div>
 </div>
@@ -333,26 +337,26 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00054">54</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
-<div class="line"><span class="lineno">   57</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <a class="code hl_function" href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">_AddButton</a>(idButton, sprite, onClick);</div>
-<div class="line"><span class="lineno">   58</span>        b.onClick.AddListener(delegate</div>
-<div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            onClick(b);</div>
-<div class="line"><span class="lineno">   61</span>        });</div>
-<div class="line"><span class="lineno">   62</span>        b.mainText.text = idLang.lang();</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
-<div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> b;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclassWindowMenu_html_a166af47e5e8491d9cb758181808788e5"><div class="ttname"><a href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">WindowMenu._AddButton</a></div><div class="ttdeci">UIButton _AddButton(string idButton, Sprite sprite, Action&lt; UIButton &gt; onClick)</div><div class="ttdef"><b>Definition:</b> <a href="WindowMenu_8cs_source.html#l00113">WindowMenu.cs:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00067">67</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <a class="code hl_function" href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">_AddButton</a>(idButton, sprite, onClick);</div>
+<div class="line"><span class="lineno">   71</span>        b.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            onClick(b);</div>
+<div class="line"><span class="lineno">   74</span>        });</div>
+<div class="line"><span class="lineno">   75</span>        b.mainText.text = idLang.lang();</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
+<div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> b;</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="aclassWindowMenu_html_a166af47e5e8491d9cb758181808788e5"><div class="ttname"><a href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">WindowMenu._AddButton</a></div><div class="ttdeci">UIButton _AddButton(string idButton, Sprite sprite, Action&lt; UIButton &gt; onClick)</div><div class="ttdef"><b>Definition:</b> <a href="WindowMenu_8cs_source.html#l00126">WindowMenu.cs:126</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00113">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
+<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00126">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerQuestBoard_8cs_source.html#l00043">LayerQuestBoard.OnSwitchContent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00465">BaseListPeople.OnRefreshMenu()</a>, and <a class="el" href="LayerQuestBoard_8cs_source.html#l00043">LayerQuestBoard.OnSwitchContent()</a>.</p>
 
 </div>
 </div>
@@ -408,29 +412,29 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00091">91</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <a class="code hl_function" href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">_AddButton</a>(idButton, sprite, onClick);</div>
-<div class="line"><span class="lineno">   95</span>        b.onClick.AddListener(delegate</div>
-<div class="line"><span class="lineno">   96</span>        {</div>
-<div class="line"><span class="lineno">   97</span>            onClick?.Invoke(b);</div>
-<div class="line"><span class="lineno">   98</span>            SE.Click();</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)b)</div>
-<div class="line"><span class="lineno">  100</span>            {</div>
-<div class="line"><span class="lineno">  101</span>                b.subText.text = funcText().lang();</div>
-<div class="line"><span class="lineno">  102</span>            }</div>
-<div class="line"><span class="lineno">  103</span>        });</div>
-<div class="line"><span class="lineno">  104</span>        b.mainText.text = idLang.lang();</div>
-<div class="line"><span class="lineno">  105</span>        b.subText.text = funcText().lang();</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
-<div class="line"><span class="lineno">  107</span>        {</div>
-<div class="line"><span class="lineno">  108</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> b;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00104">104</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <a class="code hl_function" href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">_AddButton</a>(idButton, sprite, onClick);</div>
+<div class="line"><span class="lineno">  108</span>        b.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            onClick?.Invoke(b);</div>
+<div class="line"><span class="lineno">  111</span>            SE.Click();</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)b)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                b.subText.text = funcText().lang();</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>        });</div>
+<div class="line"><span class="lineno">  117</span>        b.mainText.text = idLang.lang();</div>
+<div class="line"><span class="lineno">  118</span>        b.subText.text = funcText().lang();</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> b;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00113">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
+<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00126">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerResource_8cs_source.html#l00015">LayerResource.OnInit()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00465">BaseListPeople.OnRefreshMenu()</a>, and <a class="el" href="LayerTech_8cs_source.html#l00014">LayerTech.RefreshTech()</a>.</p>
 
@@ -482,30 +486,113 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00070">70</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <a class="code hl_function" href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">_AddButton</a>(idButton, sprite, onClick);</div>
-<div class="line"><span class="lineno">   74</span>        b.onClick.AddListener(delegate</div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            onClick?.Invoke(b);</div>
-<div class="line"><span class="lineno">   77</span>            SE.Click();</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)b)</div>
-<div class="line"><span class="lineno">   79</span>            {</div>
-<div class="line"><span class="lineno">   80</span>                b.subText.text = funcText().lang();</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        });</div>
-<div class="line"><span class="lineno">   83</span>        b.subText.text = funcText().lang();</div>
-<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
-<div class="line"><span class="lineno">   85</span>        {</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> b;</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00083">83</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_class" href="classUIButton.html">UIButton</a> b = <a class="code hl_function" href="classWindowMenu.html#a166af47e5e8491d9cb758181808788e5">_AddButton</a>(idButton, sprite, onClick);</div>
+<div class="line"><span class="lineno">   87</span>        b.onClick.AddListener(delegate</div>
+<div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            onClick?.Invoke(b);</div>
+<div class="line"><span class="lineno">   90</span>            SE.Click();</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)b)</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                b.subText.text = funcText().lang();</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>        });</div>
+<div class="line"><span class="lineno">   96</span>        b.subText.text = funcText().lang();</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_variable" href="classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6">header</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> b;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00113">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
+<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00126">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerHome_8cs_source.html#l00043">LayerHome.OnSwitchContent()</a>.</p>
+
+</div>
+</div>
+<a id="a58245acf499fb6b9ad67120aab2eee66" name="a58245acf499fb6b9ad67120aab2eee66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58245acf499fb6b9ad67120aab2eee66">&#9670;&#160;</a></span>AddHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindowMenu.AddHeader </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>idLang</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sprite&#160;</td>
+          <td class="paramname"><em>sprite</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00054">54</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5">Init</a>();</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;Transform&gt;(<span class="stringliteral">&quot;UI/Window/Base/Element/Header WindowMenu2&quot;</span>, <a class="code hl_variable" href="classWindowMenu.html#a112b26405bde686a64ad076cc0a85650">layout</a>).GetComponentInChildren&lt;UIText&gt;().text = idLang.lang();</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00011">layout</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00465">BaseListPeople.OnRefreshMenu()</a>.</p>
+
+</div>
+</div>
+<a id="a6285b2e45392b0389594e816a43e31bc" name="a6285b2e45392b0389594e816a43e31bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6285b2e45392b0389594e816a43e31bc">&#9670;&#160;</a></span>AddSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindowMenu.AddSpace </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em> = <code>30f</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00060">60</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        RectTransform rectTransform = <span class="keyword">new</span> GameObject().AddComponent&lt;RectTransform&gt;();</div>
+<div class="line"><span class="lineno">   63</span>        rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(1f, height);</div>
+<div class="line"><span class="lineno">   64</span>        rectTransform.SetParent(<a class="code hl_variable" href="classWindowMenu.html#a112b26405bde686a64ad076cc0a85650">layout</a>.transform);</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="WindowMenu_8cs_source.html#l00011">layout</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseListPeople_8cs_source.html#l00465">BaseListPeople.OnRefreshMenu()</a>.</p>
 
 </div>
 </div>
@@ -594,7 +681,7 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SkinManager_8cs_source.html#l00082">SkinManager.CurrentSkin</a>, <a class="el" href="WindowMenu_8cs_source.html#l00013">header</a>, <a class="el" href="WindowMenu_8cs_source.html#l00007">id</a>, <a class="el" href="WindowMenu_8cs_source.html#l00015">initialized</a>, <a class="el" href="WindowMenu_8cs_source.html#l00011">layout</a>, <a class="el" href="SkinRootStatic_8cs_source.html#l00067">SkinRootStatic.Positions.leftMenu</a>, <a class="el" href="SkinRootStatic_8cs_source.html#l00106">SkinRootStatic.positions</a>, <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00009">window</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00113">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00054">AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00091">AddButton2Line()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00070">AddButtonSimple()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00044">Clear()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00126">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00067">AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00104">AddButton2Line()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00083">AddButtonSimple()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00054">AddHeader()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00044">Clear()</a>.</p>
 
 </div>
 </div>
@@ -613,7 +700,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00013">13</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00113">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00054">AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00091">AddButton2Line()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00070">AddButtonSimple()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00044">Clear()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00126">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00067">AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00104">AddButton2Line()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00083">AddButtonSimple()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00044">Clear()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>.</p>
 
 </div>
 </div>
@@ -675,7 +762,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="WindowMenu_8cs_source.html#l00011">11</a> of file <a class="el" href="WindowMenu_8cs_source.html">WindowMenu.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00113">_AddButton()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01129">Window.ApplySkin()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00044">Clear()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00017">WindowMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="WindowMenu_8cs_source.html#l00126">_AddButton()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00054">AddHeader()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00060">AddSpace()</a>, <a class="el" href="Plugins_8UI_2Window_8cs_source.html#l01129">Window.ApplySkin()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00044">Clear()</a>, <a class="el" href="WindowMenu_8cs_source.html#l00029">Init()</a>, and <a class="el" href="WindowMenu_8cs_source.html#l00017">WindowMenu()</a>.</p>
 
 </div>
 </div>

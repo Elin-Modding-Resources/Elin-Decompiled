@@ -2,6 +2,7 @@ var classParty =
 [
     [ "AddMemeber", "classParty.html#ac7adae19004adcdb2507606ec961fb6f", null ],
     [ "Count", "classParty.html#a804ec2bc141e603e8000aade968debde", null ],
+    [ "Disband", "classParty.html#a50d09cc7ed7577b27f44e08fed7f2763", null ],
     [ "EvalueBest", "classParty.html#ab95e130119843d94f98a383d17328ee7", null ],
     [ "EvalueTotal", "classParty.html#a53b97b67778fedd930e777386a7f40a7", null ],
     [ "Find", "classParty.html#a39ee0bb9808d4139f5ef325ad6ff579f", null ],

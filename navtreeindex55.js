@@ -1,5 +1,12 @@
 var NAVTREEINDEX55 =
 {
+"classCoreRef_1_1Crawlers.html#a0f580821e6dd27b290d0f9575ff53dbe":[1,0,421,2,0],
+"classCoreRef_1_1DefaultRoof.html":[1,0,421,3],
+"classCoreRef_1_1DefaultRoof.html#a3cc0237df76fb76749cc467ee65cb79d":[1,0,421,3,1],
+"classCoreRef_1_1DefaultRoof.html#abcfc821a2a856282b572b67c4e2af2ee":[1,0,421,3,0],
+"classCoreRef_1_1Icons.html":[1,0,421,4],
+"classCoreRef_1_1Icons.html#a0b7ae58921fbadf8bf42d0e8589d19d0":[1,0,421,4,10],
+"classCoreRef_1_1Icons.html#a311725d213bd13523c613c37fafc3da8":[1,0,421,4,12],
 "classCoreRef_1_1Icons.html#a37c4a59b14d366f7717b495df67e6c9c":[1,0,421,4,18],
 "classCoreRef_1_1Icons.html#a444e66ec5cc5d4fed13d31568885ecd1":[1,0,421,4,26],
 "classCoreRef_1_1Icons.html#a5071c4bbcdbc33b8520c8a93e27c233c":[1,0,421,4,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX55 =
 "classCritterRatSmall.html#aa6bbe8dc3373baf82b42c4710462b897":[1,0,432,0],
 "classCritterRatSmall.html#abede702e92acef26938471005cf884ff":[1,0,432,1],
 "classCritterRoach.html":[1,0,433],
-"classCritterRoach.html#a0a968b234dda354e49d8cda058f9d9e5":[1,0,433,0],
-"classCritterRoach.html#a5ac122ba4a69b5d66358ebcb18347c53":[1,0,433,3],
-"classCritterRoach.html#a9b00b3ae5b5e1cea02e175d60403fe21":[1,0,433,1],
-"classCritterRoach.html#aa9164b154baa2ae48ede3bc897a64a5a":[1,0,433,2],
-"classCritterRoachSmall.html":[1,0,434],
-"classCritterRoachSmall.html#a21751b5e2118afe68abc4a7d4abc44b0":[1,0,434,1],
-"classCritterRoachSmall.html#a49f165282c7701c06b8a5eb520bc4df7":[1,0,434,3],
-"classCritterRoachSmall.html#a5a58f1a53b6fd34c599409545326998e":[1,0,434,0]
+"classCritterRoach.html#a0a968b234dda354e49d8cda058f9d9e5":[1,0,433,0]
 };

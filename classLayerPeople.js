@@ -16,6 +16,7 @@ var classLayerPeople =
     [ "Create", "classLayerPeople.html#a753657f069ff6d0af0a0917668a51671", null ],
     [ "Create< T >", "classLayerPeople.html#ac8439b77a0e860194b4eeda69a077928", null ],
     [ "CreateBed", "classLayerPeople.html#ade3a731ccea30fbebfec827a2711aea5", null ],
+    [ "CreateParty", "classLayerPeople.html#ae7fca74e35621ed238ea83153af70293", null ],
     [ "CreateReserve", "classLayerPeople.html#aa90fc478e0919104f69d233db059d8fe", null ],
     [ "CreateSelect", "classLayerPeople.html#a80a236c9b33a959d5fc62bad8053138b", null ],
     [ "CreateSelectEmbarkMembers", "classLayerPeople.html#ae8b5fc6e3af77eb8c66ccfe8ae21e6b4", null ],

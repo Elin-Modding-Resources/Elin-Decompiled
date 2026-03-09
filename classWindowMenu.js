@@ -6,6 +6,8 @@ var classWindowMenu =
     [ "AddButton", "classWindowMenu.html#a84c4bce691c133f487590bb24e5a1dac", null ],
     [ "AddButton2Line", "classWindowMenu.html#aed8be41b1c47708a60fc26aa068f144c", null ],
     [ "AddButtonSimple", "classWindowMenu.html#ac175d50c1c884b81907ca57155f71549", null ],
+    [ "AddHeader", "classWindowMenu.html#a58245acf499fb6b9ad67120aab2eee66", null ],
+    [ "AddSpace", "classWindowMenu.html#a6285b2e45392b0389594e816a43e31bc", null ],
     [ "Clear", "classWindowMenu.html#a3340a1f287153598ff32c455b302c6a7", null ],
     [ "Init", "classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5", null ],
     [ "header", "classWindowMenu.html#a2eea35a88b0fa64bd7679dcc5573f8b6", null ],

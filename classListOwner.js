@@ -8,6 +8,7 @@ var classListOwner =
     [ "OnList", "classListOwner.html#a226a711bd27287a56049bb01b738765f", null ],
     [ "OnRefreshMenu", "classListOwner.html#aed2d5663bbcfd432ceb0412e4dc83115", null ],
     [ "OnSwitchContent", "classListOwner.html#a6094e79696b1f11fb891b7a98e272180", null ],
+    [ "RefreshAll", "classListOwner.html#a43b9c8aad662ea0d972eb45cb4b05db6", null ],
     [ "RefreshCaption", "classListOwner.html#a983b5f25bf2c937d3b9d43a47f908e42", null ],
     [ "RefreshTab", "classListOwner.html#a5cfd823ad83b54e27439297513bbd33c", null ],
     [ "funcHeader", "classListOwner.html#a63499452caa01d5d6a224de296d294e4", null ],

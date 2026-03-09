@@ -11,6 +11,7 @@ var classPlayer_1_1Stats =
     [ "deepestVoid", "classPlayer_1_1Stats.html#a91248095f0fbfca0e26d0fd01abceaf1", null ],
     [ "digs", "classPlayer_1_1Stats.html#a01d61a1358fa2e4dc5301c6535f87a6a", null ],
     [ "divorced", "classPlayer_1_1Stats.html#ac2a82472efbf79c31f62bbee9f1d3d71", null ],
+    [ "escapeSilverBell", "classPlayer_1_1Stats.html#aa2f7a5cbde1a90ee1080f2620ee56ac0", null ],
     [ "gambleChest", "classPlayer_1_1Stats.html#afdf6688c3453349a11a669697078077b", null ],
     [ "gambleChestOpen", "classPlayer_1_1Stats.html#a9a23525a8d3547fc02647602955f78e6", null ],
     [ "kills", "classPlayer_1_1Stats.html#a410245742b48f2d4b6c12d227951e8e9", null ],
