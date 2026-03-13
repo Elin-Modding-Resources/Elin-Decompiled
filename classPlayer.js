@@ -1,6 +1,7 @@
 var classPlayer =
 [
     [ "Flags", "classPlayer_1_1Flags.html", "classPlayer_1_1Flags" ],
+    [ "PartySetup", "classPlayer_1_1PartySetup.html", "classPlayer_1_1PartySetup" ],
     [ "Pref", "classPlayer_1_1Pref.html", "classPlayer_1_1Pref" ],
     [ "ReturnInfo", "classPlayer_1_1ReturnInfo.html", "classPlayer_1_1ReturnInfo" ],
     [ "Stats", "classPlayer_1_1Stats.html", "classPlayer_1_1Stats" ],
@@ -131,6 +132,7 @@ var classPlayer =
     [ "little_saved", "classPlayer.html#aecce22c783d38ac05c67b384c8ae259a", null ],
     [ "luckycoin", "classPlayer.html#a960909597b2f57b1d8888f52269a3620", null ],
     [ "mainWidgets", "classPlayer.html#ace998cd817f7f40663a1f8883d510953", null ],
+    [ "MaxPartySetup", "classPlayer.html#a9eca44eb7a58a9739670cb901042ef41", null ],
     [ "memo", "classPlayer.html#a6cbd253420008666ef350e81e71854e1", null ],
     [ "memo2", "classPlayer.html#acca637905a73924877bab1127594c2a8", null ],
     [ "nextMove", "classPlayer.html#a49d4323b8ad06b5b1db4e39ee8812ae8", null ],
@@ -140,6 +142,7 @@ var classPlayer =
     [ "nums", "classPlayer.html#af29affd91a70e5d10192fbea1f8a5810", null ],
     [ "onStartZone", "classPlayer.html#a1b3617f0581b4996926e898d464aab5c", null ],
     [ "openContainerCenter", "classPlayer.html#af8bde5efbb3312e8faaa9e1f39ec8559", null ],
+    [ "partySetups", "classPlayer.html#a76e115a071abc42be03d1e65471bff2f", null ],
     [ "pickupDelay", "classPlayer.html#a7581c9d262369a141d3eca99ea850fe6", null ],
     [ "playingSong", "classPlayer.html#add1fcaef9502dccea91b8e57f014db33", null ],
     [ "popups", "classPlayer.html#abfe0e143fcc3d42f4bfaaba28e82ca2f", null ],

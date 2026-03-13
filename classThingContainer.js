@@ -17,7 +17,7 @@ var classThingContainer =
     [ "FindStealable", "classThingContainer.html#a0e94fffa1b0b17d1c68645e3cdd3be53", null ],
     [ "Foreach", "classThingContainer.html#a893f3830d6174aa8ef32d39b151ca647", null ],
     [ "Foreach", "classThingContainer.html#aae07b3e0c8a65ffb22e4c17f03891dbb", null ],
-    [ "GetCurrency", "classThingContainer.html#adce16823f2a090694a8bdc26955e50c1", null ],
+    [ "GetCurrency", "classThingContainer.html#ac5f4846bd6e07a404c9dafafed0fc804", null ],
     [ "GetDest", "classThingContainer.html#a649cd0e7a1e190150571c94c0b31c07c", null ],
     [ "GetFreeGridIndex", "classThingContainer.html#ae95fb4d65ec78a0d1fc86eb236c502c2", null ],
     [ "GetThingStack", "classThingContainer.html#a19b19ba562ba0ccacdad473164e3771b", null ],

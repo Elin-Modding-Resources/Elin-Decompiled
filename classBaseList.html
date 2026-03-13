@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.284 Nightly Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.285 Nightly</span>
    </div>
   </td>
  </tr>
@@ -124,6 +124,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae41ee570c87d5134f68a7fc349f62868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d7718ca13ef524b61349d318a92277"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseList.html#ae8d7718ca13ef524b61349d318a92277">Add</a> (object o)</td></tr>
 <tr class="separator:ae8d7718ca13ef524b61349d318a92277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fb370933472348ba913afd713429e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseList.html#ae2fb370933472348ba913afd713429e6">AddDynamic</a> (object <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</td></tr>
+<tr class="separator:ae2fb370933472348ba913afd713429e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c1057b1b61f9e40cb32c5c4e64748e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseList.html#ad6c1057b1b61f9e40cb32c5c4e64748e">RemoveDynamic</a> (object <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</td></tr>
+<tr class="separator:ad6c1057b1b61f9e40cb32c5c4e64748e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ec7d22e65bcc71473e0ffa5c6f9ec3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseList.html#ad9ec7d22e65bcc71473e0ffa5c6f9ec3">Contains</a> (object <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>)</td></tr>
+<tr class="separator:ad9ec7d22e65bcc71473e0ffa5c6f9ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a41e1d9b6a0807726c5291938bd24b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseList.html#aa9a41e1d9b6a0807726c5291938bd24b">OnMove</a> (object o, object select=null)</td></tr>
+<tr class="separator:aa9a41e1d9b6a0807726c5291938bd24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e5e45ed4df08bbd11194609f79f7eff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseList.html#a1e5e45ed4df08bbd11194609f79f7eff">RefreshNoItem</a> ()</td></tr>
 <tr class="separator:a1e5e45ed4df08bbd11194609f79f7eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64dfa0bef540cde9585828906fe5b87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseList.html#af64dfa0bef540cde9585828906fe5b87">RefreshBGGrid</a> ()</td></tr>
@@ -208,6 +216,38 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="ae2fb370933472348ba913afd713429e6" name="ae2fb370933472348ba913afd713429e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2fb370933472348ba913afd713429e6">&#9670;&#160;</a></span>AddDynamic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void BaseList.AddDynamic </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classUIDynamicList.html#a1a7818c7e76364e5f4741cfe5a4b738a">UIDynamicList</a>, and <a class="el" href="classUIList.html#ae46720ec9c420382c5c9a1379639bcc4">UIList</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00069">69</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ae41ee570c87d5134f68a7fc349f62868" name="ae41ee570c87d5134f68a7fc349f62868"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae41ee570c87d5134f68a7fc349f62868">&#9670;&#160;</a></span>Clear()</h2>
 
@@ -236,6 +276,39 @@ Properties</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00061">61</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
 <div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad9ec7d22e65bcc71473e0ffa5c6f9ec3" name="ad9ec7d22e65bcc71473e0ffa5c6f9ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ec7d22e65bcc71473e0ffa5c6f9ec3">&#9670;&#160;</a></span>Contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool BaseList.Contains </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classUIDynamicList.html#a74cd39f2b5aa1c4654dc9d5e744744ff">UIDynamicList</a>, and <a class="el" href="classUIList.html#afb1d4003c57cfee26bd0896bb46f533c">UIList</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00077">77</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,6 +414,48 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="aa9a41e1d9b6a0807726c5291938bd24b" name="aa9a41e1d9b6a0807726c5291938bd24b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a41e1d9b6a0807726c5291938bd24b">&#9670;&#160;</a></span>OnMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void BaseList.OnMove </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>select</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classUIDynamicList.html#ab0766b8a26c90d9284f303f34e6dae48">UIDynamicList</a>, and <a class="el" href="classUIList.html#aa5926dd39f98f10452aaa201d26b1fc1">UIList</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00082">82</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    {</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="adb79a9876cb0f90a4962c107daff67eb" name="adb79a9876cb0f90a4962c107daff67eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb79a9876cb0f90a4962c107daff67eb">&#9670;&#160;</a></span>Redraw()</h2>
 
@@ -397,66 +512,66 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00089">89</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.none)</div>
-<div class="line"><span class="lineno">   92</span>        {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">int</span> num = <a class="code hl_property" href="classBaseList.html#ab8ec66abe73b63cf9c475431473146f1">RowCount</a>;</div>
-<div class="line"><span class="lineno">   96</span>        LayoutGroup component = base.transform.GetComponent&lt;LayoutGroup&gt;();</div>
-<div class="line"><span class="lineno">   97</span>        GridLayoutGroup gridLayoutGroup = component as GridLayoutGroup;</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.stripe;</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>)</div>
-<div class="line"><span class="lineno">  100</span>        {</div>
-<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a> = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;RawImage&gt;(<span class="stringliteral">&quot;UI/Element/List/BGList &quot;</span> + <a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a>, base.transform);</div>
-<div class="line"><span class="lineno">  102</span>        }</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.transform.SetAsFirstSibling();</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)gridLayoutGroup &amp;&amp; gridLayoutGroup.constraint == GridLayoutGroup.Constraint.FixedColumnCount)</div>
-<div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            num = Mathf.CeilToInt((<span class="keywordtype">float</span>)num / (float)gridLayoutGroup.constraintCount);</div>
-<div class="line"><span class="lineno">  107</span>        }</div>
-<div class="line"><span class="lineno">  108</span>        <span class="keywordtype">float</span> height = num;</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (flag)</div>
-<div class="line"><span class="lineno">  110</span>        {</div>
-<div class="line"><span class="lineno">  111</span>            height = (float)num * 0.5f * (<span class="keywordtype">float</span>)((num % 2 != 0) ? 1 : (-1));</div>
-<div class="line"><span class="lineno">  112</span>        }</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">float</span> num2 = component?.padding.top ?? 0;</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordtype">float</span> num3 = (flag ? 0f : 1f) + <a class="code hl_variable" href="classBaseList.html#ace9a0a53975584b349f5757c385f76be">bgFix</a>.y;</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">float</span> num4 = 0f;</div>
-<div class="line"><span class="lineno">  116</span>        num4 = (component as VerticalLayoutGroup)?.spacing ?? gridLayoutGroup?.spacing.y ?? 0f;</div>
-<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.grid)</div>
-<div class="line"><span class="lineno">  118</span>        {</div>
-<div class="line"><span class="lineno">  119</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().sizeDelta = <span class="keyword">new</span> Vector2(0f, 0f);</div>
-<div class="line"><span class="lineno">  120</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(0f, 0f);</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  123</span>        {</div>
-<div class="line"><span class="lineno">  124</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().sizeDelta = <span class="keyword">new</span> Vector2(-8f, 0f - num2 + num4);</div>
-<div class="line"><span class="lineno">  125</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(0f, (0f - num2) * 0.5f - num3);</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordtype">float</span> width = 1f;</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordtype">float</span> num5 = base.transform.Rect().rect.width;</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)gridLayoutGroup &amp;&amp; gridLayoutGroup.constraint == GridLayoutGroup.Constraint.FixedColumnCount)</div>
-<div class="line"><span class="lineno">  130</span>        {</div>
-<div class="line"><span class="lineno">  131</span>            num5 = (float)gridLayoutGroup.constraintCount * (gridLayoutGroup.cellSize.x + gridLayoutGroup.spacing.x);</div>
-<div class="line"><span class="lineno">  132</span>        }</div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">if</span> (!flag)</div>
-<div class="line"><span class="lineno">  134</span>        {</div>
-<div class="line"><span class="lineno">  135</span>            <span class="keywordtype">int</span> num6 = 64;</div>
-<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.dot)</div>
-<div class="line"><span class="lineno">  137</span>            {</div>
-<div class="line"><span class="lineno">  138</span>                num6 = 60;</div>
-<div class="line"><span class="lineno">  139</span>            }</div>
-<div class="line"><span class="lineno">  140</span>            width = num5 / (float)num6 * <a class="code hl_variable" href="classBaseList.html#a22f62e2c6e3303db5ada6d07d34b0826">bgUvFix</a>.x;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.grid &amp;&amp; gridLayoutGroup.constraint == GridLayoutGroup.Constraint.FixedColumnCount)</div>
-<div class="line"><span class="lineno">  143</span>        {</div>
-<div class="line"><span class="lineno">  144</span>            width = gridLayoutGroup.constraintCount;</div>
-<div class="line"><span class="lineno">  145</span>        }</div>
-<div class="line"><span class="lineno">  146</span>        bgGrid.uvRect = <span class="keyword">new</span> Rect(0f, 0f, width, height);</div>
-<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.SetActive(<a class="code hl_property" href="classBaseList.html#a3d50e9699eaa8de3e116a3fa05bcf21b">ItemCount</a> &gt; 0);</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00106">106</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.none)</div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">int</span> num = <a class="code hl_property" href="classBaseList.html#ab8ec66abe73b63cf9c475431473146f1">RowCount</a>;</div>
+<div class="line"><span class="lineno">  113</span>        LayoutGroup component = base.transform.GetComponent&lt;LayoutGroup&gt;();</div>
+<div class="line"><span class="lineno">  114</span>        GridLayoutGroup gridLayoutGroup = component as GridLayoutGroup;</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">bool</span> flag = <a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.stripe;</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a> = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;RawImage&gt;(<span class="stringliteral">&quot;UI/Element/List/BGList &quot;</span> + <a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a>, base.transform);</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.transform.SetAsFirstSibling();</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)gridLayoutGroup &amp;&amp; gridLayoutGroup.constraint == GridLayoutGroup.Constraint.FixedColumnCount)</div>
+<div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            num = Mathf.CeilToInt((<span class="keywordtype">float</span>)num / (float)gridLayoutGroup.constraintCount);</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">float</span> height = num;</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (flag)</div>
+<div class="line"><span class="lineno">  127</span>        {</div>
+<div class="line"><span class="lineno">  128</span>            height = (float)num * 0.5f * (<span class="keywordtype">float</span>)((num % 2 != 0) ? 1 : (-1));</div>
+<div class="line"><span class="lineno">  129</span>        }</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordtype">float</span> num2 = component?.padding.top ?? 0;</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">float</span> num3 = (flag ? 0f : 1f) + <a class="code hl_variable" href="classBaseList.html#ace9a0a53975584b349f5757c385f76be">bgFix</a>.y;</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordtype">float</span> num4 = 0f;</div>
+<div class="line"><span class="lineno">  133</span>        num4 = (component as VerticalLayoutGroup)?.spacing ?? gridLayoutGroup?.spacing.y ?? 0f;</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.grid)</div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().sizeDelta = <span class="keyword">new</span> Vector2(0f, 0f);</div>
+<div class="line"><span class="lineno">  137</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(0f, 0f);</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().sizeDelta = <span class="keyword">new</span> Vector2(-8f, 0f - num2 + num4);</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.Rect().anchoredPosition = <span class="keyword">new</span> Vector2(0f, (0f - num2) * 0.5f - num3);</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordtype">float</span> width = 1f;</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordtype">float</span> num5 = base.transform.Rect().rect.width;</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)gridLayoutGroup &amp;&amp; gridLayoutGroup.constraint == GridLayoutGroup.Constraint.FixedColumnCount)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            num5 = (float)gridLayoutGroup.constraintCount * (gridLayoutGroup.cellSize.x + gridLayoutGroup.spacing.x);</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">if</span> (!flag)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            <span class="keywordtype">int</span> num6 = 64;</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.dot)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                num6 = 60;</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>            width = num5 / (float)num6 * <a class="code hl_variable" href="classBaseList.html#a22f62e2c6e3303db5ada6d07d34b0826">bgUvFix</a>.x;</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">bgType</a> == <a class="code hl_class" href="classUIList.html">UIList</a>.<a class="code hl_enumeration" href="classUIList.html#a65d7895cbebc281e5c39c5397c8ed763">BGType</a>.grid &amp;&amp; gridLayoutGroup.constraint == GridLayoutGroup.Constraint.FixedColumnCount)</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            width = gridLayoutGroup.constraintCount;</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>        bgGrid.uvRect = <span class="keyword">new</span> Rect(0f, 0f, width, height);</div>
+<div class="line"><span class="lineno">  164</span>        <a class="code hl_variable" href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">bgGrid</a>.SetActive(<a class="code hl_property" href="classBaseList.html#a3d50e9699eaa8de3e116a3fa05bcf21b">ItemCount</a> &gt; 0);</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
 <div class="ttc" id="aclassBaseList_html_a22f62e2c6e3303db5ada6d07d34b0826"><div class="ttname"><a href="classBaseList.html#a22f62e2c6e3303db5ada6d07d34b0826">BaseList.bgUvFix</a></div><div class="ttdeci">Vector2 bgUvFix</div><div class="ttdef"><b>Definition:</b> <a href="BaseList_8cs_source.html#l00011">BaseList.cs:11</a></div></div>
 <div class="ttc" id="aclassBaseList_html_a2902394764eaa3197f828fc3633a9924"><div class="ttname"><a href="classBaseList.html#a2902394764eaa3197f828fc3633a9924">BaseList.bgGrid</a></div><div class="ttdeci">RawImage bgGrid</div><div class="ttdef"><b>Definition:</b> <a href="BaseList_8cs_source.html#l00030">BaseList.cs:30</a></div></div>
 <div class="ttc" id="aclassBaseList_html_a305b26ccd9261a3a52e89fa179460372"><div class="ttname"><a href="classBaseList.html#a305b26ccd9261a3a52e89fa179460372">BaseList.bgType</a></div><div class="ttdeci">UIList.BGType bgType</div><div class="ttdef"><b>Definition:</b> <a href="BaseList_8cs_source.html#l00007">BaseList.cs:7</a></div></div>
@@ -470,7 +585,7 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="BaseList_8cs_source.html#l00009">bgFix</a>, <a class="el" href="BaseList_8cs_source.html#l00030">bgGrid</a>, <a class="el" href="BaseList_8cs_source.html#l00007">bgType</a>, <a class="el" href="BaseList_8cs_source.html#l00011">bgUvFix</a>, <a class="el" href="BaseList_8cs_source.html#l00038">ItemCount</a>, <a class="el" href="BaseList_8cs_source.html#l00040">RowCount</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00643">UIList.AfterRefresh()</a>, and <a class="el" href="UIDynamicList_8cs_source.html#l00117">UIDynamicList.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00644">UIList.AfterRefresh()</a>, and <a class="el" href="UIDynamicList_8cs_source.html#l00149">UIDynamicList.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -497,25 +612,25 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00069">69</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a>)</div>
-<div class="line"><span class="lineno">   72</span>        {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a40ca5a2ad1cfd36efa09d331189ec836">useDefaultNoItem</a>)</div>
-<div class="line"><span class="lineno">   74</span>            {</div>
-<div class="line"><span class="lineno">   75</span>                <a class="code hl_class" href="classUIScrollView.html">UIScrollView</a>[] componentsInParent = base.transform.GetComponentsInParent&lt;<a class="code hl_class" href="classUIScrollView.html">UIScrollView</a>&gt;(includeInactive: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   76</span>                <a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a> = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;Transform&gt;(<span class="stringliteral">&quot;NoItem&quot;</span>), (componentsInParent.Length != 0) ? componentsInParent[0].transform : base.transform.parent);</div>
-<div class="line"><span class="lineno">   77</span>            }</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   79</span>            {</div>
-<div class="line"><span class="lineno">   80</span>                <a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a> = base.transform.Find(<span class="stringliteral">&quot;NoItem&quot;</span>);</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>        }</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a>)</div>
-<div class="line"><span class="lineno">   84</span>        {</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a>.SetActive(<a class="code hl_property" href="classBaseList.html#a3d50e9699eaa8de3e116a3fa05bcf21b">ItemCount</a> == 0);</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00086">86</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a>)</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseList.html#a40ca5a2ad1cfd36efa09d331189ec836">useDefaultNoItem</a>)</div>
+<div class="line"><span class="lineno">   91</span>            {</div>
+<div class="line"><span class="lineno">   92</span>                <a class="code hl_class" href="classUIScrollView.html">UIScrollView</a>[] componentsInParent = base.transform.GetComponentsInParent&lt;<a class="code hl_class" href="classUIScrollView.html">UIScrollView</a>&gt;(includeInactive: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   93</span>                <a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a> = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>(<a class="code hl_class" href="classResourceCache.html">ResourceCache</a>.Load&lt;Transform&gt;(<span class="stringliteral">&quot;NoItem&quot;</span>), (componentsInParent.Length != 0) ? componentsInParent[0].transform : base.transform.parent);</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                <a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a> = base.transform.Find(<span class="stringliteral">&quot;NoItem&quot;</span>);</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a>)</div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">transNoItem</a>.SetActive(<a class="code hl_property" href="classBaseList.html#a3d50e9699eaa8de3e116a3fa05bcf21b">ItemCount</a> == 0);</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
 <div class="ttc" id="aclassBaseList_html_a05714b573cc383ac6593893b5b8c0dd4"><div class="ttname"><a href="classBaseList.html#a05714b573cc383ac6593893b5b8c0dd4">BaseList.transNoItem</a></div><div class="ttdeci">Transform transNoItem</div><div class="ttdef"><b>Definition:</b> <a href="BaseList_8cs_source.html#l00025">BaseList.cs:25</a></div></div>
 <div class="ttc" id="aclassBaseList_html_a40ca5a2ad1cfd36efa09d331189ec836"><div class="ttname"><a href="classBaseList.html#a40ca5a2ad1cfd36efa09d331189ec836">BaseList.useDefaultNoItem</a></div><div class="ttdeci">bool useDefaultNoItem</div><div class="ttdef"><b>Definition:</b> <a href="BaseList_8cs_source.html#l00021">BaseList.cs:21</a></div></div>
 <div class="ttc" id="aclassResourceCache_html"><div class="ttname"><a href="classResourceCache.html">ResourceCache</a></div><div class="ttdef"><b>Definition:</b> <a href="ResourceCache_8cs_source.html#l00019">ResourceCache.cs:20</a></div></div>
@@ -523,8 +638,40 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="BaseList_8cs_source.html#l00038">ItemCount</a>, <a class="el" href="BaseList_8cs_source.html#l00025">transNoItem</a>, <a class="el" href="BaseList_8cs_source.html#l00021">useDefaultNoItem</a>, and <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a23e8a4b4f7cc1898ef12b4e6e48852bb">Util</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00643">UIList.AfterRefresh()</a>, and <a class="el" href="UIDynamicList_8cs_source.html#l00117">UIDynamicList.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00644">UIList.AfterRefresh()</a>, and <a class="el" href="UIDynamicList_8cs_source.html#l00149">UIDynamicList.Refresh()</a>.</p>
 
+</div>
+</div>
+<a id="ad6c1057b1b61f9e40cb32c5c4e64748e" name="ad6c1057b1b61f9e40cb32c5c4e64748e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c1057b1b61f9e40cb32c5c4e64748e">&#9670;&#160;</a></span>RemoveDynamic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void BaseList.RemoveDynamic </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classUIDynamicList.html#aec265f6d88ad81a2702be92d064624de">UIDynamicList</a>, and <a class="el" href="classUIList.html#af46d206fd8b5c7a66e29392b055b60e7">UIList</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00073">73</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -542,7 +689,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00009">9</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00089">RefreshBGGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00106">RefreshBGGrid()</a>.</p>
 
 </div>
 </div>
@@ -560,7 +707,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00030">30</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00089">RefreshBGGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00106">RefreshBGGrid()</a>.</p>
 
 </div>
 </div>
@@ -578,7 +725,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00007">7</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00089">RefreshBGGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00106">RefreshBGGrid()</a>.</p>
 
 </div>
 </div>
@@ -596,7 +743,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00011">11</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00089">RefreshBGGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00106">RefreshBGGrid()</a>.</p>
 
 </div>
 </div>
@@ -614,7 +761,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00013">13</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00643">UIList.AfterRefresh()</a>, <a class="el" href="UIList_8cs_source.html#l00858">UIList.BeginItemDrag()</a>, <a class="el" href="UIList_8cs_source.html#l00406">UIList.CreateChild()</a>, <a class="el" href="UIList_8cs_source.html#l00867">UIList.EndItemDrag()</a>, <a class="el" href="UIList_8cs_source.html#l00783">UIList.List()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00240">UIDynamicList.List()</a>, <a class="el" href="UIList_8cs_source.html#l00791">UIList.Redraw()</a>, <a class="el" href="UIList_8cs_source.html#l00475">UIList.Refresh()</a>, <a class="el" href="UIListEx_8cs_source.html#l00017">UIListEx&lt; T &gt;.Refresh()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00325">UIDynamicList.RefreshHighlight()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00128">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00115">LayerAbility.SetDirty()</a>, <a class="el" href="UIList_8cs_source.html#l00748">UIList.Sort()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00035">LayerCraftFloat.Update()</a>, <a class="el" href="UIList_8cs_source.html#l00880">UIList.UpdateItemDragHover()</a>, and <a class="el" href="UIDynamicList_8cs_source.html#l00150">UIDynamicList.UpdateRow()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00644">UIList.AfterRefresh()</a>, <a class="el" href="UIList_8cs_source.html#l00864">UIList.BeginItemDrag()</a>, <a class="el" href="UIList_8cs_source.html#l00407">UIList.CreateChild()</a>, <a class="el" href="UIList_8cs_source.html#l00873">UIList.EndItemDrag()</a>, <a class="el" href="UIList_8cs_source.html#l00784">UIList.List()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00272">UIDynamicList.List()</a>, <a class="el" href="UIList_8cs_source.html#l00792">UIList.Redraw()</a>, <a class="el" href="UIList_8cs_source.html#l00476">UIList.Refresh()</a>, <a class="el" href="UIListEx_8cs_source.html#l00017">UIListEx&lt; T &gt;.Refresh()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00374">UIDynamicList.RefreshHighlight()</a>, <a class="el" href="LayerQuestBoard_8cs_source.html#l00128">LayerQuestBoard.RefreshHire()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00115">LayerAbility.SetDirty()</a>, <a class="el" href="UIList_8cs_source.html#l00749">UIList.Sort()</a>, <a class="el" href="LayerCraftFloat_8cs_source.html#l00035">LayerCraftFloat.Update()</a>, <a class="el" href="UIList_8cs_source.html#l00886">UIList.UpdateItemDragHover()</a>, and <a class="el" href="UIDynamicList_8cs_source.html#l00182">UIDynamicList.UpdateRow()</a>.</p>
 
 </div>
 </div>
@@ -632,7 +779,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00036">36</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00039">ContentCodex.OnSwitchContent()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00117">UIDynamicList.Refresh()</a>, and <a class="el" href="UIList_8cs_source.html#l00475">UIList.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ContentCodex_8cs_source.html#l00039">ContentCodex.OnSwitchContent()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00149">UIDynamicList.Refresh()</a>, and <a class="el" href="UIList_8cs_source.html#l00476">UIList.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -650,7 +797,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00023">23</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00475">UIList.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00476">UIList.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -668,7 +815,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00019">19</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00791">UIList.Redraw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00792">UIList.Redraw()</a>.</p>
 
 </div>
 </div>
@@ -686,7 +833,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00017">17</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00791">UIList.Redraw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00792">UIList.Redraw()</a>.</p>
 
 </div>
 </div>
@@ -704,7 +851,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00027">27</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00475">UIList.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00476">UIList.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -722,7 +869,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00033">33</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00756">UIList.ChangeSort()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00235">UIDynamicList.List()</a>, <a class="el" href="UIList_8cs_source.html#l00768">UIList.List()</a>, <a class="el" href="BaseList_8cs_source.html#l00044">NextSort()</a>, <a class="el" href="UIList_8cs_source.html#l00763">UIList.NextSort()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00281">LayerAbility.OnDisable()</a>, <a class="el" href="LayerResource_8cs_source.html#l00015">LayerResource.OnInit()</a>, <a class="el" href="LayerResource_8cs_source.html#l00036">LayerResource.OnKill()</a>, <a class="el" href="UIList_8cs_source.html#l00475">UIList.Refresh()</a>, and <a class="el" href="UIList_8cs_source.html#l00748">UIList.Sort()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00757">UIList.ChangeSort()</a>, <a class="el" href="UIDynamicList_8cs_source.html#l00267">UIDynamicList.List()</a>, <a class="el" href="UIList_8cs_source.html#l00769">UIList.List()</a>, <a class="el" href="BaseList_8cs_source.html#l00044">NextSort()</a>, <a class="el" href="UIList_8cs_source.html#l00764">UIList.NextSort()</a>, <a class="el" href="LayerAbility_8cs_source.html#l00281">LayerAbility.OnDisable()</a>, <a class="el" href="LayerResource_8cs_source.html#l00015">LayerResource.OnInit()</a>, <a class="el" href="LayerResource_8cs_source.html#l00036">LayerResource.OnKill()</a>, <a class="el" href="UIList_8cs_source.html#l00476">UIList.Refresh()</a>, and <a class="el" href="UIList_8cs_source.html#l00749">UIList.Sort()</a>.</p>
 
 </div>
 </div>
@@ -740,7 +887,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00015">15</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00044">NextSort()</a>, <a class="el" href="UIList_8cs_source.html#l00763">UIList.NextSort()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00036">LayerAbility.OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00044">NextSort()</a>, <a class="el" href="UIList_8cs_source.html#l00764">UIList.NextSort()</a>, and <a class="el" href="LayerAbility_8cs_source.html#l00036">LayerAbility.OnInit()</a>.</p>
 
 </div>
 </div>
@@ -766,7 +913,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00025">25</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00837">UIList.OnDestroy()</a>, and <a class="el" href="BaseList_8cs_source.html#l00069">RefreshNoItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UIList_8cs_source.html#l00843">UIList.OnDestroy()</a>, and <a class="el" href="BaseList_8cs_source.html#l00086">RefreshNoItem()</a>.</p>
 
 </div>
 </div>
@@ -784,7 +931,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00021">21</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00069">RefreshNoItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00086">RefreshNoItem()</a>.</p>
 
 </div>
 </div>
@@ -811,7 +958,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00038">38</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00089">RefreshBGGrid()</a>, and <a class="el" href="BaseList_8cs_source.html#l00069">RefreshNoItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00106">RefreshBGGrid()</a>, and <a class="el" href="BaseList_8cs_source.html#l00086">RefreshNoItem()</a>.</p>
 
 </div>
 </div>
@@ -837,7 +984,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BaseList_8cs_source.html#l00040">40</a> of file <a class="el" href="BaseList_8cs_source.html">BaseList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00089">RefreshBGGrid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseList_8cs_source.html#l00106">RefreshBGGrid()</a>.</p>
 
 </div>
 </div>

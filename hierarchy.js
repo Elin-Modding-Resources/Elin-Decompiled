@@ -730,6 +730,10 @@ var hierarchy =
             [ "ActDreamBug", "classActDreamBug.html", null ],
             [ "ActKiss", "classActKiss.html", null ],
             [ "ActMissileBarrage", "classActMissileBarrage.html", null ],
+            [ "ActMoneyDump", "classActMoneyDump.html", null ],
+            [ "ActMoneySlap", "classActMoneySlap.html", [
+              [ "ActMoneyThrow", "classActMoneyThrow.html", null ]
+            ] ],
             [ "ActMultihit", "classActMultihit.html", null ],
             [ "ActNTR", "classActNTR.html", [
               [ "ActBloodsuck", "classActBloodsuck.html", null ],
@@ -1011,6 +1015,7 @@ var hierarchy =
       [ "Person", "classPerson.html", null ],
       [ "Player", "classPlayer.html", null ],
       [ "Player.Flags", "classPlayer_1_1Flags.html", null ],
+      [ "Player.PartySetup", "classPlayer_1_1PartySetup.html", null ],
       [ "Player.Stats", "classPlayer_1_1Stats.html", null ],
       [ "Point", "classPoint.html", [
         [ "LogicalPoint", "classLogicalPoint.html", [
@@ -2874,6 +2879,7 @@ var hierarchy =
         [ "UIResourceTrack", "classUIResourceTrack.html", null ],
         [ "UIScaleFix", "classUIScaleFix.html", null ],
         [ "UIScreenshot", "classUIScreenshot.html", null ],
+        [ "UISearchPeople", "classUISearchPeople.html", null ],
         [ "UISong", "classUISong.html", null ],
         [ "UIZoneInfo", "classUIZoneInfo.html", null ],
         [ "VFX", "classVFX.html", null ],
@@ -3034,6 +3040,7 @@ var hierarchy =
       [ "ContentGallery.Page", "classContentGallery_1_1Page.html", null ]
     ] ],
     [ "PaintPosition", "classPaintPosition.html", null ],
+    [ "ColorProfile.ParticleColors", "classColorProfile_1_1ParticleColors.html", null ],
     [ "GameSetting.PassSetting", "classGameSetting_1_1PassSetting.html", null ],
     [ "Algorithms.PathFinderNode", "structAlgorithms_1_1PathFinderNode.html", null ],
     [ "Algorithms.PathFinder.PathFinderNodeFast", "structAlgorithms_1_1PathFinder_1_1PathFinderNodeFast.html", null ],

@@ -135,6 +135,7 @@ var EffectId_8cs =
       [ "Flare", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a38a368670cc1a53c88f52116bd063e08", null ],
       [ "GravityGun", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a7a1fbd0243efae87bb52210f6d3d7fb7", null ],
       [ "TransBlood", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a1e8653af89c3aeed55732c4381dba7ab", null ],
-      [ "Field", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a6f16a5f8ff5d75ab84c018adacdfcbb7", null ]
+      [ "Field", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a6f16a5f8ff5d75ab84c018adacdfcbb7", null ],
+      [ "SilverCatMigration", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a65d3024af841f11b2739d9f99644b61f", null ]
     ] ]
 ];

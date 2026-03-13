@@ -2,11 +2,12 @@ var classWindowMenu =
 [
     [ "WindowMenu", "classWindowMenu.html#aeb79764628b9891284d7975844a1dcac", null ],
     [ "WindowMenu", "classWindowMenu.html#af1e6b66c550eb49dbada29175d29d154", null ],
-    [ "_AddButton", "classWindowMenu.html#a166af47e5e8491d9cb758181808788e5", null ],
+    [ "_AddButton", "classWindowMenu.html#a33d1614c3784f01f391ede5aadc98ee5", null ],
     [ "AddButton", "classWindowMenu.html#a84c4bce691c133f487590bb24e5a1dac", null ],
     [ "AddButton2Line", "classWindowMenu.html#aed8be41b1c47708a60fc26aa068f144c", null ],
     [ "AddButtonSimple", "classWindowMenu.html#ac175d50c1c884b81907ca57155f71549", null ],
     [ "AddHeader", "classWindowMenu.html#a58245acf499fb6b9ad67120aab2eee66", null ],
+    [ "AddItem", "classWindowMenu.html#aa23c12b6ce91560a90d9a1be86334e3c", null ],
     [ "AddSpace", "classWindowMenu.html#a6285b2e45392b0389594e816a43e31bc", null ],
     [ "Clear", "classWindowMenu.html#a3340a1f287153598ff32c455b302c6a7", null ],
     [ "Init", "classWindowMenu.html#a63818015b5c819a2f227ca817554a4d5", null ],

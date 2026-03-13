@@ -1,7 +1,7 @@
 var searchData=
 [
   ['_5fadd_0',['_Add',['../classWidgetSticky.html#abd3a19a89e0375f342caf728c559314c',1,'WidgetSticky._Add()'],['../classUIDynamicList.html#ad2bdc2d439b2b7cc257caae0a9e4b4ef',1,'UIDynamicList._Add()']]],
-  ['_5faddbutton_1',['_AddButton',['../classWindowMenu.html#a166af47e5e8491d9cb758181808788e5',1,'WindowMenu']]],
+  ['_5faddbutton_1',['_AddButton',['../classWindowMenu.html#a33d1614c3784f01f391ede5aadc98ee5',1,'WindowMenu']]],
   ['_5faddcard_2',['_AddCard',['../classMap.html#a75197d96a8d44699c84ed34e16892f69',1,'Map']]],
   ['_5faddlayer_3',['_AddLayer',['../classLayer.html#a39cffe9e4e350c1684a9a084506ee587',1,'Layer']]],
   ['_5fcaninspect_4',['_CanInspect',['../classBlockInfo.html#a48ed4b7da1b64e44ce7978cb00b350c4',1,'BlockInfo._CanInspect()'],['../classObjInfo.html#aa1091f321c89877b05e9720270ab1f00',1,'ObjInfo._CanInspect()']]],

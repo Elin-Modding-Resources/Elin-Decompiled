@@ -11,6 +11,7 @@ var classParty =
     [ "HasElement", "classParty.html#a31a1ae3612f5a42ff30b05fbbe639e14", null ],
     [ "IsCriticallyWounded", "classParty.html#a8c88de227aab1ef3e7bf739511182de0", null ],
     [ "ModExp", "classParty.html#a79069ec25178f10c310439805b49e65d", null ],
+    [ "RegisterSetup", "classParty.html#acfe1ff0646457af3fee31468b54aceab", null ],
     [ "RemoveMember", "classParty.html#a788354c34bb79aace9e073fc395f251f", null ],
     [ "Replace", "classParty.html#a6193a79fe03465e70a645403dbf39c09", null ],
     [ "SetLeader", "classParty.html#af223fdbe82be421705b1e9b3411be8db", null ],

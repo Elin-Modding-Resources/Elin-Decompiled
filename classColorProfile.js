@@ -1,6 +1,7 @@
 var classColorProfile =
 [
     [ "BlockColors", "classColorProfile_1_1BlockColors.html", "classColorProfile_1_1BlockColors" ],
+    [ "ParticleColors", "classColorProfile_1_1ParticleColors.html", "classColorProfile_1_1ParticleColors" ],
     [ "PCLights", "classColorProfile_1_1PCLights.html", "classColorProfile_1_1PCLights" ],
     [ "RarityColors", "classColorProfile_1_1RarityColors.html", "classColorProfile_1_1RarityColors" ],
     [ "TextColors", "classColorProfile_1_1TextColors.html", "classColorProfile_1_1TextColors" ],
@@ -25,6 +26,7 @@ var classColorProfile =
     [ "gradientLVComparison", "classColorProfile.html#ae93388ad9ef1ec9940ff1364550acd9e", null ],
     [ "lightColors", "classColorProfile.html#a1106b067696c776c28f5124173a28552", null ],
     [ "matColors", "classColorProfile.html#ae7780e500700a2e92b5e3baf71ffb584", null ],
+    [ "particleColors", "classColorProfile.html#a2fb84ab548b8e50ec33da3200882ac6b", null ],
     [ "pcLights", "classColorProfile.html#ab68b6800a249ad8a831c3ceaaa708636", null ],
     [ "rarityColors", "classColorProfile.html#a1d746ce946d35b7d642da2a1d2da82e5", null ],
     [ "textColors", "classColorProfile.html#ac59c0c1ca559ff7f3d3a886d6cc100cd", null ],

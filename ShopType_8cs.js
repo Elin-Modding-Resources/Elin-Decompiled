@@ -51,6 +51,7 @@ var ShopType_8cs =
       [ "StrangeGirl", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba9aa969112e78614681f82bfa2c717532", null ],
       [ "Sweet", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0c13f53c2b84e2431bcd0194fc4a69f9", null ],
       [ "Moyer", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafe49251a5d107b95b09178e978c590ad", null ],
-      [ "Curry", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba5933baf90dcec96ffa6ecdaf30299550", null ]
+      [ "Curry", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba5933baf90dcec96ffa6ecdaf30299550", null ],
+      [ "KeeperOfGarden", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa0fb939f13240e5798b102af79c67f12", null ]
     ] ]
 ];

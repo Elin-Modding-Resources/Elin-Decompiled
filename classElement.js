@@ -21,7 +21,7 @@ var classElement =
     [ "GetParent", "classElement.html#ac60d26e4f4bd9e76b14b3fd41bde5507", null ],
     [ "GetPower", "classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73", null ],
     [ "GetRandomElement", "classElement.html#a214f9a54684a03e25d00586463257684", null ],
-    [ "GetResistDamage", "classElement.html#a2aac1d17dae88109a6d166fc67d03732", null ],
+    [ "GetResistDamage", "classElement.html#ae38a18136b3d59a31d7e0d91db4fd63f", null ],
     [ "GetResistLv", "classElement.html#a4e50a377ed544c43bdf0992b97eb20fb", null ],
     [ "GetSortVal", "classElement.html#a61b0f8c35a0b1d63e92b538aa8eaddb8", null ],
     [ "GetSource", "classElement.html#a35264fc9a9c32851e5ecbe30e769a39e", null ],

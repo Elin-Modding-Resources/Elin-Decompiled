@@ -1,13 +1,17 @@
 var classBaseList =
 [
     [ "Add", "classBaseList.html#ae8d7718ca13ef524b61349d318a92277", null ],
+    [ "AddDynamic", "classBaseList.html#ae2fb370933472348ba913afd713429e6", null ],
     [ "Clear", "classBaseList.html#ae41ee570c87d5134f68a7fc349f62868", null ],
+    [ "Contains", "classBaseList.html#ad9ec7d22e65bcc71473e0ffa5c6f9ec3", null ],
     [ "List", "classBaseList.html#a09f39a10692c6721f8335dec71e8aee6", null ],
     [ "List", "classBaseList.html#aa2a1cf952daa5a3ec8b2a371bd6cee23", null ],
     [ "NextSort", "classBaseList.html#aff899ca210bfe3b352b8948c956f7570", null ],
+    [ "OnMove", "classBaseList.html#aa9a41e1d9b6a0807726c5291938bd24b", null ],
     [ "Redraw", "classBaseList.html#adb79a9876cb0f90a4962c107daff67eb", null ],
     [ "RefreshBGGrid", "classBaseList.html#af64dfa0bef540cde9585828906fe5b87", null ],
     [ "RefreshNoItem", "classBaseList.html#a1e5e45ed4df08bbd11194609f79f7eff", null ],
+    [ "RemoveDynamic", "classBaseList.html#ad6c1057b1b61f9e40cb32c5c4e64748e", null ],
     [ "bgFix", "classBaseList.html#ace9a0a53975584b349f5757c385f76be", null ],
     [ "bgGrid", "classBaseList.html#a2902394764eaa3197f828fc3633a9924", null ],
     [ "bgType", "classBaseList.html#a305b26ccd9261a3a52e89fa179460372", null ],
