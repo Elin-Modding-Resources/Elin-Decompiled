@@ -1,5 +1,9 @@
 var classCardBlueprint =
 [
+    [ "Generation", "classCardBlueprint.html#a39d02f1f938385f3ba7428ec949b60da", [
+      [ "Default", "classCardBlueprint.html#a39d02f1f938385f3ba7428ec949b60daa7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "GarokkHammer", "classCardBlueprint.html#a39d02f1f938385f3ba7428ec949b60daa8f7865831bd4216b615b39621077af28", null ]
+    ] ],
     [ "Chara", "classCardBlueprint.html#a5e98cfd83c297ebdad0cf923b242d695", null ],
     [ "Set", "classCardBlueprint.html#a564cdf8fd4f0cd93b0cdbfb450d40afb", null ],
     [ "SetNormalRarity", "classCardBlueprint.html#af242f3d605483f7d2642e85ea17e6b92", null ],
@@ -11,6 +15,7 @@ var classCardBlueprint =
     [ "DebugEQ", "classCardBlueprint.html#adc97a2b601e2044abbfc02c9aae9ed8b", null ],
     [ "fixedMat", "classCardBlueprint.html#a6a72edcc32f89f8786201ce4fe73d3eb", null ],
     [ "fixedQuality", "classCardBlueprint.html#a39278374ff1a44bf3aa68889bbfd4ef9", null ],
+    [ "generation", "classCardBlueprint.html#a67ea64b1770ee02bebdca650b6cd58e0", null ],
     [ "idEle", "classCardBlueprint.html#ad7a55d542f5e992ee5c4188ff01b73e9", null ],
     [ "idJob", "classCardBlueprint.html#a5392f064be403cde895740d58db4c916", null ],
     [ "idRace", "classCardBlueprint.html#a3d34d720a94bc988355acd4827132ef0", null ],

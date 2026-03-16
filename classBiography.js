@@ -8,6 +8,7 @@ var classBiography =
     [ "GetAge", "classBiography.html#a67e602e7640fdc700c705144a2d66b7b", null ],
     [ "IsUnderAge", "classBiography.html#abb65170017926632e1ec85f83e4235fa", null ],
     [ "RerollBio", "classBiography.html#aa3046219269dedf4b0b297c466340741", null ],
+    [ "RerollParents", "classBiography.html#ac54838fcd4065c50dac71bfa193e8b71", null ],
     [ "RndBio", "classBiography.html#a9c62c98f1b26eb90d362724df04cace5", null ],
     [ "SetAge", "classBiography.html#a8b09b0468a047ab5ecc1ceaa56dbd337", null ],
     [ "SetBirthYear", "classBiography.html#ac41193c9fa55c9ee9a5b6fe209d46dfb", null ],

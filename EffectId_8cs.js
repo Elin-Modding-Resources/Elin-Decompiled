@@ -136,6 +136,9 @@ var EffectId_8cs =
       [ "GravityGun", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a7a1fbd0243efae87bb52210f6d3d7fb7", null ],
       [ "TransBlood", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a1e8653af89c3aeed55732c4381dba7ab", null ],
       [ "Field", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a6f16a5f8ff5d75ab84c018adacdfcbb7", null ],
-      [ "SilverCatMigration", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a65d3024af841f11b2739d9f99644b61f", null ]
+      [ "SilverCatMigration", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a65d3024af841f11b2739d9f99644b61f", null ],
+      [ "ChangeRarity", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02acd750eb5fea27c00a140de857bb9d87a", null ],
+      [ "ChangeAlias", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a7b448efb8e4d98c45977a4bb43ace33e", null ],
+      [ "ChangeBiography", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02afff8adfaedac2beaa1bd7e063e3a7eee", null ]
     ] ]
 ];

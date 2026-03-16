@@ -948,6 +948,7 @@ var hierarchy =
           [ "InvOwnerDeliverBox", "classInvOwnerDeliverBox.html", null ],
           [ "InvOwnerEffect", "classInvOwnerEffect.html", [
             [ "InvOwnerChangeMaterial", "classInvOwnerChangeMaterial.html", null ],
+            [ "InvOwnerChangeRarity", "classInvOwnerChangeRarity.html", null ],
             [ "InvOwnerEnchant", "classInvOwnerEnchant.html", null ],
             [ "InvOwnerIdentify", "classInvOwnerIdentify.html", null ],
             [ "InvOwnerLighten", "classInvOwnerLighten.html", null ],
@@ -1809,6 +1810,7 @@ var hierarchy =
             [ "TraitSlotMachine", "classTraitSlotMachine.html", null ]
           ] ],
           [ "TraitGambleChest", "classTraitGambleChest.html", null ],
+          [ "TraitGarokkHammer", "classTraitGarokkHammer.html", null ],
           [ "TraitGiftPack", "classTraitGiftPack.html", [
             [ "TraitGiftJure", "classTraitGiftJure.html", null ],
             [ "TraitGiftNewYear", "classTraitGiftNewYear.html", null ]

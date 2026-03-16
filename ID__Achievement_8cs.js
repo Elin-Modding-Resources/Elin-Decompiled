@@ -24,6 +24,7 @@ var ID__Achievement_8cs =
       [ "ONEV", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ab0df544e1508a4b6b5cf66af8e1f5cd5", null ],
       [ "JURE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a4df96777ae95a6062e20c841a7a4051d", null ],
       [ "BELL", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ae25524800989ebde09d7f9a3633368e9", null ],
-      [ "NERUN2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a709620568dbf65be5f180e617e16754c", null ]
+      [ "NERUN2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a709620568dbf65be5f180e617e16754c", null ],
+      [ "OYS", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af5ad88a6915758610c9b7400d851bec3", null ]
     ] ]
 ];

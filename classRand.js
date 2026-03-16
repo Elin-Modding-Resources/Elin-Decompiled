@@ -9,9 +9,11 @@ var classRand =
     [ "rndNormal2", "classRand.html#a187db907a68b67bec2ae3bef8d07a856", null ],
     [ "rndSeed", "classRand.html#a62c6616c6d0a3cd94e553b72dabd8809", null ],
     [ "rndSqrt", "classRand.html#aba2b35e463fa4da60254342180a4f55a", null ],
+    [ "SetBaseSeed", "classRand.html#a2e740c818f65ecd5ec349674f7339e6a", null ],
     [ "SetSeed", "classRand.html#aedb43adb5963433dd4098a0d2514c599", null ],
     [ "UseSeed", "classRand.html#a830d4d30ba870344c9be961357746a04", null ],
     [ "_random", "classRand.html#a282c83e91a97bd9694962b6a481addf8", null ],
+    [ "baseSeed", "classRand.html#a7a9872c16365c56143618baacaaa4c8f", null ],
     [ "bytes", "classRand.html#a44fdf2659f22f6db38549d8966a22599", null ],
     [ "MaxBytes", "classRand.html#a116307e9f0d536f3c83e7828acc25ec5", null ]
 ];
