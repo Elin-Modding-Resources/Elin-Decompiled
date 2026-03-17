@@ -1,5 +1,9 @@
 var NAVTREEINDEX38 =
 {
+"classBaseWidgetNotice.html#ad547559a06b1abf0ca0a3a7ced6a203c":[1,0,232,2],
+"classBaseWidgetNotice.html#ad54e4507b93eec2d5c6d7ebe26fef32b":[1,0,232,12],
+"classBaseWidgetNotice.html#ad78ebc6f8637a748dd29adcc8d27f37c":[1,0,232,0],
+"classBaseWidgetNotice.html#adaea889fb21fa11dcd17203c92f674b3":[1,0,232,11],
 "classBaseWidgetNotice.html#ae22f0fa68d6f84ed409bd43219fd8b35":[1,0,232,17],
 "classBaseWidgetNotice.html#af3de80de0d75ebf1821d1b607319609c":[1,0,232,18],
 "classBaseWidgetNotice.html#afb44b7d9c4c387cee338ff74e524af90":[1,0,232,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX38 =
 "classBookList_1_1Item.html#ac849648b68f648e3c8c639c064123bd6":[1,0,241,0,3],
 "classBookList_1_1Item.html#ae6408297d572156530cce01a0cc6b583":[1,0,241,0,1],
 "classBookList_1_1Item.html#aeb9de669a12877be3a1aeec049e4fdf7":[1,0,241,0,6],
-"classBottleMessageList.html":[1,0,242],
-"classBottleMessageList.html#a04632ce9e3e0d1d034c35ebed7f9a582":[1,0,242,1],
-"classBottleMessageList.html#a35dd53cbdc476870b2d9ac9349785a13":[1,0,242,3],
-"classBottleMessageList.html#a5c9c14d88709aabb29814073f741b97e":[1,0,242,0],
-"classBottleMessageList.html#abf3625c75e9bab81bc31ba29732a9d2e":[1,0,242,2]
+"classBottleMessageList.html":[1,0,242]
 };

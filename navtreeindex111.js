@@ -1,5 +1,10 @@
 var NAVTREEINDEX111 =
 {
+"classSpriteAnimation.html":[1,0,1277],
+"classSpriteAnimation.html#a26e3f088b1fa879f5de1e3e135e0c553":[1,0,1277,7],
+"classSpriteAnimation.html#a2b3421777f74e51d0251fdc91dbd9e7f":[1,0,1277,2],
+"classSpriteAnimation.html#a2e49148c70ff48c84dfeb5ee1b0a7865":[1,0,1277,9],
+"classSpriteAnimation.html#a31ceae627b7f3cbd43bc22ac07468430":[1,0,1277,4],
 "classSpriteAnimation.html#a3c09d8915349553182d596f4537b3674":[1,0,1277,8],
 "classSpriteAnimation.html#a517becba9f764f816914c6c1c3337a68":[1,0,1277,10],
 "classSpriteAnimation.html#a6cf0db85365ee1e449fcbedcd28e9f7e":[1,0,1277,11],
@@ -244,10 +249,5 @@ var NAVTREEINDEX111 =
 "classStickyQuest.html":[1,0,1305],
 "classStickyQuest.html#aafb6f078c9b6cae766aa0477c03e8f09":[1,0,1305,2],
 "classStickyQuest.html#ab5cecc901445a8a77afb51998482d66b":[1,0,1305,0],
-"classStickyQuest.html#afa5d5eb61b3ea047f550e29d9ab52d4d":[1,0,1305,1],
-"classStickySiege.html":[1,0,1306],
-"classStickySiege.html#a16401e15a4bd22e2d47834652276eb60":[1,0,1306,0],
-"classStickyTutorial.html":[1,0,1307],
-"classStickyTutorial.html#a51dca3c7b911e89581fdb6ee0c665575":[1,0,1307,0],
-"classStickyTutorial.html#a69eb0549468eb92bddaa2494abe44932":[1,0,1307,2]
+"classStickyQuest.html#afa5d5eb61b3ea047f550e29d9ab52d4d":[1,0,1305,1]
 };

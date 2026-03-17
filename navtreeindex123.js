@@ -1,5 +1,12 @@
 var NAVTREEINDEX123 =
 {
+"classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688":[1,0,1699,1],
+"classTraitIndulgence.html":[1,0,1700],
+"classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1700,0],
+"classTraitInformer.html":[1,0,1701],
+"classTraitInformer.html#a45d21aa6becf3adbbe756570bcef33d2":[1,0,1701,0],
+"classTraitInformer.html#a5c83359e8a084cf42606afae00f40bc9":[1,0,1701,2],
+"classTraitInformer.html#adfc92367a39bc18656a6248b2453ea76":[1,0,1701,1],
 "classTraitInnkeeper.html":[1,0,1702],
 "classTraitInnkeeper.html#a98842eadb445c2d9f7eb61046343acb7":[1,0,1702,0],
 "classTraitItem.html":[1,0,1703],
@@ -242,12 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitMerchantPlat.html#a1cf490d00541658556845f9079413af1":[1,0,1765,4],
 "classTraitMerchantPlat.html#a286223da4abae46466983a6559c202af":[1,0,1765,2],
 "classTraitMerchantPlat.html#a9d2c4c909322b495fc105310d86ac1e2":[1,0,1765,1],
-"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1765,0],
-"classTraitMerchantPlat.html#adc26d42455bdacb98b2a88007aedbbed":[1,0,1765,3],
-"classTraitMerchantSeed.html":[1,0,1766],
-"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1766,0],
-"classTraitMerchantSouvenir.html":[1,0,1767],
-"classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1767,0],
-"classTraitMerchantWeapon.html":[1,0,1768],
-"classTraitMerchantWeapon.html#a39707660f853306b84cb5dd687a478e8":[1,0,1768,1]
+"classTraitMerchantPlat.html#ab99956b521b0df03a8939a31f6c90d69":[1,0,1765,0]
 };

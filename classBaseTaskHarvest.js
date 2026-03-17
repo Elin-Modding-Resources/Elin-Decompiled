@@ -16,6 +16,7 @@ var classBaseTaskHarvest =
     [ "GetTextSmall", "classBaseTaskHarvest.html#a4f16b561204aa009727f568d7062acf9", null ],
     [ "GetToolEfficiency", "classBaseTaskHarvest.html#ada009e3b23d7475192cee2a9d792821d", null ],
     [ "GetToolEfficiency", "classBaseTaskHarvest.html#a5c0953d7b3921a1e95fa99e670b6c5fd", null ],
+    [ "OnStart", "classBaseTaskHarvest.html#a438dd329b6f73666acdc3b743771eaa9", null ],
     [ "SetTarget", "classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8", null ],
     [ "difficulty", "classBaseTaskHarvest.html#ad5039d9fa4651ae0f56084a073a7f016", null ],
     [ "effectFrame", "classBaseTaskHarvest.html#afa3d38f2faa0369dc5ab49e528327339", null ],

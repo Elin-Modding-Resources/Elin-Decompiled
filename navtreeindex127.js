@@ -1,5 +1,12 @@
 var NAVTREEINDEX127 =
 {
+"classTraitThrown.html#a11f5ac00698f5598dcdac8d41061ecce":[1,0,1939,0],
+"classTraitThrown.html#ac7f8523e6f0db3812f77e20e6d359a8d":[1,0,1939,1],
+"classTraitThrownConsume.html":[1,0,1940],
+"classTraitThrownConsume.html#a222a35e3c2c50f87dd8916f90b209e61":[1,0,1940,2],
+"classTraitThrownConsume.html#a3c63c370bd2e267a526f509dee6ab64f":[1,0,1940,1],
+"classTraitThrownConsume.html#afd0c90d89344c7d71c784614a5e96da7":[1,0,1940,0],
+"classTraitThrownExplosive.html":[1,0,1941],
 "classTraitThrownExplosive.html#a5c0197caa76da42e635848ca65439097":[1,0,1941,0],
 "classTraitThrownExplosive.html#a98e390f9d299283a1f55f5dbc959df7d":[1,0,1941,1],
 "classTraitTicketArmPillow.html":[1,0,1942],
@@ -242,12 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitWell.html#a227abc4c403af92c9f4495bb61c2c538":[1,0,2007,0],
 "classTraitWell.html#a333f15c39e4a2af8da5b104e06552d76":[1,0,2007,11],
 "classTraitWell.html#a6bc0304d5569861ea72a6f0d7df18df7":[1,0,2007,6],
-"classTraitWell.html#a8574886d51f230f42d9f767586499835":[1,0,2007,13],
-"classTraitWell.html#a9593bbb7ecbc8e48ef643c7d15d846b6":[1,0,2007,5],
-"classTraitWell.html#a9eec76b1d415c2f3cd0c9dae154b7800":[1,0,2007,10],
-"classTraitWell.html#aa06297ee620590d4afd9e1fb203baa6a":[1,0,2007,8],
-"classTraitWell.html#aa268ec87deda1603ca0cdb7c74707eff":[1,0,2007,4],
-"classTraitWell.html#aa706d5cd69551cc52e5281f8fd88c2f9":[1,0,2007,7],
-"classTraitWell.html#ac68b92f93d5db86ba39c7f3911ae47aa":[1,0,2007,2],
-"classTraitWell.html#ae2b4bf33123a1f3c0b46675ffe02d681":[1,0,2007,3]
+"classTraitWell.html#a8574886d51f230f42d9f767586499835":[1,0,2007,13]
 };

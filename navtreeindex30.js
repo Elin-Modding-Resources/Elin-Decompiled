@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"classActCrySad.html":[1,0,25],
+"classActCrySad.html#ad0c986a3a97afd8f83b56f26d8056acb":[1,0,25,0],
+"classActDeepKiss.html":[1,0,26],
 "classActDrawWater.html":[1,0,27],
 "classActDrawWater.html#a017e40e33d11dcecf3bbbd872e23dea4":[1,0,27,2],
 "classActDrawWater.html#a1e56e234992b1eabab32b1a85d8b62c8":[1,0,27,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "classActThrow.html#ab07f9918672dcd30c19045f4867862de":[1,0,71,2],
 "classActThrow.html#abd790f8573939a0db86b351aff25e4c0":[1,0,71,1],
 "classActThrow.html#ae035028b2780bb60c78cd104f1863dbf":[1,0,71,4],
-"classActThrow.html#aeaadcc12898b5d7c045bc0027d8fac3b":[1,0,71,8],
-"classActWait.html":[1,0,72],
-"classActWait.html#a2a77424557d558ef0475d340da4bbe20":[1,0,72,5],
-"classActWait.html#a3f2ae3bb5eafcc14899e1cb1cf5c76c3":[1,0,72,2]
+"classActThrow.html#aeaadcc12898b5d7c045bc0027d8fac3b":[1,0,71,8]
 };

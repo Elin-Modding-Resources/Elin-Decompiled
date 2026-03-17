@@ -1,5 +1,12 @@
 var NAVTREEINDEX124 =
 {
+"classTraitMerchantPlat.html#adc26d42455bdacb98b2a88007aedbbed":[1,0,1765,3],
+"classTraitMerchantSeed.html":[1,0,1766],
+"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1766,0],
+"classTraitMerchantSouvenir.html":[1,0,1767],
+"classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1767,0],
+"classTraitMerchantWeapon.html":[1,0,1768],
+"classTraitMerchantWeapon.html#a39707660f853306b84cb5dd687a478e8":[1,0,1768,1],
 "classTraitMerchantWeapon.html#af0080d32bcb9f5aade5f2099b25dcd70":[1,0,1768,0],
 "classTraitMiko__Mifu.html":[1,0,1769],
 "classTraitMiko__Nefu.html":[1,0,1770],
@@ -242,12 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitPotionRandom.html":[1,0,1829],
 "classTraitPotionRandom.html#a446a2199968a1bd5756385afb8bf1d5c":[1,0,1829,0],
 "classTraitPotionRandom.html#a531b0e1d3ffaa723f9ed9ab0cd05f928":[1,0,1829,9],
-"classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1829,8],
-"classTraitPotionRandom.html#a6edd071c6499d46dbdb86a912357421b":[1,0,1829,3],
-"classTraitPotionRandom.html#a6f8ad0e2c44a98bfcf172afef5aa307d":[1,0,1829,7],
-"classTraitPotionRandom.html#a6fc7e1dc86ab190027a43a34defe6c70":[1,0,1829,1],
-"classTraitPotionRandom.html#a81f51a653e3ce1a6e0a118178812daf2":[1,0,1829,10],
-"classTraitPotionRandom.html#abaae34393bf06c2aaad531ca30799516":[1,0,1829,5],
-"classTraitPotionRandom.html#adbaf7305ae19e67a415e1ac710688c4f":[1,0,1829,4],
-"classTraitPotionRandom.html#af5d2e6755f6bcfa5b0b53d091fd6473c":[1,0,1829,6]
+"classTraitPotionRandom.html#a6126e03b2315db52474291f0db648c83":[1,0,1829,8]
 };
