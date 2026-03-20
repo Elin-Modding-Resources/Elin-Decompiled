@@ -1,7 +1,5 @@
 var NAVTREEINDEX119 =
 {
-"classTraitBaseSpellbook.html#a6751607c6ecd9ad50bafe58d9d96428a":[1,0,1478,10],
-"classTraitBaseSpellbook.html#a68ad147a394d09b062f9d4fc042816d9":[1,0,1478,4],
 "classTraitBaseSpellbook.html#a7e832f3c41aa28e23551946e5fd9334c":[1,0,1478,13],
 "classTraitBaseSpellbook.html#ab88e783f03c314e47d4d029af226a6d6":[1,0,1478,8],
 "classTraitBaseSpellbook.html#acd742b5fd8ff68f8a5b17110ce1f23d5":[1,0,1478,12],
@@ -208,6 +206,7 @@ var NAVTREEINDEX119 =
 "classTraitChara.html#a77f2a76840cbdd37c2d5af53abaa7203":[1,0,1523,31],
 "classTraitChara.html#a81f914259f059c258488bae53fa00c18":[1,0,1523,19],
 "classTraitChara.html#a87668c63e44d245f2c84f2d39aa268e2":[1,0,1523,6],
+"classTraitChara.html#a89d12a86b7501db14a7c014aafa29e2f":[1,0,1523,44],
 "classTraitChara.html#a8ef368d3c80cc1f7251c7d59c13d0b45":[1,0,1523,36],
 "classTraitChara.html#a993b1d313f028c65c8f2d580fc6b0579":[1,0,1523,43],
 "classTraitChara.html#a9b232d96239ea131a2cdfcd93447dd1f":[1,0,1523,8],
@@ -249,5 +248,6 @@ var NAVTREEINDEX119 =
 "classTraitChestOyster.html#ad89f91220e999eaf2bb6055adbbb012d":[1,0,1527,1],
 "classTraitChestOyster.html#afe2b414ab91f33a90cc9acf35fab0fb4":[1,0,1527,0],
 "classTraitChestPractice.html":[1,0,1528],
-"classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1528,0]
+"classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1528,0],
+"classTraitChestPractice.html#a22654107dd11bd30370c76a197508a63":[1,0,1528,3]
 };

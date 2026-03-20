@@ -48,5 +48,6 @@ var classTraitChara =
     [ "owner", "classTraitChara.html#acd41bf1785e6918b297a392c75f7befc", null ],
     [ "ShowAdvRank", "classTraitChara.html#af7fa7f221aa381be2ee34dd822ef25d3", null ],
     [ "UseGlobalGoal", "classTraitChara.html#abe2d33e9e462de7c1dc61406cba841d7", null ],
-    [ "UseRandomAlias", "classTraitChara.html#a993b1d313f028c65c8f2d580fc6b0579", null ]
+    [ "UseRandomAlias", "classTraitChara.html#a993b1d313f028c65c8f2d580fc6b0579", null ],
+    [ "UseRandomName", "classTraitChara.html#a89d12a86b7501db14a7c014aafa29e2f", null ]
 ];

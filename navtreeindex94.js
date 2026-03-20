@@ -1,6 +1,5 @@
 var NAVTREEINDEX94 =
 {
-"classProceduralMesh.html#a6436b699d650d8552ba5c838862896f2":[1,0,1002,6],
 "classProceduralMesh.html#a90029523a1dbdb81248068676a5700b9":[1,0,1002,10],
 "classProceduralMesh.html#ab66669bfc7f06ac8de2c69a5de2247f3":[1,0,1002,11],
 "classProceduralMesh.html#acfbfb8eb075e9a0dbcc028c7190b75f9":[1,0,1002,12],
@@ -249,5 +248,6 @@ var NAVTREEINDEX94 =
 "classQuestCraft.html#a7b35530f418b9d569fad45049d7b02ed":[1,0,1015,8],
 "classQuestCraft.html#a98d5d3580aa628ac16d5de23bc8b7ebf":[1,0,1015,7],
 "classQuestCraft.html#aa435f3dff176d19d4d2450ab2592225b":[1,0,1015,4],
-"classQuestCraft.html#aa64f8e34692842835f681b6d4ff8b408":[1,0,1015,5]
+"classQuestCraft.html#aa64f8e34692842835f681b6d4ff8b408":[1,0,1015,5],
+"classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021":[1,0,1015,3]
 };

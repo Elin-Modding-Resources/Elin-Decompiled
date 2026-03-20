@@ -74,7 +74,7 @@ var searchData=
   ['dodamage_71',['DoDamage',['../classActTelekinesis.html#a26b00ed7a53ffc4fd9a3e0534284608e',1,'ActTelekinesis']]],
   ['dofix_72',['DoFix',['../classSourceAsset.html#a2999055ff1469334ed8ecc23aa1eae44',1,'SourceAsset']]],
   ['dofunc_73',['DoFunc',['../classActionMode.html#ab1f41eb99e4708fdafbd6ea4d0f05757',1,'ActionMode.DoFunc(CoreConfig.GameFuncBuild func)'],['../classActionMode.html#a6c25ac8926d440e9bab8200be6467a53',1,'ActionMode.DoFunc(CoreConfig.GameFunc func)']]],
-  ['dogoto_74',['DoGoto',['../classAIAct.html#ad69a96ace451443057c8db17179025fa',1,'AIAct.DoGoto(Point pos, int dist=0, bool ignoreConnection=false, Func&lt; Status &gt; _onChildFail=null)'],['../classAIAct.html#a0b874d4fa04c1fb9561b13403b122aed',1,'AIAct.DoGoto(Card card, Func&lt; Status &gt; _onChildFail=null)'],['../classAIAct.html#a0f2c821fb744b4e792465a14dea1498f',1,'AIAct.DoGoto(Card card, int dist, Func&lt; Status &gt; _onChildFail=null)']]],
+  ['dogoto_74',['DoGoto',['../classAIAct.html#ad69a96ace451443057c8db17179025fa',1,'AIAct.DoGoto(Point pos, int dist=0, bool ignoreConnection=false, Func&lt; Status &gt; _onChildFail=null)'],['../classAIAct.html#a0b874d4fa04c1fb9561b13403b122aed',1,'AIAct.DoGoto(Card card, Func&lt; Status &gt; _onChildFail=null)'],['../classAIAct.html#a4b0204938f96afac0f6b554e9bcff98d',1,'AIAct.DoGoto(Card card, int dist, bool ignoreConnection=false, Func&lt; Status &gt; _onChildFail=null)']]],
   ['dogoto_3c_20t_20_3e_75',['DoGoto&lt; T &gt;',['../classAIAct.html#a5369d3a64fd984c16b558389bec1edf0',1,'AIAct']]],
   ['dogotointeraction_76',['DoGotoInteraction',['../classAIAct.html#a5c2a5e3082311d7c7b2a4636fab71fd0',1,'AIAct']]],
   ['dogotospot_77',['DoGotoSpot',['../classAIAct.html#abd15e5dc340f48aeb049acefed61c71c',1,'AIAct']]],

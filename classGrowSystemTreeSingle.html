@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.286 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.287 Stable</span>
    </div>
   </td>
  </tr>
@@ -259,8 +259,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a5a8b36bfe3282266f8a9012a125a3ddb inherit pub_static_attribs_classGrowSystemTree"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemTree.html#a5a8b36bfe3282266f8a9012a125a3ddb">shadows</a> = new int[8] { 31, 31, 32, 33, 34, 1, 1, 1 }</td></tr>
 <tr class="separator:a5a8b36bfe3282266f8a9012a125a3ddb inherit pub_static_attribs_classGrowSystemTree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classGrowSystem"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classGrowSystem')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classGrowSystem.html">GrowSystem</a></td></tr>
-<tr class="memitem:a5043c1eccd9c87b365b94ead336f0be8 inherit pub_static_attribs_classGrowSystem"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSourceObj_1_1Row.html">SourceObj.Row</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystem.html#a5043c1eccd9c87b365b94ead336f0be8">sourceSnowTree</a></td></tr>
-<tr class="separator:a5043c1eccd9c87b365b94ead336f0be8 inherit pub_static_attribs_classGrowSystem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fa971f674c6df12da263c940582a1bb inherit pub_static_attribs_classGrowSystem"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystem.html#a7fa971f674c6df12da263c940582a1bb">DivStage</a> = 30</td></tr>
 <tr class="separator:a7fa971f674c6df12da263c940582a1bb inherit pub_static_attribs_classGrowSystem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae924400168ee1141c8b2b8bffd86b14e inherit pub_static_attribs_classGrowSystem"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCell.html">Cell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystem.html#ae924400168ee1141c8b2b8bffd86b14e">cell</a></td></tr>
@@ -311,6 +309,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a2f439f23df2e8fb7b2a4cc35a62b0f0b inherit properties_classGrowSystemTree"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystemTree.html#a2f439f23df2e8fb7b2a4cc35a62b0f0b">UseGenericFirstStageTile</a><code> [get]</code></td></tr>
 <tr class="separator:a2f439f23df2e8fb7b2a4cc35a62b0f0b inherit properties_classGrowSystemTree"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classGrowSystem"><td colspan="2" onclick="javascript:toggleInherit('properties_classGrowSystem')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classGrowSystem.html">GrowSystem</a></td></tr>
+<tr class="memitem:af815bf809f24d6f0614ea155ef7b6696 inherit properties_classGrowSystem"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSourceObj_1_1Row.html">SourceObj.Row</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystem.html#af815bf809f24d6f0614ea155ef7b6696">SourceSnowTree</a><code> [get]</code></td></tr>
+<tr class="separator:af815bf809f24d6f0614ea155ef7b6696 inherit properties_classGrowSystem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b6e5357eb98ca212bc811a3e2c8ddd inherit properties_classGrowSystem"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRenderData.html">RenderData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystem.html#a57b6e5357eb98ca212bc811a3e2c8ddd">RenderHarvest</a><code> [get]</code></td></tr>
 <tr class="separator:a57b6e5357eb98ca212bc811a3e2c8ddd inherit properties_classGrowSystem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8641f9a26dbe377da1794a1e8d66ff62 inherit properties_classGrowSystem"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrowSystem.html#a8641f9a26dbe377da1794a1e8d66ff62">Step</a><code> [get]</code></td></tr>
@@ -467,10 +467,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   10</span>        s.renderData = <a class="code hl_variable" href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">source</a>.renderData;</div>
 <div class="line"><span class="lineno">   11</span>        s.SetTile(0, <a class="code hl_variable" href="classGrowSystem.html#a34fa0189b5b21ec531053235246b53ad">baseTiles</a>);</div>
 <div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclassGrowSystem_html_a34fa0189b5b21ec531053235246b53ad"><div class="ttname"><a href="classGrowSystem.html#a34fa0189b5b21ec531053235246b53ad">GrowSystem.baseTiles</a></div><div class="ttdeci">int[] baseTiles</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00053">GrowSystem.cs:53</a></div></div>
-<div class="ttc" id="aclassGrowSystem_html_a663df27be6412bdcab650a8d5afd49e2"><div class="ttname"><a href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">GrowSystem.source</a></div><div class="ttdeci">SourceObj.Row source</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00049">GrowSystem.cs:49</a></div></div>
+<div class="ttc" id="aclassGrowSystem_html_a34fa0189b5b21ec531053235246b53ad"><div class="ttname"><a href="classGrowSystem.html#a34fa0189b5b21ec531053235246b53ad">GrowSystem.baseTiles</a></div><div class="ttdeci">int[] baseTiles</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00049">GrowSystem.cs:49</a></div></div>
+<div class="ttc" id="aclassGrowSystem_html_a663df27be6412bdcab650a8d5afd49e2"><div class="ttname"><a href="classGrowSystem.html#a663df27be6412bdcab650a8d5afd49e2">GrowSystem.source</a></div><div class="ttdeci">SourceObj.Row source</div><div class="ttdef"><b>Definition:</b> <a href="GrowSystem_8cs_source.html#l00045">GrowSystem.cs:45</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GrowSystem_8cs_source.html#l00053">GrowSystem.baseTiles</a>, <a class="el" href="GrowSystem_8cs_source.html#l00017">GrowSystem.Stage.SetTile()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00049">GrowSystem.source</a>.</p>
+<p class="reference">References <a class="el" href="GrowSystem_8cs_source.html#l00049">GrowSystem.baseTiles</a>, <a class="el" href="GrowSystem_8cs_source.html#l00017">GrowSystem.Stage.SetTile()</a>, and <a class="el" href="GrowSystem_8cs_source.html#l00045">GrowSystem.source</a>.</p>
 
 </div>
 </div>

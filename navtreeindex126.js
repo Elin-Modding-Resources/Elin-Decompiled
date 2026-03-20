@@ -1,6 +1,5 @@
 var NAVTREEINDEX126 =
 {
-"classTraitSeed.html#af2208d3f5e291404bd099ba004a37e95":[1,0,1873,18],
 "classTraitSeeker.html":[1,0,1874],
 "classTraitSeeker.html#a91f7a7790660bc6b21176f15211a12fb":[1,0,1874,0],
 "classTraitSeeker.html#abaf311c8c8ff1938ad363e78ac2d977c":[1,0,1874,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX126 =
 "classTraitTerraGlobe.html#ad8fb3a2ab6df3a32e79ffdc2442eb99c":[1,0,1938,4],
 "classTraitTerraGlobe.html#ae14402d3bd5c865d86e002d4e394b00c":[1,0,1938,2],
 "classTraitTerraGlobe.html#af86df78ae3d14388b985d7b5e4ab32c1":[1,0,1938,5],
-"classTraitThrown.html":[1,0,1939]
+"classTraitThrown.html":[1,0,1939],
+"classTraitThrown.html#a11f5ac00698f5598dcdac8d41061ecce":[1,0,1939,0]
 };

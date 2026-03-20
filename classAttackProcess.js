@@ -32,7 +32,7 @@ var classAttackProcess =
     [ "dNum", "classAttackProcess.html#a336fc2ef1e6a81f891b4f4e667e14199", null ],
     [ "dNumAmmo", "classAttackProcess.html#a1cbad6f08e836899666783997e1f4658", null ],
     [ "evadePlus", "classAttackProcess.html#a1596e08d416a40c15924e483050063d3", null ],
-    [ "evasion", "classAttackProcess.html#a7591d0edcd15d3c8284c5e2745218452", null ],
+    [ "evasion", "classAttackProcess.html#a5df1aa119b5e3b341b3011dcecc4fef4", null ],
     [ "hit", "classAttackProcess.html#a97c94b10588c5ebf43fa93862421466b", null ],
     [ "ignoreAnime", "classAttackProcess.html#ad1145c4ae29e6ddc51fab0457699370c", null ],
     [ "ignoreAttackSound", "classAttackProcess.html#aaa3a8cab246fecaa6a0b9908d8b3fe6d", null ],
