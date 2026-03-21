@@ -7,6 +7,7 @@ var classItemGeneral =
     [ "DisableIcon", "classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a", null ],
     [ "DisableMask", "classItemGeneral.html#a95d4a8f3e7210482fd65ab483bbb73d9", null ],
     [ "GetRenderRow", "classItemGeneral.html#ae2b16424c79064f91f91d2e54d63c145", null ],
+    [ "GetSubButton", "classItemGeneral.html#a087687da03e1edbacef89c4165c31dbb", null ],
     [ "OnRefreshPref", "classItemGeneral.html#a5a4526f8f934296516be14156b398e19", null ],
     [ "SetChara", "classItemGeneral.html#a510d4bb12895da66283e1baf0502c77f", null ],
     [ "SetMainText", "classItemGeneral.html#a113e909185d6b7648936f4aef7264d33", null ],

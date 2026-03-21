@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['w_0',['w',['../classEloMap.html#a459513f30c91cbcf20ee9c3aba706306',1,'EloMap.w()'],['../classCoreConfig_1_1GraphicSetting.html#a72d8938881eeda8edbbda96dfa440ee7',1,'CoreConfig.GraphicSetting.w()']]],
+  ['w_0',['w',['../classCoreConfig_1_1GraphicSetting.html#a72d8938881eeda8edbbda96dfa440ee7',1,'CoreConfig::GraphicSetting']]],
   ['w_1',['W',['../classRenderRow.html#a430cf4dd98a65d9e4ec2458b62de39ef',1,'RenderRow']]],
-  ['w_2',['w',['../classTextureReplace.html#a5ce7dd5b241f912e2f6cbc91c305b7fc',1,'TextureReplace.w()'],['../classPartialMap.html#a75129f1547912fb4e15571b047bf898a',1,'PartialMap.w()'],['../classRoofStyle.html#a8c20ff40d296583434a1fdff43a35d9a',1,'RoofStyle.w()']]],
+  ['w_2',['w',['../classTextureReplace.html#a5ce7dd5b241f912e2f6cbc91c305b7fc',1,'TextureReplace.w()'],['../classRoofStyle.html#a8c20ff40d296583434a1fdff43a35d9a',1,'RoofStyle.w()'],['../classEloMap.html#a459513f30c91cbcf20ee9c3aba706306',1,'EloMap.w()'],['../classPartialMap.html#a75129f1547912fb4e15571b047bf898a',1,'PartialMap.w()']]],
   ['waist_3',['waist',['../classSLOT.html#a59f7f87538a64701a7e37f8c9ec1911c',1,'SLOT']]],
-  ['wait_4',['Wait',['../classABILITY.html#a1126c6a12c07ed4e5af5321f4ec790bd',1,'ABILITY.Wait()'],['../classACT.html#ae497f6efe379221991822457af996b37',1,'ACT.Wait()']]],
-  ['wait_5',['wait',['../classDynamicAIAct.html#ab7fbbce1bdf65d99146fcfd8855912f3',1,'DynamicAIAct.wait()'],['../classEInput_1_1KeyMapManager.html#a5d655f23175a733582b265b94483006d',1,'EInput.KeyMapManager.wait()']]],
+  ['wait_4',['wait',['../classDynamicAIAct.html#ab7fbbce1bdf65d99146fcfd8855912f3',1,'DynamicAIAct.wait()'],['../classEInput_1_1KeyMapManager.html#a5d655f23175a733582b265b94483006d',1,'EInput.KeyMapManager.wait()']]],
+  ['wait_5',['Wait',['../classABILITY.html#a1126c6a12c07ed4e5af5321f4ec790bd',1,'ABILITY.Wait()'],['../classACT.html#ae497f6efe379221991822457af996b37',1,'ACT.Wait()']]],
   ['waitcomplete_6',['waitComplete',['../classLayerCraft.html#aa789257447344bd6cd45922ea1b37685',1,'LayerCraft']]],
   ['waitcount_7',['waitCount',['../classAI__Goto.html#a0959f1c16ae0bcdb29f1bb268314b79c',1,'AI_Goto']]],
   ['waiter_8',['waiter',['../classCoreConfig_1_1GameConfig.html#a1823b4c0766f5fd71266bab513755463',1,'CoreConfig::GameConfig']]],

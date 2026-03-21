@@ -1,5 +1,7 @@
 var NAVTREEINDEX122 =
 {
+"classTraitFoodEgg.html#a909b13f82623bb0343ef2fdb2eb8bb6f":[1,0,1638,2],
+"classTraitFoodEgg.html#abff42ae0524da5ba0917398f75555dd5":[1,0,1638,3],
 "classTraitFoodEggFertilized.html":[1,0,1639],
 "classTraitFoodEggFertilized.html#a30deffbc67fef64568d97ccfe62691ad":[1,0,1639,1],
 "classTraitFoodEggFertilized.html#a7a4d7a1a045a83230ceb34f69a3edc51":[1,0,1639,0],
@@ -72,7 +74,8 @@ var NAVTREEINDEX122 =
 "classTraitGambleChest.html#af1855c0b9def1407b0cb0d967d4204be":[1,0,1657,0],
 "classTraitGarokk.html":[1,0,1658],
 "classTraitGarokkHammer.html":[1,0,1659],
-"classTraitGarokkHammer.html#aa496658157fe23f71df2cbe33e5d43f9":[1,0,1659,0],
+"classTraitGarokkHammer.html#a636e3d4ffa334921800650ad671e658e":[1,0,1659,0],
+"classTraitGarokkHammer.html#aa496658157fe23f71df2cbe33e5d43f9":[1,0,1659,1],
 "classTraitGemCutter.html":[1,0,1660],
 "classTraitGemCutter.html#a52e9b307ebc7ed32c541113c4a898965":[1,0,1660,3],
 "classTraitGemCutter.html#a72e42b90159f991187240f2075e47512":[1,0,1660,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitIncubator.html#a0f85ef82f7e7f9334ecd28ec4a039598":[1,0,1699,8],
 "classTraitIncubator.html#a18699f14d54bfb2326f762d86291817d":[1,0,1699,2],
 "classTraitIncubator.html#a4b87afe6c576e76b0c0dd1f17acc1dc8":[1,0,1699,7],
-"classTraitIncubator.html#a5b87af23019200733b000010034199de":[1,0,1699,5],
-"classTraitIncubator.html#a6119c378e5c66da625b8eba6ba9c4361":[1,0,1699,0],
-"classTraitIncubator.html#ac84f64d0a27de94f83fdc996b2ac5250":[1,0,1699,4],
-"classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688":[1,0,1699,1]
+"classTraitIncubator.html#a5b87af23019200733b000010034199de":[1,0,1699,5]
 };

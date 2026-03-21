@@ -1,5 +1,7 @@
 var NAVTREEINDEX104 =
 {
+"classSkewEffect.html#ab8c1a452a189608fd3aef10a161762a1":[1,0,1195,5],
+"classSkill.html":[1,0,1196],
 "classSkill.html#a84fef8278c7af1b8900826daba9ec833":[1,0,1196,4],
 "classSkill.html#a8f0eea33cc42f37c85deca259d30e493":[1,0,1196,0],
 "classSkill.html#ab1576470cc0bed3f3194e80edf234ca6":[1,0,1196,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX104 =
 "classSkinSet.html":[1,0,1212],
 "classSkinSet.html#a3280e8618694fd1374899f660a73405f":[1,0,1212,0],
 "classSkinSet.html#aabe819d44fca70bce12e75170514a3c7":[1,0,1212,2],
-"classSkinSet.html#af4b0e1fc9425e51f9730cf083a054437":[1,0,1212,1],
-"classSlaverData.html":[1,0,1213],
-"classSlaverData.html#a43ffae8134178b1a8548cfb91d1136e6":[1,0,1213,1]
+"classSkinSet.html#af4b0e1fc9425e51f9730cf083a054437":[1,0,1212,1]
 };

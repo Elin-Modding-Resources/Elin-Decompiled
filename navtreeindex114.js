@@ -1,5 +1,7 @@
 var NAVTREEINDEX114 =
 {
+"classTaskManager_1_1Designations.html#aad4bbcfbd0a6dc433cd134ba9457d293":[1,0,1340,0,8],
+"classTaskManager_1_1Designations.html#acf3d25ef9c5d0687bddc7fcb8e508121":[1,0,1340,0,6],
 "classTaskMine.html":[1,0,1341],
 "classTaskMine.html#a060fee64a88701e1ca142e0f9f029bf2":[1,0,1341,2],
 "classTaskMine.html#a0fe0c4a94fc5b1f48b7a1462b8234a60":[1,0,1341,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX114 =
 "classThingContainer.html#a11654a9bb41d3eabe5bcfddb5c8f051f":[1,0,1371,4],
 "classThingContainer.html#a1619498597f2aa66645335e507f8ff96":[1,0,1371,7],
 "classThingContainer.html#a16c127acf637a55faf1bbbce95041240":[1,0,1371,22],
-"classThingContainer.html#a19b19ba562ba0ccacdad473164e3771b":[1,0,1371,20],
-"classThingContainer.html#a203972cb9293020b40d298d968d79a52":[1,0,1371,9],
-"classThingContainer.html#a283f096c2eddc97aeddaa8c1b1e46894":[1,0,1371,30]
+"classThingContainer.html#a19b19ba562ba0ccacdad473164e3771b":[1,0,1371,20]
 };

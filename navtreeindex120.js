@@ -1,5 +1,7 @@
 var NAVTREEINDEX120 =
 {
+"classTraitChestPractice.html#a18697f2b3c25a06acd3beba632b85199":[1,0,1528,0],
+"classTraitChestPractice.html#a22654107dd11bd30370c76a197508a63":[1,0,1528,3],
 "classTraitChestPractice.html#aa888ef024cbf4d967f1780c60ffeab9d":[1,0,1528,2],
 "classTraitChestPractice.html#ad10c89e064ae12a6d55672e2c02e0fcd":[1,0,1528,1],
 "classTraitChopper.html":[1,0,1529],
@@ -247,7 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitDoor.html#ad0b7578066367ee483762b3dacf54578":[1,0,1578,16],
 "classTraitDoor.html#adf1a3b9932603789145e294254d33fbe":[1,0,1578,3],
 "classTraitDoor.html#ae678481c510684deb2fee593cb539b51":[1,0,1578,9],
-"classTraitDoor.html#ae97feebb4cd06140e4b276757ee8170c":[1,0,1578,12],
-"classTraitDoor.html#aefdf075fedcd96d092297ef79a8fce98":[1,0,1578,19],
-"classTraitDoorAuto.html":[1,0,1579]
+"classTraitDoor.html#ae97feebb4cd06140e4b276757ee8170c":[1,0,1578,12]
 };

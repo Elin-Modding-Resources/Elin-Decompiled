@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classLayerGacha.html#aea702ed5d7dd5cdc7ab9ddb79639cc1d":[1,0,825,5],
 "classLayerGacha.html#afdf99b1e83ff350112654362f38c02f5":[1,0,825,8],
 "classLayerGacha.html#afeb5b05338fd7cbd77d4fd61e7483592":[1,0,825,2],
 "classLayerGachaResult.html":[1,0,826],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "classLayerList.html#a8e0f22f7dc6a57293024ca4ff73526b8":[1,0,839,8],
 "classLayerList.html#a8e4f728446e22e39337f2ae8c3f1e70d":[1,0,839,35],
 "classLayerList.html#a9dc936b1bffbf85f04aa631a0107b312":[1,0,839,9],
-"classLayerList.html#aa02f79a285c5c91d12f4e762276564e7":[1,0,839,17],
-"classLayerList.html#aa06570de0aa70eb268511c3246c0ad89":[1,0,839,3]
+"classLayerList.html#aa02f79a285c5c91d12f4e762276564e7":[1,0,839,17]
 };

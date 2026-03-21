@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.287 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.287 Stable Patch 3</span>
    </div>
   </td>
  </tr>
@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4c743d7f09d4d4b944294a57dd32e60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2172d486c23198acd6a42714969f63a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItemGeneral.html#a2172d486c23198acd6a42714969f63a6">AddSubButton</a> (Sprite sprite, Action action, string lang=null, Action&lt; <a class="el" href="classUITooltip.html">UITooltip</a> &gt; onTooltip=null, string id=null)</td></tr>
 <tr class="separator:a2172d486c23198acd6a42714969f63a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087687da03e1edbacef89c4165c31dbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItemGeneral.html#a087687da03e1edbacef89c4165c31dbb">GetSubButton</a> (string id)</td></tr>
+<tr class="separator:a087687da03e1edbacef89c4165c31dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a113e909185d6b7648936f4aef7264d33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItemGeneral.html#a113e909185d6b7648936f4aef7264d33">SetMainText</a> (string lang, Sprite sprite=null, bool disableMask=true)</td></tr>
 <tr class="separator:a113e909185d6b7648936f4aef7264d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2b8778fd74445f36964a7224550426a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUIButton.html">UIButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItemGeneral.html#ae2b8778fd74445f36964a7224550426a">SetSubText</a> (string lang, int x, <a class="el" href="FontColor_8cs.html#a38781c7178610f85215f87793e99ed51">FontColor</a> c=FontColor.Default, TextAnchor align=TextAnchor.MiddleLeft)</td></tr>
@@ -241,18 +243,18 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00174">174</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  174</span>                                             : Component</div>
-<div class="line"><span class="lineno">  175</span>    {</div>
-<div class="line"><span class="lineno">  176</span>        T val = <a class="code hl_variable" href="classItemGeneral.html#ae9ef8416a5aeb86fbd77e04f6a03a1ab">prefabs</a>.TryGetValue(<span class="keywordtype">id</span>) as T;</div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (val != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  178</span>        {</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>        val = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;T&gt;(<span class="stringliteral">&quot;UI/Element/Item/Extra/&quot;</span> + id, base.transform);</div>
-<div class="line"><span class="lineno">  182</span>        <a class="code hl_variable" href="classItemGeneral.html#ae9ef8416a5aeb86fbd77e04f6a03a1ab">prefabs</a>[id] = val;</div>
-<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span> val;</div>
-<div class="line"><span class="lineno">  184</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00179">179</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>                                             : Component</div>
+<div class="line"><span class="lineno">  180</span>    {</div>
+<div class="line"><span class="lineno">  181</span>        T val = <a class="code hl_variable" href="classItemGeneral.html#ae9ef8416a5aeb86fbd77e04f6a03a1ab">prefabs</a>.TryGetValue(<span class="keywordtype">id</span>) as T;</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">if</span> (val != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            <span class="keywordflow">return</span> val;</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>        val = <a class="code hl_class" href="classUtil.html">Util</a>.<a class="code hl_function" href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Instantiate</a>&lt;T&gt;(<span class="stringliteral">&quot;UI/Element/Item/Extra/&quot;</span> + id, base.transform);</div>
+<div class="line"><span class="lineno">  187</span>        <a class="code hl_variable" href="classItemGeneral.html#ae9ef8416a5aeb86fbd77e04f6a03a1ab">prefabs</a>[id] = val;</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> val;</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
 <div class="ttc" id="aclassItemGeneral_html_ae9ef8416a5aeb86fbd77e04f6a03a1ab"><div class="ttname"><a href="classItemGeneral.html#ae9ef8416a5aeb86fbd77e04f6a03a1ab">ItemGeneral.prefabs</a></div><div class="ttdeci">Dictionary&lt; string, Component &gt; prefabs</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00026">ItemGeneral.cs:26</a></div></div>
 <div class="ttc" id="aclassUtil_html"><div class="ttname"><a href="classUtil.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00009">Util.cs:10</a></div></div>
 <div class="ttc" id="aclassUtil_html_aa04bb2b43c83223ec61d9c79f362cedb"><div class="ttname"><a href="classUtil.html#aa04bb2b43c83223ec61d9c79f362cedb">Util.Instantiate</a></div><div class="ttdeci">static Transform Instantiate(string path, Component parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="Util_8cs_source.html#l00067">Util.cs:67</a></div></div>
@@ -388,15 +390,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00205">205</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
-<div class="line"><span class="lineno">  207</span>        RectTransform rectTransform = <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.Rect();</div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classItemGeneral.html#ae8e3365b984c4da9c4e6491c28d8bb24">count</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  209</span>        {</div>
-<div class="line"><span class="lineno">  210</span>            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classItemGeneral.html#ae8e3365b984c4da9c4e6491c28d8bb24">count</a> * -40 - 10 - 3, 0f);</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>        <a class="code hl_variable" href="classItemGeneral.html#acd2bb491e9c63204eb821c92cde2c5b7">built</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00210">210</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>    {</div>
+<div class="line"><span class="lineno">  212</span>        RectTransform rectTransform = <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.Rect();</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classItemGeneral.html#ae8e3365b984c4da9c4e6491c28d8bb24">count</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  214</span>        {</div>
+<div class="line"><span class="lineno">  215</span>            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(<a class="code hl_variable" href="classItemGeneral.html#ae8e3365b984c4da9c4e6491c28d8bb24">count</a> * -40 - 10 - 3, 0f);</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span>        <a class="code hl_variable" href="classItemGeneral.html#acd2bb491e9c63204eb821c92cde2c5b7">built</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  218</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00022">built</a>, <a class="el" href="UIItem_8cs_source.html#l00018">UIItem.button1</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00020">count</a>.</p>
 
@@ -470,20 +472,20 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00191">191</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
-<div class="line"><span class="lineno">  193</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.transform.parent.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a26d82e6a67f2a2ea13c73d95675dc2bf">keyText</a>)</div>
-<div class="line"><span class="lineno">  195</span>        {</div>
-<div class="line"><span class="lineno">  196</span>            button1.mainText.rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(20f, 0f);</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00196">196</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>    {</div>
+<div class="line"><span class="lineno">  198</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.transform.parent.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a26d82e6a67f2a2ea13c73d95675dc2bf">keyText</a>)</div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            button1.mainText.rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(20f, 0f);</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
 <div class="ttc" id="aclassUIButton_html_a1a3f3d8365203e634319910616ad5b72"><div class="ttname"><a href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">UIButton.icon</a></div><div class="ttdeci">Image icon</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00110">UIButton.cs:110</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a26d82e6a67f2a2ea13c73d95675dc2bf"><div class="ttname"><a href="classUIButton.html#a26d82e6a67f2a2ea13c73d95675dc2bf">UIButton.keyText</a></div><div class="ttdeci">UIText keyText</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00108">UIButton.cs:108</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIItem_8cs_source.html#l00018">UIItem.button1</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, and <a class="el" href="UIButton_8cs_source.html#l00108">UIButton.keyText</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00138">SetMainText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00143">SetMainText()</a>.</p>
 
 </div>
 </div>
@@ -510,12 +512,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00200">200</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
-<div class="line"><span class="lineno">  202</span>        image2.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00205">205</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
+<div class="line"><span class="lineno">  207</span>        image2.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00138">SetMainText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00143">SetMainText()</a>.</p>
 
 </div>
 </div>
@@ -552,6 +554,39 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassItemGeneral_html_a8b98692168011ffad93059788deb4804"><div class="ttname"><a href="classItemGeneral.html#a8b98692168011ffad93059788deb4804">ItemGeneral.card</a></div><div class="ttdeci">Card card</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00018">ItemGeneral.cs:18</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00018">card</a>, and <a class="el" href="Card_8cs_source.html#l02171">Card.sourceRenderCard</a>.</p>
+
+</div>
+</div>
+<a id="a087687da03e1edbacef89c4165c31dbb" name="a087687da03e1edbacef89c4165c31dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087687da03e1edbacef89c4165c31dbb">&#9670;&#160;</a></span>GetSubButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUIButton.html">UIButton</a> ItemGeneral.GetSubButton </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00138">138</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classItemGeneral.html#af0a8b4c0b292127bce82be723d35e23d">subButtons</a>.TryGetValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ItemGeneral_8cs_source.html#l00024">subButtons</a>.</p>
 
 </div>
 </div>
@@ -734,27 +769,27 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00138">138</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>    {</div>
-<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(lang.lang());</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite)</div>
-<div class="line"><span class="lineno">  142</span>        {</div>
-<div class="line"><span class="lineno">  143</span>            button1.icon.sprite = sprite;</div>
-<div class="line"><span class="lineno">  144</span>            <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetNativeSize();</div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">if</span> (disableMask)</div>
-<div class="line"><span class="lineno">  146</span>            {</div>
-<div class="line"><span class="lineno">  147</span>                <a class="code hl_function" href="classItemGeneral.html#a95d4a8f3e7210482fd65ab483bbb73d9">DisableMask</a>();</div>
-<div class="line"><span class="lineno">  148</span>            }</div>
-<div class="line"><span class="lineno">  149</span>        }</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  151</span>        {</div>
-<div class="line"><span class="lineno">  152</span>            <a class="code hl_function" href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">DisableIcon</a>();</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-<div class="ttc" id="aclassItemGeneral_html_a95d4a8f3e7210482fd65ab483bbb73d9"><div class="ttname"><a href="classItemGeneral.html#a95d4a8f3e7210482fd65ab483bbb73d9">ItemGeneral.DisableMask</a></div><div class="ttdeci">void DisableMask()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00200">ItemGeneral.cs:200</a></div></div>
-<div class="ttc" id="aclassItemGeneral_html_ad04bc95b354b2dbf271ca3e571ef6f1a"><div class="ttname"><a href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">ItemGeneral.DisableIcon</a></div><div class="ttdeci">void DisableIcon()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00191">ItemGeneral.cs:191</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00143">143</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a2c91e2485c1dea09ccf8cf5865e4c4dd">mainText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(lang.lang());</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)sprite)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            button1.icon.sprite = sprite;</div>
+<div class="line"><span class="lineno">  149</span>            <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a1a3f3d8365203e634319910616ad5b72">icon</a>.SetNativeSize();</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">if</span> (disableMask)</div>
+<div class="line"><span class="lineno">  151</span>            {</div>
+<div class="line"><span class="lineno">  152</span>                <a class="code hl_function" href="classItemGeneral.html#a95d4a8f3e7210482fd65ab483bbb73d9">DisableMask</a>();</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  156</span>        {</div>
+<div class="line"><span class="lineno">  157</span>            <a class="code hl_function" href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">DisableIcon</a>();</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+<div class="ttc" id="aclassItemGeneral_html_a95d4a8f3e7210482fd65ab483bbb73d9"><div class="ttname"><a href="classItemGeneral.html#a95d4a8f3e7210482fd65ab483bbb73d9">ItemGeneral.DisableMask</a></div><div class="ttdeci">void DisableMask()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00205">ItemGeneral.cs:205</a></div></div>
+<div class="ttc" id="aclassItemGeneral_html_ad04bc95b354b2dbf271ca3e571ef6f1a"><div class="ttname"><a href="classItemGeneral.html#ad04bc95b354b2dbf271ca3e571ef6f1a">ItemGeneral.DisableIcon</a></div><div class="ttdeci">void DisableIcon()</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00196">ItemGeneral.cs:196</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIItem_8cs_source.html#l00018">UIItem.button1</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00191">DisableIcon()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00200">DisableMask()</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, and <a class="el" href="UIText_8cs_source.html#l00163">UIText.SetText()</a>.</p>
+<p class="reference">References <a class="el" href="UIItem_8cs_source.html#l00018">UIItem.button1</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00196">DisableIcon()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00205">DisableMask()</a>, <a class="el" href="UIButton_8cs_source.html#l00110">UIButton.icon</a>, <a class="el" href="UIButton_8cs_source.html#l00102">UIButton.mainText</a>, and <a class="el" href="UIText_8cs_source.html#l00163">UIText.SetText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="LayerEditPlaylist_8cs_source.html#l00024">LayerEditPlaylist.ListBGM.List()</a>, <a class="el" href="LayerHome_8cs_source.html#l00204">LayerHome.RefreshAreas()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00030">ContentFaction.RefreshFactions()</a>, <a class="el" href="LayerMapList_8cs_source.html#l00010">LayerMapList.RefreshList()</a>, <a class="el" href="UIHomeInfo_8cs_source.html#l00342">UIHomeInfo.RefreshReport()</a>, <a class="el" href="LayerHome_8cs_source.html#l00234">LayerHome.RefreshSpots()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00086">ContentFaction.RefreshZones()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00069">LayerFactions.RefreshZones()</a>, and <a class="el" href="LayerLocation_8cs_source.html#l00026">LayerLocation.RefreshZones()</a>.</p>
 
@@ -784,10 +819,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00186">186</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>    {</div>
-<div class="line"><span class="lineno">  188</span>        button1.soundClick = data ?? SE.DataClick;</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00191">191</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>        button1.soundClick = data ?? SE.DataClick;</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="ContentKeyItem_8cs_source.html#l00016">ContentKeyItem.OnSwitchContent()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00030">ContentFaction.RefreshFactions()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00086">ContentFaction.RefreshZones()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00069">LayerFactions.RefreshZones()</a>, and <a class="el" href="LayerLocation_8cs_source.html#l00026">LayerLocation.RefreshZones()</a>.</p>
 
@@ -839,21 +874,21 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00156">156</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>    {</div>
-<div class="line"><span class="lineno">  158</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05da21944bfa6651769a168d0460ce7d">subText</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  159</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05da21944bfa6651769a168d0460ce7d">subText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(lang.lang(), c);</div>
-<div class="line"><span class="lineno">  160</span>        button1.subText.alignment = align;</div>
-<div class="line"><span class="lineno">  161</span>        button1.mainText.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(x - <a class="code hl_variable" href="classItemGeneral.html#a423263301b326e5a9fcf043a01a6d07d">paddingSubText</a>, 20f);</div>
-<div class="line"><span class="lineno">  162</span>        button1.subText.rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(x, 0f);</div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>;</div>
-<div class="line"><span class="lineno">  164</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00161">161</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05da21944bfa6651769a168d0460ce7d">subText</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  164</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05da21944bfa6651769a168d0460ce7d">subText</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(lang.lang(), c);</div>
+<div class="line"><span class="lineno">  165</span>        button1.subText.alignment = align;</div>
+<div class="line"><span class="lineno">  166</span>        button1.mainText.rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(x - <a class="code hl_variable" href="classItemGeneral.html#a423263301b326e5a9fcf043a01a6d07d">paddingSubText</a>, 20f);</div>
+<div class="line"><span class="lineno">  167</span>        button1.subText.rectTransform.anchoredPosition = <span class="keyword">new</span> Vector2(x, 0f);</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>;</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
 <div class="ttc" id="aclassItemGeneral_html_a423263301b326e5a9fcf043a01a6d07d"><div class="ttname"><a href="classItemGeneral.html#a423263301b326e5a9fcf043a01a6d07d">ItemGeneral.paddingSubText</a></div><div class="ttdeci">int paddingSubText</div><div class="ttdef"><b>Definition:</b> <a href="ItemGeneral_8cs_source.html#l00016">ItemGeneral.cs:16</a></div></div>
 <div class="ttc" id="aclassUIButton_html_a05da21944bfa6651769a168d0460ce7d"><div class="ttname"><a href="classUIButton.html#a05da21944bfa6651769a168d0460ce7d">UIButton.subText</a></div><div class="ttdeci">UIText subText</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00104">UIButton.cs:104</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIItem_8cs_source.html#l00018">UIItem.button1</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00016">paddingSubText</a>, <a class="el" href="UIText_8cs_source.html#l00163">UIText.SetText()</a>, and <a class="el" href="UIButton_8cs_source.html#l00104">UIButton.subText</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00465">AM_Adv._OnUpdateInput()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00271">TraitCrafter.Craft()</a>, <a class="el" href="ListPeopleCallReserve_8cs_source.html#l00008">ListPeopleCallReserve.OnInstantiate()</a>, <a class="el" href="ListPeopleEmbark_8cs_source.html#l00009">ListPeopleEmbark.OnInstantiate()</a>, <a class="el" href="ListPeopleParty_8cs_source.html#l00124">ListPeopleParty.OnInstantiate()</a>, <a class="el" href="ContentKeyItem_8cs_source.html#l00016">ContentKeyItem.OnSwitchContent()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00030">ContentFaction.RefreshFactions()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00242">BaseListPeople.SetSubText()</a>, and <a class="el" href="ListPeopleExpedition_8cs_source.html#l00043">ListPeopleExpedition.SetSubText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AM__Adv_8cs_source.html#l00465">AM_Adv._OnUpdateInput()</a>, <a class="el" href="TraitCrafter_8cs_source.html#l00271">TraitCrafter.Craft()</a>, <a class="el" href="ListPeopleCallReserve_8cs_source.html#l00008">ListPeopleCallReserve.OnInstantiate()</a>, <a class="el" href="ListPeopleEmbark_8cs_source.html#l00009">ListPeopleEmbark.OnInstantiate()</a>, <a class="el" href="ListPeopleParty_8cs_source.html#l00124">ListPeopleParty.OnInstantiate()</a>, <a class="el" href="ContentKeyItem_8cs_source.html#l00016">ContentKeyItem.OnSwitchContent()</a>, <a class="el" href="ContentQuest_8cs_source.html#l00026">ContentQuest.OnSwitchContent()</a>, <a class="el" href="LayerFactions_8cs_source.html#l00033">LayerFactions.RefreshFactions()</a>, <a class="el" href="ContentFaction_8cs_source.html#l00030">ContentFaction.RefreshFactions()</a>, <a class="el" href="BaseListPeople_8cs_source.html#l00256">BaseListPeople.SetSubText()</a>, and <a class="el" href="ListPeopleExpedition_8cs_source.html#l00043">ListPeopleExpedition.SetSubText()</a>.</p>
 
 </div>
 </div>
@@ -897,13 +932,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00166">166</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>    {</div>
-<div class="line"><span class="lineno">  168</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05d9b2234ef2845d7bc51720a01d98cd">subText2</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  169</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05d9b2234ef2845d7bc51720a01d98cd">subText2</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(lang.lang(), c);</div>
-<div class="line"><span class="lineno">  170</span>        button1.subText2.alignment = align;</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00171">171</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05d9b2234ef2845d7bc51720a01d98cd">subText2</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  174</span>        <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>.<a class="code hl_variable" href="classUIButton.html#a05d9b2234ef2845d7bc51720a01d98cd">subText2</a>.<a class="code hl_function" href="classUIText.html#a46e587cdfc8870d9e88cca27a620505b">SetText</a>(lang.lang(), c);</div>
+<div class="line"><span class="lineno">  175</span>        button1.subText2.alignment = align;</div>
+<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classUIItem.html#a45ee05110c6c40eddecd647facada51d">button1</a>;</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
 <div class="ttc" id="aclassUIButton_html_a05d9b2234ef2845d7bc51720a01d98cd"><div class="ttname"><a href="classUIButton.html#a05d9b2234ef2845d7bc51720a01d98cd">UIButton.subText2</a></div><div class="ttdeci">UIText subText2</div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00106">UIButton.cs:106</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIItem_8cs_source.html#l00018">UIItem.button1</a>, <a class="el" href="UIText_8cs_source.html#l00163">UIText.SetText()</a>, and <a class="el" href="UIButton_8cs_source.html#l00106">UIButton.subText2</a>.</p>
@@ -935,7 +970,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00022">22</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00097">AddSubButton()</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00205">Build()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00097">AddSubButton()</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00210">Build()</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1038,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00020">20</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00097">AddSubButton()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00205">Build()</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00081">Clear()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00097">AddSubButton()</a>, <a class="el" href="ItemGeneral_8cs_source.html#l00210">Build()</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00081">Clear()</a>.</p>
 
 </div>
 </div>
@@ -1085,7 +1120,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00016">16</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00156">SetSubText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00161">SetSubText()</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +1146,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00026">26</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00174">AddPrefab&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00179">AddPrefab&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1172,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ItemGeneral_8cs_source.html#l00024">24</a> of file <a class="el" href="ItemGeneral_8cs_source.html">ItemGeneral.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00097">AddSubButton()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ItemGeneral_8cs_source.html#l00097">AddSubButton()</a>, and <a class="el" href="ItemGeneral_8cs_source.html#l00138">GetSubButton()</a>.</p>
 
 </div>
 </div>

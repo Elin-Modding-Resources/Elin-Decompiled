@@ -1,5 +1,8 @@
 var NAVTREEINDEX145 =
 {
+"dir_55284aae4a4f1b01d5af1423fa438bef.html":[2,0,0,1],
+"dir_59ae87babc71723b1fb1066db0b4cdb0.html":[2,0,0,2],
+"dir_5dd5e4122e6732c90a52f4b68e3d25ef.html":[2,0,0,3,2,0],
 "dir_6aa5288b1ac0f72f4ed8de4a60fffa53.html":[2,0,0,1,0,0,0],
 "dir_6b09264ad8f51f6a28577ac0d4500fd6.html":[2,0,0,5],
 "dir_731e2c45514a493c27f529d38202d9ae.html":[2,0,0,3,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX145 =
 "namespaceApplibot.html":[0,4,1],
 "namespaceAssets.html":[0,4,2],
 "namespaceAssets_1_1Resources.html":[0,4,2,0],
-"namespaceAssets_1_1Resources_1_1Scene.html":[0,4,2,0,0],
-"namespaceAssets_1_1Resources_1_1Scene_1_1Profile.html":[0,4,2,0,0,0],
-"namespaceAssets_1_1Resources_1_1Scene_1_1Profile_1_1Global.html":[0,4,2,0,0,0,0],
-"namespaceAssets_1_1Resources_1_1Scene_1_1Render.html":[0,4,2,0,0,1]
+"namespaceAssets_1_1Resources_1_1Scene.html":[0,4,2,0,0]
 };
