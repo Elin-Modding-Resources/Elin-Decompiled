@@ -1,5 +1,8 @@
 var NAVTREEINDEX67 =
 {
+"classFoodEffect.html#a89d18d770af1efce970a01d8544465b9":[1,0,546,2],
+"classFoodEffect.html#a95264ce4c4305b68c5dd3777733f6e34":[1,0,546,1],
+"classFootmark.html":[1,0,547],
 "classFootmark.html#a046967b8ceccd3e42d36ec594136c552":[1,0,547,1],
 "classFootmark.html#a404f6ab25809b84b2174e40d3c42ba24":[1,0,547,2],
 "classFootmark.html#a67511ba7dafbc8828a0dc622aadcf34e":[1,0,547,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX67 =
 "classGamePrincipal.html#a5c8848d805f8e61cf7db970faac71f27":[1,0,561,7],
 "classGamePrincipal.html#a6ca40d57c29fbb485f6cc61af0fc5fa9":[1,0,561,18],
 "classGamePrincipal.html#a7367a6d6ff6c977d173a412cfffc81dd":[1,0,561,13],
-"classGamePrincipal.html#a8b5f1b36de3ea0520445e3c3f3fe3733":[1,0,561,24],
-"classGamePrincipal.html#a9af39c8af7e6a46aa31f948ab88af979":[1,0,561,25],
-"classGamePrincipal.html#a9e6c90c15b4c7b80ec396812a3d7c03a":[1,0,561,15],
-"classGamePrincipal.html#aa3acaf24131562501a120c3f1f0f9eb5":[1,0,561,11]
+"classGamePrincipal.html#a8b5f1b36de3ea0520445e3c3f3fe3733":[1,0,561,24]
 };

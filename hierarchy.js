@@ -1444,9 +1444,7 @@ var hierarchy =
             [ "TraitToolBelt", "classTraitToolBelt.html", null ]
           ] ]
         ] ],
-        [ "TraitBath", "classTraitBath.html", [
-          [ "TraitGeyser", "classTraitGeyser.html", null ]
-        ] ],
+        [ "TraitBath", "classTraitBath.html", null ],
         [ "TraitBed", "classTraitBed.html", [
           [ "TraitBedCoffin", "classTraitBedCoffin.html", null ]
         ] ],
@@ -1763,6 +1761,7 @@ var hierarchy =
           ] ],
           [ "TraitGeneratorWind", "classTraitGeneratorWind.html", null ]
         ] ],
+        [ "TraitGeyser", "classTraitGeyser.html", null ],
         [ "TraitGrave", "classTraitGrave.html", null ],
         [ "TraitHarvest", "classTraitHarvest.html", [
           [ "TraitCobWeb", "classTraitCobWeb.html", null ]
@@ -1782,6 +1781,7 @@ var hierarchy =
           ] ],
           [ "TraitBank", "classTraitBank.html", null ],
           [ "TraitBookResident", "classTraitBookResident.html", null ],
+          [ "TraitBookRoster", "classTraitBookRoster.html", null ],
           [ "TraitDaggerGrave", "classTraitDaggerGrave.html", null ],
           [ "TraitDamnPool", "classTraitDamnPool.html", null ],
           [ "TraitDetector", "classTraitDetector.html", null ],
@@ -1965,6 +1965,7 @@ var hierarchy =
           ] ]
         ] ],
         [ "TraitSnow", "classTraitSnow.html", null ],
+        [ "TraitSpeaker", "classTraitSpeaker.html", null ],
         [ "TraitSpot", "classTraitSpot.html", [
           [ "TraitSpotBiome", "classTraitSpotBiome.html", null ],
           [ "TraitSpotDining", "classTraitSpotDining.html", null ],

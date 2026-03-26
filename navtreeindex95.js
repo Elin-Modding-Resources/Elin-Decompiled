@@ -1,5 +1,8 @@
 var NAVTREEINDEX95 =
 {
+"classQuestCraft.html#a7b35530f418b9d569fad45049d7b02ed":[1,0,1015,8],
+"classQuestCraft.html#a98d5d3580aa628ac16d5de23bc8b7ebf":[1,0,1015,7],
+"classQuestCraft.html#aa435f3dff176d19d4d2450ab2592225b":[1,0,1015,4],
 "classQuestCraft.html#aa64f8e34692842835f681b6d4ff8b408":[1,0,1015,5],
 "classQuestCraft.html#ab42eddbb6ed17f3bc902c5c12dce4021":[1,0,1015,3],
 "classQuestCraft.html#ad07345ad6920b9ffa60372337f47c1a5":[1,0,1015,15],
@@ -42,9 +45,10 @@ var NAVTREEINDEX95 =
 "classQuestDefenseGame.html":[1,0,1021],
 "classQuestDefenseGame.html#a034cd5e16342dd9038d2d7e49429b216":[1,0,1021,7],
 "classQuestDefenseGame.html#a172877297ca8d5a1514cadd9711fccf8":[1,0,1021,6],
-"classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd":[1,0,1021,12],
+"classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd":[1,0,1021,13],
+"classQuestDefenseGame.html#a250135b3fe3610c4b4fd552a9cd85bec":[1,0,1021,12],
 "classQuestDefenseGame.html#a551d58179e2ee0b30584c2dac865f912":[1,0,1021,11],
-"classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482":[1,0,1021,13],
+"classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482":[1,0,1021,14],
 "classQuestDefenseGame.html#a78b66992932d0fa32dbcbf17c094ddfd":[1,0,1021,10],
 "classQuestDefenseGame.html#a859e1c04385585dbc327c19ee7406e27":[1,0,1021,9],
 "classQuestDefenseGame.html#aa3430704375447d0efde0093a54dacff":[1,0,1021,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX95 =
 "classQuestManager.html#aa792725892a946a4527c8a006b2209dd":[1,0,1051,26],
 "classQuestManager.html#ab651e7c02717adeaa6e1ac0652dbd39b":[1,0,1051,8],
 "classQuestManager.html#abcb5c423e6aa6418f34a2b81bdfbd40e":[1,0,1051,25],
-"classQuestManager.html#ac87fcf8fa65b2eb1b59a24a3f5666efd":[1,0,1051,18],
-"classQuestManager.html#ad260e998ef2a4951d0a96c04741f759e":[1,0,1051,29],
-"classQuestManager.html#ad9c2fe4dd7d3baebd59450cd0aaedd1f":[1,0,1051,12],
-"classQuestManager.html#ae66c5dda98498edcb42971241ec929d0":[1,0,1051,28],
-"classQuestManager.html#ae95a50210b18f1576e03bc0faffd3e12":[1,0,1051,7]
+"classQuestManager.html#ac87fcf8fa65b2eb1b59a24a3f5666efd":[1,0,1051,18]
 };

@@ -12,6 +12,7 @@ var classQuestDefenseGame =
     [ "FameContent", "classQuestDefenseGame.html#a859e1c04385585dbc327c19ee7406e27", null ],
     [ "FameOnComplete", "classQuestDefenseGame.html#a78b66992932d0fa32dbcbf17c094ddfd", null ],
     [ "IdZone", "classQuestDefenseGame.html#a551d58179e2ee0b30584c2dac865f912", null ],
+    [ "LastWaveBonus", "classQuestDefenseGame.html#a250135b3fe3610c4b4fd552a9cd85bec", null ],
     [ "RefDrama1", "classQuestDefenseGame.html#a1fb4eb973eb9c406cdd76a6a4a1248fd", null ],
     [ "RewardSuffix", "classQuestDefenseGame.html#a77172d202f9b107bdc861f16c229d482", null ]
 ];

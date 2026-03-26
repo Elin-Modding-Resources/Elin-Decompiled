@@ -1,5 +1,9 @@
 var NAVTREEINDEX112 =
 {
+"classStickyMenu.html#ac96d7e2ce56c5aa7f677ffce1a9beeb4":[1,0,1304,1],
+"classStickyQuest.html":[1,0,1305],
+"classStickyQuest.html#aafb6f078c9b6cae766aa0477c03e8f09":[1,0,1305,2],
+"classStickyQuest.html#ab5cecc901445a8a77afb51998482d66b":[1,0,1305,0],
 "classStickyQuest.html#afa5d5eb61b3ea047f550e29d9ab52d4d":[1,0,1305,1],
 "classStickySiege.html":[1,0,1306],
 "classStickySiege.html#a16401e15a4bd22e2d47834652276eb60":[1,0,1306,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX112 =
 "classTargetTypeAny.html":[1,0,1316],
 "classTargetTypeAny.html#a2c2d96b3a11af91492b11ee777732272":[1,0,1316,0],
 "classTargetTypeCard.html":[1,0,1317],
-"classTargetTypeChara.html":[1,0,1318],
-"classTargetTypeChara.html#a106859ec6c5eaae48d7bdc0ad7081248":[1,0,1318,0],
-"classTargetTypeChara.html#aa076c608cc5f66c2a3fe56614c0a7871":[1,0,1318,1],
-"classTargetTypeEnemy.html":[1,0,1319],
-"classTargetTypeEnemy.html#ab5ec9046aa86e7ebe6f351c1972f2036":[1,0,1319,0]
+"classTargetTypeChara.html":[1,0,1318]
 };

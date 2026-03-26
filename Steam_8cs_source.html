@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.287 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.288 Nightly</span>
    </div>
   </td>
  </tr>
@@ -236,7 +236,7 @@ $(document).ready(function(){initNavTree('Steam_8cs_source.html',''); initResiza
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; keyValueTags.Length; i++)</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            {</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                StringKeyValuePair stringKeyValuePair = keyValueTags[i];</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                <span class="keywordflow">if</span> (stringKeyValuePair.key == <span class="stringliteral">&quot;id&quot;</span> &amp;&amp; stringKeyValuePair.value == baseModPackage.id &amp;&amp; results.Owner.id == App.Client.Owner.id)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                <span class="keywordflow">if</span> (stringKeyValuePair.key == <span class="stringliteral">&quot;id&quot;</span> &amp;&amp; stringKeyValuePair.value == baseModPackage.id &amp;&amp; results.Owner.id == User.Client.Id)</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Updating Content&quot;</span>);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                    <a class="code hl_function" href="classSteam.html#a18718c8872733ffe0e2d561c94abcc6f">UpdateUserContent</a>(results.FileId);</div>

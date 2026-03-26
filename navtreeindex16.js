@@ -247,7 +247,7 @@ var NAVTREEINDEX16 =
 "TraitBookPlan_8cs_source.html":[2,0,0,1389],
 "TraitBookResident_8cs.html":[2,0,0,1390],
 "TraitBookResident_8cs_source.html":[2,0,0,1390],
-"TraitBookSecret_8cs.html":[2,0,0,1391],
-"TraitBookSecret_8cs_source.html":[2,0,0,1391],
-"TraitBookShelf_8cs.html":[2,0,0,1392]
+"TraitBookRoster_8cs.html":[2,0,0,1391],
+"TraitBookRoster_8cs_source.html":[2,0,0,1391],
+"TraitBookSecret_8cs.html":[2,0,0,1392]
 };

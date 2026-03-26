@@ -1,5 +1,8 @@
 var NAVTREEINDEX92 =
 {
+"classPolicy.html#a575e431a08bbeedaa1088ad243cab282":[1,0,986,0],
+"classPolicy.html#a618b8ba030f07541239efa8bd209bea9":[1,0,986,6],
+"classPolicy.html#a70279185c88a49ba2eb7c30032f7961d":[1,0,986,5],
 "classPolicy.html#a70452c409002d4735bc0202269413836":[1,0,986,2],
 "classPolicy.html#abfda47a340d0c44cea9a0798df71c3c4":[1,0,986,14],
 "classPolicy.html#ac6222ce3285ab3f7a63dd28f26bb6b06":[1,0,986,7],
@@ -243,11 +246,8 @@ var NAVTREEINDEX92 =
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html":[0,4,7,0,1],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[1,0,7,0,1,9],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0a409f45b40d352d929e210a6ea1f571":[0,4,7,0,1,9],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0e86818a95b0f513ff99193459dc7205":[1,0,7,0,1,5],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0e86818a95b0f513ff99193459dc7205":[0,4,7,0,1,5],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a14dcd9bd653b653ac3e27bda2707f9b8":[1,0,7,0,1,16],
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a0e86818a95b0f513ff99193459dc7205":[1,0,7,0,1,5],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a14dcd9bd653b653ac3e27bda2707f9b8":[0,4,7,0,1,16],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a20209a119b1ff72346fad86ef8dccb87":[1,0,7,0,1,13],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a20209a119b1ff72346fad86ef8dccb87":[0,4,7,0,1,13],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a24f33a8e5f1cd17de76e007e1a66e973":[0,4,7,0,1,7]
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a14dcd9bd653b653ac3e27bda2707f9b8":[1,0,7,0,1,16]
 };

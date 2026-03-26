@@ -7,7 +7,6 @@ var classBaseWidgetNotice =
     [ "OnApplySkin", "classBaseWidgetNotice.html#a026aac1affba8005e84b0f49253bcd0e", null ],
     [ "OnDisable", "classBaseWidgetNotice.html#afb44b7d9c4c387cee338ff74e524af90", null ],
     [ "OnEnable", "classBaseWidgetNotice.html#a35857ace33736bdf25d4a5a35c0ab3df", null ],
-    [ "OnFlip", "classBaseWidgetNotice.html#ac6268569832f4477dd4300f6f61837ab", null ],
     [ "OnRefresh", "classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab", null ],
     [ "OnSetContextMenu", "classBaseWidgetNotice.html#a8e2d65a3951d17dd8885de063b31fb88", null ],
     [ "RefreshLayout", "classBaseWidgetNotice.html#afbe5dad9401d76e4b83a9e62cacae1d8", null ],

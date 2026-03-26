@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.287 Stable Patch 3</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.288 Nightly</span>
    </div>
   </td>
  </tr>
@@ -95,9 +95,9 @@ $(document).ready(function(){initNavTree('classThingContainer.html',''); initRes
 
 <p>This is the complete list of members for <a class="el" href="classThingContainer.html">ThingContainer</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#acb351e9ee71a718e6d1064a7eaaf860d">_List</a>(Func&lt; Thing, bool &gt; func, bool onlyAccessible=false)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#a5dba8d1c9a37c72e72e5ba81a369089b">_List</a>(List&lt; Thing &gt; tempList, Func&lt; Thing, bool &gt; func, bool onlyAccessible=false)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classThingContainer.html#a864ab2dda2e1b4ed54e60795866ace39">_listContainers</a></td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#a7841c80da72d10965543c9d7640c9f49">_ListCurrency</a>(string id)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#add05acdcbb151e7a36a72d7514395358">_ListCurrency</a>(List&lt; Thing &gt; tempList, string id)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classActPlan_1_1List.html#afd0ce1c0b760d6242ed7898f5dd85d2f">Add</a>(Act a, string s=&quot;&quot;)</td><td class="entry"><a class="el" href="classActPlan_1_1List.html">ActPlan.List&lt; Thing &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#a3d40e950e1d277688d6336c1f5ecf9d7">AddCurrency</a>(Card owner, string id, int a, SourceMaterial.Row mat=null)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classThingContainer.html#a11654a9bb41d3eabe5bcfddb5c8f051f">AddFactory</a>(HashSet&lt; string &gt; hash)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -143,9 +143,8 @@ $(document).ready(function(){initNavTree('classThingContainer.html',''); initRes
   <tr class="odd"><td class="entry"><a class="el" href="classThingContainer.html#a0740985c65227a6eee60e6a078129d75">SetOwner</a>(Card owner)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#a85ee83a3a893b3f086cd56ed692b51db">SetSize</a>(int w, int h)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classThingContainer.html#a71f6ef763db999cf9584a4fdf4207182">ShouldShowOnGrid</a>(Thing t)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#a4acba982526b37fa6ce7d272d60c7cad">tempList</a></td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classThingContainer.html#a286cda09daec9f1373491cae9af35e6c">TryStack</a>(Thing target, int destInvX=-1, int destInvY=-1)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a></td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classThingContainer.html#a286cda09daec9f1373491cae9af35e6c">TryStack</a>(Thing target, int destInvX=-1, int destInvY=-1)</td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classThingContainer.html#ade996f8bffeaeaf449b4aeaafdaef9f4">width</a></td><td class="entry"><a class="el" href="classThingContainer.html">ThingContainer</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

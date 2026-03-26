@@ -1,5 +1,9 @@
 var NAVTREEINDEX113 =
 {
+"classTargetTypeChara.html#a106859ec6c5eaae48d7bdc0ad7081248":[1,0,1318,0],
+"classTargetTypeChara.html#aa076c608cc5f66c2a3fe56614c0a7871":[1,0,1318,1],
+"classTargetTypeEnemy.html":[1,0,1319],
+"classTargetTypeEnemy.html#ab5ec9046aa86e7ebe6f351c1972f2036":[1,0,1319,0],
 "classTargetTypeGround.html":[1,0,1320],
 "classTargetTypeGround.html#a6ec3c7ee6c9714b49a6da39ba687c45b":[1,0,1320,0],
 "classTargetTypeGround.html#a8185c612184b00ed8edebe386d12d744":[1,0,1320,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX113 =
 "classTaskManager_1_1Designations.html#a04b1c8e57ac0597ea351c6ad52c7bb30":[1,0,1340,0,9],
 "classTaskManager_1_1Designations.html#a0e95758f58fb783cfc6a3eadcfa7614f":[1,0,1340,0,1],
 "classTaskManager_1_1Designations.html#a33ece8fe7d4e12d34276af1fd03bebcb":[1,0,1340,0,3],
-"classTaskManager_1_1Designations.html#a43bd2a42344872f04cdaadc19ef24071":[1,0,1340,0,4],
-"classTaskManager_1_1Designations.html#a4651187a0d1dfbe39e42a6e43aaae3d6":[1,0,1340,0,7],
-"classTaskManager_1_1Designations.html#a766c3f8b7eb557f502c7a52223723228":[1,0,1340,0,0],
-"classTaskManager_1_1Designations.html#a8a01f6e9293ef3e8a327a644ab3b1b2d":[1,0,1340,0,2],
-"classTaskManager_1_1Designations.html#a8d16ae882e3694d6b480982abf3acd8d":[1,0,1340,0,5]
+"classTaskManager_1_1Designations.html#a43bd2a42344872f04cdaadc19ef24071":[1,0,1340,0,4]
 };
