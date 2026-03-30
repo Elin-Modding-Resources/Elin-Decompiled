@@ -1,5 +1,10 @@
 var NAVTREEINDEX97 =
 {
+"classRainbowTextColor.html#a539b3f16b9f45a1cc573532cf219184f":[1,0,1095,9],
+"classRainbowTextColor.html#a5405aaf893b8f0e2c4ca946157ba1fd3":[1,0,1095,1],
+"classRainbowTextColor.html#a66bc95781d36573b3ae26295cdddc09f":[1,0,1095,12],
+"classRainbowTextColor.html#a79fcdf93e2b31ab8d4529cafc20d5455":[1,0,1095,5],
+"classRainbowTextColor.html#a93aae7efdb866f06489220d343bfc00e":[1,0,1095,4],
 "classRainbowTextColor.html#ac1a00922beb966c030a0eeb9d1dfa36f":[1,0,1095,10],
 "classRainbowTextColor.html#ad5f7f1bee271cff7fc0b66c28654cd26":[1,0,1095,14],
 "classRainbowTextColor.html#ad7dd0ef79a5b9c23e9d436323eac2ae9":[1,0,1095,13],
@@ -244,10 +249,5 @@ var NAVTREEINDEX97 =
 "classRecipeUpdater.html#aaebcb9fc50d8c69a6861a1f884269c76":[1,0,1106,14],
 "classRecipeUpdater.html#ade9645fe135cc6060607744242707bbc":[1,0,1106,2],
 "classRecipe_1_1Ingredient.html":[1,0,1100,0],
-"classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16":[1,0,1100,0,3],
-"classRecipe_1_1Ingredient.html#a0f7847f01969f81cd8cef26596fb248a":[1,0,1100,0,18],
-"classRecipe_1_1Ingredient.html#a1815a4273d3b3808f02c079e4750544e":[1,0,1100,0,14],
-"classRecipe_1_1Ingredient.html#a44f06296039d29dcb759daa7da96c63b":[1,0,1100,0,10],
-"classRecipe_1_1Ingredient.html#a4dca129b30f3f4070784361ea8e7676c":[1,0,1100,0,9],
-"classRecipe_1_1Ingredient.html#a50857f57552484b9f35820590ccbf500":[1,0,1100,0,15]
+"classRecipe_1_1Ingredient.html#a02ff2039cd048aaa48058463ad174c16":[1,0,1100,0,3]
 };

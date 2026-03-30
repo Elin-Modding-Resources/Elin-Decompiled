@@ -1550,6 +1550,7 @@ var hierarchy =
               [ "TraitMerchantPlat", "classTraitMerchantPlat.html", null ],
               [ "TraitMerchantSeed", "classTraitMerchantSeed.html", null ],
               [ "TraitMerchantSouvenir", "classTraitMerchantSouvenir.html", null ],
+              [ "TraitMerchantTravel", "classTraitMerchantTravel.html", null ],
               [ "TraitMerchantWeapon", "classTraitMerchantWeapon.html", null ]
             ] ],
             [ "TraitRogue", "classTraitRogue.html", null ],
@@ -1679,7 +1680,8 @@ var hierarchy =
           [ "TraitDoorSwing", "classTraitDoorSwing.html", [
             [ "TraitDoorAuto", "classTraitDoorAuto.html", [
               [ "TraitDoorAutoShoji", "classTraitDoorAutoShoji.html", null ],
-              [ "TraitDoorCurtain2", "classTraitDoorCurtain2.html", null ]
+              [ "TraitDoorCurtain2", "classTraitDoorCurtain2.html", null ],
+              [ "TraitDoorCurtain3", "classTraitDoorCurtain3.html", null ]
             ] ],
             [ "TraitDoorSwingGrass", "classTraitDoorSwingGrass.html", null ]
           ] ]

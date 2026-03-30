@@ -1,5 +1,11 @@
 var NAVTREEINDEX119 =
 {
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a615755cd42631ce31ff696a9891b3c2a":[1,0,1478,0,3],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3a968ae4f03d7e0c30fe4eb26b83c855dd":[1,0,1478,0,1],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3aad05e01777549db85f26c13042db94fb":[1,0,1478,0,4],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3abdf1893b54669831286b617d7dc24e27":[1,0,1478,0,0],
+"classTraitBaseSpellbook.html#a1c24d56710a61dc0f043e97ac74648e3ae0ca2db63b4b9d0cbde2f31d67376f1c":[1,0,1478,0,2],
+"classTraitBaseSpellbook.html#a361c2bf31c4146bc6e1b58d5d1afd5a3":[1,0,1478,9],
 "classTraitBaseSpellbook.html#a4b1b6489c9ded1fa63c59d6f51cd6fac":[1,0,1478,3],
 "classTraitBaseSpellbook.html#a4d64058d240d2f7efd88628a447ef1af":[1,0,1478,11],
 "classTraitBaseSpellbook.html#a5d102c34e32611f13f7a4db5f2c30c05":[1,0,1478,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitChara.html#ae84e295693c53aa97004b25b9a872d69":[1,0,1524,22],
 "classTraitChara.html#aead06d14cb0056f03792b19cf0228ff6":[1,0,1524,16],
 "classTraitChara.html#af7fa7f221aa381be2ee34dd822ef25d3":[1,0,1524,41],
-"classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3":[1,0,1524,1],
-"classTraitChef.html":[1,0,1525],
-"classTraitChef.html#a0cb367e1a36ee27848151015571b0967":[1,0,1525,0],
-"classTraitChef.html#aabf5e2cf6a203954522b31e5398ee049":[1,0,1525,1],
-"classTraitChest.html":[1,0,1526],
-"classTraitChest.html#a844ef34ac1868307a3b79a00864d30b6":[1,0,1526,0],
-"classTraitChest.html#a936699add2a889d87a77cfb4c34bf858":[1,0,1526,1]
+"classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3":[1,0,1524,1]
 };

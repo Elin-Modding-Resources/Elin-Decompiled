@@ -239,6 +239,7 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba11e8fe8bff2c3aa4808ef36b7851e687":[2,0,0,1107,0,27],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba1296fcaab5ec71496d1ecb176f176bdf":[2,0,0,1107,0,12],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba12cf08020be04c9b1f8ad50a614cdd7f":[2,0,0,1107,0,43],
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba15ad0e98a76b2521eb7bf8ec497c08a8":[2,0,0,1107,0,52],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba18c83669920215a818638ad0e5421e4b":[2,0,0,1107,0,11],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba25510a243582b6d2cb071f223eafdffc":[2,0,0,1107,0,35],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba2765242ce212b33cd934c1b24f12cc39":[2,0,0,1107,0,36],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba3b26194b13edb91ea719ef5cbee8d5bd":[2,0,0,1107,0,23],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba3efc0f9d30242aca0f09552a2c5016ee":[2,0,0,1107,0,33],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba40491db1043a93d8b94b9d94e3eda532":[2,0,0,1107,0,22],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba42efd0867b89b195b80b5b1c36a8ea53":[2,0,0,1107,0,37],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba46f3ea056caa3126b91f3f70beea068c":[2,0,0,1107,0,4]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba42efd0867b89b195b80b5b1c36a8ea53":[2,0,0,1107,0,37]
 };

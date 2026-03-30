@@ -8,5 +8,6 @@ var classTraitIncubator =
     [ "idSoundComplete", "classTraitIncubator.html#a5b87af23019200733b000010034199de", null ],
     [ "idSoundProgress", "classTraitIncubator.html#a01be3a4b8ab3dca322ee0eec40670aa8", null ],
     [ "IdSource", "classTraitIncubator.html#a4b87afe6c576e76b0c0dd1f17acc1dc8", null ],
+    [ "IsHomeItem", "classTraitIncubator.html#a4ea7c74c43657209fea316a45edd2e7d", null ],
     [ "ToggleType", "classTraitIncubator.html#a0f85ef82f7e7f9334ecd28ec4a039598", null ]
 ];

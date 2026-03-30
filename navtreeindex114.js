@@ -1,5 +1,11 @@
 var NAVTREEINDEX114 =
 {
+"classTaskManager.html#afa1f0197007e41524f4bcc59ebee7615":[1,0,1340,3],
+"classTaskManager_1_1Designations.html":[1,0,1340,0],
+"classTaskManager_1_1Designations.html#a04b1c8e57ac0597ea351c6ad52c7bb30":[1,0,1340,0,9],
+"classTaskManager_1_1Designations.html#a0e95758f58fb783cfc6a3eadcfa7614f":[1,0,1340,0,1],
+"classTaskManager_1_1Designations.html#a33ece8fe7d4e12d34276af1fd03bebcb":[1,0,1340,0,3],
+"classTaskManager_1_1Designations.html#a43bd2a42344872f04cdaadc19ef24071":[1,0,1340,0,4],
 "classTaskManager_1_1Designations.html#a4651187a0d1dfbe39e42a6e43aaae3d6":[1,0,1340,0,7],
 "classTaskManager_1_1Designations.html#a766c3f8b7eb557f502c7a52223723228":[1,0,1340,0,0],
 "classTaskManager_1_1Designations.html#a8a01f6e9293ef3e8a327a644ab3b1b2d":[1,0,1340,0,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX114 =
 "classThing.html#af8c63279f5a9aaa6f67c807fbc3d944f":[1,0,1370,21],
 "classThing.html#afb778d298b1fe406e190c3226fdcd8e7":[1,0,1370,8],
 "classThing.html#afce2b7cab7c06b8e01034535a23fa07a":[1,0,1370,18],
-"classThingContainer.html":[1,0,1371],
-"classThingContainer.html#a0185a60bc6d01b16da5bda7bf7907cc1":[1,0,1371,11],
-"classThingContainer.html#a0245366800e33e6bea8b80b68dc76214":[1,0,1371,44],
-"classThingContainer.html#a050b32b5812add0577b27ce8aa4dccff":[1,0,1371,28],
-"classThingContainer.html#a0740985c65227a6eee60e6a078129d75":[1,0,1371,35],
-"classThingContainer.html#a083c19966bc2c38dbf80495a48306071":[1,0,1371,33],
-"classThingContainer.html#a0e94fffa1b0b17d1c68645e3cdd3be53":[1,0,1371,14]
+"classThingContainer.html":[1,0,1371]
 };
