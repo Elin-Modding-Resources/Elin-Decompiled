@@ -1,5 +1,8 @@
 var NAVTREEINDEX26 =
 {
+"classAI__Drink.html#aa607edfa24c602083a3fefa4cdd71bf3":[1,0,88,0],
+"classAI__Eat.html":[1,0,89],
+"classAI__Eat.html#a14a7d2ec509af028475c4e1ce658a9b6":[1,0,89,6],
 "classAI__Eat.html#a8536f42d8c4eb6d844f9eaa1e92c8ab8":[1,0,89,0],
 "classAI__Eat.html#ab690b73b45a79070cc3064497a145f7e":[1,0,89,4],
 "classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d":[1,0,89,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX26 =
 "classAI__SelfHarm.html":[1,0,115],
 "classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f":[1,0,115,0],
 "classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912":[1,0,115,1],
-"classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d":[1,0,115,2],
-"classAI__Shear.html":[1,0,116],
-"classAI__Shear.html#a4ab4cab7cdd941b674944fe2ab02c27c":[1,0,116,5],
-"classAI__Shear.html#a4ee49ecd9ffa4e4a7f78ce90bca5e57b":[1,0,116,6]
+"classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d":[1,0,115,2]
 };

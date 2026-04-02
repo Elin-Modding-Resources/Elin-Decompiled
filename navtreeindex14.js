@@ -2,6 +2,7 @@ var NAVTREEINDEX14 =
 {
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba46f3ea056caa3126b91f3f70beea068c":[2,0,0,1107,0,4],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba50a16f415160a7132a86a551fc34bdc9":[2,0,0,1107,0,20],
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba50cabfff47520fb5143437c05924174f":[2,0,0,1107,0,53],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba5331717d33d4e634fd3c5ec209f475d2":[2,0,0,1107,0,29],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba5933baf90dcec96ffa6ecdaf30299550":[2,0,0,1107,0,50],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba5db77f3adad441007eef5e7aac9210c4":[2,0,0,1107,0,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "SplashText_8cs_source.html":[2,0,0,1173],
 "SpriteAnimation_8cs.html":[2,0,0,2,79],
 "SpriteAnimation_8cs_source.html":[2,0,0,2,79],
-"SpriteAsset_8cs.html":[2,0,0,3,103],
-"SpriteAsset_8cs_source.html":[2,0,0,3,103]
+"SpriteAsset_8cs.html":[2,0,0,3,103]
 };

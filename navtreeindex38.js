@@ -1,5 +1,8 @@
 var NAVTREEINDEX38 =
 {
+"classBaseWidgetNotice.html#a540c6d843e4ff2b1834448b495d83bcc":[1,0,232,1],
+"classBaseWidgetNotice.html#a568ea714f69d9f976bc2e241f4974a56":[1,0,232,15],
+"classBaseWidgetNotice.html#a56a1ac88905109c610a592e15ab541ab":[1,0,232,7],
 "classBaseWidgetNotice.html#a8e2d65a3951d17dd8885de063b31fb88":[1,0,232,8],
 "classBaseWidgetNotice.html#aa7e208b176c451a6ff8e0c80009cea52":[1,0,232,18],
 "classBaseWidgetNotice.html#abb547558386bf03cf27d3531221d65e8":[1,0,232,12],
@@ -246,8 +249,5 @@ var NAVTREEINDEX38 =
 "classBookList.html#a981eaa16191524e3acd51790950a8e13":[1,0,241,2],
 "classBookList.html#a9d3859ec19825b8940f611f10fc6e399":[1,0,241,1],
 "classBookList.html#ada84d594f324b450d1ac04aa44c9a9e8":[1,0,241,4],
-"classBookList_1_1Item.html":[1,0,241,0],
-"classBookList_1_1Item.html#a0ca1c2849c4cf22bcfb71b483e34ab98":[1,0,241,0,4],
-"classBookList_1_1Item.html#a200e13ca7835bdd53ac50810e736b0bc":[1,0,241,0,5],
-"classBookList_1_1Item.html#a5b05bf6e47c50c9e797c4a2f0eaf35f6":[1,0,241,0,0]
+"classBookList_1_1Item.html":[1,0,241,0]
 };

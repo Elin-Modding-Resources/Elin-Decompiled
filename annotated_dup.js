@@ -1848,6 +1848,7 @@ var annotated_dup =
     [ "TraitMerchantSeed", "classTraitMerchantSeed.html", "classTraitMerchantSeed" ],
     [ "TraitMerchantSouvenir", "classTraitMerchantSouvenir.html", "classTraitMerchantSouvenir" ],
     [ "TraitMerchantTravel", "classTraitMerchantTravel.html", "classTraitMerchantTravel" ],
+    [ "TraitMerchantTravel2", "classTraitMerchantTravel2.html", "classTraitMerchantTravel2" ],
     [ "TraitMerchantWeapon", "classTraitMerchantWeapon.html", "classTraitMerchantWeapon" ],
     [ "TraitMiko_Mifu", "classTraitMiko__Mifu.html", null ],
     [ "TraitMiko_Nefu", "classTraitMiko__Nefu.html", null ],

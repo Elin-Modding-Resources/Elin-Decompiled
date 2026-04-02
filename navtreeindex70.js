@@ -1,5 +1,9 @@
 var NAVTREEINDEX70 =
 {
+"classGoalSleep.html#ad47f4ac09ee230043fe2e8ed3d5e131d":[1,0,593,3],
+"classGoalSpot.html":[1,0,594],
+"classGoalSpot.html#a303713cf647d8b644b40d9b2f9de6bf6":[1,0,594,0],
+"classGoalTask.html":[1,0,595],
 "classGoalTask.html#a131fb83443b3558c5e771f8c51603c1b":[1,0,595,6],
 "classGoalTask.html#a1cfb24798cf9f4527bfc4f3ef82d47ac":[1,0,595,2],
 "classGoalTask.html#a27a69c8c10ec7d5760d3211f076032d2":[1,0,595,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX70 =
 "classGrowSystemTree.html#a62b8376f04a7c20aa86bb85761fa1a38":[1,0,621,10],
 "classGrowSystemTree.html#a64d0a81f0593813f320ca821c1c2cc0a":[1,0,621,17],
 "classGrowSystemTree.html#a6c387dd7894c5ea8a138c7042f3ebcbd":[1,0,621,13],
-"classGrowSystemTree.html#a84d5380a61f5ff6737f614ed43c512ea":[1,0,621,4],
-"classGrowSystemTree.html#a8de59706b21afe7a4ec4a80bd1b33e3c":[1,0,621,16],
-"classGrowSystemTree.html#a968e0229a80dadc8d1b8a4350026d5f1":[1,0,621,19],
-"classGrowSystemTree.html#a96a5f8b1eeece292312cb522b5c1b215":[1,0,621,3],
-"classGrowSystemTree.html#a9ea9df87417de10c33ff5607428eb8e3":[1,0,621,20]
+"classGrowSystemTree.html#a84d5380a61f5ff6737f614ed43c512ea":[1,0,621,4]
 };

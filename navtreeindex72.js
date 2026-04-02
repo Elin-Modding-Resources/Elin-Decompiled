@@ -1,5 +1,9 @@
 var NAVTREEINDEX72 =
 {
+"classHoardActor.html#a55621c901028b9c537ca931df8c94957":[1,0,644,10],
+"classHoardActor.html#a5ec31f09edea5dc75a8d0b93c166575b":[1,0,644,19],
+"classHoardActor.html#a5ec56150a93ffe8ce6e641effe4ebe35":[1,0,644,39],
+"classHoardActor.html#a5fc3a4d50b0a973e62f195a021898fe4":[1,0,644,7],
 "classHoardActor.html#a630fe0fa98bd0f37776f697b0ea64efb":[1,0,644,31],
 "classHoardActor.html#a67dae3a430217b345ffdd33a467612eb":[1,0,644,41],
 "classHoardActor.html#a69847789557da45e516e275273059bff":[1,0,644,22],
@@ -245,9 +249,5 @@ var NAVTREEINDEX72 =
 "classHotItemFocusPos.html#afab578ff132fd625a0061ec17dfd3838":[1,0,673,1],
 "classHotItemGameAction.html":[1,0,674],
 "classHotItemGameAction.html#a53bdbc7305f11f24bd8b2451690732f3":[1,0,674,3],
-"classHotItemGameAction.html#a76fcc1add8d0ea9ad3c538ab8e040921":[1,0,674,4],
-"classHotItemGameAction.html#a9bbc11691a6cdd1e8aed75e7ce4b42e0":[1,0,674,2],
-"classHotItemGameAction.html#ace8cf4da21b79dd307033e1c8ded90ee":[1,0,674,0],
-"classHotItemGameAction.html#af0a14cff53e34e638b943564e4fc612d":[1,0,674,1],
-"classHotItemHeld.html":[1,0,675]
+"classHotItemGameAction.html#a76fcc1add8d0ea9ad3c538ab8e040921":[1,0,674,4]
 };

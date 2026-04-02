@@ -42,6 +42,7 @@ var classFEAT =
     [ "featFaith", "classFEAT.html#a3c430fc7408d087afdba0ce0d923d764", null ],
     [ "featFarmer", "classFEAT.html#af9887b12675531f0a4ea73b48e17b52b", null ],
     [ "featFastEater", "classFEAT.html#a3b7f27462cdd060661323ac5abe9e5cf", null ],
+    [ "featFastFucker", "classFEAT.html#a76d97b072480f001b7c09d17a71bd679", null ],
     [ "featFastLearner", "classFEAT.html#a85310f26f3bf584f37dfa768ce5060ed", null ],
     [ "featFate", "classFEAT.html#a35b0c2d76d318aab91a204ad7ede31b4", null ],
     [ "featFisher", "classFEAT.html#a5d23845cbd821c7fb59187caa981519d", null ],

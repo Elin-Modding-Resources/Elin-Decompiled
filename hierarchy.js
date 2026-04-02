@@ -1550,7 +1550,9 @@ var hierarchy =
               [ "TraitMerchantPlat", "classTraitMerchantPlat.html", null ],
               [ "TraitMerchantSeed", "classTraitMerchantSeed.html", null ],
               [ "TraitMerchantSouvenir", "classTraitMerchantSouvenir.html", null ],
-              [ "TraitMerchantTravel", "classTraitMerchantTravel.html", null ],
+              [ "TraitMerchantTravel", "classTraitMerchantTravel.html", [
+                [ "TraitMerchantTravel2", "classTraitMerchantTravel2.html", null ]
+              ] ],
               [ "TraitMerchantWeapon", "classTraitMerchantWeapon.html", null ]
             ] ],
             [ "TraitRogue", "classTraitRogue.html", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitFertilizer_8cs_source.html":[2,0,0,1515],
 "TraitFiama_8cs.html":[2,0,0,1516],
 "TraitFiama_8cs_source.html":[2,0,0,1516],
 "TraitFigure_8cs.html":[2,0,0,1517],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitMerchantFireworks_8cs_source.html":[2,0,0,1639],
 "TraitMerchantFish_8cs.html":[2,0,0,1640],
 "TraitMerchantFish_8cs_source.html":[2,0,0,1640],
-"TraitMerchantFood_8cs.html":[2,0,0,1641],
-"TraitMerchantFood_8cs_source.html":[2,0,0,1641]
+"TraitMerchantFood_8cs.html":[2,0,0,1641]
 };

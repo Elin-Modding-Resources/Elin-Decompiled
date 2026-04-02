@@ -1658,6 +1658,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitMerchantSeed.cs", "TraitMerchantSeed_8cs.html", "TraitMerchantSeed_8cs" ],
     [ "TraitMerchantSouvenir.cs", "TraitMerchantSouvenir_8cs.html", "TraitMerchantSouvenir_8cs" ],
     [ "TraitMerchantTravel.cs", "TraitMerchantTravel_8cs.html", "TraitMerchantTravel_8cs" ],
+    [ "TraitMerchantTravel2.cs", "TraitMerchantTravel2_8cs.html", "TraitMerchantTravel2_8cs" ],
     [ "TraitMerchantWeapon.cs", "TraitMerchantWeapon_8cs.html", "TraitMerchantWeapon_8cs" ],
     [ "TraitMiko_Mifu.cs", "TraitMiko__Mifu_8cs.html", "TraitMiko__Mifu_8cs" ],
     [ "TraitMiko_Nefu.cs", "TraitMiko__Nefu_8cs.html", "TraitMiko__Nefu_8cs" ],
