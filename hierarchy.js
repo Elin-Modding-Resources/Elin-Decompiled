@@ -449,10 +449,13 @@ var hierarchy =
                 [ "ConTelepathy", "classConTelepathy.html", null ],
                 [ "ConTorch", "classConTorch.html", null ],
                 [ "ConTransmute", "classConTransmute.html", [
+                  [ "ConBaseTransmuteMimic", "classConBaseTransmuteMimic.html", [
+                    [ "ConTransmuteHuman", "classConTransmuteHuman.html", null ],
+                    [ "ConTransmuteMimic", "classConTransmuteMimic.html", null ]
+                  ] ],
                   [ "ConTransmuteBat", "classConTransmuteBat.html", null ],
                   [ "ConTransmuteBroom", "classConTransmuteBroom.html", null ],
                   [ "ConTransmuteCat", "classConTransmuteCat.html", null ],
-                  [ "ConTransmuteMimic", "classConTransmuteMimic.html", null ],
                   [ "ConTransmutePutit", "classConTransmutePutit.html", null ],
                   [ "ConTransmuteShadow", "classConTransmuteShadow.html", null ]
                 ] ],

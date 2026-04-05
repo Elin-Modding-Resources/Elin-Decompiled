@@ -123,6 +123,7 @@ var classABILITY =
     [ "SongTulip", "classABILITY.html#aedab18658e1088c7d9105eb0816217a7", null ],
     [ "SongValor", "classABILITY.html#a5704d8fbdac84442ce9e797bc55c0346", null ],
     [ "SpTransmuteBat", "classABILITY.html#a907615124a9fb16fb1b70b4724114aa9", null ],
+    [ "SpTransmuteHuman", "classABILITY.html#ac30238848860d2551e6afad15bed1ddf", null ],
     [ "SpTransmuteMimic", "classABILITY.html#a3ccdd7ddb19beac5f4ad3fc187d6197d", null ],
     [ "SpTransmuteShadow", "classABILITY.html#afe62ecb412d5c272b1dd621bf99f3595", null ],
     [ "StManaCost", "classABILITY.html#aa74f8fa720ebd9ab23d4e1be983183d8", null ],

@@ -1,5 +1,10 @@
 var NAVTREEINDEX39 =
 {
+"classBookList.html#a67a77f59f481cb606a581b9e4d06d7c2":[1,0,241,3],
+"classBookList.html#a981eaa16191524e3acd51790950a8e13":[1,0,241,2],
+"classBookList.html#a9d3859ec19825b8940f611f10fc6e399":[1,0,241,1],
+"classBookList.html#ada84d594f324b450d1ac04aa44c9a9e8":[1,0,241,4],
+"classBookList_1_1Item.html":[1,0,241,0],
 "classBookList_1_1Item.html#a0ca1c2849c4cf22bcfb71b483e34ab98":[1,0,241,0,4],
 "classBookList_1_1Item.html#a200e13ca7835bdd53ac50810e736b0bc":[1,0,241,0,5],
 "classBookList_1_1Item.html#a5b05bf6e47c50c9e797c4a2f0eaf35f6":[1,0,241,0,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX39 =
 "classButtonHotItem.html#aa40b4c0db04ff289ee39a21c579c645e":[1,0,255,1],
 "classButtonHotItem.html#ad5233f78aead8f9833026e8f7c8ac54e":[1,0,255,0],
 "classButtonRecipe.html":[1,0,256],
-"classButtonRecipe.html#aa49a344fa5488191e8528b28c4dd8491":[1,0,256,0],
-"classButtonRecipe.html#ab5a06e9048d04b6137a4cdc7661c0ddc":[1,0,256,1],
-"classButtonResourceTrack.html":[1,0,257],
-"classButtonResourceTrack.html#a112e680b7e0b3a6758428cb965402227":[1,0,257,0],
-"classButtonResourceTrack.html#a33af0031857d42298f534d42423a1db6":[1,0,257,3],
-"classButtonResourceTrack.html#a4d51631eb33dd4e7c63db29843c87d9f":[1,0,257,4]
+"classButtonRecipe.html#aa49a344fa5488191e8528b28c4dd8491":[1,0,256,0]
 };

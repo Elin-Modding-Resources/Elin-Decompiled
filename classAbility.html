@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.290 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.291 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -532,7 +532,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00312">312</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00314">314</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adc0411882ca5c5a75719528a66cbe16e" name="adc0411882ca5c5a75719528a66cbe16e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc0411882ca5c5a75719528a66cbe16e">&#9670;&#160;</a></span>CanLink()</h2>
@@ -560,14 +560,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a83c7be33ee0ea37dfaf49c393a5c2d34">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00320">320</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  321</span>    {</div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  323</span>        {</div>
-<div class="line"><span class="lineno">  324</span>            <span class="keywordflow">return</span> !base.IsGlobalElement;</div>
-<div class="line"><span class="lineno">  325</span>        }</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  327</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00322">322</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  323</span>    {</div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  325</span>        {</div>
+<div class="line"><span class="lineno">  326</span>            <span class="keywordflow">return</span> !base.IsGlobalElement;</div>
+<div class="line"><span class="lineno">  327</span>        }</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  329</span>    }</div>
 <div class="ttc" id="aclassElementContainer_html_a3dcd9f6f33a93cb894639d25c9c955e5"><div class="ttname"><a href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">ElementContainer.Card</a></div><div class="ttdeci">virtual Card Card</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00028">ElementContainer.cs:28</a></div></div>
 <div class="ttc" id="aclassElement_html_a4ae86959ad9952c795fc71fe4dd46e0a"><div class="ttname"><a href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">Element.owner</a></div><div class="ttdeci">ElementContainer owner</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00271">ELEMENT.cs:271</a></div></div>
 </div><!-- fragment -->
@@ -601,32 +601,32 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a68cfe23ce1ce41da21b7ce89d260ea73">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00338">338</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  339</span>    {</div>
-<div class="line"><span class="lineno">  340</span>        <span class="keywordtype">long</span> a = base.Value * 8 + 50;</div>
-<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>)</div>
-<div class="line"><span class="lineno">  342</span>        {</div>
-<div class="line"><span class="lineno">  343</span>            a = <a class="code hl_class" href="classMathEx.html">MathEx</a>.<a class="code hl_function" href="classMathEx.html#ac8b4f85abda90df3561d100d74d1b265">Max</a>(a, (<span class="keywordtype">long</span>)c.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> * 6L + 30);</div>
-<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a> &amp;&amp; !base.source.aliasParent.IsEmpty())</div>
-<div class="line"><span class="lineno">  345</span>            {</div>
-<div class="line"><span class="lineno">  346</span>                a = <a class="code hl_class" href="classMathEx.html">MathEx</a>.<a class="code hl_function" href="classMathEx.html#ac8b4f85abda90df3561d100d74d1b265">Max</a>(a, (<span class="keywordtype">long</span>)c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(base.source.aliasParent) * 4L + 30);</div>
-<div class="line"><span class="lineno">  347</span>            }</div>
-<div class="line"><span class="lineno">  348</span>        }</div>
-<div class="line"><span class="lineno">  349</span>        a = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a045b2d6bbccbb6edaa12afe340176867">curve</a>(a, 400, 100);</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classSpell.html">Spell</a>)</div>
-<div class="line"><span class="lineno">  351</span>        {</div>
-<div class="line"><span class="lineno">  352</span>            a = a * Mathf.Max(100 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(411) - c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(93), 1) / 100;</div>
-<div class="line"><span class="lineno">  353</span>        }</div>
-<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classActBreathe.html">ActBreathe</a>)</div>
-<div class="line"><span class="lineno">  355</span>        {</div>
-<div class="line"><span class="lineno">  356</span>            a = a * Mathf.Max(100 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(411), 1) / 100;</div>
-<div class="line"><span class="lineno">  357</span>        }</div>
-<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (a &gt; 214748364)</div>
-<div class="line"><span class="lineno">  359</span>        {</div>
-<div class="line"><span class="lineno">  360</span>            a = 214748364L;</div>
-<div class="line"><span class="lineno">  361</span>        }</div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)a;</div>
-<div class="line"><span class="lineno">  363</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00340">340</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>    {</div>
+<div class="line"><span class="lineno">  342</span>        <span class="keywordtype">long</span> a = base.Value * 8 + 50;</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">IsPC</a>)</div>
+<div class="line"><span class="lineno">  344</span>        {</div>
+<div class="line"><span class="lineno">  345</span>            a = <a class="code hl_class" href="classMathEx.html">MathEx</a>.<a class="code hl_function" href="classMathEx.html#ac8b4f85abda90df3561d100d74d1b265">Max</a>(a, (<span class="keywordtype">long</span>)c.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a> * 6L + 30);</div>
+<div class="line"><span class="lineno">  346</span>            <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">IsPCFactionOrMinion</a> &amp;&amp; !base.source.aliasParent.IsEmpty())</div>
+<div class="line"><span class="lineno">  347</span>            {</div>
+<div class="line"><span class="lineno">  348</span>                a = <a class="code hl_class" href="classMathEx.html">MathEx</a>.<a class="code hl_function" href="classMathEx.html#ac8b4f85abda90df3561d100d74d1b265">Max</a>(a, (<span class="keywordtype">long</span>)c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(base.source.aliasParent) * 4L + 30);</div>
+<div class="line"><span class="lineno">  349</span>            }</div>
+<div class="line"><span class="lineno">  350</span>        }</div>
+<div class="line"><span class="lineno">  351</span>        a = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_function" href="classEClass.html#a045b2d6bbccbb6edaa12afe340176867">curve</a>(a, 400, 100);</div>
+<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classSpell.html">Spell</a>)</div>
+<div class="line"><span class="lineno">  353</span>        {</div>
+<div class="line"><span class="lineno">  354</span>            a = a * Mathf.Max(100 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(411) - c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(93), 1) / 100;</div>
+<div class="line"><span class="lineno">  355</span>        }</div>
+<div class="line"><span class="lineno">  356</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">this</span> is <a class="code hl_class" href="classActBreathe.html">ActBreathe</a>)</div>
+<div class="line"><span class="lineno">  357</span>        {</div>
+<div class="line"><span class="lineno">  358</span>            a = a * Mathf.Max(100 + c.<a class="code hl_function" href="classCard.html#abc8aac2488d18ebc899393231f7032c8">Evalue</a>(411), 1) / 100;</div>
+<div class="line"><span class="lineno">  359</span>        }</div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">if</span> (a &gt; 214748364)</div>
+<div class="line"><span class="lineno">  361</span>        {</div>
+<div class="line"><span class="lineno">  362</span>            a = 214748364L;</div>
+<div class="line"><span class="lineno">  363</span>        }</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)a;</div>
+<div class="line"><span class="lineno">  365</span>    }</div>
 <div class="ttc" id="aclassActBreathe_html"><div class="ttname"><a href="classActBreathe.html">ActBreathe</a></div><div class="ttdef"><b>Definition:</b> <a href="ActBreathe_8cs_source.html#l00001">ActBreathe.cs:2</a></div></div>
 <div class="ttc" id="aclassCard_html_a0a02f84d6b79a05b0b23bc63226cccd2"><div class="ttname"><a href="classCard.html#a0a02f84d6b79a05b0b23bc63226cccd2">Card.IsPCFactionOrMinion</a></div><div class="ttdeci">bool IsPCFactionOrMinion</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02311">Card.cs:2312</a></div></div>
 <div class="ttc" id="aclassCard_html_aafbb34c9bea4b056ef8c3e8981604870"><div class="ttname"><a href="classCard.html#aafbb34c9bea4b056ef8c3e8981604870">Card.IsPC</a></div><div class="ttdeci">virtual bool IsPC</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02183">Card.cs:2183</a></div></div>
@@ -686,14 +686,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a11855bcfd170541cd7f8b9f01a9a1c3f">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00329">329</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  330</span>    {</div>
-<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">if</span> (type != 0)</div>
-<div class="line"><span class="lineno">  332</span>        {</div>
-<div class="line"><span class="lineno">  333</span>            <span class="keywordflow">return</span> base.GetSourceValue(v, lv, type);</div>
-<div class="line"><span class="lineno">  334</span>        }</div>
-<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">return</span> 10 * (100 + ((long)lv - 1L) * base.source.lvFactor / 10) / 100;</div>
-<div class="line"><span class="lineno">  336</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00331">331</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>    {</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">if</span> (type != 0)</div>
+<div class="line"><span class="lineno">  334</span>        {</div>
+<div class="line"><span class="lineno">  335</span>            <span class="keywordflow">return</span> base.GetSourceValue(v, lv, type);</div>
+<div class="line"><span class="lineno">  336</span>        }</div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">return</span> 10 * (100 + ((long)lv - 1L) * base.source.lvFactor / 10) / 100;</div>
+<div class="line"><span class="lineno">  338</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -722,14 +722,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classElement.html#a1053d168a082abeb846bc292994a01e0">Element</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00365">365</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  366</span>    {</div>
-<div class="line"><span class="lineno">  367</span>        <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a>;</div>
-<div class="line"><span class="lineno">  368</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>._IsPC)</div>
-<div class="line"><span class="lineno">  369</span>        {</div>
-<div class="line"><span class="lineno">  370</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_function" href="classLayerAbility.html#a8e373b2c45f472eca51146d9e191155a">SetDirty</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  371</span>        }</div>
-<div class="line"><span class="lineno">  372</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00367">367</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  368</span>    {</div>
+<div class="line"><span class="lineno">  369</span>        <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> = <a class="code hl_variable" href="classElement.html#a4ae86959ad9952c795fc71fe4dd46e0a">owner</a>.<a class="code hl_property" href="classElementContainer.html#a3dcd9f6f33a93cb894639d25c9c955e5">Card</a>;</div>
+<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>._IsPC)</div>
+<div class="line"><span class="lineno">  371</span>        {</div>
+<div class="line"><span class="lineno">  372</span>            <a class="code hl_class" href="classLayerAbility.html">LayerAbility</a>.<a class="code hl_function" href="classLayerAbility.html#a8e373b2c45f472eca51146d9e191155a">SetDirty</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  373</span>        }</div>
+<div class="line"><span class="lineno">  374</span>    }</div>
 <div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassLayerAbility_html"><div class="ttname"><a href="classLayerAbility.html">LayerAbility</a></div><div class="ttdef"><b>Definition:</b> <a href="LayerAbility_8cs_source.html#l00005">LayerAbility.cs:6</a></div></div>
@@ -760,7 +760,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00316">316</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00318">318</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
 
 </div>
 </div>
@@ -784,7 +784,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00318">318</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00320">320</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
 
 </div>
 </div>
@@ -808,7 +808,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00314">314</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ABILITY_8cs_source.html#l00316">316</a> of file <a class="el" href="ABILITY_8cs_source.html">ABILITY.cs</a>.</p>
 
 </div>
 </div>
