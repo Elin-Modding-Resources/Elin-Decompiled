@@ -1,5 +1,10 @@
 var NAVTREEINDEX95 =
 {
+"classQuest.html#ab4b50284da058423b70cecc7e3b1ab29":[1,0,1014,22],
+"classQuest.html#ab5256caefde2c0037ef19e4514fcfa3b":[1,0,1014,24],
+"classQuest.html#ab671f56796ecba20b378611b49d0322a":[1,0,1014,15],
+"classQuest.html#ab69581222e68c8f86bfbfdb9adb6c2a7":[1,0,1014,77],
+"classQuest.html#abadc7dbd005ead5d571cc7a3f5b7b864":[1,0,1014,46],
 "classQuest.html#abcda0e8cd9add8667a20f7af53733749":[1,0,1014,18],
 "classQuest.html#ac0386b88dd13fba25949cece128496d4":[1,0,1014,67],
 "classQuest.html#ac34a1a4c6ad6c492f7824c85d41db6ca":[1,0,1014,32],
@@ -244,10 +249,5 @@ var NAVTREEINDEX95 =
 "classQuestIntoDarkness.html#a68d8645cb3cdb80412f5b86fa550469b":[1,0,1048,0],
 "classQuestIntoDarkness.html#a6ae95776848173b44b9e5fc0b1c6662b":[1,0,1048,1],
 "classQuestIntoDarkness.html#abdb2a13c591879b41c096646bfb1574e":[1,0,1048,2],
-"classQuestIntroInspector.html":[1,0,1049],
-"classQuestIntroInspector.html#a9e2b1725e8742d671a5670dde1788930":[1,0,1049,0],
-"classQuestLoytelFarm.html":[1,0,1050],
-"classQuestLoytelFarm.html#a255474c30a08dee1bbdc10ba62f1fe07":[1,0,1050,1],
-"classQuestLoytelFarm.html#a5de61c383ad35c495dc4d4bef86a1dee":[1,0,1050,0],
-"classQuestLumiest.html":[1,0,1051]
+"classQuestIntroInspector.html":[1,0,1049]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX20 =
 {
+"TraitScrollStatic_8cs.html":[2,0,0,1764],
+"TraitScrollStatic_8cs_source.html":[2,0,0,1764],
 "TraitScroll_8cs.html":[2,0,0,1760],
 "TraitScroll_8cs_source.html":[2,0,0,1760],
 "TraitSculpture_8cs.html":[2,0,0,1765],
@@ -247,7 +249,5 @@ var NAVTREEINDEX20 =
 "TraitTutorialBook_8cs.html":[2,0,0,1885],
 "TraitTutorialBook_8cs_source.html":[2,0,0,1885],
 "TraitTyche_8cs.html":[2,0,0,1887],
-"TraitTyche_8cs_source.html":[2,0,0,1887],
-"TraitUniqueCharaNoJoin_8cs.html":[2,0,0,1889],
-"TraitUniqueCharaNoJoin_8cs_source.html":[2,0,0,1889]
+"TraitTyche_8cs_source.html":[2,0,0,1887]
 };

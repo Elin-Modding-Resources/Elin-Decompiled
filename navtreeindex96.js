@@ -1,5 +1,10 @@
 var NAVTREEINDEX96 =
 {
+"classQuestIntroInspector.html#a9e2b1725e8742d671a5670dde1788930":[1,0,1049,0],
+"classQuestLoytelFarm.html":[1,0,1050],
+"classQuestLoytelFarm.html#a255474c30a08dee1bbdc10ba62f1fe07":[1,0,1050,1],
+"classQuestLoytelFarm.html#a5de61c383ad35c495dc4d4bef86a1dee":[1,0,1050,0],
+"classQuestLumiest.html":[1,0,1051],
 "classQuestLumiest.html#a54cc2df6c212876a66c403ede142d19a":[1,0,1051,0],
 "classQuestMain.html":[1,0,1052],
 "classQuestMain.html#a01c18e621e3cd51eb5ed02a2a81a1b8d":[1,0,1052,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX96 =
 "classQuestWedding.html#a06575bdc7645ae71b0e907ac01f1d9a3":[1,0,1091,2],
 "classQuestWedding.html#a0ccad7c8863027ff89ea46cc02dbf434":[1,0,1091,5],
 "classQuestWedding.html#a3932adb00d59568666bc71f020f5bf1d":[1,0,1091,6],
-"classQuestWedding.html#a5a470ba43ecb60e8fe15ac3725efdd47":[1,0,1091,0],
-"classQuestWedding.html#a9999e38c7edae2bb0bfa789f94f00918":[1,0,1091,1],
-"classQuestWedding.html#ad3a2606da7e7ca7031edcc674215bfb9":[1,0,1091,3],
-"classQuestWedding.html#aedf25a2ba28152fd92f1ad1986a5511d":[1,0,1091,4],
-"classQueue.html":[1,0,1092],
-"classQueue.html#a0826a0ca90fa09ad272055106f0dd4f4":[1,0,1092,0]
+"classQuestWedding.html#a5a470ba43ecb60e8fe15ac3725efdd47":[1,0,1091,0]
 };

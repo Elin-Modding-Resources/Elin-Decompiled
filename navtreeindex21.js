@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"TraitUniqueCharaNoJoin_8cs.html":[2,0,0,1889],
+"TraitUniqueCharaNoJoin_8cs_source.html":[2,0,0,1889],
 "TraitUniqueChara_8cs.html":[2,0,0,1888],
 "TraitUniqueChara_8cs_source.html":[2,0,0,1888],
 "TraitUniqueGuildPersonnel_8cs.html":[2,0,0,1890],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "UIZoneInfo_8cs.html":[2,0,0,1948],
 "UIZoneInfo_8cs_source.html":[2,0,0,1948],
 "UI_8cs.html":[2,0,0,1921],
-"UI_8cs_source.html":[2,0,0,1921],
-"UPair_8cs.html":[2,0,0,2,98],
-"UPair_8cs_source.html":[2,0,0,2,98]
+"UI_8cs_source.html":[2,0,0,1921]
 };

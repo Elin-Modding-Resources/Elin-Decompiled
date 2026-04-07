@@ -1,5 +1,10 @@
 var NAVTREEINDEX98 =
 {
+"classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551":[1,0,1107,3],
+"classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d":[1,0,1107,16],
+"classRecipeSource.html#a33b396cd7c68721982ea0efc346a711d":[1,0,1107,2],
+"classRecipeSource.html#a38e2e9b19a4240ebec56a654c3268f9c":[1,0,1107,19],
+"classRecipeSource.html#a3ad10d18700cb89ae0c6319ac5a7bf1f":[1,0,1107,23],
 "classRecipeSource.html#a3eae8739c68c89266fb328c94ff76fd7":[1,0,1107,18],
 "classRecipeSource.html#a56791ce013cc6b4f1a392c06d408a83d":[1,0,1107,21],
 "classRecipeSource.html#a614aa60a56e731c871cd565455e36551":[1,0,1107,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX98 =
 "classReligionOblivion.html#a5f94572db73cf58930a9c9581548407d":[1,0,1133,1],
 "classReligionOblivion.html#ac535bfdc543f8a32d4729bf7c05eb1e8":[1,0,1133,0],
 "classReligionStrife.html":[1,0,1134],
-"classReligionStrife.html#a7579f63b88cc23f159b17db0dfe40dec":[1,0,1134,0],
-"classReligionTrickery.html":[1,0,1135],
-"classReligionTrickery.html#a5b6ebb4cc9dcb9dd279f30b0bce80077":[1,0,1135,0],
-"classReligionTrickery.html#a66555a6abaf5766ec0a83827b45ee445":[1,0,1135,1],
-"classReligionWind.html":[1,0,1136],
-"classReligionWind.html#a0890cc356b78df37353415414f4fd47c":[1,0,1136,0]
+"classReligionStrife.html#a7579f63b88cc23f159b17db0dfe40dec":[1,0,1134,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"TileSelectorElona_8cs_source.html":[2,0,0,1273],
+"TileSelector_8cs.html":[2,0,0,1272],
 "TileSelector_8cs_source.html":[2,0,0,1272],
 "TileTypeBaseBlock_8cs.html":[2,0,0,1275],
 "TileTypeBaseBlock_8cs_source.html":[2,0,0,1275],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TraitBoard_8cs_source.html":[2,0,0,1387],
 "TraitBoat_8cs.html":[2,0,0,1388],
 "TraitBoat_8cs_source.html":[2,0,0,1388],
-"TraitBookExp_8cs.html":[2,0,0,1390],
-"TraitBookExp_8cs_source.html":[2,0,0,1390],
-"TraitBookPlan_8cs.html":[2,0,0,1391]
+"TraitBookExp_8cs.html":[2,0,0,1390]
 };

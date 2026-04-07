@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"PopupManager_8cs.html":[2,0,0,922],
 "PopupManager_8cs_source.html":[2,0,0,922],
 "Portrait_8cs.html":[2,0,0,923],
 "Portrait_8cs_source.html":[2,0,0,923],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "RecipeManager_8cs.html":[2,0,0,1028],
 "RecipeManager_8cs_source.html":[2,0,0,1028],
 "RecipeSource_8cs.html":[2,0,0,1029],
-"RecipeSource_8cs_source.html":[2,0,0,1029],
-"RecipeUpdater_8cs.html":[2,0,0,1030]
+"RecipeSource_8cs_source.html":[2,0,0,1029]
 };

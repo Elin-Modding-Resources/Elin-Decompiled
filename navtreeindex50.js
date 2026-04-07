@@ -1,5 +1,9 @@
 var NAVTREEINDEX50 =
 {
+"classConInvisibility.html":[1,0,355],
+"classConInvisibility.html#a5e00a7acf18605b3badae025680be443":[1,0,355,2],
+"classConInvisibility.html#a640e09a4fd2ff5531b2b8cfb25884aa4":[1,0,355,1],
+"classConInvisibility.html#ac25f8da9dd4d5f630b91b6d51987974c":[1,0,355,0],
 "classConInvisibility.html#af0165653c4373e4fd5f7699b34e13a4b":[1,0,355,3],
 "classConInvulnerable.html":[1,0,356],
 "classConLevitate.html":[1,0,357],
@@ -138,12 +142,13 @@ var NAVTREEINDEX50 =
 "classConTransmuteCat.html":[1,0,407],
 "classConTransmuteCat.html#ab842625ebae9c0b7f72100ff6937f6e5":[1,0,407,0],
 "classConTransmuteHuman.html":[1,0,408],
-"classConTransmuteHuman.html#a18b1fcdf63980041adea0ab0582055dd":[1,0,408,7],
+"classConTransmuteHuman.html#a18b1fcdf63980041adea0ab0582055dd":[1,0,408,8],
 "classConTransmuteHuman.html#a34d7ea6b0f01a861b81c00957355cf3d":[1,0,408,0],
-"classConTransmuteHuman.html#a5eb45fe24d6c70be79d57c85155fd7e0":[1,0,408,6],
+"classConTransmuteHuman.html#a378ab2f810bf8a9e9e4565c9c32a5cb8":[1,0,408,6],
+"classConTransmuteHuman.html#a5eb45fe24d6c70be79d57c85155fd7e0":[1,0,408,7],
 "classConTransmuteHuman.html#a6d173bcaa65946ca14665aaa95a9e477":[1,0,408,1],
 "classConTransmuteHuman.html#a98d37c62f4fe21a4ff64b226138f4b23":[1,0,408,5],
-"classConTransmuteHuman.html#a9f5eabda9bcac5652b828a38d13c16f0":[1,0,408,8],
+"classConTransmuteHuman.html#a9f5eabda9bcac5652b828a38d13c16f0":[1,0,408,9],
 "classConTransmuteHuman.html#a9fbfd65aea523f64cdb3384e75921cfd":[1,0,408,2],
 "classConTransmuteHuman.html#add00a825b5d94b1e6453ed1b6246e0fd":[1,0,408,4],
 "classConTransmuteHuman.html#ae80f476d5b4ea367244d3979b3a280cf":[1,0,408,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX50 =
 "classContentChronicle.html":[1,0,381],
 "classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a":[1,0,381,1],
 "classContentChronicle.html#af35eec2b514361d7050bae67d6e1a686":[1,0,381,0],
-"classContentCodex.html":[1,0,382],
-"classContentCodex.html#a007eb841fa4ad581a0b7c79c75a8e459":[1,0,382,11],
-"classContentCodex.html#a31956b743c882e5eec0c7da891c71643":[1,0,382,0],
-"classContentCodex.html#a3636c903855e3187c44dca1e0bebad2f":[1,0,382,19],
-"classContentCodex.html#a3f787f7de4f0238d3373f005658d5610":[1,0,382,12],
-"classContentCodex.html#a447f01fc6f53cf285c4502b82fed78d9":[1,0,382,14]
+"classContentCodex.html":[1,0,382]
 };

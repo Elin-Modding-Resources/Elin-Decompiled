@@ -1,5 +1,9 @@
 var NAVTREEINDEX40 =
 {
+"classButtonHotItem.html#aa40b4c0db04ff289ee39a21c579c645e":[1,0,255,1],
+"classButtonHotItem.html#ad5233f78aead8f9833026e8f7c8ac54e":[1,0,255,0],
+"classButtonRecipe.html":[1,0,256],
+"classButtonRecipe.html#aa49a344fa5488191e8528b28c4dd8491":[1,0,256,0],
 "classButtonRecipe.html#ab5a06e9048d04b6137a4cdc7661c0ddc":[1,0,256,1],
 "classButtonResourceTrack.html":[1,0,257],
 "classButtonResourceTrack.html#a112e680b7e0b3a6758428cb965402227":[1,0,257,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX40 =
 "classCameraSupport.html#a71dcc9dc415aca52eddc1342aa0d2eee":[1,0,264,12],
 "classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec":[1,0,264,0],
 "classCameraSupport.html#a764fe3119d6b3264c4981f01836076eca37b6bd7fe61d651735cec3d3b0356c66":[1,0,264,0,4],
-"classCameraSupport.html#a764fe3119d6b3264c4981f01836076eca6adf97f83acf6453d4a6a4b1070f3754":[1,0,264,0,0],
-"classCameraSupport.html#a764fe3119d6b3264c4981f01836076ecab7f41fc1412ad2ee75e9b2635d3b9d5c":[1,0,264,0,2],
-"classCameraSupport.html#a764fe3119d6b3264c4981f01836076ecab95a01ffffa8fcdd2a9af961937c097c":[1,0,264,0,3],
-"classCameraSupport.html#a764fe3119d6b3264c4981f01836076ecaf3f6d0343d56ce88ce7958170ed05cb3":[1,0,264,0,1],
-"classCameraSupport.html#aa22eb2f3398121e32e0e1c5f1ea6b6a2":[1,0,264,16]
+"classCameraSupport.html#a764fe3119d6b3264c4981f01836076eca6adf97f83acf6453d4a6a4b1070f3754":[1,0,264,0,0]
 };

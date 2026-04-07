@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"Zone__CaveMonster_8cs_source.html":[2,0,0,2019],
+"Zone__Civilized_8cs.html":[2,0,0,2020],
 "Zone__Civilized_8cs_source.html":[2,0,0,2020],
 "Zone__CurryRuinDungeon_8cs.html":[2,0,0,2022],
 "Zone__CurryRuinDungeon_8cs_source.html":[2,0,0,2022],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "classABILITY.html#a9de4d8f8574a673e43c419ed21075cc1":[1,0,11,92],
 "classABILITY.html#aa74f8fa720ebd9ab23d4e1be983183d8":[1,0,11,126],
 "classABILITY.html#aada6738a3c3390753d4cba8a522d4879":[1,0,11,142],
-"classABILITY.html#aaed984638cef5ccf4f2c66758a14d1c2":[1,0,11,96],
-"classABILITY.html#aaf7d7682639e944877dd826d9cc29e33":[1,0,11,35],
-"classABILITY.html#aafd756d8fcc9bd77a02390c735ca8bcc":[1,0,11,28]
+"classABILITY.html#aaed984638cef5ccf4f2c66758a14d1c2":[1,0,11,96]
 };

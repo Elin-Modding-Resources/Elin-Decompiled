@@ -1,5 +1,13 @@
 var NAVTREEINDEX122 =
 {
+"classTraitFakeObj.html#aa827cfbf5a5f928eceea3833889e9158":[1,0,1625,1],
+"classTraitFakeTile.html":[1,0,1626],
+"classTraitFakeTile.html#a78976e2f1250fb1f2119052c5aaf7c94":[1,0,1626,3],
+"classTraitFakeTile.html#aa6f4895620e4a96622b0757e8d02d6aa":[1,0,1626,1],
+"classTraitFakeTile.html#ab62aa8fa1db81812d697998be2201dcd":[1,0,1626,2],
+"classTraitFakeTile.html#afbdb02dd08e9fbc41fad11da8061b1f3":[1,0,1626,0],
+"classTraitFarmChest.html":[1,0,1627],
+"classTraitFarmChest.html#a24ba7195fdbb804198d179484cbcc0ad":[1,0,1627,1],
 "classTraitFarmChest.html#a2e5532fbdab692f8145e0aa82a785367":[1,0,1627,3],
 "classTraitFarmChest.html#a4ca85bab37d8bcb65709d7b9365e65d1":[1,0,1627,2],
 "classTraitFarmChest.html#a76b65125860a4a94d4d0c6f5c1f59033":[1,0,1627,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitGuildPersonnel.html":[1,0,1692],
 "classTraitGuildPersonnel.html#a5319d30754ed823433c0ed6dc0bf487b":[1,0,1692,0],
 "classTraitHarvest.html":[1,0,1693],
-"classTraitHarvest.html#a9c1d15a0abea72025b0737f4676442db":[1,0,1693,0],
-"classTraitHat.html":[1,0,1694],
-"classTraitHat.html#a83d1f986b3e96c46bd3d19f0ff0e3bf4":[1,0,1694,0],
-"classTraitHealer.html":[1,0,1695],
-"classTraitHealer.html#a3b66d25e0b0c78a93b7199c8083e1ec4":[1,0,1695,0],
-"classTraitHealer.html#a6492fd912057fcb5d8c2a1c9d0456b8d":[1,0,1695,1],
-"classTraitHealer.html#a7a2af2b9ec46403980ff4b9127a54846":[1,0,1695,2],
-"classTraitHealer.html#aed29dabd08d59245961cd78bf7307a8d":[1,0,1695,3],
-"classTraitHearth.html":[1,0,1696]
+"classTraitHarvest.html#a9c1d15a0abea72025b0737f4676442db":[1,0,1693,0]
 };

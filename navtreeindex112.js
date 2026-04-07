@@ -1,5 +1,13 @@
 var NAVTREEINDEX112 =
 {
+"classStatsSleepiness.html#afce6a722b620b8e0c647e070054ccde6":[1,0,1300,0],
+"classStatsStamina.html":[1,0,1301],
+"classStatsStamina.html#a09f89b25c2a08098d107b0b0ae1866e8":[1,0,1301,4],
+"classStatsStamina.html#a1649d3999db40c9240ced251f755710a":[1,0,1301,3],
+"classStatsStamina.html#a3ecab3c16e85f0349747bef6e02c5570":[1,0,1301,6],
+"classStatsStamina.html#a67218ec3fb5177a57aaee68881378d03":[1,0,1301,5],
+"classStatsStamina.html#a67983d0ba1dd4dd99c2d2f1009c5055a":[1,0,1301,7],
+"classStatsStamina.html#ab9292a777cda0a1bbd330f54689e5235":[1,0,1301,2],
 "classStatsStamina.html#ac20d64fa0645b5ada9bccf70ce9c31c4":[1,0,1301,8],
 "classStatsStamina.html#ac9e43b59e611cc22dfcb22855fb6c223":[1,0,1301,0],
 "classStatsStamina.html#add1c9f063d3d8f95d421e5e920c7d085":[1,0,1301,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX112 =
 "classTactics.html":[1,0,1314],
 "classTactics.html#a069dc2818e00392d1b7515e3f3a5dd3b":[1,0,1314,8],
 "classTactics.html#a0cdc56dac52fbcabcc8678fffbd985cb":[1,0,1314,18],
-"classTactics.html#a183137ef63a14ffb97ce8bdec546306c":[1,0,1314,14],
-"classTactics.html#a4b75dcef587fc75c23f72917c51dfc1d":[1,0,1314,16],
-"classTactics.html#a51df248f18f84f1f8b446c41ba7d49e7":[1,0,1314,6],
-"classTactics.html#a5dbb92b5bf85148cacc178d8d7643f75":[1,0,1314,5],
-"classTactics.html#a7f5e4d5cecc8c50aab9a55cc0ee74dc3":[1,0,1314,11],
-"classTactics.html#a835f143a21af573d527c515521cceb67":[1,0,1314,1],
-"classTactics.html#a85c1fcd50eefde87cdd05d92d5e2c31a":[1,0,1314,10],
-"classTactics.html#a8a9acef5488b9b142e3eb395836a09b2":[1,0,1314,7],
-"classTactics.html#a8fb9e3bcde63fcc7cc5245962fd1f2b7":[1,0,1314,13]
+"classTactics.html#a183137ef63a14ffb97ce8bdec546306c":[1,0,1314,14]
 };

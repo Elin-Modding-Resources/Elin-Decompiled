@@ -14,6 +14,7 @@ var classAffinity =
       [ "LoveLove", "classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58a7d7cb5df3bb5c280343b35b0e8295b3f", null ],
       [ "LoveLoveLove", "classAffinity.html#a1be2612ec02309c56e5c6ecdbdbd8a58a82c1f4eb70c7459e845782bd39e9f902", null ]
     ] ],
+    [ "CanBecomeMama", "classAffinity.html#ab33707952497a7baa0eb69b498c89f5e", null ],
     [ "CanForceTradeEquip", "classAffinity.html#aa96f600c75595d5f0192acdd47f68652", null ],
     [ "CanGiveCard", "classAffinity.html#abe00f9f7c0aac303535c88fec5d6d9c5", null ],
     [ "CanInvite", "classAffinity.html#a14c112230e1d7c7a0d75ef4c020b40f6", null ],

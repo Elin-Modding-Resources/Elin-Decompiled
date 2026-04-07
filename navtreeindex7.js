@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a5c6ba25104401c9ee0650230fc6ba413":[2,0,0,3,33,0,27],
 "FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a5e920a170bf5c13903501ebee13e041e":[2,0,0,3,33,0,34],
 "FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a61ee5a22cd5f14ed4e48eb5611031e74":[2,0,0,3,33,0,9],
 "FontColor_8cs.html#a38781c7178610f85215f87793e99ed51a63191e4ece37523c9fe6bb62a5e64d45":[2,0,0,3,33,0,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "GrowSystemWheat_8cs.html":[2,0,0,594],
 "GrowSystemWheat_8cs_source.html":[2,0,0,594],
 "GrowSystem_8cs.html":[2,0,0,576],
-"GrowSystem_8cs_source.html":[2,0,0,576],
-"GuildFighter_8cs.html":[2,0,0,597]
+"GrowSystem_8cs_source.html":[2,0,0,576]
 };

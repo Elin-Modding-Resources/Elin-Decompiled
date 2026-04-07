@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"TraitFarmChest_8cs_source.html":[2,0,0,1514],
+"TraitFarris_8cs.html":[2,0,0,1515],
 "TraitFarris_8cs_source.html":[2,0,0,1515],
 "TraitFelmera_8cs.html":[2,0,0,1516],
 "TraitFelmera_8cs_source.html":[2,0,0,1516],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "TraitMerchantEcopo_8cs_source.html":[2,0,0,1638],
 "TraitMerchantExotic_8cs.html":[2,0,0,1639],
 "TraitMerchantExotic_8cs_source.html":[2,0,0,1639],
-"TraitMerchantFestival_8cs.html":[2,0,0,1640],
-"TraitMerchantFestival_8cs_source.html":[2,0,0,1640],
-"TraitMerchantFireworks_8cs.html":[2,0,0,1641]
+"TraitMerchantFestival_8cs.html":[2,0,0,1640]
 };

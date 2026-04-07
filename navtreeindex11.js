@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"MapMetaData_8cs_source.html":[2,0,0,851],
 "MapPiece_8cs.html":[2,0,0,852],
 "MapPiece_8cs_source.html":[2,0,0,852],
 "MapSubset_8cs.html":[2,0,0,853],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "PopperManager_8cs.html":[2,0,0,3,77],
 "PopperManager_8cs_source.html":[2,0,0,3,77],
 "Popper_8cs.html":[2,0,0,3,76],
-"Popper_8cs_source.html":[2,0,0,3,76],
-"PopupManager_8cs.html":[2,0,0,922]
+"Popper_8cs_source.html":[2,0,0,3,76]
 };
