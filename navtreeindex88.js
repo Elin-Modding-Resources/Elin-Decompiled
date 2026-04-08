@@ -1,5 +1,6 @@
 var NAVTREEINDEX88 =
 {
+"classMsgLog.html#ad8cfe01d45c512d230a876870fc6ab7c":[1,0,940,7],
 "classMsgLog.html#af9aaf76bd9bad68e380a5dab31ed82c3":[1,0,940,1],
 "classMsgLog_1_1Data.html":[1,0,940,0],
 "classMsgLog_1_1Data.html#a575027ceee770aa9b9a3bb6e69e9b5d1":[1,0,940,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX88 =
 "classPCOrbit.html#aafc0bf3ad1c68e105b4382599739fda3":[1,0,977,0],
 "classPCOrbit.html#ad68fe6e8974cb587e9ef81092b3262e1":[1,0,977,7],
 "classPOIMap.html":[1,0,984],
-"classPOIMap.html#a2404b6a75215d3199290443b4b826585":[1,0,984,3],
-"classPOIMap.html#a3106b908cd8fabfa00864b25c9c88259":[1,0,984,6]
+"classPOIMap.html#a2404b6a75215d3199290443b4b826585":[1,0,984,3]
 };

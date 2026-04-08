@@ -1,5 +1,9 @@
 var NAVTREEINDEX123 =
 {
+"classTraitGuildPersonnel.html":[1,0,1692],
+"classTraitGuildPersonnel.html#a5319d30754ed823433c0ed6dc0bf487b":[1,0,1692,0],
+"classTraitHarvest.html":[1,0,1693],
+"classTraitHarvest.html#a9c1d15a0abea72025b0737f4676442db":[1,0,1693,0],
 "classTraitHat.html":[1,0,1694],
 "classTraitHat.html#a83d1f986b3e96c46bd3d19f0ff0e3bf4":[1,0,1694,0],
 "classTraitHealer.html":[1,0,1695],
@@ -245,9 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitMerchantBlack.html#aaaee57988bd078678deba34c5ba43121":[1,0,1744,1],
 "classTraitMerchantBlack.html#ab7b5016580ce7553776144b5b0eb64e6":[1,0,1744,2],
 "classTraitMerchantBook.html":[1,0,1745],
-"classTraitMerchantBook.html#a115cbd0d0309a7724e22ad4fdb6386f7":[1,0,1745,1],
-"classTraitMerchantBook.html#ad722ebe739a5592e8ca6c1ec91d9463e":[1,0,1745,0],
-"classTraitMerchantBooze.html":[1,0,1746],
-"classTraitMerchantBooze.html#a8421907c2aa603915ee4f9e73ffcf0c0":[1,0,1746,0],
-"classTraitMerchantBread.html":[1,0,1747]
+"classTraitMerchantBook.html#a115cbd0d0309a7724e22ad4fdb6386f7":[1,0,1745,1]
 };

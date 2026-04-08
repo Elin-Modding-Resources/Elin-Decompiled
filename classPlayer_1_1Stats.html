@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.292 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly</span>
    </div>
   </td>
  </tr>
@@ -193,6 +193,8 @@ Properties</h2></td></tr>
 <tr class="separator:a56a973aa8b004dd419ce952b791210ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84e326e192127f9a31c6e8e110d20f30"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Stats.html#a84e326e192127f9a31c6e8e110d20f30">clean</a><code> [get, set]</code></td></tr>
 <tr class="separator:a84e326e192127f9a31c6e8e110d20f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50466439b2c84dbac65359f06701ee4"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer_1_1Stats.html#ac50466439b2c84dbac65359f06701ee4">mama</a><code> [get, set]</code></td></tr>
+<tr class="separator:ac50466439b2c84dbac65359f06701ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classEClass"><td colspan="2" onclick="javascript:toggleInherit('properties_classEClass')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a012d65ced13d1cf54c6776a5d29df3c3 inherit properties_classEClass"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGame.html">Game</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a><code> [get]</code></td></tr>
 <tr class="separator:a012d65ced13d1cf54c6776a5d29df3c3 inherit properties_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,36 +298,36 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00236">236</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>        {</div>
-<div class="line"><span class="lineno">  238</span>            <span class="keywordtype">long</span> p = 0L;</div>
-<div class="line"><span class="lineno">  239</span>            <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  240</span>            SetBonus(1000000000, 50000);</div>
-<div class="line"><span class="lineno">  241</span>            SetBonus(100000000, 20000);</div>
-<div class="line"><span class="lineno">  242</span>            SetBonus(10000000, 10000);</div>
-<div class="line"><span class="lineno">  243</span>            SetBonus(500000, 5000);</div>
-<div class="line"><span class="lineno">  244</span>            SetBonus(250000, 3000);</div>
-<div class="line"><span class="lineno">  245</span>            SetBonus(100000, 2000);</div>
-<div class="line"><span class="lineno">  246</span>            SetBonus(20000, 1000);</div>
-<div class="line"><span class="lineno">  247</span>            SetBonus(6000, 500);</div>
-<div class="line"><span class="lineno">  248</span>            SetBonus(2000, 200);</div>
-<div class="line"><span class="lineno">  249</span>            SetBonus(0, 100);</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)p;</div>
-<div class="line"><span class="lineno">  251</span>            <span class="keywordtype">void</span> SetBonus(<span class="keywordtype">int</span> threshold, <span class="keywordtype">int</span> div)</div>
-<div class="line"><span class="lineno">  252</span>            {</div>
-<div class="line"><span class="lineno">  253</span>                <span class="keywordflow">if</span> (_a &gt;= threshold)</div>
-<div class="line"><span class="lineno">  254</span>                {</div>
-<div class="line"><span class="lineno">  255</span>                    p += (_a - threshold) / div;</div>
-<div class="line"><span class="lineno">  256</span>                    <span class="keywordflow">if</span> (first)</div>
-<div class="line"><span class="lineno">  257</span>                    {</div>
-<div class="line"><span class="lineno">  258</span>                        <a class="code hl_variable" href="classPlayer_1_1Stats.html#a99ddbf0bf5fe620d4c828714d494c6b0">lastShippingExp</a> = (int)((_a - threshold) % div);</div>
-<div class="line"><span class="lineno">  259</span>                        <a class="code hl_variable" href="classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007">lastShippingExpMax</a> = div;</div>
-<div class="line"><span class="lineno">  260</span>                        first = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  261</span>                    }</div>
-<div class="line"><span class="lineno">  262</span>                    _a = threshold;</div>
-<div class="line"><span class="lineno">  263</span>                }</div>
-<div class="line"><span class="lineno">  264</span>            }</div>
-<div class="line"><span class="lineno">  265</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00248">248</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  249</span>        {</div>
+<div class="line"><span class="lineno">  250</span>            <span class="keywordtype">long</span> p = 0L;</div>
+<div class="line"><span class="lineno">  251</span>            <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  252</span>            SetBonus(1000000000, 50000);</div>
+<div class="line"><span class="lineno">  253</span>            SetBonus(100000000, 20000);</div>
+<div class="line"><span class="lineno">  254</span>            SetBonus(10000000, 10000);</div>
+<div class="line"><span class="lineno">  255</span>            SetBonus(500000, 5000);</div>
+<div class="line"><span class="lineno">  256</span>            SetBonus(250000, 3000);</div>
+<div class="line"><span class="lineno">  257</span>            SetBonus(100000, 2000);</div>
+<div class="line"><span class="lineno">  258</span>            SetBonus(20000, 1000);</div>
+<div class="line"><span class="lineno">  259</span>            SetBonus(6000, 500);</div>
+<div class="line"><span class="lineno">  260</span>            SetBonus(2000, 200);</div>
+<div class="line"><span class="lineno">  261</span>            SetBonus(0, 100);</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)p;</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordtype">void</span> SetBonus(<span class="keywordtype">int</span> threshold, <span class="keywordtype">int</span> div)</div>
+<div class="line"><span class="lineno">  264</span>            {</div>
+<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">if</span> (_a &gt;= threshold)</div>
+<div class="line"><span class="lineno">  266</span>                {</div>
+<div class="line"><span class="lineno">  267</span>                    p += (_a - threshold) / div;</div>
+<div class="line"><span class="lineno">  268</span>                    <span class="keywordflow">if</span> (first)</div>
+<div class="line"><span class="lineno">  269</span>                    {</div>
+<div class="line"><span class="lineno">  270</span>                        <a class="code hl_variable" href="classPlayer_1_1Stats.html#a99ddbf0bf5fe620d4c828714d494c6b0">lastShippingExp</a> = (int)((_a - threshold) % div);</div>
+<div class="line"><span class="lineno">  271</span>                        <a class="code hl_variable" href="classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007">lastShippingExpMax</a> = div;</div>
+<div class="line"><span class="lineno">  272</span>                        first = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  273</span>                    }</div>
+<div class="line"><span class="lineno">  274</span>                    _a = threshold;</div>
+<div class="line"><span class="lineno">  275</span>                }</div>
+<div class="line"><span class="lineno">  276</span>            }</div>
+<div class="line"><span class="lineno">  277</span>        }</div>
 <div class="ttc" id="aclassPlayer_1_1Stats_html_a99ddbf0bf5fe620d4c828714d494c6b0"><div class="ttname"><a href="classPlayer_1_1Stats.html#a99ddbf0bf5fe620d4c828714d494c6b0">Player.Stats.lastShippingExp</a></div><div class="ttdeci">int lastShippingExp</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00146">Player.cs:146</a></div></div>
 <div class="ttc" id="aclassPlayer_1_1Stats_html_aa2e29d370c284c2fa60ec6b9fdfcc007"><div class="ttname"><a href="classPlayer_1_1Stats.html#aa2e29d370c284c2fa60ec6b9fdfcc007">Player.Stats.lastShippingExpMax</a></div><div class="ttdeci">int lastShippingExpMax</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l00148">Player.cs:148</a></div></div>
 </div><!-- fragment -->
@@ -420,7 +422,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00075">75</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00149">GameDate.AdvanceDay()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00053">LayerShippingResult.Awake()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00316">AI_Fish.Makefish()</a>, <a class="el" href="ConSleep_8cs_source.html#l00228">ConSleep.OnRemoved()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00649">GrowSystem.PopHarvest()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00716">FactionBranch.ReceivePackages()</a>, <a class="el" href="ContentHallOfFame_8cs_source.html#l00031">ContentHallOfFame.Refresh()</a>, <a class="el" href="WindowChara_8cs_source.html#l00364">WindowChara.RefreshProfile()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00024">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="Chara_8cs_source.html#l05248">Chara.Revive()</a>, <a class="el" href="GameDate_8cs_source.html#l00437">GameDate.ShipLetter()</a>, and <a class="el" href="Zone_8cs_source.html#l03707">Zone.UpdateQuests()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GameDate_8cs_source.html#l00149">GameDate.AdvanceDay()</a>, <a class="el" href="LayerShippingResult_8cs_source.html#l00053">LayerShippingResult.Awake()</a>, <a class="el" href="GameIndex_8cs_source.html#l00070">GameIndex.Create()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00316">AI_Fish.Makefish()</a>, <a class="el" href="ConSleep_8cs_source.html#l00228">ConSleep.OnRemoved()</a>, <a class="el" href="GrowSystem_8cs_source.html#l00649">GrowSystem.PopHarvest()</a>, <a class="el" href="FactionBranch_8cs_source.html#l00716">FactionBranch.ReceivePackages()</a>, <a class="el" href="ContentHallOfFame_8cs_source.html#l00031">ContentHallOfFame.Refresh()</a>, <a class="el" href="WindowChara_8cs_source.html#l00364">WindowChara.RefreshProfile()</a>, <a class="el" href="LayerGlobalMap_8cs_source.html#l00024">LayerGlobalMap.RefreshSummary()</a>, <a class="el" href="Chara_8cs_source.html#l05248">Chara.Revive()</a>, <a class="el" href="GameDate_8cs_source.html#l00437">GameDate.ShipLetter()</a>, and <a class="el" href="Zone_8cs_source.html#l03708">Zone.UpdateQuests()</a>.</p>
 
 </div>
 </div>
@@ -524,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00135">135</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08284">Chara.Divorce()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08288">Chara.Divorce()</a>.</p>
 
 </div>
 </div>
@@ -650,7 +652,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00146">146</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00236">Player.Stats.GetShippingBonus()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00089">LayerShippingResult.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00248">Player.Stats.GetShippingBonus()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00089">LayerShippingResult.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -668,7 +670,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00148">148</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00236">Player.Stats.GetShippingBonus()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00089">LayerShippingResult.Refresh()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Player_8cs_source.html#l00248">Player.Stats.GetShippingBonus()</a>, and <a class="el" href="LayerShippingResult_8cs_source.html#l00089">LayerShippingResult.Refresh()</a>.</p>
 
 </div>
 </div>
@@ -686,7 +688,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00132">132</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08271">Chara.Marry()</a>, and <a class="el" href="Trait_8cs_source.html#l01531">Trait.OnBarter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l08275">Chara.Marry()</a>, and <a class="el" href="Trait_8cs_source.html#l01531">Trait.OnBarter()</a>.</p>
 
 </div>
 </div>
@@ -1025,6 +1027,42 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  174</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00271">AI_Fuck.Finish()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l02343">CoreDebug.Stats()</a>.</p>
+
+</div>
+</div>
+<a id="ac50466439b2c84dbac65359f06701ee4" name="ac50466439b2c84dbac65359f06701ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50466439b2c84dbac65359f06701ee4">&#9670;&#160;</a></span>mama</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Player.Stats.mama</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Player_8cs_source.html#l00236">236</a> of file <a class="el" href="Player_8cs_source.html">Player.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  237</span>        {</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">  239</span>            {</div>
+<div class="line"><span class="lineno">  240</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="classPlayer_1_1Stats.html#ada6b14866ee7fc79fa32cfe4ee13510d">_longs</a>[17];</div>
+<div class="line"><span class="lineno">  241</span>            }</div>
+<div class="line"><span class="lineno">  242</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">  243</span>            {</div>
+<div class="line"><span class="lineno">  244</span>                <a class="code hl_variable" href="classPlayer_1_1Stats.html#ada6b14866ee7fc79fa32cfe4ee13510d">_longs</a>[17] = value;</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="AI__Fuck_8cs_source.html#l00271">AI_Fuck.Finish()</a>.</p>
 
 </div>
 </div>

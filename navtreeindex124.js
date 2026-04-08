@@ -1,5 +1,9 @@
 var NAVTREEINDEX124 =
 {
+"classTraitMerchantBook.html#ad722ebe739a5592e8ca6c1ec91d9463e":[1,0,1745,0],
+"classTraitMerchantBooze.html":[1,0,1746],
+"classTraitMerchantBooze.html#a8421907c2aa603915ee4f9e73ffcf0c0":[1,0,1746,0],
+"classTraitMerchantBread.html":[1,0,1747],
 "classTraitMerchantBread.html#ad8d3e750f17db5fba4fffa2b85f95d8e":[1,0,1747,0],
 "classTraitMerchantDeed.html":[1,0,1748],
 "classTraitMerchantDeed.html#a50502273446dd725a00ed46880c16331":[1,0,1748,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitParcel.html#ae77b3e62de983fd1011245bc3b2008e7":[1,0,1805,4],
 "classTraitParchment.html":[1,0,1806],
 "classTraitParchmentBottle.html":[1,0,1807],
-"classTraitParchmentBottle.html#a0f5aad5e4015eff7b2ee1a8d134df306":[1,0,1807,3],
-"classTraitParchmentBottle.html#a1ecbd27e21ab0836bb4d68bf711cb31c":[1,0,1807,1],
-"classTraitParchmentBottle.html#a22ec5a7ff01f66d6eed64d85104da29f":[1,0,1807,4],
-"classTraitParchmentBottle.html#a959c4d41bb548687eacc1000a1810adb":[1,0,1807,2],
-"classTraitParchmentBottle.html#ab53b457227f881574f9d4dd876051b74":[1,0,1807,0]
+"classTraitParchmentBottle.html#a0f5aad5e4015eff7b2ee1a8d134df306":[1,0,1807,3]
 };

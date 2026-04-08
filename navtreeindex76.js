@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"classInvOwnerRefuel.html#a197f8493f505180c61d51c58e0753f80":[1,0,746,3],
 "classInvOwnerRefuel.html#a58d0ffb426f1cd50fed79c368ee69249":[1,0,746,2],
 "classInvOwnerRefuel.html#a7d2cbed2bb8066ebb499b4b2ac34f8b9":[1,0,746,4],
 "classInvOwnerRefuel.html#a7ff1df68e70e142b32ee1b2fe38fbe87":[1,0,746,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "classLang.html#aa84c85d24328a98729ac206b2ac15d84":[1,0,786,24],
 "classLang.html#ab6c6063b77d22d9ac6f53c789763bf95":[1,0,786,39],
 "classLang.html#ac2c9bc0c43618dc081cafdcbf0c94766":[1,0,786,19],
-"classLang.html#ac72b180753f995dee7ee7754c770e201":[1,0,786,21],
-"classLang.html#ac72c791b12dc4fd790e4054a3fb20d1c":[1,0,786,26]
+"classLang.html#ac72b180753f995dee7ee7754c770e201":[1,0,786,21]
 };

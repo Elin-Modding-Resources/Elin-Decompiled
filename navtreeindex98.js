@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0":[1,0,1107,9],
+"classRecipeSource.html#a131007e755b7e6df83226c0ce1796b50":[1,0,1107,6],
 "classRecipeSource.html#a2266c0dbc3e404d4589c40d1759ab551":[1,0,1107,3],
 "classRecipeSource.html#a2b57efc5ee24c77c9c4ee3d3b578a37d":[1,0,1107,16],
 "classRecipeSource.html#a33b396cd7c68721982ea0efc346a711d":[1,0,1107,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "classReligionMoonShadow.html#ac452bc715e0a01255d5896fea8259adc":[1,0,1132,1],
 "classReligionOblivion.html":[1,0,1133],
 "classReligionOblivion.html#a5f94572db73cf58930a9c9581548407d":[1,0,1133,1],
-"classReligionOblivion.html#ac535bfdc543f8a32d4729bf7c05eb1e8":[1,0,1133,0],
-"classReligionStrife.html":[1,0,1134],
-"classReligionStrife.html#a7579f63b88cc23f159b17db0dfe40dec":[1,0,1134,0]
+"classReligionOblivion.html#ac535bfdc543f8a32d4729bf7c05eb1e8":[1,0,1133,0]
 };

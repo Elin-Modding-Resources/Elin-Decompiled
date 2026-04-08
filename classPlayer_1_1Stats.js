@@ -36,6 +36,7 @@ var classPlayer_1_1Stats =
     [ "clean", "classPlayer_1_1Stats.html#a84e326e192127f9a31c6e8e110d20f30", null ],
     [ "eggHatched", "classPlayer_1_1Stats.html#a0d861b9b25b0efa6a81d35b30e4a9482", null ],
     [ "kimo", "classPlayer_1_1Stats.html#a65588225970c26f8a09e91db9ea2a4c8", null ],
+    [ "mama", "classPlayer_1_1Stats.html#ac50466439b2c84dbac65359f06701ee4", null ],
     [ "nefiaBeaten", "classPlayer_1_1Stats.html#a2c1ef75d0893707ccb013935fd5ea8dc", null ],
     [ "plow", "classPlayer_1_1Stats.html#a56a973aa8b004dd419ce952b791210ec", null ],
     [ "shear", "classPlayer_1_1Stats.html#ae6a32ebf4cfd9521a80e2642b7cc37e2", null ]

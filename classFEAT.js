@@ -119,6 +119,7 @@ var classFEAT =
     [ "featReboot", "classFEAT.html#aa5ad2a27d0552cf884e3c5bac72c81a7", null ],
     [ "featResCurse", "classFEAT.html#abcda042decba4b79b3b6903a1672457f", null ],
     [ "featRoran", "classFEAT.html#a501ec6650ed03082d430788cba29d0d8", null ],
+    [ "featSadCreature", "classFEAT.html#ac282c8363a1f03265c502857fb851abf", null ],
     [ "featScavenger", "classFEAT.html#a6debfe996d70a902ac484387509a5d32", null ],
     [ "featServant", "classFEAT.html#a35d12277772936bc8de48bfe34ada1e4", null ],
     [ "featSevenSense", "classFEAT.html#aaaf062d051281d062e67f1db98f2e0ec", null ],

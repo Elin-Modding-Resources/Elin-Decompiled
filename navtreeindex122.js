@@ -1,5 +1,9 @@
 var NAVTREEINDEX122 =
 {
+"classTraitFakeObj.html#a543f43eb6580335efa069266e5dad138":[1,0,1625,4],
+"classTraitFakeObj.html#a6cac8d4ddc3b68a1398e500aaa6b2525":[1,0,1625,5],
+"classTraitFakeObj.html#a7d5ffe7e2d0f9b397a15270c4b532c40":[1,0,1625,7],
+"classTraitFakeObj.html#a828173f868171f8f1f3939547e66c6dc":[1,0,1625,3],
 "classTraitFakeObj.html#aa827cfbf5a5f928eceea3833889e9158":[1,0,1625,1],
 "classTraitFakeTile.html":[1,0,1626],
 "classTraitFakeTile.html#a78976e2f1250fb1f2119052c5aaf7c94":[1,0,1626,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d":[1,0,1691,0],
 "classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9":[1,0,1691,4],
 "classTraitGuildDoorman.html#aadcfa292e43eeb2526e61af2d3fdf94b":[1,0,1691,3],
-"classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3":[1,0,1691,1],
-"classTraitGuildPersonnel.html":[1,0,1692],
-"classTraitGuildPersonnel.html#a5319d30754ed823433c0ed6dc0bf487b":[1,0,1692,0],
-"classTraitHarvest.html":[1,0,1693],
-"classTraitHarvest.html#a9c1d15a0abea72025b0737f4676442db":[1,0,1693,0]
+"classTraitGuildDoorman.html#abc0a9d3e3011f3a5ed3426d70f3542b3":[1,0,1691,1]
 };

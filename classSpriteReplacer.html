@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.292 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly</span>
    </div>
   </td>
  </tr>
@@ -103,6 +103,8 @@ $(document).ready(function(){initNavTree('classSpriteReplacer.html',''); initRes
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a85f20c864603c141f8b9324105b1a0c5"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteReplacer.html#a85f20c864603c141f8b9324105b1a0c5">GetSprite</a> (string suffix=&quot;&quot;)</td></tr>
 <tr class="separator:a85f20c864603c141f8b9324105b1a0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267847f0e77fc22baffd77880c79391a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteReplacer.html#a267847f0e77fc22baffd77880c79391a">Validate</a> ()</td></tr>
+<tr class="separator:a267847f0e77fc22baffd77880c79391a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa06c8e55ff417767bd0582a69a9ed258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteReplacer.html#aa06c8e55ff417767bd0582a69a9ed258">Reload</a> (string id, <a class="el" href="classRenderData.html">RenderData</a> renderData=null)</td></tr>
 <tr class="separator:aa06c8e55ff417767bd0582a69a9ed258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e1e07244267d344fa0b921dd7c522b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteReplacer.html#a3e1e07244267d344fa0b921dd7c522b1">HasSprite</a> (string id, <a class="el" href="classRenderData.html">RenderData</a> renderData=null)</td></tr>
@@ -207,20 +209,20 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00112">112</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
-<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSpriteReplacer.html#a4202ebcd0888ed99208261d5328ec9b4">isChecked</a>.GetValueOrDefault(<span class="keywordtype">id</span>) || (<a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_variable" href="classSpriteData.html#ab49b75ce85ac2ee9e5fa8d88d29c390d">id</a> != <span class="keywordtype">id</span>))</div>
-<div class="line"><span class="lineno">  115</span>        {</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_function" href="classSpriteReplacer.html#aa06c8e55ff417767bd0582a69a9ed258">Reload</a>(<span class="keywordtype">id</span>, renderData);</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00121">121</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classSpriteReplacer.html#a4202ebcd0888ed99208261d5328ec9b4">isChecked</a>.GetValueOrDefault(<span class="keywordtype">id</span>) || (<a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_variable" href="classSpriteData.html#ab49b75ce85ac2ee9e5fa8d88d29c390d">id</a> != <span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  124</span>        {</div>
+<div class="line"><span class="lineno">  125</span>            <a class="code hl_function" href="classSpriteReplacer.html#aa06c8e55ff417767bd0582a69a9ed258">Reload</a>(<span class="keywordtype">id</span>, renderData);</div>
+<div class="line"><span class="lineno">  126</span>        }</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
 <div class="ttc" id="aclassSpriteData_html_ab49b75ce85ac2ee9e5fa8d88d29c390d"><div class="ttname"><a href="classSpriteData.html#ab49b75ce85ac2ee9e5fa8d88d29c390d">SpriteData.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00010">SpriteData.cs:10</a></div></div>
 <div class="ttc" id="aclassSpriteReplacer_html_a3a55fa97a3e1176d3f27e7ae0b640d37"><div class="ttname"><a href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">SpriteReplacer.data</a></div><div class="ttdeci">SpriteData data</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00012">SpriteReplacer.cs:12</a></div></div>
 <div class="ttc" id="aclassSpriteReplacer_html_a4202ebcd0888ed99208261d5328ec9b4"><div class="ttname"><a href="classSpriteReplacer.html#a4202ebcd0888ed99208261d5328ec9b4">SpriteReplacer.isChecked</a></div><div class="ttdeci">Dictionary&lt; string, bool &gt; isChecked</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00016">SpriteReplacer.cs:16</a></div></div>
-<div class="ttc" id="aclassSpriteReplacer_html_aa06c8e55ff417767bd0582a69a9ed258"><div class="ttname"><a href="classSpriteReplacer.html#aa06c8e55ff417767bd0582a69a9ed258">SpriteReplacer.Reload</a></div><div class="ttdeci">void Reload(string id, RenderData renderData=null)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00059">SpriteReplacer.cs:59</a></div></div>
+<div class="ttc" id="aclassSpriteReplacer_html_aa06c8e55ff417767bd0582a69a9ed258"><div class="ttname"><a href="classSpriteReplacer.html#aa06c8e55ff417767bd0582a69a9ed258">SpriteReplacer.Reload</a></div><div class="ttdeci">void Reload(string id, RenderData renderData=null)</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00068">SpriteReplacer.cs:68</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SpriteReplacer_8cs_source.html#l00012">data</a>, <a class="el" href="SpriteData_8cs_source.html#l00010">SpriteData.id</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00016">isChecked</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00059">Reload()</a>.</p>
+<p class="reference">References <a class="el" href="SpriteReplacer_8cs_source.html#l00012">data</a>, <a class="el" href="SpriteData_8cs_source.html#l00010">SpriteData.id</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00016">isChecked</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00068">Reload()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RenderRow_8cs_source.html#l00271">RenderRow.GetSprite()</a>, and <a class="el" href="CardActor_8cs_source.html#l00103">CardActor.OnRender()</a>.</p>
 
@@ -328,65 +330,102 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00059">59</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
-<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>.Clear();</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403">dictModItems</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
-<div class="line"><span class="lineno">   66</span>            {</div>
-<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">foreach</span> (var (text3, path) in <a class="code hl_variable" href="classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403">dictModItems</a>)</div>
-<div class="line"><span class="lineno">   68</span>                {</div>
-<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">if</span> (text3.StartsWith(<span class="keywordtype">id</span>))</div>
-<div class="line"><span class="lineno">   70</span>                    {</div>
-<div class="line"><span class="lineno">   71</span>                        <span class="keywordtype">string</span> text4 = text3[<span class="keywordtype">id</span>.Length..];</div>
-<div class="line"><span class="lineno">   72</span>                        <a class="code hl_class" href="classSpriteData.html">SpriteData</a> spriteData = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteData.html">SpriteData</a></div>
-<div class="line"><span class="lineno">   73</span>                        {</div>
-<div class="line"><span class="lineno">   74</span>                            path = path</div>
-<div class="line"><span class="lineno">   75</span>                        };</div>
-<div class="line"><span class="lineno">   76</span>                        spriteData.<a class="code hl_function" href="classSpriteData.html#a067129c7182d547ab1b051543814d315">Init</a>();</div>
-<div class="line"><span class="lineno">   77</span>                        <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>[text4] = spriteData;</div>
-<div class="line"><span class="lineno">   78</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;#sprite replacer init &#39;&quot;</span> + text4 + <span class="stringliteral">&quot;&#39; at &quot;</span> + path.ShortPath());</div>
-<div class="line"><span class="lineno">   79</span>                    }</div>
-<div class="line"><span class="lineno">   80</span>                }</div>
-<div class="line"><span class="lineno">   81</span>                <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>.TryGetValue(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>            }</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   84</span>            {</div>
-<div class="line"><span class="lineno">   85</span>                <span class="keywordtype">string</span> text5 = CorePath.packageCore + <span class="stringliteral">&quot;Texture/Item/&quot;</span> + id;</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">if</span> (!File.Exists(text5 + <span class="stringliteral">&quot;.png&quot;</span>) &amp;&amp; renderData != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   87</span>                {</div>
-<div class="line"><span class="lineno">   88</span>                    text5 = CorePath.packageCore + <span class="stringliteral">&quot;Texture/Item/&quot;</span> + renderData.name;</div>
+<p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00068">68</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>.Clear();</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403">dictModItems</a>.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">foreach</span> (var (text3, path) in <a class="code hl_variable" href="classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403">dictModItems</a>)</div>
+<div class="line"><span class="lineno">   77</span>                {</div>
+<div class="line"><span class="lineno">   78</span>                    <span class="keywordflow">if</span> (text3.StartsWith(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">   79</span>                    {</div>
+<div class="line"><span class="lineno">   80</span>                        <span class="keywordtype">string</span> text4 = text3[<span class="keywordtype">id</span>.Length..];</div>
+<div class="line"><span class="lineno">   81</span>                        <a class="code hl_class" href="classSpriteData.html">SpriteData</a> spriteData = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteData.html">SpriteData</a></div>
+<div class="line"><span class="lineno">   82</span>                        {</div>
+<div class="line"><span class="lineno">   83</span>                            path = path</div>
+<div class="line"><span class="lineno">   84</span>                        };</div>
+<div class="line"><span class="lineno">   85</span>                        spriteData.<a class="code hl_function" href="classSpriteData.html#a067129c7182d547ab1b051543814d315">Init</a>();</div>
+<div class="line"><span class="lineno">   86</span>                        <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>[text4] = spriteData;</div>
+<div class="line"><span class="lineno">   87</span>                        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;#sprite replacer init &#39;&quot;</span> + text4 + <span class="stringliteral">&quot;&#39; at &quot;</span> + path.ShortPath());</div>
+<div class="line"><span class="lineno">   88</span>                    }</div>
 <div class="line"><span class="lineno">   89</span>                }</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">if</span> (File.Exists(text5 + <span class="stringliteral">&quot;.png&quot;</span>))</div>
-<div class="line"><span class="lineno">   91</span>                {</div>
-<div class="line"><span class="lineno">   92</span>                    <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteData.html">SpriteData</a></div>
-<div class="line"><span class="lineno">   93</span>                    {</div>
-<div class="line"><span class="lineno">   94</span>                        path = text5</div>
-<div class="line"><span class="lineno">   95</span>                    };</div>
-<div class="line"><span class="lineno">   96</span>                    <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_function" href="classSpriteData.html#a067129c7182d547ab1b051543814d315">Init</a>();</div>
-<div class="line"><span class="lineno">   97</span>                    <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>[<span class="stringliteral">&quot;&quot;</span>] = <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>;</div>
+<div class="line"><span class="lineno">   90</span>                <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>.TryGetValue(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   91</span>            }</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordtype">string</span> text5 = CorePath.packageCore + <span class="stringliteral">&quot;Texture/Item/&quot;</span> + id;</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">if</span> (!File.Exists(text5 + <span class="stringliteral">&quot;.png&quot;</span>) &amp;&amp; renderData != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   96</span>                {</div>
+<div class="line"><span class="lineno">   97</span>                    text5 = CorePath.packageCore + <span class="stringliteral">&quot;Texture/Item/&quot;</span> + renderData.name;</div>
 <div class="line"><span class="lineno">   98</span>                }</div>
-<div class="line"><span class="lineno">   99</span>            }</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  101</span>            {</div>
-<div class="line"><span class="lineno">  102</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;:&quot;</span> + <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a>);</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><span class="lineno">  106</span>        {</div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;#sprite error fetching sprite replacer:&quot;</span> + ex);</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="classSpriteReplacer.html#a4202ebcd0888ed99208261d5328ec9b4">isChecked</a>[id] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (File.Exists(text5 + <span class="stringliteral">&quot;.png&quot;</span>))</div>
+<div class="line"><span class="lineno">  100</span>                {</div>
+<div class="line"><span class="lineno">  101</span>                    <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteData.html">SpriteData</a></div>
+<div class="line"><span class="lineno">  102</span>                    {</div>
+<div class="line"><span class="lineno">  103</span>                        path = text5</div>
+<div class="line"><span class="lineno">  104</span>                    };</div>
+<div class="line"><span class="lineno">  105</span>                    <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_function" href="classSpriteData.html#a067129c7182d547ab1b051543814d315">Init</a>();</div>
+<div class="line"><span class="lineno">  106</span>                    <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>[<span class="stringliteral">&quot;&quot;</span>] = <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>;</div>
+<div class="line"><span class="lineno">  107</span>                }</div>
+<div class="line"><span class="lineno">  108</span>            }</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  110</span>            {</div>
+<div class="line"><span class="lineno">  111</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;:&quot;</span> + <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>.<a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a>);</div>
+<div class="line"><span class="lineno">  112</span>            }</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;#sprite error fetching sprite replacer:&quot;</span> + ex);</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_variable" href="classSpriteReplacer.html#a4202ebcd0888ed99208261d5328ec9b4">isChecked</a>[id] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassSpriteData_html_a8d5f029eac023ca0beb69ad66cfe5f38"><div class="ttname"><a href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">SpriteData.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00012">SpriteData.cs:12</a></div></div>
 <div class="ttc" id="aclassSpriteReplacer_html_aad0ebd65369f6c15ab30497b69b62403"><div class="ttname"><a href="classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403">SpriteReplacer.dictModItems</a></div><div class="ttdeci">static Dictionary&lt; string, string &gt; dictModItems</div><div class="ttdef"><b>Definition:</b> <a href="SpriteReplacer_8cs_source.html#l00010">SpriteReplacer.cs:10</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SpriteReplacer_8cs_source.html#l00012">data</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00010">dictModItems</a>, <a class="el" href="SpriteData_8cs_source.html#l00028">SpriteData.Init()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00016">isChecked</a>, <a class="el" href="SpriteData_8cs_source.html#l00012">SpriteData.path</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00014">suffixes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00112">HasSprite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00121">HasSprite()</a>.</p>
+
+</div>
+</div>
+<a id="a267847f0e77fc22baffd77880c79391a" name="a267847f0e77fc22baffd77880c79391a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267847f0e77fc22baffd77880c79391a">&#9670;&#160;</a></span>Validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteReplacer.Validate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00059">59</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        <a class="code hl_variable" href="classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37">data</a>?.<a class="code hl_function" href="classSpriteData.html#a9610c941e83f99180123ba77377656bc">Validate</a>();</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpriteData.html">SpriteData</a> value <span class="keywordflow">in</span> <a class="code hl_variable" href="classSpriteReplacer.html#a0b6aeb5cece11bc1e139cfdce0428cc9">suffixes</a>.Values)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            value?.<a class="code hl_function" href="classSpriteData.html#a9610c941e83f99180123ba77377656bc">Validate</a>();</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassSpriteData_html_a9610c941e83f99180123ba77377656bc"><div class="ttname"><a href="classSpriteData.html#a9610c941e83f99180123ba77377656bc">SpriteData.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00095">SpriteData.cs:95</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SpriteReplacer_8cs_source.html#l00012">data</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00014">suffixes</a>, and <a class="el" href="SpriteData_8cs_source.html#l00095">SpriteData.Validate()</a>.</p>
 
 </div>
 </div>
@@ -405,7 +444,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00012">12</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00775">CardRenderer.GetPref()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00112">HasSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00018">ListSkins()</a>, <a class="el" href="CardActor_8cs_source.html#l00103">CardActor.OnRender()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00023">LayerEditSkin.RefreshImage()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00059">Reload()</a>, <a class="el" href="Card_8cs_source.html#l06367">Card.SetImage()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CardRenderer_8cs_source.html#l00775">CardRenderer.GetPref()</a>, <a class="el" href="Chara_8cs_source.html#l06847">Chara.GetSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00121">HasSprite()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00018">ListSkins()</a>, <a class="el" href="CardActor_8cs_source.html#l00103">CardActor.OnRender()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00023">LayerEditSkin.RefreshImage()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00068">Reload()</a>, <a class="el" href="Card_8cs_source.html#l06367">Card.SetImage()</a>, <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00059">Validate()</a>.</p>
 
 </div>
 </div>
@@ -431,7 +470,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00010">10</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModPackage_8cs_source.html#l00095">ModPackage.ParseTexture()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00059">Reload()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModPackage_8cs_source.html#l00095">ModPackage.ParseTexture()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00068">Reload()</a>.</p>
 
 </div>
 </div>
@@ -475,7 +514,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00016">16</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00112">HasSprite()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00059">Reload()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00121">HasSprite()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00068">Reload()</a>.</p>
 
 </div>
 </div>
@@ -493,7 +532,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00014">14</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00050">GetSprite()</a>, <a class="el" href="CardActor_8cs_source.html#l00103">CardActor.OnRender()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00059">Reload()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00050">GetSprite()</a>, <a class="el" href="CardActor_8cs_source.html#l00103">CardActor.OnRender()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00068">Reload()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00059">Validate()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX143 =
 {
+"classZoneEventSiege.html#a3fcdb3d904089d1ddb7e91f9b7645b55":[1,0,2278,0],
+"classZoneEventSiege.html#a5b040d0edba449ad82d0f26d2e4aeead":[1,0,2278,4],
+"classZoneEventSiege.html#a5c7752d79885ac08373b0e02202b73d2":[1,0,2278,16],
+"classZoneEventSiege.html#a6547da0955fc02be6ef5beb5a4e6b961":[1,0,2278,8],
 "classZoneEventSiege.html#a823073e79fc2ea7ce42d0f153528660d":[1,0,2278,9],
 "classZoneEventSiege.html#a82dadfa900a145e1c652f8996aa0f50d":[1,0,2278,10],
 "classZoneEventSiege.html#a8e3d4aebbbb7009f9bb4399fcdbfef89":[1,0,2278,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX143 =
 "classZone__CurryRuinDungeon.html#ae4ca84f6a0de0717081820449bdd6bf7":[1,0,2193,6],
 "classZone__CursedManor.html":[1,0,2194],
 "classZone__CursedManor.html#a121b9fe5f94519d85ea40c5b7265f6bb":[1,0,2194,1],
-"classZone__CursedManor.html#aa150c9205a532a69a04e4b6689f447ea":[1,0,2194,0],
-"classZone__CursedManor.html#aa1b0cf17c11a73667228a45a847a75bf":[1,0,2194,2],
-"classZone__CursedManor.html#adc56f3b2a1f8b9c026e4c3c450184e90":[1,0,2194,3],
-"classZone__CursedManor.html#add100cf842a97b6a534f444e15db9700":[1,0,2194,4],
-"classZone__CursedManorDungeon.html":[1,0,2195]
+"classZone__CursedManor.html#aa150c9205a532a69a04e4b6689f447ea":[1,0,2194,0]
 };

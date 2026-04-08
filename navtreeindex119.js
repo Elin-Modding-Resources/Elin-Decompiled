@@ -1,5 +1,9 @@
 var NAVTREEINDEX119 =
 {
+"classTraitBambi.html#a64a6cf65ba718fcf0665ded5ba64a18d":[1,0,1472,1],
+"classTraitBambi.html#af2a1756b3261e24ece7bd0e5f751948f":[1,0,1472,0],
+"classTraitBananaPeel.html":[1,0,1473],
+"classTraitBananaPeel.html#a35f6bb6198d4cc5d009c42e3cec00d4e":[1,0,1473,3],
 "classTraitBananaPeel.html#a693332211aa44d8fa431813a0e52f2cb":[1,0,1473,1],
 "classTraitBananaPeel.html#ae543ae587c520f715a768884cf96bb49":[1,0,1473,0],
 "classTraitBananaPeel.html#af627480fad2384e3ff463de101b8c474":[1,0,1473,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitChair.html":[1,0,1524],
 "classTraitChangingRoom.html":[1,0,1525],
 "classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1525,0],
-"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1525,1],
-"classTraitChara.html":[1,0,1526],
-"classTraitChara.html#a082aebc8ded8a214962006a21717b046":[1,0,1526,4],
-"classTraitChara.html#a1cb2d15f296e190a9b93880a7ddbf2c1":[1,0,1526,12],
-"classTraitChara.html#a2086848ac881113e85fd2f5f2cb7dbe1":[1,0,1526,27]
+"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1525,1]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX110 =
 {
+"classSourceTactics_1_1Row.html#a4c314cbd164a840f91e1a2913bbe48dc":[1,0,1263,0,8],
+"classSourceTactics_1_1Row.html#a4d6a275d49b40b49cfae4651ac109c43":[1,0,1263,0,1],
 "classSourceTactics_1_1Row.html#a52df1f501d5334099f5ac2ea1ae4d688":[1,0,1263,0,5],
 "classSourceTactics_1_1Row.html#a55884a794f58754015614815e4e42f49":[1,0,1263,0,7],
 "classSourceTactics_1_1Row.html#a56e8fcbaab8c75b7c3bef7c94d752f03":[1,0,1263,0,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX110 =
 "classSpatialManager.html#ac0eadafc4e8f266aefee812d3d0924c0":[1,0,1271,7],
 "classSpatialManager.html#ac5a9f1d1494e6d4de5af2feaea367a72":[1,0,1271,10],
 "classSpatialManager.html#aef2c5ad096faa71f9f790dcb47e58326":[1,0,1271,4],
-"classSpatialManager.html#af24c0aa5ca66a0b1d17f8607ce848b9a":[1,0,1271,11],
-"classSpatialManager_1_1GlobalSpatialList.html":[1,0,1271,0],
-"classSpatialManager_1_1GlobalSpatialList.html#a907944d2e810c7f1204aadf438ec2ee4":[1,0,1271,0,0]
+"classSpatialManager.html#af24c0aa5ca66a0b1d17f8607ce848b9a":[1,0,1271,11]
 };

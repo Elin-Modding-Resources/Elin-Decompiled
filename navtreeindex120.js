@@ -1,5 +1,9 @@
 var NAVTREEINDEX120 =
 {
+"classTraitChara.html":[1,0,1526],
+"classTraitChara.html#a082aebc8ded8a214962006a21717b046":[1,0,1526,4],
+"classTraitChara.html#a1cb2d15f296e190a9b93880a7ddbf2c1":[1,0,1526,12],
+"classTraitChara.html#a2086848ac881113e85fd2f5f2cb7dbe1":[1,0,1526,27],
 "classTraitChara.html#a26d1948919de92330634988e012a7e10":[1,0,1526,18],
 "classTraitChara.html#a2bd44c5e5fb7182a0450bfd8139e6fc9":[1,0,1526,3],
 "classTraitChara.html#a2d39a084b220d4016457b1677412c3a3":[1,0,1526,28],
@@ -245,9 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitDeedLostRing.html#a364b80495e9d8e05f6f9ea95e8047d4c":[1,0,1570,0],
 "classTraitDeedRelocate.html":[1,0,1571],
 "classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1571,0],
-"classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1571,1],
-"classTraitDeedWedding.html":[1,0,1572],
-"classTraitDefertilizer.html":[1,0,1573],
-"classTraitDeliveryChest.html":[1,0,1574],
-"classTraitDeliveryChest.html#a120325a952af6fc337e01d0498f9d35f":[1,0,1574,1]
+"classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1571,1]
 };

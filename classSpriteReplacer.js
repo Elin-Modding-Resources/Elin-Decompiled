@@ -4,6 +4,7 @@ var classSpriteReplacer =
     [ "HasSprite", "classSpriteReplacer.html#a3e1e07244267d344fa0b921dd7c522b1", null ],
     [ "ListSkins", "classSpriteReplacer.html#ae80438d18cf1e6ba8a2d7c3f702f5bf6", null ],
     [ "Reload", "classSpriteReplacer.html#aa06c8e55ff417767bd0582a69a9ed258", null ],
+    [ "Validate", "classSpriteReplacer.html#a267847f0e77fc22baffd77880c79391a", null ],
     [ "data", "classSpriteReplacer.html#a3a55fa97a3e1176d3f27e7ae0b640d37", null ],
     [ "dictModItems", "classSpriteReplacer.html#aad0ebd65369f6c15ab30497b69b62403", null ],
     [ "dictSkins", "classSpriteReplacer.html#a88313578a2ab905ddc3e88795168977d", null ],
