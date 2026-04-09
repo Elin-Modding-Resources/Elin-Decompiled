@@ -1,6 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"SpawnSetting_8cs_source.html":[2,0,0,1173],
 "SplashText_8cs.html":[2,0,0,1175],
 "SplashText_8cs_source.html":[2,0,0,1175],
 "SpriteAnimation_8cs.html":[2,0,0,2,79],
@@ -16,6 +15,7 @@ var NAVTREEINDEX15 =
 "SpriteReplacerAnimation_8cs.html":[2,0,0,1179],
 "SpriteReplacerAnimation_8cs_source.html":[2,0,0,1179],
 "SpriteReplacer_8cs.html":[2,0,0,1178],
+"SpriteReplacer_8cs.html#ae5a705b165a78f6de5e375f0fd1b9442":[2,0,0,1178,1],
 "SpriteReplacer_8cs_source.html":[2,0,0,1178],
 "SpriteSheet_8cs.html":[2,0,0,2,81],
 "SpriteSheet_8cs_source.html":[2,0,0,2,81],

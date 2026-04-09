@@ -1,5 +1,10 @@
 var NAVTREEINDEX113 =
 {
+"classTableData.html#a8d09aa604457ec36f3488480fbfafca4":[1,0,1313,2],
+"classTableData.html#ab39bf8be0cad17232aeb3b1e7ee414c8":[1,0,1313,4],
+"classTableData.html#ae8b876123965bdbe133a5c17680f7967":[1,0,1313,1],
+"classTableData_1_1Col.html":[1,0,1313,0],
+"classTableData_1_1Col.html#a1efffe439f3b22644618b44de721dc6c":[1,0,1313,0,0],
 "classTactics.html":[1,0,1314],
 "classTactics.html#a069dc2818e00392d1b7515e3f3a5dd3b":[1,0,1314,8],
 "classTactics.html#a0cdc56dac52fbcabcc8678fffbd985cb":[1,0,1314,18],
@@ -244,10 +249,5 @@ var NAVTREEINDEX113 =
 "classTaskDrawWater.html#a71e1bbf33201820adb710bb7bfef089f":[1,0,1338,3],
 "classTaskDrawWater.html#a797788de93c5cbeabf1db1b365a3f442":[1,0,1338,4],
 "classTaskDrawWater.html#ac92f06b0b777dd4ae5f3235dcb95fa85":[1,0,1338,2],
-"classTaskDrawWater.html#ae4fda6cd123cdeae035893b81ad78e8b":[1,0,1338,7],
-"classTaskDrawWater.html#aefe7c4816ea49b998e2be4750c991319":[1,0,1338,1],
-"classTaskDump.html":[1,0,1339],
-"classTaskDump.html#a570d0a2bc645236b92c502291292dbf5":[1,0,1339,1],
-"classTaskDump.html#a6d7023dedbbabae1a6d77dfa2a794b35":[1,0,1339,3],
-"classTaskDump.html#a81cd57810bcc1275e291083efc02de91":[1,0,1339,2]
+"classTaskDrawWater.html#ae4fda6cd123cdeae035893b81ad78e8b":[1,0,1338,7]
 };

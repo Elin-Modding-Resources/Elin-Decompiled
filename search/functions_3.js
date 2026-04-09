@@ -38,12 +38,13 @@ var searchData=
   ['buildpages_35',['BuildPages',['../classUIBook.html#af85dc41de30ceac932bfaa0247582ae7',1,'UIBook']]],
   ['buildraces_36',['BuildRaces',['../classUICharaMaker.html#a383530ce96edc1da03644ff54fd92903',1,'UICharaMaker']]],
   ['buildrandomabilitylist_37',['BuildRandomAbilityList',['../classCharaAbility.html#af0cba40d33b6f10a36477b55966f8150',1,'CharaAbility']]],
-  ['buildsunmap_38',['BuildSunMap',['../classVirtualDate.html#a5f4735f84f049be8eebd2857ea532fe8',1,'VirtualDate']]],
-  ['buildtabs_39',['BuildTabs',['../classWindow.html#a28efb530112dab3122832f80561ffb06',1,'Window']]],
-  ['buildtextdata_40',['BuildTextData',['../classDramaCustomSequence.html#a1996858ef84bfaac5f620d1a70b8c5ca',1,'DramaCustomSequence']]],
-  ['builduicurrency_41',['BuildUICurrency',['../classInvOwner.html#a298f5f9938948377de584dacd88dc309',1,'InvOwner.BuildUICurrency()'],['../classInvOwnerDraglet.html#a55b2ced5259f24cd2e5246bcdf9e2740',1,'InvOwnerDraglet.BuildUICurrency()'],['../classInvOwnerRecycle.html#a7452fc635b9fcd629fd32d9246115448',1,'InvOwnerRecycle.BuildUICurrency()']]],
-  ['burn_42',['Burn',['../classMap.html#a77355c191cd4630fadb489f99acf227e',1,'Map']]],
-  ['buy_43',['Buy',['../classAI__Shopping.html#a01a70a3b3ef3975f2e9d1b3c5ab2b794',1,'AI_Shopping']]],
-  ['buyslave_44',['BuySlave',['../classCalcMoney.html#a8b8f576c8e9f6ec5a286627cc24b4c1a',1,'CalcMoney']]],
-  ['buyspellbookprice_45',['BuySpellbookPrice',['../classGuildMage.html#a58189178f12635adea355a8199949d95',1,'GuildMage']]]
+  ['buildsuffixdata_38',['BuildSuffixData',['../classSpriteReplacer.html#a5ae1a43f4d4feb5dc7438ff2444356d8',1,'SpriteReplacer']]],
+  ['buildsunmap_39',['BuildSunMap',['../classVirtualDate.html#a5f4735f84f049be8eebd2857ea532fe8',1,'VirtualDate']]],
+  ['buildtabs_40',['BuildTabs',['../classWindow.html#a28efb530112dab3122832f80561ffb06',1,'Window']]],
+  ['buildtextdata_41',['BuildTextData',['../classDramaCustomSequence.html#a1996858ef84bfaac5f620d1a70b8c5ca',1,'DramaCustomSequence']]],
+  ['builduicurrency_42',['BuildUICurrency',['../classInvOwner.html#a298f5f9938948377de584dacd88dc309',1,'InvOwner.BuildUICurrency()'],['../classInvOwnerDraglet.html#a55b2ced5259f24cd2e5246bcdf9e2740',1,'InvOwnerDraglet.BuildUICurrency()'],['../classInvOwnerRecycle.html#a7452fc635b9fcd629fd32d9246115448',1,'InvOwnerRecycle.BuildUICurrency()']]],
+  ['burn_43',['Burn',['../classMap.html#a77355c191cd4630fadb489f99acf227e',1,'Map']]],
+  ['buy_44',['Buy',['../classAI__Shopping.html#a01a70a3b3ef3975f2e9d1b3c5ab2b794',1,'AI_Shopping']]],
+  ['buyslave_45',['BuySlave',['../classCalcMoney.html#a8b8f576c8e9f6ec5a286627cc24b4c1a',1,'CalcMoney']]],
+  ['buyspellbookprice_46',['BuySpellbookPrice',['../classGuildMage.html#a58189178f12635adea355a8199949d95',1,'GuildMage']]]
 ];

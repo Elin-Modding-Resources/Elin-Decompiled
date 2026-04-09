@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -172,7 +172,7 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SpriteData_8cs_source.html#l00016">sprites</a>, and <a class="el" href="SpriteData_8cs_source.html#l00095">Validate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06847">Chara.GetSprite()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="SpriteReplacerAnimation_8cs_source.html#l00034">SpriteReplacerAnimation.SetData()</a>, <a class="el" href="Card_8cs_source.html#l06367">Card.SetImage()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00071">SpriteReplacer.GetSprite()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="SpriteReplacerAnimation_8cs_source.html#l00034">SpriteReplacerAnimation.SetData()</a>, <a class="el" href="Card_8cs_source.html#l06367">Card.SetImage()</a>, and <a class="el" href="CharaRenderer_8cs_source.html#l00059">CharaRenderer.SetOwner()</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteData_8cs_source.html#l00052">LoadAnimationIni()</a>, <a class="el" href="SpriteData_8cs_source.html#l00043">LoadPref()</a>, and <a class="el" href="SpriteData_8cs_source.html#l00012">path</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00018">SpriteReplacer.ListSkins()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00068">SpriteReplacer.Reload()</a>, and <a class="el" href="SpriteReplacerAnimation_8cs_source.html#l00034">SpriteReplacerAnimation.SetData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00112">SpriteReplacer.BuildSuffixData()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, and <a class="el" href="SpriteReplacerAnimation_8cs_source.html#l00034">SpriteReplacerAnimation.SetData()</a>.</p>
 
 </div>
 </div>
@@ -284,38 +284,39 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteData_8cs_source.html#l00105">105</a> of file <a class="el" href="SpriteData_8cs_source.html">SpriteData.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  106</span>    {</div>
-<div class="line"><span class="lineno">  107</span>        Texture2D texture2D = <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(<a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a> + <span class="stringliteral">&quot;.png&quot;</span>);</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(texture2D.width + <span class="stringliteral">&quot;/&quot;</span> + texture2D.height + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a>);</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>)</div>
-<div class="line"><span class="lineno">  110</span>        {</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (texture2D.width != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.width || texture2D.height != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height)</div>
-<div class="line"><span class="lineno">  112</span>            {</div>
-<div class="line"><span class="lineno">  113</span>                <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Reinitialize(texture2D.width, texture2D.height);</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
-<div class="line"><span class="lineno">  115</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.SetPixels32(texture2D.GetPixels32());</div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Apply();</div>
-<div class="line"><span class="lineno">  117</span>            UnityEngine.Object.Destroy(texture2D);</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
-<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  120</span>        {</div>
-<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a> = texture2D;</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordtype">int</span> num = tex.width / <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>;</div>
-<div class="line"><span class="lineno">  123</span>            <span class="keywordtype">int</span> height = <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height;</div>
-<div class="line"><span class="lineno">  124</span>            <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a> = <span class="keyword">new</span> Sprite[<a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>];</div>
-<div class="line"><span class="lineno">  125</span>            Vector2 pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
-<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>; i++)</div>
-<div class="line"><span class="lineno">  127</span>            {</div>
-<div class="line"><span class="lineno">  128</span>                <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a>[i] = Sprite.Create(<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>, <span class="keyword">new</span> Rect(i * num, 0f, num, height), pivot, 100f, 0u, SpriteMeshType.FullRect);</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-<div class="line"><span class="lineno">  131</span>        <a class="code hl_function" href="classSpriteData.html#a8fa7572d9e4778dcb436346bd742b0f3">LoadPref</a>();</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  107</span>        <a class="code hl_function" href="classSpriteData.html#a8fa7572d9e4778dcb436346bd742b0f3">LoadPref</a>();</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_function" href="classSpriteData.html#a4e756733744924365b4712229c4d00db">LoadAnimationIni</a>();</div>
+<div class="line"><span class="lineno">  109</span>        Texture2D texture2D = <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">LoadPNG</a>(<a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a> + <span class="stringliteral">&quot;.png&quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(texture2D.width + <span class="stringliteral">&quot;/&quot;</span> + texture2D.height + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a>);</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>)</div>
+<div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (texture2D.width != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.width || texture2D.height != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height)</div>
+<div class="line"><span class="lineno">  114</span>            {</div>
+<div class="line"><span class="lineno">  115</span>                <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Reinitialize(texture2D.width, texture2D.height);</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.SetPixels32(texture2D.GetPixels32());</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Apply();</div>
+<div class="line"><span class="lineno">  119</span>            UnityEngine.Object.Destroy(texture2D);</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a> = texture2D;</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordtype">int</span> num = tex.width / <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>;</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordtype">int</span> height = <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height;</div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a> = <span class="keyword">new</span> Sprite[<a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>];</div>
+<div class="line"><span class="lineno">  128</span>        Vector2 pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>; i++)</div>
+<div class="line"><span class="lineno">  130</span>        {</div>
+<div class="line"><span class="lineno">  131</span>            <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a>[i] = Sprite.Create(<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>, <span class="keyword">new</span> Rect(i * num, 0f, num, height), pivot, 100f, 0u, SpriteMeshType.FullRect);</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
 <div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
 <div class="ttc" id="aclassIO_html_ae5e5735da261f46af4ae0e268b5bf1cf"><div class="ttname"><a href="classIO.html#ae5e5735da261f46af4ae0e268b5bf1cf">IO.LoadPNG</a></div><div class="ttdeci">static Texture2D LoadPNG(string _path, FilterMode filter=FilterMode.Point)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00465">IO.cs:465</a></div></div>
 <div class="ttc" id="aclassSpriteData_html_a2bb56554ce16f0af909b235b83215517"><div class="ttname"><a href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">SpriteData.tex</a></div><div class="ttdeci">Texture2D tex</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00014">SpriteData.cs:14</a></div></div>
 <div class="ttc" id="aclassSpriteData_html_ac41edb3644f689da6fa292a09a8396f9"><div class="ttname"><a href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">SpriteData.frame</a></div><div class="ttdeci">int frame</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00020">SpriteData.cs:20</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteData_8cs_source.html#l00020">frame</a>, <a class="el" href="SpriteData_8cs_source.html#l00043">LoadPref()</a>, <a class="el" href="SpriteData_8cs_source.html#l00012">path</a>, <a class="el" href="SpriteData_8cs_source.html#l00016">sprites</a>, and <a class="el" href="SpriteData_8cs_source.html#l00014">tex</a>.</p>
+<p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteData_8cs_source.html#l00020">frame</a>, <a class="el" href="SpriteData_8cs_source.html#l00052">LoadAnimationIni()</a>, <a class="el" href="SpriteData_8cs_source.html#l00043">LoadPref()</a>, <a class="el" href="SpriteData_8cs_source.html#l00012">path</a>, <a class="el" href="SpriteData_8cs_source.html#l00016">sprites</a>, and <a class="el" href="SpriteData_8cs_source.html#l00014">tex</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SpriteData_8cs_source.html#l00095">Validate()</a>.</p>
 
@@ -379,7 +380,7 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="SpriteData_8cs_source.html#l00020">frame</a>, <a class="el" href="SpriteData_8cs_source.html#l00012">path</a>, <a class="el" href="SpriteData_8cs_source.html#l00022">scale</a>, and <a class="el" href="SpriteData_8cs_source.html#l00024">time</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteData_8cs_source.html#l00028">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteData_8cs_source.html#l00028">Init()</a>, and <a class="el" href="SpriteData_8cs_source.html#l00105">Load()</a>.</p>
 
 </div>
 </div>
@@ -461,7 +462,7 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SpriteData_8cs_source.html#l00018">date</a>, <a class="el" href="SpriteData_8cs_source.html#l00105">Load()</a>, and <a class="el" href="SpriteData_8cs_source.html#l00012">path</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteData_8cs_source.html#l00089">GetSprite()</a>, <a class="el" href="SpriteData_8cs_source.html#l00083">GetSprites()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00059">SpriteReplacer.Validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteData_8cs_source.html#l00089">GetSprite()</a>, <a class="el" href="SpriteData_8cs_source.html#l00083">GetSprites()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00098">SpriteReplacer.Validate()</a>.</p>
 
 </div>
 </div>
@@ -516,7 +517,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteData_8cs_source.html#l00010">10</a> of file <a class="el" href="SpriteData_8cs_source.html">SpriteData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00121">SpriteReplacer.HasSprite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteReplacer_8cs_source.html#l00169">SpriteReplacer.HasSprite()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +535,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SpriteData_8cs_source.html#l00012">12</a> of file <a class="el" href="SpriteData_8cs_source.html">SpriteData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SpriteData_8cs_source.html#l00028">Init()</a>, <a class="el" href="SpriteData_8cs_source.html#l00105">Load()</a>, <a class="el" href="SpriteData_8cs_source.html#l00052">LoadAnimationIni()</a>, <a class="el" href="SpriteData_8cs_source.html#l00043">LoadPref()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00040">LayerEditSkin.OnClickEdit()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00068">SpriteReplacer.Reload()</a>, and <a class="el" href="SpriteData_8cs_source.html#l00095">Validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SpriteData_8cs_source.html#l00028">Init()</a>, <a class="el" href="SpriteData_8cs_source.html#l00105">Load()</a>, <a class="el" href="SpriteData_8cs_source.html#l00052">LoadAnimationIni()</a>, <a class="el" href="SpriteData_8cs_source.html#l00043">LoadPref()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00040">LayerEditSkin.OnClickEdit()</a>, <a class="el" href="LayerEditSkin_8cs_source.html#l00057">LayerEditSkin.RefreshList()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00130">SpriteReplacer.Reload()</a>, and <a class="el" href="SpriteData_8cs_source.html#l00095">Validate()</a>.</p>
 
 </div>
 </div>

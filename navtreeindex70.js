@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"classGoalEndTurn.html#afef9d655986c1e102ab5dcf79b594e68":[1,0,586,1],
 "classGoalGraze.html":[1,0,587],
 "classGoalGraze.html#a2b1565ee34febf7be0ff0ece785427f5":[1,0,587,0],
 "classGoalGraze.html#aa2efa0d49a8622cfb1d8712b0edf4fb8":[1,0,587,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "classGrowSystemKinoko.html#a8a6d487f4133d9a3529f1c81f6eee891":[1,0,617,3],
 "classGrowSystemKinoko.html#a9baf46e4f24e58cf40b755e28b55be56":[1,0,617,7],
 "classGrowSystemKinoko.html#ac3ff4c25f4969ab353f963d0a2477dc9":[1,0,617,2],
-"classGrowSystemKinoko.html#ad3ecf944a2fabd71d75a486330ac08e2":[1,0,617,4],
-"classGrowSystemKinoko.html#af49878e5da59a94790ccac57ffa1ed78":[1,0,617,0]
+"classGrowSystemKinoko.html#ad3ecf944a2fabd71d75a486330ac08e2":[1,0,617,4]
 };

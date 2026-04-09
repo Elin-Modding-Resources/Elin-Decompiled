@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classGameSetting_1_1TransData.html":[1,0,568,8],
 "classGameSetting_1_1TransData.html#a4f9a112181feb34e224f02ac4d48a4bc":[1,0,568,8,1],
 "classGameSetting_1_1TransData.html#a7a9e08b98ec9d727474754b1b66468ea":[1,0,568,8,2],
 "classGameSetting_1_1TransData.html#aabfa6ead5a8f3f0e2d584dec173f88b9":[1,0,568,8,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "classGoalCombat_1_1ItemAbility.html#a8c7ec2bf97dd92ac046c4b0cf189ff7b":[1,0,585,0,1],
 "classGoalCombat_1_1ItemAbility.html#af05492ba44254c2572f4f77b9d545203":[1,0,585,0,2],
 "classGoalEndTurn.html":[1,0,586],
-"classGoalEndTurn.html#a207648cf696513dbca960c9c1f6adca4":[1,0,586,0],
-"classGoalEndTurn.html#afef9d655986c1e102ab5dcf79b594e68":[1,0,586,1]
+"classGoalEndTurn.html#a207648cf696513dbca960c9c1f6adca4":[1,0,586,0]
 };

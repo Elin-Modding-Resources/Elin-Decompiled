@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -198,33 +198,34 @@ $(document).ready(function(){initNavTree('SpriteData_8cs_source.html',''); initR
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classSpriteData.html#a4f7238b5f2073dfe94ff604134e68cfa">  105</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSpriteData.html#a4f7238b5f2073dfe94ff604134e68cfa">Load</a>()</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        Texture2D texture2D = IO.LoadPNG(<a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a> + <span class="stringliteral">&quot;.png&quot;</span>);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(texture2D.width + <span class="stringliteral">&quot;/&quot;</span> + texture2D.height + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a>);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">if</span> (texture2D.width != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.width || texture2D.height != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height)</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Reinitialize(texture2D.width, texture2D.height);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            }</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.SetPixels32(texture2D.GetPixels32());</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Apply();</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            UnityEngine.Object.Destroy(texture2D);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a> = texture2D;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordtype">int</span> num = tex.width / <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordtype">int</span> height = <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a> = <span class="keyword">new</span> Sprite[<a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>];</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            Vector2 pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>; i++)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a>[i] = Sprite.Create(<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>, <span class="keyword">new</span> Rect(i * num, 0f, num, height), pivot, 100f, 0u, SpriteMeshType.FullRect);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_function" href="classSpriteData.html#a8fa7572d9e4778dcb436346bd742b0f3">LoadPref</a>();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_function" href="classSpriteData.html#a8fa7572d9e4778dcb436346bd742b0f3">LoadPref</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_function" href="classSpriteData.html#a4e756733744924365b4712229c4d00db">LoadAnimationIni</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        Texture2D texture2D = IO.LoadPNG(<a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a> + <span class="stringliteral">&quot;.png&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(texture2D.width + <span class="stringliteral">&quot;/&quot;</span> + texture2D.height + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classSpriteData.html#a8d5f029eac023ca0beb69ad66cfe5f38">path</a>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">if</span> (texture2D.width != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.width || texture2D.height != <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Reinitialize(texture2D.width, texture2D.height);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.SetPixels32(texture2D.GetPixels32());</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.Apply();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            UnityEngine.Object.Destroy(texture2D);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a> = texture2D;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordtype">int</span> num = tex.width / <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordtype">int</span> height = <a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>.height;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a> = <span class="keyword">new</span> Sprite[<a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>];</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        Vector2 pivot = <span class="keyword">new</span> Vector2(0.5f, 0.5f);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSpriteData.html#ac41edb3644f689da6fa292a09a8396f9">frame</a>; i++)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <a class="code hl_variable" href="classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5">sprites</a>[i] = Sprite.Create(<a class="code hl_variable" href="classSpriteData.html#a2bb56554ce16f0af909b235b83215517">tex</a>, <span class="keyword">new</span> Rect(i * num, 0f, num, height), pivot, 100f, 0u, SpriteMeshType.FullRect);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassSourcePref_html"><div class="ttname"><a href="classSourcePref.html">SourcePref</a></div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00010">SourcePref.cs:11</a></div></div>
 <div class="ttc" id="aclassSourcePref_html_aa604b7203b9bda39abf527c27f4e55dc"><div class="ttname"><a href="classSourcePref.html#aa604b7203b9bda39abf527c27f4e55dc">SourcePref.ReadFromIni</a></div><div class="ttdeci">static SourcePref ReadFromIni(string path)</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00385">SourcePref.cs:385</a></div></div>

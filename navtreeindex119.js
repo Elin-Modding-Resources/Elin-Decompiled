@@ -1,5 +1,10 @@
 var NAVTREEINDEX119 =
 {
+"classTraitBall.html":[1,0,1471],
+"classTraitBall.html#a2c60b947e7e99945839070f7418c832a":[1,0,1471,1],
+"classTraitBall.html#a5b7f38443b0af7249248a06af97ebc8c":[1,0,1471,0],
+"classTraitBambi.html":[1,0,1472],
+"classTraitBambi.html#a5b613bd6cfda79105a277f9d6b21ea00":[1,0,1472,2],
 "classTraitBambi.html#a64a6cf65ba718fcf0665ded5ba64a18d":[1,0,1472,1],
 "classTraitBambi.html#af2a1756b3261e24ece7bd0e5f751948f":[1,0,1472,0],
 "classTraitBananaPeel.html":[1,0,1473],
@@ -244,10 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9":[1,0,1522,5],
 "classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1522,2],
 "classTraitCauldron.html":[1,0,1523],
-"classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1523,1],
-"classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1523,0],
-"classTraitChair.html":[1,0,1524],
-"classTraitChangingRoom.html":[1,0,1525],
-"classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1525,0],
-"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1525,1]
+"classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1523,1]
 };

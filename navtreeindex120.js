@@ -1,5 +1,10 @@
 var NAVTREEINDEX120 =
 {
+"classTraitCauldron.html#ac1aa4eb95e423c37c7bd6ce2f1e44b3b":[1,0,1523,0],
+"classTraitChair.html":[1,0,1524],
+"classTraitChangingRoom.html":[1,0,1525],
+"classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1525,0],
+"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1525,1],
 "classTraitChara.html":[1,0,1526],
 "classTraitChara.html#a082aebc8ded8a214962006a21717b046":[1,0,1526,4],
 "classTraitChara.html#a1cb2d15f296e190a9b93880a7ddbf2c1":[1,0,1526,12],
@@ -244,10 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitDeed.html#aa67b89d49deb49ab6a97d33226616440":[1,0,1568,1],
 "classTraitDeed.html#ad3a5f615aa20d8cdd0052fe2e38b672b":[1,0,1568,2],
 "classTraitDeedDivorce.html":[1,0,1569],
-"classTraitDeedDivorce.html#aaf3e290df36320ae262b326e20b0775d":[1,0,1569,0],
-"classTraitDeedLostRing.html":[1,0,1570],
-"classTraitDeedLostRing.html#a364b80495e9d8e05f6f9ea95e8047d4c":[1,0,1570,0],
-"classTraitDeedRelocate.html":[1,0,1571],
-"classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1571,0],
-"classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1571,1]
+"classTraitDeedDivorce.html#aaf3e290df36320ae262b326e20b0775d":[1,0,1569,0]
 };

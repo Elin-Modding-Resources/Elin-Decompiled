@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -90,8 +90,7 @@ $(document).ready(function(){initNavTree('RenderRow_8cs.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">RenderRow.cs File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -102,184 +101,7 @@ $(document).ready(function(){initNavTree('RenderRow_8cs.html',''); initResizable
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderRow.html">RenderRow</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ae5a705b165a78f6de5e375f0fd1b9442"><td class="memItemLeft" align="right" valign="top">$&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RenderRow_8cs.html#ae5a705b165a78f6de5e375f0fd1b9442">_skin</a></td></tr>
-<tr class="separator:ae5a705b165a78f6de5e375f0fd1b9442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ae5a705b165a78f6de5e375f0fd1b9442" name="ae5a705b165a78f6de5e375f0fd1b9442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5a705b165a78f6de5e375f0fd1b9442">&#9670;&#160;</a></span>_skin</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$ _skin</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="RenderRow_8cs_source.html#l00352">352</a> of file <a class="el" href="RenderRow_8cs_source.html">RenderRow.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  353</span>{</div>
-<div class="line"><span class="lineno">  354</span>        sr.sprite = sprite ?? GetSprite(dir, idSkin);</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">if</span> (renderData is <a class="code hl_class" href="classRenderDataThing.html">RenderDataThing</a>)</div>
-<div class="line"><span class="lineno">  356</span>        {</div>
-<div class="line"><span class="lineno">  357</span>            sr.sprite = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a2c5adbdf212528192cbdb9ce9f6d9cba">spriteThingActor</a>;</div>
-<div class="line"><span class="lineno">  358</span>        }</div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordtype">int</span> num = ((matCol == 0) ? 104025 : matCol);</div>
-<div class="line"><span class="lineno">  360</span>        <span class="keywordtype">float</span> num2 = (float)(num / 262144) * 0.01f;</div>
-<div class="line"><span class="lineno">  361</span>        <span class="keywordtype">float</span> num3 = 0.02f;</div>
-<div class="line"><span class="lineno">  362</span>        <span class="keywordtype">float</span> num4 = 0.3f;</div>
-<div class="line"><span class="lineno">  363</span>        <span class="keywordflow">if</span> (num2 != 0f)</div>
-<div class="line"><span class="lineno">  364</span>        {</div>
-<div class="line"><span class="lineno">  365</span>            num3 *= num2;</div>
-<div class="line"><span class="lineno">  366</span>        }</div>
-<div class="line"><span class="lineno">  367</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(num3 * (<span class="keywordtype">float</span>)(num % 262144 / 4096) + num4, num3 * (<span class="keywordtype">float</span>)(num % 4096 / 64) + num4, num3 * (<span class="keywordtype">float</span>)(num % 64) + num4, 1f);</div>
-<div class="line"><span class="lineno">  368</span>        sr.color = color;</div>
-<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">if</span> (setTransform)</div>
-<div class="line"><span class="lineno">  370</span>        {</div>
-<div class="line"><span class="lineno">  371</span>            <span class="keywordtype">float</span> num5 = sr.bounds.max.x - sr.bounds.min.x;</div>
-<div class="line"><span class="lineno">  372</span>            _ = sr.bounds.max;</div>
-<div class="line"><span class="lineno">  373</span>            _ = sr.bounds.min;</div>
-<div class="line"><span class="lineno">  374</span>            sr.transform.localPosition = <span class="keyword">new</span> Vector3(-0.5f * num5, 0f, 0f);</div>
-<div class="line"><span class="lineno">  375</span>        }</div>
-<div class="line"><span class="lineno">  376</span>    }</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classSourcePref.html">SourcePref</a> GetPref()</div>
-<div class="line"><span class="lineno">  379</span>    {</div>
-<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">return</span> pref;</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
-<div class="line"><span class="lineno">  382</span> </div>
-<div class="line"><span class="lineno">  383</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> SetImage(Image image, Sprite sprite = <span class="keyword">null</span>, <span class="keywordtype">int</span> matCol = 0, <span class="keywordtype">bool</span> setNativeSize = <span class="keyword">true</span>, <span class="keywordtype">int</span> dir = 0, <span class="keywordtype">int</span> idSkin = 0, <a class="code hl_class" href="classCard.html">Card</a> <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> = <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  384</span>    {</div>
-<div class="line"><span class="lineno">  385</span>        <span class="keywordtype">bool</span> num = <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span> &amp;&amp; card.isChara &amp;&amp; card.Chara.spriteReplacer != <span class="keyword">null</span> &amp;&amp; !<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>.HasHost;</div>
-<div class="line"><span class="lineno">  386</span>        <a class="code hl_class" href="classSourcePref.html">SourcePref</a> sourcePref = ((<a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a> != <span class="keyword">null</span>) ? <a class="code hl_enumvalue" href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">card</a>.Pref : GetPref());</div>
-<div class="line"><span class="lineno">  387</span>        <a class="code hl_class" href="classRenderData.html">RenderData</a> renderData = (num ? card.renderer.data : this.renderData);</div>
-<div class="line"><span class="lineno">  388</span>        SetImage(image, sprite, matCol, setNativeSize, dir, idSkin, renderData, sourcePref);</div>
-<div class="line"><span class="lineno">  389</span>    }</div>
-<div class="line"><span class="lineno">  390</span> </div>
-<div class="line"><span class="lineno">  391</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> SetImage(Image image, Sprite sprite, <span class="keywordtype">int</span> matCol, <span class="keywordtype">bool</span> setNativeSize, <span class="keywordtype">int</span> dir, <span class="keywordtype">int</span> idSkin, <a class="code hl_class" href="classRenderData.html">RenderData</a> _renderData, <a class="code hl_class" href="classSourcePref.html">SourcePref</a> _pref)</div>
-<div class="line"><span class="lineno">  392</span>    {</div>
-<div class="line"><span class="lineno">  393</span>        image.sprite = sprite ?? GetSprite(dir, idSkin);</div>
-<div class="line"><span class="lineno">  394</span>        <span class="keywordtype">int</span> num = ((matCol == 0) ? 104025 : matCol);</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordtype">float</span> num2 = 0.02f;</div>
-<div class="line"><span class="lineno">  396</span>        <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color = <span class="keyword">new</span> <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>(num2 * (<span class="keywordtype">float</span>)(num % 262144 / 4096), num2 * (<span class="keywordtype">float</span>)(num % 4096 / 64), num2 * (<span class="keywordtype">float</span>)(num % 64), (<span class="keywordtype">float</span>)(num / 262144) * 0.01f);</div>
-<div class="line"><span class="lineno">  397</span>        color.a = 1f;</div>
-<div class="line"><span class="lineno">  398</span>        image.color = color;</div>
-<div class="line"><span class="lineno">  399</span>        RectTransform rectTransform = image.Rect();</div>
-<div class="line"><span class="lineno">  400</span>        rectTransform.pivot = _renderData.imagePivot - <span class="keyword">new</span> Vector2(0.01f * (<span class="keywordtype">float</span>)_pref.<a class="code hl_property" href="classSourcePref.html#a1eb1308badc480c80270846cc913a19c">pivotX</a>, 0.01f * (<span class="keywordtype">float</span>)_pref.<a class="code hl_property" href="classSourcePref.html#ae74d8d440e0b825bb455a8f5b96602f8">pivotY</a>);</div>
-<div class="line"><span class="lineno">  401</span>        <span class="keywordtype">float</span> x = Mathf.Abs(image.transform.localScale.x) * (float)((_tiles == <span class="keyword">null</span> || _tiles.Length == 0 || _tiles[dir % _tiles.Length] &gt;= 0) ? 1 : (-1));</div>
-<div class="line"><span class="lineno">  402</span>        <span class="keywordtype">float</span> y = image.transform.localScale.y;</div>
-<div class="line"><span class="lineno">  403</span>        image.transform.localScale = <span class="keyword">new</span> Vector3(x, y, image.transform.localScale.z);</div>
-<div class="line"><span class="lineno">  404</span>        _pref.<a class="code hl_function" href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">Validate</a>();</div>
-<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">if</span> (setNativeSize)</div>
-<div class="line"><span class="lineno">  406</span>        {</div>
-<div class="line"><span class="lineno">  407</span>            image.SetNativeSize();</div>
-<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">if</span> (_renderData.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.x != 1f || _renderData.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.y != 1f || _pref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> != 0)</div>
-<div class="line"><span class="lineno">  409</span>            {</div>
-<div class="line"><span class="lineno">  410</span>                rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(rectTransform.sizeDelta.x * (_renderData.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.x + (<span class="keywordtype">float</span>)_pref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> * 0.01f), rectTransform.sizeDelta.y * (_renderData.<a class="code hl_variable" href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">imageScale</a>.y + (<span class="keywordtype">float</span>)_pref.<a class="code hl_property" href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">scaleIcon</a> * 0.01f));</div>
-<div class="line"><span class="lineno">  411</span>            }</div>
-<div class="line"><span class="lineno">  412</span>        }</div>
-<div class="line"><span class="lineno">  413</span>    }</div>
-<div class="line"><span class="lineno">  414</span> </div>
-<div class="line"><span class="lineno">  415</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> SetRenderParam(<a class="code hl_class" href="classRenderParam.html">RenderParam</a> p, <a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> mat, <span class="keywordtype">int</span> dir)</div>
-<div class="line"><span class="lineno">  416</span>    {</div>
-<div class="line"><span class="lineno">  417</span>        p.tile = GetTile(mat ?? DefaultMaterial, dir);</div>
-<div class="line"><span class="lineno">  418</span>        p.matColor = GetColorInt(mat ?? DefaultMaterial);</div>
-<div class="line"><span class="lineno">  419</span>        p.mat = mat ?? DefaultMaterial;</div>
-<div class="line"><span class="lineno">  420</span>        p.liquidLv = 0;</div>
-<div class="line"><span class="lineno">  421</span>        p.dir = dir;</div>
-<div class="line"><span class="lineno">  422</span>        p.cell = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  423</span>    }</div>
-<div class="line"><span class="lineno">  424</span> </div>
-<div class="line"><span class="lineno">  425</span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classRenderParam.html">RenderParam</a> GetRenderParam(<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> mat, <span class="keywordtype">int</span> dir, <a class="code hl_class" href="classPoint.html">Point</a> point = <span class="keyword">null</span>, <span class="keywordtype">int</span> bridgeHeight = -1)</div>
-<div class="line"><span class="lineno">  426</span>    {</div>
-<div class="line"><span class="lineno">  427</span>        <a class="code hl_class" href="classRenderParam.html">RenderParam</a> shared = <a class="code hl_class" href="classRenderParam.html">RenderParam</a>.<a class="code hl_variable" href="classRenderParam.html#a92d2ea1a74544a17ca327137272c613a">shared</a>;</div>
-<div class="line"><span class="lineno">  428</span>        shared.tile = GetTile(mat, dir);</div>
-<div class="line"><span class="lineno">  429</span>        shared.matColor = GetColorInt(mat);</div>
-<div class="line"><span class="lineno">  430</span>        shared.mat = mat;</div>
-<div class="line"><span class="lineno">  431</span>        shared.liquidLv = 0;</div>
-<div class="line"><span class="lineno">  432</span>        shared.dir = dir;</div>
-<div class="line"><span class="lineno">  433</span>        shared.cell = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  434</span>        Vector3 vector;</div>
-<div class="line"><span class="lineno">  435</span>        <span class="keywordflow">if</span> (point == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  436</span>        {</div>
-<div class="line"><span class="lineno">  437</span>            shared.color = 11010048f;</div>
-<div class="line"><span class="lineno">  438</span>            vector = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a979937020fe19876f3a7395faeb96a5e">scene</a>.<a class="code hl_variable" href="classScene.html#a4fed7b4258761e1c13852b02ea502564">camSupport</a>.<a class="code hl_variable" href="classCameraSupport.html#a71dcc9dc415aca52eddc1342aa0d2eee">renderPos</a>;</div>
-<div class="line"><span class="lineno">  439</span>            <span class="keywordflow">if</span> (renderData.multiSize)</div>
-<div class="line"><span class="lineno">  440</span>            {</div>
-<div class="line"><span class="lineno">  441</span>                vector.y -= 0.8f;</div>
-<div class="line"><span class="lineno">  442</span>            }</div>
-<div class="line"><span class="lineno">  443</span>        }</div>
-<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  445</span>        {</div>
-<div class="line"><span class="lineno">  446</span>            shared.color = 10485760f;</div>
-<div class="line"><span class="lineno">  447</span>            _ = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#aa115bf6d048542080bc7a185949ade75">screen</a>.<a class="code hl_variable" href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">tileMap</a>;</div>
-<div class="line"><span class="lineno">  448</span>            vector = point.Position(bridgeHeight);</div>
-<div class="line"><span class="lineno">  449</span>        }</div>
-<div class="line"><span class="lineno">  450</span>        shared.x = vector.<a class="code hl_variable" href="classBaseTileMap.html#ad1078733ff1b3228447bfee972767a03">x</a>;</div>
-<div class="line"><span class="lineno">  451</span>        shared.y = vector.y;</div>
-<div class="line"><span class="lineno">  452</span>        shared.z = vector.z;</div>
-<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">return</span> shared;</div>
-<div class="line"><span class="lineno">  454</span>    }</div>
-<div class="line"><span class="lineno">  455</span> </div>
-<div class="line"><span class="lineno">  456</span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetTile(<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> mat, <span class="keywordtype">int</span> dir = 0)</div>
-<div class="line"><span class="lineno">  457</span>    {</div>
-<div class="line"><span class="lineno">  458</span>        <span class="keywordflow">return</span> _tiles[dir % _tiles.Length];</div>
-<div class="line"><span class="lineno">  459</span>    }</div>
-<div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>    <span class="keyword">public</span> <span class="keywordtype">int</span> GetColorInt(<a class="code hl_class" href="classSourceMaterial.html">SourceMaterial</a>.<a class="code hl_class" href="classSourceMaterial_1_1Row.html">Row</a> mat)</div>
-<div class="line"><span class="lineno">  462</span>    {</div>
-<div class="line"><span class="lineno">  463</span>        <span class="keywordflow">if</span> (useAltColor)</div>
-<div class="line"><span class="lineno">  464</span>        {</div>
-<div class="line"><span class="lineno">  465</span>            <span class="keywordflow">if</span> (colorMod != 0)</div>
-<div class="line"><span class="lineno">  466</span>            {</div>
-<div class="line"><span class="lineno">  467</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.altColor, colorMod);</div>
-<div class="line"><span class="lineno">  468</span>            }</div>
-<div class="line"><span class="lineno">  469</span>            <span class="keywordflow">return</span> 104025;</div>
-<div class="line"><span class="lineno">  470</span>        }</div>
-<div class="line"><span class="lineno">  471</span>        <span class="keywordflow">if</span> (colorMod != 0)</div>
-<div class="line"><span class="lineno">  472</span>        {</div>
-<div class="line"><span class="lineno">  473</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="classBaseTileMap.html">BaseTileMap</a>.<a class="code hl_function" href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">GetColorInt</a>(ref mat.matColor, colorMod);</div>
-<div class="line"><span class="lineno">  474</span>        }</div>
-<div class="line"><span class="lineno">  475</span>        <span class="keywordflow">return</span> 104025;</div>
-<div class="line"><span class="lineno">  476</span>    }</div>
-<div class="line"><span class="lineno">  477</span>}</div>
-<div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
-<div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
-<div class="ttc" id="aclassBaseGameScreen_html_ae1cab34d4e704e02792cabba797f1c23"><div class="ttname"><a href="classBaseGameScreen.html#ae1cab34d4e704e02792cabba797f1c23">BaseGameScreen.tileMap</a></div><div class="ttdeci">BaseTileMap tileMap</div><div class="ttdef"><b>Definition:</b> <a href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.cs:114</a></div></div>
-<div class="ttc" id="aclassBaseTileMap_html"><div class="ttname"><a href="classBaseTileMap.html">BaseTileMap</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00005">BaseTileMap.cs:6</a></div></div>
-<div class="ttc" id="aclassBaseTileMap_html_a4ce40943930704595f222254d924a7c5"><div class="ttname"><a href="classBaseTileMap.html#a4ce40943930704595f222254d924a7c5">BaseTileMap.GetColorInt</a></div><div class="ttdeci">static int GetColorInt(ref Color matColor, int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l03740">BaseTileMap.cs:3740</a></div></div>
-<div class="ttc" id="aclassBaseTileMap_html_ad1078733ff1b3228447bfee972767a03"><div class="ttname"><a href="classBaseTileMap.html#ad1078733ff1b3228447bfee972767a03">BaseTileMap.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="BaseTileMap_8cs_source.html#l00248">BaseTileMap.cs:248</a></div></div>
-<div class="ttc" id="aclassCameraSupport_html_a71dcc9dc415aca52eddc1342aa0d2eee"><div class="ttname"><a href="classCameraSupport.html#a71dcc9dc415aca52eddc1342aa0d2eee">CameraSupport.renderPos</a></div><div class="ttdeci">Vector3 renderPos</div><div class="ttdef"><b>Definition:</b> <a href="CameraSupport_8cs_source.html#l00019">CameraSupport.cs:19</a></div></div>
-<div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
-<div class="ttc" id="aclassCoreRef_html_a2c5adbdf212528192cbdb9ce9f6d9cba"><div class="ttname"><a href="classCoreRef.html#a2c5adbdf212528192cbdb9ce9f6d9cba">CoreRef.spriteThingActor</a></div><div class="ttdeci">Sprite spriteThingActor</div><div class="ttdef"><b>Definition:</b> <a href="CoreRef_8cs_source.html#l00401">CoreRef.cs:401</a></div></div>
-<div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
-<div class="ttc" id="aclassCore_html_a174ab976ba96dbcd610d5219de4a85cb"><div class="ttname"><a href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">Core.refs</a></div><div class="ttdeci">CoreRef refs</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00051">Core.cs:51</a></div></div>
-<div class="ttc" id="aclassCore_html_a8ac9331b81131b4034d361e097440c23"><div class="ttname"><a href="classCore.html#a8ac9331b81131b4034d361e097440c23">Core.Instance</a></div><div class="ttdeci">static new Core Instance</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00015">Core.cs:15</a></div></div>
-<div class="ttc" id="aclassCore_html_a979937020fe19876f3a7395faeb96a5e"><div class="ttname"><a href="classCore.html#a979937020fe19876f3a7395faeb96a5e">Core.scene</a></div><div class="ttdeci">Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00065">Core.cs:65</a></div></div>
-<div class="ttc" id="aclassCore_html_aa115bf6d048542080bc7a185949ade75"><div class="ttname"><a href="classCore.html#aa115bf6d048542080bc7a185949ade75">Core.screen</a></div><div class="ttdeci">BaseGameScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00067">Core.cs:67</a></div></div>
-<div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
-<div class="ttc" id="aclassEClass_html_a43ff00755aa7d34b91ab7f9dbbe922c3"><div class="ttname"><a href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">EClass.core</a></div><div class="ttdeci">static Core core</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00007">EClass.cs:7</a></div></div>
-<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
-<div class="ttc" id="aclassRenderDataThing_html"><div class="ttname"><a href="classRenderDataThing.html">RenderDataThing</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderDataThing_8cs_source.html#l00004">RenderDataThing.cs:5</a></div></div>
-<div class="ttc" id="aclassRenderData_html"><div class="ttname"><a href="classRenderData.html">RenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00004">RenderData.cs:5</a></div></div>
-<div class="ttc" id="aclassRenderData_html_aafc563cf13156fae364ef9b9e23f99a5"><div class="ttname"><a href="classRenderData.html#aafc563cf13156fae364ef9b9e23f99a5">RenderData.imageScale</a></div><div class="ttdeci">Vector2 imageScale</div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00028">RenderData.cs:28</a></div></div>
-<div class="ttc" id="aclassRenderParam_html"><div class="ttname"><a href="classRenderParam.html">RenderParam</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00003">RenderParam.cs:4</a></div></div>
-<div class="ttc" id="aclassRenderParam_html_a92d2ea1a74544a17ca327137272c613a"><div class="ttname"><a href="classRenderParam.html#a92d2ea1a74544a17ca327137272c613a">RenderParam.shared</a></div><div class="ttdeci">static RenderParam shared</div><div class="ttdef"><b>Definition:</b> <a href="RenderParam_8cs_source.html#l00005">RenderParam.cs:5</a></div></div>
-<div class="ttc" id="aclassScene_html_a4fed7b4258761e1c13852b02ea502564"><div class="ttname"><a href="classScene.html#a4fed7b4258761e1c13852b02ea502564">Scene.camSupport</a></div><div class="ttdeci">CameraSupport camSupport</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00041">Scene.cs:41</a></div></div>
-<div class="ttc" id="aclassSourceMaterial_1_1Row_html"><div class="ttname"><a href="classSourceMaterial_1_1Row.html">SourceMaterial.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00008">SourceMaterial.cs:9</a></div></div>
-<div class="ttc" id="aclassSourceMaterial_html"><div class="ttname"><a href="classSourceMaterial.html">SourceMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceMaterial_8cs_source.html#l00005">SourceMaterial.cs:6</a></div></div>
-<div class="ttc" id="aclassSourcePref_html"><div class="ttname"><a href="classSourcePref.html">SourcePref</a></div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00010">SourcePref.cs:11</a></div></div>
-<div class="ttc" id="aclassSourcePref_html_a1eb1308badc480c80270846cc913a19c"><div class="ttname"><a href="classSourcePref.html#a1eb1308badc480c80270846cc913a19c">SourcePref.pivotX</a></div><div class="ttdeci">int pivotX</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00146">SourcePref.cs:147</a></div></div>
-<div class="ttc" id="aclassSourcePref_html_ad22f2c48cd46fc3a0512abbaca2b666d"><div class="ttname"><a href="classSourcePref.html#ad22f2c48cd46fc3a0512abbaca2b666d">SourcePref.scaleIcon</a></div><div class="ttdeci">int scaleIcon</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00290">SourcePref.cs:291</a></div></div>
-<div class="ttc" id="aclassSourcePref_html_ae74d8d440e0b825bb455a8f5b96602f8"><div class="ttname"><a href="classSourcePref.html#ae74d8d440e0b825bb455a8f5b96602f8">SourcePref.pivotY</a></div><div class="ttdeci">int pivotY</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00158">SourcePref.cs:159</a></div></div>
-<div class="ttc" id="aclassSourcePref_html_afbc57d24dff0f3bc7c9a0b10cbdb6923"><div class="ttname"><a href="classSourcePref.html#afbc57d24dff0f3bc7c9a0b10cbdb6923">SourcePref.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="SourcePref_8cs_source.html#l00351">SourcePref.cs:351</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

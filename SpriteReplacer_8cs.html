@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.293 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,8 @@ $(document).ready(function(){initNavTree('SpriteReplacer_8cs.html',''); initResi
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">SpriteReplacer.cs File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -101,7 +102,115 @@ $(document).ready(function(){initNavTree('SpriteReplacer_8cs.html',''); initResi
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpriteReplacer.html">SpriteReplacer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae5a705b165a78f6de5e375f0fd1b9442"><td class="memItemLeft" align="right" valign="top">$&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SpriteReplacer_8cs.html#ae5a705b165a78f6de5e375f0fd1b9442">_skin</a></td></tr>
+<tr class="separator:ae5a705b165a78f6de5e375f0fd1b9442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ae5a705b165a78f6de5e375f0fd1b9442" name="ae5a705b165a78f6de5e375f0fd1b9442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a705b165a78f6de5e375f0fd1b9442">&#9670;&#160;</a></span>_skin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$ _skin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SpriteReplacer_8cs_source.html#l00098">98</a> of file <a class="el" href="SpriteReplacer_8cs_source.html">SpriteReplacer.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>{</div>
+<div class="line"><span class="lineno">  100</span>        data?.Validate();</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classSpriteData.html">SpriteData</a> value <span class="keywordflow">in</span> suffixes.Values)</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            value?.<a class="code hl_function" href="classSpriteData.html#a9610c941e83f99180123ba77377656bc">Validate</a>();</div>
+<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> ReloadBuiltInTextures()</div>
+<div class="line"><span class="lineno">  108</span>    {</div>
+<div class="line"><span class="lineno">  109</span>        dictTextureItems = <span class="keyword">new</span> DirectoryInfo(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> + <span class="stringliteral">&quot;Texture/Item&quot;</span>).GetFiles(<span class="stringliteral">&quot;*.png&quot;</span>).ToDictionary((FileInfo f) =&gt; Path.GetFileNameWithoutExtension(f.Name), (FileInfo f) =&gt; Path.ChangeExtension(f.FullName, <span class="keyword">null</span>));</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> BuildSuffixData(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, Dictionary&lt;string, string&gt; dictTexItems)</div>
+<div class="line"><span class="lineno">  113</span>    {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">foreach</span> (var (text3, path) in dictTexItems)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (text3.StartsWith(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  117</span>            {</div>
+<div class="line"><span class="lineno">  118</span>                <span class="keywordtype">string</span> text4 = text3[<span class="keywordtype">id</span>.Length..];</div>
+<div class="line"><span class="lineno">  119</span>                <a class="code hl_class" href="classSpriteData.html">SpriteData</a> spriteData = <span class="keyword">new</span> <a class="code hl_class" href="classSpriteData.html">SpriteData</a></div>
+<div class="line"><span class="lineno">  120</span>                {</div>
+<div class="line"><span class="lineno">  121</span>                    path = path</div>
+<div class="line"><span class="lineno">  122</span>                };</div>
+<div class="line"><span class="lineno">  123</span>                spriteData.<a class="code hl_function" href="classSpriteData.html#a067129c7182d547ab1b051543814d315">Init</a>();</div>
+<div class="line"><span class="lineno">  124</span>                suffixes[text4] = spriteData;</div>
+<div class="line"><span class="lineno">  125</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;#sprite replacer init &#39;&quot;</span> + text4 + <span class="stringliteral">&quot;&#39; at &quot;</span> + path.ShortPath());</div>
+<div class="line"><span class="lineno">  126</span>            }</div>
+<div class="line"><span class="lineno">  127</span>        }</div>
+<div class="line"><span class="lineno">  128</span>    }</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> Reload(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <a class="code hl_class" href="classRenderData.html">RenderData</a> renderData = <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        data = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  133</span>        suffixes.Clear();</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  135</span>        {</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> (dictModItems.ContainsKey(<span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>                BuildSuffixData(<span class="keywordtype">id</span>, dictModItems);</div>
+<div class="line"><span class="lineno">  139</span>            }</div>
+<div class="line"><span class="lineno">  140</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">if</span> (dictTextureItems.Count == 0)</div>
+<div class="line"><span class="lineno">  143</span>                {</div>
+<div class="line"><span class="lineno">  144</span>                    ReloadBuiltInTextures();</div>
+<div class="line"><span class="lineno">  145</span>                }</div>
+<div class="line"><span class="lineno">  146</span>                <span class="keywordtype">string</span> text = dictTextureItems.TryGetValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  147</span>                <span class="keywordflow">if</span> (text == <span class="keyword">null</span> &amp;&amp; renderData != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  148</span>                {</div>
+<div class="line"><span class="lineno">  149</span>                    text = dictTextureItems.TryGetValue(renderData.name);</div>
+<div class="line"><span class="lineno">  150</span>                }</div>
+<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">if</span> (text != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  152</span>                {</div>
+<div class="line"><span class="lineno">  153</span>                    BuildSuffixData(<span class="keywordtype">id</span>, dictTextureItems);</div>
+<div class="line"><span class="lineno">  154</span>                }</div>
+<div class="line"><span class="lineno">  155</span>            }</div>
+<div class="line"><span class="lineno">  156</span>            data = suffixes.TryGetValue(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">if</span> (data != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="keywordtype">id</span> + <span class="stringliteral">&quot;:&quot;</span> + data.path);</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><span class="lineno">  163</span>        {</div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<span class="stringliteral">&quot;#sprite error fetching sprite replacer:&quot;</span> + ex);</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+<div class="line"><span class="lineno">  166</span>        isChecked[id] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  167</span>    }</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> HasSprite(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <a class="code hl_class" href="classRenderData.html">RenderData</a> renderData = <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  170</span>    {</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (!isChecked.GetValueOrDefault(<span class="keywordtype">id</span>) || (data != <span class="keyword">null</span> &amp;&amp; data.id != <span class="keywordtype">id</span>))</div>
+<div class="line"><span class="lineno">  172</span>        {</div>
+<div class="line"><span class="lineno">  173</span>            Reload(<span class="keywordtype">id</span>, renderData);</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> data != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+<div class="line"><span class="lineno">  177</span>}</div>
+<div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
+<div class="ttc" id="aclassCorePath_html"><div class="ttname"><a href="classCorePath.html">CorePath</a></div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00006">CorePath.cs:7</a></div></div>
+<div class="ttc" id="aclassCorePath_html_a7b6aa77a287630c4a6000cdcea156118"><div class="ttname"><a href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">CorePath.packageCore</a></div><div class="ttdeci">static string packageCore</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00161">CorePath.cs:161</a></div></div>
+<div class="ttc" id="aclassRenderData_html"><div class="ttname"><a href="classRenderData.html">RenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="RenderData_8cs_source.html#l00004">RenderData.cs:5</a></div></div>
+<div class="ttc" id="aclassSpriteData_html"><div class="ttname"><a href="classSpriteData.html">SpriteData</a></div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00008">SpriteData.cs:9</a></div></div>
+<div class="ttc" id="aclassSpriteData_html_a067129c7182d547ab1b051543814d315"><div class="ttname"><a href="classSpriteData.html#a067129c7182d547ab1b051543814d315">SpriteData.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00028">SpriteData.cs:28</a></div></div>
+<div class="ttc" id="aclassSpriteData_html_a9610c941e83f99180123ba77377656bc"><div class="ttname"><a href="classSpriteData.html#a9610c941e83f99180123ba77377656bc">SpriteData.Validate</a></div><div class="ttdeci">void Validate()</div><div class="ttdef"><b>Definition:</b> <a href="SpriteData_8cs_source.html#l00095">SpriteData.cs:95</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

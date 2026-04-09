@@ -1,5 +1,10 @@
 var NAVTREEINDEX121 =
 {
+"classTraitDeedLostRing.html":[1,0,1570],
+"classTraitDeedLostRing.html#a364b80495e9d8e05f6f9ea95e8047d4c":[1,0,1570,0],
+"classTraitDeedRelocate.html":[1,0,1571],
+"classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1571,0],
+"classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1571,1],
 "classTraitDeedWedding.html":[1,0,1572],
 "classTraitDefertilizer.html":[1,0,1573],
 "classTraitDeliveryChest.html":[1,0,1574],
@@ -244,10 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461":[1,0,1623,2],
 "classTraitFakeBlock.html":[1,0,1624],
 "classTraitFakeBlock.html#a96edbd1d237bf3137ad70ac548bf8dc7":[1,0,1624,2],
-"classTraitFakeBlock.html#acb8cf6feaedcbe57f4edc24b196d2068":[1,0,1624,0],
-"classTraitFakeBlock.html#aefdfb8480f6d15a8ea3765227f1f525a":[1,0,1624,1],
-"classTraitFakeObj.html":[1,0,1625],
-"classTraitFakeObj.html#a1c7f5c85b07de2d5bff3fd0587b2d87a":[1,0,1625,6],
-"classTraitFakeObj.html#a209b1e60531dcdb8325625d269765381":[1,0,1625,0],
-"classTraitFakeObj.html#a46be5a12628f68450f97789c1a0a3548":[1,0,1625,2]
+"classTraitFakeBlock.html#acb8cf6feaedcbe57f4edc24b196d2068":[1,0,1624,0]
 };

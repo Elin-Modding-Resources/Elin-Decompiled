@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"classLayerProgress.html#aca02d7cfd441f4cbf264b2d4950e54c8":[1,0,854,9],
 "classLayerProgress.html#ad26170ee5338fa0989fd762309066cd6":[1,0,854,3],
 "classLayerProgress.html#ad5e24c39d975c7b88856110c5c86ca9e":[1,0,854,11],
 "classLayerProgress.html#af37eed653dbfdece0c0fd11b5f42b832":[1,0,854,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb":[1,0,870,6],
 "classLayerWorldSetting.html":[1,0,871],
 "classLayerWorldSetting.html#a02372087adc2a8b5bba0508f26c2a523":[1,0,871,1],
-"classLayerWorldSetting.html#a0feecf2a7b581b967a300f0869f39dc3":[1,0,871,30],
-"classLayerWorldSetting.html#a135010f3719d38d6539d4187dd718c4a":[1,0,871,32]
+"classLayerWorldSetting.html#a0feecf2a7b581b967a300f0869f39dc3":[1,0,871,30]
 };

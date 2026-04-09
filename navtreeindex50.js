@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"classConInsane.html#ae33280dafb330ef3f2e48e05427ed4d0":[1,0,354,1],
 "classConInvisibility.html":[1,0,355],
 "classConInvisibility.html#a5e00a7acf18605b3badae025680be443":[1,0,355,2],
 "classConInvisibility.html#a640e09a4fd2ff5531b2b8cfb25884aa4":[1,0,355,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "classContent.html":[1,0,380],
 "classContentChronicle.html":[1,0,381],
 "classContentChronicle.html#a88c00e919f0778489da3a0cec871bf4a":[1,0,381,1],
-"classContentChronicle.html#af35eec2b514361d7050bae67d6e1a686":[1,0,381,0],
-"classContentCodex.html":[1,0,382]
+"classContentChronicle.html#af35eec2b514361d7050bae67d6e1a686":[1,0,381,0]
 };

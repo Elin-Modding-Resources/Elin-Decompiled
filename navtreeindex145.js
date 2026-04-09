@@ -1,5 +1,10 @@
 var NAVTREEINDEX145 =
 {
+"classZone__Town.html#a1b85d1e8a15a86d4409abf44b8d7603f":[1,0,2256,2],
+"classZone__Town.html#a1e86e8ab9035a69df4d7c3c926fb6f37":[1,0,2256,3],
+"classZone__Town.html#a563f2f2382e94fe5f17c487f4b9e6132":[1,0,2256,1],
+"classZone__Town.html#a79b00ab615cd6a0f6a8623739ea36b25":[1,0,2256,4],
+"classZone__Town.html#ab522c0ae6fa3efe82885116b08a59797":[1,0,2256,0],
 "classZone__Town.html#ad10b97c1fff097611d051d5b1c416058":[1,0,2256,5],
 "classZone__TruceGround.html":[1,0,2257],
 "classZone__TruceGround.html#acd95161ed33a202914ec10488724e5b0":[1,0,2257,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX145 =
 "interfaceIChangeResolution.html#a96eb6faf64a5ddb49d52fbea2279634d":[1,0,698,0],
 "interfaceIDragParent.html":[1,0,699],
 "interfaceIDragParent.html#a78c434d459866eba7901e4c9d175ab9f":[1,0,699,1],
-"interfaceIDragParent.html#af1414a748bb176738da4d9344fd45ccb":[1,0,699,2],
-"interfaceIDragParent.html#afaebc90d9389a33cabfbc0be7f0a720a":[1,0,699,0],
-"interfaceIGlobalValue.html":[1,0,700],
-"interfaceIGlobalValue.html#a5bcca28f13ae08915eb0a54186b3e572":[1,0,700,0],
-"interfaceIInspect.html":[1,0,701],
-"interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f":[1,0,701,1]
+"interfaceIDragParent.html#af1414a748bb176738da4d9344fd45ccb":[1,0,699,2]
 };
