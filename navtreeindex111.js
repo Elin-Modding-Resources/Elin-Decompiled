@@ -1,5 +1,6 @@
 var NAVTREEINDEX111 =
 {
+"classSpatialManager.html#aef2c5ad096faa71f9f790dcb47e58326":[1,0,1271,4],
 "classSpatialManager.html#af24c0aa5ca66a0b1d17f8607ce848b9a":[1,0,1271,11],
 "classSpatialManager_1_1GlobalSpatialList.html":[1,0,1271,0],
 "classSpatialManager_1_1GlobalSpatialList.html#a907944d2e810c7f1204aadf438ec2ee4":[1,0,1271,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX111 =
 "classStatsHygiene.html#ac0e03ed015afaeb9e62c3378239a4856":[1,0,1297,0],
 "classStatsHygiene.html#ac2c182189f1546a0bd808c4352c4837e":[1,0,1297,7],
 "classStatsHygiene.html#ac4dadda2948de038fb993b3216e955c6":[1,0,1297,4],
-"classStatsHygiene.html#acc387b5e0d55446700712682abdac70d":[1,0,1297,1],
-"classStatsHygiene.html#ad0889bab0571eb9d8e6b63a6f261fadb":[1,0,1297,3]
+"classStatsHygiene.html#acc387b5e0d55446700712682abdac70d":[1,0,1297,1]
 };

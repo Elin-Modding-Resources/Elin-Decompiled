@@ -1,5 +1,6 @@
 var NAVTREEINDEX119 =
 {
+"classTraitBait.html#a8c0f75c77ea0f262d1f27a4b0f456420":[1,0,1470,0],
 "classTraitBall.html":[1,0,1471],
 "classTraitBall.html#a2c60b947e7e99945839070f7418c832a":[1,0,1471,1],
 "classTraitBall.html#a5b7f38443b0af7249248a06af97ebc8c":[1,0,1471,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitCatalyst.html#a78dc75aff4091d1eec2b1c1232ce054a":[1,0,1522,0],
 "classTraitCatalyst.html#a99e66cca228fa05452d36568a7943dd9":[1,0,1522,5],
 "classTraitCatalyst.html#ab236e4260a56f7fad9365127d9b27cb6":[1,0,1522,2],
-"classTraitCauldron.html":[1,0,1523],
-"classTraitCauldron.html#a46d3d071f3390b12f0ed9a35f0d0afb9":[1,0,1523,1]
+"classTraitCauldron.html":[1,0,1523]
 };

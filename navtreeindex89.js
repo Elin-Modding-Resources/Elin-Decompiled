@@ -1,5 +1,6 @@
 var NAVTREEINDEX89 =
 {
+"classPOIMap.html":[1,0,984],
 "classPOIMap.html#a2404b6a75215d3199290443b4b826585":[1,0,984,3],
 "classPOIMap.html#a3106b908cd8fabfa00864b25c9c88259":[1,0,984,6],
 "classPOIMap.html#a346b05b270a81456d0e1be2a981620c7":[1,0,984,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX89 =
 "classPiety.html":[1,0,979],
 "classPiety.html#a2a9434937ff65595b30cda6e9225ca74":[1,0,979,3],
 "classPiety.html#a32859b3ff6e5adad20d6fea84e057a92":[1,0,979,2],
-"classPiety.html#a3c9e4e06ae4a7887562a424a572d1714":[1,0,979,1],
-"classPiety.html#a72ba076dfadb4bb8c148b3d28742d1d8":[1,0,979,0]
+"classPiety.html#a3c9e4e06ae4a7887562a424a572d1714":[1,0,979,1]
 };

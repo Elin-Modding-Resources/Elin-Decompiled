@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitSalesTag.html#ad775fb0e118436eb927e004f71c7f413":[1,0,1869,5],
 "classTraitSalesTag.html#af240bb3862ff5b8acb871e125b0ae553":[1,0,1869,2],
 "classTraitSawMill.html":[1,0,1870],
 "classTraitSawMill.html#a2c05175e641c6a8c4f1735138ecaebec":[1,0,1870,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitStethoscope.html#a5e57478dff52286322ba3de95bfc7e4d":[1,0,1928,0],
 "classTraitStethoscope.html#aea25913633730dcf60b7af36eaea2465":[1,0,1928,1],
 "classTraitStoneCutter.html":[1,0,1929],
-"classTraitStoneCutter.html#a05c54a273a1b037c2418d56b4aafb9dd":[1,0,1929,3],
-"classTraitStoneCutter.html#a5e2c3d5d944c49954c63a2326df03338":[1,0,1929,0]
+"classTraitStoneCutter.html#a05c54a273a1b037c2418d56b4aafb9dd":[1,0,1929,3]
 };

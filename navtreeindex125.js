@@ -1,5 +1,6 @@
 var NAVTREEINDEX125 =
 {
+"classTraitParcel.html#a64392f9e69a1a046171f1809c93afd5e":[1,0,1805,1],
 "classTraitParcel.html#ab355e6d3c7d6a8c02fcc286d805530ce":[1,0,1805,3],
 "classTraitParcel.html#ae77b3e62de983fd1011245bc3b2008e7":[1,0,1805,4],
 "classTraitParchment.html":[1,0,1806],
@@ -248,6 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitSalesTag.html#a1847e16f59895662a5404130593c0aab":[1,0,1869,3],
 "classTraitSalesTag.html#a192160d4f2b8384e2c2021b91b2cd8e3":[1,0,1869,4],
 "classTraitSalesTag.html#a25581dfef060629517263b86bb68ce12":[1,0,1869,0],
-"classTraitSalesTag.html#a5c87ee56f2fbd659da3f1ec1687a70b3":[1,0,1869,1],
-"classTraitSalesTag.html#ad775fb0e118436eb927e004f71c7f413":[1,0,1869,5]
+"classTraitSalesTag.html#a5c87ee56f2fbd659da3f1ec1687a70b3":[1,0,1869,1]
 };

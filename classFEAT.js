@@ -102,6 +102,7 @@ var classFEAT =
     [ "featMimic", "classFEAT.html#a7a46005731bdacb35f12b29c4cd33209", null ],
     [ "featMiscreation", "classFEAT.html#a0a4a0be928ad7b2242152e979415ecf2", null ],
     [ "featModelBeliever", "classFEAT.html#a2af69a5227cfe8a862b423832d03a645", null ],
+    [ "featMurderer", "classFEAT.html#adddf45cb49148d095d514acb31f702c7", null ],
     [ "featNeckHunter", "classFEAT.html#a5d160a48bed1b8e004bf369751a80115", null ],
     [ "featNegotiate", "classFEAT.html#afdc6723070cbfd787f607e4cef09bdbe", null ],
     [ "featNirvana", "classFEAT.html#a195c2d549673ea9f76a90d9400cfabc4", null ],

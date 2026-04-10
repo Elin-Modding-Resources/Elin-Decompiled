@@ -1,5 +1,6 @@
 var NAVTREEINDEX117 =
 {
+"classTileTypeSky.html":[1,0,1420],
 "classTileTypeSky.html#a3a9c75e665652078bfb52459679fe9ee":[1,0,1420,4],
 "classTileTypeSky.html#a3e31721076a55e9edc77f265f79054e4":[1,0,1420,0],
 "classTileTypeSky.html#a44a7d1a161e243caf7901085507c30e4":[1,0,1420,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX117 =
 "classTrait.html#a694ffdbe1c5b08dabbbf5d80b53e741f":[1,0,1447,192],
 "classTrait.html#a69c36cb3396a41ee14cf18a07a7ed134":[1,0,1447,187],
 "classTrait.html#a6a1ed59c8c0884a94e688053d2335973":[1,0,1447,221],
-"classTrait.html#a6a201e322fb1df8940651b4cf50cc9c3":[1,0,1447,130],
-"classTrait.html#a6af6e23fa338026063b5abfb601b7aa6":[1,0,1447,145]
+"classTrait.html#a6a201e322fb1df8940651b4cf50cc9c3":[1,0,1447,130]
 };

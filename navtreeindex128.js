@@ -1,5 +1,6 @@
 var NAVTREEINDEX128 =
 {
+"classTraitTrainingDummyArmor.html":[1,0,1989],
 "classTraitTrainingDummyArmor.html#a1943884ccec196581f39fd3f20f40134":[1,0,1989,0],
 "classTraitTrainingDummyArmor.html#a7ede5fa583c669e66a118b54f82ff460":[1,0,1989,2],
 "classTraitTrainingDummyArmor.html#adddc474b9eb399dddfa9a6e78c94e03a":[1,0,1989,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX128 =
 "classTwoDLaserPack_1_1LineBasedLaser.html#ab8f6ec984104168a6910ebb761b84aae":[0,4,9,0,2],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286":[1,0,9,0,5],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286":[0,4,9,0,5],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2":[0,4,9,0,1],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2":[1,0,9,0,1]
+"classTwoDLaserPack_1_1LineBasedLaser.html#ac3efda8af21fab8966157acf5b0380b2":[0,4,9,0,1]
 };

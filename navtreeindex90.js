@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"classPiety.html#a72ba076dfadb4bb8c148b3d28742d1d8":[1,0,979,0],
 "classPixelPaint.html":[1,0,980],
 "classPixelPaint.html#a076a624bfe066e549063929947cbb41f":[1,0,980,3],
 "classPixelPaint.html#a0c9f3c3668458a7e527ddc370103e076":[1,0,980,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "classPlayer_1_1Flags.html#a1ddf8b634e2bf98b569e26d98d6e1143":[1,0,982,0,58],
 "classPlayer_1_1Flags.html#a23289c953b5d00e073bcb379e7efd421":[1,0,982,0,45],
 "classPlayer_1_1Flags.html#a2c380e3f43afd785c454dacbed814030":[1,0,982,0,31],
-"classPlayer_1_1Flags.html#a318392987df64bcdf147b9b9d458bbd8":[1,0,982,0,41],
-"classPlayer_1_1Flags.html#a346f10ea120f6d106b68170d86322002":[1,0,982,0,12]
+"classPlayer_1_1Flags.html#a318392987df64bcdf147b9b9d458bbd8":[1,0,982,0,41]
 };

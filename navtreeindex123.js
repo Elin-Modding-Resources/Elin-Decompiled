@@ -1,5 +1,6 @@
 var NAVTREEINDEX123 =
 {
+"classTraitGuildDoorman.html":[1,0,1691],
 "classTraitGuildDoorman.html#a4a661079da82fec370e7bc63e5c6063d":[1,0,1691,2],
 "classTraitGuildDoorman.html#a514f6747ba6ec846528328efa000627d":[1,0,1691,0],
 "classTraitGuildDoorman.html#a97a6fc7ee5bc9bc14030222527aaadd9":[1,0,1691,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitMerchant.html#ac785b13ae49732f62e5c6494e0bd2d96":[1,0,1743,2],
 "classTraitMerchant.html#af444fd651a60a11d125a7094e132707a":[1,0,1743,4],
 "classTraitMerchantBlack.html":[1,0,1744],
-"classTraitMerchantBlack.html#a0c55ab4bf916652cb165aba6b61f358b":[1,0,1744,4],
-"classTraitMerchantBlack.html#a426b63b31cfd38c4f2abfcdcf43f8a89":[1,0,1744,0]
+"classTraitMerchantBlack.html#a0c55ab4bf916652cb165aba6b61f358b":[1,0,1744,4]
 };
