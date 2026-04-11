@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"classLayerWorldSetting.html#a02372087adc2a8b5bba0508f26c2a523":[1,0,871,1],
 "classLayerWorldSetting.html#a0feecf2a7b581b967a300f0869f39dc3":[1,0,871,30],
 "classLayerWorldSetting.html#a135010f3719d38d6539d4187dd718c4a":[1,0,871,32],
 "classLayerWorldSetting.html#a20749e29926dc4a2316fc03b17e259ff":[1,0,871,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "classLogicalPoint.html#a0e0d9f5ebc65c2505727c892624899b8":[1,0,895,6],
 "classLogicalPoint.html#a33cc737c0dc9e40afe4b37aaca5ddc7e":[1,0,895,0],
 "classLogicalPoint.html#a568f8688aedb86a341c43e888801fe69":[1,0,895,2],
-"classLogicalPoint.html#aa77bffe31cc5b18e789ebea7ff01ae0d":[1,0,895,1],
-"classLogicalPoint.html#af591a38df8b26103efe107a5361c2ce9":[1,0,895,3]
+"classLogicalPoint.html#aa77bffe31cc5b18e789ebea7ff01ae0d":[1,0,895,1]
 };

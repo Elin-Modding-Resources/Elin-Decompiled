@@ -1,7 +1,7 @@
 var classShippingResult =
 [
     [ "Item", "classShippingResult_1_1Item.html", "classShippingResult_1_1Item" ],
-    [ "GetIncome", "classShippingResult.html#add91f6fe9a7e710f9c7e80ad7383b2c0", null ],
+    [ "GetIncome", "classShippingResult.html#aec10f58fe51a80f62d32963601a3fd0a", null ],
     [ "ints", "classShippingResult.html#a0eac966bb8a62c93e48faa137e5f3326", null ],
     [ "items", "classShippingResult.html#a64976b01ce635b3ebe60cb20463e7ef7", null ],
     [ "debt", "classShippingResult.html#a0438bfea753857c49975eef6e8c514f0", null ],

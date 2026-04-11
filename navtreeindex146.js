@@ -1,5 +1,6 @@
 var NAVTREEINDEX146 =
 {
+"interfaceIDragParent.html#a78c434d459866eba7901e4c9d175ab9f":[1,0,699,1],
 "interfaceIDragParent.html#af1414a748bb176738da4d9344fd45ccb":[1,0,699,2],
 "interfaceIDragParent.html#afaebc90d9389a33cabfbc0be7f0a720a":[1,0,699,0],
 "interfaceIGlobalValue.html":[1,0,700],
@@ -248,6 +249,5 @@ var NAVTREEINDEX146 =
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da94089683b075eaa1d0926cd9eb66e04b":[0,4,3,0,8,68],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da94b510a314c374bc5a229e350c606a17":[0,4,3,0,8,163],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da94dfe944aa85d4b291c299f52bb0d464":[0,4,3,0,8,52],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9572839dbc21cf29f84f02c7b7a6ad2e":[0,4,3,0,8,10],
-"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da964af2af259188703a9dde3adce53d47":[0,4,3,0,8,138]
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9572839dbc21cf29f84f02c7b7a6ad2e":[0,4,3,0,8,10]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX97 =
 {
+"classQuestWedding.html":[1,0,1091],
 "classQuestWedding.html#a06575bdc7645ae71b0e907ac01f1d9a3":[1,0,1091,2],
 "classQuestWedding.html#a0ccad7c8863027ff89ea46cc02dbf434":[1,0,1091,5],
 "classQuestWedding.html#a3932adb00d59568666bc71f020f5bf1d":[1,0,1091,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX97 =
 "classRecipeManager.html#ac8a72b822fb5d9f56382dd698ee3e55a":[1,0,1106,15],
 "classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703":[1,0,1106,18],
 "classRecipeManager.html#aecb1c741b6f9349424fbb084a8848615":[1,0,1106,8],
-"classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab":[1,0,1106,3],
-"classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79":[1,0,1106,10]
+"classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab":[1,0,1106,3]
 };

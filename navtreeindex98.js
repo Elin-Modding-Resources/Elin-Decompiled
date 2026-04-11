@@ -1,5 +1,6 @@
 var NAVTREEINDEX98 =
 {
+"classRecipeManager.html#af6cbda515dc03e8fb96dbecf0e7e3e79":[1,0,1106,10],
 "classRecipeManager.html#afc7f69001a0268922b380bc78f8f6477":[1,0,1106,23],
 "classRecipeSource.html":[1,0,1107],
 "classRecipeSource.html#a010a0bba2369bc5af000bf68245b33d0":[1,0,1107,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX98 =
 "classReligionMinor.html#af3c264773bb108d66fcdf6f955e0e515":[1,0,1131,0],
 "classReligionMoonShadow.html":[1,0,1132],
 "classReligionMoonShadow.html#aafd52afe204a2425426f3a3a4dc6df93":[1,0,1132,0],
-"classReligionMoonShadow.html#ac452bc715e0a01255d5896fea8259adc":[1,0,1132,1],
-"classReligionOblivion.html":[1,0,1133]
+"classReligionMoonShadow.html#ac452bc715e0a01255d5896fea8259adc":[1,0,1132,1]
 };

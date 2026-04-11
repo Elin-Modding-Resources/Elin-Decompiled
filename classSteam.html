@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.294 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.295 Stable</span>
    </div>
   </td>
  </tr>
@@ -638,7 +638,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Steam_8cs_source.html#l00099">99</a> of file <a class="el" href="Steam_8cs_source.html">Steam.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
-<div class="line"><span class="lineno">  101</span>        AchievementObject achievementObject = <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements.First((AchievementObject a) =&gt; a.Id == <span class="keywordtype">id</span>.ToString());</div>
+<div class="line"><span class="lineno">  101</span>        AchievementObject achievementObject = <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements.FirstOrDefault((AchievementObject a) =&gt; a.Id == <span class="keywordtype">id</span>.ToString());</div>
 <div class="line"><span class="lineno">  102</span>        <span class="keywordflow">if</span> (achievementObject != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  103</span>        {</div>
 <div class="line"><span class="lineno">  104</span>            achievementObject.ClearAchievement();</div>

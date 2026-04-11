@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.294 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.295 Stable</span>
    </div>
   </td>
  </tr>
@@ -192,7 +192,7 @@ $(document).ready(function(){initNavTree('Steam_8cs_source.html',''); initResiza
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classSteam.html#a39d10fbb39e03c39d1f509fb2e75d392">   99</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSteam.html#a39d10fbb39e03c39d1f509fb2e75d392">ResetAchievement</a>(<a class="code hl_enumeration" href="ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9">ID_Achievement</a> <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        AchievementObject achievementObject = <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements.First((AchievementObject a) =&gt; a.Id == <span class="keywordtype">id</span>.ToString());</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        AchievementObject achievementObject = <a class="code hl_variable" href="classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4">Instance</a>.<a class="code hl_variable" href="classSteam.html#a202d04d123f0110ae37da006d3a839ba">steamworks</a>.settings.achievements.FirstOrDefault((AchievementObject a) =&gt; a.Id == <span class="keywordtype">id</span>.ToString());</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span> (achievementObject != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            achievementObject.ClearAchievement();</div>

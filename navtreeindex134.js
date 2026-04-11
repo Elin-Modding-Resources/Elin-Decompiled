@@ -1,5 +1,6 @@
 var NAVTREEINDEX134 =
 {
+"classUIMagicChest.html#adc5bb57fa79ee896808379ba43537e6f":[1,0,2091,26],
 "classUIMagicChest.html#adf1f6ff6dcca1045ce9cfc666ea6d8f8":[1,0,2091,31],
 "classUIMagicChest.html#ae3e6b7a95fed7ecd8316735bace01e16":[1,0,2091,21],
 "classUIMagicChest.html#ae9ebd1071902eec5f19c907cccf833c9":[1,0,2091,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX134 =
 "classUISelectableGroup.html#a1e1e8b5434ad704b4f51e982a727b231":[1,0,2107,7],
 "classUISelectableGroup.html#a20b920ca42181ee821226f32e037a390":[1,0,2107,9],
 "classUISelectableGroup.html#a2ee02ef91e48cdaed87a3a7be17f2bb5":[1,0,2107,2],
-"classUISelectableGroup.html#a3330500685860af4cf2faa8b91fdbf3f":[1,0,2107,26],
-"classUISelectableGroup.html#a34fa544402858565da3ca892704f317e":[1,0,2107,41]
+"classUISelectableGroup.html#a3330500685860af4cf2faa8b91fdbf3f":[1,0,2107,26]
 };

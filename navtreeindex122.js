@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTraitFakeBlock.html#a96edbd1d237bf3137ad70ac548bf8dc7":[1,0,1624,2],
 "classTraitFakeBlock.html#acb8cf6feaedcbe57f4edc24b196d2068":[1,0,1624,0],
 "classTraitFakeBlock.html#aefdfb8480f6d15a8ea3765227f1f525a":[1,0,1624,1],
 "classTraitFakeObj.html":[1,0,1625],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitGuard.html#a8c0a04548373303e71ed5a9d15bbd6f8":[1,0,1689,0],
 "classTraitGuard.html#ab37ae0e246f09be3190e1017ac92c948":[1,0,1689,1],
 "classTraitGuildClerk.html":[1,0,1690],
-"classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1690,0],
-"classTraitGuildClerk.html#af26f260414696aa1275acfa5775f5bda":[1,0,1690,1]
+"classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1690,0]
 };

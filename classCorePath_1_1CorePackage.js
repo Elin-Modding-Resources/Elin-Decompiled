@@ -15,6 +15,7 @@ var classCorePath_1_1CorePackage =
     [ "TextCommon", "classCorePath_1_1CorePackage.html#a9a4c069d3762e78d8ccad043daa651b0", null ],
     [ "TextData", "classCorePath_1_1CorePackage.html#a41e66790015ae3751508406d8cc77029", null ],
     [ "TextDialog", "classCorePath_1_1CorePackage.html#a4736caa81aed440d11158a565e2c6b86", null ],
+    [ "TextDialogLocal", "classCorePath_1_1CorePackage.html#af575672896c227f4039d3e6584c3a643", null ],
     [ "TextEN", "classCorePath_1_1CorePackage.html#a430f8fc9da95dbe021f7dacc3bb2ea68", null ],
     [ "TextNarration", "classCorePath_1_1CorePackage.html#a5219f5ef946c306830533d274b622176", null ]
 ];
