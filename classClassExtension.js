@@ -199,6 +199,7 @@ var classClassExtension =
     [ "ToInt2", "classClassExtension.html#af82ea79955d7c9f172162e8799db060f", null ],
     [ "ToInt3", "classClassExtension.html#a7bd6d8869bfde526c073d49e8d7404c6", null ],
     [ "ToInt< T >", "classClassExtension.html#aab4b4e953a8ec182632a84fc6046646b", null ],
+    [ "ToLong", "classClassExtension.html#ad7a0c14beb27b0fc8fed480ff89a3277", null ],
     [ "ToShortNumber", "classClassExtension.html#aaefe4c75a6ba0017e68dd5091c2fe31d", null ],
     [ "ToText", "classClassExtension.html#acaa2a168cfbd79f74b2e6b0c163c5232", null ],
     [ "ToTitleCase", "classClassExtension.html#a204e5e38adc7a975e2d98c29d524102b", null ],

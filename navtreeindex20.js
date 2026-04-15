@@ -1,5 +1,8 @@
 var NAVTREEINDEX20 =
 {
+"TraitScrollMap_8cs_source.html":[2,0,0,1761],
+"TraitScrollRandom_8cs.html":[2,0,0,1763],
+"TraitScrollRandom_8cs_source.html":[2,0,0,1763],
 "TraitScrollStatic_8cs.html":[2,0,0,1764],
 "TraitScrollStatic_8cs_source.html":[2,0,0,1764],
 "TraitScroll_8cs.html":[2,0,0,1760],
@@ -246,8 +249,5 @@ var NAVTREEINDEX20 =
 "TraitTrolleyBig_8cs_source.html":[2,0,0,1884],
 "TraitTrolley_8cs.html":[2,0,0,1883],
 "TraitTrolley_8cs_source.html":[2,0,0,1883],
-"TraitTutorialBook_8cs.html":[2,0,0,1885],
-"TraitTutorialBook_8cs_source.html":[2,0,0,1885],
-"TraitTyche_8cs.html":[2,0,0,1887],
-"TraitTyche_8cs_source.html":[2,0,0,1887]
+"TraitTutorialBook_8cs.html":[2,0,0,1885]
 };

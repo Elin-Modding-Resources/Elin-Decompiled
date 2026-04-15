@@ -1,5 +1,8 @@
 var NAVTREEINDEX13 =
 {
+"RecipeManager_8cs_source.html":[2,0,0,1028],
+"RecipeSource_8cs.html":[2,0,0,1029],
+"RecipeSource_8cs_source.html":[2,0,0,1029],
 "RecipeUpdater_8cs.html":[2,0,0,1030],
 "RecipeUpdater_8cs_source.html":[2,0,0,1030],
 "Recipe_8cs.html":[2,0,0,1024],
@@ -246,8 +249,5 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba12cf08020be04c9b1f8ad50a614cdd7f":[2,0,0,1109,0,43],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba15ad0e98a76b2521eb7bf8ec497c08a8":[2,0,0,1109,0,52],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba18c83669920215a818638ad0e5421e4b":[2,0,0,1109,0,11],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba25510a243582b6d2cb071f223eafdffc":[2,0,0,1109,0,35],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba2765242ce212b33cd934c1b24f12cc39":[2,0,0,1109,0,36],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba291d369b25229bc8ea7ab00d83e15910":[2,0,0,1109,0,46],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba2b1f94ef23b79bf90eb891cae1df7a90":[2,0,0,1109,0,18]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba25510a243582b6d2cb071f223eafdffc":[2,0,0,1109,0,35]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX21 =
 {
+"TraitTutorialBook_8cs_source.html":[2,0,0,1885],
+"TraitTyche_8cs.html":[2,0,0,1887],
+"TraitTyche_8cs_source.html":[2,0,0,1887],
 "TraitUniqueCharaNoJoin_8cs.html":[2,0,0,1889],
 "TraitUniqueCharaNoJoin_8cs_source.html":[2,0,0,1889],
 "TraitUniqueChara_8cs.html":[2,0,0,1888],
@@ -246,8 +249,5 @@ var NAVTREEINDEX21 =
 "UIText_8cs_source.html":[2,0,0,3,151],
 "UITooltip_8cs.html":[2,0,0,3,152],
 "UITooltip_8cs_source.html":[2,0,0,3,152],
-"UIZoneInfo_8cs.html":[2,0,0,1948],
-"UIZoneInfo_8cs_source.html":[2,0,0,1948],
-"UI_8cs.html":[2,0,0,1921],
-"UI_8cs_source.html":[2,0,0,1921]
+"UIZoneInfo_8cs.html":[2,0,0,1948]
 };

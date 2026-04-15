@@ -1,5 +1,8 @@
 var NAVTREEINDEX12 =
 {
+"PopperManager_8cs_source.html":[2,0,0,3,77],
+"Popper_8cs.html":[2,0,0,3,76],
+"Popper_8cs_source.html":[2,0,0,3,76],
 "PopupManager_8cs.html":[2,0,0,922],
 "PopupManager_8cs_source.html":[2,0,0,922],
 "Portrait_8cs.html":[2,0,0,923],
@@ -246,8 +249,5 @@ var NAVTREEINDEX12 =
 "RecipeCard_8cs_source.html":[2,0,0,1026],
 "RecipeCustom_8cs.html":[2,0,0,1027],
 "RecipeCustom_8cs_source.html":[2,0,0,1027],
-"RecipeManager_8cs.html":[2,0,0,1028],
-"RecipeManager_8cs_source.html":[2,0,0,1028],
-"RecipeSource_8cs.html":[2,0,0,1029],
-"RecipeSource_8cs_source.html":[2,0,0,1029]
+"RecipeManager_8cs.html":[2,0,0,1028]
 };

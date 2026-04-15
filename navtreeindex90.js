@@ -1,5 +1,9 @@
 var NAVTREEINDEX90 =
 {
+"classPerson.html#af1c76454a0f955a04399ee141036afae":[1,0,978,19],
+"classPiety.html":[1,0,979],
+"classPiety.html#a2a9434937ff65595b30cda6e9225ca74":[1,0,979,3],
+"classPiety.html#a32859b3ff6e5adad20d6fea84e057a92":[1,0,979,2],
 "classPiety.html#a3c9e4e06ae4a7887562a424a572d1714":[1,0,979,1],
 "classPiety.html#a72ba076dfadb4bb8c148b3d28742d1d8":[1,0,979,0],
 "classPixelPaint.html":[1,0,980],
@@ -245,9 +249,5 @@ var NAVTREEINDEX90 =
 "classPlayer_1_1Flags.html#a0e5de12c4be974b9ba21190161d514e6":[1,0,982,0,34],
 "classPlayer_1_1Flags.html#a1104d83c8e72928436503ca03be64438":[1,0,982,0,25],
 "classPlayer_1_1Flags.html#a162b7b621a261de0baaa5d7cd3337e89":[1,0,982,0,48],
-"classPlayer_1_1Flags.html#a18363eb223e3eb3f6071db5901764bd5":[1,0,982,0,35],
-"classPlayer_1_1Flags.html#a1c49f0f9e9a93a3c6c5a7baed4d3f9e9":[1,0,982,0,5],
-"classPlayer_1_1Flags.html#a1ddf8b634e2bf98b569e26d98d6e1143":[1,0,982,0,58],
-"classPlayer_1_1Flags.html#a23289c953b5d00e073bcb379e7efd421":[1,0,982,0,45],
-"classPlayer_1_1Flags.html#a2c380e3f43afd785c454dacbed814030":[1,0,982,0,31]
+"classPlayer_1_1Flags.html#a18363eb223e3eb3f6071db5901764bd5":[1,0,982,0,35]
 };

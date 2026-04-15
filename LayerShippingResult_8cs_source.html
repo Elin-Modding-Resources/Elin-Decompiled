@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.295 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.295 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -204,7 +204,7 @@ $(document).ready(function(){initNavTree('LayerShippingResult_8cs_source.html','
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_class" href="classFactionBranch.html">FactionBranch</a> branch = (<a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a4edba9f63942defc147a2be41de40b36">game</a>.<a class="code hl_variable" href="classGame.html#a66686ed40b2f75c85ad2a7a84f839c09">spatials</a>.<a class="code hl_function" href="classSpatialManager.html#a46faf4647f579d4537ef0f5610ebb519">Find</a>(<a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_property" href="classShippingResult.html#a532678167d95ced5bbcf28577564fc2d">uidZone</a>) ?? <a class="code hl_class" href="classELayer.html">ELayer</a>.<a class="code hl_property" href="classELayer.html#a0bed0f9db2b89dfefa4893321bd461ce">pc</a>.<a class="code hl_property" href="classChara.html#aadd3929ed87179d19119d41182f92afc">homeZone</a>).branch;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">float</span> num = (float)<a class="code hl_variable" href="classLayerShippingResult.html#a300079a3e07409cb0a2e416f2ab465ab">update</a> / (<span class="keywordtype">float</span>)<a class="code hl_variable" href="classLayerShippingResult.html#a9135839a57cdcf1936c3fa999e881acd">maxUpdate</a>;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">long</span> income = <a class="code hl_variable" href="classLayerShippingResult.html#a43d33d69c3bbde560fbeffd8ecba9899">result</a>.<a class="code hl_function" href="classShippingResult.html#aec10f58fe51a80f62d32963601a3fd0a">GetIncome</a>();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        income = (int)((<span class="keywordtype">float</span>)income * num);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        income = (long)((<span class="keywordtype">float</span>)income * num);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">long</span> num2 = result.total + income;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        textIncome.text = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#ad22a457cf8e8db9df95fc389e825d528">_currency</a>(income, showUnit: <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        textIncomeTotal.text = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_function" href="classLang.html#ad22a457cf8e8db9df95fc389e825d528">_currency</a>(num2, showUnit: <span class="keyword">true</span>);</div>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX127 =
 {
+"classTraitStethoscope.html#a1378d4c0883841197569236cedcf157e":[1,0,1928,2],
+"classTraitStethoscope.html#a5e57478dff52286322ba3de95bfc7e4d":[1,0,1928,0],
+"classTraitStethoscope.html#aea25913633730dcf60b7af36eaea2465":[1,0,1928,1],
+"classTraitStoneCutter.html":[1,0,1929],
 "classTraitStoneCutter.html#a05c54a273a1b037c2418d56b4aafb9dd":[1,0,1929,3],
 "classTraitStoneCutter.html#a5e2c3d5d944c49954c63a2326df03338":[1,0,1929,0],
 "classTraitStoneCutter.html#a965c9a1be14b65a329ece7ab2700a0e5":[1,0,1929,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitTrainer.html":[1,0,1987],
 "classTraitTrainer.html#aa3957b1536c6d87265e99950340079d0":[1,0,1987,0],
 "classTraitTrainer.html#abc012cd71e222c14080302c8a60d1003":[1,0,1987,1],
-"classTraitTrainer.html#aec8937bf3f03094c513dce6760306126":[1,0,1987,2],
-"classTraitTrainingDummy.html":[1,0,1988],
-"classTraitTrainingDummy.html#a1f360870dccb76ca2c5a7d7ca784cb23":[1,0,1988,0],
-"classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,1988,1],
-"classTraitTrainingDummy.html#a4b356fb1fe2328acbd4482e2f6f3dc65":[1,0,1988,3]
+"classTraitTrainer.html#aec8937bf3f03094c513dce6760306126":[1,0,1987,2]
 };

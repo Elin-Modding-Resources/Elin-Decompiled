@@ -1,5 +1,9 @@
 var NAVTREEINDEX97 =
 {
+"classQuestVernis.html#a5adb13db581fadd870fcd4f35da58f8a":[1,0,1090,2],
+"classQuestVernis.html#a7139c08254711f7726d5326a64f1f103":[1,0,1090,5],
+"classQuestVernis.html#ab25e94b71d14c0e1d17f531ee38795fb":[1,0,1090,4],
+"classQuestVernis.html#acebd0f5c64235969545b6283c26c8b54":[1,0,1090,3],
 "classQuestWedding.html":[1,0,1091],
 "classQuestWedding.html#a06575bdc7645ae71b0e907ac01f1d9a3":[1,0,1091,2],
 "classQuestWedding.html#a0ccad7c8863027ff89ea46cc02dbf434":[1,0,1091,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX97 =
 "classRecipeManager.html#aa562b72a517f7388895d1411ebbae69b":[1,0,1106,14],
 "classRecipeManager.html#aadf6707359cef0a3f36428b0be7fde58":[1,0,1106,20],
 "classRecipeManager.html#abd07df26289fd4e84fce5baddddd953c":[1,0,1106,13],
-"classRecipeManager.html#abfdac34700a6d0361b304d8be7008850":[1,0,1106,1],
-"classRecipeManager.html#ac8a72b822fb5d9f56382dd698ee3e55a":[1,0,1106,15],
-"classRecipeManager.html#adf9713bb1d8455c8ec7d69d50daa5703":[1,0,1106,18],
-"classRecipeManager.html#aecb1c741b6f9349424fbb084a8848615":[1,0,1106,8],
-"classRecipeManager.html#af546920ce6e9377018ba84f0cac97aab":[1,0,1106,3]
+"classRecipeManager.html#abfdac34700a6d0361b304d8be7008850":[1,0,1106,1]
 };

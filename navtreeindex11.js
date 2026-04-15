@@ -1,5 +1,8 @@
 var NAVTREEINDEX11 =
 {
+"MapHeight_8cs.html":[2,0,0,850],
+"MapHeight_8cs_source.html":[2,0,0,850],
+"MapMetaData_8cs.html":[2,0,0,851],
 "MapMetaData_8cs_source.html":[2,0,0,851],
 "MapPiece_8cs.html":[2,0,0,852],
 "MapPiece_8cs_source.html":[2,0,0,852],
@@ -246,8 +249,5 @@ var NAVTREEINDEX11 =
 "PopfabText_8cs_source.html":[2,0,0,3,72],
 "Popfab_8cs.html":[2,0,0,3,70],
 "Popfab_8cs_source.html":[2,0,0,3,70],
-"PopperManager_8cs.html":[2,0,0,3,77],
-"PopperManager_8cs_source.html":[2,0,0,3,77],
-"Popper_8cs.html":[2,0,0,3,76],
-"Popper_8cs_source.html":[2,0,0,3,76]
+"PopperManager_8cs.html":[2,0,0,3,77]
 };

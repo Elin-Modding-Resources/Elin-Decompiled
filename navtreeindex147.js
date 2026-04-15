@@ -1,5 +1,9 @@
 var NAVTREEINDEX147 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da94089683b075eaa1d0926cd9eb66e04b":[0,4,3,0,8,68],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da94b510a314c374bc5a229e350c606a17":[0,4,3,0,8,163],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da94dfe944aa85d4b291c299f52bb0d464":[0,4,3,0,8,52],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9572839dbc21cf29f84f02c7b7a6ad2e":[0,4,3,0,8,10],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da964af2af259188703a9dde3adce53d47":[0,4,3,0,8,138],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9bacb86ad80810707c08a9216f6ccdb3":[0,4,3,0,8,218],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da9bdbe8b74f12ee43a209888b99042697":[0,4,3,0,8,208],
@@ -245,9 +249,5 @@ var NAVTREEINDEX147 =
 "structHSVColor.html#ae15d71cc2d2ccf180f8944e914d7f49b":[1,0,693,4],
 "structHSVColor.html#ae276915cfaffacad09684150688bbc1b":[1,0,693,5],
 "structHSVColor.html#af85814ea1356ececc7ea4b61bd3c86ed":[1,0,693,1],
-"structModPackage_1_1SheetIndex.html":[1,0,933,0],
-"structModPackage_1_1SheetIndex.html#a6410b1dc1baf8ad709c0ea35ad015ca0":[1,0,933,0,1],
-"structModPackage_1_1SheetIndex.html#a818e078e5fed2facd2a7f95858a3d864":[1,0,933,0,0],
-"structSFB_1_1ExtensionFilter.html":[0,4,8,0],
-"structSFB_1_1ExtensionFilter.html":[1,0,8,0]
+"structModPackage_1_1SheetIndex.html":[1,0,933,0]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX83 =
 {
+"classLayerWidget.html#ad0d89cbd69896ca19e42ace17b9b6567":[1,0,870,5],
+"classLayerWidget.html#ad8133d7bd53208f663844736d384f85b":[1,0,870,1],
+"classLayerWidget.html#adcd0b2f7e3fb99c714476b11fe8ebbcb":[1,0,870,6],
+"classLayerWorldSetting.html":[1,0,871],
 "classLayerWorldSetting.html#a02372087adc2a8b5bba0508f26c2a523":[1,0,871,1],
 "classLayerWorldSetting.html#a0feecf2a7b581b967a300f0869f39dc3":[1,0,871,30],
 "classLayerWorldSetting.html#a135010f3719d38d6539d4187dd718c4a":[1,0,871,32],
@@ -245,9 +249,5 @@ var NAVTREEINDEX83 =
 "classLogicalFire.html#ae1d15df7d063a2a83e8c2ba1478e1efe":[1,0,894,0],
 "classLogicalFire.html#aeffde08e7c96a155ae12008d5e911562":[1,0,894,2],
 "classLogicalPoint.html":[1,0,895],
-"classLogicalPoint.html#a0e00f45935c4861197130fb2810e6d80":[1,0,895,4],
-"classLogicalPoint.html#a0e0d9f5ebc65c2505727c892624899b8":[1,0,895,6],
-"classLogicalPoint.html#a33cc737c0dc9e40afe4b37aaca5ddc7e":[1,0,895,0],
-"classLogicalPoint.html#a568f8688aedb86a341c43e888801fe69":[1,0,895,2],
-"classLogicalPoint.html#aa77bffe31cc5b18e789ebea7ff01ae0d":[1,0,895,1]
+"classLogicalPoint.html#a0e00f45935c4861197130fb2810e6d80":[1,0,895,4]
 };

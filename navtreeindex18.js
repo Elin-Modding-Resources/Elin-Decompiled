@@ -1,5 +1,8 @@
 var NAVTREEINDEX18 =
 {
+"TraitFakeTile_8cs.html":[2,0,0,1513],
+"TraitFakeTile_8cs_source.html":[2,0,0,1513],
+"TraitFarmChest_8cs.html":[2,0,0,1514],
 "TraitFarmChest_8cs_source.html":[2,0,0,1514],
 "TraitFarris_8cs.html":[2,0,0,1515],
 "TraitFarris_8cs_source.html":[2,0,0,1515],
@@ -246,8 +249,5 @@ var NAVTREEINDEX18 =
 "TraitMerchantDye_8cs.html":[2,0,0,1637],
 "TraitMerchantDye_8cs_source.html":[2,0,0,1637],
 "TraitMerchantEcopo_8cs.html":[2,0,0,1638],
-"TraitMerchantEcopo_8cs_source.html":[2,0,0,1638],
-"TraitMerchantExotic_8cs.html":[2,0,0,1639],
-"TraitMerchantExotic_8cs_source.html":[2,0,0,1639],
-"TraitMerchantFestival_8cs.html":[2,0,0,1640]
+"TraitMerchantEcopo_8cs_source.html":[2,0,0,1638]
 };

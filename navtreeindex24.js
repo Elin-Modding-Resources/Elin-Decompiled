@@ -1,5 +1,8 @@
 var NAVTREEINDEX24 =
 {
+"Zone__CaveElona_8cs.html":[2,0,0,2018],
+"Zone__CaveElona_8cs_source.html":[2,0,0,2018],
+"Zone__CaveMonster_8cs.html":[2,0,0,2019],
 "Zone__CaveMonster_8cs_source.html":[2,0,0,2019],
 "Zone__Civilized_8cs.html":[2,0,0,2020],
 "Zone__Civilized_8cs_source.html":[2,0,0,2020],
@@ -246,8 +249,5 @@ var NAVTREEINDEX24 =
 "classABILITY.html#a99b5b64cb10275e4279f171a10bc58f1":[1,0,11,31],
 "classABILITY.html#a9a3d6afa0f65960042d06e670736d2b5":[1,0,11,53],
 "classABILITY.html#a9c59d89307cb21b3141a2facaa99db71":[1,0,11,104],
-"classABILITY.html#a9de4d8f8574a673e43c419ed21075cc1":[1,0,11,92],
-"classABILITY.html#aa74f8fa720ebd9ab23d4e1be983183d8":[1,0,11,126],
-"classABILITY.html#aada6738a3c3390753d4cba8a522d4879":[1,0,11,142],
-"classABILITY.html#aaed984638cef5ccf4f2c66758a14d1c2":[1,0,11,96]
+"classABILITY.html#a9de4d8f8574a673e43c419ed21075cc1":[1,0,11,92]
 };

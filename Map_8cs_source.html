@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.295 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.295 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -1423,7 +1423,7 @@ $(document).ready(function(){initNavTree('Map_8cs_source.html',''); initResizabl
 <div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span>                    }</div>
 <div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span>                    <span class="keywordflow">if</span> (list3.Count &gt; 0)</div>
 <div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span>                    {</div>
-<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span>                        text = list3.RandomItem().<a class="code hl_variable" href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">id</a>;</div>
+<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span>                        text = list3.RandomItemWeighted((<a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> r) =&gt; r.chance)?.<span class="keywordtype">id</span>;</div>
 <div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span>                    }</div>
 <div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span>                }</div>
 <div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span>                <span class="keywordflow">else</span></div>
@@ -2863,7 +2863,6 @@ $(document).ready(function(){initNavTree('Map_8cs_source.html',''); initResizabl
 <div class="ttc" id="aclassBiomeProfile_html"><div class="ttname"><a href="classBiomeProfile.html">BiomeProfile</a></div><div class="ttdef"><b>Definition:</b> <a href="BiomeProfile_8cs_source.html#l00007">BiomeProfile.cs:8</a></div></div>
 <div class="ttc" id="aclassCardRenderer_html_ac2af4f5b5a526c822194f7d073da3011"><div class="ttname"><a href="classCardRenderer.html#ac2af4f5b5a526c822194f7d073da3011">CardRenderer.KillActor</a></div><div class="ttdeci">void KillActor()</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00531">CardRenderer.cs:531</a></div></div>
 <div class="ttc" id="aclassCardRenderer_html_ada2b1b89a728d6ddef531c8703c5044d"><div class="ttname"><a href="classCardRenderer.html#ada2b1b89a728d6ddef531c8703c5044d">CardRenderer.hasActor</a></div><div class="ttdeci">bool hasActor</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00013">CardRenderer.cs:13</a></div></div>
-<div class="ttc" id="aclassCardRow_html_a961c56d0a5b380e864213b9ff19189a9"><div class="ttname"><a href="classCardRow.html#a961c56d0a5b380e864213b9ff19189a9">CardRow.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00007">CardRow.cs:7</a></div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
 <div class="ttc" id="aclassCard_html_a05dffd4f600c4a61fcabec797f77b221"><div class="ttname"><a href="classCard.html#a05dffd4f600c4a61fcabec797f77b221">Card.isDestroyed</a></div><div class="ttdeci">bool isDestroyed</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00076">Card.cs:76</a></div></div>
 <div class="ttc" id="aclassCard_html_a073062cbf78bcdeddafbd90db4b86ca6"><div class="ttname"><a href="classCard.html#a073062cbf78bcdeddafbd90db4b86ca6">Card.TryMakeRandomItem</a></div><div class="ttdeci">Thing TryMakeRandomItem(int lv=-1, TryMakeRandomItemSource itemSource=TryMakeRandomItemSource.Default, Chara crafter=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l05582">Card.cs:5582</a></div></div>

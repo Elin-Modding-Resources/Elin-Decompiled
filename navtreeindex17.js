@@ -1,5 +1,8 @@
 var NAVTREEINDEX17 =
 {
+"TraitBoat_8cs.html":[2,0,0,1388],
+"TraitBoat_8cs_source.html":[2,0,0,1388],
+"TraitBookExp_8cs.html":[2,0,0,1390],
 "TraitBookExp_8cs_source.html":[2,0,0,1390],
 "TraitBookPlan_8cs.html":[2,0,0,1391],
 "TraitBookPlan_8cs_source.html":[2,0,0,1391],
@@ -246,8 +249,5 @@ var NAVTREEINDEX17 =
 "TraitFakeBlock_8cs.html":[2,0,0,1511],
 "TraitFakeBlock_8cs_source.html":[2,0,0,1511],
 "TraitFakeObj_8cs.html":[2,0,0,1512],
-"TraitFakeObj_8cs_source.html":[2,0,0,1512],
-"TraitFakeTile_8cs.html":[2,0,0,1513],
-"TraitFakeTile_8cs_source.html":[2,0,0,1513],
-"TraitFarmChest_8cs.html":[2,0,0,1514]
+"TraitFakeObj_8cs_source.html":[2,0,0,1512]
 };

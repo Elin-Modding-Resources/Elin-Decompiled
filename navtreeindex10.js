@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"Lang_8cs.html":[2,0,0,2,45],
+"Lang_8cs_source.html":[2,0,0,2,45],
+"LayerAbility_8cs.html":[2,0,0,743],
 "LayerAbility_8cs_source.html":[2,0,0,743],
 "LayerAdmin_8cs.html":[2,0,0,744],
 "LayerAdmin_8cs_source.html":[2,0,0,744],
@@ -246,8 +249,5 @@ var NAVTREEINDEX10 =
 "MapGenVariation_8cs.html":[2,0,0,849],
 "MapGenVariation_8cs_source.html":[2,0,0,849],
 "MapGen_8cs.html":[2,0,0,846],
-"MapGen_8cs_source.html":[2,0,0,846],
-"MapHeight_8cs.html":[2,0,0,850],
-"MapHeight_8cs_source.html":[2,0,0,850],
-"MapMetaData_8cs.html":[2,0,0,851]
+"MapGen_8cs_source.html":[2,0,0,846]
 };

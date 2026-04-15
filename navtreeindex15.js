@@ -1,5 +1,8 @@
 var NAVTREEINDEX15 =
 {
+"SpawnPosition_8cs_source.html":[2,0,0,1172],
+"SpawnSetting_8cs.html":[2,0,0,1173],
+"SpawnSetting_8cs_source.html":[2,0,0,1173],
 "SplashText_8cs.html":[2,0,0,1175],
 "SplashText_8cs_source.html":[2,0,0,1175],
 "SpriteAnimation_8cs.html":[2,0,0,2,79],
@@ -246,8 +249,5 @@ var NAVTREEINDEX15 =
 "TileMapElona_8cs.html":[2,0,0,1270],
 "TileMapElona_8cs_source.html":[2,0,0,1270],
 "TileMap_8cs.html":[2,0,0,1269],
-"TileMap_8cs_source.html":[2,0,0,1269],
-"TileRow_8cs.html":[2,0,0,1271],
-"TileRow_8cs_source.html":[2,0,0,1271],
-"TileSelectorElona_8cs.html":[2,0,0,1273]
+"TileMap_8cs_source.html":[2,0,0,1269]
 };

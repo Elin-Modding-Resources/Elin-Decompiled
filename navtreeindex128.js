@@ -1,5 +1,9 @@
 var NAVTREEINDEX128 =
 {
+"classTraitTrainingDummy.html":[1,0,1988],
+"classTraitTrainingDummy.html#a1f360870dccb76ca2c5a7d7ca784cb23":[1,0,1988,0],
+"classTraitTrainingDummy.html#a219b22e7dc3a8e43fab004787c6516e8":[1,0,1988,1],
+"classTraitTrainingDummy.html#a4b356fb1fe2328acbd4482e2f6f3dc65":[1,0,1988,3],
 "classTraitTrainingDummy.html#a6b66cf5d030f6577f9317b14db659234":[1,0,1988,2],
 "classTraitTrainingDummyArmor.html":[1,0,1989],
 "classTraitTrainingDummyArmor.html#a1943884ccec196581f39fd3f20f40134":[1,0,1989,0],
@@ -186,8 +190,8 @@ var NAVTREEINDEX128 =
 "classTwoDLaserPack_1_1LineBasedLaser.html":[1,0,9,0],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[1,0,9,0,10],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a09178dd55966957298a6152f74a2a5f9":[0,4,9,0,10],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d":[0,4,9,0,36],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d":[1,0,9,0,36],
+"classTwoDLaserPack_1_1LineBasedLaser.html#a0926ddea7fc1f2d60ed2530d9fcf7e4d":[0,4,9,0,36],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[0,4,9,0,3],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a0fe061f937ad82981819fa6d53911f70":[1,0,9,0,3],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a1c96e56e82ac84817c1f58b5236a719d":[0,4,9,0,13],
@@ -236,18 +240,14 @@ var NAVTREEINDEX128 =
 "classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[1,0,9,0,0],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[1,0,9,0,35],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[0,4,9,0,35],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869":[0,4,9,0,24],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869":[1,0,9,0,24],
+"classTwoDLaserPack_1_1LineBasedLaser.html#a9aa6e926e0215c2e4781de9f0132d869":[0,4,9,0,24],
 "classTwoDLaserPack_1_1LineBasedLaser.html#aa0dbe66bdb5cae641922809c28d072a0":[0,4,9,0,6],
 "classTwoDLaserPack_1_1LineBasedLaser.html#aa0dbe66bdb5cae641922809c28d072a0":[1,0,9,0,6],
-"classTwoDLaserPack_1_1LineBasedLaser.html#aa840fac1dd8bd5775d1b2e95cc7cfb8f":[1,0,9,0,26],
 "classTwoDLaserPack_1_1LineBasedLaser.html#aa840fac1dd8bd5775d1b2e95cc7cfb8f":[0,4,9,0,26],
+"classTwoDLaserPack_1_1LineBasedLaser.html#aa840fac1dd8bd5775d1b2e95cc7cfb8f":[1,0,9,0,26],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ab25926c7a29110d9f0a7f2e7dffb1903":[0,4,9,0,38],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ab25926c7a29110d9f0a7f2e7dffb1903":[1,0,9,0,38],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ab52544ca33f66e98cafe5d03d8f2df70":[1,0,9,0,21],
 "classTwoDLaserPack_1_1LineBasedLaser.html#ab52544ca33f66e98cafe5d03d8f2df70":[0,4,9,0,21],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ab8f6ec984104168a6910ebb761b84aae":[0,4,9,0,2],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ab8f6ec984104168a6910ebb761b84aae":[1,0,9,0,2],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286":[1,0,9,0,5],
-"classTwoDLaserPack_1_1LineBasedLaser.html#ac14fb00d8e542f511522ea115387a286":[0,4,9,0,5]
+"classTwoDLaserPack_1_1LineBasedLaser.html#ab52544ca33f66e98cafe5d03d8f2df70":[1,0,9,0,21]
 };
