@@ -1,5 +1,11 @@
 var NAVTREEINDEX26 =
 {
+"classAI__Craft.html":[1,0,84],
+"classAI__Craft.html#a6bcd8e21ecc43e79e06ad01eb6477e73":[1,0,84,0],
+"classAI__Craft__Snowman.html":[1,0,85],
+"classAI__Craft__Snowman.html#a48e8e0bbee2071fccee63b68ca1b842c":[1,0,85,0],
+"classAI__Dance.html":[1,0,86],
+"classAI__Dance.html#aa3511119c6cec3ec51e49dfbdf5dfaf4":[1,0,86,0],
 "classAI__Deconstruct.html":[1,0,87],
 "classAI__Deconstruct.html#a5d2fbe673e26f5251c11e3a2edc6a6c2":[1,0,87,1],
 "classAI__Deconstruct.html#ae85b22ad1a9c98986bdfbb9d9fd194fc":[1,0,87,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX26 =
 "classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,111,2],
 "classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,111,0],
 "classAI__Pray.html":[1,0,112],
-"classAI__Pray.html#a603871972aa41989db7311054d56825f":[1,0,112,0],
-"classAI__Pray.html#a72cbc4ccf6864ede8f4dcc1f3b3ca90f":[1,0,112,2],
-"classAI__Pray.html#a76dad0b469e00ae0458c9cf0367a4cd9":[1,0,112,4],
-"classAI__Pray.html#a8d3b186e7e9f85e975f899e77143b46d":[1,0,112,1],
-"classAI__Pray.html#af1be3c0e8c04a33aaa127ec879b8e03e":[1,0,112,3],
-"classAI__Read.html":[1,0,113],
-"classAI__Read.html#a5946252854f402ff272fdde1b271bf38":[1,0,113,4]
+"classAI__Pray.html#a603871972aa41989db7311054d56825f":[1,0,112,0]
 };

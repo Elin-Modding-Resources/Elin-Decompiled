@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.295 Stable Patch 2</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.296 Nightly</span>
    </div>
   </td>
  </tr>
@@ -453,9 +453,9 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  649</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  650</span>        }</div>
 <div class="ttc" id="aclassLang_html_ada42353e8636a1085ec2f851e7b3c403"><div class="ttname"><a href="classLang.html#ada42353e8636a1085ec2f851e7b3c403">Lang.isBuiltin</a></div><div class="ttdeci">static bool isBuiltin</div><div class="ttdef"><b>Definition:</b> <a href="Lang_8cs_source.html#l00042">Lang.cs:42</a></div></div>
-<div class="ttc" id="aclassSourceData_html_abe8bece61bdd9360f411c3e51a899c50"><div class="ttname"><a href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">SourceData.LangSuffix</a></div><div class="ttdeci">static string LangSuffix</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00762">SourceData.cs:762</a></div></div>
+<div class="ttc" id="aclassSourceData_html_abe8bece61bdd9360f411c3e51a899c50"><div class="ttname"><a href="classSourceData.html#abe8bece61bdd9360f411c3e51a899c50">SourceData.LangSuffix</a></div><div class="ttdeci">static string LangSuffix</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00772">SourceData.cs:772</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00042">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00762">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00042">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00772">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l02665">Card.GetDetail()</a>, <a class="el" href="SourceData_8cs_source.html#l00616">SourceData&lt; T, T2 &gt;.BaseRow.GetDetail()</a>, <a class="el" href="Recipe_8cs_source.html#l00802">Recipe.GetDetail()</a>, <a class="el" href="Msg_8cs_source.html#l00257">Msg.GetGameText()</a>, <a class="el" href="SourceData_8cs_source.html#l00611">SourceData&lt; T, T2 &gt;.BaseRow.GetName()</a>, <a class="el" href="Recipe_8cs_source.html#l00780">Recipe.GetName()</a>, <a class="el" href="SourceChara_8cs_source.html#l00134">SourceChara.Row.GetName()</a>, <a class="el" href="SourceThing_8cs_source.html#l00123">SourceThing.Row.GetName()</a>, <a class="el" href="Trait_8cs_source.html#l00718">Trait.GetName()</a>, <a class="el" href="TraitGene_8cs_source.html#l00011">TraitGene.GetName()</a>, <a class="el" href="CardRow_8cs_source.html#l00115">CardRow.GetName()</a>, <a class="el" href="RenderRow_8cs_source.html#l00130">RenderRow.GetSearchName()</a>, <a class="el" href="SourceChara_8cs_source.html#l00097">SourceChara.Row.GetSearchName()</a>, and <a class="el" href="SourceThing_8cs_source.html#l00137">SourceThing.Row.GetSearchName()</a>.</p>
 
@@ -499,7 +499,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  663</span>            <span class="keywordflow">return</span> Array.Empty&lt;<span class="keywordtype">string</span>&gt;();</div>
 <div class="line"><span class="lineno">  664</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00042">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00762">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, <a class="el" href="Lang_8cs_source.html#l00042">Lang.isBuiltin</a>, and <a class="el" href="SourceData_8cs_source.html#l00772">SourceData&lt; T, T2 &gt;.LangSuffix</a>.</p>
 
 </div>
 </div>
@@ -546,36 +546,46 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  729</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  730</span>            }</div>
 <div class="line"><span class="lineno">  731</span>            <span class="keywordtype">string</span> name = GetType().DeclaringType.Name;</div>
-<div class="line"><span class="lineno">  732</span>            <span class="keywordflow">foreach</span> (var (text2, fieldInfo2) in rowFields)</div>
-<div class="line"><span class="lineno">  733</span>            {</div>
-<div class="line"><span class="lineno">  734</span>                <span class="keywordflow">if</span> (!text2.EndsWith(<span class="stringliteral">&quot;_L&quot;</span>))</div>
-<div class="line"><span class="lineno">  735</span>                {</div>
-<div class="line"><span class="lineno">  736</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  737</span>                }</div>
-<div class="line"><span class="lineno">  738</span>                <span class="keywordtype">string</span> text3 = text2[..^2];</div>
-<div class="line"><span class="lineno">  739</span>                <span class="keywordflow">if</span> (rowFields.ContainsKey(text3) &amp;&amp; rowFields.ContainsKey(text3 + <span class="stringliteral">&quot;_JP&quot;</span>))</div>
-<div class="line"><span class="lineno">  740</span>                {</div>
-<div class="line"><span class="lineno">  741</span>                    fieldInfo2.SetValue(<span class="keyword">this</span>, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  742</span>                    <span class="keywordflow">if</span> (texts.TryGetValue(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>, out var value2) &amp;&amp; !value2.IsEmpty())</div>
-<div class="line"><span class="lineno">  743</span>                    {</div>
-<div class="line"><span class="lineno">  744</span>                        SetFieldText(fieldInfo2, value2);</div>
-<div class="line"><span class="lineno">  745</span>                    }</div>
-<div class="line"><span class="lineno">  746</span>                }</div>
-<div class="line"><span class="lineno">  747</span>            }</div>
-<div class="line"><span class="lineno">  748</span>            <span class="keywordtype">void</span> SetFieldText(FieldInfo l, <span class="keywordtype">string</span> value)</div>
-<div class="line"><span class="lineno">  749</span>            {</div>
-<div class="line"><span class="lineno">  750</span>                <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>))</div>
-<div class="line"><span class="lineno">  751</span>                {</div>
-<div class="line"><span class="lineno">  752</span>                    l.SetValue(<span class="keyword">this</span>, value);</div>
-<div class="line"><span class="lineno">  753</span>                }</div>
-<div class="line"><span class="lineno">  754</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>[]))</div>
-<div class="line"><span class="lineno">  755</span>                {</div>
-<div class="line"><span class="lineno">  756</span>                    l.SetValue(<span class="keyword">this</span>, value.IsEmpty() ? Array.Empty&lt;<span class="keywordtype">string</span>&gt;() : value.Split(<span class="charliteral">&#39;,&#39;</span>));</div>
-<div class="line"><span class="lineno">  757</span>                }</div>
-<div class="line"><span class="lineno">  758</span>            }</div>
-<div class="line"><span class="lineno">  759</span>        }</div>
+<div class="line"><span class="lineno">  732</span>            <span class="keywordtype">string</span> langCode = <a class="code hl_class" href="classLang.html">Lang</a>.<a class="code hl_variable" href="classLang.html#aa1952bedb7f38df2ae3e130ee1d5d659">langCode</a>;</div>
+<div class="line"><span class="lineno">  733</span>            <span class="keywordflow">foreach</span> (var (text2, fieldInfo2) in rowFields)</div>
+<div class="line"><span class="lineno">  734</span>            {</div>
+<div class="line"><span class="lineno">  735</span>                <span class="keywordflow">if</span> (!text2.EndsWith(<span class="stringliteral">&quot;_L&quot;</span>))</div>
+<div class="line"><span class="lineno">  736</span>                {</div>
+<div class="line"><span class="lineno">  737</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  738</span>                }</div>
+<div class="line"><span class="lineno">  739</span>                <span class="keywordtype">string</span> text3 = text2[..^2];</div>
+<div class="line"><span class="lineno">  740</span>                <span class="keywordflow">if</span> (!texts.TryGetValue(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{name}.{obj}.{text3}&quot;</span>, out var value2) || value2.IsEmpty() || !rowFields.TryGetValue(text3, out var value3) || !rowFields.TryGetValue(text3 + <span class="stringliteral">&quot;_JP&quot;</span>, out var value4))</div>
+<div class="line"><span class="lineno">  741</span>                {</div>
+<div class="line"><span class="lineno">  742</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  743</span>                }</div>
+<div class="line"><span class="lineno">  744</span>                fieldInfo2.SetValue(<span class="keyword">this</span>, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  745</span>                SetFieldText(fieldInfo2, value2);</div>
+<div class="line"><span class="lineno">  746</span>                <span class="keywordflow">if</span> (!(langCode == <span class="stringliteral">&quot;EN&quot;</span>))</div>
+<div class="line"><span class="lineno">  747</span>                {</div>
+<div class="line"><span class="lineno">  748</span>                    <span class="keywordflow">if</span> (langCode == <span class="stringliteral">&quot;JP&quot;</span>)</div>
+<div class="line"><span class="lineno">  749</span>                    {</div>
+<div class="line"><span class="lineno">  750</span>                        SetFieldText(value4, value2);</div>
+<div class="line"><span class="lineno">  751</span>                    }</div>
+<div class="line"><span class="lineno">  752</span>                }</div>
+<div class="line"><span class="lineno">  753</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  754</span>                {</div>
+<div class="line"><span class="lineno">  755</span>                    SetFieldText(value3, value2);</div>
+<div class="line"><span class="lineno">  756</span>                }</div>
+<div class="line"><span class="lineno">  757</span>            }</div>
+<div class="line"><span class="lineno">  758</span>            <span class="keywordtype">void</span> SetFieldText(FieldInfo l, <span class="keywordtype">string</span> value)</div>
+<div class="line"><span class="lineno">  759</span>            {</div>
+<div class="line"><span class="lineno">  760</span>                <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>))</div>
+<div class="line"><span class="lineno">  761</span>                {</div>
+<div class="line"><span class="lineno">  762</span>                    l.SetValue(<span class="keyword">this</span>, value);</div>
+<div class="line"><span class="lineno">  763</span>                }</div>
+<div class="line"><span class="lineno">  764</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (l.FieldType == typeof(<span class="keywordtype">string</span>[]))</div>
+<div class="line"><span class="lineno">  765</span>                {</div>
+<div class="line"><span class="lineno">  766</span>                    l.SetValue(<span class="keyword">this</span>, value.IsEmpty() ? Array.Empty&lt;<span class="keywordtype">string</span>&gt;() : value.Split(<span class="charliteral">&#39;,&#39;</span>));</div>
+<div class="line"><span class="lineno">  767</span>                }</div>
+<div class="line"><span class="lineno">  768</span>            }</div>
+<div class="line"><span class="lineno">  769</span>        }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00086">$</a>, and <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00086">$</a>, <a class="el" href="SourceData_8cs_source.html#l00595">SourceData&lt; T, T2 &gt;.BaseRow.GetRowFields()</a>, and <a class="el" href="Lang_8cs_source.html#l00028">Lang.langCode</a>.</p>
 
 </div>
 </div>
@@ -684,7 +694,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SourceData_8cs_source.html#l00589">589</a> of file <a class="el" href="SourceData_8cs_source.html">SourceData.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00535">Thing.GetName()</a>, <a class="el" href="Trait_8cs_source.html#l00984">Trait.GetSortVal()</a>, <a class="el" href="Chara_8cs_source.html#l07477">Chara.SetSortVal()</a>, and <a class="el" href="Thing_8cs_source.html#l02029">Thing.TryLickEnchant()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Thing_8cs_source.html#l00532">Thing.GetName()</a>, <a class="el" href="Trait_8cs_source.html#l00984">Trait.GetSortVal()</a>, <a class="el" href="Chara_8cs_source.html#l07477">Chara.SetSortVal()</a>, and <a class="el" href="Thing_8cs_source.html#l02026">Thing.TryLickEnchant()</a>.</p>
 
 </div>
 </div>

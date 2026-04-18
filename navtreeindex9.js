@@ -1,9 +1,11 @@
 var NAVTREEINDEX9 =
 {
+"ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af1e659c34ad06a8cc89931551e6b97e0":[2,0,0,661,0,18],
 "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af263257b0f6db21fcccf9fd2e3a99b9a":[2,0,0,661,0,13],
 "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af5ad88a6915758610c9b7400d851bec3":[2,0,0,661,0,24],
 "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af97b352f735dd1cb723e4606f0782532":[2,0,0,661,0,26],
 "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9afb6ba492b8fa0b264ad5fc016cb1123a":[2,0,0,661,0,25],
+"ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9afdbb86f18777865a07fcec2f7decec6a":[2,0,0,661,0,29],
 "ID__Achievement_8cs_source.html":[2,0,0,661],
 "ID__DLC_8cs.html":[2,0,0,662],
 "ID__DLC_8cs.html#a388d737f2417abc42bf7c1cb10e469f9":[2,0,0,662,0],
@@ -224,8 +226,8 @@ var NAVTREEINDEX9 =
 "Knowledge_8cs_source.html":[2,0,0,734],
 "KnownSong_8cs.html":[2,0,0,740],
 "KnownSong_8cs_source.html":[2,0,0,740],
-"LIQUID_8cs.html":[2,0,0,821],
-"LIQUID_8cs_source.html":[2,0,0,821],
+"LIQUID_8cs.html":[2,0,0,822],
+"LIQUID_8cs_source.html":[2,0,0,822],
 "Lab_8cs.html":[2,0,0,3,55],
 "Lab_8cs_source.html":[2,0,0,3,55],
 "LabeledColorSlider_8cs.html":[2,0,0,3,2,0,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "LangSetting_8cs.html":[2,0,0,2,51],
 "LangSetting_8cs_source.html":[2,0,0,2,51],
 "LangTalk_8cs.html":[2,0,0,2,52],
-"LangTalk_8cs_source.html":[2,0,0,2,52],
-"LangWord_8cs.html":[2,0,0,2,53],
-"LangWord_8cs_source.html":[2,0,0,2,53]
+"LangTalk_8cs_source.html":[2,0,0,2,52]
 };

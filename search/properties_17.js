@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['w_0',['W',['../classCard.html#ad03194fe33b200a48c78e8a53e8c1bea',1,'Card']]],
+  ['w_0',['W',['../classRecipe.html#af249c1a508cebbbc321adc1560639378',1,'Recipe.W()'],['../classCard.html#ad03194fe33b200a48c78e8a53e8c1bea',1,'Card.W()']]],
   ['w_1',['w',['../classWindow_1_1SaveData.html#aa3be798f087ee0aa88b0c59efaea77e6',1,'Window::SaveData']]],
-  ['w_2',['W',['../classTaskMoveInstalled.html#aedd062cf1829f208c6f683a6837687a7',1,'TaskMoveInstalled.W()'],['../classTaskDesignation.html#ad672983d3aa118c741ec14de746f798b',1,'TaskDesignation.W()'],['../classRecipe.html#af249c1a508cebbbc321adc1560639378',1,'Recipe.W()'],['../classTaskBuild.html#a7191f00413d8eabcd48d9b3aa870b7e3',1,'TaskBuild.W()']]],
+  ['w_2',['W',['../classTaskMoveInstalled.html#aedd062cf1829f208c6f683a6837687a7',1,'TaskMoveInstalled.W()'],['../classTaskBuild.html#a7191f00413d8eabcd48d9b3aa870b7e3',1,'TaskBuild.W()'],['../classTaskDesignation.html#ad672983d3aa118c741ec14de746f798b',1,'TaskDesignation.W()']]],
   ['wait_3',['Wait',['../classCursorSystem.html#aca93c166e0621b7830ccb5cad5b30ac9',1,'CursorSystem']]],
   ['warnboss_4',['WarnBoss',['../classZoneEventQuest.html#a3c3e51090db7ce1c0430f4bf20b1ee01',1,'ZoneEventQuest.WarnBoss()'],['../classZoneEventSubdue.html#a7b115c11946823becb0ed629992cb52e',1,'ZoneEventSubdue.WarnBoss()']]],
   ['warnexit_5',['WarnExit',['../classZoneInstance.html#acefff2f7b36649ff8038eb326459f2fa',1,'ZoneInstance.WarnExit()'],['../classZoneInstanceRandomQuest.html#a5647043abd82324dac9147905d64e977',1,'ZoneInstanceRandomQuest.WarnExit()']]],

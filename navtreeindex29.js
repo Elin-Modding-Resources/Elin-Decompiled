@@ -1,5 +1,11 @@
 var NAVTREEINDEX29 =
 {
+"classAM__MoveInstalled.html#a043f889264546b830927e58cf7c82c12":[1,0,165,20],
+"classAM__MoveInstalled.html#a16bd1cdf9ee31d021af3002f33d4d601":[1,0,165,15],
+"classAM__MoveInstalled.html#a1ca7794b65e63e3ed4a5314dcff402fa":[1,0,165,27],
+"classAM__MoveInstalled.html#a257cdf514813c2c497d432e834465583":[1,0,165,30],
+"classAM__MoveInstalled.html#a2fb7b082dc7ec43763a64e667f56de63":[1,0,165,22],
+"classAM__MoveInstalled.html#a3a577f5de923532fcf02643320874c17":[1,0,165,28],
 "classAM__MoveInstalled.html#a3ce29a3258ab1f58d9a1396d4d6ec6fa":[1,0,165,10],
 "classAM__MoveInstalled.html#a3ea91eee174b7caa23355f252c5359c2":[1,0,165,7],
 "classAM__MoveInstalled.html#a42e272a65ca4a451f51141c8da03b4e4":[1,0,165,24],
@@ -243,11 +249,5 @@ var NAVTREEINDEX29 =
 "classActBit.html":[1,0,18],
 "classActBloodsuck.html":[1,0,19],
 "classActBloodsuck.html#a264ebda17ffb589290ecff2af75ca6db":[1,0,19,0],
-"classActBloodsuck.html#a28998f76688b9ea566dc72a24be2834d":[1,0,19,2],
-"classActBloodsuck.html#a3235a88763fff5d57f8082140406935e":[1,0,19,1],
-"classActBolt.html":[1,0,20],
-"classActBolt.html#a03d8a20551ae8e5479357cb2e10c6b5d":[1,0,20,4],
-"classActBolt.html#a18d6ceb7cc1eb4d471bb93b53ef780d8":[1,0,20,5],
-"classActBolt.html#a372d79e74bd30421670e59de92b65631":[1,0,20,3],
-"classActBolt.html#a498c54f033bf58223c11108777588f11":[1,0,20,2]
+"classActBloodsuck.html#a28998f76688b9ea566dc72a24be2834d":[1,0,19,2]
 };

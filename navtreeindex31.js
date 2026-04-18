@@ -1,5 +1,11 @@
 var NAVTREEINDEX31 =
 {
+"classActSwarm.html#ac72dec631d51037817b213f0404d02be":[1,0,68,0],
+"classActSword.html":[1,0,69],
+"classActTelekinesis.html":[1,0,70],
+"classActTelekinesis.html#a0b104cf343432392875d4ace1118d744":[1,0,70,6],
+"classActTelekinesis.html#a1a09eed0c663cc601ec05f3559e92522":[1,0,70,0],
+"classActTelekinesis.html#a26b00ed7a53ffc4fd9a3e0534284608e":[1,0,70,1],
 "classActTelekinesis.html#a2c6788eec86e15dcfc1048cb60c265ce":[1,0,70,2],
 "classActTelekinesis.html#a58b4567c5a6183490dcf6784a1816c33":[1,0,70,4],
 "classActTelekinesis.html#a63b33d6424ef3c458fb03c36a2d4b565":[1,0,70,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX31 =
 "classActorEx.html#a6aa441ae48170bad785530d42b34e2c6":[1,0,54,9],
 "classActorEx.html#a737ef801f9c7207db0ce984e0cfa1394":[1,0,54,1],
 "classActorEx.html#a8a5d9bdef17f4801826272d253f1f555":[1,0,54,5],
-"classActorEx.html#ab86071c915c1191bfe3dea6d6adcc2c9":[1,0,54,2],
-"classActorEx.html#abc58ec00242ec10fd210480c20f118bb":[1,0,54,8],
-"classActorEx.html#af0c4a4041f2ade35b1c7b756258e2813":[1,0,54,15],
-"classActorEx.html#af8d340238c9db5ac592554ccabd4cdca":[1,0,54,11],
-"classAffinity.html":[1,0,77],
-"classAffinity.html#a14c112230e1d7c7a0d75ef4c020b40f6":[1,0,77,4],
-"classAffinity.html#a16ef025808ce3a1594b2ef11b8db9daf":[1,0,77,19]
+"classActorEx.html#ab86071c915c1191bfe3dea6d6adcc2c9":[1,0,54,2]
 };

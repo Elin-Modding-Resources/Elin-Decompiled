@@ -7,6 +7,7 @@ var classCoreConfig_1_1CameraConfig =
     [ "invertX", "classCoreConfig_1_1CameraConfig.html#a59a75d00045e68bcaabc0bab1945fb77", null ],
     [ "invertY", "classCoreConfig_1_1CameraConfig.html#ad7ff889daf5a99898924d8ef998f866d", null ],
     [ "linearZoom", "classCoreConfig_1_1CameraConfig.html#a140de5dfc721213e6d8f11eb61f06df9", null ],
+    [ "listZoom", "classCoreConfig_1_1CameraConfig.html#ae96eba3a724a1a61d945c178e1dc6aca", null ],
     [ "momentum", "classCoreConfig_1_1CameraConfig.html#a3566af2a0cc79757dd7272bc2a415fa7", null ],
     [ "moveframe", "classCoreConfig_1_1CameraConfig.html#a381826b7161407f4a39799421e95a405", null ],
     [ "sensDrag", "classCoreConfig_1_1CameraConfig.html#a32d3846137ecee9dcef05f8385399091", null ],

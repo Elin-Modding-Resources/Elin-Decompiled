@@ -28,6 +28,8 @@ var ID__Achievement_8cs =
       [ "OYS", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af5ad88a6915758610c9b7400d851bec3", null ],
       [ "MAMA", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9afb6ba492b8fa0b264ad5fc016cb1123a", null ],
       [ "PRIEST", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af97b352f735dd1cb723e4606f0782532", null ],
-      [ "PRIEST2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ae930b9fdf4a48f0e114edf504930a522", null ]
+      [ "PRIEST2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ae930b9fdf4a48f0e114edf504930a522", null ],
+      [ "MAMA2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a71e1170613cc0f905b8bc426fe7f65eb", null ],
+      [ "MAMA3", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9afdbb86f18777865a07fcec2f7decec6a", null ]
     ] ]
 ];

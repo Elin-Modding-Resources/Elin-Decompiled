@@ -1,5 +1,11 @@
 var NAVTREEINDEX49 =
 {
+"classCodexManager.html#ae8db35079ee814d97778a761a23258e1":[1,0,304,10],
+"classCodexManager.html#af422093e0282cbe750a69bb3aaf4adf9":[1,0,304,1],
+"classCodexManager.html#affc405e7e04063d640026ef8117ef3e9":[1,0,304,8],
+"classCollectibleActor.html":[1,0,305],
+"classCollectibleActor.html#a00572c2696d82dd5f5406e316a291dcf":[1,0,305,0],
+"classCollectibleActor.html#a2869dcda119032ddaaa2918e8668d4aa":[1,0,305,4],
 "classCollectibleActor.html#a378be62783df4ddb4ff3857f8cf7b863":[1,0,305,9],
 "classCollectibleActor.html#a51300889399b76c546f14f4ec60a7686":[1,0,305,6],
 "classCollectibleActor.html#a614a1f18f3de2c5fd734de2af0de5057":[1,0,305,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX49 =
 "classConHOT.html#a360291589a8cbb8b71c9abcb06a736bb":[1,0,351,0],
 "classConHOT.html#ae1fbaa703bd42d4142d3965d7bb5e595":[1,0,351,1],
 "classConHallucination.html":[1,0,348],
-"classConHallucination.html#a7d23bd75af8458738df4a221e97daac5":[1,0,348,0],
-"classConHallucination.html#a829965949dee7153dde60bfa5ce1be8b":[1,0,348,1],
-"classConHero.html":[1,0,349],
-"classConHolyVeil.html":[1,0,350],
-"classConHotspring.html":[1,0,352],
-"classConHotspring.html#aab8a03aa74e2f885a0819da3ef48f7ab":[1,0,352,0],
-"classConIncognito.html":[1,0,353]
+"classConHallucination.html#a7d23bd75af8458738df4a221e97daac5":[1,0,348,0]
 };

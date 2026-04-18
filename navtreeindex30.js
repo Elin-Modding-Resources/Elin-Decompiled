@@ -1,5 +1,11 @@
 var NAVTREEINDEX30 =
 {
+"classActBloodsuck.html#a3235a88763fff5d57f8082140406935e":[1,0,19,1],
+"classActBolt.html":[1,0,20],
+"classActBolt.html#a03d8a20551ae8e5479357cb2e10c6b5d":[1,0,20,4],
+"classActBolt.html#a18d6ceb7cc1eb4d471bb93b53ef780d8":[1,0,20,5],
+"classActBolt.html#a372d79e74bd30421670e59de92b65631":[1,0,20,3],
+"classActBolt.html#a498c54f033bf58223c11108777588f11":[1,0,20,2],
 "classActBolt.html#aa7e92d6306492c55549e1c2c52510a3e":[1,0,20,0],
 "classActBolt.html#aeddc60271a10015641594df5f3a7c1f8":[1,0,20,1],
 "classActBreathe.html":[1,0,21],
@@ -243,11 +249,5 @@ var NAVTREEINDEX30 =
 "classActSummonGuard.html#a4719dfaf59dd567fc165a31811d032bd":[1,0,67,1],
 "classActSwarm.html":[1,0,68],
 "classActSwarm.html#a8c6e2c436a1eaf7f0f62fc38dab165b2":[1,0,68,2],
-"classActSwarm.html#a8f3bf8d4621cd4242c9d2357b498ce61":[1,0,68,1],
-"classActSwarm.html#ac72dec631d51037817b213f0404d02be":[1,0,68,0],
-"classActSword.html":[1,0,69],
-"classActTelekinesis.html":[1,0,70],
-"classActTelekinesis.html#a0b104cf343432392875d4ace1118d744":[1,0,70,6],
-"classActTelekinesis.html#a1a09eed0c663cc601ec05f3559e92522":[1,0,70,0],
-"classActTelekinesis.html#a26b00ed7a53ffc4fd9a3e0534284608e":[1,0,70,1]
+"classActSwarm.html#a8f3bf8d4621cd4242c9d2357b498ce61":[1,0,68,1]
 };
