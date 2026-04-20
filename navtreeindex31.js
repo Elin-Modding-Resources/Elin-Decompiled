@@ -1,5 +1,8 @@
 var NAVTREEINDEX31 =
 {
+"classActSwarm.html":[1,0,68],
+"classActSwarm.html#a8c6e2c436a1eaf7f0f62fc38dab165b2":[1,0,68,2],
+"classActSwarm.html#a8f3bf8d4621cd4242c9d2357b498ce61":[1,0,68,1],
 "classActSwarm.html#ac72dec631d51037817b213f0404d02be":[1,0,68,0],
 "classActSword.html":[1,0,69],
 "classActTelekinesis.html":[1,0,70],
@@ -246,8 +249,5 @@ var NAVTREEINDEX31 =
 "classActorEx.html#a49e15587e009380fd955612bdebfe3d3":[1,0,54,13],
 "classActorEx.html#a4bfc5b4b2c13f5c670a1f19be9d30b93":[1,0,54,7],
 "classActorEx.html#a69a8c654028ae46ff708a89aa102c654":[1,0,54,12],
-"classActorEx.html#a6aa441ae48170bad785530d42b34e2c6":[1,0,54,9],
-"classActorEx.html#a737ef801f9c7207db0ce984e0cfa1394":[1,0,54,1],
-"classActorEx.html#a8a5d9bdef17f4801826272d253f1f555":[1,0,54,5],
-"classActorEx.html#ab86071c915c1191bfe3dea6d6adcc2c9":[1,0,54,2]
+"classActorEx.html#a6aa441ae48170bad785530d42b34e2c6":[1,0,54,9]
 };

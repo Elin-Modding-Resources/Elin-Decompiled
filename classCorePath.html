@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.296 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.297 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -234,6 +234,8 @@ Properties</h2></td></tr>
 <tr class="separator:a14d601287968907ef2791eaaf2bccb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e3995d5c70ce695d1f01f93d14c4dd"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorePath.html#a04e3995d5c70ce695d1f01f93d14c4dd">PathIni</a><code> [get]</code></td></tr>
 <tr class="separator:a04e3995d5c70ce695d1f01f93d14c4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4838e5a931446a566eb62184e066e468"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorePath.html#a4838e5a931446a566eb62184e066e468">CustomDrawing</a><code> [get]</code></td></tr>
+<tr class="separator:a4838e5a931446a566eb62184e066e468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e8d0246f0d8972ea5f43c6ed7e6937b"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b">PathBackupOld</a><code> [get]</code></td></tr>
 <tr class="separator:a5e8d0246f0d8972ea5f43c6ed7e6937b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3125ecd3ecdb30023908ae691288928"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a><code> [get]</code></td></tr>
@@ -268,68 +270,68 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00216">216</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>    {</div>
-<div class="line"><span class="lineno">  218</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Init CorePath&quot;</span>);</div>
-<div class="line"><span class="lineno">  219</span>        <a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a> = Application.dataPath + <span class="stringliteral">&quot;/../Package/&quot;</span>;</div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (!Directory.Exists(<a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a>))</div>
-<div class="line"><span class="lineno">  221</span>        {</div>
-<div class="line"><span class="lineno">  222</span>            <a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a> = Application.streamingAssetsPath + <span class="stringliteral">&quot;/Package/&quot;</span>;</div>
-<div class="line"><span class="lineno">  223</span>        }</div>
-<div class="line"><span class="lineno">  224</span>        <a class="code hl_variable" href="classCorePath.html#ac565c0dd7ab38176a9a74a75aa92ce8e">rootExe</a> = Application.dataPath + <span class="stringliteral">&quot;/../&quot;</span>;</div>
-<div class="line"><span class="lineno">  225</span>        <a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> = <a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a> + <span class="stringliteral">&quot;_Elona/&quot;</span>;</div>
-<div class="line"><span class="lineno">  226</span>        <a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a> = Application.persistentDataPath + <span class="stringliteral">&quot;/User/&quot;</span>;</div>
-<div class="line"><span class="lineno">  227</span>        <a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a> = Application.persistentDataPath + <span class="stringliteral">&quot;/Custom/&quot;</span>;</div>
-<div class="line"><span class="lineno">  228</span>        <a class="code hl_variable" href="classCorePath.html#ad0b98610666b3a6b67e5e142dbc75641">modData</a> = Application.persistentDataPath + <span class="stringliteral">&quot;/Mod/&quot;</span>;</div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (!Application.isPlaying)</div>
-<div class="line"><span class="lineno">  230</span>        {</div>
-<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  232</span>        }</div>
-<div class="line"><span class="lineno">  233</span>        <span class="keywordflow">if</span> (!Directory.Exists(<a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>))</div>
-<div class="line"><span class="lineno">  234</span>        {</div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">if</span> (Directory.Exists(<a class="code hl_property" href="classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b">PathBackupOld</a>))</div>
-<div class="line"><span class="lineno">  236</span>            {</div>
-<div class="line"><span class="lineno">  237</span>                Directory.Move(<a class="code hl_property" href="classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b">PathBackupOld</a>, <a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>);</div>
-<div class="line"><span class="lineno">  238</span>            }</div>
-<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  240</span>            {</div>
-<div class="line"><span class="lineno">  241</span>                <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>);</div>
-<div class="line"><span class="lineno">  242</span>            }</div>
-<div class="line"><span class="lineno">  243</span>        }</div>
-<div class="line"><span class="lineno">  244</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#acfb2421158015d8415024f55e9fdf2e0">PathBackupCloud</a>);</div>
-<div class="line"><span class="lineno">  245</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#a65ef1a6b58a53140342d1505b198e472">RootSave</a>);</div>
-<div class="line"><span class="lineno">  246</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#a9a276737e4db9a35c0e1f5a07b2b60cc">RootSaveCloud</a>);</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordtype">string</span> text = (Application.isEditor ? (Application.streamingAssetsPath + <span class="stringliteral">&quot;/User/&quot;</span>) : (<a class="code hl_variable" href="classCorePath.html#ac565c0dd7ab38176a9a74a75aa92ce8e">rootExe</a> + <span class="stringliteral">&quot;User/&quot;</span>));</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (!Application.isEditor || !Directory.Exists(<a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>))</div>
-<div class="line"><span class="lineno">  249</span>        {</div>
-<div class="line"><span class="lineno">  250</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Copy User Folder:&quot;</span> + text + <span class="stringliteral">&quot;  to  &quot;</span> + <a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>);</div>
-<div class="line"><span class="lineno">  251</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>);</div>
-<div class="line"><span class="lineno">  252</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a5512635b863e240f0571e2cbd58496c4">CopyAll</a>(text, <a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>, overwrite: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  253</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#aa9b830a7d68c2eb585c6f0087a6d5fb9">SceneCustomizerSave</a>);</div>
-<div class="line"><span class="lineno">  254</span>        }</div>
-<div class="line"><span class="lineno">  255</span>        text = (Application.isEditor ? (Application.streamingAssetsPath + <span class="stringliteral">&quot;/Custom/&quot;</span>) : (<a class="code hl_variable" href="classCorePath.html#ac565c0dd7ab38176a9a74a75aa92ce8e">rootExe</a> + <span class="stringliteral">&quot;Custom/&quot;</span>));</div>
-<div class="line"><span class="lineno">  256</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Copy Custom Folder:&quot;</span> + text + <span class="stringliteral">&quot;  to  &quot;</span> + <a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a>);</div>
-<div class="line"><span class="lineno">  257</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a>);</div>
-<div class="line"><span class="lineno">  258</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a5512635b863e240f0571e2cbd58496c4">CopyAll</a>(text, <a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a>, overwrite: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00218">218</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Init CorePath&quot;</span>);</div>
+<div class="line"><span class="lineno">  221</span>        <a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a> = Application.dataPath + <span class="stringliteral">&quot;/../Package/&quot;</span>;</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">if</span> (!Directory.Exists(<a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a>))</div>
+<div class="line"><span class="lineno">  223</span>        {</div>
+<div class="line"><span class="lineno">  224</span>            <a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a> = Application.streamingAssetsPath + <span class="stringliteral">&quot;/Package/&quot;</span>;</div>
+<div class="line"><span class="lineno">  225</span>        }</div>
+<div class="line"><span class="lineno">  226</span>        <a class="code hl_variable" href="classCorePath.html#ac565c0dd7ab38176a9a74a75aa92ce8e">rootExe</a> = Application.dataPath + <span class="stringliteral">&quot;/../&quot;</span>;</div>
+<div class="line"><span class="lineno">  227</span>        <a class="code hl_variable" href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">packageCore</a> = <a class="code hl_variable" href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">rootMod</a> + <span class="stringliteral">&quot;_Elona/&quot;</span>;</div>
+<div class="line"><span class="lineno">  228</span>        <a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a> = Application.persistentDataPath + <span class="stringliteral">&quot;/User/&quot;</span>;</div>
+<div class="line"><span class="lineno">  229</span>        <a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a> = Application.persistentDataPath + <span class="stringliteral">&quot;/Custom/&quot;</span>;</div>
+<div class="line"><span class="lineno">  230</span>        <a class="code hl_variable" href="classCorePath.html#ad0b98610666b3a6b67e5e142dbc75641">modData</a> = Application.persistentDataPath + <span class="stringliteral">&quot;/Mod/&quot;</span>;</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">if</span> (!Application.isPlaying)</div>
+<div class="line"><span class="lineno">  232</span>        {</div>
+<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  234</span>        }</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">if</span> (!Directory.Exists(<a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>))</div>
+<div class="line"><span class="lineno">  236</span>        {</div>
+<div class="line"><span class="lineno">  237</span>            <span class="keywordflow">if</span> (Directory.Exists(<a class="code hl_property" href="classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b">PathBackupOld</a>))</div>
+<div class="line"><span class="lineno">  238</span>            {</div>
+<div class="line"><span class="lineno">  239</span>                Directory.Move(<a class="code hl_property" href="classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b">PathBackupOld</a>, <a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>);</div>
+<div class="line"><span class="lineno">  240</span>            }</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  242</span>            {</div>
+<div class="line"><span class="lineno">  243</span>                <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">PathBackup</a>);</div>
+<div class="line"><span class="lineno">  244</span>            }</div>
+<div class="line"><span class="lineno">  245</span>        }</div>
+<div class="line"><span class="lineno">  246</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#acfb2421158015d8415024f55e9fdf2e0">PathBackupCloud</a>);</div>
+<div class="line"><span class="lineno">  247</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#a65ef1a6b58a53140342d1505b198e472">RootSave</a>);</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#a9a276737e4db9a35c0e1f5a07b2b60cc">RootSaveCloud</a>);</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordtype">string</span> text = (Application.isEditor ? (Application.streamingAssetsPath + <span class="stringliteral">&quot;/User/&quot;</span>) : (<a class="code hl_variable" href="classCorePath.html#ac565c0dd7ab38176a9a74a75aa92ce8e">rootExe</a> + <span class="stringliteral">&quot;User/&quot;</span>));</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span> (!Application.isEditor || !Directory.Exists(<a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>))</div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Copy User Folder:&quot;</span> + text + <span class="stringliteral">&quot;  to  &quot;</span> + <a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>);</div>
+<div class="line"><span class="lineno">  253</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>);</div>
+<div class="line"><span class="lineno">  254</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a5512635b863e240f0571e2cbd58496c4">CopyAll</a>(text, <a class="code hl_variable" href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">user</a>, overwrite: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  255</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_property" href="classCorePath.html#aa9b830a7d68c2eb585c6f0087a6d5fb9">SceneCustomizerSave</a>);</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>        text = (Application.isEditor ? (Application.streamingAssetsPath + <span class="stringliteral">&quot;/Custom/&quot;</span>) : (<a class="code hl_variable" href="classCorePath.html#ac565c0dd7ab38176a9a74a75aa92ce8e">rootExe</a> + <span class="stringliteral">&quot;Custom/&quot;</span>));</div>
+<div class="line"><span class="lineno">  258</span>        <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;Copy Custom Folder:&quot;</span> + text + <span class="stringliteral">&quot;  to  &quot;</span> + <a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a>);</div>
+<div class="line"><span class="lineno">  259</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">CreateDirectory</a>(<a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a>);</div>
+<div class="line"><span class="lineno">  260</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a5512635b863e240f0571e2cbd58496c4">CopyAll</a>(text, <a class="code hl_variable" href="classCorePath.html#a35770bd5140c88784d90753e20554316">custom</a>, overwrite: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  261</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassCorePath_html_a31fdacbd188c623a8fb245a33d18be9d"><div class="ttname"><a href="classCorePath.html#a31fdacbd188c623a8fb245a33d18be9d">CorePath.rootMod</a></div><div class="ttdeci">static string rootMod</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00165">CorePath.cs:165</a></div></div>
 <div class="ttc" id="aclassCorePath_html_a35770bd5140c88784d90753e20554316"><div class="ttname"><a href="classCorePath.html#a35770bd5140c88784d90753e20554316">CorePath.custom</a></div><div class="ttdeci">static string custom</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00159">CorePath.cs:159</a></div></div>
-<div class="ttc" id="aclassCorePath_html_a5e8d0246f0d8972ea5f43c6ed7e6937b"><div class="ttname"><a href="classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b">CorePath.PathBackupOld</a></div><div class="ttdeci">static string PathBackupOld</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00210">CorePath.cs:210</a></div></div>
+<div class="ttc" id="aclassCorePath_html_a5e8d0246f0d8972ea5f43c6ed7e6937b"><div class="ttname"><a href="classCorePath.html#a5e8d0246f0d8972ea5f43c6ed7e6937b">CorePath.PathBackupOld</a></div><div class="ttdeci">static string PathBackupOld</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00212">CorePath.cs:212</a></div></div>
 <div class="ttc" id="aclassCorePath_html_a65ef1a6b58a53140342d1505b198e472"><div class="ttname"><a href="classCorePath.html#a65ef1a6b58a53140342d1505b198e472">CorePath.RootSave</a></div><div class="ttdeci">static string RootSave</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00202">CorePath.cs:202</a></div></div>
 <div class="ttc" id="aclassCorePath_html_a7b6aa77a287630c4a6000cdcea156118"><div class="ttname"><a href="classCorePath.html#a7b6aa77a287630c4a6000cdcea156118">CorePath.packageCore</a></div><div class="ttdeci">static string packageCore</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00153">CorePath.cs:153</a></div></div>
 <div class="ttc" id="aclassCorePath_html_a9a276737e4db9a35c0e1f5a07b2b60cc"><div class="ttname"><a href="classCorePath.html#a9a276737e4db9a35c0e1f5a07b2b60cc">CorePath.RootSaveCloud</a></div><div class="ttdeci">static string RootSaveCloud</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00204">CorePath.cs:204</a></div></div>
 <div class="ttc" id="aclassCorePath_html_aa9b830a7d68c2eb585c6f0087a6d5fb9"><div class="ttname"><a href="classCorePath.html#aa9b830a7d68c2eb585c6f0087a6d5fb9">CorePath.SceneCustomizerSave</a></div><div class="ttdeci">static string SceneCustomizerSave</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00190">CorePath.cs:190</a></div></div>
-<div class="ttc" id="aclassCorePath_html_ac3125ecd3ecdb30023908ae691288928"><div class="ttname"><a href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">CorePath.PathBackup</a></div><div class="ttdeci">static string PathBackup</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00212">CorePath.cs:212</a></div></div>
+<div class="ttc" id="aclassCorePath_html_ac3125ecd3ecdb30023908ae691288928"><div class="ttname"><a href="classCorePath.html#ac3125ecd3ecdb30023908ae691288928">CorePath.PathBackup</a></div><div class="ttdeci">static string PathBackup</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00214">CorePath.cs:214</a></div></div>
 <div class="ttc" id="aclassCorePath_html_ac565c0dd7ab38176a9a74a75aa92ce8e"><div class="ttname"><a href="classCorePath.html#ac565c0dd7ab38176a9a74a75aa92ce8e">CorePath.rootExe</a></div><div class="ttdeci">static string rootExe</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00168">CorePath.cs:168</a></div></div>
-<div class="ttc" id="aclassCorePath_html_acfb2421158015d8415024f55e9fdf2e0"><div class="ttname"><a href="classCorePath.html#acfb2421158015d8415024f55e9fdf2e0">CorePath.PathBackupCloud</a></div><div class="ttdeci">static string PathBackupCloud</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00214">CorePath.cs:214</a></div></div>
+<div class="ttc" id="aclassCorePath_html_acfb2421158015d8415024f55e9fdf2e0"><div class="ttname"><a href="classCorePath.html#acfb2421158015d8415024f55e9fdf2e0">CorePath.PathBackupCloud</a></div><div class="ttdeci">static string PathBackupCloud</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00216">CorePath.cs:216</a></div></div>
 <div class="ttc" id="aclassCorePath_html_ad0b98610666b3a6b67e5e142dbc75641"><div class="ttname"><a href="classCorePath.html#ad0b98610666b3a6b67e5e142dbc75641">CorePath.modData</a></div><div class="ttdeci">static string modData</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00162">CorePath.cs:162</a></div></div>
 <div class="ttc" id="aclassCorePath_html_ae2530233ffdeff66beed71e85f690c33"><div class="ttname"><a href="classCorePath.html#ae2530233ffdeff66beed71e85f690c33">CorePath.user</a></div><div class="ttdeci">static string user</div><div class="ttdef"><b>Definition:</b> <a href="CorePath_8cs_source.html#l00156">CorePath.cs:156</a></div></div>
 <div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
 <div class="ttc" id="aclassIO_html_a5512635b863e240f0571e2cbd58496c4"><div class="ttname"><a href="classIO.html#a5512635b863e240f0571e2cbd58496c4">IO.CopyAll</a></div><div class="ttdeci">static void CopyAll(string fromPath, string toPath, bool overwrite=true)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00338">IO.cs:338</a></div></div>
 <div class="ttc" id="aclassIO_html_a936ea0e43adecbf23afb5bbc53c484f9"><div class="ttname"><a href="classIO.html#a936ea0e43adecbf23afb5bbc53c484f9">IO.CreateDirectory</a></div><div class="ttdeci">static void CreateDirectory(string path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00377">IO.cs:377</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CorePath_8cs_source.html#l00159">custom</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="CorePath_8cs_source.html#l00162">modData</a>, <a class="el" href="CorePath_8cs_source.html#l00153">packageCore</a>, <a class="el" href="CorePath_8cs_source.html#l00212">PathBackup</a>, <a class="el" href="CorePath_8cs_source.html#l00214">PathBackupCloud</a>, <a class="el" href="CorePath_8cs_source.html#l00210">PathBackupOld</a>, <a class="el" href="CorePath_8cs_source.html#l00168">rootExe</a>, <a class="el" href="CorePath_8cs_source.html#l00165">rootMod</a>, <a class="el" href="CorePath_8cs_source.html#l00202">RootSave</a>, <a class="el" href="CorePath_8cs_source.html#l00204">RootSaveCloud</a>, <a class="el" href="CorePath_8cs_source.html#l00190">SceneCustomizerSave</a>, and <a class="el" href="CorePath_8cs_source.html#l00156">user</a>.</p>
+<p class="reference">References <a class="el" href="CorePath_8cs_source.html#l00159">custom</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="CorePath_8cs_source.html#l00162">modData</a>, <a class="el" href="CorePath_8cs_source.html#l00153">packageCore</a>, <a class="el" href="CorePath_8cs_source.html#l00214">PathBackup</a>, <a class="el" href="CorePath_8cs_source.html#l00216">PathBackupCloud</a>, <a class="el" href="CorePath_8cs_source.html#l00212">PathBackupOld</a>, <a class="el" href="CorePath_8cs_source.html#l00168">rootExe</a>, <a class="el" href="CorePath_8cs_source.html#l00165">rootMod</a>, <a class="el" href="CorePath_8cs_source.html#l00202">RootSave</a>, <a class="el" href="CorePath_8cs_source.html#l00204">RootSaveCloud</a>, <a class="el" href="CorePath_8cs_source.html#l00190">SceneCustomizerSave</a>, and <a class="el" href="CorePath_8cs_source.html#l00156">user</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CoreEmu_8cs_source.html#l00007">CoreEmu.Awake()</a>, and <a class="el" href="Core_8cs_source.html#l00610">Core.SetReferences()</a>.</p>
 
@@ -430,7 +432,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00159">159</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00021">SpriteReplacer.ListSkins()</a>, <a class="el" href="ModManager_8cs_source.html#l00389">ModManager.LoadCustomPackage()</a>, and <a class="el" href="HotItemContext_8cs_source.html#l00067">HotItemContext.Show()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="SpriteReplacer_8cs_source.html#l00021">SpriteReplacer.ListSkins()</a>, <a class="el" href="ModManager_8cs_source.html#l00389">ModManager.LoadCustomPackage()</a>, and <a class="el" href="HotItemContext_8cs_source.html#l00067">HotItemContext.Show()</a>.</p>
 
 </div>
 </div>
@@ -888,7 +890,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00162">162</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>.</p>
 
 </div>
 </div>
@@ -938,7 +940,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00153">153</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ModPackage_8cs_source.html#l00237">ModPackage.AddOrUpdateLang()</a>, <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00107">SpriteReplacer.ReloadBuiltInTextures()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ModPackage_8cs_source.html#l00237">ModPackage.AddOrUpdateLang()</a>, <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, and <a class="el" href="SpriteReplacer_8cs_source.html#l00107">SpriteReplacer.ReloadBuiltInTextures()</a>.</p>
 
 </div>
 </div>
@@ -1060,7 +1062,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00168">168</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00067">LayerFeedback.OnInit()</a>, and <a class="el" href="ModManager_8cs_source.html#l00075">ModManager.SaveLoadOrder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00067">LayerFeedback.OnInit()</a>, and <a class="el" href="ModManager_8cs_source.html#l00075">ModManager.SaveLoadOrder()</a>.</p>
 
 </div>
 </div>
@@ -1086,7 +1088,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00165">165</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00115">ContentConfigOther.OpenPackage()</a>, and <a class="el" href="Core_8cs_source.html#l00215">Core.StartCase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00115">ContentConfigOther.OpenPackage()</a>, and <a class="el" href="Core_8cs_source.html#l00215">Core.StartCase()</a>.</p>
 
 </div>
 </div>
@@ -1256,7 +1258,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00156">156</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="TextureManager_8cs_source.html#l00011">TextureManager.Init()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00051">LayerTextureViewer.OnInit()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00120">ContentConfigOther.OpenUser()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00118">LayerTextureViewer.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="TextureManager_8cs_source.html#l00011">TextureManager.Init()</a>, <a class="el" href="LayerTextureViewer_8cs_source.html#l00051">LayerTextureViewer.OnInit()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00120">ContentConfigOther.OpenUser()</a>, and <a class="el" href="LayerTextureViewer_8cs_source.html#l00118">LayerTextureViewer.Update()</a>.</p>
 
 </div>
 </div>
@@ -1335,6 +1337,32 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a4838e5a931446a566eb62184e066e468" name="a4838e5a931446a566eb62184e066e468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4838e5a931446a566eb62184e066e468">&#9670;&#160;</a></span>CustomDrawing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CorePath.CustomDrawing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00210">210</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LayerPixelPaint_8cs_source.html#l00087">LayerPixelPaint.DialogLoad()</a>.</p>
+
+</div>
+</div>
 <a id="abd3bf0c8b5eb70515a684b48156195a3" name="abd3bf0c8b5eb70515a684b48156195a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd3bf0c8b5eb70515a684b48156195a3">&#9670;&#160;</a></span>DramaData</h2>
 
@@ -1357,7 +1385,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00174">174</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07220">Chara.ShowDialog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l07216">Chara.ShowDialog()</a>.</p>
 
 </div>
 </div>
@@ -1485,9 +1513,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00212">212</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00214">214</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00267">GameIO.DeleteGame()</a>, <a class="el" href="GameIO_8cs_source.html#l00289">GameIO.GetGameList()</a>, <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00161">LayerLoadGame.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00267">GameIO.DeleteGame()</a>, <a class="el" href="GameIO_8cs_source.html#l00289">GameIO.GetGameList()</a>, <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00161">LayerLoadGame.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -1511,9 +1539,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00214">214</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00216">216</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00267">GameIO.DeleteGame()</a>, <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00161">LayerLoadGame.RefreshInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GameIO_8cs_source.html#l00267">GameIO.DeleteGame()</a>, <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, and <a class="el" href="LayerLoadGame_8cs_source.html#l00161">LayerLoadGame.RefreshInfo()</a>.</p>
 
 </div>
 </div>
@@ -1537,9 +1565,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00210">210</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00212">212</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>.</p>
 
 </div>
 </div>
@@ -1617,7 +1645,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00202">202</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00192">LayerFeedback.CollectFiles()</a>, <a class="el" href="Game_8cs_source.html#l00733">Game.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00267">GameIO.DeleteGame()</a>, <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="Game_8cs_source.html#l00322">Game.Load()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, <a class="el" href="Core_8cs_source.html#l00480">Core.OnApplicationQuit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00067">LayerFeedback.OnInit()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00110">ContentConfigOther.OoenConfigFolder()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00105">ContentConfigOther.OpenLog()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00108">LayerLoadGame.RefreshList()</a>, <a class="el" href="Game_8cs_source.html#l00806">Game.StartNewGame()</a>, <a class="el" href="Game_8cs_source.html#l00311">Game.TryLoad()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00862">CoreDebug.UpdateInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00192">LayerFeedback.CollectFiles()</a>, <a class="el" href="Game_8cs_source.html#l00733">Game.Create()</a>, <a class="el" href="GameIO_8cs_source.html#l00267">GameIO.DeleteGame()</a>, <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="Game_8cs_source.html#l00322">Game.Load()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, <a class="el" href="Core_8cs_source.html#l00480">Core.OnApplicationQuit()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00067">LayerFeedback.OnInit()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00110">ContentConfigOther.OoenConfigFolder()</a>, <a class="el" href="ContentConfigOther_8cs_source.html#l00105">ContentConfigOther.OpenLog()</a>, <a class="el" href="LayerLoadGame_8cs_source.html#l00108">LayerLoadGame.RefreshList()</a>, <a class="el" href="Game_8cs_source.html#l00806">Game.StartNewGame()</a>, <a class="el" href="Game_8cs_source.html#l00311">Game.TryLoad()</a>, and <a class="el" href="CoreDebug_8cs_source.html#l00862">CoreDebug.UpdateInput()</a>.</p>
 
 </div>
 </div>
@@ -1643,7 +1671,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00204">204</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00192">LayerFeedback.CollectFiles()</a>, <a class="el" href="Game_8cs_source.html#l00733">Game.Create()</a>, <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00067">LayerFeedback.OnInit()</a>, <a class="el" href="Game_8cs_source.html#l00806">Game.StartNewGame()</a>, and <a class="el" href="Game_8cs_source.html#l00311">Game.TryLoad()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerFeedback_8cs_source.html#l00192">LayerFeedback.CollectFiles()</a>, <a class="el" href="Game_8cs_source.html#l00733">Game.Create()</a>, <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="GameIO_8cs_source.html#l00115">GameIO.MakeBackup()</a>, <a class="el" href="LayerFeedback_8cs_source.html#l00067">LayerFeedback.OnInit()</a>, <a class="el" href="Game_8cs_source.html#l00806">Game.StartNewGame()</a>, and <a class="el" href="Game_8cs_source.html#l00311">Game.TryLoad()</a>.</p>
 
 </div>
 </div>
@@ -1669,7 +1697,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CorePath_8cs_source.html#l00190">190</a> of file <a class="el" href="CorePath_8cs_source.html">CorePath.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00216">Init()</a>, <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00133">WidgetSceneCustomizer.OnClickLoad()</a>, and <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00121">WidgetSceneCustomizer.OnClickSave()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CorePath_8cs_source.html#l00218">Init()</a>, <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00133">WidgetSceneCustomizer.OnClickLoad()</a>, and <a class="el" href="WidgetSceneCustomizer_8cs_source.html#l00121">WidgetSceneCustomizer.OnClickSave()</a>.</p>
 
 </div>
 </div>

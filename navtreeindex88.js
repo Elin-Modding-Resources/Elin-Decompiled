@@ -1,5 +1,12 @@
 var NAVTREEINDEX88 =
 {
+"classMsgBox.html#aed5e73609bda8ad23106b7b8fff53ff0":[1,0,938,9],
+"classMsgBox.html#af92dda942e33520980a33ad2eaaa8c7f":[1,0,938,8],
+"classMsgBox_1_1Prefabs.html":[1,0,938,0],
+"classMsgBox_1_1Prefabs.html#a3d5f70eac255073a7f30a87282866d5a":[1,0,938,0,2],
+"classMsgBox_1_1Prefabs.html#a57c00c394c4d8df5bf19851f4b22fb8b":[1,0,938,0,3],
+"classMsgBox_1_1Prefabs.html#a90ff9ebdf4fa5dbd94ff334438cb4e1e":[1,0,938,0,0],
+"classMsgBox_1_1Prefabs.html#adf4465aa017ad2e8763535141875150c":[1,0,938,0,1],
 "classMsgBox_1_1Prefabs.html#af14399c240d39d4e011d035f580582b1":[1,0,938,0,4],
 "classMsgColors.html":[1,0,939],
 "classMsgColors.html#a03aebc4adfa9026f5bf970fa13ccbdda":[1,0,939,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX88 =
 "classObjectPool_1_1Item.html#adf03e02b6956a8d39bdab9e771119e5a":[1,0,966,1,9],
 "classObjectPool_1_1Item.html#aed2d6a1afc4656496668577c72eaa3e4":[1,0,966,1,10],
 "classObjectPool_1_1Item.html#aed8b9b0fb6dbf695772311e04bc6c74c":[1,0,966,1,11],
-"classObjectPool_1_1Item.html#afbc6b23440ee9899154589845e990969":[1,0,966,1,0],
-"classObjectPool_1_1Item.html#afbfae03289458bbada603decaa385009":[1,0,966,1,7],
-"classObjectPool_1_1Item.html#afc14568f51218d24f896190b17b3656d":[1,0,966,1,3],
-"classOutline8.html":[1,0,968],
-"classOutline8.html#a519d28a745afb06c930d467a308c49dc":[1,0,968,0],
-"classOverlayTexture.html":[1,0,969],
-"classOverlayTexture.html#a0dbed3d287a586c568652484e61d1f2b":[1,0,969,4],
-"classOverlayTexture.html#a1bbb3990dca7f9bb719bc7bc79859332":[1,0,969,10]
+"classObjectPool_1_1Item.html#afbc6b23440ee9899154589845e990969":[1,0,966,1,0]
 };

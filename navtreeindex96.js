@@ -1,5 +1,12 @@
 var NAVTREEINDEX96 =
 {
+"classQuestHarvest.html#a5e3a7e6be03d4b55c907a9d4f765ee57":[1,0,1044,3],
+"classQuestHarvest.html#a621512234cba5cbc6a958dcc60f9ccf7":[1,0,1044,9],
+"classQuestHarvest.html#a6429f7b182933ee08852e9918d5058e4":[1,0,1044,5],
+"classQuestHarvest.html#a680ac521d4a5ebf9ff65f1f28f1934aa":[1,0,1044,12],
+"classQuestHarvest.html#a817d2550ab88174eb18cbbcaea9b04d8":[1,0,1044,11],
+"classQuestHarvest.html#a8ea61ee6d76cdfe528add524b793d566":[1,0,1044,0],
+"classQuestHarvest.html#ac318c6328ba76821eb6dd41483c66274":[1,0,1044,7],
 "classQuestHarvest.html#af018998b81716a58b35a69d69945e75a":[1,0,1044,2],
 "classQuestHarvest.html#afdc88600430b667c21f351b3b0115cda":[1,0,1044,6],
 "classQuestHome.html":[1,0,1045],
@@ -242,12 +249,5 @@ var NAVTREEINDEX96 =
 "classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98aaa6a4212acefd15c744c2bf98c31081b5":[1,0,1087,0,1],
 "classQuestTaskHunt.html#aab0a62a84d7beaca850a6f7f909299b1":[1,0,1087,11],
 "classQuestTaskHunt.html#abd7126a640c020a8f718e998f39660dd":[1,0,1087,12],
-"classQuestTaskHunt.html#ac39302d3182982f633ccc0bb8666a625":[1,0,1087,14],
-"classQuestTaskHunt.html#ada775f46aa97a3f7c1d27f97fe9421f6":[1,0,1087,5],
-"classQuestTaskHunt.html#afdc18c565e6753bccb16eff6d2dfcbc6":[1,0,1087,2],
-"classQuestTaskKarma.html":[1,0,1088],
-"classQuestTaskKarma.html#a20d5febc00e50145d823e0f4689c78a6":[1,0,1088,5],
-"classQuestTaskKarma.html#a27e609fd7fae9ffa7688ea78fca7c8d7":[1,0,1088,9],
-"classQuestTaskKarma.html#a2d1be8b30e784e7d98a54b41872f7ca8":[1,0,1088,1],
-"classQuestTaskKarma.html#a45dfd78c1ef8e13121fea02cd2d2f043":[1,0,1088,3]
+"classQuestTaskHunt.html#ac39302d3182982f633ccc0bb8666a625":[1,0,1087,14]
 };

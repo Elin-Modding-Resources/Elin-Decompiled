@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"MapGenRegion_8cs_source.html":[2,0,0,849],
 "MapGenVariation_8cs.html":[2,0,0,850],
 "MapGenVariation_8cs_source.html":[2,0,0,850],
 "MapGen_8cs.html":[2,0,0,847],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "PopManager_8cs.html":[2,0,0,3,75],
 "PopManager_8cs_source.html":[2,0,0,3,75],
 "PopfabItem_8cs.html":[2,0,0,3,71],
-"PopfabItem_8cs_source.html":[2,0,0,3,71],
-"PopfabText_8cs.html":[2,0,0,3,72]
+"PopfabItem_8cs_source.html":[2,0,0,3,71]
 };

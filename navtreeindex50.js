@@ -1,5 +1,8 @@
 var NAVTREEINDEX50 =
 {
+"classConHOT.html#ae1fbaa703bd42d4142d3965d7bb5e595":[1,0,351,1],
+"classConHallucination.html":[1,0,348],
+"classConHallucination.html#a7d23bd75af8458738df4a221e97daac5":[1,0,348,0],
 "classConHallucination.html#a829965949dee7153dde60bfa5ce1be8b":[1,0,348,1],
 "classConHero.html":[1,0,349],
 "classConHolyVeil.html":[1,0,350],
@@ -246,8 +249,5 @@ var NAVTREEINDEX50 =
 "classConfigTactics.html":[1,0,344],
 "classConfigTactics.html#a47dffa4b1ca69a9226fa4054e1d6d405":[1,0,344,1],
 "classConfigTactics.html#a70a0db59b46e9424171d363f2ad2f188":[1,0,344,0],
-"classConfigTactics.html#a85626c285d80af5b82be7b4997c58d4d":[1,0,344,2],
-"classConsoleProDebug.html":[1,0,373],
-"classConsoleProDebug.html#a040ea11ee30655ec83b7f26b9d0d9e29":[1,0,373,0],
-"classConsoleProDebug.html#a24b01b8afcd05185b815d7f0eaf01870":[1,0,373,2]
+"classConfigTactics.html#a85626c285d80af5b82be7b4997c58d4d":[1,0,344,2]
 };

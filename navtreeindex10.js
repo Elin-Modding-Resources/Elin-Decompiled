@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"LangTalk_8cs_source.html":[2,0,0,2,52],
 "LangWord_8cs.html":[2,0,0,2,53],
 "LangWord_8cs_source.html":[2,0,0,2,53],
 "Lang_8cs.html":[2,0,0,2,45],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "MapExportSetting_8cs_source.html":[2,0,0,846],
 "MapGenDungen_8cs.html":[2,0,0,848],
 "MapGenDungen_8cs_source.html":[2,0,0,848],
-"MapGenRegion_8cs.html":[2,0,0,849],
-"MapGenRegion_8cs_source.html":[2,0,0,849]
+"MapGenRegion_8cs.html":[2,0,0,849]
 };

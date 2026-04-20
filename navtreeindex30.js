@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"classActBloodsuck.html":[1,0,19],
+"classActBloodsuck.html#a264ebda17ffb589290ecff2af75ca6db":[1,0,19,0],
+"classActBloodsuck.html#a28998f76688b9ea566dc72a24be2834d":[1,0,19,2],
 "classActBloodsuck.html#a3235a88763fff5d57f8082140406935e":[1,0,19,1],
 "classActBolt.html":[1,0,20],
 "classActBolt.html#a03d8a20551ae8e5479357cb2e10c6b5d":[1,0,20,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "classActSlime.html#a98e8cf97c769aea1faa8ab5b3e3a557a":[1,0,66,3],
 "classActSummonGuard.html":[1,0,67],
 "classActSummonGuard.html#a17fb58c2f7ac46f41168858d5f78bd0c":[1,0,67,0],
-"classActSummonGuard.html#a4719dfaf59dd567fc165a31811d032bd":[1,0,67,1],
-"classActSwarm.html":[1,0,68],
-"classActSwarm.html#a8c6e2c436a1eaf7f0f62fc38dab165b2":[1,0,68,2],
-"classActSwarm.html#a8f3bf8d4621cd4242c9d2357b498ce61":[1,0,68,1]
+"classActSummonGuard.html#a4719dfaf59dd567fc165a31811d032bd":[1,0,67,1]
 };

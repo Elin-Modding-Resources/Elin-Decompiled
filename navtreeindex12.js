@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"PopfabText_8cs.html":[2,0,0,3,72],
 "PopfabText_8cs_source.html":[2,0,0,3,72],
 "Popfab_8cs.html":[2,0,0,3,70],
 "Popfab_8cs_source.html":[2,0,0,3,70],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600ab96919a088e508abfbb1aa9c4cbb8f0b":[2,0,0,1024,0,6],
 "Rarity_8cs_source.html":[2,0,0,1024],
 "RecipeBridgePillar_8cs.html":[2,0,0,1026],
-"RecipeBridgePillar_8cs_source.html":[2,0,0,1026],
-"RecipeCard_8cs.html":[2,0,0,1027]
+"RecipeBridgePillar_8cs_source.html":[2,0,0,1026]
 };

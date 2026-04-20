@@ -1,5 +1,8 @@
 var NAVTREEINDEX26 =
 {
+"classAI__Cook.html#a377c39fd6dc18d190051c73dfd8d1201":[1,0,83,3],
+"classAI__Cook.html#a76cba3e04b6a5cb002b52f7e92004ab5":[1,0,83,2],
+"classAI__Cook.html#a9f2f32f1f082f586dd25e5a52f92f951":[1,0,83,0],
 "classAI__Craft.html":[1,0,84],
 "classAI__Craft.html#a6bcd8e21ecc43e79e06ad01eb6477e73":[1,0,84,0],
 "classAI__Craft__Snowman.html":[1,0,85],
@@ -246,8 +249,5 @@ var NAVTREEINDEX26 =
 "classAI__PracticeDummy.html#a03326368461ff11e6229ae15a2cd47c0":[1,0,111,3],
 "classAI__PracticeDummy.html#a1983a95e64a78d87922878eef32208c4":[1,0,111,1],
 "classAI__PracticeDummy.html#a2caa3366643ef1267b72d7b0462357e2":[1,0,111,4],
-"classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,111,2],
-"classAI__PracticeDummy.html#ad6f3d4b7ba5db96703378f1186a57589":[1,0,111,0],
-"classAI__Pray.html":[1,0,112],
-"classAI__Pray.html#a603871972aa41989db7311054d56825f":[1,0,112,0]
+"classAI__PracticeDummy.html#a5b79994bd44cb72b50cc7f7594818768":[1,0,111,2]
 };

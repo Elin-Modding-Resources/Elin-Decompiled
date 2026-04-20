@@ -1,5 +1,8 @@
 var NAVTREEINDEX28 =
 {
+"classAM__Bird.html#a3fe205a551067676de164ab92faa3412":[1,0,146,0],
+"classAM__Bird.html#a4b776cc8d26396e265d98c64e513bb9e":[1,0,146,1],
+"classAM__Blueprint.html":[1,0,147],
 "classAM__Blueprint.html#a23b7c9373eba7f93ba9e1c88a60bb5aa":[1,0,147,2],
 "classAM__Blueprint.html#a2852fdf4cefb2c694620a7091b670fd7":[1,0,147,1],
 "classAM__Blueprint.html#a411fb78b6a4d8eee5c174591cc0806dc":[1,0,147,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX28 =
 "classAM__MiniGame.html":[1,0,164],
 "classAM__MiniGame.html#a00bcce97d902ca3e5ba88fa06782b063":[1,0,164,1],
 "classAM__MiniGame.html#a2494e88520e26f48488c18fb064099e8":[1,0,164,0],
-"classAM__MiniGame.html#a36aa1e9275ea7a58a96098dabe1285d0":[1,0,164,3],
-"classAM__MiniGame.html#a50c55c881857f40f66b50a2484041f64":[1,0,164,2],
-"classAM__MiniGame.html#ab7c2c5b8c59d76d78b3b167f5837f314":[1,0,164,4],
-"classAM__MoveInstalled.html":[1,0,165]
+"classAM__MiniGame.html#a36aa1e9275ea7a58a96098dabe1285d0":[1,0,164,3]
 };

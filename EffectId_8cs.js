@@ -140,6 +140,7 @@ var EffectId_8cs =
       [ "ChangeRarity", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02acd750eb5fea27c00a140de857bb9d87a", null ],
       [ "ChangeAlias", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a7b448efb8e4d98c45977a4bb43ace33e", null ],
       [ "ChangeBiography", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02afff8adfaedac2beaa1bd7e063e3a7eee", null ],
-      [ "Degenerate", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a24c813faee6d26cc144bec89a984824d", null ]
+      [ "Degenerate", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a24c813faee6d26cc144bec89a984824d", null ],
+      [ "MassFear", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a8f4b40a01e816c94f1ee28b842e47a08", null ]
     ] ]
 ];

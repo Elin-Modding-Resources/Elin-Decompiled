@@ -1,5 +1,14 @@
 var NAVTREEINDEX119 =
 {
+"classTraitAmmo.html#a061b674e16022617b5e80d700617d7d5":[1,0,1457,4],
+"classTraitAmmo.html#a42c9e9705bd05948c684caa21b3d1e35":[1,0,1457,2],
+"classTraitAmmo.html#a7c03a44e4d3d715a26ae0ffe8db66cd5":[1,0,1457,3],
+"classTraitAmmo.html#ab25d4ac09a41e5ebab12f2d56fbc31fa":[1,0,1457,5],
+"classTraitAmmo.html#ac834422091e2fd3f8bf11d0f100e995c":[1,0,1457,0],
+"classTraitAmmo.html#ad2a54cfc05eb96b3682323ee18cc64ce":[1,0,1457,1],
+"classTraitAmmoArrow.html":[1,0,1458],
+"classTraitAmmoBolt.html":[1,0,1459],
+"classTraitAmmoBullet.html":[1,0,1460],
 "classTraitAmmoEnergy.html":[1,0,1461],
 "classTraitAmmoRocket.html":[1,0,1462],
 "classTraitAmmoRocket.html#a78c6030477eed382e68ad8eb977c25cf":[1,0,1462,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614cacd24882902a3d5da6e5783027a0ae3d0":[1,0,1511,0,2],
 "classTraitBrewery.html#af6db96e2d5003643fc59104d280777c1":[1,0,1511,7],
 "classTraitBroom.html":[1,0,1512],
-"classTraitBroom.html#a9abeb512e6bd909828dcc06921134bba":[1,0,1512,1],
-"classTraitBroom.html#abb8942a50793670e76df21f2d5f74b3f":[1,0,1512,0],
-"classTraitBroomWitch.html":[1,0,1513],
-"classTraitBuildBoard.html":[1,0,1514],
-"classTraitBuildBoard.html#a27513be20ef8e5426a7729e1525cf7b7":[1,0,1514,0],
-"classTraitBuildBoard.html#a42864a925c4d3be0cd7583e79c80e4c6":[1,0,1514,1],
-"classTraitButcher.html":[1,0,1515],
-"classTraitButcher.html#a7c70e9340a319dcaea9405e19e121223":[1,0,1515,0],
-"classTraitButcher.html#aaa2e972b3aecbd51a01b4df7e1aede2a":[1,0,1515,2],
-"classTraitButcher.html#aabe2afc5aa8883e90a78ffc9325172db":[1,0,1515,1]
+"classTraitBroom.html#a9abeb512e6bd909828dcc06921134bba":[1,0,1512,1]
 };

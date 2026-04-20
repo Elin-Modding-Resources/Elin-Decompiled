@@ -18,6 +18,7 @@ var classENC =
     [ "breathing", "classENC.html#a074875e077b0cd15c13eff2ab5cace3b", null ],
     [ "convertCold", "classENC.html#a41f34ee042b3d74d033fe24016fb635e", null ],
     [ "convertFire", "classENC.html#a96ccd9231736738c9cbb227e6ebdc1fc", null ],
+    [ "convertHoly", "classENC.html#aaa953dbc933c387b7e072d9faa89f140", null ],
     [ "convertImpact", "classENC.html#ad7c5a7e58005a35687e1ef71fae42585", null ],
     [ "convertLightning", "classENC.html#ab4a8db4fff771b3dc9ed9b062bac8f23", null ],
     [ "corruption", "classENC.html#a489d27762489926abebbb23e14f8d060", null ],

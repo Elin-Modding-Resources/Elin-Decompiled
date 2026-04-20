@@ -1470,7 +1470,9 @@ var hierarchy =
         ] ],
         [ "TraitBoat", "classTraitBoat.html", null ],
         [ "TraitCanvas", "classTraitCanvas.html", [
-          [ "TraitDrawingPaper", "classTraitDrawingPaper.html", null ],
+          [ "TraitDrawingPaper", "classTraitDrawingPaper.html", [
+            [ "TraitDrawingPaperM", "classTraitDrawingPaperM.html", null ]
+          ] ],
           [ "TraitPhoto", "classTraitPhoto.html", null ]
         ] ],
         [ "TraitChair", "classTraitChair.html", [

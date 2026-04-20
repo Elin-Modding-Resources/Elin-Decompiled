@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"RecipeCard_8cs.html":[2,0,0,1027],
 "RecipeCard_8cs_source.html":[2,0,0,1027],
 "RecipeCustom_8cs.html":[2,0,0,1028],
 "RecipeCustom_8cs_source.html":[2,0,0,1028],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0c13f53c2b84e2431bcd0194fc4a69f9":[2,0,0,1110,0,48],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0db377921f4ce762c62526131097968f":[2,0,0,1110,0,1],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba10721d3ee4b8c50a7103d523bfcfac43":[2,0,0,1110,0,28],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba11e8fe8bff2c3aa4808ef36b7851e687":[2,0,0,1110,0,27],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba1296fcaab5ec71496d1ecb176f176bdf":[2,0,0,1110,0,12]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba11e8fe8bff2c3aa4808ef36b7851e687":[2,0,0,1110,0,27]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX29 =
 {
+"classAM__MiniGame.html#a50c55c881857f40f66b50a2484041f64":[1,0,164,2],
+"classAM__MiniGame.html#ab7c2c5b8c59d76d78b3b167f5837f314":[1,0,164,4],
+"classAM__MoveInstalled.html":[1,0,165],
 "classAM__MoveInstalled.html#a043f889264546b830927e58cf7c82c12":[1,0,165,20],
 "classAM__MoveInstalled.html#a16bd1cdf9ee31d021af3002f33d4d601":[1,0,165,15],
 "classAM__MoveInstalled.html#a1ca7794b65e63e3ed4a5314dcff402fa":[1,0,165,27],
@@ -246,8 +249,5 @@ var NAVTREEINDEX29 =
 "classActBash.html":[1,0,17],
 "classActBash.html#a3c263fd7d37fee8619cf006957dcf46f":[1,0,17,0],
 "classActBash.html#a83b37c1eae905d51673df4259d086f49":[1,0,17,1],
-"classActBit.html":[1,0,18],
-"classActBloodsuck.html":[1,0,19],
-"classActBloodsuck.html#a264ebda17ffb589290ecff2af75ca6db":[1,0,19,0],
-"classActBloodsuck.html#a28998f76688b9ea566dc72a24be2834d":[1,0,19,2]
+"classActBit.html":[1,0,18]
 };

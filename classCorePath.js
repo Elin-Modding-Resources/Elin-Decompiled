@@ -44,6 +44,7 @@ var classCorePath =
     [ "ZoneProfile", "classCorePath.html#a03f875b9dd1c0ce57dd7e8b5df757753", null ],
     [ "ConfigFile", "classCorePath.html#a3b762a62a93f085436b9ca668633b3cd", null ],
     [ "coreWidget", "classCorePath.html#abcffc38b52218c4a29b42a8dc67f0598", null ],
+    [ "CustomDrawing", "classCorePath.html#a4838e5a931446a566eb62184e066e468", null ],
     [ "DramaData", "classCorePath.html#abd3bf0c8b5eb70515a684b48156195a3", null ],
     [ "DramaDataLocal", "classCorePath.html#a6bb2a19194a528c4352ce34306e1a51b", null ],
     [ "LotTemplate", "classCorePath.html#a30a23ff7741c431420ab044bf5b5fea1", null ],

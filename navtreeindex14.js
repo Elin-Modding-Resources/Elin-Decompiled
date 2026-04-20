@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba1296fcaab5ec71496d1ecb176f176bdf":[2,0,0,1110,0,12],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba12cf08020be04c9b1f8ad50a614cdd7f":[2,0,0,1110,0,43],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba15ad0e98a76b2521eb7bf8ec497c08a8":[2,0,0,1110,0,52],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba18c83669920215a818638ad0e5421e4b":[2,0,0,1110,0,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "SpawnListThing_8cs.html":[2,0,0,1172],
 "SpawnListThing_8cs_source.html":[2,0,0,1172],
 "SpawnList_8cs.html":[2,0,0,1170],
-"SpawnList_8cs_source.html":[2,0,0,1170],
-"SpawnPosition_8cs.html":[2,0,0,1173]
+"SpawnList_8cs_source.html":[2,0,0,1170]
 };

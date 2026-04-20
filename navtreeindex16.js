@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"ThrowType_8cs_source.html":[2,0,0,1269],
 "TileMapElona_8cs.html":[2,0,0,1271],
 "TileMapElona_8cs_source.html":[2,0,0,1271],
 "TileMap_8cs.html":[2,0,0,1270],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TraitBlanket_8cs_source.html":[2,0,0,1382],
 "TraitBlock_8cs.html":[2,0,0,1385],
 "TraitBlock_8cs_source.html":[2,0,0,1385],
-"TraitBloodSample_8cs.html":[2,0,0,1386],
-"TraitBloodSample_8cs_source.html":[2,0,0,1386]
+"TraitBloodSample_8cs.html":[2,0,0,1386]
 };
