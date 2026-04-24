@@ -47,6 +47,22 @@ public class Dropper : MonoBehaviour
 		}
 	}
 
+	private void OnDestroy()
+	{
+		if ((bool)renderTexture)
+		{
+			UnityEngine.Object.Destroy(renderTexture);
+		}
+		if ((bool)texture2D)
+		{
+			UnityEngine.Object.Destroy(texture2D);
+		}
+		if ((bool)pixelBlock)
+		{
+			UnityEngine.Object.Destroy(pixelBlock);
+		}
+	}
+
 	private void Start()
 	{
 	}
@@ -60,6 +76,7 @@ public class Dropper : MonoBehaviour
 	{
 		if (renderTexture.width != Screen.width || renderTexture.height != Screen.height)
 		{
+			UnityEngine.Object.Destroy(renderTexture);
 			renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
 		}
 	}
@@ -96,7 +113,15 @@ public class Dropper : MonoBehaviour
 
 	private void UpdateColorByMousePosition()
 	{
-		color = texture2D.GetPixel((int)EInput.uiMousePosition.x, (int)EInput.uiMousePosition.y);
+		int num = (int)Mathf.Clamp(Input.mousePosition.x, 0f, texture2D.width);
+		int num2 = (int)Mathf.Clamp(Input.mousePosition.y, 0f, texture2D.height);
+		Vector2 vector = new Vector2(num - 8, num2 - 8);
+		Vector2 vector2 = new Vector2(num + 8, num2 + 8);
+		Vector2 vector3 = new Vector2(Mathf.Clamp(vector.x, 0f, texture2D.width - 8), Mathf.Clamp(vector.y, 0f, texture2D.height - 8));
+		Vector2 vector4 = new Vector2(Mathf.Clamp(vector2.x, 8f, texture2D.width), Mathf.Clamp(vector2.y, 8f, texture2D.height));
+		int num3 = (int)vector4.x - (int)vector3.x;
+		int num4 = (int)vector4.y - (int)vector3.y;
+		color = texture2D.GetPixel((int)vector3.x + num3 / 2, (int)vector3.y + num4 / 2);
 	}
 
 	public void PickColors(Action<Color> onColorPicked, Action onDropCanceled)
@@ -111,6 +136,7 @@ public class Dropper : MonoBehaviour
 
 	private void OnBlockerClicked()
 	{
+		UpdateColorByMousePosition();
 		Stop();
 		onColorPicked(color);
 	}
