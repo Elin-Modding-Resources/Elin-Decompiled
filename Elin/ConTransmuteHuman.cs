@@ -34,7 +34,7 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 		{
 			List<Chara> list = owner.pos.ListCharasInRadius(owner, 5, delegate(Chara c)
 			{
-				if (c.IsHumanSpeak)
+				if (!c.IsMultisize && c.IsHumanSpeak)
 				{
 					CardRenderer renderer = c.renderer;
 					if (renderer != null && !renderer.hasActor)

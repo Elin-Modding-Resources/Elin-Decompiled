@@ -294,18 +294,21 @@ public class GrowSystem : EClass
 		{
 			return false;
 		}
-		if (GrowUndersea)
+		if (EClass._zone.IsUnderwater)
 		{
-			if (EClass._zone.IsUnderwater || cell.sourceFloor.tileType.IsDeepWater)
+			if (!GrowUndersea)
 			{
-				return true;
+				return false;
 			}
 		}
-		else if (EClass._zone.IsUnderwater)
+		else if (cell.sourceFloor.tileType.IsDeepWater)
 		{
-			return false;
+			if (!GrowUndersea)
+			{
+				return false;
+			}
 		}
-		if (!GrowOnLand)
+		else if (!GrowOnLand)
 		{
 			return false;
 		}

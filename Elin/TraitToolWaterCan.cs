@@ -8,12 +8,26 @@ public class TraitToolWaterCan : TraitTool
 
 	public override void TrySetHeldAct(ActPlan p)
 	{
+		if (p.TrySetAct(new ActDrawWater
+		{
+			waterCan = this
+		}, owner))
+		{
+			return;
+		}
+		foreach (Chara item in p.pos.ListCharas())
+		{
+			if (item.IsPCFactionOrMinion && item.HasCondition<ConBurning>() && p.TrySetAct(new ActWater
+			{
+				waterCan = this
+			}, owner))
+			{
+				return;
+			}
+		}
 		if (!p.TrySetAct(new TaskWater
 		{
 			dest = p.pos
-		}, owner) && !p.TrySetAct(new ActDrawWater
-		{
-			waterCan = this
 		}, owner))
 		{
 			p.TrySetAct(new ActWater

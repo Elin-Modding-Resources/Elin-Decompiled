@@ -261,15 +261,16 @@ public class CardActor : Actor
 			break;
 		}
 		int dir = owner.dir;
-		SpriteRenderer spriteRenderer = sr;
-		Sprite sprite2 = (sr.sprite = owner.GetSprite(dir));
-		Sprite sprite4 = (spriteRenderer.sprite = sprite2);
-		Sprite sprite5 = sprite4;
+		Sprite sprite = owner.GetSprite(dir);
+		if (!sr.sprite)
+		{
+			sr.sprite = sprite;
+		}
 		sr.flipX = dir == 1 || dir == 3;
-		mpb.SetTexture("_MainTex", sprite5.texture);
-		Vector4 value = new Vector4(sprite5.textureRect.min.x / (float)sprite5.texture.width, sprite5.textureRect.min.y / (float)sprite5.texture.height, sprite5.textureRect.max.x / (float)sprite5.texture.width, sprite5.textureRect.max.y / (float)sprite5.texture.height);
+		mpb.SetTexture("_MainTex", sprite.texture);
+		Vector4 value = new Vector4(sprite.textureRect.min.x / (float)sprite.texture.width, sprite.textureRect.min.y / (float)sprite.texture.height, sprite.textureRect.max.x / (float)sprite.texture.width, sprite.textureRect.max.y / (float)sprite.texture.height);
 		mpb.SetVector("_Rect", value);
-		mpb.SetFloat("_PixelHeight", sprite5.rect.height);
+		mpb.SetFloat("_PixelHeight", sprite.rect.height);
 		if (!sr2)
 		{
 			return;
@@ -277,14 +278,14 @@ public class CardActor : Actor
 		if ((bool)sr2.sprite && (bool)sr2.sprite.texture)
 		{
 			sr2.flipX = dir == 1 || dir == 3;
-			sprite5 = sr2.sprite;
-			if ((bool)sprite5)
+			sprite = sr2.sprite;
+			if ((bool)sprite)
 			{
-				_ = sprite5.textureRect;
-				value = new Vector4(sprite5.textureRect.min.x / (float)sprite5.texture.width, sprite5.textureRect.min.y / (float)sprite5.texture.height, sprite5.textureRect.max.x / (float)sprite5.texture.width, sprite5.textureRect.max.y / (float)sprite5.texture.height);
-				mpb2.SetTexture("_MainTex", sprite5.texture);
+				_ = sprite.textureRect;
+				value = new Vector4(sprite.textureRect.min.x / (float)sprite.texture.width, sprite.textureRect.min.y / (float)sprite.texture.height, sprite.textureRect.max.x / (float)sprite.texture.width, sprite.textureRect.max.y / (float)sprite.texture.height);
+				mpb2.SetTexture("_MainTex", sprite.texture);
 				mpb2.SetVector("_Rect", value);
-				mpb2.SetFloat("_PixelHeight", sprite5.rect.height);
+				mpb2.SetFloat("_PixelHeight", sprite.rect.height);
 			}
 		}
 		else
@@ -295,6 +296,7 @@ public class CardActor : Actor
 
 	public virtual void Kill()
 	{
+		sr.sprite = null;
 		PoolManager.Despawn(base.transform);
 	}
 }

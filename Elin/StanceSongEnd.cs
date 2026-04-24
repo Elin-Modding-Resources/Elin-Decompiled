@@ -17,7 +17,8 @@ public class StanceSongEnd : BaseSong
 				Act act = Element.Create((EClass.rnd(2) == 0) ? 50402 : ((EClass.rnd(2) == 0) ? 50401 : 50400), owner.CHA) as Act;
 				ActEffect.ProcAt(EffectId.Hand, act.GetPower(owner), BlessedState.Normal, owner, item, item.pos, isNeg: true, new ActRef
 				{
-					act = act
+					act = act,
+					aliasEle = act.source.aliasRef
 				});
 			}
 		}

@@ -36,6 +36,7 @@ public class LayerPixelPaint : ELayer
 			thing.renderer.RefreshSprite();
 			Close();
 		};
+		paint.scale = c.SizeGrid;
 		paint.size = new Vector2Int(c.Width, c.Height);
 		InitPaint();
 		if (c.owner.c_textureData != null)

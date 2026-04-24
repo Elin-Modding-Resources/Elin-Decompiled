@@ -15,6 +15,8 @@ public class TraitCanvas : Trait
 
 	public virtual int Height => 28;
 
+	public virtual int SizeGrid => 16;
+
 	public virtual TraitPainter.Type CanvasType => TraitPainter.Type.Paint;
 
 	public override void OnSetCardGrid(ButtonGrid b)

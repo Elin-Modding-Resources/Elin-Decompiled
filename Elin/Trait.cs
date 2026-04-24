@@ -1528,7 +1528,7 @@ public class Trait : EClass
 		return Emo2.none;
 	}
 
-	public void OnBarter(bool reroll = false)
+	public virtual void OnBarter(bool reroll = false)
 	{
 		Thing t = owner.things.Find("chest_merchant");
 		if (t == null)

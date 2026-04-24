@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,22 +54,30 @@ public class LayerShippingResult : ELayer
 	private new void Awake()
 	{
 		Rand.SetSeed(ELayer.game.seed + ELayer.player.stats.days);
-		int num = ELayer.rnd(spriteBG.Length);
-		if (num == 1 && ELayer.game.cards.globalCharas.Find("corgon") == null)
+		List<int> list = new List<int> { 0, 1 };
+		Add("corgon", 2);
+		Add("loytel", 3);
+		Add("farris", 4);
+		if (ELayer.game.quests.IsCompleted("negotiation_darkness") && !ELayer.player.flags.killedDuponne)
 		{
-			num = 0;
+			Add("demitas", 6);
 		}
-		if (num == 2 && ELayer.game.cards.globalCharas.Find("loytel") == null)
+		else
 		{
-			num = 0;
+			Add("demitas", 5);
 		}
-		if (num == 3 && ELayer.game.cards.globalCharas.Find("farris") == null)
-		{
-			num = 0;
-		}
+		int num = list.RandomItem();
 		imageBG.sprite = spriteBG[num];
 		Rand.SetSeed();
 		base.Awake();
+		void Add(string id, int index)
+		{
+			Chara chara = ELayer.game.cards.globalCharas.Find(id);
+			if (chara != null && chara.IsPCFaction)
+			{
+				list.Add(index);
+			}
+		}
 	}
 
 	public void Show()
