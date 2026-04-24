@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"classLayerTreasureMap.html#a97bb1e74ba3e084b89a793a7cdecc32d":[1,0,869,1],
+"classLayerTreasureMap.html#af445d81b557f55c0e33cb605ce90845a":[1,0,869,2],
 "classLayerTreasureMap.html#afa0696d20109373d929cd6e708ac06d5":[1,0,869,0],
 "classLayerUploader.html":[1,0,870],
 "classLayerUploader.html#a08c2067a31eb306034a12fc1a3b52a73":[1,0,870,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX83 =
 "classListPeopleRevive.html#a42c8a23c836101e58dc91e3112dbe6ab":[1,0,889,0],
 "classListPeopleRevive.html#ac2c87362089d236ca39d86862fd77c51":[1,0,889,1],
 "classListPeopleRevive.html#adc707b3249dc262f2a42c490630c3d41":[1,0,889,2],
-"classListPeopleSelect.html":[1,0,890],
-"classListPeopleSelect.html#a1852cb164395ca8ac4530dc0540b3bd5":[1,0,890,0],
-"classListPeopleSelect.html#a35b0d559171b8712b89d24067c303f69":[1,0,890,3]
+"classListPeopleSelect.html":[1,0,890]
 };

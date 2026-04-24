@@ -1,5 +1,8 @@
 var NAVTREEINDEX121 =
 {
+"classTraitCrafter.html#ab6976f17a6b72bb6a3af88d0627373cd":[1,0,1562,15],
+"classTraitCrafter.html#ac154e3baf3f8b1994e6bae094ad0401f":[1,0,1562,20],
+"classTraitCrafter.html#ad084942afed510b4fbf54e9086eddde4":[1,0,1562,4],
 "classTraitCrafter.html#ad1550a5648cd24eac0d9b9c9bb068b7b":[1,0,1562,26],
 "classTraitCrafter.html#ada15d322729b7ddd06d3b5dcf8c92c9f":[1,0,1562,9],
 "classTraitCrafter.html#adda85b6e89740c5018791da335d9a024":[1,0,1562,5],
@@ -164,7 +167,8 @@ var NAVTREEINDEX121 =
 "classTraitDrawingPaper.html#abb230ca8b499e7d6cde06dbc22c97493":[1,0,1597,1],
 "classTraitDrawingPaper.html#ac1a9175ac80c4f81ada50d8ee54efffd":[1,0,1597,3],
 "classTraitDrawingPaperM.html":[1,0,1598],
-"classTraitDrawingPaperM.html#a814597900babcc5071f3fdd0bf4e9b10":[1,0,1598,1],
+"classTraitDrawingPaperM.html#a20361a9263ec4315d2d90751a74d1dd3":[1,0,1598,1],
+"classTraitDrawingPaperM.html#a814597900babcc5071f3fdd0bf4e9b10":[1,0,1598,2],
 "classTraitDrawingPaperM.html#ad8092b4a561151c1a2b9481e7d85ead5":[1,0,1598,0],
 "classTraitDreamBug.html":[1,0,1599],
 "classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1599,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitEffect.html#a07bc65d2ec3a648e06be838e21b358e0":[1,0,1613,4],
 "classTraitEffect.html#a17bd67fbfc23aaf5e55649c261a0b670":[1,0,1613,8],
 "classTraitEffect.html#a18f55693616231ca402614694de2bbf0":[1,0,1613,11],
-"classTraitEffect.html#a34357f3e4400c13895214be692eccb15":[1,0,1613,3],
-"classTraitEffect.html#a421a99541c178b934d4eef877efcfe1c":[1,0,1613,10],
-"classTraitEffect.html#a49d29f10fb5e4db7826ae1287470e138":[1,0,1613,2],
-"classTraitEffect.html#a5759212af372e9e407f76931f8659818":[1,0,1613,6],
-"classTraitEffect.html#a6332e579f42e7dadd7929afd9eb552c5":[1,0,1613,7]
+"classTraitEffect.html#a34357f3e4400c13895214be692eccb15":[1,0,1613,3]
 };

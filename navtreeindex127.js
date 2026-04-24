@@ -1,5 +1,9 @@
 var NAVTREEINDEX127 =
 {
+"classTraitSpotFish.html":[1,0,1909],
+"classTraitSpotFuel.html":[1,0,1910],
+"classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1910,0],
+"classTraitSpotGarbage.html":[1,0,1911],
 "classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1911,0],
 "classTraitSpotGuidePC.html":[1,0,1912],
 "classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1912,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitToolRangeSling.html#a9fd893013d95169a944c3ac06cf5dfc1":[1,0,1978,0],
 "classTraitToolRangeSling.html#ae7eaf617819b7b2d4fa3c91e5a1cb531":[1,0,1978,2],
 "classTraitToolSculpture.html":[1,0,1979],
-"classTraitToolSculpture.html#a4838304872af3ec97dff211d4965216c":[1,0,1979,0],
-"classTraitToolShears.html":[1,0,1980],
-"classTraitToolShears.html#a06d4cdf9b914ea63e7a701f0ca3645e9":[1,0,1980,1],
-"classTraitToolShears.html#a3ee171e6c9fa1529dd76603ac02b4f6a":[1,0,1980,0],
-"classTraitToolShears.html#af647d7ff31cf1df7683bdb84cb5b3fea":[1,0,1980,2]
+"classTraitToolSculpture.html#a4838304872af3ec97dff211d4965216c":[1,0,1979,0]
 };

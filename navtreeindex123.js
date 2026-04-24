@@ -1,5 +1,9 @@
 var NAVTREEINDEX123 =
 {
+"classTraitGeneratorSolar.html#ae7ad169a7eae90bafb4ea61b8523c607":[1,0,1673,0],
+"classTraitGeneratorWheel.html":[1,0,1674],
+"classTraitGeneratorWheel.html#a2abb80b9c1097874eb18a47a47c3994f":[1,0,1674,0],
+"classTraitGeneratorWheel.html#a352011c0a160c5d6db44a0019d2307fa":[1,0,1674,6],
 "classTraitGeneratorWheel.html#a3d8d8b6f6323a404490a47d463e3c78b":[1,0,1674,1],
 "classTraitGeneratorWheel.html#a3f197df98b6db4ef93b4f8351d87fe60":[1,0,1674,3],
 "classTraitGeneratorWheel.html#a508f2a6c091b478443f8cdc07583b9de":[1,0,1674,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitMagicChest.html#a4f5af16cef8f4b7cd634815df07ff21c":[1,0,1734,0],
 "classTraitMagicChest.html#a60fa09f514bf44fcc46986443de111fd":[1,0,1734,3],
 "classTraitMagicChest.html#a9c2a979bdada31f4a63034602d0ee47f":[1,0,1734,7],
-"classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1734,6],
-"classTraitMagicChest.html#ac653c6cbde0047caa6f0a25a70b8aaf5":[1,0,1734,2],
-"classTraitMahjong.html":[1,0,1735],
-"classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1735,0],
-"classTraitMahjong.html#a86d68283a84acf869c68193fddf3a198":[1,0,1735,3]
+"classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1734,6]
 };

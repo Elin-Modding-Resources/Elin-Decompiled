@@ -1,5 +1,7 @@
 var NAVTREEINDEX120 =
 {
+"classTraitBroom.html":[1,0,1512],
+"classTraitBroom.html#a9abeb512e6bd909828dcc06921134bba":[1,0,1512,1],
 "classTraitBroom.html#abb8942a50793670e76df21f2d5f74b3f":[1,0,1512,0],
 "classTraitBroomWitch.html":[1,0,1513],
 "classTraitBuildBoard.html":[1,0,1514],
@@ -19,11 +21,12 @@ var NAVTREEINDEX120 =
 "classTraitCamera.html":[1,0,1518],
 "classTraitCamera.html#aac8b0271af431a04632d2f4828361141":[1,0,1518,0],
 "classTraitCanvas.html":[1,0,1519],
-"classTraitCanvas.html#a3ef9d04fd551068726c53328bac0a56a":[1,0,1519,8],
+"classTraitCanvas.html#a3ef9d04fd551068726c53328bac0a56a":[1,0,1519,9],
 "classTraitCanvas.html#a4298d852681c52ee1dbe685153801ce6":[1,0,1519,2],
-"classTraitCanvas.html#a63ee52c6b6753f225e2167c8fe9ac462":[1,0,1519,7],
+"classTraitCanvas.html#a63ee52c6b6753f225e2167c8fe9ac462":[1,0,1519,8],
 "classTraitCanvas.html#a7680aece7bb9be37160bb38db93e7ac4":[1,0,1519,1],
 "classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1519,3],
+"classTraitCanvas.html#a9009b42274c91a7a98468bd57509291b":[1,0,1519,7],
 "classTraitCanvas.html#aaf23f8a6dc8c67306f1169aeb6b77a07":[1,0,1519,5],
 "classTraitCanvas.html#ab2c7786e34b9dfe0573d6f61bc34082d":[1,0,1519,4],
 "classTraitCanvas.html#ae3ad3d5f043445ec51aa8c8ecabfe6d9":[1,0,1519,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitCrafter.html#aa7ba1ba047159bd7dec7c9cedfafd755":[1,0,1562,33],
 "classTraitCrafter.html#aa97f9ea9f9bdcba7b7c1402d10ef8b4b":[1,0,1562,10],
 "classTraitCrafter.html#aade7caa6ae03de7628ab79027edbf23c":[1,0,1562,12],
-"classTraitCrafter.html#ab1f95cc464045f6811c479bad31d2325":[1,0,1562,6],
-"classTraitCrafter.html#ab6976f17a6b72bb6a3af88d0627373cd":[1,0,1562,15],
-"classTraitCrafter.html#ac154e3baf3f8b1994e6bae094ad0401f":[1,0,1562,20],
-"classTraitCrafter.html#ad084942afed510b4fbf54e9086eddde4":[1,0,1562,4]
+"classTraitCrafter.html#ab1f95cc464045f6811c479bad31d2325":[1,0,1562,6]
 };

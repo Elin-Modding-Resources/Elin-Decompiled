@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.297 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.298 Nightly</span>
    </div>
   </td>
  </tr>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('ConTransmuteHuman_8cs_source.html','')
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            List&lt;Chara&gt; list = <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a8b1488299388277a7ac0e7556b3ee3b9">ListCharasInRadius</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, 5, delegate(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">IsHumanSpeak</a>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#ac79ea3f84d4bf288927e3cb3e7933de2">IsMultisize</a> &amp;&amp; c.<a class="code hl_property" href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">IsHumanSpeak</a>)</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    CardRenderer renderer = c.renderer;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    if (renderer != null &amp;&amp; !renderer.hasActor)</div>
@@ -162,6 +162,7 @@ $(document).ready(function(){initNavTree('ConTransmuteHuman_8cs_source.html','')
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassChara_html_a04481f3eec7c112a96ee7db1b87e92d5"><div class="ttname"><a href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">Chara.IsHumanSpeak</a></div><div class="ttdeci">bool IsHumanSpeak</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01028">Chara.cs:1029</a></div></div>
 <div class="ttc" id="aclassChara_html_a860a939a5ff77e4442e1cd3ab101b55f"><div class="ttname"><a href="classChara.html#a860a939a5ff77e4442e1cd3ab101b55f">Chara.Duplicate</a></div><div class="ttdeci">Chara Duplicate()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01817">Chara.cs:1817</a></div></div>
+<div class="ttc" id="aclassChara_html_ac79ea3f84d4bf288927e3cb3e7933de2"><div class="ttname"><a href="classChara.html#ac79ea3f84d4bf288927e3cb3e7933de2">Chara.IsMultisize</a></div><div class="ttdeci">override bool IsMultisize</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00720">Chara.cs:720</a></div></div>
 <div class="ttc" id="aclassConBaseTransmuteMimic_html"><div class="ttname"><a href="classConBaseTransmuteMimic.html">ConBaseTransmuteMimic</a></div><div class="ttdef"><b>Definition:</b> <a href="ConBaseTransmuteMimic_8cs_source.html#l00001">ConBaseTransmuteMimic.cs:2</a></div></div>
 <div class="ttc" id="aclassConTransmuteHuman_html"><div class="ttname"><a href="classConTransmuteHuman.html">ConTransmuteHuman</a></div><div class="ttdef"><b>Definition:</b> <a href="ConTransmuteHuman_8cs_source.html#l00004">ConTransmuteHuman.cs:5</a></div></div>
 <div class="ttc" id="aclassConTransmuteHuman_html_a18b1fcdf63980041adea0ab0582055dd"><div class="ttname"><a href="classConTransmuteHuman.html#a18b1fcdf63980041adea0ab0582055dd">ConTransmuteHuman.ShouldRevealOnDamage</a></div><div class="ttdeci">override bool ShouldRevealOnDamage</div><div class="ttdef"><b>Definition:</b> <a href="ConTransmuteHuman_8cs_source.html#l00019">ConTransmuteHuman.cs:19</a></div></div>

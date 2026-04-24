@@ -1,5 +1,9 @@
 var NAVTREEINDEX145 =
 {
+"classZone__RandomDungeonForest.html":[1,0,2240],
+"classZone__RandomDungeonForest.html#ae8ca3272f662b6d8f59d5855e6f486b5":[1,0,2240,0],
+"classZone__RandomDungeonNature.html":[1,0,2241],
+"classZone__RandomDungeonNature.html#a3b3a542113fc933ff04c32724c2e24a4":[1,0,2241,0],
 "classZone__RandomDungeonNature.html#af5e1db33f5a3dc44b2bec3898088666c":[1,0,2241,1],
 "classZone__RandomDungeonPlain.html":[1,0,2242],
 "classZone__RandomDungeonWater.html":[1,0,2243],
@@ -245,9 +249,5 @@ var NAVTREEINDEX145 =
 "functions_v.html":[1,3,0,22],
 "functions_vars.html":[1,3,2],
 "functions_vars.html":[1,3,2,0],
-"functions_vars_a.html":[1,3,2,1],
-"functions_vars_b.html":[1,3,2,2],
-"functions_vars_c.html":[1,3,2,3],
-"functions_vars_d.html":[1,3,2,4],
-"functions_vars_e.html":[1,3,2,5]
+"functions_vars_a.html":[1,3,2,1]
 };

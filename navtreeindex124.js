@@ -1,5 +1,9 @@
 var NAVTREEINDEX124 =
 {
+"classTraitMagicChest.html#ac653c6cbde0047caa6f0a25a70b8aaf5":[1,0,1734,2],
+"classTraitMahjong.html":[1,0,1735],
+"classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1735,0],
+"classTraitMahjong.html#a86d68283a84acf869c68193fddf3a198":[1,0,1735,3],
 "classTraitMahjong.html#ab0a37c49a996da5b11700a4799287790":[1,0,1735,1],
 "classTraitMahjong.html#ac0ab7deae7e14aa5ee8f1bf073126970":[1,0,1735,2],
 "classTraitMaid.html":[1,0,1736],
@@ -245,9 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1796,23],
 "classTraitNewZone.html#adcf7d96ce38bca4b635f0505de6f55bb":[1,0,1796,1],
 "classTraitNewZone.html#ae002023845fe236526177b3d14615923":[1,0,1796,4],
-"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1796,19],
-"classTraitNewZone.html#ae0df02573fce410f2e3dab1fc991c1fe":[1,0,1796,5],
-"classTraitNewZone.html#aeebced4525b68749edc9e0296611c84e":[1,0,1796,10],
-"classTraitNewZone.html#af6a94cc31b5243bbf11e53a4804924e6":[1,0,1796,24],
-"classTraitNewZone.html#af9f61a07745ed9036244dc2ac4522938":[1,0,1796,18]
+"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1796,19]
 };

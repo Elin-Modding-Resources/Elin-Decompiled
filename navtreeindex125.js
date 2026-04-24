@@ -1,5 +1,9 @@
 var NAVTREEINDEX125 =
 {
+"classTraitNewZone.html#ae0df02573fce410f2e3dab1fc991c1fe":[1,0,1796,5],
+"classTraitNewZone.html#aeebced4525b68749edc9e0296611c84e":[1,0,1796,10],
+"classTraitNewZone.html#af6a94cc31b5243bbf11e53a4804924e6":[1,0,1796,24],
+"classTraitNewZone.html#af9f61a07745ed9036244dc2ac4522938":[1,0,1796,18],
 "classTraitNewZone.html#afc72378e91e49dc9fbf792ebb54f040d":[1,0,1796,8],
 "classTraitNewspaper.html":[1,0,1795],
 "classTraitNewspaper.html#aba9f4a4c3b225af53eb55c8bd573ab41":[1,0,1795,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitRodRandom.html#a9d68e3da8cd8a318207247b7b9b87893":[1,0,1858,0],
 "classTraitRodRandom.html#ab71f6c55e74cd9bdf3db450fd59fe749":[1,0,1858,5],
 "classTraitRodRandom.html#ac49e68a738c706fed4ac3938afa63bec":[1,0,1858,6],
-"classTraitRodRandom.html#ad191c1aa1c1861bbe451185220ccfc35":[1,0,1858,3],
-"classTraitRogue.html":[1,0,1859],
-"classTraitRollingFortune.html":[1,0,1860],
-"classTraitRollingFortune.html#a3bbf3c32a0a5900536ef45411d92097e":[1,0,1860,5],
-"classTraitRollingFortune.html#a56352d29ba42a40a680f1645d755a62a":[1,0,1860,2]
+"classTraitRodRandom.html#ad191c1aa1c1861bbe451185220ccfc35":[1,0,1858,3]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.297 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.298 Nightly</span>
    </div>
   </td>
  </tr>
@@ -131,6 +131,8 @@ Static Public Attributes</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a3543da13efcb25571f47000a4ab365f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a3543da13efcb25571f47000a4ab365f5">Awake</a> ()</td></tr>
 <tr class="separator:a3543da13efcb25571f47000a4ab365f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31574b61b8a82ac283cfc566ccd4b810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a31574b61b8a82ac283cfc566ccd4b810">OnDestroy</a> ()</td></tr>
+<tr class="separator:a31574b61b8a82ac283cfc566ccd4b810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687df128a2cfb1dda7feea15efc9c851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a687df128a2cfb1dda7feea15efc9c851">Start</a> ()</td></tr>
 <tr class="separator:a687df128a2cfb1dda7feea15efc9c851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a792c310a5c855018939a45160ebb68e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a792c310a5c855018939a45160ebb68e2">Update</a> ()</td></tr>
@@ -238,37 +240,37 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00067">67</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForEndOfFrame();</div>
-<div class="line"><span class="lineno">   72</span>            <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5e42938ded0da6132ef0bfffc983ada7">UpdateTexture</a>();</div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a222c411e0e31866d01497664dec54e71">UpdateColorByMousePosition</a>();</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordtype">int</span> num = (int)Mathf.Clamp(Input.mousePosition.x, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width);</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordtype">int</span> num2 = (int)Mathf.Clamp(Input.mousePosition.y, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height);</div>
-<div class="line"><span class="lineno">   76</span>            Vector2 vector = <span class="keyword">new</span> Vector2(num - 8, num2 - 8);</div>
-<div class="line"><span class="lineno">   77</span>            Vector2 vector2 = <span class="keyword">new</span> Vector2(num + 8, num2 + 8);</div>
-<div class="line"><span class="lineno">   78</span>            Vector2 vector3 = <span class="keyword">new</span> Vector2(Mathf.Clamp(vector.x, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width - 8), Mathf.Clamp(vector.y, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height - 8));</div>
-<div class="line"><span class="lineno">   79</span>            Vector2 vector4 = <span class="keyword">new</span> Vector2(Mathf.Clamp(vector2.x, 8f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width), Mathf.Clamp(vector2.y, 8f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height));</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">int</span> blockWidth = (int)vector4.x - (<span class="keywordtype">int</span>)vector3.x;</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordtype">int</span> blockHeight = (int)vector4.y - (<span class="keywordtype">int</span>)vector3.y;</div>
-<div class="line"><span class="lineno">   82</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>[] pixels = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.GetPixels((<span class="keywordtype">int</span>)vector3.x, (int)vector3.y, blockWidth, blockHeight);</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordtype">float</span> num3 = vector3.x - vector.x;</div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordtype">float</span> num4 = vector3.y - vector.y;</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>.SetPixels(0, 0, 16, 16, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a544d5ce220099c2eede07ad41963edaf">black16x16</a>);</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>.SetPixels((<span class="keywordtype">int</span>)num3, (int)num4, blockWidth, blockHeight, pixels);</div>
-<div class="line"><span class="lineno">   87</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6da7a4317e15d071a3576fc760e229a1">palette</a>.<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a4e35da57e89c28510b7ca739b4ae97e5">ShowEnlargedPixels</a>(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>.GetPixels());</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00084">84</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForEndOfFrame();</div>
+<div class="line"><span class="lineno">   89</span>            <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5e42938ded0da6132ef0bfffc983ada7">UpdateTexture</a>();</div>
+<div class="line"><span class="lineno">   90</span>            <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a222c411e0e31866d01497664dec54e71">UpdateColorByMousePosition</a>();</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordtype">int</span> num = (int)Mathf.Clamp(Input.mousePosition.x, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width);</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordtype">int</span> num2 = (int)Mathf.Clamp(Input.mousePosition.y, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height);</div>
+<div class="line"><span class="lineno">   93</span>            Vector2 vector = <span class="keyword">new</span> Vector2(num - 8, num2 - 8);</div>
+<div class="line"><span class="lineno">   94</span>            Vector2 vector2 = <span class="keyword">new</span> Vector2(num + 8, num2 + 8);</div>
+<div class="line"><span class="lineno">   95</span>            Vector2 vector3 = <span class="keyword">new</span> Vector2(Mathf.Clamp(vector.x, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width - 8), Mathf.Clamp(vector.y, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height - 8));</div>
+<div class="line"><span class="lineno">   96</span>            Vector2 vector4 = <span class="keyword">new</span> Vector2(Mathf.Clamp(vector2.x, 8f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width), Mathf.Clamp(vector2.y, 8f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height));</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordtype">int</span> blockWidth = (int)vector4.x - (<span class="keywordtype">int</span>)vector3.x;</div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordtype">int</span> blockHeight = (int)vector4.y - (<span class="keywordtype">int</span>)vector3.y;</div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_enumvalue" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>[] pixels = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.GetPixels((<span class="keywordtype">int</span>)vector3.x, (int)vector3.y, blockWidth, blockHeight);</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordtype">float</span> num3 = vector3.x - vector.x;</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordtype">float</span> num4 = vector3.y - vector.y;</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>.SetPixels(0, 0, 16, 16, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a544d5ce220099c2eede07ad41963edaf">black16x16</a>);</div>
+<div class="line"><span class="lineno">  103</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>.SetPixels((<span class="keywordtype">int</span>)num3, (int)num4, blockWidth, blockHeight, pixels);</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6da7a4317e15d071a3576fc760e229a1">palette</a>.<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a4e35da57e89c28510b7ca739b4ae97e5">ShowEnlargedPixels</a>(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>.GetPixels());</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1ColorPalette_html_a4e35da57e89c28510b7ca739b4ae97e5"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a4e35da57e89c28510b7ca739b4ae97e5">Empyrean.ColorPicker.ColorPalette.ShowEnlargedPixels</a></div><div class="ttdeci">void ShowEnlargedPixels(Color[] colors)</div><div class="ttdef"><b>Definition:</b> <a href="ColorPalette_8cs_source.html#l00117">ColorPalette.cs:117</a></div></div>
-<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a222c411e0e31866d01497664dec54e71"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a222c411e0e31866d01497664dec54e71">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition</a></div><div class="ttdeci">void UpdateColorByMousePosition()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00097">Dropper.cs:97</a></div></div>
-<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a5e42938ded0da6132ef0bfffc983ada7"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5e42938ded0da6132ef0bfffc983ada7">Empyrean.ColorPicker.Dropper.UpdateTexture</a></div><div class="ttdeci">void UpdateTexture()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00091">Dropper.cs:91</a></div></div>
+<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a222c411e0e31866d01497664dec54e71"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a222c411e0e31866d01497664dec54e71">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition</a></div><div class="ttdeci">void UpdateColorByMousePosition()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00114">Dropper.cs:114</a></div></div>
+<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a5e42938ded0da6132ef0bfffc983ada7"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5e42938ded0da6132ef0bfffc983ada7">Empyrean.ColorPicker.Dropper.UpdateTexture</a></div><div class="ttdeci">void UpdateTexture()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00108">Dropper.cs:108</a></div></div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a6da7a4317e15d071a3576fc760e229a1"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6da7a4317e15d071a3576fc760e229a1">Empyrean.ColorPicker.Dropper.palette</a></div><div class="ttdeci">ColorPalette palette</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00011">Dropper.cs:11</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00032">Empyrean.ColorPicker.Dropper.black16x16</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Dropper_8cs_source.html#l00011">Empyrean.ColorPicker.Dropper.palette</a>, <a class="el" href="Dropper_8cs_source.html#l00026">Empyrean.ColorPicker.Dropper.pixelBlock</a>, <a class="el" href="ColorPalette_8cs_source.html#l00117">Empyrean.ColorPicker.ColorPalette.ShowEnlargedPixels()</a>, <a class="el" href="Dropper_8cs_source.html#l00024">Empyrean.ColorPicker.Dropper.texture2D</a>, <a class="el" href="Dropper_8cs_source.html#l00097">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition()</a>, and <a class="el" href="Dropper_8cs_source.html#l00091">Empyrean.ColorPicker.Dropper.UpdateTexture()</a>.</p>
+<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00032">Empyrean.ColorPicker.Dropper.black16x16</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>, <a class="el" href="Dropper_8cs_source.html#l00011">Empyrean.ColorPicker.Dropper.palette</a>, <a class="el" href="Dropper_8cs_source.html#l00026">Empyrean.ColorPicker.Dropper.pixelBlock</a>, <a class="el" href="ColorPalette_8cs_source.html#l00117">Empyrean.ColorPicker.ColorPalette.ShowEnlargedPixels()</a>, <a class="el" href="Dropper_8cs_source.html#l00024">Empyrean.ColorPicker.Dropper.texture2D</a>, <a class="el" href="Dropper_8cs_source.html#l00114">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition()</a>, and <a class="el" href="Dropper_8cs_source.html#l00108">Empyrean.ColorPicker.Dropper.UpdateTexture()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
 
 </div>
 </div>
@@ -295,18 +297,62 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00112">112</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>    {</div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#aa7b98135aa9f9e557730843222f85cbd">Stop</a>();</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a734fee664d74601da2a942e19cbf6313">onColorPicked</a>(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#ae0763a2ee765d6453e3806d9d5748ab0">color</a>);</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00137">137</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a222c411e0e31866d01497664dec54e71">UpdateColorByMousePosition</a>();</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#aa7b98135aa9f9e557730843222f85cbd">Stop</a>();</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a734fee664d74601da2a942e19cbf6313">onColorPicked</a>(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#ae0763a2ee765d6453e3806d9d5748ab0">color</a>);</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a734fee664d74601da2a942e19cbf6313"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a734fee664d74601da2a942e19cbf6313">Empyrean.ColorPicker.Dropper.onColorPicked</a></div><div class="ttdeci">Action&lt; Color &gt; onColorPicked</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00036">Dropper.cs:36</a></div></div>
-<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_aa7b98135aa9f9e557730843222f85cbd"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#aa7b98135aa9f9e557730843222f85cbd">Empyrean.ColorPicker.Dropper.Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00118">Dropper.cs:118</a></div></div>
+<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_aa7b98135aa9f9e557730843222f85cbd"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#aa7b98135aa9f9e557730843222f85cbd">Empyrean.ColorPicker.Dropper.Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00144">Dropper.cs:144</a></div></div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_ae0763a2ee765d6453e3806d9d5748ab0"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#ae0763a2ee765d6453e3806d9d5748ab0">Empyrean.ColorPicker.Dropper.color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00030">Dropper.cs:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00030">Empyrean.ColorPicker.Dropper.color</a>, <a class="el" href="Dropper_8cs_source.html#l00036">Empyrean.ColorPicker.Dropper.onColorPicked</a>, and <a class="el" href="Dropper_8cs_source.html#l00118">Empyrean.ColorPicker.Dropper.Stop()</a>.</p>
+<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00030">Empyrean.ColorPicker.Dropper.color</a>, <a class="el" href="Dropper_8cs_source.html#l00036">Empyrean.ColorPicker.Dropper.onColorPicked</a>, <a class="el" href="Dropper_8cs_source.html#l00144">Empyrean.ColorPicker.Dropper.Stop()</a>, and <a class="el" href="Dropper_8cs_source.html#l00114">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
+
+</div>
+</div>
+<a id="a31574b61b8a82ac283cfc566ccd4b810" name="a31574b61b8a82ac283cfc566ccd4b810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31574b61b8a82ac283cfc566ccd4b810">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Empyrean.ColorPicker.Dropper.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00050">50</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>)</div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            UnityEngine.Object.Destroy(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>);</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            UnityEngine.Object.Destroy(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            UnityEngine.Object.Destroy(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a88b375e857edb6d86b2efa4b155574cb">pixelBlock</a>);</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00026">Empyrean.ColorPicker.Dropper.pixelBlock</a>, <a class="el" href="Dropper_8cs_source.html#l00022">Empyrean.ColorPicker.Dropper.renderTexture</a>, and <a class="el" href="Dropper_8cs_source.html#l00024">Empyrean.ColorPicker.Dropper.texture2D</a>.</p>
 
 </div>
 </div>
@@ -344,24 +390,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00102">102</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        this.onDropCanceled = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a440d5d5f4c45c999ee0ba08f6638fd71">onDropCanceled</a>;</div>
-<div class="line"><span class="lineno">  105</span>        this.onColorPicked = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a734fee664d74601da2a942e19cbf6313">onColorPicked</a>;</div>
-<div class="line"><span class="lineno">  106</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6da7a4317e15d071a3576fc760e229a1">palette</a>.<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a8ffbbdd9c4a7a00649d1418c7bb4a43e">ShowDropperMarker</a>(value: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  107</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a> = UnityEngine.Object.Instantiate(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6e09f9cfe94d207f2a2ede7c10f8f110">blockerPrefab</a>);</div>
-<div class="line"><span class="lineno">  108</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a>.onClick.AddListener(<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9c854d4f568c41c928925b466ade0fa1">OnBlockerClicked</a>);</div>
-<div class="line"><span class="lineno">  109</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a162abbb9c9475ee0515f4e97e69113df">coroutine</a> = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a>.StartCoroutine(<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a4ed1e7fa12962352db62b2cdec3f95ad">EnlargeAreaAroundPointer</a>());</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00127">127</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        this.onDropCanceled = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a440d5d5f4c45c999ee0ba08f6638fd71">onDropCanceled</a>;</div>
+<div class="line"><span class="lineno">  130</span>        this.onColorPicked = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a734fee664d74601da2a942e19cbf6313">onColorPicked</a>;</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6da7a4317e15d071a3576fc760e229a1">palette</a>.<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a8ffbbdd9c4a7a00649d1418c7bb4a43e">ShowDropperMarker</a>(value: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a> = UnityEngine.Object.Instantiate(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6e09f9cfe94d207f2a2ede7c10f8f110">blockerPrefab</a>);</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a>.onClick.AddListener(<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9c854d4f568c41c928925b466ade0fa1">OnBlockerClicked</a>);</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a162abbb9c9475ee0515f4e97e69113df">coroutine</a> = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a>.StartCoroutine(<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a4ed1e7fa12962352db62b2cdec3f95ad">EnlargeAreaAroundPointer</a>());</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1ColorPalette_html_a8ffbbdd9c4a7a00649d1418c7bb4a43e"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a8ffbbdd9c4a7a00649d1418c7bb4a43e">Empyrean.ColorPicker.ColorPalette.ShowDropperMarker</a></div><div class="ttdeci">void ShowDropperMarker(bool value)</div><div class="ttdef"><b>Definition:</b> <a href="ColorPalette_8cs_source.html#l00134">ColorPalette.cs:134</a></div></div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a162abbb9c9475ee0515f4e97e69113df"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a162abbb9c9475ee0515f4e97e69113df">Empyrean.ColorPicker.Dropper.coroutine</a></div><div class="ttdeci">Coroutine coroutine</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00028">Dropper.cs:28</a></div></div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a440d5d5f4c45c999ee0ba08f6638fd71"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a440d5d5f4c45c999ee0ba08f6638fd71">Empyrean.ColorPicker.Dropper.onDropCanceled</a></div><div class="ttdeci">Action onDropCanceled</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00034">Dropper.cs:34</a></div></div>
-<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a4ed1e7fa12962352db62b2cdec3f95ad"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a4ed1e7fa12962352db62b2cdec3f95ad">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer</a></div><div class="ttdeci">IEnumerator EnlargeAreaAroundPointer()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00067">Dropper.cs:67</a></div></div>
+<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a4ed1e7fa12962352db62b2cdec3f95ad"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a4ed1e7fa12962352db62b2cdec3f95ad">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer</a></div><div class="ttdeci">IEnumerator EnlargeAreaAroundPointer()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00084">Dropper.cs:84</a></div></div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a5b99f921da6650857867c6a8cbb8e0cc"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">Empyrean.ColorPicker.Dropper.blocker</a></div><div class="ttdeci">Button blocker</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00020">Dropper.cs:20</a></div></div>
 <div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a6e09f9cfe94d207f2a2ede7c10f8f110"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6e09f9cfe94d207f2a2ede7c10f8f110">Empyrean.ColorPicker.Dropper.blockerPrefab</a></div><div class="ttdeci">Button blockerPrefab</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00014">Dropper.cs:14</a></div></div>
-<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a9c854d4f568c41c928925b466ade0fa1"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9c854d4f568c41c928925b466ade0fa1">Empyrean.ColorPicker.Dropper.OnBlockerClicked</a></div><div class="ttdeci">void OnBlockerClicked()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00112">Dropper.cs:112</a></div></div>
+<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_a9c854d4f568c41c928925b466ade0fa1"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9c854d4f568c41c928925b466ade0fa1">Empyrean.ColorPicker.Dropper.OnBlockerClicked</a></div><div class="ttdeci">void OnBlockerClicked()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00137">Dropper.cs:137</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00020">Empyrean.ColorPicker.Dropper.blocker</a>, <a class="el" href="Dropper_8cs_source.html#l00014">Empyrean.ColorPicker.Dropper.blockerPrefab</a>, <a class="el" href="Dropper_8cs_source.html#l00028">Empyrean.ColorPicker.Dropper.coroutine</a>, <a class="el" href="Dropper_8cs_source.html#l00067">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, <a class="el" href="Dropper_8cs_source.html#l00112">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, <a class="el" href="Dropper_8cs_source.html#l00036">Empyrean.ColorPicker.Dropper.onColorPicked</a>, <a class="el" href="Dropper_8cs_source.html#l00034">Empyrean.ColorPicker.Dropper.onDropCanceled</a>, <a class="el" href="Dropper_8cs_source.html#l00011">Empyrean.ColorPicker.Dropper.palette</a>, and <a class="el" href="ColorPalette_8cs_source.html#l00134">Empyrean.ColorPicker.ColorPalette.ShowDropperMarker()</a>.</p>
+<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00020">Empyrean.ColorPicker.Dropper.blocker</a>, <a class="el" href="Dropper_8cs_source.html#l00014">Empyrean.ColorPicker.Dropper.blockerPrefab</a>, <a class="el" href="Dropper_8cs_source.html#l00028">Empyrean.ColorPicker.Dropper.coroutine</a>, <a class="el" href="Dropper_8cs_source.html#l00084">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, <a class="el" href="Dropper_8cs_source.html#l00137">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, <a class="el" href="Dropper_8cs_source.html#l00036">Empyrean.ColorPicker.Dropper.onColorPicked</a>, <a class="el" href="Dropper_8cs_source.html#l00034">Empyrean.ColorPicker.Dropper.onDropCanceled</a>, <a class="el" href="Dropper_8cs_source.html#l00011">Empyrean.ColorPicker.Dropper.palette</a>, and <a class="el" href="ColorPalette_8cs_source.html#l00134">Empyrean.ColorPicker.ColorPalette.ShowDropperMarker()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ColorPicker_8cs_source.html#l00193">Empyrean.ColorPicker.ColorPicker.StartDropper()</a>.</p>
 
@@ -390,9 +436,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00050">50</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00066">66</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -419,18 +465,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00118">118</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6da7a4317e15d071a3576fc760e229a1">palette</a>.<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a8ffbbdd9c4a7a00649d1418c7bb4a43e">ShowDropperMarker</a>(value: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  121</span>        StopCoroutine(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a162abbb9c9475ee0515f4e97e69113df">coroutine</a>);</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a162abbb9c9475ee0515f4e97e69113df">coroutine</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  123</span>        UnityEngine.Object.Destroy(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a>.gameObject);</div>
-<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a> = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00144">144</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a6da7a4317e15d071a3576fc760e229a1">palette</a>.<a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1ColorPalette.html#a8ffbbdd9c4a7a00649d1418c7bb4a43e">ShowDropperMarker</a>(value: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  147</span>        StopCoroutine(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a162abbb9c9475ee0515f4e97e69113df">coroutine</a>);</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a162abbb9c9475ee0515f4e97e69113df">coroutine</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  149</span>        UnityEngine.Object.Destroy(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a>.gameObject);</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a5b99f921da6650857867c6a8cbb8e0cc">blocker</a> = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00020">Empyrean.ColorPicker.Dropper.blocker</a>, <a class="el" href="Dropper_8cs_source.html#l00028">Empyrean.ColorPicker.Dropper.coroutine</a>, <a class="el" href="Dropper_8cs_source.html#l00011">Empyrean.ColorPicker.Dropper.palette</a>, and <a class="el" href="ColorPalette_8cs_source.html#l00134">Empyrean.ColorPicker.ColorPalette.ShowDropperMarker()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerColorPicker_8cs_source.html#l00040">LayerColorPicker.OnBack()</a>, <a class="el" href="Dropper_8cs_source.html#l00112">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, and <a class="el" href="LayerColorPicker_8cs_source.html#l00052">LayerColorPicker.OnKill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerColorPicker_8cs_source.html#l00040">LayerColorPicker.OnBack()</a>, <a class="el" href="Dropper_8cs_source.html#l00137">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, and <a class="el" href="LayerColorPicker_8cs_source.html#l00052">LayerColorPicker.OnKill()</a>.</p>
 
 </div>
 </div>
@@ -457,13 +503,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00054">54</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#adc5013efe94ebb577242b96cd61cfe79">UpdateRenderTextureIfNecessary</a>();</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_adc5013efe94ebb577242b96cd61cfe79"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#adc5013efe94ebb577242b96cd61cfe79">Empyrean.ColorPicker.Dropper.UpdateRenderTextureIfNecessary</a></div><div class="ttdeci">void UpdateRenderTextureIfNecessary()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00059">Dropper.cs:59</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00070">70</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#adc5013efe94ebb577242b96cd61cfe79">UpdateRenderTextureIfNecessary</a>();</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclassEmpyrean_1_1ColorPicker_1_1Dropper_html_adc5013efe94ebb577242b96cd61cfe79"><div class="ttname"><a href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#adc5013efe94ebb577242b96cd61cfe79">Empyrean.ColorPicker.Dropper.UpdateRenderTextureIfNecessary</a></div><div class="ttdeci">void UpdateRenderTextureIfNecessary()</div><div class="ttdef"><b>Definition:</b> <a href="Dropper_8cs_source.html#l00075">Dropper.cs:75</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00059">Empyrean.ColorPicker.Dropper.UpdateRenderTextureIfNecessary()</a>.</p>
+<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00075">Empyrean.ColorPicker.Dropper.UpdateRenderTextureIfNecessary()</a>.</p>
 
 </div>
 </div>
@@ -490,16 +536,22 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00097">97</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>    {</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#ae0763a2ee765d6453e3806d9d5748ab0">color</a> = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.GetPixel((<span class="keywordtype">int</span>)<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a255a7f6ebc0f0e918bf321786be9f3e0">uiMousePosition</a>.x, (<span class="keywordtype">int</span>)<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a255a7f6ebc0f0e918bf321786be9f3e0">uiMousePosition</a>.y);</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-<div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
-<div class="ttc" id="aclassEInput_html_a255a7f6ebc0f0e918bf321786be9f3e0"><div class="ttname"><a href="classEInput.html#a255a7f6ebc0f0e918bf321786be9f3e0">EInput.uiMousePosition</a></div><div class="ttdeci">static Vector3 uiMousePosition</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00380">EInput.cs:380</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00114">114</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">int</span> num = (int)Mathf.Clamp(Input.mousePosition.x, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width);</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">int</span> num2 = (int)Mathf.Clamp(Input.mousePosition.y, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height);</div>
+<div class="line"><span class="lineno">  118</span>        Vector2 vector = <span class="keyword">new</span> Vector2(num - 8, num2 - 8);</div>
+<div class="line"><span class="lineno">  119</span>        Vector2 vector2 = <span class="keyword">new</span> Vector2(num + 8, num2 + 8);</div>
+<div class="line"><span class="lineno">  120</span>        Vector2 vector3 = <span class="keyword">new</span> Vector2(Mathf.Clamp(vector.x, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width - 8), Mathf.Clamp(vector.y, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height - 8));</div>
+<div class="line"><span class="lineno">  121</span>        Vector2 vector4 = <span class="keyword">new</span> Vector2(Mathf.Clamp(vector2.x, 8f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.width), Mathf.Clamp(vector2.y, 8f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.height));</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordtype">int</span> num3 = (int)vector4.x - (<span class="keywordtype">int</span>)vector3.x;</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordtype">int</span> num4 = (int)vector4.y - (<span class="keywordtype">int</span>)vector3.y;</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#ae0763a2ee765d6453e3806d9d5748ab0">color</a> = <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.GetPixel((<span class="keywordtype">int</span>)vector3.x + num3 / 2, (int)vector3.y + num4 / 2);</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00030">Empyrean.ColorPicker.Dropper.color</a>, <a class="el" href="Dropper_8cs_source.html#l00024">Empyrean.ColorPicker.Dropper.texture2D</a>, and <a class="el" href="EInput_8cs_source.html#l00380">EInput.uiMousePosition</a>.</p>
+<p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00030">Empyrean.ColorPicker.Dropper.color</a>, and <a class="el" href="Dropper_8cs_source.html#l00024">Empyrean.ColorPicker.Dropper.texture2D</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00067">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00084">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, and <a class="el" href="Dropper_8cs_source.html#l00137">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>.</p>
 
 </div>
 </div>
@@ -526,17 +578,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00059">59</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.width != Screen.width || <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.height != Screen.height)</div>
-<div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a> = <span class="keyword">new</span> RenderTexture(Screen.width, Screen.height, 24);</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00075">75</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.width != Screen.width || <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.height != Screen.height)</div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            UnityEngine.Object.Destroy(<a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>);</div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a> = <span class="keyword">new</span> RenderTexture(Screen.width, Screen.height, 24);</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00022">Empyrean.ColorPicker.Dropper.renderTexture</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00054">Empyrean.ColorPicker.Dropper.Update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00070">Empyrean.ColorPicker.Dropper.Update()</a>.</p>
 
 </div>
 </div>
@@ -563,15 +616,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00091">91</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.ReadPixels(<span class="keyword">new</span> Rect(0f, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.width, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.height), 0, 0);</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.Apply();</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00108">108</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.ReadPixels(<span class="keyword">new</span> Rect(0f, 0f, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.width, <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#abe968216b9b4df9ffef762d0974e4477">renderTexture</a>.height), 0, 0);</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_variable" href="classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9b640546c228aede5527fe10c65a0bcb">texture2D</a>.Apply();</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Dropper_8cs_source.html#l00022">Empyrean.ColorPicker.Dropper.renderTexture</a>, and <a class="el" href="Dropper_8cs_source.html#l00024">Empyrean.ColorPicker.Dropper.texture2D</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00067">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00084">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>.</p>
 
 </div>
 </div>
@@ -598,7 +651,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00032">32</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, and <a class="el" href="Dropper_8cs_source.html#l00067">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, and <a class="el" href="Dropper_8cs_source.html#l00084">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>.</p>
 
 </div>
 </div>
@@ -624,7 +677,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00020">20</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>, and <a class="el" href="Dropper_8cs_source.html#l00118">Empyrean.ColorPicker.Dropper.Stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>, and <a class="el" href="Dropper_8cs_source.html#l00144">Empyrean.ColorPicker.Dropper.Stop()</a>.</p>
 
 </div>
 </div>
@@ -650,7 +703,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00014">14</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
 
 </div>
 </div>
@@ -724,7 +777,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00030">30</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00112">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, and <a class="el" href="Dropper_8cs_source.html#l00097">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00137">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, and <a class="el" href="Dropper_8cs_source.html#l00114">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition()</a>.</p>
 
 </div>
 </div>
@@ -742,7 +795,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00028">28</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerColorPicker_8cs_source.html#l00040">LayerColorPicker.OnBack()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00052">LayerColorPicker.OnKill()</a>, <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>, and <a class="el" href="Dropper_8cs_source.html#l00118">Empyrean.ColorPicker.Dropper.Stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerColorPicker_8cs_source.html#l00040">LayerColorPicker.OnBack()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00052">LayerColorPicker.OnKill()</a>, <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>, and <a class="el" href="Dropper_8cs_source.html#l00144">Empyrean.ColorPicker.Dropper.Stop()</a>.</p>
 
 </div>
 </div>
@@ -768,7 +821,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00036">36</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00112">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, and <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00137">Empyrean.ColorPicker.Dropper.OnBlockerClicked()</a>, and <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
 
 </div>
 </div>
@@ -786,7 +839,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00034">34</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LayerColorPicker_8cs_source.html#l00040">LayerColorPicker.OnBack()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00052">LayerColorPicker.OnKill()</a>, and <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LayerColorPicker_8cs_source.html#l00040">LayerColorPicker.OnBack()</a>, <a class="el" href="LayerColorPicker_8cs_source.html#l00052">LayerColorPicker.OnKill()</a>, and <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>.</p>
 
 </div>
 </div>
@@ -812,7 +865,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00011">11</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00067">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, <a class="el" href="Dropper_8cs_source.html#l00102">Empyrean.ColorPicker.Dropper.PickColors()</a>, and <a class="el" href="Dropper_8cs_source.html#l00118">Empyrean.ColorPicker.Dropper.Stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00084">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, <a class="el" href="Dropper_8cs_source.html#l00127">Empyrean.ColorPicker.Dropper.PickColors()</a>, and <a class="el" href="Dropper_8cs_source.html#l00144">Empyrean.ColorPicker.Dropper.Stop()</a>.</p>
 
 </div>
 </div>
@@ -838,7 +891,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00026">26</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, and <a class="el" href="Dropper_8cs_source.html#l00067">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, <a class="el" href="Dropper_8cs_source.html#l00084">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, and <a class="el" href="Dropper_8cs_source.html#l00050">Empyrean.ColorPicker.Dropper.OnDestroy()</a>.</p>
 
 </div>
 </div>
@@ -864,7 +917,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00022">22</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, <a class="el" href="Dropper_8cs_source.html#l00059">Empyrean.ColorPicker.Dropper.UpdateRenderTextureIfNecessary()</a>, and <a class="el" href="Dropper_8cs_source.html#l00091">Empyrean.ColorPicker.Dropper.UpdateTexture()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, <a class="el" href="Dropper_8cs_source.html#l00050">Empyrean.ColorPicker.Dropper.OnDestroy()</a>, <a class="el" href="Dropper_8cs_source.html#l00075">Empyrean.ColorPicker.Dropper.UpdateRenderTextureIfNecessary()</a>, and <a class="el" href="Dropper_8cs_source.html#l00108">Empyrean.ColorPicker.Dropper.UpdateTexture()</a>.</p>
 
 </div>
 </div>
@@ -890,7 +943,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Dropper_8cs_source.html#l00024">24</a> of file <a class="el" href="Dropper_8cs_source.html">Dropper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, <a class="el" href="Dropper_8cs_source.html#l00067">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, <a class="el" href="Dropper_8cs_source.html#l00097">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition()</a>, and <a class="el" href="Dropper_8cs_source.html#l00091">Empyrean.ColorPicker.Dropper.UpdateTexture()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Dropper_8cs_source.html#l00038">Empyrean.ColorPicker.Dropper.Awake()</a>, <a class="el" href="Dropper_8cs_source.html#l00084">Empyrean.ColorPicker.Dropper.EnlargeAreaAroundPointer()</a>, <a class="el" href="Dropper_8cs_source.html#l00050">Empyrean.ColorPicker.Dropper.OnDestroy()</a>, <a class="el" href="Dropper_8cs_source.html#l00114">Empyrean.ColorPicker.Dropper.UpdateColorByMousePosition()</a>, and <a class="el" href="Dropper_8cs_source.html#l00108">Empyrean.ColorPicker.Dropper.UpdateTexture()</a>.</p>
 
 </div>
 </div>

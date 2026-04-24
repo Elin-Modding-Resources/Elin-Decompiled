@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.297 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.298 Nightly</span>
    </div>
   </td>
  </tr>
@@ -572,7 +572,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   34</span>        {</div>
 <div class="line"><span class="lineno">   35</span>            List&lt;Chara&gt; list = <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#a8b1488299388277a7ac0e7556b3ee3b9">ListCharasInRadius</a>(<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, 5, delegate(<a class="code hl_class" href="classChara.html">Chara</a> c)</div>
 <div class="line"><span class="lineno">   36</span>            {</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">if</span> (c.<a class="code hl_property" href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">IsHumanSpeak</a>)</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">if</span> (!c.<a class="code hl_property" href="classChara.html#ac79ea3f84d4bf288927e3cb3e7933de2">IsMultisize</a> &amp;&amp; c.<a class="code hl_property" href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">IsHumanSpeak</a>)</div>
 <div class="line"><span class="lineno">   38</span>                {</div>
 <div class="line"><span class="lineno">   39</span>                    CardRenderer renderer = c.renderer;</div>
 <div class="line"><span class="lineno">   40</span>                    if (renderer != null &amp;&amp; !renderer.hasActor)</div>
@@ -600,9 +600,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassChara_html"><div class="ttname"><a href="classChara.html">Chara</a></div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00009">Chara.cs:10</a></div></div>
 <div class="ttc" id="aclassChara_html_a04481f3eec7c112a96ee7db1b87e92d5"><div class="ttname"><a href="classChara.html#a04481f3eec7c112a96ee7db1b87e92d5">Chara.IsHumanSpeak</a></div><div class="ttdeci">bool IsHumanSpeak</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01028">Chara.cs:1029</a></div></div>
 <div class="ttc" id="aclassChara_html_a860a939a5ff77e4442e1cd3ab101b55f"><div class="ttname"><a href="classChara.html#a860a939a5ff77e4442e1cd3ab101b55f">Chara.Duplicate</a></div><div class="ttdeci">Chara Duplicate()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01817">Chara.cs:1817</a></div></div>
+<div class="ttc" id="aclassChara_html_ac79ea3f84d4bf288927e3cb3e7933de2"><div class="ttname"><a href="classChara.html#ac79ea3f84d4bf288927e3cb3e7933de2">Chara.IsMultisize</a></div><div class="ttdeci">override bool IsMultisize</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00720">Chara.cs:720</a></div></div>
 <div class="ttc" id="aclassPoint_html_a8b1488299388277a7ac0e7556b3ee3b9"><div class="ttname"><a href="classPoint.html#a8b1488299388277a7ac0e7556b3ee3b9">Point.ListCharasInRadius</a></div><div class="ttdeci">List&lt; Chara &gt; ListCharasInRadius(Chara cc, int dist, Func&lt; Chara, bool &gt; func, bool onlyVisible=true)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l01220">Point.cs:1220</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ConTransmuteHuman_8cs_source.html#l00007">chara</a>, <a class="el" href="CharaGen_8cs_source.html#l00022">CharaGen.CreateFromFilter()</a>, <a class="el" href="Chara_8cs_source.html#l01817">Chara.Duplicate()</a>, <a class="el" href="Chara_8cs_source.html#l01029">Chara.IsHumanSpeak</a>, <a class="el" href="Point_8cs_source.html#l01220">Point.ListCharasInRadius()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, and <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>.</p>
+<p class="reference">References <a class="el" href="ConTransmuteHuman_8cs_source.html#l00007">chara</a>, <a class="el" href="CharaGen_8cs_source.html#l00022">CharaGen.CreateFromFilter()</a>, <a class="el" href="Chara_8cs_source.html#l01817">Chara.Duplicate()</a>, <a class="el" href="Chara_8cs_source.html#l01029">Chara.IsHumanSpeak</a>, <a class="el" href="Chara_8cs_source.html#l00720">Chara.IsMultisize</a>, <a class="el" href="Point_8cs_source.html#l01220">Point.ListCharasInRadius()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, and <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>.</p>
 
 </div>
 </div>

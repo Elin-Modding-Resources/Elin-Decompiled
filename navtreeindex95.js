@@ -1,5 +1,7 @@
 var NAVTREEINDEX95 =
 {
+"classQuest.html#a52a40ae32e2d7dbea5da494677e24212":[1,0,1015,5],
+"classQuest.html#a545abc9492e58121d3766ea768e51fcf":[1,0,1015,54],
 "classQuest.html#a575a49b6c3cb97536289824b2d140787":[1,0,1015,71],
 "classQuest.html#a58f6e2f8f35f7c6dc6614a57cf255474":[1,0,1015,72],
 "classQuest.html#a59e4bc1164356da0209cc14f98dd7237":[1,0,1015,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX95 =
 "classQuestGuildThief.html#aebc8de2de652bf3c53f9da414e3ae543":[1,0,1043,1],
 "classQuestHarvest.html":[1,0,1044],
 "classQuestHarvest.html#a05156c1d257dbf02f2db6310ca409753":[1,0,1044,10],
-"classQuestHarvest.html#a224c8f00f4286d2b99be71cacef1c87e":[1,0,1044,8],
-"classQuestHarvest.html#a2c661585ee315c7787252d68adfb1f25":[1,0,1044,4],
-"classQuestHarvest.html#a41150d3a50df7d0a0708349a3b4fb657":[1,0,1044,1]
+"classQuestHarvest.html#a224c8f00f4286d2b99be71cacef1c87e":[1,0,1044,8]
 };

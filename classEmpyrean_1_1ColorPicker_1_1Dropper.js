@@ -3,6 +3,7 @@ var classEmpyrean_1_1ColorPicker_1_1Dropper =
     [ "Awake", "classEmpyrean_1_1ColorPicker_1_1Dropper.html#a3543da13efcb25571f47000a4ab365f5", null ],
     [ "EnlargeAreaAroundPointer", "classEmpyrean_1_1ColorPicker_1_1Dropper.html#a4ed1e7fa12962352db62b2cdec3f95ad", null ],
     [ "OnBlockerClicked", "classEmpyrean_1_1ColorPicker_1_1Dropper.html#a9c854d4f568c41c928925b466ade0fa1", null ],
+    [ "OnDestroy", "classEmpyrean_1_1ColorPicker_1_1Dropper.html#a31574b61b8a82ac283cfc566ccd4b810", null ],
     [ "PickColors", "classEmpyrean_1_1ColorPicker_1_1Dropper.html#a35751cb2d9c2e9bd709393c60e541bb8", null ],
     [ "Start", "classEmpyrean_1_1ColorPicker_1_1Dropper.html#a687df128a2cfb1dda7feea15efc9c851", null ],
     [ "Stop", "classEmpyrean_1_1ColorPicker_1_1Dropper.html#aa7b98135aa9f9e557730843222f85cbd", null ],

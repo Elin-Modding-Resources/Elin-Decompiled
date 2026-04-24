@@ -1,5 +1,7 @@
 var NAVTREEINDEX99 =
 {
+"classReligionHealing.html":[1,0,1128],
+"classReligionHealing.html#a3261fc58a373e9bacd4cec50fb58e8dc":[1,0,1128,2],
 "classReligionHealing.html#a55fcabcaca2065006f95d420742be5c4":[1,0,1128,1],
 "classReligionHealing.html#ae65f5b53a7049c3f07f99b4ea9474faa":[1,0,1128,0],
 "classReligionLuck.html":[1,0,1129],
@@ -247,7 +249,5 @@ var NAVTREEINDEX99 =
 "classRenderRow.html#ac57c52424ee83fc3f783e0cbddb7bcca":[1,0,1157,52],
 "classRenderRow.html#ac8011f6a77ce7474edab024f664ead2c":[1,0,1157,43],
 "classRenderRow.html#acbad842b2a43c3f64ccaa573b7327682":[1,0,1157,19],
-"classRenderRow.html#acc4325d305863606f002e014de0e5bd1":[1,0,1157,6],
-"classRenderRow.html#accc19e7e1a2e00fb5a6440bd041989f3":[1,0,1157,14],
-"classRenderRow.html#acd185bcd12119d3cd2cab52b47d47923":[1,0,1157,56]
+"classRenderRow.html#acc4325d305863606f002e014de0e5bd1":[1,0,1157,6]
 };

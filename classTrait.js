@@ -62,7 +62,7 @@ var classTrait =
     [ "Offer", "classTrait.html#a773ff35de469eff01a2dbe0b165d32a5", null ],
     [ "OfferProcess", "classTrait.html#a07db3b3661073b4b2f354f56325bf324", null ],
     [ "OnAddedToZone", "classTrait.html#a7a3637e38ace8063cd066648552195cc", null ],
-    [ "OnBarter", "classTrait.html#a5ded46828bb83e6d480d551d03b48bbf", null ],
+    [ "OnBarter", "classTrait.html#aab6a3b0ebcf39f0e3e2e1902d3c7f7eb", null ],
     [ "OnBlend", "classTrait.html#afe04c35d6a7b1cb37e81944261583702", null ],
     [ "OnChangePlaceState", "classTrait.html#a1bcc89016758ef51b5722da792d53f41", null ],
     [ "OnChildDecay", "classTrait.html#a5a26a2b47cf0cd07ec1e9094131fc29e", null ],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX126 =
 {
+"classTraitRogue.html":[1,0,1859],
+"classTraitRollingFortune.html":[1,0,1860],
+"classTraitRollingFortune.html#a3bbf3c32a0a5900536ef45411d92097e":[1,0,1860,5],
+"classTraitRollingFortune.html#a56352d29ba42a40a680f1645d755a62a":[1,0,1860,2],
 "classTraitRollingFortune.html#a5997575ca14641c00633be0a788db30e":[1,0,1860,6],
 "classTraitRollingFortune.html#a8a8c01fcc9b5db9140a36c4f9230936c":[1,0,1860,3],
 "classTraitRollingFortune.html#ad1199c02254ea0e8445c5a39e1175ec2":[1,0,1860,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitSpotExit.html#a72b988c1d472fae5444c2920a3ca06b5":[1,0,1907,1],
 "classTraitSpotFarm.html":[1,0,1908],
 "classTraitSpotFarm.html#ae765c95cafe5778e91abdac984ead166":[1,0,1908,1],
-"classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1908,0],
-"classTraitSpotFish.html":[1,0,1909],
-"classTraitSpotFuel.html":[1,0,1910],
-"classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1910,0],
-"classTraitSpotGarbage.html":[1,0,1911]
+"classTraitSpotFarm.html#af202e83197d5a3a4287663a54287bb40":[1,0,1908,0]
 };
