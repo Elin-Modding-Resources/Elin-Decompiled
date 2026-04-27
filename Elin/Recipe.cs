@@ -492,14 +492,14 @@ public class Recipe : EClass
 		{
 			num = 3;
 		}
-		return EClass.sources.materials.rows[num];
+		return EClass.sources.materials.map.TryGetValue(num) ?? EClass.sources.materials.map[3];
 	}
 
 	public virtual SourceMaterial.Row GetColorMaterial()
 	{
 		if (idMat != -1)
 		{
-			return EClass.sources.materials.rows[idMat];
+			return EClass.sources.materials.map.TryGetValue(idMat) ?? EClass.sources.materials.map[3];
 		}
 		if (UseStock)
 		{
@@ -513,14 +513,14 @@ public class Recipe : EClass
 				}
 				return thing.DyeMat;
 			}
-			return EClass.sources.materials.rows[3];
+			return EClass.sources.materials.map[3];
 		}
 		int num = ((ingredients.Count > 0) ? ingredients[source.colorIng].mat : 3);
 		if (num == -1)
 		{
 			num = 3;
 		}
-		return EClass.sources.materials.rows[num];
+		return EClass.sources.materials.map.TryGetValue(num) ?? EClass.sources.materials.map[3];
 	}
 
 	public virtual void BuildIngredientList()
@@ -630,7 +630,8 @@ public class Recipe : EClass
 		{
 			mat = 2;
 		}
-		EClass.pc.PlaySound(EClass.sources.materials.rows[mat].GetSoundImpact());
+		SourceMaterial.Row row = EClass.sources.materials.map.TryGetValue(mat) ?? EClass.sources.materials.map[2];
+		EClass.pc.PlaySound(row.GetSoundImpact());
 		pos.cell.isModified = true;
 		switch (source.type)
 		{
@@ -639,7 +640,7 @@ public class Recipe : EClass
 			int ramp = tileRow.id;
 			if (ramp == 3)
 			{
-				ramp = EClass.sources.materials.rows[mat].ramp;
+				ramp = row.ramp;
 			}
 			if (EClass.scene.actionMode.IsRoofEditMode())
 			{

@@ -122,7 +122,7 @@ public class SpriteReplacer
 				};
 				spriteData.Init();
 				suffixes[text4] = spriteData;
-				Debug.Log("#sprite replacer init '" + text4 + "' at " + path.ShortPath());
+				Debug.Log("#sprite replacer " + text4.IsEmpty("<base>") + "/" + path.ShortPath());
 			}
 		}
 	}

@@ -4,5 +4,5 @@ public class TraitDrawingPaperM : TraitDrawingPaper
 
 	public override int Height => 64;
 
-	public override int SizeGrid => 15;
+	public override int SizeGrid => 12;
 }

@@ -32,25 +32,33 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 	{
 		if (chara == null)
 		{
-			List<Chara> list = owner.pos.ListCharasInRadius(owner, 5, delegate(Chara c)
-			{
-				if (!c.IsMultisize && c.IsHumanSpeak)
-				{
-					CardRenderer renderer = c.renderer;
-					if (renderer != null && !renderer.hasActor)
-					{
-						return !c.HasElement(1427);
-					}
-				}
-				return false;
-			});
+			List<Thing> list = owner.things.List((Thing t) => t.trait is TraitFigure { source: not null } traitFigure && !traitFigure.source.multisize, onlyAccessible: true);
 			if (list.Count > 0)
 			{
-				chara = list.RandomItem().Duplicate();
+				chara = CharaGen.Create((list.RandomItem().trait as TraitFigure).source.id);
 			}
 			else
 			{
-				chara = CharaGen.CreateFromFilter("c_guest");
+				List<Chara> list2 = owner.pos.ListCharasInRadius(owner, 5, delegate(Chara c)
+				{
+					if (!c.IsMultisize && c.IsHumanSpeak)
+					{
+						CardRenderer renderer = c.renderer;
+						if (renderer != null && !renderer.hasActor)
+						{
+							return !c.HasElement(1427);
+						}
+					}
+					return false;
+				});
+				if (list2.Count > 0)
+				{
+					chara = list2.RandomItem().Duplicate();
+				}
+				else
+				{
+					chara = CharaGen.CreateFromFilter("c_guest");
+				}
 			}
 		}
 		base.OnBeforeStart();

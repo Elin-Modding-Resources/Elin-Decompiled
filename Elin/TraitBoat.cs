@@ -59,6 +59,6 @@ public class TraitBoat : Trait
 				mat = p.matFloor.id;
 			}
 		});
-		return EClass.sources.materials.rows[mat];
+		return EClass.sources.materials.map.TryGetValue(mat) ?? EClass.sources.materials.map[67];
 	}
 }

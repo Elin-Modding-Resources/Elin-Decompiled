@@ -29,14 +29,16 @@ public class ZonePreEnterBout : ZonePreEnterEvent
 		for (int i = 0; i < EClass.pc.party.members.Count - 1; i++)
 		{
 			Chara chara = CharaGen.CreateFromFilter("c_neutral", target.LV + 10);
-			Debug.Log(chara);
-			chara.ChangeRarity(Rarity.Superior);
-			if (chara.LV < target.LV)
+			if (!(chara.trait is TraitMerchantTravel))
 			{
-				chara.SetLv(target.LV);
+				chara.ChangeRarity(Rarity.Superior);
+				if (chara.LV < target.LV)
+				{
+					chara.SetLv(target.LV);
+				}
+				EClass._zone.AddCard(chara, target.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? target.pos);
+				list.Add(chara);
 			}
-			EClass._zone.AddCard(chara, target.pos.GetNearestPoint(allowBlock: false, allowChara: false) ?? target.pos);
-			list.Add(chara);
 		}
 		Debug.Log(list.Count);
 		foreach (Chara item in list)

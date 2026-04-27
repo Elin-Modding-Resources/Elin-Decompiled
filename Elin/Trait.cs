@@ -2304,6 +2304,10 @@ public class Trait : EClass
 				case ShopType.VMachine:
 					if (EClass.rnd(10) == 0)
 					{
+						return Create("wear_swim");
+					}
+					if (EClass.rnd(10) == 0)
+					{
 						return Create("panty");
 					}
 					if (EClass.rnd(5) == 0)

@@ -40,7 +40,7 @@ public class SpriteData
 		catch (Exception exception)
 		{
 			Debug.LogException(exception);
-			Debug.LogError("#sprite failed to init '" + id + "' at " + path);
+			Debug.LogError("#sprite failed " + id + "/" + path);
 		}
 	}
 

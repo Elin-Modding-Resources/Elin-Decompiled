@@ -459,7 +459,8 @@ public class RecipeCard : Recipe
 		{
 			mat = 2;
 		}
-		EClass.pc.PlaySound(EClass.sources.materials.rows[mat].GetSoundImpact());
+		SourceMaterial.Row row = EClass.sources.materials.map.TryGetValue(mat) ?? EClass.sources.materials.map[2];
+		EClass.pc.PlaySound(row.GetSoundImpact());
 		t.SetDir(dir);
 		t.idSkin = idSkin;
 		EClass._zone.AddCard(t, pos);

@@ -480,8 +480,10 @@ public class ModManager : ModManagerCore
 		{
 			try
 			{
-				package.Init();
-				mappedPackages[package.id] = package as ModPackage;
+				if (package.Init())
+				{
+					mappedPackages[package.id] = package as ModPackage;
+				}
 				_loading?.Log(package.ToString());
 			}
 			catch (Exception ex)

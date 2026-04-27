@@ -87,7 +87,7 @@ public class Chara : Card, IPathfindWalker
 
 	public Chara master;
 
-	public Point lastPos = new Point();
+	public new Point lastPos = new Point();
 
 	public PathProgress path = new PathProgress();
 
@@ -3286,7 +3286,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		list.Copy().ForeachReverse(delegate(Chara c)
 		{
-			if (!c.ai.IsMoveAI && !c.IsPC && c.trait.CanBePushed && c != this && !c.noMove && (!EClass._zone.IsRegion || c.IsPCFactionOrMinion))
+			if ((trait is TraitSnitch && c.IsPCFactionOrMinion) || (!c.ai.IsMoveAI && !c.IsPC && c.trait.CanBePushed && c != this && !c.noMove && (!EClass._zone.IsRegion || c.IsPCFactionOrMinion)))
 			{
 				List<Point> list2 = new List<Point>();
 				for (int i = point.x - 1; i <= point.x + 1; i++)

@@ -47,7 +47,7 @@ public class BiomeProfile : EScriptable
 			{
 				return "-";
 			}
-			SourceThing.Row row = EClass.editorSources.things.rows.First((SourceThing.Row a) => a.id == id);
+			SourceThing.Row row = EClass.editorSources.things.rows.FirstOrDefault((SourceThing.Row a) => a.id == id);
 			if (row != null)
 			{
 				return row.id + "-(" + row.name_JP + ")";
@@ -67,7 +67,7 @@ public class BiomeProfile : EScriptable
 
 		protected string _GetObj(int id)
 		{
-			SourceObj.Row row = EClass.editorSources.objs.rows.First((SourceObj.Row a) => a.id == id);
+			SourceObj.Row row = EClass.editorSources.objs.rows.FirstOrDefault((SourceObj.Row a) => a.id == id);
 			if (row != null)
 			{
 				return row.id + "-" + row.alias + "(" + row.name_JP + ")";
@@ -87,7 +87,7 @@ public class BiomeProfile : EScriptable
 
 		protected string _GetFloor(int id)
 		{
-			SourceFloor.Row row = EClass.editorSources.floors.rows.First((SourceFloor.Row a) => a.id == id);
+			SourceFloor.Row row = EClass.editorSources.floors.rows.FirstOrDefault((SourceFloor.Row a) => a.id == id);
 			if (row != null)
 			{
 				return row.id + "-" + row.alias + "(" + row.name_JP + ")";
@@ -107,7 +107,7 @@ public class BiomeProfile : EScriptable
 
 		protected string _GetBlock(int id)
 		{
-			SourceBlock.Row row = EClass.editorSources.blocks.rows.First((SourceBlock.Row a) => a.id == id);
+			SourceBlock.Row row = EClass.editorSources.blocks.rows.FirstOrDefault((SourceBlock.Row a) => a.id == id);
 			if (row != null)
 			{
 				return row.id + "-" + row.alias + "(" + row.name_JP + ")";
@@ -131,7 +131,7 @@ public class BiomeProfile : EScriptable
 			{
 				id = 0;
 			}
-			SourceMaterial.Row row = EClass.editorSources.materials.rows.First((SourceMaterial.Row a) => a.id == id);
+			SourceMaterial.Row row = EClass.editorSources.materials.rows.FirstOrDefault((SourceMaterial.Row a) => a.id == id);
 			if (row != null)
 			{
 				return row.id + "-" + row.alias + "(" + row.name_JP + ")";
@@ -155,7 +155,7 @@ public class BiomeProfile : EScriptable
 			{
 				return "-";
 			}
-			SourceSpawnList.Row row = EClass.editorSources.spawnLists.rows.First((SourceSpawnList.Row a) => a.id == id);
+			SourceSpawnList.Row row = EClass.editorSources.spawnLists.rows.FirstOrDefault((SourceSpawnList.Row a) => a.id == id);
 			if (row != null)
 			{
 				return row.id;
@@ -510,9 +510,9 @@ public class BiomeProfile : EScriptable
 		{
 			public int idObj;
 
-			public override bool IsSpawnOnBlock => EClass.sources.objs.rows[idObj].tileType.IsBlockMount;
+			public override bool IsSpawnOnBlock => EClass.sources.objs.map[idObj].tileType.IsBlockMount;
 
-			public override bool IsSpawnOnWater => EClass.sources.objs.rows[idObj].tileType.CanSpawnOnWater;
+			public override bool IsSpawnOnWater => EClass.sources.objs.map[idObj].tileType.CanSpawnOnWater;
 
 			public string obj
 			{

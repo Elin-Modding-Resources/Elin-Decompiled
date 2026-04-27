@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -381,5 +382,17 @@ public class Region : Zone
 			}
 		}
 		return list;
+	}
+
+	[OnDeserialized]
+	private void _OnDeserialized(StreamingContext context)
+	{
+		for (int num = children.Count - 1; num >= 0; num--)
+		{
+			if (!EClass.sources.zones.map.ContainsKey(children[num].id))
+			{
+				RemoveChild(children[num]);
+			}
+		}
 	}
 }

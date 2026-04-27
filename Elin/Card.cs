@@ -59,6 +59,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public Point pos = new Point();
 
+	public Point lastPos = new Point();
+
 	public CardRenderer renderer;
 
 	public CardRow hat;
@@ -1975,7 +1977,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
-	public SourceMaterial.Row DyeMat => EClass.sources.materials.rows[c_dyeMat];
+	public SourceMaterial.Row DyeMat => EClass.sources.materials.map.TryGetValue(c_dyeMat) ?? EClass.sources.materials.map[1];
 
 	public int invX
 	{
@@ -2879,7 +2881,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			bool flag = (bp != null && bp.fixedMat) || sourceCard.quality == 4 || sourceCard.tierGroup.IsEmpty();
 			if (_idMat != -1)
 			{
-				_material = EClass.sources.materials.rows[_idMat];
+				_material = EClass.sources.materials.map.TryGetValue(_idMat) ?? EClass.sources.materials.map[1];
 			}
 			else if (!flag)
 			{
@@ -4184,10 +4186,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						{
 							int num = chara4.Evalue(1241);
 							int num2 = chara4.Evalue(438);
-							if ((num != 0 || num2 != 0) && !chara4.IsDisabled && !chara4.isRestrained && (!IsPCFactionOrMinion || chara4.IsPCFactionOrMinion) && chara4.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || hp * 100 / MaxHP <= chara4.hp * 100 / chara4.MaxHP))
+							if ((num != 0 || num2 != 0) && !chara4.IsDisabled && !chara4.isRestrained && (!IsPCFactionOrMinion || chara4.IsPCFactionOrMinion) && (IsPCFactionOrMinion || !chara4.IsPCFactionOrMinion) && chara4.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || hp * 100 / MaxHP <= chara4.hp * 100 / chara4.MaxHP))
 							{
 								Say((num2 == 0) ? "wall_flesh" : "wall_knightly", chara4, this);
-								chara4.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
+								chara4.DamageHP(dmg * (100 + ((num2 <= 0) ? 10 : 0)) / 100, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
 								return;
 							}
 						}
@@ -4498,7 +4500,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_10b3;
+							goto IL_10dd;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4526,7 +4528,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_10b3;
+								goto IL_10dd;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4544,8 +4546,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_10b3;
-		IL_10b3:
+		goto IL_10dd;
+		IL_10dd:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -6090,9 +6092,24 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		point.Set(pos);
 		point.x -= num;
 		point.z -= num2;
-		if (point.IsValid && !point.HasChara)
+		if (point.IsValid && !point.HasChara && TryMove(point, allowDestroyPath: false) == MoveResult.Success)
 		{
-			return TryMove(point, allowDestroyPath: false);
+			return MoveResult.Success;
+		}
+		for (int i = -1; i < 2; i++)
+		{
+			for (int j = -1; j < 2; j++)
+			{
+				if (EClass.rnd(2) != 0)
+				{
+					point.x = pos.x + j;
+					point.z = pos.z + i;
+					if (!point.Equals(lastPos) && point.IsValid && !point.HasChara && TryMove(point, allowDestroyPath: false) == MoveResult.Success)
+					{
+						return MoveResult.Success;
+					}
+				}
+			}
 		}
 		return MoveResult.Fail;
 	}
@@ -6337,7 +6354,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		Rand.UseSeed(num, delegate
 		{
-			_randColor = EClass.sources.materials.rows[EClass.rnd(90)].matColor;
+			_randColor = EClass.sources.materials.rows.RandomItem().matColor;
 		});
 		return ref _randColor;
 	}
