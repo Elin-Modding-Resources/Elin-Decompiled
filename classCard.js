@@ -268,6 +268,7 @@ var classCard =
     [ "id", "classCard.html#a2460fdceeef9382e2fccf227a568cf58", null ],
     [ "isDestroyed", "classCard.html#a05dffd4f600c4a61fcabec797f77b221", null ],
     [ "lastEmo", "classCard.html#ad85e1617f82e1ef914a244c8442d2efb", null ],
+    [ "lastPos", "classCard.html#ae5817d783118e5d5519ac510d288dd33", null ],
     [ "MaxWeight", "classCard.html#a5d63427212c856513a8ace9d963d28c1", null ],
     [ "parent", "classCard.html#a5fdd419eccae9c9ab3af2c954091692c", null ],
     [ "placeState", "classCard.html#a77dc3446a7564c5ec837ac0033f6a313", null ],

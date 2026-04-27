@@ -1612,6 +1612,7 @@ var hierarchy =
             [ "TraitVishnu", "classTraitVishnu.html", null ]
           ] ],
           [ "TraitUniqueMonster", "classTraitUniqueMonster.html", [
+            [ "TraitSnitch", "classTraitSnitch.html", null ],
             [ "TraitUniqueMonsterAdv", "classTraitUniqueMonsterAdv.html", null ]
           ] ]
         ] ],
@@ -2277,6 +2278,7 @@ var hierarchy =
     ] ],
     [ "IChangeResolution", "interfaceIChangeResolution.html", [
       [ "LayerTitle", "classLayerTitle.html", null ],
+      [ "PixelPaint", "classPixelPaint.html", null ],
       [ "RenderCamUpscaler", "classRenderCamUpscaler.html", null ],
       [ "UIDragPanel", "classUIDragPanel.html", null ],
       [ "Widget", "classWidget.html", [

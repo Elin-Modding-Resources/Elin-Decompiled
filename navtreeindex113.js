@@ -1,5 +1,12 @@
 var NAVTREEINDEX113 =
 {
+"classTCOrbitChara.html#ada37c4ed77cb850ac2235b10e83101cf":[1,0,1357,9],
+"classTCOrbitTask.html":[1,0,1358],
+"classTCOrbitTask.html#a18d4b927fa246e20c01900f95add6ced":[1,0,1358,3],
+"classTCOrbitTask.html#a88c580c2ee24e85665112a0e5f4e85cb":[1,0,1358,1],
+"classTCOrbitTask.html#acad24d37c6aa8e407a69477b3be57cc2":[1,0,1358,5],
+"classTCOrbitTask.html#af3fd86e7fd1c7ce663b350e9763f0178":[1,0,1358,2],
+"classTCOrbitTask.html#af5b8d1edeafe3bd971a4eb83cf24693f":[1,0,1358,4],
 "classTCOrbitTask.html#af882c4b90fa624857157a01978aec95e":[1,0,1358,0],
 "classTCOrbitThing.html":[1,0,1359],
 "classTCOrbitThing.html#a09db9c82143f25ef187c895ccb9a8960":[1,0,1359,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX113 =
 "classTaskCut.html#a65baa72aa754ac1e68e6451e1c7e7ff4":[1,0,1336,6],
 "classTaskCut.html#ab92bd421d2f346b1e6a79154963adfcb":[1,0,1336,4],
 "classTaskCut.html#ae9e8f17a294b20d8c09fd925cb5b94bd":[1,0,1336,5],
-"classTaskCut.html#afcf4260262c5e7bc4109f66984ba77dc":[1,0,1336,1],
-"classTaskDesignation.html":[1,0,1337],
-"classTaskDesignation.html#a0e1e4e15f3bc7365cb84e5ddbc7b766d":[1,0,1337,12],
-"classTaskDesignation.html#a2da7155eaf5c317d2f66f13bd12751ed":[1,0,1337,15],
-"classTaskDesignation.html#a3c72850421bd0e522e1bb0ce5731591e":[1,0,1337,9],
-"classTaskDesignation.html#a3e24872d059e332b7f978ef3c50fc7f6":[1,0,1337,7],
-"classTaskDesignation.html#a5c0f50410827dce3f162e6cb43d9ef67":[1,0,1337,11],
-"classTaskDesignation.html#a5d2e671ad9bed3ac8bf9a014af8dd4e6":[1,0,1337,3]
+"classTaskCut.html#afcf4260262c5e7bc4109f66984ba77dc":[1,0,1336,1]
 };

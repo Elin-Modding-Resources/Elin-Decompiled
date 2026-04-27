@@ -1,5 +1,12 @@
 var NAVTREEINDEX118 =
 {
+"classTrait.html#a347dc97633489ded2c1f0391b967d2f5":[1,0,1448,208],
+"classTrait.html#a3536e5d336611ddb31db73dd27e15265":[1,0,1448,64],
+"classTrait.html#a36e5910b883d1f4d4f9b318a97f6ced5":[1,0,1448,237],
+"classTrait.html#a39ace83d7e9e32e675a6cc4614497718":[1,0,1448,165],
+"classTrait.html#a3c9f561376bd9d2a64d731b08ebb587a":[1,0,1448,198],
+"classTrait.html#a3d7c708e6d4de364a10d7f3c4ee9fce4":[1,0,1448,97],
+"classTrait.html#a3dfddf8ab3a55240f886305bddba17bf":[1,0,1448,32],
 "classTrait.html#a3ec98447690dd68571b75ff355289308":[1,0,1448,62],
 "classTrait.html#a3f3b522d5f37459262eb30f511dbc667":[1,0,1448,124],
 "classTrait.html#a4035d731d6f901a2aa909c848d0a7627":[1,0,1448,229],
@@ -242,12 +249,5 @@ var NAVTREEINDEX118 =
 "classTraitAltar.html#aba8b3431e81a47fa306e204ca6b7e9c1":[1,0,1454,12],
 "classTraitAltar.html#ac631be9bc0add6867a5fb6993215df3e":[1,0,1454,8],
 "classTraitAltar.html#acce5c7d09ed1a3b0acaf4a577cbfdbc0":[1,0,1454,9],
-"classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752":[1,0,1454,4],
-"classTraitAltar.html#ae59022869e58c61830f66a53b1bdfe54":[1,0,1454,10],
-"classTraitAltar.html#ae5fd67e75b95c7edf12a6cf333c01a6d":[1,0,1454,15],
-"classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919":[1,0,1454,3],
-"classTraitAltarAncient.html":[1,0,1455],
-"classTraitAltarAncient.html#a8d295ef9480c495698224054e97c41f7":[1,0,1455,0],
-"classTraitAltarAncient.html#af14e8f20f77cec9a3515d788847ae57d":[1,0,1455,1],
-"classTraitAltarChaos.html":[1,0,1456]
+"classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752":[1,0,1454,4]
 };

@@ -1972,6 +1972,7 @@ var annotated_dup =
     [ "TraitSlaver", "classTraitSlaver.html", "classTraitSlaver" ],
     [ "TraitSlotMachine", "classTraitSlotMachine.html", "classTraitSlotMachine" ],
     [ "TraitSmelter", "classTraitSmelter.html", "classTraitSmelter" ],
+    [ "TraitSnitch", "classTraitSnitch.html", null ],
     [ "TraitSnow", "classTraitSnow.html", "classTraitSnow" ],
     [ "TraitSofa", "classTraitSofa.html", null ],
     [ "TraitSorin", "classTraitSorin.html", "classTraitSorin" ],

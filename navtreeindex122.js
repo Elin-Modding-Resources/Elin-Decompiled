@@ -1,5 +1,12 @@
 var NAVTREEINDEX122 =
 {
+"classTraitEditorSign.html":[1,0,1611],
+"classTraitEditorSign.html#a563f4d7190c7abc1677228760a74d0f0":[1,0,1611,0],
+"classTraitEffect.html":[1,0,1613],
+"classTraitEffect.html#a07bc65d2ec3a648e06be838e21b358e0":[1,0,1613,4],
+"classTraitEffect.html#a17bd67fbfc23aaf5e55649c261a0b670":[1,0,1613,8],
+"classTraitEffect.html#a18f55693616231ca402614694de2bbf0":[1,0,1613,11],
+"classTraitEffect.html#a34357f3e4400c13895214be692eccb15":[1,0,1613,3],
 "classTraitEffect.html#a421a99541c178b934d4eef877efcfe1c":[1,0,1613,10],
 "classTraitEffect.html#a49d29f10fb5e4db7826ae1287470e138":[1,0,1613,2],
 "classTraitEffect.html#a5759212af372e9e407f76931f8659818":[1,0,1613,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitGeneratorHamster.html":[1,0,1672],
 "classTraitGeneratorHamster.html#a19e930bee3bf79c212c80631efee8e8b":[1,0,1672,1],
 "classTraitGeneratorHamster.html#a2bf9bb3367e9f51b6fbd73f550b9a099":[1,0,1672,3],
-"classTraitGeneratorHamster.html#a39fd9f1fb117279f59f755d133d1c553":[1,0,1672,2],
-"classTraitGeneratorHamster.html#a41cc6879622ccad22c5b5ad02cc27822":[1,0,1672,4],
-"classTraitGeneratorHamster.html#a7f2e870a1c0d37c4392bb21fa3e1fda6":[1,0,1672,7],
-"classTraitGeneratorHamster.html#aad615b7a6a0246921e3c0ef3114163f3":[1,0,1672,6],
-"classTraitGeneratorHamster.html#acb060ee03755414cb9f06593ed9937bd":[1,0,1672,8],
-"classTraitGeneratorHamster.html#ae5a40c2d2302a023256c16881d47be04":[1,0,1672,0],
-"classTraitGeneratorHamster.html#aea8d1660070dc8448ac5d9f9de48c91e":[1,0,1672,5],
-"classTraitGeneratorSolar.html":[1,0,1673]
+"classTraitGeneratorHamster.html#a39fd9f1fb117279f59f755d133d1c553":[1,0,1672,2]
 };

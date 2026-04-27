@@ -2,7 +2,9 @@ var classPixelPaint =
 [
     [ "Fill", "classPixelPaint.html#a90d8d3fdc0f8f1c1bf8f009c1250fbd1", null ],
     [ "Init", "classPixelPaint.html#a6acbd5db4c64e3bb3b2c87474fbf20de", null ],
+    [ "OnChangeResolution", "classPixelPaint.html#a78ed1fbafe01e78147508b0e2f4132d5", null ],
     [ "OnDestroy", "classPixelPaint.html#abf755dbdcac19ad42025dac163bdacd2", null ],
+    [ "RefreshSize", "classPixelPaint.html#af346fbf8738477a556bbfed6c75a6e31", null ],
     [ "Update", "classPixelPaint.html#a076a624bfe066e549063929947cbb41f", null ],
     [ "bgColor", "classPixelPaint.html#a66159745c8bd9206c3e3de27596c0f60", null ],
     [ "brushSize", "classPixelPaint.html#a3d126d079c181f8633a9da651e6988cc", null ],
@@ -12,6 +14,7 @@ var classPixelPaint =
     [ "imageMask", "classPixelPaint.html#ad8f0afefa1c58dcc0175c7a23bfcd915", null ],
     [ "imagePreview", "classPixelPaint.html#a170cdc0cd9571f6f40a77b5778d4c4e7", null ],
     [ "imageRect", "classPixelPaint.html#adb1a6768cc11f10cd80dcc290d3bbec8", null ],
+    [ "lastSize", "classPixelPaint.html#a56d5b8b625303328933c879a1df6e8fe", null ],
     [ "paddingBrush", "classPixelPaint.html#a46bc87ab90614a3b9024221894856ab2", null ],
     [ "picker", "classPixelPaint.html#a3240271ba111f857826c159833fd9838", null ],
     [ "scale", "classPixelPaint.html#a85a24d7c6cebb93e985a2fefdac09c7b", null ],

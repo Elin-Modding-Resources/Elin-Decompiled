@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"classActBash.html#a83b37c1eae905d51673df4259d086f49":[1,0,17,1],
+"classActBit.html":[1,0,18],
 "classActBloodsuck.html":[1,0,19],
 "classActBloodsuck.html#a264ebda17ffb589290ecff2af75ca6db":[1,0,19,0],
 "classActBloodsuck.html#a28998f76688b9ea566dc72a24be2834d":[1,0,19,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX30 =
 "classActSlime.html#a5b8741d3582c8ae96a87ee3b93228b05":[1,0,66,1],
 "classActSlime.html#a75acfe7a26dd13e30fd6004f03ee40c9":[1,0,66,2],
 "classActSlime.html#a98e8cf97c769aea1faa8ab5b3e3a557a":[1,0,66,3],
-"classActSummonGuard.html":[1,0,67],
-"classActSummonGuard.html#a17fb58c2f7ac46f41168858d5f78bd0c":[1,0,67,0],
-"classActSummonGuard.html#a4719dfaf59dd567fc165a31811d032bd":[1,0,67,1]
+"classActSummonGuard.html":[1,0,67]
 };

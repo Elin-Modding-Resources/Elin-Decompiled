@@ -1,5 +1,6 @@
 var classRegion =
 [
+    [ "_OnDeserialized", "classRegion.html#ada2df73907ae5de62f3ac6c258e57df3", null ],
     [ "CanCreateZone", "classRegion.html#a1bf3366be2bf056c66d02aaac1208de7", null ],
     [ "CheckRandomSites", "classRegion.html#afa5b1559f3551e4ea7b07804f6c28a04", null ],
     [ "CreateRandomSite", "classRegion.html#af8fd63f724ab634433d97dd7602ba303", null ],

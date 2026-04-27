@@ -1,5 +1,12 @@
 var NAVTREEINDEX123 =
 {
+"classTraitGeneratorHamster.html#a41cc6879622ccad22c5b5ad02cc27822":[1,0,1672,4],
+"classTraitGeneratorHamster.html#a7f2e870a1c0d37c4392bb21fa3e1fda6":[1,0,1672,7],
+"classTraitGeneratorHamster.html#aad615b7a6a0246921e3c0ef3114163f3":[1,0,1672,6],
+"classTraitGeneratorHamster.html#acb060ee03755414cb9f06593ed9937bd":[1,0,1672,8],
+"classTraitGeneratorHamster.html#ae5a40c2d2302a023256c16881d47be04":[1,0,1672,0],
+"classTraitGeneratorHamster.html#aea8d1660070dc8448ac5d9f9de48c91e":[1,0,1672,5],
+"classTraitGeneratorSolar.html":[1,0,1673],
 "classTraitGeneratorSolar.html#ae7ad169a7eae90bafb4ea61b8523c607":[1,0,1673,0],
 "classTraitGeneratorWheel.html":[1,0,1674],
 "classTraitGeneratorWheel.html#a2abb80b9c1097874eb18a47a47c3994f":[1,0,1674,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitLunchLove.html":[1,0,1733],
 "classTraitMagicChest.html":[1,0,1734],
 "classTraitMagicChest.html#a0736e3bf06a16e5ce69336ee2553301d":[1,0,1734,9],
-"classTraitMagicChest.html#a31e5a90eb8e0c2878af32d7a140207ec":[1,0,1734,5],
-"classTraitMagicChest.html#a3350a75f795760a2e574b42e506aea94":[1,0,1734,8],
-"classTraitMagicChest.html#a374c84d6ee8fd4b303002cce39310071":[1,0,1734,1],
-"classTraitMagicChest.html#a48d4cc922d03e7fff2a2122aa3ecffb4":[1,0,1734,4],
-"classTraitMagicChest.html#a4f5af16cef8f4b7cd634815df07ff21c":[1,0,1734,0],
-"classTraitMagicChest.html#a60fa09f514bf44fcc46986443de111fd":[1,0,1734,3],
-"classTraitMagicChest.html#a9c2a979bdada31f4a63034602d0ee47f":[1,0,1734,7],
-"classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1734,6]
+"classTraitMagicChest.html#a31e5a90eb8e0c2878af32d7a140207ec":[1,0,1734,5]
 };

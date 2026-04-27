@@ -364,7 +364,7 @@ var classChara =
     [ "isParalyzed", "classChara.html#a4f0d6326aaa2c210d05b0c06c4f1dbf4", null ],
     [ "isWeakToSunlight", "classChara.html#a934220711f77c3f450c627bfcd2e9e70", null ],
     [ "isWet", "classChara.html#a273c92c4bca9292369659d9955cdedbc", null ],
-    [ "lastPos", "classChara.html#a90fea2db825470d3dd2a131ddace3abb", null ],
+    [ "lastPos", "classChara.html#a983bbb54aa25255972d995dbcf32e3d1", null ],
     [ "ListAdvJob", "classChara.html#afce16dab6c2041b61788c8435dedd54c", null ],
     [ "ListAdvRace", "classChara.html#ab7199bb05ac1da4df2942409fe6886c1", null ],
     [ "listHobby", "classChara.html#a6b05baee646475f11afc681d7339f386", null ],

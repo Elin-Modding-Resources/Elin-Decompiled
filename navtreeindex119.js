@@ -1,5 +1,12 @@
 var NAVTREEINDEX119 =
 {
+"classTraitAltar.html#ae59022869e58c61830f66a53b1bdfe54":[1,0,1454,10],
+"classTraitAltar.html#ae5fd67e75b95c7edf12a6cf333c01a6d":[1,0,1454,15],
+"classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919":[1,0,1454,3],
+"classTraitAltarAncient.html":[1,0,1455],
+"classTraitAltarAncient.html#a8d295ef9480c495698224054e97c41f7":[1,0,1455,0],
+"classTraitAltarAncient.html#af14e8f20f77cec9a3515d788847ae57d":[1,0,1455,1],
+"classTraitAltarChaos.html":[1,0,1456],
 "classTraitAltarChaos.html#a9ab111166b27ff5182b9f43e7e10f800":[1,0,1456,0],
 "classTraitAmmo.html":[1,0,1457],
 "classTraitAmmo.html#a061b674e16022617b5e80d700617d7d5":[1,0,1457,4],
@@ -242,12 +249,5 @@ var NAVTREEINDEX119 =
 "classTraitBrewery.html#a42071de0bf383f079fa4f2b031c2091e":[1,0,1511,2],
 "classTraitBrewery.html#a5387d116dd271c6ca5690ebb7c2213d3":[1,0,1511,3],
 "classTraitBrewery.html#ab60b6997f1cd8e5cd8f0f0928b2192ea":[1,0,1511,4],
-"classTraitBrewery.html#ac6392218736e8045381c246c4b5b8dd3":[1,0,1511,1],
-"classTraitBrewery.html#ad0f183c75b466f63ce9906a5ea1ada3a":[1,0,1511,8],
-"classTraitBrewery.html#ad6cfde6d0eda91cfdca50e56ac36a2c8":[1,0,1511,6],
-"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614c":[1,0,1511,0],
-"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614ca0a38e7286ebbb560354992b3ce62be67":[1,0,1511,0,0],
-"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614ca40491db1043a93d8b94b9d94e3eda532":[1,0,1511,0,1],
-"classTraitBrewery.html#add0fd959673c91d9b0bcf25276e5614cacd24882902a3d5da6e5783027a0ae3d0":[1,0,1511,0,2],
-"classTraitBrewery.html#af6db96e2d5003643fc59104d280777c1":[1,0,1511,7]
+"classTraitBrewery.html#ac6392218736e8045381c246c4b5b8dd3":[1,0,1511,1]
 };

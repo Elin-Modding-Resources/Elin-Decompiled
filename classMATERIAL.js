@@ -22,8 +22,8 @@ var classMATERIAL =
     [ "sourceIce", "classMATERIAL.html#ace82e1a970c2cfab0b6bddd7657c3bc1", null ],
     [ "sourceOak", "classMATERIAL.html#a11fda324144d6894bdbbbfc4bd07f922", null ],
     [ "sourceSnow", "classMATERIAL.html#a82479c0abf6ef6fe4a1417edf7777b12", null ],
+    [ "sourceWaterSea", "classMATERIAL.html#af04b88e731f908012f504b03a66f8045", null ],
     [ "water", "classMATERIAL.html#afd5af9821756345908fdda4cabfdef70", null ],
     [ "water_fresh", "classMATERIAL.html#a9b413fce55a7d547945c65722536ae47", null ],
-    [ "water_sea", "classMATERIAL.html#a080167c1b4a6f5f8ff76909a2a7dadde", null ],
-    [ "sourceWaterSea", "classMATERIAL.html#af04b88e731f908012f504b03a66f8045", null ]
+    [ "water_sea", "classMATERIAL.html#a080167c1b4a6f5f8ff76909a2a7dadde", null ]
 ];

@@ -1,5 +1,12 @@
 var NAVTREEINDEX124 =
 {
+"classTraitMagicChest.html#a3350a75f795760a2e574b42e506aea94":[1,0,1734,8],
+"classTraitMagicChest.html#a374c84d6ee8fd4b303002cce39310071":[1,0,1734,1],
+"classTraitMagicChest.html#a48d4cc922d03e7fff2a2122aa3ecffb4":[1,0,1734,4],
+"classTraitMagicChest.html#a4f5af16cef8f4b7cd634815df07ff21c":[1,0,1734,0],
+"classTraitMagicChest.html#a60fa09f514bf44fcc46986443de111fd":[1,0,1734,3],
+"classTraitMagicChest.html#a9c2a979bdada31f4a63034602d0ee47f":[1,0,1734,7],
+"classTraitMagicChest.html#ab4d9a81c63bd19b9e17dde96249285a5":[1,0,1734,6],
 "classTraitMagicChest.html#ac653c6cbde0047caa6f0a25a70b8aaf5":[1,0,1734,2],
 "classTraitMahjong.html":[1,0,1735],
 "classTraitMahjong.html#a099c319f02a38a52f298054b5ff10c65":[1,0,1735,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitNewZone.html#a5f8428fdd28fd867be7661ae1d58bbca":[1,0,1796,13],
 "classTraitNewZone.html#a6d51d58a5467a29e9e731ef2ae798066":[1,0,1796,20],
 "classTraitNewZone.html#a9a63a7b8b415c696689644ae43329e6f":[1,0,1796,6],
-"classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984":[1,0,1796,26],
-"classTraitNewZone.html#ac01e05ddac5e41b530840b966a74d34f":[1,0,1796,7],
-"classTraitNewZone.html#acaa1d4dfbee3d5fd8953e698fa0e1b82":[1,0,1796,2],
-"classTraitNewZone.html#ad3ef2288dca8c3423c6b3abaab2b25c9":[1,0,1796,14],
-"classTraitNewZone.html#ad57dc3f7f98e0116848f8b79f048656a":[1,0,1796,23],
-"classTraitNewZone.html#adcf7d96ce38bca4b635f0505de6f55bb":[1,0,1796,1],
-"classTraitNewZone.html#ae002023845fe236526177b3d14615923":[1,0,1796,4],
-"classTraitNewZone.html#ae01094bfae9a46a72b058281c7c09195":[1,0,1796,19]
+"classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984":[1,0,1796,26]
 };
