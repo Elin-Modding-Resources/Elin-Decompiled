@@ -2,7 +2,7 @@ using Empyrean.ColorPicker;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PixelPaint : MonoBehaviour
+public class PixelPaint : MonoBehaviour, IChangeResolution
 {
 	public RawImage imageRect;
 
@@ -29,6 +29,8 @@ public class PixelPaint : MonoBehaviour
 	public Color startColor;
 
 	public Color bgColor;
+
+	private Vector2 lastSize;
 
 	private bool first = true;
 
@@ -91,19 +93,34 @@ public class PixelPaint : MonoBehaviour
 
 	public void Init()
 	{
-		Vector2 sizeDelta = new Vector2(size.x * scale, size.y * scale);
-		imageRect.rectTransform.sizeDelta = sizeDelta;
-		imageGrid.rectTransform.sizeDelta = sizeDelta;
-		imageGrid.uvRect = new Rect(0f, 0f, size.x, size.y);
 		tex = new Texture2D(size.x, size.y, TextureFormat.ARGB32, mipChain: false);
 		tex.filterMode = FilterMode.Point;
 		imagePreview.texture = tex;
 		imagePreview.rectTransform.sizeDelta = new Vector2(size.x * 2, size.y * 2);
 		imageRect.texture = tex;
 		Fill(bgColor);
+		RefreshSize();
 		picker.Init();
 		picker.SelectColor(startColor);
 		picker.SelectColor(startColor);
+	}
+
+	public void OnChangeResolution()
+	{
+		RefreshSize();
+	}
+
+	public void RefreshSize()
+	{
+		scale = (int)((float)(Screen.height - 200) / BaseCore.Instance.uiScale / (float)size.y);
+		Vector2 vector = new Vector2(size.x * scale, size.y * scale);
+		if (!(lastSize == vector))
+		{
+			imageRect.rectTransform.sizeDelta = vector;
+			imageGrid.rectTransform.sizeDelta = vector;
+			imageGrid.uvRect = new Rect(0f, 0f, size.x, size.y);
+			lastSize = vector;
+		}
 	}
 
 	public void Fill(Color color)
