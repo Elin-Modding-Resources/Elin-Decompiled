@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using UnityEngine;
 
 public class BookList
 {
@@ -16,45 +18,70 @@ public class BookList
 
 		public string cat;
 
+		public string path;
+
 		public int chance = 100;
 
 		public int skin;
 	}
 
+	public static List<Func<string[]>> booklistLoaders = new List<Func<string[]>>();
+
 	public static Dictionary<string, Dictionary<string, Item>> dict;
 
 	public static void Init()
 	{
-		if (dict == null)
+		if (dict != null)
 		{
-			dict = new Dictionary<string, Dictionary<string, Item>>();
-			AddDir("Book", CorePath.CorePackage.Book);
-			AddDir("Scroll", CorePath.CorePackage.Scroll);
+			return;
 		}
-		static void AddDir(string id, string path)
+		dict = new Dictionary<string, Dictionary<string, Item>>();
+		List<string> list = new List<string>();
+		list.AddRange(LoadDefaultBookList());
+		foreach (Func<string[]> booklistLoader in booklistLoaders)
 		{
-			DirectoryInfo directoryInfo = new DirectoryInfo(path);
-			Dictionary<string, Item> dictionary = new Dictionary<string, Item>();
-			dict.Add(id, dictionary);
-			FileInfo[] files = directoryInfo.GetFiles();
+			try
+			{
+				list.AddRange(booklistLoader());
+			}
+			catch (Exception arg)
+			{
+				Debug.LogWarning($"#book external booklist loader failed\n{arg}");
+			}
+		}
+		foreach (string item in list)
+		{
+			DirectoryInfo directoryInfo = new DirectoryInfo(item);
+			if (!directoryInfo.Exists)
+			{
+				Debug.LogWarning("#book invalid booklist path/" + item);
+				continue;
+			}
+			string name = directoryInfo.Name;
+			dict.TryAdd(name, new Dictionary<string, Item>());
+			FileInfo[] files = directoryInfo.GetFiles("*.txt", SearchOption.TopDirectoryOnly);
 			foreach (FileInfo fileInfo in files)
 			{
-				if (!(fileInfo.Extension != ".txt"))
+				using StreamReader streamReader = new StreamReader(fileInfo.FullName);
+				string text = Path.ChangeExtension(fileInfo.Name, null);
+				string text2 = streamReader.ReadLine();
+				int? num = text2?.Length;
+				if (!num.HasValue || num.GetValueOrDefault() <= 0)
 				{
-					StreamReader streamReader = new StreamReader(fileInfo.FullName);
-					string[] array = streamReader.ReadLine().Split(',');
-					Item item = new Item
-					{
-						cat = id,
-						title = array[0],
-						author = ((array.Length >= 2 && !array[1].IsEmpty()) ? "nameAuthor".lang(array[1]) : "unknownAuthor".lang()),
-						chance = ((array.Length >= 3) ? array[2].ToInt() : 100),
-						skin = ((array.Length >= 4) ? array[3].ToInt() : 0),
-						id = fileInfo.Name.Replace(fileInfo.Extension, "")
-					};
-					dictionary.Add(item.id, item);
-					streamReader.Close();
+					Debug.LogWarning("#book invalid first line/" + item);
+					continue;
 				}
+				string[] array = text2.Split(',');
+				dict[name][text] = new Item
+				{
+					cat = name,
+					title = array[0],
+					author = ((array.Length > 1) ? "nameAuthor".lang(array[1]) : "unknownAuthor".lang()),
+					chance = ((array.Length > 2) ? array[2].ToInt() : 100),
+					skin = ((array.Length > 3) ? array[3].ToInt() : 0),
+					id = text,
+					path = fileInfo.FullName
+				};
 			}
 		}
 	}
@@ -70,5 +97,14 @@ public class BookList
 	{
 		Init();
 		return dict[idCat].TryGetValue(id) ?? dict["Book"]["_default"];
+	}
+
+	public static string[] LoadDefaultBookList()
+	{
+		return new string[2]
+		{
+			CorePath.CorePackage.Book,
+			CorePath.CorePackage.Scroll
+		};
 	}
 }

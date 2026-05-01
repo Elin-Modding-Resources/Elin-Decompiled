@@ -329,6 +329,8 @@ public class UIBook : MonoBehaviour
 
 	public static SearchContext searchContext;
 
+	public static List<Func<string[]>> topicLoaders = new List<Func<string[]>>();
+
 	private void Awake()
 	{
 		if (searchContext == null || Application.isEditor)
@@ -493,26 +495,37 @@ public class UIBook : MonoBehaviour
 	public void BuildPages()
 	{
 		pages.Clear();
-		string[] array = bookItem?.lines ?? IO.LoadTextArray(CorePath.CorePackage.Help + idFile);
-		if (idFile == "version" && Lang.langCode == "CN")
+		string[] array = bookItem?.lines;
+		if (bookItem?.path != null && array == null)
 		{
-			array = IO.LoadTextArray(CorePath.CorePackage.TextEN + idFile);
+			array = IO.LoadTextArray(bookItem.path);
 		}
 		if (array.IsEmpty())
 		{
-			array = IO.LoadTextArray(CorePath.CorePackage.Text + idFile);
+			List<string> list = new List<string>
+			{
+				CorePath.CorePackage.Help,
+				CorePath.CorePackage.Text,
+				CorePath.CorePackage.TextCommon,
+				CorePath.CorePackage.HelpEN,
+				CorePath.CorePackage.TextEN
+			};
+			if (idFile == "version" && Lang.langCode == "CN")
+			{
+				list.Insert(1, CorePath.CorePackage.TextEN);
+			}
+			foreach (string item in list)
+			{
+				array = IO.LoadTextArray(item + idFile);
+				if (!array.IsEmpty())
+				{
+					break;
+				}
+			}
 		}
-		if (array.IsEmpty())
+		if (array == null)
 		{
-			array = IO.LoadTextArray(CorePath.CorePackage.TextCommon + idFile);
-		}
-		if (array.IsEmpty())
-		{
-			array = IO.LoadTextArray(CorePath.CorePackage.HelpEN + idFile);
-		}
-		if (array.IsEmpty())
-		{
-			array = IO.LoadTextArray(CorePath.CorePackage.TextEN + idFile);
+			array = Array.Empty<string>();
 		}
 		Page page = new Page();
 		int num = 0;
@@ -544,11 +557,10 @@ public class UIBook : MonoBehaviour
 
 	public void RefreshTopics()
 	{
-		string[] array = IO.LoadTextArray(CorePath.CorePackage.Help + "_topics.txt");
 		List<UIList> lists = new List<UIList>();
-		lists.Add(list);
-		list.Clear();
-		list.callbacks = new UIList.Callback<Item, ButtonCategory>
+		lists.Add(this.list);
+		this.list.Clear();
+		this.list.callbacks = new UIList.Callback<Item, ButtonCategory>
 		{
 			onClick = delegate(Item a, ButtonCategory b)
 			{
@@ -594,23 +606,35 @@ public class UIBook : MonoBehaviour
 		Item item = null;
 		Item item2 = null;
 		helpTitles.Clear();
-		string[] array2 = array;
-		for (int i = 0; i < array2.Length; i++)
+		List<string> list = new List<string>();
+		list.AddRange(LoadBuiltInTopics());
+		foreach (Func<string[]> topicLoader in topicLoaders)
 		{
-			string[] array3 = array2[i].Replace(oldValue, "").Split(',');
-			string[] array4 = array3[0].Split('-');
+			try
+			{
+				list.AddRange(topicLoader());
+			}
+			catch (Exception arg)
+			{
+				Debug.LogWarning($"#book external topic loader failed\n{arg}");
+			}
+		}
+		foreach (string item6 in list)
+		{
+			string[] array = item6.Replace(oldValue, "").Split(',');
+			string[] array2 = array[0].Split('-');
 			Item item3 = new Item
 			{
-				idFile = array4[0],
-				id = array4[1],
-				title = array3[1]
+				idFile = array2[0],
+				id = array2[1],
+				title = array[1]
 			};
-			helpTitles[array3[0]] = item3.title.Replace("$", "");
+			helpTitles[array[0]] = item3.title.Replace("$", "");
 			if (item3.title.StartsWith("$"))
 			{
 				item = item3;
 				item3.title = item3.title.TrimStart('$');
-				list.Add(item3);
+				this.list.Add(item3);
 			}
 			else if (item != null)
 			{
@@ -618,7 +642,7 @@ public class UIBook : MonoBehaviour
 			}
 			else
 			{
-				list.Add(item3);
+				this.list.Add(item3);
 			}
 			if (item3.idFile == idFirstFile && item3.id == idFirstTopic)
 			{
@@ -626,23 +650,28 @@ public class UIBook : MonoBehaviour
 				idFirstFile = null;
 			}
 		}
-		list.Refresh();
+		this.list.Refresh();
 		if (item2 != null)
 		{
-			foreach (UIList item6 in lists)
+			foreach (UIList item7 in lists)
 			{
-				item6.Select(item2, invoke: true);
+				item7.Select(item2, invoke: true);
 			}
 		}
-		else if (list.children.Count > 0)
+		else if (this.list.children.Count > 0)
 		{
-			list.children.FirstItem().Select(0, invoke: true);
+			this.list.children.FirstItem().Select(0, invoke: true);
 		}
 		else
 		{
-			list.Select(0, invoke: true);
+			this.list.Select(0, invoke: true);
 		}
 		SkinManager.tempSkin = null;
+	}
+
+	public string[] LoadBuiltInTopics()
+	{
+		return IO.LoadTextArray(CorePath.CorePackage.Help + "_topics.txt");
 	}
 
 	public void ShowPage(int idx = 0)
