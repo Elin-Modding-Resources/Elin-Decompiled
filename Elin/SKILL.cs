@@ -296,7 +296,15 @@ public class Skill : Element
 	{
 		if (!base.IsGlobalElement)
 		{
-			return !base.source.IsWeaponEnc;
+			if (base.source.IsWeaponEnc)
+			{
+				if (base.owner != null && base.owner.Card != null)
+				{
+					return !base.owner.Card.IsWeapon;
+				}
+				return false;
+			}
+			return true;
 		}
 		return false;
 	}

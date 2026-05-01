@@ -3131,25 +3131,7 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public Playlist CreatePlaylist(ref List<int> list, Playlist mold = null)
 	{
-		Playlist playlist = EClass.Sound.plBlank.Instantiate();
-		if (list.Count == 0 && (bool)mold)
-		{
-			list = mold.ToInts();
-			playlist.shuffle = mold.shuffle;
-			playlist.minSwitchTime = mold.minSwitchTime;
-			playlist.nextBGMOnSwitch = mold.nextBGMOnSwitch;
-			playlist.ignoreLoop = mold.ignoreLoop;
-			playlist.keepBGMifSamePlaylist = mold.keepBGMifSamePlaylist;
-			playlist.name = mold.name;
-		}
-		foreach (int item in list)
-		{
-			playlist.list.Add(new Playlist.Item
-			{
-				data = EClass.core.refs.dictBGM.TryGetValue(item, 1)
-			});
-		}
-		return playlist;
+		return ModUtil.CreatePlaylist(ref list, mold);
 	}
 
 	public Chara FindChara(string id)

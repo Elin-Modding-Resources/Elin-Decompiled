@@ -66,6 +66,7 @@ public class LayerShippingResult : ELayer
 		{
 			Add("demitas", 5);
 		}
+		Add("kettle", 7);
 		int num = list.RandomItem();
 		imageBG.sprite = spriteBG[num];
 		Rand.SetSeed();

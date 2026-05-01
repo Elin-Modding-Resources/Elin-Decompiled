@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
@@ -437,8 +438,17 @@ public class CoreRef : ScriptableObject
 		int num = 0;
 		foreach (BGMData bgm in bgms)
 		{
-			dictBGM.Add(bgm.id, bgm);
+			dictBGM[bgm.id] = bgm;
 			num++;
+		}
+		if (Core.Instance.debug.skipMod)
+		{
+			return;
+		}
+		foreach (KeyValuePair<string, FileInfo> item in MOD.sounds.Where((KeyValuePair<string, FileInfo> kv) => kv.Key.StartsWith("BGM/")))
+		{
+			item.Deconstruct(out var key, out var _);
+			ModUtil.AddOrReplaceBGM(key);
 		}
 	}
 

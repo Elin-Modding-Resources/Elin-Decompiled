@@ -1544,9 +1544,9 @@ public class Trait : EClass
 		owner.c_dateStockExpire = EClass.world.date.GetRaw(24 * RestockDay);
 		owner.isRestocking = true;
 		t.things.DestroyAll((Thing _t) => _t.GetInt(101) != 0);
-		foreach (Thing thing9 in t.things)
+		foreach (Thing thing10 in t.things)
 		{
-			thing9.invX = -1;
+			thing10.invX = -1;
 		}
 		switch (ShopType)
 		{
@@ -1564,13 +1564,13 @@ public class Trait : EClass
 				break;
 			}
 			int num5 = 0;
-			foreach (Thing thing10 in c_copyContainer.things)
+			foreach (Thing thing11 in c_copyContainer.things)
 			{
-				if (!owner.trait.CanCopy(thing10))
+				if (!owner.trait.CanCopy(thing11))
 				{
 					continue;
 				}
-				Thing thing2 = thing10.Duplicate(1);
+				Thing thing2 = thing11.Duplicate(1);
 				thing2.isStolen = false;
 				thing2.isCopy = true;
 				thing2.c_priceFix = 0;
@@ -1595,7 +1595,7 @@ public class Trait : EClass
 					break;
 				}
 				case CopyShopType.Spellbook:
-					thing2.c_charges = thing10.c_charges;
+					thing2.c_charges = thing11.c_charges;
 					break;
 				}
 				if (num6 > 1 && thing2.trait.CanStack)
@@ -1904,25 +1904,27 @@ public class Trait : EClass
 					break;
 				}
 				case ShopType.Medal:
-					NoRestockId("hammer_garokk", 3);
-					NoRestockId("sword_dragon", 1);
+					NoRestockId("hammer_garokk", 3, 0);
+					NoRestockId("sword_dragon", 1, 0);
 					Add("sword_dragon", 1, 0).SetReplica(on: true);
-					NoRestockId("point_stick", 1);
+					NoRestockId("point_stick", 1, 0);
 					Add("point_stick", 1, 0).SetReplica(on: true);
-					NoRestockId("blunt_bonehammer", 1);
+					NoRestockId("blunt_bonehammer", 1, 0);
 					Add("blunt_bonehammer", 1, 0).SetReplica(on: true);
-					NoRestockId("pole_gunlance", 1);
+					NoRestockId("pole_gunlance", 1, 0);
 					Add("pole_gunlance", 1, 0).SetReplica(on: true);
-					NoRestockId("sword_muramasa", 1);
+					NoRestockId("sword_muramasa", 1, 0);
 					Add("sword_muramasa", 1, 0).SetReplica(on: true);
-					NoRestockId("sword_forgetmenot", 1);
+					NoRestockId("sword_forgetmenot", 1, 0);
 					Add("sword_forgetmenot", 1, 0).SetReplica(on: true);
-					NoRestockId("dagger_fish", 1);
+					NoRestockId("dagger_fish", 1, 0);
 					Add("dagger_fish", 1, 0).SetReplica(on: true);
-					NoRestockId("sword_zephir", 1);
+					NoRestockId("sword_zephir", 1, 0);
 					Add("sword_zephir", 1, 0).SetReplica(on: true);
 					Add("ribbon", 1, 0);
 					Add("helm_sage", 1, 0);
+					Add("wear_swim_danger", 1, 0);
+					Add("wear_swim_danger", 1, 1);
 					Add("diary_sister", 1, 0);
 					Add("diary_catsister", 1, 0);
 					Add("diary_lady", 1, 0);
@@ -2180,53 +2182,53 @@ public class Trait : EClass
 					}
 					AddThing(ThingGen.CreateScroll(8780, EClass.rndHalf(5)));
 				}
-				foreach (Thing thing11 in t.things)
+				foreach (Thing thing12 in t.things)
 				{
-					thing11.c_idBacker = 0;
+					thing12.c_idBacker = 0;
 					if (ShopType != ShopType.Copy)
 					{
-						thing11.TryMakeRandomItem(ShopLv);
-						if (thing11.Num == 1)
+						thing12.TryMakeRandomItem(ShopLv);
+						if (thing12.Num == 1)
 						{
-							thing11.SetNum(thing11.trait.DefaultStock);
+							thing12.SetNum(thing12.trait.DefaultStock);
 						}
-						if (thing11.trait is TraitFoodMeal)
+						if (thing12.trait is TraitFoodMeal)
 						{
-							CraftUtil.MakeDish(thing11, ShopLv, owner.Chara);
+							CraftUtil.MakeDish(thing12, ShopLv, owner.Chara);
 						}
-						if (thing11.IsFood && owner.id == "rodwyn")
+						if (thing12.IsFood && owner.id == "rodwyn")
 						{
 							SourceElement.Row row = EClass.sources.elements.rows.Where((SourceElement.Row e) => !e.foodEffect.IsEmpty() && e.category != "feat" && e.chance > 0).RandomItem();
-							thing11.elements.SetBase(row.id, 10 + EClass.rnd(10));
+							thing12.elements.SetBase(row.id, 10 + EClass.rnd(10));
 						}
 					}
 					if (CurrencyType == CurrencyType.Casino_coin)
 					{
-						thing11.noSell = true;
+						thing12.noSell = true;
 					}
 					if (Guild.Thief.IsCurrentZone)
 					{
-						thing11.isStolen = true;
+						thing12.isStolen = true;
 					}
-					if (!(thing11.trait is TraitErohon))
+					if (!(thing12.trait is TraitErohon))
 					{
-						thing11.c_IDTState = 0;
+						thing12.c_IDTState = 0;
 					}
-					if (CurrencyType == CurrencyType.Money && (thing11.category.IsChildOf("meal") || thing11.category.IsChildOf("preserved")) && thing11.id != "ration" && !thing11.IsUnique)
+					if (CurrencyType == CurrencyType.Money && (thing12.category.IsChildOf("meal") || thing12.category.IsChildOf("preserved")) && thing12.id != "ration" && !thing12.IsUnique)
 					{
-						thing11.c_priceFix = -70;
+						thing12.c_priceFix = -70;
 					}
 					if (ShopType == ShopType.TravelMerchant)
 					{
-						thing11.c_priceFix = 200;
+						thing12.c_priceFix = 200;
 					}
-					if (thing11.trait is TraitErohon)
+					if (thing12.trait is TraitErohon)
 					{
-						thing11.c_IDTState = 5;
+						thing12.c_IDTState = 5;
 					}
-					if (thing11.IsContainer && !thing11.c_revealLock)
+					if (thing12.IsContainer && !thing12.c_revealLock)
 					{
-						thing11.RemoveThings();
+						thing12.RemoveThings();
 						t.c_lockLv = 0;
 					}
 				}
@@ -2247,9 +2249,9 @@ public class Trait : EClass
 				Thing Add(string id, int a, int idSkin)
 				{
 					CardBlueprint.SetNormalRarity();
-					Thing thing8 = ThingGen.Create(id, -1, ShopLv).SetNum(a);
-					thing8.idSkin = ((idSkin == -1) ? EClass.rnd(thing8.source.skins.Length + 1) : idSkin);
-					return t.AddThing(thing8);
+					Thing thing9 = ThingGen.Create(id, -1, ShopLv).SetNum(a);
+					thing9.idSkin = ((idSkin == -1) ? EClass.rnd(thing9.source.skins.Length + 1) : idSkin);
+					return t.AddThing(thing9);
 				}
 				void AddAdvWeek(int i)
 				{
@@ -2270,7 +2272,12 @@ public class Trait : EClass
 				}
 				void NoRestock(Thing _t)
 				{
-					HashSet<string> hashSet = EClass.player.noRestocks.TryGetValue(owner.id);
+					string text = owner.id;
+					if (_t.idSkin != 0)
+					{
+						text = text + "_skin" + _t.idSkin;
+					}
+					HashSet<string> hashSet = EClass.player.noRestocks.TryGetValue(text);
 					if (hashSet == null)
 					{
 						hashSet = new HashSet<string>();
@@ -2278,14 +2285,16 @@ public class Trait : EClass
 					if (!hashSet.Contains(_t.trait.IdNoRestock))
 					{
 						hashSet.Add(_t.trait.IdNoRestock);
-						EClass.player.noRestocks[owner.id] = hashSet;
+						EClass.player.noRestocks[text] = hashSet;
 						_t.SetInt(101, 1);
 						AddThing(_t);
 					}
 				}
-				void NoRestockId(string _id, int num)
+				void NoRestockId(string _id, int num, int idSkin)
 				{
-					NoRestock(ThingGen.Create(_id).SetNum(num));
+					Thing thing8 = ThingGen.Create(_id).SetNum(num);
+					thing8.idSkin = idSkin;
+					NoRestock(thing8);
 				}
 			}
 

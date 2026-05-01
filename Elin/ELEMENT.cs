@@ -624,6 +624,10 @@ public class Element : EClass
 				{
 					Condition condition = Condition.Create(text2.Replace("@", ""), p);
 					condition.owner = c;
+					if (condition is ConWeapon conWeapon)
+					{
+						conWeapon.cha = c.CHA;
+					}
 					if (!source.aliasRef.IsEmpty())
 					{
 						condition.SetElement(EClass.sources.elements.alias[source.aliasRef].id);

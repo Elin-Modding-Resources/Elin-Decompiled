@@ -23,7 +23,15 @@ public class ModUtil : EClass
 	public static void OnModsActivated()
 	{
 		SoundManager.current.soundLoaders.Add(LoadSoundData);
+		UIBook.topicLoaders.Add(LoadTopicFiles);
+		BookList.booklistLoaders.Add(LoadBookList);
 		BaseModManager.PublishEvent("elin.mods.activated");
+		BaseModManager.SubscribeEvent("elin.game.post_load", PostLoadCleanup);
+	}
+
+	private static void PostLoadCleanup(object context)
+	{
+		EClass.player.knownBGMs.RemoveWhere((int id) => !EClass.core.refs.dictBGM.ContainsKey(id));
 	}
 
 	public static void LoadTypeFallback()
@@ -53,6 +61,11 @@ public class ModUtil : EClass
 	public static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)
 	{
 		fallbackTypes[nameType] = nameFallbackType;
+	}
+
+	public static ModPackage GetModPackage(string modId)
+	{
+		return ModManagerCore.Instance.MappedPackages.GetValueOrDefault(modId) as ModPackage;
 	}
 
 	public static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)
@@ -89,12 +102,7 @@ public class ModUtil : EClass
 
 	public static ModPackage FindSourceRowPackage(SourceData.BaseRow row)
 	{
-		return ModManagerCore.Instance.packages.OfType<ModPackage>().FirstOrDefault((ModPackage p) => p.sourceRows.Contains(row));
-	}
-
-	public static ModPackage GetModPackage(string modId)
-	{
-		return ModManagerCore.Instance.MappedPackages.GetValueOrDefault(modId) as ModPackage;
+		return ModManagerCore.Instance.packages.OfType<ModPackage>().LastOrDefault((ModPackage p) => p.sourceRows.Contains(row));
 	}
 
 	public static SerializableSoundData GetSoundMeta(string soundPath)
@@ -119,7 +127,13 @@ public class ModUtil : EClass
 		if (soundPath.NormalizePath().Contains("/Sound/BGM/"))
 		{
 			serializableSoundData.type = SoundData.Type.BGM;
-			serializableSoundData.bgmDataOptional = new SerializableBGMData();
+			serializableSoundData.bgmDataOptional = new SerializableBGMData
+			{
+				parts = new List<BGMData.Part>
+				{
+					new BGMData.Part()
+				}
+			};
 		}
 		IO.SaveFile(path, serializableSoundData);
 		return serializableSoundData;
@@ -187,5 +201,87 @@ public class ModUtil : EClass
 		UnityEngine.Debug.Log($"#sound '{fileNameWithoutExtension}' loaded: {audioType}/{content.length}s");
 		SoundManager.current.dictData[fileNameWithoutExtension] = soundData;
 		return soundData;
+	}
+
+	public static void AddOrReplaceBGM(string bgmId)
+	{
+		List<BGMData> bgms = Core.Instance.refs.bgms;
+		Dictionary<int, BGMData> dictBGM = Core.Instance.refs.dictBGM;
+		BGMData bGMData = SoundManager.current.GetData(bgmId) as BGMData;
+		if (!(bGMData == null))
+		{
+			bGMData.name = bgmId[4..];
+			if (bGMData.id <= 0)
+			{
+				bGMData.id = bgms.Count + 1;
+				UnityEngine.Debug.Log($"#sound bgm unassigned/{bGMData.id}/{bGMData.name}");
+			}
+			if (dictBGM.TryGetValue(bGMData.id, out var value))
+			{
+				value.clip = bGMData.clip;
+				UnityEngine.Debug.Log($"#sound bgm replace/{bGMData.id}/{value.name}/>/{bGMData.name}");
+			}
+			else
+			{
+				bgms.Add(bGMData);
+				dictBGM[bGMData.id] = bGMData;
+				UnityEngine.Debug.Log($"#sound bgm addon/{bGMData.id}/{bGMData.name}");
+			}
+		}
+	}
+
+	public static ModPackage FindSoundPackage(string soundId)
+	{
+		return ModManagerCore.Instance.packages.OfType<ModPackage>().LastOrDefault((ModPackage p) => p.sounds.Keys.Contains(soundId));
+	}
+
+	public static Playlist CreatePlaylist(ref List<int> bgmIds, Playlist mold = null)
+	{
+		Playlist playlist = EClass.Sound.plBlank.Instantiate();
+		if (bgmIds.Count == 0 && (bool)mold)
+		{
+			bgmIds = mold.ToInts();
+			playlist.shuffle = mold.shuffle;
+			playlist.minSwitchTime = mold.minSwitchTime;
+			playlist.nextBGMOnSwitch = mold.nextBGMOnSwitch;
+			playlist.ignoreLoop = mold.ignoreLoop;
+			playlist.keepBGMifSamePlaylist = mold.keepBGMifSamePlaylist;
+			playlist.name = mold.name;
+		}
+		foreach (int bgmId in bgmIds)
+		{
+			if (EClass.core.refs.dictBGM.TryGetValue(bgmId, out var value))
+			{
+				playlist.list.Add(new Playlist.Item
+				{
+					data = value
+				});
+			}
+		}
+		return playlist;
+	}
+
+	public static void SetBGMKnown(int bgmId, bool known = true)
+	{
+		known &= EClass.core.refs.dictBGM.ContainsKey(bgmId);
+		if (known)
+		{
+			EClass.player.knownBGMs.Add(bgmId);
+		}
+		else
+		{
+			EClass.player.knownBGMs.Remove(bgmId);
+		}
+	}
+
+	public static string[] LoadBookList()
+	{
+		return (from d in PackageIterator.GetDirectories("Text").SelectMany((DirectoryInfo d) => d.GetDirectories())
+			select d.FullName).ToArray();
+	}
+
+	public static string[] LoadTopicFiles()
+	{
+		return PackageIterator.GetFiles("Text/Help/_topics.txt").SelectMany((FileInfo f) => IO.LoadTextArray(f.FullName)).ToArray();
 	}
 }

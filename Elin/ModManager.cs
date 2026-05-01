@@ -69,6 +69,7 @@ public class ModManager : ModManagerCore
 				ModManagerCore.generateLocalizations = false;
 			}
 			ImportAllModDialogs();
+			BookList.dict = null;
 		});
 	}
 

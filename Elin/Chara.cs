@@ -3959,30 +3959,28 @@ public class Chara : Card, IPathfindWalker
 				}
 			}
 		}
-		string text = id;
-		if (!(text == "cocoon"))
+		switch (id)
 		{
-			if (text == "tsunami")
-			{
-				if (elements.Base(79) < 30)
-				{
-					Die();
-					return;
-				}
-				if (IsInCombat)
-				{
-					elements.SetTo(79, elements.Base(79) * 3 / 4);
-				}
-			}
-		}
-		else
-		{
-			if (!EClass._zone.IsRegion && !IsDisabled && 1.0001f - (float)base.hp / (float)MaxHP > EClass.rndf(1f) && !pos.IsSunLit)
+		case "cocoon_alien":
+		case "cocoon":
+			if (!EClass._zone.IsRegion && !IsDisabled && 1.0005f - (float)base.hp / (float)MaxHP > EClass.rndf(1f) && !pos.IsSunLit)
 			{
 				HatchEgg();
 				return;
 			}
 			consumeTurn = true;
+			break;
+		case "tsunami":
+			if (elements.Base(79) >= 30)
+			{
+				if (IsInCombat)
+				{
+					elements.SetTo(79, elements.Base(79) * 3 / 4);
+				}
+				break;
+			}
+			Die();
+			return;
 		}
 		if (!preventRegen)
 		{
@@ -8426,7 +8424,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if ((t.category.IsChildOf("furniture") || t.category.IsChildOf("junk")) && !HasElement(1411))
+		if ((t.category.IsChildOf("furniture") || t.category.IsChildOf("junk")) && (!(t.trait is TraitFigure) || !HasElement(1427)) && !HasElement(1411))
 		{
 			return false;
 		}

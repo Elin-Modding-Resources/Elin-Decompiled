@@ -488,7 +488,7 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				foreach (Chara item3 in nearestPoint.ListCharasInRadius(owner, 6, (Chara _c) => _c != owner && !_c.IsPCFactionOrMinion && _c.id != "cocoon"))
+				foreach (Chara item3 in nearestPoint.ListCharasInRadius(owner, 6, (Chara _c) => _c != owner && !_c.IsPCFactionOrMinion && _c.id != "cocoon" && _c.id != "cocoon_alien"))
 				{
 					item3.Teleport(nearestPoint.GetNearestPoint(allowBlock: false, allowChara: false) ?? nearestPoint);
 				}

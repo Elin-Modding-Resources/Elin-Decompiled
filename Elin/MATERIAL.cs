@@ -38,15 +38,15 @@ public class MATERIAL : EClass
 
 	public const int MaxTier = 7;
 
-	public static SourceMaterial.Row sourceSnow = EClass.sources.materials.map[48];
+	public static SourceMaterial.Row sourceSnow => EClass.sources.materials.map[48];
 
-	public static SourceMaterial.Row sourceIce = EClass.sources.materials.map[61];
+	public static SourceMaterial.Row sourceIce => EClass.sources.materials.map[61];
 
-	public static SourceMaterial.Row sourceGold = EClass.sources.materials.map[12];
+	public static SourceMaterial.Row sourceGold => EClass.sources.materials.map[12];
 
-	public static SourceMaterial.Row sourceOak = EClass.sources.materials.map[1];
+	public static SourceMaterial.Row sourceOak => EClass.sources.materials.map[1];
 
-	public static SourceMaterial.Row sourceWaterSea = EClass.sources.materials.map[88];
+	public static SourceMaterial.Row sourceWaterSea => EClass.sources.materials.map[88];
 
 	public static SourceMaterial.Row FromElement(int id)
 	{

@@ -1291,11 +1291,11 @@ public class Thing : Card
 				}
 				if (!e.IsGlobalElement)
 				{
-					if (e.source.tag.Contains("weaponEnc") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
+					if (e.source.tag.Contains("weaponEnc") && !base.IsEquipmentOrRangedOrAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
 					{
 						return false;
 					}
-					if (e.source.IsWeaponEnc && !base.category.IsChildOf("shield") && !base.IsWeapon && !base.IsRangedWeapon && !base.IsAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
+					if (e.source.IsWeaponEnc && !base.category.IsChildOf("shield") && !base.IsEquipmentOrRangedOrAmmo && !base.IsThrownWeapon && !(trait is TraitToolMusic))
 					{
 						return false;
 					}

@@ -5944,7 +5944,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public void HatchEgg()
 	{
-		string[] array = new string[6] { "spider_queen", "spider_vampire", "spider_paralyzer", "spider_black", "spider_tarantula", "spider_spotted" };
+		string[] array = ((!(id == "cocoon")) ? new string[4] { "alien", "alien", "alien", "alien2" } : new string[6] { "spider_queen", "spider_vampire", "spider_paralyzer", "spider_black", "spider_tarantula", "spider_spotted" });
 		int num = EClass.rnd(array.Length);
 		Point point = pos.Copy();
 		PlayEffect("blood").SetParticleColor(EClass.Colors.matColors[material.alias].main).Emit(50);
@@ -6354,7 +6354,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		Rand.UseSeed(num, delegate
 		{
-			_randColor = EClass.sources.materials.rows.RandomItem().matColor;
+			_randColor = EClass.sources.materials.rows[EClass.rnd(90)].matColor;
 		});
 		return ref _randColor;
 	}
