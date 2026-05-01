@@ -1,6 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"classCraftUtil.html":[1,0,427],
 "classCraftUtil.html#a071fef6b04e735eebb33083a2589082e":[1,0,427,4],
 "classCraftUtil.html#a0c93bd9f677aa06f1c994b16fcfb6b22":[1,0,427,5],
 "classCraftUtil.html#a1082d9fae227ecaaa5f39a75f0d37246":[1,0,427,12],
@@ -249,5 +248,6 @@ var NAVTREEINDEX56 =
 "classDNA.html#a9ddd01e83b7ca731a900ba3300a706be":[1,0,457,25],
 "classDNA.html#ab3cc3e3e9678f0d7f51b6693cfea8d60":[1,0,457,12],
 "classDNA.html#ab7fae840137a248774d4da8a3d4f9b0f":[1,0,457,6],
-"classDNA.html#ab8d17312383a69af22ff757f76bf5900":[1,0,457,18]
+"classDNA.html#ab8d17312383a69af22ff757f76bf5900":[1,0,457,18],
+"classDNA.html#ac4ccc343e3934157071be3433a7fe135":[1,0,457,9]
 };

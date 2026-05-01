@@ -56,6 +56,7 @@ var classUIBook =
     [ "textPage", "classUIBook.html#a00aa9895769f785c23946b08d8c1f225", null ],
     [ "textPage2", "classUIBook.html#a12786e0ecab5fec1c6308c805aeba87c", null ],
     [ "textTitle", "classUIBook.html#a5e83b2ade4f38f6c54e4ae98164127f2", null ],
+    [ "topicLoaders", "classUIBook.html#aa222c07e9e6a66056feb32845336f860", null ],
     [ "transSearchResult", "classUIBook.html#aff6e130812af8ab0207d917ea68260c6", null ],
     [ "window", "classUIBook.html#a25132798c40b1ed4ada3094056403a75", null ]
 ];

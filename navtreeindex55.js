@@ -1,6 +1,5 @@
 var NAVTREEINDEX55 =
 {
-"classCorePath.html#acd3cd089c086cdde9ceb05dfeabc7259":[1,0,425,11],
 "classCorePath.html#aceb353c0c84151cf679c4765d4bad59f":[1,0,425,62],
 "classCorePath.html#acf26b2767bab700797e697e1fab7f2fc":[1,0,425,64],
 "classCorePath.html#acfb2421158015d8415024f55e9fdf2e0":[1,0,425,51],
@@ -249,5 +248,6 @@ var NAVTREEINDEX55 =
 "classCoreRef_1_1TextureDatas.html#afea9e8ce9e4fff029d95f1cef8807d67":[1,0,426,13,15],
 "classCoreRef_1_1UDIconWeather.html":[1,0,426,14],
 "classCoreRef_1_1UDInvStyle.html":[1,0,426,15],
-"classCoreRef_1_1UDInvTab.html":[1,0,426,16]
+"classCoreRef_1_1UDInvTab.html":[1,0,426,16],
+"classCraftUtil.html":[1,0,427]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX124 =
 {
+"classTraitLumiestCrimAle.html#ad3b0344bd161cc79330a38ecb67e3c8b":[1,0,1731,0],
+"classTraitLunch.html":[1,0,1732],
+"classTraitLunchLove.html":[1,0,1733],
+"classTraitMagicChest.html":[1,0,1734],
+"classTraitMagicChest.html#a0736e3bf06a16e5ce69336ee2553301d":[1,0,1734,9],
+"classTraitMagicChest.html#a31e5a90eb8e0c2878af32d7a140207ec":[1,0,1734,5],
 "classTraitMagicChest.html#a3350a75f795760a2e574b42e506aea94":[1,0,1734,8],
 "classTraitMagicChest.html#a374c84d6ee8fd4b303002cce39310071":[1,0,1734,1],
 "classTraitMagicChest.html#a48d4cc922d03e7fff2a2122aa3ecffb4":[1,0,1734,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitNewZone.html#a340969fab4513a06b89a3050c2726600":[1,0,1796,12],
 "classTraitNewZone.html#a3de38236209dd47b9ddf9c73d5508a68":[1,0,1796,15],
 "classTraitNewZone.html#a45084d4e1fe1843960bdaf1d79ba5a13":[1,0,1796,16],
-"classTraitNewZone.html#a45833a46b03a511f9110591fee764b98":[1,0,1796,21],
-"classTraitNewZone.html#a4a5f6b919a184a1459c0035f13c43df0":[1,0,1796,11],
-"classTraitNewZone.html#a5ec3b0aa83460646d6c6c283b1d8a384":[1,0,1796,17],
-"classTraitNewZone.html#a5f8428fdd28fd867be7661ae1d58bbca":[1,0,1796,13],
-"classTraitNewZone.html#a6d51d58a5467a29e9e731ef2ae798066":[1,0,1796,20],
-"classTraitNewZone.html#a9a63a7b8b415c696689644ae43329e6f":[1,0,1796,6],
-"classTraitNewZone.html#aa61a82c68c59451f3df12768d3aa1984":[1,0,1796,26]
+"classTraitNewZone.html#a45833a46b03a511f9110591fee764b98":[1,0,1796,21]
 };

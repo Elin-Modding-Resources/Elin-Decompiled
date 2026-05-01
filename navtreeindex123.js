@@ -1,5 +1,11 @@
 var NAVTREEINDEX123 =
 {
+"classTraitGeneratorDrain.html":[1,0,1671],
+"classTraitGeneratorDrain.html#a23e8cb93bc3ba370049dcf147335f9cb":[1,0,1671,0],
+"classTraitGeneratorHamster.html":[1,0,1672],
+"classTraitGeneratorHamster.html#a19e930bee3bf79c212c80631efee8e8b":[1,0,1672,1],
+"classTraitGeneratorHamster.html#a2bf9bb3367e9f51b6fbd73f550b9a099":[1,0,1672,3],
+"classTraitGeneratorHamster.html#a39fd9f1fb117279f59f755d133d1c553":[1,0,1672,2],
 "classTraitGeneratorHamster.html#a41cc6879622ccad22c5b5ad02cc27822":[1,0,1672,4],
 "classTraitGeneratorHamster.html#a7f2e870a1c0d37c4392bb21fa3e1fda6":[1,0,1672,7],
 "classTraitGeneratorHamster.html#aad615b7a6a0246921e3c0ef3114163f3":[1,0,1672,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitLoytelMart.html#a91d5d63bf430404d945cf7a67358579c":[1,0,1730,1],
 "classTraitLumiestCrimAle.html":[1,0,1731],
 "classTraitLumiestCrimAle.html#a16d9d819912361f0ededd117bc99c4a6":[1,0,1731,1],
-"classTraitLumiestCrimAle.html#aaad9f54120334442c777b157a1014db9":[1,0,1731,2],
-"classTraitLumiestCrimAle.html#ad3b0344bd161cc79330a38ecb67e3c8b":[1,0,1731,0],
-"classTraitLunch.html":[1,0,1732],
-"classTraitLunchLove.html":[1,0,1733],
-"classTraitMagicChest.html":[1,0,1734],
-"classTraitMagicChest.html#a0736e3bf06a16e5ce69336ee2553301d":[1,0,1734,9],
-"classTraitMagicChest.html#a31e5a90eb8e0c2878af32d7a140207ec":[1,0,1734,5]
+"classTraitLumiestCrimAle.html#aaad9f54120334442c777b157a1014db9":[1,0,1731,2]
 };

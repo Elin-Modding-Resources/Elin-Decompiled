@@ -1,5 +1,11 @@
 var NAVTREEINDEX98 =
 {
+"classRecipeCard.html#a6464a3d14158a1d9a5b03e145e324e2b":[1,0,1105,14],
+"classRecipeCard.html#a68e2e3e75c1e1f14a9951e0d27b6bd79":[1,0,1105,0],
+"classRecipeCard.html#a69c92f83236ec1e55e61758e4ec3f412":[1,0,1105,19],
+"classRecipeCard.html#a825e59e83979f2a794d37616d62e8bb7":[1,0,1105,8],
+"classRecipeCard.html#a84488c19f8360b5835f0052cd951e014":[1,0,1105,30],
+"classRecipeCard.html#a90e5d744f49ca9e50e8912ef9fbd3f4c":[1,0,1105,3],
 "classRecipeCard.html#aa724ade180063beff0c35ed2eee4604d":[1,0,1105,5],
 "classRecipeCard.html#aaa3bf220a6580af3d2cf5fff3c6b13ac":[1,0,1105,6],
 "classRecipeCard.html#ac8f2b9fea400453c543712ad1f9df5f5":[1,0,1105,29],
@@ -243,11 +249,5 @@ var NAVTREEINDEX98 =
 "classReligion.html#adb384c960d33d46d068c3fdd1fe82056":[1,0,1122,11],
 "classReligion.html#ae23184a0902d5492dfae4668a01269d0":[1,0,1122,3],
 "classReligion.html#ae6df81a74156128af9ccde9e4fdb6341":[1,0,1122,1],
-"classReligion.html#afac69a2f0e61c63a15bba99e55a9286c":[1,0,1122,14],
-"classReligionEarth.html":[1,0,1123],
-"classReligionEarth.html#a4d445ea2606528249dda9dad9db96c2a":[1,0,1123,2],
-"classReligionEarth.html#a83063c92146d22b79972030f71a13a1a":[1,0,1123,1],
-"classReligionEarth.html#ae4cb99fa1dc8d883b62c818e0a53dce4":[1,0,1123,0],
-"classReligionElement.html":[1,0,1124],
-"classReligionElement.html#ac04f4925ad351fc34d36e41784e34632":[1,0,1124,0]
+"classReligion.html#afac69a2f0e61c63a15bba99e55a9286c":[1,0,1122,14]
 };

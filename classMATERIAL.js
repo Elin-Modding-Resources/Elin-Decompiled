@@ -18,12 +18,12 @@ var classMATERIAL =
     [ "sand_sea", "classMATERIAL.html#a0d3f56e7ad277b982d7250fb675ea791", null ],
     [ "snow", "classMATERIAL.html#a5c183d7625d5686fefb81a4a5ab7a2f3", null ],
     [ "soil", "classMATERIAL.html#a7c2c6e7c5ad11f20690a6c6c11fa9199", null ],
+    [ "water", "classMATERIAL.html#afd5af9821756345908fdda4cabfdef70", null ],
+    [ "water_fresh", "classMATERIAL.html#a9b413fce55a7d547945c65722536ae47", null ],
+    [ "water_sea", "classMATERIAL.html#a080167c1b4a6f5f8ff76909a2a7dadde", null ],
     [ "sourceGold", "classMATERIAL.html#adde450449bfd5e024391db917e10a464", null ],
     [ "sourceIce", "classMATERIAL.html#ace82e1a970c2cfab0b6bddd7657c3bc1", null ],
     [ "sourceOak", "classMATERIAL.html#a11fda324144d6894bdbbbfc4bd07f922", null ],
     [ "sourceSnow", "classMATERIAL.html#a82479c0abf6ef6fe4a1417edf7777b12", null ],
-    [ "sourceWaterSea", "classMATERIAL.html#af04b88e731f908012f504b03a66f8045", null ],
-    [ "water", "classMATERIAL.html#afd5af9821756345908fdda4cabfdef70", null ],
-    [ "water_fresh", "classMATERIAL.html#a9b413fce55a7d547945c65722536ae47", null ],
-    [ "water_sea", "classMATERIAL.html#a080167c1b4a6f5f8ff76909a2a7dadde", null ]
+    [ "sourceWaterSea", "classMATERIAL.html#af04b88e731f908012f504b03a66f8045", null ]
 ];

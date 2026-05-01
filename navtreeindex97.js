@@ -1,5 +1,11 @@
 var NAVTREEINDEX97 =
 {
+"classQuestTaskHunt.html#a6d965565f4649033a0a9183929acb13f":[1,0,1087,9],
+"classQuestTaskHunt.html#a7418b1cf6cd716ff14975bb64061c4b6":[1,0,1087,8],
+"classQuestTaskHunt.html#a752762a73d8b59eeebb12d57ad755726":[1,0,1087,6],
+"classQuestTaskHunt.html#a7867ae0d298b0f5c8235be31b38b8565":[1,0,1087,10],
+"classQuestTaskHunt.html#a8cc6a02eab3d8a3e1de5878767e581a0":[1,0,1087,13],
+"classQuestTaskHunt.html#a911a8072f98c1d712c7b202a2e9d2287":[1,0,1087,1],
 "classQuestTaskHunt.html#a911a8072f98c1d712c7b202a2e9d2287a4e221fc084bb69a82315a154d6dd7879":[1,0,1087,1,1],
 "classQuestTaskHunt.html#a911a8072f98c1d712c7b202a2e9d2287a7a1920d61156abc05a60135aefe8bc67":[1,0,1087,1,0],
 "classQuestTaskHunt.html#aa17415b4d84cc0fb25b29e124c18e98a":[1,0,1087,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX97 =
 "classRecipeCard.html#a46b0479f12eedcaedec1c5684e53d8d6":[1,0,1105,12],
 "classRecipeCard.html#a49932c7ce2cc0bb7b21b0472c586e568":[1,0,1105,7],
 "classRecipeCard.html#a57194f47b7709d5ad01c6ef255336298":[1,0,1105,22],
-"classRecipeCard.html#a596c39567796ef377988118fc03a534f":[1,0,1105,1],
-"classRecipeCard.html#a6464a3d14158a1d9a5b03e145e324e2b":[1,0,1105,14],
-"classRecipeCard.html#a68e2e3e75c1e1f14a9951e0d27b6bd79":[1,0,1105,0],
-"classRecipeCard.html#a69c92f83236ec1e55e61758e4ec3f412":[1,0,1105,19],
-"classRecipeCard.html#a825e59e83979f2a794d37616d62e8bb7":[1,0,1105,8],
-"classRecipeCard.html#a84488c19f8360b5835f0052cd951e014":[1,0,1105,30],
-"classRecipeCard.html#a90e5d744f49ca9e50e8912ef9fbd3f4c":[1,0,1105,3]
+"classRecipeCard.html#a596c39567796ef377988118fc03a534f":[1,0,1105,1]
 };

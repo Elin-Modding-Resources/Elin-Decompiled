@@ -1,5 +1,12 @@
 var NAVTREEINDEX144 =
 {
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a183b62c7f067711f9c5a54913c054617":[1,0,2304,0,8],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a1df77512d7438a05a42148249f6c9092":[1,0,2304,0,10],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a258f49887ef8d14ac268c92b02503aaa":[1,0,2304,0,13],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a2ad9d63b69c4a10a5cc9cad923133bc4":[1,0,2304,0,6],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a3c4e6dbf3e1df93a734d9959bac9ee94":[1,0,2304,0,3],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a4f1f6016fc9f3f2353c0cc7c67b292bd":[1,0,2304,0,1],
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a58fa788345ab5ac21c2cef38907d4580":[1,0,2304,0,20],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a5e8d00f86c596de089cda8f5471c82be":[1,0,2304,0,18],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a92b09c7c48c520c3c55e497875da437c":[1,0,2304,0,5],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a945d5e233cf7d6240f6b783b36a374ff":[1,0,2304,0,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX144 =
 "classZone__QuestDungeon.html":[1,0,2238],
 "classZone__QuestDungeon.html#a64131f42676873923976c028b6f27b61":[1,0,2238,1],
 "classZone__QuestDungeon.html#a69a96588fd6056b0ba3a0e232fb4d9f4":[1,0,2238,3],
-"classZone__QuestDungeon.html#acfc92837b42386cf7c772135b0eeb014":[1,0,2238,0],
-"classZone__QuestDungeon.html#afe3c45318b3087c8a2dd1b7ac9e2aa1e":[1,0,2238,2],
-"classZone__RandomDungeon.html":[1,0,2239],
-"classZone__RandomDungeon.html#a0a7be9d55d0f9cce17fe0b3723827761":[1,0,2239,6],
-"classZone__RandomDungeon.html#a162e212b39d284ecd4d4995802cc6dd1":[1,0,2239,7],
-"classZone__RandomDungeon.html#a1b95c85a59dd3b68031c252a0840fd7c":[1,0,2239,0],
-"classZone__RandomDungeon.html#a1c4d53de56d72d0b0e191b07f0c49fa9":[1,0,2239,4],
-"classZone__RandomDungeon.html#a496b26f2a9cd757c04c6b36b26ed52d0":[1,0,2239,2]
+"classZone__QuestDungeon.html#acfc92837b42386cf7c772135b0eeb014":[1,0,2238,0]
 };

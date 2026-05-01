@@ -1,5 +1,11 @@
 var NAVTREEINDEX111 =
 {
+"classSpatial.html#aa9fcce2bbd59732e9bcabc395667c644":[1,0,1269,15],
+"classSpatial.html#aaac694765e94e45977810bc7ec417758":[1,0,1269,62],
+"classSpatial.html#aacd1406adc971196e607a0116c78d588":[1,0,1269,67],
+"classSpatial.html#aadb0637b5d27300541f6201089b1345f":[1,0,1269,88],
+"classSpatial.html#aae22897ae9f955fe847da1af30e7aa3f":[1,0,1269,23],
+"classSpatial.html#ab005f3e3fcd24905d112de51b9d2d138":[1,0,1269,51],
 "classSpatial.html#ab20ca0db6cb6c35c70d6b7e3c91f173f":[1,0,1269,36],
 "classSpatial.html#ab74629ab14442169d029714917e0b5a1":[1,0,1269,59],
 "classSpatial.html#abb405ce44d8ad308b7572b07d06a7bc7":[1,0,1269,82],
@@ -243,11 +249,5 @@ var NAVTREEINDEX111 =
 "classStanceSongSleep.html#a2d21f428e025d08a5ab0a2fc76d67fe7":[1,0,1292,0],
 "classStanceSongSleep.html#ac8399dfdfb56110954abdee574a4745c":[1,0,1292,1],
 "classStanceSongValor.html":[1,0,1293],
-"classStanceSongValor.html#a50b9a5698a07a08472ac2337ec188761":[1,0,1293,1],
-"classStanceSongValor.html#a982ec8101728814b93706e087060e3df":[1,0,1293,0],
-"classStanceTaunt.html":[1,0,1294],
-"classStats.html":[1,0,1295],
-"classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1295,18],
-"classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e":[1,0,1295,19],
-"classStats.html#a272581c184ff82852476db0e26571c73":[1,0,1295,3]
+"classStanceSongValor.html#a50b9a5698a07a08472ac2337ec188761":[1,0,1293,1]
 };

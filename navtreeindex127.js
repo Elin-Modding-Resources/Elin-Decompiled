@@ -1,5 +1,11 @@
 var NAVTREEINDEX127 =
 {
+"classTraitSpot.html#a1990503145dd01cad1ca1e2d71656499":[1,0,1905,0],
+"classTraitSpot.html#a54744d73b57e0c1880e07fac54454e50":[1,0,1905,1],
+"classTraitSpotBiome.html":[1,0,1906],
+"classTraitSpotBiome.html#a00d8d22dc47e10f9b40c069c1f7f1e15":[1,0,1906,1],
+"classTraitSpotBiome.html#a0f68f6a92582bf8314f7bdf7debc6595":[1,0,1906,2],
+"classTraitSpotBiome.html#a1919aa54ec4ba5278caa7e1a63e35b83":[1,0,1906,0],
 "classTraitSpotBiome.html#a58684fd795a215913bbe31116f1380ea":[1,0,1906,3],
 "classTraitSpotDining.html":[1,0,1907],
 "classTraitSpotExit.html":[1,0,1908],
@@ -243,11 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitToolRangeGun.html":[1,0,1975],
 "classTraitToolRangeGun.html#a7f27e34273d5e851ddbf62a2b02f9a08":[1,0,1975,1],
 "classTraitToolRangeGun.html#a9c3c21138efefb3fb2af09898332f943":[1,0,1975,2],
-"classTraitToolRangeGun.html#af8d8fbc2f19b475ff5923f91a36de0c2":[1,0,1975,0],
-"classTraitToolRangeGunEnergy.html":[1,0,1976],
-"classTraitToolRangeGunEnergy.html#adfefa6f64285332e885186f31a543f8f":[1,0,1976,0],
-"classTraitToolRangeGunGravity.html":[1,0,1977],
-"classTraitToolRangeGunGravity.html#a5ca3ff3eee7285d146f6c67ad0e61de9":[1,0,1977,0],
-"classTraitToolRangeGunRocket.html":[1,0,1978],
-"classTraitToolRangeGunRocket.html#ac010dd19efab2c4f1ce0ff89dc747a52":[1,0,1978,2]
+"classTraitToolRangeGun.html#af8d8fbc2f19b475ff5923f91a36de0c2":[1,0,1975,0]
 };

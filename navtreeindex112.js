@@ -1,5 +1,11 @@
 var NAVTREEINDEX112 =
 {
+"classStanceSongValor.html#a982ec8101728814b93706e087060e3df":[1,0,1293,0],
+"classStanceTaunt.html":[1,0,1294],
+"classStats.html":[1,0,1295],
+"classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1295,18],
+"classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e":[1,0,1295,19],
+"classStats.html#a272581c184ff82852476db0e26571c73":[1,0,1295,3],
 "classStats.html#a2972d0d69579f77f16a038c181357c20":[1,0,1295,4],
 "classStats.html#a2cb20076257f94455dac63674bf53902":[1,0,1295,14],
 "classStats.html#a2fd603d82369cb63e193b53225a59b7c":[1,0,1295,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX112 =
 "classTCOrbitChara.html#a351d4801a88cbb1a134a4cc7e4988d17":[1,0,1357,11],
 "classTCOrbitChara.html#a5d15423ac081ebce2421a736ab86dc5f":[1,0,1357,13],
 "classTCOrbitChara.html#a652b278ffdef9c2294c68d5b737756a7":[1,0,1357,12],
-"classTCOrbitChara.html#aa3ead05c54c745b58b6b9c0e93debc69":[1,0,1357,3],
-"classTCOrbitChara.html#aa72513be33486a36c06cc03188eddee6":[1,0,1357,4],
-"classTCOrbitChara.html#ab81202f1b685bc12aab5d3dac00ecac8":[1,0,1357,15],
-"classTCOrbitChara.html#ab9c999ccc63cb17f1094c0cdad40bdb8":[1,0,1357,0],
-"classTCOrbitChara.html#ac0b6dbd71126eec09e595f4729f52433":[1,0,1357,6],
-"classTCOrbitChara.html#ac3529550ca44fe18638d8ea878e1beb0":[1,0,1357,5],
-"classTCOrbitChara.html#acac2f78a19c22929942a153342dcc7da":[1,0,1357,8]
+"classTCOrbitChara.html#aa3ead05c54c745b58b6b9c0e93debc69":[1,0,1357,3]
 };

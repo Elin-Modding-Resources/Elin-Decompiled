@@ -1,5 +1,12 @@
 var NAVTREEINDEX143 =
 {
+"classZoneEventDefenseGame.html#a26e408a57a552868851fb9f96fdfe278":[1,0,2275,1],
+"classZoneEventDefenseGame.html#a35673aed191bc30aa483c62c75f8a1b9":[1,0,2275,11],
+"classZoneEventDefenseGame.html#a456cd9c78941f6089159f834a0f6d08e":[1,0,2275,6],
+"classZoneEventDefenseGame.html#a477daf74a2638c7052e0fd556dc83d7a":[1,0,2275,7],
+"classZoneEventDefenseGame.html#a52ce3364c2a1b478339b2c93d2e58e3a":[1,0,2275,4],
+"classZoneEventDefenseGame.html#a53419b139c7b1ad82c248fdf54f44b34":[1,0,2275,16],
+"classZoneEventDefenseGame.html#a6a25482165e40c9796338ec45ee47b0f":[1,0,2275,9],
 "classZoneEventDefenseGame.html#a8555887b6caf6d0618649cf32f9f5628":[1,0,2275,0],
 "classZoneEventDefenseGame.html#a8fe36a57970f2948e10137f3d90322a8":[1,0,2275,8],
 "classZoneEventDefenseGame.html#aa10e5c9847a181482a46d14fff899551":[1,0,2275,17],
@@ -242,12 +249,5 @@ var NAVTREEINDEX143 =
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a054fc7866c93a2496fd9048c493e6aed":[1,0,2304,0,15],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a06b9281e396db002010bde1de57262eb":[1,0,2304,0,0],
 "classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a08a38277b0309070706f6652eeae9a53":[1,0,2304,0,12],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a1649aed298f99d587e2eb30c1db5946b":[1,0,2304,0,9],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a183b62c7f067711f9c5a54913c054617":[1,0,2304,0,8],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a1df77512d7438a05a42148249f6c9092":[1,0,2304,0,10],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a258f49887ef8d14ac268c92b02503aaa":[1,0,2304,0,13],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a2ad9d63b69c4a10a5cc9cad923133bc4":[1,0,2304,0,6],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a3c4e6dbf3e1df93a734d9959bac9ee94":[1,0,2304,0,3],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a4f1f6016fc9f3f2353c0cc7c67b292bd":[1,0,2304,0,1],
-"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a58fa788345ab5ac21c2cef38907d4580":[1,0,2304,0,20]
+"classZoneTransition.html#a42f31e47f43496abebff8ed4c4d16d46a1649aed298f99d587e2eb30c1db5946b":[1,0,2304,0,9]
 };

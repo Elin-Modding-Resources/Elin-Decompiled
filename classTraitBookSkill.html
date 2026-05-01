@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.299 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.300 Nightly</span>
    </div>
   </td>
  </tr>
@@ -878,17 +878,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   41</span>            {</div>
 <div class="line"><span class="lineno">   42</span>                return false;</div>
 <div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>            <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (a.tag.Contains(<span class="stringliteral">&quot;hidden&quot;</span>) || a.tag.Contains(<span class="stringliteral">&quot;unused&quot;</span>))</div>
+<div class="line"><span class="lineno">   44</span>            if (a.tag.Contains(<span class="stringliteral">&quot;hidden&quot;</span>) || a.tag.Contains(<span class="stringliteral">&quot;unused&quot;</span>))</div>
 <div class="line"><span class="lineno">   45</span>            {</div>
 <div class="line"><span class="lineno">   46</span>                return false;</div>
 <div class="line"><span class="lineno">   47</span>            }</div>
-<div class="line"><span class="lineno">   48</span>            <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (<a class="code hl_property" href="classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3">IsPlan</a>)</div>
+<div class="line"><span class="lineno">   48</span>            if (<a class="code hl_property" href="classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3">IsPlan</a>)</div>
 <div class="line"><span class="lineno">   49</span>            {</div>
 <div class="line"><span class="lineno">   50</span>                <span class="keywordflow">if</span> (a.category != <span class="stringliteral">&quot;policy&quot;</span> &amp;&amp; a.category != <span class="stringliteral">&quot;tech&quot;</span>)</div>
 <div class="line"><span class="lineno">   51</span>                {</div>
 <div class="line"><span class="lineno">   52</span>                    return false;</div>
 <div class="line"><span class="lineno">   53</span>                }</div>
-<div class="line"><span class="lineno">   54</span>                <a class="code hl_function" href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a> (a.cost.Length == 0 || (a.category == <span class="stringliteral">&quot;tech&quot;</span> &amp;&amp; a.cost[0] == 0))</div>
+<div class="line"><span class="lineno">   54</span>                if (a.cost.Length == 0 || (a.category == <span class="stringliteral">&quot;tech&quot;</span> &amp;&amp; a.cost[0] == 0))</div>
 <div class="line"><span class="lineno">   55</span>                {</div>
 <div class="line"><span class="lineno">   56</span>                    return false;</div>
 <div class="line"><span class="lineno">   57</span>                }</div>
@@ -901,7 +901,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   64</span>        });</div>
 <div class="line"><span class="lineno">   65</span>        owner.refVal = ie.RandomItem().id;</div>
 <div class="line"><span class="lineno">   66</span>    }</div>
-<div class="ttc" id="aUIBook_8cs_html_a7a84b28e36fc5c8b0594d31d7e8d7808"><div class="ttname"><a href="UIBook_8cs.html#a7a84b28e36fc5c8b0594d31d7e8d7808">if</a></div><div class="ttdeci">if(item3.idFile==idFirstFile &amp;&amp;item3.id==idFirstTopic)</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00627">UIBook.cs:627</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
 <div class="ttc" id="aclassSourceElement_1_1Row_html"><div class="ttname"><a href="classSourceElement_1_1Row.html">SourceElement.Row</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceElement_8cs_source.html#l00010">SourceElement.cs:11</a></div></div>
@@ -909,7 +908,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00029">SourceManager.cs:29</a></div></div>
 <div class="ttc" id="aclassTraitBookSkill_html_af12dd8a6a2d9a77647ef83ac9f6687c3"><div class="ttname"><a href="classTraitBookSkill.html#af12dd8a6a2d9a77647ef83ac9f6687c3">TraitBookSkill.IsPlan</a></div><div class="ttdeci">virtual bool IsPlan</div><div class="ttdef"><b>Definition:</b> <a href="TraitBookSkill_8cs_source.html#l00010">TraitBookSkill.cs:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00029">SourceManager.elements</a>, <a class="el" href="UIBook_8cs_source.html#l00627">if()</a>, <a class="el" href="TraitBookSkill_8cs_source.html#l00010">IsPlan</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00029">SourceManager.elements</a>, <a class="el" href="TraitBookSkill_8cs_source.html#l00010">IsPlan</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
 
 </div>
 </div>
