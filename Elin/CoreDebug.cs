@@ -58,6 +58,21 @@ public class CoreDebug : EScriptable
 		Tefra
 	}
 
+	public enum BodyCode
+	{
+		head = 30,
+		neck = 31,
+		torso = 32,
+		back = 33,
+		waist = 37,
+		arm = 34,
+		hand = 35,
+		finger = 36,
+		leg = 38,
+		foot = 39,
+		lightsource = 45
+	}
+
 	[Serializable]
 	public class MatColorTest
 	{
@@ -2218,8 +2233,38 @@ public class CoreDebug : EScriptable
 	[ConsoleCommand("")]
 	public static string FlyMode()
 	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
 		EClass.pc.AddCondition<ConLevitate>();
 		return "I can fly!";
+	}
+
+	[ConsoleCommand("")]
+	public static string AddBodyPart(BodyCode bodyCode)
+	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
+		EClass.pc.body.AddBodyPart((int)bodyCode);
+		EClass.pc.body.RefreshBodyParts();
+		WidgetEquip.OnChangeBodyPart();
+		return "Done.";
+	}
+
+	[ConsoleCommand("")]
+	public static string RemoveBodyPart(BodyCode bodyCode)
+	{
+		if (!CheatEnabled())
+		{
+			return EnableCheat;
+		}
+		EClass.pc.body.RemoveBodyPart((int)bodyCode);
+		EClass.pc.body.RefreshBodyParts();
+		WidgetEquip.OnChangeBodyPart();
+		return "Done.";
 	}
 
 	[ConsoleCommand("")]
@@ -2257,6 +2302,8 @@ public class CoreDebug : EScriptable
 			EClass.pc.body.AddBodyPart(45);
 			EClass.pc.body.AddBodyPart(44);
 			EClass.pc.body.Equip(thing);
+			EClass.pc.body.RefreshBodyParts();
+			WidgetEquip.OnChangeBodyPart();
 			return "Done.";
 		}
 		string text = "";

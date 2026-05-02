@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfGum = 3803;
-
-	public const int bfMushroom = 3801;
-
-	public const int bfSilica = 3802;
+	public const int fRation = 2207;
 
 	public const int actBuildMine = 4001;
 
@@ -16,13 +12,25 @@ public class FACTION
 
 	public const int bfStart = 3900;
 
+	public const int bfChitin = 3805;
+
 	public const int bfIce = 3804;
+
+	public const int bfGum = 3803;
+
+	public const int bfSilica = 3802;
+
+	public const int bfMushroom = 3801;
 
 	public const int bfCoal = 3800;
 
-	public const int bfChitin = 3805;
+	public const int fLoyal = 2117;
 
-	public const int fAttraction = 2206;
+	public const int fConstruction = 2003;
+
+	public const int fEducation = 2116;
+
+	public const int bfLandmark5 = 3784;
 
 	public const int fSafety = 2205;
 
@@ -42,19 +50,11 @@ public class FACTION
 
 	public const int fLuck = 2118;
 
-	public const int fLoyal = 2117;
-
-	public const int fEducation = 2116;
-
 	public const int fAdmin = 2115;
-
-	public const int fConstruction = 2003;
-
-	public const int bfLandmark5 = 3784;
 
 	public const int bfLandmark4 = 3783;
 
-	public const int fRation = 2207;
+	public const int fAttraction = 2206;
 
 	public const int bfLandmark2 = 3781;
 
@@ -88,9 +88,9 @@ public class FACTION
 
 	public const int bfCave = 3500;
 
-	public const int bfLandmark1 = 3780;
-
 	public const int actBuildInspect = 4006;
+
+	public const int bfLandmark1 = 3780;
 
 	public const int actBuildRecipe = 4005;
 
@@ -112,11 +112,11 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[53]
 	{
-		3803, 3801, 3802, 4001, 4000, 3900, 3804, 3800, 3805, 2206,
-		2205, 2204, 2203, 2202, 2201, 2200, 2120, 2119, 2118, 2117,
-		2116, 2115, 2003, 3784, 3783, 2207, 3781, 3782, 3705, 3704,
+		2207, 4001, 4000, 3900, 3805, 3804, 3803, 3802, 3801, 3800,
+		2117, 2003, 2116, 3784, 2205, 2204, 2203, 2202, 2201, 2200,
+		2120, 2119, 2118, 2115, 3783, 2206, 3781, 3782, 3705, 3704,
 		3703, 3706, 3702, 3701, 3700, 3606, 3604, 3603, 3602, 3601,
-		3605, 3500, 3780, 4006, 4005, 4004, 4003, 4002, 3707, 3708,
+		3605, 3500, 4006, 3780, 4005, 4004, 4003, 4002, 3707, 3708,
 		3709, 3600, 3710
 	};
 }

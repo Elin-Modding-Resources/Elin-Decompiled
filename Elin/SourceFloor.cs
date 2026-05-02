@@ -10,6 +10,8 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 
 		public string[] reqHarvest;
 
+		public int[] anime;
+
 		public string defBlock;
 
 		public string bridgeBlock;
@@ -90,24 +92,25 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 			_tileType = SourceData.GetString(8),
 			_idRenderData = SourceData.GetString(9),
 			tiles = SourceData.GetIntArray(10),
-			colorMod = SourceData.GetInt(11),
-			value = SourceData.GetInt(12),
-			LV = SourceData.GetInt(13),
-			recipeKey = SourceData.GetStringArray(14),
-			factory = SourceData.GetStringArray(15),
-			components = SourceData.GetStringArray(16),
-			defMat = SourceData.GetString(17),
-			defBlock = SourceData.GetString(18),
-			bridgeBlock = SourceData.GetString(19),
-			category = SourceData.GetString(20),
-			edge = SourceData.GetInt(21),
-			autotile = SourceData.GetInt(22),
-			autotilePriority = SourceData.GetInt(23),
-			autotileBrightness = SourceData.GetFloat(24),
-			soundFoot = SourceData.GetString(25),
-			tag = SourceData.GetStringArray(26),
-			detail_JP = SourceData.GetString(27),
-			detail = SourceData.GetString(28)
+			anime = SourceData.GetIntArray(11),
+			colorMod = SourceData.GetInt(12),
+			value = SourceData.GetInt(13),
+			LV = SourceData.GetInt(14),
+			recipeKey = SourceData.GetStringArray(15),
+			factory = SourceData.GetStringArray(16),
+			components = SourceData.GetStringArray(17),
+			defMat = SourceData.GetString(18),
+			defBlock = SourceData.GetString(19),
+			bridgeBlock = SourceData.GetString(20),
+			category = SourceData.GetString(21),
+			edge = SourceData.GetInt(22),
+			autotile = SourceData.GetInt(23),
+			autotilePriority = SourceData.GetInt(24),
+			autotileBrightness = SourceData.GetFloat(25),
+			soundFoot = SourceData.GetString(26),
+			tag = SourceData.GetStringArray(27),
+			detail_JP = SourceData.GetString(28),
+			detail = SourceData.GetString(29)
 		};
 	}
 

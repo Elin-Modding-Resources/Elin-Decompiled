@@ -25,6 +25,8 @@ public class InvOwnerDraglet : InvOwner
 
 	public virtual bool AllowStockIngredients => false;
 
+	public virtual bool ShowButtonDeliver => false;
+
 	public override bool AllowTransfer => true;
 
 	public override bool AllowAutouse => false;

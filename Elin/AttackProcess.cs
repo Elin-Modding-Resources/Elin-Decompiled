@@ -623,6 +623,13 @@ public class AttackProcess : EClass
 			num2 += weapon.Evalue(91, ignoreGlobalElement: true);
 			num3 += weapon.Evalue(603, ignoreGlobalElement: true);
 		}
+		foreach (Element value in CC.elements.dict.Values)
+		{
+			if (!value.IsGlobalElement && value.source.categorySub == "eleAttack")
+			{
+				list.Add(value);
+			}
+		}
 		if (!IsRanged && !isThrow && CC.HasElement(1426))
 		{
 			list.Add(Element.Create(6650, 100));
@@ -647,11 +654,11 @@ public class AttackProcess : EClass
 		}
 		if (CC.IsPCFaction)
 		{
-			foreach (Element value in EClass.pc.faction.charaElements.dict.Values)
+			foreach (Element value2 in EClass.pc.faction.charaElements.dict.Values)
 			{
-				if (value.Value > 0)
+				if (value2.Value > 0)
 				{
-					list.Add(value);
+					list.Add(value2);
 				}
 			}
 		}
@@ -721,13 +728,13 @@ public class AttackProcess : EClass
 		ConWeapon conWeapon = null;
 		if (weapon != null)
 		{
-			foreach (Element value2 in weapon.elements.dict.Values)
+			foreach (Element value3 in weapon.elements.dict.Values)
 			{
-				if (value2.source.categorySub == "eleConvert")
+				if (value3.source.categorySub == "eleConvert")
 				{
-					num4 = EClass.sources.elements.alias[value2.source.aliasRef].id;
-					num5 = 50 + value2.Value * 2;
-					num6 = Mathf.Min(value2.Value, 100);
+					num4 = EClass.sources.elements.alias[value3.source.aliasRef].id;
+					num5 = 50 + value3.Value * 2;
+					num6 = Mathf.Min(value3.Value, 100);
 					break;
 				}
 			}

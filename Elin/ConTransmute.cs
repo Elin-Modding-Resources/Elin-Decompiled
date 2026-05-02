@@ -16,6 +16,11 @@ public class ConTransmute : BaseBuff
 
 	public override void OnStart()
 	{
+		Change();
+	}
+
+	public void Change()
+	{
 		owner._CreateRenderer();
 		if (owner.IsPCParty)
 		{

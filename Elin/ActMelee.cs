@@ -207,15 +207,15 @@ public class ActMelee : ActBaseAttack
 				int num = 1 + Mathf.Max(Act.CC.Evalue(666), (w != null) ? w.Evalue(666) : 0);
 				if (!UseWeaponDist || dist <= 1 || dist <= num || intercepted)
 				{
-					int num2 = GetWeaponEnc(606, addSelfEnc: false);
-					int scatter = GetWeaponEnc(607, addSelfEnc: false);
+					int num2 = GetWeaponEnc(606, addSelfEnc: true);
+					int scatter = GetWeaponEnc(607, addSelfEnc: true);
 					splash = GetWeaponEnc(608, addSelfEnc: true);
 					chaser = GetWeaponEnc(620, addSelfEnc: true);
 					flurry = GetWeaponEnc(621, addSelfEnc: true);
 					frustration = GetWeaponEnc(624, addSelfEnc: true);
 					int num3 = GetWeaponEnc(622, addSelfEnc: true);
 					feint = GetWeaponEnc(623, addSelfEnc: true);
-					knockback = Act.CC.Evalue(603);
+					knockback = Act.CC.Evalue(603, ignoreGlobalElement: true);
 					mod_talisman = GetWeaponEnc(609, addSelfEnc: true);
 					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
 					if (w != null)

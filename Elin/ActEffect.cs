@@ -1403,6 +1403,7 @@ public class ActEffect : EClass
 			});
 			Thing thing4 = ThingGen.Create(tc.id, -1, (int)((long)num6 * (long)power / 400));
 			thing4.genLv = num6;
+			thing4.idSkin = tc.idSkin;
 			if (tc.c_uidAttune != 0)
 			{
 				thing4.c_uidAttune = tc.c_uidAttune;

@@ -5961,7 +5961,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		for (int i = 0; i < 1 + EClass.rnd(num + 1); i++)
 		{
-			EClass._zone.SpawnMob(array[num], point.GetNearestPoint(allowBlock: false, allowChara: false));
+			Chara chara = EClass._zone.SpawnMob(array[num], point.GetNearestPoint(allowBlock: false, allowChara: false));
+			if (chara != null && isChara)
+			{
+				chara.SetHostility(Chara.OriginalHostility);
+			}
 		}
 	}
 

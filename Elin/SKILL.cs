@@ -298,9 +298,9 @@ public class Skill : Element
 		{
 			if (base.source.IsWeaponEnc)
 			{
-				if (base.owner != null && base.owner.Card != null)
+				if (base.owner != null && base.owner.Card != null && !base.owner.Card.IsWeapon)
 				{
-					return !base.owner.Card.IsWeapon;
+					return base.owner.Card.sourceCard.elementMap.ContainsKey(base.source.id);
 				}
 				return false;
 			}

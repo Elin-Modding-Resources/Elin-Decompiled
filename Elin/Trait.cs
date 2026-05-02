@@ -1923,8 +1923,8 @@ public class Trait : EClass
 					Add("sword_zephir", 1, 0).SetReplica(on: true);
 					Add("ribbon", 1, 0);
 					Add("helm_sage", 1, 0);
-					Add("wear_swim_danger", 1, 0);
-					Add("wear_swim_danger", 1, 1);
+					NoRestockId("wear_swim_danger", 1, 0);
+					NoRestockId("wear_swim_danger", 1, 1);
 					Add("diary_sister", 1, 0);
 					Add("diary_catsister", 1, 0);
 					Add("diary_lady", 1, 0);

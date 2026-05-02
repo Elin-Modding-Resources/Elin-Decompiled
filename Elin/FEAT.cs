@@ -3,37 +3,37 @@ using UnityEngine;
 
 public class FEAT
 {
+	public const int featPER = 1623;
+
 	public const int featLER = 1624;
 
 	public const int featMAG = 1625;
 
-	public const int featWIL = 1626;
+	public const int featHardy = 1630;
 
-	public const int featDefense = 1631;
+	public const int featCHA = 1627;
 
 	public const int featLuck = 1628;
 
 	public const int featSPD = 1629;
 
-	public const int featHardy = 1630;
-
-	public const int featPER = 1623;
-
-	public const int featEvade = 1632;
-
-	public const int featCHA = 1627;
-
 	public const int featEND = 1622;
 
-	public const int featManaMeat = 1421;
+	public const int featDefense = 1631;
 
-	public const int featSTR = 1620;
+	public const int featWIL = 1626;
+
+	public const int featDEX = 1621;
+
+	public const int featManaMeat = 1421;
 
 	public const int featStamina = 1612;
 
 	public const int featMana = 1611;
 
 	public const int featLife = 1610;
+
+	public const int featManyFace = 1429;
 
 	public const int featMurderer = 1428;
 
@@ -49,17 +49,17 @@ public class FEAT
 
 	public const int featHealer = 1422;
 
-	public const int featSpotting = 1633;
+	public const int featEvade = 1632;
 
 	public const int featExecutioner = 1420;
 
-	public const int featDEX = 1621;
+	public const int featSTR = 1620;
 
-	public const int featNegotiate = 1634;
+	public const int featSpotting = 1633;
 
-	public const int featGourmet = 1650;
+	public const int featDefender = 1649;
 
-	public const int featFaith = 1636;
+	public const int featMartial = 1635;
 
 	public const int featMilitant = 1419;
 
@@ -85,15 +85,15 @@ public class FEAT
 
 	public const int featModelBeliever = 1655;
 
-	public const int featMartial = 1635;
-
 	public const int featHeavyCasting = 1654;
+
+	public const int featDreamWaker = 1653;
 
 	public const int featRapidArrow = 1652;
 
 	public const int featMagicManner = 1651;
 
-	public const int featDefender = 1649;
+	public const int featGourmet = 1650;
 
 	public const int featRapidMagic = 1648;
 
@@ -113,7 +113,9 @@ public class FEAT
 
 	public const int featAnimalLover = 1640;
 
-	public const int featDreamWaker = 1653;
+	public const int featFaith = 1636;
+
+	public const int featNegotiate = 1634;
 
 	public const int featSwordsage = 1418;
 
@@ -301,23 +303,23 @@ public class FEAT
 
 	public const int featFoxMaid = 1415;
 
-	public static readonly int[] IDS = new int[149]
+	public static readonly int[] IDS = new int[150]
 	{
-		1624, 1625, 1626, 1631, 1628, 1629, 1630, 1623, 1632, 1627,
-		1622, 1421, 1620, 1612, 1611, 1610, 1428, 1427, 1426, 1425,
-		1424, 1423, 1422, 1633, 1420, 1621, 1634, 1650, 1636, 1419,
+		1623, 1624, 1625, 1630, 1627, 1628, 1629, 1622, 1631, 1626,
+		1621, 1421, 1612, 1611, 1610, 1429, 1428, 1427, 1426, 1425,
+		1424, 1423, 1422, 1632, 1420, 1620, 1633, 1649, 1635, 1419,
 		1750, 1664, 1663, 1662, 1661, 1660, 1659, 1658, 1657, 1656,
-		1655, 1635, 1654, 1652, 1651, 1649, 1648, 1647, 1646, 1645,
-		1644, 1643, 1642, 1641, 1640, 1653, 1418, 1345, 1416, 1233,
-		1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1242, 1243,
-		1244, 1245, 1246, 1247, 1248, 1249, 1250, 1251, 1252, 1417,
-		1271, 1272, 1273, 1274, 1275, 1276, 1290, 1291, 1232, 1300,
-		1231, 1229, 1200, 1201, 1202, 1203, 1204, 1205, 1206, 1207,
-		1208, 1209, 1210, 1211, 1212, 1213, 1214, 1215, 1216, 1217,
-		1218, 1219, 1220, 1221, 1222, 1223, 1224, 1225, 1226, 1227,
-		1228, 1230, 1305, 1270, 1315, 1414, 1413, 1412, 1411, 1410,
-		1409, 1408, 1407, 1406, 1310, 1405, 1404, 1403, 1402, 1401,
-		1400, 1355, 1350, 1340, 1335, 1330, 1325, 1320, 1415
+		1655, 1654, 1653, 1652, 1651, 1650, 1648, 1647, 1646, 1645,
+		1644, 1643, 1642, 1641, 1640, 1636, 1634, 1418, 1345, 1416,
+		1233, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1242,
+		1243, 1244, 1245, 1246, 1247, 1248, 1249, 1250, 1251, 1252,
+		1417, 1271, 1272, 1273, 1274, 1275, 1276, 1290, 1291, 1232,
+		1300, 1231, 1229, 1200, 1201, 1202, 1203, 1204, 1205, 1206,
+		1207, 1208, 1209, 1210, 1211, 1212, 1213, 1214, 1215, 1216,
+		1217, 1218, 1219, 1220, 1221, 1222, 1223, 1224, 1225, 1226,
+		1227, 1228, 1230, 1305, 1270, 1315, 1414, 1413, 1412, 1411,
+		1410, 1409, 1408, 1407, 1406, 1310, 1405, 1404, 1403, 1402,
+		1401, 1400, 1355, 1350, 1340, 1335, 1330, 1325, 1320, 1415
 	};
 }
 public class Feat : Element
@@ -534,9 +536,9 @@ public class Feat : Element
 					_ = a;
 					_ = 0;
 				}
-				if (owner.Chara.IsPC && (bool)WidgetEquip.Instance)
+				if (owner.Chara.IsPC)
 				{
-					WidgetEquip.Instance.Rebuild();
+					WidgetEquip.OnChangeBodyPart();
 				}
 			}
 			ModBase(60, (A > 5) ? ((A - 5) * -3 * invert) : 0, hide: false);

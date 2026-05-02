@@ -37,6 +37,8 @@ public class LayerDragGrid : LayerBaseCraft
 
 	public UIButton buttonStock;
 
+	public UIButton buttonDeliver;
+
 	public InvOwnerDraglet owner;
 
 	public UICurrency uiCurrency;
@@ -104,6 +106,7 @@ public class LayerDragGrid : LayerBaseCraft
 		buttonRefuel.SetActive(owner.ShowFuel);
 		buttonAutoRefuel.SetActive(owner.ShowFuel);
 		buttonStock.SetActive(owner.AllowStockIngredients);
+		buttonDeliver.SetActive(owner.ShowButtonDeliver);
 		if (owner.CanTargetAlly && ELayer.pc.party.members.Count > 1)
 		{
 			listAlly.callbacks = new UIList.Callback<Chara, UIButton>
@@ -183,6 +186,31 @@ public class LayerDragGrid : LayerBaseCraft
 			owner.owner.c_isDisableStockUse = !owner.owner.c_isDisableStockUse;
 			uiIngredients.Refresh();
 			RefreshCost();
+		});
+		buttonDeliver.SetOnClick(delegate
+		{
+			InvOwnerDeliver deliver = owner as InvOwnerDeliver;
+			QuestHarvest questHarvest = ELayer.game.quests.Get<QuestHarvest>();
+			int num = 0;
+			if (questHarvest != null)
+			{
+				foreach (Thing item in ELayer.pc.things.List((Thing a) => deliver.ShouldShowGuide(a)))
+				{
+					Msg.Say("farm_chest", item, Lang._weight(item.SelfWeight * item.Num));
+					questHarvest.weightDelivered += item.SelfWeight * item.Num;
+					item.Destroy();
+					num++;
+				}
+			}
+			if (num > 0)
+			{
+				SE.Pick();
+			}
+			else
+			{
+				SE.BeepSmall();
+			}
+			Close();
 		});
 		if (owner is InvOwnerRefuel)
 		{

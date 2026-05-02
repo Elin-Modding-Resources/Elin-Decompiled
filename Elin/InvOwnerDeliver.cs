@@ -10,6 +10,8 @@ public class InvOwnerDeliver : InvOwnerDraglet
 
 	public Mode mode;
 
+	public override bool ShowButtonDeliver => mode == Mode.Crop;
+
 	public override bool SingleTarget => mode == Mode.Tax;
 
 	public override string langTransfer

@@ -50,6 +50,14 @@ public class WidgetEquip : Widget
 		Rebuild();
 	}
 
+	public static void OnChangeBodyPart()
+	{
+		if ((bool)Instance)
+		{
+			Instance.Rebuild();
+		}
+	}
+
 	public void Rebuild()
 	{
 		RefreshEquipment(listMain);

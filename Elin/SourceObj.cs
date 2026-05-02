@@ -18,6 +18,8 @@ public class SourceObj : SourceDataInt<SourceObj.Row>
 
 		public string valType;
 
+		public int[] anime;
+
 		public string matCategory;
 
 		public int idRoof;
@@ -98,21 +100,22 @@ public class SourceObj : SourceDataInt<SourceObj.Row>
 			valType = SourceData.GetString(13),
 			_idRenderData = SourceData.GetString(14),
 			tiles = SourceData.GetIntArray(15),
-			snowTile = SourceData.GetInt(16),
-			colorMod = SourceData.GetInt(17),
-			colorType = SourceData.GetString(18),
-			value = SourceData.GetInt(19),
-			LV = SourceData.GetInt(20),
-			chance = SourceData.GetInt(21),
-			recipeKey = SourceData.GetStringArray(22),
-			factory = SourceData.GetStringArray(23),
-			components = SourceData.GetStringArray(24),
-			defMat = SourceData.GetString(25),
-			matCategory = SourceData.GetString(26),
-			category = SourceData.GetString(27),
-			idRoof = SourceData.GetInt(28),
-			detail_JP = SourceData.GetString(29),
-			detail = SourceData.GetString(30)
+			anime = SourceData.GetIntArray(16),
+			snowTile = SourceData.GetInt(17),
+			colorMod = SourceData.GetInt(18),
+			colorType = SourceData.GetString(19),
+			value = SourceData.GetInt(20),
+			LV = SourceData.GetInt(21),
+			chance = SourceData.GetInt(22),
+			recipeKey = SourceData.GetStringArray(23),
+			factory = SourceData.GetStringArray(24),
+			components = SourceData.GetStringArray(25),
+			defMat = SourceData.GetString(26),
+			matCategory = SourceData.GetString(27),
+			category = SourceData.GetString(28),
+			idRoof = SourceData.GetInt(29),
+			detail_JP = SourceData.GetString(30),
+			detail = SourceData.GetString(31)
 		};
 	}
 

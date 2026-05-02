@@ -246,18 +246,25 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 							break;
 						case "skin":
 						{
-							string[] array2 = array[1].Split('|');
-							row.skins = new int[array2.Length];
-							for (int j = 0; j < array2.Length; j++)
+							string[] array3 = array[1].Split('|');
+							row.skins = new int[array3.Length];
+							for (int k = 0; k < array3.Length; k++)
 							{
-								row.skins[j] = array2[j].ToInt();
+								row.skins[k] = array3[k].ToInt();
 							}
 							break;
 						}
 						case "alt":
-							row.altTiles = new int[1] { array[1].ToInt() };
+						{
+							string[] array2 = array[1].Split('|');
+							row.altTiles = new int[array2.Length];
+							for (int j = 0; j < array2.Length; j++)
+							{
+								row.altTiles[j] = array2[j].ToInt();
+							}
 							row.ignoreAltFix = true;
 							break;
+						}
 						case "naming":
 							row.naming = array[1];
 							break;

@@ -10,6 +10,8 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 
 		public string idThing;
 
+		public int[] anime;
+
 		public int roof;
 
 		public string autoFloor;
@@ -85,25 +87,26 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 			_tileType = SourceData.GetString(8),
 			_idRenderData = SourceData.GetString(9),
 			tiles = SourceData.GetIntArray(10),
-			snowTile = SourceData.GetInt(11),
-			colorMod = SourceData.GetInt(12),
-			colorType = SourceData.GetString(13),
-			value = SourceData.GetInt(14),
-			LV = SourceData.GetInt(15),
-			recipeKey = SourceData.GetStringArray(16),
-			factory = SourceData.GetStringArray(17),
-			components = SourceData.GetStringArray(18),
-			defMat = SourceData.GetString(19),
-			category = SourceData.GetString(20),
-			roof = SourceData.GetInt(21),
-			autoFloor = SourceData.GetString(22),
-			concrete = SourceData.GetBool(23),
-			transparent = SourceData.GetBool(24),
-			transition = SourceData.GetIntArray(25),
-			tag = SourceData.GetStringArray(26),
-			soundFoot = SourceData.GetString(27),
-			detail_JP = SourceData.GetString(28),
-			detail = SourceData.GetString(29)
+			anime = SourceData.GetIntArray(11),
+			snowTile = SourceData.GetInt(12),
+			colorMod = SourceData.GetInt(13),
+			colorType = SourceData.GetString(14),
+			value = SourceData.GetInt(15),
+			LV = SourceData.GetInt(16),
+			recipeKey = SourceData.GetStringArray(17),
+			factory = SourceData.GetStringArray(18),
+			components = SourceData.GetStringArray(19),
+			defMat = SourceData.GetString(20),
+			category = SourceData.GetString(21),
+			roof = SourceData.GetInt(22),
+			autoFloor = SourceData.GetString(23),
+			concrete = SourceData.GetBool(24),
+			transparent = SourceData.GetBool(25),
+			transition = SourceData.GetIntArray(26),
+			tag = SourceData.GetStringArray(27),
+			soundFoot = SourceData.GetString(28),
+			detail_JP = SourceData.GetString(29),
+			detail = SourceData.GetString(30)
 		};
 	}
 
