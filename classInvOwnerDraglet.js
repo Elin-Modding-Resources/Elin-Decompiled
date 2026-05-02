@@ -31,6 +31,7 @@ var classInvOwnerDraglet =
     [ "InvertSell", "classInvOwnerDraglet.html#ac5c98d5cd1c72e25cbac1b9197cd5694", null ],
     [ "langWhat", "classInvOwnerDraglet.html#a4690a81c6947e1a4a796ed722247b217", null ],
     [ "processType", "classInvOwnerDraglet.html#ab759376f0f320550be6424b40b3cee5b", null ],
+    [ "ShowButtonDeliver", "classInvOwnerDraglet.html#abc15f318a6ea22ee82cc7d916fe33280", null ],
     [ "ShowFuel", "classInvOwnerDraglet.html#acf98939bbb5817a58c85ffaa6cae8563", null ],
     [ "UseGuide", "classInvOwnerDraglet.html#afd1941b83bce7551f0c856e960511dd1", null ]
 ];

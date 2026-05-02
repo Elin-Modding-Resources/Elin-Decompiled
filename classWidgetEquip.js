@@ -6,6 +6,7 @@ var classWidgetEquip =
     [ "CheckDirty", "classWidgetEquip.html#a26447c3d121b272a80e99134dee261f0", null ],
     [ "CreateExtra", "classWidgetEquip.html#aea3e425d87733226a553df87b867f602", null ],
     [ "OnActivate", "classWidgetEquip.html#ab8fcc4d5d536e2f5203d4cb772d005ff", null ],
+    [ "OnChangeBodyPart", "classWidgetEquip.html#af41a1cb17236a689b8ff2270cbb43ac6", null ],
     [ "OnSetContextMenu", "classWidgetEquip.html#a5cfa4b9edad83f50ae5958b257ea1524", null ],
     [ "Rebuild", "classWidgetEquip.html#a5608e558f0ab5b2bd364cc4e81b87f79", null ],
     [ "Redraw", "classWidgetEquip.html#aa5c5ff25afea48ebc465ab083e886304", null ],

@@ -93,6 +93,7 @@ var classFEAT =
     [ "featManaCost", "classFEAT.html#a019a500874be34ae6104c21ebc329449", null ],
     [ "featManaMeat", "classFEAT.html#a9e6a6b0656d8308032d18d5384b91f13", null ],
     [ "featManaPrecision", "classFEAT.html#a6d7fc53b21cb00823e6cd4b333399907", null ],
+    [ "featManyFace", "classFEAT.html#aaf70337780d0252c98161ea6a601c665", null ],
     [ "featMartial", "classFEAT.html#a1283fdb2cc9815eb8edbca4ac009cea5", null ],
     [ "featMassSummoner", "classFEAT.html#a6fce93f88e1519a6fbe71ec8363b56fb", null ],
     [ "featMeatCushion", "classFEAT.html#abd15a0eeebeb9a4c0557a789cbd81ba9", null ],

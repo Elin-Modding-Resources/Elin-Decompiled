@@ -23,5 +23,6 @@ var searchData=
   ['nextsort_20',['NextSort',['../classBaseList.html#aff899ca210bfe3b352b8948c956f7570',1,'BaseList.NextSort()'],['../classUIList.html#a453cf08abbb6316ce21ceb1fe232bd06',1,'UIList.NextSort()']]],
   ['nexttab_21',['NextTab',['../classWindow.html#adf12f68bdfcef89af1f51f439ffbc487',1,'Window']]],
   ['nextwave_22',['NextWave',['../classZoneEventDefenseGame.html#addfa0bee9b80661ff5142bc06d2e491d',1,'ZoneEventDefenseGame']]],
-  ['notifyaddthing_23',['NotifyAddThing',['../classCard.html#a628abe522b5747f432615dffd6f58051',1,'Card']]]
+  ['notifyaddthing_23',['NotifyAddThing',['../classCard.html#a628abe522b5747f432615dffd6f58051',1,'Card']]],
+  ['nyaruspecial_24',['NyaruSpecial',['../classConTransmuteHuman.html#adcdb6cd62e18c3af23c8f16a6c560b4f',1,'ConTransmuteHuman']]]
 ];

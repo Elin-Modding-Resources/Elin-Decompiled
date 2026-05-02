@@ -13,5 +13,6 @@ var classInvOwnerDeliver =
     [ "mode", "classInvOwnerDeliver.html#af4ac55affebd13b9ebf635fb416d2cc1", null ],
     [ "langTransfer", "classInvOwnerDeliver.html#a9ef2626557d6269c718ad08fea6cecfa", null ],
     [ "processType", "classInvOwnerDeliver.html#af68dc939211520c7d05c2396d975c156", null ],
+    [ "ShowButtonDeliver", "classInvOwnerDeliver.html#ad32e08813cab0eddd72c54509bb940ef", null ],
     [ "SingleTarget", "classInvOwnerDeliver.html#aea0d6276046f5aebc07d82cb33f552a2", null ]
 ];

@@ -3,6 +3,19 @@ var classCoreDebug =
     [ "DebugCommand", "classCoreDebug_1_1DebugCommand.html", "classCoreDebug_1_1DebugCommand" ],
     [ "MatColorTest", "classCoreDebug_1_1MatColorTest.html", "classCoreDebug_1_1MatColorTest" ],
     [ "StartSetting", "classCoreDebug_1_1StartSetting.html", "classCoreDebug_1_1StartSetting" ],
+    [ "BodyCode", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103", [
+      [ "head", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a96e89a298e0a9f469b9ae458d6afae9f", null ],
+      [ "neck", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a45fe7e5529d283851d93b74536e095a0", null ],
+      [ "torso", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a42155934c716c14660745bf822f4ff63", null ],
+      [ "back", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a469bba0a564235dfceede42db14f17b0", null ],
+      [ "waist", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a54680ce9dccba6570053db39038a9d7a", null ],
+      [ "arm", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103af926b3e222d7afee57071b2256839701", null ],
+      [ "hand", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a573ce5969e9884d49d4fab77b09a306a", null ],
+      [ "finger", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103ae7efda40b1c94805070cd9bf9638ae27", null ],
+      [ "leg", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103a4e1df3d256693afb3630685668820df4", null ],
+      [ "foot", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103ad8735f7489c94f42f508d7eb1c249584", null ],
+      [ "lightsource", "classCoreDebug.html#acd4e96c992f2c0188a112205dcec1103aedefcf0fac9cfe9d7b79cf35391a1079", null ]
+    ] ],
     [ "DebugHotkey", "classCoreDebug.html#a063b341273a739b96a41ef360f2f57e6", [
       [ "None", "classCoreDebug.html#a063b341273a739b96a41ef360f2f57e6a6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Block", "classCoreDebug.html#a063b341273a739b96a41ef360f2f57e6ae1e4c8c9ccd9fc39c391da4bcd093fb2", null ],
@@ -36,6 +49,7 @@ var classCoreDebug =
       [ "Tefra", "classCoreDebug.html#ab5ff357725e781bf865cf09100670c91a645b6a7d7fa38912972453898809a642", null ]
     ] ],
     [ "AddAllRecipes", "classCoreDebug.html#aa2acba4dba4dbe0a488b1dfc23df2e38", null ],
+    [ "AddBodyPart", "classCoreDebug.html#ad439cb3ccd36f52541093c7eb99e2197", null ],
     [ "AllRecipe", "classCoreDebug.html#aa96ee1163f82e8ec74f0da7cd5f7f4ad", null ],
     [ "BroadcastNext", "classCoreDebug.html#aed1f72ea9715661b52928b37dc9d212c", null ],
     [ "ChangeJob", "classCoreDebug.html#aac9179a72cc42d88f612f079e956a655", null ],
@@ -74,6 +88,7 @@ var classCoreDebug =
     [ "OnLoad", "classCoreDebug.html#acdbbcaac35626378c3bc0f9f56d9de65", null ],
     [ "QuickStart", "classCoreDebug.html#a813ced8e0bd435e48dcfd6089bfeb6c1", null ],
     [ "RegenerateNames", "classCoreDebug.html#a80cee7d7a2576162c5faa6c4cceb74f6", null ],
+    [ "RemoveBodyPart", "classCoreDebug.html#a2d0720e378127919203d7f10e41f0238", null ],
     [ "Reset_LoytelDebt", "classCoreDebug.html#a5390ab2096b1e78219772e585ad958ee", null ],
     [ "ResetAchievement", "classCoreDebug.html#a001f72dc1c87241a3e192122f36183a8", null ],
     [ "ResetAllAchievement", "classCoreDebug.html#a15adf266294be42f33b3c345b92411ec", null ],

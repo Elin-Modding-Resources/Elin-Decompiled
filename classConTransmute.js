@@ -1,5 +1,6 @@
 var classConTransmute =
 [
+    [ "Change", "classConTransmute.html#a9ca82446973a2f4eca598af81f32fea5", null ],
     [ "OnRemoved", "classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013", null ],
     [ "OnStart", "classConTransmute.html#a54071b3bff56fc7b02e39fac45b95c2f", null ],
     [ "Tick", "classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a", null ],

@@ -4,6 +4,7 @@ var classSourceFloor_1_1Row =
     [ "OnInit", "classSourceFloor_1_1Row.html#af4ea7f4770ca77c66b7a2e65aecbef8f", null ],
     [ "_bridgeBlock", "classSourceFloor_1_1Row.html#a79120043cd04d97c5b25eb8bb2246a5b", null ],
     [ "_defBlock", "classSourceFloor_1_1Row.html#a6feaba815e82a073e52828785dab2fcf", null ],
+    [ "anime", "classSourceFloor_1_1Row.html#a6e83209ba3dff48e0ce003431333bf4e", null ],
     [ "autotile", "classSourceFloor_1_1Row.html#aa3aca90c4a5ed6da6c4d38749548a514", null ],
     [ "autotileBrightness", "classSourceFloor_1_1Row.html#a5c00f7e911284025e037eece8bab4fd6", null ],
     [ "autotilePriority", "classSourceFloor_1_1Row.html#ac3717911a3dae1d9f6aa1f68ee975b11", null ],
