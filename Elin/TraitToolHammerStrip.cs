@@ -15,7 +15,7 @@ public class TraitToolHammerStrip : TraitTool
 					t.PlayEffect("buff");
 					t.SetEncLv(0);
 					return false;
-				});
+				}, t);
 			}
 		});
 	}

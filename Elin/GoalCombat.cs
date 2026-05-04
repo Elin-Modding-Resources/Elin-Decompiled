@@ -1192,6 +1192,7 @@ public class GoalCombat : Goal
 
 	public virtual void BuildAbilityList()
 	{
+		abilities.Clear();
 		foreach (ActList.Item item in owner.ability.list.items)
 		{
 			AddAbility(item.act, 0, item.chance, item.pt);

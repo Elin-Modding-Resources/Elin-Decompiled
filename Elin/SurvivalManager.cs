@@ -388,7 +388,7 @@ public class SurvivalManager : EClass
 			Point pos2 = point.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? point;
 			if (searchWreck2 == 20)
 			{
-				Thing container = ThingGen.CreateParcel(null, ThingGen.CreateRecipe("container_shipping"), ThingGen.CreateRecipe("stonecutter"), ThingGen.CreateRecipe("workbench2"));
+				Thing container = ThingGen.CreateParcel(null, ThingGen.CreateRecipe("container_shipping"), ThingGen.CreateRecipe("stonecutter"), ThingGen.CreateRecipe("workbench2"), ThingGen.Create("crystal_earth").SetNum(3));
 				Meteor(pos2, delegate
 				{
 					EClass._zone.AddCard(container, pos2);

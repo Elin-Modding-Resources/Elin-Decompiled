@@ -4,15 +4,11 @@ public class ConBaseTransmuteMimic : ConTransmute
 
 	public override bool HasDuration => false;
 
-	public virtual bool ShouldRevealOnContact => true;
-
-	public virtual bool ShouldRevealOnPush => true;
-
-	public virtual bool ShouldRevealOnDamage => true;
-
 	public virtual bool IsThing => Card.isThing;
 
 	public virtual bool IsChara => Card.isChara;
+
+	public override bool ShouldRevealOnDamage => true;
 
 	public override void SetOwner(Chara _owner, bool onDeserialize = false)
 	{
@@ -26,17 +22,17 @@ public class ConBaseTransmuteMimic : ConTransmute
 		base.OnRemoved();
 	}
 
-	public virtual void RevealMimicry(Card c, bool surprise)
+	public override void Reveal(Card attacker = null, bool surprise = false)
 	{
-		if (c != null && owner.IsHostile(c.Chara))
+		if (attacker is Chara && owner.IsHostile(attacker.Chara))
 		{
-			owner.DoHostileAction(c, immediate: true);
+			owner.DoHostileAction(attacker, immediate: true);
 		}
 		if (surprise)
 		{
 			owner.AddCondition<ConAmbush>();
 		}
-		Kill();
+		base.Reveal(attacker, surprise);
 	}
 
 	public virtual string GetName(NameStyle style, int num = -1)

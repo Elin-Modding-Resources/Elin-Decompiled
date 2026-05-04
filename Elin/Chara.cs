@@ -2949,7 +2949,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					if (item.mimicry.ShouldRevealOnPush)
 					{
-						item.mimicry.RevealMimicry(this, surprise: true);
+						item.mimicry.Reveal(this, surprise: true);
 					}
 					return MoveResult.Event;
 				}
@@ -4862,6 +4862,12 @@ public class Chara : Card, IPathfindWalker
 			if (onCreate)
 			{
 				AddThing("bow_vindale");
+			}
+			break;
+		case "unseenhand":
+			if (onCreate)
+			{
+				EQ_ID("martial_ring");
 			}
 			break;
 		case "larnneire":
@@ -8576,6 +8582,10 @@ public class Chara : Card, IPathfindWalker
 				c.nextUse = null;
 			}
 		}
+		if (c.IsPCParty)
+		{
+			c.TryClearInventory();
+		}
 	}
 
 	public void OnGiveErohon(Thing t)
@@ -8703,9 +8713,18 @@ public class Chara : Card, IPathfindWalker
 		switch (type)
 		{
 		case ClearInventoryType.SellAtTown:
-			if (!t.isGifted && !t.isNPCProperty)
+			switch (t.category.id)
 			{
-				return false;
+			default:
+				if (!t.isGifted && !t.isNPCProperty)
+				{
+					return false;
+				}
+				break;
+			case "fish":
+			case "junk":
+			case "garbage":
+				break;
 			}
 			break;
 		case ClearInventoryType.Purge:
@@ -8740,6 +8759,40 @@ public class Chara : Card, IPathfindWalker
 			break;
 		}
 		return true;
+	}
+
+	public void TryClearInventory()
+	{
+		if (IsPC)
+		{
+			return;
+		}
+		if (IsPCParty)
+		{
+			if (!things.IsAlmostFull())
+			{
+				return;
+			}
+			bool flag = EClass._zone.IsTown;
+			if (!flag && EClass._zone.IsPCFactionOrTent)
+			{
+				foreach (Chara chara in EClass._map.charas)
+				{
+					if (chara.IsPCFaction && chara.trait.ShopType != 0)
+					{
+						flag = true;
+					}
+				}
+			}
+			if (flag)
+			{
+				ClearInventory(ClearInventoryType.SellAtTown);
+			}
+		}
+		else
+		{
+			ClearInventory(ClearInventoryType.Purge);
+		}
 	}
 
 	public void ClearInventory(ClearInventoryType type)

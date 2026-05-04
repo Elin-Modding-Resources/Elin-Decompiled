@@ -46,7 +46,7 @@ public class ConTransmuteMimic : ConBaseTransmuteMimic
 		{
 			p.TrySetAct("actContainer", delegate
 			{
-				RevealMimicry(EClass.pc, surprise: true);
+				Reveal(EClass.pc, surprise: true);
 				return true;
 			}, owner, CursorSystem.Container);
 		}

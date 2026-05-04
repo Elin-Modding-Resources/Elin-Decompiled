@@ -6,6 +6,18 @@ public class AI_OpenLock : AI_TargetThing
 
 	public override bool CanTargetInventory => true;
 
+	public override bool IsHostileAct
+	{
+		get
+		{
+			if (base.target != null)
+			{
+				return base.target.isNPCProperty;
+			}
+			return false;
+		}
+	}
+
 	public override AIProgress CreateProgress()
 	{
 		return new Progress_Custom

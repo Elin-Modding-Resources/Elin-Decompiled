@@ -116,8 +116,8 @@ public class GoalAutoCombat : GoalCombat
 
 	public override void BuildAbilityList()
 	{
-		GetAbilities((Element e) => e.source.abilityType.Length != 0);
 		base.BuildAbilityList();
+		GetAbilities((Element e) => e.source.abilityType.Length != 0);
 	}
 
 	public override bool TryAbortCombat()

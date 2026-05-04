@@ -299,6 +299,10 @@ public class BaseCondition : BaseStats
 	{
 	}
 
+	public virtual void OnHit(Card attacker, AttackSource source)
+	{
+	}
+
 	public virtual void PlayEffect()
 	{
 		if (!Condition.ignoreEffect && base.source.effect.Length != 0)

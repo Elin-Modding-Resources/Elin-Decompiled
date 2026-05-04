@@ -36,7 +36,7 @@ public class HotItemNoItem : HotItemGameAction
 				{
 					if (tg.isChara && tg.Chara.mimicry != null && !tg.IsPCParty)
 					{
-						tg.Chara.mimicry.RevealMimicry(EClass.pc, surprise: true);
+						tg.Chara.mimicry.Reveal(EClass.pc, surprise: true);
 						return true;
 					}
 					if (!EClass.pc.CanLift(tg))

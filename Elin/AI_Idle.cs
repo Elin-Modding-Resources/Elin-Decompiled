@@ -93,6 +93,10 @@ public class AI_Idle : AIAct
 				}
 				if (thing != null)
 				{
+					if (owner.IsPCParty)
+					{
+						owner.TryClearInventory();
+					}
 					if (EClass._zone.IsRegion)
 					{
 						owner.InstantEat(thing, sound: false);
@@ -424,10 +428,14 @@ public class AI_Idle : AIAct
 						c.pos.TryWitnessCrime(owner, c);
 						if (owner.mimicry != null)
 						{
-							owner.mimicry.RevealMimicry(c, surprise: true);
+							owner.mimicry.Reveal(c, surprise: true);
 						}
 					});
 				}
+			}
+			if (owner.mimicry != null && owner.HasElement(1429))
+			{
+				owner.mimicry.Reveal();
 			}
 			Party party = owner.party;
 			if (party == null || party.leader == owner || !party.leader.IsAliveInCurrentZone || owner.host != null || !EClass._zone.PetFollow)

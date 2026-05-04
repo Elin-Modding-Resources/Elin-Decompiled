@@ -15,7 +15,7 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 
 	public bool IsBaby => chara.HasElement(1232);
 
-	public bool IsNyaru => owner?.id == "nyaruruga";
+	public bool IsNyaru => owner.HasElement(1429);
 
 	public override bool HasDuration => false;
 
@@ -90,9 +90,18 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 
 	public void NyaruSpecial()
 	{
-		IEnumerable<SourceChara.Row> ie = EClass.sources.charas.rows.Where((SourceChara.Row a) => !a.multisize && !a.actCombat.IsEmpty() && !a.HasTag(CTAG.suicide) && !a.HasTag(CTAG.noRandomProduct));
-		chara = CharaGen.Create(ie.RandomItem().id);
+		if (chara != null && chara.id != owner.id)
+		{
+			chara = CharaGen.Create(owner.id);
+		}
+		else
+		{
+			IEnumerable<SourceChara.Row> ie = EClass.sources.charas.rows.Where((SourceChara.Row a) => !a.multisize && !a.actCombat.IsEmpty() && !a.HasTag(CTAG.suicide) && !a.HasTag(CTAG.noRandomProduct));
+			chara = CharaGen.Create(ie.RandomItem().id);
+		}
 		lastHP = owner.hp;
+		owner.PlayEffect("morph");
+		owner.PlaySound("vanish");
 	}
 
 	public override void Tick()

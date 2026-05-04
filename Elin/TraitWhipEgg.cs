@@ -35,7 +35,7 @@ public class TraitWhipEgg : TraitWhipLove
 					EClass.player.ModKarma(-1);
 					if (c.isChara && c.Chara.mimicry != null)
 					{
-						c.Chara.mimicry.RevealMimicry(EClass.pc, surprise: false);
+						c.Chara.mimicry.Reveal(EClass.pc);
 					}
 					return true;
 				}, c);

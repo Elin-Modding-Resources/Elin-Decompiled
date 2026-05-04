@@ -157,7 +157,7 @@ public class ActThrow : ActBaseAttack
 		}
 		if (Act.TC?.Chara?.mimicry != null && Act.TC.Chara.mimicry.ShouldRevealOnContact)
 		{
-			Act.TC.Chara.mimicry.RevealMimicry(c, surprise: false);
+			Act.TC.Chara.mimicry.Reveal(c);
 		}
 		bool flag = method == ThrowMethod.Reward;
 		bool flag2 = method == ThrowMethod.Default;

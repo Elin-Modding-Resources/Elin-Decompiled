@@ -947,21 +947,7 @@ public class Trait : EClass
 				num3 *= 10;
 			}
 			cc.ModExp(280, num3);
-			owner.c_lockLv = 0;
-			if (owner.c_lockedHard)
-			{
-				owner.c_lockedHard = false;
-				owner.c_priceAdd = 0;
-			}
-			if (cc.IsPC && owner.isLostProperty)
-			{
-				EClass.player.ModKarma(-8);
-			}
-			owner.isLostProperty = false;
-			if (owner.GetBool(127))
-			{
-				Steam.GetAchievement(ID_Achievement.FIAMA_CHEST);
-			}
+			OnLockOpen(cc);
 			return LockOpenState.Success;
 		}
 		cc.PlaySound("lock");
@@ -975,6 +961,96 @@ public class Trait : EClass
 			cc.stamina.Mod(-1);
 		}
 		return LockOpenState.Fail;
+	}
+
+	public virtual LockOpenState TryPryOpenLock(Chara cc, bool msgFail = true)
+	{
+		Thing tool = cc.Tool;
+		cc.stamina.Mod(-1);
+		Point pos = owner.GetRootCard().pos;
+		SourceMaterial.Row material = owner.material;
+		material.PlayHitEffect(pos);
+		material.AddBlood(pos);
+		if (!cc.IsAliveInCurrentZone || tool == null)
+		{
+			return LockOpenState.Fail;
+		}
+		cc.ModExp(280, 20);
+		cc.ModExp(70, 30);
+		int a2 = Mathf.Clamp(20 * tool.material.hardness / material.hardness, 10, 150);
+		owner.hp -= EClass.rnd(a2);
+		int num = (int)Mathf.Clamp(20L * (long)(owner.c_lockLv + 20) / cc.STR, 5f, 50f);
+		if (owner.c_lockedHard)
+		{
+			num = num * 3 / 2;
+		}
+		if (EClass.rnd(100) < num)
+		{
+			DamageRandomProperty(cc);
+		}
+		if (owner.hp < 0)
+		{
+			cc.Say("pry_success", cc, owner);
+			if (owner.trait is TraitChestPractice)
+			{
+				cc.PlaySound("lock_open");
+			}
+			OnLockOpen(cc);
+			foreach (Thing item in owner.things.List((Thing a) => a.Num > 10))
+			{
+				item.SetNum(item.Num / 10 * 9);
+			}
+			if (!(owner.trait is TraitChestPractice))
+			{
+				if (owner.isNPCProperty && cc.IsPC)
+				{
+					EClass.player.ModKarma(-1);
+				}
+				owner.Die();
+			}
+			return LockOpenState.Success;
+		}
+		return LockOpenState.Fail;
+	}
+
+	public void DamageRandomProperty(Chara cc)
+	{
+		Thing thing = owner.things.List((Thing a) => true).RandomItem();
+		if (thing != null)
+		{
+			if (thing.Num > 10)
+			{
+				thing.SetNum(thing.Num / 10 * 9);
+			}
+			else if (thing.Num > 1)
+			{
+				thing.SetNum(thing.Num - 1);
+			}
+			else
+			{
+				thing.Destroy();
+			}
+			cc.Say("pry_damage", cc, thing);
+		}
+	}
+
+	public virtual void OnLockOpen(Chara cc)
+	{
+		owner.c_lockLv = 0;
+		if (owner.c_lockedHard)
+		{
+			owner.c_lockedHard = false;
+			owner.c_priceAdd = 0;
+		}
+		if (cc.IsPC && owner.isLostProperty)
+		{
+			EClass.player.ModKarma(-8);
+		}
+		owner.isLostProperty = false;
+		if (owner.GetBool(127))
+		{
+			Steam.GetAchievement(ID_Achievement.FIAMA_CHEST);
+		}
 	}
 
 	public virtual void WriteNote(UINote n, bool identified)

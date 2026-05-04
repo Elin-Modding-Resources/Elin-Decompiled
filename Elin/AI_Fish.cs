@@ -250,16 +250,10 @@ public class AI_Fish : AIAct
 				yield return Restart();
 			}
 			yield return DoWait(2);
-			if (owner != null)
+			if (owner != null && !owner.IsPC)
 			{
-				if (!owner.IsPC)
-				{
-					owner.TryPickGroundItem((Card t) => t.category.IsChildOf("fish") || t.SelfWeight <= 1000);
-				}
-				if (owner.IsPCFaction && !owner.IsPCParty)
-				{
-					owner.ClearInventory(ClearInventoryType.Purge);
-				}
+				owner.TryPickGroundItem((Card t) => t.category.IsChildOf("fish") || t.SelfWeight <= 1000);
+				owner.TryClearInventory();
 			}
 			yield return Success();
 		}

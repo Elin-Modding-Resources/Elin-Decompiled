@@ -547,6 +547,8 @@ public class CoreConfig : EClass
 
 		public bool extraRace;
 
+		public bool allRace;
+
 		public bool unsealWidgets;
 
 		public bool extraMoveCancel;

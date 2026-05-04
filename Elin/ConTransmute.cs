@@ -6,6 +6,12 @@ public class ConTransmute : BaseBuff
 
 	public override bool ShouldTryNullify => true;
 
+	public virtual bool ShouldRevealOnContact => true;
+
+	public virtual bool ShouldRevealOnPush => true;
+
+	public virtual bool ShouldRevealOnDamage => false;
+
 	public override void Tick()
 	{
 		if (HasDuration && owner.host == null && owner.conSleep == null && (EClass.pc.conSleep == null || EClass.pc.conSleep.pcSleep == 0))
@@ -19,8 +25,20 @@ public class ConTransmute : BaseBuff
 		Change();
 	}
 
+	public override void OnHit(Card attacker, AttackSource source)
+	{
+		if (ShouldRevealOnDamage)
+		{
+			Reveal(attacker);
+		}
+	}
+
 	public void Change()
 	{
+		if (owner.ai is GoalCombat { abilities: not null } goalCombat)
+		{
+			goalCombat.BuildAbilityList();
+		}
 		owner._CreateRenderer();
 		if (owner.IsPCParty)
 		{
@@ -51,5 +69,10 @@ public class ConTransmute : BaseBuff
 			return true;
 		}
 		return false;
+	}
+
+	public virtual void Reveal(Card attacker = null, bool surprise = false)
+	{
+		Kill();
 	}
 }

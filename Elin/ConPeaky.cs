@@ -39,7 +39,7 @@ public class ConPeaky : Condition
 		}
 	}
 
-	public void OnHit()
+	public override void OnHit(Card attacker, AttackSource source)
 	{
 		ec.SetBase(79, ec.Value(79) / 2);
 	}

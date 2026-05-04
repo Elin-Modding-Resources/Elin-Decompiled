@@ -35,5 +35,6 @@ public class TraitChestPractice : TraitContainer
 			}
 		}
 		owner.c_lockLv = owner.LV;
+		owner.hp = 100;
 	}
 }

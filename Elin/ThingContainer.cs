@@ -285,6 +285,11 @@ public class ThingContainer : List<Thing>
 		}
 	}
 
+	public bool IsAlmostFull(int threshold = 2)
+	{
+		return base.Count + threshold >= GridSize;
+	}
+
 	public bool IsFull(int y = 0)
 	{
 		if (IsMagicChest)
