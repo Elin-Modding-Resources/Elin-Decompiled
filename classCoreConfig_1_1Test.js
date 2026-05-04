@@ -2,6 +2,7 @@ var classCoreConfig_1_1Test =
 [
     [ "aaPortrait", "classCoreConfig_1_1Test.html#a1e792fec9fcd3632dcf856bd2ee7fe12", null ],
     [ "allowBlockOnItem", "classCoreConfig_1_1Test.html#a51b883e315faf3c71d17a985756ffff0", null ],
+    [ "allRace", "classCoreConfig_1_1Test.html#adf476a734e94a361789a3dac60893216", null ],
     [ "alwaysFixCamera", "classCoreConfig_1_1Test.html#a7e1964bdadc08f5c341a137a60b7ac2b", null ],
     [ "alwaysRun", "classCoreConfig_1_1Test.html#a416db7bc74df175984d4956bc2eabc46", null ],
     [ "animeFrame", "classCoreConfig_1_1Test.html#a6b5d7965f9d70b07fdc39712875e52b9", null ],

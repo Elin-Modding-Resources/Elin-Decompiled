@@ -1,5 +1,17 @@
 var NAVTREEINDEX31 =
 {
+"classActRush.html#acdaa1c8b0844e1677d289eb32d43bd26":[1,0,65,1],
+"classActRush.html#ae2689a832aefc83c6378bec085bd3b49":[1,0,65,0],
+"classActSlime.html":[1,0,66],
+"classActSlime.html#a3250e3a95aa06b76ede96f3843a213e8":[1,0,66,0],
+"classActSlime.html#a5b8741d3582c8ae96a87ee3b93228b05":[1,0,66,1],
+"classActSlime.html#a75acfe7a26dd13e30fd6004f03ee40c9":[1,0,66,2],
+"classActSlime.html#a98e8cf97c769aea1faa8ab5b3e3a557a":[1,0,66,3],
+"classActSummonGuard.html":[1,0,67],
+"classActSummonGuard.html#a17fb58c2f7ac46f41168858d5f78bd0c":[1,0,67,0],
+"classActSummonGuard.html#a4719dfaf59dd567fc165a31811d032bd":[1,0,67,1],
+"classActSwarm.html":[1,0,68],
+"classActSwarm.html#a8c6e2c436a1eaf7f0f62fc38dab165b2":[1,0,68,2],
 "classActSwarm.html#a8f3bf8d4621cd4242c9d2357b498ce61":[1,0,68,1],
 "classActSwarm.html#ac72dec631d51037817b213f0404d02be":[1,0,68,0],
 "classActSword.html":[1,0,69],
@@ -237,17 +249,5 @@ var NAVTREEINDEX31 =
 "classActor.html":[1,0,53],
 "classActorEx.html":[1,0,54],
 "classActorEx.html#a08672f80bd657495bf0d3e12c3739c3a":[1,0,54,4],
-"classActorEx.html#a098eb9a80c94345150d480f2e712ef7b":[1,0,54,3],
-"classActorEx.html#a23d0b0c958b76eacc23b9fd5b93222d3":[1,0,54,10],
-"classActorEx.html#a24a8a2e117ad5a0082faac20961713f2":[1,0,54,0],
-"classActorEx.html#a24a8a2e117ad5a0082faac20961713f2a7a1920d61156abc05a60135aefe8bc67":[1,0,54,0,0],
-"classActorEx.html#a24a8a2e117ad5a0082faac20961713f2adc9d0aa2ac7ab1f3345178a493749ea3":[1,0,54,0,1],
-"classActorEx.html#a32ef77a07aff66a1be966897f9b82ea6":[1,0,54,6],
-"classActorEx.html#a407a78cdee4311686a4bfeb8c6ca3dd0":[1,0,54,14],
-"classActorEx.html#a49e15587e009380fd955612bdebfe3d3":[1,0,54,13],
-"classActorEx.html#a4bfc5b4b2c13f5c670a1f19be9d30b93":[1,0,54,7],
-"classActorEx.html#a69a8c654028ae46ff708a89aa102c654":[1,0,54,12],
-"classActorEx.html#a6aa441ae48170bad785530d42b34e2c6":[1,0,54,9],
-"classActorEx.html#a737ef801f9c7207db0ce984e0cfa1394":[1,0,54,1],
-"classActorEx.html#a8a5d9bdef17f4801826272d253f1f555":[1,0,54,5]
+"classActorEx.html#a098eb9a80c94345150d480f2e712ef7b":[1,0,54,3]
 };

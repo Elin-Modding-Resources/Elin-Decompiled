@@ -24,6 +24,7 @@ var classThingContainer =
     [ "GetThingStack", "classThingContainer.html#ac07f7c79d1350cc066e7112cf3ba5173", null ],
     [ "GetThingStack", "classThingContainer.html#a16c127acf637a55faf1bbbce95041240", null ],
     [ "GetThingStack", "classThingContainer.html#ab9f25bda40b4a1ba2cafbffc7aa953eb", null ],
+    [ "IsAlmostFull", "classThingContainer.html#ab1b4369b4a21c1658f5a1761802f0600", null ],
     [ "IsFull", "classThingContainer.html#af2de292db3056b8bdb3956c6fbbae9ce", null ],
     [ "IsFull", "classThingContainer.html#aeeba3582eaf42798d8111bf9c7c4dbe2", null ],
     [ "IsOccupied", "classThingContainer.html#a697b7bfb2141a220554dea52ff057280", null ],

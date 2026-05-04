@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.301 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.302 Nightly</span>
    </div>
   </td>
  </tr>
@@ -228,6 +228,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a336f2c4cb334fc08d99d7f63b655d506 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65d0ff0c4033dad073b840686f988bf0 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85">LockOpenState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a65d0ff0c4033dad073b840686f988bf0">TryOpenLock</a> (<a class="el" href="classChara.html">Chara</a> cc, bool msgFail=true)</td></tr>
 <tr class="separator:a65d0ff0c4033dad073b840686f988bf0 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ba15ed91bb653a5ad121e61b877cab inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="LockOpenState_8cs.html#a18b4184c13cd2cd21ce824772e08fa85">LockOpenState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#ae9ba15ed91bb653a5ad121e61b877cab">TryPryOpenLock</a> (<a class="el" href="classChara.html">Chara</a> cc, bool msgFail=true)</td></tr>
+<tr class="separator:ae9ba15ed91bb653a5ad121e61b877cab inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80823be28f891ec67a2005cef68fda5d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a80823be28f891ec67a2005cef68fda5d">DamageRandomProperty</a> (<a class="el" href="classChara.html">Chara</a> cc)</td></tr>
+<tr class="separator:a80823be28f891ec67a2005cef68fda5d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4a4c98642a84d4279cabe112663e6b inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#abc4a4c98642a84d4279cabe112663e6b">OnLockOpen</a> (<a class="el" href="classChara.html">Chara</a> cc)</td></tr>
+<tr class="separator:abc4a4c98642a84d4279cabe112663e6b inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a306f5ddbb9273ba3177f72b1018f52cf inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a306f5ddbb9273ba3177f72b1018f52cf">WriteNote</a> (<a class="el" href="classUINote.html">UINote</a> n, bool identified)</td></tr>
 <tr class="separator:a306f5ddbb9273ba3177f72b1018f52cf inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a96ed454081d641245531100eb1835e inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a2a96ed454081d641245531100eb1835e">GetSortVal</a> (<a class="el" href="classUIList.html#ab6830a3f19955c15f58839b55702ed49">UIList.SortMode</a> m)</td></tr>
@@ -1004,10 +1010,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  223</span>        }</div>
 <div class="line"><span class="lineno">  224</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">  225</span>    }</div>
-<div class="ttc" id="aclassChara_html_ad6bc7a09cb9935ad483614e31d37ac40"><div class="ttname"><a href="classChara.html#ad6bc7a09cb9935ad483614e31d37ac40">Chara.Drink</a></div><div class="ttdeci">void Drink(Card t)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05209">Chara.cs:5209</a></div></div>
+<div class="ttc" id="aclassChara_html_ad6bc7a09cb9935ad483614e31d37ac40"><div class="ttname"><a href="classChara.html#ad6bc7a09cb9935ad483614e31d37ac40">Chara.Drink</a></div><div class="ttdeci">void Drink(Card t)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l05215">Chara.cs:5215</a></div></div>
 <div class="ttc" id="aclassTrait_html_ac0d6248b0468917710ad9bc9020f8e35"><div class="ttname"><a href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">Trait.owner</a></div><div class="ttdeci">Card owner</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00028">Trait.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05209">Chara.Drink()</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l05215">Chara.Drink()</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1210,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassActEffect_html"><div class="ttname"><a href="classActEffect.html">ActEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l00006">ActEffect.cs:7</a></div></div>
 <div class="ttc" id="aclassActEffect_html_aa11e7453203f08185bc4d9db277254a7"><div class="ttname"><a href="classActEffect.html#aa11e7453203f08185bc4d9db277254a7">ActEffect.Proc</a></div><div class="ttdeci">static void Proc(EffectId id, Card cc, Card tc=null, int power=100, ActRef actRef=default(ActRef))</div><div class="ttdef"><b>Definition:</b> <a href="ActEffect_8cs_source.html#l01040">ActEffect.cs:1040</a></div></div>
 <div class="ttc" id="aclassCard_html_ab8dc572d8ca0cb00f977a916266a7218"><div class="ttname"><a href="classCard.html#ab8dc572d8ca0cb00f977a916266a7218">Card.Thing</a></div><div class="ttdeci">virtual Thing Thing</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l02097">Card.cs:2098</a></div></div>
-<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09633">Chara.cs:9633</a></div></div>
+<div class="ttc" id="aclassChara_html_a55dfb9ac67f1a3d3764ee6959da3e277"><div class="ttname"><a href="classChara.html#a55dfb9ac67f1a3d3764ee6959da3e277">Chara.HasCondition</a></div><div class="ttdeci">bool HasCondition(string alias)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09686">Chara.cs:9686</a></div></div>
 <div class="ttc" id="aclassConAwakening_html"><div class="ttname"><a href="classConAwakening.html">ConAwakening</a></div><div class="ttdef"><b>Definition:</b> <a href="ConAwakening_8cs_source.html#l00001">ConAwakening.cs:2</a></div></div>
 <div class="ttc" id="aclassFoodEffect_html"><div class="ttname"><a href="classFoodEffect.html">FoodEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="FoodEffect_8cs_source.html#l00005">FoodEffect.cs:6</a></div></div>
 <div class="ttc" id="aclassFoodEffect_html_a89d18d770af1efce970a01d8544465b9"><div class="ttname"><a href="classFoodEffect.html#a89d18d770af1efce970a01d8544465b9">FoodEffect.ProcTrait</a></div><div class="ttdeci">static void ProcTrait(Chara c, Card t)</div><div class="ttdef"><b>Definition:</b> <a href="FoodEffect_8cs_source.html#l00482">FoodEffect.cs:482</a></div></div>
@@ -1215,7 +1221,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTraitPerfume_html"><div class="ttname"><a href="classTraitPerfume.html">TraitPerfume</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitPerfume_8cs_source.html#l00001">TraitPerfume.cs:2</a></div></div>
 <div class="ttc" id="astructActRef_html"><div class="ttname"><a href="structActRef.html">ActRef</a></div><div class="ttdef"><b>Definition:</b> <a href="ActRef_8cs_source.html#l00001">ActRef.cs:2</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l00281">Card.blessedState</a>, <a class="el" href="ACT_8cs_source.html#l00036">ACT.Create()</a>, <a class="el" href="Steam_8cs_source.html#l00051">Steam.GetAchievement()</a>, <a class="el" href="Chara_8cs_source.html#l09633">Chara.HasCondition()</a>, <a class="el" href="Card_8cs_source.html#l00036">Card.id</a>, <a class="el" href="TraitDrink_8cs_source.html#l00005">IdEffect</a>, <a class="el" href="TraitDrink_8cs_source.html#l00047">N1</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="TraitDrink_8cs_source.html#l00008">Power</a>, <a class="el" href="ActEffect_8cs_source.html#l01040">ActEffect.Proc()</a>, <a class="el" href="TraitDrink_8cs_source.html#l00031">source</a>, and <a class="el" href="Card_8cs_source.html#l02098">Card.Thing</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l00281">Card.blessedState</a>, <a class="el" href="ACT_8cs_source.html#l00036">ACT.Create()</a>, <a class="el" href="Steam_8cs_source.html#l00051">Steam.GetAchievement()</a>, <a class="el" href="Chara_8cs_source.html#l09686">Chara.HasCondition()</a>, <a class="el" href="Card_8cs_source.html#l00036">Card.id</a>, <a class="el" href="TraitDrink_8cs_source.html#l00005">IdEffect</a>, <a class="el" href="TraitDrink_8cs_source.html#l00047">N1</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="TraitDrink_8cs_source.html#l00008">Power</a>, <a class="el" href="ActEffect_8cs_source.html#l01040">ActEffect.Proc()</a>, <a class="el" href="TraitDrink_8cs_source.html#l00031">source</a>, and <a class="el" href="Card_8cs_source.html#l02098">Card.Thing</a>.</p>
 
 </div>
 </div>

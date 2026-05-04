@@ -20,6 +20,7 @@ var classBaseCondition =
     [ "Mod", "classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea", null ],
     [ "OnBeforeStart", "classBaseCondition.html#af67f6ff3e9f992f221d0018d8ef5d0a2", null ],
     [ "OnChangePhase", "classBaseCondition.html#a0079bf7e071e4d6295ad8f87159b1f6e", null ],
+    [ "OnHit", "classBaseCondition.html#ab188bc1d8ffa1782e0cf635993f26c89", null ],
     [ "OnRefresh", "classBaseCondition.html#a8e4c9027cee1e821d2ec5cfbace3c781", null ],
     [ "OnRemoved", "classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e", null ],
     [ "OnStart", "classBaseCondition.html#a5b906e1dde65d20a17f961c9fe57ba03", null ],

@@ -667,6 +667,7 @@ var hierarchy =
               [ "AI_TargetChara", "classAI__TargetChara.html", null ],
               [ "AI_TargetThing", "classAI__TargetThing.html", [
                 [ "AI_OpenLock", "classAI__OpenLock.html", null ],
+                [ "AI_PryOpen", "classAI__PryOpen.html", null ],
                 [ "AI_Sleep", "classAI__Sleep.html", null ]
               ] ]
             ] ],
@@ -2053,6 +2054,7 @@ var hierarchy =
           [ "TraitToolBrushStrip", "classTraitToolBrushStrip.html", null ],
           [ "TraitToolBuild", "classTraitToolBuild.html", null ],
           [ "TraitToolButcher", "classTraitToolButcher.html", null ],
+          [ "TraitToolCrowbar", "classTraitToolCrowbar.html", null ],
           [ "TraitToolFishing", "classTraitToolFishing.html", null ],
           [ "TraitToolHammer", "classTraitToolHammer.html", null ],
           [ "TraitToolHammerStrip", "classTraitToolHammerStrip.html", null ],
