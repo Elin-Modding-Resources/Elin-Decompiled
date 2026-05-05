@@ -905,7 +905,8 @@ public class Point : EClass
 		List<Chara> list = EClass._map.charas.Where((Chara c) => c.trait is TraitGuard && !c.IsInCombat).ToList();
 		if (list.Count > 0)
 		{
-			Chara chara = list.RandomItem();
+			list.Sort((Chara a, Chara b) => a.Dist(criminal) - b.Dist(criminal));
+			Chara chara = list.First();
 			caller.Say("calledGuard", caller);
 			chara.DoHostileAction(criminal);
 		}

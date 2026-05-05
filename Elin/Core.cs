@@ -380,8 +380,9 @@ public class Core : BaseCore
 		{
 			for (int num = actionsNextFrame.Count - 1; num >= 0; num--)
 			{
-				actionsNextFrame[num]();
+				Action action = actionsNextFrame[num];
 				actionsNextFrame.RemoveAt(num);
+				action?.Invoke();
 			}
 		}
 	}

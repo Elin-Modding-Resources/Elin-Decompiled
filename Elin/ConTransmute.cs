@@ -39,6 +39,7 @@ public class ConTransmute : BaseBuff
 		{
 			goalCombat.BuildAbilityList();
 		}
+		owner._colorInt = 0;
 		owner._CreateRenderer();
 		if (owner.IsPCParty)
 		{
@@ -49,6 +50,7 @@ public class ConTransmute : BaseBuff
 	public override void OnRemoved()
 	{
 		bool isSynced = owner.isSynced;
+		owner._colorInt = 0;
 		owner._CreateRenderer();
 		if (isSynced)
 		{

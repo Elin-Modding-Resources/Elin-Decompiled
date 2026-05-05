@@ -33,9 +33,16 @@ public class AI_PryOpen : AI_TargetThing
 			onProgress = delegate(Progress_Custom p)
 			{
 				owner.PlaySound("lock_pry");
-				if (p.progress >= 3 && base.target.trait.TryPryOpenLock(owner, msgFail: false) == LockOpenState.Success)
+				if (p.progress >= 3)
 				{
-					p.CompleteProgress();
+					if (base.target.trait.TryPryOpenLock(owner, msgFail: false) == LockOpenState.Success)
+					{
+						p.CompleteProgress();
+					}
+					else if (EClass._zone.IsCrime(owner, this))
+					{
+						owner.pos.TryWitnessCrime(owner);
+					}
 				}
 			},
 			onProgressComplete = delegate

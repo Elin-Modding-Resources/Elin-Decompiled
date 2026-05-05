@@ -891,6 +891,14 @@ public class AttackProcess : EClass
 		{
 			return true;
 		}
+		if (CC.HasElement(1253))
+		{
+			TC.DamageHP(num7 / 10, 916, 100, AttackSource.None, CC);
+		}
+		if (!CC.IsAliveInCurrentZone || !TC.IsAliveInCurrentZone)
+		{
+			return true;
+		}
 		if (TC.isChara && !TC.HasCondition<ConGravity>() && num3 > 0 && num3 * 2 + 15 > EClass.rnd(100) && !TC.isRestrained && TC.Chara.TryMoveFrom(CC.pos) == Card.MoveResult.Success)
 		{
 			TC.pos.PlayEffect("vanish");
@@ -1007,7 +1015,7 @@ public class AttackProcess : EClass
 		{
 			return Crit();
 		}
-		if (CC.HasCondition<ConSevenSense>() && (CC.HasElement(1244) || CC.HasElement(1246) || CC.HasElement(1247)))
+		if (CC.HasCondition<ConSevenSense>() && (CC.HasElement(1244) || CC.HasElement(1246) || CC.HasElement(1247) || CC.HasElement(1253)))
 		{
 			return true;
 		}

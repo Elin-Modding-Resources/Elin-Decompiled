@@ -998,7 +998,7 @@ public class Trait : EClass
 			OnLockOpen(cc);
 			foreach (Thing item in owner.things.List((Thing a) => a.Num > 10))
 			{
-				item.SetNum(item.Num / 10 * 9);
+				item.SetNum(item.Num / 10 * 8);
 			}
 			if (!(owner.trait is TraitChestPractice))
 			{
@@ -1015,7 +1015,7 @@ public class Trait : EClass
 
 	public void DamageRandomProperty(Chara cc)
 	{
-		Thing thing = owner.things.List((Thing a) => true).RandomItem();
+		Thing thing = owner.things.List((Thing a) => a.category.id == "currency" || !a.IsUnique).RandomItem();
 		if (thing != null)
 		{
 			if (thing.Num > 10)

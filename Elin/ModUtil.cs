@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
@@ -207,26 +208,41 @@ public class ModUtil : EClass
 	{
 		List<BGMData> bgms = Core.Instance.refs.bgms;
 		Dictionary<int, BGMData> dictBGM = Core.Instance.refs.dictBGM;
-		BGMData bGMData = SoundManager.current.GetData(bgmId) as BGMData;
-		if (!(bGMData == null))
+		BGMData bGMData = LoadSoundData(bgmId) as BGMData;
+		if (bGMData == null)
 		{
-			bGMData.name = bgmId[4..];
-			if (bGMData.id <= 0)
+			return;
+		}
+		bGMData.name = bgmId.Replace("BGM/", "");
+		if (bGMData.id <= 0)
+		{
+			Match match = Regex.Match(bGMData.name, "^(\\d+)(?:_(.*))?$");
+			if (match.Success)
+			{
+				int id = match.Groups[1].Value.ToInt();
+				string text = (match.Groups[2].Success ? match.Groups[2].Value : null);
+				bGMData.id = id;
+				if (!text.IsEmpty())
+				{
+					bGMData.name = text;
+				}
+			}
+			else
 			{
 				bGMData.id = bgms.Count + 1;
 				UnityEngine.Debug.Log($"#sound bgm unassigned/{bGMData.id}/{bGMData.name}");
 			}
-			if (dictBGM.TryGetValue(bGMData.id, out var value))
-			{
-				value.clip = bGMData.clip;
-				UnityEngine.Debug.Log($"#sound bgm replace/{bGMData.id}/{value.name}/>/{bGMData.name}");
-			}
-			else
-			{
-				bgms.Add(bGMData);
-				dictBGM[bGMData.id] = bGMData;
-				UnityEngine.Debug.Log($"#sound bgm addon/{bGMData.id}/{bGMData.name}");
-			}
+		}
+		if (dictBGM.TryGetValue(bGMData.id, out var value))
+		{
+			value.clip = bGMData.clip;
+			UnityEngine.Debug.Log($"#sound bgm replace/{bGMData.id}/{value.name}/>/{bGMData.name}");
+		}
+		else
+		{
+			bgms.Add(bGMData);
+			dictBGM[bGMData.id] = bGMData;
+			UnityEngine.Debug.Log($"#sound bgm addon/{bGMData.id}/{bGMData.name}");
 		}
 	}
 

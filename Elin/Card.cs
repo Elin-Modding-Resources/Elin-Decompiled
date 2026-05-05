@@ -4238,21 +4238,28 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (!e.source.aliasRef.IsEmpty() && attackSource != AttackSource.ManaBackfire)
 			{
 				int num3 = ((origin != null) ? origin.Evalue(1238) : 0);
-				if (attackSource == AttackSource.MagicSword)
+				if (origin != null)
 				{
-					num3 += 2;
-					if (origin.HasElement(1247))
+					if (attackSource == AttackSource.MagicSword)
+					{
+						num3 += 2;
+						if (origin.HasElement(1247))
+						{
+							num3++;
+						}
+					}
+					if (attackSource == AttackSource.MagicArrow && origin.HasElement(1244))
 					{
 						num3++;
 					}
-				}
-				if (attackSource == AttackSource.MagicArrow && origin != null && origin.HasElement(1244))
-				{
-					num3++;
-				}
-				if (attackSource == AttackSource.MagicHand && origin != null && origin.HasElement(1246))
-				{
-					num3++;
+					if (attackSource == AttackSource.MagicHand && origin.HasElement(1246))
+					{
+						num3++;
+					}
+					if (e.id == 916 && (HasElement(1253) || origin.HasElement(1253)))
+					{
+						num3++;
+					}
 				}
 				dmg = Element.GetResistDamage(dmg, Evalue(e.source.aliasRef), num3);
 				dmg = dmg * 100 / (100 + Mathf.Clamp(Evalue(961) * 5, -50, 200));
@@ -4500,7 +4507,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_10dd;
+							goto IL_1111;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4528,7 +4535,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_10dd;
+								goto IL_1111;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4546,8 +4553,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_10dd;
-		IL_10dd:
+		goto IL_1111;
+		IL_1111:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -6294,11 +6301,15 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		_colorInt = 0;
 	}
 
-	public void RefreshColor()
+	public int RefreshColor()
 	{
 		if (isChara)
 		{
-			if (isDyed)
+			if (Chara.mimicry != null)
+			{
+				_colorInt = Chara.mimicry.Card.RefreshColor();
+			}
+			else if (isDyed)
 			{
 				_colorInt = BaseTileMap.GetColorInt(ref DyeMat.matColor, TileRow.colorMod);
 			}
@@ -6334,6 +6345,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			_colorInt = BaseTileMap.GetColorInt(ref material.matColor, TileRow.colorMod);
 		}
+		return _colorInt;
 	}
 
 	public ref Color GetRandomColor()

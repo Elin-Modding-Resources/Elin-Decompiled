@@ -16,7 +16,7 @@ public class SpatialGen : EClass
 	public static Spatial Create(string id, Spatial parent, bool register, int x = -99999, int y = -99999, int icon = 0)
 	{
 		SourceZone.Row row = EClass.sources.zones.map[id];
-		Spatial spatial = ClassCache.Create<Spatial>(row.type, "Elin");
+		Spatial spatial = ClassCache.Create<Spatial>(row.type, "Elin") ?? new Zone();
 		if (x == -99999)
 		{
 			x = ((row.pos.Length != 0) ? row.pos[0] : (-1000));

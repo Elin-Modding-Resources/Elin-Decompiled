@@ -49,6 +49,12 @@ public class AI_OpenLock : AI_TargetThing
 					p.Cancel();
 					EClass.Sound.Stop("lock_pick");
 					break;
+				default:
+					if (EClass._zone.IsCrime(owner, this))
+					{
+						owner.pos.TryWitnessCrime(owner);
+					}
+					break;
 				}
 			},
 			onProgressComplete = delegate
