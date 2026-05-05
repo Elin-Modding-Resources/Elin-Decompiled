@@ -183,7 +183,7 @@ var classCard =
     [ "PurgeEythArtifact", "classCard.html#aad68ceee89ca92565541f6c4cfae0d7c", null ],
     [ "RecalculateFOV", "classCard.html#a7e5b0731b914744e0e7063b19afe5938", null ],
     [ "ReferenceId", "classCard.html#a0cde0d7dc325ad74cae8e99d2606413e", null ],
-    [ "RefreshColor", "classCard.html#ab77e0235503fd040146fc88721616f61", null ],
+    [ "RefreshColor", "classCard.html#a489e10a84f7b4c34227c7e7cf4ee34dd", null ],
     [ "RemoveBacker", "classCard.html#aa3716d6e35c2433bfededd7c447fbbb2", null ],
     [ "RemoveCard", "classCard.html#af1cae49186737c262c5ff963b945508b", null ],
     [ "RemoveEditorTag", "classCard.html#a10381bf59a75c588ee074e26e9e06f88", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.302 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.303 Nightly</span>
    </div>
   </td>
  </tr>
@@ -542,7 +542,7 @@ $(document).ready(function(){initNavTree('CoreRef_8cs_source.html',''); initResi
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>        <span class="keywordflow">foreach</span> (KeyValuePair&lt;string, FileInfo&gt; <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ae4a6fee83088f66bec4fa7cde78f985b">sounds</a>.Where((KeyValuePair&lt;string, FileInfo&gt; kv) =&gt; kv.Key.StartsWith(<span class="stringliteral">&quot;BGM/&quot;</span>)))</div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        {</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>            <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.Deconstruct(out var key, out var _);</div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>            <a class="code hl_class" href="classModUtil.html">ModUtil</a>.<a class="code hl_function" href="classModUtil.html#a31db01b9833b17e70a14a6cb2aa7a483">AddOrReplaceBGM</a>(key);</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>            ModUtil.AddOrReplaceBGM(key);</div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>        }</div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    }</div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span> </div>
@@ -822,8 +822,6 @@ $(document).ready(function(){initNavTree('CoreRef_8cs_source.html',''); initResi
 <div class="ttc" id="aclassGalleryFlattenAndRename_html_aa6feb7bf3529c03097b1f277e0047cb9"><div class="ttname"><a href="classGalleryFlattenAndRename.html#aa6feb7bf3529c03097b1f277e0047cb9">GalleryFlattenAndRename.Run</a></div><div class="ttdeci">static UD_Int_String Run()</div><div class="ttdef"><b>Definition:</b> <a href="GalleryFlattenAndRename_8cs_source.html#l00015">GalleryFlattenAndRename.cs:15</a></div></div>
 <div class="ttc" id="aclassMOD_html"><div class="ttname"><a href="classMOD.html">MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00006">MOD.cs:7</a></div></div>
 <div class="ttc" id="aclassMOD_html_ae4a6fee83088f66bec4fa7cde78f985b"><div class="ttname"><a href="classMOD.html#ae4a6fee83088f66bec4fa7cde78f985b">MOD.sounds</a></div><div class="ttdeci">static Dictionary&lt; string, FileInfo &gt; sounds</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00024">MOD.cs:24</a></div></div>
-<div class="ttc" id="aclassModUtil_html"><div class="ttname"><a href="classModUtil.html">ModUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00013">ModUtil.cs:14</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a31db01b9833b17e70a14a6cb2aa7a483"><div class="ttname"><a href="classModUtil.html#a31db01b9833b17e70a14a6cb2aa7a483">ModUtil.AddOrReplaceBGM</a></div><div class="ttdeci">static void AddOrReplaceBGM(string bgmId)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00206">ModUtil.cs:206</a></div></div>
 <div class="ttc" id="aclassMsgColors_html"><div class="ttname"><a href="classMsgColors.html">MsgColors</a></div><div class="ttdef"><b>Definition:</b> <a href="MsgColors_8cs_source.html#l00003">MsgColors.cs:4</a></div></div>
 <div class="ttc" id="aclassMultiSprite_html"><div class="ttname"><a href="classMultiSprite.html">MultiSprite</a></div><div class="ttdef"><b>Definition:</b> <a href="MultiSprite_8cs_source.html#l00005">MultiSprite.cs:6</a></div></div>
 <div class="ttc" id="aclassRectData_html"><div class="ttname"><a href="classRectData.html">RectData</a></div><div class="ttdef"><b>Definition:</b> <a href="RectData_8cs_source.html#l00005">RectData.cs:6</a></div></div>

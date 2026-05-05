@@ -13,6 +13,7 @@ var classFEAT =
     [ "featBloom", "classFEAT.html#a2f82e187d50dbc8063ece2da4f01f0a7", null ],
     [ "featBodyParts", "classFEAT.html#a815481fd7a5d4c8a2ca7ab1920da9f2d", null ],
     [ "featBoost", "classFEAT.html#a186c336699bd1f8e57b0c4350db485e2", null ],
+    [ "featCancer", "classFEAT.html#a29e9dcd1ab7d84360258962c4f3f9601", null ],
     [ "featCannibalism", "classFEAT.html#a108834adbbcf268f82d82c65737e39d3", null ],
     [ "featCentaur", "classFEAT.html#ae307ea1a3cabd6a7391fad35d792c0f7", null ],
     [ "featCHA", "classFEAT.html#adacbce9259f9c2f4c96d6e28c08f1465", null ],

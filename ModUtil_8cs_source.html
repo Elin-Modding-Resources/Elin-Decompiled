@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.302 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.303 Nightly</span>
    </div>
   </td>
  </tr>
@@ -98,287 +98,303 @@ $(document).ready(function(){initNavTree('ModUtil_8cs_source.html',''); initResi
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.IO;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Linq;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>System.Reflection;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>System.Threading;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>NPOI.SS.UserModel;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>NPOI.XSSF.UserModel;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span>UnityEngine.Networking;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classModUtil.html">   13</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classModUtil.html">ModUtil</a> : <a class="code hl_class" href="classEClass.html">EClass</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classModUtil.html#a2af737667dd4cb0d3fb420c8ca7f37d8">   15</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classSourceImporter.html">SourceImporter</a> <a class="code hl_variable" href="classModUtil.html#a2af737667dd4cb0d3fb420c8ca7f37d8">sourceImporter</a> = <span class="keyword">new</span> <a class="code hl_class" href="classSourceImporter.html">SourceImporter</a>(<a class="code hl_property" href="classModUtil.html#a1828dbd4faebae5c3d6489efb7b1a441">SourceMapping</a>);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">   17</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> Dictionary&lt;string, string&gt; <a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a> = <span class="keyword">new</span> Dictionary&lt;string, string&gt;();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classModUtil.html#a1828dbd4faebae5c3d6489efb7b1a441">   19</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> IReadOnlyDictionary&lt;string, SourceData&gt; <a class="code hl_property" href="classModUtil.html#a1828dbd4faebae5c3d6489efb7b1a441">SourceMapping</a> =&gt; (from f in typeof(<a class="code hl_class" href="classSourceManager.html">SourceManager</a>).GetFields()</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        where typeof(<a class="code hl_class" href="classSourceData.html">SourceData</a>).IsAssignableFrom(f.FieldType)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        select f).ToDictionary((FieldInfo f) =&gt; f.FieldType.Name, (FieldInfo f) =&gt; f.GetValue(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>) as <a class="code hl_class" href="classSourceData.html">SourceData</a>);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classModUtil.html#abf1e487b6edc0d22a16aa285e3bfb307">   23</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classModUtil.html#abf1e487b6edc0d22a16aa285e3bfb307">OnModsActivated</a>()</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        SoundManager.current.soundLoaders.Add(<a class="code hl_function" href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">LoadSoundData</a>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_class" href="classUIBook.html">UIBook</a>.<a class="code hl_variable" href="classUIBook.html#aa222c07e9e6a66056feb32845336f860">topicLoaders</a>.Add(<a class="code hl_function" href="classModUtil.html#ac7201a52cd96eda0178278d223f8b55b">LoadTopicFiles</a>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_class" href="classBookList.html">BookList</a>.<a class="code hl_variable" href="classBookList.html#af3821165665c366764504d956cb31c05">booklistLoaders</a>.Add(<a class="code hl_function" href="classModUtil.html#a4f0642b637056155d7d53344470e7d1b">LoadBookList</a>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_class" href="classBaseModManager.html">BaseModManager</a>.<a class="code hl_function" href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">PublishEvent</a>(<span class="stringliteral">&quot;elin.mods.activated&quot;</span>);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_class" href="classBaseModManager.html">BaseModManager</a>.<a class="code hl_function" href="classBaseModManager.html#acae7f54f391c14cd9bf1542e26774c71">SubscribeEvent</a>(<span class="stringliteral">&quot;elin.game.post_load&quot;</span>, <a class="code hl_function" href="classModUtil.html#a60893e4a716c8e5f69298217fbdab793">PostLoadCleanup</a>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classModUtil.html#a60893e4a716c8e5f69298217fbdab793">   32</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classModUtil.html#a60893e4a716c8e5f69298217fbdab793">PostLoadCleanup</a>(<span class="keywordtype">object</span> context)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.RemoveWhere((<span class="keywordtype">int</span> <span class="keywordtype">id</span>) =&gt; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>.ContainsKey(<span class="keywordtype">id</span>));</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classModUtil.html#acb36876e5c912f025129bda3e5ebacb8">   37</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classModUtil.html#acb36876e5c912f025129bda3e5ebacb8">LoadTypeFallback</a>()</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;type_resolver.txt&quot;</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span> (File.Exists(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text))</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            array = IO.LoadTextArray(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[2] { <span class="stringliteral">&quot;TrueArena,ArenaWaveEvent,ZoneEvent&quot;</span>, <span class="stringliteral">&quot;Elin-GeneRecombinator,Elin_GeneRecombinator.IncubationSacrifice,Chara&quot;</span> };</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            IO.SaveTextArray(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text, array);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array2.Length; i++)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordtype">string</span>[] array3 = array2[i].Split(<span class="charliteral">&#39;,&#39;</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">if</span> (array3.Length &gt;= 2)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <a class="code hl_function" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">RegisterSerializedTypeFallback</a>(array3[0], array3[1], array3[2]);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">   61</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">RegisterSerializedTypeFallback</a>(<span class="keywordtype">string</span> nameAssembly, <span class="keywordtype">string</span> nameType, <span class="keywordtype">string</span> nameFallbackType)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_variable" href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">fallbackTypes</a>[nameType] = nameFallbackType;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classModUtil.html#a212dd865a3e48ab848ee24fce3fb4326">   66</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classModPackage.html">ModPackage</a> <a class="code hl_function" href="classModUtil.html#a212dd865a3e48ab848ee24fce3fb4326">GetModPackage</a>(<span class="keywordtype">string</span> modId)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.MappedPackages.GetValueOrDefault(modId) as <a class="code hl_class" href="classModPackage.html">ModPackage</a>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">   71</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ImportExcel</a>(<span class="keywordtype">string</span> pathToExcelFile, <span class="keywordtype">string</span> sheetName, <a class="code hl_class" href="classSourceData.html">SourceData</a> source)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        UnityEngine.Debug.Log(<span class="stringliteral">&quot;ImportExcel source:&quot;</span> + source?.ToString() + <span class="stringliteral">&quot; Path:&quot;</span> + pathToExcelFile);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">using </span>FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        XSSFWorkbook xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook.NumberOfSheets; i++)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">if</span> (sheetAt.SheetName != sheetName)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            UnityEngine.Debug.Log(<span class="stringliteral">&quot;Importing Sheet:&quot;</span> + sheetName);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                ExcelParser.path = pathToExcelFile;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <span class="keywordflow">if</span> (!source.<a class="code hl_function" href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">ImportData</a>(sheetAt, <span class="keyword">new</span> FileInfo(pathToExcelFile).Name, overwrite: <span class="keyword">true</span>))</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    UnityEngine.Debug.LogError(<a class="code hl_class" href="classERROR.html">ERROR</a>.<a class="code hl_variable" href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">msg</a>);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                UnityEngine.Debug.Log(<span class="stringliteral">&quot;Imported &quot;</span> + sheetAt.SheetName);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                source.<a class="code hl_function" href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">Reset</a>();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                UnityEngine.Debug.LogError(<span class="stringliteral">&quot;[Error] Skipping import &quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot; :&quot;</span> + ex.Message + <span class="stringliteral">&quot;/&quot;</span> + ex.Source + <span class="stringliteral">&quot;/&quot;</span> + ex.StackTrace);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classModUtil.html#ab12f8dcd83e8d82039b8ab2bb8aaab00">  103</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classModPackage.html">ModPackage</a> <a class="code hl_function" href="classModUtil.html#ab12f8dcd83e8d82039b8ab2bb8aaab00">FindSourceRowPackage</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_class" href="classSourceData_1_1BaseRow.html">BaseRow</a> row)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.packages.OfType&lt;<a class="code hl_class" href="classModPackage.html">ModPackage</a>&gt;().LastOrDefault((<a class="code hl_class" href="classModPackage.html">ModPackage</a> p) =&gt; p.sourceRows.Contains(row));</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classModUtil.html#a4d4f385335427f4154c36b09ebb0d3cc">  108</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> SerializableSoundData <a class="code hl_function" href="classModUtil.html#a4d4f385335427f4154c36b09ebb0d3cc">GetSoundMeta</a>(<span class="keywordtype">string</span> soundPath)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">string</span> path = Path.ChangeExtension(soundPath, <span class="stringliteral">&quot;.json&quot;</span>);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        SerializableSoundData serializableSoundData;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">if</span> (File.Exists(path))</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">try</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                serializableSoundData = IO.LoadFile&lt;SerializableSoundData&gt;(path);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">if</span> (serializableSoundData.dataVersion == SerializableSoundData.SoundDataMetaVersion.V1)</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <span class="keywordflow">return</span> serializableSoundData;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">catch</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        serializableSoundData = <span class="keyword">new</span> SerializableSoundData();</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">if</span> (soundPath.NormalizePath().Contains(<span class="stringliteral">&quot;/Sound/BGM/&quot;</span>))</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            serializableSoundData.type = SoundData.Type.BGM;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            serializableSoundData.bgmDataOptional = <span class="keyword">new</span> SerializableBGMData</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                parts = <span class="keyword">new</span> List&lt;BGMData.Part&gt;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                    <span class="keyword">new</span> BGMData.Part()</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            };</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        IO.SaveFile(path, serializableSoundData);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> serializableSoundData;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">  142</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> AudioType <a class="code hl_function" href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">GetAudioType</a>(<span class="keywordtype">string</span> extension)</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> extension.ToLowerInvariant().Trim() <span class="keywordflow">switch</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="stringliteral">&quot;.acc&quot;</span> =&gt; AudioType.ACC, </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="stringliteral">&quot;.mp3&quot;</span> =&gt; AudioType.MPEG, </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="stringliteral">&quot;.ogg&quot;</span> =&gt; AudioType.OGGVORBIS, </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="stringliteral">&quot;.wav&quot;</span> =&gt; AudioType.WAV, </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            _ =&gt; AudioType.UNKNOWN, </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        };</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">  154</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> SoundData <a class="code hl_function" href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">LoadSoundData</a>(<span class="keywordtype">string</span> soundId)</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ae4a6fee83088f66bec4fa7cde78f985b">sounds</a>.TryGetValue(soundId, out var value) || !value.Exists)</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">LoadSoundData</a>(value);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classModUtil.html#ab21eb1b2ab0065fa0e40e578e1be5217">  163</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> SoundData <a class="code hl_function" href="classModUtil.html#ab21eb1b2ab0065fa0e40e578e1be5217">LoadSoundData</a>(FileInfo soundFile)</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordtype">string</span> fileNameWithoutExtension = Path.GetFileNameWithoutExtension(soundFile.FullName);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordtype">string</span> fullName = soundFile.FullName;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        AudioType audioType = <a class="code hl_function" href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">GetAudioType</a>(soundFile.Extension);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordtype">bool</span> stream = fullName.NormalizePath().Contains(<span class="stringliteral">&quot;/BGM/&quot;</span>) &amp;&amp; audioType == AudioType.OGGVORBIS;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keyword">using </span>UnityWebRequest unityWebRequest = AudioClipStream.GetAudioClip(<span class="stringliteral">&quot;file://&quot;</span> + fullName, audioType, compressed: <span class="keyword">false</span>, stream);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        unityWebRequest.SendWebRequest();</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        Stopwatch stopwatch = Stopwatch.StartNew();</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">while</span> (!unityWebRequest.isDone &amp;&amp; stopwatch.ElapsedMilliseconds &lt; 5000)</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            Thread.Sleep(1);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">if</span> (unityWebRequest.result != UnityWebRequest.Result.Success)</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        {</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            UnityEngine.Debug.LogError(<span class="stringliteral">&quot;#sound &#39;&quot;</span> + fileNameWithoutExtension + <span class="stringliteral">&quot;&#39; failed to load: &quot;</span> + unityWebRequest.error.IsEmpty(<span class="stringliteral">&quot;timeout&quot;</span>));</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        AudioClip content = DownloadHandlerAudioClip.GetContent(unityWebRequest);</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordtype">int</span>? num = content?.samples;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span> (!num.HasValue || num.GetValueOrDefault() &lt;= 0)</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            UnityEngine.Debug.LogError(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound &#39;{fileNameWithoutExtension}&#39; sample is null: {audioType}&quot;</span>);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        }</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        content.name = fileNameWithoutExtension;</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        SoundData soundData = <a class="code hl_function" href="classModUtil.html#a4d4f385335427f4154c36b09ebb0d3cc">GetSoundMeta</a>(fullName).ToSoundData();</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">if</span> (soundData is BGMData bGMData)</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            bGMData._name = Path.GetFileNameWithoutExtension(fullName);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            <span class="keywordflow">if</span> (bGMData.song == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            {</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                bGMData.song = <span class="keyword">new</span> BGMData.SongData();</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                bGMData.song.parts.Add(<span class="keyword">new</span> BGMData.Part());</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        }</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        soundData.clip = content;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        soundData.name = fileNameWithoutExtension;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound &#39;{fileNameWithoutExtension}&#39; loaded: {audioType}/{content.length}s&quot;</span>);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        SoundManager.current.dictData[fileNameWithoutExtension] = soundData;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">return</span> soundData;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="classModUtil.html#a31db01b9833b17e70a14a6cb2aa7a483">  206</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classModUtil.html#a31db01b9833b17e70a14a6cb2aa7a483">AddOrReplaceBGM</a>(<span class="keywordtype">string</span> bgmId)</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    {</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        List&lt;BGMData&gt; bgms = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a74f87041d9e6b0dc11495a59afc29c10">bgms</a>;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        Dictionary&lt;int, BGMData&gt; dictBGM = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        BGMData bGMData = SoundManager.current.GetData(bgmId) as BGMData;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="keywordflow">if</span> (!(bGMData == <span class="keyword">null</span>))</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            bGMData.name = bgmId[4..];</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">if</span> (bGMData.id &lt;= 0)</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                bGMData.id = bgms.Count + 1;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound bgm unassigned/{bGMData.id}/{bGMData.name}&quot;</span>);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            }</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">if</span> (dictBGM.TryGetValue(bGMData.id, out var value))</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            {</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                value.clip = bGMData.clip;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound bgm replace/{bGMData.id}/{value.name}/&gt;/{bGMData.name}&quot;</span>);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            }</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                bgms.Add(bGMData);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                dictBGM[bGMData.id] = bGMData;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound bgm addon/{bGMData.id}/{bGMData.name}&quot;</span>);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>System.Text.RegularExpressions;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>System.Threading;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>NPOI.SS.UserModel;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>NPOI.XSSF.UserModel;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using </span>UnityEngine.Networking;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span> <span class="keyword">class </span>ModUtil : <a class="code hl_class" href="classEClass.html">EClass</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classSourceImporter.html">SourceImporter</a> sourceImporter = <span class="keyword">new</span> <a class="code hl_class" href="classSourceImporter.html">SourceImporter</a>(SourceMapping);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span> <span class="keyword">static</span> Dictionary&lt;string, string&gt; fallbackTypes = <span class="keyword">new</span> Dictionary&lt;string, string&gt;();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span> <span class="keyword">static</span> IReadOnlyDictionary&lt;string, SourceData&gt; SourceMapping =&gt; (from f in typeof(<a class="code hl_class" href="classSourceManager.html">SourceManager</a>).GetFields()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        where typeof(<a class="code hl_class" href="classSourceData.html">SourceData</a>).IsAssignableFrom(f.FieldType)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        select f).ToDictionary((FieldInfo f) =&gt; f.FieldType.Name, (FieldInfo f) =&gt; f.GetValue(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>) as <a class="code hl_class" href="classSourceData.html">SourceData</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> OnModsActivated()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        SoundManager.current.soundLoaders.Add(LoadSoundData);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_class" href="classUIBook.html">UIBook</a>.<a class="code hl_variable" href="classUIBook.html#aa222c07e9e6a66056feb32845336f860">topicLoaders</a>.Add(LoadTopicFiles);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_class" href="classBookList.html">BookList</a>.<a class="code hl_variable" href="classBookList.html#af3821165665c366764504d956cb31c05">booklistLoaders</a>.Add(LoadBookList);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_class" href="classBaseModManager.html">BaseModManager</a>.<a class="code hl_function" href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">PublishEvent</a>(<span class="stringliteral">&quot;elin.mods.activated&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="classBaseModManager.html">BaseModManager</a>.<a class="code hl_function" href="classBaseModManager.html#acae7f54f391c14cd9bf1542e26774c71">SubscribeEvent</a>(<span class="stringliteral">&quot;elin.game.post_load&quot;</span>, PostLoadCleanup);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> PostLoadCleanup(<span class="keywordtype">object</span> context)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.RemoveWhere((<span class="keywordtype">int</span> <span class="keywordtype">id</span>) =&gt; !<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>.ContainsKey(<span class="keywordtype">id</span>));</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> LoadTypeFallback()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;type_resolver.txt&quot;</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">string</span>[] array = <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (File.Exists(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text))</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            array = <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">LoadTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            array = <span class="keyword">new</span> <span class="keywordtype">string</span>[2] { <span class="stringliteral">&quot;TrueArena,ArenaWaveEvent,ZoneEvent&quot;</span>, <span class="stringliteral">&quot;Elin-GeneRecombinator,Elin_GeneRecombinator.IncubationSacrifice,Chara&quot;</span> };</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a53413f94d70f8a806038b6974752109b">SaveTextArray</a>(<a class="code hl_class" href="classCorePath.html">CorePath</a>.<a class="code hl_property" href="classCorePath.html#a433ebb5d0a3d88629f959a50e036db16">RootData</a> + text, array);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">string</span>[] array2 = array;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array2.Length; i++)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordtype">string</span>[] array3 = array2[i].Split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (array3.Length &gt;= 2)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                RegisterSerializedTypeFallback(array3[0], array3[1], array3[2]);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RegisterSerializedTypeFallback(<span class="keywordtype">string</span> nameAssembly, <span class="keywordtype">string</span> nameType, <span class="keywordtype">string</span> nameFallbackType)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        fallbackTypes[nameType] = nameFallbackType;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classModPackage.html">ModPackage</a> GetModPackage(<span class="keywordtype">string</span> modId)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.MappedPackages.GetValueOrDefault(modId) as <a class="code hl_class" href="classModPackage.html">ModPackage</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> ImportExcel(<span class="keywordtype">string</span> pathToExcelFile, <span class="keywordtype">string</span> sheetName, <a class="code hl_class" href="classSourceData.html">SourceData</a> source)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        UnityEngine.Debug.Log(<span class="stringliteral">&quot;ImportExcel source:&quot;</span> + source?.ToString() + <span class="stringliteral">&quot; Path:&quot;</span> + pathToExcelFile);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">using </span>FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        XSSFWorkbook xSSFWorkbook = <span class="keyword">new</span> XSSFWorkbook((Stream)@is);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xSSFWorkbook.NumberOfSheets; i++)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">if</span> (sheetAt.SheetName != sheetName)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            UnityEngine.Debug.Log(<span class="stringliteral">&quot;Importing Sheet:&quot;</span> + sheetName);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                ExcelParser.path = pathToExcelFile;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">if</span> (!source.<a class="code hl_function" href="classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89">ImportData</a>(sheetAt, <span class="keyword">new</span> FileInfo(pathToExcelFile).Name, overwrite: <span class="keyword">true</span>))</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    UnityEngine.Debug.LogError(<a class="code hl_class" href="classERROR.html">ERROR</a>.<a class="code hl_variable" href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">msg</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                UnityEngine.Debug.Log(<span class="stringliteral">&quot;Imported &quot;</span> + sheetAt.SheetName);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                source.<a class="code hl_function" href="classSourceData.html#ab0d3e367fad8f5515b6df6f0eb5597ad">Reset</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                UnityEngine.Debug.LogError(<span class="stringliteral">&quot;[Error] Skipping import &quot;</span> + sheetAt.SheetName + <span class="stringliteral">&quot; :&quot;</span> + ex.Message + <span class="stringliteral">&quot;/&quot;</span> + ex.Source + <span class="stringliteral">&quot;/&quot;</span> + ex.StackTrace);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classModPackage.html">ModPackage</a> FindSourceRowPackage(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_class" href="classSourceData_1_1BaseRow.html">BaseRow</a> row)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.packages.OfType&lt;<a class="code hl_class" href="classModPackage.html">ModPackage</a>&gt;().LastOrDefault((<a class="code hl_class" href="classModPackage.html">ModPackage</a> p) =&gt; p.sourceRows.Contains(row));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">public</span> <span class="keyword">static</span> SerializableSoundData GetSoundMeta(<span class="keywordtype">string</span> soundPath)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">string</span> path = Path.ChangeExtension(soundPath, <span class="stringliteral">&quot;.json&quot;</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        SerializableSoundData serializableSoundData;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">if</span> (File.Exists(path))</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                serializableSoundData = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;SerializableSoundData&gt;(path);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keywordflow">if</span> (serializableSoundData.dataVersion == SerializableSoundData.SoundDataMetaVersion.V1)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                    <span class="keywordflow">return</span> serializableSoundData;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">catch</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        serializableSoundData = <span class="keyword">new</span> SerializableSoundData();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (soundPath.NormalizePath().Contains(<span class="stringliteral">&quot;/Sound/BGM/&quot;</span>))</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            serializableSoundData.type = SoundData.Type.BGM;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            serializableSoundData.bgmDataOptional = <span class="keyword">new</span> SerializableBGMData</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                parts = <span class="keyword">new</span> List&lt;BGMData.Part&gt;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    <span class="keyword">new</span> BGMData.Part()</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            };</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">SaveFile</a>(path, serializableSoundData);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">return</span> serializableSoundData;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">public</span> <span class="keyword">static</span> AudioType GetAudioType(<span class="keywordtype">string</span> extension)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">return</span> extension.ToLowerInvariant().Trim() <span class="keywordflow">switch</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="stringliteral">&quot;.acc&quot;</span> =&gt; AudioType.ACC, </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="stringliteral">&quot;.mp3&quot;</span> =&gt; AudioType.MPEG, </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="stringliteral">&quot;.ogg&quot;</span> =&gt; AudioType.OGGVORBIS, </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="stringliteral">&quot;.wav&quot;</span> =&gt; AudioType.WAV, </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            _ =&gt; AudioType.UNKNOWN, </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        };</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">public</span> <span class="keyword">static</span> SoundData LoadSoundData(<span class="keywordtype">string</span> soundId)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classMOD.html">MOD</a>.<a class="code hl_variable" href="classMOD.html#ae4a6fee83088f66bec4fa7cde78f985b">sounds</a>.TryGetValue(soundId, out var value) || !value.Exists)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">return</span> LoadSoundData(value);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keyword">public</span> <span class="keyword">static</span> SoundData LoadSoundData(FileInfo soundFile)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordtype">string</span> fileNameWithoutExtension = Path.GetFileNameWithoutExtension(soundFile.FullName);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordtype">string</span> fullName = soundFile.FullName;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        AudioType audioType = GetAudioType(soundFile.Extension);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordtype">bool</span> stream = fullName.NormalizePath().Contains(<span class="stringliteral">&quot;/BGM/&quot;</span>) &amp;&amp; audioType == AudioType.OGGVORBIS;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keyword">using </span>UnityWebRequest unityWebRequest = AudioClipStream.GetAudioClip(<span class="stringliteral">&quot;file://&quot;</span> + fullName, audioType, compressed: <span class="keyword">false</span>, stream);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        unityWebRequest.SendWebRequest();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        Stopwatch stopwatch = Stopwatch.StartNew();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">while</span> (!unityWebRequest.isDone &amp;&amp; stopwatch.ElapsedMilliseconds &lt; 5000)</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            Thread.Sleep(1);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">if</span> (unityWebRequest.result != UnityWebRequest.Result.Success)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            UnityEngine.Debug.LogError(<span class="stringliteral">&quot;#sound &#39;&quot;</span> + fileNameWithoutExtension + <span class="stringliteral">&quot;&#39; failed to load: &quot;</span> + unityWebRequest.error.IsEmpty(<span class="stringliteral">&quot;timeout&quot;</span>));</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        AudioClip content = DownloadHandlerAudioClip.GetContent(unityWebRequest);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordtype">int</span>? num = content?.samples;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">if</span> (!num.HasValue || num.GetValueOrDefault() &lt;= 0)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            UnityEngine.Debug.LogError(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound &#39;{fileNameWithoutExtension}&#39; sample is null: {audioType}&quot;</span>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        content.name = fileNameWithoutExtension;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        SoundData soundData = GetSoundMeta(fullName).ToSoundData();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">if</span> (soundData is BGMData bGMData)</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            bGMData._name = Path.GetFileNameWithoutExtension(fullName);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">if</span> (bGMData.song == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                bGMData.song = <span class="keyword">new</span> BGMData.SongData();</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                bGMData.song.parts.Add(<span class="keyword">new</span> BGMData.Part());</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        soundData.clip = content;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        soundData.name = fileNameWithoutExtension;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound &#39;{fileNameWithoutExtension}&#39; loaded: {audioType}/{content.length}s&quot;</span>);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        SoundManager.current.dictData[fileNameWithoutExtension] = soundData;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">return</span> soundData;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> AddOrReplaceBGM(<span class="keywordtype">string</span> bgmId)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        List&lt;BGMData&gt; bgms = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a74f87041d9e6b0dc11495a59afc29c10">bgms</a>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        Dictionary&lt;int, BGMData&gt; dictBGM = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_variable" href="classCore.html#a8ac9331b81131b4034d361e097440c23">Instance</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        BGMData bGMData = LoadSoundData(bgmId) as BGMData;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">if</span> (bGMData == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        bGMData.name = bgmId.Replace(<span class="stringliteral">&quot;BGM/&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">if</span> (bGMData.id &lt;= 0)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            Match match = Regex.Match(bGMData.name, <span class="stringliteral">&quot;^(\\d+)(?:_(.*))?$&quot;</span>);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">if</span> (match.Success)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = match.Groups[1].Value.ToInt();</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <span class="keywordtype">string</span> text = (match.Groups[2].Success ? match.Groups[2].Value : <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                bGMData.id = id;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                <span class="keywordflow">if</span> (!text.IsEmpty())</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                    bGMData.name = text;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                }</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            }</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="classModUtil.html#aac66296cb1121bc7d349d55381fdc0eb">  233</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classModPackage.html">ModPackage</a> <a class="code hl_function" href="classModUtil.html#aac66296cb1121bc7d349d55381fdc0eb">FindSoundPackage</a>(<span class="keywordtype">string</span> soundId)</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.packages.OfType&lt;<a class="code hl_class" href="classModPackage.html">ModPackage</a>&gt;().LastOrDefault((<a class="code hl_class" href="classModPackage.html">ModPackage</a> p) =&gt; p.sounds.Keys.Contains(soundId));</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classModUtil.html#a8a82bc872e029693ad57cf04d53f422a">  238</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> Playlist <a class="code hl_function" href="classModUtil.html#a8a82bc872e029693ad57cf04d53f422a">CreatePlaylist</a>(ref List&lt;int&gt; bgmIds, Playlist mold = <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        Playlist playlist = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.plBlank.Instantiate();</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">if</span> (bgmIds.Count == 0 &amp;&amp; (<span class="keywordtype">bool</span>)mold)</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                bGMData.id = bgms.Count + 1;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound bgm unassigned/{bGMData.id}/{bGMData.name}&quot;</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">if</span> (dictBGM.TryGetValue(bGMData.id, out var value))</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            value.clip = bGMData.clip;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound bgm replace/{bGMData.id}/{value.name}/&gt;/{bGMData.name}&quot;</span>);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        {</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            bgmIds = mold.ToInts();</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            playlist.shuffle = mold.shuffle;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            playlist.minSwitchTime = mold.minSwitchTime;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            playlist.nextBGMOnSwitch = mold.nextBGMOnSwitch;</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            playlist.ignoreLoop = mold.ignoreLoop;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            playlist.keepBGMifSamePlaylist = mold.keepBGMifSamePlaylist;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            playlist.name = mold.name;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> bgmId <span class="keywordflow">in</span> bgmIds)</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>.TryGetValue(bgmId, out var value))</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            {</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                playlist.list.Add(<span class="keyword">new</span> Playlist.Item</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                    data = value</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                });</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            }</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        }</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">return</span> playlist;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    }</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="classModUtil.html#ad02d71cfa9779e09e64610a442ef70db">  264</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classModUtil.html#ad02d71cfa9779e09e64610a442ef70db">SetBGMKnown</a>(<span class="keywordtype">int</span> bgmId, <span class="keywordtype">bool</span> known = <span class="keyword">true</span>)</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        known &amp;= <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>.ContainsKey(bgmId);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordflow">if</span> (known)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            bgms.Add(bGMData);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            dictBGM[bGMData.id] = bGMData;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            UnityEngine.Debug.Log(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#sound bgm addon/{bGMData.id}/{bGMData.name}&quot;</span>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classModPackage.html">ModPackage</a> FindSoundPackage(<span class="keywordtype">string</span> soundId)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">return</span> ModManagerCore.Instance.packages.OfType&lt;<a class="code hl_class" href="classModPackage.html">ModPackage</a>&gt;().LastOrDefault((<a class="code hl_class" href="classModPackage.html">ModPackage</a> p) =&gt; p.sounds.Keys.Contains(soundId));</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keyword">public</span> <span class="keyword">static</span> Playlist CreatePlaylist(ref List&lt;int&gt; bgmIds, Playlist mold = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        Playlist playlist = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">Sound</a>.plBlank.Instantiate();</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">if</span> (bgmIds.Count == 0 &amp;&amp; (<span class="keywordtype">bool</span>)mold)</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            bgmIds = mold.ToInts();</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            playlist.shuffle = mold.shuffle;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            playlist.minSwitchTime = mold.minSwitchTime;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            playlist.nextBGMOnSwitch = mold.nextBGMOnSwitch;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            playlist.ignoreLoop = mold.ignoreLoop;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            playlist.keepBGMifSamePlaylist = mold.keepBGMifSamePlaylist;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            playlist.name = mold.name;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> bgmId <span class="keywordflow">in</span> bgmIds)</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.Add(bgmId);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        }</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        {</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.Remove(bgmId);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        }</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="classModUtil.html#a4f0642b637056155d7d53344470e7d1b">  277</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span>[] <a class="code hl_function" href="classModUtil.html#a4f0642b637056155d7d53344470e7d1b">LoadBookList</a>()</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordflow">return</span> (from d in PackageIterator.GetDirectories(<span class="stringliteral">&quot;Text&quot;</span>).SelectMany((DirectoryInfo d) =&gt; d.GetDirectories())</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            select d.FullName).ToArray();</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="classModUtil.html#ac7201a52cd96eda0178278d223f8b55b">  283</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span>[] <a class="code hl_function" href="classModUtil.html#ac7201a52cd96eda0178278d223f8b55b">LoadTopicFiles</a>()</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">return</span> PackageIterator.GetFiles(<span class="stringliteral">&quot;Text/Help/_topics.txt&quot;</span>).SelectMany((FileInfo f) =&gt; IO.LoadTextArray(f.FullName)).ToArray();</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    }</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>}</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>.TryGetValue(bgmId, out var value))</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                playlist.list.Add(<span class="keyword">new</span> Playlist.Item</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                    data = value</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                });</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">return</span> playlist;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetBGMKnown(<span class="keywordtype">int</span> bgmId, <span class="keywordtype">bool</span> known = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        known &amp;= <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_variable" href="classEClass.html#a43ff00755aa7d34b91ab7f9dbbe922c3">core</a>.<a class="code hl_variable" href="classCore.html#a174ab976ba96dbcd610d5219de4a85cb">refs</a>.<a class="code hl_variable" href="classCoreRef.html#a23b6310cd88ac8985687addfd36327df">dictBGM</a>.ContainsKey(bgmId);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">if</span> (known)</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.Add(bgmId);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#aaf17e3ff62e9e834064c5d4b782a84cb">player</a>.<a class="code hl_variable" href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">knownBGMs</a>.Remove(bgmId);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span>[] LoadBookList()</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        <span class="keywordflow">return</span> (from d in PackageIterator.GetDirectories(<span class="stringliteral">&quot;Text&quot;</span>).SelectMany((DirectoryInfo d) =&gt; d.GetDirectories())</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            select d.FullName).ToArray();</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span>[] LoadTopicFiles()</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        <span class="keywordflow">return</span> PackageIterator.GetFiles(<span class="stringliteral">&quot;Text/Help/_topics.txt&quot;</span>).SelectMany((FileInfo f) =&gt; <a class="code hl_class" href="classIO.html">IO</a>.<a class="code hl_function" href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">LoadTextArray</a>(f.FullName)).ToArray();</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>}</div>
 <div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00087">ModManager.cs:87</a></div></div>
 <div class="ttc" id="aclassBaseModManager_html"><div class="ttname"><a href="classBaseModManager.html">BaseModManager</a></div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00007">BaseModManager.cs:8</a></div></div>
 <div class="ttc" id="aclassBaseModManager_html_a9ea8d96cc9a903415e9ed9b62b47a7ab"><div class="ttname"><a href="classBaseModManager.html#a9ea8d96cc9a903415e9ed9b62b47a7ab">BaseModManager.PublishEvent</a></div><div class="ttdeci">static void PublishEvent(string eventId, object data=null)</div><div class="ttdef"><b>Definition:</b> <a href="BaseModManager_8cs_source.html#l00114">BaseModManager.cs:114</a></div></div>
@@ -399,30 +415,13 @@ $(document).ready(function(){initNavTree('ModUtil_8cs_source.html',''); initResi
 <div class="ttc" id="aclassEClass_html_af170c2fbde2a903f1c288b48a96566e6"><div class="ttname"><a href="classEClass.html#af170c2fbde2a903f1c288b48a96566e6">EClass.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00047">EClass.cs:47</a></div></div>
 <div class="ttc" id="aclassERROR_html"><div class="ttname"><a href="classERROR.html">ERROR</a></div><div class="ttdef"><b>Definition:</b> <a href="ERROR_8cs_source.html#l00001">ERROR.cs:2</a></div></div>
 <div class="ttc" id="aclassERROR_html_a874d44fb6d2d560a40be056ded3d029b"><div class="ttname"><a href="classERROR.html#a874d44fb6d2d560a40be056ded3d029b">ERROR.msg</a></div><div class="ttdeci">static string msg</div><div class="ttdef"><b>Definition:</b> <a href="ERROR_8cs_source.html#l00003">ERROR.cs:3</a></div></div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
+<div class="ttc" id="aclassIO_html_a0a40c97df4bcb6632fee67504caa619d"><div class="ttname"><a href="classIO.html#a0a40c97df4bcb6632fee67504caa619d">IO.LoadTextArray</a></div><div class="ttdeci">static string[] LoadTextArray(string _path)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00475">IO.cs:475</a></div></div>
+<div class="ttc" id="aclassIO_html_a53413f94d70f8a806038b6974752109b"><div class="ttname"><a href="classIO.html#a53413f94d70f8a806038b6974752109b">IO.SaveTextArray</a></div><div class="ttdeci">static void SaveTextArray(string path, string[] text)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00111">IO.cs:111</a></div></div>
+<div class="ttc" id="aclassIO_html_ac15051fb75be08e9ff3dd16de65959b3"><div class="ttname"><a href="classIO.html#ac15051fb75be08e9ff3dd16de65959b3">IO.SaveFile</a></div><div class="ttdeci">static void SaveFile(string path, object obj, bool compress=false, JsonSerializerSettings setting=null)</div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00089">IO.cs:89</a></div></div>
 <div class="ttc" id="aclassMOD_html"><div class="ttname"><a href="classMOD.html">MOD</a></div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00006">MOD.cs:7</a></div></div>
 <div class="ttc" id="aclassMOD_html_ae4a6fee83088f66bec4fa7cde78f985b"><div class="ttname"><a href="classMOD.html#ae4a6fee83088f66bec4fa7cde78f985b">MOD.sounds</a></div><div class="ttdeci">static Dictionary&lt; string, FileInfo &gt; sounds</div><div class="ttdef"><b>Definition:</b> <a href="MOD_8cs_source.html#l00024">MOD.cs:24</a></div></div>
 <div class="ttc" id="aclassModPackage_html"><div class="ttname"><a href="classModPackage.html">ModPackage</a></div><div class="ttdef"><b>Definition:</b> <a href="ModPackage_8cs_source.html#l00009">ModPackage.cs:10</a></div></div>
-<div class="ttc" id="aclassModUtil_html"><div class="ttname"><a href="classModUtil.html">ModUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00013">ModUtil.cs:14</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a0d092261fe4ebefa745f3a38c602253e"><div class="ttname"><a href="classModUtil.html#a0d092261fe4ebefa745f3a38c602253e">ModUtil.LoadSoundData</a></div><div class="ttdeci">static SoundData LoadSoundData(string soundId)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00154">ModUtil.cs:154</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a1828dbd4faebae5c3d6489efb7b1a441"><div class="ttname"><a href="classModUtil.html#a1828dbd4faebae5c3d6489efb7b1a441">ModUtil.SourceMapping</a></div><div class="ttdeci">static IReadOnlyDictionary&lt; string, SourceData &gt; SourceMapping</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00019">ModUtil.cs:19</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a212dd865a3e48ab848ee24fce3fb4326"><div class="ttname"><a href="classModUtil.html#a212dd865a3e48ab848ee24fce3fb4326">ModUtil.GetModPackage</a></div><div class="ttdeci">static ModPackage GetModPackage(string modId)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00066">ModUtil.cs:66</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a2af737667dd4cb0d3fb420c8ca7f37d8"><div class="ttname"><a href="classModUtil.html#a2af737667dd4cb0d3fb420c8ca7f37d8">ModUtil.sourceImporter</a></div><div class="ttdeci">static SourceImporter sourceImporter</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00015">ModUtil.cs:15</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a31ba10f41ba488756158380558ea91b9"><div class="ttname"><a href="classModUtil.html#a31ba10f41ba488756158380558ea91b9">ModUtil.GetAudioType</a></div><div class="ttdeci">static AudioType GetAudioType(string extension)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00142">ModUtil.cs:142</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a31db01b9833b17e70a14a6cb2aa7a483"><div class="ttname"><a href="classModUtil.html#a31db01b9833b17e70a14a6cb2aa7a483">ModUtil.AddOrReplaceBGM</a></div><div class="ttdeci">static void AddOrReplaceBGM(string bgmId)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00206">ModUtil.cs:206</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a4d4f385335427f4154c36b09ebb0d3cc"><div class="ttname"><a href="classModUtil.html#a4d4f385335427f4154c36b09ebb0d3cc">ModUtil.GetSoundMeta</a></div><div class="ttdeci">static SerializableSoundData GetSoundMeta(string soundPath)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00108">ModUtil.cs:108</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a4f0642b637056155d7d53344470e7d1b"><div class="ttname"><a href="classModUtil.html#a4f0642b637056155d7d53344470e7d1b">ModUtil.LoadBookList</a></div><div class="ttdeci">static string[] LoadBookList()</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00277">ModUtil.cs:277</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a60893e4a716c8e5f69298217fbdab793"><div class="ttname"><a href="classModUtil.html#a60893e4a716c8e5f69298217fbdab793">ModUtil.PostLoadCleanup</a></div><div class="ttdeci">static void PostLoadCleanup(object context)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00032">ModUtil.cs:32</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a6b85ad7fd9d7cd4d72c8fea59c3f47d8"><div class="ttname"><a href="classModUtil.html#a6b85ad7fd9d7cd4d72c8fea59c3f47d8">ModUtil.RegisterSerializedTypeFallback</a></div><div class="ttdeci">static void RegisterSerializedTypeFallback(string nameAssembly, string nameType, string nameFallbackType)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00061">ModUtil.cs:61</a></div></div>
-<div class="ttc" id="aclassModUtil_html_a8a82bc872e029693ad57cf04d53f422a"><div class="ttname"><a href="classModUtil.html#a8a82bc872e029693ad57cf04d53f422a">ModUtil.CreatePlaylist</a></div><div class="ttdeci">static Playlist CreatePlaylist(ref List&lt; int &gt; bgmIds, Playlist mold=null)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00238">ModUtil.cs:238</a></div></div>
-<div class="ttc" id="aclassModUtil_html_aa27eede742d1e4dff63fa45538cada84"><div class="ttname"><a href="classModUtil.html#aa27eede742d1e4dff63fa45538cada84">ModUtil.fallbackTypes</a></div><div class="ttdeci">static Dictionary&lt; string, string &gt; fallbackTypes</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00017">ModUtil.cs:17</a></div></div>
-<div class="ttc" id="aclassModUtil_html_aac66296cb1121bc7d349d55381fdc0eb"><div class="ttname"><a href="classModUtil.html#aac66296cb1121bc7d349d55381fdc0eb">ModUtil.FindSoundPackage</a></div><div class="ttdeci">static ModPackage FindSoundPackage(string soundId)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00233">ModUtil.cs:233</a></div></div>
-<div class="ttc" id="aclassModUtil_html_ab12f8dcd83e8d82039b8ab2bb8aaab00"><div class="ttname"><a href="classModUtil.html#ab12f8dcd83e8d82039b8ab2bb8aaab00">ModUtil.FindSourceRowPackage</a></div><div class="ttdeci">static ModPackage FindSourceRowPackage(SourceData.BaseRow row)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00103">ModUtil.cs:103</a></div></div>
-<div class="ttc" id="aclassModUtil_html_ab21eb1b2ab0065fa0e40e578e1be5217"><div class="ttname"><a href="classModUtil.html#ab21eb1b2ab0065fa0e40e578e1be5217">ModUtil.LoadSoundData</a></div><div class="ttdeci">static SoundData LoadSoundData(FileInfo soundFile)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00163">ModUtil.cs:163</a></div></div>
-<div class="ttc" id="aclassModUtil_html_abf1e487b6edc0d22a16aa285e3bfb307"><div class="ttname"><a href="classModUtil.html#abf1e487b6edc0d22a16aa285e3bfb307">ModUtil.OnModsActivated</a></div><div class="ttdeci">static void OnModsActivated()</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00023">ModUtil.cs:23</a></div></div>
-<div class="ttc" id="aclassModUtil_html_ac7201a52cd96eda0178278d223f8b55b"><div class="ttname"><a href="classModUtil.html#ac7201a52cd96eda0178278d223f8b55b">ModUtil.LoadTopicFiles</a></div><div class="ttdeci">static string[] LoadTopicFiles()</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00283">ModUtil.cs:283</a></div></div>
-<div class="ttc" id="aclassModUtil_html_acb36876e5c912f025129bda3e5ebacb8"><div class="ttname"><a href="classModUtil.html#acb36876e5c912f025129bda3e5ebacb8">ModUtil.LoadTypeFallback</a></div><div class="ttdeci">static void LoadTypeFallback()</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00037">ModUtil.cs:37</a></div></div>
-<div class="ttc" id="aclassModUtil_html_ad02d71cfa9779e09e64610a442ef70db"><div class="ttname"><a href="classModUtil.html#ad02d71cfa9779e09e64610a442ef70db">ModUtil.SetBGMKnown</a></div><div class="ttdeci">static void SetBGMKnown(int bgmId, bool known=true)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00264">ModUtil.cs:264</a></div></div>
-<div class="ttc" id="aclassModUtil_html_aefa809513e8a6902a3b88650a9f6bcdf"><div class="ttname"><a href="classModUtil.html#aefa809513e8a6902a3b88650a9f6bcdf">ModUtil.ImportExcel</a></div><div class="ttdeci">static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)</div><div class="ttdef"><b>Definition:</b> <a href="ModUtil_8cs_source.html#l00071">ModUtil.cs:71</a></div></div>
 <div class="ttc" id="aclassPlayer_html_a653ddfd408c5ddc8e1f132f3a7fb57fe"><div class="ttname"><a href="classPlayer.html#a653ddfd408c5ddc8e1f132f3a7fb57fe">Player.knownBGMs</a></div><div class="ttdeci">HashSet&lt; int &gt; knownBGMs</div><div class="ttdef"><b>Definition:</b> <a href="Player_8cs_source.html#l01131">Player.cs:1131</a></div></div>
 <div class="ttc" id="aclassSourceData_1_1BaseRow_html"><div class="ttname"><a href="classSourceData_1_1BaseRow.html">SourceData.BaseRow</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00585">SourceData.cs:586</a></div></div>
 <div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00010">SourceData.cs:11</a></div></div>

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.302 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.303 Nightly</span>
    </div>
   </td>
  </tr>
@@ -253,7 +253,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SpatialGen_8cs_source.html#l00016">16</a> of file <a class="el" href="SpatialGen_8cs_source.html">SpatialGen.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
 <div class="line"><span class="lineno">   18</span>        <a class="code hl_class" href="classSourceZone_1_1Row.html">SourceZone.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a43ee8479482668d85c820a75f4a6f5fe">zones</a>.map[id];</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="classSpatial.html">Spatial</a> spatial = <a class="code hl_class" href="classClassCache.html">ClassCache</a>.Create&lt;<a class="code hl_class" href="classSpatial.html">Spatial</a>&gt;(row.<a class="code hl_variable" href="classSourceZone_1_1Row.html#a0f8847852d5d017d7e006cdc218d5c7e">type</a>, <span class="stringliteral">&quot;Elin&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="classSpatial.html">Spatial</a> spatial = <a class="code hl_class" href="classClassCache.html">ClassCache</a>.Create&lt;<a class="code hl_class" href="classSpatial.html">Spatial</a>&gt;(row.<a class="code hl_variable" href="classSourceZone_1_1Row.html#a0f8847852d5d017d7e006cdc218d5c7e">type</a>, <span class="stringliteral">&quot;Elin&quot;</span>) ?? <span class="keyword">new</span> <a class="code hl_class" href="classZone.html">Zone</a>();</div>
 <div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span> (x == -99999)</div>
 <div class="line"><span class="lineno">   21</span>        {</div>
 <div class="line"><span class="lineno">   22</span>            x = ((row.pos.Length != 0) ? row.<a class="code hl_variable" href="classSourceZone_1_1Row.html#a4119726315f85a0ae8c6e8261ae2467a">pos</a>[0] : (-1000));</div>
@@ -284,6 +284,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSpatial_html_a4f6c96d31ec7c12004d5d9831228c597"><div class="ttname"><a href="classSpatial.html#a4f6c96d31ec7c12004d5d9831228c597">Spatial.OnAfterCreate</a></div><div class="ttdeci">virtual void OnAfterCreate()</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00642">Spatial.cs:642</a></div></div>
 <div class="ttc" id="aclassSpatial_html_a74c17e96f0423cef7b3844ce0c57c686"><div class="ttname"><a href="classSpatial.html#a74c17e96f0423cef7b3844ce0c57c686">Spatial.Create</a></div><div class="ttdeci">void Create(string _id, int _x, int _y, int _icon)</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00612">Spatial.cs:612</a></div></div>
 <div class="ttc" id="aclassSpatial_html_aae22897ae9f955fe847da1af30e7aa3f"><div class="ttname"><a href="classSpatial.html#aae22897ae9f955fe847da1af30e7aa3f">Spatial.Register</a></div><div class="ttdeci">void Register()</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00630">Spatial.cs:630</a></div></div>
+<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Spatial_8cs_source.html#l00703">Spatial.AddChild()</a>, <a class="el" href="Spatial_8cs_source.html#l00612">Spatial.Create()</a>, <a class="el" href="Spatial_8cs_source.html#l00642">Spatial.OnAfterCreate()</a>, <a class="el" href="SourceZone_8cs_source.html#l00044">SourceZone.Row.pos</a>, <a class="el" href="Spatial_8cs_source.html#l00630">Spatial.Register()</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, <a class="el" href="SourceZone_8cs_source.html#l00016">SourceZone.Row.type</a>, and <a class="el" href="SourceManager_8cs_source.html#l00065">SourceManager.zones</a>.</p>
 
@@ -342,7 +343,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSpatialGen_html_a1f71ec7993040f0b0ac2de45d7b4ed64"><div class="ttname"><a href="classSpatialGen.html#a1f71ec7993040f0b0ac2de45d7b4ed64">SpatialGen.Create</a></div><div class="ttdeci">static Spatial Create(string id, Spatial parent, bool register, int x=-99999, int y=-99999, int icon=0)</div><div class="ttdef"><b>Definition:</b> <a href="SpatialGen_8cs_source.html#l00016">SpatialGen.cs:16</a></div></div>
 <div class="ttc" id="aclassSpatial_html_ac91ab5f2967837520d40a341ce0ede79"><div class="ttname"><a href="classSpatial.html#ac91ab5f2967837520d40a341ce0ede79">Spatial.y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00105">Spatial.cs:106</a></div></div>
 <div class="ttc" id="aclassSpatial_html_af8df28fd32e0eb5c0fc25a68cb2c8035"><div class="ttname"><a href="classSpatial.html#af8df28fd32e0eb5c0fc25a68cb2c8035">Spatial.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Spatial_8cs_source.html#l00093">Spatial.cs:94</a></div></div>
-<div class="ttc" id="aclassZone_html"><div class="ttname"><a href="classZone.html">Zone</a></div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00011">Zone.cs:12</a></div></div>
 <div class="ttc" id="aclassZone_html_a4db1e848e7bff8b57cbc60873d15b87d"><div class="ttname"><a href="classZone.html#a4db1e848e7bff8b57cbc60873d15b87d">Zone.GetTopZone</a></div><div class="ttdeci">Zone GetTopZone()</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l01973">Zone.cs:1973</a></div></div>
 <div class="ttc" id="aclassZone_html_ae866846af33c4a0044b0642efb5f8dc6"><div class="ttname"><a href="classZone.html#ae866846af33c4a0044b0642efb5f8dc6">Zone.Region</a></div><div class="ttdeci">Region Region</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l00165">Zone.cs:165</a></div></div>
 </div><!-- fragment -->

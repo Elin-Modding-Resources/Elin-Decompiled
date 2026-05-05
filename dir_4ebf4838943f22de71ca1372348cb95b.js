@@ -872,7 +872,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "ModManager.cs", "ModManager_8cs.html", "ModManager_8cs" ],
     [ "ModMinigame.cs", "ModMinigame_8cs.html", "ModMinigame_8cs" ],
     [ "ModPackage.cs", "ModPackage_8cs.html", "ModPackage_8cs" ],
-    [ "ModUtil.cs", "ModUtil_8cs.html", "ModUtil_8cs" ],
+    [ "ModUtil.cs", "ModUtil_8cs.html", null ],
     [ "Msg.cs", "Msg_8cs.html", "Msg_8cs" ],
     [ "MsgCat.cs", "MsgCat_8cs.html", "MsgCat_8cs" ],
     [ "MsgLog.cs", "MsgLog_8cs.html", "MsgLog_8cs" ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.302 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.303 Nightly</span>
    </div>
   </td>
  </tr>
@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('SpatialGen_8cs_source.html',''); initR
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classSpatialGen.html#a1f71ec7993040f0b0ac2de45d7b4ed64">   16</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classSpatial.html">Spatial</a> <a class="code hl_function" href="classSpatialGen.html#a1f71ec7993040f0b0ac2de45d7b4ed64">Create</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>, <a class="code hl_class" href="classSpatial.html">Spatial</a> parent, <span class="keywordtype">bool</span> <span class="keyword">register</span>, <span class="keywordtype">int</span> x = -99999, <span class="keywordtype">int</span> y = -99999, <span class="keywordtype">int</span> icon = 0)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="classSourceZone_1_1Row.html">SourceZone.Row</a> row = <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a43ee8479482668d85c820a75f4a6f5fe">zones</a>.map[id];</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="classSpatial.html">Spatial</a> spatial = <a class="code hl_class" href="classClassCache.html">ClassCache</a>.Create&lt;<a class="code hl_class" href="classSpatial.html">Spatial</a>&gt;(row.<a class="code hl_variable" href="classSourceZone_1_1Row.html#a0f8847852d5d017d7e006cdc218d5c7e">type</a>, <span class="stringliteral">&quot;Elin&quot;</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="classSpatial.html">Spatial</a> spatial = <a class="code hl_class" href="classClassCache.html">ClassCache</a>.Create&lt;<a class="code hl_class" href="classSpatial.html">Spatial</a>&gt;(row.<a class="code hl_variable" href="classSourceZone_1_1Row.html#a0f8847852d5d017d7e006cdc218d5c7e">type</a>, <span class="stringliteral">&quot;Elin&quot;</span>) ?? <span class="keyword">new</span> <a class="code hl_class" href="classZone.html">Zone</a>();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (x == -99999)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            x = ((row.pos.Length != 0) ? row.<a class="code hl_variable" href="classSourceZone_1_1Row.html#a4119726315f85a0ae8c6e8261ae2467a">pos</a>[0] : (-1000));</div>

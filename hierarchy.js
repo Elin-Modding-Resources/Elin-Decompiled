@@ -1001,7 +1001,6 @@ var hierarchy =
       ] ],
       [ "MeetingManager", "classMeetingManager.html", null ],
       [ "MixedFoodData", "classMixedFoodData.html", null ],
-      [ "ModUtil", "classModUtil.html", null ],
       [ "Msg", "classMsg.html", null ],
       [ "MsgLog", "classMsgLog.html", null ],
       [ "MsgLog.Data", "classMsgLog_1_1Data.html", null ],
