@@ -1,5 +1,14 @@
 var NAVTREEINDEX135 =
 {
+"classUIRecipeInfo.html":[1,0,2106],
+"classUIRecipeInfo.html#a0078b73e2009226976b4fb329ba6eb18":[1,0,2106,9],
+"classUIRecipeInfo.html#a04640eb9cfade7482c7558a95268bcb3":[1,0,2106,20],
+"classUIRecipeInfo.html#a09cd560fc57e7ffaeea06ded7dd1220d":[1,0,2106,15],
+"classUIRecipeInfo.html#a1075e2a43acb9954d2c3a126fd603441":[1,0,2106,6],
+"classUIRecipeInfo.html#a12ac1fd63bcf24b605fbeb724da07495":[1,0,2106,7],
+"classUIRecipeInfo.html#a1393f07d2734eab4494c6155a65973c7":[1,0,2106,26],
+"classUIRecipeInfo.html#a14e1e7c671afd9f7a9f6f8a27e000341":[1,0,2106,14],
+"classUIRecipeInfo.html#a1697d99099a4f5bf7f1583ce6733cee4":[1,0,2106,13],
 "classUIRecipeInfo.html#a206549acd1879e103cb78b8004bf4411":[1,0,2106,40],
 "classUIRecipeInfo.html#a370bb29939131e25f84d308028659b9e":[1,0,2106,30],
 "classUIRecipeInfo.html#a38c4fa7fe9e15bc7d1216b47042d4832":[1,0,2106,21],
@@ -240,14 +249,5 @@ var NAVTREEINDEX135 =
 "classUiInputField.html#ad8bfc09c35baaec415caba600232dc54":[1,0,2085,7],
 "classUiInputField.html#ad8f325752205f67ed11f59515c3cf257":[1,0,2085,6],
 "classUiInputField.html#adebdc7a33b7e776794a88e4a0b86c871":[1,0,2085,11],
-"classUiInputField.html#ae4ef3f5b7898c455c13859f8ca5cccc4":[1,0,2085,17],
-"classUiInputField.html#ae552a1943198188fc9aa4d24bae43571":[1,0,2085,14],
-"classUiInputField.html#aec98039efad25a06d752c5fa773f5561":[1,0,2085,12],
-"classUiInputField.html#af45a9f070ccf6d5052f2b4631fc18fb6":[1,0,2085,15],
-"classUiInputField.html#afb3f4bb9e0925c6bc6261fc40f8f07db":[1,0,2085,10],
-"classUndoManager.html":[1,0,2118],
-"classUndoManager.html#a0afa43b69a43c19d6989be0dfd6d2c07":[1,0,2118,6],
-"classUndoManager.html#a25e113eda00c61c1f00871fc42bb4f75":[1,0,2118,8],
-"classUndoManager.html#a2ab7e948d250cae2e6356b7687281c00":[1,0,2118,7],
-"classUndoManager.html#a434df48c1bf9cdbdb30830d33f632c6a":[1,0,2118,5]
+"classUiInputField.html#ae4ef3f5b7898c455c13859f8ca5cccc4":[1,0,2085,17]
 };

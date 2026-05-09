@@ -55,6 +55,7 @@ var classBaseCondition =
     [ "IsElemental", "classBaseCondition.html#afaf2494eaf8d9e427a88f248d0e77142", null ],
     [ "isPerfume", "classBaseCondition.html#adb275b67d6831d265774cb24476031e2", null ],
     [ "IsToggle", "classBaseCondition.html#a27be1bf4b5e38ddf5d9e1da8f58101ec", null ],
+    [ "MaxDuration", "classBaseCondition.html#a3fbbe142eed2b58d07ae906e14a09ec8", null ],
     [ "Name", "classBaseCondition.html#a498217d12174c0b19681fc95b63ea0e3", null ],
     [ "Owner", "classBaseCondition.html#a289b434221238da225dd256cdcdd52d5", null ],
     [ "P2", "classBaseCondition.html#a84faa4d75f092fa823d264c46e10c46c", null ],

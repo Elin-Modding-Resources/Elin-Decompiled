@@ -1,5 +1,11 @@
 var NAVTREEINDEX70 =
 {
+"classGlobalGoal.html#a9ac4b8ed5f324bc100e6dd06f4b51e71":[1,0,579,9],
+"classGlobalGoal.html#aa9264f11678dea51f4dbd69390f59c29":[1,0,579,8],
+"classGlobalGoal.html#adddd8a0f1a96851f123e72e4728a77bf":[1,0,579,5],
+"classGlobalGoal.html#ade51c0ca2782e364d8cb48bf66b2a542":[1,0,579,6],
+"classGlobalGoal.html#afeaafaf50c4aa90c1bf01fdc681f9b37":[1,0,579,0],
+"classGlobalGoalAdv.html":[1,0,580],
 "classGlobalGoalAdv.html#a4b10fb5369a0b97b50f052d91fcf845e":[1,0,580,0],
 "classGlobalGoalExplore.html":[1,0,581],
 "classGlobalGoalExplore.html#a689769ea5b7cf54a36d8bfd8cefca1ca":[1,0,581,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX70 =
 "classGrowSystem.html#a8f378d1da1d951e47a8883d77d002195":[1,0,611,60],
 "classGrowSystem.html#a91e2316e7b1c4140d97616cd211e8d44":[1,0,611,37],
 "classGrowSystem.html#a9975e5a3addacdc704ab5297f88ec652":[1,0,611,70],
-"classGrowSystem.html#a9b1775a530623ddea3d8d50b7b1f4cf3":[1,0,611,74],
-"classGrowSystem.html#aa2e9cb8324ddddfe04cdb43106bd7262":[1,0,611,27],
-"classGrowSystem.html#aa46c003453fd64f10cc86ef34afc242b":[1,0,611,24],
-"classGrowSystem.html#aaac640d5d5b782e7e162d203da14d509":[1,0,611,11],
-"classGrowSystem.html#aac16c85bac86ae5a9825baeb66520e6f":[1,0,611,16],
-"classGrowSystem.html#aac6278e9765227e16e062e1d79f598c6":[1,0,611,57],
-"classGrowSystem.html#aad7964ae6bf55495bdabdafba3cc5c6f":[1,0,611,66]
+"classGrowSystem.html#a9b1775a530623ddea3d8d50b7b1f4cf3":[1,0,611,74]
 };

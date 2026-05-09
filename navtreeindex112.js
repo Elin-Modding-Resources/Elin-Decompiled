@@ -1,5 +1,14 @@
 var NAVTREEINDEX112 =
 {
+"classSpriteReplacer.html#adae3887c758236ff74a63afadbb64568":[1,0,1285,1],
+"classSpriteReplacer.html#ae80438d18cf1e6ba8a2d7c3f702f5bf6":[1,0,1285,4],
+"classSpriteReplacerAnimation.html":[1,0,1286],
+"classSpriteReplacerAnimation.html#a0a178b33ca500c108ddbc35db7be3685":[1,0,1286,4],
+"classSpriteReplacerAnimation.html#a21d5036fdbd4877031ec1d7bc4676538":[1,0,1286,5],
+"classSpriteReplacerAnimation.html#a43452a9098cce9c27158367920da081f":[1,0,1286,9],
+"classSpriteReplacerAnimation.html#a4c5d962cd32d286f7f8fd1a7f3162811":[1,0,1286,2],
+"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eaf":[1,0,1286,0],
+"classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eafa7a1920d61156abc05a60135aefe8bc67":[1,0,1286,0,0],
 "classSpriteReplacerAnimation.html#a95b9ca97062b007c3bf9ade338bd0eafaf769aafbc2b8929829c52f0df81f6421":[1,0,1286,0,1],
 "classSpriteReplacerAnimation.html#abbae4ce3b9dbae35c520a1f0a99ddeee":[1,0,1286,3],
 "classSpriteReplacerAnimation.html#adfd0818c18b61bf53bb9869b78fe6c4f":[1,0,1286,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX112 =
 "classTCExtra.html#aaadba122a3e0913c400fd15aad69a022":[1,0,1353,11],
 "classTCExtra.html#ab0ed7abbde53f3afe7179c0d0877231a":[1,0,1353,21],
 "classTCExtra.html#ab1847f3c15936de0bc8c119694657c6c":[1,0,1353,20],
-"classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd":[1,0,1353,26],
-"classTCExtra.html#ac7942b42be58cbd780976b8d0b03462e":[1,0,1353,3],
-"classTCExtra.html#acd53fc7cb96769da28d1babb50dc37d8":[1,0,1353,15],
-"classTCExtra.html#af1c45adf4635f9c5029d6cc623144d0a":[1,0,1353,17],
-"classTCExtra.html#af7487b052252310d271231f2d1425eeb":[1,0,1353,6],
-"classTCExtra.html#afa897efdbfcd97301f4b311c8ccc8e87":[1,0,1353,24],
-"classTCExtra.html#afb2f6d4cffdc55958db829020ed9f346":[1,0,1353,4],
-"classTCExtraProgress.html":[1,0,1354],
-"classTCExtraProgress.html#a545cf4d793ee254ba5c850aa4ee0f2ee":[1,0,1354,8],
-"classTCExtraProgress.html#a603cb12c156196937d884c688d749ced":[1,0,1354,3]
+"classTCExtra.html#ab6896b1cc1195994baf7a50203db8cdd":[1,0,1353,26]
 };

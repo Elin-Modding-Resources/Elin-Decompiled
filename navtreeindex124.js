@@ -1,5 +1,14 @@
 var NAVTREEINDEX124 =
 {
+"classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1724,2],
+"classTraitLightSun.html#ab57619e493c8a4fd38d34dc931603829":[1,0,1724,1],
+"classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1724,3],
+"classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1724,4],
+"classTraitLightSun.html#aff2a91bfa08afa9a8013938b7e09d6b7":[1,0,1724,0],
+"classTraitLittleBall.html":[1,0,1725],
+"classTraitLittleBall.html#a4a80b199bb3d05a702c698829c40a713":[1,0,1725,0],
+"classTraitLittleOne.html":[1,0,1726],
+"classTraitLittleOne.html#a196d3faedc31a553cf60e02e07ec8eb1":[1,0,1726,1],
 "classTraitLittleOne.html#a684a3d82f3490aaf03fa09342ca9c16f":[1,0,1726,3],
 "classTraitLittleOne.html#a6879827034676409bc8095bb301c4222":[1,0,1726,0],
 "classTraitLittleOne.html#a709fb591676b3fbde62b1c23a06c7107":[1,0,1726,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitMonsterBall.html#a8c077132dd854a5d52130317cb183c09":[1,0,1789,9],
 "classTraitMonsterBall.html#a8c84c59d2b629a6fe2984e8c00d94312":[1,0,1789,3],
 "classTraitMonsterBall.html#a92e81fe688eef43f0edd42d1e2bf7a2c":[1,0,1789,6],
-"classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28":[1,0,1789,10],
-"classTraitMonsterBall.html#aaeb6f9fa895248244d88d0fc00d0f8a9":[1,0,1789,1],
-"classTraitMonsterBall.html#abf8484d5fc4555b0219682768e8d0160":[1,0,1789,5],
-"classTraitMonsterBall.html#aff66f460e585dd1fde7a184789916b5d":[1,0,1789,7],
-"classTraitMoongate.html":[1,0,1790],
-"classTraitMoongate.html#a074c20e5f9d54bcc590372dc69766388":[1,0,1790,2],
-"classTraitMoongate.html#a0b42907bbe5a84a7d0ddfd39d740d58c":[1,0,1790,0],
-"classTraitMoongate.html#a4a517aab4bd4dc0df5f124fb8e81c984":[1,0,1790,3],
-"classTraitMoongate.html#a6197df121fca3a909195e91c032dd3f4":[1,0,1790,6],
-"classTraitMoongate.html#a6904ec6f73d14f1204481714bb72414f":[1,0,1790,1]
+"classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28":[1,0,1789,10]
 };

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.303 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.304 Nightly</span>
    </div>
   </td>
  </tr>
@@ -330,6 +330,8 @@ Properties</h2></td></tr>
 <tr class="separator:a7bcd09d541305c41297cabf1a1449294 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25aa6aa3d3fe7c1621dd07fe5e0d412a inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a25aa6aa3d3fe7c1621dd07fe5e0d412a">HasDuration</a><code> [get]</code></td></tr>
 <tr class="separator:a25aa6aa3d3fe7c1621dd07fe5e0d412a inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbbe142eed2b58d07ae906e14a09ec8 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a3fbbe142eed2b58d07ae906e14a09ec8">MaxDuration</a><code> [get]</code></td></tr>
+<tr class="separator:a3fbbe142eed2b58d07ae906e14a09ec8 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433192bcbafe922e72aaad8239934279 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a433192bcbafe922e72aaad8239934279">PreventRegen</a><code> [get]</code></td></tr>
 <tr class="separator:a433192bcbafe922e72aaad8239934279 inherit properties_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c765b9f06398ef311f291623a1b597 inherit properties_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">ShouldRefresh</a><code> [get]</code></td></tr>
@@ -496,7 +498,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceStat_8cs_source.html#l00009">SourceStat.Row.id</a>, <a class="el" href="BaseCondition_8cs_source.html#l00030">BaseCondition.power</a>, <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>, <a class="el" href="SourceManager_8cs_source.html#l00061">SourceManager.stats</a>, and <a class="el" href="SourceStat_8cs_source.html#l00017">SourceStat.Row.type</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00611">Element._WriteNote()</a>, <a class="el" href="Chara_8cs_source.html#l09525">Chara.AddCondition()</a>, <a class="el" href="Condition_8cs_source.html#l00038">Create&lt; T &gt;()</a>, <a class="el" href="ActEffect_8cs_source.html#l01045">ActEffect.Proc()</a>, <a class="el" href="Chara_8cs_source.html#l09983">Chara.Sleep()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00009">ConMiasma.Tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ELEMENT_8cs_source.html#l00611">Element._WriteNote()</a>, <a class="el" href="Chara_8cs_source.html#l09517">Chara.AddCondition()</a>, <a class="el" href="Condition_8cs_source.html#l00038">Create&lt; T &gt;()</a>, <a class="el" href="ActEffect_8cs_source.html#l01045">ActEffect.Proc()</a>, <a class="el" href="Chara_8cs_source.html#l09975">Chara.Sleep()</a>, and <a class="el" href="ConMiasma_8cs_source.html#l00014">ConMiasma.Tick()</a>.</p>
 
 </div>
 </div>
@@ -621,47 +623,47 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00091">91</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>        base.value = 0;</div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>.Remove(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (!silent &amp;&amp; !<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a> &amp;&amp; !base.source.textEnd.IsEmpty())</div>
-<div class="line"><span class="lineno">   96</span>        {</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(base.source.GetText(<span class="stringliteral">&quot;textEnd&quot;</span>), <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, <a class="code hl_property" href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">RefString1</a>);</div>
-<div class="line"><span class="lineno">   98</span>        }</div>
-<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="classBaseCondition.html#adc2afd810b0ce0a62481218449231929">PlayEndEffect</a>();</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  101</span>        {</div>
-<div class="line"><span class="lineno">  102</span>            <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">SetParent</a>();</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_function" href="classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e">OnRemoved</a>();</div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseStats.html#adde8e92858ce87d9474c9e8c03192b13">EmoIcon</a> != 0 &amp;&amp; <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classChara.html#a6c0f9facfb0e197b3236c5265ed0517c">emoIcon</a> == <a class="code hl_property" href="classBaseStats.html#adde8e92858ce87d9474c9e8c03192b13">EmoIcon</a>)</div>
-<div class="line"><span class="lineno">  106</span>        {</div>
-<div class="line"><span class="lineno">  107</span>            owner.emoIcon = <a class="code hl_enumeration" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088">Emo2</a>.none;</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCondition.html">Condition</a> condition <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>)</div>
-<div class="line"><span class="lineno">  109</span>            {</div>
-<div class="line"><span class="lineno">  110</span>                condition.<a class="code hl_function" href="classBaseCondition.html#a10d26d960382d8fef3bb13edc8dd507c">RefreshEmoIcon</a>();</div>
-<div class="line"><span class="lineno">  111</span>            }</div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>?.<a class="code hl_variable" href="classCardRenderer.html#ab064a6a53c49416ebf15a53a46eaac7d">orbit</a>?.<a class="code hl_function" href="classTCOrbit.html#a573a4792f8952269c18fa585c55ec873">RefreshAll</a>();</div>
-<div class="line"><span class="lineno">  113</span>        }</div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">ShouldRefresh</a>)</div>
-<div class="line"><span class="lineno">  116</span>        {</div>
-<div class="line"><span class="lineno">  117</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00095">95</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        base.value = 0;</div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>.Remove(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span> (!silent &amp;&amp; !<a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_property" href="classChara.html#ade1b70855a0acaea042e54f55b5a9d0a">isDead</a> &amp;&amp; !base.source.textEnd.IsEmpty())</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(base.source.GetText(<span class="stringliteral">&quot;textEnd&quot;</span>), <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>, <a class="code hl_property" href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">RefString1</a>);</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_function" href="classBaseCondition.html#adc2afd810b0ce0a62481218449231929">PlayEndEffect</a>();</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <a class="code hl_variable" href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">elements</a>.<a class="code hl_function" href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">SetParent</a>();</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <a class="code hl_function" href="classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e">OnRemoved</a>();</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseStats.html#adde8e92858ce87d9474c9e8c03192b13">EmoIcon</a> != 0 &amp;&amp; <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classChara.html#a6c0f9facfb0e197b3236c5265ed0517c">emoIcon</a> == <a class="code hl_property" href="classBaseStats.html#adde8e92858ce87d9474c9e8c03192b13">EmoIcon</a>)</div>
+<div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            owner.emoIcon = <a class="code hl_enumeration" href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088">Emo2</a>.none;</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classCondition.html">Condition</a> condition <span class="keywordflow">in</span> <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classChara.html#a522224f15420736ea92c6acee26efd6c">conditions</a>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                condition.<a class="code hl_function" href="classBaseCondition.html#a10d26d960382d8fef3bb13edc8dd507c">RefreshEmoIcon</a>();</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_variable" href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">renderer</a>?.<a class="code hl_variable" href="classCardRenderer.html#ab064a6a53c49416ebf15a53a46eaac7d">orbit</a>?.<a class="code hl_function" href="classTCOrbit.html#a573a4792f8952269c18fa585c55ec873">RefreshAll</a>();</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>        <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a13e7743c9276a844507514084bd1cfdb">SetDirtySpeed</a>();</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">ShouldRefresh</a>)</div>
+<div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            <a class="code hl_variable" href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">owner</a>.<a class="code hl_function" href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Refresh</a>();</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
 <div class="ttc" id="aEmo2_8cs_html_aa8125d7ee949f0cb7735a8b097bd8088"><div class="ttname"><a href="Emo2_8cs.html#aa8125d7ee949f0cb7735a8b097bd8088">Emo2</a></div><div class="ttdeci">Emo2</div><div class="ttdef"><b>Definition:</b> <a href="Emo2_8cs_source.html#l00001">Emo2.cs:2</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_a10d26d960382d8fef3bb13edc8dd507c"><div class="ttname"><a href="classBaseCondition.html#a10d26d960382d8fef3bb13edc8dd507c">BaseCondition.RefreshEmoIcon</a></div><div class="ttdeci">void RefreshEmoIcon()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00229">BaseCondition.cs:229</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_a33c765b9f06398ef311f291623a1b597"><div class="ttname"><a href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">BaseCondition.ShouldRefresh</a></div><div class="ttdeci">virtual bool ShouldRefresh</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00103">BaseCondition.cs:103</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_a68c88f07a0d161a580dbee29aa406a8f"><div class="ttname"><a href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">BaseCondition.RefString1</a></div><div class="ttdeci">virtual string RefString1</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00121">BaseCondition.cs:122</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_ab0dc2314a6e33d4561841e5a1f65c90e"><div class="ttname"><a href="classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e">BaseCondition.OnRemoved</a></div><div class="ttdeci">virtual void OnRemoved()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00415">BaseCondition.cs:415</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_adc2afd810b0ce0a62481218449231929"><div class="ttname"><a href="classBaseCondition.html#adc2afd810b0ce0a62481218449231929">BaseCondition.PlayEndEffect</a></div><div class="ttdeci">virtual void PlayEndEffect()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00318">BaseCondition.cs:318</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a10d26d960382d8fef3bb13edc8dd507c"><div class="ttname"><a href="classBaseCondition.html#a10d26d960382d8fef3bb13edc8dd507c">BaseCondition.RefreshEmoIcon</a></div><div class="ttdeci">void RefreshEmoIcon()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00231">BaseCondition.cs:231</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a33c765b9f06398ef311f291623a1b597"><div class="ttname"><a href="classBaseCondition.html#a33c765b9f06398ef311f291623a1b597">BaseCondition.ShouldRefresh</a></div><div class="ttdeci">virtual bool ShouldRefresh</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00105">BaseCondition.cs:105</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a68c88f07a0d161a580dbee29aa406a8f"><div class="ttname"><a href="classBaseCondition.html#a68c88f07a0d161a580dbee29aa406a8f">BaseCondition.RefString1</a></div><div class="ttdeci">virtual string RefString1</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00123">BaseCondition.cs:124</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_ab0dc2314a6e33d4561841e5a1f65c90e"><div class="ttname"><a href="classBaseCondition.html#ab0dc2314a6e33d4561841e5a1f65c90e">BaseCondition.OnRemoved</a></div><div class="ttdeci">virtual void OnRemoved()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00417">BaseCondition.cs:417</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_adc2afd810b0ce0a62481218449231929"><div class="ttname"><a href="classBaseCondition.html#adc2afd810b0ce0a62481218449231929">BaseCondition.PlayEndEffect</a></div><div class="ttdeci">virtual void PlayEndEffect()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00320">BaseCondition.cs:320</a></div></div>
 <div class="ttc" id="aclassBaseCondition_html_ae298dc6f6177eb07f0aa01f7422532f5"><div class="ttname"><a href="classBaseCondition.html#ae298dc6f6177eb07f0aa01f7422532f5">BaseCondition.elements</a></div><div class="ttdeci">ElementContainer elements</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00013">BaseCondition.cs:13</a></div></div>
 <div class="ttc" id="aclassBaseCondition_html_ae90044ea473ebbe7db39a525f51867cc"><div class="ttname"><a href="classBaseCondition.html#ae90044ea473ebbe7db39a525f51867cc">BaseCondition.owner</a></div><div class="ttdeci">Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00015">BaseCondition.cs:15</a></div></div>
 <div class="ttc" id="aclassBaseStats_html_adde8e92858ce87d9474c9e8c03192b13"><div class="ttname"><a href="classBaseStats.html#adde8e92858ce87d9474c9e8c03192b13">BaseStats.EmoIcon</a></div><div class="ttdeci">virtual Emo2 EmoIcon</div><div class="ttdef"><b>Definition:</b> <a href="BaseStats_8cs_source.html#l00017">BaseStats.cs:17</a></div></div>
 <div class="ttc" id="aclassCardRenderer_html_ab064a6a53c49416ebf15a53a46eaac7d"><div class="ttname"><a href="classCardRenderer.html#ab064a6a53c49416ebf15a53a46eaac7d">CardRenderer.orbit</a></div><div class="ttdeci">TCOrbit orbit</div><div class="ttdef"><b>Definition:</b> <a href="CardRenderer_8cs_source.html#l00007">CardRenderer.cs:7</a></div></div>
 <div class="ttc" id="aclassCard_html_af2583c026b8a4d082a4abc0fa829a66a"><div class="ttname"><a href="classCard.html#af2583c026b8a4d082a4abc0fa829a66a">Card.renderer</a></div><div class="ttdeci">CardRenderer renderer</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00064">Card.cs:64</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07137">Card.cs:7137</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07144">Card.cs:7144</a></div></div>
 <div class="ttc" id="aclassChara_html_a072be17eb82fa2059622c2d9c45a9673"><div class="ttname"><a href="classChara.html#a072be17eb82fa2059622c2d9c45a9673">Chara.Refresh</a></div><div class="ttdeci">void Refresh(bool calledRecursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01759">Chara.cs:1759</a></div></div>
 <div class="ttc" id="aclassChara_html_a13e7743c9276a844507514084bd1cfdb"><div class="ttname"><a href="classChara.html#a13e7743c9276a844507514084bd1cfdb">Chara.SetDirtySpeed</a></div><div class="ttdeci">void SetDirtySpeed()</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l01898">Chara.cs:1898</a></div></div>
 <div class="ttc" id="aclassChara_html_a522224f15420736ea92c6acee26efd6c"><div class="ttname"><a href="classChara.html#a522224f15420736ea92c6acee26efd6c">Chara.conditions</a></div><div class="ttdeci">List&lt; Condition &gt; conditions</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l00213">Chara.cs:213</a></div></div>
@@ -670,9 +672,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElementContainer_html_a1612076673169f97fcfabf021eee2f20"><div class="ttname"><a href="classElementContainer.html#a1612076673169f97fcfabf021eee2f20">ElementContainer.SetParent</a></div><div class="ttdeci">void SetParent(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="ElementContainer_8cs_source.html#l00539">ElementContainer.cs:539</a></div></div>
 <div class="ttc" id="aclassTCOrbit_html_a573a4792f8952269c18fa585c55ec873"><div class="ttname"><a href="classTCOrbit.html#a573a4792f8952269c18fa585c55ec873">TCOrbit.RefreshAll</a></div><div class="ttdeci">virtual void RefreshAll()</div><div class="ttdef"><b>Definition:</b> <a href="TCOrbit_8cs_source.html#l00007">TCOrbit.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00213">Chara.conditions</a>, <a class="el" href="BaseCondition_8cs_source.html#l00013">BaseCondition.elements</a>, <a class="el" href="BaseStats_8cs_source.html#l00017">BaseStats.EmoIcon</a>, <a class="el" href="Chara_8cs_source.html#l00108">Chara.emoIcon</a>, <a class="el" href="Chara_8cs_source.html#l00391">Chara.isDead</a>, <a class="el" href="BaseCondition_8cs_source.html#l00415">BaseCondition.OnRemoved()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00007">CardRenderer.orbit</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="BaseCondition_8cs_source.html#l00318">BaseCondition.PlayEndEffect()</a>, <a class="el" href="Chara_8cs_source.html#l01759">Chara.Refresh()</a>, <a class="el" href="TCOrbit_8cs_source.html#l00007">TCOrbit.RefreshAll()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00229">BaseCondition.RefreshEmoIcon()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00122">BaseCondition.RefString1</a>, <a class="el" href="Card_8cs_source.html#l00064">Card.renderer</a>, <a class="el" href="Card_8cs_source.html#l07137">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01898">Chara.SetDirtySpeed()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00539">ElementContainer.SetParent()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00103">BaseCondition.ShouldRefresh</a>.</p>
+<p class="reference">References <a class="el" href="Chara_8cs_source.html#l00213">Chara.conditions</a>, <a class="el" href="BaseCondition_8cs_source.html#l00013">BaseCondition.elements</a>, <a class="el" href="BaseStats_8cs_source.html#l00017">BaseStats.EmoIcon</a>, <a class="el" href="Chara_8cs_source.html#l00108">Chara.emoIcon</a>, <a class="el" href="Chara_8cs_source.html#l00391">Chara.isDead</a>, <a class="el" href="BaseCondition_8cs_source.html#l00417">BaseCondition.OnRemoved()</a>, <a class="el" href="CardRenderer_8cs_source.html#l00007">CardRenderer.orbit</a>, <a class="el" href="BaseCondition_8cs_source.html#l00015">BaseCondition.owner</a>, <a class="el" href="BaseCondition_8cs_source.html#l00320">BaseCondition.PlayEndEffect()</a>, <a class="el" href="Chara_8cs_source.html#l01759">Chara.Refresh()</a>, <a class="el" href="TCOrbit_8cs_source.html#l00007">TCOrbit.RefreshAll()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00231">BaseCondition.RefreshEmoIcon()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00124">BaseCondition.RefString1</a>, <a class="el" href="Card_8cs_source.html#l00064">Card.renderer</a>, <a class="el" href="Card_8cs_source.html#l07144">Card.Say()</a>, <a class="el" href="Chara_8cs_source.html#l01898">Chara.SetDirtySpeed()</a>, <a class="el" href="ElementContainer_8cs_source.html#l00539">ElementContainer.SetParent()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00105">BaseCondition.ShouldRefresh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04964">Card.ApplyElementEffect()</a>, <a class="el" href="Chara_8cs_source.html#l09778">Chara.Cure()</a>, <a class="el" href="Card_8cs_source.html#l06141">Card.Kick()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00066">NotificationCondition.OnClick()</a>, <a class="el" href="Condition_8cs_source.html#l00083">OnValueChanged()</a>, <a class="el" href="ACT_8cs_source.html#l00303">Act.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l01045">ActEffect.Proc()</a>, <a class="el" href="Religion_8cs_source.html#l00505">Religion.Punish()</a>, <a class="el" href="Religion_8cs_source.html#l00545">Religion.PunishTakeOver()</a>, <a class="el" href="Chara_8cs_source.html#l09902">Chara.RemoveAllStances()</a>, <a class="el" href="Chara_8cs_source.html#l09753">Chara.RemoveCondition&lt; T &gt;()</a>, <a class="el" href="ConTransmute_8cs_source.html#l00076">ConTransmute.Reveal()</a>, <a class="el" href="AIAct_8cs_source.html#l00212">AIAct.Start()</a>, <a class="el" href="ConStrife_8cs_source.html#l00122">ConStrife.SyncPC()</a>, <a class="el" href="BaseSong_8cs_source.html#l00011">BaseSong.Tick()</a>, <a class="el" href="ConStrife_8cs_source.html#l00080">ConStrife.Tick()</a>, <a class="el" href="ConSuffocation_8cs_source.html#l00030">ConSuffocation.Tick()</a>, <a class="el" href="ConSuspend_8cs_source.html#l00042">ConSuspend.Tick()</a>, <a class="el" href="ConDeathSentense_8cs_source.html#l00038">ConDeathSentense.TryRemove()</a>, and <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04970">Card.ApplyElementEffect()</a>, <a class="el" href="Chara_8cs_source.html#l09770">Chara.Cure()</a>, <a class="el" href="Card_8cs_source.html#l06148">Card.Kick()</a>, <a class="el" href="NotificationCondition_8cs_source.html#l00066">NotificationCondition.OnClick()</a>, <a class="el" href="Condition_8cs_source.html#l00087">OnValueChanged()</a>, <a class="el" href="ACT_8cs_source.html#l00303">Act.Perform()</a>, <a class="el" href="ActEffect_8cs_source.html#l01045">ActEffect.Proc()</a>, <a class="el" href="Religion_8cs_source.html#l00505">Religion.Punish()</a>, <a class="el" href="Religion_8cs_source.html#l00545">Religion.PunishTakeOver()</a>, <a class="el" href="Chara_8cs_source.html#l09894">Chara.RemoveAllStances()</a>, <a class="el" href="Chara_8cs_source.html#l09745">Chara.RemoveCondition&lt; T &gt;()</a>, <a class="el" href="ConTransmute_8cs_source.html#l00076">ConTransmute.Reveal()</a>, <a class="el" href="AIAct_8cs_source.html#l00212">AIAct.Start()</a>, <a class="el" href="ConStrife_8cs_source.html#l00122">ConStrife.SyncPC()</a>, <a class="el" href="BaseSong_8cs_source.html#l00011">BaseSong.Tick()</a>, <a class="el" href="ConStrife_8cs_source.html#l00080">ConStrife.Tick()</a>, <a class="el" href="ConSuffocation_8cs_source.html#l00030">ConSuffocation.Tick()</a>, <a class="el" href="ConSuspend_8cs_source.html#l00042">ConSuspend.Tick()</a>, <a class="el" href="ConDeathSentense_8cs_source.html#l00038">ConDeathSentense.TryRemove()</a>, and <a class="el" href="TraitToolTorch_8cs_source.html#l00048">TraitToolTorch.TrySetHeldAct()</a>.</p>
 
 </div>
 </div>
@@ -718,11 +720,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classConNightVision.html#a35845c11a51a895fd4c65c2c4280087d">ConNightVision</a>, and <a class="el" href="classConTorch.html#a36bb825a149846540ee834356d77e4bc">ConTorch</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00075">75</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00079">79</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06792">Card.CalculateFOV()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06799">Card.CalculateFOV()</a>.</p>
 
 </div>
 </div>
@@ -752,11 +754,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classConTorch.html#ab1487bed345a17352630c0ebb02e1d15">ConTorch</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00079">79</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00083">83</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06835">Card.CreateFov()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l06842">Card.CreateFov()</a>.</p>
 
 </div>
 </div>
@@ -787,12 +789,17 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00057">57</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
 <div class="line"><span class="lineno">   59</span>        base.value += <a class="code hl_function" href="classBaseCondition.html#a7f23858771f5daa7a120966068d52c05">EvaluateTurn</a>(p);</div>
-<div class="line"><span class="lineno">   60</span>        <a class="code hl_function" href="classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e">SetPhase</a>();</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_a4767e1a9196cc255eb901ac7988f600e"><div class="ttname"><a href="classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e">BaseCondition.SetPhase</a></div><div class="ttdeci">void SetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00334">BaseCondition.cs:334</a></div></div>
-<div class="ttc" id="aclassBaseCondition_html_a7f23858771f5daa7a120966068d52c05"><div class="ttname"><a href="classBaseCondition.html#a7f23858771f5daa7a120966068d52c05">BaseCondition.EvaluateTurn</a></div><div class="ttdeci">virtual int EvaluateTurn(int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00424">BaseCondition.cs:424</a></div></div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classBaseCondition.html#a3fbbe142eed2b58d07ae906e14a09ec8">MaxDuration</a> != 0 &amp;&amp; base.value &gt; <a class="code hl_property" href="classBaseCondition.html#a3fbbe142eed2b58d07ae906e14a09ec8">MaxDuration</a>)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            base.value = <a class="code hl_property" href="classBaseCondition.html#a3fbbe142eed2b58d07ae906e14a09ec8">MaxDuration</a>;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e">SetPhase</a>();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_a3fbbe142eed2b58d07ae906e14a09ec8"><div class="ttname"><a href="classBaseCondition.html#a3fbbe142eed2b58d07ae906e14a09ec8">BaseCondition.MaxDuration</a></div><div class="ttdeci">virtual int MaxDuration</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00101">BaseCondition.cs:101</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a4767e1a9196cc255eb901ac7988f600e"><div class="ttname"><a href="classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e">BaseCondition.SetPhase</a></div><div class="ttdeci">void SetPhase()</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00336">BaseCondition.cs:336</a></div></div>
+<div class="ttc" id="aclassBaseCondition_html_a7f23858771f5daa7a120966068d52c05"><div class="ttname"><a href="classBaseCondition.html#a7f23858771f5daa7a120966068d52c05">BaseCondition.EvaluateTurn</a></div><div class="ttdeci">virtual int EvaluateTurn(int p)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00426">BaseCondition.cs:426</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00424">BaseCondition.EvaluateTurn()</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00334">BaseCondition.SetPhase()</a>.</p>
+<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00426">BaseCondition.EvaluateTurn()</a>, <a class="el" href="BaseCondition_8cs_source.html#l00101">BaseCondition.MaxDuration</a>, and <a class="el" href="BaseCondition_8cs_source.html#l00336">BaseCondition.SetPhase()</a>.</p>
 
 </div>
 </div>
@@ -821,16 +828,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a32963b9a945b867e50b2e9cad6d55aec">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00083">83</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (base.value &lt;= 0)</div>
-<div class="line"><span class="lineno">   86</span>        {</div>
-<div class="line"><span class="lineno">   87</span>            <a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="ttc" id="aclassCondition_html_a9441709e24ca102eed7a41b3ccaa4cee"><div class="ttname"><a href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Condition.Kill</a></div><div class="ttdeci">void Kill(bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00091">Condition.cs:91</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00087">87</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (base.value &lt;= 0)</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            <a class="code hl_function" href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Kill</a>();</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="ttc" id="aclassCondition_html_a9441709e24ca102eed7a41b3ccaa4cee"><div class="ttname"><a href="classCondition.html#a9441709e24ca102eed7a41b3ccaa4cee">Condition.Kill</a></div><div class="ttdeci">void Kill(bool silent=false)</div><div class="ttdef"><b>Definition:</b> <a href="Condition_8cs_source.html#l00095">Condition.cs:95</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Condition_8cs_source.html#l00091">Kill()</a>.</p>
+<p class="reference">References <a class="el" href="Condition_8cs_source.html#l00095">Kill()</a>.</p>
 
 </div>
 </div>
@@ -858,12 +865,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00063">63</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
-<div class="line"><span class="lineno">   65</span>        base.isPerfume = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   66</span>        base.value = duration;</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00067">67</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        base.isPerfume = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   70</span>        base.value = duration;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -894,13 +901,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classConDrunk.html#ae4d2e7cc94ace1d9d1d4bb431b4d8eb3">ConDrunk</a>, <a class="el" href="classConEntangle.html#ae77d05cda6139fa2f75bd4d5f1caec4c">ConEntangle</a>, <a class="el" href="classConFear.html#ada8a00942fd4cb0054a6891fce9f3305">ConFear</a>, <a class="el" href="classConHOT.html#ae1fbaa703bd42d4142d3965d7bb5e595">ConHOT</a>, <a class="el" href="classConInsane.html#a7b0bd17d749ff8c3d0664f7a432002e7">ConInsane</a>, <a class="el" href="classConMiasma.html#a0e4b16048c4c380aff9bfddd04d39273">ConMiasma</a>, <a class="el" href="classConPeaky.html#a23031952d85d573791e8772e6237616a">ConPeaky</a>, <a class="el" href="classConPoison.html#adba150667ac07d0665dfca4cbca09755">ConPoison</a>, <a class="el" href="classConRebirth.html#a65d7000ce43d7e5df654694c9cbfd18d">ConRebirth</a>, <a class="el" href="classConSleep.html#ab1af65d98ba5552f166ddf59802a0cf7">ConSleep</a>, <a class="el" href="classConSmoking.html#ae466ace8ef73f73a224bfe2d59679dab">ConSmoking</a>, <a class="el" href="classConStrife.html#a2fc13f405ab43edaf071446d7261082d">ConStrife</a>, <a class="el" href="classConSuffocation.html#a491553122d58258cb1fb7725f8b582c5">ConSuffocation</a>, <a class="el" href="classConSuspend.html#acf7c42aa99b78f28a517ef0b39d59fe2">ConSuspend</a>, <a class="el" href="classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a">ConTransmute</a>, <a class="el" href="classConTransmuteHuman.html#a6e9c5210792258338e64aff35f0a82b4">ConTransmuteHuman</a>, <a class="el" href="classConVampire.html#a8f40013ed452ee592a0316d2a9b2f094">ConVampire</a>, <a class="el" href="classConWeapon.html#ae56b62ab1b833b2c37e0188105a7b202">ConWeapon</a>, and <a class="el" href="classConWet.html#aefa09eb61bd604b8c38a56cf8d36e6ee">ConWet</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00070">70</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_function" href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">Mod</a>(-1);</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="ttc" id="aclassBaseCondition_html_aba9c7904f2e608799748dbb7947d48ea"><div class="ttname"><a href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">BaseCondition.Mod</a></div><div class="ttdeci">void Mod(int a, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00397">BaseCondition.cs:397</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00074">74</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <a class="code hl_function" href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">Mod</a>(-1);</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aclassBaseCondition_html_aba9c7904f2e608799748dbb7947d48ea"><div class="ttname"><a href="classBaseCondition.html#aba9c7904f2e608799748dbb7947d48ea">BaseCondition.Mod</a></div><div class="ttdeci">void Mod(int a, bool force=false)</div><div class="ttdef"><b>Definition:</b> <a href="BaseCondition_8cs_source.html#l00399">BaseCondition.cs:399</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00397">BaseCondition.Mod()</a>.</p>
+<p class="reference">References <a class="el" href="BaseCondition_8cs_source.html#l00399">BaseCondition.Mod()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l03738">Chara.TickConditions()</a>.</p>
 
@@ -929,7 +936,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Condition_8cs_source.html#l00005">5</a> of file <a class="el" href="Condition_8cs_source.html">Condition.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BaseCondition_8cs_source.html#l00306">BaseCondition.PlayEffect()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00082">ConBuffStats.PlayEffect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BaseCondition_8cs_source.html#l00308">BaseCondition.PlayEffect()</a>, and <a class="el" href="ConBuffStats_8cs_source.html#l00094">ConBuffStats.PlayEffect()</a>.</p>
 
 </div>
 </div>

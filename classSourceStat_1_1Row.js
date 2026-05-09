@@ -8,6 +8,7 @@ var classSourceStat_1_1Row =
     [ "detail_JP", "classSourceStat_1_1Row.html#a3fd2bb6a031057533580c265737ffcb4", null ],
     [ "detail_L", "classSourceStat_1_1Row.html#a07658411ffdc8468506b5e09fd0c4d97", null ],
     [ "duration", "classSourceStat_1_1Row.html#aca6e3e7920c7ef90c1f473915197cbb6", null ],
+    [ "durationMax", "classSourceStat_1_1Row.html#ae7ebd02160e784f9d19b6a3225d299cf", null ],
     [ "effect", "classSourceStat_1_1Row.html#afc0ef3b18e1a679c91abc2ab0df0de4f", null ],
     [ "element", "classSourceStat_1_1Row.html#ad71279814b492dc14969fe6c61b73beb", null ],
     [ "elements", "classSourceStat_1_1Row.html#a531f107d41e43d6b6d9b81f3e59816f6", null ],

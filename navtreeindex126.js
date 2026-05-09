@@ -1,5 +1,14 @@
 var NAVTREEINDEX126 =
 {
+"classTraitRecipeBook.html#a5cdacf7787d5988dd7905523e6c2a642":[1,0,1848,1],
+"classTraitRecipeBook.html#a89131d34ebb60cb390603934f9437ba8":[1,0,1848,0],
+"classTraitRecipeBook.html#acf3dd9ff3b4a9c15d28ea26295799c60":[1,0,1848,2],
+"classTraitRecipeCat.html":[1,0,1849],
+"classTraitRecipeCat.html#a03f7f71e0918b01d8f56d318a8cd084e":[1,0,1849,4],
+"classTraitRecipeCat.html#a0c0bd5950b3a85c62cefab479913c282":[1,0,1849,0],
+"classTraitRecipeCat.html#aa57df0e3fd9df7a7841a2435992af79d":[1,0,1849,1],
+"classTraitRecipeCat.html#aa5b1ec1dcf577ec4c81f286fcfa59ae4":[1,0,1849,2],
+"classTraitRecipeCat.html#aaec83cd0ffac4e729fa9444df883ba8e":[1,0,1849,3],
 "classTraitRecycle.html":[1,0,1850],
 "classTraitRecycle.html#ac78d6fcde5d0eda17bb742881ad40a66":[1,0,1850,0],
 "classTraitRegionMap.html":[1,0,1851],
@@ -240,14 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitSlaver.html#ac441dd02a62a5446ee6382966679e280":[1,0,1892,1],
 "classTraitSlotMachine.html":[1,0,1893],
 "classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628":[1,0,1893,0],
-"classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1893,2],
-"classTraitSlotMachine.html#adefe8cefa9e242e1fcdaab8dff1a0756":[1,0,1893,1],
-"classTraitSmelter.html":[1,0,1894],
-"classTraitSmelter.html#a085a6739e2464e952545e9a02f30721e":[1,0,1894,4],
-"classTraitSmelter.html#a3180454786ce77336f6f31befaec2bf5":[1,0,1894,2],
-"classTraitSmelter.html#a5bbbc27e3581ae203ed08f424adbf78a":[1,0,1894,3],
-"classTraitSmelter.html#a5bd91a2e6d40f1482a070a63729e14d8":[1,0,1894,1],
-"classTraitSmelter.html#a947b1d267be4a146fa476811b48b6638":[1,0,1894,0],
-"classTraitSnitch.html":[1,0,1895],
-"classTraitSnow.html":[1,0,1896]
+"classTraitSlotMachine.html#aaf19e956db7786bf0b8fdee20fc7792d":[1,0,1893,2]
 };

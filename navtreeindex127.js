@@ -1,5 +1,14 @@
 var NAVTREEINDEX127 =
 {
+"classTraitSlotMachine.html#adefe8cefa9e242e1fcdaab8dff1a0756":[1,0,1893,1],
+"classTraitSmelter.html":[1,0,1894],
+"classTraitSmelter.html#a085a6739e2464e952545e9a02f30721e":[1,0,1894,4],
+"classTraitSmelter.html#a3180454786ce77336f6f31befaec2bf5":[1,0,1894,2],
+"classTraitSmelter.html#a5bbbc27e3581ae203ed08f424adbf78a":[1,0,1894,3],
+"classTraitSmelter.html#a5bd91a2e6d40f1482a070a63729e14d8":[1,0,1894,1],
+"classTraitSmelter.html#a947b1d267be4a146fa476811b48b6638":[1,0,1894,0],
+"classTraitSnitch.html":[1,0,1895],
+"classTraitSnow.html":[1,0,1896],
 "classTraitSnow.html#a521e55acbe1bcdfc18f3cf6728b18e94":[1,0,1896,2],
 "classTraitSnow.html#a7e56f341e87a9bdc4b8fb9064b6b5718":[1,0,1896,0],
 "classTraitSnow.html#ac0420a0ba3539ee8be4738478c0dce8d":[1,0,1896,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitToolHammerStrip.html":[1,0,1967],
 "classTraitToolHammerStrip.html#a73d7d0e0d2d09e3dbbcced36f8b84910":[1,0,1967,0],
 "classTraitToolHammerStrip.html#a86eb770ccca7ce466ff2c363cd6011d8":[1,0,1967,1],
-"classTraitToolLoom.html":[1,0,1968],
-"classTraitToolMusic.html":[1,0,1969],
-"classTraitToolMusic.html#a6c7c055a5a8b58dd04965de99fce74be":[1,0,1969,0],
-"classTraitToolMusic.html#a781fb5d77ac59a1293edca876030cf25":[1,0,1969,1],
-"classTraitToolMusicBig.html":[1,0,1970],
-"classTraitToolMusicBig.html#a9a2988056ad5650f7435819d06faabf9":[1,0,1970,0],
-"classTraitToolMusicMic.html":[1,0,1971],
-"classTraitToolRange.html":[1,0,1972],
-"classTraitToolRange.html#a2da554174e63ecb769c7485ea5e72525":[1,0,1972,8],
-"classTraitToolRange.html#a4ceb81ef267c84bc4960ebb10c4e0777":[1,0,1972,12]
+"classTraitToolLoom.html":[1,0,1968]
 };

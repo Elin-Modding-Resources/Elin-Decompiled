@@ -8,7 +8,7 @@ var classCharaBody =
     [ "GetAttackStyleElement", "classCharaBody.html#aa64f88c9b72bea695db0108ce9a8020e", null ],
     [ "GetEquippedThing", "classCharaBody.html#acf6d97e2fc24de857c05a2140b883b57", null ],
     [ "GetMeleeDistance", "classCharaBody.html#a659d3ef6dd600acf8a3f0953597d485a", null ],
-    [ "GetSlot", "classCharaBody.html#a147717021c8677fbf42ae8381237318f", null ],
+    [ "GetSlot", "classCharaBody.html#a728733f8031464bb355a3811220e9d62", null ],
     [ "GetSlot", "classCharaBody.html#ade0eba276f909a565a1d0ccf1c26f218", null ],
     [ "GetSortVal", "classCharaBody.html#aa9ff820ba11082738c171b45e8f1287b", null ],
     [ "GetWeight", "classCharaBody.html#ac39f1a023d4926609ec1fae7eb18510e", null ],

@@ -1,5 +1,14 @@
 var NAVTREEINDEX123 =
 {
+"classTraitGemCutter.html":[1,0,1666],
+"classTraitGemCutter.html#a52e9b307ebc7ed32c541113c4a898965":[1,0,1666,3],
+"classTraitGemCutter.html#a72e42b90159f991187240f2075e47512":[1,0,1666,1],
+"classTraitGemCutter.html#a785ab711675b3b95e1fc3a4fb9d1ffd7":[1,0,1666,5],
+"classTraitGemCutter.html#ac1c1cd18138413fcfc05f88efbb3b6d8":[1,0,1666,2],
+"classTraitGemCutter.html#ad4c678718199490197cc863c8df758da":[1,0,1666,4],
+"classTraitGemCutter.html#ae2be1a78267a99786d8530c23fc9cce7":[1,0,1666,0],
+"classTraitGene.html":[1,0,1667],
+"classTraitGene.html#a1403eb260c043875d300944d6115b345":[1,0,1667,4],
 "classTraitGene.html#a6ef0c0e35f7bc7ed7bd0896d08225854":[1,0,1667,0],
 "classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1667,5],
 "classTraitGene.html#a8e388181f33a808db84812e4f1df11be":[1,0,1667,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitLightAlwaysAnime.html#ad9c21526cbf585830e8b4782043e79c5":[1,0,1722,1],
 "classTraitLightSource.html":[1,0,1723],
 "classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1723,0],
-"classTraitLightSun.html":[1,0,1724],
-"classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1724,2],
-"classTraitLightSun.html#ab57619e493c8a4fd38d34dc931603829":[1,0,1724,1],
-"classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1724,3],
-"classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1724,4],
-"classTraitLightSun.html#aff2a91bfa08afa9a8013938b7e09d6b7":[1,0,1724,0],
-"classTraitLittleBall.html":[1,0,1725],
-"classTraitLittleBall.html#a4a80b199bb3d05a702c698829c40a713":[1,0,1725,0],
-"classTraitLittleOne.html":[1,0,1726],
-"classTraitLittleOne.html#a196d3faedc31a553cf60e02e07ec8eb1":[1,0,1726,1]
+"classTraitLightSun.html":[1,0,1724]
 };

@@ -13,7 +13,8 @@ var classConBuffStats =
     [ "SetOwner", "classConBuffStats.html#aca3550d9a6658613de6e23f5f6b93874", null ],
     [ "ShouldOverride", "classConBuffStats.html#a53033a099c6b58437990d18fd1c840f8", null ],
     [ "AllowMultipleInstance", "classConBuffStats.html#af11facc3c065d7a72b0d2b70851ead63", null ],
-    [ "isDebuff", "classConBuffStats.html#a963134f5f8e6d294ffb1231dddf2eee5", null ],
+    [ "IsDebuff", "classConBuffStats.html#a5a1eda3015669051dc7e9c88a6f09abb", null ],
+    [ "MaxDuration", "classConBuffStats.html#a8356002e00e3a5b150b8fcca8bf57921", null ],
     [ "Name", "classConBuffStats.html#a2f2d9a660d1aa7c8483993c1d5010a70", null ],
     [ "Type", "classConBuffStats.html#a89aa2540012608c39824505a1ba5c378", null ],
     [ "UseElements", "classConBuffStats.html#a6611b71184e12cc13e5eb74d70200cbe", null ]
