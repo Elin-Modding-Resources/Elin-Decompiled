@@ -57,6 +57,10 @@ public class Condition : BaseCondition
 	public virtual void OnStacked(int p)
 	{
 		base.value += EvaluateTurn(p);
+		if (MaxDuration != 0 && base.value > MaxDuration)
+		{
+			base.value = MaxDuration;
+		}
 		SetPhase();
 	}
 

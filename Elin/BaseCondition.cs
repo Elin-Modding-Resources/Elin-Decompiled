@@ -98,6 +98,8 @@ public class BaseCondition : BaseStats
 
 	public virtual bool HasDuration => base.source.duration != "-1";
 
+	public virtual int MaxDuration => base.source.durationMax;
+
 	public virtual bool PreventRegen => false;
 
 	public virtual bool ShouldRefresh => false;
@@ -423,7 +425,7 @@ public class BaseCondition : BaseStats
 
 	public virtual int EvaluateTurn(int p)
 	{
-		return Mathf.Max(1, base.source.duration.Calc(p, 0, P2));
+		return Mathf.Min(Mathf.Max(1, base.source.duration.Calc(p, 0, P2)), (MaxDuration == 0) ? int.MaxValue : MaxDuration);
 	}
 
 	public virtual BaseNotification CreateNotification()

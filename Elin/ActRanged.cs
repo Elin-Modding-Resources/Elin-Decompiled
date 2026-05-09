@@ -266,6 +266,7 @@ public class ActRanged : ActThrow
 			if (EClass.rnd(2) == 0)
 			{
 				Act.CC.RemoveCondition<ConInvisibility>();
+				Act.CC.RemoveCondition<ConDark>();
 			}
 			if (weapon.trait is TraitToolRangeCane)
 			{

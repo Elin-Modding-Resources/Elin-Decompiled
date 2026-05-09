@@ -16,15 +16,17 @@ public class Zone_Town : Zone_Civilized
 		{
 			Add("mad_rich");
 		}
-		if (EClass.rnd(EClass.debug.enable ? 1 : 8) == 0)
+		bool flag = this is Zone_Kapul && IsFestival;
+		if (EClass.rnd((EClass.debug.enable || flag) ? 1 : 8) == 0)
 		{
-			Add((EClass.rnd(EClass.debug.enable ? 1 : 4) == 0) ? "unseenhand" : "murderer");
+			Add((EClass.rnd((EClass.debug.enable || flag) ? 1 : 4) == 0) ? "unseenhand" : "murderer").AddCondition<ConTransmuteHuman>();
 		}
-		void Add(string id)
+		Chara Add(string id)
 		{
 			Chara chara = CharaGen.Create(id);
 			chara.isSubsetCard = true;
 			EClass._zone.AddCard(chara, GetSpawnPos(chara));
+			return chara;
 		}
 	}
 }

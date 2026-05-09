@@ -315,7 +315,7 @@ public class CharaBody : EClass
 			int elementId = bodySlot.elementId;
 			if (elementId == 35)
 			{
-				if (slotMainHand == null)
+				if (slotMainHand == null || slotMainHand == bodySlot)
 				{
 					slotMainHand = bodySlot;
 				}
@@ -380,14 +380,14 @@ public class CharaBody : EClass
 		return null;
 	}
 
-	public BodySlot GetSlot(int elementId, bool onlyEmpty = true, bool secondSlot = false)
+	public BodySlot GetSlot(int elementId, bool onlyEmpty = true, bool getSecondSlot = false)
 	{
 		bool flag = true;
 		foreach (BodySlot slot in slots)
 		{
 			if (elementId == slot.elementId && (!onlyEmpty || slot.thing == null))
 			{
-				if (!(secondSlot && flag))
+				if (!(getSecondSlot && flag))
 				{
 					return slot;
 				}

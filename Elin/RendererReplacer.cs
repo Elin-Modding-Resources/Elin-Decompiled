@@ -8,6 +8,8 @@ public class RendererReplacer : EClass
 
 	public SourcePref pref;
 
+	public PCCData pccData;
+
 	public static RendererReplacer CreateFrom(string id, int shift = 0, int mat = -1)
 	{
 		CardRow cardRow = EClass.sources.cards.map.TryGetValue(id);
@@ -21,6 +23,21 @@ public class RendererReplacer : EClass
 			data = cardRow.renderData,
 			pref = cardRow.pref,
 			mat = mat
+		};
+	}
+
+	public static RendererReplacer CreateFromPCC(string id, PCCData pccData)
+	{
+		CardRow cardRow = EClass.sources.cards.map.TryGetValue(id);
+		if (cardRow == null)
+		{
+			cardRow = EClass.sources.cards.map["money2"];
+		}
+		return new RendererReplacer
+		{
+			data = cardRow.renderData,
+			pref = cardRow.pref,
+			pccData = pccData
 		};
 	}
 }

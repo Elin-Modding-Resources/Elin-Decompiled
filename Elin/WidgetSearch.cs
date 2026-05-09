@@ -133,7 +133,18 @@ public class WidgetSearch : WidgetCodex
 			{
 				foreach (Chara chara in EMono._map.charas)
 				{
-					if (chara.IsNeutralOrAbove() && (chara.Name.ToLower().Contains(s) || chara.sourceCard.GetSearchName(jp: false).Contains(s)))
+					if (!chara.IsNeutralOrAbove())
+					{
+						continue;
+					}
+					if (chara.mimicry != null && !chara.IsPCFactionOrMinion && !EMono.debug.showExtra)
+					{
+						if (chara.mimicry.Card.Name.ToLower().Contains(s) || chara.mimicry.Card.sourceCard.GetSearchName(jp: false).Contains(s))
+						{
+							newCards.Add(chara);
+						}
+					}
+					else if (chara.Name.ToLower().Contains(s) || chara.sourceCard.GetSearchName(jp: false).Contains(s))
 					{
 						newCards.Add(chara);
 					}

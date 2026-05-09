@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class ConBuffStats : Condition
 {
-	public override string Name => (isDebuff ? "debuff" : "buff").lang();
+	public override string Name => (IsDebuff ? "debuff" : "buff").lang();
 
 	public override ConditionType Type
 	{
 		get
 		{
-			if (!isDebuff)
+			if (!IsDebuff)
 			{
 				return ConditionType.Buff;
 			}
@@ -17,7 +17,19 @@ public class ConBuffStats : Condition
 		}
 	}
 
-	public bool isDebuff => base.refVal2 == 222;
+	public bool IsDebuff => base.refVal2 == 222;
+
+	public override int MaxDuration
+	{
+		get
+		{
+			if (!IsDebuff)
+			{
+				return 0;
+			}
+			return base.MaxDuration;
+		}
+	}
 
 	public override bool AllowMultipleInstance => true;
 
@@ -25,7 +37,7 @@ public class ConBuffStats : Condition
 
 	public override bool IsOverrideConditionMet(Condition c, int turn)
 	{
-		if ((c as ConBuffStats).isDebuff == isDebuff)
+		if ((c as ConBuffStats).IsDebuff == IsDebuff)
 		{
 			return base.IsOverrideConditionMet(c, turn);
 		}
@@ -53,7 +65,7 @@ public class ConBuffStats : Condition
 
 	public override Color GetColor(SkinColorProfile c)
 	{
-		if (!isDebuff)
+		if (!IsDebuff)
 		{
 			return c.textGood;
 		}
@@ -70,7 +82,7 @@ public class ConBuffStats : Condition
 		string[] list = Lang.GetList("buff_" + EClass.sources.elements.map[base.refVal].alias);
 		if (list != null)
 		{
-			if (!isDebuff)
+			if (!IsDebuff)
 			{
 				return list[0];
 			}
@@ -83,9 +95,9 @@ public class ConBuffStats : Condition
 	{
 		if (!Condition.ignoreEffect)
 		{
-			owner.PlaySound(isDebuff ? "debuff" : "buff");
-			owner.PlayEffect(isDebuff ? "debuff" : "buff");
-			owner.Say(isDebuff ? "buffStats_curse" : "buffStats", owner, EClass.sources.elements.map[base.refVal].GetName().ToLower());
+			owner.PlaySound(IsDebuff ? "debuff" : "buff");
+			owner.PlayEffect(IsDebuff ? "debuff" : "buff");
+			owner.Say(IsDebuff ? "buffStats_curse" : "buffStats", owner, EClass.sources.elements.map[base.refVal].GetName().ToLower());
 		}
 	}
 
@@ -101,7 +113,7 @@ public class ConBuffStats : Condition
 	public override void SetOwner(Chara _owner, bool onDeserialize = false)
 	{
 		base.SetOwner(_owner);
-		elements.SetBase(base.refVal, CalcValue() * ((!isDebuff) ? 1 : (-1)));
+		elements.SetBase(base.refVal, CalcValue() * ((!IsDebuff) ? 1 : (-1)));
 		elements.SetParent(owner);
 	}
 
@@ -120,6 +132,6 @@ public class ConBuffStats : Condition
 
 	public override void OnWriteNote(List<string> list)
 	{
-		list.Add((isDebuff ? "hintDebuffStats" : "hintBuffStats").lang(base.sourceElement.GetName(), CalcValue().ToString() ?? ""));
+		list.Add((IsDebuff ? "hintDebuffStats" : "hintBuffStats").lang(base.sourceElement.GetName(), CalcValue().ToString() ?? ""));
 	}
 }

@@ -705,6 +705,30 @@ public class DNA : EClass
 		return null;
 	}
 
+	public int GetBodySlot()
+	{
+		for (int i = 0; i < vals.Count; i += 2)
+		{
+			Element element = Element.Create(vals[i], vals[i + 1]);
+			if (element.source.category == "slot")
+			{
+				return element.id;
+			}
+		}
+		return -1;
+	}
+
+	public void ReplaceBodySlot(int slot)
+	{
+		for (int i = 0; i < vals.Count; i += 2)
+		{
+			if (Element.Create(vals[i], vals[i + 1]).source.category == "slot")
+			{
+				vals[i] = slot;
+			}
+		}
+	}
+
 	public void MakeSlimeFood(Chara c)
 	{
 		int num = c.Evalue(6608) + 10;

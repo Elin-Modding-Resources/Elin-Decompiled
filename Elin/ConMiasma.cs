@@ -6,12 +6,17 @@ public class ConMiasma : TimeDebuff
 {
 	public override bool IsElemental => true;
 
+	public void SetResistPenetrationLevel(Chara tc, Chara cc)
+	{
+		base.refVal2 = tc.GetResistPenetrationLevel(base.refVal, AttackSource.Condition, cc);
+	}
+
 	public override void Tick()
 	{
 		Dice dice = Dice.Create("miasma_", base.power);
 		try
 		{
-			owner.DamageHP(dice.Roll(), base.refVal, EClass.rnd(base.power / 2) + base.power / 4, AttackSource.Condition);
+			owner.DamageHP(dice.Roll(), base.refVal, EClass.rnd(base.power / 2) + base.power / 4, AttackSource.Condition, null, showEffect: true, null, null, base.refVal2);
 			if (owner.IsAliveInCurrentZone && base.value > 1)
 			{
 				for (int i = 0; i < 6; i++)
@@ -24,6 +29,7 @@ public class ConMiasma : TimeDebuff
 							{
 								con.givenByPcParty = base.givenByPcParty;
 								con.SetElement(base.refVal);
+								con.refVal2 = base.refVal2;
 							}));
 							if (condition != null)
 							{

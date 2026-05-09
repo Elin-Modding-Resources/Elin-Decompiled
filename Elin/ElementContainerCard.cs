@@ -74,7 +74,7 @@ public class ElementContainerCard : ElementContainer
 
 	public override void OnModTempPotential(Element e, int v, int threshMsg)
 	{
-		if (threshMsg == 0 || Mathf.Abs(v) >= threshMsg)
+		if ((threshMsg == 0 || Mathf.Abs(v) >= threshMsg) && v != 0)
 		{
 			string lang = ((v > 0) ? "potentialInc" : "potentialDec");
 			if (owner.IsPCFaction && v > 0)

@@ -153,7 +153,7 @@ public class GoalCombat : Goal
 			{
 				CursorSystem.ignoreCount = 1;
 			}
-			if (tc.host != null && (tc.hp == 0 || EClass.rnd(5) == 0))
+			if (tc.host != null && (tc.hp == 0 || EClass.rnd(5) == 0 || tc.host.isRestrained))
 			{
 				tc = owner.SetEnemy(tc.host);
 			}

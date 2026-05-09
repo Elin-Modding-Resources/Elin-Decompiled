@@ -42,6 +42,10 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 
 	public override RendererReplacer GetRendererReplacer()
 	{
+		if (chara.IsPCC)
+		{
+			return RendererReplacer.CreateFromPCC(chara.id, chara.pccData);
+		}
 		return RendererReplacer.CreateFrom(chara.id);
 	}
 
@@ -62,7 +66,7 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 				}
 				else
 				{
-					List<Chara> list2 = owner.pos.ListCharasInRadius(owner, 5, delegate(Chara c)
+					List<Chara> list2 = owner.pos.ListCharasInRadius(owner, 6, delegate(Chara c)
 					{
 						if (!c.IsMultisize && c.IsHumanSpeak)
 						{
@@ -92,7 +96,7 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 	{
 		if (chara != null && chara.id != owner.id)
 		{
-			chara = CharaGen.Create(owner.id);
+			chara = owner;
 		}
 		else
 		{

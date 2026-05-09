@@ -1382,7 +1382,7 @@ public class Chara : Card, IPathfindWalker
 
 	public override string GetName(NameStyle style, int num = -1)
 	{
-		if (mimicry != null)
+		if (mimicry != null && mimicry.Card != this)
 		{
 			return mimicry.GetName(style, num);
 		}
@@ -3203,7 +3203,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (IsPC)
 		{
-			if (renderer.anime == null && renderer.replacer != null)
+			if (renderer.anime == null && renderer.replacer != null && renderer.replacer.pccData == null)
 			{
 				renderer.PlayAnime(AnimeID.Hop);
 			}
@@ -6819,6 +6819,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					charaRenderer.replacer = rendererReplacer;
 					charaRenderer.data = rendererReplacer.data;
+					charaRenderer.pccData = rendererReplacer.pccData;
 					break;
 				}
 			}
@@ -6942,7 +6943,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return mimicry.GetHoverText();
 		}
-		string text = ((mimicry != null) ? mimicry.GetName(NameStyle.Full) : base.Name);
+		string text = ((mimicry != null && mimicry.Card != this) ? mimicry.GetName(NameStyle.Full) : base.Name);
 		if (IsFriendOrAbove())
 		{
 			text = text.TagColor(EClass.Colors.colorFriend);
@@ -8713,18 +8714,9 @@ public class Chara : Card, IPathfindWalker
 		switch (type)
 		{
 		case ClearInventoryType.SellAtTown:
-			switch (t.category.id)
+			if (!t.isGifted && !t.isNPCProperty)
 			{
-			default:
-				if (!t.isGifted && !t.isNPCProperty)
-				{
-					return false;
-				}
-				break;
-			case "fish":
-			case "junk":
-			case "garbage":
-				break;
+				return false;
 			}
 			break;
 		case ClearInventoryType.Purge:

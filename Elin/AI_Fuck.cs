@@ -487,7 +487,26 @@ public class AI_Fuck : AIAct
 				Thing thing = null;
 				for (int j = 0; j < 10; j++)
 				{
-					thing = target.MakeGene((j < 3) ? DNA.Type.Superior : DNA.Type.Default);
+					for (int k = 0; k < 20; k++)
+					{
+						thing = target.MakeGene((j < 3) ? DNA.Type.Superior : DNA.Type.Default);
+						if (EClass.rnd(10) < chara.body.slots.Count - 2)
+						{
+							break;
+						}
+						if (thing.c_DNA.GetBodySlot() != -1)
+						{
+							if (chara.body.GetSlot(35, onlyEmpty: false) == null && EClass.rnd(2) == 0)
+							{
+								thing.c_DNA.ReplaceBodySlot(35);
+							}
+							else if (chara.body.GetSlot(32, onlyEmpty: false) == null && EClass.rnd(2) == 0)
+							{
+								thing.c_DNA.ReplaceBodySlot(32);
+							}
+							break;
+						}
+					}
 					thing.c_DNA.MakeSlimeFood(chara);
 					if (thing.c_DNA.GetInvalidAction(chara) != null || thing.c_DNA.GetInvalidFeat(chara) != null)
 					{

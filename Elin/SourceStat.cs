@@ -22,6 +22,8 @@ public class SourceStat : SourceDataInt<SourceStat.Row>
 
 		public string duration;
 
+		public int durationMax;
+
 		public int hexPower;
 
 		public string[] negate;
@@ -110,30 +112,31 @@ public class SourceStat : SourceDataInt<SourceStat.Row>
 			group = SourceData.GetString(5),
 			curse = SourceData.GetString(6),
 			duration = SourceData.GetString(7),
-			hexPower = SourceData.GetInt(8),
-			negate = SourceData.GetStringArray(9),
-			defenseAttb = SourceData.GetStringArray(10),
-			resistance = SourceData.GetStringArray(11),
-			gainRes = SourceData.GetInt(12),
-			elements = SourceData.GetStringArray(13),
-			nullify = SourceData.GetStringArray(14),
-			tag = SourceData.GetStringArray(15),
-			phase = SourceData.GetIntArray(16),
-			colors = SourceData.GetString(17),
-			element = SourceData.GetString(18),
-			effect = SourceData.GetStringArray(19),
-			strPhase_JP = SourceData.GetStringArray(20),
-			strPhase = SourceData.GetStringArray(21),
-			textPhase_JP = SourceData.GetString(22),
-			textPhase = SourceData.GetString(23),
-			textEnd_JP = SourceData.GetString(24),
-			textEnd = SourceData.GetString(25),
-			textPhase2_JP = SourceData.GetString(26),
-			textPhase2 = SourceData.GetString(27),
-			gradient = SourceData.GetString(28),
-			invert = SourceData.GetBool(29),
-			detail_JP = SourceData.GetString(30),
-			detail = SourceData.GetString(31)
+			durationMax = SourceData.GetInt(8),
+			hexPower = SourceData.GetInt(9),
+			negate = SourceData.GetStringArray(10),
+			defenseAttb = SourceData.GetStringArray(11),
+			resistance = SourceData.GetStringArray(12),
+			gainRes = SourceData.GetInt(13),
+			elements = SourceData.GetStringArray(14),
+			nullify = SourceData.GetStringArray(15),
+			tag = SourceData.GetStringArray(16),
+			phase = SourceData.GetIntArray(17),
+			colors = SourceData.GetString(18),
+			element = SourceData.GetString(19),
+			effect = SourceData.GetStringArray(20),
+			strPhase_JP = SourceData.GetStringArray(21),
+			strPhase = SourceData.GetStringArray(22),
+			textPhase_JP = SourceData.GetString(23),
+			textPhase = SourceData.GetString(24),
+			textEnd_JP = SourceData.GetString(25),
+			textEnd = SourceData.GetString(26),
+			textPhase2_JP = SourceData.GetString(27),
+			textPhase2 = SourceData.GetString(28),
+			gradient = SourceData.GetString(29),
+			invert = SourceData.GetBool(30),
+			detail_JP = SourceData.GetString(31),
+			detail = SourceData.GetString(32)
 		};
 	}
 
