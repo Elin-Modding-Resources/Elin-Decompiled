@@ -66,18 +66,7 @@ public class ConTransmuteHuman : ConBaseTransmuteMimic
 				}
 				else
 				{
-					List<Chara> list2 = owner.pos.ListCharasInRadius(owner, 6, delegate(Chara c)
-					{
-						if (!c.IsMultisize && c.IsHumanSpeak)
-						{
-							CardRenderer renderer = c.renderer;
-							if (renderer != null && !renderer.hasActor)
-							{
-								return !c.HasElement(1427);
-							}
-						}
-						return false;
-					});
+					List<Chara> list2 = owner.pos.ListCharasInRadius(owner, 6, (Chara c) => !c.IsMultisize && c.IsHumanSpeak && !c.HasElement(1427));
 					if (list2.Count > 0)
 					{
 						chara = list2.RandomItem().Duplicate();

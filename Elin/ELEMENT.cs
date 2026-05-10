@@ -642,7 +642,7 @@ public class Element : EClass
 						condition.SetRefVal(79, (act.id == 8710) ? 222 : 221);
 						break;
 					}
-					n.AddText("_bullet".lang() + (condition.HasDuration ? "hintCon" : "hintCon2").lang(condition.Name, condition.EvaluateTurn(p).ToString() ?? ""));
+					n.AddText("_bullet".lang() + (condition.HasDuration ? "hintCon" : "hintCon2").lang(condition.Name, condition.EvaluateTurn(p).ToString() ?? "") + ((condition.HasDuration && condition.MaxDuration != 0 && condition.MaxDuration < 999) ? "hintCon3".lang(condition.MaxDuration.ToString() ?? "") : ""));
 					condition._WriteNote(n, asChild: true);
 				}
 				else

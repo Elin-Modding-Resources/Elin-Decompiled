@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -133,9 +134,9 @@ public class Net : MonoBehaviour
 		}
 		WWWForm wWWForm = new WWWForm();
 		wWWForm.AddField("mode", 1);
-		wWWForm.AddField("id", id);
-		wWWForm.AddField("name", name);
-		wWWForm.AddField("title", title);
+		wWWForm.AddField("id", id.RemoveNewline());
+		wWWForm.AddField("name", name.RemoveNewline());
+		wWWForm.AddField("title", title.RemoveNewline());
 		wWWForm.AddField("cat", cat);
 		wWWForm.AddField("tag", tag);
 		wWWForm.AddField("idLang", idLang);
@@ -229,22 +230,22 @@ public class Net : MonoBehaviour
 			}
 			return null;
 		}
-		StringReader stringReader = new StringReader(www.downloadHandler.text);
-		for (string text = stringReader.ReadLine(); text != null; text = stringReader.ReadLine())
+		string[] array = www.downloadHandler.text.SplitNewline();
+		foreach (string obj in array)
 		{
-			if (!string.IsNullOrEmpty(text))
+			string[] array2 = obj.Split(',');
+			if (obj.StartsWith("files") && array2.Length >= 7)
 			{
-				string[] array = text.Split(',');
 				list.Add(new DownloadMeta
 				{
-					path = array[0],
-					id = Path.GetFileNameWithoutExtension(array[0]),
-					name = array[2],
-					title = array[3],
-					cat = array[5],
-					date = array[6].Replace("\"", ""),
-					version = ((array.Length >= 9) ? array[8].ToInt() : 0),
-					tag = ((array.Length >= 10) ? array[9] : "")
+					path = array2[0],
+					id = WebUtility.HtmlDecode(array2[1]),
+					name = WebUtility.HtmlDecode(array2[2]),
+					title = WebUtility.HtmlDecode(array2[3]),
+					cat = array2[5],
+					date = array2[6].Replace("\"", ""),
+					version = ((array2.Length > 8) ? array2[8].ToInt() : 0),
+					tag = ((array2.Length > 9) ? array2[9] : "")
 				});
 			}
 		}

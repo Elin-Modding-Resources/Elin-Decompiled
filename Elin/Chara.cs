@@ -1837,6 +1837,10 @@ public class Chara : Card, IPathfindWalker
 		chara.isScaled = base.isScaled;
 		chara.c_altName = base.c_altName;
 		chara._alias = _alias;
+		if (pccData != null)
+		{
+			chara.pccData = IO.DeepCopy(pccData);
+		}
 		if (HaveFur())
 		{
 			chara.c_fur = -1;
