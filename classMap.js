@@ -95,6 +95,7 @@ var classMap =
     [ "SetBounds", "classMap.html#a7d4fbbb06323f111e12465125c769f04", null ],
     [ "SetBridge", "classMap.html#a2425953e7c96cfab67a413d00452863a", null ],
     [ "SetDecal", "classMap.html#a4d48625150837d1ca16aad0f0c76e1ff", null ],
+    [ "SetDeco", "classMap.html#a7501a6b8d9256990605b3cac75b56549", null ],
     [ "SetEffect", "classMap.html#ac5d55bb35f14a266aa8d689b1bdafb3c", null ],
     [ "SetFloor", "classMap.html#a57af5946455529198d758a83f6672256", null ],
     [ "SetFloor", "classMap.html#a7c42b39e9297df5d44c7963791d5cc90", null ],

@@ -111,6 +111,7 @@ var NAVTREEINDEX2 =
 "BlockRenderMode_8cs.html#a55e0dd4145fbc0c069fa1c911b39fd3ea7a1920d61156abc05a60135aefe8bc67":[2,0,0,232,0,0],
 "BlockRenderMode_8cs.html#a55e0dd4145fbc0c069fa1c911b39fd3eaa8d676f6251d12b454b9ffd792d5ce46":[2,0,0,232,0,4],
 "BlockRenderMode_8cs.html#a55e0dd4145fbc0c069fa1c911b39fd3eaf0d02acf8caf951ae624c2c2843397d6":[2,0,0,232,0,1],
+"BlockRenderMode_8cs.html#a55e0dd4145fbc0c069fa1c911b39fd3eaf3f6d0343d56ce88ce7958170ed05cb3":[2,0,0,232,0,5],
 "BlockRenderMode_8cs_source.html":[2,0,0,232],
 "BodySlot_8cs.html":[2,0,0,233],
 "BodySlot_8cs_source.html":[2,0,0,233],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "CardBlueprint_8cs.html":[2,0,0,255],
 "CardBlueprint_8cs_source.html":[2,0,0,255],
 "CardFilter_8cs.html":[2,0,0,256],
-"CardFilter_8cs_source.html":[2,0,0,256],
-"CardGen_8cs.html":[2,0,0,257]
+"CardFilter_8cs_source.html":[2,0,0,256]
 };

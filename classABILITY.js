@@ -126,6 +126,7 @@ var classABILITY =
     [ "SpTransmuteHuman", "classABILITY.html#ac30238848860d2551e6afad15bed1ddf", null ],
     [ "SpTransmuteMimic", "classABILITY.html#a3ccdd7ddb19beac5f4ad3fc187d6197d", null ],
     [ "SpTransmuteShadow", "classABILITY.html#afe62ecb412d5c272b1dd621bf99f3595", null ],
+    [ "StMama", "classABILITY.html#a34ceeb976bd14cdac07c846d3aebb597", null ],
     [ "StManaCost", "classABILITY.html#aa74f8fa720ebd9ab23d4e1be983183d8", null ],
     [ "StTaunt", "classABILITY.html#a95955e7cb37876d089e49d8d96eea35c", null ],
     [ "TaskAttack", "classABILITY.html#a5e5613f46539c790b830307b8a2ab9ad", null ],

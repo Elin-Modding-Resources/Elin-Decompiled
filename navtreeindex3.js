@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"CardGen_8cs.html":[2,0,0,257],
 "CardGen_8cs_source.html":[2,0,0,257],
 "CardInspector_8cs.html":[2,0,0,258],
 "CardInspector_8cs_source.html":[2,0,0,258],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "ConTransmute_8cs_source.html":[2,0,0,387],
 "ConVampire_8cs.html":[2,0,0,395],
 "ConVampire_8cs_source.html":[2,0,0,395],
-"ConWait_8cs.html":[2,0,0,396],
-"ConWait_8cs_source.html":[2,0,0,396]
+"ConWait_8cs.html":[2,0,0,396]
 };

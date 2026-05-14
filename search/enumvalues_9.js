@@ -12,8 +12,8 @@ var searchData=
   ['junk_9',['Junk',['../classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da50a16f415160a7132a86a551fc34bdc9',1,'TraitGacha']]],
   ['junk_10',['junk',['../ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a0c821f675f132d790b3f25e79da739a7',1,'ContainerFlag2.cs']]],
   ['junk_11',['Junk',['../ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba50a16f415160a7132a86a551fc34bdc9',1,'ShopType.cs']]],
-  ['jure_12',['Jure',['../CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5e8a407fd55a2cd13d462390bd849531',1,'CureType.cs']]],
-  ['jure_13',['JURE',['../ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a4df96777ae95a6062e20c841a7a4051d',1,'ID_Achievement.cs']]],
+  ['jure_12',['JURE',['../ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a4df96777ae95a6062e20c841a7a4051d',1,'ID_Achievement.cs']]],
+  ['jure_13',['Jure',['../CureType_8cs.html#af6d2b967a6970eaae81f28d381fb875ba5e8a407fd55a2cd13d462390bd849531',1,'CureType.cs']]],
   ['jure_5fwater_14',['JURE_WATER',['../ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a0f8bbfb0a0cc33d3bacbfa99a2308403',1,'ID_Achievement.cs']]],
   ['jureheal_15',['JureHeal',['../EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ad6f4b8eaa230a174a87f50cbc69ecc34',1,'EffectId.cs']]]
 ];

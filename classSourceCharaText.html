@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.305 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.306 Nightly</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('classSourceCharaText.html',''); initRe
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="classSourceCharaText-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SourceCharaText Class Reference</div></div>
@@ -116,11 +117,20 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab9f57673ec2f652dc43c76c8a5291140"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classSourceCharaText_1_1Row.html">Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceCharaText.html#ab9f57673ec2f652dc43c76c8a5291140">CreateRow</a> ()</td></tr>
 <tr class="separator:ab9f57673ec2f652dc43c76c8a5291140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979818ffd0cb4e00f224d26588f25f41"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="classSourceCharaText_1_1Row.html">Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceCharaText.html#a979818ffd0cb4e00f224d26588f25f41">CreateRowByMapping</a> (IReadOnlyDictionary&lt; string, int &gt; mapping)</td></tr>
+<tr class="separator:a979818ffd0cb4e00f224d26588f25f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a098225f353ed0077a406b224b11451e2"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceCharaText.html#a098225f353ed0077a406b224b11451e2">SetRow</a> (<a class="el" href="classSourceCharaText_1_1Row.html">Row</a> r)</td></tr>
 <tr class="separator:a098225f353ed0077a406b224b11451e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9185360e5f43646baef90d366ab2fe89"><td class="memItemLeft" align="right" valign="top">override IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceCharaText.html#a9185360e5f43646baef90d366ab2fe89">GetRowMapping</a> ()</td></tr>
+<tr class="separator:a9185360e5f43646baef90d366ab2fe89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSourceDataString"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSourceDataString')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSourceDataString.html">SourceDataString&lt; SourceCharaText.Row &gt;</a></td></tr>
 <tr class="memitem:ae9a81424246f259016a8e5c54b735517 inherit pub_methods_classSourceDataString"><td class="memItemLeft" align="right" valign="top">override T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceDataString.html#ae9a81424246f259016a8e5c54b735517">GetRow</a> (string id)</td></tr>
 <tr class="separator:ae9a81424246f259016a8e5c54b735517 inherit pub_methods_classSourceDataString"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a0d9e9105490a98d25033d01e173645b3"><td class="memItemLeft" align="right" valign="top">static readonly IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceCharaText.html#a0d9e9105490a98d25033d01e173645b3">RowMapping</a></td></tr>
+<tr class="separator:a0d9e9105490a98d25033d01e173645b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -129,7 +139,7 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00003">3</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00004">4</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab9f57673ec2f652dc43c76c8a5291140" name="ab9f57673ec2f652dc43c76c8a5291140"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9f57673ec2f652dc43c76c8a5291140">&#9670;&#160;</a></span>CreateRow()</h2>
@@ -154,27 +164,106 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00052">52</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
-<div class="line"><span class="lineno">   57</span>            calm_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
-<div class="line"><span class="lineno">   58</span>            fov_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3),</div>
-<div class="line"><span class="lineno">   59</span>            aggro_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(4),</div>
-<div class="line"><span class="lineno">   60</span>            dead_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(5),</div>
-<div class="line"><span class="lineno">   61</span>            kill_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(6),</div>
-<div class="line"><span class="lineno">   62</span>            calm = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(7),</div>
-<div class="line"><span class="lineno">   63</span>            fov = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(8),</div>
-<div class="line"><span class="lineno">   64</span>            aggro = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(9),</div>
-<div class="line"><span class="lineno">   65</span>            dead = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(10),</div>
-<div class="line"><span class="lineno">   66</span>            kill = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(11)</div>
-<div class="line"><span class="lineno">   67</span>        };</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00010">SourceData.cs:11</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00927">SourceData.cs:927</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00068">68</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
+<div class="line"><span class="lineno">   73</span>            calm_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
+<div class="line"><span class="lineno">   74</span>            fov_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3),</div>
+<div class="line"><span class="lineno">   75</span>            aggro_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(4),</div>
+<div class="line"><span class="lineno">   76</span>            dead_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(5),</div>
+<div class="line"><span class="lineno">   77</span>            kill_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(6),</div>
+<div class="line"><span class="lineno">   78</span>            calm = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(7),</div>
+<div class="line"><span class="lineno">   79</span>            fov = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(8),</div>
+<div class="line"><span class="lineno">   80</span>            aggro = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(9),</div>
+<div class="line"><span class="lineno">   81</span>            dead = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(10),</div>
+<div class="line"><span class="lineno">   82</span>            kill = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(11)</div>
+<div class="line"><span class="lineno">   83</span>        };</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00011">SourceData.cs:12</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00983">SourceData.cs:983</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00927">SourceData&lt; T, T2 &gt;.GetString()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>.</p>
+
+</div>
+</div>
+<a id="a979818ffd0cb4e00f224d26588f25f41" name="a979818ffd0cb4e00f224d26588f25f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979818ffd0cb4e00f224d26588f25f41">&#9670;&#160;</a></span>CreateRowByMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="classSourceCharaText_1_1Row.html">Row</a> SourceCharaText.CreateRowByMapping </td>
+          <td>(</td>
+          <td class="paramtype">IReadOnlyDictionary&lt; string, int &gt;&#160;</td>
+          <td class="paramname"><em>mapping</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00086">86</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
+<div class="line"><span class="lineno">   91</span>            calm_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;calm_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">   92</span>            fov_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;fov_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">   93</span>            aggro_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;aggro_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">   94</span>            dead_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;dead_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">   95</span>            kill_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;kill_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">   96</span>            calm = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;calm&quot;</span>]),</div>
+<div class="line"><span class="lineno">   97</span>            fov = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;fov&quot;</span>]),</div>
+<div class="line"><span class="lineno">   98</span>            aggro = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;aggro&quot;</span>]),</div>
+<div class="line"><span class="lineno">   99</span>            dead = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;dead&quot;</span>]),</div>
+<div class="line"><span class="lineno">  100</span>            kill = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;kill&quot;</span>])</div>
+<div class="line"><span class="lineno">  101</span>        };</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>.</p>
+
+</div>
+</div>
+<a id="a9185360e5f43646baef90d366ab2fe89" name="a9185360e5f43646baef90d366ab2fe89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9185360e5f43646baef90d366ab2fe89">&#9670;&#160;</a></span>GetRowMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IReadOnlyDictionary&lt; string, int &gt; SourceCharaText.GetRowMapping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00109">109</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceCharaText.html#a0d9e9105490a98d25033d01e173645b3">RowMapping</a>;</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="ttc" id="aclassSourceCharaText_html_a0d9e9105490a98d25033d01e173645b3"><div class="ttname"><a href="classSourceCharaText.html#a0d9e9105490a98d25033d01e173645b3">SourceCharaText.RowMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, int &gt; RowMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceCharaText_8cs_source.html#l00051">SourceCharaText.cs:51</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceCharaText_8cs_source.html#l00051">RowMapping</a>.</p>
 
 </div>
 </div>
@@ -202,12 +291,53 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00070">70</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>        map[r.id] = r;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00104">104</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceCharaText_8cs_source.html#l00008">SourceCharaText.Row.id</a>.</p>
+<p class="reference">References <a class="el" href="SourceCharaText_8cs_source.html#l00009">SourceCharaText.Row.id</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0d9e9105490a98d25033d01e173645b3" name="a0d9e9105490a98d25033d01e173645b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9e9105490a98d25033d01e173645b3">&#9670;&#160;</a></span>RowMapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly IReadOnlyDictionary&lt;string, int&gt; SourceCharaText.RowMapping</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Dictionary&lt;string, int&gt;</div>
+<div class="line">    {</div>
+<div class="line">        [<span class="stringliteral">&quot;id&quot;</span>] = 0,</div>
+<div class="line">        [<span class="stringliteral">&quot;calm_JP&quot;</span>] = 2,</div>
+<div class="line">        [<span class="stringliteral">&quot;fov_JP&quot;</span>] = 3,</div>
+<div class="line">        [<span class="stringliteral">&quot;aggro_JP&quot;</span>] = 4,</div>
+<div class="line">        [<span class="stringliteral">&quot;dead_JP&quot;</span>] = 5,</div>
+<div class="line">        [<span class="stringliteral">&quot;kill_JP&quot;</span>] = 6,</div>
+<div class="line">        [<span class="stringliteral">&quot;calm&quot;</span>] = 7,</div>
+<div class="line">        [<span class="stringliteral">&quot;fov&quot;</span>] = 8,</div>
+<div class="line">        [<span class="stringliteral">&quot;aggro&quot;</span>] = 9,</div>
+<div class="line">        [<span class="stringliteral">&quot;dead&quot;</span>] = 10,</div>
+<div class="line">        [<span class="stringliteral">&quot;kill&quot;</span>] = 11</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00051">51</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceCharaText_8cs_source.html#l00109">GetRowMapping()</a>.</p>
 
 </div>
 </div>
@@ -232,7 +362,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00050">50</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceCharaText_8cs_source.html#l00066">66</a> of file <a class="el" href="SourceCharaText_8cs_source.html">SourceCharaText.cs</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var classExcelParser =
 [
+    [ "ClearStaticRows", "classExcelParser.html#a0d5b40e2577f9a2903fb40bc83be2816", null ],
     [ "GetBool", "classExcelParser.html#a4fafadc15b084d07ec965f16607a9793", null ],
     [ "GetBool", "classExcelParser.html#a1223faafd18b79471da489cae63d46e7", null ],
     [ "GetDouble", "classExcelParser.html#a9fe7f3b6689dd30cb2b4ec42a36c8105", null ],
@@ -8,6 +9,7 @@ var classExcelParser =
     [ "GetInt", "classExcelParser.html#a7e443489cda4848acf13dc6e5b7f6271", null ],
     [ "GetInt", "classExcelParser.html#a55d3bd78cbe12814fc7beb83b4ce7b37", null ],
     [ "GetIntArray", "classExcelParser.html#a77608e5f794e0cef72a46e3fcc750c3a", null ],
+    [ "GetRowHeaderDiff", "classExcelParser.html#a2211874057b971cec1c0c7a199327b97", null ],
     [ "GetStr", "classExcelParser.html#ac98b9c4c7bf5efe1f49038004406a216", null ],
     [ "GetString", "classExcelParser.html#af509e35ce4810039a877603cde638c36", null ],
     [ "GetString", "classExcelParser.html#a6dcc6701826d8b7d1d068ba2eb858c60", null ],
@@ -17,5 +19,6 @@ var classExcelParser =
     [ "ToLetterId", "classExcelParser.html#a2bbe64eb4c0ae3211e8c8dc0f445f76e", null ],
     [ "path", "classExcelParser.html#a9c8b87ac73dbebf9015f999cf1e5c24c", null ],
     [ "row", "classExcelParser.html#a5e037f830a26aa5b027bd155e21ae83b", null ],
-    [ "rowDefault", "classExcelParser.html#a373376895ea848135feb8708be6c3873", null ]
+    [ "rowDefault", "classExcelParser.html#a373376895ea848135feb8708be6c3873", null ],
+    [ "rowHeader", "classExcelParser.html#ae7992c9b93a5180aef8456606d6b8939", null ]
 ];

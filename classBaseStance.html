@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.305 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.306 Nightly</span>
    </div>
   </td>
  </tr>
@@ -102,15 +102,16 @@ Inheritance diagram for BaseStance:</div>
  <div class="center">
   <img src="classBaseStance.png" usemap="#BaseStance_map" alt=""/>
   <map id="BaseStance_map" name="BaseStance_map">
-<area href="classCondition.html" alt="Condition" shape="rect" coords="366,168,478,192"/>
-<area href="classBaseCondition.html" alt="BaseCondition" shape="rect" coords="366,112,478,136"/>
-<area href="classBaseStats.html" alt="BaseStats" shape="rect" coords="366,56,478,80"/>
-<area href="classEClass.html" alt="EClass" shape="rect" coords="366,0,478,24"/>
+<area href="classCondition.html" alt="Condition" shape="rect" coords="427,168,539,192"/>
+<area href="classBaseCondition.html" alt="BaseCondition" shape="rect" coords="427,112,539,136"/>
+<area href="classBaseStats.html" alt="BaseStats" shape="rect" coords="427,56,539,80"/>
+<area href="classEClass.html" alt="EClass" shape="rect" coords="427,0,539,24"/>
 <area href="classBaseSong.html" alt="BaseSong" shape="rect" coords="122,280,234,304"/>
 <area href="classStanceFury.html" alt="StanceFury" shape="rect" coords="244,280,356,304"/>
 <area href="classStanceIai.html" alt="StanceIai" shape="rect" coords="366,280,478,304"/>
-<area href="classStanceManaCost.html" alt="StanceManaCost" shape="rect" coords="488,280,600,304"/>
-<area href="classStanceTaunt.html" alt="StanceTaunt" shape="rect" coords="610,280,722,304"/>
+<area href="classStanceMama.html" alt="StanceMama" shape="rect" coords="488,280,600,304"/>
+<area href="classStanceManaCost.html" alt="StanceManaCost" shape="rect" coords="610,280,722,304"/>
+<area href="classStanceTaunt.html" alt="StanceTaunt" shape="rect" coords="732,280,844,304"/>
 <area href="classStanceSongEnd.html" alt="StanceSongEnd" shape="rect" coords="0,336,112,360"/>
 <area href="classStanceSongSleep.html" alt="StanceSongSleep" shape="rect" coords="122,336,234,360"/>
 <area href="classStanceSongValor.html" alt="StanceSongValor" shape="rect" coords="244,336,356,360"/>
@@ -257,6 +258,8 @@ Public Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a892a79a7176e84c6aa8c413863ca6672"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseStance.html#a892a79a7176e84c6aa8c413863ca6672">CanManualRemove</a><code> [get]</code></td></tr>
 <tr class="separator:a892a79a7176e84c6aa8c413863ca6672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ebb1f5acd2d52fd2d29acd8ba50bef"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseStance.html#a94ebb1f5acd2d52fd2d29acd8ba50bef">HasDuration</a><code> [get]</code></td></tr>
+<tr class="separator:a94ebb1f5acd2d52fd2d29acd8ba50bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classCondition"><td colspan="2" onclick="javascript:toggleInherit('properties_classCondition')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classCondition.html">Condition</a></td></tr>
 <tr class="memitem:a3cae0da067003b05fe8b315948664bfb inherit properties_classCondition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#a3cae0da067003b05fe8b315948664bfb">IsKilled</a><code> [get]</code></td></tr>
 <tr class="separator:a3cae0da067003b05fe8b315948664bfb inherit properties_classCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -457,13 +460,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#a653199ff8beb45fc8d91d3bf89b91676">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00010">10</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStance.html">NotificationStance</a></div>
-<div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            condition = <span class="keyword">this</span></div>
-<div class="line"><span class="lineno">   15</span>        };</div>
-<div class="line"><span class="lineno">   16</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00012">12</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classNotificationStance.html">NotificationStance</a></div>
+<div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            condition = <span class="keyword">this</span></div>
+<div class="line"><span class="lineno">   17</span>        };</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
 <div class="ttc" id="aclassNotificationStance_html"><div class="ttname"><a href="classNotificationStance.html">NotificationStance</a></div><div class="ttdef"><b>Definition:</b> <a href="NotificationStance_8cs_source.html#l00001">NotificationStance.cs:2</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -493,10 +496,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af424fbf8c5f20a671768732269a12794">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00005">5</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">    8</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00007">7</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -525,9 +528,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af0c6ea92ca1cc59ce6dec886a38868b5">BaseCondition</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00018">18</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
-<div class="line"><span class="lineno">   20</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00020">20</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -553,6 +556,30 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00003">3</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
+
+</div>
+</div>
+<a id="a94ebb1f5acd2d52fd2d29acd8ba50bef" name="a94ebb1f5acd2d52fd2d29acd8ba50bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ebb1f5acd2d52fd2d29acd8ba50bef">&#9670;&#160;</a></span>HasDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool BaseStance.HasDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00005">5</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
 
 </div>
 </div>

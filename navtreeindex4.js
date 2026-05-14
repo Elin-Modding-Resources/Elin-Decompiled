@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"ConWait_8cs_source.html":[2,0,0,396],
 "ConWardMonster_8cs.html":[2,0,0,397],
 "ConWardMonster_8cs_source.html":[2,0,0,397],
 "ConWeakResEle_8cs.html":[2,0,0,399],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "DesignationList_8cs_source.html":[2,0,0,431],
 "DialogDrama_8cs.html":[2,0,0,433],
 "DialogDrama_8cs_source.html":[2,0,0,433],
-"Dialog_8cs.html":[2,0,0,432],
-"Dialog_8cs_source.html":[2,0,0,432]
+"Dialog_8cs.html":[2,0,0,432]
 };

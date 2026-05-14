@@ -21,6 +21,7 @@ var classSourceManager =
     [ "charaText", "classSourceManager.html#ab084035a5bb5fff272e13e8c01b8894c", null ],
     [ "checks", "classSourceManager.html#a6abf3ffa99e1dc0f729165644f814c8d", null ],
     [ "collectibles", "classSourceManager.html#a4bf87f219cdfb7f4da20de5e3d14852b", null ],
+    [ "decos", "classSourceManager.html#a62d2bafcd5108ed0407514a3688155eb", null ],
     [ "elements", "classSourceManager.html#aca64230665ba96ef7f9e96164be02578", null ],
     [ "factions", "classSourceManager.html#a0036753bc9e25f95a06c6472e85beaf7", null ],
     [ "floors", "classSourceManager.html#af0401efa5aae8bd83979a2a12bad1893", null ],

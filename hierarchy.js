@@ -102,6 +102,7 @@ var hierarchy =
         [ "TileRow", "classTileRow.html", [
           [ "SourceBlock.Row", "classSourceBlock_1_1Row.html", null ],
           [ "SourceCellEffect.Row", "classSourceCellEffect_1_1Row.html", null ],
+          [ "SourceDeco.Row", "classSourceDeco_1_1Row.html", null ],
           [ "SourceFloor.Row", "classSourceFloor_1_1Row.html", null ],
           [ "SourceObj.Row", "classSourceObj_1_1Row.html", null ]
         ] ]
@@ -489,6 +490,7 @@ var hierarchy =
               ] ],
               [ "StanceFury", "classStanceFury.html", null ],
               [ "StanceIai", "classStanceIai.html", null ],
+              [ "StanceMama", "classStanceMama.html", null ],
               [ "StanceManaCost", "classStanceManaCost.html", null ],
               [ "StanceTaunt", "classStanceTaunt.html", null ]
             ] ],
@@ -1357,8 +1359,10 @@ var hierarchy =
           ] ]
         ] ],
         [ "TileTypeFloor", "classTileTypeFloor.html", [
+          [ "TileTypeBlockDeco", "classTileTypeBlockDeco.html", null ],
           [ "TileTypeBridge", "classTileTypeBridge.html", null ],
           [ "TileTypeBridgeDeco", "classTileTypeBridgeDeco.html", null ],
+          [ "TileTypeFloorDeco", "classTileTypeFloorDeco.html", null ],
           [ "TileTypeFloorScaffold", "classTileTypeFloorScaffold.html", null ],
           [ "TileTypeNone", "classTileTypeNone.html", null ],
           [ "TileTypeWaterShallow", "classTileTypeWaterShallow.html", [
@@ -2032,6 +2036,7 @@ var hierarchy =
         [ "TraitTile", "classTraitTile.html", [
           [ "TraitBlock", "classTraitBlock.html", null ],
           [ "TraitFloor", "classTraitFloor.html", null ],
+          [ "TraitFloorDeco", "classTraitFloorDeco.html", null ],
           [ "TraitObj", "classTraitObj.html", null ],
           [ "TraitPlatform", "classTraitPlatform.html", null ]
         ] ],
@@ -3221,6 +3226,9 @@ var hierarchy =
     ] ],
     [ "SourceDataInt< SourceCellEffect.Row >", "classSourceDataInt.html", [
       [ "SourceCellEffect", "classSourceCellEffect.html", null ]
+    ] ],
+    [ "SourceDataInt< SourceDeco.Row >", "classSourceDataInt.html", [
+      [ "SourceDeco", "classSourceDeco.html", null ]
     ] ],
     [ "SourceDataInt< SourceElement.Row >", "classSourceDataInt.html", [
       [ "SourceElement", "classSourceElement.html", null ]

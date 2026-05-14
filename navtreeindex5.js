@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"Dialog_8cs_source.html":[2,0,0,432],
 "Dice_8cs.html":[2,0,0,434],
 "Dice_8cs_source.html":[2,0,0,434],
 "DissolveImage_8cs.html":[2,0,0,3,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a858071464775993491f4d4327234cb64":[2,0,0,465,0,52],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a85caab9f87aaab2166693ab8a1aeaa97":[2,0,0,465,0,38],
 "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a8a03dee166961130058458d3eefd866a":[2,0,0,465,0,97],
-"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a8a10e8ef925a747add7aebf40e98b8ae":[2,0,0,465,0,84],
-"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a8a88c39cef668fb55f188af09665bd40":[2,0,0,465,0,63]
+"EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a8a10e8ef925a747add7aebf40e98b8ae":[2,0,0,465,0,84]
 };

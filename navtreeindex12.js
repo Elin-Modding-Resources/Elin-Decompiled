@@ -1,5 +1,10 @@
 var NAVTREEINDEX12 =
 {
+"PopItemText_8cs_source.html":[2,0,0,3,74],
+"PopItem_8cs.html":[2,0,0,3,73],
+"PopItem_8cs_source.html":[2,0,0,3,73],
+"PopManager_8cs.html":[2,0,0,3,75],
+"PopManager_8cs_source.html":[2,0,0,3,75],
 "PopfabItem_8cs.html":[2,0,0,3,71],
 "PopfabItem_8cs_source.html":[2,0,0,3,71],
 "PopfabText_8cs.html":[2,0,0,3,72],
@@ -244,10 +249,5 @@ var NAVTREEINDEX12 =
 "Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600":[2,0,0,1025,0],
 "Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64663f4646781c9c0110838b905daa23":[2,0,0,1025,0,0],
 "Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a64dbb87794fbe7f587582b27d08ace2b":[2,0,0,1025,0,3],
-"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9461cd71b44420aa1d0e6487f1b7bb60":[2,0,0,1025,0,4],
-"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a960b44c579bc2f6818d2daaf9e4c16f0":[2,0,0,1025,0,2],
-"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9a88a95cae2b773e5134a06d74dde1aa":[2,0,0,1025,0,1],
-"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9cce556535c54f0a868908310f75a92e":[2,0,0,1025,0,5],
-"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600ab96919a088e508abfbb1aa9c4cbb8f0b":[2,0,0,1025,0,6],
-"Rarity_8cs_source.html":[2,0,0,1025]
+"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9461cd71b44420aa1d0e6487f1b7bb60":[2,0,0,1025,0,4]
 };

@@ -13,6 +13,7 @@ var classSourceData =
     [ "BuildEditorList", "classSourceData.html#ac8bd4dce104d43a0fdff6869fc626abe", null ],
     [ "BuildFlags", "classSourceData.html#a60e56c946628f53bfa55cec4d6c75f8b", null ],
     [ "CreateRow", "classSourceData.html#a2a4b58f656b62e6bf22e4d707c8b5473", null ],
+    [ "CreateRowByMapping", "classSourceData.html#a82482fe32ec0e2ac2130d417d4f62cae", null ],
     [ "ExportTexts", "classSourceData.html#a234a9b78fef2d11bc60bd93276dba176", null ],
     [ "ExportTexts", "classSourceData.html#a91071fe7311740c5e52305f1199ab79c", null ],
     [ "GetBool", "classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4", null ],
@@ -26,6 +27,7 @@ var classSourceData =
     [ "GetList", "classSourceData.html#a26250e5aad2df9810fc1153e7d2faf8b", null ],
     [ "GetListString", "classSourceData.html#ac81910433d23d089a97cbae4f68d967e", null ],
     [ "GetRow", "classSourceData.html#aa31f30f7ececda6407dd6539ca7dd700", null ],
+    [ "GetRowMapping", "classSourceData.html#a38771d899db1d35bd2e3a77f45e8a10b", null ],
     [ "GetStr", "classSourceData.html#a611aa9991dfe740ac3068254327369c6", null ],
     [ "GetString", "classSourceData.html#a1038fc01782222ed71c35569190e3db7", null ],
     [ "GetStringArray", "classSourceData.html#a067341fc167e6502e6905105a7b84343", null ],
@@ -68,6 +70,7 @@ var classSourceData =
     [ "ImportFields", "classSourceData.html#a05a4f5dc511dfa38272bd42d4498cc78", null ],
     [ "row", "classSourceData.html#a1188b762baf71923df3cdc92d0abc41d", null ],
     [ "rowDefault", "classSourceData.html#a34240ee771c869320b92e9971c720afc", null ],
+    [ "rowHeader", "classSourceData.html#a0d8058cf30314b13548bb62580bdd91d", null ],
     [ "sheetName", "classSourceData.html#a45f02be16e15689d6c0a06f377b8bd83", null ],
     [ "sourcePath", "classSourceData.html#a4c8d7949a775b9f4a86b264193e264a6", null ]
 ];

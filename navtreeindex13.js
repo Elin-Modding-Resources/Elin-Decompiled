@@ -1,5 +1,10 @@
 var NAVTREEINDEX13 =
 {
+"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a960b44c579bc2f6818d2daaf9e4c16f0":[2,0,0,1025,0,2],
+"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9a88a95cae2b773e5134a06d74dde1aa":[2,0,0,1025,0,1],
+"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600a9cce556535c54f0a868908310f75a92e":[2,0,0,1025,0,5],
+"Rarity_8cs.html#a6c4fc244cdc975f7fd572fa614617600ab96919a088e508abfbb1aa9c4cbb8f0b":[2,0,0,1025,0,6],
+"Rarity_8cs_source.html":[2,0,0,1025],
 "RecipeBridgePillar_8cs.html":[2,0,0,1027],
 "RecipeBridgePillar_8cs_source.html":[2,0,0,1027],
 "RecipeCard_8cs.html":[2,0,0,1028],
@@ -190,8 +195,8 @@ var NAVTREEINDEX13 =
 "SKILL_8cs_source.html":[2,0,0,1113],
 "SLOT_8cs.html":[2,0,0,1118],
 "SLOT_8cs_source.html":[2,0,0,1118],
-"SPELL_8cs.html":[2,0,0,1176],
-"SPELL_8cs_source.html":[2,0,0,1176],
+"SPELL_8cs.html":[2,0,0,1177],
+"SPELL_8cs_source.html":[2,0,0,1177],
 "SceneColorProfile_8cs.html":[2,0,0,1095],
 "SceneColorProfile_8cs_source.html":[2,0,0,1095],
 "SceneGlobalProfile_8cs.html":[2,0,0,1,0,0,0,0,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX13 =
 "ShopType_8cs.html":[2,0,0,1111],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbb":[2,0,0,1111,0],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba02700e454d679f31f27c6f0768986dd1":[2,0,0,1111,0,14],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba07032f64d3cdf373c87a760abb6e098a":[2,0,0,1111,0,38],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba071642fa72ba780ee90ed36350d82745":[2,0,0,1111,0,17],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0a38e7286ebbb560354992b3ce62be67":[2,0,0,1111,0,25],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0b6cbdf7ad2928078f1600a3e8979485":[2,0,0,1111,0,10],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0c13f53c2b84e2431bcd0194fc4a69f9":[2,0,0,1111,0,48],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba0db377921f4ce762c62526131097968f":[2,0,0,1111,0,1]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba07032f64d3cdf373c87a760abb6e098a":[2,0,0,1111,0,38]
 };

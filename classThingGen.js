@@ -9,6 +9,7 @@ var classThingGen =
     [ "CreateCardboardBox", "classThingGen.html#ae07aa2249e03c6738cdd93c8054a9f65", null ],
     [ "CreateCassette", "classThingGen.html#a808918a40dd4d2d2f0bcd92dcd0fb3bf", null ],
     [ "CreateCurrency", "classThingGen.html#ae7d129df204b9092499fad5f944c750e", null ],
+    [ "CreateDeco", "classThingGen.html#a56ad541558a5718d3a22abca64b20ae4", null ],
     [ "CreateFloor", "classThingGen.html#a9acd66525d43b1297dff782f6ce6b562", null ],
     [ "CreateFromCategory", "classThingGen.html#ac4a7ef4a68508b96961ea565b80be7d8", null ],
     [ "CreateFromFilter", "classThingGen.html#a281cc475b772addc30ebe918809aaa30", null ],

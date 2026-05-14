@@ -1,5 +1,10 @@
 var NAVTREEINDEX10 =
 {
+"LangNote_8cs.html":[2,0,0,2,49],
+"LangNote_8cs_source.html":[2,0,0,2,49],
+"LangRow_8cs.html":[2,0,0,2,50],
+"LangRow_8cs_source.html":[2,0,0,2,50],
+"LangSetting_8cs.html":[2,0,0,2,51],
 "LangSetting_8cs_source.html":[2,0,0,2,51],
 "LangTalk_8cs.html":[2,0,0,2,52],
 "LangTalk_8cs_source.html":[2,0,0,2,52],
@@ -244,10 +249,5 @@ var NAVTREEINDEX10 =
 "MapBG_8cs.html#a35f8d808141b7cd0027802c3c54f9fcfade750545706d10adc6a3b6ca1b0f7c3f":[2,0,0,844,0,3],
 "MapBG_8cs_source.html":[2,0,0,844],
 "MapBounds_8cs.html":[2,0,0,845],
-"MapBounds_8cs_source.html":[2,0,0,845],
-"MapConfig_8cs.html":[2,0,0,846],
-"MapConfig_8cs_source.html":[2,0,0,846],
-"MapExportSetting_8cs.html":[2,0,0,847],
-"MapExportSetting_8cs_source.html":[2,0,0,847],
-"MapGenDungen_8cs.html":[2,0,0,849]
+"MapBounds_8cs_source.html":[2,0,0,845]
 };
