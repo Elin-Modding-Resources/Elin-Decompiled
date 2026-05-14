@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class LangGame : SourceLang<LangGame.Row>
 {
@@ -22,6 +23,19 @@ public class LangGame : SourceLang<LangGame.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["filter"] = 1,
+		["group"] = 2,
+		["color"] = 3,
+		["logColor"] = 4,
+		["sound"] = 5,
+		["effect"] = 6,
+		["text_JP"] = 7,
+		["text"] = 8
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -38,9 +52,30 @@ public class LangGame : SourceLang<LangGame.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			filter = SourceData.GetString(mapping["filter"]),
+			group = SourceData.GetString(mapping["group"]),
+			color = SourceData.GetString(mapping["color"]),
+			logColor = SourceData.GetString(mapping["logColor"]),
+			sound = SourceData.GetString(mapping["sound"]),
+			effect = SourceData.GetString(mapping["effect"]),
+			text_JP = SourceData.GetString(mapping["text_JP"]),
+			text = SourceData.GetString(mapping["text"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public static bool Has(string id)

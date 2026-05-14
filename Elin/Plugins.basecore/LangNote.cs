@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class LangNote : SourceDataString<LangNote.Row>
 {
@@ -19,6 +20,13 @@ public class LangNote : SourceDataString<LangNote.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["text_JP"] = 1,
+		["text"] = 2
+	};
+
 	public override bool AllowHotInitialization => true;
 
 	public override Row CreateRow()
@@ -31,8 +39,23 @@ public class LangNote : SourceDataString<LangNote.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			text_JP = SourceData.GetString(mapping["text_JP"]),
+			text = SourceData.GetString(mapping["text"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

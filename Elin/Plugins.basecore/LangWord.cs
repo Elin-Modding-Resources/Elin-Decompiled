@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class LangWord : SourceDataInt<LangWord.Row>
 {
@@ -21,6 +22,14 @@ public class LangWord : SourceDataInt<LangWord.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["group"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3
+	};
+
 	public override bool AllowHotInitialization => true;
 
 	public override Row CreateRow()
@@ -34,9 +43,25 @@ public class LangWord : SourceDataInt<LangWord.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			group = SourceData.GetString(mapping["group"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnAfterImportData()

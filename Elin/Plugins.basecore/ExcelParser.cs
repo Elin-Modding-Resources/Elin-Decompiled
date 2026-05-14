@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using NPOI.SS.UserModel;
 using UnityEngine;
@@ -10,6 +12,8 @@ public class ExcelParser
 	public static IRow row;
 
 	public static IRow rowDefault;
+
+	public static IRow rowHeader;
 
 	public static bool IsNull(ICell cell)
 	{
@@ -29,6 +33,10 @@ public class ExcelParser
 		}
 		if (!int.TryParse(str, out var result))
 		{
+			if (float.TryParse(str, out var result2))
+			{
+				return (int)result2;
+			}
 			ReportIllFormat<int>(id);
 		}
 		return result;
@@ -120,6 +128,11 @@ public class ExcelParser
 		{
 			if (!int.TryParse(array[i], out array2[i]))
 			{
+				if (float.TryParse(array[i], out var result))
+				{
+					array2[i] = (int)result;
+					continue;
+				}
 				ReportIllFormat<int>(id);
 				array2[i] = 0;
 			}
@@ -199,7 +212,7 @@ public class ExcelParser
 		ICell cell = row?.Cells.TryGet(id, returnNull: true);
 		IRow obj = row;
 		string value = ((obj != null && obj.RowNum >= 3) ? $", default:'{rowDefault?.Cells.TryGet(id, returnNull: true)}'" : ", SourceData begins at the 4th row. 3rd row is the default value row.");
-		stringBuilder.AppendLine("$source ill-format file: " + path);
+		stringBuilder.AppendLine("#source ill-format file: " + path);
 		object[] array = new object[5];
 		IRow obj2 = row;
 		array[0] = ((obj2 != null) ? new int?(obj2.RowNum + 1) : null);
@@ -207,8 +220,40 @@ public class ExcelParser
 		array[2] = ToLetterId(id);
 		array[3] = name;
 		array[4] = cell;
-		stringBuilder.Append(string.Format("row#{0}, cell'{1}'/'{2}', expected:'{3}', read:'{4}'", array));
+		stringBuilder.Append(string.Format("row#{0}, cell#{1}/#{2}, expected:'{3}', read:'{4}'", array));
 		stringBuilder.AppendLine(value);
-		Debug.LogError(stringBuilder);
+		Debug.LogWarning(stringBuilder);
+	}
+
+	public static string GetRowHeaderDiff(IReadOnlyDictionary<string, int> mapping, IReadOnlyDictionary<string, int> header)
+	{
+		StringBuilder stringBuilder = new StringBuilder();
+		List<KeyValuePair<string, int>> list = mapping.OrderBy((KeyValuePair<string, int> c) => c.Value).ToList();
+		int num = list.Max((KeyValuePair<string, int> c) => c.Key.Length);
+		foreach (KeyValuePair<string, int> item in list)
+		{
+			item.Deconstruct(out var key, out var value);
+			string text = key;
+			int index = value;
+			int value2;
+			bool num2 = header.TryGetValue(text, out value2);
+			string text2 = ((num2 && value2 != index) ? $"maybe {value2 + 1,2}/{ToLetterId(value2)} {text}" : "");
+			if (!num2)
+			{
+				text2 = "<missing>";
+			}
+			string text3 = header.FirstOrDefault((KeyValuePair<string, int> c) => c.Value == index).Key ?? "<missing>";
+			text3 = text3.PadRight(num + 3);
+			string text4 = text.PadRight(num);
+			stringBuilder.AppendLine($"{index + 1,2}/{ToLetterId(index),2}: {text4} -> {text3} {text2}");
+		}
+		return stringBuilder.ToString();
+	}
+
+	public static void ClearStaticRows()
+	{
+		row = null;
+		rowDefault = null;
+		rowHeader = null;
 	}
 }

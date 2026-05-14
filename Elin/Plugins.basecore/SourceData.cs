@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
@@ -142,23 +143,56 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 		isNew = true;
 		nameSheet = sheet.SheetName;
 		nameBook = bookname;
+		SourceData.rowHeader = sheet.GetRow(0);
 		SourceData.rowDefault = sheet.GetRow(2);
-		int num = 0;
-		for (int i = 3; i <= sheet.LastRowNum; i++)
+		IReadOnlyDictionary<string, int> rowMapping = GetRowMapping();
+		Dictionary<string, int> dictionary = null;
+		if (rowMapping != null)
 		{
-			SourceData.row = sheet.GetRow(i);
-			if (SourceData.row == null || SourceData.row.GetCell(0) == null || SourceData.row.GetCell(0).ToString().IsEmpty())
+			dictionary = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+			foreach (ICell item in SourceData.rowHeader.Cells.Where((ICell c) => c.ToString() != "0" && !c.ToString().IsEmpty()))
+			{
+				dictionary[item.ToString().Trim()] = item.ColumnIndex;
+			}
+			if (!rowMapping.Keys.All(dictionary.ContainsKey) || rowMapping.Count > dictionary.Count)
+			{
+				string[] array = rowMapping.Keys.Except(dictionary.Keys).ToArray();
+				if (array.Length != 0)
+				{
+					Debug.LogWarning("#source ill-format file with missing columns, init with empty values\n" + ExcelParser.GetRowHeaderDiff(rowMapping, dictionary));
+					string[] array2 = array;
+					foreach (string text in array2)
+					{
+						SourceData.rowHeader.CreateCell(276, CellType.String).SetCellValue(text);
+						dictionary[text] = 276;
+					}
+				}
+				else
+				{
+					Debug.Log("#source ill-format file with reordered columns");
+				}
+			}
+			else
+			{
+				dictionary = null;
+			}
+		}
+		int num = 0;
+		for (int j = 3; j <= sheet.LastRowNum; j++)
+		{
+			SourceData.row = sheet.GetRow(j);
+			if (string.IsNullOrEmpty(SourceData.row?.GetCell(0)?.ToString()))
 			{
 				break;
 			}
-			T val = CreateRow();
+			T val = ((dictionary != null) ? CreateRowByMapping(dictionary) : CreateRow());
 			val.OnImportData(this);
 			rows.Add(val);
 			num++;
 		}
-		string text = sheet.SheetName + "/" + sheet.LastRowNum + "/" + num;
-		Debug.Log(text);
-		ERROR.msg = text;
+		string text2 = sheet.SheetName + "/" + sheet.LastRowNum + "/" + num;
+		Debug.Log(text2);
+		ERROR.msg = text2;
 		OnAfterImportData();
 		initialized = false;
 		return true;
@@ -169,6 +203,11 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 	}
 
 	public virtual T CreateRow()
+	{
+		return null;
+	}
+
+	public virtual T CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
 	{
 		return null;
 	}
@@ -809,6 +848,18 @@ public class SourceData : ScriptableObject
 		}
 	}
 
+	public static IRow rowHeader
+	{
+		get
+		{
+			return ExcelParser.rowHeader;
+		}
+		set
+		{
+			ExcelParser.rowHeader = value;
+		}
+	}
+
 	public void BuildFlags(string rawText, Dictionary<string, bool> map)
 	{
 		if (!string.IsNullOrEmpty(rawText))
@@ -878,6 +929,11 @@ public class SourceData : ScriptableObject
 
 	public virtual void ValidateLang()
 	{
+	}
+
+	public virtual IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return null;
 	}
 
 	public static bool IsNull(ICell cell)
