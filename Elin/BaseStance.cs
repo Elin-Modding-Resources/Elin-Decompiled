@@ -2,6 +2,8 @@ public class BaseStance : Condition
 {
 	public override bool CanManualRemove => true;
 
+	public override bool HasDuration => false;
+
 	public override int GetPhase()
 	{
 		return 0;

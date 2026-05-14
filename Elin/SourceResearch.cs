@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceResearch : SourceDataString<SourceResearch.Row>
 {
@@ -42,6 +43,23 @@ public class SourceResearch : SourceDataString<SourceResearch.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["resource"] = 3,
+		["money"] = 4,
+		["tech"] = 5,
+		["req"] = 6,
+		["type"] = 7,
+		["expMod"] = 8,
+		["maxLv"] = 9,
+		["reward"] = 10,
+		["detail_JP"] = 11,
+		["detail"] = 12
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -62,8 +80,33 @@ public class SourceResearch : SourceDataString<SourceResearch.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			resource = SourceData.GetStringArray(mapping["resource"]),
+			money = SourceData.GetInt(mapping["money"]),
+			tech = SourceData.GetInt(mapping["tech"]),
+			req = SourceData.GetString(mapping["req"]),
+			type = SourceData.GetString(mapping["type"]),
+			expMod = SourceData.GetInt(mapping["expMod"]),
+			maxLv = SourceData.GetInt(mapping["maxLv"]),
+			reward = SourceData.GetString(mapping["reward"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

@@ -1,5 +1,10 @@
+using Newtonsoft.Json;
+
 public class ConFear : BadCondition
 {
+	[JsonProperty]
+	public int turnStill;
+
 	public override Emo2 EmoIcon => Emo2.fear;
 
 	public override bool ConsumeTurn => !owner.IsPC;
@@ -19,9 +24,20 @@ public class ConFear : BadCondition
 				return;
 			}
 		}
-		if (!owner.IsPC && !EClass._zone.IsRegion)
+		if (owner.IsPC || EClass._zone.IsRegion)
 		{
-			owner.TryMoveFrom((owner.enemy != null) ? owner.enemy.pos : EClass.pc.pos);
+			return;
+		}
+		if (owner.TryMoveFrom((owner.enemy != null) ? owner.enemy.pos : EClass.pc.pos) == Card.MoveResult.Success)
+		{
+			turnStill = 0;
+			return;
+		}
+		turnStill++;
+		if (EClass.rnd(turnStill) > 2)
+		{
+			owner.Say("fear_break", owner);
+			Kill();
 		}
 	}
 }

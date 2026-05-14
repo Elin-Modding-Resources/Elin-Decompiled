@@ -197,6 +197,10 @@ public class TaskBuild : TaskBaseBuild
 			{
 				return HitResult.Invalid;
 			}
+			if (useHeld && EClass.pc.held != null && EClass.pc.held.trait is TraitFloorDeco && lastPos.Equals(pos))
+			{
+				return HitResult.Default;
+			}
 		}
 		if (0 == 0 && recipe.HasSameTile(pos, recipe._dir, altitude, bridgeHeight))
 		{
@@ -297,7 +301,7 @@ public class TaskBuild : TaskBaseBuild
 			ActionMode.Build.FixBridge(pos, recipe);
 			bridgeHeight = ActionMode.Build.bridgeHeight;
 			target = (owner.held.category.installOne ? owner.held.Split(1) : owner.held);
-			if (target.trait is TraitTile)
+			if (target.trait is TraitTile { ConsumeOnUse: not false })
 			{
 				target.ModNum(-1);
 			}

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceCheck : SourceDataString<SourceCheck.Row>
 {
@@ -30,6 +31,20 @@ public class SourceCheck : SourceDataString<SourceCheck.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["element"] = 1,
+		["targetElement"] = 2,
+		["subFactor"] = 3,
+		["targetSubFactor"] = 4,
+		["baseDC"] = 5,
+		["critRange"] = 6,
+		["fumbleRange"] = 7,
+		["dice"] = 8,
+		["lvMod"] = 9
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -47,8 +62,30 @@ public class SourceCheck : SourceDataString<SourceCheck.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			element = Core.GetElement(SourceData.GetStr(mapping["element"])),
+			targetElement = Core.GetElement(SourceData.GetStr(mapping["targetElement"])),
+			subFactor = SourceData.GetFloat(mapping["subFactor"]),
+			targetSubFactor = SourceData.GetFloat(mapping["targetSubFactor"]),
+			baseDC = SourceData.GetInt(mapping["baseDC"]),
+			critRange = SourceData.GetInt(mapping["critRange"]),
+			fumbleRange = SourceData.GetInt(mapping["fumbleRange"]),
+			dice = SourceData.GetInt(mapping["dice"]),
+			lvMod = SourceData.GetFloat(mapping["lvMod"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

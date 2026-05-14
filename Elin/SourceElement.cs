@@ -276,6 +276,66 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["alias"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["altname_JP"] = 4,
+		["altname"] = 5,
+		["aliasParent"] = 6,
+		["aliasRef"] = 7,
+		["aliasMtp"] = 8,
+		["parentFactor"] = 9,
+		["lvFactor"] = 10,
+		["encFactor"] = 11,
+		["encSlot"] = 12,
+		["mtp"] = 13,
+		["LV"] = 14,
+		["chance"] = 15,
+		["value"] = 16,
+		["cost"] = 17,
+		["geneSlot"] = 18,
+		["sort"] = 19,
+		["target"] = 20,
+		["proc"] = 21,
+		["type"] = 22,
+		["group"] = 23,
+		["category"] = 24,
+		["categorySub"] = 25,
+		["abilityType"] = 26,
+		["tag"] = 27,
+		["thing"] = 28,
+		["eleP"] = 29,
+		["cooldown"] = 30,
+		["charge"] = 31,
+		["radius"] = 32,
+		["max"] = 33,
+		["req"] = 34,
+		["idTrainer"] = 35,
+		["partySkill"] = 36,
+		["tagTrainer"] = 37,
+		["levelBonus_JP"] = 38,
+		["levelBonus"] = 39,
+		["foodEffect"] = 40,
+		["langAct"] = 42,
+		["detail_JP"] = 43,
+		["detail"] = 44,
+		["textPhase_JP"] = 45,
+		["textPhase"] = 46,
+		["textExtra_JP"] = 47,
+		["textExtra"] = 48,
+		["textInc_JP"] = 49,
+		["textInc"] = 50,
+		["textDec_JP"] = 51,
+		["textDec"] = 52,
+		["textAlt_JP"] = 53,
+		["textAlt"] = 54,
+		["adjective_JP"] = 55,
+		["adjective"] = 56
+	};
+
 	[NonSerialized]
 	public List<Row> hobbies = new List<Row>();
 
@@ -347,9 +407,77 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			alias = SourceData.GetString(mapping["alias"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			altname_JP = SourceData.GetString(mapping["altname_JP"]),
+			altname = SourceData.GetString(mapping["altname"]),
+			aliasParent = SourceData.GetString(mapping["aliasParent"]),
+			aliasRef = SourceData.GetString(mapping["aliasRef"]),
+			aliasMtp = SourceData.GetString(mapping["aliasMtp"]),
+			parentFactor = SourceData.GetFloat(mapping["parentFactor"]),
+			lvFactor = SourceData.GetInt(mapping["lvFactor"]),
+			encFactor = SourceData.GetInt(mapping["encFactor"]),
+			encSlot = SourceData.GetString(mapping["encSlot"]),
+			mtp = SourceData.GetInt(mapping["mtp"]),
+			LV = SourceData.GetInt(mapping["LV"]),
+			chance = SourceData.GetInt(mapping["chance"]),
+			value = SourceData.GetInt(mapping["value"]),
+			cost = SourceData.GetIntArray(mapping["cost"]),
+			geneSlot = SourceData.GetInt(mapping["geneSlot"]),
+			sort = SourceData.GetInt(mapping["sort"]),
+			target = SourceData.GetString(mapping["target"]),
+			proc = SourceData.GetStringArray(mapping["proc"]),
+			type = SourceData.GetString(mapping["type"]),
+			group = SourceData.GetString(mapping["group"]),
+			category = SourceData.GetString(mapping["category"]),
+			categorySub = SourceData.GetString(mapping["categorySub"]),
+			abilityType = SourceData.GetStringArray(mapping["abilityType"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			thing = SourceData.GetString(mapping["thing"]),
+			eleP = SourceData.GetInt(mapping["eleP"]),
+			cooldown = SourceData.GetInt(mapping["cooldown"]),
+			charge = SourceData.GetInt(mapping["charge"]),
+			radius = SourceData.GetFloat(mapping["radius"]),
+			max = SourceData.GetInt(mapping["max"]),
+			req = SourceData.GetStringArray(mapping["req"]),
+			idTrainer = SourceData.GetString(mapping["idTrainer"]),
+			partySkill = SourceData.GetInt(mapping["partySkill"]),
+			tagTrainer = SourceData.GetString(mapping["tagTrainer"]),
+			levelBonus_JP = SourceData.GetString(mapping["levelBonus_JP"]),
+			levelBonus = SourceData.GetString(mapping["levelBonus"]),
+			foodEffect = SourceData.GetStringArray(mapping["foodEffect"]),
+			langAct = SourceData.GetStringArray(mapping["langAct"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"]),
+			textPhase_JP = SourceData.GetString(mapping["textPhase_JP"]),
+			textPhase = SourceData.GetString(mapping["textPhase"]),
+			textExtra_JP = SourceData.GetString(mapping["textExtra_JP"]),
+			textExtra = SourceData.GetString(mapping["textExtra"]),
+			textInc_JP = SourceData.GetString(mapping["textInc_JP"]),
+			textInc = SourceData.GetString(mapping["textInc"]),
+			textDec_JP = SourceData.GetString(mapping["textDec_JP"]),
+			textDec = SourceData.GetString(mapping["textDec"]),
+			textAlt_JP = SourceData.GetStringArray(mapping["textAlt_JP"]),
+			textAlt = SourceData.GetStringArray(mapping["textAlt"]),
+			adjective_JP = SourceData.GetStringArray(mapping["adjective_JP"]),
+			adjective = SourceData.GetStringArray(mapping["adjective"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()

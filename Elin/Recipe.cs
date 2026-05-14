@@ -429,6 +429,10 @@ public class Recipe : EClass
 		{
 			return (source.row as SourceFloor.Row).id;
 		}
+		if (source.row is SourceDeco.Row)
+		{
+			return (source.row as SourceDeco.Row).id;
+		}
 		if (source.row is SourceObj.Row)
 		{
 			return (source.row as SourceObj.Row).id;
@@ -449,6 +453,10 @@ public class Recipe : EClass
 				return "floor";
 			}
 			return "platform";
+		}
+		if (source.row is SourceDeco.Row)
+		{
+			return "deco";
 		}
 		if (source.row is SourceObj.Row)
 		{
@@ -553,8 +561,13 @@ public class Recipe : EClass
 	public virtual Thing Craft(BlessedState blessed, bool sound = false, List<Thing> ings = null, TraitCrafter crafter = null, bool model = false)
 	{
 		Thing thing = null;
-		string type = source.type;
-		thing = ((type == "Block") ? ThingGen.CreateBlock(tileRow.id, GetMainMaterial().id) : ((!(type == "Obj")) ? ThingGen.CreateFloor(tileRow.id, GetMainMaterial().id, source.isBridge) : ThingGen.CreateObj(tileRow.id, GetMainMaterial().id)));
+		thing = source.type switch
+		{
+			"Block" => ThingGen.CreateBlock(tileRow.id, GetMainMaterial().id), 
+			"Obj" => ThingGen.CreateObj(tileRow.id, GetMainMaterial().id), 
+			"Deco" => ThingGen.CreateDeco(tileRow.id, GetMainMaterial().id), 
+			_ => ThingGen.CreateFloor(tileRow.id, GetMainMaterial().id, source.isBridge), 
+		};
 		if (thing == null)
 		{
 			return null;
@@ -681,6 +694,9 @@ public class Recipe : EClass
 				EClass._map.SetObj(pos.x, pos.z);
 			}
 			EClass._map.SetFloor(pos.x, pos.z, mat, tileRow.id, dir);
+			break;
+		case "Deco":
+			EClass._map.SetDeco(pos.x, pos.z, mat, (pos.cell._deco == 0) ? tileRow.id : 0);
 			break;
 		case "Bridge":
 		{

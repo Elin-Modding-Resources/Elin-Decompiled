@@ -460,6 +460,7 @@ public class SurvivalManager : EClass
 			case "loytel":
 			case "nino":
 			case "big_daddy":
+			case "big_daddy2":
 			case "littleOne":
 			case "sorin":
 			case "vesda":

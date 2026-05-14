@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceHomeResource : SourceDataString<SourceHomeResource.Row>
 {
@@ -32,6 +33,18 @@ public class SourceHomeResource : SourceDataString<SourceHomeResource.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["expMod"] = 3,
+		["maxLv"] = 4,
+		["reward"] = 5,
+		["detail_JP"] = 6,
+		["detail"] = 7
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -47,8 +60,28 @@ public class SourceHomeResource : SourceDataString<SourceHomeResource.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			expMod = SourceData.GetInt(mapping["expMod"]),
+			maxLv = SourceData.GetInt(mapping["maxLv"]),
+			reward = SourceData.GetStringArray(mapping["reward"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

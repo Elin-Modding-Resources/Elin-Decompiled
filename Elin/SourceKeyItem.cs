@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceKeyItem : SourceDataInt<SourceKeyItem.Row>
 {
@@ -28,6 +29,16 @@ public class SourceKeyItem : SourceDataInt<SourceKeyItem.Row>
 		public override string GetAlias => alias;
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["alias"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["detail_JP"] = 4,
+		["detail"] = 5
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -41,8 +52,26 @@ public class SourceKeyItem : SourceDataInt<SourceKeyItem.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			alias = SourceData.GetString(mapping["alias"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

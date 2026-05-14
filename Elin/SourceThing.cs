@@ -144,6 +144,61 @@ public class SourceThing : SourceDataString<SourceThing.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["unknown_JP"] = 2,
+		["unit_JP"] = 3,
+		["naming"] = 4,
+		["name"] = 5,
+		["unit"] = 6,
+		["unknown"] = 7,
+		["category"] = 8,
+		["sort"] = 10,
+		["_tileType"] = 11,
+		["_idRenderData"] = 12,
+		["tiles"] = 13,
+		["altTiles"] = 14,
+		["anime"] = 15,
+		["skins"] = 16,
+		["size"] = 17,
+		["colorMod"] = 18,
+		["colorType"] = 19,
+		["recipeKey"] = 20,
+		["factory"] = 21,
+		["components"] = 22,
+		["disassemble"] = 23,
+		["defMat"] = 24,
+		["tierGroup"] = 25,
+		["value"] = 26,
+		["LV"] = 27,
+		["chance"] = 28,
+		["quality"] = 29,
+		["HP"] = 30,
+		["weight"] = 31,
+		["electricity"] = 32,
+		["trait"] = 33,
+		["elements"] = 34,
+		["range"] = 35,
+		["attackType"] = 36,
+		["offense"] = 37,
+		["substats"] = 38,
+		["defense"] = 39,
+		["lightData"] = 40,
+		["idExtra"] = 41,
+		["idToggleExtra"] = 42,
+		["idActorEx"] = 43,
+		["idSound"] = 44,
+		["tag"] = 45,
+		["workTag"] = 46,
+		["filter"] = 47,
+		["roomName_JP"] = 48,
+		["roomName"] = 49,
+		["detail_JP"] = 50,
+		["detail"] = 51
+	};
+
 	public Dictionary<string, Row> _rows = new Dictionary<string, Row>();
 
 	public override string[] ImportFields => new string[4] { "unit", "unknown", "roomName", "name2" };
@@ -206,9 +261,72 @@ public class SourceThing : SourceDataString<SourceThing.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			unknown_JP = SourceData.GetString(mapping["unknown_JP"]),
+			unit_JP = SourceData.GetString(mapping["unit_JP"]),
+			naming = SourceData.GetString(mapping["naming"]),
+			name = SourceData.GetString(mapping["name"]),
+			unit = SourceData.GetString(mapping["unit"]),
+			unknown = SourceData.GetString(mapping["unknown"]),
+			category = SourceData.GetString(mapping["category"]),
+			sort = SourceData.GetInt(mapping["sort"]),
+			_tileType = SourceData.GetString(mapping["_tileType"]),
+			_idRenderData = SourceData.GetString(mapping["_idRenderData"]),
+			tiles = SourceData.GetIntArray(mapping["tiles"]),
+			altTiles = SourceData.GetIntArray(mapping["altTiles"]),
+			anime = SourceData.GetIntArray(mapping["anime"]),
+			skins = SourceData.GetIntArray(mapping["skins"]),
+			size = SourceData.GetIntArray(mapping["size"]),
+			colorMod = SourceData.GetInt(mapping["colorMod"]),
+			colorType = SourceData.GetString(mapping["colorType"]),
+			recipeKey = SourceData.GetStringArray(mapping["recipeKey"]),
+			factory = SourceData.GetStringArray(mapping["factory"]),
+			components = SourceData.GetStringArray(mapping["components"]),
+			disassemble = SourceData.GetStringArray(mapping["disassemble"]),
+			defMat = SourceData.GetString(mapping["defMat"]),
+			tierGroup = SourceData.GetString(mapping["tierGroup"]),
+			value = SourceData.GetInt(mapping["value"]),
+			LV = SourceData.GetInt(mapping["LV"]),
+			chance = SourceData.GetInt(mapping["chance"]),
+			quality = SourceData.GetInt(mapping["quality"]),
+			HP = SourceData.GetInt(mapping["HP"]),
+			weight = SourceData.GetInt(mapping["weight"]),
+			electricity = SourceData.GetInt(mapping["electricity"]),
+			trait = SourceData.GetStringArray(mapping["trait"]),
+			elements = Core.ParseElements(SourceData.GetStr(mapping["elements"])),
+			range = SourceData.GetInt(mapping["range"]),
+			attackType = SourceData.GetString(mapping["attackType"]),
+			offense = SourceData.GetIntArray(mapping["offense"]),
+			substats = SourceData.GetIntArray(mapping["substats"]),
+			defense = SourceData.GetIntArray(mapping["defense"]),
+			lightData = SourceData.GetString(mapping["lightData"]),
+			idExtra = SourceData.GetString(mapping["idExtra"]),
+			idToggleExtra = SourceData.GetString(mapping["idToggleExtra"]),
+			idActorEx = SourceData.GetString(mapping["idActorEx"]),
+			idSound = SourceData.GetString(mapping["idSound"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			workTag = SourceData.GetString(mapping["workTag"]),
+			filter = SourceData.GetStringArray(mapping["filter"]),
+			roomName_JP = SourceData.GetStringArray(mapping["roomName_JP"]),
+			roomName = SourceData.GetStringArray(mapping["roomName"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void BackupPref()

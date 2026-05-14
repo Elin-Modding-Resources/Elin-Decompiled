@@ -142,7 +142,7 @@ public class TCOrbitChara : TCOrbit
 		{
 			num = (float)(owner.hp + owner.mana.value) / (float)(owner.MaxHP + owner.mana.max);
 		}
-		showHP = num < 0.9f && (owner.IsPCParty || owner.IsHostile() || (owner.enemy != null && owner.enemy.IsPCParty));
+		showHP = num < 0.9f && (owner.IsPCParty || owner.IsHostile() || (owner.enemy != null && owner.enemy.IsPCParty)) && !owner.IsPCFactionMinion;
 		if (showHP)
 		{
 			if (flag2)

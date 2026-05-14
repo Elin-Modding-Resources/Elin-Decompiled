@@ -138,6 +138,32 @@ public class SourceCategory : SourceDataString<SourceCategory.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["uid"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["_parent"] = 4,
+		["recipeCat"] = 5,
+		["slot"] = 6,
+		["skill"] = 7,
+		["maxStack"] = 8,
+		["tileDummy"] = 9,
+		["installOne"] = 10,
+		["ignoreBless"] = 11,
+		["tag"] = 12,
+		["idThing"] = 13,
+		["recycle"] = 14,
+		["costSP"] = 15,
+		["gift"] = 16,
+		["deliver"] = 17,
+		["offer"] = 18,
+		["ticket"] = 19,
+		["sortVal"] = 20,
+		["flag"] = 21
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -167,9 +193,43 @@ public class SourceCategory : SourceDataString<SourceCategory.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			uid = SourceData.GetInt(mapping["uid"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			_parent = SourceData.GetString(mapping["_parent"]),
+			recipeCat = SourceData.GetString(mapping["recipeCat"]),
+			slot = Core.GetElement(SourceData.GetStr(mapping["slot"])),
+			skill = Core.GetElement(SourceData.GetStr(mapping["skill"])),
+			maxStack = SourceData.GetInt(mapping["maxStack"]),
+			tileDummy = SourceData.GetInt(mapping["tileDummy"]),
+			installOne = SourceData.GetBool(mapping["installOne"]),
+			ignoreBless = SourceData.GetInt(mapping["ignoreBless"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			idThing = SourceData.GetString(mapping["idThing"]),
+			recycle = SourceData.GetStringArray(mapping["recycle"]),
+			costSP = SourceData.GetInt(mapping["costSP"]),
+			gift = SourceData.GetInt(mapping["gift"]),
+			deliver = SourceData.GetInt(mapping["deliver"]),
+			offer = SourceData.GetInt(mapping["offer"]),
+			ticket = SourceData.GetInt(mapping["ticket"]),
+			sortVal = SourceData.GetInt(mapping["sortVal"]),
+			flag = SourceData.GetInt(mapping["flag"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()

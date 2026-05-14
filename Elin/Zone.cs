@@ -2690,6 +2690,18 @@ public class Zone : Spatial, ICardParent, IInspect
 	{
 		if (!(BigDaddyChance * (EClass.pc.HasElement(1270) ? 1.1f : 1f) <= EClass.rndf(1f)))
 		{
+			Point spawnPos = GetSpawnPos(SpawnPosition.Random, 10000);
+			List<string> list = new List<string> { "big_daddy", "big_daddy2" };
+			list.Shuffle();
+			Spawn(list[0], spawnPos);
+			if (EClass.rnd(EClass.debug.enable ? 2 : 20) == 0)
+			{
+				Spawn(list[1], spawnPos.GetNearestPoint(allowBlock: false, allowChara: false));
+			}
+			Msg.Say("sign_bigdaddy");
+		}
+		void Spawn(string id, Point pos)
+		{
 			int num = (int)((long)DangerLv * 125L / 100);
 			if (num >= 30)
 			{
@@ -2698,7 +2710,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					lv = num
 				});
 			}
-			Chara chara = CharaGen.Create("big_daddy");
+			Chara chara = CharaGen.Create(id);
 			if (EClass.pc.HasElement(1270))
 			{
 				chara.SetHostility(Hostility.Friend);
@@ -2707,8 +2719,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				chara.SetHostility(Hostility.Enemy);
 			}
-			EClass._zone.AddCard(chara, GetSpawnPos(SpawnPosition.Random, 10000));
-			Msg.Say("sign_bigdaddy");
+			EClass._zone.AddCard(chara, pos);
 		}
 	}
 

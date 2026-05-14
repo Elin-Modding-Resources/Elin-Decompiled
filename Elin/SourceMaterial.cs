@@ -321,6 +321,44 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["alias"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["category"] = 4,
+		["tag"] = 5,
+		["thing"] = 6,
+		["goods"] = 7,
+		["minerals"] = 8,
+		["decal"] = 9,
+		["decay"] = 10,
+		["grass"] = 11,
+		["defFloor"] = 12,
+		["defBlock"] = 13,
+		["edge"] = 14,
+		["ramp"] = 15,
+		["idSound"] = 16,
+		["soundFoot"] = 17,
+		["hardness"] = 18,
+		["groups"] = 19,
+		["tier"] = 20,
+		["chance"] = 21,
+		["weight"] = 22,
+		["value"] = 23,
+		["quality"] = 24,
+		["atk"] = 25,
+		["dmg"] = 26,
+		["dv"] = 27,
+		["pv"] = 28,
+		["dice"] = 29,
+		["bits"] = 30,
+		["elements"] = 31,
+		["altName"] = 32,
+		["altName_JP"] = 33
+	};
+
 	public static Dictionary<string, TierList> tierMap = new Dictionary<string, TierList>();
 
 	public override string[] ImportFields => new string[1] { "altName" };
@@ -366,9 +404,55 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			alias = SourceData.GetString(mapping["alias"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			category = SourceData.GetString(mapping["category"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			thing = SourceData.GetString(mapping["thing"]),
+			goods = SourceData.GetStringArray(mapping["goods"]),
+			minerals = SourceData.GetStringArray(mapping["minerals"]),
+			decal = SourceData.GetInt(mapping["decal"]),
+			decay = SourceData.GetInt(mapping["decay"]),
+			grass = SourceData.GetInt(mapping["grass"]),
+			defFloor = SourceData.GetInt(mapping["defFloor"]),
+			defBlock = SourceData.GetInt(mapping["defBlock"]),
+			edge = SourceData.GetInt(mapping["edge"]),
+			ramp = SourceData.GetInt(mapping["ramp"]),
+			idSound = SourceData.GetString(mapping["idSound"]),
+			soundFoot = SourceData.GetString(mapping["soundFoot"]),
+			hardness = SourceData.GetInt(mapping["hardness"]),
+			groups = SourceData.GetStringArray(mapping["groups"]),
+			tier = SourceData.GetInt(mapping["tier"]),
+			chance = SourceData.GetInt(mapping["chance"]),
+			weight = SourceData.GetInt(mapping["weight"]),
+			value = SourceData.GetInt(mapping["value"]),
+			quality = SourceData.GetInt(mapping["quality"]),
+			atk = SourceData.GetInt(mapping["atk"]),
+			dmg = SourceData.GetInt(mapping["dmg"]),
+			dv = SourceData.GetInt(mapping["dv"]),
+			pv = SourceData.GetInt(mapping["pv"]),
+			dice = SourceData.GetInt(mapping["dice"]),
+			bits = SourceData.GetStringArray(mapping["bits"]),
+			elements = Core.ParseElements(SourceData.GetStr(mapping["elements"])),
+			altName = SourceData.GetStringArray(mapping["altName"]),
+			altName_JP = SourceData.GetStringArray(mapping["altName_JP"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()

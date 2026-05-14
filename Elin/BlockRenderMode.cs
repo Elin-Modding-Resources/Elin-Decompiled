@@ -4,5 +4,6 @@ public enum BlockRenderMode
 	FullBlock,
 	WallOrFence,
 	Pillar,
-	HalfBlock
+	HalfBlock,
+	Floor
 }

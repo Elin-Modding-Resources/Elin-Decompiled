@@ -761,7 +761,7 @@ public class Core : BaseCore
 			}
 			else
 			{
-				Debug.LogError("#element not found: " + id);
+				Debug.LogWarning("#element not found: " + id);
 				value = sourceElement.rows[0];
 			}
 		}

@@ -1177,7 +1177,11 @@ public class Thing : Card
 			AddText("isDangerLv".lang((GetInt(25) + 1).ToString() ?? "", (EClass.pc.FameLv + 10).ToString() ?? ""), FontColor.Default);
 		}
 		FontColor col2 = FontColor.Util;
-		if (trait is TraitTool && !(trait is TraitToolRange))
+		if (trait is TraitToolCrowbar)
+		{
+			AddText("canPryOpen", col2);
+		}
+		else if (trait is TraitTool && !(trait is TraitToolRange))
 		{
 			if (HasElement(220))
 			{

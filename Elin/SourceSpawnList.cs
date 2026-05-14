@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceSpawnList : SourceDataString<SourceSpawnList.Row>
 {
@@ -29,6 +30,17 @@ public class SourceSpawnList : SourceDataString<SourceSpawnList.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["parent"] = 2,
+		["type"] = 3,
+		["category"] = 4,
+		["idCard"] = 5,
+		["tag"] = 6,
+		["filter"] = 7
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -43,8 +55,27 @@ public class SourceSpawnList : SourceDataString<SourceSpawnList.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			parent = SourceData.GetString(mapping["parent"]),
+			type = SourceData.GetString(mapping["type"]),
+			category = SourceData.GetStringArray(mapping["category"]),
+			idCard = SourceData.GetStringArray(mapping["idCard"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			filter = SourceData.GetStringArray(mapping["filter"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

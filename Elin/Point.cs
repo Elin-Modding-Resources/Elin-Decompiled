@@ -124,7 +124,7 @@ public class Point : EClass
 		}
 	}
 
-	public bool IsFarmField => (HasBridge ? sourceBridge : sourceFloor).alias == "field";
+	public bool IsFarmField => (HasBridge ? sourceBridge : sourceFloor).Category.id == "floor_field";
 
 	public bool IsWater => cell.IsTopWater;
 

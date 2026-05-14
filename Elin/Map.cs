@@ -409,6 +409,8 @@ public class Map : MapBounds, IPathfindGrid
 		byte[] array17 = new byte[num5];
 		byte[] array18 = new byte[num5];
 		byte[] array19 = new byte[num5];
+		byte[] array20 = new byte[num5];
+		byte[] array21 = new byte[num5];
 		cellEffects.Clear();
 		int num6 = 0;
 		for (int i = num; i < num + num3; i++)
@@ -422,6 +424,8 @@ public class Map : MapBounds, IPathfindGrid
 				array5[num6] = cell._floorMat;
 				array4[num6] = cell._floor;
 				array6[num6] = cell.obj;
+				array20[num6] = cell._deco;
+				array21[num6] = cell._decoMat;
 				array7[num6] = cell.objMat;
 				array8[num6] = cell.decal;
 				array9[num6] = cell._dirs;
@@ -470,6 +474,8 @@ public class Map : MapBounds, IPathfindGrid
 		Write(path + "roofBlocks", array18);
 		Write(path + "roofBlockMats", array19);
 		Write(path + "roofBlockDirs", array17);
+		Write(path + "decos", array20);
+		Write(path + "decoMats", array21);
 		things.Sort((Thing a, Thing b) => a.stackOrder - b.stackOrder);
 		if (export == null)
 		{
@@ -572,28 +578,30 @@ public class Map : MapBounds, IPathfindGrid
 		byte[] bytes7 = TryLoad("objs");
 		byte[] bytes8 = TryLoad("objMats");
 		byte[] bytes9 = TryLoad("decal");
-		byte[] bytes10 = TryLoad("dirs");
-		byte[] bytes11 = TryLoad("flags");
-		byte[] bytes12 = TryLoad("flags2");
-		byte[] bytes13 = TryLoad("heights");
-		byte[] bytes14 = TryLoad("bridges");
-		byte[] bytes15 = TryLoad("bridgeMats");
-		byte[] bytes16 = TryLoad("bridgeHeights");
-		byte[] bytes17 = TryLoad("bridgePillars");
-		byte[] bytes18 = TryLoad("roofBlocks");
-		byte[] bytes19 = TryLoad("roofBlockMats");
-		byte[] bytes20 = TryLoad("roofBlockDirs");
-		if (bytes17.Length < size)
+		byte[] bytes10 = TryLoad("decos");
+		byte[] bytes11 = TryLoad("decoMats");
+		byte[] bytes12 = TryLoad("dirs");
+		byte[] bytes13 = TryLoad("flags");
+		byte[] bytes14 = TryLoad("flags2");
+		byte[] bytes15 = TryLoad("heights");
+		byte[] bytes16 = TryLoad("bridges");
+		byte[] bytes17 = TryLoad("bridgeMats");
+		byte[] bytes18 = TryLoad("bridgeHeights");
+		byte[] bytes19 = TryLoad("bridgePillars");
+		byte[] bytes20 = TryLoad("roofBlocks");
+		byte[] bytes21 = TryLoad("roofBlockMats");
+		byte[] bytes22 = TryLoad("roofBlockDirs");
+		if (bytes19.Length < size)
 		{
-			bytes17 = new byte[size];
+			bytes19 = new byte[size];
 		}
 		if (bytes2.Length < size)
 		{
 			bytes2 = new byte[size];
 		}
-		if (bytes12.Length < size)
+		if (bytes14.Length < size)
 		{
-			bytes12 = new byte[size];
+			bytes14 = new byte[size];
 		}
 		Validate(ref bytes2, "objVals");
 		Validate(ref bytes3, "blockMats");
@@ -603,17 +611,19 @@ public class Map : MapBounds, IPathfindGrid
 		Validate(ref bytes7, "objs");
 		Validate(ref bytes8, "objMats");
 		Validate(ref bytes9, "decal");
-		Validate(ref bytes10, "dirs");
-		Validate(ref bytes11, "flags");
-		Validate(ref bytes12, "flags2");
-		Validate(ref bytes13, "heights");
-		Validate(ref bytes14, "bridges");
-		Validate(ref bytes15, "bridgeMats");
-		Validate(ref bytes16, "bridgeHeights");
-		Validate(ref bytes17, "bridgePillars");
-		Validate(ref bytes18, "roofBlocks");
-		Validate(ref bytes19, "roofBlockMats");
-		Validate(ref bytes20, "roofBlockDirs");
+		Validate(ref bytes10, "decos");
+		Validate(ref bytes11, "decoMats");
+		Validate(ref bytes12, "dirs");
+		Validate(ref bytes13, "flags");
+		Validate(ref bytes14, "flags2");
+		Validate(ref bytes15, "heights");
+		Validate(ref bytes16, "bridges");
+		Validate(ref bytes17, "bridgeMats");
+		Validate(ref bytes18, "bridgeHeights");
+		Validate(ref bytes19, "bridgePillars");
+		Validate(ref bytes20, "roofBlocks");
+		Validate(ref bytes21, "roofBlockMats");
+		Validate(ref bytes22, "roofBlockDirs");
 		int count = EClass.sources.floors.rows.Count;
 		int count2 = EClass.sources.materials.rows.Count;
 		int num3 = 0;
@@ -633,25 +643,27 @@ public class Map : MapBounds, IPathfindGrid
 					obj = bytes7[num3],
 					objMat = bytes8[num3],
 					decal = bytes9[num3],
-					_dirs = bytes10[num3],
-					height = bytes13[num3],
-					_bridge = bytes14[num3],
-					_bridgeMat = bytes15[num3],
-					bridgeHeight = bytes16[num3],
-					bridgePillar = bytes17[num3],
-					_roofBlock = bytes18[num3],
-					_roofBlockMat = bytes19[num3],
-					_roofBlockDir = bytes20[num3],
-					isSeen = bytes11[num3].GetBit(1),
-					isHarvested = bytes11[num3].GetBit(2),
-					impassable = bytes11[num3].GetBit(3),
-					isModified = bytes11[num3].GetBit(4),
-					isClearSnow = bytes11[num3].GetBit(5),
-					isForceFloat = bytes11[num3].GetBit(6),
-					isToggleWallPillar = bytes11[num3].GetBit(7),
-					isWatered = bytes12[num3].GetBit(0),
-					isObjDyed = bytes12[num3].GetBit(1),
-					crossWall = bytes12[num3].GetBit(2)
+					_deco = bytes10[num3],
+					_decoMat = bytes11[num3],
+					_dirs = bytes12[num3],
+					height = bytes15[num3],
+					_bridge = bytes16[num3],
+					_bridgeMat = bytes17[num3],
+					bridgeHeight = bytes18[num3],
+					bridgePillar = bytes19[num3],
+					_roofBlock = bytes20[num3],
+					_roofBlockMat = bytes21[num3],
+					_roofBlockDir = bytes22[num3],
+					isSeen = bytes13[num3].GetBit(1),
+					isHarvested = bytes13[num3].GetBit(2),
+					impassable = bytes13[num3].GetBit(3),
+					isModified = bytes13[num3].GetBit(4),
+					isClearSnow = bytes13[num3].GetBit(5),
+					isForceFloat = bytes13[num3].GetBit(6),
+					isToggleWallPillar = bytes13[num3].GetBit(7),
+					isWatered = bytes14[num3].GetBit(0),
+					isObjDyed = bytes14[num3].GetBit(1),
+					crossWall = bytes14[num3].GetBit(2)
 				});
 				if (cell._bridge >= count)
 				{
@@ -967,6 +979,14 @@ public class Map : MapBounds, IPathfindGrid
 		cell._floor = (byte)idFloor;
 		cell.floorDir = dir;
 		Critter.RebuildCritter(cell);
+		RefreshNeighborTiles(x, z);
+	}
+
+	public void SetDeco(int x, int z, int idMat, int idDeco)
+	{
+		Cell cell = cells[x, z];
+		cell._decoMat = (byte)idMat;
+		cell._deco = (byte)idDeco;
 		RefreshNeighborTiles(x, z);
 	}
 

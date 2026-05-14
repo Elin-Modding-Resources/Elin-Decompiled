@@ -65,6 +65,29 @@ public class SourceJob : SourceDataString<SourceJob.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["playable"] = 3,
+		["STR"] = 4,
+		["END"] = 5,
+		["DEX"] = 6,
+		["PER"] = 7,
+		["LER"] = 8,
+		["WIL"] = 9,
+		["MAG"] = 10,
+		["CHA"] = 11,
+		["SPD"] = 12,
+		["elements"] = 14,
+		["weapon"] = 15,
+		["equip"] = 16,
+		["domain"] = 17,
+		["detail_JP"] = 18,
+		["detail"] = 19
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -91,9 +114,40 @@ public class SourceJob : SourceDataString<SourceJob.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			playable = SourceData.GetInt(mapping["playable"]),
+			STR = SourceData.GetInt(mapping["STR"]),
+			END = SourceData.GetInt(mapping["END"]),
+			DEX = SourceData.GetInt(mapping["DEX"]),
+			PER = SourceData.GetInt(mapping["PER"]),
+			LER = SourceData.GetInt(mapping["LER"]),
+			WIL = SourceData.GetInt(mapping["WIL"]),
+			MAG = SourceData.GetInt(mapping["MAG"]),
+			CHA = SourceData.GetInt(mapping["CHA"]),
+			SPD = SourceData.GetInt(mapping["SPD"]),
+			elements = Core.ParseElements(SourceData.GetStr(mapping["elements"])),
+			weapon = SourceData.GetStringArray(mapping["weapon"]),
+			equip = SourceData.GetString(mapping["equip"]),
+			domain = Core.ParseElements(SourceData.GetStr(mapping["domain"])),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()

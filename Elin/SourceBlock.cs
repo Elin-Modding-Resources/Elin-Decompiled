@@ -68,6 +68,41 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["alias"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["sort"] = 4,
+		["reqHarvest"] = 5,
+		["hp"] = 6,
+		["idThing"] = 7,
+		["_tileType"] = 8,
+		["_idRenderData"] = 9,
+		["tiles"] = 10,
+		["anime"] = 11,
+		["snowTile"] = 12,
+		["colorMod"] = 13,
+		["colorType"] = 14,
+		["value"] = 15,
+		["LV"] = 16,
+		["recipeKey"] = 17,
+		["factory"] = 18,
+		["components"] = 19,
+		["defMat"] = 20,
+		["category"] = 21,
+		["roof"] = 22,
+		["autoFloor"] = 23,
+		["concrete"] = 24,
+		["transparent"] = 25,
+		["transition"] = 26,
+		["tag"] = 27,
+		["soundFoot"] = 28,
+		["detail_JP"] = 29,
+		["detail"] = 30
+	};
+
 	public Dictionary<int, Row> _rows = new Dictionary<int, Row>();
 
 	public static RenderData FallbackRenderData;
@@ -110,9 +145,52 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			alias = SourceData.GetString(mapping["alias"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			sort = SourceData.GetInt(mapping["sort"]),
+			reqHarvest = SourceData.GetStringArray(mapping["reqHarvest"]),
+			hp = SourceData.GetInt(mapping["hp"]),
+			idThing = SourceData.GetString(mapping["idThing"]),
+			_tileType = SourceData.GetString(mapping["_tileType"]),
+			_idRenderData = SourceData.GetString(mapping["_idRenderData"]),
+			tiles = SourceData.GetIntArray(mapping["tiles"]),
+			anime = SourceData.GetIntArray(mapping["anime"]),
+			snowTile = SourceData.GetInt(mapping["snowTile"]),
+			colorMod = SourceData.GetInt(mapping["colorMod"]),
+			colorType = SourceData.GetString(mapping["colorType"]),
+			value = SourceData.GetInt(mapping["value"]),
+			LV = SourceData.GetInt(mapping["LV"]),
+			recipeKey = SourceData.GetStringArray(mapping["recipeKey"]),
+			factory = SourceData.GetStringArray(mapping["factory"]),
+			components = SourceData.GetStringArray(mapping["components"]),
+			defMat = SourceData.GetString(mapping["defMat"]),
+			category = SourceData.GetString(mapping["category"]),
+			roof = SourceData.GetInt(mapping["roof"]),
+			autoFloor = SourceData.GetString(mapping["autoFloor"]),
+			concrete = SourceData.GetBool(mapping["concrete"]),
+			transparent = SourceData.GetBool(mapping["transparent"]),
+			transition = SourceData.GetIntArray(mapping["transition"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			soundFoot = SourceData.GetString(mapping["soundFoot"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void BackupPref()

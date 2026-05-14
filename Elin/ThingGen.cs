@@ -113,6 +113,14 @@ public class ThingGen : CardGen
 		return thing;
 	}
 
+	public static Thing CreateDeco(int id, int idMat)
+	{
+		_ = EClass.sources.decos.rows[id];
+		Thing thing = Create("deco", idMat);
+		thing.refVal = id;
+		return thing;
+	}
+
 	public static Thing CreateObj(int id, int idMat)
 	{
 		_ = EClass.sources.objs.rows[id];

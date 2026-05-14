@@ -57,6 +57,30 @@ public class SourceHobby : SourceDataInt<SourceHobby.Row>
 		public override string GetAlias => alias;
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["alias"] = 1,
+		["type"] = 2,
+		["name_JP"] = 3,
+		["name"] = 4,
+		["ai"] = 5,
+		["talk"] = 6,
+		["area"] = 7,
+		["destTrait"] = 8,
+		["workTag"] = 9,
+		["expedition"] = 10,
+		["resources"] = 11,
+		["randomRange"] = 12,
+		["modifiers"] = 13,
+		["tax"] = 14,
+		["things"] = 15,
+		["elements"] = 16,
+		["skill"] = 17,
+		["detail_JP"] = 18,
+		["detail"] = 19
+	};
+
 	[NonSerialized]
 	public List<Row> listHobbies = new List<Row>();
 
@@ -90,9 +114,41 @@ public class SourceHobby : SourceDataInt<SourceHobby.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			alias = SourceData.GetString(mapping["alias"]),
+			type = SourceData.GetString(mapping["type"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			ai = SourceData.GetString(mapping["ai"]),
+			talk = SourceData.GetString(mapping["talk"]),
+			area = SourceData.GetString(mapping["area"]),
+			destTrait = SourceData.GetString(mapping["destTrait"]),
+			workTag = SourceData.GetString(mapping["workTag"]),
+			expedition = SourceData.GetString(mapping["expedition"]),
+			resources = SourceData.GetIntArray(mapping["resources"]),
+			randomRange = SourceData.GetInt(mapping["randomRange"]),
+			modifiers = SourceData.GetStringArray(mapping["modifiers"]),
+			tax = SourceData.GetInt(mapping["tax"]),
+			things = SourceData.GetStringArray(mapping["things"]),
+			elements = Core.ParseElements(SourceData.GetStr(mapping["elements"])),
+			skill = SourceData.GetString(mapping["skill"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()

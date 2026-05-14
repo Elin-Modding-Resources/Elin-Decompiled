@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceReligion : SourceDataString<SourceReligion.Row>
 {
@@ -71,6 +72,33 @@ public class SourceReligion : SourceDataString<SourceReligion.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["name2_JP"] = 3,
+		["name2"] = 4,
+		["type"] = 5,
+		["idMaterial"] = 6,
+		["faith"] = 7,
+		["domain"] = 8,
+		["tax"] = 9,
+		["relation"] = 10,
+		["elements"] = 11,
+		["cat_offer"] = 12,
+		["rewards"] = 13,
+		["textType_JP"] = 14,
+		["textType"] = 15,
+		["textAvatar"] = 16,
+		["detail_JP"] = 17,
+		["detail"] = 18,
+		["textBenefit_JP"] = 19,
+		["textBenefit"] = 20,
+		["textPet_JP"] = 21,
+		["textPet"] = 22
+	};
+
 	public override string[] ImportFields => new string[3] { "textBenefit", "textType", "name2" };
 
 	public override Row CreateRow()
@@ -103,8 +131,43 @@ public class SourceReligion : SourceDataString<SourceReligion.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			name2_JP = SourceData.GetStringArray(mapping["name2_JP"]),
+			name2 = SourceData.GetStringArray(mapping["name2"]),
+			type = SourceData.GetString(mapping["type"]),
+			idMaterial = SourceData.GetString(mapping["idMaterial"]),
+			faith = SourceData.GetString(mapping["faith"]),
+			domain = SourceData.GetString(mapping["domain"]),
+			tax = SourceData.GetInt(mapping["tax"]),
+			relation = SourceData.GetInt(mapping["relation"]),
+			elements = Core.ParseElements(SourceData.GetStr(mapping["elements"])),
+			cat_offer = SourceData.GetStringArray(mapping["cat_offer"]),
+			rewards = SourceData.GetStringArray(mapping["rewards"]),
+			textType_JP = SourceData.GetString(mapping["textType_JP"]),
+			textType = SourceData.GetString(mapping["textType"]),
+			textAvatar = SourceData.GetString(mapping["textAvatar"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"]),
+			textBenefit_JP = SourceData.GetString(mapping["textBenefit_JP"]),
+			textBenefit = SourceData.GetString(mapping["textBenefit"]),
+			textPet_JP = SourceData.GetString(mapping["textPet_JP"]),
+			textPet = SourceData.GetString(mapping["textPet"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

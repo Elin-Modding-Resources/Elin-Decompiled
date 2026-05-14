@@ -4268,6 +4268,10 @@ public class Chara : Card, IPathfindWalker
 				hygiene.Mod(2);
 			}
 		}
+		if (cell.sourceFloor.id == 20)
+		{
+			AddCondition<ConBurning>();
+		}
 		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate() && !EClass.debug.godMode && !HasElement(1252))
 		{
 			AddCondition<ConSuffocation>(800 / (100 + EvalueMax(200, -5) * 10), force: true);
@@ -5716,6 +5720,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			break;
 		case "big_daddy":
+		case "big_daddy2":
 			if (!IsPCFaction)
 			{
 				Chara chara = CharaGen.Create("littleOne");
@@ -6477,7 +6482,7 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	private void GoHostile(Card _tg)
+	public void GoHostile(Card _tg)
 	{
 		if (enemy == null && !IsPC)
 		{

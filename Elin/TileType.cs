@@ -42,6 +42,10 @@ public class TileType : EClass
 
 	public static TileTypeWaterfall Waterfall = new TileTypeWaterfall();
 
+	public static TileTypeBlockDeco BlockDeco = new TileTypeBlockDeco();
+
+	public static TileTypeFloorDeco FloorDeco = new TileTypeFloorDeco();
+
 	public static TileTypeWall Wall = new TileTypeWall();
 
 	public static TileTypeWallOpen WallOpen = new TileTypeWallOpen();

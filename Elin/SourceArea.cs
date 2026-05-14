@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceArea : SourceDataString<SourceArea.Row>
 {
@@ -35,6 +36,18 @@ public class SourceArea : SourceDataString<SourceArea.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["textAssign_JP"] = 3,
+		["textAssign"] = 4,
+		["detail_JP"] = 5,
+		["tag"] = 6,
+		["detail"] = 7
+	};
+
 	public override string[] ImportFields => new string[1] { "textAssign" };
 
 	public override Row CreateRow()
@@ -52,8 +65,28 @@ public class SourceArea : SourceDataString<SourceArea.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			textAssign_JP = SourceData.GetString(mapping["textAssign_JP"]),
+			textAssign = SourceData.GetString(mapping["textAssign"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			tag = SourceData.GetString(mapping["tag"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

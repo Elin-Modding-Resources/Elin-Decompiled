@@ -15,6 +15,8 @@ public class Cell : WeightCell, IFloodCell
 
 	public static List<SourceFloor.Row> floorList;
 
+	public static List<SourceDeco.Row> decoList;
+
 	public static List<SourceCellEffect.Row> effectList;
 
 	public static List<SourceObj.Row> objList;
@@ -53,6 +55,10 @@ public class Cell : WeightCell, IFloodCell
 
 	public byte _roofBlockDir;
 
+	public byte _deco;
+
+	public byte _decoMat;
+
 	public byte x;
 
 	public byte z;
@@ -60,6 +66,8 @@ public class Cell : WeightCell, IFloodCell
 	public byte light;
 
 	public byte autotile;
+
+	public byte autotileDeco;
 
 	public byte autotileBridge;
 
@@ -732,9 +740,9 @@ public class Cell : WeightCell, IFloodCell
 		{
 			if (_bridge != 0)
 			{
-				return sourceBridge.alias == "field";
+				return sourceBridge.Category.id == "floor_field";
 			}
-			return sourceFloor.alias == "field";
+			return sourceFloor.Category.id == "floor_field";
 		}
 	}
 
@@ -1031,6 +1039,8 @@ public class Cell : WeightCell, IFloodCell
 
 	public SourceMaterial.Row matFloor => matList[_floorMat];
 
+	public SourceMaterial.Row matDeco => matList[_decoMat];
+
 	public SourceMaterial.Row matBridge => matList[_bridgeMat];
 
 	public SourceMaterial.Row matObj => matList[objMat];
@@ -1066,6 +1076,8 @@ public class Cell : WeightCell, IFloodCell
 			return sourceFloor;
 		}
 	}
+
+	public SourceDeco.Row sourceDeco => decoList[_deco];
 
 	public SourceCellEffect.Row sourceEffect => effect?.source ?? effectList[0];
 
@@ -1164,7 +1176,7 @@ public class Cell : WeightCell, IFloodCell
 		TileType tileType = sourceBlock.tileType;
 		TileType tileType2 = sourceFloor.tileType;
 		MapBounds bounds = map.bounds;
-		bool flag = _bridge != 0;
+		bool hasBridge = _bridge != 0;
 		outOfBounds = x < bounds.x || z < bounds.z || x > bounds.maxX || z > bounds.maxZ;
 		isSurrounded4d = cell2.HasFullBlock && cell3.HasFullBlock && cell4.HasFullBlock && cell5.HasFullBlock;
 		isSurrounded = isSurrounded4d && cell6.HasFullBlock && cell7.HasFullBlock && cell8.HasFullBlock && cell9.HasFullBlock && cell4.bridgeHeight == bridgeHeight && cell3.bridgeHeight == bridgeHeight && cell5.bridgeHeight == bridgeHeight && cell2.bridgeHeight == bridgeHeight;
@@ -1179,9 +1191,9 @@ public class Cell : WeightCell, IFloodCell
 		openPath = false;
 		openSight = tileType.IsOpenSight || (cell4.hasWindow && !cell4.isCurtainClosed) || (cell3.hasWindow && !cell3.isCurtainClosed);
 		blockSight = tileType.IsBlockSight || ((objList[obj].growth != null) ? objList[obj].growth.BlockSight(this) : objList[obj].tileType.IsBlockSight);
-		blocked = outOfBounds || tileType.IsBlockPass || (tileType2.IsBlockPass && !flag) || ((objList[obj].growth != null) ? objList[obj].growth.BlockPass(this) : objList[obj].tileType.IsBlockPass) || impassable;
+		blocked = outOfBounds || tileType.IsBlockPass || (tileType2.IsBlockPass && !hasBridge) || ((objList[obj].growth != null) ? objList[obj].growth.BlockPass(this) : objList[obj].tileType.IsBlockPass) || impassable;
 		isSlopeEdge = height > cell3.height || height > cell4.height;
-		if (flag && sourceBridge.tileType.ShowPillar)
+		if (hasBridge && sourceBridge.tileType.ShowPillar)
 		{
 			isBridgeEdge = _bridge != cell3._bridge || _bridge != cell4._bridge || bridgeHeight > cell3.bridgeHeight || bridgeHeight > cell4.bridgeHeight || _bridge != cell2._bridge || _bridge != cell5._bridge || bridgeHeight > cell2.bridgeHeight || bridgeHeight > cell5.bridgeHeight;
 		}
@@ -1207,7 +1219,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		isShadowed = lotShade || sourceBlock.tileType.CastShadowSelf || cell4.sourceBlock.tileType.CastShadowBack || (!HasRoof && _roofBlock != 0);
 		castFloorShadow = lotShade || (room == null && sourceBlock.tileType.CastShadowSelf);
-		byte b = (flag ? bridgeHeight : height);
+		byte b = (hasBridge ? bridgeHeight : height);
 		byte b2 = ((cell4.bridgeHeight == 0) ? cell4.height : cell4.bridgeHeight);
 		byte b3 = ((cell3.bridgeHeight == 0) ? cell3.height : cell3.bridgeHeight);
 		byte b4 = ((cell10.bridgeHeight == 0) ? cell10.height : cell10.bridgeHeight);
@@ -1382,6 +1394,14 @@ public class Cell : WeightCell, IFloodCell
 		{
 			autotile = 0;
 		}
+		if (sourceDeco.autotile > 0)
+		{
+			autotileDeco = (byte)(((IsDecoAutoTileEdge(cell5) && z != Size - 1) ? 1 : 0) + ((IsDecoAutoTileEdge(cell3) && x != Size - 1) ? 2 : 0) + ((IsDecoAutoTileEdge(cell4) && z != 0) ? 4 : 0) + ((IsDecoAutoTileEdge(cell2) && x != 0) ? 8 : 0));
+		}
+		else
+		{
+			autotileDeco = 0;
+		}
 		if (_bridge != 0 && sourceBridge.autotile > 0)
 		{
 			autotileBridge = (byte)(((IsBridgeAutoTileEdge(cell5) && z != Size - 1) ? 1 : 0) + ((IsBridgeAutoTileEdge(cell3) && x != Size - 1) ? 2 : 0) + ((IsBridgeAutoTileEdge(cell4) && z != 0) ? 4 : 0) + ((IsBridgeAutoTileEdge(cell2) && x != 0) ? 8 : 0));
@@ -1408,7 +1428,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		bool IsAutoTileEdge(Cell cell)
 		{
-			if (cell.sourceFloor.autotilePriority <= sourceFloor.autotilePriority && (!sourceFloor.isBeach || !cell.sourceFloor.isBeach) && (cell._floor != _floor || cell._floorMat != _floorMat))
+			if ((!sourceFloor.isBeach || !cell.sourceFloor.isBeach) && (cell._floor != _floor || cell._floorMat != _floorMat))
 			{
 				return true;
 			}
@@ -1420,9 +1440,21 @@ public class Cell : WeightCell, IFloodCell
 		}
 		bool IsBridgeAutoTileEdge(Cell cell)
 		{
-			if (cell.sourceBridge.autotilePriority <= sourceBridge.autotilePriority && (cell._bridge != _bridge || cell._bridgeMat != _bridgeMat))
+			if (cell._bridge != _bridge || cell._bridgeMat != _bridgeMat)
 			{
 				return true;
+			}
+			return bridgeHeight != cell.bridgeHeight;
+		}
+		bool IsDecoAutoTileEdge(Cell cell)
+		{
+			if (cell._deco != _deco)
+			{
+				return true;
+			}
+			if (!hasBridge)
+			{
+				return topHeight != cell.topHeight;
 			}
 			return bridgeHeight != cell.bridgeHeight;
 		}
@@ -1432,7 +1464,11 @@ public class Cell : WeightCell, IFloodCell
 			{
 				return true;
 			}
-			return topHeight != cell.topHeight;
+			if (!hasBridge)
+			{
+				return topHeight != cell.topHeight;
+			}
+			return bridgeHeight != cell.bridgeHeight;
 		}
 	}
 

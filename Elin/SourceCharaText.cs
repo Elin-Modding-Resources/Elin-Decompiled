@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceCharaText : SourceDataString<SourceCharaText.Row>
 {
@@ -47,6 +48,21 @@ public class SourceCharaText : SourceDataString<SourceCharaText.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["calm_JP"] = 2,
+		["fov_JP"] = 3,
+		["aggro_JP"] = 4,
+		["dead_JP"] = 5,
+		["kill_JP"] = 6,
+		["calm"] = 7,
+		["fov"] = 8,
+		["aggro"] = 9,
+		["dead"] = 10,
+		["kill"] = 11
+	};
+
 	public override string[] ImportFields => new string[5] { "calm", "fov", "aggro", "dead", "kill" };
 
 	public override Row CreateRow()
@@ -67,8 +83,31 @@ public class SourceCharaText : SourceDataString<SourceCharaText.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			calm_JP = SourceData.GetString(mapping["calm_JP"]),
+			fov_JP = SourceData.GetString(mapping["fov_JP"]),
+			aggro_JP = SourceData.GetString(mapping["aggro_JP"]),
+			dead_JP = SourceData.GetString(mapping["dead_JP"]),
+			kill_JP = SourceData.GetString(mapping["kill_JP"]),
+			calm = SourceData.GetString(mapping["calm"]),
+			fov = SourceData.GetString(mapping["fov"]),
+			aggro = SourceData.GetString(mapping["aggro"]),
+			dead = SourceData.GetString(mapping["dead"]),
+			kill = SourceData.GetString(mapping["kill"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

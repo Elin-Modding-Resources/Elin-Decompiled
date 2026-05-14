@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceRecipe : SourceDataInt<SourceRecipe.Row>
 {
@@ -38,6 +39,21 @@ public class SourceRecipe : SourceDataInt<SourceRecipe.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["factory"] = 1,
+		["type"] = 2,
+		["thing"] = 3,
+		["num"] = 4,
+		["sp"] = 5,
+		["time"] = 6,
+		["ing1"] = 7,
+		["ing2"] = 8,
+		["ing3"] = 9,
+		["tag"] = 10
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -56,8 +72,31 @@ public class SourceRecipe : SourceDataInt<SourceRecipe.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			factory = SourceData.GetString(mapping["factory"]),
+			type = SourceData.GetString(mapping["type"]),
+			thing = SourceData.GetString(mapping["thing"]),
+			num = SourceData.GetString(mapping["num"]),
+			sp = SourceData.GetInt(mapping["sp"]),
+			time = SourceData.GetInt(mapping["time"]),
+			ing1 = SourceData.GetStringArray(mapping["ing1"]),
+			ing2 = SourceData.GetStringArray(mapping["ing2"]),
+			ing3 = SourceData.GetStringArray(mapping["ing3"]),
+			tag = SourceData.GetStringArray(mapping["tag"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

@@ -44,6 +44,8 @@ public class SourceManager : EMono
 
 	public SourceFloor floors;
 
+	public SourceDeco decos;
+
 	public SourceCellEffect cellEffects;
 
 	public SourceObj objs;
@@ -152,6 +154,7 @@ public class SourceManager : EMono
 		jobs.Init();
 		hobbies.Init();
 		floors.Init();
+		decos.Init();
 		blocks.Init();
 		cellEffects.Init();
 		objs.Init();

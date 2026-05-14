@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class SourceFloor : SourceDataInt<SourceFloor.Row>
+public class SourceDeco : SourceDataInt<SourceDeco.Row>
 {
 	[Serializable]
 	public class Row : TileRow
@@ -12,10 +12,6 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 
 		public int[] anime;
 
-		public string defBlock;
-
-		public string bridgeBlock;
-
 		public int edge;
 
 		public int autotile;
@@ -24,48 +20,11 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 
 		public float autotileBrightness;
 
-		public bool nonGradient;
-
-		public bool isBeach;
-
-		public bool snowtile;
-
-		public bool ignoreTransition;
-
-		[NonSerialized]
-		public SourceBlock.Row _defBlock;
-
-		[NonSerialized]
-		public SourceBlock.Row _bridgeBlock;
-
-		[NonSerialized]
-		public BiomeProfile biome;
-
-		[NonSerialized]
-		public string name_L;
-
-		[NonSerialized]
-		public string detail_L;
-
 		public override bool UseAlias => true;
 
 		public override string GetAlias => alias;
 
-		public override string RecipeID => "f" + id;
-
-		public override RenderData defaultRenderData => FallbackRenderData;
-
-		public override void OnInit()
-		{
-			ignoreTransition = tag.Contains("noTransition");
-			ignoreSnow = tag.Contains("noSnow");
-			isBeach = tag.Contains("beach");
-			snowtile = tag.Contains("snowtile");
-			if (!idBiome.IsEmpty())
-			{
-				biome = EClass.core.refs.biomes.dict[idBiome];
-			}
-		}
+		public override string RecipeID => "d" + id;
 
 		public override int GetTile(SourceMaterial.Row mat, int dir = 0)
 		{
@@ -94,22 +53,18 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 		["factory"] = 16,
 		["components"] = 17,
 		["defMat"] = 18,
-		["defBlock"] = 19,
-		["bridgeBlock"] = 20,
-		["category"] = 21,
-		["edge"] = 22,
-		["autotile"] = 23,
-		["autotilePriority"] = 24,
-		["autotileBrightness"] = 25,
-		["soundFoot"] = 26,
-		["tag"] = 27,
-		["detail_JP"] = 28,
-		["detail"] = 29
+		["category"] = 19,
+		["edge"] = 20,
+		["autotile"] = 21,
+		["autotilePriority"] = 22,
+		["autotileBrightness"] = 23,
+		["soundFoot"] = 24,
+		["tag"] = 25,
+		["detail_JP"] = 26,
+		["detail"] = 27
 	};
 
 	public Dictionary<int, Row> _rows = new Dictionary<int, Row>();
-
-	public static RenderData FallbackRenderData;
 
 	public override Row CreateRow()
 	{
@@ -134,17 +89,15 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 			factory = SourceData.GetStringArray(16),
 			components = SourceData.GetStringArray(17),
 			defMat = SourceData.GetString(18),
-			defBlock = SourceData.GetString(19),
-			bridgeBlock = SourceData.GetString(20),
-			category = SourceData.GetString(21),
-			edge = SourceData.GetInt(22),
-			autotile = SourceData.GetInt(23),
-			autotilePriority = SourceData.GetInt(24),
-			autotileBrightness = SourceData.GetFloat(25),
-			soundFoot = SourceData.GetString(26),
-			tag = SourceData.GetStringArray(27),
-			detail_JP = SourceData.GetString(28),
-			detail = SourceData.GetString(29)
+			category = SourceData.GetString(19),
+			edge = SourceData.GetInt(20),
+			autotile = SourceData.GetInt(21),
+			autotilePriority = SourceData.GetInt(22),
+			autotileBrightness = SourceData.GetFloat(23),
+			soundFoot = SourceData.GetString(24),
+			tag = SourceData.GetStringArray(25),
+			detail_JP = SourceData.GetString(26),
+			detail = SourceData.GetString(27)
 		};
 	}
 
@@ -171,8 +124,6 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 			factory = SourceData.GetStringArray(mapping["factory"]),
 			components = SourceData.GetStringArray(mapping["components"]),
 			defMat = SourceData.GetString(mapping["defMat"]),
-			defBlock = SourceData.GetString(mapping["defBlock"]),
-			bridgeBlock = SourceData.GetString(mapping["bridgeBlock"]),
 			category = SourceData.GetString(mapping["category"]),
 			edge = SourceData.GetInt(mapping["edge"]),
 			autotile = SourceData.GetInt(mapping["autotile"]),
@@ -237,21 +188,10 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 
 	public override void OnInit()
 	{
-		FallbackRenderData = ResourceCache.Load<RenderData>("Scene/Render/Data/floor");
-		Cell.floorList = rows;
+		Cell.decoList = rows;
 		foreach (Row row in rows)
 		{
 			row.Init();
-		}
-	}
-
-	public void OnAfterInit()
-	{
-		foreach (Row row in rows)
-		{
-			row._defBlock = EClass.sources.blocks.alias[row.defBlock];
-			row._bridgeBlock = EClass.sources.blocks.alias[row.bridgeBlock];
-			row.nonGradient = row.ContainsTag("nonGradient");
 		}
 	}
 }

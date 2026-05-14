@@ -4,6 +4,8 @@ public class TraitTile : Trait
 
 	public virtual string suffix => "";
 
+	public virtual bool ConsumeOnUse => true;
+
 	public override bool CanExtendBuild => true;
 
 	public override bool CanBuildInTown => false;

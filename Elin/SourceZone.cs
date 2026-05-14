@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceZone : SourceDataString<SourceZone.Row>
 {
@@ -67,6 +68,34 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["parent"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["type"] = 4,
+		["LV"] = 5,
+		["chance"] = 6,
+		["faction"] = 7,
+		["value"] = 8,
+		["idProfile"] = 9,
+		["idFile"] = 10,
+		["idBiome"] = 11,
+		["idGen"] = 12,
+		["idPlaylist"] = 13,
+		["tag"] = 14,
+		["cost"] = 15,
+		["dev"] = 16,
+		["image"] = 17,
+		["pos"] = 18,
+		["questTag"] = 19,
+		["textFlavor_JP"] = 20,
+		["textFlavor"] = 21,
+		["detail_JP"] = 22,
+		["detail"] = 23
+	};
+
 	public override string[] ImportFields => new string[1] { "textFlavor" };
 
 	public override Row CreateRow()
@@ -100,8 +129,44 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			parent = SourceData.GetString(mapping["parent"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			type = SourceData.GetString(mapping["type"]),
+			LV = SourceData.GetInt(mapping["LV"]),
+			chance = SourceData.GetInt(mapping["chance"]),
+			faction = SourceData.GetString(mapping["faction"]),
+			value = SourceData.GetInt(mapping["value"]),
+			idProfile = SourceData.GetString(mapping["idProfile"]),
+			idFile = SourceData.GetStringArray(mapping["idFile"]),
+			idBiome = SourceData.GetString(mapping["idBiome"]),
+			idGen = SourceData.GetString(mapping["idGen"]),
+			idPlaylist = SourceData.GetString(mapping["idPlaylist"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			cost = SourceData.GetInt(mapping["cost"]),
+			dev = SourceData.GetInt(mapping["dev"]),
+			image = SourceData.GetString(mapping["image"]),
+			pos = SourceData.GetIntArray(mapping["pos"]),
+			questTag = SourceData.GetStringArray(mapping["questTag"]),
+			textFlavor_JP = SourceData.GetString(mapping["textFlavor_JP"]),
+			textFlavor = SourceData.GetString(mapping["textFlavor"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

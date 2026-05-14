@@ -149,6 +149,8 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping;
+
 	public Dictionary<string, Row> _rows = new Dictionary<string, Row>();
 
 	public static Row rowDefaultPCC;
@@ -211,9 +213,70 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		return obj;
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		Row obj = new Row();
+		obj.id = SourceData.GetString(mapping["id"]);
+		obj._id = SourceData.GetInt(mapping["_id"]);
+		obj.name_JP = SourceData.GetString(mapping["name_JP"]);
+		obj.name = SourceData.GetString(mapping["name"]);
+		obj.aka_JP = SourceData.GetString(mapping["aka_JP"]);
+		obj.aka = SourceData.GetString(mapping["aka"]);
+		obj.idActor = SourceData.GetStringArray(mapping["idActor"]);
+		obj.sort = SourceData.GetInt(mapping["sort"]);
+		obj.size = SourceData.GetIntArray(mapping["size"]);
+		obj._idRenderData = SourceData.GetString(mapping["_idRenderData"]);
+		obj.tiles = SourceData.GetIntArray(mapping["tiles"]);
+		obj.tiles_snow = SourceData.GetIntArray(mapping["tiles_snow"]);
+		obj.colorMod = SourceData.GetInt(mapping["colorMod"]);
+		obj.components = SourceData.GetStringArray(mapping["components"]);
+		obj.defMat = SourceData.GetString(mapping["defMat"]);
+		obj.LV = SourceData.GetInt(mapping["LV"]);
+		obj.chance = SourceData.GetInt(mapping["chance"]);
+		obj.quality = SourceData.GetInt(mapping["quality"]);
+		obj.hostility = SourceData.GetString(mapping["hostility"]);
+		obj.biome = SourceData.GetString(mapping["biome"]);
+		obj.tag = SourceData.GetStringArray(mapping["tag"]);
+		obj.trait = SourceData.GetStringArray(mapping["trait"]);
+		obj.race = SourceData.GetString(mapping["race"]);
+		obj.job = SourceData.GetString(mapping["job"]);
+		obj.tactics = SourceData.GetString(mapping["tactics"]);
+		obj.aiIdle = SourceData.GetString(mapping["aiIdle"]);
+		obj.aiParam = SourceData.GetIntArray(mapping["aiParam"]);
+		obj.actCombat = SourceData.GetStringArray(mapping["actCombat"]);
+		obj.mainElement = SourceData.GetStringArray(mapping["mainElement"]);
+		obj.elements = Core.ParseElements(SourceData.GetStr(mapping["elements"]));
+		obj.equip = SourceData.GetString(mapping["equip"]);
+		obj.loot = SourceData.GetStringArray(mapping["loot"]);
+		obj.category = SourceData.GetString(mapping["category"]);
+		obj.filter = SourceData.GetStringArray(mapping["filter"]);
+		obj.gachaFilter = SourceData.GetStringArray(mapping["gachaFilter"]);
+		obj.tone = SourceData.GetString(mapping["tone"]);
+		obj.actIdle = SourceData.GetStringArray(mapping["actIdle"]);
+		obj.lightData = SourceData.GetString(mapping["lightData"]);
+		obj.idExtra = SourceData.GetString(mapping["idExtra"]);
+		obj.bio = SourceData.GetString(mapping["bio"]);
+		obj.faith = SourceData.GetString(mapping["faith"]);
+		obj.works = SourceData.GetStringArray(mapping["works"]);
+		obj.hobbies = SourceData.GetStringArray(mapping["hobbies"]);
+		obj.idText = SourceData.GetString(mapping["idText"]);
+		obj.moveAnime = SourceData.GetString(mapping["moveAnime"]);
+		obj.factory = SourceData.GetStringArray(mapping["factory"]);
+		obj.components = SourceData.GetStringArray(mapping["components"]);
+		obj.recruitItems = SourceData.GetStringArray(mapping["recruitItems"]);
+		obj.detail_JP = SourceData.GetString(mapping["detail_JP"]);
+		obj.detail = SourceData.GetString(mapping["detail"]);
+		return obj;
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void BackupPref()
@@ -240,5 +303,61 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		{
 			row.pref.Validate();
 		}
+	}
+
+	static SourceChara()
+	{
+		Dictionary<string, int> dictionary = new Dictionary<string, int>();
+		dictionary["id"] = 0;
+		dictionary["_id"] = 1;
+		dictionary["name_JP"] = 2;
+		dictionary["name"] = 3;
+		dictionary["aka_JP"] = 4;
+		dictionary["aka"] = 5;
+		dictionary["idActor"] = 6;
+		dictionary["sort"] = 7;
+		dictionary["size"] = 8;
+		dictionary["_idRenderData"] = 9;
+		dictionary["tiles"] = 10;
+		dictionary["tiles_snow"] = 11;
+		dictionary["colorMod"] = 12;
+		dictionary["components"] = 13;
+		dictionary["defMat"] = 14;
+		dictionary["LV"] = 15;
+		dictionary["chance"] = 16;
+		dictionary["quality"] = 17;
+		dictionary["hostility"] = 18;
+		dictionary["biome"] = 19;
+		dictionary["tag"] = 20;
+		dictionary["trait"] = 21;
+		dictionary["race"] = 22;
+		dictionary["job"] = 23;
+		dictionary["tactics"] = 24;
+		dictionary["aiIdle"] = 25;
+		dictionary["aiParam"] = 26;
+		dictionary["actCombat"] = 27;
+		dictionary["mainElement"] = 28;
+		dictionary["elements"] = 29;
+		dictionary["equip"] = 30;
+		dictionary["loot"] = 31;
+		dictionary["category"] = 32;
+		dictionary["filter"] = 33;
+		dictionary["gachaFilter"] = 34;
+		dictionary["tone"] = 35;
+		dictionary["actIdle"] = 36;
+		dictionary["lightData"] = 37;
+		dictionary["idExtra"] = 38;
+		dictionary["bio"] = 39;
+		dictionary["faith"] = 40;
+		dictionary["works"] = 41;
+		dictionary["hobbies"] = 42;
+		dictionary["idText"] = 43;
+		dictionary["moveAnime"] = 44;
+		dictionary["factory"] = 45;
+		dictionary["components"] = 46;
+		dictionary["recruitItems"] = 47;
+		dictionary["detail_JP"] = 48;
+		dictionary["detail"] = 49;
+		RowMapping = dictionary;
 	}
 }

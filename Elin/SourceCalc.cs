@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceCalc : SourceDataString<SourceCalc.Row>
 {
@@ -18,6 +19,14 @@ public class SourceCalc : SourceDataString<SourceCalc.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["num"] = 2,
+		["sides"] = 3,
+		["bonus"] = 4
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -29,8 +38,24 @@ public class SourceCalc : SourceDataString<SourceCalc.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			num = SourceData.GetString(mapping["num"]),
+			sides = SourceData.GetString(mapping["sides"]),
+			bonus = SourceData.GetString(mapping["bonus"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

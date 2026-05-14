@@ -32,26 +32,32 @@ public class AM_BaseGameMode : ActionMode
 		if (EInput.leftMouse.down && EClass.ui.isPointerOverUI)
 		{
 			EInput.leftMouse.Consume();
-			return;
 		}
-		switch (EInput.action)
+		else
 		{
-		case EAction.Cancel:
-			if (!WidgetSearch.Instance)
+			if (!EClass.core.IsGameStarted)
 			{
-				HotItemContext.Show("system", EInput.uiMousePosition);
+				return;
 			}
-			break;
-		case EAction.Help:
-			LayerHelp.Toggle("general", "1");
-			break;
-		case EAction.Log:
-			WidgetMainText.ToggleLog();
-			break;
-		}
-		if (EClass.pc.currentZone.IsActiveZone)
-		{
-			_OnUpdateInput();
+			switch (EInput.action)
+			{
+			case EAction.Cancel:
+				if (!WidgetSearch.Instance)
+				{
+					HotItemContext.Show("system", EInput.uiMousePosition);
+				}
+				break;
+			case EAction.Help:
+				LayerHelp.Toggle("general", "1");
+				break;
+			case EAction.Log:
+				WidgetMainText.ToggleLog();
+				break;
+			}
+			if (EClass.pc.currentZone.IsActiveZone)
+			{
+				_OnUpdateInput();
+			}
 		}
 	}
 

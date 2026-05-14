@@ -5,35 +5,35 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
-	public const int difficulty = 765;
-
-	public const int air = 763;
-
-	public const int roasted = 762;
-
-	public const int rare = 751;
-
-	public const int cute = 752;
-
-	public const int antidote = 753;
-
-	public const int nerve = 754;
-
-	public const int blood = 755;
+	public const int purity = 759;
 
 	public const int hotspring = 756;
 
-	public const int purity = 759;
-
-	public const int stimulant = 760;
+	public const int blood = 755;
 
 	public const int recharge = 761;
 
+	public const int antidote = 753;
+
+	public const int cute = 752;
+
+	public const int rare = 751;
+
 	public const int comfort = 750;
+
+	public const int roasted = 762;
+
+	public const int air = 763;
+
+	public const int difficulty = 765;
+
+	public const int stimulant = 760;
+
+	public const int nerve = 754;
 
 	public const int _void = 0;
 
-	public const int nutrition = 10;
+	public const int socket = 5;
 
 	public const int lv = 1;
 
@@ -41,7 +41,7 @@ public class ELEMENT
 
 	public const int d = 3;
 
-	public const int socket = 5;
+	public const int nutrition = 10;
 
 	public const int weight = 11;
 
@@ -57,9 +57,9 @@ public class ELEMENT
 
 	public const int taste = 18;
 
-	public const int poison = 20;
-
 	public const int heat = 16;
+
+	public const int fire = 21;
 
 	public const int cut = 22;
 
@@ -75,14 +75,14 @@ public class ELEMENT
 
 	public const int piety = 85;
 
-	public const int fire = 21;
+	public const int poison = 20;
 
 	public static readonly int[] IDS = new int[36]
 	{
-		765, 763, 762, 751, 752, 753, 754, 755, 756, 759,
-		760, 761, 750, 0, 10, 1, 2, 3, 5, 11,
-		12, 13, 14, 15, 17, 18, 20, 16, 22, 23,
-		24, 25, 26, 29, 85, 21
+		759, 756, 755, 761, 753, 752, 751, 750, 762, 763,
+		765, 760, 754, 0, 5, 1, 2, 3, 10, 11,
+		12, 13, 14, 15, 17, 18, 16, 21, 22, 23,
+		24, 25, 26, 29, 85, 20
 	};
 }
 public class Element : EClass

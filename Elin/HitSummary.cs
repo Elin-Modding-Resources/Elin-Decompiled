@@ -119,7 +119,7 @@ public class HitSummary : EClass
 		{
 			BuildMenu.Instance.info1.lastMats[recipe.id] = recipe.ingredients[0].mat;
 		}
-		if (!recipe.tileType.CanInstaComplete && !EClass.player.instaComplete)
+		if ((!recipe.tileType.CanInstaComplete && !EClass.player.instaComplete) || recipe.GetIdThing() == "deco")
 		{
 			return;
 		}

@@ -74,13 +74,17 @@ public class RecipeManager : EClass
 				Create(row4, "Bridge", "-b");
 			}
 		}
-		foreach (SourceObj.Row row5 in EClass.sources.objs.rows)
+		foreach (SourceDeco.Row row5 in EClass.sources.decos.rows)
 		{
-			Create(row5, "Obj");
+			Create(row5, "Deco");
 		}
-		foreach (SourceCellEffect.Row row6 in EClass.sources.cellEffects.rows)
+		foreach (SourceObj.Row row6 in EClass.sources.objs.rows)
 		{
-			Create(row6, "Liquid");
+			Create(row6, "Obj");
+		}
+		foreach (SourceCellEffect.Row row7 in EClass.sources.cellEffects.rows)
+		{
+			Create(row7, "Liquid");
 		}
 		rebuild = false;
 	}

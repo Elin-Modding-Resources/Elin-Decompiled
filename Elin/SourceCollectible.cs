@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceCollectible : SourceDataString<SourceCollectible.Row>
 {
@@ -38,6 +39,21 @@ public class SourceCollectible : SourceDataString<SourceCollectible.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["rarity"] = 3,
+		["prefab"] = 4,
+		["num"] = 5,
+		["filter"] = 6,
+		["tag"] = 7,
+		["sound"] = 8,
+		["detail_JP"] = 9,
+		["detail"] = 10
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -56,8 +72,31 @@ public class SourceCollectible : SourceDataString<SourceCollectible.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			rarity = SourceData.GetInt(mapping["rarity"]),
+			prefab = SourceData.GetString(mapping["prefab"]),
+			num = SourceData.GetInt(mapping["num"]),
+			filter = SourceData.GetString(mapping["filter"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			sound = SourceData.GetString(mapping["sound"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

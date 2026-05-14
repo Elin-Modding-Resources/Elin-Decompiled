@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourcePerson : SourceDataString<SourcePerson.Row>
 {
@@ -49,6 +50,25 @@ public class SourcePerson : SourceDataString<SourcePerson.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["idActor"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["aka_JP"] = 4,
+		["aka"] = 5,
+		["portrait"] = 6,
+		["faction"] = 7,
+		["LV"] = 8,
+		["job"] = 9,
+		["race"] = 10,
+		["material"] = 11,
+		["bio"] = 12,
+		["detail_JP"] = 13,
+		["detail"] = 14
+	};
+
 	public override string[] ImportFields => new string[1] { "aka" };
 
 	public override Row CreateRow()
@@ -73,8 +93,35 @@ public class SourcePerson : SourceDataString<SourcePerson.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			idActor = SourceData.GetString(mapping["idActor"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			aka_JP = SourceData.GetString(mapping["aka_JP"]),
+			aka = SourceData.GetString(mapping["aka"]),
+			portrait = SourceData.GetString(mapping["portrait"]),
+			faction = SourceData.GetString(mapping["faction"]),
+			LV = SourceData.GetInt(mapping["LV"]),
+			job = SourceData.GetString(mapping["job"]),
+			race = SourceData.GetString(mapping["race"]),
+			material = SourceData.GetString(mapping["material"]),
+			bio = SourceData.GetString(mapping["bio"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

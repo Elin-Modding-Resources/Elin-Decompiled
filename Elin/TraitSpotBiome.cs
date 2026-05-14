@@ -41,13 +41,13 @@ public class TraitSpotBiome : TraitSpot
 					thing.SetPriceFix(-100);
 					EClass._zone.AddCard(thing, randomPoint).Install();
 				}
-				if (EClass.rnd(40) == 0 && EClass._map.FindChara("big_daddy") == null)
+				if (EClass.rnd(40) == 0 && EClass._map.FindChara("big_daddy") == null && EClass._map.FindChara("big_daddy2") == null)
 				{
 					CardBlueprint.Set(new CardBlueprint
 					{
 						lv = EClass.game.survival.flags.raidLv + 10
 					});
-					Chara t = CharaGen.Create("big_daddy");
+					Chara t = CharaGen.Create((EClass.rnd(2) == 0) ? "big_daddy" : "big_daddy2");
 					EClass._zone.AddCard(t, randomPoint);
 					Msg.Say("sign_bigdaddy");
 				}

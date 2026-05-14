@@ -15,6 +15,33 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["_origin"] = 1,
+		["name_JP"] = 2,
+		["unit_JP"] = 3,
+		["name"] = 4,
+		["unit"] = 5,
+		["tiles"] = 6,
+		["skins"] = 7,
+		["parse"] = 8,
+		["vals"] = 9,
+		["trait"] = 11,
+		["LV"] = 12,
+		["chance"] = 13,
+		["value"] = 14,
+		["weight"] = 15,
+		["recipeKey"] = 16,
+		["factory"] = 17,
+		["components"] = 18,
+		["defMat"] = 19,
+		["category"] = 20,
+		["tag"] = 21,
+		["detail_JP"] = 22,
+		["detail"] = 23
+	};
+
 	public override string[] ImportFields => new string[1] { "unit" };
 
 	public override Row CreateRow()
@@ -47,9 +74,44 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			_origin = SourceData.GetString(mapping["_origin"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			unit_JP = SourceData.GetString(mapping["unit_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			unit = SourceData.GetString(mapping["unit"]),
+			tiles = SourceData.GetIntArray(mapping["tiles"]),
+			skins = SourceData.GetIntArray(mapping["skins"]),
+			parse = SourceData.GetStringArray(mapping["parse"]),
+			vals = SourceData.GetStringArray(mapping["vals"]),
+			trait = SourceData.GetStringArray(mapping["trait"]),
+			LV = SourceData.GetInt(mapping["LV"]),
+			chance = SourceData.GetInt(mapping["chance"]),
+			value = SourceData.GetInt(mapping["value"]),
+			weight = SourceData.GetInt(mapping["weight"]),
+			recipeKey = SourceData.GetStringArray(mapping["recipeKey"]),
+			factory = SourceData.GetStringArray(mapping["factory"]),
+			components = SourceData.GetStringArray(mapping["components"]),
+			defMat = SourceData.GetString(mapping["defMat"]),
+			category = SourceData.GetString(mapping["category"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void RestorePref()

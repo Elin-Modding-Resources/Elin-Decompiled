@@ -149,6 +149,17 @@ public class GoalCombat : Goal
 				}
 				owner.calmCheckTurn--;
 			}
+			string text = owner.id;
+			if ((text == "big_daddy" || text == "big_daddy2") && !owner.IsPCFactionOrMinion)
+			{
+				foreach (Chara chara in EClass._map.charas)
+				{
+					if (!chara.IsPCFaction && !chara.IsInCombat && chara != owner)
+					{
+						chara.GoHostile(tc);
+					}
+				}
+			}
 			if (owner.IsPC)
 			{
 				CursorSystem.ignoreCount = 1;
@@ -320,8 +331,8 @@ public class GoalCombat : Goal
 					yield return Success();
 				}
 				idleCount = 0;
-				string aiIdle = owner.source.aiIdle;
-				if (aiIdle == "stand" || aiIdle == "root")
+				text = owner.source.aiIdle;
+				if (text == "stand" || text == "root")
 				{
 					yield return Success();
 				}

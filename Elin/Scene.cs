@@ -557,6 +557,10 @@ public class Scene : EMono
 			{
 				EMono.ui.UpdateInput();
 			}
+			if (!EMono.core.IsGameStarted)
+			{
+				break;
+			}
 			if (EMono.pc.currentZone != EMono.game.activeZone && EMono.pc.global.transition != null)
 			{
 				EMono.player.flags.OnLeaveZone();

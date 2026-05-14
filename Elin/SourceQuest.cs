@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class SourceQuest : SourceDataString<SourceQuest.Row>
 {
@@ -56,6 +57,27 @@ public class SourceQuest : SourceDataString<SourceQuest.Row>
 		public override string GetAlias => "n";
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["type"] = 3,
+		["drama"] = 4,
+		["idZone"] = 5,
+		["group"] = 6,
+		["tags"] = 7,
+		["money"] = 8,
+		["chance"] = 9,
+		["minFame"] = 10,
+		["detail_JP"] = 11,
+		["detail"] = 12,
+		["talkProgress_JP"] = 13,
+		["talkProgress"] = 14,
+		["talkComplete_JP"] = 15,
+		["talkComplete"] = 16
+	};
+
 	public override string[] ImportFields => new string[2] { "talkProgress", "talkComplete" };
 
 	public override Row CreateRow()
@@ -82,8 +104,37 @@ public class SourceQuest : SourceDataString<SourceQuest.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			type = SourceData.GetString(mapping["type"]),
+			drama = SourceData.GetStringArray(mapping["drama"]),
+			idZone = SourceData.GetString(mapping["idZone"]),
+			group = SourceData.GetString(mapping["group"]),
+			tags = SourceData.GetStringArray(mapping["tags"]),
+			money = SourceData.GetInt(mapping["money"]),
+			chance = SourceData.GetInt(mapping["chance"]),
+			minFame = SourceData.GetInt(mapping["minFame"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"]),
+			talkProgress_JP = SourceData.GetString(mapping["talkProgress_JP"]),
+			talkProgress = SourceData.GetString(mapping["talkProgress"]),
+			talkComplete_JP = SourceData.GetString(mapping["talkComplete_JP"]),
+			talkComplete = SourceData.GetString(mapping["talkComplete"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 }

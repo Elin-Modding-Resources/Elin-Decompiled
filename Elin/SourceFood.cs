@@ -49,6 +49,56 @@ public class SourceFood : SourceThingV
 		public override string GetAlias => "n";
 	}
 
+	public new static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["_origin"] = 1,
+		["name_JP"] = 2,
+		["unit_JP"] = 3,
+		["name"] = 4,
+		["unit"] = 5,
+		["name2_JP"] = 6,
+		["name2"] = 7,
+		["unknown_JP"] = 8,
+		["unknown"] = 9,
+		["tiles"] = 10,
+		["parse"] = 11,
+		["vals"] = 12,
+		["trait"] = 13,
+		["elements"] = 14,
+		["idTaste"] = 16,
+		["TST"] = 17,
+		["NUT"] = 18,
+		["STR"] = 19,
+		["STR2"] = 20,
+		["END"] = 21,
+		["END2"] = 22,
+		["DEX"] = 23,
+		["DEX2"] = 24,
+		["PER"] = 25,
+		["PER2"] = 26,
+		["LER"] = 27,
+		["LER2"] = 28,
+		["WIL"] = 29,
+		["WIL2"] = 30,
+		["MAG"] = 31,
+		["MAG2"] = 32,
+		["CHA"] = 33,
+		["CHA2"] = 34,
+		["LV"] = 36,
+		["chance"] = 37,
+		["value"] = 38,
+		["weight"] = 39,
+		["recipeKey"] = 40,
+		["factory"] = 41,
+		["components"] = 42,
+		["defMat"] = 43,
+		["category"] = 44,
+		["tag"] = 45,
+		["detail_JP"] = 46,
+		["detail"] = 47
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row2
@@ -102,9 +152,67 @@ public class SourceFood : SourceThingV
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row2
+		{
+			id = SourceData.GetString(mapping["id"]),
+			_origin = SourceData.GetString(mapping["_origin"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			unit_JP = SourceData.GetString(mapping["unit_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			unit = SourceData.GetString(mapping["unit"]),
+			name2_JP = SourceData.GetStringArray(mapping["name2_JP"]),
+			name2 = SourceData.GetStringArray(mapping["name2"]),
+			unknown_JP = SourceData.GetString(mapping["unknown_JP"]),
+			unknown = SourceData.GetString(mapping["unknown"]),
+			tiles = SourceData.GetIntArray(mapping["tiles"]),
+			parse = SourceData.GetStringArray(mapping["parse"]),
+			vals = SourceData.GetStringArray(mapping["vals"]),
+			trait = SourceData.GetStringArray(mapping["trait"]),
+			elements = Core.ParseElements(SourceData.GetStr(mapping["elements"])),
+			idTaste = SourceData.GetString(mapping["idTaste"]),
+			TST = SourceData.GetInt(mapping["TST"]),
+			NUT = SourceData.GetInt(mapping["NUT"]),
+			STR = SourceData.GetInt(mapping["STR"]),
+			STR2 = SourceData.GetInt(mapping["STR2"]),
+			END = SourceData.GetInt(mapping["END"]),
+			END2 = SourceData.GetInt(mapping["END2"]),
+			DEX = SourceData.GetInt(mapping["DEX"]),
+			DEX2 = SourceData.GetInt(mapping["DEX2"]),
+			PER = SourceData.GetInt(mapping["PER"]),
+			PER2 = SourceData.GetInt(mapping["PER2"]),
+			LER = SourceData.GetInt(mapping["LER"]),
+			LER2 = SourceData.GetInt(mapping["LER2"]),
+			WIL = SourceData.GetInt(mapping["WIL"]),
+			WIL2 = SourceData.GetInt(mapping["WIL2"]),
+			MAG = SourceData.GetInt(mapping["MAG"]),
+			MAG2 = SourceData.GetInt(mapping["MAG2"]),
+			CHA = SourceData.GetInt(mapping["CHA"]),
+			CHA2 = SourceData.GetInt(mapping["CHA2"]),
+			LV = SourceData.GetInt(mapping["LV"]),
+			chance = SourceData.GetInt(mapping["chance"]),
+			value = SourceData.GetInt(mapping["value"]),
+			weight = SourceData.GetInt(mapping["weight"]),
+			recipeKey = SourceData.GetStringArray(mapping["recipeKey"]),
+			factory = SourceData.GetStringArray(mapping["factory"]),
+			components = SourceData.GetStringArray(mapping["components"]),
+			defMat = SourceData.GetString(mapping["defMat"]),
+			category = SourceData.GetString(mapping["category"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void Reset()

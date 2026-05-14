@@ -224,7 +224,7 @@ public class AI_Fuck : AIAct
 				{
 					num = 50;
 				}
-				else if (tc.affinity.CurrentStage < Affinity.Stage.Intimate && EClass.rnd(6 * num / 100) == 0)
+				else if (tc.affinity.CurrentStage < Affinity.Stage.Respected && EClass.rnd((tc.IsPCFaction ? 30 : 10) * 100 / num) == 0)
 				{
 					tc.AddCondition<ConFear>(60);
 				}

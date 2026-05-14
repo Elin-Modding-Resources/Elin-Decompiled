@@ -63,6 +63,26 @@ public class SourceBacker : SourceDataInt<SourceBacker.Row>
 		}
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["valid"] = 3,
+		["lang"] = 7,
+		["name"] = 8,
+		["text"] = 9,
+		["type"] = 10,
+		["skin"] = 11,
+		["gender"] = 12,
+		["tree"] = 13,
+		["deity"] = 14,
+		["chara"] = 15,
+		["loot"] = 16,
+		["isStatic"] = 17,
+		["done"] = 18,
+		["loc"] = 19,
+		["original"] = 20
+	};
+
 	[NonSerialized]
 	public List<Row> listRemain = new List<Row>();
 
@@ -107,9 +127,37 @@ public class SourceBacker : SourceDataInt<SourceBacker.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			valid = SourceData.GetBool(mapping["valid"]),
+			lang = SourceData.GetString(mapping["lang"]),
+			name = SourceData.GetString(mapping["name"]),
+			text = SourceData.GetString(mapping["text"]),
+			type = SourceData.GetInt(mapping["type"]),
+			skin = SourceData.GetInt(mapping["skin"]),
+			gender = SourceData.GetInt(mapping["gender"]),
+			tree = SourceData.GetString(mapping["tree"]),
+			deity = SourceData.GetString(mapping["deity"]),
+			chara = SourceData.GetString(mapping["chara"]),
+			loot = SourceData.GetString(mapping["loot"]),
+			isStatic = SourceData.GetInt(mapping["isStatic"]),
+			done = SourceData.GetBool(mapping["done"]),
+			loc = SourceData.GetString(mapping["loc"]),
+			original = SourceData.GetString(mapping["original"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()

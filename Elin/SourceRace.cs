@@ -127,6 +127,54 @@ public class SourceRace : SourceDataString<SourceRace.Row>
 		public bool IsPlant => tag.Contains("plant");
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["name_JP"] = 1,
+		["name"] = 2,
+		["playable"] = 3,
+		["tag"] = 4,
+		["life"] = 5,
+		["mana"] = 6,
+		["vigor"] = 7,
+		["DV"] = 8,
+		["PV"] = 9,
+		["PDR"] = 10,
+		["EDR"] = 11,
+		["EP"] = 12,
+		["STR"] = 13,
+		["END"] = 14,
+		["DEX"] = 15,
+		["PER"] = 16,
+		["LER"] = 17,
+		["WIL"] = 18,
+		["MAG"] = 19,
+		["CHA"] = 20,
+		["SPD"] = 21,
+		["INT"] = 23,
+		["martial"] = 24,
+		["pen"] = 25,
+		["elements"] = 26,
+		["skill"] = 27,
+		["figure"] = 28,
+		["geneCap"] = 29,
+		["material"] = 30,
+		["corpse"] = 31,
+		["loot"] = 32,
+		["blood"] = 33,
+		["meleeStyle"] = 34,
+		["castStyle"] = 35,
+		["EQ"] = 36,
+		["sex"] = 37,
+		["age"] = 38,
+		["height"] = 39,
+		["breeder"] = 40,
+		["food"] = 41,
+		["fur"] = 42,
+		["detail_JP"] = 43,
+		["detail"] = 44
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -178,9 +226,65 @@ public class SourceRace : SourceDataString<SourceRace.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetString(mapping["id"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			playable = SourceData.GetInt(mapping["playable"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			life = SourceData.GetInt(mapping["life"]),
+			mana = SourceData.GetInt(mapping["mana"]),
+			vigor = SourceData.GetInt(mapping["vigor"]),
+			DV = SourceData.GetInt(mapping["DV"]),
+			PV = SourceData.GetInt(mapping["PV"]),
+			PDR = SourceData.GetInt(mapping["PDR"]),
+			EDR = SourceData.GetInt(mapping["EDR"]),
+			EP = SourceData.GetInt(mapping["EP"]),
+			STR = SourceData.GetInt(mapping["STR"]),
+			END = SourceData.GetInt(mapping["END"]),
+			DEX = SourceData.GetInt(mapping["DEX"]),
+			PER = SourceData.GetInt(mapping["PER"]),
+			LER = SourceData.GetInt(mapping["LER"]),
+			WIL = SourceData.GetInt(mapping["WIL"]),
+			MAG = SourceData.GetInt(mapping["MAG"]),
+			CHA = SourceData.GetInt(mapping["CHA"]),
+			SPD = SourceData.GetInt(mapping["SPD"]),
+			INT = SourceData.GetInt(mapping["INT"]),
+			martial = SourceData.GetInt(mapping["martial"]),
+			pen = SourceData.GetInt(mapping["pen"]),
+			elements = Core.ParseElements(SourceData.GetStr(mapping["elements"])),
+			skill = SourceData.GetString(mapping["skill"]),
+			figure = SourceData.GetString(mapping["figure"]),
+			geneCap = SourceData.GetInt(mapping["geneCap"]),
+			material = SourceData.GetString(mapping["material"]),
+			corpse = SourceData.GetStringArray(mapping["corpse"]),
+			loot = SourceData.GetStringArray(mapping["loot"]),
+			blood = SourceData.GetInt(mapping["blood"]),
+			meleeStyle = SourceData.GetString(mapping["meleeStyle"]),
+			castStyle = SourceData.GetString(mapping["castStyle"]),
+			EQ = SourceData.GetStringArray(mapping["EQ"]),
+			sex = SourceData.GetInt(mapping["sex"]),
+			age = SourceData.GetIntArray(mapping["age"]),
+			height = SourceData.GetInt(mapping["height"]),
+			breeder = SourceData.GetInt(mapping["breeder"]),
+			food = SourceData.GetStringArray(mapping["food"]),
+			fur = SourceData.GetString(mapping["fur"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()

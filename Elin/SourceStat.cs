@@ -95,6 +95,43 @@ public class SourceStat : SourceDataInt<SourceStat.Row>
 		public override string GetAlias => alias;
 	}
 
+	public static readonly IReadOnlyDictionary<string, int> RowMapping = new Dictionary<string, int>
+	{
+		["id"] = 0,
+		["alias"] = 1,
+		["name_JP"] = 2,
+		["name"] = 3,
+		["type"] = 4,
+		["group"] = 5,
+		["curse"] = 6,
+		["duration"] = 7,
+		["durationMax"] = 8,
+		["hexPower"] = 9,
+		["negate"] = 10,
+		["defenseAttb"] = 11,
+		["resistance"] = 12,
+		["gainRes"] = 13,
+		["elements"] = 14,
+		["nullify"] = 15,
+		["tag"] = 16,
+		["phase"] = 17,
+		["colors"] = 18,
+		["element"] = 19,
+		["effect"] = 20,
+		["strPhase_JP"] = 21,
+		["strPhase"] = 22,
+		["textPhase_JP"] = 23,
+		["textPhase"] = 24,
+		["textEnd_JP"] = 25,
+		["textEnd"] = 26,
+		["textPhase2_JP"] = 27,
+		["textPhase2"] = 28,
+		["gradient"] = 29,
+		["invert"] = 30,
+		["detail_JP"] = 31,
+		["detail"] = 32
+	};
+
 	[NonSerialized]
 	public Dictionary<string, List<Row>> groups = new Dictionary<string, List<Row>>();
 
@@ -140,9 +177,54 @@ public class SourceStat : SourceDataInt<SourceStat.Row>
 		};
 	}
 
+	public override Row CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
+	{
+		return new Row
+		{
+			id = SourceData.GetInt(mapping["id"]),
+			alias = SourceData.GetString(mapping["alias"]),
+			name_JP = SourceData.GetString(mapping["name_JP"]),
+			name = SourceData.GetString(mapping["name"]),
+			type = SourceData.GetString(mapping["type"]),
+			group = SourceData.GetString(mapping["group"]),
+			curse = SourceData.GetString(mapping["curse"]),
+			duration = SourceData.GetString(mapping["duration"]),
+			durationMax = SourceData.GetInt(mapping["durationMax"]),
+			hexPower = SourceData.GetInt(mapping["hexPower"]),
+			negate = SourceData.GetStringArray(mapping["negate"]),
+			defenseAttb = SourceData.GetStringArray(mapping["defenseAttb"]),
+			resistance = SourceData.GetStringArray(mapping["resistance"]),
+			gainRes = SourceData.GetInt(mapping["gainRes"]),
+			elements = SourceData.GetStringArray(mapping["elements"]),
+			nullify = SourceData.GetStringArray(mapping["nullify"]),
+			tag = SourceData.GetStringArray(mapping["tag"]),
+			phase = SourceData.GetIntArray(mapping["phase"]),
+			colors = SourceData.GetString(mapping["colors"]),
+			element = SourceData.GetString(mapping["element"]),
+			effect = SourceData.GetStringArray(mapping["effect"]),
+			strPhase_JP = SourceData.GetStringArray(mapping["strPhase_JP"]),
+			strPhase = SourceData.GetStringArray(mapping["strPhase"]),
+			textPhase_JP = SourceData.GetString(mapping["textPhase_JP"]),
+			textPhase = SourceData.GetString(mapping["textPhase"]),
+			textEnd_JP = SourceData.GetString(mapping["textEnd_JP"]),
+			textEnd = SourceData.GetString(mapping["textEnd"]),
+			textPhase2_JP = SourceData.GetString(mapping["textPhase2_JP"]),
+			textPhase2 = SourceData.GetString(mapping["textPhase2"]),
+			gradient = SourceData.GetString(mapping["gradient"]),
+			invert = SourceData.GetBool(mapping["invert"]),
+			detail_JP = SourceData.GetString(mapping["detail_JP"]),
+			detail = SourceData.GetString(mapping["detail"])
+		};
+	}
+
 	public override void SetRow(Row r)
 	{
 		map[r.id] = r;
+	}
+
+	public override IReadOnlyDictionary<string, int> GetRowMapping()
+	{
+		return RowMapping;
 	}
 
 	public override void OnInit()
