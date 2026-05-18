@@ -138,6 +138,6 @@ public class TraitGeneMachine : TraitStasisChamber
 		{
 			LayerDragGrid.Create(new InvOwnerGene(owner, target));
 		}
-		return true;
+		return false;
 	}
 }

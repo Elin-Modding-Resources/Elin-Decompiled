@@ -259,7 +259,7 @@ public class TaskBuild : TaskBaseBuild
 			}
 			if (p.Installed != null)
 			{
-				if (p.Installed.trait is TraitSeed && !(EClass.pc.held.trait is TraitFertilizer))
+				if (p.Installed.trait is TraitSeed && !(EClass.pc.held.trait is TraitFertilizer) && !(EClass.pc.held.trait is TraitFloor) && !(EClass.pc.held.trait is TraitFloorDeco))
 				{
 					return HitResult.Invalid;
 				}

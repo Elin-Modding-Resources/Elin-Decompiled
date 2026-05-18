@@ -50,7 +50,7 @@ public class ActTelekinesis : Spell
 		{
 			return false;
 		}
-		if (!Act.CC.IsPC && Act.CC.Dist(Act.TC) != 1)
+		if (!Act.CC.IsPC && (Act.CC.Dist(Act.TC) != 1 || Act.TC.isThing))
 		{
 			return false;
 		}

@@ -4268,7 +4268,7 @@ public class Chara : Card, IPathfindWalker
 				hygiene.Mod(2);
 			}
 		}
-		if (cell.sourceFloor.id == 20)
+		if (cell.sourceSurface.id == 20)
 		{
 			AddCondition<ConBurning>();
 		}

@@ -25,7 +25,7 @@ public class InvOwnerGene : InvOwnerDraglet
 	public override void _OnProcess(Thing t)
 	{
 		DNA.Type type = t.c_DNA.type;
-		if (type != 0 && tg.c_genes != null)
+		if (type != 0)
 		{
 			int num = t.c_DNA.slot;
 			if (num > 1 && tg.HasElement(1237))

@@ -160,6 +160,10 @@ public class GameUpdater : EClass
 						EClass._map.SetEffect(pos.x, pos.z);
 					}
 				}
+				if (cell.sourceSurface.id == 20 && EClass.rnd(10) == 0)
+				{
+					EClass._map.TryShatter(pos, 910, 100);
+				}
 				x++;
 				if (x >= base.Size)
 				{

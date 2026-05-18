@@ -1289,6 +1289,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		list.Shuffle();
 		int num = 0;
+		bool flag = false;
 		foreach (Card item3 in list)
 		{
 			if (!item3.trait.CanBeDestroyed || item3.category.IsChildOf("currency") || item3.trait is TraitDoor || item3.trait is TraitFigure || item3.trait is TraitTrainingDummy || item3.rarity >= Rarity.Legendary)
@@ -1319,9 +1320,9 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				continue;
 			}
-			bool flag = CanCook(item3);
+			bool flag2 = CanCook(item3);
 			string text = "";
-			if (flag)
+			if (flag2)
 			{
 				if (fire)
 				{
@@ -1358,9 +1359,8 @@ public class Map : MapBounds, IPathfindGrid
 					text = "711";
 				}
 			}
-			if (flag && !text.IsEmpty())
+			if (flag2 && !text.IsEmpty())
 			{
-				item3.GetRoot();
 				Thing thing2 = item3.Split(1);
 				List<Thing> list4 = new List<Thing>();
 				list4.Add(thing2);
@@ -1413,6 +1413,11 @@ public class Map : MapBounds, IPathfindGrid
 			if (rootCard3.IsPCParty)
 			{
 				ActionMode.Adv.itemLost++;
+			}
+			if (!flag)
+			{
+				pos.PlayEffect(fire ? "Element/eleFire" : "Element/eleCold");
+				flag = true;
 			}
 			num++;
 		}

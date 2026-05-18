@@ -1428,7 +1428,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		bool IsAutoTileEdge(Cell cell)
 		{
-			if ((!sourceFloor.isBeach || !cell.sourceFloor.isBeach) && (cell._floor != _floor || cell._floorMat != _floorMat))
+			if (!sourceFloor.isBeach && !cell.sourceFloor.isBeach && (cell._floor != _floor || cell._floorMat != _floorMat))
 			{
 				return true;
 			}
@@ -1448,7 +1448,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		bool IsDecoAutoTileEdge(Cell cell)
 		{
-			if (cell._deco != _deco)
+			if (cell._deco != _deco || cell._decoMat != _decoMat)
 			{
 				return true;
 			}
