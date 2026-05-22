@@ -48,6 +48,18 @@ public class SourceArea : SourceDataString<SourceArea.Row>
 		["detail"] = 7
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["textAssign_JP"] = "string",
+		["textAssign"] = "string",
+		["detail_JP"] = "string",
+		["tag"] = "string",
+		["detail"] = "string"
+	};
+
 	public override string[] ImportFields => new string[1] { "textAssign" };
 
 	public override Row CreateRow()
@@ -88,5 +100,10 @@ public class SourceArea : SourceDataString<SourceArea.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

@@ -199,6 +199,61 @@ public class SourceThing : SourceDataString<SourceThing.Row>
 		["detail"] = 51
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["unknown_JP"] = "string",
+		["unit_JP"] = "string",
+		["naming"] = "string",
+		["name"] = "string",
+		["unit"] = "string",
+		["unknown"] = "string",
+		["category"] = "string",
+		["sort"] = "int",
+		["_tileType"] = "string",
+		["_idRenderData"] = "string",
+		["tiles"] = "int[]",
+		["altTiles"] = "int[]",
+		["anime"] = "int[]",
+		["skins"] = "int[]",
+		["size"] = "int[]",
+		["colorMod"] = "int",
+		["colorType"] = "string",
+		["recipeKey"] = "string[]",
+		["factory"] = "string[]",
+		["components"] = "string[]",
+		["disassemble"] = "string[]",
+		["defMat"] = "string",
+		["tierGroup"] = "string",
+		["value"] = "int",
+		["LV"] = "int",
+		["chance"] = "int",
+		["quality"] = "int",
+		["HP"] = "int",
+		["weight"] = "int",
+		["electricity"] = "int",
+		["trait"] = "string[]",
+		["elements"] = "elements",
+		["range"] = "int",
+		["attackType"] = "string",
+		["offense"] = "int[]",
+		["substats"] = "int[]",
+		["defense"] = "int[]",
+		["lightData"] = "string",
+		["idExtra"] = "string",
+		["idToggleExtra"] = "string",
+		["idActorEx"] = "string",
+		["idSound"] = "string",
+		["tag"] = "string[]",
+		["workTag"] = "string",
+		["filter"] = "string[]",
+		["roomName_JP"] = "string[]",
+		["roomName"] = "string[]",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public Dictionary<string, Row> _rows = new Dictionary<string, Row>();
 
 	public override string[] ImportFields => new string[4] { "unit", "unknown", "roomName", "name2" };
@@ -327,6 +382,11 @@ public class SourceThing : SourceDataString<SourceThing.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void BackupPref()

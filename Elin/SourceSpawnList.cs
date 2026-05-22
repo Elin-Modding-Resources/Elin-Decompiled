@@ -41,6 +41,17 @@ public class SourceSpawnList : SourceDataString<SourceSpawnList.Row>
 		["filter"] = 7
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["parent"] = "string",
+		["type"] = "string",
+		["category"] = "string[]",
+		["idCard"] = "string[]",
+		["tag"] = "string[]",
+		["filter"] = "string[]"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -77,5 +88,10 @@ public class SourceSpawnList : SourceDataString<SourceSpawnList.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

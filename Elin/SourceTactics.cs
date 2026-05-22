@@ -75,6 +75,28 @@ public class SourceTactics : SourceDataString<SourceTactics.Row>
 		["detail"] = 18
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["dist"] = "int",
+		["move"] = "int",
+		["movePC"] = "int",
+		["party"] = "int",
+		["taunt"] = "int",
+		["melee"] = "int",
+		["range"] = "int",
+		["spell"] = "int",
+		["heal"] = "int",
+		["summon"] = "int",
+		["buff"] = "int",
+		["debuff"] = "int",
+		["tag"] = "string[]",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -133,5 +155,10 @@ public class SourceTactics : SourceDataString<SourceTactics.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

@@ -937,6 +937,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 	}
 
+	public bool isHatchling
+	{
+		get
+		{
+			return _bits2[11];
+		}
+		set
+		{
+			_bits2[11] = value;
+		}
+	}
+
 	public bool isBackerContent => c_idBacker != 0;
 
 	public SourceBacker.Row sourceBacker
@@ -5982,6 +5994,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (chara != null && isChara)
 			{
 				chara.SetHostility(Chara.OriginalHostility);
+				chara.isHatchling = true;
 			}
 		}
 	}

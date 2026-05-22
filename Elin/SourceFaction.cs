@@ -66,6 +66,22 @@ public class SourceFaction : SourceDataString<SourceFaction.Row>
 		["detail"] = 11
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["type"] = "string",
+		["faith"] = "string",
+		["domain"] = "string",
+		["relation"] = "int",
+		["textType_JP"] = "string",
+		["textType"] = "string",
+		["textAvatar"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override string[] ImportFields => new string[3] { "textType", "textBenefit", "textPet" };
 
 	public override Row CreateRow()
@@ -114,5 +130,10 @@ public class SourceFaction : SourceDataString<SourceFaction.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

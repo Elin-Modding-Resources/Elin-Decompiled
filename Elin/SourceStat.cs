@@ -132,6 +132,43 @@ public class SourceStat : SourceDataInt<SourceStat.Row>
 		["detail"] = 32
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["type"] = "string",
+		["group"] = "string",
+		["curse"] = "string",
+		["duration"] = "string",
+		["durationMax"] = "int",
+		["hexPower"] = "int",
+		["negate"] = "string[]",
+		["defenseAttb"] = "string[]",
+		["resistance"] = "string[]",
+		["gainRes"] = "int",
+		["elements"] = "string[]",
+		["nullify"] = "string[]",
+		["tag"] = "string[]",
+		["phase"] = "int[]",
+		["colors"] = "string",
+		["element"] = "string",
+		["effect"] = "string[]",
+		["strPhase_JP"] = "string[]",
+		["strPhase"] = "string[]",
+		["textPhase_JP"] = "string",
+		["textPhase"] = "string",
+		["textEnd_JP"] = "string",
+		["textEnd"] = "string",
+		["textPhase2_JP"] = "string",
+		["textPhase2"] = "string",
+		["gradient"] = "string",
+		["invert"] = "bool",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	[NonSerialized]
 	public Dictionary<string, List<Row>> groups = new Dictionary<string, List<Row>>();
 
@@ -225,6 +262,11 @@ public class SourceStat : SourceDataInt<SourceStat.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

@@ -57,6 +57,24 @@ public class SourceGlobalTile : SourceDataInt<SourceGlobalTile.Row>
 		["detail"] = 13
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["tiles"] = "int[]",
+		["floor"] = "int",
+		["zoneProfile"] = "string",
+		["tag"] = "string[]",
+		["dangerLv"] = "int",
+		["trait"] = "string[]",
+		["idBiome"] = "string",
+		["attribs"] = "int[]",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public Dictionary<int, Row> tileAlias = new Dictionary<int, Row>();
 
 	public override Row CreateRow()
@@ -109,6 +127,11 @@ public class SourceGlobalTile : SourceDataInt<SourceGlobalTile.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

@@ -45,6 +45,29 @@ public class SourceCellEffect : SourceDataInt<SourceCellEffect.Row>
 		["detail"] = 18
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["sort"] = "int",
+		["_tileType"] = "string",
+		["_idRenderData"] = "string",
+		["tiles"] = "int[]",
+		["anime"] = "int[]",
+		["colorMod"] = "int",
+		["value"] = "int",
+		["recipeKey"] = "string[]",
+		["factory"] = "string[]",
+		["components"] = "string[]",
+		["defMat"] = "string",
+		["category"] = "string",
+		["tag"] = "string[]",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public static RenderData FallbackRenderData;
 
 	public override Row CreateRow()
@@ -107,6 +130,11 @@ public class SourceCellEffect : SourceDataInt<SourceCellEffect.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnAfterImportData()

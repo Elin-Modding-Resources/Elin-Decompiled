@@ -99,6 +99,56 @@ public class SourceFood : SourceThingV
 		["detail"] = 47
 	};
 
+	public new static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["_origin"] = "string",
+		["name_JP"] = "string",
+		["unit_JP"] = "string",
+		["name"] = "string",
+		["unit"] = "string",
+		["name2_JP"] = "string[]",
+		["name2"] = "string[]",
+		["unknown_JP"] = "string",
+		["unknown"] = "string",
+		["tiles"] = "int[]",
+		["parse"] = "string[]",
+		["vals"] = "string[]",
+		["trait"] = "string[]",
+		["elements"] = "elements",
+		["idTaste"] = "string",
+		["TST"] = "int",
+		["NUT"] = "int",
+		["STR"] = "int",
+		["STR2"] = "int",
+		["END"] = "int",
+		["END2"] = "int",
+		["DEX"] = "int",
+		["DEX2"] = "int",
+		["PER"] = "int",
+		["PER2"] = "int",
+		["LER"] = "int",
+		["LER2"] = "int",
+		["WIL"] = "int",
+		["WIL2"] = "int",
+		["MAG"] = "int",
+		["MAG2"] = "int",
+		["CHA"] = "int",
+		["CHA2"] = "int",
+		["LV"] = "int",
+		["chance"] = "int",
+		["value"] = "int",
+		["weight"] = "int",
+		["recipeKey"] = "string[]",
+		["factory"] = "string[]",
+		["components"] = "string[]",
+		["defMat"] = "string",
+		["category"] = "string",
+		["tag"] = "string[]",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row2
@@ -213,6 +263,11 @@ public class SourceFood : SourceThingV
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void Reset()

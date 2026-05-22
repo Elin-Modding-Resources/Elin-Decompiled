@@ -64,18 +64,13 @@ public class Effect : SceneObject
 	public Vector3 destV;
 
 	[NonSerialized]
-	public bool pooled;
-
-	[NonSerialized]
-	public Transform poolParent;
+	public Vector3 orgLocalScale;
 
 	[NonSerialized]
 	public List<Material> materialsToDestroy;
 
 	[NonSerialized]
 	public Point destPos;
-
-	protected bool killed;
 
 	[NonSerialized]
 	public Tween killTimer;
@@ -95,6 +90,11 @@ public class Effect : SceneObject
 	public static T Get<T>(string id) where T : Effect
 	{
 		return manager.effects.Get(id) as T;
+	}
+
+	private void Awake()
+	{
+		orgLocalScale = base.transform.localScale;
 	}
 
 	public void Play(float delay, Point from, float fixY = 0f, Point to = null, Sprite sprite = null)
@@ -241,7 +241,9 @@ public class Effect : SceneObject
 	{
 		TweenUtil.KillTween(ref killTimer);
 		TweenUtil.KillTween(ref moveTween);
-		killed = true;
+		timer = 0f;
+		spriteIndex = 0;
+		base.transform.localScale = orgLocalScale;
 		OnKill();
 		manager.Remove(this);
 		if (pool && manager.effects.usePool)
@@ -260,7 +262,7 @@ public class Effect : SceneObject
 
 	public void OnDisable()
 	{
-		if ((bool)base.transform.parent && !test)
+		if ((bool)base.transform.parent && !test && (!pool || !manager.effects.usePool))
 		{
 			Kill();
 		}
@@ -311,7 +313,10 @@ public class Effect : SceneObject
 			if (changeMaterial)
 			{
 				Material material = particleSystem.GetComponent<ParticleSystemRenderer>().material;
-				materialsToDestroy.Add(material);
+				if (!manager.effects.usePool || !pool)
+				{
+					materialsToDestroy.Add(material);
+				}
 				material.SetColor(idCol, color);
 			}
 			else

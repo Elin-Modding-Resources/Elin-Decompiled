@@ -60,6 +60,23 @@ public class SourceResearch : SourceDataString<SourceResearch.Row>
 		["detail"] = 12
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["resource"] = "string[]",
+		["money"] = "int",
+		["tech"] = "int",
+		["req"] = "string",
+		["type"] = "string",
+		["expMod"] = "int",
+		["maxLv"] = "int",
+		["reward"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -108,5 +125,10 @@ public class SourceResearch : SourceDataString<SourceResearch.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

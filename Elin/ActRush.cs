@@ -42,7 +42,7 @@ public class ActRush : ActMelee
 			return false;
 		}
 		Act.TP.Set(flag ? EClass.scene.mouseTarget.pos : Act.TC.pos);
-		if (Act.CC.isRestrained || Act.CC.HasCondition<ConEntangle>())
+		if (Act.CC.isRestrained || Act.CC.HasCondition<ConEntangle>() || Act.CC.isBlind)
 		{
 			return false;
 		}

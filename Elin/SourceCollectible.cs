@@ -54,6 +54,21 @@ public class SourceCollectible : SourceDataString<SourceCollectible.Row>
 		["detail"] = 10
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["rarity"] = "int",
+		["prefab"] = "string",
+		["num"] = "int",
+		["filter"] = "string",
+		["tag"] = "string[]",
+		["sound"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -98,5 +113,10 @@ public class SourceCollectible : SourceDataString<SourceCollectible.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

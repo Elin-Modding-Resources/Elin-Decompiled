@@ -573,6 +573,8 @@ public class CoreConfig : EClass
 
 		public bool compressSave;
 
+		public bool cacheEffect;
+
 		public float brightnessNight;
 	}
 
@@ -903,6 +905,8 @@ public class CoreConfig : EClass
 			camSupport.beautify.bloom = test.bloom2;
 			camSupport.cam.allowHDR = graphic.hdr;
 			ApplyScale();
+			EClass.core.effects.KillAll();
+			EClass.core.effects.effects.usePool = test.cacheEffect;
 		}
 	}
 

@@ -151,6 +151,8 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 
 	public static readonly IReadOnlyDictionary<string, int> RowMapping;
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping;
+
 	public Dictionary<string, Row> _rows = new Dictionary<string, Row>();
 
 	public static Row rowDefaultPCC;
@@ -279,6 +281,11 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		return RowMapping;
 	}
 
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
+	}
+
 	public override void BackupPref()
 	{
 		SourceAsset._SavePrefs("prefs_auto");
@@ -359,5 +366,57 @@ public class SourceChara : SourceDataString<SourceChara.Row>
 		dictionary["detail_JP"] = 48;
 		dictionary["detail"] = 49;
 		RowMapping = dictionary;
+		Dictionary<string, string> dictionary2 = new Dictionary<string, string>();
+		dictionary2["id"] = "string";
+		dictionary2["_id"] = "int";
+		dictionary2["name_JP"] = "string";
+		dictionary2["name"] = "string";
+		dictionary2["aka_JP"] = "string";
+		dictionary2["aka"] = "string";
+		dictionary2["idActor"] = "string[]";
+		dictionary2["sort"] = "int";
+		dictionary2["size"] = "int[]";
+		dictionary2["_idRenderData"] = "string";
+		dictionary2["tiles"] = "int[]";
+		dictionary2["tiles_snow"] = "int[]";
+		dictionary2["colorMod"] = "int";
+		dictionary2["components"] = "string[]";
+		dictionary2["defMat"] = "string";
+		dictionary2["LV"] = "int";
+		dictionary2["chance"] = "int";
+		dictionary2["quality"] = "int";
+		dictionary2["hostility"] = "string";
+		dictionary2["biome"] = "string";
+		dictionary2["tag"] = "string[]";
+		dictionary2["trait"] = "string[]";
+		dictionary2["race"] = "string";
+		dictionary2["job"] = "string";
+		dictionary2["tactics"] = "string";
+		dictionary2["aiIdle"] = "string";
+		dictionary2["aiParam"] = "int[]";
+		dictionary2["actCombat"] = "string[]";
+		dictionary2["mainElement"] = "string[]";
+		dictionary2["elements"] = "elements";
+		dictionary2["equip"] = "string";
+		dictionary2["loot"] = "string[]";
+		dictionary2["category"] = "string";
+		dictionary2["filter"] = "string[]";
+		dictionary2["gachaFilter"] = "string[]";
+		dictionary2["tone"] = "string";
+		dictionary2["actIdle"] = "string[]";
+		dictionary2["lightData"] = "string";
+		dictionary2["idExtra"] = "string";
+		dictionary2["bio"] = "string";
+		dictionary2["faith"] = "string";
+		dictionary2["works"] = "string[]";
+		dictionary2["hobbies"] = "string[]";
+		dictionary2["idText"] = "string";
+		dictionary2["moveAnime"] = "string";
+		dictionary2["factory"] = "string[]";
+		dictionary2["components"] = "string[]";
+		dictionary2["recruitItems"] = "string[]";
+		dictionary2["detail_JP"] = "string";
+		dictionary2["detail"] = "string";
+		TypeMapping = dictionary2;
 	}
 }

@@ -39,6 +39,16 @@ public class SourceKeyItem : SourceDataInt<SourceKeyItem.Row>
 		["detail"] = 5
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -73,5 +83,10 @@ public class SourceKeyItem : SourceDataInt<SourceKeyItem.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

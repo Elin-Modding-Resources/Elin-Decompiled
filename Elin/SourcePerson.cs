@@ -69,6 +69,25 @@ public class SourcePerson : SourceDataString<SourcePerson.Row>
 		["detail"] = 14
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["idActor"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["aka_JP"] = "string",
+		["aka"] = "string",
+		["portrait"] = "string",
+		["faction"] = "string",
+		["LV"] = "int",
+		["job"] = "string",
+		["race"] = "string",
+		["material"] = "string",
+		["bio"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override string[] ImportFields => new string[1] { "aka" };
 
 	public override Row CreateRow()
@@ -123,5 +142,10 @@ public class SourcePerson : SourceDataString<SourcePerson.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

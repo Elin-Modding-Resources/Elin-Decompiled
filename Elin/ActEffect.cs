@@ -1103,7 +1103,7 @@ public class ActEffect : EClass
 		{
 			CC.PlaySound("clean_floor");
 			Msg.Say("exterminate");
-			List<Chara> list3 = EClass._map.charas.Where((Chara c) => c.isCopy && !c.IsPCFaction).ToList();
+			List<Chara> list3 = EClass._map.charas.Where((Chara c) => (c.isCopy || c.isHatchling) && !c.IsPCFaction).ToList();
 			if (list3.Count == 0)
 			{
 				Msg.SayNothingHappen();

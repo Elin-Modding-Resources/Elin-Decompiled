@@ -359,6 +359,44 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 		["altName_JP"] = 33
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["category"] = "string",
+		["tag"] = "string[]",
+		["thing"] = "string",
+		["goods"] = "string[]",
+		["minerals"] = "string[]",
+		["decal"] = "int",
+		["decay"] = "int",
+		["grass"] = "int",
+		["defFloor"] = "int",
+		["defBlock"] = "int",
+		["edge"] = "int",
+		["ramp"] = "int",
+		["idSound"] = "string",
+		["soundFoot"] = "string",
+		["hardness"] = "int",
+		["groups"] = "string[]",
+		["tier"] = "int",
+		["chance"] = "int",
+		["weight"] = "int",
+		["value"] = "int",
+		["quality"] = "int",
+		["atk"] = "int",
+		["dmg"] = "int",
+		["dv"] = "int",
+		["pv"] = "int",
+		["dice"] = "int",
+		["bits"] = "string[]",
+		["elements"] = "elements",
+		["altName"] = "string[]",
+		["altName_JP"] = "string[]"
+	};
+
 	public static Dictionary<string, TierList> tierMap = new Dictionary<string, TierList>();
 
 	public override string[] ImportFields => new string[1] { "altName" };
@@ -453,6 +491,11 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

@@ -164,6 +164,32 @@ public class SourceCategory : SourceDataString<SourceCategory.Row>
 		["flag"] = 21
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["uid"] = "int",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["_parent"] = "string",
+		["recipeCat"] = "string",
+		["slot"] = "element_id",
+		["skill"] = "element_id",
+		["maxStack"] = "int",
+		["tileDummy"] = "int",
+		["installOne"] = "bool",
+		["ignoreBless"] = "int",
+		["tag"] = "string[]",
+		["idThing"] = "string",
+		["recycle"] = "string[]",
+		["costSP"] = "int",
+		["gift"] = "int",
+		["deliver"] = "int",
+		["offer"] = "int",
+		["ticket"] = "int",
+		["sortVal"] = "int",
+		["flag"] = "int"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -230,6 +256,11 @@ public class SourceCategory : SourceDataString<SourceCategory.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

@@ -96,6 +96,34 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 		["detail"] = 23
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["parent"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["type"] = "string",
+		["LV"] = "int",
+		["chance"] = "int",
+		["faction"] = "string",
+		["value"] = "int",
+		["idProfile"] = "string",
+		["idFile"] = "string[]",
+		["idBiome"] = "string",
+		["idGen"] = "string",
+		["idPlaylist"] = "string",
+		["tag"] = "string[]",
+		["cost"] = "int",
+		["dev"] = "int",
+		["image"] = "string",
+		["pos"] = "int[]",
+		["questTag"] = "string[]",
+		["textFlavor_JP"] = "string",
+		["textFlavor"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override string[] ImportFields => new string[1] { "textFlavor" };
 
 	public override Row CreateRow()
@@ -168,5 +196,10 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

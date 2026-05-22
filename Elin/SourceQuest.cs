@@ -78,6 +78,27 @@ public class SourceQuest : SourceDataString<SourceQuest.Row>
 		["talkComplete"] = 16
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["type"] = "string",
+		["drama"] = "string[]",
+		["idZone"] = "string",
+		["group"] = "string",
+		["tags"] = "string[]",
+		["money"] = "int",
+		["chance"] = "int",
+		["minFame"] = "int",
+		["detail_JP"] = "string",
+		["detail"] = "string",
+		["talkProgress_JP"] = "string",
+		["talkProgress"] = "string",
+		["talkComplete_JP"] = "string",
+		["talkComplete"] = "string"
+	};
+
 	public override string[] ImportFields => new string[2] { "talkProgress", "talkComplete" };
 
 	public override Row CreateRow()
@@ -136,5 +157,10 @@ public class SourceQuest : SourceDataString<SourceQuest.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

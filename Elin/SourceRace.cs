@@ -175,6 +175,54 @@ public class SourceRace : SourceDataString<SourceRace.Row>
 		["detail"] = 44
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["playable"] = "int",
+		["tag"] = "string[]",
+		["life"] = "int",
+		["mana"] = "int",
+		["vigor"] = "int",
+		["DV"] = "int",
+		["PV"] = "int",
+		["PDR"] = "int",
+		["EDR"] = "int",
+		["EP"] = "int",
+		["STR"] = "int",
+		["END"] = "int",
+		["DEX"] = "int",
+		["PER"] = "int",
+		["LER"] = "int",
+		["WIL"] = "int",
+		["MAG"] = "int",
+		["CHA"] = "int",
+		["SPD"] = "int",
+		["INT"] = "int",
+		["martial"] = "int",
+		["pen"] = "int",
+		["elements"] = "elements",
+		["skill"] = "string",
+		["figure"] = "string",
+		["geneCap"] = "int",
+		["material"] = "string",
+		["corpse"] = "string[]",
+		["loot"] = "string[]",
+		["blood"] = "int",
+		["meleeStyle"] = "string",
+		["castStyle"] = "string",
+		["EQ"] = "string[]",
+		["sex"] = "int",
+		["age"] = "int[]",
+		["height"] = "int",
+		["breeder"] = "int",
+		["food"] = "string[]",
+		["fur"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -285,6 +333,11 @@ public class SourceRace : SourceDataString<SourceRace.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

@@ -255,7 +255,7 @@ public class GameUpdater : EClass
 			}
 			List<Chara> charas = EClass._map.charas;
 			float gameDelta = Core.gameDelta;
-			SetUpdatesPerFrame(charas.Count, 0.05f);
+			bool flag = false;
 			for (int i = 0; i < charas.Count; i++)
 			{
 				Chara chara = charas[i];
@@ -264,20 +264,24 @@ public class GameUpdater : EClass
 					break;
 				}
 				chara.roundTimer += gameDelta;
-				float actTime = chara.actTime;
-				if (chara.roundTimer > actTime)
+				while (chara.roundTimer > chara.actTime)
 				{
 					chara.Tick();
-					chara.roundTimer -= actTime;
+					chara.roundTimer -= chara.actTime;
 					if (chara.ai is GoalEndTurn)
 					{
 						chara.SetNoGoal();
-						break;
+						return;
 					}
 					if (i > charas.Count)
 					{
+						flag = true;
 						break;
 					}
+				}
+				if (flag)
+				{
+					break;
 				}
 			}
 		}

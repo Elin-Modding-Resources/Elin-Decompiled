@@ -83,6 +83,26 @@ public class SourceBacker : SourceDataInt<SourceBacker.Row>
 		["original"] = 20
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["valid"] = "bool",
+		["lang"] = "string",
+		["name"] = "string",
+		["text"] = "string",
+		["type"] = "int",
+		["skin"] = "int",
+		["gender"] = "int",
+		["tree"] = "string",
+		["deity"] = "string",
+		["chara"] = "string",
+		["loot"] = "string",
+		["isStatic"] = "int",
+		["done"] = "bool",
+		["loc"] = "string",
+		["original"] = "string"
+	};
+
 	[NonSerialized]
 	public List<Row> listRemain = new List<Row>();
 
@@ -158,6 +178,11 @@ public class SourceBacker : SourceDataInt<SourceBacker.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

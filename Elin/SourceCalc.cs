@@ -27,6 +27,14 @@ public class SourceCalc : SourceDataString<SourceCalc.Row>
 		["bonus"] = 4
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["num"] = "string",
+		["sides"] = "string",
+		["bonus"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -57,5 +65,10 @@ public class SourceCalc : SourceDataString<SourceCalc.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

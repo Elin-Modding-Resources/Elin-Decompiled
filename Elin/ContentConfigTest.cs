@@ -43,6 +43,8 @@ public class ContentConfigTest : ContentConfig
 
 	public UIButton toggledDntCancelIfZeroDamage;
 
+	public UIButton toggleCacheEffect;
+
 	public Slider sliderBrightness;
 
 	public Slider sliderExtraHeight;
@@ -91,6 +93,11 @@ public class ContentConfigTest : ContentConfig
 		toggleToolNoPick.SetToggle(base.config.test.toolNoPick, delegate(bool on)
 		{
 			base.config.test.toolNoPick = on;
+		});
+		toggleCacheEffect.SetToggle(base.config.test.cacheEffect, delegate(bool on)
+		{
+			base.config.test.cacheEffect = on;
+			base.config.Apply();
 		});
 		toggleCompressSave.SetToggle(base.config.test.compressSave, delegate(bool on)
 		{

@@ -45,6 +45,18 @@ public class SourceZoneAffix : SourceDataInt<SourceZoneAffix.Row>
 		["detail"] = 7
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["zone"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["textAssign_JP"] = "string",
+		["textAssign"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -83,5 +95,10 @@ public class SourceZoneAffix : SourceDataInt<SourceZoneAffix.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

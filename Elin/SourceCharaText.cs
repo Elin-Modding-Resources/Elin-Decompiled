@@ -63,6 +63,21 @@ public class SourceCharaText : SourceDataString<SourceCharaText.Row>
 		["kill"] = 11
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["calm_JP"] = "string",
+		["fov_JP"] = "string",
+		["aggro_JP"] = "string",
+		["dead_JP"] = "string",
+		["kill_JP"] = "string",
+		["calm"] = "string",
+		["fov"] = "string",
+		["aggro"] = "string",
+		["dead"] = "string",
+		["kill"] = "string"
+	};
+
 	public override string[] ImportFields => new string[5] { "calm", "fov", "aggro", "dead", "kill" };
 
 	public override Row CreateRow()
@@ -109,5 +124,10 @@ public class SourceCharaText : SourceDataString<SourceCharaText.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

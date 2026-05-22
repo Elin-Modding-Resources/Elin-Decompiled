@@ -45,6 +45,20 @@ public class SourceCheck : SourceDataString<SourceCheck.Row>
 		["lvMod"] = 9
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["element"] = "element_id",
+		["targetElement"] = "element_id",
+		["subFactor"] = "float",
+		["targetSubFactor"] = "float",
+		["baseDC"] = "int",
+		["critRange"] = "int",
+		["fumbleRange"] = "int",
+		["dice"] = "int",
+		["lvMod"] = "float"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -87,5 +101,10 @@ public class SourceCheck : SourceDataString<SourceCheck.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

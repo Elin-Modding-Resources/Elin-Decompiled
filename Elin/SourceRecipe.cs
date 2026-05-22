@@ -54,6 +54,21 @@ public class SourceRecipe : SourceDataInt<SourceRecipe.Row>
 		["tag"] = 10
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["factory"] = "string",
+		["type"] = "string",
+		["thing"] = "string",
+		["num"] = "string",
+		["sp"] = "int",
+		["time"] = "int",
+		["ing1"] = "string[]",
+		["ing2"] = "string[]",
+		["ing3"] = "string[]",
+		["tag"] = "string[]"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -98,5 +113,10 @@ public class SourceRecipe : SourceDataInt<SourceRecipe.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

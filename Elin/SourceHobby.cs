@@ -81,6 +81,30 @@ public class SourceHobby : SourceDataInt<SourceHobby.Row>
 		["detail"] = 19
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["type"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["ai"] = "string",
+		["talk"] = "string",
+		["area"] = "string",
+		["destTrait"] = "string",
+		["workTag"] = "string",
+		["expedition"] = "string",
+		["resources"] = "int[]",
+		["randomRange"] = "int",
+		["modifiers"] = "string[]",
+		["tax"] = "int",
+		["things"] = "string[]",
+		["elements"] = "elements",
+		["skill"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	[NonSerialized]
 	public List<Row> listHobbies = new List<Row>();
 
@@ -149,6 +173,11 @@ public class SourceHobby : SourceDataInt<SourceHobby.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

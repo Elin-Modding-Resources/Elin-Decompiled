@@ -99,6 +99,33 @@ public class SourceReligion : SourceDataString<SourceReligion.Row>
 		["textPet"] = 22
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["name2_JP"] = "string[]",
+		["name2"] = "string[]",
+		["type"] = "string",
+		["idMaterial"] = "string",
+		["faith"] = "string",
+		["domain"] = "string",
+		["tax"] = "int",
+		["relation"] = "int",
+		["elements"] = "elements",
+		["cat_offer"] = "string[]",
+		["rewards"] = "string[]",
+		["textType_JP"] = "string",
+		["textType"] = "string",
+		["textAvatar"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string",
+		["textBenefit_JP"] = "string",
+		["textBenefit"] = "string",
+		["textPet_JP"] = "string",
+		["textPet"] = "string"
+	};
+
 	public override string[] ImportFields => new string[3] { "textBenefit", "textType", "name2" };
 
 	public override Row CreateRow()
@@ -169,5 +196,10 @@ public class SourceReligion : SourceDataString<SourceReligion.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

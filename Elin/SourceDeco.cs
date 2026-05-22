@@ -64,6 +64,38 @@ public class SourceDeco : SourceDataInt<SourceDeco.Row>
 		["detail"] = 27
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["sort"] = "int",
+		["idBiome"] = "string",
+		["reqHarvest"] = "string[]",
+		["hp"] = "int",
+		["_tileType"] = "string",
+		["_idRenderData"] = "string",
+		["tiles"] = "int[]",
+		["anime"] = "int[]",
+		["colorMod"] = "int",
+		["value"] = "int",
+		["LV"] = "int",
+		["recipeKey"] = "string[]",
+		["factory"] = "string[]",
+		["components"] = "string[]",
+		["defMat"] = "string",
+		["category"] = "string",
+		["edge"] = "int",
+		["autotile"] = "int",
+		["autotilePriority"] = "int",
+		["autotileBrightness"] = "float",
+		["soundFoot"] = "string",
+		["tag"] = "string[]",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public Dictionary<int, Row> _rows = new Dictionary<int, Row>();
 
 	public override Row CreateRow()
@@ -144,6 +176,11 @@ public class SourceDeco : SourceDataInt<SourceDeco.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void BackupPref()

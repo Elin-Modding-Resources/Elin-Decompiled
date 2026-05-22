@@ -88,6 +88,29 @@ public class SourceJob : SourceDataString<SourceJob.Row>
 		["detail"] = 19
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["playable"] = "int",
+		["STR"] = "int",
+		["END"] = "int",
+		["DEX"] = "int",
+		["PER"] = "int",
+		["LER"] = "int",
+		["WIL"] = "int",
+		["MAG"] = "int",
+		["CHA"] = "int",
+		["SPD"] = "int",
+		["elements"] = "elements",
+		["weapon"] = "string[]",
+		["equip"] = "string",
+		["domain"] = "elements",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -148,6 +171,11 @@ public class SourceJob : SourceDataString<SourceJob.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

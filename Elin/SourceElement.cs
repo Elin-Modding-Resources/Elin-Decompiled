@@ -336,6 +336,66 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 		["adjective"] = 56
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["altname_JP"] = "string",
+		["altname"] = "string",
+		["aliasParent"] = "string",
+		["aliasRef"] = "string",
+		["aliasMtp"] = "string",
+		["parentFactor"] = "float",
+		["lvFactor"] = "int",
+		["encFactor"] = "int",
+		["encSlot"] = "string",
+		["mtp"] = "int",
+		["LV"] = "int",
+		["chance"] = "int",
+		["value"] = "int",
+		["cost"] = "int[]",
+		["geneSlot"] = "int",
+		["sort"] = "int",
+		["target"] = "string",
+		["proc"] = "string[]",
+		["type"] = "string",
+		["group"] = "string",
+		["category"] = "string",
+		["categorySub"] = "string",
+		["abilityType"] = "string[]",
+		["tag"] = "string[]",
+		["thing"] = "string",
+		["eleP"] = "int",
+		["cooldown"] = "int",
+		["charge"] = "int",
+		["radius"] = "float",
+		["max"] = "int",
+		["req"] = "string[]",
+		["idTrainer"] = "string",
+		["partySkill"] = "int",
+		["tagTrainer"] = "string",
+		["levelBonus_JP"] = "string",
+		["levelBonus"] = "string",
+		["foodEffect"] = "string[]",
+		["langAct"] = "string[]",
+		["detail_JP"] = "string",
+		["detail"] = "string",
+		["textPhase_JP"] = "string",
+		["textPhase"] = "string",
+		["textExtra_JP"] = "string",
+		["textExtra"] = "string",
+		["textInc_JP"] = "string",
+		["textInc"] = "string",
+		["textDec_JP"] = "string",
+		["textDec"] = "string",
+		["textAlt_JP"] = "string[]",
+		["textAlt"] = "string[]",
+		["adjective_JP"] = "string[]",
+		["adjective"] = "string[]"
+	};
+
 	[NonSerialized]
 	public List<Row> hobbies = new List<Row>();
 
@@ -478,6 +538,11 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnInit()

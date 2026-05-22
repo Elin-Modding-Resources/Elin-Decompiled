@@ -103,6 +103,41 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 		["detail"] = 30
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["alias"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string",
+		["sort"] = "int",
+		["reqHarvest"] = "string[]",
+		["hp"] = "int",
+		["idThing"] = "string",
+		["_tileType"] = "string",
+		["_idRenderData"] = "string",
+		["tiles"] = "int[]",
+		["anime"] = "int[]",
+		["snowTile"] = "int",
+		["colorMod"] = "int",
+		["colorType"] = "string",
+		["value"] = "int",
+		["LV"] = "int",
+		["recipeKey"] = "string[]",
+		["factory"] = "string[]",
+		["components"] = "string[]",
+		["defMat"] = "string",
+		["category"] = "string",
+		["roof"] = "int",
+		["autoFloor"] = "string",
+		["concrete"] = "bool",
+		["transparent"] = "bool",
+		["transition"] = "int[]",
+		["tag"] = "string[]",
+		["soundFoot"] = "string",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public Dictionary<int, Row> _rows = new Dictionary<int, Row>();
 
 	public static RenderData FallbackRenderData;
@@ -191,6 +226,11 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void BackupPref()

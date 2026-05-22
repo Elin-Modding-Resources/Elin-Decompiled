@@ -42,6 +42,33 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 		["detail"] = 23
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["_origin"] = "string",
+		["name_JP"] = "string",
+		["unit_JP"] = "string",
+		["name"] = "string",
+		["unit"] = "string",
+		["tiles"] = "int[]",
+		["skins"] = "int[]",
+		["parse"] = "string[]",
+		["vals"] = "string[]",
+		["trait"] = "string[]",
+		["LV"] = "int",
+		["chance"] = "int",
+		["value"] = "int",
+		["weight"] = "int",
+		["recipeKey"] = "string[]",
+		["factory"] = "string[]",
+		["components"] = "string[]",
+		["defMat"] = "string",
+		["category"] = "string",
+		["tag"] = "string[]",
+		["detail_JP"] = "string",
+		["detail"] = "string"
+	};
+
 	public override string[] ImportFields => new string[1] { "unit" };
 
 	public override Row CreateRow()
@@ -112,6 +139,11 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void RestorePref()
