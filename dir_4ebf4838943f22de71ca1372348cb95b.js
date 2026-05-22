@@ -588,6 +588,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "GrowSystemPasture.cs", "GrowSystemPasture_8cs.html", "GrowSystemPasture_8cs" ],
     [ "GrowSystemPlant.cs", "GrowSystemPlant_8cs.html", "GrowSystemPlant_8cs" ],
     [ "GrowSystemRice.cs", "GrowSystemRice_8cs.html", "GrowSystemRice_8cs" ],
+    [ "GrowSystemRose.cs", "GrowSystemRose_8cs.html", "GrowSystemRose_8cs" ],
     [ "GrowSystemSeaweed.cs", "GrowSystemSeaweed_8cs.html", "GrowSystemSeaweed_8cs" ],
     [ "GrowSystemSunFlower.cs", "GrowSystemSunFlower_8cs.html", "GrowSystemSunFlower_8cs" ],
     [ "GrowSystemTree.cs", "GrowSystemTree_8cs.html", "GrowSystemTree_8cs" ],

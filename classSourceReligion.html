@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.307 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.308 Nightly</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab3c3ca344c1e64abba59aa0d5d4e0e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf69980798798f0631ec1dd1c2b1e98"><td class="memItemLeft" align="right" valign="top">override IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceReligion.html#a5bf69980798798f0631ec1dd1c2b1e98">GetRowMapping</a> ()</td></tr>
 <tr class="separator:a5bf69980798798f0631ec1dd1c2b1e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3beb0f19a02332b7b9f12425ac1f8209"><td class="memItemLeft" align="right" valign="top">override IReadOnlyDictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceReligion.html#a3beb0f19a02332b7b9f12425ac1f8209">GetTypeMapping</a> ()</td></tr>
+<tr class="separator:a3beb0f19a02332b7b9f12425ac1f8209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSourceDataString"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSourceDataString')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSourceDataString.html">SourceDataString&lt; SourceReligion.Row &gt;</a></td></tr>
 <tr class="memitem:ae9a81424246f259016a8e5c54b735517 inherit pub_methods_classSourceDataString"><td class="memItemLeft" align="right" valign="top">override T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceDataString.html#ae9a81424246f259016a8e5c54b735517">GetRow</a> (string id)</td></tr>
 <tr class="separator:ae9a81424246f259016a8e5c54b735517 inherit pub_methods_classSourceDataString"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +133,8 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ad815277ade979618fffef8f851f294fa"><td class="memItemLeft" align="right" valign="top">static readonly IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceReligion.html#ad815277ade979618fffef8f851f294fa">RowMapping</a></td></tr>
 <tr class="separator:ad815277ade979618fffef8f851f294fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46902eb0b338c409ba34d67211d7c8f1"><td class="memItemLeft" align="right" valign="top">static readonly IReadOnlyDictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceReligion.html#a46902eb0b338c409ba34d67211d7c8f1">TypeMapping</a></td></tr>
+<tr class="separator:a46902eb0b338c409ba34d67211d7c8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -164,45 +168,45 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00104">104</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>    {</div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">  107</span>        {</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
-<div class="line"><span class="lineno">  109</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
-<div class="line"><span class="lineno">  110</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
-<div class="line"><span class="lineno">  111</span>            name2_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(3),</div>
-<div class="line"><span class="lineno">  112</span>            name2 = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(4),</div>
-<div class="line"><span class="lineno">  113</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(5),</div>
-<div class="line"><span class="lineno">  114</span>            idMaterial = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(6),</div>
-<div class="line"><span class="lineno">  115</span>            <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(7),</div>
-<div class="line"><span class="lineno">  116</span>            domain = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(8),</div>
-<div class="line"><span class="lineno">  117</span>            tax = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(9),</div>
-<div class="line"><span class="lineno">  118</span>            relation = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(10),</div>
-<div class="line"><span class="lineno">  119</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(11)),</div>
-<div class="line"><span class="lineno">  120</span>            cat_offer = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(12),</div>
-<div class="line"><span class="lineno">  121</span>            rewards = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(13),</div>
-<div class="line"><span class="lineno">  122</span>            textType_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(14),</div>
-<div class="line"><span class="lineno">  123</span>            textType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(15),</div>
-<div class="line"><span class="lineno">  124</span>            textAvatar = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(16),</div>
-<div class="line"><span class="lineno">  125</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(17),</div>
-<div class="line"><span class="lineno">  126</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(18),</div>
-<div class="line"><span class="lineno">  127</span>            textBenefit_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(19),</div>
-<div class="line"><span class="lineno">  128</span>            textBenefit = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(20),</div>
-<div class="line"><span class="lineno">  129</span>            textPet_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(21),</div>
-<div class="line"><span class="lineno">  130</span>            textPet = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(22)</div>
-<div class="line"><span class="lineno">  131</span>        };</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00131">131</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">  134</span>        {</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
+<div class="line"><span class="lineno">  136</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
+<div class="line"><span class="lineno">  137</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
+<div class="line"><span class="lineno">  138</span>            name2_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(3),</div>
+<div class="line"><span class="lineno">  139</span>            name2 = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(4),</div>
+<div class="line"><span class="lineno">  140</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(5),</div>
+<div class="line"><span class="lineno">  141</span>            idMaterial = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(6),</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(7),</div>
+<div class="line"><span class="lineno">  143</span>            domain = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(8),</div>
+<div class="line"><span class="lineno">  144</span>            tax = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(9),</div>
+<div class="line"><span class="lineno">  145</span>            relation = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(10),</div>
+<div class="line"><span class="lineno">  146</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(11)),</div>
+<div class="line"><span class="lineno">  147</span>            cat_offer = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(12),</div>
+<div class="line"><span class="lineno">  148</span>            rewards = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(13),</div>
+<div class="line"><span class="lineno">  149</span>            textType_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(14),</div>
+<div class="line"><span class="lineno">  150</span>            textType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(15),</div>
+<div class="line"><span class="lineno">  151</span>            textAvatar = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(16),</div>
+<div class="line"><span class="lineno">  152</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(17),</div>
+<div class="line"><span class="lineno">  153</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(18),</div>
+<div class="line"><span class="lineno">  154</span>            textBenefit_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(19),</div>
+<div class="line"><span class="lineno">  155</span>            textBenefit = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(20),</div>
+<div class="line"><span class="lineno">  156</span>            textPet_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(21),</div>
+<div class="line"><span class="lineno">  157</span>            textPet = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(22)</div>
+<div class="line"><span class="lineno">  158</span>        };</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
 <div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">HomeResourceType.faith</a></div><div class="ttdeci">@ faith</div></div>
 <div class="ttc" id="aclassCore_html"><div class="ttname"><a href="classCore.html">Core</a></div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00013">Core.cs:14</a></div></div>
 <div class="ttc" id="aclassCore_html_a7f1647f581632954ef2f60994a974075"><div class="ttname"><a href="classCore.html#a7f1647f581632954ef2f60994a974075">Core.ParseElements</a></div><div class="ttdeci">static int[] ParseElements(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Core_8cs_source.html#l00727">Core.cs:727</a></div></div>
 <div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00011">SourceData.cs:12</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a067341fc167e6502e6905105a7b84343"><div class="ttname"><a href="classSourceData.html#a067341fc167e6502e6905105a7b84343">SourceData.GetStringArray</a></div><div class="ttdeci">static string[] GetStringArray(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00978">SourceData.cs:978</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00983">SourceData.cs:983</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a475cec2c5e253d39e837e3507588635c"><div class="ttname"><a href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">SourceData.GetInt</a></div><div class="ttdeci">static int GetInt(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00948">SourceData.cs:948</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a611aa9991dfe740ac3068254327369c6"><div class="ttname"><a href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">SourceData.GetStr</a></div><div class="ttdeci">static string GetStr(int id, bool useDefault=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00988">SourceData.cs:988</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a067341fc167e6502e6905105a7b84343"><div class="ttname"><a href="classSourceData.html#a067341fc167e6502e6905105a7b84343">SourceData.GetStringArray</a></div><div class="ttdeci">static string[] GetStringArray(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00983">SourceData.cs:983</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00988">SourceData.cs:988</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a475cec2c5e253d39e837e3507588635c"><div class="ttname"><a href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">SourceData.GetInt</a></div><div class="ttdeci">static int GetInt(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00953">SourceData.cs:953</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a611aa9991dfe740ac3068254327369c6"><div class="ttname"><a href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">SourceData.GetStr</a></div><div class="ttdeci">static string GetStr(int id, bool useDefault=false)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00993">SourceData.cs:993</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a>, <a class="el" href="SourceData_8cs_source.html#l00948">SourceData&lt; T, T2 &gt;.GetInt()</a>, <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetStr()</a>, <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>, <a class="el" href="SourceData_8cs_source.html#l00978">SourceData&lt; T, T2 &gt;.GetStringArray()</a>, and <a class="el" href="Core_8cs_source.html#l00727">Core.ParseElements()</a>.</p>
+<p class="reference">References <a class="el" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a>, <a class="el" href="SourceData_8cs_source.html#l00953">SourceData&lt; T, T2 &gt;.GetInt()</a>, <a class="el" href="SourceData_8cs_source.html#l00993">SourceData&lt; T, T2 &gt;.GetStr()</a>, <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetString()</a>, <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetStringArray()</a>, and <a class="el" href="Core_8cs_source.html#l00727">Core.ParseElements()</a>.</p>
 
 </div>
 </div>
@@ -230,37 +234,37 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00134">134</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">  137</span>        {</div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
-<div class="line"><span class="lineno">  139</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  140</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name&quot;</span>]),</div>
-<div class="line"><span class="lineno">  141</span>            name2_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;name2_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  142</span>            name2 = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;name2&quot;</span>]),</div>
-<div class="line"><span class="lineno">  143</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;type&quot;</span>]),</div>
-<div class="line"><span class="lineno">  144</span>            idMaterial = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;idMaterial&quot;</span>]),</div>
-<div class="line"><span class="lineno">  145</span>            <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;faith&quot;</span>]),</div>
-<div class="line"><span class="lineno">  146</span>            domain = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;domain&quot;</span>]),</div>
-<div class="line"><span class="lineno">  147</span>            tax = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;tax&quot;</span>]),</div>
-<div class="line"><span class="lineno">  148</span>            relation = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;relation&quot;</span>]),</div>
-<div class="line"><span class="lineno">  149</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(mapping[<span class="stringliteral">&quot;elements&quot;</span>])),</div>
-<div class="line"><span class="lineno">  150</span>            cat_offer = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;cat_offer&quot;</span>]),</div>
-<div class="line"><span class="lineno">  151</span>            rewards = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;rewards&quot;</span>]),</div>
-<div class="line"><span class="lineno">  152</span>            textType_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textType_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  153</span>            textType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textType&quot;</span>]),</div>
-<div class="line"><span class="lineno">  154</span>            textAvatar = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textAvatar&quot;</span>]),</div>
-<div class="line"><span class="lineno">  155</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  156</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail&quot;</span>]),</div>
-<div class="line"><span class="lineno">  157</span>            textBenefit_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textBenefit_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  158</span>            textBenefit = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textBenefit&quot;</span>]),</div>
-<div class="line"><span class="lineno">  159</span>            textPet_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textPet_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">  160</span>            textPet = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textPet&quot;</span>])</div>
-<div class="line"><span class="lineno">  161</span>        };</div>
-<div class="line"><span class="lineno">  162</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00161">161</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">  164</span>        {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
+<div class="line"><span class="lineno">  166</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  167</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name&quot;</span>]),</div>
+<div class="line"><span class="lineno">  168</span>            name2_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;name2_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  169</span>            name2 = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;name2&quot;</span>]),</div>
+<div class="line"><span class="lineno">  170</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;type&quot;</span>]),</div>
+<div class="line"><span class="lineno">  171</span>            idMaterial = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;idMaterial&quot;</span>]),</div>
+<div class="line"><span class="lineno">  172</span>            <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;faith&quot;</span>]),</div>
+<div class="line"><span class="lineno">  173</span>            domain = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;domain&quot;</span>]),</div>
+<div class="line"><span class="lineno">  174</span>            tax = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;tax&quot;</span>]),</div>
+<div class="line"><span class="lineno">  175</span>            relation = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;relation&quot;</span>]),</div>
+<div class="line"><span class="lineno">  176</span>            elements = <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#a7f1647f581632954ef2f60994a974075">ParseElements</a>(<a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a611aa9991dfe740ac3068254327369c6">GetStr</a>(mapping[<span class="stringliteral">&quot;elements&quot;</span>])),</div>
+<div class="line"><span class="lineno">  177</span>            cat_offer = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;cat_offer&quot;</span>]),</div>
+<div class="line"><span class="lineno">  178</span>            rewards = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;rewards&quot;</span>]),</div>
+<div class="line"><span class="lineno">  179</span>            textType_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textType_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  180</span>            textType = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textType&quot;</span>]),</div>
+<div class="line"><span class="lineno">  181</span>            textAvatar = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textAvatar&quot;</span>]),</div>
+<div class="line"><span class="lineno">  182</span>            detail_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  183</span>            detail = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;detail&quot;</span>]),</div>
+<div class="line"><span class="lineno">  184</span>            textBenefit_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textBenefit_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  185</span>            textBenefit = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textBenefit&quot;</span>]),</div>
+<div class="line"><span class="lineno">  186</span>            textPet_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textPet_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">  187</span>            textPet = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;textPet&quot;</span>])</div>
+<div class="line"><span class="lineno">  188</span>        };</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a>, <a class="el" href="SourceData_8cs_source.html#l00948">SourceData&lt; T, T2 &gt;.GetInt()</a>, <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetStr()</a>, <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>, <a class="el" href="SourceData_8cs_source.html#l00978">SourceData&lt; T, T2 &gt;.GetStringArray()</a>, and <a class="el" href="Core_8cs_source.html#l00727">Core.ParseElements()</a>.</p>
+<p class="reference">References <a class="el" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caecee7df9bbac50b9b428483bfea1dd7c">faith</a>, <a class="el" href="SourceData_8cs_source.html#l00953">SourceData&lt; T, T2 &gt;.GetInt()</a>, <a class="el" href="SourceData_8cs_source.html#l00993">SourceData&lt; T, T2 &gt;.GetStr()</a>, <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetString()</a>, <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetStringArray()</a>, and <a class="el" href="Core_8cs_source.html#l00727">Core.ParseElements()</a>.</p>
 
 </div>
 </div>
@@ -287,13 +291,46 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00169">169</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceReligion.html#ad815277ade979618fffef8f851f294fa">RowMapping</a>;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00196">196</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>    {</div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceReligion.html#ad815277ade979618fffef8f851f294fa">RowMapping</a>;</div>
+<div class="line"><span class="lineno">  199</span>    }</div>
 <div class="ttc" id="aclassSourceReligion_html_ad815277ade979618fffef8f851f294fa"><div class="ttname"><a href="classSourceReligion.html#ad815277ade979618fffef8f851f294fa">SourceReligion.RowMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, int &gt; RowMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceReligion_8cs_source.html#l00075">SourceReligion.cs:75</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceReligion_8cs_source.html#l00075">RowMapping</a>.</p>
+
+</div>
+</div>
+<a id="a3beb0f19a02332b7b9f12425ac1f8209" name="a3beb0f19a02332b7b9f12425ac1f8209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3beb0f19a02332b7b9f12425ac1f8209">&#9670;&#160;</a></span>GetTypeMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IReadOnlyDictionary&lt; string, string &gt; SourceReligion.GetTypeMapping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00201">201</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>    {</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceReligion.html#a46902eb0b338c409ba34d67211d7c8f1">TypeMapping</a>;</div>
+<div class="line"><span class="lineno">  204</span>    }</div>
+<div class="ttc" id="aclassSourceReligion_html_a46902eb0b338c409ba34d67211d7c8f1"><div class="ttname"><a href="classSourceReligion.html#a46902eb0b338c409ba34d67211d7c8f1">SourceReligion.TypeMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, string &gt; TypeMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceReligion_8cs_source.html#l00102">SourceReligion.cs:102</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceReligion_8cs_source.html#l00102">TypeMapping</a>.</p>
 
 </div>
 </div>
@@ -321,10 +358,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00164">164</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>    {</div>
-<div class="line"><span class="lineno">  166</span>        map[r.id] = r;</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00191">191</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>    {</div>
+<div class="line"><span class="lineno">  193</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceReligion_8cs_source.html#l00009">SourceReligion.Row.id</a>.</p>
 
@@ -379,7 +416,59 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00075">75</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceReligion_8cs_source.html#l00169">GetRowMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceReligion_8cs_source.html#l00196">GetRowMapping()</a>.</p>
+
+</div>
+</div>
+<a id="a46902eb0b338c409ba34d67211d7c8f1" name="a46902eb0b338c409ba34d67211d7c8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46902eb0b338c409ba34d67211d7c8f1">&#9670;&#160;</a></span>TypeMapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly IReadOnlyDictionary&lt;string, string&gt; SourceReligion.TypeMapping</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Dictionary&lt;string, string&gt;</div>
+<div class="line">    {</div>
+<div class="line">        [<span class="stringliteral">&quot;id&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;name_JP&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;name&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;name2_JP&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;name2&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;type&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;idMaterial&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;faith&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;domain&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;tax&quot;</span>] = <span class="stringliteral">&quot;int&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;relation&quot;</span>] = <span class="stringliteral">&quot;int&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;elements&quot;</span>] = <span class="stringliteral">&quot;elements&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;cat_offer&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;rewards&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;textType_JP&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;textType&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;textAvatar&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;detail_JP&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;detail&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;textBenefit_JP&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;textBenefit&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;textPet_JP&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;textPet&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00102">102</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceReligion_8cs_source.html#l00201">GetTypeMapping()</a>.</p>
 
 </div>
 </div>
@@ -404,7 +493,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00102">102</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SourceReligion_8cs_source.html#l00129">129</a> of file <a class="el" href="SourceReligion_8cs_source.html">SourceReligion.cs</a>.</p>
 
 </div>
 </div>

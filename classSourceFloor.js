@@ -5,6 +5,7 @@ var classSourceFloor =
     [ "CreateRow", "classSourceFloor.html#ac15a324ff79494e6fa1b95658d752fd0", null ],
     [ "CreateRowByMapping", "classSourceFloor.html#a3f5c8147d100d3877d18c0ab03329af1", null ],
     [ "GetRowMapping", "classSourceFloor.html#ab152a429124953f309a2f41a593f90f7", null ],
+    [ "GetTypeMapping", "classSourceFloor.html#a8a3e8703f1d3a212a1a59abb208581ad", null ],
     [ "OnAfterImportData", "classSourceFloor.html#afab6b84066f92c1bb736b59dcdaaf136", null ],
     [ "OnAfterInit", "classSourceFloor.html#a0fd6720c7573b9c2c055b3d36540f953", null ],
     [ "OnInit", "classSourceFloor.html#a7f73b52931abaae2ef0eb8a4a5ff372e", null ],
@@ -13,5 +14,6 @@ var classSourceFloor =
     [ "ValidatePref", "classSourceFloor.html#a3bee5d812022857c105fcf07d66a222e", null ],
     [ "_rows", "classSourceFloor.html#a44332669ec2dfc23e215e3f8eb5b696e", null ],
     [ "FallbackRenderData", "classSourceFloor.html#ace984d8795b4d5a20bfec883210e8339", null ],
-    [ "RowMapping", "classSourceFloor.html#af9b7714521c79d99bfd74b48efd0fd2b", null ]
+    [ "RowMapping", "classSourceFloor.html#af9b7714521c79d99bfd74b48efd0fd2b", null ],
+    [ "TypeMapping", "classSourceFloor.html#a098b3830a10d70a67eea5a83a40d3f85", null ]
 ];

@@ -5,6 +5,7 @@ var classSourceBlock =
     [ "CreateRow", "classSourceBlock.html#a86060977c3463c1df278a79114faf412", null ],
     [ "CreateRowByMapping", "classSourceBlock.html#a9edccbb1deef74059468950ff688a2b2", null ],
     [ "GetRowMapping", "classSourceBlock.html#af978e01d40fae81e3cb7ce4496cf5083", null ],
+    [ "GetTypeMapping", "classSourceBlock.html#a55bcada608cf77382806003b74fb99da", null ],
     [ "OnAfterImportData", "classSourceBlock.html#a5fd59a339cf92300e586be98246ce170", null ],
     [ "OnInit", "classSourceBlock.html#a7e80c10828c248c928f3b31319802985", null ],
     [ "RestorePref", "classSourceBlock.html#a5913eda1451fdd3955a1d4f6dcb8bf98", null ],
@@ -12,5 +13,6 @@ var classSourceBlock =
     [ "ValidatePref", "classSourceBlock.html#a0c6e85fa829627efbe22831f2c1933cc", null ],
     [ "_rows", "classSourceBlock.html#ac3f183b23c3446359304eefcaf41ddb2", null ],
     [ "FallbackRenderData", "classSourceBlock.html#a9de65c59e76be1e9c4624c260495c1e5", null ],
-    [ "RowMapping", "classSourceBlock.html#adb2e8b5338ee3204cfc173bfe9b08e7f", null ]
+    [ "RowMapping", "classSourceBlock.html#adb2e8b5338ee3204cfc173bfe9b08e7f", null ],
+    [ "TypeMapping", "classSourceBlock.html#af4ed121170dcc5dcd6a4edff6e07f3c9", null ]
 ];

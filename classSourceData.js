@@ -31,6 +31,7 @@ var classSourceData =
     [ "GetStr", "classSourceData.html#a611aa9991dfe740ac3068254327369c6", null ],
     [ "GetString", "classSourceData.html#a1038fc01782222ed71c35569190e3db7", null ],
     [ "GetStringArray", "classSourceData.html#a067341fc167e6502e6905105a7b84343", null ],
+    [ "GetTypeMapping", "classSourceData.html#acc91c55eda809e86813256f72df948fa", null ],
     [ "ImportData", "classSourceData.html#a0e0897d3fefeaef5b5e50291a2845f89", null ],
     [ "ImportData", "classSourceData.html#a6c6e88ea67e517f74f367b0526d60e25", null ],
     [ "ImportRows", "classSourceData.html#a98ada1241aa0c5efa92179f55a8e92e3", null ],

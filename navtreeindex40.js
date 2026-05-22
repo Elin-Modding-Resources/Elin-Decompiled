@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"classButtonGrid.html#a733ccc7ef8a5ab3637255a9cd32d5bc1":[1,0,253,9],
+"classButtonGrid.html#a7c813d5ada0a86d8447be38224802048":[1,0,253,0],
 "classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a13348442cc6a27032d2b4aa28b75a5d3":[1,0,253,0,5],
 "classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a28250bea189c979bf5d600aa8c2ec3f7":[1,0,253,0,4],
 "classButtonGrid.html#a7c813d5ada0a86d8447be38224802048a5174d1309f275ba6f275db3af9eb3e18":[1,0,253,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "classCSTR.html#ae8c396eac537b37134cedd56f0e2777e":[1,0,441,13],
 "classCSTR.html#aed6f860096dbb0c2155f3263057490bd":[1,0,441,12],
 "classCSTR.html#af188053286177fff8d18c66a9cdab104":[1,0,441,6],
-"classCSTR.html#af6b2e6435d1acee7ccd2640492a9a8be":[1,0,441,23],
-"classCSTR.html#afb199ccd4e011123fb9cb2d66e65a019":[1,0,441,7],
-"classCalcGold.html":[1,0,261]
+"classCSTR.html#af6b2e6435d1acee7ccd2640492a9a8be":[1,0,441,23]
 };

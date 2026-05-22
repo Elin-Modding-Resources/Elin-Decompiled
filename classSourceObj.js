@@ -7,6 +7,7 @@ var classSourceObj =
     [ "CreateRowByMapping", "classSourceObj.html#a28cda282e9a012f3a5e73c04b27e17f7", null ],
     [ "GetName", "classSourceObj.html#a48f86c2b89c8a9337102b8ee64560131", null ],
     [ "GetRowMapping", "classSourceObj.html#a627e3d84c991c7d57be75022977f2887", null ],
+    [ "GetTypeMapping", "classSourceObj.html#a2227785661f9b9f6db5214b227c971b3", null ],
     [ "OnAfterImportData", "classSourceObj.html#a59fd3693b8127d1c0d93ca2fb1fa226a", null ],
     [ "OnInit", "classSourceObj.html#a4b79ab53f7d910cf66a2e1108310662a", null ],
     [ "RestorePref", "classSourceObj.html#aae36dd4b33549c8f7cc277508be472c0", null ],
@@ -14,5 +15,6 @@ var classSourceObj =
     [ "ValidatePref", "classSourceObj.html#ae5e311075cb9810094c2ad191e909126", null ],
     [ "_rows", "classSourceObj.html#aff636667321e955f080c0c5a72b4c369", null ],
     [ "FallbackRenderData", "classSourceObj.html#aba418b23ae72d273c01bcfad5c314f5b", null ],
-    [ "RowMapping", "classSourceObj.html#a9395ea2d1e66beb691748f232ea0b8c9", null ]
+    [ "RowMapping", "classSourceObj.html#a9395ea2d1e66beb691748f232ea0b8c9", null ],
+    [ "TypeMapping", "classSourceObj.html#a900626370b09c9f12c559938e6d158d5", null ]
 ];

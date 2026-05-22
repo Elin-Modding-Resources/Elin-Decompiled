@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.307 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.308 Nightly</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3d2332dd6c71aa86647d365e1f0df31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf8a579e32624f7bd54ac6ecbe56a58f"><td class="memItemLeft" align="right" valign="top">override IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangWord.html#aaf8a579e32624f7bd54ac6ecbe56a58f">GetRowMapping</a> ()</td></tr>
 <tr class="separator:aaf8a579e32624f7bd54ac6ecbe56a58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1ff9f37fd9a44bdd621290ad2dd9fd"><td class="memItemLeft" align="right" valign="top">override IReadOnlyDictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangWord.html#a3c1ff9f37fd9a44bdd621290ad2dd9fd">GetTypeMapping</a> ()</td></tr>
+<tr class="separator:a3c1ff9f37fd9a44bdd621290ad2dd9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a552485087c5d23aaa52d58b6c8765ca4"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangWord.html#a552485087c5d23aaa52d58b6c8765ca4">OnAfterImportData</a> ()</td></tr>
 <tr class="separator:a552485087c5d23aaa52d58b6c8765ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSourceDataInt"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSourceDataInt')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSourceDataInt.html">SourceDataInt&lt; LangWord.Row &gt;</a></td></tr>
@@ -133,6 +135,8 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a9a3395b15f60bdbcf11236ebf222913e"><td class="memItemLeft" align="right" valign="top">static readonly IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangWord.html#a9a3395b15f60bdbcf11236ebf222913e">RowMapping</a></td></tr>
 <tr class="separator:a9a3395b15f60bdbcf11236ebf222913e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da3512658875ddb5170f07a6a02779b"><td class="memItemLeft" align="right" valign="top">static readonly IReadOnlyDictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangWord.html#a8da3512658875ddb5170f07a6a02779b">TypeMapping</a></td></tr>
+<tr class="separator:a8da3512658875ddb5170f07a6a02779b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -166,21 +170,21 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00035">35</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(0),</div>
-<div class="line"><span class="lineno">   40</span>            group = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
-<div class="line"><span class="lineno">   41</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
-<div class="line"><span class="lineno">   42</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3)</div>
-<div class="line"><span class="lineno">   43</span>        };</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00043">43</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(0),</div>
+<div class="line"><span class="lineno">   48</span>            group = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(1),</div>
+<div class="line"><span class="lineno">   49</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
+<div class="line"><span class="lineno">   50</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3)</div>
+<div class="line"><span class="lineno">   51</span>        };</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
 <div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00011">SourceData.cs:12</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00983">SourceData.cs:983</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a475cec2c5e253d39e837e3507588635c"><div class="ttname"><a href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">SourceData.GetInt</a></div><div class="ttdeci">static int GetInt(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00948">SourceData.cs:948</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00988">SourceData.cs:988</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a475cec2c5e253d39e837e3507588635c"><div class="ttname"><a href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">SourceData.GetInt</a></div><div class="ttdeci">static int GetInt(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00953">SourceData.cs:953</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00948">SourceData&lt; T, T2 &gt;.GetInt()</a>, and <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00953">SourceData&lt; T, T2 &gt;.GetInt()</a>, and <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetString()</a>.</p>
 
 </div>
 </div>
@@ -208,18 +212,18 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00046">46</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
-<div class="line"><span class="lineno">   51</span>            group = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;group&quot;</span>]),</div>
-<div class="line"><span class="lineno">   52</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name_JP&quot;</span>]),</div>
-<div class="line"><span class="lineno">   53</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name&quot;</span>])</div>
-<div class="line"><span class="lineno">   54</span>        };</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00054">54</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a475cec2c5e253d39e837e3507588635c">GetInt</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
+<div class="line"><span class="lineno">   59</span>            group = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;group&quot;</span>]),</div>
+<div class="line"><span class="lineno">   60</span>            name_JP = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name_JP&quot;</span>]),</div>
+<div class="line"><span class="lineno">   61</span>            name = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;name&quot;</span>])</div>
+<div class="line"><span class="lineno">   62</span>        };</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00948">SourceData&lt; T, T2 &gt;.GetInt()</a>, and <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00953">SourceData&lt; T, T2 &gt;.GetInt()</a>, and <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetString()</a>.</p>
 
 </div>
 </div>
@@ -246,13 +250,46 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00062">62</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classLangWord.html#a9a3395b15f60bdbcf11236ebf222913e">RowMapping</a>;</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00070">70</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classLangWord.html#a9a3395b15f60bdbcf11236ebf222913e">RowMapping</a>;</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
 <div class="ttc" id="aclassLangWord_html_a9a3395b15f60bdbcf11236ebf222913e"><div class="ttname"><a href="classLangWord.html#a9a3395b15f60bdbcf11236ebf222913e">LangWord.RowMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, int &gt; RowMapping</div><div class="ttdef"><b>Definition:</b> <a href="LangWord_8cs_source.html#l00025">LangWord.cs:25</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LangWord_8cs_source.html#l00025">RowMapping</a>.</p>
+
+</div>
+</div>
+<a id="a3c1ff9f37fd9a44bdd621290ad2dd9fd" name="a3c1ff9f37fd9a44bdd621290ad2dd9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1ff9f37fd9a44bdd621290ad2dd9fd">&#9670;&#160;</a></span>GetTypeMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IReadOnlyDictionary&lt; string, string &gt; LangWord.GetTypeMapping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00075">75</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classLangWord.html#a8da3512658875ddb5170f07a6a02779b">TypeMapping</a>;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassLangWord_html_a8da3512658875ddb5170f07a6a02779b"><div class="ttname"><a href="classLangWord.html#a8da3512658875ddb5170f07a6a02779b">LangWord.TypeMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, string &gt; TypeMapping</div><div class="ttdef"><b>Definition:</b> <a href="LangWord_8cs_source.html#l00033">LangWord.cs:33</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LangWord_8cs_source.html#l00033">TypeMapping</a>.</p>
 
 </div>
 </div>
@@ -279,19 +316,19 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00067">67</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
-<div class="line"><span class="lineno">   71</span>        {</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (row.id != 0)</div>
-<div class="line"><span class="lineno">   73</span>            {</div>
-<div class="line"><span class="lineno">   74</span>                num = row.id;</div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>            row.id = num;</div>
-<div class="line"><span class="lineno">   77</span>            num++;</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
-<div class="line"><span class="lineno">   79</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00080">80</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">foreach</span> (Row row <span class="keywordflow">in</span> rows)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (row.id != 0)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                num = row.id;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>            row.id = num;</div>
+<div class="line"><span class="lineno">   90</span>            num++;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LangWord_8cs_source.html#l00009">LangWord.Row.id</a>.</p>
 
@@ -321,10 +358,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00057">57</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
-<div class="line"><span class="lineno">   59</span>        map[r.id] = r;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00065">65</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LangWord_8cs_source.html#l00009">LangWord.Row.id</a>.</p>
 
@@ -360,7 +397,40 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00025">25</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LangWord_8cs_source.html#l00062">GetRowMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LangWord_8cs_source.html#l00070">GetRowMapping()</a>.</p>
+
+</div>
+</div>
+<a id="a8da3512658875ddb5170f07a6a02779b" name="a8da3512658875ddb5170f07a6a02779b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da3512658875ddb5170f07a6a02779b">&#9670;&#160;</a></span>TypeMapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly IReadOnlyDictionary&lt;string, string&gt; LangWord.TypeMapping</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Dictionary&lt;string, string&gt;</div>
+<div class="line">    {</div>
+<div class="line">        [<span class="stringliteral">&quot;id&quot;</span>] = <span class="stringliteral">&quot;int&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;group&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;name_JP&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;name&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00033">33</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="LangWord_8cs_source.html#l00075">GetTypeMapping()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +455,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00033">33</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LangWord_8cs_source.html#l00041">41</a> of file <a class="el" href="LangWord_8cs_source.html">LangWord.cs</a>.</p>
 
 </div>
 </div>

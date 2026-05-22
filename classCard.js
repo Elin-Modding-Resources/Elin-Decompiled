@@ -453,6 +453,7 @@ var classCard =
     [ "IsFurniture", "classCard.html#a75fd085ac062423a6ec800b8e604304a", null ],
     [ "isGifted", "classCard.html#ac779609ca835a63303e930e2bd9708ac", null ],
     [ "IsGlobal", "classCard.html#acc046822bfdb7c0fcb8a5935c706fe14", null ],
+    [ "isHatchling", "classCard.html#ad44fff0b2a379097a8bf3918bd59484c", null ],
     [ "isHidden", "classCard.html#ac1c9cc77266e08fe518fc6dc4ac0ea95", null ],
     [ "IsHotItem", "classCard.html#a621ae80a7c7b7c58519c1afdcfe0dc89", null ],
     [ "IsIdentified", "classCard.html#aeb6ca5c2f62e5a584b732552ed160599", null ],

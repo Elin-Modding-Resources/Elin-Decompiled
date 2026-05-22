@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.307 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.308 Nightly</span>
    </div>
   </td>
  </tr>
@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0110ac4d23084d62c9a7f6c4cd7993a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71532fb0829b2698c6926d3ef1a6a591"><td class="memItemLeft" align="right" valign="top">override IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#a71532fb0829b2698c6926d3ef1a6a591">GetRowMapping</a> ()</td></tr>
 <tr class="separator:a71532fb0829b2698c6926d3ef1a6a591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc3f7b29fef48ba7732baf89787c23c8"><td class="memItemLeft" align="right" valign="top">override IReadOnlyDictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#adc3f7b29fef48ba7732baf89787c23c8">GetTypeMapping</a> ()</td></tr>
+<tr class="separator:adc3f7b29fef48ba7732baf89787c23c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSourceDataString"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSourceDataString')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSourceDataString.html">SourceDataString&lt; SourceSpawnList.Row &gt;</a></td></tr>
 <tr class="memitem:ae9a81424246f259016a8e5c54b735517 inherit pub_methods_classSourceDataString"><td class="memItemLeft" align="right" valign="top">override T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceDataString.html#ae9a81424246f259016a8e5c54b735517">GetRow</a> (string id)</td></tr>
 <tr class="separator:ae9a81424246f259016a8e5c54b735517 inherit pub_methods_classSourceDataString"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +132,8 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a6674054640628612b50fa23ff4c0e65a"><td class="memItemLeft" align="right" valign="top">static readonly IReadOnlyDictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#a6674054640628612b50fa23ff4c0e65a">RowMapping</a></td></tr>
 <tr class="separator:a6674054640628612b50fa23ff4c0e65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14df5d6757e5f3931ee9aaa77682f9ea"><td class="memItemLeft" align="right" valign="top">static readonly IReadOnlyDictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSourceSpawnList.html#a14df5d6757e5f3931ee9aaa77682f9ea">TypeMapping</a></td></tr>
+<tr class="separator:a14df5d6757e5f3931ee9aaa77682f9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -158,24 +162,24 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00044">44</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">   47</span>        {</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
-<div class="line"><span class="lineno">   49</span>            parent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
-<div class="line"><span class="lineno">   50</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3),</div>
-<div class="line"><span class="lineno">   51</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(4),</div>
-<div class="line"><span class="lineno">   52</span>            idCard = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(5),</div>
-<div class="line"><span class="lineno">   53</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(6),</div>
-<div class="line"><span class="lineno">   54</span>            filter = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(7)</div>
-<div class="line"><span class="lineno">   55</span>        };</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00055">55</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(0),</div>
+<div class="line"><span class="lineno">   60</span>            parent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(2),</div>
+<div class="line"><span class="lineno">   61</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(3),</div>
+<div class="line"><span class="lineno">   62</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(4),</div>
+<div class="line"><span class="lineno">   63</span>            idCard = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(5),</div>
+<div class="line"><span class="lineno">   64</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(6),</div>
+<div class="line"><span class="lineno">   65</span>            filter = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(7)</div>
+<div class="line"><span class="lineno">   66</span>        };</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
 <div class="ttc" id="aclassSourceData_html"><div class="ttname"><a href="classSourceData.html">SourceData</a></div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00011">SourceData.cs:12</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a067341fc167e6502e6905105a7b84343"><div class="ttname"><a href="classSourceData.html#a067341fc167e6502e6905105a7b84343">SourceData.GetStringArray</a></div><div class="ttdeci">static string[] GetStringArray(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00978">SourceData.cs:978</a></div></div>
-<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00983">SourceData.cs:983</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a067341fc167e6502e6905105a7b84343"><div class="ttname"><a href="classSourceData.html#a067341fc167e6502e6905105a7b84343">SourceData.GetStringArray</a></div><div class="ttdeci">static string[] GetStringArray(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00983">SourceData.cs:983</a></div></div>
+<div class="ttc" id="aclassSourceData_html_a1038fc01782222ed71c35569190e3db7"><div class="ttname"><a href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">SourceData.GetString</a></div><div class="ttdeci">static string GetString(int id)</div><div class="ttdef"><b>Definition:</b> <a href="SourceData_8cs_source.html#l00988">SourceData.cs:988</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>, and <a class="el" href="SourceData_8cs_source.html#l00978">SourceData&lt; T, T2 &gt;.GetStringArray()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetString()</a>, and <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetStringArray()</a>.</p>
 
 </div>
 </div>
@@ -203,21 +207,21 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00058">58</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
-<div class="line"><span class="lineno">   63</span>            parent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;parent&quot;</span>]),</div>
-<div class="line"><span class="lineno">   64</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;type&quot;</span>]),</div>
-<div class="line"><span class="lineno">   65</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;category&quot;</span>]),</div>
-<div class="line"><span class="lineno">   66</span>            idCard = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;idCard&quot;</span>]),</div>
-<div class="line"><span class="lineno">   67</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;tag&quot;</span>]),</div>
-<div class="line"><span class="lineno">   68</span>            filter = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;filter&quot;</span>])</div>
-<div class="line"><span class="lineno">   69</span>        };</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00069">69</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Row</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordtype">id</span> = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;id&quot;</span>]),</div>
+<div class="line"><span class="lineno">   74</span>            parent = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;parent&quot;</span>]),</div>
+<div class="line"><span class="lineno">   75</span>            type = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a1038fc01782222ed71c35569190e3db7">GetString</a>(mapping[<span class="stringliteral">&quot;type&quot;</span>]),</div>
+<div class="line"><span class="lineno">   76</span>            category = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;category&quot;</span>]),</div>
+<div class="line"><span class="lineno">   77</span>            idCard = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;idCard&quot;</span>]),</div>
+<div class="line"><span class="lineno">   78</span>            tag = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;tag&quot;</span>]),</div>
+<div class="line"><span class="lineno">   79</span>            filter = <a class="code hl_class" href="classSourceData.html">SourceData</a>.<a class="code hl_function" href="classSourceData.html#a067341fc167e6502e6905105a7b84343">GetStringArray</a>(mapping[<span class="stringliteral">&quot;filter&quot;</span>])</div>
+<div class="line"><span class="lineno">   80</span>        };</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetString()</a>, and <a class="el" href="SourceData_8cs_source.html#l00978">SourceData&lt; T, T2 &gt;.GetStringArray()</a>.</p>
+<p class="reference">References <a class="el" href="SourceData_8cs_source.html#l00988">SourceData&lt; T, T2 &gt;.GetString()</a>, and <a class="el" href="SourceData_8cs_source.html#l00983">SourceData&lt; T, T2 &gt;.GetStringArray()</a>.</p>
 
 </div>
 </div>
@@ -244,13 +248,46 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00077">77</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceSpawnList.html#a6674054640628612b50fa23ff4c0e65a">RowMapping</a>;</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00088">88</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceSpawnList.html#a6674054640628612b50fa23ff4c0e65a">RowMapping</a>;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 <div class="ttc" id="aclassSourceSpawnList_html_a6674054640628612b50fa23ff4c0e65a"><div class="ttname"><a href="classSourceSpawnList.html#a6674054640628612b50fa23ff4c0e65a">SourceSpawnList.RowMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, int &gt; RowMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00033">SourceSpawnList.cs:33</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceSpawnList_8cs_source.html#l00033">RowMapping</a>.</p>
+
+</div>
+</div>
+<a id="adc3f7b29fef48ba7732baf89787c23c8" name="adc3f7b29fef48ba7732baf89787c23c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc3f7b29fef48ba7732baf89787c23c8">&#9670;&#160;</a></span>GetTypeMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override IReadOnlyDictionary&lt; string, string &gt; SourceSpawnList.GetTypeMapping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00093">93</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classSourceSpawnList.html#a14df5d6757e5f3931ee9aaa77682f9ea">TypeMapping</a>;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="ttc" id="aclassSourceSpawnList_html_a14df5d6757e5f3931ee9aaa77682f9ea"><div class="ttname"><a href="classSourceSpawnList.html#a14df5d6757e5f3931ee9aaa77682f9ea">SourceSpawnList.TypeMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, string &gt; TypeMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceSpawnList_8cs_source.html#l00044">SourceSpawnList.cs:44</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="SourceSpawnList_8cs_source.html#l00044">TypeMapping</a>.</p>
 
 </div>
 </div>
@@ -278,10 +315,10 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00072">72</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
-<div class="line"><span class="lineno">   74</span>        map[r.id] = r;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00083">83</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        map[r.id] = r;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SourceSpawnList_8cs_source.html#l00009">SourceSpawnList.Row.id</a>.</p>
 
@@ -320,7 +357,43 @@ Static Public Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00033">33</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SourceSpawnList_8cs_source.html#l00077">GetRowMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SourceSpawnList_8cs_source.html#l00088">GetRowMapping()</a>.</p>
+
+</div>
+</div>
+<a id="a14df5d6757e5f3931ee9aaa77682f9ea" name="a14df5d6757e5f3931ee9aaa77682f9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14df5d6757e5f3931ee9aaa77682f9ea">&#9670;&#160;</a></span>TypeMapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly IReadOnlyDictionary&lt;string, string&gt; SourceSpawnList.TypeMapping</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> Dictionary&lt;string, string&gt;</div>
+<div class="line">    {</div>
+<div class="line">        [<span class="stringliteral">&quot;id&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;parent&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;type&quot;</span>] = <span class="stringliteral">&quot;string&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;category&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;idCard&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;tag&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span>,</div>
+<div class="line">        [<span class="stringliteral">&quot;filter&quot;</span>] = <span class="stringliteral">&quot;string[]&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="SourceSpawnList_8cs_source.html#l00044">44</a> of file <a class="el" href="SourceSpawnList_8cs_source.html">SourceSpawnList.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SourceSpawnList_8cs_source.html#l00093">GetTypeMapping()</a>.</p>
 
 </div>
 </div>

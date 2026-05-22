@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.307 Stable</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.308 Nightly</span>
    </div>
   </td>
  </tr>
@@ -95,8 +95,8 @@ $(document).ready(function(){initNavTree('classEffect.html',''); initResizable()
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classEffect-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Effect Class Reference</div></div>
 </div><!--header-->
@@ -219,10 +219,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa779ad3e4380fa046770b056bd87936e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb34b1a828e1a5b058cff139e97b17bc"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#aeb34b1a828e1a5b058cff139e97b17bc">destV</a></td></tr>
 <tr class="separator:aeb34b1a828e1a5b058cff139e97b17bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93cf48c48bb741454c89261b213b3772"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a93cf48c48bb741454c89261b213b3772">pooled</a></td></tr>
-<tr class="separator:a93cf48c48bb741454c89261b213b3772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47fb7a58cc37840dc4414475da1fe679"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a47fb7a58cc37840dc4414475da1fe679">poolParent</a></td></tr>
-<tr class="separator:a47fb7a58cc37840dc4414475da1fe679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab883b95877653787f44abffd8e338095"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#ab883b95877653787f44abffd8e338095">orgLocalScale</a></td></tr>
+<tr class="separator:ab883b95877653787f44abffd8e338095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1dd7dc8a6efdf46eecd3bca99a13093"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a></td></tr>
 <tr class="separator:ad1dd7dc8a6efdf46eecd3bca99a13093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e517f63facf231a2c3aebdc73412d59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a1e517f63facf231a2c3aebdc73412d59">destPos</a></td></tr>
@@ -234,11 +232,6 @@ Public Attributes</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:af43dadbc9c9e4a3a3920cd911273ede7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#af43dadbc9c9e4a3a3920cd911273ede7">Activate</a> ()</td></tr>
 <tr class="separator:af43dadbc9c9e4a3a3920cd911273ede7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a602f6d3563184a4571413d96caab7420"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a602f6d3563184a4571413d96caab7420">killed</a></td></tr>
-<tr class="separator:a602f6d3563184a4571413d96caab7420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -285,6 +278,11 @@ Properties</h2></td></tr>
 <tr class="separator:a5d0daaa0d5e8367c3140e8e90b775935 inherit properties_classEMono"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f655ce6663c9ac9ec7a91c56f99c85 inherit properties_classEMono"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCoreDebug.html">CoreDebug</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEMono.html#af8f655ce6663c9ac9ec7a91c56f99c85">debug</a><code> [get]</code></td></tr>
 <tr class="separator:af8f655ce6663c9ac9ec7a91c56f99c85 inherit properties_classEMono"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab49f775fe858af27dafbc224eef93d65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#ab49f775fe858af27dafbc224eef93d65">Awake</a> ()</td></tr>
+<tr class="separator:ab49f775fe858af27dafbc224eef93d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -433,7 +431,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassEMono_html_a790dff7e193a284b2be7a187110677bf"><div class="ttname"><a href="classEMono.html#a790dff7e193a284b2be7a187110677bf">EMono.rnd</a></div><div class="ttdeci">static int rnd(int a)</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00047">EMono.cs:47</a></div></div>
 <div class="ttc" id="aclassEffect_html_a055ff6ed02c72021068a8ee4d7a3eb9c"><div class="ttname"><a href="classEffect.html#a055ff6ed02c72021068a8ee4d7a3eb9c">Effect.speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00018">Effect.cs:18</a></div></div>
 <div class="ttc" id="aclassEffect_html_a1c9a0aa3aa7c33ac7b1ec8a96acbf301"><div class="ttname"><a href="classEffect.html#a1c9a0aa3aa7c33ac7b1ec8a96acbf301">Effect.OnUpdate</a></div><div class="ttdeci">virtual void OnUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00211">Effect.cs:211</a></div></div>
-<div class="ttc" id="aclassEffect_html_a1e517f63facf231a2c3aebdc73412d59"><div class="ttname"><a href="classEffect.html#a1e517f63facf231a2c3aebdc73412d59">Effect.destPos</a></div><div class="ttdeci">Point destPos</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00076">Effect.cs:76</a></div></div>
+<div class="ttc" id="aclassEffect_html_a1e517f63facf231a2c3aebdc73412d59"><div class="ttname"><a href="classEffect.html#a1e517f63facf231a2c3aebdc73412d59">Effect.destPos</a></div><div class="ttdeci">Point destPos</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00073">Effect.cs:73</a></div></div>
 <div class="ttc" id="aclassEffect_html_a3f6c8742317b14c5ac4dc815ef528d6f"><div class="ttname"><a href="classEffect.html#a3f6c8742317b14c5ac4dc815ef528d6f">Effect.OnPlay</a></div><div class="ttdeci">virtual void OnPlay()</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00207">Effect.cs:207</a></div></div>
 <div class="ttc" id="aclassEffect_html_a3fd1504be53cae161a0458e3352a913e"><div class="ttname"><a href="classEffect.html#a3fd1504be53cae161a0458e3352a913e">Effect.sr</a></div><div class="ttdeci">SpriteRenderer sr</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00028">Effect.cs:28</a></div></div>
 <div class="ttc" id="aclassEffect_html_a4b3874d6a3faf36384238fa8f5156c24"><div class="ttname"><a href="classEffect.html#a4b3874d6a3faf36384238fa8f5156c24">Effect.rotate</a></div><div class="ttdeci">bool rotate</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00024">Effect.cs:24</a></div></div>
@@ -452,9 +450,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPoint_html_ab8f490544366b7838cf4c951ad6e6c4e"><div class="ttname"><a href="classPoint.html#ab8f490544366b7838cf4c951ad6e6c4e">Point.IsValid</a></div><div class="ttdeci">bool IsValid</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00087">Point.cs:88</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BaseTileMap_8cs_source.html#l00314">BaseTileMap._baseBrightness</a>, <a class="el" href="Effect_8cs_source.html#l00181">Activate()</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="Effect_8cs_source.html#l00076">destPos</a>, <a class="el" href="Effect_8cs_source.html#l00064">destV</a>, <a class="el" href="Point_8cs_source.html#l00990">Point.Distance()</a>, <a class="el" href="Effect_8cs_source.html#l00016">duration</a>, <a class="el" href="Effect_8cs_source.html#l00061">fromV</a>, <a class="el" href="Point_8cs_source.html#l00602">Point.GetRotation()</a>, <a class="el" href="Core_8cs_source.html#l00084">Core.IsGameStarted</a>, <a class="el" href="Cell_8cs_source.html#l00254">Cell.isShadowed</a>, <a class="el" href="Point_8cs_source.html#l00088">Point.IsValid</a>, <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00040">moveTween</a>, <a class="el" href="Effect_8cs_source.html#l00207">OnPlay()</a>, <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>, <a class="el" href="Effect_8cs_source.html#l00036">posFix</a>, <a class="el" href="Effect_8cs_source.html#l00044">randomFlip</a>, <a class="el" href="Effect_8cs_source.html#l00038">randomRange</a>, <a class="el" href="EMono_8cs_source.html#l00047">EMono.rnd()</a>, <a class="el" href="Effect_8cs_source.html#l00024">rotate</a>, <a class="el" href="Core_8cs_source.html#l00067">Core.screen</a>, <a class="el" href="Effect_8cs_source.html#l00050">setColor</a>, <a class="el" href="Effect_8cs_source.html#l00018">speed</a>, <a class="el" href="Effect_8cs_source.html#l00028">sr</a>, <a class="el" href="Effect_8cs_source.html#l00020">startDelay</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>.</p>
+<p class="reference">References <a class="el" href="BaseTileMap_8cs_source.html#l00314">BaseTileMap._baseBrightness</a>, <a class="el" href="Effect_8cs_source.html#l00181">Activate()</a>, <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="EMono_8cs_source.html#l00005">EMono.core</a>, <a class="el" href="Effect_8cs_source.html#l00073">destPos</a>, <a class="el" href="Effect_8cs_source.html#l00064">destV</a>, <a class="el" href="Point_8cs_source.html#l00990">Point.Distance()</a>, <a class="el" href="Effect_8cs_source.html#l00016">duration</a>, <a class="el" href="Effect_8cs_source.html#l00061">fromV</a>, <a class="el" href="Point_8cs_source.html#l00602">Point.GetRotation()</a>, <a class="el" href="Core_8cs_source.html#l00084">Core.IsGameStarted</a>, <a class="el" href="Cell_8cs_source.html#l00254">Cell.isShadowed</a>, <a class="el" href="Point_8cs_source.html#l00088">Point.IsValid</a>, <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00040">moveTween</a>, <a class="el" href="Effect_8cs_source.html#l00207">OnPlay()</a>, <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>, <a class="el" href="Effect_8cs_source.html#l00036">posFix</a>, <a class="el" href="Effect_8cs_source.html#l00044">randomFlip</a>, <a class="el" href="Effect_8cs_source.html#l00038">randomRange</a>, <a class="el" href="EMono_8cs_source.html#l00047">EMono.rnd()</a>, <a class="el" href="Effect_8cs_source.html#l00024">rotate</a>, <a class="el" href="Core_8cs_source.html#l00067">Core.screen</a>, <a class="el" href="Effect_8cs_source.html#l00050">setColor</a>, <a class="el" href="Effect_8cs_source.html#l00018">speed</a>, <a class="el" href="Effect_8cs_source.html#l00028">sr</a>, <a class="el" href="Effect_8cs_source.html#l00020">startDelay</a>, and <a class="el" href="BaseGameScreen_8cs_source.html#l00114">BaseGameScreen.tileMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06416">Chara.Kiss()</a>, <a class="el" href="EffectIRenderer_8cs_source.html#l00048">EffectIRenderer.Play()</a>, <a class="el" href="Effect_8cs_source.html#l00112">Play()</a>, <a class="el" href="Card_8cs_source.html#l06506">Card.PlayEffect()</a>, and <a class="el" href="AttackProcess_8cs_source.html#l00382">AttackProcess.PlayRangedAnime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l06416">Chara.Kiss()</a>, <a class="el" href="EffectIRenderer_8cs_source.html#l00048">EffectIRenderer.Play()</a>, <a class="el" href="Effect_8cs_source.html#l00112">Play()</a>, <a class="el" href="Card_8cs_source.html#l06519">Card.PlayEffect()</a>, and <a class="el" href="AttackProcess_8cs_source.html#l00382">AttackProcess.PlayRangedAnime()</a>.</p>
 
 </div>
 </div>
@@ -491,15 +489,48 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  188</span>        <a class="code hl_variable" href="classEffect.html#a1b8e04aa0b6f2c9d3016a986a863014b">killTimer</a> = TweenUtil.Tween(<a class="code hl_variable" href="classEffect.html#a67a06bff2295d48f528bb9fecec81777">startDelay</a> + <a class="code hl_variable" href="classEffect.html#a8600d90db7e5615a5fab275e60381555">duration</a> + 0.01f + (<span class="keywordtype">float</span>)<a class="code hl_variable" href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">sprites</a>.Length * 0.01f, <span class="keyword">null</span>, <a class="code hl_function" href="classEffect.html#a87814d9ad1a11712ee253bf82cd38a78">Kill</a>);</div>
 <div class="line"><span class="lineno">  189</span>    }</div>
 <div class="ttc" id="aclassEffectManager_html_add7dab2e4dbb3a0cf494d1065f6c4de0"><div class="ttname"><a href="classEffectManager.html#add7dab2e4dbb3a0cf494d1065f6c4de0">EffectManager.Add</a></div><div class="ttdeci">void Add(Effect e)</div><div class="ttdef"><b>Definition:</b> <a href="EffectManager_8cs_source.html#l00022">EffectManager.cs:22</a></div></div>
-<div class="ttc" id="aclassEffect_html_a195decf97fee46fc0f4a0b18afb3d056"><div class="ttname"><a href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">Effect.manager</a></div><div class="ttdeci">static EffectManager manager</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00083">Effect.cs:83</a></div></div>
-<div class="ttc" id="aclassEffect_html_a1b8e04aa0b6f2c9d3016a986a863014b"><div class="ttname"><a href="classEffect.html#a1b8e04aa0b6f2c9d3016a986a863014b">Effect.killTimer</a></div><div class="ttdeci">Tween killTimer</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00081">Effect.cs:81</a></div></div>
+<div class="ttc" id="aclassEffect_html_a195decf97fee46fc0f4a0b18afb3d056"><div class="ttname"><a href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">Effect.manager</a></div><div class="ttdeci">static EffectManager manager</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00078">Effect.cs:78</a></div></div>
+<div class="ttc" id="aclassEffect_html_a1b8e04aa0b6f2c9d3016a986a863014b"><div class="ttname"><a href="classEffect.html#a1b8e04aa0b6f2c9d3016a986a863014b">Effect.killTimer</a></div><div class="ttdeci">Tween killTimer</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00076">Effect.cs:76</a></div></div>
 <div class="ttc" id="aclassEffect_html_a4464a19ae38b7a19f2ebfae0a75f4287"><div class="ttname"><a href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">Effect.sprites</a></div><div class="ttdeci">Sprite[] sprites</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00042">Effect.cs:42</a></div></div>
 <div class="ttc" id="aclassEffect_html_ae4350134d2ce4cbf006e55f7159c15d7"><div class="ttname"><a href="classEffect.html#ae4350134d2ce4cbf006e55f7159c15d7">Effect.type</a></div><div class="ttdeci">Type type</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00014">Effect.cs:14</a></div></div>
 <div class="ttc" id="aclassEffect_html_afafcc2c4741cce66e7f71f0afb8d6578"><div class="ttname"><a href="classEffect.html#afafcc2c4741cce66e7f71f0afb8d6578">Effect.Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00008">Effect.cs:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00022">EffectManager.Add()</a>, <a class="el" href="Effect_8cs_source.html#l00016">duration</a>, <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00081">killTimer</a>, <a class="el" href="Effect_8cs_source.html#l00083">manager</a>, <a class="el" href="Effect_8cs_source.html#l00042">sprites</a>, <a class="el" href="Effect_8cs_source.html#l00020">startDelay</a>, and <a class="el" href="Effect_8cs_source.html#l00014">type</a>.</p>
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00022">EffectManager.Add()</a>, <a class="el" href="Effect_8cs_source.html#l00016">duration</a>, <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00076">killTimer</a>, <a class="el" href="Effect_8cs_source.html#l00078">manager</a>, <a class="el" href="Effect_8cs_source.html#l00042">sprites</a>, <a class="el" href="Effect_8cs_source.html#l00020">startDelay</a>, and <a class="el" href="Effect_8cs_source.html#l00014">type</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00117">_Play()</a>, <a class="el" href="EffectIRenderer_8cs_source.html#l00023">EffectIRenderer.Play()</a>, and <a class="el" href="Effect_8cs_source.html#l00166">Play()</a>.</p>
+
+</div>
+</div>
+<a id="ab49f775fe858af27dafbc224eef93d65" name="ab49f775fe858af27dafbc224eef93d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49f775fe858af27dafbc224eef93d65">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Effect.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00095">95</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>    {</div>
+<div class="line"><span class="lineno">   97</span>        <a class="code hl_variable" href="classEffect.html#ab883b95877653787f44abffd8e338095">orgLocalScale</a> = base.transform.localScale;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="ttc" id="aclassEffect_html_ab883b95877653787f44abffd8e338095"><div class="ttname"><a href="classEffect.html#ab883b95877653787f44abffd8e338095">Effect.orgLocalScale</a></div><div class="ttdeci">Vector3 orgLocalScale</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00067">Effect.cs:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Effect_8cs_source.html#l00067">orgLocalScale</a>.</p>
 
 </div>
 </div>
@@ -527,20 +558,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00281">281</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  282</span>    {</div>
-<div class="line"><span class="lineno">  283</span>        ParticleSystem[] array = <a class="code hl_variable" href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">systems</a>;</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
-<div class="line"><span class="lineno">  285</span>        {</div>
-<div class="line"><span class="lineno">  286</span>            array[i].Emit(num);</div>
-<div class="line"><span class="lineno">  287</span>        }</div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  289</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00283">283</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  284</span>    {</div>
+<div class="line"><span class="lineno">  285</span>        ParticleSystem[] array = <a class="code hl_variable" href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">systems</a>;</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  287</span>        {</div>
+<div class="line"><span class="lineno">  288</span>            array[i].Emit(num);</div>
+<div class="line"><span class="lineno">  289</span>        }</div>
+<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  291</span>    }</div>
 <div class="ttc" id="aclassEffect_html_a35c4a15f39858c75f7dc48c614b768e1"><div class="ttname"><a href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">Effect.systems</a></div><div class="ttdeci">ParticleSystem[] systems</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00030">Effect.cs:30</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Effect_8cs_source.html#l00030">systems</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04186">Card.DamageHP()</a>, <a class="el" href="Card_8cs_source.html#l05130">Card.Die()</a>, <a class="el" href="TraitSyringe_8cs_source.html#l00005">TraitSyringe.EffectInject()</a>, and <a class="el" href="AttackProcess_8cs_source.html#l00382">AttackProcess.PlayRangedAnime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l04198">Card.DamageHP()</a>, <a class="el" href="Card_8cs_source.html#l05142">Card.Die()</a>, <a class="el" href="TraitSyringe_8cs_source.html#l00005">TraitSyringe.EffectInject()</a>, and <a class="el" href="AttackProcess_8cs_source.html#l00382">AttackProcess.PlayRangedAnime()</a>.</p>
 
 </div>
 </div>
@@ -616,12 +647,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00085">85</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> UnityEngine.Object.Instantiate(original);</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00080">80</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span> UnityEngine.Object.Instantiate(original);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02785">Chara._Move()</a>, <a class="el" href="Zone_8cs_source.html#l01752">Zone.ClaimZone()</a>, <a class="el" href="EffectMeteor_8cs_source.html#l00033">EffectMeteor.Create()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Map_8cs_source.html#l01851">Map.DestroyObj()</a>, <a class="el" href="Chara_8cs_source.html#l05429">Chara.Die()</a>, <a class="el" href="Chara_8cs_source.html#l06416">Chara.Kiss()</a>, <a class="el" href="Map_8cs_source.html#l01694">Map.MineBlock()</a>, <a class="el" href="Map_8cs_source.html#l01778">Map.MineFloor()</a>, <a class="el" href="Map_8cs_source.html#l01761">Map.MineRamp()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00037">TaskDrawWater.OnCreateProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00032">TaskPlow.OnCreateProgress()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00025">TaskPourWater.OnCreateProgress()</a>, <a class="el" href="TraitAltar_8cs_source.html#l00099">TraitAltar.OnOffer()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, <a class="el" href="ActMoneySlap_8cs_source.html#l00016">ActMoneySlap.Perform()</a>, <a class="el" href="ActSummonGuard_8cs_source.html#l00008">ActSummonGuard.Perform()</a>, <a class="el" href="ActTelekinesis_8cs_source.html#l00126">ActTelekinesis.Perform()</a>, <a class="el" href="Point_8cs_source.html#l01249">Point.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l06506">Card.PlayEffect()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00174">SourceMaterial.Row.PlayHitEffect()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00382">AttackProcess.PlayRangedAnime()</a>, <a class="el" href="ActEffect_8cs_source.html#l01045">ActEffect.Proc()</a>, <a class="el" href="TraitEffect_8cs_source.html#l00076">TraitEffect.Proc()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00069">AI_Fish.ProgressFish.Ripple()</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>, <a class="el" href="ActThrow_8cs_source.html#l00110">ActThrow.Throw()</a>, <a class="el" href="TraitCoreZone_8cs_source.html#l00021">TraitCoreZone.TrySetAct()</a>, and <a class="el" href="TraitWaystone_8cs_source.html#l00019">TraitWaystone.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Chara_8cs_source.html#l02785">Chara._Move()</a>, <a class="el" href="Zone_8cs_source.html#l01752">Zone.ClaimZone()</a>, <a class="el" href="EffectMeteor_8cs_source.html#l00033">EffectMeteor.Create()</a>, <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Map_8cs_source.html#l01851">Map.DestroyObj()</a>, <a class="el" href="Chara_8cs_source.html#l05429">Chara.Die()</a>, <a class="el" href="Chara_8cs_source.html#l06416">Chara.Kiss()</a>, <a class="el" href="Map_8cs_source.html#l01694">Map.MineBlock()</a>, <a class="el" href="Map_8cs_source.html#l01778">Map.MineFloor()</a>, <a class="el" href="Map_8cs_source.html#l01761">Map.MineRamp()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00037">TaskDrawWater.OnCreateProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00032">TaskPlow.OnCreateProgress()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00025">TaskPourWater.OnCreateProgress()</a>, <a class="el" href="TraitAltar_8cs_source.html#l00099">TraitAltar.OnOffer()</a>, <a class="el" href="TaskCraft_8cs_source.html#l00142">TaskCraft.OnProgressComplete()</a>, <a class="el" href="TraitDaggerGrave_8cs_source.html#l00013">TraitDaggerGrave.OnUse()</a>, <a class="el" href="ActMoneySlap_8cs_source.html#l00016">ActMoneySlap.Perform()</a>, <a class="el" href="ActSummonGuard_8cs_source.html#l00008">ActSummonGuard.Perform()</a>, <a class="el" href="ActTelekinesis_8cs_source.html#l00126">ActTelekinesis.Perform()</a>, <a class="el" href="Point_8cs_source.html#l01249">Point.PlayEffect()</a>, <a class="el" href="Card_8cs_source.html#l06519">Card.PlayEffect()</a>, <a class="el" href="SourceMaterial_8cs_source.html#l00174">SourceMaterial.Row.PlayHitEffect()</a>, <a class="el" href="AttackProcess_8cs_source.html#l00382">AttackProcess.PlayRangedAnime()</a>, <a class="el" href="ActEffect_8cs_source.html#l01045">ActEffect.Proc()</a>, <a class="el" href="TraitEffect_8cs_source.html#l00076">TraitEffect.Proc()</a>, <a class="el" href="AI__Fish_8cs_source.html#l00069">AI_Fish.ProgressFish.Ripple()</a>, <a class="el" href="AI__UseCrafter_8cs_source.html#l00075">AI_UseCrafter.Run()</a>, <a class="el" href="ActThrow_8cs_source.html#l00110">ActThrow.Throw()</a>, <a class="el" href="TraitCoreZone_8cs_source.html#l00021">TraitCoreZone.TrySetAct()</a>, and <a class="el" href="TraitWaystone_8cs_source.html#l00019">TraitWaystone.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -649,14 +680,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00090">90</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>    {</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_function" href="classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914">Get</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00085">85</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_function" href="classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914">Get</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
 <div class="ttc" id="aclassEffectManager_1_1EffectList_html_a228b6c65f22fc4ad88a4f712099d4914"><div class="ttname"><a href="classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914">EffectManager.EffectList.Get</a></div><div class="ttdeci">Effect Get(string id)</div><div class="ttdef"><b>Definition:</b> <a href="EffectManager_8cs_source.html#l00009">EffectManager.cs:9</a></div></div>
 <div class="ttc" id="aclassEffectManager_html_a5c5c811142ae5ea7b412f24fb83302c4"><div class="ttname"><a href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">EffectManager.effects</a></div><div class="ttdeci">EffectList effects</div><div class="ttdef"><b>Definition:</b> <a href="EffectManager_8cs_source.html#l00020">EffectManager.cs:20</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="EffectManager_8cs_source.html#l00009">EffectManager.EffectList.Get()</a>, and <a class="el" href="Effect_8cs_source.html#l00083">manager</a>.</p>
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="EffectManager_8cs_source.html#l00009">EffectManager.EffectList.Get()</a>, and <a class="el" href="Effect_8cs_source.html#l00078">manager</a>.</p>
 
 </div>
 </div>
@@ -692,14 +723,14 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00095">95</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                              : <a class="code hl_class" href="classEffect.html">Effect</a></div>
-<div class="line"><span class="lineno">   96</span>    {</div>
-<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_function" href="classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914">Get</a>(<span class="keywordtype">id</span>) as T;</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00090">90</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>                                              : <a class="code hl_class" href="classEffect.html">Effect</a></div>
+<div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_function" href="classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914">Get</a>(<span class="keywordtype">id</span>) as T;</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
 <div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00006">Effect.cs:7</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="EffectManager_8cs_source.html#l00009">EffectManager.EffectList.Get()</a>, and <a class="el" href="Effect_8cs_source.html#l00083">manager</a>.</p>
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="EffectManager_8cs_source.html#l00009">EffectManager.EffectList.Get()</a>, and <a class="el" href="Effect_8cs_source.html#l00078">manager</a>.</p>
 
 </div>
 </div>
@@ -730,29 +761,32 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  241</span>    {</div>
 <div class="line"><span class="lineno">  242</span>        TweenUtil.KillTween(ref <a class="code hl_variable" href="classEffect.html#a1b8e04aa0b6f2c9d3016a986a863014b">killTimer</a>);</div>
 <div class="line"><span class="lineno">  243</span>        TweenUtil.KillTween(ref <a class="code hl_variable" href="classEffect.html#adb8a0192c35c15289acbca0fa98eb32b">moveTween</a>);</div>
-<div class="line"><span class="lineno">  244</span>        <a class="code hl_variable" href="classEffect.html#a602f6d3563184a4571413d96caab7420">killed</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  245</span>        <a class="code hl_function" href="classEffect.html#abd0b6f46b318ce3992820da09bb741dc">OnKill</a>();</div>
-<div class="line"><span class="lineno">  246</span>        <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_function" href="classEffectManager.html#aa630acdf06546db552c0a50b485f50fb">Remove</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEffect.html#aae0055107e08b410f532f369487e93e5">pool</a> &amp;&amp; <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_variable" href="classDynamicAsset.html#afe5136dbcb54b892526de3021adf1ebb">usePool</a>)</div>
-<div class="line"><span class="lineno">  248</span>        {</div>
-<div class="line"><span class="lineno">  249</span>            <a class="code hl_class" href="classPoolManager.html">PoolManager</a>.<a class="code hl_function" href="classPoolManager.html#a719b92449dfb223b03bb0ebc1b0218ff">DespawnOrDestroy</a>(base.transform);</div>
-<div class="line"><span class="lineno">  250</span>        }</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)base.gameObject)</div>
-<div class="line"><span class="lineno">  252</span>        {</div>
-<div class="line"><span class="lineno">  253</span>            UnityEngine.Object.Destroy(base.gameObject);</div>
-<div class="line"><span class="lineno">  254</span>        }</div>
-<div class="line"><span class="lineno">  255</span>    }</div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_variable" href="classEffect.html#a9f7cb75d1aadfa921b0443ebf98d1d39">timer</a> = 0f;</div>
+<div class="line"><span class="lineno">  245</span>        <a class="code hl_variable" href="classEffect.html#a5ce6e1854aaffb8d8d9a3555cd5bb742">spriteIndex</a> = 0;</div>
+<div class="line"><span class="lineno">  246</span>        base.transform.localScale = <a class="code hl_variable" href="classEffect.html#ab883b95877653787f44abffd8e338095">orgLocalScale</a>;</div>
+<div class="line"><span class="lineno">  247</span>        <a class="code hl_function" href="classEffect.html#abd0b6f46b318ce3992820da09bb741dc">OnKill</a>();</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_function" href="classEffectManager.html#aa630acdf06546db552c0a50b485f50fb">Remove</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEffect.html#aae0055107e08b410f532f369487e93e5">pool</a> &amp;&amp; <a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_variable" href="classDynamicAsset.html#afe5136dbcb54b892526de3021adf1ebb">usePool</a>)</div>
+<div class="line"><span class="lineno">  250</span>        {</div>
+<div class="line"><span class="lineno">  251</span>            <a class="code hl_class" href="classPoolManager.html">PoolManager</a>.<a class="code hl_function" href="classPoolManager.html#a719b92449dfb223b03bb0ebc1b0218ff">DespawnOrDestroy</a>(base.transform);</div>
+<div class="line"><span class="lineno">  252</span>        }</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)base.gameObject)</div>
+<div class="line"><span class="lineno">  254</span>        {</div>
+<div class="line"><span class="lineno">  255</span>            UnityEngine.Object.Destroy(base.gameObject);</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
 <div class="ttc" id="aclassDynamicAsset_html_afe5136dbcb54b892526de3021adf1ebb"><div class="ttname"><a href="classDynamicAsset.html#afe5136dbcb54b892526de3021adf1ebb">DynamicAsset.usePool</a></div><div class="ttdeci">bool usePool</div><div class="ttdef"><b>Definition:</b> <a href="DynamicAsset_8cs_source.html#l00014">DynamicAsset.cs:14</a></div></div>
 <div class="ttc" id="aclassEffectManager_html_aa630acdf06546db552c0a50b485f50fb"><div class="ttname"><a href="classEffectManager.html#aa630acdf06546db552c0a50b485f50fb">EffectManager.Remove</a></div><div class="ttdeci">void Remove(Effect e)</div><div class="ttdef"><b>Definition:</b> <a href="EffectManager_8cs_source.html#l00027">EffectManager.cs:27</a></div></div>
-<div class="ttc" id="aclassEffect_html_a602f6d3563184a4571413d96caab7420"><div class="ttname"><a href="classEffect.html#a602f6d3563184a4571413d96caab7420">Effect.killed</a></div><div class="ttdeci">bool killed</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00078">Effect.cs:78</a></div></div>
+<div class="ttc" id="aclassEffect_html_a5ce6e1854aaffb8d8d9a3555cd5bb742"><div class="ttname"><a href="classEffect.html#a5ce6e1854aaffb8d8d9a3555cd5bb742">Effect.spriteIndex</a></div><div class="ttdeci">int spriteIndex</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00055">Effect.cs:55</a></div></div>
+<div class="ttc" id="aclassEffect_html_a9f7cb75d1aadfa921b0443ebf98d1d39"><div class="ttname"><a href="classEffect.html#a9f7cb75d1aadfa921b0443ebf98d1d39">Effect.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00058">Effect.cs:58</a></div></div>
 <div class="ttc" id="aclassEffect_html_aae0055107e08b410f532f369487e93e5"><div class="ttname"><a href="classEffect.html#aae0055107e08b410f532f369487e93e5">Effect.pool</a></div><div class="ttdeci">bool pool</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00026">Effect.cs:26</a></div></div>
-<div class="ttc" id="aclassEffect_html_abd0b6f46b318ce3992820da09bb741dc"><div class="ttname"><a href="classEffect.html#abd0b6f46b318ce3992820da09bb741dc">Effect.OnKill</a></div><div class="ttdeci">virtual void OnKill()</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00257">Effect.cs:257</a></div></div>
+<div class="ttc" id="aclassEffect_html_abd0b6f46b318ce3992820da09bb741dc"><div class="ttname"><a href="classEffect.html#abd0b6f46b318ce3992820da09bb741dc">Effect.OnKill</a></div><div class="ttdeci">virtual void OnKill()</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00259">Effect.cs:259</a></div></div>
 <div class="ttc" id="aclassPoolManager_html"><div class="ttname"><a href="classPoolManager.html">PoolManager</a></div><div class="ttdef"><b>Definition:</b> <a href="PoolManager_8cs_source.html#l00004">PoolManager.cs:5</a></div></div>
 <div class="ttc" id="aclassPoolManager_html_a719b92449dfb223b03bb0ebc1b0218ff"><div class="ttname"><a href="classPoolManager.html#a719b92449dfb223b03bb0ebc1b0218ff">PoolManager.DespawnOrDestroy</a></div><div class="ttdeci">static void DespawnOrDestroy(Component c)</div><div class="ttdef"><b>Definition:</b> <a href="PoolManager_8cs_source.html#l00158">PoolManager.cs:158</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PoolManager_8cs_source.html#l00158">PoolManager.DespawnOrDestroy()</a>, <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="Effect_8cs_source.html#l00078">killed</a>, <a class="el" href="Effect_8cs_source.html#l00081">killTimer</a>, <a class="el" href="Effect_8cs_source.html#l00083">manager</a>, <a class="el" href="Effect_8cs_source.html#l00040">moveTween</a>, <a class="el" href="Effect_8cs_source.html#l00257">OnKill()</a>, <a class="el" href="Effect_8cs_source.html#l00026">pool</a>, <a class="el" href="EffectManager_8cs_source.html#l00027">EffectManager.Remove()</a>, and <a class="el" href="DynamicAsset_8cs_source.html#l00014">DynamicAsset&lt; T &gt;.usePool</a>.</p>
+<p class="reference">References <a class="el" href="PoolManager_8cs_source.html#l00158">PoolManager.DespawnOrDestroy()</a>, <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="Effect_8cs_source.html#l00076">killTimer</a>, <a class="el" href="Effect_8cs_source.html#l00078">manager</a>, <a class="el" href="Effect_8cs_source.html#l00040">moveTween</a>, <a class="el" href="Effect_8cs_source.html#l00259">OnKill()</a>, <a class="el" href="Effect_8cs_source.html#l00067">orgLocalScale</a>, <a class="el" href="Effect_8cs_source.html#l00026">pool</a>, <a class="el" href="EffectManager_8cs_source.html#l00027">EffectManager.Remove()</a>, <a class="el" href="Effect_8cs_source.html#l00055">spriteIndex</a>, <a class="el" href="Effect_8cs_source.html#l00058">timer</a>, and <a class="el" href="DynamicAsset_8cs_source.html#l00014">DynamicAsset&lt; T &gt;.usePool</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00117">_Play()</a>, <a class="el" href="Effect_8cs_source.html#l00181">Activate()</a>, <a class="el" href="Effect_8cs_source.html#l00261">OnDisable()</a>, <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>, <a class="el" href="EffectIRenderer_8cs_source.html#l00023">EffectIRenderer.Play()</a>, and <a class="el" href="Effect_8cs_source.html#l00166">Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00117">_Play()</a>, <a class="el" href="Effect_8cs_source.html#l00181">Activate()</a>, <a class="el" href="Effect_8cs_source.html#l00263">OnDisable()</a>, <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>, <a class="el" href="EffectIRenderer_8cs_source.html#l00023">EffectIRenderer.Play()</a>, and <a class="el" href="Effect_8cs_source.html#l00166">Play()</a>.</p>
 
 </div>
 </div>
@@ -779,22 +813,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00269">269</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>    {</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  272</span>        {</div>
-<div class="line"><span class="lineno">  273</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  274</span>        }</div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">foreach</span> (<a class="code hl_enumvalue" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a>)</div>
-<div class="line"><span class="lineno">  276</span>        {</div>
-<div class="line"><span class="lineno">  277</span>            UnityEngine.Object.Destroy(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">  278</span>        }</div>
-<div class="line"><span class="lineno">  279</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00271">271</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>    {</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  274</span>        {</div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">foreach</span> (<a class="code hl_enumvalue" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> <a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a>)</div>
+<div class="line"><span class="lineno">  278</span>        {</div>
+<div class="line"><span class="lineno">  279</span>            UnityEngine.Object.Destroy(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">  280</span>        }</div>
+<div class="line"><span class="lineno">  281</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aObjValType_8cs_html_a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206"><div class="ttname"><a href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">ObjValType.Material</a></div><div class="ttdeci">@ Material</div></div>
-<div class="ttc" id="aclassEffect_html_ad1dd7dc8a6efdf46eecd3bca99a13093"><div class="ttname"><a href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">Effect.materialsToDestroy</a></div><div class="ttdeci">List&lt; Material &gt; materialsToDestroy</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00073">Effect.cs:73</a></div></div>
+<div class="ttc" id="aclassEffect_html_ad1dd7dc8a6efdf46eecd3bca99a13093"><div class="ttname"><a href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">Effect.materialsToDestroy</a></div><div class="ttdeci">List&lt; Material &gt; materialsToDestroy</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00070">Effect.cs:70</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a>, and <a class="el" href="Effect_8cs_source.html#l00073">materialsToDestroy</a>.</p>
+<p class="reference">References <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a>, and <a class="el" href="Effect_8cs_source.html#l00070">materialsToDestroy</a>.</p>
 
 </div>
 </div>
@@ -821,16 +855,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00261">261</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  262</span>    {</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)base.transform.parent &amp;&amp; !<a class="code hl_variable" href="classEffect.html#a2eb72e775f36bf0e168fb66617be7fb6">test</a>)</div>
-<div class="line"><span class="lineno">  264</span>        {</div>
-<div class="line"><span class="lineno">  265</span>            <a class="code hl_function" href="classEffect.html#a87814d9ad1a11712ee253bf82cd38a78">Kill</a>();</div>
-<div class="line"><span class="lineno">  266</span>        }</div>
-<div class="line"><span class="lineno">  267</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00263">263</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  264</span>    {</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)base.transform.parent &amp;&amp; !<a class="code hl_variable" href="classEffect.html#a2eb72e775f36bf0e168fb66617be7fb6">test</a> &amp;&amp; (!<a class="code hl_variable" href="classEffect.html#aae0055107e08b410f532f369487e93e5">pool</a> || !<a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_variable" href="classDynamicAsset.html#afe5136dbcb54b892526de3021adf1ebb">usePool</a>))</div>
+<div class="line"><span class="lineno">  266</span>        {</div>
+<div class="line"><span class="lineno">  267</span>            <a class="code hl_function" href="classEffect.html#a87814d9ad1a11712ee253bf82cd38a78">Kill</a>();</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
 <div class="ttc" id="aclassEffect_html_a2eb72e775f36bf0e168fb66617be7fb6"><div class="ttname"><a href="classEffect.html#a2eb72e775f36bf0e168fb66617be7fb6">Effect.test</a></div><div class="ttdeci">bool test</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00048">Effect.cs:48</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, and <a class="el" href="Effect_8cs_source.html#l00048">test</a>.</p>
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00078">manager</a>, <a class="el" href="Effect_8cs_source.html#l00026">pool</a>, <a class="el" href="Effect_8cs_source.html#l00048">test</a>, and <a class="el" href="DynamicAsset_8cs_source.html#l00014">DynamicAsset&lt; T &gt;.usePool</a>.</p>
 
 </div>
 </div>
@@ -859,9 +893,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classEffectIRenderer.html#a98102adace64c9f04796307b859abd06">EffectIRenderer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00257">257</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  258</span>    {</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00259">259</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  260</span>    {</div>
+<div class="line"><span class="lineno">  261</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>.</p>
 
@@ -953,8 +987,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  236</span>            sr.sprite = <a class="code hl_variable" href="classEffect.html#a4464a19ae38b7a19f2ebfae0a75f4287">sprites</a>[<a class="code hl_variable" href="classEffect.html#a5ce6e1854aaffb8d8d9a3555cd5bb742">spriteIndex</a>];</div>
 <div class="line"><span class="lineno">  237</span>        }</div>
 <div class="line"><span class="lineno">  238</span>    }</div>
-<div class="ttc" id="aclassEffect_html_a5ce6e1854aaffb8d8d9a3555cd5bb742"><div class="ttname"><a href="classEffect.html#a5ce6e1854aaffb8d8d9a3555cd5bb742">Effect.spriteIndex</a></div><div class="ttdeci">int spriteIndex</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00055">Effect.cs:55</a></div></div>
-<div class="ttc" id="aclassEffect_html_a9f7cb75d1aadfa921b0443ebf98d1d39"><div class="ttname"><a href="classEffect.html#a9f7cb75d1aadfa921b0443ebf98d1d39">Effect.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00058">Effect.cs:58</a></div></div>
 <div class="ttc" id="aclassEffect_html_abc887330995e05f27275030ca2056708"><div class="ttname"><a href="classEffect.html#abc887330995e05f27275030ca2056708">Effect.randomSpeed</a></div><div class="ttdeci">bool randomSpeed</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00046">Effect.cs:46</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Effect_8cs_source.html#l00016">duration</a>, <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00046">randomSpeed</a>, <a class="el" href="Effect_8cs_source.html#l00055">spriteIndex</a>, <a class="el" href="Effect_8cs_source.html#l00042">sprites</a>, <a class="el" href="Effect_8cs_source.html#l00020">startDelay</a>, <a class="el" href="Effect_8cs_source.html#l00058">timer</a>, and <a class="el" href="Effect_8cs_source.html#l00014">type</a>.</p>
@@ -1159,20 +1191,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00291">291</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  292</span>    {</div>
-<div class="line"><span class="lineno">  293</span>        ParticleSystem[] array = <a class="code hl_variable" href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">systems</a>;</div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
-<div class="line"><span class="lineno">  295</span>        {</div>
-<div class="line"><span class="lineno">  296</span>            ParticleSystem.MainModule main = array[i].main;</div>
-<div class="line"><span class="lineno">  297</span>            main.startColor = c;</div>
-<div class="line"><span class="lineno">  298</span>        }</div>
-<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  300</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00293">293</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>    {</div>
+<div class="line"><span class="lineno">  295</span>        ParticleSystem[] array = <a class="code hl_variable" href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">systems</a>;</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; array.Length; i++)</div>
+<div class="line"><span class="lineno">  297</span>        {</div>
+<div class="line"><span class="lineno">  298</span>            ParticleSystem.MainModule main = array[i].main;</div>
+<div class="line"><span class="lineno">  299</span>            main.startColor = c;</div>
+<div class="line"><span class="lineno">  300</span>        }</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  302</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Effect_8cs_source.html#l00030">systems</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Card_8cs_source.html#l04186">Card.DamageHP()</a>, <a class="el" href="Card_8cs_source.html#l05130">Card.Die()</a>, <a class="el" href="TraitSyringe_8cs_source.html#l00005">TraitSyringe.EffectInject()</a>, and <a class="el" href="TraitEffect_8cs_source.html#l00076">TraitEffect.Proc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l00036">ActEffect.DamageEle()</a>, <a class="el" href="Card_8cs_source.html#l04198">Card.DamageHP()</a>, <a class="el" href="Card_8cs_source.html#l05142">Card.Die()</a>, <a class="el" href="TraitSyringe_8cs_source.html#l00005">TraitSyringe.EffectInject()</a>, and <a class="el" href="TraitEffect_8cs_source.html#l00076">TraitEffect.Proc()</a>.</p>
 
 </div>
 </div>
@@ -1216,32 +1248,35 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00302">302</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  303</span>    {</div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">if</span> (changeMaterial)</div>
-<div class="line"><span class="lineno">  305</span>        {</div>
-<div class="line"><span class="lineno">  306</span>            <a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a> = <span class="keyword">new</span> List&lt;Material&gt;();</div>
-<div class="line"><span class="lineno">  307</span>        }</div>
-<div class="line"><span class="lineno">  308</span>        ParticleSystem[] array = <a class="code hl_variable" href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">systems</a>;</div>
-<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">foreach</span> (ParticleSystem particleSystem <span class="keywordflow">in</span> array)</div>
-<div class="line"><span class="lineno">  310</span>        {</div>
-<div class="line"><span class="lineno">  311</span>            <span class="keywordflow">if</span> (changeMaterial)</div>
-<div class="line"><span class="lineno">  312</span>            {</div>
-<div class="line"><span class="lineno">  313</span>                <a class="code hl_enumvalue" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a> <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a> = particleSystem.GetComponent&lt;ParticleSystemRenderer&gt;().<a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>;</div>
-<div class="line"><span class="lineno">  314</span>                <a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a>.Add(<a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>);</div>
-<div class="line"><span class="lineno">  315</span>                <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>.SetColor(idCol, color);</div>
-<div class="line"><span class="lineno">  316</span>            }</div>
-<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  318</span>            {</div>
-<div class="line"><span class="lineno">  319</span>                ParticleSystem.MainModule main = particleSystem.main;</div>
-<div class="line"><span class="lineno">  320</span>                main.startColor = color;</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00304">304</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  305</span>    {</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (changeMaterial)</div>
+<div class="line"><span class="lineno">  307</span>        {</div>
+<div class="line"><span class="lineno">  308</span>            <a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a> = <span class="keyword">new</span> List&lt;Material&gt;();</div>
+<div class="line"><span class="lineno">  309</span>        }</div>
+<div class="line"><span class="lineno">  310</span>        ParticleSystem[] array = <a class="code hl_variable" href="classEffect.html#a35c4a15f39858c75f7dc48c614b768e1">systems</a>;</div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">foreach</span> (ParticleSystem particleSystem <span class="keywordflow">in</span> array)</div>
+<div class="line"><span class="lineno">  312</span>        {</div>
+<div class="line"><span class="lineno">  313</span>            <span class="keywordflow">if</span> (changeMaterial)</div>
+<div class="line"><span class="lineno">  314</span>            {</div>
+<div class="line"><span class="lineno">  315</span>                <a class="code hl_enumvalue" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a> <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a> = particleSystem.GetComponent&lt;ParticleSystemRenderer&gt;().<a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>;</div>
+<div class="line"><span class="lineno">  316</span>                <span class="keywordflow">if</span> (!<a class="code hl_property" href="classEffect.html#a195decf97fee46fc0f4a0b18afb3d056">manager</a>.<a class="code hl_variable" href="classEffectManager.html#a5c5c811142ae5ea7b412f24fb83302c4">effects</a>.<a class="code hl_variable" href="classDynamicAsset.html#afe5136dbcb54b892526de3021adf1ebb">usePool</a> || !<a class="code hl_variable" href="classEffect.html#aae0055107e08b410f532f369487e93e5">pool</a>)</div>
+<div class="line"><span class="lineno">  317</span>                {</div>
+<div class="line"><span class="lineno">  318</span>                    <a class="code hl_variable" href="classEffect.html#ad1dd7dc8a6efdf46eecd3bca99a13093">materialsToDestroy</a>.Add(<a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>);</div>
+<div class="line"><span class="lineno">  319</span>                }</div>
+<div class="line"><span class="lineno">  320</span>                <a class="code hl_enumvalue" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>.SetColor(idCol, color);</div>
 <div class="line"><span class="lineno">  321</span>            }</div>
-<div class="line"><span class="lineno">  322</span>        }</div>
-<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  324</span>    }</div>
+<div class="line"><span class="lineno">  322</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  323</span>            {</div>
+<div class="line"><span class="lineno">  324</span>                ParticleSystem.MainModule main = particleSystem.main;</div>
+<div class="line"><span class="lineno">  325</span>                main.startColor = color;</div>
+<div class="line"><span class="lineno">  326</span>            }</div>
+<div class="line"><span class="lineno">  327</span>        }</div>
+<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  329</span>    }</div>
 <div class="ttc" id="aHomeResourceType_8cs_html_a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4"><div class="ttname"><a href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">HomeResourceType.material</a></div><div class="ttdeci">@ material</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>, <a class="el" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a>, <a class="el" href="Effect_8cs_source.html#l00073">materialsToDestroy</a>, and <a class="el" href="Effect_8cs_source.html#l00030">systems</a>.</p>
+<p class="reference">References <a class="el" href="EffectManager_8cs_source.html#l00020">EffectManager.effects</a>, <a class="el" href="Effect_8cs_source.html#l00078">manager</a>, <a class="el" href="HomeResourceType_8cs.html#a8a524f62499a0c993c0ec2374329fa9caeec34d804c9ce6c89cff596be555e6a4">material</a>, <a class="el" href="ObjValType_8cs.html#a2c8aaf7514a257b80ba45f969367279aad92a8333dd3ccb895cc65f7455b71206">Material</a>, <a class="el" href="Effect_8cs_source.html#l00070">materialsToDestroy</a>, <a class="el" href="Effect_8cs_source.html#l00026">pool</a>, <a class="el" href="Effect_8cs_source.html#l00030">systems</a>, and <a class="el" href="DynamicAsset_8cs_source.html#l00014">DynamicAsset&lt; T &gt;.usePool</a>.</p>
 
 </div>
 </div>
@@ -1269,11 +1304,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00326">326</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  327</span>    {</div>
-<div class="line"><span class="lineno">  328</span>        base.transform.localScale *= a;</div>
-<div class="line"><span class="lineno">  329</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  330</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00331">331</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>    {</div>
+<div class="line"><span class="lineno">  333</span>        base.transform.localScale *= a;</div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="ActMoneySlap_8cs_source.html#l00016">ActMoneySlap.Perform()</a>.</p>
 
@@ -1328,7 +1363,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00076">76</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00073">73</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00117">_Play()</a>, and <a class="el" href="EffectMeteor_8cs_source.html#l00014">EffectMeteor.OnPlay()</a>.</p>
 
@@ -1422,32 +1457,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a602f6d3563184a4571413d96caab7420" name="a602f6d3563184a4571413d96caab7420"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a602f6d3563184a4571413d96caab7420">&#9670;&#160;</a></span>killed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Effect.killed</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00078">78</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>.</p>
-
-</div>
-</div>
 <a id="a1b8e04aa0b6f2c9d3016a986a863014b" name="a1b8e04aa0b6f2c9d3016a986a863014b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b8e04aa0b6f2c9d3016a986a863014b">&#9670;&#160;</a></span>killTimer</h2>
 
@@ -1460,7 +1469,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00081">81</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00076">76</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00181">Activate()</a>, and <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>.</p>
 
@@ -1494,9 +1503,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00073">73</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00070">70</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00269">OnDestroy()</a>, and <a class="el" href="Effect_8cs_source.html#l00302">SetParticleColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00271">OnDestroy()</a>, and <a class="el" href="Effect_8cs_source.html#l00304">SetParticleColor()</a>.</p>
 
 </div>
 </div>
@@ -1536,6 +1545,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab883b95877653787f44abffd8e338095" name="ab883b95877653787f44abffd8e338095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab883b95877653787f44abffd8e338095">&#9670;&#160;</a></span>orgLocalScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Effect.orgLocalScale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00067">67</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00095">Awake()</a>, and <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>.</p>
+
+</div>
+</div>
 <a id="aae0055107e08b410f532f369487e93e5" name="aae0055107e08b410f532f369487e93e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae0055107e08b410f532f369487e93e5">&#9670;&#160;</a></span>pool</h2>
 
@@ -1550,39 +1577,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00026">26</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>.</p>
-
-</div>
-</div>
-<a id="a93cf48c48bb741454c89261b213b3772" name="a93cf48c48bb741454c89261b213b3772"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93cf48c48bb741454c89261b213b3772">&#9670;&#160;</a></span>pooled</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Effect.pooled</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00067">67</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
-
-</div>
-</div>
-<a id="a47fb7a58cc37840dc4414475da1fe679" name="a47fb7a58cc37840dc4414475da1fe679"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47fb7a58cc37840dc4414475da1fe679">&#9670;&#160;</a></span>poolParent</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Transform Effect.poolParent</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00070">70</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00263">OnDisable()</a>, and <a class="el" href="Effect_8cs_source.html#l00304">SetParticleColor()</a>.</p>
 
 </div>
 </div>
@@ -1726,7 +1721,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00055">55</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, and <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -1798,7 +1793,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00030">30</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00281">Emit()</a>, <a class="el" href="Effect_8cs_source.html#l00291">SetParticleColor()</a>, and <a class="el" href="TraitEffect_8cs_source.html#l00104">TraitEffect.TrySetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00283">Emit()</a>, <a class="el" href="Effect_8cs_source.html#l00293">SetParticleColor()</a>, and <a class="el" href="TraitEffect_8cs_source.html#l00104">TraitEffect.TrySetAct()</a>.</p>
 
 </div>
 </div>
@@ -1816,7 +1811,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00048">48</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00261">OnDisable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00263">OnDisable()</a>.</p>
 
 </div>
 </div>
@@ -1834,7 +1829,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00058">58</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>, and <a class="el" href="EffectIRenderer_8cs_source.html#l00072">EffectIRenderer.OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00211">OnUpdate()</a>, and <a class="el" href="EffectIRenderer_8cs_source.html#l00072">EffectIRenderer.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -1877,9 +1872,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00083">83</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Effect_8cs_source.html#l00078">78</a> of file <a class="el" href="Effect_8cs_source.html">Effect.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00181">Activate()</a>, <a class="el" href="Effect_8cs_source.html#l00090">Get()</a>, <a class="el" href="Effect_8cs_source.html#l00095">Get&lt; T &gt;()</a>, and <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Effect_8cs_source.html#l00181">Activate()</a>, <a class="el" href="Effect_8cs_source.html#l00085">Get()</a>, <a class="el" href="Effect_8cs_source.html#l00090">Get&lt; T &gt;()</a>, <a class="el" href="Effect_8cs_source.html#l00240">Kill()</a>, <a class="el" href="Effect_8cs_source.html#l00263">OnDisable()</a>, and <a class="el" href="Effect_8cs_source.html#l00304">SetParticleColor()</a>.</p>
 
 </div>
 </div>

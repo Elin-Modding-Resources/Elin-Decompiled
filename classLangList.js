@@ -5,7 +5,9 @@ var classLangList =
     [ "CreateRowByMapping", "classLangList.html#abf3fee06cf7decccf264002d45c01678", null ],
     [ "GetList", "classLangList.html#a35a3dae99f44523516dc705e32c99fc2", null ],
     [ "GetRowMapping", "classLangList.html#a202693b54d53506cb99c9b0d3c25c280", null ],
+    [ "GetTypeMapping", "classLangList.html#a6fe9f10bcc6aaa61146c1e0353d5682b", null ],
     [ "SetRow", "classLangList.html#adc2511062f800c7c17d875834d2295b2", null ],
     [ "RowMapping", "classLangList.html#a9dc1e88f0c43c13fa38cb6335a48e2cb", null ],
+    [ "TypeMapping", "classLangList.html#a692888051cb379663e74133ce48b76b1", null ],
     [ "AllowHotInitialization", "classLangList.html#a15192c27ae9a2193a586bfad8be50c57", null ]
 ];

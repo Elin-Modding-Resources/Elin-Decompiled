@@ -1,5 +1,8 @@
 var NAVTREEINDEX50 =
 {
+"classConDisease.html#adbda88b1068645fd3d15b4e84f279f92":[1,0,331,1],
+"classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,331,4],
+"classConDrawBacker.html":[1,0,333],
 "classConDrawMetal.html":[1,0,334],
 "classConDrawMonster.html":[1,0,335],
 "classConDrug.html":[1,0,336],
@@ -246,8 +249,5 @@ var NAVTREEINDEX50 =
 "classConWardMonster.html":[1,0,415],
 "classConWeakResEle.html":[1,0,417],
 "classConWeakness.html":[1,0,416],
-"classConWeapon.html":[1,0,418],
-"classConWeapon.html#a19d89d5302482a64ba0fc4ca9a5547bd":[1,0,418,4],
-"classConWeapon.html#a67f041b4924a9b7714b9f6c23f5f71df":[1,0,418,6],
-"classConWeapon.html#a78014d205880f0aff39457469afc0272":[1,0,418,0]
+"classConWeapon.html":[1,0,418]
 };

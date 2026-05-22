@@ -4,6 +4,8 @@ var classSourceZoneAffix =
     [ "CreateRow", "classSourceZoneAffix.html#a357d2b022f59bab65ac09192a135d452", null ],
     [ "CreateRowByMapping", "classSourceZoneAffix.html#a19f94eb8c75c1865c73f454e54070970", null ],
     [ "GetRowMapping", "classSourceZoneAffix.html#acd79f896bb4ae94f1dc95b1cbf1e2871", null ],
+    [ "GetTypeMapping", "classSourceZoneAffix.html#a8c04fd5ce0d7016150e41bc4d0c75e47", null ],
     [ "SetRow", "classSourceZoneAffix.html#ab4677edb6d08c0147cf2b585e1273fd6", null ],
-    [ "RowMapping", "classSourceZoneAffix.html#a1f9989adbf6a0a422d9e36c07c3cb35d", null ]
+    [ "RowMapping", "classSourceZoneAffix.html#a1f9989adbf6a0a422d9e36c07c3cb35d", null ],
+    [ "TypeMapping", "classSourceZoneAffix.html#a3a07066ae27024162a357a0db9922160", null ]
 ];
