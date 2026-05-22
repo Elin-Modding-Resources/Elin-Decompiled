@@ -21,6 +21,14 @@ public class LangGeneral : SourceLang<LangGeneral.Row>
 		["text"] = 3
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "str",
+		["filter"] = "str",
+		["text_JP"] = "str",
+		["text"] = "str"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -51,5 +59,10 @@ public class LangGeneral : SourceLang<LangGeneral.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 }

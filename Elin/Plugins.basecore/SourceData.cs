@@ -936,6 +936,11 @@ public class SourceData : ScriptableObject
 		return null;
 	}
 
+	public virtual IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return null;
+	}
+
 	public static bool IsNull(ICell cell)
 	{
 		if (cell != null && cell.CellType != CellType.Blank)

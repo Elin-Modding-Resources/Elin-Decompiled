@@ -30,6 +30,14 @@ public class LangWord : SourceDataInt<LangWord.Row>
 		["name"] = 3
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "int",
+		["group"] = "string",
+		["name_JP"] = "string",
+		["name"] = "string"
+	};
+
 	public override bool AllowHotInitialization => true;
 
 	public override Row CreateRow()
@@ -62,6 +70,11 @@ public class LangWord : SourceDataInt<LangWord.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override void OnAfterImportData()

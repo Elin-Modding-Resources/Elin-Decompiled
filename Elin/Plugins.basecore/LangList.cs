@@ -30,6 +30,14 @@ public class LangList : SourceDataString<LangList.Row>
 		["text"] = 3
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["filter"] = "string",
+		["text_JP"] = "string[]",
+		["text"] = "string[]"
+	};
+
 	public override bool AllowHotInitialization => true;
 
 	public override Row CreateRow()
@@ -62,6 +70,11 @@ public class LangList : SourceDataString<LangList.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public override string[] GetList(string id)

@@ -36,6 +36,19 @@ public class LangGame : SourceLang<LangGame.Row>
 		["text"] = 8
 	};
 
+	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
+	{
+		["id"] = "string",
+		["filter"] = "string",
+		["group"] = "string",
+		["color"] = "string",
+		["logColor"] = "string",
+		["sound"] = "string",
+		["effect"] = "string",
+		["text_JP"] = "string",
+		["text"] = "string"
+	};
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -76,6 +89,11 @@ public class LangGame : SourceLang<LangGame.Row>
 	public override IReadOnlyDictionary<string, int> GetRowMapping()
 	{
 		return RowMapping;
+	}
+
+	public override IReadOnlyDictionary<string, string> GetTypeMapping()
+	{
+		return TypeMapping;
 	}
 
 	public static bool Has(string id)
