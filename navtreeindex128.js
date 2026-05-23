@@ -1,5 +1,11 @@
 var NAVTREEINDEX128 =
 {
+"classTraitShippingChest.html#a6abb9e30a12c19af7c56991a502bf646":[1,0,1893,1],
+"classTraitShippingChest.html#a817267edd75c49ec3143fe4ff58f67c7":[1,0,1893,5],
+"classTraitShippingChest.html#ab367483a11271403fa645d8ccc69eadd":[1,0,1893,4],
+"classTraitShippingChest.html#abd7d3c579c62eabbabf8d1962e05a667":[1,0,1893,2],
+"classTraitShippingChest.html#ae385a2abc96d5a5275d0b2c60c7722d3":[1,0,1893,6],
+"classTraitShippingChest.html#afe3fbe1fa561e2aeab8caa8f233e2482":[1,0,1893,7],
 "classTraitShowcase.html":[1,0,1894],
 "classTraitShowcase.html#abc66a7e09a8aec9cd0ca1946a4d36f89":[1,0,1894,0],
 "classTraitShrine.html":[1,0,1895],
@@ -243,11 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitTile.html#a77c9ae5847b9fa4dd8946ec703f454f8":[1,0,1962,5],
 "classTraitTile.html#a987ac06392217f7222915d9266d6d3bf":[1,0,1962,2],
 "classTraitTile.html#ad8366d37bfea1a3aebb3efdee522963a":[1,0,1962,1],
-"classTraitTile.html#ae66a1ad1b38c2488aaf089ac308ab4e7":[1,0,1962,0],
-"classTraitTool.html":[1,0,1963],
-"classTraitTool.html#a0cf304d701d5457989f429ecac5fc1ab":[1,0,1963,1],
-"classTraitTool.html#a756d3c26ce8d9c023e1ce1dbe200cea2":[1,0,1963,0],
-"classTraitTool.html#a9a1537ba5d24196c7b94f1baafb33fef":[1,0,1963,3],
-"classTraitTool.html#af96da687cff3a3c4c9b07bb885c10e05":[1,0,1963,2],
-"classTraitToolAlchemy.html":[1,0,1964]
+"classTraitTile.html#ae66a1ad1b38c2488aaf089ac308ab4e7":[1,0,1962,0]
 };

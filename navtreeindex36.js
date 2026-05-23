@@ -1,5 +1,7 @@
 var NAVTREEINDEX36 =
 {
+"classBaseInspectPos.html#a77ae2e462410f4c2a519bc9dc8cdd773":[1,0,218,6],
+"classBaseInspectPos.html#a8dad48efa1633b30abaf5012f8bd11e8":[1,0,218,4],
 "classBaseInspectPos.html#ad6156388185d0e309661c03073469df7":[1,0,218,5],
 "classBaseInspectPos.html#ae969784ba459fe2de03c60c9390a9c71":[1,0,218,3],
 "classBaseList.html":[1,0,219],
@@ -247,7 +249,5 @@ var NAVTREEINDEX36 =
 "classBaseTaskHarvest.html#add03492172277c204a2e15af6e69d1e4":[1,0,230,17],
 "classBaseTaskHarvest.html#adea18b53756a02dae64d6b7f378ec313":[1,0,230,23],
 "classBaseTaskHarvest.html#ae0b5b698587cc3f9f8e4fa2a197b6d3e":[1,0,230,5],
-"classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8":[1,0,230,11],
-"classBaseTaskHarvest.html#af7959fce092142e6ecbc2e83ddda5554":[1,0,230,4],
-"classBaseTaskHarvest.html#afa3d38f2faa0369dc5ab49e528327339":[1,0,230,13]
+"classBaseTaskHarvest.html#aee890f3c8a7df01e76f1847636ccdce8":[1,0,230,11]
 };

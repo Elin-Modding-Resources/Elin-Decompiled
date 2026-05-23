@@ -1,5 +1,11 @@
 var NAVTREEINDEX95 =
 {
+"classPropSet.html#a8dcb398791d6f661ab1f3c8d0daf7d85":[1,0,1010,2],
+"classPropSet.html#a9b71c3f74ec3f4261127f92f28231f68":[1,0,1010,3],
+"classPropSetCategory.html":[1,0,1011],
+"classPropSetCategory.html#a3265f627fd74fdd6095dd5b93c19a236":[1,0,1011,2],
+"classPropSetCategory.html#a60c156a3c9bbd87e6da7cec90fc3f666":[1,0,1011,1],
+"classPropSetCategory.html#ac9c054af1545f999297649ffa5402db6":[1,0,1011,4],
 "classPropSetCategory.html#ae0fa0553049b67cc8ff3ba104dae2ef7":[1,0,1011,0],
 "classPropSetCategory.html#afe98e31b42e7fb0c1fa04298e9f429d6":[1,0,1011,3],
 "classProps.html":[1,0,1009],
@@ -243,11 +249,5 @@ var NAVTREEINDEX95 =
 "classQuestDefenseGame.html#a859e1c04385585dbc327c19ee7406e27":[1,0,1025,9],
 "classQuestDefenseGame.html#aa3430704375447d0efde0093a54dacff":[1,0,1025,2],
 "classQuestDefenseGame.html#aa99bffe9473ce269dbab915f55553245":[1,0,1025,1],
-"classQuestDefenseGame.html#ac30bf7f41b3cc1a02276afcf91c5333c":[1,0,1025,4],
-"classQuestDefenseGame.html#ac80947d3d8b47cc223d386e68f225b05":[1,0,1025,0],
-"classQuestDefenseGame.html#ad05e2dfbd03444d2650cb87280b963a1":[1,0,1025,8],
-"classQuestDefenseGame.html#ada3b1dd97bafcc67414d14cc09c56660":[1,0,1025,5],
-"classQuestDefenseGame.html#ae54172bb969f293d6420370870f519f9":[1,0,1025,3],
-"classQuestDefenseGame2.html":[1,0,1026],
-"classQuestDefenseGame2.html#a88e0d1c99259bd6a9101fab78a8efab0":[1,0,1026,0]
+"classQuestDefenseGame.html#ac30bf7f41b3cc1a02276afcf91c5333c":[1,0,1025,4]
 };

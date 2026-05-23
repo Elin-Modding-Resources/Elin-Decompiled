@@ -832,7 +832,7 @@ var annotated_dup =
     [ "IO", "classIO.html", "classIO" ],
     [ "IPathfinder", "interfaceIPathfinder.html", "interfaceIPathfinder" ],
     [ "IPathfindGrid", "interfaceIPathfindGrid.html", null ],
-    [ "IPathfindWalker", "interfaceIPathfindWalker.html", null ],
+    [ "IPathfindWalker", "interfaceIPathfindWalker.html", "interfaceIPathfindWalker" ],
     [ "IPoolObject", "interfaceIPoolObject.html", "interfaceIPoolObject" ],
     [ "IPrefImage", "interfaceIPrefImage.html", "interfaceIPrefImage" ],
     [ "IRenderer", "interfaceIRenderer.html", "interfaceIRenderer" ],

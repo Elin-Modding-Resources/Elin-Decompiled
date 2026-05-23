@@ -6,6 +6,7 @@ var classFEAT =
     [ "featAquatic", "classFEAT.html#a7f811b309d39b4f36f4993d736f155c7", null ],
     [ "featArcher", "classFEAT.html#a41a1c5b70e147372f92307f4aafafa08", null ],
     [ "featAshborn", "classFEAT.html#a3663a91bf1e657a7db2b199c1580e8e4", null ],
+    [ "featAstralBody", "classFEAT.html#ac2a182c2fb01932ae81899b2db8db918", null ],
     [ "featBaby", "classFEAT.html#ac10bfe1aa857e98e537dad450203b194", null ],
     [ "featBadKarma", "classFEAT.html#ab194a1c81dec1a82a07fa2b017ee06c8", null ],
     [ "featBelovedOne", "classFEAT.html#a4cf240fa1f808a8658e5985f8b8fab2d", null ],

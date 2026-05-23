@@ -20,7 +20,7 @@ var classCell =
     [ "GetSurfaceHeight", "classCell.html#ae37d67e2befa70197129953b001b8103", null ],
     [ "HasObstacle", "classCell.html#a695e921fdd494e1a21349745fad87bee", null ],
     [ "HasZoneStairs", "classCell.html#ae8a16b25aa3d31acbf637a2786bb8464", null ],
-    [ "IsPathBlocked", "classCell.html#a45103f382cdb7921daaaccb309e62a64", null ],
+    [ "IsPathBlocked", "classCell.html#adefeb7dd36f6416621f812a3c6445bb8", null ],
     [ "Refresh", "classCell.html#a67f183567ef3ad56b8b79dd45c4f7bc9", null ],
     [ "RemoveCard", "classCell.html#a0b9a588b14c6c308cb75eb2f21496371", null ],
     [ "Reset", "classCell.html#a6822c3fac23c6dbf8e71e859cd197373", null ],

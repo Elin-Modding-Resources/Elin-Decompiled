@@ -1,5 +1,11 @@
 var NAVTREEINDEX97 =
 {
+"classQuestNegotiationDarkness.html#aa28bb6b7d7d08d20463dec9ad1dc796a":[1,0,1071,5],
+"classQuestNegotiationDarkness.html#ae7141cb2935bcbf1baa2d95eb584cefe":[1,0,1071,2],
+"classQuestProgression.html":[1,0,1072],
+"classQuestProgression.html#a2000aa9e33842fd3bf72845ea5152f34":[1,0,1072,1],
+"classQuestProgression.html#a4f9c868cd12c3938138e02095412aaef":[1,0,1072,0],
+"classQuestPuppy.html":[1,0,1073],
 "classQuestPuppy.html#acb92fc942bb2ae1ca180e0f7937ed7f0":[1,0,1073,0],
 "classQuestPuppy.html#ad8cd77a2801c88b65d3ba3f5e37c7da7":[1,0,1073,1],
 "classQuestRandom.html":[1,0,1074],
@@ -243,11 +249,5 @@ var NAVTREEINDEX97 =
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6a3ac705f2acd51a4613f9188c05c91d0d":[1,0,1104,2,0],
 "classRecipe.html#a11bd1633807997a593db370fa17c96b6a4bbb8f967da6d1a610596d7257179c2b":[1,0,1104,2,1],
 "classRecipe.html#a123d8acc734e50c7c492c141eddf2680":[1,0,1104,38],
-"classRecipe.html#a16d6e7a1f3e7ec064260d975ece515ec":[1,0,1104,42],
-"classRecipe.html#a17b522883cf23372db4f4228baf9bc7a":[1,0,1104,44],
-"classRecipe.html#a1d2ab89173f5d72ede008cc6eccefc3c":[1,0,1104,43],
-"classRecipe.html#a21877e57c53fd1150ce766b0e31373f3":[1,0,1104,9],
-"classRecipe.html#a21dd69360b93de59b5308d7db36b9559":[1,0,1104,53],
-"classRecipe.html#a26d659bbb40ad8f2b48a337c6a56e60e":[1,0,1104,32],
-"classRecipe.html#a279d730fc3c5a87840cecbfd3f8aabb1":[1,0,1104,74]
+"classRecipe.html#a16d6e7a1f3e7ec064260d975ece515ec":[1,0,1104,42]
 };

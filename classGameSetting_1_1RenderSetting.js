@@ -11,6 +11,7 @@ var classGameSetting_1_1RenderSetting =
     [ "alphaHair", "classGameSetting_1_1RenderSetting.html#ae976b7edaa927f50c75b0c2a0e470d65", null ],
     [ "anime", "classGameSetting_1_1RenderSetting.html#a42f89db4180b00cb7f16d8741d30817e", null ],
     [ "animeWalk", "classGameSetting_1_1RenderSetting.html#aae3f12482b5d262e0b6a67fc3646fb1f", null ],
+    [ "astralBodyFixZ", "classGameSetting_1_1RenderSetting.html#a85fd15e047495a6a7380f75e61a56ea0", null ],
     [ "bgs", "classGameSetting_1_1RenderSetting.html#ac7fd6f9986812f6e8e0c475822b05456", null ],
     [ "charaPos", "classGameSetting_1_1RenderSetting.html#a59a993c39fa2211745cabc04ace204a1", null ],
     [ "charaZ", "classGameSetting_1_1RenderSetting.html#a1aa001319b607780fe69619a9971da23", null ],

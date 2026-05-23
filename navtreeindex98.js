@@ -1,5 +1,11 @@
 var NAVTREEINDEX98 =
 {
+"classRecipe.html#a17b522883cf23372db4f4228baf9bc7a":[1,0,1104,44],
+"classRecipe.html#a1d2ab89173f5d72ede008cc6eccefc3c":[1,0,1104,43],
+"classRecipe.html#a21877e57c53fd1150ce766b0e31373f3":[1,0,1104,9],
+"classRecipe.html#a21dd69360b93de59b5308d7db36b9559":[1,0,1104,53],
+"classRecipe.html#a26d659bbb40ad8f2b48a337c6a56e60e":[1,0,1104,32],
+"classRecipe.html#a279d730fc3c5a87840cecbfd3f8aabb1":[1,0,1104,74],
 "classRecipe.html#a28da28557b2edc52979be0b8f061bcfb":[1,0,1104,18],
 "classRecipe.html#a2d8a4c729f584be34db82fd54d858fa0":[1,0,1104,16],
 "classRecipe.html#a2e5fc07ff7bf8f9733181e2d03ce8f29":[1,0,1104,27],
@@ -243,11 +249,5 @@ var NAVTREEINDEX98 =
 "classRefractionProfile.html#a49892c2c685c132b01f07410403afe52":[1,0,1116,3],
 "classRefractionProfile.html#a4ab4d6763218831d0d134f4391ff7a51":[1,0,1116,6],
 "classRefractionProfile.html#a95f32eeb4aed84825b46ac1e1bab1fae":[1,0,1116,1],
-"classRefractionProfile.html#ab78262fe7606ffeb695ba08879a0a2ac":[1,0,1116,0],
-"classRegion.html":[1,0,1119],
-"classRegion.html#a036ce5fedf8aa267f23e7f6433bddf15":[1,0,1119,6],
-"classRegion.html#a05864d91753c5890318d497f3ba69ab0":[1,0,1119,27],
-"classRegion.html#a05ed7e0203400a7b627d3dbfb281d00e":[1,0,1119,11],
-"classRegion.html#a09503d19cb3e6be74f6070b2d940f27c":[1,0,1119,9],
-"classRegion.html#a0a3cedbd3028eb6fead482e2336f58b2":[1,0,1119,23]
+"classRefractionProfile.html#ab78262fe7606ffeb695ba08879a0a2ac":[1,0,1116,0]
 };

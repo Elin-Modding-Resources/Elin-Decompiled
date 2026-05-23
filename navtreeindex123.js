@@ -1,5 +1,11 @@
 var NAVTREEINDEX123 =
 {
+"classTraitDreamBug.html#a18d492d340ab5615e331d005f5e9d818":[1,0,1604,0],
+"classTraitDreamBug.html#a312a1c5a153424c12d45ce5e5c1872fc":[1,0,1604,1],
+"classTraitDreamBug.html#a52f951b18784825907d82d82bfa5b351":[1,0,1604,3],
+"classTraitDreamBug.html#ad56606394c6e097a292ec3e7377c1714":[1,0,1604,4],
+"classTraitDresser.html":[1,0,1605],
+"classTraitDrink.html":[1,0,1606],
 "classTraitDrink.html#a02255aa4d0c4ff1782d9f6af3cc9ddc9":[1,0,1606,1],
 "classTraitDrink.html#a180d6de63303acbbf3ff132db664fc3f":[1,0,1606,9],
 "classTraitDrink.html#a455aa1d0f6ec5f3e7799065a8d68337c":[1,0,1606,18],
@@ -243,11 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitGM__Thief.html":[1,0,1690],
 "classTraitGacha.html":[1,0,1664],
 "classTraitGacha.html#a105f89d64e5997d0e6a706688b0d120b":[1,0,1664,3],
-"classTraitGacha.html#a1db11aa432c9bd42cec71f6fb6447158":[1,0,1664,1],
-"classTraitGacha.html#a2dc893f597a04a16f6bd9c1efb9b20e0":[1,0,1664,5],
-"classTraitGacha.html#a4809775ed4c5c7a53bc0479ad1312e69":[1,0,1664,6],
-"classTraitGacha.html#a5ce8ca8716b11e9534475f9d495d8ab1":[1,0,1664,2],
-"classTraitGacha.html#ac12e98eec74d5b2aa7e4c467d82d3c48":[1,0,1664,4],
-"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9d":[1,0,1664,0],
-"classTraitGacha.html#ad6cc7b55650ec00db6111990cdd82f9da2751e0752cf12f17b5efd065c06daae5":[1,0,1664,0,1]
+"classTraitGacha.html#a1db11aa432c9bd42cec71f6fb6447158":[1,0,1664,1]
 };

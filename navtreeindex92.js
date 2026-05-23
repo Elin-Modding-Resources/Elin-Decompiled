@@ -1,5 +1,11 @@
 var NAVTREEINDEX92 =
 {
+"classPlayer_1_1Stats.html#ada6b14866ee7fc79fa32cfe4ee13510d":[1,0,984,4,1],
+"classPlayer_1_1Stats.html#adaca4df27fb8d6d32f47d9c3b579f464":[1,0,984,4,27],
+"classPlayer_1_1Stats.html#adcb20b2f964476e38ab2ede7b20ea052":[1,0,984,4,17],
+"classPlayer_1_1Stats.html#ae4d9783e4b5651150a5bdecf13cfe88a":[1,0,984,4,22],
+"classPlayer_1_1Stats.html#ae6a32ebf4cfd9521a80e2642b7cc37e2":[1,0,984,4,39],
+"classPlayer_1_1Stats.html#ae88dedf7e8921ddbb79b23590b8749c9":[1,0,984,4,16],
 "classPlayer_1_1Stats.html#afdf6688c3453349a11a669697078077b":[1,0,984,4,13],
 "classPlayingSong.html":[1,0,985],
 "classPlayingSong.html#a1c9823e9ed9866885b724cad90b3fe29":[1,0,985,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX92 =
 "classPoolManager_1_1PoolGroup.html#a9ce4a594b82add9b596c6e6afacc2eb0":[1,0,993,0,5],
 "classPopItem.html":[1,0,997],
 "classPopItem.html#a1124deefa90f17ee0066f47bc2e695af":[1,0,997,5],
-"classPopItem.html#a1a4ac33b9ecbf0b6ab0f7cdb1cd3beb2":[1,0,997,2],
-"classPopItem.html#a4c55e8f71796c1b98fbb08f4ef19206d":[1,0,997,4],
-"classPopItem.html#a621c1d8b64c8a35203edfe2c1d67a9be":[1,0,997,6],
-"classPopItem.html#a7f686b6b7afb97ba720d32a85b287f36":[1,0,997,3],
-"classPopItem.html#a8f1374735fd982ec7da59742f9e040f1":[1,0,997,7],
-"classPopItem.html#aadf3305689fec10b905b2425e63c0165":[1,0,997,8],
-"classPopItem.html#abe95a31b3ebff215b06ea767c4d61483":[1,0,997,1]
+"classPopItem.html#a1a4ac33b9ecbf0b6ab0f7cdb1cd3beb2":[1,0,997,2]
 };

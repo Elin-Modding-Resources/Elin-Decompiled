@@ -1,4 +1,4 @@
 var IPathfindWalker_8cs =
 [
-    [ "IPathfindWalker", "interfaceIPathfindWalker.html", null ]
+    [ "IPathfindWalker", "interfaceIPathfindWalker.html", "interfaceIPathfindWalker" ]
 ];

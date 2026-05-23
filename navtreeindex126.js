@@ -1,5 +1,11 @@
 var NAVTREEINDEX126 =
 {
+"classTraitMiral.html#a79d7b7af125be1f284cdee11eee50f6b":[1,0,1789,1],
+"classTraitMiral.html#aa4e80ca1b96c8498276a839bc1a0ce63":[1,0,1789,0],
+"classTraitMiral.html#af8bc8e07899c0e933ac0173f6a699611":[1,0,1789,3],
+"classTraitMirror.html":[1,0,1790],
+"classTraitMirror.html#a9dd2e197c3be2aa95a03b1b05f9ad76a":[1,0,1790,0],
+"classTraitMirror.html#ae2b0c631db56ab571c04c35efa6b59ab":[1,0,1790,1],
 "classTraitMixedFood.html":[1,0,1791],
 "classTraitMixedFood.html#a6085baf9639617a23eab1f7d7baeb3e8":[1,0,1791,1],
 "classTraitMixedFood.html#a98870940b2830f71cbce717e996d6192":[1,0,1791,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1846,0],
 "classTraitQuestBoard.html":[1,0,1847],
 "classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1847,0],
-"classTraitQuestBoard.html#acc915a6236db624e9877d89ed47c9913":[1,0,1847,1],
-"classTraitQuiver.html":[1,0,1848],
-"classTraitQuru.html":[1,0,1849],
-"classTraitQuru.html#a78ee1996db80b583df7a0cc891ff6876":[1,0,1849,0],
-"classTraitQuru.html#ad31ffa6fd80a7a940392ffeffe073ea9":[1,0,1849,1],
-"classTraitRadio.html":[1,0,1850],
-"classTraitRadio.html#a43d67817bab65ef41fc728a848390b69":[1,0,1850,4]
+"classTraitQuestBoard.html#acc915a6236db624e9877d89ed47c9913":[1,0,1847,1]
 };

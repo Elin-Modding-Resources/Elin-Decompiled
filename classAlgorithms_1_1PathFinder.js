@@ -44,5 +44,6 @@ var classAlgorithms_1_1PathFinder =
     [ "PunishChangeDirection", "classAlgorithms_1_1PathFinder.html#aa51616c6ecb853a2f0cda5f5ffb4f038", null ],
     [ "TieBreaker", "classAlgorithms_1_1PathFinder.html#a2774ab62eda72a0f212a30ad58170c1b", null ],
     [ "total", "classAlgorithms_1_1PathFinder.html#ae60bb48578421c1338127db4b886c078", null ],
+    [ "walker", "classAlgorithms_1_1PathFinder.html#a311fd12e54d4703b954bcaebe409f7af", null ],
     [ "weightMap", "classAlgorithms_1_1PathFinder.html#a969aea389bf18c3cf7dcb2407f7e6aa9", null ]
 ];

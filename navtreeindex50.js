@@ -1,5 +1,9 @@
 var NAVTREEINDEX50 =
 {
+"classConDisease.html#a1434844620f4de148c1065529cfa3f89":[1,0,331,0],
+"classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,331,2],
+"classConDisease.html#a77af44cc3544aac2d0cce8a9930605bf":[1,0,331,5],
+"classConDisease.html#ad8527bb782ccef1f688df0ded6e72923":[1,0,331,3],
 "classConDisease.html#adbda88b1068645fd3d15b4e84f279f92":[1,0,331,1],
 "classConDisease.html#ae8396f3e394c5dffc4dafe38e188bacb":[1,0,331,4],
 "classConDrawBacker.html":[1,0,333],
@@ -245,9 +249,5 @@ var NAVTREEINDEX50 =
 "classConWait.html":[1,0,414],
 "classConWait.html#a1b779fa88b0ebec7ba621cd29e30b3f5":[1,0,414,2],
 "classConWait.html#a8a9e67c8523c0598cb17e0fafcaaa885":[1,0,414,0],
-"classConWait.html#aa26395da0b82ddde0f31ecfc5b80a6c5":[1,0,414,1],
-"classConWardMonster.html":[1,0,415],
-"classConWeakResEle.html":[1,0,417],
-"classConWeakness.html":[1,0,416],
-"classConWeapon.html":[1,0,418]
+"classConWait.html#aa26395da0b82ddde0f31ecfc5b80a6c5":[1,0,414,1]
 };

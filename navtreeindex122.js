@@ -1,5 +1,11 @@
 var NAVTREEINDEX122 =
 {
+"classTraitCooker.html#a407d967ec67ff0423d8a96c772772f3f":[1,0,1559,1],
+"classTraitCooker.html#a67e9ed5046f389a1c664d41ed6193c51":[1,0,1559,3],
+"classTraitCooker.html#a8b4cce75ee58cbab2725611a4dc60ce6":[1,0,1559,0],
+"classTraitCooker.html#a912c97e1cccd75a289d656cfaa78a9fe":[1,0,1559,2],
+"classTraitCooker.html#ad9f3c54d89f1c9fc9778202dd04a3c1e":[1,0,1559,4],
+"classTraitCookerMicrowave.html":[1,0,1560],
 "classTraitCookerMicrowave.html#a09995ff5750a6aafd9db13aaf8649805":[1,0,1560,5],
 "classTraitCookerMicrowave.html#a0af22d1d7b9228b6dee6c5a8b7d454cd":[1,0,1560,1],
 "classTraitCookerMicrowave.html#a0ca3fbeffff6406e6f040cb1b8635364":[1,0,1560,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitDrawingPaperM.html#a814597900babcc5071f3fdd0bf4e9b10":[1,0,1603,2],
 "classTraitDrawingPaperM.html#ad8092b4a561151c1a2b9481e7d85ead5":[1,0,1603,0],
 "classTraitDreamBug.html":[1,0,1604],
-"classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1604,2],
-"classTraitDreamBug.html#a18d492d340ab5615e331d005f5e9d818":[1,0,1604,0],
-"classTraitDreamBug.html#a312a1c5a153424c12d45ce5e5c1872fc":[1,0,1604,1],
-"classTraitDreamBug.html#a52f951b18784825907d82d82bfa5b351":[1,0,1604,3],
-"classTraitDreamBug.html#ad56606394c6e097a292ec3e7377c1714":[1,0,1604,4],
-"classTraitDresser.html":[1,0,1605],
-"classTraitDrink.html":[1,0,1606]
+"classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1604,2]
 };
