@@ -195,6 +195,8 @@ public class GameSetting : ScriptableObject
 
 		public float hangedObjFixZ;
 
+		public float astralBodyFixZ;
+
 		public Vector3 shadowScale;
 
 		public Vector3 shadowOffset;

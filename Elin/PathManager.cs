@@ -77,7 +77,7 @@ public class PathManager : MonoBehaviour
 
 	public Point _GetFirstStep(Point origin, Point dest, IPathfindWalker walker, int maxDist = 20, MoveType moveType = MoveType.Default)
 	{
-		if (!dest.IsValid || (dest.cell.blocked && origin.Distance(dest) <= 1))
+		if (!dest.IsValid || (dest.cell.blocked && !walker.IsAstralBody && origin.Distance(dest) <= 1))
 		{
 			return Point.Invalid;
 		}

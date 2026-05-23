@@ -1766,13 +1766,21 @@ public class Cell : WeightCell, IFloodCell
 		return false;
 	}
 
-	public override bool IsPathBlocked(PathManager.MoveType moveType)
+	public override bool IsPathBlocked(IPathfindWalker walker, PathManager.MoveType moveType)
 	{
+		if (IsSky)
+		{
+			return true;
+		}
 		if (moveType == PathManager.MoveType.Default)
 		{
+			if (walker.IsAstralBody)
+			{
+				return false;
+			}
 			return blocked;
 		}
-		if (!blocked)
+		if (!blocked || walker.IsAstralBody)
 		{
 			if (detail != null)
 			{

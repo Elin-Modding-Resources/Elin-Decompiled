@@ -58,6 +58,8 @@ public class PathFinder : IPathfinder
 
 	private IPathfindGrid grid;
 
+	private IPathfindWalker walker;
+
 	private int mHEstimate = 2;
 
 	private PriorityQueueB<int> mOpen;
@@ -153,6 +155,7 @@ public class PathFinder : IPathfinder
 	public void FindPath(PathProgress path)
 	{
 		moveType = path.moveType;
+		walker = path.walker;
 		_FindPath(path);
 		if (path.nodes.Count > 0)
 		{
@@ -258,7 +261,7 @@ public class PathFinder : IPathfinder
 								mz = mLocationZ;
 								index = ((mz >= mLocationZ) ? ((mx > mLocationX) ? 1 : ((mz > mLocationZ) ? 2 : 3)) : 0);
 								_weight = weightMap[mLocationX, mLocationZ].weights[index];
-								if (weightMap[mx, mz].IsPathBlocked(moveType))
+								if (weightMap[mx, mz].IsPathBlocked(walker, moveType))
 								{
 									_weight = 0;
 								}
@@ -272,7 +275,7 @@ public class PathFinder : IPathfinder
 										mz = mLocationZ + mDirection[i, 1];
 										index = ((mz >= mLocationZ) ? ((mx > mLocationX) ? 1 : ((mz > mLocationZ) ? 2 : 3)) : 0);
 										_weight = weightMap[mLocationX, mLocationZ].weights[index];
-										if (weightMap[mx, mz].IsPathBlocked(moveType))
+										if (weightMap[mx, mz].IsPathBlocked(walker, moveType))
 										{
 											_weight = 0;
 										}
@@ -289,7 +292,7 @@ public class PathFinder : IPathfinder
 								continue;
 							}
 							_weight += weightMap[mLocationX, mLocationZ].baseWeight;
-							if (mEndLocation != mNewLocation && weightMap[mNewLocationX, mNewLocationZ].IsPathBlocked(moveType))
+							if (mEndLocation != mNewLocation && weightMap[mNewLocationX, mNewLocationZ].IsPathBlocked(walker, moveType))
 							{
 								continue;
 							}

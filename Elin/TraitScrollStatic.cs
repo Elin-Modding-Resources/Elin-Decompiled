@@ -57,6 +57,11 @@ public class TraitScrollStatic : TraitScroll
 			}
 			return;
 		}
+		if (idEffect == EffectId.Exterminate && !EClass._zone.IsPCFactionOrTent)
+		{
+			Msg.Say("skillbook_invalidZone");
+			return;
+		}
 		if (c.IsPC && (idEffect == EffectId.Identify || idEffect == EffectId.GreaterIdentify))
 		{
 			foreach (Thing item in EClass.pc.things.List((Thing t) => t.id == owner.id, onlyAccessible: true))

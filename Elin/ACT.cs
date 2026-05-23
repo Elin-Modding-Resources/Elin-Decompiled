@@ -390,7 +390,7 @@ public class Act : Element
 						return false;
 					}
 				}
-				else if ((num != 1 || !CC.IsMultisize) && !Los.IsVisible(p1, p2))
+				else if ((num != 1 || (!CC.IsMultisize && !CC.pos.IsBlocked)) && !Los.IsVisible(p1, p2))
 				{
 					return false;
 				}

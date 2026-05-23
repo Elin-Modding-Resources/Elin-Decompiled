@@ -1238,7 +1238,7 @@ public class AM_Adv : AM_BaseGameMode
 			return;
 		}
 		Point pos = ((!isMouseOnMap) ? null : base.hit.Copy());
-		if (pos != null && (EClass.pc.pos.Equals(pos) || (EClass.pc.pos.Distance(pos) == 1 && pos.cell.blocked)))
+		if (pos != null && (EClass.pc.pos.Equals(pos) || (EClass.pc.pos.Distance(pos) == 1 && pos.cell.blocked && !EClass.pc.IsAstralBody)))
 		{
 			return;
 		}

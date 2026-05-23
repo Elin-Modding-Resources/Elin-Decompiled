@@ -335,6 +335,10 @@ public class GoalCombat : Goal
 				{
 					yield return Success();
 				}
+				if (owner.tactics.DestDist > 4)
+				{
+					yield return Success();
+				}
 				yield return DoGoto(tc.pos);
 			}
 			else if (owner.FindNearestNewEnemy())

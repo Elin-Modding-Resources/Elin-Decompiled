@@ -8,7 +8,7 @@ public class WeightCell
 
 	public byte baseWeight;
 
-	public virtual bool IsPathBlocked(PathManager.MoveType moveType)
+	public virtual bool IsPathBlocked(IPathfindWalker walker, PathManager.MoveType moveType)
 	{
 		return blocked;
 	}

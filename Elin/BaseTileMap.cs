@@ -1214,7 +1214,7 @@ public class BaseTileMap : EMono
 		bool flag4 = this.cell.isSurrounded && innerMode != 0 && sourceBlock.tileType.IsFullBlock;
 		if (!(!isSeen || flag4))
 		{
-			goto IL_16bd;
+			goto IL_16c3;
 		}
 		bool isRoomEdge = this.cell.IsRoomEdge;
 		orgY = param.y;
@@ -1267,7 +1267,7 @@ public class BaseTileMap : EMono
 		param.color = blockLight;
 		if (flag5)
 		{
-			if (detail == null || !EMono.pc.hasTelepathy)
+			if (detail == null || !(EMono.pc.hasTelepathy || flag4))
 			{
 				return;
 			}
@@ -1276,9 +1276,9 @@ public class BaseTileMap : EMono
 		{
 			if (isRoomEdge)
 			{
-				goto IL_16bd;
+				goto IL_16c3;
 			}
-			if (detail == null || !EMono.pc.hasTelepathy)
+			if (detail == null || !(EMono.pc.hasTelepathy || flag4))
 			{
 				if (noRoofMode || detail == null)
 				{
@@ -1287,16 +1287,16 @@ public class BaseTileMap : EMono
 				fogged = true;
 			}
 		}
-		goto IL_7eb8;
-		IL_7327:
+		goto IL_7ebe;
+		IL_732d:
 		int num3;
 		if (!showRoof || !roof || this.cell.room == null || this.cell.Front.room == null || this.cell.Right.room == null)
 		{
 			param.tile = num3;
 			rendererFov.Draw(param);
 		}
-		goto IL_7387;
-		IL_7387:
+		goto IL_738d;
+		IL_738d:
 		if (isSnowCovered && (sourceBlock.id != 0 || this.cell.hasDoor) && !snowed && !this.cell.isClearSnow && ((!this.cell.Front.HasRoof && !this.cell.Front.HasBlock) || (!this.cell.Right.HasRoof && !this.cell.Right.HasBlock)))
 		{
 			snowed = true;
@@ -1514,8 +1514,8 @@ public class BaseTileMap : EMono
 			param.matColor = 104025f;
 			renderFootmark.Draw(param);
 		}
-		goto IL_7eb8;
-		IL_16bd:
+		goto IL_7ebe;
+		IL_16c3:
 		if (this.cell.isSlopeEdge)
 		{
 			float num6 = (float)height * _heightMod.y;
@@ -2756,19 +2756,19 @@ public class BaseTileMap : EMono
 		{
 			if (this.cell.room != null || !this.cell.IsRoomEdge || !showRoof)
 			{
-				goto IL_7327;
+				goto IL_732d;
 			}
 			if (this.cell._block == 0 || !this.cell.sourceBlock.tileType.RepeatBlock)
 			{
 				Room obj = this.cell.FrontRight.room;
 				if (obj == null || !obj.HasRoof)
 				{
-					goto IL_7327;
+					goto IL_732d;
 				}
 			}
 		}
-		goto IL_7387;
-		IL_7eb8:
+		goto IL_738d;
+		IL_7ebe:
 		if (detail.things.Count == 0 && detail.charas.Count == 0)
 		{
 			return;
@@ -3159,6 +3159,10 @@ public class BaseTileMap : EMono
 			_actorPos.x = orgX;
 			_actorPos.y = orgY;
 			_actorPos.z = orgZ;
+			if (this.cell.IsBlocked && chara.IsAstralBody)
+			{
+				_actorPos.z += EMono.setting.render.astralBodyFixZ;
+			}
 			chara.SetRenderParam(param);
 			_ = chara.IsAliveInCurrentZone;
 			if (chara.isRestrained)

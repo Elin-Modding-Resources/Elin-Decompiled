@@ -153,6 +153,8 @@ public class Chara : Card, IPathfindWalker
 
 	public bool isWeakToSunlight;
 
+	public bool isAstralBody;
+
 	public SpriteReplacer spriteReplacer;
 
 	private Faction _faction;
@@ -500,6 +502,8 @@ public class Chara : Card, IPathfindWalker
 			return source.idActor[1];
 		}
 	}
+
+	public bool IsAstralBody => isAstralBody;
 
 	public new TraitChara trait
 	{
@@ -1300,6 +1304,10 @@ public class Chara : Card, IPathfindWalker
 			}
 			return false;
 		}
+		if ((pos.IsBlocked || p.IsBlocked) && dist <= 1)
+		{
+			return true;
+		}
 		return Los.IsVisible(pos, p);
 	}
 
@@ -1773,6 +1781,7 @@ public class Chara : Card, IPathfindWalker
 		canSeeInvisible = HasElement(416);
 		isWeakToSunlight = HasElement(1251) && !HasElement(431);
 		base.isHidden = HasElement(415);
+		isAstralBody = HasElement(1430);
 		foreach (Condition condition in conditions)
 		{
 			condition.OnRefresh();
@@ -2519,7 +2528,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			if (EClass._map.cells[p.x, p.z].blocked || EClass._map.cells[pos.x, pos.z].weights[num] == 0)
+			if ((EClass._map.cells[p.x, p.z].blocked && (!IsAstralBody || EClass._map.cells[p.x, p.z].IsSky)) || EClass._map.cells[pos.x, pos.z].weights[num] == 0)
 			{
 				return false;
 			}
@@ -2533,7 +2542,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					return false;
 				}
-				if (cells[x, z].blocked)
+				if (cells[x, z].blocked && (!IsAstralBody || cells[x, z].IsSky))
 				{
 					return false;
 				}
@@ -2549,7 +2558,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					return false;
 				}
-				if (cells[x, z].blocked)
+				if (cells[x, z].blocked && (!IsAstralBody || cells[x, z].IsSky))
 				{
 					return false;
 				}
@@ -3190,21 +3199,6 @@ public class Chara : Card, IPathfindWalker
 				}
 			}
 		}
-		lastPos.Things.ForeachReverse(delegate(Thing t)
-		{
-			t.trait.OnSteppedOut(this);
-		});
-		if (!IsPC)
-		{
-			pos.Things.ForeachReverse(delegate(Thing t)
-			{
-				t.trait.OnStepped(this);
-			});
-		}
-		if (CanDestroyPath())
-		{
-			DestroyPath(pos);
-		}
 		if (IsPC)
 		{
 			if (renderer.anime == null && renderer.replacer != null && renderer.replacer.pccData == null)
@@ -3232,6 +3226,25 @@ public class Chara : Card, IPathfindWalker
 		{
 			wasInWater = flag7;
 			RefreshSpeed();
+		}
+		lastPos.Things.ForeachReverse(delegate(Thing t)
+		{
+			t.trait.OnSteppedOut(this);
+		});
+		if (!IsPC)
+		{
+			pos.Things.ForeachReverse(delegate(Thing t)
+			{
+				t.trait.OnStepped(this);
+			});
+		}
+		if (CanDestroyPath())
+		{
+			DestroyPath(pos);
+		}
+		if (!isDead && pos.IsBlocked && EClass.rnd(2) == 0)
+		{
+			stamina.Mod(-1);
 		}
 		hasMovedThisTurn = true;
 		return MoveResult.Success;
@@ -3985,6 +3998,10 @@ public class Chara : Card, IPathfindWalker
 			}
 			Die();
 			return;
+		}
+		if (pos.IsBlocked)
+		{
+			preventRegen = true;
 		}
 		if (!preventRegen)
 		{
