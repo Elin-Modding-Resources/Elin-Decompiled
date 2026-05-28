@@ -146,7 +146,7 @@ public class BaseTaskHarvest : TaskDesignation
 		{
 		case HarvestType.Obj:
 			array = pos.sourceObj.reqHarvest;
-			row = pos.cell.matObj;
+			row = (pos.cell.isObjDyed ? pos.sourceObj.DefaultMaterial : pos.cell.matObj);
 			break;
 		case HarvestType.Thing:
 			array = target.trait.ReqHarvest.Split(',');

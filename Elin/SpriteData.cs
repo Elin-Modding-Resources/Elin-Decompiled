@@ -29,6 +29,8 @@ public class SpriteData
 
 	public SourcePref pref;
 
+	public bool tryFixPrefNotLoadedAtStart;
+
 	public void Init()
 	{
 		try

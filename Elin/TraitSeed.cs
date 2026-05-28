@@ -46,6 +46,10 @@ public class TraitSeed : Trait
 		{
 			n.AddText("NoteText_enc", "isWaterCrop");
 		}
+		if (row.tag.Contains("dyeable"))
+		{
+			n.AddText("NoteText_enc", "isDyeableCrop");
+		}
 		if (row.growth != null)
 		{
 			if (row.growth.GrowOnLand)
@@ -74,6 +78,11 @@ public class TraitSeed : Trait
 		{
 			pos.SetObj(row.id, 1, owner.dir);
 			EClass._map.AddPlant(pos, owner.Thing);
+			if (owner.isDyed && pos.sourceObj.ContainsTag("dyeable"))
+			{
+				pos.cell.isObjDyed = true;
+				pos.cell.objMat = (byte)owner.DyeMat.id;
+			}
 			if (sucker)
 			{
 				Zone.Suckers.Add(owner.Thing);
@@ -83,6 +92,36 @@ public class TraitSeed : Trait
 				owner.Destroy();
 			}
 		}
+	}
+
+	public static Thing MakeRandomSeed(bool enc = false)
+	{
+		Thing thing = ThingGen.Create("seed", null);
+		SourceObj.Row randomSeedObj = GetRandomSeedObj();
+		ApplySeed(thing, randomSeedObj.id);
+		return thing;
+	}
+
+	public static Thing MakeSeed(string idSource)
+	{
+		return MakeSeed(EClass.sources.objs.alias[idSource]);
+	}
+
+	public static Thing MakeSeed(SourceObj.Row obj)
+	{
+		Thing thing = ThingGen.Create("seed");
+		ApplySeed(thing, obj.id);
+		return thing;
+	}
+
+	public static Thing MakeSeed(Cell cell)
+	{
+		Thing thing = MakeSeed(cell.sourceObj, EClass._map.TryGetPlant(cell));
+		if (thing != null && cell.isObjDyed && cell.sourceObj.ContainsTag("dyeable"))
+		{
+			thing.Dye(cell.matObj);
+		}
+		return thing;
 	}
 
 	public static Thing MakeSeed(string id, PlantData plant = null)
@@ -166,11 +205,6 @@ public class TraitSeed : Trait
 		}
 	}
 
-	public static Thing MakeSeed(string idSource)
-	{
-		return MakeSeed(EClass.sources.objs.alias[idSource]);
-	}
-
 	public static Thing ApplySeed(Thing t, int refval)
 	{
 		t.refVal = refval;
@@ -180,21 +214,6 @@ public class TraitSeed : Trait
 			t.idSkin = row.vals[0].ToInt();
 		}
 		return t;
-	}
-
-	public static Thing MakeSeed(SourceObj.Row obj)
-	{
-		Thing thing = ThingGen.Create("seed");
-		ApplySeed(thing, obj.id);
-		return thing;
-	}
-
-	public static Thing MakeRandomSeed(bool enc = false)
-	{
-		Thing thing = ThingGen.Create("seed", null);
-		SourceObj.Row randomSeedObj = GetRandomSeedObj();
-		ApplySeed(thing, randomSeedObj.id);
-		return thing;
 	}
 
 	public static SourceObj.Row GetRandomSeedObj()

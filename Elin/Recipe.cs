@@ -523,7 +523,12 @@ public class Recipe : EClass
 			}
 			return EClass.sources.materials.map[3];
 		}
-		int num = ((ingredients.Count > 0) ? ingredients[source.colorIng].mat : 3);
+		int num = 3;
+		if (ingredients.Count > 0)
+		{
+			Ingredient ingredient = ingredients[source.colorIng];
+			num = ((ingredient.thing != null && ingredient.thing.isDyed) ? ingredient.thing.DyeMat.id : ingredient.mat);
+		}
 		if (num == -1)
 		{
 			num = 3;

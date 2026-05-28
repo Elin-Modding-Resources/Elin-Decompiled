@@ -178,7 +178,7 @@ public class GrowSystemTree : GrowSystem
 				}
 				if (point.IsFarmField)
 				{
-					TryPick(GrowSystem.cell, TraitSeed.MakeSeed(point.sourceObj, plant), c);
+					TryPick(GrowSystem.cell, TraitSeed.MakeSeed(GrowSystem.cell), c);
 				}
 			}
 			return;
@@ -187,7 +187,7 @@ public class GrowSystemTree : GrowSystem
 		TryPick(GrowSystem.cell, "resin", -1, 1 + PlantBonus() / 2);
 		if (!EClass.player.isAutoFarming)
 		{
-			TryPick(GrowSystem.cell, TraitSeed.MakeSeed(GrowSystem.cell.sourceObj, plant).SetNum(1 + EClass.rnd(3)), c);
+			TryPick(GrowSystem.cell, TraitSeed.MakeSeed(GrowSystem.cell).SetNum(1 + EClass.rnd(3)), c);
 			if (EClass.rnd(100) == 0)
 			{
 				TryPick(GrowSystem.cell, "throw_putit");

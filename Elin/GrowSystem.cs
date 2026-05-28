@@ -622,7 +622,7 @@ public class GrowSystem : EClass
 			}
 			if (EClass.player.isAutoFarming || EClass.rnd(num) < EClass.rnd(source.chance))
 			{
-				Thing thing = TraitSeed.MakeSeed(source, EClass._map.TryGetPlant(cell));
+				Thing thing = TraitSeed.MakeSeed(cell);
 				if (EClass.player.isAutoFarming)
 				{
 					return thing;
@@ -665,6 +665,10 @@ public class GrowSystem : EClass
 			}
 		}
 		ApplySeed(t);
+		if (cell.isObjDyed && source.ContainsTag("dyeable"))
+		{
+			t.Dye(cell.matObj);
+		}
 		PlantData plantData = EClass._map.TryGetPlant(cell);
 		bool flag = false;
 		if (plantData != null && plantData.size > 0)
@@ -733,6 +737,10 @@ public class GrowSystem : EClass
 		t.SetEncLv(encLv);
 		t.c_refText = thing.c_refText;
 		t.isCrafted = true;
+		if (thing.isDyed)
+		{
+			t.Dye(thing.DyeMat);
+		}
 	}
 
 	public virtual int GetHp()

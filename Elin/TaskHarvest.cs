@@ -278,7 +278,7 @@ public class TaskHarvest : BaseTaskHarvest
 	{
 		SetTarget(owner);
 		string i = (IsObj ? pos.cell.GetObjName() : target.Name);
-		SourceMaterial.Row mat = (IsObj ? pos.cell.matObj : target.material);
+		SourceMaterial.Row mat = ((!IsObj) ? target.material : (pos.cell.isObjDyed ? pos.sourceObj.DefaultMaterial : pos.cell.matObj));
 		GrowSystem growth = pos.growth;
 		float num = (base.IsHarvest ? 0.5f : ((!IsObj) ? 1f : ((growth != null) ? growth.MtpProgress : 1f)));
 		int exp = 50;

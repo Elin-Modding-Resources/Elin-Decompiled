@@ -183,7 +183,7 @@ public class AttackProcess : EClass
 			dBonus = CC.DMG + (CC.IsPCParty ? 3 : 7) + Math.Min(weapon.encLV, 99);
 			dNum = 2;
 			dDim = (((!CC.IsPCParty) ? CC.LV : 0) + CC.STR + CC.Evalue(108)) * num2 / 100 * num3 / 100 / 2;
-			dMulti = 1f;
+			dMulti = 1f + (float)CC.Evalue(132) / 500f;
 			toHitBase = EClass.curve(CC.DEX / 4 + CC.STR / 2 + weaponSkill.Value, 50, 25) + (CC.IsPCFaction ? 75 : 250);
 			toHitFix = CC.HIT + weapon.HIT;
 			penetration = 25;

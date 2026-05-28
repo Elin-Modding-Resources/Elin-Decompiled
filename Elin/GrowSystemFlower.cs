@@ -18,4 +18,14 @@ public class GrowSystemFlower : GrowSystemPlant
 			PopHarvest(c ?? EClass.pc, ThingGen.Create(idHarvestThing.IsEmpty("flower")));
 		}
 	}
+
+	public override void OnSetObj()
+	{
+		string alias = source.alias;
+		if (alias == "tulip_red" || alias == "roseflower")
+		{
+			GrowSystem.cell.DyeObj("rubinus");
+			GrowSystem.cell.objDir = EClass.rnd(4);
+		}
+	}
 }

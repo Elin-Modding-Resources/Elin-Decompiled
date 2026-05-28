@@ -1852,15 +1852,15 @@ public class Map : MapBounds, IPathfindGrid
 	{
 		Cell cell = point.cell;
 		SourceObj.Row sourceObj = cell.sourceObj;
-		SourceMaterial.Row matObj = cell.matObj;
+		SourceMaterial.Row row = (cell.isObjDyed ? sourceObj.DefaultMaterial : cell.matObj);
 		if (sourceObj.tileType.IsBlockPass)
 		{
 			Effect.Get("smoke").Play(point);
 		}
-		Effect.Get("mine").Play(point).SetParticleColor(cell.matObj.GetColor())
+		Effect.Get("mine").Play(point).SetParticleColor(row.GetColor())
 			.Emit(10 + EClass.rnd(10));
-		point.PlaySound(matObj.GetSoundDead());
-		matObj.AddBlood(point, 3);
+		point.PlaySound(row.GetSoundDead());
+		row.AddBlood(point, 3);
 	}
 
 	public void MineObj(Point point, Task task = null, Chara c = null)
@@ -1895,7 +1895,7 @@ public class Map : MapBounds, IPathfindGrid
 				}
 				else if (!EClass._zone.IsUserZone)
 				{
-					Thing t2 = TraitSeed.MakeSeed(sourceObj, TryGetPlant(cell)).SetNum(num2);
+					Thing t2 = TraitSeed.MakeSeed(cell).SetNum(num2);
 					EClass.pc.PickOrDrop(point, t2);
 				}
 				if (cell.growth.IsTree)

@@ -1721,6 +1721,12 @@ public class Cell : WeightCell, IFloodCell
 		return EClass._map.TryGetPlant(this);
 	}
 
+	public void DyeObj(string id)
+	{
+		isObjDyed = true;
+		objMat = (byte)EClass.sources.materials.alias[id].id;
+	}
+
 	public float GetSurfaceHeight()
 	{
 		if (detail == null)
@@ -1774,13 +1780,13 @@ public class Cell : WeightCell, IFloodCell
 		}
 		if (moveType == PathManager.MoveType.Default)
 		{
-			if (walker.IsAstralBody)
+			if (walker.IsAstralBody && !EClass._zone.IsRegion)
 			{
 				return false;
 			}
 			return blocked;
 		}
-		if (!blocked || walker.IsAstralBody)
+		if (!blocked || (walker.IsAstralBody && !EClass._zone.IsRegion))
 		{
 			if (detail != null)
 			{

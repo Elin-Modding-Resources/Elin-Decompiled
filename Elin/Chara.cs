@@ -805,31 +805,36 @@ public class Chara : Card, IPathfindWalker
 	{
 		get
 		{
-			if (spriteReplacer == null)
+			if (spriteReplacer != null)
 			{
-				if (base.idSkin > 0)
+				if (spriteReplacer.data.pref == null && !spriteReplacer.data.tryFixPrefNotLoadedAtStart)
 				{
-					switch (sourceCard.tiles.TryGet(base.idSkin))
-					{
-					case 2319:
-					case 2619:
-					case 2621:
-					case 2623:
-					case 2625:
-						return EClass.core.refs.prefs.sonwputit1;
-					case 2320:
-					case 2611:
-					case 2620:
-					case 2622:
-					case 2624:
-					case 2626:
-					case 2828:
-						return EClass.core.refs.prefs.snowputit2;
-					}
+					spriteReplacer.data.tryFixPrefNotLoadedAtStart = true;
+					spriteReplacer.data.LoadPref();
 				}
-				return sourceCard.replacer.data?.pref ?? sourceCard.pref;
+				return spriteReplacer.data?.pref ?? EClass.core.refs.prefs.replacer1;
 			}
-			return spriteReplacer.data?.pref ?? EClass.core.refs.prefs.replacer1;
+			if (base.idSkin > 0)
+			{
+				switch (sourceCard.tiles.TryGet(base.idSkin))
+				{
+				case 2319:
+				case 2619:
+				case 2621:
+				case 2623:
+				case 2625:
+					return EClass.core.refs.prefs.sonwputit1;
+				case 2320:
+				case 2611:
+				case 2620:
+				case 2622:
+				case 2624:
+				case 2626:
+				case 2828:
+					return EClass.core.refs.prefs.snowputit2;
+				}
+			}
+			return sourceCard.replacer.data?.pref ?? sourceCard.pref;
 		}
 	}
 
@@ -2528,7 +2533,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			if ((EClass._map.cells[p.x, p.z].blocked && (!IsAstralBody || EClass._map.cells[p.x, p.z].IsSky)) || EClass._map.cells[pos.x, pos.z].weights[num] == 0)
+			if ((EClass._map.cells[p.x, p.z].blocked && (!IsAstralBody || EClass._map.cells[p.x, p.z].IsSky || EClass._zone.IsRegion || !EClass._map.bounds.Contains(pos.x, pos.z))) || EClass._map.cells[pos.x, pos.z].weights[num] == 0)
 			{
 				return false;
 			}
@@ -2542,7 +2547,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					return false;
 				}
-				if (cells[x, z].blocked && (!IsAstralBody || cells[x, z].IsSky))
+				if (cells[x, z].blocked && (!IsAstralBody || cells[x, z].IsSky || EClass._zone.IsRegion))
 				{
 					return false;
 				}
@@ -2558,7 +2563,7 @@ public class Chara : Card, IPathfindWalker
 				{
 					return false;
 				}
-				if (cells[x, z].blocked && (!IsAstralBody || cells[x, z].IsSky))
+				if (cells[x, z].blocked && (!IsAstralBody || cells[x, z].IsSky || EClass._zone.IsRegion))
 				{
 					return false;
 				}
@@ -3826,7 +3831,7 @@ public class Chara : Card, IPathfindWalker
 			break;
 		case 5:
 		case 30:
-			if (isWeakToSunlight && pos.IsSunLit)
+			if (isWeakToSunlight && pos.IsSunLit && !EClass.debug.godMode)
 			{
 				AddCondition<ConBurning>(1000, force: true);
 			}
