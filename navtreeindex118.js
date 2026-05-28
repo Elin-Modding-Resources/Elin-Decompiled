@@ -1,5 +1,8 @@
 var NAVTREEINDEX118 =
 {
+"classTileTypeChasm.html":[1,0,1397],
+"classTileTypeChasm.html#a805df73e2e1fe5b8a8aaf2ee49574726":[1,0,1397,0],
+"classTileTypeDoor.html":[1,0,1398],
 "classTileTypeDoor.html#a002d5724178dab4807dd0aa7d5628fd7":[1,0,1398,5],
 "classTileTypeDoor.html#a55d2184e167167eefc8b280162a425fe":[1,0,1398,2],
 "classTileTypeDoor.html#a77062ed4b4c4ae7035834a94690c29b0":[1,0,1398,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX118 =
 "classToneDataList.html":[1,0,1450],
 "classToneDataList.html#a7c35f8b58a70841bf7ca043907c57dae":[1,0,1450,0],
 "classToneDataList.html#ac1ede95e937c1caa5be2206dcb2d5f02":[1,0,1450,2],
-"classToneDataList.html#aeb12580b326ad3ca57c2ff992c25c1b3":[1,0,1450,1],
-"classTooltipData.html":[1,0,1451],
-"classTooltipData.html#a02d27583bcaca7c0052a5201e4e9c05e":[1,0,1451,3],
-"classTooltipData.html#a0c7a4208ea8a8cf2761622df863353e4":[1,0,1451,5]
+"classToneDataList.html#aeb12580b326ad3ca57c2ff992c25c1b3":[1,0,1450,1]
 };

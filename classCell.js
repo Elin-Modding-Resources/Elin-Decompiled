@@ -7,6 +7,7 @@ var classCell =
     [ "CanMakeStraw", "classCell.html#a0b5b794b5bf979b4eb5fd3e5f2a47265", null ],
     [ "CanReapSeed", "classCell.html#ad82c4c002d7d26b3f51f20ac23c87e81", null ],
     [ "CanSuffocate", "classCell.html#ae6ee56f2ccab47dd6d11964ad14fe62c", null ],
+    [ "DyeObj", "classCell.html#a3950bc214f3a4e629c246657040db3ac", null ],
     [ "Equals", "classCell.html#af9baf281dd21e672e074b9fb88797fec", null ],
     [ "GetBlockName", "classCell.html#ab99724d1f578f57e18c2d3466c742ad5", null ],
     [ "GetBridgeName", "classCell.html#a42602f4e2d0d68ddcefaf145d8693ada", null ],

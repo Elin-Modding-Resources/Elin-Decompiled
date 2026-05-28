@@ -18,5 +18,6 @@ var classSpriteData =
     [ "scale", "classSpriteData.html#aa80b10d37115b754b7a57721af581e11", null ],
     [ "sprites", "classSpriteData.html#a179aa55dbcdd3a706c9578e1256886c5", null ],
     [ "tex", "classSpriteData.html#a2bb56554ce16f0af909b235b83215517", null ],
-    [ "time", "classSpriteData.html#adf8ba462c11d8df4f83c557ea9cc727d", null ]
+    [ "time", "classSpriteData.html#adf8ba462c11d8df4f83c557ea9cc727d", null ],
+    [ "tryFixPrefNotLoadedAtStart", "classSpriteData.html#a2faf45d553a0d6f0d64c05b1e5c10732", null ]
 ];

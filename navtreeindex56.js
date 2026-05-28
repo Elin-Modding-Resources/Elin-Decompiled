@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"classCoreRef_1_1InventoryStyle.html#ac73a7499a8f163b4537ca69ffd2a0b90":[1,0,427,5,2],
 "classCoreRef_1_1InventoryStyle.html#adb0362f00db063bccb8fc540e25f54e9":[1,0,427,5,0],
 "classCoreRef_1_1InventoryStyle.html#afbde42cc1979a47687c1f63c98e956dc":[1,0,427,5,5],
 "classCoreRef_1_1OrbitIcons.html":[1,0,427,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "classCursorSystem.html#aa66fe6cc9f8b06d65da080964d798dde":[1,0,445,33],
 "classCursorSystem.html#aa6e09d588ef0468948c9c8fc604ad27b":[1,0,445,45],
 "classCursorSystem.html#aa7085f8ad55fa490cbc0c4bcb261e9dd":[1,0,445,43],
-"classCursorSystem.html#aab4c592c51f1e3a6b952ecd71791205c":[1,0,445,54],
-"classCursorSystem.html#aad2361de9dd2c9720a7d9cd292adc09c":[1,0,445,21]
+"classCursorSystem.html#aab4c592c51f1e3a6b952ecd71791205c":[1,0,445,54]
 };

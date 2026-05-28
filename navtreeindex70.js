@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"classGenBounds.html#af25058aec70f18f04698c0425d977cdb":[1,0,572,8],
 "classGenBounds.html#af2b2ee3b0222ce1d895b77171a9ce943":[1,0,572,4],
 "classGenBounds.html#afc64fedfe2f244865599dec27704a1dd":[1,0,572,2],
 "classGenRoom.html":[1,0,575],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "classGrowSystem.html":[1,0,611],
 "classGrowSystem.html#a03e1eb0500f714f92da21cd308569440":[1,0,611,39],
 "classGrowSystem.html#a0569eb515437fbc5dec14c12471c52ff":[1,0,611,33],
-"classGrowSystem.html#a09f6ec1ebb599d26522abf33e38ad116":[1,0,611,31],
-"classGrowSystem.html#a0cea3d86f9b53e3ad287d9fa3872c10c":[1,0,611,1]
+"classGrowSystem.html#a09f6ec1ebb599d26522abf33e38ad116":[1,0,611,31]
 };

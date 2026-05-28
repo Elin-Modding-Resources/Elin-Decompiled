@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"classConWait.html#aa26395da0b82ddde0f31ecfc5b80a6c5":[1,0,414,1],
 "classConWardMonster.html":[1,0,415],
 "classConWeakResEle.html":[1,0,417],
 "classConWeakness.html":[1,0,416],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "classContentGallery.html#a23e2776de8e0ace978fe6abab79c2f13":[1,0,391,16],
 "classContentGallery.html#a3442c80b08b81a45505ca60bf0d8a574":[1,0,391,7],
 "classContentGallery.html#a3e50fc895f689f247476f16694c17b43":[1,0,391,3],
-"classContentGallery.html#a6eb98472510cfbc6ea6bc72e9327afb4":[1,0,391,13],
-"classContentGallery.html#a8c28ca32c4cfd4f9d9695973f3012402":[1,0,391,4]
+"classContentGallery.html#a6eb98472510cfbc6ea6bc72e9327afb4":[1,0,391,13]
 };

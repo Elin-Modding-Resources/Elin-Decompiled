@@ -1,8 +1,10 @@
 var NAVTREEINDEX88 =
 {
+"classMosframe_1_1ScrollbarHandleSize.html":[1,0,6,4],
 "classMosframe_1_1ScrollbarHandleSize.html#a11c24db7e8999ca504709748621c21c7":[0,4,6,4,5],
-"classMosframe_1_1ScrollbarHandleSize.html#a54904beb7979f1bcec120cfd073bccd2":[1,0,6,4,4],
+"classMosframe_1_1ScrollbarHandleSize.html#a11c24db7e8999ca504709748621c21c7":[1,0,6,4,5],
 "classMosframe_1_1ScrollbarHandleSize.html#a54904beb7979f1bcec120cfd073bccd2":[0,4,6,4,4],
+"classMosframe_1_1ScrollbarHandleSize.html#a54904beb7979f1bcec120cfd073bccd2":[1,0,6,4,4],
 "classMosframe_1_1ScrollbarHandleSize.html#a5506d004226f778d75a832a974ce3b18":[1,0,6,4,2],
 "classMosframe_1_1ScrollbarHandleSize.html#a5506d004226f778d75a832a974ce3b18":[0,4,6,4,2],
 "classMosframe_1_1ScrollbarHandleSize.html#a70157e91dcf7c331965964d8dc083559":[1,0,6,4,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX88 =
 "classNotificationCooldown.html#a2028e864389ad438b6d31f5c0e1e7c00":[1,0,953,4],
 "classNotificationCooldown.html#a8b8e59afa5b8257ee385df1f9ce18aab":[1,0,953,0],
 "classNotificationCooldown.html#a912bba5053f60ebdbb7e6620b93c52cd":[1,0,953,7],
-"classNotificationCooldown.html#a9156ce246369fef83e2e6b721db4bbf8":[1,0,953,2],
-"classNotificationCooldown.html#aa7ee643e0ae7282832af10915aad8a97":[1,0,953,5],
-"classNotificationCooldown.html#abcb161d5b242a00eb4521519f71d0cad":[1,0,953,6]
+"classNotificationCooldown.html#a9156ce246369fef83e2e6b721db4bbf8":[1,0,953,2]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX123 =
 {
+"classTraitDrawingPaperM.html#ad8092b4a561151c1a2b9481e7d85ead5":[1,0,1603,0],
+"classTraitDreamBug.html":[1,0,1604],
+"classTraitDreamBug.html#a0b06e0705570930530a148076cb8c4e2":[1,0,1604,2],
 "classTraitDreamBug.html#a18d492d340ab5615e331d005f5e9d818":[1,0,1604,0],
 "classTraitDreamBug.html#a312a1c5a153424c12d45ce5e5c1872fc":[1,0,1604,1],
 "classTraitDreamBug.html#a52f951b18784825907d82d82bfa5b351":[1,0,1604,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitGM__Fighter.html":[1,0,1687],
 "classTraitGM__Mage.html":[1,0,1688],
 "classTraitGM__Merchant.html":[1,0,1689],
-"classTraitGM__Thief.html":[1,0,1690],
-"classTraitGacha.html":[1,0,1664],
-"classTraitGacha.html#a105f89d64e5997d0e6a706688b0d120b":[1,0,1664,3],
-"classTraitGacha.html#a1db11aa432c9bd42cec71f6fb6447158":[1,0,1664,1]
+"classTraitGM__Thief.html":[1,0,1690]
 };

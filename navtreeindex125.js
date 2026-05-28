@@ -1,5 +1,8 @@
 var NAVTREEINDEX125 =
 {
+"classTraitKettle.html#a33374215107213d73f52df9ce041331b":[1,0,1720,8],
+"classTraitKettle.html#a3d81c25abb48955fa7aba166c881c756":[1,0,1720,2],
+"classTraitKettle.html#a87f74459a7a4845567b22b7fb626d02c":[1,0,1720,1],
 "classTraitKettle.html#ab28c7087c28817390dd30f8ca9e00178":[1,0,1720,7],
 "classTraitKettle.html#ab4c80c01c1125e6111420740696b9d0d":[1,0,1720,5],
 "classTraitKettle.html#abad08e8eb2d56f33009395c62f660ca7":[1,0,1720,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitMineEntrance.html#ad4edf6ccbf323b04d581042f0d5db63f":[1,0,1787,1],
 "classTraitMiniPool.html":[1,0,1788],
 "classTraitMiniPool.html#a3da0901f8c0fb31f5bce5efde7fc5d0b":[1,0,1788,0],
-"classTraitMiral.html":[1,0,1789],
-"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1789,5],
-"classTraitMiral.html#a377aac926d21870adbfbe70fa41b77c8":[1,0,1789,4],
-"classTraitMiral.html#a63e4a4dd026d96c60e4584aee3a04b0c":[1,0,1789,2]
+"classTraitMiral.html":[1,0,1789]
 };

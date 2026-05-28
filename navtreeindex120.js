@@ -1,5 +1,8 @@
 var NAVTREEINDEX120 =
 {
+"classTrait.html#ae871dd13fc2fdff306261be34b481058":[1,0,1453,35],
+"classTrait.html#ae9ba15ed91bb653a5ad121e61b877cab":[1,0,1453,95],
+"classTrait.html#aea1c46b47612fab453627904323922c1":[1,0,1453,42],
 "classTrait.html#aeae7706effc27faab891e9b6e10b5dd8":[1,0,1453,145],
 "classTrait.html#aeaf83db7916e730b6b27066c133b240c":[1,0,1453,210],
 "classTrait.html#aeb890fe5326f5f413cf37c724575ab78":[1,0,1453,59],
@@ -246,8 +249,5 @@ var NAVTREEINDEX120 =
 "classTraitBlanket.html":[1,0,1500],
 "classTraitBlanket.html#a53d27637cc556e3c125c466cc8ac652c":[1,0,1500,3],
 "classTraitBlanket.html#a782f100d552308d63b1ddac41ca4cf87":[1,0,1500,0],
-"classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1500,1],
-"classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1500,2],
-"classTraitBlanketColdproof.html":[1,0,1501],
-"classTraitBlanketFireproof.html":[1,0,1502]
+"classTraitBlanket.html#ad4fb34d1b8f83fa6eda4da648f6b9da6":[1,0,1500,1]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX121 =
 {
+"classTraitBlanket.html#af106b3f1e0d2c2818d5e1937ac3c11fc":[1,0,1500,2],
+"classTraitBlanketColdproof.html":[1,0,1501],
+"classTraitBlanketFireproof.html":[1,0,1502],
 "classTraitBlock.html":[1,0,1503],
 "classTraitBlock.html#ae426f33158dbe2679e431c2b12875260":[1,0,1503,0],
 "classTraitBloodSample.html":[1,0,1504],
@@ -246,8 +249,5 @@ var NAVTREEINDEX121 =
 "classTraitContainerPurse.html":[1,0,1555],
 "classTraitContainerPurse.html#a9c4a857406e55a4b88e6a2b1989e2c36":[1,0,1555,0],
 "classTraitContainerShared.html":[1,0,1556],
-"classTraitContainerShared.html#ad1c35637c320a062119c4a541ba3ec91":[1,0,1556,0],
-"classTraitContainerShop.html":[1,0,1557],
-"classTraitContainerUnburnable.html":[1,0,1558],
-"classTraitCooker.html":[1,0,1559]
+"classTraitContainerShared.html#ad1c35637c320a062119c4a541ba3ec91":[1,0,1556,0]
 };

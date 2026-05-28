@@ -4,6 +4,7 @@ var classTraitSeed =
     [ "GetRandomSeedObj", "classTraitSeed.html#a022b05bc222961ddf02ab956699a4376", null ],
     [ "LevelSeed", "classTraitSeed.html#ab1a58e9818adecda0adc5d55f8a16c48", null ],
     [ "MakeRandomSeed", "classTraitSeed.html#a923f82176e5f262b290f9ec55038f5d2", null ],
+    [ "MakeSeed", "classTraitSeed.html#ace53bc23a686aa430cf28e6c2080b2fb", null ],
     [ "MakeSeed", "classTraitSeed.html#ae4abd6eafb95c4415723bf945c0abbe6", null ],
     [ "MakeSeed", "classTraitSeed.html#a4e85436bb9800c6440030b79204601d9", null ],
     [ "MakeSeed", "classTraitSeed.html#ac31ee9604c76c7eb22bef287c97532ac", null ],

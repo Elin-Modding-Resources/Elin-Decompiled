@@ -1,5 +1,8 @@
 var NAVTREEINDEX126 =
 {
+"classTraitMiral.html#a13f00df2fa41e728b44adc75b5fbe703":[1,0,1789,5],
+"classTraitMiral.html#a377aac926d21870adbfbe70fa41b77c8":[1,0,1789,4],
+"classTraitMiral.html#a63e4a4dd026d96c60e4584aee3a04b0c":[1,0,1789,2],
 "classTraitMiral.html#a79d7b7af125be1f284cdee11eee50f6b":[1,0,1789,1],
 "classTraitMiral.html#aa4e80ca1b96c8498276a839bc1a0ce63":[1,0,1789,0],
 "classTraitMiral.html#af8bc8e07899c0e933ac0173f6a699611":[1,0,1789,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitPunishBall.html#aa09ba5e2e40ce2ceab7738c0967479ad":[1,0,1845,3],
 "classTraitPunishBall.html#af986d9992b08bfedf70a1ccb37add2fb":[1,0,1845,2],
 "classTraitPuppy.html":[1,0,1846],
-"classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1846,0],
-"classTraitQuestBoard.html":[1,0,1847],
-"classTraitQuestBoard.html#a027b4628114024a8dd4386f538c96452":[1,0,1847,0],
-"classTraitQuestBoard.html#acc915a6236db624e9877d89ed47c9913":[1,0,1847,1]
+"classTraitPuppy.html#a6d5a08a298a186d0f900b096d33c2bdb":[1,0,1846,0]
 };

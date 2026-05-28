@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"classLayerConsole.html#a00932463f607f48c2e00db66023cf97a":[1,0,809,2],
+"classLayerConsole.html#a35aa71b690d07af90a643f9455b10f97":[1,0,809,3],
 "classLayerConsole.html#aa016dec0f5a553940da2a1dee4e511e1":[1,0,809,1],
 "classLayerConsole.html#ab9dfc51e32946ddd1d26406186673c12":[1,0,809,0],
 "classLayerCover.html":[1,0,810],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "classLayerEditPlaylist.html#a8174f6bdc11a0bf24f5e40a309a87bc8":[1,0,821,14],
 "classLayerEditPlaylist.html#a8202631bf3cb4eee46f7efdf8bd55066":[1,0,821,11],
 "classLayerEditPlaylist.html#a99097a5d50df0ee1d6eca1e1702fb652":[1,0,821,13],
-"classLayerEditPlaylist.html#a9dfc06e1bb9ec91b4209730b6f3b6b57":[1,0,821,15],
-"classLayerEditPlaylist.html#ab8eb96e393ddb7c6e5c75e0a121e35f9":[1,0,821,4],
-"classLayerEditPlaylist.html#abafe0a88654f40927c6b7a33fcf8eb23":[1,0,821,8]
+"classLayerEditPlaylist.html#a9dfc06e1bb9ec91b4209730b6f3b6b57":[1,0,821,15]
 };

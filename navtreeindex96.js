@@ -1,5 +1,7 @@
 var NAVTREEINDEX96 =
 {
+"classQuestDefenseGame.html#aa99bffe9473ce269dbab915f55553245":[1,0,1025,1],
+"classQuestDefenseGame.html#ac30bf7f41b3cc1a02276afcf91c5333c":[1,0,1025,4],
 "classQuestDefenseGame.html#ac80947d3d8b47cc223d386e68f225b05":[1,0,1025,0],
 "classQuestDefenseGame.html#ad05e2dfbd03444d2650cb87280b963a1":[1,0,1025,8],
 "classQuestDefenseGame.html#ada3b1dd97bafcc67414d14cc09c56660":[1,0,1025,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "classQuestNasu.html#addd044d92c4b79dcd9acdee3bc45bb51":[1,0,1070,0],
 "classQuestNegotiationDarkness.html":[1,0,1071],
 "classQuestNegotiationDarkness.html#a05ad6892e43a89fac37a9edd4c4709b4":[1,0,1071,0],
-"classQuestNegotiationDarkness.html#a1dccd4a910593765ea94bf573a878352":[1,0,1071,3],
-"classQuestNegotiationDarkness.html#a3bbdc03e427d1419ce680fa3953c0fef":[1,0,1071,4],
-"classQuestNegotiationDarkness.html#a7f50d02dc7f93dbea5923e4f734f5b0e":[1,0,1071,1]
+"classQuestNegotiationDarkness.html#a1dccd4a910593765ea94bf573a878352":[1,0,1071,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"classEffectManager_1_1EffectList.html#a228b6c65f22fc4ad88a4f712099d4914":[1,0,490,0,0],
 "classEffectMeteor.html":[1,0,491],
 "classEffectMeteor.html#a136d029336b0c95f59ed828f2e097c67":[1,0,491,1],
 "classEffectMeteor.html#a7df3ab0069ef7c288a958f680019793d":[1,0,491,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "classEloMap.html#a005eb26c5c0f9be68eece6fe9238ace8":[1,0,508,22],
 "classEloMap.html#a0797d69e85c0817f04a75280fec113d7":[1,0,508,14],
 "classEloMap.html#a0d645ebe3ded1112af376834928de2d3":[1,0,508,20],
-"classEloMap.html#a2e98739c30cf1857509452ffbcc78b29":[1,0,508,5],
-"classEloMap.html#a38d288255611bf0adbc16d80b75ccea6":[1,0,508,27]
+"classEloMap.html#a2e98739c30cf1857509452ffbcc78b29":[1,0,508,5]
 };

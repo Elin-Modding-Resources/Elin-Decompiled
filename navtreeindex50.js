@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"classConDisease.html":[1,0,331],
 "classConDisease.html#a1434844620f4de148c1065529cfa3f89":[1,0,331,0],
 "classConDisease.html#a323a32b289ed5406f61f8ebb4d8de49d":[1,0,331,2],
 "classConDisease.html#a77af44cc3544aac2d0cce8a9930605bf":[1,0,331,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "classConVampire.html#af0cd8bbb5ab5f1864d9a7d82d7c62019":[1,0,413,3],
 "classConWait.html":[1,0,414],
 "classConWait.html#a1b779fa88b0ebec7ba621cd29e30b3f5":[1,0,414,2],
-"classConWait.html#a8a9e67c8523c0598cb17e0fafcaaa885":[1,0,414,0],
-"classConWait.html#aa26395da0b82ddde0f31ecfc5b80a6c5":[1,0,414,1]
+"classConWait.html#a8a9e67c8523c0598cb17e0fafcaaa885":[1,0,414,0]
 };
