@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 public class Lang
@@ -59,7 +60,7 @@ public class Lang
 
 	public static ExcelData excelDialog;
 
-	public static HashSet<string> extraExcelDialogs = new HashSet<string>();
+	public static List<Func<List<string>>> excelDialogLoaders = new List<Func<List<string>>>();
 
 	public static bool IsBuiltin(string id)
 	{
@@ -215,9 +216,10 @@ public class Lang
 			{
 				list.Add(new ExcelData(CorePath.CorePackage.TextDialogLocal + "dialog.xlsx"));
 			}
-			foreach (string extraExcelDialog in extraExcelDialogs)
+			foreach (Func<List<string>> excelDialogLoader in excelDialogLoaders)
 			{
-				list.Add(new ExcelData(extraExcelDialog));
+				list.AddRange(from f in excelDialogLoader()
+					select new ExcelData(f));
 			}
 			for (int i = 0; i < excelDialog.book.NumberOfSheets; i++)
 			{

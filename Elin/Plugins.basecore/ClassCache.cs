@@ -7,25 +7,19 @@ public class ClassCache<T>
 {
 	public Dictionary<string, Func<T>> dict = new Dictionary<string, Func<T>>();
 
-	public T Create<T2>(Type type)
+	public Func<T> CreateDelegate(Type type)
 	{
+		Func<T> result = () => default(T);
 		if (type == null)
 		{
-			return default(T);
-		}
-		Func<T> func = dict.TryGetValue(type.Name);
-		if (func != null)
-		{
-			return func();
+			return result;
 		}
 		ConstructorInfo constructor = type.GetConstructor(Type.EmptyTypes);
-		if (constructor == null)
+		if (constructor != null)
 		{
-			return default(T);
+			result = Expression.Lambda<Func<T>>(Expression.New(constructor), Array.Empty<ParameterExpression>()).Compile();
 		}
-		func = Expression.Lambda<Func<T>>(Expression.New(constructor), Array.Empty<ParameterExpression>()).Compile();
-		dict.Add(type.Name, func);
-		return func();
+		return result;
 	}
 
 	public T Create<T2>(string id, string assembly)
@@ -38,16 +32,18 @@ public class ClassCache<T>
 		Type type = Type.GetType(id + ", " + assembly);
 		if (type == null)
 		{
-			foreach (string assembly2 in ClassCache.assemblies)
+			for (int num = ClassCache.typeLoaders.Count - 1; num >= 0; num--)
 			{
-				type = Type.GetType(id + ", " + assembly2);
+				type = ClassCache.typeLoaders[num](id);
 				if (type != null)
 				{
 					break;
 				}
 			}
 		}
-		return Create<T2>(type);
+		func = CreateDelegate(type);
+		dict[id] = func;
+		return func();
 	}
 }
 public class ClassCache
@@ -56,8 +52,23 @@ public class ClassCache
 
 	public static HashSet<string> assemblies = new HashSet<string>();
 
+	public static List<Func<string, Type>> typeLoaders = new List<Func<string, Type>> { LoadTypeFromGlobalNamespace };
+
 	public static T Create<T>(string id, string assembly = "Assembly-CSharp")
 	{
 		return (T)caches.Create<T>(id, assembly);
+	}
+
+	public static Type LoadTypeFromGlobalNamespace(string id)
+	{
+		foreach (string assembly in assemblies)
+		{
+			Type type = Type.GetType(id + ", " + assembly);
+			if (type != null)
+			{
+				return type;
+			}
+		}
+		return null;
 	}
 }

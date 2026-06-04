@@ -10,10 +10,7 @@ public class ToneDataList : ExcelDataList
 
 	public StringBuilder ApplyTone(string id, ref string text, int gender)
 	{
-		if (!initialized)
-		{
-			Initialize();
-		}
+		Initialize();
 		Dictionary<string, string> dictionary = all[id];
 		StringBuilder stringBuilder = new StringBuilder();
 		bool flag = false;
@@ -57,10 +54,7 @@ public class ToneDataList : ExcelDataList
 
 	public string GetToneID(string id, int gender)
 	{
-		if (!initialized)
-		{
-			Initialize();
-		}
+		Initialize();
 		if (!Lang.isJP)
 		{
 			return id + "|I|YOU";

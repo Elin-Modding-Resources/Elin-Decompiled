@@ -159,13 +159,10 @@ public class BaseModPackage
 		{
 			if (directoryInfo.Name == "Actor")
 			{
-				FileInfo[] files = directoryInfo.GetFiles();
+				FileInfo[] files = directoryInfo.GetFiles("*.xlsx", SearchOption.TopDirectoryOnly);
 				foreach (FileInfo fileInfo in files)
 				{
-					if (fileInfo.Name.EndsWith(".xlsx"))
-					{
-						MOD.actorSources.items.Add(new ExcelData(fileInfo.FullName));
-					}
+					MOD.actorSources.Add(new ExcelData(fileInfo.FullName));
 				}
 				DirectoryInfo[] directories2 = directoryInfo.GetDirectories();
 				foreach (DirectoryInfo directoryInfo2 in directories2)

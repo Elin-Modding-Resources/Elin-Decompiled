@@ -145,26 +145,36 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 		nameBook = bookname;
 		SourceData.rowHeader = sheet.GetRow(0);
 		SourceData.rowDefault = sheet.GetRow(2);
+		IRow row = sheet.GetRow(3);
+		if (SourceData.rowHeader == null || row == null)
+		{
+			ERROR.lastImported = 0;
+			return true;
+		}
 		IReadOnlyDictionary<string, int> rowMapping = GetRowMapping();
-		Dictionary<string, int> dictionary = null;
+		Dictionary<string, int> header = null;
 		if (rowMapping != null)
 		{
-			dictionary = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
-			foreach (ICell item in SourceData.rowHeader.Cells.Where((ICell c) => c.ToString() != "0" && !c.ToString().IsEmpty()))
+			header = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+			foreach (ICell cell in SourceData.rowHeader.Cells)
 			{
-				dictionary[item.ToString().Trim()] = item.ColumnIndex;
+				string text = cell.ToString().Trim();
+				if (!(text == "0") && !text.IsEmpty())
+				{
+					header[text] = cell.ColumnIndex;
+				}
 			}
-			if (!rowMapping.Keys.All(dictionary.ContainsKey) || rowMapping.Count > dictionary.Count)
+			if (!rowMapping.All((KeyValuePair<string, int> kv) => header.TryGetValue(kv.Key, 0) == kv.Value))
 			{
-				string[] array = rowMapping.Keys.Except(dictionary.Keys).ToArray();
+				string[] array = rowMapping.Keys.Except(header.Keys).ToArray();
 				if (array.Length != 0)
 				{
-					Debug.LogWarning("#source ill-format file with missing columns, init with empty values\n" + ExcelParser.GetRowHeaderDiff(rowMapping, dictionary));
+					Debug.LogWarning("#source ill-format file with missing columns, init with empty values\n" + ExcelParser.GetRowHeaderDiff(rowMapping, header));
 					string[] array2 = array;
-					foreach (string text in array2)
+					foreach (string text2 in array2)
 					{
-						SourceData.rowHeader.CreateCell(276, CellType.String).SetCellValue(text);
-						dictionary[text] = 276;
+						SourceData.rowHeader.CreateCell(276, CellType.String).SetCellValue(text2);
+						header[text2] = 276;
 					}
 				}
 				else
@@ -174,25 +184,33 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 			}
 			else
 			{
-				dictionary = null;
+				header = null;
 			}
 		}
 		int num = 0;
 		for (int j = 3; j <= sheet.LastRowNum; j++)
 		{
 			SourceData.row = sheet.GetRow(j);
-			if (string.IsNullOrEmpty(SourceData.row?.GetCell(0)?.ToString()))
+			try
 			{
-				break;
+				if (string.IsNullOrEmpty(SourceData.row?.GetCell(0)?.ToString()))
+				{
+					break;
+				}
+				T val = ((header != null) ? CreateRowByMapping(header) : CreateRow());
+				val.OnImportData(this);
+				rows.Add(val);
+				num++;
+				continue;
 			}
-			T val = ((dictionary != null) ? CreateRowByMapping(dictionary) : CreateRow());
-			val.OnImportData(this);
-			rows.Add(val);
-			num++;
+			catch (Exception arg)
+			{
+				Debug.LogError($"#source failed to create row#{j + 1}\n{arg}");
+				continue;
+			}
 		}
-		string text2 = sheet.SheetName + "/" + sheet.LastRowNum + "/" + num;
-		Debug.Log(text2);
-		ERROR.msg = text2;
+		Debug.Log(sheet.SheetName + "/" + sheet.LastRowNum + "/" + num);
+		ERROR.lastImported = num;
 		OnAfterImportData();
 		initialized = false;
 		return true;
@@ -210,6 +228,11 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 	public virtual T CreateRowByMapping(IReadOnlyDictionary<string, int> mapping)
 	{
 		return null;
+	}
+
+	public override BaseRow[] ExportRows()
+	{
+		return rows.OfType<BaseRow>().ToArray();
 	}
 
 	public override int ImportRows(IEnumerable<BaseRow> sourceRows)
@@ -242,7 +265,7 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 		}
 		if (field.FieldType != typeof(T2))
 		{
-			Debug.LogError($"#source override: {arg} id field mismatch {field.FieldType} != {typeof(T2)}");
+			Debug.LogError($"#source-override: {arg} id field mismatch {field.FieldType} != {typeof(T2)}");
 		}
 		for (int num = rows.Count - 1; num >= 0; num--)
 		{
@@ -254,12 +277,12 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 			}
 			else if (!flag)
 			{
-				Debug.Log($"#source override: {arg} {val2}");
+				Debug.Log($"#source-override: {arg} {val2}");
 			}
 		}
 		if (rows.Count != list.Count)
 		{
-			Debug.Log($"#source override: {arg} total/{rows.Count} -> unique/{list.Count}");
+			Debug.Log($"#source-override: {arg} total/{rows.Count} -> unique/{list.Count}");
 			list.Reverse();
 			rows = list;
 		}
@@ -897,6 +920,11 @@ public class SourceData : ScriptableObject
 	public virtual int ImportRows(IEnumerable<BaseRow> sourceRows)
 	{
 		return 0;
+	}
+
+	public virtual BaseRow[] ExportRows()
+	{
+		return Array.Empty<BaseRow>();
 	}
 
 	public virtual void BackupSource()

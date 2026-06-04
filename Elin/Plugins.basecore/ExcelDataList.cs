@@ -46,12 +46,27 @@ public class ExcelDataList
 	{
 	}
 
+	public bool HasRow(string id)
+	{
+		Initialize();
+		return all.ContainsKey(id);
+	}
+
 	public Dictionary<string, string> GetRow(string id)
 	{
-		if (!initialized)
-		{
-			Initialize();
-		}
-		return all.TryGetValue(id) ?? list[0];
+		Initialize();
+		return all.TryGetValue(id);
+	}
+
+	public void Add(ExcelData data)
+	{
+		items.Add(data);
+		Reload();
+	}
+
+	public void Clear()
+	{
+		items.Clear();
+		Reload();
 	}
 }

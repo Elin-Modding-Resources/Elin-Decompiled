@@ -145,7 +145,7 @@ public class ExcelParser
 		string str = GetStr(id);
 		if (str != null)
 		{
-			return str.Split(',');
+			return str.Split(',').ToArray();
 		}
 		return Array.Empty<string>();
 	}

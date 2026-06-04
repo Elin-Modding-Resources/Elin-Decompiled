@@ -119,7 +119,7 @@ public class IO
 	{
 		if (!File.Exists(path))
 		{
-			Debug.Log("File does not exist:" + path);
+			Debug.Log("#io File does not exist:" + path);
 			return default(T);
 		}
 		string value = (IsCompressed(path) ? Decompress(path) : File.ReadAllText(path));

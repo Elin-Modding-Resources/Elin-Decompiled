@@ -9,6 +9,8 @@ public class MOD
 
 	public static TalkDataList listTalk = new TalkDataList();
 
+	public static GodTalkDataList listGodTalk = new GodTalkDataList();
+
 	public static ToneDataList tones = new ToneDataList();
 
 	public static ExcelDataList actorSources = new ExcelDataList();
@@ -22,4 +24,17 @@ public class MOD
 	public static List<FileInfo> listPartialMaps = new List<FileInfo>();
 
 	public static Dictionary<string, FileInfo> sounds = new Dictionary<string, FileInfo>();
+
+	public static void ResetResources()
+	{
+		langs.Clear();
+		listTalk.Clear();
+		listGodTalk.Clear();
+		tones.Clear();
+		actorSources.Clear();
+		sprites = new ModItemList<Sprite>();
+		listMaps.Clear();
+		listPartialMaps.Clear();
+		sounds.Clear();
+	}
 }

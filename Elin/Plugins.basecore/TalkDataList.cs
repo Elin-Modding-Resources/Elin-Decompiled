@@ -22,17 +22,13 @@ public class TalkDataList : ExcelDataList
 
 	public string GetTalk(string id, string idTopic, bool useDefault = false, bool human = true)
 	{
-		if (!initialized)
-		{
-			Initialize();
-		}
 		bool flag = false;
-		Dictionary<string, string> dictionary = all.TryGetValue(idTopic);
-		if (dictionary == null)
+		Dictionary<string, string> row = GetRow(idTopic);
+		if (row == null)
 		{
 			return "";
 		}
-		string text = dictionary.TryGetValue(id);
+		string text = row.TryGetValue(id);
 		if (text.IsEmpty())
 		{
 			if (!useDefault)
@@ -40,7 +36,7 @@ public class TalkDataList : ExcelDataList
 				Debug.LogError("id not found:" + id);
 				return "";
 			}
-			text = dictionary.TryGetValue("default");
+			text = row.TryGetValue("default");
 			flag = true;
 		}
 		text = text.Split(new string[3] { "\r\n", "\r", "\n" }, StringSplitOptions.None).RandomItem();
