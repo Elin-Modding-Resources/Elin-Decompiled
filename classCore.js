@@ -48,6 +48,7 @@ var classCore =
     [ "initialized", "classCore.html#a8e458dc5119454864d2c6fd4fd86547d", null ],
     [ "Instance", "classCore.html#a8ac9331b81131b4034d361e097440c23", null ],
     [ "lastFullScreen", "classCore.html#af7f09e149dd7ec3cbd94e7af0eaa2b3c", null ],
+    [ "launchArgs", "classCore.html#abcbd65a75fbf08edbb2a1457e2c98076", null ],
     [ "matUI", "classCore.html#a109ff8bad337801d937c5c268a68f862", null ],
     [ "mods", "classCore.html#a177018324b0a8085746d77c8fafb40d5", null ],
     [ "nextResolutionUpdate", "classCore.html#a0d40c0f78b47426c8bce493f04e4c2cb", null ],

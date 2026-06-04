@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.310 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
    </div>
   </td>
  </tr>
@@ -116,8 +116,8 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:af3821165665c366764504d956cb31c05"><td class="memItemLeft" align="right" valign="top">static List&lt; Func&lt; string[]&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBookList.html#af3821165665c366764504d956cb31c05">booklistLoaders</a> = new List&lt;Func&lt;string[]&gt;&gt;()</td></tr>
-<tr class="separator:af3821165665c366764504d956cb31c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe28a658ac07258f99bc47deb678063"><td class="memItemLeft" align="right" valign="top">static List&lt; Func&lt; List&lt; string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBookList.html#affe28a658ac07258f99bc47deb678063">booklistLoaders</a> = new List&lt;Func&lt;List&lt;string&gt;&gt;&gt;()</td></tr>
+<tr class="separator:affe28a658ac07258f99bc47deb678063"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada84d594f324b450d1ac04aa44c9a9e8"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, Dictionary&lt; string, <a class="el" href="classBookList_1_1Item.html">Item</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBookList.html#ada84d594f324b450d1ac04aa44c9a9e8">dict</a></td></tr>
 <tr class="separator:ada84d594f324b450d1ac04aa44c9a9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -240,7 +240,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   38</span>        <a class="code hl_variable" href="classBookList.html#ada84d594f324b450d1ac04aa44c9a9e8">dict</a> = <span class="keyword">new</span> Dictionary&lt;string, Dictionary&lt;string, Item&gt;&gt;();</div>
 <div class="line"><span class="lineno">   39</span>        List&lt;string&gt; list = <span class="keyword">new</span> List&lt;string&gt;();</div>
 <div class="line"><span class="lineno">   40</span>        list.AddRange(<a class="code hl_function" href="classBookList.html#ab8edc231aacb36a1b42fc9a24cfcdeca">LoadDefaultBookList</a>());</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">foreach</span> (Func&lt;<span class="keywordtype">string</span>[]&gt; booklistLoader <span class="keywordflow">in</span> <a class="code hl_variable" href="classBookList.html#af3821165665c366764504d956cb31c05">booklistLoaders</a>)</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">foreach</span> (Func&lt;List&lt;string&gt;&gt; booklistLoader <span class="keywordflow">in</span> <a class="code hl_variable" href="classBookList.html#affe28a658ac07258f99bc47deb678063">booklistLoaders</a>)</div>
 <div class="line"><span class="lineno">   42</span>        {</div>
 <div class="line"><span class="lineno">   43</span>            <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">   44</span>            {</div>
@@ -248,7 +248,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   46</span>            }</div>
 <div class="line"><span class="lineno">   47</span>            <span class="keywordflow">catch</span> (Exception arg)</div>
 <div class="line"><span class="lineno">   48</span>            {</div>
-<div class="line"><span class="lineno">   49</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogWarning(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#book external booklist loader failed\n{arg}&quot;</span>);</div>
+<div class="line"><span class="lineno">   49</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(<a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;#book external booklist loader failed\n{arg}&quot;</span>);</div>
 <div class="line"><span class="lineno">   50</span>            }</div>
 <div class="line"><span class="lineno">   51</span>        }</div>
 <div class="line"><span class="lineno">   52</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
@@ -278,7 +278,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   76</span>                {</div>
 <div class="line"><span class="lineno">   77</span>                    cat = name,</div>
 <div class="line"><span class="lineno">   78</span>                    <a class="code hl_variable" href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a> = array[0],</div>
-<div class="line"><span class="lineno">   79</span>                    author = ((array.Length &gt; 1) ? <span class="stringliteral">&quot;nameAuthor&quot;</span>.lang(array[1]) : <span class="stringliteral">&quot;unknownAuthor&quot;</span>.lang()),</div>
+<div class="line"><span class="lineno">   79</span>                    author = ((array.Length &gt; 1 &amp;&amp; !array[1].IsEmpty()) ? <span class="stringliteral">&quot;nameAuthor&quot;</span>.lang(array[1]) : <span class="stringliteral">&quot;unknownAuthor&quot;</span>.lang()),</div>
 <div class="line"><span class="lineno">   80</span>                    chance = ((array.Length &gt; 2) ? array[2].ToInt() : 100),</div>
 <div class="line"><span class="lineno">   81</span>                    skin = ((array.Length &gt; 3) ? array[3].ToInt() : 0),</div>
 <div class="line"><span class="lineno">   82</span>                    <span class="keywordtype">id</span> = text,</div>
@@ -289,13 +289,13 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   87</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aHealSource_8cs_html_a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679"><div class="ttname"><a href="HealSource_8cs.html#a3111b7c56697622ac9831636c9d40f0ba7d74f3b92b19da5e606d737d339a9679">HealSource.Item</a></div><div class="ttdeci">@ Item</div></div>
-<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00087">ModManager.cs:87</a></div></div>
+<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00076">ModManager.cs:76</a></div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aUIBook_8cs_html_a270e3896fe3ee5b1a258e8c8091a1945"><div class="ttname"><a href="UIBook_8cs.html#a270e3896fe3ee5b1a258e8c8091a1945">title</a></div><div class="ttdeci">item3. title</div><div class="ttdef"><b>Definition:</b> <a href="UIBook_8cs_source.html#l00640">UIBook.cs:640</a></div></div>
 <div class="ttc" id="aclassBookList_html_ab8edc231aacb36a1b42fc9a24cfcdeca"><div class="ttname"><a href="classBookList.html#ab8edc231aacb36a1b42fc9a24cfcdeca">BookList.LoadDefaultBookList</a></div><div class="ttdeci">static string[] LoadDefaultBookList()</div><div class="ttdef"><b>Definition:</b> <a href="BookList_8cs_source.html#l00102">BookList.cs:102</a></div></div>
-<div class="ttc" id="aclassBookList_html_af3821165665c366764504d956cb31c05"><div class="ttname"><a href="classBookList.html#af3821165665c366764504d956cb31c05">BookList.booklistLoaders</a></div><div class="ttdeci">static List&lt; Func&lt; string[]&gt; &gt; booklistLoaders</div><div class="ttdef"><b>Definition:</b> <a href="BookList_8cs_source.html#l00028">BookList.cs:28</a></div></div>
+<div class="ttc" id="aclassBookList_html_affe28a658ac07258f99bc47deb678063"><div class="ttname"><a href="classBookList.html#affe28a658ac07258f99bc47deb678063">BookList.booklistLoaders</a></div><div class="ttdeci">static List&lt; Func&lt; List&lt; string &gt; &gt; &gt; booklistLoaders</div><div class="ttdef"><b>Definition:</b> <a href="BookList_8cs_source.html#l00028">BookList.cs:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00087">$</a>, <a class="el" href="BookList_8cs_source.html#l00028">booklistLoaders</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="BookList_8cs_source.html#l00030">dict</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="BookList_8cs_source.html#l00102">LoadDefaultBookList()</a>, and <a class="el" href="UIBook_8cs_source.html#l00640">title</a>.</p>
+<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00076">$</a>, <a class="el" href="BookList_8cs_source.html#l00028">booklistLoaders</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="BookList_8cs_source.html#l00030">dict</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="BookList_8cs_source.html#l00102">LoadDefaultBookList()</a>, and <a class="el" href="UIBook_8cs_source.html#l00640">title</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="BookList_8cs_source.html#l00096">GetItem()</a>, and <a class="el" href="BookList_8cs_source.html#l00089">GetRandomItem()</a>.</p>
 
@@ -343,8 +343,8 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af3821165665c366764504d956cb31c05" name="af3821165665c366764504d956cb31c05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3821165665c366764504d956cb31c05">&#9670;&#160;</a></span>booklistLoaders</h2>
+<a id="affe28a658ac07258f99bc47deb678063" name="affe28a658ac07258f99bc47deb678063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe28a658ac07258f99bc47deb678063">&#9670;&#160;</a></span>booklistLoaders</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,7 +353,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;Func&lt;string[]&gt; &gt; BookList.booklistLoaders = new List&lt;Func&lt;string[]&gt;&gt;()</td>
+          <td class="memname">List&lt;Func&lt;List&lt;string&gt; &gt; &gt; BookList.booklistLoaders = new List&lt;Func&lt;List&lt;string&gt;&gt;&gt;()</td>
         </tr>
       </table>
   </td>

@@ -136,6 +136,7 @@ var classFEAT =
     [ "featSPD", "classFEAT.html#a1979cda1cd06f650a10ccba67d126177", null ],
     [ "featSpike", "classFEAT.html#ad55db0153ca26111fdf9e256400e0311", null ],
     [ "featSplit", "classFEAT.html#a89dfee0403abeba460666e3e11ef3d49", null ],
+    [ "featSplitWater", "classFEAT.html#a97a55891e4f45625575710a232b1feb7", null ],
     [ "featSpotting", "classFEAT.html#ac40d5df55c67f84ffdb11d79474304c7", null ],
     [ "featStamina", "classFEAT.html#ac79595a4b35d5928b43b74cd8b610c8c", null ],
     [ "featSTR", "classFEAT.html#a837c3c0b1a633c3937b10b1df9c0d3dc", null ],

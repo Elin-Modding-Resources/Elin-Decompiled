@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.310 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
    </div>
   </td>
  </tr>
@@ -120,10 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2bd44c5e5fb7182a0450bfd8139e6fc9 inherit pub_methods_classTraitChara"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a082aebc8ded8a214962006a21717b046 inherit pub_methods_classTraitChara"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitChara.html#a082aebc8ded8a214962006a21717b046">GetValue</a> ()</td></tr>
 <tr class="separator:a082aebc8ded8a214962006a21717b046 inherit pub_methods_classTraitChara"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc8a3d0d54d7140a40672748356b27a3 inherit pub_methods_classTraitChara"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3">GetAdvRank</a> ()</td></tr>
-<tr class="separator:afc8a3d0d54d7140a40672748356b27a3 inherit pub_methods_classTraitChara"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8acc03026142a26aa61aca0e8d060ab inherit pub_methods_classTraitChara"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitChara.html#aa8acc03026142a26aa61aca0e8d060ab">GetAdvRankText</a> ()</td></tr>
-<tr class="separator:aa8acc03026142a26aa61aca0e8d060ab inherit pub_methods_classTraitChara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36accef708392c4bd1ffaaffe68fa458 inherit pub_methods_classTraitChara"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitChara.html#a36accef708392c4bd1ffaaffe68fa458">GetAdvRank</a> ()</td></tr>
+<tr class="separator:a36accef708392c4bd1ffaaffe68fa458 inherit pub_methods_classTraitChara"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72016afd57266a92678259db07fe5496 inherit pub_methods_classTraitChara"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitChara.html#a72016afd57266a92678259db07fe5496">GetAdvRankText</a> ()</td></tr>
+<tr class="separator:a72016afd57266a92678259db07fe5496 inherit pub_methods_classTraitChara"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
 <tr class="memitem:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a> (int i, string def=null)</td></tr>
 <tr class="separator:a7db8c514710fbb74b2f471cf9e6fe0af inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -754,10 +754,14 @@ Properties</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classTraitChara"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classTraitChara')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classTraitChara.html">TraitChara</a></td></tr>
-<tr class="memitem:acaa56902f9b17d108bcf8bc1a7f0c000 inherit pub_types_classTraitChara"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000">Adv_Type</a> { <a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a6adf97f83acf6453d4a6a4b1070f3754">None</a>
+<tr class="memitem:acaa56902f9b17d108bcf8bc1a7f0c000 inherit pub_types_classTraitChara"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000">Adv_Type</a> { <br />
+&#160;&#160;<a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a6adf97f83acf6453d4a6a4b1070f3754">None</a>
 , <a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a181634470467a8f1a9b41cbee362451b">Adv</a>
 , <a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a563fb5522ca0956b09befe841375ef7e">Adv_Fairy</a>
 , <a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a4f9d0921d220f6b660454a303e79fc73">Adv_Backer</a>
+, <br />
+&#160;&#160;<a class="el" href="classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000af1a067e689449dcf78b55f0ee1fc51d8">Adv_Custom</a>
+<br />
  }</td></tr>
 <tr class="separator:acaa56902f9b17d108bcf8bc1a7f0c000 inherit pub_types_classTraitChara"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classTrait"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classTrait')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classTrait.html">Trait</a></td></tr>
@@ -880,18 +884,18 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> t.<a class="code hl_property" href="classCard.html#a0b09633ea67d0f53371157d49f1832af">isCrafted</a>;</div>
 <div class="line"><span class="lineno">   78</span>    }</div>
 <div class="ttc" id="aclassCard_html_a0b09633ea67d0f53371157d49f1832af"><div class="ttname"><a href="classCard.html#a0b09633ea67d0f53371157d49f1832af">Card.isCrafted</a></div><div class="ttdeci">bool isCrafted</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00796">Card.cs:797</a></div></div>
-<div class="ttc" id="aclassCard_html_a1a28353830ac60c8ebf01f599b99b0db"><div class="ttname"><a href="classCard.html#a1a28353830ac60c8ebf01f599b99b0db">Card.HasRune</a></div><div class="ttdeci">bool HasRune()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03823">Card.cs:3823</a></div></div>
+<div class="ttc" id="aclassCard_html_a1a28353830ac60c8ebf01f599b99b0db"><div class="ttname"><a href="classCard.html#a1a28353830ac60c8ebf01f599b99b0db">Card.HasRune</a></div><div class="ttdeci">bool HasRune()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03872">Card.cs:3872</a></div></div>
 <div class="ttc" id="aclassCard_html_a397032484c590be1da2571c303f95a6a"><div class="ttname"><a href="classCard.html#a397032484c590be1da2571c303f95a6a">Card.noSell</a></div><div class="ttdeci">bool noSell</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00832">Card.cs:833</a></div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00054">Card.cs:54</a></div></div>
 <div class="ttc" id="aclassCard_html_acb53bc89e7ae376f24fcccc205055952"><div class="ttname"><a href="classCard.html#acb53bc89e7ae376f24fcccc205055952">Card.isStolen</a></div><div class="ttdeci">bool isStolen</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00856">Card.cs:857</a></div></div>
 <div class="ttc" id="aclassCard_html_af10b07d1dd2e8ac8d687663d7a0a383e"><div class="ttname"><a href="classCard.html#af10b07d1dd2e8ac8d687663d7a0a383e">Card.sockets</a></div><div class="ttdeci">List&lt; int &gt; sockets</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00048">Card.cs:48</a></div></div>
-<div class="ttc" id="aclassCard_html_af4616290fa0dd51fa1a94efd843eb68f"><div class="ttname"><a href="classCard.html#af4616290fa0dd51fa1a94efd843eb68f">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, bool includeNagative=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06223">Card.cs:6223</a></div></div>
+<div class="ttc" id="aclassCard_html_af4616290fa0dd51fa1a94efd843eb68f"><div class="ttname"><a href="classCard.html#af4616290fa0dd51fa1a94efd843eb68f">Card.HasElement</a></div><div class="ttdeci">bool HasElement(int ele, bool includeNagative=false)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06272">Card.cs:6272</a></div></div>
 <div class="ttc" id="aclassCard_html_afc6e0221d5fd91dbc75b016dc84cb214"><div class="ttname"><a href="classCard.html#afc6e0221d5fd91dbc75b016dc84cb214">Card.c_uidAttune</a></div><div class="ttdeci">int c_uidAttune</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l01211">Card.cs:1212</a></div></div>
-<div class="ttc" id="aclassCard_html_afe2181dcf1836617cba63b74886b4d29"><div class="ttname"><a href="classCard.html#afe2181dcf1836617cba63b74886b4d29">Card.HasElementNoCopy</a></div><div class="ttdeci">bool HasElementNoCopy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06251">Card.cs:6251</a></div></div>
+<div class="ttc" id="aclassCard_html_afe2181dcf1836617cba63b74886b4d29"><div class="ttname"><a href="classCard.html#afe2181dcf1836617cba63b74886b4d29">Card.HasElementNoCopy</a></div><div class="ttdeci">bool HasElementNoCopy()</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06300">Card.cs:6300</a></div></div>
 <div class="ttc" id="aclassTraitFoodFishSlice_html"><div class="ttname"><a href="classTraitFoodFishSlice.html">TraitFoodFishSlice</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitFoodFishSlice_8cs_source.html#l00001">TraitFoodFishSlice.cs:2</a></div></div>
 <div class="ttc" id="aclassTraitSeed_html"><div class="ttname"><a href="classTraitSeed.html">TraitSeed</a></div><div class="ttdef"><b>Definition:</b> <a href="TraitSeed_8cs_source.html#l00005">TraitSeed.cs:6</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l01212">Card.c_uidAttune</a>, <a class="el" href="Card_8cs_source.html#l06223">Card.HasElement()</a>, <a class="el" href="Card_8cs_source.html#l06251">Card.HasElementNoCopy()</a>, <a class="el" href="Card_8cs_source.html#l03823">Card.HasRune()</a>, <a class="el" href="Card_8cs_source.html#l00797">Card.isCrafted</a>, <a class="el" href="Card_8cs_source.html#l00857">Card.isStolen</a>, <a class="el" href="Card_8cs_source.html#l00833">Card.noSell</a>, <a class="el" href="Card_8cs_source.html#l00048">Card.sockets</a>, and <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l01212">Card.c_uidAttune</a>, <a class="el" href="Card_8cs_source.html#l06272">Card.HasElement()</a>, <a class="el" href="Card_8cs_source.html#l06300">Card.HasElementNoCopy()</a>, <a class="el" href="Card_8cs_source.html#l03872">Card.HasRune()</a>, <a class="el" href="Card_8cs_source.html#l00797">Card.isCrafted</a>, <a class="el" href="Card_8cs_source.html#l00857">Card.isStolen</a>, <a class="el" href="Card_8cs_source.html#l00833">Card.noSell</a>, <a class="el" href="Card_8cs_source.html#l00048">Card.sockets</a>, and <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>.</p>
 
 </div>
 </div>

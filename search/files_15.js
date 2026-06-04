@@ -45,7 +45,7 @@ var searchData=
   ['widgettutorial_2ecs_42',['WidgetTutorial.cs',['../WidgetTutorial_8cs.html',1,'']]],
   ['widgetunitychan_2ecs_43',['WidgetUnityChan.cs',['../WidgetUnityChan_8cs.html',1,'']]],
   ['winapi_2ecs_44',['WinAPI.cs',['../WinAPI_8cs.html',1,'']]],
-  ['window_2ecs_45',['Window.cs',['../Plugins_8UI_2Window_8cs.html',1,'(Global Namespace)'],['../Plugins_8basecore_2B83_2Win32_2Window_8cs.html',1,'(Global Namespace)']]],
+  ['window_2ecs_45',['Window.cs',['../Plugins_8basecore_2B83_2Win32_2Window_8cs.html',1,'(Global Namespace)'],['../Plugins_8UI_2Window_8cs.html',1,'(Global Namespace)']]],
   ['windowchara_2ecs_46',['WindowChara.cs',['../WindowChara_8cs.html',1,'']]],
   ['windowcharamini_2ecs_47',['WindowCharaMini.cs',['../WindowCharaMini_8cs.html',1,'']]],
   ['windowcontroller_2ecs_48',['WindowController.cs',['../WindowController_8cs.html',1,'']]],

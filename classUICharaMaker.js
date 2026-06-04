@@ -1,6 +1,7 @@
 var classUICharaMaker =
 [
     [ "AddDomain", "classUICharaMaker.html#a0c19275bc622cec6a572ee656b04a867", null ],
+    [ "AddWeaponSkill", "classUICharaMaker.html#a206aa186fd0bfc97e733ba195fc61908", null ],
     [ "BuildRaces", "classUICharaMaker.html#a383530ce96edc1da03644ff54fd92903", null ],
     [ "EditName", "classUICharaMaker.html#a9fcd686b51100c7c0fcd13732fe76fd4", null ],
     [ "EditPCC", "classUICharaMaker.html#a4ec29bdd153f39953b0057cf5d71306b", null ],

@@ -37,6 +37,7 @@ var dir_59ae87babc71723b1fb1066db0b4cdb0 =
     [ "FastString.cs", "FastString_8cs.html", "FastString_8cs" ],
     [ "FileDragAndDrop.cs", "FileDragAndDrop_8cs.html", "FileDragAndDrop_8cs" ],
     [ "Gender.cs", "Gender_8cs.html", "Gender_8cs" ],
+    [ "GodTalkDataList.cs", "GodTalkDataList_8cs.html", "GodTalkDataList_8cs" ],
     [ "Hide.cs", "Hide_8cs.html", "Hide_8cs" ],
     [ "IChangeLanguage.cs", "IChangeLanguage_8cs.html", "IChangeLanguage_8cs" ],
     [ "IChangeResolution.cs", "IChangeResolution_8cs.html", "IChangeResolution_8cs" ],

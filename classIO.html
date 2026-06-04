@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.310 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
    </div>
   </td>
  </tr>
@@ -1063,7 +1063,7 @@ Properties</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
 <div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (!File.Exists(path))</div>
 <div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;File does not exist:&quot;</span> + path);</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<span class="stringliteral">&quot;#io File does not exist:&quot;</span> + path);</div>
 <div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <span class="keywordflow">default</span>(T);</div>
 <div class="line"><span class="lineno">  124</span>        }</div>
 <div class="line"><span class="lineno">  125</span>        <span class="keywordtype">string</span> value = (<a class="code hl_function" href="classIO.html#ad663294fae919a3485e1356b597f40be">IsCompressed</a>(path) ? <a class="code hl_function" href="classIO.html#a6608819b60994ec51d2efcbdfa0a76d1">Decompress</a>(path) : File.ReadAllText(path));</div>

@@ -8,7 +8,6 @@ var classSourceManager =
     [ "Reload", "classSourceManager.html#a4d0a6da2a403b6c964d62a37ea667094", null ],
     [ "UpdateSourceTexts", "classSourceManager.html#a57a471351f436e88ecc0ec51a07e0e1f", null ],
     [ "ValidateLang", "classSourceManager.html#a23abb970eaf823a7ca14209fb1f37434", null ],
-    [ "_dataGodTalk", "classSourceManager.html#a79c33d8b216b3a0e846ad4fa2f4fe4a2", null ],
     [ "areas", "classSourceManager.html#aafdb592c819bdbdf0e39eb4f52292afc", null ],
     [ "asset", "classSourceManager.html#a73edd2d15d9dcaae027163dba5a87be9", null ],
     [ "backers", "classSourceManager.html#ab4cf7dce730d8197f24cb4da0832b5d7", null ],
@@ -52,6 +51,5 @@ var classSourceManager =
     [ "things", "classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca", null ],
     [ "thingV", "classSourceManager.html#a2b65d7893ce9efd2215d725e636018c3", null ],
     [ "zoneAffixes", "classSourceManager.html#ab1a429e06e2a5a823a4cdf21a9a316c8", null ],
-    [ "zones", "classSourceManager.html#a43ee8479482668d85c820a75f4a6f5fe", null ],
-    [ "dataGodTalk", "classSourceManager.html#aa2db06fe5f1d83fda35f5600262619bb", null ]
+    [ "zones", "classSourceManager.html#a43ee8479482668d85c820a75f4a6f5fe", null ]
 ];

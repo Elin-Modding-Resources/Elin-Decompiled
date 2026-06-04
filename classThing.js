@@ -16,6 +16,7 @@ var classThing =
     [ "GetHoverText", "classThing.html#ad177b3c245042058a8f0745bf718a5a1", null ],
     [ "GetIngredients", "classThing.html#a0fa3660277b7c069b02e7962a4e4506d", null ],
     [ "GetName", "classThing.html#abf919b04ba952974c2778a7f50ab647c", null ],
+    [ "GetPrice", "classThing.html#a846374ada2956cf459650108c741a944", null ],
     [ "GetRecipes", "classThing.html#a18383067f5ab5317eb271d8ead71843f", null ],
     [ "GetSubPassData", "classThing.html#a73b1775f4dd44e1d7a165d25a3b46a9b", null ],
     [ "Identify", "classThing.html#afce2b7cab7c06b8e01034535a23fa07a", null ],

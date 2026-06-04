@@ -2,9 +2,11 @@ var classReligionManager =
 [
     [ "ジュアさまの薄い本をください", "classReligionManager.html#a5feaf61a148e5a86084fcb315b9cfa34", null ],
     [ "Find", "classReligionManager.html#a2b096a7b38a79e753733244a073f08c5", null ],
+    [ "GetArtifactDeity", "classReligionManager.html#a30ab2cf5dec41ebc951f233459fbdc5c", null ],
     [ "GetRandomReligion", "classReligionManager.html#af893c0ae38d8c0ae912d16a74e244b92", null ],
     [ "OnCreateGame", "classReligionManager.html#a31d2c73847ec475e8304680c0db13e71", null ],
     [ "OnLoad", "classReligionManager.html#a72ee83cb99211d14cedcd45db4fb9266", null ],
+    [ "Reforge", "classReligionManager.html#a66043103966e91ff29dc764ef1808f11", null ],
     [ "SetOwner", "classReligionManager.html#a13ab03f6808ef49713bd40d42086a1ba", null ],
     [ "dictAll", "classReligionManager.html#a64b6c1e970d860efd2e4306d66eda169", null ],
     [ "Earth", "classReligionManager.html#ab5a8f054052e21f5f4cb8045dba783e3", null ],

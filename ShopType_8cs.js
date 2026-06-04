@@ -54,6 +54,7 @@ var ShopType_8cs =
       [ "Curry", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba5933baf90dcec96ffa6ecdaf30299550", null ],
       [ "KeeperOfGarden", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa0fb939f13240e5798b102af79c67f12", null ],
       [ "TravelMerchant", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba15ad0e98a76b2521eb7bf8ec497c08a8", null ],
-      [ "TravelMerchant2", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba50cabfff47520fb5143437c05924174f", null ]
+      [ "TravelMerchant2", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba50cabfff47520fb5143437c05924174f", null ],
+      [ "CustomContent", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa434f90146c7c910f3fb5035bb615f42", null ]
     ] ]
 ];

@@ -30,6 +30,7 @@ var classZone =
     [ "ExportDialog", "classZone.html#a6c5fd16cca942316394c7bbcf380d758", null ],
     [ "FindChara", "classZone.html#a765158383897b5cb414530520bec6cba", null ],
     [ "FindChara", "classZone.html#aaa7ff2c0ede4f0bc48a3fbd22bae1b88", null ],
+    [ "FindOrCreateLevel", "classZone.html#a9d67527c876015d15f021569f74d6d89", null ],
     [ "Generate", "classZone.html#a18e27aa23214025873fe68fdcfd4fbe3", null ],
     [ "GetDeepestLv", "classZone.html#a5e99d9a7d1f87129b31a866bc84644c6", null ],
     [ "GetDeepestLv", "classZone.html#a74f8cf3ba466d3e5f2a5d4d750e2c0d6", null ],
@@ -241,5 +242,6 @@ var classZone =
     [ "TextWidgetDate", "classZone.html#a854b78baab0357b602bc7e82dedf8c65", null ],
     [ "UseFog", "classZone.html#aa1f2c38e95095d204529b8d7f7f37380", null ],
     [ "UseLight", "classZone.html#a29edd5ce6d603f47268726af34c3858b", null ],
-    [ "WillAutoSave", "classZone.html#ae18ddc6d1abc82ba1263ad41307e5263", null ]
+    [ "WillAutoSave", "classZone.html#ae18ddc6d1abc82ba1263ad41307e5263", null ],
+    [ "ZoneFullName", "classZone.html#a088ea3de2a08bd93a41d5539082f2558", null ]
 ];

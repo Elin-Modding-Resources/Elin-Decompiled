@@ -14,6 +14,8 @@ var classSourceData =
     [ "BuildFlags", "classSourceData.html#a60e56c946628f53bfa55cec4d6c75f8b", null ],
     [ "CreateRow", "classSourceData.html#a2a4b58f656b62e6bf22e4d707c8b5473", null ],
     [ "CreateRowByMapping", "classSourceData.html#a82482fe32ec0e2ac2130d417d4f62cae", null ],
+    [ "ExportRows", "classSourceData.html#a862366add5442a149f00dc93c358d9e7", null ],
+    [ "ExportRows", "classSourceData.html#a1ee73bcbe25e8ff6aa4523c900ea08c0", null ],
     [ "ExportTexts", "classSourceData.html#a234a9b78fef2d11bc60bd93276dba176", null ],
     [ "ExportTexts", "classSourceData.html#a91071fe7311740c5e52305f1199ab79c", null ],
     [ "GetBool", "classSourceData.html#a177f472912a4c6ceef4fbf5addceb8a4", null ],

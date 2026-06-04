@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.310 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
    </div>
   </td>
  </tr>
@@ -104,8 +104,9 @@ Inheritance diagram for ExcelDataList:</div>
  <div class="center">
   <img src="classExcelDataList.png" usemap="#ExcelDataList_map" alt=""/>
   <map id="ExcelDataList_map" name="ExcelDataList_map">
-<area href="classTalkDataList.html" alt="TalkDataList" shape="rect" coords="0,56,88,80"/>
-<area href="classToneDataList.html" alt="ToneDataList" shape="rect" coords="98,56,186,80"/>
+<area href="classGodTalkDataList.html" alt="GodTalkDataList" shape="rect" coords="0,56,103,80"/>
+<area href="classTalkDataList.html" alt="TalkDataList" shape="rect" coords="113,56,216,80"/>
+<area href="classToneDataList.html" alt="ToneDataList" shape="rect" coords="226,56,329,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -117,8 +118,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af10918323ba9f81d7bb520993e5dc050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dcc12b68c925b038cc8097e9f95774a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelDataList.html#a9dcc12b68c925b038cc8097e9f95774a">OnInitialize</a> ()</td></tr>
 <tr class="separator:a9dcc12b68c925b038cc8097e9f95774a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41945043779c3c01914edbe3d7a0baba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelDataList.html#a41945043779c3c01914edbe3d7a0baba">HasRow</a> (string id)</td></tr>
+<tr class="separator:a41945043779c3c01914edbe3d7a0baba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef09577120f153af693d1ac4cc9d732e"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelDataList.html#aef09577120f153af693d1ac4cc9d732e">GetRow</a> (string id)</td></tr>
 <tr class="separator:aef09577120f153af693d1ac4cc9d732e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5caff0b4bb91f1322f4677b303c2970"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelDataList.html#aa5caff0b4bb91f1322f4677b303c2970">Add</a> (<a class="el" href="classExcelData.html">ExcelData</a> data)</td></tr>
+<tr class="separator:aa5caff0b4bb91f1322f4677b303c2970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e6bb0016a626bf7bdb69457d23a572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExcelDataList.html#aa2e6bb0016a626bf7bdb69457d23a572">Clear</a> ()</td></tr>
+<tr class="separator:aa2e6bb0016a626bf7bdb69457d23a572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -143,6 +150,79 @@ Properties</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00004">4</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa5caff0b4bb91f1322f4677b303c2970" name="aa5caff0b4bb91f1322f4677b303c2970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5caff0b4bb91f1322f4677b303c2970">&#9670;&#160;</a></span>Add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExcelDataList.Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExcelData.html">ExcelData</a>&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00061">61</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_variable" href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">items</a>.Add(data);</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_function" href="classExcelDataList.html#a5be636aa2d3219ea5ba3f2a843b2f542">Reload</a>();</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="aclassExcelDataList_html_a16deb200dd45f2905399065bdc1b6a67"><div class="ttname"><a href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">ExcelDataList.items</a></div><div class="ttdeci">List&lt; ExcelData &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00006">ExcelDataList.cs:6</a></div></div>
+<div class="ttc" id="aclassExcelDataList_html_a5be636aa2d3219ea5ba3f2a843b2f542"><div class="ttname"><a href="classExcelDataList.html#a5be636aa2d3219ea5ba3f2a843b2f542">ExcelDataList.Reload</a></div><div class="ttdeci">void Reload()</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00016">ExcelDataList.cs:16</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00006">items</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseModManager_8cs_source.html#l00059">BaseModManager.InitLang()</a>, and <a class="el" href="BaseModPackage_8cs_source.html#l00155">BaseModPackage.Parse()</a>.</p>
+
+</div>
+</div>
+<a id="aa2e6bb0016a626bf7bdb69457d23a572" name="aa2e6bb0016a626bf7bdb69457d23a572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e6bb0016a626bf7bdb69457d23a572">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExcelDataList.Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00067">67</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_variable" href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">items</a>.Clear();</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_function" href="classExcelDataList.html#a5be636aa2d3219ea5ba3f2a843b2f542">Reload</a>();</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00006">items</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BaseModManager_8cs_source.html#l00059">BaseModManager.InitLang()</a>, and <a class="el" href="MOD_8cs_source.html#l00028">MOD.ResetResources()</a>.</p>
+
+</div>
+</div>
 <a id="aef09577120f153af693d1ac4cc9d732e" name="aef09577120f153af693d1ac4cc9d732e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef09577120f153af693d1ac4cc9d732e">&#9670;&#160;</a></span>GetRow()</h2>
 
@@ -167,20 +247,51 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00049">49</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classExcelDataList.html#a00fe424eb2bcf02c37b9c84dc09bcf9d">initialized</a>)</div>
-<div class="line"><span class="lineno">   52</span>        {</div>
-<div class="line"><span class="lineno">   53</span>            <a class="code hl_function" href="classExcelDataList.html#af10918323ba9f81d7bb520993e5dc050">Initialize</a>();</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classExcelDataList.html#a107c6afb7de42b94658481efb5cd8d0d">all</a>.TryGetValue(<span class="keywordtype">id</span>) ?? <a class="code hl_variable" href="classExcelDataList.html#a69ae7963e48003cd3800bc05bc13c402">list</a>[0];</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclassExcelDataList_html_a00fe424eb2bcf02c37b9c84dc09bcf9d"><div class="ttname"><a href="classExcelDataList.html#a00fe424eb2bcf02c37b9c84dc09bcf9d">ExcelDataList.initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00012">ExcelDataList.cs:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00055">55</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_function" href="classExcelDataList.html#af10918323ba9f81d7bb520993e5dc050">Initialize</a>();</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classExcelDataList.html#a107c6afb7de42b94658481efb5cd8d0d">all</a>.TryGetValue(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
 <div class="ttc" id="aclassExcelDataList_html_a107c6afb7de42b94658481efb5cd8d0d"><div class="ttname"><a href="classExcelDataList.html#a107c6afb7de42b94658481efb5cd8d0d">ExcelDataList.all</a></div><div class="ttdeci">Dictionary&lt; string, Dictionary&lt; string, string &gt; &gt; all</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00008">ExcelDataList.cs:8</a></div></div>
-<div class="ttc" id="aclassExcelDataList_html_a69ae7963e48003cd3800bc05bc13c402"><div class="ttname"><a href="classExcelDataList.html#a69ae7963e48003cd3800bc05bc13c402">ExcelDataList.list</a></div><div class="ttdeci">List&lt; Dictionary&lt; string, string &gt; &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00010">ExcelDataList.cs:10</a></div></div>
 <div class="ttc" id="aclassExcelDataList_html_af10918323ba9f81d7bb520993e5dc050"><div class="ttname"><a href="classExcelDataList.html#af10918323ba9f81d7bb520993e5dc050">ExcelDataList.Initialize</a></div><div class="ttdeci">virtual void Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00023">ExcelDataList.cs:23</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00008">all</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00012">initialized</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00010">list</a>.</p>
+<p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00008">all</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="GodTalkDataList_8cs_source.html#l00039">GodTalkDataList.GetTalk()</a>, and <a class="el" href="TalkDataList_8cs_source.html#l00023">TalkDataList.GetTalk()</a>.</p>
+
+</div>
+</div>
+<a id="a41945043779c3c01914edbe3d7a0baba" name="a41945043779c3c01914edbe3d7a0baba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41945043779c3c01914edbe3d7a0baba">&#9670;&#160;</a></span>HasRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ExcelDataList.HasRow </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00049">49</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="classExcelDataList.html#af10918323ba9f81d7bb520993e5dc050">Initialize</a>();</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classExcelDataList.html#a107c6afb7de42b94658481efb5cd8d0d">all</a>.ContainsKey(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00008">all</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -207,6 +318,8 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="classGodTalkDataList.html#ab662a51a6f3f3c0e0cf890e53f23faa5">GodTalkDataList</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00023">23</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
 <div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classExcelDataList.html#a00fe424eb2bcf02c37b9c84dc09bcf9d">initialized</a>)</div>
@@ -229,14 +342,15 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="classExcelDataList.html#a00fe424eb2bcf02c37b9c84dc09bcf9d">initialized</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   43</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
-<div class="ttc" id="aclassExcelDataList_html_a16deb200dd45f2905399065bdc1b6a67"><div class="ttname"><a href="classExcelDataList.html#a16deb200dd45f2905399065bdc1b6a67">ExcelDataList.items</a></div><div class="ttdeci">List&lt; ExcelData &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00006">ExcelDataList.cs:6</a></div></div>
+<div class="ttc" id="aclassExcelDataList_html_a00fe424eb2bcf02c37b9c84dc09bcf9d"><div class="ttname"><a href="classExcelDataList.html#a00fe424eb2bcf02c37b9c84dc09bcf9d">ExcelDataList.initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00012">ExcelDataList.cs:12</a></div></div>
+<div class="ttc" id="aclassExcelDataList_html_a69ae7963e48003cd3800bc05bc13c402"><div class="ttname"><a href="classExcelDataList.html#a69ae7963e48003cd3800bc05bc13c402">ExcelDataList.list</a></div><div class="ttdeci">List&lt; Dictionary&lt; string, string &gt; &gt; list</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00010">ExcelDataList.cs:10</a></div></div>
 <div class="ttc" id="aclassExcelDataList_html_a96ff45d725ada5c8b666439afb5ee0e1"><div class="ttname"><a href="classExcelDataList.html#a96ff45d725ada5c8b666439afb5ee0e1">ExcelDataList.StartIndex</a></div><div class="ttdeci">virtual int StartIndex</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00014">ExcelDataList.cs:14</a></div></div>
 <div class="ttc" id="aclassExcelDataList_html_a9dcc12b68c925b038cc8097e9f95774a"><div class="ttname"><a href="classExcelDataList.html#a9dcc12b68c925b038cc8097e9f95774a">ExcelDataList.OnInitialize</a></div><div class="ttdeci">virtual void OnInitialize()</div><div class="ttdef"><b>Definition:</b> <a href="ExcelDataList_8cs_source.html#l00045">ExcelDataList.cs:45</a></div></div>
 <div class="ttc" id="aclassExcelData_html"><div class="ttname"><a href="classExcelData.html">ExcelData</a></div><div class="ttdef"><b>Definition:</b> <a href="ExcelData_8cs_source.html#l00010">ExcelData.cs:11</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00008">all</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00012">initialized</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00006">items</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00010">list</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00045">OnInitialize()</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00014">StartIndex</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07212">Card.ApplyTone()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00011">ToneDataList.ApplyTone()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00049">GetRow()</a>, <a class="el" href="TalkDataList_8cs_source.html#l00023">TalkDataList.GetTalk()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00058">ToneDataList.GetToneID()</a>, <a class="el" href="Card_8cs_source.html#l07264">Card.SetRandomTalk()</a>, and <a class="el" href="Card_8cs_source.html#l07273">Card.SetRandomTone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07261">Card.ApplyTone()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00011">ToneDataList.ApplyTone()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00055">GetRow()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00055">ToneDataList.GetToneID()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00049">HasRow()</a>, <a class="el" href="Card_8cs_source.html#l07313">Card.SetRandomTalk()</a>, and <a class="el" href="Card_8cs_source.html#l07322">Card.SetRandomTone()</a>.</p>
 
 </div>
 </div>
@@ -305,6 +419,8 @@ Properties</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ExcelDataList_8cs_source.html#l00008">all</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00012">initialized</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00010">list</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="ExcelDataList_8cs_source.html#l00061">Add()</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00067">Clear()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -322,7 +438,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00008">8</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07212">Card.ApplyTone()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00011">ToneDataList.ApplyTone()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00049">GetRow()</a>, <a class="el" href="TalkDataList_8cs_source.html#l00023">TalkDataList.GetTalk()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00058">ToneDataList.GetToneID()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07261">Card.ApplyTone()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00011">ToneDataList.ApplyTone()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00055">GetRow()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00055">ToneDataList.GetToneID()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00049">HasRow()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, <a class="el" href="GodTalkDataList_8cs_source.html#l00007">GodTalkDataList.Initialize()</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>.</p>
 
 </div>
 </div>
@@ -348,7 +464,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00012">12</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ToneDataList_8cs_source.html#l00011">ToneDataList.ApplyTone()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00049">GetRow()</a>, <a class="el" href="TalkDataList_8cs_source.html#l00023">TalkDataList.GetTalk()</a>, <a class="el" href="ToneDataList_8cs_source.html#l00058">ToneDataList.GetToneID()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, <a class="el" href="GodTalkDataList_8cs_source.html#l00007">GodTalkDataList.Initialize()</a>, and <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +482,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00006">6</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, <a class="el" href="BaseModManager_8cs_source.html#l00055">BaseModManager.InitLang()</a>, and <a class="el" href="BaseModPackage_8cs_source.html#l00155">BaseModPackage.Parse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExcelDataList_8cs_source.html#l00061">Add()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00067">Clear()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, and <a class="el" href="GodTalkDataList_8cs_source.html#l00007">GodTalkDataList.Initialize()</a>.</p>
 
 </div>
 </div>
@@ -384,7 +500,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ExcelDataList_8cs_source.html#l00010">10</a> of file <a class="el" href="ExcelDataList_8cs_source.html">ExcelDataList.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07212">Card.ApplyTone()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00049">GetRow()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, <a class="el" href="TalkDataList_8cs_source.html#l00011">TalkDataList.OnInitialize()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>, <a class="el" href="Card_8cs_source.html#l07264">Card.SetRandomTalk()</a>, and <a class="el" href="Card_8cs_source.html#l07273">Card.SetRandomTone()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Card_8cs_source.html#l07261">Card.ApplyTone()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00023">Initialize()</a>, <a class="el" href="GodTalkDataList_8cs_source.html#l00007">GodTalkDataList.Initialize()</a>, <a class="el" href="TalkDataList_8cs_source.html#l00011">TalkDataList.OnInitialize()</a>, <a class="el" href="ExcelDataList_8cs_source.html#l00016">Reload()</a>, <a class="el" href="Card_8cs_source.html#l07313">Card.SetRandomTalk()</a>, and <a class="el" href="Card_8cs_source.html#l07322">Card.SetRandomTone()</a>.</p>
 
 </div>
 </div>

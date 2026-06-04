@@ -4,10 +4,11 @@ var classTraitChara =
       [ "None", "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Adv", "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a181634470467a8f1a9b41cbee362451b", null ],
       [ "Adv_Fairy", "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a563fb5522ca0956b09befe841375ef7e", null ],
-      [ "Adv_Backer", "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a4f9d0921d220f6b660454a303e79fc73", null ]
+      [ "Adv_Backer", "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000a4f9d0921d220f6b660454a303e79fc73", null ],
+      [ "Adv_Custom", "classTraitChara.html#acaa56902f9b17d108bcf8bc1a7f0c000af1a067e689449dcf78b55f0ee1fc51d8", null ]
     ] ],
-    [ "GetAdvRank", "classTraitChara.html#afc8a3d0d54d7140a40672748356b27a3", null ],
-    [ "GetAdvRankText", "classTraitChara.html#aa8acc03026142a26aa61aca0e8d060ab", null ],
+    [ "GetAdvRank", "classTraitChara.html#a36accef708392c4bd1ffaaffe68fa458", null ],
+    [ "GetAdvRankText", "classTraitChara.html#a72016afd57266a92678259db07fe5496", null ],
     [ "GetDramaText", "classTraitChara.html#a2bd44c5e5fb7182a0450bfd8139e6fc9", null ],
     [ "GetValue", "classTraitChara.html#a082aebc8ded8a214962006a21717b046", null ],
     [ "IdleAct", "classTraitChara.html#ad5c4df45be3036b5b5b6279fdf9edc64", null ],

@@ -1,6 +1,9 @@
 var classExcelDataList =
 [
+    [ "Add", "classExcelDataList.html#aa5caff0b4bb91f1322f4677b303c2970", null ],
+    [ "Clear", "classExcelDataList.html#aa2e6bb0016a626bf7bdb69457d23a572", null ],
     [ "GetRow", "classExcelDataList.html#aef09577120f153af693d1ac4cc9d732e", null ],
+    [ "HasRow", "classExcelDataList.html#a41945043779c3c01914edbe3d7a0baba", null ],
     [ "Initialize", "classExcelDataList.html#af10918323ba9f81d7bb520993e5dc050", null ],
     [ "OnInitialize", "classExcelDataList.html#a9dcc12b68c925b038cc8097e9f95774a", null ],
     [ "Reload", "classExcelDataList.html#a5be636aa2d3219ea5ba3f2a843b2f542", null ],

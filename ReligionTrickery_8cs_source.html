@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.310 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
    </div>
   </td>
  </tr>
@@ -109,11 +109,30 @@ $(document).ready(function(){initNavTree('ReligionTrickery_8cs_source.html','');
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classReligionTrickery.html#ad1470ed73e17d575f608afa26c6deec7">   19</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classReligionTrickery.html#ad1470ed73e17d575f608afa26c6deec7">IsValidArtifact</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span> == <span class="stringliteral">&quot;kogitsunemaru&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classReligionTrickery.html#a39bcf31e28d5201658ea8adad37cc730">   24</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span>[] <a class="code hl_function" href="classReligionTrickery.html#a39bcf31e28d5201658ea8adad37cc730">GetValidArtifacts</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[1] { <span class="stringliteral">&quot;kogitsunemaru&quot;</span> };</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classReligionTrickery.html#add6d2e477728fa70e7b22c4873592043">   29</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classReligionTrickery.html#add6d2e477728fa70e7b22c4873592043">IsFaithElement</a>(<a class="code hl_class" href="classElement.html">Element</a> e)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> e.id != 656;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00036">Card.cs:36</a></div></div>
+<div class="ttc" id="aclassElement_html"><div class="ttname"><a href="classElement.html">Element</a></div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00088">ELEMENT.cs:89</a></div></div>
 <div class="ttc" id="aclassReligionMinor_html"><div class="ttname"><a href="classReligionMinor.html">ReligionMinor</a></div><div class="ttdef"><b>Definition:</b> <a href="ReligionMinor_8cs_source.html#l00001">ReligionMinor.cs:2</a></div></div>
 <div class="ttc" id="aclassReligionTrickery_html"><div class="ttname"><a href="classReligionTrickery.html">ReligionTrickery</a></div><div class="ttdef"><b>Definition:</b> <a href="ReligionTrickery_8cs_source.html#l00001">ReligionTrickery.cs:2</a></div></div>
+<div class="ttc" id="aclassReligionTrickery_html_a39bcf31e28d5201658ea8adad37cc730"><div class="ttname"><a href="classReligionTrickery.html#a39bcf31e28d5201658ea8adad37cc730">ReligionTrickery.GetValidArtifacts</a></div><div class="ttdeci">override string[] GetValidArtifacts()</div><div class="ttdef"><b>Definition:</b> <a href="ReligionTrickery_8cs_source.html#l00024">ReligionTrickery.cs:24</a></div></div>
 <div class="ttc" id="aclassReligionTrickery_html_a5b6ebb4cc9dcb9dd279f30b0bce80077"><div class="ttname"><a href="classReligionTrickery.html#a5b6ebb4cc9dcb9dd279f30b0bce80077">ReligionTrickery.GetOfferingMtp</a></div><div class="ttdeci">override int GetOfferingMtp(Thing t)</div><div class="ttdef"><b>Definition:</b> <a href="ReligionTrickery_8cs_source.html#l00005">ReligionTrickery.cs:5</a></div></div>
+<div class="ttc" id="aclassReligionTrickery_html_ad1470ed73e17d575f608afa26c6deec7"><div class="ttname"><a href="classReligionTrickery.html#ad1470ed73e17d575f608afa26c6deec7">ReligionTrickery.IsValidArtifact</a></div><div class="ttdeci">override bool IsValidArtifact(string id)</div><div class="ttdef"><b>Definition:</b> <a href="ReligionTrickery_8cs_source.html#l00019">ReligionTrickery.cs:19</a></div></div>
+<div class="ttc" id="aclassReligionTrickery_html_add6d2e477728fa70e7b22c4873592043"><div class="ttname"><a href="classReligionTrickery.html#add6d2e477728fa70e7b22c4873592043">ReligionTrickery.IsFaithElement</a></div><div class="ttdeci">override bool IsFaithElement(Element e)</div><div class="ttdef"><b>Definition:</b> <a href="ReligionTrickery_8cs_source.html#l00029">ReligionTrickery.cs:29</a></div></div>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
