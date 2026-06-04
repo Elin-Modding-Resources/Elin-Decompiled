@@ -25,7 +25,7 @@ public class BookList
 		public int skin;
 	}
 
-	public static List<Func<string[]>> booklistLoaders = new List<Func<string[]>>();
+	public static List<Func<List<string>>> booklistLoaders = new List<Func<List<string>>>();
 
 	public static Dictionary<string, Dictionary<string, Item>> dict;
 
@@ -38,7 +38,7 @@ public class BookList
 		dict = new Dictionary<string, Dictionary<string, Item>>();
 		List<string> list = new List<string>();
 		list.AddRange(LoadDefaultBookList());
-		foreach (Func<string[]> booklistLoader in booklistLoaders)
+		foreach (Func<List<string>> booklistLoader in booklistLoaders)
 		{
 			try
 			{
@@ -46,7 +46,7 @@ public class BookList
 			}
 			catch (Exception arg)
 			{
-				Debug.LogWarning($"#book external booklist loader failed\n{arg}");
+				Debug.LogError($"#book external booklist loader failed\n{arg}");
 			}
 		}
 		foreach (string item in list)
@@ -76,7 +76,7 @@ public class BookList
 				{
 					cat = name,
 					title = array[0],
-					author = ((array.Length > 1) ? "nameAuthor".lang(array[1]) : "unknownAuthor".lang()),
+					author = ((array.Length > 1 && !array[1].IsEmpty()) ? "nameAuthor".lang(array[1]) : "unknownAuthor".lang()),
 					chance = ((array.Length > 2) ? array[2].ToInt() : 100),
 					skin = ((array.Length > 3) ? array[3].ToInt() : 0),
 					id = text,

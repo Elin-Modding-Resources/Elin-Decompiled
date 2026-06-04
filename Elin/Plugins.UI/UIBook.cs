@@ -329,7 +329,7 @@ public class UIBook : MonoBehaviour
 
 	public static SearchContext searchContext;
 
-	public static List<Func<string[]>> topicLoaders = new List<Func<string[]>>();
+	public static List<Func<List<string>>> topicLoaders = new List<Func<List<string>>>();
 
 	private void Awake()
 	{
@@ -608,7 +608,7 @@ public class UIBook : MonoBehaviour
 		helpTitles.Clear();
 		List<string> list = new List<string>();
 		list.AddRange(LoadBuiltInTopics());
-		foreach (Func<string[]> topicLoader in topicLoaders)
+		foreach (Func<List<string>> topicLoader in topicLoaders)
 		{
 			try
 			{
@@ -616,7 +616,7 @@ public class UIBook : MonoBehaviour
 			}
 			catch (Exception arg)
 			{
-				Debug.LogWarning($"#book external topic loader failed\n{arg}");
+				Debug.LogError($"#book external topic loader failed\n{arg}");
 			}
 		}
 		foreach (string item6 in list)
