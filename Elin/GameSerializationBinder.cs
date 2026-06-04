@@ -14,14 +14,14 @@ public class GameSerializationBinder : DefaultSerializationBinder, ISerializatio
 		}
 		catch (Exception ex)
 		{
-			Core.Instance.ui.Say("Possible Mod Error, please contact the mod auther.");
+			Core.Instance.ui.Say("Possible Mod Error, please contact the mod author.");
 			Core.Instance.ui.Say(ex.Message);
 			Debug.LogError(ex.Message);
 			Debug.LogError(assemblyName + "/" + typeName);
-			if (ModUtil.fallbackTypes.ContainsKey(typeName))
+			if (ModUtil.fallbackTypes.TryGetValue(typeName, out var value))
 			{
-				Debug.Log(typeName + "/" + Type.GetType(ModUtil.fallbackTypes[typeName]));
-				return Type.GetType(ModUtil.fallbackTypes[typeName]);
+				Debug.Log(typeName + "/" + Type.GetType(value));
+				return Type.GetType(value);
 			}
 			if (typeName.StartsWith("Quest"))
 			{
@@ -30,6 +30,10 @@ public class GameSerializationBinder : DefaultSerializationBinder, ISerializatio
 			if (typeName.StartsWith("Zone"))
 			{
 				return typeof(Zone);
+			}
+			if (typeName.StartsWith("Religion"))
+			{
+				return typeof(ReligionCustom);
 			}
 			return typeof(UnknownTypePlaceholder);
 		}

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 
 public class LayerMod : ELayer
 {
@@ -45,12 +46,12 @@ public class LayerMod : ELayer
 		list.dragEdgeSize = 34f;
 		UIList uIList = list;
 		UIList uIList2 = list2;
-		UIList.Callback<BaseModPackage, ItemMod> obj = new UIList.Callback<BaseModPackage, ItemMod>
+		UIList.Callback<ModPackage, ItemMod> obj = new UIList.Callback<ModPackage, ItemMod>
 		{
 			onClick = delegate
 			{
 			},
-			onInstantiate = delegate(BaseModPackage a, ItemMod b)
+			onInstantiate = delegate(ModPackage a, ItemMod b)
 			{
 				a.UpdateMeta(updateOnly: true);
 				b.package = a;
@@ -105,6 +106,32 @@ public class LayerMod : ELayer
 							list.List();
 							textRestart.SetActive(enable: true);
 						});
+						if (!a.isInPackages && !a.workshopId.IsEmpty())
+						{
+							uIContextMenu.AddButton("mod_convert_local", delegate
+							{
+								SE.Click();
+								string path = ("Mod_" + a.workshopId + "_" + a.id).SanitizeDirectoryName();
+								string text2 = Path.Combine(BaseModManager.rootMod, path);
+								a.CopyContentTo(text2);
+								ModPackage modPackage = manager.AddPackage(new DirectoryInfo(text2), isInPackages: true);
+								manager.packages.Move(modPackage, manager.packages.IndexOf(a) - manager.packages.Count + 2);
+								modPackage.willActivate = false;
+								modPackage.activated = false;
+								ELayer.core.mods.SaveLoadOrder();
+								list.List();
+								textRestart.SetActive(enable: true);
+							});
+						}
+						if (a.isInPackages && a.IsSourceLocalizable)
+						{
+							uIContextMenu.AddButton("mod_export_text", delegate
+							{
+								SE.Click();
+								string text = a.UpdateSourceLocalizationFile(Lang.langCode, force: true);
+								ELayer.ui.Say(text);
+							});
+						}
 					}
 					uIContextMenu.AddButton("mod_info", delegate
 					{
@@ -130,7 +157,7 @@ public class LayerMod : ELayer
 				}
 			},
 			onRefresh = Refresh,
-			onDragReorder = delegate(BaseModPackage p, int a)
+			onDragReorder = delegate(ModPackage p, int a)
 			{
 				BaseCore.Instance.FreezeScreen(0.1f);
 				manager.packages.Move(p, a);
@@ -139,7 +166,7 @@ public class LayerMod : ELayer
 				ELayer.core.mods.SaveLoadOrder();
 				list.List();
 			},
-			canDragReorder = (BaseModPackage p) => !p.builtin
+			canDragReorder = (ModPackage p) => !p.builtin
 		};
 		UIList.ICallback callbacks = obj;
 		uIList2.callbacks = obj;

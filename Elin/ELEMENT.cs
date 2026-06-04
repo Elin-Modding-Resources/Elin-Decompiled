@@ -53,13 +53,13 @@ public class ELEMENT
 
 	public const int water = 15;
 
-	public const int heat = 16;
+	public const int decay = 17;
 
 	public const int taste = 18;
 
 	public const int poison = 20;
 
-	public const int decay = 17;
+	public const int heat = 16;
 
 	public const int cut = 22;
 
@@ -81,7 +81,7 @@ public class ELEMENT
 	{
 		765, 763, 762, 751, 752, 753, 754, 755, 756, 759,
 		760, 761, 750, 0, 10, 1, 2, 3, 5, 11,
-		12, 13, 14, 15, 16, 18, 20, 17, 22, 23,
+		12, 13, 14, 15, 17, 18, 20, 16, 22, 23,
 		24, 25, 26, 29, 85, 21
 	};
 }

@@ -8,9 +8,9 @@ public class SKILL
 
 	public const int weaponCrossbow = 109;
 
-	public const int climbing = 242;
+	public const int weaponScythe = 110;
 
-	public const int weaponBlunt = 111;
+	public const int climbing = 242;
 
 	public const int armorHeavy = 122;
 
@@ -132,7 +132,7 @@ public class SKILL
 
 	public const int fishing = 245;
 
-	public const int weaponScythe = 110;
+	public const int weaponBlunt = 111;
 
 	public const int carpentry = 255;
 
@@ -270,13 +270,13 @@ public class SKILL
 
 	public static readonly int[] IDS = new int[134]
 	{
-		120, 50, 108, 109, 242, 111, 122, 132, 130, 241,
+		120, 50, 108, 109, 110, 242, 122, 132, 130, 241,
 		240, 237, 235, 230, 227, 226, 220, 123, 210, 200,
 		152, 151, 150, 135, 134, 133, 131, 207, 225, 92,
 		106, 71, 70, 68, 67, 66, 65, 72, 64, 61,
 		60, 57, 56, 55, 51, 62, 73, 74, 75, 105,
 		104, 103, 102, 101, 100, 94, 93, 91, 90, 80,
-		79, 78, 77, 76, 107, 245, 110, 255, 916, 917,
+		79, 78, 77, 76, 107, 245, 111, 255, 916, 917,
 		918, 919, 921, 922, 923, 924, 925, 926, 950, 951,
 		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
 		962, 963, 964, 250, 972, 971, 970, 965, 955, 914,

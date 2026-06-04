@@ -2538,6 +2538,56 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public Vector3 InspectPosition => renderer.position;
 
+	public bool GetBool(string id)
+	{
+		return GetBool(id.GetHashCode());
+	}
+
+	public void SetBool(string id, bool enable)
+	{
+		SetBool(id.GetHashCode(), enable);
+	}
+
+	public int GetInt(string id, int? defaultInt = null)
+	{
+		return GetInt(id.GetHashCode(), defaultInt);
+	}
+
+	public void AddInt(string id, int value)
+	{
+		AddInt(id.GetHashCode(), value);
+	}
+
+	public void SetInt(string id, int value = 0)
+	{
+		SetInt(id.GetHashCode(), value);
+	}
+
+	public string GetStr(string id, string defaultStr = null)
+	{
+		return GetStr(id.GetHashCode(), defaultStr);
+	}
+
+	public void SetStr(string id, string value = null)
+	{
+		SetStr(id.GetHashCode(), value);
+	}
+
+	public T GetObj<T>(string id)
+	{
+		return GetObj<T>(id.GetHashCode());
+	}
+
+	public void SetObj(string id, object o)
+	{
+		SetObj(id.GetHashCode(), o);
+	}
+
+	public T SetObj<T>(string id, object o)
+	{
+		return SetObj<T>(id.GetHashCode(), o);
+	}
+
 	public override string ToString()
 	{
 		return Name + "/" + pos?.ToString() + "/" + parent;
@@ -3342,12 +3392,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 				foreach (Thing item2 in list2)
 				{
-					Religion artifactDeity = Religion.GetArtifactDeity(item2.id);
 					if (item2.isEquipped)
 					{
 						item.body.Unequip(item2);
 					}
-					item2.c_idDeity = artifactDeity?.id ?? null;
+					item2.c_idDeity = EClass.game.religions.GetArtifactDeity(item2.id)?.id;
 					Msg.Say("waterCurse", item2);
 				}
 			}
@@ -4090,11 +4139,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			if (Chara.parasite != null)
 			{
-				Chara.parasite.HealHP(a);
+				Chara.parasite.HealHP(a, origin);
 			}
 			if (Chara.ride != null)
 			{
-				Chara.ride.HealHP(a);
+				Chara.ride.HealHP(a, origin);
 			}
 		}
 		HealHP(a, origin);

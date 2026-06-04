@@ -74,6 +74,9 @@ public class Core : BaseCore
 	[NonSerialized]
 	public bool initialized;
 
+	[NonSerialized]
+	public string[] launchArgs;
+
 	private bool? lastFullScreen;
 
 	private float nextResolutionUpdate;
@@ -108,11 +111,11 @@ public class Core : BaseCore
 		{
 			forceLangCode = debug.langCode.ToString();
 		}
-		string[] array = (Application.isEditor ? debug.command.Split(',') : Environment.GetCommandLineArgs());
-		for (int i = 0; i < array.Length; i++)
+		launchArgs = (Application.isEditor ? debug.command.Split(',') : Environment.GetCommandLineArgs());
+		for (int i = 0; i < launchArgs.Length; i++)
 		{
-			string text = array[i];
-			text = text.Replace("-", "").ToUpper();
+			string text = launchArgs[i].Replace("-", "").ToUpper();
+			launchArgs[i] = text;
 			Debug.Log("Commandline args:" + text);
 			if (text.StartsWith("LANG_"))
 			{
@@ -177,12 +180,8 @@ public class Core : BaseCore
 		};
 		SoundManager.funcCanPlayBGM = () => !LayerDrama.haltPlaylist && !LayerDrama.keepBGM;
 		FileDragAndDrop.onDrop = textures.OnDropFile;
-		MOD.langs.Clear();
 		MOD.OnAddPcc = pccs.Add;
-		MOD.listTalk = new TalkDataList();
-		MOD.tones = new ToneDataList();
-		MOD.listMaps.Clear();
-		MOD.listPartialMaps.Clear();
+		MOD.ResetResources();
 		Portrait.modPortraitBGFs = new ModItemList<Sprite>();
 		Portrait.modPortraitBGs = new ModItemList<Sprite>();
 		Portrait.modPortraits = new ModItemList<Sprite>();
@@ -550,11 +549,6 @@ public class Core : BaseCore
 		Cal.Init();
 		Colors.Init();
 		gameSetting.Init();
-		mods.InitLang();
-		if (!Lang.isBuiltin)
-		{
-			sources.ImportSourceTexts();
-		}
 		PCCManager.current.Init();
 		SpriteVariationManager.current.Init();
 		scene.InitPass();
@@ -720,6 +714,11 @@ public class Core : BaseCore
 				game.Kill();
 			}
 			config.OnSetLang();
+			mods.InitLang();
+			if (!Lang.isBuiltin)
+			{
+				sources.ImportSourceTexts();
+			}
 			BaseModManager.PublishEvent("elin.source.lang_set", langCode);
 		}
 	}
@@ -728,7 +727,7 @@ public class Core : BaseCore
 	{
 		if (string.IsNullOrEmpty(str))
 		{
-			return new int[0];
+			return Array.Empty<int>();
 		}
 		string[] array = str.Replace("\n", "").Split(',');
 		int[] array2 = new int[array.Length * 2];
@@ -736,7 +735,7 @@ public class Core : BaseCore
 		{
 			string[] array3 = array[i].Split('/');
 			array2[i * 2] = GetElement(array3[0]);
-			array2[i * 2 + 1] = ((array3.Length == 1) ? 1 : int.Parse(array3[1]));
+			array2[i * 2 + 1] = ((!int.TryParse(array3.TryGet(1, returnNull: true), out var result)) ? 1 : result);
 		}
 		return array2;
 	}
@@ -752,7 +751,8 @@ public class Core : BaseCore
 		{
 			sourceElement.Init();
 		}
-		if (!sourceElement.alias.TryGetValue(id ?? (id = "_void"), out var value))
+		id = id?.Trim() ?? "_void";
+		if (!sourceElement.alias.TryGetValue(id, out var value))
 		{
 			if (sourceElement.fuzzyAlias.TryGetValue(id, out var value2))
 			{

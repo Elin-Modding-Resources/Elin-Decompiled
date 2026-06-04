@@ -122,15 +122,16 @@ public class TraitDrink : Trait
 		case EffectId.DrinkWater:
 		{
 			BlessedState blessedState = owner.blessedState;
-			t = t.Split(1);
 			if (blessedState >= BlessedState.Blessed)
 			{
+				t = t.Split(1);
 				Msg.Say("waterBless", t);
 				t.SetBlessedState(BlessedState.Blessed);
 				c.Pick(t);
 			}
 			else if (blessedState <= BlessedState.Cursed)
 			{
+				t = t.Split(1);
 				Msg.Say("waterCurse", t);
 				t.SetBlessedState(BlessedState.Cursed);
 				c.Pick(t);

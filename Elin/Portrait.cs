@@ -150,9 +150,21 @@ public class Portrait : UIButton
 			imageChara.SetNativeSize();
 			if (fixSpritePos)
 			{
-				imageChara.transform.localScale = (c.IsPCC ? new Vector3(1.3f, 1.4f, 1f) : new Vector3(1f, 1f, 1f)) * charaScale;
-				imageChara.rectTransform.pivot = (c.IsPCC ? new Vector2(0.5f, 0.3f) : new Vector2(0.5f, 0.2f));
-				imageChara.rectTransform.anchoredPosition = (c.IsPCC ? new Vector2(-25f, 20f) : new Vector2(-25f, 20f));
+				if (c.IsPCC)
+				{
+					imageChara.rectTransform.localScale = new Vector3(1.3f, 1.4f, 1f) * charaScale;
+					imageChara.rectTransform.anchoredPosition = new Vector2(-25f, 10f);
+					imageChara.rectTransform.pivot = new Vector2(0.5f, 0.3f);
+				}
+				else
+				{
+					imageChara.rectTransform.localScale = Vector3.one * charaScale;
+					imageChara.rectTransform.anchoredPosition = new Vector2(-25f, 28f);
+					imageChara.rectTransform.pivot = c.source.renderData.imagePivot;
+					SourcePref pref = c.Pref;
+					float num = imageChara.sprite.rect.height / 128f;
+					imageChara.rectTransform.localPosition += new Vector3(pref.pivotX, (float)pref.pivotY * num, 0f);
+				}
 			}
 		}
 		if ((bool)imageFaith)

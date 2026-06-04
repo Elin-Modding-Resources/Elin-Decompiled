@@ -210,16 +210,9 @@ public class RenderRow : SourceData.BaseRow, IRenderSource
 		{
 			this.renderData = ResourceCache.Load<RenderData>(pathRenderData + idRenderData) ?? defaultRenderData;
 		}
-		if (!Application.isEditor && pref == null)
+		if (!Application.isEditor && !aliasPref.IsEmpty())
 		{
-			if (aliasPref.IsEmpty())
-			{
-				pref = new SourcePref();
-			}
-			else
-			{
-				pref = sources.cards.map[aliasPref].pref;
-			}
+			pref = sources.cards.map[aliasPref].pref;
 		}
 		if (pref == null)
 		{

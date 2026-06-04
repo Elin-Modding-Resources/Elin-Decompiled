@@ -82,6 +82,8 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public static List<Thing> Suckers = new List<Thing>();
 
+	public string ZoneFullName => $"Zone_{id}@{base.lv}";
+
 	public Chara Boss
 	{
 		get
@@ -526,6 +528,23 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 	}
 
+	public Zone FindOrCreateLevel(int destLv, string subId = "")
+	{
+		Zone zone = FindZone(destLv);
+		if (zone != null)
+		{
+			return zone;
+		}
+		if (!(SpatialGen.Create(subId.IsEmpty(GetNewZoneID(destLv)), this, register: true) is Zone zone2))
+		{
+			return null;
+		}
+		zone2.lv = destLv;
+		zone2.x = base.x;
+		zone2.y = base.y;
+		return zone2;
+	}
+
 	public int Evalue(int ele)
 	{
 		return elements.Value(ele);
@@ -553,7 +572,7 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public override string ToString()
 	{
-		return Name + "(" + base.uid + ")(" + _regionPos?.ToString() + ") instance?" + IsInstance + "/" + EClass.world.date.GetRemainingHours(base.dateExpire) + "h";
+		return Name + "(" + base.uid + ")(" + RegionPos?.ToString() + ") instance?" + IsInstance + "/" + EClass.world.date.GetRemainingHours(base.dateExpire) + "h";
 	}
 
 	public string TextLevel(int _lv)
@@ -628,8 +647,33 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			UnloadMap();
 		}
-		Debug.Log(idExport + "/" + File.Exists(pathExport) + "/" + pathExport);
-		if (!base.isGenerated && (idExport.IsEmpty() || !File.Exists(pathExport)))
+		string fullName = pathExport;
+		string lhs = CorePath.ZoneSave + "_new.z";
+		bool flag3 = File.Exists(fullName) && !PathComparer.Default.Equals(lhs, fullName);
+		bool flag4 = !idExport.IsEmpty();
+		Debug.Log(idExport + "/" + flag3 + "/" + fullName);
+		if (!flag3 && (base.source.tag.Contains("addMap") || flag4))
+		{
+			string[] array = new string[4]
+			{
+				"Maps/" + idExport + ".z",
+				"Maps/" + ZoneFullName + ".z",
+				"Map/" + idExport + ".z",
+				"Map/" + ZoneFullName + ".z"
+			};
+			for (int i = 0; i < array.Length; i++)
+			{
+				FileInfo fileInfo = PackageIterator.GetFiles(array[i]).LastOrDefault();
+				if (fileInfo != null)
+				{
+					fullName = fileInfo.FullName;
+					flag3 = true;
+					flag4 = true;
+					break;
+				}
+			}
+		}
+		if (!base.isGenerated && (!flag4 || !flag3))
 		{
 			Debug.Log("generating random map");
 			flag = true;
@@ -662,29 +706,29 @@ public class Zone : Spatial, ICardParent, IInspect
 		else
 		{
 			subset = null;
-			bool flag3 = (base.isGenerated && flag2) || (base.isGenerated && !IsInstance && !IsPCFaction && ShouldRegenerate && EClass.world.date.IsExpired(base.dateRegenerate)) || forceRegenerate;
-			if (pathExport.IsEmpty() || !File.Exists(pathExport) || EClass.game.isLoading || EClass.player.simulatingZone)
+			bool flag5 = (base.isGenerated && flag2) || (base.isGenerated && !IsInstance && !IsPCFaction && ShouldRegenerate && EClass.world.date.IsExpired(base.dateRegenerate)) || forceRegenerate;
+			if (!flag3 || EClass.game.isLoading || EClass.player.simulatingZone)
 			{
-				flag3 = false;
+				flag5 = false;
 				flag2 = false;
 			}
-			Debug.Log(base.isGenerated + "/" + flag3 + "/" + flag2 + "/" + IDSubset);
-			if (!base.isGenerated || flag3 || flag2)
+			Debug.Log(base.isGenerated + "/" + flag5 + "/" + flag2 + "/" + IDSubset);
+			if (!base.isGenerated || flag5 || flag2)
 			{
-				Debug.Log("importing map:" + pathExport);
+				Debug.Log("importing map:" + fullName);
 				flag = true;
 				base.dateRegenerate = EClass.world.date.GetRaw() + 1440 * EClass.setting.balance.dateRegenerateZone;
-				if (!flag3)
+				if (!flag5)
 				{
 					IO.DeleteDirectory(pathTemp + "Texture Replace");
 					Debug.Log(pathTemp);
 				}
 				try
 				{
-					zoneExportData = Import(pathExport);
+					zoneExportData = Import(fullName);
 					base.isGenerated = true;
 					isImported = true;
-					if (flag3)
+					if (flag5)
 					{
 						zoneExportData.orgMap = GameIO.LoadFile<Map>(base.pathSave + "map");
 					}
@@ -698,11 +742,16 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 			}
 			EClass.game.countLoadedMaps++;
-			Debug.Log("loading map: imported? " + isImported + " regenerate? " + flag3);
-			map = GameIO.LoadFile<Map>((isImported ? pathTemp : base.pathSave) + "map");
-			if (map == null)
+			Debug.Log("loading map: imported? " + isImported + " regenerate? " + flag5);
+			string text = (isImported ? pathTemp : base.pathSave) + "map";
+			try
 			{
-				EClass.ui.Say("System.IO.EndOfStreamException: Unexpected end of stream:" + Environment.NewLine + "File may be corrupted. Try replacing the following file if you have a backup:" + Environment.NewLine + (isImported ? pathTemp : base.pathSave) + "map");
+				map = GameIO.LoadFile<Map>(text);
+			}
+			catch (Exception message2)
+			{
+				EClass.ui.Say($"Can't load map '{base.uid}/{Name}'; File may be corrupted.\n" + "Try replacing the following file if you have a backup:\n" + text + "\nDefault file is at:\n" + fullName);
+				Debug.LogError(message2);
 				return;
 			}
 			map.SetZone(this);
@@ -713,7 +762,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				map.deadCharas.Clear();
 				map.OnImport(zoneExportData);
-				if (UseFog && !flag3)
+				if (UseFog && !flag5)
 				{
 					map.ForeachCell(delegate(Cell c)
 					{
@@ -727,14 +776,14 @@ public class Zone : Spatial, ICardParent, IInspect
 					map.charas = orgMap.charas;
 					map.serializedCharas = orgMap.serializedCharas;
 					map.deadCharas = orgMap.deadCharas;
-					byte[] array = orgMap.TryLoadFile(base.pathSave, "flags", EClass._map.Size * EClass._map.Size);
-					if (array != null && array.Length == EClass._map.Size * EClass._map.Size)
+					byte[] array2 = orgMap.TryLoadFile(base.pathSave, "flags", EClass._map.Size * EClass._map.Size);
+					if (array2 != null && array2.Length == EClass._map.Size * EClass._map.Size)
 					{
-						for (int i = 0; i < EClass._map.Size; i++)
+						for (int j = 0; j < EClass._map.Size; j++)
 						{
-							for (int j = 0; j < EClass._map.Size; j++)
+							for (int k = 0; k < EClass._map.Size; k++)
 							{
-								map.cells[i, j].isSeen = array[i * EClass._map.Size + j].GetBit(1);
+								map.cells[j, k].isSeen = array2[j * EClass._map.Size + k].GetBit(1);
 							}
 						}
 					}
@@ -840,7 +889,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			map.RefreshAllTiles();
 			AddGlobalCharasOnActivate();
 			map.OnLoad();
-			if (flag3)
+			if (flag5)
 			{
 				foreach (Card item3 in map.Cards.ToList())
 				{
@@ -881,7 +930,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					instance.OnGenerateMap();
 				}
 			}
-			if (isImported && !flag3 && !RevealRoom)
+			if (isImported && !flag5 && !RevealRoom)
 			{
 				foreach (Room item4 in map.rooms.listRoom)
 				{
@@ -895,7 +944,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					}
 				}
 			}
-			if (flag3)
+			if (flag5)
 			{
 				OnRegenerate();
 			}

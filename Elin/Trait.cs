@@ -528,7 +528,17 @@ public class Trait : EClass
 
 	public virtual int NumCopyItem => 2 + Mathf.Min(owner.c_invest / 10, 3);
 
-	public virtual ShopType ShopType => ShopType.None;
+	public virtual ShopType ShopType
+	{
+		get
+		{
+			if (!owner.GetStr("merchant_override").IsEmpty())
+			{
+				return ShopType.CustomContent;
+			}
+			return ShopType.None;
+		}
+	}
 
 	public virtual CurrencyType CurrencyType => CurrencyType.Money;
 
@@ -2029,6 +2039,10 @@ public class Trait : EClass
 					break;
 				default:
 				{
+					if (!owner.GetStr("merchant_override").IsEmpty())
+					{
+						break;
+					}
 					float num2 = (float)(3 + Mathf.Min(ShopLv / 5, 10)) + Mathf.Sqrt(ShopLv);
 					int num3 = 300;
 					switch (ShopType)
@@ -2075,18 +2089,27 @@ public class Trait : EClass
 					break;
 				}
 				}
-				foreach (RecipeSource item3 in RecipeManager.list)
+				string str = owner.GetStr("merchant_override");
+				if (!str.IsEmpty())
 				{
-					if (item3.row.recipeKey.IsEmpty())
+					foreach (Thing item3 in ModUtil.GenerateMerchantStock(owner, str))
+					{
+						AddThing(item3);
+					}
+				}
+				string text = ShopType.ToString();
+				foreach (RecipeSource item4 in RecipeManager.list)
+				{
+					if (item4.row.recipeKey.IsEmpty())
 					{
 						continue;
 					}
-					string[] array2 = item3.row.recipeKey;
+					string[] array2 = item4.row.recipeKey;
 					for (int k = 0; k < array2.Length; k++)
 					{
-						if (array2[k] == ShopType.ToString())
+						if (array2[k] == text)
 						{
-							NoRestock(ThingGen.CreateRecipe(item3.id));
+							NoRestock(ThingGen.CreateRecipe(item4.id));
 							break;
 						}
 					}
@@ -2348,12 +2371,12 @@ public class Trait : EClass
 				}
 				void NoRestock(Thing _t)
 				{
-					string text = owner.id;
+					string text2 = owner.id;
 					if (_t.idSkin != 0)
 					{
-						text = text + "_skin" + _t.idSkin;
+						text2 = text2 + "_skin" + _t.idSkin;
 					}
-					HashSet<string> hashSet = EClass.player.noRestocks.TryGetValue(text);
+					HashSet<string> hashSet = EClass.player.noRestocks.TryGetValue(text2);
 					if (hashSet == null)
 					{
 						hashSet = new HashSet<string>();
@@ -2361,7 +2384,7 @@ public class Trait : EClass
 					if (!hashSet.Contains(_t.trait.IdNoRestock))
 					{
 						hashSet.Add(_t.trait.IdNoRestock);
-						EClass.player.noRestocks[text] = hashSet;
+						EClass.player.noRestocks[text2] = hashSet;
 						_t.SetInt(101, 1);
 						AddThing(_t);
 					}

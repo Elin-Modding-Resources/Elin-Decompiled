@@ -477,12 +477,16 @@ public class WindowChara : WindowController
 
 	public void RefreshInfo()
 	{
+		if (ModUtil.TryGetContent<CustomBiographyContent>("Biography/" + chara.id, out var content))
+		{
+			content.RefreshCharaBio(chara);
+		}
 		textBirthday.text = bio.TextBirthDate(chara);
-		textMom.text = chara.bio.nameMom.ToTitleCase();
-		textDad.text = chara.bio.nameDad.ToTitleCase();
-		textBirthplace.text = chara.bio.nameBirthplace.ToTitleCase();
-		textLike.text = EClass.sources.cards.map.TryGetValue(bio.idLike, EClass.sources.cards.map["ash"]).GetName();
-		textHobby.text = EClass.sources.elements.map[bio.idHobby].GetText();
+		textMom.text = bio.nameMom.ToTitleCase().Trim();
+		textDad.text = bio.nameDad.ToTitleCase().Trim();
+		textBirthplace.text = bio.nameBirthplace.ToTitleCase();
+		textLike.text = EClass.sources.cards.map.TryGetValue(bio.idLike, "ash").GetName();
+		textHobby.text = EClass.sources.elements.map.TryGetValue(bio.idHobby, 100).GetText();
 		textFaction.text = ((chara.faction == null) ? "???" : chara.faction.name.ToTitleCase());
 		textFaith.text = chara.faith.Name.ToTitleCase();
 	}
@@ -913,31 +917,37 @@ public class WindowChara : WindowController
 			}
 			else
 			{
-				uIItem.text1.SetText("???");
+				string text = "???";
+				if (ModUtil.TryGetContent<CustomBiographyContent>("Biography/" + chara.id, out var content))
+				{
+					content.RefreshCharaBio(chara);
+					text = content.background;
+				}
+				uIItem.text1.SetText(text);
 				uIItem.button1.SetActive(enable: false);
 			}
 			n.Space(16);
 			n.AddTopic("TopicDomain", "profile".lang(), biography.TextBio(chara) + " " + biography.TextBio2(chara));
 		}
-		string text = "";
+		string text2 = "";
 		ElementContainer elementContainer = (chara.IsPC ? EClass.player.GetDomains() : new ElementContainer().ImportElementMap(chara.job.domain));
 		foreach (Element value in elementContainer.dict.Values)
 		{
-			text = text + ((value == elementContainer.dict.Values.First()) ? "" : ", ") + value.Name;
+			text2 = text2 + ((value == elementContainer.dict.Values.First()) ? "" : ", ") + value.Name;
 		}
-		n.AddTopic("TopicDomain", "domain".lang(), text).button1.SetActive(enable: false);
-		string text2 = chara.GetFavCat().GetName();
+		n.AddTopic("TopicDomain", "domain".lang(), text2).button1.SetActive(enable: false);
+		string text3 = chara.GetFavCat().GetName();
 		string @ref = chara.GetFavFood().GetName();
-		Add("favgift".lang(text2.ToLower().ToTitleCase(), @ref));
+		Add("favgift".lang(text3.ToLower().ToTitleCase(), @ref));
 		Add(chara.GetTextHobby());
 		Add(chara.GetTextWork());
 		if (chara.IsPC)
 		{
 			n.AddTopic("TopicDomain", "totalFeat".lang(), EClass.player.totalFeat.ToString() ?? "");
 		}
-		text = chara.GetFavWeaponSkill()?.Name ?? Element.Get(100).GetText();
-		text = text + " / " + ("style" + chara.GetFavAttackStyle()).lang();
-		n.AddTopic("TopicDomain", "attackStyle".lang(), text);
+		text2 = chara.GetFavWeaponSkill()?.Name ?? Element.Get(100).GetText();
+		text2 = text2 + " / " + ("style" + chara.GetFavAttackStyle()).lang();
+		n.AddTopic("TopicDomain", "attackStyle".lang(), text2);
 		n.AddTopic("TopicDomain", "armorStyle".lang(), chara.GetFavArmorSkill()?.Name ?? Element.Get(120).GetText());
 		bool textAdded = false;
 		if (chara.IsPC && EClass.pc.c_daysWithGod > 0)

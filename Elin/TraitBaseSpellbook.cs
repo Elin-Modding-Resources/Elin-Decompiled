@@ -267,7 +267,7 @@ public class TraitBaseSpellbook : TraitScroll
 			s = "_titled".lang(Lang.GetList("ancientbook")[owner.refVal], s);
 			if (owner.isOn)
 			{
-				s = "_deciphered ".lang(s);
+				s = "_deciphered".lang(s);
 			}
 			break;
 		case Type.Ero:

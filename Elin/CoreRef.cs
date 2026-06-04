@@ -435,11 +435,17 @@ public class CoreRef : ScriptableObject
 	public void RefreshBGM()
 	{
 		dictBGM = new Dictionary<int, BGMData>();
-		int num = 0;
-		foreach (BGMData bgm in bgms)
+		for (int num = bgms.Count - 1; num >= 0; num--)
 		{
-			dictBGM[bgm.id] = bgm;
-			num++;
+			BGMData bGMData = bgms[num];
+			if (!bGMData)
+			{
+				bgms.RemoveAt(num);
+			}
+			else
+			{
+				dictBGM[bGMData.id] = bGMData;
+			}
 		}
 		if (Core.Instance.debug.skipMod)
 		{

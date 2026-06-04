@@ -88,7 +88,7 @@ public class ConBuffStats : Condition
 			}
 			return list[1];
 		}
-		return base.GetText();
+		return base.GetPhaseStr();
 	}
 
 	public override void PlayEffect()

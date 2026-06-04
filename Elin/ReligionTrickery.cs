@@ -15,4 +15,19 @@ public class ReligionTrickery : ReligionMinor
 			return 0;
 		}
 	}
+
+	public override bool IsValidArtifact(string id)
+	{
+		return id == "kogitsunemaru";
+	}
+
+	public override string[] GetValidArtifacts()
+	{
+		return new string[1] { "kogitsunemaru" };
+	}
+
+	public override bool IsFaithElement(Element e)
+	{
+		return e.id != 656;
+	}
 }

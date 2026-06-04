@@ -61,25 +61,24 @@ public class SourceImporter : EClass
 			int count = list2.Count;
 			Debug.Log("#source loading sheet " + sheetName);
 			ExcelParser.path = file;
+			ERROR.lastImported = 0;
 			string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(file);
 			if (!sourceData.ImportData(sheet, fileNameWithoutExtension, overwrite: true))
 			{
 				throw new SourceParseException("#source failed to import data " + sourceData.GetType().Name + ":" + fileNameWithoutExtension + "/" + sheetName);
 			}
-			SourceData.BaseRow[] item = Array.Empty<SourceData.BaseRow>();
-			int num = ERROR.msg.Split('/')[^1].ToInt();
-			if (num > 0)
+			if (ERROR.lastImported > 0)
 			{
-				item = list2.OfType<SourceData.BaseRow>().Skip(count).Take(num)
+				SourceData.BaseRow[] item = list2.OfType<SourceData.BaseRow>().Skip(count).Take(ERROR.lastImported)
 					.ToArray();
+				return (sourceData, item);
 			}
-			return (sourceData, item);
 		}
 		catch (Exception arg)
 		{
 			Debug.LogError($"#source failed to load sheet {sheetName}\n{arg}");
 		}
-		return (null, null);
+		return (null, Array.Empty<SourceData.BaseRow>());
 	}
 
 	public IEnumerable<SourceData> ImportFilesCached(IEnumerable<string> imports, bool resetData = true)
@@ -101,12 +100,16 @@ public class SourceImporter : EClass
 			}
 			if (sourceCache.IsDirtyOrEmpty)
 			{
-				if (dictionary.TryGetValue(sourceCache, out var value2) && value2.Item3.Length != 0)
+				if (!dictionary.TryGetValue(sourceCache, out var value2) || value2.Item3.Length == 0)
 				{
-					ISheet[] item = value2.Item3;
-					foreach (ISheet sheet in item)
+					continue;
+				}
+				ISheet[] item = value2.Item3;
+				foreach (ISheet sheet in item)
+				{
+					SourceData.BaseRow[] item2 = LoadBySheetName(sheet, value2.Item1).Item2;
+					if (!item2.IsEmpty())
 					{
-						SourceData.BaseRow[] item2 = LoadBySheetName(sheet, value2.Item1).Item2;
 						sourceCache.EmplaceCache(sheet.SheetName, item2);
 						value?.sourceRows.UnionWith(item2);
 						Debug.Log($"#source workbook {arg}:{sheet.SheetName}:{item2.Length}");

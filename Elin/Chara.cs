@@ -2915,7 +2915,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				flag2 = true;
 			}
-			if (flag2 && newPoint.Distance(pos) <= 1)
+			if (flag2 && !HasElement(493) && newPoint.Distance(pos) <= 1)
 			{
 				Point randomNeighbor = pos.GetRandomNeighbor();
 				if (CanMoveTo(randomNeighbor, allowDestroyPath: false))
@@ -2936,7 +2936,7 @@ public class Chara : Card, IPathfindWalker
 		if (effect != null && effect.id == 7)
 		{
 			CellEffect effect2 = base.Cell.effect;
-			if (race.height < 500 && !race.tag.Contains("webfree") && EClass.rnd(effect2.power + 25) > EClass.rnd(base.STR + base.DEX + 1))
+			if (race.height < 500 && !race.tag.Contains("webfree") && !HasElement(493) && EClass.rnd(effect2.power + 25) > EClass.rnd(base.STR + base.DEX + 1))
 			{
 				Say("abWeb_caught", this);
 				PlaySound("web");
@@ -3247,9 +3247,16 @@ public class Chara : Card, IPathfindWalker
 		{
 			DestroyPath(pos);
 		}
-		if (!isDead && pos.IsBlocked && EClass.rnd(2) == 0)
+		if (!isDead)
 		{
-			stamina.Mod(-1);
+			if (Evalue(492) > 0 && EClass.rnd(10000 / (80 + Evalue(492) * 2)) == 0)
+			{
+				AddExp(Mathf.Clamp((int)Mathf.Sqrt(base.ExpToNext / 100), 1, 1000));
+			}
+			if (pos.IsBlocked && EClass.rnd(2) == 0)
+			{
+				stamina.Mod(-1);
+			}
 		}
 		hasMovedThisTurn = true;
 		return MoveResult.Success;
@@ -6878,6 +6885,15 @@ public class Chara : Card, IPathfindWalker
 
 	public override Sprite GetSprite(int dir = 0)
 	{
+		string str = GetStr("sprite_override");
+		if (!str.IsEmpty())
+		{
+			Sprite sprite = ModUtil.LoadSprite(str);
+			if ((bool)sprite)
+			{
+				return sprite;
+			}
+		}
 		if (IsPCC)
 		{
 			PCC pCC = PCC.Get(pccData);
@@ -6888,10 +6904,10 @@ public class Chara : Card, IPathfindWalker
 		int skin = 0;
 		if (spriteReplacer?.data != null)
 		{
-			Sprite sprite = spriteReplacer.GetSprite(dir, skin, snow);
-			if ((bool)sprite)
+			Sprite sprite2 = spriteReplacer.GetSprite(dir, skin, snow);
+			if ((bool)sprite2)
 			{
-				return sprite;
+				return sprite2;
 			}
 		}
 		if (sourceCard.tiles.Length > 1)
@@ -7432,14 +7448,16 @@ public class Chara : Card, IPathfindWalker
 		{
 			flag = false;
 		}
-		if (flag && File.Exists(PackageIterator.GetFiles("Dialog/Drama/" + id + ".xlsx").LastOrDefault()?.FullName ?? (CorePath.DramaData + id + ".xlsx")))
+		string book = "_chara";
+		if (flag)
 		{
-			ShowDialog(id);
+			string text = GetStr("drama_override").IsEmpty(id);
+			if (File.Exists(PackageIterator.GetFiles("Dialog/Drama/" + text + ".xlsx").LastOrDefault()?.FullName ?? (CorePath.DramaData + id + ".xlsx")))
+			{
+				book = text;
+			}
 		}
-		else
-		{
-			ShowDialog("_chara");
-		}
+		ShowDialog(book);
 	}
 
 	public LayerDrama ShowDialog(string book, string step = "main", string tag = "")
@@ -8271,6 +8289,14 @@ public class Chara : Card, IPathfindWalker
 
 	public SourceThing.Row GetFavFood()
 	{
+		if (ModUtil.TryGetContent<CustomBiographyContent>("Biography/" + id, out var content))
+		{
+			content.RefreshCharaBio(this);
+			if (!content.favFood.IsEmpty() && EClass.sources.things.map.TryGetValue(content.favFood, out var value))
+			{
+				return value;
+			}
+		}
 		if (_listFavFood.Count == 0)
 		{
 			foreach (SourceThing.Row row in EClass.sources.things.rows)
@@ -8291,6 +8317,14 @@ public class Chara : Card, IPathfindWalker
 
 	public SourceCategory.Row GetFavCat()
 	{
+		if (ModUtil.TryGetContent<CustomBiographyContent>("Biography/" + id, out var content))
+		{
+			content.RefreshCharaBio(this);
+			if (!content.favCategory.IsEmpty() && EClass.sources.categories.map.TryGetValue(content.favCategory, out var value) && value.gift > 0)
+			{
+				return value;
+			}
+		}
 		SourceCategory.Row r = null;
 		if (_listFavCat.Count == 0)
 		{
@@ -8397,6 +8431,11 @@ public class Chara : Card, IPathfindWalker
 
 	public string GetIdPortrait()
 	{
+		string str = GetStr("portrait_override");
+		if (!str.IsEmpty() && Portrait.allIds.Contains(str + ".png"))
+		{
+			return str;
+		}
 		if (id == "olderyoungersister")
 		{
 			if (base.idSkin != 2)
@@ -8667,7 +8706,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				continue;
 			}
-			int num = Mathf.Max(chara.Evalue(1649), (!chara.IsPC) ? ((!flag2) ? 1 : 3) : 0);
+			int num = Mathf.Max(chara.Evalue(1649), (!flag2) ? 1 : 3);
 			int num2 = Dist(chara);
 			if (num2 > 25)
 			{
@@ -9418,9 +9457,14 @@ public class Chara : Card, IPathfindWalker
 		else
 		{
 			string[] hobbies = source.hobbies;
-			foreach (string key in hobbies)
+			foreach (string text in hobbies)
 			{
-				AddHobby(EClass.sources.hobbies.alias[key].id);
+				if (EClass.sources.hobbies.alias.ContainsKey(text))
+				{
+					AddHobby(EClass.sources.hobbies.alias[text].id);
+					continue;
+				}
+				ModUtil.LogModError("source chara row '" + source.id + "' has invalid hobby '" + text + "'", source);
 			}
 		}
 		if (source.works.IsEmpty())
@@ -9430,9 +9474,14 @@ public class Chara : Card, IPathfindWalker
 		else
 		{
 			string[] hobbies = source.works;
-			foreach (string key2 in hobbies)
+			foreach (string text2 in hobbies)
 			{
-				AddWork(EClass.sources.hobbies.alias[key2].id);
+				if (EClass.sources.hobbies.alias.ContainsKey(text2))
+				{
+					AddWork(EClass.sources.hobbies.alias[text2].id);
+					continue;
+				}
+				ModUtil.LogModError("source chara row '" + source.id + "' has invalid work '" + text2 + "'", source);
 			}
 		}
 		GetWorkSummary().Reset();

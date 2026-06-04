@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class Condition : BaseCondition
 {
@@ -45,8 +46,20 @@ public class Condition : BaseCondition
 
 	public static Condition Create(string alias, int power = 100, Action<Condition> onCreate = null)
 	{
-		SourceStat.Row row = EClass.sources.stats.alias[alias];
-		Condition condition = ClassCache.Create<Condition>(row.type.IsEmpty(alias), "Elin");
+		SourceStat.Row row = EClass.sources.stats.alias.TryGetValue(alias);
+		if (row == null)
+		{
+			row = EClass.sources.stats.alias["ConWet"];
+			Debug.LogError("#source can't create condition from alias '" + alias + "'");
+		}
+		string text = row.type.IsEmpty(alias);
+		Condition condition = ClassCache.Create<Condition>(text, "Elin");
+		if (condition == null)
+		{
+			condition = new ConWet();
+			row = EClass.sources.stats.alias["ConWet"];
+			ModUtil.LogModError("source condition row '" + alias + "' has invalid type '" + text + "'", row);
+		}
 		condition.power = power;
 		condition.id = row.id;
 		condition._source = row;

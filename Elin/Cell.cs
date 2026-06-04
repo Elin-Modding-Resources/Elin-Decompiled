@@ -1774,7 +1774,7 @@ public class Cell : WeightCell, IFloodCell
 
 	public override bool IsPathBlocked(IPathfindWalker walker, PathManager.MoveType moveType)
 	{
-		if (IsSky)
+		if (IsSky || outOfBounds)
 		{
 			return true;
 		}

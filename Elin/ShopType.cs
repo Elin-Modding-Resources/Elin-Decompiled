@@ -53,5 +53,6 @@ public enum ShopType
 	Curry,
 	KeeperOfGarden,
 	TravelMerchant,
-	TravelMerchant2
+	TravelMerchant2,
+	CustomContent
 }

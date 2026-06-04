@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class ModPackage : EMod
@@ -13,6 +14,13 @@ public class ModPackage : EMod
 		public int dest;
 
 		public int old;
+	}
+
+	public void CopyContentTo(string dir)
+	{
+		IO.DeleteDirectory(dir);
+		IO.CopyAll(dirInfo.FullName, dir);
+		EClass.ui.Say(dir);
 	}
 
 	public IReadOnlyList<FileInfo> ParseTalkText(DirectoryInfo dir)
@@ -192,7 +200,69 @@ public class ModPackage : EMod
 		return list;
 	}
 
-	public SortedDictionary<string, string> ExportSourceLocalizations()
+	public override void GenerateCustomContentProfiles()
+	{
+		customContent.Clear();
+		foreach (SourceData.BaseRow sourceRow in sourceRows)
+		{
+			if (!(sourceRow is SourceChara.Row r))
+			{
+				if (!(sourceRow is SourceReligion.Row row))
+				{
+					if (!(sourceRow is SourceZone.Row r2))
+					{
+						if (!(sourceRow is SourceElement.Row r3))
+						{
+							if (!(sourceRow is SourceMaterial.Row r4))
+							{
+								if (!(sourceRow is SourceStat.Row r5))
+								{
+									if (!(sourceRow is SourceThing.Row r6))
+									{
+										if (!(sourceRow is SourceFaction.Row) && sourceRow is SourceQuest.Row)
+										{
+										}
+									}
+									else
+									{
+										customContent.Add(CustomThingContent.CreateFromRow(r6, this));
+									}
+								}
+								else
+								{
+									customContent.Add(CustomStatContent.CreateFromRow(r5, this));
+								}
+							}
+							else
+							{
+								customContent.Add(CustomMaterialContent.CreateFromRow(r4, this));
+							}
+						}
+						else
+						{
+							customContent.Add(CustomElementContent.CreateFromRow(r3, this));
+						}
+					}
+					else
+					{
+						customContent.Add(CustomZoneContent.CreateFromRow(r2, this));
+					}
+				}
+				else if (row.id.StartsWith("cwl") || row.id.StartsWith("custom"))
+				{
+					customContent.Add(CustomReligionContent.CreateFromRow(row, this));
+				}
+			}
+			else
+			{
+				ModUtil.FixDefaultCharaRowPref(r);
+				customContent.Add(CustomCharaContent.CreateFromRow(r, this));
+			}
+		}
+		customContent.RemoveAll((ICustomContent p) => p == null);
+	}
+
+	public override SortedDictionary<string, string> ExportSourceLocalizations()
 	{
 		SortedDictionary<string, string> sortedDictionary = new SortedDictionary<string, string>();
 		try
@@ -215,7 +285,7 @@ public class ModPackage : EMod
 		return sortedDictionary;
 	}
 
-	public void ImportSourceLocalizations(IReadOnlyDictionary<string, string> texts)
+	public override void ImportSourceLocalizations(IReadOnlyDictionary<string, string> texts)
 	{
 		foreach (SourceData.BaseRow sourceRow in sourceRows)
 		{
@@ -223,15 +293,42 @@ public class ModPackage : EMod
 		}
 	}
 
-	public void ClearSourceLocalizations(string lang)
+	public override void ClearSourceLocalizations(string lang)
 	{
 		Mapping.RebuildLangModMapping(lang);
 		for (FileInfo fileInfo = Mapping.RelocateFile("SourceLocalization.json"); fileInfo != null; fileInfo = Mapping.RelocateFile("SourceLocalization.json"))
 		{
 			fileInfo.Delete();
-			Debug.Log("#source localization deleted " + fileInfo.ShortPath());
+			Debug.Log("#source-localization deleted " + fileInfo.ShortPath());
 		}
 		Mapping.RebuildLangModMapping(Lang.langCode);
+	}
+
+	public override string UpdateSourceLocalizationFile(string lang, bool force = false)
+	{
+		if (!base.IsSourceLocalizable)
+		{
+			return null;
+		}
+		IReadOnlyDictionary<string, string> modEntries = SourceLocalization.GetModEntries(id, lang);
+		SortedDictionary<string, string> sortedDictionary = ExportSourceLocalizations();
+		SortedDictionary<string, string> final = new SortedDictionary<string, string>();
+		foreach (var (key, defaultValue) in sortedDictionary)
+		{
+			final[key] = modEntries.GetValueOrDefault(key, defaultValue);
+		}
+		string text3 = Path.Combine(dirInfo.FullName, "LangMod/" + lang + "/SourceLocalization.json");
+		if (force || modEntries.Count != final.Count || modEntries.Any((KeyValuePair<string, string> kv) => !final.ContainsKey(kv.Key)))
+		{
+			JsonSerializerSettings setting = new JsonSerializerSettings
+			{
+				PreserveReferencesHandling = PreserveReferencesHandling.None,
+				NullValueHandling = NullValueHandling.Ignore
+			};
+			IO.SaveFile(text3, final, compress: false, setting);
+			SourceLocalization.UpdateModEntries(id, lang, final);
+		}
+		return text3;
 	}
 
 	public void AddOrUpdateLang(DirectoryInfo dir)

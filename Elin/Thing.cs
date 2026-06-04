@@ -826,6 +826,26 @@ public class Thing : Card
 		return text;
 	}
 
+	public override int GetPrice(CurrencyType currency = CurrencyType.Money, bool sell = false, PriceType priceType = PriceType.Default, Chara c = null)
+	{
+		int price = base.GetPrice(currency, sell, priceType, c);
+		string str = GetStr("price_calc_override");
+		if (!str.IsEmpty())
+		{
+			var args = new
+			{
+				@base = price,
+				lv = base.LV,
+				rarity = base.rarityLv
+			};
+			if (str.TryEvaluateAsCalc(out int result, (object)args))
+			{
+				return result;
+			}
+		}
+		return price;
+	}
+
 	public List<Element> ListLimitedValidTraits(bool limit)
 	{
 		List<Element> list = new List<Element>();

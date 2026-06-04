@@ -165,7 +165,7 @@ public class TraitAltar : Trait
 			{
 				_ = t.encLV;
 				t.Destroy();
-				Thing thing = Religion.Reforge(t.id);
+				Thing thing = EClass.game.religions.Reforge(t.id);
 				if (EClass.pc.IsEyth && EClass.pc.HasElement(1228) && IsEyth)
 				{
 					thing.c_idDeity = EClass.game.religions.Eyth.id;

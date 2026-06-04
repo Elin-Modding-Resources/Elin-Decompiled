@@ -6,7 +6,6 @@ using System.Linq;
 using HeathenEngineering.SteamworksIntegration;
 using HeathenEngineering.SteamworksIntegration.API;
 using IniParser.Model;
-using Newtonsoft.Json;
 using Steamworks;
 using UnityEngine;
 
@@ -61,16 +60,6 @@ public class ModManager : ModManagerCore
 		Debug.Log("Workshop:" + dirWorkshop);
 		Debug.Log("Packages:" + BaseModManager.rootMod);
 		Debug.Log("Core Mod:" + BaseModManager.rootDefaultPacakge);
-		BaseModManager.SubscribeEvent("elin.source.lang_set", delegate(object lang)
-		{
-			if (ModManagerCore.useLocalizations)
-			{
-				ImportSourceLocalizations(lang as string);
-				ModManagerCore.generateLocalizations = false;
-			}
-			ImportAllModDialogs();
-			BookList.dict = null;
-		});
 	}
 
 	public void SaveLoadOrder()
@@ -110,172 +99,6 @@ public class ModManager : ModManagerCore
 				value.willActivate = array2[1] == "1";
 			}
 			num++;
-		}
-	}
-
-	public void ImportSourceLocalizations(string lang)
-	{
-		PackageIterator.RebuildAllMappings(lang);
-		SortedDictionary<string, string> sortedDictionary = new SortedDictionary<string, string>();
-		Dictionary<string, SortedDictionary<string, string>> dictionary = new Dictionary<string, SortedDictionary<string, string>>();
-		string value;
-		string key;
-		foreach (string item in FileMapping.FallbackLut[lang].Append(lang).Distinct())
-		{
-			(FileInfo, EMod)[] filesEx = PackageIterator.GetFilesEx(item + "/SourceLocalization.json", useCache: false);
-			for (int i = 0; i < filesEx.Length; i++)
-			{
-				var (fileInfo, eMod) = filesEx[i];
-				try
-				{
-					SortedDictionary<string, string> sortedDictionary2 = IO.LoadFile<SortedDictionary<string, string>>(fileInfo.FullName);
-					foreach (KeyValuePair<string, string> item2 in sortedDictionary2)
-					{
-						item2.Deconstruct(out value, out key);
-						string key2 = value;
-						string value2 = key;
-						sortedDictionary[key2] = value2;
-					}
-					dictionary[eMod.id] = sortedDictionary2;
-				}
-				catch (Exception arg)
-				{
-					Debug.LogError($"#source localization failed to load {fileInfo.ShortPath()}\n{arg}");
-				}
-			}
-		}
-		JsonSerializerSettings setting = new JsonSerializerSettings
-		{
-			PreserveReferencesHandling = PreserveReferencesHandling.None,
-			NullValueHandling = NullValueHandling.Ignore
-		};
-		foreach (BaseModPackage package in packages)
-		{
-			if (!(package is ModPackage modPackage) || package.builtin || !package.activated)
-			{
-				continue;
-			}
-			HashSet<SourceData.BaseRow> sourceRows = modPackage.sourceRows;
-			if (sourceRows == null || sourceRows.Count <= 0)
-			{
-				continue;
-			}
-			modPackage.ImportSourceLocalizations(sortedDictionary);
-			if (!ModManagerCore.generateLocalizations || (!modPackage.isInPackages && !Application.isEditor))
-			{
-				continue;
-			}
-			try
-			{
-				SortedDictionary<string, string> sortedDictionary3 = dictionary.GetValueOrDefault(modPackage.id) ?? new SortedDictionary<string, string>();
-				SortedDictionary<string, string> sortedDictionary4 = modPackage.ExportSourceLocalizations();
-				SortedDictionary<string, string> final = new SortedDictionary<string, string>();
-				foreach (KeyValuePair<string, string> item3 in sortedDictionary4)
-				{
-					item3.Deconstruct(out key, out value);
-					string key3 = key;
-					string defaultValue = value;
-					final[key3] = sortedDictionary3.GetValueOrDefault(key3, defaultValue);
-				}
-				if (sortedDictionary3.Count != final.Count || sortedDictionary3.Any((KeyValuePair<string, string> kv) => !final.ContainsKey(kv.Key)))
-				{
-					string path = Path.Combine(modPackage.dirInfo.FullName, "LangMod/" + lang + "/SourceLocalization.json");
-					IO.SaveFile(path, final, compress: false, setting);
-					Debug.Log($"#source localization updated {path.ShortPath()} / {modPackage}");
-				}
-			}
-			catch (Exception arg2)
-			{
-				Debug.LogError($"#source localization failed to generate {modPackage}\n{arg2}");
-			}
-		}
-	}
-
-	public void ImportAllModSourceSheets()
-	{
-		try
-		{
-			SourceCache.InvalidateCacheVersion();
-			SourceImporter.HotInit(new SourceData[2]
-			{
-				EClass.sources.elements,
-				EClass.sources.materials
-			});
-			List<string> list = new List<string>();
-			foreach (ModPackage item in packages.OfType<ModPackage>())
-			{
-				if (item.builtin || !item.activated)
-				{
-					continue;
-				}
-				foreach (FileInfo sourceSheet in item.Mapping.SourceSheets)
-				{
-					if (!sourceSheet.Name.StartsWith(".") && !sourceSheet.Name.Contains("~"))
-					{
-						ModUtil.sourceImporter.fileProviders[sourceSheet.FullName] = item;
-						list.Add(sourceSheet.FullName);
-					}
-				}
-			}
-			ModUtil.sourceImporter.ImportFilesCached(list);
-			SourceCache.FinalizeCache();
-			SourceCache.InvalidateCacheBlobs();
-			SourceCache.ClearDetail();
-		}
-		catch (Exception message)
-		{
-			Debug.LogError(message);
-		}
-		Debug.Log("#source finished importing workbooks");
-	}
-
-	public void ImportAllModDialogs()
-	{
-		Lang.extraExcelDialogs = new HashSet<string>(PathComparer.Default);
-		Lang.excelDialog = null;
-		FileInfo[] files = PackageIterator.GetFiles("Dialog/dialog.xlsx");
-		foreach (FileInfo fileInfo in files)
-		{
-			Lang.extraExcelDialogs.Add(fileInfo.FullName);
-			Debug.Log("#dialog loaded " + fileInfo.ShortPath());
-		}
-	}
-
-	public void ImportAllModGodTalks()
-	{
-		if (Lang.setting?.dir == null)
-		{
-			return;
-		}
-		Dictionary<string, Dictionary<string, string>> map = EClass.sources.dataGodTalk.sheets["_default"].map;
-		foreach (ExcelData item in from f in PackageIterator.GetFiles("Data/god_talk.xlsx")
-			select new ExcelData(f.FullName, 3))
-		{
-			foreach (KeyValuePair<string, Dictionary<string, string>> item2 in map)
-			{
-				item2.Deconstruct(out var key, out var _);
-				string text = key;
-				if (text.IsEmpty())
-				{
-					continue;
-				}
-				Dictionary<string, string> valueOrDefault = item.sheets["_default"].map.GetValueOrDefault(text);
-				if (valueOrDefault == null)
-				{
-					continue;
-				}
-				foreach (KeyValuePair<string, string> item3 in valueOrDefault)
-				{
-					item3.Deconstruct(out key, out var value2);
-					string text2 = key;
-					string value3 = value2;
-					if (text2 != "id")
-					{
-						map[text][text2] = value3;
-					}
-				}
-			}
-			Debug.Log("#dialog loaded " + item.path.ShortPath());
 		}
 	}
 
@@ -339,7 +162,7 @@ public class ModManager : ModManagerCore
 	{
 		ModPackage modPackage = new ModPackage
 		{
-			dirInfo = dir,
+			dirInfo = new DirectoryInfo(dir.FullName.NormalizePath()),
 			installed = true,
 			isInPackages = isInPackages,
 			loadPriority = priorityIndex,
@@ -364,6 +187,7 @@ public class ModManager : ModManagerCore
 		ModPackage modPackage = AddPackage(directoryInfo, isInPackages);
 		modPackage.installed = itemInstallInfo;
 		modPackage.banned = item.IsBanned;
+		modPackage.workshopId = item.FileId.ToString();
 		return modPackage;
 	}
 
@@ -382,7 +206,14 @@ public class ModManager : ModManagerCore
 		{
 			if (!disableMod || !(directoryInfo.Name != "_Elona") || !(directoryInfo.Name != "_Lang_Chinese"))
 			{
-				AddPackage(directoryInfo, isInPackages: true);
+				if (directoryInfo.Name == "Mod_FixedPackageLoader")
+				{
+					IO.DeleteDirectory(directoryInfo.FullName);
+				}
+				else
+				{
+					AddPackage(directoryInfo, isInPackages: true);
+				}
 			}
 		}
 	}

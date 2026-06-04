@@ -88,13 +88,9 @@ public class SourceManager : EMono
 
 	public SourceKeyItem keyItems;
 
-	private ExcelData _dataGodTalk;
-
 	private List<SourceData> list = new List<SourceData>();
 
 	public bool initialized;
-
-	public ExcelData dataGodTalk => _dataGodTalk ?? (_dataGodTalk = new ExcelData(Lang.setting.dir + "Data/god_talk.xlsx", 3));
 
 	public void InitLang()
 	{
@@ -112,7 +108,6 @@ public class SourceManager : EMono
 
 	public void OnChangeLang()
 	{
-		_dataGodTalk = null;
 	}
 
 	public void Init()
@@ -133,10 +128,6 @@ public class SourceManager : EMono
 			}
 		}
 		BaseModManager.PublishEvent("elin.source.importing");
-		if (ModManagerCore.enableSheetLoading)
-		{
-			ModManager.Instance.ImportAllModSourceSheets();
-		}
 		elements.Init();
 		materials.Init();
 		charas.Init();

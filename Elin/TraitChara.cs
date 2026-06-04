@@ -7,7 +7,8 @@ public class TraitChara : Trait
 		None,
 		Adv,
 		Adv_Fairy,
-		Adv_Backer
+		Adv_Backer,
+		Adv_Custom
 	}
 
 	public static string[] ListRank = new string[7] { "E", "D", "C", "B", "A", "S", "S" };
@@ -157,7 +158,7 @@ public class TraitChara : Trait
 		return owner.LV * 500 + 3000;
 	}
 
-	public int GetAdvRank()
+	public virtual int GetAdvRank()
 	{
 		int min = 0;
 		switch (owner.id)
@@ -172,7 +173,7 @@ public class TraitChara : Trait
 		return Mathf.Clamp(owner.LV / 10, min, 6);
 	}
 
-	public string GetAdvRankText()
+	public virtual string GetAdvRankText()
 	{
 		int advRank = GetAdvRank();
 		return ListRank[advRank];

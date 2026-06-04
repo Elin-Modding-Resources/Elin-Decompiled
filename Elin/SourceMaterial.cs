@@ -117,18 +117,19 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 			{
 				matColors = new MatColors();
 				string[] array = tag;
-				foreach (string text in array)
+				for (int i = 0; i < array.Length; i++)
 				{
-					if (text.StartsWith("addCol"))
+					var (text, s, _) = CustomSourceContent.GetParams(array[i]);
+					switch (text)
 					{
-						if (text.Contains("_Main"))
-						{
-							matColors.main = text.ExtractInBetween('(', ')').ToColor();
-						}
-						if (text.Contains("_Alt"))
-						{
-							matColors.alt = text.ExtractInBetween('(', ')').ToColor();
-						}
+					case "addCol_Main":
+					case "addColorMain":
+						matColors.main = s.ToColor();
+						break;
+					case "addCol_Alt":
+					case "addColorAlt":
+						matColors.alt = s.ToColor();
+						break;
 					}
 				}
 				Core.Instance.Colors.matColors[alias] = matColors;

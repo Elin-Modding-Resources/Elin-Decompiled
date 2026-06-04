@@ -287,6 +287,8 @@ public class UICharaMaker : EMono
 					t.note.AddHeader("lore");
 					t.note.AddText("NoteText_long", a.GetDetail().IsEmpty(TextUnknown)).Hyphenate();
 					t.note.Space(8);
+					AddWeaponSkill(t.note, elementContainer);
+					t.note.Space(8);
 					t.note.Build();
 				});
 				if (first)
@@ -342,6 +344,7 @@ public class UICharaMaker : EMono
 					t.note.AddHeader("lore");
 					t.note.AddText("NoteText_long", a.GetDetail().IsEmpty(TextUnknown)).Hyphenate();
 					AddDomain(t.note, new ElementContainer().ImportElementMap(a.domain), button: false);
+					AddWeaponSkill(t.note, elementContainer);
 					t.note.Build();
 				});
 				if (first)
@@ -379,6 +382,20 @@ public class UICharaMaker : EMono
 		{
 			EMono.player.SelectDomain(Refresh);
 		});
+	}
+
+	public void AddWeaponSkill(UINote n, ElementContainer eles)
+	{
+		List<Element> list = eles.dict.Values.Where((Element e) => e.ValueWithoutLink > 1 && e.source.categorySub == "weapon").ToList();
+		string text = "";
+		foreach (Element item in list)
+		{
+			text = text + ((item == list.First()) ? "" : ", ") + item.Name;
+		}
+		if (!text.IsEmpty())
+		{
+			n.AddTopic("TopicDomain", "skillsWeapon".lang(), text).button1.SetActive(enable: false);
+		}
 	}
 
 	public void ListGender()

@@ -24,11 +24,7 @@ public class BaseCard : EClass
 
 	public int GetInt(int id, int? defaultInt = null)
 	{
-		if (mapInt.TryGetValue(id, out var value))
-		{
-			return value;
-		}
-		return defaultInt.GetValueOrDefault();
+		return mapInt.GetValueOrDefault(id, defaultInt.GetValueOrDefault());
 	}
 
 	public void AddInt(int id, int value)
@@ -40,10 +36,7 @@ public class BaseCard : EClass
 	{
 		if (value == 0)
 		{
-			if (mapInt.ContainsKey(id))
-			{
-				mapInt.Remove(id);
-			}
+			mapInt.Remove(id);
 		}
 		else
 		{
@@ -53,21 +46,14 @@ public class BaseCard : EClass
 
 	public string GetStr(int id, string defaultStr = null)
 	{
-		if (mapStr.TryGetValue(id, out var value))
-		{
-			return value;
-		}
-		return defaultStr;
+		return mapStr.GetValueOrDefault(id, defaultStr);
 	}
 
 	public void SetStr(int id, string value = null)
 	{
 		if (value.IsEmpty())
 		{
-			if (mapStr.ContainsKey(id))
-			{
-				mapStr.Remove(id);
-			}
+			mapStr.Remove(id);
 		}
 		else
 		{
@@ -81,9 +67,10 @@ public class BaseCard : EClass
 		{
 			return default(T);
 		}
-		if (mapObj.TryGetValue(id, out var value) && value is T)
+		object valueOrDefault = mapObj.GetValueOrDefault(id);
+		if (valueOrDefault is T)
 		{
-			return (T)value;
+			return (T)valueOrDefault;
 		}
 		return default(T);
 	}
@@ -96,10 +83,7 @@ public class BaseCard : EClass
 		}
 		if (o == null)
 		{
-			if (mapObj.ContainsKey(id))
-			{
-				mapObj.Remove(id);
-			}
+			mapObj.Remove(id);
 		}
 		else
 		{
@@ -115,10 +99,7 @@ public class BaseCard : EClass
 		}
 		if (o == null)
 		{
-			if (mapStr.ContainsKey(id))
-			{
-				mapObj.Remove(id);
-			}
+			mapObj.Remove(id);
 			return default(T);
 		}
 		mapObj[id] = o;

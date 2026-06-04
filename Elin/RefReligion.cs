@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 public class RefReligion : EClass
@@ -7,7 +8,7 @@ public class RefReligion : EClass
 
 	private Religion _religion;
 
-	public Religion Instance => _religion ?? (_religion = EClass.game.religions.dictAll[uid]);
+	public Religion Instance => _religion ?? (_religion = EClass.game.religions.dictAll.GetValueOrDefault(uid, EClass.game.religions.Eyth));
 
 	public RefReligion()
 	{

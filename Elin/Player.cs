@@ -1491,7 +1491,7 @@ public class Player : EClass
 		chara.things.DestroyAll();
 		CreateEquip();
 		dateTravel = EClass.world.date.GetRaw();
-		uidLastTravelZone = EClass.pc.currentZone.uid;
+		uidLastTravelZone = EClass.pc.currentZone?.uid ?? 0;
 		GenerateBackgroundText();
 		EClass.pc.elements.CheckSkillActions();
 		EClass.pc.hunger.value = 30;
@@ -2652,7 +2652,7 @@ public class Player : EClass
 
 	public bool TooHeavyToMove()
 	{
-		if (!EClass.debug.ignoreWeight && EClass.pc.burden.GetPhase() == 4)
+		if (!EClass.debug.ignoreWeight && EClass.pc.burden.GetPhase() == 4 && !EClass.pc.HasElement(493))
 		{
 			Msg.Say("tooHeavyToMove");
 			EClass.pc.renderer.NextFrame();

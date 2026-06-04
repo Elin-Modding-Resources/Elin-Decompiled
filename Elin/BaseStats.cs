@@ -12,7 +12,21 @@ public class BaseStats : EClass
 
 	public SourceStat.Row _source;
 
-	public SourceStat.Row source => _source ?? (_source = EClass.sources.stats.map[id]);
+	public SourceStat.Row source
+	{
+		get
+		{
+			SourceStat.Row row = _source;
+			if (row == null)
+			{
+				SourceStat.Row obj = EClass.sources.stats.map.TryGetValue(id) ?? EClass.sources.stats.alias["ConWet"];
+				SourceStat.Row row2 = obj;
+				_source = obj;
+				row = row2;
+			}
+			return row;
+		}
+	}
 
 	public virtual Emo2 EmoIcon => Emo2.none;
 

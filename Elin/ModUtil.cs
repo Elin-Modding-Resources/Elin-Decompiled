@@ -1,44 +1,42 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
+using Newtonsoft.Json;
+using ReflexCLI.Attributes;
 using UnityEngine;
 using UnityEngine.Networking;
 
+[ConsoleCommandClassCustomizer("Mod")]
 public class ModUtil : EClass
 {
-	public static SourceImporter sourceImporter = new SourceImporter(SourceMapping);
-
 	public static Dictionary<string, string> fallbackTypes = new Dictionary<string, string>();
+
+	private static readonly Dictionary<string, ICustomContent> _customContent = new Dictionary<string, ICustomContent>();
+
+	private static readonly List<Func<string, object, int>> _customCalcEvaluator = new List<Func<string, object, int>>();
+
+	private static readonly Dictionary<string, Texture2D> _cachedTextures = new Dictionary<string, Texture2D>();
+
+	public static SourceImporter sourceImporter = new SourceImporter(SourceMapping);
 
 	public static IReadOnlyDictionary<string, SourceData> SourceMapping => (from f in typeof(SourceManager).GetFields()
 		where typeof(SourceData).IsAssignableFrom(f.FieldType)
 		select f).ToDictionary((FieldInfo f) => f.FieldType.Name, (FieldInfo f) => f.GetValue(EClass.sources) as SourceData);
 
-	public static void OnModsActivated()
-	{
-		SoundManager.current.soundLoaders.Add(LoadSoundData);
-		UIBook.topicLoaders.Add(LoadTopicFiles);
-		BookList.booklistLoaders.Add(LoadBookList);
-		BaseModManager.PublishEvent("elin.mods.activated");
-		BaseModManager.SubscribeEvent("elin.game.post_load", PostLoadCleanup);
-	}
-
-	private static void PostLoadCleanup(object context)
-	{
-		EClass.player.knownBGMs.RemoveWhere((int id) => !EClass.core.refs.dictBGM.ContainsKey(id));
-	}
-
 	public static void LoadTypeFallback()
 	{
 		string text = "type_resolver.txt";
-		string[] array = new string[0];
+		string[] array = Array.Empty<string>();
 		if (File.Exists(CorePath.RootData + text))
 		{
 			array = IO.LoadTextArray(CorePath.RootData + text);
@@ -64,46 +62,464 @@ public class ModUtil : EClass
 		fallbackTypes[nameType] = nameFallbackType;
 	}
 
+	public static void LogModError(string message, BaseModPackage package = null)
+	{
+		string text = "#mod/" + package?.id + "\n" + message;
+		UnityEngine.Debug.LogWarning(text.RemoveAllTags());
+		if ((package?.isInPackages ?? false) || Application.isEditor)
+		{
+			EGui.CreatePopup(text);
+		}
+	}
+
+	public static void LogModError(string message, SourceData.BaseRow row = null)
+	{
+		LogModError(message, FindSourceRowPackage(row));
+	}
+
+	public static void LogModError(string message, FileInfo file = null)
+	{
+		LogModError(message, FindFileProviderPackage(file));
+	}
+
+	public static void LogModError(string message, DirectoryInfo dir = null)
+	{
+		LogModError(message, FindDirectoryProviderPackage(dir));
+	}
+
 	public static ModPackage GetModPackage(string modId)
 	{
 		return ModManagerCore.Instance.MappedPackages.GetValueOrDefault(modId) as ModPackage;
 	}
 
-	public static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)
+	public static ModPackage FindFileProviderPackage(FileInfo file)
 	{
-		UnityEngine.Debug.Log("ImportExcel source:" + source?.ToString() + " Path:" + pathToExcelFile);
-		using FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-		XSSFWorkbook xSSFWorkbook = new XSSFWorkbook((Stream)@is);
-		for (int i = 0; i < xSSFWorkbook.NumberOfSheets; i++)
-		{
-			ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);
-			if (sheetAt.SheetName != sheetName)
-			{
-				continue;
-			}
-			UnityEngine.Debug.Log("Importing Sheet:" + sheetName);
-			try
-			{
-				ExcelParser.path = pathToExcelFile;
-				if (!source.ImportData(sheetAt, new FileInfo(pathToExcelFile).Name, overwrite: true))
-				{
-					UnityEngine.Debug.LogError(ERROR.msg);
-					break;
-				}
-				UnityEngine.Debug.Log("Imported " + sheetAt.SheetName);
-				source.Reset();
-			}
-			catch (Exception ex)
-			{
-				UnityEngine.Debug.LogError("[Error] Skipping import " + sheetAt.SheetName + " :" + ex.Message + "/" + ex.Source + "/" + ex.StackTrace);
-				break;
-			}
-		}
+		string path = file.FullName.NormalizePath();
+		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName)) as ModPackage;
+	}
+
+	public static ModPackage FindDirectoryProviderPackage(DirectoryInfo dir)
+	{
+		string path = dir.FullName.NormalizePath();
+		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName)) as ModPackage;
 	}
 
 	public static ModPackage FindSourceRowPackage(SourceData.BaseRow row)
 	{
 		return ModManagerCore.Instance.packages.OfType<ModPackage>().LastOrDefault((ModPackage p) => p.sourceRows.Contains(row));
+	}
+
+	public static Zone FindZoneByFullName(string zoneFullName = "ntyris/0", bool useRandomFallback = false)
+	{
+		if (zoneFullName.IsEmpty())
+		{
+			return null;
+		}
+		zoneFullName = zoneFullName.Replace('/', '@');
+		Zone zone = EClass.game.spatials.Find((Zone z) => z.ZoneFullName == zoneFullName);
+		if (zone != null)
+		{
+			return zone;
+		}
+		int num = zoneFullName.LastIndexOf('@');
+		int destLv = 0;
+		string zoneType;
+		if (num > 0 && num < zoneFullName.Length - 1)
+		{
+			zoneType = zoneFullName[..num];
+			destLv = zoneFullName[(num + 1)..].ToInt();
+		}
+		else
+		{
+			zoneType = zoneFullName.Replace("@", "");
+		}
+		string zoneId = zoneType.Replace("Zone_", "");
+		zoneType = "Zone_" + zoneId;
+		zone = EClass.game.spatials.Find((Zone z) => z.GetType().Name == zoneType || z.id == zoneId)?.FindOrCreateLevel(destLv);
+		if (zone == null && (zoneId == "*" || useRandomFallback))
+		{
+			zone = (from z in EClass.game.spatials.map.Values.OfType<Zone>()
+				where z.CanSpawnAdv
+				select z).RandomItem();
+		}
+		return zone;
+	}
+
+	public static void OnModsActivated()
+	{
+		_cachedTextures.Clear();
+		_customContent.Clear();
+		SoundManager.current.soundLoaders.Add(LoadSoundData);
+		UIBook.topicLoaders.Add(LoadTopicFiles);
+		BookList.booklistLoaders.Add(LoadBookList);
+		Lang.excelDialogLoaders.Add(LoadExcelDialog);
+		BaseModManager.SubscribeEvent<GameIOContext>("elin.game.post_load", OnPostLoadInit);
+		BaseModManager.SubscribeEvent<GameIOContext>("elin.game.start_new", OnPostLoadInit);
+		BaseModManager.SubscribeEvent<GameIOContext>("elin.game.post_save", OnPostSaveInit);
+		BaseModManager.SubscribeEvent<string>("elin.source.lang_set", OnSetLang);
+		BaseModManager.SubscribeEvent<Chara>("elin.chara_created", OnCharaCreated);
+		BaseModManager.SubscribeEvent<Thing>("elin.thing_created", OnThingCreated);
+		BaseModManager.SubscribeEvent<List<Religion>>("elin.religion_importing", OnReligionImporting);
+		BaseModManager.SubscribeEvent<Act>("elin.act_performed", OnActPerformed);
+		BaseModManager.SubscribeEvent("elin.source.importing", OnSourceImporting);
+		BaseModManager.SubscribeEvent("elin.source.imported", OnSourceImported);
+		BaseModManager.PublishEvent("elin.mods.activated");
+	}
+
+	private static void OnSourceImporting()
+	{
+		if (ModManagerCore.enableSheetLoading)
+		{
+			ImportAllModSourceSheets();
+		}
+	}
+
+	private static void OnSourceImported()
+	{
+		_customContent.Clear();
+		foreach (EMod activatedUserMod in ModManager.Instance.ActivatedUserMods)
+		{
+			try
+			{
+				activatedUserMod.GenerateCustomContentProfiles();
+				foreach (ICustomContent item in activatedUserMod.customContent)
+				{
+					AddContent(item);
+				}
+			}
+			catch (Exception ex)
+			{
+				LogModError("exception while generating custom source profiles\n" + ex.Message, activatedUserMod);
+				UnityEngine.Debug.LogError(ex);
+			}
+		}
+		CustomReligionContent.managed.Clear();
+		foreach (CustomReligionContent item2 in _customContent.Values.OfType<CustomReligionContent>())
+		{
+			item2.RegisterCustomReligion();
+		}
+		CustomReligionContent.Init();
+	}
+
+	private static void OnPostLoadInit(GameIOContext context)
+	{
+		EClass.player.knownBGMs.RemoveWhere((int id) => !EClass.core.refs.dictBGM.ContainsKey(id));
+		List<ICustomContent> contents = new List<ICustomContent>();
+		CustomReligionContent.LoadReligionData(context);
+		LoadCustomContent<CustomZoneContent>();
+		LoadCustomContent<CustomCharaContent>();
+		LoadOtherCustomContent();
+		void LoadCustomContent<T>() where T : class, ICustomContent
+		{
+			UnityEngine.Debug.Log("#mod-content loading " + typeof(T).Name + "...");
+			foreach (T item in _customContent.Values.OfType<T>())
+			{
+				try
+				{
+					item.OnGameLoad(context);
+					contents.Add(item);
+				}
+				catch (Exception ex2)
+				{
+					LogModError("exception while loading custom content '" + item.ContentId + "'\n" + ex2.Message, item.Owner);
+					UnityEngine.Debug.LogError(ex2);
+				}
+			}
+		}
+		void LoadOtherCustomContent()
+		{
+			foreach (ICustomContent item2 in _customContent.Values.Except(contents))
+			{
+				try
+				{
+					item2.OnGameLoad(context);
+				}
+				catch (Exception ex)
+				{
+					LogModError("exception while loading custom content '" + item2.ContentId + "'\n" + ex.Message, item2.Owner);
+					UnityEngine.Debug.LogError(ex);
+				}
+			}
+		}
+	}
+
+	private static void OnPostSaveInit(GameIOContext context)
+	{
+		CustomReligionContent.SaveReligionData(context);
+		foreach (ICustomContent value in _customContent.Values)
+		{
+			try
+			{
+				value.OnGameSave(context);
+			}
+			catch (Exception ex)
+			{
+				LogModError("exception while saving custom content '" + value.ContentId + "'\n" + ex.Message, value.Owner);
+				UnityEngine.Debug.LogError(ex);
+			}
+		}
+	}
+
+	private static void OnReligionImporting(List<Religion> list)
+	{
+		list.AddRange(CustomReligionContent.GetCustomReligions());
+	}
+
+	private static void OnCharaCreated(Chara chara)
+	{
+		if (TryGetContent<CustomCharaContent>("Chara/" + chara.id, out var content))
+		{
+			content.OnCharaCreated(chara);
+		}
+		if (TryGetContent<CustomBiographyContent>("Biography/" + chara.id, out var content2))
+		{
+			content2.RefreshCharaBio(chara);
+		}
+	}
+
+	private static void OnThingCreated(Thing thing)
+	{
+		if (TryGetContent<CustomThingContent>("Thing/" + thing.id, out var content))
+		{
+			content.OnThingCreated(thing);
+		}
+	}
+
+	private static void OnActPerformed(Act act)
+	{
+		if (act.HasTag("godAbility"))
+		{
+			CustomReligionContent.managed.Values.FirstOrDefault((ReligionCustom r) => r.content.godAbilities.Contains(act.ID))?.Talk("ability");
+		}
+	}
+
+	private static void OnSetLang(string lang)
+	{
+		PackageIterator.ClearCache();
+		PackageIterator.RebuildAllMappings(lang);
+		SourceLocalization.SetLang(lang);
+		if (ModManagerCore.generateLocalizations)
+		{
+			foreach (EMod activatedUserMod in ModManager.Instance.ActivatedUserMods)
+			{
+				if (activatedUserMod.IsSourceLocalizable && (activatedUserMod.isInPackages || Application.isEditor))
+				{
+					activatedUserMod.UpdateSourceLocalizationFile(lang);
+				}
+			}
+			ModManagerCore.generateLocalizations = false;
+		}
+		foreach (string item in LoadGodTalk())
+		{
+			MOD.listGodTalk.Add(new ExcelData(item));
+		}
+		BookList.dict = null;
+		BottleMessageList.list = null;
+		Lang.excelDialog = null;
+		foreach (CustomFileContent item2 in _customContent.Values.OfType<CustomFileContent>())
+		{
+			item2.OnSetLang(lang);
+		}
+	}
+
+	public static bool TryGetContent<T>(string contentId, [NotNullWhen(true)] out T content) where T : class, ICustomContent
+	{
+		ICustomContent value;
+		bool num = _customContent.TryGetValue(contentId, out value);
+		content = value as T;
+		if (num)
+		{
+			return content != null;
+		}
+		return false;
+	}
+
+	public static bool HasContent(string contentId)
+	{
+		return _customContent.ContainsKey(contentId);
+	}
+
+	public static void AddContent(ICustomContent content)
+	{
+		UnityEngine.Debug.Log(_customContent.Remove(content.ContentId, out var value) ? ("#mod-content override '" + content.ContentId + "' '" + value.Owner.id + "' -> '" + content.Owner.id + "'") : ("#mod-content added '" + content.ContentId + "' from '" + content.Owner.id + "'"));
+		_customContent[content.ContentId] = content;
+	}
+
+	public static void FixDefaultCharaRowPref(SourceChara.Row r)
+	{
+		r.pref = new SourcePref
+		{
+			pivotY = -10
+		};
+	}
+
+	public static List<Thing> GenerateMerchantStock(Card owner, string stockId = null, bool forceRestock = false)
+	{
+		List<Thing> list = new List<Thing>();
+		if (stockId.IsEmpty())
+		{
+			stockId = owner.GetStr("merchant_override");
+		}
+		if (stockId.IsEmpty())
+		{
+			return list;
+		}
+		string[] array = stockId.Split('|');
+		HashSet<string> orCreate = EClass.player.noRestocks.GetOrCreate(owner.trait.IdNoRestock, () => new HashSet<string>());
+		string[] array2 = array;
+		foreach (string text in array2)
+		{
+			if (!TryGetContent<CustomMerchantStock>("MerchantStock/" + text, out var content))
+			{
+				continue;
+			}
+			foreach (Thing item in content.Generate(owner))
+			{
+				bool @bool = item.GetBool(101);
+				if (!(!forceRestock && @bool) || !orCreate.Contains(item.trait.IdNoRestock))
+				{
+					if (@bool)
+					{
+						orCreate.Add(item.trait.IdNoRestock);
+					}
+					list.Add(item);
+				}
+			}
+		}
+		return list;
+	}
+
+	public static Sprite AppendSpriteSheet(string id, int resizeWidth = 0, int resizeHeight = 0, string pattern = "@")
+	{
+		Dictionary<string, string> dictModItems = SpriteReplacer.dictModItems;
+		if (!dictModItems.TryGetValue(id, out var value) && pattern != "")
+		{
+			value = dictModItems.Where((KeyValuePair<string, string> kv) => kv.Key.StartsWith(pattern)).FirstOrDefault((KeyValuePair<string, string> kv) => id.StartsWith(kv.Key[pattern.Length..])).Value;
+		}
+		string spritePath = value;
+		string name = id;
+		Sprite sprite = LoadSprite(spritePath, null, name, resizeWidth, resizeHeight);
+		if (sprite == null)
+		{
+			return null;
+		}
+		if (SpriteSheet.dict.TryGetValue(id, out var value2) && value2.texture.width == sprite.texture.width && value2.texture.height == sprite.texture.height)
+		{
+			return value2;
+		}
+		return SpriteSheet.dict[sprite.name] = sprite;
+	}
+
+	public static List<string> LoadBookList()
+	{
+		List<string> list = new List<string>();
+		DirectoryInfo[] directories = PackageIterator.GetDirectories("Text");
+		foreach (DirectoryInfo directoryInfo in directories)
+		{
+			list.AddRange(Directory.GetDirectories(directoryInfo.FullName));
+			UnityEngine.Debug.Log("#book list loaded " + directoryInfo.ShortPath());
+		}
+		return list;
+	}
+
+	public static List<string> LoadTopicFiles()
+	{
+		List<string> list = new List<string>();
+		FileInfo[] files = PackageIterator.GetFiles("Text/Help/_topics.txt");
+		foreach (FileInfo fileInfo in files)
+		{
+			list.AddRange(IO.LoadTextArray(fileInfo.FullName));
+			UnityEngine.Debug.Log("#book topic loaded " + fileInfo.ShortPath());
+		}
+		return list;
+	}
+
+	public static List<string> LoadExcelDialog()
+	{
+		List<string> list = new List<string>();
+		FileInfo[] files = PackageIterator.GetFiles("Dialog/dialog.xlsx");
+		foreach (FileInfo fileInfo in files)
+		{
+			list.Add(fileInfo.FullName);
+			UnityEngine.Debug.Log("#dialog loaded " + fileInfo.ShortPath());
+		}
+		return list;
+	}
+
+	public static Sprite LoadSprite(string spritePath, Vector2? pivot = null, string name = null, int resizeWidth = 0, int resizeHeight = 0)
+	{
+		if (spritePath.IsEmpty())
+		{
+			return null;
+		}
+		if (!spritePath.EndsWith(".png"))
+		{
+			if (SpriteReplacer.dictModItems.TryGetValue(spritePath, out var value))
+			{
+				spritePath = value;
+			}
+			spritePath += ".png";
+		}
+		if (!File.Exists(spritePath))
+		{
+			FileInfo[] files = PackageIterator.GetFiles(Path.Combine("Texture", spritePath));
+			if (files.IsEmpty())
+			{
+				return null;
+			}
+			spritePath = files[^1].FullName;
+		}
+		Vector2 valueOrDefault = pivot.GetValueOrDefault();
+		if (!pivot.HasValue)
+		{
+			valueOrDefault = new Vector2(0.5f, 0.5f);
+			pivot = valueOrDefault;
+		}
+		string text = $"{spritePath}/{pivot}/{resizeWidth}/{resizeHeight}";
+		if (name == null)
+		{
+			name = text;
+		}
+		try
+		{
+			if (!_cachedTextures.TryGetValue(text, out var value2))
+			{
+				value2 = IO.LoadPNG(spritePath);
+				if (value2 == null)
+				{
+					return null;
+				}
+				if (resizeWidth != 0 && resizeHeight != 0 && value2.width != resizeWidth && value2.height != resizeHeight)
+				{
+					Texture2D texture2D = value2.Rescale(resizeWidth, resizeHeight);
+					UnityEngine.Object.Destroy(value2);
+					value2 = texture2D;
+					value2.name = text;
+				}
+			}
+			_cachedTextures[text] = value2;
+		}
+		catch (Exception arg)
+		{
+			UnityEngine.Debug.LogError($"#sprite failed to load {spritePath.ShortPath()}\n{arg}");
+			return null;
+		}
+		Texture2D texture2D2 = _cachedTextures[text];
+		Sprite sprite = Sprite.Create(texture2D2, new Rect(0f, 0f, texture2D2.width, texture2D2.height), pivot.Value, 100f, 0u, SpriteMeshType.FullRect);
+		sprite.name = name;
+		return sprite;
+	}
+
+	public static List<string> LoadGodTalk()
+	{
+		List<string> list = new List<string>();
+		FileInfo[] files = PackageIterator.GetFiles("Data/god_talk.xlsx");
+		foreach (FileInfo fileInfo in files)
+		{
+			list.Add(fileInfo.FullName);
+			UnityEngine.Debug.Log("#god-talk loaded " + fileInfo.ShortPath());
+		}
+		return list;
 	}
 
 	public static SerializableSoundData GetSoundMeta(string soundPath)
@@ -290,14 +706,216 @@ public class ModUtil : EClass
 		}
 	}
 
-	public static string[] LoadBookList()
+	[Obsolete("use ImportModSourceSheets for proper caching and localizaiton support")]
+	public static void ImportExcel(string pathToExcelFile, string sheetName, SourceData source)
 	{
-		return (from d in PackageIterator.GetDirectories("Text").SelectMany((DirectoryInfo d) => d.GetDirectories())
-			select d.FullName).ToArray();
+		UnityEngine.Debug.Log("ImportExcel source:" + source?.ToString() + " Path:" + pathToExcelFile);
+		using FileStream @is = File.Open(pathToExcelFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+		XSSFWorkbook xSSFWorkbook = new XSSFWorkbook((Stream)@is);
+		for (int i = 0; i < xSSFWorkbook.NumberOfSheets; i++)
+		{
+			ISheet sheetAt = xSSFWorkbook.GetSheetAt(i);
+			if (sheetAt.SheetName != sheetName)
+			{
+				continue;
+			}
+			UnityEngine.Debug.Log("Importing Sheet:" + sheetName);
+			try
+			{
+				ExcelParser.path = pathToExcelFile;
+				if (!source.ImportData(sheetAt, new FileInfo(pathToExcelFile).Name, overwrite: true))
+				{
+					UnityEngine.Debug.LogError(ERROR.msg);
+					break;
+				}
+				UnityEngine.Debug.Log("Imported " + sheetAt.SheetName);
+				source.Reset();
+			}
+			catch (Exception ex)
+			{
+				UnityEngine.Debug.LogError("[Error] Skipping import " + sheetAt.SheetName + " :" + ex.Message + "/" + ex.Source + "/" + ex.StackTrace);
+				break;
+			}
+		}
 	}
 
-	public static string[] LoadTopicFiles()
+	public static SourceData FindSourceByName(string sourceData)
 	{
-		return PackageIterator.GetFiles("Text/Help/_topics.txt").SelectMany((FileInfo f) => IO.LoadTextArray(f.FullName)).ToArray();
+		return sourceImporter.FindSourceByName(sourceData);
+	}
+
+	public static void ImportModSourceSheets(string modId)
+	{
+		try
+		{
+			SourceCache.InvalidateCacheVersion();
+			EMod valueOrDefault = ModManager.Instance.MappedPackages.GetValueOrDefault(modId);
+			if (valueOrDefault == null)
+			{
+				return;
+			}
+			List<string> list = new List<string>();
+			foreach (FileInfo sourceSheet in valueOrDefault.Mapping.SourceSheets)
+			{
+				sourceImporter.fileProviders[sourceSheet.FullName] = valueOrDefault;
+				list.Add(sourceSheet.FullName);
+			}
+			sourceImporter.ImportFilesCached(list);
+			if (ModManagerCore.enableSheetCaching)
+			{
+				SourceCache.FinalizeCache();
+			}
+			SourceCache.InvalidateCacheBlobs();
+			SourceCache.ClearDetail();
+			UnityEngine.Debug.Log("#source finished importing workbooks from " + modId);
+		}
+		catch (Exception exception)
+		{
+			UnityEngine.Debug.LogException(exception);
+		}
+	}
+
+	public static void ImportAllModSourceSheets()
+	{
+		try
+		{
+			SourceCache.InvalidateCacheVersion();
+			SourceImporter.HotInit(new SourceData[2]
+			{
+				EClass.sources.elements,
+				EClass.sources.materials
+			});
+			List<string> list = new List<string>();
+			foreach (BaseModPackage package in ModManager.Instance.packages)
+			{
+				if (!(package is ModPackage modPackage) || !package.activated || package.id == null)
+				{
+					continue;
+				}
+				foreach (FileInfo sourceSheet in modPackage.Mapping.SourceSheets)
+				{
+					if (!sourceSheet.Name.StartsWith(".") && !sourceSheet.Name.Contains('~'))
+					{
+						sourceImporter.fileProviders[sourceSheet.FullName] = modPackage;
+						list.Add(sourceSheet.FullName);
+					}
+				}
+			}
+			sourceImporter.ImportFilesCached(list);
+			if (ModManagerCore.enableSheetCaching)
+			{
+				SourceCache.FinalizeCache();
+			}
+			SourceCache.InvalidateCacheBlobs();
+			SourceCache.ClearDetail();
+		}
+		catch (Exception message)
+		{
+			UnityEngine.Debug.LogError(message);
+		}
+		UnityEngine.Debug.Log("#source finished importing workbooks");
+	}
+
+	public static string ExportSourceDataCsv(string sourceData, string delimiter = ",")
+	{
+		SourceData sourceData2 = FindSourceByName(sourceData);
+		if (sourceData2 == null)
+		{
+			return "";
+		}
+		IReadOnlyDictionary<string, string> typeMapping = sourceData2.GetTypeMapping();
+		IReadOnlyDictionary<string, int> rowMapping = sourceData2.GetRowMapping();
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.AppendLine(string.Join(delimiter, rowMapping.Keys));
+		stringBuilder.AppendLine(string.Join(delimiter, rowMapping.Keys.Select((string k) => typeMapping[k])));
+		(string, string)[] array = (from kv in rowMapping
+			orderby kv.Value
+			select (Key: kv.Key, typeMapping[kv.Key])).ToArray();
+		SourceData.BaseRow[] array2 = sourceData2.ExportRows();
+		foreach (SourceData.BaseRow baseRow in array2)
+		{
+			List<string> list = new List<string>();
+			(string, string)[] array3 = array;
+			for (int j = 0; j < array3.Length; j++)
+			{
+				(string, string) tuple = array3[j];
+				string item = tuple.Item1;
+				string item2 = tuple.Item2;
+				object value = baseRow.GetRowFields()[item].GetValue(baseRow);
+				object obj = value;
+				IEnumerable enumerable;
+				if (!(obj is int[] array4))
+				{
+					if (!(obj is int key))
+					{
+						if (obj is string item3)
+						{
+							list.Add(item3);
+							continue;
+						}
+						enumerable = obj as IEnumerable;
+						if (enumerable != null)
+						{
+							goto IL_0221;
+						}
+					}
+					else if (item2 == "element_id")
+					{
+						list.Add(EClass.sources.elements.map[key].alias);
+						continue;
+					}
+					list.Add(value.ToString());
+					continue;
+				}
+				if (!(item2 == "elements"))
+				{
+					enumerable = (IEnumerable)obj;
+					goto IL_0221;
+				}
+				List<string> list2 = new List<string>();
+				for (int l = 0; l < array4.Length - 1; l += 2)
+				{
+					string alias = EClass.sources.elements.map[array4[l]].alias;
+					string text = array4[l + 1].ToString();
+					list2.Add(alias + "/" + text);
+				}
+				string item4 = string.Join(',', list2);
+				list.Add(item4);
+				continue;
+				IL_0221:
+				string item5 = string.Join(',', enumerable.OfType<object>());
+				list.Add(item5);
+			}
+			stringBuilder.AppendLine(string.Join(delimiter, list.Select((string f) => "\"" + f.RemoveNewline() + "\"")));
+		}
+		return stringBuilder.ToString();
+	}
+
+	public static void ExportAllSourceDataCsv(string dir)
+	{
+		IO.CreateDirectory(dir);
+		foreach (string key in SourceMapping.Keys)
+		{
+			File.WriteAllText(Path.Combine(dir, key + ".csv"), ExportSourceDataCsv(key));
+		}
+	}
+
+	public static string ExportSourceDataJson(string sourceData, Formatting format = Formatting.Indented)
+	{
+		SourceData sourceData2 = FindSourceByName(sourceData);
+		if (sourceData2 == null)
+		{
+			return "";
+		}
+		return JsonConvert.SerializeObject(sourceData2.ExportRows(), format);
+	}
+
+	public static void ExportAllSourceDataJson(string dir)
+	{
+		IO.CreateDirectory(dir);
+		foreach (string key in SourceMapping.Keys)
+		{
+			File.WriteAllText(Path.Combine(dir, key + ".json"), ExportSourceDataJson(key));
+		}
 	}
 }

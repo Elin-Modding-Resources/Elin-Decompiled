@@ -310,7 +310,12 @@ public class Act : Element
 		{
 			_cc.mimicry.Kill();
 		}
-		return Perform();
+		bool num = Perform();
+		if (num)
+		{
+			BaseModManager.PublishEvent("elin.act_performed", this);
+		}
+		return num;
 	}
 
 	public virtual bool ValidatePerform(Chara _cc, Card _tc, Point _tp)

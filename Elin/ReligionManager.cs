@@ -55,9 +55,10 @@ public class ReligionManager : EClass
 			Eyth, Wind, Earth, Healing, Luck, Machine, Element, Harvest, Oblivion, Harmony,
 			Trickery, MoonShadow, Strife
 		};
+		BaseModManager.PublishEvent("elin.religion_importing", list);
 		foreach (Religion item in list)
 		{
-			dictAll.Add(item.id, item);
+			dictAll[item.id] = item;
 		}
 	}
 
@@ -81,14 +82,7 @@ public class ReligionManager : EClass
 
 	public Religion Find(string id)
 	{
-		foreach (Religion value in dictAll.Values)
-		{
-			if (value.id == id)
-			{
-				return value;
-			}
-		}
-		return null;
+		return dictAll.TryGetValue(id);
 	}
 
 	public Religion GetRandomReligion(bool onlyJoinable = true, bool includeMinor = false)
@@ -112,5 +106,28 @@ public class ReligionManager : EClass
 		}
 		Debug.Log("hai");
 		return true;
+	}
+
+	public Religion GetArtifactDeity(string id)
+	{
+		return list.LastOrDefault((Religion a) => a.IsValidArtifact(id));
+	}
+
+	public Thing Reforge(string id, Point pos = null, bool first = true)
+	{
+		if (pos == null)
+		{
+			pos = EClass.pc.pos.Copy();
+		}
+		pos.Set(pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true) ?? pos);
+		Thing thing = ThingGen.Create(id);
+		GetArtifactDeity(id)?.OnReforge(thing);
+		EClass._zone.AddCard(thing, pos);
+		pos.PlayEffect("aura_heaven");
+		if (first)
+		{
+			pos.PlaySound("godbless");
+		}
+		return thing;
 	}
 }

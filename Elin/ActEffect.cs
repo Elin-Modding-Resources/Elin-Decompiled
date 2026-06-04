@@ -1828,7 +1828,7 @@ public class ActEffect : EClass
 			}
 			CC.Say("abDraw", CC, TC);
 			CC.PlaySound("draw");
-			if (TC.HasCondition<ConGravity>())
+			if (TC.HasCondition<ConGravity>() || TC.HasElement(493))
 			{
 				CC.SayNothingHappans();
 				break;
@@ -3077,7 +3077,7 @@ public class ActEffect : EClass
 					Debug.Log(_s + "/" + num + "/" + score);
 					if (thing.HasTag(CTAG.godArtifact))
 					{
-						Religion.Reforge(thing.id);
+						EClass.game.religions.Reforge(thing.id);
 					}
 					else
 					{

@@ -433,9 +433,9 @@ public class Biography : EClass
 		{
 			height /= 10;
 		}
-		if (c.source.tag.Contains("mini"))
+		if (c.source.tag.Contains("maxi"))
 		{
-			height /= 10;
+			height *= 10;
 		}
 		weight = height * height * (EClass.rnd(6) + 18) / 10000;
 	}
@@ -459,20 +459,11 @@ public class Biography : EClass
 
 	private string StrBio(int id)
 	{
-		object obj;
-		if (!EClass.sources.langWord.map.ContainsKey(id))
+		if (!EClass.sources.langWord.map.TryGetValue(id, out var value))
 		{
-			obj = id.ToString();
-			if (obj == null)
-			{
-				return "";
-			}
+			return "";
 		}
-		else
-		{
-			obj = EClass.sources.langWord.map[id].GetText().Split(',')[0];
-		}
-		return (string)obj;
+		return value.GetText().Split(',')[0];
 	}
 
 	public void SetGender(int g)

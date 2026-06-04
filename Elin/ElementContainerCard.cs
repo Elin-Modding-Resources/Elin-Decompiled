@@ -24,6 +24,14 @@ public class ElementContainerCard : ElementContainer
 	{
 		owner = c;
 		SourceValueType sourceValueType = ((c.IsEquipmentOrRangedOrAmmo && c.rarity < Rarity.Artifact && !c.isReplica) ? SourceValueType.EquipmentRandom : SourceValueType.Fixed);
+		if (c.sourceCard.ContainsTag("fixedElement"))
+		{
+			sourceValueType = SourceValueType.Fixed;
+		}
+		if (c.sourceCard.ContainsTag("randomElement"))
+		{
+			sourceValueType = SourceValueType.EquipmentRandom;
+		}
 		ApplyElementMap(c.uid, sourceValueType, c.sourceCard.elementMap, (sourceValueType != SourceValueType.EquipmentRandom) ? 1 : c.LV, invert: false, applyFeat);
 	}
 

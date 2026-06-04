@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharaAbility : EClass
@@ -77,12 +78,40 @@ public class CharaAbility : EClass
 
 	public void Refresh()
 	{
-		list.items.Clear();
-		string[] actCombat = owner.source.actCombat;
-		for (int i = 0; i < actCombat.Length; i++)
+		this.list.items.Clear();
+		List<string> list = owner.source.actCombat.ToList();
+		bool flag = true;
+		for (int num = list.Count - 1; num >= 0; num--)
 		{
-			string[] array = actCombat[i].Split('/');
-			list.items.Add(new ActList.Item
+			string text = list[num];
+			string text2 = text.Split('/')[0];
+			if (text2.IsEmpty())
+			{
+				list.RemoveAt(num);
+				flag = false;
+			}
+			else if (!EClass.sources.elements.alias.ContainsKey(text2) || !ACT.dict.ContainsKey(text2))
+			{
+				if (EClass.sources.elements.fuzzyAlias.TryGetValue(text2, out var value) && ACT.dict.ContainsKey(value))
+				{
+					list[num] = text.Replace(text2, value);
+				}
+				else
+				{
+					list.RemoveAt(num);
+					ModUtil.LogModError("source chara row '" + owner.id + "' has invalid actCombat '" + text + "'", owner.source);
+				}
+				flag = false;
+			}
+		}
+		if (!flag)
+		{
+			owner.source.actCombat = list.ToArray();
+		}
+		foreach (string item in list)
+		{
+			string[] array = item.Split('/');
+			this.list.items.Add(new ActList.Item
 			{
 				act = ACT.dict[ConvertID(array[0])],
 				chance = ((array.Length > 1) ? array[1].ToInt() : 100),
@@ -91,11 +120,11 @@ public class CharaAbility : EClass
 		}
 		if (owner.trait.MaxRandomAbility > 0 && owner._listAbility == null)
 		{
-			int num = owner.trait.MaxRandomAbility + EClass.rnd(2) - list.items.Count;
-			if (num > 1)
+			int num2 = owner.trait.MaxRandomAbility + EClass.rnd(2) - this.list.items.Count;
+			if (num2 > 1)
 			{
 				owner._listAbility = new List<int>();
-				for (int j = 0; j < num; j++)
+				for (int i = 0; i < num2; i++)
 				{
 					owner._listAbility.Add(GetRandomAbilityList().RandomItemWeighted((SourceElement.Row e) => e.chance).id);
 				}
@@ -105,15 +134,18 @@ public class CharaAbility : EClass
 		{
 			return;
 		}
-		foreach (int item in owner._listAbility)
+		foreach (int item2 in owner._listAbility)
 		{
-			string alias = EClass.sources.elements.map[Mathf.Abs(item)].alias;
-			list.items.Add(new ActList.Item
+			string text3 = EClass.sources.elements.map.TryGetValue(Mathf.Abs(item2))?.alias;
+			if (!text3.IsEmpty())
 			{
-				act = ACT.dict[alias],
-				chance = 50,
-				pt = (item < 0)
-			});
+				this.list.items.Add(new ActList.Item
+				{
+					act = ACT.dict[text3],
+					chance = 50,
+					pt = (item2 < 0)
+				});
+			}
 		}
 		string ConvertID(string s)
 		{

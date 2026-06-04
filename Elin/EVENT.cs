@@ -66,4 +66,8 @@ public static class EVENT
 	public const string CharaCreated = "elin.chara_created";
 
 	public const string ThingCreated = "elin.thing_created";
+
+	public const string ReligionImporting = "elin.religion_importing";
+
+	public const string ActPerformed = "elin.act_performed";
 }
