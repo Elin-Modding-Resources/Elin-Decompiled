@@ -428,7 +428,12 @@ public class RecipeCard : Recipe
 		}
 		else
 		{
-			card = ThingGen.Create(idCard, -1, Mathf.Max(EClass._zone.DangerLv, EClass.pc.LV));
+			CardBlueprint.Set(new CardBlueprint
+			{
+				rarity = Rarity.Normal,
+				isCraft = true
+			});
+			card = ThingGen.Create(idCard);
 			if (!card.IsUnique)
 			{
 				card.ChangeMaterial(GetMainMaterial());

@@ -2,20 +2,9 @@ public class ReligionWind : Religion
 {
 	public override string id => "wind";
 
-	public override void OnReforge(Thing t)
+	public override bool IsIgnoreReforge(Thing t)
 	{
-		t.c_idDeity = id;
-		if (t.id == "windbow")
-		{
-			return;
-		}
-		foreach (Element value in t.elements.dict.Values)
-		{
-			if (IsFaithElement(value))
-			{
-				value.vExp = -1;
-			}
-		}
+		return t.id == "windbow";
 	}
 
 	public override bool IsValidArtifact(string id)

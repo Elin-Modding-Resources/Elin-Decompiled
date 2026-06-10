@@ -756,12 +756,12 @@ public class Core : BaseCore
 		{
 			if (sourceElement.fuzzyAlias.TryGetValue(id, out var value2))
 			{
-				Debug.Log("#element lookup: " + id + " -> " + value2);
+				Debug.Log("#element lookup: '" + id + "' -> '" + value2 + "'");
 				value = sourceElement.alias[value2];
 			}
 			else
 			{
-				Debug.LogWarning("#element not found: " + id);
+				Debug.LogWarning("#element not found: '" + id + "'");
 				value = sourceElement.rows[0];
 			}
 		}

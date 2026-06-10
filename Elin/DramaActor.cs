@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 public class DramaActor : EMono
@@ -192,11 +193,15 @@ public class DramaActor : EMono
 			}
 			if (!idAction.IsEmpty())
 			{
-				typeof(DramaOutcome).GetMethod(sequence.id + "_" + idAction).Invoke(sequence.manager.outcome, PARAMS);
-				if (DramaOutcome.idJump != null)
+				MethodInfo method = typeof(DramaOutcome).GetMethod(sequence.id + "_" + idAction);
+				if (method != null)
 				{
-					sequence.Play(DramaOutcome.idJump);
-					return;
+					method.Invoke(sequence.manager.outcome, PARAMS);
+					if (DramaOutcome.idJump != null)
+					{
+						sequence.Play(DramaOutcome.idJump);
+						return;
+					}
 				}
 			}
 			if (item.onClick != null)

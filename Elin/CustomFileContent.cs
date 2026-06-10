@@ -31,10 +31,10 @@ public abstract class CustomFileContent : CustomContent
 		{
 			LoadContent();
 		}
-		catch (Exception message)
+		catch (Exception exception)
 		{
 			ModUtil.LogModError("exception while loading file '" + base.ContentId + "'", base.Owner);
-			Debug.LogError(message);
+			Debug.LogException(exception);
 		}
 		finally
 		{

@@ -136,10 +136,10 @@ public class Props : EClass
 		weight -= t.Num;
 		all.Remove(t);
 		things.Remove(t.Thing);
-		cardMap[t.id].Remove(t);
+		cardMap.TryGetValue(t.id)?.Remove(t);
 		if (t.sourceCard.origin != null)
 		{
-			cardMap[t.sourceCard.origin.id].Remove(t);
+			cardMap.TryGetValue(t.sourceCard.origin.id)?.Remove(t);
 		}
 		categoryMap[t.category.id].Remove(t);
 		if (!t.Thing.source.workTag.IsEmpty())

@@ -12,6 +12,7 @@ using System.Threading;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using Newtonsoft.Json;
+using ReflexCLI;
 using ReflexCLI.Attributes;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -25,9 +26,15 @@ public class ModUtil : EClass
 
 	private static readonly List<Func<string, object, int>> _customCalcEvaluator = new List<Func<string, object, int>>();
 
+	private static readonly HashSet<Type> _checkedAttributedTypes = new HashSet<Type>();
+
 	private static readonly Dictionary<string, Texture2D> _cachedTextures = new Dictionary<string, Texture2D>();
 
+	private static Effect _rodTemplate;
+
 	public static SourceImporter sourceImporter = new SourceImporter(SourceMapping);
+
+	public static readonly List<ContextMenuProxy> contextMenuProxies = new List<ContextMenuProxy>();
 
 	public static IReadOnlyDictionary<string, SourceData> SourceMapping => (from f in typeof(SourceManager).GetFields()
 		where typeof(SourceData).IsAssignableFrom(f.FieldType)
@@ -64,7 +71,7 @@ public class ModUtil : EClass
 
 	public static void LogModError(string message, BaseModPackage package = null)
 	{
-		string text = "#mod/" + package?.id + "\n" + message;
+		string text = "#mod/" + package?.title + " (" + package?.id + ")\n" + message;
 		UnityEngine.Debug.LogWarning(text.RemoveAllTags());
 		if ((package?.isInPackages ?? false) || Application.isEditor)
 		{
@@ -72,17 +79,22 @@ public class ModUtil : EClass
 		}
 	}
 
-	public static void LogModError(string message, SourceData.BaseRow row = null)
+	public static void LogModError(string message, SourceData.BaseRow row)
 	{
 		LogModError(message, FindSourceRowPackage(row));
 	}
 
-	public static void LogModError(string message, FileInfo file = null)
+	public static void LogModError(string message, Type type)
+	{
+		LogModError(message, FindFileProviderPackage(new FileInfo(type.Assembly.Location)));
+	}
+
+	public static void LogModError(string message, FileInfo file)
 	{
 		LogModError(message, FindFileProviderPackage(file));
 	}
 
-	public static void LogModError(string message, DirectoryInfo dir = null)
+	public static void LogModError(string message, DirectoryInfo dir)
 	{
 		LogModError(message, FindDirectoryProviderPackage(dir));
 	}
@@ -95,13 +107,13 @@ public class ModUtil : EClass
 	public static ModPackage FindFileProviderPackage(FileInfo file)
 	{
 		string path = file.FullName.NormalizePath();
-		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName)) as ModPackage;
+		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName.NormalizePath())) as ModPackage;
 	}
 
 	public static ModPackage FindDirectoryProviderPackage(DirectoryInfo dir)
 	{
 		string path = dir.FullName.NormalizePath();
-		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName)) as ModPackage;
+		return ModManager.Instance.packages.LastOrDefault((BaseModPackage p) => path.StartsWith(p.dirInfo.FullName.NormalizePath())) as ModPackage;
 	}
 
 	public static ModPackage FindSourceRowPackage(SourceData.BaseRow row)
@@ -147,31 +159,25 @@ public class ModUtil : EClass
 
 	public static void OnModsActivated()
 	{
-		_cachedTextures.Clear();
-		_customContent.Clear();
+		CommandRegistry.assemblies.Add(typeof(EScript).Assembly);
 		SoundManager.current.soundLoaders.Add(LoadSoundData);
 		UIBook.topicLoaders.Add(LoadTopicFiles);
 		BookList.booklistLoaders.Add(LoadBookList);
 		Lang.excelDialogLoaders.Add(LoadExcelDialog);
-		BaseModManager.SubscribeEvent<GameIOContext>("elin.game.post_load", OnPostLoadInit);
-		BaseModManager.SubscribeEvent<GameIOContext>("elin.game.start_new", OnPostLoadInit);
-		BaseModManager.SubscribeEvent<GameIOContext>("elin.game.post_save", OnPostSaveInit);
+		LoadEffectTemplate();
+		DynamicAsset<Effect>.assetLoaders.Add(LoadEffect);
 		BaseModManager.SubscribeEvent<string>("elin.source.lang_set", OnSetLang);
-		BaseModManager.SubscribeEvent<Chara>("elin.chara_created", OnCharaCreated);
-		BaseModManager.SubscribeEvent<Thing>("elin.thing_created", OnThingCreated);
 		BaseModManager.SubscribeEvent<List<Religion>>("elin.religion_importing", OnReligionImporting);
-		BaseModManager.SubscribeEvent<Act>("elin.act_performed", OnActPerformed);
 		BaseModManager.SubscribeEvent("elin.source.importing", OnSourceImporting);
 		BaseModManager.SubscribeEvent("elin.source.imported", OnSourceImported);
 		BaseModManager.PublishEvent("elin.mods.activated");
+		RegisterElinEventAttributes();
+		CoroutineHelper.Deferred(RegisterElinEventAttributes);
 	}
 
 	private static void OnSourceImporting()
 	{
-		if (ModManagerCore.enableSheetLoading)
-		{
-			ImportAllModSourceSheets();
-		}
+		ImportAllModSourceSheets();
 	}
 
 	private static void OnSourceImported()
@@ -190,17 +196,33 @@ public class ModUtil : EClass
 			catch (Exception ex)
 			{
 				LogModError("exception while generating custom source profiles\n" + ex.Message, activatedUserMod);
-				UnityEngine.Debug.LogError(ex);
+				UnityEngine.Debug.LogException(ex);
 			}
 		}
+		ImportAllGunEffectSettings();
 		CustomReligionContent.managed.Clear();
 		foreach (CustomReligionContent item2 in _customContent.Values.OfType<CustomReligionContent>())
 		{
 			item2.RegisterCustomReligion();
 		}
 		CustomReligionContent.Init();
+		SourceCache.FinalizeCache();
+		SourceCache.InvalidateCacheBlobs();
+		SourceCache.ClearDetail();
+		if (EClass.core.launchArgs.Contains("EXPORTSOURCE"))
+		{
+			string text = CorePath.rootExe + "/SourceExport/" + EClass.core.version.GetText();
+			ExportAllSourceDataCsv(text);
+			UnityEngine.Debug.Log("#source exported current version to " + text);
+		}
 	}
 
+	[ElinPreLoad]
+	private static void OnPreLoadInit(GameIOContext context)
+	{
+	}
+
+	[ElinPostLoad]
 	private static void OnPostLoadInit(GameIOContext context)
 	{
 		EClass.player.knownBGMs.RemoveWhere((int id) => !EClass.core.refs.dictBGM.ContainsKey(id));
@@ -222,7 +244,7 @@ public class ModUtil : EClass
 				catch (Exception ex2)
 				{
 					LogModError("exception while loading custom content '" + item.ContentId + "'\n" + ex2.Message, item.Owner);
-					UnityEngine.Debug.LogError(ex2);
+					UnityEngine.Debug.LogException(ex2);
 				}
 			}
 		}
@@ -237,12 +259,18 @@ public class ModUtil : EClass
 				catch (Exception ex)
 				{
 					LogModError("exception while loading custom content '" + item2.ContentId + "'\n" + ex.Message, item2.Owner);
-					UnityEngine.Debug.LogError(ex);
+					UnityEngine.Debug.LogException(ex);
 				}
 			}
 		}
 	}
 
+	[ElinPreSave]
+	private static void OnPreSaveInit(GameIOContext context)
+	{
+	}
+
+	[ElinPostSave]
 	private static void OnPostSaveInit(GameIOContext context)
 	{
 		CustomReligionContent.SaveReligionData(context);
@@ -255,7 +283,7 @@ public class ModUtil : EClass
 			catch (Exception ex)
 			{
 				LogModError("exception while saving custom content '" + value.ContentId + "'\n" + ex.Message, value.Owner);
-				UnityEngine.Debug.LogError(ex);
+				UnityEngine.Debug.LogException(ex);
 			}
 		}
 	}
@@ -265,6 +293,7 @@ public class ModUtil : EClass
 		list.AddRange(CustomReligionContent.GetCustomReligions());
 	}
 
+	[ElinCharaOnCreate]
 	private static void OnCharaCreated(Chara chara)
 	{
 		if (TryGetContent<CustomCharaContent>("Chara/" + chara.id, out var content))
@@ -277,6 +306,7 @@ public class ModUtil : EClass
 		}
 	}
 
+	[ElinThingOnCreate]
 	private static void OnThingCreated(Thing thing)
 	{
 		if (TryGetContent<CustomThingContent>("Thing/" + thing.id, out var content))
@@ -285,6 +315,7 @@ public class ModUtil : EClass
 		}
 	}
 
+	[ElinActPerform]
 	private static void OnActPerformed(Act act)
 	{
 		if (act.HasTag("godAbility"))
@@ -298,27 +329,31 @@ public class ModUtil : EClass
 		PackageIterator.ClearCache();
 		PackageIterator.RebuildAllMappings(lang);
 		SourceLocalization.SetLang(lang);
-		if (ModManagerCore.generateLocalizations)
+		foreach (EMod activatedUserMod in ModManager.Instance.ActivatedUserMods)
 		{
-			foreach (EMod activatedUserMod in ModManager.Instance.ActivatedUserMods)
+			if (activatedUserMod.IsSourceLocalizable && (activatedUserMod.isInPackages || Application.isEditor))
 			{
-				if (activatedUserMod.IsSourceLocalizable && (activatedUserMod.isInPackages || Application.isEditor))
-				{
-					activatedUserMod.UpdateSourceLocalizationFile(lang);
-				}
+				activatedUserMod.UpdateSourceLocalizationFile(lang);
 			}
-			ModManagerCore.generateLocalizations = false;
 		}
 		foreach (string item in LoadGodTalk())
 		{
 			MOD.listGodTalk.Add(new ExcelData(item));
 		}
+		foreach (string item2 in LoadCharaTalk())
+		{
+			MOD.listTalk.Add(new ExcelData(item2));
+		}
+		foreach (string item3 in LoadCharaTone())
+		{
+			MOD.tones.Add(new ExcelData(item3));
+		}
 		BookList.dict = null;
 		BottleMessageList.list = null;
 		Lang.excelDialog = null;
-		foreach (CustomFileContent item2 in _customContent.Values.OfType<CustomFileContent>())
+		foreach (CustomFileContent item4 in _customContent.Values.OfType<CustomFileContent>())
 		{
-			item2.OnSetLang(lang);
+			item4.OnSetLang(lang);
 		}
 	}
 
@@ -341,7 +376,7 @@ public class ModUtil : EClass
 
 	public static void AddContent(ICustomContent content)
 	{
-		UnityEngine.Debug.Log(_customContent.Remove(content.ContentId, out var value) ? ("#mod-content override '" + content.ContentId + "' '" + value.Owner.id + "' -> '" + content.Owner.id + "'") : ("#mod-content added '" + content.ContentId + "' from '" + content.Owner.id + "'"));
+		UnityEngine.Debug.Log(_customContent.Remove(content.ContentId, out var value) ? ("#mod-content override '" + content.ContentId + "' from '" + value.Owner.id + "' to '" + content.Owner.id + "'") : ("#mod-content added '" + content.ContentId + "' from '" + content.Owner.id + "'"));
 		_customContent[content.ContentId] = content;
 	}
 
@@ -389,25 +424,38 @@ public class ModUtil : EClass
 		return list;
 	}
 
-	public static Sprite AppendSpriteSheet(string id, int resizeWidth = 0, int resizeHeight = 0, string pattern = "@")
+	public static void RegisterElinEventAttributes()
 	{
-		Dictionary<string, string> dictModItems = SpriteReplacer.dictModItems;
-		if (!dictModItems.TryGetValue(id, out var value) && pattern != "")
+		ClassCache.modTypes.Add(typeof(ModUtil));
+		ClassCache.modTypes.Add(typeof(CustomDramaExpansion));
+		foreach (var item3 in ClassCache.modTypes.Except(_checkedAttributedTypes).MembersWith<ElinEventBaseAttribute>())
 		{
-			value = dictModItems.Where((KeyValuePair<string, string> kv) => kv.Key.StartsWith(pattern)).FirstOrDefault((KeyValuePair<string, string> kv) => id.StartsWith(kv.Key[pattern.Length..])).Value;
+			MemberInfo item = item3.member;
+			ElinEventBaseAttribute[] item2 = item3.attrs;
+			foreach (ElinEventBaseAttribute elinEventBaseAttribute in item2)
+			{
+				try
+				{
+					if (!(item is PropertyInfo property))
+					{
+						if (item is MethodInfo method)
+						{
+							elinEventBaseAttribute.Register(method);
+						}
+					}
+					else
+					{
+						elinEventBaseAttribute.Register(property);
+					}
+				}
+				catch (Exception ex)
+				{
+					LogModError("exception while registering attribute '" + elinEventBaseAttribute.GetType().Name + "' from '" + item.TryToString() + "'\n" + ex.Message, item.DeclaringType);
+					UnityEngine.Debug.LogException(ex);
+				}
+			}
 		}
-		string spritePath = value;
-		string name = id;
-		Sprite sprite = LoadSprite(spritePath, null, name, resizeWidth, resizeHeight);
-		if (sprite == null)
-		{
-			return null;
-		}
-		if (SpriteSheet.dict.TryGetValue(id, out var value2) && value2.texture.width == sprite.texture.width && value2.texture.height == sprite.texture.height)
-		{
-			return value2;
-		}
-		return SpriteSheet.dict[sprite.name] = sprite;
+		_checkedAttributedTypes.UnionWith(ClassCache.modTypes);
 	}
 
 	public static List<string> LoadBookList()
@@ -417,7 +465,7 @@ public class ModUtil : EClass
 		foreach (DirectoryInfo directoryInfo in directories)
 		{
 			list.AddRange(Directory.GetDirectories(directoryInfo.FullName));
-			UnityEngine.Debug.Log("#book list loaded " + directoryInfo.ShortPath());
+			UnityEngine.Debug.Log("#mod-content loaded book list " + directoryInfo.ShortPath());
 		}
 		return list;
 	}
@@ -429,7 +477,7 @@ public class ModUtil : EClass
 		foreach (FileInfo fileInfo in files)
 		{
 			list.AddRange(IO.LoadTextArray(fileInfo.FullName));
-			UnityEngine.Debug.Log("#book topic loaded " + fileInfo.ShortPath());
+			UnityEngine.Debug.Log("#mod-content loaded book topics " + fileInfo.ShortPath());
 		}
 		return list;
 	}
@@ -441,7 +489,31 @@ public class ModUtil : EClass
 		foreach (FileInfo fileInfo in files)
 		{
 			list.Add(fileInfo.FullName);
-			UnityEngine.Debug.Log("#dialog loaded " + fileInfo.ShortPath());
+			UnityEngine.Debug.Log("#mod-content loaded dialog " + fileInfo.ShortPath());
+		}
+		return list;
+	}
+
+	public static List<string> LoadCharaTalk()
+	{
+		List<string> list = new List<string>();
+		FileInfo[] files = PackageIterator.GetFiles("Data/chara_talk.xlsx");
+		foreach (FileInfo fileInfo in files)
+		{
+			list.Add(fileInfo.FullName);
+			UnityEngine.Debug.Log("#mod-content loaded chara tone " + fileInfo.ShortPath());
+		}
+		return list;
+	}
+
+	public static List<string> LoadCharaTone()
+	{
+		List<string> list = new List<string>();
+		FileInfo[] files = PackageIterator.GetFiles("Data/chara_tone.xlsx");
+		foreach (FileInfo fileInfo in files)
+		{
+			list.Add(fileInfo.FullName);
+			UnityEngine.Debug.Log("#mod-content loaded chara talk " + fileInfo.ShortPath());
 		}
 		return list;
 	}
@@ -501,13 +573,34 @@ public class ModUtil : EClass
 		}
 		catch (Exception arg)
 		{
-			UnityEngine.Debug.LogError($"#sprite failed to load {spritePath.ShortPath()}\n{arg}");
+			UnityEngine.Debug.LogError($"#mod-content failed to load sprite {spritePath.ShortPath()}\n{arg}");
 			return null;
 		}
 		Texture2D texture2D2 = _cachedTextures[text];
 		Sprite sprite = Sprite.Create(texture2D2, new Rect(0f, 0f, texture2D2.width, texture2D2.height), pivot.Value, 100f, 0u, SpriteMeshType.FullRect);
 		sprite.name = name;
 		return sprite;
+	}
+
+	public static Sprite AppendSpriteSheet(string id, int resizeWidth = 0, int resizeHeight = 0, string pattern = "@")
+	{
+		Dictionary<string, string> dictModItems = SpriteReplacer.dictModItems;
+		if (!dictModItems.TryGetValue(id, out var value) && pattern != "")
+		{
+			value = dictModItems.Where((KeyValuePair<string, string> kv) => kv.Key.StartsWith(pattern)).FirstOrDefault((KeyValuePair<string, string> kv) => id.StartsWith(kv.Key[pattern.Length..])).Value;
+		}
+		string spritePath = value;
+		string name = id;
+		Sprite sprite = LoadSprite(spritePath, null, name, resizeWidth, resizeHeight);
+		if (sprite == null)
+		{
+			return null;
+		}
+		if (SpriteSheet.dict.TryGetValue(id, out var value2) && value2.texture.width == sprite.texture.width && value2.texture.height == sprite.texture.height)
+		{
+			return value2;
+		}
+		return SpriteSheet.dict[sprite.name] = sprite;
 	}
 
 	public static List<string> LoadGodTalk()
@@ -517,9 +610,105 @@ public class ModUtil : EClass
 		foreach (FileInfo fileInfo in files)
 		{
 			list.Add(fileInfo.FullName);
-			UnityEngine.Debug.Log("#god-talk loaded " + fileInfo.ShortPath());
+			UnityEngine.Debug.Log("#mod-content loaded god talk " + fileInfo.ShortPath());
 		}
 		return list;
+	}
+
+	public static Dictionary<string, CustomGunEffectData> LoadGunEffects()
+	{
+		Dictionary<string, CustomGunEffectData> dictionary = new Dictionary<string, CustomGunEffectData>();
+		(FileInfo, EMod)[] filesEx = PackageIterator.GetFilesEx("Data/EffectSetting.guns.json");
+		for (int i = 0; i < filesEx.Length; i++)
+		{
+			(FileInfo, EMod) tuple = filesEx[i];
+			FileInfo item = tuple.Item1;
+			EMod item2 = tuple.Item2;
+			CustomGunEffectSetting customGunEffectSetting = CustomGunEffectSetting.CreateFromFile(item, item2 as ModPackage);
+			_customContent[customGunEffectSetting.ContentId] = customGunEffectSetting;
+		}
+		foreach (CustomGunEffectSetting item3 in _customContent.Values.OfType<CustomGunEffectSetting>())
+		{
+			item3.Load();
+			dictionary.Merge(item3.items);
+			UnityEngine.Debug.Log($"#mod-content loaded {item3}");
+		}
+		return dictionary;
+	}
+
+	public static void ImportAllGunEffectSettings()
+	{
+		foreach (KeyValuePair<string, CustomGunEffectData> item in LoadGunEffects())
+		{
+			item.Deconstruct(out var key, out var value);
+			string key2 = key;
+			GameSetting.EffectData value2 = value.CreateEffectData();
+			EClass.setting.effect.guns[key2] = value2;
+		}
+	}
+
+	public static string ExportAllGunEffectSettings()
+	{
+		UD_String_EffectData guns = EClass.setting.effect.guns;
+		string text = CorePath.rootExe + "/guns.json";
+		Dictionary<string, CustomGunEffectData> dictionary = new Dictionary<string, CustomGunEffectData>();
+		foreach (string key in guns.Keys)
+		{
+			CustomGunEffectData value = CustomGunEffectData.CreateFromId(key);
+			dictionary[key] = value;
+		}
+		File.WriteAllText(text, JsonConvert.SerializeObject(dictionary, Formatting.Indented, GameIOContext.Settings));
+		return $"dumped {dictionary.Count} guns data to {text}";
+	}
+
+	private static Effect LoadEffect(string id)
+	{
+		if (id.IsEmpty())
+		{
+			return null;
+		}
+		if (!_rodTemplate)
+		{
+			return null;
+		}
+		string effectId = id.Split('/')[^1];
+		Sprite sprite = LoadSprite(effectId);
+		if (!sprite)
+		{
+			return null;
+		}
+		Effect effect = UnityEngine.Object.Instantiate(_rodTemplate);
+		effect.name = effectId;
+		effect.sprites = Slice().ToArray();
+		UnityEngine.Object.DontDestroyOnLoad(effect);
+		UnityEngine.Debug.Log("#mod-content loaded custom effect '" + effectId + "'");
+		return effect;
+		IEnumerable<Sprite> Slice()
+		{
+			int height = (int)sprite.rect.height;
+			float frames = sprite.rect.width / (float)height;
+			if (frames != 0f)
+			{
+				int i = 0;
+				while ((float)i < frames)
+				{
+					Sprite sprite2 = Sprite.Create(rect: new Rect(i * height, 0f, height, height), texture: sprite.texture, pivot: new Vector2(0.5f, 0.5f * (128f / (float)height)), pixelsPerUnit: 100f, extrude: 0u, meshType: SpriteMeshType.FullRect);
+					sprite2.name = $"{effectId}{i:D4}";
+					yield return sprite2;
+					int num = i + 1;
+					i = num;
+				}
+			}
+		}
+	}
+
+	private static void LoadEffectTemplate()
+	{
+		_rodTemplate = Resources.Load<Effect>("Media/Effect/General/rod");
+		if (!_rodTemplate)
+		{
+			UnityEngine.Debug.LogWarning("#mod-content cannot initialize rod effect template");
+		}
 	}
 
 	public static SerializableSoundData GetSoundMeta(string soundPath)
@@ -761,12 +950,6 @@ public class ModUtil : EClass
 				list.Add(sourceSheet.FullName);
 			}
 			sourceImporter.ImportFilesCached(list);
-			if (ModManagerCore.enableSheetCaching)
-			{
-				SourceCache.FinalizeCache();
-			}
-			SourceCache.InvalidateCacheBlobs();
-			SourceCache.ClearDetail();
 			UnityEngine.Debug.Log("#source finished importing workbooks from " + modId);
 		}
 		catch (Exception exception)
@@ -802,16 +985,10 @@ public class ModUtil : EClass
 				}
 			}
 			sourceImporter.ImportFilesCached(list);
-			if (ModManagerCore.enableSheetCaching)
-			{
-				SourceCache.FinalizeCache();
-			}
-			SourceCache.InvalidateCacheBlobs();
-			SourceCache.ClearDetail();
 		}
-		catch (Exception message)
+		catch (Exception exception)
 		{
-			UnityEngine.Debug.LogError(message);
+			UnityEngine.Debug.LogException(exception);
 		}
 		UnityEngine.Debug.Log("#source finished importing workbooks");
 	}
@@ -824,13 +1001,12 @@ public class ModUtil : EClass
 			return "";
 		}
 		IReadOnlyDictionary<string, string> typeMapping = sourceData2.GetTypeMapping();
-		IReadOnlyDictionary<string, int> rowMapping = sourceData2.GetRowMapping();
-		StringBuilder stringBuilder = new StringBuilder();
-		stringBuilder.AppendLine(string.Join(delimiter, rowMapping.Keys));
-		stringBuilder.AppendLine(string.Join(delimiter, rowMapping.Keys.Select((string k) => typeMapping[k])));
-		(string, string)[] array = (from kv in rowMapping
+		(string, string)[] array = (from kv in sourceData2.GetRowMapping()
 			orderby kv.Value
-			select (Key: kv.Key, typeMapping[kv.Key])).ToArray();
+			select (column: kv.Key, type: typeMapping[kv.Key])).ToArray();
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.AppendLine(string.Join(delimiter, array.Select(((string column, string type) p) => p.column)));
+		stringBuilder.AppendLine(string.Join(delimiter, array.Select(((string column, string type) p) => p.type)));
 		SourceData.BaseRow[] array2 = sourceData2.ExportRows();
 		foreach (SourceData.BaseRow baseRow in array2)
 		{
@@ -856,7 +1032,7 @@ public class ModUtil : EClass
 						enumerable = obj as IEnumerable;
 						if (enumerable != null)
 						{
-							goto IL_0221;
+							goto IL_024a;
 						}
 					}
 					else if (item2 == "element_id")
@@ -870,23 +1046,28 @@ public class ModUtil : EClass
 				if (!(item2 == "elements"))
 				{
 					enumerable = (IEnumerable)obj;
-					goto IL_0221;
+					goto IL_024a;
 				}
 				List<string> list2 = new List<string>();
-				for (int l = 0; l < array4.Length - 1; l += 2)
+				for (int k = 0; k < array4.Length - 1; k += 2)
 				{
-					string alias = EClass.sources.elements.map[array4[l]].alias;
-					string text = array4[l + 1].ToString();
+					string alias = EClass.sources.elements.map[array4[k]].alias;
+					string text = array4[k + 1].ToString();
 					list2.Add(alias + "/" + text);
 				}
 				string item4 = string.Join(',', list2);
 				list.Add(item4);
 				continue;
-				IL_0221:
+				IL_024a:
 				string item5 = string.Join(',', enumerable.OfType<object>());
 				list.Add(item5);
 			}
-			stringBuilder.AppendLine(string.Join(delimiter, list.Select((string f) => "\"" + f.RemoveNewline() + "\"")));
+			IEnumerable<string> values = list.Select(delegate(string f)
+			{
+				string text2 = f.Replace("\r", "").Replace("\n", "\\n").Replace("\"", "\"\"");
+				return (!text2.IsEmpty()) ? ("\"" + text2 + "\"") : "";
+			});
+			stringBuilder.AppendLine(string.Join(delimiter, values));
 		}
 		return stringBuilder.ToString();
 	}
@@ -917,5 +1098,72 @@ public class ModUtil : EClass
 		{
 			File.WriteAllText(Path.Combine(dir, key + ".json"), ExportSourceDataJson(key));
 		}
+	}
+
+	public static void AddContextMenuEntry(Action onClick, string menuEntry, string displayName = "")
+	{
+		if (onClick == null || menuEntry.IsEmpty())
+		{
+			return;
+		}
+		string[] array = menuEntry.Split('/', StringSplitOptions.RemoveEmptyEntries);
+		List<ContextMenuProxy> children = contextMenuProxies;
+		for (int i = 0; i < array.Length; i++)
+		{
+			bool flag = i < array.Length - 1;
+			string part = array[i];
+			ContextMenuProxy contextMenuProxy = children.Find((ContextMenuProxy p) => p.MenuEntry == part);
+			if (contextMenuProxy == null)
+			{
+				contextMenuProxy = new ContextMenuProxy(part, flag ? part : displayName)
+				{
+					onClick = ((i == array.Length - 1 && flag) ? null : new Action(SafeInvoke)),
+					isMenu = flag
+				};
+				children.Add(contextMenuProxy);
+			}
+			else if (contextMenuProxy.isMenu != flag)
+			{
+				UnityEngine.Debug.LogWarning("#mod-content attempt to add context menu entry with same name but different types\n" + part + " -> " + (contextMenuProxy.isMenu ? "submenu" : "button"));
+				return;
+			}
+			children = contextMenuProxy.children;
+		}
+		UnityEngine.Debug.Log("#mod-content added context menu entry '" + menuEntry + "' from '" + onClick.Method.TryToString() + "'");
+		void SafeInvoke()
+		{
+			try
+			{
+				onClick();
+			}
+			catch (Exception exception)
+			{
+				UnityEngine.Debug.LogException(exception);
+			}
+		}
+	}
+
+	public static void RemoveContextMenuEntry(string entry)
+	{
+		string[] array = entry.Split('/', StringSplitOptions.RemoveEmptyEntries);
+		if (array.Length == 0)
+		{
+			return;
+		}
+		List<ContextMenuProxy> children = contextMenuProxies;
+		ContextMenuProxy contextMenuProxy = null;
+		List<ContextMenuProxy> list = null;
+		string[] array2 = array;
+		foreach (string part in array2)
+		{
+			contextMenuProxy = children.Find((ContextMenuProxy p) => p.MenuEntry == part);
+			if (contextMenuProxy == null)
+			{
+				return;
+			}
+			list = children;
+			children = contextMenuProxy.children;
+		}
+		list?.Remove(contextMenuProxy);
 	}
 }

@@ -388,6 +388,7 @@ public class AttackProcess : EClass
 		bool isGun = toolRange is TraitToolRangeGun;
 		bool isCane = toolRange is TraitToolRangeCane;
 		GameSetting.EffectData data = EClass.setting.effect.guns.TryGetValue(weapon.id) ?? EClass.setting.effect.guns[isCane ? "cane" : (isGun ? "gun" : "bow")];
+		CustomGunEffectData customData = data as CustomGunEffectData;
 		bool isPCC = CC.IsPCC && CC.renderer.hasActor;
 		Vector2 firePos = (isPCC ? new Vector2(data.firePos.x * (float)((CC.renderer.actor.currentDir != 0 && CC.renderer.actor.currentDir != 1) ? 1 : (-1)), data.firePos.y) : Vector2.zero);
 		Chara _CC = CC;
@@ -398,19 +399,26 @@ public class AttackProcess : EClass
 		Color effColor = Color.white;
 		if (isCane)
 		{
-			IEnumerable<Element> enumerable = toolRange.owner.elements.dict.Values.Where((Element e) => e.source.categorySub == "eleAttack");
-			if (enumerable.Count() > 0)
+			Element element = toolRange.owner.elements.dict.Values.Where((Element e) => e.source.categorySub == "eleAttack").RandomItem();
+			if (element != null)
 			{
-				Element element = enumerable.RandomItem();
-				effColor = EClass.Colors.elementColors[element.source.alias];
+				effColor = EClass.Colors.elementColors.TryGetValue(element.source.alias, "eleFire");
+			}
+			if (!string.IsNullOrEmpty(customData?.caneColor))
+			{
+				Color color = customData.caneColor.ToColor();
+				effColor = (customData.caneColorBlend ? Color.Lerp(effColor, color, 0.5f) : color);
 			}
 		}
+		bool isLaser = toolRange is TraitToolRangeGunEnergy || (customData?.forceLaser ?? false);
+		bool isRail = isLaser && (weapon.id == "gun_rail" || (customData?.forceRail ?? false));
 		for (int i = 0; i < numFire; i++)
 		{
 			TweenUtil.Delay((float)i * data.delay + delay, delegate
 			{
 				if (EClass.core.IsGameStarted && _CC.IsAliveInCurrentZone && _zone == _CC.currentZone)
 				{
+					Vector3 fromV = (_CC.isSynced ? _CC.renderer.position : _CC.pos.Position());
 					switch (_weapon.id)
 					{
 					case "gun_rail":
@@ -420,23 +428,29 @@ public class AttackProcess : EClass
 						_CC.PlayEffect("laser").GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
 						break;
 					case "gun_laser_assault":
-						Effect.Get("ranged_laser")._Play(_CC.pos, _CC.isSynced ? _CC.renderer.position : _CC.pos.Position(), 0f, _TP, data.sprite);
+						Effect.Get("ranged_laser")._Play(_CC.pos, fromV, 0f, _TP, data.sprite);
 						break;
 					default:
-					{
-						Effect effect = Effect.Get("ranged_arrow")._Play(_CC.pos, _CC.isSynced ? _CC.renderer.position : _CC.pos.Position(), 0f, _TP, data.sprite);
-						if (isCane)
+						if (isLaser)
 						{
-							effect.sr.color = effColor;
+							string id = (isRail ? "laser_rail" : "laser");
+							_CC.PlayEffect(id).GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
+						}
+						else
+						{
+							Effect effect = Effect.Get("ranged_arrow")._Play(_CC.pos, fromV, 0f, _TP, data.sprite);
+							if (isCane)
+							{
+								effect.sr.color = effColor;
+							}
 						}
 						break;
-					}
 					}
 					if (data.eject)
 					{
 						if (!ignoreSound)
 						{
-							_CC.PlaySound("bullet_drop");
+							_CC.PlaySound(customData?.idSoundEject.IsEmpty("bullet_drop"));
 						}
 						_CC.PlayEffect("bullet").Emit(1);
 					}

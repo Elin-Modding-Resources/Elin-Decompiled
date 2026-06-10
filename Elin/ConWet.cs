@@ -26,15 +26,9 @@ public class ConWet : Condition
 
 	public override void OnStart()
 	{
-		if (!EClass._zone.IsRegion && owner.HasElement(1254))
+		if (!EClass._zone.IsRegion && owner.HasElement(1254) && owner.pos.ListCharasInNeighbor((Chara c) => c.HasElement(1254)).Count < 5)
 		{
-			Point randomPoint = owner.pos.GetRandomPoint(2, requireLos: false, allowChara: false, allowBlocked: false, 200);
-			if (randomPoint != null && !randomPoint.Equals(BaseStats.CC.pos) && randomPoint.IsValid)
-			{
-				Chara t = owner.Duplicate();
-				EClass._zone.AddCard(t, randomPoint);
-				owner.Say("split", owner);
-			}
+			owner.TryDuplicate(DuplicateCondition.Water);
 		}
 	}
 }

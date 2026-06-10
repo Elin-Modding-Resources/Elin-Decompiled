@@ -1,3 +1,5 @@
+using System;
+
 public class DramaEvent : EClass
 {
 	public int progress;
@@ -14,6 +16,8 @@ public class DramaEvent : EClass
 
 	public DramaSequence sequence;
 
+	public Func<bool> activeCondition;
+
 	public DramaActor actor => sequence.GetActor(idActor);
 
 	public DramaManager manager => sequence.manager;
@@ -28,5 +32,14 @@ public class DramaEvent : EClass
 	public virtual void Reset()
 	{
 		progress = 0;
+	}
+
+	public virtual bool CanPlay()
+	{
+		if (activeCondition != null)
+		{
+			return activeCondition();
+		}
+		return true;
 	}
 }

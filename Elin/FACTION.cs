@@ -155,10 +155,10 @@ public class Faction : EClass
 
 	public static Faction Create(SourceFaction.Row r)
 	{
-		Faction faction = ClassCache.Create<Faction>(r.type, "Elin");
-		faction.id = r.id;
-		faction.Init();
-		return faction;
+		Faction obj = ClassCache.Create<Faction>(r.type, "Elin") ?? new Faction();
+		obj.id = r.id;
+		obj.Init();
+		return obj;
 	}
 
 	public void Init()

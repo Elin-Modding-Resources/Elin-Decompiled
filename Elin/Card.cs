@@ -2550,17 +2550,30 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public int GetInt(string id, int? defaultInt = null)
 	{
-		return GetInt(id.GetHashCode(), defaultInt);
+		int @int = GetInt(id.GetHashCode(), defaultInt);
+		if (!IsPC)
+		{
+			return @int;
+		}
+		return EClass.player.dialogFlags.GetValueOrDefault(id, @int);
 	}
 
 	public void AddInt(string id, int value)
 	{
 		AddInt(id.GetHashCode(), value);
+		if (IsPC)
+		{
+			EClass.player.dialogFlags[id] = GetInt(id.GetHashCode());
+		}
 	}
 
 	public void SetInt(string id, int value = 0)
 	{
 		SetInt(id.GetHashCode(), value);
+		if (IsPC)
+		{
+			EClass.player.dialogFlags[id] = value;
+		}
 	}
 
 	public string GetStr(string id, string defaultStr = null)
@@ -7143,7 +7156,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			text = text.Replace("#2", ref2);
 		}
 		HostRenderer.Say(ApplyNewLine(text));
-		text = StripTalkSpeiclaCharacters(text);
+		text = StripTalkSpecialCharacters(text);
 		bool flag = text.StartsWith("*");
 		Msg.SetColor(text.StartsWith("(") ? Msg.colors.Thinking : (flag ? Msg.colors.Ono : Msg.colors.Talk));
 		if (!flag)
@@ -7153,7 +7166,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		Msg.Say(text.Replace("&", ""));
 	}
 
-	public string StripTalkSpeiclaCharacters(string text)
+	public string StripTalkSpecialCharacters(string text)
 	{
 		switch (text[0])
 		{

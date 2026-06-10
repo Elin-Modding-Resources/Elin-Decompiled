@@ -14,7 +14,7 @@ public class QuestDeliver : QuestDestZone
 
 	public virtual bool ConsumeGoods => false;
 
-	public SourceThing.Row sourceThing => EClass.sources.things.map[idThing.IsEmpty("generator_snowman")];
+	public SourceThing.Row sourceThing => EClass.sources.things.map.TryGetValue(idThing.IsEmpty("generator_snowman"), "generator_snowman");
 
 	public override string NameDeliver => sourceThing.GetName();
 
@@ -109,9 +109,16 @@ public class QuestDeliver : QuestDestZone
 			if (t.c_altName.IsEmpty())
 			{
 				string name = sourceThing.GetName();
-				if (t.source.GetName() == name || t.GetName(NameStyle.Simple, 1) == name)
+				try
 				{
-					return true;
+					if (t.source.GetName() == name || t.GetName(NameStyle.Simple, 1) == name)
+					{
+						return true;
+					}
+				}
+				catch
+				{
+					return false;
 				}
 			}
 		}

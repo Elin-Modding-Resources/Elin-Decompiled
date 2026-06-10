@@ -526,6 +526,11 @@ public class Point : EClass
 		return "(" + x + " / " + z + ")";
 	}
 
+	public static Point operator +(Point lhs, Point rhs)
+	{
+		return new Point(lhs.x + rhs.x, lhs.z + rhs.z);
+	}
+
 	public void Set(Vector3 v)
 	{
 		v.x -= 0.64f;

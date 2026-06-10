@@ -513,7 +513,7 @@ public class AI_Idle : AIAct
 			}
 			case "spider_queen":
 			{
-				if (EClass.rnd(20) != 0 || !owner.CanDuplicate() || EClass._zone.IsUserZone)
+				if (EClass.rnd(20) != 0 || !owner.CanDuplicate(DuplicateCondition.SpiderEgg) || EClass._zone.IsUserZone)
 				{
 					break;
 				}
@@ -539,7 +539,7 @@ public class AI_Idle : AIAct
 			}
 			case "mech_scarab":
 			{
-				if (EClass.rnd(20) != 0 || !owner.CanDuplicate() || EClass._zone.IsUserZone)
+				if (EClass.rnd(20) != 0 || !owner.CanDuplicate(DuplicateCondition.Scarab) || EClass._zone.IsUserZone)
 				{
 					break;
 				}

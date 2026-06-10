@@ -1803,9 +1803,9 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public bool CanDuplicate()
+	public bool CanDuplicate(DuplicateCondition con = DuplicateCondition.Default)
 	{
-		if (EClass._zone.IsRegion || HasCondition<ConPoison>() || HasCondition<ConConfuse>() || HasCondition<ConDim>() || HasCondition<ConParalyze>() || HasCondition<ConSleep>() || HasCondition<ConBurning>() || HasCondition<ConFreeze>() || HasCondition<ConMiasma>() || corruption >= 100)
+		if (EClass._zone.IsRegion)
 		{
 			return false;
 		}
@@ -1813,19 +1813,48 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		string text = id;
-		if (!(text == "mech_scarab"))
-		{
-			if (text == "spider_queen" && (pos.cell.light > 0 || pos.IsSunLit))
-			{
-				return false;
-			}
-		}
-		else if (isSynced || pos.cell.light > 0 || (!EClass._map.IsIndoor && !pos.cell.HasRoof && !EClass.world.date.IsNight))
+		if (corruption >= 100)
 		{
 			return false;
 		}
+		if (con != DuplicateCondition.Water && (HasCondition<ConPoison>() || HasCondition<ConConfuse>() || HasCondition<ConDim>() || HasCondition<ConParalyze>() || HasCondition<ConSleep>() || HasCondition<ConBurning>() || HasCondition<ConFreeze>() || HasCondition<ConMiasma>()))
+		{
+			return false;
+		}
+		switch (con)
+		{
+		case DuplicateCondition.Scarab:
+			if (isSynced || pos.cell.light > 0 || (!EClass._map.IsIndoor && !pos.cell.HasRoof && !EClass.world.date.IsNight))
+			{
+				return false;
+			}
+			break;
+		case DuplicateCondition.SpiderEgg:
+			if (pos.cell.light > 0 || pos.IsSunLit)
+			{
+				return false;
+			}
+			break;
+		}
 		return true;
+	}
+
+	public Chara TryDuplicate(DuplicateCondition con = DuplicateCondition.Default, Point dest = null)
+	{
+		if (dest == null)
+		{
+			dest = pos;
+		}
+		dest = dest.GetRandomPoint(2, requireLos: false, allowChara: false, allowBlocked: false, 200);
+		if (dest == null || dest.Equals(pos) || !dest.IsValid || !CanDuplicate(con))
+		{
+			Say("split_fail", this);
+			return null;
+		}
+		Chara chara = Duplicate();
+		EClass._zone.AddCard(chara, dest);
+		Say("split", this);
+		return chara;
 	}
 
 	public Chara Duplicate()
@@ -1900,12 +1929,12 @@ public class Chara : Card, IPathfindWalker
 	{
 		bool flag = EClass._map.FindThing((Thing t) => t.IsInstalled && t.pos.Equals(EClass.pc.pos) && t.trait is TraitStairsUp) != null;
 		Say(flag ? "dmgBurdenStairs" : "dmgBurdenFallDown", this);
-		int num = MaxHP;
+		long num = MaxHP;
 		if (Evalue(1421) > 0)
 		{
 			num = mana.max;
 		}
-		int num2 = (num * (base.ChildrenWeight * 100 / WeightLimit) / (flag ? 100 : 200) + 1) * mtp / 100;
+		long num2 = (num * (base.ChildrenWeight * 100 / WeightLimit) / (flag ? 100 : 200) + 1) * mtp / 100;
 		if (base.hp <= 0)
 		{
 			num2 *= 2;
@@ -2326,16 +2355,26 @@ public class Chara : Card, IPathfindWalker
 		}
 		body.RefreshBodyParts();
 		elements.ApplyElementMap(base.uid, SourceValueType.Chara, race.elementMap, base.DefaultLV, remove, applyFeat: true);
-		if (!remove)
+		if (remove)
 		{
-			if (race.id == "bike" && id != "bike_cub")
+			if (HasElement(1423))
 			{
-				SetFeat(1423, (id == "chara" || id == "player") ? 10 : (1 + EClass.rnd(10)));
+				SetFeat(1423, 0);
 			}
-			if (race.id == "horse" && EClass.rnd(5) == 0)
-			{
-				SetFeat(1423, 1 + EClass.rnd(5));
-			}
+			return;
+		}
+		bool flag = id == "chara" || id == "player";
+		if (race.id == "bike" && id != "bike_cub")
+		{
+			SetFeat(1423, flag ? 10 : (1 + EClass.rnd(10)));
+		}
+		if (id == "moa")
+		{
+			SetFeat(1423, flag ? 7 : (1 + EClass.rnd(7)));
+		}
+		if (race.id == "horse" && EClass.rnd(5) == 0)
+		{
+			SetFeat(1423, flag ? 5 : (1 + EClass.rnd(5)));
 		}
 	}
 
@@ -7236,14 +7275,20 @@ public class Chara : Card, IPathfindWalker
 		{
 			return null;
 		}
-		string text = "_bracketTalk".lang();
+		HashSet<string> obj = new HashSet<string>
+		{
+			"_bracketTalk".lang(),
+			"\"",
+			"“",
+			"「"
+		};
 		bool flag = topicText.StartsWith("*");
 		bool flag2 = topicText.StartsWith("(");
-		bool flag3 = topicText.StartsWith(text) || (topicText.Length > 0 && topicText[0] == text[0]) || topicText[0] == '“';
+		bool flag3 = obj.Any(topicText.StartsWith);
 		topicText = ApplyTone(topicText);
-		topicText = topicText.Replace("~", "*");
+		topicText = topicText.Replace('~', '*');
 		Msg.SetColor(flag2 ? Msg.colors.Thinking : (flag3 ? Msg.colors.Talk : Msg.colors.Ono));
-		Msg.Say(StripTalkSpeiclaCharacters(topicText.Replace("&", "")));
+		Msg.Say(StripTalkSpecialCharacters(topicText.Replace("&", "")));
 		if (topic == "dead")
 		{
 			EClass.ui.popGame.PopText(ApplyNewLine(topicText.StripBrackets()), null, "PopTextDead", default(Color), pos.Position() + EClass.setting.render.tc.textPosDead);
@@ -9459,9 +9504,9 @@ public class Chara : Card, IPathfindWalker
 			string[] hobbies = source.hobbies;
 			foreach (string text in hobbies)
 			{
-				if (EClass.sources.hobbies.alias.ContainsKey(text))
+				if (EClass.sources.hobbies.alias.TryGetValue(text.Trim(), out var value))
 				{
-					AddHobby(EClass.sources.hobbies.alias[text].id);
+					AddHobby(value.id);
 					continue;
 				}
 				ModUtil.LogModError("source chara row '" + source.id + "' has invalid hobby '" + text + "'", source);
@@ -9476,9 +9521,9 @@ public class Chara : Card, IPathfindWalker
 			string[] hobbies = source.works;
 			foreach (string text2 in hobbies)
 			{
-				if (EClass.sources.hobbies.alias.ContainsKey(text2))
+				if (EClass.sources.hobbies.alias.TryGetValue(text2.Trim(), out var value2))
 				{
-					AddWork(EClass.sources.hobbies.alias[text2].id);
+					AddWork(value2.id);
 					continue;
 				}
 				ModUtil.LogModError("source chara row '" + source.id + "' has invalid work '" + text2 + "'", source);

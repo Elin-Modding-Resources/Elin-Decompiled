@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
@@ -58,7 +59,7 @@ public class CustomThingContent : CustomSourceContent
 	[JsonConverter(typeof(StringEnumConverter))]
 	public Rarity rarity;
 
-	[JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+	[DefaultValue(true)]
 	public bool restock = true;
 
 	public List<string> sockets = new List<string>();

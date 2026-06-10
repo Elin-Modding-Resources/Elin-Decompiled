@@ -20,8 +20,6 @@ public class ModManager : ModManagerCore
 
 	public List<FileInfo> replaceFiles = new List<FileInfo>();
 
-	private Action ImportModGodTalks;
-
 	public static List<string> ListChainLoad => BaseModManager.listChainLoad;
 
 	public static DirectoryInfo DirWorkshop => Instance.dirWorkshop;
@@ -53,7 +51,7 @@ public class ModManager : ModManagerCore
 				Core.SaveElinIni(elinIni);
 			}
 		}
-		if (!dirWorkshop.Exists)
+		if ((!(dirWorkshop?.Exists)) ?? true)
 		{
 			dirWorkshop = null;
 		}

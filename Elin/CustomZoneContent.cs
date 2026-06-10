@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -8,15 +6,12 @@ public class CustomZoneContent : CustomSourceContent
 {
 	public string parent;
 
+	public bool autoSpawn;
+
 	public override string SourceType => "SourceZone";
 
 	public static CustomZoneContent CreateFromRow(SourceZone.Row r, ModPackage owner = null)
 	{
-		List<string> list = r.tag.Where((string t) => t.StartsWith("add")).ToList();
-		if (list.Count == 0)
-		{
-			return null;
-		}
 		if (owner == null)
 		{
 			owner = ModUtil.FindSourceRowPackage(r);
@@ -27,12 +22,14 @@ public class CustomZoneContent : CustomSourceContent
 			SourceId = r.id,
 			Owner = owner
 		};
-		foreach (string item in list)
+		string[] tag = r.tag;
+		for (int i = 0; i < tag.Length; i++)
 		{
-			var (text, str, _) = CustomSourceContent.GetParams(item);
+			var (text, str, _) = CustomSourceContent.GetParams(tag[i]);
 			if (text == "addMap")
 			{
 				customZoneContent.parent = str.IsEmpty(r.parent.IsEmpty("ntyris"));
+				customZoneContent.autoSpawn = true;
 			}
 		}
 		return customZoneContent;
@@ -40,6 +37,10 @@ public class CustomZoneContent : CustomSourceContent
 
 	public override void OnGameLoad(GameIOContext context)
 	{
+		if (!autoSpawn || parent == null)
+		{
+			return;
+		}
 		Debug.Log($"#mod-content loading {this}");
 		if (EClass.game.spatials.Find(base.SourceId) != null)
 		{

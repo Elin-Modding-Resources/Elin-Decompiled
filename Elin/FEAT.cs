@@ -410,7 +410,7 @@ public class Feat : Element
 		}
 	}
 
-	public List<string> Apply(int a, ElementContainer owner, bool hint = false)
+	public virtual List<string> Apply(int a, ElementContainer owner, bool hint = false)
 	{
 		if (hint)
 		{

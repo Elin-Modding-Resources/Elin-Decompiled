@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -105,7 +106,16 @@ public class RecipeManager : EClass
 		list.Add(recipeSource);
 		dict[recipeSource.id] = recipeSource;
 		_ = row.components;
-		Recipe.Create(recipeSource).BuildIngredientList();
+		try
+		{
+			Recipe.Create(recipeSource).BuildIngredientList();
+		}
+		catch (Exception ex)
+		{
+			list.Remove(recipeSource);
+			dict.Remove(recipeSource.id);
+			Debug.LogWarning($"Failed to create recipe '{row.RecipeID}' '{type}{suffix}'\n{ex}");
+		}
 	}
 
 	public static RecipeSource Get(string id)

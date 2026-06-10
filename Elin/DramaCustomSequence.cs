@@ -181,7 +181,10 @@ public class DramaCustomSequence : EClass
 					}
 					if (c.trait.ShopType != 0)
 					{
-						Choice2(c.trait.TextNextRestock, "_buy").DisableSound();
+						if (!c.GetBool("disable_barter_choice"))
+						{
+							Choice2(c.trait.TextNextRestock, "_buy").DisableSound();
+						}
 						if (c.trait is TraitMerchantTravel && !c.IsPCFactionOrMinion)
 						{
 							Choice2("daRob", "_rob");
@@ -214,7 +217,7 @@ public class DramaCustomSequence : EClass
 				{
 					if (EClass.pc.HasElement(1232) || EClass.pc.HasElement(1291))
 					{
-						goto IL_094a;
+						goto IL_095c;
 					}
 					num2 = EClass.pc.HasCondition<StanceMama>();
 				}
@@ -224,23 +227,20 @@ public class DramaCustomSequence : EClass
 				}
 				if (num2)
 				{
-					goto IL_094a;
+					goto IL_095c;
 				}
-				goto IL_095b;
+				goto IL_096d;
 			}
 			if (c.isDrunk || c.HasElement(1275) || EClass.debug.enable)
 			{
 				Choice2(flag2 ? "daBird" : "daTail", "_tail");
 			}
 		}
-		goto IL_0d74;
-		IL_099a:
-		Choice2("daBaby", "_baby");
-		goto IL_09ab;
-		IL_094a:
+		goto IL_0d86;
+		IL_095c:
 		Choice2("daMama", "_mama");
-		goto IL_095b;
-		IL_09ab:
+		goto IL_096d;
+		IL_09bd:
 		if (c.trait.CanRevive)
 		{
 			Choice2("daRevive", "_revive").DisableSound();
@@ -309,8 +309,31 @@ public class DramaCustomSequence : EClass
 		{
 			Choice2("daBlessing", "_blessing");
 		}
-		goto IL_0d74;
-		IL_0d74:
+		goto IL_0d86;
+		IL_09ac:
+		Choice2("daBaby", "_baby");
+		goto IL_09bd;
+		IL_096d:
+		ConTransmuteHuman condition2 = c.GetCondition<ConTransmuteHuman>();
+		bool num3;
+		if (condition2 == null)
+		{
+			if (c.HasElement(1232))
+			{
+				goto IL_09ac;
+			}
+			num3 = c.HasElement(1291);
+		}
+		else
+		{
+			num3 = condition2.IsBaby;
+		}
+		if (num3)
+		{
+			goto IL_09ac;
+		}
+		goto IL_09bd;
+		IL_0d86:
 		if (c.IsHomeMember())
 		{
 			if (c.IsMaid)
@@ -1751,27 +1774,6 @@ public class DramaCustomSequence : EClass
 		End();
 		Step("_end");
 		End();
-		return;
-		IL_095b:
-		ConTransmuteHuman condition2 = c.GetCondition<ConTransmuteHuman>();
-		bool num3;
-		if (condition2 == null)
-		{
-			if (c.HasElement(1232))
-			{
-				goto IL_099a;
-			}
-			num3 = c.HasElement(1291);
-		}
-		else
-		{
-			num3 = condition2.IsBaby;
-		}
-		if (num3)
-		{
-			goto IL_099a;
-		}
-		goto IL_09ab;
 		void BackChill()
 		{
 			Method(RumorChill, null, StepDefault);

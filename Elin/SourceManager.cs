@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
@@ -166,12 +167,8 @@ public class SourceManager : EMono
 		keyItems.Init();
 		ACT.Init();
 		TimeTable.Init();
-		List<SourceElement.Row> listAttackElements = Element.ListAttackElements;
-		listAttackElements.Clear();
-		for (int j = 910; j < 927; j++)
-		{
-			listAttackElements.Add(EMono.sources.elements.map[j]);
-		}
+		Element.ListAttackElements.Clear();
+		Element.ListAttackElements.AddRange(EMono.sources.elements.rows.Where((SourceElement.Row r) => r.categorySub == "eleAttack"));
 		BaseModManager.PublishEvent("elin.source.imported");
 	}
 

@@ -1060,18 +1060,8 @@ public class ActEffect : EClass
 		switch (id)
 		{
 		case EffectId.Duplicate:
-		{
-			Point randomPoint = CC.pos.GetRandomPoint(2, requireLos: false, allowChara: false, allowBlocked: false, 200);
-			if (randomPoint == null || randomPoint.Equals(CC.pos) || !randomPoint.IsValid || !CC.CanDuplicate())
-			{
-				CC.Say("split_fail", CC);
-				return;
-			}
-			Chara t2 = CC.Duplicate();
-			EClass._zone.AddCard(t2, randomPoint);
-			CC.Say("split", CC);
+			CC.TryDuplicate();
 			break;
-		}
 		case EffectId.Escape:
 			if (CC.IsPCFaction || (EClass._zone.Boss == CC && EClass.rnd(30) != 0))
 			{
@@ -1718,8 +1708,8 @@ public class ActEffect : EClass
 		case EffectId.ThrowPotion:
 			if (!CC.pos.Equals(TC.pos))
 			{
-				Thing t3 = ThingGen.Create(new string[6] { "330", "331", "334", "335", "336", "1142" }.RandomItem());
-				ActThrow.Throw(CC, TC.pos, t3, ThrowMethod.Punish, 0.7f);
+				Thing t2 = ThingGen.Create(new string[6] { "330", "331", "334", "335", "336", "1142" }.RandomItem());
+				ActThrow.Throw(CC, TC.pos, t2, ThrowMethod.Punish, 0.7f);
 			}
 			break;
 		case EffectId.StripBlessing:
@@ -2954,8 +2944,8 @@ public class ActEffect : EClass
 		Msg.thirdPerson1.Set(EClass.pc);
 		string netMsg = GameLang.Parse("wish".langGame(), thirdPerson: true, name, s);
 		List<WishItem> list = new List<WishItem>();
-		int wishLv = 10 + power / 4;
-		int wishValue = 5000 + power * 50;
+		long wishLv = 10 + power / 4;
+		int wishValue = MathEx.ClampToInt(5000 + (long)power * 50L);
 		if (state >= BlessedState.Blessed)
 		{
 			wishLv = wishLv * 150 / 100;
@@ -3019,7 +3009,7 @@ public class ActEffect : EClass
 					{
 						CardBlueprint.SetRarity(Rarity.Legendary);
 					}
-					Thing thing = ThingGen.Create(r.id, -1, wishLv);
+					Thing thing = ThingGen.Create(r.id, -1, MathEx.ClampToInt(wishLv));
 					int num = 1;
 					int price = thing.GetPrice(CurrencyType.Money, sell: false, PriceType.Tourism);
 					bool flag2 = thing.trait is TraitDeed || thing.rarity >= Rarity.Artifact || thing.source._origin == "artifact_summon";

@@ -114,6 +114,14 @@ public class HotItemContext : HotItem
 				{
 					Util.ShowExplorer(CorePath.custom + "Portrait");
 				});
+				if (ModUtil.contextMenuProxies.Count > 0)
+				{
+					UIContextMenu parent2 = i.AddChild("mod");
+					foreach (ContextMenuProxy contextMenuProxy in ModUtil.contextMenuProxies)
+					{
+						PopulateMenu(parent2, contextMenuProxy);
+					}
+				}
 				i.AddSeparator();
 				i.AddButton("help", delegate
 				{
@@ -330,6 +338,21 @@ public class HotItemContext : HotItem
 				}
 				EClass.scene.camSupport.tiltShift.blurArea = 0.1f * b;
 			}, 0f, 150f, isInt: true, hideOther: false);
+		}
+		static void PopulateMenu(UIContextMenu parent, ContextMenuProxy proxy)
+		{
+			if (proxy.isMenu)
+			{
+				UIContextMenu parent3 = parent.AddChild(proxy.DisplayName);
+				{
+					foreach (ContextMenuProxy child in proxy.children)
+					{
+						PopulateMenu(parent3, child);
+					}
+					return;
+				}
+			}
+			parent.AddButton(proxy.DisplayName, proxy.onClick);
 		}
 		static void Toggle(ref bool flag)
 		{

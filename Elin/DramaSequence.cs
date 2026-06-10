@@ -56,9 +56,9 @@ public class DramaSequence : EClass
 
 	public DramaActor GetActor(string id)
 	{
-		if (actors.ContainsKey(id))
+		if (actors.TryGetValue(id, out var value))
 		{
-			return actors[id];
+			return value;
 		}
 		if (EClass.sources.persons.map.ContainsKey(id))
 		{
@@ -71,6 +71,18 @@ public class DramaSequence : EClass
 			{
 				return AddActor(id, new Person(chara));
 			}
+		}
+		if (EClass.sources.charas.map.TryGetValue(id, out var value2))
+		{
+			Person person = new Person(id)
+			{
+				name = value2.GetName()
+			};
+			if (Portrait.allIds.Contains(person.id))
+			{
+				person.idPortrait = "UN_" + id;
+			}
+			return AddActor(id, person);
 		}
 		if (actors.Count <= 0)
 		{
@@ -93,14 +105,14 @@ public class DramaSequence : EClass
 
 	public DramaActor AddActor(string id, Person person)
 	{
-		if (actors.ContainsKey(id))
+		if (actors.TryGetValue(id, out var value))
 		{
-			return actors[id];
+			return value;
 		}
-		DramaActor dramaActor = Util.Instantiate(manager.moldActor, manager.actorPos);
-		dramaActor.Init(this, id, person);
-		actors.Add(id, dramaActor);
-		return dramaActor;
+		value = Util.Instantiate(manager.moldActor, manager.actorPos);
+		value.Init(this, id, person);
+		actors.Add(id, value);
+		return value;
 	}
 
 	public void AddStep(string id)
@@ -213,7 +225,7 @@ public class DramaSequence : EClass
 				}
 				Play(text);
 			}
-			else if (currentEvent.Play())
+			else if (!currentEvent.CanPlay() || currentEvent.Play())
 			{
 				PlayNext();
 			}

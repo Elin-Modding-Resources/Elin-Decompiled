@@ -511,13 +511,15 @@ public class CoreConfig : EClass
 
 		public bool showTestOptions;
 
+		public string idMainWidgetTheme;
+
+		public string idSubWidgetTheme;
+
 		public bool syncMods;
 
 		public bool disableMods;
 
-		public string idMainWidgetTheme;
-
-		public string idSubWidgetTheme;
+		public bool exceptionPopup;
 	}
 
 	[Serializable]

@@ -12,6 +12,8 @@ public static class CMOD
 
 	public const string PriceCalcOverride = "price_calc_override";
 
+	public const string DisableBarterChoice = "disable_barter_choice";
+
 	public const string IsCustomContent = "custom_content";
 
 	public const string IsCustomCwlContent = "cwl_tags_applied";

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
@@ -54,6 +55,9 @@ public class DramaManager : EMono
 
 	public float creditSpeed;
 
+	[NonSerialized]
+	public string path;
+
 	private string lastIF;
 
 	private string lastIF2;
@@ -74,17 +78,25 @@ public class DramaManager : EMono
 
 	private string textReplace;
 
-	public static Dictionary<string, ExcelData> dictCache = new Dictionary<string, ExcelData>();
+	public static Dictionary<string, ExcelData> dictCache = new Dictionary<string, ExcelData>(PathComparer.Default);
 
 	public bool keepAmbientBGM => !bgmChanged;
+
+	public EScriptSubmission Scripting => EScriptSubmission.Create(setup.book);
 
 	public DramaActor tgActor => sequence.GetActor("tg");
 
 	private void Update()
 	{
-		if (sequence != null)
+		try
 		{
-			sequence.OnUpdate();
+			sequence?.OnUpdate();
+		}
+		catch (Exception ex)
+		{
+			layer.Close();
+			ModUtil.LogModError("error during drama play\n" + ex.GetType().Name + ": " + ex.Message, new FileInfo(path));
+			Debug.LogException(ex);
 		}
 	}
 
@@ -125,7 +137,7 @@ public class DramaManager : EMono
 			sequence.AddActor("tg", tg);
 		}
 		sequence.AddActor("pc", new Person(EMono.pc));
-		string text = PackageIterator.GetFiles("Dialog/Drama/" + setup.book + ".xlsx").LastOrDefault()?.FullName ?? (CorePath.DramaData + setup.book + ".xlsx");
+		string text = PackageIterator.GetFiles("Dialog/Drama/" + setup.book + ".xlsx").LastOrDefault()?.FullName;
 		ExcelData excelData = dictCache.TryGetValue(text);
 		if (excelData != null && excelData.IsModified())
 		{
@@ -136,37 +148,77 @@ public class DramaManager : EMono
 			excelData = new ExcelData();
 		}
 		excelData.maxEmptyRows = 10;
-		excelData.path = text;
+		path = (excelData.path = text ?? (CorePath.DramaData + setup.book + ".xlsx"));
 		List<Dictionary<string, string>> list = excelData.BuildList(setup.sheet);
-		if (!Lang.isBuiltin && dictLocalize.Count == 0)
+		dictCache[excelData.path] = excelData;
+		string key = text ?? (CorePath.DramaDataLocal + setup.book + ".xlsx");
+		if (!File.Exists(key))
 		{
-			foreach (Dictionary<string, string> item in new ExcelData
+			key = excelData.path;
+		}
+		ExcelData excelData2 = dictCache.TryGetValue(key);
+		if (excelData2 != excelData)
+		{
+			if (excelData2 != null && excelData2.IsModified())
 			{
-				maxEmptyRows = 10,
-				path = (PackageIterator.GetFiles("Dialog/Drama/" + setup.book + ".xlsx").LastOrDefault()?.FullName ?? (CorePath.DramaDataLocal + setup.book + ".xlsx"))
-			}.BuildList(setup.sheet))
+				excelData2 = null;
+			}
+			if (excelData2 == null)
 			{
-				string text2 = item["id"];
-				if (!text2.IsEmpty())
+				excelData2 = new ExcelData();
+			}
+			excelData2.maxEmptyRows = 10;
+			excelData2.path = key;
+			dictCache[excelData2.path] = excelData2;
+		}
+		dictLocalize.Clear();
+		string[] array = new string[3]
+		{
+			"text_" + Lang.langCode,
+			"text",
+			"text_EN"
+		};
+		foreach (Dictionary<string, string> item in excelData2.BuildList(setup.sheet))
+		{
+			string text2 = item["id"];
+			if (text2.IsEmpty())
+			{
+				continue;
+			}
+			string value = null;
+			string[] array2 = array;
+			foreach (string key2 in array2)
+			{
+				if (item.TryGetValue(key2, out value) && !value.IsEmpty())
 				{
-					string text3 = item.TryGetValue("text_" + Lang.langCode) ?? item["text"];
-					if (!dictLocalize.TryAdd(text2, text3))
-					{
-						string text4 = dictLocalize[text2];
-						dictLocalize[text2] = ("[DUPLICATE ID '" + text2 + "']\n").TagColor(Color.red) + text4;
-						Debug.LogError("#drama duplicate id '" + text2 + "' at " + text + "\n" + text4 + " -> " + text3);
-					}
+					break;
 				}
 			}
+			if (value == null)
+			{
+				value = "[ID '" + text2 + "'] <empty text>";
+			}
+			if (!dictLocalize.TryAdd(text2, value))
+			{
+				string text3 = dictLocalize[text2];
+				dictLocalize[text2] = ("[DUPLICATE ID '" + text2 + "']\n").TagColor(Color.red) + text3;
+				Debug.LogWarning("#drama duplicate id '" + text2 + "' at " + path + "\n" + text3 + " -> " + value);
+			}
 		}
-		dictCache[text] = excelData;
 		idDefault = setup.step;
 		lastTalk = null;
 		enableTone = (customEventsAdded = (idDefaultPassed = false));
 		countLine = 0;
-		for (int i = 0; i < list.Count; i++)
+		for (int j = 0; j < list.Count; j++)
 		{
-			ParseLine(list[i]);
+			try
+			{
+				ParseLine(list[j]);
+			}
+			catch (Exception exception)
+			{
+				Debug.LogException(exception);
+			}
 			countLine++;
 		}
 		AddCustomEvents();
@@ -212,9 +264,7 @@ public class DramaManager : EMono
 
 	public void ParseLine(Dictionary<string, string> item)
 	{
-		string[] array = (item.ContainsKey("action") ? item["action"].Split('/') : null);
-		string action = ((array != null) ? array[0] : null);
-		string text2 = (item.ContainsKey("step") ? item["step"] : null);
+		string text2 = item.TryGetValue("step");
 		if (text2 == "//")
 		{
 			return;
@@ -223,46 +273,34 @@ public class DramaManager : EMono
 		{
 			idDefaultPassed = true;
 		}
-		string actor = (item.ContainsKey("actor") ? item["actor"] : "#1");
-		string[] p = (item.ContainsKey("param") ? item["param"].Split(',') : new string[0]);
+		string[] array = item.TryGetValue("action")?.Split('/');
+		string action = array.TryGet(0, returnNull: true);
+		string actor = item.GetValueOrDefault("actor", "#1");
+		string[] p = item.TryGetValue("param")?.Split(',') ?? Array.Empty<string>();
 		string p2 = ((p.Length != 0) ? p[0] : "");
 		string p3 = ((p.Length > 1) ? p[1] : "");
 		string p4 = ((p.Length > 2) ? p[2] : "");
 		float.TryParse(p2, out var p0f);
 		float.TryParse(p3, out var result);
-		bool flag = !item["text_JP"].IsEmpty();
-		item.TryGetValue("text_JP");
-		string text = null;
-		if (flag)
+		string text = item.TryGetValue("text_JP");
+		bool flag = !text.IsEmpty();
+		string id = item["id"];
+		if (!id.IsEmpty())
 		{
-			if (!Lang.isBuiltin)
-			{
-				string key = item["id"];
-				if (dictLocalize.ContainsKey(key))
-				{
-					text = dictLocalize[key];
-				}
-				else
-				{
-					text = item.TryGetValue("text_EN");
-				}
-			}
-			else
-			{
-				text = item["text_" + Lang.langCode];
-			}
+			text = dictLocalize.TryGetValue(id);
+			flag = !text.IsEmpty();
 		}
 		if (flag && text.StartsWith("$") && tg != null && tg.hasChara)
 		{
 			string text3 = text.Split(' ')[0];
-			text = text.Replace(text3, tg.chara.GetTalkText(text3.Remove(0, 1)));
+			text = text.Replace(text3, tg.chara.GetTalkText(text3[1..]));
 		}
-		string jump = (item.ContainsKey("jump") ? item["jump"] : null);
-		string text4 = (item.ContainsKey("if") ? item["if"] : null);
-		string iF = (item.ContainsKey("if2") ? item["if2"] : null);
-		string cHECK = (item.ContainsKey("check") ? item["check"] : null);
+		string jump = item.TryGetValue("jump");
+		string text4 = item.TryGetValue("if");
+		string iF = item.TryGetValue("if2");
+		string cHECK = item.TryGetValue("check");
 		bool flag2 = false;
-		if (text2 != null && !sequence.steps.ContainsKey(text2) && action != "choice" && action != "cancel")
+		if (!text2.IsEmpty() && !sequence.steps.ContainsKey(text2) && action != "choice" && action != "cancel")
 		{
 			sequence.steps.Add(text2, sequence.events.Count);
 		}
@@ -280,8 +318,8 @@ public class DramaManager : EMono
 		{
 			if (action == "reload")
 			{
-				string id = "flag" + countLine;
-				sequence.AddStep(id);
+				string id2 = "flag" + countLine;
+				sequence.AddStep(id2);
 			}
 			return;
 		}
@@ -367,10 +405,7 @@ public class DramaManager : EMono
 			}
 			break;
 		case "choice":
-			if (!CheckIF(text4) || !CheckIF(iF))
-			{
-				break;
-			}
+		{
 			if (array.Length > 1)
 			{
 				switch (array[1])
@@ -410,8 +445,16 @@ public class DramaManager : EMono
 				}
 			}
 			flag2 = true;
-			lastTalk.AddChoice(new DramaChoice(text, jump, p2, cHECK, text4));
+			DramaChoice dramaChoice = new DramaChoice(text, jump, p2, cHECK, text4);
+			lastTalk.AddChoice(dramaChoice);
+			var (invoke, invokeP) = CustomDramaExpansion.BuildInvokeExpression(item.TryGetValue("param"));
+			if (invoke.Method != null)
+			{
+				dramaChoice.idAction = "";
+				dramaChoice.SetCondition(() => invoke.SafeInvoke(this, item, invokeP));
+			}
 			break;
+		}
 		case "addTempActor":
 		{
 			Person person = new Person(actor);
@@ -477,7 +520,7 @@ public class DramaManager : EMono
 				else
 				{
 					imageBG.enabled = true;
-					imageBG.sprite = Resources.Load<Sprite>("Media/Graphics/Image/Drama/" + p2);
+					imageBG.sprite = Resources.Load<Sprite>("Media/Graphics/Image/Drama/" + p2) ?? ModUtil.LoadSprite(p2);
 				}
 			});
 			break;
@@ -497,7 +540,7 @@ public class DramaManager : EMono
 				else
 				{
 					dialog.imageBgAdv.enabled = true;
-					dialog.imageBgAdv.sprite = Resources.Load<Sprite>("Media/Graphics/Image/Drama/" + p2);
+					dialog.imageBgAdv.sprite = Resources.Load<Sprite>("Media/Graphics/Image/Drama/" + p2) ?? ModUtil.LoadSprite(p2);
 				}
 			});
 			break;
@@ -1033,15 +1076,7 @@ public class DramaManager : EMono
 			});
 			break;
 		default:
-		{
-			EVENT.ElinDramaParseActionEventArgs elinDramaParseActionEventArgs = new EVENT.ElinDramaParseActionEventArgs
-			{
-				dm = this,
-				line = item
-			};
-			elinDramaParseActionEventArgs.SetData(action);
-			BaseModManager.PublishEvent("elin.drama.parse_action", elinDramaParseActionEventArgs);
-			if (elinDramaParseActionEventArgs.IsUsed)
+			if (CustomDramaExpansion.ParseAction(action, this, item))
 			{
 				return;
 			}
@@ -1056,6 +1091,21 @@ public class DramaManager : EMono
 					text = textReplace;
 					textReplace = null;
 				}
+				if (text.StartsWith("#eval"))
+				{
+					string script = text[5..].Trim();
+					if (!EScript.IsScriptingAvailable)
+					{
+						return ("[ID '" + id + "'] <scripting is disabled>").TagColor(Color.red);
+					}
+					Func<EDramaScriptState, object> func = Scripting.Compile<EDramaScriptState>(script);
+					EDramaScriptState arg = new EDramaScriptState
+					{
+						dm = this,
+						line = item
+					};
+					text = func(arg).TryToString("[ID '" + id + "'] <scripting returns no text>");
+				}
 				if (tg != null && (actor == "tg" || actor.IsEmpty()))
 				{
 					text = (enableTone ? tg.ApplyTone(text) : text);
@@ -1064,7 +1114,6 @@ public class DramaManager : EMono
 			})) as DramaEventTalk;
 			lastTalk.center = p2 == "center";
 			break;
-		}
 		case "new":
 		case "saveBGM":
 		case "checkAffinity":
@@ -1074,6 +1123,16 @@ public class DramaManager : EMono
 		{
 			AddEvent(new DramaEventGoto(jump));
 		}
+	}
+
+	public Chara GetChara(string id)
+	{
+		return GetPerson(id)?.chara;
+	}
+
+	public Person GetPerson(string id)
+	{
+		return GetActor(id)?.owner;
 	}
 
 	public DramaActor GetActor(string id)

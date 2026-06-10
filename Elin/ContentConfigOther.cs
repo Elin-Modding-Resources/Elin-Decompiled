@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class ContentConfigOther : ContentConfig
 {
-	public UIButton toggleSyncMod;
-
 	public UIButton toggleNoCensor;
 
 	public UIButton toggleRunBackground;
@@ -22,9 +20,13 @@ public class ContentConfigOther : ContentConfig
 
 	public UIButton buttonBackerCode;
 
+	public UIButton buttonWallPaper;
+
+	public UIButton toggleSyncMod;
+
 	public UIButton toggleDisableMods;
 
-	public UIButton buttonWallPaper;
+	public UIButton toggleExceptionPopup;
 
 	public UIDropdown ddSnap;
 
@@ -66,6 +68,10 @@ public class ContentConfigOther : ContentConfig
 		toggleDisableMods.SetToggle(base.config.other.disableMods, delegate(bool on)
 		{
 			base.config.other.disableMods = on;
+		});
+		toggleExceptionPopup.SetToggle(base.config.other.exceptionPopup, delegate(bool on)
+		{
+			base.config.other.exceptionPopup = on;
 		});
 		toggleNoCensor.SetToggle(base.config.other.noCensor, delegate(bool on)
 		{

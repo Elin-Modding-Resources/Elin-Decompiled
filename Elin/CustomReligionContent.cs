@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ public class CustomReligionContent : CustomSourceContent
 
 	public List<string> artifacts = new List<string>();
 
-	[JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+	[DefaultValue(true)]
 	public bool canJoin = true;
 
 	public bool isMinorGod;
@@ -95,7 +96,7 @@ public class CustomReligionContent : CustomSourceContent
 			catch (Exception ex)
 			{
 				ModUtil.LogModError("exception while loading religion data '" + fileInfo.ShortPath() + "'\n" + ex.Message, package);
-				Debug.LogError(ex);
+				Debug.LogException(ex);
 			}
 		}
 		LoadDeprecatedCwlSpec();
@@ -136,7 +137,7 @@ public class CustomReligionContent : CustomSourceContent
 				catch (Exception ex2)
 				{
 					ModUtil.LogModError("exception while loading '" + fileInfo2.ShortPath() + "'\n" + ex2.Message, package2);
-					Debug.LogError(ex2);
+					Debug.LogException(ex2);
 				}
 			}
 			filesEx2 = PackageIterator.GetFilesEx("Data/religion_offerings.json");
@@ -159,7 +160,7 @@ public class CustomReligionContent : CustomSourceContent
 				catch (Exception ex3)
 				{
 					ModUtil.LogModError("exception while loading '" + fileInfo3.ShortPath() + "'\n" + ex3.Message, package3);
-					Debug.LogError(ex3);
+					Debug.LogException(ex3);
 				}
 			}
 		}
@@ -190,7 +191,7 @@ public class CustomReligionContent : CustomSourceContent
 		{
 			if (EClass.game.religions.dictAll.TryGetValue(key, out var value))
 			{
-				Debug.Log($"#mod-content loading {religionCustom2.content}");
+				Debug.Log("#mod-content loading Religion/" + value.id);
 				value.mood = religionCustom2.mood;
 				value.relation = religionCustom2.relation;
 				value.giftRank = religionCustom2.giftRank;

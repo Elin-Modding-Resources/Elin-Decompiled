@@ -289,13 +289,23 @@ public class Religion : EClass
 	public virtual void OnReforge(Thing t)
 	{
 		t.c_idDeity = id;
+		if (IsIgnoreReforge(t))
+		{
+			return;
+		}
 		foreach (Element value in t.elements.dict.Values)
 		{
-			if (IsFaithElement(value))
+			int num = value.id;
+			if ((uint)(num - 64) > 3u && IsFaithElement(value))
 			{
 				value.vExp = -1;
 			}
 		}
+	}
+
+	public virtual bool IsIgnoreReforge(Thing t)
+	{
+		return false;
 	}
 
 	public virtual bool IsValidArtifact(string id)

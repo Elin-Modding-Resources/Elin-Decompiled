@@ -144,12 +144,11 @@ public class Dice
 
 	public static Dice Create(string id, int power, Card c = null, Act act = null)
 	{
-		if (!EClass.sources.calc.map.ContainsKey(id))
+		if (!EClass.sources.calc.map.TryGetValue(id, out var value) && (string.IsNullOrEmpty(act?.ID) || !EClass.sources.calc.map.TryGetValue(act.ID, out value)))
 		{
 			Debug.Log(id);
 			return null;
 		}
-		SourceCalc.Row row = EClass.sources.calc.map[id];
 		int power2 = power;
 		int ele = power / 10;
 		if (act != null)
@@ -160,7 +159,7 @@ public class Dice
 		}
 		try
 		{
-			return new Dice(Mathf.Max(1, row.num.Calc(power2, ele)), Mathf.Max(1, row.sides.Calc(power2, ele)), row.bonus.Calc(power2, ele), c);
+			return new Dice(Mathf.Max(1, value.num.Calc(power2, ele)), Mathf.Max(1, value.sides.Calc(power2, ele)), value.bonus.Calc(power2, ele), c);
 		}
 		catch
 		{

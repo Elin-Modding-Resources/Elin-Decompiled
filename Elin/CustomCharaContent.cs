@@ -174,7 +174,7 @@ public class CustomCharaContent : CustomSourceContent
 
 	public void OnCharaCreated(Chara chara)
 	{
-		if (chara.GetBool("custom_content") || chara.GetBool("cwl_tags_applied") || chara.id != base.SourceId)
+		if (chara.GetBool("custom_content") || chara.id != base.SourceId)
 		{
 			return;
 		}
@@ -195,6 +195,10 @@ public class CustomCharaContent : CustomSourceContent
 			string id3 = key2;
 			int value3 = value2;
 			chara.SetInt(id3, value3);
+		}
+		if (chara.GetBool("cwl_tags_applied"))
+		{
+			return;
 		}
 		if (things.Count > 0 || equipments.Count > 0)
 		{
@@ -265,27 +269,27 @@ public class CustomCharaContent : CustomSourceContent
 		{
 			if (num2 != 1)
 			{
-				goto IL_01d5;
+				goto IL_01cf;
 			}
 			if (IsAdventurer)
 			{
-				goto IL_017e;
+				goto IL_0178;
 			}
 		}
 		else if (IsAdventurer)
 		{
-			ModUtil.LogModError("adventurer '" + base.SourceId + "' has spawned more than once", base.Owner);
+			Debug.LogWarning("#mod-content adventurer '" + base.SourceId + "' has spawned more than once");
 			return;
 		}
 		if (num == 0)
 		{
-			goto IL_017e;
+			goto IL_0178;
 		}
-		goto IL_01d5;
-		IL_017e:
-		Debug.Log("#mod-content skipping existing character '" + base.SourceId + "', " + $"{count} at {string.Join('/', list2.Select((Chara c) => c.currentZone.ZoneFullName))}");
+		goto IL_01cf;
+		IL_0178:
+		Debug.Log("#mod-content skipping existing character '" + base.SourceId + "', " + $"{count} at {string.Join(',', list2.Select((Chara c) => c.currentZone?.ZoneFullName))}");
 		return;
-		IL_01d5:
+		IL_01cf:
 		for (int i = 0; i < num; i++)
 		{
 			Zone z2 = list[i];

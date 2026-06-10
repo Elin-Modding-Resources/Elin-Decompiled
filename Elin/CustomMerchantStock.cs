@@ -24,13 +24,13 @@ public class CustomMerchantStock : CustomFileContent
 			catch (Exception ex)
 			{
 				ModUtil.LogModError("can't create stock item '" + item2.ContentId + "'\n" + ex.Message, base.Owner);
-				Debug.LogError(ex);
+				Debug.LogException(ex);
 			}
 		}
 		return list;
 	}
 
-	public static CustomMerchantStock CreateFromId(string stockId, ModPackage owner)
+	public static CustomMerchantStock CreateFromId(string stockId, ModPackage owner = null)
 	{
 		var (fileInfo, eMod) = PackageIterator.GetFilesEx("Data/stock_" + stockId + ".json").LastOrDefault();
 		if (fileInfo == null)

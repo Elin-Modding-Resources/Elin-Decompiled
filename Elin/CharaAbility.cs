@@ -92,7 +92,7 @@ public class CharaAbility : EClass
 			}
 			else if (!EClass.sources.elements.alias.ContainsKey(text2) || !ACT.dict.ContainsKey(text2))
 			{
-				if (EClass.sources.elements.fuzzyAlias.TryGetValue(text2, out var value) && ACT.dict.ContainsKey(value))
+				if (EClass.sources.elements.fuzzyAlias.TryGetValue(text2.Trim(), out var value) && ACT.dict.ContainsKey(value))
 				{
 					list[num] = text.Replace(text2, value);
 				}

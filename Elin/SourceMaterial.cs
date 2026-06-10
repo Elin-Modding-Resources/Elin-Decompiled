@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
@@ -113,13 +114,13 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 		public void Init()
 		{
 			MatColors matColors = Core.Instance.Colors.matColors.TryGetValue(alias);
+			HashSet<string> hashSet = new HashSet<string>(tag) { alias };
 			if (matColors == null)
 			{
 				matColors = new MatColors();
-				string[] array = tag;
-				for (int i = 0; i < array.Length; i++)
+				foreach (string item in hashSet)
 				{
-					var (text, s, _) = CustomSourceContent.GetParams(array[i]);
+					var (text, s, _) = CustomSourceContent.GetParams(item);
 					switch (text)
 					{
 					case "addCol_Main":
@@ -136,6 +137,7 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 			}
 			matColor = matColors.main;
 			altColor = matColors.alt;
+			tag = hashSet.ToArray();
 			SetTiles();
 		}
 

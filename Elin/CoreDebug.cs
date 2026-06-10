@@ -1876,6 +1876,21 @@ public class CoreDebug : EScriptable
 	}
 
 	[ConsoleCommand("")]
+	public static string Fix_Awning()
+	{
+		foreach (Thing thing in EClass._map.things)
+		{
+			if (thing.id == "ash3")
+			{
+				thing.id = "awning ";
+				thing.source = EClass.sources.things.map[thing.id];
+				thing._CreateRenderer();
+			}
+		}
+		return "Fixed!";
+	}
+
+	[ConsoleCommand("")]
 	public static string Fix_RemoveDuplicateUnique()
 	{
 		if (EClass.Branch == null)

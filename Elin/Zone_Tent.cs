@@ -12,6 +12,8 @@ public class Zone_Tent : Zone
 
 	public override bool IsUnderwater => elements.Has(3606);
 
+	public override int DangerLv => 1;
+
 	public override ZoneTransition.EnterState RegionEnterState => ZoneTransition.EnterState.Bottom;
 
 	public override void OnBeforeDeactivate()
