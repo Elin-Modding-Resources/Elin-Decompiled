@@ -19,6 +19,7 @@ var classContentConfigOther =
     [ "toggleAltAbility", "classContentConfigOther.html#a20fda8388f5713a23218f81cf80bc2ac", null ],
     [ "toggleAltInv", "classContentConfigOther.html#a86cd80485202be55c74b39eb11b442ee", null ],
     [ "toggleDisableMods", "classContentConfigOther.html#ad67202a1ca2cd5f003acd025a4ea3337", null ],
+    [ "toggleExceptionPopup", "classContentConfigOther.html#a1827ea632f4ee416de35f58fa7e6c16b", null ],
     [ "toggleMuteBackground", "classContentConfigOther.html#a0aecd7a8448d7b8b8b3b28e363e2d8d3", null ],
     [ "toggleNoCensor", "classContentConfigOther.html#a35d84ba633774fad8c99eda951240d2c", null ],
     [ "toggleRunBackground", "classContentConfigOther.html#a8116a0a42e1c339508a579ce8f84dbab", null ],

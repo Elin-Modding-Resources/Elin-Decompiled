@@ -29,7 +29,24 @@ var hierarchy =
     [ "GameSetting.RenderSetting.AnimeSetting", "classGameSetting_1_1RenderSetting_1_1AnimeSetting.html", null ],
     [ "SkinRootStatic.Assets", "classSkinRootStatic_1_1Assets.html", null ],
     [ "Attribute", null, [
-      [ "Algorithms.AuthorAttribute", "classAlgorithms_1_1AuthorAttribute.html", null ]
+      [ "Algorithms.AuthorAttribute", "classAlgorithms_1_1AuthorAttribute.html", null ],
+      [ "ElinEventBaseAttribute", "classElinEventBaseAttribute.html", [
+        [ "ElinActPerformAttribute", "classElinActPerformAttribute.html", null ],
+        [ "ElinCharaOnCreateAttribute", "classElinCharaOnCreateAttribute.html", null ],
+        [ "ElinContextMenuEntryAttribute", "classElinContextMenuEntryAttribute.html", null ],
+        [ "ElinDramaActionInvokeAttribute", "classElinDramaActionInvokeAttribute.html", null ],
+        [ "ElinDramaActionParserAttribute", "classElinDramaActionParserAttribute.html", null ],
+        [ "ElinGameIOEventAttribute", "classElinGameIOEventAttribute.html", [
+          [ "ElinGameIOPropertyAttribute", "classElinGameIOPropertyAttribute.html", null ],
+          [ "ElinPostLoadAttribute", "classElinPostLoadAttribute.html", null ],
+          [ "ElinPostSaveAttribute", "classElinPostSaveAttribute.html", null ],
+          [ "ElinPreLoadAttribute", "classElinPreLoadAttribute.html", null ],
+          [ "ElinPreSaveAttribute", "classElinPreSaveAttribute.html", null ]
+        ] ],
+        [ "ElinPostSceneInitAttribute", "classElinPostSceneInitAttribute.html", null ],
+        [ "ElinPreSceneInitAttribute", "classElinPreSceneInitAttribute.html", null ],
+        [ "ElinThingOnCreateAttribute", "classElinThingOnCreateAttribute.html", null ]
+      ] ]
     ] ],
     [ "GameSetting.AudioSetting", "classGameSetting_1_1AudioSetting.html", null ],
     [ "CoreConfig.BackerContentConfig", "classCoreConfig_1_1BackerContentConfig.html", null ],
@@ -188,6 +205,7 @@ var hierarchy =
       [ "BackerContentInspector.ContentCard", "classBackerContentInspector_1_1ContentCard.html", null ],
       [ "BackerContentInspector.ContentObj", "classBackerContentInspector_1_1ContentObj.html", null ]
     ] ],
+    [ "ContextMenuProxy", "classContextMenuProxy.html", null ],
     [ "CoreExtension", "classCoreExtension.html", null ],
     [ "CorePath.CorePackage", "classCorePath_1_1CorePackage.html", null ],
     [ "CorePath", "classCorePath.html", null ],
@@ -197,6 +215,7 @@ var hierarchy =
     [ "CSTR", "classCSTR.html", null ],
     [ "Currency", "classCurrency.html", null ],
     [ "CursorInfo", "classCursorInfo.html", null ],
+    [ "CustomDramaExpansionHelper", "classCustomDramaExpansionHelper.html", null ],
     [ "CoreConfig.CustomFont", "classCoreConfig_1_1CustomFont.html", null ],
     [ "LayerList.CustomItem", "classLayerList_1_1CustomItem.html", null ],
     [ "B83.Win32.CWPSTRUCT", "structB83_1_1Win32_1_1CWPSTRUCT.html", null ],
@@ -233,7 +252,9 @@ var hierarchy =
     [ "Net.DownloadMeta", "classNet_1_1DownloadMeta.html", null ],
     [ "DragItemCard.DragInfo", "classDragItemCard_1_1DragInfo.html", null ],
     [ "DramaChoice", "classDramaChoice.html", null ],
+    [ "DramaInvokeDetail", "classDramaInvokeDetail.html", null ],
     [ "DramaSetup", "classDramaSetup.html", null ],
+    [ "DramaValueExpression", "classDramaValueExpression.html", null ],
     [ "Dropdown", null, [
       [ "UIDropdown", "classUIDropdown.html", [
         [ "DropdownRecipe", "classDropdownRecipe.html", null ]
@@ -584,6 +605,7 @@ var hierarchy =
       [ "CustomContent", "classCustomContent.html", [
         [ "CustomFileContent", "classCustomFileContent.html", [
           [ "CustomBiographyContent", "classCustomBiographyContent.html", null ],
+          [ "CustomGunEffectSetting", "classCustomGunEffectSetting.html", null ],
           [ "CustomMerchantStock", "classCustomMerchantStock.html", null ]
         ] ],
         [ "CustomSourceContent", "classCustomSourceContent.html", [
@@ -596,6 +618,7 @@ var hierarchy =
         ] ]
       ] ],
       [ "CustomData", "classCustomData.html", null ],
+      [ "CustomDramaExpansion", "classCustomDramaExpansion.html", null ],
       [ "DNA", "classDNA.html", null ],
       [ "DamageTextRenderer", "classDamageTextRenderer.html", null ],
       [ "Date", "classDate.html", [
@@ -2187,7 +2210,9 @@ var hierarchy =
       ] ],
       [ "ZoneTransition", "classZoneTransition.html", null ]
     ] ],
-    [ "GameSetting.EffectData", "classGameSetting_1_1EffectData.html", null ],
+    [ "GameSetting.EffectData", "classGameSetting_1_1EffectData.html", [
+      [ "CustomGunEffectData", "classCustomGunEffectData.html", null ]
+    ] ],
     [ "GameSetting.EffectSetting", "classGameSetting_1_1EffectSetting.html", null ],
     [ "ELEMENT", "classELEMENT.html", null ],
     [ "ElementOrigin", "classElementOrigin.html", null ],
@@ -2207,6 +2232,9 @@ var hierarchy =
     [ "ENC", "classENC.html", null ],
     [ "ERROR", "classERROR.html", null ],
     [ "InvOwner.ErrorMessage", "classInvOwner_1_1ErrorMessage.html", null ],
+    [ "EScriptState", null, [
+      [ "EDramaScriptState", "classEDramaScriptState.html", null ]
+    ] ],
     [ "EVENT", "classEVENT.html", null ],
     [ "ExcelBookImportSetting", "classExcelBookImportSetting.html", null ],
     [ "ExcelData", "classExcelData.html", [

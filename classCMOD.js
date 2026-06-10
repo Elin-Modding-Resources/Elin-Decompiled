@@ -3,6 +3,7 @@ var classCMOD =
     [ "BiographyOverride", "classCMOD.html#a8d1f43aea5be64d6957ec1d3854ddf8c", null ],
     [ "CustomContentId", "classCMOD.html#aa28d7617a7f73058feadacb86025be9e", null ],
     [ "CustomContentPackage", "classCMOD.html#a94712768c08c97708348d34f5d6ab693", null ],
+    [ "DisableBarterChoice", "classCMOD.html#ac9a32f1b68e7225a82d4e701462478c9", null ],
     [ "DramaOverride", "classCMOD.html#ad08249cfee2f7f547251313b8159f1ff", null ],
     [ "IsCustomContent", "classCMOD.html#a94c349c28c85e820d1da54964bb2ed42", null ],
     [ "IsCustomCwlContent", "classCMOD.html#a9d4ba11e964d2d4d49b7f3e89a20591c", null ],

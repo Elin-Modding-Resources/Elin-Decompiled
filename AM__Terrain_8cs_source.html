@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.315 Nightly</span>
    </div>
   </td>
  </tr>
@@ -154,12 +154,12 @@ $(document).ready(function(){initNavTree('AM__Terrain_8cs_source.html',''); init
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    return;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordtype">int</span> num2 = p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> - cell.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                if (!<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a87252937274776e86b7a8ea4ea21dded">isShiftDown</a>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (!<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a87252937274776e86b7a8ea4ea21dded">isShiftDown</a>)</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    num2 = ((num2 &gt;= 0) ? Mathf.Clamp(brushRadius - num, 1, num2) : Mathf.Clamp((brushRadius - num) * -1, num2, -1));</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a835540b2640271ddf7ca5b7cd12466c1">height</a> -= (<span class="keywordtype">byte</span>)num2;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                if (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_variable" href="classCell.html#a23a20aed3b871d236514d5e80ce425ab">_bridge</a> != 0)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    if (p.cell.bridgeHeight - num2 &lt; 0)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    {</div>
@@ -178,20 +178,20 @@ $(document).ready(function(){initNavTree('AM__Terrain_8cs_source.html',''); init
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    num3 = 1;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                if (<a class="code hl_variable" href="classAM__Terrain.html#aa428ca09f7dc9510ba97b5fee7875b49">mode</a> == <a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>.Down)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (<a class="code hl_variable" href="classAM__Terrain.html#aa428ca09f7dc9510ba97b5fee7875b49">mode</a> == <a class="code hl_enumeration" href="classAM__Terrain.html#afe47c4bf51cba44aa9822cb8c4b31289">Mode</a>.Down)</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    num3 *= -1;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                if (p.cell.height + num3 &lt; 0)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (p.cell.height + num3 &lt; 0)</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    num3 = -p.cell.height;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">else</span> if (p.cell.height + num3 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67">maxGenHeight</a>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">else</span> <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (p.cell.height + num3 &gt; <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#afef49687145e5bf7994b77ba86d1ff11">setting</a>.<a class="code hl_variable" href="classGameSetting.html#a203d5edf6c4908c33d21eea1a4d90d67">maxGenHeight</a>)</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    num3 = EClass.setting.maxGenHeight - p.cell.height;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                }</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                p.cell.height += (<span class="keywordtype">byte</span>)num3;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                if (p.cell._bridge != 0)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (p.cell._bridge != 0)</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    if (p.cell.bridgeHeight + num3 &lt; 0)</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    {</div>
@@ -211,6 +211,7 @@ $(document).ready(function(){initNavTree('AM__Terrain_8cs_source.html',''); init
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        });</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+<div class="ttc" id="aCustomDramaExpansion_8cs_html_a6c81777e5c27748217b5f383b27c394f"><div class="ttname"><a href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a></div><div class="ttdeci">if(!match.Success)</div><div class="ttdef"><b>Definition:</b> <a href="CustomDramaExpansion_8cs_source.html#l00449">CustomDramaExpansion.cs:449</a></div></div>
 <div class="ttc" id="aclassAM__BaseTerrain_html"><div class="ttname"><a href="classAM__BaseTerrain.html">AM_BaseTerrain</a></div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00003">AM_BaseTerrain.cs:4</a></div></div>
 <div class="ttc" id="aclassAM__BaseTerrain_html_a053aac41776b71fd9fe24a48f041b061"><div class="ttname"><a href="classAM__BaseTerrain.html#a053aac41776b71fd9fe24a48f041b061">AM_BaseTerrain.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00007">AM_BaseTerrain.cs:7</a></div></div>
 <div class="ttc" id="aclassAM__BaseTerrain_html_ad34525c196161376cf58244b901102dd"><div class="ttname"><a href="classAM__BaseTerrain.html#ad34525c196161376cf58244b901102dd">AM_BaseTerrain.lastPoint</a></div><div class="ttdeci">Point lastPoint</div><div class="ttdef"><b>Definition:</b> <a href="AM__BaseTerrain_8cs_source.html#l00011">AM_BaseTerrain.cs:11</a></div></div>
@@ -240,7 +241,7 @@ $(document).ready(function(){initNavTree('AM__Terrain_8cs_source.html',''); init
 <div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
 <div class="ttc" id="aclassPoint_html_a697e31738608d7bd7ca19e615a8d38e3"><div class="ttname"><a href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">Point.x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00036">Point.cs:36</a></div></div>
 <div class="ttc" id="aclassPoint_html_a752d212440ad1555a43cdbbd283f28a7"><div class="ttname"><a href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">Point.z</a></div><div class="ttdeci">int z</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00039">Point.cs:39</a></div></div>
-<div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00990">Point.cs:990</a></div></div>
+<div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00995">Point.cs:995</a></div></div>
 <div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
 <div class="ttc" id="aclassUIButton_html"><div class="ttname"><a href="classUIButton.html">UIButton</a></div><div class="ttdef"><b>Definition:</b> <a href="UIButton_8cs_source.html#l00009">UIButton.cs:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -7,6 +7,8 @@ var classDramaManager =
     [ "CheckIF", "classDramaManager.html#a6ba58f74ea0d694b6f8f213eb8e8c0ff", null ],
     [ "CustomEvent", "classDramaManager.html#a34a5b16e14dfe39e13f1b617655bba9c", null ],
     [ "GetActor", "classDramaManager.html#aea015631a5369fd277a84c4488566bfa", null ],
+    [ "GetChara", "classDramaManager.html#a13d00a962bef41324ea3125c9062458f", null ],
+    [ "GetPerson", "classDramaManager.html#a699043dd9f766c04cddfc0efd4ce7c1c", null ],
     [ "Hide", "classDramaManager.html#a1f945a734f73f4ba1128f7f904b46b1a", null ],
     [ "Load", "classDramaManager.html#a57b30e8d7f4fceb0752947281b0f82cf", null ],
     [ "ParseLine", "classDramaManager.html#a6eae472f587ababee3b630a1b58f9207", null ],
@@ -43,11 +45,13 @@ var classDramaManager =
     [ "listCredit", "classDramaManager.html#a78c34a6e9cd08d43ca48f6d48c71abf6", null ],
     [ "moldActor", "classDramaManager.html#aa12253f3aa4c7dcca03102bb0d4ce324", null ],
     [ "outcome", "classDramaManager.html#a1633b93119f3eda8725dc07a8d6095c2", null ],
+    [ "path", "classDramaManager.html#a4a07a4691186c50ece47c2df89f8d85f", null ],
     [ "sequence", "classDramaManager.html#a126ec4575827e234ecb66a76c4d1703f", null ],
     [ "setup", "classDramaManager.html#afb8a86c14c5a04dbec3f2fc790838815", null ],
     [ "textReplace", "classDramaManager.html#a2aa2f66cbe2ad568bd205509e376a50f", null ],
     [ "TG", "classDramaManager.html#ae0ae922c134cec005735b244f023b1ae", null ],
     [ "tg", "classDramaManager.html#a8376359d700874e947c3ee3c853783df", null ],
     [ "keepAmbientBGM", "classDramaManager.html#ac46b40a28457e2d6e688e32cd43e4f43", null ],
+    [ "Scripting", "classDramaManager.html#a9f910e1782671f6f97c8fb5cd7c04e0d", null ],
     [ "tgActor", "classDramaManager.html#afe040050db19d7c35bbd833e2f3b4ffa", null ]
 ];

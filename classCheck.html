@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.315 Nightly</span>
    </div>
   </td>
  </tr>
@@ -344,7 +344,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Check_8cs_source.html#l00024">dcMod</a>, and <a class="el" href="Check_8cs_source.html#l00022">id</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00140">DramaActor.SetChoice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaActor_8cs_source.html#l00141">DramaActor.SetChoice()</a>.</p>
 
 </div>
 </div>
@@ -380,13 +380,13 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   59</span>            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)num;</div>
 <div class="line"><span class="lineno">   60</span>        }</div>
 <div class="line"><span class="lineno">   61</span>        num += source.lvMod * (float)tg.<a class="code hl_property" href="classCard.html#af7ba822509d0724e71b6b84bce16642e">LV</a>;</div>
-<div class="line"><span class="lineno">   62</span>        if (<a class="code hl_property" href="classCheck.html#ad68587d4b4ad48debb30cf649d7ac1f7">source</a>.targetElement != 0)</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (<a class="code hl_property" href="classCheck.html#ad68587d4b4ad48debb30cf649d7ac1f7">source</a>.targetElement != 0)</div>
 <div class="line"><span class="lineno">   63</span>        {</div>
 <div class="line"><span class="lineno">   64</span>            <a class="code hl_class" href="classElement.html">Element</a> element = tg.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(<a class="code hl_property" href="classCheck.html#ad68587d4b4ad48debb30cf649d7ac1f7">source</a>.element);</div>
 <div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (element != <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   66</span>            {</div>
 <div class="line"><span class="lineno">   67</span>                num += (float)element.<a class="code hl_property" href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Value</a>;</div>
-<div class="line"><span class="lineno">   68</span>                if (<a class="code hl_property" href="classCheck.html#ad68587d4b4ad48debb30cf649d7ac1f7">source</a>.targetSubFactor &gt; 0f &amp;&amp; !element.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasParent.IsEmpty())</div>
+<div class="line"><span class="lineno">   68</span>                <a class="code hl_function" href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a> (<a class="code hl_property" href="classCheck.html#ad68587d4b4ad48debb30cf649d7ac1f7">source</a>.targetSubFactor &gt; 0f &amp;&amp; !element.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasParent.IsEmpty())</div>
 <div class="line"><span class="lineno">   69</span>                {</div>
 <div class="line"><span class="lineno">   70</span>                    <a class="code hl_class" href="classElement.html">Element</a> element2 = tg.<a class="code hl_variable" href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">elements</a>.<a class="code hl_function" href="classElementContainer.html#af89e7a757ada52d39be78e0508ea17e2">GetElement</a>(element.<a class="code hl_property" href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">source</a>.aliasParent);</div>
 <div class="line"><span class="lineno">   71</span>                    <span class="keywordflow">if</span> (element2 != <span class="keyword">null</span>)</div>
@@ -398,6 +398,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   77</span>        }</div>
 <div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)num;</div>
 <div class="line"><span class="lineno">   79</span>    }</div>
+<div class="ttc" id="aCustomDramaExpansion_8cs_html_a6c81777e5c27748217b5f383b27c394f"><div class="ttname"><a href="CustomDramaExpansion_8cs.html#a6c81777e5c27748217b5f383b27c394f">if</a></div><div class="ttdeci">if(!match.Success)</div><div class="ttdef"><b>Definition:</b> <a href="CustomDramaExpansion_8cs_source.html#l00449">CustomDramaExpansion.cs:449</a></div></div>
 <div class="ttc" id="aclassCard_html_a21183d2839c6e8b51fcb7e1f08461138"><div class="ttname"><a href="classCard.html#a21183d2839c6e8b51fcb7e1f08461138">Card.elements</a></div><div class="ttdeci">ElementContainerCard elements</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00042">Card.cs:42</a></div></div>
 <div class="ttc" id="aclassCard_html_af7ba822509d0724e71b6b84bce16642e"><div class="ttname"><a href="classCard.html#af7ba822509d0724e71b6b84bce16642e">Card.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00388">Card.cs:389</a></div></div>
 <div class="ttc" id="aclassCheck_html_a4aae65b04404b4b66fe6a97e6adbe151"><div class="ttname"><a href="classCheck.html#a4aae65b04404b4b66fe6a97e6adbe151">Check.baseDC</a></div><div class="ttdeci">int baseDC</div><div class="ttdef"><b>Definition:</b> <a href="Check_8cs_source.html#l00030">Check.cs:30</a></div></div>
@@ -407,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassElement_html_a3eb853993ffbe07f393e80bcf4e0f5c6"><div class="ttname"><a href="classElement.html#a3eb853993ffbe07f393e80bcf4e0f5c6">Element.source</a></div><div class="ttdeci">SourceElement.Row source</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00277">ELEMENT.cs:278</a></div></div>
 <div class="ttc" id="aclassElement_html_a6a11800bda14d29b682b0c82bd540d0e"><div class="ttname"><a href="classElement.html#a6a11800bda14d29b682b0c82bd540d0e">Element.Value</a></div><div class="ttdeci">int Value</div><div class="ttdef"><b>Definition:</b> <a href="ELEMENT_8cs_source.html#l00297">ELEMENT.cs:297</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Check_8cs_source.html#l00030">baseDC</a>, <a class="el" href="Check_8cs_source.html#l00024">dcMod</a>, <a class="el" href="Check_8cs_source.html#l00026">source</a>, <a class="el" href="ELEMENT_8cs_source.html#l00278">Element.source</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00297">Element.Value</a>.</p>
+<p class="reference">References <a class="el" href="Check_8cs_source.html#l00030">baseDC</a>, <a class="el" href="Check_8cs_source.html#l00024">dcMod</a>, <a class="el" href="CustomDramaExpansion_8cs_source.html#l00449">if()</a>, <a class="el" href="Check_8cs_source.html#l00026">source</a>, <a class="el" href="ELEMENT_8cs_source.html#l00278">Element.source</a>, and <a class="el" href="ELEMENT_8cs_source.html#l00297">Element.Value</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Check_8cs_source.html#l00081">GetFinalDC()</a>, and <a class="el" href="Check_8cs_source.html#l00041">GetText()</a>.</p>
 
@@ -540,9 +541,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassCheck_html_ada90f1021481fd46e0ea117f977a026a"><div class="ttname"><a href="classCheck.html#ada90f1021481fd46e0ea117f977a026a">Check.GetFinalDC</a></div><div class="ttdeci">int GetFinalDC(Chara p, Card tg=null)</div><div class="ttdef"><b>Definition:</b> <a href="Check_8cs_source.html#l00081">Check.cs:81</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
-<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00029">SourceManager.cs:29</a></div></div>
+<div class="ttc" id="aclassSourceManager_html_aca64230665ba96ef7f9e96164be02578"><div class="ttname"><a href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">SourceManager.elements</a></div><div class="ttdeci">SourceElement elements</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8cs_source.html#l00030">SourceManager.cs:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00029">SourceManager.elements</a>, <a class="el" href="Check_8cs_source.html#l00054">GetDC()</a>, <a class="el" href="Check_8cs_source.html#l00081">GetFinalDC()</a>, <a class="el" href="Check_8cs_source.html#l00028">mainElementName</a>, <a class="el" href="Check_8cs_source.html#l00026">source</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
+<p class="reference">References <a class="el" href="SourceManager_8cs_source.html#l00030">SourceManager.elements</a>, <a class="el" href="Check_8cs_source.html#l00054">GetDC()</a>, <a class="el" href="Check_8cs_source.html#l00081">GetFinalDC()</a>, <a class="el" href="Check_8cs_source.html#l00028">mainElementName</a>, <a class="el" href="Check_8cs_source.html#l00026">source</a>, and <a class="el" href="EClass_8cs_source.html#l00043">EClass.sources</a>.</p>
 
 </div>
 </div>

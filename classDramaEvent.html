@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.315 Nightly</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaccc686b224da6e9497c9ca3caddba6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab197703b48752f1d0933a7e34705980"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#aab197703b48752f1d0933a7e34705980">Reset</a> ()</td></tr>
 <tr class="separator:aab197703b48752f1d0933a7e34705980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb370b727ce0932e66aeed468bf2a19a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#adb370b727ce0932e66aeed468bf2a19a">CanPlay</a> ()</td></tr>
+<tr class="separator:adb370b727ce0932e66aeed468bf2a19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -136,6 +138,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ab50995fa1974a033ae81ce193d26f6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf3686f859e00fa2ea86aac41b2228e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDramaSequence.html">DramaSequence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#a6bf3686f859e00fa2ea86aac41b2228e">sequence</a></td></tr>
 <tr class="separator:a6bf3686f859e00fa2ea86aac41b2228e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06092eb1918bc634be2028928843925"><td class="memItemLeft" align="right" valign="top">Func&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#ae06092eb1918bc634be2028928843925">activeCondition</a></td></tr>
+<tr class="separator:ae06092eb1918bc634be2028928843925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -222,8 +226,47 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00001">1</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00003">3</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adb370b727ce0932e66aeed468bf2a19a" name="adb370b727ce0932e66aeed468bf2a19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb370b727ce0932e66aeed468bf2a19a">&#9670;&#160;</a></span>CanPlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool DramaEvent.CanPlay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00037">37</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classDramaEvent.html#ae06092eb1918bc634be2028928843925">activeCondition</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classDramaEvent.html#ae06092eb1918bc634be2028928843925">activeCondition</a>();</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="ttc" id="aclassDramaEvent_html_ae06092eb1918bc634be2028928843925"><div class="ttname"><a href="classDramaEvent.html#ae06092eb1918bc634be2028928843925">DramaEvent.activeCondition</a></div><div class="ttdeci">Func&lt; bool &gt; activeCondition</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00019">DramaEvent.cs:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DramaEvent_8cs_source.html#l00019">activeCondition</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00199">DramaSequence.OnUpdate()</a>.</p>
+
+</div>
+</div>
 <a id="aaccc686b224da6e9497c9ca3caddba6d" name="aaccc686b224da6e9497c9ca3caddba6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaccc686b224da6e9497c9ca3caddba6d">&#9670;&#160;</a></span>Play()</h2>
 
@@ -249,12 +292,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classDramaEventEndRoll.html#a6309fdf7989ba137fd045e08dd685090">DramaEventEndRoll</a>, <a class="el" href="classDramaEventExit.html#a1fd4452ea16d9dc4b0b4155a34f2381d">DramaEventExit</a>, <a class="el" href="classDramaEventMethod.html#a7f813141a89602174e290c63c764402d">DramaEventMethod</a>, and <a class="el" href="classDramaEventTalk.html#a3ca091571fcbea0a22248c10aa31c079">DramaEventTalk</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00023">23</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   26</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00027">27</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00187">DramaSequence.OnUpdate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00199">DramaSequence.OnUpdate()</a>.</p>
 
 </div>
 </div>
@@ -281,19 +324,37 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00028">28</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="classDramaEvent.html#ae41fa002892e6355521402a377b6b0c5">progress</a> = 0;</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
-<div class="ttc" id="aclassDramaEvent_html_ae41fa002892e6355521402a377b6b0c5"><div class="ttname"><a href="classDramaEvent.html#ae41fa002892e6355521402a377b6b0c5">DramaEvent.progress</a></div><div class="ttdeci">int progress</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00003">DramaEvent.cs:3</a></div></div>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00032">32</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="classDramaEvent.html#ae41fa002892e6355521402a377b6b0c5">progress</a> = 0;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassDramaEvent_html_ae41fa002892e6355521402a377b6b0c5"><div class="ttname"><a href="classDramaEvent.html#ae41fa002892e6355521402a377b6b0c5">DramaEvent.progress</a></div><div class="ttdeci">int progress</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00005">DramaEvent.cs:5</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaEvent_8cs_source.html#l00003">progress</a>.</p>
+<p class="reference">References <a class="el" href="DramaEvent_8cs_source.html#l00005">progress</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00145">DramaSequence.Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00157">DramaSequence.Play()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae06092eb1918bc634be2028928843925" name="ae06092eb1918bc634be2028928843925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06092eb1918bc634be2028928843925">&#9670;&#160;</a></span>activeCondition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Func&lt;bool&gt; DramaEvent.activeCondition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00019">19</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DramaEvent_8cs_source.html#l00037">CanPlay()</a>.</p>
+
+</div>
+</div>
 <a id="a9d0f02823b214c0de9e81f3dd46d9cab" name="a9d0f02823b214c0de9e81f3dd46d9cab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d0f02823b214c0de9e81f3dd46d9cab">&#9670;&#160;</a></span>idActor</h2>
 
@@ -306,7 +367,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00007">7</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00009">9</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaEventTalk_8cs_source.html#l00027">DramaEventTalk.DramaEventTalk()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00161">DramaEventTalk.InitDialog()</a>, and <a class="el" href="DramaEventTalk_8cs_source.html#l00174">DramaEventTalk.ResetDialog()</a>.</p>
 
@@ -324,9 +385,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00005">5</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00007">7</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaEventGoto_8cs_source.html#l00003">DramaEventGoto.DramaEventGoto()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00187">DramaSequence.OnUpdate()</a>, and <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaEventGoto_8cs_source.html#l00003">DramaEventGoto.DramaEventGoto()</a>, <a class="el" href="DramaSequence_8cs_source.html#l00199">DramaSequence.OnUpdate()</a>, and <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>.</p>
 
 </div>
 </div>
@@ -342,9 +403,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00003">3</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00005">5</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaEventEndRoll_8cs_source.html#l00011">DramaEventEndRoll.Play()</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00023">DramaEventMethod.Play()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, and <a class="el" href="DramaEvent_8cs_source.html#l00028">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaEventEndRoll_8cs_source.html#l00011">DramaEventEndRoll.Play()</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00023">DramaEventMethod.Play()</a>, <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>, and <a class="el" href="DramaEvent_8cs_source.html#l00032">Reset()</a>.</p>
 
 </div>
 </div>
@@ -360,7 +421,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00015">15</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00017">17</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaEventEndRoll_8cs_source.html#l00011">DramaEventEndRoll.Play()</a>, <a class="el" href="DramaEventExit_8cs_source.html#l00003">DramaEventExit.Play()</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00023">DramaEventMethod.Play()</a>, and <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>.</p>
 
@@ -378,9 +439,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00009">9</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00011">11</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00116">DramaSequence.AddEvent()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00082">DramaSequence.GetEvent&lt; T &gt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DramaSequence_8cs_source.html#l00128">DramaSequence.AddEvent()</a>, and <a class="el" href="DramaSequence_8cs_source.html#l00094">DramaSequence.GetEvent&lt; T &gt;()</a>.</p>
 
 </div>
 </div>
@@ -396,7 +457,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00013">13</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00015">15</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaEventTalk_8cs_source.html#l00060">DramaEventTalk.Play()</a>.</p>
 
@@ -414,7 +475,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00011">11</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00013">13</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="DramaEventMethod_8cs_source.html#l00016">DramaEventMethod.DramaEventMethod()</a>, and <a class="el" href="DramaEventMethod_8cs_source.html#l00023">DramaEventMethod.Play()</a>.</p>
 
@@ -441,7 +502,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00017">17</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00021">21</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
 </div>
 </div>
@@ -465,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00021">21</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00025">25</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
 </div>
 </div>
@@ -489,7 +550,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00019">19</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DramaEvent_8cs_source.html#l00023">23</a> of file <a class="el" href="DramaEvent_8cs_source.html">DramaEvent.cs</a>.</p>
 
 </div>
 </div>

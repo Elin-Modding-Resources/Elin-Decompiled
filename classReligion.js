@@ -15,6 +15,7 @@ var classReligion =
     [ "GetValidArtifacts", "classReligion.html#a8567f3fa42a8135ea2abbea27cd0aefc", null ],
     [ "Init", "classReligion.html#aae3dfa92e31ec9cfc07cd3d68257bdc5", null ],
     [ "IsFaithElement", "classReligion.html#ac584193374d5a58a856fb66ee4331634", null ],
+    [ "IsIgnoreReforge", "classReligion.html#ae9f4088a1afb7e6f814f683e0c8d938a", null ],
     [ "IsValidArtifact", "classReligion.html#a280fd43869b7eb1c6337ff6516a639a1", null ],
     [ "JoinFaith", "classReligion.html#a1a42ccac115befafe673e5bbbbb265b2", null ],
     [ "LeaveFaith", "classReligion.html#acc7d75dd170ad8faa323a8800ee912e9", null ],

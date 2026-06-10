@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.315 Nightly</span>
    </div>
   </td>
  </tr>
@@ -133,8 +133,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a59f5956673682398c62e50481587791c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCustomMerchantStock.html">CustomMerchantStock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomMerchantStock.html#a59f5956673682398c62e50481587791c">CreateFromId</a> (string stockId, <a class="el" href="classModPackage.html">ModPackage</a> owner)</td></tr>
-<tr class="separator:a59f5956673682398c62e50481587791c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30298a3f7f2c3ed1509791383d29dcd0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCustomMerchantStock.html">CustomMerchantStock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCustomMerchantStock.html#a30298a3f7f2c3ed1509791383d29dcd0">CreateFromId</a> (string stockId, <a class="el" href="classModPackage.html">ModPackage</a> owner=null)</td></tr>
+<tr class="separator:a30298a3f7f2c3ed1509791383d29dcd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classEClass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEClass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEClass.html">EClass</a></td></tr>
 <tr class="memitem:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEClass.html#a94fb5aa0c65da9a755ec40a77b03c91b">rndSeed</a> (int a, int <a class="el" href="CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afe4c0f30aa359c41d9f9a5f69c8c4192">seed</a>)</td></tr>
 <tr class="separator:a94fb5aa0c65da9a755ec40a77b03c91b inherit pub_static_methods_classEClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,8 +236,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="CustomMerchantStock_8cs_source.html#l00008">8</a> of file <a class="el" href="CustomMerchantStock_8cs_source.html">CustomMerchantStock.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a59f5956673682398c62e50481587791c" name="a59f5956673682398c62e50481587791c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59f5956673682398c62e50481587791c">&#9670;&#160;</a></span>CreateFromId()</h2>
+<a id="a30298a3f7f2c3ed1509791383d29dcd0" name="a30298a3f7f2c3ed1509791383d29dcd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30298a3f7f2c3ed1509791383d29dcd0">&#9670;&#160;</a></span>CreateFromId()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,7 +255,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classModPackage.html">ModPackage</a>&#160;</td>
-          <td class="paramname"><em>owner</em>&#160;</td>
+          <td class="paramname"><em>owner</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -339,7 +339,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   24</span>            <span class="keywordflow">catch</span> (Exception ex)</div>
 <div class="line"><span class="lineno">   25</span>            {</div>
 <div class="line"><span class="lineno">   26</span>                ModUtil.LogModError(<span class="stringliteral">&quot;can&#39;t create stock item &#39;&quot;</span> + item2.<a class="code hl_property" href="classCustomContent.html#ab75eb2d8f7abc17150ba2dc6bbd89b62">ContentId</a> + <span class="stringliteral">&quot;&#39;\n&quot;</span> + ex.Message, base.Owner);</div>
-<div class="line"><span class="lineno">   27</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogError(ex);</div>
+<div class="line"><span class="lineno">   27</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.LogException(ex);</div>
 <div class="line"><span class="lineno">   28</span>            }</div>
 <div class="line"><span class="lineno">   29</span>        }</div>
 <div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> list;</div>
@@ -347,15 +347,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassCard_html_a951069e4c0a069b750ad6b9066cddfe3"><div class="ttname"><a href="classCard.html#a951069e4c0a069b750ad6b9066cddfe3">Card.trait</a></div><div class="ttdeci">Trait trait</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00054">Card.cs:54</a></div></div>
-<div class="ttc" id="aclassCard_html_ae037e2e92487e8c96fafc247c1761974"><div class="ttname"><a href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Card.Add</a></div><div class="ttdeci">Thing Add(string id, int num=1, int lv=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03221">Card.cs:3221</a></div></div>
+<div class="ttc" id="aclassCard_html_ae037e2e92487e8c96fafc247c1761974"><div class="ttname"><a href="classCard.html#ae037e2e92487e8c96fafc247c1761974">Card.Add</a></div><div class="ttdeci">Thing Add(string id, int num=1, int lv=1)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l03234">Card.cs:3234</a></div></div>
 <div class="ttc" id="aclassCustomFileContent_html_a3caf7c420a13dbe6b28dc3b176a44558"><div class="ttname"><a href="classCustomFileContent.html#a3caf7c420a13dbe6b28dc3b176a44558">CustomFileContent.Load</a></div><div class="ttdeci">void Load()</div><div class="ttdef"><b>Definition:</b> <a href="CustomFileContent_8cs_source.html#l00024">CustomFileContent.cs:24</a></div></div>
 <div class="ttc" id="aclassCustomMerchantStock_html_a9989ed5aa6e67d699541e19b199808f0"><div class="ttname"><a href="classCustomMerchantStock.html#a9989ed5aa6e67d699541e19b199808f0">CustomMerchantStock.items</a></div><div class="ttdeci">List&lt; CustomThingContent &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="CustomMerchantStock_8cs_source.html#l00010">CustomMerchantStock.cs:10</a></div></div>
-<div class="ttc" id="aclassCustomThingContent_html"><div class="ttname"><a href="classCustomThingContent.html">CustomThingContent</a></div><div class="ttdef"><b>Definition:</b> <a href="CustomThingContent_8cs_source.html#l00009">CustomThingContent.cs:10</a></div></div>
-<div class="ttc" id="aclassCustomThingContent_html_a6226caa5786c285bc97e7bf237d057ee"><div class="ttname"><a href="classCustomThingContent.html#a6226caa5786c285bc97e7bf237d057ee">CustomThingContent.Create</a></div><div class="ttdeci">Thing Create(int createLv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="CustomThingContent_8cs_source.html#l00201">CustomThingContent.cs:201</a></div></div>
+<div class="ttc" id="aclassCustomThingContent_html"><div class="ttname"><a href="classCustomThingContent.html">CustomThingContent</a></div><div class="ttdef"><b>Definition:</b> <a href="CustomThingContent_8cs_source.html#l00010">CustomThingContent.cs:11</a></div></div>
+<div class="ttc" id="aclassCustomThingContent_html_a6226caa5786c285bc97e7bf237d057ee"><div class="ttname"><a href="classCustomThingContent.html#a6226caa5786c285bc97e7bf237d057ee">CustomThingContent.Create</a></div><div class="ttdeci">Thing Create(int createLv=-1)</div><div class="ttdef"><b>Definition:</b> <a href="CustomThingContent_8cs_source.html#l00202">CustomThingContent.cs:202</a></div></div>
 <div class="ttc" id="aclassThing_html"><div class="ttname"><a href="classThing.html">Thing</a></div><div class="ttdef"><b>Definition:</b> <a href="Thing_8cs_source.html#l00007">Thing.cs:8</a></div></div>
 <div class="ttc" id="aclassTrait_html_ad3adbb27e406a0e923840806bb500660"><div class="ttname"><a href="classTrait.html#ad3adbb27e406a0e923840806bb500660">Trait.ShopLv</a></div><div class="ttdeci">virtual int ShopLv</div><div class="ttdef"><b>Definition:</b> <a href="Trait_8cs_source.html#l00525">Trait.cs:525</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Card_8cs_source.html#l03221">Card.Add()</a>, <a class="el" href="CustomContent_8cs_source.html#l00006">CustomContent.ContentId</a>, <a class="el" href="CustomThingContent_8cs_source.html#l00201">CustomThingContent.Create()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="CustomMerchantStock_8cs_source.html#l00010">items</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00024">CustomFileContent.Load()</a>, <a class="el" href="Trait_8cs_source.html#l00525">Trait.ShopLv</a>, and <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>.</p>
+<p class="reference">References <a class="el" href="Card_8cs_source.html#l03234">Card.Add()</a>, <a class="el" href="CustomContent_8cs_source.html#l00006">CustomContent.ContentId</a>, <a class="el" href="CustomThingContent_8cs_source.html#l00202">CustomThingContent.Create()</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="CustomMerchantStock_8cs_source.html#l00010">items</a>, <a class="el" href="CustomFileContent_8cs_source.html#l00024">CustomFileContent.Load()</a>, <a class="el" href="Trait_8cs_source.html#l00525">Trait.ShopLv</a>, and <a class="el" href="Card_8cs_source.html#l00054">Card.trait</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   54</span>        <a class="code hl_class" href="classCustomMerchantStock.html">CustomMerchantStock</a> customMerchantStock = <a class="code hl_class" href="classIO.html">IO</a>.LoadFile&lt;<a class="code hl_class" href="classCustomMerchantStock.html">CustomMerchantStock</a>&gt;(base.File.FullName);</div>
 <div class="line"><span class="lineno">   55</span>        <a class="code hl_variable" href="classCustomMerchantStock.html#a9989ed5aa6e67d699541e19b199808f0">items</a> = customMerchantStock.<a class="code hl_variable" href="classCustomMerchantStock.html#a9989ed5aa6e67d699541e19b199808f0">items</a>;</div>
 <div class="line"><span class="lineno">   56</span>    }</div>
-<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00010">IO.cs:11</a></div></div>
+<div class="ttc" id="aclassIO_html"><div class="ttname"><a href="classIO.html">IO</a></div><div class="ttdef"><b>Definition:</b> <a href="IO_8cs_source.html#l00009">IO.cs:10</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CustomMerchantStock_8cs_source.html#l00010">items</a>.</p>
 
@@ -420,11 +420,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="CustomMerchantStock_8cs_source.html#l00058">58</a> of file <a class="el" href="CustomMerchantStock_8cs_source.html">CustomMerchantStock.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{base.ContentId}/items({items.Count})&quot;</span>;</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a><span class="stringliteral">&quot;{base.ContentId}/items({items.Count})&quot;</span>;</div>
 <div class="line"><span class="lineno">   61</span>    }</div>
-<div class="ttc" id="aModManager_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="ModManager_8cs_source.html#l00076">ModManager.cs:76</a></div></div>
+<div class="ttc" id="aCustomDramaExpansion_8cs_html_a58859d93c30e635814dc980ed86e3f84"><div class="ttname"><a href="CustomDramaExpansion_8cs.html#a58859d93c30e635814dc980ed86e3f84">$</a></div><div class="ttdeci">$</div><div class="ttdef"><b>Definition:</b> <a href="CustomDramaExpansion_8cs_source.html#l00016">CustomDramaExpansion.cs:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ModManager_8cs_source.html#l00076">$</a>.</p>
+<p class="reference">References <a class="el" href="CustomDramaExpansion_8cs_source.html#l00016">$</a>.</p>
 
 </div>
 </div>

@@ -49,6 +49,7 @@ var classPoint =
     [ "ListVisibleCharas", "classPoint.html#af333b9b2df3fc703050e7a95c856ea58", null ],
     [ "ListWitnesses", "classPoint.html#a1307ed7565e6b669ebd14a4dd08a74da", null ],
     [ "ModFire", "classPoint.html#a6d8c61a0c27eed004dd7335176c83faf", null ],
+    [ "operator+", "classPoint.html#abace1c006fd6fec189c0f7a62f913309", null ],
     [ "PlayEffect", "classPoint.html#abd1a4e4f694fdc06fef3c423c9b2c8bc", null ],
     [ "PlaySound", "classPoint.html#a82b8f3c92de760d27d9023d6fdcd591c", null ],
     [ "Plow", "classPoint.html#a205b18481b54171fb3ae1106d32e6acc", null ],

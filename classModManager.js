@@ -16,7 +16,6 @@ var classModManager =
     [ "UpdateWorkshopPackages", "classModManager.html#a8fd6216138faf601bd86e7af8aa06613", null ],
     [ "_loading", "classModManager.html#a38cdb56c0f84e73f2a2dec6543ebb452", null ],
     [ "disableMod", "classModManager.html#ab2008faf39c4e179f5b5d538b2ec7996", null ],
-    [ "ImportModGodTalks", "classModManager.html#a6252d0e27b6bf648378e6d9e62d34f32", null ],
     [ "ListPluginObject", "classModManager.html#ada7518f02da2ce3f6fb3dc92128b2fe2", null ],
     [ "replaceFiles", "classModManager.html#a76a8d2fbb962ccaa2d1393f2719b454e", null ],
     [ "DirWorkshop", "classModManager.html#af7b1f26106310a4557070f1567afb09f", null ],

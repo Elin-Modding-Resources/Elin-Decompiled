@@ -62,6 +62,7 @@ var classCoreDebug =
     [ "COM_Teleport", "classCoreDebug.html#a7eaddd28b84b17e019de10fbfe328622", null ],
     [ "EnableDebugResource", "classCoreDebug.html#ac353b15e1f130324b31a6a8d30ce554e", null ],
     [ "FirstAdventurer", "classCoreDebug.html#a506f8281fdf879f01c51a8802827a25f", null ],
+    [ "Fix_Awning", "classCoreDebug.html#ae72e9baf81fa7407c4cd755a7dcd4d4c", null ],
     [ "Fix_EtherDisease", "classCoreDebug.html#a22256c592fdb210a509a5d747fe8d040", null ],
     [ "Fix_LostCore", "classCoreDebug.html#ad8fd0fde65f710c7a6ea864e52b72c50", null ],
     [ "Fix_RemoveAshland", "classCoreDebug.html#ae002ba6a1f2dbd22bbd5a770d194a8db", null ],

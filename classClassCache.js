@@ -7,5 +7,6 @@ var classClassCache =
     [ "assemblies", "classClassCache.html#a7a130179b409895401a1f64b0dc3bfce", null ],
     [ "caches", "classClassCache.html#a4b956480e24124d9c12acaf83ae9a58f", null ],
     [ "dict", "classClassCache.html#ae2c182b27c8e4eb3b74d99a416f10d1a", null ],
+    [ "modTypes", "classClassCache.html#ab04b6fa77a07e78bf63f3c6b6c831caa", null ],
     [ "typeLoaders", "classClassCache.html#ab7cc09c80f1bd7dd9839c2dd0a28546a", null ]
 ];

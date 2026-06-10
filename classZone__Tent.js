@@ -2,6 +2,7 @@ var classZone__Tent =
 [
     [ "OnBeforeDeactivate", "classZone__Tent.html#a948c963b9ff815c5e7d193db78af0ed6", null ],
     [ "AllowNewZone", "classZone__Tent.html#a67166219131214f0bc53d365bec1a119", null ],
+    [ "DangerLv", "classZone__Tent.html#a10c7a83ccea3c7e8f9a343281478549c", null ],
     [ "GrowPlant", "classZone__Tent.html#a3bedebfdf9768e021471e38a856e0f00", null ],
     [ "IsUnderwater", "classZone__Tent.html#a7e20c2d2cfbf3afc409c476da9b1bfa1", null ],
     [ "MaxSoil", "classZone__Tent.html#a6484546f24573da063c04e6c8f95563b", null ],

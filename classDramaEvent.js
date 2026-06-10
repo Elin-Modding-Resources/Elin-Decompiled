@@ -1,7 +1,9 @@
 var classDramaEvent =
 [
+    [ "CanPlay", "classDramaEvent.html#adb370b727ce0932e66aeed468bf2a19a", null ],
     [ "Play", "classDramaEvent.html#aaccc686b224da6e9497c9ca3caddba6d", null ],
     [ "Reset", "classDramaEvent.html#aab197703b48752f1d0933a7e34705980", null ],
+    [ "activeCondition", "classDramaEvent.html#ae06092eb1918bc634be2028928843925", null ],
     [ "idActor", "classDramaEvent.html#a9d0f02823b214c0de9e81f3dd46d9cab", null ],
     [ "idJump", "classDramaEvent.html#a7216bd1c68177b121b31fb56ce7f2dce", null ],
     [ "progress", "classDramaEvent.html#ae41fa002892e6355521402a377b6b0c5", null ],

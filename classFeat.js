@@ -1,6 +1,6 @@
 var classFeat =
 [
-    [ "Apply", "classFeat.html#a40ee44c884814f793c41b38e0764f60c", null ],
+    [ "Apply", "classFeat.html#a5d9d8c44f783e100c30d8133a6d4a31a", null ],
     [ "CanLink", "classFeat.html#a89562a18bcd7f4bd2e9006149c81bda9", null ],
     [ "GetHint", "classFeat.html#ab1592a097e653f368aa1760c1086469d", null ],
     [ "GetIcon", "classFeat.html#a5e798eb65df335949b0f368aababf979", null ],

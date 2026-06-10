@@ -12,13 +12,14 @@ var searchData=
   ['validatepref_9',['ValidatePref',['../classSourceData.html#a910a3682ac4a6da5d35231a8b3dd2a16',1,'SourceData.ValidatePref()'],['../classSourceBlock.html#a0c6e85fa829627efbe22831f2c1933cc',1,'SourceBlock.ValidatePref()'],['../classSourceChara.html#a794d6ca819020f2cd9545ed95d850ff4',1,'SourceChara.ValidatePref()'],['../classSourceDeco.html#a66cd303c4d2f3e44c5763ebe669c85ea',1,'SourceDeco.ValidatePref()'],['../classSourceFloor.html#a3bee5d812022857c105fcf07d66a222e',1,'SourceFloor.ValidatePref()'],['../classSourceObj.html#ae5e311075cb9810094c2ad191e909126',1,'SourceObj.ValidatePref()'],['../classSourceThingV.html#aff0111b19538e5afe462ddacdba21c9c',1,'SourceThingV.ValidatePref()']]],
   ['validateprefs_10',['ValidatePrefs',['../classSourcePrefInspector.html#aceba88b57dcd66031c42fb9f0c5e1740',1,'SourcePrefInspector']]],
   ['validateresolution_11',['ValidateResolution',['../classLayerConfig.html#aae67d89c8445b4e0324d185edadda6bc',1,'LayerConfig']]],
-  ['validateupgradepolicies_12',['ValidateUpgradePolicies',['../classFactionBranch.html#afbb13a7a836830d4d9d4bb55e505f1d7',1,'FactionBranch']]],
-  ['validateversion_13',['ValidateVersion',['../classMap.html#ae002f7973d0dda1ff4c27087e0bec3de',1,'Map']]],
-  ['validateworks_14',['ValidateWorks',['../classChara.html#a20df5c7b054e93536a36f6d9c75b34a1',1,'Chara']]],
-  ['value_15',['Value',['../classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6',1,'ElementContainer']]],
-  ['valuebonus_16',['ValueBonus',['../classElementContainer.html#a61b13a243ecc198fb4ec72409b482bdd',1,'ElementContainer.ValueBonus()'],['../classElementContainerCard.html#a64e3aaaf3f8250e541fb79cb455d073b',1,'ElementContainerCard.ValueBonus()']]],
-  ['valuewithoutlink_17',['ValueWithoutLink',['../classElementContainer.html#a9733e2947b8fbfd0f38af08c184a792d',1,'ElementContainer.ValueWithoutLink(int ele)'],['../classElementContainer.html#a39485432d30f1463e23bbc7255940557',1,'ElementContainer.ValueWithoutLink(string alias)']]],
-  ['virtualdate_18',['VirtualDate',['../classVirtualDate.html#a990d3f84ddd29935ee8fe78038f9eebe',1,'VirtualDate']]],
-  ['virtualroom_19',['VirtualRoom',['../classVirtualRoom.html#a103beb23b0ce5124ff92026d42c6e3bc',1,'VirtualRoom']]],
-  ['vomit_20',['Vomit',['../classChara.html#a7f532451c91912d6cac6bc6820b40f25',1,'Chara']]]
+  ['validatesignature_12',['ValidateSignature',['../classDramaInvokeDetail.html#a7704835e2b399eb6b36e579124bb353d',1,'DramaInvokeDetail']]],
+  ['validateupgradepolicies_13',['ValidateUpgradePolicies',['../classFactionBranch.html#afbb13a7a836830d4d9d4bb55e505f1d7',1,'FactionBranch']]],
+  ['validateversion_14',['ValidateVersion',['../classMap.html#ae002f7973d0dda1ff4c27087e0bec3de',1,'Map']]],
+  ['validateworks_15',['ValidateWorks',['../classChara.html#a20df5c7b054e93536a36f6d9c75b34a1',1,'Chara']]],
+  ['value_16',['Value',['../classElementContainer.html#a456b44ab11894a7747b2c39d85eb1df6',1,'ElementContainer']]],
+  ['valuebonus_17',['ValueBonus',['../classElementContainer.html#a61b13a243ecc198fb4ec72409b482bdd',1,'ElementContainer.ValueBonus()'],['../classElementContainerCard.html#a64e3aaaf3f8250e541fb79cb455d073b',1,'ElementContainerCard.ValueBonus()']]],
+  ['valuewithoutlink_18',['ValueWithoutLink',['../classElementContainer.html#a9733e2947b8fbfd0f38af08c184a792d',1,'ElementContainer.ValueWithoutLink(int ele)'],['../classElementContainer.html#a39485432d30f1463e23bbc7255940557',1,'ElementContainer.ValueWithoutLink(string alias)']]],
+  ['virtualdate_19',['VirtualDate',['../classVirtualDate.html#a990d3f84ddd29935ee8fe78038f9eebe',1,'VirtualDate']]],
+  ['virtualroom_20',['VirtualRoom',['../classVirtualRoom.html#a103beb23b0ce5124ff92026d42c6e3bc',1,'VirtualRoom']]],
+  ['vomit_21',['Vomit',['../classChara.html#a7f532451c91912d6cac6bc6820b40f25',1,'Chara']]]
 ];

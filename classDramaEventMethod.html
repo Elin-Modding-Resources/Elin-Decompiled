@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.312 Nightly Patch 4</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.315 Nightly</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaccc686b224da6e9497c9ca3caddba6d inherit pub_methods_classDramaEvent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab197703b48752f1d0933a7e34705980 inherit pub_methods_classDramaEvent"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#aab197703b48752f1d0933a7e34705980">Reset</a> ()</td></tr>
 <tr class="separator:aab197703b48752f1d0933a7e34705980 inherit pub_methods_classDramaEvent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb370b727ce0932e66aeed468bf2a19a inherit pub_methods_classDramaEvent"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#adb370b727ce0932e66aeed468bf2a19a">CanPlay</a> ()</td></tr>
+<tr class="separator:adb370b727ce0932e66aeed468bf2a19a inherit pub_methods_classDramaEvent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -147,6 +149,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ab50995fa1974a033ae81ce193d26f6a2 inherit pub_attribs_classDramaEvent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf3686f859e00fa2ea86aac41b2228e inherit pub_attribs_classDramaEvent"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDramaSequence.html">DramaSequence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#a6bf3686f859e00fa2ea86aac41b2228e">sequence</a></td></tr>
 <tr class="separator:a6bf3686f859e00fa2ea86aac41b2228e inherit pub_attribs_classDramaEvent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06092eb1918bc634be2028928843925 inherit pub_attribs_classDramaEvent"><td class="memItemLeft" align="right" valign="top">Func&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDramaEvent.html#ae06092eb1918bc634be2028928843925">activeCondition</a></td></tr>
+<tr class="separator:ae06092eb1918bc634be2028928843925 inherit pub_attribs_classDramaEvent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -281,9 +285,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   21</span>    }</div>
 <div class="ttc" id="aclassDramaEventMethod_html_a9c9523375e81713fbf55a61cc80b46d3"><div class="ttname"><a href="classDramaEventMethod.html#a9c9523375e81713fbf55a61cc80b46d3">DramaEventMethod.action</a></div><div class="ttdeci">Action action</div><div class="ttdef"><b>Definition:</b> <a href="DramaEventMethod_8cs_source.html#l00006">DramaEventMethod.cs:6</a></div></div>
 <div class="ttc" id="aclassDramaEventMethod_html_aac6ca7c0508b9b105622517f96fa0f62"><div class="ttname"><a href="classDramaEventMethod.html#aac6ca7c0508b9b105622517f96fa0f62">DramaEventMethod.halt</a></div><div class="ttdeci">bool halt</div><div class="ttdef"><b>Definition:</b> <a href="DramaEventMethod_8cs_source.html#l00012">DramaEventMethod.cs:12</a></div></div>
-<div class="ttc" id="aclassDramaEvent_html_aa43498322a732f83f4949609b23fb524"><div class="ttname"><a href="classDramaEvent.html#aa43498322a732f83f4949609b23fb524">DramaEvent.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00011">DramaEvent.cs:11</a></div></div>
+<div class="ttc" id="aclassDramaEvent_html_aa43498322a732f83f4949609b23fb524"><div class="ttname"><a href="classDramaEvent.html#aa43498322a732f83f4949609b23fb524">DramaEvent.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00013">DramaEvent.cs:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaEventMethod_8cs_source.html#l00006">action</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00012">halt</a>, and <a class="el" href="DramaEvent_8cs_source.html#l00011">DramaEvent.time</a>.</p>
+<p class="reference">References <a class="el" href="DramaEventMethod_8cs_source.html#l00006">action</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00012">halt</a>, and <a class="el" href="DramaEvent_8cs_source.html#l00013">DramaEvent.time</a>.</p>
 
 </div>
 </div>
@@ -364,14 +368,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassDramaEventMethod_html_a88caeafa44132a09a2feeddb2aea8eb0"><div class="ttname"><a href="classDramaEventMethod.html#a88caeafa44132a09a2feeddb2aea8eb0">DramaEventMethod.hideDialog</a></div><div class="ttdeci">bool hideDialog</div><div class="ttdef"><b>Definition:</b> <a href="DramaEventMethod_8cs_source.html#l00014">DramaEventMethod.cs:14</a></div></div>
 <div class="ttc" id="aclassDramaEventMethod_html_ad1f82f769e8f2d5f6df6ac1d5b135e30"><div class="ttname"><a href="classDramaEventMethod.html#ad1f82f769e8f2d5f6df6ac1d5b135e30">DramaEventMethod.endFunc</a></div><div class="ttdeci">Func&lt; bool &gt; endFunc</div><div class="ttdef"><b>Definition:</b> <a href="DramaEventMethod_8cs_source.html#l00008">DramaEventMethod.cs:8</a></div></div>
 <div class="ttc" id="aclassDramaEventMethod_html_af287f94da37e842dd5b9ad1ed8e1f5c7"><div class="ttname"><a href="classDramaEventMethod.html#af287f94da37e842dd5b9ad1ed8e1f5c7">DramaEventMethod.jumpFunc</a></div><div class="ttdeci">Func&lt; string &gt; jumpFunc</div><div class="ttdef"><b>Definition:</b> <a href="DramaEventMethod_8cs_source.html#l00010">DramaEventMethod.cs:10</a></div></div>
-<div class="ttc" id="aclassDramaEvent_html_a6bf3686f859e00fa2ea86aac41b2228e"><div class="ttname"><a href="classDramaEvent.html#a6bf3686f859e00fa2ea86aac41b2228e">DramaEvent.sequence</a></div><div class="ttdeci">DramaSequence sequence</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00015">DramaEvent.cs:15</a></div></div>
-<div class="ttc" id="aclassDramaEvent_html_ae41fa002892e6355521402a377b6b0c5"><div class="ttname"><a href="classDramaEvent.html#ae41fa002892e6355521402a377b6b0c5">DramaEvent.progress</a></div><div class="ttdeci">int progress</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00003">DramaEvent.cs:3</a></div></div>
-<div class="ttc" id="aclassDramaSequence_html_a8e91a52830eabf326efed83eda5790f0"><div class="ttname"><a href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">DramaSequence.Play</a></div><div class="ttdeci">void Play(string id)</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00132">DramaSequence.cs:132</a></div></div>
+<div class="ttc" id="aclassDramaEvent_html_a6bf3686f859e00fa2ea86aac41b2228e"><div class="ttname"><a href="classDramaEvent.html#a6bf3686f859e00fa2ea86aac41b2228e">DramaEvent.sequence</a></div><div class="ttdeci">DramaSequence sequence</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00017">DramaEvent.cs:17</a></div></div>
+<div class="ttc" id="aclassDramaEvent_html_ae41fa002892e6355521402a377b6b0c5"><div class="ttname"><a href="classDramaEvent.html#ae41fa002892e6355521402a377b6b0c5">DramaEvent.progress</a></div><div class="ttdeci">int progress</div><div class="ttdef"><b>Definition:</b> <a href="DramaEvent_8cs_source.html#l00005">DramaEvent.cs:5</a></div></div>
+<div class="ttc" id="aclassDramaSequence_html_a8e91a52830eabf326efed83eda5790f0"><div class="ttname"><a href="classDramaSequence.html#a8e91a52830eabf326efed83eda5790f0">DramaSequence.Play</a></div><div class="ttdeci">void Play(string id)</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00144">DramaSequence.cs:144</a></div></div>
 <div class="ttc" id="aclassDramaSequence_html_ad0a8d5bb13ec7fd65f0e2faa9e511cd7"><div class="ttname"><a href="classDramaSequence.html#ad0a8d5bb13ec7fd65f0e2faa9e511cd7">DramaSequence.dialog</a></div><div class="ttdeci">DialogDrama dialog</div><div class="ttdef"><b>Definition:</b> <a href="DramaSequence_8cs_source.html#l00047">DramaSequence.cs:47</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_af23c8bf694ef75cda88e6b272597bf92"><div class="ttname"><a href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">EClass.ui</a></div><div class="ttdeci">static UI ui</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00017">EClass.cs:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DramaEventMethod_8cs_source.html#l00006">action</a>, <a class="el" href="DramaSequence_8cs_source.html#l00047">DramaSequence.dialog</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00008">endFunc</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00012">halt</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00014">hideDialog</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00010">jumpFunc</a>, <a class="el" href="DramaSequence_8cs_source.html#l00132">DramaSequence.Play()</a>, <a class="el" href="DramaEvent_8cs_source.html#l00003">DramaEvent.progress</a>, <a class="el" href="DramaEvent_8cs_source.html#l00015">DramaEvent.sequence</a>, <a class="el" href="DramaEvent_8cs_source.html#l00011">DramaEvent.time</a>, and <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="DramaEventMethod_8cs_source.html#l00006">action</a>, <a class="el" href="DramaSequence_8cs_source.html#l00047">DramaSequence.dialog</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00008">endFunc</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00012">halt</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00014">hideDialog</a>, <a class="el" href="DramaEventMethod_8cs_source.html#l00010">jumpFunc</a>, <a class="el" href="DramaSequence_8cs_source.html#l00144">DramaSequence.Play()</a>, <a class="el" href="DramaEvent_8cs_source.html#l00005">DramaEvent.progress</a>, <a class="el" href="DramaEvent_8cs_source.html#l00017">DramaEvent.sequence</a>, <a class="el" href="DramaEvent_8cs_source.html#l00013">DramaEvent.time</a>, and <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>.</p>
 
 </div>
 </div>
