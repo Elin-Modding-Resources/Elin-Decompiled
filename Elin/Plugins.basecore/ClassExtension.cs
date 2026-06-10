@@ -775,9 +775,8 @@ public static class ClassExtension
 
 	public static string StripBrackets(this string str)
 	{
-		return str.Replace("\"", "").Replace("「", "").Replace("」", "")
-			.Replace("“", "")
-			.Replace("\"", "");
+		HashSet<char> brackets = new HashSet<char> { '"', '「', '」', '“', '”' };
+		return string.Concat(str.Where((char c) => !brackets.Contains(c)));
 	}
 
 	public static string TryAddExtension(this string s, string ext)

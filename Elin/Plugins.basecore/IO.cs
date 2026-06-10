@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Security;
 using System.Security.Permissions;
 using LZ4;
 using Newtonsoft.Json;
@@ -356,9 +355,17 @@ public class IO
 
 	public static void DeleteFile(string path)
 	{
-		if (File.Exists(path))
+		if (!File.Exists(path))
+		{
+			return;
+		}
+		try
 		{
 			File.Delete(path);
+		}
+		catch (Exception message)
+		{
+			Debug.LogError(message);
 		}
 	}
 
@@ -385,21 +392,22 @@ public class IO
 	public static void DeleteDirectory(string path)
 	{
 		path = path.Replace("\\\\?\\", "");
-		if (Directory.Exists(path))
+		if (!Directory.Exists(path))
 		{
-			DirectoryInfo directoryInfo = new DirectoryInfo(path);
-			try
-			{
-				new FileIOPermission(FileIOPermissionAccess.AllAccess, path).Demand();
-			}
-			catch (SecurityException ex)
-			{
-				Debug.Log(ex.ToString());
-			}
+			return;
+		}
+		DirectoryInfo directoryInfo = new DirectoryInfo(path);
+		try
+		{
+			new FileIOPermission(FileIOPermissionAccess.AllAccess, path).Demand();
 			if (directoryInfo.Exists)
 			{
 				directoryInfo.Delete(recursive: true);
 			}
+		}
+		catch (Exception message)
+		{
+			Debug.Log(message);
 		}
 	}
 

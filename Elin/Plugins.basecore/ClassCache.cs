@@ -24,6 +24,7 @@ public class ClassCache<T>
 
 	public T Create<T2>(string id, string assembly)
 	{
+		id = id.Trim();
 		Func<T> func = dict.TryGetValue(id);
 		if (func != null)
 		{
@@ -53,6 +54,8 @@ public class ClassCache
 	public static HashSet<string> assemblies = new HashSet<string>();
 
 	public static List<Func<string, Type>> typeLoaders = new List<Func<string, Type>> { LoadTypeFromGlobalNamespace };
+
+	public static HashSet<Type> modTypes = new HashSet<Type>();
 
 	public static T Create<T>(string id, string assembly = "Assembly-CSharp")
 	{

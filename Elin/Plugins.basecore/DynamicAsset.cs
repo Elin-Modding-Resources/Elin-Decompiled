@@ -5,6 +5,9 @@ using UnityEngine;
 [Serializable]
 public class DynamicAsset<T> where T : MonoBehaviour
 {
+	[NonSerialized]
+	public static List<Func<string, T>> assetLoaders = new List<Func<string, T>> { Resources.Load<T> };
+
 	public string groupId = "";
 
 	public List<T> list = new List<T>();
@@ -62,7 +65,21 @@ public class DynamicAsset<T> where T : MonoBehaviour
 		{
 			return value;
 		}
-		value = Resources.Load<T>(groupId + "/" + id);
+		string arg = groupId + "/" + id;
+		for (int i = 0; i < assetLoaders.Count; i++)
+		{
+			try
+			{
+				value = assetLoaders[i](arg);
+				if ((bool)value)
+				{
+					break;
+				}
+			}
+			catch
+			{
+			}
+		}
 		map[id] = value;
 		list.Add(value);
 		return value;
