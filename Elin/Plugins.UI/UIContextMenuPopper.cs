@@ -55,7 +55,7 @@ public class UIContextMenuPopper : UIContextMenuItem, IPointerEnterHandler, IEve
 	{
 		if (!UIContextMenu.Current.hideOnMouseLeave)
 		{
-			UIContextMenuPopper[] componentsInChildren = UIContextMenu.Current.GetComponentsInChildren<UIContextMenuPopper>();
+			UIContextMenuPopper[] componentsInChildren = (parent ? parent : UIContextMenu.Current).GetComponentsInChildren<UIContextMenuPopper>();
 			for (int i = 0; i < componentsInChildren.Length; i++)
 			{
 				componentsInChildren[i].Depop();
