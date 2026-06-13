@@ -1,5 +1,15 @@
 var NAVTREEINDEX71 =
 {
+"classGameSetting_1_1RenderSetting.html#a45f6ebe317f503a9ab368010437c40f9":[1,0,605,6,19],
+"classGameSetting_1_1RenderSetting.html#a4bdbfd4571370bd8257f59dfe690d34c":[1,0,605,6,47],
+"classGameSetting_1_1RenderSetting.html#a524bde3cb08aa82353fd54f6e5a46d80":[1,0,605,6,28],
+"classGameSetting_1_1RenderSetting.html#a55ed4bdaa4f5ca30325278ff17e28bae":[1,0,605,6,36],
+"classGameSetting_1_1RenderSetting.html#a59a993c39fa2211745cabc04ace204a1":[1,0,605,6,13],
+"classGameSetting_1_1RenderSetting.html#a67a662d7364f6d980c1922f231ae81e6":[1,0,605,6,44],
+"classGameSetting_1_1RenderSetting.html#a79975fcfd56af7a47cdbee9909b2467a":[1,0,605,6,42],
+"classGameSetting_1_1RenderSetting.html#a82f492719e4f108dc60a71c6f3c0420c":[1,0,605,6,23],
+"classGameSetting_1_1RenderSetting.html#a85fd15e047495a6a7380f75e61a56ea0":[1,0,605,6,11],
+"classGameSetting_1_1RenderSetting.html#a8ac8de9786944f77a3994abfb79a26a5":[1,0,605,6,30],
 "classGameSetting_1_1RenderSetting.html#a8dcc0eb730d7f0e6971c0eb8951aa9ce":[1,0,605,6,16],
 "classGameSetting_1_1RenderSetting.html#a9260efeaba25bb5478b8ecb5f0cb8dc0":[1,0,605,6,21],
 "classGameSetting_1_1RenderSetting.html#a9b828825465662205097c1aec6556d7a":[1,0,605,6,32],
@@ -239,15 +249,5 @@ var NAVTREEINDEX71 =
 "classGender.html#a5e5ac6c93493c292aa478d8b2f648272":[1,0,609,1],
 "classGender.html#a5e65110a5dddefc6fcb4902b3d3ea028":[1,0,609,0],
 "classGender.html#aea111ef25547cdaba8d4f4405876fc07":[1,0,609,2],
-"classGender.html#af880737171140963693b6ae64fc4c748":[1,0,609,3],
-"classGeneratedClass.html":[1,0,610],
-"classGlobalData.html":[1,0,614],
-"classGlobalData.html#a242d899c028f3d1898099f275ac7dd3d":[1,0,614,0],
-"classGlobalData.html#abc84da135a04acf4ce7076d70692cec0":[1,0,614,1],
-"classGlobalGoal.html":[1,0,615],
-"classGlobalGoal.html#a067e369e656c2c2f2590e7cd49502586":[1,0,615,7],
-"classGlobalGoal.html#a42fff510e744d3de87825e7713d4b735":[1,0,615,3],
-"classGlobalGoal.html#a5291f5bf8d264177135bc1cffe4e541f":[1,0,615,1],
-"classGlobalGoal.html#a5c2048b56e976d1e86601a6fd0299ada":[1,0,615,2],
-"classGlobalGoal.html#a6de3df5d326eb08614a42a65fdde49d0":[1,0,615,4]
+"classGender.html#af880737171140963693b6ae64fc4c748":[1,0,609,3]
 };

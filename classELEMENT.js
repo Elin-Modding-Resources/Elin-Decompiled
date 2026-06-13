@@ -11,6 +11,7 @@ var classELEMENT =
     [ "d", "classELEMENT.html#aed49bd278c8684b467b4b30dbc53dbd7", null ],
     [ "decay", "classELEMENT.html#a5c8bd6d106fba94bbb013555dfa7898b", null ],
     [ "difficulty", "classELEMENT.html#a6994fee334b3d3a5309d5684851856ab", null ],
+    [ "effectRange", "classELEMENT.html#a22994009aebc7edbc84aa35d087490c2", null ],
     [ "fire", "classELEMENT.html#ac1adfd54b17d3dd2203ca9971d424aac", null ],
     [ "growth", "classELEMENT.html#a277cff826dafcffed5daf64e4e437f22", null ],
     [ "hardness", "classELEMENT.html#aef574d4349cce7fbf53b743ccb4257cc", null ],

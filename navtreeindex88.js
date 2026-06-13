@@ -1,5 +1,15 @@
 var NAVTREEINDEX88 =
 {
+"classMapConfig.html#a158c5cefcdc28c505b0ec583da8f0865":[1,0,943,16],
+"classMapConfig.html#a169a81af975ca0dfaefdc183a89ebdfa":[1,0,943,22],
+"classMapConfig.html#a1cd098e7a5302ad9a98740be016825b7":[1,0,943,15],
+"classMapConfig.html#a2de8dc5db98bf7d3bcfb66cdcbb97c27":[1,0,943,29],
+"classMapConfig.html#a2df7a8804e66a944cac50a4d714b9db5":[1,0,943,17],
+"classMapConfig.html#a37d7b59875e25e78524c7b83939fa617":[1,0,943,20],
+"classMapConfig.html#a38f9878894d33f899ef6450b251afca6":[1,0,943,7],
+"classMapConfig.html#a498956a06ce4cd0749fc67d7c6331b2e":[1,0,943,24],
+"classMapConfig.html#a53d0b1f71bc0aa424e84f1641c73eafe":[1,0,943,10],
+"classMapConfig.html#a5a5bb318a384516d35207331b3af2e06":[1,0,943,14],
 "classMapConfig.html#a620f51f2e2fb8fa4f56c1648fb9aa0af":[1,0,943,9],
 "classMapConfig.html#a693e975ab77ef8bc79406271e58d8e6b":[1,0,943,19],
 "classMapConfig.html#a6975da84308f50dfa79dfa41abea2bb5":[1,0,943,33],
@@ -239,15 +249,5 @@ var NAVTREEINDEX88 =
 "classMiniGame.html#aa8b8e918ed02a76223b9765d524d8a4f":[1,0,963,5],
 "classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538":[1,0,963,15],
 "classMiniGame.html#abab7288d007c057e407548207dd98b87":[1,0,963,1],
-"classMiniGame.html#abab7288d007c057e407548207dd98b87a0795da41d3780aceefba445c3b6a3251":[1,0,963,1,4],
-"classMiniGame.html#abab7288d007c057e407548207dd98b87a9234cc57c43f272b55a94b0069fe62d1":[1,0,963,1,0],
-"classMiniGame.html#abab7288d007c057e407548207dd98b87aa53f4cee63e4f783b0d8dded8760cfba":[1,0,963,1,2],
-"classMiniGame.html#abab7288d007c057e407548207dd98b87ac997a483f4bb4d216dd0e040cd32858c":[1,0,963,1,1],
-"classMiniGame.html#abab7288d007c057e407548207dd98b87af19c8051c83dca722870dbece5e52c58":[1,0,963,1,3],
-"classMiniGame.html#abbecef084a95542383bf8f6ce178e13d":[1,0,963,8],
-"classMiniGame.html#ac3f960d254d0c26d8c74af2361c4cd87":[1,0,963,4],
-"classMiniGame.html#ac9e3840075a21dc0e617610a4f4f1719":[1,0,963,3],
-"classMiniGame.html#aca40b6dd9568979ce74b2a3dc9e09ef6":[1,0,963,11],
-"classMiniGame.html#ad9e0f2e2146cd442bf0f40bae409caff":[1,0,963,9],
-"classMiniGame.html#adb368cf1c5fa3a40cc724a04386684b0":[1,0,963,17]
+"classMiniGame.html#abab7288d007c057e407548207dd98b87a0795da41d3780aceefba445c3b6a3251":[1,0,963,1,4]
 };

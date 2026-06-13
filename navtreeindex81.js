@@ -1,5 +1,15 @@
 var NAVTREEINDEX81 =
 {
+"classLayerCraft.html#a38e0a36932f700dfb2f1f10103d7ec7f":[1,0,848,14],
+"classLayerCraft.html#a3cf1402c95b9b3ffe4e2502b51c78b43":[1,0,848,20],
+"classLayerCraft.html#a3d4fe3a247d8d6f7f5f9ee64e2ead382":[1,0,848,8],
+"classLayerCraft.html#a4386b51227db7b5df134e1ad958542b1":[1,0,848,48],
+"classLayerCraft.html#a46e3c623937f96603a6748a952e0799c":[1,0,848,9],
+"classLayerCraft.html#a478ffc295f925fd77bc903176adaba54":[1,0,848,25],
+"classLayerCraft.html#a482931175ce8c4d8c18ed2a2260eb495":[1,0,848,23],
+"classLayerCraft.html#a557b77dbafa48b24d68507bf3a0f7c53":[1,0,848,21],
+"classLayerCraft.html#a5a28595a37cd8246266cacb2db8dfa2b":[1,0,848,19],
+"classLayerCraft.html#a652a92fd94f647b26d3ac3877fe52c6f":[1,0,848,27],
 "classLayerCraft.html#a6cbfe72fb77ede0b4fc5670284a1c131":[1,0,848,37],
 "classLayerCraft.html#a770dc865e6fd0e0b592aa47b971d62d4":[1,0,848,47],
 "classLayerCraft.html#a7cf22d769bc9a847ab58d9f7ab5c3aeb":[1,0,848,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX81 =
 "classLayerEditPortrait.html#a90f0d044009acd7cc1993cdbe0f5309d":[1,0,859,9],
 "classLayerEditPortrait.html#a939c3c85d8ea8df3df664876b8d78eb2":[1,0,859,11],
 "classLayerEditPortrait.html#aa348ccafc01427b1464c270d8bea5bee":[1,0,859,7],
-"classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf":[1,0,859,2],
-"classLayerEditPortrait.html#ab4b60186844cc4fed548b459d1e4604d":[1,0,859,16],
-"classLayerEditPortrait.html#acb57627372aa29489410b35fe5d9ceb0":[1,0,859,13],
-"classLayerEditPortrait.html#accee51a7bf8fa47715fdfccdffa11609":[1,0,859,17],
-"classLayerEditPortrait.html#ae741dfb7296d851279bb1b55e31917f4":[1,0,859,1],
-"classLayerEditPortrait.html#afa33abbd34457d12699f69a764d74e86":[1,0,859,0],
-"classLayerEditPortrait.html#afa34be60ddf0890ee7f2aa39ffc61f2d":[1,0,859,15],
-"classLayerEditPortrait.html#afaf4dcece1866d4e7c178075d7102894":[1,0,859,14],
-"classLayerEditSkin.html":[1,0,860],
-"classLayerEditSkin.html#a2bd725a2b6720e08a238e342bdcd4cd5":[1,0,860,5],
-"classLayerEditSkin.html#a341c206c47558098081b6eeb3083d542":[1,0,860,6]
+"classLayerEditPortrait.html#ab32f2715c5a8fe81b82a99402e56dfdf":[1,0,859,2]
 };

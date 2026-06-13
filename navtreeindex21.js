@@ -1,5 +1,12 @@
 var NAVTREEINDEX21 =
 {
+"TraitSorin_8cs_source.html":[2,0,0,1836],
+"TraitSpeaker_8cs.html":[2,0,0,1837],
+"TraitSpeaker_8cs_source.html":[2,0,0,1837],
+"TraitSpecialLantern_8cs.html":[2,0,0,1838],
+"TraitSpecialLantern_8cs_source.html":[2,0,0,1838],
+"TraitSpellbookRandom_8cs.html":[2,0,0,1840],
+"TraitSpellbookRandom_8cs_source.html":[2,0,0,1840],
 "TraitSpellbook_8cs.html":[2,0,0,1839],
 "TraitSpellbook_8cs_source.html":[2,0,0,1839],
 "TraitSpinner_8cs.html":[2,0,0,1841],
@@ -242,12 +249,5 @@ var NAVTREEINDEX21 =
 "TraitWhipInterest_8cs_source.html":[2,0,0,1959],
 "TraitWhipLove_8cs.html":[2,0,0,1960],
 "TraitWhipLove_8cs_source.html":[2,0,0,1960],
-"TraitWhistlePeace_8cs.html":[2,0,0,1961],
-"TraitWhistlePeace_8cs_source.html":[2,0,0,1961],
-"TraitWindow_8cs.html":[2,0,0,1962],
-"TraitWindow_8cs_source.html":[2,0,0,1962],
-"TraitWoodMill_8cs.html":[2,0,0,1963],
-"TraitWoodMill_8cs_source.html":[2,0,0,1963],
-"TraitWorkbenchFuel_8cs.html":[2,0,0,1965],
-"TraitWorkbenchFuel_8cs_source.html":[2,0,0,1965]
+"TraitWhistlePeace_8cs.html":[2,0,0,1961]
 };

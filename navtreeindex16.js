@@ -1,5 +1,12 @@
 var NAVTREEINDEX16 =
 {
+"Stats_8cs.html":[2,0,0,1234],
+"Stats_8cs_source.html":[2,0,0,1234],
+"Steam_8cs.html":[2,0,0,1242],
+"Steam_8cs_source.html":[2,0,0,1242],
+"StickyDate_8cs.html":[2,0,0,1243],
+"StickyDate_8cs_source.html":[2,0,0,1243],
+"StickyGacha_8cs.html":[2,0,0,1244],
 "StickyGacha_8cs_source.html":[2,0,0,1244],
 "StickyHomeReport_8cs.html":[2,0,0,1245],
 "StickyHomeReport_8cs_source.html":[2,0,0,1245],
@@ -242,12 +249,5 @@ var NAVTREEINDEX16 =
 "TileTypeObjBig_8cs.html":[2,0,0,1346],
 "TileTypeObjBig_8cs_source.html":[2,0,0,1346],
 "TileTypeObjCeil_8cs.html":[2,0,0,1347],
-"TileTypeObjCeil_8cs_source.html":[2,0,0,1347],
-"TileTypeObjFloatWaterfall_8cs.html":[2,0,0,1349],
-"TileTypeObjFloatWaterfall_8cs_source.html":[2,0,0,1349],
-"TileTypeObjFloat_8cs.html":[2,0,0,1348],
-"TileTypeObjFloat_8cs_source.html":[2,0,0,1348],
-"TileTypeObjHuge_8cs.html":[2,0,0,1350],
-"TileTypeObjHuge_8cs_source.html":[2,0,0,1350],
-"TileTypeObjWaterTop_8cs.html":[2,0,0,1352]
+"TileTypeObjCeil_8cs_source.html":[2,0,0,1347]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX17 =
 {
+"TileTypeObjFloatWaterfall_8cs.html":[2,0,0,1349],
+"TileTypeObjFloatWaterfall_8cs_source.html":[2,0,0,1349],
+"TileTypeObjFloat_8cs.html":[2,0,0,1348],
+"TileTypeObjFloat_8cs_source.html":[2,0,0,1348],
+"TileTypeObjHuge_8cs.html":[2,0,0,1350],
+"TileTypeObjHuge_8cs_source.html":[2,0,0,1350],
+"TileTypeObjWaterTop_8cs.html":[2,0,0,1352],
 "TileTypeObjWaterTop_8cs_source.html":[2,0,0,1352],
 "TileTypeObjWater_8cs.html":[2,0,0,1351],
 "TileTypeObjWater_8cs_source.html":[2,0,0,1351],
@@ -242,12 +249,5 @@ var NAVTREEINDEX17 =
 "TraitChair_8cs.html":[2,0,0,1461],
 "TraitChair_8cs_source.html":[2,0,0,1461],
 "TraitChangingRoom_8cs.html":[2,0,0,1462],
-"TraitChangingRoom_8cs_source.html":[2,0,0,1462],
-"TraitChara_8cs.html":[2,0,0,1463],
-"TraitChara_8cs_source.html":[2,0,0,1463],
-"TraitChef_8cs.html":[2,0,0,1464],
-"TraitChef_8cs_source.html":[2,0,0,1464],
-"TraitChestMerchant_8cs.html":[2,0,0,1466],
-"TraitChestMerchant_8cs_source.html":[2,0,0,1466],
-"TraitChestOyster_8cs.html":[2,0,0,1467]
+"TraitChangingRoom_8cs_source.html":[2,0,0,1462]
 };

@@ -1,5 +1,17 @@
 var NAVTREEINDEX124 =
 {
+"classTraitClerk__Mage.html":[1,0,1583],
+"classTraitClerk__Merchant.html":[1,0,1584],
+"classTraitClerk__Thief.html":[1,0,1585],
+"classTraitClock.html":[1,0,1586],
+"classTraitClock.html#ae6c19d6deb65c9ebcb5e6a9cd3f390bf":[1,0,1586,0],
+"classTraitCobWeb.html":[1,0,1587],
+"classTraitCobWeb.html#acc2ae9534e2f6fabb23901e6cb032f8e":[1,0,1587,0],
+"classTraitCoffin.html":[1,0,1588],
+"classTraitCoffin.html#a6e2277b00dc1174a525ab5b05022f553":[1,0,1588,0],
+"classTraitComputer.html":[1,0,1589],
+"classTraitContainer.html":[1,0,1590],
+"classTraitContainer.html#a028629344f6f5bfe30568b666952b2e5":[1,0,1590,5],
 "classTraitContainer.html#a2fb04afc28809d6e887fd259c60e89d0":[1,0,1590,0],
 "classTraitContainer.html#a5a3d2ab4dda1f072130bef770cc04acc":[1,0,1590,4],
 "classTraitContainer.html#aa5c0f23169a185c1604f46194357006d":[1,0,1590,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitDoorCurtain.html":[1,0,1632],
 "classTraitDoorCurtain.html#a2afacb16aa5d5ef62f7c093981328ca8":[1,0,1632,0],
 "classTraitDoorCurtain.html#a6fe7f911c184a7ccbc01324566486227":[1,0,1632,2],
-"classTraitDoorCurtain.html#a89347d132b17b2750f5f8b44b1c4c09e":[1,0,1632,1],
-"classTraitDoorCurtain2.html":[1,0,1633],
-"classTraitDoorCurtain2.html#aee16732f839dd53bf7a49de2a4bcd391":[1,0,1633,0],
-"classTraitDoorCurtain3.html":[1,0,1634],
-"classTraitDoorCurtain3.html#a247f2c7c76c7b097a38c565e47b10ac2":[1,0,1634,0],
-"classTraitDoorFence.html":[1,0,1635],
-"classTraitDoorFence.html#a3c7c8bf4e1b60582abfe54a3dd9d70b4":[1,0,1635,0],
-"classTraitDoorFrame.html":[1,0,1636],
-"classTraitDoorFrame.html#ab343e2af0b44daf071a0bbc7535dc5c5":[1,0,1636,0],
-"classTraitDoorSwing.html":[1,0,1640],
-"classTraitDoorSwing.html#a1897689db9b4c3e5831f763f276261de":[1,0,1640,2],
-"classTraitDoorSwing.html#ab03d902cf8b1d11252ef9038eacd7f1d":[1,0,1640,1],
-"classTraitDoorSwing.html#aca0158988369ad823267b50e84e975c1":[1,0,1640,3]
+"classTraitDoorCurtain.html#a89347d132b17b2750f5f8b44b1c4c09e":[1,0,1632,1]
 };

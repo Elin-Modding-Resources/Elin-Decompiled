@@ -1,5 +1,15 @@
 var NAVTREEINDEX70 =
 {
+"classGame.html#abeab15667eb7327ad8bdd55d59bdcf6f":[1,0,591,68],
+"classGame.html#ac194cdcc502d6e3f5c92ea1126a908d5":[1,0,591,53],
+"classGame.html#ac50ae8c89b2a4b7814c0cb6623656a20":[1,0,591,30],
+"classGame.html#aca7d98676e4be7cefa8eb603cbaa56a1":[1,0,591,28],
+"classGame.html#ad087a868ccb40bc9c7487fef56161212":[1,0,591,40],
+"classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1":[1,0,591,51],
+"classGame.html#ad4cd5264bb015e8e30a56880a5ac9776":[1,0,591,25],
+"classGame.html#ad8df470c569d4ed80aa973fd08e6efac":[1,0,591,17],
+"classGame.html#ad972ec618df0b2311be8173091df77cb":[1,0,591,36],
+"classGame.html#adc4fcdf04bc0105799d51b1e009a3c8d":[1,0,591,70],
 "classGame.html#add1c4d804bf54ef2718272d5c5261141":[1,0,591,62],
 "classGame.html#ade9ad14fdc23297b2803bb988cd2a401":[1,0,591,12],
 "classGame.html#ae12b72a9348adf2fac318a403394f9be":[1,0,591,56],
@@ -239,15 +249,5 @@ var NAVTREEINDEX70 =
 "classGameSetting_1_1RenderSetting.html#a3ac111a8067a63e300d15732a4efd145":[1,0,605,6,18],
 "classGameSetting_1_1RenderSetting.html#a3bebce8fd64a95c0096bd4ed9c59c489":[1,0,605,6,25],
 "classGameSetting_1_1RenderSetting.html#a3c01deda3421eadbc1fcbdf15a275a71":[1,0,605,6,40],
-"classGameSetting_1_1RenderSetting.html#a42f89db4180b00cb7f16d8741d30817e":[1,0,605,6,9],
-"classGameSetting_1_1RenderSetting.html#a45f6ebe317f503a9ab368010437c40f9":[1,0,605,6,19],
-"classGameSetting_1_1RenderSetting.html#a4bdbfd4571370bd8257f59dfe690d34c":[1,0,605,6,47],
-"classGameSetting_1_1RenderSetting.html#a524bde3cb08aa82353fd54f6e5a46d80":[1,0,605,6,28],
-"classGameSetting_1_1RenderSetting.html#a55ed4bdaa4f5ca30325278ff17e28bae":[1,0,605,6,36],
-"classGameSetting_1_1RenderSetting.html#a59a993c39fa2211745cabc04ace204a1":[1,0,605,6,13],
-"classGameSetting_1_1RenderSetting.html#a67a662d7364f6d980c1922f231ae81e6":[1,0,605,6,44],
-"classGameSetting_1_1RenderSetting.html#a79975fcfd56af7a47cdbee9909b2467a":[1,0,605,6,42],
-"classGameSetting_1_1RenderSetting.html#a82f492719e4f108dc60a71c6f3c0420c":[1,0,605,6,23],
-"classGameSetting_1_1RenderSetting.html#a85fd15e047495a6a7380f75e61a56ea0":[1,0,605,6,11],
-"classGameSetting_1_1RenderSetting.html#a8ac8de9786944f77a3994abfb79a26a5":[1,0,605,6,30]
+"classGameSetting_1_1RenderSetting.html#a42f89db4180b00cb7f16d8741d30817e":[1,0,605,6,9]
 };

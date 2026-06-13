@@ -76,6 +76,7 @@ var classTrait =
     [ "OnHeld", "classTrait.html#a2e7fac22e911788cd46f6da81ad8e245", null ],
     [ "OnImportMap", "classTrait.html#a01114b762877593444f784e64c4421de", null ],
     [ "OnInstall", "classTrait.html#a3ec98447690dd68571b75ff355289308", null ],
+    [ "OnListInteraction", "classTrait.html#a8e4a95f94e7acdaf9adc8010f717c576", null ],
     [ "OnLockOpen", "classTrait.html#abc4a4c98642a84d4279cabe112663e6b", null ],
     [ "OnOpenDoor", "classTrait.html#a63a6da2dbdf7baf6aecd4213efc8ce64", null ],
     [ "OnRead", "classTrait.html#a3536e5d336611ddb31db73dd27e15265", null ],

@@ -30,6 +30,13 @@ var ID__Achievement_8cs =
       [ "PRIEST", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9af97b352f735dd1cb723e4606f0782532", null ],
       [ "PRIEST2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ae930b9fdf4a48f0e114edf504930a522", null ],
       [ "MAMA2", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a71e1170613cc0f905b8bc426fe7f65eb", null ],
-      [ "MAMA3", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9afdbb86f18777865a07fcec2f7decec6a", null ]
+      [ "MAMA3", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9afdbb86f18777865a07fcec2f7decec6a", null ],
+      [ "DIARY", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ab900fb9f5726ca76a4d06adfe9c1a62a", null ],
+      [ "LITTLEMIG", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9ace7749109c1e8383aa6921ff35d3430d", null ],
+      [ "MAMMOTH", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a7bd8d762a338118fce3df129202eaed6", null ],
+      [ "NIRVANA", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a62c2f0fa26b1d1a7ce4e48537262b4c7", null ],
+      [ "SMOKE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a6d13a238611766e52de32375eedf319b", null ],
+      [ "SNAIL", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a1cc72022bae6b6f0d1e3b2f5e34626f2", null ],
+      [ "UPGRADE", "ID__Achievement_8cs.html#af30f45c9abd9d83624e399923fe2e1e9a7f10b7b76869bf2e029b6ce4632e1323", null ]
     ] ]
 ];

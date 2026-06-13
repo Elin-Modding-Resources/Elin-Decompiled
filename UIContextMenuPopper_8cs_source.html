@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.315 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.316 Nightly</span>
    </div>
   </td>
  </tr>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('UIContextMenuPopper_8cs_source.html','
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a>.<a class="code hl_variable" href="classUIContextMenu.html#a63e37bbf16d92f43625ba8e08cc99270">Current</a>.<a class="code hl_variable" href="classUIContextMenu.html#a7c9a8e297d2abd34ab95906d57954c5c">hideOnMouseLeave</a>)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_class" href="classUIContextMenuPopper.html">UIContextMenuPopper</a>[] componentsInChildren = <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a>.<a class="code hl_variable" href="classUIContextMenu.html#a63e37bbf16d92f43625ba8e08cc99270">Current</a>.GetComponentsInChildren&lt;<a class="code hl_class" href="classUIContextMenuPopper.html">UIContextMenuPopper</a>&gt;();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_class" href="classUIContextMenuPopper.html">UIContextMenuPopper</a>[] componentsInChildren = (<a class="code hl_variable" href="classUIContextMenuPopper.html#a02af504e9ee45171f5d9c572437477a1">parent</a> ? <a class="code hl_variable" href="classUIContextMenuPopper.html#a02af504e9ee45171f5d9c572437477a1">parent</a> : <a class="code hl_class" href="classUIContextMenu.html">UIContextMenu</a>.<a class="code hl_variable" href="classUIContextMenu.html#a63e37bbf16d92f43625ba8e08cc99270">Current</a>).GetComponentsInChildren&lt;UIContextMenuPopper&gt;();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; componentsInChildren.Length; i++)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                componentsInChildren[i].<a class="code hl_function" href="classUIContextMenuPopper.html#a00e586ac308b538a06badeebe9610f0d">Depop</a>();</div>

@@ -1,5 +1,15 @@
 var NAVTREEINDEX91 =
 {
+"classNotificationStats.html#a425dc2de345d36324cab84c75606389d":[1,0,996,0],
+"classNotificationStats.html#a55e688bf4047932a997e859366c43d4c":[1,0,996,6],
+"classNotificationStats.html#a5b16835fe43bbd355171e7494bcc59a2":[1,0,996,4],
+"classNotificationStats.html#a92d7c509592028fec5be287cb599ec17":[1,0,996,2],
+"classNotificationStats.html#a9ceb388a5c83dca36f61fa7fccf35d30":[1,0,996,7],
+"classNotificationStats.html#aa0643b05b6b57039356c7526a261bc72":[1,0,996,1],
+"classNotificationStats.html#ac65bc846baf55a3773739f9dc697bc5b":[1,0,996,5],
+"classNotificationStatsMana.html":[1,0,997],
+"classNotificationStatsMana.html#aada441d31b6c95b68f82b12af8649d37":[1,0,997,1],
+"classNotificationStatsMana.html#ab57132f0a714bbf7183fcba5a800d376":[1,0,997,0],
 "classNumLog.html":[1,0,998],
 "classNumLog.html#a13bcc23bd682feb70fb0d70f60ad086b":[1,0,998,2],
 "classNumLog.html#a2d112e4fde180dbdca75688c45b05ef9":[1,0,998,9],
@@ -239,15 +249,5 @@ var NAVTREEINDEX91 =
 "classPartialMapMenu.html#a2a57dab2267a2d78e4c0e7e74fe2c8d6":[1,0,1010,6],
 "classPartialMapMenu.html#a3a2afc9ed4964d6d02d065b5540c80a7":[1,0,1010,28],
 "classPartialMapMenu.html#a3f26353bd413d528bd683b112517516c":[1,0,1010,4],
-"classPartialMapMenu.html#a45837ed1cb521249a7285243946c1d20":[1,0,1010,12],
-"classPartialMapMenu.html#a490264bbdfd2119d7bf3917e6c7e97ef":[1,0,1010,16],
-"classPartialMapMenu.html#a54c60ef9cf32600cb78437cc2f3cb40a":[1,0,1010,13],
-"classPartialMapMenu.html#a5a1501c24381f6bd17e520a6758eb2e6":[1,0,1010,24],
-"classPartialMapMenu.html#a5fcb392de10088fd2aef8bf7dc4bb0be":[1,0,1010,26],
-"classPartialMapMenu.html#a6060ee4dc7273d4526502d2e64d6e016":[1,0,1010,7],
-"classPartialMapMenu.html#a67e157b82b8af5b11a9413b7b9a2de5f":[1,0,1010,19],
-"classPartialMapMenu.html#a71bddd02233887b9fc255150eecffd9a":[1,0,1010,11],
-"classPartialMapMenu.html#a7da8aedd3df54a7726c51f4d1d97f3b7":[1,0,1010,27],
-"classPartialMapMenu.html#a83e4234dffabf828255014af46f8af8b":[1,0,1010,29],
-"classPartialMapMenu.html#a8d9ce95a5fe42aed83ff00166085d101":[1,0,1010,22]
+"classPartialMapMenu.html#a45837ed1cb521249a7285243946c1d20":[1,0,1010,12]
 };

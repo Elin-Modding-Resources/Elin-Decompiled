@@ -1,5 +1,15 @@
 var NAVTREEINDEX69 =
 {
+"classFactionBranch.html#aebe10599ea9fecaad0681c0c43158e90":[1,0,570,22],
+"classFactionBranch.html#aed5261461375018a53ad7853e6b081c6":[1,0,570,97],
+"classFactionBranch.html#aef58f0fe5e6b6d513f9119bfc45d9bc9":[1,0,570,90],
+"classFactionBranch.html#aefa28ddde0dcdaee119ec726c466ddb4":[1,0,570,21],
+"classFactionBranch.html#af173ffe36dbf9a092fd1a87884292869":[1,0,570,100],
+"classFactionBranch.html#af30460d5bfe8e658f642125ec60adf77":[1,0,570,31],
+"classFactionBranch.html#af3e0056cddbc23577321456176f5de3f":[1,0,570,6],
+"classFactionBranch.html#af46ece49058e8d974d0b0044b948014e":[1,0,570,3],
+"classFactionBranch.html#af7c531edafe2a33ec3f2483a67d6ee25":[1,0,570,9],
+"classFactionBranch.html#afbb13a7a836830d4d9d4bb55e505f1d7":[1,0,570,64],
 "classFactionBranch_1_1Statistics.html":[1,0,570,0],
 "classFactionBranch_1_1Statistics.html#a2f0ac1be8ed0c97edf64f0e25ca2979d":[1,0,570,0,1],
 "classFactionBranch_1_1Statistics.html#a411501e6fcd5c839e8e58e9c3c36c91d":[1,0,570,0,3],
@@ -239,15 +249,5 @@ var NAVTREEINDEX69 =
 "classGame.html#ab07259f062c45e3591ccd2b1e9b9330c":[1,0,591,43],
 "classGame.html#ab25d260f6837c8fad664a8d59a2697b0":[1,0,591,59],
 "classGame.html#ab5a1c307fccf9aecd72bfaafc1b69558":[1,0,591,3],
-"classGame.html#abc5c100c5634a7f0a72abbebe0a6dc96":[1,0,591,13],
-"classGame.html#abeab15667eb7327ad8bdd55d59bdcf6f":[1,0,591,68],
-"classGame.html#ac194cdcc502d6e3f5c92ea1126a908d5":[1,0,591,53],
-"classGame.html#ac50ae8c89b2a4b7814c0cb6623656a20":[1,0,591,30],
-"classGame.html#aca7d98676e4be7cefa8eb603cbaa56a1":[1,0,591,28],
-"classGame.html#ad087a868ccb40bc9c7487fef56161212":[1,0,591,40],
-"classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1":[1,0,591,51],
-"classGame.html#ad4cd5264bb015e8e30a56880a5ac9776":[1,0,591,25],
-"classGame.html#ad8df470c569d4ed80aa973fd08e6efac":[1,0,591,17],
-"classGame.html#ad972ec618df0b2311be8173091df77cb":[1,0,591,36],
-"classGame.html#adc4fcdf04bc0105799d51b1e009a3c8d":[1,0,591,70]
+"classGame.html#abc5c100c5634a7f0a72abbebe0a6dc96":[1,0,591,13]
 };

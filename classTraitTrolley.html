@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.315 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.316 Nightly</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af0f060ec628470b1d81957f5bb97cfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8044046332f08d1dc60011a5c459e5e0"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitTrolley.html#a8044046332f08d1dc60011a5c459e5e0">GetIdSound</a> ()</td></tr>
 <tr class="separator:a8044046332f08d1dc60011a5c459e5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5c734043469f9edffb99baaf532455"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitTrolley.html#a2d5c734043469f9edffb99baaf532455">ShouldPlaySound</a> (<a class="el" href="classPoint.html">Point</a> p)</td></tr>
+<tr class="separator:a2d5c734043469f9edffb99baaf532455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classTraitFloorSwitch"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classTraitFloorSwitch')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classTraitFloorSwitch.html">TraitFloorSwitch</a></td></tr>
 <tr class="memitem:a8cb9fe69f1bad95221af3b4f3282c01e inherit pub_methods_classTraitFloorSwitch"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitFloorSwitch.html#a8cb9fe69f1bad95221af3b4f3282c01e">OnStepped</a> (<a class="el" href="classChara.html">Chara</a> c)</td></tr>
 <tr class="separator:a8cb9fe69f1bad95221af3b4f3282c01e inherit pub_methods_classTraitFloorSwitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,6 +201,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aed664cfcbe19bd9b7cb288461852ad46 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f776deb99822151021ce9c1c20ed395 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a5f776deb99822151021ce9c1c20ed395">OnRenderTile</a> (<a class="el" href="classPoint.html">Point</a> point, <a class="el" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a> result, int dir)</td></tr>
 <tr class="separator:a5f776deb99822151021ce9c1c20ed395 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4a95f94e7acdaf9adc8010f717c576 inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#a8e4a95f94e7acdaf9adc8010f717c576">OnListInteraction</a> (<a class="el" href="classInvOwner_1_1ListInteraction.html">InvOwner.ListInteraction</a> list, <a class="el" href="classButtonGrid.html">ButtonGrid</a> b, bool context)</td></tr>
+<tr class="separator:a8e4a95f94e7acdaf9adc8010f717c576 inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af198baeac5df3a1a0efc771401772f0d inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#af198baeac5df3a1a0efc771401772f0d">CompareTo</a> (<a class="el" href="classCard.html">Card</a> b)</td></tr>
 <tr class="separator:af198baeac5df3a1a0efc771401772f0d inherit pub_methods_classTrait"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbbdd1adb2e0f80d00fda68c6bca34ff inherit pub_methods_classTrait"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrait.html#acbbdd1adb2e0f80d00fda68c6bca34ff">CanBuiltAt</a> (<a class="el" href="classPoint.html">Point</a> p)</td></tr>
@@ -849,22 +853,33 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitTrolley_8cs_source.html#l00065">65</a> of file <a class="el" href="TraitTrolley_8cs_source.html">TraitTrolley.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (!(<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a> == <span class="stringliteral">&quot;play_ride_kin&quot;</span>))</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>)</div>
 <div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac2303db867c29bad3e86b57165c0a841">idSkin</a> != 7)</div>
-<div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_trolley&quot;</span>;</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_bike&quot;</span>;</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_kin&quot;</span>;</div>
-<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;play_ride_kin&quot;</span>:</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_kin&quot;</span>;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;ride_boat&quot;</span>:</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;ride_boat2&quot;</span>:</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_boat&quot;</span>;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">case</span> <span class="stringliteral">&quot;play_ride_big&quot;</span>:</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac2303db867c29bad3e86b57165c0a841">idSkin</a> != 0)</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_trolley&quot;</span>;</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_kin&quot;</span>;</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#ac2303db867c29bad3e86b57165c0a841">idSkin</a> != 7)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_trolley&quot;</span>;</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;ride_bike&quot;</span>;</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
 <div class="ttc" id="aclassCard_html_a2460fdceeef9382e2fccf227a568cf58"><div class="ttname"><a href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">Card.id</a></div><div class="ttdeci">string id</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00036">Card.cs:36</a></div></div>
 <div class="ttc" id="aclassCard_html_ac2303db867c29bad3e86b57165c0a841"><div class="ttname"><a href="classCard.html#ac2303db867c29bad3e86b57165c0a841">Card.idSkin</a></div><div class="ttdeci">int idSkin</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00364">Card.cs:365</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Card_8cs_source.html#l00036">Card.id</a>, <a class="el" href="Card_8cs_source.html#l00365">Card.idSkin</a>, and <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00057">AI_Trolley.Run()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00138">AI_Trolley.Stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00057">AI_Trolley.Run()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00148">AI_Trolley.Stop()</a>.</p>
 
 </div>
 </div>
@@ -905,10 +920,52 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   61</span>            });</div>
 <div class="line"><span class="lineno">   62</span>        }</div>
 <div class="line"><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09262">Chara.cs:9262</a></div></div>
+<div class="ttc" id="aclassChara_html_a596e564cd2a43240c20a500fb640d97c"><div class="ttname"><a href="classChara.html#a596e564cd2a43240c20a500fb640d97c">Chara.SetAI</a></div><div class="ttdeci">AIAct SetAI(AIAct g)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l09267">Chara.cs:9267</a></div></div>
 <div class="ttc" id="aclassTraitTrolley_html_a6426325cb252d6f8288e12173e519aa0"><div class="ttname"><a href="classTraitTrolley.html#a6426325cb252d6f8288e12173e519aa0">TraitTrolley.CanActivate</a></div><div class="ttdeci">bool CanActivate(Chara c)</div><div class="ttdef"><b>Definition:</b> <a href="TraitTrolley_8cs_source.html#l00029">TraitTrolley.cs:29</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TraitTrolley_8cs_source.html#l00029">CanActivate()</a>, and <a class="el" href="Chara_8cs_source.html#l09262">Chara.SetAI()</a>.</p>
+<p class="reference">References <a class="el" href="TraitTrolley_8cs_source.html#l00029">CanActivate()</a>, and <a class="el" href="Chara_8cs_source.html#l09267">Chara.SetAI()</a>.</p>
+
+</div>
+</div>
+<a id="a2d5c734043469f9edffb99baaf532455" name="a2d5c734043469f9edffb99baaf532455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5c734043469f9edffb99baaf532455">&#9670;&#160;</a></span>ShouldPlaySound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool TraitTrolley.ShouldPlaySound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TraitTrolley_8cs_source.html#l00089">89</a> of file <a class="el" href="TraitTrolley_8cs_source.html">TraitTrolley.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>    {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">string</span> <span class="keywordtype">id</span> = <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#a2460fdceeef9382e2fccf227a568cf58">id</a>;</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="stringliteral">&quot;ride_boat&quot;</span> || <span class="keywordtype">id</span> == <span class="stringliteral">&quot;ride_boat2&quot;</span>)</div>
+<div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">return</span> p.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#a4322883653a907833926f8d4e5db08c9">IsTopWaterAndNoSnow</a>;</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="ttc" id="aclassCell_html_a4322883653a907833926f8d4e5db08c9"><div class="ttname"><a href="classCell.html#a4322883653a907833926f8d4e5db08c9">Cell.IsTopWaterAndNoSnow</a></div><div class="ttdeci">bool IsTopWaterAndNoSnow</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00719">Cell.cs:720</a></div></div>
+<div class="ttc" id="aclassPoint_html_ae77439bcd222df31e3380daf61159f8b"><div class="ttname"><a href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">Point.cell</a></div><div class="ttdeci">Cell cell</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00051">Point.cs:51</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00051">Point.cell</a>, <a class="el" href="Card_8cs_source.html#l00036">Card.id</a>, <a class="el" href="Cell_8cs_source.html#l00720">Cell.IsTopWaterAndNoSnow</a>, and <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00057">AI_Trolley.Run()</a>.</p>
 
 </div>
 </div>
@@ -981,7 +1038,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   26</span>        }</div>
 <div class="line"><span class="lineno">   27</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00057">AI_Trolley.Run()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00138">AI_Trolley.Stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__Trolley_8cs_source.html#l00057">AI_Trolley.Run()</a>, and <a class="el" href="AI__Trolley_8cs_source.html#l00148">AI_Trolley.Stop()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,12 @@
 var NAVTREEINDEX19 =
 {
+"TraitFoodPrepared_8cs.html":[2,0,0,1588],
+"TraitFoodPrepared_8cs_source.html":[2,0,0,1588],
+"TraitFoodSeasoning_8cs.html":[2,0,0,1590],
+"TraitFoodSeasoning_8cs_source.html":[2,0,0,1590],
+"TraitFoodTravel_8cs.html":[2,0,0,1591],
+"TraitFoodTravel_8cs_source.html":[2,0,0,1591],
+"TraitFood_8cs.html":[2,0,0,1578],
 "TraitFood_8cs_source.html":[2,0,0,1578],
 "TraitFortuneBall_8cs.html":[2,0,0,1592],
 "TraitFortuneBall_8cs_source.html":[2,0,0,1592],
@@ -242,12 +249,5 @@ var NAVTREEINDEX19 =
 "TraitMerchantTravel_8cs.html":[2,0,0,1711],
 "TraitMerchantTravel_8cs_source.html":[2,0,0,1711],
 "TraitMerchantWeapon_8cs.html":[2,0,0,1713],
-"TraitMerchantWeapon_8cs_source.html":[2,0,0,1713],
-"TraitMerchant_8cs.html":[2,0,0,1682],
-"TraitMerchant_8cs_source.html":[2,0,0,1682],
-"TraitMiko__Mifu_8cs.html":[2,0,0,1714],
-"TraitMiko__Mifu_8cs_source.html":[2,0,0,1714],
-"TraitMiko__Nefu_8cs.html":[2,0,0,1715],
-"TraitMiko__Nefu_8cs_source.html":[2,0,0,1715],
-"TraitMill_8cs.html":[2,0,0,1716]
+"TraitMerchantWeapon_8cs_source.html":[2,0,0,1713]
 };

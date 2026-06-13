@@ -1,5 +1,13 @@
 var NAVTREEINDEX55 =
 {
+"classCoreConfig_1_1Test.html#ad7509d26c9a03e21511a5be6a3ad2e5f":[1,0,425,11,7],
+"classCoreConfig_1_1Test.html#adf476a734e94a361789a3dac60893216":[1,0,425,11,2],
+"classCoreConfig_1_1Test.html#aee9a2780269b705ce20ae046dccb91bb":[1,0,425,11,19],
+"classCoreConfig_1_1Test.html#af11cdf6acc44b7f1f60cb0177714b289":[1,0,425,11,16],
+"classCoreConfig_1_1Test.html#afa510c7e3b781dc922924515b6c8c94d":[1,0,425,11,20],
+"classCoreConfig_1_1Test.html#afd53c2aa7f1341c4081787476c302f33":[1,0,425,11,11],
+"classCoreConfig_1_1UISetting.html":[1,0,425,12],
+"classCoreConfig_1_1UISetting.html#a10f31e15e8a22b0e953c55c322b90322":[1,0,425,12,18],
 "classCoreConfig_1_1UISetting.html#a11b5c179326dcf16849a58946661ab01":[1,0,425,12,4],
 "classCoreConfig_1_1UISetting.html#a1910f238c7a657d899096e24eb178338":[1,0,425,12,11],
 "classCoreConfig_1_1UISetting.html#a1a496712bbae62495e0eda86669b05e4":[1,0,425,12,13],
@@ -241,13 +249,5 @@ var NAVTREEINDEX55 =
 "classCoreEmu.html":[1,0,427],
 "classCoreEmu.html#a4b106800b20b0f433295d4a97120289d":[1,0,427,0],
 "classCoreEmu.html#ab13c65dc949c59dd087aa7adca90bf7a":[1,0,427,1],
-"classCoreEmu.html#ae9d169985c1bfa505192ee17367d7ca6":[1,0,427,2],
-"classCoreExtension.html":[1,0,428],
-"classCoreExtension.html#a159725003d2a00c906ed83536a69b398":[1,0,428,1],
-"classCoreExtension.html#a184b445eb60c2552eafc9289727a077f":[1,0,428,4],
-"classCoreExtension.html#a2813e62f4e3b6a18f35ccdafb0430fd8":[1,0,428,5],
-"classCoreExtension.html#a440f00ea6b2f3f00507e5bfb4277a2f5":[1,0,428,2],
-"classCoreExtension.html#a71d44e80d0f8997765468e77dff2318e":[1,0,428,7],
-"classCoreExtension.html#a873bfb57dd3a03eb445f9955af485a6b":[1,0,428,0],
-"classCoreExtension.html#aa70405ca2591819d6475ea486016a06a":[1,0,428,3]
+"classCoreEmu.html#ae9d169985c1bfa505192ee17367d7ca6":[1,0,427,2]
 };

@@ -1,7 +1,7 @@
 var CustomDramaExpansion_8cs =
 [
     [ "CustomDramaExpansion", "classCustomDramaExpansion.html", "classCustomDramaExpansion" ],
-    [ "add_item", "CustomDramaExpansion_8cs.html#a613ef3caf17caa91bee20ccac84f9670", null ],
+    [ "add_item", "CustomDramaExpansion_8cs.html#a5652dc2ecc71e64c980858c9c45a5bb9", null ],
     [ "and", "CustomDramaExpansion_8cs.html#a19df1e586ef74c47121d4b43bf991897", null ],
     [ "apply_condition", "CustomDramaExpansion_8cs.html#a93795274253215b0979c01694f52b366", null ],
     [ "console_cmd", "CustomDramaExpansion_8cs.html#a31a0bbf665c1690afab24bdb1dbee60d", null ],

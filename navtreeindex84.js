@@ -1,5 +1,15 @@
 var NAVTREEINDEX84 =
 {
+"classLayerNewZone.html#a46cfa445703dd82116bfd17b3ae1c800":[1,0,887,3],
+"classLayerNewZone.html#a577ee0893e3ecd16b7f207e57e8912a7":[1,0,887,5],
+"classLayerNewZone.html#a625c0067bad64da5fdabf3886146504e":[1,0,887,6],
+"classLayerNewZone.html#a66365084c5e0961f2177250fb601fdb4":[1,0,887,4],
+"classLayerNewZone.html#ab1159998a59539e9ff2402ff4f80aa30":[1,0,887,1],
+"classLayerNewZone.html#acb4716ff30147926c26b7b2926141799":[1,0,887,2],
+"classLayerNewZone.html#ad88e546cbe4ba72506702e6d962bdf92":[1,0,887,7],
+"classLayerNewspaper.html":[1,0,886],
+"classLayerNewspaper.html#a00cacba299ad97b3e4da6cfd3d446c61":[1,0,886,26],
+"classLayerNewspaper.html#a058b88fed10b7390b6b692747d194d1c":[1,0,886,19],
 "classLayerNewspaper.html#a27e4c094cbdf9e83e5cf147a2549dfcc":[1,0,886,6],
 "classLayerNewspaper.html#a2bb186920786f44ad20851466d9d44a6":[1,0,886,10],
 "classLayerNewspaper.html#a4462204f2d3064aa40c0a86863cb7411":[1,0,886,7],
@@ -239,15 +249,5 @@ var NAVTREEINDEX84 =
 "classLayerTech.html#a9e3265d037a19892a2be8effde7eae8b":[1,0,904,3],
 "classLayerTech.html#aa70fe42a095cd7bb5fdc81c58a438b97":[1,0,904,5],
 "classLayerTech.html#af2477012071274f4a672760651eea946":[1,0,904,1],
-"classLayerTextureViewer.html":[1,0,905],
-"classLayerTextureViewer.html#a027e204389c830fe21d4451cee837abc":[1,0,905,19],
-"classLayerTextureViewer.html#a16fe35776804b0d2c77cb8926be365af":[1,0,905,10],
-"classLayerTextureViewer.html#a189e535214252ee932b8739b8bdbcf68":[1,0,905,14],
-"classLayerTextureViewer.html#a243122798733a7e5aed89f7e3b9fed0b":[1,0,905,12],
-"classLayerTextureViewer.html#a2930e0cb430bccd0848a288a0e4a1e6a":[1,0,905,0],
-"classLayerTextureViewer.html#a2d3834df56bff7fcabae2e45a1382c60":[1,0,905,13],
-"classLayerTextureViewer.html#a61d288c187859e76c6d0920a8fc1c5d3":[1,0,905,22],
-"classLayerTextureViewer.html#a6a3fd480e22790bb8641e587782d7b3d":[1,0,905,25],
-"classLayerTextureViewer.html#a7079b77b694d0eb1f7b739a3d2455e00":[1,0,905,3],
-"classLayerTextureViewer.html#a71e2d2da9af643e8c96654995fc2ab47":[1,0,905,1]
+"classLayerTextureViewer.html":[1,0,905]
 };

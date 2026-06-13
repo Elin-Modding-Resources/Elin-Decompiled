@@ -1,5 +1,12 @@
 var NAVTREEINDEX18 =
 {
+"TraitChara_8cs.html":[2,0,0,1463],
+"TraitChara_8cs_source.html":[2,0,0,1463],
+"TraitChef_8cs.html":[2,0,0,1464],
+"TraitChef_8cs_source.html":[2,0,0,1464],
+"TraitChestMerchant_8cs.html":[2,0,0,1466],
+"TraitChestMerchant_8cs_source.html":[2,0,0,1466],
+"TraitChestOyster_8cs.html":[2,0,0,1467],
 "TraitChestOyster_8cs_source.html":[2,0,0,1467],
 "TraitChestPractice_8cs.html":[2,0,0,1468],
 "TraitChestPractice_8cs_source.html":[2,0,0,1468],
@@ -242,12 +249,5 @@ var NAVTREEINDEX18 =
 "TraitFoodNut_8cs.html":[2,0,0,1587],
 "TraitFoodNut_8cs_source.html":[2,0,0,1587],
 "TraitFoodPreparedPackage_8cs.html":[2,0,0,1589],
-"TraitFoodPreparedPackage_8cs_source.html":[2,0,0,1589],
-"TraitFoodPrepared_8cs.html":[2,0,0,1588],
-"TraitFoodPrepared_8cs_source.html":[2,0,0,1588],
-"TraitFoodSeasoning_8cs.html":[2,0,0,1590],
-"TraitFoodSeasoning_8cs_source.html":[2,0,0,1590],
-"TraitFoodTravel_8cs.html":[2,0,0,1591],
-"TraitFoodTravel_8cs_source.html":[2,0,0,1591],
-"TraitFood_8cs.html":[2,0,0,1578]
+"TraitFoodPreparedPackage_8cs_source.html":[2,0,0,1589]
 };

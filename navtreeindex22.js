@@ -1,5 +1,12 @@
 var NAVTREEINDEX22 =
 {
+"TraitWhistlePeace_8cs_source.html":[2,0,0,1961],
+"TraitWindow_8cs.html":[2,0,0,1962],
+"TraitWindow_8cs_source.html":[2,0,0,1962],
+"TraitWoodMill_8cs.html":[2,0,0,1963],
+"TraitWoodMill_8cs_source.html":[2,0,0,1963],
+"TraitWorkbenchFuel_8cs.html":[2,0,0,1965],
+"TraitWorkbenchFuel_8cs_source.html":[2,0,0,1965],
 "TraitWorkbench_8cs.html":[2,0,0,1964],
 "TraitWorkbench_8cs_source.html":[2,0,0,1964],
 "TraitWrench_8cs.html":[2,0,0,1966],
@@ -242,12 +249,5 @@ var NAVTREEINDEX22 =
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288a8e79e9ffded94b8fae2c23ff9793d653":[2,0,0,2010,0,3],
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288aa9c7b1d7219fa9d3de551ba5bc639eb6":[2,0,0,2010,0,2],
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288ae599161956d626eda4cb0a5ffb85271c":[2,0,0,2010,0,1],
-"VisitorState_8cs_source.html":[2,0,0,2010],
-"WM_8cs.html":[2,0,0,2,0,0,10],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3d":[2,0,0,2,0,0,10,0],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da00fbb0efe65c1695a9a2019b7daefa9d":[2,0,0,2,0,0,10,0,110],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da027acd3aa6b1dd7f26119d3cf0f9a063":[2,0,0,2,0,0,10,0,96],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da02dc039367c8055965649d9b95864e3f":[2,0,0,2,0,0,10,0,113],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da02fe48387ff216163f3b9cfb5cefc1c1":[2,0,0,2,0,0,10,0,209],
-"WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da0468e4e5bcaffcbb4f112b922e976344":[2,0,0,2,0,0,10,0,55]
+"VisitorState_8cs_source.html":[2,0,0,2010]
 };

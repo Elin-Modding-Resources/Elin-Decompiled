@@ -1,5 +1,15 @@
 var NAVTREEINDEX115 =
 {
+"classSpriteBasedLaser.html#acecba11968e71d99020698f25bdc1b22":[1,0,1323,26],
+"classSpriteBasedLaser.html#acfee00c85e09316c8ad4a3bfb194f78d":[1,0,1323,35],
+"classSpriteBasedLaser.html#ad0df5c15f16e1713c0e25ca4aa6ee73c":[1,0,1323,37],
+"classSpriteBasedLaser.html#ad95230d56c222d94094d0295d693adb6":[1,0,1323,11],
+"classSpriteBasedLaser.html#ae0131f2a5c6ce3312b12103a1e4b76c4":[1,0,1323,39],
+"classSpriteBasedLaser.html#ae547100865d56d546c2b0c6af9425727":[1,0,1323,31],
+"classSpriteBasedLaser.html#ae8e86f50113b497a10a68cd725a37d84":[1,0,1323,40],
+"classSpriteBasedLaser.html#ae8e9822a90fc5847b534945986c01e82":[1,0,1323,43],
+"classSpriteBasedLaser.html#aea6500d993bd74d0aacb0601e559d13d":[1,0,1323,33],
+"classSpriteBasedLaser.html#af596f8c9f20dfcc05e13cfd399f13693":[1,0,1323,0],
 "classSpriteBasedLaser.html#af702ecf836512057f7f209496ec3e746":[1,0,1323,17],
 "classSpriteBasedLaser.html#af723a6519af2ca9b810ed4f62f34c144":[1,0,1323,15],
 "classSpriteBasedLaser.html#afb29aa363afaaeba1e35f6375a089036":[1,0,1323,23],
@@ -239,15 +249,5 @@ var NAVTREEINDEX115 =
 "classSurvivalManager_1_1Flags.html":[1,0,1355,0],
 "classSurvivalManager_1_1Flags.html#a027aeea8a1056f83bb8f71088c5249a7":[1,0,1355,0,8],
 "classSurvivalManager_1_1Flags.html#a32cc9cb8c5e242fdad8b825125f4c032":[1,0,1355,0,5],
-"classSurvivalManager_1_1Flags.html#a3c0599b88d8ebdaf2fe3be4b77ef0e4d":[1,0,1355,0,10],
-"classSurvivalManager_1_1Flags.html#a45559482e388dde90ddd6ab1bc72e769":[1,0,1355,0,4],
-"classSurvivalManager_1_1Flags.html#a5cd4d0e0ecb062c1fd5fa2279b542b7e":[1,0,1355,0,11],
-"classSurvivalManager_1_1Flags.html#a760c8f77f7873985a7bf72d3e31f6b40":[1,0,1355,0,1],
-"classSurvivalManager_1_1Flags.html#a78c2d65f0df6624e267b41d71390cf53":[1,0,1355,0,9],
-"classSurvivalManager_1_1Flags.html#a8d23380cb67ade7e8afe1fdd836b3e0c":[1,0,1355,0,12],
-"classSurvivalManager_1_1Flags.html#a8e2c80376db7abe62fac9eda0b626edb":[1,0,1355,0,6],
-"classSurvivalManager_1_1Flags.html#aa5b63b39d661468259cd1786936fd0e9":[1,0,1355,0,7],
-"classSurvivalManager_1_1Flags.html#aaae6c9849f5fabad98ba275bf7865cdc":[1,0,1355,0,2],
-"classSurvivalManager_1_1Flags.html#ac976238faa2e89c4f137aef4e7de887d":[1,0,1355,0,3],
-"classSurvivalManager_1_1Flags.html#ae9a61858491972fb0c828413b19d6b49":[1,0,1355,0,0]
+"classSurvivalManager_1_1Flags.html#a3c0599b88d8ebdaf2fe3be4b77ef0e4d":[1,0,1355,0,10]
 };

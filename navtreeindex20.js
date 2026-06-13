@@ -1,5 +1,12 @@
 var NAVTREEINDEX20 =
 {
+"TraitMerchant_8cs.html":[2,0,0,1682],
+"TraitMerchant_8cs_source.html":[2,0,0,1682],
+"TraitMiko__Mifu_8cs.html":[2,0,0,1714],
+"TraitMiko__Mifu_8cs_source.html":[2,0,0,1714],
+"TraitMiko__Nefu_8cs.html":[2,0,0,1715],
+"TraitMiko__Nefu_8cs_source.html":[2,0,0,1715],
+"TraitMill_8cs.html":[2,0,0,1716],
 "TraitMill_8cs_source.html":[2,0,0,1716],
 "TraitMimu_8cs.html":[2,0,0,1717],
 "TraitMimu_8cs_source.html":[2,0,0,1717],
@@ -242,12 +249,5 @@ var NAVTREEINDEX20 =
 "TraitSnow_8cs_source.html":[2,0,0,1834],
 "TraitSofa_8cs.html":[2,0,0,1835],
 "TraitSofa_8cs_source.html":[2,0,0,1835],
-"TraitSorin_8cs.html":[2,0,0,1836],
-"TraitSorin_8cs_source.html":[2,0,0,1836],
-"TraitSpeaker_8cs.html":[2,0,0,1837],
-"TraitSpeaker_8cs_source.html":[2,0,0,1837],
-"TraitSpecialLantern_8cs.html":[2,0,0,1838],
-"TraitSpecialLantern_8cs_source.html":[2,0,0,1838],
-"TraitSpellbookRandom_8cs.html":[2,0,0,1840],
-"TraitSpellbookRandom_8cs_source.html":[2,0,0,1840]
+"TraitSorin_8cs.html":[2,0,0,1836]
 };

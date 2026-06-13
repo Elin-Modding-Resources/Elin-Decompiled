@@ -1,5 +1,17 @@
 var NAVTREEINDEX126 =
 {
+"classTraitFoodFish.html#a844ba52915c9c1616917ba3bed8f0014":[1,0,1692,0],
+"classTraitFoodFishSlice.html":[1,0,1693],
+"classTraitFoodFishSlice.html#a215c1b8d753c3d83eaba34517448f227":[1,0,1693,0],
+"classTraitFoodMeal.html":[1,0,1694],
+"classTraitFoodMeat.html":[1,0,1695],
+"classTraitFoodMeat.html#a191ea68390f5bed9c333b9de376ad5fd":[1,0,1695,0],
+"classTraitFoodMeat.html#aa792f2c17c7d0fd28603bbb8bbe30ad5":[1,0,1695,1],
+"classTraitFoodMeat.html#ab0e92b21d810be525166166aeeac4c4a":[1,0,1695,2],
+"classTraitFoodNut.html":[1,0,1696],
+"classTraitFoodNut.html#acaa966d671c0513320a6c4776f394d25":[1,0,1696,0],
+"classTraitFoodPrepared.html":[1,0,1697],
+"classTraitFoodPrepared.html#abfed20f491eec7c0fbdde9db74ff859a":[1,0,1697,0],
 "classTraitFoodPreparedPackage.html":[1,0,1698],
 "classTraitFoodPreparedPackage.html#a68d433792e701946bbe99206018e94e7":[1,0,1698,2],
 "classTraitFoodPreparedPackage.html#a6d50baf3f04d64802668f797894f8e87":[1,0,1698,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitIndulgence.html":[1,0,1752],
 "classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1752,0],
 "classTraitInformer.html":[1,0,1753],
-"classTraitInformer.html#a45d21aa6becf3adbbe756570bcef33d2":[1,0,1753,0],
-"classTraitInformer.html#a5c83359e8a084cf42606afae00f40bc9":[1,0,1753,2],
-"classTraitInformer.html#adfc92367a39bc18656a6248b2453ea76":[1,0,1753,1],
-"classTraitInnkeeper.html":[1,0,1754],
-"classTraitInnkeeper.html#a98842eadb445c2d9f7eb61046343acb7":[1,0,1754,0],
-"classTraitItem.html":[1,0,1755],
-"classTraitItem.html#a02208ed1a7513742a9168c1d82ff04d5":[1,0,1755,0],
-"classTraitItem.html#a67c970376a20a76d3abfa1ba8382d8ac":[1,0,1755,2],
-"classTraitItem.html#a9a7e274c9ee81e0b3b2982edb7cb472f":[1,0,1755,1],
-"classTraitItem.html#a9b65264c6f7cd5e29878041afa2af138":[1,0,1755,3],
-"classTraitItemProc.html":[1,0,1756],
-"classTraitItemProc.html#a25f0438f464274462cdf60267819711f":[1,0,1756,1],
-"classTraitItemProc.html#a2bff6aad8b590965d2578ef609b3de3c":[1,0,1756,6]
+"classTraitInformer.html#a45d21aa6becf3adbbe756570bcef33d2":[1,0,1753,0]
 };
