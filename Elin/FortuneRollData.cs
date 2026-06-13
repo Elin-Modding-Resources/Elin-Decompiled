@@ -130,7 +130,7 @@ public class FortuneRollData : EClass
 	public void RefreshPrize()
 	{
 		prizes.Clear();
-		Rand.SetSeed(EClass.game.seed + seed + count);
+		Rand.SetSeed(EClass.debug.enable ? (-1) : (EClass.game.seed + seed + count));
 		List<List<string>> list = GetPrizeList();
 		if ((EClass._zone.IsTown && EClass._zone.lv == 0) || (EClass.game.IsSurvival && EClass._zone is Zone_StartSiteSky))
 		{
@@ -184,7 +184,7 @@ public class FortuneRollData : EClass
 			{
 				"computer", "834", "1090", "goods_figure", "goods_canvas", "mb_1", "mb_2", "mb_3", "mb_4", "mb_5",
 				"1174", "1085", "toilet", "714", "nobility", "plat", "1165", "mathammer", "medal", "bbq",
-				"panty", "beehive", "ticket_resident", "lovepotion", "crystal_sun", "goods_crim"
+				"panty", "beehive", "ticket_resident", "lovepotion", "crystal_sun", "goods_crim", "ride_boat"
 			},
 			new List<string>
 			{
@@ -192,7 +192,10 @@ public class FortuneRollData : EClass
 				"plat",
 				"1165",
 				"boat3",
-				"medal"
+				"medal",
+				"ride_boat2",
+				"play_ride_big",
+				"scrubber"
 			}
 		};
 		if (EClass.pc.faction.IsGlobalPolicyActive(2712))
@@ -245,12 +248,16 @@ public class FortuneRollData : EClass
 					card.c_idRefCard = prize.idRef;
 					card.rarity = Rarity.Legendary;
 					break;
+				case "scrubber":
+					if (grade == 3)
+					{
+						card.rarity = Rarity.Legendary;
+						card.elements.SetBase(770, 1 + EClass.rnd(25));
+					}
+					break;
 				}
 			}
-			if (grade != 3)
-			{
-				prize.claimed = true;
-			}
+			prize.claimed = true;
 		}
 		else
 		{

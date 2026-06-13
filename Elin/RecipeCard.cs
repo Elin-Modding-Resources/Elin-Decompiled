@@ -464,11 +464,10 @@ public class RecipeCard : Recipe
 		{
 			mat = 2;
 		}
-		SourceMaterial.Row row = EClass.sources.materials.map.TryGetValue(mat) ?? EClass.sources.materials.map[2];
-		EClass.pc.PlaySound(row.GetSoundImpact());
 		t.SetDir(dir);
 		t.idSkin = idSkin;
 		EClass._zone.AddCard(t, pos);
+		t.PlaySoundImpact();
 		if (t.trait is TraitHouseBoard && ActionMode.Build.houseBoard != null)
 		{
 			(t.trait as TraitHouseBoard).data = IO.DeepCopy(ActionMode.Build.houseBoard.data);

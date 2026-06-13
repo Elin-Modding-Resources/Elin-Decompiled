@@ -35,6 +35,7 @@ public class InvOwnerEquip : InvOwner
 				}
 			}
 		});
+		trait.OnListInteraction(list, b, context);
 	}
 
 	public override bool IsFailByCurse(Thing t)

@@ -14,6 +14,10 @@ public class TraitDiary : TraitScroll
 		chara.MakeAlly(msg: false);
 		chara.PlaySound("identify");
 		chara.PlayEffect("teleport");
+		if (c.IsPC && GetParam(1) == "sister")
+		{
+			Steam.GetAchievement(ID_Achievement.DIARY);
+		}
 		owner.ModNum(-1);
 	}
 }

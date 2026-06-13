@@ -130,6 +130,10 @@ public class AI_Eat : AIAct
 					{
 						EClass.player.forceTalk = true;
 						owner.Talk("eatammoth");
+						if (owner.IsPC)
+						{
+							Steam.GetAchievement(ID_Achievement.MAMMOTH);
+						}
 					}
 				}
 				turn++;

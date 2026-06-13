@@ -6,4 +6,16 @@ public class TraitCard : TraitFigure
 	{
 		return -3;
 	}
+
+	public override void OnListInteraction(InvOwner.ListInteraction list, ButtonGrid b, bool context)
+	{
+		base.OnListInteraction(list, b, context);
+		if (context)
+		{
+			list.Add("invCollect", 150, delegate
+			{
+				ContentCodex.Collect(owner as Thing);
+			});
+		}
+	}
 }

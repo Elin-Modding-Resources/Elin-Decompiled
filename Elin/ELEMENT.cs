@@ -29,6 +29,8 @@ public class ELEMENT
 
 	public const int recharge = 761;
 
+	public const int effectRange = 770;
+
 	public const int comfort = 750;
 
 	public const int _void = 0;
@@ -77,12 +79,12 @@ public class ELEMENT
 
 	public const int fire = 21;
 
-	public static readonly int[] IDS = new int[36]
+	public static readonly int[] IDS = new int[37]
 	{
 		765, 763, 762, 751, 752, 753, 754, 755, 756, 759,
-		760, 761, 750, 0, 10, 1, 2, 3, 5, 11,
-		12, 13, 14, 15, 17, 18, 20, 16, 22, 23,
-		24, 25, 26, 29, 85, 21
+		760, 761, 770, 750, 0, 10, 1, 2, 3, 5,
+		11, 12, 13, 14, 15, 17, 18, 20, 16, 22,
+		23, 24, 25, 26, 29, 85, 21
 	};
 }
 public class Element : EClass

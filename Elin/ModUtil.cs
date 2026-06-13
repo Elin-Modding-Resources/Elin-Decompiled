@@ -177,6 +177,7 @@ public class ModUtil : EClass
 
 	private static void OnSourceImporting()
 	{
+		ExcelParser.allowTrimming = true;
 		ImportAllModSourceSheets();
 	}
 
@@ -209,6 +210,7 @@ public class ModUtil : EClass
 		SourceCache.FinalizeCache();
 		SourceCache.InvalidateCacheBlobs();
 		SourceCache.ClearDetail();
+		ExcelParser.ClearStaticRows();
 		if (EClass.core.launchArgs.Contains("EXPORTSOURCE"))
 		{
 			string text = CorePath.rootExe + "/SourceExport/" + EClass.core.version.GetText();
@@ -1115,7 +1117,7 @@ public class ModUtil : EClass
 			ContextMenuProxy contextMenuProxy = children.Find((ContextMenuProxy p) => p.MenuEntry == part);
 			if (contextMenuProxy == null)
 			{
-				contextMenuProxy = new ContextMenuProxy(part, flag ? part : displayName)
+				contextMenuProxy = new ContextMenuProxy(flag ? part : displayName, part)
 				{
 					onClick = ((i == array.Length - 1 && flag) ? null : new Action(SafeInvoke)),
 					isMenu = flag

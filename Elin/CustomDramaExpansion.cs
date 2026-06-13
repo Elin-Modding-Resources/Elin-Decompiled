@@ -322,11 +322,11 @@ public class CustomDramaExpansion : EClass
 	}
 
 	[ElinDramaActionInvoke(null)]
-	public static bool add_item(DramaManager dm, Dictionary<string, string> line, string itemId, string materialAlias = "wood", int lv = -1, int count = 1)
+	public static bool add_item(DramaManager dm, Dictionary<string, string> line, string itemId, string materialAlias = "", int lv = -1, int count = 1)
 	{
 		Chara chara = dm.GetChara(line["actor"]);
-		SourceMaterial.Row row = EClass.sources.materials.alias.TryGetValue(materialAlias, "wood");
-		Thing t = ThingGen.Create(itemId, row.id, lv).SetNum(count);
+		int idMat = EClass.sources.materials.alias.TryGetValue(materialAlias)?.id ?? (-1);
+		Thing t = ThingGen.Create(itemId, idMat, lv).SetNum(count);
 		chara.Pick(t);
 		return true;
 	}

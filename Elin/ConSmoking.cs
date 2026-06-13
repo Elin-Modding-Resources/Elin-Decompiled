@@ -5,6 +5,15 @@ public class ConSmoking : Condition
 		return 0;
 	}
 
+	public override void OnStart()
+	{
+		base.OnStart();
+		if (owner.IsPC)
+		{
+			Steam.GetAchievement(ID_Achievement.SMOKE);
+		}
+	}
+
 	public override void Tick()
 	{
 		base.Tick();

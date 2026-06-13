@@ -107,12 +107,20 @@ public class SourceImporter : EClass
 				ISheet[] item = value2.Item3;
 				foreach (ISheet sheet in item)
 				{
-					SourceData.BaseRow[] item2 = LoadBySheetName(sheet, value2.Item1).Item2;
-					if (!item2.IsEmpty())
+					ExcelParser.allowTrimming = true;
+					try
 					{
-						sourceCache.EmplaceCache(sheet.SheetName, item2);
-						value?.sourceRows.UnionWith(item2);
-						Debug.Log($"#source workbook {arg}:{sheet.SheetName}:{item2.Length}");
+						SourceData.BaseRow[] item2 = LoadBySheetName(sheet, value2.Item1).Item2;
+						if (!item2.IsEmpty())
+						{
+							sourceCache.EmplaceCache(sheet.SheetName, item2);
+							value?.sourceRows.UnionWith(item2);
+							Debug.Log($"#source workbook {arg}:{sheet.SheetName}:{item2.Length}");
+						}
+					}
+					finally
+					{
+						ExcelParser.allowTrimming = false;
 					}
 				}
 				continue;
@@ -132,6 +140,7 @@ public class SourceImporter : EClass
 		foreach (SourceCache sourceCache2 in array2)
 		{
 			string text2 = sourceCache2.SheetFile.ShortPath();
+			string key;
 			if (sourceCache2.IsDirtyOrEmpty)
 			{
 				if (!dictionary.TryGetValue(sourceCache2, out var value3) || value3.Item2.Length == 0)
@@ -146,23 +155,45 @@ public class SourceImporter : EClass
 					{
 						continue;
 					}
-					var (sourceData, array4) = LoadBySheetName(sheet2, value3.Item1);
-					if ((object)sourceData != null)
+					key = sheet2.SheetName;
+					int allowTrimming;
+					switch (key)
 					{
-						int? num2 = array4?.Length;
-						if (num2.HasValue && num2.GetValueOrDefault() > 0)
+					default:
+						allowTrimming = ((!(key == "Word")) ? 1 : 0);
+						break;
+					case "General":
+					case "Game":
+					case "Note":
+					case "List":
+						allowTrimming = 0;
+						break;
+					}
+					ExcelParser.allowTrimming = (byte)allowTrimming != 0;
+					try
+					{
+						var (sourceData, array4) = LoadBySheetName(sheet2, value3.Item1);
+						if ((object)sourceData != null)
 						{
-							sourceCache2.EmplaceCache(sheet2.SheetName, array4);
-							sourceCache2.Mod?.sourceRows.UnionWith(array4);
-							hashSet.Add(sourceData);
+							int? num2 = array4?.Length;
+							if (num2.HasValue && num2.GetValueOrDefault() > 0)
+							{
+								sourceCache2.EmplaceCache(sheet2.SheetName, array4);
+								sourceCache2.Mod?.sourceRows.UnionWith(array4);
+								hashSet.Add(sourceData);
+							}
 						}
+					}
+					finally
+					{
+						ExcelParser.allowTrimming = false;
 					}
 				}
 				continue;
 			}
 			foreach (KeyValuePair<string, SourceData.BaseRow[]> item3 in sourceCache2.Source)
 			{
-				item3.Deconstruct(out var key, out var value4);
+				item3.Deconstruct(out key, out var value4);
 				string text3 = key;
 				SourceData.BaseRow[] array5 = value4;
 				SourceData sourceData2 = FindSourceByName(text3);

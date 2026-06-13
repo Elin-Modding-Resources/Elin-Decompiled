@@ -177,41 +177,18 @@ public class ActEffect : EClass
 					});
 				}
 			}
-			bool flag3 = false;
-			if (CC.IsPCFactionOrMinion && (CC.HasElement(1651) || EClass.pc.Evalue(1651) >= 2))
+			if (e.id == 910)
 			{
-				bool flag4 = false;
-				foreach (Card item in p.ListCards())
-				{
-					if (item.isChara)
-					{
-						if (item.IsPCFactionOrMinion)
-						{
-							flag4 = true;
-						}
-					}
-					else if ((e.id != 910 && e.id != 911) || !item.IsFood || !item.category.IsChildOf("foodstuff"))
-					{
-						flag4 = true;
-					}
-				}
-				flag3 = flag4;
+				EClass._map.TryShatter(p, 910, power, CC);
 			}
-			if (!flag3)
+			if (e.id == 911)
 			{
-				if (e.id == 910)
-				{
-					EClass._map.TryShatter(p, 910, power);
-				}
-				if (e.id == 911)
-				{
-					EClass._map.TryShatter(p, 911, power);
-				}
+				EClass._map.TryShatter(p, 911, power, CC);
 			}
-			foreach (Card item2 in p.ListCards().ToList())
+			foreach (Card item in p.ListCards().ToList())
 			{
-				Card c = item2;
-				if ((!c.isChara && !c.trait.CanBeAttacked) || (c.IsMultisize && item2 == CC) || (c.isChara && (c.Chara.host == CC || c.Chara.parasite == CC || c.Chara.ride == CC)))
+				Card c = item;
+				if ((!c.isChara && !c.trait.CanBeAttacked) || (c.IsMultisize && item == CC) || (c.isChara && (c.Chara.host == CC || c.Chara.parasite == CC || c.Chara.ride == CC)))
 				{
 					continue;
 				}
@@ -437,11 +414,11 @@ public class ActEffect : EClass
 					EffectId.Meteor => 50 + power / 20, 
 					_ => (actref.refThing != null) ? actref.refThing.material.hardness : (30 + power / 20), 
 				};
-				bool flag5 = EClass._zone.HasLaw && !EClass._zone.IsPCFaction && (CC.IsPC || (id == EffectId.Explosive && actref.refThing == null)) && !(EClass._zone is Zone_Vernis);
+				bool flag3 = EClass._zone.HasLaw && !EClass._zone.IsPCFaction && (CC.IsPC || (id == EffectId.Explosive && actref.refThing == null)) && !(EClass._zone is Zone_Vernis);
 				if (p.HasObj && p.cell.matObj.hardness <= num7)
 				{
 					EClass._map.MineObj(p);
-					if (flag5)
+					if (flag3)
 					{
 						EClass.player.ModKarma(-1);
 					}
@@ -449,7 +426,7 @@ public class ActEffect : EClass
 				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num7)
 				{
 					EClass._map.MineBlock(p);
-					if (flag5)
+					if (flag3)
 					{
 						EClass.player.ModKarma(-1);
 					}
@@ -478,12 +455,12 @@ public class ActEffect : EClass
 		}
 		if (RapidCount == 0)
 		{
-			foreach (Card item3 in list)
+			foreach (Card item2 in list)
 			{
-				if (item3.ExistsOnMap)
+				if (item2.ExistsOnMap)
 				{
 					RapidCount += 2;
-					ProcAt(id, power, BlessedState.Normal, item3, null, item3.pos, isNeg: true, actref);
+					ProcAt(id, power, BlessedState.Normal, item2, null, item2.pos, isNeg: true, actref);
 				}
 			}
 		}
@@ -1159,11 +1136,10 @@ public class ActEffect : EClass
 			if (flag3)
 			{
 				EClass.player.stats.catDepart += list2.Count;
+				break;
 			}
-			else
-			{
-				EClass.player.stats.sistersDepart += list2.Count;
-			}
+			EClass.player.stats.sistersDepart += list2.Count;
+			Steam.GetAchievement(ID_Achievement.LITTLEMIG);
 			break;
 		}
 		case EffectId.MagicMap:

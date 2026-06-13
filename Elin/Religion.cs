@@ -296,7 +296,7 @@ public class Religion : EClass
 		foreach (Element value in t.elements.dict.Values)
 		{
 			int num = value.id;
-			if ((uint)(num - 64) > 3u && IsFaithElement(value))
+			if ((uint)(num - 64) > 3u && num != 92 && IsFaithElement(value))
 			{
 				value.vExp = -1;
 			}

@@ -8508,16 +8508,21 @@ public class Chara : Card, IPathfindWalker
 
 	public void OnInsulted()
 	{
-		if (!isDead)
+		if (isDead)
 		{
-			if (HasElement(1231))
+			return;
+		}
+		if (HasElement(1231))
+		{
+			Talk("insulted");
+			AddCondition<ConEuphoric>(100 * Evalue(1231));
+		}
+		else if (EClass.rnd(20) == 0)
+		{
+			SetFeat(1231, 1, msg: true);
+			if (IsPC)
 			{
-				Talk("insulted");
-				AddCondition<ConEuphoric>(100 * Evalue(1231));
-			}
-			else if (EClass.rnd(20) == 0)
-			{
-				SetFeat(1231, 1, msg: true);
+				Steam.GetAchievement(ID_Achievement.NIRVANA);
 			}
 		}
 	}

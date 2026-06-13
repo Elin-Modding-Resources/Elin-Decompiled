@@ -29,5 +29,12 @@ public enum ID_Achievement
 	PRIEST,
 	PRIEST2,
 	MAMA2,
-	MAMA3
+	MAMA3,
+	DIARY,
+	LITTLEMIG,
+	MAMMOTH,
+	NIRVANA,
+	SMOKE,
+	SNAIL,
+	UPGRADE
 }

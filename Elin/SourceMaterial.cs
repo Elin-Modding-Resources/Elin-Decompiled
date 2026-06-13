@@ -120,20 +120,17 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 				matColors = new MatColors();
 				foreach (string item in hashSet)
 				{
-					var (text, s, _) = CustomSourceContent.GetParams(item);
-					switch (text)
+					if (item.StartsWith("addColorMain") || item.StartsWith("addCol_Main"))
 					{
-					case "addCol_Main":
-					case "addColorMain":
-						matColors.main = s.ToColor();
-						break;
-					case "addCol_Alt":
-					case "addColorAlt":
-						matColors.alt = s.ToColor();
-						break;
+						matColors.main = item.ExtractInBetween('(', ')').ToColor();
+					}
+					else if (item.StartsWith("addColorAlt") || item.StartsWith("addCol_Alt"))
+					{
+						matColors.alt = item.ExtractInBetween('(', ')').ToColor();
 					}
 				}
 				Core.Instance.Colors.matColors[alias] = matColors;
+				Debug.Log($"#mod-content adding new material '{alias}'/{id}, main '{matColors.main}', alt '{matColors.alt}'");
 			}
 			matColor = matColors.main;
 			altColor = matColors.alt;

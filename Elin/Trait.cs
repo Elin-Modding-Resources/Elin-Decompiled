@@ -749,6 +749,81 @@ public class Trait : EClass
 		}
 	}
 
+	public virtual void OnListInteraction(InvOwner.ListInteraction list, ButtonGrid b, bool context)
+	{
+		Card card = owner;
+		Thing t = card as Thing;
+		if (t == null)
+		{
+			return;
+		}
+		if (!LayerChara.Instance)
+		{
+			if (CanRead(EClass.pc))
+			{
+				list.Add("invRead", 110, delegate
+				{
+					t.DoAct(new AI_Read
+					{
+						target = t
+					});
+				}, "remove");
+			}
+			if (CanUse(EClass.pc))
+			{
+				list.Add(LangUse, 120, delegate
+				{
+					if (OnUse(EClass.pc))
+					{
+						EClass.player.EndTurn();
+					}
+				}, "use");
+			}
+			if (CanDrink(EClass.pc))
+			{
+				list.Add("invDrink", 130, delegate
+				{
+					t.DoAct(new AI_Drink
+					{
+						target = t
+					});
+				}, "remove");
+			}
+			if (CanEat(EClass.pc))
+			{
+				list.Add("invFood", 140, delegate
+				{
+					t.DoAct(new AI_Eat
+					{
+						cook = false,
+						target = t
+					});
+				}, "remove");
+			}
+			if (IsBlendBase)
+			{
+				list.Add("invBlend", 150, delegate
+				{
+					LayerDragGrid.Create(new InvOwnerBlend(t));
+				}, "blend");
+			}
+		}
+		if (!context || !CanName)
+		{
+			return;
+		}
+		list.Add("changeName", 200, delegate
+		{
+			Dialog.InputName("dialogChangeName", t.c_refText.IsEmpty(""), delegate(bool cancel, string text)
+			{
+				if (!cancel)
+				{
+					t.c_refText = text;
+				}
+			});
+		});
+	}
+
 	public virtual int CompareTo(Card b)
 	{
 		return 0;

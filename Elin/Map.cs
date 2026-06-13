@@ -1218,8 +1218,13 @@ public class Map : MapBounds, IPathfindGrid
 		}
 	}
 
-	public void TryShatter(Point pos, int ele, int power)
+	public void TryShatter(Point pos, int ele, int power, Card CC = null)
 	{
+		bool flag = false;
+		if (CC != null && CC.IsPCFactionOrMinion && (CC.HasElement(1651) || EClass.pc.Evalue(1651) >= 2))
+		{
+			flag = true;
+		}
 		Element element = Element.Create(ele);
 		List<Card> list = new List<Card>();
 		bool fire = ele == 910;
@@ -1235,6 +1240,20 @@ public class Map : MapBounds, IPathfindGrid
 			if (item.ResistLvFrom(ele) >= 3 || item.trait is TraitBlanket || (EClass.rnd(3) == 0 && !CanCook(item)) || (item.IsPCFaction && EClass.rnd(3) == 0) || (fire && item.HasCondition<ConWet>()) || (cold && item.HasCondition<ConBurning>()))
 			{
 				continue;
+			}
+			if (flag)
+			{
+				if (item.isChara)
+				{
+					if (item.IsPCFactionOrMinion)
+					{
+						continue;
+					}
+				}
+				else if (!CanCook(item))
+				{
+					continue;
+				}
 			}
 			if (EClass._zone.IsPCFaction && EClass.Branch.HasItemProtection)
 			{
@@ -1289,7 +1308,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		list.Shuffle();
 		int num = 0;
-		bool flag = false;
+		bool flag2 = false;
 		foreach (Card item3 in list)
 		{
 			if (!item3.trait.CanBeDestroyed || item3.category.IsChildOf("currency") || item3.trait is TraitDoor || item3.trait is TraitFigure || item3.trait is TraitTrainingDummy || item3.rarity >= Rarity.Legendary)
@@ -1320,9 +1339,9 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				continue;
 			}
-			bool flag2 = CanCook(item3);
+			bool flag3 = CanCook(item3);
 			string text = "";
-			if (flag2)
+			if (flag3)
 			{
 				if (fire)
 				{
@@ -1359,7 +1378,7 @@ public class Map : MapBounds, IPathfindGrid
 					text = "711";
 				}
 			}
-			if (flag2 && !text.IsEmpty())
+			if (flag3 && !text.IsEmpty())
 			{
 				Thing thing2 = item3.Split(1);
 				List<Thing> list4 = new List<Thing>();
@@ -1414,10 +1433,10 @@ public class Map : MapBounds, IPathfindGrid
 			{
 				ActionMode.Adv.itemLost++;
 			}
-			if (!flag)
+			if (!flag2)
 			{
 				pos.PlayEffect(fire ? "Element/eleFire" : "Element/eleCold");
-				flag = true;
+				flag2 = true;
 			}
 			num++;
 		}

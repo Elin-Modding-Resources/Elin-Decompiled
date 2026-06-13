@@ -110,11 +110,11 @@ public class AI_Fuck : AIAct
 		}
 		cc.Say((this.variation == Variation.Slime) ? "slime_start" : ((this.variation == Variation.Bloodsuck) ? "suck_start" : (Type.ToString() + "_start")), cc, tc);
 		isFail = () => !tc.IsAliveInCurrentZone || tc.Dist(owner) > 3;
+		maxProgress = ((this.variation == Variation.NTR || this.variation == Variation.Bloodsuck) ? 10 : 25);
 		if (Type == FuckType.tame)
 		{
 			cc.SetTempHand(1104, -1);
 		}
-		maxProgress = ((this.variation == Variation.NTR || this.variation == Variation.Bloodsuck) ? 10 : 25);
 		Variation variation = this.variation;
 		if ((uint)(variation - 3) <= 2u)
 		{
@@ -133,7 +133,8 @@ public class AI_Fuck : AIAct
 			target.AddCondition<ConEntangle>(500, force: true);
 			break;
 		}
-		for (int i = 0; i < maxProgress; i++)
+		int i;
+		for (i = 0; i < maxProgress; i++)
 		{
 			progress = i;
 			if (owner.host != target)
@@ -175,12 +176,12 @@ public class AI_Fuck : AIAct
 					}
 					break;
 				}
-				int num5 = ((cc.HasElement(1216) || tc.HasElement(1216)) ? 100 : 20);
+				int num = ((cc.HasElement(1216) || tc.HasElement(1216)) ? 100 : 20);
 				if (this.variation == Variation.MotherMilk)
 				{
-					num5 *= 5;
+					num *= 5;
 				}
-				if (num5 > EClass.rnd(100))
+				if (num > EClass.rnd(100))
 				{
 					((EClass.rnd(2) == 0) ? cc : tc).PlayEffect("love2");
 				}
@@ -206,29 +207,6 @@ public class AI_Fuck : AIAct
 				break;
 			}
 			case FuckType.tame:
-			{
-				int num = 100;
-				if (!tc.IsAnimal)
-				{
-					num += 50;
-				}
-				if (tc.IsHuman)
-				{
-					num += 50;
-				}
-				if (tc.IsInCombat)
-				{
-					num += 100;
-				}
-				if (tc == cc)
-				{
-					num = 50;
-				}
-				else if (tc.affinity.CurrentStage < Affinity.Stage.Respected && EClass.rnd((tc.IsPCFaction ? 30 : 10) * 100 / num) == 0)
-				{
-					tc.AddCondition<ConFear>(60);
-				}
-				tc.interest -= (tc.IsPCFaction ? 20 : (2 * num / 100));
 				if (i == 0 || i == 10)
 				{
 					cc.Talk("goodBoy");
@@ -236,36 +214,95 @@ public class AI_Fuck : AIAct
 				if (i % 5 == 0)
 				{
 					tc.PlaySound("brushing");
-					int num2 = cc.CHA / 2 + cc.Evalue(237) - tc.CHA * 2;
-					int num3;
-					if (EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) > EClass.rnd(tc.CHA * num / 100))
+				}
+				if (cc.Tool != null && cc.Tool.Evalue(770) > 0)
+				{
+					foreach (Chara item in cc.pos.ListCharasInRadius(cc, 2 + cc.Tool.Evalue(770) / 10, (Chara c) => true))
 					{
-						num3 = 5 + Mathf.Clamp(num2 / 20, 0, 20);
+						if (cc == tc || item != cc)
+						{
+							Brush(item);
+							if (cc.isDead)
+							{
+								break;
+							}
+						}
+					}
+				}
+				else
+				{
+					Brush(tc);
+				}
+				break;
+			}
+		}
+		Finish();
+		void Brush(Chara c)
+		{
+			if (c.interest >= 0)
+			{
+				int num2 = 100;
+				if (!c.IsAnimal)
+				{
+					num2 += 50;
+				}
+				if (c.IsHuman)
+				{
+					num2 += 50;
+				}
+				if (c.IsInCombat)
+				{
+					num2 += 100;
+				}
+				if (c == cc)
+				{
+					num2 = 50;
+				}
+				else if (c.affinity.CurrentStage < Affinity.Stage.Respected && EClass.rnd((c.IsPCFaction ? 30 : 10) * 100 / num2) == 0)
+				{
+					tc.AddCondition<ConFear>(60);
+				}
+				c.interest -= (c.IsPCFaction ? 20 : (2 * num2 / 100));
+				if (i % 5 == 0)
+				{
+					int num3 = 0;
+					int num4 = cc.CHA / 2 + cc.Evalue(237) - c.CHA * 2;
+					if (EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) > EClass.rnd(c.CHA * num2 / 100))
+					{
+						num3 = 5 + Mathf.Clamp(num4 / 20, 0, 20);
 					}
 					else
 					{
-						num3 = -5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num2 / 10, -30, 0) : 0);
+						num3 = -5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num4 / 10, -30, 0) : 0);
 						fails++;
 					}
-					int num4 = 20;
-					if (tc.IsPCFactionOrMinion && tc.affinity.CurrentStage >= Affinity.Stage.Love)
+					int num5 = 20;
+					if (c.IsPCFactionOrMinion && c.affinity.CurrentStage >= Affinity.Stage.Love)
 					{
 						num3 = ((EClass.rnd(3) == 0) ? 4 : 0);
-						num4 = 10;
+						num5 = 10;
 					}
 					totalAffinity += num3;
-					tc.ModAffinity(EClass.pc, num3, show: true, showOnlyEmo: true);
-					cc.elements.ModExp(237, num4);
+					c.ModAffinity(EClass.pc, num3, show: true, showOnlyEmo: true);
+					cc.elements.ModExp(237, num5);
 					if (EClass.rnd(4) == 0)
 					{
 						cc.stamina.Mod(-1);
 					}
 				}
-				break;
-			}
+				if (c.interest < 0 && c != tc)
+				{
+					Msg.Say("tame_end", c);
+					c.PlaySound("groomed");
+					c.PlayEffect("heal_tick");
+					c.hygiene.Mod(15);
+					if (cc == EClass.pc)
+					{
+						EClass.player.stats.brush++;
+					}
+				}
 			}
 		}
-		Finish();
 	}
 
 	public void Finish()

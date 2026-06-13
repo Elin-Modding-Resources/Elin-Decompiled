@@ -79,11 +79,21 @@ public class AI_Trolley : AIAct
 			string idSound = trolley.GetIdSound();
 			if (owner.IsPC)
 			{
-				owner.PlaySound(idSound);
+				if (trolley.ShouldPlaySound(owner.pos))
+				{
+					owner.PlaySound(idSound);
+				}
+				else
+				{
+					EClass.Sound.Stop(idSound, Mathf.Max(1f, trolley.FadeDuration));
+				}
 			}
 			else if (!(EClass.pc.ai is AI_Trolley))
 			{
-				owner.PlaySound(idSound);
+				if (trolley.ShouldPlaySound(owner.pos))
+				{
+					owner.PlaySound(idSound);
+				}
 				EClass.Sound.Stop(idSound, Mathf.Max(1f, trolley.FadeDuration));
 			}
 			foreach (Chara item in point.ListCharas().ToList())

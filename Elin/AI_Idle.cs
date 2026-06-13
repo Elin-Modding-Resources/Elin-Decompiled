@@ -980,6 +980,10 @@ public class AI_Idle : AIAct
 					owner.Say("use_whip3", owner, c);
 					owner.PlaySound("whip");
 					owner.Talk("insult");
+					if (c.IsPC)
+					{
+						Steam.GetAchievement(ID_Achievement.SNAIL);
+					}
 					c.PlayAnime(AnimeID.Shiver);
 					c.OnInsulted();
 				});

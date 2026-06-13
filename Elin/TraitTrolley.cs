@@ -64,14 +64,35 @@ public class TraitTrolley : TraitFloorSwitch
 
 	public virtual string GetIdSound()
 	{
-		if (!(owner.id == "play_ride_kin"))
+		switch (owner.id)
 		{
+		case "play_ride_kin":
+			return "ride_kin";
+		case "ride_boat":
+		case "ride_boat2":
+			return "ride_boat";
+		case "play_ride_big":
+			if (owner.idSkin != 0)
+			{
+				return "ride_trolley";
+			}
+			return "ride_kin";
+		default:
 			if (owner.idSkin != 7)
 			{
 				return "ride_trolley";
 			}
 			return "ride_bike";
 		}
-		return "ride_kin";
+	}
+
+	public virtual bool ShouldPlaySound(Point p)
+	{
+		string id = owner.id;
+		if (id == "ride_boat" || id == "ride_boat2")
+		{
+			return p.cell.IsTopWaterAndNoSnow;
+		}
+		return true;
 	}
 }

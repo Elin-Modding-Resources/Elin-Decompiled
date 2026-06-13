@@ -27,7 +27,7 @@ public class TCUI : TC
 				Vector3 position = Camera.main.WorldToScreenPoint(_pos);
 				position.z = 0f;
 				Vector3 vector = FixPos;
-				if (render.hasActor && !render.actor.isPCC && (bool)render.actor && (bool)render.actor.sr.sprite)
+				if (render != null && render.hasActor && !render.actor.isPCC && (bool)render.actor && (bool)render.actor.sr && (bool)render.actor.sr.sprite)
 				{
 					float num = 128f / render.actor.sr.sprite.rect.height;
 					int pivotY = render.owner.Pref.pivotY;

@@ -500,6 +500,7 @@ public class DramaOutcome : EMono
 			}
 		}
 		Rand.SetSeed();
+		Steam.GetAchievement(ID_Achievement.UPGRADE);
 	}
 
 	public static bool If(DramaChoice item, Chara c)

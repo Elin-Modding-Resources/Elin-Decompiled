@@ -1383,19 +1383,6 @@ public class InvOwner : EClass
 			}
 		}
 		ListInteractions(listInteraction, t, trait, b, context);
-		if (context && trait is TraitLightSource)
-		{
-			listInteraction.Add("customBrightness", 300, delegate
-			{
-				UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
-				uIContextMenu.AddSlider("brightness", (float a) => a.ToString() ?? "", EClass.player.customLightMod, delegate(float b)
-				{
-					EClass.player.customLightMod = (int)b;
-					EClass.pc.RecalculateFOV();
-				}, 1f, 6f, isInt: true, hideOther: false);
-				uIContextMenu.Show();
-			});
-		}
 		if (AllowHold(t) && !t.isEquipped && !HasTrader)
 		{
 			Interaction item = listInteraction.Add((EClass.pc.held == t) ? "actPick" : "actHold", 60, delegate
@@ -1552,82 +1539,7 @@ public class InvOwner : EClass
 				});
 			}
 		}
-		if (!LayerChara.Instance)
-		{
-			if (trait.CanRead(EClass.pc))
-			{
-				list.Add("invRead", 110, delegate
-				{
-					t.DoAct(new AI_Read
-					{
-						target = t
-					});
-				}, "remove");
-			}
-			if (trait.CanUse(EClass.pc))
-			{
-				list.Add(trait.LangUse, 120, delegate
-				{
-					if (trait.OnUse(EClass.pc))
-					{
-						EClass.player.EndTurn();
-					}
-				}, "use");
-			}
-			if (trait.CanDrink(EClass.pc))
-			{
-				list.Add("invDrink", 130, delegate
-				{
-					t.DoAct(new AI_Drink
-					{
-						target = t
-					});
-				}, "remove");
-			}
-			if (trait.CanEat(EClass.pc))
-			{
-				list.Add("invFood", 140, delegate
-				{
-					t.DoAct(new AI_Eat
-					{
-						cook = false,
-						target = t
-					});
-				}, "remove");
-			}
-			if (trait.IsBlendBase)
-			{
-				list.Add("invBlend", 150, delegate
-				{
-					LayerDragGrid.Create(new InvOwnerBlend(t));
-				}, "blend");
-			}
-		}
-		if (!context)
-		{
-			return;
-		}
-		if (trait is TraitCard)
-		{
-			list.Add("invCollect", 150, delegate
-			{
-				ContentCodex.Collect(t);
-			});
-		}
-		if (!trait.CanName)
-		{
-			return;
-		}
-		list.Add("changeName", 200, delegate
-		{
-			Dialog.InputName("dialogChangeName", t.c_refText.IsEmpty(""), delegate(bool cancel, string text)
-			{
-				if (!cancel)
-				{
-					t.c_refText = text;
-				}
-			});
-		});
+		trait.OnListInteraction(list, b, context);
 	}
 
 	public virtual string GetAutoUseLang(ButtonGrid button)

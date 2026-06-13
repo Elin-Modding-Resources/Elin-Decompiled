@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ABILITY
 {
-	public const int ActMoneyDump = 5058;
+	public const int ActMoneyThrow = 5057;
 
 	public const int ActDreamBug = 6020;
 
@@ -22,7 +22,7 @@ public class ABILITY
 
 	public const int AI_PlayMusic = 6001;
 
-	public const int ActMoneyThrow = 5057;
+	public const int ActMoneyDump = 5058;
 
 	public const int ActMoneySlap = 5056;
 
@@ -232,6 +232,8 @@ public class ABILITY
 
 	public const int ActHeadpat = 6904;
 
+	public const int ActKiss = 6628;
+
 	public const int ActDeepKiss = 6629;
 
 	public const int ActInsult = 6630;
@@ -253,8 +255,6 @@ public class ABILITY
 	public const int breathe_ = 7000;
 
 	public const int ActSwarm = 6662;
-
-	public const int ActKiss = 6628;
 
 	public const int ActBladeStorm = 6664;
 
@@ -284,11 +284,11 @@ public class ABILITY
 
 	public const int ActMissileBarrage = 6667;
 
+	public const int StMama = 6701;
+
 	public const int StManaCost = 6720;
 
 	public const int ActWombDark = 6801;
-
-	public const int StMama = 6701;
 
 	public const int StTaunt = 6700;
 
@@ -296,8 +296,8 @@ public class ABILITY
 
 	public static readonly int[] IDS = new int[146]
 	{
-		5058, 6020, 6019, 6018, 6015, 6013, 6012, 6011, 6003, 6001,
-		5057, 5056, 5055, 5054, 5053, 5052, 6050, 6400, 6410, 6420,
+		5057, 6020, 6019, 6018, 6015, 6013, 6012, 6011, 6003, 6001,
+		5058, 5056, 5055, 5054, 5053, 5052, 6050, 6400, 6410, 6420,
 		6621, 6620, 6613, 6612, 6611, 6610, 6608, 5051, 6606, 6604,
 		6603, 6602, 6601, 6600, 6500, 6450, 6605, 6622, 5050, 5048,
 		5004, 5005, 5006, 5007, 5008, 5009, 5010, 5011, 5012, 5013,
@@ -307,10 +307,10 @@ public class ABILITY
 		50210, 50209, 6626, 50207, 50206, 50212, 50205, 50203, 50202, 50201,
 		50200, 8796, 8795, 50204, 8794, 50213, 50215, 5031, 5030, 5029,
 		5028, 5027, 5026, 50214, 5025, 5023, 5022, 5021, 5020, 5019,
-		50216, 5024, 8793, 50208, 6904, 6629, 6630, 6631, 6640, 6641,
-		6642, 6650, 6660, 6661, 7000, 6662, 6628, 6664, 6665, 6666,
+		50216, 5024, 8793, 50208, 6904, 6628, 6629, 6630, 6631, 6640,
+		6641, 6642, 6650, 6660, 6661, 7000, 6662, 6664, 6665, 6666,
 		6663, 6800, 6903, 6902, 6901, 6900, 6753, 6752, 6751, 6750,
-		6667, 6720, 6801, 6701, 6700, 6802
+		6667, 6701, 6720, 6801, 6700, 6802
 	};
 }
 public class Ability : Act
