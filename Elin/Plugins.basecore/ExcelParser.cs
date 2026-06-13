@@ -15,6 +15,8 @@ public class ExcelParser
 
 	public static IRow rowHeader;
 
+	public static bool allowTrimming;
+
 	public static bool IsNull(ICell cell)
 	{
 		if (cell != null && cell.CellType != CellType.Blank)
@@ -145,7 +147,12 @@ public class ExcelParser
 		string str = GetStr(id);
 		if (str != null)
 		{
-			return str.Split(',').ToArray();
+			if (!allowTrimming)
+			{
+				return str.Split(',');
+			}
+			return (from c in str.Split(',')
+				select c.Trim()).ToArray();
 		}
 		return Array.Empty<string>();
 	}
@@ -190,7 +197,11 @@ public class ExcelParser
 			}
 			return null;
 		}
-		return cell.StringCellValue;
+		if (!allowTrimming)
+		{
+			return cell.StringCellValue;
+		}
+		return cell.StringCellValue.Trim();
 	}
 
 	public static string ToLetterId(int id)
@@ -255,5 +266,6 @@ public class ExcelParser
 		row = null;
 		rowDefault = null;
 		rowHeader = null;
+		allowTrimming = false;
 	}
 }
