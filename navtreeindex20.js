@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitMerchantWeapon_8cs_source.html":[2,0,0,1713],
 "TraitMerchant_8cs.html":[2,0,0,1682],
 "TraitMerchant_8cs_source.html":[2,0,0,1682],
 "TraitMiko__Mifu_8cs.html":[2,0,0,1714],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "TraitSnow_8cs.html":[2,0,0,1834],
 "TraitSnow_8cs_source.html":[2,0,0,1834],
 "TraitSofa_8cs.html":[2,0,0,1835],
-"TraitSofa_8cs_source.html":[2,0,0,1835],
-"TraitSorin_8cs.html":[2,0,0,1836]
+"TraitSofa_8cs_source.html":[2,0,0,1835]
 };

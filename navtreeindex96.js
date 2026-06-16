@@ -1,5 +1,7 @@
 var NAVTREEINDEX96 =
 {
+"classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a363f847cdd5ff1e4326426f8bec72a9b":[1,0,7,0,3,12],
+"classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a692f3a955236e099dc31b300d67b7209":[0,4,7,0,3,1],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a692f3a955236e099dc31b300d67b7209":[1,0,7,0,3,1],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a69e0016b7fc1ee147af7ba23a7426915":[0,4,7,0,3,6],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a69e0016b7fc1ee147af7ba23a7426915":[1,0,7,0,3,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "classProps.html#a34427660209faae37853f163cadf24be":[1,0,1046,0],
 "classProps.html#a374b4de339301d262590da4254b0150e":[1,0,1046,24],
 "classProps.html#a476e122e7e3d134272ddfda4ad1fa1eb":[1,0,1046,26],
-"classProps.html#a4c47639f956225f1c7242b2380061e79":[1,0,1046,16],
-"classProps.html#a5d7fea70da3c26cd0dd76616e2556598":[1,0,1046,14],
-"classProps.html#a6140ef7305b2c520f689be3a1467b18c":[1,0,1046,1]
+"classProps.html#a4c47639f956225f1c7242b2380061e79":[1,0,1046,16]
 };

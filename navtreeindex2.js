@@ -192,6 +192,7 @@ var NAVTREEINDEX2 =
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a33a65d8c9806d0b7857467a10ebefab9":[2,0,0,425,0,51],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3712c55e14d81902f831c6225fb1b831":[2,0,0,425,0,33],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a382dcad9b76f9fd19985185e6ebcbba1":[2,0,0,425,0,10],
+"CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3d65d50235118b0d92112b39ea797fdd":[2,0,0,425,0,52],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3dac9b722adaf90c5f99d4113b923d59":[2,0,0,425,0,2],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3ee94730c4c78551270eb9fa6d87f7b6":[2,0,0,425,0,14],
 "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a4460740cd9ee7f43a4fde3a966f0787d":[2,0,0,425,0,42],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "CanvasExt_8cs_source.html":[2,0,0,3,21],
 "CardActor_8cs.html":[2,0,0,254],
 "CardActor_8cs_source.html":[2,0,0,254],
-"CardBlueprint_8cs.html":[2,0,0,255],
-"CardBlueprint_8cs_source.html":[2,0,0,255]
+"CardBlueprint_8cs.html":[2,0,0,255]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"VisitorState_8cs_source.html":[2,0,0,2010],
 "WM_8cs.html":[2,0,0,2,0,0,10],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3d":[2,0,0,2,0,0,10,0],
 "WM_8cs.html#a8b9068eec63b05501f0a9be56015ed3da00fbb0efe65c1695a9a2019b7daefa9d":[2,0,0,2,0,0,10,0,110],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "WidgetBottomBar_8cs_source.html":[2,0,0,2016],
 "WidgetCodex_8cs.html":[2,0,0,2017],
 "WidgetCodex_8cs_source.html":[2,0,0,2017],
-"WidgetCurrentTool_8cs.html":[2,0,0,2018],
-"WidgetCurrentTool_8cs_source.html":[2,0,0,2018]
+"WidgetCurrentTool_8cs.html":[2,0,0,2018]
 };

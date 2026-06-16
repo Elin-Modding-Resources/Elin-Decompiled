@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classButtonRoster.html#a2057821985506b77b6ec1ca8ee1352a0":[1,0,259,2],
 "classButtonRoster.html#a20b10ff3ea12fed1671568ccd028e598":[1,0,259,3],
 "classButtonRoster.html#a4ba091782f077207b9bad85fa11d34c2":[1,0,259,0],
 "classButtonRoster.html#a554c4259ae7b001b941b4a8c4464af69":[1,0,259,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classCameraSupport.html#a6d34c8d6ee4755e11a58175b64bb4566":[1,0,265,8],
 "classCameraSupport.html#a71dcc9dc415aca52eddc1342aa0d2eee":[1,0,265,12],
 "classCameraSupport.html#a764fe3119d6b3264c4981f01836076ec":[1,0,265,0],
-"classCameraSupport.html#a764fe3119d6b3264c4981f01836076eca37b6bd7fe61d651735cec3d3b0356c66":[1,0,265,0,4],
-"classCameraSupport.html#a764fe3119d6b3264c4981f01836076eca6adf97f83acf6453d4a6a4b1070f3754":[1,0,265,0,0]
+"classCameraSupport.html#a764fe3119d6b3264c4981f01836076eca37b6bd7fe61d651735cec3d3b0356c66":[1,0,265,0,4]
 };

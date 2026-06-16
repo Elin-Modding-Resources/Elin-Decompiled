@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"classDSVRow_1_1Item.html#a235105a682ce53793f960afb53939417":[1,0,502,0,1],
 "classDamageTextRenderer.html":[1,0,467],
 "classDamageTextRenderer.html#a3ca61bdbd06e731804c1c23bd4b4871b":[1,0,467,2],
 "classDamageTextRenderer.html#a672a73be84734e8ab952d4c3f2f85d7f":[1,0,467,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "classDramaActor.html#a1546558468e3ad3f579138fcfd1f8e2e":[1,0,482,2],
 "classDramaActor.html#a25c70fa77968081351464ccbf1490501":[1,0,482,6],
 "classDramaActor.html#a5d4dbaf0ff42734e0a0661535b425af2":[1,0,482,0],
-"classDramaActor.html#a77fee054b0e38d653178e752b6095c3d":[1,0,482,4],
-"classDramaActor.html#a94a3bd841b31f142590d4c180f8cea38":[1,0,482,1]
+"classDramaActor.html#a77fee054b0e38d653178e752b6095c3d":[1,0,482,4]
 };

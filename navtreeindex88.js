@@ -1,5 +1,7 @@
 var NAVTREEINDEX88 =
 {
+"classMapBounds.html#afa4c0cb609253c68cd5801c1b0d7d73a":[1,0,942,21],
+"classMapConfig.html":[1,0,943],
 "classMapConfig.html#a158c5cefcdc28c505b0ec583da8f0865":[1,0,943,16],
 "classMapConfig.html#a169a81af975ca0dfaefdc183a89ebdfa":[1,0,943,22],
 "classMapConfig.html#a1cd098e7a5302ad9a98740be016825b7":[1,0,943,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX88 =
 "classMiniGame.html#a8901d83bae518949c49d150a72280e06":[1,0,963,7],
 "classMiniGame.html#a8c0cd76013567bb97ac0264328fec98f":[1,0,963,6],
 "classMiniGame.html#aa8b8e918ed02a76223b9765d524d8a4f":[1,0,963,5],
-"classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538":[1,0,963,15],
-"classMiniGame.html#abab7288d007c057e407548207dd98b87":[1,0,963,1],
-"classMiniGame.html#abab7288d007c057e407548207dd98b87a0795da41d3780aceefba445c3b6a3251":[1,0,963,1,4]
+"classMiniGame.html#aa9078eeeb3d0845470479b54b97b7538":[1,0,963,15]
 };

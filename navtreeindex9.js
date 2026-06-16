@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"HomeResourceManager_8cs_source.html":[2,0,0,661],
 "HomeResourceMedicine_8cs.html":[2,0,0,662],
 "HomeResourceMedicine_8cs_source.html":[2,0,0,662],
 "HomeResourceNature_8cs.html":[2,0,0,663],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0af15fba7bb646f82eb601c03028d17fc7":[2,0,0,3,48,0,1],
 "ImageType_8cs_source.html":[2,0,0,3,48],
 "IngredientAndRecipe_8cs.html":[2,0,0,710],
-"IngredientAndRecipe_8cs_source.html":[2,0,0,710],
-"InnerBevel_8cs.html":[2,0,0,3,49]
+"IngredientAndRecipe_8cs_source.html":[2,0,0,710]
 };

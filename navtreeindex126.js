@@ -1,5 +1,7 @@
 var NAVTREEINDEX126 =
 {
+"classTraitFoodEggFertilized.html#aec113c7bbcd065461773f4ec7ccd59e6":[1,0,1691,3],
+"classTraitFoodFish.html":[1,0,1692],
 "classTraitFoodFish.html#a844ba52915c9c1616917ba3bed8f0014":[1,0,1692,0],
 "classTraitFoodFishSlice.html":[1,0,1693],
 "classTraitFoodFishSlice.html#a215c1b8d753c3d83eaba34517448f227":[1,0,1693,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitIncubator.html#ac84f64d0a27de94f83fdc996b2ac5250":[1,0,1751,4],
 "classTraitIncubator.html#adfc8ff93bb469fe32a689cdfebda9688":[1,0,1751,1],
 "classTraitIndulgence.html":[1,0,1752],
-"classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1752,0],
-"classTraitInformer.html":[1,0,1753],
-"classTraitInformer.html#a45d21aa6becf3adbbe756570bcef33d2":[1,0,1753,0]
+"classTraitIndulgence.html#abdc6c9ab8d80a5dd6788c51a79eecccc":[1,0,1752,0]
 };

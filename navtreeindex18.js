@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitChangingRoom_8cs_source.html":[2,0,0,1462],
 "TraitChara_8cs.html":[2,0,0,1463],
 "TraitChara_8cs_source.html":[2,0,0,1463],
 "TraitChef_8cs.html":[2,0,0,1464],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitFoodMeat_8cs_source.html":[2,0,0,1586],
 "TraitFoodNut_8cs.html":[2,0,0,1587],
 "TraitFoodNut_8cs_source.html":[2,0,0,1587],
-"TraitFoodPreparedPackage_8cs.html":[2,0,0,1589],
-"TraitFoodPreparedPackage_8cs_source.html":[2,0,0,1589]
+"TraitFoodPreparedPackage_8cs.html":[2,0,0,1589]
 };

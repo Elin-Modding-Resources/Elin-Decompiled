@@ -52,6 +52,7 @@ var CTAG_8cs =
       [ "antiSpider", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07afd80bafe2b888e3dd1bcbfefbf89ce88", null ],
       [ "shield", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a28c69b4cba5681d565d3bd901684dd77", null ],
       [ "humanSpeak", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad0f42bd74e8f2e41e9de1c4635b24e34", null ],
-      [ "throwBall", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a33a65d8c9806d0b7857467a10ebefab9", null ]
+      [ "throwBall", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a33a65d8c9806d0b7857467a10ebefab9", null ],
+      [ "alwaysDropCorpse", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3d65d50235118b0d92112b39ea797fdd", null ]
     ] ]
 ];

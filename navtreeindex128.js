@@ -1,5 +1,7 @@
 var NAVTREEINDEX128 =
 {
+"classTraitMerchantSeed.html#a7f1d2a65a072a36f41235109b235214e":[1,0,1818,0],
+"classTraitMerchantSouvenir.html":[1,0,1819],
 "classTraitMerchantSouvenir.html#a5c7ec7da83aaf0da51f3cd549f7e24a9":[1,0,1819,0],
 "classTraitMerchantTravel.html":[1,0,1820],
 "classTraitMerchantTravel.html#a3941fe587384376ffa17244d78097109":[1,0,1820,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitPotionAlchemy.html#afbe2c5dc046840f3d0e06840b81548fb":[1,0,1880,1],
 "classTraitPotionEmpty.html":[1,0,1881],
 "classTraitPotionEmpty.html#a479119429f1aad7dc8d43f3a7870aeb8":[1,0,1881,3],
-"classTraitPotionEmpty.html#a5c7c586fa312bde006e46eb2f8b3c6b3":[1,0,1881,0],
-"classTraitPotionEmpty.html#a827023eb995b6e874b6c13f1ec9dabbb":[1,0,1881,4],
-"classTraitPotionEmpty.html#aca8c5b343e5ee07e3f37bc4c937dcc06":[1,0,1881,2]
+"classTraitPotionEmpty.html#a5c7c586fa312bde006e46eb2f8b3c6b3":[1,0,1881,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX106 =
 {
+"classSceneTemplate.html":[1,0,1217],
+"classSceneTemplate.html#a1e46f0d7190713741f8c8ab795add40f":[1,0,1217,1],
 "classSceneTemplate.html#a852b39e49d364431d974177908465d2b":[1,0,1217,2],
 "classSceneTemplate.html#ada8e69ce3f23212cb5fed61101074f4b":[1,0,1217,0],
 "classSchedule.html":[1,0,1218],
@@ -247,7 +249,5 @@ var NAVTREEINDEX106 =
 "classSkinAsset.html#ae74d480d7367b7e9201f69465b39c378":[1,0,1242,0],
 "classSkinAsset__BG.html":[1,0,1243],
 "classSkinAsset__BG.html#a07f6d691ed56fded70d1b9c0ad8f0b1e":[1,0,1243,2],
-"classSkinAsset__BG.html#a3936088c22e6a0a167c4fc16ffe6d5d5":[1,0,1243,0],
-"classSkinAsset__BG.html#a4cf07b0d123dc5d09188ef57ecbfbb69":[1,0,1243,1],
-"classSkinAsset__Button.html":[1,0,1244]
+"classSkinAsset__BG.html#a3936088c22e6a0a167c4fc16ffe6d5d5":[1,0,1243,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"classActWater.html#add157b1bf508543215994cae2b588e66":[1,0,73,0],
 "classActWater.html#ae4ef679a79009a4284c8df5b8983c17b":[1,0,73,4],
 "classActWeapon.html":[1,0,74],
 "classActWhirlwind.html":[1,0,75],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "classAffinity.html#ae704c8104beec2eb92052418ef31d5e7":[1,0,77,14],
 "classAffinity.html#aeebc41560bd44b3d5f57bd617bb8ce33":[1,0,77,11],
 "classAlgorithms_1_1AuthorAttribute.html":[0,4,0,0],
-"classAlgorithms_1_1AuthorAttribute.html":[1,0,0,0],
-"classAlgorithms_1_1AuthorAttribute.html#a75e7e800e98e301d2ba7e8c9be6126df":[1,0,0,0,0]
+"classAlgorithms_1_1AuthorAttribute.html":[1,0,0,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"InnerBevel_8cs.html":[2,0,0,3,49],
 "InnerBevel_8cs_source.html":[2,0,0,3,49],
 "InnerOutline_8cs.html":[2,0,0,3,50],
 "InnerOutline_8cs_source.html":[2,0,0,3,50],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "LayerGacha_8cs.html":[2,0,0,815],
 "LayerGacha_8cs_source.html":[2,0,0,815],
 "LayerGlobalMap_8cs.html":[2,0,0,817],
-"LayerGlobalMap_8cs_source.html":[2,0,0,817],
-"LayerHelp_8cs.html":[2,0,0,818]
+"LayerGlobalMap_8cs_source.html":[2,0,0,817]
 };

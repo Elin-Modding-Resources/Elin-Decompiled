@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878":[2,0,0,915,0],
 "MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a0db377921f4ce762c62526131097968f":[2,0,0,915,0,0],
 "MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a40085574ffe68d3214bf81845239eefc":[2,0,0,915,0,1],
 "MsgCat_8cs.html#aad7bd7fd94fd4e83148bc601547a4878a55dcdf017b51fc96f7b5f9d63013b95d":[2,0,0,915,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "QuestCurry_8cs_source.html":[2,0,0,985],
 "QuestCursedManor_8cs.html":[2,0,0,986],
 "QuestCursedManor_8cs_source.html":[2,0,0,986],
-"QuestDebt_8cs.html":[2,0,0,987],
-"QuestDebt_8cs_source.html":[2,0,0,987]
+"QuestDebt_8cs.html":[2,0,0,987]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"SkinAssetRedirect_8cs_source.html":[2,0,0,3,91],
 "SkinAsset_8cs.html":[2,0,0,3,87],
 "SkinAsset_8cs_source.html":[2,0,0,3,87],
 "SkinAsset__BG_8cs.html":[2,0,0,3,88],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "StatsSAN_8cs_source.html":[2,0,0,1239],
 "StatsSleepiness_8cs.html":[2,0,0,1240],
 "StatsSleepiness_8cs_source.html":[2,0,0,1240],
-"StatsStamina_8cs.html":[2,0,0,1241],
-"StatsStamina_8cs_source.html":[2,0,0,1241]
+"StatsStamina_8cs.html":[2,0,0,1241]
 };

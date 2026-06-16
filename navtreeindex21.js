@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"TraitSorin_8cs.html":[2,0,0,1836],
 "TraitSorin_8cs_source.html":[2,0,0,1836],
 "TraitSpeaker_8cs.html":[2,0,0,1837],
 "TraitSpeaker_8cs_source.html":[2,0,0,1837],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "TraitWhipInterest_8cs.html":[2,0,0,1959],
 "TraitWhipInterest_8cs_source.html":[2,0,0,1959],
 "TraitWhipLove_8cs.html":[2,0,0,1960],
-"TraitWhipLove_8cs_source.html":[2,0,0,1960],
-"TraitWhistlePeace_8cs.html":[2,0,0,1961]
+"TraitWhipLove_8cs_source.html":[2,0,0,1960]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX123 =
 {
+"classTraitBed.html#ab28e1ac03be7c28ba707fdf36a169f80":[1,0,1530,10],
+"classTraitBed.html#ac01d84f3d0fb3e10a42cd5d4c170c4ae":[1,0,1530,1],
 "classTraitBed.html#acc9d27b2bb5a76810cbd6cb5ff646768":[1,0,1530,11],
 "classTraitBed.html#ad92ddc87aafebdedf361f47d92a6ef4f":[1,0,1530,3],
 "classTraitBedCoffin.html":[1,0,1531],
@@ -247,7 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitClerk__Casino.html":[1,0,1581],
 "classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1581,0],
 "classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1581,1],
-"classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1581,3],
-"classTraitClerk__Casino.html#adf9adb8d16132e9f3a0918dfa6db4872":[1,0,1581,2],
-"classTraitClerk__Fighter.html":[1,0,1582]
+"classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1581,3]
 };

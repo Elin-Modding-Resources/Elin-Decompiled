@@ -33,6 +33,7 @@ var classENC =
     [ "encSpell", "classENC.html#a082acb3ccb9281afd0da55f67c959264", null ],
     [ "encTail", "classENC.html#a1bfcdad0c620c34aa12c4f0c02814440", null ],
     [ "expMod", "classENC.html#a0ce600fd7031e892c5357353d1e3487b", null ],
+    [ "extendedSentence", "classENC.html#aea15e11f7d66a4d3dd649e7450bcc8d6", null ],
     [ "farsee", "classENC.html#a95a465f9000e534d33bbe83f417b2af0", null ],
     [ "force_weapon", "classENC.html#a9f1818d1783e6c234846718c768c8596", null ],
     [ "freemove", "classENC.html#a8f8acfebff120ad794dd7f789cd366ae", null ],

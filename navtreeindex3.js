@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"CardBlueprint_8cs_source.html":[2,0,0,255],
 "CardFilter_8cs.html":[2,0,0,256],
 "CardFilter_8cs_source.html":[2,0,0,256],
 "CardGen_8cs.html":[2,0,0,257],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "ConTransmutePutit_8cs.html":[2,0,0,396],
 "ConTransmutePutit_8cs_source.html":[2,0,0,396],
 "ConTransmuteShadow_8cs.html":[2,0,0,397],
-"ConTransmuteShadow_8cs_source.html":[2,0,0,397],
-"ConTransmute_8cs.html":[2,0,0,390]
+"ConTransmuteShadow_8cs_source.html":[2,0,0,397]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"classClassWithBits.html#a88ffe814fac844b728c7948fded533ff":[1,0,303,3],
 "classClassWithBits.html#aa4dd1436ff6cc3975605464f90eb4861":[1,0,303,2],
 "classCodexCreature.html":[1,0,306],
 "classCodexCreature.html#a53fc120a115da7361e65f8df05ada451":[1,0,306,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "classConExcommunication.html#a91a2fc70525688f3aa694564f7fc8755":[1,0,342,1],
 "classConExcommunication.html#aeb4b487f70e6a73064577459f103e21d":[1,0,342,2],
 "classConFaint.html":[1,0,343],
-"classConFaint.html#ad53e4873652814051e91b7e246c506b8":[1,0,343,2],
-"classConFaint.html#ae47670ce05a674f1bf38e90f91f29332":[1,0,343,3]
+"classConFaint.html#ad53e4873652814051e91b7e246c506b8":[1,0,343,2]
 };

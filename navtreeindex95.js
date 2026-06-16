@@ -1,5 +1,7 @@
 var NAVTREEINDEX95 =
 {
+"classPopManager.html#a5d3430c235547c74408cefb3947b68de":[1,0,1036,2],
+"classPopManager.html#a5f1309967a6c825014d4cb84814592a0":[1,0,1036,12],
 "classPopManager.html#a742b01f4fd30dd9540e9e04200f9e5f1":[1,0,1036,14],
 "classPopManager.html#a779dce9178096576bebbba8c75bfb257":[1,0,1036,7],
 "classPopManager.html#a8f2a9a46b22e09ea8343aa453d727db6":[1,0,1036,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX95 =
 "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a116a991dfbae191d28d937106c60287c":[0,4,7,0,3,2],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a12632abe7e68955c13eafecc8a2e28fb":[0,4,7,0,3,9],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a12632abe7e68955c13eafecc8a2e28fb":[1,0,7,0,3,9],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a363f847cdd5ff1e4326426f8bec72a9b":[0,4,7,0,3,12],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a363f847cdd5ff1e4326426f8bec72a9b":[1,0,7,0,3,12],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a692f3a955236e099dc31b300d67b7209":[0,4,7,0,3,1]
+"classPrimitiveUI_1_1Examples_1_1PUIExampleSineWaves.html#a363f847cdd5ff1e4326426f8bec72a9b":[0,4,7,0,3,12]
 };

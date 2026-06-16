@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"WidgetCurrentTool_8cs_source.html":[2,0,0,2018],
 "WidgetDate_8cs.html":[2,0,0,2019],
 "WidgetDate_8cs_source.html":[2,0,0,2019],
 "WidgetDebug_8cs.html":[2,0,0,2020],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "Zone__EternalGarden_8cs_source.html":[2,0,0,2091],
 "Zone__Exile_8cs.html":[2,0,0,2092],
 "Zone__Exile_8cs_source.html":[2,0,0,2092],
-"Zone__Field_8cs.html":[2,0,0,2093],
-"Zone__Field_8cs_source.html":[2,0,0,2093]
+"Zone__Field_8cs.html":[2,0,0,2093]
 };

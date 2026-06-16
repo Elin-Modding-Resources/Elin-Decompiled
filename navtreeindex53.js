@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"classContentHomeLog.html#a36803c6c55c1b32b89d487e3d2676ee5":[1,0,395,4],
 "classContentHomeLog.html#aab9563f75119383202b8871c3b72623e":[1,0,395,0],
 "classContentHomeLog.html#ac40453c55fd137caa5bf0f3e3be653cd":[1,0,395,1],
 "classContentHomeRanking.html":[1,0,396],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "classCoreConfig.html#aa1b21097831b581be4b734571e8e296d":[1,0,425,65],
 "classCoreConfig.html#aa1cfb4ba8acc6fae946d3bcbae81c112":[1,0,425,20],
 "classCoreConfig.html#aa29be1b17ab71b16a4a8b5d143c3d8e0":[1,0,425,51],
-"classCoreConfig.html#aa6d85dfd1337be8d169f75f081275853":[1,0,425,45],
-"classCoreConfig.html#aacfb79ec5c6e9fa278ec39e047ad79f2":[1,0,425,49]
+"classCoreConfig.html#aa6d85dfd1337be8d169f75f081275853":[1,0,425,45]
 };

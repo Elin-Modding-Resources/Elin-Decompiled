@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589dea181634470467a8f1a9b41cbee362451b":[2,0,0,571,0,1],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589dea57670cffcfc65012d597222e98961de5":[2,0,0,571,0,4],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589dea6e040661e5d964f2ae2fac7b1fdb52ff":[2,0,0,571,0,5],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589dea942d4e37dd5607ab68e54755540d4a47":[2,0,0,571,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "HomeResourceIndustry_8cs_source.html":[2,0,0,659],
 "HomeResourceKarma_8cs.html":[2,0,0,660],
 "HomeResourceKarma_8cs_source.html":[2,0,0,660],
-"HomeResourceManager_8cs.html":[2,0,0,661],
-"HomeResourceManager_8cs_source.html":[2,0,0,661]
+"HomeResourceManager_8cs.html":[2,0,0,661]
 };

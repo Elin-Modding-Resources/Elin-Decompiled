@@ -149,7 +149,7 @@ var classCard =
     [ "LookAt", "classCard.html#a41c7af36473a6ffecaef0fda8ad73887", null ],
     [ "MakeEgg", "classCard.html#afd3e6d966f414705a6bce02818ac243b", null ],
     [ "MakeFigureFrom", "classCard.html#a20033aa7db8a7ea3a87d10de3d8dcae5", null ],
-    [ "MakeFoodFrom", "classCard.html#afcd1cb7245a2d0d496bf304617f2f9c8", null ],
+    [ "MakeFoodFrom", "classCard.html#aa574bb031eb0e438dda5cf56684f20da", null ],
     [ "MakeFoodFrom", "classCard.html#aa53755a525ef141147e2e5fa605b8130", null ],
     [ "MakeFoodRef", "classCard.html#a877b85bc04fceb350b4c3cc9041a4c46", null ],
     [ "MakeMilk", "classCard.html#a9f61d705c7a6599d5c78818fd66f9a94", null ],
