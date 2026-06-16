@@ -38,10 +38,10 @@ public class TaskWater : Task
 		{
 			Debug.Log(list.Count);
 			list.Sort((Point a, Point b) => a.Distance(dest) - b.Distance(dest));
-			Point p = list[0];
-			dest.Set(p);
+			Point p2 = list[0];
+			dest.Set(p2);
 			list.RemoveAt(0);
-			if (!ShouldWater(p))
+			if (!ShouldWater(p2))
 			{
 				continue;
 			}
@@ -50,7 +50,7 @@ public class TaskWater : Task
 				yield return Cancel();
 			}
 			bool fail = false;
-			Status status = DoGoto(p, 1, ignoreConnection: false, delegate
+			Status status = DoGoto(p2, 1, ignoreConnection: false, delegate
 			{
 				fail = true;
 				return Status.Running;
@@ -64,31 +64,50 @@ public class TaskWater : Task
 			{
 				yield return Cancel();
 			}
-			if (ShouldWater(p))
+			if (!ShouldWater(p2))
 			{
-				if (owner.Dist(dest) > 1)
-				{
-					yield return Cancel();
-				}
-				p.cell.isWatered = true;
-				if (!p.cell.blocked && EClass.rnd(5) == 0)
-				{
-					EClass._map.SetLiquid(p.x, p.z, 1);
-				}
-				if (p.cell.HasFire)
-				{
-					p.ModFire(-50, extinguish: true);
-				}
-				owner.PlaySound("water_farm");
-				owner.Say("water_farm", owner, p.cell.GetFloorName());
-				waterCan.owner.ModCharge(-1);
-				owner.ModExp(286, 15);
-				if (!IsWaterCanValid())
-				{
-					yield return Cancel();
-				}
-				yield return KeepRunning();
+				continue;
 			}
+			if (owner.Dist(dest) > 1)
+			{
+				yield return Cancel();
+			}
+			int num = waterCan.owner.Evalue(770);
+			num = ((num <= 0) ? 1 : Mathf.Min(waterCan.owner.c_charges, 2 + num / 10));
+			if (num > 1)
+			{
+				List<Point> list2 = EClass._map.ListPointsInCircle(p2, num);
+				list2.Sort((Point a, Point b) => a.Distance(p2) - b.Distance(p2));
+				foreach (Point item in list2)
+				{
+					Water(item);
+				}
+			}
+			else
+			{
+				Water(p2);
+			}
+			owner.PlaySound("water_farm");
+			owner.Say("water_farm", owner, p2.cell.GetFloorName());
+			waterCan.owner.ModCharge(-num);
+			if (!IsWaterCanValid())
+			{
+				yield return Cancel();
+			}
+			yield return KeepRunning();
+		}
+		void Water(Point p)
+		{
+			p.cell.isWatered = true;
+			if (!p.cell.blocked && EClass.rnd(5) == 0)
+			{
+				EClass._map.SetLiquid(p.x, p.z, 1);
+			}
+			if (p.cell.HasFire)
+			{
+				p.ModFire(-50, extinguish: true);
+			}
+			owner.ModExp(286, 15);
 		}
 	}
 

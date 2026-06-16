@@ -5339,7 +5339,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				list.Add(thing2);
 			}
 		}
-		bool flag2 = Chara.race.corpse[1].ToInt() > EClass.rnd(1500) || (Chara.IsPowerful && !IsPCFaction) || EClass.debug.godFood;
+		bool flag2 = Chara.race.corpse[1].ToInt() > EClass.rnd(1500) || (Chara.IsPowerful && !IsPCFaction) || EClass.debug.godFood || HasTag(CTAG.alwaysDropCorpse);
 		int num = 1;
 		if (!IsMinion && Chara.IsAnimal && EClass.rnd(EClass._zone.IsPCFaction ? 3 : 5) == 0)
 		{
@@ -5372,31 +5372,46 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (flag2 && !isUserZone)
 		{
-			string text = Chara.race.corpse[0];
-			bool num2 = text == "_meat";
-			int num3 = 10;
-			if (AI_Slaughter.slaughtering)
+			string text = id;
+			if (!(text == "bubble_pudding"))
 			{
-				num3 += (int)Mathf.Min(Mathf.Sqrt(EClass.pc.Evalue(290)), 20f);
-			}
-			if (EClass.rnd((Act.CurrentAct is ActMeleeBladeStorm || (origin != null && (origin.HasElement(1556) || origin.HasCondition<ConTransmuteCat>()))) ? 2 : 100) == 0)
-			{
-				text = "dattamono";
-			}
-			if (num2 && num3 > EClass.rnd(100))
-			{
-				text = "meat_marble";
-			}
-			Thing thing3 = ThingGen.Create(text).SetNum(num);
-			if (thing3.source._origin == "meat")
-			{
-				thing3.MakeFoodFrom(this);
+				if (text == "marshmallow_monster")
+				{
+					list.Add(ThingGen.Create("marshmallow_nama").SetNum(num).MakeFoodFrom(this, makeRef: false));
+				}
+				else
+				{
+					string text2 = Chara.race.corpse[0];
+					bool num2 = text2 == "_meat";
+					int num3 = 10;
+					if (AI_Slaughter.slaughtering)
+					{
+						num3 += (int)Mathf.Min(Mathf.Sqrt(EClass.pc.Evalue(290)), 20f);
+					}
+					if (EClass.rnd((Act.CurrentAct is ActMeleeBladeStorm || (origin != null && (origin.HasElement(1556) || origin.HasCondition<ConTransmuteCat>()))) ? 2 : 100) == 0)
+					{
+						text2 = "dattamono";
+					}
+					if (num2 && num3 > EClass.rnd(100))
+					{
+						text2 = "meat_marble";
+					}
+					Thing thing3 = ThingGen.Create(text2).SetNum(num);
+					if (thing3.source._origin == "meat")
+					{
+						thing3.MakeFoodFrom(this);
+					}
+					else
+					{
+						thing3.ChangeMaterial(Chara.material);
+					}
+					list.Add(thing3);
+				}
 			}
 			else
 			{
-				thing3.ChangeMaterial(Chara.material);
+				list.Add(ThingGen.Create("517").SetNum(num).MakeFoodFrom(this, makeRef: false));
 			}
-			list.Add(thing3);
 		}
 		if (!IsPCFaction && (!isUserZone || !EClass.game.principal.disableUsermapBenefit) && chance(200))
 		{
@@ -5752,9 +5767,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return MakeFoodFrom(EClass.sources.cards.map[_id].model);
 	}
 
-	public Card MakeFoodFrom(Card c)
+	public Card MakeFoodFrom(Card c, bool makeRef = true)
 	{
-		MakeRefFrom(c);
+		if (makeRef)
+		{
+			MakeRefFrom(c);
+		}
 		ChangeMaterial(c.material);
 		if (!c.isChara)
 		{
@@ -5765,7 +5783,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		bool flag = id == "meat_marble";
 		int num2 = 1;
 		bool flag2 = category.IsChildOf("meat");
-		bool flag3 = category.IsChildOf("egg") || trait is TraitGene;
+		bool flag3 = id == "517" || id == "marshmallow_nama" || category.IsChildOf("egg") || trait is TraitGene;
 		if (flag)
 		{
 			num += 100;

@@ -417,7 +417,7 @@ public class ActRanged : ActThrow
 		}
 		if (weapon.ammoData != null)
 		{
-			if (weapon.ammoData.Num > 0)
+			if (weapon.ammoData.Num > 0 && !(weapon.ammoData.trait is TraitAmmoTalisman))
 			{
 				Act.CC.Pick(weapon.ammoData);
 			}

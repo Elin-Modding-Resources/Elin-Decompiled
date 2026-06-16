@@ -576,9 +576,9 @@ public class GoalCombat : Goal
 			}
 			case "song":
 			{
-				bool flag7 = owner.HasCondition<BaseSong>();
-				bool flag8 = owner.mana.value > owner.mana.max / 3;
-				num = ((flag7 && !flag8) ? 100 : ((!flag7 && flag8) ? 100 : 0));
+				bool flag8 = owner.HasCondition<BaseSong>();
+				bool flag9 = owner.mana.value > owner.mana.max / 3;
+				num = ((flag8 && !flag9) ? 100 : ((!flag8 && flag9) ? 100 : 0));
 				break;
 			}
 			case "melee":
@@ -654,13 +654,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag9 = text == "dot";
-				if (flag9 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag12 = text == "dot";
+				if (flag12 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag9)
+				if (num > 0 && flag12)
 				{
 					num += 10;
 				}
@@ -677,7 +677,8 @@ public class GoalCombat : Goal
 					continue;
 				}
 				bool flag6 = act is ActBolt;
-				if (!flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
+				bool flag7 = act is ActBall;
+				if ((owner.pos.IsBlocked && (flag6 || flag7)) || !flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}

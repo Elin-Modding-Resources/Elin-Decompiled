@@ -4050,7 +4050,7 @@ public class Chara : Card, IPathfindWalker
 			Die();
 			return;
 		}
-		if (pos.IsBlocked)
+		if (pos.IsBlocked && pos.HasBlock)
 		{
 			preventRegen = true;
 		}
@@ -9712,6 +9712,10 @@ public class Chara : Card, IPathfindWalker
 			}
 		}
 		int num2 = c.EvaluateTurn(c.power);
+		if (c is ConDeathSentense && HasElement(494))
+		{
+			num2 = num2 * (100 + (int)Mathf.Sqrt(Evalue(494)) * 10) / 100;
+		}
 		if (num2 == 0)
 		{
 			return null;

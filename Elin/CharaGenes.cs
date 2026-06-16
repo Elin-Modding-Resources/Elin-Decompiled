@@ -16,8 +16,6 @@ public class CharaGenes : EClass
 			c.c_genes.items.Remove(item);
 			c.feat += item.cost * c.GeneCostMTP / 100;
 			item.Apply(c, reverse: true);
-			c.Refresh();
-			c.RemoveAllStances();
 			Msg.Say("dna_loss", c, item.GetText());
 		}
 	}

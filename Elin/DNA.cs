@@ -246,6 +246,12 @@ public class DNA : EClass
 				break;
 			}
 		}
+		c.RefreshFaithElement();
+		c.Refresh();
+		if (reverse)
+		{
+			c.RemoveAllStances();
+		}
 	}
 
 	public bool CanRemove(Chara c)

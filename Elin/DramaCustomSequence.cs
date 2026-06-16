@@ -1659,17 +1659,26 @@ public class DramaCustomSequence : EClass
 				{
 					TempTalkTopic("alreadyFull", StepDefault);
 				}
-				else if (EClass.pc.GetCurrency() < cost)
-				{
-					TempTalkTopic("nomoney", StepDefault);
-				}
 				else
 				{
-					SE.Pay();
-					EClass.pc.ModCurrency(-cost);
-					TempTalkTopic("food2", StepDefault);
-					FoodEffect.Proc(EClass.pc, ThingGen.Create("dish_lunch"), consume: false);
-					EClass.pc.hunger.value = 0;
+					if (EClass.pc.GetCurrency() >= cost)
+					{
+						SE.Pay();
+						EClass.pc.ModCurrency(-cost);
+						TempTalkTopic("food2", StepDefault);
+						{
+							foreach (Chara member3 in EClass.pc.party.members)
+							{
+								if (member3.hunger.GetPhase() > 0)
+								{
+									FoodEffect.Proc(member3, ThingGen.Create("dish_lunch"), consume: false);
+									member3.hunger.value = 0;
+								}
+							}
+							return;
+						}
+					}
+					TempTalkTopic("nomoney", StepDefault);
 				}
 			});
 			Choice("no", StepDefault, cancel: true).SetOnClick(RumorChill);

@@ -51,5 +51,6 @@ public enum CTAG
 	antiSpider,
 	shield,
 	humanSpeak,
-	throwBall
+	throwBall,
+	alwaysDropCorpse
 }

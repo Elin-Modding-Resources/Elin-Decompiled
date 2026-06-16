@@ -12,9 +12,9 @@ public class FACTION
 
 	public const int bfSnow = 3602;
 
-	public const int bfFertile = 3700;
+	public const int bfHill = 3603;
 
-	public const int bfBeach = 3604;
+	public const int bfFertile = 3700;
 
 	public const int bfSea = 3605;
 
@@ -22,7 +22,7 @@ public class FACTION
 
 	public const int bfCave = 3500;
 
-	public const int bfHill = 3603;
+	public const int bfBeach = 3604;
 
 	public const int fRation = 2207;
 
@@ -54,7 +54,7 @@ public class FACTION
 
 	public const int bfTranquil = 3703;
 
-	public const int actBuildMine = 4001;
+	public const int actBuildTerrain = 4002;
 
 	public const int bfHunt = 3705;
 
@@ -66,7 +66,7 @@ public class FACTION
 
 	public const int actBuildAnywhere = 4003;
 
-	public const int actBuildTerrain = 4002;
+	public const int actBuildMine = 4001;
 
 	public const int actBuildCut = 4000;
 
@@ -112,10 +112,10 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[53]
 	{
-		3701, 3600, 3601, 3602, 3700, 3604, 3605, 3606, 3500, 3603,
+		3701, 3600, 3601, 3602, 3603, 3700, 3605, 3606, 3500, 3604,
 		2207, 2115, 2204, 2203, 2202, 2201, 2200, 2120, 2119, 2118,
-		2117, 2116, 3702, 2206, 3703, 4001, 3705, 4006, 4005, 4004,
-		4003, 4002, 4000, 3900, 3805, 3804, 3803, 3802, 3801, 3800,
+		2117, 2116, 3702, 2206, 3703, 4002, 3705, 4006, 4005, 4004,
+		4003, 4001, 4000, 3900, 3805, 3804, 3803, 3802, 3801, 3800,
 		3784, 3783, 3782, 3781, 3780, 3710, 3709, 3708, 3707, 3706,
 		3704, 2003, 2205
 	};

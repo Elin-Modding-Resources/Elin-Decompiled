@@ -128,15 +128,15 @@ public class ENC
 
 	public const int encSpell = 411;
 
-	public const int mod_cleave = 622;
+	public const int slowCorruption = 412;
 
-	public const int encHit = 414;
+	public const int mod_cleave = 622;
 
 	public const int slowDecay = 405;
 
 	public const int sustain_STR = 440;
 
-	public const int slowCorruption = 412;
+	public const int encHit = 414;
 
 	public const int mod_rapid = 602;
 
@@ -144,7 +144,7 @@ public class ENC
 
 	public const int deathagony = 488;
 
-	public const int farsee = 490;
+	public const int music_drunk = 489;
 
 	public const int negateGravity = 491;
 
@@ -152,11 +152,13 @@ public class ENC
 
 	public const int freemove = 493;
 
+	public const int extendedSentence = 494;
+
 	public const int mod_ammo = 600;
 
-	public const int mod_reload = 601;
+	public const int safetyMeasure = 486;
 
-	public const int mod_ammo_knockback = 603;
+	public const int mod_reload = 601;
 
 	public const int mod_ammo_recover = 604;
 
@@ -174,11 +176,11 @@ public class ENC
 
 	public const int sustain_END = 441;
 
-	public const int safetyMeasure = 486;
+	public const int mod_ammo_knockback = 603;
 
 	public const int nonLethal = 485;
 
-	public const int music_drunk = 489;
+	public const int farsee = 490;
 
 	public const int optimizeMana = 483;
 
@@ -220,7 +222,7 @@ public class ENC
 
 	public const int force_weapon = 482;
 
-	public static readonly int[] IDS = new int[110]
+	public static readonly int[] IDS = new int[111]
 	{
 		656, 655, 654, 653, 651, 641, 650, 652, 660, 640,
 		661, 851, 663, 664, 665, 666, 667, 850, 624, 865,
@@ -228,10 +230,11 @@ public class ENC
 		423, 424, 425, 426, 418, 427, 429, 430, 431, 432,
 		435, 436, 437, 438, 428, 439, 417, 415, 380, 381,
 		382, 383, 400, 401, 402, 403, 416, 404, 406, 407,
-		408, 409, 410, 411, 622, 414, 405, 440, 412, 602,
-		487, 488, 490, 491, 492, 493, 600, 601, 603, 604,
-		605, 606, 607, 608, 609, 620, 441, 486, 485, 489,
-		483, 443, 444, 445, 446, 447, 484, 460, 461, 462,
-		450, 464, 465, 466, 467, 468, 480, 481, 463, 482
+		408, 409, 410, 411, 412, 622, 405, 440, 414, 602,
+		487, 488, 489, 491, 492, 493, 494, 600, 486, 601,
+		604, 605, 606, 607, 608, 609, 620, 441, 603, 485,
+		490, 483, 443, 444, 445, 446, 447, 484, 460, 461,
+		462, 450, 464, 465, 466, 467, 468, 480, 481, 463,
+		482
 	};
 }
