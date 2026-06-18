@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.317 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.318 Nightly</span>
    </div>
   </td>
  </tr>
@@ -133,6 +133,8 @@ Inheritance diagram for TaskPoint:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae88a3b820e677050f149af5bfcd9fbad"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTaskPoint.html#ae88a3b820e677050f149af5bfcd9fbad">CanManualCancel</a> ()</td></tr>
 <tr class="separator:ae88a3b820e677050f149af5bfcd9fbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385586e1d4f02b8791878983c23835bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTaskPoint.html#a385586e1d4f02b8791878983c23835bd">GetHitResult</a> (<a class="el" href="classPoint.html">Point</a> p)</td></tr>
+<tr class="separator:a385586e1d4f02b8791878983c23835bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a3f1eb877b21ab41f76d3b3be49c041"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">CanPerform</a> ()</td></tr>
 <tr class="separator:a2a3f1eb877b21ab41f76d3b3be49c041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf5c0049a744538ef7c94c936f360ff4"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTaskPoint.html#abf5c0049a744538ef7c94c936f360ff4">_CanPerformTask</a> (<a class="el" href="classChara.html">Chara</a> chara, int radius)</td></tr>
@@ -840,18 +842,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTask.html#a4db0d8ce34d9559ca866f49fc4685a46">Task</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00059">59</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (radius != -1 &amp;&amp; chara.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>) &gt; radius)</div>
-<div class="line"><span class="lineno">   62</span>        {</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ac104dff1d7d021561642722594ea027c">isSurrounded</a>)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00068">68</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (radius != -1 &amp;&amp; chara.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>) &gt; radius)</div>
+<div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_property" href="classPoint.html#ae77439bcd222df31e3380daf61159f8b">cell</a>.<a class="code hl_property" href="classCell.html#ac104dff1d7d021561642722594ea027c">isSurrounded</a>)</div>
+<div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00060">Card.cs:60</a></div></div>
 <div class="ttc" id="aclassCell_html_ac104dff1d7d021561642722594ea027c"><div class="ttname"><a href="classCell.html#ac104dff1d7d021561642722594ea027c">Cell.isSurrounded</a></div><div class="ttdeci">bool isSurrounded</div><div class="ttdef"><b>Definition:</b> <a href="Cell_8cs_source.html#l00241">Cell.cs:242</a></div></div>
 <div class="ttc" id="aclassPoint_html_ad787ed156f4f6d356ed15f50202458d4"><div class="ttname"><a href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Point.Distance</a></div><div class="ttdeci">int Distance(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00995">Point.cs:995</a></div></div>
@@ -929,22 +931,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classAct.html#adc0a2efd2fefeb21d959bf4fcaa12e38">Act</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00042">42</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   45</span>        {</div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>;</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="classTaskPoint.html#ad9f9e7e49e3c9c5e75976497c12bd17c">tempPos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>);</div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>);</div>
-<div class="line"><span class="lineno">   50</span>        <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a> hitResult = <a class="code hl_function" href="classTask.html#af88bbfa521b498e59f51714f39ab9d43">GetHitResult</a>();</div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_variable" href="classTaskPoint.html#ad9f9e7e49e3c9c5e75976497c12bd17c">tempPos</a>);</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (hitResult != <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid)</div>
-<div class="line"><span class="lineno">   53</span>        {</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> hitResult == <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Warning;</div>
-<div class="line"><span class="lineno">   55</span>        }</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00051">51</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> = <a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#aaee36f292832814173c67d44df115a5a">CC</a>;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="line"><span class="lineno">   57</span>        <a class="code hl_variable" href="classTaskPoint.html#ad9f9e7e49e3c9c5e75976497c12bd17c">tempPos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>);</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>);</div>
+<div class="line"><span class="lineno">   59</span>        <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a> hitResult = <a class="code hl_function" href="classTask.html#af88bbfa521b498e59f51714f39ab9d43">GetHitResult</a>();</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_variable" href="classTaskPoint.html#ad9f9e7e49e3c9c5e75976497c12bd17c">tempPos</a>);</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (hitResult != <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Valid)</div>
+<div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span> hitResult == <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a>.Warning;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
 <div class="ttc" id="aHitResult_8cs_html_a7edaf0746b1c938ab5c2d9aaaee8a01a"><div class="ttname"><a href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a></div><div class="ttdeci">HitResult</div><div class="ttdef"><b>Definition:</b> <a href="HitResult_8cs_source.html#l00001">HitResult.cs:2</a></div></div>
 <div class="ttc" id="aclassAIAct_html_a90a10a6cf1431bc73ba4bd215e2d1ace"><div class="ttname"><a href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">AIAct.owner</a></div><div class="ttdeci">new Chara owner</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00014">AIAct.cs:14</a></div></div>
 <div class="ttc" id="aclassAct_html"><div class="ttname"><a href="classAct.html">Act</a></div><div class="ttdef"><b>Definition:</b> <a href="ACT_8cs_source.html#l00061">ACT.cs:62</a></div></div>
@@ -956,7 +958,46 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ACT_8cs_source.html#l00077">Act.CC</a>, <a class="el" href="Task_8cs_source.html#l00016">Task.GetHitResult()</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="TaskPoint_8cs_source.html#l00011">pos</a>, <a class="el" href="Point_8cs_source.html#l00503">Point.Set()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00008">tempPos</a>, and <a class="el" href="ACT_8cs_source.html#l00081">Act.TP</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HotItemHeld_8cs_source.html#l00015">HotItemHeld.CanChangeHeightByWheel()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00028">HotItemHeld.CanRotate()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00427">HotItemHeld.OnRenderTile()</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00072">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HotItemHeld_8cs_source.html#l00015">HotItemHeld.CanChangeHeightByWheel()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00028">HotItemHeld.CanRotate()</a>, <a class="el" href="HotItemHeld_8cs_source.html#l00427">HotItemHeld.OnRenderTile()</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00081">Run()</a>.</p>
+
+</div>
+</div>
+<a id="a385586e1d4f02b8791878983c23835bd" name="a385586e1d4f02b8791878983c23835bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385586e1d4f02b8791878983c23835bd">&#9670;&#160;</a></span>GetHitResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a> TaskPoint.GetHitResult </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00042">42</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_class" href="classPoint.html">Point</a> point = <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a> = p;</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_enumeration" href="HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01a">HitResult</a> hitResult = <a class="code hl_function" href="classTask.html#af88bbfa521b498e59f51714f39ab9d43">GetHitResult</a>();</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a> = point;</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> hitResult;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="ttc" id="aclassPoint_html"><div class="ttname"><a href="classPoint.html">Point</a></div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00008">Point.cs:9</a></div></div>
+<div class="ttc" id="aclassPoint_html_a3548549d3df5229465d73290f51446f5"><div class="ttname"><a href="classPoint.html#a3548549d3df5229465d73290f51446f5">Point.Copy</a></div><div class="ttdeci">Point Copy()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00491">Point.cs:491</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00491">Point.Copy()</a>, <a class="el" href="Task_8cs_source.html#l00016">Task.GetHitResult()</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00011">pos</a>.</p>
 
 </div>
 </div>
@@ -985,9 +1026,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceIInspect.html#a0f1a43bcf9a39d8dba914b60172c4c1f">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00128">128</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00137">137</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1016,61 +1057,61 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classAIAct.html#a95c411b9e44463b061c832cedc7a12ea">AIAct</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00072">72</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>    {</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; <a class="code hl_class" href="classAM__Adv.html">AM_Adv</a>.<a class="code hl_variable" href="classAM__Adv.html#a4969ac61370fbbc0cf62daa3453e3985">actCount</a> &gt; 0)</div>
-<div class="line"><span class="lineno">   75</span>        {</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">while</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#aa93b8d7a75279ebdae61a04df4991c80">rightMouse</a>.<a class="code hl_variable" href="classButtonState.html#a2795e664e9d9d2e7daf816393e89ddd4">pressing</a>)</div>
-<div class="line"><span class="lineno">   77</span>            {</div>
-<div class="line"><span class="lineno">   78</span>                <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classAM__Adv.html#a0e34c414bfd00bf268e98526e96a31e1">mouseTarget</a>.<a class="code hl_variable" href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">pos</a>));</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">CanPerform</a>())</div>
-<div class="line"><span class="lineno">   80</span>                {</div>
-<div class="line"><span class="lineno">   81</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>                yield <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Running;</div>
-<div class="line"><span class="lineno">   84</span>            }</div>
-<div class="line"><span class="lineno">   85</span>            <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classAM__Adv.html#a0e34c414bfd00bf268e98526e96a31e1">mouseTarget</a>.<a class="code hl_variable" href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">pos</a>));</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">CanPerform</a>() || !<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#aa93b8d7a75279ebdae61a04df4991c80">rightMouse</a>.<a class="code hl_variable" href="classButtonState.html#a2795e664e9d9d2e7daf816393e89ddd4">pressing</a> || (<a class="code hl_property" href="classTaskPoint.html#ae5f1ddf6bd9c6c4b53906872ae996d89">HasProgress</a> &amp;&amp; !<a class="code hl_function" href="classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0">CanProgress</a>()))</div>
-<div class="line"><span class="lineno">   87</span>            {</div>
-<div class="line"><span class="lineno">   88</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Destroy</a>();</div>
-<div class="line"><span class="lineno">   89</span>            }</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">   92</span>        {</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>) &gt; <a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a>)</div>
-<div class="line"><span class="lineno">   94</span>            {</div>
-<div class="line"><span class="lineno">   95</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ad69a96ace451443057c8db17179025fa">DoGoto</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>, <a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a>, <a class="code hl_property" href="classTaskPoint.html#acfa62455f713e7b8e27d1583884c8601">destIgnoreConnection</a>);</div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>) &gt; <a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a>)</div>
-<div class="line"><span class="lineno">   97</span>                {</div>
-<div class="line"><span class="lineno">   98</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_class" href="classAM__Adv.html">AM_Adv</a>.<a class="code hl_variable" href="classAM__Adv.html#a4969ac61370fbbc0cf62daa3453e3985">actCount</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>?.<a class="code hl_function" href="classPoint.html#a41611e1395be01bf3d49302d97d2f9bf">ToString</a>() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
-<div class="line"><span class="lineno">   99</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>));</div>
-<div class="line"><span class="lineno">  100</span>                    yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Destroy</a>();</div>
-<div class="line"><span class="lineno">  101</span>                }</div>
-<div class="line"><span class="lineno">  102</span>            }</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0">CanProgress</a>())</div>
-<div class="line"><span class="lineno">  104</span>            {</div>
-<div class="line"><span class="lineno">  105</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Destroy</a>();</div>
-<div class="line"><span class="lineno">  106</span>            }</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTaskPoint.html#ae5f1ddf6bd9c6c4b53906872ae996d89">HasProgress</a>)</div>
-<div class="line"><span class="lineno">  108</span>            {</div>
-<div class="line"><span class="lineno">  109</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ad55c49cdbb7dc68eee758b866d30e98d">DoProgress</a>();</div>
-<div class="line"><span class="lineno">  110</span>            }</div>
-<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  112</span>            {</div>
-<div class="line"><span class="lineno">  113</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ae4190e3f5fcf30bb0e936c159ef9a84e">KeepRunning</a>();</div>
-<div class="line"><span class="lineno">  114</span>                <a class="code hl_function" href="classAIAct.html#ac93e4c4275a15fa903bd7aba64cb81c5">OnProgressComplete</a>();</div>
+<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00081">81</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>    {</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a> &amp;&amp; <a class="code hl_class" href="classAM__Adv.html">AM_Adv</a>.<a class="code hl_variable" href="classAM__Adv.html#a4969ac61370fbbc0cf62daa3453e3985">actCount</a> &gt; 0)</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">while</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#aa93b8d7a75279ebdae61a04df4991c80">rightMouse</a>.<a class="code hl_variable" href="classButtonState.html#a2795e664e9d9d2e7daf816393e89ddd4">pressing</a>)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classAM__Adv.html#a0e34c414bfd00bf268e98526e96a31e1">mouseTarget</a>.<a class="code hl_variable" href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">pos</a>));</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">CanPerform</a>())</div>
+<div class="line"><span class="lineno">   89</span>                {</div>
+<div class="line"><span class="lineno">   90</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   91</span>                }</div>
+<div class="line"><span class="lineno">   92</span>                yield <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Running;</div>
+<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="line"><span class="lineno">   94</span>            <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classAct.html">Act</a>.<a class="code hl_variable" href="classAct.html#a87d86f3edab9b6107a74d29921b81d32">TP</a>.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(<a class="code hl_class" href="classActionMode.html">ActionMode</a>.<a class="code hl_variable" href="classActionMode.html#af841b34c3b252c5ed036eb2adb505bc1">Adv</a>.<a class="code hl_property" href="classAM__Adv.html#a0e34c414bfd00bf268e98526e96a31e1">mouseTarget</a>.<a class="code hl_variable" href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">pos</a>));</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">CanPerform</a>() || !<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#aa93b8d7a75279ebdae61a04df4991c80">rightMouse</a>.<a class="code hl_variable" href="classButtonState.html#a2795e664e9d9d2e7daf816393e89ddd4">pressing</a> || (<a class="code hl_property" href="classTaskPoint.html#ae5f1ddf6bd9c6c4b53906872ae996d89">HasProgress</a> &amp;&amp; !<a class="code hl_function" href="classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0">CanProgress</a>()))</div>
+<div class="line"><span class="lineno">   96</span>            {</div>
+<div class="line"><span class="lineno">   97</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Destroy</a>();</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  101</span>        {</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>) &gt; <a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a>)</div>
+<div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ad69a96ace451443057c8db17179025fa">DoGoto</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>, <a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a>, <a class="code hl_property" href="classTaskPoint.html#acfa62455f713e7b8e27d1583884c8601">destIgnoreConnection</a>);</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>) &gt; <a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a>)</div>
+<div class="line"><span class="lineno">  106</span>                {</div>
+<div class="line"><span class="lineno">  107</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_class" href="classAM__Adv.html">AM_Adv</a>.<a class="code hl_variable" href="classAM__Adv.html#a4969ac61370fbbc0cf62daa3453e3985">actCount</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>?.<a class="code hl_function" href="classPoint.html#a41611e1395be01bf3d49302d97d2f9bf">ToString</a>() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>);</div>
+<div class="line"><span class="lineno">  108</span>                    <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(<a class="code hl_property" href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">destDist</a> + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>.<a class="code hl_function" href="classPoint.html#ad787ed156f4f6d356ed15f50202458d4">Distance</a>(<a class="code hl_variable" href="classTaskPoint.html#a14bd72967b54c56f9fc32d26a866fbaa">pos</a>));</div>
+<div class="line"><span class="lineno">  109</span>                    yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Destroy</a>();</div>
+<div class="line"><span class="lineno">  110</span>                }</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0">CanProgress</a>())</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Destroy</a>();</div>
 <div class="line"><span class="lineno">  115</span>            }</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="classTaskPoint.html#ae5f1ddf6bd9c6c4b53906872ae996d89">HasProgress</a>)</div>
 <div class="line"><span class="lineno">  117</span>            {</div>
-<div class="line"><span class="lineno">  118</span>                <a class="code hl_class" href="classAM__Adv.html">AM_Adv</a>.<a class="code hl_variable" href="classAM__Adv.html#a4969ac61370fbbc0cf62daa3453e3985">actCount</a>++;</div>
+<div class="line"><span class="lineno">  118</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ad55c49cdbb7dc68eee758b866d30e98d">DoProgress</a>();</div>
 <div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#aa8a987543199031d0ebc6f7fa62eaff4">child</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classAIAct.html#aa8a987543199031d0ebc6f7fa62eaff4">child</a>.<a class="code hl_variable" href="classAIAct.html#a85c02a6c23799bbe6f6d2af9b4f41eee">status</a> == <a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Fail)</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  121</span>            {</div>
-<div class="line"><span class="lineno">  122</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#a3a03ae6d8df2455f5232cd93093368b9">Cancel</a>();</div>
-<div class="line"><span class="lineno">  123</span>            }</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classTaskPoint.html#a1712e21e59c42d684e3c06bd53786a4a">Loop</a>);</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="line"><span class="lineno">  122</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classAIAct.html#ae4190e3f5fcf30bb0e936c159ef9a84e">KeepRunning</a>();</div>
+<div class="line"><span class="lineno">  123</span>                <a class="code hl_function" href="classAIAct.html#ac93e4c4275a15fa903bd7aba64cb81c5">OnProgressComplete</a>();</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classAIAct.html#a90a10a6cf1431bc73ba4bd215e2d1ace">owner</a>.<a class="code hl_property" href="classChara.html#a36a4e7df4ea4cd8c9b5c28203e1cc80b">IsPC</a>)</div>
+<div class="line"><span class="lineno">  126</span>            {</div>
+<div class="line"><span class="lineno">  127</span>                <a class="code hl_class" href="classAM__Adv.html">AM_Adv</a>.<a class="code hl_variable" href="classAM__Adv.html#a4969ac61370fbbc0cf62daa3453e3985">actCount</a>++;</div>
+<div class="line"><span class="lineno">  128</span>            }</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAIAct.html#aa8a987543199031d0ebc6f7fa62eaff4">child</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="classAIAct.html#aa8a987543199031d0ebc6f7fa62eaff4">child</a>.<a class="code hl_variable" href="classAIAct.html#a85c02a6c23799bbe6f6d2af9b4f41eee">status</a> == <a class="code hl_enumeration" href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">Status</a>.Fail)</div>
+<div class="line"><span class="lineno">  130</span>            {</div>
+<div class="line"><span class="lineno">  131</span>                yield <span class="keywordflow">return</span> <a class="code hl_function" href="classTask.html#a3a03ae6d8df2455f5232cd93093368b9">Cancel</a>();</div>
+<div class="line"><span class="lineno">  132</span>            }</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">while</span> (<a class="code hl_property" href="classTaskPoint.html#a1712e21e59c42d684e3c06bd53786a4a">Loop</a>);</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
 <div class="ttc" id="aReleaseMode_8cs_html_a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">ReleaseMode.Debug</a></div><div class="ttdeci">@ Debug</div></div>
 <div class="ttc" id="aclassAIAct_html_a85c02a6c23799bbe6f6d2af9b4f41eee"><div class="ttname"><a href="classAIAct.html#a85c02a6c23799bbe6f6d2af9b4f41eee">AIAct.status</a></div><div class="ttdeci">Status status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00016">AIAct.cs:16</a></div></div>
 <div class="ttc" id="aclassAIAct_html_aae7586662bd9772ff368785a26ab260a"><div class="ttname"><a href="classAIAct.html#aae7586662bd9772ff368785a26ab260a">AIAct.Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00007">AIAct.cs:8</a></div></div>
@@ -1090,7 +1131,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassPointTarget_html_a8e3f9431c0938d6d92565e1a9d7a7d3c"><div class="ttname"><a href="classPointTarget.html#a8e3f9431c0938d6d92565e1a9d7a7d3c">PointTarget.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="PointTarget_8cs_source.html#l00032">PointTarget.cs:32</a></div></div>
 <div class="ttc" id="aclassPoint_html_a41611e1395be01bf3d49302d97d2f9bf"><div class="ttname"><a href="classPoint.html#a41611e1395be01bf3d49302d97d2f9bf">Point.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> <a href="Point_8cs_source.html#l00524">Point.cs:524</a></div></div>
 <div class="ttc" id="aclassTaskPoint_html_a1712e21e59c42d684e3c06bd53786a4a"><div class="ttname"><a href="classTaskPoint.html#a1712e21e59c42d684e3c06bd53786a4a">TaskPoint.Loop</a></div><div class="ttdeci">virtual bool Loop</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00023">TaskPoint.cs:23</a></div></div>
-<div class="ttc" id="aclassTaskPoint_html_a2a3f1eb877b21ab41f76d3b3be49c041"><div class="ttname"><a href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">TaskPoint.CanPerform</a></div><div class="ttdeci">override bool CanPerform()</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00042">TaskPoint.cs:42</a></div></div>
+<div class="ttc" id="aclassTaskPoint_html_a2a3f1eb877b21ab41f76d3b3be49c041"><div class="ttname"><a href="classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041">TaskPoint.CanPerform</a></div><div class="ttdeci">override bool CanPerform()</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00051">TaskPoint.cs:51</a></div></div>
 <div class="ttc" id="aclassTaskPoint_html_acfa62455f713e7b8e27d1583884c8601"><div class="ttname"><a href="classTaskPoint.html#acfa62455f713e7b8e27d1583884c8601">TaskPoint.destIgnoreConnection</a></div><div class="ttdeci">virtual bool destIgnoreConnection</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00019">TaskPoint.cs:19</a></div></div>
 <div class="ttc" id="aclassTaskPoint_html_ae5f1ddf6bd9c6c4b53906872ae996d89"><div class="ttname"><a href="classTaskPoint.html#ae5f1ddf6bd9c6c4b53906872ae996d89">TaskPoint.HasProgress</a></div><div class="ttdeci">override bool HasProgress</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00015">TaskPoint.cs:15</a></div></div>
 <div class="ttc" id="aclassTaskPoint_html_afd38bbc78a297cca8bb7cd10f4660cc1"><div class="ttname"><a href="classTaskPoint.html#afd38bbc78a297cca8bb7cd10f4660cc1">TaskPoint.destDist</a></div><div class="ttdeci">virtual int destDist</div><div class="ttdef"><b>Definition:</b> <a href="TaskPoint_8cs_source.html#l00017">TaskPoint.cs:17</a></div></div>
@@ -1098,7 +1139,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassTask_html_aaed6d0dd18b3060661a230cf0abb77b9"><div class="ttname"><a href="classTask.html#aaed6d0dd18b3060661a230cf0abb77b9">Task.Destroy</a></div><div class="ttdeci">Status Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="Task_8cs_source.html#l00031">Task.cs:31</a></div></div>
 <div class="ttc" id="aclassTask_html_ace0d6347681762aa3b4c2424a9e0d5c0"><div class="ttname"><a href="classTask.html#ace0d6347681762aa3b4c2424a9e0d5c0">Task.CanProgress</a></div><div class="ttdeci">override bool CanProgress()</div><div class="ttdef"><b>Definition:</b> <a href="Task_8cs_source.html#l00068">Task.cs:68</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AM__Adv_8cs_source.html#l00102">AM_Adv.actCount</a>, <a class="el" href="ActionMode_8cs_source.html#l00015">ActionMode.Adv</a>, <a class="el" href="Task_8cs_source.html#l00054">Task.Cancel()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00042">CanPerform()</a>, <a class="el" href="Task_8cs_source.html#l00068">Task.CanProgress()</a>, <a class="el" href="AIAct_8cs_source.html#l00020">AIAct.child</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="TaskPoint_8cs_source.html#l00017">destDist</a>, <a class="el" href="TaskPoint_8cs_source.html#l00019">destIgnoreConnection</a>, <a class="el" href="Task_8cs_source.html#l00031">Task.Destroy()</a>, <a class="el" href="Point_8cs_source.html#l00995">Point.Distance()</a>, <a class="el" href="AIAct_8cs_source.html#l00446">AIAct.DoGoto()</a>, <a class="el" href="AIAct_8cs_source.html#l00531">AIAct.DoProgress()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00015">HasProgress</a>, <a class="el" href="Chara_8cs_source.html#l00630">Chara.IsPC</a>, <a class="el" href="AIAct_8cs_source.html#l00335">AIAct.KeepRunning()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00023">Loop</a>, <a class="el" href="AM__Adv_8cs_source.html#l00171">AM_Adv.mouseTarget</a>, <a class="el" href="AIAct_8cs_source.html#l00588">AIAct.OnProgressComplete()</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>, <a class="el" href="PointTarget_8cs_source.html#l00032">PointTarget.pos</a>, <a class="el" href="TaskPoint_8cs_source.html#l00011">pos</a>, <a class="el" href="ButtonState_8cs_source.html#l00035">ButtonState.pressing</a>, <a class="el" href="EInput_8cs_source.html#l00362">EInput.rightMouse</a>, <a class="el" href="Point_8cs_source.html#l00503">Point.Set()</a>, <a class="el" href="AIAct_8cs_source.html#l00016">AIAct.status</a>, <a class="el" href="Point_8cs_source.html#l00524">Point.ToString()</a>, and <a class="el" href="ACT_8cs_source.html#l00081">Act.TP</a>.</p>
+<p class="reference">References <a class="el" href="AM__Adv_8cs_source.html#l00102">AM_Adv.actCount</a>, <a class="el" href="ActionMode_8cs_source.html#l00015">ActionMode.Adv</a>, <a class="el" href="Task_8cs_source.html#l00054">Task.Cancel()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00051">CanPerform()</a>, <a class="el" href="Task_8cs_source.html#l00068">Task.CanProgress()</a>, <a class="el" href="AIAct_8cs_source.html#l00020">AIAct.child</a>, <a class="el" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>, <a class="el" href="TaskPoint_8cs_source.html#l00017">destDist</a>, <a class="el" href="TaskPoint_8cs_source.html#l00019">destIgnoreConnection</a>, <a class="el" href="Task_8cs_source.html#l00031">Task.Destroy()</a>, <a class="el" href="Point_8cs_source.html#l00995">Point.Distance()</a>, <a class="el" href="AIAct_8cs_source.html#l00446">AIAct.DoGoto()</a>, <a class="el" href="AIAct_8cs_source.html#l00531">AIAct.DoProgress()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00015">HasProgress</a>, <a class="el" href="Chara_8cs_source.html#l00630">Chara.IsPC</a>, <a class="el" href="AIAct_8cs_source.html#l00335">AIAct.KeepRunning()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00023">Loop</a>, <a class="el" href="AM__Adv_8cs_source.html#l00171">AM_Adv.mouseTarget</a>, <a class="el" href="AIAct_8cs_source.html#l00588">AIAct.OnProgressComplete()</a>, <a class="el" href="AIAct_8cs_source.html#l00014">AIAct.owner</a>, <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>, <a class="el" href="PointTarget_8cs_source.html#l00032">PointTarget.pos</a>, <a class="el" href="TaskPoint_8cs_source.html#l00011">pos</a>, <a class="el" href="ButtonState_8cs_source.html#l00035">ButtonState.pressing</a>, <a class="el" href="EInput_8cs_source.html#l00362">EInput.rightMouse</a>, <a class="el" href="Point_8cs_source.html#l00503">Point.Set()</a>, <a class="el" href="AIAct_8cs_source.html#l00016">AIAct.status</a>, <a class="el" href="Point_8cs_source.html#l00524">Point.ToString()</a>, and <a class="el" href="ACT_8cs_source.html#l00081">Act.TP</a>.</p>
 
 </div>
 </div>
@@ -1150,12 +1191,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceIInspect.html#a53694e39c0b8ee3f771896555166a20c">IInspect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00132">132</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>    {</div>
-<div class="line"><span class="lineno">  134</span>        n.<a class="code hl_function" href="classUINote.html#a201293c027e2d754b95366702087b081">Clear</a>();</div>
-<div class="line"><span class="lineno">  135</span>        n.<a class="code hl_function" href="classUINote.html#a155f30d13b33eeea9e096413ff0012fd">AddHeaderCard</a>(<a class="code hl_property" href="classAIAct.html#ac6b22016f0841208f2826276b0a1ac79">Name</a>);</div>
-<div class="line"><span class="lineno">  136</span>        n.<a class="code hl_function" href="classUINote.html#ae74cd5d02ecb155823a55d182817f3f3">Build</a>();</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00141">141</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>    {</div>
+<div class="line"><span class="lineno">  143</span>        n.<a class="code hl_function" href="classUINote.html#a201293c027e2d754b95366702087b081">Clear</a>();</div>
+<div class="line"><span class="lineno">  144</span>        n.<a class="code hl_function" href="classUINote.html#a155f30d13b33eeea9e096413ff0012fd">AddHeaderCard</a>(<a class="code hl_property" href="classAIAct.html#ac6b22016f0841208f2826276b0a1ac79">Name</a>);</div>
+<div class="line"><span class="lineno">  145</span>        n.<a class="code hl_function" href="classUINote.html#ae74cd5d02ecb155823a55d182817f3f3">Build</a>();</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
 <div class="ttc" id="aclassAIAct_html_ac6b22016f0841208f2826276b0a1ac79"><div class="ttname"><a href="classAIAct.html#ac6b22016f0841208f2826276b0a1ac79">AIAct.Name</a></div><div class="ttdeci">virtual new string Name</div><div class="ttdef"><b>Definition:</b> <a href="AIAct_8cs_source.html#l00068">AIAct.cs:68</a></div></div>
 <div class="ttc" id="aclassUINote_html_a155f30d13b33eeea9e096413ff0012fd"><div class="ttname"><a href="classUINote.html#a155f30d13b33eeea9e096413ff0012fd">UINote.AddHeaderCard</a></div><div class="ttdeci">UIItem AddHeaderCard(string text, Sprite sprite=null)</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00084">UINote.cs:84</a></div></div>
 <div class="ttc" id="aclassUINote_html_a201293c027e2d754b95366702087b081"><div class="ttname"><a href="classUINote.html#a201293c027e2d754b95366702087b081">UINote.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="UINote_8cs_source.html#l00035">UINote.cs:35</a></div></div>
@@ -1198,7 +1239,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00011">11</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00059">_CanPerformTask()</a>, <a class="el" href="Recipe_8cs_source.html#l00640">Recipe.Build()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00399">RecipeCard.Build()</a>, <a class="el" href="TaskMine_8cs_source.html#l00033">TaskMine.CanMine()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00042">CanPerform()</a>, <a class="el" href="TaskBaseBuild_8cs_source.html#l00003">TaskBaseBuild.CanPlaceCard()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00023">TaskDrawWater.CanProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00226">TaskHarvest.CanProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00023">TaskPlow.CanProgress()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00011">TaskPourWater.CanProgress()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00074">TaskBuild.CanRotateBlock()</a>, <a class="el" href="TaskMine_8cs_source.html#l00095">TaskMine.DrawMarker()</a>, <a class="el" href="AM__Dig_8cs_source.html#l00013">AM_Dig.ForcedInstaComplete()</a>, <a class="el" href="AM__Mine_8cs_source.html#l00029">AM_Mine.ForcedInstaComplete()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00108">BaseTaskHarvest.GetBestTool()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00149">TaskBuild.GetHitResult()</a>, <a class="el" href="TaskCut_8cs_source.html#l00019">TaskCut.GetHitResult()</a>, <a class="el" href="TaskDig_8cs_source.html#l00095">TaskDig.GetHitResult()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00107">TaskDrawWater.GetHitResult()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00248">TaskHarvest.GetHitResult()</a>, <a class="el" href="TaskMine_8cs_source.html#l00107">TaskMine.GetHitResult()</a>, <a class="el" href="TaskMoveInstalled_8cs_source.html#l00040">TaskMoveInstalled.GetHitResult()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00079">TaskPlow.GetHitResult()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00095">TaskPourWater.GetHitResult()</a>, <a class="el" href="TaskChopWood_8cs_source.html#l00017">TaskChopWood.GetLog()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00072">BaseTaskHarvest.GetTextSmall()</a>, <a class="el" href="TaskDig_8cs_source.html#l00054">TaskDig.GetTextSmall()</a>, <a class="el" href="TaskMine_8cs_source.html#l00049">TaskMine.GetTextSmall()</a>, <a class="el" href="TaskDig_8cs_source.html#l00136">TaskDig.GetTreasureMap()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00565">TaskHarvest.HarvestThing()</a>, <a class="el" href="TaskChopWood_8cs_source.html#l00045">TaskChopWood.OnCreateProgress()</a>, <a class="el" href="TaskDig_8cs_source.html#l00063">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00037">TaskDrawWater.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00277">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskMine_8cs_source.html#l00058">TaskMine.OnCreateProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00032">TaskPlow.OnCreateProgress()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00025">TaskPourWater.OnCreateProgress()</a>, <a class="el" href="TaskCut_8cs_source.html#l00037">TaskCut.OnProgress()</a>, <a class="el" href="AI__Water_8cs_source.html#l00017">AI_Water.OnProgressComplete()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00285">TaskBuild.OnProgressComplete()</a>, <a class="el" href="TaskCut_8cs_source.html#l00067">TaskCut.OnProgressComplete()</a>, <a class="el" href="TaskDig_8cs_source.html#l00149">TaskDig.OnProgressComplete()</a>, <a class="el" href="TaskMine_8cs_source.html#l00136">TaskMine.OnProgressComplete()</a>, <a class="el" href="TaskMoveInstalled_8cs_source.html#l00092">TaskMoveInstalled.OnProgressComplete()</a>, <a class="el" href="InspectGroupObj_8cs_source.html#l00005">InspectGroupObj.OnSetActions()</a>, <a class="el" href="TaskCut_8cs_source.html#l00007">TaskCut.OnStart()</a>, <a class="el" href="TaskDesignation_8cs_source.html#l00034">TaskDesignation.PointHasOtherDesignation()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, <a class="el" href="TaskMoveInstalled_8cs_source.html#l00057">TaskMoveInstalled.Run()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00072">Run()</a>, <a class="el" href="TCOrbitTask_8cs_source.html#l00010">TCOrbitTask.SetOwner()</a>, and <a class="el" href="TaskHarvest_8cs_source.html#l00136">TaskHarvest.TryGetAct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00068">_CanPerformTask()</a>, <a class="el" href="Recipe_8cs_source.html#l00640">Recipe.Build()</a>, <a class="el" href="RecipeCard_8cs_source.html#l00399">RecipeCard.Build()</a>, <a class="el" href="TaskMine_8cs_source.html#l00036">TaskMine.CanMine()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00051">CanPerform()</a>, <a class="el" href="TaskBaseBuild_8cs_source.html#l00003">TaskBaseBuild.CanPlaceCard()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00025">TaskDrawWater.CanProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00223">TaskHarvest.CanProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00024">TaskPlow.CanProgress()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00013">TaskPourWater.CanProgress()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00074">TaskBuild.CanRotateBlock()</a>, <a class="el" href="TaskMine_8cs_source.html#l00098">TaskMine.DrawMarker()</a>, <a class="el" href="AM__Dig_8cs_source.html#l00013">AM_Dig.ForcedInstaComplete()</a>, <a class="el" href="AM__Mine_8cs_source.html#l00029">AM_Mine.ForcedInstaComplete()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00111">BaseTaskHarvest.GetBestTool()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00149">TaskBuild.GetHitResult()</a>, <a class="el" href="TaskCut_8cs_source.html#l00019">TaskCut.GetHitResult()</a>, <a class="el" href="TaskDig_8cs_source.html#l00094">TaskDig.GetHitResult()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00134">TaskDrawWater.GetHitResult()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00245">TaskHarvest.GetHitResult()</a>, <a class="el" href="TaskMine_8cs_source.html#l00110">TaskMine.GetHitResult()</a>, <a class="el" href="TaskMoveInstalled_8cs_source.html#l00040">TaskMoveInstalled.GetHitResult()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00105">TaskPlow.GetHitResult()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00122">TaskPourWater.GetHitResult()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00042">GetHitResult()</a>, <a class="el" href="TaskChopWood_8cs_source.html#l00017">TaskChopWood.GetLog()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00080">BaseTaskHarvest.GetText()</a>, <a class="el" href="BaseTaskHarvest_8cs_source.html#l00075">BaseTaskHarvest.GetTextSmall()</a>, <a class="el" href="TaskDig_8cs_source.html#l00053">TaskDig.GetTextSmall()</a>, <a class="el" href="TaskMine_8cs_source.html#l00052">TaskMine.GetTextSmall()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00562">TaskHarvest.HarvestThing()</a>, <a class="el" href="TaskChopWood_8cs_source.html#l00045">TaskChopWood.OnCreateProgress()</a>, <a class="el" href="TaskDig_8cs_source.html#l00062">TaskDig.OnCreateProgress()</a>, <a class="el" href="TaskDrawWater_8cs_source.html#l00039">TaskDrawWater.OnCreateProgress()</a>, <a class="el" href="TaskHarvest_8cs_source.html#l00274">TaskHarvest.OnCreateProgress()</a>, <a class="el" href="TaskMine_8cs_source.html#l00061">TaskMine.OnCreateProgress()</a>, <a class="el" href="TaskPlow_8cs_source.html#l00033">TaskPlow.OnCreateProgress()</a>, <a class="el" href="TaskPourWater_8cs_source.html#l00027">TaskPourWater.OnCreateProgress()</a>, <a class="el" href="TaskCut_8cs_source.html#l00037">TaskCut.OnProgress()</a>, <a class="el" href="AI__Water_8cs_source.html#l00017">AI_Water.OnProgressComplete()</a>, <a class="el" href="TaskBuild_8cs_source.html#l00285">TaskBuild.OnProgressComplete()</a>, <a class="el" href="TaskCut_8cs_source.html#l00067">TaskCut.OnProgressComplete()</a>, <a class="el" href="TaskDig_8cs_source.html#l00148">TaskDig.OnProgressComplete()</a>, <a class="el" href="TaskMine_8cs_source.html#l00139">TaskMine.OnProgressComplete()</a>, <a class="el" href="TaskMoveInstalled_8cs_source.html#l00092">TaskMoveInstalled.OnProgressComplete()</a>, <a class="el" href="InspectGroupObj_8cs_source.html#l00005">InspectGroupObj.OnSetActions()</a>, <a class="el" href="TaskCut_8cs_source.html#l00007">TaskCut.OnStart()</a>, <a class="el" href="TaskDesignation_8cs_source.html#l00034">TaskDesignation.PointHasOtherDesignation()</a>, <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, <a class="el" href="TaskMoveInstalled_8cs_source.html#l00057">TaskMoveInstalled.Run()</a>, <a class="el" href="TaskPoint_8cs_source.html#l00081">Run()</a>, <a class="el" href="TCOrbitTask_8cs_source.html#l00010">TCOrbitTask.SetOwner()</a>, and <a class="el" href="TaskHarvest_8cs_source.html#l00133">TaskHarvest.TryGetAct()</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1265,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00008">8</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00042">CanPerform()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00051">CanPerform()</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1318,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00017">17</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00072">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00081">Run()</a>.</p>
 
 </div>
 </div>
@@ -1303,7 +1344,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00019">19</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00072">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="AI__HaulResource_8cs_source.html#l00014">AI_HaulResource.Run()</a>, and <a class="el" href="TaskPoint_8cs_source.html#l00081">Run()</a>.</p>
 
 </div>
 </div>
@@ -1329,7 +1370,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00015">15</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00072">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00081">Run()</a>.</p>
 
 </div>
 </div>
@@ -1459,7 +1500,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TaskPoint_8cs_source.html#l00023">23</a> of file <a class="el" href="TaskPoint_8cs_source.html">TaskPoint.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00072">Run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TaskPoint_8cs_source.html#l00081">Run()</a>.</p>
 
 </div>
 </div>

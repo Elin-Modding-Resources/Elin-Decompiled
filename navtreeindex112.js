@@ -1,5 +1,10 @@
 var NAVTREEINDEX112 =
 {
+"classSourceObj_1_1Stage.html":[1,0,1291,1],
+"classSourceObj_1_1Stage.html#a586f7173f045c278fc9fbad84e0cabc9":[1,0,1291,1,0],
+"classSourceObj_1_1Stage.html#a6626d2cffe3f7caad4a2714246090cb2":[1,0,1291,1,1],
+"classSourceObj_1_1Stage.html#a6a5e16c1aa59582d251cdd45bbe61036":[1,0,1291,1,3],
+"classSourceObj_1_1Stage.html#ac48d3bbee3dc0354bd605e5b0e05d219":[1,0,1291,1,2],
 "classSourcePerson.html":[1,0,1292],
 "classSourcePerson.html#a0c6d000ac8f3909e863f56061af52417":[1,0,1292,2],
 "classSourcePerson.html#a5d438e1cc904841275920bee0d67ade1":[1,0,1292,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX112 =
 "classSourceReligion_1_1Row.html#a8ee8974bbb66990cd494d44b31bdfbb0":[1,0,1300,0,23],
 "classSourceReligion_1_1Row.html#aade23b740d8ab05f6e87c9b0dde109f0":[1,0,1300,0,28],
 "classSourceReligion_1_1Row.html#ab5b35d3f0254fd7b0c608ad28813e4a9":[1,0,1300,0,18],
-"classSourceReligion_1_1Row.html#ab61ad658d35581a5f9e6fcb8fb0d100a":[1,0,1300,0,16],
-"classSourceReligion_1_1Row.html#ab6c3d75fe0b2a955459fb73eefb53c23":[1,0,1300,0,7],
-"classSourceReligion_1_1Row.html#abd18cec9f0c68afe6d6d432ba1f8fa9e":[1,0,1300,0,12],
-"classSourceReligion_1_1Row.html#ac4558f76ae44f34f08a05ddb374ddbc9":[1,0,1300,0,4],
-"classSourceReligion_1_1Row.html#acf9ff7b59fdb4e6e65d15f2fe398987a":[1,0,1300,0,25],
-"classSourceReligion_1_1Row.html#ad759ffd5d996f9bd02adfeefa02123c3":[1,0,1300,0,22]
+"classSourceReligion_1_1Row.html#ab61ad658d35581a5f9e6fcb8fb0d100a":[1,0,1300,0,16]
 };

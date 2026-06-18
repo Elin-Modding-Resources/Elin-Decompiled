@@ -3,6 +3,7 @@ var classTaskPoint =
     [ "_CanPerformTask", "classTaskPoint.html#abf5c0049a744538ef7c94c936f360ff4", null ],
     [ "CanManualCancel", "classTaskPoint.html#ae88a3b820e677050f149af5bfcd9fbad", null ],
     [ "CanPerform", "classTaskPoint.html#a2a3f1eb877b21ab41f76d3b3be49c041", null ],
+    [ "GetHitResult", "classTaskPoint.html#a385586e1d4f02b8791878983c23835bd", null ],
     [ "OnInspect", "classTaskPoint.html#aa3ad45aec255df8e98da8269eaeb0e79", null ],
     [ "Run", "classTaskPoint.html#a8523a93880914121b962fb0e7812b1dc", null ],
     [ "WriteNote", "classTaskPoint.html#aa6bfa873d4eb8e53933180703d034166", null ],

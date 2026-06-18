@@ -1,5 +1,14 @@
 var NAVTREEINDEX148 =
 {
+"classZone__DungeonDragon.html#ac15a3842a5a036e005de25873df24a1d":[1,0,2251,0],
+"classZone__DungeonFairy.html":[1,0,2252],
+"classZone__DungeonFairy.html#a11e87113c2bc50b56c6816e89c2ac74a":[1,0,2252,5],
+"classZone__DungeonFairy.html#a1221a66463054a8b8e555e228e6b2374":[1,0,2252,1],
+"classZone__DungeonFairy.html#a184774f4f43f2e7a7962b20334ed90a4":[1,0,2252,2],
+"classZone__DungeonFairy.html#a3e550c60a07fb82f56b5b92b7055c9cb":[1,0,2252,0],
+"classZone__DungeonFairy.html#a7ee1adb0ead69afc560ecb4aabf4088c":[1,0,2252,4],
+"classZone__DungeonFairy.html#ac806e2a7450cdce238e27c3524d688be":[1,0,2252,3],
+"classZone__DungeonMino.html":[1,0,2253],
 "classZone__DungeonMino.html#a2573665b975b4ebc3bc39057656deb64":[1,0,2253,4],
 "classZone__DungeonMino.html#a3fe0258171d5229af7388ec006be1517":[1,0,2253,2],
 "classZone__DungeonMino.html#a5603702f096c88091cfbf3a1bccd68e4":[1,0,2253,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX148 =
 "classZone__VernisMine.html#a17691b3a0c025f1727653611058e611f":[1,0,2313,3],
 "classZone__VernisMine.html#a27fedac71b999cb0ed77c68931b06e50":[1,0,2313,1],
 "classZone__VernisMine.html#a63c463f18bc711a12c656f96a36d4a08":[1,0,2313,4],
-"classZone__VernisMine.html#a79a271dbee384036b45e78371c1f8005":[1,0,2313,0],
-"classZone__VernisMine.html#aa9fb168e9543ffcc707cb938654a8bfc":[1,0,2313,7],
-"classZone__VernisMine.html#ab31bc5282028394deab8598b5a08cb72":[1,0,2313,5],
-"classZone__VernisMine.html#afb7b59097abbc9ce7540153503f12c61":[1,0,2313,6],
-"classZone__Void.html":[1,0,2314],
-"classZone__Void.html#a36658f60a67d6a5abd2f81d04bbb697d":[1,0,2314,1],
-"classZone__Void.html#a5341d9971ad1b83a61f096063306f1b9":[1,0,2314,6],
-"classZone__Void.html#a6ef3406e9a33ac89c4f059053302bc3e":[1,0,2314,7],
-"classZone__Void.html#a8b647d9cfbc067fb54a505f785055b95":[1,0,2314,4],
-"classZone__Void.html#aa6216768bd2a3c62913a0861439143db":[1,0,2314,3]
+"classZone__VernisMine.html#a79a271dbee384036b45e78371c1f8005":[1,0,2313,0]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX138 =
 {
+"classUIMouseInfo.html#a64439b414f07ab5cf26079eac0ad5f2a":[1,0,2145,2],
+"classUIMouseInfo.html#a70b022470071460750f8e5460a132884":[1,0,2145,4],
+"classUIMouseInfo.html#a73d3835f9954dded8e4df6461b987512":[1,0,2145,5],
+"classUIMouseInfo.html#a7e4253892afdd111228ecfb5831e5340":[1,0,2145,1],
+"classUIMouseInfo.html#a9de33cb4d1ec8055a985372588d86944":[1,0,2145,3],
+"classUIMultiList.html":[1,0,2146],
 "classUIMultiList.html#a0191b5999343a5d61e5fc8714a576362":[1,0,2146,4],
 "classUIMultiList.html#a2961d63580497e68e170e67bfd42cb9e":[1,0,2146,0],
 "classUIMultiList.html#a364a26b3bdd27f06f7cef32f4d6c5100":[1,0,2146,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX138 =
 "classUISong.html#aaba69511c4b133170c4d02523b1509ef":[1,0,2160,9],
 "classUISong.html#ac20a95ba4beed45a735ccf8eccd97822":[1,0,2160,7],
 "classUISong.html#ac20d663437f4002d26673c766c3e8540":[1,0,2160,3],
-"classUISong.html#ad7cc0e937c588c12d87bb0017915e29b":[1,0,2160,10],
-"classUISong.html#afb98ccdca62127e6ff61d421b372774c":[1,0,2160,8],
-"classUIText.html":[1,0,2161],
-"classUIText.html#a005e5d0643acb271e250c80424e8980b":[1,0,2161,20],
-"classUIText.html#a07435f587d14fe48572f478350085fec":[1,0,2161,9],
-"classUIText.html#a1163a1672b1b67321171376d326a3401":[1,0,2161,0],
-"classUIText.html#a170d3a498d1e4ed6a8065d11796e8f73":[1,0,2161,17]
+"classUISong.html#ad7cc0e937c588c12d87bb0017915e29b":[1,0,2160,10]
 };

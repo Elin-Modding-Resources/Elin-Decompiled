@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classFactionBranch.html#ae2632831e6f50065e49f4fef1a2d0837":[1,0,570,110],
 "classFactionBranch.html#ae50927e9082d4a32af38b7340c2758a9":[1,0,570,87],
 "classFactionBranch.html#aea176952c73ef30b1bc84c356a08d655":[1,0,570,67],
 "classFactionBranch.html#aebe10599ea9fecaad0681c0c43158e90":[1,0,570,22],
@@ -127,8 +128,10 @@ var NAVTREEINDEX69 =
 "classFontSource.html#ae1185416a8d5703566834260555c11c6":[1,0,583,5],
 "classFontSource.html#afa5282da8ea2e7a01335cdb53604062a":[1,0,583,4],
 "classFoodEffect.html":[1,0,585],
+"classFoodEffect.html#a047f931678de77883539f9fa9014e7a1":[1,0,585,3],
+"classFoodEffect.html#a315eb26150f6c7175c83714e4df427df":[1,0,585,4],
 "classFoodEffect.html#a631f1059cb0ee191166b2a555121a61d":[1,0,585,0],
-"classFoodEffect.html#a89d18d770af1efce970a01d8544465b9":[1,0,585,2],
+"classFoodEffect.html#a66243a80221ac3550f1ed42d8a8d9747":[1,0,585,2],
 "classFoodEffect.html#a95264ce4c4305b68c5dd3777733f6e34":[1,0,585,1],
 "classFootmark.html":[1,0,586],
 "classFootmark.html#a046967b8ceccd3e42d36ec594136c552":[1,0,586,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX69 =
 "classGame.html#a9dccaf6fb486511d5ad1b3fd01c6c113":[1,0,591,22],
 "classGame.html#aa15e3562b9e4c6e7ecc7ea9b11a5d038":[1,0,591,66],
 "classGame.html#aa24cab7df1c85dc6efe68c3d68703fe7":[1,0,591,33],
-"classGame.html#aabe7e6472b92da43673526dca5d41bd9":[1,0,591,23],
-"classGame.html#aaf3a6ba060d72c88051a40c58db7f7d8":[1,0,591,71],
-"classGame.html#ab07259f062c45e3591ccd2b1e9b9330c":[1,0,591,43],
-"classGame.html#ab25d260f6837c8fad664a8d59a2697b0":[1,0,591,59]
+"classGame.html#aabe7e6472b92da43673526dca5d41bd9":[1,0,591,23]
 };

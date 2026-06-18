@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.317 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.318 Nightly</span>
    </div>
   </td>
  </tr>
@@ -1419,7 +1419,7 @@ Properties</h2></td></tr>
 <div class="line"><span class="lineno">  488</span>            <span class="keywordflow">if</span> (!File.Exists(_path))</div>
 <div class="line"><span class="lineno">  489</span>            {</div>
 <div class="line"><span class="lineno">  490</span>                <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(_path);</div>
-<div class="line"><span class="lineno">  491</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">string</span>[0];</div>
+<div class="line"><span class="lineno">  491</span>                <span class="keywordflow">return</span> Array.Empty&lt;<span class="keywordtype">string</span>&gt;();</div>
 <div class="line"><span class="lineno">  492</span>            }</div>
 <div class="line"><span class="lineno">  493</span>        }</div>
 <div class="line"><span class="lineno">  494</span>        <span class="keywordflow">return</span> File.ReadAllLines(_path);</div>

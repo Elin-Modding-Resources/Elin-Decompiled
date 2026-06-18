@@ -3,7 +3,8 @@ var classCraftUtil =
     [ "MixType", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7", [
       [ "General", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0db377921f4ce762c62526131097968f", null ],
       [ "Food", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0a38e7286ebbb560354992b3ce62be67", null ],
-      [ "NoMix", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a761633dea969aa13350ebbb08aea8d04", null ]
+      [ "NoMix", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a761633dea969aa13350ebbb08aea8d04", null ],
+      [ "Drink", "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a40491db1043a93d8b94b9d94e3eda532", null ]
     ] ],
     [ "WrapType", "classCraftUtil.html#a7b9a8d0121c502659dbe8a4142836694", [
       [ "Love", "classCraftUtil.html#a7b9a8d0121c502659dbe8a4142836694a8bd7a1153a88761ad9d37e2f2394c947", null ],

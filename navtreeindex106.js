@@ -1,5 +1,10 @@
 var NAVTREEINDEX106 =
 {
+"classSceneProfile.html#a47c5287accc39b7af6a8e7c9d6c18f64":[1,0,1216,2],
+"classSceneProfile.html#a64ef9a729989c3c6681a99a90250b425":[1,0,1216,1],
+"classSceneProfile.html#a6778ce7f52f41aa2534081a411457f3f":[1,0,1216,0],
+"classSceneProfile.html#ac235af0727e4ceb31a0ad8e0d21d9904":[1,0,1216,4],
+"classSceneProfile.html#aff5c41ed79116864d74a01d770f0fcdb":[1,0,1216,3],
 "classSceneTemplate.html":[1,0,1217],
 "classSceneTemplate.html#a1e46f0d7190713741f8c8ab795add40f":[1,0,1217,1],
 "classSceneTemplate.html#a852b39e49d364431d974177908465d2b":[1,0,1217,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX106 =
 "classSkill.html#ab1576470cc0bed3f3194e80edf234ca6":[1,0,1240,3],
 "classSkill.html#ae8497dc40f8e0ff0303b17740e707c3a":[1,0,1240,1],
 "classSkill.html#af0062c2e2382d83c4c7122b26f8785f4":[1,0,1240,2],
-"classSkillCheck.html":[1,0,1241],
-"classSkinAsset.html":[1,0,1242],
-"classSkinAsset.html#ae74d480d7367b7e9201f69465b39c378":[1,0,1242,0],
-"classSkinAsset__BG.html":[1,0,1243],
-"classSkinAsset__BG.html#a07f6d691ed56fded70d1b9c0ad8f0b1e":[1,0,1243,2],
-"classSkinAsset__BG.html#a3936088c22e6a0a167c4fc16ffe6d5d5":[1,0,1243,0]
+"classSkillCheck.html":[1,0,1241]
 };

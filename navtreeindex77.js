@@ -1,5 +1,8 @@
 var NAVTREEINDEX77 =
 {
+"classInspectGroupThing.html#a2c249737802f724ccff3e2d74fbac73b":[1,0,756,1],
+"classInspectGroupThing.html#a2ccf144ac69a1403769548f5d91640f5":[1,0,756,0],
+"classInspectGroup_1_1Item.html":[1,0,749,0],
 "classInspectGroup_1_1Item.html#a1e774da47be03068e0ae79803776320c":[1,0,749,0,1],
 "classInspectGroup_1_1Item.html#a48c793966286305c80143d482f582bfc":[1,0,749,0,6],
 "classInspectGroup_1_1Item.html#a4bd6c917be70c41d2215090baa39c4ae":[1,0,749,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX77 =
 "classInvOwnerEnchant.html#a119f26c9152a89a6eb629484cca3c24a":[1,0,773,0],
 "classInvOwnerEnchant.html#a20ac377a506334664822325113c6e020":[1,0,773,5],
 "classInvOwnerEnchant.html#a57c4a5cd701dd7147be387364ace99fb":[1,0,773,2],
-"classInvOwnerEnchant.html#aa174a0372fc787965639e8db7c5c4598":[1,0,773,3],
-"classInvOwnerEnchant.html#aa731eb15129b7766223b290074b96c41":[1,0,773,1],
-"classInvOwnerEnchant.html#aad67bda61d6274900184e7fe6fdbbc16":[1,0,773,4],
-"classInvOwnerEquip.html":[1,0,774]
+"classInvOwnerEnchant.html#aa174a0372fc787965639e8db7c5c4598":[1,0,773,3]
 };

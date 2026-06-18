@@ -1,5 +1,11 @@
 var NAVTREEINDEX123 =
 {
+"classTraitBed.html#a4435f2f8b8997c03cbea0f7c37824f1d":[1,0,1530,9],
+"classTraitBed.html#a4a0a38bf3561473e8951dc8d64f1a8b8":[1,0,1530,15],
+"classTraitBed.html#a560cbcda92f36fd65f2da4e6b5f208c7":[1,0,1530,2],
+"classTraitBed.html#a7d20b131e4fc7cccdae60a2e19788efd":[1,0,1530,4],
+"classTraitBed.html#a89c9557454b47a7f30b3af53e30679bc":[1,0,1530,6],
+"classTraitBed.html#a95a7c5c2914d6e0ba1725c21cb5274d7":[1,0,1530,7],
 "classTraitBed.html#ab28e1ac03be7c28ba707fdf36a169f80":[1,0,1530,10],
 "classTraitBed.html#ac01d84f3d0fb3e10a42cd5d4c170c4ae":[1,0,1530,1],
 "classTraitBed.html#acc9d27b2bb5a76810cbd6cb5ff646768":[1,0,1530,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitChopper.html#ac064b8f91a6972cedc7f6ead2dd5058f":[1,0,1578,2],
 "classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1578,1],
 "classTraitCitizen.html":[1,0,1579],
-"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1579,0],
-"classTraitCitizenExile.html":[1,0,1580],
-"classTraitCitizenExile.html#a40e5576ecccf46497e22f62efc9678aa":[1,0,1580,0],
-"classTraitClerk__Casino.html":[1,0,1581],
-"classTraitClerk__Casino.html#a02186658a1a54bbfbfd4cded27a200d2":[1,0,1581,0],
-"classTraitClerk__Casino.html#a5f3e44a91d959604c74917008e671ccb":[1,0,1581,1],
-"classTraitClerk__Casino.html#a90c0d3ab89aa66f098d29d5341f3d62c":[1,0,1581,3]
+"classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1579,0]
 };

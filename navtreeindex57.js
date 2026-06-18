@@ -80,6 +80,7 @@ var NAVTREEINDEX57 =
 "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7":[1,0,431,0],
 "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0a38e7286ebbb560354992b3ce62be67":[1,0,431,0,1],
 "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a0db377921f4ce762c62526131097968f":[1,0,431,0,0],
+"classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a40491db1043a93d8b94b9d94e3eda532":[1,0,431,0,3],
 "classCraftUtil.html#ad61247f9b2fbb0b889b8399bcb9947b7a761633dea969aa13350ebbb08aea8d04":[1,0,431,0,2],
 "classCraftUtil.html#add4dc6f639360d41149085a0df252bc5":[1,0,431,3],
 "classCraftUtil.html#ae83c5284bd6f207dcdf531e9ddf96079":[1,0,431,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "classCursorSystem.html#ad3a17fecf5fdf0989bea9c5fd7285b8c":[1,0,448,35],
 "classCursorSystem.html#ad7722ab42c8895c7a63ac32d81e1b6c7":[1,0,448,13],
 "classCursorSystem.html#adb13ec5be75cf5ab11901adf158dcdb5":[1,0,448,9],
-"classCursorSystem.html#aef5d580420f8c746eecc7d3137a2b542":[1,0,448,19],
-"classCursorSystem.html#af0be3fdfb388384d628117833e3a5c30":[1,0,448,51]
+"classCursorSystem.html#aef5d580420f8c746eecc7d3137a2b542":[1,0,448,19]
 };
