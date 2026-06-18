@@ -157,7 +157,7 @@ public class BaseModPackage
 		DirectoryInfo[] directories = dirInfo.GetDirectories();
 		foreach (DirectoryInfo directoryInfo in directories)
 		{
-			if (directoryInfo.Name == "Actor")
+			if (directoryInfo.Name.ToLower() == "actor")
 			{
 				FileInfo[] files = directoryInfo.GetFiles("*.xlsx", SearchOption.TopDirectoryOnly);
 				foreach (FileInfo fileInfo in files)
@@ -168,10 +168,10 @@ public class BaseModPackage
 				foreach (DirectoryInfo directoryInfo2 in directories2)
 				{
 					Log.App(directoryInfo2.FullName);
-					string name = directoryInfo2.Name;
-					if (!(name == "PCC"))
+					string text = directoryInfo2.Name.ToLower();
+					if (!(text == "pcc"))
 					{
-						if (!(name == "Sprite"))
+						if (!(text == "sprite"))
 						{
 							continue;
 						}

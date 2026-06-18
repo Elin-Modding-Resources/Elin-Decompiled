@@ -59,6 +59,8 @@ public class BaseModManager
 	public void InitLang()
 	{
 		Debug.Log("Initializing Langs: " + Lang.langCode);
+		MOD.listAlias.Clear();
+		MOD.listName.Clear();
 		MOD.listTalk.Clear();
 		MOD.listGodTalk.Clear();
 		MOD.tones.Clear();
@@ -74,10 +76,10 @@ public class BaseModManager
 			switch (fileInfo.Name)
 			{
 			case "Alias.xlsx":
-				Lang.alias = new ExcelData(fileInfo.FullName);
+				MOD.listAlias.Add(new ExcelData(fileInfo.FullName));
 				break;
 			case "Name.xlsx":
-				Lang.names = new ExcelData(fileInfo.FullName);
+				MOD.listName.Add(new ExcelData(fileInfo.FullName));
 				break;
 			case "chara_talk.xlsx":
 				MOD.listTalk.Add(new ExcelData(fileInfo.FullName));

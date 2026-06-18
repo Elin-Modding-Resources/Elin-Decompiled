@@ -7,6 +7,10 @@ public class MOD
 {
 	public static Dictionary<string, LangSetting> langs = new Dictionary<string, LangSetting>();
 
+	public static ExcelDataList listAlias = new ExcelDataList();
+
+	public static ExcelDataList listName = new ExcelDataList();
+
 	public static TalkDataList listTalk = new TalkDataList();
 
 	public static GodTalkDataList listGodTalk = new GodTalkDataList();
@@ -28,6 +32,8 @@ public class MOD
 	public static void ResetResources()
 	{
 		langs.Clear();
+		listAlias.Clear();
+		listName.Clear();
 		listTalk.Clear();
 		listGodTalk.Clear();
 		tones.Clear();

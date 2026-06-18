@@ -34,7 +34,10 @@ public class ExcelDataList
 			foreach (Dictionary<string, string> item2 in obj)
 			{
 				item2["path"] = directoryName;
-				all[item2["id"]] = item2;
+				if (item2.TryGetValue("id", out var value))
+				{
+					all[value] = item2;
+				}
 				list.Add(item2);
 			}
 		}

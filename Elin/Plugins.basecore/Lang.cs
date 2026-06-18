@@ -54,10 +54,6 @@ public class Lang
 
 	public static LangSetting setting;
 
-	public static ExcelData alias;
-
-	public static ExcelData names;
-
 	public static ExcelData excelDialog;
 
 	public static List<Func<List<string>>> excelDialogLoaders = new List<Func<List<string>>>();

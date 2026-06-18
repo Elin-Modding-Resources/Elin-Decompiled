@@ -488,7 +488,7 @@ public class IO
 			if (!File.Exists(_path))
 			{
 				Debug.Log(_path);
-				return new string[0];
+				return Array.Empty<string>();
 			}
 		}
 		return File.ReadAllLines(_path);
