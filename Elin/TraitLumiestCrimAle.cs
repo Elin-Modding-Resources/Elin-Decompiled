@@ -10,6 +10,5 @@ public class TraitLumiestCrimAle : TraitFoodPrepared
 	public override void OnDrink(Chara c)
 	{
 		ActEffect.Proc(EffectId.Booze, 500, owner.blessedState, c);
-		FoodEffect.ProcTrait(c, owner);
 	}
 }

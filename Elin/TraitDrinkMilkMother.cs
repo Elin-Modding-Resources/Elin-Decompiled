@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TraitDrinkMilkMother : TraitDrinkMilk
 {
-	public override bool HoldAsDefaultInteraction => true;
+	public override bool HoldAsDefaultInteraction => owner.id == "_milk";
 
 	public override Emo2 GetHeldEmo(Chara c)
 	{

@@ -225,6 +225,7 @@ public class ModPackage : EMod
 									}
 									else
 									{
+										ModUtil.FixDefaultThingRowPref(r6);
 										customContent.Add(CustomThingContent.CreateFromRow(r6, this));
 									}
 								}

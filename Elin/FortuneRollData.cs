@@ -178,13 +178,13 @@ public class FortuneRollData : EClass
 			new List<string>
 			{
 				"microchip", "1089", "150", "855", "medal", "water", "goods_charm", "electronicsS", "electronics", "plat",
-				"plat", "ration", "backpack2", "sister", "rp_food", "rp_block", "157", "sleepingbag"
+				"plat", "ration", "backpack2", "sister", "rp_food", "rp_block", "157", "sleepingbag", "scrubber"
 			},
 			new List<string>
 			{
 				"computer", "834", "1090", "goods_figure", "goods_canvas", "mb_1", "mb_2", "mb_3", "mb_4", "mb_5",
 				"1174", "1085", "toilet", "714", "nobility", "plat", "1165", "mathammer", "medal", "bbq",
-				"panty", "beehive", "ticket_resident", "lovepotion", "crystal_sun", "goods_crim", "ride_boat"
+				"panty", "beehive", "ticket_resident", "lovepotion", "crystal_sun", "goods_crim", "ride_boat", "scrubber"
 			},
 			new List<string>
 			{
@@ -249,10 +249,10 @@ public class FortuneRollData : EClass
 					card.rarity = Rarity.Legendary;
 					break;
 				case "scrubber":
-					if (grade == 3)
+					if (grade >= 1)
 					{
 						card.rarity = Rarity.Legendary;
-						card.elements.SetBase(770, 1 + EClass.rnd(25));
+						card.elements.SetBase(770, (grade == 1) ? 1 : ((grade - 1) * 10));
 					}
 					break;
 				}

@@ -5339,7 +5339,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				list.Add(thing2);
 			}
 		}
-		bool flag2 = Chara.race.corpse[1].ToInt() > EClass.rnd(1500) || (Chara.IsPowerful && !IsPCFaction) || EClass.debug.godFood || HasTag(CTAG.alwaysDropCorpse);
+		bool flag2 = Chara.race.corpse[1].ToInt() > EClass.rnd(1500) || (Chara.IsPowerful && !IsPCFaction) || EClass.debug.godFood || (HasTag(CTAG.alwaysDropCorpse) && !IsPCFaction);
 		int num = 1;
 		if (!IsMinion && Chara.IsAnimal && EClass.rnd(EClass._zone.IsPCFaction ? 3 : 5) == 0)
 		{
@@ -5410,7 +5410,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			else
 			{
-				list.Add(ThingGen.Create("517").SetNum(num).MakeFoodFrom(this, makeRef: false));
+				list.Add(ThingGen.Create("milk_custard").SetNum(num).MakeFoodFrom(this, makeRef: false));
 			}
 		}
 		if (!IsPCFaction && (!isUserZone || !EClass.game.principal.disableUsermapBenefit) && chance(200))
@@ -5708,7 +5708,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		case "ore":
 			ChangeMaterial(MATERIAL.GetRandomMaterialFromCategory(lv, "ore", material));
 			break;
-		case "milk":
+		case "_milk":
 		case "_egg":
 		case "egg_fertilized":
 		case "_meat":
@@ -5727,7 +5727,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			for (int i = 0; i < 20; i++)
 			{
 				CardRow cardRow = SpawnList.Get(text).Select(lv + i);
-				if (cardRow.model.Chara.race.corpse[0] != "_meat" && id != "milk" && id != "_egg" && id != "egg_fertilized")
+				if (cardRow.model.Chara.race.corpse[0] != "_meat" && id != "_milk" && id != "_egg" && id != "egg_fertilized")
 				{
 					continue;
 				}
@@ -5742,7 +5742,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						cardRow = crafter.source;
 					}
 				}
-				if (id == "milk")
+				if (id == "_milk")
 				{
 					if (c_idRefCard.IsEmpty())
 					{
@@ -5783,7 +5783,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		bool flag = id == "meat_marble";
 		int num2 = 1;
 		bool flag2 = category.IsChildOf("meat");
-		bool flag3 = id == "517" || id == "marshmallow_nama" || category.IsChildOf("egg") || trait is TraitGene;
+		bool flag3 = id == "marshmallow_nama" || category.IsChildOf("egg") || trait is TraitGene;
+		bool flag4 = category.IsChildOf("milk");
 		if (flag)
 		{
 			num += 100;
@@ -5801,14 +5802,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			elements.SetBase(71, (int)Mathf.Clamp((float)(num / 10) + Mathf.Sqrt(race.height) - 10f, 1f, 60f));
 		}
-		else if (flag3)
+		else if (!flag3)
 		{
-			elements.SetBase(444, race.LER * race.LER / 5 * num / 100 - 10 + num / 10);
-			num2 = 2;
+			num2 = ((!flag4) ? 3 : 2);
 		}
 		else
 		{
-			num2 = 3;
+			elements.SetBase(444, race.LER * race.LER / 5 * num / 100 - 10 + num / 10);
+			num2 = 2;
 		}
 		if (flag2)
 		{
@@ -5999,7 +6000,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public Thing MakeMilk(bool effect = true, int num = 1, bool addToZone = true, BlessedState? state = null)
 	{
-		Thing thing = ThingGen.Create("milk").SetNum(num);
+		Thing thing = ThingGen.Create("_milk").SetNum(num);
 		if (!EClass.debug.enable && HasElement(1290) && Evalue(418) >= 0)
 		{
 			thing.MakeRefFrom(EClass.sources.charas.map["caladrius"].model);

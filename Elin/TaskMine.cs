@@ -14,8 +14,6 @@ public class TaskMine : BaseTaskHarvest
 
 	public override HarvestType harvestType => HarvestType.Block;
 
-	public override string IdRecipe => pos.sourceBlock.RecipeID;
-
 	public override int destDist => 1;
 
 	public override bool isBlock => true;
@@ -29,6 +27,11 @@ public class TaskMine : BaseTaskHarvest
 	public override CursorInfo CursorIcon => CursorSystem.Mine;
 
 	public override bool IsHostileAct => true;
+
+	public override string GetIdRecipe(Point p)
+	{
+		return p.sourceBlock.RecipeID;
+	}
 
 	public static bool CanMine(Point pos, Card t)
 	{
@@ -135,7 +138,7 @@ public class TaskMine : BaseTaskHarvest
 
 	public override void OnProgressComplete()
 	{
-		string idRecipe = IdRecipe;
+		string idRecipe = GetIdRecipe(pos);
 		int hardness = pos.matBlock.hardness;
 		switch (mode)
 		{

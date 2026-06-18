@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class TaskDig : BaseTaskHarvest
 {
 	public enum Mode
@@ -12,18 +14,6 @@ public class TaskDig : BaseTaskHarvest
 	public int ramp = 3;
 
 	public override HarvestType harvestType => HarvestType.Floor;
-
-	public override string IdRecipe
-	{
-		get
-		{
-			if (!pos.HasBridge)
-			{
-				return pos.sourceFloor.RecipeID;
-			}
-			return pos.sourceBridge.RecipeID;
-		}
-	}
 
 	public override int RightHand => 1101;
 
@@ -50,6 +40,15 @@ public class TaskDig : BaseTaskHarvest
 	public override bool destIgnoreConnection => true;
 
 	public override CursorInfo CursorIcon => CursorSystem.Dig;
+
+	public override string GetIdRecipe(Point p)
+	{
+		if (!p.HasBridge)
+		{
+			return p.sourceFloor.RecipeID;
+		}
+		return p.sourceBridge.RecipeID;
+	}
 
 	public override string GetTextSmall(Card c)
 	{
@@ -94,7 +93,7 @@ public class TaskDig : BaseTaskHarvest
 
 	public override HitResult GetHitResult()
 	{
-		if (EClass._zone.IsRegion && GetTreasureMap() != null)
+		if (EClass._zone.IsRegion && GetTreasureMap(pos) != null)
 		{
 			return HitResult.Valid;
 		}
@@ -133,12 +132,12 @@ public class TaskDig : BaseTaskHarvest
 		return HitResult.Default;
 	}
 
-	public Thing GetTreasureMap()
+	public Thing GetTreasureMap(Point p)
 	{
 		foreach (Thing item in EClass.pc.things.List((Thing t) => t.trait is TraitScrollMapTreasure))
 		{
 			TraitScrollMapTreasure traitScrollMapTreasure = item.trait as TraitScrollMapTreasure;
-			if (pos.Equals(traitScrollMapTreasure.GetDest(fix: true)))
+			if (p.Equals(traitScrollMapTreasure.GetDest(fix: true)))
 			{
 				return item;
 			}
@@ -148,64 +147,89 @@ public class TaskDig : BaseTaskHarvest
 
 	public override void OnProgressComplete()
 	{
-		string idRecipe = IdRecipe;
-		int num = (pos.HasBridge ? pos.matBridge.hardness : pos.matFloor.hardness);
-		if (EClass._zone.IsRegion)
+		int num = owner.Tool?.Evalue(770) ?? 0;
+		num = ((num <= 0) ? 1 : (2 + num / 10));
+		if (num > 1)
 		{
-			Thing map = GetTreasureMap();
-			if (map != null || EClass.debug.enable)
+			List<Point> list = EClass._map.ListPointsInSquare(pos, num - 1);
+			list.Sort((Point a, Point b) => a.Distance(pos) - b.Distance(pos));
 			{
-				if (map == null)
+				foreach (Point item in list)
 				{
-					map = ThingGen.Create("map_treasure", -1, EClass.pc.LV);
+					if (owner == null || owner.isDead)
+					{
+						break;
+					}
+					Dig(item);
 				}
-				SE.Play("ding_skill");
-				Msg.Say("digTreasure");
-				Rand.UseSeed(map.refVal, delegate
-				{
-					Thing thing = ThingGen.CreateTreasure("chest_treasure", map.LV);
-					EClass._zone.AddCard(thing, EClass.pc.pos);
-					ThingGen.TryLickChest(thing);
-				});
-				map.Destroy();
-				EClass.player.willAutoSave = true;
 				return;
 			}
 		}
-		switch (mode)
+		Dig(pos);
+		void Dig(Point p)
 		{
-		case Mode.Default:
-			EClass._map.SetBridge(pos.x, pos.z, 0, 0, 0, 0, 0);
-			break;
-		case Mode.RemoveFloor:
-			EClass._map.MineFloor(pos, owner);
-			pos.Animate(AnimeID.Dig, animeBlock: true);
-			if (!owner.IsAgent)
+			if (GetHitResult(p) != HitResult.Invalid)
 			{
-				owner.elements.ModExp(230, 20 + num / 2);
-			}
-			break;
-		case Mode.Ramp:
-			EClass._map.MineFloor(pos, owner);
-			break;
-		}
-		if (EClass._zone.IsCrime(owner, this))
-		{
-			EClass.player.ModKarma(-1);
-		}
-		if (EClass.rnd(2) == 0)
-		{
-			owner.stamina.Mod(-1);
-		}
-		if (owner != null)
-		{
-			if (owner.IsPC)
-			{
-				EClass.player.recipes.ComeUpWithRecipe(idRecipe, 30);
-			}
-			if (owner.IsPC && owner.IsAliveInCurrentZone && EClass._zone.IsSkyLevel && !EClass.game.IsSurvival && owner.pos.IsSky)
-			{
-				EClass.pc.FallFromZone();
+				string idRecipe = GetIdRecipe(p);
+				int num2 = (p.HasBridge ? p.matBridge.hardness : p.matFloor.hardness);
+				if (EClass._zone.IsRegion)
+				{
+					Thing map = GetTreasureMap(p);
+					if (map != null || EClass.debug.enable)
+					{
+						if (map == null)
+						{
+							map = ThingGen.Create("map_treasure", -1, EClass.pc.LV);
+						}
+						SE.Play("ding_skill");
+						Msg.Say("digTreasure");
+						Rand.UseSeed(map.refVal, delegate
+						{
+							Thing thing = ThingGen.CreateTreasure("chest_treasure", map.LV);
+							EClass._zone.AddCard(thing, p);
+							ThingGen.TryLickChest(thing);
+						});
+						map.Destroy();
+						EClass.player.willAutoSave = true;
+						return;
+					}
+				}
+				switch (mode)
+				{
+				case Mode.Default:
+					EClass._map.SetBridge(p.x, p.z, 0, 0, 0, 0, 0);
+					break;
+				case Mode.RemoveFloor:
+					EClass._map.MineFloor(p, owner);
+					p.Animate(AnimeID.Dig, animeBlock: true);
+					if (!owner.IsAgent)
+					{
+						owner.elements.ModExp(230, 20 + num2 / 2);
+					}
+					break;
+				case Mode.Ramp:
+					EClass._map.MineFloor(p, owner);
+					break;
+				}
+				if (EClass._zone.IsCrime(owner, this))
+				{
+					EClass.player.ModKarma(-1);
+				}
+				if (EClass.rnd(2) == 0)
+				{
+					owner.stamina.Mod(-1);
+				}
+				if (owner != null)
+				{
+					if (owner.IsPC)
+					{
+						EClass.player.recipes.ComeUpWithRecipe(idRecipe, 30);
+					}
+					if (owner.IsPC && owner.IsAliveInCurrentZone && EClass._zone.IsSkyLevel && !EClass.game.IsSurvival && owner.pos.IsSky)
+					{
+						EClass.pc.FallFromZone();
+					}
+				}
 			}
 		}
 	}

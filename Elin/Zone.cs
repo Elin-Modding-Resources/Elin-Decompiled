@@ -545,6 +545,31 @@ public class Zone : Spatial, ICardParent, IInspect
 		return zone2;
 	}
 
+	public static (string zoneType, string zoneId, int zoneLv) ParseZoneFullName(string zoneFullName)
+	{
+		string item = "";
+		string item2 = "";
+		int item3 = 0;
+		zoneFullName = zoneFullName.Replace('/', '@');
+		if (EClass.game.spatials.Find((Zone z) => z.ZoneFullName == zoneFullName) != null)
+		{
+			return (zoneType: item, zoneId: item2, zoneLv: item3);
+		}
+		int num = zoneFullName.LastIndexOf('@');
+		if (num > 0 && num < zoneFullName.Length - 1)
+		{
+			item = zoneFullName[..num];
+			item3 = zoneFullName[(num + 1)..].ToInt();
+		}
+		else
+		{
+			item = zoneFullName.Replace("@", "");
+		}
+		item2 = item.Replace("Zone_", "");
+		item = "Zone_" + item2;
+		return (zoneType: item, zoneId: item2, zoneLv: item3);
+	}
+
 	public int Evalue(int ele)
 	{
 		return elements.Value(ele);
@@ -2894,20 +2919,48 @@ public class Zone : Spatial, ICardParent, IInspect
 			biome = ((EClass.rnd(4) != 0) ? EClass.core.refs.biomes.Water : EClass.core.refs.biomes.Sand);
 		}
 		SpawnList spawnList = null;
-		spawnList = ((setting.idSpawnList != null) ? SpawnList.Get(setting.idSpawnList) : ((EClass._zone is Zone_DungeonYeek && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_yeek", (SourceChara.Row r) => r.race == "yeek" && r.quality == 0) : ((EClass._zone is Zone_DungeonDragon && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_dragon", (SourceChara.Row r) => (r.race == "dragon" || r.race == "drake" || r.race == "wyvern" || r.race == "lizardman" || r.race == "dinosaur") && r.quality == 0) : ((EClass._zone is Zone_DungeonMino && EClass.rnd(5) != 0) ? SpawnListChara.Get("dungeon_mino", (SourceChara.Row r) => r.race == "minotaur" && r.quality == 0) : ((setting.hostility == SpawnHostility.Neutral || (setting.hostility != SpawnHostility.Enemy && Rand.Range(0f, 1f) < ChanceSpawnNeutral)) ? SpawnList.Get(IsInstance ? "c_neutral_war" : "c_neutral") : ((biome.spawn.chara.Count <= 0) ? SpawnList.Get(biome.name, "chara", new CharaFilter
+		if (setting.idSpawnList != null)
 		{
-			ShouldPass = delegate(SourceChara.Row s)
+			spawnList = SpawnList.Get(setting.idSpawnList);
+		}
+		else if (EClass._zone is Zone_DungeonYeek && EClass.rnd(5) != 0)
+		{
+			spawnList = SpawnListChara.Get("dungeon_yeek", (SourceChara.Row r) => r.race == "yeek" && r.quality == 0);
+		}
+		else if (EClass._zone is Zone_DungeonDragon && EClass.rnd(5) != 0)
+		{
+			spawnList = SpawnListChara.Get("dungeon_dragon", (SourceChara.Row r) => (r.race == "dragon" || r.race == "drake" || r.race == "wyvern" || r.race == "lizardman" || r.race == "dinosaur") && r.quality == 0);
+		}
+		else if (EClass._zone is Zone_DungeonMino && EClass.rnd(5) != 0)
+		{
+			spawnList = SpawnListChara.Get("dungeon_mino", (SourceChara.Row r) => r.race == "minotaur" && r.quality == 0);
+		}
+		else if (setting.hostility == SpawnHostility.Neutral || (setting.hostility != SpawnHostility.Enemy && Rand.Range(0f, 1f) < ChanceSpawnNeutral))
+		{
+			spawnList = SpawnList.Get(IsInstance ? "c_neutral_war" : "c_neutral");
+		}
+		else if (biome.spawn.chara.Count > 0)
+		{
+			string randomCharaId = biome.spawn.GetRandomCharaId();
+			spawnList = ((!IsInstance) ? SpawnList.Get(randomCharaId) : SpawnList.Get("instance_" + randomCharaId, randomCharaId, new CharaFilter
 			{
-				if (s.hostility != "")
-				{
-					return false;
-				}
-				return s.biome == biome.name || s.biome.IsEmpty();
-			}
-		}) : SpawnList.Get(biome.spawn.GetRandomCharaId(), "chara", new CharaFilter
+				ShouldPass = (SourceChara.Row s) => (!(s.hostility != "") || (!s.tag.Contains("cat") && !s.race_row.tag.Contains("cat"))) ? true : false
+			}));
+		}
+		else
 		{
-			ShouldPass = (SourceChara.Row s) => (!IsInstance || !(s.hostility != "") || !s.tag.Contains("cat")) ? true : false
-		})))))));
+			spawnList = SpawnList.Get(biome.name, "chara", new CharaFilter
+			{
+				ShouldPass = delegate(SourceChara.Row s)
+				{
+					if (s.hostility != "")
+					{
+						return false;
+					}
+					return s.biome == biome.name || s.biome.IsEmpty();
+				}
+			});
+		}
 		int num = ((setting.dangerLv == -1) ? DangerLv : setting.dangerLv);
 		CardBlueprint cardBlueprint = new CardBlueprint
 		{

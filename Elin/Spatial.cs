@@ -450,7 +450,7 @@ public class Spatial : EClass
 		}
 	}
 
-	public SourceZone.Row source => _source ?? (_source = EClass.sources.zones.map[id]);
+	public SourceZone.Row source => _source ?? (_source = EClass.sources.zones.map.TryGetValue(id));
 
 	public bool IsPlayerFaction => mainFaction == EClass.pc.faction;
 

@@ -182,7 +182,7 @@ public class ActThrow : ActBaseAttack
 			{
 				if (t.trait.CanDrink(Act.TC.Chara))
 				{
-					t.trait.OnDrink(Act.TC.Chara);
+					FoodEffect.ProcDrink(Act.TC.Chara, t);
 				}
 				flag2 = t.IsNegativeGift;
 				Act.TC.Chara.AddCondition<ConWet>();

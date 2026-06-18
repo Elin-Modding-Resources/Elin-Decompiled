@@ -689,7 +689,7 @@ public class Thing : Card
 					{
 						Rand.UseSeed(base.uid + EClass.game.seed, delegate
 						{
-							sig = AliasGen.GetRandomAlias().Bracket((base.rarity == Rarity.Mythical) ? 3 : 2);
+							sig = AliasGen.GetRandomAlias(builtin: true).Bracket((base.rarity == Rarity.Mythical) ? 3 : 2);
 						});
 						sig = Lang.space + sig;
 					}
@@ -1266,7 +1266,11 @@ public class Thing : Card
 		{
 			AddText("isNoProcessIng", FontColor.Default);
 		}
-		if (HasElement(10))
+		if (trait.CanDrink(EClass.pc))
+		{
+			AddText("isDrinkable", FontColor.Default);
+		}
+		else if (trait.CanEat(EClass.pc))
 		{
 			AddText("isEdible", FontColor.Default);
 		}

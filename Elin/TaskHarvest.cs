@@ -30,22 +30,6 @@ public class TaskHarvest : BaseTaskHarvest
 
 	public override HarvestType harvestType => mode;
 
-	public override string IdRecipe
-	{
-		get
-		{
-			if (!IsObj)
-			{
-				if (target == null)
-				{
-					return "";
-				}
-				return target.source.RecipeID;
-			}
-			return pos.sourceObj.RecipeID;
-		}
-	}
-
 	public override int RightHand => 1005;
 
 	public override int destDist => 1;
@@ -96,6 +80,19 @@ public class TaskHarvest : BaseTaskHarvest
 			}
 			return false;
 		}
+	}
+
+	public override string GetIdRecipe(Point p)
+	{
+		if (!IsObj)
+		{
+			if (target == null)
+			{
+				return "";
+			}
+			return target.source.RecipeID;
+		}
+		return p.sourceObj.RecipeID;
 	}
 
 	public override bool CanManualCancel()
@@ -346,7 +343,7 @@ public class TaskHarvest : BaseTaskHarvest
 		};
 		p.onProgressComplete = delegate
 		{
-			string idRecipe = IdRecipe;
+			string idRecipe = GetIdRecipe(pos);
 			SourceBacker.Row backerObj = EClass._map.GetBackerObj(pos);
 			int num2 = ((EClass.rnd(3) != 0) ? 1 : 0);
 			if (IsObj)

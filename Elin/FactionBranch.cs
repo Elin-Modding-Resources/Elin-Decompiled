@@ -843,7 +843,7 @@ public class FactionBranch : EClass
 					{
 						if (!(text == "_egg"))
 						{
-							if (text == "milk")
+							if (text == "_milk")
 							{
 								i.MakeMilk(date.IsRealTime, num6);
 							}

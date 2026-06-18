@@ -36,7 +36,7 @@ public class AI_Haul : AIAct
 		_list.Clear();
 		foreach (Thing thing in EClass._map.things)
 		{
-			if (thing.placeState == PlaceState.roaming && !thing.isMasked && (thing.id == "731" || thing.id == "_egg" || thing.id == "egg_fertilized" || thing.id == "milk"))
+			if (thing.placeState == PlaceState.roaming && !thing.isMasked && (thing.id == "731" || thing.id == "_egg" || thing.id == "egg_fertilized" || thing.id == "_milk"))
 			{
 				_list.Add(thing);
 			}

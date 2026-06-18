@@ -1857,7 +1857,7 @@ public class Map : MapBounds, IPathfindGrid
 		{
 			EClass.pc.PickOrDrop(p, t);
 		}
-		else if (c != null && c.IsPC && (c.pos.Equals(p) || (EClass.core.config.game.smoothPick && c.Dist(p) <= 1) || EClass._zone.IsRegion))
+		else if (c != null && c.IsPC && (c.pos.Equals(p) || EClass.core.config.game.smoothPick || EClass._zone.IsRegion))
 		{
 			c.PickOrDrop(p, t);
 		}
@@ -2333,6 +2333,19 @@ public class Map : MapBounds, IPathfindGrid
 		return list;
 	}
 
+	public List<Point> ListPointsInSquare(Point center, int radius, bool mustBeWalkable = true, bool los = true)
+	{
+		List<Point> list = new List<Point>();
+		ForeachSquare(center.x, center.z, radius, delegate(Point p)
+		{
+			if ((!mustBeWalkable || !p.cell.blocked) && (!los || Los.IsVisible(center, p)))
+			{
+				list.Add(p.Copy());
+			}
+		});
+		return list;
+	}
+
 	public List<Chara> ListCharasInCircle(Point center, float radius, bool los = true)
 	{
 		List<Chara> list = new List<Chara>();
@@ -2435,6 +2448,26 @@ public class Map : MapBounds, IPathfindGrid
 			for (int j = _z - num; j < _z + num + 1; j++)
 			{
 				if (j >= 0 && j < Size && (float)((i - _x) * (i - _x) + (j - _z) * (j - _z)) < r * r)
+				{
+					point.Set(i, j);
+					action(point);
+				}
+			}
+		}
+	}
+
+	public void ForeachSquare(int _x, int _z, int r, Action<Point> action)
+	{
+		Point point = new Point();
+		for (int i = _x - r; i < _x + r + 1; i++)
+		{
+			if (i < 0 || i >= Size)
+			{
+				continue;
+			}
+			for (int j = _z - r; j < _z + r + 1; j++)
+			{
+				if (j >= 0 && j < Size)
 				{
 					point.Set(i, j);
 					action(point);

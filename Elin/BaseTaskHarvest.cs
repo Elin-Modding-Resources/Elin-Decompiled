@@ -50,8 +50,6 @@ public class BaseTaskHarvest : TaskDesignation
 
 	public bool IsHarvest => pos.cell.CanHarvest();
 
-	public virtual string IdRecipe => "";
-
 	public virtual bool CanReapSeed => pos.cell.CanReapSeed();
 
 	public virtual HarvestType harvestType => HarvestType.Block;
@@ -63,6 +61,11 @@ public class BaseTaskHarvest : TaskDesignation
 	public override int LeftHand => -1;
 
 	public override CursorInfo CursorIcon => CursorSystem.Cut;
+
+	public virtual string GetIdRecipe(Point p)
+	{
+		return "";
+	}
 
 	public virtual string GetBaseText(string str)
 	{
@@ -84,7 +87,7 @@ public class BaseTaskHarvest : TaskDesignation
 		string text = "tHarvest".lang(GetBaseText(str), (EClass.pc.Tool == null) ? "hand".lang() : owner.Tool.NameSimple, toolLv.ToString() ?? "");
 		if (EClass.pc.HasElement(1661))
 		{
-			RecipeManager.LearnState recipeLearnState = EClass.player.recipes.GetRecipeLearnState(IdRecipe);
+			RecipeManager.LearnState recipeLearnState = EClass.player.recipes.GetRecipeLearnState(GetIdRecipe(pos));
 			switch (recipeLearnState)
 			{
 			case RecipeManager.LearnState.Learnable:

@@ -76,7 +76,7 @@ public class TaskWater : Task
 			num = ((num <= 0) ? 1 : Mathf.Min(waterCan.owner.c_charges, 2 + num / 10));
 			if (num > 1)
 			{
-				List<Point> list2 = EClass._map.ListPointsInCircle(p2, num);
+				List<Point> list2 = EClass._map.ListPointsInSquare(p2, num - 1);
 				list2.Sort((Point a, Point b) => a.Distance(p2) - b.Distance(p2));
 				foreach (Point item in list2)
 				{

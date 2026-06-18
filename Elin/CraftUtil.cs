@@ -8,7 +8,8 @@ public class CraftUtil : EClass
 	{
 		General,
 		Food,
-		NoMix
+		NoMix,
+		Drink
 	}
 
 	public enum WrapType
@@ -375,12 +376,18 @@ public class CraftUtil : EClass
 	{
 		bool noMix = type == MixType.NoMix || product.HasTag(CTAG.noMix);
 		bool isFood = type == MixType.Food;
+		bool isDrink = type == MixType.Drink;
+		bool isFoodOrDrink = isFood || isDrink;
 		int nutFactor = 100 - (ings.Count - 1) * 5;
 		Thing thing = ((ings.Count > 0) ? ings[0] : null);
 		bool creative = crafter?.HasElement(487) ?? false;
 		if (crafter != null && crafter.Evalue(1650) >= 3)
 		{
 			nutFactor -= 10;
+		}
+		if (isDrink)
+		{
+			nutFactor = 100 / ings.Count;
 		}
 		if (!noMix)
 		{
@@ -399,6 +406,10 @@ public class CraftUtil : EClass
 			{
 				product.elements.ModBase(item.id, item.Value);
 			}
+		}
+		if (isDrink)
+		{
+			product.elements.SetTo(10, 0);
 		}
 		if (isFood)
 		{
@@ -515,6 +526,7 @@ public class CraftUtil : EClass
 				}
 				break;
 			case MixType.Food:
+			case MixType.Drink:
 				if (e.IsFoodTrait || e.IsTrait || e.id == 2)
 				{
 					return true;
@@ -531,7 +543,7 @@ public class CraftUtil : EClass
 				{
 					if (IsValidTrait(value3) && (!noMix || value3.id == 2))
 					{
-						if (isFood && value3.IsFoodTraitMain)
+						if (isFoodOrDrink && value3.IsFoodTraitMain)
 						{
 							int num5 = value3.Value;
 							if (product.id == "lunch_dystopia")
@@ -557,6 +569,10 @@ public class CraftUtil : EClass
 				if (isFood)
 				{
 					product.elements.ModBase(10, t.Evalue(10) * nutFactor / 100);
+				}
+				if (isDrink)
+				{
+					product.elements.ModBase(10, Mathf.CeilToInt((float)t.Evalue(10) * (float)nutFactor / 100f));
 				}
 			}
 		}

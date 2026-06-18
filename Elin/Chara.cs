@@ -5293,9 +5293,8 @@ public class Chara : Card, IPathfindWalker
 		Say("drink", this, t.Duplicate(1));
 		Say("quaff");
 		PlaySound("drink");
-		hunger.Mod(-2);
 		t.ModNum(-1);
-		t.trait.OnDrink(this);
+		FoodEffect.ProcDrink(this, t.Thing);
 		_ = IsPC;
 	}
 
@@ -8195,17 +8194,17 @@ public class Chara : Card, IPathfindWalker
 			(t.trait as TraitItemProc).OnUse(this);
 			return true;
 		}
+		if (t.trait.CanDrink(this))
+		{
+			Drink(t);
+			return true;
+		}
 		if (t.trait.CanEat(this) && hunger.GetPhase() > ((IsPCFaction || IsPCFactionMinion) ? 2 : 0))
 		{
 			SetAIImmediate(new AI_Eat
 			{
 				target = t
 			});
-			return true;
-		}
-		if (t.trait.CanDrink(this))
-		{
-			Drink(t);
 			return true;
 		}
 		if (t.trait.CanRead(this))

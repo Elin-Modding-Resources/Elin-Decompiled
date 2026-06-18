@@ -569,16 +569,16 @@ public class GoalCombat : Goal
 				break;
 			case "taunt":
 			{
-				bool flag10 = owner.HasCondition<StanceTaunt>();
-				bool flag11 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
-				num = ((flag10 && !flag11) ? 100 : ((!flag10 && flag11) ? 100 : 0));
+				bool flag6 = owner.HasCondition<StanceTaunt>();
+				bool flag7 = tactics.source.taunt != -1 && 100 * owner.hp / owner.MaxHP >= tactics.source.taunt;
+				num = ((flag6 && !flag7) ? 100 : ((!flag6 && flag7) ? 100 : 0));
 				break;
 			}
 			case "song":
 			{
-				bool flag8 = owner.HasCondition<BaseSong>();
-				bool flag9 = owner.mana.value > owner.mana.max / 3;
-				num = ((flag8 && !flag9) ? 100 : ((!flag8 && flag9) ? 100 : 0));
+				bool flag10 = owner.HasCondition<BaseSong>();
+				bool flag11 = owner.mana.value > owner.mana.max / 3;
+				num = ((flag10 && !flag11) ? 100 : ((!flag10 && flag11) ? 100 : 0));
 				break;
 			}
 			case "melee":
@@ -654,13 +654,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag12 = text == "dot";
-				if (flag12 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
+				bool flag9 = text == "dot";
+				if (flag9 && (owner.isRestrained || (tc != null && tc.IsRestrainedResident)))
 				{
 					continue;
 				}
 				num = ((text == "attackMelee") ? tactics.P_Melee : tactics.P_Spell) + GetAttackMod(act);
-				if (num > 0 && flag12)
+				if (num > 0 && flag9)
 				{
 					num += 10;
 				}
@@ -676,14 +676,13 @@ public class GoalCombat : Goal
 				{
 					continue;
 				}
-				bool flag6 = act is ActBolt;
-				bool flag7 = act is ActBall;
-				if ((owner.pos.IsBlocked && (flag6 || flag7)) || !flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
+				bool flag8 = act is ActBolt;
+				if ((owner.pos.IsBlocked && (flag8 || act is ActBall || act is ActBreathe)) || !flag || (owner.IsPCParty && (EClass._zone.IsTown || EClass._zone.IsPCFaction)) || (act.id == 9150 && EClass._zone.IsPCFaction && owner.IsNeutralOrAbove()))
 				{
 					continue;
 				}
-				GetNumEnemy(flag6 ? 6 : 5);
-				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag6 ? 6 : 5) > 0))
+				GetNumEnemy(flag8 ? 6 : 5);
+				if (numEnemy == 0 || (owner.IsPCFactionOrMinion && GetNumNeutral(flag8 ? 6 : 5) > 0))
 				{
 					continue;
 				}
@@ -962,36 +961,36 @@ public class GoalCombat : Goal
 				{
 					return 0;
 				}
-				float num5 = (float)c.hp / (float)c.MaxHP;
-				if (num5 > (isHOT ? 0.85f : 0.75f))
+				float num7 = (float)c.hp / (float)c.MaxHP;
+				if (num7 > (isHOT ? 0.85f : 0.75f))
 				{
 					return 0;
 				}
-				int num6 = tactics.P_Heal - (int)((float)tactics.P_Heal * num5) + (isHOT ? 50 : 25);
+				int num8 = tactics.P_Heal - (int)((float)tactics.P_Heal * num7) + (isHOT ? 50 : 25);
 				foreach (Condition condition2 in c.conditions)
 				{
 					if (condition2 is ConFear)
 					{
-						num6 += 10;
+						num8 += 10;
 					}
 					else if (condition2 is ConPoison)
 					{
-						num6 += 2;
+						num8 += 2;
 					}
 					else if (condition2 is ConConfuse)
 					{
-						num6 += 4;
+						num8 += 4;
 					}
 					else if (condition2 is ConDim)
 					{
-						num6 += 6;
+						num8 += 6;
 					}
 					else if (condition2 is ConBleed)
 					{
-						num6 += 8;
+						num8 += 8;
 					}
 				}
-				return num6;
+				return num8;
 			}
 		}
 		abilities.Sort((ItemAbility a, ItemAbility b) => b.priority - a.priority);
@@ -1094,11 +1093,11 @@ public class GoalCombat : Goal
 				return func(owner);
 			}
 			BuildCharaList();
-			int num7 = 0;
+			int num5 = 0;
 			foreach (Chara chara3 in charas)
 			{
-				int num8 = func(chara3);
-				if (num8 > 0)
+				int num6 = func(chara3);
+				if (num6 > 0)
 				{
 					if (isFriendlyAbility)
 					{
@@ -1115,21 +1114,21 @@ public class GoalCombat : Goal
 						}
 						if (chara3 != owner)
 						{
-							num8 += tactics.P_Party;
+							num6 += tactics.P_Party;
 						}
 					}
 					else if (!owner.IsHostile(chara3))
 					{
 						continue;
 					}
-					if (num8 >= num7)
+					if (num6 >= num5)
 					{
 						a.tg = chara3;
-						num7 = num8;
+						num5 = num6;
 					}
 				}
 			}
-			return num7;
+			return num5;
 		}
 		int GetAttackMod(Act a)
 		{

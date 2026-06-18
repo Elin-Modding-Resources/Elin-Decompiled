@@ -373,7 +373,7 @@ public class RecipeCard : Recipe
 		{
 			list.Add(ingredient.thing);
 		}
-		CraftUtil.MixIngredients(t, list, CraftUtil.MixType.General, GetQualityBonus());
+		CraftUtil.MixIngredients(t, list, (t.trait is TraitDrink) ? CraftUtil.MixType.Drink : CraftUtil.MixType.General, GetQualityBonus());
 		Rand.SetSeed();
 	}
 

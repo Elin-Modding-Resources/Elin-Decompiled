@@ -109,14 +109,14 @@ public class ModManager : ModManagerCore
 		disableMod |= Application.isEditor && EClass.debug.skipMod;
 		LoadLocalPackages();
 		LoadCustomPackage();
-		if (!disableMod)
+		if (!disableMod && dirWorkshop != null)
 		{
 			_loading.Log("Loading workshop contents...");
 			if (flag)
 			{
 				yield return LoadWorkshopPackages();
 			}
-			else if (dirWorkshop != null)
+			else
 			{
 				DirectoryInfo[] directories = dirWorkshop.GetDirectories();
 				foreach (DirectoryInfo dir in directories)
@@ -173,19 +173,18 @@ public class ModManager : ModManagerCore
 
 	public ModPackage AddWorkshopPackage(WorkshopItem item, bool isInPackages = false)
 	{
-		ulong sizeOnDisk;
-		string folderPath;
-		DateTime timeStamp;
-		bool itemInstallInfo = UserGeneratedContent.Client.GetItemInstallInfo(item.FileId, out sizeOnDisk, out folderPath, out timeStamp);
-		DirectoryInfo directoryInfo = new DirectoryInfo(folderPath);
-		if (!directoryInfo.Exists)
+		bool itemInstallInfo = UserGeneratedContent.Client.GetItemInstallInfo(item.FileId, out var _, out var folderPath, out var _);
+		if (folderPath == null)
 		{
-			return null;
+			folderPath = Path.Combine(DirWorkshop.FullName, item.FileId.ToString());
 		}
+		DirectoryInfo directoryInfo = new DirectoryInfo(folderPath);
+		itemInstallInfo &= directoryInfo.Exists;
 		ModPackage modPackage = AddPackage(directoryInfo, isInPackages);
 		modPackage.installed = itemInstallInfo;
 		modPackage.banned = item.IsBanned;
 		modPackage.workshopId = item.FileId.ToString();
+		modPackage.item = item;
 		return modPackage;
 	}
 
@@ -354,39 +353,39 @@ public class ModManager : ModManagerCore
 	public override void ParseExtra(DirectoryInfo dir, BaseModPackage package)
 	{
 		ModPackage modPackage = (ModPackage)package;
-		switch (dir.Name)
+		switch (dir.Name.ToLower())
 		{
-		case "TalkText":
+		case "talktext":
 			modPackage.ParseTalkText(dir);
 			break;
-		case "Map":
+		case "map":
 			if (!package.builtin)
 			{
 				modPackage.ParseMap(dir);
 			}
 			break;
-		case "Map Piece":
+		case "map piece":
 			if (!package.builtin)
 			{
 				modPackage.ParseMapPiece(dir);
 			}
 			break;
-		case "Texture Replace":
+		case "texture replace":
 			replaceFiles.AddRange(modPackage.ParseTextureReplace(dir));
 			break;
-		case "Texture":
+		case "texture":
 			modPackage.ParseTexture(dir);
 			break;
-		case "Portrait":
+		case "portrait":
 			modPackage.ParsePortrait(dir);
 			break;
-		case "LangMod":
+		case "langmod":
 			modPackage.ParseLangMod(dir);
 			break;
-		case "Sound":
+		case "sound":
 			modPackage.ParseSound(dir);
 			break;
-		case "Lang":
+		case "lang":
 			modPackage.AddOrUpdateLang(dir);
 			break;
 		}

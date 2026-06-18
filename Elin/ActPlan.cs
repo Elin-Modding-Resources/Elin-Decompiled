@@ -784,16 +784,16 @@ public class ActPlan : EClass
 								}
 								if (!EClass._zone.IsUserZone || !t.isNPCProperty)
 								{
-									if (t.trait.CanEat(EClass.pc))
+									if (t.trait.CanDrink(EClass.pc))
 									{
-										TrySetAct(new AI_Eat
+										TrySetAct(new AI_Drink
 										{
 											target = t
 										}, t);
 									}
-									if (t.trait.CanDrink(EClass.pc))
+									else if (t.trait.CanEat(EClass.pc))
 									{
-										TrySetAct(new AI_Drink
+										TrySetAct(new AI_Eat
 										{
 											target = t
 										}, t);

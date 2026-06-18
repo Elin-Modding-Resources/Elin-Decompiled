@@ -127,27 +127,12 @@ public class ModUtil : EClass
 		{
 			return null;
 		}
-		zoneFullName = zoneFullName.Replace('/', '@');
-		Zone zone = EClass.game.spatials.Find((Zone z) => z.ZoneFullName == zoneFullName);
-		if (zone != null)
+		var (zoneType, zoneId, destLv) = Zone.ParseZoneFullName(zoneFullName);
+		if (zoneId.IsEmpty())
 		{
-			return zone;
+			return null;
 		}
-		int num = zoneFullName.LastIndexOf('@');
-		int destLv = 0;
-		string zoneType;
-		if (num > 0 && num < zoneFullName.Length - 1)
-		{
-			zoneType = zoneFullName[..num];
-			destLv = zoneFullName[(num + 1)..].ToInt();
-		}
-		else
-		{
-			zoneType = zoneFullName.Replace("@", "");
-		}
-		string zoneId = zoneType.Replace("Zone_", "");
-		zoneType = "Zone_" + zoneId;
-		zone = EClass.game.spatials.Find((Zone z) => z.GetType().Name == zoneType || z.id == zoneId)?.FindOrCreateLevel(destLv);
+		Zone zone = EClass.game.spatials.Find((Zone z) => z.GetType().Name == zoneType || z.id == zoneId)?.FindOrCreateLevel(destLv);
 		if (zone == null && (zoneId == "*" || useRandomFallback))
 		{
 			zone = (from z in EClass.game.spatials.map.Values.OfType<Zone>()
@@ -228,6 +213,17 @@ public class ModUtil : EClass
 	private static void OnPostLoadInit(GameIOContext context)
 	{
 		EClass.player.knownBGMs.RemoveWhere((int id) => !EClass.core.refs.dictBGM.ContainsKey(id));
+		KeyValuePair<int, Spatial>[] array = EClass.game.spatials.map.ToArray();
+		for (int i = 0; i < array.Length; i++)
+		{
+			KeyValuePair<int, Spatial> keyValuePair = array[i];
+			var (num2, spatial2) = (KeyValuePair<int, Spatial>)(ref keyValuePair);
+			if (spatial2.source == null)
+			{
+				spatial2.Destroy();
+				UnityEngine.Debug.LogWarning($"#mod-content removed invalid zone '{num2}', '{spatial2.id}', '{(spatial2 as Zone)?.ZoneFullName}'");
+			}
+		}
 		List<ICustomContent> contents = new List<ICustomContent>();
 		CustomReligionContent.LoadReligionData(context);
 		LoadCustomContent<CustomZoneContent>();
@@ -338,24 +334,38 @@ public class ModUtil : EClass
 				activatedUserMod.UpdateSourceLocalizationFile(lang);
 			}
 		}
-		foreach (string item in LoadGodTalk())
+		AliasGen.list = null;
+		AliasGen.listMix.Clear();
+		AliasGen.listBuiltin.Clear();
+		WordGen.listMix.Clear();
+		WordGen.listBuiltin.Clear();
+		foreach (string item in LoadAlias())
 		{
-			MOD.listGodTalk.Add(new ExcelData(item));
+			MOD.listAlias.Add(new ExcelData(item));
 		}
-		foreach (string item2 in LoadCharaTalk())
+		NameGen.list = null;
+		foreach (string item2 in LoadName())
 		{
-			MOD.listTalk.Add(new ExcelData(item2));
+			MOD.listName.Add(new ExcelData(item2));
 		}
-		foreach (string item3 in LoadCharaTone())
+		foreach (string item3 in LoadGodTalk())
 		{
-			MOD.tones.Add(new ExcelData(item3));
+			MOD.listGodTalk.Add(new ExcelData(item3));
+		}
+		foreach (string item4 in LoadCharaTalk())
+		{
+			MOD.listTalk.Add(new ExcelData(item4));
+		}
+		foreach (string item5 in LoadCharaTone())
+		{
+			MOD.tones.Add(new ExcelData(item5));
 		}
 		BookList.dict = null;
 		BottleMessageList.list = null;
 		Lang.excelDialog = null;
-		foreach (CustomFileContent item4 in _customContent.Values.OfType<CustomFileContent>())
+		foreach (CustomFileContent item6 in _customContent.Values.OfType<CustomFileContent>())
 		{
-			item4.OnSetLang(lang);
+			item6.OnSetLang(lang);
 		}
 	}
 
@@ -382,12 +392,37 @@ public class ModUtil : EClass
 		_customContent[content.ContentId] = content;
 	}
 
+	public static bool FixDefaultRenderRowPref(RenderRow r, string id)
+	{
+		FileInfo fileInfo = PackageIterator.GetFiles("Texture/" + id + ".pref").LastOrDefault();
+		if (fileInfo == null)
+		{
+			return false;
+		}
+		r.pref = SourcePref.ReadFromIni(fileInfo.FullName);
+		return true;
+	}
+
 	public static void FixDefaultCharaRowPref(SourceChara.Row r)
 	{
-		r.pref = new SourcePref
+		if (!r.tag.Contains("usePref") || !FixDefaultRenderRowPref(r, r.id))
 		{
-			pivotY = -10
-		};
+			r.pref = new SourcePref
+			{
+				pivotY = -10
+			};
+		}
+	}
+
+	public static void FixDefaultThingRowPref(SourceThing.Row r)
+	{
+		if (!r.tag.Contains("usePref") || !FixDefaultRenderRowPref(r, r.id))
+		{
+			r.pref = new SourcePref
+			{
+				shadow = 1
+			};
+		}
 	}
 
 	public static List<Thing> GenerateMerchantStock(Card owner, string stockId = null, bool forceRestock = false)
@@ -492,6 +527,30 @@ public class ModUtil : EClass
 		{
 			list.Add(fileInfo.FullName);
 			UnityEngine.Debug.Log("#mod-content loaded dialog " + fileInfo.ShortPath());
+		}
+		return list;
+	}
+
+	public static List<string> LoadAlias()
+	{
+		List<string> list = new List<string>();
+		FileInfo[] files = PackageIterator.GetFiles(Lang.langCode + "/Data/Alias.xlsx");
+		foreach (FileInfo fileInfo in files)
+		{
+			list.Add(fileInfo.FullName);
+			UnityEngine.Debug.Log("#mod-content loaded Alias " + fileInfo.ShortPath());
+		}
+		return list;
+	}
+
+	public static List<string> LoadName()
+	{
+		List<string> list = new List<string>();
+		FileInfo[] files = PackageIterator.GetFiles(Lang.langCode + "/Data/Name.xlsx");
+		foreach (FileInfo fileInfo in files)
+		{
+			list.Add(fileInfo.FullName);
+			UnityEngine.Debug.Log("#mod-content loaded Name " + fileInfo.ShortPath());
 		}
 		return list;
 	}
@@ -1090,7 +1149,7 @@ public class ModUtil : EClass
 		{
 			return "";
 		}
-		return JsonConvert.SerializeObject(sourceData2.ExportRows(), format);
+		return JsonConvert.SerializeObject(sourceData2.ExportRows(), format, GameIOContext.Settings);
 	}
 
 	public static void ExportAllSourceDataJson(string dir)

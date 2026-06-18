@@ -39,6 +39,15 @@ public class TaskPoint : Task, IInspect
 		return false;
 	}
 
+	public HitResult GetHitResult(Point p)
+	{
+		Point point = pos.Copy();
+		pos = p;
+		HitResult hitResult = GetHitResult();
+		pos = point;
+		return hitResult;
+	}
+
 	public override bool CanPerform()
 	{
 		if (owner == null)

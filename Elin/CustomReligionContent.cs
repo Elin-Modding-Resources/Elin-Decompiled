@@ -37,21 +37,20 @@ public class CustomReligionContent : CustomSourceContent
 
 	public static CustomReligionContent CreateFromRow(SourceReligion.Row r, ModPackage owner = null)
 	{
-		EClass.sources.religions.map.Remove(r.id);
-		r.id = r.id.Split('#')[0];
-		EClass.sources.religions.map[r.id] = r;
+		string text = r.id.Split('#')[0];
 		if (owner == null)
 		{
 			owner = ModUtil.FindSourceRowPackage(r);
 		}
 		CustomReligionContent obj = new CustomReligionContent
 		{
-			ContentId = "Religion/" + r.id,
-			SourceId = r.id,
+			ContentId = "Religion/" + text,
+			SourceId = text,
 			Owner = owner,
 			canJoin = (!r.id.Contains("#noJoin") && !r.id.Contains("#cannot")),
 			isMinorGod = r.id.Contains("#minor")
 		};
+		EClass.sources.religions.map[text] = r;
 		if (!Portrait.modPortraits.dict.ContainsKey("UN_" + r.id) && SpriteReplacer.dictModItems.TryGetValue(r.id, out var value))
 		{
 			Portrait.modPortraits.Add("UN_" + r.id, new FileInfo(value + ".png"));
@@ -82,10 +81,8 @@ public class CustomReligionContent : CustomSourceContent
 				{
 					if (managed.TryGetValue(key, out var value))
 					{
-						bool flag = customReligionContent2.canJoin;
-						value.content.canJoin = flag;
-						bool flag2 = customReligionContent2.isMinorGod;
-						value.content.isMinorGod = flag2;
+						value.content.canJoin = customReligionContent2.canJoin;
+						value.content.isMinorGod = customReligionContent2.isMinorGod;
 						value.content.artifacts = customReligionContent2.artifacts;
 						value.content.offeringMtp = customReligionContent2.offeringMtp;
 						value.content.offeringValue = customReligionContent2.offeringValue;

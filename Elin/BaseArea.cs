@@ -121,12 +121,13 @@ public class BaseArea : EClass, IInspect
 
 	public string GetRandomName(int seed = -1)
 	{
-		if (seed != -1)
+		bool flag = seed != -1;
+		if (flag)
 		{
 			Rand.SetSeed(seed);
 		}
-		string combinedName = WordGen.GetCombinedName(EClass.Branch?.GetRandomName(), ListRoomNames().RandomItem(), room: true);
-		if (seed != -1)
+		string combinedName = WordGen.GetCombinedName(EClass.Branch?.GetRandomName(), ListRoomNames().RandomItem(), room: true, flag);
+		if (flag)
 		{
 			Rand.SetSeed();
 		}

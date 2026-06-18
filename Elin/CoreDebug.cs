@@ -469,10 +469,10 @@ public class CoreDebug : EScriptable
 			}
 			EClass.pc.AddCard(thing);
 			thing = ThingGen.Create("pouch");
-			for (int k = 1; k < 5; k++)
+			for (int k = 0; k < 5; k++)
 			{
 				Thing thing3 = ThingGen.Create("scrubber");
-				thing3.elements.SetBase(770, k * 10);
+				thing3.elements.SetBase(770, k * 10 + 1);
 				thing.AddCard(thing3);
 			}
 			for (int l = 0; l < 30; l++)
@@ -979,7 +979,7 @@ public class CoreDebug : EScriptable
 			Chara targetChara = EClass.scene.mouseTarget.TargetChara;
 			if (targetChara != null)
 			{
-				EClass.pc.Pick(CraftUtil.MakeLoveLunch(targetChara));
+				EClass.pc.Pick(targetChara.MakeMilk());
 				EClass.pc.Pick(targetChara.MakeEgg(effect: true, 10));
 				EClass.pc.Pick(targetChara.MakeGene());
 				TraitFoodEggFertilized.Incubate(targetChara.MakeEgg(effect: false, 1, addToZone: false, 100), targetChara.pos.GetNearestPoint(allowBlock: false, allowChara: false));
@@ -2388,6 +2388,10 @@ public class CoreDebug : EScriptable
 		EClass.core.mods.InitLang();
 		NameGen.list = null;
 		AliasGen.list = null;
+		AliasGen.listMix.Clear();
+		AliasGen.listBuiltin.Clear();
+		WordGen.listMix.Clear();
+		WordGen.listBuiltin.Clear();
 		NameGen.Init();
 		AliasGen.Init();
 		foreach (Chara chara in EClass._map.charas)

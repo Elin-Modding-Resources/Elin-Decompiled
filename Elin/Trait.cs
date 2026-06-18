@@ -789,7 +789,7 @@ public class Trait : EClass
 					});
 				}, "remove");
 			}
-			if (CanEat(EClass.pc))
+			else if (CanEat(EClass.pc))
 			{
 				list.Add("invFood", 140, delegate
 				{
@@ -2544,12 +2544,12 @@ public class Trait : EClass
 				case ShopType.Milk:
 					if (EClass._zone is Zone_Nefu && EClass.rnd(2) == 0)
 					{
-						Thing thing4 = ThingGen.Create("milk");
+						Thing thing4 = ThingGen.Create("_milk");
 						thing4.MakeRefFrom(EClass.sources.charas.rows.Where((SourceChara.Row r) => r.race == "mifu" || r.race == "nefu").RandomItem().model);
 						Debug.Log(thing4);
 						return thing4;
 					}
-					return Create("milk");
+					return Create("_milk");
 				case ShopType.Map:
 					return ThingGen.CreateMap();
 				case ShopType.Plan:

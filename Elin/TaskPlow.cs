@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TaskPlow : TaskDesignation
@@ -56,24 +57,49 @@ public class TaskPlow : TaskDesignation
 		p.onProgressComplete = delegate
 		{
 			owner.PlaySound(pos.cell.HasBridge ? pos.cell.matBridge.GetSoundDead(pos.sourceBridge) : pos.cell.matFloor.GetSoundDead(pos.sourceFloor));
-			Effect.Get("mine").Play(pos).SetParticleColor(pos.cell.HasBridge ? pos.matBridge.GetColor() : pos.matFloor.GetColor())
-				.Emit(10 + EClass.rnd(10));
-			pos.Animate(AnimeID.Dig, animeBlock: true);
-			if (pos.HasBridge)
+			int num = owner.Tool?.Evalue(770) ?? 0;
+			num = ((num <= 0) ? 1 : (2 + num / 10));
+			if (num > 1)
 			{
-				pos.cell._bridge = 4;
+				List<Point> list = EClass._map.ListPointsInSquare(pos, num - 1);
+				list.Sort((Point a, Point b) => a.Distance(pos) - b.Distance(pos));
+				{
+					foreach (Point item in list)
+					{
+						if (owner == null || owner.isDead)
+						{
+							break;
+						}
+						Plow(item);
+					}
+					return;
+				}
 			}
-			else
-			{
-				pos.SetFloor(pos.matFloor.id, 4);
-			}
-			owner.elements.ModExp(286, 30f);
-			if (owner.IsPC)
-			{
-				EClass.player.stats.plow++;
-			}
-			owner.stamina.Mod(-1);
+			Plow(pos);
 		};
+		void Plow(Point p)
+		{
+			if ((p.HasBridge ? p.sourceBridge : p.sourceFloor).tag.Contains("soil") && GetHitResult(p) != HitResult.Invalid)
+			{
+				Effect.Get("mine").Play(p).SetParticleColor(p.cell.HasBridge ? p.matBridge.GetColor() : p.matFloor.GetColor())
+					.Emit(10 + EClass.rnd(10));
+				p.Animate(AnimeID.Dig, animeBlock: true);
+				if (p.HasBridge)
+				{
+					p.cell._bridge = 4;
+				}
+				else
+				{
+					p.SetFloor(p.matFloor.id, 4);
+				}
+				owner.elements.ModExp(286, 30f);
+				if (owner.IsPC)
+				{
+					EClass.player.stats.plow++;
+				}
+				owner.stamina.Mod(-1);
+			}
+		}
 	}
 
 	public override HitResult GetHitResult()

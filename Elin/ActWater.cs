@@ -21,7 +21,7 @@ public class ActWater : Act
 		num = ((num <= 0) ? 1 : Mathf.Min(waterCan.owner.c_charges, 2 + num / 10));
 		if (num > 1)
 		{
-			List<Point> list = EClass._map.ListPointsInCircle(Act.TP, num);
+			List<Point> list = EClass._map.ListPointsInSquare(Act.TP, num - 1);
 			list.Sort((Point a, Point b) => a.Distance(Act.TP) - b.Distance(Act.TP));
 			foreach (Point item in list)
 			{
