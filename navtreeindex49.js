@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"classCircularRadialButton.html#a445c77697a866708073db920e1d81f7c":[1,0,300,6],
+"classCircularRadialButton.html#a4658ad32535ebf686b4dd0e956b27021":[1,0,300,15],
 "classCircularRadialButton.html#a55e585471c0c25f7d1b0c73748f40cf3":[1,0,300,25],
 "classCircularRadialButton.html#a6ca531c87757de7113ce00510dacf9ea":[1,0,300,23],
 "classCircularRadialButton.html#a70c465fa136a41a03e0a4069551c5d79":[1,0,300,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "classClassExtension.html#afa4721369ddf76cd9ff872447b8d60e7":[1,0,302,67],
 "classClassExtension.html#afe78902de30382be1675f4ae0319c676":[1,0,302,5],
 "classClassExtension.html#aff50909b244a17f06d2cc98a1ebe5fdc":[1,0,302,88],
-"classClassWithBits.html":[1,0,303],
-"classClassWithBits.html#a4a12a1bd7cee408abb579356fd34c044":[1,0,303,1],
-"classClassWithBits.html#a831fd88b82c5c8b5272505376424c816":[1,0,303,0]
+"classClassWithBits.html":[1,0,303]
 };

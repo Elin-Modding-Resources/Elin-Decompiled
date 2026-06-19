@@ -1,5 +1,7 @@
 var NAVTREEINDEX76 =
 {
+"classHotItemWidgetSet.html#a76d19587af7bfca0e054e1a4d80c048c":[1,0,729,6],
+"classHotItemWidgetSet.html#a7798477f62113b7db87bf6b8e10fda7d":[1,0,729,3],
 "classHotItemWidgetSet.html#a8a10c2ee3ae46f69a68689dcfb6c45a7":[1,0,729,4],
 "classHotItemWidgetSet.html#ae55366a0b9aac964bde2ad38211ff7ea":[1,0,729,2],
 "classHotItemWidgetSet.html#aebfc09619121d481b92d901ec386074f":[1,0,729,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX76 =
 "classInspectGroupObj.html#a00efe62da38f50784e64f8a0454565c9":[1,0,754,1],
 "classInspectGroupObj.html#af0e3e16f18fdf01ed814449e9b0f9d8b":[1,0,754,0],
 "classInspectGroupTask.html":[1,0,755],
-"classInspectGroupTask.html#aa100fe6fee6eb53cd16883e33e1009ee":[1,0,755,0],
-"classInspectGroupTask.html#abaac66d0868765138fbc197c9715fc39":[1,0,755,1],
-"classInspectGroupThing.html":[1,0,756]
+"classInspectGroupTask.html#aa100fe6fee6eb53cd16883e33e1009ee":[1,0,755,0]
 };

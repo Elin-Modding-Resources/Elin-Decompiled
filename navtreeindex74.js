@@ -1,5 +1,7 @@
 var NAVTREEINDEX74 =
 {
+"classHUD.html#a5e5e28aed4a7885c689dd65a173097ff":[1,0,733,12],
+"classHUD.html#a663b5caf12091c37d5ed05a2e2007811":[1,0,733,11],
 "classHUD.html#a6f895b1850cfbbaeb4e1ae7949cfa7eb":[1,0,733,1],
 "classHUD.html#a7c92f79434f2ccdd3140d26018f188b3":[1,0,733,0],
 "classHUD.html#a7f739c79a7f1e9c783305eff98d01560":[1,0,733,26],
@@ -247,7 +249,5 @@ var NAVTREEINDEX74 =
 "classHomeResourceWorth.html#a8d884d5b9c65d333714375080b2cbf1b":[1,0,700,2],
 "classHomeResourceWorth.html#ac0132967865c23cf7c00648cd621c634":[1,0,700,5],
 "classHomeResourceWorth.html#ae9dcdb6b6e66397ee5b1e09cf119d9f0":[1,0,700,0],
-"classHomeResourceWorth.html#afc0ef6c94c4f21c1de0f76b4737dc433":[1,0,700,1],
-"classHomeResource_1_1Cost.html":[1,0,687,0],
-"classHomeResource_1_1Cost.html#a2313fe7e50537b17cb666952e54e2a35":[1,0,687,0,2]
+"classHomeResourceWorth.html#afc0ef6c94c4f21c1de0f76b4737dc433":[1,0,700,1]
 };

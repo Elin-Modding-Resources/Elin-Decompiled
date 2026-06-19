@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"classQuestDeliver.html#a516279bbb42d517e05d3e7b44bd63599":[1,0,1064,16],
+"classQuestDeliver.html#a51a3edb7e5fdd38b7c5a63375fc3d4f2":[1,0,1064,20],
 "classQuestDeliver.html#a5514031c0c284459e6097cba04e9a967":[1,0,1064,25],
 "classQuestDeliver.html#a57c1077dcf08f8bafcccedd6d693cbf1":[1,0,1064,14],
 "classQuestDeliver.html#a7e84b4b5eb75e7bc4500686d975d8110":[1,0,1064,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "classQuestRandom.html#a1dc12b77423d3fb0f4d2a59fb626dc9d":[1,0,1111,5],
 "classQuestRandom.html#a3cc1ada379412eb2e3bdf73099b4d5a6":[1,0,1111,1],
 "classQuestRandom.html#a8644f960c225228d40c475a0eac15ebc":[1,0,1111,6],
-"classQuestRandom.html#aa075246fc7da571ec8b4db6b2b87debd":[1,0,1111,3],
-"classQuestRandom.html#aeeee76be886c6da7347c2f0c465ce751":[1,0,1111,2],
-"classQuestRandom.html#af4f04fc53aef85deed96ca42e25ba30f":[1,0,1111,0]
+"classQuestRandom.html#aa075246fc7da571ec8b4db6b2b87debd":[1,0,1111,3]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"classExcelBookImportSetting.html#ab0b5350a310129fa961c80ca3a018c37":[1,0,558,8],
+"classExcelBookImportSetting.html#af93a95b00f46914b147cc0252a9e27b1":[1,0,558,4],
 "classExcelData.html":[1,0,559],
 "classExcelData.html#a069577f49ece251304c930959bc71000":[1,0,559,7],
 "classExcelData.html#a0be9c5038f66b91b39e53c5b1004b1ab":[1,0,559,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "classFEAT.html#a996a2893d4d012ac9a4f6d7976058150":[1,0,577,64],
 "classFEAT.html#a99799ffa0458a177ff163acb2b76bb2c":[1,0,577,20],
 "classFEAT.html#a9990c642d1c622a82ad54d1d1448e290":[1,0,577,141],
-"classFEAT.html#a9a18d11f2883cf72fd18e778d16795e2":[1,0,577,30],
-"classFEAT.html#a9a24d8cae8aa9e9afe88e2e02f5e60a8":[1,0,577,132],
-"classFEAT.html#a9dc997249c07337520b10cab896efd32":[1,0,577,149]
+"classFEAT.html#a9a18d11f2883cf72fd18e778d16795e2":[1,0,577,30]
 };

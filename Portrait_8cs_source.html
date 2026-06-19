@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.318 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.319 Nightly Patch 1</span>
    </div>
   </td>
  </tr>
@@ -214,7 +214,7 @@ $(document).ready(function(){initNavTree('Portrait_8cs_source.html',''); initRes
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">  120</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classPortrait.html#a268f060ca5eb021c65521c3fd12b06fc">SetPerson</a>(<a class="code hl_class" href="classPerson.html">Person</a> p)</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        base.gameObject.SetActive(value: <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPerson.html#a2b4f80c4f959f19f3acd1c84cde8005d">hasChara</a>)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">if</span> (p.<a class="code hl_property" href="classPerson.html#a2b4f80c4f959f19f3acd1c84cde8005d">hasChara</a> &amp;&amp; p.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>.<a class="code hl_function" href="classChara.html#ac3a0d547b42414135e4f3f721f4602d8">GetIdPortrait</a>() == p.<a class="code hl_variable" href="classPerson.html#a189b5a854df35af35737d6742881d5d5">idPortrait</a>)</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        {</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <a class="code hl_function" href="classPortrait.html#a91e34bfdc436df25a78dfab00bc0c5d4">SetChara</a>(p.<a class="code hl_property" href="classPerson.html#af1c76454a0f955a04399ee141036afae">chara</a>);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>

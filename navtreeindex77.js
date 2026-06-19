@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"classInspectGroupTask.html#abaac66d0868765138fbc197c9715fc39":[1,0,755,1],
+"classInspectGroupThing.html":[1,0,756],
 "classInspectGroupThing.html#a2c249737802f724ccff3e2d74fbac73b":[1,0,756,1],
 "classInspectGroupThing.html#a2ccf144ac69a1403769548f5d91640f5":[1,0,756,0],
 "classInspectGroup_1_1Item.html":[1,0,749,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "classInvOwnerEffect.html#a7edce2ef6119ca81f6a54e8140ea9402":[1,0,772,3],
 "classInvOwnerEnchant.html":[1,0,773],
 "classInvOwnerEnchant.html#a119f26c9152a89a6eb629484cca3c24a":[1,0,773,0],
-"classInvOwnerEnchant.html#a20ac377a506334664822325113c6e020":[1,0,773,5],
-"classInvOwnerEnchant.html#a57c4a5cd701dd7147be387364ace99fb":[1,0,773,2],
-"classInvOwnerEnchant.html#aa174a0372fc787965639e8db7c5c4598":[1,0,773,3]
+"classInvOwnerEnchant.html#a20ac377a506334664822325113c6e020":[1,0,773,5]
 };
