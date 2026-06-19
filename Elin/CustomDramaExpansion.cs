@@ -797,21 +797,21 @@ public class CustomDramaExpansion : EClass
 		{
 			return false;
 		}
-		string text = person.chara?.GetIdPortrait();
+		string idPortrait = person.chara?.GetIdPortrait();
 		if (!portraitId.IsEmpty())
 		{
-			string text2 = person.id.IsEmpty(person.chara?.id);
+			string text = person.id.IsEmpty(person.chara?.id);
 			HashSet<string> hashSet = new HashSet<string>(StringComparer.Ordinal);
-			hashSet.Add("UN_" + text2 + "_" + text + ".png");
-			hashSet.Add(text + ".png");
-			hashSet.Add(text2 + "_" + text + ".png");
-			string text3 = hashSet.FirstOrDefault(Portrait.allIds.Contains);
-			if (text3 != null)
+			hashSet.Add("UN_" + text + "_" + portraitId + ".png");
+			hashSet.Add(portraitId + ".png");
+			hashSet.Add(text + "_" + portraitId + ".png");
+			string text2 = hashSet.FirstOrDefault(Portrait.allIds.Contains);
+			if (text2 != null)
 			{
-				text = text3[..^4];
+				idPortrait = text2[..^4];
 			}
 		}
-		person.idPortrait = text;
+		person.idPortrait = idPortrait;
 		return true;
 	}
 

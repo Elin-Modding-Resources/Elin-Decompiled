@@ -52,7 +52,7 @@ public class InvOwnerRecycle : InvOwnerDraglet
 	{
 		SE.Play("trash");
 		Msg.Say("dump", t, Container.Name);
-		int a = t.Num * Mathf.Clamp(t.GetPrice() / 100, 1, 100);
+		int a = t.Num * Mathf.Clamp(t.GetPrice(CurrencyType.Money, sell: false, PriceType.Tourism) / 100, 1, 100);
 		a = EClass.rndHalf(a);
 		if (t.id == "1084")
 		{

@@ -68,17 +68,46 @@ public class AI_Shear : AI_TargetCard
 			{
 				if (target.IsAliveInCurrentZone)
 				{
-					Thing fur = GetFur(target.Chara);
-					owner.Say("shear_end", owner, target, fur.Name);
-					owner.Pick(fur, msg: false);
-					owner.elements.ModExp(237, 50 * furLv);
-					owner.stamina.Mod(-1);
-					target.Chara.ModAffinity(owner, 1);
-					EClass.player.stats.shear++;
+					Point pos = target.pos;
+					int num = owner.Tool?.Evalue(770) ?? 0;
+					num = ((num <= 0) ? 1 : (2 + num / 10));
+					if (num > 1)
+					{
+						List<Point> list = EClass._map.ListPointsInSquare(pos, num - 1);
+						list.Sort((Point a, Point b) => a.Distance(pos) - b.Distance(pos));
+						{
+							foreach (Point item in list)
+							{
+								foreach (Chara item2 in item.ListCharas())
+								{
+									if (item2.CanBeSheared())
+									{
+										Shear(item2);
+									}
+									if (owner == null || owner.isDead)
+									{
+										break;
+									}
+								}
+							}
+							return;
+						}
+					}
+					Shear(target.Chara);
 				}
 			}
 		}.SetDuration((6 + furLv * 6) * 100 / (100 + owner.Tool.material.hardness * 2), 3);
 		yield return Do(seq);
+		void Shear(Chara c)
+		{
+			Thing fur = GetFur(c);
+			owner.Say("shear_end", owner, c, fur.Name);
+			owner.Pick(fur, msg: false);
+			owner.elements.ModExp(237, 50 * furLv);
+			owner.stamina.Mod(-1);
+			c.ModAffinity(owner, 1);
+			EClass.player.stats.shear++;
+		}
 	}
 
 	public static int GetFurLv(Chara c)

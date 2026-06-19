@@ -172,62 +172,69 @@ public class TaskDig : BaseTaskHarvest
 			{
 				string idRecipe = GetIdRecipe(p);
 				int num2 = (p.HasBridge ? p.matBridge.hardness : p.matFloor.hardness);
-				if (EClass._zone.IsRegion)
+				TaskDig taskDig = new TaskDig();
+				taskDig.owner = owner;
+				taskDig.pos = p;
+				taskDig.SetTarget(owner, owner.Tool);
+				if (!taskDig.IsTooHard)
 				{
-					Thing map = GetTreasureMap(p);
-					if (map != null || EClass.debug.enable)
+					if (EClass._zone.IsRegion)
 					{
-						if (map == null)
+						Thing map = GetTreasureMap(p);
+						if (map != null || EClass.debug.enable)
 						{
-							map = ThingGen.Create("map_treasure", -1, EClass.pc.LV);
+							if (map == null)
+							{
+								map = ThingGen.Create("map_treasure", -1, EClass.pc.LV);
+							}
+							SE.Play("ding_skill");
+							Msg.Say("digTreasure");
+							Rand.UseSeed(map.refVal, delegate
+							{
+								Thing thing = ThingGen.CreateTreasure("chest_treasure", map.LV);
+								EClass._zone.AddCard(thing, p);
+								ThingGen.TryLickChest(thing);
+							});
+							map.Destroy();
+							EClass.player.willAutoSave = true;
+							return;
 						}
-						SE.Play("ding_skill");
-						Msg.Say("digTreasure");
-						Rand.UseSeed(map.refVal, delegate
+					}
+					switch (mode)
+					{
+					case Mode.Default:
+						EClass._map.SetBridge(p.x, p.z, 0, 0, 0, 0, 0);
+						break;
+					case Mode.RemoveFloor:
+						EClass._map.MineFloor(p, owner);
+						p.Animate(AnimeID.Dig, animeBlock: true);
+						if (!owner.IsAgent)
 						{
-							Thing thing = ThingGen.CreateTreasure("chest_treasure", map.LV);
-							EClass._zone.AddCard(thing, p);
-							ThingGen.TryLickChest(thing);
-						});
-						map.Destroy();
-						EClass.player.willAutoSave = true;
-						return;
+							owner.elements.ModExp(230, 20 + num2 / 2);
+						}
+						break;
+					case Mode.Ramp:
+						EClass._map.MineFloor(p, owner);
+						break;
 					}
-				}
-				switch (mode)
-				{
-				case Mode.Default:
-					EClass._map.SetBridge(p.x, p.z, 0, 0, 0, 0, 0);
-					break;
-				case Mode.RemoveFloor:
-					EClass._map.MineFloor(p, owner);
-					p.Animate(AnimeID.Dig, animeBlock: true);
-					if (!owner.IsAgent)
+					if (EClass._zone.IsCrime(owner, this))
 					{
-						owner.elements.ModExp(230, 20 + num2 / 2);
+						EClass.player.ModKarma(-1);
 					}
-					break;
-				case Mode.Ramp:
-					EClass._map.MineFloor(p, owner);
-					break;
-				}
-				if (EClass._zone.IsCrime(owner, this))
-				{
-					EClass.player.ModKarma(-1);
-				}
-				if (EClass.rnd(2) == 0)
-				{
-					owner.stamina.Mod(-1);
-				}
-				if (owner != null)
-				{
-					if (owner.IsPC)
+					if (EClass.rnd(2) == 0)
 					{
-						EClass.player.recipes.ComeUpWithRecipe(idRecipe, 30);
+						owner.stamina.Mod(-1);
 					}
-					if (owner.IsPC && owner.IsAliveInCurrentZone && EClass._zone.IsSkyLevel && !EClass.game.IsSurvival && owner.pos.IsSky)
+					if (owner != null)
 					{
-						EClass.pc.FallFromZone();
+						if (owner.IsPC)
+						{
+							EClass.player.recipes.ComeUpWithRecipe(idRecipe, 30);
+						}
+						if (owner.IsPC && owner.IsAliveInCurrentZone && EClass._zone.IsSkyLevel && !EClass.game.IsSurvival && owner.pos.IsSky)
+						{
+							EClass.pc.FallFromZone();
+						}
 					}
 				}
 			}

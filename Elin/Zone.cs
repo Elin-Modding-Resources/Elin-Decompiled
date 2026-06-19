@@ -547,27 +547,22 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public static (string zoneType, string zoneId, int zoneLv) ParseZoneFullName(string zoneFullName)
 	{
-		string item = "";
-		string item2 = "";
-		int item3 = 0;
+		int item = 0;
 		zoneFullName = zoneFullName.Replace('/', '@');
-		if (EClass.game.spatials.Find((Zone z) => z.ZoneFullName == zoneFullName) != null)
-		{
-			return (zoneType: item, zoneId: item2, zoneLv: item3);
-		}
 		int num = zoneFullName.LastIndexOf('@');
+		string text;
 		if (num > 0 && num < zoneFullName.Length - 1)
 		{
-			item = zoneFullName[..num];
-			item3 = zoneFullName[(num + 1)..].ToInt();
+			text = zoneFullName[..num];
+			item = zoneFullName[(num + 1)..].ToInt();
 		}
 		else
 		{
-			item = zoneFullName.Replace("@", "");
+			text = zoneFullName.Replace("@", "");
 		}
-		item2 = item.Replace("Zone_", "");
-		item = "Zone_" + item2;
-		return (zoneType: item, zoneId: item2, zoneLv: item3);
+		string text2 = text.Replace("Zone_", "");
+		text = "Zone_" + text2;
+		return (zoneType: text, zoneId: text2, zoneLv: item);
 	}
 
 	public int Evalue(int ele)

@@ -120,7 +120,7 @@ public class Portrait : UIButton
 	public void SetPerson(Person p)
 	{
 		base.gameObject.SetActive(value: true);
-		if (p.hasChara)
+		if (p.hasChara && p.chara.GetIdPortrait() == p.idPortrait)
 		{
 			SetChara(p.chara);
 		}

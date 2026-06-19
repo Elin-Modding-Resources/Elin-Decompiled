@@ -49,11 +49,15 @@ public class TraitBrewery : TraitContainer
 			{
 				return true;
 			}
-			if (!c.IsFood && !(c.id == "508") && !(c.id == "778") && !(c.id == "_milk"))
+			if (!c.IsFood && !(c.trait is TraitDrinkMilk))
 			{
 				return true;
 			}
 			if (c.category.IsChildOf("meal"))
+			{
+				return true;
+			}
+			if (c.category.IsChildOf("filling"))
 			{
 				return true;
 			}

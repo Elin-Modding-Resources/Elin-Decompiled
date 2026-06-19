@@ -815,6 +815,12 @@ public class GoalCombat : Goal
 			}
 			switch (act.id)
 			{
+			case 6802:
+				if (owner.IsPCFactionOrMinion && tc.IsPCFactionOrMinion)
+				{
+					continue;
+				}
+				break;
 			case 6606:
 				if (owner.mana.value <= 0)
 				{

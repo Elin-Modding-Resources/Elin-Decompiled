@@ -78,9 +78,13 @@ public class DramaSequence : EClass
 			{
 				name = value2.GetName()
 			};
-			if (Portrait.allIds.Contains(person.id))
+			if (Portrait.allIds.Contains("UN_" + id + ".png"))
 			{
-				person.idPortrait = "UN_" + id;
+				person.idPortrait = "UN_" + id + ".png";
+			}
+			else
+			{
+				person.SetChara(CharaGen.Create(value2.id));
 			}
 			return AddActor(id, person);
 		}

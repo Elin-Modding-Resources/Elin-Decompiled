@@ -39,25 +39,50 @@ public class TaskClean : Task
 				yield return Success();
 			}
 			yield return DoGoto(dest, 1);
+			if (!CanClean(dest) || owner.Dist(dest) > 1)
+			{
+				yield return Cancel();
+			}
 			for (int i = 0; i < ((!dest.cell.HasLiquid) ? 1 : 5); i++)
 			{
 				owner.LookAt(dest);
 				owner.renderer.NextFrame();
 				yield return KeepRunning();
 			}
-			if (!CanClean(dest) || owner.Dist(dest) > 1)
-			{
-				yield return Cancel();
-			}
-			EClass._map.SetDecal(dest.x, dest.z);
-			EClass._map.SetLiquid(dest.x, dest.z, 0, 0);
-			dest.PlayEffect("vanish");
 			EClass.pc.Say("clean", owner);
 			EClass.pc.PlaySound("clean_floor");
-			EClass.pc.ModExp(293, 30);
-			EClass.player.stats.clean++;
-			EClass.pc.stamina.Mod(-1);
+			int num = owner.Tool?.Evalue(770) ?? 0;
+			num = ((num <= 0) ? 1 : (2 + num / 10));
+			if (num > 1)
+			{
+				List<Point> list = EClass._map.ListPointsInSquare(dest, num - 1);
+				list.Sort((Point a, Point b) => a.Distance(dest) - b.Distance(dest));
+				foreach (Point item in list)
+				{
+					if (owner == null || owner.isDead)
+					{
+						break;
+					}
+					Clean(item);
+				}
+			}
+			else
+			{
+				Clean(dest);
+			}
 			yield return KeepRunning();
+		}
+		static void Clean(Point p)
+		{
+			if (CanClean(p))
+			{
+				EClass._map.SetDecal(p.x, p.z);
+				EClass._map.SetLiquid(p.x, p.z, 0, 0);
+				p.PlayEffect("vanish");
+				EClass.pc.ModExp(293, 30);
+				EClass.player.stats.clean++;
+				EClass.pc.stamina.Mod(-1);
+			}
 		}
 	}
 
@@ -66,7 +91,7 @@ public class TaskClean : Task
 		List<Point> list = new List<Point>();
 		foreach (Point item in EClass._map.ListPointsInCircle(dest, 3f, mustBeWalkable: false))
 		{
-			if (CanClean(item))
+			if (CanClean(item) && item.IsInBounds)
 			{
 				list.Add(item);
 			}

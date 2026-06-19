@@ -71,6 +71,12 @@ public class TraitTrolley : TraitFloorSwitch
 		case "ride_boat":
 		case "ride_boat2":
 			return "ride_boat";
+		case "wheel_chair":
+			if (owner.idSkin != 1)
+			{
+				return "ride_trolley";
+			}
+			return "ride_bike";
 		case "play_ride_big":
 			if (owner.idSkin != 0)
 			{
