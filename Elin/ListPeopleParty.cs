@@ -63,7 +63,7 @@ public class ListPeopleParty : BaseListPeople
 				foreach (int uid in setup.uids)
 				{
 					Chara chara3 = EClass.game.cards.globalCharas.Find(uid);
-					if (chara3 != null && !chara3.IsPC && CanJoinParty(chara3))
+					if (chara3 != null && !chara3.IsPC && CanJoinParty(chara3) && chara3.IsPCFaction)
 					{
 						JoinParty(chara3);
 						if (chara3.uid == setup.ride)
@@ -108,7 +108,7 @@ public class ListPeopleParty : BaseListPeople
 							text = text + " " + "party_parasite".lang();
 						}
 					}
-					n.note.AddText(text, (chara2 == null || chara2.isDead) ? FontColor.Bad : ((!CanJoinParty(chara2)) ? FontColor.Warning : FontColor.Good));
+					n.note.AddText(text, (chara2 == null || chara2.isDead || !chara2.IsPCFaction) ? FontColor.Bad : ((!CanJoinParty(chara2)) ? FontColor.Warning : FontColor.Good));
 				}
 				n.note.Build();
 			});

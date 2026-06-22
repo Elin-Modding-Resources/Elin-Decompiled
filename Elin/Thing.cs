@@ -595,8 +595,8 @@ public class Thing : Card
 			});
 		}
 		text = idUnknown;
-		goto IL_047d;
-		IL_047d:
+		goto IL_0499;
+		IL_0499:
 		if (GetBool(125))
 		{
 			text = "_halfeaten".lang(text);
@@ -770,7 +770,7 @@ public class Thing : Card
 			}
 			if (!(text11 == "*r"))
 			{
-				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1b", base.c_extraNameRef.IsEmpty((base.refCard == null) ? text11 : (base.refCard.isChara ? base.refCard.GetName() : base.refCard.GetText()))).Replace("#1", base.c_extraNameRef.IsEmpty(text11)) : (source.naming.Contains("last") ? (text + Lang.space + text11) : (source.naming.Contains("first") ? (text11 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text11, text) : "_of".lang(text11, text)))));
+				text = ((!source.name2.IsEmpty()) ? source.GetTextArray("name2")[0].Replace("#1g", EClass.pc.faith.NameShort).Replace("#1b", base.c_extraNameRef.IsEmpty((base.refCard == null) ? text11 : (base.refCard.isChara ? base.refCard.GetName() : base.refCard.GetText()))).Replace("#1", base.c_extraNameRef.IsEmpty(text11)) : (source.naming.Contains("last") ? (text + Lang.space + text11) : (source.naming.Contains("first") ? (text11 + Lang.space + text) : ((!source.naming.Contains("of")) ? (text6.IsEmpty() ? "_of3" : "_of2").lang(text11, text) : "_of".lang(text11, text)))));
 			}
 			else
 			{
@@ -781,7 +781,7 @@ public class Thing : Card
 				}
 			}
 		}
-		goto IL_047d;
+		goto IL_0499;
 	}
 
 	public override string GetHoverText()

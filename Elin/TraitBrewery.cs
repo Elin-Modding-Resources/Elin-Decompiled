@@ -49,7 +49,7 @@ public class TraitBrewery : TraitContainer
 			{
 				return true;
 			}
-			if (!c.IsFood && !(c.trait is TraitDrinkMilk))
+			if (!c.IsFood && c.sourceCard._origin != "milk")
 			{
 				return true;
 			}

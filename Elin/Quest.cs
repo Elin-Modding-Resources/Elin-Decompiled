@@ -52,13 +52,13 @@ public class Quest : EClass
 	public int rewardMoney;
 
 	[JsonProperty]
-	public int bonusMoney;
-
-	[JsonProperty]
 	public int startDate;
 
 	[JsonProperty]
 	public int dangerLv;
+
+	[JsonProperty]
+	public long bonusMoney;
 
 	[JsonProperty]
 	public bool isNew;

@@ -288,6 +288,7 @@ public class ThingGen : CardGen
 			t.Add("money", EClass.rndHalf(1000 + num * 100));
 			t.Add("money2", EClass.rndHalf(Mathf.Min(3 + num / 10, 10)));
 			t.Add("medal", EClass.rnd(3));
+			TryAddScrubber(25);
 			break;
 		case TreasureType.BossNefia:
 		case TreasureType.BossQuest:
@@ -307,6 +308,7 @@ public class ThingGen : CardGen
 				t.Add("book_skill", 1, lv);
 			}
 			t.c_lockLv /= 2;
+			TryAddScrubber(5);
 			break;
 		case TreasureType.SurvivalRaid:
 			t.Add("plat", EClass.rndHalf(Mathf.Min(3 + num / 10, 15)));
@@ -315,6 +317,7 @@ public class ThingGen : CardGen
 			t.Add("book_skill", 1, lv);
 			t.Add("book_skill", 1, lv);
 			t.c_lockLv /= 3;
+			TryAddScrubber(2);
 			break;
 		case TreasureType.RandomChest:
 			flag2 = false;
@@ -352,6 +355,7 @@ public class ThingGen : CardGen
 			{
 				t.Add("medal");
 			}
+			TryAddScrubber(30);
 			break;
 		}
 		if (type == TreasureType.RandomChest && EClass.rnd(2) == 0)
@@ -411,6 +415,16 @@ public class ThingGen : CardGen
 			{
 				rarity = rarity
 			});
+		}
+		void TryAddScrubber(int chance)
+		{
+			if (EClass.rnd(chance) == 0)
+			{
+				Thing thing2 = Create("scrubber");
+				thing2.rarity = Rarity.Legendary;
+				thing2.elements.SetBase(770, 1 + EClass.rnd(EClass.rnd(Mathf.Min(10 + (int)Mathf.Sqrt(lv) * 2, 30) + 1)));
+				t.AddThing(thing2);
+			}
 		}
 	}
 

@@ -55,7 +55,7 @@ public class TaskClean : Task
 			num = ((num <= 0) ? 1 : (2 + num / 10));
 			if (num > 1)
 			{
-				List<Point> list = EClass._map.ListPointsInSquare(dest, num - 1);
+				List<Point> list = EClass._map.ListPointsInSquare(dest, num - 1, mustBeWalkable: false);
 				list.Sort((Point a, Point b) => a.Distance(dest) - b.Distance(dest));
 				foreach (Point item in list)
 				{

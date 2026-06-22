@@ -343,7 +343,7 @@ public class CharaRenderer : CardRenderer
 			RenderObject.currentParam.x += 0.01f * (float)pref.equipX;
 			RenderObject.currentParam.y += num + 0.01f * (float)(pref.equipY + cardRow.pref.equipY);
 			RenderObject.currentParam.z += -0.09f;
-			RenderObject.currentParam.tile = cardRow._tiles[owner.uid % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
+			RenderObject.currentParam.tile = cardRow._tiles[MathEx.IntIDOverflowTempFix(owner.uid) % cardRow._tiles.Length] * ((!flag) ? 1 : (-1));
 			RenderObject.currentParam.mat = cardRow.DefaultMaterial;
 			RenderObject.currentParam.matColor = cardRow.GetColorInt(RenderObject.currentParam.mat);
 			cardRow.renderData.Draw(RenderObject.currentParam);

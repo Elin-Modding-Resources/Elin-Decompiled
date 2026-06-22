@@ -1348,7 +1348,7 @@ public class Map : MapBounds, IPathfindGrid
 					List<SourceThing.Row> list3 = new List<SourceThing.Row>();
 					foreach (RecipeSource item4 in RecipeManager.list)
 					{
-						if (!(item4.row is SourceThing.Row { isOrigin: false } row) || row.components.IsEmpty() || (row.components.Length >= 3 && !row.components[2].StartsWith('+')) || !row.Category.IsChildOf("meal") || (row.HasTag(CTAG.dish_fail) && power > EClass.rnd(500)))
+						if (!(item4.row is SourceThing.Row { isOrigin: false, chance: not 0 } row) || row.components.IsEmpty() || (row.components.Length >= 3 && !row.components[2].StartsWith('+')) || !row.Category.IsChildOf("meal") || (row.HasTag(CTAG.dish_fail) && power > EClass.rnd(500)))
 						{
 							continue;
 						}

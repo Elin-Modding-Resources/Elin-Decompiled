@@ -184,7 +184,7 @@ public class FortuneRollData : EClass
 			{
 				"computer", "834", "1090", "goods_figure", "goods_canvas", "mb_1", "mb_2", "mb_3", "mb_4", "mb_5",
 				"1174", "1085", "toilet", "714", "nobility", "plat", "1165", "mathammer", "medal", "bbq",
-				"panty", "beehive", "ticket_resident", "lovepotion", "crystal_sun", "goods_crim", "ride_boat", "scrubber"
+				"panty", "beehive", "ticket_resident", "lovepotion", "crystal_sun", "goods_crim", "ride_boat"
 			},
 			new List<string>
 			{
@@ -194,8 +194,7 @@ public class FortuneRollData : EClass
 				"boat3",
 				"medal",
 				"ride_boat2",
-				"play_ride_big",
-				"scrubber"
+				"play_ride_big"
 			}
 		};
 		if (EClass.pc.faction.IsGlobalPolicyActive(2712))
