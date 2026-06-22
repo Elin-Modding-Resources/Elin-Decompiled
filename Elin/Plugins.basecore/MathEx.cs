@@ -1,5 +1,14 @@
 public static class MathEx
 {
+	public static int IntIDOverflowTempFix(int a)
+	{
+		if (a >= 0)
+		{
+			return a;
+		}
+		return -a;
+	}
+
 	public static bool IsSameSign(int a, int b)
 	{
 		if (a < 0 || b < 0)
