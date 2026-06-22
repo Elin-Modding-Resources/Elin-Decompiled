@@ -1,5 +1,6 @@
 var NAVTREEINDEX128 =
 {
+"classTraitMerchantPlan.html#a8ab4c39f9b9050c042d2dddcffb8c2d0":[1,0,1817,1],
 "classTraitMerchantPlan.html#a98a140c37901a065443c3f99ad755beb":[1,0,1817,2],
 "classTraitMerchantPlan.html#ab278bfef3c363c2066ef537cbbd74984":[1,0,1817,0],
 "classTraitMerchantPlat.html":[1,0,1818],
@@ -248,6 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1878,0],
 "classTraitPoop.html":[1,0,1879],
 "classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1879,0],
-"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1879,1],
-"classTraitPotion.html":[1,0,1880]
+"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1879,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX106 =
 {
+"classSceneProfile.html":[1,0,1216],
 "classSceneProfile.html#a06115a901e483893afdb3a3c5cab1ca3":[1,0,1216,5],
 "classSceneProfile.html#a31e31a19f021a2304356fbc94c22f507":[1,0,1216,6],
 "classSceneProfile.html#a47c5287accc39b7af6a8e7c9d6c18f64":[1,0,1216,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX106 =
 "classSkill.html":[1,0,1240],
 "classSkill.html#a84fef8278c7af1b8900826daba9ec833":[1,0,1240,4],
 "classSkill.html#a8f0eea33cc42f37c85deca259d30e493":[1,0,1240,0],
-"classSkill.html#ab1576470cc0bed3f3194e80edf234ca6":[1,0,1240,3],
-"classSkill.html#ae8497dc40f8e0ff0303b17740e707c3a":[1,0,1240,1]
+"classSkill.html#ab1576470cc0bed3f3194e80edf234ca6":[1,0,1240,3]
 };

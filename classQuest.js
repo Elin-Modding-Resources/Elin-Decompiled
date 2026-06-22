@@ -67,7 +67,7 @@ var classQuest =
     [ "Start", "classQuest.html#a5ef91434eb7f4417c32190382e9a6110", null ],
     [ "UpdateJournal", "classQuest.html#adcd454b2defd9a23d3021dd03d3afa2f", null ],
     [ "UpdateOnTalk", "classQuest.html#a2d86589e5a70a667ab9b261ee17233b0", null ],
-    [ "bonusMoney", "classQuest.html#a7d0a1cdaf2f0d81e1243b51f15475115", null ],
+    [ "bonusMoney", "classQuest.html#acb002124a0546ed00fa20121875eb659", null ],
     [ "dangerLv", "classQuest.html#a545abc9492e58121d3766ea768e51fcf", null ],
     [ "deadline", "classQuest.html#a4cca13714da20fa2a37a597f23a0e0a8", null ],
     [ "difficulty", "classQuest.html#adb6939deeabb61dc1e3af7d236ee0b4a", null ],

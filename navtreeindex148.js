@@ -1,5 +1,6 @@
 var NAVTREEINDEX148 =
 {
+"classZone__DungeonDead.html#ac7c035e791241cee15cb3a4207bbf0e5":[1,0,2251,1],
 "classZone__DungeonDead.html#ad90f935f7bffcf4b87e86b54e1d9aeb0":[1,0,2251,0],
 "classZone__DungeonDead.html#ae005a7204c810cbf1e620ebf1d945d89":[1,0,2251,2],
 "classZone__DungeonDragon.html":[1,0,2252],
@@ -248,6 +249,5 @@ var NAVTREEINDEX148 =
 "classZone__Vernis.html#ac0658c708135b3890165ca706d4eb619":[1,0,2313,4],
 "classZone__Vernis.html#ac967c3d6e9afc1f0e647d87221869f14":[1,0,2313,0],
 "classZone__VernisMine.html":[1,0,2314],
-"classZone__VernisMine.html#a00ecc6211c303d27920c1caa16d308c2":[1,0,2314,2],
-"classZone__VernisMine.html#a17691b3a0c025f1727653611058e611f":[1,0,2314,3]
+"classZone__VernisMine.html#a00ecc6211c303d27920c1caa16d308c2":[1,0,2314,2]
 };

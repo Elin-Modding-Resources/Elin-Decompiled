@@ -1,5 +1,6 @@
 var NAVTREEINDEX138 =
 {
+"classUIMouseInfo.html":[1,0,2146],
 "classUIMouseInfo.html#a17154d637da1edb757c926b03f4279be":[1,0,2146,6],
 "classUIMouseInfo.html#a2c7ea3ba5136f32ab7fb84a5c763c377":[1,0,2146,0],
 "classUIMouseInfo.html#a35dd5eaaaa7f77e57d9fa1bbb2106ba6":[1,0,2146,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX138 =
 "classUISong.html#a2ea466d0a17a220dd8e930991ed366a2":[1,0,2161,6],
 "classUISong.html#a41ed310b376d21c6137b048e82c02515":[1,0,2161,4],
 "classUISong.html#a78b113b2d5e006b5774b0ee456afb0b4":[1,0,2161,11],
-"classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f":[1,0,2161,12],
-"classUISong.html#aaba69511c4b133170c4d02523b1509ef":[1,0,2161,9]
+"classUISong.html#a94cab18ec048ea33ce22bef93d5ab23f":[1,0,2161,12]
 };

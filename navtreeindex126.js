@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitFoodEgg.html":[1,0,1690],
 "classTraitFoodEgg.html#a152d63e014a05fe909cebcdcdc62f402":[1,0,1690,1],
 "classTraitFoodEgg.html#a4b469927012d999f388b6df7ed23ad0f":[1,0,1690,0],
 "classTraitFoodEgg.html#a909b13f82623bb0343ef2fdb2eb8bb6f":[1,0,1690,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitIncinerator.html":[1,0,1751],
 "classTraitIncubator.html":[1,0,1752],
 "classTraitIncubator.html#a01be3a4b8ab3dca322ee0eec40670aa8":[1,0,1752,6],
-"classTraitIncubator.html#a08b08410e9e46115a2b6d236b22429df":[1,0,1752,3],
-"classTraitIncubator.html#a0f85ef82f7e7f9334ecd28ec4a039598":[1,0,1752,9]
+"classTraitIncubator.html#a08b08410e9e46115a2b6d236b22429df":[1,0,1752,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX124 =
 {
+"classTraitChopper.html#ae27d4e72f0a3f68b63718c71a31b311f":[1,0,1578,1],
 "classTraitCitizen.html":[1,0,1579],
 "classTraitCitizen.html#a1130a2d94ae922652905433931067fc9":[1,0,1579,0],
 "classTraitCitizenExile.html":[1,0,1580],
@@ -248,6 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitDoorAuto.html#a7148a84f436620e642691776018b42f4":[1,0,1628,1],
 "classTraitDoorAutoShoji.html":[1,0,1629],
 "classTraitDoorAutoShoji.html#a6e3209cbb2b148f8073cfaccd5980424":[1,0,1629,1],
-"classTraitDoorAutoShoji.html#abec3329e1d1e91c4294dce4e3e25b129":[1,0,1629,0],
-"classTraitDoorBell.html":[1,0,1630]
+"classTraitDoorAutoShoji.html#abec3329e1d1e91c4294dce4e3e25b129":[1,0,1629,0]
 };

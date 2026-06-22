@@ -1,5 +1,6 @@
 var NAVTREEINDEX91 =
 {
+"classNotificationGuest.html#af74035b4be7b2bcb0febd0fc1b7fdda1":[1,0,993,1],
 "classNotificationHome.html":[1,0,994],
 "classNotificationHome.html#a7198d2b2277afd033bac1f1f65d4fab2":[1,0,994,2],
 "classNotificationHome.html#a740df8bd342780851f71415771445b22":[1,0,994,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX91 =
 "classPartialMap.html#af95b6ebc505e1211f59634a8cfbf74e8":[1,0,1009,20],
 "classPartialMapMenu.html":[1,0,1010],
 "classPartialMapMenu.html#a00de5748293260b8fc918785ad006edd":[1,0,1010,2],
-"classPartialMapMenu.html#a04354044602f5a21ceaf4b8ff75f0d59":[1,0,1010,3],
-"classPartialMapMenu.html#a0918f5c9ab7ff9561d00b4cd320aad7b":[1,0,1010,14]
+"classPartialMapMenu.html#a04354044602f5a21ceaf4b8ff75f0d59":[1,0,1010,3]
 };

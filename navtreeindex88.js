@@ -137,8 +137,9 @@ var NAVTREEINDEX88 =
 "classMatColors.html#a6580912a516b837070a00a58d4c4baec":[1,0,953,0],
 "classMathEx.html":[1,0,955],
 "classMathEx.html#a410bdcf87b565fdca2fb304948ca41fe":[1,0,955,1],
-"classMathEx.html#ac8b4f85abda90df3561d100d74d1b265":[1,0,955,3],
-"classMathEx.html#ae0626047833b1336ed985caf2ae54ba1":[1,0,955,2],
+"classMathEx.html#a623097c95475f71b1b4be36bd62455f1":[1,0,955,2],
+"classMathEx.html#ac8b4f85abda90df3561d100d74d1b265":[1,0,955,4],
+"classMathEx.html#ae0626047833b1336ed985caf2ae54ba1":[1,0,955,3],
 "classMathEx.html#af7ce525e0762481f8ca0b15d17aba736":[1,0,955,0],
 "classMeeting.html":[1,0,956],
 "classMeeting.html#a00423040867a541b5e6d9135c2d62e5d":[1,0,956,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX88 =
 "classMiniGame.html#a029cc7803f3adfd89b4e736136cbda00":[1,0,963,16],
 "classMiniGame.html#a131b3e551cd419f283fd224cdd266401":[1,0,963,19],
 "classMiniGame.html#a1841c0a22cc425004dd613e6dabd20eb":[1,0,963,2],
-"classMiniGame.html#a1a8deb0f248753f137d64a61b2d30a01":[1,0,963,10],
-"classMiniGame.html#a4146f72c61e7109de04bfbf3e6c165f6":[1,0,963,20]
+"classMiniGame.html#a1a8deb0f248753f137d64a61b2d30a01":[1,0,963,10]
 };
