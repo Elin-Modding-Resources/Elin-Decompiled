@@ -530,7 +530,7 @@ public class WindowChara : WindowController
 				List("availableFeats_attribute", "attribute");
 				return;
 			}
-			if (chara.IsPC && chara.HasElement(1274) && chara.c_genes != null && chara.c_genes.items.Count > 0)
+			if (chara.IsSlimeEvolvable && chara.c_genes != null && chara.c_genes.items.Count > 0)
 			{
 				Header("genes".lang() + "  " + EClass.pc.CurrentGeneSlot + "/" + EClass.pc.MaxGeneSlot, null);
 				ListFeat();

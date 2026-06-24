@@ -1088,7 +1088,7 @@ public class Chara : Card, IPathfindWalker
 
 	public FactionBranch homeBranch => homeZone?.branch;
 
-	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242) + Evalue(1273) + ((IsPC && HasElement(1274)) ? (Evalue(1274) - 7) : 0);
+	public int MaxGeneSlot => race.geneCap - (HasElement(1237) ? 2 : 0) + Evalue(1242) + Evalue(1273) + (base.IsSlimeEvolvable ? (Evalue(1274) - 7) : 0);
 
 	public int GeneCostMTP
 	{
@@ -1803,6 +1803,60 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public bool TryFuse(int chance = 10)
+	{
+		if (chance < EClass.rnd(100))
+		{
+			return false;
+		}
+		List<Chara> list = ListFussableCharas(3);
+		if (list.Count < 8)
+		{
+			return false;
+		}
+		Say("fuse", this);
+		Chara chara = EClass._zone.SpawnMob("marshmallow_king", pos);
+		foreach (Chara item in list)
+		{
+			item.Talk("fusion");
+			Effect.Get<EffectIRenderer>("throw_fuse").Play(item, item, item.pos, pos);
+			item.Destroy();
+		}
+		Destroy();
+		chara.PlayAnime(AnimeID.Shiver);
+		return true;
+	}
+
+	public bool IsFusable(Chara c)
+	{
+		if (c == this)
+		{
+			return false;
+		}
+		if (c.id != id)
+		{
+			return false;
+		}
+		if (c.IsPCFactionOrMinion || base.IsPCFactionOrMinion)
+		{
+			return false;
+		}
+		if (c.c_bossType != 0 || base.c_bossType != 0)
+		{
+			return false;
+		}
+		if (!EClass.debug.enable && (c.affinity.CanSleepBeside() || affinity.CanSleepBeside()))
+		{
+			return false;
+		}
+		return true;
+	}
+
+	public List<Chara> ListFussableCharas(int radius = 2)
+	{
+		return pos.ListCharasInRadius(this, radius, (Chara c) => IsFusable(c));
+	}
+
 	public bool CanDuplicate(DuplicateCondition con = DuplicateCondition.Default)
 	{
 		if (EClass._zone.IsRegion)
@@ -1853,6 +1907,7 @@ public class Chara : Card, IPathfindWalker
 		}
 		Chara chara = Duplicate();
 		EClass._zone.AddCard(chara, dest);
+		chara.SetHostility(hostility);
 		Say("split", this);
 		return chara;
 	}

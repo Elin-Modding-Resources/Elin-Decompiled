@@ -144,7 +144,6 @@ public class GameLang : EClass
 		stringBuilder.Replace("#guild", Guild.CurrentDrama.Name);
 		stringBuilder.Replace("#race", EClass.pc.race.GetName());
 		stringBuilder.Replace("#pc_full", EClass.pc.NameBraced);
-		stringBuilder.Replace("#pc", EClass.pc.NameSimple);
 		stringBuilder.Replace("#aka", EClass.pc.Aka);
 		stringBuilder.Replace("#bigdaddy", "bigdaddy".lang());
 		stringBuilder.Replace("#festival", EClass._zone.IsFestival ? (EClass._zone.id + "_festival").lang() : "_festival".lang());

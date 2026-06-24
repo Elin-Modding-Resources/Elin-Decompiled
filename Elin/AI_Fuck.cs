@@ -194,6 +194,12 @@ public class AI_Fuck : AIAct
 					if (this.variation == Variation.Slime)
 					{
 						target.AddCondition<ConSupress>(200, force: true);
+						if (!owner.IsPC)
+						{
+							int num2 = EClass.rndHalf(target.MaxHP / (target.IsPowerful ? 100 : 10)) + 1;
+							owner.HealHP(num2);
+							target.DamageHP(num2, AttackSource.Condition, owner);
+						}
 					}
 					else
 					{
@@ -241,50 +247,50 @@ public class AI_Fuck : AIAct
 		{
 			if (c.interest >= 0)
 			{
-				int num2 = 100;
+				int num3 = 100;
 				if (!c.IsAnimal)
 				{
-					num2 += 50;
+					num3 += 50;
 				}
 				if (c.IsHuman)
 				{
-					num2 += 50;
+					num3 += 50;
 				}
 				if (c.IsInCombat)
 				{
-					num2 += 100;
+					num3 += 100;
 				}
 				if (c == cc)
 				{
-					num2 = 50;
+					num3 = 50;
 				}
-				else if (c.affinity.CurrentStage < Affinity.Stage.Respected && EClass.rnd((c.IsPCFaction ? 30 : 10) * 100 / num2) == 0)
+				else if (c.affinity.CurrentStage < Affinity.Stage.Respected && EClass.rnd((c.IsPCFaction ? 30 : 10) * 100 / num3) == 0)
 				{
 					tc.AddCondition<ConFear>(60);
 				}
-				c.interest -= (c.IsPCFaction ? 20 : (2 * num2 / 100));
+				c.interest -= (c.IsPCFaction ? 20 : (2 * num3 / 100));
 				if (i % 5 == 0)
 				{
-					int num3 = 0;
-					int num4 = cc.CHA / 2 + cc.Evalue(237) - c.CHA * 2;
-					if (EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) > EClass.rnd(c.CHA * num2 / 100))
+					int num4 = 0;
+					int num5 = cc.CHA / 2 + cc.Evalue(237) - c.CHA * 2;
+					if (EClass.rnd(cc.CHA / 2 + cc.Evalue(237)) > EClass.rnd(c.CHA * num3 / 100))
 					{
-						num3 = 5 + Mathf.Clamp(num4 / 20, 0, 20);
+						num4 = 5 + Mathf.Clamp(num5 / 20, 0, 20);
 					}
 					else
 					{
-						num3 = -5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num4 / 10, -30, 0) : 0);
+						num4 = -5 + ((!tc.IsPCFaction) ? Mathf.Clamp(num5 / 10, -30, 0) : 0);
 						fails++;
 					}
-					int num5 = 20;
+					int num6 = 20;
 					if (c.IsPCFactionOrMinion && c.affinity.CurrentStage >= Affinity.Stage.Love)
 					{
-						num3 = ((EClass.rnd(3) == 0) ? 4 : 0);
-						num5 = 10;
+						num4 = ((EClass.rnd(3) == 0) ? 4 : 0);
+						num6 = 10;
 					}
-					totalAffinity += num3;
-					c.ModAffinity(EClass.pc, num3, show: true, showOnlyEmo: true);
-					cc.elements.ModExp(237, num5);
+					totalAffinity += num4;
+					c.ModAffinity(EClass.pc, num4, show: true, showOnlyEmo: true);
+					cc.elements.ModExp(237, num6);
 					if (EClass.rnd(4) == 0)
 					{
 						cc.stamina.Mod(-1);

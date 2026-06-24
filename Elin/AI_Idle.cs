@@ -566,6 +566,12 @@ public class AI_Idle : AIAct
 				}
 				break;
 			}
+			case "marshmallow_monster":
+				if (owner.TryFuse())
+				{
+					yield return Success();
+				}
+				break;
 			}
 		}
 		if (owner.IsMinion && owner.master != null && owner.master.id == "keeper_garden" && !(owner.master.ai is GoalCombat))

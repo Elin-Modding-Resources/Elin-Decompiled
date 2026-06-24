@@ -18,6 +18,15 @@ public class ReligionLuck : Religion
 		return new string[1] { "luckydagger" };
 	}
 
+	public override int GetOfferingMtp(Thing t)
+	{
+		if (t.id == "taiyaki")
+		{
+			return 2;
+		}
+		return 0;
+	}
+
 	public override bool IsFaithElement(Element e)
 	{
 		return e.id != 426;

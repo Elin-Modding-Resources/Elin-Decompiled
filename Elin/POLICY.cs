@@ -19,7 +19,7 @@ public class POLICY
 
 	public const int legendary_heirloom = 2821;
 
-	public const int forcePanty = 2712;
+	public const int home_discount = 2800;
 
 	public const int license_furniture = 2819;
 
@@ -71,9 +71,9 @@ public class POLICY
 
 	public const int incomeTransfer = 2711;
 
-	public const int livestock_priv = 2715;
+	public const int forcePanty = 2712;
 
-	public const int home_discount = 2800;
+	public const int livestock_priv = 2715;
 
 	public const int open_business = 2810;
 
@@ -107,10 +107,10 @@ public class POLICY
 
 	public static readonly int[] IDS = new int[51]
 	{
-		2822, 2828, 2827, 2826, 2825, 2824, 2823, 2821, 2712, 2819,
+		2822, 2828, 2827, 2826, 2825, 2824, 2823, 2821, 2800, 2819,
 		2700, 2516, 2515, 2514, 2513, 2507, 2820, 2500, 2701, 2501,
 		2503, 2504, 2505, 2512, 2511, 2510, 2509, 2508, 2502, 2702,
-		2506, 2704, 2703, 2711, 2715, 2800, 2810, 2811, 2812, 2813,
+		2506, 2704, 2703, 2711, 2712, 2715, 2810, 2811, 2812, 2813,
 		2814, 2710, 2816, 2817, 2818, 2709, 2708, 2707, 2706, 2705,
 		2815
 	};

@@ -13,6 +13,10 @@ public class ActSlime : ActNTR
 
 	public override bool ValidatePerform(Chara _cc, Card _tc, Point _tp)
 	{
+		if (_cc.id == "marshmallow_king")
+		{
+			return true;
+		}
 		if (Act.CC.hunger.GetPhase() < 3 && !EClass.debug.godFood)
 		{
 			Msg.Say("not_hungry");

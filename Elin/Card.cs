@@ -2308,6 +2308,22 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public bool IsCursed => blessedState <= BlessedState.Cursed;
 
+	public bool IsSlimeEvolvable
+	{
+		get
+		{
+			if (HasElement(1274))
+			{
+				if (!IsPC)
+				{
+					return HasTag(CTAG.allowDevour);
+				}
+				return true;
+			}
+			return false;
+		}
+	}
+
 	public bool IsRestrainedResident
 	{
 		get
@@ -2551,7 +2567,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public int GetInt(string id, int? defaultInt = null)
 	{
 		int @int = GetInt(id.GetHashCode(), defaultInt);
-		if (!IsPC)
+		if (this != EClass.game?.player?.chara)
 		{
 			return @int;
 		}
@@ -2561,7 +2577,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public void AddInt(string id, int value)
 	{
 		AddInt(id.GetHashCode(), value);
-		if (IsPC)
+		if (this == EClass.game?.player?.chara)
 		{
 			EClass.player.dialogFlags[id] = GetInt(id.GetHashCode());
 		}
@@ -2570,7 +2586,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	public void SetInt(string id, int value = 0)
 	{
 		SetInt(id.GetHashCode(), value);
-		if (IsPC)
+		if (this == EClass.game?.player?.chara)
 		{
 			EClass.player.dialogFlags[id] = value;
 		}
@@ -3164,7 +3180,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Chara.SetFeat(1415, Evalue(1415) + 1, msg: true);
 		}
-		if (IsPC && HasElement(1274) && Evalue(1274) < 8 && LV >= Evalue(1274) * 5)
+		if (IsSlimeEvolvable && Evalue(1274) < 8 && LV >= Evalue(1274) * 5)
 		{
 			Chara.SetFeat(1274, Evalue(1274) + 1, msg: true);
 		}
@@ -5388,13 +5404,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					{
 						num3 += (int)Mathf.Min(Mathf.Sqrt(EClass.pc.Evalue(290)), 20f);
 					}
-					if (EClass.rnd((Act.CurrentAct is ActMeleeBladeStorm || (origin != null && (origin.HasElement(1556) || origin.HasCondition<ConTransmuteCat>()))) ? 2 : 100) == 0)
-					{
-						text2 = "dattamono";
-					}
 					if (num2 && num3 > EClass.rnd(100))
 					{
 						text2 = "meat_marble";
+					}
+					if (EClass.rnd((Act.CurrentAct is ActMeleeBladeStorm || (origin != null && (origin.HasElement(1556) || origin.HasCondition<ConTransmuteCat>()))) ? 2 : 100) == 0 || id == "marshmallow_king")
+					{
+						text2 = "dattamono";
 					}
 					Thing thing3 = ThingGen.Create(text2).SetNum(num);
 					if (thing3.source._origin == "meat")

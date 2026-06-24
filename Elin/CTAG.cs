@@ -52,5 +52,6 @@ public enum CTAG
 	shield,
 	humanSpeak,
 	throwBall,
-	alwaysDropCorpse
+	alwaysDropCorpse,
+	allowDevour
 }
