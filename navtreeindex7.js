@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"ElinPreSceneInitAttribute_8cs_source.html":[2,0,0,520],
+"ElinThingOnCreateAttribute_8cs.html":[2,0,0,521],
 "ElinThingOnCreateAttribute_8cs_source.html":[2,0,0,521],
 "EloMapActor_8cs.html":[2,0,0,523],
 "EloMapActor_8cs_source.html":[2,0,0,523],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "GameIndex_8cs.html":[2,0,0,568],
 "GameIndex_8cs_source.html":[2,0,0,568],
 "GameLang_8cs.html":[2,0,0,570],
-"GameLang_8cs_source.html":[2,0,0,570],
-"GameMode_8cs.html":[2,0,0,571],
-"GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589de":[2,0,0,571,0]
+"GameLang_8cs_source.html":[2,0,0,570]
 };

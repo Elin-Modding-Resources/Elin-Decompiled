@@ -1,5 +1,13 @@
 var NAVTREEINDEX129 =
 {
+"classTraitPolicyBoard.html":[1,0,1877],
+"classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1877,1],
+"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1877,0],
+"classTraitPoolTable.html":[1,0,1878],
+"classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1878,0],
+"classTraitPoop.html":[1,0,1879],
+"classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1879,0],
+"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1879,1],
 "classTraitPotion.html":[1,0,1880],
 "classTraitPotion.html#abd2561c2870de2bf7225c8dcdd7116a0":[1,0,1880,1],
 "classTraitPotion.html#afff8d665590ded77bf0541ff9a5de82e":[1,0,1880,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX129 =
 "classTraitSculpture.html":[1,0,1926],
 "classTraitSculpture.html#a11c9397c46d08a30050c7985340f336b":[1,0,1926,1],
 "classTraitSculpture.html#a2f529009ac3f323b1112e3806487d5e7":[1,0,1926,3],
-"classTraitSculpture.html#a4dd65adb7742ffb16d054061bba3f848":[1,0,1926,2],
-"classTraitSculpture.html#a4fa1e452ad8812fe9d6470487ac96fca":[1,0,1926,0],
-"classTraitSecretary.html":[1,0,1927],
-"classTraitSecretary.html#a04dd47662c866bf02d6bac3187a80395":[1,0,1927,1],
-"classTraitSecretary.html#a0b9a93b1c07797b776f15320f577da41":[1,0,1927,0],
-"classTraitSecretary.html#a30a9225084c8540bab55047482cdd0cb":[1,0,1927,2],
-"classTraitSecretary.html#a609c1fe1754e9ba237082cdb70fa0ea6":[1,0,1927,5],
-"classTraitSecretary.html#a6110ea0c3c95006b574bc9ee6131f9d4":[1,0,1927,4],
-"classTraitSecretary.html#ac6154c708ec273c7f2daf8708b80274a":[1,0,1927,3]
+"classTraitSculpture.html#a4dd65adb7742ffb16d054061bba3f848":[1,0,1926,2]
 };

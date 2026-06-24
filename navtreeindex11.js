@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"LayerGlobalMap_8cs.html":[2,0,0,817],
+"LayerGlobalMap_8cs_source.html":[2,0,0,817],
 "LayerHelp_8cs.html":[2,0,0,818],
 "LayerHelp_8cs_source.html":[2,0,0,818],
 "LayerHire_8cs.html":[2,0,0,819],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "ModifiedShadow_8cs_source.html":[2,0,0,3,61],
 "MsgBlock_8cs.html":[2,0,0,3,62],
 "MsgBlock_8cs_source.html":[2,0,0,3,62],
-"MsgBox_8cs.html":[2,0,0,3,63],
-"MsgBox_8cs_source.html":[2,0,0,3,63],
-"MsgCat_8cs.html":[2,0,0,915]
+"MsgBox_8cs.html":[2,0,0,3,63]
 };

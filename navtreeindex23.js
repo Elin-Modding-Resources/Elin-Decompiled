@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288a168d3e51452f6d8988f75ed882e74eb6":[2,0,0,2011,0,0],
+"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288a8e79e9ffded94b8fae2c23ff9793d653":[2,0,0,2011,0,3],
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288aa9c7b1d7219fa9d3de551ba5bc639eb6":[2,0,0,2011,0,2],
 "VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288ae599161956d626eda4cb0a5ffb85271c":[2,0,0,2011,0,1],
 "VisitorState_8cs_source.html":[2,0,0,2011],
@@ -247,7 +249,5 @@ var NAVTREEINDEX23 =
 "WeightCell_8cs_source.html":[2,0,0,0,6],
 "WidgetArtTool_8cs.html":[2,0,0,2016],
 "WidgetArtTool_8cs_source.html":[2,0,0,2016],
-"WidgetBottomBar_8cs.html":[2,0,0,2017],
-"WidgetBottomBar_8cs_source.html":[2,0,0,2017],
-"WidgetCodex_8cs.html":[2,0,0,2018]
+"WidgetBottomBar_8cs.html":[2,0,0,2017]
 };

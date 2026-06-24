@@ -1,5 +1,12 @@
 var NAVTREEINDEX78 =
 {
+"classInvOwnerEffect.html#a5cd4bffb9091082643c8c77c4d11dbd7":[1,0,772,4],
+"classInvOwnerEffect.html#a64666ece29f4bac8e1932f81bd2c33d7":[1,0,772,0],
+"classInvOwnerEffect.html#a650b0ecc8fea45fd3c46de77d2d4cc5d":[1,0,772,1],
+"classInvOwnerEffect.html#a7edce2ef6119ca81f6a54e8140ea9402":[1,0,772,3],
+"classInvOwnerEnchant.html":[1,0,773],
+"classInvOwnerEnchant.html#a119f26c9152a89a6eb629484cca3c24a":[1,0,773,0],
+"classInvOwnerEnchant.html#a20ac377a506334664822325113c6e020":[1,0,773,5],
 "classInvOwnerEnchant.html#a57c4a5cd701dd7147be387364ace99fb":[1,0,773,2],
 "classInvOwnerEnchant.html#aa174a0372fc787965639e8db7c5c4598":[1,0,773,3],
 "classInvOwnerEnchant.html#aa731eb15129b7766223b290074b96c41":[1,0,773,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX78 =
 "classItemNumLog.html#adfca03547e4c50c3192779c7726fb19f":[1,0,807,5],
 "classItemNumLog.html#ae543300a209242b51162bfa8abe955f2":[1,0,807,3],
 "classItemPopulation.html":[1,0,808],
-"classItemPopulation.html#aaab1898cbb11ef157b9f60c833dbf4f3":[1,0,808,0],
-"classItemPopulation.html#ae850e315c5d4370361ed4951cb7178eb":[1,0,808,2],
-"classItemPopulation.html#ae95b87332589fd81c4f842088f5d3d45":[1,0,808,1],
-"classItemPosition.html":[1,0,809],
-"classItemPosition.html#a3cdd9bb143b40c31fdf4456e62043bd2":[1,0,809,0],
-"classItemPosition.html#a5c5e3adc113a5a66f2c3bc697542843b":[1,0,809,2],
-"classItemPosition.html#a6ccff9e05feadddf33825dba5c2c2a2b":[1,0,809,1],
-"classItemPosition.html#a78a3b5fd8d8787bbe46042eadc56e781":[1,0,809,3]
+"classItemPopulation.html#aaab1898cbb11ef157b9f60c833dbf4f3":[1,0,808,0]
 };

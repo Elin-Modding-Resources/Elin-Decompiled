@@ -1,5 +1,13 @@
 var NAVTREEINDEX115 =
 {
+"classSpriteBasedLaser.html#a5b85fef07896acf69e515d5a239468e1":[1,0,1323,2],
+"classSpriteBasedLaser.html#a5cb97b7d4aaaa17326a4ed9cf32c5a21":[1,0,1323,19],
+"classSpriteBasedLaser.html#a6042da6b2c3b551b66772cb2f35ea694":[1,0,1323,3],
+"classSpriteBasedLaser.html#a67a10e5c8cebbf89feb1774fe72b5da4":[1,0,1323,5],
+"classSpriteBasedLaser.html#a69f269a912df6db2460c9cc87494be43":[1,0,1323,7],
+"classSpriteBasedLaser.html#a6cf9a67d0ac2857eaa2a27c8823d77a4":[1,0,1323,9],
+"classSpriteBasedLaser.html#a6d5e638fd31f33e192e1431fc3a58cb0":[1,0,1323,8],
+"classSpriteBasedLaser.html#a75434ba17368701fbdd9f4f89542afc7":[1,0,1323,41],
 "classSpriteBasedLaser.html#a7bd6e82e1caeede7d4fdabebc312da8a":[1,0,1323,29],
 "classSpriteBasedLaser.html#a7c2f77fb8f2415ae0f92478fc9d7b101":[1,0,1323,21],
 "classSpriteBasedLaser.html#a7f64a9cca2019ba35925cb2478361432":[1,0,1323,34],
@@ -241,13 +249,5 @@ var NAVTREEINDEX115 =
 "classSubPassData.html#ab4e1e9a922e0841228dc6eda3a24571c":[1,0,1354,2],
 "classSurvivalManager.html":[1,0,1355],
 "classSurvivalManager.html#a00d50db57f55ce1c53b8119085802b84":[1,0,1355,16],
-"classSurvivalManager.html#a03d7da5d2d4eddeaca3a09c3b6f21324":[1,0,1355,15],
-"classSurvivalManager.html#a101c122f0a3bb9e6d542f913c7bc0bd1":[1,0,1355,10],
-"classSurvivalManager.html#a1a78b549b2c369a994b349d2d4e8ed6a":[1,0,1355,3],
-"classSurvivalManager.html#a1c8dbe122e610ef5f3edcf8fcc8cc14a":[1,0,1355,2],
-"classSurvivalManager.html#a1eb44ee4d59a07f7acb1a9c0cbc89e9b":[1,0,1355,13],
-"classSurvivalManager.html#a366e4da0d7ad7e17b0021411117a3184":[1,0,1355,14],
-"classSurvivalManager.html#a3fdbf4d79d9c65c894793e3d9a4b2e4f":[1,0,1355,11],
-"classSurvivalManager.html#a6f542852a0873aed31d85e9e0e84c603":[1,0,1355,5],
-"classSurvivalManager.html#a9ee9783ea0ccff3eafa68e830d0692b5":[1,0,1355,9]
+"classSurvivalManager.html#a03d7da5d2d4eddeaca3a09c3b6f21324":[1,0,1355,15]
 };

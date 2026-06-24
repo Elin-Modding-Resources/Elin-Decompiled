@@ -1,5 +1,6 @@
 var classReligionLuck =
 [
+    [ "GetOfferingMtp", "classReligionLuck.html#a49217bccf0dfc47f6abfe35b862ca552", null ],
     [ "GetValidArtifacts", "classReligionLuck.html#acc94136aa855b8a95c623df50abb9f8a", null ],
     [ "IsFaithElement", "classReligionLuck.html#a312dbcae065837c1651bc2d0b6560de4", null ],
     [ "IsValidArtifact", "classReligionLuck.html#aaaf3c30f0b35109fc2d0839c739e48d3", null ],

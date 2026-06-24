@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"WidgetBottomBar_8cs_source.html":[2,0,0,2017],
+"WidgetCodex_8cs.html":[2,0,0,2018],
 "WidgetCodex_8cs_source.html":[2,0,0,2018],
 "WidgetCurrentTool_8cs.html":[2,0,0,2019],
 "WidgetCurrentTool_8cs_source.html":[2,0,0,2019],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "Zone__Dungeon_8cs_source.html":[2,0,0,2083],
 "Zone__EmbassyPalmia_8cs.html":[2,0,0,2091],
 "Zone__EmbassyPalmia_8cs_source.html":[2,0,0,2091],
-"Zone__EternalGarden_8cs.html":[2,0,0,2092],
-"Zone__EternalGarden_8cs_source.html":[2,0,0,2092],
-"Zone__Exile_8cs.html":[2,0,0,2093]
+"Zone__EternalGarden_8cs.html":[2,0,0,2092]
 };

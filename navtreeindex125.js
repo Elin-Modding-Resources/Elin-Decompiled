@@ -1,5 +1,13 @@
 var NAVTREEINDEX125 =
 {
+"classTraitDoor.html#ae97feebb4cd06140e4b276757ee8170c":[1,0,1627,12],
+"classTraitDoor.html#aefdf075fedcd96d092297ef79a8fce98":[1,0,1627,19],
+"classTraitDoorAuto.html":[1,0,1628],
+"classTraitDoorAuto.html#a421ee44da149ef2a08b3fbfa85a3e2ca":[1,0,1628,0],
+"classTraitDoorAuto.html#a7148a84f436620e642691776018b42f4":[1,0,1628,1],
+"classTraitDoorAutoShoji.html":[1,0,1629],
+"classTraitDoorAutoShoji.html#a6e3209cbb2b148f8073cfaccd5980424":[1,0,1629,1],
+"classTraitDoorAutoShoji.html#abec3329e1d1e91c4294dce4e3e25b129":[1,0,1629,0],
 "classTraitDoorBell.html":[1,0,1630],
 "classTraitDoorBell.html#a60355c6c79902899dab8139d7b7dffad":[1,0,1630,1],
 "classTraitDoorBell.html#a66facc2f3eb6cdb5c0370fa66cb27bcd":[1,0,1630,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitFlyer.html":[1,0,1685],
 "classTraitFlyer.html#ac1693046120ebde13b5f5b01cc96650e":[1,0,1685,0],
 "classTraitFollower.html":[1,0,1686],
-"classTraitFollower.html#a0a6bf2b7018105d4995602a1b72177a2":[1,0,1686,0],
-"classTraitFollower.html#a3e2a186ebbed1ecf19f2c75aa476317a":[1,0,1686,1],
-"classTraitFood.html":[1,0,1687],
-"classTraitFood.html#a331afa29d6fd5b7fc301dcf7c1954dc4":[1,0,1687,0],
-"classTraitFood.html#aaca54391b55287bfb1d20a09828613ff":[1,0,1687,2],
-"classTraitFood.html#af9e3980cc7461d71d4c614ae03e24f1e":[1,0,1687,1],
-"classTraitFoodChuryu.html":[1,0,1688],
-"classTraitFoodDough.html":[1,0,1689],
-"classTraitFoodDough.html#afc2e0fe000653d2556383395cfafb0b1":[1,0,1689,0]
+"classTraitFollower.html#a0a6bf2b7018105d4995602a1b72177a2":[1,0,1686,0]
 };

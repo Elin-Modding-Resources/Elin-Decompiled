@@ -1,5 +1,8 @@
 var NAVTREEINDEX37 =
 {
+"classBaseMapGen.html#a6ff5c57a11b547673c2d4471419c51e5":[1,0,221,25],
+"classBaseMapGen.html#a71762d5901baf2a225dc1b307b3bb48b":[1,0,221,5],
+"classBaseMapGen.html#a80454c1f557db141e30ec0c050ac5d75":[1,0,221,29],
 "classBaseMapGen.html#a8454646312bf6d299605b9fc38712728":[1,0,221,20],
 "classBaseMapGen.html#a899b515f79186c152f98bb5f1f6cacfe":[1,0,221,2],
 "classBaseMapGen.html#a8c3f5129f0214843730e647ecca34f83":[1,0,221,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX37 =
 "classBaseTileMap.html#a397f9e6cb11fd8eba4e9ab5ff6b755b9":[1,0,231,130],
 "classBaseTileMap.html#a3a6c01e0012a4f1febba724947082f8a":[1,0,231,119],
 "classBaseTileMap.html#a3bf86b02204dfc0f74a08badd8c4d6ab":[1,0,231,111],
-"classBaseTileMap.html#a3ce911459227e73e312e8c703531d682":[1,0,231,151],
-"classBaseTileMap.html#a3d5d98082d84e1f8a670cc4b1654a3a5":[1,0,231,175],
-"classBaseTileMap.html#a3ee38056b6208dbda423dae3244b6b40":[1,0,231,233],
-"classBaseTileMap.html#a3f5aaed4f0efcc44f75590e229dbb630":[1,0,231,7]
+"classBaseTileMap.html#a3ce911459227e73e312e8c703531d682":[1,0,231,151]
 };

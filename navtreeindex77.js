@@ -1,5 +1,12 @@
 var NAVTREEINDEX77 =
 {
+"classInspectGroupEloPos.html":[1,0,753],
+"classInspectGroupEloPos.html#a21d28ce97a40004abcb6bcbcd854803f":[1,0,753,0],
+"classInspectGroupObj.html":[1,0,754],
+"classInspectGroupObj.html#a00efe62da38f50784e64f8a0454565c9":[1,0,754,1],
+"classInspectGroupObj.html#af0e3e16f18fdf01ed814449e9b0f9d8b":[1,0,754,0],
+"classInspectGroupTask.html":[1,0,755],
+"classInspectGroupTask.html#aa100fe6fee6eb53cd16883e33e1009ee":[1,0,755,0],
 "classInspectGroupTask.html#abaac66d0868765138fbc197c9715fc39":[1,0,755,1],
 "classInspectGroupThing.html":[1,0,756],
 "classInspectGroupThing.html#a2c249737802f724ccff3e2d74fbac73b":[1,0,756,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX77 =
 "classInvOwnerDraglet.html#af82999adf60f4bb8b564cb05ef1b9981":[1,0,771,17],
 "classInvOwnerDraglet.html#afd1941b83bce7551f0c856e960511dd1":[1,0,771,30],
 "classInvOwnerEffect.html":[1,0,772],
-"classInvOwnerEffect.html#a3dd1c3dbb20ca852849e4a9191130dd3":[1,0,772,2],
-"classInvOwnerEffect.html#a5cd4bffb9091082643c8c77c4d11dbd7":[1,0,772,4],
-"classInvOwnerEffect.html#a64666ece29f4bac8e1932f81bd2c33d7":[1,0,772,0],
-"classInvOwnerEffect.html#a650b0ecc8fea45fd3c46de77d2d4cc5d":[1,0,772,1],
-"classInvOwnerEffect.html#a7edce2ef6119ca81f6a54e8140ea9402":[1,0,772,3],
-"classInvOwnerEnchant.html":[1,0,773],
-"classInvOwnerEnchant.html#a119f26c9152a89a6eb629484cca3c24a":[1,0,773,0],
-"classInvOwnerEnchant.html#a20ac377a506334664822325113c6e020":[1,0,773,5]
+"classInvOwnerEffect.html#a3dd1c3dbb20ca852849e4a9191130dd3":[1,0,772,2]
 };

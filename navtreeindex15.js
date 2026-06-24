@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"SkinAssetRedirect_8cs.html#abde730ba51957d5537649bf37baaf00da6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,3,91,0,0],
+"SkinAssetRedirect_8cs.html#abde730ba51957d5537649bf37baaf00da8054fb02cd7dfc395f333858f2fcf170":[2,0,0,3,91,0,1],
 "SkinAssetRedirect_8cs_source.html":[2,0,0,3,91],
 "SkinAsset_8cs.html":[2,0,0,3,87],
 "SkinAsset_8cs_source.html":[2,0,0,3,87],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "StatsMana_8cs_source.html":[2,0,0,1238],
 "StatsSAN_8cs.html":[2,0,0,1239],
 "StatsSAN_8cs_source.html":[2,0,0,1239],
-"StatsSleepiness_8cs.html":[2,0,0,1240],
-"StatsSleepiness_8cs_source.html":[2,0,0,1240],
-"StatsStamina_8cs.html":[2,0,0,1241]
+"StatsSleepiness_8cs.html":[2,0,0,1240]
 };

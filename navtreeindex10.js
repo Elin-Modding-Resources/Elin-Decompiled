@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"IngredientAndRecipe_8cs.html":[2,0,0,710],
+"IngredientAndRecipe_8cs_source.html":[2,0,0,710],
 "InnerBevel_8cs.html":[2,0,0,3,49],
 "InnerBevel_8cs_source.html":[2,0,0,3,49],
 "InnerOutline_8cs.html":[2,0,0,3,50],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "LayerGachaResult_8cs.html":[2,0,0,816],
 "LayerGachaResult_8cs_source.html":[2,0,0,816],
 "LayerGacha_8cs.html":[2,0,0,815],
-"LayerGacha_8cs_source.html":[2,0,0,815],
-"LayerGlobalMap_8cs.html":[2,0,0,817],
-"LayerGlobalMap_8cs_source.html":[2,0,0,817]
+"LayerGacha_8cs_source.html":[2,0,0,815]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX99 =
 {
+"classQuestPuppy.html#acb92fc942bb2ae1ca180e0f7937ed7f0":[1,0,1110,0],
+"classQuestPuppy.html#ad8cd77a2801c88b65d3ba3f5e37c7da7":[1,0,1110,1],
+"classQuestRandom.html":[1,0,1111],
+"classQuestRandom.html#a1b45862340397c921ecb04dd215371fd":[1,0,1111,4],
+"classQuestRandom.html#a1dc12b77423d3fb0f4d2a59fb626dc9d":[1,0,1111,5],
+"classQuestRandom.html#a3cc1ada379412eb2e3bdf73099b4d5a6":[1,0,1111,1],
+"classQuestRandom.html#a8644f960c225228d40c475a0eac15ebc":[1,0,1111,6],
 "classQuestRandom.html#aa075246fc7da571ec8b4db6b2b87debd":[1,0,1111,3],
 "classQuestRandom.html#aeeee76be886c6da7347c2f0c465ce751":[1,0,1111,2],
 "classQuestRandom.html#af4f04fc53aef85deed96ca42e25ba30f":[1,0,1111,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX99 =
 "classRecipe.html#a21877e57c53fd1150ce766b0e31373f3":[1,0,1141,9],
 "classRecipe.html#a21dd69360b93de59b5308d7db36b9559":[1,0,1141,53],
 "classRecipe.html#a26d659bbb40ad8f2b48a337c6a56e60e":[1,0,1141,32],
-"classRecipe.html#a279d730fc3c5a87840cecbfd3f8aabb1":[1,0,1141,74],
-"classRecipe.html#a28da28557b2edc52979be0b8f061bcfb":[1,0,1141,18],
-"classRecipe.html#a2d8a4c729f584be34db82fd54d858fa0":[1,0,1141,16],
-"classRecipe.html#a2e5fc07ff7bf8f9733181e2d03ce8f29":[1,0,1141,27],
-"classRecipe.html#a2f06ae614a1b3efab9a86a3bd4cfe4ce":[1,0,1141,24],
-"classRecipe.html#a32ea83feab1dd425947e10577121c615":[1,0,1141,69],
-"classRecipe.html#a359cae3060cac19f2128b923bdfa12e6":[1,0,1141,57],
-"classRecipe.html#a385282f558d5ab34d1a9c1fc9c80c349":[1,0,1141,76]
+"classRecipe.html#a279d730fc3c5a87840cecbfd3f8aabb1":[1,0,1141,74]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX85 =
 {
+"classLayerSleep.html#afe4cefcdbdcb5077878ddfdbb2cbe3e3":[1,0,901,2],
+"classLayerStockpile.html":[1,0,902],
+"classLayerTactics.html":[1,0,903],
+"classLayerTactics.html#a04e7de861444b8fd47eef4742510f711":[1,0,903,0],
+"classLayerTech.html":[1,0,904],
+"classLayerTech.html#a42fd0cc46addc364b56faae0c3969b97":[1,0,904,0],
+"classLayerTech.html#a440176680a6eb5909b6a7aaa68bef5b6":[1,0,904,2],
 "classLayerTech.html#a6259a91fa0633ae3c0bfa3ad165c5891":[1,0,904,4],
 "classLayerTech.html#a9e3265d037a19892a2be8effde7eae8b":[1,0,904,3],
 "classLayerTech.html#aa70fe42a095cd7bb5fdc81c58a438b97":[1,0,904,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX85 =
 "classLightControl2.html#af6673ec3a5e58fe0671093291973e572":[1,0,915,0],
 "classLightData.html":[1,0,916],
 "classLightData.html#a3b56e0ee305e935748721bd615135849":[1,0,916,1],
-"classLightData.html#a72afa84bf18c420397a5e032f79ab195":[1,0,916,0],
-"classLimitVisibleCharacters.html":[1,0,917],
-"classLimitVisibleCharacters.html#a2f82468974c2a82b29dd924b8a90a74d":[1,0,917,3],
-"classLimitVisibleCharacters.html#a6194ee11f436c9d9526071fb8d8da21b":[1,0,917,1],
-"classLimitVisibleCharacters.html#ab0bee5cd5cd2de2e2eed391e7647d343":[1,0,917,6],
-"classLimitVisibleCharacters.html#ab6ff8a5cd38cf1747dc7680615c20c6a":[1,0,917,4],
-"classLimitVisibleCharacters.html#ac095054e472fb658a4b9728c403dc7a7":[1,0,917,2],
-"classLimitVisibleCharacters.html#adb572a79916ab7d407d9dde8e2f2ef94":[1,0,917,0]
+"classLightData.html#a72afa84bf18c420397a5e032f79ab195":[1,0,916,0]
 };

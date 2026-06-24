@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"HomeResourceKarma_8cs_source.html":[2,0,0,660],
+"HomeResourceManager_8cs.html":[2,0,0,661],
 "HomeResourceManager_8cs_source.html":[2,0,0,661],
 "HomeResourceMedicine_8cs.html":[2,0,0,662],
 "HomeResourceMedicine_8cs_source.html":[2,0,0,662],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0a82b61f3e1702bde1b8e0b25fd5def3c7":[2,0,0,3,48,0,5],
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0a9ae525b09c64556f06d636e5bfc17672":[2,0,0,3,48,0,7],
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0af15fba7bb646f82eb601c03028d17fc7":[2,0,0,3,48,0,1],
-"ImageType_8cs_source.html":[2,0,0,3,48],
-"IngredientAndRecipe_8cs.html":[2,0,0,710],
-"IngredientAndRecipe_8cs_source.html":[2,0,0,710]
+"ImageType_8cs_source.html":[2,0,0,3,48]
 };

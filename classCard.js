@@ -503,6 +503,7 @@ var classCard =
     [ "IsRotting", "classCard.html#a3c46bf63506a69565affb390ad4f9ed7", null ],
     [ "isSale", "classCard.html#a51e91216ecc9690a490e6b52ef798321", null ],
     [ "isScaled", "classCard.html#acff3fcc8f2ff27686a3556aa0d9159aa", null ],
+    [ "IsSlimeEvolvable", "classCard.html#ac2138d062f05074ab16372ae7401f4d2", null ],
     [ "isStolen", "classCard.html#acb53bc89e7ae376f24fcccc205055952", null ],
     [ "isSubsetCard", "classCard.html#a2c402dd2cd3822276e084576ede5ded2", null ],
     [ "isSummon", "classCard.html#a18df8b0c12925deda26841c2e7a41654", null ],

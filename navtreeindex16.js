@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"StatsSleepiness_8cs_source.html":[2,0,0,1240],
+"StatsStamina_8cs.html":[2,0,0,1241],
 "StatsStamina_8cs_source.html":[2,0,0,1241],
 "Stats_8cs.html":[2,0,0,1234],
 "Stats_8cs_source.html":[2,0,0,1234],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "TileTypeMarker_8cs_source.html":[2,0,0,1343],
 "TileTypeNone_8cs.html":[2,0,0,1344],
 "TileTypeNone_8cs_source.html":[2,0,0,1344],
-"TileTypeObjBig_8cs.html":[2,0,0,1346],
-"TileTypeObjBig_8cs_source.html":[2,0,0,1346],
-"TileTypeObjCeil_8cs.html":[2,0,0,1347]
+"TileTypeObjBig_8cs.html":[2,0,0,1346]
 };

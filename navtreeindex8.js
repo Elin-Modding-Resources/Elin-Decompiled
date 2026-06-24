@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"GameMode_8cs.html":[2,0,0,571],
+"GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589de":[2,0,0,571,0],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589dea181634470467a8f1a9b41cbee362451b":[2,0,0,571,0,1],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589dea57670cffcfc65012d597222e98961de5":[2,0,0,571,0,4],
 "GameMode_8cs.html#aaf5ef5a17b53e9997c837b07015589dea6e040661e5d964f2ae2fac7b1fdb52ff":[2,0,0,571,0,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "HomeResourceFun_8cs_source.html":[2,0,0,658],
 "HomeResourceIndustry_8cs.html":[2,0,0,659],
 "HomeResourceIndustry_8cs_source.html":[2,0,0,659],
-"HomeResourceKarma_8cs.html":[2,0,0,660],
-"HomeResourceKarma_8cs_source.html":[2,0,0,660],
-"HomeResourceManager_8cs.html":[2,0,0,661]
+"HomeResourceKarma_8cs.html":[2,0,0,660]
 };

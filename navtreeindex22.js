@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"TraitWhipInterest_8cs.html":[2,0,0,1960],
+"TraitWhipInterest_8cs_source.html":[2,0,0,1960],
 "TraitWhipLove_8cs.html":[2,0,0,1961],
 "TraitWhipLove_8cs_source.html":[2,0,0,1961],
 "TraitWhistlePeace_8cs.html":[2,0,0,1962],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "VirtualRoom_8cs.html":[2,0,0,2010],
 "VirtualRoom_8cs_source.html":[2,0,0,2010],
 "VisitorState_8cs.html":[2,0,0,2011],
-"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288":[2,0,0,2011,0],
-"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288a168d3e51452f6d8988f75ed882e74eb6":[2,0,0,2011,0,0],
-"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288a8e79e9ffded94b8fae2c23ff9793d653":[2,0,0,2011,0,3]
+"VisitorState_8cs.html#a230925cfcfd38408cd33467475de7288":[2,0,0,2011,0]
 };

@@ -23,6 +23,7 @@ var classABILITY =
     [ "ActEntangle", "classABILITY.html#a8d8b17d09a341f1bce1bf7f1f22fbe9e", null ],
     [ "ActEscape", "classABILITY.html#a8ff34e6723fa1cbad5c09d1a8061ff70", null ],
     [ "ActFear", "classABILITY.html#a113e09d796ece705d392046df1001c55", null ],
+    [ "ActFuse", "classABILITY.html#a1f23d011537205b2636226ade428b778", null ],
     [ "ActGazeDim", "classABILITY.html#a80b868c9bce245253821b5c40a4f189f", null ],
     [ "ActGazeInsane", "classABILITY.html#ad3abf96885733f57329f61081edd23ad", null ],
     [ "ActGazeMana", "classABILITY.html#ae32712cf7c3fbd1d0dca4068fa97c43a", null ],

@@ -1,5 +1,13 @@
 var NAVTREEINDEX128 =
 {
+"classTraitMerchantMap.html":[1,0,1814],
+"classTraitMerchantMap.html#a43f8b32edfbbba5b3efd6657edfd3bd4":[1,0,1814,1],
+"classTraitMerchantMap.html#aad3d047dce9c4c5b808552b384dc97b1":[1,0,1814,0],
+"classTraitMerchantMeat.html":[1,0,1815],
+"classTraitMerchantMeat.html#a52d68461a10fe1bda1299b8ec529620b":[1,0,1815,0],
+"classTraitMerchantMilk.html":[1,0,1816],
+"classTraitMerchantMilk.html#a1425f96b7285390b82e48446a25f6e49":[1,0,1816,0],
+"classTraitMerchantPlan.html":[1,0,1817],
 "classTraitMerchantPlan.html#a8ab4c39f9b9050c042d2dddcffb8c2d0":[1,0,1817,1],
 "classTraitMerchantPlan.html#a98a140c37901a065443c3f99ad755beb":[1,0,1817,2],
 "classTraitMerchantPlan.html#ab278bfef3c363c2066ef537cbbd74984":[1,0,1817,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitPlatform.html#a761bc5daab23761ed77e4d766fe73c1c":[1,0,1875,2],
 "classTraitPlatform.html#aa1e9d56c2306479fafdfef3e5fe19786":[1,0,1875,0],
 "classTraitPlatform.html#ac84c80f09f56c79e194ff076ce0f3f44":[1,0,1875,3],
-"classTraitPoina.html":[1,0,1876],
-"classTraitPolicyBoard.html":[1,0,1877],
-"classTraitPolicyBoard.html#a0fc8061303d7a906964fcb60dd787c56":[1,0,1877,1],
-"classTraitPolicyBoard.html#ae19765bbe404dfc0cb797eefe42e744f":[1,0,1877,0],
-"classTraitPoolTable.html":[1,0,1878],
-"classTraitPoolTable.html#a9edee5cc1ded4d6dd6bf72eae5d59332":[1,0,1878,0],
-"classTraitPoop.html":[1,0,1879],
-"classTraitPoop.html#a1f50b3143c86ffa857d97bb9cae4e3b3":[1,0,1879,0],
-"classTraitPoop.html#a4d7423a096171d399103d190bd0072d6":[1,0,1879,1]
+"classTraitPoina.html":[1,0,1876]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"TraitSnow_8cs.html":[2,0,0,1835],
+"TraitSnow_8cs_source.html":[2,0,0,1835],
 "TraitSofa_8cs.html":[2,0,0,1836],
 "TraitSofa_8cs_source.html":[2,0,0,1836],
 "TraitSorin_8cs.html":[2,0,0,1837],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "TraitWell_8cs.html":[2,0,0,1957],
 "TraitWell_8cs_source.html":[2,0,0,1957],
 "TraitWhipEgg_8cs.html":[2,0,0,1959],
-"TraitWhipEgg_8cs_source.html":[2,0,0,1959],
-"TraitWhipInterest_8cs.html":[2,0,0,1960],
-"TraitWhipInterest_8cs_source.html":[2,0,0,1960]
+"TraitWhipEgg_8cs_source.html":[2,0,0,1959]
 };

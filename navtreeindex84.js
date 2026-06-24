@@ -1,5 +1,12 @@
 var NAVTREEINDEX84 =
 {
+"classLayerMod.html#a4b6303c09b2ee562f224c53ef87b9e91":[1,0,885,5],
+"classLayerMod.html#a4bca6bd0b0053210469753d9a16b36ed":[1,0,885,9],
+"classLayerMod.html#a5676fbdc1be755ef42b9d104e39feeca":[1,0,885,0],
+"classLayerMod.html#a75d0282f6faf3dfe3c02881a364ae697":[1,0,885,8],
+"classLayerMod.html#a760852c57410ce4012d0736dc4827ff2":[1,0,885,1],
+"classLayerMod.html#a76cfbb8217b7d031a4e7ad0f714997c6":[1,0,885,2],
+"classLayerMod.html#a97620f68c20388b11ce72a85907dc7e1":[1,0,885,6],
 "classLayerMod.html#aa8c35a933c697f01de22bfbe1b66cf6a":[1,0,885,7],
 "classLayerMod.html#ac8001e26ec3748110c199b72ffaa723b":[1,0,885,3],
 "classLayerMod.html#af8c386023bd69c5c81c181cb664797c2":[1,0,885,4],
@@ -242,12 +249,5 @@ var NAVTREEINDEX84 =
 "classLayerSleep.html#adbe25d93a728eaf2c1d846fde88dc5ce":[1,0,901,8],
 "classLayerSleep.html#aeddb1de9ae9d70e7bd915e71d1719dd6":[1,0,901,1],
 "classLayerSleep.html#aef56dfd8ed93cfa21d2f4100e6213b4e":[1,0,901,10],
-"classLayerSleep.html#af0008dcab9b1b602b3b7f4f5d4b22cf6":[1,0,901,9],
-"classLayerSleep.html#afe4cefcdbdcb5077878ddfdbb2cbe3e3":[1,0,901,2],
-"classLayerStockpile.html":[1,0,902],
-"classLayerTactics.html":[1,0,903],
-"classLayerTactics.html#a04e7de861444b8fd47eef4742510f711":[1,0,903,0],
-"classLayerTech.html":[1,0,904],
-"classLayerTech.html#a42fd0cc46addc364b56faae0c3969b97":[1,0,904,0],
-"classLayerTech.html#a440176680a6eb5909b6a7aaa68bef5b6":[1,0,904,2]
+"classLayerSleep.html#af0008dcab9b1b602b3b7f4f5d4b22cf6":[1,0,901,9]
 };

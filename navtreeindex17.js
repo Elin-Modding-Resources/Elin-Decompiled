@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"TileTypeObjBig_8cs_source.html":[2,0,0,1346],
+"TileTypeObjCeil_8cs.html":[2,0,0,1347],
 "TileTypeObjCeil_8cs_source.html":[2,0,0,1347],
 "TileTypeObjFloatWaterfall_8cs.html":[2,0,0,1349],
 "TileTypeObjFloatWaterfall_8cs_source.html":[2,0,0,1349],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "TraitCatalyst_8cs_source.html":[2,0,0,1459],
 "TraitCauldron_8cs.html":[2,0,0,1460],
 "TraitCauldron_8cs_source.html":[2,0,0,1460],
-"TraitChair_8cs.html":[2,0,0,1461],
-"TraitChair_8cs_source.html":[2,0,0,1461],
-"TraitChangingRoom_8cs.html":[2,0,0,1462]
+"TraitChair_8cs.html":[2,0,0,1461]
 };
