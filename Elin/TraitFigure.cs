@@ -33,7 +33,7 @@ public class TraitFigure : Trait
 		{
 			return base.GetValue();
 		}
-		return (base.GetValue() + source.LV * 50) * ((!source.multisize) ? 1 : 2) * ((source.quality < 4) ? 1 : 2);
+		return MathEx.ClampToInt((base.GetValue() + Mathf.Min(source.LV, 2000000) * 50) * ((!source.multisize) ? 1 : 2) * ((source.quality < 4) ? 1 : 2));
 	}
 
 	public override void TrySetAct(ActPlan p)

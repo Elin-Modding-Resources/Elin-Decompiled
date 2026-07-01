@@ -858,6 +858,30 @@ public class Chara : Card, IPathfindWalker
 
 	public TimeTable.Span CurrentSpan => TimeTable.GetSpan(idTimeTable, EClass.world.date.hour);
 
+	public Ridability Ridability
+	{
+		get
+		{
+			if (!HasTag(CTAG.ride))
+			{
+				if (!HasTag(CTAG.noRide))
+				{
+					if (!race.tag.Contains("ride"))
+					{
+						if (!race.tag.Contains("noRide"))
+						{
+							return Ridability.Default;
+						}
+						return Ridability.BadRide;
+					}
+					return Ridability.GoodRide;
+				}
+				return Ridability.BadRide;
+			}
+			return Ridability.GoodRide;
+		}
+	}
+
 	public bool IsInActiveZone => currentZone == EClass.game.activeZone;
 
 	public bool IsLocalChara
@@ -1435,7 +1459,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return text;
 		}
-		int num2 = ((base.rarity == Rarity.Mythical) ? 3 : ((base.rarity >= Rarity.Legendary) ? 2 : ((!_alias.IsEmpty()) ? 1 : (-1))));
+		int num2 = ((base.rarity == Rarity.Mythical) ? 3 : ((base.rarity >= Rarity.Mythical) ? 2 : ((base.rarity >= Rarity.Legendary) ? 2 : ((!_alias.IsEmpty()) ? 1 : (-1)))));
 		if (trait is TraitAdventurer)
 		{
 			num2 = 1;
@@ -1803,9 +1827,9 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
-	public bool TryFuse(int chance = 10)
+	public bool TryFuse(float chance = 1f)
 	{
-		if (chance < EClass.rnd(100))
+		if (chance < EClass.rndf(1f))
 		{
 			return false;
 		}
@@ -1823,7 +1847,9 @@ public class Chara : Card, IPathfindWalker
 			item.Destroy();
 		}
 		Destroy();
-		chara.PlayAnime(AnimeID.Shiver);
+		chara.PlayAnime(AnimeID.FallSky);
+		chara.pos.PlaySound("fuse");
+		chara.pos.PlayEffect("vanish");
 		return true;
 	}
 
@@ -1907,7 +1933,6 @@ public class Chara : Card, IPathfindWalker
 		}
 		Chara chara = Duplicate();
 		EClass._zone.AddCard(chara, dest);
-		chara.SetHostility(hostility);
 		Say("split", this);
 		return chara;
 	}
@@ -2025,7 +2050,8 @@ public class Chara : Card, IPathfindWalker
 			{
 				_Speed = Evalue(79);
 				int a = Evalue(1423);
-				int value = 100 + (int)_Speed * ((!race.tag.Contains("noRide")) ? 1 : 5) * Mathf.Max(a, 1) - base.STR - host.EvalueRiding() * 2 - (race.tag.Contains("ride") ? 50 : 0);
+				int num = ((!HasElement(495)) ? 1 : 3);
+				int value = 100 + (int)_Speed * ((Ridability != Ridability.BadRide) ? 1 : 5) * Mathf.Max(a, 1) / num - base.STR - host.EvalueRiding() * 2 - ((Ridability == Ridability.GoodRide) ? 50 : 0);
 				_Speed = _Speed * 100 / Mathf.Clamp(value, 100, 1000);
 			}
 			else
@@ -2045,7 +2071,8 @@ public class Chara : Card, IPathfindWalker
 		if (parasite != null)
 		{
 			long speed = _Speed;
-			_Speed = _Speed * 100 / Mathf.Clamp(120 + parasite.LV * 2 - base.STR - Evalue(227) * 2, 100, 1000);
+			int num2 = ((!HasElement(495)) ? 1 : 3);
+			_Speed = _Speed * 100 / Mathf.Clamp(120 + parasite.LV * 2 / num2 - base.STR - Evalue(227) * 2, 100, 1000);
 			info?.AddText(_Speed - speed, "parasiteSpeed".lang());
 		}
 		if (_Speed < elements.ValueWithoutLink(79) / 3)
@@ -2053,20 +2080,20 @@ public class Chara : Card, IPathfindWalker
 			_Speed = elements.ValueWithoutLink(79) / 3;
 			info?.AddText("minSpeed".lang((elements.ValueWithoutLink(79) / 3).ToString() ?? ""));
 		}
-		int num = 100;
+		int num3 = 100;
 		if (EClass._zone.map != null && (EClass._zone.IsUnderwater || (base.Cell.IsTopWaterAndNoSnow && !base.Cell.isFloating)))
 		{
-			int num2 = Evalue(200);
-			int num3 = Evalue(1252);
-			num = 50 + Mathf.Clamp((int)Mathf.Sqrt(num2) * 5 - EClass._zone.DangerLv / 50, (num3 > 0) ? 50 : ((base.IsPowerful || IsMultisize) ? 40 : 0), 50) + Mathf.Clamp((int)Mathf.Sqrt(num2), 0, 25);
-			if (info != null && num != 100)
+			int num4 = Evalue(200);
+			int num5 = Evalue(1252);
+			num3 = 50 + Mathf.Clamp((int)Mathf.Sqrt(num4) * 5 - EClass._zone.DangerLv / 50, (num5 > 0) ? 50 : ((base.IsPowerful || IsMultisize) ? 40 : 0), 50) + Mathf.Clamp((int)Mathf.Sqrt(num4), 0, 25);
+			if (info != null && num3 != 100)
 			{
-				info.AddFix(num - 100, EClass.sources.elements.map[200].GetName().ToTitleCase());
+				info.AddFix(num3 - 100, EClass.sources.elements.map[200].GetName().ToTitleCase());
 			}
-			if (num3 > 0)
+			if (num5 > 0)
 			{
-				num += num3 * 20;
-				info?.AddFix(num3 * 20, EClass.sources.elements.map[1252].GetName().ToTitleCase());
+				num3 += num5 * 20;
+				info?.AddFix(num5 * 20, EClass.sources.elements.map[1252].GetName().ToTitleCase());
 			}
 		}
 		if (IsPCFaction)
@@ -2074,19 +2101,19 @@ public class Chara : Card, IPathfindWalker
 			switch (burden.GetPhase())
 			{
 			case 1:
-				num -= 10;
+				num3 -= 10;
 				info?.AddFix(-10, burden.GetPhaseStr());
 				break;
 			case 2:
-				num -= 20;
+				num3 -= 20;
 				info?.AddFix(-20, burden.GetPhaseStr());
 				break;
 			case 3:
-				num -= 30;
+				num3 -= 30;
 				info?.AddFix(-30, burden.GetPhaseStr());
 				break;
 			case 4:
-				num -= (IsPC ? 50 : 100);
+				num3 -= (IsPC ? 50 : 100);
 				info?.AddFix(IsPC ? (-50) : (-100), burden.GetPhaseStr());
 				break;
 			}
@@ -2095,22 +2122,22 @@ public class Chara : Card, IPathfindWalker
 				switch (stamina.GetPhase())
 				{
 				case 1:
-					num -= 10;
+					num3 -= 10;
 					info?.AddFix(-10, stamina.GetPhaseStr());
 					break;
 				case 0:
-					num -= 20;
+					num3 -= 20;
 					info?.AddFix(-20, stamina.GetPhaseStr());
 					break;
 				}
 				switch (sleepiness.GetPhase())
 				{
 				case 2:
-					num -= 10;
+					num3 -= 10;
 					info?.AddFix(-10, sleepiness.GetPhaseStr());
 					break;
 				case 3:
-					num -= 20;
+					num3 -= 20;
 					info?.AddFix(-20, sleepiness.GetPhaseStr());
 					break;
 				}
@@ -2118,38 +2145,38 @@ public class Chara : Card, IPathfindWalker
 				{
 				case 3:
 				case 4:
-					num -= 10;
+					num3 -= 10;
 					info?.AddFix(-10, hunger.GetPhaseStr());
 					break;
 				case 5:
-					num -= 30;
+					num3 -= 30;
 					info?.AddFix(-30, hunger.GetPhaseStr());
 					break;
 				}
-				num += EClass.player.lastEmptyAlly * Evalue(1646);
+				num3 += EClass.player.lastEmptyAlly * Evalue(1646);
 				info?.AddFix(EClass.player.lastEmptyAlly * Evalue(1646), EClass.sources.elements.map[1646].GetName());
 			}
 			if (IsPCParty && EClass.player.lastEmptyAlly < 0)
 			{
-				num += EClass.player.lastEmptyAlly * 10 - 10;
+				num3 += EClass.player.lastEmptyAlly * 10 - 10;
 				info?.AddFix(EClass.player.lastEmptyAlly * 10 - 10, "exceedParty".lang());
 			}
 		}
 		else if (base.LV >= 1000 && !EClass.game.principal.disableVoidBlessing && !base.IsPCFactionOrMinion)
 		{
-			num += EClass.curve((base.LV - 900) / 100 * 10, 500, 100);
+			num3 += EClass.curve((base.LV - 900) / 100 * 10, 500, 100);
 			info?.AddFix(EClass.curve((base.LV - 900) / 100 * 10, 500, 100), "enemySpeedBuff".lang());
 		}
 		if (HasCondition<ConGravity>())
 		{
-			num -= 30;
+			num3 -= 30;
 			info?.AddFix(-30, GetCondition<ConGravity>().Name);
 		}
 		if (_Speed < 10)
 		{
 			_Speed = 10L;
 		}
-		_Speed = _Speed * num / 100;
+		_Speed = _Speed * num3 / 100;
 		if (_Speed < 10)
 		{
 			_Speed = 10L;
@@ -2602,9 +2629,9 @@ public class Chara : Card, IPathfindWalker
 	{
 		if (!IsMultisize)
 		{
-			if (base.rarity >= Rarity.Superior && !base.IsPCFactionOrMinion && ai is GoalCombat && !EClass._zone.IsPCFaction)
+			if (base.rarity >= Rarity.Superior && !base.IsPCFactionOrMinion && ai is GoalCombat)
 			{
-				return !(EClass._zone is Zone_Town);
+				return !EClass._zone.IsPCFaction;
 			}
 			return false;
 		}
@@ -4983,6 +5010,16 @@ public class Chara : Card, IPathfindWalker
 				AddThing("1071");
 			}
 			break;
+		case "mamani":
+			EQ_ID("lightsaber_double", -1, Rarity.Mythical);
+			if (onCreate)
+			{
+				EQ_ID("cloak_mani2");
+				EQ_ID("boots_dal");
+				AddThing("gun_gravity2");
+				AddThing("gun_mani");
+			}
+			break;
 		case "namamani":
 			if (onCreate)
 			{
@@ -6337,7 +6374,7 @@ public class Chara : Card, IPathfindWalker
 			RemoveCondition<ConInvisibility>();
 			RemoveCondition<ConDark>();
 		}
-		if (!base.IsPCFactionOrMinion && a.HasTag("specialAbility"))
+		if (!base.IsPCFactionOrMinion && a.HasTag("specialAbility") && renderer.isSynced)
 		{
 			string name = a.Name;
 			renderer.Say("| " + name + " ");
@@ -8197,8 +8234,17 @@ public class Chara : Card, IPathfindWalker
 		return result;
 	}
 
+	public Thing GetRandomRangedWeapon()
+	{
+		return things.List((Thing t) => t.IsRangedWeapon && CanEquipRanged(t)).RandomItem();
+	}
+
 	public bool TryEquipRanged()
 	{
+		if (id == "mamani")
+		{
+			ranged = GetRandomRangedWeapon();
+		}
 		if (IsPC)
 		{
 			Thing thing = EClass.player.currentHotItem.Thing;
@@ -8552,7 +8598,7 @@ public class Chara : Card, IPathfindWalker
 
 	public Thing MakeGene(DNA.Type? type = null)
 	{
-		return DNA.GenerateGene((HasElement(1290) && Evalue(418) >= 0) ? EClass.sources.charas.map["caladrius"].model.Chara : this, type);
+		return DNA.GenerateGene(((HasElement(1290) || HasElement(1292)) && Evalue(418) >= 0) ? EClass.sources.charas.map["caladrius"].model.Chara : this, type);
 	}
 
 	public Thing MakeBraineCell()
@@ -8631,6 +8677,10 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		if (t.trait.CanOnlyCarry || !t.trait.CanBeDestroyed || t.trait.CanExtendBuild || t.rarity == Rarity.Artifact || t.IsContainer)
+		{
+			return false;
+		}
+		if (base.IsPowerful && t.trait is TraitScroll { source: not null } traitScroll && traitScroll.source.abilityType.Contains("summon"))
 		{
 			return false;
 		}

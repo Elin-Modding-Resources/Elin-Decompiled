@@ -351,7 +351,17 @@ public class ActRanged : ActThrow
 						AttackProcess.Current.TC = chara;
 						AttackProcess.Current.TP.Set(chara.pos);
 						AttackProcess.Current.posRangedAnime = chara.pos;
-						AttackProcess.Current.Perform(j, hasHit, chara.IsPCFactionOrMinion ? 0.1f : 2.5f, maxRoll: true, subAttack: true);
+						if (chara.HasElement(383))
+						{
+							AttackProcess.Current.PlayRangedAnime(numFire, 0.2f);
+							AttackProcess.Current.CC = chara;
+							AttackProcess.Current.posRangedAnime = chara.pos.GetRandomPoint(2) ?? chara.pos.GetRandomNeighbor();
+							AttackProcess.Current.PlayRangedAnime(numFire, 0.3f);
+						}
+						else
+						{
+							AttackProcess.Current.Perform(j, hasHit, chara.IsPCFactionOrMinion ? 0.1f : 2.5f, maxRoll: true, subAttack: true);
+						}
 					}
 					else if (AttackProcess.Current.Perform(j, hasHit, dmgMulti, maxRoll: false, subAttack))
 					{

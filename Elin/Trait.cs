@@ -176,7 +176,7 @@ public class Trait : EClass
 
 	public virtual bool CanBeAttacked => false;
 
-	public virtual bool CanBeTeleported => true;
+	public virtual bool CanBeTeleported => !owner.IsMultisize;
 
 	public virtual bool CanExtendBuild => false;
 

@@ -179,15 +179,16 @@ public class Net : MonoBehaviour
 
 	public static async UniTask<FileInfo> DownloadFile(DownloadMeta item, string path, string idLang)
 	{
-		string fn = item.id + ".z";
+		string path2 = item.id + ".z";
+		string fullPath = path + path2.SanitizeFileName();
 		DownloadCahce caches = IO.LoadFile<DownloadCahce>(CorePath.ZoneSaveUser + "cache.txt") ?? new DownloadCahce();
-		if (caches.items.TryGetValue(item.id) == item.date.Replace("\"", "") && File.Exists(path + fn))
+		if (caches.items.TryGetValue(item.id) == item.date.Replace("\"", "") && File.Exists(fullPath))
 		{
-			Debug.Log("Returning Cache:" + path + fn);
-			return new FileInfo(path + fn);
+			Debug.Log("Returning Cache:" + fullPath);
+			return new FileInfo(fullPath);
 		}
-		using UnityWebRequest www = UnityWebRequest.Get(urlUpload + "files/" + idLang + "/" + fn);
-		www.downloadHandler = new DownloadHandlerFile(path + fn);
+		using UnityWebRequest www = UnityWebRequest.Get(urlUpload + item.path);
+		www.downloadHandler = new DownloadHandlerFile(fullPath);
 		try
 		{
 			await www.SendWebRequest();
@@ -196,7 +197,7 @@ public class Net : MonoBehaviour
 		{
 			EClass.ui.Say(ex.Message);
 		}
-		FileInfo fileInfo = new FileInfo(path + fn);
+		FileInfo fileInfo = new FileInfo(fullPath);
 		if (!fileInfo.Exists || www.result != UnityWebRequest.Result.Success)
 		{
 			if (ShowNetError)

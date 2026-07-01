@@ -76,11 +76,11 @@ public class ActRide : Ability
 		EClass.pc.party.AddMemeber(t);
 		if (!parasite)
 		{
-			if (t.race.tag.Contains("ride"))
+			if (t.Ridability == Ridability.GoodRide)
 			{
 				Msg.Say("ride_good");
 			}
-			if (t.race.tag.Contains("noRide"))
+			if (t.Ridability == Ridability.BadRide)
 			{
 				Msg.Say("ride_bad");
 			}

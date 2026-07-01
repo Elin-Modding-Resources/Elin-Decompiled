@@ -3255,6 +3255,11 @@ public class Zone : Spatial, ICardParent, IInspect
 		return map.charas.Find((Chara c) => c.uid == uid);
 	}
 
+	public Chara FindDeadChara(string id)
+	{
+		return map.deadCharas.Find((Chara c) => c.id == id);
+	}
+
 	public int GetDeepestLv()
 	{
 		int max = base.lv;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FEAT
 {
-	public const int featNorland = 1236;
+	public const int featLightEater = 1235;
 
 	public const int featSorter = 1643;
 
@@ -81,13 +81,11 @@ public class FEAT
 
 	public const int featFisher = 1659;
 
+	public const int featMana = 1611;
+
 	public const int featLooter = 1660;
 
-	public const int featDismantler = 1661;
-
 	public const int featGoldenFinger = 1662;
-
-	public const int featDwarf = 1215;
 
 	public const int featManaPrecision = 1214;
 
@@ -103,9 +101,9 @@ public class FEAT
 
 	public const int featFoxLearn = 1208;
 
-	public const int featFoxBless = 1207;
+	public const int featDwarf = 1215;
 
-	public const int featMelilithCurse = 1206;
+	public const int featFoxBless = 1207;
 
 	public const int featCannibalism = 1205;
 
@@ -119,15 +117,15 @@ public class FEAT
 
 	public const int featSlowFood = 1200;
 
-	public const int featLightEater = 1235;
+	public const int featHeavyEater = 1234;
+
+	public const int featMelilithCurse = 1206;
 
 	public const int featSuccubus = 1216;
 
-	public const int featMana = 1611;
-
 	public const int featGolem = 1217;
 
-	public const int featElderCrab = 1219;
+	public const int featMetal = 1218;
 
 	public const int featFastEater = 1663;
 
@@ -135,13 +133,11 @@ public class FEAT
 
 	public const int featComat = 1750;
 
-	public const int featHeavyEater = 1234;
-
 	public const int featCosmicHorror = 1233;
 
 	public const int featBaby = 1232;
 
-	public const int featNirvana = 1231;
+	public const int featAdam = 1230;
 
 	public const int featLittleOne = 1229;
 
@@ -163,13 +159,19 @@ public class FEAT
 
 	public const int featFate = 1220;
 
-	public const int featMetal = 1218;
+	public const int featElderCrab = 1219;
+
+	public const int featDismantler = 1661;
 
 	public const int featLife = 1610;
 
-	public const int featAdam = 1230;
+	public const int featNirvana = 1231;
 
-	public const int featArcher = 1404;
+	public const int featFarmer = 1403;
+
+	public const int featPaladin = 1407;
+
+	public const int featPaladin2 = 1408;
 
 	public const int featBoost = 1409;
 
@@ -183,9 +185,9 @@ public class FEAT
 
 	public const int featWhiteVixen = 1414;
 
-	public const int featFoxMaid = 1415;
+	public const int featTourist = 1406;
 
-	public const int featInquisitor = 1416;
+	public const int featFoxMaid = 1415;
 
 	public const int featWitch = 1417;
 
@@ -203,35 +205,39 @@ public class FEAT
 
 	public const int featElite = 1424;
 
+	public const int featInquisitor = 1416;
+
 	public const int featMimic = 1425;
 
-	public const int featPaladin2 = 1408;
-
-	public const int featPaladin = 1407;
-
-	public const int featTourist = 1406;
-
 	public const int featPianist = 1405;
+
+	public const int featWizard = 1402;
+
+	public const int featSadCreature = 1291;
+
+	public const int featGod = 1292;
+
+	public const int featSevenPillars = 1293;
 
 	public const int featGod_element1 = 1300;
 
 	public const int featGod_earth1 = 1305;
 
+	public const int featNorland = 1236;
+
 	public const int featGod_wind1 = 1310;
 
 	public const int featGod_machine1 = 1315;
 
-	public const int featRoran = 1237;
+	public const int featArcher = 1404;
 
 	public const int featGod_healing1 = 1320;
 
-	public const int featGod_harvest1 = 1325;
-
 	public const int featGod_luck1 = 1330;
 
-	public const int featNeckHunter = 1426;
-
 	public const int featGod_harmony1 = 1335;
+
+	public const int featGod_oblivion1 = 1340;
 
 	public const int featGod_trickery1 = 1345;
 
@@ -243,19 +249,19 @@ public class FEAT
 
 	public const int featThief = 1401;
 
-	public const int featWizard = 1402;
+	public const int featGod_harvest1 = 1325;
 
-	public const int featFarmer = 1403;
+	public const int featGoddess = 1290;
 
-	public const int featHarem = 1276;
+	public const int featNeckHunter = 1426;
 
-	public const int featGod_oblivion1 = 1340;
+	public const int featMurderer = 1428;
 
-	public const int featSadCreature = 1291;
+	public const int featDemon = 1239;
 
-	public const int featDisguise = 1427;
+	public const int featMassSummoner = 1240;
 
-	public const int featManyFace = 1429;
+	public const int featMeatCushion = 1241;
 
 	public const int featGeneSlot = 1242;
 
@@ -267,9 +273,9 @@ public class FEAT
 
 	public const int featPegasus = 1246;
 
-	public const int featLibra = 1247;
+	public const int featDisguise = 1427;
 
-	public const int featMiscreation = 1248;
+	public const int featLibra = 1247;
 
 	public const int featBloodBond = 1249;
 
@@ -287,46 +293,46 @@ public class FEAT
 
 	public const int featBadKarma = 1271;
 
-	public const int featPeacemaker = 1272;
+	public const int featMiscreation = 1248;
 
-	public const int featBloom = 1273;
-
-	public const int featMeatCushion = 1241;
-
-	public const int featMurderer = 1428;
-
-	public const int featMassSummoner = 1240;
+	public const int featRoran = 1237;
 
 	public const int featElder = 1238;
 
+	public const int featHarem = 1276;
+
+	public const int featManyFace = 1429;
+
 	public const int featAstralBody = 1430;
+
+	public const int featDeviant = 1431;
 
 	public const int featBelovedOne = 1275;
 
 	public const int featSlimeEvolution = 1274;
 
-	public const int featDemon = 1239;
+	public const int featBloom = 1273;
 
-	public const int featGoddess = 1290;
+	public const int featPeacemaker = 1272;
 
-	public static readonly int[] IDS = new int[153]
+	public static readonly int[] IDS = new int[156]
 	{
-		1236, 1643, 1644, 1645, 1646, 1647, 1648, 1649, 1642, 1650,
+		1235, 1643, 1644, 1645, 1646, 1647, 1648, 1649, 1642, 1650,
 		1652, 1653, 1654, 1655, 1656, 1657, 1658, 1651, 1641, 1640,
 		1636, 1612, 1620, 1621, 1622, 1623, 1624, 1625, 1626, 1627,
-		1628, 1629, 1630, 1631, 1632, 1633, 1634, 1635, 1659, 1660,
-		1661, 1662, 1215, 1214, 1213, 1212, 1211, 1210, 1209, 1208,
-		1207, 1206, 1205, 1204, 1203, 1202, 1201, 1200, 1235, 1216,
-		1611, 1217, 1219, 1663, 1664, 1750, 1234, 1233, 1232, 1231,
-		1229, 1228, 1227, 1226, 1225, 1224, 1223, 1222, 1221, 1220,
-		1218, 1610, 1230, 1404, 1409, 1410, 1411, 1412, 1413, 1414,
-		1415, 1416, 1417, 1418, 1419, 1420, 1421, 1422, 1423, 1424,
-		1425, 1408, 1407, 1406, 1405, 1300, 1305, 1310, 1315, 1237,
-		1320, 1325, 1330, 1426, 1335, 1345, 1350, 1355, 1400, 1401,
-		1402, 1403, 1276, 1340, 1291, 1427, 1429, 1242, 1243, 1244,
-		1245, 1246, 1247, 1248, 1249, 1250, 1251, 1252, 1253, 1254,
-		1270, 1271, 1272, 1273, 1241, 1428, 1240, 1238, 1430, 1275,
-		1274, 1239, 1290
+		1628, 1629, 1630, 1631, 1632, 1633, 1634, 1635, 1659, 1611,
+		1660, 1662, 1214, 1213, 1212, 1211, 1210, 1209, 1208, 1215,
+		1207, 1205, 1204, 1203, 1202, 1201, 1200, 1234, 1206, 1216,
+		1217, 1218, 1663, 1664, 1750, 1233, 1232, 1230, 1229, 1228,
+		1227, 1226, 1225, 1224, 1223, 1222, 1221, 1220, 1219, 1661,
+		1610, 1231, 1403, 1407, 1408, 1409, 1410, 1411, 1412, 1413,
+		1414, 1406, 1415, 1417, 1418, 1419, 1420, 1421, 1422, 1423,
+		1424, 1416, 1425, 1405, 1402, 1291, 1292, 1293, 1300, 1305,
+		1236, 1310, 1315, 1404, 1320, 1330, 1335, 1340, 1345, 1350,
+		1355, 1400, 1401, 1325, 1290, 1426, 1428, 1239, 1240, 1241,
+		1242, 1243, 1244, 1245, 1246, 1427, 1247, 1249, 1250, 1251,
+		1252, 1253, 1254, 1270, 1271, 1248, 1237, 1238, 1276, 1429,
+		1430, 1431, 1275, 1274, 1273, 1272
 	};
 }
 public class Feat : Element
@@ -573,6 +579,7 @@ public class Feat : Element
 			ModBase(423, a, hide: false);
 			break;
 		case 1290:
+		case 1292:
 			ModBase(418, a * 100, hide: false);
 			break;
 		case 1239:

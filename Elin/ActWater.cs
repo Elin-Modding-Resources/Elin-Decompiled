@@ -41,6 +41,10 @@ public class ActWater : Act
 		return base.Perform();
 		static void Water(Point pos)
 		{
+			if (TaskWater.ShouldWater(pos))
+			{
+				Act.CC.ModExp(286, 15);
+			}
 			if (!pos.cell.IsTopWater && !pos.cell.IsSnowTile)
 			{
 				pos.cell.isWatered = true;

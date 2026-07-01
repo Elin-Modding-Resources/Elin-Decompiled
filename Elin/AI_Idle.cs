@@ -487,7 +487,7 @@ public class AI_Idle : AIAct
 			case "azzrasizzle":
 			case "geist":
 			{
-				if (EClass.rnd(20) != 0)
+				if ((owner.IsPCFactionOrMinion && owner.IsPCParty) || EClass.rnd(20) != 0)
 				{
 					break;
 				}
@@ -517,20 +517,20 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				int i = 0;
+				int j = 0;
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
 					if (p.HasChara && p.FirstChara.id == "cocoon")
 					{
-						i++;
+						j++;
 					}
 				});
-				if (i < 2)
+				if (j < 2)
 				{
-					Point randomPoint2 = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
-					if (randomPoint2 != null)
+					Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
+					if (randomPoint != null)
 					{
-						Chara chara3 = EClass._zone.SpawnMob("cocoon", randomPoint2);
+						Chara chara3 = EClass._zone.SpawnMob("cocoon", randomPoint);
 						owner.Say("egglay", owner);
 						chara3.SetHostility(owner.OriginalHostility);
 					}
@@ -539,27 +539,27 @@ public class AI_Idle : AIAct
 			}
 			case "mech_scarab":
 			{
-				if (EClass.rnd(20) != 0 || !owner.CanDuplicate(DuplicateCondition.Scarab) || EClass._zone.IsUserZone)
+				if (EClass.rnd(20) != 0 || !owner.CanDuplicate(DuplicateCondition.Scarab) || EClass._zone.IsUserZone || EClass._zone is Zone_SnowGrave)
 				{
 					break;
 				}
-				int j = 0;
+				int i = 0;
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
 					if (p.HasChara && p.FirstChara.id == "mech_scarab")
 					{
-						j++;
+						i++;
 					}
 				});
-				if (j >= 2)
+				if (i >= 2)
 				{
 					break;
 				}
-				Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
-				if (randomPoint != null)
+				Point randomPoint2 = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
+				if (randomPoint2 != null)
 				{
-					Card c2 = EClass._zone.AddCard(owner.Duplicate(), randomPoint);
-					if (randomPoint.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
+					Card c2 = EClass._zone.AddCard(owner.Duplicate(), randomPoint2);
+					if (randomPoint2.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
 					{
 						Msg.Say("self_dupe", owner, c2);
 					}
@@ -567,7 +567,7 @@ public class AI_Idle : AIAct
 				break;
 			}
 			case "marshmallow_monster":
-				if (owner.TryFuse())
+				if (owner.TryFuse(0.001f))
 				{
 					yield return Success();
 				}
@@ -1245,6 +1245,10 @@ public class AI_Idle : AIAct
 	{
 		for (int i = 0; i < 10; i++)
 		{
+			if (owner == null)
+			{
+				return true;
+			}
 			Point randomPoint = owner.pos.GetRandomPoint(7, requireLos: true, allowChara: true, allowBlocked: true);
 			if (randomPoint == null || randomPoint.detail == null)
 			{
@@ -1252,20 +1256,24 @@ public class AI_Idle : AIAct
 			}
 			foreach (Thing thing in randomPoint.detail.things)
 			{
-				if (thing.IsInstalled)
+				if (!thing.IsInstalled)
 				{
-					int num = owner.Dist(thing);
-					if (EClass.rnd((owner.memberType == FactionMemberType.Guest) ? 5 : 50) == 0 && thing.HasTag(CTAG.tourism) && num <= 2)
+					continue;
+				}
+				int num = owner.Dist(thing);
+				if (EClass.rnd((owner.memberType == FactionMemberType.Guest) ? 5 : 50) == 0 && thing.HasTag(CTAG.tourism) && num <= 2)
+				{
+					owner.LookAt(thing);
+					owner.Talk("nice_statue");
+					return true;
+				}
+				if (EClass.rnd(thing.trait.IdleUseChance) == 0 && thing.trait.IdleUse(owner, num))
+				{
+					if (owner != null)
 					{
 						owner.LookAt(thing);
-						owner.Talk("nice_statue");
-						return true;
 					}
-					if (EClass.rnd(thing.trait.IdleUseChance) == 0 && thing.trait.IdleUse(owner, num))
-					{
-						owner.LookAt(thing);
-						return true;
-					}
+					return true;
 				}
 			}
 		}

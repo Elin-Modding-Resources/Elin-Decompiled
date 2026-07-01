@@ -30,6 +30,15 @@ public class AM_ViewMap : AM_BaseTileSelect
 		}
 	}
 
+	public override void OnUpdateInput()
+	{
+		base.OnUpdateInput();
+		if (EInput.middleMouse.clicked)
+		{
+			EClass.scene.ToggleRoof();
+		}
+	}
+
 	public override void OnDeactivate()
 	{
 		foreach (Layer layer in EClass.ui.layerFloat.layers)

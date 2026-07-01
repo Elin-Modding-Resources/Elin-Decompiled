@@ -414,6 +414,7 @@ public class Religion : EClass
 		{
 			c.elements.SetBase(85, 0);
 		}
+		c.RemoveAllStances();
 		if (c.IsPC)
 		{
 			EClass.pc.faction.charaElements.OnLeaveFaith();

@@ -53,5 +53,7 @@ public enum CTAG
 	humanSpeak,
 	throwBall,
 	alwaysDropCorpse,
-	allowDevour
+	allowDevour,
+	noRide,
+	ride
 }

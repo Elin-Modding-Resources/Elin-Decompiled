@@ -1,0 +1,41 @@
+using System.Collections.Generic;
+using System.Linq;
+
+public class ActMissileBarrage2 : Ability
+{
+	public override bool Perform()
+	{
+		List<Point> list = new List<Point>();
+		for (int i = 0; i < 30; i++)
+		{
+			Point p = Act.CC.pos.GetRandomPointInRadius(2, 12);
+			if (p != null)
+			{
+				IEnumerable<Point> enumerable = list.Where((Point _p) => _p.Equals(p));
+				if (enumerable != null && enumerable.Count() == 0)
+				{
+					list.Add(p);
+				}
+			}
+		}
+		if (list.Count > 0)
+		{
+			Act.CC.Say("abMissileBarrage", Act.CC);
+			Act.CC.PlaySound("missile");
+			Chara cC = Act.CC;
+			foreach (Point item in list)
+			{
+				Act.CC = cC;
+				Act.TP.Set(item);
+				ActEffect.ProcAt(EffectId.Rocket, GetPower(Act.CC), BlessedState.Normal, Act.CC, null, Act.TP, isNeg: true, new ActRef
+				{
+					origin = Act.CC.Chara,
+					aliasEle = "eleVoid"
+				});
+				ActEffect.RapidDelay = 0.03f;
+				ActEffect.RapidCount++;
+			}
+		}
+		return true;
+	}
+}

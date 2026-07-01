@@ -59,7 +59,7 @@ public class AI_Steal : AI_TargetCard
 		bool negate = chara != null && chara.HasElement(426);
 		if (chara != null)
 		{
-			if (negate && owner.Evalue(1662) == 0)
+			if ((negate && owner.Evalue(1662) == 0) || chara.HasElement(1292) || chara.HasElement(1290))
 			{
 				owner.Say("abStealNegate", chara);
 				yield return Cancel();

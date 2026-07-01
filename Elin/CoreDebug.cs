@@ -630,6 +630,10 @@ public class CoreDebug : EScriptable
 			EClass.pc.AddThing("water").SetNum(20).SetBlessedState(BlessedState.Blessed);
 			EClass.pc.AddThing("water").SetNum(20).SetBlessedState(BlessedState.Cursed);
 			EClass.pc.AddThing("potion_empty").SetNum(20);
+			EClass.pc.AddThing(ThingGen.CreateScroll(9004).SetNum(100));
+			EClass.pc.AddThing(ThingGen.CreateScroll(9008).SetNum(100));
+			EClass.pc.AddThing(ThingGen.CreateScroll(9001).SetNum(100));
+			EClass.pc.AddThing(ThingGen.CreateScroll(9005).SetNum(100));
 			EClass.pc.ModCurrency(10000000);
 			EClass.pc.AddCard(ThingGen.CreateBlock(67, 1).SetNum(99));
 			EClass.pc.AddCard(ThingGen.CreateFloor(41, 1).SetNum(99));

@@ -315,7 +315,7 @@ public class FoodEffect : EClass
 				break;
 			}
 		}
-		if (!(food.trait is TraitGene) || !c.HasElement(1274))
+		if (!(food.trait is TraitGene) || !c.IsSlimeEvolvable)
 		{
 			return;
 		}

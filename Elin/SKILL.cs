@@ -1,22 +1,24 @@
 public class SKILL
 {
-	public const int armorLight = 120;
+	public const int shield = 123;
 
 	public const int fireproof = 50;
 
-	public const int throwing = 108;
-
-	public const int weaponCrossbow = 109;
-
 	public const int weaponScythe = 110;
 
-	public const int climbing = 242;
+	public const int weaponBlunt = 111;
 
-	public const int armorHeavy = 122;
+	public const int armorLight = 120;
+
+	public const int fishing = 245;
+
+	public const int twohand = 130;
+
+	public const int eyeofmind = 134;
 
 	public const int tactics = 132;
 
-	public const int twohand = 130;
+	public const int climbing = 242;
 
 	public const int music = 241;
 
@@ -28,15 +30,15 @@ public class SKILL
 
 	public const int digging = 230;
 
-	public const int parasite = 227;
-
 	public const int riding = 226;
+
+	public const int lumberjack = 225;
 
 	public const int mining = 220;
 
-	public const int shield = 123;
-
 	public const int spotting = 210;
+
+	public const int weightlifting = 207;
 
 	public const int swimming = 200;
 
@@ -48,19 +50,17 @@ public class SKILL
 
 	public const int strategy = 135;
 
-	public const int eyeofmind = 134;
-
 	public const int marksman = 133;
 
 	public const int twowield = 131;
 
-	public const int weightlifting = 207;
+	public const int parasite = 227;
 
-	public const int lumberjack = 225;
+	public const int antiMagic = 93;
 
-	public const int penetration = 92;
+	public const int throwing = 108;
 
-	public const int weaponPolearm = 106;
+	public const int DEX = 72;
 
 	public const int END = 71;
 
@@ -74,9 +74,9 @@ public class SKILL
 
 	public const int PV = 65;
 
-	public const int DEX = 72;
-
 	public const int DV = 64;
+
+	public const int vigor = 62;
 
 	public const int mana = 61;
 
@@ -90,13 +90,17 @@ public class SKILL
 
 	public const int acidproof = 51;
 
-	public const int vigor = 62;
-
 	public const int PER = 73;
 
 	public const int LER = 74;
 
 	public const int WIL = 75;
+
+	public const int MAG = 76;
+
+	public const int weaponDagger = 107;
+
+	public const int weaponPolearm = 106;
 
 	public const int weaponGun = 105;
 
@@ -108,11 +112,11 @@ public class SKILL
 
 	public const int weaponSword = 101;
 
+	public const int weaponCrossbow = 109;
+
 	public const int martial = 100;
 
-	public const int dmgDealt = 94;
-
-	public const int antiMagic = 93;
+	public const int penetration = 92;
 
 	public const int vopal = 91;
 
@@ -126,17 +130,13 @@ public class SKILL
 
 	public const int CHA = 77;
 
-	public const int MAG = 76;
+	public const int dmgDealt = 94;
 
-	public const int weaponDagger = 107;
+	public const int gathering = 250;
 
-	public const int fishing = 245;
+	public const int armorHeavy = 122;
 
-	public const int weaponBlunt = 111;
-
-	public const int carpentry = 255;
-
-	public const int eleNether = 916;
+	public const int blacksmith = 256;
 
 	public const int eleSound = 917;
 
@@ -144,9 +144,11 @@ public class SKILL
 
 	public const int eleHoly = 919;
 
+	public const int eleChaos = 920;
+
 	public const int eleMagic = 921;
 
-	public const int eleEther = 922;
+	public const int resDamage = 971;
 
 	public const int eleAcid = 923;
 
@@ -156,17 +158,19 @@ public class SKILL
 
 	public const int eleVoid = 926;
 
+	public const int eleCat = 927;
+
 	public const int resFire = 950;
 
 	public const int resCold = 951;
 
 	public const int resLightning = 952;
 
+	public const int eleNether = 916;
+
 	public const int resDarkness = 953;
 
-	public const int elePoison = 915;
-
-	public const int resMind = 954;
+	public const int resPoison = 955;
 
 	public const int resNether = 956;
 
@@ -186,104 +190,104 @@ public class SKILL
 
 	public const int resCut = 964;
 
-	public const int gathering = 250;
+	public const int resImpact = 965;
+
+	public const int carpentry = 255;
+
+	public const int resCat = 973;
 
 	public const int resCurse = 972;
 
-	public const int resDamage = 971;
+	public const int resMind = 954;
 
-	public const int resDecay = 970;
+	public const int elePoison = 915;
 
-	public const int resImpact = 965;
-
-	public const int resPoison = 955;
-
-	public const int eleMind = 914;
-
-	public const int eleChaos = 920;
-
-	public const int eleLightning = 912;
-
-	public const int anatomy = 290;
-
-	public const int appraising = 289;
-
-	public const int building = 288;
-
-	public const int cooking = 287;
+	public const int eleEther = 922;
 
 	public const int eleDarkness = 913;
 
-	public const int reading = 285;
-
-	public const int negotiation = 291;
-
-	public const int stealing = 281;
-
-	public const int handicraft = 261;
-
-	public const int weaving = 260;
-
-	public const int jewelry = 259;
+	public const int alchemy = 257;
 
 	public const int sculpture = 258;
 
-	public const int alchemy = 257;
+	public const int jewelry = 259;
 
-	public const int blacksmith = 256;
+	public const int weaving = 260;
+
+	public const int handicraft = 261;
 
 	public const int lockpicking = 280;
 
-	public const int investing = 292;
+	public const int stealing = 281;
+
+	public const int eleMind = 914;
 
 	public const int farming = 286;
 
+	public const int cooking = 287;
+
+	public const int building = 288;
+
+	public const int appraising = 289;
+
+	public const int anatomy = 290;
+
+	public const int negotiation = 291;
+
+	public const int investing = 292;
+
+	public const int reading = 285;
+
 	public const int regeneration = 300;
+
+	public const int eleLightning = 912;
 
 	public const int eleCold = 911;
 
 	public const int eleFire = 910;
 
+	public const int disarmTrap = 293;
+
 	public const int env = 313;
 
 	public const int fun = 312;
 
-	public const int disarmTrap = 293;
-
-	public const int hygine = 310;
-
 	public const int bladder = 311;
 
+	public const int resDecay = 970;
+
+	public const int memorization = 307;
+
 	public const int faith = 306;
+
+	public const int magicDevice = 305;
 
 	public const int meditation = 301;
 
 	public const int controlmana = 302;
 
-	public const int magicDevice = 305;
-
 	public const int manaCapacity = 303;
 
 	public const int casting = 304;
 
-	public const int memorization = 307;
+	public const int hygine = 310;
 
-	public static readonly int[] IDS = new int[134]
+	public static readonly int[] IDS = new int[136]
 	{
-		120, 50, 108, 109, 110, 242, 122, 132, 130, 241,
-		240, 237, 235, 230, 227, 226, 220, 123, 210, 200,
-		152, 151, 150, 135, 134, 133, 131, 207, 225, 92,
-		106, 71, 70, 68, 67, 66, 65, 72, 64, 61,
-		60, 57, 56, 55, 51, 62, 73, 74, 75, 105,
-		104, 103, 102, 101, 100, 94, 93, 91, 90, 80,
-		79, 78, 77, 76, 107, 245, 111, 255, 916, 917,
-		918, 919, 921, 922, 923, 924, 925, 926, 950, 951,
-		952, 953, 915, 954, 956, 957, 958, 959, 960, 961,
-		962, 963, 964, 250, 972, 971, 970, 965, 955, 914,
-		920, 912, 290, 289, 288, 287, 913, 285, 291, 281,
-		261, 260, 259, 258, 257, 256, 280, 292, 286, 300,
-		911, 910, 313, 312, 293, 310, 311, 306, 301, 302,
-		305, 303, 304, 307
+		123, 50, 110, 111, 120, 245, 130, 134, 132, 242,
+		241, 240, 237, 235, 230, 226, 225, 220, 210, 207,
+		200, 152, 151, 150, 135, 133, 131, 227, 93, 108,
+		72, 71, 70, 68, 67, 66, 65, 64, 62, 61,
+		60, 57, 56, 55, 51, 73, 74, 75, 76, 107,
+		106, 105, 104, 103, 102, 101, 109, 100, 92, 91,
+		90, 80, 79, 78, 77, 94, 250, 122, 256, 917,
+		918, 919, 920, 921, 971, 923, 924, 925, 926, 927,
+		950, 951, 952, 916, 953, 955, 956, 957, 958, 959,
+		960, 961, 962, 963, 964, 965, 255, 973, 972, 954,
+		915, 922, 913, 257, 258, 259, 260, 261, 280, 281,
+		914, 286, 287, 288, 289, 290, 291, 292, 285, 300,
+		912, 911, 910, 293, 313, 312, 311, 970, 307, 306,
+		305, 301, 302, 303, 304, 310
 	};
 }
 public class Skill : Element

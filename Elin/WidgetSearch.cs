@@ -87,6 +87,11 @@ public class WidgetSearch : WidgetCodex
 			return;
 		}
 		base.Update();
+		if (selected != null && (selected.isDestroyed || (selected.isChara && !selected.Chara.IsAliveInCurrentZone)))
+		{
+			selected = null;
+			isDirty = true;
+		}
 		if (lastZone != EMono._zone || isDirty)
 		{
 			lastSearch = "";

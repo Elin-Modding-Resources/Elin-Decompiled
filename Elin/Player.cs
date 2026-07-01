@@ -1673,7 +1673,7 @@ public class Player : EClass
 
 	public void RefreshEmptyAlly()
 	{
-		int num = MaxAlly - EClass.pc.party.members.Count + 1;
+		int num = MaxAlly - EClass.pc.party.Count() + 1;
 		if (num == lastEmptyAlly)
 		{
 			return;

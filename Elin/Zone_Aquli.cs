@@ -8,4 +8,13 @@ public class Zone_Aquli : Zone_Town
 		}
 		base.OnActivate();
 	}
+
+	public override void OnVisitNewMapOrRegenerate()
+	{
+		base.OnVisitNewMapOrRegenerate();
+		if (FindChara("mamani") == null && FindDeadChara("mamani") == null && EClass.game.cards.globalCharas.Find("mamani") == null && EClass.pc.faction.FindChara("namamani") != null && EClass.pc.faction.FindChara("namamani2") != null)
+		{
+			AddChara("mamani", 48, 56).SetHomeZone(this);
+		}
+	}
 }

@@ -73,7 +73,7 @@ public class CraftUtil : EClass
 		foreach (Recipe.Ingredient ingredient in recipeSource.GetIngredients())
 		{
 			SetSeed();
-			Thing thing = ThingGen.Create(ingredient.id, -1, lv);
+			Thing thing = (ingredient.useCat ? ThingGen.CreateFromCategory(ingredient.id, lv) : ThingGen.Create(ingredient.id, -1, lv));
 			if (thing.id == "deadbody")
 			{
 				thing = ThingGen.Create("_meat");

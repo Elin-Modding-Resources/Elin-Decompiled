@@ -98,6 +98,10 @@ public class TaskWater : Task
 		}
 		void Water(Point p)
 		{
+			if (ShouldWater(p))
+			{
+				owner.ModExp(286, 15);
+			}
 			p.cell.isWatered = true;
 			if (!p.cell.blocked && EClass.rnd(5) == 0)
 			{
@@ -107,7 +111,6 @@ public class TaskWater : Task
 			{
 				p.ModFire(-50, extinguish: true);
 			}
-			owner.ModExp(286, 15);
 		}
 	}
 

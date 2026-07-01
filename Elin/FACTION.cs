@@ -30,9 +30,9 @@ public class FACTION
 
 	public const int fAttraction = 2206;
 
-	public const int fFood = 2204;
+	public const int fSafety = 2205;
 
-	public const int fMoral = 2203;
+	public const int fFood = 2204;
 
 	public const int fPromo = 2202;
 
@@ -108,16 +108,16 @@ public class FACTION
 
 	public const int fConstruction = 2003;
 
-	public const int fSafety = 2205;
+	public const int fMoral = 2203;
 
 	public static readonly int[] IDS = new int[53]
 	{
 		3702, 3601, 3602, 3603, 3604, 3701, 3606, 3700, 3600, 3605,
-		3500, 2119, 2206, 2204, 2203, 2202, 2201, 2200, 2116, 2120,
+		3500, 2119, 2206, 2205, 2204, 2202, 2201, 2200, 2116, 2120,
 		2118, 2117, 3703, 2207, 3704, 4002, 3706, 2115, 4006, 4005,
 		4004, 4003, 4001, 4000, 3900, 3805, 3804, 3803, 3802, 3801,
 		3800, 3784, 3783, 3782, 3781, 3780, 3710, 3709, 3708, 3707,
-		3705, 2003, 2205
+		3705, 2003, 2203
 	};
 }
 public class Faction : EClass
@@ -440,6 +440,31 @@ public class Faction : EClass
 			if (child.members.Contains(c))
 			{
 				return child;
+			}
+		}
+		return null;
+	}
+
+	public Chara FindChara(string id, bool inclurdeReserve = true)
+	{
+		foreach (FactionBranch child in GetChildren())
+		{
+			foreach (Chara member in child.members)
+			{
+				if (member.id == id)
+				{
+					return member;
+				}
+			}
+		}
+		if (inclurdeReserve)
+		{
+			foreach (HireInfo item in listReserve)
+			{
+				if (item.chara.id == id)
+				{
+					return item.chara;
+				}
 			}
 		}
 		return null;

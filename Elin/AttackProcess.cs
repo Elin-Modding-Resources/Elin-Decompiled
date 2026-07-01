@@ -923,7 +923,7 @@ public class AttackProcess : EClass
 		{
 			if (valid)
 			{
-				bane += (CC.Evalue(idEle) + ((weapon != null) ? weapon.Evalue(idEle, ignoreGlobalElement: true) : 0)) * mod / 100;
+				bane += (CC.Evalue(idEle) + ((weapon != null) ? weapon.Evalue(idEle, ignoreGlobalElement: true) : 0) + ((ammo != null) ? ammo.Evalue(idEle, ignoreGlobalElement: true) : 0)) * mod / 100;
 			}
 		}
 		bool IgnoreExp()

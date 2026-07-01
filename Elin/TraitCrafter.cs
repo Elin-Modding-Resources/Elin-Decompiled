@@ -115,31 +115,46 @@ public class TraitCrafter : Trait
 			return false;
 		}
 		string[] array = ((idx == 0) ? r.ing1 : r.ing2);
-		if (r.type.ToEnum<MixType>() == MixType.Grind && idx == 1)
+		switch (r.type.ToEnum<MixType>())
 		{
+		case MixType.Grind:
+		{
+			if (idx != 1)
+			{
+				break;
+			}
 			if (r.tag.Contains("rust") && c.encLV >= 0)
 			{
 				return false;
 			}
-			if (r.tag.Contains("mod_eject"))
+			if (!r.tag.Contains("mod_eject"))
 			{
-				if (c.sockets == null)
+				break;
+			}
+			if (c.sockets == null)
+			{
+				return false;
+			}
+			bool flag = false;
+			foreach (int socket in c.sockets)
+			{
+				if (socket != 0)
 				{
-					return false;
-				}
-				bool flag = false;
-				foreach (int socket in c.sockets)
-				{
-					if (socket != 0)
-					{
-						flag = true;
-					}
-				}
-				if (!flag)
-				{
-					return false;
+					flag = true;
 				}
 			}
+			if (!flag)
+			{
+				return false;
+			}
+			break;
+		}
+		case MixType.SeedWork:
+			if (idx == 0 && c.id == "seed" && c.encLV == 0)
+			{
+				return false;
+			}
+			break;
 		}
 		string[] array2 = array;
 		foreach (string text in array2)

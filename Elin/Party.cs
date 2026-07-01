@@ -54,6 +54,16 @@ public class Party : EClass
 		return _members;
 	}
 
+	public int Count()
+	{
+		int num = members.Count;
+		foreach (Chara member in members)
+		{
+			num += member.Evalue(1431);
+		}
+		return num;
+	}
+
 	public void AddMemeber(Chara c, bool showMsg = false)
 	{
 		if (c.party == this)
@@ -205,19 +215,6 @@ public class Party : EClass
 			}
 		}
 		return false;
-	}
-
-	public int Count()
-	{
-		int num = 0;
-		foreach (Chara member in members)
-		{
-			if (!member.isDead)
-			{
-				num++;
-			}
-		}
-		return num;
 	}
 
 	public void RegisterSetup(int index)

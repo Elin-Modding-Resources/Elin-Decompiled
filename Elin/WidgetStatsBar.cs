@@ -144,7 +144,7 @@ public class WidgetStatsBar : Widget
 		}
 		if (extra.maxAlly)
 		{
-			Add(null, "maxAlly", iconMaxAlly, () => EMono.pc.party.members.Count - 1 + "/" + EMono.player.MaxAlly, () => (EMono.player.lastEmptyAlly >= 0) ? FontColor.Default : FontColor.Bad);
+			Add(null, "maxAlly", iconMaxAlly, () => EMono.pc.party.Count() - 1 + "/" + EMono.player.MaxAlly, () => (EMono.player.lastEmptyAlly >= 0) ? FontColor.Default : FontColor.Bad);
 		}
 		if (extra.maxMinion)
 		{
