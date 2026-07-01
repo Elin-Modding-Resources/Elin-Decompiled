@@ -48,6 +48,19 @@ public static class MathEx
 		return (int)a;
 	}
 
+	public static int ClampToInt(long a, int min, int max)
+	{
+		if (a > max)
+		{
+			return max;
+		}
+		if (a < min)
+		{
+			return min;
+		}
+		return (int)a;
+	}
+
 	public static long Max(long a, long b)
 	{
 		if (a >= b)

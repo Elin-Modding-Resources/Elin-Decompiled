@@ -55,15 +55,22 @@ public static class ClassExtension
 
 	public static string Bracket(this string str, int type = 0)
 	{
-		return type switch
+		switch (type)
 		{
-			-1 => str, 
-			1 => "「" + str + "」", 
-			2 => "『" + str + "』", 
-			3 => "《" + str + "》", 
-			4 => "(" + str + ")", 
-			_ => "_bracketLeft".lang() + str + "_bracketRight".lang(), 
-		};
+		case -1:
+			return str;
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		{
+			string[] list = Lang.GetList("bracket_" + type);
+			return list[0] + str + list[1];
+		}
+		default:
+			return "_bracketLeft".lang() + str + "_bracketRight".lang();
+		}
 	}
 
 	public static byte[] ToBytes(this BitArray bits)
