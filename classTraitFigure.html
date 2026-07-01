@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.321 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.324 Nightly</span>
    </div>
   </td>
  </tr>
@@ -791,13 +791,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>        {</div>
 <div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> base.GetValue();</div>
 <div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> (base.GetValue() + <a class="code hl_property" href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">source</a>.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a> * 50) * ((!<a class="code hl_property" href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">source</a>.<a class="code hl_variable" href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">multisize</a>) ? 1 : 2) * ((source.quality &lt; 4) ? 1 : 2);</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classMathEx.html">MathEx</a>.<a class="code hl_function" href="classMathEx.html#af7ce525e0762481f8ca0b15d17aba736">ClampToInt</a>((base.GetValue() + Mathf.Min(<a class="code hl_property" href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">source</a>.<a class="code hl_variable" href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">LV</a>, 2000000) * 50) * ((!<a class="code hl_property" href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">source</a>.<a class="code hl_variable" href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">multisize</a>) ? 1 : 2) * ((<a class="code hl_property" href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">source</a>.<a class="code hl_variable" href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">quality</a> &lt; 4) ? 1 : 2));</div>
 <div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclassCardRow_html_a434ba5fccf3e0227791c1561a3fa5903"><div class="ttname"><a href="classCardRow.html#a434ba5fccf3e0227791c1561a3fa5903">CardRow.quality</a></div><div class="ttdeci">int quality</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00019">CardRow.cs:19</a></div></div>
+<div class="ttc" id="aclassMathEx_html"><div class="ttname"><a href="classMathEx.html">MathEx</a></div><div class="ttdef"><b>Definition:</b> <a href="MathEx_8cs_source.html#l00001">MathEx.cs:2</a></div></div>
+<div class="ttc" id="aclassMathEx_html_af7ce525e0762481f8ca0b15d17aba736"><div class="ttname"><a href="classMathEx.html#af7ce525e0762481f8ca0b15d17aba736">MathEx.ClampToInt</a></div><div class="ttdeci">static int ClampToInt(long a)</div><div class="ttdef"><b>Definition:</b> <a href="MathEx_8cs_source.html#l00025">MathEx.cs:25</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_a2081e4780b37fba374c0014d0405cc09"><div class="ttname"><a href="classRenderRow.html#a2081e4780b37fba374c0014d0405cc09">RenderRow.multisize</a></div><div class="ttdeci">bool multisize</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00064">RenderRow.cs:64</a></div></div>
 <div class="ttc" id="aclassRenderRow_html_aed3ac25d06114085ec605995cd3d9171"><div class="ttname"><a href="classRenderRow.html#aed3ac25d06114085ec605995cd3d9171">RenderRow.LV</a></div><div class="ttdeci">int LV</div><div class="ttdef"><b>Definition:</b> <a href="RenderRow_8cs_source.html#l00022">RenderRow.cs:22</a></div></div>
 <div class="ttc" id="aclassTraitFigure_html_a6dc624d3d99e0e0b72c7495de02a41f6"><div class="ttname"><a href="classTraitFigure.html#a6dc624d3d99e0e0b72c7495de02a41f6">TraitFigure.source</a></div><div class="ttdeci">CardRow source</div><div class="ttdef"><b>Definition:</b> <a href="TraitFigure_8cs_source.html#l00010">TraitFigure.cs:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="RenderRow_8cs_source.html#l00022">RenderRow.LV</a>, <a class="el" href="RenderRow_8cs_source.html#l00064">RenderRow.multisize</a>, and <a class="el" href="TraitFigure_8cs_source.html#l00010">source</a>.</p>
+<p class="reference">References <a class="el" href="MathEx_8cs_source.html#l00025">MathEx.ClampToInt()</a>, <a class="el" href="RenderRow_8cs_source.html#l00022">RenderRow.LV</a>, <a class="el" href="RenderRow_8cs_source.html#l00064">RenderRow.multisize</a>, <a class="el" href="CardRow_8cs_source.html#l00019">CardRow.quality</a>, and <a class="el" href="TraitFigure_8cs_source.html#l00010">source</a>.</p>
 
 </div>
 </div>

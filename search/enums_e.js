@@ -12,5 +12,6 @@ var searchData=
   ['resist_9',['Resist',['../Resist_8cs.html#a8387139be855f5585d9e1580321896e5',1,'Resist.cs']]],
   ['resourcegroup_10',['ResourceGroup',['../classBaseHomeResource.html#a9b3766f6a777aa858a6a8e52c7f4c5e0',1,'BaseHomeResource']]],
   ['resourceloadtype_11',['ResourceLoadType',['../ResourceLoadType_8cs.html#abcc2899f1dfbd8787ca4c2cda61ce5d5',1,'ResourceLoadType.cs']]],
-  ['result_12',['Result',['../classCheck.html#aa615a546baec820ce101e11ff15c419a',1,'Check']]]
+  ['result_12',['Result',['../classCheck.html#aa615a546baec820ce101e11ff15c419a',1,'Check']]],
+  ['ridability_13',['Ridability',['../Ridability_8cs.html#a59976cff0b5b600f059fe7f152d0ed97',1,'Ridability.cs']]]
 ];

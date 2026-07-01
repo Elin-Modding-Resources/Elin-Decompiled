@@ -30,6 +30,7 @@ var classZone =
     [ "ExportDialog", "classZone.html#a6c5fd16cca942316394c7bbcf380d758", null ],
     [ "FindChara", "classZone.html#a765158383897b5cb414530520bec6cba", null ],
     [ "FindChara", "classZone.html#aaa7ff2c0ede4f0bc48a3fbd22bae1b88", null ],
+    [ "FindDeadChara", "classZone.html#a7c28b59a512fc6cdccacac7854c51faa", null ],
     [ "FindOrCreateLevel", "classZone.html#a9d67527c876015d15f021569f74d6d89", null ],
     [ "Generate", "classZone.html#a18e27aa23214025873fe68fdcfd4fbe3", null ],
     [ "GetDeepestLv", "classZone.html#a5e99d9a7d1f87129b31a866bc84644c6", null ],

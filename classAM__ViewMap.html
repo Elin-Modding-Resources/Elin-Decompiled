@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.321 Nightly Patch 1</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.324 Nightly</span>
    </div>
   </td>
  </tr>
@@ -112,6 +112,8 @@ Inheritance diagram for AM_ViewMap:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aca2db0a0203f83f1b0ccc1c0b60a2020"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__ViewMap.html#aca2db0a0203f83f1b0ccc1c0b60a2020">OnActivate</a> ()</td></tr>
 <tr class="separator:aca2db0a0203f83f1b0ccc1c0b60a2020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa98cab40fa4d5b46f06301aa5f9d8b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__ViewMap.html#afaa98cab40fa4d5b46f06301aa5f9d8b">OnUpdateInput</a> ()</td></tr>
+<tr class="separator:afaa98cab40fa4d5b46f06301aa5f9d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9adde6e0aaf5fb54e87685206901f54"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__ViewMap.html#ad9adde6e0aaf5fb54e87685206901f54">OnDeactivate</a> ()</td></tr>
 <tr class="separator:ad9adde6e0aaf5fb54e87685206901f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a521ffd23a408b80bd3f95338563bcb3e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAM__ViewMap.html#a521ffd23a408b80bd3f95338563bcb3e">OnCancel</a> ()</td></tr>
@@ -620,10 +622,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classActionMode.html#a0e4d1674634ca32a302a52d782a9535b">ActionMode</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AM__ViewMap_8cs_source.html#l00041">41</a> of file <a class="el" href="AM__ViewMap_8cs_source.html">AM_ViewMap.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_function" href="classActionMode.html#a91ea5ceb4b1b2d49a6de0b6cb9379b90">Deactivate</a>();</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AM__ViewMap_8cs_source.html#l00050">50</a> of file <a class="el" href="AM__ViewMap_8cs_source.html">AM_ViewMap.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="classActionMode.html#a91ea5ceb4b1b2d49a6de0b6cb9379b90">Deactivate</a>();</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 <div class="ttc" id="aclassActionMode_html_a91ea5ceb4b1b2d49a6de0b6cb9379b90"><div class="ttname"><a href="classActionMode.html#a91ea5ceb4b1b2d49a6de0b6cb9379b90">ActionMode.Deactivate</a></div><div class="ttdeci">void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="ActionMode_8cs_source.html#l00529">ActionMode.cs:529</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00529">ActionMode.Deactivate()</a>.</p>
@@ -655,15 +657,58 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classActionMode.html#a60169ef780ec579954fa93da38febf23">ActionMode</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AM__ViewMap_8cs_source.html#l00033">33</a> of file <a class="el" href="AM__ViewMap_8cs_source.html">AM_ViewMap.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayer.html">Layer</a> <a class="code hl_variable" href="classActionMode.html#a6c0a20ec89dda3366cb1a90b9b1cec85">layer</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.<a class="code hl_variable" href="classUI.html#a0535b9d0ee7115c6fd5f4eab6119a5b4">layerFloat</a>.<a class="code hl_variable" href="classLayer.html#a0eec6ca819db19f911d8dc9ecb259d49">layers</a>)</div>
-<div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <a class="code hl_variable" href="classActionMode.html#a6c0a20ec89dda3366cb1a90b9b1cec85">layer</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
-<div class="line"><span class="lineno">   39</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="AM__ViewMap_8cs_source.html#l00042">42</a> of file <a class="el" href="AM__ViewMap_8cs_source.html">AM_ViewMap.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classLayer.html">Layer</a> <a class="code hl_variable" href="classActionMode.html#a6c0a20ec89dda3366cb1a90b9b1cec85">layer</a> <span class="keywordflow">in</span> <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.<a class="code hl_variable" href="classUI.html#a0535b9d0ee7115c6fd5f4eab6119a5b4">layerFloat</a>.<a class="code hl_variable" href="classLayer.html#a0eec6ca819db19f911d8dc9ecb259d49">layers</a>)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_variable" href="classActionMode.html#a6c0a20ec89dda3366cb1a90b9b1cec85">layer</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="ActionMode_8cs_source.html#l00097">ActionMode.layer</a>, <a class="el" href="UI_8cs_source.html#l00049">UI.layerFloat</a>, <a class="el" href="Layer_8cs_source.html#l00110">Layer.layers</a>, and <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>.</p>
+
+</div>
+</div>
+<a id="afaa98cab40fa4d5b46f06301aa5f9d8b" name="afaa98cab40fa4d5b46f06301aa5f9d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa98cab40fa4d5b46f06301aa5f9d8b">&#9670;&#160;</a></span>OnUpdateInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void AM_ViewMap.OnUpdateInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classActionMode.html#a4025ab325b17507860ed9192c0b79769">ActionMode</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AM__ViewMap_8cs_source.html#l00033">33</a> of file <a class="el" href="AM__ViewMap_8cs_source.html">AM_ViewMap.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        base.OnUpdateInput();</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEInput.html">EInput</a>.<a class="code hl_variable" href="classEInput.html#a27401c30d8046080a3fe380a0a99450d">middleMouse</a>.<a class="code hl_variable" href="classButtonState.html#a3e4c86be0bfb79ff8fb68640b05584f3">clicked</a>)</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">scene</a>.<a class="code hl_function" href="classScene.html#aaa4c834df143d223bc8be2e8417d27c7">ToggleRoof</a>();</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="ttc" id="aclassButtonState_html_a3e4c86be0bfb79ff8fb68640b05584f3"><div class="ttname"><a href="classButtonState.html#a3e4c86be0bfb79ff8fb68640b05584f3">ButtonState.clicked</a></div><div class="ttdeci">bool clicked</div><div class="ttdef"><b>Definition:</b> <a href="ButtonState_8cs_source.html#l00037">ButtonState.cs:37</a></div></div>
+<div class="ttc" id="aclassEClass_html_a06be4be1aacaa8f55093955d573ada26"><div class="ttname"><a href="classEClass.html#a06be4be1aacaa8f55093955d573ada26">EClass.scene</a></div><div class="ttdeci">static Scene scene</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00031">EClass.cs:31</a></div></div>
+<div class="ttc" id="aclassEInput_html"><div class="ttname"><a href="classEInput.html">EInput</a></div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00007">EInput.cs:8</a></div></div>
+<div class="ttc" id="aclassEInput_html_a27401c30d8046080a3fe380a0a99450d"><div class="ttname"><a href="classEInput.html#a27401c30d8046080a3fe380a0a99450d">EInput.middleMouse</a></div><div class="ttdeci">static ButtonState middleMouse</div><div class="ttdef"><b>Definition:</b> <a href="EInput_8cs_source.html#l00364">EInput.cs:364</a></div></div>
+<div class="ttc" id="aclassScene_html_aaa4c834df143d223bc8be2e8417d27c7"><div class="ttname"><a href="classScene.html#aaa4c834df143d223bc8be2e8417d27c7">Scene.ToggleRoof</a></div><div class="ttdeci">void ToggleRoof()</div><div class="ttdef"><b>Definition:</b> <a href="Scene_8cs_source.html#l00928">Scene.cs:928</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="ButtonState_8cs_source.html#l00037">ButtonState.clicked</a>, <a class="el" href="EInput_8cs_source.html#l00364">EInput.middleMouse</a>, <a class="el" href="EClass_8cs_source.html#l00031">EClass.scene</a>, and <a class="el" href="Scene_8cs_source.html#l00928">Scene.ToggleRoof()</a>.</p>
 
 </div>
 </div>

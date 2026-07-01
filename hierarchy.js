@@ -775,6 +775,7 @@ var hierarchy =
             [ "ActDreamBug", "classActDreamBug.html", null ],
             [ "ActKiss", "classActKiss.html", null ],
             [ "ActMissileBarrage", "classActMissileBarrage.html", null ],
+            [ "ActMissileBarrage2", "classActMissileBarrage2.html", null ],
             [ "ActMoneyDump", "classActMoneyDump.html", null ],
             [ "ActMoneySlap", "classActMoneySlap.html", [
               [ "ActMoneyThrow", "classActMoneyThrow.html", null ]

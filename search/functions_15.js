@@ -168,7 +168,7 @@ var searchData=
   ['tryequip_165',['TryEquip',['../classChara.html#ace86ded2c8e703df587e6e0c6a456ad0',1,'Chara']]],
   ['tryequipbait_166',['TryEquipBait',['../classPlayer.html#a87866bb2ea5defa71bce46e2b77c7a61',1,'Player']]],
   ['tryequipranged_167',['TryEquipRanged',['../classChara.html#ae130733b82773b9a99fef7c341b32e5c',1,'Chara']]],
-  ['tryfuse_168',['TryFuse',['../classChara.html#a86d0cc0739869147c351c41141c09e1c',1,'Chara']]],
+  ['tryfuse_168',['TryFuse',['../classChara.html#aecd6a43f9deb6c7031a2ce6dfd6d223b',1,'Chara']]],
   ['trygeneratebigdaddy_169',['TryGenerateBigDaddy',['../classZone.html#ad78139c9703c79c3d1fc55486416337f',1,'Zone']]],
   ['trygenerateevolved_170',['TryGenerateEvolved',['../classZone.html#a527e68e4296dbe8776456da24fc5e5cf',1,'Zone']]],
   ['trygenerateore_171',['TryGenerateOre',['../classZone.html#a99a9535f55f4d0b29277e78a65d5ce6f',1,'Zone']]],

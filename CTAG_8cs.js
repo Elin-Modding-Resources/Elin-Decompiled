@@ -54,6 +54,8 @@ var CTAG_8cs =
       [ "humanSpeak", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad0f42bd74e8f2e41e9de1c4635b24e34", null ],
       [ "throwBall", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a33a65d8c9806d0b7857467a10ebefab9", null ],
       [ "alwaysDropCorpse", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a3d65d50235118b0d92112b39ea797fdd", null ],
-      [ "allowDevour", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad659a544bab87e4b54142bad161e6734", null ]
+      [ "allowDevour", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07ad659a544bab87e4b54142bad161e6734", null ],
+      [ "noRide", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a49a37dfd96201b42724aa33d7c4e3cbf", null ],
+      [ "ride", "CTAG_8cs.html#ada23f0d8c8d5928ed3a5b964e931bc07a059763450f095b4973b450eaf58399c1", null ]
     ] ]
 ];

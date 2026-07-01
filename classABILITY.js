@@ -40,6 +40,7 @@ var classABILITY =
     [ "ActManaAbsorb", "classABILITY.html#ac22d039123a14f116ade80dd89ff8a3c", null ],
     [ "ActMelee", "classABILITY.html#a31775f0ae6d599b73f18bc3ecb3d420f", null ],
     [ "ActMissileBarrage", "classABILITY.html#af22fd628853a09f4e3c2844229da0911", null ],
+    [ "ActMissileBarrage2", "classABILITY.html#abb5f5d27d86ed1e35d94793acd44a1c5", null ],
     [ "ActMoneyDump", "classABILITY.html#abde3f2a52f6b6ebfaf7cb7bb4467f0f6", null ],
     [ "ActMoneySlap", "classABILITY.html#a0c6688c6bea7277ea6254d72c3fbb5ac", null ],
     [ "ActMoneyThrow", "classABILITY.html#af12fdaa18c9f77b9e2f188d84ece77c6", null ],

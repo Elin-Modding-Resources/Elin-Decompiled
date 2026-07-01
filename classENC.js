@@ -91,6 +91,7 @@ var classENC =
     [ "resWeather", "classENC.html#a6ae415ffbcfbeb35bf6509440fd8953e", null ],
     [ "revealFaith", "classENC.html#a755ce3011d74da18e450b0795509e01a", null ],
     [ "rusher", "classENC.html#ad571fdce0ca2a076cffd6a5cb2aa50bf", null ],
+    [ "saddle", "classENC.html#ab68c53f3a76745f7c057b9b4fb5a2220", null ],
     [ "safetyMeasure", "classENC.html#a75ce9d45a34c4d41b8eb7af8bb470c23", null ],
     [ "sanctified", "classENC.html#a9d934088093b35aafc2f3a0f930cca4d", null ],
     [ "searchRange", "classENC.html#a71b8edd67d1269d8facb7fa5cff58b04", null ],

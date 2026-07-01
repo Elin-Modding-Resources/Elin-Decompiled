@@ -124,6 +124,7 @@ var annotated_dup =
     [ "ActMeleeWhilrwind", "classActMeleeWhilrwind.html", "classActMeleeWhilrwind" ],
     [ "ActMiasma", "classActMiasma.html", "classActMiasma" ],
     [ "ActMissileBarrage", "classActMissileBarrage.html", "classActMissileBarrage" ],
+    [ "ActMissileBarrage2", "classActMissileBarrage2.html", "classActMissileBarrage2" ],
     [ "ActMoneyDump", "classActMoneyDump.html", "classActMoneyDump" ],
     [ "ActMoneySlap", "classActMoneySlap.html", "classActMoneySlap" ],
     [ "ActMoneyThrow", "classActMoneyThrow.html", "classActMoneyThrow" ],

@@ -11,6 +11,7 @@ var classFaction =
     [ "Create", "classFaction.html#abe63e4d34bdc461787e3c3a2cf548c9d", null ],
     [ "EvadeTax", "classFaction.html#a743504cdf8008dc558188525ef421dcf", null ],
     [ "FindBranch", "classFaction.html#a146046424a50eceeb1c1fc683dc7740c", null ],
+    [ "FindChara", "classFaction.html#a63eaa905c4c156f13344fb0b1590c818", null ],
     [ "GetBaseTax", "classFaction.html#a99ce867277467e5526fa98cd9958668d", null ],
     [ "GetChildren", "classFaction.html#a0fbbcc93f973d9dc9d933dfddaf11ca8", null ],
     [ "GetFactionSalary", "classFaction.html#a03c7bd98e77cb3843edd69056a0e64f4", null ],
