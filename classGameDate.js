@@ -10,6 +10,7 @@ var classGameDate =
     [ "ShipLetter", "classGameDate.html#ab23ab5ea00c8f8fe4fd353676208a07a", null ],
     [ "ShipPackages", "classGameDate.html#a4bead563961e259897d737e78466d8ce", null ],
     [ "ShipRandomPackages", "classGameDate.html#a6f7310794618760e06c10432a0cc99e1", null ],
+    [ "_fieldEffectsToRemove", "classGameDate.html#a7b2811451d597b01da2909a10440d693", null ],
     [ "minPerRound", "classGameDate.html#ac109306b1d3bf9612daf3a031e1290a7", null ],
     [ "shaken", "classGameDate.html#ac8efda516018be8562d4dc820780b6e9", null ]
 ];

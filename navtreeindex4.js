@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"ConTransmuteMimic_8cs.html":[2,0,0,396],
 "ConTransmuteMimic_8cs_source.html":[2,0,0,396],
 "ConTransmutePutit_8cs.html":[2,0,0,397],
 "ConTransmutePutit_8cs_source.html":[2,0,0,397],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "CustomDramaExpansionHelper_8cs.html":[2,0,0,436],
 "CustomDramaExpansionHelper_8cs_source.html":[2,0,0,436],
 "CustomDramaExpansion_8cs.html":[2,0,0,435],
-"CustomDramaExpansion_8cs.html#a04b366a8d97f92cfaba718703dbaa9b0":[2,0,0,435,8],
-"CustomDramaExpansion_8cs.html#a097b54a12677a82c36bb1ddcbc206db4":[2,0,0,435,29]
+"CustomDramaExpansion_8cs.html#a04b366a8d97f92cfaba718703dbaa9b0":[2,0,0,435,8]
 };

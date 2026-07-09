@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"CustomDramaExpansion_8cs.html#a097b54a12677a82c36bb1ddcbc206db4":[2,0,0,435,29],
 "CustomDramaExpansion_8cs.html#a09f4330b9f989b9f940d61bbbf646422":[2,0,0,435,54],
 "CustomDramaExpansion_8cs.html#a0bfe66b01d5b0d3cff68b56170befcfe":[2,0,0,435,27],
 "CustomDramaExpansion_8cs.html#a0d2e722fc130b50d47b0abff64388e58":[2,0,0,435,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "EClass_8cs.html":[2,0,0,485],
 "EClass_8cs_source.html":[2,0,0,485],
 "EContent_8cs.html":[2,0,0,486],
-"EContent_8cs_source.html":[2,0,0,486],
-"EDramaScriptState_8cs.html":[2,0,0,488]
+"EContent_8cs_source.html":[2,0,0,486]
 };

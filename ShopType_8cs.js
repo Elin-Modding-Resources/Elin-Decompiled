@@ -55,6 +55,7 @@ var ShopType_8cs =
       [ "KeeperOfGarden", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa0fb939f13240e5798b102af79c67f12", null ],
       [ "TravelMerchant", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba15ad0e98a76b2521eb7bf8ec497c08a8", null ],
       [ "TravelMerchant2", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbba50cabfff47520fb5143437c05924174f", null ],
-      [ "CustomContent", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa434f90146c7c910f3fb5035bb615f42", null ]
+      [ "CustomContent", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaa434f90146c7c910f3fb5035bb615f42", null ],
+      [ "AnimalGoods", "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafc4887af369e4fe938386e5d245765c6", null ]
     ] ]
 ];

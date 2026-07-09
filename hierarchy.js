@@ -792,6 +792,7 @@ var hierarchy =
             ] ],
             [ "ActSwarm", "classActSwarm.html", null ],
             [ "ActWhirlwind", "classActWhirlwind.html", null ],
+            [ "Song", "classSong.html", null ],
             [ "Spell", "classSpell.html", [
               [ "ActArrow", "classActArrow.html", null ],
               [ "ActBall", "classActBall.html", null ],
@@ -807,6 +808,7 @@ var hierarchy =
               [ "ActTelekinesis", "classActTelekinesis.html", null ],
               [ "ActWeapon", "classActWeapon.html", null ],
               [ "FieldEffect", "classFieldEffect.html", [
+                [ "FieldEffectAlert", "classFieldEffectAlert.html", null ],
                 [ "FieldEffectFeast", "classFieldEffectFeast.html", null ],
                 [ "FieldEffectSpider", "classFieldEffectSpider.html", null ]
               ] ]
@@ -1532,7 +1534,6 @@ var hierarchy =
           ] ],
           [ "TraitBigDaddy", "classTraitBigDaddy.html", null ],
           [ "TraitCitizen", "classTraitCitizen.html", [
-            [ "TraitAnimalTamer", "classTraitAnimalTamer.html", null ],
             [ "TraitBanker", "classTraitBanker.html", null ],
             [ "TraitBard", "classTraitBard.html", null ],
             [ "TraitBitch", "classTraitBitch.html", null ],
@@ -1569,6 +1570,7 @@ var hierarchy =
               [ "TraitElder", "classTraitElder.html", null ]
             ] ],
             [ "TraitMerchant", "classTraitMerchant.html", [
+              [ "TraitAnimalTamer", "classTraitAnimalTamer.html", null ],
               [ "TraitMerchantBlack", "classTraitMerchantBlack.html", null ],
               [ "TraitMerchantBook", "classTraitMerchantBook.html", null ],
               [ "TraitMerchantBooze", "classTraitMerchantBooze.html", [

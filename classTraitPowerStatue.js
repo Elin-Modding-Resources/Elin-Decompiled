@@ -5,6 +5,7 @@ var classTraitPowerStatue =
     [ "IsImplemented", "classTraitPowerStatue.html#a7aac436c696a83cff1b994329c8b2f18", null ],
     [ "OnCreate", "classTraitPowerStatue.html#afa6921051a3a49015d9b43a3a3cddae3", null ],
     [ "OnUse", "classTraitPowerStatue.html#acd5f28e4b6d88497a973702d694cb90c", null ],
+    [ "SetName", "classTraitPowerStatue.html#a8d8656e9c2e93d64771c56087f5fff38", null ],
     [ "CanBeDestroyed", "classTraitPowerStatue.html#a81a166b19fd010b11d7644172e5abf07", null ],
     [ "CanBeStolen", "classTraitPowerStatue.html#ad4219ceac075b2bef9fd98c90c22f651", null ],
     [ "CanBeTeleported", "classTraitPowerStatue.html#a9619a7baffa3cd4a949fb97c7975dd39", null ],

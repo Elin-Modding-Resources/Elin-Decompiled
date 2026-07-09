@@ -13,6 +13,7 @@ var classELEMENT =
     [ "difficulty", "classELEMENT.html#a6994fee334b3d3a5309d5684851856ab", null ],
     [ "effectRange", "classELEMENT.html#a22994009aebc7edbc84aa35d087490c2", null ],
     [ "fire", "classELEMENT.html#ac1adfd54b17d3dd2203ca9971d424aac", null ],
+    [ "forbidden", "classELEMENT.html#a2ed3363487c1946cd42249c343718376", null ],
     [ "growth", "classELEMENT.html#a277cff826dafcffed5daf64e4e437f22", null ],
     [ "hardness", "classELEMENT.html#aef574d4349cce7fbf53b743ccb4257cc", null ],
     [ "heat", "classELEMENT.html#a7225c50f90f78234c8cd393a26d6b86c", null ],

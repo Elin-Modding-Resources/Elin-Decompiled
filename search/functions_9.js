@@ -58,8 +58,8 @@ var searchData=
   ['headerislistof_55',['HeaderIsListOf',['../classLayer.html#a888fe6a9c60541bb89a6104c8993ff74',1,'Layer.HeaderIsListOf()'],['../classLayerPeople.html#adc03fb5c8a5d0661799c257374d1cd54',1,'LayerPeople.HeaderIsListOf()'],['../classLayerLocation.html#acbd4dd130c9d10c97fede0c1697b206e',1,'LayerLocation.HeaderIsListOf()'],['../classLayerInventory.html#ab8dcee55eca64ed2846ffba3d0f0025e',1,'LayerInventory.HeaderIsListOf()'],['../classLayerJournal.html#a9de89428ad5def5936a9b5d8ca79cd89',1,'LayerJournal.HeaderIsListOf()'],['../classLayerFactions.html#a13f2e69d9db6ecb11779aa862f9ba152',1,'LayerFactions.HeaderIsListOf()'],['../classLayerHome.html#a3a6b79defd203e8ac86debb561e58185',1,'LayerHome.HeaderIsListOf()']]],
   ['heal_56',['Heal',['../classCalcMoney.html#a641ab2f690f502c0693cf0525ed32fd9',1,'CalcMoney']]],
   ['healall_57',['HealAll',['../classChara.html#a5b6acfb55cd01e0038b38a63ee4e10a7',1,'Chara']]],
-  ['healhp_58',['HealHP',['../classCard.html#a4b66715cfdd6e3a9835fb6806a8ef9be',1,'Card']]],
-  ['healhphost_59',['HealHPHost',['../classCard.html#a46101186b77dc490ec71020dbfdaa762',1,'Card']]],
+  ['healhp_58',['HealHP',['../classCard.html#a90d70df5826806c75756f4fd4d906c97',1,'Card']]],
+  ['healhphost_59',['HealHPHost',['../classCard.html#a23bb433e122c316681ab8cd3f3eda4db',1,'Card']]],
   ['hextocolor_60',['HexToColor',['../classEmpyrean_1_1Utils_1_1Colorist.html#a0f1abea24beaa3c2e3ed4df91a54231d',1,'Empyrean::Utils::Colorist']]],
   ['hide_61',['Hide',['../classUI.html#ad4e115676f0ce8e488ac20981251be22',1,'UI.Hide()'],['../classWidgetMouseover.html#a841eddd3fb7a8aaceca7a93b0120dd84',1,'WidgetMouseover.Hide()'],['../classWidgetManager.html#a104c61d0007a55979d1c8e942bc8a737',1,'WidgetManager.Hide()'],['../classWidgetInspector.html#ab46ff3dc9774951947b6ead8f3208468',1,'WidgetInspector.Hide()'],['../classUIInspector.html#ac7d4003ee1350edfd349f44e216f545e',1,'UIInspector.Hide()'],['../classUIContextMenu.html#ab93ef9591bfe1425601a9aaab7c94132',1,'UIContextMenu.Hide()'],['../classEmbarkActor.html#a9d017aef7af74ec4f4534f33cf6bb32c',1,'EmbarkActor.Hide()'],['../classDramaManager.html#a1f945a734f73f4ba1128f7f904b46b1a',1,'DramaManager.Hide()'],['../classBuildMenu.html#a3f89afb39b935cba4f9825df68bfdd9c',1,'BuildMenu.Hide()']]],
   ['hidecaret_62',['HideCaret',['../classUiInputField.html#a62f2c3353274ad72c8385c2d183225a9',1,'UiInputField']]],
@@ -94,7 +94,7 @@ var searchData=
   ['hsltohsv_91',['HSLtoHSV',['../classEmpyrean_1_1Utils_1_1Colorist.html#aa3e114374a3dc5fa74dcf7f9278ae658',1,'Empyrean::Utils::Colorist']]],
   ['hsvcolor_92',['HSVColor',['../structHSVColor.html#a5c768ddf18c6019c357d254af364f6d9',1,'HSVColor']]],
   ['hsvtohsl_93',['HSVtoHSL',['../classEmpyrean_1_1Utils_1_1Colorist.html#a8fa34023600268fcdb4b5d85b1bfd760',1,'Empyrean::Utils::Colorist']]],
-  ['hsvtorgb_94',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
-  ['hsvtorgb_95',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_94',['HSVtoRGB',['../classEmpyrean_1_1Utils_1_1Colorist.html#a337d8613f8ddc0bb8d3a1b077c0f45e2',1,'Empyrean.Utils.Colorist.HSVtoRGB(HSVColor hsv)'],['../classEmpyrean_1_1Utils_1_1Colorist.html#a63d2d38bafa77f1f99f1ef049564af70',1,'Empyrean.Utils.Colorist.HSVtoRGB(float hue, float saturation, float value, float alpha=1f)']]],
+  ['hsvtorgb_95',['HSVToRGB',['../classColorUtil.html#adbe97b300969ed0e34892618bb8ae552',1,'ColorUtil']]],
   ['hyphenate_96',['Hyphenate',['../classUIItem.html#a978123034ebe56fe7a9efac366812b9f',1,'UIItem']]]
 ];

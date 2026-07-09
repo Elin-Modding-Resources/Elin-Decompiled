@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.324 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.326 Nightly</span>
    </div>
   </td>
  </tr>
@@ -276,8 +276,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a743d6d3ff9afabf8ec22a96581f75ceb inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68b9f68b3f4f709da8a5a6bb579ce250 inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a68b9f68b3f4f709da8a5a6bb579ce250">HasField</a> (int idEle)</td></tr>
 <tr class="separator:a68b9f68b3f4f709da8a5a6bb579ce250 inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb27193c931c91b95652a6fb3e58c1c1 inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#aeb27193c931c91b95652a6fb3e58c1c1">SetFieldEffect</a> (int idEle, int a)</td></tr>
-<tr class="separator:aeb27193c931c91b95652a6fb3e58c1c1 inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af480fbe15ab21f93a4ee0731a48f14d9 inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#af480fbe15ab21f93a4ee0731a48f14d9">SetFieldEffect</a> (int idEle, int a, int duration=0)</td></tr>
+<tr class="separator:af480fbe15ab21f93a4ee0731a48f14d9 inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5bed594639ef36c3f8cffc4fd812043 inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#ad5bed594639ef36c3f8cffc4fd812043">RemoveFieldEffect</a> (int idEle)</td></tr>
+<tr class="separator:ad5bed594639ef36c3f8cffc4fd812043 inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a145ba64add88a8c861965b6480825e6a inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a145ba64add88a8c861965b6480825e6a">RefreshElectricity</a> ()</td></tr>
 <tr class="separator:a145ba64add88a8c861965b6480825e6a inherit pub_methods_classZone"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d5bebfd386cd803662138b40bc3053a inherit pub_methods_classZone"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZone.html#a6d5bebfd386cd803662138b40bc3053a">GetElectricity</a> (bool cost=false)</td></tr>
@@ -1022,7 +1024,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
 <div class="line"><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_property" href="classZone__DungeonDead.html#a3db05b258c77a8884ef9593d569471d7">IsBossLv</a>)</div>
 <div class="line"><span class="lineno">   32</span>        {</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_function" href="classZone.html#aeb27193c931c91b95652a6fb3e58c1c1">SetFieldEffect</a>(10000, 1);</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_function" href="classZone.html#af480fbe15ab21f93a4ee0731a48f14d9">SetFieldEffect</a>(10000, 1);</div>
 <div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a012d65ced13d1cf54c6776a5d29df3c3">game</a>.<a class="code hl_variable" href="classGame.html#ad1aed3f11c20f40bba80db23b7aea9a1">quests</a>.<a class="code hl_function" href="classQuestManager.html#a74a0969213ef6505cac5c065012486ce">GetPhase</a>&lt;<a class="code hl_class" href="classQuestIntoDarkness.html">QuestIntoDarkness</a>&gt;() == 4)</div>
 <div class="line"><span class="lineno">   35</span>            {</div>
 <div class="line"><span class="lineno">   36</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a4d6bdfd2b69bc49a9b29f1199877ebd9">_zone</a>.<a class="code hl_function" href="classZone.html#a8162581383366357abed295b18ea2fb8">SetBGM</a>(1);</div>
@@ -1036,10 +1038,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassQuestIntoDarkness_html"><div class="ttname"><a href="classQuestIntoDarkness.html">QuestIntoDarkness</a></div><div class="ttdef"><b>Definition:</b> <a href="QuestIntoDarkness_8cs_source.html#l00001">QuestIntoDarkness.cs:2</a></div></div>
 <div class="ttc" id="aclassQuestManager_html_a74a0969213ef6505cac5c065012486ce"><div class="ttname"><a href="classQuestManager.html#a74a0969213ef6505cac5c065012486ce">QuestManager.GetPhase</a></div><div class="ttdeci">int GetPhase(string id)</div><div class="ttdef"><b>Definition:</b> <a href="QuestManager_8cs_source.html#l00169">QuestManager.cs:169</a></div></div>
 <div class="ttc" id="aclassZone__DungeonDead_html_a3db05b258c77a8884ef9593d569471d7"><div class="ttname"><a href="classZone__DungeonDead.html#a3db05b258c77a8884ef9593d569471d7">Zone_DungeonDead.IsBossLv</a></div><div class="ttdeci">bool IsBossLv</div><div class="ttdef"><b>Definition:</b> <a href="Zone__DungeonDead_8cs_source.html#l00009">Zone_DungeonDead.cs:9</a></div></div>
-<div class="ttc" id="aclassZone_html_a8162581383366357abed295b18ea2fb8"><div class="ttname"><a href="classZone.html#a8162581383366357abed295b18ea2fb8">Zone.SetBGM</a></div><div class="ttdeci">void SetBGM(List&lt; int &gt; ids, bool refresh=true, float fadeDuration=0f)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03145">Zone.cs:3145</a></div></div>
-<div class="ttc" id="aclassZone_html_aeb27193c931c91b95652a6fb3e58c1c1"><div class="ttname"><a href="classZone.html#aeb27193c931c91b95652a6fb3e58c1c1">Zone.SetFieldEffect</a></div><div class="ttdeci">void SetFieldEffect(int idEle, int a)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03070">Zone.cs:3070</a></div></div>
+<div class="ttc" id="aclassZone_html_a8162581383366357abed295b18ea2fb8"><div class="ttname"><a href="classZone.html#a8162581383366357abed295b18ea2fb8">Zone.SetBGM</a></div><div class="ttdeci">void SetBGM(List&lt; int &gt; ids, bool refresh=true, float fadeDuration=0f)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03154">Zone.cs:3154</a></div></div>
+<div class="ttc" id="aclassZone_html_af480fbe15ab21f93a4ee0731a48f14d9"><div class="ttname"><a href="classZone.html#af480fbe15ab21f93a4ee0731a48f14d9">Zone.SetFieldEffect</a></div><div class="ttdeci">void SetFieldEffect(int idEle, int a, int duration=0)</div><div class="ttdef"><b>Definition:</b> <a href="Zone_8cs_source.html#l03074">Zone.cs:3074</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00021">EClass._zone</a>, <a class="el" href="EClass_8cs_source.html#l00009">EClass.game</a>, <a class="el" href="QuestManager_8cs_source.html#l00169">QuestManager.GetPhase()</a>, <a class="el" href="Zone__DungeonDead_8cs_source.html#l00009">IsBossLv</a>, <a class="el" href="Game_8cs_source.html#l00183">Game.quests</a>, <a class="el" href="Zone_8cs_source.html#l03145">Zone.SetBGM()</a>, and <a class="el" href="Zone_8cs_source.html#l03070">Zone.SetFieldEffect()</a>.</p>
+<p class="reference">References <a class="el" href="EClass_8cs_source.html#l00021">EClass._zone</a>, <a class="el" href="EClass_8cs_source.html#l00009">EClass.game</a>, <a class="el" href="QuestManager_8cs_source.html#l00169">QuestManager.GetPhase()</a>, <a class="el" href="Zone__DungeonDead_8cs_source.html#l00009">IsBossLv</a>, <a class="el" href="Game_8cs_source.html#l00183">Game.quests</a>, <a class="el" href="Zone_8cs_source.html#l03154">Zone.SetBGM()</a>, and <a class="el" href="Zone_8cs_source.html#l03074">Zone.SetFieldEffect()</a>.</p>
 
 </div>
 </div>

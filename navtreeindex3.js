@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"CameraSupport_8cs_source.html":[2,0,0,253],
 "CanvasExt_8cs.html":[2,0,0,3,21],
 "CanvasExt_8cs_source.html":[2,0,0,3,21],
 "CardActor_8cs.html":[2,0,0,255],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "ConTransmuteCat_8cs.html":[2,0,0,394],
 "ConTransmuteCat_8cs_source.html":[2,0,0,394],
 "ConTransmuteHuman_8cs.html":[2,0,0,395],
-"ConTransmuteHuman_8cs_source.html":[2,0,0,395],
-"ConTransmuteMimic_8cs.html":[2,0,0,396]
+"ConTransmuteHuman_8cs_source.html":[2,0,0,395]
 };

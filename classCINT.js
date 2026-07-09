@@ -29,6 +29,8 @@ var classCINT =
     [ "disarmFail", "classCINT.html#a71582ba1818dc9558e173dfa86437ed3", null ],
     [ "dyeMat", "classCINT.html#a63a74c3c3a0f07360db7f17e0df0e170", null ],
     [ "equippedSlot", "classCINT.html#a71db5e06600041f69f744821a8c194d2", null ],
+    [ "favCat", "classCINT.html#a159f83ab71fb48371f308cc205dea06f", null ],
+    [ "favFood", "classCINT.html#a1170128bd76258411a5e433b694c62b4", null ],
     [ "fiamaPet", "classCINT.html#a08f9ed82073374be60e7d4eba9a312d4", null ],
     [ "fixedValue", "classCINT.html#abca89486d90b93aa65c5451a0e47da79", null ],
     [ "fur", "classCINT.html#a0e5ef825d3c97fbd444825027b143d0e", null ],

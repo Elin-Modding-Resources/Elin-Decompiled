@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"classAI__Eat.html#af360d70637e48fa709f2ffeaa53b67d6":[1,0,90,3],
+"classAI__Eat.html#af542285e8d3e367ad24d37a23dfb3456":[1,0,90,2],
+"classAI__Equip.html":[1,0,91],
+"classAI__Equip.html#a2e280f2083c06fb41296482d359e8146":[1,0,91,1],
+"classAI__Equip.html#a6ca311ba9d26281a3a0bc18bf4ab1fa1":[1,0,91,0],
+"classAI__Farm.html":[1,0,92],
 "classAI__Farm.html#a0240662c3daa782b2184f6fc53e65b44":[1,0,92,4],
 "classAI__Farm.html#a19bec2fea0ddb2d9105c0149f2a24306":[1,0,92,1],
 "classAI__Farm.html#a3c47ef55ccf791900c1dcda0c74a6800":[1,0,92,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "classAI__ReleaseHeld.html#ac3307266cdb37eadc1bf5db1d14b236c":[1,0,116,0],
 "classAI__SelfHarm.html":[1,0,117],
 "classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f":[1,0,117,0],
-"classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912":[1,0,117,1],
-"classAI__SelfHarm.html#a9fcbd9bba7a7f5b4c5ad6a489bf9fd7d":[1,0,117,2],
-"classAI__Shear.html":[1,0,118],
-"classAI__Shear.html#a4ab4cab7cdd941b674944fe2ab02c27c":[1,0,118,5],
-"classAI__Shear.html#a4ee49ecd9ffa4e4a7f78ce90bca5e57b":[1,0,118,6],
-"classAI__Shear.html#a7a248f30aa4fd497a644edfbed45f538":[1,0,118,4],
-"classAI__Shear.html#a9931fc56ba6e57e83eaceaec5978fa06":[1,0,118,1]
+"classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912":[1,0,117,1]
 };
