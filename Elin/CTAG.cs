@@ -55,5 +55,6 @@ public enum CTAG
 	alwaysDropCorpse,
 	allowDevour,
 	noRide,
-	ride
+	ride,
+	allowIngredient
 }

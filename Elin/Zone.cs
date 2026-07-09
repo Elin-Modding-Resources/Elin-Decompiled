@@ -530,6 +530,10 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public Zone FindOrCreateLevel(int destLv, string subId = "")
 	{
+		if (destLv == base.lv)
+		{
+			return this;
+		}
 		Zone zone = FindZone(destLv);
 		if (zone != null)
 		{
@@ -1175,7 +1179,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			base.visitCount++;
 		}
 		base.version = EClass.core.version.GetInt();
-		if (fieldElements.dict.Count() > 0)
+		if (HasField(10000))
 		{
 			Tutorial.Reserve("field");
 		}
@@ -3067,9 +3071,14 @@ public class Zone : Spatial, ICardParent, IInspect
 		return fieldElements.Has(idEle);
 	}
 
-	public void SetFieldEffect(int idEle, int a)
+	public void SetFieldEffect(int idEle, int a, int duration = 0)
 	{
-		fieldElements.SetBase(idEle, a);
+		fieldElements.SetBase(idEle, a, duration);
+	}
+
+	public void RemoveFieldEffect(int idEle)
+	{
+		fieldElements.Remove(idEle);
 	}
 
 	public void RefreshElectricity()

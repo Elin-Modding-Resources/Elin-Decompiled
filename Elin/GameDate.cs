@@ -9,6 +9,8 @@ public class GameDate : Date
 
 	public const int minPerRound = 5;
 
+	private List<Element> _fieldEffectsToRemove = new List<Element>();
+
 	public void AdvanceSec(int a)
 	{
 		base.sec += a;
@@ -62,9 +64,28 @@ public class GameDate : Date
 			EClass.player.countNewline = 0;
 		}
 		EClass.screen.pcOrbit.OnChangeMin();
-		foreach (ZoneEvent item in EClass._zone.events.list)
+		if (EClass._zone.fieldElements.dict.Count > 0)
 		{
-			item.minElapsed += a;
+			_fieldEffectsToRemove.Clear();
+			foreach (Element value in EClass._zone.fieldElements.dict.Values)
+			{
+				if (value.vPotential > 0)
+				{
+					value.vPotential--;
+					if (value.vPotential == 0)
+					{
+						_fieldEffectsToRemove.Add(value);
+					}
+				}
+			}
+			foreach (Element item in _fieldEffectsToRemove)
+			{
+				EClass._zone.RemoveFieldEffect(item.id);
+			}
+		}
+		foreach (ZoneEvent item2 in EClass._zone.events.list)
+		{
+			item2.minElapsed += a;
 		}
 	}
 

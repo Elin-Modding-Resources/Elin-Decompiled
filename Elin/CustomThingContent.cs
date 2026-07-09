@@ -144,7 +144,10 @@ public class CustomThingContent : CustomSourceContent
 			int value3 = value2;
 			thing.SetInt(text2, value3);
 		}
-		thing.ChangeRarity(rarity);
+		if (thing.source.ContainsTag("forceRarity"))
+		{
+			thing.ChangeRarity(rarity);
+		}
 		if (noCopy)
 		{
 			EClass.core.actionsNextFrame.Add(delegate
@@ -307,6 +310,7 @@ public class CustomThingContent : CustomSourceContent
 		{
 			thing.SetStr("price_calc_override", priceCalc);
 		}
+		thing.ChangeRarity(rarity);
 		return thing;
 	}
 

@@ -7095,6 +7095,10 @@ public class Chara : Card, IPathfindWalker
 			if (source._tiles_snow.Length > 1)
 			{
 				int num = ((base.idSkin != 0 || source.staticSkin) ? base.idSkin : (base.uid % source._tiles_snow.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0)));
+				if (num < 0)
+				{
+					num = 0;
+				}
 				p.tile = source._tiles_snow[(num < source._tiles_snow.Length) ? num : 0] * ((!flipX) ? 1 : (-1));
 			}
 			else
@@ -7105,6 +7109,10 @@ public class Chara : Card, IPathfindWalker
 		else if (sourceCard._tiles.Length > 1)
 		{
 			int num2 = ((base.idSkin != 0 || source.staticSkin) ? base.idSkin : (base.uid % sourceCard._tiles.Length / 2 * 2 + ((!base.IsMale) ? 1 : 0)));
+			if (num2 < 0)
+			{
+				num2 = 0;
+			}
 			p.tile = sourceCard._tiles[(num2 >= 0 && num2 < sourceCard._tiles.Length) ? num2 : 0] * ((!flipX) ? 1 : (-1));
 		}
 		else
@@ -8442,6 +8450,11 @@ public class Chara : Card, IPathfindWalker
 				return value;
 			}
 		}
+		string str = GetStr(72);
+		if (!str.IsEmpty() && EClass.sources.things.map[str] != null)
+		{
+			return EClass.sources.things.map[str];
+		}
 		if (_listFavFood.Count == 0)
 		{
 			foreach (SourceThing.Row row in EClass.sources.things.rows)
@@ -8469,6 +8482,11 @@ public class Chara : Card, IPathfindWalker
 			{
 				return value;
 			}
+		}
+		string str = GetStr(73);
+		if (!str.IsEmpty() && EClass.sources.categories.map[str] != null)
+		{
+			return EClass.sources.categories.map[str];
 		}
 		SourceCategory.Row r = null;
 		if (_listFavCat.Count == 0)

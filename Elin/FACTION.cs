@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class FACTION
 {
-	public const int bfRuin = 3702;
-
 	public const int bfForest = 3601;
 
 	public const int bfSnow = 3602;
@@ -19,6 +17,8 @@ public class FACTION
 	public const int bfUndersea = 3606;
 
 	public const int bfFertile = 3700;
+
+	public const int bfRuin = 3702;
 
 	public const int bfPlain = 3600;
 
@@ -112,7 +112,7 @@ public class FACTION
 
 	public static readonly int[] IDS = new int[53]
 	{
-		3702, 3601, 3602, 3603, 3604, 3701, 3606, 3700, 3600, 3605,
+		3601, 3602, 3603, 3604, 3701, 3606, 3700, 3702, 3600, 3605,
 		3500, 2119, 2206, 2205, 2204, 2202, 2201, 2200, 2116, 2120,
 		2118, 2117, 3703, 2207, 3704, 4002, 3706, 2115, 4006, 4005,
 		4004, 4003, 4001, 4000, 3900, 3805, 3804, 3803, 3802, 3801,

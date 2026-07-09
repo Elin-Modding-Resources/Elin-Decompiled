@@ -109,6 +109,7 @@ public class SourceManager : EMono
 
 	public void OnChangeLang()
 	{
+		InitLang();
 	}
 
 	public void Init()

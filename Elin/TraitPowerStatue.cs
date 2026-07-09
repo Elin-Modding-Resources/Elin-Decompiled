@@ -77,4 +77,12 @@ public class TraitPowerStatue : TraitItem
 	{
 		return true;
 	}
+
+	public override void SetName(ref string s)
+	{
+		if (!(this is TraitGodStatue) && !owner.isOn)
+		{
+			s = s + Lang.space + "empty".lang();
+		}
+	}
 }

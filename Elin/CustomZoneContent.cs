@@ -50,8 +50,9 @@ public class CustomZoneContent : CustomSourceContent
 		Zone zone = ModUtil.FindZoneByFullName(parent);
 		if (zone != null)
 		{
-			Spatial arg = SpatialGen.Create(base.SourceId, zone, register: true);
-			Debug.Log($"#mod-content spawned custom zone {arg}");
+			Spatial spatial = SpatialGen.Create(base.SourceId, zone, register: true);
+			EClass.game.world.region.elomap.SetZone(spatial.x, spatial.y, spatial as Zone);
+			Debug.Log($"#mod-content spawned custom zone {spatial}");
 			return;
 		}
 		ModUtil.LogModError("source zone row '" + base.SourceId + "' has invalid addMap parent '" + parent + "'", base.Owner);

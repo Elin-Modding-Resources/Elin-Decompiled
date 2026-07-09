@@ -50,8 +50,8 @@ public class CustomElementContent : CustomSourceContent
 
 	public override void OnGameLoad(GameIOContext context)
 	{
-		SourceElement.Row row = EClass.sources.elements.alias[base.SourceId];
-		if (addOnLoad && !EClass.pc.HasElement(base.SourceId))
+		SourceElement.Row row = EClass.sources.elements.alias.TryGetValue(base.SourceId);
+		if (row != null && addOnLoad && !EClass.pc.HasElement(base.SourceId))
 		{
 			switch (row.group)
 			{

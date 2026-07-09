@@ -35,7 +35,7 @@ public class ConTransmute : BaseBuff
 
 	public void Change()
 	{
-		if (owner.ai is GoalCombat { abilities: not null } goalCombat)
+		if (owner.ai is GoalCombat { IsRunning: not false, abilities: not null } goalCombat)
 		{
 			goalCombat.BuildAbilityList();
 		}

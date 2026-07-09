@@ -355,7 +355,7 @@ public class Ability : Act
 			}
 		}
 		a = EClass.curve(a, 400, 100);
-		if (this is Spell)
+		if (this is Spell || this is Song)
 		{
 			a = a * Mathf.Max(100 + c.Evalue(411) - c.Evalue(93), 1) / 100;
 		}
@@ -363,6 +363,18 @@ public class Ability : Act
 		{
 			a = a * Mathf.Max(100 + c.Evalue(411), 1) / 100;
 		}
+		if (a > 214748364)
+		{
+			a = 214748364L;
+		}
+		return (int)a;
+	}
+
+	public static int GetSongPower(Chara c, int idSkill, int power)
+	{
+		long a = MathEx.Max(c.LV * 6 + 30, (long)c.Evalue(idSkill) * 4L + 30);
+		a = EClass.curve(a, 400, 100);
+		a = a * Mathf.Max(100 + c.Evalue(411) - c.Evalue(93), 1) / 100;
 		if (a > 214748364)
 		{
 			a = 214748364L;

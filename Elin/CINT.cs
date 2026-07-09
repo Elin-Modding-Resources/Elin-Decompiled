@@ -114,6 +114,10 @@ public class CINT
 
 	public const int dateLunchGift = 71;
 
+	public const int favFood = 72;
+
+	public const int favCat = 73;
+
 	public const int fiamaPet = 100;
 
 	public const int noRestock = 101;

@@ -170,6 +170,11 @@ public class Affinity : EClass
 		{
 			CC.Talk("thanks2");
 		}
+		if (flag3 || flag2)
+		{
+			CC.SetStr(72, CC.GetFavFood().id);
+			CC.SetStr(73, CC.GetFavCat().id);
+		}
 		CC.ModAffinity(EClass.pc, num);
 		return result;
 	}

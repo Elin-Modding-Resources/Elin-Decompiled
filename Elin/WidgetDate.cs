@@ -156,7 +156,7 @@ public class WidgetDate : Widget
 		gridFieldEffect.childAlignment = (flag ? TextAnchor.UpperRight : TextAnchor.UpperLeft);
 		foreach (UIButton componentsInDirectChild in gridFieldEffect.GetComponentsInDirectChildren<UIButton>())
 		{
-			if (!(componentsInDirectChild.refObj is FieldEffect fieldEffect) || fieldEffect.owner != EMono._zone.fieldElements || fieldEffect.Value == 9)
+			if (!(componentsInDirectChild.refObj is FieldEffect fieldEffect) || fieldEffect.owner != EMono._zone.fieldElements || fieldEffect.Value == 0)
 			{
 				UnityEngine.Object.DestroyImmediate(componentsInDirectChild.gameObject);
 			}

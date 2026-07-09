@@ -414,7 +414,7 @@ public class FoodEffect : EClass
 			}
 			string[] foodEffect = value.source.foodEffect;
 			int id = value.id;
-			float num = effP * (float)value.Value;
+			float num = effP * (float)Mathf.Min(value.Value, 10000);
 			if (value.source.category == "food" && c.IsPC)
 			{
 				bool flag2 = num >= 0f;

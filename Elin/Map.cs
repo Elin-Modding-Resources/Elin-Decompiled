@@ -978,6 +978,7 @@ public class Map : MapBounds, IPathfindGrid
 		cell._floorMat = (byte)idMat;
 		cell._floor = (byte)idFloor;
 		cell.floorDir = dir;
+		cell.isWatered = false;
 		Critter.RebuildCritter(cell);
 		RefreshNeighborTiles(x, z);
 	}

@@ -20,6 +20,12 @@ public class SourceDeco : SourceDataInt<SourceDeco.Row>
 
 		public float autotileBrightness;
 
+		[NonSerialized]
+		public string name_L;
+
+		[NonSerialized]
+		public string detail_L;
+
 		public override bool UseAlias => true;
 
 		public override string GetAlias => alias;

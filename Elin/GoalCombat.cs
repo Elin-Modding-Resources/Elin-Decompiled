@@ -1060,6 +1060,17 @@ public class GoalCombat : Goal
 				return true;
 			}
 		}
+		if (owner != null && owner.IsAliveInCurrentZone && owner.CanDestroyPath() && (!owner.CanSeeLos(tc) || !owner.CanInteractTo(tc.pos)) && tc.Dist(owner) == 1 && tc.pos.HasBridge != owner.pos.HasBridge)
+		{
+			if (tc.pos.HasBridge)
+			{
+				EClass._map.SetBridge(tc.pos.x, tc.pos.z, 0, 0, 0, 0, 0);
+			}
+			else
+			{
+				EClass._map.SetBridge(owner.pos.x, owner.pos.z, 0, 0, 0, 0, 0);
+			}
+		}
 		if (EClass.debug.logCombat)
 		{
 			Debug.Log(owner.Name + "/" + abilities.Count);

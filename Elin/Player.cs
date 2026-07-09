@@ -1615,7 +1615,7 @@ public class Player : EClass
 		List<SourceElement.Row> list2 = new List<SourceElement.Row>();
 		foreach (SourceElement.Row row2 in EClass.sources.elements.rows)
 		{
-			if (row2.categorySub == "eleAttack" && !row2.tag.Contains("hidden") && ((EClass.pc.HasElement(1402) && Guild.Mage.relation.rank >= 6 && row2.id != 925 && row2.id != 926) || !row2.tag.Contains("high") || EClass.pc.job.domain.Contains(row2.id)))
+			if (row2.categorySub == "eleAttack" && !row2.tag.Contains("hidden") && ((EClass.pc.HasElement(1402) && Guild.Mage.relation.rank >= 6 && row2.id != 925 && row2.id != 926 && row2.id != 927) || !row2.tag.Contains("high") || EClass.pc.job.domain.Contains(row2.id)))
 			{
 				list2.Add(row2);
 			}

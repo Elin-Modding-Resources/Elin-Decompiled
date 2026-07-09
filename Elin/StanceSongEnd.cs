@@ -6,6 +6,10 @@ public class StanceSongEnd : BaseSong
 
 	public override void TickSong()
 	{
+		if (owner.IsPCFactionOrMinion && EClass._zone.isPeace)
+		{
+			return;
+		}
 		foreach (Chara item in owner.pos.ListCharasInRadius(owner, 4, (Chara c) => !c.IsDeadOrSleeping && c.IsHostile(owner)))
 		{
 			if (owner == null || !owner.ExistsOnMap)

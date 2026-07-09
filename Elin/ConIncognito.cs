@@ -2,12 +2,19 @@ public class ConIncognito : BaseBuff
 {
 	public override void OnStart()
 	{
-		EClass._zone.ResetHostility();
-		EClass._zone.RefreshCriminal();
+		if (!EClass._zone.HasField(10002))
+		{
+			EClass._zone.ResetHostility();
+			EClass._zone.RefreshCriminal();
+			EClass._zone.SetFieldEffect(10002, 1, 20);
+		}
 	}
 
 	public override void OnRemoved()
 	{
-		EClass._zone.RefreshCriminal();
+		if (!EClass._zone.HasField(10002))
+		{
+			EClass._zone.RefreshCriminal();
+		}
 	}
 }

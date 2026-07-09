@@ -16,4 +16,14 @@ public class GrowSystemWeed : GrowSystem
 		PopHarvest(c ?? EClass.pc, ThingGen.Create("grass", EClass.sources.materials.alias["grass"].id), EClass.rnd(5));
 		base.OnMineObj(c);
 	}
+
+	public override void OnSetObj()
+	{
+		GrowSystem.cell.objDir = EClass.rnd(source.tiles.Length);
+	}
+
+	public override int GetStageTile()
+	{
+		return source._tiles[GrowSystem.cell.objDir % source._tiles.Length] + GrowSystem.currentStage.idx - 2;
+	}
 }

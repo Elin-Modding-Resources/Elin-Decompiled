@@ -54,5 +54,6 @@ public enum ShopType
 	KeeperOfGarden,
 	TravelMerchant,
 	TravelMerchant2,
-	CustomContent
+	CustomContent,
+	AnimalGoods
 }

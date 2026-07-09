@@ -2661,7 +2661,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public bool IsExcludeFromCraft(Recipe.Ingredient ing)
 	{
-		if ((IsUnique && ing.id != id && !ing.idOther.Contains(id)) || c_isImportant)
+		if ((IsUnique && !HasTag(CTAG.allowIngredient) && ing.id != id && !ing.idOther.Contains(id)) || c_isImportant)
 		{
 			return true;
 		}
@@ -4162,7 +4162,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		return (int)sum;
 	}
 
-	public virtual void HealHPHost(int a, HealSource origin = HealSource.None)
+	public virtual void HealHPHost(long a, HealSource origin = HealSource.None)
 	{
 		if (isChara)
 		{
@@ -4178,21 +4178,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		HealHP(a, origin);
 	}
 
-	public virtual void HealHP(int a, HealSource origin = HealSource.None)
+	public virtual void HealHP(long a, HealSource origin = HealSource.None)
 	{
-		long num = a;
 		if (origin == HealSource.Magic)
 		{
-			num = (long)a * (long)Mathf.Max(100 - Evalue(93), 1) / 100;
+			a = a * Mathf.Max(100 - Evalue(93), 1) / 100;
 		}
-		if (num > 100000000)
-		{
-			num = 100000000L;
-		}
-		hp += (int)num;
-		if (hp > MaxHP)
+		if (a + hp >= MaxHP)
 		{
 			hp = MaxHP;
+		}
+		else
+		{
+			hp += (int)a;
 		}
 		switch (origin)
 		{
@@ -4291,6 +4289,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					{
 						Say("wall_bond", chara3, this);
 						chara3.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
+						origin?.Chara?.DoHostileAction(chara3);
 						return;
 					}
 				}
@@ -4306,10 +4305,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						{
 							int num = chara4.Evalue(1241);
 							int num2 = chara4.Evalue(438);
-							if ((num != 0 || num2 != 0) && !chara4.IsDisabled && !chara4.isRestrained && (!IsPCFactionOrMinion || chara4.IsPCFactionOrMinion) && (IsPCFactionOrMinion || !chara4.IsPCFactionOrMinion) && chara4.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || hp * 100 / MaxHP <= chara4.hp * 100 / chara4.MaxHP))
+							if ((num != 0 || num2 != 0) && !chara4.IsDisabled && !chara4.isRestrained && (!IsPCFactionOrMinion || chara4.IsPCFactionOrMinion) && (IsPCFactionOrMinion || !chara4.IsPCFactionOrMinion) && chara4.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || (long)hp * 100L / MaxHP <= (long)chara4.hp * 100L / chara4.MaxHP))
 							{
 								Say((num2 == 0) ? "wall_flesh" : "wall_knightly", chara4, this);
 								chara4.DamageHP(dmg * (100L + (long)((num2 > 0) ? (-10) : 0) + ((num > 0) ? 10 : 0)) / 100, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
+								origin?.Chara?.DoHostileAction(chara4);
 								return;
 							}
 						}
@@ -4604,7 +4604,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_10a8;
+							goto IL_1107;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4632,7 +4632,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_10a8;
+								goto IL_1107;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4650,8 +4650,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_10a8;
-		IL_10a8:
+		goto IL_1107;
+		IL_1107:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -5417,6 +5417,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			default:
 			{
 				string text = Chara.race.corpse[0];
+				if (id == "titan_iron")
+				{
+					text = "ingot";
+				}
 				bool num2 = text == "_meat";
 				int num3 = 10;
 				if (AI_Slaughter.slaughtering)
@@ -6380,6 +6384,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			return true;
 		}
 		if (HasElement(704))
+		{
+			return true;
+		}
+		if (HasElement(766))
 		{
 			return true;
 		}
@@ -7718,6 +7726,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (tier > 0)
 		{
 			num2 *= (float)(tier + 1);
+		}
+		if (num2 > 2.1474836E+09f)
+		{
+			return int.MaxValue;
 		}
 		return (int)num2;
 	}

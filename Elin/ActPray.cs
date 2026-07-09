@@ -108,7 +108,7 @@ public class ActPray : Act
 		static void Heal(Chara _c)
 		{
 			_c.PlayEffect("revive");
-			_c.HealHP(999999);
+			_c.HealHP(999999L);
 			_c.mana.Mod(999999);
 			_c.Cure(CureType.Prayer, 999999);
 			_c.RemoveCondition<ConDeathSentense>();

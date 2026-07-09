@@ -2394,14 +2394,14 @@ public class ActEffect : EClass
 			break;
 		}
 		case EffectId.HealComplete:
-			TC.HealHPHost(100000000, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
+			TC.HealHPHost(100000000L, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
 			TC.CureHost(CureType.HealComplete, power, state);
 			TC.Say("heal_heavy", TC);
 			break;
 		case EffectId.Heal:
 		case EffectId.JureHeal:
 		{
-			int num9 = Dice.Create((actRef.act != null && EClass.sources.calc.map.ContainsKey(actRef.act.ID)) ? actRef.act.ID : "SpHealLight", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
+			long num9 = Dice.Create((actRef.act != null && EClass.sources.calc.map.ContainsKey(actRef.act.ID)) ? actRef.act.ID : "SpHealLight", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
 			if (actRef.refThing != null)
 			{
 				num9 = num9 * (100 + actRef.refThing.Evalue(750) * 10) / 100;
@@ -2416,14 +2416,19 @@ public class ActEffect : EClass
 				EClass.game.religions.Healing.Talk("ability");
 				num9 += TC.MaxHP / 4;
 				TC.AddCondition<ConInvulnerable>();
+				TC.HealHP(num9, HealSource.Item);
+				TC.Cure(CureType.Heal, power, state);
 			}
-			TC.HealHPHost(num9, (actRef.refThing == null && id != EffectId.JureHeal) ? HealSource.Magic : HealSource.Item);
-			TC.CureHost(CureType.Heal, power, state);
+			else
+			{
+				TC.HealHPHost(num9, (actRef.refThing == null) ? HealSource.Magic : HealSource.Item);
+				TC.CureHost(CureType.Heal, power, state);
+			}
 			TC.Say((power >= 300) ? "heal_heavy" : "heal_light", TC);
 			break;
 		}
 		case EffectId.RemedyJure:
-			TC.HealHP(1000000, HealSource.Magic);
+			TC.HealHP(1000000L, HealSource.Magic);
 			TC.CureHost(CureType.Jure, power, state);
 			TC.Say("heal_jure", TC);
 			break;

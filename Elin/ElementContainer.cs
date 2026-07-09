@@ -410,6 +410,7 @@ public class ElementContainer : EClass
 				parent.ModLink(id, -element.Value);
 			}
 			dict.Remove(id);
+			element.owner = null;
 		}
 	}
 

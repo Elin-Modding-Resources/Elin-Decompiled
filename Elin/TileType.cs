@@ -359,7 +359,7 @@ public class TileType : EClass
 		}
 		if (pos.HasBlock)
 		{
-			if (!CanBuiltOnBlock && pos.sourceBlock.tileType.IsOccupyCell && !EClass.core.config.test.allowBlockOnItem)
+			if (!CanBuiltOnBlock && pos.sourceBlock.tileType.IsOccupyCell && (!EClass.core.config.test.allowBlockOnItem || !EClass._zone.IsPCFactionOrTent))
 			{
 				return HitResult.Invalid;
 			}
