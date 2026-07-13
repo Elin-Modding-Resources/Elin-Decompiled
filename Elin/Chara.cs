@@ -3374,7 +3374,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				AddExp(Mathf.Clamp((int)Mathf.Sqrt(base.ExpToNext / 100), 1, 1000));
 			}
-			if (pos.IsBlocked && EClass.rnd(2) == 0)
+			if (pos.IsBlocked && EClass.rnd(IsPC ? 2 : 20) == 0)
 			{
 				stamina.Mod(-1);
 			}
@@ -8869,7 +8869,7 @@ public class Chara : Card, IPathfindWalker
 		bool flag = false;
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (chara == attacker || chara.enemy == this || chara == this || chara.host != null || chara.IsDisabled || !chara.IsFriendOrAbove(this) || chara.conSuspend != null || (chara.IsPCParty && !IsPCParty) || (IsPCFaction && !chara.IsPCFaction) || (attacker.IsPCFactionOrMinion && chara.IsPCFactionOrMinion))
+			if (chara == attacker || chara.enemy == this || chara == this || chara.host != null || chara.IsDisabled || !chara.IsFriendOrAbove(this) || chara.conSuspend != null || (chara.IsPCParty && !IsPCParty) || (IsPCFaction && !chara.IsPCFaction) || (attacker.IsPCFactionOrMinion && chara.IsPCFactionOrMinion) || chara.HasElement(1277))
 			{
 				continue;
 			}

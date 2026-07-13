@@ -1042,7 +1042,7 @@ public class UIInventory : EMono
 			}
 			num++;
 		}
-		owner.Container.things.Sort(m, IsShop ? EMono.player.pref.sort_ascending_shop : (IsAdvSort ? window.saveData.sort_ascending : EMono.player.pref.sort_ascending));
+		owner.Container.things.Sort(m, IsShop ? EMono.player.pref.sort_ascending_shop : (IsAdvSort ? window.saveData.sort_ascending : EMono.player.pref.sort_ascending), owner.currency);
 		if (!UseGrid)
 		{
 			int num2 = 0;

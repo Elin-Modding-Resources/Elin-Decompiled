@@ -1,14 +1,12 @@
 public class MUTATION
 {
-	public const int mutationRegen = 1516;
+	public const int mutationDexN = 1515;
 
-	public const int mutationRegenN = 1517;
+	public const int mutationRegen = 1516;
 
 	public const int mutationSkin = 1510;
 
-	public const int etherGravity = 1550;
-
-	public const int mutationHair = 1532;
+	public const int mutationHairN = 1533;
 
 	public const int mutationBodyN = 1531;
 
@@ -20,11 +18,11 @@ public class MUTATION
 
 	public const int mutationColdN = 1527;
 
-	public const int etherUgly = 1551;
-
 	public const int mutationCold = 1526;
 
-	public const int mutationBrain = 1524;
+	public const int etherGravity = 1550;
+
+	public const int mutationBrainN = 1525;
 
 	public const int mutationChaN = 1523;
 
@@ -38,13 +36,15 @@ public class MUTATION
 
 	public const int mutationSpeed = 1518;
 
-	public const int mutationBrainN = 1525;
+	public const int mutationRegenN = 1517;
 
-	public const int etherFeet = 1552;
+	public const int mutationBrain = 1524;
 
-	public const int mutationHairN = 1533;
+	public const int etherUgly = 1551;
 
-	public const int etherWing = 1554;
+	public const int mutationHair = 1532;
+
+	public const int etherEye = 1553;
 
 	public const int mutationSkinN = 1511;
 
@@ -54,17 +54,15 @@ public class MUTATION
 
 	public const int mutationDex = 1514;
 
-	public const int mutationDexN = 1515;
+	public const int etherPoisonHand = 1565;
 
-	public const int etherEye = 1553;
-
-	public const int etherManaBattery = 1564;
+	public const int etherFeet = 1552;
 
 	public const int etherProvoke = 1563;
 
-	public const int etherPoisonHand = 1565;
+	public const int etherArmor = 1562;
 
-	public const int etherStupid = 1561;
+	public const int etherManaBattery = 1564;
 
 	public const int etherWeak = 1560;
 
@@ -78,14 +76,16 @@ public class MUTATION
 
 	public const int etherNeck = 1555;
 
-	public const int etherArmor = 1562;
+	public const int etherWing = 1554;
+
+	public const int etherStupid = 1561;
 
 	public static readonly int[] IDS = new int[40]
 	{
-		1516, 1517, 1510, 1550, 1532, 1531, 1530, 1529, 1528, 1527,
-		1551, 1526, 1524, 1523, 1522, 1521, 1520, 1519, 1518, 1525,
-		1552, 1533, 1554, 1511, 1512, 1513, 1514, 1515, 1553, 1564,
-		1563, 1565, 1561, 1560, 1559, 1558, 1557, 1556, 1555, 1562
+		1515, 1516, 1510, 1533, 1531, 1530, 1529, 1528, 1527, 1526,
+		1550, 1525, 1523, 1522, 1521, 1520, 1519, 1518, 1517, 1524,
+		1551, 1532, 1553, 1511, 1512, 1513, 1514, 1565, 1552, 1563,
+		1562, 1564, 1560, 1559, 1558, 1557, 1556, 1555, 1554, 1561
 	};
 }
 public class Mutation : Feat

@@ -47,6 +47,8 @@ public class TraitChara : Trait
 
 	public virtual bool CanJoinParty => true;
 
+	public virtual bool NeedBoutToJoin => true;
+
 	public virtual bool CanJoinPartyResident
 	{
 		get

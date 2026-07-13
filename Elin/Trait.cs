@@ -2088,6 +2088,7 @@ public class Trait : EClass
 					Add("dagger_fish", 1, 0).SetReplica(on: true);
 					NoRestockId("sword_zephir", 1, 0);
 					Add("sword_zephir", 1, 0).SetReplica(on: true);
+					Add("bed_shiawase", 1, 0).SetReplica(on: true);
 					Add("ribbon", 1, 0);
 					Add("helm_sage", 1, 0);
 					NoRestockId("wear_swim_danger", 1, 0);
@@ -2205,7 +2206,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Moyer:
 				{
-					for (int num14 = 1; num14 <= 22; num14++)
+					for (int num14 = 1; num14 <= 23; num14++)
 					{
 						AddAdvWeek(num14);
 					}
@@ -2520,15 +2521,15 @@ public class Trait : EClass
 					return thing3;
 				}
 				case ShopType.AnimalGoods:
-					if (EClass.rnd(2) == 0)
+					if (EClass.rnd(3) == 0)
 					{
 						return Create("saddle");
 					}
-					if (EClass.rnd(2) == 0)
+					if (EClass.rnd(3) == 0)
 					{
 						return Create("saddle_waist");
 					}
-					return Create("pasture");
+					return Create("pasture").SetNum(EClass.rndHalf(8));
 				case ShopType.Healer:
 				{
 					Thing thing2 = null;

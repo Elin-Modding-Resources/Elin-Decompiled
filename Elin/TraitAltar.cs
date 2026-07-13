@@ -129,6 +129,11 @@ public class TraitAltar : Trait
 			}
 			return;
 		}
+		if (t.HasElement(766) && !Deity.IsEyth)
+		{
+			Deity.PunishTakeOver(EClass.pc);
+			return;
+		}
 		if (!IsBranchAltar && EClass.pc.IsEyth && !EClass.pc.HasElement(1228))
 		{
 			EClass.pc.Say("god_offerEyth", owner, t);

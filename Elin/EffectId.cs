@@ -141,5 +141,6 @@ public enum EffectId
 	ChangeBiography = 317,
 	Degenerate = 318,
 	MassFear = 319,
-	Fuse = 320
+	Fuse = 320,
+	BlueDrag = 321
 }

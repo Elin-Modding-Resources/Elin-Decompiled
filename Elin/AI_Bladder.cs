@@ -15,6 +15,10 @@ public class AI_Bladder : AIAct
 			yield return Cancel();
 		}
 		yield return DoGoto(toilet.owner);
+		if (EClass._zone.IsPCFactionOrTent && toilet != null && toilet.owner.Dist(owner) == 1 && toilet.owner.sourceCard._origin == "bathtub")
+		{
+			owner._Move(toilet.owner.pos);
+		}
 		Progress_Custom seq = new Progress_Custom
 		{
 			onProgressBegin = delegate

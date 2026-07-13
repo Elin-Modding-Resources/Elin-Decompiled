@@ -1068,8 +1068,8 @@ public class CoreDebug : EScriptable
 		}
 		if (Input.GetKeyDown(KeyCode.F7))
 		{
-			MiniGame.Activate(MiniGame.Type.Scratch);
-			return;
+			EClass.pc.PlayEffect("punishment");
+			EClass.pc.elements.ModBase(79, key ? (-10) : 10);
 		}
 		if (Input.GetKeyDown(KeyCode.F8))
 		{

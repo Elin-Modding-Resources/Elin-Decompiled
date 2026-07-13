@@ -56,11 +56,11 @@ public static class CoreExtension
 		return text.TagColor(funcGood() ? skinColorProfile.textGood : ((funcBad != null && funcBad()) ? skinColorProfile.textBad : skinColorProfile.textDefault));
 	}
 
-	public static void Sort(this List<Thing> things, UIList.SortMode m, bool ascending = false)
+	public static void Sort(this List<Thing> things, UIList.SortMode m, bool ascending = false, CurrencyType currency = CurrencyType.Money)
 	{
 		foreach (Thing thing in things)
 		{
-			thing.SetSortVal(m);
+			thing.SetSortVal(m, currency);
 		}
 		things.Sort(delegate(Thing a, Thing b)
 		{

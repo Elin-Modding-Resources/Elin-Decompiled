@@ -10,6 +10,13 @@ public class Religion : EClass
 		Campaign
 	}
 
+	public enum PunishType
+	{
+		Wrath,
+		Takeover,
+		Pervert
+	}
+
 	[JsonProperty]
 	public int relation;
 
@@ -425,78 +432,95 @@ public class Religion : EClass
 
 	public virtual void Punish(Chara c)
 	{
-		if (c.mimicry != null)
-		{
-			c.mimicry.Kill();
-		}
-		Talk("wrath");
-		if (c.Evalue(1228) > 0)
-		{
-			c.SayNothingHappans();
-			return;
-		}
-		c.hp = 1;
-		c.mana.value = 1;
-		c.stamina.value = 1;
-		if (c.HasCondition<ConWrath>())
-		{
-			recentWrath = this;
-			c.DamageHP(999999L, AttackSource.Wrath);
-			recentWrath = null;
-			return;
-		}
-		Thing thing = ThingGen.Create("punish_ball");
-		int num = 0;
-		foreach (Religion item in EClass.game.religions.list)
-		{
-			if (item.giftRank > 0)
-			{
-				num++;
-			}
-		}
-		if (num >= 4)
-		{
-			thing.idSkin = 1;
-		}
-		thing.ChangeWeight(EClass.pc.WeightLimit / 4 + 1000);
-		c.AddThing(thing);
-		c.AddCondition<ConWrath>(2000 + (c.IsPC ? (EClass.pc.c_daysWithGod * 20) : 0));
+		DoPunish(c, PunishType.Wrath);
 	}
 
 	public virtual void PunishTakeOver(Chara c)
+	{
+		DoPunish(c, PunishType.Takeover);
+	}
+
+	public virtual void PunishPerverseWretch(Chara c)
+	{
+		DoPunish(c, PunishType.Pervert);
+	}
+
+	public void DoPunish(Chara c, PunishType type)
 	{
 		if (c.mimicry != null)
 		{
 			c.mimicry.Kill();
 		}
-		Talk("takeoverFail");
-		if (c.Evalue(1228) > 0)
+		Talk((type == PunishType.Takeover) ? "takeoverFail" : "wrath");
+		if (type == PunishType.Wrath && c.Evalue(1228) > 0)
 		{
 			c.SayNothingHappans();
 			return;
 		}
-		c.hp /= 2;
-		if (c.mana.value > 0)
+		if (type == PunishType.Wrath)
 		{
-			c.mana.value = c.mana.value / 2;
+			c.hp = 1;
+			if (c.mana.value > 0)
+			{
+				c.mana.value = 1;
+			}
+			if (c.stamina.value > 0)
+			{
+				c.stamina.value = 1;
+			}
 		}
-		if (c.stamina.value > 0)
+		else
 		{
-			c.stamina.value = c.stamina.value / 2;
+			c.hp /= 2;
+			if (c.mana.value > 0)
+			{
+				c.mana.value = c.mana.value / 2;
+			}
+			if (c.stamina.value > 0)
+			{
+				c.stamina.value = c.stamina.value / 2;
+			}
 		}
 		if (c.HasCondition<ConWrath>())
 		{
 			recentWrath = this;
-			c.DamageHP(999999L, AttackSource.Wrath);
+			c.DamageHP(99999999L, AttackSource.Wrath);
 			recentWrath = null;
 			return;
 		}
 		Thing thing = ThingGen.Create("punish_ball");
-		thing.c_weight = EClass.pc.WeightLimit / 4 + 1000;
-		thing.isWeightChanged = true;
-		thing.SetDirtyWeight();
+		int p = 100;
+		switch (type)
+		{
+		case PunishType.Wrath:
+		{
+			p = 2000 + (c.IsPC ? (EClass.pc.c_daysWithGod * 20) : 0);
+			if (type != 0)
+			{
+				break;
+			}
+			int num = 0;
+			foreach (Religion item in EClass.game.religions.list)
+			{
+				if (item.giftRank > 0)
+				{
+					num++;
+				}
+			}
+			if (num >= 4)
+			{
+				thing.idSkin = 1;
+			}
+			break;
+		}
+		case PunishType.Takeover:
+		case PunishType.Pervert:
+			p = 200;
+			break;
+		}
+		thing.ChangeWeight(EClass.pc.WeightLimit / 4 + 1000);
 		c.AddThing(thing);
-		c.AddCondition<ConWrath>(200);
+		c.AddCondition<ConWrath>(p);
 	}
 
 	public virtual void OnJoinFaith()

@@ -78,11 +78,15 @@ public class TraitTrolley : TraitFloorSwitch
 			}
 			return "ride_bike";
 		case "play_ride_big":
-			if (owner.idSkin != 0)
+			if (owner.idSkin != 3)
 			{
-				return "ride_trolley";
+				if (owner.idSkin != 0)
+				{
+					return "ride_trolley";
+				}
+				return "ride_kin";
 			}
-			return "ride_kin";
+			return "ride_bike";
 		default:
 			if (owner.idSkin != 7)
 			{

@@ -4285,7 +4285,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				foreach (Chara chara3 in EClass._map.charas)
 				{
-					if (chara3 != this && !chara3.IsHostile(Chara) && !chara3.IsPowerful && !chara3.IsDisabled && !chara3.isRestrained && (!IsPCFactionOrMinion || chara3.IsPCFactionOrMinion) && chara3.Dist(this) <= 3)
+					if (chara3 != this && !chara3.IsHostile(Chara) && !chara3.IsPowerful && !chara3.IsDisabled && !chara3.isRestrained && (!IsPCFactionOrMinion || chara3.IsPCFactionOrMinion) && chara3.Dist(this) <= 3 && !chara3.HasElement(1277))
 					{
 						Say("wall_bond", chara3, this);
 						chara3.DamageHP(dmg, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
@@ -4305,7 +4305,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 						{
 							int num = chara4.Evalue(1241);
 							int num2 = chara4.Evalue(438);
-							if ((num != 0 || num2 != 0) && !chara4.IsDisabled && !chara4.isRestrained && (!IsPCFactionOrMinion || chara4.IsPCFactionOrMinion) && (IsPCFactionOrMinion || !chara4.IsPCFactionOrMinion) && chara4.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && (num != 0 || num2 <= 0 || (long)hp * 100L / MaxHP <= (long)chara4.hp * 100L / chara4.MaxHP))
+							if ((num != 0 || num2 != 0) && !chara4.IsDisabled && !chara4.isRestrained && (!IsPCFactionOrMinion || chara4.IsPCFactionOrMinion) && (IsPCFactionOrMinion || !chara4.IsPCFactionOrMinion) && chara4.Dist(this) <= Mathf.Max(num, (num2 > 0) ? 1 : 0) && !chara4.HasElement(1277) && (num != 0 || num2 <= 0 || (long)hp * 100L / MaxHP <= (long)chara4.hp * 100L / chara4.MaxHP))
 							{
 								Say((num2 == 0) ? "wall_flesh" : "wall_knightly", chara4, this);
 								chara4.DamageHP(dmg * (100L + (long)((num2 > 0) ? (-10) : 0) + ((num > 0) ? 10 : 0)) / 100, ele, eleP, attackSource, origin, showEffect, weapon, Chara);
@@ -4604,7 +4604,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_1107;
+							goto IL_1128;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4632,7 +4632,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_1107;
+								goto IL_1128;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4650,8 +4650,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_1107;
-		IL_1107:
+		goto IL_1128;
+		IL_1128:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -5506,6 +5506,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				{
 					list.Add(ThingGen.Create("heart"));
 				}
+			}
+			if (this.rarity == Rarity.Mythical)
+			{
+				list.Add(ThingGen.Create("money3"));
 			}
 			if (!isBackerContent && !flag)
 			{
@@ -7831,6 +7835,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 					return 3;
 				case "1165":
 					return 10;
+				case "bed_shiawase":
+					return 40;
 				case "diary_sister":
 					return 12;
 				case "diary_lady":

@@ -36,12 +36,18 @@ public class TraitBook : TraitScroll
 		owner.idSkin = Item.skin;
 	}
 
+	public override void OnSetOwner()
+	{
+		owner.idSkin = Item.skin;
+	}
+
 	public override void OnImportMap()
 	{
 		if (GetParam(1) != null)
 		{
 			owner.SetStr(53, GetParam(1));
 		}
+		owner.idSkin = Item.skin;
 	}
 
 	public override void SetName(ref string s)

@@ -44,8 +44,7 @@ public class LayerEditSkin : ELayer
 			SE.Beep();
 			return;
 		}
-		string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(currentData.path);
-		string text = CorePath.custom + "Skin/" + fileNameWithoutExtension + ".pref";
+		string text = currentData.path + ".pref";
 		if (!File.Exists(text))
 		{
 			(currentData.pref ?? chara.Pref).WriteIni(text);

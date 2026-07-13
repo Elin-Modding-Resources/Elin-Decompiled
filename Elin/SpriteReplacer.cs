@@ -10,7 +10,9 @@ public class SpriteReplacer
 
 	public static Dictionary<string, string> dictModItems = new Dictionary<string, string>();
 
-	public static Dictionary<string, string> dictTextureItems = new Dictionary<string, string>();
+	private static List<string> sortedModIds = new List<string>();
+
+	private static bool modIdsDirty = true;
 
 	public SpriteData data;
 
@@ -32,31 +34,50 @@ public class SpriteReplacer
 		{
 			dictSkins.Remove(item);
 		}
-		Dictionary<string, string> dictionary = new DirectoryInfo(CorePath.custom + "Skin").GetFiles("*.png").ToDictionary((FileInfo f) => Path.GetFileNameWithoutExtension(f.Name), (FileInfo f) => Path.ChangeExtension(f.FullName, null));
-		string key2;
+		Dictionary<string, string> dictionary = ListSkinItems();
+		List<string> sortedIds = dictionary.Keys.OrderBy((string k) => k).ToList();
 		foreach (KeyValuePair<string, string> item2 in dictionary)
 		{
-			item2.Deconstruct(out var key, out key2);
-			string key3 = key;
-			string path = key2;
-			if (!dictSkins.ContainsKey(key3))
+			item2.Deconstruct(out var key, out var value);
+			string text = key;
+			string path = value;
+			SpriteReplacer spriteReplacer = new SpriteReplacer
 			{
-				dictSkins[key3] = new SpriteReplacer
+				data = new SpriteData
 				{
-					data = new SpriteData
-					{
-						path = path
-					}
-				};
+					path = path
+				}
+			};
+			spriteReplacer.BuildSuffixData(text, dictionary, sortedIds);
+			if (spriteReplacer.suffixes.TryGetValue("", out var value2))
+			{
+				spriteReplacer.data = value2;
 			}
-		}
-		foreach (KeyValuePair<string, SpriteReplacer> dictSkin2 in dictSkins)
-		{
-			dictSkin2.Deconstruct(out key2, out var value);
-			string id = key2;
-			value.BuildSuffixData(id, dictionary);
+			else
+			{
+				spriteReplacer.data.Init();
+			}
+			dictSkins[text] = spriteReplacer;
 		}
 		return dictSkins;
+	}
+
+	public static Dictionary<string, string> ListSkinItems()
+	{
+		List<DirectoryInfo> list = new List<DirectoryInfo>();
+		list.Add(new DirectoryInfo(CorePath.custom + "Skin"));
+		list.AddRange(PackageIterator.GetDirectories("Skin", useCache: false));
+		IEnumerable<FileInfo> enumerable = list.SelectMany((DirectoryInfo d) => from f in d.GetFiles("*.png", SearchOption.TopDirectoryOnly)
+			orderby f.Name
+			select f);
+		Dictionary<string, string> dictionary = new Dictionary<string, string>();
+		foreach (FileInfo item in enumerable)
+		{
+			string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(item.Name);
+			string value = Path.ChangeExtension(item.FullName, null);
+			dictionary[fileNameWithoutExtension] = value;
+		}
+		return dictionary;
 	}
 
 	public Sprite GetSprite(string suffix = "")
@@ -104,26 +125,39 @@ public class SpriteReplacer
 		}
 	}
 
-	public void ReloadBuiltInTextures()
+	public void BuildSuffixData(string id, IReadOnlyDictionary<string, string> dictTexItems, List<string> sortedIds = null)
 	{
-		dictTextureItems = new DirectoryInfo(CorePath.packageCore + "Texture/Item").GetFiles("*.png").ToDictionary((FileInfo f) => Path.GetFileNameWithoutExtension(f.Name), (FileInfo f) => Path.ChangeExtension(f.FullName, null));
-	}
-
-	public void BuildSuffixData(string id, Dictionary<string, string> dictTexItems)
-	{
-		foreach (var (text3, path) in dictTexItems)
+		List<string> list = sortedIds ?? dictTexItems.Keys.OrderBy((string k) => k).ToList();
+		int num = list.BinarySearch(id);
+		if (num < 0)
 		{
-			if (text3.StartsWith(id))
+			num = ~num;
+		}
+		for (int i = num; i < list.Count; i++)
+		{
+			string text = list[i];
+			if (text.StartsWith(id))
 			{
-				string text4 = text3[id.Length..];
+				string text2 = text[id.Length..];
 				SpriteData spriteData = new SpriteData
 				{
-					path = path
+					path = dictTexItems[text]
 				};
 				spriteData.Init();
-				suffixes[text4] = spriteData;
-				Debug.Log("#sprite replacer " + text4.IsEmpty("<base>") + "/" + path.ShortPath());
+				suffixes[text2] = spriteData;
+				Debug.Log("#sprite replacer " + text2.IsEmpty("<base>") + "/" + dictTexItems[text].ShortPath());
+				continue;
 			}
+			break;
+		}
+	}
+
+	public void SortModItemIds()
+	{
+		if (sortedModIds.Count != dictModItems.Count || modIdsDirty)
+		{
+			sortedModIds = dictModItems.Keys.OrderBy((string k) => k).ToList();
+			modIdsDirty = false;
 		}
 	}
 
@@ -133,27 +167,16 @@ public class SpriteReplacer
 		suffixes.Clear();
 		try
 		{
+			SortModItemIds();
 			if (dictModItems.ContainsKey(id))
 			{
-				BuildSuffixData(id, dictModItems);
+				BuildSuffixData(id, dictModItems, sortedModIds);
 			}
-			else
+			else if (renderData != null && dictModItems.ContainsKey("Item/" + id))
 			{
-				if (dictTextureItems.Count == 0)
-				{
-					ReloadBuiltInTextures();
-				}
-				string text = dictTextureItems.TryGetValue(id);
-				if (text == null && renderData != null)
-				{
-					text = dictTextureItems.TryGetValue(renderData.name);
-				}
-				if (text != null)
-				{
-					BuildSuffixData(id, dictTextureItems);
-				}
+				BuildSuffixData("Item/" + id, dictModItems, sortedModIds);
 			}
-			data = suffixes.TryGetValue("");
+			suffixes.TryGetValue("", out data);
 			if (data != null)
 			{
 				Debug.Log(id + ":" + data.path);
@@ -161,7 +184,7 @@ public class SpriteReplacer
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError("#sprite error fetching sprite replacer:" + ex);
+			Debug.LogError("#sprite error fetching sprite replacer '" + id + "' : " + ex);
 		}
 		isChecked[id] = true;
 	}
