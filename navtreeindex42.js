@@ -1,5 +1,10 @@
 var NAVTREEINDEX42 =
 {
+"classCalcMoney.html#aaa3bce77f8cdce7bebc21f8a0eaebf88":[1,0,263,9],
+"classCalcMoney.html#aea79efe244b90285b6dd96bfe102fd1c":[1,0,263,6],
+"classCalcPlat.html":[1,0,264],
+"classCalcPlat.html#abecddf66db5d8bbe251d9c1e55834eac":[1,0,264,0],
+"classCalcPlat.html#af457f0c6b03b91dac52c85bc6a3ea5ac":[1,0,264,1],
 "classCameraFilterPack__Atmosphere__Rain.html":[1,0,265],
 "classCameraFilterPack__Atmosphere__Rain.html#a0ff4d59673f2e841af3b4dc7567a2cf2":[1,0,265,12],
 "classCameraFilterPack__Atmosphere__Rain.html#a19e7edcf4c7e300e5af7c31e227da2f7":[1,0,265,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX42 =
 "classCard.html#a5a2aae6c5128f2015795b3f3972b5282":[1,0,268,405],
 "classCard.html#a5a6f253b03f13d9e792836ee2ec678ec":[1,0,268,516],
 "classCard.html#a5c4cb5a17fbbe8ee86f3d13cab60d31c":[1,0,268,221],
-"classCard.html#a5cca5733a0c88e78325f6ef6c785cf04":[1,0,268,176],
-"classCard.html#a5cdca84470e3deb7067bff632665c789":[1,0,268,365],
-"classCard.html#a5d17755c0073cd30dfe7b5dead6f4b63":[1,0,268,486],
-"classCard.html#a5d63427212c856513a8ace9d963d28c1":[1,0,268,272],
-"classCard.html#a5dab6db16b0ad59a7df0bf7a7c6341dc":[1,0,268,290],
-"classCard.html#a5e0535e093f8257427b9510e045b48fc":[1,0,268,381]
+"classCard.html#a5cca5733a0c88e78325f6ef6c785cf04":[1,0,268,176]
 };

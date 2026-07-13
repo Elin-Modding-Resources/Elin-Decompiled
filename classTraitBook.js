@@ -4,6 +4,7 @@ var classTraitBook =
     [ "OnCreate", "classTraitBook.html#a069d61059a15437119bb0bc6058f1a40", null ],
     [ "OnImportMap", "classTraitBook.html#a30eb6a8e3739b5085e7c7ea66a5016c8", null ],
     [ "OnRead", "classTraitBook.html#a5221e67f4814bb1aecd73c548e83d43d", null ],
+    [ "OnSetOwner", "classTraitBook.html#acc692d8010a3b0f4d43dfe0cf541e8b8", null ],
     [ "SetName", "classTraitBook.html#a18586bbf8c3c844aa673755a8a5bc8fd", null ],
     [ "IdCat", "classTraitBook.html#a0a1171837e959a3a759bc04126b5fec6", null ],
     [ "IdItem", "classTraitBook.html#ab8f2a6b72ddd8dde717f425e076ca20c", null ],

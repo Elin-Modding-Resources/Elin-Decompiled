@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.326 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.327 Nightly</span>
    </div>
   </td>
  </tr>
@@ -116,6 +116,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aea450206978dd2aca9fd6a4ce36ab468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a069d61059a15437119bb0bc6058f1a40"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBook.html#a069d61059a15437119bb0bc6058f1a40">OnCreate</a> (int lv)</td></tr>
 <tr class="separator:a069d61059a15437119bb0bc6058f1a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc692d8010a3b0f4d43dfe0cf541e8b8"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBook.html#acc692d8010a3b0f4d43dfe0cf541e8b8">OnSetOwner</a> ()</td></tr>
+<tr class="separator:acc692d8010a3b0f4d43dfe0cf541e8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30eb6a8e3739b5085e7c7ea66a5016c8"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBook.html#a30eb6a8e3739b5085e7c7ea66a5016c8">OnImportMap</a> ()</td></tr>
 <tr class="separator:a30eb6a8e3739b5085e7c7ea66a5016c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18586bbf8c3c844aa673755a8a5bc8fd"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTraitBook.html#a18586bbf8c3c844aa673755a8a5bc8fd">SetName</a> (ref string s)</td></tr>
@@ -858,15 +860,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a01114b762877593444f784e64c4421de">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00039">39</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1) != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   42</span>        {</div>
-<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aace9260c6f214f00e77571b9e85b458a">SetStr</a>(53, <a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1));</div>
-<div class="line"><span class="lineno">   44</span>        }</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00044">44</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1) != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_function" href="classCard.html#aace9260c6f214f00e77571b9e85b458a">SetStr</a>(53, <a class="code hl_function" href="classTrait.html#a7db8c514710fbb74b2f471cf9e6fe0af">GetParam</a>(1));</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="line"><span class="lineno">   50</span>        owner.idSkin = <a class="code hl_property" href="classTraitBook.html#abcc6a9c538ad2a8ea014d3697b088ede">Item</a>.skin;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00587">Trait.GetParam()</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l02600">Card.SetStr()</a>.</p>
+<p class="reference">References <a class="el" href="Trait_8cs_source.html#l00587">Trait.GetParam()</a>, <a class="el" href="TraitBook_8cs_source.html#l00019">Item</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, and <a class="el" href="Card_8cs_source.html#l02600">Card.SetStr()</a>.</p>
 
 </div>
 </div>
@@ -896,33 +899,33 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classTrait.html#a3536e5d336611ddb31db73dd27e15265">Trait</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00052">52</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a47bf1787110a3285ebb050be305c315e">c_lockLv</a> &gt; 0)</div>
-<div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            owner.c_lockLv = 0;</div>
-<div class="line"><span class="lineno">   57</span>            c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;unseal&quot;</span>, c, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
-<div class="line"><span class="lineno">   58</span>            c.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;open_bottle&quot;</span>);</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count == 0)</div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;empty&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7090c2ec2037f2fad4198f59e9d9a7d4">PickOrDrop</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>[0]);</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_class" href="classBookList_1_1Item.html">BookList.Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_property" href="classTraitBook.html#abcc6a9c538ad2a8ea014d3697b088ede">Item</a>;</div>
-<div class="line"><span class="lineno">   69</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.<a class="code hl_function" href="classLayer.html#a8f3352f9d82ea51dd18490338991e819">AddLayer</a>&lt;<a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>&gt;(<a class="code hl_property" href="classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e">IsParchment</a> ? <span class="stringliteral">&quot;LayerParchment&quot;</span> : <span class="stringliteral">&quot;LayerBook&quot;</span>).<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba821f03288846297c2cf43c34766a38f7">book</a>.Show((<a class="code hl_property" href="classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e">IsParchment</a> ? <span class="stringliteral">&quot;Scroll/&quot;</span> : <span class="stringliteral">&quot;Book/&quot;</span>) + <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id, <span class="keyword">null</span>, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.title, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00058">58</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_property" href="classCard.html#a47bf1787110a3285ebb050be305c315e">c_lockLv</a> &gt; 0)</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            owner.c_lockLv = 0;</div>
+<div class="line"><span class="lineno">   63</span>            c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;unseal&quot;</span>, c, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>);</div>
+<div class="line"><span class="lineno">   64</span>            c.<a class="code hl_function" href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">PlaySound</a>(<span class="stringliteral">&quot;open_bottle&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                c.<a class="code hl_function" href="classCard.html#afb333b988381db70039fd711fe25e035">Say</a>(<span class="stringliteral">&quot;empty&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_function" href="classChara.html#a7090c2ec2037f2fad4198f59e9d9a7d4">PickOrDrop</a>(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">pc</a>.<a class="code hl_variable" href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">pos</a>, <a class="code hl_variable" href="classTrait.html#ac0d6248b0468917710ad9bc9020f8e35">owner</a>.<a class="code hl_variable" href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">things</a>[0]);</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <a class="code hl_class" href="classBookList_1_1Item.html">BookList.Item</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> = <a class="code hl_property" href="classTraitBook.html#abcc6a9c538ad2a8ea014d3697b088ede">Item</a>;</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af23c8bf694ef75cda88e6b272597bf92">ui</a>.<a class="code hl_function" href="classLayer.html#a8f3352f9d82ea51dd18490338991e819">AddLayer</a>&lt;<a class="code hl_class" href="classLayerHelp.html">LayerHelp</a>&gt;(<a class="code hl_property" href="classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e">IsParchment</a> ? <span class="stringliteral">&quot;LayerParchment&quot;</span> : <span class="stringliteral">&quot;LayerBook&quot;</span>).<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba821f03288846297c2cf43c34766a38f7">book</a>.Show((<a class="code hl_property" href="classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e">IsParchment</a> ? <span class="stringliteral">&quot;Scroll/&quot;</span> : <span class="stringliteral">&quot;Book/&quot;</span>) + <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.id, <span class="keyword">null</span>, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>.title, <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba821f03288846297c2cf43c34766a38f7"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba821f03288846297c2cf43c34766a38f7">ContainerFlag.book</a></div><div class="ttdeci">@ book</div></div>
 <div class="ttc" id="aclassBookList_1_1Item_html"><div class="ttname"><a href="classBookList_1_1Item.html">BookList.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="BookList_8cs_source.html#l00009">BookList.cs:10</a></div></div>
-<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06602">Card.cs:6602</a></div></div>
+<div class="ttc" id="aclassCard_html_a3d6c93c9e7f81b70be407db5d4d8f871"><div class="ttname"><a href="classCard.html#a3d6c93c9e7f81b70be407db5d4d8f871">Card.PlaySound</a></div><div class="ttdeci">SoundSource PlaySound(string id, float v=1f, bool spatial=true)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l06606">Card.cs:6606</a></div></div>
 <div class="ttc" id="aclassCard_html_a47bf1787110a3285ebb050be305c315e"><div class="ttname"><a href="classCard.html#a47bf1787110a3285ebb050be305c315e">Card.c_lockLv</a></div><div class="ttdeci">int c_lockLv</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00990">Card.cs:991</a></div></div>
 <div class="ttc" id="aclassCard_html_a81dd8816d5fa0cadcb97054d64eda4d4"><div class="ttname"><a href="classCard.html#a81dd8816d5fa0cadcb97054d64eda4d4">Card.pos</a></div><div class="ttdeci">Point pos</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00060">Card.cs:60</a></div></div>
 <div class="ttc" id="aclassCard_html_aad0881624a8ae1acf65e28b256c8d287"><div class="ttname"><a href="classCard.html#aad0881624a8ae1acf65e28b256c8d287">Card.things</a></div><div class="ttdeci">ThingContainer things</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00039">Card.cs:39</a></div></div>
-<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07280">Card.cs:7280</a></div></div>
+<div class="ttc" id="aclassCard_html_afb333b988381db70039fd711fe25e035"><div class="ttname"><a href="classCard.html#afb333b988381db70039fd711fe25e035">Card.Say</a></div><div class="ttdeci">void Say(string lang, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l07284">Card.cs:7284</a></div></div>
 <div class="ttc" id="aclassChara_html_a7090c2ec2037f2fad4198f59e9d9a7d4"><div class="ttname"><a href="classChara.html#a7090c2ec2037f2fad4198f59e9d9a7d4">Chara.PickOrDrop</a></div><div class="ttdeci">void PickOrDrop(Point p, string idThing, int idMat=-1, int num=1, bool msg=true)</div><div class="ttdef"><b>Definition:</b> <a href="Chara_8cs_source.html#l04522">Chara.cs:4522</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_ab6ee3269cfd4fb7292d9f39b859b9b07"><div class="ttname"><a href="classEClass.html#ab6ee3269cfd4fb7292d9f39b859b9b07">EClass.pc</a></div><div class="ttdeci">static Chara pc</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00015">EClass.cs:15</a></div></div>
@@ -931,7 +934,41 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassLayer_html_a8f3352f9d82ea51dd18490338991e819"><div class="ttname"><a href="classLayer.html#a8f3352f9d82ea51dd18490338991e819">Layer.AddLayer</a></div><div class="ttdeci">Layer AddLayer(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Layer_8cs_source.html#l00337">Layer.cs:337</a></div></div>
 <div class="ttc" id="aclassTraitBook_html_a8cbf583a8d833195bc063e4a827e4c6e"><div class="ttname"><a href="classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e">TraitBook.IsParchment</a></div><div class="ttdeci">bool IsParchment</div><div class="ttdef"><b>Definition:</b> <a href="TraitBook_8cs_source.html#l00003">TraitBook.cs:3</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Layer_8cs_source.html#l00337">Layer.AddLayer()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba821f03288846297c2cf43c34766a38f7">book</a>, <a class="el" href="Card_8cs_source.html#l00991">Card.c_lockLv</a>, <a class="el" href="TraitBook_8cs_source.html#l00003">IsParchment</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="TraitBook_8cs_source.html#l00019">Item</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l04522">Chara.PickOrDrop()</a>, <a class="el" href="Card_8cs_source.html#l06602">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l07280">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l00039">Card.things</a>, and <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>.</p>
+<p class="reference">References <a class="el" href="Layer_8cs_source.html#l00337">Layer.AddLayer()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba821f03288846297c2cf43c34766a38f7">book</a>, <a class="el" href="Card_8cs_source.html#l00991">Card.c_lockLv</a>, <a class="el" href="TraitBook_8cs_source.html#l00003">IsParchment</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="TraitBook_8cs_source.html#l00019">Item</a>, <a class="el" href="Trait_8cs_source.html#l00028">Trait.owner</a>, <a class="el" href="EClass_8cs_source.html#l00015">EClass.pc</a>, <a class="el" href="Chara_8cs_source.html#l04522">Chara.PickOrDrop()</a>, <a class="el" href="Card_8cs_source.html#l06606">Card.PlaySound()</a>, <a class="el" href="Card_8cs_source.html#l00060">Card.pos</a>, <a class="el" href="Card_8cs_source.html#l07284">Card.Say()</a>, <a class="el" href="Card_8cs_source.html#l00039">Card.things</a>, and <a class="el" href="EClass_8cs_source.html#l00017">EClass.ui</a>.</p>
+
+</div>
+</div>
+<a id="acc692d8010a3b0f4d43dfe0cf541e8b8" name="acc692d8010a3b0f4d43dfe0cf541e8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc692d8010a3b0f4d43dfe0cf541e8b8">&#9670;&#160;</a></span>OnSetOwner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void TraitBook.OnSetOwner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classTrait.html#ac8a7b0424ba2861d77e4a3320ced075e">Trait</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00039">39</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        owner.idSkin = <a class="code hl_property" href="classTraitBook.html#abcc6a9c538ad2a8ea014d3697b088ede">Item</a>.skin;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="TraitBook_8cs_source.html#l00019">Item</a>.</p>
 
 </div>
 </div>
@@ -963,10 +1000,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTraitParchmentBottle.html#a1ecbd27e21ab0836bb4d68bf711cb31c">TraitParchmentBottle</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00047">47</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        s = (<a class="code hl_property" href="classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e">IsParchment</a> ? <span class="stringliteral">&quot;_parchment&quot;</span> : <span class="stringliteral">&quot;_book&quot;</span>).lang(s, <a class="code hl_property" href="classTraitBook.html#abcc6a9c538ad2a8ea014d3697b088ede">Item</a>.title);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00053">53</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        s = (<a class="code hl_property" href="classTraitBook.html#a8cbf583a8d833195bc063e4a827e4c6e">IsParchment</a> ? <span class="stringliteral">&quot;_parchment&quot;</span> : <span class="stringliteral">&quot;_book&quot;</span>).lang(s, <a class="code hl_property" href="classTraitBook.html#abcc6a9c538ad2a8ea014d3697b088ede">Item</a>.title);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TraitBook_8cs_source.html#l00003">IsParchment</a>, and <a class="el" href="TraitBook_8cs_source.html#l00019">Item</a>.</p>
 
@@ -1057,7 +1094,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00003">3</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitBook_8cs_source.html#l00052">OnRead()</a>, and <a class="el" href="TraitBook_8cs_source.html#l00047">SetName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitBook_8cs_source.html#l00058">OnRead()</a>, and <a class="el" href="TraitBook_8cs_source.html#l00053">SetName()</a>.</p>
 
 </div>
 </div>
@@ -1083,7 +1120,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TraitBook_8cs_source.html#l00019">19</a> of file <a class="el" href="TraitBook_8cs_source.html">TraitBook.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TraitBook_8cs_source.html#l00026">OnCreate()</a>, <a class="el" href="TraitBook_8cs_source.html#l00052">OnRead()</a>, and <a class="el" href="TraitBook_8cs_source.html#l00047">SetName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TraitBook_8cs_source.html#l00026">OnCreate()</a>, <a class="el" href="TraitBook_8cs_source.html#l00044">OnImportMap()</a>, <a class="el" href="TraitBook_8cs_source.html#l00058">OnRead()</a>, <a class="el" href="TraitBook_8cs_source.html#l00039">OnSetOwner()</a>, and <a class="el" href="TraitBook_8cs_source.html#l00053">SetName()</a>.</p>
 
 </div>
 </div>

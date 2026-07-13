@@ -39,7 +39,7 @@ var searchData=
   ['buildpages_36',['BuildPages',['../classUIBook.html#af85dc41de30ceac932bfaa0247582ae7',1,'UIBook']]],
   ['buildraces_37',['BuildRaces',['../classUICharaMaker.html#a383530ce96edc1da03644ff54fd92903',1,'UICharaMaker']]],
   ['buildrandomabilitylist_38',['BuildRandomAbilityList',['../classCharaAbility.html#af0cba40d33b6f10a36477b55966f8150',1,'CharaAbility']]],
-  ['buildsuffixdata_39',['BuildSuffixData',['../classSpriteReplacer.html#a5ae1a43f4d4feb5dc7438ff2444356d8',1,'SpriteReplacer']]],
+  ['buildsuffixdata_39',['BuildSuffixData',['../classSpriteReplacer.html#ae48945a175171d20d2ddb840566feaba',1,'SpriteReplacer']]],
   ['buildsunmap_40',['BuildSunMap',['../classVirtualDate.html#a5f4735f84f049be8eebd2857ea532fe8',1,'VirtualDate']]],
   ['buildtabs_41',['BuildTabs',['../classWindow.html#a28efb530112dab3122832f80561ffb06',1,'Window']]],
   ['buildtextdata_42',['BuildTextData',['../classDramaCustomSequence.html#a1996858ef84bfaac5f620d1a70b8c5ca',1,'DramaCustomSequence']]],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"ElinPostSceneInitAttribute_8cs_source.html":[2,0,0,518],
 "ElinPreLoadAttribute_8cs.html":[2,0,0,519],
 "ElinPreLoadAttribute_8cs_source.html":[2,0,0,519],
 "ElinPreSaveAttribute_8cs.html":[2,0,0,520],
@@ -235,10 +236,10 @@ var NAVTREEINDEX7 =
 "FrameType_8cs.html#ad495a9f61af7fff07d7e97979d1ab854a6adf97f83acf6453d4a6a4b1070f3754":[2,0,0,3,36,0,0],
 "FrameType_8cs.html#ad495a9f61af7fff07d7e97979d1ab854a9f6f17a87c3aacacaafef71001bbdda9":[2,0,0,3,36,0,1],
 "FrameType_8cs_source.html":[2,0,0,3,36],
-"GStability_8cs.html":[2,0,0,639],
-"GStability_8cs_source.html":[2,0,0,639],
-"GWorth_8cs.html":[2,0,0,646],
-"GWorth_8cs_source.html":[2,0,0,646],
+"GStability_8cs.html":[2,0,0,640],
+"GStability_8cs_source.html":[2,0,0,640],
+"GWorth_8cs.html":[2,0,0,647],
+"GWorth_8cs_source.html":[2,0,0,647],
 "GalleryFlattenAndRename_8cs.html":[2,0,0,563],
 "GalleryFlattenAndRename_8cs_source.html":[2,0,0,563],
 "GameBlueprint_8cs.html":[2,0,0,565],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "GameData_8cs.html":[2,0,0,567],
 "GameData_8cs_source.html":[2,0,0,567],
 "GameDate_8cs.html":[2,0,0,568],
-"GameDate_8cs_source.html":[2,0,0,568],
-"GameDifficultySetting_8cs.html":[2,0,0,569]
+"GameDate_8cs_source.html":[2,0,0,568]
 };

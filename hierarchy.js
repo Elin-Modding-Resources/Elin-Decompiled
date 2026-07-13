@@ -947,6 +947,7 @@ var hierarchy =
         [ "GrowSystemCrop", "classGrowSystemCrop.html", [
           [ "GrowSystemBerry", "classGrowSystemBerry.html", null ],
           [ "GrowSystemCactus", "classGrowSystemCactus.html", null ],
+          [ "GrowSystemCha", "classGrowSystemCha.html", null ],
           [ "GrowSystemWheat", "classGrowSystemWheat.html", [
             [ "GrowSystemPasture", "classGrowSystemPasture.html", null ],
             [ "GrowSystemRice", "classGrowSystemRice.html", null ],
@@ -1643,7 +1644,9 @@ var hierarchy =
             [ "TraitSorin", "classTraitSorin.html", null ],
             [ "TraitStrangeGirl", "classTraitStrangeGirl.html", null ],
             [ "TraitTyche", "classTraitTyche.html", null ],
-            [ "TraitUniqueCharaNoJoin", "classTraitUniqueCharaNoJoin.html", null ],
+            [ "TraitUniqueCharaNoJoin", "classTraitUniqueCharaNoJoin.html", [
+              [ "TraitMani", "classTraitMani.html", null ]
+            ] ],
             [ "TraitUniqueMerchant", "classTraitUniqueMerchant.html", [
               [ "TraitBambi", "classTraitBambi.html", null ],
               [ "TraitClerk_Casino", "classTraitClerk__Casino.html", null ],

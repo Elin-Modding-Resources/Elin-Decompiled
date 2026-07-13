@@ -1,5 +1,10 @@
 var NAVTREEINDEX51 =
 {
+"classConDeathSentense.html#a256fffe4abe9db1d6ba418ddd77f6ae0":[1,0,332,0],
+"classConDeathSentense.html#a312c709b8b763a189631df627c9d75f6":[1,0,332,5],
+"classConDeathSentense.html#a410f2d069e8973571a4916ec0e39a8d6":[1,0,332,3],
+"classConDeathSentense.html#a43aab9b03d820744108fc9d28c720f62":[1,0,332,2],
+"classConDeathSentense.html#a470143d94270adac608a17849c5cae68":[1,0,332,6],
 "classConDeathSentense.html#aa4cbb1ad2ee053541ee98f36e6b4fdc8":[1,0,332,1],
 "classConDeathSentense.html#ad29bb6aac81a7b47e342fce29eefaec5":[1,0,332,4],
 "classConDim.html":[1,0,333],
@@ -244,10 +249,5 @@ var NAVTREEINDEX51 =
 "classConTransmuteShadow.html":[1,0,416],
 "classConTransmuteShadow.html#aa6fa1d0f67f6edd25ba302400f768af7":[1,0,416,1],
 "classConTransmuteShadow.html#ad910892fafe8061a4f3a074e508857dd":[1,0,416,0],
-"classConVampire.html":[1,0,417],
-"classConVampire.html#a1036ac1e2abad752f28a798fcff9628e":[1,0,417,1],
-"classConVampire.html#a4c89344d9fae61e888cc3b65463a2f87":[1,0,417,5],
-"classConVampire.html#a5e755b186ee017cc355bf4dff48c3cdf":[1,0,417,2],
-"classConVampire.html#a805fa528c902d4a2aafb5273b76e96c6":[1,0,417,6],
-"classConVampire.html#a8f40013ed452ee592a0316d2a9b2f094":[1,0,417,4]
+"classConVampire.html":[1,0,417]
 };

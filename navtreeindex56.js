@@ -1,5 +1,10 @@
 var NAVTREEINDEX56 =
 {
+"classCoreDebug.html#adf46e253b79065cecd1500cc45ffb977":[1,0,427,60],
+"classCoreDebug.html#adf59026dcd0719d722979cee73513ba5":[1,0,427,154],
+"classCoreDebug.html#ae002ba6a1f2dbd22bbd5a770d194a8db":[1,0,427,25],
+"classCoreDebug.html#ae02e7b572091039f592a38fe24bf0f4c":[1,0,427,112],
+"classCoreDebug.html#ae1b96a83cb4f4168d572d016fe34d996":[1,0,427,94],
 "classCoreDebug.html#ae29989e7771f4e21ef0b1a7205db9f28":[1,0,427,69],
 "classCoreDebug.html#ae2af87305f7aff6715ef0ba4f3164794":[1,0,427,76],
 "classCoreDebug.html#ae513c73abecea8acf9b064dd6cdb5c2d":[1,0,427,61],
@@ -39,9 +44,9 @@ var NAVTREEINDEX56 =
 "classCoreExtension.html#a159725003d2a00c906ed83536a69b398":[1,0,429,1],
 "classCoreExtension.html#a184b445eb60c2552eafc9289727a077f":[1,0,429,4],
 "classCoreExtension.html#a2813e62f4e3b6a18f35ccdafb0430fd8":[1,0,429,5],
-"classCoreExtension.html#a440f00ea6b2f3f00507e5bfb4277a2f5":[1,0,429,2],
 "classCoreExtension.html#a71d44e80d0f8997765468e77dff2318e":[1,0,429,7],
 "classCoreExtension.html#a873bfb57dd3a03eb445f9955af485a6b":[1,0,429,0],
+"classCoreExtension.html#aa0d0ff0517ce8cff1e0fef5d5f8d80d6":[1,0,429,2],
 "classCoreExtension.html#aa70405ca2591819d6475ea486016a06a":[1,0,429,3],
 "classCoreExtension.html#af0f09a59fcd4ea5c32ec8cd5aa6e1ecc":[1,0,429,6],
 "classCorePath.html":[1,0,430],
@@ -244,10 +249,5 @@ var NAVTREEINDEX56 =
 "classCoreRef_1_1Icons.html#ae4a9ad1921987e4012131409514ab812":[1,0,431,4,23],
 "classCoreRef_1_1Icons.html#aed98f3cb4cb6b061a8476fd276271a49":[1,0,431,4,4],
 "classCoreRef_1_1Icons.html#af6b57a3010cecf448f0ee70011209dc8":[1,0,431,4,25],
-"classCoreRef_1_1Icons.html#af73c420bed60717a9c9bcd82aa5e36c3":[1,0,431,4,3],
-"classCoreRef_1_1Icons.html#afbb5a47da23ece3ea1f84c13df70b9cd":[1,0,431,4,2],
-"classCoreRef_1_1Icons_1_1Affinity.html":[1,0,431,4,0],
-"classCoreRef_1_1Icons_1_1Affinity.html#a1a5b12d8a333eca33bc5f2c158ee3288":[1,0,431,4,0,3],
-"classCoreRef_1_1Icons_1_1Affinity.html#a667972590c81f1ba5e96cee7a64f41d1":[1,0,431,4,0,2],
-"classCoreRef_1_1Icons_1_1Affinity.html#a69e5ec2b8d6d9f6b5834b8766102124a":[1,0,431,4,0,1]
+"classCoreRef_1_1Icons.html#af73c420bed60717a9c9bcd82aa5e36c3":[1,0,431,4,3]
 };

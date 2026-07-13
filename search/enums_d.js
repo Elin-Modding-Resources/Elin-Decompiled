@@ -7,5 +7,6 @@ var searchData=
   ['pricetype_4',['PriceType',['../PriceType_8cs.html#a482277e66af02c7d65679d7485095573',1,'PriceType.cs']]],
   ['processmode_5',['ProcessMode',['../classBaseTileSelector.html#a807af12c90fdeb0562286aa0ea9a4a2b',1,'BaseTileSelector']]],
   ['processtype_6',['ProcessType',['../classInvOwnerDraglet.html#ac84e693d7e7dfbf1245b4e324ff4a77e',1,'InvOwnerDraglet']]],
-  ['progresstype_7',['ProgressType',['../classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6',1,'TCExtraProgress']]]
+  ['progresstype_7',['ProgressType',['../classTCExtraProgress.html#ab50255535fe6123ff1e14d81bd9539e6',1,'TCExtraProgress']]],
+  ['punishtype_8',['PunishType',['../classReligion.html#aa159a38b869002dc75a6b6ccf2b0df1e',1,'Religion']]]
 ];

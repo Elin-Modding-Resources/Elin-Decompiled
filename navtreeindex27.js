@@ -1,5 +1,10 @@
 var NAVTREEINDEX27 =
 {
+"classAI__Eat.html#a8536f42d8c4eb6d844f9eaa1e92c8ab8":[1,0,90,0],
+"classAI__Eat.html#ab690b73b45a79070cc3064497a145f7e":[1,0,90,4],
+"classAI__Eat.html#abb16725cd6cdd3efaa1c6fbe4b98883d":[1,0,90,1],
+"classAI__Eat.html#acfde6bf6461e7ffac35078af83ee4dc9":[1,0,90,7],
+"classAI__Eat.html#ae21cfc17cad4b3fe77805c23c6d35a27":[1,0,90,5],
 "classAI__Eat.html#af360d70637e48fa709f2ffeaa53b67d6":[1,0,90,3],
 "classAI__Eat.html#af542285e8d3e367ad24d37a23dfb3456":[1,0,90,2],
 "classAI__Equip.html":[1,0,91],
@@ -244,10 +249,5 @@ var NAVTREEINDEX27 =
 "classAI__Read.html#a7a71040134c92c58a8550aa7320c0e6f":[1,0,115,3],
 "classAI__Read.html#ab9abd844f3d45c948dd5e4e773dfe686":[1,0,115,0],
 "classAI__Read.html#abf176bb2cce745515adc2673258f944a":[1,0,115,2],
-"classAI__ReleaseHeld.html":[1,0,116],
-"classAI__ReleaseHeld.html#a87122c51df0e433718abd7e2611ba109":[1,0,116,1],
-"classAI__ReleaseHeld.html#ac3307266cdb37eadc1bf5db1d14b236c":[1,0,116,0],
-"classAI__SelfHarm.html":[1,0,117],
-"classAI__SelfHarm.html#a08b6ab5eaf83d160f1b3b37175d2070f":[1,0,117,0],
-"classAI__SelfHarm.html#a4e871d95b403358b0affbc8c80137912":[1,0,117,1]
+"classAI__ReleaseHeld.html":[1,0,116]
 };

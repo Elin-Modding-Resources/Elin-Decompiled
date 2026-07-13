@@ -19,6 +19,7 @@ var classFEAT =
     [ "featCentaur", "classFEAT.html#ae307ea1a3cabd6a7391fad35d792c0f7", null ],
     [ "featCHA", "classFEAT.html#adacbce9259f9c2f4c96d6e28c08f1465", null ],
     [ "featChef", "classFEAT.html#aed7da48dd5efcf6e3769de20eff93908", null ],
+    [ "featColdHearted", "classFEAT.html#a9fd103b23a24714a83f55bc252113752", null ],
     [ "featComat", "classFEAT.html#ad838b4efe519cd904f9b90b34dd8dbc3", null ],
     [ "featCosmicHorror", "classFEAT.html#a99799ffa0458a177ff163acb2b76bb2c", null ],
     [ "featDefender", "classFEAT.html#af028af952f3c8a7f7979d8e15658a90d", null ],

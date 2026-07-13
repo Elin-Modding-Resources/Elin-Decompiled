@@ -4,6 +4,12 @@ var classReligion =
       [ "Default", "classReligion.html#a3c46dfed1d15abea8c396e60c614e989a7a1920d61156abc05a60135aefe8bc67", null ],
       [ "Campaign", "classReligion.html#a3c46dfed1d15abea8c396e60c614e989af00a1d99f6f47917006e88a803ecde1f", null ]
     ] ],
+    [ "PunishType", "classReligion.html#aa159a38b869002dc75a6b6ccf2b0df1e", [
+      [ "Wrath", "classReligion.html#aa159a38b869002dc75a6b6ccf2b0df1ea9b1271f437c566a7fb4836696ee65de6", null ],
+      [ "Takeover", "classReligion.html#aa159a38b869002dc75a6b6ccf2b0df1ea9d42dba7120418ef641edb36d0edf0cb", null ],
+      [ "Pervert", "classReligion.html#aa159a38b869002dc75a6b6ccf2b0df1eab2d4e6a4c0904ce52efe998a6e6ba4de", null ]
+    ] ],
+    [ "DoPunish", "classReligion.html#a329b97e57b28aea79fc4bcf83f18c106", null ],
     [ "GetFeat", "classReligion.html#a478a09bb7605f21efdd4b0017a7d8c2f", null ],
     [ "GetGiftRank", "classReligion.html#a3954242f8c1728351f79fdf83d08e0f7", null ],
     [ "GetGodTalk", "classReligion.html#a792d0e5a22357928f477da16602ed777", null ],
@@ -27,6 +33,7 @@ var classReligion =
     [ "OnLoad", "classReligion.html#a93860ff8c3342ad597ac6190cbb2f80b", null ],
     [ "OnReforge", "classReligion.html#a66d5318bf989d730e13b6e535ab8583e", null ],
     [ "Punish", "classReligion.html#a4a40dfee5cd21f61158772b23adec8e6", null ],
+    [ "PunishPerverseWretch", "classReligion.html#a17069147c30e8a5c289402987d29400b", null ],
     [ "PunishTakeOver", "classReligion.html#a45e0d39d648fc29108b929a3ca954779", null ],
     [ "Revelation", "classReligion.html#a11125a6b8a550c62876d2b414066f811", null ],
     [ "SetTextRelation", "classReligion.html#abdf78a5d6d96bd2eb60eedb529c9fff9", null ],
