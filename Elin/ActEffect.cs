@@ -2332,13 +2332,13 @@ public class ActEffect : EClass
 		case EffectId.DamageMindGreat:
 		case EffectId.Weaken:
 		{
-			bool flag10 = id == EffectId.DamageBody || id == EffectId.DamageBodyGreat;
+			bool flag9 = id == EffectId.DamageBody || id == EffectId.DamageBodyGreat;
 			bool mind = id == EffectId.DamageMind || id == EffectId.DamageMindGreat;
 			int num9 = ((id == EffectId.DamageBody || id == EffectId.DamageMind) ? 1 : (4 + EClass.rnd(4)));
 			if (id == EffectId.Weaken)
 			{
-				flag10 = EClass.rnd(2) == 0;
-				mind = !flag10;
+				flag9 = EClass.rnd(2) == 0;
+				mind = !flag9;
 				num9 = 1;
 			}
 			else
@@ -2346,10 +2346,10 @@ public class ActEffect : EClass
 				TC.PlayEffect("debuff");
 				TC.PlaySound("debuff");
 			}
-			TC.Say(flag10 ? "damageBody" : "damageMind", TC);
+			TC.Say(flag9 ? "damageBody" : "damageMind", TC);
 			for (int k = 0; k < num9; k++)
 			{
-				TC.DamageTempElements(power, flag10, mind, id != EffectId.Weaken);
+				TC.DamageTempElements(power, flag9, mind, id != EffectId.Weaken);
 			}
 			if (TC.IsPC)
 			{
@@ -2377,19 +2377,19 @@ public class ActEffect : EClass
 		case EffectId.RestoreBody:
 		case EffectId.RestoreMind:
 		{
-			bool flag9 = id == EffectId.RestoreBody;
+			bool flag10 = id == EffectId.RestoreBody;
 			if (flag)
 			{
-				Redirect(flag9 ? EffectId.DamageBodyGreat : EffectId.DamageMindGreat, BlessedState.Normal, default(ActRef));
+				Redirect(flag10 ? EffectId.DamageBodyGreat : EffectId.DamageMindGreat, BlessedState.Normal, default(ActRef));
 				break;
 			}
-			TC.Say(flag9 ? "restoreBody" : "restoreMind", TC);
+			TC.Say(flag10 ? "restoreBody" : "restoreMind", TC);
 			TC.PlaySound("heal");
 			TC.PlayEffect("heal");
-			TC.CureHost(flag9 ? CureType.CureBody : CureType.CureMind, power, state);
+			TC.CureHost(flag10 ? CureType.CureBody : CureType.CureMind, power, state);
 			if (blessed)
 			{
-				Redirect(flag9 ? EffectId.EnhanceBodyGreat : EffectId.EnhanceMindGreat, BlessedState.Normal, default(ActRef));
+				Redirect(flag10 ? EffectId.EnhanceBodyGreat : EffectId.EnhanceMindGreat, BlessedState.Normal, default(ActRef));
 			}
 			break;
 		}
@@ -2692,16 +2692,13 @@ public class ActEffect : EClass
 				TC.PlayEffect("buff");
 				TC.PlaySound("offering");
 				int num18 = TC.Evalue(1423);
-				if (num18 > 1 && num18 < 15)
+				if (flag && num18 > 1)
 				{
-					if (flag)
-					{
-						TC.SetFeat(1423, num18 - 1, msg: true);
-					}
-					else
-					{
-						TC.SetFeat(1423, Mathf.Min(num18 + ((!blessed) ? 1 : 2), 15), msg: true);
-					}
+					TC.SetFeat(1423, num18 - 1, msg: true);
+				}
+				else if (num18 < 15)
+				{
+					TC.SetFeat(1423, Mathf.Min(num18 + ((!blessed) ? 1 : 2), 15), msg: true);
 				}
 			}
 			if (flag)

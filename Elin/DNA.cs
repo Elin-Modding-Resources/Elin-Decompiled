@@ -258,13 +258,13 @@ public class DNA : EClass
 	{
 		for (int i = 0; i < vals.Count; i += 2)
 		{
-			switch (vals[i])
+			if (EClass.sources.elements.map[vals[i]].tag.Contains("permaGene"))
 			{
-			case 1237:
-			case 1415:
 				return false;
-			case 1228:
-			case 1414:
+			}
+			int num = vals[i];
+			if (num == 1228 || num == 1414)
+			{
 				if (c != null)
 				{
 					return !c.IsPC;

@@ -1901,6 +1901,7 @@ public class Trait : EClass
 			AddThing(TraitSeed.MakeSeed("carrot")).SetNum(4 + EClass.rnd(4));
 			AddThing(TraitSeed.MakeSeed("potato")).SetNum(4 + EClass.rnd(4));
 			AddThing(TraitSeed.MakeSeed("corn")).SetNum(4 + EClass.rnd(4));
+			AddThing(TraitSeed.MakeSeed("chanoki")).SetNum(4 + EClass.rnd(4));
 			for (int num10 = 0; num10 < EClass.rnd(3) + 1; num10++)
 			{
 				Add("462", 1, 0);
@@ -2206,7 +2207,7 @@ public class Trait : EClass
 					break;
 				case ShopType.Moyer:
 				{
-					for (int num14 = 1; num14 <= 23; num14++)
+					for (int num14 = 1; num14 <= 24; num14++)
 					{
 						AddAdvWeek(num14);
 					}

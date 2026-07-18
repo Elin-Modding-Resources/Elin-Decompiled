@@ -154,6 +154,8 @@ public class CINT
 
 	public const int seedBlood = 118;
 
+	public const int isDisableFuck = 119;
+
 	public const int isTrained = 120;
 
 	public const int isPrayed = 121;

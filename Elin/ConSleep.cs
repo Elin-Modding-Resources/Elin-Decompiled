@@ -177,7 +177,7 @@ public class ConSleep : BadCondition
 		}
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (chara == tg || chara.IsPC || chara.host != null || chara.IsDisabled || !chara.IsIdle || chara.Evalue(418) > 0 || tg.Evalue(418) > 0)
+			if (chara == tg || chara.IsPC || chara.host != null || chara.IsDisabled || !chara.IsIdle || chara.Evalue(418) > 0 || tg.Evalue(418) > 0 || chara.GetInt(119) != 0)
 			{
 				continue;
 			}

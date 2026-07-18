@@ -2,6 +2,10 @@ public class ActNTR : Ability
 {
 	public override bool CanPerform()
 	{
+		if (Act.CC.GetInt(119) != 0)
+		{
+			return false;
+		}
 		if (Act.TC == null || !Act.TC.isChara)
 		{
 			return false;

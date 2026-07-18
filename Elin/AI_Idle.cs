@@ -487,7 +487,7 @@ public class AI_Idle : AIAct
 			case "azzrasizzle":
 			case "geist":
 			{
-				if ((owner.IsPCFactionOrMinion && owner.IsPCParty) || EClass.rnd(20) != 0)
+				if (owner.IsPCFactionOrMinion || owner.IsPCParty || EClass.rnd(20) != 0)
 				{
 					break;
 				}

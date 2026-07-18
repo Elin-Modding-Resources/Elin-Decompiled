@@ -4,6 +4,10 @@ public class ActSlime : ActNTR
 
 	public override bool CanPerform()
 	{
+		if (Act.CC.GetInt(119) != 0)
+		{
+			return false;
+		}
 		if (Act.TC == null || !Act.TC.isChara || Act.TC == Act.CC)
 		{
 			return false;

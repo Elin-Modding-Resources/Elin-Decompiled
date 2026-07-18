@@ -24,6 +24,10 @@ public class BaseSong : BaseStance
 		{
 			owner.elements.ModExp(element.id, 20f);
 		}
+		if (EClass.rnd(10) == 0)
+		{
+			owner.elements.ModExp(241, owner.IsPC ? 10 : 100);
+		}
 		TickSong();
 	}
 

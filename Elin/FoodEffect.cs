@@ -414,10 +414,10 @@ public class FoodEffect : EClass
 			}
 			string[] foodEffect = value.source.foodEffect;
 			int id = value.id;
-			float num = effP * (float)Mathf.Min(value.Value, 10000);
+			float v = effP * (float)Mathf.Min(value.Value, 10000);
 			if (value.source.category == "food" && c.IsPC)
 			{
-				bool flag2 = num >= 0f;
+				bool flag2 = v >= 0f;
 				string text = value.source.GetText(flag2 ? "textInc" : "textDec", returnNull: true);
 				if (text != null)
 				{
@@ -449,19 +449,19 @@ public class FoodEffect : EClass
 			case "exp":
 			{
 				id = ((foodEffect.Length > 1) ? EClass.sources.elements.alias[foodEffect[1]].id : value.id);
-				int a = (int)(num * (float)((foodEffect.Length > 2) ? foodEffect[2].ToInt() : 4)) * 2 / 3;
+				int a = (int)(v * (float)((foodEffect.Length > 2) ? foodEffect[2].ToInt() : 4)) * 2 / 3;
 				c.ModExp(id, a);
 				break;
 			}
 			case "pot":
-			{
 				id = ((foodEffect.Length > 1) ? EClass.sources.elements.alias[foodEffect[1]].id : value.id);
-				int vTempPotential = c.elements.GetElement(id).vTempPotential;
-				int num2 = EClass.rndHalf((int)(num / 5f) + 1);
-				num2 = num2 * 100 / Mathf.Max(100, vTempPotential * 2 / 3);
-				c.elements.ModTempPotential(id, num2, 8);
+				AddPotential(id);
 				break;
-			}
+			case "catechin":
+				AddPotential(71);
+				AddPotential(75);
+				c.ModWeight(-EClass.rndHalf(value.Value / 5));
+				break;
 			case "karma":
 				if (c.IsPCParty)
 				{
@@ -487,13 +487,13 @@ public class FoodEffect : EClass
 				{
 					c.Say("little_eat", c);
 					c.PlaySound("ding_potential");
-					int v = Mathf.Max(5 - @int / 2, 1);
-					Debug.Log("sister eaten:" + @int + "/" + v);
+					int v2 = Mathf.Max(5 - @int / 2, 1);
+					Debug.Log("sister eaten:" + @int + "/" + v2);
 					foreach (Element value3 in c.elements.dict.Values)
 					{
 						if (value3.IsMainAttribute)
 						{
-							c.elements.ModPotential(value3.id, v);
+							c.elements.ModPotential(value3.id, v2);
 						}
 					}
 				}
@@ -505,6 +505,13 @@ public class FoodEffect : EClass
 				c.SetInt(112, @int + 1);
 				break;
 			}
+			}
+			void AddPotential(int idEle)
+			{
+				int vTempPotential = c.elements.GetElement(idEle).vTempPotential;
+				int num = EClass.rndHalf((int)(v / 5f) + 1);
+				num = num * 100 / Mathf.Max(100, vTempPotential * 2 / 3);
+				c.elements.ModTempPotential(idEle, num, 8);
 			}
 		}
 	}

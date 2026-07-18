@@ -4,6 +4,8 @@ public class ABILITY
 {
 	public const int ActMoneyDump = 5058;
 
+	public const int ActEscape = 6400;
+
 	public const int ActPray = 6050;
 
 	public const int ActDreamBug = 6020;
@@ -32,15 +34,15 @@ public class ABILITY
 
 	public const int AI_Bladder = 5054;
 
-	public const int TaskHarvest = 5053;
-
-	public const int ActEscape = 6400;
-
 	public const int ActSuicide = 6410;
 
 	public const int ActDuplicate = 6420;
 
 	public const int ActRush = 6450;
+
+	public const int ActCrabBreathe = 6500;
+
+	public const int ActGazeMana = 6623;
 
 	public const int ActGazeMutation = 6622;
 
@@ -54,11 +56,11 @@ public class ABILITY
 
 	public const int ActFear = 6611;
 
+	public const int TaskHarvest = 5053;
+
 	public const int ActWeaken = 6610;
 
-	public const int ActBash = 5052;
-
-	public const int ActBloodsuck = 6607;
+	public const int ActBurnMana = 6606;
 
 	public const int ActCrySad = 6605;
 
@@ -72,15 +74,15 @@ public class ABILITY
 
 	public const int ActCurse = 6600;
 
-	public const int ActCrabBreathe = 6500;
+	public const int ActBloodsuck = 6607;
 
-	public const int ActBurnMana = 6606;
+	public const int ActBash = 5052;
 
 	public const int ActZap = 5051;
 
 	public const int AI_Sleep = 5050;
 
-	public const int AI_OpenLock = 5049;
+	public const int Sleep = 5004;
 
 	public const int Wait = 5005;
 
@@ -94,11 +96,11 @@ public class ABILITY
 
 	public const int TaskDig = 5010;
 
+	public const int Ranged = 5003;
+
 	public const int TaskCut = 5011;
 
-	public const int Sleep = 5004;
-
-	public const int AI_Goto = 5012;
+	public const int ActAttack = 5013;
 
 	public const int TaskPlow = 5014;
 
@@ -112,15 +114,15 @@ public class ABILITY
 
 	public const int TaskReadBoard = 5019;
 
-	public const int TaskFarm = 5020;
+	public const int AI_Goto = 5012;
 
-	public const int ActAttack = 5013;
+	public const int ActDrainBlood = 6626;
 
-	public const int ActGazeMana = 6623;
+	public const int Melee = 5002;
 
-	public const int Ranged = 5003;
+	public const int ActWait = 5000;
 
-	public const int ActMelee = 5001;
+	public const int AI_OpenLock = 5049;
 
 	public const int ActItem = 5048;
 
@@ -134,11 +136,11 @@ public class ABILITY
 
 	public const int AI_TendAnimal = 5043;
 
+	public const int ActMelee = 5001;
+
 	public const int ActKick = 5042;
 
-	public const int Melee = 5002;
-
-	public const int AI_Read = 5041;
+	public const int ActRanged = 5040;
 
 	public const int AI_Fish = 5039;
 
@@ -152,31 +154,31 @@ public class ABILITY
 
 	public const int GoalIdle = 5034;
 
-	public const int ActWait = 5000;
+	public const int AI_Read = 5041;
 
-	public const int ActRanged = 5040;
-
-	public const int ActDrainBlood = 6626;
+	public const int ActCatHuffing = 6627;
 
 	public const int ActSlime = 6608;
 
-	public const int ActKiss = 6628;
+	public const int ActDeepKiss = 6629;
+
+	public const int breathe_Magic = 50211;
 
 	public const int breathe_Chaos = 50210;
 
-	public const int breathe_Holy = 50209;
+	public const int ActKiss = 6628;
 
-	public const int ActCatHuffing = 6627;
+	public const int breathe_Nerve = 50208;
 
 	public const int breathe_Sound = 50207;
 
 	public const int breathe_Nether = 50206;
 
+	public const int breathe_Ether = 50212;
+
 	public const int breathe_Poison = 50205;
 
-	public const int breathe_Magic = 50211;
-
-	public const int breathe_Mind = 50204;
+	public const int breathe_Darkness = 50203;
 
 	public const int breathe_Lightning = 50202;
 
@@ -188,15 +190,13 @@ public class ABILITY
 
 	public const int SpTransmuteShadow = 8795;
 
-	public const int SpTransmuteMimic = 8794;
-
-	public const int breathe_Darkness = 50203;
-
-	public const int breathe_Ether = 50212;
+	public const int breathe_Mind = 50204;
 
 	public const int breathe_Acid = 50213;
 
 	public const int breathe_Cut = 50214;
+
+	public const int breathe_Impact = 50215;
 
 	public const int ActCancelTask = 5033;
 
@@ -224,19 +224,17 @@ public class ABILITY
 
 	public const int TaskTrain = 5021;
 
+	public const int TaskFarm = 5020;
+
 	public const int breathe_Void = 50216;
 
-	public const int breathe_Impact = 50215;
+	public const int SpTransmuteMimic = 8794;
 
 	public const int SpTransmuteBat = 8793;
 
-	public const int breathe_ = 7000;
+	public const int breathe_Holy = 50209;
 
-	public const int breathe_Nerve = 50208;
-
-	public const int ActKizuamiTrick = 6903;
-
-	public const int ActDeepKiss = 6629;
+	public const int ActHeadpat = 6904;
 
 	public const int ActInsult = 6630;
 
@@ -256,9 +254,9 @@ public class ABILITY
 
 	public const int ActThrowPotion = 6661;
 
-	public const int ActHeadpat = 6904;
+	public const int breathe_ = 7000;
 
-	public const int ActSwarm = 6662;
+	public const int ActMultiHit = 6663;
 
 	public const int ActBladeStorm = 6664;
 
@@ -266,7 +264,11 @@ public class ABILITY
 
 	public const int ActWhirlwind = 6666;
 
-	public const int ActMultiHit = 6663;
+	public const int ActMissileBarrage = 6667;
+
+	public const int ActSwarm = 6662;
+
+	public const int ActSummonSpecial = 6800;
 
 	public const int ActMissileBarrage2 = 6668;
 
@@ -286,13 +288,11 @@ public class ABILITY
 
 	public const int StManaCost = 6720;
 
-	public const int ActMissileBarrage = 6667;
-
-	public const int StTaunt = 6700;
-
 	public const int StMama = 6701;
 
-	public const int ActSummonSpecial = 6800;
+	public const int ActKizuamiTrick = 6903;
+
+	public const int StTaunt = 6700;
 
 	public const int ActDeathSentense = 6802;
 
@@ -300,21 +300,21 @@ public class ABILITY
 
 	public static readonly int[] IDS = new int[148]
 	{
-		5058, 6050, 6020, 6019, 6018, 6015, 6013, 6012, 6011, 6003,
-		6001, 5057, 5056, 5055, 5054, 5053, 6400, 6410, 6420, 6450,
-		6622, 6621, 6620, 6613, 6612, 6611, 6610, 5052, 6607, 6605,
-		6604, 6603, 6602, 6601, 6600, 6500, 6606, 5051, 5050, 5049,
-		5005, 5006, 5007, 5008, 5009, 5010, 5011, 5004, 5012, 5014,
-		5015, 5016, 5017, 5018, 5019, 5020, 5013, 6623, 5003, 5001,
-		5048, 5047, 5046, 5045, 5044, 5043, 5042, 5002, 5041, 5039,
-		5038, 5037, 5036, 5035, 5034, 5000, 5040, 6626, 6608, 6628,
-		50210, 50209, 6627, 50207, 50206, 50205, 50211, 50204, 50202, 50201,
-		50200, 8796, 8795, 8794, 50203, 50212, 50213, 50214, 5033, 5032,
+		5058, 6400, 6050, 6020, 6019, 6018, 6015, 6013, 6012, 6011,
+		6003, 6001, 5057, 5056, 5055, 5054, 6410, 6420, 6450, 6500,
+		6623, 6622, 6621, 6620, 6613, 6612, 6611, 5053, 6610, 6606,
+		6605, 6604, 6603, 6602, 6601, 6600, 6607, 5052, 5051, 5050,
+		5004, 5005, 5006, 5007, 5008, 5009, 5010, 5003, 5011, 5013,
+		5014, 5015, 5016, 5017, 5018, 5019, 5012, 6626, 5002, 5000,
+		5049, 5048, 5047, 5046, 5045, 5044, 5043, 5001, 5042, 5040,
+		5039, 5038, 5037, 5036, 5035, 5034, 5041, 6627, 6608, 6629,
+		50211, 50210, 6628, 50208, 50207, 50206, 50212, 50205, 50203, 50202,
+		50201, 50200, 8796, 8795, 50204, 50213, 50214, 50215, 5033, 5032,
 		5031, 5030, 5029, 5028, 5027, 5026, 5025, 5024, 5023, 5022,
-		5021, 50216, 50215, 8793, 7000, 50208, 6903, 6629, 6630, 6631,
-		6632, 6640, 6641, 6642, 6650, 6660, 6661, 6904, 6662, 6664,
-		6665, 6666, 6663, 6668, 6902, 6901, 6900, 6753, 6752, 6751,
-		6750, 6720, 6667, 6700, 6701, 6800, 6802, 6801
+		5021, 5020, 50216, 8794, 8793, 50209, 6904, 6630, 6631, 6632,
+		6640, 6641, 6642, 6650, 6660, 6661, 7000, 6663, 6664, 6665,
+		6666, 6667, 6662, 6800, 6668, 6902, 6901, 6900, 6753, 6752,
+		6751, 6750, 6720, 6701, 6903, 6700, 6802, 6801
 	};
 }
 public class Ability : Act
@@ -355,7 +355,11 @@ public class Ability : Act
 			}
 		}
 		a = EClass.curve(a, 400, 100);
-		if (this is Spell || this is Song)
+		if (this is Song)
+		{
+			a = a * Mathf.Max(100 + c.Evalue(411) / 3, 1) / 100 * Mathf.Clamp(50 + EClass.curve(c.Evalue(241), 50, 10, 50) * 2, 1, 300) / 100;
+		}
+		else if (this is Spell)
 		{
 			a = a * Mathf.Max(100 + c.Evalue(411) - c.Evalue(93), 1) / 100;
 		}
@@ -363,18 +367,6 @@ public class Ability : Act
 		{
 			a = a * Mathf.Max(100 + c.Evalue(411), 1) / 100;
 		}
-		if (a > 214748364)
-		{
-			a = 214748364L;
-		}
-		return (int)a;
-	}
-
-	public static int GetSongPower(Chara c, int idSkill, int power)
-	{
-		long a = MathEx.Max(c.LV * 6 + 30, (long)c.Evalue(idSkill) * 4L + 30);
-		a = EClass.curve(a, 400, 100);
-		a = a * Mathf.Max(100 + c.Evalue(411) - c.Evalue(93), 1) / 100;
 		if (a > 214748364)
 		{
 			a = 214748364L;

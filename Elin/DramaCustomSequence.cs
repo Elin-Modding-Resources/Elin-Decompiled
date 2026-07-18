@@ -323,6 +323,10 @@ public class DramaCustomSequence : EClass
 		{
 			Choice((c.GetInt(126) == 0) ? "daDisableLoyal" : "daDisableLoyal2", "_disableLoyal");
 		}
+		if (c.IsSlimeEvolvable || c.ability.Has(6603) || c.HasElement(1216))
+		{
+			Choice((c.GetInt(119) == 0) ? "daDisableFuck" : "daDisableFuck2", "_disableFuck");
+		}
 		if (c.GetInt(113) == 0)
 		{
 			Choice("daEquipSharedOff", "_toggleSharedEquip");
@@ -656,6 +660,13 @@ public class DramaCustomSequence : EClass
 			c.SetInt(126, (c.GetInt(126) == 0) ? 1 : 0);
 		});
 		_Talk("tg", GetTopic(c, (c.GetInt(126) == 0) ? "shutup" : "shutup2"));
+		End();
+		Step("_disableFuck");
+		Method(delegate
+		{
+			c.SetInt(119, (c.GetInt(119) == 0) ? 1 : 0);
+		});
+		_Talk("tg", GetTopic(c, (c.GetInt(119) == 0) ? "shutup" : "shutup2"));
 		End();
 		Step("_suck");
 		_Talk("tg", GetTalk("pervert4"));

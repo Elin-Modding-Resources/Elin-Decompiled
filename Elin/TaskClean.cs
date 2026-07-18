@@ -33,7 +33,9 @@ public class TaskClean : Task
 	{
 		while (true)
 		{
-			dest = GetTarget(dest);
+			int range = owner.Tool?.Evalue(770) ?? 0;
+			range = ((range <= 0) ? 1 : (2 + range / 10));
+			dest = GetTarget(dest, range);
 			if (dest == null)
 			{
 				yield return Success();
@@ -51,11 +53,9 @@ public class TaskClean : Task
 			}
 			EClass.pc.Say("clean", owner);
 			EClass.pc.PlaySound("clean_floor");
-			int num = owner.Tool?.Evalue(770) ?? 0;
-			num = ((num <= 0) ? 1 : (2 + num / 10));
-			if (num > 1)
+			if (range > 1)
 			{
-				List<Point> list = EClass._map.ListPointsInSquare(dest, num - 1, mustBeWalkable: false);
+				List<Point> list = EClass._map.ListPointsInSquare(dest, range - 1, mustBeWalkable: false);
 				list.Sort((Point a, Point b) => a.Distance(dest) - b.Distance(dest));
 				foreach (Point item in list)
 				{
@@ -86,10 +86,10 @@ public class TaskClean : Task
 		}
 	}
 
-	public static Point GetTarget(Point dest)
+	public static Point GetTarget(Point dest, int ranage)
 	{
 		List<Point> list = new List<Point>();
-		foreach (Point item in EClass._map.ListPointsInCircle(dest, 3f, mustBeWalkable: false))
+		foreach (Point item in EClass._map.ListPointsInCircle(dest, 2 + ranage * 2, mustBeWalkable: false))
 		{
 			if (CanClean(item) && item.IsInBounds)
 			{

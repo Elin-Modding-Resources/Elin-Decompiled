@@ -5,33 +5,33 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
+	public const int rare = 751;
+
 	public const int difficulty = 765;
+
+	public const int stimulant = 760;
 
 	public const int air = 763;
 
 	public const int roasted = 762;
 
-	public const int rare = 751;
-
-	public const int cute = 752;
-
-	public const int antidote = 753;
-
-	public const int nerve = 754;
-
-	public const int blood = 755;
-
-	public const int hotspring = 756;
+	public const int recharge = 761;
 
 	public const int purity = 759;
 
-	public const int stimulant = 760;
+	public const int hotspring = 756;
 
-	public const int recharge = 761;
+	public const int blood = 755;
 
-	public const int forbidden = 766;
+	public const int nerve = 754;
+
+	public const int antidote = 753;
+
+	public const int cute = 752;
 
 	public const int comfort = 750;
+
+	public const int forbidden = 766;
 
 	public const int _void = 0;
 
@@ -83,8 +83,8 @@ public class ELEMENT
 
 	public static readonly int[] IDS = new int[38]
 	{
-		765, 763, 762, 751, 752, 753, 754, 755, 756, 759,
-		760, 761, 766, 750, 0, 11, 1, 2, 3, 5,
+		751, 765, 760, 763, 762, 761, 759, 756, 755, 754,
+		753, 752, 750, 766, 0, 11, 1, 2, 3, 5,
 		10, 770, 12, 13, 14, 15, 16, 18, 20, 17,
 		22, 23, 24, 25, 26, 29, 85, 21
 	};

@@ -7428,7 +7428,7 @@ public class Chara : Card, IPathfindWalker
 				ShowDialog("_chara", "invisible");
 				return;
 			}
-			if (!IsPC && !EClass.player.codex.DroppedCard(id) && affinity.CanGiveCard())
+			if (!IsPC && !EClass.player.codex.DroppedCard(id) && affinity.CanGiveCard() && source.LV < 10000)
 			{
 				EClass.player.codex.MarkCardDrop(id);
 				ShowDialog("_chara", "give_card");

@@ -150,7 +150,7 @@ public class TraitCrafter : Trait
 			break;
 		}
 		case MixType.SeedWork:
-			if (idx == 0 && c.id == "seed" && c.encLV == 0)
+			if (idx == 1 && c.id == "seed" && c.encLV == 0)
 			{
 				return false;
 			}
@@ -410,12 +410,12 @@ public class TraitCrafter : Trait
 		}
 		case MixType.SeedWork:
 		{
-			TraitSeed traitSeed = thing.trait as TraitSeed;
-			string id = thing2.id;
+			TraitSeed traitSeed = thing2.trait as TraitSeed;
+			string id = thing.id;
 			if (id == "mercury" || id == "blood_angel")
 			{
-				int num7 = thing.encLV;
-				if (thing2.id == "mercury")
+				int num7 = thing2.encLV;
+				if (thing.id == "mercury")
 				{
 					num7 = num7 * 2 / 3;
 				}
