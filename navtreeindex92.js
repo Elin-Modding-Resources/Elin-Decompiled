@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"classPOLICY.html#af05aabbd7d781ce4cde56f941662b5bb":[1,0,1031,25],
 "classPOLICY.html#af321f186fa52b987a0df023acadacfae":[1,0,1031,11],
 "classPOLICY.html#af6db609d97a9b064db9bae40a50d6146":[1,0,1031,45],
 "classPaintPosition.html":[1,0,1011],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "classPlayer.html#a31497c929d1e935516cb12e059af6a5c":[1,0,1024,59],
 "classPlayer.html#a32eea09b622f81f3ad2afe9ea4fcb55d":[1,0,1024,213],
 "classPlayer.html#a33de1eae7c1cabc30cafd41148f4ed5a":[1,0,1024,75],
-"classPlayer.html#a3609bf4c85562d1cbfcd07c4b8977071":[1,0,1024,195],
-"classPlayer.html#a3654552eef9f19f722bc7821445a78a0":[1,0,1024,187]
+"classPlayer.html#a3609bf4c85562d1cbfcd07c4b8977071":[1,0,1024,195]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX96 =
 {
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a810425f032142fee96e58a389b00c51b":[0,4,7,0,1,0],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a810425f032142fee96e58a389b00c51b":[1,0,7,0,1,0],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a8269ac74857b8de789bf9a68ac7fe3f8":[1,0,7,0,1,1],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a8269ac74857b8de789bf9a68ac7fe3f8":[0,4,7,0,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX96 =
 "classProceduralMesh.html#ae9ac9ac0ba2a40143d72b1bc326abe7c":[1,0,1046,1],
 "classProceduralMesh.html#aedaad433ecb7daf2d7e8518ca6710840":[1,0,1046,9],
 "classProceduralMesh.html#af393d4ea95d89c6508055596445f5efb":[1,0,1046,3],
-"classProceduralMesh.html#af80ec9621d8a2376644b6a6b10b88c96":[1,0,1046,2],
-"classProceduralMesh.html#af8f81e07870f27302f1047f59b4468c2":[1,0,1046,7]
+"classProceduralMesh.html#af80ec9621d8a2376644b6a6b10b88c96":[1,0,1046,2]
 };

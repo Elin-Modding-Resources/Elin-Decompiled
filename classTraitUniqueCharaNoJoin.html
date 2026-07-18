@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.327 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.328 Nightly</span>
    </div>
   </td>
  </tr>
@@ -835,7 +835,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TraitUniqueCharaNoJoin_8cs_source.html#l00005">5</a> of file <a class="el" href="TraitUniqueCharaNoJoin_8cs_source.html">TraitUniqueCharaNoJoin.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (base.owner.Chara.source.recruitItems.IsEmpty())</div>
+<div class="line"><span class="lineno">   10</span>            {</div>
+<div class="line"><span class="lineno">   11</span>                <span class="keywordflow">return</span> base.owner.IsPCFaction;</div>
+<div class="line"><span class="lineno">   12</span>            }</div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1ab819fc489cb759d35f3b507b092966" name="a1ab819fc489cb759d35f3b507b092966"></a>

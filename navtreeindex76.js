@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"classHotItemThing.html#aad549be5cac2b4376c90b5f714fd8007":[1,0,725,7],
 "classHotItemThing.html#aff293e50f60c2e63cadf5e29b83ce11a":[1,0,725,0],
 "classHotItemToggle.html":[1,0,726],
 "classHotItemToggle.html#a1b38b1f7ed2d3d5e31ea2f64c60e6c53":[1,0,726,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "classInputFieldsTabSwitcher.html#a08932a97481c55c41841189ff2ab5777":[1,0,750,9],
 "classInputFieldsTabSwitcher.html#a19ae6309117ff66d12b11b64c21e2a9e":[1,0,750,7],
 "classInputFieldsTabSwitcher.html#a1f14e24aae94458a60929b5f5d13d5b7":[1,0,750,5],
-"classInputFieldsTabSwitcher.html#a3c116ecaa22e70712af9748b20b61dbf":[1,0,750,6],
-"classInputFieldsTabSwitcher.html#a51d50f81a245a3141d2437b4a4301925":[1,0,750,4]
+"classInputFieldsTabSwitcher.html#a3c116ecaa22e70712af9748b20b61dbf":[1,0,750,6]
 };

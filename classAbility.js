@@ -2,7 +2,6 @@ var classAbility =
 [
     [ "CanLink", "classAbility.html#adc0411882ca5c5a75719528a66cbe16e", null ],
     [ "GetPower", "classAbility.html#ae21977e06fa4d9ca2d5c44aa2adecee4", null ],
-    [ "GetSongPower", "classAbility.html#a2b44fd2b23c258e5c437e701fc706e23", null ],
     [ "GetSourceValue", "classAbility.html#a06d83b5a738742b54e545a74e45ba988", null ],
     [ "OnChangeValue", "classAbility.html#a3a131c464b975844416a8ed95fe6947a", null ],
     [ "CanPressRepeat", "classAbility.html#a89aa95f671cf3573c82d84320f895a8f", null ],

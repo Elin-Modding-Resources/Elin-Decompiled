@@ -1,6 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classActBreathe.html#a36d8ee33f9accda16f48a4dd44e5d1dc":[1,0,21,2],
 "classActBreathe.html#a60457d7264e26509408ac042cc004fef":[1,0,21,0],
 "classActBreathe.html#a8f9245b9be5061b7120bb4f99f747228":[1,0,21,1],
 "classActChat.html":[1,0,22],
@@ -249,5 +248,6 @@ var NAVTREEINDEX31 =
 "classActTelekinesis.html#a0b104cf343432392875d4ace1118d744":[1,0,71,6],
 "classActTelekinesis.html#a1a09eed0c663cc601ec05f3559e92522":[1,0,71,0],
 "classActTelekinesis.html#a26b00ed7a53ffc4fd9a3e0534284608e":[1,0,71,1],
-"classActTelekinesis.html#a2c6788eec86e15dcfc1048cb60c265ce":[1,0,71,2]
+"classActTelekinesis.html#a2c6788eec86e15dcfc1048cb60c265ce":[1,0,71,2],
+"classActTelekinesis.html#a58b4567c5a6183490dcf6784a1816c33":[1,0,71,4]
 };

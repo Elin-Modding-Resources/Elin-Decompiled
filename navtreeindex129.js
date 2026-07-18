@@ -1,5 +1,6 @@
 var NAVTREEINDEX129 =
 {
+"classTraitPainter.html#a804454fa49e9e95eb60096914c11a747":[1,0,1857,0],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a4802a5ac6005a6ab9c68a2fb29e30a3e":[1,0,1857,0,0],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747a967d35e40f3f95b1f538bd248640bf3b":[1,0,1857,0,1],
 "classTraitPainter.html#a804454fa49e9e95eb60096914c11a747ad0a662a5235ecde30739fe50cf0de830":[1,0,1857,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX129 =
 "classTraitRuneMoldMana.html":[1,0,1919],
 "classTraitRuneMoldMana.html#acda0f331003b839933a569cab825df3c":[1,0,1919,0],
 "classTraitRuneMoldSun.html":[1,0,1920],
-"classTraitRuneMoldSun.html#a81942ebbbe6681ff721b95abce3a2ffb":[1,0,1920,0],
-"classTraitSack.html":[1,0,1921]
+"classTraitRuneMoldSun.html#a81942ebbbe6681ff721b95abce3a2ffb":[1,0,1920,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX116 =
 {
+"classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247":[1,0,1349,13],
 "classSteam.html#a97a5dc96771772c2d6aa9326f22fd65a":[1,0,1349,8],
 "classSteam.html#a9a3517abe94edb870b327fbb128ee3a7":[1,0,1349,11],
 "classSteam.html#aa8e05cdeeba8f9bdbe101b0b184500e9":[1,0,1349,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX116 =
 "classTactics.html#afb472ee81016a5aec1e24ec5961f9998":[1,0,1361,17],
 "classTalkDataList.html":[1,0,1362],
 "classTalkDataList.html#a0dad3e3ec163dea82e2415ba05727aa7":[1,0,1362,2],
-"classTalkDataList.html#a296b9ef78f9249aa676fe7636d87be61":[1,0,1362,1],
-"classTalkDataList.html#a313200ec86e0ec40751d28ff335df32f":[1,0,1362,3]
+"classTalkDataList.html#a296b9ef78f9249aa676fe7636d87be61":[1,0,1362,1]
 };

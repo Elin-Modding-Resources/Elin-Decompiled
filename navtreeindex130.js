@@ -1,5 +1,6 @@
 var NAVTREEINDEX130 =
 {
+"classTraitSack.html":[1,0,1921],
 "classTraitSack.html#a0849f9fa92dacafa1eee0cc4fdc9987a":[1,0,1921,0],
 "classTraitSack.html#a7f0bf4fff6720ad40009df89a4c380f9":[1,0,1921,1],
 "classTraitSalaryChest.html":[1,0,1922],
@@ -248,6 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitStairsLocked.html":[1,0,1979],
 "classTraitStairsLocked.html#a6cd0bdb93a24abd59e451ebe49f5c476":[1,0,1979,1],
 "classTraitStairsLocked.html#aabec620ca37f834dc90bcf2c07517f8c":[1,0,1979,0],
-"classTraitStairsLocked.html#af72856364f66818fed33d3f391612712":[1,0,1979,2],
-"classTraitStairsUp.html":[1,0,1980]
+"classTraitStairsLocked.html#af72856364f66818fed33d3f391612712":[1,0,1979,2]
 };

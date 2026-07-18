@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitFakeBlock.html#a96edbd1d237bf3137ad70ac548bf8dc7":[1,0,1675,2],
 "classTraitFakeBlock.html#acb8cf6feaedcbe57f4edc24b196d2068":[1,0,1675,0],
 "classTraitFakeBlock.html#aefdfb8480f6d15a8ea3765227f1f525a":[1,0,1675,1],
 "classTraitFakeObj.html":[1,0,1676],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitGrindstone.html#aae24f4234cc21b75179426d68b1da507":[1,0,1741,1],
 "classTraitGrindstone.html#ab32d06a9e3524b76d1f2592e39d6a319":[1,0,1741,8],
 "classTraitGrindstone.html#ae008eb99c52e7011b65067ebd018fe2d":[1,0,1741,0],
-"classTraitGuard.html":[1,0,1742],
-"classTraitGuard.html#a8c0a04548373303e71ed5a9d15bbd6f8":[1,0,1742,0]
+"classTraitGuard.html":[1,0,1742]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX127 =
 {
+"classTraitGuard.html#a8c0a04548373303e71ed5a9d15bbd6f8":[1,0,1742,0],
 "classTraitGuard.html#ab37ae0e246f09be3190e1017ac92c948":[1,0,1742,1],
 "classTraitGuildClerk.html":[1,0,1743],
 "classTraitGuildClerk.html#a3f3b315569c06d2d1cd57bfcbfce7567":[1,0,1743,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitMaterialHammer.html#aecb35443e66b34103adc8b494ce32d52":[1,0,1795,0],
 "classTraitMayor.html":[1,0,1796],
 "classTraitMayor.html#a6a765a7ca86755cd4560397ed8aa28d2":[1,0,1796,1],
-"classTraitMayor.html#ac622a4b6c45cf17f89d4431d0439739f":[1,0,1796,2],
-"classTraitMayor.html#ac7e6606d157a5ed5e3a66d773aaecd59":[1,0,1796,0]
+"classTraitMayor.html#ac622a4b6c45cf17f89d4431d0439739f":[1,0,1796,2]
 };

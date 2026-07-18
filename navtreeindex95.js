@@ -1,5 +1,6 @@
 var NAVTREEINDEX95 =
 {
+"classPolicyManager.html#a332360c727a51e03190e1e99f68d4bb9":[1,0,1032,3],
 "classPolicyManager.html#a412a4ca24a22cd22211c1419481fb6f3":[1,0,1032,1],
 "classPolicyManager.html#a6e36235690fcb1f725c4713674c647cb":[1,0,1032,13],
 "classPolicyManager.html#a8b22547f2d8a6bbf9100a3b657ab38f4":[1,0,1032,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX95 =
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a5a1b8c5a5bda134cf561b5f130d126f8":[0,4,7,0,1,4],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a5a1b8c5a5bda134cf561b5f130d126f8":[1,0,7,0,1,4],
 "classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a72d0cbbadffa740b2534935bf59e0027":[1,0,7,0,1,14],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a72d0cbbadffa740b2534935bf59e0027":[0,4,7,0,1,14],
-"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a810425f032142fee96e58a389b00c51b":[0,4,7,0,1,0]
+"classPrimitiveUI_1_1Examples_1_1PUIExampleCharts.html#a72d0cbbadffa740b2534935bf59e0027":[0,4,7,0,1,14]
 };

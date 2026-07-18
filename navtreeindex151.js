@@ -1,5 +1,6 @@
 var NAVTREEINDEX151 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da713ae1e76bdce5df49e9da47798a9e1c":[0,4,3,0,8,58],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7157aa762a893b51e4bdda0e1148bee0":[0,4,3,0,8,162],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da720a669da5c6495a5c7600bdcf74afae":[0,4,3,0,8,26],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da7258b1ac55aa7dbeaa9a67b188d3ad19":[0,4,3,0,8,150],
@@ -248,6 +249,5 @@ var NAVTREEINDEX151 =
 "structBitArray32.html":[1,0,239],
 "structBitArray32.html#a0e36b9b35f6f05c9d0ee4046d0f93b91":[1,0,239,0],
 "structBitArray32.html#a1204ad7532f69f38c5d5b5405ec1f445":[1,0,239,14],
-"structBitArray32.html#a14a258c29e186dd2b80683591efb99d6":[1,0,239,11],
-"structBitArray32.html#a2c4a15cea9f0f82794194104c94c0154":[1,0,239,6]
+"structBitArray32.html#a14a258c29e186dd2b80683591efb99d6":[1,0,239,11]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX149 =
 {
+"classZone__StartSite.html#a2712b88083ca6a99de3d830b9766c3c6":[1,0,2304,1],
 "classZone__StartSite.html#a8fcddf2588515c21a69c0cb885c407c3":[1,0,2304,2],
 "classZone__StartSite.html#ae24d1e90e115f1b5ad892fb055e13fda":[1,0,2304,3],
 "classZone__StartSiteCave.html":[1,0,2305],
@@ -248,6 +249,5 @@ var NAVTREEINDEX149 =
 "functions_vars_u.html":[1,3,2,21],
 "functions_vars_v.html":[1,3,2,22],
 "functions_vars_w.html":[1,3,2,23],
-"functions_vars_x.html":[1,3,2,24],
-"functions_vars_y.html":[1,3,2,25]
+"functions_vars_x.html":[1,3,2,24]
 };

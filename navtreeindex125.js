@@ -1,5 +1,6 @@
 var NAVTREEINDEX125 =
 {
+"classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1621,0],
 "classTraitDeedRelocate.html#afc369a4209e43af8f60355ac32314f7b":[1,0,1621,1],
 "classTraitDeedWedding.html":[1,0,1622],
 "classTraitDefertilizer.html":[1,0,1623],
@@ -248,6 +249,5 @@ var NAVTREEINDEX125 =
 "classTraitFactory.html#a4ea2e3f2fa68547ae6f8664924ec1b1a":[1,0,1674,3],
 "classTraitFactory.html#a78d67401eceea58e197ddf83824dbf5e":[1,0,1674,1],
 "classTraitFactory.html#ae4bca0b8260e8992e5db61309bbbb461":[1,0,1674,2],
-"classTraitFakeBlock.html":[1,0,1675],
-"classTraitFakeBlock.html#a96edbd1d237bf3137ad70ac548bf8dc7":[1,0,1675,2]
+"classTraitFakeBlock.html":[1,0,1675]
 };

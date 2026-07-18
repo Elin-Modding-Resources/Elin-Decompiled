@@ -1,5 +1,6 @@
 var NAVTREEINDEX137 =
 {
+"classUIInventory.html#a61e2a9128919831e352165b946d045f1":[1,0,2140,50],
 "classUIInventory.html#a6345d19bc41fb8d362325dcbf44f31ef":[1,0,2140,29],
 "classUIInventory.html#a638977ba866f0d5cfb744e71a113eac0":[1,0,2140,44],
 "classUIInventory.html#a6748160a28613c1219faaee5bf7fbc27":[1,0,2140,31],
@@ -248,6 +249,5 @@ var NAVTREEINDEX137 =
 "classUIMagicChest.html#a03875b33175263127ed5046ec6695a38":[1,0,2148,28],
 "classUIMagicChest.html#a03dc9cb30be9958fb997e8591a0a5542":[1,0,2148,29],
 "classUIMagicChest.html#a0f5b05b036c8200fcf1e0a3636f89401":[1,0,2148,20],
-"classUIMagicChest.html#a1291cd7e76136cb6ea7e0a7069b4308f":[1,0,2148,9],
-"classUIMagicChest.html#a23a486f428ed8338bee184f9573d2d21":[1,0,2148,6]
+"classUIMagicChest.html#a1291cd7e76136cb6ea7e0a7069b4308f":[1,0,2148,9]
 };

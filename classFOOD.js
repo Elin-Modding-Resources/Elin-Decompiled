@@ -4,6 +4,7 @@ var classFOOD =
     [ "food_blood", "classFOOD.html#a386ba3da0ca8b2874230951d3db821f6", null ],
     [ "food_bug", "classFOOD.html#a288f52db938443ba7caa49ca386aa24a", null ],
     [ "food_cat", "classFOOD.html#a7378998540354bd7f84e9a179fa3ae76", null ],
+    [ "food_catechin", "classFOOD.html#a9264c57120a9b5da919b0b333720e22a", null ],
     [ "food_CHA", "classFOOD.html#a29ae8719d0667458d64f333946336be6", null ],
     [ "food_god", "classFOOD.html#a1c6add4cdabe7b53a17cd09c9f35ceff", null ],
     [ "food_human", "classFOOD.html#a8af74bfc7b158912bdee043f95211c37", null ],

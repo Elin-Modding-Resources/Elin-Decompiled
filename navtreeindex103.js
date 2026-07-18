@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"classResearchManager.html#ae5322f077fc92edc9ab003c4de25db48":[1,0,1201,11],
 "classResearchManager.html#aeb308ad900caa30fb5e9e7ac51d5a86f":[1,0,1201,6],
 "classResearchPlan.html":[1,0,1202],
 "classResearchPlan.html#a06b52c7ccb84fc5d63b7e9bb83050bb9":[1,0,1202,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX103 =
 "classSKILL.html#a2fe1e7208c74ac81fd42db8efca0f75a":[1,0,1242,42],
 "classSKILL.html#a3031ecc00a3a08ffa988048c57e683dc":[1,0,1242,59],
 "classSKILL.html#a31d699ec8b8ef228347939d20dc4ba29":[1,0,1242,49],
-"classSKILL.html#a3229f65b65a6dd957289373b4c04e741":[1,0,1242,10],
-"classSKILL.html#a33325dd5438366c2afd7e5b0ab7051d3":[1,0,1242,127]
+"classSKILL.html#a3229f65b65a6dd957289373b4c04e741":[1,0,1242,10]
 };

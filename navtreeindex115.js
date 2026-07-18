@@ -1,5 +1,6 @@
 var NAVTREEINDEX115 =
 {
+"classSpawnSetting.html#a7f4eb4a498e2a9cb6895d4fb44fb0d7d":[1,0,1321,10],
 "classSpawnSetting.html#a9824bebf004b4b2b038699808ff9a87d":[1,0,1321,20],
 "classSpawnSetting.html#aa1db65406ce51e1303a9bad67b9a3114":[1,0,1321,5],
 "classSpawnSetting.html#aa580628089b00d52eb870b037d9cd3f3":[1,0,1321,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX115 =
 "classSteam.html#a4ca228997c65c35b796ddb721042a21a":[1,0,1349,1],
 "classSteam.html#a611e6d30df5e4f3179483fa6b0e543e5":[1,0,1349,10],
 "classSteam.html#a7ed989445273162de59dd96ac322d9ee":[1,0,1349,0],
-"classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4":[1,0,1349,14],
-"classSteam.html#a9655d73df0490d47b8a9b8fa3db6d247":[1,0,1349,13]
+"classSteam.html#a8042508c3cfc8f7c6cb9ed189614bdb4":[1,0,1349,14]
 };

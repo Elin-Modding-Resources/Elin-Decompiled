@@ -1,5 +1,6 @@
 var NAVTREEINDEX123 =
 {
+"classTraitBananaPeel.html#af627480fad2384e3ff463de101b8c474":[1,0,1523,2],
 "classTraitBank.html":[1,0,1524],
 "classTraitBank.html#a6aac890589392f8f052ed3df63dc57eb":[1,0,1524,1],
 "classTraitBank.html#ac5a210f7b83e9778db4b194d3869499f":[1,0,1524,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitChair.html":[1,0,1574],
 "classTraitChangingRoom.html":[1,0,1575],
 "classTraitChangingRoom.html#a70098cc23cf42aad78138d397604ded8":[1,0,1575,0],
-"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1575,1],
-"classTraitChara.html":[1,0,1576]
+"classTraitChangingRoom.html#ae46c46af0344d61e4cba88717e7c4b07":[1,0,1575,1]
 };

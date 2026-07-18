@@ -1,5 +1,6 @@
 var NAVTREEINDEX124 =
 {
+"classTraitChara.html":[1,0,1576],
 "classTraitChara.html#a082aebc8ded8a214962006a21717b046":[1,0,1576,4],
 "classTraitChara.html#a1cb2d15f296e190a9b93880a7ddbf2c1":[1,0,1576,12],
 "classTraitChara.html#a2086848ac881113e85fd2f5f2cb7dbe1":[1,0,1576,27],
@@ -248,6 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitDeedDivorce.html#aaf3e290df36320ae262b326e20b0775d":[1,0,1619,0],
 "classTraitDeedLostRing.html":[1,0,1620],
 "classTraitDeedLostRing.html#a364b80495e9d8e05f6f9ea95e8047d4c":[1,0,1620,0],
-"classTraitDeedRelocate.html":[1,0,1621],
-"classTraitDeedRelocate.html#a9a6ffc067898e2e41e831a9e1d6e2358":[1,0,1621,0]
+"classTraitDeedRelocate.html":[1,0,1621]
 };

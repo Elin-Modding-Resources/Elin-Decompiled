@@ -43,6 +43,7 @@ var classCINT =
     [ "invest", "classCINT.html#aa1dce184557bac765309697e38ca33c3", null ],
     [ "isAlreadyCaptured", "classCINT.html#a374344939e8099e1b407bc19b96ac3df", null ],
     [ "isAmbushWarned", "classCINT.html#adb56566ba997569423c6325bed1bfec3", null ],
+    [ "isDisableFuck", "classCINT.html#a67e3488be858dbdcb8a6d22feccc8cef", null ],
     [ "isDisableLoyal", "classCINT.html#afca62bb57f80478ecf0137fec1615a1a", null ],
     [ "isDisableStockUse", "classCINT.html#a23a05bba9c26015d92f8ff829cfdf156", null ],
     [ "isFiamaChest", "classCINT.html#a6a2c043701e2c5d37b5a84cb86c3544d", null ],

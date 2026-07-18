@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classGuildFighter.html#abff767150b3a93afed2296f18333a5c6":[1,0,673,0],
 "classGuildFighter.html#ad7d6d24de2e4d3e50810aa7b889e6d9f":[1,0,673,5],
 "classGuildMage.html":[1,0,674],
 "classGuildMage.html#a0c5f9aaf359c3d4d1a8b7c9c2aacbf5c":[1,0,674,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classHomeResourceEducation.html#ae6369f86a757cc1f7a124ec8bcbf5c1f":[1,0,692,0],
 "classHomeResourceFun.html":[1,0,693],
 "classHomeResourceIndustry.html":[1,0,694],
-"classHomeResourceKarma.html":[1,0,695],
-"classHomeResourceManager.html":[1,0,696]
+"classHomeResourceKarma.html":[1,0,695]
 };

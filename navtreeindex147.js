@@ -1,5 +1,6 @@
 var NAVTREEINDEX147 =
 {
+"classZoneEventManager.html#ad91925d5b80641654ce190d9fd16da4f":[1,0,2330,2],
 "classZoneEventManager.html#ad9ceee099090c0ac51861aa2319b54f7":[1,0,2330,6],
 "classZoneEventManager.html#ade91a72719cc08bc4303d34d941cbebd":[1,0,2330,10],
 "classZoneEventMusic.html":[1,0,2331],
@@ -248,6 +249,5 @@ var NAVTREEINDEX147 =
 "classZone__Arena.html":[1,0,2241],
 "classZone__Arena.html#a23f93026eb8b48371b37ca1c5d5644b3":[1,0,2241,1],
 "classZone__Arena.html#a34a1cd9398e8fb458e0a3ba38fc50907":[1,0,2241,0],
-"classZone__Arena.html#a5b657d752ffb0416861456d6ed94b93d":[1,0,2241,4],
-"classZone__Arena.html#a7b031408533c6fa2374f687f3a23242a":[1,0,2241,2]
+"classZone__Arena.html#a5b657d752ffb0416861456d6ed94b93d":[1,0,2241,4]
 };

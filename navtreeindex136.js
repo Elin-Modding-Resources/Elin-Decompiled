@@ -1,5 +1,6 @@
 var NAVTREEINDEX136 =
 {
+"classUIEventUtil.html#ac2179e25c4a76bae627aba69ad35a796":[1,0,2126,0],
 "classUIFactionInfo.html":[1,0,2127],
 "classUIFactionInfo.html#a01b9b20bb820570a2a32db502d0dc4f7":[1,0,2127,17],
 "classUIFactionInfo.html#a02c5060ce96e0e28e64593e3aec75bb5":[1,0,2127,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX136 =
 "classUIInventory.html#a580c5474718bd3459a566f889ada1ee0a3e679cff5b3a6f6f8f32aead541a0a12":[1,0,2140,2,2],
 "classUIInventory.html#a580c5474718bd3459a566f889ada1ee0abcd8db575b47c838e5d551e3973db4ac":[1,0,2140,2,1],
 "classUIInventory.html#a5cf5f2944629a84f64edd7a6401677f4":[1,0,2140,16],
-"classUIInventory.html#a5d6c55347e3f37e74d232e4a85c9b0b8":[1,0,2140,26],
-"classUIInventory.html#a61e2a9128919831e352165b946d045f1":[1,0,2140,50]
+"classUIInventory.html#a5d6c55347e3f37e74d232e4a85c9b0b8":[1,0,2140,26]
 };

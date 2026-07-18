@@ -1,5 +1,6 @@
 var NAVTREEINDEX132 =
 {
+"classTraitToolWrite.html":[1,0,2040],
 "classTraitTorch.html":[1,0,2041],
 "classTraitTorch.html#a597313b06fa2e8b837ff2db8f05d9511":[1,0,2041,1],
 "classTraitTorch.html#ae700c12b434ee5226ae9b6f7f771bc4d":[1,0,2041,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX132 =
 "classTwoDLaserPack_1_1LineBasedLaser.html#a8d176050c08c5635142bcb6349b24b11":[1,0,9,0,4],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a8d176050c08c5635142bcb6349b24b11":[0,4,9,0,4],
 "classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[0,4,9,0,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[1,0,9,0,0],
-"classTwoDLaserPack_1_1LineBasedLaser.html#a910959e3d11641d1ecc0187e386e2470":[1,0,9,0,35]
+"classTwoDLaserPack_1_1LineBasedLaser.html#a90e6cf1d6a7e4efb0f734112481f3442":[1,0,9,0,0]
 };
