@@ -469,6 +469,7 @@ var hierarchy =
                 [ "ConRebirth", "classConRebirth.html", null ],
                 [ "ConResEle", "classConResEle.html", null ],
                 [ "ConSeeInvisible", "classConSeeInvisible.html", null ],
+                [ "ConSongValor", "classConSongValor.html", null ],
                 [ "ConStrife", "classConStrife.html", null ],
                 [ "ConTelepathy", "classConTelepathy.html", null ],
                 [ "ConTorch", "classConTorch.html", null ],

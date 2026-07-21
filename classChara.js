@@ -94,6 +94,7 @@ var classChara =
     [ "GetBuffStats", "classChara.html#aff618829bc8d84bcb00b43928be8d4b7", null ],
     [ "GetBuffStats", "classChara.html#a2603c60e1fb15b338073f73f2b0355a7", null ],
     [ "GetBurden", "classChara.html#a14578e8701ab8e453eebe2cb220123f0", null ],
+    [ "GetCondition", "classChara.html#a146c78cf3a02185dc5a0ae4573e5ede1", null ],
     [ "GetCondition< T >", "classChara.html#a3208332f6204ed7f804395c2755a638b", null ],
     [ "GetCooldown", "classChara.html#abad8e49e1e7d1b82508b3e96c892d192", null ],
     [ "GetCurrentDir", "classChara.html#a662c01a1b998c133898c481f31f509e2", null ],

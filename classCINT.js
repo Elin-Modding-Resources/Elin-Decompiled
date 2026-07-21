@@ -68,6 +68,7 @@ var classCINT =
     [ "numBeaten", "classCINT.html#aecaed8f913e8e7057564c167e99b6757", null ],
     [ "numLicked", "classCINT.html#a85eedc7a415e3fe8d6cbfaed9858b7ad", null ],
     [ "originalHostility", "classCINT.html#a46b8687230da11a44f803c035f51990e", null ],
+    [ "peakyAdded", "classCINT.html#a9280eea5320a3c4f439bc23e9fae502a", null ],
     [ "price", "classCINT.html#ada27054673e418046326d07c6e82e736", null ],
     [ "price_add", "classCINT.html#ad2811034f351ac27993b6c5021f0dbbb", null ],
     [ "price_copy", "classCINT.html#a2f23d3eb1e0706d50a69917b091411e8", null ],

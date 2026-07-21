@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"classActTelekinesis.html#a2c6788eec86e15dcfc1048cb60c265ce":[1,0,71,2],
+"classActTelekinesis.html#a58b4567c5a6183490dcf6784a1816c33":[1,0,71,4],
 "classActTelekinesis.html#a63b33d6424ef3c458fb03c36a2d4b565":[1,0,71,3],
 "classActTelekinesis.html#a8ac3a4b892f1edf4afad91ad34ebe340":[1,0,71,5],
 "classActTelekinesis.html#aba01860cd0a373f5a81256b6077ddf24":[1,0,71,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "classActorEx.html#af8d340238c9db5ac592554ccabd4cdca":[1,0,55,11],
 "classAffinity.html":[1,0,78],
 "classAffinity.html#a14c112230e1d7c7a0d75ef4c020b40f6":[1,0,78,4],
-"classAffinity.html#a16ef025808ce3a1594b2ef11b8db9daf":[1,0,78,19],
-"classAffinity.html#a183a1ef42f8257aad70cf5ef95ca810a":[1,0,78,7],
-"classAffinity.html#a19e2f81de3cca811f77553b318986011":[1,0,78,12]
+"classAffinity.html#a16ef025808ce3a1594b2ef11b8db9daf":[1,0,78,19]
 };

@@ -359,6 +359,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "ConSilence.cs", "ConSilence_8cs.html", "ConSilence_8cs" ],
     [ "ConSleep.cs", "ConSleep_8cs.html", "ConSleep_8cs" ],
     [ "ConSmoking.cs", "ConSmoking_8cs.html", "ConSmoking_8cs" ],
+    [ "ConSongValor.cs", "ConSongValor_8cs.html", "ConSongValor_8cs" ],
     [ "ConStrife.cs", "ConStrife_8cs.html", "ConStrife_8cs" ],
     [ "ConSuffocation.cs", "ConSuffocation_8cs.html", "ConSuffocation_8cs" ],
     [ "ConSupress.cs", "ConSupress_8cs.html", "ConSupress_8cs" ],

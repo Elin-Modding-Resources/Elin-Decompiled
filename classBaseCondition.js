@@ -35,6 +35,7 @@ var classBaseCondition =
     [ "SetOwner", "classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe", null ],
     [ "SetPhase", "classBaseCondition.html#a4767e1a9196cc255eb901ac7988f600e", null ],
     [ "SetRefVal", "classBaseCondition.html#aec7a1d3e6428d478b441c206ca9dd642", null ],
+    [ "SetValue", "classBaseCondition.html#a6c10c8d31ff1b75fb447691e2a220de3", null ],
     [ "ShouldOverride", "classBaseCondition.html#adbb716dd6883676c3ed87033dce2e27c", null ],
     [ "Start", "classBaseCondition.html#a43f2848978b48514f88d601a68f24c61", null ],
     [ "Tick", "classBaseCondition.html#af0c6ea92ca1cc59ce6dec886a38868b5", null ],
