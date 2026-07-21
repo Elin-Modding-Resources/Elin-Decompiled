@@ -222,8 +222,24 @@ public class DNA : EClass
 				}
 				break;
 			case "feat":
-				c.SetFeat(num, c.elements.ValueWithoutLink(num) + ((!reverse) ? 1 : (-1)), !reverse);
+			{
+				int num3 = c.elements.ValueWithoutLink(num) + ((!reverse) ? 1 : (-1));
+				if (num3 < 0)
+				{
+					num3 = 0;
+				}
+				c.SetFeat(num, num3, !reverse);
+				if (reverse && num == 1423)
+				{
+					int @int = c.GetInt(134);
+					if (@int > 0)
+					{
+						c.SetFeat(num, -@int);
+					}
+					c.SetInt(134);
+				}
 				break;
+			}
 			case "ability":
 				if (reverse)
 				{

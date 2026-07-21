@@ -183,4 +183,6 @@ public class CINT
 	public const int isAlreadyCaptured = 132;
 
 	public const int uidAttune = 133;
+
+	public const int peakyAdded = 134;
 }

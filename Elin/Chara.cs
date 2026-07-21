@@ -9986,6 +9986,18 @@ public class Chara : Card, IPathfindWalker
 		}
 	}
 
+	public BaseCondition GetCondition(string idCon)
+	{
+		for (int i = 0; i < conditions.Count; i++)
+		{
+			if (conditions[i].source.alias == idCon)
+			{
+				return conditions[i];
+			}
+		}
+		return null;
+	}
+
 	public override T GetCondition<T>()
 	{
 		for (int i = 0; i < conditions.Count; i++)

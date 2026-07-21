@@ -166,6 +166,11 @@ public class BaseCondition : BaseStats
 		refVal = id;
 	}
 
+	public void SetValue(int a)
+	{
+		value = a;
+	}
+
 	public void SetRefVal(int a, int b)
 	{
 		refVal = a;
