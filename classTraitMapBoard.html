@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.329 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.330 Nightly</span>
    </div>
   </td>
  </tr>
@@ -840,7 +840,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  107</span>            List&lt;FogType&gt; list = <a class="code hl_class" href="classUtil.html">Util</a>.EnumToList&lt;<a class="code hl_enumeration" href="FogType_8cs.html#a42f27fc284c47c506b5e3515cf11e2c4">FogType</a>&gt;();</div>
 <div class="line"><span class="lineno">  108</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.Count; i++)</div>
 <div class="line"><span class="lineno">  109</span>            {</div>
-<div class="line"><span class="lineno">  110</span>                layerList.<a class="code hl_function" href="classLayerList.html#aa9ef66f60da84050068849b769cfbe24">Add</a>(list[i].ToString(), delegate(<span class="keywordtype">int</span> a)</div>
+<div class="line"><span class="lineno">  110</span>                layerList.<a class="code hl_function" href="classLayerList.html#aa9ef66f60da84050068849b769cfbe24">Add</a>((list[i].ToString() == <span class="stringliteral">&quot;Blizard&quot;</span>) ? <span class="stringliteral">&quot;Blizzard&quot;</span> : list[i].ToString(), delegate(<span class="keywordtype">int</span> a)</div>
 <div class="line"><span class="lineno">  111</span>                {</div>
 <div class="line"><span class="lineno">  112</span>                    EClass._map.config.fog = list[a];</div>
 <div class="line"><span class="lineno">  113</span>                    <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a9ef545539642e6b9a5e9fcb4092abce9">screen</a>.<a class="code hl_function" href="classBaseGameScreen.html#a92379235a4d6fbca6fc53ebdc9131bd7">RefreshAll</a>();</div>

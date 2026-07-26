@@ -2,7 +2,7 @@ var classActEffect =
 [
     [ "WishItem", "classActEffect_1_1WishItem.html", "classActEffect_1_1WishItem" ],
     [ "Compare", "classActEffect.html#a69dfcafb70a901cac733b7ec0abcf28b", null ],
-    [ "DamageEle", "classActEffect.html#aa7e3c236ae31446cae7736dab0d27c33", null ],
+    [ "DamageEle", "classActEffect.html#aed6e11982d85e9c5e052ba6780eaa3fe", null ],
     [ "GeneMiracle", "classActEffect.html#a494eaa0133cff03438f71b1ba8cb5e88", null ],
     [ "GetTeleportPos", "classActEffect.html#a5882f770fd20cf2c854a371bd3f475ef", null ],
     [ "LoveMiracle", "classActEffect.html#a2fa2767bb66d306d1f23e8c975ec29ae", null ],

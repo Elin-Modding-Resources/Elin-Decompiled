@@ -143,6 +143,7 @@ var EffectId_8cs =
       [ "Degenerate", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a24c813faee6d26cc144bec89a984824d", null ],
       [ "MassFear", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a8f4b40a01e816c94f1ee28b842e47a08", null ],
       [ "Fuse", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02aa7513661ae079a868d2986c7aed2d913", null ],
-      [ "BlueDrag", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a64e50e029b869a0068df3db2578d36e2", null ]
+      [ "BlueDrag", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02a64e50e029b869a0068df3db2578d36e2", null ],
+      [ "Comet", "EffectId_8cs.html#a984565599b06a35ad0709a8177b7ec02ab9a8503552f9f7e1e1bc4a0ba9902594", null ]
     ] ]
 ];

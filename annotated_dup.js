@@ -101,6 +101,7 @@ var annotated_dup =
     [ "ActBreathe", "classActBreathe.html", "classActBreathe" ],
     [ "ActChat", "classActChat.html", "classActChat" ],
     [ "ActClearWater", "classActClearWater.html", "classActClearWater" ],
+    [ "ActComet", "classActComet.html", "classActComet" ],
     [ "ActCryRage", "classActCryRage.html", "classActCryRage" ],
     [ "ActCrySad", "classActCrySad.html", "classActCrySad" ],
     [ "ActDeepKiss", "classActDeepKiss.html", null ],

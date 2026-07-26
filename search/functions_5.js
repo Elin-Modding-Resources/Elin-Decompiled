@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dailyoutcome_0',['DailyOutcome',['../classFactionBranch.html#a2b06ef27c1488f8cc19a69009d6c6ec1',1,'FactionBranch.DailyOutcome()'],['../classAIWork.html#a1766ec0c976dea1607ff4d8618dca613',1,'AIWork.DailyOutcome()']]],
-  ['damageele_1',['DamageEle',['../classActEffect.html#aa7e3c236ae31446cae7736dab0d27c33',1,'ActEffect']]],
+  ['damageele_1',['DamageEle',['../classActEffect.html#aed6e11982d85e9c5e052ba6780eaa3fe',1,'ActEffect']]],
   ['damagehp_2',['DamageHP',['../classCard.html#aa300fa6820d441356548a0def458aea0',1,'Card.DamageHP(long dmg, AttackSource attackSource=AttackSource.None, Card origin=null)'],['../classCard.html#abaedb9a53a8ff8e25caafa7f63f35053',1,'Card.DamageHP(long dmg, int ele, int eleP=100, AttackSource attackSource=AttackSource.None, Card origin=null, bool showEffect=true, Thing weapon=null, Chara originalTarget=null, int resistPenetrationLevel=0)']]],
   ['damagerandomproperty_3',['DamageRandomProperty',['../classTrait.html#a80823be28f891ec67a2005cef68fda5d',1,'Trait']]],
   ['damagetempelement_4',['DamageTempElement',['../classChara.html#a050ddb397d91384b625a577b7ae43f5e',1,'Chara']]],

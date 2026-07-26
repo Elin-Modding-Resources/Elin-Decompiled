@@ -29,7 +29,7 @@ var classPlayer_1_1Stats =
     [ "sistersDepart", "classPlayer_1_1Stats.html#a201edc7b4e0a4b61a1a0c3c408e5d9cd", null ],
     [ "slept", "classPlayer_1_1Stats.html#adaca4df27fb8d6d32f47d9c3b579f464", null ],
     [ "taxBills", "classPlayer_1_1Stats.html#a076320f325be3bf11d6d5590c395047c", null ],
-    [ "taxBillsPaid", "classPlayer_1_1Stats.html#a62d0999ce40548d7d9e664d023a1517a", null ],
+    [ "taxBillsPaid", "classPlayer_1_1Stats.html#a864d62a9e5bd808a0711351b779ca016", null ],
     [ "timeElapsed", "classPlayer_1_1Stats.html#a25aa49994e7c001cb8cc6f934878fbbb", null ],
     [ "turns", "classPlayer_1_1Stats.html#a41b344b7dc933f0e764313a390949319", null ],
     [ "brush", "classPlayer_1_1Stats.html#a5b05d59c1542baafd720efa9005c0769", null ],

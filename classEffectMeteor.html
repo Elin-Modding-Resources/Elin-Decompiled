@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.329 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.330 Nightly</span>
    </div>
   </td>
  </tr>
@@ -151,6 +151,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab535ec8357af1bbd2521659dd938a3b1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffectMeteor.html#ab535ec8357af1bbd2521659dd938a3b1">Create</a> (<a class="el" href="classPoint.html">Point</a> center, int radius, int count, Action&lt; int, <a class="el" href="classPoint.html">Point</a> &gt; <a class="el" href="classEffect.html#a861c92829d016b5a1c2716885d99f907">onComplete</a>)</td></tr>
 <tr class="separator:ab535ec8357af1bbd2521659dd938a3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c647357051fbc9e656a0cd8005d5c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffectMeteor.html#ae3c647357051fbc9e656a0cd8005d5c6">CreateComet</a> (<a class="el" href="classPoint.html">Point</a> center, Action&lt; int, <a class="el" href="classPoint.html">Point</a> &gt; <a class="el" href="classEffect.html#a861c92829d016b5a1c2716885d99f907">onComplete</a>, <a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a> color)</td></tr>
+<tr class="separator:ae3c647357051fbc9e656a0cd8005d5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classEffect"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classEffect')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classEffect.html">Effect</a></td></tr>
 <tr class="memitem:a4b51528582c52d77dc9846b6efa150d5 inherit pub_static_methods_classEffect"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classEffect.html">Effect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a> (<a class="el" href="classEffect.html">Effect</a> original)</td></tr>
 <tr class="separator:a4b51528582c52d77dc9846b6efa150d5 inherit pub_static_methods_classEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +170,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af09691542e722bf5f9c00718eff24ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df3ab0069ef7c288a958f680019793d"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffectMeteor.html#a7df3ab0069ef7c288a958f680019793d">startPos</a></td></tr>
 <tr class="separator:a7df3ab0069ef7c288a958f680019793d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93505a40128cb199e7cd1c7b1cb47b3"><td class="memItemLeft" align="right" valign="top">SoundData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffectMeteor.html#aa93505a40128cb199e7cd1c7b1cb47b3">soundExplode</a></td></tr>
+<tr class="separator:aa93505a40128cb199e7cd1c7b1cb47b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0987fb3d3254a72f215ff598c06b96fb"><td class="memItemLeft" align="right" valign="top">SpriteRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffectMeteor.html#a0987fb3d3254a72f215ff598c06b96fb">sr2</a></td></tr>
+<tr class="separator:a0987fb3d3254a72f215ff598c06b96fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3712a9f327be46a5d01613474019f67"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffectMeteor.html#aa3712a9f327be46a5d01613474019f67">time</a></td></tr>
 <tr class="separator:aa3712a9f327be46a5d01613474019f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classEffect"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classEffect')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classEffect.html">Effect</a></td></tr>
@@ -336,36 +342,36 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00033">33</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        List&lt;Point&gt; list = <span class="keyword">new</span> List&lt;Point&gt;();</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
-<div class="line"><span class="lineno">   37</span>        {</div>
-<div class="line"><span class="lineno">   38</span>            <a class="code hl_class" href="classPoint.html">Point</a> p = center.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="classEffect.html">Effect</a> effect = <a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_function" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a>(<span class="stringliteral">&quot;meteor&quot;</span>);</div>
-<div class="line"><span class="lineno">   40</span>            effect.startDelay = <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(0f, 0.5f);</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (radius &gt; 0)</div>
-<div class="line"><span class="lineno">   42</span>            {</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">if</span> (num &lt; 1000)</div>
-<div class="line"><span class="lineno">   45</span>                {</div>
-<div class="line"><span class="lineno">   46</span>                    <a class="code hl_class" href="classPoint.html">Point</a> point = ((radius == 0) ? center : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_function" href="classMapBounds.html#a7ab1f846065e7f55108ec1400e532467">GetRandomSurface</a>(center.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, center.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, radius));</div>
-<div class="line"><span class="lineno">   47</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
-<div class="line"><span class="lineno">   48</span>                    {</div>
-<div class="line"><span class="lineno">   49</span>                        point.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
-<div class="line"><span class="lineno">   50</span>                    }</div>
-<div class="line"><span class="lineno">   51</span>                    p.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(point);</div>
-<div class="line"><span class="lineno">   52</span>                    list.Add(point);</div>
-<div class="line"><span class="lineno">   53</span>                }</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordtype">int</span> _i = i;</div>
-<div class="line"><span class="lineno">   56</span>            effect.onComplete = delegate</div>
-<div class="line"><span class="lineno">   57</span>            {</div>
-<div class="line"><span class="lineno">   58</span>                <a class="code hl_variable" href="classEffect.html#a861c92829d016b5a1c2716885d99f907">onComplete</a>(_i, p);</div>
-<div class="line"><span class="lineno">   59</span>            };</div>
-<div class="line"><span class="lineno">   60</span>            effect.<a class="code hl_function" href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Play</a>(p);</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00037">37</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        List&lt;Point&gt; list = <span class="keyword">new</span> List&lt;Point&gt;();</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_class" href="classPoint.html">Point</a> p = center.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_class" href="classEffect.html">Effect</a> effect = <a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_function" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a>(<span class="stringliteral">&quot;meteor&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span>            effect.startDelay = <a class="code hl_class" href="classRand.html">Rand</a>.<a class="code hl_function" href="classRand.html#a6cc0599974b496e07844cbeb25e755ad">Range</a>(0f, 0.5f);</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (radius &gt; 0)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">if</span> (num &lt; 1000)</div>
+<div class="line"><span class="lineno">   49</span>                {</div>
+<div class="line"><span class="lineno">   50</span>                    <a class="code hl_class" href="classPoint.html">Point</a> point = ((radius == 0) ? center : <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">_map</a>.<a class="code hl_function" href="classMapBounds.html#a7ab1f846065e7f55108ec1400e532467">GetRandomSurface</a>(center.<a class="code hl_variable" href="classPoint.html#a697e31738608d7bd7ca19e615a8d38e3">x</a>, center.<a class="code hl_variable" href="classPoint.html#a752d212440ad1555a43cdbbd283f28a7">z</a>, radius));</div>
+<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="classPoint.html">Point</a> <a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a> <span class="keywordflow">in</span> list)</div>
+<div class="line"><span class="lineno">   52</span>                    {</div>
+<div class="line"><span class="lineno">   53</span>                        point.<a class="code hl_function" href="classPoint.html#a91e18491812702289084e1b9728d1fa0">Equals</a>(<a class="code hl_enumvalue" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>);</div>
+<div class="line"><span class="lineno">   54</span>                    }</div>
+<div class="line"><span class="lineno">   55</span>                    p.<a class="code hl_function" href="classPoint.html#a42c8f268b9be2807c858060618025031">Set</a>(point);</div>
+<div class="line"><span class="lineno">   56</span>                    list.Add(point);</div>
+<div class="line"><span class="lineno">   57</span>                }</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordtype">int</span> _i = i;</div>
+<div class="line"><span class="lineno">   60</span>            effect.onComplete = delegate</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="classEffect.html#a861c92829d016b5a1c2716885d99f907">onComplete</a>(_i, p);</div>
+<div class="line"><span class="lineno">   63</span>            };</div>
+<div class="line"><span class="lineno">   64</span>            effect.<a class="code hl_function" href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Play</a>(p);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aclassEMono_html"><div class="ttname"><a href="classEMono.html">EMono</a></div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00003">EMono.cs:4</a></div></div>
 <div class="ttc" id="aclassEMono_html_af8f5537c2acc423bdbc584f2e2a73629"><div class="ttname"><a href="classEMono.html#af8f5537c2acc423bdbc584f2e2a73629">EMono._map</a></div><div class="ttdeci">static Map _map</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00017">EMono.cs:17</a></div></div>
@@ -385,7 +391,66 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EMono_8cs_source.html#l00017">EMono._map</a>, <a class="el" href="Point_8cs_source.html#l00491">Point.Copy()</a>, <a class="el" href="Point_8cs_source.html#l00966">Point.Equals()</a>, <a class="el" href="Effect_8cs_source.html#l00080">Effect.Get()</a>, <a class="el" href="MapBounds_8cs_source.html#l00182">MapBounds.GetRandomSurface()</a>, <a class="el" href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">item</a>, <a class="el" href="Effect_8cs_source.html#l00052">Effect.onComplete</a>, <a class="el" href="Effect_8cs_source.html#l00100">Effect.Play()</a>, <a class="el" href="Rand_8cs_source.html#l00049">Rand.Range()</a>, <a class="el" href="Point_8cs_source.html#l00503">Point.Set()</a>, <a class="el" href="Point_8cs_source.html#l00036">Point.x</a>, and <a class="el" href="Point_8cs_source.html#l00039">Point.z</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SurvivalManager_8cs_source.html#l00151">SurvivalManager.Meteor()</a>, and <a class="el" href="ActEffect_8cs_source.html#l00470">ActEffect.ProcAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SurvivalManager_8cs_source.html#l00151">SurvivalManager.Meteor()</a>, and <a class="el" href="ActEffect_8cs_source.html#l00483">ActEffect.ProcAt()</a>.</p>
+
+</div>
+</div>
+<a id="ae3c647357051fbc9e656a0cd8005d5c6" name="ae3c647357051fbc9e656a0cd8005d5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c647357051fbc9e656a0cd8005d5c6">&#9670;&#160;</a></span>CreateComet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void EffectMeteor.CreateComet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; int, <a class="el" href="classPoint.html">Point</a> &gt;&#160;</td>
+          <td class="paramname"><em>onComplete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00068">68</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_class" href="classPoint.html">Point</a> p = center.<a class="code hl_function" href="classPoint.html#a3548549d3df5229465d73290f51446f5">Copy</a>();</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_class" href="classEffectMeteor.html">EffectMeteor</a> obj = <a class="code hl_class" href="classEffect.html">Effect</a>.<a class="code hl_function" href="classEffect.html#a4b51528582c52d77dc9846b6efa150d5">Get</a>(<span class="stringliteral">&quot;meteor_comet&quot;</span>) as <a class="code hl_class" href="classEffectMeteor.html">EffectMeteor</a>;</div>
+<div class="line"><span class="lineno">   72</span>        obj.onComplete = delegate</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <a class="code hl_variable" href="classEffect.html#a861c92829d016b5a1c2716885d99f907">onComplete</a>(0, p);</div>
+<div class="line"><span class="lineno">   75</span>        };</div>
+<div class="line"><span class="lineno">   76</span>        obj.sr.color = color;</div>
+<div class="line"><span class="lineno">   77</span>        obj.<a class="code hl_function" href="classEffect.html#a7fc23b7447649119c0b7497c4218d792">Play</a>(p);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aclassEffectMeteor_html"><div class="ttname"><a href="classEffectMeteor.html">EffectMeteor</a></div><div class="ttdef"><b>Definition:</b> <a href="EffectMeteor_8cs_source.html#l00006">EffectMeteor.cs:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="Point_8cs_source.html#l00491">Point.Copy()</a>, <a class="el" href="Effect_8cs_source.html#l00080">Effect.Get()</a>, <a class="el" href="Effect_8cs_source.html#l00052">Effect.onComplete</a>, and <a class="el" href="Effect_8cs_source.html#l00100">Effect.Play()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ActEffect_8cs_source.html#l00483">ActEffect.ProcAt()</a>.</p>
 
 </div>
 </div>
@@ -414,28 +479,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classEffect.html#a3f6c8742317b14c5ac4dc815ef528d6f">Effect</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00014">14</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        sr.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   17</span>        <a class="code hl_variable" href="classEffectMeteor.html#af09691542e722bf5f9c00718eff24ebb">aniExplosion</a>.SetActive(enable: <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_variable" href="classEffect.html#aeb34b1a828e1a5b058cff139e97b17bc">destV</a> = <a class="code hl_variable" href="classEffect.html#aa779ad3e4380fa046770b056bd87936e">fromV</a>;</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_variable" href="classEffect.html#aa779ad3e4380fa046770b056bd87936e">fromV</a> += <a class="code hl_variable" href="classEffectMeteor.html#a7df3ab0069ef7c288a958f680019793d">startPos</a> + <a class="code hl_variable" href="classEffectMeteor.html#a7df3ab0069ef7c288a958f680019793d">startPos</a>.Random() * 0.2f;</div>
-<div class="line"><span class="lineno">   20</span>        base.transform.position = <a class="code hl_variable" href="classEffect.html#aa779ad3e4380fa046770b056bd87936e">fromV</a>;</div>
-<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="classEffect.html#adb8a0192c35c15289acbca0fa98eb32b">moveTween</a> = base.transform.DOMove(<a class="code hl_variable" href="classEffect.html#aeb34b1a828e1a5b058cff139e97b17bc">destV</a>, <a class="code hl_variable" href="classEffectMeteor.html#aa3712a9f327be46a5d01613474019f67">time</a>).SetEase(Ease.Linear).SetDelay(<a class="code hl_variable" href="classEffect.html#a67a06bff2295d48f528bb9fecec81777">startDelay</a>)</div>
-<div class="line"><span class="lineno">   22</span>            .OnComplete(delegate</div>
-<div class="line"><span class="lineno">   23</span>            {</div>
-<div class="line"><span class="lineno">   24</span>                sr.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   25</span>                <a class="code hl_variable" href="classEffectMeteor.html#af09691542e722bf5f9c00718eff24ebb">aniExplosion</a>.SetActive(enable: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   26</span>                <a class="code hl_variable" href="classEffect.html#a1e517f63facf231a2c3aebdc73412d59">destPos</a>.<a class="code hl_function" href="classPoint.html#aecc8df7c8ad20e227e49b08778c0aca1">Animate</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Dig, animeBlock: <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   27</span>                <a class="code hl_variable" href="classEffect.html#a861c92829d016b5a1c2716885d99f907">onComplete</a>?.Invoke();</div>
-<div class="line"><span class="lineno">   28</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<span class="stringliteral">&quot;explode&quot;</span>, <a class="code hl_variable" href="classEffect.html#aeb34b1a828e1a5b058cff139e97b17bc">destV</a>);</div>
-<div class="line"><span class="lineno">   29</span>                <a class="code hl_class" href="classShaker.html">Shaker</a>.<a class="code hl_function" href="classShaker.html#a727eade26f07286a89a2b38f078e19ce">ShakeCam</a>(<span class="stringliteral">&quot;meteor&quot;</span>);</div>
-<div class="line"><span class="lineno">   30</span>            });</div>
-<div class="line"><span class="lineno">   31</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00018">18</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        sr.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="classEffectMeteor.html#af09691542e722bf5f9c00718eff24ebb">aniExplosion</a>.SetActive(enable: <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   22</span>        <a class="code hl_variable" href="classEffect.html#aeb34b1a828e1a5b058cff139e97b17bc">destV</a> = <a class="code hl_variable" href="classEffect.html#aa779ad3e4380fa046770b056bd87936e">fromV</a>;</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="classEffect.html#aa779ad3e4380fa046770b056bd87936e">fromV</a> += <a class="code hl_variable" href="classEffectMeteor.html#a7df3ab0069ef7c288a958f680019793d">startPos</a> + <a class="code hl_variable" href="classEffectMeteor.html#a7df3ab0069ef7c288a958f680019793d">startPos</a>.Random() * 0.2f;</div>
+<div class="line"><span class="lineno">   24</span>        base.transform.position = <a class="code hl_variable" href="classEffect.html#aa779ad3e4380fa046770b056bd87936e">fromV</a>;</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="classEffect.html#adb8a0192c35c15289acbca0fa98eb32b">moveTween</a> = base.transform.DOMove(<a class="code hl_variable" href="classEffect.html#aeb34b1a828e1a5b058cff139e97b17bc">destV</a>, <a class="code hl_variable" href="classEffectMeteor.html#aa3712a9f327be46a5d01613474019f67">time</a>).SetEase(Ease.Linear).SetDelay(<a class="code hl_variable" href="classEffect.html#a67a06bff2295d48f528bb9fecec81777">startDelay</a>)</div>
+<div class="line"><span class="lineno">   26</span>            .OnComplete(delegate</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                sr.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>                <a class="code hl_variable" href="classEffectMeteor.html#af09691542e722bf5f9c00718eff24ebb">aniExplosion</a>.SetActive(enable: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   30</span>                <a class="code hl_variable" href="classEffect.html#a1e517f63facf231a2c3aebdc73412d59">destPos</a>.<a class="code hl_function" href="classPoint.html#aecc8df7c8ad20e227e49b08778c0aca1">Animate</a>(<a class="code hl_enumeration" href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a>.Dig, animeBlock: <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   31</span>                <a class="code hl_variable" href="classEffect.html#a861c92829d016b5a1c2716885d99f907">onComplete</a>?.Invoke();</div>
+<div class="line"><span class="lineno">   32</span>                <a class="code hl_class" href="classEMono.html">EMono</a>.<a class="code hl_property" href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">Sound</a>.Play(<a class="code hl_variable" href="classEffectMeteor.html#aa93505a40128cb199e7cd1c7b1cb47b3">soundExplode</a>, <a class="code hl_variable" href="classEffect.html#aeb34b1a828e1a5b058cff139e97b17bc">destV</a>);</div>
+<div class="line"><span class="lineno">   33</span>                <a class="code hl_class" href="classShaker.html">Shaker</a>.<a class="code hl_function" href="classShaker.html#a727eade26f07286a89a2b38f078e19ce">ShakeCam</a>(<span class="stringliteral">&quot;meteor&quot;</span>);</div>
+<div class="line"><span class="lineno">   34</span>            });</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 <div class="ttc" id="aAnimeID_8cs_html_acb2df3ff1f7c3f3446c23860741f8f2d"><div class="ttname"><a href="AnimeID_8cs.html#acb2df3ff1f7c3f3446c23860741f8f2d">AnimeID</a></div><div class="ttdeci">AnimeID</div><div class="ttdef"><b>Definition:</b> <a href="AnimeID_8cs_source.html#l00001">AnimeID.cs:2</a></div></div>
 <div class="ttc" id="aclassEMono_html_abdbb9003a5179eefc73781a814ab8059"><div class="ttname"><a href="classEMono.html#abdbb9003a5179eefc73781a814ab8059">EMono.Sound</a></div><div class="ttdeci">static SoundManager Sound</div><div class="ttdef"><b>Definition:</b> <a href="EMono_8cs_source.html#l00039">EMono.cs:39</a></div></div>
 <div class="ttc" id="aclassEffectMeteor_html_a7df3ab0069ef7c288a958f680019793d"><div class="ttname"><a href="classEffectMeteor.html#a7df3ab0069ef7c288a958f680019793d">EffectMeteor.startPos</a></div><div class="ttdeci">Vector3 startPos</div><div class="ttdef"><b>Definition:</b> <a href="EffectMeteor_8cs_source.html#l00010">EffectMeteor.cs:10</a></div></div>
-<div class="ttc" id="aclassEffectMeteor_html_aa3712a9f327be46a5d01613474019f67"><div class="ttname"><a href="classEffectMeteor.html#aa3712a9f327be46a5d01613474019f67">EffectMeteor.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="EffectMeteor_8cs_source.html#l00012">EffectMeteor.cs:12</a></div></div>
+<div class="ttc" id="aclassEffectMeteor_html_aa3712a9f327be46a5d01613474019f67"><div class="ttname"><a href="classEffectMeteor.html#aa3712a9f327be46a5d01613474019f67">EffectMeteor.time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> <a href="EffectMeteor_8cs_source.html#l00016">EffectMeteor.cs:16</a></div></div>
+<div class="ttc" id="aclassEffectMeteor_html_aa93505a40128cb199e7cd1c7b1cb47b3"><div class="ttname"><a href="classEffectMeteor.html#aa93505a40128cb199e7cd1c7b1cb47b3">EffectMeteor.soundExplode</a></div><div class="ttdeci">SoundData soundExplode</div><div class="ttdef"><b>Definition:</b> <a href="EffectMeteor_8cs_source.html#l00012">EffectMeteor.cs:12</a></div></div>
 <div class="ttc" id="aclassEffectMeteor_html_af09691542e722bf5f9c00718eff24ebb"><div class="ttname"><a href="classEffectMeteor.html#af09691542e722bf5f9c00718eff24ebb">EffectMeteor.aniExplosion</a></div><div class="ttdeci">Animator aniExplosion</div><div class="ttdef"><b>Definition:</b> <a href="EffectMeteor_8cs_source.html#l00008">EffectMeteor.cs:8</a></div></div>
 <div class="ttc" id="aclassEffect_html_a1e517f63facf231a2c3aebdc73412d59"><div class="ttname"><a href="classEffect.html#a1e517f63facf231a2c3aebdc73412d59">Effect.destPos</a></div><div class="ttdeci">Point destPos</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00073">Effect.cs:73</a></div></div>
 <div class="ttc" id="aclassEffect_html_a67a06bff2295d48f528bb9fecec81777"><div class="ttname"><a href="classEffect.html#a67a06bff2295d48f528bb9fecec81777">Effect.startDelay</a></div><div class="ttdeci">float startDelay</div><div class="ttdef"><b>Definition:</b> <a href="Effect_8cs_source.html#l00020">Effect.cs:20</a></div></div>
@@ -446,7 +512,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassShaker_html"><div class="ttname"><a href="classShaker.html">Shaker</a></div><div class="ttdef"><b>Definition:</b> <a href="Shaker_8cs_source.html#l00004">Shaker.cs:5</a></div></div>
 <div class="ttc" id="aclassShaker_html_a727eade26f07286a89a2b38f078e19ce"><div class="ttname"><a href="classShaker.html#a727eade26f07286a89a2b38f078e19ce">Shaker.ShakeCam</a></div><div class="ttdeci">static void ShakeCam(string id=&quot;default&quot;, float magnitude=1f)</div><div class="ttdef"><b>Definition:</b> <a href="Shaker_8cs_source.html#l00025">Shaker.cs:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EffectMeteor_8cs_source.html#l00008">aniExplosion</a>, <a class="el" href="Point_8cs_source.html#l01308">Point.Animate()</a>, <a class="el" href="Effect_8cs_source.html#l00073">Effect.destPos</a>, <a class="el" href="Effect_8cs_source.html#l00064">Effect.destV</a>, <a class="el" href="Effect_8cs_source.html#l00061">Effect.fromV</a>, <a class="el" href="Effect_8cs_source.html#l00040">Effect.moveTween</a>, <a class="el" href="Effect_8cs_source.html#l00052">Effect.onComplete</a>, <a class="el" href="Shaker_8cs_source.html#l00025">Shaker.ShakeCam()</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.Sound</a>, <a class="el" href="Effect_8cs_source.html#l00020">Effect.startDelay</a>, <a class="el" href="EffectMeteor_8cs_source.html#l00010">startPos</a>, and <a class="el" href="EffectMeteor_8cs_source.html#l00012">time</a>.</p>
+<p class="reference">References <a class="el" href="EffectMeteor_8cs_source.html#l00008">aniExplosion</a>, <a class="el" href="Point_8cs_source.html#l01308">Point.Animate()</a>, <a class="el" href="Effect_8cs_source.html#l00073">Effect.destPos</a>, <a class="el" href="Effect_8cs_source.html#l00064">Effect.destV</a>, <a class="el" href="Effect_8cs_source.html#l00061">Effect.fromV</a>, <a class="el" href="Effect_8cs_source.html#l00040">Effect.moveTween</a>, <a class="el" href="Effect_8cs_source.html#l00052">Effect.onComplete</a>, <a class="el" href="Shaker_8cs_source.html#l00025">Shaker.ShakeCam()</a>, <a class="el" href="EMono_8cs_source.html#l00039">EMono.Sound</a>, <a class="el" href="EffectMeteor_8cs_source.html#l00012">soundExplode</a>, <a class="el" href="Effect_8cs_source.html#l00020">Effect.startDelay</a>, <a class="el" href="EffectMeteor_8cs_source.html#l00010">startPos</a>, and <a class="el" href="EffectMeteor_8cs_source.html#l00016">time</a>.</p>
 
 </div>
 </div>
@@ -465,7 +531,41 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00008">8</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EffectMeteor_8cs_source.html#l00014">OnPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EffectMeteor_8cs_source.html#l00018">OnPlay()</a>.</p>
+
+</div>
+</div>
+<a id="aa93505a40128cb199e7cd1c7b1cb47b3" name="aa93505a40128cb199e7cd1c7b1cb47b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93505a40128cb199e7cd1c7b1cb47b3">&#9670;&#160;</a></span>soundExplode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SoundData EffectMeteor.soundExplode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00012">12</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="EffectMeteor_8cs_source.html#l00018">OnPlay()</a>.</p>
+
+</div>
+</div>
+<a id="a0987fb3d3254a72f215ff598c06b96fb" name="a0987fb3d3254a72f215ff598c06b96fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0987fb3d3254a72f215ff598c06b96fb">&#9670;&#160;</a></span>sr2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteRenderer EffectMeteor.sr2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00014">14</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
 
 </div>
 </div>
@@ -483,7 +583,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00010">10</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EffectMeteor_8cs_source.html#l00014">OnPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EffectMeteor_8cs_source.html#l00018">OnPlay()</a>.</p>
 
 </div>
 </div>
@@ -499,9 +599,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00012">12</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EffectMeteor_8cs_source.html#l00016">16</a> of file <a class="el" href="EffectMeteor_8cs_source.html">EffectMeteor.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EffectMeteor_8cs_source.html#l00014">OnPlay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EffectMeteor_8cs_source.html#l00018">OnPlay()</a>.</p>
 
 </div>
 </div>

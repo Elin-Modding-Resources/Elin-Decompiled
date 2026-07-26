@@ -67,6 +67,7 @@ var classClassExtension =
     [ "GetProperty< T >", "classClassExtension.html#a708f76f70446360025fbc1da11730390", null ],
     [ "GetRuntimeEventCount", "classClassExtension.html#a4fde1d33179a2366a82bd66cd26063e0", null ],
     [ "GetSelectable", "classClassExtension.html#a42cab834de205bc706946fbfaf2f152f", null ],
+    [ "GetSpecialArticle", "classClassExtension.html#ad85bd1a923fc8cdd699fe869d9913f42", null ],
     [ "HasField< T >", "classClassExtension.html#afa4721369ddf76cd9ff872447b8d60e7", null ],
     [ "HasTag", "classClassExtension.html#a620d2349994d1dc5b2744ad156427037", null ],
     [ "IndexOf", "classClassExtension.html#a3b58dae5224021057e881d79f67b26ac", null ],

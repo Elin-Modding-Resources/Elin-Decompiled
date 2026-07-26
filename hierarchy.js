@@ -799,6 +799,7 @@ var hierarchy =
               [ "ActBall", "classActBall.html", null ],
               [ "ActBit", "classActBit.html", null ],
               [ "ActBolt", "classActBolt.html", null ],
+              [ "ActComet", "classActComet.html", null ],
               [ "ActFlare", "classActFlare.html", null ],
               [ "ActFunnel", "classActFunnel.html", null ],
               [ "ActHand", "classActHand.html", [
