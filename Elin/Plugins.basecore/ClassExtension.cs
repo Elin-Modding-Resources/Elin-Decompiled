@@ -1008,6 +1008,15 @@ public static class ClassExtension
 		return pluralizer.Pluralize(s);
 	}
 
+	public static string GetSpecialArticle(string a)
+	{
+		if (a.ToLower() == "unicorn")
+		{
+			return "a ";
+		}
+		return null;
+	}
+
 	public static string AddArticle(this string s)
 	{
 		if (!Lang.setting.addArticle || s.Length < 1)
@@ -1015,7 +1024,7 @@ public static class ClassExtension
 			return s;
 		}
 		char c = s.ToLower()[0];
-		s = ((c == 'a' || c == 'i' || c == 'u' || c == 'e' || c == 'o') ? "an " : "a ") + s;
+		s = (GetSpecialArticle(s) ?? ((c == 'a' || c == 'i' || c == 'u' || c == 'e' || c == 'o') ? "an " : "a ")) + s;
 		return s;
 	}
 
@@ -1026,7 +1035,7 @@ public static class ClassExtension
 			return s;
 		}
 		char c = s[0];
-		string text = ((num >= 2) ? (num.ToFormat() + " ") : ((c == 'a' || c == 'i' || c == 'u' || c == 'e' || c == 'o') ? "an " : "a "));
+		string text = ((num >= 2) ? (num.ToFormat() + " ") : (GetSpecialArticle(s) ?? ((c == 'a' || c == 'i' || c == 'u' || c == 'e' || c == 'o') ? "an " : "a ")));
 		if (num >= 2 && Lang.setting.pluralize)
 		{
 			s = ((replace.IsEmpty() || !s.Contains(replace) || s.Contains("limestone stone")) ? Pluralize(s) : s.Replace(replace, Pluralize(replace)));
