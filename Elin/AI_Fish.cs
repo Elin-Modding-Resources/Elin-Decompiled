@@ -126,8 +126,8 @@ public class AI_Fish : AIAct
 					Steam.GetAchievement(ID_Achievement.EHE_FISH);
 					if (EClass.rnd(777) == 0)
 					{
-						EClass.pc.AddCondition<ConInvulnerable>();
-						ActEffect.Proc(EffectId.Wish, EClass.pc, null, 50 + EClass.player.CountKeyItem("well_enhance") * 50 + EClass.player.flags.fishStolen * 50);
+						owner.AddCondition<ConInvulnerable>();
+						ActEffect.Proc(EffectId.Wish, owner, null, 50 + EClass.player.CountKeyItem("well_enhance") * 50 + EClass.player.flags.fishStolen * 50);
 					}
 				}
 				thing.Destroy();
@@ -136,9 +136,9 @@ public class AI_Fish : AIAct
 			{
 				if (EClass.game.config.preference.pickFish)
 				{
-					if (StatsBurden.GetPhase((EClass.pc.ChildrenWeight + thing.ChildrenAndSelfWeight) * 100 / EClass.pc.WeightLimit) >= 3)
+					if (StatsBurden.GetPhase((owner.ChildrenWeight + thing.ChildrenAndSelfWeight) * 100 / owner.WeightLimit) >= 3)
 					{
-						EClass.pc.Say("tooHeavy", thing);
+						owner.Say("tooHeavy", thing);
 						shouldCancel = true;
 					}
 					else

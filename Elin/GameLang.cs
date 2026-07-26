@@ -206,10 +206,14 @@ public class GameLang : EClass
 		if (val3 != null)
 		{
 			stringBuilder.Replace("#3", val3);
+			int num = val3.ToInt();
+			stringBuilder.Replace("(s3)", (num > 1) ? "s" : "");
 		}
 		if (val4 != null)
 		{
 			stringBuilder.Replace("#4", val4);
+			int num2 = val4.ToInt();
+			stringBuilder.Replace("(s4)", (num2 > 1) ? "s" : "");
 		}
 		if (int.TryParse(val1, out var result))
 		{

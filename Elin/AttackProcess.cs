@@ -905,7 +905,7 @@ public class AttackProcess : EClass
 		{
 			return true;
 		}
-		if (CC.HasElement(1253))
+		if (CC.HasElement(1253) && (!CC.HasElement(486) || !CC.IsPCFactionOrMinion))
 		{
 			TC.DamageHP(num7 / 10, 916, 100, AttackSource.None, CC);
 		}

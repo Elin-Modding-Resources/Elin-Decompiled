@@ -12,7 +12,7 @@ public class StanceSongValor : BaseSong
 			}
 			else
 			{
-				item.GetCondition<ConSongValor>()?.SetValue(3);
+				item.GetCondition<ConSongValor>()?.SetValue(10);
 			}
 		}
 	}

@@ -20,6 +20,7 @@ public class GameScreenElona : BaseGameScreen
 		actor.transMap.SetActive(enable: true);
 		actor.selector.hasTargetChanged = true;
 		EMono.scene.skyBG.SetActive(enable: false);
+		EMono.scene.skyPlane.SetActive(enable: false);
 		EMono.scene.cam.clearFlags = CameraClearFlags.Color;
 		Tutorial.Play("region");
 		actor.OnActivate();

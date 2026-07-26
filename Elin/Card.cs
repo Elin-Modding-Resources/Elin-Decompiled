@@ -4995,7 +4995,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				Chara.TrySetEnemy(origin.Chara);
 			}
-			if ((weapon == null || !weapon.HasElement(486)) && origin.Evalue(428) > 0 && !IsPCFactionOrMinion && EClass.rnd(dmg) >= EClass.rnd(MaxHP / 10) + MaxHP / 100 + 1)
+			if ((weapon == null || !weapon.HasElement(486) || !origin.IsPCFactionOrMinion) && origin.Evalue(428) > 0 && !IsPCFactionOrMinion && EClass.rnd(dmg) >= EClass.rnd(MaxHP / 10) + MaxHP / 100 + 1)
 			{
 				origin.Chara.TryNeckHunt(Chara, origin.Evalue(428) * 20, harvest: true);
 			}
@@ -5028,7 +5028,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		void ProcAbsorb()
 		{
-			if (origin != null && origin.isChara && isChara && (weapon == null || !weapon.HasElement(486)))
+			if (origin != null && origin.isChara && isChara && (weapon == null || !weapon.HasElement(486) || !origin.IsPCFactionOrMinion))
 			{
 				int num19 = origin.Evalue(660) + (weapon?.Evalue(660, ignoreGlobalElement: true) ?? 0);
 				int num20 = origin.Evalue(662) + (weapon?.Evalue(662, ignoreGlobalElement: true) ?? 0);

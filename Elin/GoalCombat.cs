@@ -1227,7 +1227,10 @@ public class GoalCombat : Goal
 		abilities.Clear();
 		foreach (ActList.Item item in owner.ability.list.items)
 		{
-			AddAbility(item.act, 0, item.chance, item.pt);
+			if (!owner.IsPC || (EClass.game.config.autoCombat.bUseInventory && (!EClass.game.config.autoCombat.bUseFav || EClass.player.favAbility.Contains(item.act.id))))
+			{
+				AddAbility(item.act, 0, item.chance, item.pt);
+			}
 		}
 		if (owner.mimicry != null && owner.mimicry.IsChara)
 		{

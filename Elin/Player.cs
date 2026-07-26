@@ -90,9 +90,6 @@ public class Player : EClass
 		public int taxBills;
 
 		[JsonProperty]
-		public int taxBillsPaid;
-
-		[JsonProperty]
 		public int digs;
 
 		[JsonProperty]
@@ -142,6 +139,9 @@ public class Player : EClass
 
 		[JsonProperty]
 		public long shipMoney;
+
+		[JsonProperty]
+		public long taxBillsPaid;
 
 		public int lastShippingExp;
 

@@ -8698,6 +8698,10 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
+		if (t.category.id == "currency" && !IsPCFaction)
+		{
+			return false;
+		}
 		if (base.IsPowerful && t.trait is TraitScroll { source: not null } traitScroll && traitScroll.source.abilityType.Contains("summon"))
 		{
 			return false;

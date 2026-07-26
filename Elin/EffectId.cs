@@ -142,5 +142,6 @@ public enum EffectId
 	Degenerate = 318,
 	MassFear = 319,
 	Fuse = 320,
-	BlueDrag = 321
+	BlueDrag = 321,
+	Comet = 322
 }

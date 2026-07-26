@@ -107,7 +107,7 @@ public class TraitMapBoard : TraitBoard
 			List<FogType> list = Util.EnumToList<FogType>();
 			for (int i = 0; i < list.Count; i++)
 			{
-				layerList.Add(list[i].ToString(), delegate(int a)
+				layerList.Add((list[i].ToString() == "Blizard") ? "Blizzard" : list[i].ToString(), delegate(int a)
 				{
 					EClass._map.config.fog = list[a];
 					EClass.screen.RefreshAll();

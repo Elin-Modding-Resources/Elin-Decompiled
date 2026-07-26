@@ -594,6 +594,7 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 			AddRow(ele, num + num2 + 1000, "sword_");
 			AddRow(ele, num + num2 + 1100, "bit_");
 			AddRow(ele, num + num2 + 1200, "flare_");
+			AddRow(ele, num + num2 + 1300, "comet_");
 			num2++;
 		}
 		initialized = false;

@@ -33,7 +33,7 @@ public class ActEffect : EClass
 		});
 	}
 
-	public static bool DamageEle(Card CC, EffectId id, int power, Element e, List<Point> points, ActRef actref, string lang = null)
+	public static bool DamageEle(Card CC, EffectId id, int power, Element e, List<Point> points, ActRef actref, string lang = null, Point center = null)
 	{
 		if (points.Count == 0)
 		{
@@ -48,9 +48,12 @@ public class ActEffect : EClass
 		ElementRef elementRef = EClass.setting.elements[e.source.alias];
 		int num = actref.act?.ElementPowerMod ?? 50;
 		int num2 = 0;
-		Point point = CC.pos.Copy();
 		List<Card> list = new List<Card>();
 		bool flag = false;
+		if (center == null)
+		{
+			center = CC.pos.Copy();
+		}
 		if ((id == EffectId.Explosive || id == EffectId.Rocket || id == EffectId.GravityGun) && actref.refThing != null)
 		{
 			power = power * actref.refThing.material.hardness / 10;
@@ -134,12 +137,12 @@ public class ActEffect : EClass
 				{
 					effect = Effect.Get("Element/ball_Fire");
 				}
-				float startDelay = ((id == EffectId.Meteor) ? 0.1f : 0.04f) * (float)CC.pos.Distance(p);
+				float startDelay = ((id == EffectId.Meteor || id == EffectId.Comet) ? 0.1f : 0.04f) * (float)center.Distance(p);
 				effect.SetStartDelay(startDelay);
 				effect2.SetStartDelay(startDelay);
 				if (id == EffectId.GravityGun)
 				{
-					float duration = 0.06f * (float)CC.pos.Distance(p);
+					float duration = 0.06f * (float)center.Distance(p);
 					Point pos2 = p.Copy();
 					TweenUtil.Tween(duration, null, delegate
 					{
@@ -166,7 +169,7 @@ public class ActEffect : EClass
 				{
 					TryDelay(delegate
 					{
-						effect.Play(p).Flip(p.x > CC.pos.x);
+						effect.Play(p).Flip(p.x > center.x);
 					});
 				}
 				if (id == EffectId.Flare)
@@ -229,7 +232,7 @@ public class ActEffect : EClass
 				if (id == EffectId.Suicide)
 				{
 					num4 = CC.MaxHP * 2;
-					num4 = num4 * 100 / (50 + point.Distance(p) * 75);
+					num4 = num4 * 100 / (50 + center.Distance(p) * 75);
 					if ((c.HasCondition<ConBrightnessOfLife>() || c.HasTag(CTAG.suicide)) && !c.HasCondition<ConWet>() && !c.IsPowerful)
 					{
 						list.Add(c);
@@ -265,7 +268,7 @@ public class ActEffect : EClass
 					}
 					if (id == EffectId.Ball || id == EffectId.BallBubble || id == EffectId.Explosive || id == EffectId.Rocket || id == EffectId.GravityGun)
 					{
-						num4 = num4 * 100 / (90 + point.Distance(p) * 10);
+						num4 = num4 * 100 / (90 + center.Distance(p) * 10);
 					}
 				}
 				if (id == EffectId.Sword)
@@ -340,6 +343,7 @@ public class ActEffect : EClass
 					case EffectId.Rocket:
 					case EffectId.Flare:
 					case EffectId.GravityGun:
+					case EffectId.Comet:
 						num4 /= 2;
 						break;
 					}
@@ -408,14 +412,23 @@ public class ActEffect : EClass
 			}
 			if ((id == EffectId.Explosive || id == EffectId.Suicide || id == EffectId.Rocket) && (!EClass._zone.IsPCFaction || !EClass.Branch.HasItemProtection))
 			{
-				int num7 = id switch
+				int num7;
+				switch (id)
 				{
-					EffectId.Suicide => CC.LV / 3 + 40, 
-					EffectId.Meteor => 50 + power / 20, 
-					_ => (actref.refThing != null) ? actref.refThing.material.hardness : (30 + power / 20), 
-				};
+				default:
+					num7 = ((actref.refThing != null) ? actref.refThing.material.hardness : (30 + power / 20));
+					break;
+				case EffectId.Suicide:
+					num7 = CC.LV / 3 + 40;
+					break;
+				case EffectId.Meteor:
+				case EffectId.Comet:
+					num7 = 50 + power / 20;
+					break;
+				}
+				int num8 = num7;
 				bool flag3 = EClass._zone.HasLaw && !EClass._zone.IsPCFaction && (CC.IsPC || (id == EffectId.Explosive && actref.refThing == null)) && !(EClass._zone is Zone_Vernis);
-				if (p.HasObj && p.cell.matObj.hardness <= num7)
+				if (p.HasObj && p.cell.matObj.hardness <= num8)
 				{
 					EClass._map.MineObj(p);
 					if (flag3)
@@ -423,7 +436,7 @@ public class ActEffect : EClass
 						EClass.player.ModKarma(-1);
 					}
 				}
-				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num7)
+				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num8)
 				{
 					EClass._map.MineBlock(p);
 					if (flag3)
@@ -434,16 +447,16 @@ public class ActEffect : EClass
 			}
 			if (e.id == 910)
 			{
-				int num8 = 0;
+				int num9 = 0;
 				if (id == EffectId.Meteor)
 				{
-					num8 = 2;
+					num9 = 2;
 				}
 				if (EClass._zone.IsPCFaction && EClass._zone.branch.HasItemProtection)
 				{
-					num8 = 0;
+					num9 = 0;
 				}
-				if (num8 > EClass.rnd(10))
+				if (num9 > EClass.rnd(10))
 				{
 					p.ModFire(4 + EClass.rnd(10));
 				}
@@ -473,6 +486,7 @@ public class ActEffect : EClass
 		bool flag = state <= BlessedState.Cursed;
 		bool flag2 = isNeg || flag;
 		Element element = Element.Create(actRef.aliasEle.IsEmpty("eleFire"), power / 10);
+		Color matColor = EClass.Colors.elementColors.TryGetValue(element.source.alias);
 		if (EClass.debug.enable && EInput.isShiftDown)
 		{
 			angle += 5;
@@ -486,10 +500,10 @@ public class ActEffect : EClass
 		{
 		case EffectId.Earthquake:
 		{
-			List<Point> list = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
-			if (list.Count == 0)
+			List<Point> list6 = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
+			if (list6.Count == 0)
 			{
-				list.Add(CC.pos.Copy());
+				list6.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_earthquake", CC, element.Name.ToLower());
 			TryDelay(delegate
@@ -501,18 +515,18 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list, actRef, "spell_earthquake");
+			DamageEle(CC, id, power, element, list6, actRef, "spell_earthquake");
 			break;
 		}
 		case EffectId.Meteor:
 		{
-			EffectMeteor.Create(cc.pos, 6, 10, delegate
+			EffectMeteor.Create(cc.pos, 10, 10, delegate
 			{
 			});
-			List<Point> list3 = EClass._map.ListPointsInCircle(CC.pos, 10f);
-			if (list3.Count == 0)
+			List<Point> list = EClass._map.ListPointsInCircle(CC.pos, 10f);
+			if (list.Count == 0)
 			{
-				list3.Add(CC.pos.Copy());
+				list.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_ball", CC, element.Name.ToLower());
 			TryDelay(delegate
@@ -524,7 +538,30 @@ public class ActEffect : EClass
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list3, actRef, "spell_ball");
+			DamageEle(CC, id, power, element, list, actRef, "spell_ball");
+			return;
+		}
+		case EffectId.Comet:
+		{
+			EffectMeteor.CreateComet(tp, delegate
+			{
+			}, matColor * 2f);
+			List<Point> list7 = EClass._map.ListPointsInCircle(tp, 7f);
+			if (list7.Count == 0)
+			{
+				list7.Add(tp.Copy());
+			}
+			CC.Say("spell_ball", CC, element.Name.ToLower());
+			TryDelay(delegate
+			{
+				CC.PlaySound("spell_ball");
+			});
+			if (CC.IsInMutterDistance())
+			{
+				Shaker.ShakeCam("ball");
+			}
+			EClass.Wait(1f, CC);
+			DamageEle(CC, id, power, element, list7, actRef, "spell_ball", tp);
 			return;
 		}
 		case EffectId.Hand:
@@ -532,14 +569,14 @@ public class ActEffect : EClass
 		case EffectId.DrainMana:
 		case EffectId.Sword:
 		{
-			List<Point> list6 = new List<Point>();
-			list6.Add(tp.Copy());
+			List<Point> list2 = new List<Point>();
+			list2.Add(tp.Copy());
 			EClass.Wait(0.3f, CC);
 			TryDelay(delegate
 			{
 				CC.PlaySound("spell_hand");
 			});
-			if (!DamageEle(CC, id, power, element, list6, actRef, (id == EffectId.DrainBlood || id == EffectId.DrainMana) ? "" : ((id == EffectId.Sword) ? "spell_sword" : "spell_hand")))
+			if (!DamageEle(CC, id, power, element, list2, actRef, (id == EffectId.DrainBlood || id == EffectId.DrainMana) ? "" : ((id == EffectId.Sword) ? "spell_sword" : "spell_hand")))
 			{
 				CC.Say("spell_hand_miss", CC, element.Name.ToLower());
 			}
@@ -553,15 +590,15 @@ public class ActEffect : EClass
 		case EffectId.MoonSpear:
 		case EffectId.MoonArrow:
 		{
-			List<Point> list7 = new List<Point>();
-			list7.Add(tp.Copy());
+			List<Point> list4 = new List<Point>();
+			list4.Add(tp.Copy());
 			CC.Say((id == EffectId.MoonSpear) ? "spell_spear" : "spell_arrow", CC, element.Name.ToLower());
 			EClass.Wait(0.5f, CC);
 			TryDelay(delegate
 			{
 				CC.PlaySound((id == EffectId.MoonSpear) ? "spell_moonspear" : "spell_arrow");
 			});
-			DamageEle(CC, id, power, element, list7, actRef, (id == EffectId.MoonSpear) ? "spell_spear" : "spell_arrow");
+			DamageEle(CC, id, power, element, list4, actRef, (id == EffectId.MoonSpear) ? "spell_spear" : "spell_arrow");
 			return;
 		}
 		case EffectId.Summon:
@@ -823,10 +860,10 @@ public class ActEffect : EClass
 		}
 		case EffectId.Breathe:
 		{
-			List<Point> list2 = EClass._map.ListPointsInArc(CC.pos, tp, 7, 35f);
-			if (list2.Count == 0)
+			List<Point> list5 = EClass._map.ListPointsInArc(CC.pos, tp, 7, 35f);
+			if (list5.Count == 0)
 			{
-				list2.Add(CC.pos.Copy());
+				list5.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_breathe", CC, element.Name.ToLower());
 			EClass.Wait(0.8f, CC);
@@ -838,7 +875,7 @@ public class ActEffect : EClass
 			{
 				Shaker.ShakeCam("breathe");
 			}
-			DamageEle(CC, id, power, element, list2, actRef, "spell_breathe");
+			DamageEle(CC, id, power, element, list5, actRef, "spell_breathe");
 			return;
 		}
 		case EffectId.Scream:
@@ -886,10 +923,10 @@ public class ActEffect : EClass
 				}
 			}
 			bool flag5 = id == EffectId.Explosive || id == EffectId.Suicide || id == EffectId.Rocket;
-			List<Point> list5 = EClass._map.ListPointsInCircle((id == EffectId.GravityGun || id == EffectId.Rocket || id == EffectId.Flare) ? tp : cc.pos, radius2, !flag5, !flag5);
-			if (list5.Count == 0)
+			List<Point> list8 = EClass._map.ListPointsInCircle((id == EffectId.GravityGun || id == EffectId.Rocket || id == EffectId.Flare) ? tp : cc.pos, radius2, !flag5, !flag5);
+			if (list8.Count == 0)
 			{
-				list5.Add(cc.pos.Copy());
+				list8.Add(cc.pos.Copy());
 			}
 			cc.Say((id == EffectId.Suicide) ? "abSuicide" : "spell_ball", cc, element.Name.ToLower());
 			EClass.Wait(0.8f, cc);
@@ -908,7 +945,7 @@ public class ActEffect : EClass
 			{
 				Shaker.ShakeCam("ball");
 			}
-			DamageEle(actRef.origin ?? cc, id, power, element, list5, actRef, (id == EffectId.Suicide) ? "suicide" : "spell_ball");
+			DamageEle(actRef.origin ?? cc, id, power, element, list8, actRef, (id == EffectId.Suicide) ? "suicide" : "spell_ball");
 			if (id == EffectId.Suicide && CC.IsAliveInCurrentZone)
 			{
 				CC.Die();
@@ -917,10 +954,10 @@ public class ActEffect : EClass
 		}
 		case EffectId.Bolt:
 		{
-			List<Point> list4 = EClass._map.ListPointsInLine(CC.pos, tp, 10);
-			if (list4.Count == 0)
+			List<Point> list3 = EClass._map.ListPointsInLine(CC.pos, tp, 10);
+			if (list3.Count == 0)
 			{
-				list4.Add(CC.pos.Copy());
+				list3.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_bolt", CC, element.Name.ToLower());
 			EClass.Wait(0.8f, CC);
@@ -932,7 +969,7 @@ public class ActEffect : EClass
 			{
 				Shaker.ShakeCam("bolt");
 			}
-			DamageEle(CC, id, power, element, list4, actRef, "spell_bolt");
+			DamageEle(CC, id, power, element, list3, actRef, "spell_bolt");
 			return;
 		}
 		case EffectId.Bubble:
@@ -948,7 +985,6 @@ public class ActEffect : EClass
 			int num = 2 + EClass.rnd(3);
 			int id2 = ((id == EffectId.Puddle) ? 4 : ((id == EffectId.Bubble) ? 5 : ((id == EffectId.MistOfDarkness) ? 6 : 7)));
 			EffectId idEffect = ((id == EffectId.Bubble) ? EffectId.BallBubble : EffectId.PuddleEffect);
-			Color matColor = EClass.Colors.elementColors.TryGetValue(element.source.alias);
 			if (id == EffectId.Bubble && CC.id == "cancer")
 			{
 				idEffect = EffectId.Nothing;
@@ -979,15 +1015,15 @@ public class ActEffect : EClass
 			return;
 		}
 		}
-		List<Card> list8 = tp.ListCards().ToList();
-		list8.Reverse();
-		if (list8.Contains(CC))
+		List<Card> list9 = tp.ListCards().ToList();
+		list9.Reverse();
+		if (list9.Contains(CC))
 		{
-			list8.Remove(CC);
-			list8.Insert(0, CC);
+			list9.Remove(CC);
+			list9.Insert(0, CC);
 		}
 		bool flag6 = true;
-		foreach (Card item3 in list8)
+		foreach (Card item3 in list9)
 		{
 			if (tc == null || item3 == tc)
 			{

@@ -496,7 +496,7 @@ public class CustomDramaExpansion : EClass
 			expr = ">=1";
 		}
 		Chara chara = dm.GetChara(line["actor"]);
-		return expr.Compare(chara.things.List((Thing t) => t.id == itemId).Count);
+		return expr.Compare(chara.things.List((Thing t) => t.id == itemId).Sum((Thing t) => t.Num));
 	}
 
 	[ElinDramaActionInvoke("nodiscard")]

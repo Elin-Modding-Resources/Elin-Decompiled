@@ -54,7 +54,7 @@ public class AI_UseCrafter : AIAct
 			if (ing != null && ing.ExistsOnMap)
 			{
 				ing.isHidden = false;
-				EClass.pc.Pick(ing);
+				owner.Pick(ing);
 			}
 		}
 		if (crafter.AutoTurnOff && crafter.owner.isOn)
@@ -233,7 +233,7 @@ public class AI_UseCrafter : AIAct
 								thing2.SetBlessedState(blessed);
 							}
 							thing2.PlaySoundDrop(spatial: false);
-							EClass._zone.AddCard(thing2, EClass.pc.pos);
+							EClass._zone.AddCard(thing2, owner.pos);
 							thing2.Identify(show: false);
 							owner.Pick(thing2);
 						}
@@ -275,8 +275,8 @@ public class AI_UseCrafter : AIAct
 					Rand.SetSeed();
 					if (crafter is TraitCookerMicrowave && recipe.id == "onsentamago" && EClass.rnd(3) != 0)
 					{
-						int power = EClass.curve((200 + ings[0].Quality * 5) * (100 + EClass.pc.Evalue(287) * 10) / 100, 400, 100);
-						ActEffect.ProcAt(EffectId.Explosive, power, BlessedState.Normal, crafter.owner.ExistsOnMap ? crafter.owner : EClass.pc, EClass.pc, EClass.pc.pos, isNeg: true, new ActRef
+						int power = EClass.curve((200 + ings[0].Quality * 5) * (100 + owner.Evalue(287) * 10) / 100, 400, 100);
+						ActEffect.ProcAt(EffectId.Explosive, power, BlessedState.Normal, crafter.owner.ExistsOnMap ? crafter.owner : owner, owner, owner.pos, isNeg: true, new ActRef
 						{
 							aliasEle = "eleImpact"
 						});

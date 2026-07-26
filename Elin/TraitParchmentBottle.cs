@@ -62,7 +62,7 @@ public class TraitParchmentBottle : TraitParchment
 		base.SetName(ref s);
 		if (owner.c_lockLv != 0)
 		{
-			s += "_sealed".lang();
+			s = s + Lang.space + "_sealed".lang();
 		}
 	}
 }

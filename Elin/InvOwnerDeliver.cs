@@ -89,6 +89,10 @@ public class InvOwnerDeliver : InvOwnerDraglet
 		}
 		else if (flag)
 		{
+			if (EClass.player.stats.taxBillsPaid < 0)
+			{
+				EClass.player.stats.taxBillsPaid = 2147483647L;
+			}
 			EClass.player.stats.taxBillsPaid += t.c_bill;
 			EClass.player.taxBills--;
 			if (EClass.player.taxBills < 0)

@@ -9,6 +9,10 @@ public class EffectMeteor : Effect
 
 	public Vector3 startPos;
 
+	public SoundData soundExplode;
+
+	public SpriteRenderer sr2;
+
 	public float time;
 
 	public override void OnPlay()
@@ -25,7 +29,7 @@ public class EffectMeteor : Effect
 				aniExplosion.SetActive(enable: true);
 				destPos.Animate(AnimeID.Dig, animeBlock: true);
 				onComplete?.Invoke();
-				EMono.Sound.Play("explode", destV);
+				EMono.Sound.Play(soundExplode, destV);
 				Shaker.ShakeCam("meteor");
 			});
 	}
@@ -59,5 +63,17 @@ public class EffectMeteor : Effect
 			};
 			effect.Play(p);
 		}
+	}
+
+	public static void CreateComet(Point center, Action<int, Point> onComplete, Color color)
+	{
+		Point p = center.Copy();
+		EffectMeteor obj = Effect.Get("meteor_comet") as EffectMeteor;
+		obj.onComplete = delegate
+		{
+			onComplete(0, p);
+		};
+		obj.sr.color = color;
+		obj.Play(p);
 	}
 }
