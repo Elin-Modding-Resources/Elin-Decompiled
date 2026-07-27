@@ -77,7 +77,7 @@ public class WidgetDate : Widget
 			}
 			if (EMono._zone.isClaimable && !EMono._zone.IsPCFaction)
 			{
-				text += "(";
+				text += " (";
 				List<Element> list = EMono._zone.ListLandFeats();
 				foreach (Element item in list)
 				{

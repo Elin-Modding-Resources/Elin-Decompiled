@@ -45,7 +45,7 @@ public class RecipeSource : EClass
 		}
 	}
 
-	public string Name => row.GetName() + (isBridgePillar ? "recipeBridgePillar".lang() : (isBridge ? "recipeBridge".lang() : ""));
+	public string Name => row.GetName() + (isBridgePillar ? (" " + "recipeBridgePillar".lang()) : (isBridge ? (" " + "recipeBridge".lang()) : ""));
 
 	public bool IsQuickCraft
 	{

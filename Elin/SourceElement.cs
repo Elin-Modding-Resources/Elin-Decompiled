@@ -190,7 +190,12 @@ public class SourceElement : SourceDataInt<SourceElement.Row>
 		{
 			if (idMold != 0)
 			{
-				return EClass.sources.elements.map[idMold].alias.lang(EClass.sources.elements.alias[aliasRef].GetAltname(0));
+				int i = 0;
+				if (idMold == 7011 || idMold == 7010)
+				{
+					i = 3;
+				}
+				return EClass.sources.elements.map[idMold].alias.lang(EClass.sources.elements.alias[aliasRef].GetAltname(i));
 			}
 			return base.GetName();
 		}

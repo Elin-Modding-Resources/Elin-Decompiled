@@ -112,6 +112,8 @@ public class CoreRef : ScriptableObject
 
 		public Sprite fav;
 
+		public Sprite sharedEquip;
+
 		public Sprite noHotItem;
 
 		public Sprite defaultHotItem;

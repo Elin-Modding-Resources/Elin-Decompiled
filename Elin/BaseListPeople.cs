@@ -77,46 +77,55 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 				}
 			}
 			AddSubButtonWork(b, a);
-			if (memberType == FactionMemberType.Default)
+			Room room = a.FindRoom();
+			TraitBed bed = a.FindBed();
+			UIButton uIButton = b.AddSubButton(EClass.core.refs.icons.home, delegate
 			{
-				Room room = a.FindRoom();
-				TraitBed bed = a.FindBed();
-				UIButton uIButton = b.AddSubButton(EClass.core.refs.icons.home, delegate
+				if (room == null)
 				{
-					if (room == null)
-					{
-						SE.BeepSmall();
-					}
-					else
-					{
-						EClass.pc.SetAI(new AI_Goto(room.GetRandomFreePos(), 1));
-						layer.Close();
-					}
-				}, null, delegate(UITooltip t)
+					SE.BeepSmall();
+				}
+				else
 				{
-					t.note.Clear();
-					t.note.AddHeader("infoHome".lang((room != null) ? room.Name : "none".lang()));
-					t.note.AddTopic("TopicLeft", "infoBed".lang(), (bed != null) ? bed.Name.ToTitleCase() : "none".lang());
-					t.note.Build();
-					if (room != null)
-					{
-						EClass.core.actionsNextFrame.Add(delegate
-						{
-						});
-					}
-				}, "home");
-				uIButton.icon.SetAlpha((bed != null) ? 1f : 0.4f);
-				uIButton.SetActive(enable: true);
-			}
-			else
+					EClass.pc.SetAI(new AI_Goto(room.GetRandomFreePos(), 1));
+					layer.Close();
+				}
+			}, null, delegate(UITooltip t)
 			{
-				b.AddSubButton(EClass.core.refs.icons.home, null, null, null, "home").SetActive(enable: false);
-			}
+				t.note.Clear();
+				t.note.AddHeader("infoHome".lang((room != null) ? room.Name : "none".lang()));
+				t.note.AddTopic("TopicLeft", "infoBed".lang(), (bed != null) ? bed.Name.ToTitleCase() : "none".lang());
+				t.note.Build();
+				if (room != null)
+				{
+					EClass.core.actionsNextFrame.Add(delegate
+					{
+					});
+				}
+			}, "home");
+			uIButton.icon.SetAlpha((bed != null) ? 1f : 0.4f);
+			uIButton.SetActive(enable: true);
+			UIButton sub2 = null;
+			sub2 = b.AddSubButton(EClass.core.refs.icons.sharedEquip, delegate
+			{
+				a.SetInt(113, (a.GetInt(113) == 0) ? 1 : 0);
+				SE.Tab();
+				sub2.icon.SetAlpha((a.GetInt(113) == 1) ? 0.4f : 1f);
+				UIButton.TryShowTip();
+			}, null, delegate(UITooltip t)
+			{
+				t.note.Clear();
+				t.note.AddHeader("infoSharedEquip".lang((a.GetInt(113) == 1) ? "none".lang() : "infoSharedEquip_on".lang()));
+				t.note.Build();
+			}, "sharedEquip");
+			sub2.icon.SetAlpha((a.GetInt(113) == 1) ? 0.4f : 1f);
+			sub2.SetActive(enable: true);
 		}
 		else
 		{
 			b.AddSubButton(EClass.core.refs.icons.work, null, null, null, "room").SetActive(enable: false);
 			b.AddSubButton(EClass.core.refs.icons.home, null, null, null, "home").SetActive(enable: false);
+			b.AddSubButton(EClass.core.refs.icons.sharedEquip, null, null, null, "sharedEquip").SetActive(enable: false);
 		}
 		if (ShowCharaSheet && EClass.debug.showExtra)
 		{

@@ -6175,7 +6175,14 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (!silent)
 		{
-			PlaySound("teleport");
+			if (id == "mush_quantum")
+			{
+				PlaySound("teleport_quantum");
+			}
+			else
+			{
+				PlaySound("teleport");
+			}
 			Say("teleported", this);
 		}
 		_Move(point);

@@ -1,6 +1,6 @@
 public class SKILL
 {
-	public const int armorHeavy = 122;
+	public const int fishing = 245;
 
 	public const int fireproof = 50;
 
@@ -10,7 +10,7 @@ public class SKILL
 
 	public const int armorLight = 120;
 
-	public const int fishing = 245;
+	public const int shield = 123;
 
 	public const int marksman = 133;
 
@@ -134,7 +134,7 @@ public class SKILL
 
 	public const int gathering = 250;
 
-	public const int shield = 123;
+	public const int armorHeavy = 122;
 
 	public const int blacksmith = 256;
 
@@ -148,7 +148,7 @@ public class SKILL
 
 	public const int eleMagic = 921;
 
-	public const int resDamage = 971;
+	public const int eleEther = 922;
 
 	public const int eleAcid = 923;
 
@@ -166,47 +166,51 @@ public class SKILL
 
 	public const int resLightning = 952;
 
-	public const int eleNether = 916;
-
 	public const int resDarkness = 953;
-
-	public const int resPoison = 955;
-
-	public const int resNether = 956;
-
-	public const int resSound = 957;
-
-	public const int resNerve = 958;
-
-	public const int resChaos = 959;
-
-	public const int resHoly = 960;
-
-	public const int resMagic = 961;
-
-	public const int resEther = 962;
-
-	public const int resAcid = 963;
-
-	public const int resCut = 964;
-
-	public const int resImpact = 965;
-
-	public const int carpentry = 255;
-
-	public const int resCat = 973;
-
-	public const int resCurse = 972;
 
 	public const int resMind = 954;
 
+	public const int resPoison = 955;
+
+	public const int carpentry = 255;
+
+	public const int resDecay = 970;
+
+	public const int resDamage = 971;
+
+	public const int resCurse = 972;
+
+	public const int resCat = 973;
+
+	public const int resImpact = 965;
+
+	public const int eleNether = 916;
+
+	public const int resCut = 964;
+
+	public const int resEther = 962;
+
+	public const int resMagic = 961;
+
+	public const int resHoly = 960;
+
+	public const int resChaos = 959;
+
+	public const int resSound = 957;
+
+	public const int resNether = 956;
+
+	public const int resAcid = 963;
+
 	public const int elePoison = 915;
 
-	public const int eleEther = 922;
+	public const int resNerve = 958;
 
 	public const int eleDarkness = 913;
 
 	public const int alchemy = 257;
+
+	public const int eleMind = 914;
 
 	public const int sculpture = 258;
 
@@ -220,9 +224,7 @@ public class SKILL
 
 	public const int stealing = 281;
 
-	public const int eleMind = 914;
-
-	public const int farming = 286;
+	public const int reading = 285;
 
 	public const int cooking = 287;
 
@@ -236,7 +238,7 @@ public class SKILL
 
 	public const int investing = 292;
 
-	public const int reading = 285;
+	public const int farming = 286;
 
 	public const int regeneration = 300;
 
@@ -248,46 +250,44 @@ public class SKILL
 
 	public const int disarmTrap = 293;
 
-	public const int env = 313;
-
 	public const int fun = 312;
 
 	public const int bladder = 311;
 
-	public const int resDecay = 970;
+	public const int hygine = 310;
 
 	public const int memorization = 307;
 
-	public const int faith = 306;
+	public const int env = 313;
 
 	public const int magicDevice = 305;
+
+	public const int casting = 304;
+
+	public const int manaCapacity = 303;
 
 	public const int meditation = 301;
 
 	public const int controlmana = 302;
 
-	public const int manaCapacity = 303;
-
-	public const int casting = 304;
-
-	public const int hygine = 310;
+	public const int faith = 306;
 
 	public static readonly int[] IDS = new int[136]
 	{
-		122, 50, 110, 111, 120, 245, 133, 131, 242, 241,
+		245, 50, 110, 111, 120, 123, 133, 131, 242, 241,
 		240, 237, 235, 230, 227, 225, 130, 220, 207, 200,
 		152, 151, 150, 135, 134, 132, 210, 226, 94, 108,
 		72, 71, 70, 68, 67, 66, 65, 64, 62, 61,
 		60, 57, 56, 55, 51, 73, 74, 75, 76, 107,
 		106, 105, 104, 103, 102, 101, 109, 100, 92, 91,
-		90, 80, 79, 78, 77, 93, 250, 123, 256, 917,
-		918, 919, 920, 921, 971, 923, 924, 925, 926, 927,
-		950, 951, 952, 916, 953, 955, 956, 957, 958, 959,
-		960, 961, 962, 963, 964, 965, 255, 973, 972, 954,
-		915, 922, 913, 257, 258, 259, 260, 261, 280, 281,
-		914, 286, 287, 288, 289, 290, 291, 292, 285, 300,
-		912, 911, 910, 293, 313, 312, 311, 970, 307, 306,
-		305, 301, 302, 303, 304, 310
+		90, 80, 79, 78, 77, 93, 250, 122, 256, 917,
+		918, 919, 920, 921, 922, 923, 924, 925, 926, 927,
+		950, 951, 952, 953, 954, 955, 255, 970, 971, 972,
+		973, 965, 916, 964, 962, 961, 960, 959, 957, 956,
+		963, 915, 958, 913, 257, 914, 258, 259, 260, 261,
+		280, 281, 285, 287, 288, 289, 290, 291, 292, 286,
+		300, 912, 911, 910, 293, 312, 311, 310, 307, 313,
+		305, 304, 303, 301, 302, 306
 	};
 }
 public class Skill : Element

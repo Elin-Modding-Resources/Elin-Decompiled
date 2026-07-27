@@ -152,6 +152,10 @@ public class Affinity : EClass
 		}
 		num = Mathf.Clamp(t.GetPrice() / (flag3 ? 10 : (flag2 ? 20 : 200)), 0, 50) + (flag3 ? 20 : (flag2 ? 5 : 0));
 		num = num * (100 + (t.HasElement(757) ? 50 : 0)) / (100 + CC.LV * 10);
+		if (t.category.id == "currency")
+		{
+			num = 0;
+		}
 		if (flag)
 		{
 			num += 100;
