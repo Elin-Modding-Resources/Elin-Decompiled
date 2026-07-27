@@ -1,5 +1,13 @@
 var NAVTREEINDEX131 =
 {
+"classTraitSpotSearch.html":[1,0,1973],
+"classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1973,0],
+"classTraitSpotSpawn.html":[1,0,1974],
+"classTraitSpotSpawn.html#a51eeba704fdecd9aea102ed878ad20e8":[1,0,1974,2],
+"classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685":[1,0,1974,1],
+"classTraitSpotSpawn.html#aa8fead14158139521f68cda9f4b16f0a":[1,0,1974,3],
+"classTraitSpotSpawn.html#acdce588d16b0d5e8f97614c2044fc533":[1,0,1974,0],
+"classTraitSpotStock.html":[1,0,1975],
 "classTraitSpotStock.html#af8870bb4fbba3c2111b67956e3d9d5ad":[1,0,1975,0],
 "classTraitSpotStockpile.html":[1,0,1976],
 "classTraitSpotStockpile.html#a24f33d2e704f24f7ca5675808ee6ecb2":[1,0,1976,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX131 =
 "classTraitToolTalisman.html":[1,0,2038],
 "classTraitToolTalisman.html#a0570fc6eaf7f97ac63265befa1c1b176":[1,0,2038,3],
 "classTraitToolTalisman.html#a2eef1c145cc21eef149e51d3068741cf":[1,0,2038,7],
-"classTraitToolTalisman.html#a3aaeea66f51cb96aea42536db2e290eb":[1,0,2038,6],
-"classTraitToolTalisman.html#a591bc7510cb9e9f810701c33e8aa115e":[1,0,2038,5],
-"classTraitToolTalisman.html#a641e5ad30e9b0a4efe916c0a0a9eddcc":[1,0,2038,4],
-"classTraitToolTalisman.html#a7b02272526c9469e10b7da1a773daab5":[1,0,2038,10],
-"classTraitToolTalisman.html#a935ef1ade21756e75c9f91e20e84bb4d":[1,0,2038,9],
-"classTraitToolTalisman.html#a99b1fe0f9fcd870334b8d43fc7d4d29e":[1,0,2038,0],
-"classTraitToolTalisman.html#ab67b4736c563c4a2e4ef5dc747b24fc1":[1,0,2038,2],
-"classTraitToolTalisman.html#ac2f907dd845c4d804ac2ee22834864ff":[1,0,2038,8],
-"classTraitToolTalisman.html#adf76fbbdf82cce4f21bfefa434cac57f":[1,0,2038,1]
+"classTraitToolTalisman.html#a3aaeea66f51cb96aea42536db2e290eb":[1,0,2038,6]
 };

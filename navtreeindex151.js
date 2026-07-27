@@ -1,5 +1,13 @@
 var NAVTREEINDEX151 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da590e889dce1111c0ced6fb0574beec5e":[0,4,3,0,8,206],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da59863bd42694472292baf42b42b9e8c9":[0,4,3,0,8,35],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da5b77400e1df6e000ea117b2d65a404e9":[0,4,3,0,8,73],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da5d9ea49eabb0d6766971ff3d357aff78":[0,4,3,0,8,100],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da5dfd352dd6b7a5d118237fcf1e19fcc1":[0,4,3,0,8,18],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da5e720b59b7c8c02318a330007fff0c2c":[0,4,3,0,8,41],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da60eb2135733e12a345213d06bd2f5206":[0,4,3,0,8,126],
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da616398c4218d9324003fd4a15d605b3e":[0,4,3,0,8,86],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da62e5cef85d46f1a5a2144d9fd463b79e":[0,4,3,0,8,4],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da63e4712334837225accc760aa4dea552":[0,4,3,0,8,183],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da6436122f2fa545fef1af92c0c9e3018a":[0,4,3,0,8,211],
@@ -241,13 +249,5 @@ var NAVTREEINDEX151 =
 "structB83_1_1Win32_1_1MSG.html#aff3a81f1d83672f5cc3616c385b0a7ce":[0,4,3,0,1,1],
 "structB83_1_1Win32_1_1MSG.html#aff3a81f1d83672f5cc3616c385b0a7ce":[1,0,3,0,1,1],
 "structB83_1_1Win32_1_1POINT.html":[0,4,3,0,2],
-"structB83_1_1Win32_1_1POINT.html":[1,0,3,0,2],
-"structB83_1_1Win32_1_1POINT.html#a607a091307c07913cb55ecf880afcb54":[0,4,3,0,2,0],
-"structB83_1_1Win32_1_1POINT.html#a607a091307c07913cb55ecf880afcb54":[1,0,3,0,2,0],
-"structB83_1_1Win32_1_1POINT.html#a79430a307e45cd817fcc7e27dccc90c1":[0,4,3,0,2,2],
-"structB83_1_1Win32_1_1POINT.html#a79430a307e45cd817fcc7e27dccc90c1":[1,0,3,0,2,2],
-"structB83_1_1Win32_1_1POINT.html#a88d0677efb3fd7bac31199fe3f2c9954":[1,0,3,0,2,1],
-"structB83_1_1Win32_1_1POINT.html#a88d0677efb3fd7bac31199fe3f2c9954":[0,4,3,0,2,1],
-"structB83_1_1Win32_1_1POINT.html#adf0708674514e0284358eaf36b1af1fe":[1,0,3,0,2,3],
-"structB83_1_1Win32_1_1POINT.html#adf0708674514e0284358eaf36b1af1fe":[0,4,3,0,2,3]
+"structB83_1_1Win32_1_1POINT.html":[1,0,3,0,2]
 };

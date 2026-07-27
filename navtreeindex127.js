@@ -1,5 +1,13 @@
 var NAVTREEINDEX127 =
 {
+"classTraitGiftPack.html":[1,0,1732],
+"classTraitGiftPack.html#a19bd599f4e584182043d07226d6a0ffe":[1,0,1732,1],
+"classTraitGiftPack.html#a943b6a12c7bce4185459b2645a1f1c34":[1,0,1732,0],
+"classTraitGodStatue.html":[1,0,1738],
+"classTraitGodStatue.html#a1590a2af361a881d0e32aeb5793dbc2e":[1,0,1738,0],
+"classTraitGodStatue.html#a8033bab260716f3d6c25362c28506c33":[1,0,1738,1],
+"classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836":[1,0,1738,2],
+"classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1738,3],
 "classTraitGodStatue.html#abc0ce01bea37d901ff1893ea8576377d":[1,0,1738,4],
 "classTraitGoodsCoin.html":[1,0,1739],
 "classTraitGoodsCoin.html#a9751edccc0d9badf730cb5cca88fb87d":[1,0,1739,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606":[1,0,1791,3],
 "classTraitManager.html#ab374daadf270383f2e8ca27527340509":[1,0,1791,4],
 "classTraitManager.html#ab69deb4557ccae112300fa8eee9a85d8":[1,0,1791,1],
-"classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f":[1,0,1791,9],
-"classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e":[1,0,1791,10],
-"classTraitManhole.html":[1,0,1792],
-"classTraitManhole.html#aa962c446c36eae0e5f40730b4c7c288a":[1,0,1792,0],
-"classTraitMani.html":[1,0,1793],
-"classTraitMani.html#a84ed89df5e2263ca035643cc30eed49c":[1,0,1793,0],
-"classTraitMani.html#adbf16a7e346d14746a647bff0ae05d06":[1,0,1793,1],
-"classTraitMannequin.html":[1,0,1794],
-"classTraitMannequin.html#a1d3663a88e58c5eab42519b42d7a1264":[1,0,1794,5]
+"classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f":[1,0,1791,9]
 };

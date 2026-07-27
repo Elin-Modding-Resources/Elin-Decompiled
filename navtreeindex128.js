@@ -1,5 +1,13 @@
 var NAVTREEINDEX128 =
 {
+"classTraitManager.html#af88d814dfd0f7667d7d3c5746a78c70e":[1,0,1791,10],
+"classTraitManhole.html":[1,0,1792],
+"classTraitManhole.html#aa962c446c36eae0e5f40730b4c7c288a":[1,0,1792,0],
+"classTraitMani.html":[1,0,1793],
+"classTraitMani.html#a84ed89df5e2263ca035643cc30eed49c":[1,0,1793,0],
+"classTraitMani.html#adbf16a7e346d14746a647bff0ae05d06":[1,0,1793,1],
+"classTraitMannequin.html":[1,0,1794],
+"classTraitMannequin.html#a1d3663a88e58c5eab42519b42d7a1264":[1,0,1794,5],
 "classTraitMannequin.html#a3eda9d8f2da4f148b92673bbc0d529e9":[1,0,1794,1],
 "classTraitMannequin.html#a46dc077526eed5cc8c13690e85909b70":[1,0,1794,7],
 "classTraitMannequin.html#a51c9d4666799b2cb4a2b74090d010f9b":[1,0,1794,6],
@@ -241,13 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitNino.html#acc31a15517d8afa22aeeeae87258b9c4":[1,0,1851,0],
 "classTraitNola.html":[1,0,1852],
 "classTraitNola.html#a2d3973f59a50ca94708145aa5a20e545":[1,0,1852,1],
-"classTraitNola.html#a376fa5937ae4878a433ad8b1c02e8947":[1,0,1852,2],
-"classTraitNola.html#a694337ae9d9513218531d20abf7c6ad4":[1,0,1852,4],
-"classTraitNola.html#a7ab27b3957b1cb0c6e9d21616f9dce30":[1,0,1852,3],
-"classTraitNola.html#ae6222b9c6697d78a3afc2e25a0769477":[1,0,1852,0],
-"classTraitNote.html":[1,0,1853],
-"classTraitNote.html#a1bf55d03433108430137e481eb6b94d6":[1,0,1853,3],
-"classTraitNote.html#abd9c08d1cdcd89ce145a1efeda8c9637":[1,0,1853,0],
-"classTraitNote.html#ae64a3732578342315cb31685ec9c6d27":[1,0,1853,1],
-"classTraitNote.html#af5b43b9758d75717f8002291d2ac2628":[1,0,1853,2]
+"classTraitNola.html#a376fa5937ae4878a433ad8b1c02e8947":[1,0,1852,2]
 };

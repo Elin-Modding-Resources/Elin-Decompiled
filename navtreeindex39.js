@@ -1,5 +1,11 @@
 var NAVTREEINDEX39 =
 {
+"classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244b":[1,0,234,0],
+"classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244ba3cfce651e667ab85486dd42a8185f98a":[1,0,234,0,0],
+"classBaseTileSelector.html#a4265496d5196bab375a49a289d0f244bafa1124a61230804809a9b5fc57932b40":[1,0,234,0,1],
+"classBaseTileSelector.html#a49b05a49c395a659ab6e12a909fb8f4d":[1,0,234,6],
+"classBaseTileSelector.html#a644059fb77bd5e44333d5066e26a4308":[1,0,234,19],
+"classBaseTileSelector.html#a65d0ebc8b59e7933d13a3d03279f1919":[1,0,234,26],
 "classBaseTileSelector.html#a6fab9b93329270608ffa8b7c6ee84f8a":[1,0,234,25],
 "classBaseTileSelector.html#a70420f11dd7ebbc6259c5fe04f15e29e":[1,0,234,7],
 "classBaseTileSelector.html#a807af12c90fdeb0562286aa0ea9a4a2b":[1,0,234,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX39 =
 "classBiomeProfile_1_1Style.html#afe32cfbfda489fff8da633d29f65db6a":[1,0,239,9,6],
 "classBiomeProfile_1_1Tile.html":[1,0,239,10],
 "classBiomeProfile_1_1Tile.html#a1fc0c7959cb667cbac383c3901438f3e":[1,0,239,10,7],
-"classBiomeProfile_1_1Tile.html#a30003e7d11d27ef5b1d01b1acf99f9c8":[1,0,239,10,8],
-"classBiomeProfile_1_1Tile.html#a378ec25f09d2d68ff777c2a17ba2e352":[1,0,239,10,6],
-"classBiomeProfile_1_1Tile.html#a6cc5ce0d0bfd86581f4a8679c6955225":[1,0,239,10,4],
-"classBiomeProfile_1_1Tile.html#a762961914009f2c293c711c603475360":[1,0,239,10,3],
-"classBiomeProfile_1_1Tile.html#a8f44ad1b17d726309ed5269c982fe53d":[1,0,239,10,0],
-"classBiomeProfile_1_1Tile.html#a9e84d5f037423d8aead3414947faec81":[1,0,239,10,2],
-"classBiomeProfile_1_1Tile.html#a9f25f93e246ab2df8d439b24055ee0f7":[1,0,239,10,5]
+"classBiomeProfile_1_1Tile.html#a30003e7d11d27ef5b1d01b1acf99f9c8":[1,0,239,10,8]
 };

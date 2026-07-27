@@ -1,5 +1,13 @@
 var NAVTREEINDEX123 =
 {
+"classTraitAnimalTamer.html#ae0135f951d9f2982c2a655759e21d723":[1,0,1517,1],
+"classTraitAnvil.html":[1,0,1518],
+"classTraitAppraiser.html":[1,0,1519],
+"classTraitAppraiser.html#a1ca238d5d1e178b3b4a7054d89d21077":[1,0,1519,0],
+"classTraitAppraiser.html#ac2667376d933a0450b99f469e1d4aa73":[1,0,1519,1],
+"classTraitAshland.html":[1,0,1520],
+"classTraitAshland.html#aec6e421de9a8108eb3ca196cd1429339":[1,0,1520,0],
+"classTraitBBQ.html":[1,0,1535],
 "classTraitBBQ.html#ae23270c3c55f5dcc8d12a295650f4f54":[1,0,1535,0],
 "classTraitBJTable.html":[1,0,1545],
 "classTraitBJTable.html#a294b8bdb971efcc60d99ff887df2b8f2":[1,0,1545,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitCanvas.html#a7680aece7bb9be37160bb38db93e7ac4":[1,0,1570,1],
 "classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1570,3],
 "classTraitCanvas.html#a9009b42274c91a7a98468bd57509291b":[1,0,1570,7],
-"classTraitCanvas.html#aaf23f8a6dc8c67306f1169aeb6b77a07":[1,0,1570,5],
-"classTraitCanvas.html#ab2c7786e34b9dfe0573d6f61bc34082d":[1,0,1570,4],
-"classTraitCanvas.html#ae3ad3d5f043445ec51aa8c8ecabfe6d9":[1,0,1570,0],
-"classTraitCanvas.html#afa90520697e05c702fcd08d382abba35":[1,0,1570,6],
-"classTraitCard.html":[1,0,1571],
-"classTraitCard.html#a385d69ae4a39fed551482ff9a659dc85":[1,0,1571,2],
-"classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370":[1,0,1571,0],
-"classTraitCard.html#a891771259e250e40caa56df515387258":[1,0,1571,1],
-"classTraitCasinoGuard.html":[1,0,1572]
+"classTraitCanvas.html#aaf23f8a6dc8c67306f1169aeb6b77a07":[1,0,1570,5]
 };

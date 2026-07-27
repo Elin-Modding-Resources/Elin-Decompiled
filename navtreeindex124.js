@@ -1,5 +1,13 @@
 var NAVTREEINDEX124 =
 {
+"classTraitCanvas.html#ab2c7786e34b9dfe0573d6f61bc34082d":[1,0,1570,4],
+"classTraitCanvas.html#ae3ad3d5f043445ec51aa8c8ecabfe6d9":[1,0,1570,0],
+"classTraitCanvas.html#afa90520697e05c702fcd08d382abba35":[1,0,1570,6],
+"classTraitCard.html":[1,0,1571],
+"classTraitCard.html#a385d69ae4a39fed551482ff9a659dc85":[1,0,1571,2],
+"classTraitCard.html#a64983ac650be0c2ba4ab5c57dd5df370":[1,0,1571,0],
+"classTraitCard.html#a891771259e250e40caa56df515387258":[1,0,1571,1],
+"classTraitCasinoGuard.html":[1,0,1572],
 "classTraitCasinoGuard.html#a5fa43ff32174f8fe00b372404084cda2":[1,0,1572,0],
 "classTraitCasinoTable.html":[1,0,1573],
 "classTraitCasinoTable.html#aae4eafadaaee9f34981e5563e683d053":[1,0,1573,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitCurrencyMedal.html#a83af106650761bd1917199486fe112f2":[1,0,1616,0],
 "classTraitCurtain.html":[1,0,1617],
 "classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1617,3],
-"classTraitCurtain.html#a1f1e4de13216bc852a9ff429896d712e":[1,0,1617,1],
-"classTraitCurtain.html#a2b50ce8f3b99e7b80da8bc908409b8f0":[1,0,1617,4],
-"classTraitCurtain.html#a6d171ff8fd09f46803032f43954dd416":[1,0,1617,2],
-"classTraitCurtain.html#af815915a391a32fe3f4c9f5579397147":[1,0,1617,0],
-"classTraitDaggerGrave.html":[1,0,1618],
-"classTraitDaggerGrave.html#a3d61deede7bf6c9338c372164507bd6f":[1,0,1618,1],
-"classTraitDaggerGrave.html#a4fe260b1a1e644df232832be5bae583d":[1,0,1618,3],
-"classTraitDaggerGrave.html#a9f325398c45e2274af5e891c6b8a037e":[1,0,1618,5],
-"classTraitDaggerGrave.html#acacb5e09722aaf2d6cc6497bb7275b58":[1,0,1618,4]
+"classTraitCurtain.html#a1f1e4de13216bc852a9ff429896d712e":[1,0,1617,1]
 };

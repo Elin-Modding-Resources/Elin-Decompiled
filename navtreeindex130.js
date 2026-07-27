@@ -1,5 +1,13 @@
 var NAVTREEINDEX130 =
 {
+"classTraitRoomPlate.html#a738261f447a82cdb204add9779035832":[1,0,1915,6],
+"classTraitRoomPlate.html#a829e280297a537dd0e26212fa263f882":[1,0,1915,2],
+"classTraitRoomPlate.html#ab17dd62bedd1048338b1f14b2c46e345":[1,0,1915,4],
+"classTraitRope.html":[1,0,1916],
+"classTraitRope.html#a9cb7af347d972444df31f3c6b598bcd7":[1,0,1916,0],
+"classTraitRune.html":[1,0,1917],
+"classTraitRune.html#a3ef4e57dd7b4f5ccefcd30f71a65985f":[1,0,1917,1],
+"classTraitRune.html#ad1d7c2da5c25bbce6d814883e67850f8":[1,0,1917,0],
 "classTraitRuneFree.html":[1,0,1918],
 "classTraitRuneMold.html":[1,0,1919],
 "classTraitRuneMold.html#a0e9a7e9012a365c20c2297ce477847d9":[1,0,1919,8],
@@ -241,13 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitSpotLumberjack.html":[1,0,1969],
 "classTraitSpotMeeting.html":[1,0,1970],
 "classTraitSpotPrayer.html":[1,0,1971],
-"classTraitSpotRanch.html":[1,0,1972],
-"classTraitSpotSearch.html":[1,0,1973],
-"classTraitSpotSearch.html#ad4a719770fe40dcf2bec6c52864ba921":[1,0,1973,0],
-"classTraitSpotSpawn.html":[1,0,1974],
-"classTraitSpotSpawn.html#a51eeba704fdecd9aea102ed878ad20e8":[1,0,1974,2],
-"classTraitSpotSpawn.html#a68925c7634ec1abaeab15a3838c45685":[1,0,1974,1],
-"classTraitSpotSpawn.html#aa8fead14158139521f68cda9f4b16f0a":[1,0,1974,3],
-"classTraitSpotSpawn.html#acdce588d16b0d5e8f97614c2044fc533":[1,0,1974,0],
-"classTraitSpotStock.html":[1,0,1975]
+"classTraitSpotRanch.html":[1,0,1972]
 };

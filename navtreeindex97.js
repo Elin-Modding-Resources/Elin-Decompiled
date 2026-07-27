@@ -1,7 +1,14 @@
 var NAVTREEINDEX97 =
 {
-"classPrimitiveUI_1_1StrokeStyle.html#abb4854e8df760a655a72578fb788bebb":[0,4,7,2,4],
+"classPrimitiveUI_1_1StrokeStyle.html#a288f9fbbb464437b8442446a3822fc7e":[1,0,7,2,3],
+"classPrimitiveUI_1_1StrokeStyle.html#a727668dcf704f92eaec5513c33fdc898":[1,0,7,2,1],
+"classPrimitiveUI_1_1StrokeStyle.html#a727668dcf704f92eaec5513c33fdc898":[0,4,7,2,1],
+"classPrimitiveUI_1_1StrokeStyle.html#a7ec988e27cd881a41dab71fc0ec2dbcc":[1,0,7,2,0],
+"classPrimitiveUI_1_1StrokeStyle.html#a7ec988e27cd881a41dab71fc0ec2dbcc":[0,4,7,2,0],
+"classPrimitiveUI_1_1StrokeStyle.html#a9eaca2e2787e7306312fa5be13570ff1":[0,4,7,2,2],
+"classPrimitiveUI_1_1StrokeStyle.html#a9eaca2e2787e7306312fa5be13570ff1":[1,0,7,2,2],
 "classPrimitiveUI_1_1StrokeStyle.html#abb4854e8df760a655a72578fb788bebb":[1,0,7,2,4],
+"classPrimitiveUI_1_1StrokeStyle.html#abb4854e8df760a655a72578fb788bebb":[0,4,7,2,4],
 "classProceduralMesh.html":[1,0,1048],
 "classProceduralMesh.html#a054b8794762eba9800818d4d79fa7a39":[1,0,1048,4],
 "classProceduralMesh.html#a0d9a39e631ce79d80d9ec1b305b241af":[1,0,1048,13],
@@ -242,12 +249,5 @@ var NAVTREEINDEX97 =
 "classQuest.html#af5d4b1838e2ff8298b458352da6ce89b":[1,0,1058,98],
 "classQuest.html#af81b809e290fdbe9fbf0d218090403de":[1,0,1058,102],
 "classQuest.html#afdb84778eac5d79659f29d92af572204":[1,0,1058,44],
-"classQuestCompanion.html":[1,0,1059],
-"classQuestCompanion.html#a0fd0ab3dda80cc5f73fe3189a044ea23":[1,0,1059,0],
-"classQuestCompanion.html#a26b20844888ffd508e0adeeb69f7382d":[1,0,1059,2],
-"classQuestCompanion.html#a7715303ba7f4689c79af3c74419883a5":[1,0,1059,1],
-"classQuestCouncil.html":[1,0,1060],
-"classQuestCouncil.html#a535037316220f4da0d56f0f417e0bbf5":[1,0,1060,0],
-"classQuestCraft.html":[1,0,1061],
-"classQuestCraft.html#a1728c066dcb9f4bfcbb1d8c1b0cab352":[1,0,1061,2]
+"classQuestCompanion.html":[1,0,1059]
 };

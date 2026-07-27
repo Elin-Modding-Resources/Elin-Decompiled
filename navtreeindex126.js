@@ -1,5 +1,13 @@
 var NAVTREEINDEX126 =
 {
+"classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1669,0],
+"classTraitErohon.html":[1,0,1670],
+"classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1670,0],
+"classTraitErohon.html#a2d6396007a75f9ac916b827d6a0e8da4":[1,0,1670,2],
+"classTraitErohon.html#a6c1465509a734979f77294dc47c71369":[1,0,1670,1],
+"classTraitErohon.html#ad7141e5b654da19ff834bfe154bce6f5":[1,0,1670,3],
+"classTraitEspressoMachine.html":[1,0,1671],
+"classTraitEternalMonument.html":[1,0,1672],
 "classTraitEureka.html":[1,0,1673],
 "classTraitExileElder.html":[1,0,1674],
 "classTraitExileElder.html#a0458cf5a6732bad15e0bc70236544c11":[1,0,1674,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitGiftJure.html":[1,0,1730],
 "classTraitGiftJure.html#a9ffa22a8c61e29654ee74d0c0bba405d":[1,0,1730,0],
 "classTraitGiftNewYear.html":[1,0,1731],
-"classTraitGiftNewYear.html#a14f33ead74c45e2c7618566a77de9a7b":[1,0,1731,0],
-"classTraitGiftPack.html":[1,0,1732],
-"classTraitGiftPack.html#a19bd599f4e584182043d07226d6a0ffe":[1,0,1732,1],
-"classTraitGiftPack.html#a943b6a12c7bce4185459b2645a1f1c34":[1,0,1732,0],
-"classTraitGodStatue.html":[1,0,1738],
-"classTraitGodStatue.html#a1590a2af361a881d0e32aeb5793dbc2e":[1,0,1738,0],
-"classTraitGodStatue.html#a8033bab260716f3d6c25362c28506c33":[1,0,1738,1],
-"classTraitGodStatue.html#a8f5dfdfdcbaa412a21eb5a33ee11a836":[1,0,1738,2],
-"classTraitGodStatue.html#a915731cb4559dcb14b1af938120f54f7":[1,0,1738,3]
+"classTraitGiftNewYear.html#a14f33ead74c45e2c7618566a77de9a7b":[1,0,1731,0]
 };

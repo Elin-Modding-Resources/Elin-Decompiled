@@ -1,5 +1,13 @@
 var NAVTREEINDEX115 =
 {
+"classSpawnList.html#a49eef52cc21bf519f3664f7fe5f39b38":[1,0,1320,10],
+"classSpawnList.html#a4a16374107c2972f88dbaf5eee915927":[1,0,1320,5],
+"classSpawnList.html#a6b49e9302e9916ce174e8748a39a86b3":[1,0,1320,9],
+"classSpawnList.html#a8738e590f31a4bfe29fba0d79a6d051f":[1,0,1320,12],
+"classSpawnList.html#a97ee96f64efd879295c436e7e6d2ae76":[1,0,1320,13],
+"classSpawnList.html#a996f0031a8413a114d4a114c252dad70":[1,0,1320,8],
+"classSpawnList.html#aeff18a9741191ca50781957a9a8fdfb2":[1,0,1320,11],
+"classSpawnList.html#af1d2461853390964b1bd30f39f6249ab":[1,0,1320,0],
 "classSpawnListChara.html":[1,0,1321],
 "classSpawnListChara.html#a826ca3be552dcd20e4cf9276c0d0ab6f":[1,0,1321,0],
 "classSpawnListThing.html":[1,0,1322],
@@ -241,13 +249,5 @@ var NAVTREEINDEX115 =
 "classStatsHygiene.html#ad0889bab0571eb9d8e6b63a6f261fadb":[1,0,1346,3],
 "classStatsMana.html":[1,0,1347],
 "classStatsMana.html#a139c5b18dc30e35d1e47b62a1847b55a":[1,0,1347,1],
-"classStatsMana.html#a6470aeb93cb08b7d1be5ee135db95da4":[1,0,1347,2],
-"classStatsMana.html#a64d348c6710c69010c4e72d1131f3e63":[1,0,1347,0],
-"classStatsSAN.html":[1,0,1348],
-"classStatsSleepiness.html":[1,0,1349],
-"classStatsSleepiness.html#a4ca086b556618937773fe99636df1761":[1,0,1349,2],
-"classStatsSleepiness.html#a7d07bb121327fb0d2831bab1927db8c5":[1,0,1349,3],
-"classStatsSleepiness.html#ae6913832f855ded6cd18f27e8345537c":[1,0,1349,1],
-"classStatsSleepiness.html#afce6a722b620b8e0c647e070054ccde6":[1,0,1349,0],
-"classStatsStamina.html":[1,0,1350]
+"classStatsMana.html#a6470aeb93cb08b7d1be5ee135db95da4":[1,0,1347,2]
 };

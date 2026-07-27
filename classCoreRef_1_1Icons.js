@@ -21,6 +21,7 @@ var classCoreRef_1_1Icons =
     [ "quality", "classCoreRef_1_1Icons.html#a37c4a59b14d366f7717b495df67e6c9c", null ],
     [ "resume", "classCoreRef_1_1Icons.html#ab0edf4554b49a910bf022c5a64572398", null ],
     [ "shared", "classCoreRef_1_1Icons.html#adab1e5f7eb7c6f2dd7fae10dc8f49cef", null ],
+    [ "sharedEquip", "classCoreRef_1_1Icons.html#aa9b75f56337e0c6857a9f9461a0cbe2a", null ],
     [ "stamina", "classCoreRef_1_1Icons.html#a8429f8021eac7646e571c0a38b3c1954", null ],
     [ "suspend", "classCoreRef_1_1Icons.html#abdc9a9b022ae0f3a3e2df92487db29f8", null ],
     [ "talk", "classCoreRef_1_1Icons.html#ae4a9ad1921987e4012131409514ab812", null ],

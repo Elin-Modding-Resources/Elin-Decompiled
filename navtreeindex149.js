@@ -1,5 +1,13 @@
 var NAVTREEINDEX149 =
 {
+"classZone__RandomDungeonFactory.html#a95c72c38ae14923abe1b88066452e7ae":[1,0,2295,1],
+"classZone__RandomDungeonFactory.html#aa88accff4d113803d3179e0e9d09b72b":[1,0,2295,0],
+"classZone__RandomDungeonForest.html":[1,0,2296],
+"classZone__RandomDungeonForest.html#ae8ca3272f662b6d8f59d5855e6f486b5":[1,0,2296,0],
+"classZone__RandomDungeonNature.html":[1,0,2297],
+"classZone__RandomDungeonNature.html#a3b3a542113fc933ff04c32724c2e24a4":[1,0,2297,0],
+"classZone__RandomDungeonNature.html#af5e1db33f5a3dc44b2bec3898088666c":[1,0,2297,1],
+"classZone__RandomDungeonPlain.html":[1,0,2298],
 "classZone__RandomDungeonWater.html":[1,0,2299],
 "classZone__RandomDungeonWater.html#a768ce264e05aa7123e791e05a1431554":[1,0,2299,0],
 "classZone__Seeker.html":[1,0,2300],
@@ -241,13 +249,5 @@ var NAVTREEINDEX149 =
 "functions_s.html":[1,3,0,19],
 "functions_t.html":[1,3,0,20],
 "functions_u.html":[1,3,0,21],
-"functions_v.html":[1,3,0,22],
-"functions_vars.html":[1,3,2],
-"functions_vars.html":[1,3,2,0],
-"functions_vars_a.html":[1,3,2,1],
-"functions_vars_b.html":[1,3,2,2],
-"functions_vars_c.html":[1,3,2,3],
-"functions_vars_d.html":[1,3,2,4],
-"functions_vars_e.html":[1,3,2,5],
-"functions_vars_f.html":[1,3,2,6]
+"functions_v.html":[1,3,0,22]
 };
