@@ -801,6 +801,13 @@ public class Element : EClass
 			{
 				uIItem2.text2.SetText(GetPower(EClass.pc).ToString() ?? "");
 			}
+			bool flag5 = source.eleP != 50 && this is Act;
+			uIItem2.text4.SetActive(flag5);
+			uIItem2.Find("text5")?.SetActive(flag5);
+			if (flag5)
+			{
+				uIItem2.text4.SetText(source.eleP.ToString() ?? "");
+			}
 		}
 		OnWriteNote(n, owner);
 		if (EClass.debug.showExtra)

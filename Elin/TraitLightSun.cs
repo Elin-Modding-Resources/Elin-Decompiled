@@ -16,7 +16,7 @@ public class TraitLightSun : TraitLight
 
 	public override bool CanUseRoomRadius => false;
 
-	public override List<Point> ListPoints(Point center = null, bool onlyPassable = true)
+	public override List<Point> ListPoints(Point center = null, bool onlyPassable = true, bool allowChara = true)
 	{
 		Trait.listRadiusPoints.Clear();
 		if (center == null)

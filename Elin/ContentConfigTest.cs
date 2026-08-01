@@ -31,6 +31,8 @@ public class ContentConfigTest : ContentConfig
 
 	public UIButton toggleBlockOnItem;
 
+	public UIButton toggleDisableShake2;
+
 	public UIButton toggleAlwaysFixCamera;
 
 	public UIButton toggleIgnoreBackerFlag;
@@ -56,6 +58,10 @@ public class ContentConfigTest : ContentConfig
 		{
 			base.config.test.idSkin = a;
 			base.config.ApplySkin();
+		});
+		toggleDisableShake2.SetToggle(base.config.test.disableShake2, delegate(bool on)
+		{
+			base.config.test.disableShake2 = on;
 		});
 		List<string> langs = new List<string> { "ani0", "ani1", "ani2", "ani3", "ani4" };
 		List<string> langs2 = new List<string> { "0x", "1x", "2x", "5x", "10x" };

@@ -861,7 +861,7 @@ public class Trait : EClass
 		return list[0];
 	}
 
-	public virtual List<Point> ListPoints(Point center = null, bool onlyPassable = true)
+	public virtual List<Point> ListPoints(Point center = null, bool onlyPassable = true, bool allowChara = true)
 	{
 		listRadiusPoints.Clear();
 		if (center == null)
@@ -878,13 +878,16 @@ public class Trait : EClass
 		{
 			foreach (Point point in room.points)
 			{
-				if (radiusType == TraitRadiusType.Farm)
+				if (allowChara || !point.HasChara)
 				{
-					listRadiusPoints.Add(point.Copy());
-				}
-				else if ((!onlyPassable || !point.cell.blocked) && !point.cell.HasBlock && point.cell.HasFloor)
-				{
-					listRadiusPoints.Add(point.Copy());
+					if (radiusType == TraitRadiusType.Farm)
+					{
+						listRadiusPoints.Add(point.Copy());
+					}
+					else if ((!onlyPassable || !point.cell.blocked) && !point.cell.HasBlock && point.cell.HasFloor)
+					{
+						listRadiusPoints.Add(point.Copy());
+					}
 				}
 			}
 		}
@@ -892,16 +895,19 @@ public class Trait : EClass
 		{
 			EClass._map.ForeachSphere(center.x, center.z, radius + 1, delegate(Point p)
 			{
-				if (radiusType == TraitRadiusType.Farm)
+				if (allowChara || !p.HasChara)
 				{
-					if (!p.cell.HasBlock || p.cell.HasFence)
+					if (radiusType == TraitRadiusType.Farm)
+					{
+						if (!p.cell.HasBlock || p.cell.HasFence)
+						{
+							listRadiusPoints.Add(p.Copy());
+						}
+					}
+					else if ((!onlyPassable || !p.cell.blocked) && !p.cell.HasBlock && p.cell.HasFloor && (!onlyPassable || Los.IsVisible(center, p)))
 					{
 						listRadiusPoints.Add(p.Copy());
 					}
-				}
-				else if ((!onlyPassable || !p.cell.blocked) && !p.cell.HasBlock && p.cell.HasFloor && (!onlyPassable || Los.IsVisible(center, p)))
-				{
-					listRadiusPoints.Add(p.Copy());
 				}
 			});
 		}

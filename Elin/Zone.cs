@@ -2867,6 +2867,19 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 			case SpawnPosition.Guest:
 			{
+				List<TraitSpotGuest> list = EClass._map.props.installed.traits.List<TraitSpotGuest>();
+				if (list.Count > 0)
+				{
+					list.Shuffle();
+					foreach (TraitSpotGuest item in list)
+					{
+						List<Point> list2 = item.ListPoints(null, onlyPassable: true, allowChara: false);
+						if (list2.Count > 0)
+						{
+							return list2.RandomItem();
+						}
+					}
+				}
 				Room room = point.cell.room;
 				if (room != null && room.data.accessType != 0)
 				{

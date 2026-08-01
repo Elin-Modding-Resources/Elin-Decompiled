@@ -3,5 +3,6 @@ public enum DuplicateCondition
 	Default,
 	Scarab,
 	SpiderEgg,
-	Water
+	Water,
+	Quantum
 }

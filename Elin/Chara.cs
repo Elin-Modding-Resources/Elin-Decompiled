@@ -1839,7 +1839,13 @@ public class Chara : Card, IPathfindWalker
 			return false;
 		}
 		Say("fuse", this);
-		Chara chara = EClass._zone.SpawnMob("marshmallow_king", pos);
+		string text = "marshmallow_king";
+		if (id == "imotoroid")
+		{
+			text = "imotomaton";
+		}
+		Chara chara = EClass._zone.SpawnMob(text, pos);
+		chara.SetHostility(hostility);
 		foreach (Chara item in list)
 		{
 			item.Talk("fusion");
@@ -1897,7 +1903,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (con != DuplicateCondition.Water && (HasCondition<ConPoison>() || HasCondition<ConConfuse>() || HasCondition<ConDim>() || HasCondition<ConParalyze>() || HasCondition<ConSleep>() || HasCondition<ConBurning>() || HasCondition<ConFreeze>() || HasCondition<ConMiasma>()))
+		if (con != DuplicateCondition.Water && con != DuplicateCondition.Quantum && (HasCondition<ConPoison>() || HasCondition<ConConfuse>() || HasCondition<ConDim>() || HasCondition<ConParalyze>() || HasCondition<ConSleep>() || HasCondition<ConBurning>() || HasCondition<ConFreeze>() || HasCondition<ConMiasma>()))
 		{
 			return false;
 		}
@@ -1919,7 +1925,7 @@ public class Chara : Card, IPathfindWalker
 		return true;
 	}
 
-	public Chara TryDuplicate(DuplicateCondition con = DuplicateCondition.Default, Point dest = null)
+	public Chara TryDuplicate(DuplicateCondition con = DuplicateCondition.Default, Point dest = null, bool inheritHostility = false)
 	{
 		if (dest == null)
 		{
@@ -1933,6 +1939,10 @@ public class Chara : Card, IPathfindWalker
 		}
 		Chara chara = Duplicate();
 		EClass._zone.AddCard(chara, dest);
+		if (inheritHostility)
+		{
+			chara.SetHostility(hostility);
+		}
 		Say("split", this);
 		return chara;
 	}
@@ -5164,6 +5174,7 @@ public class Chara : Card, IPathfindWalker
 			case "mech_scarab":
 				AddThing("gun_laser");
 				break;
+			case "imotomaton":
 			case "rocketman":
 			{
 				Thing thing2 = AddThing("panzerfaust");
@@ -8695,10 +8706,6 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		if (t.trait.CanOnlyCarry || !t.trait.CanBeDestroyed || t.trait.CanExtendBuild || t.rarity == Rarity.Artifact || t.IsContainer)
-		{
-			return false;
-		}
-		if (t.category.id == "currency" && !IsPCFaction)
 		{
 			return false;
 		}

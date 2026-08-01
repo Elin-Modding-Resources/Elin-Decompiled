@@ -30,7 +30,10 @@ public class EffectMeteor : Effect
 				destPos.Animate(AnimeID.Dig, animeBlock: true);
 				onComplete?.Invoke();
 				EMono.Sound.Play(soundExplode, destV);
-				Shaker.ShakeCam("meteor");
+				if (!EMono.core.config.test.disableShake2)
+				{
+					Shaker.ShakeCam("meteor");
+				}
 			});
 	}
 

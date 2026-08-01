@@ -5444,6 +5444,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				{
 					thing3.ChangeMaterial(Chara.material);
 				}
+				if (thing3.HasElement(758))
+				{
+					thing3.SetNum(1);
+				}
 				list.Add(thing3);
 				break;
 			}

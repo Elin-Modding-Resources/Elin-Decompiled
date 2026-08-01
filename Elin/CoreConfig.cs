@@ -563,6 +563,8 @@ public class CoreConfig : EClass
 
 		public bool dontCancelIfZeroDamage;
 
+		public bool disableShake2;
+
 		public bool alwaysFixCamera;
 
 		public bool ignoreBackerDestoryFlag;

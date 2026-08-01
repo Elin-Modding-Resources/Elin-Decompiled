@@ -379,7 +379,7 @@ public class FactionBranch : EClass
 		}
 		if ((date.IsRealTime || num2 == 0) && num6 != 0 && EClass.rnd(num6) == 0 && EClass._map.CountWildAnimal() < num4)
 		{
-			EClass._zone.SpawnMob(null, SpawnSetting.HomeWild(5));
+			EClass._zone.SpawnMob(EClass._zone.GetSpawnPos(SpawnPosition.Guest), SpawnSetting.HomeWild(5));
 		}
 		if (EClass.rnd(5) == 0 && policies.IsActive(2810))
 		{
@@ -400,7 +400,7 @@ public class FactionBranch : EClass
 				}
 				else
 				{
-					chara2 = EClass._zone.SpawnMob(null, SpawnSetting.HomeGuest(ContentLV));
+					chara2 = EClass._zone.SpawnMob(EClass._zone.GetSpawnPos(SpawnPosition.Guest), SpawnSetting.HomeGuest(ContentLV));
 				}
 				if (chara2 != null && (chara2.id == "nun_mother" || chara2.id == "prostitute") && policies.IsActive(2710))
 				{

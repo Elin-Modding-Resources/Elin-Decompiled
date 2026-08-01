@@ -266,9 +266,24 @@ public class ActEffect : EClass
 						num4 /= 5;
 						break;
 					}
-					if (id == EffectId.Ball || id == EffectId.BallBubble || id == EffectId.Explosive || id == EffectId.Rocket || id == EffectId.GravityGun)
+					int num5 = 0;
+					switch (id)
 					{
-						num4 = num4 * 100 / (90 + center.Distance(p) * 10);
+					case EffectId.Earthquake:
+					case EffectId.Comet:
+						num5 = 5;
+						break;
+					case EffectId.Ball:
+					case EffectId.Explosive:
+					case EffectId.BallBubble:
+					case EffectId.Rocket:
+					case EffectId.GravityGun:
+						num5 = 10;
+						break;
+					}
+					if (num5 != 0)
+					{
+						num4 = num4 * 100 / (90 + center.Distance(p) * num5);
 					}
 				}
 				if (id == EffectId.Sword)
@@ -282,18 +297,18 @@ public class ActEffect : EClass
 				}
 				if (isChara && points.Count > 1 && c != null && c.isChara && CC.isChara && CC.Chara.IsFriendOrAbove(c.Chara))
 				{
-					int num5 = CC.Evalue(302);
+					int num6 = CC.Evalue(302);
 					if (!CC.IsPC && CC.IsPCFactionOrMinion)
 					{
-						num5 += EClass.pc.Evalue(302);
+						num6 += EClass.pc.Evalue(302);
 					}
 					if (CC.HasElement(1214))
 					{
-						num5 *= 2;
+						num6 *= 2;
 					}
-					if (num5 > 0)
+					if (num6 > 0)
 					{
-						if (num5 * 10 > EClass.rnd(num4 + 1))
+						if (num6 * 10 > EClass.rnd(num4 + 1))
 						{
 							if (c == c.pos.FirstChara)
 							{
@@ -301,7 +316,7 @@ public class ActEffect : EClass
 							}
 							continue;
 						}
-						num4 = EClass.rnd(num4 * 100 / (100 + num5 * 10 + 1));
+						num4 = EClass.rnd(num4 * 100 / (100 + num6 * 10 + 1));
 						if (c == c.pos.FirstChara)
 						{
 							CC.ModExp(302, CC.IsPC ? 20 : 100);
@@ -381,14 +396,14 @@ public class ActEffect : EClass
 					case EffectId.DrainMana:
 						if (CC.IsAliveInCurrentZone && c.isChara && CC.isChara && c.Chara.mana.value > 0)
 						{
-							long num6 = num4 * num / 100;
-							Debug.Log(num4 + " v:" + num6 + " evalue:" + e.Value + " power:" + power + " elepMod:" + num);
-							if (num6 > c.Chara.mana.value)
+							long num7 = num4 * num / 100;
+							Debug.Log(num4 + " v:" + num7 + " evalue:" + e.Value + " power:" + power + " elepMod:" + num);
+							if (num7 > c.Chara.mana.value)
 							{
-								num6 = c.Chara.mana.value;
+								num7 = c.Chara.mana.value;
 							}
-							c.Chara.mana.Mod((int)(-num6));
-							CC.Chara.mana.Mod((int)num6);
+							c.Chara.mana.Mod((int)(-num7));
+							CC.Chara.mana.Mod((int)num7);
 						}
 						break;
 					}
@@ -412,23 +427,23 @@ public class ActEffect : EClass
 			}
 			if ((id == EffectId.Explosive || id == EffectId.Suicide || id == EffectId.Rocket) && (!EClass._zone.IsPCFaction || !EClass.Branch.HasItemProtection))
 			{
-				int num7;
+				int num8;
 				switch (id)
 				{
 				default:
-					num7 = ((actref.refThing != null) ? actref.refThing.material.hardness : (30 + power / 20));
+					num8 = ((actref.refThing != null) ? actref.refThing.material.hardness : (30 + power / 20));
 					break;
 				case EffectId.Suicide:
-					num7 = CC.LV / 3 + 40;
+					num8 = CC.LV / 3 + 40;
 					break;
 				case EffectId.Meteor:
 				case EffectId.Comet:
-					num7 = 50 + power / 20;
+					num8 = 50 + power / 20;
 					break;
 				}
-				int num8 = num7;
+				int num9 = num8;
 				bool flag3 = EClass._zone.HasLaw && !EClass._zone.IsPCFaction && (CC.IsPC || (id == EffectId.Explosive && actref.refThing == null)) && !(EClass._zone is Zone_Vernis);
-				if (p.HasObj && p.cell.matObj.hardness <= num8)
+				if (p.HasObj && p.cell.matObj.hardness <= num9)
 				{
 					EClass._map.MineObj(p);
 					if (flag3)
@@ -436,7 +451,7 @@ public class ActEffect : EClass
 						EClass.player.ModKarma(-1);
 					}
 				}
-				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num8)
+				if (!p.HasObj && p.HasBlock && p.matBlock.hardness <= num9)
 				{
 					EClass._map.MineBlock(p);
 					if (flag3)
@@ -447,16 +462,16 @@ public class ActEffect : EClass
 			}
 			if (e.id == 910)
 			{
-				int num9 = 0;
+				int num10 = 0;
 				if (id == EffectId.Meteor)
 				{
-					num9 = 2;
+					num10 = 2;
 				}
 				if (EClass._zone.IsPCFaction && EClass._zone.branch.HasItemProtection)
 				{
-					num9 = 0;
+					num10 = 0;
 				}
-				if (num9 > EClass.rnd(10))
+				if (num10 > EClass.rnd(10))
 				{
 					p.ModFire(4 + EClass.rnd(10));
 				}
@@ -500,22 +515,22 @@ public class ActEffect : EClass
 		{
 		case EffectId.Earthquake:
 		{
-			List<Point> list6 = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
-			if (list6.Count == 0)
+			List<Point> list = EClass._map.ListPointsInCircle(CC.pos, 12f, mustBeWalkable: false);
+			if (list.Count == 0)
 			{
-				list6.Add(CC.pos.Copy());
+				list.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_earthquake", CC, element.Name.ToLower());
 			TryDelay(delegate
 			{
 				CC.PlaySound("spell_earthquake");
 			});
-			if (CC.IsInMutterDistance())
+			if (CC.IsInMutterDistance() && !EClass.core.config.test.disableShake2)
 			{
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list6, actRef, "spell_earthquake");
+			DamageEle(CC, id, power, element, list, actRef, "spell_earthquake");
 			break;
 		}
 		case EffectId.Meteor:
@@ -523,22 +538,22 @@ public class ActEffect : EClass
 			EffectMeteor.Create(cc.pos, 10, 10, delegate
 			{
 			});
-			List<Point> list = EClass._map.ListPointsInCircle(CC.pos, 10f);
-			if (list.Count == 0)
+			List<Point> list5 = EClass._map.ListPointsInCircle(CC.pos, 10f);
+			if (list5.Count == 0)
 			{
-				list.Add(CC.pos.Copy());
+				list5.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_ball", CC, element.Name.ToLower());
 			TryDelay(delegate
 			{
 				CC.PlaySound("spell_ball");
 			});
-			if (CC.IsInMutterDistance())
+			if (CC.IsInMutterDistance() && !EClass.core.config.test.disableShake2)
 			{
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list, actRef, "spell_ball");
+			DamageEle(CC, id, power, element, list5, actRef, "spell_ball");
 			return;
 		}
 		case EffectId.Comet:
@@ -546,22 +561,22 @@ public class ActEffect : EClass
 			EffectMeteor.CreateComet(tp, delegate
 			{
 			}, matColor * 2f);
-			List<Point> list7 = EClass._map.ListPointsInCircle(tp, 7f);
-			if (list7.Count == 0)
+			List<Point> list6 = EClass._map.ListPointsInCircle(tp, 7f);
+			if (list6.Count == 0)
 			{
-				list7.Add(tp.Copy());
+				list6.Add(tp.Copy());
 			}
 			CC.Say("spell_ball", CC, element.Name.ToLower());
 			TryDelay(delegate
 			{
 				CC.PlaySound("spell_ball");
 			});
-			if (CC.IsInMutterDistance())
+			if (CC.IsInMutterDistance() && !EClass.core.config.test.disableShake2)
 			{
 				Shaker.ShakeCam("ball");
 			}
 			EClass.Wait(1f, CC);
-			DamageEle(CC, id, power, element, list7, actRef, "spell_ball", tp);
+			DamageEle(CC, id, power, element, list6, actRef, "spell_ball", tp);
 			return;
 		}
 		case EffectId.Hand:
@@ -569,14 +584,14 @@ public class ActEffect : EClass
 		case EffectId.DrainMana:
 		case EffectId.Sword:
 		{
-			List<Point> list2 = new List<Point>();
-			list2.Add(tp.Copy());
+			List<Point> list7 = new List<Point>();
+			list7.Add(tp.Copy());
 			EClass.Wait(0.3f, CC);
 			TryDelay(delegate
 			{
 				CC.PlaySound("spell_hand");
 			});
-			if (!DamageEle(CC, id, power, element, list2, actRef, (id == EffectId.DrainBlood || id == EffectId.DrainMana) ? "" : ((id == EffectId.Sword) ? "spell_sword" : "spell_hand")))
+			if (!DamageEle(CC, id, power, element, list7, actRef, (id == EffectId.DrainBlood || id == EffectId.DrainMana) ? "" : ((id == EffectId.Sword) ? "spell_sword" : "spell_hand")))
 			{
 				CC.Say("spell_hand_miss", CC, element.Name.ToLower());
 			}
@@ -640,9 +655,9 @@ public class ActEffect : EClass
 			string id3 = actRef.n1;
 			int num3 = 1;
 			int num4 = -1;
-			int radius = 3;
-			bool flag3 = false;
-			bool flag4 = actRef.n1 == "special";
+			int radius2 = 3;
+			bool flag4 = false;
+			bool flag5 = actRef.n1 == "special";
 			int num5 = -1;
 			string text = "";
 			switch (actRef.n1)
@@ -663,7 +678,7 @@ public class ActEffect : EClass
 				break;
 			case "tentacle":
 				num4 = 20 + EClass.rnd(10);
-				radius = 1;
+				radius2 = 1;
 				break;
 			case "special":
 				CC.SetInt(70, EClass.world.date.GetRaw() + 1440);
@@ -683,12 +698,12 @@ public class ActEffect : EClass
 					break;
 				}
 				Point point = null;
-				point = ((!(actRef.n1 == "special2")) ? tp.GetRandomPoint(radius)?.GetNearestPoint(allowBlock: false, allowChara: false) : EClass._map.GetRandomSurface(centered: false, walkable: true, allowWater: true)?.GetNearestPoint(allowBlock: false, allowChara: false));
+				point = ((!(actRef.n1 == "special2")) ? tp.GetRandomPoint(radius2)?.GetNearestPoint(allowBlock: false, allowChara: false) : EClass._map.GetRandomSurface(centered: false, walkable: true, allowWater: true)?.GetNearestPoint(allowBlock: false, allowChara: false));
 				if (point == null || !point.IsValid)
 				{
 					continue;
 				}
-				Chara chara = null;
+				Chara chara2 = null;
 				CardBlueprint.Set(new CardBlueprint());
 				if (num5 != -1)
 				{
@@ -703,60 +718,60 @@ public class ActEffect : EClass
 				case "special":
 					if (j == 0 && !CC.HasMinion("imolonac") && !CC.HasMinion("ygolonac"))
 					{
-						chara = CharaGen.Create((EClass.rnd(20) == 0) ? "imolonac" : "ygolonac");
+						chara2 = CharaGen.Create((EClass.rnd(20) == 0) ? "imolonac" : "ygolonac");
 						break;
 					}
-					chara = CharaGen.Create("hound", CC.LV);
+					chara2 = CharaGen.Create("hound", CC.LV);
 					if (text.IsEmpty())
 					{
-						text = chara.MainElement.source.alias;
+						text = chara2.MainElement.source.alias;
 					}
 					break;
 				case "special2":
-					chara = CharaGen.Create("cocoon");
+					chara2 = CharaGen.Create("cocoon");
 					break;
 				case "yeek":
-					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_yeek", (SourceChara.Row r) => r.race == "yeek"), power / 10);
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_yeek", (SourceChara.Row r) => r.race == "yeek"), power / 10);
 					break;
 				case "orc":
-					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_orc", (SourceChara.Row r) => r.race == "orc"), power / 10);
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_orc", (SourceChara.Row r) => r.race == "orc"), power / 10);
 					break;
 				case "dragon":
-					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_dragon", (SourceChara.Row r) => r.race == "dragon" || r.race == "drake" || r.race == "wyvern"), power / 5);
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_dragon", (SourceChara.Row r) => r.race == "dragon" || r.race == "drake" || r.race == "wyvern"), power / 5);
 					break;
 				case "undead":
-					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_undead", (SourceChara.Row r) => r.HasTag(CTAG.undead) || (EClass.sources.races.map.TryGetValue(r.race)?.IsUndead ?? false)), power / 5);
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_undead", (SourceChara.Row r) => r.HasTag(CTAG.undead) || (EClass.sources.races.map.TryGetValue(r.race)?.IsUndead ?? false)), power / 5);
 					break;
 				case "pawn":
-					chara = CharaGen.CreateFromFilter("c_pawn", power / 10);
+					chara2 = CharaGen.CreateFromFilter("c_pawn", power / 10);
 					break;
 				case "machine":
-					chara = CharaGen.CreateFromFilter("c_machine", power / 10);
+					chara2 = CharaGen.CreateFromFilter("c_machine", power / 10);
 					break;
 				case "monster":
-					chara = CharaGen.CreateFromFilter("c_dungeon", power / 10);
+					chara2 = CharaGen.CreateFromFilter("c_dungeon", power / 10);
 					break;
 				case "animal":
-					chara = CharaGen.CreateFromFilter("c_animal", power / 15);
+					chara2 = CharaGen.CreateFromFilter("c_animal", power / 15);
 					break;
 				case "fire":
-					chara = CharaGen.CreateFromElement("Fire", power / 10);
+					chara2 = CharaGen.CreateFromElement("Fire", power / 10);
 					break;
 				case "fish":
-					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_fish", (SourceChara.Row r) => r.ContainsTag("water") || r.model.Chara.race.tag.Contains("water")), power / 10);
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_fish", (SourceChara.Row r) => r.ContainsTag("water") || r.model.Chara.race.tag.Contains("water")), power / 10);
 					break;
 				case "octopus":
-					chara = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_octopus", (SourceChara.Row r) => r.race == "octopus"), power / 10);
+					chara2 = CharaGen.CreateFromFilter(SpawnListChara.Get("summon_octopus", (SourceChara.Row r) => r.race == "octopus"), power / 10);
 					break;
 				default:
-					chara = CharaGen.Create(id3, power / 10);
+					chara2 = CharaGen.Create(id3, power / 10);
 					break;
 				}
-				if (chara == null)
+				if (chara2 == null)
 				{
 					continue;
 				}
-				if (chara.rarity >= Rarity.Legendary && !flag4)
+				if (chara2.rarity >= Rarity.Legendary && !flag5)
 				{
 					j--;
 					continue;
@@ -778,7 +793,7 @@ public class ActEffect : EClass
 						}
 						if (num5 == -1)
 						{
-							num6 = chara.LV * (100 + power / 10) / 100 + power / 30;
+							num6 = chara2.LV * (100 + power / 10) / 100 + power / 30;
 						}
 						if (num6 < num7)
 						{
@@ -794,45 +809,45 @@ public class ActEffect : EClass
 				{
 					num6 = power / 10 + 1;
 				}
-				if (chara.LV < num6)
+				if (chara2.LV < num6)
 				{
-					chara.SetLv((int)num6);
+					chara2.SetLv((int)num6);
 				}
-				chara.interest = 0;
-				if (chara.HaveFur())
+				chara2.interest = 0;
+				if (chara2.HaveFur())
 				{
-					chara.c_fur = -1;
+					chara2.c_fur = -1;
 				}
 				n = actRef.n1;
 				if (!(n == "shadow"))
 				{
 					if (n == "special_force")
 					{
-						chara.homeZone = EClass._zone;
+						chara2.homeZone = EClass._zone;
 					}
 				}
 				else
 				{
-					chara.hp = chara.MaxHP / 2;
+					chara2.hp = chara2.MaxHP / 2;
 				}
-				EClass._zone.AddCard(chara, point);
+				EClass._zone.AddCard(chara2, point);
 				if (flag)
 				{
-					Chara chara2 = chara;
-					Hostility hostility2 = (chara.c_originalHostility = Hostility.Enemy);
-					chara2.hostility = hostility2;
+					Chara chara3 = chara2;
+					Hostility hostility2 = (chara2.c_originalHostility = Hostility.Enemy);
+					chara3.hostility = hostility2;
 				}
-				else if (!(chara.id == "cocoon") && (!(actRef.n1 == "monster") || actRef.refThing == null))
+				else if (!(chara2.id == "cocoon") && (!(actRef.n1 == "monster") || actRef.refThing == null))
 				{
-					chara.MakeMinion(CC);
+					chara2.MakeMinion(CC);
 				}
 				if (num4 != -1)
 				{
-					chara.SetSummon(num4);
+					chara2.SetSummon(num4);
 				}
-				flag3 = true;
+				flag4 = true;
 			}
-			if (!flag3)
+			if (!flag4)
 			{
 				CC.Say("summon_ally_fail", CC);
 			}
@@ -848,22 +863,22 @@ public class ActEffect : EClass
 			}
 			CC.Say("spell_funnel", CC, element.Name.ToLower());
 			CC.PlaySound("spell_funnel");
-			Chara chara3 = CharaGen.Create((id == EffectId.Bit) ? "bit2" : "bit");
-			chara3.SetMainElement(element.source.alias, element.Value, elemental: true);
-			chara3.SetSummon(20 + power / 20 + EClass.rnd(10));
-			chara3.SetLv(Mathf.Abs(power) / 15);
-			chara3.interest = 0;
-			EClass._zone.AddCard(chara3, tp.GetNearestPoint(allowBlock: false, allowChara: false));
-			chara3.PlayEffect("teleport");
-			chara3.MakeMinion(CC);
+			Chara chara = CharaGen.Create((id == EffectId.Bit) ? "bit2" : "bit");
+			chara.SetMainElement(element.source.alias, element.Value, elemental: true);
+			chara.SetSummon(20 + power / 20 + EClass.rnd(10));
+			chara.SetLv(Mathf.Abs(power) / 15);
+			chara.interest = 0;
+			EClass._zone.AddCard(chara, tp.GetNearestPoint(allowBlock: false, allowChara: false));
+			chara.PlayEffect("teleport");
+			chara.MakeMinion(CC);
 			return;
 		}
 		case EffectId.Breathe:
 		{
-			List<Point> list5 = EClass._map.ListPointsInArc(CC.pos, tp, 7, 35f);
-			if (list5.Count == 0)
+			List<Point> list8 = EClass._map.ListPointsInArc(CC.pos, tp, 7, 35f);
+			if (list8.Count == 0)
 			{
-				list5.Add(CC.pos.Copy());
+				list8.Add(CC.pos.Copy());
 			}
 			CC.Say("spell_breathe", CC, element.Name.ToLower());
 			EClass.Wait(0.8f, CC);
@@ -871,11 +886,11 @@ public class ActEffect : EClass
 			{
 				CC.PlaySound("spell_breathe");
 			});
-			if (CC.IsInMutterDistance() && !EClass.core.config.graphic.disableShake)
+			if (CC.IsInMutterDistance() && !EClass.core.config.graphic.disableShake && !EClass.core.config.test.disableShake2)
 			{
 				Shaker.ShakeCam("breathe");
 			}
-			DamageEle(CC, id, power, element, list5, actRef, "spell_breathe");
+			DamageEle(CC, id, power, element, list8, actRef, "spell_breathe");
 			return;
 		}
 		case EffectId.Scream:
@@ -902,10 +917,10 @@ public class ActEffect : EClass
 		case EffectId.Flare:
 		case EffectId.GravityGun:
 		{
-			float radius2 = ((id == EffectId.GravityGun) ? 4f : ((id == EffectId.Rocket) ? 2.8f : ((id == EffectId.Suicide) ? 3.5f : ((id == EffectId.Flare) ? 2.1f : ((float)((id == EffectId.BallBubble) ? 2 : 5))))));
+			float radius = ((id == EffectId.GravityGun) ? 4f : ((id == EffectId.Rocket) ? 2.8f : ((id == EffectId.Suicide) ? 3.5f : ((id == EffectId.Flare) ? 2.1f : ((float)((id == EffectId.BallBubble) ? 2 : 5))))));
 			if ((id == EffectId.Explosive || id == EffectId.Rocket) && actRef.refThing != null)
 			{
-				radius2 = 2 + actRef.refThing.Evalue(666);
+				radius = 2 + actRef.refThing.Evalue(666);
 			}
 			if (id == EffectId.Suicide)
 			{
@@ -919,14 +934,14 @@ public class ActEffect : EClass
 				}
 				if (CC.HasTag(CTAG.kamikaze))
 				{
-					radius2 = 1.5f;
+					radius = 1.5f;
 				}
 			}
-			bool flag5 = id == EffectId.Explosive || id == EffectId.Suicide || id == EffectId.Rocket;
-			List<Point> list8 = EClass._map.ListPointsInCircle((id == EffectId.GravityGun || id == EffectId.Rocket || id == EffectId.Flare) ? tp : cc.pos, radius2, !flag5, !flag5);
-			if (list8.Count == 0)
+			bool flag3 = id == EffectId.Explosive || id == EffectId.Suicide || id == EffectId.Rocket;
+			List<Point> list2 = EClass._map.ListPointsInCircle((id == EffectId.GravityGun || id == EffectId.Rocket || id == EffectId.Flare) ? tp : cc.pos, radius, !flag3, !flag3);
+			if (list2.Count == 0)
 			{
-				list8.Add(cc.pos.Copy());
+				list2.Add(cc.pos.Copy());
 			}
 			cc.Say((id == EffectId.Suicide) ? "abSuicide" : "spell_ball", cc, element.Name.ToLower());
 			EClass.Wait(0.8f, cc);
@@ -941,11 +956,11 @@ public class ActEffect : EClass
 					cc.PlaySound((id == EffectId.Flare) ? "spell_flare" : "spell_ball");
 				}
 			});
-			if (id != EffectId.GravityGun && cc.IsInMutterDistance() && !EClass.core.config.graphic.disableShake)
+			if (id != EffectId.GravityGun && cc.IsInMutterDistance() && !EClass.core.config.graphic.disableShake && !EClass.core.config.test.disableShake2)
 			{
 				Shaker.ShakeCam("ball");
 			}
-			DamageEle(actRef.origin ?? cc, id, power, element, list8, actRef, (id == EffectId.Suicide) ? "suicide" : "spell_ball");
+			DamageEle(actRef.origin ?? cc, id, power, element, list2, actRef, (id == EffectId.Suicide) ? "suicide" : "spell_ball");
 			if (id == EffectId.Suicide && CC.IsAliveInCurrentZone)
 			{
 				CC.Die();
@@ -965,7 +980,7 @@ public class ActEffect : EClass
 			{
 				CC.PlaySound("spell_bolt");
 			});
-			if (CC.IsInMutterDistance() && !EClass.core.config.graphic.disableShake)
+			if (CC.IsInMutterDistance() && !EClass.core.config.graphic.disableShake && !EClass.core.config.test.disableShake2)
 			{
 				Shaker.ShakeCam("bolt");
 			}
@@ -1234,9 +1249,9 @@ public class ActEffect : EClass
 			TC.PlaySound("curse3");
 			TC.PlayEffect("curse");
 			TC.Say("forgetItems", TC);
-			int num3 = power / 50 + 1 + EClass.rnd(3);
+			int num4 = power / 50 + 1 + EClass.rnd(3);
 			List<Thing> source = TC.things.List((Thing t) => t.c_IDTState == 0);
-			for (int j = 0; j < num3; j++)
+			for (int j = 0; j < num4; j++)
 			{
 				source.RandomItem().c_IDTState = 5;
 			}
@@ -1248,10 +1263,10 @@ public class ActEffect : EClass
 		case EffectId.EnchantArmorGreat:
 		{
 			bool armor = id == EffectId.EnchantArmor || id == EffectId.EnchantArmorGreat;
-			bool flag6 = id == EffectId.EnchantWeaponGreat || id == EffectId.EnchantArmorGreat;
+			bool flag5 = id == EffectId.EnchantWeaponGreat || id == EffectId.EnchantArmorGreat;
 			if (!tc.isThing)
 			{
-				LayerDragGrid.CreateEnchant(CC, armor, flag6, state);
+				LayerDragGrid.CreateEnchant(CC, armor, flag5, state);
 				return;
 			}
 			cc.PlaySound("identify");
@@ -1262,8 +1277,8 @@ public class ActEffect : EClass
 				tc.ModEncLv(-1);
 				break;
 			}
-			int num4 = (flag6 ? 4 : 2) + (blessed ? 1 : 0);
-			if (tc.encLV >= num4)
+			int num3 = (flag5 ? 4 : 2) + (blessed ? 1 : 0);
+			if (tc.encLV >= num3)
 			{
 				cc.Say("enc_resist", tc);
 				break;
@@ -1275,21 +1290,21 @@ public class ActEffect : EClass
 		case EffectId.Identify:
 		case EffectId.GreaterIdentify:
 		{
-			bool flag5 = id == EffectId.GreaterIdentify;
+			bool flag6 = id == EffectId.GreaterIdentify;
 			if (flag)
 			{
-				Redirect(EffectId.ForgetItems, flag5 ? BlessedState.Cursed : BlessedState.Normal, default(ActRef));
+				Redirect(EffectId.ForgetItems, flag6 ? BlessedState.Cursed : BlessedState.Normal, default(ActRef));
 				break;
 			}
 			if (!tc.isThing)
 			{
-				int count = ((!blessed) ? 1 : (flag5 ? (2 + EClass.rnd(2)) : (3 + EClass.rnd(3))));
-				LayerDragGrid.CreateIdentify(CC, flag5, state, 0, count);
+				int count = ((!blessed) ? 1 : (flag6 ? (2 + EClass.rnd(2)) : (3 + EClass.rnd(3))));
+				LayerDragGrid.CreateIdentify(CC, flag6, state, 0, count);
 				return;
 			}
 			cc.PlaySound("identify");
 			cc.PlayEffect("identify");
-			tc.Thing.Identify(cc.IsPCParty, (!flag5) ? IDTSource.Identify : IDTSource.SuperiorIdentify);
+			tc.Thing.Identify(cc.IsPCParty, (!flag6) ? IDTSource.Identify : IDTSource.SuperiorIdentify);
 			break;
 		}
 		case EffectId.Uncurse:
@@ -1704,11 +1719,11 @@ public class ActEffect : EClass
 					}
 				}
 			}
-			if (tc.ExistsOnMap && tc.c_bossType == BossType.none && tc.id == "mush_quantum" && !tc.HasElement(400) && !tc.HasCondition<ConGravity>())
+			if (tc.ExistsOnMap && tc.id == "mush_quantum" && !tc.HasElement(400) && !tc.HasCondition<ConGravity>())
 			{
 				if (EClass.rnd(2) == 0)
 				{
-					if (tc.IsGlobal || EClass._zone.IsInstance)
+					if (tc.IsGlobal || EClass._zone.IsInstance || tc.c_bossType != 0)
 					{
 						tc.Die();
 					}
@@ -1718,7 +1733,7 @@ public class ActEffect : EClass
 					}
 					break;
 				}
-				tc.Chara.TryDuplicate();
+				tc.Chara.TryDuplicate(DuplicateCondition.Quantum, null, inheritHostility: true);
 			}
 			if (flag)
 			{

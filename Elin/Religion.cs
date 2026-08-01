@@ -452,7 +452,7 @@ public class Religion : EClass
 			c.mimicry.Kill();
 		}
 		Talk((type == PunishType.Takeover) ? "takeoverFail" : "wrath");
-		if (type == PunishType.Wrath && c.Evalue(1228) > 0)
+		if ((type == PunishType.Wrath || type == PunishType.Takeover) && c.Evalue(1228) > 0)
 		{
 			c.SayNothingHappans();
 			return;

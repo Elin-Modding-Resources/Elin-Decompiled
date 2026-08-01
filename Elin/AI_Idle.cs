@@ -566,6 +566,7 @@ public class AI_Idle : AIAct
 				}
 				break;
 			}
+			case "imotoroid":
 			case "marshmallow_monster":
 				if (owner.TryFuse(0.001f))
 				{

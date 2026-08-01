@@ -103,7 +103,7 @@ public class GameDate : Date
 		if (!shaken && EClass.rnd(24) == 0 && !EClass._zone.IsRegion)
 		{
 			Msg.Say("earthquake");
-			if (!EClass.core.config.graphic.disableShake)
+			if (!EClass.core.config.graphic.disableShake && !EClass.core.config.test.disableShake2)
 			{
 				Shaker.ShakeCam("earthquake");
 			}

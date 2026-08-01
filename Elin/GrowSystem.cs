@@ -650,19 +650,7 @@ public class GrowSystem : EClass
 	{
 		if (t == null)
 		{
-			if (idHarvestThing.StartsWith('#'))
-			{
-				t = ThingGen.CreateFromCategory(idHarvestThing.Replace("#", ""));
-			}
-			else
-			{
-				string text = idHarvestThing;
-				if (text == "potato" && EClass.rnd(3) == 0)
-				{
-					text = "784";
-				}
-				t = ThingGen.Create(text.IsEmpty("apple"));
-			}
+			t = ((!idHarvestThing.StartsWith('#')) ? ThingGen.Create(idHarvestThing.IsEmpty("apple")) : ThingGen.CreateFromCategory(idHarvestThing.Replace("#", "")));
 		}
 		ApplySeed(t);
 		if (cell.isObjDyed && source.ContainsTag("dyeable"))
