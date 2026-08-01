@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"TraitFloorSwitch_8cs.html":[2,0,0,1582],
 "TraitFloorSwitch_8cs_source.html":[2,0,0,1582],
 "TraitFloor_8cs.html":[2,0,0,1580],
 "TraitFloor_8cs_source.html":[2,0,0,1580],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "TraitMerchantFruit_8cs.html":[2,0,0,1705],
 "TraitMerchantFruit_8cs_source.html":[2,0,0,1705],
 "TraitMerchantFurniture_8cs.html":[2,0,0,1706],
-"TraitMerchantFurniture_8cs_source.html":[2,0,0,1706],
-"TraitMerchantGeneralExotic_8cs.html":[2,0,0,1708]
+"TraitMerchantFurniture_8cs_source.html":[2,0,0,1706]
 };

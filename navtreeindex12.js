@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"ModManager_8cs.html#a58859d93c30e635814dc980ed86e3f84":[2,0,0,915,2],
 "ModManager_8cs.html#a69367e20a45337445df9533f000dcb84":[2,0,0,915,4],
 "ModManager_8cs_source.html":[2,0,0,915],
 "ModMinigame_8cs.html":[2,0,0,916],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "PropsInstalled_8cs_source.html":[2,0,0,981],
 "PropsManager_8cs.html":[2,0,0,982],
 "PropsManager_8cs_source.html":[2,0,0,982],
-"PropsRoaming_8cs.html":[2,0,0,983],
-"PropsRoaming_8cs_source.html":[2,0,0,983]
+"PropsRoaming_8cs.html":[2,0,0,983]
 };

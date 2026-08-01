@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae4b662d3892f8c0c86801919f979467f":[2,0,0,1160,0,16],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae89b2cbb7d11825a67459af2249064de":[2,0,0,1160,0,42],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbaee6085db6c9b85f45fd9b9b31b020f8d":[2,0,0,1160,0,7],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbafc4887af369e4fe938386e5d245765c6":[2,0,0,1160,0,55],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "StanceIai_8cs.html":[2,0,0,1234],
 "StanceIai_8cs_source.html":[2,0,0,1234],
 "StanceMama_8cs.html":[2,0,0,1235],
-"StanceMama_8cs_source.html":[2,0,0,1235],
-"StanceManaCost_8cs.html":[2,0,0,1236]
+"StanceMama_8cs_source.html":[2,0,0,1235]
 };

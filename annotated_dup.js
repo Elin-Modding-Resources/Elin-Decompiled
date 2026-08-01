@@ -2044,6 +2044,7 @@ var annotated_dup =
     [ "TraitSpotFish", "classTraitSpotFish.html", null ],
     [ "TraitSpotFuel", "classTraitSpotFuel.html", "classTraitSpotFuel" ],
     [ "TraitSpotGarbage", "classTraitSpotGarbage.html", "classTraitSpotGarbage" ],
+    [ "TraitSpotGuest", "classTraitSpotGuest.html", null ],
     [ "TraitSpotGuidePC", "classTraitSpotGuidePC.html", "classTraitSpotGuidePC" ],
     [ "TraitSpotLight", "classTraitSpotLight.html", "classTraitSpotLight" ],
     [ "TraitSpotLumberjack", "classTraitSpotLumberjack.html", null ],

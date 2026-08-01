@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"TileTypeFenceClosed_8cs.html":[2,0,0,1341],
 "TileTypeFenceClosed_8cs_source.html":[2,0,0,1341],
 "TileTypeFence_8cs.html":[2,0,0,1340],
 "TileTypeFence_8cs_source.html":[2,0,0,1340],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "TraitBrewery_8cs.html":[2,0,0,1454],
 "TraitBrewery_8cs_source.html":[2,0,0,1454],
 "TraitBroomWitch_8cs.html":[2,0,0,1456],
-"TraitBroomWitch_8cs_source.html":[2,0,0,1456],
-"TraitBroom_8cs.html":[2,0,0,1455]
+"TraitBroomWitch_8cs_source.html":[2,0,0,1456]
 };

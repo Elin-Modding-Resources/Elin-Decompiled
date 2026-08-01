@@ -1,5 +1,11 @@
 var NAVTREEINDEX123 =
 {
+"classTraitAncientbook.html#aa6e1c3b9dcb61283b5fa8b600ffa5806":[1,0,1516,3],
+"classTraitAncientbook.html#ae882ffdfc7ef8327868fd0c99b2d937f":[1,0,1516,0],
+"classTraitAncientbook.html#aec51bf4c2860bbb886b3a13bf244bd0f":[1,0,1516,1],
+"classTraitAnimalTamer.html":[1,0,1517],
+"classTraitAnimalTamer.html#a30f720e3ce438f383623a58deac3560d":[1,0,1517,2],
+"classTraitAnimalTamer.html#a9ccd01f015a3cb0422371a3d89716131":[1,0,1517,0],
 "classTraitAnimalTamer.html#ae0135f951d9f2982c2a655759e21d723":[1,0,1517,1],
 "classTraitAnvil.html":[1,0,1518],
 "classTraitAppraiser.html":[1,0,1519],
@@ -243,11 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitCamera.html":[1,0,1569],
 "classTraitCamera.html#aac8b0271af431a04632d2f4828361141":[1,0,1569,0],
 "classTraitCanvas.html":[1,0,1570],
-"classTraitCanvas.html#a3ef9d04fd551068726c53328bac0a56a":[1,0,1570,9],
-"classTraitCanvas.html#a4298d852681c52ee1dbe685153801ce6":[1,0,1570,2],
-"classTraitCanvas.html#a63ee52c6b6753f225e2167c8fe9ac462":[1,0,1570,8],
-"classTraitCanvas.html#a7680aece7bb9be37160bb38db93e7ac4":[1,0,1570,1],
-"classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1570,3],
-"classTraitCanvas.html#a9009b42274c91a7a98468bd57509291b":[1,0,1570,7],
-"classTraitCanvas.html#aaf23f8a6dc8c67306f1169aeb6b77a07":[1,0,1570,5]
+"classTraitCanvas.html#a3ef9d04fd551068726c53328bac0a56a":[1,0,1570,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"StanceManaCost_8cs.html":[2,0,0,1236],
 "StanceManaCost_8cs_source.html":[2,0,0,1236],
 "StanceSongEnd_8cs.html":[2,0,0,1237],
 "StanceSongEnd_8cs_source.html":[2,0,0,1237],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "TileTypeChasm_8cs.html":[2,0,0,1338],
 "TileTypeChasm_8cs_source.html":[2,0,0,1338],
 "TileTypeDoor_8cs.html":[2,0,0,1339],
-"TileTypeDoor_8cs_source.html":[2,0,0,1339],
-"TileTypeFenceClosed_8cs.html":[2,0,0,1341]
+"TileTypeDoor_8cs_source.html":[2,0,0,1339]
 };

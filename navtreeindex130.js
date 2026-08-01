@@ -1,5 +1,11 @@
 var NAVTREEINDEX130 =
 {
+"classTraitRollingFortune.html#af55aa1f40dd1f0c243780187e41e154a":[1,0,1914,0],
+"classTraitRoomPlate.html":[1,0,1915],
+"classTraitRoomPlate.html#a065c336a47bc7bc1125322303ee5b7f4":[1,0,1915,0],
+"classTraitRoomPlate.html#a27f3e38fdf204ea437e0d9e1cfe4cb92":[1,0,1915,5],
+"classTraitRoomPlate.html#a59e313e83bf4c2ebd915963958fcd33f":[1,0,1915,1],
+"classTraitRoomPlate.html#a6724215f8edab886ab4dc4a2285c0ba4":[1,0,1915,3],
 "classTraitRoomPlate.html#a738261f447a82cdb204add9779035832":[1,0,1915,6],
 "classTraitRoomPlate.html#a829e280297a537dd0e26212fa263f882":[1,0,1915,2],
 "classTraitRoomPlate.html#ab17dd62bedd1048338b1f14b2c46e345":[1,0,1915,4],
@@ -242,12 +248,6 @@ var NAVTREEINDEX130 =
 "classTraitSpotFuel.html#a276572173aac875b6b681ca5ce0dce21":[1,0,1965,0],
 "classTraitSpotGarbage.html":[1,0,1966],
 "classTraitSpotGarbage.html#a1263699a73c2115da22cb6ce22593904":[1,0,1966,0],
-"classTraitSpotGuidePC.html":[1,0,1967],
-"classTraitSpotGuidePC.html#a16cc1495b3eadec075407227b24d366f":[1,0,1967,0],
-"classTraitSpotLight.html":[1,0,1968],
-"classTraitSpotLight.html#a95a0a2863a144b62664851cefa4a6cb0":[1,0,1968,0],
-"classTraitSpotLumberjack.html":[1,0,1969],
-"classTraitSpotMeeting.html":[1,0,1970],
-"classTraitSpotPrayer.html":[1,0,1971],
-"classTraitSpotRanch.html":[1,0,1972]
+"classTraitSpotGuest.html":[1,0,1967],
+"classTraitSpotGuidePC.html":[1,0,1968]
 };

@@ -15,6 +15,7 @@ var classContentConfigTest =
     [ "toggleCacheEffect", "classContentConfigTest.html#a3c0ccf941875602b737a7ebfba67a390", null ],
     [ "toggleCompressSave", "classContentConfigTest.html#ae78989735fa371997d7953b3fab93e4a", null ],
     [ "toggledDntCancelIfZeroDamage", "classContentConfigTest.html#aa120a8c146b9300cb6ae7690784d7ea8", null ],
+    [ "toggleDisableShake2", "classContentConfigTest.html#ac7683b569d7945a6226263304763db57", null ],
     [ "toggleExtraCancelMove", "classContentConfigTest.html#a115b87cda6e665611031c972cd21b058", null ],
     [ "toggleExtraRace", "classContentConfigTest.html#afa0bfc94658e06e94293daf2346e0c32", null ],
     [ "toggleExTurn", "classContentConfigTest.html#acc8834bad6839037b189665008dd14e7", null ],

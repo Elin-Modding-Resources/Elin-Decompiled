@@ -1,5 +1,11 @@
 var NAVTREEINDEX127 =
 {
+"classTraitGeyser.html":[1,0,1729],
+"classTraitGeyser.html#a1131933bbabc51f03bdb66b90ecaed52":[1,0,1729,0],
+"classTraitGiftJure.html":[1,0,1730],
+"classTraitGiftJure.html#a9ffa22a8c61e29654ee74d0c0bba405d":[1,0,1730,0],
+"classTraitGiftNewYear.html":[1,0,1731],
+"classTraitGiftNewYear.html#a14f33ead74c45e2c7618566a77de9a7b":[1,0,1731,0],
 "classTraitGiftPack.html":[1,0,1732],
 "classTraitGiftPack.html#a19bd599f4e584182043d07226d6a0ffe":[1,0,1732,1],
 "classTraitGiftPack.html#a943b6a12c7bce4185459b2645a1f1c34":[1,0,1732,0],
@@ -181,10 +187,10 @@ var NAVTREEINDEX127 =
 "classTraitLightSource.html#aad5234364c50b2e05d1cd75d10b09740":[1,0,1776,1],
 "classTraitLightSun.html":[1,0,1777],
 "classTraitLightSun.html#a3961bde0a9834b000d213c624f889fd0":[1,0,1777,2],
+"classTraitLightSun.html#a3af4cf2161f05c1de3f608ad33cc6ed6":[1,0,1777,0],
 "classTraitLightSun.html#ab57619e493c8a4fd38d34dc931603829":[1,0,1777,1],
 "classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1777,3],
 "classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1777,4],
-"classTraitLightSun.html#aff2a91bfa08afa9a8013938b7e09d6b7":[1,0,1777,0],
 "classTraitLittleBall.html":[1,0,1778],
 "classTraitLittleBall.html#a4a80b199bb3d05a702c698829c40a713":[1,0,1778,0],
 "classTraitLittleOne.html":[1,0,1779],
@@ -243,11 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitManager.html#a067d996cb2fecff60760aac97a0b837e":[1,0,1791,2],
 "classTraitManager.html#a081802c5d65cca165bcb166eace19913":[1,0,1791,5],
 "classTraitManager.html#a5c7be3389262c6008368f88f346b7761":[1,0,1791,7],
-"classTraitManager.html#a7bf4a93c42e4356203fc8384b749e68b":[1,0,1791,0],
-"classTraitManager.html#a93cb95b65c99b90891d43f3e855d6273":[1,0,1791,6],
-"classTraitManager.html#a94e333560c29365f1158f52e7a370ae5":[1,0,1791,8],
-"classTraitManager.html#aa9d61d33373ce6b2116240f5edb75606":[1,0,1791,3],
-"classTraitManager.html#ab374daadf270383f2e8ca27527340509":[1,0,1791,4],
-"classTraitManager.html#ab69deb4557ccae112300fa8eee9a85d8":[1,0,1791,1],
-"classTraitManager.html#ad6340f0bc4e247da25cb0e2a1ddc965f":[1,0,1791,9]
+"classTraitManager.html#a7bf4a93c42e4356203fc8384b749e68b":[1,0,1791,0]
 };

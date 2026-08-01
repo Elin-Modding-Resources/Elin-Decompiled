@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"RelationManager_8cs_source.html":[2,0,0,1089],
 "Relation_8cs.html":[2,0,0,1088],
 "Relation_8cs_source.html":[2,0,0,1088],
 "ReleaseMode_8cs.html":[2,0,0,2,70],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbad2ed16ac4449c60a82b5a4512ef06528":[2,0,0,1160,0,15],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbad35a98028cca23c2a745a0bba43a90ff":[2,0,0,1160,0,32],
 "ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbadba005190e58b252f9b5375cdf5655d9":[2,0,0,1160,0,34],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae4120fc5cb9df630d2f54ee644faafa7":[2,0,0,1160,0,31],
-"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae4b662d3892f8c0c86801919f979467f":[2,0,0,1160,0,16]
+"ShopType_8cs.html#ab5af427a86c75bad7882f32f0b262bbbae4120fc5cb9df630d2f54ee644faafa7":[2,0,0,1160,0,31]
 };

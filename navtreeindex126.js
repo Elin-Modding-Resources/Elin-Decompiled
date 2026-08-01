@@ -1,5 +1,11 @@
 var NAVTREEINDEX126 =
 {
+"classTraitElevator.html#ab0e9634ffd686f0bf9662bfb18f567f2":[1,0,1666,2],
+"classTraitElevator.html#ae1be1942dfb0d2d5db1c4b96b9740488":[1,0,1666,3],
+"classTraitElevator.html#af62894b698bcc696ce498a4885eaa974":[1,0,1666,0],
+"classTraitEquipItem.html":[1,0,1669],
+"classTraitEquipItem.html#a82397e9b89cff4b7ac2072d96e473a1c":[1,0,1669,1],
+"classTraitEquipItem.html#af53edaf7b40c1ca5c97d977de8e475e6":[1,0,1669,2],
 "classTraitEquipItem.html#afa46d9c8eb1a486f1a7c0bd3b5812cfa":[1,0,1669,0],
 "classTraitErohon.html":[1,0,1670],
 "classTraitErohon.html#a07084236b636fdb8163df04cb052d2ad":[1,0,1670,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitGeneratorWheel.html#af2beebf433e8d020687ff01dfbcd0c60":[1,0,1727,7],
 "classTraitGeneratorWheel.html#af4fb97465b98e6bc72d7727366bfff6e":[1,0,1727,5],
 "classTraitGeneratorWind.html":[1,0,1728],
-"classTraitGeneratorWind.html#a4c2955cf4ae5ba12e00e8ea724e1db69":[1,0,1728,0],
-"classTraitGeyser.html":[1,0,1729],
-"classTraitGeyser.html#a1131933bbabc51f03bdb66b90ecaed52":[1,0,1729,0],
-"classTraitGiftJure.html":[1,0,1730],
-"classTraitGiftJure.html#a9ffa22a8c61e29654ee74d0c0bba405d":[1,0,1730,0],
-"classTraitGiftNewYear.html":[1,0,1731],
-"classTraitGiftNewYear.html#a14f33ead74c45e2c7618566a77de9a7b":[1,0,1731,0]
+"classTraitGeneratorWind.html#a4c2955cf4ae5ba12e00e8ea724e1db69":[1,0,1728,0]
 };

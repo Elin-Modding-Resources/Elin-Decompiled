@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"TraitMerchantGeneralExotic_8cs.html":[2,0,0,1708],
 "TraitMerchantGeneralExotic_8cs_source.html":[2,0,0,1708],
 "TraitMerchantGeneral_8cs.html":[2,0,0,1707],
 "TraitMerchantGeneral_8cs_source.html":[2,0,0,1707],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "TraitSecretary_8cs_source.html":[2,0,0,1827],
 "TraitSeed_8cs.html":[2,0,0,1828],
 "TraitSeed_8cs_source.html":[2,0,0,1828],
-"TraitSeeker_8cs.html":[2,0,0,1829],
-"TraitSeeker_8cs_source.html":[2,0,0,1829]
+"TraitSeeker_8cs.html":[2,0,0,1829]
 };

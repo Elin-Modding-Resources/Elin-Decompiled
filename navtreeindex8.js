@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"GameContractResolver_8cs.html":[2,0,0,568],
 "GameContractResolver_8cs_source.html":[2,0,0,568],
 "GameData_8cs.html":[2,0,0,569],
 "GameData_8cs_source.html":[2,0,0,569],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01aa7a1920d61156abc05a60135aefe8bc67":[2,0,0,655,0,0],
 "HitResult_8cs.html#a7edaf0746b1c938ab5c2d9aaaee8a01aaff4d8f7b051f09ecae01888dda54c15c":[2,0,0,655,0,5],
 "HitResult_8cs_source.html":[2,0,0,655],
-"HitSummary_8cs.html":[2,0,0,656],
-"HitSummary_8cs_source.html":[2,0,0,656]
+"HitSummary_8cs.html":[2,0,0,656]
 };

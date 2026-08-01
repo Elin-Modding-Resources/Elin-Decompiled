@@ -1,5 +1,11 @@
 var NAVTREEINDEX124 =
 {
+"classTraitCanvas.html#a4298d852681c52ee1dbe685153801ce6":[1,0,1570,2],
+"classTraitCanvas.html#a63ee52c6b6753f225e2167c8fe9ac462":[1,0,1570,8],
+"classTraitCanvas.html#a7680aece7bb9be37160bb38db93e7ac4":[1,0,1570,1],
+"classTraitCanvas.html#a789caad3e39585f022166139ad345f3b":[1,0,1570,3],
+"classTraitCanvas.html#a9009b42274c91a7a98468bd57509291b":[1,0,1570,7],
+"classTraitCanvas.html#aaf23f8a6dc8c67306f1169aeb6b77a07":[1,0,1570,5],
 "classTraitCanvas.html#ab2c7786e34b9dfe0573d6f61bc34082d":[1,0,1570,4],
 "classTraitCanvas.html#ae3ad3d5f043445ec51aa8c8ecabfe6d9":[1,0,1570,0],
 "classTraitCanvas.html#afa90520697e05c702fcd08d382abba35":[1,0,1570,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX124 =
 "classTraitCrenel.html":[1,0,1614],
 "classTraitCrenel.html#adb6e4a2b412ecdd0c4edb7895a11d7ea":[1,0,1614,0],
 "classTraitCrenel.html#adcc43621d3918d5e8df769c1445e7136":[1,0,1614,1],
-"classTraitCurrency.html":[1,0,1615],
-"classTraitCurrency.html#a8ad4ef6f66318b88486c825e591e4082":[1,0,1615,0],
-"classTraitCurrencyMedal.html":[1,0,1616],
-"classTraitCurrencyMedal.html#a83af106650761bd1917199486fe112f2":[1,0,1616,0],
-"classTraitCurtain.html":[1,0,1617],
-"classTraitCurtain.html#a02dea1c7dac62975f8e2737db016a2a8":[1,0,1617,3],
-"classTraitCurtain.html#a1f1e4de13216bc852a9ff429896d712e":[1,0,1617,1]
+"classTraitCurrency.html":[1,0,1615]
 };

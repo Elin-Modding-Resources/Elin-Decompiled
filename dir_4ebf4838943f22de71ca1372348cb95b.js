@@ -1860,6 +1860,7 @@ var dir_4ebf4838943f22de71ca1372348cb95b =
     [ "TraitSpotFish.cs", "TraitSpotFish_8cs.html", "TraitSpotFish_8cs" ],
     [ "TraitSpotFuel.cs", "TraitSpotFuel_8cs.html", "TraitSpotFuel_8cs" ],
     [ "TraitSpotGarbage.cs", "TraitSpotGarbage_8cs.html", "TraitSpotGarbage_8cs" ],
+    [ "TraitSpotGuest.cs", "TraitSpotGuest_8cs.html", "TraitSpotGuest_8cs" ],
     [ "TraitSpotGuidePC.cs", "TraitSpotGuidePC_8cs.html", "TraitSpotGuidePC_8cs" ],
     [ "TraitSpotLight.cs", "TraitSpotLight_8cs.html", "TraitSpotLight_8cs" ],
     [ "TraitSpotLumberjack.cs", "TraitSpotLumberjack_8cs.html", "TraitSpotLumberjack_8cs" ],

@@ -2039,6 +2039,7 @@ var hierarchy =
           [ "TraitSpotFish", "classTraitSpotFish.html", null ],
           [ "TraitSpotFuel", "classTraitSpotFuel.html", null ],
           [ "TraitSpotGarbage", "classTraitSpotGarbage.html", null ],
+          [ "TraitSpotGuest", "classTraitSpotGuest.html", null ],
           [ "TraitSpotGuidePC", "classTraitSpotGuidePC.html", null ],
           [ "TraitSpotLumberjack", "classTraitSpotLumberjack.html", null ],
           [ "TraitSpotMeeting", "classTraitSpotMeeting.html", null ],

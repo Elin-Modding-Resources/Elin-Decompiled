@@ -11,6 +11,7 @@ var classCoreConfig_1_1Test =
     [ "brightnessNight", "classCoreConfig_1_1Test.html#a941d76751fd76ccbb2ba8016612b8d51", null ],
     [ "cacheEffect", "classCoreConfig_1_1Test.html#a635ec7c69ab3af7ebfa929888c938e7d", null ],
     [ "compressSave", "classCoreConfig_1_1Test.html#ac984f2ea1dc5aa0afb4d006a6fc17766", null ],
+    [ "disableShake2", "classCoreConfig_1_1Test.html#ace1547c5bcd2ac358e4e96980725f6e7", null ],
     [ "dontCancelIfZeroDamage", "classCoreConfig_1_1Test.html#afd53c2aa7f1341c4081787476c302f33", null ],
     [ "extraMoveCancel", "classCoreConfig_1_1Test.html#a187d26dd01abad7ef1c307ff4817ba1e", null ],
     [ "extraRace", "classCoreConfig_1_1Test.html#a7708ab8c0bace6a10c0e288e5f7d8e30", null ],

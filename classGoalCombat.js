@@ -7,6 +7,7 @@ var classGoalCombat =
     [ "Run", "classGoalCombat.html#a0ca96bef4bc165272d07e10330e94a32", null ],
     [ "TryAbortCombat", "classGoalCombat.html#a6c8189a549709f4f7914e2f2616e6fd5", null ],
     [ "TryAddAbility", "classGoalCombat.html#ad2349c9a7709bf783d0e4f953b41734e", null ],
+    [ "TryFuse", "classGoalCombat.html#a8fedc739c8ab0dd7857cc593a708bc0e", null ],
     [ "TryMove", "classGoalCombat.html#a9a36c7c515deec0f4d38997c7318cf03", null ],
     [ "TryRemoveAbility", "classGoalCombat.html#a45bd5d5fd887669969cbe4b3ac01d6dd", null ],
     [ "TryThrow", "classGoalCombat.html#a0cb5be0d349d1fb3979e8f0dfd26a021", null ],

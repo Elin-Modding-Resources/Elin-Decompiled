@@ -59,7 +59,7 @@ var classTrait =
     [ "IsFuel", "classTrait.html#a05348975d767a4a7869d864869d5bd82", null ],
     [ "IsFuel", "classTrait.html#a6b1204b6b11166bf97bab39e927070ce", null ],
     [ "IsFuelEnough", "classTrait.html#adfc3e89789e170dff0672e351a7c0c39", null ],
-    [ "ListPoints", "classTrait.html#a18c0e1c78039242bdb2c7a4719783a2d", null ],
+    [ "ListPoints", "classTrait.html#ae852514b9fc56dfb56af95cb4ceb062e", null ],
     [ "Offer", "classTrait.html#a773ff35de469eff01a2dbe0b165d32a5", null ],
     [ "OfferProcess", "classTrait.html#a07db3b3661073b4b2f354f56325bf324", null ],
     [ "OnAddedToZone", "classTrait.html#a7a3637e38ace8063cd066648552195cc", null ],

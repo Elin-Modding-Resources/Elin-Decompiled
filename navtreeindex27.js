@@ -1,5 +1,8 @@
 var NAVTREEINDEX27 =
 {
+"classAI__Drink.html#a0d3a43714db3651fb002d6ec72212e1a":[1,0,90,5],
+"classAI__Drink.html#a16276486abdab375db4163ab162afed3":[1,0,90,3],
+"classAI__Drink.html#a364eff37700af28a416c8165a20425b6":[1,0,90,2],
 "classAI__Drink.html#a460bd4f4ae7aa419a7fe37916295b4eb":[1,0,90,4],
 "classAI__Drink.html#a4ff8cd00b0492d0509394cf839e675dd":[1,0,90,1],
 "classAI__Drink.html#aa607edfa24c602083a3fefa4cdd71bf3":[1,0,90,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX27 =
 "classAI__PryOpen.html#a4c032607f1726f92d59799f4af00545c":[1,0,115,3],
 "classAI__PryOpen.html#a5af5fd9c54e8e9387c9cb6a9e237aa3e":[1,0,115,2],
 "classAI__PryOpen.html#aa4762ca735a025e632a05b551c8f0baf":[1,0,115,0],
-"classAI__PryOpen.html#aab3112bce8e9124a311deb7a082d655e":[1,0,115,4],
-"classAI__PryOpen.html#ad809fbaf695ab882c80ca3e02efe771a":[1,0,115,1],
-"classAI__Read.html":[1,0,116],
-"classAI__Read.html#a5946252854f402ff272fdde1b271bf38":[1,0,116,4]
+"classAI__PryOpen.html#aab3112bce8e9124a311deb7a082d655e":[1,0,115,4]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"HitSummary_8cs_source.html":[2,0,0,656],
 "HoardActor_8cs.html":[2,0,0,658],
 "HoardActor_8cs_source.html":[2,0,0,658],
 "Hoard_8cs.html":[2,0,0,657],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "IUISkin_8cs.html":[2,0,0,3,54],
 "IUISkin_8cs_source.html":[2,0,0,3,54],
 "ImageExample_8cs.html":[2,0,0,2,41],
-"ImageExample_8cs_source.html":[2,0,0,2,41],
-"ImageLoader_8cs.html":[2,0,0,2,42]
+"ImageExample_8cs_source.html":[2,0,0,2,41]
 };

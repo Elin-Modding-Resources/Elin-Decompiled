@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"ImageLoader_8cs.html":[2,0,0,2,42],
 "ImageLoader_8cs_source.html":[2,0,0,2,42],
 "ImageType_8cs.html":[2,0,0,3,48],
 "ImageType_8cs.html#a3154c405c975616503bac23f51b78fc0":[2,0,0,3,48,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "LayerEditPlaylist_8cs.html":[2,0,0,812],
 "LayerEditPlaylist_8cs_source.html":[2,0,0,812],
 "LayerEditPortrait_8cs.html":[2,0,0,813],
-"LayerEditPortrait_8cs_source.html":[2,0,0,813],
-"LayerEditSkin_8cs.html":[2,0,0,814]
+"LayerEditPortrait_8cs_source.html":[2,0,0,813]
 };

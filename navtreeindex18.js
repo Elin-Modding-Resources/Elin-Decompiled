@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"TraitBroom_8cs.html":[2,0,0,1455],
 "TraitBroom_8cs_source.html":[2,0,0,1455],
 "TraitBuildBoard_8cs.html":[2,0,0,1457],
 "TraitBuildBoard_8cs_source.html":[2,0,0,1457],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "TraitFirework_8cs.html":[2,0,0,1578],
 "TraitFirework_8cs_source.html":[2,0,0,1578],
 "TraitFloorDeco_8cs.html":[2,0,0,1581],
-"TraitFloorDeco_8cs_source.html":[2,0,0,1581],
-"TraitFloorSwitch_8cs.html":[2,0,0,1582]
+"TraitFloorDeco_8cs_source.html":[2,0,0,1581]
 };
