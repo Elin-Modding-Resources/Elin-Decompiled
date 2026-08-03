@@ -114,7 +114,7 @@ public class BaseCondition : BaseStats
 
 	public virtual int GainResistFactor => base.source.gainRes;
 
-	public virtual int P2 => 0;
+	public virtual int P2 { get; set; }
 
 	public SourceElement.Row sourceElement => EClass.sources.elements.map[refVal];
 
@@ -166,9 +166,10 @@ public class BaseCondition : BaseStats
 		refVal = id;
 	}
 
-	public void SetValue(int a)
+	public void SetValue(int a, int _p2 = 0)
 	{
 		value = a;
+		P2 = _p2;
 	}
 
 	public void SetRefVal(int a, int b)

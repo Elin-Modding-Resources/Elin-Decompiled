@@ -69,7 +69,11 @@ public class Affinity : EClass
 
 	public bool CanGiveCard()
 	{
-		return CurrentStage >= Stage.Love;
+		if (CurrentStage >= Stage.Love)
+		{
+			return CC.source.LV < 10000;
+		}
+		return false;
 	}
 
 	public bool CanMarry()

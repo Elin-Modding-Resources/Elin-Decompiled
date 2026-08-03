@@ -213,13 +213,21 @@ public class GameDate : Date
 		{
 			WidgetSticky.Add(new StickyHomeReport());
 		}
-		if (EClass.player.stats.days >= 7 && EClass.game.cards.globalCharas.Find("fiama").currentZone == EClass.game.StartZone && EClass.game.quests.GetGlobal("fiama_starter_gift") == null && !EClass.game.quests.IsCompleted("fiama_starter_gift"))
+		if (EClass.player.stats.days >= 7)
 		{
-			EClass.game.quests.Add("fiama_starter_gift", "fiama");
+			Chara chara = EClass.game.cards.globalCharas.Find("fiama");
+			if (chara != null && chara.currentZone == EClass.game.StartZone && EClass.game.quests.GetGlobal("fiama_starter_gift") == null && !EClass.game.quests.IsCompleted("fiama_starter_gift"))
+			{
+				EClass.game.quests.Add("fiama_starter_gift", "fiama");
+			}
 		}
 		if (EClass.game.quests.completedIDs.Contains("demitas_spellwriter") && !EClass.game.quests.IsAdded<QuestNegotiationDarkness>())
 		{
 			EClass.game.quests.Add("negotiation_darkness", "loytel");
+		}
+		if (EClass.game.quests.IsCompleted<QuestIntoDarkness>() && !EClass.game.quests.IsAdded("stone_dream"))
+		{
+			EClass.game.quests.Add("stone_dream", "loytel");
 		}
 		if (EClass.game.quests.IsCompleted("exploration"))
 		{

@@ -1544,6 +1544,14 @@ public class Zone : Spatial, ICardParent, IInspect
 					}
 				}
 				Thing thing = null;
+				if (enterState == ZoneTransition.EnterState.Return && EClass.game.IsSurvival)
+				{
+					thing = map.props.installed.traits.GetRandomThing<TraitLandingPortal>();
+					if (thing != null)
+					{
+						return thing.pos;
+					}
+				}
 				thing = map.props.installed.traits.GetRandomThing<TraitWaystone>();
 				if (thing != null)
 				{
@@ -1556,7 +1564,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				}
 				if (base.lv == 0)
 				{
-					goto IL_04a1;
+					goto IL_04da;
 				}
 				flag = base.lv <= 0;
 				break;
@@ -1595,7 +1603,7 @@ public class Zone : Spatial, ICardParent, IInspect
 				break;
 			}
 			break;
-			IL_04a1:
+			IL_04da:
 			enterState = ZoneTransition.EnterState.Center;
 		}
 		foreach (Thing thing5 in map.things)

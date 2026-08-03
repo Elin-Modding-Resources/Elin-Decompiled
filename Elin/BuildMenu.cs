@@ -266,9 +266,13 @@ public class BuildMenu : EMono
 			}
 			foreach (Thing thing in EMono._map.Stocked.Things)
 			{
-				if (EMono._map.Stocked.ShouldListAsResource(thing) && (thing.source.name.Contains(s) || thing.source.name_JP.Contains(s) || thing.NameOne.Contains(s)))
+				if (!EMono._map.Stocked.ShouldListAsResource(thing) || (!thing.source.name.Contains(s) && !thing.source.name_JP.Contains(s) && !thing.NameOne.Contains(s)))
 				{
-					Recipe recipe2 = Recipe.Create(thing);
+					continue;
+				}
+				Recipe recipe2 = Recipe.Create(thing);
+				if (!recipe2.source.noListing)
+				{
 					if (recipe2 == null)
 					{
 						Debug.Log(thing.Name + "/" + thing.id);
@@ -284,13 +288,16 @@ public class BuildMenu : EMono
 				if (t.trait.CanBeDropped && !t.trait.CanOnlyCarry && !t.isEquipped && (t.source.name.Contains(s) || t.source.name_JP.Contains(s) || t.NameOne.Contains(s)))
 				{
 					Recipe recipe3 = Recipe.Create(t);
-					if (recipe3 == null)
+					if (!recipe3.source.noListing)
 					{
-						Debug.Log(t.Name + "/" + t.id);
-					}
-					else
-					{
-						newRecipes.Add(recipe3);
+						if (recipe3 == null)
+						{
+							Debug.Log(t.Name + "/" + t.id);
+						}
+						else
+						{
+							newRecipes.Add(recipe3);
+						}
 					}
 				}
 			});
@@ -603,7 +610,7 @@ public class BuildMenu : EMono
 					}
 					EMono.pc.things.Foreach(delegate(Thing t)
 					{
-						if (!t.trait.CanOnlyCarry && t.trait.CanBeDropped && !t.c_isImportant && !t.isEquipped)
+						if (!t.trait.CanOnlyCarry && t.trait.CanBeDropped && !t.c_isImportant && !t.isEquipped && !(t.trait is TraitAbility))
 						{
 							counts[t.trait.RecipeCat]++;
 							if (t.trait.RecipeCat == cat && t.invY != 1)

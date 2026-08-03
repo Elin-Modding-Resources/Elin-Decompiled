@@ -703,7 +703,7 @@ public class CoreDebug : EScriptable
 			EClass.game.quests.Add("demitas_spellwriter");
 			EClass.game.quests.Add("negotiation_darkness");
 			EClass.game.quests.Start("into_darkness", EClass.game.cards.globalCharas.Find("kettle"));
-			EClass.game.quests.Get<QuestIntoDarkness>().phase = 4;
+			EClass.game.quests.Get<QuestIntoDarkness>().phase = 6;
 			EClass.player.ModKeyItem("potion_sorin", 1, msg: false);
 			EClass.player.ModKeyItem("potion_farris", 1, msg: false);
 		}

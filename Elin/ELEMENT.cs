@@ -5,37 +5,39 @@ using UnityEngine.UI;
 
 public class ELEMENT
 {
+	public const int comfort = 750;
+
 	public const int rare = 751;
-
-	public const int difficulty = 765;
-
-	public const int stimulant = 760;
-
-	public const int air = 763;
-
-	public const int roasted = 762;
-
-	public const int recharge = 761;
-
-	public const int purity = 759;
-
-	public const int hotspring = 756;
-
-	public const int blood = 755;
-
-	public const int nerve = 754;
-
-	public const int antidote = 753;
 
 	public const int cute = 752;
 
-	public const int comfort = 750;
+	public const int antidote = 753;
+
+	public const int blood = 755;
+
+	public const int hotspring = 756;
+
+	public const int purity = 759;
+
+	public const int stimulant = 760;
+
+	public const int recharge = 761;
+
+	public const int roasted = 762;
+
+	public const int air = 763;
+
+	public const int difficulty = 765;
 
 	public const int forbidden = 766;
 
+	public const int nerve = 754;
+
+	public const int effectRange = 770;
+
 	public const int _void = 0;
 
-	public const int weight = 11;
+	public const int nutrition = 10;
 
 	public const int lv = 1;
 
@@ -45,9 +47,7 @@ public class ELEMENT
 
 	public const int socket = 5;
 
-	public const int nutrition = 10;
-
-	public const int effectRange = 770;
+	public const int weight = 11;
 
 	public const int size = 12;
 
@@ -57,36 +57,36 @@ public class ELEMENT
 
 	public const int water = 15;
 
-	public const int heat = 16;
+	public const int decay = 17;
 
 	public const int taste = 18;
 
-	public const int poison = 20;
-
-	public const int decay = 17;
-
-	public const int cut = 22;
-
-	public const int old_detox = 23;
-
-	public const int old_heal = 24;
-
-	public const int old_antidote = 25;
-
-	public const int cure = 26;
-
-	public const int race = 29;
-
-	public const int piety = 85;
+	public const int heat = 16;
 
 	public const int fire = 21;
 
+	public const int poison = 20;
+
+	public const int race = 29;
+
+	public const int cure = 26;
+
+	public const int old_antidote = 25;
+
+	public const int piety = 85;
+
+	public const int old_detox = 23;
+
+	public const int cut = 22;
+
+	public const int old_heal = 24;
+
 	public static readonly int[] IDS = new int[38]
 	{
-		751, 765, 760, 763, 762, 761, 759, 756, 755, 754,
-		753, 752, 750, 766, 0, 11, 1, 2, 3, 5,
-		10, 770, 12, 13, 14, 15, 16, 18, 20, 17,
-		22, 23, 24, 25, 26, 29, 85, 21
+		750, 751, 752, 753, 755, 756, 759, 760, 761, 762,
+		763, 765, 766, 754, 770, 0, 10, 1, 2, 3,
+		5, 11, 12, 13, 14, 15, 17, 18, 16, 21,
+		20, 29, 26, 25, 85, 23, 22, 24
 	};
 }
 public class Element : EClass

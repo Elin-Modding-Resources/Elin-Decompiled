@@ -1840,15 +1840,20 @@ public class Chara : Card, IPathfindWalker
 		}
 		Say("fuse", this);
 		string text = "marshmallow_king";
+		string text2 = "fusion";
 		if (id == "imotoroid")
 		{
 			text = "imotomaton";
+			text2 = "";
 		}
 		Chara chara = EClass._zone.SpawnMob(text, pos);
 		chara.SetHostility(hostility);
 		foreach (Chara item in list)
 		{
-			item.Talk("fusion");
+			if (!text2.IsEmpty())
+			{
+				item.Talk(text2);
+			}
 			Effect.Get<EffectIRenderer>("throw_fuse").Play(item, item, item.pos, pos);
 			item.Destroy();
 		}
@@ -3558,6 +3563,14 @@ public class Chara : Card, IPathfindWalker
 		if (z == currentZone)
 		{
 			return;
+		}
+		if (EClass.game.IsSurvival && z.IsRegion)
+		{
+			z = EClass.pc.homeZone;
+			transition = new ZoneTransition
+			{
+				state = ZoneTransition.EnterState.Return
+			};
 		}
 		if (HasCondition<ConInvulnerable>())
 		{
@@ -7439,7 +7452,7 @@ public class Chara : Card, IPathfindWalker
 				ShowDialog("_chara", "invisible");
 				return;
 			}
-			if (!IsPC && !EClass.player.codex.DroppedCard(id) && affinity.CanGiveCard() && source.LV < 10000)
+			if (!IsPC && !EClass.player.codex.DroppedCard(id) && affinity.CanGiveCard())
 			{
 				EClass.player.codex.MarkCardDrop(id);
 				ShowDialog("_chara", "give_card");
@@ -9777,9 +9790,21 @@ public class Chara : Card, IPathfindWalker
 		return AddCondition(typeof(T).Name, p, force);
 	}
 
+	public Condition AddCondition<T>(int p, int p2, bool force = false) where T : Condition
+	{
+		return AddCondition(typeof(T).Name, p, p2, force);
+	}
+
 	public Condition AddCondition(string id, int p = 100, bool force = false)
 	{
 		return AddCondition(Condition.Create(id, p), force);
+	}
+
+	public Condition AddCondition(string id, int p, int p2, bool force = false)
+	{
+		Condition condition = Condition.Create(id, p);
+		condition.P2 = p2;
+		return AddCondition(condition, force);
 	}
 
 	public Condition AddCondition(Condition c, bool force = false)

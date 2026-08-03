@@ -129,7 +129,7 @@ public class WidgetDate : Widget
 		}
 		if (EMono.game.IsSurvival)
 		{
-			text += "raid_till".lang(EMono.game.survival.flags.raidLv.ToString() ?? "");
+			text += "raid_till".lang(EMono.game.survival.flags.raidLv.ToString() ?? "", (EMono.game.survival.gateZone != null) ? EMono.game.survival.gateZone.NameWithDangerLevel : "???");
 		}
 		if (EMono.Branch != null && EMono.Branch.luckyMonth)
 		{

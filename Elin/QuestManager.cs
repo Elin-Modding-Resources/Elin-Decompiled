@@ -129,6 +129,32 @@ public class QuestManager : EClass
 		});
 	}
 
+	public bool IsCompleted(string id)
+	{
+		return completedIDs.Contains(id);
+	}
+
+	public bool IsCompleted<T>() where T : Quest
+	{
+		return completedTypes.Contains(typeof(T).ToString());
+	}
+
+	public bool IsAdded(string id)
+	{
+		if (IsStarted(id) || GetPhase(id) == 999)
+		{
+			return true;
+		}
+		foreach (Quest global in globalList)
+		{
+			if (global.id == id)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public bool IsAdded<T>() where T : Quest
 	{
 		if (IsStarted<T>() || GetPhase<T>() == 999)
@@ -148,6 +174,11 @@ public class QuestManager : EClass
 	public bool IsStarted<T>() where T : Quest
 	{
 		return GetPhase<T>() != -1;
+	}
+
+	public bool IsStarted(string id)
+	{
+		return GetPhase(id) != -1;
 	}
 
 	public int GetPhase<T>() where T : Quest
@@ -228,11 +259,6 @@ public class QuestManager : EClass
 			}
 		}
 		return null;
-	}
-
-	public bool IsCompleted(string id)
-	{
-		return completedIDs.Contains(id);
 	}
 
 	public int CountNew()

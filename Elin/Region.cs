@@ -148,7 +148,7 @@ public class Region : Zone
 		return CreateRandomSite(GetRandomPoint(point.x, point.z, radius), idSource, updateMesh, lv);
 	}
 
-	private Zone CreateRandomSite(Point pos, string idSource, bool updateMesh, int lv = 0)
+	public Zone CreateRandomSite(Point pos, string idSource, bool updateMesh, int lv = 0)
 	{
 		if (pos == null)
 		{

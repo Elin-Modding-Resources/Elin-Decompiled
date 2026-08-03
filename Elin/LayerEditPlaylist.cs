@@ -77,6 +77,7 @@ public class LayerEditPlaylist : ELayer
 				},
 				onList = delegate
 				{
+					items.Sort((BGMData a, BGMData b) => a.id - b.id);
 					foreach (BGMData item in items)
 					{
 						list.Add(item);

@@ -122,6 +122,18 @@ public class SurvivalManager : EClass
 			}
 		}
 
+		public bool gotPortal
+		{
+			get
+			{
+				return bits[3];
+			}
+			set
+			{
+				bits[3] = value;
+			}
+		}
+
 		[OnSerializing]
 		private void _OnSerializing(StreamingContext context)
 		{
@@ -140,6 +152,9 @@ public class SurvivalManager : EClass
 
 	[JsonProperty]
 	public List<string> listReward = new List<string>();
+
+	[JsonProperty]
+	public Zone gateZone;
 
 	public bool IsInRaid => GetRaidEvent() != null;
 
@@ -193,6 +208,23 @@ public class SurvivalManager : EClass
 			{
 				point.SetObj(46);
 			}
+		}
+		if (EClass.world.date.hour == 0 || EClass.debug.enable)
+		{
+			SetGateZone();
+		}
+	}
+
+	public void SetGateZone()
+	{
+		if (EClass.rnd(3) == 0)
+		{
+			IEnumerable<Spatial> ie = EClass.game.spatials.map.Values.Where((Spatial z) => z.source.tag.Contains("oneblock"));
+			gateZone = ie.RandomItem() as Zone;
+		}
+		else
+		{
+			gateZone = EClass.world.region.CreateRandomSite(new Point(1, 1), (EClass.rnd(5) == 0) ? "dungeon_water" : null, updateMesh: false);
 		}
 	}
 
@@ -396,13 +428,18 @@ public class SurvivalManager : EClass
 			}
 			if (searchWreck2 > (EClass.debug.enable ? 5 : 100) && !flags.gotTaxChest)
 			{
-				MeteorThing(pos2, "chest_tax");
+				MeteorThing(pos2, "chest_tax", install: true);
 				flags.gotTaxChest = true;
 			}
-			if (searchWreck2 > (EClass.debug.enable ? 10 : 200) && !flags.gotGaragara)
+			else if (searchWreck2 > (EClass.debug.enable ? 10 : 200) && !flags.gotGaragara)
 			{
-				MeteorThing(pos2, "rolling_fortune");
+				MeteorThing(pos2, "rolling_fortune", install: true);
 				flags.gotGaragara = true;
+			}
+			else if (EClass.player.stats.days > 1 && !flags.gotPortal)
+			{
+				MeteorThing(pos2, "teleporter_gate", install: true);
+				flags.gotPortal = true;
 			}
 			NextObj();
 			return true;
@@ -462,7 +499,6 @@ public class SurvivalManager : EClass
 			case "big_daddy":
 			case "big_daddy2":
 			case "littleOne":
-			case "vesda":
 			case "mamani":
 				return false;
 			default:

@@ -503,6 +503,16 @@ public class DramaOutcome : EMono
 		Steam.GetAchievement(ID_Achievement.UPGRADE);
 	}
 
+	public void reward_stone_dream()
+	{
+		Chara chara = EMono.game.cards.globalCharas.Find("farris");
+		if (chara != null)
+		{
+			chara.ability.Add(6754, 50, pt: false);
+			Msg.Say("learnSkill", chara.NameBraced, EMono.sources.elements.map[6754].GetName());
+		}
+	}
+
 	public static bool If(DramaChoice item, Chara c)
 	{
 		_ = item.IF.Split('/')[0] == "costHire";

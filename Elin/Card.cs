@@ -3083,6 +3083,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		elementContainer.ApplyElementMap(uid, SourceValueType.Chara, Chara.source.elementMap, 1, invert: false, applyFeat: true);
 		foreach (Element value in elements.dict.Values)
 		{
+			if (!(value.source.category == "attribute") && !(value.source.category == "skill"))
+			{
+				continue;
+			}
 			int num = elementContainer.Value(value.id);
 			if (num != 0)
 			{
@@ -6075,14 +6079,19 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public Thing GiveBirth(Thing t, bool effect)
 	{
-		Card card = (ExistsOnMap ? this : (GetRootCard() ?? EClass.pc));
+		Card obj = (ExistsOnMap ? this : (GetRootCard() ?? EClass.pc));
 		EClass.player.forceTalk = true;
-		card.Talk("giveBirth");
-		EClass._zone.TryAddThing(t, card.pos);
+		obj.Talk("giveBirth");
+		Point nearestPoint = obj.pos;
+		if (nearestPoint.IsBlocked)
+		{
+			nearestPoint = nearestPoint.GetNearestPoint();
+		}
+		EClass._zone.TryAddThing(t, nearestPoint);
 		if (effect)
 		{
-			card.pos.PlayEffect("revive");
-			card.pos.PlaySound("egg");
+			nearestPoint.PlayEffect("revive");
+			nearestPoint.PlaySound("egg");
 			PlayAnime(AnimeID.Shiver);
 			if (isChara)
 			{

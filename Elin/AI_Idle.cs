@@ -171,6 +171,10 @@ public class AI_Idle : AIAct
 							{
 								if (owner.UseAbility(actHeal, EClass.pc, null, pt: true))
 								{
+									if (owner == null)
+									{
+										yield return Success();
+									}
 									owner.AddCooldown(actHeal.id, 5);
 									owner.Talk("no_problem");
 									Steam.GetAchievement(ID_Achievement.PRIEST);
@@ -178,6 +182,10 @@ public class AI_Idle : AIAct
 							}
 							else if (!EClass.pc.HasCondition<ConHolyVeil>() && owner.UseAbility(8500, EClass.pc, null, pt: true))
 							{
+								if (owner == null)
+								{
+									yield return Success();
+								}
 								owner.AddCooldown(8500, 30);
 								owner.Talk("no_problem");
 							}
