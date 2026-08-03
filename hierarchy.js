@@ -469,7 +469,10 @@ var hierarchy =
                 [ "ConRebirth", "classConRebirth.html", null ],
                 [ "ConResEle", "classConResEle.html", null ],
                 [ "ConSeeInvisible", "classConSeeInvisible.html", null ],
-                [ "ConSongValor", "classConSongValor.html", null ],
+                [ "ConSong", "classConSong.html", [
+                  [ "ConSongPebble", "classConSongPebble.html", null ],
+                  [ "ConSongValor", "classConSongValor.html", null ]
+                ] ],
                 [ "ConStrife", "classConStrife.html", null ],
                 [ "ConTelepathy", "classConTelepathy.html", null ],
                 [ "ConTorch", "classConTorch.html", null ],
@@ -509,6 +512,7 @@ var hierarchy =
             [ "BaseStance", "classBaseStance.html", [
               [ "BaseSong", "classBaseSong.html", [
                 [ "StanceSongEnd", "classStanceSongEnd.html", null ],
+                [ "StanceSongPebble", "classStanceSongPebble.html", null ],
                 [ "StanceSongSleep", "classStanceSongSleep.html", null ],
                 [ "StanceSongValor", "classStanceSongValor.html", null ]
               ] ],
@@ -1888,6 +1892,7 @@ var hierarchy =
             [ "TraitDollHouse", "classTraitDollHouse.html", null ],
             [ "TraitSpit", "classTraitSpit.html", null ]
           ] ],
+          [ "TraitLandingPortal", "classTraitLandingPortal.html", null ],
           [ "TraitMannequin", "classTraitMannequin.html", null ],
           [ "TraitMaterialHammer", "classTraitMaterialHammer.html", null ],
           [ "TraitMod", "classTraitMod.html", [
@@ -1909,10 +1914,13 @@ var hierarchy =
             [ "TraitShrine", "classTraitShrine.html", null ]
           ] ],
           [ "TraitRadio", "classTraitRadio.html", null ],
-          [ "TraitRecycle", "classTraitRecycle.html", null ],
+          [ "TraitRecycle", "classTraitRecycle.html", [
+            [ "TraitStarIncinerator", "classTraitStarIncinerator.html", null ]
+          ] ],
           [ "TraitRope", "classTraitRope.html", null ],
           [ "TraitScrollMapTreasure", "classTraitScrollMapTreasure.html", null ],
           [ "TraitStairsLocked", "classTraitStairsLocked.html", null ],
+          [ "TraitStarHelm", "classTraitStarHelm.html", null ],
           [ "TraitTape", "classTraitTape.html", null ],
           [ "TraitTaxChest", "classTraitTaxChest.html", null ],
           [ "TraitTerraGlobe", "classTraitTerraGlobe.html", null ],

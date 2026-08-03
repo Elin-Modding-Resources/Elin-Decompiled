@@ -121,6 +121,7 @@ var classABILITY =
     [ "Shoot", "classABILITY.html#a7cb7bc71634cfe4b980b7c1a47caee01", null ],
     [ "Sleep", "classABILITY.html#a4b0d861103c165f656e1fa7873cbc70e", null ],
     [ "SongEnd", "classABILITY.html#a2e529cd587010bf6cf7b817fb3fcee3f", null ],
+    [ "SongPebble", "classABILITY.html#a8b106c53b5a535ab0d3e2e6f3f5cb9f2", null ],
     [ "SongSleep", "classABILITY.html#a530882edbe4481603c5301946a6b7b1c", null ],
     [ "SongTulip", "classABILITY.html#aedab18658e1088c7d9105eb0816217a7", null ],
     [ "SongValor", "classABILITY.html#a5704d8fbdac84442ce9e797bc55c0346", null ],

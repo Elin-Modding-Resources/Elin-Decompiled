@@ -53,6 +53,7 @@ var classDramaOutcome =
     [ "QuestShippingChest_Drop1", "classDramaOutcome.html#a490b582cb17fb4db8bb0841726ba5504", null ],
     [ "QuestVernis_DropRecipe", "classDramaOutcome.html#af0c9dcd3524af01a7f20ceafb9d737e9", null ],
     [ "revive_pet", "classDramaOutcome.html#a9b9b8c64bbf3beeaf9f9a39335946e80", null ],
+    [ "reward_stone_dream", "classDramaOutcome.html#a1e27f653abba870c6586f79878a3d981", null ],
     [ "sister_change", "classDramaOutcome.html#ad526a8ac71cb8ce3de7b29010e7ae0a6", null ],
     [ "sister_friend", "classDramaOutcome.html#a341dda5dbf8c9cb78d79dbbe61c62f61", null ],
     [ "StartNewGame", "classDramaOutcome.html#a67a2c4cd195cfb682078b76b626d0896", null ],

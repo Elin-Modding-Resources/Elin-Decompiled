@@ -30,6 +30,7 @@ var classFEAT =
     [ "featDEX", "classFEAT.html#a37292ae76cf46837a338f46620934bbc", null ],
     [ "featDisguise", "classFEAT.html#a30699ce96606f26f6b9bd7ecebef1f04", null ],
     [ "featDismantler", "classFEAT.html#acbc5ee2c052bffaf63629fded348b419", null ],
+    [ "featDiva", "classFEAT.html#aee68d8554288a7db6980ad33aaa8c32b", null ],
     [ "featDreamWaker", "classFEAT.html#a663191d71696293163c40b5b06432a33", null ],
     [ "featDwarf", "classFEAT.html#a91bc843f57e6cf073059522328eebf78", null ],
     [ "featEarthStrength", "classFEAT.html#a9a18d11f2883cf72fd18e778d16795e2", null ],
