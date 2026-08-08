@@ -14,5 +14,6 @@ var classUICurrency_1_1Options =
     [ "money2", "classUICurrency_1_1Options.html#af9db50dd789eb41504ee9479ddf0afa3", null ],
     [ "plat", "classUICurrency_1_1Options.html#a82d6d6f53efb6d1b32a58e77462329d4", null ],
     [ "resources", "classUICurrency_1_1Options.html#a8bba5f36557129345ac0e86912a02fe5", null ],
+    [ "ticketSky", "classUICurrency_1_1Options.html#a43c899113977a9c68bf47722214e734f", null ],
     [ "weight", "classUICurrency_1_1Options.html#acfc949373b0828fc83d4747cab807be1", null ]
 ];

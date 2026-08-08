@@ -12,11 +12,12 @@ var classSurvivalManager =
     [ "OnExpandFloor", "classSurvivalManager.html#a9ee9783ea0ccff3eafa68e830d0692b5", null ],
     [ "OnMineWreck", "classSurvivalManager.html#a101c122f0a3bb9e6d542f913c7bc0bd1", null ],
     [ "OnUpdateRecruit", "classSurvivalManager.html#a3fdbf4d79d9c65c894793e3d9a4b2e4f", null ],
+    [ "RefreshGateZones", "classSurvivalManager.html#a6b7ebc6e5f52306adceeed16403f2e2f", null ],
     [ "RefreshRewards", "classSurvivalManager.html#afc6deb8aabfa587850b13f9227f627ef", null ],
-    [ "SetGateZone", "classSurvivalManager.html#a6b1aafccc0228d83a75caf54594ab7e7", null ],
     [ "StartRaid", "classSurvivalManager.html#a1eb44ee4d59a07f7acb1a9c0cbc89e9b", null ],
     [ "flags", "classSurvivalManager.html#a366e4da0d7ad7e17b0021411117a3184", null ],
     [ "gateZone", "classSurvivalManager.html#aae712b2b2ec3db1ce72c1ceeffa5898d", null ],
+    [ "listGateZone", "classSurvivalManager.html#afb4621254a7385a31516c629b53c11a8", null ],
     [ "listReward", "classSurvivalManager.html#a03d7da5d2d4eddeaca3a09c3b6f21324", null ],
     [ "IsInRaid", "classSurvivalManager.html#a00d50db57f55ce1c53b8119085802b84", null ]
 ];

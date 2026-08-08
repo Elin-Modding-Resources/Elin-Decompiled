@@ -33,6 +33,7 @@ var classZone =
     [ "FindDeadChara", "classZone.html#a7c28b59a512fc6cdccacac7854c51faa", null ],
     [ "FindOrCreateLevel", "classZone.html#a9d67527c876015d15f021569f74d6d89", null ],
     [ "Generate", "classZone.html#a18e27aa23214025873fe68fdcfd4fbe3", null ],
+    [ "GetCostSkyTravel", "classZone.html#a12271b7f6393da9ab96b56e97508c389", null ],
     [ "GetDeepestLv", "classZone.html#a5e99d9a7d1f87129b31a866bc84644c6", null ],
     [ "GetDeepestLv", "classZone.html#a74f8cf3ba466d3e5f2a5d4d750e2c0d6", null ],
     [ "GetDungenID", "classZone.html#a199a1b529edcc7541de0d408c37dc13f", null ],

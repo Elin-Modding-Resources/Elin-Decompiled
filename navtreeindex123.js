@@ -1,16 +1,19 @@
 var NAVTREEINDEX123 =
 {
+"classTraitAgingShelf.html#ad3278a1dc02120f52ef9fd5d8ce992f6":[1,0,1506,3],
+"classTraitAlchemyBench.html":[1,0,1507],
+"classTraitAlchemyBench.html#a0ee50a2137004fdae40f2bd7e02e1352":[1,0,1507,0],
 "classTraitAlchemyBench.html#ab900bd086c143a551e7e783dd4867849":[1,0,1507,1],
 "classTraitAltar.html":[1,0,1508],
 "classTraitAltar.html#a0aca9b623b935256184f75312aa8a6f3":[1,0,1508,2],
 "classTraitAltar.html#a0b72c0f51194b41e7fe5cfec94fb6f77":[1,0,1508,13],
 "classTraitAltar.html#a1734a9c2ea692e0cece10e249d810d97":[1,0,1508,5],
-"classTraitAltar.html#a22ef7843576ce235a8cc1ff6035e976e":[1,0,1508,1],
 "classTraitAltar.html#a28e392dbb7012af20236cd6dd43e51a7":[1,0,1508,16],
+"classTraitAltar.html#a2efd018334072be544b91171807891dd":[1,0,1508,7],
 "classTraitAltar.html#a31ae0b0f37f6b0d0ad83c417d18cda58":[1,0,1508,11],
+"classTraitAltar.html#a4b2c68b9f0795caad0507f5e3c78deab":[1,0,1508,1],
 "classTraitAltar.html#a4c5d5588c850748eaf15680e1cebc3f0":[1,0,1508,14],
 "classTraitAltar.html#a5b7915ae5f852b2d68d08c9ae96a3ffc":[1,0,1508,6],
-"classTraitAltar.html#a7b3d7bc4f803febf43b49ca7a7c823ea":[1,0,1508,7],
 "classTraitAltar.html#a9ba7807b70b1d35335fd06941950b02d":[1,0,1508,0],
 "classTraitAltar.html#aba8b3431e81a47fa306e204ca6b7e9c1":[1,0,1508,12],
 "classTraitAltar.html#ac631be9bc0add6867a5fb6993215df3e":[1,0,1508,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX123 =
 "classTraitBookSecret.html":[1,0,1562],
 "classTraitBookSecret.html#a1205df148f455a95a9530c6aa7083c76":[1,0,1562,0],
 "classTraitBookShelf.html":[1,0,1563],
-"classTraitBookShelf.html#a2f2ea8d92fd19b64c53459be7cc5c806":[1,0,1563,1],
-"classTraitBookShelf.html#ab1599a157037b8bdc1b4e8e8a40e5177":[1,0,1563,2],
-"classTraitBookShelf.html#afbc597174fddf775ca4d223f3375d76d":[1,0,1563,0],
-"classTraitBookSkill.html":[1,0,1564]
+"classTraitBookShelf.html#a2f2ea8d92fd19b64c53459be7cc5c806":[1,0,1563,1]
 };

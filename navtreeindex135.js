@@ -1,5 +1,6 @@
 var NAVTREEINDEX135 =
 {
+"classUIButton_1_1Item.html#a8b4d578be4489e49a64aa79f042861d1":[1,0,2114,0,20],
 "classUIButton_1_1Item.html#a9107c655c4d6e3648da624ba6ec21bc0":[1,0,2114,0,0],
 "classUIButton_1_1Item.html#a9a314ea72060956f1063340e50ca177b":[1,0,2114,0,4],
 "classUIButton_1_1Item.html#aac60693f809f7603e14d014a2513dcb4":[1,0,2114,0,1],
@@ -213,6 +214,7 @@ var NAVTREEINDEX135 =
 "classUICurrency_1_1Item.html#ad5b5dcca3d5e950ca008ffd3ecaa243e":[1,0,2128,0,1],
 "classUICurrency_1_1Options.html":[1,0,2128,1],
 "classUICurrency_1_1Options.html#a0cfc77b35c522f43041e2a13a830feb0":[1,0,2128,1,8],
+"classUICurrency_1_1Options.html#a43c899113977a9c68bf47722214e734f":[1,0,2128,1,14],
 "classUICurrency_1_1Options.html#a69b5d9247671bbbbd91c1449a9e2f54f":[1,0,2128,1,4],
 "classUICurrency_1_1Options.html#a733eb4143c788d78a73809faa1a3fee4":[1,0,2128,1,3],
 "classUICurrency_1_1Options.html#a82d6d6f53efb6d1b32a58e77462329d4":[1,0,2128,1,12],
@@ -225,7 +227,7 @@ var NAVTREEINDEX135 =
 "classUICurrency_1_1Options.html#ab82f29788c52d3048caeb3182de169a7":[1,0,2128,1,7],
 "classUICurrency_1_1Options.html#ac84385f7ab5abe491383b9bb0fd85c6d":[1,0,2128,1,10],
 "classUICurrency_1_1Options.html#ac8ef2470ca8e3d64494997128a439455":[1,0,2128,1,9],
-"classUICurrency_1_1Options.html#acfc949373b0828fc83d4747cab807be1":[1,0,2128,1,14],
+"classUICurrency_1_1Options.html#acfc949373b0828fc83d4747cab807be1":[1,0,2128,1,15],
 "classUICurrency_1_1Options.html#af9db50dd789eb41504ee9479ddf0afa3":[1,0,2128,1,11],
 "classUIDistribution.html":[1,0,2129],
 "classUIDistribution.html#a0141d609912a0ab2dce8a1aee58fd6bf":[1,0,2129,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX135 =
 "classUIDragGridInfo.html#a9baa0b4bccabc2687a94051d7ca40c3a":[1,0,2130,5],
 "classUIDragGridInfo.html#aad0b4952f2fbea3a6a7601c6c386165e":[1,0,2130,11],
 "classUIDragGridInfo.html#ac05ccf90352c9131a2df3d06199e8fb2":[1,0,2130,7],
-"classUIDragGridInfo.html#ac3ae4b9b11b9e370b0ac687a771c03f3":[1,0,2130,13],
-"classUIDragGridInfo.html#acf15d06cd4a709005310dfdd65ab7d71":[1,0,2130,15],
-"classUIDragGridInfo.html#ae9c22fb8c47c2e92308bf96d7755a528":[1,0,2130,6]
+"classUIDragGridInfo.html#ac3ae4b9b11b9e370b0ac687a771c03f3":[1,0,2130,13]
 };

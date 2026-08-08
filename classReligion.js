@@ -35,7 +35,7 @@ var classReligion =
     [ "Punish", "classReligion.html#a4a40dfee5cd21f61158772b23adec8e6", null ],
     [ "PunishPerverseWretch", "classReligion.html#a17069147c30e8a5c289402987d29400b", null ],
     [ "PunishTakeOver", "classReligion.html#a45e0d39d648fc29108b929a3ca954779", null ],
-    [ "Revelation", "classReligion.html#a11125a6b8a550c62876d2b414066f811", null ],
+    [ "Revelation", "classReligion.html#a49303eb2aa5f00c6f8225846c74483d2", null ],
     [ "SetTextRelation", "classReligion.html#abdf78a5d6d96bd2eb60eedb529c9fff9", null ],
     [ "Talk", "classReligion.html#a7bf64140b7e7e57876527ce4b604efd8", null ],
     [ "TryGetGift", "classReligion.html#a4d09564d6d77af5aa025e5b7c72065e6", null ],

@@ -1,13 +1,13 @@
 var classTraitAltar =
 [
     [ "_OnOffer", "classTraitAltar.html#a9ba7807b70b1d35335fd06941950b02d", null ],
-    [ "CanOffer", "classTraitAltar.html#a22ef7843576ce235a8cc1ff6035e976e", null ],
+    [ "CanOffer", "classTraitAltar.html#a4b2c68b9f0795caad0507f5e3c78deab", null ],
     [ "OnCreate", "classTraitAltar.html#a0aca9b623b935256184f75312aa8a6f3", null ],
     [ "OnImportMap", "classTraitAltar.html#af6920d99e259ea8757a17cf9c8dcc919", null ],
     [ "OnOffer", "classTraitAltar.html#ad113125ab8bbe049e091efafdff2f752", null ],
     [ "SetDeity", "classTraitAltar.html#a1734a9c2ea692e0cece10e249d810d97", null ],
     [ "SetName", "classTraitAltar.html#a5b7915ae5f852b2d68d08c9ae96a3ffc", null ],
-    [ "TakeOver", "classTraitAltar.html#a7b3d7bc4f803febf43b49ca7a7c823ea", null ],
+    [ "TakeOver", "classTraitAltar.html#a2efd018334072be544b91171807891dd", null ],
     [ "TrySetAct", "classTraitAltar.html#ac631be9bc0add6867a5fb6993215df3e", null ],
     [ "CanOnlyCarry", "classTraitAltar.html#acce5c7d09ed1a3b0acaf4a577cbfdbc0", null ],
     [ "CanStack", "classTraitAltar.html#ae59022869e58c61830f66a53b1bdfe54", null ],

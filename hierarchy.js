@@ -1915,12 +1915,12 @@ var hierarchy =
           ] ],
           [ "TraitRadio", "classTraitRadio.html", null ],
           [ "TraitRecycle", "classTraitRecycle.html", [
-            [ "TraitStarIncinerator", "classTraitStarIncinerator.html", null ]
+            [ "TraitSkyIncinerator", "classTraitSkyIncinerator.html", null ]
           ] ],
           [ "TraitRope", "classTraitRope.html", null ],
           [ "TraitScrollMapTreasure", "classTraitScrollMapTreasure.html", null ],
+          [ "TraitSkyHelm", "classTraitSkyHelm.html", null ],
           [ "TraitStairsLocked", "classTraitStairsLocked.html", null ],
-          [ "TraitStarHelm", "classTraitStarHelm.html", null ],
           [ "TraitTape", "classTraitTape.html", null ],
           [ "TraitTaxChest", "classTraitTaxChest.html", null ],
           [ "TraitTerraGlobe", "classTraitTerraGlobe.html", null ],

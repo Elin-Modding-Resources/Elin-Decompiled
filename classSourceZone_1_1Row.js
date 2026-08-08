@@ -2,6 +2,7 @@ var classSourceZone_1_1Row =
 [
     [ "chance", "classSourceZone_1_1Row.html#a95d82dfe4d3c25ae9fa83de5f902d5c6", null ],
     [ "cost", "classSourceZone_1_1Row.html#a208bed9623ee654aed64a2d4faa8a8f9", null ],
+    [ "costSkyTravel", "classSourceZone_1_1Row.html#a4a68cf5fee472856874f8cde1ba8ca8a", null ],
     [ "detail", "classSourceZone_1_1Row.html#a096055e24044c004e8b6e30047aec4e5", null ],
     [ "detail_JP", "classSourceZone_1_1Row.html#a7234d9bdb9ac203c53bf40e464654cbc", null ],
     [ "detail_L", "classSourceZone_1_1Row.html#a31b60106c13e1a2b9955b2d776c1194b", null ],

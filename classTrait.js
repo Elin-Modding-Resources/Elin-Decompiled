@@ -21,7 +21,7 @@ var classTrait =
     [ "CanCopy", "classTrait.html#a7191e565a13d05d8053f510c98195814", null ],
     [ "CanDrink", "classTrait.html#af2cfd467256e84bf8e266705b6714af6", null ],
     [ "CanEat", "classTrait.html#a828119de5defe5508d1552e59bcbc5d1", null ],
-    [ "CanOffer", "classTrait.html#aa6c33621a7717c81597225d997f28aef", null ],
+    [ "CanOffer", "classTrait.html#a0331a52910261bfd97627e4f6fa19145", null ],
     [ "CanRead", "classTrait.html#a50ff3f794150d62da8471d3fb73b77ed", null ],
     [ "CanStackTo", "classTrait.html#a4b2d59088504ce0145c3096fb99645fc", null ],
     [ "CanUse", "classTrait.html#a164af9b099be75ec2ddc7d1d750727ea", null ],
