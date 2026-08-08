@@ -37,6 +37,8 @@ public class UICurrency : EMono
 		public bool casino;
 
 		public bool weight;
+
+		public bool ticketSky;
 	}
 
 	public class Item
@@ -105,6 +107,10 @@ public class UICurrency : EMono
 		if (options.ecopo)
 		{
 			Add(EMono.sources.cards.map["ecopo"].GetSprite(), "ecopo", () => EMono.pc.GetCurrency("ecopo").ToString("#,0") ?? "");
+		}
+		if (options.ticketSky)
+		{
+			Add(EMono.sources.cards.map["ticket_sky"].GetSprite(), "ticket_sky", () => EMono.pc.GetCurrency("ticket_sky").ToString("#,0") ?? "");
 		}
 		if (options.influence)
 		{

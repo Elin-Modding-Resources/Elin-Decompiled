@@ -85,7 +85,7 @@ public class SpatialManager : EClass
 			return list;
 		}
 		List<Zone> list2 = (from a in map.Values.OfType<Zone>()
-			where a != EClass._zone && a.IsReturnLocation && a.GetTopZone().visitCount > 0 && (a.GetTopZone().FindDeepestZone() == a || EClass.pc.homeZone == a)
+			where a != EClass._zone && a.IsReturnLocation && a.GetTopZone().visitCount > 0 && (a.GetTopZone().FindDeepestZone() == a || EClass.pc.homeZone == a) && (!EClass.game.IsSurvival || a.IsNefia)
 			select a).ToList();
 		list2.Sort((Zone a, Zone b) => a.GetSortVal() - b.GetSortVal());
 		return list2;

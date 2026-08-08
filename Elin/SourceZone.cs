@@ -36,6 +36,8 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 
 		public string[] tag;
 
+		public int costSkyTravel;
+
 		public int cost;
 
 		public int dev;
@@ -85,15 +87,16 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 		["idGen"] = 12,
 		["idPlaylist"] = 13,
 		["tag"] = 14,
-		["cost"] = 15,
-		["dev"] = 16,
-		["image"] = 17,
-		["pos"] = 18,
-		["questTag"] = 19,
-		["textFlavor_JP"] = 20,
-		["textFlavor"] = 21,
-		["detail_JP"] = 22,
-		["detail"] = 23
+		["costSkyTravel"] = 15,
+		["cost"] = 16,
+		["dev"] = 17,
+		["image"] = 18,
+		["pos"] = 19,
+		["questTag"] = 20,
+		["textFlavor_JP"] = 21,
+		["textFlavor"] = 22,
+		["detail_JP"] = 23,
+		["detail"] = 24
 	};
 
 	public static readonly IReadOnlyDictionary<string, string> TypeMapping = new Dictionary<string, string>
@@ -113,6 +116,7 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 		["idGen"] = "string",
 		["idPlaylist"] = "string",
 		["tag"] = "string[]",
+		["costSkyTravel"] = "int",
 		["cost"] = "int",
 		["dev"] = "int",
 		["image"] = "string",
@@ -145,15 +149,16 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 			idGen = SourceData.GetString(12),
 			idPlaylist = SourceData.GetString(13),
 			tag = SourceData.GetStringArray(14),
-			cost = SourceData.GetInt(15),
-			dev = SourceData.GetInt(16),
-			image = SourceData.GetString(17),
-			pos = SourceData.GetIntArray(18),
-			questTag = SourceData.GetStringArray(19),
-			textFlavor_JP = SourceData.GetString(20),
-			textFlavor = SourceData.GetString(21),
-			detail_JP = SourceData.GetString(22),
-			detail = SourceData.GetString(23)
+			costSkyTravel = SourceData.GetInt(15),
+			cost = SourceData.GetInt(16),
+			dev = SourceData.GetInt(17),
+			image = SourceData.GetString(18),
+			pos = SourceData.GetIntArray(19),
+			questTag = SourceData.GetStringArray(20),
+			textFlavor_JP = SourceData.GetString(21),
+			textFlavor = SourceData.GetString(22),
+			detail_JP = SourceData.GetString(23),
+			detail = SourceData.GetString(24)
 		};
 	}
 
@@ -176,6 +181,7 @@ public class SourceZone : SourceDataString<SourceZone.Row>
 			idGen = SourceData.GetString(mapping["idGen"]),
 			idPlaylist = SourceData.GetString(mapping["idPlaylist"]),
 			tag = SourceData.GetStringArray(mapping["tag"]),
+			costSkyTravel = SourceData.GetInt(mapping["costSkyTravel"]),
 			cost = SourceData.GetInt(mapping["cost"]),
 			dev = SourceData.GetInt(mapping["dev"]),
 			image = SourceData.GetString(mapping["image"]),

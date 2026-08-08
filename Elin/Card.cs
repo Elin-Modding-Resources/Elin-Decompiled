@@ -5351,17 +5351,24 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		bool isUserZone = EClass._zone.IsUserZone;
 		bool flag = EClass._zone is Zone_Music;
 		List<Card> list = new List<Card>();
-		if (!IsPCFaction && !isUserZone && sourceCard.idActor.IsEmpty())
+		if (!IsPCFactionOrMinion && !isUserZone && sourceCard.idActor.IsEmpty())
 		{
 			int i2 = 500;
-			if (this.rarity >= Rarity.Legendary)
-			{
-				i2 = ((!EClass.player.codex.DroppedCard(id)) ? 1 : 10);
-				EClass.player.codex.MarkCardDrop(id);
-			}
 			if (trait is TraitAdventurerBacker)
 			{
 				i2 = 10;
+			}
+			if (this.rarity >= Rarity.Legendary)
+			{
+				if (!EClass.player.codex.DroppedCard(id))
+				{
+					i2 = 0;
+					EClass.player.codex.MarkCardDrop(id);
+				}
+				else
+				{
+					i2 = 10;
+				}
 			}
 			if (chance(i2))
 			{
@@ -5720,13 +5727,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		bool chance(int i)
 		{
 			i = i * 100 / (100 + EClass.player.codex.GetOrCreate(id).BonusDropLv * 10);
-			if (i < 1)
-			{
-				i = 1;
-			}
 			if (IsMinion)
 			{
 				i *= 5;
+			}
+			if (i < 1)
+			{
+				i = 1;
 			}
 			if (EClass.rnd(i) == 0)
 			{

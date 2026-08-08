@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using HeathenEngineering.SteamworksIntegration;
@@ -119,33 +121,108 @@ public class Steam : MonoBehaviour
 		};
 		p.UpdateMeta(updateOnly: true);
 		currentPackage = p;
-		UgcQuery myPublished = UgcQuery.GetMyPublished();
-		myPublished.SetReturnKeyValueTags(tags: true);
-		myPublished.Execute(CreateUserContent2);
+		QueryAllMyPublished(CreateOrUpdateUserContent, delegate(string error)
+		{
+			LayerProgress.completed = true;
+			Debug.LogError(error);
+			Dialog.Ok("mod_publish_error");
+		});
 	}
 
-	private void CreateUserContent2(UgcQuery query)
+	public static void QueryAllMyPublished(Action<List<WorkshopItem>> onComplete, Action<string> onFail = null, float timeout = 10f)
+	{
+		List<WorkshopItem> results = new List<WorkshopItem>();
+		HashSet<PublishedFileId_t> ids = new HashSet<PublishedFileId_t>();
+		uint page = 1u;
+		bool done = false;
+		UgcQuery query = UgcQuery.GetMyPublished();
+		ExecutePage();
+		if (!done && (bool)Instance)
+		{
+			Instance.StartCoroutine(Timeout());
+		}
+		void ExecutePage()
+		{
+			query.SetReturnKeyValueTags(tags: true);
+			if (!query.Execute(HandleResults))
+			{
+				ReportError("UgcQuery.Execute failed at page " + page);
+			}
+		}
+		void HandleResults(UgcQuery q)
+		{
+			if (!done)
+			{
+				results.AddRange(q.ResultsList.Where((WorkshopItem r) => ids.Add(r.FileId)));
+				if (q.ResultsList.Count == 0 || page >= q.pageCount)
+				{
+					done = true;
+					query.Dispose();
+					onComplete?.Invoke(results);
+				}
+				else
+				{
+					query.SetPage(++page);
+					ExecutePage();
+				}
+			}
+		}
+		void ReportError(string error)
+		{
+			if (!done)
+			{
+				done = true;
+				query.Dispose();
+				if (onFail != null)
+				{
+					onFail(error);
+				}
+				else
+				{
+					Debug.LogError(error);
+				}
+			}
+		}
+		IEnumerator Timeout()
+		{
+			uint lastPage = page;
+			float time = Time.realtimeSinceStartup;
+			while (!done)
+			{
+				if (lastPage != page)
+				{
+					lastPage = page;
+					time = Time.realtimeSinceStartup;
+				}
+				if (Time.realtimeSinceStartup - time > timeout)
+				{
+					ReportError("UgcQuery timed out at page " + page + " (" + results.Count + " items fetched)");
+					break;
+				}
+				yield return null;
+			}
+		}
+	}
+
+	private void CreateOrUpdateUserContent(List<WorkshopItem> items)
 	{
 		Debug.Log("Creating Content2");
 		BaseModPackage baseModPackage = currentPackage;
-		if (query.ResultsList != null)
+		Debug.Log(items.Count);
+		foreach (WorkshopItem item in items)
 		{
-			Debug.Log(query.ResultsList.Count);
-		}
-		foreach (WorkshopItem results in query.ResultsList)
-		{
-			if (results.keyValueTags == null)
+			if (item.keyValueTags.IsEmpty())
 			{
 				continue;
 			}
-			StringKeyValuePair[] keyValueTags = results.keyValueTags;
+			StringKeyValuePair[] keyValueTags = item.keyValueTags;
 			for (int i = 0; i < keyValueTags.Length; i++)
 			{
 				StringKeyValuePair stringKeyValuePair = keyValueTags[i];
-				if (stringKeyValuePair.key == "id" && stringKeyValuePair.value == baseModPackage.id && results.Owner.id == User.Client.Id)
+				if (stringKeyValuePair.key == "id" && stringKeyValuePair.value == baseModPackage.id && item.Owner.IsMe)
 				{
 					Debug.Log("Updating Content");
-					UpdateUserContent(results.FileId);
+					UpdateUserContent(item.FileId);
 					return;
 				}
 			}

@@ -316,7 +316,7 @@ public class Scene : EMono
 				EMono.player.flags.OnEnterZone();
 				if (EMono._zone == EMono.pc.homeZone)
 				{
-					EMono.pc.faith.Revelation("welcome");
+					EMono.pc.faith.Revelation("welcome", EMono.pc);
 				}
 				if (EMono._zone.Boss != null && EMono._zone.Boss.ExistsOnMap)
 				{

@@ -3309,6 +3309,19 @@ public class Zone : Spatial, ICardParent, IInspect
 		return max;
 	}
 
+	public int GetCostSkyTravel()
+	{
+		if (base.source.costSkyTravel > 0)
+		{
+			return base.source.costSkyTravel;
+		}
+		if (EClass.game.IsSurvival)
+		{
+			return Mathf.Clamp(10 + EClass.curve(DangerLv, 50, 10), 1, 200);
+		}
+		return 0;
+	}
+
 	public List<Element> ListLandFeats()
 	{
 		if (landFeats == null)

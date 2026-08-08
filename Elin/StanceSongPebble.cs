@@ -12,7 +12,7 @@ public class StanceSongPebble : BaseSong
 			}
 			else
 			{
-				item.GetCondition<ConSongPebble>()?.SetValue(10, owner.Evalue(1294));
+				item.GetCondition<ConSongPebble>()?.SetValue(10 + owner.Evalue(1294) * 2, owner.Evalue(1294));
 			}
 		}
 	}

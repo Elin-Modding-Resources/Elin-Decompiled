@@ -164,11 +164,11 @@ public class Religion : EClass
 		return list[6].ToTitleCase().TagColor(FontColor.Good);
 	}
 
-	public virtual void Revelation(string idTalk, int chance = 100)
+	public virtual void Revelation(string idTalk, Card c, int chance = 100)
 	{
 		if (!IsEyth && EClass.rnd(100) <= chance)
 		{
-			Talk(idTalk, EClass.pc);
+			Talk(idTalk, c);
 		}
 	}
 
@@ -350,7 +350,7 @@ public class Religion : EClass
 		}
 		if (type != ConvertType.Campaign)
 		{
-			EClass.pc.c_daysWithGod = 0;
+			c.c_daysWithGod = 0;
 		}
 		Msg.Say("worship", Name);
 		Talk("worship", c);
@@ -518,7 +518,7 @@ public class Religion : EClass
 			p = 200;
 			break;
 		}
-		thing.ChangeWeight(EClass.pc.WeightLimit / 4 + 1000);
+		thing.ChangeWeight(c.WeightLimit / 4 + 1000);
 		c.AddThing(thing);
 		c.AddCondition<ConWrath>(p);
 	}

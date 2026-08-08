@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class TraitContainer : TraitBaseContainer
 {
 	public override bool CanStack => false;
@@ -76,6 +78,8 @@ public class TraitContainer : TraitBaseContainer
 		}
 		else if (LayerInventory.CreateContainer(owner.Thing) != null)
 		{
+			TooltipManager.Instance.HideTooltips(immediate: true);
+			Debug.Log("a");
 			if (InvStyle.sound != null)
 			{
 				InvStyle.sound.Play();

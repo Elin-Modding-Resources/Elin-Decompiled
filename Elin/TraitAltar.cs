@@ -73,11 +73,11 @@ public class TraitAltar : Trait
 		}
 	}
 
-	public override bool CanOffer(Card c)
+	public override bool CanOffer(Chara cc, Card c)
 	{
 		if (c != null && c.HasTag(CTAG.godArtifact))
 		{
-			if (EClass.pc.IsEyth && EClass.pc.HasElement(1228))
+			if (cc.IsEyth && cc.HasElement(1228))
 			{
 				if (IsEyth || Deity.IsValidArtifact(c.id))
 				{
@@ -89,7 +89,7 @@ public class TraitAltar : Trait
 				return true;
 			}
 		}
-		if (base.CanOffer(c) && (EClass.pc.faith.GetOfferingValue(c as Thing) > 0 || c.id == "water") && !c.isCopy)
+		if (base.CanOffer(cc, c) && (cc.faith.GetOfferingValue(c as Thing) > 0 || c.id == "water") && !c.isCopy)
 		{
 			return !c.HasElement(764);
 		}
@@ -104,7 +104,7 @@ public class TraitAltar : Trait
 		}
 		if (t.id == "water")
 		{
-			if (Deity != EClass.pc.faith)
+			if (Deity != c.faith)
 			{
 				if (t.blessedState == BlessedState.Cursed)
 				{
@@ -112,8 +112,8 @@ public class TraitAltar : Trait
 					return;
 				}
 				Msg.Say("waterCurse", t);
-				EClass.pc.PlayEffect("curse");
-				EClass.pc.PlaySound("curse3");
+				c.PlayEffect("curse");
+				c.PlaySound("curse3");
 				t.SetBlessedState(BlessedState.Cursed);
 			}
 			else if (t.blessedState == BlessedState.Blessed)
@@ -123,55 +123,55 @@ public class TraitAltar : Trait
 			else
 			{
 				Msg.Say("waterBless", t);
-				EClass.pc.PlayEffect("revive");
-				EClass.pc.PlaySound("revive");
+				c.PlayEffect("revive");
+				c.PlaySound("revive");
 				t.SetBlessedState(BlessedState.Blessed);
 			}
 			return;
 		}
 		if (t.HasElement(766) && !Deity.IsEyth)
 		{
-			Deity.PunishTakeOver(EClass.pc);
+			Deity.PunishTakeOver(c);
 			return;
 		}
-		if (!IsBranchAltar && EClass.pc.IsEyth && !EClass.pc.HasElement(1228))
+		if (!IsBranchAltar && c.IsEyth && !c.HasElement(1228))
 		{
-			EClass.pc.Say("god_offerEyth", owner, t);
+			c.Say("god_offerEyth", owner, t);
 			return;
 		}
-		EClass.pc.Say("god_offer", owner, t, Deity.Name);
-		if (!CanOffer(t))
+		c.Say("god_offer", owner, t, Deity.Name);
+		if (!CanOffer(c, t))
 		{
-			EClass.pc.Say("nothingHappens", owner, t);
+			c.Say("nothingHappens", owner, t);
 			return;
 		}
 		Effect.Get("debuff").Play(owner.pos);
-		EClass.pc.PlaySound("offering");
+		c.PlaySound("offering");
 		if (IsBranchAltar)
 		{
 			Msg.Say("nothingHappens");
 		}
-		else if (IsEyth && !EClass.pc.HasElement(1228))
+		else if (IsEyth && !c.HasElement(1228))
 		{
-			if (EClass.pc.IsEyth)
+			if (c.IsEyth)
 			{
 				Msg.Say("nothingHappens");
 			}
 			else
 			{
-				Msg.Say("takeover_empty", EClass.pc.faith.Name);
-				TakeOver();
+				Msg.Say("takeover_empty", c.faith.Name);
+				TakeOver(c);
 				_OnOffer(c, t, 2);
 			}
 		}
 		else
 		{
-			if (t.HasTag(CTAG.godArtifact) && (t.c_idDeity == Deity.id || (EClass.pc.IsEyth && EClass.pc.HasElement(1228))))
+			if (t.HasTag(CTAG.godArtifact) && (t.c_idDeity == Deity.id || (c.IsEyth && c.HasElement(1228))))
 			{
 				_ = t.encLV;
 				t.Destroy();
 				Thing thing = EClass.game.religions.Reforge(t.id);
-				if (EClass.pc.IsEyth && EClass.pc.HasElement(1228) && IsEyth)
+				if (c.IsEyth && c.HasElement(1228) && IsEyth)
 				{
 					thing.c_idDeity = EClass.game.religions.Eyth.id;
 				}
@@ -183,31 +183,31 @@ public class TraitAltar : Trait
 				}
 				return;
 			}
-			if (EClass.pc.IsEyth && !EClass.pc.HasElement(1228))
+			if (c.IsEyth && !c.HasElement(1228))
 			{
 				Msg.Say("nothingHappens");
 				return;
 			}
-			if (Deity.id != EClass.pc.faith.id)
+			if (Deity.id != c.faith.id)
 			{
-				bool flag = EClass.rnd(EClass.pc.faith.GetOfferingValue(t, t.Num)) > EClass.rnd(200) || IsEyth;
-				if (GetParam(1) != null || EClass.pc.IsEyth)
+				bool flag = EClass.rnd(c.faith.GetOfferingValue(t, t.Num)) > EClass.rnd(200) || IsEyth;
+				if (GetParam(1) != null || c.IsEyth)
 				{
 					Msg.Say("nothingHappens");
 					return;
 				}
-				Msg.Say("takeover_versus", EClass.pc.faith.Name, Deity.Name);
+				Msg.Say("takeover_versus", c.faith.Name, Deity.Name);
 				if (flag)
 				{
-					Msg.Say("takeover_success", EClass.pc.faith.TextGodGender);
-					Msg.Say("takeover_success2", EClass.pc.faith.Name);
-					TakeOver();
+					Msg.Say("takeover_success", c.faith.TextGodGender);
+					Msg.Say("takeover_success2", c.faith.Name);
+					TakeOver(c);
 					_OnOffer(c, t, 5);
 				}
 				else
 				{
 					Msg.Say("takeover_fail", Deity.Name);
-					Deity.PunishTakeOver(EClass.pc);
+					Deity.PunishTakeOver(c);
 				}
 			}
 			else
@@ -228,7 +228,7 @@ public class TraitAltar : Trait
 			if (offeringValue >= 200)
 			{
 				Msg.Say("god_offer1", t);
-				EClass.pc.faith.Talk("offer");
+				c.faith.Talk("offer");
 			}
 			else if (offeringValue >= 100)
 			{
@@ -278,17 +278,17 @@ public class TraitAltar : Trait
 		{
 			c.faith.Talk("like");
 		}
-		if (@bool)
+		if (@bool && c.IsPC)
 		{
 			EClass.player.ModKarma(-1);
 		}
 	}
 
-	public void TakeOver()
+	public void TakeOver(Chara c)
 	{
-		SetDeity(EClass.pc.faith.id);
-		EClass.pc.faith.Talk("takeover");
-		EClass.pc.PlayEffect("revive");
+		SetDeity(c.faith.id);
+		c.faith.Talk("takeover");
+		c.PlayEffect("revive");
 		owner.PlayEffect("aura_heaven");
 	}
 }

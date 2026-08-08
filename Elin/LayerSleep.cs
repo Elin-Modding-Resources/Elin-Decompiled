@@ -45,7 +45,7 @@ public class LayerSleep : ELayer
 		pillow = _pillow;
 		maxMin = hours * 60;
 		InvokeRepeating("Advance", repeatRate, repeatRate);
-		ELayer.pc.faith.Revelation("sleep");
+		ELayer.pc.faith.Revelation("sleep", ELayer.pc);
 		ELayer.player.stats.slept++;
 	}
 

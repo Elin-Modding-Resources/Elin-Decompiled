@@ -950,7 +950,7 @@ public class Trait : EClass
 		}
 	}
 
-	public virtual bool CanOffer(Card tg)
+	public virtual bool CanOffer(Chara cc, Card tg)
 	{
 		if (tg == null || tg.isChara || tg.trait.CanOnlyCarry)
 		{
@@ -978,7 +978,7 @@ public class Trait : EClass
 		}
 		foreach (Card item in owner.pos.ListCards())
 		{
-			if (CanOffer(item))
+			if (CanOffer(cc, item))
 			{
 				item.renderer.PlayAnime(AnimeID.Shiver);
 			}
@@ -993,7 +993,7 @@ public class Trait : EClass
 		}
 		foreach (Card item in owner.pos.ListCards())
 		{
-			if (CanOffer(item))
+			if (CanOffer(cc, item))
 			{
 				item.Destroy();
 				cc.depression.Mod(100);

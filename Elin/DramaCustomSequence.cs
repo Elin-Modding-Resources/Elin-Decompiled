@@ -77,7 +77,7 @@ public class DramaCustomSequence : EClass
 			}).SetCondition(() => c.interest > 0);
 		}
 		bool flag4 = false;
-		if (!c.IsPCFaction && c.affinity.CanInvite() && !EClass._zone.IsInstance && c.c_bossType == BossType.none)
+		if (!c.IsPCFaction && c.affinity.CanInvite() && !EClass._zone.IsInstance && c.c_bossType == BossType.none && !EClass.game.IsSurvival)
 		{
 			if ((c.trait.IsUnique || c.IsGlobal) && c.GetInt(111) == 0 && !c.IsPCFaction && c.trait.NeedBoutToJoin)
 			{
@@ -217,7 +217,7 @@ public class DramaCustomSequence : EClass
 				{
 					if (EClass.pc.HasElement(1232) || EClass.pc.HasElement(1291))
 					{
-						goto IL_0971;
+						goto IL_0980;
 					}
 					num2 = EClass.pc.HasCondition<StanceMama>();
 				}
@@ -227,23 +227,17 @@ public class DramaCustomSequence : EClass
 				}
 				if (num2)
 				{
-					goto IL_0971;
+					goto IL_0980;
 				}
-				goto IL_0982;
+				goto IL_0991;
 			}
 			if (c.isDrunk || c.HasElement(1275) || EClass.debug.enable)
 			{
 				Choice2(flag2 ? "daBird" : "daTail", "_tail");
 			}
 		}
-		goto IL_0d9b;
-		IL_09c1:
-		Choice2("daBaby", "_baby");
-		goto IL_09d2;
-		IL_0971:
-		Choice2("daMama", "_mama");
-		goto IL_0982;
-		IL_0d9b:
+		goto IL_0daa;
+		IL_0daa:
 		if (c.IsHomeMember())
 		{
 			if (c.IsMaid)
@@ -1715,7 +1709,33 @@ public class DramaCustomSequence : EClass
 		Step("_end");
 		End();
 		return;
-		IL_09d2:
+		IL_09d0:
+		Choice2("daBaby", "_baby");
+		goto IL_09e1;
+		IL_0980:
+		Choice2("daMama", "_mama");
+		goto IL_0991;
+		IL_0991:
+		ConTransmuteHuman condition2 = c.GetCondition<ConTransmuteHuman>();
+		bool num3;
+		if (condition2 == null)
+		{
+			if (c.HasElement(1232))
+			{
+				goto IL_09d0;
+			}
+			num3 = c.HasElement(1291);
+		}
+		else
+		{
+			num3 = condition2.IsBaby;
+		}
+		if (num3)
+		{
+			goto IL_09d0;
+		}
+		goto IL_09e1;
+		IL_09e1:
 		if (c.trait.CanRevive)
 		{
 			Choice2("daRevive", "_revive").DisableSound();
@@ -1784,27 +1804,7 @@ public class DramaCustomSequence : EClass
 		{
 			Choice2("daBlessing", "_blessing");
 		}
-		goto IL_0d9b;
-		IL_0982:
-		ConTransmuteHuman condition2 = c.GetCondition<ConTransmuteHuman>();
-		bool num3;
-		if (condition2 == null)
-		{
-			if (c.HasElement(1232))
-			{
-				goto IL_09c1;
-			}
-			num3 = c.HasElement(1291);
-		}
-		else
-		{
-			num3 = condition2.IsBaby;
-		}
-		if (num3)
-		{
-			goto IL_09c1;
-		}
-		goto IL_09d2;
+		goto IL_0daa;
 		void BackChill()
 		{
 			Method(RumorChill, null, StepDefault);

@@ -11,7 +11,7 @@ public class AI_Offer : AIAct
 	{
 		if (altar != null)
 		{
-			return altar.trait.CanOffer(c);
+			return altar.trait.CanOffer(owner, c);
 		}
 		return false;
 	}

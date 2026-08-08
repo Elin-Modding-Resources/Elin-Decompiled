@@ -1,18 +1,22 @@
 public class TraitLandingPortal : TraitItem
 {
-	public override bool CanBeDestroyed => false;
-
-	public override bool CanOnlyCarry => true;
-
-	public override bool CanPutAway => false;
-
 	public override bool IsAnimeOn => IsOn;
 
 	public override bool UseAltTiles => IsOn;
 
 	public override bool CanUseFromInventory => false;
 
-	public override bool IsOn => EClass.game.survival?.gateZone != null;
+	public override bool IsOn
+	{
+		get
+		{
+			if (EClass.game.IsSurvival && EClass.game.survival.gateZone != null && !EClass.game.survival.gateZone.destryoed && owner.IsInstalled)
+			{
+				return EClass._zone.IsPCFaction;
+			}
+			return false;
+		}
+	}
 
 	public override bool CanUse(Chara c)
 	{
@@ -21,6 +25,11 @@ public class TraitLandingPortal : TraitItem
 
 	public override bool OnUse(Chara c)
 	{
+		if (!EClass.game.IsSurvival)
+		{
+			Msg.SayNothingHappen();
+			return false;
+		}
 		Zone gateZone = EClass.game.survival.gateZone;
 		if (gateZone == null || gateZone.destryoed || gateZone == EClass.game.activeZone || EClass.game.activeZone.IsRegion)
 		{

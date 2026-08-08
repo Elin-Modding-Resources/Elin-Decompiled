@@ -15,7 +15,7 @@ public class InvOwnerOffering : InvOwnerDraglet
 
 	public override bool ShouldShowGuide(Thing t)
 	{
-		return altar.CanOffer(t);
+		return altar.CanOffer(EClass.pc, t);
 	}
 
 	public override void _OnProcess(Thing t)

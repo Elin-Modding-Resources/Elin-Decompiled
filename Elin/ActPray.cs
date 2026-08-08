@@ -82,7 +82,7 @@ public class ActPray : Act
 		if (!passive)
 		{
 			c.Say("pray_answer", c, Act.CC.faith.Name);
-			c.faith.Revelation((EClass.rnd(2) == 0) ? "random" : "chat");
+			c.faith.Revelation((EClass.rnd(2) == 0) ? "random" : "chat", c);
 		}
 		foreach (Chara member in EClass.pc.party.members)
 		{

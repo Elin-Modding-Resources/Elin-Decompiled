@@ -69,9 +69,9 @@ public class ContentConfigOther : ContentConfig
 		{
 			base.config.other.disableMods = on;
 		});
-		toggleExceptionPopup.SetToggle(base.config.other.exceptionPopup, delegate(bool on)
+		toggleExceptionPopup.SetToggle(base.config.other.exceptionPopup2, delegate(bool on)
 		{
-			base.config.other.exceptionPopup = on;
+			base.config.other.exceptionPopup2 = on;
 		});
 		toggleNoCensor.SetToggle(base.config.other.noCensor, delegate(bool on)
 		{

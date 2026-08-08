@@ -5864,7 +5864,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (origin == EClass.pc)
 			{
-				EClass.pc.faith.Revelation("kill", 10);
+				EClass.pc.faith.Revelation("kill", EClass.pc, 10);
 			}
 			else if (origin.IsPCFaction)
 			{

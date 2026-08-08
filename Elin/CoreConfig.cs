@@ -519,7 +519,7 @@ public class CoreConfig : EClass
 
 		public bool disableMods;
 
-		public bool exceptionPopup;
+		public bool exceptionPopup2 = true;
 	}
 
 	[Serializable]

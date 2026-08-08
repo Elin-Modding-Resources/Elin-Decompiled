@@ -60,7 +60,7 @@ public class InvOwnerRecycle : InvOwnerDraglet
 		}
 		if (a != 0)
 		{
-			EClass.pc.Pick(ThingGen.Create("ecopo").SetNum(a / 10 + 1));
+			EClass.pc.Pick(ThingGen.Create((recycle is TraitSkyIncinerator) ? "ticket_sky" : "ecopo").SetNum(a / 10 + 1));
 		}
 		switch (t.id)
 		{

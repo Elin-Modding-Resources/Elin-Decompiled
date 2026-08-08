@@ -326,7 +326,7 @@ public class RecipeManager : EClass
 		List<RecipeSource> list = new List<RecipeSource>();
 		foreach (RecipeSource item in RecipeManager.list)
 		{
-			if (!item.alwaysKnown && !item.noRandomRecipe && (item.NeedFactory || item.IsQuickCraft) && (cat == null || item.row.Category.IsChildOf(cat)) && (!onlyUnlearned || !EClass.player.recipes.knownRecipes.ContainsKey(item.id)) && EClass.pc.Evalue(item.GetReqSkill().id) + 5 + lvBonus >= item.row.LV && !item.row.ContainsTag("hiddenRecipe"))
+			if (!item.alwaysKnown && !item.noRandomRecipe && (item.NeedFactory || item.IsQuickCraft) && (EClass.game.IsSurvival || !item.row.tag.Contains("oneblock_only")) && (cat == null || item.row.Category.IsChildOf(cat)) && (!onlyUnlearned || !EClass.player.recipes.knownRecipes.ContainsKey(item.id)) && EClass.pc.Evalue(item.GetReqSkill().id) + 5 + lvBonus >= item.row.LV && !item.row.ContainsTag("hiddenRecipe"))
 			{
 				list.Add(item);
 			}

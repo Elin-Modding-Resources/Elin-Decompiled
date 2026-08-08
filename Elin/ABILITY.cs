@@ -359,7 +359,7 @@ public class Ability : Act
 		a = EClass.curve(a, 400, 100);
 		if (this is Song)
 		{
-			a = a * Mathf.Max(100 + c.Evalue(411) / 3, 1) / 100 * Mathf.Clamp(50 + EClass.curve(c.Evalue(241), 50, 10, 50) * 2, 1, 300) / 100 * (100 + c.Evalue(1294) * 25) / 100;
+			a = a * Mathf.Max(100 + c.Evalue(411) / 3, 1) / 100 * Mathf.Clamp(50 + EClass.curve(c.Evalue(241), 50, 10, 50) * 2, 1, 300) / 100 * (100 + c.Evalue(1294) * 20) / 100;
 		}
 		else if (this is Spell)
 		{

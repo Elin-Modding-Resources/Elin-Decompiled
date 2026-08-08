@@ -316,6 +316,7 @@ public class ThingGen : CardGen
 			t.Add("medal", EClass.rndHalf(8));
 			t.Add("book_skill", 1, lv);
 			t.Add("book_skill", 1, lv);
+			t.Add("ticket_sky", 25 + EClass.rnd(10));
 			t.c_lockLv /= 3;
 			TryAddScrubber(2);
 			break;
@@ -357,6 +358,10 @@ public class ThingGen : CardGen
 			}
 			TryAddScrubber(30);
 			break;
+		}
+		if (EClass.game.IsSurvival && type != TreasureType.SurvivalRaid && EClass.rnd(3) == 0)
+		{
+			t.Add("ticket_sky", 5 + EClass.rnd(10));
 		}
 		if (type == TreasureType.RandomChest && EClass.rnd(2) == 0)
 		{

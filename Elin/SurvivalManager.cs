@@ -122,15 +122,15 @@ public class SurvivalManager : EClass
 			}
 		}
 
-		public bool gotPortal
+		public bool gotSkyWorkbench
 		{
 			get
 			{
-				return bits[3];
+				return bits[4];
 			}
 			set
 			{
-				bits[3] = value;
+				bits[4] = value;
 			}
 		}
 
@@ -155,6 +155,9 @@ public class SurvivalManager : EClass
 
 	[JsonProperty]
 	public Zone gateZone;
+
+	[JsonProperty]
+	public List<Zone> listGateZone = new List<Zone>();
 
 	public bool IsInRaid => GetRaidEvent() != null;
 
@@ -211,20 +214,44 @@ public class SurvivalManager : EClass
 		}
 		if (EClass.world.date.hour == 0 || EClass.debug.enable)
 		{
-			SetGateZone();
+			RefreshGateZones();
 		}
 	}
 
-	public void SetGateZone()
+	public void RefreshGateZones()
 	{
-		if (EClass.rnd(3) == 0)
+		listGateZone.ForeachReverse(delegate(Zone z)
 		{
-			IEnumerable<Spatial> ie = EClass.game.spatials.map.Values.Where((Spatial z) => z.source.tag.Contains("oneblock"));
-			gateZone = ie.RandomItem() as Zone;
+			if (z == null || z.destryoed)
+			{
+				listGateZone.Remove(z);
+			}
+		});
+		if (listGateZone.Count == 0)
+		{
+			for (int i = 0; i < 3; i++)
+			{
+				if (EClass.rnd(4) == 0)
+				{
+					IEnumerable<Spatial> enumerable = EClass.game.spatials.map.Values.Where((Spatial a) => a.source.costSkyTravel > 0 && !listGateZone.Contains(a) && a != gateZone);
+					if (enumerable.Count() > 0)
+					{
+						listGateZone.Add(enumerable.RandomItem() as Zone);
+					}
+				}
+				else
+				{
+					Zone item = EClass.world.region.CreateRandomSite(new Point(1, 1), (EClass.rnd(5) == 0) ? "dungeon_water" : null, updateMesh: false);
+					listGateZone.Add(item);
+				}
+			}
 		}
-		else
+		foreach (Zone item2 in listGateZone)
 		{
-			gateZone = EClass.world.region.CreateRandomSite(new Point(1, 1), (EClass.rnd(5) == 0) ? "dungeon_water" : null, updateMesh: false);
+			if (item2.dateExpire > 0)
+			{
+				item2.dateExpire = EClass.world.date.GetRaw() + 10080;
+			}
 		}
 	}
 
@@ -436,10 +463,10 @@ public class SurvivalManager : EClass
 				MeteorThing(pos2, "rolling_fortune", install: true);
 				flags.gotGaragara = true;
 			}
-			else if (EClass.player.stats.days > 1 && !flags.gotPortal)
+			else if (EClass.player.stats.days > 1 && !flags.gotSkyWorkbench)
 			{
-				MeteorThing(pos2, "teleporter_gate", install: true);
-				flags.gotPortal = true;
+				MeteorThing(pos2, ThingGen.CreateRecipe("workbench_sky"));
+				flags.gotSkyWorkbench = true;
 			}
 			NextObj();
 			return true;
