@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classFaction.html#afdbf9e47afeaa36169a0a4c467719d12":[1,0,573,42],
 "classFactionBranch.html":[1,0,575],
 "classFactionBranch.html#a02254a7af1e1daeca363225270f9dde6":[1,0,575,81],
 "classFactionBranch.html#a035d377632c16860b1fb757e6d905400":[1,0,575,77],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "classFortuneRollData.html#aa8a67c206994db0250ddc0bf128c2f98":[1,0,593,9],
 "classFortuneRollData.html#af2da16d9055a44f75a9675d89b2f2b9d":[1,0,593,6],
 "classFortuneRollData.html#afcf355986e3bb37e90c40096899f073e":[1,0,593,2],
-"classFortuneRollData_1_1Prize.html":[1,0,593,0],
-"classFortuneRollData_1_1Prize.html#a032c73bc3fd549abf7e8e2e449be9170":[1,0,593,0,2]
+"classFortuneRollData_1_1Prize.html":[1,0,593,0]
 };

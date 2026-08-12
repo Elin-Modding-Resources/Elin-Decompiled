@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"classInvOwner_1_1Transaction.html#a4b8e7de3da63be19ac567f00f2e3b9cf":[1,0,767,4,9],
 "classInvOwner_1_1Transaction.html#a51b38c2d27fab3d29665ed30012366fb":[1,0,767,4,13],
 "classInvOwner_1_1Transaction.html#a5b03e99859db856c3051bb6c22ce3fd2":[1,0,767,4,18],
 "classInvOwner_1_1Transaction.html#a655b7399f737d4abdb6054d131f7899d":[1,0,767,4,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "classLangGeneral.html#aa4193c6d3928c7ce5ca15b57e5dca5cc":[1,0,835,3],
 "classLangGeneral_1_1Row.html":[1,0,835,0],
 "classLangGeneral_1_1Row.html#a6d3cd38f27556ce0dacd6130f9c7ce7a":[1,0,835,0,0],
-"classLangGeneral_1_1Row.html#aa0b98dcf071999aabf8b76ca44509ac1":[1,0,835,0,2],
-"classLangGeneral_1_1Row.html#acc848d4cdf6110544b80fb6b01a8ee96":[1,0,835,0,1]
+"classLangGeneral_1_1Row.html#aa0b98dcf071999aabf8b76ca44509ac1":[1,0,835,0,2]
 };

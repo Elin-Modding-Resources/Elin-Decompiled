@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.334 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.335 Nightly</span>
    </div>
   </td>
  </tr>
@@ -404,35 +404,39 @@ $(document).ready(function(){initNavTree('Msg_8cs_source.html',''); initResizabl
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    {</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">int</span>.TryParse(n, out var result))</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        }</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classMsg.html#a026edeb7ff47d163fd1ec45d0f06a324">IsThirdPerson</a>(result);</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno"><a class="line" href="classMsg.html#a09a011f875f35f4fcd3184217c6d3d17">  318</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classMsg.html#a09a011f875f35f4fcd3184217c6d3d17">IsThirdPerson</a>(<span class="keywordtype">int</span> i)</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    {</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="keywordflow">return</span> i &lt;= 1;</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    }</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="classMsg.html#a37bcb7ed3c3f2c326702dd3e0f36e5cd">  323</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMsg.html#a37bcb7ed3c3f2c326702dd3e0f36e5cd">NewLine</a>()</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_property" href="classMsg.html#ad0b26607afbb40ab39071d22793df03a">mainText</a>)</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        {</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            <a class="code hl_property" href="classMsg.html#ad0b26607afbb40ab39071d22793df03a">mainText</a>.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    }</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="classMsg.html#a96f496308378f45157676f4937fea6ae">  331</a></span>    <span class="keyword">public</span> unsafe <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMsg.html#a96f496308378f45157676f4937fea6ae">ToUpperFirst</a>(<span class="keywordtype">string</span> str)</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    {</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            fixed (<span class="keywordtype">char</span>* ptr = str)</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            {</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                *ptr = <span class="keywordtype">char</span>.ToUpper(*ptr);</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            }</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        }</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>}</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">if</span> (n.IsEmpty() || !<span class="keywordtype">int</span>.TryParse(n.Split(<span class="charliteral">&#39; &#39;</span>)[0], out var result2))</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classMsg.html#a026edeb7ff47d163fd1ec45d0f06a324">IsThirdPerson</a>(result2);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classMsg.html#a026edeb7ff47d163fd1ec45d0f06a324">IsThirdPerson</a>(result);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="classMsg.html#a09a011f875f35f4fcd3184217c6d3d17">  322</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classMsg.html#a09a011f875f35f4fcd3184217c6d3d17">IsThirdPerson</a>(<span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <span class="keywordflow">return</span> i &lt;= 1;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="classMsg.html#a37bcb7ed3c3f2c326702dd3e0f36e5cd">  327</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMsg.html#a37bcb7ed3c3f2c326702dd3e0f36e5cd">NewLine</a>()</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">if</span> ((<span class="keywordtype">bool</span>)<a class="code hl_property" href="classMsg.html#ad0b26607afbb40ab39071d22793df03a">mainText</a>)</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            <a class="code hl_property" href="classMsg.html#ad0b26607afbb40ab39071d22793df03a">mainText</a>.<a class="code hl_function" href="classWidgetMainText.html#a386395593032ba460d80c6c14fad0833">NewLine</a>();</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="classMsg.html#a96f496308378f45157676f4937fea6ae">  335</a></span>    <span class="keyword">public</span> unsafe <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMsg.html#a96f496308378f45157676f4937fea6ae">ToUpperFirst</a>(<span class="keywordtype">string</span> str)</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        <span class="keywordflow">if</span> (str != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            fixed (<span class="keywordtype">char</span>* ptr = str)</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            {</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                *ptr = <span class="keywordtype">char</span>.ToUpper(*ptr);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>}</div>
 <div class="ttc" id="aContainerFlag2_8cs_html_a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5"><div class="ttname"><a href="ContainerFlag2_8cs.html#a171ea4693a91779e2602944ff6a522b7a5dd2199ad68327cc76d583b057aee7d5">ContainerFlag2.card</a></div><div class="ttdeci">@ card</div></div>
 <div class="ttc" id="aFOWType_8cs_html_a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295"><div class="ttname"><a href="FOWType_8cs.html#a3f6b5b53aa6519c688d9ccc1b4269cf8acb5feb1b7314637725a2e73bdc9f7295">FOWType.Color</a></div><div class="ttdeci">@ Color</div></div>
 <div class="ttc" id="aclassCard_html"><div class="ttname"><a href="classCard.html">Card</a></div><div class="ttdef"><b>Definition:</b> <a href="Card_8cs_source.html#l00010">Card.cs:11</a></div></div>
@@ -477,11 +481,11 @@ $(document).ready(function(){initNavTree('Msg_8cs_source.html',''); initResizabl
 <div class="ttc" id="aclassMsg_html"><div class="ttname"><a href="classMsg.html">Msg</a></div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00004">Msg.cs:5</a></div></div>
 <div class="ttc" id="aclassMsg_html_a026edeb7ff47d163fd1ec45d0f06a324"><div class="ttname"><a href="classMsg.html#a026edeb7ff47d163fd1ec45d0f06a324">Msg.IsThirdPerson</a></div><div class="ttdeci">static bool IsThirdPerson(Card c)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00296">Msg.cs:296</a></div></div>
 <div class="ttc" id="aclassMsg_html_a04aa23131b1feb5338fed5cf0025ba7a"><div class="ttname"><a href="classMsg.html#a04aa23131b1feb5338fed5cf0025ba7a">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang, int i, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00086">Msg.cs:86</a></div></div>
-<div class="ttc" id="aclassMsg_html_a09a011f875f35f4fcd3184217c6d3d17"><div class="ttname"><a href="classMsg.html#a09a011f875f35f4fcd3184217c6d3d17">Msg.IsThirdPerson</a></div><div class="ttdeci">static bool IsThirdPerson(int i)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00318">Msg.cs:318</a></div></div>
+<div class="ttc" id="aclassMsg_html_a09a011f875f35f4fcd3184217c6d3d17"><div class="ttname"><a href="classMsg.html#a09a011f875f35f4fcd3184217c6d3d17">Msg.IsThirdPerson</a></div><div class="ttdeci">static bool IsThirdPerson(int i)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00322">Msg.cs:322</a></div></div>
 <div class="ttc" id="aclassMsg_html_a0e412320e4b02e4689dc7db87f959479"><div class="ttname"><a href="classMsg.html#a0e412320e4b02e4689dc7db87f959479">Msg.Say</a></div><div class="ttdeci">static string Say(string idLang)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00091">Msg.cs:91</a></div></div>
 <div class="ttc" id="aclassMsg_html_a19c89446f66b40498a43cb601141c3ab"><div class="ttname"><a href="classMsg.html#a19c89446f66b40498a43cb601141c3ab">Msg.GetGameText</a></div><div class="ttdeci">static string GetGameText(string idLang, Card card=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00257">Msg.cs:257</a></div></div>
 <div class="ttc" id="aclassMsg_html_a37ba124f651598df5482ab53313361f7"><div class="ttname"><a href="classMsg.html#a37ba124f651598df5482ab53313361f7">Msg.TalkHomeMemeber</a></div><div class="ttdeci">static PopItem TalkHomeMemeber(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00224">Msg.cs:224</a></div></div>
-<div class="ttc" id="aclassMsg_html_a37bcb7ed3c3f2c326702dd3e0f36e5cd"><div class="ttname"><a href="classMsg.html#a37bcb7ed3c3f2c326702dd3e0f36e5cd">Msg.NewLine</a></div><div class="ttdeci">static void NewLine()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00323">Msg.cs:323</a></div></div>
+<div class="ttc" id="aclassMsg_html_a37bcb7ed3c3f2c326702dd3e0f36e5cd"><div class="ttname"><a href="classMsg.html#a37bcb7ed3c3f2c326702dd3e0f36e5cd">Msg.NewLine</a></div><div class="ttdeci">static void NewLine()</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00327">Msg.cs:327</a></div></div>
 <div class="ttc" id="aclassMsg_html_a391daaba1e29bf9345d679e9b34672d4"><div class="ttname"><a href="classMsg.html#a391daaba1e29bf9345d679e9b34672d4">Msg.SayGod</a></div><div class="ttdeci">static void SayGod(string s, Card owner=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00111">Msg.cs:111</a></div></div>
 <div class="ttc" id="aclassMsg_html_a3cc599ee5c746c98cc7dd10bc74f4736"><div class="ttname"><a href="classMsg.html#a3cc599ee5c746c98cc7dd10bc74f4736">Msg.AquireItem</a></div><div class="ttdeci">static void AquireItem(string itemName)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00145">Msg.cs:145</a></div></div>
 <div class="ttc" id="aclassMsg_html_a47ad759e4dcde09f10e037c2819f4652"><div class="ttname"><a href="classMsg.html#a47ad759e4dcde09f10e037c2819f4652">Msg.feed</a></div><div class="ttdeci">static WidgetFeed feed</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00018">Msg.cs:18</a></div></div>
@@ -497,7 +501,7 @@ $(document).ready(function(){initNavTree('Msg_8cs_source.html',''); initResizabl
 <div class="ttc" id="aclassMsg_html_a7eb4385ef8e01803687aaf2f9c611f62"><div class="ttname"><a href="classMsg.html#a7eb4385ef8e01803687aaf2f9c611f62">Msg.colors</a></div><div class="ttdeci">static MsgColors colors</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00020">Msg.cs:20</a></div></div>
 <div class="ttc" id="aclassMsg_html_a8a8fd565b1b66a02083a308cf08a149a"><div class="ttname"><a href="classMsg.html#a8a8fd565b1b66a02083a308cf08a149a">Msg.thirdPerson2</a></div><div class="ttdeci">static ThirstPersonInfo thirdPerson2</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00008">Msg.cs:8</a></div></div>
 <div class="ttc" id="aclassMsg_html_a8ec5b9710dad865363a2c8e5a95ed518"><div class="ttname"><a href="classMsg.html#a8ec5b9710dad865363a2c8e5a95ed518">Msg.GetRawText</a></div><div class="ttdeci">static string GetRawText(string idLang, string ref1, string ref2=null, string ref3=null, string ref4=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00037">Msg.cs:37</a></div></div>
-<div class="ttc" id="aclassMsg_html_a96f496308378f45157676f4937fea6ae"><div class="ttname"><a href="classMsg.html#a96f496308378f45157676f4937fea6ae">Msg.ToUpperFirst</a></div><div class="ttdeci">static unsafe void ToUpperFirst(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00331">Msg.cs:331</a></div></div>
+<div class="ttc" id="aclassMsg_html_a96f496308378f45157676f4937fea6ae"><div class="ttname"><a href="classMsg.html#a96f496308378f45157676f4937fea6ae">Msg.ToUpperFirst</a></div><div class="ttdeci">static unsafe void ToUpperFirst(string str)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00335">Msg.cs:335</a></div></div>
 <div class="ttc" id="aclassMsg_html_a9b776dcdf5d909c375e4eb620bfb9d63"><div class="ttname"><a href="classMsg.html#a9b776dcdf5d909c375e4eb620bfb9d63">Msg.GetRawText</a></div><div class="ttdeci">static string GetRawText(string idLang, Card c1, Card c2, string ref1=null, string ref2=null)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00044">Msg.cs:44</a></div></div>
 <div class="ttc" id="aclassMsg_html_a9d0f29a96b3f06131283d4c806101b75"><div class="ttname"><a href="classMsg.html#a9d0f29a96b3f06131283d4c806101b75">Msg.SetColor</a></div><div class="ttdeci">static void SetColor(string id)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00032">Msg.cs:32</a></div></div>
 <div class="ttc" id="aclassMsg_html_aa5b2c871d4d8bd9eda6ece2fbed24309"><div class="ttname"><a href="classMsg.html#aa5b2c871d4d8bd9eda6ece2fbed24309">Msg.SayPic</a></div><div class="ttdeci">static void SayPic(Card c, string lang)</div><div class="ttdef"><b>Definition:</b> <a href="Msg_8cs_source.html#l00176">Msg.cs:176</a></div></div>

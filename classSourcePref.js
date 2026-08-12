@@ -8,6 +8,7 @@ var classSourcePref =
     [ "_bits1", "classSourcePref.html#ae297f0f764b20941ca54a04932546153", null ],
     [ "ints", "classSourcePref.html#ac953060b560b13354232d982721b2be7", null ],
     [ "bypassShadow", "classSourcePref.html#a170b34cbef43b5040438d2edc18ea11a", null ],
+    [ "defaultAltitude", "classSourcePref.html#ad8f7a2c30a7d9f40e54cf8312e237fe1", null ],
     [ "equipX", "classSourcePref.html#aedf586b8cb10d343c68fe65161709391", null ],
     [ "equipY", "classSourcePref.html#a562ee95073038282b6e7e63216abcd54", null ],
     [ "flags", "classSourcePref.html#ab159ab314b866628631fb4f6464f8801", null ],

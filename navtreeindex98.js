@@ -1,5 +1,6 @@
 var NAVTREEINDEX98 =
 {
+"classQuest.html#ac6c1e6c3a2f9b07ff30afdde79a9f6a2":[1,0,1060,30],
 "classQuest.html#ac7af8abe8814309a575f78ba4cefef14":[1,0,1060,25],
 "classQuest.html#ac8f1d5169891d038ac03ec8747e158d4":[1,0,1060,29],
 "classQuest.html#aca0a4b1a83c6772d5e50c636caba08ef":[1,0,1060,57],
@@ -248,6 +249,5 @@ var NAVTREEINDEX98 =
 "classQuestLoytelFarm.html#a5de61c383ad35c495dc4d4bef86a1dee":[1,0,1096,0],
 "classQuestLumiest.html":[1,0,1097],
 "classQuestLumiest.html#a54cc2df6c212876a66c403ede142d19a":[1,0,1097,0],
-"classQuestMain.html":[1,0,1098],
-"classQuestMain.html#a01c18e621e3cd51eb5ed02a2a81a1b8d":[1,0,1098,0]
+"classQuestMain.html":[1,0,1098]
 };

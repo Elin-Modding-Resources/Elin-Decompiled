@@ -1,5 +1,6 @@
 var NAVTREEINDEX99 =
 {
+"classQuestMain.html#a01c18e621e3cd51eb5ed02a2a81a1b8d":[1,0,1098,0],
 "classQuestMain.html#a3fb69e0f9eefb9e11d7b29c3d4c8d8c9":[1,0,1098,2],
 "classQuestMain.html#a6aec6403a35dfccb90505290044e8a1d":[1,0,1098,5],
 "classQuestMain.html#a9164c58095b06ffdcea1d5c6a1716f7e":[1,0,1098,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX99 =
 "classQuestWedding.html#a9999e38c7edae2bb0bfa789f94f00918":[1,0,1137,1],
 "classQuestWedding.html#ad3a2606da7e7ca7031edcc674215bfb9":[1,0,1137,3],
 "classQuestWedding.html#aedf25a2ba28152fd92f1ad1986a5511d":[1,0,1137,4],
-"classQueue.html":[1,0,1138],
-"classQueue.html#a0826a0ca90fa09ad272055106f0dd4f4":[1,0,1138,0]
+"classQueue.html":[1,0,1138]
 };

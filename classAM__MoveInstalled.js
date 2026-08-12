@@ -19,6 +19,7 @@ var classAM__MoveInstalled =
     [ "OnRenderTile", "classAM__MoveInstalled.html#afa90c9a5ecb69e6f4b9ecb552e7b03b8", null ],
     [ "RotateUnderMouse", "classAM__MoveInstalled.html#a5a6521bd35b26764f5a58e8dc0c5c7a1", null ],
     [ "SetTarget", "classAM__MoveInstalled.html#a868aa03da2ec092adeb7a34246c61503", null ],
+    [ "TopHeight", "classAM__MoveInstalled.html#a733f692a78399a977dd96c866f34c96a", null ],
     [ "TryPutAway", "classAM__MoveInstalled.html#a7cc205596b75f55ccac0b0974fb2c09f", null ],
     [ "moldCard", "classAM__MoveInstalled.html#a043f889264546b830927e58cf7c82c12", null ],
     [ "onetime", "classAM__MoveInstalled.html#a4d9f72165bb0d57d61bacd6534116088", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"classConBreath.html":[1,0,326],
 "classConBrightnessOfLife.html":[1,0,327],
 "classConBrightnessOfLife.html#a64d974ca425dd49b06f442b0601a07d4":[1,0,327,1],
 "classConBrightnessOfLife.html#a9bd48f6074c5c31ad072d7104012a250":[1,0,327,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a":[1,0,413,5],
 "classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013":[1,0,413,2],
 "classConTransmute.html#a54071b3bff56fc7b02e39fac45b95c2f":[1,0,413,3],
-"classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,413,7],
-"classConTransmute.html#a8c227bf61fee244b3d011969eb82b3e8":[1,0,413,8]
+"classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,413,7]
 };

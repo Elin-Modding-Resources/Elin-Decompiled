@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.334 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.335 Nightly</span>
    </div>
   </td>
  </tr>
@@ -389,115 +389,110 @@ $(document).ready(function(){initNavTree('SourceThingV_8cs_source.html',''); ini
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            row.recipeKey = row3.<a class="code hl_variable" href="classRenderRow.html#ac8011f6a77ce7474edab024f664ead2c">recipeKey</a>;</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            <span class="keywordflow">if</span> (!row3.<a class="code hl_variable" href="classSourceThingV_1_1Row.html#a522c69d9639305f8e63b7eea88af4d92">parse</a>.IsEmpty())</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                key = row3.<a class="code hl_variable" href="classCardRow.html#a898f4f59778bd1120e31aa5768ec4f3d">_origin</a>;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">switch</span> (key)</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                <span class="keywordtype">string</span>[] parse = row3.<a class="code hl_variable" href="classSourceThingV_1_1Row.html#a522c69d9639305f8e63b7eea88af4d92">parse</a>;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; parse.Length; i++)</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                {</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;lamp_ceil2&quot;</span>:</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;window&quot;</span>:</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;windowL&quot;</span>:</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                    row.idExtra = row3.<a class="code hl_variable" href="classSourceThingV_1_1Row.html#a522c69d9639305f8e63b7eea88af4d92">parse</a>[0];</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                {</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                    <span class="keywordtype">string</span>[] parse = row3.<a class="code hl_variable" href="classSourceThingV_1_1Row.html#a522c69d9639305f8e63b7eea88af4d92">parse</a>;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; parse.Length; i++)</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                    {</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                        <span class="keywordtype">string</span>[] array = parse[i].Split(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                        <span class="keywordflow">switch</span> (array[0])</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                        {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;elec&quot;</span>:</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                            row.electricity = array[1].ToInt();</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;render&quot;</span>:</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                            row._idRenderData = array[1];</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;tiletype&quot;</span>:</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                            row._tileType = array[1];</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;anime&quot;</span>:</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                            row.anime = ((array.Length &lt;= 4) ? ((array.Length &lt;= 3) ? <span class="keyword">new</span> <span class="keywordtype">int</span>[2]</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                            {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                                array[1].ToInt(),</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                                array[2].ToInt()</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                            } : <span class="keyword">new</span> <span class="keywordtype">int</span>[3]</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                            {</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                                array[1].ToInt(),</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                                array[2].ToInt(),</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                                array[3].ToInt()</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                            }) : <span class="keyword">new</span> <span class="keywordtype">int</span>[4]</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                            {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                                array[1].ToInt(),</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                                array[2].ToInt(),</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                                array[3].ToInt(),</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                                array[4].ToInt()</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                            });</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;skin&quot;</span>:</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                        {</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                            <span class="keywordtype">string</span>[] array3 = array[1].Split(<span class="charliteral">&#39;|&#39;</span>);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                            row.skins = <span class="keyword">new</span> <span class="keywordtype">int</span>[array3.Length];</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; array3.Length; k++)</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                            {</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                                row.skins[k] = array3[k].ToInt();</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                            }</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                        }</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;alt&quot;</span>:</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                        {</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                            <span class="keywordtype">string</span>[] array2 = array[1].Split(<span class="charliteral">&#39;|&#39;</span>);</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                            row.altTiles = <span class="keyword">new</span> <span class="keywordtype">int</span>[array2.Length];</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; array2.Length; j++)</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                            {</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                                row.altTiles[j] = array2[j].ToInt();</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                            }</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                            row.ignoreAltFix = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                        }</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;naming&quot;</span>:</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                            row.naming = array[1];</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;ex&quot;</span>:</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                            row.idActorEx = array[1];</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;sound&quot;</span>:</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                            row.idSound = array[1];</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;color&quot;</span>:</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                            row.colorMod = 100;</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;no_color&quot;</span>:</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                            row.colorMod = 0;</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;unique&quot;</span>:</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                            row.quality = 4;</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;ele&quot;</span>:</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                    <span class="keywordtype">string</span>[] array = parse[i].Split(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                    key = array[0];</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                    <span class="keywordflow">switch</span> (key)</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                    {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;elec&quot;</span>:</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                        row.electricity = array[1].ToInt();</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;render&quot;</span>:</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                        row._idRenderData = array[1];</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;tiletype&quot;</span>:</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                        row._tileType = array[1];</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;anime&quot;</span>:</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                        row.anime = ((array.Length &lt;= 4) ? ((array.Length &lt;= 3) ? <span class="keyword">new</span> <span class="keywordtype">int</span>[2]</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                        {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                            array[1].ToInt(),</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                            array[2].ToInt()</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                        } : <span class="keyword">new</span> <span class="keywordtype">int</span>[3]</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                        {</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                            array[1].ToInt(),</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                            array[2].ToInt(),</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                            array[3].ToInt()</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                        }) : <span class="keyword">new</span> <span class="keywordtype">int</span>[4]</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                        {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                            array[1].ToInt(),</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                            array[2].ToInt(),</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                            array[3].ToInt(),</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                            array[4].ToInt()</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                        });</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;skin&quot;</span>:</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                    {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                        <span class="keywordtype">string</span>[] array3 = array[1].Split(<span class="charliteral">&#39;|&#39;</span>);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                        row.skins = <span class="keyword">new</span> <span class="keywordtype">int</span>[array3.Length];</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; array3.Length; k++)</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                        {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                            row.skins[k] = array3[k].ToInt();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                        }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                    }</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;alt&quot;</span>:</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                    {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                        <span class="keywordtype">string</span>[] array2 = array[1].Split(<span class="charliteral">&#39;|&#39;</span>);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                        row.altTiles = <span class="keyword">new</span> <span class="keywordtype">int</span>[array2.Length];</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; array2.Length; j++)</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                        {</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                            row.altTiles[j] = array2[j].ToInt();</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                        }</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                        row.ignoreAltFix = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                    }</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;naming&quot;</span>:</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                        row.naming = array[1];</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;ex&quot;</span>:</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                        row.idActorEx = array[1];</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;extra&quot;</span>:</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                        row.idExtra = array[1];</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;noWindowLight&quot;</span>:</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                        row.idExtra = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                        row.altTiles = (row._altTiles = <span class="keyword">new</span> <span class="keywordtype">int</span>[0]);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;sound&quot;</span>:</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                        row.idSound = array[1];</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;color&quot;</span>:</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                        row.colorMod = 100;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;no_color&quot;</span>:</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                        row.colorMod = 0;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;unique&quot;</span>:</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                        row.quality = 4;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;ele&quot;</span>:</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                    {</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                        <span class="keywordtype">int</span>[] second = <span class="keyword">new</span> <span class="keywordtype">int</span>[2]</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                        {</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                            <span class="keywordtype">int</span>[] second = <span class="keyword">new</span> <span class="keywordtype">int</span>[2]</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                            {</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                                <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#aedcbed2e921b6b58b6ce5111501c0083">GetCurrent</a>().<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[array[1]].id,</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                                array[2].ToInt()</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                            };</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                            row.elements = row.elements.Concat(second).ToArray();</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                        }</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                        }</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    }</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                }</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                }</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            }</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            <a class="code hl_function" href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">OnImportRow</a>(row3, row);</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>            row.OnImportData(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>);</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows.Add(row);</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        }</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        rows.Clear();</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    }</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span> </div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">  403</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">OnImportRow</a>(<a class="code hl_class" href="classSourceThingV_1_1Row.html">Row</a> _r, <a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> c)</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    {</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    }</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>}</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                            <a class="code hl_class" href="classCore.html">Core</a>.<a class="code hl_function" href="classCore.html#aedcbed2e921b6b58b6ce5111501c0083">GetCurrent</a>().<a class="code hl_variable" href="classCore.html#a5806f4914088ef2f871c09cdf90046dd">sources</a>.<a class="code hl_variable" href="classSourceManager.html#aca64230665ba96ef7f9e96164be02578">elements</a>.alias[array[1]].id,</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                            array[2].ToInt()</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                        };</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                        row.elements = row.elements.Concat(second).ToArray();</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                    }</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                    }</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                }</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>            }</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>            <a class="code hl_function" href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">OnImportRow</a>(row3, row);</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            row.OnImportData(<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>);</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>            <a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">sources</a>.<a class="code hl_variable" href="classSourceManager.html#a3a3a04bed405a720e9528d2bce9d99ca">things</a>.rows.Add(row);</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        }</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        rows.Clear();</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    }</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno"><a class="line" href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">  398</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">OnImportRow</a>(<a class="code hl_class" href="classSourceThingV_1_1Row.html">Row</a> _r, <a class="code hl_class" href="classSourceThing.html">SourceThing</a>.<a class="code hl_class" href="classSourceThing_1_1Row.html">Row</a> c)</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    {</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    }</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>}</div>
 <div class="ttc" id="aContainerFlag_8cs_html_a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc"><div class="ttname"><a href="ContainerFlag_8cs.html#a904f9c4e16903183de9d3829a3d3a85ba447b7147e84be512208dcc0995d67ebc">ContainerFlag.item</a></div><div class="ttdeci">@ item</div></div>
 <div class="ttc" id="aPrefFlag_8cs_html_ac9c3f3d0eb1ed76dfc3b1896775718d3"><div class="ttname"><a href="PrefFlag_8cs.html#ac9c3f3d0eb1ed76dfc3b1896775718d3">PrefFlag</a></div><div class="ttdeci">PrefFlag</div><div class="ttdef"><b>Definition:</b> <a href="PrefFlag_8cs_source.html#l00004">PrefFlag.cs:5</a></div></div>
 <div class="ttc" id="aclassCardRow_html_a7afbf45cf14ecf8b27a021a04a2fb291"><div class="ttname"><a href="classCardRow.html#a7afbf45cf14ecf8b27a021a04a2fb291">CardRow.trait</a></div><div class="ttdeci">string[] trait</div><div class="ttdef"><b>Definition:</b> <a href="CardRow_8cs_source.html#l00033">CardRow.cs:33</a></div></div>
@@ -551,7 +546,7 @@ $(document).ready(function(){initNavTree('SourceThingV_8cs_source.html',''); ini
 <div class="ttc" id="aclassSourceThingV_html_a7ed0194879370bb72139b0b2e8bc8990"><div class="ttname"><a href="classSourceThingV.html#a7ed0194879370bb72139b0b2e8bc8990">SourceThingV.CreateRowByMapping</a></div><div class="ttdeci">override Row CreateRowByMapping(IReadOnlyDictionary&lt; string, int &gt; mapping)</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00104">SourceThingV.cs:104</a></div></div>
 <div class="ttc" id="aclassSourceThingV_html_aa74106d8899dd7b28fa96ac690c32744"><div class="ttname"><a href="classSourceThingV.html#aa74106d8899dd7b28fa96ac690c32744">SourceThingV.OnAfterImportData</a></div><div class="ttdeci">override void OnAfterImportData()</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00190">SourceThingV.cs:190</a></div></div>
 <div class="ttc" id="aclassSourceThingV_html_abeabee2e219c27902b619819bb9f3d33"><div class="ttname"><a href="classSourceThingV.html#abeabee2e219c27902b619819bb9f3d33">SourceThingV.RowMapping</a></div><div class="ttdeci">static readonly IReadOnlyDictionary&lt; string, int &gt; RowMapping</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00018">SourceThingV.cs:18</a></div></div>
-<div class="ttc" id="aclassSourceThingV_html_acd06001a5d142eed4186c4631990deed"><div class="ttname"><a href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">SourceThingV.OnImportRow</a></div><div class="ttdeci">virtual void OnImportRow(Row _r, SourceThing.Row c)</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00403">SourceThingV.cs:403</a></div></div>
+<div class="ttc" id="aclassSourceThingV_html_acd06001a5d142eed4186c4631990deed"><div class="ttname"><a href="classSourceThingV.html#acd06001a5d142eed4186c4631990deed">SourceThingV.OnImportRow</a></div><div class="ttdeci">virtual void OnImportRow(Row _r, SourceThing.Row c)</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00398">SourceThingV.cs:398</a></div></div>
 <div class="ttc" id="aclassSourceThingV_html_ad312cbbb49d3bf353296631e8edaa025"><div class="ttname"><a href="classSourceThingV.html#ad312cbbb49d3bf353296631e8edaa025">SourceThingV.CreateRow</a></div><div class="ttdeci">override Row CreateRow()</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00074">SourceThingV.cs:74</a></div></div>
 <div class="ttc" id="aclassSourceThingV_html_ae768323855904bf837edea59fa4d85ad"><div class="ttname"><a href="classSourceThingV.html#ae768323855904bf837edea59fa4d85ad">SourceThingV.Reset</a></div><div class="ttdeci">override void Reset()</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00184">SourceThingV.cs:184</a></div></div>
 <div class="ttc" id="aclassSourceThingV_html_aeca850e9b1af747442fd1c81c5b77c9c"><div class="ttname"><a href="classSourceThingV.html#aeca850e9b1af747442fd1c81c5b77c9c">SourceThingV.SetRow</a></div><div class="ttdeci">override void SetRow(Row r)</div><div class="ttdef"><b>Definition:</b> <a href="SourceThingV_8cs_source.html#l00134">SourceThingV.cs:134</a></div></div>

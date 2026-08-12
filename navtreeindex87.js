@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"classLogicalPointManager.html#aeb57756cb200475f795a026991574327":[1,0,943,1],
 "classLogicalPointManager.html#af8db0eb4fa059e80496a7f0ebfd7ec44":[1,0,943,3],
 "classLos.html":[1,0,944],
 "classLos.html#a005a8440a5909b791dc87fc53f193aa2":[1,0,944,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "classMap.html#a7bd243a460433d8b5d9dfa80427351d3":[1,0,948,59],
 "classMap.html#a7bdcb253372258682073ab5b18f77560":[1,0,948,54],
 "classMap.html#a7c42b39e9297df5d44c7963791d5cc90":[1,0,948,100],
-"classMap.html#a7d4fbbb06323f111e12465125c769f04":[1,0,948,94],
-"classMap.html#a7da5a5ce268efc40f72f8186891712b8":[1,0,948,116]
+"classMap.html#a7d4fbbb06323f111e12465125c769f04":[1,0,948,94]
 };

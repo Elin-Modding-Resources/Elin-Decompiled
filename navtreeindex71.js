@@ -1,5 +1,6 @@
 var NAVTREEINDEX71 =
 {
+"classGamePrincipal_1_1Item.html#a1b2db2e752974ae3016acbeb8c0df8b4":[1,0,606,0,9],
 "classGamePrincipal_1_1Item.html#a1cfdcd07445537080af49758160aacd7":[1,0,606,0,6],
 "classGamePrincipal_1_1Item.html#a27f6c303112ef5b9242d9d76ccf4c876":[1,0,606,0,0],
 "classGamePrincipal_1_1Item.html#a3cea37c5f094b2308ea3519afe43238d":[1,0,606,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX71 =
 "classGameUpdater_1_1Updater.html#a9ce890880fbdda48c1bc3645c627fea6":[1,0,612,9,0],
 "classGameUpdater_1_1Updater.html#aa2e9b6fd79a1e042a22cb7f8bdd84ac8":[1,0,612,9,3],
 "classGameUpdater_1_1Updater.html#ab0c8af5631686412b4966f8e22cf4e0b":[1,0,612,9,6],
-"classGame_1_1Config.html":[1,0,597,0],
-"classGame_1_1Config.html#a06434c845b8ba76333441c1108988a38":[1,0,597,0,21]
+"classGame_1_1Config.html":[1,0,597,0]
 };

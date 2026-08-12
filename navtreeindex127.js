@@ -1,5 +1,7 @@
 var NAVTREEINDEX127 =
 {
+"classTraitGene.html#aaac1b8bb856a544a6550160fe9e76d90":[1,0,1723,6],
+"classTraitGene.html#aad06c098417be0e93df7d983f89cb51e":[1,0,1723,3],
 "classTraitGene.html#af0f932640ef819c2e6009e156017441b":[1,0,1723,2],
 "classTraitGeneMachine.html":[1,0,1724],
 "classTraitGeneMachine.html#a03b1dc06acc9e6af7a7bedc69f820523":[1,0,1724,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX127 =
 "classTraitLightSun.html#a3af4cf2161f05c1de3f608ad33cc6ed6":[1,0,1781,0],
 "classTraitLightSun.html#ab57619e493c8a4fd38d34dc931603829":[1,0,1781,1],
 "classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1781,3],
-"classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1781,4],
-"classTraitLittleBall.html":[1,0,1782],
-"classTraitLittleBall.html#a4a80b199bb3d05a702c698829c40a713":[1,0,1782,0]
+"classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1781,4]
 };

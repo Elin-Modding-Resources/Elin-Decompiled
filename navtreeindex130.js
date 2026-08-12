@@ -1,5 +1,7 @@
 var NAVTREEINDEX130 =
 {
+"classTraitRecipeBook.html#a5cdacf7787d5988dd7905523e6c2a642":[1,0,1906,1],
+"classTraitRecipeBook.html#a89131d34ebb60cb390603934f9437ba8":[1,0,1906,0],
 "classTraitRecipeBook.html#acf3dd9ff3b4a9c15d28ea26295799c60":[1,0,1906,2],
 "classTraitRecipeCat.html":[1,0,1907],
 "classTraitRecipeCat.html#a03f7f71e0918b01d8f56d318a8cd084e":[1,0,1907,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX130 =
 "classTraitSkyIncinerator.html":[1,0,1951],
 "classTraitSlaver.html":[1,0,1952],
 "classTraitSlaver.html#a0cd986ad30e4b07d9a52ae142bc9b976":[1,0,1952,2],
-"classTraitSlaver.html#a812b3511171eaf5a9bc051902cc23856":[1,0,1952,0],
-"classTraitSlaver.html#ac441dd02a62a5446ee6382966679e280":[1,0,1952,1],
-"classTraitSlotMachine.html":[1,0,1953]
+"classTraitSlaver.html#a812b3511171eaf5a9bc051902cc23856":[1,0,1952,0]
 };

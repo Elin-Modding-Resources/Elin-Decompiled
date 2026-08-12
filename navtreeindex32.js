@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"classActRestrain.html#af98236f6db8d5fcf6ea1ed1a243841bd":[1,0,65,2],
 "classActRide.html":[1,0,66],
 "classActRide.html#a1df7eb3390d05cb7e58286a5fefac5b2":[1,0,66,4],
 "classActRide.html#a214b50fc04b16a8de7dbe30a69705ede":[1,0,66,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "classActionMode.html#af14e6b9d79a9cf1f642ab289fe259b6a":[1,0,35,71],
 "classActionMode.html#af395a05914450305c89b01b3e439d2f2":[1,0,35,40],
 "classActionMode.html#af447559de98793b2b0a3ec4ebd51662e":[1,0,35,65],
-"classActionMode.html#af4f718263d361a4d8a6c8f56d5dd883f":[1,0,35,84],
-"classActionMode.html#af67e1bcb70a7e79f0a6c3765c108ab77":[1,0,35,33]
+"classActionMode.html#af4f718263d361a4d8a6c8f56d5dd883f":[1,0,35,84]
 };
