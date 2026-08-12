@@ -92,7 +92,7 @@ public class WidgetDate : Widget
 		}
 		if (EMono._zone.idCurrentSubset != null)
 		{
-			text += ("(" + (EMono._zone.idExport + "_" + EMono._zone.idCurrentSubset).lang() + ")").TagColor(colorFestival);
+			text += (" (" + (EMono._zone.idExport + "_" + EMono._zone.idCurrentSubset).lang() + ")").TagColor(colorFestival);
 		}
 		if (EMono._zone.isPeace)
 		{

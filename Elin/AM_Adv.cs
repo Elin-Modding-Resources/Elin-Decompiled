@@ -409,19 +409,24 @@ public class AM_Adv : AM_BaseGameMode
 	{
 		textWheel = null;
 		textMiddle = null;
-		if (planRight.HasAct)
+		if (!planRight.HasAct)
 		{
-			if (EClass.scene.mouseTarget.pos.Distance(EClass.pc.pos) <= 1 && HotItemHeld.CanChangeHeightByWheel())
-			{
-				textWheel = "textWheel_changeHeight".lang();
-			}
-			else if (HotItemHeld.CanRotate())
-			{
-				textMiddle = "textMiddle_rotate".lang(EInput.keys.mouseMiddle.key.ToString() ?? "");
-			}
-			EClass.ui.hud.textWheel.SetText(textWheel.IsEmpty(""));
-			EClass.ui.hud.textMiddle.SetText(textMiddle.IsEmpty(""));
+			return;
 		}
+		if (EClass.scene.mouseTarget.pos.Distance(EClass.pc.pos) <= 1 && HotItemHeld.CanChangeHeightByWheel())
+		{
+			textWheel = "textWheel_changeHeight".lang();
+			if (HotItemHeld.taskBuild != null && HotItemHeld.taskBuild.altitude > 0)
+			{
+				textWheel = textWheel + " (+" + HotItemHeld.taskBuild.altitude + ")";
+			}
+		}
+		else if (HotItemHeld.CanRotate())
+		{
+			textMiddle = "textMiddle_rotate".lang(EInput.keys.mouseMiddle.key.ToString() ?? "");
+		}
+		EClass.ui.hud.textWheel.SetText(textWheel.IsEmpty(""));
+		EClass.ui.hud.textMiddle.SetText(textMiddle.IsEmpty(""));
 	}
 
 	public void ClearPlans()

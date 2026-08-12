@@ -100,7 +100,15 @@ public class AM_Build : AM_Designation<TaskBuild>
 
 	public override int TopHeight(Point p)
 	{
-		return bridgeHeight + ((!recipe.tileType.AltitudeAsDir) ? altitude : 0);
+		if (!recipe.IsThing)
+		{
+			return bridgeHeight + ((!recipe.tileType.AltitudeAsDir) ? altitude : 0);
+		}
+		if (altitude != 0)
+		{
+			return altitude;
+		}
+		return -1;
 	}
 
 	public override HitResult HitResultOnDesignation(Point p)
@@ -163,7 +171,7 @@ public class AM_Build : AM_Designation<TaskBuild>
 		}
 		CreateNewMold();
 		bridgeHeight = -1;
-		SetAltitude(0);
+		SetAltitude(r.renderRow.GetPref()?.defaultAltitude ?? 0);
 		base.Summary.SetRecipe(r);
 		EClass.ui.hud.hint.Refresh();
 	}

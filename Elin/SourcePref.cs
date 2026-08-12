@@ -299,6 +299,18 @@ public class SourcePref : EClass, ISerializationCallbackReceiver
 		}
 	}
 
+	public int defaultAltitude
+	{
+		get
+		{
+			return ints[23];
+		}
+		set
+		{
+			ints[23] = value;
+		}
+	}
+
 	public float heightFix
 	{
 		get

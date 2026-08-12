@@ -66,7 +66,7 @@ public class HotItemHeld : HotItemThing
 
 	public override void OnSetCurrentItem()
 	{
-		ActionMode.Build.altitude = 0;
+		ActionMode.Build.altitude = thing.Pref.defaultAltitude;
 		disableTool = false;
 		if (EClass.pc.held != thing)
 		{

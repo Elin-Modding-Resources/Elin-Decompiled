@@ -69,6 +69,15 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 		return EClass.player.instaComplete;
 	}
 
+	public override int TopHeight(Point p)
+	{
+		if (target != null && moldCard != null && moldCard.altitude != 0)
+		{
+			return moldCard.altitude;
+		}
+		return -1;
+	}
+
 	public override MeshPass GetGuidePass(Point point)
 	{
 		return EClass.screen.guide.passGuideBlock;

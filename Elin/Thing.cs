@@ -1781,17 +1781,23 @@ public class Thing : Card
 			}
 			foreach (Element value in elements.dict.Values)
 			{
-				if (to.elements.GetElement(value.id) == null)
+				Element element = to.elements.GetElement(value.id);
+				if (element == null)
 				{
 					return false;
+				}
+				if (element.Value != value.Value)
+				{
+					_ = value.id;
+					_ = 770;
 				}
 			}
 			int num2 = (to.encLV = Mathf.CeilToInt(1f * (float)(base.encLV * base.Num + to.encLV * to.Num) / (float)(base.Num + to.Num)));
 			base.encLV = num2;
 			foreach (Element value2 in elements.dict.Values)
 			{
-				Element element = to.elements.GetElement(value2.id);
-				value2.vBase = (element.vBase = (value2.vBase * base.Num + element.vBase * to.Num) / (base.Num + to.Num));
+				Element element2 = to.elements.GetElement(value2.id);
+				value2.vBase = (element2.vBase = (value2.vBase * base.Num + element2.vBase * to.Num) / (base.Num + to.Num));
 			}
 			return true;
 		}
@@ -1805,8 +1811,8 @@ public class Thing : Card
 		}
 		foreach (Element value3 in elements.dict.Values)
 		{
-			Element element2 = to.elements.GetElement(value3.id);
-			if (element2 == null || value3.vBase / 10 * 10 != element2.vBase / 10 * 10)
+			Element element3 = to.elements.GetElement(value3.id);
+			if (element3 == null || value3.vBase / 10 * 10 != element3.vBase / 10 * 10)
 			{
 				return false;
 			}

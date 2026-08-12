@@ -345,6 +345,7 @@ public class Act : Element
 		if (tt.Range == TargetRange.Self)
 		{
 			TP.Set(CC.pos);
+			TC = CC;
 			return CanPerform();
 		}
 		if (CC.IsPC && EClass.core.config.game.shiftToUseNegativeAbilityOnSelf)

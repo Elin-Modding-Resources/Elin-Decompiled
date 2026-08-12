@@ -295,102 +295,97 @@ public class SourceThingV : SourceDataString<SourceThingV.Row>
 			row.recipeKey = row3.recipeKey;
 			if (!row3.parse.IsEmpty())
 			{
-				key = row3._origin;
-				switch (key)
+				string[] parse = row3.parse;
+				for (int i = 0; i < parse.Length; i++)
 				{
-				case "lamp_ceil2":
-				case "window":
-				case "windowL":
-					row.idExtra = row3.parse[0];
-					break;
-				default:
-				{
-					string[] parse = row3.parse;
-					for (int i = 0; i < parse.Length; i++)
+					string[] array = parse[i].Split('/');
+					key = array[0];
+					switch (key)
 					{
-						string[] array = parse[i].Split('/');
-						switch (array[0])
+					case "elec":
+						row.electricity = array[1].ToInt();
+						break;
+					case "render":
+						row._idRenderData = array[1];
+						break;
+					case "tiletype":
+						row._tileType = array[1];
+						break;
+					case "anime":
+						row.anime = ((array.Length <= 4) ? ((array.Length <= 3) ? new int[2]
 						{
-						case "elec":
-							row.electricity = array[1].ToInt();
-							break;
-						case "render":
-							row._idRenderData = array[1];
-							break;
-						case "tiletype":
-							row._tileType = array[1];
-							break;
-						case "anime":
-							row.anime = ((array.Length <= 4) ? ((array.Length <= 3) ? new int[2]
-							{
-								array[1].ToInt(),
-								array[2].ToInt()
-							} : new int[3]
-							{
-								array[1].ToInt(),
-								array[2].ToInt(),
-								array[3].ToInt()
-							}) : new int[4]
-							{
-								array[1].ToInt(),
-								array[2].ToInt(),
-								array[3].ToInt(),
-								array[4].ToInt()
-							});
-							break;
-						case "skin":
+							array[1].ToInt(),
+							array[2].ToInt()
+						} : new int[3]
 						{
-							string[] array3 = array[1].Split('|');
-							row.skins = new int[array3.Length];
-							for (int k = 0; k < array3.Length; k++)
-							{
-								row.skins[k] = array3[k].ToInt();
-							}
-							break;
-						}
-						case "alt":
+							array[1].ToInt(),
+							array[2].ToInt(),
+							array[3].ToInt()
+						}) : new int[4]
 						{
-							string[] array2 = array[1].Split('|');
-							row.altTiles = new int[array2.Length];
-							for (int j = 0; j < array2.Length; j++)
-							{
-								row.altTiles[j] = array2[j].ToInt();
-							}
-							row.ignoreAltFix = true;
-							break;
-						}
-						case "naming":
-							row.naming = array[1];
-							break;
-						case "ex":
-							row.idActorEx = array[1];
-							break;
-						case "sound":
-							row.idSound = array[1];
-							break;
-						case "color":
-							row.colorMod = 100;
-							break;
-						case "no_color":
-							row.colorMod = 0;
-							break;
-						case "unique":
-							row.quality = 4;
-							break;
-						case "ele":
+							array[1].ToInt(),
+							array[2].ToInt(),
+							array[3].ToInt(),
+							array[4].ToInt()
+						});
+						break;
+					case "skin":
+					{
+						string[] array3 = array[1].Split('|');
+						row.skins = new int[array3.Length];
+						for (int k = 0; k < array3.Length; k++)
 						{
-							int[] second = new int[2]
-							{
-								Core.GetCurrent().sources.elements.alias[array[1]].id,
-								array[2].ToInt()
-							};
-							row.elements = row.elements.Concat(second).ToArray();
-							break;
+							row.skins[k] = array3[k].ToInt();
 						}
-						}
+						break;
 					}
-					break;
-				}
+					case "alt":
+					{
+						string[] array2 = array[1].Split('|');
+						row.altTiles = new int[array2.Length];
+						for (int j = 0; j < array2.Length; j++)
+						{
+							row.altTiles[j] = array2[j].ToInt();
+						}
+						row.ignoreAltFix = true;
+						break;
+					}
+					case "naming":
+						row.naming = array[1];
+						break;
+					case "ex":
+						row.idActorEx = array[1];
+						break;
+					case "extra":
+						row.idExtra = array[1];
+						break;
+					case "noWindowLight":
+						row.idExtra = "";
+						row.altTiles = (row._altTiles = new int[0]);
+						break;
+					case "sound":
+						row.idSound = array[1];
+						break;
+					case "color":
+						row.colorMod = 100;
+						break;
+					case "no_color":
+						row.colorMod = 0;
+						break;
+					case "unique":
+						row.quality = 4;
+						break;
+					case "ele":
+					{
+						int[] second = new int[2]
+						{
+							Core.GetCurrent().sources.elements.alias[array[1]].id,
+							array[2].ToInt()
+						};
+						row.elements = row.elements.Concat(second).ToArray();
+						break;
+					}
+					}
 				}
 			}
 			OnImportRow(row3, row);

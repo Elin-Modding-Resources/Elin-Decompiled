@@ -10,7 +10,7 @@ public class TraitLandingPortal : TraitItem
 	{
 		get
 		{
-			if (EClass.game.IsSurvival && EClass.game.survival.gateZone != null && !EClass.game.survival.gateZone.destryoed && owner.IsInstalled)
+			if (EClass.game.IsSurvival && EClass.game.survival.gateZone != null && !EClass.game.survival.gateZone.destryoed && !EClass.game.survival.gateZone.CanDestroy() && owner.IsInstalled)
 			{
 				return EClass._zone.IsPCFaction;
 			}

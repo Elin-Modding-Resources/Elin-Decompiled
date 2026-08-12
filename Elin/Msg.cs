@@ -310,7 +310,11 @@ public class Msg : EClass
 	{
 		if (!int.TryParse(n, out var result))
 		{
-			return false;
+			if (n.IsEmpty() || !int.TryParse(n.Split(' ')[0], out var result2))
+			{
+				return true;
+			}
+			return IsThirdPerson(result2);
 		}
 		return IsThirdPerson(result);
 	}

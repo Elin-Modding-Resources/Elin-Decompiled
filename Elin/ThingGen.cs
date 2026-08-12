@@ -311,15 +311,32 @@ public class ThingGen : CardGen
 			TryAddScrubber(5);
 			break;
 		case TreasureType.SurvivalRaid:
-			t.Add("plat", EClass.rndHalf(Mathf.Min(3 + num / 10, 15)));
-			t.Add("money2", EClass.rndHalf(Mathf.Min(3 + num / 10, 10)));
+		{
+			miracleChance += 50;
+			t.Add("plat", EClass.rndHalf(Mathf.Min(3 + num / 5, 50)));
+			t.Add("money2", EClass.rndHalf(Mathf.Min(3 + num / 5, 25)));
 			t.Add("medal", EClass.rndHalf(8));
 			t.Add("book_skill", 1, lv);
 			t.Add("book_skill", 1, lv);
+			t.Add("rp_random", 1, lv);
+			t.Add("rp_random", 1, lv);
+			t.Add("rp_random", 1, lv);
+			t.Add("rp_food", 2, lv).SetLv(Mathf.Min(lv, 100));
+			t.Add("rp_block", 2, lv).SetLv(Mathf.Min(lv, 100));
 			t.Add("ticket_sky", 25 + EClass.rnd(10));
-			t.c_lockLv /= 3;
+			int raidLv = EClass.game.survival.flags.raidLv;
+			if (raidLv < 50)
+			{
+				t.Add((raidLv < 30) ? "crystal_earth" : ((raidLv < 40) ? "crystal_sun" : "crystal_mana"));
+			}
+			else
+			{
+				t.Add("book_skill", 1, lv);
+			}
+			t.c_lockLv = 0;
 			TryAddScrubber(2);
 			break;
+		}
 		case TreasureType.RandomChest:
 			flag2 = false;
 			miracleChance /= 2;
