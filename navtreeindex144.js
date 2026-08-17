@@ -1,5 +1,6 @@
 var NAVTREEINDEX144 =
 {
+"classWidgetStockTracker.html#afd4a41e0f23fe4397c8b2c3dd253928c":[1,0,2227,8],
 "classWidgetSystemIndicator.html":[1,0,2228],
 "classWidgetSystemIndicator.html#a31cdb8d30d87de9de9e204e30e6e3fed":[1,0,2228,0],
 "classWidgetSystemIndicator.html#a3e7fcc6d97015223cefee7fd0c09b6b9":[1,0,2228,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX144 =
 "classWindowChara.html#a419c3defda2dde2d43b7a1f7d2b46e1d":[1,0,2233,53],
 "classWindowChara.html#a44580b791e1a023f39351f911f06406d":[1,0,2233,23],
 "classWindowChara.html#a49ed970123f77493ec9984f4ab40767a":[1,0,2233,24],
-"classWindowChara.html#a4a46d3a0e6ea169a0c1918256948ec27":[1,0,2233,13],
-"classWindowChara.html#a4b7492bbd60c98a9b4dedb9be947e5e7":[1,0,2233,42]
+"classWindowChara.html#a4a46d3a0e6ea169a0c1918256948ec27":[1,0,2233,13]
 };

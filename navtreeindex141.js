@@ -1,5 +1,6 @@
 var NAVTREEINDEX141 =
 {
+"classWidgetCurrentTool.html#a36452bc25664c77b7481aaab15495d6f":[1,0,2196,30],
 "classWidgetCurrentTool.html#a37a8c945090b80225c8e0f7ab62886e0":[1,0,2196,34],
 "classWidgetCurrentTool.html#a3808a8926986c18b12c61623150f15c3":[1,0,2196,23],
 "classWidgetCurrentTool.html#a38844b12df11d162db7f632c2c242993":[1,0,2196,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX141 =
 "classWidgetInspector.html#a7b935fe7e155873ffe5b2a6369e563b1":[1,0,2206,18],
 "classWidgetInspector.html#a7c1e98e86e8730e4799e1265b589d62c":[1,0,2206,4],
 "classWidgetInspector.html#a7e30d807cda51cbbb06ea208c5004722":[1,0,2206,8],
-"classWidgetInspector.html#a85a8ff61f210a5c5afa94e559e01d4c7":[1,0,2206,16],
-"classWidgetInspector.html#a87a17d4ebb55a7d46bc1e5b4a22d6841":[1,0,2206,21]
+"classWidgetInspector.html#a85a8ff61f210a5c5afa94e559e01d4c7":[1,0,2206,16]
 };

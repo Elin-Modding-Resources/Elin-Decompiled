@@ -1,5 +1,6 @@
 var NAVTREEINDEX107 =
 {
+"classSerializableDateTime.html#adb698aea43f8f1026258ceb3c5c42ef4":[1,0,1234,3],
 "classSerializedCards.html":[1,0,1235],
 "classSerializedCards.html#a2976e0124c5924bc2a162b64b79ad13a":[1,0,1235,5],
 "classSerializedCards.html#a4fc4209f93033d5a49b9561210d37dca":[1,0,1235,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX107 =
 "classSkinConfig.html#af50218e81fb19a315e87b4beb35d83ce":[1,0,1255,13],
 "classSkinConfig.html#afb9e28981a3b8f0c5562891f2c945db0":[1,0,1255,17],
 "classSkinConfig.html#aff77f11cb2bdbd863f4ee7cafd289b92":[1,0,1255,1],
-"classSkinDeco.html":[1,0,1256],
-"classSkinDeco.html#a143e922bd14868314bfcbd76594c8c84":[1,0,1256,3]
+"classSkinDeco.html":[1,0,1256]
 };

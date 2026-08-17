@@ -1,5 +1,6 @@
 var NAVTREEINDEX131 =
 {
+"classTraitSlaver.html#a812b3511171eaf5a9bc051902cc23856":[1,0,1952,0],
 "classTraitSlaver.html#ac441dd02a62a5446ee6382966679e280":[1,0,1952,1],
 "classTraitSlotMachine.html":[1,0,1953],
 "classTraitSlotMachine.html#a714651b3b80940b9374224a58b14e628":[1,0,1953,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX131 =
 "classTraitToolButcher.html":[1,0,2024],
 "classTraitToolButcher.html#a0103466a2e9987634cc7f73461ec8aaa":[1,0,2024,1],
 "classTraitToolButcher.html#a3de7c0c977df29e7f3fb7309e820117f":[1,0,2024,0],
-"classTraitToolCrowbar.html":[1,0,2025],
-"classTraitToolCrowbar.html#a2b4612f2edd6eb74446d131b07c473a7":[1,0,2025,0]
+"classTraitToolCrowbar.html":[1,0,2025]
 };

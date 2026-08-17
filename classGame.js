@@ -5,6 +5,7 @@ var classGame =
     [ "_Create", "classGame.html#a04c738690a3d2f0105f00fcaa52f1f27", null ],
     [ "AddAdventurer", "classGame.html#ab5a1c307fccf9aecd72bfaafc1b69558", null ],
     [ "AddAdventurers", "classGame.html#a5172a7ab80f05a03e5d22026ec9006c2", null ],
+    [ "ApplyFix", "classGame.html#a0705eddd45f3694705771178c8ecab82", null ],
     [ "Create", "classGame.html#a6f95f61e8f4ba88af692cc6ca0150efd", null ],
     [ "GotoTitle", "classGame.html#a5e3ca3abf508a285d06b39b2f732b77b", null ],
     [ "Kill", "classGame.html#a78107f466f8a2fe5f5fcc46551006d37", null ],

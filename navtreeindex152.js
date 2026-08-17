@@ -1,5 +1,6 @@
 var NAVTREEINDEX152 =
 {
+"namespaces.html":[0,4],
 "pages.html":[],
 "structAM__Picker_1_1Result.html":[1,0,172,0],
 "structAM__Picker_1_1Result.html#a322c99f8d02bda6b8148572ecca6fcbb":[1,0,172,0,4],

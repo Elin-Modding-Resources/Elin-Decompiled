@@ -1,5 +1,6 @@
 var NAVTREEINDEX132 =
 {
+"classTraitToolCrowbar.html#a2b4612f2edd6eb74446d131b07c473a7":[1,0,2025,0],
 "classTraitToolFishing.html":[1,0,2026],
 "classTraitToolHammer.html":[1,0,2027],
 "classTraitToolHammerStrip.html":[1,0,2028],
@@ -248,6 +249,5 @@ var NAVTREEINDEX132 =
 "classTraitWrench.html#a0790cb2fa6e4713b792685d718a51db0":[1,0,2089,2],
 "classTraitWrench.html#a39c10b57832b428531006c004c6c3fac":[1,0,2089,0],
 "classTraitWrench.html#a7e708c0bc475689eb7768e05e5fc9874":[1,0,2089,3],
-"classTraitWrench.html#acf628f12a1fabc11907be32583c9280a":[1,0,2089,1],
-"classTraitWrench.html#ae22cc1eda87da3dd13b1c11456f20532":[1,0,2089,4]
+"classTraitWrench.html#acf628f12a1fabc11907be32583c9280a":[1,0,2089,1]
 };
