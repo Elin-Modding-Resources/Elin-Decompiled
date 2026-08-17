@@ -3578,7 +3578,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			return false;
 		}
-		to.decay = (to.decay * to.Num + decay * Num) / (to.Num + Num);
+		to.decay = MathEx.ClampToInt(((long)to.decay * (long)to.Num + (long)decay * (long)Num) / ((long)to.Num + (long)Num));
 		to.ModNum(Num);
 		if (c_isImportant)
 		{

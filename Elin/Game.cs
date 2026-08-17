@@ -428,6 +428,44 @@ public class Game : EClass
 			}
 		}
 		EClass.pc.angle = player.angle;
+		ApplyFix();
+		if (!version.Equals(EClass.core.version))
+		{
+			player.recipes.OnVersionUpdate();
+		}
+		if (cards.container_deposit == null)
+		{
+			cards.container_deposit = ThingGen.Create("container_deposit");
+			if (player.bankMoney > 0)
+			{
+				cards.container_deposit.Add("money", player.bankMoney);
+			}
+		}
+		foreach (Quest item4 in quests.list)
+		{
+			if (item4 is QuestSequence && !EClass.sources.quests.map.ContainsKey(item4.idSource))
+			{
+				item4.phase = 0;
+			}
+		}
+		foreach (Quest global in quests.globalList)
+		{
+			if (global is QuestSequence && !EClass.sources.quests.map.ContainsKey(global.idSource))
+			{
+				global.phase = 0;
+			}
+		}
+		foreach (KeyValuePair<int, Spatial> item5 in EClass.game.spatials.map.ToList())
+		{
+			if (item5.Value == null)
+			{
+				EClass.game.spatials.map.Remove(item5.Key);
+			}
+		}
+	}
+
+	public void ApplyFix()
+	{
 		EClass.pc.elements.CheckSkillActions();
 		if (cards.listAdv.Count == 0)
 		{
@@ -437,11 +475,11 @@ public class Game : EClass
 		{
 			if (!(q is QuestRandom))
 			{
-				foreach (Quest item4 in quests.list)
+				foreach (Quest item in quests.list)
 				{
-					if (q != item4 && item4.id == q.id)
+					if (q != item && item.id == q.id)
 					{
-						quests.list.Remove(item4);
+						quests.list.Remove(item);
 						break;
 					}
 				}
@@ -461,6 +499,10 @@ public class Game : EClass
 				}
 			}
 		});
+		if (version.IsBelow(0, 23, 336))
+		{
+			AddAdventurer("adv_schwert");
+		}
 		TryAddQuest("into_darkness", "exile_kettle");
 		if (version.IsBelow(0, 23, 221) && EClass.game.quests.IsCompleted("curry"))
 		{
@@ -472,11 +514,11 @@ public class Game : EClass
 		}
 		if (version.IsBelow(0, 23, 182))
 		{
-			foreach (Chara value2 in cards.globalCharas.Values)
+			foreach (Chara value in cards.globalCharas.Values)
 			{
-				if (!value2.IsUnique && value2.c_lockedAge != 0)
+				if (!value.IsUnique && value.c_lockedAge != 0)
 				{
-					value2.elements.SetBase(1243, 1);
+					value.elements.SetBase(1243, 1);
 				}
 			}
 		}
@@ -517,11 +559,11 @@ public class Game : EClass
 		}
 		if (version.IsBelow(0, 23, 72))
 		{
-			foreach (Chara value3 in EClass.game.cards.globalCharas.Values)
+			foreach (Chara value2 in EClass.game.cards.globalCharas.Values)
 			{
-				if (!value3.isDead)
+				if (!value2.isDead)
 				{
-					value3.c_wasInPcParty = false;
+					value2.c_wasInPcParty = false;
 				}
 			}
 		}
@@ -549,11 +591,11 @@ public class Game : EClass
 		}
 		if (version.IsBelow(0, 23, 51))
 		{
-			foreach (Chara value4 in EClass.game.cards.globalCharas.Values)
+			foreach (Chara value3 in EClass.game.cards.globalCharas.Values)
 			{
-				if (!(value4.id != "adv") && value4.IsPCFaction)
+				if (!(value3.id != "adv") && value3.IsPCFaction)
 				{
-					value4.idSkin = value4.uid % (value4.source._tiles.Length - 4) / 2 * 2 + ((!value4.IsMale) ? 1 : 0);
+					value3.idSkin = value3.uid % (value3.source._tiles.Length - 4) / 2 * 2 + ((!value3.IsMale) ? 1 : 0);
 				}
 			}
 		}
@@ -615,9 +657,9 @@ public class Game : EClass
 		});
 		if (version.IsBelow(0, 22, 20))
 		{
-			foreach (Chara value5 in cards.globalCharas.Values)
+			foreach (Chara value4 in cards.globalCharas.Values)
 			{
-				value5.SetBool(18, enable: false);
+				value4.SetBool(18, enable: false);
 			}
 		}
 		if (version.IsBelow(0, 22, 22))
@@ -626,48 +668,15 @@ public class Game : EClass
 			{
 				EClass.pc.faithElements.SetParent();
 			}
-			foreach (Element item5 in EClass.pc.elements.ListElements((Element e) => e.source.categorySub == "god"))
+			foreach (Element item2 in EClass.pc.elements.ListElements((Element e) => e.source.categorySub == "god"))
 			{
-				EClass.pc.SetFeat(item5.id, 0);
+				EClass.pc.SetFeat(item2.id, 0);
 			}
 			EClass.pc.RefreshFaithElement();
 		}
 		if (version.IsBelow(0, 22, 45))
 		{
 			player.debt = 20000000;
-		}
-		if (!version.Equals(EClass.core.version))
-		{
-			player.recipes.OnVersionUpdate();
-		}
-		if (cards.container_deposit == null)
-		{
-			cards.container_deposit = ThingGen.Create("container_deposit");
-			if (player.bankMoney > 0)
-			{
-				cards.container_deposit.Add("money", player.bankMoney);
-			}
-		}
-		foreach (Quest item6 in quests.list)
-		{
-			if (item6 is QuestSequence && !EClass.sources.quests.map.ContainsKey(item6.idSource))
-			{
-				item6.phase = 0;
-			}
-		}
-		foreach (Quest global2 in quests.globalList)
-		{
-			if (global2 is QuestSequence && !EClass.sources.quests.map.ContainsKey(global2.idSource))
-			{
-				global2.phase = 0;
-			}
-		}
-		foreach (KeyValuePair<int, Spatial> item7 in EClass.game.spatials.map.ToList())
-		{
-			if (item7.Value == null)
-			{
-				EClass.game.spatials.map.Remove(item7.Key);
-			}
 		}
 		void TryAddQuest(string idQuest, string idReqQuest)
 		{
@@ -963,7 +972,7 @@ public class Game : EClass
 	public void AddAdventurers()
 	{
 		List<Zone> source = world.region.ListTowns();
-		string[] array = new string[7] { "adv_kiria", "adv_gaki", "adv_wini", "adv_verna", "adv_ivory", "adv_mesherada", "adv_yukiimo" };
+		string[] array = new string[8] { "adv_kiria", "adv_gaki", "adv_wini", "adv_verna", "adv_ivory", "adv_mesherada", "adv_yukiimo", "adv_schwert" };
 		for (int i = 0; i < EClass.setting.balance.numAdv; i++)
 		{
 			Zone zone = source.RandomItem();

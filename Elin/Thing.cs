@@ -1792,12 +1792,12 @@ public class Thing : Card
 					_ = 770;
 				}
 			}
-			int num2 = (to.encLV = Mathf.CeilToInt(1f * (float)(base.encLV * base.Num + to.encLV * to.Num) / (float)(base.Num + to.Num)));
+			int num2 = (to.encLV = Mathf.CeilToInt(MathEx.ClampToInt(((long)base.encLV * (long)base.Num + (long)to.encLV * (long)to.Num) / ((long)base.Num + (long)to.Num))));
 			base.encLV = num2;
 			foreach (Element value2 in elements.dict.Values)
 			{
 				Element element2 = to.elements.GetElement(value2.id);
-				value2.vBase = (element2.vBase = (value2.vBase * base.Num + element2.vBase * to.Num) / (base.Num + to.Num));
+				value2.vBase = (element2.vBase = MathEx.ClampToInt(((long)value2.vBase * (long)base.Num + (long)element2.vBase * (long)to.Num) / ((long)base.Num + (long)to.Num)));
 			}
 			return true;
 		}

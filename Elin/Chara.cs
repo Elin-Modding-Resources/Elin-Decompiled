@@ -4986,6 +4986,16 @@ public class Chara : Card, IPathfindWalker
 				EQ_ID("sword_zephir");
 			}
 			break;
+		case "adv_schwert":
+			if (onCreate)
+			{
+				EQ_ID("sword", -1, Rarity.Legendary);
+			}
+			if (onCreate)
+			{
+				EQ_ID("dagger", -1, Rarity.Legendary);
+			}
+			break;
 		case "adv_mesherada":
 			if (onCreate)
 			{
@@ -8024,6 +8034,10 @@ public class Chara : Card, IPathfindWalker
 			return false;
 		}
 		if (shouldEat && (!(t.trait is TraitFoodPrepared) || t.c_isImportant))
+		{
+			return false;
+		}
+		if ((IsPC || (homeBranch != null && homeBranch.GetCivility() >= 50)) && (t.HasTag(CTAG.dish_fail) || t.id == "731"))
 		{
 			return false;
 		}

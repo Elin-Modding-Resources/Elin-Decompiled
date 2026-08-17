@@ -169,6 +169,7 @@ public class TraitChara : Trait
 		case "adv_yukiimo":
 		case "adv_kiria":
 		case "adv_ivory":
+		case "adv_schwert":
 			min = 4;
 			break;
 		}
