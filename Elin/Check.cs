@@ -111,22 +111,22 @@ public class Check : EClass
 	public Result Perform(Chara p, Card tg = null)
 	{
 		int finalDC = GetFinalDC(p, tg);
-		int num = Dice.Roll(1, 20);
+		long num = Dice.Roll(1, 20);
 		if (EClass.debug.logDice)
 		{
 			string text = "Check:" + source.id + " dc=" + finalDC + " roll=" + num + "  ";
 			Debug.Log(num switch
 			{
-				20 => text + "CriticalPass", 
-				1 => text + "CriticalFail", 
+				20L => text + "CriticalPass", 
+				1L => text + "CriticalFail", 
 				_ => (num < finalDC) ? (text + "Fail") : (text + "Pass"), 
 			});
 		}
 		switch (num)
 		{
-		case 20:
+		case 20L:
 			return Result.CriticalPass;
-		case 1:
+		case 1L:
 			return Result.CriticalFail;
 		default:
 			if (num >= finalDC)

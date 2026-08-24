@@ -191,9 +191,16 @@ public class TraitCrafter : Trait
 			}
 			if (text == "any")
 			{
-				if (this is TraitDyeMaker && !c.category.GetRoot().tag.Contains("dye") && !c.category.tag.Contains("dye"))
+				if (this is TraitDyeMaker)
 				{
-					return false;
+					if (c.id == "dye")
+					{
+						return false;
+					}
+					if (!c.category.GetRoot().tag.Contains("dye") && !c.category.tag.Contains("dye"))
+					{
+						return false;
+					}
 				}
 				if (!c.IsUnique && !c.IsImportant && !c.trait.CanOnlyCarry)
 				{

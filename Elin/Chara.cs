@@ -6418,18 +6418,18 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (_pts.Count == 0)
 			{
-				for (int num10 = EClass._map.charas.Count - 1; num10 >= 0; num10--)
+				for (int num11 = EClass._map.charas.Count - 1; num11 >= 0; num11--)
 				{
-					Chara chara3 = EClass._map.charas[num10];
+					Chara chara3 = EClass._map.charas[num11];
 					if (chara3 != this && CanSeeLos(chara3) && chara3.IsHostile(this))
 					{
 						_pts.Add(chara3);
 					}
 				}
 			}
-			for (int num11 = _pts.Count - 1; num11 >= 0; num11--)
+			for (int num12 = _pts.Count - 1; num12 >= 0; num12--)
 			{
-				action(_pts[num11]);
+				action(_pts[num12]);
 			}
 		}
 		void ForeachParty(Action<Chara> action)
@@ -6459,9 +6459,15 @@ public class Chara : Card, IPathfindWalker
 					}
 				}
 			}
-			for (int num9 = _pts.Count - 1; num9 >= 0; num9--)
+			int num9 = _pts.IndexOf(this);
+			if (num9 != -1)
 			{
-				action(_pts[num9]);
+				_pts.RemoveAt(num9);
+				_pts.Insert(0, this);
+			}
+			for (int num10 = _pts.Count - 1; num10 >= 0; num10--)
+			{
+				action(_pts[num10]);
 			}
 		}
 	}
@@ -6585,7 +6591,7 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (faith == EClass.game.religions.MoonShadow && c.IsPCParty)
 			{
-				foreach (Chara member in party.members)
+				foreach (Chara member in c.party.members)
 				{
 					if (!member.IsPC && CanSeeLos(member))
 					{

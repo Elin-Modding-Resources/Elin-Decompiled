@@ -43,6 +43,26 @@ public class Zone_WindRest : Zone
 			TryRevive("eureka", 60, 61);
 			TryRevive("billy", 35, 64);
 		}
+		List<Thing> list = EClass._map.ListThing<TraitDaggerGrave>();
+		foreach (Thing item in list)
+		{
+			if (item.pos.x != 52 || item.pos.z != 46)
+			{
+				continue;
+			}
+			{
+				foreach (Thing item2 in list)
+				{
+					if (item2.c_idBacker == 1239)
+					{
+						item.MoveImmediate(item2.pos);
+						item2.MoveImmediate(new Point(52, 46));
+						break;
+					}
+				}
+				break;
+			}
+		}
 		static void TryRevive(string id, int x, int y)
 		{
 			if (EClass.game.cards.globalCharas.Find(id) == null)

@@ -15,41 +15,52 @@ public class Dice
 
 	public static int MaxValue => 214748364;
 
-	public static int Roll_Normal(long num, long sides, int bonus = 0)
+	public static long Roll_Normal(long num, long sides, int bonus = 0)
 	{
-		double num2 = (double)(num * (sides + 1)) / 2.0;
-		double num3 = Math.Sqrt((double)(num * (sides * sides - 1)) / 12.0);
+		double num2 = num;
+		double num3 = sides;
+		double num4 = num2 * (num3 + 1.0) / 2.0;
+		double num5 = Math.Sqrt(num2 * (num3 * num3 - 1.0) / 12.0);
 		double d = (double)(rnd(1000000) + 1) / 1000001.0;
-		double num4 = (double)(rnd(1000000) + 1) / 1000001.0;
-		double num5 = Math.Sqrt(-2.0 * Math.Log(d)) * Math.Cos(Math.PI * 2.0 * num4);
-		long num6 = (long)Math.Floor(num2 + num3 * num5 + 0.5);
-		long num7 = num * sides;
-		if (num6 < num)
+		double num6 = (double)(rnd(1000000) + 1) / 1000001.0;
+		double num7 = Math.Sqrt(-2.0 * Math.Log(d)) * Math.Cos(Math.PI * 2.0 * num6);
+		double num8 = Math.Floor(num4 + num5 * num7 + 0.5);
+		long num9 = ((sides != 0L && num > long.MaxValue / sides) ? long.MaxValue : (num * sides));
+		if (num8 < (double)num)
 		{
-			num6 = num;
+			num8 = num;
 		}
-		if (num6 > num7)
+		if (num8 > (double)num9)
 		{
-			num6 = num7;
+			num8 = num9;
 		}
-		return (int)Mathf.Clamp(num6 + bonus, -MaxValue, MaxValue);
+		long num10 = (long)num8;
+		if (bonus > 0 && num10 > long.MaxValue - bonus)
+		{
+			return long.MaxValue;
+		}
+		if (bonus < 0 && num10 < long.MinValue - bonus)
+		{
+			return long.MinValue;
+		}
+		return num10 + bonus;
 	}
 
-	public static int Roll_Precise(int num, int sides, int bonus = 0)
+	public static long Roll_Precise(int num, int sides, int bonus = 0)
 	{
 		long num2 = 0L;
 		for (int i = 0; i < num; i++)
 		{
 			num2 += rnd(sides) + 1;
 		}
-		return (int)Mathf.Clamp(num2 + bonus, -MaxValue, MaxValue);
+		return num2 + bonus;
 	}
 
-	public static int Roll(int num, int sides, int bonus = 0, Card card = null)
+	public static long Roll(int num, int sides, int bonus = 0, Card card = null)
 	{
 		int a = 1;
 		bool flag = true;
-		int num2 = 0;
+		long num2 = 0L;
 		if (card != null)
 		{
 			int num3 = card.Evalue(78);
@@ -58,7 +69,7 @@ public class Dice
 		}
 		for (int i = 0; i < Mathf.Min(a, 20); i++)
 		{
-			int num4 = ((num >= 10) ? Roll_Normal(num, sides, bonus) : Roll_Precise(num, sides, bonus));
+			long num4 = ((num >= 10) ? Roll_Normal(num, sides, bonus) : Roll_Precise(num, sides, bonus));
 			if (i == 0 || (flag && num4 > num2) || (!flag && num4 < num2))
 			{
 				num2 = num4;
@@ -67,9 +78,9 @@ public class Dice
 		return num2;
 	}
 
-	public static int RollMax(int num, int sides, int bonus = 0)
+	public static long RollMax(int num, int sides, int bonus = 0)
 	{
-		return (int)Mathf.Clamp((long)num * (long)sides + bonus, -MaxValue, MaxValue);
+		return (long)num * (long)sides + bonus;
 	}
 
 	public static int rnd(int a)
@@ -102,12 +113,12 @@ public class Dice
 		return dice;
 	}
 
-	public int Roll()
+	public long Roll()
 	{
 		return Roll(num, sides, bonus, card);
 	}
 
-	public int RollMax()
+	public long RollMax()
 	{
 		return RollMax(num, sides, bonus);
 	}

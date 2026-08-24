@@ -216,22 +216,32 @@ public class BaseCondition : BaseStats
 		owner = _owner;
 		phase = GetPhase();
 		RefreshEmoIcon();
-		if (UseElements)
-		{
-			elements = new ElementContainerCondition();
-			if (base.source.elements.Length != 0)
-			{
-				for (int i = 0; i < base.source.elements.Length; i += 2)
-				{
-					elements.SetBase(GetElementSource(i).id, base.source.elements[i + 1].Calc(power, 0, P2));
-				}
-			}
-			elements.SetParent(owner);
-		}
+		RefreshElements();
 		if (onDeserialize)
 		{
 			OnChangePhase(phase, phase);
 		}
+	}
+
+	public void RefreshElements()
+	{
+		if (!UseElements)
+		{
+			return;
+		}
+		if (elements != null)
+		{
+			elements.SetParent();
+		}
+		elements = new ElementContainerCondition();
+		if (base.source.elements.Length != 0)
+		{
+			for (int i = 0; i < base.source.elements.Length; i += 2)
+			{
+				elements.SetBase(GetElementSource(i).id, base.source.elements[i + 1].Calc(power, 0, P2));
+			}
+		}
+		elements.SetParent(owner);
 	}
 
 	public void RefreshEmoIcon()

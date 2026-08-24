@@ -229,13 +229,14 @@ public class DNA : EClass
 					num3 = 0;
 				}
 				c.SetFeat(num, num3, !reverse);
-				if (reverse && num == 1423)
+				if (reverse && num == 1423 && c.GetInt(134) > 0)
 				{
-					int @int = c.GetInt(134);
-					if (@int > 0)
+					int num4 = c.elements.ValueWithoutLink(num) - c.GetInt(134);
+					if (num4 < 0)
 					{
-						c.SetFeat(num, -@int);
+						num4 = 0;
 					}
+					c.SetFeat(num, num4);
 					c.SetInt(134);
 				}
 				break;

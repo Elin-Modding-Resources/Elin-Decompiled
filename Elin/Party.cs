@@ -47,8 +47,12 @@ public class Party : EClass
 		{
 			if (!hashSet.Contains(uidMember))
 			{
-				hashSet.Add(uidMember);
-				members.Add(RefChara.Get(uidMember));
+				Chara chara = RefChara.Get(uidMember);
+				if (chara != null)
+				{
+					hashSet.Add(uidMember);
+					members.Add(chara);
+				}
 			}
 		}
 		return _members;
