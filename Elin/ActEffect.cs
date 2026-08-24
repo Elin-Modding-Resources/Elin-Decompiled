@@ -368,10 +368,6 @@ public class ActEffect : EClass
 					num4 = num4 * 100 / (100 + RapidCount * 50);
 				}
 				num4 = num4 * Act.powerMod / 100;
-				if (num4 > 99999999)
-				{
-					num4 = 99999999L;
-				}
 				c.DamageHP(num4, e.id, power * num / 100, attackSource, chara ?? CC);
 				if (c.IsAliveInCurrentZone)
 				{
@@ -1229,7 +1225,7 @@ public class ActEffect : EClass
 				EClass.game.religions.Element.Talk("ability");
 			}
 			Dice dice = Dice.Create("ActManaAbsorb", power, CC, (actRef.refThing != null) ? null : actRef.act);
-			TC.mana.Mod(dice.Roll() + TC.mana.max / 5);
+			TC.mana.Mod(MathEx.ClampToInt(dice.Roll() + TC.mana.max / 5));
 			TC.PlaySound("heal");
 			TC.PlayEffect("heal");
 			if (TC == CC)
@@ -1599,7 +1595,7 @@ public class ActEffect : EClass
 			EClass.ui.AddLayer<LayerList>().SetStringList(delegate
 			{
 				List<string> list12 = new List<string>();
-				for (int num21 = 0; num21 < 10; num21++)
+				for (int num20 = 0; num20 < 10; num20++)
 				{
 					list12.Add(AliasGen.GetRandomAlias());
 				}
@@ -1840,8 +1836,8 @@ public class ActEffect : EClass
 						{
 							effect.Play(center, 0f, pos);
 						});
-						int num16 = Dice.Create("SpShutterHex", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
-						item6.DamageHP(num16, 919, power, AttackSource.None, CC, showEffect: false);
+						long dmg = Dice.Create("SpShutterHex", power, CC, (actRef.refThing != null) ? null : actRef.act).Roll();
+						item6.DamageHP(dmg, 919, power, AttackSource.None, CC, showEffect: false);
 					}
 				}
 			}
@@ -2006,26 +2002,26 @@ public class ActEffect : EClass
 			List<Thing> list = new List<Thing>();
 			TC.things.Foreach(delegate(Thing t)
 			{
-				int num20 = 0;
+				int num19 = 0;
 				if ((t.isEquipped || t.IsRangedWeapon || blessed) && t.blessedState < BlessedState.Normal)
 				{
 					if (t.blessedState == BlessedState.Cursed)
 					{
-						num20 = EClass.rnd(200);
+						num19 = EClass.rnd(200);
 					}
 					if (t.blessedState == BlessedState.Doomed)
 					{
-						num20 = EClass.rnd(1000);
+						num19 = EClass.rnd(1000);
 					}
 					if (blessed)
 					{
-						num20 /= 2;
+						num19 /= 2;
 					}
 					if (id == EffectId.UncurseEQGreater)
 					{
-						num20 /= 10;
+						num19 /= 10;
 					}
-					if (power >= num20)
+					if (power >= num19)
 					{
 						TC.Say("uncurseEQ_success", t);
 						t.SetBlessedState(BlessedState.Normal);
@@ -2630,8 +2626,8 @@ public class ActEffect : EClass
 			if (TC.HasElement(1211))
 			{
 				TC.Say("drinkSaltWater_snail", TC);
-				int num19 = ((TC.hp > 10) ? (TC.hp - EClass.rnd(10)) : 10000);
-				TC.DamageHP(num19, AttackSource.None, CC);
+				int num18 = ((TC.hp > 10) ? (TC.hp - EClass.rnd(10)) : 10000);
+				TC.DamageHP(num18, AttackSource.None, CC);
 			}
 			else if (TC.IsPC)
 			{
@@ -2758,26 +2754,26 @@ public class ActEffect : EClass
 			{
 				TC.PlayEffect("buff");
 				TC.PlaySound("offering");
-				int num17 = TC.Evalue(1423);
-				if (num17 > 0)
+				int num16 = TC.Evalue(1423);
+				if (num16 > 0)
 				{
-					int num18 = 0;
-					if (flag && num17 > 1)
+					int num17 = 0;
+					if (flag && num16 > 1)
 					{
-						num18 = -1;
+						num17 = -1;
 					}
-					else if (num17 < 15)
+					else if (num16 < 15)
 					{
-						num18 = ((!blessed) ? 1 : 2);
-						if (num18 + num17 > 15)
+						num17 = ((!blessed) ? 1 : 2);
+						if (num17 + num16 > 15)
 						{
-							num18 = 1;
+							num17 = 1;
 						}
 					}
-					if (num18 != 0)
+					if (num17 != 0)
 					{
-						TC.SetFeat(1423, num17 + num18, msg: true);
-						TC.SetInt(134, TC.GetInt(134) + num18);
+						TC.SetFeat(1423, num16 + num17, msg: true);
+						TC.SetInt(134, TC.GetInt(134) + num17);
 					}
 				}
 			}

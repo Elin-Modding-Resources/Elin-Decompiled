@@ -736,7 +736,12 @@ public class SerializedCards : EClass
 				}
 				if (source.isOrigin)
 				{
-					text = SpawnListThing.Get("origin_" + text, (SourceThing.Row a) => a.origin == source).GetFirst().id;
+					SpawnList spawnList = SpawnListThing.Get("origin_" + text, (SourceThing.Row a) => a.origin == source);
+					if (spawnList.rows.Count == 0)
+					{
+						continue;
+					}
+					text = spawnList.GetFirst().id;
 				}
 				card2 = ThingGen.Create(text, -1, EClass._zone.DangerLv);
 				card2.ChangeMaterial((card4.idMat == -1) ? card2.DefaultMaterial.id : card4.idMat);
