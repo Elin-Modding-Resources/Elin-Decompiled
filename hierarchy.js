@@ -510,11 +510,15 @@ var hierarchy =
               ] ]
             ] ],
             [ "BaseStance", "classBaseStance.html", [
-              [ "BaseSong", "classBaseSong.html", [
-                [ "StanceSongEnd", "classStanceSongEnd.html", null ],
-                [ "StanceSongPebble", "classStanceSongPebble.html", null ],
-                [ "StanceSongSleep", "classStanceSongSleep.html", null ],
+              [ "BaseSong< ConSongPebble >", "classBaseSong.html", [
+                [ "StanceSongPebble", "classStanceSongPebble.html", null ]
+              ] ],
+              [ "BaseSong< ConSongValor >", "classBaseSong.html", [
                 [ "StanceSongValor", "classStanceSongValor.html", null ]
+              ] ],
+              [ "BaseSong< T >", "classBaseSong.html", [
+                [ "StanceSongEnd", "classStanceSongEnd.html", null ],
+                [ "StanceSongSleep", "classStanceSongSleep.html", null ]
               ] ],
               [ "StanceFury", "classStanceFury.html", null ],
               [ "StanceIai", "classStanceIai.html", null ],

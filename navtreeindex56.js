@@ -1,5 +1,8 @@
 var NAVTREEINDEX56 =
 {
+"classCoreDebug.html#aada0f145788956da63ff3a8639cb82d6":[1,0,431,160],
+"classCoreDebug.html#aaeff154d80b13414a94f4c38c175fb53":[1,0,431,65],
+"classCoreDebug.html#ab064807522f8577b5085b4a53fd9bac1":[1,0,431,83],
 "classCoreDebug.html#ab3c521557163ec01dd38094abeed4f0e":[1,0,431,41],
 "classCoreDebug.html#ab415f8d04d43de1042d7a8624f1849cf":[1,0,431,92],
 "classCoreDebug.html#ab5bb89d7286dfbd3d4f26ace16aedec1":[1,0,431,151],
@@ -246,8 +249,5 @@ var NAVTREEINDEX56 =
 "classCoreRef.html#af3caee96c1fc3153ff87b8febf353ac6":[1,0,435,51],
 "classCoreRef.html#af8c13f3744eb7a70d2bc66ec79d50236":[1,0,435,45],
 "classCoreRef.html#afb1f3cdc02fb15cc2138061d141211db":[1,0,435,64],
-"classCoreRef.html#afde0d5f3e6afc28fe83ea176cb8656bb":[1,0,435,41],
-"classCoreRef.html#afed647ebedfc0205918bc6e587c95a10":[1,0,435,42],
-"classCoreRef_1_1Biomes.html":[1,0,435,0],
-"classCoreRef_1_1Biomes.html#a3ae23aef4b44f23e2e0924bda2c5e02a":[1,0,435,0,0]
+"classCoreRef.html#afde0d5f3e6afc28fe83ea176cb8656bb":[1,0,435,41]
 };

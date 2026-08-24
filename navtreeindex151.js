@@ -1,5 +1,6 @@
 var NAVTREEINDEX151 =
 {
+"namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da050e5fb177067f7514885346817707b3":[0,4,3,0,8,165],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da055c392bc0d2048ba086fc82e65257b2":[0,4,3,0,8,188],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0695f3b721713dc5ec030ddb23fb313e":[0,4,3,0,8,169],
 "namespaceB83_1_1Win32.html#a8b9068eec63b05501f0a9be56015ed3da0bdbb2c325525e986d55ef50ca66d056":[0,4,3,0,8,226],
@@ -248,6 +249,5 @@ var NAVTREEINDEX151 =
 "namespaceTwoDLaserPack.html":[0,4,9],
 "namespaceelona.html":[0,4,4],
 "namespacemembers.html":[0,5,0],
-"namespacemembers_enum.html":[0,5,2],
-"namespacemembers_func.html":[0,5,1]
+"namespacemembers_enum.html":[0,5,2]
 };

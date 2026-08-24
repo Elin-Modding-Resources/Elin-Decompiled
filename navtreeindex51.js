@@ -1,5 +1,8 @@
 var NAVTREEINDEX51 =
 {
+"classConBoost.html#a9a706a8a36c7461cbd799a80c770e7c0":[1,0,325,2],
+"classConBoost.html#ad329f0364b8886984243b60b03360898":[1,0,325,1],
+"classConBoost.html#ad4c9c14851a7948f9a3d20b6d25a6a81":[1,0,325,0],
 "classConBreath.html":[1,0,326],
 "classConBrightnessOfLife.html":[1,0,327],
 "classConBrightnessOfLife.html#a64d974ca425dd49b06f442b0601a07d4":[1,0,327,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX51 =
 "classConTransmute.html#a108f10a5e95b7ceded47ce90d5e0fcf0":[1,0,413,4],
 "classConTransmute.html#a16c5630a31740edd2c2284b29c218045":[1,0,413,11],
 "classConTransmute.html#a17566eca301e64b086b959ab0d0aafa8":[1,0,413,6],
-"classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a":[1,0,413,5],
-"classConTransmute.html#a3167eb84277e7e8db5021c7e47e1f013":[1,0,413,2],
-"classConTransmute.html#a54071b3bff56fc7b02e39fac45b95c2f":[1,0,413,3],
-"classConTransmute.html#a6508c0a6cd8182341a5ae4f421bf13d5":[1,0,413,7]
+"classConTransmute.html#a1d93858d5e33d72420ef67fa86b3429a":[1,0,413,5]
 };

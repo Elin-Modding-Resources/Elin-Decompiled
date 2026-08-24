@@ -1,5 +1,6 @@
 var NAVTREEINDEX126 =
 {
+"classTraitDuponneBall.html#a2a6ecb2be4573b8f5542798eb9c1a1aa":[1,0,1661,0],
 "classTraitDye.html":[1,0,1662],
 "classTraitDye.html#a0c666c22498c366ecbc81733694bee14":[1,0,1662,1],
 "classTraitDye.html#a0fed784d147a98ed68e0c97b6f3b15fa":[1,0,1662,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX126 =
 "classTraitGene.html":[1,0,1723],
 "classTraitGene.html#a1403eb260c043875d300944d6115b345":[1,0,1723,4],
 "classTraitGene.html#a6ef0c0e35f7bc7ed7bd0896d08225854":[1,0,1723,0],
-"classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1723,5],
-"classTraitGene.html#a8e388181f33a808db84812e4f1df11be":[1,0,1723,1]
+"classTraitGene.html#a78507c50f5b65581af23711c77f09679":[1,0,1723,5]
 };

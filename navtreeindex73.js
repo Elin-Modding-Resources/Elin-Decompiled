@@ -1,5 +1,8 @@
 var NAVTREEINDEX73 =
 {
+"classGoalWait.html":[1,0,643],
+"classGoalWait.html#a2693f1b509cfb272f475ee98cb1dcb7d":[1,0,643,2],
+"classGoalWait.html#a37a23a0f98e5c02721aa8c633ca327ea":[1,0,643,1],
 "classGoalWait.html#a5dd601de88ffbc977e2d96c3a148f694":[1,0,643,0],
 "classGoalWork.html":[1,0,644],
 "classGoalWork.html#a03f204746e3a6e6e13c5522b1f8a3a88":[1,0,644,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX73 =
 "classGrowSystemTree.html#aae1d6acc789620e4e521f40c223c3551":[1,0,669,23],
 "classGrowSystemTree.html#aafce609a9b18fbfe637db3b9fa7ab149":[1,0,669,5],
 "classGrowSystemTree.html#ab4503831b5d03eebd2d358075ee63157":[1,0,669,26],
-"classGrowSystemTree.html#ab5102062ed1b5f6db73cef8e36008b36":[1,0,669,6],
-"classGrowSystemTree.html#ae6239a2f6b839c2ae56b1cd66094cccd":[1,0,669,1],
-"classGrowSystemTreeCoralwood.html":[1,0,670],
-"classGrowSystemTreeCoralwood.html#a26a302a2d9a1ded7b610d64297ac77af":[1,0,670,5]
+"classGrowSystemTree.html#ab5102062ed1b5f6db73cef8e36008b36":[1,0,669,6]
 };

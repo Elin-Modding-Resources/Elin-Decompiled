@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.336 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.335 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -205,22 +205,22 @@ $(document).ready(function(){initNavTree('Check_8cs_source.html',''); initResiza
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classCheck.html#a15e27675e570fd924ade76d62fe77c44">  111</a></span>    <span class="keyword">public</span> <a class="code hl_enumeration" href="classCheck.html#aa615a546baec820ce101e11ff15c419a">Result</a> <a class="code hl_function" href="classCheck.html#a15e27675e570fd924ade76d62fe77c44">Perform</a>(<a class="code hl_class" href="classChara.html">Chara</a> p, <a class="code hl_class" href="classCard.html">Card</a> tg = <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">int</span> finalDC = <a class="code hl_function" href="classCheck.html#ada90f1021481fd46e0ea117f977a026a">GetFinalDC</a>(p, tg);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">int</span> num = <a class="code hl_class" href="classDice.html">Dice</a>.<a class="code hl_function" href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">Roll</a>(1, 20);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">long</span> num = <a class="code hl_class" href="classDice.html">Dice</a>.<a class="code hl_function" href="classDice.html#a2929af1baf82085c531f96ed0a380996">Roll</a>(1, 20);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classEClass.html">EClass</a>.<a class="code hl_property" href="classEClass.html#af0467a0392813c1e8e5215fde409da07">debug</a>.<a class="code hl_variable" href="classCoreDebug.html#a45c6f601d342957a061988f460601015">logDice</a>)</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        {</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordtype">string</span> text = <span class="stringliteral">&quot;Check:&quot;</span> + source.id + <span class="stringliteral">&quot; dc=&quot;</span> + finalDC + <span class="stringliteral">&quot; roll=&quot;</span> + num + <span class="stringliteral">&quot;  &quot;</span>;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <a class="code hl_enumvalue" href="ReleaseMode_8cs.html#a096fc935a8445341d0d145f51cff52dbaa603905470e2a5b8c13e96b579ef0dba">Debug</a>.Log(num <span class="keywordflow">switch</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                20 =&gt; text + <span class="stringliteral">&quot;CriticalPass&quot;</span>, </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                1 =&gt; text + <span class="stringliteral">&quot;CriticalFail&quot;</span>, </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                20L =&gt; text + <span class="stringliteral">&quot;CriticalPass&quot;</span>, </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                1L =&gt; text + <span class="stringliteral">&quot;CriticalFail&quot;</span>, </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                _ =&gt; (num &lt; finalDC) ? (text + <span class="stringliteral">&quot;Fail&quot;</span>) : (text + <span class="stringliteral">&quot;Pass&quot;</span>), </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            });</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">switch</span> (num)</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">case</span> 20:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">case</span> 20L:</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classCheck.html#aa615a546baec820ce101e11ff15c419a">Result</a>.CriticalPass;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">case</span> 1L:</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classCheck.html#aa615a546baec820ce101e11ff15c419a">Result</a>.CriticalFail;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">default</span>:</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">if</span> (num &gt;= finalDC)</div>
@@ -266,7 +266,7 @@ $(document).ready(function(){initNavTree('Check_8cs_source.html',''); initResiza
 <div class="ttc" id="aclassCheck_html_af508f9348ab3c0b01ea17767c537fd6e"><div class="ttname"><a href="classCheck.html#af508f9348ab3c0b01ea17767c537fd6e">Check.GetDC</a></div><div class="ttdeci">int GetDC(Card tg=null)</div><div class="ttdef"><b>Definition:</b> <a href="Check_8cs_source.html#l00054">Check.cs:54</a></div></div>
 <div class="ttc" id="aclassCoreDebug_html_a45c6f601d342957a061988f460601015"><div class="ttname"><a href="classCoreDebug.html#a45c6f601d342957a061988f460601015">CoreDebug.logDice</a></div><div class="ttdeci">bool logDice</div><div class="ttdef"><b>Definition:</b> <a href="CoreDebug_8cs_source.html#l00262">CoreDebug.cs:262</a></div></div>
 <div class="ttc" id="aclassDice_html"><div class="ttname"><a href="classDice.html">Dice</a></div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00004">Dice.cs:5</a></div></div>
-<div class="ttc" id="aclassDice_html_a895887ab11a960b850dcd37ed82c00f6"><div class="ttname"><a href="classDice.html#a895887ab11a960b850dcd37ed82c00f6">Dice.Roll</a></div><div class="ttdeci">static int Roll(int num, int sides, int bonus=0, Card card=null)</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00048">Dice.cs:48</a></div></div>
+<div class="ttc" id="aclassDice_html_a2929af1baf82085c531f96ed0a380996"><div class="ttname"><a href="classDice.html#a2929af1baf82085c531f96ed0a380996">Dice.Roll</a></div><div class="ttdeci">static long Roll(int num, int sides, int bonus=0, Card card=null)</div><div class="ttdef"><b>Definition:</b> <a href="Dice_8cs_source.html#l00059">Dice.cs:59</a></div></div>
 <div class="ttc" id="aclassEClass_html"><div class="ttname"><a href="classEClass.html">EClass</a></div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00005">EClass.cs:6</a></div></div>
 <div class="ttc" id="aclassEClass_html_a6a5df4ca9459aaba8ee2fa3b6697055c"><div class="ttname"><a href="classEClass.html#a6a5df4ca9459aaba8ee2fa3b6697055c">EClass.sources</a></div><div class="ttdeci">static SourceManager sources</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00043">EClass.cs:43</a></div></div>
 <div class="ttc" id="aclassEClass_html_af0467a0392813c1e8e5215fde409da07"><div class="ttname"><a href="classEClass.html#af0467a0392813c1e8e5215fde409da07">EClass.debug</a></div><div class="ttdeci">static CoreDebug debug</div><div class="ttdef"><b>Definition:</b> <a href="EClass_8cs_source.html#l00049">EClass.cs:49</a></div></div>

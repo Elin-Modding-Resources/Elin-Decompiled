@@ -1,5 +1,6 @@
 var NAVTREEINDEX128 =
 {
+"classTraitLightSun.html#ad6cc938d4c9d1fb597eca567bc2ca604":[1,0,1781,3],
 "classTraitLightSun.html#af8b90e5c811866677e8786e2a235d4b7":[1,0,1781,4],
 "classTraitLittleBall.html":[1,0,1782],
 "classTraitLittleBall.html#a4a80b199bb3d05a702c698829c40a713":[1,0,1782,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX128 =
 "classTraitMonsterBall.html#a6eefb5f490ac882b1956b6103293e873":[1,0,1847,8],
 "classTraitMonsterBall.html#a8c077132dd854a5d52130317cb183c09":[1,0,1847,9],
 "classTraitMonsterBall.html#a8c84c59d2b629a6fe2984e8c00d94312":[1,0,1847,3],
-"classTraitMonsterBall.html#a92e81fe688eef43f0edd42d1e2bf7a2c":[1,0,1847,6],
-"classTraitMonsterBall.html#a96cb262e4cbf0e39c7d1b693ae373b28":[1,0,1847,10]
+"classTraitMonsterBall.html#a92e81fe688eef43f0edd42d1e2bf7a2c":[1,0,1847,6]
 };

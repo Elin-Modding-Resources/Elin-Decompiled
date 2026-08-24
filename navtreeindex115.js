@@ -1,5 +1,8 @@
 var NAVTREEINDEX115 =
 {
+"classSpatial.html#abc206a5f879525d7644562531c7bdda9":[1,0,1318,22],
+"classSpatial.html#abf78a8bb67dc8737af244ba0a434e054":[1,0,1318,48],
+"classSpatial.html#ac061a63451fb6c789d3fbdac04a047d9":[1,0,1318,42],
 "classSpatial.html#ac30e75dd7da5575bf36ec5a4d396c23e":[1,0,1318,69],
 "classSpatial.html#ac3b83a744d43d129fc395175ad240ce2":[1,0,1318,98],
 "classSpatial.html#ac4f7274ea2784cd381e21dd3a8483330":[1,0,1318,40],
@@ -92,8 +95,8 @@ var NAVTREEINDEX115 =
 "classSpawnSetting.html#af48a56ade71cec1ec99b0a8bfcc7e832":[1,0,1325,7],
 "classSpawnSetting.html#afb8be743bcf6c0e4e96afaa18bc388d3":[1,0,1325,11],
 "classSpawnSetting.html#afbb396b0a3a874f275f95decde560e7a":[1,0,1325,4],
-"classSpell.html":[1,0,1326],
-"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1326,0],
+"classSpell.html":[1,0,1327],
+"classSpell.html#adbf001daf000ff9ece9007121d3d0985":[1,0,1327,0],
 "classSplashText.html":[1,0,1328],
 "classSplashText.html#a027bb81008215adcaa05044b0a2d565a":[1,0,1328,3],
 "classSplashText.html#a40d628265e563f3f7040b2e0c2b96aad":[1,0,1328,2],
@@ -237,17 +240,14 @@ var NAVTREEINDEX115 =
 "classStanceSongEnd.html#a33d4b1ba112d2294bc5ef7009300b0de":[1,0,1341,1],
 "classStanceSongEnd.html#a73c1062769597a781e4a656f514478bc":[1,0,1341,0],
 "classStanceSongPebble.html":[1,0,1342],
-"classStanceSongPebble.html#a1ec9fd6db5c5bbce3fad51326b7b3aed":[1,0,1342,0],
-"classStanceSongPebble.html#aba32e2129cfba6ef4750c93b59b4f8d6":[1,0,1342,1],
+"classStanceSongPebble.html#aba32e2129cfba6ef4750c93b59b4f8d6":[1,0,1342,0],
 "classStanceSongSleep.html":[1,0,1343],
 "classStanceSongSleep.html#a2d21f428e025d08a5ab0a2fc76d67fe7":[1,0,1343,0],
 "classStanceSongSleep.html#ac8399dfdfb56110954abdee574a4745c":[1,0,1343,1],
 "classStanceSongValor.html":[1,0,1344],
-"classStanceSongValor.html#a50b9a5698a07a08472ac2337ec188761":[1,0,1344,1],
-"classStanceSongValor.html#a982ec8101728814b93706e087060e3df":[1,0,1344,0],
+"classStanceSongValor.html#a50b9a5698a07a08472ac2337ec188761":[1,0,1344,0],
 "classStanceTaunt.html":[1,0,1345],
 "classStats.html":[1,0,1346],
 "classStats.html#a12082b15f705c3071892c1205637dc5d":[1,0,1346,18],
-"classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e":[1,0,1346,19],
-"classStats.html#a272581c184ff82852476db0e26571c73":[1,0,1346,3]
+"classStats.html#a1e0fd1352ebd0d3e54e2effd2194685e":[1,0,1346,19]
 };

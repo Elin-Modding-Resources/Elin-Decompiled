@@ -1,7 +1,9 @@
 var classBaseSong =
 [
-    [ "OnStart", "classBaseSong.html#a4218175ce5ecb02da5587cd1d574278e", null ],
-    [ "Tick", "classBaseSong.html#a2d3051edb9804c6536468b3a829df9f9", null ],
-    [ "TickSong", "classBaseSong.html#a68f05b988a0b756bc9f05cfda6d14928", null ],
-    [ "IdAbility", "classBaseSong.html#a1235743fa0fb67382670a9ea173cddbb", null ]
+    [ "OnStart", "classBaseSong.html#ac6cc3e7c317b0b3f1c32ab8f4dd03cae", null ],
+    [ "Tick", "classBaseSong.html#aa8bb41d876a7d8490cddb0ae9edf7015", null ],
+    [ "TickSong", "classBaseSong.html#af0d150e13c05dd43e5bb92ba57ea3743", null ],
+    [ "TickSong", "classBaseSong.html#a20965a9d5f729fc424805d0dc8c4416c", null ],
+    [ "BaseDuration", "classBaseSong.html#a6bdee1d0bdc5c7a58864d62a3a244e83", null ],
+    [ "IdAbility", "classBaseSong.html#af9d42df8e782d9b6dc2aba44a36dffb8", null ]
 ];

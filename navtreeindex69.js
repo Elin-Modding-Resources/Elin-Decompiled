@@ -1,6 +1,9 @@
 var NAVTREEINDEX69 =
 {
-"classFaction.html#afdbf9e47afeaa36169a0a4c467719d12":[1,0,573,42],
+"classFaction.html#aea8a0b60f7064fa8f4e90de9817f1a5a":[1,0,574,30],
+"classFaction.html#af35f27574f299d0ddb5e8cdc8e558538":[1,0,574,6],
+"classFaction.html#af36f1e5d08f6d5ae200f7764e2eb61c3":[1,0,574,18],
+"classFaction.html#afdbf9e47afeaa36169a0a4c467719d12":[1,0,574,42],
 "classFactionBranch.html":[1,0,575],
 "classFactionBranch.html#a02254a7af1e1daeca363225270f9dde6":[1,0,575,81],
 "classFactionBranch.html#a035d377632c16860b1fb757e6d905400":[1,0,575,77],
@@ -246,8 +249,5 @@ var NAVTREEINDEX69 =
 "classFortuneRollData.html#a8fbe46f9502f995c56eccd8f1a578038":[1,0,593,10],
 "classFortuneRollData.html#a9305c3afd722ab6b4e0b8e7daf3be593":[1,0,593,7],
 "classFortuneRollData.html#a9ba225f3be9ba62058dd8199b97b2624":[1,0,593,1],
-"classFortuneRollData.html#aa8a67c206994db0250ddc0bf128c2f98":[1,0,593,9],
-"classFortuneRollData.html#af2da16d9055a44f75a9675d89b2f2b9d":[1,0,593,6],
-"classFortuneRollData.html#afcf355986e3bb37e90c40096899f073e":[1,0,593,2],
-"classFortuneRollData_1_1Prize.html":[1,0,593,0]
+"classFortuneRollData.html#aa8a67c206994db0250ddc0bf128c2f98":[1,0,593,9]
 };

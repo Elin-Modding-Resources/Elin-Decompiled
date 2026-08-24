@@ -1,5 +1,6 @@
 var NAVTREEINDEX122 =
 {
+"classTrait.html#a22e147eb4b95fa88b72fa38006cb30a1":[1,0,1501,228],
 "classTrait.html#a230baa05c8fbca42690cde706f5b6f20":[1,0,1501,71],
 "classTrait.html#a23a8f240d97abe6938f4e378ded4aa0e":[1,0,1501,162],
 "classTrait.html#a24c97a21e803409ce0307f1ba8be0d21":[1,0,1501,166],
@@ -248,6 +249,5 @@ var NAVTREEINDEX122 =
 "classTraitAdventurerBacker.html#a26b4699ae872875d4e7f43c351f79f9e":[1,0,1504,0],
 "classTraitAdventurerBacker.html#a8e61f22092b8b46fc1ab76cea8e59601":[1,0,1504,1],
 "classTraitAdventurerCustom.html":[1,0,1505],
-"classTraitAdventurerCustom.html#afb0f3f5d527f0aff14035c37617c903f":[1,0,1505,0],
-"classTraitAgingShelf.html":[1,0,1506]
+"classTraitAdventurerCustom.html#afb0f3f5d527f0aff14035c37617c903f":[1,0,1505,0]
 };

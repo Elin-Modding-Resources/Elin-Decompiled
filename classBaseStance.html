@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.336 Nightly</span>
+   <div id="projectname">Elin Decompiled Documentation<span id="projectnumber">&#160;EA 23.335 Stable Patch 2</span>
    </div>
   </td>
  </tr>
@@ -102,20 +102,18 @@ Inheritance diagram for BaseStance:</div>
  <div class="center">
   <img src="classBaseStance.png" usemap="#BaseStance_map" alt=""/>
   <map id="BaseStance_map" name="BaseStance_map">
-<area href="classCondition.html" alt="Condition" shape="rect" coords="516,168,635,192"/>
-<area href="classBaseCondition.html" alt="BaseCondition" shape="rect" coords="516,112,635,136"/>
-<area href="classBaseStats.html" alt="BaseStats" shape="rect" coords="516,56,635,80"/>
-<area href="classEClass.html" alt="EClass" shape="rect" coords="516,0,635,24"/>
-<area href="classBaseSong.html" alt="BaseSong" shape="rect" coords="193,280,312,304"/>
-<area href="classStanceFury.html" alt="StanceFury" shape="rect" coords="322,280,441,304"/>
-<area href="classStanceIai.html" alt="StanceIai" shape="rect" coords="451,280,570,304"/>
-<area href="classStanceMama.html" alt="StanceMama" shape="rect" coords="580,280,699,304"/>
-<area href="classStanceManaCost.html" alt="StanceManaCost" shape="rect" coords="709,280,828,304"/>
-<area href="classStanceTaunt.html" alt="StanceTaunt" shape="rect" coords="838,280,957,304"/>
-<area href="classStanceSongEnd.html" alt="StanceSongEnd" shape="rect" coords="0,336,119,360"/>
-<area href="classStanceSongPebble.html" alt="StanceSongPebble" shape="rect" coords="129,336,248,360"/>
-<area href="classStanceSongSleep.html" alt="StanceSongSleep" shape="rect" coords="258,336,377,360"/>
-<area href="classStanceSongValor.html" alt="StanceSongValor" shape="rect" coords="387,336,506,360"/>
+<area href="classCondition.html" alt="Condition" shape="rect" coords="0,168,184,192"/>
+<area href="classBaseCondition.html" alt="BaseCondition" shape="rect" coords="0,112,184,136"/>
+<area href="classBaseStats.html" alt="BaseStats" shape="rect" coords="0,56,184,80"/>
+<area href="classEClass.html" alt="EClass" shape="rect" coords="0,0,184,24"/>
+<area href="classBaseSong.html" alt="BaseSong&lt; ConSongPebble &gt;" shape="rect" coords="194,280,378,304"/>
+<area href="classBaseSong.html" alt="BaseSong&lt; ConSongValor &gt;" shape="rect" coords="194,336,378,360"/>
+<area href="classBaseSong.html" alt="BaseSong&lt; T &gt;" shape="rect" coords="194,392,378,416"/>
+<area href="classStanceFury.html" alt="StanceFury" shape="rect" coords="194,448,378,472"/>
+<area href="classStanceIai.html" alt="StanceIai" shape="rect" coords="194,504,378,528"/>
+<area href="classStanceMama.html" alt="StanceMama" shape="rect" coords="194,560,378,584"/>
+<area href="classStanceManaCost.html" alt="StanceManaCost" shape="rect" coords="194,616,378,640"/>
+<area href="classStanceTaunt.html" alt="StanceTaunt" shape="rect" coords="194,672,378,696"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -173,6 +171,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7a2cfa01df0129fa55c3045866180b2a inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26434ddc3787d11f66f72160d5991fe inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#ad26434ddc3787d11f66f72160d5991fe">SetOwner</a> (<a class="el" href="classChara.html">Chara</a> _owner, bool onDeserialize=false)</td></tr>
 <tr class="separator:ad26434ddc3787d11f66f72160d5991fe inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7019c1ba2d3bdbe46a5380521b4bd870 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a7019c1ba2d3bdbe46a5380521b4bd870">RefreshElements</a> ()</td></tr>
+<tr class="separator:a7019c1ba2d3bdbe46a5380521b4bd870 inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10d26d960382d8fef3bb13edc8dd507c inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a10d26d960382d8fef3bb13edc8dd507c">RefreshEmoIcon</a> ()</td></tr>
 <tr class="separator:a10d26d960382d8fef3bb13edc8dd507c inherit pub_methods_classBaseCondition"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73caba75a4e1224a76a46fae1bb985f0 inherit pub_methods_classBaseCondition"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSourceElement_1_1Row.html">SourceElement.Row</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBaseCondition.html#a73caba75a4e1224a76a46fae1bb985f0">GetElementSource</a> (int i)</td></tr>
@@ -530,6 +530,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classBaseCondition.html#af0c6ea92ca1cc59ce6dec886a38868b5">BaseCondition</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classBaseSong.html#aa8bb41d876a7d8490cddb0ae9edf7015">BaseSong&lt; ConSongPebble &gt;</a>, and <a class="el" href="classBaseSong.html#aa8bb41d876a7d8490cddb0ae9edf7015">BaseSong&lt; ConSongValor &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="BaseStance_8cs_source.html#l00020">20</a> of file <a class="el" href="BaseStance_8cs_source.html">BaseStance.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
