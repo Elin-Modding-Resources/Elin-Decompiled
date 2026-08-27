@@ -217,9 +217,9 @@ public class Lang
 				list.AddRange(from f in excelDialogLoader()
 					select new ExcelData(f));
 			}
-			for (int i = 0; i < excelDialog.book.NumberOfSheets; i++)
+			for (int num = 0; num < excelDialog.book.NumberOfSheets; num++)
 			{
-				string sheetName = excelDialog.book.GetSheetAt(i).SheetName;
+				string sheetName = excelDialog.book.GetSheetAt(num).SheetName;
 				excelDialog.BuildMap(sheetName);
 				foreach (ExcelData item in list)
 				{

@@ -187,10 +187,10 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 				header = null;
 			}
 		}
-		int num = 0;
-		for (int j = 3; j <= sheet.LastRowNum; j++)
+		int num2 = 0;
+		for (int num3 = 3; num3 <= sheet.LastRowNum; num3++)
 		{
-			SourceData.row = sheet.GetRow(j);
+			SourceData.row = sheet.GetRow(num3);
 			try
 			{
 				if (string.IsNullOrEmpty(SourceData.row?.GetCell(0)?.ToString()))
@@ -200,17 +200,17 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 				T val = ((header != null) ? CreateRowByMapping(header) : CreateRow());
 				val.OnImportData(this);
 				rows.Add(val);
-				num++;
+				num2++;
 				continue;
 			}
 			catch (Exception arg)
 			{
-				Debug.LogError($"#source failed to create row#{j + 1}\n{arg}");
+				Debug.LogError($"#source failed to create row#{num3 + 1}\n{arg}");
 				continue;
 			}
 		}
-		Debug.Log(sheet.SheetName + "/" + sheet.LastRowNum + "/" + num);
-		ERROR.lastImported = num;
+		Debug.Log(sheet.SheetName + "/" + sheet.LastRowNum + "/" + num2);
+		ERROR.lastImported = num2;
 		OnAfterImportData();
 		initialized = false;
 		return true;
@@ -745,7 +745,7 @@ public class SourceData : ScriptableObject
 				return sortedDictionary;
 			}
 			string name = GetType().DeclaringType.Name;
-			foreach (var (text2, jp2) in rowFields)
+			foreach (var (text2, jp) in rowFields)
 			{
 				if (!text2.EndsWith("_JP"))
 				{
@@ -754,7 +754,7 @@ public class SourceData : ScriptableObject
 				string text3 = text2[..^3];
 				if (rowFields.TryGetValue(text3, out var value) && rowFields.TryGetValue(text3 + "_L", out var value2))
 				{
-					string text4 = GetFieldText(jp2, value, value2);
+					string text4 = GetFieldText(jp, value, value2);
 					if (!text4.IsEmpty())
 					{
 						sortedDictionary[$"{name}.{obj}.{text3}"] = text4;
@@ -762,9 +762,9 @@ public class SourceData : ScriptableObject
 				}
 			}
 			return sortedDictionary;
-			string GetFieldText(FieldInfo jp, FieldInfo en, FieldInfo l)
+			string GetFieldText(FieldInfo fieldInfo2, FieldInfo en, FieldInfo l)
 			{
-				object value3 = jp.GetValue(this);
+				object value3 = fieldInfo2.GetValue(this);
 				object value4 = en.GetValue(this);
 				object value5 = l.GetValue(this);
 				string langCode = Lang.langCode;
@@ -799,33 +799,33 @@ public class SourceData : ScriptableObject
 					continue;
 				}
 				string text3 = text2[..^2];
-				if (!texts.TryGetValue($"{name}.{obj}.{text3}", out var value2) || value2.IsEmpty() || !rowFields.TryGetValue(text3, out var value3) || !rowFields.TryGetValue(text3 + "_JP", out var value4))
+				if (!texts.TryGetValue($"{name}.{obj}.{text3}", out var value) || value.IsEmpty() || !rowFields.TryGetValue(text3, out var value2) || !rowFields.TryGetValue(text3 + "_JP", out var value3))
 				{
 					continue;
 				}
 				fieldInfo2.SetValue(this, null);
-				SetFieldText(fieldInfo2, value2);
+				SetFieldText(fieldInfo2, value);
 				if (!(langCode == "EN"))
 				{
 					if (langCode == "JP")
 					{
-						SetFieldText(value4, value2);
+						SetFieldText(value3, value);
 					}
 				}
 				else
 				{
-					SetFieldText(value3, value2);
+					SetFieldText(value2, value);
 				}
 			}
-			void SetFieldText(FieldInfo l, string value)
+			void SetFieldText(FieldInfo l, string text4)
 			{
 				if (l.FieldType == typeof(string))
 				{
-					l.SetValue(this, value);
+					l.SetValue(this, text4);
 				}
 				else if (l.FieldType == typeof(string[]))
 				{
-					l.SetValue(this, value.IsEmpty() ? Array.Empty<string>() : value.Split(','));
+					l.SetValue(this, text4.IsEmpty() ? Array.Empty<string>() : text4.Split(','));
 				}
 			}
 		}

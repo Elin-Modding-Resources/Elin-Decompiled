@@ -55,7 +55,7 @@ public class ResourceCache<T> where T : Object
 		if (!dict.TryGetValue(key, out value))
 		{
 			T2 val = null;
-			val = ((loadType != 0) ? AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/Bundle/" + id).LoadAsset<GameObject>(new FileInfo(id).Name).GetComponent<T2>() : Resources.Load<T2>(path + id));
+			val = ((loadType != ResourceLoadType.Resource) ? AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/Bundle/" + id).LoadAsset<GameObject>(new FileInfo(id).Name).GetComponent<T2>() : Resources.Load<T2>(path + id));
 			dict.Add(key, val as T);
 			return val;
 		}

@@ -226,7 +226,7 @@ public class ExcelParser
 		stringBuilder.AppendLine("#source ill-format file: " + path);
 		object[] array = new object[5];
 		IRow obj2 = row;
-		array[0] = ((obj2 != null) ? new int?(obj2.RowNum + 1) : null);
+		array[0] = ((obj2 != null) ? new int?(obj2.RowNum + 1) : ((int?)null));
 		array[1] = id + 1;
 		array[2] = ToLetterId(id);
 		array[3] = name;

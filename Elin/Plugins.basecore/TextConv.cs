@@ -168,41 +168,41 @@ public class TextConv : ExcelData
 			}
 			string text2 = row.GetCell(1).ToString();
 			string text3 = row.GetCell(2)?.ToString() ?? "";
-			int @int = ExcelParser.GetInt(4, row);
+			int c = ExcelParser.GetInt(4, row);
 			if (text[0] == '$')
 			{
 				switch (text + "_" + text3)
 				{
 				case "$I_":
 					I_M = (I_F = text2.Split(','));
-					p_I_M = (p_I_F = @int);
+					p_I_M = (p_I_F = c);
 					break;
 				case "$you_":
 					you_M = (you_F = text2.Split(','));
-					p_you_M = (p_you_F = @int);
+					p_you_M = (p_you_F = c);
 					break;
 				case "$I_M":
 					I_M = text2.Split(',');
-					p_I_M = @int;
+					p_I_M = c;
 					break;
 				case "$you_M":
 					you_M = text2.Split(',');
-					p_you_M = @int;
+					p_you_M = c;
 					break;
 				case "$I_F":
 					I_F = text2.Split(',');
-					p_I_F = @int;
+					p_I_F = c;
 					break;
 				case "$you_F":
 					you_F = text2.Split(',');
-					p_you_F = @int;
+					p_you_F = c;
 					break;
 				case "$tag":
 					tags = text2.Split(',');
 					break;
 				}
 			}
-			items.Add(new Item(row, text, text2, text3, @int));
+			items.Add(new Item(row, text, text2, text3, c));
 		}
 	}
 }

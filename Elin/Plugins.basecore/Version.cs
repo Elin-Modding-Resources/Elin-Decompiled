@@ -63,20 +63,22 @@ public struct Version
 		{
 			return default(Version);
 		}
-		Version result = default(Version);
-		result.major = array[0].ToInt();
-		result.minor = array[1].ToInt();
-		result.batch = array[2].ToInt();
-		return result;
+		return new Version
+		{
+			major = array[0].ToInt(),
+			minor = array[1].ToInt(),
+			batch = array[2].ToInt()
+		};
 	}
 
 	public static Version Get(int i)
 	{
-		Version result = default(Version);
-		result.major = i / 1000000;
-		result.minor = i / 1000 % 1000;
-		result.batch = i % 1000;
-		return result;
+		return new Version
+		{
+			major = i / 1000000,
+			minor = i / 1000 % 1000,
+			batch = i % 1000
+		};
 	}
 
 	public bool IsSaveCompatible(Version v)
