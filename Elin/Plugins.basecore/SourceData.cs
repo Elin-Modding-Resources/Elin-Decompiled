@@ -88,7 +88,6 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 			Debug.Log("#init Skipping sourceData.Init:" + base.name);
 			return;
 		}
-		initialized = true;
 		editorListString.Clear();
 		RemoveDuplicateRows();
 		int num = 0;
@@ -103,6 +102,7 @@ public class SourceData<T, T2> : SourceData where T : SourceData.BaseRow
 			num++;
 		}
 		OnInit();
+		initialized = true;
 	}
 
 	public virtual void OnInit()

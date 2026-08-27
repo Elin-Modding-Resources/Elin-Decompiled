@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public struct Version
@@ -12,6 +13,23 @@ public struct Version
 	public int fix;
 
 	public bool demo;
+
+	[HideInInspector]
+	public bool nightly;
+
+	public string GetBuild()
+	{
+		if (!nightly)
+		{
+			return "Stable";
+		}
+		return "Nightly";
+	}
+
+	public string GetNumeric()
+	{
+		return major + "." + minor + "." + batch + "." + fix;
+	}
 
 	public string GetText()
 	{
