@@ -51,8 +51,8 @@ public class DramaCustomSequence : EClass
 			choice.SetOnClick(delegate
 			{
 				sequence.firstTalk.funcText = () => rumor;
-				List<Hobby> list2 = c.ListHobbies();
-				Hobby hobby = ((list2.Count > 0) ? list2[0] : null);
+				List<Hobby> list = c.ListHobbies();
+				Hobby hobby = ((list.Count > 0) ? list[0] : null);
 				if (EClass.rnd(20) == 0 || EClass.debug.showFav)
 				{
 					if (EClass.rnd(2) == 0 || hobby == null)
@@ -99,14 +99,14 @@ public class DramaCustomSequence : EClass
 			QuestDeliver questDeliver = _quest as QuestDeliver;
 			foreach (Thing item2 in questDeliver.ListDestThing())
 			{
-				Thing _t5 = item2;
-				Choice2("daDeliver".lang(item.GetTitle() ?? "", _t5.GetName(NameStyle.Full, questDeliver.num)), "_deliver").SetOnClick(delegate
+				Thing _t = item2;
+				Choice2("daDeliver".lang(item.GetTitle() ?? "", _t.GetName(NameStyle.Full, questDeliver.num)), "_deliver").SetOnClick(delegate
 				{
-					destThing = _t5;
+					destThing = _t;
 					destQuest = _quest;
 				}).SetOnTooltip(delegate(UITooltip a)
 				{
-					_t5.WriteNote(a.note);
+					_t.WriteNote(a.note);
 				});
 			}
 		}
@@ -126,13 +126,13 @@ public class DramaCustomSequence : EClass
 			Choice2("daQuest".lang(c.quest?.GetTitle() ?? ""), "_quest").SetCondition(() => c.quest != null);
 			if (c.trait is TraitGuard)
 			{
-				EClass.pc.things.Foreach(delegate(Thing _t)
+				EClass.pc.things.Foreach(delegate(Thing thing)
 				{
-					if (_t.isLostProperty)
+					if (thing.isLostProperty)
 					{
-						Choice2("daLostProperty".lang(_t.Name), "_lostProperty").SetOnClick(delegate
+						Choice2("daLostProperty".lang(thing.Name), "_lostProperty").SetOnClick(delegate
 						{
-							destThing = _t;
+							destThing = thing;
 						});
 					}
 				});
@@ -179,7 +179,7 @@ public class DramaCustomSequence : EClass
 					{
 						Choice2("daChangeDomain", "_changeDomain").DisableSound();
 					}
-					if (c.trait.ShopType != 0)
+					if (c.trait.ShopType != ShopType.None)
 					{
 						if (!c.GetBool("disable_barter_choice"))
 						{
@@ -190,11 +190,11 @@ public class DramaCustomSequence : EClass
 							Choice2("daRob", "_rob");
 						}
 					}
-					if (c.trait.SlaverType != 0)
+					if (c.trait.SlaverType != SlaverType.None)
 					{
 						Choice2(c.trait.TextNextRestockPet, "_buySlave").DisableSound();
 					}
-					if (c.trait.CopyShop != 0)
+					if (c.trait.CopyShop != Trait.CopyShopType.None)
 					{
 						Choice2(("daCopy" + c.trait.CopyShop).lang(c.trait.NumCopyItem.ToString() ?? ""), "_copyItem").DisableSound();
 					}
@@ -278,10 +278,10 @@ public class DramaCustomSequence : EClass
 		{
 			foreach (Thing item4 in EClass.pc.things.List((Thing a) => !a.c_isImportant && !a.isEquipped && a.c_uidAttune == 0 && (a.id == "amulet_engagement" || a.id == "ring_engagement")))
 			{
-				Thing _t4 = item4;
+				Thing _t2 = item4;
 				Choice("daMarry".lang(item4.Name), "_marry").SetOnClick(delegate
 				{
-					destThing = _t4;
+					destThing = _t2;
 				});
 			}
 		}
@@ -504,27 +504,27 @@ public class DramaCustomSequence : EClass
 		_Talk("tg", GetTopic(c, "questAccept"));
 		Method(delegate
 		{
-			Zone z3 = c.quest.CreateInstanceZone(c);
-			EClass.pc.MoveZone(z3, ZoneTransition.EnterState.Center);
+			Zone z = c.quest.CreateInstanceZone(c);
+			EClass.pc.MoveZone(z, ZoneTransition.EnterState.Center);
 		}, null, StepEnd);
 		Step("_questFull");
 		_Talk("tg", GetTopic(c, "questFull"), text);
 		Step("_greatDebt");
 		Method(delegate
 		{
-			QuestDebt questDebt3 = EClass.game.quests.Get<QuestDebt>();
-			if (!questDebt3.CanGiveBill())
+			QuestDebt questDebt2 = EClass.game.quests.Get<QuestDebt>();
+			if (!questDebt2.CanGiveBill())
 			{
 				TempTalkTopic("loytel_bill_give_wait", StepDefault);
 			}
-			else if (questDebt3.gaveBill)
+			else if (questDebt2.gaveBill)
 			{
 				TempTalkTopic("loytel_bill_give_given", StepDefault);
 			}
 			else
 			{
-				TempTalkTopic(questDebt3.GetIdTalk_GiveBill(), StepEnd);
-				questDebt3.GiveBill();
+				TempTalkTopic(questDebt2.GetIdTalk_GiveBill(), StepEnd);
+				questDebt2.GiveBill();
 			}
 		});
 		Step("_greatDebt2");
@@ -638,8 +638,8 @@ public class DramaCustomSequence : EClass
 			}
 			Quest quest = Quest.Create("wedding", null, c, assignQuest: false);
 			EClass.game.quests.Start(quest);
-			Zone z2 = quest.CreateInstanceZone(c);
-			EClass.pc.MoveZone(z2, new ZoneTransition
+			Zone z = quest.CreateInstanceZone(c);
+			EClass.pc.MoveZone(z, new ZoneTransition
 			{
 				state = ZoneTransition.EnterState.Exact,
 				x = 50,
@@ -714,18 +714,18 @@ public class DramaCustomSequence : EClass
 				string[] recruitItems = c.source.recruitItems;
 				if (!recruitItems.IsEmpty())
 				{
-					string[] array3 = recruitItems[0].Split('/');
-					string reqId = array3[0];
-					int reqNum = array3[1].ToInt();
+					string[] array = recruitItems[0].Split('/');
+					string reqId = array[0];
+					int reqNum = array[1].ToInt();
 					CardBlueprint.Set(CardBlueprint.Original);
 					GameLang.refDrama1 = ThingGen.Create(reqId).SetNum(reqNum).Name;
 					TempTalkTopic("inviteReq1", null);
-					foreach (Thing t2 in EClass.pc.things.List((Thing t) => t.id == reqId && (t.Num >= reqNum || EClass.debug.enable), onlyAccessible: true))
+					foreach (Thing t in EClass.pc.things.List((Thing thing) => thing.id == reqId && (thing.Num >= reqNum || EClass.debug.enable), onlyAccessible: true))
 					{
-						Thing _t6 = t2;
-						Choice("daDeliver".lang("", _t6.GetName(NameStyle.Full, _t6.Num)), delegate
+						Thing _t5 = t;
+						Choice("daDeliver".lang("", _t5.GetName(NameStyle.Full, _t5.Num)), delegate
 						{
-							t2.ModNum(-reqNum);
+							t.ModNum(-reqNum);
 							TempTalk("hired", StepEnd);
 							EClass.Sound.Play("good");
 							if (c.id == "mamani")
@@ -741,7 +741,7 @@ public class DramaCustomSequence : EClass
 							}
 						}).SetOnTooltip(delegate(UITooltip a)
 						{
-							_t6.WriteNote(a.note);
+							_t5.WriteNote(a.note);
 						});
 					}
 					Choice("no2", StepDefault, cancel: true).SetOnClick(RumorChill);
@@ -804,10 +804,10 @@ public class DramaCustomSequence : EClass
 			if (c.affinity.CanBecomeMama() || EClass.pc.faith == EClass.game.religions.MoonShadow || EClass.debug.enable)
 			{
 				Steam.GetAchievement(ID_Achievement.MAMA);
-				string id2 = c.id;
-				if (!(id2 == "farris"))
+				string id = c.id;
+				if (!(id == "farris"))
 				{
-					if (id2 == "quru")
+					if (id == "quru")
 					{
 						Steam.GetAchievement(ID_Achievement.MAMA3);
 					}
@@ -876,8 +876,8 @@ public class DramaCustomSequence : EClass
 		Step("_picklock");
 		Method(delegate
 		{
-			int cost8 = CalcMoney.Picklock(EClass.pc, destThing);
-			GameLang.refDrama1 = cost8.ToString() ?? "";
+			int cost = CalcMoney.Picklock(EClass.pc, destThing);
+			GameLang.refDrama1 = cost.ToString() ?? "";
 			TempTalkTopic("bird3", null);
 			Choice("yes2", delegate
 			{
@@ -885,14 +885,14 @@ public class DramaCustomSequence : EClass
 				{
 					TempTalkTopic("lockTooHard", StepDefault);
 				}
-				else if (EClass.pc.GetCurrency() < cost8)
+				else if (EClass.pc.GetCurrency() < cost)
 				{
 					TempTalkTopic("nomoney", StepDefault);
 				}
 				else
 				{
 					SE.Pay();
-					EClass.pc.ModCurrency(-cost8);
+					EClass.pc.ModCurrency(-cost);
 					manager.layer.SetOnKill(delegate
 					{
 						c.PlaySound("lock_open");
@@ -914,10 +914,10 @@ public class DramaCustomSequence : EClass
 		Method(delegate
 		{
 			TempTalkTopic("blooming1", null);
-			foreach (Chara item7 in EClass.pc.party.members.Where((Chara c2) => c2.CanBloom()))
+			foreach (Chara item7 in EClass.pc.party.members.Where((Chara chara) => chara.CanBloom()))
 			{
-				Chara c4 = item7;
-				Choice("daBloom".lang(c4.Name), delegate
+				Chara c2 = item7;
+				Choice("daBloom".lang(c2.Name), delegate
 				{
 					if (EClass._zone.influence < 10)
 					{
@@ -929,11 +929,11 @@ public class DramaCustomSequence : EClass
 						LayerDrama.Instance.SetOnKill(delegate
 						{
 							c.Talk("goodBoy");
-							c4.Say("dingExp", c);
-							c4.Talk("insulted");
-							c4.SetFeat(1273, 1, msg: true);
-							c4.PlayEffect("aura_heaven");
-							c4.feat += 10;
+							c2.Say("dingExp", c);
+							c2.Talk("insulted");
+							c2.SetFeat(1273, 1, msg: true);
+							c2.PlayEffect("aura_heaven");
+							c2.feat += 10;
 							EClass.pc.PlaySound("pray");
 						});
 						TempTalkTopic("blooming2", StepEnd);
@@ -1002,22 +1002,22 @@ public class DramaCustomSequence : EClass
 					{
 						b.button1.mainText.text = a.Name;
 						UIItem uIItem = Util.Instantiate<UIItem>("UI/Element/Item/Extra/costBarter", b.layout);
-						HomeResource.Cost c3 = new HomeResource.Cost(EClass.BranchOrHomeBranch.resources.money, a.source.money);
-						uIItem.text1.SetText(c3.cost.ToString() ?? "", (c3.resource.value >= c3.cost) ? FontColor.Good : FontColor.Bad);
-						uIItem.image1.sprite = c3.resource.Sprite;
+						HomeResource.Cost c2 = new HomeResource.Cost(EClass.BranchOrHomeBranch.resources.money, a.source.money);
+						uIItem.text1.SetText(c2.cost.ToString() ?? "", (c2.resource.value >= c2.cost) ? FontColor.Good : FontColor.Bad);
+						uIItem.image1.sprite = c2.resource.Sprite;
 						b.button1.SetTooltip(delegate(UITooltip t)
 						{
 							a.WriteNote(t.note);
 						});
 						b.button1.onClick.AddListener(delegate
 						{
-							if (c3.resource.value < c3.cost)
+							if (c2.resource.value < c2.cost)
 							{
 								SE.Beep();
 							}
 							else
 							{
-								c3.resource.Mod(-c3.cost);
+								c2.resource.Mod(-c2.cost);
 								plans.Remove(a);
 								EClass.BranchOrHomeBranch.researches.AddPlan(a);
 								SE.Pay();
@@ -1043,20 +1043,20 @@ public class DramaCustomSequence : EClass
 		Step("_upgradeHearth");
 		Method(delegate
 		{
-			int cost7 = EClass.Branch.GetUpgradeCost();
-			GameLang.refDrama1 = Lang._currency(cost7, "money");
+			int cost = EClass.Branch.GetUpgradeCost();
+			GameLang.refDrama1 = Lang._currency(cost, "money");
 			GameLang.refDrama2 = (EClass.Branch.lv + 1).ToString() ?? "";
 			GameLang.refDrama3 = "hearth_dialog".lang(EClass.Branch.GetHearthHint(EClass.Branch.lv + 1));
 			TempTalkTopic("upgrade_heath1", null);
 			Choice("yes", delegate
 			{
-				if (EClass.pc.GetCurrency() < cost7)
+				if (EClass.pc.GetCurrency() < cost)
 				{
 					TempTalkTopic("nomoney", StepDefault);
 				}
 				else
 				{
-					EClass.pc.ModCurrency(-cost7);
+					EClass.pc.ModCurrency(-cost);
 					SE.Pay();
 					LayerDrama.Instance.SetOnKill(delegate
 					{
@@ -1070,9 +1070,9 @@ public class DramaCustomSequence : EClass
 		Step("_sellFame");
 		Method(delegate
 		{
-			int cost6 = EClass.player.fame / 5;
-			GameLang.refDrama1 = cost6.ToString() ?? "";
-			if (cost6 == 0)
+			int cost = EClass.player.fame / 5;
+			GameLang.refDrama1 = cost.ToString() ?? "";
+			if (cost == 0)
 			{
 				TempTalkTopic("goto2", StepDefault);
 			}
@@ -1081,9 +1081,9 @@ public class DramaCustomSequence : EClass
 				TempTalkTopic("sellFame1", null);
 				Choice("yes", delegate
 				{
-					EClass.pc.ModCurrency(cost6);
+					EClass.pc.ModCurrency(cost);
 					SE.Pay();
-					EClass.player.ModFame(-cost6);
+					EClass.player.ModFame(-cost);
 					TempTalkTopic("sellFame2", StepDefault);
 				});
 				Choice("no", StepDefault, cancel: true).SetOnClick(RumorChill);
@@ -1092,8 +1092,8 @@ public class DramaCustomSequence : EClass
 		Step("_investZone");
 		Method(delegate
 		{
-			int cost5 = CalcMoney.InvestZone(EClass.pc);
-			GameLang.refDrama1 = cost5.ToString() ?? "";
+			int cost = CalcMoney.InvestZone(EClass.pc);
+			GameLang.refDrama1 = cost.ToString() ?? "";
 			GameLang.refDrama2 = ((EClass._zone.investment < 0) ? int.MaxValue : EClass._zone.investment).ToString() ?? "";
 			TempTalkTopic("invest1", null);
 			Choice("yes", delegate
@@ -1107,15 +1107,15 @@ public class DramaCustomSequence : EClass
 			});
 			void Invest(bool quick)
 			{
-				if (EClass.pc.GetCurrency() < cost5)
+				if (EClass.pc.GetCurrency() < cost)
 				{
 					TempTalkTopic("nomoney", StepDefault);
 				}
 				else
 				{
-					EClass.pc.ModCurrency(-cost5);
+					EClass.pc.ModCurrency(-cost);
 					SE.Pay();
-					EClass._zone.investment += cost5;
+					EClass._zone.investment += cost;
 					EClass._zone.ModDevelopment(5 + EClass.rnd(5));
 					EClass._zone.ModInfluence(2);
 					EClass.pc.ModExp(292, 100 + EClass._zone.development * 2);
@@ -1133,8 +1133,8 @@ public class DramaCustomSequence : EClass
 		Step("_investShop");
 		Method(delegate
 		{
-			int cost4 = CalcMoney.InvestShop(EClass.pc, c);
-			GameLang.refDrama1 = cost4.ToString() ?? "";
+			int cost = CalcMoney.InvestShop(EClass.pc, c);
+			GameLang.refDrama1 = cost.ToString() ?? "";
 			GameLang.refDrama2 = c.trait.ShopLv.ToString() ?? "";
 			TempTalkTopic("invest_shop1", null);
 			Choice("yes", delegate
@@ -1148,13 +1148,13 @@ public class DramaCustomSequence : EClass
 			});
 			void Invest(bool quick)
 			{
-				if (EClass.pc.GetCurrency() < cost4)
+				if (EClass.pc.GetCurrency() < cost)
 				{
 					TempTalkTopic("nomoney", StepDefault);
 				}
 				else
 				{
-					EClass.pc.ModCurrency(-cost4);
+					EClass.pc.ModCurrency(-cost);
 					SE.Pay();
 					c.c_invest++;
 					EClass._zone.ModInfluence(1);
@@ -1181,11 +1181,11 @@ public class DramaCustomSequence : EClass
 		Step("_buyLand");
 		Method(delegate
 		{
-			bool num7 = EClass._map.bounds.CanExpand(1);
+			bool num4 = EClass._map.bounds.CanExpand(1);
 			int costLand = CalcGold.ExpandLand();
 			GameLang.refDrama1 = "";
 			GameLang.refDrama2 = costLand.ToString() ?? "";
-			if (!num7)
+			if (!num4)
 			{
 				TempTalkTopic("expand3", StepDefault);
 			}
@@ -1231,7 +1231,7 @@ public class DramaCustomSequence : EClass
 		Step("_blessing");
 		Method(delegate
 		{
-			bool flag6 = c.trait is TraitMiko_Mifu;
+			bool flag5 = c.trait is TraitMiko_Mifu;
 			TempTalkTopic("blessing", StepEnd);
 			LayerDrama.Instance.SetOnKill(delegate
 			{
@@ -1255,7 +1255,7 @@ public class DramaCustomSequence : EClass
 				}
 				c.isRestocking = true;
 			});
-			c.c_dateStockExpire = EClass.world.date.GetRaw() + (flag6 ? 180 : 180) * 1440;
+			c.c_dateStockExpire = EClass.world.date.GetRaw() + (flag5 ? 180 : 180) * 1440;
 		});
 		Step("_train");
 		Method(delegate
@@ -1267,12 +1267,12 @@ public class DramaCustomSequence : EClass
 				{
 					onClick = delegate(Element a, ButtonElement b)
 					{
-						int num6 = (EClass.pc.elements.HasBase(a.id) ? CalcPlat.Train(EClass.pc, a) : CalcPlat.Learn(EClass.pc, a));
-						if (num6 == 0)
+						int num4 = (EClass.pc.elements.HasBase(a.id) ? CalcPlat.Train(EClass.pc, a) : CalcPlat.Learn(EClass.pc, a));
+						if (num4 == 0)
 						{
 							SE.Beep();
 						}
-						else if (EClass.pc.TryPay(num6, "plat"))
+						else if (EClass.pc.TryPay(num4, "plat"))
 						{
 							if (EClass.pc.elements.HasBase(a.id))
 							{
@@ -1292,9 +1292,9 @@ public class DramaCustomSequence : EClass
 						b.imagePotential.enabled = flag5;
 						b.SetElement(EClass.pc.elements.GetElement(a.id) ?? a, EClass.pc.elements);
 						int plat = EClass.pc.GetCurrency("plat");
-						int cost3 = (EClass.pc.elements.HasBase(a.id) ? CalcPlat.Train(EClass.pc, a) : CalcPlat.Learn(EClass.pc, a));
+						int cost = (EClass.pc.elements.HasBase(a.id) ? CalcPlat.Train(EClass.pc, a) : CalcPlat.Learn(EClass.pc, a));
 						b.mainText.text = b.mainText.text + " " + (flag5 ? "" : ("notLearned".lang() + " "));
-						b.subText2.text = ((cost3 == 0) ? "-" : (cost3.ToString() ?? "")).TagColor(() => plat >= cost3 && cost3 != 0);
+						b.subText2.text = ((cost == 0) ? "-" : (cost.ToString() ?? "")).TagColor(() => plat >= cost && cost != 0);
 						b.RebuildLayout();
 					},
 					onInstantiate = delegate
@@ -1384,13 +1384,13 @@ public class DramaCustomSequence : EClass
 			}
 			else
 			{
-				int cost2 = CalcMoney.BuySlave(tc);
-				GameLang.refDrama1 = cost2.ToString() ?? "";
+				int cost = CalcMoney.BuySlave(tc);
+				GameLang.refDrama1 = cost.ToString() ?? "";
 				GameLang.refDrama2 = tc.Name;
 				TempTalkTopic("slave_buy", null);
 				Choice("yes", delegate
 				{
-					if (!EClass.pc.TryPay(cost2))
+					if (!EClass.pc.TryPay(cost))
 					{
 						TempTalkTopic("nomoney", StepDefault);
 					}
@@ -1648,14 +1648,14 @@ public class DramaCustomSequence : EClass
 		{
 			GameLang.refDrama1 = Lang._currency(EClass.player.extraTax, "money");
 			TempTalkTopic("extraTax", null);
-			int[] array2 = taxTier;
-			foreach (int num5 in array2)
+			int[] array = taxTier;
+			foreach (int num4 in array)
 			{
-				int _i2 = num5;
-				Choice(Lang._currency(_i2, showUnit: true), delegate
+				int _i = num4;
+				Choice(Lang._currency(_i, showUnit: true), delegate
 				{
-					EClass.player.extraTax = _i2;
-					GameLang.refDrama1 = Lang._currency(_i2, "money");
+					EClass.player.extraTax = _i;
+					GameLang.refDrama1 = Lang._currency(_i, "money");
 					TempTalkTopic("extraTax2", StepDefault);
 				});
 			}
@@ -1785,10 +1785,10 @@ public class DramaCustomSequence : EClass
 			}
 			foreach (Thing item11 in EClass.pc.things.List((Thing a) => a.c_lockLv > 0, onlyAccessible: true))
 			{
-				Thing _t2 = item11;
-				Choice2("daPicklock".lang(_t2.Name), "_picklock").SetOnClick(delegate
+				Thing _t4 = item11;
+				Choice2("daPicklock".lang(_t4.Name), "_picklock").SetOnClick(delegate
 				{
-					destThing = _t2;
+					destThing = _t4;
 				});
 			}
 		}

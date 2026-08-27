@@ -23,8 +23,8 @@ public class ZoneEventQuest : ZoneEvent
 		{
 			Point nearestPoint = EClass._map.bounds.GetRandomEdge().GetNearestPoint(allowBlock: false, allowChara: false);
 			Chara chara = EClass._zone.SpawnMob(nearestPoint, SpawnSetting.DefenseEnemy(EClass._zone.DangerLv));
-			Hostility hostility2 = (chara.c_originalHostility = Hostility.Enemy);
-			chara.hostility = hostility2;
+			Hostility hostility = (chara.c_originalHostility = Hostility.Enemy);
+			chara.hostility = hostility;
 			if (CountEnemy)
 			{
 				enemies.Add(chara.uid);
@@ -36,8 +36,8 @@ public class ZoneEventQuest : ZoneEvent
 	{
 		Point nearestPoint = EClass._map.bounds.GetRandomEdge().GetNearestPoint(allowBlock: false, allowChara: false);
 		Chara chara = (evolve ? EClass._zone.TryGenerateEvolved(force: true, nearestPoint) : EClass._zone.SpawnMob(nearestPoint, SpawnSetting.Boss(EClass._zone.DangerLv)));
-		Hostility hostility2 = (chara.c_originalHostility = Hostility.Enemy);
-		chara.hostility = hostility2;
+		Hostility hostility = (chara.c_originalHostility = Hostility.Enemy);
+		chara.hostility = hostility;
 		if (CountEnemy)
 		{
 			enemies.Add(chara.uid);

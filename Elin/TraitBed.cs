@@ -171,7 +171,7 @@ public class TraitBed : Trait
 		}
 		BedType c_bedType = owner.c_bedType;
 		FactionMemberType memberType = c.memberType;
-		if ((memberType != 0 || (c_bedType != 0 && c_bedType != BedType.residentOne)) && (memberType != FactionMemberType.Livestock || c_bedType != BedType.livestock))
+		if ((memberType != FactionMemberType.Default || (c_bedType != BedType.resident && c_bedType != BedType.residentOne)) && (memberType != FactionMemberType.Livestock || c_bedType != BedType.livestock))
 		{
 			if (memberType == FactionMemberType.Guest)
 			{
@@ -208,7 +208,7 @@ public class TraitBed : Trait
 				return;
 			}
 		}
-		if (owner.c_bedType != 0)
+		if (owner.c_bedType != BedType.resident)
 		{
 			string @ref = ("bed_" + owner.c_bedType).lang().ToLower();
 			s = "_of4".lang(@ref, s);

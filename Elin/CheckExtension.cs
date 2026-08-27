@@ -11,7 +11,7 @@ public static class CheckExtension
 
 	public static bool IsPass(this Check.Result r)
 	{
-		if (r != 0)
+		if (r != Check.Result.CriticalPass)
 		{
 			return r == Check.Result.Pass;
 		}

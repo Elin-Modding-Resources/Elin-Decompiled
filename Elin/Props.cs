@@ -83,7 +83,7 @@ public class Props : EClass
 		}
 		foreach (Thing thing in t.things)
 		{
-			if (t.placeState != 0)
+			if (t.placeState != PlaceState.roaming)
 			{
 				EClass._map.Stocked.Add(thing);
 			}
@@ -203,7 +203,7 @@ public class Props : EClass
 
 	public ThingStack ListThingStack(Recipe.Ingredient ing, StockSearchMode searchMode)
 	{
-		string id2 = ing.id;
+		string id = ing.id;
 		int idMat = -1;
 		string tag = (ing.tag.IsEmpty() ? null : ing.tag);
 		ThingStack stack = new ThingStack
@@ -213,7 +213,7 @@ public class Props : EClass
 		_ = EClass.pc.pos.cell.room;
 		if (ing.useCat)
 		{
-			FindCat(id2);
+			FindCat(id);
 			foreach (string item in ing.idOther)
 			{
 				FindCat(item);
@@ -221,7 +221,7 @@ public class Props : EClass
 		}
 		else
 		{
-			Find(id2);
+			Find(id);
 			foreach (string item2 in ing.idOther)
 			{
 				Find(item2);
@@ -233,21 +233,21 @@ public class Props : EClass
 		}
 		stack.list.Sort(UIList.SortMode.ByCategory);
 		return stack;
-		void Find(string id)
+		void Find(string text)
 		{
-			bool isOrigin = EClass.sources.cards.map[id].isOrigin;
+			bool isOrigin = EClass.sources.cards.map[text].isOrigin;
 			EClass.pc.things.Foreach(delegate(Thing t)
 			{
-				if (!t.isEquipped && (!(t.id != id) || (isOrigin && t.source._origin == id)))
+				if (!t.isEquipped && (!(t.id != text) || (isOrigin && t.source._origin == text)))
 				{
 					TryAdd(t);
 				}
 			});
 			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
 			{
-				foreach (Card item3 in cardMap.GetOrCreate(id))
+				foreach (Card item3 in cardMap.GetOrCreate(text))
 				{
-					if (!(item3.parent is Thing thing2) || (thing2.c_lockLv == 0 && thing2.trait.CanUseContent))
+					if (!(item3.parent is Thing thing) || (thing.c_lockLv == 0 && thing.trait.CanUseContent))
 					{
 						TryAdd(item3.Thing);
 					}
@@ -260,7 +260,7 @@ public class Props : EClass
 			{
 				if (!t.isEquipped)
 				{
-					TryAdd(t);
+					TryAdd2(t);
 				}
 			});
 			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
@@ -269,14 +269,14 @@ public class Props : EClass
 				{
 					if (!(item4.parent is Thing thing) || (thing.c_lockLv == 0 && thing.trait.CanUseContent))
 					{
-						TryAdd(item4.Thing);
+						TryAdd2(item4.Thing);
 					}
 				}
 			}
 		}
-		void FindCat(string id)
+		void FindCat(string key)
 		{
-			SourceCategory.Row cat = EClass.sources.categories.map[id];
+			SourceCategory.Row cat = EClass.sources.categories.map[key];
 			EClass.pc.things.Foreach(delegate(Thing t)
 			{
 				if (!t.isEquipped && t.category.IsChildOf(cat.id) && !t.IsExcludeFromCraft(ing))
@@ -286,12 +286,12 @@ public class Props : EClass
 			});
 			if (EClass._zone.IsPCFaction || EClass._zone is Zone_Tent || EClass.debug.enable)
 			{
-				foreach (Thing thing3 in things)
+				foreach (Thing thing2 in things)
 				{
-					Card obj = thing3.parent as Card;
-					if (obj != null && obj.c_lockLv == 0 && thing3.category.IsChildOf(cat.id) && !thing3.IsExcludeFromCraft(ing))
+					Card obj = thing2.parent as Card;
+					if (obj != null && obj.c_lockLv == 0 && thing2.category.IsChildOf(cat.id) && !thing2.IsExcludeFromCraft(ing))
 					{
-						stack.Add(thing3);
+						stack.Add(thing2);
 					}
 				}
 			}
@@ -303,7 +303,7 @@ public class Props : EClass
 				stack.Add(t.Thing);
 			}
 		}
-		void TryAdd(Thing t)
+		void TryAdd2(Thing t)
 		{
 			if (t.HasElement(10) && !(t.trait is TraitFoodFishSlice) && !t.category.IsChildOf("seasoning") && !t.category.IsChildOf("meal") && !t.category.IsChildOf("drink") && !t.IsExcludeFromCraft(ing) && !stack.list.Contains(t))
 			{

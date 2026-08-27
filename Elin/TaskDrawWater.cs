@@ -49,9 +49,9 @@ public class TaskDrawWater : TaskDesignation
 		};
 		p.onProgress = delegate
 		{
-			SourceMaterial.Row row2 = (pos.cell.HasBridge ? pos.cell.matBridge : pos.cell.matFloor);
-			row2.PlayHitEffect(pos);
-			owner.PlaySound(row2.GetSoundImpact());
+			SourceMaterial.Row row = (pos.cell.HasBridge ? pos.cell.matBridge : pos.cell.matFloor);
+			row.PlayHitEffect(pos);
+			owner.PlaySound(row.GetSoundImpact());
 		};
 		p.onProgressComplete = delegate
 		{
@@ -76,15 +76,15 @@ public class TaskDrawWater : TaskDesignation
 			}
 			Draw(pos);
 		};
-		void Draw(Point p)
+		void Draw(Point point)
 		{
-			if (pot.owner.c_charges < pot.MaxCharge && GetHitResult(p) != HitResult.Invalid)
+			if (pot.owner.c_charges < pot.MaxCharge && GetHitResult(point) != HitResult.Invalid)
 			{
-				Effect.Get("mine").Play(p).SetParticleColor(p.cell.HasBridge ? p.matBridge.GetColor() : p.matFloor.GetColor())
+				Effect.Get("mine").Play(point).SetParticleColor(point.cell.HasBridge ? point.matBridge.GetColor() : point.matFloor.GetColor())
 					.Emit(10 + EClass.rnd(10));
-				p.Animate(AnimeID.Dig, animeBlock: true);
-				pot.owner.Dye(p.HasBridge ? p.matBridge : p.matFloor);
-				switch ((p.HasBridge ? p.sourceBridge : p.sourceFloor).alias)
+				point.Animate(AnimeID.Dig, animeBlock: true);
+				pot.owner.Dye(point.HasBridge ? point.matBridge : point.matFloor);
+				switch ((point.HasBridge ? point.sourceBridge : point.sourceFloor).alias)
 				{
 				case "floor_water_shallow":
 					ChangeFloor("floor_water_shallow2");
@@ -109,24 +109,24 @@ public class TaskDrawWater : TaskDesignation
 			void ChangeFloor(string id)
 			{
 				SourceFloor.Row row = EClass.sources.floors.alias[id];
-				if (p.HasBridge)
+				if (point.HasBridge)
 				{
-					p.cell._bridge = (byte)row.id;
+					point.cell._bridge = (byte)row.id;
 					if (id == "floor_raw3")
 					{
-						p.cell._bridgeMat = 45;
+						point.cell._bridgeMat = 45;
 					}
 				}
 				else
 				{
-					p.cell._floor = (byte)row.id;
+					point.cell._floor = (byte)row.id;
 					if (id == "floor_raw3")
 					{
-						p.cell._floorMat = 45;
+						point.cell._floorMat = 45;
 					}
 				}
-				EClass._map.SetLiquid(p.x, p.z);
-				p.RefreshNeighborTiles();
+				EClass._map.SetLiquid(point.x, point.z);
+				point.RefreshNeighborTiles();
 			}
 		}
 	}

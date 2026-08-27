@@ -426,15 +426,15 @@ public class Feat : Element
 		{
 			hints.Clear();
 		}
-		EVENT.ElinFeatApplyEventArgs elinFeatApplyEventArgs = new EVENT.ElinFeatApplyEventArgs
+		EVENT.ElinFeatApplyEventArgs e = new EVENT.ElinFeatApplyEventArgs
 		{
 			feat = this,
 			owner = owner,
 			hint = hint
 		};
-		elinFeatApplyEventArgs.SetData(a);
-		BaseModManager.PublishEvent("elin.feat.apply", elinFeatApplyEventArgs);
-		a = elinFeatApplyEventArgs.data;
+		e.SetData(a);
+		BaseModManager.PublishEvent("elin.feat.apply", e);
+		a = e.data;
 		int value = base.Value;
 		int A = Mathf.Abs(a);
 		int invert = ((a >= 0) ? 1 : (-1));
@@ -907,7 +907,7 @@ public class Feat : Element
 				hints.Add(s);
 			}
 		}
-		void NoteElement(int ele, int a)
+		void NoteElement(int ele, int num4)
 		{
 			SourceElement.Row row = EClass.sources.elements.map[ele];
 			if (row.category == "ability")
@@ -920,11 +920,11 @@ public class Feat : Element
 			}
 			else
 			{
-				string @ref = ((a < 0) ? "" : "+") + a;
+				string @ref = ((num4 < 0) ? "" : "+") + num4;
 				if (row.category == "resist")
 				{
-					int num4 = 0;
-					@ref = ((a > 0) ? "+" : "-").Repeat(Mathf.Clamp(Mathf.Abs(a) / 5 + num4, 1, 5));
+					int num5 = 0;
+					@ref = ((num4 > 0) ? "+" : "-").Repeat(Mathf.Clamp(Mathf.Abs(num4) / 5 + num5, 1, 5));
 					Note("modValueRes".lang(row.GetName(), @ref));
 				}
 				else

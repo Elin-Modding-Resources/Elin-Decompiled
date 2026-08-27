@@ -480,7 +480,7 @@ public class CardRenderer : RenderObject
 	public void RefreshExtra()
 	{
 		string idExtra = owner.sourceCard.idExtra;
-		if (!idExtra.IsEmpty() && (owner.placeState != 0 || EClass.pc.held == owner || owner.isRoofItem))
+		if (!idExtra.IsEmpty() && (owner.placeState != PlaceState.roaming || EClass.pc.held == owner || owner.isRoofItem))
 		{
 			AddExtra(idExtra);
 		}

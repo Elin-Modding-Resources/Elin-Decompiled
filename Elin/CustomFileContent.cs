@@ -7,7 +7,6 @@ public abstract class CustomFileContent : CustomContent
 {
 	protected DateTime LastModified { get; set; } = DateTime.MinValue;
 
-
 	[JsonIgnore]
 	public FileInfo File { get; set; }
 

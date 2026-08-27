@@ -112,9 +112,9 @@ public class LayerMod : ELayer
 							{
 								SE.Click();
 								string path = ("Mod_" + a.workshopId + "_" + a.id).SanitizeDirectoryName();
-								string text2 = Path.Combine(BaseModManager.rootMod, path);
-								a.CopyContentTo(text2);
-								ModPackage modPackage = manager.AddPackage(new DirectoryInfo(text2), isInPackages: true);
+								string text = Path.Combine(BaseModManager.rootMod, path);
+								a.CopyContentTo(text);
+								ModPackage modPackage = manager.AddPackage(new DirectoryInfo(text), isInPackages: true);
 								manager.packages.Move(modPackage, manager.packages.IndexOf(a) - manager.packages.Count + 2);
 								modPackage.willActivate = false;
 								modPackage.activated = false;

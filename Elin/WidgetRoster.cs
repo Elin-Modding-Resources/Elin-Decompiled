@@ -109,9 +109,9 @@ public class WidgetRoster : Widget
 		}
 		list.Sort(delegate(Chara a, Chara b)
 		{
-			int @int = a.GetInt(19);
-			int int2 = b.GetInt(19);
-			return (@int == int2) ? (EMono.pc.party.members.IndexOf(a) - EMono.pc.party.members.IndexOf(b)) : (int2 * 1000 - @int * 1000);
+			int num = a.GetInt(19);
+			int num2 = b.GetInt(19);
+			return (num == num2) ? (EMono.pc.party.members.IndexOf(a) - EMono.pc.party.members.IndexOf(b)) : (num2 * 1000 - num * 1000);
 		});
 		foreach (Chara item in list)
 		{

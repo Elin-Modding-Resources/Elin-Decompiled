@@ -35,9 +35,9 @@ public class ListPeopleParty : BaseListPeople
 				RefreshAll();
 			});
 		}
-		for (int j = 0; j < 5; j++)
+		for (int num = 0; num < 5; num++)
 		{
-			int i = j;
+			int i = num;
 			Player.PartySetup setup = EClass.player.partySetups[i];
 			if (setup == null)
 			{
@@ -62,17 +62,17 @@ public class ListPeopleParty : BaseListPeople
 				EClass.pc.party.Disband();
 				foreach (int uid in setup.uids)
 				{
-					Chara chara3 = EClass.game.cards.globalCharas.Find(uid);
-					if (chara3 != null && !chara3.IsPC && CanJoinParty(chara3) && chara3.IsPCFaction)
+					Chara chara2 = EClass.game.cards.globalCharas.Find(uid);
+					if (chara2 != null && !chara2.IsPC && CanJoinParty(chara2) && chara2.IsPCFaction)
 					{
-						JoinParty(chara3);
-						if (chara3.uid == setup.ride)
+						JoinParty(chara2);
+						if (chara2.uid == setup.ride)
 						{
-							ActRide.Ride(EClass.pc, chara3, parasite: false, talk: false);
+							ActRide.Ride(EClass.pc, chara2, parasite: false, talk: false);
 						}
-						else if (chara3.uid == setup.parasite)
+						else if (chara2.uid == setup.parasite)
 						{
-							ActRide.Ride(EClass.pc, chara3, parasite: true, talk: false);
+							ActRide.Ride(EClass.pc, chara2, parasite: true, talk: false);
 						}
 					}
 				}

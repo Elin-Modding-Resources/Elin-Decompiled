@@ -432,7 +432,7 @@ public class DNA : EClass
 		}
 		void AddRandom(int n)
 		{
-			for (int l = 0; l < n; l++)
+			for (int j = 0; j < n; j++)
 			{
 				if (EClass.debug.enable && EClass.rnd(2) == 0)
 				{
@@ -450,8 +450,8 @@ public class DNA : EClass
 		}
 		void AddSkill()
 		{
-			Element element2 = listSkill[Mathf.Clamp(EClass.rnd(6), 0, listSkill.Count - 1)];
-			AddVal(element2.id, EClass.rndHalf(element2.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1, allowNegative: false);
+			Element element = listSkill[Mathf.Clamp(EClass.rnd(6), 0, listSkill.Count - 1)];
+			AddVal(element.id, EClass.rndHalf(element.ValueWithoutLink / 2), allowStack: true, (int v) => v / 5 + 1, allowNegative: false);
 		}
 		void AddSpecial()
 		{
@@ -487,16 +487,16 @@ public class DNA : EClass
 					num = EClass.curve(Mathf.Abs(v + 100), 20, 10, 90);
 				}
 				v = EClass.curve(v, 20, 10, 80);
-				for (int k = 0; k < vals.Count; k += 2)
+				for (int j = 0; j < vals.Count; j += 2)
 				{
-					if (vals[k] == id)
+					if (vals[j] == id)
 					{
 						if (allowStack)
 						{
 							v /= 2;
 							num /= 2;
-							vals[k + 1] += v;
-							Debug.Log(vals[k + 1] + ": " + v + "/" + num);
+							vals[j + 1] += v;
+							Debug.Log(vals[j + 1] + ": " + v + "/" + num);
 							flag = true;
 							break;
 						}

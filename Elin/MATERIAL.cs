@@ -98,12 +98,12 @@ public class MATERIAL : EClass
 	public static SourceMaterial.Row GetRandomMaterialFromCategory(int lv, string[] cat, SourceMaterial.Row fallback)
 	{
 		int min = ((lv >= 60) ? 2 : ((lv >= 25) ? 1 : 0));
-		int a2 = lv / 5 + 2;
-		int idTier = Mathf.Clamp(EClass.rnd(EClass.rnd(EClass.rnd(a2) + 1) + 1), min, 4);
+		int a = lv / 5 + 2;
+		int idTier = Mathf.Clamp(EClass.rnd(EClass.rnd(EClass.rnd(a) + 1) + 1), min, 4);
 		List<SourceMaterial.Row> list = EClass.sources.materials.rows.Where((SourceMaterial.Row m) => cat.Contains(m.category) && m.tier <= idTier).ToList();
 		if (list.Count > 0)
 		{
-			return list.RandomItemWeighted((SourceMaterial.Row a) => a.chance * ((a.tier != idTier) ? 1 : 5));
+			return list.RandomItemWeighted((SourceMaterial.Row row) => row.chance * ((row.tier != idTier) ? 1 : 5));
 		}
 		return fallback;
 	}

@@ -122,10 +122,10 @@ public class GenRoom : GenBounds
 				case 1:
 					if (zone.biome.spawn.thing.Count > 0)
 					{
-						Thing thing2 = ThingGen.CreateFromFilter(zone.biome.spawn.GetRandomThingId(), EClass._zone.DangerLv);
-						if (thing2 != null)
+						Thing thing = ThingGen.CreateFromFilter(zone.biome.spawn.GetRandomThingId(), EClass._zone.DangerLv);
+						if (thing != null)
 						{
-							zone.AddCard(thing2, p);
+							zone.AddCard(thing, p);
 						}
 					}
 					break;
@@ -153,7 +153,7 @@ public class GenRoom : GenBounds
 		{
 			return;
 		}
-		for (int j = 0; j < Size / 25 + EClass.rnd(Size / 25); j++)
+		for (int num = 0; num < Size / 25 + EClass.rnd(Size / 25); num++)
 		{
 			SetRandomPoint(delegate(Point p)
 			{

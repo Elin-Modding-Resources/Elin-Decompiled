@@ -64,20 +64,20 @@ public class MapGenDungen : BaseMapGen
 		Point point = new Point();
 		Thing thing = null;
 		Thing thing2 = null;
-		for (int i = 0; i < mapData.size_X + 2; i++)
+		for (int num2 = 0; num2 < mapData.size_X + 2; num2++)
 		{
-			for (int j = 0; j < mapData.size_Y + 2; j++)
+			for (int num3 = 0; num3 < mapData.size_Y + 2; num3++)
 			{
-				if (i == 0 || j == 0 || i >= mapData.size_X || j >= mapData.size_Y)
+				if (num2 == 0 || num3 == 0 || num2 >= mapData.size_X || num3 >= mapData.size_Y)
 				{
-					SetFloor(floor, i, j);
-					SetBlock(block, i, j, idMat);
+					SetFloor(floor, num2, num3);
+					SetBlock(block, num2, num3, idMat);
 					continue;
 				}
-				Dungen.Cell cell = mapData.cellsOnMap[i - 1, j - 1];
+				Dungen.Cell cell = mapData.cellsOnMap[num2 - 1, num3 - 1];
 				CellType type = cell.type;
-				point.Set(i, j);
-				SetFloor(floor, i, j);
+				point.Set(num2, num3);
+				SetFloor(floor, num2, num3);
 				switch (type.name)
 				{
 				case "Entrance":
@@ -97,7 +97,7 @@ public class MapGenDungen : BaseMapGen
 					{
 						thing2 = thing4;
 					}
-					zone.AddCard(thing4, i, j).Install();
+					zone.AddCard(thing4, num2, num3).Install();
 					break;
 				}
 				case "Exit":
@@ -121,24 +121,24 @@ public class MapGenDungen : BaseMapGen
 					{
 						thing2 = thing3;
 					}
-					zone.AddCard(thing3, i, j).Install();
+					zone.AddCard(thing3, num2, num3).Install();
 					break;
 				}
 				case "Door":
 					if (!(biome.style.doorChance < Rand.Range(0f, 1f)))
 					{
-						SetBlock(block, i, j, idMat);
-						Thing t2 = ThingGen.Create(biome.style.GetIdDoor(), biome.style.matDoor);
-						zone.AddCard(t2, i, j).Install();
+						SetBlock(block, num2, num3, idMat);
+						Thing t = ThingGen.Create(biome.style.GetIdDoor(), biome.style.matDoor);
+						zone.AddCard(t, num2, num3).Install();
 					}
 					break;
 				case "Abyss":
-					SetBlock(block, i, j, idMat);
+					SetBlock(block, num2, num3, idMat);
 					break;
 				default:
 					if (type.passable == generator.reversePassage)
 					{
-						SetBlock(block, i, j, idMat);
+						SetBlock(block, num2, num3, idMat);
 					}
 					break;
 				}
@@ -170,15 +170,15 @@ public class MapGenDungen : BaseMapGen
 		}
 		Dictionary<int, GenRoom> rooms = new Dictionary<int, GenRoom>();
 		int count = 0;
-		int num2 = 0;
+		int num4 = 0;
 		foreach (Dungen.Room room in mapData.rooms)
 		{
 			if (room.width != 0 && room.height != 0)
 			{
-				num2++;
+				num4++;
 			}
 		}
-		if (num2 == 0)
+		if (num4 == 0)
 		{
 			mapData.rooms.Clear();
 		}
@@ -205,19 +205,19 @@ public class MapGenDungen : BaseMapGen
 		zone.OnGenerateRooms(this);
 		map.ReloadRoom();
 		Debug.Log("Dungen: room:" + rooms.Count + "/" + mapData.rooms.Count + " width:" + width + " height:" + height);
-		int num3 = EClass.rnd(Size * Size / 50 + EClass.rnd(20)) + 5;
-		num3 = num3 * Mathf.Min(20 + zone.DangerLv * 5, 100) / 100;
+		int num5 = EClass.rnd(Size * Size / 50 + EClass.rnd(20)) + 5;
+		num5 = num5 * Mathf.Min(20 + zone.DangerLv * 5, 100) / 100;
 		if (zone is Zone_RandomDungeonNature)
 		{
-			num3 /= 5;
+			num5 /= 5;
 		}
-		for (int k = 0; k < num3; k++)
+		for (int num6 = 0; num6 < num5; num6++)
 		{
 			point = EClass._map.GetRandomPoint();
 			if (!point.cell.isModified && !point.HasThing && !point.HasBlock && !point.HasObj)
 			{
-				Thing t3 = ThingGen.CreateFromCategory("trap", zone.DangerLv);
-				EClass._zone.AddCard(t3, point).Install();
+				Thing t2 = ThingGen.CreateFromCategory("trap", zone.DangerLv);
+				EClass._zone.AddCard(t2, point).Install();
 			}
 		}
 		bool forest = zone is Zone_RandomDungeonForest;
@@ -225,14 +225,14 @@ public class MapGenDungen : BaseMapGen
 		{
 			Crawler.Create("pasture").CrawlUntil(tries: EClass.debug.enable ? 3 : EClass.rnd(EClass.rnd(3) + 1), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 			{
-				int num4 = ((forest || EClass.rnd(5) == 0) ? EClass.sources.objs.rows.Where((SourceObj.Row a) => a.ContainsTag("wild")).RandomItem().id : ((EClass.rnd(3) == 0) ? 108 : 105));
+				int num7 = ((forest || EClass.rnd(5) == 0) ? EClass.sources.objs.rows.Where((SourceObj.Row a) => a.ContainsTag("wild")).RandomItem().id : ((EClass.rnd(3) == 0) ? 108 : 105));
 				Thing thing5 = null;
-				int num5 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
-				if (num5 > 0)
+				int num8 = Mathf.Min(EClass._zone.DangerLv, EClass.pc.Evalue(286) * 2 / 3);
+				if (num8 > 0)
 				{
-					thing5 = TraitSeed.MakeSeed(EClass.sources.objs.map[num4]);
-					Rand.SetSeed(EClass._zone.uid * 10 + num5);
-					TraitSeed.LevelSeed(thing5, (thing5.trait as TraitSeed).row, num5);
+					thing5 = TraitSeed.MakeSeed(EClass.sources.objs.map[num7]);
+					Rand.SetSeed(EClass._zone.uid * 10 + num8);
+					TraitSeed.LevelSeed(thing5, (thing5.trait as TraitSeed).row, num8);
 					Rand.SetSeed();
 					thing5.elements.SetBase(2, EClass.curve(thing5.encLV, 50, 10, 80));
 				}
@@ -240,13 +240,13 @@ public class MapGenDungen : BaseMapGen
 				{
 					if (!point2.cell.isModified && !point2.HasThing && !point2.HasBlock && !point2.HasObj)
 					{
-						map.SetObj(point2.x, point2.z, num4);
-						int num6 = 3;
+						map.SetObj(point2.x, point2.z, num7);
+						int num9 = 3;
 						if (EClass.rnd(6) == 0)
 						{
-							num6++;
+							num9++;
 						}
-						point2.growth.SetStage(num6);
+						point2.growth.SetStage(num9);
 						if (thing5 != null)
 						{
 							EClass._map.AddPlant(point2, thing5);
@@ -256,12 +256,12 @@ public class MapGenDungen : BaseMapGen
 				return false;
 			});
 		}
-		map.things.ForeachReverse(delegate(Thing t)
+		map.things.ForeachReverse(delegate(Thing thing5)
 		{
-			if (t.trait is TraitDoor traitDoor && !traitDoor.IsValid())
+			if (thing5.trait is TraitDoor traitDoor && !traitDoor.IsValid())
 			{
-				Debug.Log("Purging Door:" + t.Name + "/" + t.pos);
-				t.Destroy();
+				Debug.Log("Purging Door:" + thing5.Name + "/" + thing5.pos);
+				thing5.Destroy();
 			}
 		});
 		if (thing != null)
@@ -273,18 +273,18 @@ public class MapGenDungen : BaseMapGen
 			ClearPos(thing2);
 		}
 		return true;
-		static void ClearPos(Thing t)
+		static void ClearPos(Thing thing5)
 		{
-			foreach (Card item in t.pos.ListCards())
+			foreach (Card item in thing5.pos.ListCards())
 			{
-				if (item != t && item.isThing)
+				if (item != thing5 && item.isThing)
 				{
 					item.Destroy();
 				}
 			}
-			t.pos.SetObj();
-			t.pos.SetBlock();
-			t.pos.cell.height = 0;
+			thing5.pos.SetObj();
+			thing5.pos.SetBlock();
+			thing5.pos.cell.height = 0;
 		}
 		void SetRoom(GenRoom room)
 		{

@@ -69,7 +69,7 @@ public class LayerFeedback : ELayer
 		inputVersion.text = ELayer.core.version.GetText() + "/" + ELayer.config.lang + " " + steamName + "/" + userName + " hours:" + playedHours + " backer:" + backerId;
 		TextField.onAddEmail = delegate
 		{
-			string s2 = "";
+			string s = "";
 			foreach (BaseModPackage package in ELayer.core.mods.packages)
 			{
 				if (!package.builtin)
@@ -95,12 +95,12 @@ public class LayerFeedback : ELayer
 			Append("cname: " + Thread.CurrentThread.CurrentCulture.Name);
 			Append("uiname: " + Thread.CurrentThread.CurrentUICulture.Name);
 			Append("device identifier: " + SystemInfo.deviceUniqueIdentifier);
-			return Environment.NewLine + Environment.NewLine + s2;
+			return Environment.NewLine + Environment.NewLine + s;
 			void Append(string text)
 			{
 				if (text != null)
 				{
-					s2 = s2 + text + Environment.NewLine;
+					s = s + text + Environment.NewLine;
 				}
 			}
 		};
@@ -140,12 +140,12 @@ public class LayerFeedback : ELayer
 		{
 			int index = 0;
 			saveIndex = gameList[0];
-			for (int i = 0; i < gameList.Count; i++)
+			for (int num = 0; num < gameList.Count; num++)
 			{
-				if (ELayer.core.IsGameStarted && gameList[i].id == Game.id)
+				if (ELayer.core.IsGameStarted && gameList[num].id == Game.id)
 				{
-					index = i;
-					saveIndex = gameList[i];
+					index = num;
+					saveIndex = gameList[num];
 				}
 			}
 			ddSave.SetList(index, gameList, (GameIndex a, int b) => ((ELayer.core.IsGameStarted && a.id == Game.id) ? "currentSave".lang() : "") + a.FormTitle, delegate(int a, GameIndex b)
@@ -217,9 +217,9 @@ public class LayerFeedback : ELayer
 			"糞", "バカ", "馬鹿", "coelacanth", "nerf", "boring", "please don't", "waste", "fuck", "suck",
 			"tbh", "shit", "stupid"
 		};
-		foreach (string c2 in array)
+		foreach (string c in array)
 		{
-			num += CountString(text4, c2);
+			num += CountString(text4, c);
 		}
 		ReportTitle.strAdd = header + ReportTitle.strAdd;
 		if (num > 0)
@@ -248,10 +248,10 @@ public class LayerFeedback : ELayer
 			form.CurrentReport.AttachFile(saveIndex.id + ".zip", File.ReadAllBytes(text5));
 		}
 		IO.DeleteDirectory(text2);
-		static int CountString(string s, string c)
+		static int CountString(string s, string text6)
 		{
-			string newValue = c.Substring(0, c.Length - 1);
-			return s.Length - s.Replace(c, newValue).Length;
+			string newValue = text6.Substring(0, text6.Length - 1);
+			return s.Length - s.Replace(text6, newValue).Length;
 		}
 		void ParseLog(string path)
 		{

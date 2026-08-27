@@ -154,7 +154,7 @@ public class LayerEmbark : ELayer
 		{
 			return false;
 		}
-		if (mode != 0)
+		if (mode != Mode.top)
 		{
 			SwitchMode(Mode.top);
 			return false;

@@ -88,30 +88,30 @@ public class TraitGeneMachine : TraitStasisChamber
 						l.Add(member);
 					}
 				}
-			}, delegate(Chara c)
+			}, delegate(Chara chara)
 			{
-				if (c.IsPCParty)
+				if (chara.IsPCParty)
 				{
-					EClass.pc.party.RemoveMember(c);
+					EClass.pc.party.RemoveMember(chara);
 				}
-				if (!c.pos.Equals(owner.pos))
+				if (!chara.pos.Equals(owner.pos))
 				{
 					EClass.pc.Kick(owner.pos);
-					c.Teleport(owner.pos, silent: false, force: true);
-					c.isRestrained = false;
+					chara.Teleport(owner.pos, silent: false, force: true);
+					chara.isRestrained = false;
 				}
 				if (EClass.debug.enable)
 				{
-					if (c.c_genes == null)
+					if (chara.c_genes == null)
 					{
-						c.c_genes = new CharaGenes();
+						chara.c_genes = new CharaGenes();
 					}
-					c.c_genes.inferior += 20;
-					c.feat += 500;
+					chara.c_genes.inferior += 20;
+					chara.feat += 500;
 				}
-				c.RemoveCondition<ConSleep>();
-				c.PlaySound("ride");
-				(c.AddCondition<ConSuspend>(100, force: true) as ConSuspend).uidMachine = owner.uid;
+				chara.RemoveCondition<ConSleep>();
+				chara.PlaySound("ride");
+				(chara.AddCondition<ConSuspend>(100, force: true) as ConSuspend).uidMachine = owner.uid;
 			}, (Chara a) => "gene_note".lang(a.CurrentGeneSlot.ToString() ?? "", a.MaxGeneSlot.ToString() ?? "", a.feat.ToString() ?? "", a.GetTotalFeat() + " "));
 		}
 		else if (GetProgress() >= 1f)

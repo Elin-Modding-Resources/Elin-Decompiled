@@ -369,9 +369,9 @@ public class ActRanged : ActThrow
 					}
 					else if (chaser > 0)
 					{
-						for (int k = 0; k < 10; k++)
+						for (int num6 = 0; num6 < 10; num6++)
 						{
-							if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, k + 2 + j)))
+							if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, num6 + 2 + j)))
 							{
 								Act.CC.Say(Act.CC.IsHostile() ? "attack_chaser_enemy" : "attack_chaser");
 								if (AttackProcess.Current.Perform(j, hasHit, dmgMulti, maxRoll: false, subAttack))

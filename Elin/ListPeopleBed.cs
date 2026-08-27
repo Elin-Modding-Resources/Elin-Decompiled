@@ -42,7 +42,7 @@ public class ListPeopleBed : ListPeople
 	{
 		foreach (Chara chara in EClass._map.charas)
 		{
-			if (!chara.IsPCFaction || (chara.memberType != 0 && chara.memberType != FactionMemberType.Livestock))
+			if (!chara.IsPCFaction || (chara.memberType != FactionMemberType.Default && chara.memberType != FactionMemberType.Livestock))
 			{
 				continue;
 			}

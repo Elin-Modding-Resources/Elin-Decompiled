@@ -77,20 +77,20 @@ public class TaskPlow : TaskDesignation
 			}
 			Plow(pos);
 		};
-		void Plow(Point p)
+		void Plow(Point point)
 		{
-			if ((p.HasBridge ? p.sourceBridge : p.sourceFloor).tag.Contains("soil") && GetHitResult(p) != HitResult.Invalid)
+			if ((point.HasBridge ? point.sourceBridge : point.sourceFloor).tag.Contains("soil") && GetHitResult(point) != HitResult.Invalid)
 			{
-				Effect.Get("mine").Play(p).SetParticleColor(p.cell.HasBridge ? p.matBridge.GetColor() : p.matFloor.GetColor())
+				Effect.Get("mine").Play(point).SetParticleColor(point.cell.HasBridge ? point.matBridge.GetColor() : point.matFloor.GetColor())
 					.Emit(10 + EClass.rnd(10));
-				p.Animate(AnimeID.Dig, animeBlock: true);
-				if (p.HasBridge)
+				point.Animate(AnimeID.Dig, animeBlock: true);
+				if (point.HasBridge)
 				{
-					p.cell._bridge = 4;
+					point.cell._bridge = 4;
 				}
 				else
 				{
-					p.SetFloor(p.matFloor.id, 4);
+					point.SetFloor(point.matFloor.id, 4);
 				}
 				owner.elements.ModExp(286, 30f);
 				if (owner.IsPC)

@@ -10,9 +10,9 @@ public class ModMinigame<T> : MiniGame where T : Component
 		if (!game)
 		{
 			asset = AssetBundle.LoadFromFile(path + "/Asset_" + id + "/asset");
-			Object @object = asset.LoadAsset(id);
-			Debug.Log(@object);
-			go = Object.Instantiate(@object) as GameObject;
+			Object obj = asset.LoadAsset(id);
+			Debug.Log(obj);
+			go = Object.Instantiate(obj) as GameObject;
 			Debug.Log(go);
 			game = go.GetComponentInChildren<T>();
 		}

@@ -81,18 +81,18 @@ public class LayerDragGrid : LayerBaseCraft
 		OnOpen();
 		buttonOwner.SetCardGrid(owner.owner);
 		owner.Container.things.RefreshGrid();
-		for (int j = 0; j < buttons.Count; j++)
+		for (int i = 0; i < buttons.Count; i++)
 		{
-			buttons[j].gameObject.AddComponent<CanvasGroup>();
-			if (owner.numDragGrid > j)
+			buttons[i].gameObject.AddComponent<CanvasGroup>();
+			if (owner.numDragGrid > i)
 			{
-				buttons[j].SetCardGrid(null, owner);
-				buttons[j].index = j;
-				owner.buttons.Add(buttons[j]);
+				buttons[i].SetCardGrid(null, owner);
+				buttons[i].index = i;
+				owner.buttons.Add(buttons[i]);
 			}
 			else
 			{
-				buttons[j].SetActive(enable: false);
+				buttons[i].SetActive(enable: false);
 			}
 		}
 		uiIngredients.Refresh();
@@ -116,7 +116,7 @@ public class LayerDragGrid : LayerBaseCraft
 					a.SetImage(b.icon);
 					b.SetTooltipLang(a.Name);
 				},
-				onClick = delegate(Chara c, UIButton i)
+				onClick = delegate(Chara c, UIButton uIButton)
 				{
 					if (!LayerInventory.CloseAllyInv(c))
 					{
@@ -486,11 +486,11 @@ public class LayerDragGrid : LayerBaseCraft
 		int num = ((owner.count == -1) ? 1 : owner.count);
 		for (int i = 0; i < num; i++)
 		{
-			List<Thing> list = cc.things.List((Thing t) => owner.ShouldShowGuide(t), onlyAccessible: true);
+			List<Thing> list = cc.things.List((Thing t2) => owner.ShouldShowGuide(t2), onlyAccessible: true);
 			if (list.Count > 0)
 			{
-				Thing t2 = list.RandomItem();
-				owner._OnProcess(t2);
+				Thing t = list.RandomItem();
+				owner._OnProcess(t);
 				continue;
 			}
 			if (i == 0)

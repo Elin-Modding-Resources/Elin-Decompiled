@@ -146,8 +146,8 @@ public class GameScreenElona : BaseGameScreen
 		ParticleSystem.MainModule main = EMono.scene.rain.main;
 		ParticleSystem.MainModule main2 = EMono.scene.snow.main;
 		ParticleSystem.MainModule main3 = EMono.scene.ether.main;
-		bool flag3 = (main3.prewarm = false);
-		bool prewarm = (main2.prewarm = flag3);
+		bool flag2 = (main3.prewarm = false);
+		bool prewarm = (main2.prewarm = flag2);
 		main.prewarm = prewarm;
 		ParticleSystem[] blossoms = EMono.scene.blossoms;
 		for (int i = 0; i < blossoms.Length; i++)

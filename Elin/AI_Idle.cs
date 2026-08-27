@@ -113,7 +113,7 @@ public class AI_Idle : AIAct
 				else if (!EClass._zone.IsRegion && owner.HasElement(1250))
 				{
 					Chara target = null;
-					for (int k = 0; k < 10; k++)
+					for (int num = 0; num < 10; num++)
 					{
 						Chara chara = EClass._map.charas.RandomItem();
 						if (chara != owner && chara.Evalue(964) <= 0 && (target == null || (chara.c_bloodData != null && (target.c_bloodData == null || CraftUtil.GetFoodScore(chara.c_bloodData) > CraftUtil.GetFoodScore(target.c_bloodData)))))
@@ -218,7 +218,7 @@ public class AI_Idle : AIAct
 						{
 							continue;
 						}
-						for (int l = 0; l < 5; l++)
+						for (int num2 = 0; num2 < 5; num2++)
 						{
 							if (thing10.encLV >= 0)
 							{
@@ -276,7 +276,7 @@ public class AI_Idle : AIAct
 								list2.Add(member);
 							}
 						}
-						if (list2.Count > 2 + EClass.pc.party.EvalueTotal(1272, (Chara c) => c.IsPC || c.faith == EClass.game.religions.Harmony))
+						if (list2.Count > 2 + EClass.pc.party.EvalueTotal(1272, (Chara chara6) => chara6.IsPC || chara6.faith == EClass.game.religions.Harmony))
 						{
 							list2.Remove(owner);
 							owner.SetEnemy(list2.RandomItem());
@@ -312,7 +312,7 @@ public class AI_Idle : AIAct
 				}
 				if (EClass.rnd(EClass.debug.enable ? 2 : 20) == 0 && owner.CanSee(EClass.pc) && !(EClass.pc.ai is AI_Eat))
 				{
-					owner.TryTakeSharedItems(EClass.pc.things.List((Thing t) => t.IsSharedContainer));
+					owner.TryTakeSharedItems(EClass.pc.things.List((Thing thing10) => thing10.IsSharedContainer));
 				}
 				if (owner.isSynced && EClass.rnd((owner.host == null) ? 200 : 150) == 0 && owner.GetInt(106) == 0)
 				{
@@ -355,25 +355,25 @@ public class AI_Idle : AIAct
 						}
 						if (flag2)
 						{
-							int num2 = owner.GetCurrency();
-							if (num2 >= 20000)
+							int num3 = owner.GetCurrency();
+							if (num3 >= 20000)
 							{
-								num2 = 20000;
+								num3 = 20000;
 							}
 							owner.PlaySound("pay");
-							int num3 = num2 / 200;
+							int num4 = num3 / 200;
 							foreach (Element value2 in owner.elements.dict.Values)
 							{
 								if (!(value2.source.category != "skill"))
 								{
-									int num4 = num3 * 100 / (100 + (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) * (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) / 100);
-									num4 += 1 + EClass.rnd(3);
-									owner.elements.ModTempPotential(value2.id, Mathf.Max(1, num4), 9999);
+									int num5 = num4 * 100 / (100 + (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) * (100 + value2.vTempPotential / 2 + value2.ValueWithoutLink) / 100);
+									num5 += 1 + EClass.rnd(3);
+									owner.elements.ModTempPotential(value2.id, Mathf.Max(1, num5), 9999);
 								}
 							}
-							Msg.Say("party_train", owner, Lang._currency(num2));
+							Msg.Say("party_train", owner, Lang._currency(num3));
 							owner.PlaySound("ding_potential");
-							owner.ModCurrency(-num2);
+							owner.ModCurrency(-num3);
 						}
 					}
 				}
@@ -406,8 +406,8 @@ public class AI_Idle : AIAct
 					{
 						owner.SetEnemy(chara2.enemy);
 					}
-					int num5 = owner.Dist(chara2.pos);
-					if (owner.source.aiIdle != "root" && num5 > EClass.game.config.tactics.AllyDistance(owner) && EClass._zone.PetFollow && owner.c_minionType == MinionType.Default)
+					int num6 = owner.Dist(chara2.pos);
+					if (owner.source.aiIdle != "root" && num6 > EClass.game.config.tactics.AllyDistance(owner) && EClass._zone.PetFollow && owner.c_minionType == MinionType.Default)
 					{
 						if (owner.HasAccess(chara2.pos))
 						{
@@ -430,13 +430,13 @@ public class AI_Idle : AIAct
 				}
 				if (EClass.rnd(100) == 0 && owner.HasElement(1428) && (!owner.IsPCFactionOrMinion || owner.affinity.CurrentStage < Affinity.Stage.Love))
 				{
-					DoSomethingToNearChara((Chara c) => !c.IsPCFactionOrMinion && !c.IsHostile(owner), delegate(Chara c)
+					DoSomethingToNearChara((Chara chara6) => !chara6.IsPCFactionOrMinion && !chara6.IsHostile(owner), delegate(Chara chara6)
 					{
-						owner.DoHostileAction(c, immediate: true);
-						c.pos.TryWitnessCrime(owner, c);
+						owner.DoHostileAction(chara6, immediate: true);
+						chara6.pos.TryWitnessCrime(owner, chara6);
 						if (owner.mimicry != null)
 						{
-							owner.mimicry.Reveal(c, surprise: true);
+							owner.mimicry.Reveal(chara6, surprise: true);
 						}
 					});
 				}
@@ -525,15 +525,15 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				int j = 0;
+				int n = 0;
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
 					if (p.HasChara && p.FirstChara.id == "cocoon")
 					{
-						j++;
+						n++;
 					}
 				});
-				if (j < 2)
+				if (n < 2)
 				{
 					Point randomPoint = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
 					if (randomPoint != null)
@@ -551,25 +551,25 @@ public class AI_Idle : AIAct
 				{
 					break;
 				}
-				int i = 0;
+				int n2 = 0;
 				owner.pos.ForeachNeighbor(delegate(Point p)
 				{
 					if (p.HasChara && p.FirstChara.id == "mech_scarab")
 					{
-						i++;
+						n2++;
 					}
 				});
-				if (i >= 2)
+				if (n2 >= 2)
 				{
 					break;
 				}
 				Point randomPoint2 = owner.pos.GetRandomPoint(1, requireLos: false, allowChara: false, allowBlocked: false, 20);
 				if (randomPoint2 != null)
 				{
-					Card c2 = EClass._zone.AddCard(owner.Duplicate(), randomPoint2);
+					Card c = EClass._zone.AddCard(owner.Duplicate(), randomPoint2);
 					if (randomPoint2.Distance(EClass.pc.pos) < EClass.pc.GetHearingRadius())
 					{
-						Msg.Say("self_dupe", owner, c2);
+						Msg.Say("self_dupe", owner, c);
 					}
 				}
 				break;
@@ -594,7 +594,7 @@ public class AI_Idle : AIAct
 			if (room != null)
 			{
 				Point point = null;
-				if (owner.memberType == FactionMemberType.Guest && room.data.accessType != 0)
+				if (owner.memberType == FactionMemberType.Guest && room.data.accessType != BaseArea.AccessType.Public)
 				{
 					point = FindMovePoint(BaseArea.AccessType.Public);
 				}
@@ -609,7 +609,7 @@ public class AI_Idle : AIAct
 			}
 		}
 		string id;
-		int num;
+		int num7;
 		if (owner.isSynced && !owner.IsPCParty)
 		{
 			if (owner.IsPCFaction && owner.GetInt(32) + 4320 < EClass.world.date.GetRaw())
@@ -626,7 +626,7 @@ public class AI_Idle : AIAct
 				if (EClass._zone is Zone_Wedding)
 				{
 					id = "money";
-					num = EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(500)))) + 1;
+					num7 = EClass.rnd(EClass.rnd(EClass.rnd(EClass.rnd(500)))) + 1;
 					string[] strs = new string[4] { "1294", "1294", "1130", "1131" };
 					ThrowMethod throwMethod = ThrowMethod.Reward;
 					if (owner.affinity.IsWeddingHater || owner.IsMarried || (EClass.debug.enable && EClass.rnd(10) == 0))
@@ -671,7 +671,7 @@ public class AI_Idle : AIAct
 							SetId(strs.RandomItem(), 1);
 						}
 					}
-					Thing thing4 = ThingGen.Create(id, -1, owner.LV).SetNum(num);
+					Thing thing4 = ThingGen.Create(id, -1, owner.LV).SetNum(num7);
 					thing4.SetRandomDir();
 					ActThrow.Throw(owner, EClass.pc.pos, thing4, throwMethod);
 					if (EClass.pc.IsAliveInCurrentZone && throwMethod == ThrowMethod.Reward && thing4.ExistsOnMap && thing4.pos.Equals(EClass.pc.pos) && !strs.Contains(thing4.id))
@@ -693,9 +693,9 @@ public class AI_Idle : AIAct
 					}
 					if ((flag4 ? (EClass.player.karma >= 90) : (EClass.player.karma <= 10)) && EClass.rnd(10) == 0)
 					{
-						Thing t2 = ThingGen.Create("stone", -1, owner.LV);
+						Thing t = ThingGen.Create("stone", -1, owner.LV);
 						AI_PlayMusic.ignoreDamage = true;
-						ActThrow.Throw(owner, EClass.pc.pos, t2, ThrowMethod.Punish);
+						ActThrow.Throw(owner, EClass.pc.pos, t, ThrowMethod.Punish);
 						AI_PlayMusic.ignoreDamage = false;
 					}
 				}
@@ -792,20 +792,20 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(owner.IsPCParty ? 1000 : 200) == 0 && owner.isDrunk && (owner.isSynced || EClass.rnd(5) == 0))
 		{
-			DoSomethingToCharaInRadius(3, null, delegate(Chara c)
+			DoSomethingToCharaInRadius(3, null, delegate(Chara chara6)
 			{
-				owner.Say("drunk_mess", owner, c);
+				owner.Say("drunk_mess", owner, chara6);
 				owner.Talk("drunk_mess");
-				bool flag7 = EClass.rnd(5) == 0 && !c.IsPC;
-				if (c.IsPCParty && owner.hostility >= Hostility.Friend)
+				bool flag7 = EClass.rnd(5) == 0 && !chara6.IsPC;
+				if (chara6.IsPCParty && owner.hostility >= Hostility.Friend)
 				{
 					flag7 = false;
 				}
 				if (flag7)
 				{
-					owner.Say("drunk_counter", c, owner);
-					c.Talk("drunk_counter");
-					c.DoHostileAction(owner);
+					owner.Say("drunk_counter", chara6, owner);
+					chara6.Talk("drunk_counter");
+					chara6.DoHostileAction(owner);
 				}
 			});
 		}
@@ -847,9 +847,9 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd((owner.host != null && owner.GetInt(106) != 0) ? 1000 : 40) == 0 && owner.IsHuman)
 		{
-			DoSomethingToNearChara((Chara c) => (!c.IsPCParty || EClass.rnd(5) == 0) && c.IsMofuable && !owner.IsHostile(c) && !c.IsInCombat && owner.CanSee(c), delegate(Chara c)
+			DoSomethingToNearChara((Chara chara6) => (!chara6.IsPCParty || EClass.rnd(5) == 0) && chara6.IsMofuable && !owner.IsHostile(chara6) && !chara6.IsInCombat && owner.CanSee(chara6), delegate(Chara c2)
 			{
-				owner.Cuddle(c);
+				owner.Cuddle(c2);
 			});
 			yield return KeepRunning();
 		}
@@ -858,7 +858,7 @@ public class AI_Idle : AIAct
 			bool flag6 = owner.HasElement(1291);
 			if (owner.trait is TraitBitch || flag6)
 			{
-				Chara chara5 = DoSomethingToNearChara((Chara c) => c.IsIdle && !c.IsPCParty && !(c.trait is TraitBitch) && c.Evalue(418) <= 0);
+				Chara chara5 = DoSomethingToNearChara((Chara chara6) => chara6.IsIdle && !chara6.IsPCParty && !(chara6.trait is TraitBitch) && chara6.Evalue(418) <= 0);
 				if (chara5 != null)
 				{
 					yield return Do(new AI_Fuck
@@ -883,13 +883,13 @@ public class AI_Idle : AIAct
 		}
 		if (idAct == "janitor" && EClass.rnd(5) == 0)
 		{
-			DoSomethingToCharaInRadius(4, null, delegate(Chara c)
+			DoSomethingToCharaInRadius(4, null, delegate(Chara chara6)
 			{
-				if (c.HasElement(1211) && !(EClass._zone is Zone_Casino))
+				if (chara6.HasElement(1211) && !(EClass._zone is Zone_Casino))
 				{
 					owner.Talk("snail");
-					Thing t4 = ThingGen.Create("1142");
-					ActThrow.Throw(owner, c.pos, t4);
+					Thing t3 = ThingGen.Create("1142");
+					ActThrow.Throw(owner, chara6.pos, t3);
 				}
 			});
 			yield return Restart();
@@ -940,8 +940,8 @@ public class AI_Idle : AIAct
 			{
 				if (EClass.rnd(3) != 0 && chara6 != owner && chara6.pos.cell.IsSnowTile && chara6.Dist(owner) <= 6 && Los.IsVisible(chara6, owner))
 				{
-					Thing t3 = ThingGen.Create("snow");
-					ActThrow.Throw(owner, chara6.pos, t3);
+					Thing t2 = ThingGen.Create("snow");
+					ActThrow.Throw(owner, chara6.pos, t2);
 					break;
 				}
 			}
@@ -990,17 +990,17 @@ public class AI_Idle : AIAct
 			switch (idAct)
 			{
 			case "torture_snail":
-				DoSomethingToNearChara((Chara c) => c.race.id == "snail", delegate(Chara c)
+				DoSomethingToNearChara((Chara chara6) => chara6.race.id == "snail", delegate(Chara chara6)
 				{
-					owner.Say("use_whip3", owner, c);
+					owner.Say("use_whip3", owner, chara6);
 					owner.PlaySound("whip");
 					owner.Talk("insult");
-					if (c.IsPC)
+					if (chara6.IsPC)
 					{
 						Steam.GetAchievement(ID_Achievement.SNAIL);
 					}
-					c.PlayAnime(AnimeID.Shiver);
-					c.OnInsulted();
+					chara6.PlayAnime(AnimeID.Shiver);
+					chara6.OnInsulted();
 				});
 				break;
 			case "buffMage":
@@ -1125,7 +1125,7 @@ public class AI_Idle : AIAct
 		}
 		if (EClass.rnd(10) == 0 && !EClass._zone.IsUnderwater && (owner.race.tag.Contains("water") || owner.source.tag.Contains("water")) && !owner.pos.IsDeepWater)
 		{
-			for (int m = 0; m < 100; m++)
+			for (int num8 = 0; num8 < 100; num8++)
 			{
 				Point randomPoint3 = EClass._map.GetRandomPoint();
 				if (randomPoint3.IsDeepWater && !randomPoint3.IsBlocked)
@@ -1158,9 +1158,9 @@ public class AI_Idle : AIAct
 		yield return Restart();
 		Point FindMovePoint(BaseArea.AccessType type)
 		{
-			for (int n = 0; n < 20; n++)
+			for (int i = 0; i < 20; i++)
 			{
-				Point randomPoint4 = owner.pos.GetRandomPoint(5 + n, requireLos: false);
+				Point randomPoint4 = owner.pos.GetRandomPoint(5 + i, requireLos: false);
 				if (randomPoint4 != null && randomPoint4.IsInBounds && (randomPoint4.cell.room == null || randomPoint4.cell.room.data.accessType == type))
 				{
 					return randomPoint4;
@@ -1171,7 +1171,7 @@ public class AI_Idle : AIAct
 		void SetId(string _id, int _num)
 		{
 			id = _id;
-			num = _num;
+			num7 = _num;
 		}
 	}
 

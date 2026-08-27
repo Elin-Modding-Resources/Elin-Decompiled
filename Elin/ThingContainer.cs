@@ -573,9 +573,9 @@ public class ThingContainer : List<Thing>
 		});
 		if (grid != null)
 		{
-			for (int i = 0; i < grid.Count; i++)
+			for (int num = 0; num < grid.Count; num++)
 			{
-				grid[i] = null;
+				grid[num] = null;
 			}
 		}
 	}

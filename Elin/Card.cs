@@ -2566,12 +2566,12 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 
 	public int GetInt(string id, int? defaultInt = null)
 	{
-		int @int = GetInt(id.GetHashCode(), defaultInt);
+		int num = GetInt(id.GetHashCode(), defaultInt);
 		if (this != EClass.game?.player?.chara)
 		{
-			return @int;
+			return num;
 		}
-		return EClass.player.dialogFlags.GetValueOrDefault(id, @int);
+		return EClass.player.dialogFlags.GetValueOrDefault(id, num);
 	}
 
 	public void AddInt(string id, int value)
@@ -2950,7 +2950,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				rarity = Rarity.Mythical;
 			}
 		}
-		if (rarity != 0 && category.tag.Contains("fixedRarity"))
+		if (rarity != Rarity.Normal && category.tag.Contains("fixedRarity"))
 		{
 			rarity = Rarity.Normal;
 		}
@@ -3335,7 +3335,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			NotifyAddThing(t, t.Num);
 		}
-		if (t == thing && isThing && parent == EClass._zone && placeState != 0)
+		if (t == thing && isThing && parent == EClass._zone && placeState != PlaceState.roaming)
 		{
 			EClass._map.Stocked.Add(t);
 		}
@@ -3942,8 +3942,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				altitude = 0;
 				freePos = false;
-				float num2 = (fy = 0f);
-				fx = num2;
+				float num = (fy = 0f);
+				fx = num;
 			}
 			trait.Uninstall();
 		}
@@ -5040,34 +5040,34 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				bool flag4 = attackSource == AttackSource.Melee || attackSource == AttackSource.Range || attackSource == AttackSource.Throw;
 				if (num19 > 0 && flag4)
 				{
-					int heal2 = EClass.rnd(dmg / 10 + num19 / 5);
-					origin.Chara.HealHP(GetHealValue(heal2, num19, origin.MaxHP, 20, 100));
+					int heal = EClass.rnd(dmg / 10 + num19 / 5);
+					origin.Chara.HealHP(GetHealValue(heal, num19, origin.MaxHP, 20, 100));
 				}
 				if (num20 > 0 && flag4 && origin.isChara && !origin.Chara.ignoreSPAbsorb && Chara.IsHostile(origin as Chara))
 				{
-					int heal3 = EClass.rnd(dmg / 100 + 3);
-					origin.Chara.stamina.Mod(GetHealValue(heal3, num20, origin.Chara.stamina.max, 1, 10));
+					int heal2 = EClass.rnd(dmg / 100 + 3);
+					origin.Chara.stamina.Mod(GetHealValue(heal2, num20, origin.Chara.stamina.max, 1, 10));
 					if (IsAliveInCurrentZone)
 					{
-						Chara.stamina.Mod(-GetHealValue(heal3, num20, Chara.stamina.max, 10, 10));
+						Chara.stamina.Mod(-GetHealValue(heal2, num20, Chara.stamina.max, 10, 10));
 					}
 				}
 				if (origin.HasElement(1350) && attackSource == AttackSource.Melee)
 				{
-					int heal4 = EClass.rnd(dmg / 10 + 2);
-					origin.Chara.mana.Mod(GetHealValue(heal4, origin.Chara.GetPietyValue(), origin.Chara.mana.max, 10, 100));
+					int heal3 = EClass.rnd(dmg / 10 + 2);
+					origin.Chara.mana.Mod(GetHealValue(heal3, origin.Chara.GetPietyValue(), origin.Chara.mana.max, 10, 100));
 					if (IsAliveInCurrentZone)
 					{
-						Chara.mana.Mod(-GetHealValue(heal4, origin.Chara.GetPietyValue(), Chara.mana.max, 20, 100));
+						Chara.mana.Mod(-GetHealValue(heal3, origin.Chara.GetPietyValue(), Chara.mana.max, 20, 100));
 					}
 				}
 				if (num21 > 0 && flag4)
 				{
-					int heal5 = EClass.rnd(dmg / 10 + num21 / 10);
-					origin.Chara.mana.Mod(GetHealValue(heal5, num21, origin.Chara.mana.max, 10, 100));
+					int heal4 = EClass.rnd(dmg / 10 + num21 / 10);
+					origin.Chara.mana.Mod(GetHealValue(heal4, num21, origin.Chara.mana.max, 10, 100));
 					if (IsAliveInCurrentZone)
 					{
-						Chara.mana.Mod(-GetHealValue(heal5, num21, Chara.mana.max, 20, 100));
+						Chara.mana.Mod(-GetHealValue(heal4, num21, Chara.mana.max, 20, 100));
 					}
 				}
 			}
@@ -5353,30 +5353,30 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		List<Card> list = new List<Card>();
 		if (!IsPCFactionOrMinion && !isUserZone && sourceCard.idActor.IsEmpty())
 		{
-			int i2 = 500;
+			int i = 500;
 			if (trait is TraitAdventurerBacker)
 			{
-				i2 = 10;
+				i = 10;
 			}
 			if (this.rarity >= Rarity.Legendary)
 			{
 				if (!EClass.player.codex.DroppedCard(id))
 				{
-					i2 = 0;
+					i = 0;
 					EClass.player.codex.MarkCardDrop(id);
 				}
 				else
 				{
-					i2 = 10;
+					i = 10;
 				}
 			}
-			if (chance(i2))
+			if (chance(i))
 			{
 				Thing thing = ThingGen.Create("figure");
 				thing.MakeFigureFrom(id);
 				list.Add(thing);
 			}
-			if (chance(i2))
+			if (chance(i))
 			{
 				Thing thing2 = ThingGen.Create("figure3");
 				thing2.MakeFigureFrom(id);
@@ -5724,18 +5724,18 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		bool chance(int i)
+		bool chance(int num9)
 		{
-			i = i * 100 / (100 + EClass.player.codex.GetOrCreate(id).BonusDropLv * 10);
+			num9 = num9 * 100 / (100 + EClass.player.codex.GetOrCreate(id).BonusDropLv * 10);
 			if (IsMinion)
 			{
-				i *= 5;
+				num9 *= 5;
 			}
-			if (i < 1)
+			if (num9 < 1)
 			{
-				i = 1;
+				num9 = 1;
 			}
-			if (EClass.rnd(i) == 0)
+			if (EClass.rnd(num9) == 0)
 			{
 				return true;
 			}
@@ -5893,9 +5893,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 		}
 		list.Sort((Tuple<int, int> a, Tuple<int, int> b) => b.Item2 - a.Item2);
-		for (int i = 0; i < num2 && i < list.Count; i++)
+		for (int num3 = 0; num3 < num2 && num3 < list.Count; num3++)
 		{
-			Tuple<int, int> tuple = list[i];
+			Tuple<int, int> tuple = list[num3];
 			elements.SetBase(tuple.Item1, tuple.Item2 * tuple.Item2 / 4);
 		}
 		if (c.Chara.IsUndead)
@@ -5906,23 +5906,23 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		c_weight = race.height * 4 + 100;
 		c_idMainElement = c.c_idMainElement;
 		SetBlessedState(BlessedState.Normal);
-		int num3 = c.LV - c.sourceCard.LV;
-		if (num3 < 0)
+		int num4 = c.LV - c.sourceCard.LV;
+		if (num4 < 0)
 		{
-			num3 = 0;
+			num4 = 0;
 		}
-		num3 = EClass.curve(num3, 10, 10, 80);
+		num4 = EClass.curve(num4, 10, 10, 80);
 		if (c.rarity >= Rarity.Legendary || c.IsUnique)
 		{
-			num3 += 60;
+			num4 += 60;
 		}
 		if (flag2 && c.IsPCFaction && c.IsUnique)
 		{
-			num3 = 0;
+			num4 = 0;
 		}
-		if (num3 > 0)
+		if (num4 > 0)
 		{
-			elements.ModBase(2, num3);
+			elements.ModBase(2, num4);
 		}
 		return this;
 	}
@@ -5958,13 +5958,13 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				c_altName2 = TryGetFoodName(card2);
 			}
 		}
-		static bool IsIgnoreName(Card c)
+		static bool IsIgnoreName(Card card3)
 		{
-			if (c == null)
+			if (card3 == null)
 			{
 				return true;
 			}
-			switch (c.id)
+			switch (card3.id)
 			{
 			case "dough_cake":
 			case "dough_bread":
@@ -6602,7 +6602,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 	{
 		if ((!isChara || Chara.host == null) && !(_emo == lastEmo && skipSame))
 		{
-			if (_emo != 0)
+			if (_emo != Emo.none)
 			{
 				renderer.ShowEmo(_emo, duration);
 			}
@@ -6777,8 +6777,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		else
 		{
-			float num2 = (fy = 0f);
-			fx = num2;
+			float num = (fy = 0f);
+			fx = num;
 		}
 	}
 
@@ -6790,7 +6790,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		Vector3 v = point.Position();
 		bool skipRender = point.cell.skipRender;
-		if (result != 0 && EClass.screen.guide.isActive && !skipRender)
+		if (result != HitResult.Default && EClass.screen.guide.isActive && !skipRender)
 		{
 			EClass.screen.guide.passGuideBlock.Add(ref v, (point.HasObj || point.HasChara) ? 5 : 0);
 		}
@@ -7498,8 +7498,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			Chara.bio.SetGender(row.gender);
 			Chara chara = Chara;
-			Hostility hostility2 = (Chara.c_originalHostility = Hostility.Neutral);
-			chara.hostility = hostility2;
+			Hostility hostility = (Chara.c_originalHostility = Hostility.Neutral);
+			chara.hostility = hostility;
 		}
 		if (row.type == 6)
 		{
@@ -8200,25 +8200,25 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			int dist = 99;
 			ForeachPoint(delegate(Point p, bool main)
 			{
-				int num2 = DistMulti(p, c);
-				if (num2 < dist)
+				int num = DistMulti(p, c);
+				if (num < dist)
 				{
-					dist = num2;
+					dist = num;
 				}
 			});
 			return dist;
 		}
 		return DistMulti(pos, c);
-		static int DistMulti(Point p1, Card c)
+		static int DistMulti(Point p1, Card card)
 		{
-			if (!c.IsMultisize)
+			if (!card.IsMultisize)
 			{
-				return p1.Distance(c.pos);
+				return p1.Distance(card.pos);
 			}
 			int dist2 = 99;
-			c.ForeachPoint(delegate(Point p, bool main)
+			card.ForeachPoint(delegate(Point p2, bool main)
 			{
-				int num = p1.Distance(p);
+				int num = p1.Distance(p2);
 				if (num < dist2)
 				{
 					dist2 = num;

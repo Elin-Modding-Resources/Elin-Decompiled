@@ -134,9 +134,9 @@ public class GameIO : EClass
 		Debug.Log("Deleting excess backup:" + dirs.Count + "/" + NumBackup);
 		if (count > NumBackup)
 		{
-			for (int j = 0; j < count - NumBackup; j++)
+			for (int num = 0; num < count - NumBackup; num++)
 			{
-				IO.DeleteDirectory(dirs[j].FullName);
+				IO.DeleteDirectory(dirs[num].FullName);
 			}
 		}
 		Debug.Log("Copying backup:");

@@ -172,7 +172,7 @@ public class BaseTileSelector : EMono
 		{
 			return;
 		}
-		if (mode.hitType != 0)
+		if (mode.hitType != HitType.None)
 		{
 			if (mode.IsFillMode())
 			{

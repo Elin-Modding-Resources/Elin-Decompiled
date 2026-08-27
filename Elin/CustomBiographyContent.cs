@@ -142,11 +142,11 @@ public class CustomBiographyContent : CustomFileContent
 				}
 				num = _lastWordKey;
 			}
-			LangWord.Row row3 = (langWord[num] = new LangWord.Row
+			LangWord.Row row2 = (langWord[num] = new LangWord.Row
 			{
 				id = num
 			});
-			row3.name = (row3.name_JP = (row3.name_L = text));
+			row2.name = (row2.name_JP = (row2.name_L = text));
 			return _tempLangKey[tempIndex] = num;
 		}
 	}

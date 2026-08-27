@@ -214,8 +214,8 @@ public class BaseGameScreen : EMono
 			ParticleSystem.MainModule main = EMono.scene.rain.main;
 			ParticleSystem.MainModule main2 = EMono.scene.snow.main;
 			ParticleSystem.MainModule main3 = EMono.scene.ether.main;
-			bool flag2 = (main3.prewarm = true);
-			bool prewarm = (main2.prewarm = flag2);
+			bool flag = (main3.prewarm = true);
+			bool prewarm = (main2.prewarm = flag);
 			main.prewarm = prewarm;
 			ParticleSystem[] blossoms = EMono.scene.blossoms;
 			for (int i = 0; i < blossoms.Length; i++)
@@ -678,8 +678,8 @@ public class BaseGameScreen : EMono
 		ParticleSystem.MainModule main2 = EMono.scene.rain.main;
 		ParticleSystem.MainModule main3 = EMono.scene.snow.main;
 		ParticleSystem.MainModule main4 = EMono.scene.ether.main;
-		bool flag6 = (main4.prewarm = false);
-		bool prewarm = (main3.prewarm = flag6);
+		bool flag5 = (main4.prewarm = false);
+		bool prewarm = (main3.prewarm = flag5);
 		main2.prewarm = prewarm;
 		blossoms = EMono.scene.blossoms;
 		for (int i = 0; i < blossoms.Length; i++)

@@ -264,12 +264,12 @@ public class DramaManager : EMono
 
 	public void ParseLine(Dictionary<string, string> item)
 	{
-		string text2 = item.TryGetValue("step");
-		if (text2 == "//")
+		string text = item.TryGetValue("step");
+		if (text == "//")
 		{
 			return;
 		}
-		if (text2 == idDefault)
+		if (text == idDefault)
 		{
 			idDefaultPassed = true;
 		}
@@ -282,27 +282,27 @@ public class DramaManager : EMono
 		string p4 = ((p.Length > 2) ? p[2] : "");
 		float.TryParse(p2, out var p0f);
 		float.TryParse(p3, out var result);
-		string text = item.TryGetValue("text_JP");
-		bool flag = !text.IsEmpty();
+		string text2 = item.TryGetValue("text_JP");
+		bool flag = !text2.IsEmpty();
 		string id = item["id"];
 		if (!id.IsEmpty())
 		{
-			text = dictLocalize.TryGetValue(id);
-			flag = !text.IsEmpty();
+			text2 = dictLocalize.TryGetValue(id);
+			flag = !text2.IsEmpty();
 		}
-		if (flag && text.StartsWith("$") && tg != null && tg.hasChara)
+		if (flag && text2.StartsWith("$") && tg != null && tg.hasChara)
 		{
-			string text3 = text.Split(' ')[0];
-			text = text.Replace(text3, tg.chara.GetTalkText(text3[1..]));
+			string text3 = text2.Split(' ')[0];
+			text2 = text2.Replace(text3, tg.chara.GetTalkText(text3[1..]));
 		}
 		string jump = item.TryGetValue("jump");
 		string text4 = item.TryGetValue("if");
 		string iF = item.TryGetValue("if2");
 		string cHECK = item.TryGetValue("check");
 		bool flag2 = false;
-		if (!text2.IsEmpty() && !sequence.steps.ContainsKey(text2) && action != "choice" && action != "cancel")
+		if (!text.IsEmpty() && !sequence.steps.ContainsKey(text) && action != "choice" && action != "cancel")
 		{
-			sequence.steps.Add(text2, sequence.events.Count);
+			sequence.steps.Add(text, sequence.events.Count);
 		}
 		if (text4 == "*")
 		{
@@ -361,8 +361,8 @@ public class DramaManager : EMono
 			{
 				if (p2.StartsWith("*"))
 				{
-					Quest quest3 = EMono.game.quests.Get(p2.TrimStart('*'));
-					quest3?.ChangePhase(p3.ToInt(quest3.GetType()));
+					Quest quest = EMono.game.quests.Get(p2.TrimStart('*'));
+					quest?.ChangePhase(p3.ToInt(quest.GetType()));
 				}
 				else
 				{
@@ -392,7 +392,7 @@ public class DramaManager : EMono
 			break;
 		}
 		case "topic":
-			customTalkTopics[p2] = text;
+			customTalkTopics[p2] = text2;
 			break;
 		case "cancel":
 			lastTalk.canCancel = true;
@@ -411,41 +411,41 @@ public class DramaManager : EMono
 				switch (array[1])
 				{
 				case "quest":
-					text = "deQuest".lang();
+					text2 = "deQuest".lang();
 					jump = "_quest";
 					break;
 				case "depart":
-					text = "depart".lang();
+					text2 = "depart".lang();
 					jump = "_depart";
 					break;
 				case "rumor":
-					text = "letsTalk".lang();
+					text2 = "letsTalk".lang();
 					jump = "_rumor";
 					break;
 				case "buy":
-					text = "daBuy".lang();
+					text2 = "daBuy".lang();
 					jump = "_buy";
 					break;
 				case "sell":
-					text = "daSell".lang();
+					text2 = "daSell".lang();
 					jump = "_sell";
 					break;
 				case "give":
-					text = "daGive".lang();
+					text2 = "daGive".lang();
 					jump = "_give";
 					break;
 				case "trade":
-					text = "daTrade".lang();
+					text2 = "daTrade".lang();
 					jump = "_trade";
 					break;
 				case "bye":
-					text = "bye".lang();
+					text2 = "bye".lang();
 					jump = "_bye";
 					break;
 				}
 			}
 			flag2 = true;
-			DramaChoice dramaChoice = new DramaChoice(text, jump, p2, cHECK, text4);
+			DramaChoice dramaChoice = new DramaChoice(text2, jump, p2, cHECK, text4);
 			lastTalk.AddChoice(dramaChoice);
 			var (invoke, invokeP) = CustomDramaExpansion.BuildInvokeExpression(item.TryGetValue("param"));
 			if (invoke.Method != null)
@@ -474,9 +474,9 @@ public class DramaManager : EMono
 				break;
 			}
 			DramaActor dramaActor = sequence.AddActor(actor, new Person(actor));
-			if (!text.IsEmpty())
+			if (!text2.IsEmpty())
 			{
-				dramaActor.owner.tempName = text;
+				dramaActor.owner.tempName = text2;
 			}
 			break;
 		}
@@ -769,18 +769,18 @@ public class DramaManager : EMono
 		case "startQuest":
 			AddEvent(delegate
 			{
-				Quest quest2 = Quest.Create(p2);
-				if (!quest2.HasDLC)
+				Quest quest = Quest.Create(p2);
+				if (!quest.HasDLC)
 				{
 					Msg.Say("(Failed DLC check)");
 				}
 				else
 				{
-					EMono.game.quests.Start(quest2);
-					LayerDrama.currentQuest = quest2;
+					EMono.game.quests.Start(quest);
+					LayerDrama.currentQuest = quest;
 					if (tg != null && tg.chara != null)
 					{
-						Debug.Log("Starting Quest:" + quest2?.ToString() + "/" + tg.chara.quest?.ToString() + "/" + (quest2 == tg.chara.quest));
+						Debug.Log("Starting Quest:" + quest?.ToString() + "/" + tg.chara.quest?.ToString() + "/" + (quest == tg.chara.quest));
 					}
 				}
 			});
@@ -805,8 +805,8 @@ public class DramaManager : EMono
 			{
 				AddEvent(delegate
 				{
-					int num2 = p3.ToInt();
-					EMono.player.ModKeyItem(p2, (num2 == 0) ? 1 : num2);
+					int num = p3.ToInt();
+					EMono.player.ModKeyItem(p2, (num == 0) ? 1 : num);
 				});
 			}
 			break;
@@ -902,8 +902,8 @@ public class DramaManager : EMono
 			AddEvent(delegate
 			{
 				Thing thing = EMono.pc.things.Find(p2);
-				int num3 = p3.ToInt();
-				thing?.ModNum((num3 == 0) ? (-1) : (-num3));
+				int num = p3.ToInt();
+				thing?.ModNum((num == 0) ? (-1) : (-num));
 			});
 			break;
 		case "destroyItem":
@@ -925,10 +925,10 @@ public class DramaManager : EMono
 		case "focusChara":
 			AddEvent(delegate
 			{
-				Point pos2 = EMono._map.FindChara(p2).pos.Copy();
+				Point pos = EMono._map.FindChara(p2).pos.Copy();
 				EMono.scene.screenElin.focusOption = new BaseGameScreen.FocusOption
 				{
-					pos = pos2,
+					pos = pos,
 					speed = p3.IsEmpty("2").ToFloat()
 				};
 			});
@@ -968,8 +968,8 @@ public class DramaManager : EMono
 		case "effect":
 			AddEvent(delegate
 			{
-				Point from = new Point(p[1].ToInt(), p[2].ToInt());
-				Effect.Get(p2).Play(from);
+				Point point = new Point(p[1].ToInt(), p[2].ToInt());
+				Effect.Get(p2).Play(point);
 			});
 			break;
 		case "effectEmbarkIn":
@@ -1072,7 +1072,7 @@ public class DramaManager : EMono
 		case "replace":
 			AddEvent(delegate
 			{
-				textReplace = text;
+				textReplace = text2;
 			});
 			break;
 		default:
@@ -1088,12 +1088,12 @@ public class DramaManager : EMono
 			{
 				if (!textReplace.IsEmpty())
 				{
-					text = textReplace;
+					text2 = textReplace;
 					textReplace = null;
 				}
-				if (text.StartsWith("#eval"))
+				if (text2.StartsWith("#eval"))
 				{
-					string script = text[5..].Trim();
+					string script = text2[5..].Trim();
 					if (!EScript.IsScriptingAvailable)
 					{
 						return ("[ID '" + id + "'] <scripting is disabled>").TagColor(Color.red);
@@ -1104,13 +1104,13 @@ public class DramaManager : EMono
 						dm = this,
 						line = item
 					};
-					text = func(arg).TryToString("[ID '" + id + "'] <scripting returns no text>");
+					text2 = func(arg).TryToString("[ID '" + id + "'] <scripting returns no text>");
 				}
 				if (tg != null && (actor == "tg" || actor.IsEmpty()))
 				{
-					text = (enableTone ? tg.ApplyTone(text) : text);
+					text2 = (enableTone ? tg.ApplyTone(text2) : text2);
 				}
-				return text;
+				return text2;
 			})) as DramaEventTalk;
 			lastTalk.center = p2 == "center";
 			break;

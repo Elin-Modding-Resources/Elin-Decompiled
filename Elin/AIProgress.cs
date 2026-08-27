@@ -35,7 +35,7 @@ public class AIProgress : AIAct
 			{
 				OnProgressBegin();
 			}
-			if (status != 0)
+			if (status != Status.Running)
 			{
 				yield return status;
 			}
@@ -44,7 +44,7 @@ public class AIProgress : AIAct
 				OnProgress();
 			}
 			progress++;
-			if (status != 0)
+			if (status != Status.Running)
 			{
 				yield return status;
 			}

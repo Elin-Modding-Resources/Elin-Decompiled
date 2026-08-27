@@ -214,14 +214,14 @@ public class ModUtil : EClass
 	{
 		EClass.player.knownBGMs.RemoveWhere((int id) => !EClass.core.refs.dictBGM.ContainsKey(id));
 		KeyValuePair<int, Spatial>[] array = EClass.game.spatials.map.ToArray();
-		for (int i = 0; i < array.Length; i++)
+		for (int num = 0; num < array.Length; num++)
 		{
-			KeyValuePair<int, Spatial> keyValuePair = array[i];
-			var (num2, spatial2) = (KeyValuePair<int, Spatial>)(ref keyValuePair);
+			KeyValuePair<int, Spatial> keyValuePair = array[num];
+			var (num3, spatial2) = (KeyValuePair<int, Spatial>)(ref keyValuePair);
 			if (spatial2.source == null)
 			{
 				spatial2.Destroy();
-				UnityEngine.Debug.LogWarning($"#mod-content removed invalid zone '{num2}', '{spatial2.id}', '{(spatial2 as Zone)?.ZoneFullName}'");
+				UnityEngine.Debug.LogWarning($"#mod-content removed invalid zone '{num3}', '{spatial2.id}', '{(spatial2 as Zone)?.ZoneFullName}'");
 			}
 		}
 		List<ICustomContent> contents = new List<ICustomContent>();
@@ -239,10 +239,10 @@ public class ModUtil : EClass
 					item.OnGameLoad(context);
 					contents.Add(item);
 				}
-				catch (Exception ex2)
+				catch (Exception ex)
 				{
-					LogModError("exception while loading custom content '" + item.ContentId + "'\n" + ex2.Message, item.Owner);
-					UnityEngine.Debug.LogException(ex2);
+					LogModError("exception while loading custom content '" + item.ContentId + "'\n" + ex.Message, item.Owner);
+					UnityEngine.Debug.LogException(ex);
 				}
 			}
 		}
@@ -447,10 +447,10 @@ public class ModUtil : EClass
 			}
 			foreach (Thing item in content.Generate(owner))
 			{
-				bool @bool = item.GetBool(101);
-				if (!(!forceRestock && @bool) || !orCreate.Contains(item.trait.IdNoRestock))
+				bool flag = item.GetBool(101);
+				if (!(!forceRestock && flag) || !orCreate.Contains(item.trait.IdNoRestock))
 				{
-					if (@bool)
+					if (flag)
 					{
 						orCreate.Add(item.trait.IdNoRestock);
 					}
@@ -1073,9 +1073,9 @@ public class ModUtil : EClass
 		{
 			List<string> list = new List<string>();
 			(string, string)[] array3 = array;
-			for (int j = 0; j < array3.Length; j++)
+			for (int num2 = 0; num2 < array3.Length; num2++)
 			{
-				(string, string) tuple = array3[j];
+				(string, string) tuple = array3[num2];
 				string item = tuple.Item1;
 				string item2 = tuple.Item2;
 				object value = baseRow.GetRowFields()[item].GetValue(baseRow);
@@ -1110,10 +1110,10 @@ public class ModUtil : EClass
 					goto IL_024a;
 				}
 				List<string> list2 = new List<string>();
-				for (int k = 0; k < array4.Length - 1; k += 2)
+				for (int num3 = 0; num3 < array4.Length - 1; num3 += 2)
 				{
-					string alias = EClass.sources.elements.map[array4[k]].alias;
-					string text = array4[k + 1].ToString();
+					string alias = EClass.sources.elements.map[array4[num3]].alias;
+					string text = array4[num3 + 1].ToString();
 					list2.Add(alias + "/" + text);
 				}
 				string item4 = string.Join(',', list2);

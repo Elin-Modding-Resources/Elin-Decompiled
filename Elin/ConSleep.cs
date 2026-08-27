@@ -277,15 +277,15 @@ public class ConSleep : BadCondition
 						continue;
 					}
 					int c_charges = item.c_charges;
-					for (int i = 0; i < c_charges; i++)
+					for (int num = 0; num < c_charges; num++)
 					{
 						if (EClass.pc.isDead)
 						{
 							return;
 						}
-						int num = traitBaseSpellbook.GetActDuration(EClass.pc) + 1;
+						int num2 = traitBaseSpellbook.GetActDuration(EClass.pc) + 1;
 						bool flag = false;
-						for (int j = 0; j < num; j++)
+						for (int num3 = 0; num3 < num2; num3++)
 						{
 							if (!traitBaseSpellbook.TryProgress(new AIProgress
 							{

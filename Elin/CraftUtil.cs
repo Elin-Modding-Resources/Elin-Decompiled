@@ -120,13 +120,13 @@ public class CraftUtil : EClass
 		string text = "";
 		List<Element> list = MakeBloodMeal(EClass.pc, c, msg: false).elements.ListElements((Element e) => e.IsFoodTraitMain, (Element a, Element b) => b.Value - a.Value);
 		int num = Mathf.Min(list.Count(), 3, EClass.debug.godMode ? 3 : (1 + EClass.pc.Evalue(6607) / 15));
-		for (int i = 0; i < num; i++)
+		for (int num2 = 0; num2 < num; num2++)
 		{
-			Element element = list[i];
+			Element element = list[num2];
 			string[] textArray = element.source.GetTextArray("textAlt");
-			int num2 = Mathf.Clamp(element.Value / 10 + 1, (element.Value < 0 || textArray.Length <= 2) ? 1 : 2, textArray.Length - 1);
-			string text2 = textArray[num2];
-			if (i != 0)
+			int num3 = Mathf.Clamp(element.Value / 10 + 1, (element.Value < 0 || textArray.Length <= 2) ? 1 : 2, textArray.Length - 1);
+			string text2 = textArray[num3];
+			if (num2 != 0)
 			{
 				text += ", ";
 			}

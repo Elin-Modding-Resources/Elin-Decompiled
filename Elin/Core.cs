@@ -107,7 +107,7 @@ public class Core : BaseCore
 		IO.CreateDirectory(CorePath.Temp);
 		SetCurrent();
 		Lang.langCode = "";
-		if (Application.isEditor && debug.langCode != 0)
+		if (Application.isEditor && debug.langCode != Lang.LangCode.None)
 		{
 			forceLangCode = debug.langCode.ToString();
 		}
@@ -467,9 +467,9 @@ public class Core : BaseCore
 				}
 			}
 			CharaActorPCC[] array = UnityEngine.Object.FindObjectsOfType<CharaActorPCC>();
-			for (int i = 0; i < array.Length; i++)
+			for (int num = 0; num < array.Length; num++)
 			{
-				array[i].provider.Rebuild();
+				array[num].provider.Rebuild();
 			}
 		}
 		EInput.Consume();

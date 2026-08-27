@@ -103,7 +103,7 @@ public class HoardActor : EMono
 		foreach (Hoard.Item item in list)
 		{
 			string filter = item.Source.filter;
-			if (hoard.mode != 0 && !filter.IsEmpty() && filter != text)
+			if (hoard.mode != Hoard.Mode.all && !filter.IsEmpty() && filter != text)
 			{
 				continue;
 			}
@@ -135,9 +135,9 @@ public class HoardActor : EMono
 			bool hasSound = !item.Source.sound.IsEmpty();
 			if (debug)
 			{
-				string id2 = item.id;
+				string id = item.id;
 				Vector3 vector = extents;
-				Debug.Log(id2 + "/" + vector.ToString());
+				Debug.Log(id + "/" + vector.ToString());
 			}
 			float num4 = Mathf.Sqrt(actor.GetComponent<Rigidbody2D>().mass);
 			if (num4 < 0.7f)
@@ -388,11 +388,11 @@ public class HoardActor : EMono
 				}
 			}
 		}
-		bool FindPair(CollectibleActor taker, string id, float dist)
+		bool FindPair(CollectibleActor taker, string text2, float dist)
 		{
 			foreach (CollectibleActor actor4 in actors)
 			{
-				if (actor4.item.id == id && !actor4.paired)
+				if (actor4.item.id == text2 && !actor4.paired)
 				{
 					MakePair(taker, actor4, dist);
 					return true;
@@ -442,8 +442,8 @@ public class HoardActor : EMono
 	public void RefreshBG()
 	{
 		SpriteRenderer spriteRenderer = srBG;
-		Sprite sprite2 = (srReflection.sprite = bg.sprite);
-		spriteRenderer.sprite = sprite2;
+		Sprite sprite = (srReflection.sprite = bg.sprite);
+		spriteRenderer.sprite = sprite;
 		matReflection.SetColor("_GrabColor", new Color(1f, 1f, 1f, bg.reflection * (0.01f * (float)hoard.reflection)));
 		srReflection.SetActive(hoard.reflection > 0);
 	}

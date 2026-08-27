@@ -23,23 +23,23 @@ public class ZoneEventHarvest : ZoneEventQuest
 		genBounds.marginPartial = 2;
 		genBounds.FuncCheckEmpty = (Cell cell) => cell.sourceFloor.id == 42;
 		List<SourceObj.Row> crops = EClass.sources.objs.rows.Where((SourceObj.Row o) => o.tag.Contains("harvest")).ToList();
-		for (int i = 0; i < 50; i++)
+		for (int num = 0; num < 50; num++)
 		{
 			genBounds.TryAddMapPiece(MapPiece.Type.Farm, 0f, "", delegate(PartialMap p, GenBounds b)
 			{
 				List<Point> list = b.ListEmptyPoint();
 				SourceObj.Row row = crops.RandomItemWeighted((SourceObj.Row o) => o.chance);
-				int num = 1 + EClass.rnd(5 + base.quest.difficulty * 2);
+				int num4 = 1 + EClass.rnd(5 + base.quest.difficulty * 2);
 				foreach (Point item in list)
 				{
 					if (item.sourceFloor.id == 4 && EClass.rnd(4) != 0)
 					{
 						item.SetObj(row.id);
-						int num2 = item.growth.HarvestStage - EClass.rnd(4);
-						item.growth.SetStage(num2);
-						if (num2 == item.growth.HarvestStage)
+						int num5 = item.growth.HarvestStage - EClass.rnd(4);
+						item.growth.SetStage(num5);
+						if (num5 == item.growth.HarvestStage)
 						{
-							EClass._map.AddPlant(item, null).size = Mathf.Clamp(num + EClass.rnd(2) - EClass.rnd(2), 0, 9) + 1;
+							EClass._map.AddPlant(item, null).size = Mathf.Clamp(num4 + EClass.rnd(2) - EClass.rnd(2), 0, 9) + 1;
 						}
 						item.cell.isClearSnow = true;
 					}
@@ -50,11 +50,11 @@ public class ZoneEventHarvest : ZoneEventQuest
 		{
 			thing.isNPCProperty = true;
 		}
-		for (int j = 0; j < 12; j++)
+		for (int num2 = 0; num2 < 12; num2++)
 		{
 			EClass._zone.SpawnMob();
 		}
-		for (int k = 0; k < 30; k++)
+		for (int num3 = 0; num3 < 30; num3++)
 		{
 			EClass._zone.SpawnMob(null, SpawnSetting.HomeWild(1));
 		}

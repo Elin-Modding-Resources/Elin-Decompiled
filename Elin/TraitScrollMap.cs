@@ -37,17 +37,17 @@ public class TraitScrollMap : TraitScroll
 				s = EClass.sources.zoneAffixes.map[owner.GetInt(24)].GetName() + Lang.space + s;
 			}
 		}
-		int @int = owner.GetInt(25);
-		if (@int > 0)
+		int num = owner.GetInt(25);
+		if (num > 0)
 		{
-			s = s + " Lv " + (@int + 1);
+			s = s + " Lv " + (num + 1);
 		}
 	}
 
 	public override void OnRead(Chara c)
 	{
-		int @int = owner.GetInt(25);
-		Zone zone = EClass.world.region.CreateRandomSite(EClass._zone, 8, idSourceZone, updateMesh: true, @int);
+		int lv = owner.GetInt(25);
+		Zone zone = EClass.world.region.CreateRandomSite(EClass._zone, 8, idSourceZone, updateMesh: true, lv);
 		if (zone == null)
 		{
 			Msg.Say("nothingHappens");

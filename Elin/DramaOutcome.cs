@@ -490,10 +490,10 @@ public class DramaOutcome : EMono
 		Chara chara = EMono.pc.party.members.Find((Chara c) => !c.IsPC && c.HasElement(1248));
 		int num = chara.Evalue(1248);
 		chara.SetFeat(1248, 0);
-		for (int i = 0; i < num; i++)
+		for (int num2 = 0; num2 < num; num2++)
 		{
-			Rand.SetSeed(chara.uid + i);
-			Thing thing = DNA.GenerateRandomGene(chara.LV + 30, chara.uid + i);
+			Rand.SetSeed(chara.uid + num2);
+			Thing thing = DNA.GenerateRandomGene(chara.LV + 30, chara.uid + num2);
 			if (thing.c_DNA.GetInvalidFeat(chara) == null && thing.c_DNA.GetInvalidAction(chara) == null)
 			{
 				thing.c_DNA.Apply(chara, reverse: false);

@@ -66,7 +66,7 @@ public class DramaEventEndRoll : DramaEvent
 			onList = delegate
 			{
 				List<string> list = IO.LoadTextArray(CorePath.CorePackage.TextCommon + "endroll").ToList();
-				for (int k = 0; k < Screen.height / 32 + 1; k++)
+				for (int i = 0; i < Screen.height / 32 + 1; i++)
 				{
 					Space(newline: true);
 				}
@@ -76,12 +76,12 @@ public class DramaEventEndRoll : DramaEvent
 					{
 						string[] array = item.Replace("#", "").Split(',');
 						string text = array[0];
-						int num2 = array[1].ToInt();
+						int num = array[1].ToInt();
 						foreach (Dictionary<string, string> item2 in items)
 						{
-							if (index % 5 < num2)
+							if (index % 5 < num)
 							{
-								for (int l = 0; l < num2; l++)
+								for (int j = 0; j < num; j++)
 								{
 									this.list.Add("");
 									index++;
@@ -91,9 +91,9 @@ public class DramaEventEndRoll : DramaEvent
 							{
 								AddBacker(item2["Name"]);
 							}
-							if (index % 5 >= 5 - num2)
+							if (index % 5 >= 5 - num)
 							{
-								for (int n = 0; n < num2; n++)
+								for (int k = 0; k < num; k++)
 								{
 									this.list.Add("");
 									index++;
@@ -106,7 +106,7 @@ public class DramaEventEndRoll : DramaEvent
 						Add(item);
 					}
 				}
-				for (int num3 = 0; num3 < Screen.height / 32 / 2 - 1; num3++)
+				for (int l = 0; l < Screen.height / 32 / 2 - 1; l++)
 				{
 					Space(newline: true);
 				}
@@ -135,7 +135,7 @@ public class DramaEventEndRoll : DramaEvent
 			{
 				num += 5 - index % 5;
 			}
-			for (int j = 0; j < num; j++)
+			for (int i = 0; i < num; i++)
 			{
 				list.Add("");
 				index++;

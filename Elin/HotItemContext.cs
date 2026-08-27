@@ -67,7 +67,7 @@ public class HotItemContext : HotItem
 	public static void Show(string id, Vector3 pos)
 	{
 		string menuName = ((id == "system") ? "ContextSystem" : "ContextMenu");
-		UIContextMenu i = EClass.ui.contextMenu.Create(menuName);
+		UIContextMenu m = EClass.ui.contextMenu.Create(menuName);
 		GameDate d = EClass.core.game.world.date;
 		Game.Config conf = EClass.game.config;
 		bool isRegion = EClass._zone.IsRegion;
@@ -75,7 +75,7 @@ public class HotItemContext : HotItem
 		{
 			if (id == "system")
 			{
-				UIContextMenu uIContextMenu = i.AddChild("etc");
+				UIContextMenu uIContextMenu = m.AddChild("etc");
 				uIContextMenu.AddButton("LayerFeedback".lang() + "(" + EInput.keys.report.key.ToString() + ")", delegate
 				{
 					EClass.ui.ToggleFeedback();
@@ -101,7 +101,7 @@ public class HotItemContext : HotItem
 					SE.ClickGeneral();
 					EClass.ui.ToggleCanvas();
 				});
-				UIContextMenu uIContextMenu2 = i.AddChild("tool");
+				UIContextMenu uIContextMenu2 = m.AddChild("tool");
 				uIContextMenu2.AddButton("LayerMod", delegate
 				{
 					EClass.ui.AddLayer<LayerMod>();
@@ -116,66 +116,66 @@ public class HotItemContext : HotItem
 				});
 				if (ModUtil.contextMenuProxies.Count > 0)
 				{
-					UIContextMenu parent2 = i.AddChild("mod");
+					UIContextMenu parent = m.AddChild("mod");
 					foreach (ContextMenuProxy contextMenuProxy in ModUtil.contextMenuProxies)
 					{
-						PopulateMenu(parent2, contextMenuProxy);
+						PopulateMenu(parent, contextMenuProxy);
 					}
 				}
-				i.AddSeparator();
-				i.AddButton("help", delegate
+				m.AddSeparator();
+				m.AddButton("help", delegate
 				{
 					LayerHelp.Toggle("general", "1");
 				});
-				i.AddButton("widget", delegate
+				m.AddButton("widget", delegate
 				{
 					EClass.ui.AddLayer<LayerWidget>();
 				});
-				i.AddButton("config", delegate
+				m.AddButton("config", delegate
 				{
 					EClass.ui.AddLayer<LayerConfig>();
 				});
-				i.AddButton("worldSetting", delegate
+				m.AddButton("worldSetting", delegate
 				{
 					EClass.ui.AddLayer<LayerWorldSetting>();
 				});
-				i.AddSeparator();
-				i.AddButton("LayerHoard", delegate
+				m.AddSeparator();
+				m.AddButton("LayerHoard", delegate
 				{
 					EClass.ui.AddLayer<LayerHoard>();
 				});
-				i.AddSeparator();
+				m.AddSeparator();
 				if (!EClass.game.principal.disableManualSave || EClass.debug.enable)
 				{
-					i.AddButton("save", delegate
+					m.AddButton("save", delegate
 					{
 						EClass.game.Save();
 					});
-					i.AddButton("load", delegate
+					m.AddButton("load", delegate
 					{
 						EClass.ui.AddLayer<LayerLoadGame>().Init(_backup: false);
 					});
 				}
-				i.AddSeparator();
-				i.AddButton("title", delegate
+				m.AddSeparator();
+				m.AddButton("title", delegate
 				{
 					EClass.game.GotoTitle();
 				});
-				i.AddButton("quit", EClass.game.Quit);
-				i.GetComponent<Image>().SetAlpha(1f);
+				m.AddButton("quit", EClass.game.Quit);
+				m.GetComponent<Image>().SetAlpha(1f);
 			}
 		}
 		else if (EClass.scene.actionMode.IsBuildMode)
 		{
 			if (EClass.debug.enable)
 			{
-				i.AddButton("Reset Map", delegate
+				m.AddButton("Reset Map", delegate
 				{
 					Zone.forceRegenerate = true;
 					EClass._zone.Activate();
 				});
-				i.AddChild("Map Subset");
-				i.AddSeparator();
+				m.AddChild("Map Subset");
+				m.AddSeparator();
 				AddSliderMonth();
 				AddSliderHour();
 				AddSliderWeather();
@@ -185,50 +185,50 @@ public class HotItemContext : HotItem
 		{
 			if (!isRegion && EClass.scene.flock.gameObject.activeSelf)
 			{
-				i.AddButton("birdView", delegate
+				m.AddButton("birdView", delegate
 				{
 					EClass.scene.ToggleBirdView();
 				});
 			}
 			AddTilt();
-			i.AddToggle("highlightArea", conf.highlightArea, delegate
+			m.AddToggle("highlightArea", conf.highlightArea, delegate
 			{
 				EClass.scene.ToggleHighlightArea();
 			});
-			i.AddToggle("noRoof", conf.noRoof, delegate
+			m.AddToggle("noRoof", conf.noRoof, delegate
 			{
 				EClass.scene.ToggleRoof();
 			});
 			if (EClass._zone.IsRegion)
 			{
-				i.AddSlider("zoomRegion", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.regionZoom / CoreConfig.ZoomStep, delegate(float b)
+				m.AddSlider("zoomRegion", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.regionZoom / CoreConfig.ZoomStep, delegate(float b)
 				{
 					conf.regionZoom = (int)b * CoreConfig.ZoomStep;
 				}, 100 / CoreConfig.ZoomStep, 200 / CoreConfig.ZoomStep, isInt: true, hideOther: false);
 			}
 			else if (ActionMode.Adv.zoomOut2)
 			{
-				i.AddSlider("zoomAlt", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.zoomedZoom / CoreConfig.ZoomStep, delegate(float b)
+				m.AddSlider("zoomAlt", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.zoomedZoom / CoreConfig.ZoomStep, delegate(float b)
 				{
 					conf.zoomedZoom = (int)b * CoreConfig.ZoomStep;
 				}, 50 / CoreConfig.ZoomStep, 200 / CoreConfig.ZoomStep, isInt: true, hideOther: false);
 			}
 			else
 			{
-				i.AddSlider("zoom", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.defaultZoom / CoreConfig.ZoomStep, delegate(float b)
+				m.AddSlider("zoom", (float a) => a * (float)CoreConfig.ZoomStep + "%", conf.defaultZoom / CoreConfig.ZoomStep, delegate(float b)
 				{
 					conf.defaultZoom = (int)b * CoreConfig.ZoomStep;
 				}, 50 / CoreConfig.ZoomStep, 200 / CoreConfig.ZoomStep, isInt: true, hideOther: false);
 			}
-			i.AddSlider("backDrawAlpha", (float a) => a + "%", EClass.game.config.backDrawAlpha, delegate(float b)
+			m.AddSlider("backDrawAlpha", (float a) => a + "%", EClass.game.config.backDrawAlpha, delegate(float b)
 			{
 				EClass.game.config.backDrawAlpha = (int)b;
 			}, 0f, 50f, isInt: true, hideOther: false);
 			if (EClass.debug.enable)
 			{
-				i.AddSeparator();
+				m.AddSeparator();
 				AddSliderMonth();
-				i.AddSlider("sliderDay", (float a) => a.ToString() ?? "", EClass.world.date.day, delegate(float b)
+				m.AddSlider("sliderDay", (float a) => a.ToString() ?? "", EClass.world.date.day, delegate(float b)
 				{
 					if ((int)b != EClass.world.date.day)
 					{
@@ -240,11 +240,11 @@ public class HotItemContext : HotItem
 				}, 1f, 30f, isInt: true, hideOther: false);
 				AddSliderHour();
 				AddSliderWeather();
-				i.AddSlider("sliderAnimeSpeed", (float a) => EClass.game.config.animeSpeed + "%", EClass.game.config.animeSpeed, delegate(float b)
+				m.AddSlider("sliderAnimeSpeed", (float a) => EClass.game.config.animeSpeed + "%", EClass.game.config.animeSpeed, delegate(float b)
 				{
 					EClass.game.config.animeSpeed = (int)b;
 				}, 0f, 100f, isInt: true, hideOther: false);
-				UIContextMenu uIContextMenu3 = i.AddChild("debug");
+				UIContextMenu uIContextMenu3 = m.AddChild("debug");
 				uIContextMenu3.AddToggle("reveal_map", EClass.debug.revealMap, delegate
 				{
 					EClass.debug.ToggleRevealMap();
@@ -276,14 +276,14 @@ public class HotItemContext : HotItem
 				}, 0f, 500f, isInt: true, hideOther: false);
 			}
 		}
-		i.Show(pos);
+		m.Show(pos);
 		if (id == "system")
 		{
-			i.hideOnMouseLeave = false;
+			m.hideOnMouseLeave = false;
 		}
 		void AddSliderHour()
 		{
-			i.AddSlider("sliderTime", (float a) => a.ToString() ?? "", d.hour, delegate(float b)
+			m.AddSlider("sliderTime", (float a) => a.ToString() ?? "", d.hour, delegate(float b)
 			{
 				Weather.Condition currentCondition = EClass.world.weather._currentCondition;
 				if (d.hour != (int)b)
@@ -299,7 +299,7 @@ public class HotItemContext : HotItem
 		}
 		void AddSliderMonth()
 		{
-			i.AddSlider("sliderMonth", (float a) => a.ToString() ?? "", EClass.world.date.month, delegate(float b)
+			m.AddSlider("sliderMonth", (float a) => a.ToString() ?? "", EClass.world.date.month, delegate(float b)
 			{
 				if (d.month != (int)b)
 				{
@@ -315,18 +315,18 @@ public class HotItemContext : HotItem
 		}
 		void AddSliderWeather()
 		{
-			i.AddSlider("sliderWeather", (float a) => EClass.world.weather.GetName(((int)a).ToEnum<Weather.Condition>()) ?? "", (float)EClass.world.weather._currentCondition, delegate(float b)
+			m.AddSlider("sliderWeather", (float a) => EClass.world.weather.GetName(((int)a).ToEnum<Weather.Condition>()) ?? "", (float)EClass.world.weather._currentCondition, delegate(float b)
 			{
 				EClass.world.weather.SetCondition(((int)b).ToEnum<Weather.Condition>());
 			}, 0f, 7f, isInt: true, hideOther: false);
 		}
 		void AddTilt()
 		{
-			i.AddToggle("alwaysTilt".lang() + (isRegion ? "(Region)" : ""), isRegion ? conf.tiltRegion : conf.tilt, delegate
+			m.AddToggle("alwaysTilt".lang() + (isRegion ? "(Region)" : ""), isRegion ? conf.tiltRegion : conf.tilt, delegate
 			{
 				EClass.scene.ToggleTilt();
 			});
-			i.AddSlider("tiltPower", (float a) => a.ToString() ?? "", isRegion ? conf.tiltPowerRegion : conf.tiltPower, delegate(float b)
+			m.AddSlider("tiltPower", (float a) => a.ToString() ?? "", isRegion ? conf.tiltPowerRegion : conf.tiltPower, delegate(float b)
 			{
 				if (isRegion)
 				{
@@ -339,20 +339,20 @@ public class HotItemContext : HotItem
 				EClass.scene.camSupport.tiltShift.blurArea = 0.1f * b;
 			}, 0f, 150f, isInt: true, hideOther: false);
 		}
-		static void PopulateMenu(UIContextMenu parent, ContextMenuProxy proxy)
+		static void PopulateMenu(UIContextMenu uIContextMenu4, ContextMenuProxy proxy)
 		{
 			if (proxy.isMenu)
 			{
-				UIContextMenu parent3 = parent.AddChild(proxy.DisplayName);
+				UIContextMenu parent2 = uIContextMenu4.AddChild(proxy.DisplayName);
 				{
 					foreach (ContextMenuProxy child in proxy.children)
 					{
-						PopulateMenu(parent3, child);
+						PopulateMenu(parent2, child);
 					}
 					return;
 				}
 			}
-			parent.AddButton(proxy.DisplayName, proxy.onClick);
+			uIContextMenu4.AddButton(proxy.DisplayName, proxy.onClick);
 		}
 		static void Toggle(ref bool flag)
 		{

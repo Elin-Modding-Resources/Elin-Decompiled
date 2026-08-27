@@ -77,11 +77,11 @@ public class WorkSummary : EClass
 
 	public void Reset()
 	{
-		int num2 = (material = 0);
-		int num4 = (knowledge = num2);
-		int num6 = (food = num4);
-		int num8 = (money = num6);
-		progress = num8;
+		int num = (material = 0);
+		int num3 = (knowledge = num);
+		int num5 = (food = num3);
+		int num7 = (money = num5);
+		progress = num7;
 	}
 
 	public void AddThing(Thing t)

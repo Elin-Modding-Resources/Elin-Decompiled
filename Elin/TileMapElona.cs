@@ -618,7 +618,7 @@ public class TileMapElona : BaseTileMap
 				thingPos.y += num6;
 				if (!thing2.sourceCard.multisize || (thing2.pos.x == cx && thing2.pos.z == cz))
 				{
-					if (iconMode != 0)
+					if (iconMode != CardIconMode.None)
 					{
 						int num7 = 0;
 						switch (iconMode)

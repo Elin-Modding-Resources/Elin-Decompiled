@@ -146,9 +146,9 @@ public class LayerQuestBoard : ELayer
 				b.item.text1.text = cost.ToString().TagColorGoodBad(() => ELayer.pc.GetCurrency("money2") >= cost || ELayer.pc.things.Find("ticket_resident") != null);
 				b.item.text2.text = ((a.Days == -1) ? "-" : (a.Days.ToString() ?? ""));
 				HintIcon[] componentsInChildren = b.layoutTag.GetComponentsInChildren<HintIcon>();
-				for (int i = 0; i < componentsInChildren.Length; i++)
+				for (int num = 0; num < componentsInChildren.Length; num++)
 				{
-					componentsInChildren[i].onPointerDown = delegate
+					componentsInChildren[num].onPointerDown = delegate
 					{
 						list.callbacks.OnClick(a, b);
 					};

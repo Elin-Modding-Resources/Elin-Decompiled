@@ -1053,11 +1053,11 @@ public class Scene : EMono
 			Sprite sprite = SpriteSheet.Get(item.id);
 			if ((bool)sprite)
 			{
-				Sprite @object = item.GetObject(new SpriteLoadOption
+				Sprite value = item.GetObject(new SpriteLoadOption
 				{
 					pivot = new Vector2(sprite.pivot.x / (sprite.bounds.size.x * 100f), sprite.pivot.y / (sprite.bounds.size.y * 100f))
 				});
-				SpriteSheet.dict[item.id] = @object;
+				SpriteSheet.dict[item.id] = value;
 			}
 		}
 	}

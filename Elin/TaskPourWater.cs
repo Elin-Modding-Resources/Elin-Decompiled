@@ -63,15 +63,15 @@ public class TaskPourWater : TaskDesignation
 			}
 			Pour(pos);
 		};
-		void Pour(Point p)
+		void Pour(Point point)
 		{
-			if (pot.owner.c_charges > 0 && GetHitResult(p) != HitResult.Invalid)
+			if (pot.owner.c_charges > 0 && GetHitResult(point) != HitResult.Invalid)
 			{
 				if (pot.owner.DyeMat == null)
 				{
 					pot.owner.Dye(MATERIAL.sourceWaterSea);
 				}
-				switch ((p.HasBridge ? p.sourceBridge : p.sourceFloor).alias)
+				switch ((point.HasBridge ? point.sourceBridge : point.sourceFloor).alias)
 				{
 				case "floor_water_shallow2":
 					ChangeFloor("floor_water_shallow");
@@ -86,9 +86,9 @@ public class TaskPourWater : TaskDesignation
 					ChangeFloor("floor_water_shallow2");
 					break;
 				}
-				Effect.Get("mine").Play(p).SetParticleColor(p.cell.HasBridge ? pos.matBridge.GetColor() : p.matFloor.GetColor())
+				Effect.Get("mine").Play(point).SetParticleColor(point.cell.HasBridge ? pos.matBridge.GetColor() : point.matFloor.GetColor())
 					.Emit(10 + EClass.rnd(10));
-				p.Animate(AnimeID.Dig, animeBlock: true);
+				point.Animate(AnimeID.Dig, animeBlock: true);
 				pot.owner.ModCharge(-1);
 				if (pot.owner.c_charges <= 0)
 				{
@@ -103,18 +103,18 @@ public class TaskPourWater : TaskDesignation
 			void ChangeFloor(string id)
 			{
 				SourceFloor.Row row = EClass.sources.floors.alias[id];
-				if (p.HasBridge)
+				if (point.HasBridge)
 				{
-					p.cell._bridge = (byte)row.id;
-					p.cell._bridgeMat = (byte)pot.owner.DyeMat.id;
+					point.cell._bridge = (byte)row.id;
+					point.cell._bridgeMat = (byte)pot.owner.DyeMat.id;
 				}
 				else
 				{
-					p.cell._floor = (byte)row.id;
-					p.cell._floorMat = (byte)pot.owner.DyeMat.id;
+					point.cell._floor = (byte)row.id;
+					point.cell._floorMat = (byte)pot.owner.DyeMat.id;
 				}
-				EClass._map.SetLiquid(p.x, p.z);
-				p.RefreshNeighborTiles();
+				EClass._map.SetLiquid(point.x, point.z);
+				point.RefreshNeighborTiles();
 			}
 		}
 	}

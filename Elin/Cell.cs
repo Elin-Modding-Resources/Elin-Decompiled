@@ -1163,23 +1163,23 @@ public class Cell : WeightCell, IFloodCell
 
 	public void Refresh()
 	{
-		Cell cell2 = ((x > 0) ? cells[x - 1, z] : Void);
-		Cell cell3 = ((x + 1 < Size) ? cells[x + 1, z] : Void);
-		Cell cell4 = ((z > 0) ? cells[x, z - 1] : Void);
-		Cell cell5 = ((z + 1 < Size) ? cells[x, z + 1] : Void);
-		Cell cell6 = ((x > 0 && z > 0) ? cells[x - 1, z - 1] : Void);
-		Cell cell7 = ((x + 1 < Size && z > 0) ? cells[x + 1, z - 1] : Void);
-		Cell cell8 = ((x > 0 && z + 1 < Size) ? cells[x - 1, z + 1] : Void);
-		Cell cell9 = ((x + 1 < Size && z + 1 < Size) ? cells[x + 1, z + 1] : Void);
-		Cell cell10 = ((z > 1) ? cells[x, z - 2] : Void);
-		Cell cell11 = ((x + 2 < Size) ? cells[x + 2, z] : Void);
+		Cell cell = ((x > 0) ? cells[x - 1, z] : Void);
+		Cell cell2 = ((x + 1 < Size) ? cells[x + 1, z] : Void);
+		Cell cell3 = ((z > 0) ? cells[x, z - 1] : Void);
+		Cell cell4 = ((z + 1 < Size) ? cells[x, z + 1] : Void);
+		Cell cell5 = ((x > 0 && z > 0) ? cells[x - 1, z - 1] : Void);
+		Cell cell6 = ((x + 1 < Size && z > 0) ? cells[x + 1, z - 1] : Void);
+		Cell cell7 = ((x > 0 && z + 1 < Size) ? cells[x - 1, z + 1] : Void);
+		Cell cell8 = ((x + 1 < Size && z + 1 < Size) ? cells[x + 1, z + 1] : Void);
+		Cell cell9 = ((z > 1) ? cells[x, z - 2] : Void);
+		Cell cell10 = ((x + 2 < Size) ? cells[x + 2, z] : Void);
 		TileType tileType = sourceBlock.tileType;
 		TileType tileType2 = sourceFloor.tileType;
 		MapBounds bounds = map.bounds;
 		bool hasBridge = _bridge != 0;
 		outOfBounds = x < bounds.x || z < bounds.z || x > bounds.maxX || z > bounds.maxZ;
-		isSurrounded4d = cell2.HasFullBlock && cell3.HasFullBlock && cell4.HasFullBlock && cell5.HasFullBlock;
-		isSurrounded = isSurrounded4d && cell6.HasFullBlock && cell7.HasFullBlock && cell8.HasFullBlock && cell9.HasFullBlock && cell4.bridgeHeight == bridgeHeight && cell3.bridgeHeight == bridgeHeight && cell5.bridgeHeight == bridgeHeight && cell2.bridgeHeight == bridgeHeight;
+		isSurrounded4d = cell.HasFullBlock && cell2.HasFullBlock && cell3.HasFullBlock && cell4.HasFullBlock;
+		isSurrounded = isSurrounded4d && cell5.HasFullBlock && cell6.HasFullBlock && cell7.HasFullBlock && cell8.HasFullBlock && cell3.bridgeHeight == bridgeHeight && cell2.bridgeHeight == bridgeHeight && cell4.bridgeHeight == bridgeHeight && cell.bridgeHeight == bridgeHeight;
 		isFloating = isForceFloat;
 		hasDoor = false;
 		hasDoorBoat = false;
@@ -1187,15 +1187,15 @@ public class Cell : WeightCell, IFloodCell
 		isShoreSand = false;
 		hasWindow = false;
 		isCurtainClosed = false;
-		isSkyFloor = tileType2 != TileType.Sky && (cell3.sourceFloor.tileType == TileType.Sky || cell4.sourceFloor.tileType == TileType.Sky);
+		isSkyFloor = tileType2 != TileType.Sky && (cell2.sourceFloor.tileType == TileType.Sky || cell3.sourceFloor.tileType == TileType.Sky);
 		openPath = false;
-		openSight = tileType.IsOpenSight || (cell4.hasWindow && !cell4.isCurtainClosed) || (cell3.hasWindow && !cell3.isCurtainClosed);
+		openSight = tileType.IsOpenSight || (cell3.hasWindow && !cell3.isCurtainClosed) || (cell2.hasWindow && !cell2.isCurtainClosed);
 		blockSight = tileType.IsBlockSight || ((objList[obj].growth != null) ? objList[obj].growth.BlockSight(this) : objList[obj].tileType.IsBlockSight);
 		blocked = outOfBounds || tileType.IsBlockPass || (tileType2.IsBlockPass && !hasBridge) || ((objList[obj].growth != null) ? objList[obj].growth.BlockPass(this) : objList[obj].tileType.IsBlockPass) || impassable;
-		isSlopeEdge = height > cell3.height || height > cell4.height;
+		isSlopeEdge = height > cell2.height || height > cell3.height;
 		if (hasBridge && sourceBridge.tileType.ShowPillar)
 		{
-			isBridgeEdge = _bridge != cell3._bridge || _bridge != cell4._bridge || bridgeHeight > cell3.bridgeHeight || bridgeHeight > cell4.bridgeHeight || _bridge != cell2._bridge || _bridge != cell5._bridge || bridgeHeight > cell2.bridgeHeight || bridgeHeight > cell5.bridgeHeight;
+			isBridgeEdge = _bridge != cell2._bridge || _bridge != cell3._bridge || bridgeHeight > cell2.bridgeHeight || bridgeHeight > cell3.bridgeHeight || _bridge != cell._bridge || _bridge != cell4._bridge || bridgeHeight > cell.bridgeHeight || bridgeHeight > cell4.bridgeHeight;
 		}
 		else
 		{
@@ -1204,26 +1204,26 @@ public class Cell : WeightCell, IFloodCell
 		lotShade = false;
 		if (room == null && !EClass._zone.IsSnowCovered)
 		{
-			if ((cell11.room != null && cell3.sourceBlock.tileType.CastShadowSelf) || (cell10.room != null && cell4.sourceBlock.tileType.CastShadowSelf))
+			if ((cell10.room != null && cell2.sourceBlock.tileType.CastShadowSelf) || (cell9.room != null && cell3.sourceBlock.tileType.CastShadowSelf))
 			{
 				lotShade = true;
 			}
-			else if ((cell11.Front.room != null && cell7.sourceBlock.tileType.CastShadowSelf) || (cell10.Right.room != null && cell7.sourceBlock.tileType.CastShadowSelf) || (cell7.FrontRight.room != null && cell7.Right.sourceBlock.tileType.CastShadowSelf))
+			else if ((cell10.Front.room != null && cell6.sourceBlock.tileType.CastShadowSelf) || (cell9.Right.room != null && cell6.sourceBlock.tileType.CastShadowSelf) || (cell6.FrontRight.room != null && cell6.Right.sourceBlock.tileType.CastShadowSelf))
 			{
 				lotShade = true;
 			}
-			else if (cell11.sourceBlock.tileType.CastShadowSelf && cell11.Right.room != null)
+			else if (cell10.sourceBlock.tileType.CastShadowSelf && cell10.Right.room != null)
 			{
 				lotShade = true;
 			}
 		}
-		isShadowed = lotShade || sourceBlock.tileType.CastShadowSelf || cell4.sourceBlock.tileType.CastShadowBack || (!HasRoof && _roofBlock != 0);
+		isShadowed = lotShade || sourceBlock.tileType.CastShadowSelf || cell3.sourceBlock.tileType.CastShadowBack || (!HasRoof && _roofBlock != 0);
 		castFloorShadow = lotShade || (room == null && sourceBlock.tileType.CastShadowSelf);
 		byte b = (hasBridge ? bridgeHeight : height);
-		byte b2 = ((cell4.bridgeHeight == 0) ? cell4.height : cell4.bridgeHeight);
-		byte b3 = ((cell3.bridgeHeight == 0) ? cell3.height : cell3.bridgeHeight);
-		byte b4 = ((cell10.bridgeHeight == 0) ? cell10.height : cell10.bridgeHeight);
-		byte b5 = ((cell11.bridgeHeight == 0) ? cell11.height : cell11.bridgeHeight);
+		byte b2 = ((cell3.bridgeHeight == 0) ? cell3.height : cell3.bridgeHeight);
+		byte b3 = ((cell2.bridgeHeight == 0) ? cell2.height : cell2.bridgeHeight);
+		byte b4 = ((cell9.bridgeHeight == 0) ? cell9.height : cell9.bridgeHeight);
+		byte b5 = ((cell10.bridgeHeight == 0) ? cell10.height : cell10.bridgeHeight);
 		int num = 0;
 		if (b3 - b > num)
 		{
@@ -1333,41 +1333,41 @@ public class Cell : WeightCell, IFloodCell
 		}
 		minHeight = (byte)(10 + b + ((IsTopWater && !isFloating) ? sourceFloor.tileType.FloorAltitude : 0));
 		topHeight = (byte)(minHeight + tileType.slopeHeight);
-		weights[0] = (byte)((Mathf.Abs(cell4.minHeight - topHeight) <= 8 || Mathf.Abs(cell4.topHeight - minHeight) <= 8) ? 1u : 0u);
-		weights[1] = (byte)((Mathf.Abs(cell3.minHeight - topHeight) <= 8 || Mathf.Abs(cell3.topHeight - minHeight) <= 8) ? 1u : 0u);
-		weights[2] = (byte)((Mathf.Abs(cell5.minHeight - topHeight) <= 8 || Mathf.Abs(cell5.topHeight - minHeight) <= 8) ? 1u : 0u);
-		weights[3] = (byte)((Mathf.Abs(cell2.minHeight - topHeight) <= 8 || Mathf.Abs(cell2.topHeight - minHeight) <= 8) ? 1u : 0u);
+		weights[0] = (byte)((Mathf.Abs(cell3.minHeight - topHeight) <= 8 || Mathf.Abs(cell3.topHeight - minHeight) <= 8) ? 1u : 0u);
+		weights[1] = (byte)((Mathf.Abs(cell2.minHeight - topHeight) <= 8 || Mathf.Abs(cell2.topHeight - minHeight) <= 8) ? 1u : 0u);
+		weights[2] = (byte)((Mathf.Abs(cell4.minHeight - topHeight) <= 8 || Mathf.Abs(cell4.topHeight - minHeight) <= 8) ? 1u : 0u);
+		weights[3] = (byte)((Mathf.Abs(cell.minHeight - topHeight) <= 8 || Mathf.Abs(cell.topHeight - minHeight) <= 8) ? 1u : 0u);
 		if (IsDeepWater)
 		{
 			baseWeight += 100;
 		}
 		ignoreObjShadow = (b2 > b && b2 - b > 6) || (b3 > b && b3 - b > 6);
-		isWallEdge = !blocked && cell3.sourceBlock.tileType.IsWallOrFence && cell3.blockDir != 1 && cell4.sourceBlock.tileType.IsWallOrFence && cell4.blockDir != 0;
+		isWallEdge = !blocked && cell2.sourceBlock.tileType.IsWallOrFence && cell2.blockDir != 1 && cell3.sourceBlock.tileType.IsWallOrFence && cell3.blockDir != 0;
 		if (isWallEdge)
 		{
-			blockSight = cell3.sourceBlock.tileType.IsBlockSight && cell4.sourceBlock.tileType.IsBlockSight;
+			blockSight = cell2.sourceBlock.tileType.IsBlockSight && cell3.sourceBlock.tileType.IsBlockSight;
 			blocked = true;
 			blockSight = true;
 		}
 		shadow = 0;
 		if (!HasBlock)
 		{
-			if (cell2.isSeen && cell2.CastAmbientShadow && !cell2.hasDoor && bridgeHeight == cell2.bridgeHeight && !sourceFloor.ignoreTransition && (!cell2.sourceBlock.tileType.IsWallOrFence || cell2.blockDir != 0))
+			if (cell.isSeen && cell.CastAmbientShadow && !cell.hasDoor && bridgeHeight == cell.bridgeHeight && !sourceFloor.ignoreTransition && (!cell.sourceBlock.tileType.IsWallOrFence || cell.blockDir != 0))
 			{
 				shadow++;
 			}
-			if (cell5.isSeen && cell5.CastAmbientShadow && !cell5.hasDoor && bridgeHeight == cell5.bridgeHeight && !sourceFloor.ignoreTransition && (!cell5.sourceBlock.tileType.IsWallOrFence || cell5.blockDir != 1))
+			if (cell4.isSeen && cell4.CastAmbientShadow && !cell4.hasDoor && bridgeHeight == cell4.bridgeHeight && !sourceFloor.ignoreTransition && (!cell4.sourceBlock.tileType.IsWallOrFence || cell4.blockDir != 1))
 			{
 				shadow += 2;
 			}
 		}
 		else
 		{
-			if (isFloating && (room != null || cell4.room != null || cell3.room != null || cell7.room != null))
+			if (isFloating && (room != null || cell3.room != null || cell2.room != null || cell6.room != null))
 			{
 				isFloating = false;
 			}
-			if (sourceBlock.tileType.IsFence && !hasDoor && (blockDir != 0 || cell5.topHeight >= b - 3) && (blockDir != 1 || cell2.topHeight >= b - 3))
+			if (sourceBlock.tileType.IsFence && !hasDoor && (blockDir != 0 || cell4.topHeight >= b - 3) && (blockDir != 1 || cell.topHeight >= b - 3))
 			{
 				shadow = (byte)(blockDir + 4);
 			}
@@ -1375,8 +1375,8 @@ public class Cell : WeightCell, IFloodCell
 		bool isFloorWater = IsFloorWater;
 		if (isFloorWater)
 		{
-			shore = (byte)((((!cell5.IsNotWaterEdge && z != Size - 1 && height == cell5.height) ? 1 : 0) + ((!cell3.IsNotWaterEdge && x != Size - 1 && height == cell3.height) ? 2 : 0) + ((!cell4.IsNotWaterEdge && z != 0 && height == cell4.height) ? 4 : 0) + ((!cell2.IsNotWaterEdge && x != 0 && height == cell2.height) ? 8 : 0)) * 12);
-			isShoreSand = cell5.sourceFloor.isBeach || cell3.sourceFloor.isBeach || cell4.sourceFloor.isBeach || cell2.sourceFloor.isBeach;
+			shore = (byte)((((!cell4.IsNotWaterEdge && z != Size - 1 && height == cell4.height) ? 1 : 0) + ((!cell2.IsNotWaterEdge && x != Size - 1 && height == cell2.height) ? 2 : 0) + ((!cell3.IsNotWaterEdge && z != 0 && height == cell3.height) ? 4 : 0) + ((!cell.IsNotWaterEdge && x != 0 && height == cell.height) ? 8 : 0)) * 12);
+			isShoreSand = cell4.sourceFloor.isBeach || cell2.sourceFloor.isBeach || cell3.sourceFloor.isBeach || cell.sourceFloor.isBeach;
 			if (shore != 0)
 			{
 				shore += (byte)(isShoreSand ? 2 : 3);
@@ -1388,7 +1388,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		if (sourceFloor.autotile > 0)
 		{
-			autotile = (byte)(((IsAutoTileEdge(cell5) && z != Size - 1) ? 1 : 0) + ((IsAutoTileEdge(cell3) && x != Size - 1) ? 2 : 0) + ((IsAutoTileEdge(cell4) && z != 0) ? 4 : 0) + ((IsAutoTileEdge(cell2) && x != 0) ? 8 : 0));
+			autotile = (byte)(((IsAutoTileEdge(cell4) && z != Size - 1) ? 1 : 0) + ((IsAutoTileEdge(cell2) && x != Size - 1) ? 2 : 0) + ((IsAutoTileEdge(cell3) && z != 0) ? 4 : 0) + ((IsAutoTileEdge(cell) && x != 0) ? 8 : 0));
 		}
 		else
 		{
@@ -1396,7 +1396,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		if (sourceDeco.autotile > 0)
 		{
-			autotileDeco = (byte)(((IsDecoAutoTileEdge(cell5) && z != Size - 1) ? 1 : 0) + ((IsDecoAutoTileEdge(cell3) && x != Size - 1) ? 2 : 0) + ((IsDecoAutoTileEdge(cell4) && z != 0) ? 4 : 0) + ((IsDecoAutoTileEdge(cell2) && x != 0) ? 8 : 0));
+			autotileDeco = (byte)(((IsDecoAutoTileEdge(cell4) && z != Size - 1) ? 1 : 0) + ((IsDecoAutoTileEdge(cell2) && x != Size - 1) ? 2 : 0) + ((IsDecoAutoTileEdge(cell3) && z != 0) ? 4 : 0) + ((IsDecoAutoTileEdge(cell) && x != 0) ? 8 : 0));
 		}
 		else
 		{
@@ -1404,7 +1404,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		if (_bridge != 0 && sourceBridge.autotile > 0)
 		{
-			autotileBridge = (byte)(((IsBridgeAutoTileEdge(cell5) && z != Size - 1) ? 1 : 0) + ((IsBridgeAutoTileEdge(cell3) && x != Size - 1) ? 2 : 0) + ((IsBridgeAutoTileEdge(cell4) && z != 0) ? 4 : 0) + ((IsBridgeAutoTileEdge(cell2) && x != 0) ? 8 : 0));
+			autotileBridge = (byte)(((IsBridgeAutoTileEdge(cell4) && z != Size - 1) ? 1 : 0) + ((IsBridgeAutoTileEdge(cell2) && x != Size - 1) ? 2 : 0) + ((IsBridgeAutoTileEdge(cell3) && z != 0) ? 4 : 0) + ((IsBridgeAutoTileEdge(cell) && x != 0) ? 8 : 0));
 		}
 		else
 		{
@@ -1412,7 +1412,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 		if (obj != 0 && sourceObj.autoTile)
 		{
-			autotileObj = (byte)(((IsObjAutoTileEdge(cell5) && z != Size - 1) ? 1 : 0) + ((IsObjAutoTileEdge(cell3) && x != Size - 1) ? 2 : 0) + ((IsObjAutoTileEdge(cell4) && z != 0) ? 4 : 0) + ((IsObjAutoTileEdge(cell2) && x != 0) ? 8 : 0));
+			autotileObj = (byte)(((IsObjAutoTileEdge(cell4) && z != Size - 1) ? 1 : 0) + ((IsObjAutoTileEdge(cell2) && x != Size - 1) ? 2 : 0) + ((IsObjAutoTileEdge(cell3) && z != 0) ? 4 : 0) + ((IsObjAutoTileEdge(cell) && x != 0) ? 8 : 0));
 		}
 		else
 		{
@@ -1426,49 +1426,49 @@ public class Cell : WeightCell, IFloodCell
 		{
 			blocked = false;
 		}
-		bool IsAutoTileEdge(Cell cell)
+		bool IsAutoTileEdge(Cell cell11)
 		{
-			if (!sourceFloor.isBeach && !cell.sourceFloor.isBeach && (cell._floor != _floor || cell._floorMat != _floorMat))
+			if (!sourceFloor.isBeach && !cell11.sourceFloor.isBeach && (cell11._floor != _floor || cell11._floorMat != _floorMat))
 			{
 				return true;
 			}
 			if (!isFloorWater)
 			{
-				return height != cell.height;
+				return height != cell11.height;
 			}
 			return false;
 		}
-		bool IsBridgeAutoTileEdge(Cell cell)
+		bool IsBridgeAutoTileEdge(Cell cell11)
 		{
-			if (cell._bridge != _bridge || cell._bridgeMat != _bridgeMat)
+			if (cell11._bridge != _bridge || cell11._bridgeMat != _bridgeMat)
 			{
 				return true;
 			}
-			return bridgeHeight != cell.bridgeHeight;
+			return bridgeHeight != cell11.bridgeHeight;
 		}
-		bool IsDecoAutoTileEdge(Cell cell)
+		bool IsDecoAutoTileEdge(Cell cell11)
 		{
-			if (cell._deco != _deco || cell._decoMat != _decoMat)
+			if (cell11._deco != _deco || cell11._decoMat != _decoMat)
 			{
 				return true;
 			}
 			if (!hasBridge)
 			{
-				return topHeight != cell.topHeight;
+				return topHeight != cell11.topHeight;
 			}
-			return bridgeHeight != cell.bridgeHeight;
+			return bridgeHeight != cell11.bridgeHeight;
 		}
-		bool IsObjAutoTileEdge(Cell cell)
+		bool IsObjAutoTileEdge(Cell cell11)
 		{
-			if (cell.obj != obj && (obj != 31 || (cell.obj != 97 && cell.obj != 98)))
+			if (cell11.obj != obj && (obj != 31 || (cell11.obj != 97 && cell11.obj != 98)))
 			{
 				return true;
 			}
 			if (!hasBridge)
 			{
-				return topHeight != cell.topHeight;
+				return topHeight != cell11.topHeight;
 			}
-			return bridgeHeight != cell.bridgeHeight;
+			return bridgeHeight != cell11.bridgeHeight;
 		}
 	}
 

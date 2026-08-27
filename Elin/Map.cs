@@ -570,60 +570,60 @@ public class Map : MapBounds, IPathfindGrid
 			bounds.SetBounds(0, 0, num - 1, num2 - 1);
 		}
 		SetBounds(0, 0, num - 1, num2 - 1);
-		byte[] bytes2 = TryLoad("objVals");
-		byte[] bytes3 = TryLoad("blockMats");
-		byte[] bytes4 = TryLoad("blocks");
-		byte[] bytes5 = TryLoad("floorMats");
-		byte[] bytes6 = TryLoad("floors");
-		byte[] bytes7 = TryLoad("objs");
-		byte[] bytes8 = TryLoad("objMats");
-		byte[] bytes9 = TryLoad("decal");
-		byte[] bytes10 = TryLoad("decos");
-		byte[] bytes11 = TryLoad("decoMats");
-		byte[] bytes12 = TryLoad("dirs");
-		byte[] bytes13 = TryLoad("flags");
-		byte[] bytes14 = TryLoad("flags2");
-		byte[] bytes15 = TryLoad("heights");
-		byte[] bytes16 = TryLoad("bridges");
-		byte[] bytes17 = TryLoad("bridgeMats");
-		byte[] bytes18 = TryLoad("bridgeHeights");
-		byte[] bytes19 = TryLoad("bridgePillars");
-		byte[] bytes20 = TryLoad("roofBlocks");
-		byte[] bytes21 = TryLoad("roofBlockMats");
-		byte[] bytes22 = TryLoad("roofBlockDirs");
-		if (bytes19.Length < size)
+		byte[] bytes = TryLoad("objVals");
+		byte[] bytes2 = TryLoad("blockMats");
+		byte[] bytes3 = TryLoad("blocks");
+		byte[] bytes4 = TryLoad("floorMats");
+		byte[] bytes5 = TryLoad("floors");
+		byte[] bytes6 = TryLoad("objs");
+		byte[] bytes7 = TryLoad("objMats");
+		byte[] bytes8 = TryLoad("decal");
+		byte[] bytes9 = TryLoad("decos");
+		byte[] bytes10 = TryLoad("decoMats");
+		byte[] bytes11 = TryLoad("dirs");
+		byte[] bytes12 = TryLoad("flags");
+		byte[] bytes13 = TryLoad("flags2");
+		byte[] bytes14 = TryLoad("heights");
+		byte[] bytes15 = TryLoad("bridges");
+		byte[] bytes16 = TryLoad("bridgeMats");
+		byte[] bytes17 = TryLoad("bridgeHeights");
+		byte[] bytes18 = TryLoad("bridgePillars");
+		byte[] bytes19 = TryLoad("roofBlocks");
+		byte[] bytes20 = TryLoad("roofBlockMats");
+		byte[] bytes21 = TryLoad("roofBlockDirs");
+		if (bytes18.Length < size)
 		{
-			bytes19 = new byte[size];
+			bytes18 = new byte[size];
 		}
-		if (bytes2.Length < size)
+		if (bytes.Length < size)
 		{
-			bytes2 = new byte[size];
+			bytes = new byte[size];
 		}
-		if (bytes14.Length < size)
+		if (bytes13.Length < size)
 		{
-			bytes14 = new byte[size];
+			bytes13 = new byte[size];
 		}
-		Validate(ref bytes2, "objVals");
-		Validate(ref bytes3, "blockMats");
-		Validate(ref bytes4, "blocks");
-		Validate(ref bytes5, "floorMats");
-		Validate(ref bytes6, "floors");
-		Validate(ref bytes7, "objs");
-		Validate(ref bytes8, "objMats");
-		Validate(ref bytes9, "decal");
-		Validate(ref bytes10, "decos");
-		Validate(ref bytes11, "decoMats");
-		Validate(ref bytes12, "dirs");
-		Validate(ref bytes13, "flags");
-		Validate(ref bytes14, "flags2");
-		Validate(ref bytes15, "heights");
-		Validate(ref bytes16, "bridges");
-		Validate(ref bytes17, "bridgeMats");
-		Validate(ref bytes18, "bridgeHeights");
-		Validate(ref bytes19, "bridgePillars");
-		Validate(ref bytes20, "roofBlocks");
-		Validate(ref bytes21, "roofBlockMats");
-		Validate(ref bytes22, "roofBlockDirs");
+		Validate(ref bytes, "objVals");
+		Validate(ref bytes2, "blockMats");
+		Validate(ref bytes3, "blocks");
+		Validate(ref bytes4, "floorMats");
+		Validate(ref bytes5, "floors");
+		Validate(ref bytes6, "objs");
+		Validate(ref bytes7, "objMats");
+		Validate(ref bytes8, "decal");
+		Validate(ref bytes9, "decos");
+		Validate(ref bytes10, "decoMats");
+		Validate(ref bytes11, "dirs");
+		Validate(ref bytes12, "flags");
+		Validate(ref bytes13, "flags2");
+		Validate(ref bytes14, "heights");
+		Validate(ref bytes15, "bridges");
+		Validate(ref bytes16, "bridgeMats");
+		Validate(ref bytes17, "bridgeHeights");
+		Validate(ref bytes18, "bridgePillars");
+		Validate(ref bytes19, "roofBlocks");
+		Validate(ref bytes20, "roofBlockMats");
+		Validate(ref bytes21, "roofBlockDirs");
 		int count = EClass.sources.floors.rows.Count;
 		int count2 = EClass.sources.materials.rows.Count;
 		int num3 = 0;
@@ -635,35 +635,35 @@ public class Map : MapBounds, IPathfindGrid
 				{
 					x = (byte)i,
 					z = (byte)j,
-					objVal = bytes2[num3],
-					_blockMat = bytes3[num3],
-					_block = bytes4[num3],
-					_floorMat = bytes5[num3],
-					_floor = bytes6[num3],
-					obj = bytes7[num3],
-					objMat = bytes8[num3],
-					decal = bytes9[num3],
-					_deco = bytes10[num3],
-					_decoMat = bytes11[num3],
-					_dirs = bytes12[num3],
-					height = bytes15[num3],
-					_bridge = bytes16[num3],
-					_bridgeMat = bytes17[num3],
-					bridgeHeight = bytes18[num3],
-					bridgePillar = bytes19[num3],
-					_roofBlock = bytes20[num3],
-					_roofBlockMat = bytes21[num3],
-					_roofBlockDir = bytes22[num3],
-					isSeen = bytes13[num3].GetBit(1),
-					isHarvested = bytes13[num3].GetBit(2),
-					impassable = bytes13[num3].GetBit(3),
-					isModified = bytes13[num3].GetBit(4),
-					isClearSnow = bytes13[num3].GetBit(5),
-					isForceFloat = bytes13[num3].GetBit(6),
-					isToggleWallPillar = bytes13[num3].GetBit(7),
-					isWatered = bytes14[num3].GetBit(0),
-					isObjDyed = bytes14[num3].GetBit(1),
-					crossWall = bytes14[num3].GetBit(2)
+					objVal = bytes[num3],
+					_blockMat = bytes2[num3],
+					_block = bytes3[num3],
+					_floorMat = bytes4[num3],
+					_floor = bytes5[num3],
+					obj = bytes6[num3],
+					objMat = bytes7[num3],
+					decal = bytes8[num3],
+					_deco = bytes9[num3],
+					_decoMat = bytes10[num3],
+					_dirs = bytes11[num3],
+					height = bytes14[num3],
+					_bridge = bytes15[num3],
+					_bridgeMat = bytes16[num3],
+					bridgeHeight = bytes17[num3],
+					bridgePillar = bytes18[num3],
+					_roofBlock = bytes19[num3],
+					_roofBlockMat = bytes20[num3],
+					_roofBlockDir = bytes21[num3],
+					isSeen = bytes12[num3].GetBit(1),
+					isHarvested = bytes12[num3].GetBit(2),
+					impassable = bytes12[num3].GetBit(3),
+					isModified = bytes12[num3].GetBit(4),
+					isClearSnow = bytes12[num3].GetBit(5),
+					isForceFloat = bytes12[num3].GetBit(6),
+					isToggleWallPillar = bytes12[num3].GetBit(7),
+					isWatered = bytes13[num3].GetBit(0),
+					isObjDyed = bytes13[num3].GetBit(1),
+					crossWall = bytes13[num3].GetBit(2)
 				});
 				if (cell._bridge >= count)
 				{
@@ -702,12 +702,12 @@ public class Map : MapBounds, IPathfindGrid
 		{
 			return TryLoadFile(path, s, size);
 		}
-		void Validate(ref byte[] bytes, string id)
+		void Validate(ref byte[] reference, string id)
 		{
-			if (bytes.Length < size)
+			if (reference.Length < size)
 			{
-				Debug.LogError("expection: size invalid:" + id + " " + bytes.Length + "/" + size);
-				bytes = new byte[size];
+				Debug.LogError("expection: size invalid:" + id + " " + reference.Length + "/" + size);
+				reference = new byte[size];
 			}
 		}
 	}
@@ -1915,8 +1915,8 @@ public class Map : MapBounds, IPathfindGrid
 				}
 				else if (!EClass._zone.IsUserZone)
 				{
-					Thing t2 = TraitSeed.MakeSeed(cell).SetNum(num2);
-					EClass.pc.PickOrDrop(point, t2);
+					Thing t = TraitSeed.MakeSeed(cell).SetNum(num2);
+					EClass.pc.PickOrDrop(point, t);
 				}
 				if (cell.growth.IsTree)
 				{
@@ -1964,17 +1964,17 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		SetObj(point.x, point.z);
 		cell.gatherCount = 0;
-		void Pop(Thing t)
+		void Pop(Thing thing2)
 		{
 			if (!EClass._zone.IsUserZone || !EClass.game.principal.disableUsermapBenefit)
 			{
 				if (EClass.scene.actionMode.IsBuildMode && EClass.debug.godBuild)
 				{
-					EClass._map.PutAway(t);
+					EClass._map.PutAway(thing2);
 				}
 				else
 				{
-					TrySmoothPick(point, t, c);
+					TrySmoothPick(point, thing2, c);
 				}
 			}
 		}
@@ -2733,12 +2733,12 @@ public class Map : MapBounds, IPathfindGrid
 			thing = Find(area2);
 		}
 		return thing;
-		Thing Find(BaseArea area)
+		Thing Find(BaseArea a)
 		{
 			_things.Clear();
 			foreach (Thing thing2 in EClass._map.props.installed.things)
 			{
-				if (type.IsAssignableFrom(thing2.trait.GetType()) && thing2.pos.HasRoomOrArea(area))
+				if (type.IsAssignableFrom(thing2.trait.GetType()) && thing2.pos.HasRoomOrArea(a))
 				{
 					_things.Add(thing2);
 				}

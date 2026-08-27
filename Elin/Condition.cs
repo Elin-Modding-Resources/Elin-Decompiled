@@ -119,7 +119,7 @@ public class Condition : BaseCondition
 			elements.SetParent();
 		}
 		OnRemoved();
-		if (EmoIcon != 0 && owner.emoIcon == EmoIcon)
+		if (EmoIcon != Emo2.none && owner.emoIcon == EmoIcon)
 		{
 			owner.emoIcon = Emo2.none;
 			foreach (Condition condition in owner.conditions)

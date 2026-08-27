@@ -74,7 +74,7 @@ public class LayerEditHouse : ELayer
 		}
 		ELayer.screen.tileMap.usingHouseBoard = true;
 		board = b;
-		ddRoofStyle.SetList(data.idRoofStyle, ELayer.screen.tileMap.roofStyles, (RoofStyle a, int b) => a.GetName(b).lang(), delegate(int a, RoofStyle b)
+		ddRoofStyle.SetList(data.idRoofStyle, ELayer.screen.tileMap.roofStyles, (RoofStyle a, int i) => a.GetName(i).lang(), delegate(int a, RoofStyle roofStyle)
 		{
 			data.idRoofStyle = a;
 			ApplyData();
@@ -105,9 +105,9 @@ public class LayerEditHouse : ELayer
 		{
 			num = 0;
 		}
-		sliderRoof.SetList(num, blocks, delegate(int a, int b)
+		sliderRoof.SetList(num, blocks, delegate(int a, int idRoofTile)
 		{
-			data.idRoofTile = b;
+			data.idRoofTile = idRoofTile;
 			ApplyData();
 		}, (int a) => blocks.IndexOf(a).ToString() ?? "");
 		List<int> ramps = new List<int>();
@@ -123,9 +123,9 @@ public class LayerEditHouse : ELayer
 		{
 			num2 = 0;
 		}
-		sliderRamp.SetList(num2, ramps, delegate(int a, int b)
+		sliderRamp.SetList(num2, ramps, delegate(int a, int idRamp)
 		{
-			data.idRamp = b;
+			data.idRamp = idRamp;
 			ApplyData();
 		}, (int a) => ramps.IndexOf(a).ToString() ?? "");
 		sliderWallHeight.SetSlider(data.height, delegate(float a)

@@ -185,16 +185,16 @@ public class CustomCharaContent : CustomSourceContent
 		foreach (KeyValuePair<string, string> item in mapStr)
 		{
 			item.Deconstruct(out var key, out key2);
-			string id2 = key;
+			string id = key;
 			string value = key2;
-			chara.SetStr(id2, value);
+			chara.SetStr(id, value);
 		}
 		foreach (KeyValuePair<string, int> item2 in mapInt)
 		{
 			item2.Deconstruct(out key2, out var value2);
-			string id3 = key2;
+			string id2 = key2;
 			int value3 = value2;
-			chara.SetInt(id3, value3);
+			chara.SetInt(id2, value3);
 		}
 		if (chara.GetBool("cwl_tags_applied"))
 		{
@@ -226,13 +226,13 @@ public class CustomCharaContent : CustomSourceContent
 				chara.AddThing(item4[0]).SetNum(result2);
 			}
 		}
-		bool HasValidContentId(string id)
+		bool HasValidContentId(string text)
 		{
-			if (EClass.sources.cards.map.ContainsKey(id))
+			if (EClass.sources.cards.map.ContainsKey(text))
 			{
 				return true;
 			}
-			ModUtil.LogModError("source chara row '" + base.ContentId + "' has invalid addEq/addThing spec '" + id + "'", base.Owner);
+			ModUtil.LogModError("source chara row '" + base.ContentId + "' has invalid addEq/addThing spec '" + text + "'", base.Owner);
 			return false;
 		}
 	}
@@ -290,10 +290,10 @@ public class CustomCharaContent : CustomSourceContent
 		Debug.Log("#mod-content skipping existing character '" + base.SourceId + "', " + $"{count} at {string.Join(',', list2.Select((Chara c) => c.currentZone?.ZoneFullName))}");
 		return;
 		IL_01cf:
-		for (int i = 0; i < num; i++)
+		for (int num3 = 0; num3 < num; num3++)
 		{
-			Zone z2 = list[i];
-			Chara chara = SpawnToZone(z2);
+			Zone z = list[num3];
+			Chara chara = SpawnToZone(z);
 			if (chara == null)
 			{
 				ModUtil.LogModError("can't spawn character '" + base.SourceId + "'", base.Owner);
@@ -305,16 +305,16 @@ public class CustomCharaContent : CustomSourceContent
 				break;
 			}
 		}
-		Chara SpawnToZone(Zone z)
+		Chara SpawnToZone(Zone zone2)
 		{
 			Chara chara2 = CharaGen.Create(base.SourceId);
 			if (chara2.id == "chicken")
 			{
 				return null;
 			}
-			chara2.SetHomeZone(z);
-			chara2.MoveZone(z, ZoneTransition.EnterState.RandomVisit);
-			Debug.Log("#mod-content spawned character '" + base.SourceId + "' to " + z.ZoneFullName);
+			chara2.SetHomeZone(zone2);
+			chara2.MoveZone(zone2, ZoneTransition.EnterState.RandomVisit);
+			Debug.Log("#mod-content spawned character '" + base.SourceId + "' to " + zone2.ZoneFullName);
 			return chara2;
 		}
 	}

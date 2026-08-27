@@ -122,7 +122,7 @@ public class PointTarget : EClass
 				target = task;
 				drawHighlight = true;
 			}
-			else if (area != null && EClass.scene.actionMode.AreaHihlight != 0)
+			else if (area != null && EClass.scene.actionMode.AreaHihlight != AreaHighlightMode.None)
 			{
 				target = area;
 			}

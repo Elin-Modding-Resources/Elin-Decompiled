@@ -40,13 +40,13 @@ public class LayerEditPlaylist : ELayer
 					{
 						b.AddSubButton(EClass.core.refs.icons.down, delegate
 						{
-							BGMData select2 = items.Move(a, 1);
-							list.OnMove(a, select2);
+							BGMData bGMData = items.Move(a, 1);
+							list.OnMove(a, bGMData);
 						}, null, null, "down");
 						b.AddSubButton(EClass.core.refs.icons.up, delegate
 						{
-							BGMData select = items.Move(a, -1);
-							list.OnMove(a, select);
+							BGMData bGMData = items.Move(a, -1);
+							list.OnMove(a, bGMData);
 						}, null, null, "up");
 					}
 					b.Build();

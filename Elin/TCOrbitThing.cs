@@ -48,7 +48,7 @@ public class TCOrbitThing : TCOrbit
 		Emo2 emo = Emo2.none;
 		if (owner.IsInstalled)
 		{
-			if (owner.isRestocking && !owner.IsPCParty && owner.trait.GetRestockedIcon() != 0 && !(EMono._zone is Zone_Dungeon))
+			if (owner.isRestocking && !owner.IsPCParty && owner.trait.GetRestockedIcon() != Emo2.none && !(EMono._zone is Zone_Dungeon))
 			{
 				emo = owner.trait.GetRestockedIcon();
 			}

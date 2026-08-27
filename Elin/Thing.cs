@@ -290,7 +290,7 @@ public class Thing : Card
 			SourceElement.Row randomElement = Element.GetRandomElement(genLv);
 			elements.SetBase(randomElement.alias.Replace("ele", "miasma_"), 20);
 		}
-		if ((bp.rarity != 0 || bp.qualityBonus != 0) && base.rarity < Rarity.Artifact && base.category.tag.Contains("enc"))
+		if ((bp.rarity != Rarity.Normal || bp.qualityBonus != 0) && base.rarity < Rarity.Artifact && base.category.tag.Contains("enc"))
 		{
 			int num4 = 0;
 			if (EClass.rnd(6) == 0)
@@ -361,8 +361,8 @@ public class Thing : Card
 		if (remove)
 		{
 			ApplyMaterialElements(remove: true);
-			bool flag2 = (base.isFireproof = false);
-			base.isAcidproof = flag2;
+			bool flag = (base.isFireproof = false);
+			base.isAcidproof = flag;
 			return;
 		}
 		bool pvSet = false;
@@ -507,8 +507,8 @@ public class Thing : Card
 		}
 		if (base.rarity >= Rarity.Artifact)
 		{
-			bool flag2 = (base.isFireproof = true);
-			base.isAcidproof = flag2;
+			bool flag = (base.isFireproof = true);
+			base.isAcidproof = flag;
 		}
 		_colorInt = 0;
 		void SetBase(int ele, int a)
@@ -670,7 +670,7 @@ public class Thing : Card
 			}
 			if (base.IsIdentified)
 			{
-				if (base.blessedState != 0)
+				if (base.blessedState != BlessedState.Normal)
 				{
 					text4 = ("bs" + base.blessedState).lang();
 				}
@@ -862,7 +862,7 @@ public class Thing : Card
 			if (limit && list.Count > 5)
 			{
 				int num = list.Count - 5;
-				for (int i = 0; i < num; i++)
+				for (int num2 = 0; num2 < num; num2++)
 				{
 					list.RemoveAt(list.Count - 1);
 				}
@@ -902,32 +902,32 @@ public class Thing : Card
 		{
 			CheckJustCooked();
 		}
-		string text2 = ((trait is TraitLunchLove) ? "_heart".lang().TagColor(FontColor.Bad) : "");
+		string text = ((trait is TraitLunchLove) ? "_heart".lang().TagColor(FontColor.Bad) : "");
 		n.Clear();
-		string text3 = "";
+		string text2 = "";
 		TraitAbility traitAbility = trait as TraitAbility;
 		bool showEQStats = base.IsEquipmentOrRangedOrAmmo;
 		bool flag = mode == IInspect.NoteMode.Product;
 		bool flag2 = base.IsIdentified || flag;
-		text3 = base.Name;
+		text2 = base.Name;
 		if (base.rarity == Rarity.Legendary || base.rarity == Rarity.Mythical)
 		{
-			string text4 = (text3.Contains("『") ? "『" : (text3.Contains("《") ? "《" : ""));
-			if (text4 != "")
+			string text3 = (text2.Contains("『") ? "『" : (text2.Contains("《") ? "《" : ""));
+			if (text3 != "")
 			{
-				string[] array = text3.Split(text4);
-				text3 = array[0] + Environment.NewLine + text4 + array[1];
+				string[] array = text2.Split(text3);
+				text2 = array[0] + Environment.NewLine + text3 + array[1];
 			}
 		}
 		if (flag)
 		{
 			if (!(trait is TraitPotionAlchemy))
 			{
-				text3 = recipe.GetName();
+				text2 = recipe.GetName();
 			}
 			if (trait.CraftNum > 1)
 			{
-				text3 = text3 + " x " + trait.CraftNum;
+				text2 = text2 + " x " + trait.CraftNum;
 			}
 		}
 		if (mode != IInspect.NoteMode.Recipe)
@@ -938,59 +938,59 @@ public class Thing : Card
 			}
 			else
 			{
-				UIItem uIItem = n.AddHeaderCard(text3);
+				UIItem uIItem = n.AddHeaderCard(text2);
 				SetImage(uIItem.image2);
 				uIItem.image2.Rect().pivot = new Vector2(0.5f, 0.5f);
-				string text5 = base.Num.ToFormat() ?? "";
-				string text6 = (0.01f * (float)base.ChildrenAndSelfWeight * 0.1f).ToString((base.ChildrenAndSelfWeight == 0) ? "F0" : ((base.ChildrenAndSelfWeight >= 1000) ? "F1" : "F2")) + "s";
+				string text4 = base.Num.ToFormat() ?? "";
+				string text5 = (0.01f * (float)base.ChildrenAndSelfWeight * 0.1f).ToString((base.ChildrenAndSelfWeight == 0) ? "F0" : ((base.ChildrenAndSelfWeight >= 1000) ? "F1" : "F2")) + "s";
 				if (things.Count > 0)
 				{
-					text5 = text5 + " (" + things.Count + ")";
+					text4 = text4 + " (" + things.Count + ")";
 				}
 				if (base.ChildrenAndSelfWeight != SelfWeight)
 				{
-					text6 = text6 + " (" + (Mathf.Ceil(0.01f * (float)SelfWeight) * 0.1f).ToString("F1") + "s)";
+					text5 = text5 + " (" + (Mathf.Ceil(0.01f * (float)SelfWeight) * 0.1f).ToString("F1") + "s)";
 				}
-				text3 = "_quantity".lang(text5 ?? "", text6);
+				text2 = "_quantity".lang(text4 ?? "", text5);
 				if (EClass.debug.showExtra)
 				{
-					text3 = text3 + "(" + base.ChildrenAndSelfWeight + ")";
+					text2 = text2 + "(" + base.ChildrenAndSelfWeight + ")";
 				}
 				if (flag && recipe != null && (bool)LayerCraft.Instance)
 				{
-					text3 = text3 + "  " + "_recipe_lv".lang(recipe.RecipeLv.ToString() ?? "");
+					text2 = text2 + "  " + "_recipe_lv".lang(recipe.RecipeLv.ToString() ?? "");
 				}
-				uIItem.text2.SetText(text3);
+				uIItem.text2.SetText(text2);
 				if (showEQStats && flag2)
 				{
-					text3 = "";
+					text2 = "";
 					if (DV != 0 || PV != 0 || base.HIT != 0 || base.DMG != 0 || Penetration != 0)
 					{
 						if (base.DMG != 0)
 						{
-							text3 = text3 + "DMG".lang() + ((base.DMG > 0) ? "+" : "") + base.DMG + ", ";
+							text2 = text2 + "DMG".lang() + ((base.DMG > 0) ? "+" : "") + base.DMG + ", ";
 						}
 						if (base.HIT != 0)
 						{
-							text3 = text3 + "HIT".lang() + ((base.HIT > 0) ? "+" : "") + base.HIT + ", ";
+							text2 = text2 + "HIT".lang() + ((base.HIT > 0) ? "+" : "") + base.HIT + ", ";
 						}
 						if (DV != 0)
 						{
-							text3 = text3 + "DV".lang() + ((DV > 0) ? "+" : "") + DV + ", ";
+							text2 = text2 + "DV".lang() + ((DV > 0) ? "+" : "") + DV + ", ";
 						}
 						if (PV != 0)
 						{
-							text3 = text3 + "PV".lang() + ((PV > 0) ? "+" : "") + PV + ", ";
+							text2 = text2 + "PV".lang() + ((PV > 0) ? "+" : "") + PV + ", ";
 						}
 						if (Penetration != 0)
 						{
-							text3 = text3 + "PEN".lang() + ((Penetration > 0) ? "+" : "") + Penetration + "%, ";
+							text2 = text2 + "PEN".lang() + ((Penetration > 0) ? "+" : "") + Penetration + "%, ";
 						}
-						text3 = text3.TrimEnd(' ').TrimEnd(',');
+						text2 = text2.TrimEnd(' ').TrimEnd(',');
 					}
-					if (!text3.IsEmpty())
+					if (!text2.IsEmpty())
 					{
-						n.AddText("NoteText_eqstats", text3);
+						n.AddText("NoteText_eqstats", text2);
 					}
 					if (trait is TraitToolRange traitToolRange)
 					{
@@ -999,28 +999,28 @@ public class Thing : Card
 				}
 				else
 				{
-					string text7 = "";
+					string text6 = "";
 					if (EClass.debug.showExtra)
 					{
 						int totalQuality = GetTotalQuality();
 						int totalQuality2 = GetTotalQuality(applyBonus: false);
-						text7 = text7 + "Lv. " + base.LV + " TQ. " + GetTotalQuality() + ((totalQuality == totalQuality2) ? "" : (" (" + totalQuality2 + ")"));
+						text6 = text6 + "Lv. " + base.LV + " TQ. " + GetTotalQuality() + ((totalQuality == totalQuality2) ? "" : (" (" + totalQuality2 + ")"));
 					}
 					if (HasElement(10))
 					{
-						text7 = text7 + (text7.IsEmpty() ? "" : "  ") + "_nutrition".lang(Evalue(10).ToFormat() ?? "");
+						text6 = text6 + (text6.IsEmpty() ? "" : "  ") + "_nutrition".lang(Evalue(10).ToFormat() ?? "");
 					}
 					if ((base.category.IsChildOf("throw") || base.category.IsChildOf("resource") || trait.IsTool) && !(trait is TraitAbility))
 					{
-						text7 = text7 + (text7.IsEmpty() ? "" : "  ") + "_hardness".lang(base.material.hardness.ToString() ?? "");
+						text6 = text6 + (text6.IsEmpty() ? "" : "  ") + "_hardness".lang(base.material.hardness.ToString() ?? "");
 					}
 					if (flag && recipe != null && (bool)LayerCraft.Instance)
 					{
-						text7 = text7 + (text7.IsEmpty() ? "" : "  ") + "_max_quality".lang(recipe.GetQualityBonus().ToString() ?? "");
+						text6 = text6 + (text6.IsEmpty() ? "" : "  ") + "_max_quality".lang(recipe.GetQualityBonus().ToString() ?? "");
 					}
-					if (!text7.IsEmpty())
+					if (!text6.IsEmpty())
 					{
-						n.AddText("NoteText_eqstats", text7);
+						n.AddText("NoteText_eqstats", text6);
 					}
 				}
 			}
@@ -1097,9 +1097,9 @@ public class Thing : Card
 		}
 		if (trait.Decay > 0)
 		{
-			string text8 = "";
-			text8 = (base.IsDecayed ? "isRotten" : (base.IsRotting ? "isRotting" : ((!base.IsFresn) ? "isNotFresh" : "isFresh")));
-			AddText(text8.lang(), FontColor.Default);
+			string text7 = "";
+			text7 = (base.IsDecayed ? "isRotten" : (base.IsRotting ? "isRotting" : ((!base.IsFresn) ? "isNotFresh" : "isFresh")));
+			AddText(text7.lang(), FontColor.Default);
 		}
 		if (base.isDyed)
 		{
@@ -1107,8 +1107,8 @@ public class Thing : Card
 		}
 		if (base.IsEquipment)
 		{
-			text3 = "isEquipable".lang(Element.Get(base.category.slot).GetText());
-			AddText(text3, FontColor.Default);
+			text2 = "isEquipable".lang(Element.Get(base.category.slot).GetText());
+			AddText(text2, FontColor.Default);
 		}
 		if (base.isFireproof)
 		{
@@ -1196,42 +1196,42 @@ public class Thing : Card
 		{
 			AddText("isDangerLv".lang((GetInt(25) + 1).ToString() ?? "", (EClass.pc.FameLv + 10).ToString() ?? ""), FontColor.Default);
 		}
-		FontColor col2 = FontColor.Util;
+		FontColor col = FontColor.Util;
 		if (trait is TraitToolCrowbar)
 		{
-			AddText("canPryOpen", col2);
+			AddText("canPryOpen", col);
 		}
 		else if (trait is TraitTool && !(trait is TraitToolRange))
 		{
 			if (HasElement(220))
 			{
-				AddText("canMine".lang(), col2);
+				AddText("canMine".lang(), col);
 			}
 			if (HasElement(225))
 			{
-				AddText("canLumberjack".lang(), col2);
-				AddText("canLumberjack2".lang(), col2);
+				AddText("canLumberjack".lang(), col);
+				AddText("canLumberjack2".lang(), col);
 			}
 			if (HasElement(230))
 			{
-				AddText("canDig", col2);
+				AddText("canDig", col);
 			}
 			if (HasElement(286))
 			{
-				AddText("canFarm", col2);
+				AddText("canFarm", col);
 			}
 			if (HasElement(245))
 			{
-				AddText("canFish", col2);
+				AddText("canFish", col);
 			}
 			if (HasElement(237))
 			{
-				AddText("canTame", col2);
+				AddText("canTame", col);
 			}
 		}
 		if (trait is TraitToolMusic)
 		{
-			AddText("canPlayMusic".lang(), col2);
+			AddText("canPlayMusic".lang(), col);
 		}
 		if (Lang.Has("hint_" + trait.ToString()))
 		{
@@ -1340,18 +1340,18 @@ public class Thing : Card
 				{
 					return s;
 				}
-				int num3 = e.Value;
+				int num = e.Value;
 				if (e.source.IsWeaponEnc && (!e.source.tag.Contains("modRanged") || e.id == 609) && isEquipped && root.isChara)
 				{
-					int num4 = e.id;
-					if (num4 != 482 && (uint)(num4 - 660) > 2u && num4 != 666)
+					int num2 = e.id;
+					if (num2 != 482 && (uint)(num2 - 660) > 2u && num2 != 666)
 					{
-						num3 = num3 * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara, this)) / 100;
+						num = num * (100 + AttackProcess.GetTwoHandEncBonus(root.Chara, this)) / 100;
 					}
 				}
-				string text13 = " (" + e.Value + ((e.Value == num3) ? "" : (" → " + num3)) + ")";
-				string text14 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
-				return s + text13 + " " + text14;
+				string text9 = " (" + e.Value + ((e.Value == num) ? "" : (" → " + num)) + ")";
+				string text10 = "_bracketLeft３".lang() + e.Name + "_bracketRight３".lang();
+				return s + text9 + " " + text10;
 			});
 			if (sockets != null)
 			{
@@ -1377,9 +1377,9 @@ public class Thing : Card
 			if (base.c_mixedFoodData != null)
 			{
 				n.AddHeader("isMixedFood");
-				foreach (string text15 in base.c_mixedFoodData.texts)
+				foreach (string text12 in base.c_mixedFoodData.texts)
 				{
-					AddText("_bullet".lang() + text15 + text2, FontColor.Default);
+					AddText("_bullet".lang() + text12 + text, FontColor.Default);
 				}
 			}
 		}
@@ -1431,9 +1431,9 @@ public class Thing : Card
 			{
 				n.AddHeader("headerAttackEval");
 				AttackProcess.Current.Prepare(chara2 ?? EClass.pc, this, null, null, 0, base.IsThrownWeapon);
-				string text9 = AttackProcess.Current.GetText();
-				text9 = text9.TagColor(() => true);
-				n.AddText(text9);
+				string text8 = AttackProcess.Current.GetText();
+				text8 = text8.TagColor(() => true);
+				n.AddText(text8);
 			}
 		}
 		if (base.ammoData != null)
@@ -1458,28 +1458,28 @@ public class Thing : Card
 			}
 		}
 		n.Build();
-		void AddText(string text, FontColor col)
+		void AddText(string text9, FontColor color)
 		{
-			n.AddText("NoteText_enc", text, col);
+			n.AddText("NoteText_enc", text9, color);
 		}
-		void AddTextWithIcon(string text, Sprite sprite, FontColor col)
+		void AddTextWithIcon(string text9, Sprite sprite, FontColor color)
 		{
-			UIItem uIItem2 = n.AddText("NoteText_enc", text, col);
+			UIItem uIItem2 = n.AddText("NoteText_enc", text9, color);
 			uIItem2.image1.SetActive(enable: true);
 			uIItem2.image1.sprite = sprite;
 		}
 		string GetTextTrait(Element e)
 		{
-			string text10 = e.source.GetText("textExtra");
-			if (text10.IsEmpty())
+			string text9 = e.source.GetText("textExtra");
+			if (text9.IsEmpty())
 			{
 				return "";
 			}
 			if (e.id == 710)
 			{
-				text10 = text10.Replace("#1", $"{0.1f * (float)(e.Value + 10):F1}");
+				text9 = text9.Replace("#1", $"{0.1f * (float)(e.Value + 10):F1}");
 			}
-			string text11 = "";
+			string text10 = "";
 			if (e.id == 2 && mode == IInspect.NoteMode.Product)
 			{
 				int num = recipe.GetQualityBonus() / 10;
@@ -1487,21 +1487,21 @@ public class Thing : Card
 				{
 					num++;
 				}
-				text11 = "qualityLimit".lang(num.ToString() ?? "");
+				text10 = "qualityLimit".lang(num.ToString() ?? "");
 			}
 			int num2 = e.Value / 10;
 			num2 = ((e.Value < 0) ? (num2 - 1) : (num2 + 1));
-			string text12 = num2.ToString() ?? "";
+			string text11 = num2.ToString() ?? "";
 			if (EClass.pc.HasElement(1250) && HasElement(710) && e.IsFoodTrait && e.id != 710)
 			{
-				text12 = (int)((float)num2 * 0.1f * (float)(Evalue(710) + 10)) + " (" + num2 + ")";
+				text11 = (int)((float)num2 * 0.1f * (float)(Evalue(710) + 10)) + " (" + num2 + ")";
 			}
-			text10 = "Lv." + text12 + text11 + " " + text10;
+			text9 = "Lv." + text11 + text10 + " " + text9;
 			if (infoMode && e.IsFoodTraitMain)
 			{
-				text10 += "traitAdditive".lang();
+				text9 += "traitAdditive".lang();
 			}
-			return (" <size=12>" + text10 + "</size>").TagColor(FontColor.Passive);
+			return (" <size=12>" + text9 + "</size>").TagColor(FontColor.Passive);
 		}
 	}
 
@@ -1792,8 +1792,8 @@ public class Thing : Card
 					_ = 770;
 				}
 			}
-			int num2 = (to.encLV = Mathf.CeilToInt(MathEx.ClampToInt(((long)base.encLV * (long)base.Num + (long)to.encLV * (long)to.Num) / ((long)base.Num + (long)to.Num))));
-			base.encLV = num2;
+			int num = (to.encLV = Mathf.CeilToInt(MathEx.ClampToInt(((long)base.encLV * (long)base.Num + (long)to.encLV * (long)to.Num) / ((long)base.Num + (long)to.Num))));
+			base.encLV = num;
 			foreach (Element value2 in elements.dict.Values)
 			{
 				Element element2 = to.elements.GetElement(value2.id);
@@ -1864,11 +1864,11 @@ public class Thing : Card
 	public void ShowSplitMenu(ButtonGrid button, InvOwner.Transaction trans = null)
 	{
 		int count = 1;
-		UIContextMenu i = EClass.ui.CreateContextMenuInteraction();
+		UIContextMenu m = EClass.ui.CreateContextMenuInteraction();
 		bool buy = trans != null;
 		UIButton buttonBuy = null;
 		UIItem itemSlider = null;
-		itemSlider = i.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
+		itemSlider = m.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
 		{
 			count = (int)b;
 			if (trans != null)
@@ -1879,19 +1879,19 @@ public class Thing : Card
 		}, 1f, base.Num, isInt: true, hideOther: false, useInput: true).GetComponent<UIItem>();
 		if (buy)
 		{
-			buttonBuy = i.AddButton("invBuy", delegate
+			buttonBuy = m.AddButton("invBuy", delegate
 			{
 				Process();
 			});
 		}
-		i.onDestroy = delegate
+		m.onDestroy = delegate
 		{
-			if ((!buy || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !i.wasCanceled)
+			if ((!buy || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !m.wasCanceled)
 			{
 				Process();
 			}
 		};
-		i.Show();
+		m.Show();
 		if ((bool)buttonBuy)
 		{
 			buttonBuy.gameObject.AddComponent<CanvasGroup>();
@@ -1951,26 +1951,26 @@ public class Thing : Card
 	public void ShowSplitMenu2(ButtonGrid button, string lang, Action<int> onSplit = null)
 	{
 		int count = 1;
-		UIContextMenu i = EClass.ui.CreateContextMenuInteraction();
+		UIContextMenu m = EClass.ui.CreateContextMenuInteraction();
 		UIButton buttonBuy = null;
 		UIItem itemSlider = null;
-		itemSlider = i.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
+		itemSlider = m.AddSlider("sliderSplitMenu", "adjustmentNum", (float a) => (!EClass.core.IsGameStarted) ? "" : ("/" + base.Num), count, delegate(float b)
 		{
 			count = (int)b;
 			UpdateButton();
 		}, 1f, base.Num, isInt: true, hideOther: false, useInput: true).GetComponent<UIItem>();
-		buttonBuy = i.AddButton("invBuy", delegate
+		buttonBuy = m.AddButton("invBuy", delegate
 		{
 			Process();
 		});
-		i.onDestroy = delegate
+		m.onDestroy = delegate
 		{
-			if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !i.wasCanceled)
+			if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !m.wasCanceled)
 			{
 				Process();
 			}
 		};
-		i.Show();
+		m.Show();
 		if ((bool)buttonBuy)
 		{
 			buttonBuy.gameObject.AddComponent<CanvasGroup>();
@@ -2153,7 +2153,7 @@ public class Thing : Card
 			IDTSource.Skill => Rarity.Superior, 
 			_ => Rarity.Normal, 
 		};
-		if (rarity != 0 && ((base.IsEquipmentOrRangedOrAmmo && base.rarity >= rarity) || base.rarity >= Rarity.Mythical))
+		if (rarity != Rarity.Normal && ((base.IsEquipmentOrRangedOrAmmo && base.rarity >= rarity) || base.rarity >= Rarity.Mythical))
 		{
 			base.c_IDTState = 3;
 		}

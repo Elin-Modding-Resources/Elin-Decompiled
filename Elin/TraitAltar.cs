@@ -220,7 +220,7 @@ public class TraitAltar : Trait
 
 	public void _OnOffer(Chara c, Thing t, int takeoverMod = 0)
 	{
-		bool @bool = t.GetBool(115);
+		bool flag = t.GetBool(115);
 		int offeringValue = Deity.GetOfferingValue(t, t.Num);
 		offeringValue = offeringValue * (EClass.debug.enable ? 1000 : (c.HasElement(1228) ? 130 : 100)) / 100;
 		if (takeoverMod == 0)
@@ -278,7 +278,7 @@ public class TraitAltar : Trait
 		{
 			c.faith.Talk("like");
 		}
-		if (@bool && c.IsPC)
+		if (flag && c.IsPC)
 		{
 			EClass.player.ModKarma(-1);
 		}

@@ -28,10 +28,10 @@ public class TerrainMenu : EMono
 		{
 			am.OnClickSubMenu(a);
 		});
-		for (int i = 0; i < group.list.Count; i++)
+		for (int num = 0; num < group.list.Count; num++)
 		{
-			UIButton uIButton = group.list[i];
-			string text = am.OnSetSubMenuButton(i, uIButton);
+			UIButton uIButton = group.list[num];
+			string text = am.OnSetSubMenuButton(num, uIButton);
 			uIButton.SetActive(text != null);
 			if (text != null)
 			{

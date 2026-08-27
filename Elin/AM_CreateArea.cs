@@ -29,7 +29,7 @@ public class AM_CreateArea : AM_BaseTileSelect
 	public override HitResult HitTest(Point point, Point start)
 	{
 		HitResult hitResult = EClass._map.rooms.GetHitResult(point, start);
-		if (hitResult != 0)
+		if (hitResult != HitResult.Default)
 		{
 			return hitResult;
 		}

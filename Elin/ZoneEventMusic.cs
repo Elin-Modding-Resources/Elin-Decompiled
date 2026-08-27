@@ -30,26 +30,26 @@ public class ZoneEventMusic : ZoneEventQuest
 		{
 			genBounds.TryAddMapPiece(MapPiece.Type.Concert, 0f, "", delegate(PartialMap p, GenBounds b)
 			{
-				int num = 1 + i * 3;
-				if (num > maxLv)
+				int num2 = 1 + i * 3;
+				if (num2 > maxLv)
 				{
-					num = EClass.rnd(maxLv);
+					num2 = EClass.rnd(maxLv);
 				}
 				List<Point> list = b.ListEmptyPoint();
-				for (int k = 0; k < EClass.rndHalf(list.Count); k++)
+				for (int j = 0; j < EClass.rndHalf(list.Count); j++)
 				{
 					if (list.Count == 0)
 					{
 						break;
 					}
 					Point point = list.RandomItem();
-					Chara c4 = CharaGen.CreateFromFilter("c_neutral", num, 5);
-					Spawn(c4, point);
+					Chara c3 = CharaGen.CreateFromFilter("c_neutral", num2, 5);
+					Spawn(c3, point);
 					list.Remove(point);
 				}
 			});
 		}
-		foreach (SourceChara.Row item in EClass.sources.charas.rows.Where((SourceChara.Row c) => c.tag.Contains("party")))
+		foreach (SourceChara.Row item in EClass.sources.charas.rows.Where((SourceChara.Row row) => row.tag.Contains("party")))
 		{
 			if (item.LV >= maxLv * 2)
 			{
@@ -70,17 +70,17 @@ public class ZoneEventMusic : ZoneEventQuest
 			}
 			if (flag)
 			{
-				Chara c2 = CharaGen.Create(item.id);
-				Spawn(c2, randomPoint);
+				Chara c = CharaGen.Create(item.id);
+				Spawn(c, randomPoint);
 			}
 		}
-		for (int j = 0; j < 50; j++)
+		for (int num = 0; num < 50; num++)
 		{
 			Point randomPoint2 = EClass._map.bounds.GetRandomPoint();
 			if (!randomPoint2.HasChara && !randomPoint2.HasBlock)
 			{
-				Chara c3 = CharaGen.CreateFromFilter("c_neutral", maxLv / 2);
-				Spawn(c3, randomPoint2);
+				Chara c2 = CharaGen.CreateFromFilter("c_neutral", maxLv / 2);
+				Spawn(c2, randomPoint2);
 			}
 		}
 		foreach (Thing thing in EClass._map.things)

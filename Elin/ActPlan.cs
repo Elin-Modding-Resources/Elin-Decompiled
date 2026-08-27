@@ -492,7 +492,7 @@ public class ActPlan : EClass
 		bool isKey = input == ActInput.Key;
 		altAction = (EInput.isShiftDown && !EInput.isAltDown && !isKey) || input == ActInput.AllAction;
 		_canInteractNeighbor = dist == 0 || (dist == 1 && cc.CanInteractTo(_pos));
-		if (EClass.pc.isBlind && !_pos.Equals(EClass.pc.pos) && !isKey && input != 0)
+		if (EClass.pc.isBlind && !_pos.Equals(EClass.pc.pos) && !isKey && input != ActInput.LeftMouse)
 		{
 			return;
 		}
@@ -528,92 +528,92 @@ public class ActPlan : EClass
 			}
 			items.ForeachReverse(delegate(Card _c)
 			{
-				Chara c2 = _c.Chara;
-				if (c2 != null && !c2.IsPC && EClass.pc.CanSee(c2))
+				Chara c = _c.Chara;
+				if (c != null && !c.IsPC && EClass.pc.CanSee(c))
 				{
-					int num = c2.Dist(EClass.pc);
+					int num = c.Dist(EClass.pc);
 					if (num <= 1 || !EClass.pc.isBlind)
 					{
-						if (c2.mimicry != null && c2.mimicry.IsThing && !c2.IsPCParty)
+						if (c.mimicry != null && c.mimicry.IsThing && !c.IsPCParty)
 						{
 							if (num <= 1)
 							{
-								c2.mimicry.TrySetAct(this);
+								c.mimicry.TrySetAct(this);
 							}
 						}
 						else
 						{
-							if (!EClass.pc.isBlind && !c2.IsHostile() && (input == ActInput.AllAction || !(c2.IsPCParty || c2.IsMinion || isKey)) && (input == ActInput.AllAction || !c2.IsNeutral() || c2.quest != null || EClass.game.quests.IsDeliverTarget(c2)) && c2.isSynced && num <= 2)
+							if (!EClass.pc.isBlind && !c.IsHostile() && (input == ActInput.AllAction || !(c.IsPCParty || c.IsMinion || isKey)) && (input == ActInput.AllAction || !c.IsNeutral() || c.quest != null || EClass.game.quests.IsDeliverTarget(c)) && c.isSynced && num <= 2)
 							{
-								bool flag5 = !c2.HasCondition<ConSuspend>() && (!c2.isRestrained || !c2.IsPCFaction);
-								if (EClass._zone.instance is ZoneInstanceMusic && !c2.IsPCFactionOrMinion)
+								bool flag3 = !c.HasCondition<ConSuspend>() && (!c.isRestrained || !c.IsPCFaction);
+								if (EClass._zone.instance is ZoneInstanceMusic && !c.IsPCFactionOrMinion)
 								{
-									flag5 = false;
+									flag3 = false;
 								}
-								if (flag5 || altAction)
+								if (flag3 || altAction)
 								{
-									if (EClass.pc.HasElement(1216) && c2.HasCondition<ConSleep>())
+									if (EClass.pc.HasElement(1216) && c.HasCondition<ConSleep>())
 									{
 										TrySetAct(new AI_Fuck
 										{
-											target = c2,
+											target = c,
 											variation = AI_Fuck.Variation.Succubus
-										}, c2);
+										}, c);
 									}
-									TrySetAct(ACT.Chat, c2);
+									TrySetAct(ACT.Chat, c);
 								}
 							}
-							if (!c2.IsPC && num <= 2 && ((c2.IsPCFaction && !c2.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
+							if (!c.IsPC && num <= 2 && ((c.IsPCFaction && !c.IsDisabled) || EClass.debug.enable) && input == ActInput.AllAction)
 							{
 								TrySetAct("actTrade", delegate
 								{
-									LayerInventory.CreateContainer(c2);
+									LayerInventory.CreateContainer(c);
 									return false;
-								}, c2, null, 2);
+								}, c, null, 2);
 							}
-							if (c2.host != EClass.pc)
+							if (c.host != EClass.pc)
 							{
-								TraitShackle traitShackle = c2.pos.FindThing<TraitShackle>();
-								if (c2.IsRestrainedResident)
+								TraitShackle traitShackle = c.pos.FindThing<TraitShackle>();
+								if (c.IsRestrainedResident)
 								{
 									if (traitShackle != null && traitShackle.AllowTraining)
 									{
 										TrySetAct(new AI_PracticeDummy
 										{
-											target = c2
+											target = c
 										});
 									}
 								}
-								else if ((c2.IsHostile() || altAction || c2.isRestrained) && c2.IsAliveInCurrentZone)
+								else if ((c.IsHostile() || altAction || c.isRestrained) && c.IsAliveInCurrentZone)
 								{
-									TrySetAct(ACT.Melee, c2);
+									TrySetAct(ACT.Melee, c);
 								}
 							}
-							if (c2.IsPCPartyMinion && !c2.Chara.IsEscorted() && altAction)
+							if (c.IsPCPartyMinion && !c.Chara.IsEscorted() && altAction)
 							{
 								TrySetAct("ActBanishSummon", delegate
 								{
-									c2.Banish(EClass.pc);
+									c.Banish(EClass.pc);
 									return true;
-								}, c2, null, 99);
-								List<Chara> list2 = new List<Chara>();
+								}, c, null, 99);
+								List<Chara> list = new List<Chara>();
 								foreach (Chara chara in EClass._map.charas)
 								{
 									if (chara.IsPCFactionMinion && !chara.IsEscorted())
 									{
-										list2.Add(chara);
+										list.Add(chara);
 									}
 								}
-								if (list2.Count > 1)
+								if (list.Count > 1)
 								{
 									TrySetAct("ActBanishSummonAll", delegate
 									{
-										foreach (Chara item in list2)
+										foreach (Chara item in list)
 										{
 											item.Banish(EClass.pc);
 										}
 										return true;
-									}, c2, null, 99);
+									}, c, null, 99);
 								}
 							}
 						}
@@ -758,7 +758,7 @@ public class ActPlan : EClass
 									TrySetAct("actSetLight", delegate
 									{
 										Color lightColor = t.LightColor;
-										EClass.ui.AddLayer<LayerColorPicker>().SetColor(lightColor, lightColor, delegate(PickerState state, Color _c)
+										EClass.ui.AddLayer<LayerColorPicker>().SetColor(lightColor, lightColor, delegate(PickerState state, Color color)
 										{
 											if (state == PickerState.Cancel)
 											{
@@ -766,7 +766,7 @@ public class ActPlan : EClass
 											}
 											else
 											{
-												t.c_lightColor = (byte)Mathf.Clamp(_c.r * 32f, 1f, 31f) * 1024 + (byte)Mathf.Clamp(_c.g * 32f, 1f, 31f) * 32 + (byte)Mathf.Clamp(_c.b * 32f, 1f, 31f);
+												t.c_lightColor = (byte)Mathf.Clamp(color.r * 32f, 1f, 31f) * 1024 + (byte)Mathf.Clamp(color.g * 32f, 1f, 31f) * 32 + (byte)Mathf.Clamp(color.b * 32f, 1f, 31f);
 											}
 											t.RecalculateFOV();
 											t.renderer.GetTC<TCExtra>()?.RefreshColor();

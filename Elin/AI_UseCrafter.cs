@@ -27,7 +27,7 @@ public class AI_UseCrafter : AIAct
 
 	public override void OnStart()
 	{
-		if (crafter.Icon != 0)
+		if (crafter.Icon != Emo.none)
 		{
 			owner.ShowEmo(crafter.Icon);
 		}
@@ -86,12 +86,12 @@ public class AI_UseCrafter : AIAct
 			}
 			List<Thing> targets = layer.GetTargets();
 			BlessedState blessed = BlessedState.Normal;
-			for (int j = 0; j < targets.Count; j++)
+			for (int i = 0; i < targets.Count; i++)
 			{
-				Thing t2 = targets[j];
-				if (!IsIngValid(t2, j))
+				Thing t = targets[i];
+				if (!IsIngValid(t, i))
 				{
-					if (j == 0)
+					if (i == 0)
 					{
 						layer.ClearButtons();
 					}
@@ -109,9 +109,9 @@ public class AI_UseCrafter : AIAct
 				yield return Success();
 			}
 			ings = new List<Thing>();
-			for (int k = 0; k < targets.Count; k++)
+			for (int j = 0; j < targets.Count; j++)
 			{
-				Thing thing = targets[k].Split(layer.GetReqIngredient(k));
+				Thing thing = targets[j].Split(layer.GetReqIngredient(j));
 				ings.Add(thing);
 				if (thing.blessedState <= BlessedState.Cursed && blessed > thing.blessedState)
 				{
@@ -160,9 +160,9 @@ public class AI_UseCrafter : AIAct
 					if ((bool)LayerDragGrid.Instance)
 					{
 						InvOwnerDraglet invOwnerDraglet = LayerDragGrid.Instance.owner;
-						for (int num = 0; num < invOwnerDraglet.numDragGrid; num++)
+						for (int k = 0; k < invOwnerDraglet.numDragGrid; k++)
 						{
-							if (invOwnerDraglet.buttons[num].Card == null)
+							if (invOwnerDraglet.buttons[k].Card == null)
 							{
 								return false;
 							}
@@ -211,14 +211,14 @@ public class AI_UseCrafter : AIAct
 					Element orCreateElement = owner.elements.GetOrCreateElement(crafter.IDReqEle(recipe?.source ?? null));
 					if (recipe != null)
 					{
-						for (int l = 0; l < num; l++)
+						for (int k = 0; k < num; k++)
 						{
-							recipe.Craft(blessed, l == 0, ings, crafter);
+							recipe.Craft(blessed, k == 0, ings, crafter);
 						}
 						EClass.Sound.Play("craft");
-						Point from = (crafter.owner.ExistsOnMap ? crafter.owner.pos : owner.pos);
-						Effect.Get("smoke").Play(from);
-						Effect.Get("mine").Play(from).SetParticleColor(recipe.GetColorMaterial().GetColor())
+						Point point = (crafter.owner.ExistsOnMap ? crafter.owner.pos : owner.pos);
+						Effect.Get("smoke").Play(point);
+						Effect.Get("mine").Play(point).SetParticleColor(recipe.GetColorMaterial().GetColor())
 							.Emit(10 + EClass.rnd(10));
 						owner.renderer.PlayAnime(AnimeID.JumpSmall);
 						recipe.TryGetFirstTimeBonus();
@@ -238,11 +238,11 @@ public class AI_UseCrafter : AIAct
 							owner.Pick(thing2);
 						}
 					}
-					for (int m = 0; m < ings.Count; m++)
+					for (int l = 0; l < ings.Count; l++)
 					{
-						if (crafter.ShouldConsumeIng(crafter.GetSource(this), m))
+						if (crafter.ShouldConsumeIng(crafter.GetSource(this), l))
 						{
-							ings[m].Destroy();
+							ings[l].Destroy();
 						}
 					}
 					foreach (Thing ing3 in ings)
@@ -261,7 +261,7 @@ public class AI_UseCrafter : AIAct
 							crafter.Toggle(on: false);
 						}
 					}
-					for (int n = 0; n < num; n++)
+					for (int m = 0; m < num; m++)
 					{
 						owner.RemoveCondition<ConInvulnerable>();
 						EClass.player.invlunerable = false;
@@ -304,18 +304,18 @@ public class AI_UseCrafter : AIAct
 			}
 		}
 		while ((bool)layer && layer.RepeatAI);
-		bool IsIngValid(Thing t, int i)
+		bool IsIngValid(Thing thing2, int idx)
 		{
-			if (t == null || t.isDestroyed)
+			if (thing2 == null || thing2.isDestroyed)
 			{
 				return false;
 			}
-			Card rootCard = t.GetRootCard();
+			Card rootCard = thing2.GetRootCard();
 			if (rootCard != null && rootCard.isChara && !rootCard.IsPCFaction)
 			{
 				return false;
 			}
-			if (!crafter.IsFactory && !crafter.IsCraftIngredient(t, i))
+			if (!crafter.IsFactory && !crafter.IsCraftIngredient(thing2, idx))
 			{
 				return false;
 			}

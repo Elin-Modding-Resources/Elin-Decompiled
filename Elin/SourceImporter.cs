@@ -130,9 +130,9 @@ public class SourceImporter : EClass
 			{
 				if (sourceCache.TryGetCache(text, out var rows))
 				{
-					int num = elements.ImportRows(rows);
+					int num3 = elements.ImportRows(rows);
 					value?.sourceRows.UnionWith(rows);
-					Debug.Log($"#source workbook-cache {arg}:{text}:{num}");
+					Debug.Log($"#source workbook-cache {arg}:{text}:{num3}");
 				}
 			}
 		}
@@ -175,8 +175,8 @@ public class SourceImporter : EClass
 						var (sourceData, array4) = LoadBySheetName(sheet2, value3.Item1);
 						if ((object)sourceData != null)
 						{
-							int? num2 = array4?.Length;
-							if (num2.HasValue && num2.GetValueOrDefault() > 0)
+							int? num4 = array4?.Length;
+							if (num4.HasValue && num4.GetValueOrDefault() > 0)
 							{
 								sourceCache2.EmplaceCache(sheet2.SheetName, array4);
 								sourceCache2.Mod?.sourceRows.UnionWith(array4);
@@ -213,9 +213,9 @@ public class SourceImporter : EClass
 					Debug.Log("#source cached rows are empty " + text2 + ":" + text3);
 					continue;
 				}
-				int num3 = sourceData2.ImportRows(array5);
+				int num5 = sourceData2.ImportRows(array5);
 				sourceCache2.Mod?.sourceRows.UnionWith(array5);
-				Debug.Log($"#source workbook-cache {text2}:{text3}:{num3}");
+				Debug.Log($"#source workbook-cache {text2}:{text3}:{num5}");
 				hashSet.Add(sourceData2);
 			}
 		}

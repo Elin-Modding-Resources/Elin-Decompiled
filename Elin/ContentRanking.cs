@@ -44,14 +44,14 @@ public class ContentRanking : EContent
 			}
 		}
 		list.Refresh();
-		for (int i = 0; i < list.buttons.Count; i++)
+		for (int num = 0; num < list.buttons.Count; num++)
 		{
-			ButtonChara buttonChara = list.buttons[i].component as ButtonChara;
-			buttonChara.item.text3.text = "rank".lang((i + 1).ToString() ?? "");
-			buttonChara.item.image1.SetActive(i < 3);
-			if (i < 3)
+			ButtonChara buttonChara = list.buttons[num].component as ButtonChara;
+			buttonChara.item.text3.text = "rank".lang((num + 1).ToString() ?? "");
+			buttonChara.item.image1.SetActive(num < 3);
+			if (num < 3)
 			{
-				buttonChara.item.image1.sprite = spriteTrophies[i];
+				buttonChara.item.image1.sprite = spriteTrophies[num];
 			}
 		}
 		comingSoon.SetActive(id != "contribution");

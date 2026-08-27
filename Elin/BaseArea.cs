@@ -236,15 +236,15 @@ public class BaseArea : EClass, IInspect
 				text = "limitRoomHeight",
 				action = delegate
 				{
-					List<string> list2 = new List<string>();
+					List<string> list = new List<string>();
 					EClass.ui.AddLayer<LayerList>().SetStringList(delegate
 					{
-						list2.Clear();
-						for (int j = 1; j < 10; j++)
+						list.Clear();
+						for (int i = 1; i < 10; i++)
 						{
-							list2.Add(j.ToString() ?? "");
+							list.Add(i.ToString() ?? "");
 						}
-						return list2;
+						return list;
 					}, delegate(int a, string b)
 					{
 						data.maxHeight = a + 1;

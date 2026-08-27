@@ -12,13 +12,13 @@ public class TraitStoryBookHome : TraitScroll
 		{
 			EClass.ui.GetLayer<LayerList>().SetActive(enable: false);
 			LayerDrama.fromBook = true;
-			string text3 = a.drama[0];
+			string text = a.drama[0];
 			string idStep = "quest_" + a.id;
 			if (a.id == "pre_debt_runaway")
 			{
 				idStep = "loytelEscaped";
 			}
-			LayerDrama.Activate(text3, text3, idStep, GetChara(text3)).SetOnKill(delegate
+			LayerDrama.Activate(text, text, idStep, GetChara(text)).SetOnKill(delegate
 			{
 				EClass.ui.GetLayer<LayerList>().SetActive(enable: true);
 			});
@@ -63,18 +63,18 @@ public class TraitStoryBookHome : TraitScroll
 			{
 				return false;
 			}
-			string text2 = Regex.Replace(r.id, "([0-9]*$)", "");
-			if (EClass.game.quests.completedIDs.Contains(r.id) || EClass.game.quests.completedIDs.Contains(text2))
+			string text = Regex.Replace(r.id, "([0-9]*$)", "");
+			if (EClass.game.quests.completedIDs.Contains(r.id) || EClass.game.quests.completedIDs.Contains(text))
 			{
 				return true;
 			}
-			string str2 = r.id.Replace(text2, "");
+			string str = r.id.Replace(text, "");
 			int num = 0;
-			if (!str2.IsEmpty())
+			if (!str.IsEmpty())
 			{
-				num = str2.ToInt();
+				num = str.ToInt();
 			}
-			Quest quest = EClass.game.quests.Get(text2);
+			Quest quest = EClass.game.quests.Get(text);
 			if (quest != null && num <= quest.phase)
 			{
 				return true;

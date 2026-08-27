@@ -38,13 +38,13 @@ public class TraitGeneratorWheel : TraitGenerator
 					l.Add(member);
 				}
 			}
-		}, delegate(Chara c)
+		}, delegate(Chara chara)
 		{
-			c.Teleport(owner.pos, silent: false, force: true);
-			c.RemoveCondition<ConSleep>();
-			c.noMove = true;
-			c.orgPos = new Point(owner.pos);
-			c.PlaySound("ride");
+			chara.Teleport(owner.pos, silent: false, force: true);
+			chara.RemoveCondition<ConSleep>();
+			chara.noMove = true;
+			chara.orgPos = new Point(owner.pos);
+			chara.PlaySound("ride");
 		});
 		return true;
 	}

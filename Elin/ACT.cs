@@ -433,11 +433,11 @@ public class Act : Element
 			}
 			else
 			{
-				c.ForeachPoint(delegate(Point p, bool main)
+				c.ForeachPoint(delegate(Point p2, bool main)
 				{
 					if (!distCheck)
 					{
-						distCheck = DistCheck(p1, p);
+						distCheck = DistCheck(p1, p2);
 					}
 				});
 			}

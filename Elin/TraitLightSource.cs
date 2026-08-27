@@ -12,9 +12,9 @@ public class TraitLightSource : TraitTorch
 		list.Add("customBrightness", 300, delegate
 		{
 			UIContextMenu uIContextMenu = EClass.ui.CreateContextMenuInteraction();
-			uIContextMenu.AddSlider("brightness", (float a) => a.ToString() ?? "", EClass.player.customLightMod, delegate(float b)
+			uIContextMenu.AddSlider("brightness", (float a) => a.ToString() ?? "", EClass.player.customLightMod, delegate(float num)
 			{
-				EClass.player.customLightMod = (int)b;
+				EClass.player.customLightMod = (int)num;
 				EClass.pc.RecalculateFOV();
 			}, 1f, 6f, isInt: true, hideOther: false);
 			uIContextMenu.Show();

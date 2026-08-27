@@ -265,12 +265,12 @@ public class WindowChara : WindowController
 		textHealth.text = chara.hp + "/" + chara.MaxHP;
 		textMood.text = chara.mana.value + "/" + chara.mana.max;
 		portrait.SetChara(chara);
-		Sprite @object = Portrait.modPortraitBGs.GetItem(chara.GetStr(23) ?? "BG_1").GetObject();
-		@object.texture.filterMode = FilterMode.Bilinear;
-		portrait.image.sprite = @object;
-		@object = Portrait.modPortraitBGFs.GetItem(chara.GetStr(24) ?? "BGF_1").GetObject();
-		@object.texture.filterMode = FilterMode.Bilinear;
-		portrait.imageFrame.sprite = @object;
+		Sprite sprite = Portrait.modPortraitBGs.GetItem(chara.GetStr(23) ?? "BG_1").GetObject();
+		sprite.texture.filterMode = FilterMode.Bilinear;
+		portrait.image.sprite = sprite;
+		sprite = Portrait.modPortraitBGFs.GetItem(chara.GetStr(24) ?? "BGF_1").GetObject();
+		sprite.texture.filterMode = FilterMode.Bilinear;
+		portrait.imageFrame.sprite = sprite;
 		window.SetCaption(chara.NameBraced);
 		listAttaribute.Clear();
 		listAttaribute.callbacks = new UIList.Callback<Element, ButtonElement>
@@ -458,7 +458,7 @@ public class WindowChara : WindowController
 		if (list.items.Count < 12)
 		{
 			int num = 12 - list.items.Count;
-			for (int i = 0; i < num; i++)
+			for (int num2 = 0; num2 < num; num2++)
 			{
 				list.Add(new BodySlot());
 			}
@@ -524,10 +524,10 @@ public class WindowChara : WindowController
 			RefreshFeatMode();
 			if (featMode)
 			{
-				List("availableFeats", "general");
-				List("availableFeats_special", "special");
-				List("availableFeats_skill", "skill");
-				List("availableFeats_attribute", "attribute");
+				List2("availableFeats", "general");
+				List2("availableFeats_special", "special");
+				List2("availableFeats_skill", "skill");
+				List2("availableFeats_attribute", "attribute");
 				return;
 			}
 			if (chara.IsSlimeEvolvable && chara.c_genes != null && chara.c_genes.items.Count > 0)
@@ -821,7 +821,7 @@ public class WindowChara : WindowController
 			};
 			list.List(UIList.SortMode.ByElementParent);
 		}
-		void List(string lang, string idSubCat)
+		void List2(string lang, string idSubCat)
 		{
 			Header(lang, "cost");
 			ListFeatPurchase();

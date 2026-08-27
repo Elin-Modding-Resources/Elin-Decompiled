@@ -67,24 +67,24 @@ public class UIDragGridInfo : EMono
 					{
 						Util.Instantiate(moldPlus, b);
 					}
-					string[] array2 = i switch
+					string[] array = i switch
 					{
 						1 => a.ing2, 
 						0 => a.ing1, 
 						_ => a.ing3, 
 					};
-					if (array2.IsEmpty())
+					if (array.IsEmpty())
 					{
 						break;
 					}
-					string[] array3 = array2;
-					foreach (string text2 in array3)
+					string[] array2 = array;
+					foreach (string text in array2)
 					{
-						if (text2 != array2[0])
+						if (text != array[0])
 						{
 							Util.Instantiate(moldOr, b);
 						}
-						AddThing(text2, null);
+						AddThing(text, null);
 					}
 				}
 				Util.Instantiate(moldEqual, b);

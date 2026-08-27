@@ -710,9 +710,9 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			if (!UseFog)
 			{
-				map.ForeachCell(delegate(Cell c)
+				map.ForeachCell(delegate(Cell cell)
 				{
-					c.isSeen = true;
+					cell.isSeen = true;
 				});
 			}
 			if (!(bp is GameBlueprint))
@@ -788,9 +788,9 @@ public class Zone : Spatial, ICardParent, IInspect
 				map.OnImport(zoneExportData);
 				if (UseFog && !flag5)
 				{
-					map.ForeachCell(delegate(Cell c)
+					map.ForeachCell(delegate(Cell cell)
 					{
-						c.isSeen = false;
+						cell.isSeen = false;
 					});
 				}
 				if (zoneExportData.orgMap != null)
@@ -803,11 +803,11 @@ public class Zone : Spatial, ICardParent, IInspect
 					byte[] array2 = orgMap.TryLoadFile(base.pathSave, "flags", EClass._map.Size * EClass._map.Size);
 					if (array2 != null && array2.Length == EClass._map.Size * EClass._map.Size)
 					{
-						for (int j = 0; j < EClass._map.Size; j++)
+						for (int num = 0; num < EClass._map.Size; num++)
 						{
-							for (int k = 0; k < EClass._map.Size; k++)
+							for (int num2 = 0; num2 < EClass._map.Size; num2++)
 							{
-								map.cells[j, k].isSeen = array2[j * EClass._map.Size + k].GetBit(1);
+								map.cells[num, num2].isSeen = array2[num * EClass._map.Size + num2].GetBit(1);
 							}
 						}
 					}
@@ -897,12 +897,12 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				map.AddCardOnActivate(thing5);
 			}
-			foreach (Chara c3 in map.serializedCharas)
+			foreach (Chara c in map.serializedCharas)
 			{
-				if (c3.c_uidMaster == 0 || EClass.player.listCarryoverMap.Find((Chara c2) => c2.uid == c3.uid) == null)
+				if (c.c_uidMaster == 0 || EClass.player.listCarryoverMap.Find((Chara chara2) => chara2.uid == c.uid) == null)
 				{
-					map.charas.Add(c3);
-					map.AddCardOnActivate(c3);
+					map.charas.Add(c);
+					map.AddCardOnActivate(c);
 				}
 			}
 			map.serializedCharas.Clear();
@@ -988,15 +988,15 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			base.dateRevive = EClass.world.date.GetRaw() + 1440 * EClass.setting.balance.dateRevive;
 		}
-		map.ForeachCell(delegate(Cell c)
+		map.ForeachCell(delegate(Cell cell)
 		{
-			if (c.HasFire)
+			if (cell.HasFire)
 			{
-				map.effectManager.GetOrCreate(c.GetSharedPoint());
+				map.effectManager.GetOrCreate(cell.GetSharedPoint());
 			}
 			if (IsRegion)
 			{
-				c.decal = 0;
+				cell.decal = 0;
 			}
 		});
 		if (EClass.world.weather.IsRaining)
@@ -1005,9 +1005,9 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		if (EClass.debug.revealMap)
 		{
-			map.ForeachCell(delegate(Cell c)
+			map.ForeachCell(delegate(Cell cell)
 			{
-				c.isSeen = true;
+				cell.isSeen = true;
 			});
 		}
 		isStarted = true;
@@ -1042,12 +1042,12 @@ public class Zone : Spatial, ICardParent, IInspect
 						uidZone = base.uid
 					};
 				}
-				int @int = card.GetInt(55);
-				if (@int != 0)
+				int num3 = card.GetInt(55);
+				if (num3 != 0)
 				{
 					foreach (Chara chara2 in map.charas)
 					{
-						if (chara2.uid == @int)
+						if (chara2.uid == num3)
 						{
 							if (chara.IsHostile(chara2))
 							{
@@ -1430,7 +1430,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			return;
 		}
-		for (int j = num4; j < list2.Count; j++)
+		for (int num5 = num4; num5 < list2.Count; num5++)
 		{
 			if (EClass.rnd(200) <= HourSinceLastActive)
 			{
@@ -1610,7 +1610,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			if (thing5.trait is TraitNewZone { zone: not null } traitNewZone && zone != null && traitNewZone.zone.uid == zone.uid)
 			{
-				if (c != null && enterState != 0)
+				if (c != null && enterState != ZoneTransition.EnterState.Auto)
 				{
 					c.SetDir(traitNewZone.owner.dir);
 				}
@@ -1621,7 +1621,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			if (thing6.trait is TraitNewZone traitNewZone2 && ((flag && traitNewZone2.IsUpstairs) || (!flag && traitNewZone2.IsDownstairs)))
 			{
-				if (c != null && enterState != 0)
+				if (c != null && enterState != ZoneTransition.EnterState.Auto)
 				{
 					c.SetDir(traitNewZone2.owner.dir);
 				}
@@ -1640,7 +1640,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		}
 		if (point == null && EClass.rnd(4) != 0)
 		{
-			IEnumerable<Chara> ie = map.charas.Where((Chara t) => t.trait.ShopType != 0 && t.pos != null && t.pos.IsValid);
+			IEnumerable<Chara> ie = map.charas.Where((Chara t) => t.trait.ShopType != ShopType.None && t.pos != null && t.pos.IsValid);
 			if (ie.Count() > 0)
 			{
 				point = ie.RandomItem().pos.GetRandomPoint(3);
@@ -2544,12 +2544,12 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			crawler.CrawlUntil(EClass._map, () => EClass._map.GetRandomPoint(), num2 + (flag2 ? 4 : 0), delegate(Crawler.Result r)
 			{
-				int num6 = 137;
+				int num7 = 137;
 				foreach (Point point in r.points)
 				{
 					if (!point.cell.isModified && !point.HasThing && !point.HasBlock && !point.HasObj)
 					{
-						map.SetObj(point.x, point.z, num6);
+						map.SetObj(point.x, point.z, num7);
 						int idx = 3 + ((EClass.rnd(3) == 0) ? 1 : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0) + ((EClass.rnd(3) == 0) ? (-1) : 0);
 						point.growth.SetStage(idx);
 						if (seed != null)
@@ -2562,12 +2562,12 @@ public class Zone : Spatial, ICardParent, IInspect
 			});
 			crawler.CrawlUntil(tries: EClass.rnd(EClass.rnd(5) + 1) + 1 + (flag2 ? 20 : 0), map: EClass._map, onStart: () => EClass._map.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 			{
-				int num5 = 136;
+				int num7 = 136;
 				foreach (Point point2 in r.points)
 				{
 					if (!point2.cell.isModified && !point2.HasThing && !point2.HasBlock && !point2.HasObj)
 					{
-						map.SetObj(point2.x, point2.z, num5, 1, EClass.rnd(4));
+						map.SetObj(point2.x, point2.z, num7, 1, EClass.rnd(4));
 					}
 				}
 				return false;
@@ -2587,7 +2587,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			if (EClass.rnd(3) == 0)
 			{
 				int num4 = EClass.rnd(2);
-				for (int m = 0; m < num4; m++)
+				for (int num5 = 0; num5 < num4; num5++)
 				{
 					Point randomSurface4 = EClass._map.bounds.GetRandomSurface();
 					if (!randomSurface4.HasObj && !randomSurface4.HasThing)
@@ -2612,7 +2612,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			if (base.Tile.isRoad)
 			{
-				for (int n = 0; n < EClass.rnd(4); n++)
+				for (int num6 = 0; num6 < EClass.rnd(4); num6++)
 				{
 					EClass._zone.SpawnMob(map.GetCenterPos().GetRandomPointInRadius(2, 6, requireLos: false, allowChara: false), SpawnSetting.HomeGuest(EClass._zone.DangerLv));
 				}
@@ -2646,7 +2646,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 		}
 		Religion faith = EClass.game.religions.dictAll.Values.Where((Religion a) => a != c.faith).RandomItem();
-		for (int i = 0; i < 3 + EClass.rnd(4); i++)
+		for (int num = 0; num < 3 + EClass.rnd(4); num++)
 		{
 			Chara chara = CharaGen.Create("fanatic");
 			chara.SetFaith(faith);
@@ -2702,8 +2702,8 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				if (!chara.IsGlobal && chara.hostility < Hostility.Neutral && chara.OriginalHostility < Hostility.Friend)
 				{
-					Hostility hostility2 = (chara.c_originalHostility = Hostility.Neutral);
-					chara.hostility = hostility2;
+					Hostility hostility = (chara.c_originalHostility = Hostility.Neutral);
+					chara.hostility = hostility;
 				}
 			}
 		}
@@ -2729,13 +2729,13 @@ public class Zone : Spatial, ICardParent, IInspect
 		Crawler.Create("ore").CrawlUntil(tries: EClass.rnd((int)((float)(map.bounds.Width * map.bounds.Height / 200 + 1) * OreChance + 2f)), map: EClass._map, onStart: () => EClass._map.bounds.GetRandomPoint(), canComplete: delegate(Crawler.Result r)
 		{
 			byte b = 18;
-			string group = "ore";
+			string text = "ore";
 			if (EClass.rnd(5) == 0)
 			{
 				b++;
-				group = "gem";
+				text = "gem";
 			}
-			SourceMaterial.Row randomMaterial = MATERIAL.GetRandomMaterial(DangerLv, group);
+			SourceMaterial.Row randomMaterial = MATERIAL.GetRandomMaterial(DangerLv, text);
 			foreach (Point point in r.points)
 			{
 				if (point.sourceBlock.ContainsTag("ore"))
@@ -2889,7 +2889,7 @@ public class Zone : Spatial, ICardParent, IInspect
 					}
 				}
 				Room room = point.cell.room;
-				if (room != null && room.data.accessType != 0)
+				if (room != null && room.data.accessType != BaseArea.AccessType.Public)
 				{
 					continue;
 				}
@@ -3579,7 +3579,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			if (num < MaxRespawn)
 			{
-				for (int i = 0; i < RespawnPerHour; i++)
+				for (int num2 = 0; num2 < RespawnPerHour; num2++)
 				{
 					SpawnMob();
 				}
@@ -3888,12 +3888,12 @@ public class Zone : Spatial, ICardParent, IInspect
 			array = new string[9] { "supply/8", "deliver/7", "food/8", "escort/4", "deliver/4", "monster/0", "war/0", "farm/0", "music/0" };
 		}
 		string[] array2 = array;
-		for (int i = 0; i < array2.Length; i++)
+		for (int num2 = 0; num2 < array2.Length; num2++)
 		{
-			string[] array3 = array2[i].Split('/');
+			string[] array3 = array2[num2].Split('/');
 			listTag.Add(new Tuple<string, int>(array3[0], array3[1].ToInt()));
 		}
-		for (int j = 0; j < map.charas.Count * 2; j++)
+		for (int num3 = 0; num3 < map.charas.Count * 2; num3++)
 		{
 			if (num > maxQuest)
 			{
@@ -3910,20 +3910,20 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 			SourceQuest.Row row = list.RandomItemWeighted(delegate(SourceQuest.Row a)
 			{
-				int num2 = 1;
+				int num4 = 1;
 				foreach (Tuple<string, int> item2 in listTag)
 				{
 					if (a.tags.Contains(item2.Item1))
 					{
-						num2 = item2.Item2;
+						num4 = item2.Item2;
 						break;
 					}
 				}
 				if (!EClass._zone.IsPCFaction && a.tags.Contains("bulk"))
 				{
-					num2 = 0;
+					num4 = 0;
 				}
-				return a.chance * num2;
+				return a.chance * num4;
 			});
 			if ((!row.tags.Contains("needDestZone") || list2.Count >= 2) && (row.minFame <= 0 || row.minFame < EClass.player.fame || EClass.debug.enable))
 			{
@@ -3961,12 +3961,12 @@ public class Zone : Spatial, ICardParent, IInspect
 
 	public int GetSoilCost()
 	{
-		int i = 0;
+		int n = 0;
 		EClass._map.bounds.ForeachCell(delegate(Cell c)
 		{
-			i += c.sourceObj.costSoil;
+			n += c.sourceObj.costSoil;
 		});
-		return i / 10;
+		return n / 10;
 	}
 
 	public void SpawnLostItems()
@@ -3983,8 +3983,8 @@ public class Zone : Spatial, ICardParent, IInspect
 				Thing thing = ThingGen.Create("purse");
 				thing.isLostProperty = true;
 				thing.things.DestroyAll();
-				int num2 = (thing.c_lockLv = EClass.rndHalf(Mathf.Min(base.development / 10 + 10, 50)));
-				thing.Add("money", EClass.rndHalf(num2 * 60 + 1000));
+				int num = (thing.c_lockLv = EClass.rndHalf(Mathf.Min(base.development / 10 + 10, 50)));
+				thing.Add("money", EClass.rndHalf(num * 60 + 1000));
 				if (EClass.rnd(2) == 0)
 				{
 					thing.Add("plat", EClass.rnd(4));

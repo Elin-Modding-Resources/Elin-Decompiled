@@ -37,8 +37,8 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 							string[] source = new string[5] { "merc", "merc_archer", "merc_mage", "merc_warrior", "dog_hound" };
 							chara = EClass._zone.SpawnMob(randomPointInRadius2, SpawnSetting.Mob(source.RandomItem(), null, lv * 2 / 3));
 							Chara chara2 = chara;
-							Hostility hostility2 = (chara.c_originalHostility = Hostility.Neutral);
-							chara2.hostility = hostility2;
+							Hostility hostility = (chara.c_originalHostility = Hostility.Neutral);
+							chara2.hostility = hostility;
 							chara.MakeMinion(leader);
 						}
 						list.Add(chara);
@@ -56,8 +56,8 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 					{
 						bool flag2 = EClass.rnd(5) == 0;
 						Chara chara3 = EClass._zone.SpawnMob(randomPointInRadius3, SpawnSetting.Mob(mob.id, (mob.MainElement == Element.Void) ? null : mob.MainElement.source.alias.Substring(3), -1, (!flag2 && EClass.player.HasKeyItem("license_adv")) ? EClass.rndHalf(EClass.pc.FameLv) : 0));
-						Hostility hostility2 = (chara3.c_originalHostility = Hostility.Enemy);
-						chara3.hostility = hostility2;
+						Hostility hostility = (chara3.c_originalHostility = Hostility.Enemy);
+						chara3.hostility = hostility;
 						chara3.enemy = EClass.pc.party.members.RandomItem();
 						leader = chara3;
 						if (flag2)
@@ -69,23 +69,23 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 				}
 				if (leader != null)
 				{
-					List<Thing> list2 = EClass.pc.things.List(delegate(Thing t)
+					List<Thing> list2 = EClass.pc.things.List(delegate(Thing thing)
 					{
-						if (t.Num >= 10)
+						if (thing.Num >= 10)
 						{
 							return false;
 						}
-						return t.trait.CanBeDestroyed && t.things.Count == 0 && t.invY != 1 && t.trait.CanBeStolen && !t.trait.CanOnlyCarry && !t.IsUnique && !t.isEquipped;
+						return thing.trait.CanBeDestroyed && thing.things.Count == 0 && thing.invY != 1 && thing.trait.CanBeStolen && !thing.trait.CanOnlyCarry && !thing.IsUnique && !thing.isEquipped;
 					}, onlyAccessible: true);
-					Thing t2 = ((list2.Count > 0) ? list2.RandomItem() : null);
-					if (t2 == null)
+					Thing t = ((list2.Count > 0) ? list2.RandomItem() : null);
+					if (t == null)
 					{
 						GameLang.refDrama1 = (GameLang.refDrama2 = "mobPity".lang());
 					}
 					else
 					{
-						GameLang.refDrama1 = t2.NameSimple;
-						GameLang.refDrama2 = t2.Name;
+						GameLang.refDrama1 = t.NameSimple;
+						GameLang.refDrama2 = t.Name;
 					}
 					LayerDrama.refAction1 = delegate
 					{
@@ -100,9 +100,9 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 					};
 					LayerDrama.refAction2 = delegate
 					{
-						if (t2 != null)
+						if (t != null)
 						{
-							leader.AddCard(t2);
+							leader.AddCard(t);
 						}
 						foreach (Chara item2 in list)
 						{
@@ -111,8 +111,8 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 								item2.Talk((EClass.rnd(5) == 0) ? "rumor_good" : ((EClass.rnd(3) == 0) ? "thanks3" : "thanks"));
 							}
 							item2.ShowEmo(Emo.happy);
-							Hostility hostility6 = (item2.c_originalHostility = Hostility.Neutral);
-							item2.hostility = hostility6;
+							Hostility hostility5 = (item2.c_originalHostility = Hostility.Neutral);
+							item2.hostility = hostility5;
 							item2.enemy = null;
 						}
 						EClass.player.ModKarma(1);
@@ -123,12 +123,12 @@ public class ZonePreEnterEncounter : ZonePreEnterEvent
 		}
 		else
 		{
-			for (int k = 0; k < enemies; k++)
+			for (int num2 = 0; num2 < enemies; num2++)
 			{
 				Point nearestPoint = (EClass.pc.pos.GetRandomPoint(4) ?? EClass.pc.pos).GetNearestPoint(allowBlock: false, allowChara: false);
 				Chara chara4 = EClass._zone.SpawnMob(nearestPoint, SpawnSetting.Encounter(lv));
-				Hostility hostility2 = (chara4.c_originalHostility = Hostility.Enemy);
-				chara4.hostility = hostility2;
+				Hostility hostility = (chara4.c_originalHostility = Hostility.Enemy);
+				chara4.hostility = hostility;
 				chara4.enemy = EClass.pc.party.members.RandomItem();
 			}
 		}

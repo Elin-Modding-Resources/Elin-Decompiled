@@ -123,9 +123,9 @@ public class HomeResourceWorth : HomeResourceRate
 		num = (100 + num) * (100 + num7 * 15) / 100;
 		branch.tourism = (int)num;
 		list2.Sort((Thing a, Thing b) => GetPrice(b) - GetPrice(a));
-		for (int i = 0; i < branch.NumHeirloom && i < list2.Count; i++)
+		for (int num8 = 0; num8 < branch.NumHeirloom && num8 < list2.Count; num8++)
 		{
-			list.Add(list2[i]);
+			list.Add(list2[num8]);
 		}
 		return list;
 	}

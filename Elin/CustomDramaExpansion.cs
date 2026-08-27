@@ -118,9 +118,9 @@ public class CustomDramaExpansion : EClass
 					case ',':
 						if (num == 0)
 						{
-							string s2 = args[num2..i].Trim();
-							s2 = Unquote(s2);
-							list.Add(s2);
+							string s = args[num2..i].Trim();
+							s = Unquote(s);
+							list.Add(s);
 							num2 = i + 1;
 						}
 						break;
@@ -205,8 +205,8 @@ public class CustomDramaExpansion : EClass
 			dm.ParseLine(item);
 			dm.lastTalk.activeCondition = delegate
 			{
-				object obj2 = DeferredCompileAndRun();
-				return obj2 is bool && (bool)obj2;
+				object obj = DeferredCompileAndRun();
+				return obj is bool && (bool)obj;
 			};
 			return true;
 		}

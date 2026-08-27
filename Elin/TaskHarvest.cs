@@ -274,14 +274,14 @@ public class TaskHarvest : BaseTaskHarvest
 	public override void OnCreateProgress(Progress_Custom p)
 	{
 		SetTarget(owner);
-		string i = (IsObj ? pos.cell.GetObjName() : target.Name);
+		string n = (IsObj ? pos.cell.GetObjName() : target.Name);
 		SourceMaterial.Row mat = ((!IsObj) ? target.material : (pos.cell.isObjDyed ? pos.sourceObj.DefaultMaterial : pos.cell.matObj));
 		GrowSystem growth = pos.growth;
 		float num = (base.IsHarvest ? 0.5f : ((!IsObj) ? 1f : ((growth != null) ? growth.MtpProgress : 1f)));
 		int exp = 50;
 		wasReapSeed = IsReapSeed;
 		wasCrime = IsHostileAct;
-		p.textHint = i;
+		p.textHint = n;
 		p.maxProgress = (int)((float)(maxProgress * 150) * num / 100f);
 		p.interval = 1;
 		p.onProgressBegin = delegate
@@ -292,20 +292,20 @@ public class TaskHarvest : BaseTaskHarvest
 			}
 			else if (base.IsTooHard)
 			{
-				owner.Say((mode == HarvestType.Disassemble) ? "tooHardToDisassemble" : "tooHardToHarvest", owner, i);
+				owner.Say((mode == HarvestType.Disassemble) ? "tooHardToDisassemble" : "tooHardToHarvest", owner, n);
 				p.Cancel();
 			}
 			else if (mode == HarvestType.Disassemble)
 			{
-				owner.Say("disassemble_start", owner, owner.Tool, i);
+				owner.Say("disassemble_start", owner, owner.Tool, n);
 			}
 			else if (owner.Tool == null)
 			{
-				owner.Say("harvestHand_start", owner, i);
+				owner.Say("harvestHand_start", owner, n);
 			}
 			else
 			{
-				owner.Say("harvest_start", owner, owner.Tool, i);
+				owner.Say("harvest_start", owner, owner.Tool, n);
 			}
 		};
 		p.onProgress = delegate(Progress_Custom _p)
@@ -319,7 +319,7 @@ public class TaskHarvest : BaseTaskHarvest
 					if (base.IsHarvest && growth != null)
 					{
 						owner.PlaySound(growth.GetSoundProgress());
-						if (growth.AnimeProgress != 0)
+						if (growth.AnimeProgress != AnimeID.None)
 						{
 							pos.Animate(growth.AnimeProgress);
 						}

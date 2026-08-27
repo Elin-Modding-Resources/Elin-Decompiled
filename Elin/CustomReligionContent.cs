@@ -99,25 +99,25 @@ public class CustomReligionContent : CustomSourceContent
 		LoadDeprecatedCwlSpec();
 		static void LoadDeprecatedCwlSpec()
 		{
-			foreach (SourceThing.Row row2 in EClass.sources.things.rows)
+			foreach (SourceThing.Row row in EClass.sources.things.rows)
 			{
-				if (row2.HasTag(CTAG.godArtifact))
+				if (row.HasTag(CTAG.godArtifact))
 				{
-					managed.Values.FirstOrDefault((ReligionCustom r) => row2.tag.Contains(r.id))?.content.artifacts.Add(row2.id);
+					managed.Values.FirstOrDefault((ReligionCustom r) => row.tag.Contains(r.id))?.content.artifacts.Add(row.id);
 				}
 			}
-			foreach (SourceElement.Row row in EClass.sources.elements.rows)
+			foreach (SourceElement.Row row2 in EClass.sources.elements.rows)
 			{
-				if (row.tag.Contains("godAbility"))
+				if (row2.tag.Contains("godAbility"))
 				{
-					managed.Values.FirstOrDefault((ReligionCustom r) => row.tag.Contains(r.id))?.content.godAbilities.Add(row.alias);
+					managed.Values.FirstOrDefault((ReligionCustom r) => row2.tag.Contains(r.id))?.content.godAbilities.Add(row2.alias);
 				}
 			}
 			(FileInfo, EMod)[] filesEx2 = PackageIterator.GetFilesEx("Data/religion_elements.json");
 			string key2;
-			for (int j = 0; j < filesEx2.Length; j++)
+			for (int num = 0; num < filesEx2.Length; num++)
 			{
-				var (fileInfo2, package2) = filesEx2[j];
+				var (fileInfo2, package2) = filesEx2[num];
 				try
 				{
 					foreach (KeyValuePair<string, List<string>> item in IO.LoadFile<Dictionary<string, List<string>>>(fileInfo2.FullName))
@@ -138,9 +138,9 @@ public class CustomReligionContent : CustomSourceContent
 				}
 			}
 			filesEx2 = PackageIterator.GetFilesEx("Data/religion_offerings.json");
-			for (int j = 0; j < filesEx2.Length; j++)
+			for (int num = 0; num < filesEx2.Length; num++)
 			{
-				var (fileInfo3, package3) = filesEx2[j];
+				var (fileInfo3, package3) = filesEx2[num];
 				try
 				{
 					foreach (KeyValuePair<string, Dictionary<string, int>> item2 in IO.LoadFile<Dictionary<string, Dictionary<string, int>>>(fileInfo3.FullName))

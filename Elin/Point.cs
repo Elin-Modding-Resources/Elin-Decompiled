@@ -593,11 +593,11 @@ public class Point : EClass
 	{
 		if (EClass._zone.IsRegion)
 		{
-			_ = ref PositionTopdown();
+			PositionTopdown();
 		}
 		else
 		{
-			_ = ref Position();
+			Position();
 		}
 		vCache.x += EClass.screen.tileWorldSize.x * 0.5f;
 		vCache.y += EClass.screen.tileWorldSize.y * 0.75f;
@@ -844,7 +844,7 @@ public class Point : EClass
 			}
 			foreach (Chara item2 in list2)
 			{
-				if (item2 == criminal || item2.IsPC || (item2.HasCondition<ConDim>() && EClass.rnd(2) == 0) || item2.conSuspend != null || item2.isParalyzed || item2.IsDisabled || (type != 0 && type != WitnessType.ally && item2 != target && !item2.CanWitness))
+				if (item2 == criminal || item2.IsPC || (item2.HasCondition<ConDim>() && EClass.rnd(2) == 0) || item2.conSuspend != null || item2.isParalyzed || item2.IsDisabled || (type != WitnessType.everyone && type != WitnessType.ally && item2 != target && !item2.CanWitness))
 				{
 					continue;
 				}

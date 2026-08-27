@@ -324,10 +324,10 @@ public class LayerCraft : LayerBaseCraft
 						list.Add(o2);
 						if (item.row.skins != null && item.row.skins.Length != 0 && !item.row.HasTag(CTAG.noSkinRecipe))
 						{
-							for (int j = 0; j < item.row.skins.Length; j++)
+							for (int i = 0; i < item.row.skins.Length; i++)
 							{
 								o2 = Recipe.Create(item);
-								o2.idSkin = j + 1;
+								o2.idSkin = i + 1;
 								list.Add(o2);
 							}
 						}

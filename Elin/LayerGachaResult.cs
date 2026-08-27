@@ -31,7 +31,7 @@ public class LayerGachaResult : ELayer
 	{
 		layout.DestroyChildren();
 		items.Clear();
-		for (int j = 0; j < n; j++)
+		for (int i = 0; i < n; i++)
 		{
 			Chara c = Draw(id.Split('_').LastItem());
 			ItemGachaResult itemGachaResult = Util.Instantiate(moldItem, layout);
@@ -43,17 +43,17 @@ public class LayerGachaResult : ELayer
 		buttonGetAll.onClick.AddListener(delegate
 		{
 			ELayer.Sound.Play("good");
-			items.ForeachReverse(delegate(ItemGachaResult i)
+			items.ForeachReverse(delegate(ItemGachaResult itemGachaResult2)
 			{
-				i.Confirm(add: true);
+				itemGachaResult2.Confirm(add: true);
 			});
 		});
 		buttonDumpAll.onClick.AddListener(delegate
 		{
 			ELayer.Sound.Play("pay");
-			items.ForeachReverse(delegate(ItemGachaResult i)
+			items.ForeachReverse(delegate(ItemGachaResult itemGachaResult2)
 			{
-				i.Confirm(add: false);
+				itemGachaResult2.Confirm(add: false);
 			});
 		});
 		Refresh();

@@ -56,9 +56,9 @@ public class QuestVernis : QuestProgression
 		case 3:
 		{
 			bool valid = true;
-			EClass._map.bounds.ForeachCell(delegate(Cell c)
+			EClass._map.bounds.ForeachCell(delegate(Cell cell)
 			{
-				if (c.sourceObj.id == 100)
+				if (cell.sourceObj.id == 100)
 				{
 					valid = false;
 				}
@@ -95,15 +95,15 @@ public class QuestVernis : QuestProgression
 	{
 		if (phase == 3 && EClass._zone is Zone_Vernis && EClass._zone.lv == 0)
 		{
-			int i = 0;
+			int n = 0;
 			EClass._map.bounds.ForeachCell(delegate(Cell c)
 			{
 				if (c.sourceObj.id == 100)
 				{
-					i++;
+					n++;
 				}
 			});
-			return "progressVernis".lang(i.ToString() ?? "");
+			return "progressVernis".lang(n.ToString() ?? "");
 		}
 		return base.GetTextProgress();
 	}

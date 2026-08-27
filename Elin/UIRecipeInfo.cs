@@ -163,8 +163,8 @@ public class UIRecipeInfo : EMono
 		if (textName.text != "")
 		{
 			UIText uIText = textName;
-			string text2 = (textDetail.text = "");
-			uIText.text = text2;
+			string text = (textDetail.text = "");
+			uIText.text = text;
 			RefreshList();
 			RefreshBalance();
 			if ((bool)imageArea)
@@ -348,12 +348,12 @@ public class UIRecipeInfo : EMono
 							b.SetRecipeVariation(a);
 						}
 					};
-					for (int j = 0; j < array.Length; j++)
+					for (int num2 = 0; num2 < array.Length; num2++)
 					{
 						uIList.Add(new RecipeVariation
 						{
 							recipe = r,
-							dir = j
+							dir = num2
 						});
 					}
 					uIList.Refresh();

@@ -92,7 +92,7 @@ public class InvOwner : EClass
 		{
 			get
 			{
-				if (HasTrader && currency != 0 && (to == null || to.invOwner.owner != EClass.pc))
+				if (HasTrader && currency != CurrencyType.None && (to == null || to.invOwner.owner != EClass.pc))
 				{
 					if ((bool)destUIInv)
 					{
@@ -385,7 +385,7 @@ public class InvOwner : EClass
 				error.Set("errorUnemptyContainer");
 				return false;
 			}
-			if (HasTrader && Trader.currency != 0)
+			if (HasTrader && Trader.currency != CurrencyType.None)
 			{
 				int price = GetPrice();
 				if (sell)
@@ -558,7 +558,7 @@ public class InvOwner : EClass
 	{
 		get
 		{
-			if (currency != 0)
+			if (currency != CurrencyType.None)
 			{
 				return owner.trait.AllowSell;
 			}
@@ -979,7 +979,7 @@ public class InvOwner : EClass
 		{
 			return false;
 		}
-		if (!EClass.pc.HasNoGoal || Container.isNPCProperty || currency != 0)
+		if (!EClass.pc.HasNoGoal || Container.isNPCProperty || currency != CurrencyType.None)
 		{
 			return false;
 		}
@@ -989,7 +989,7 @@ public class InvOwner : EClass
 		}
 		if (HasTrader)
 		{
-			if (Trader is InvOwnerDraglet || Trader.Container.isNPCProperty || Trader.currency != 0)
+			if (Trader is InvOwnerDraglet || Trader.Container.isNPCProperty || Trader.currency != CurrencyType.None)
 			{
 				return false;
 			}
@@ -1078,7 +1078,7 @@ public class InvOwner : EClass
 		{
 			return false;
 		}
-		if (!EClass.pc.HasNoGoal || Container.isNPCProperty || currency != 0)
+		if (!EClass.pc.HasNoGoal || Container.isNPCProperty || currency != CurrencyType.None)
 		{
 			return false;
 		}
@@ -1339,8 +1339,8 @@ public class InvOwner : EClass
 			{
 				if (!flag3 && (Trader.currency == CurrencyType.None || (Trader.currency != CurrencyType.Influence && t.GetPrice(Trader.currency, sell: false, Trader.priceType) == 0)))
 				{
-					Transaction trans2 = new Transaction(b, t.Num);
-					if (trans2.IsValid())
+					Transaction trans = new Transaction(b, t.Num);
+					if (trans.IsValid())
 					{
 						listInteraction.Add(Container.isNPCProperty ? "actSteal".lang().TagColor(FontColor.Bad, SkinManager.DarkColors) : destInvOwner.langTransfer, 0, delegate
 						{
@@ -1348,12 +1348,12 @@ public class InvOwner : EClass
 							{
 								Dialog.TryWarnCrime(delegate
 								{
-									trans2.Process();
+									trans.Process();
 								});
 							}
 							else
 							{
-								trans2.Process();
+								trans.Process();
 							}
 						});
 					}
@@ -1361,10 +1361,10 @@ public class InvOwner : EClass
 				else
 				{
 					bool isShiftDown = EInput.isShiftDown;
-					Transaction trans = new Transaction(b);
-					listInteraction.Add(trans.GetTextDetail(), 0, delegate
+					Transaction trans2 = new Transaction(b);
+					listInteraction.Add(trans2.GetTextDetail(), 0, delegate
 					{
-						trans.Process();
+						trans2.Process();
 					}).repeatable = true;
 					if (t.Num > 1)
 					{
@@ -1420,7 +1420,7 @@ public class InvOwner : EClass
 				{
 					listInteraction.Add("actSplit", 50, delegate
 					{
-						t.ShowSplitMenu(b, (HasTrader && currency != 0 && !owner.IsPC) ? new Transaction(b) : null);
+						t.ShowSplitMenu(b, (HasTrader && currency != CurrencyType.None && !owner.IsPC) ? new Transaction(b) : null);
 					});
 				}
 				if ((owner.IsPC || Container.IsPCFactionOrMinion) && AllowDrop(t))
@@ -1659,7 +1659,7 @@ public class InvOwner : EClass
 	{
 		if (button.card is Thing t)
 		{
-			bool flag = HasTrader && Trader.currency != 0 && (destInvOwner != Trader || Trader.AllowSell || (ShopTransaction.current?.CanSellBack(t) ?? false));
+			bool flag = HasTrader && Trader.currency != CurrencyType.None && (destInvOwner != Trader || Trader.AllowSell || (ShopTransaction.current?.CanSellBack(t) ?? false));
 			if (flag && Trader.UseGuide && !Trader.ShouldShowGuide(t))
 			{
 				flag = false;

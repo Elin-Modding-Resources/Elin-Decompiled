@@ -259,13 +259,13 @@ public class ActThrow : ActBaseAttack
 				if (_c.IsMultisize)
 				{
 					_c.DestroyPath(_c.pos);
-					_c.ForeachPoint(delegate(Point p2, bool first)
+					_c.ForeachPoint(delegate(Point point, bool first)
 					{
-						foreach (Chara item in p2.ListCharas())
+						foreach (Chara item in point.ListCharas())
 						{
 							if (item != _c)
 							{
-								_c.Kick(p2, ignoreSelf: true, checkWall: false);
+								_c.Kick(point, ignoreSelf: true, checkWall: false);
 								break;
 							}
 						}
@@ -321,7 +321,7 @@ public class ActThrow : ActBaseAttack
 				Chara chara4 = Act.TC.Chara;
 				if (traitMonsterBall.IsSilvercatBall)
 				{
-					if (chara4.id != "cat_silver" || chara4.IsPCFactionOrMinion || EClass._zone.id == "startVillage2" || EClass._zone.IsUserZone || EClass._zone.Boss == chara4 || chara4.c_bossType != 0)
+					if (chara4.id != "cat_silver" || chara4.IsPCFactionOrMinion || EClass._zone.id == "startVillage2" || EClass._zone.IsUserZone || EClass._zone.Boss == chara4 || chara4.c_bossType != BossType.none)
 					{
 						Msg.Say("monsterball_invalid");
 						break;

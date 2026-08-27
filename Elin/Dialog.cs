@@ -477,16 +477,16 @@ public class Dialog : ELayer
 			d.Close();
 		});
 		d.option.soundActivate = null;
-		for (int i = 0; i < list.Count; i++)
+		for (int num = 0; num < list.Count; num++)
 		{
-			RecipeSource recipeSource = list[i];
+			RecipeSource recipeSource = list[num];
 			List<Recipe.Ingredient> ingredients = recipeSource.GetIngredients();
 			if (ingredients.Count > 0 && ELayer.sources.cards.map.ContainsKey(ingredients[0].id))
 			{
 				ELayer.sources.cards.map[ingredients[0].id].GetName();
 			}
 			d.note.AddText("・" + recipeSource.Name.ToTitleCase());
-			if (i >= 9 && list.Count > 10)
+			if (num >= 9 && list.Count > 10)
 			{
 				d.note.Space(6);
 				d.note.AddText("moreRecipes".lang((list.Count - 10).ToString() ?? ""));

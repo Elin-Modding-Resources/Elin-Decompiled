@@ -88,18 +88,18 @@ public class LayerWorldSetting : ELayer
 		}
 		pp = IO.DeepCopy(ELayer.game.principal);
 		transMold.SetActive(enable: false);
-		for (int j = 0; j < buttonTemplates.Count; j++)
+		for (int i = 0; i < buttonTemplates.Count; i++)
 		{
-			int i = j;
-			UIButton uIButton = buttonTemplates[i];
-			uIButton.mainText.SetText(Lang.GetList("pp_templates")[i]);
-			if (i != IdxCustom)
+			int i2 = i;
+			UIButton uIButton = buttonTemplates[i2];
+			uIButton.mainText.SetText(Lang.GetList("pp_templates")[i2]);
+			if (i2 != IdxCustom)
 			{
-				uIButton.refObj = ELayer.setting.start.principals[i];
+				uIButton.refObj = ELayer.setting.start.principals[i2];
 			}
 			uIButton.SetOnClick(delegate
 			{
-				SetTemplate(i);
+				SetTemplate(i2);
 			});
 		}
 		buttonWorkaround.SetToggle(ELayer.player.showWorkaround, delegate(bool a)

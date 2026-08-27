@@ -495,7 +495,7 @@ public class Religion : EClass
 		case PunishType.Wrath:
 		{
 			p = 2000 + (c.IsPC ? (EClass.pc.c_daysWithGod * 20) : 0);
-			if (type != 0)
+			if (type != PunishType.Wrath)
 			{
 				break;
 			}

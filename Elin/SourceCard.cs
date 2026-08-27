@@ -74,10 +74,10 @@ public class SourceCard : EClass
 			rows.Add(row);
 			map[row.id] = row;
 		}
-		catch (Exception arg2)
+		catch (Exception arg)
 		{
-			ModPackage arg = ModUtil.FindSourceRowPackage(row);
-			Debug.LogError($"#source failed to set render data for '{row.id}' - {arg}\n{arg2}");
+			ModPackage arg2 = ModUtil.FindSourceRowPackage(row);
+			Debug.LogError($"#source failed to set render data for '{row.id}' - {arg2}\n{arg}");
 		}
 	}
 }

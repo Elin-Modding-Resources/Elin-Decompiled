@@ -105,7 +105,7 @@ public class Weather : EClass
 	{
 		get
 		{
-			if (CurrentCondition != 0)
+			if (CurrentCondition != Condition.Fine)
 			{
 				return CurrentCondition == Condition.Cloudy;
 			}

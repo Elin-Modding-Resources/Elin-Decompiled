@@ -1612,25 +1612,25 @@ public class Player : EClass
 
 	public Layer SelectDomain(Action onKill = null)
 	{
-		List<SourceElement.Row> list2 = new List<SourceElement.Row>();
+		List<SourceElement.Row> list = new List<SourceElement.Row>();
 		foreach (SourceElement.Row row2 in EClass.sources.elements.rows)
 		{
 			if (row2.categorySub == "eleAttack" && !row2.tag.Contains("hidden") && ((EClass.pc.HasElement(1402) && Guild.Mage.relation.rank >= 6 && row2.id != 925 && row2.id != 926 && row2.id != 927) || !row2.tag.Contains("high") || EClass.pc.job.domain.Contains(row2.id)))
 			{
-				list2.Add(row2);
+				list.Add(row2);
 			}
 		}
-		return EClass.ui.AddLayer<LayerList>().SetListCheck(list2, (SourceElement.Row a) => a.GetName(), delegate(SourceElement.Row s, ItemGeneral b)
+		return EClass.ui.AddLayer<LayerList>().SetListCheck(list, (SourceElement.Row a) => a.GetName(), delegate(SourceElement.Row s, ItemGeneral b)
 		{
-			bool flag4 = false;
+			bool flag = false;
 			foreach (int domain in EClass.player.domains)
 			{
 				if (s.id == domain)
 				{
-					flag4 = true;
+					flag = true;
 				}
 			}
-			if (flag4)
+			if (flag)
 			{
 				EClass.player.domains.Remove(s.id);
 			}
@@ -1638,10 +1638,10 @@ public class Player : EClass
 			{
 				EClass.player.domains.Add(s.id);
 			}
-		}, delegate(List<UIList.ButtonPair> list)
+		}, delegate(List<UIList.ButtonPair> list2)
 		{
 			bool flag = EClass.player.domains.Count >= ((EClass.pc.job.id == "swordsage") ? 5 : 3) + EClass.pc.Evalue(1402) + Guild.Mage.DomainBonus();
-			foreach (UIList.ButtonPair item in list)
+			foreach (UIList.ButtonPair item in list2)
 			{
 				UIButton button = (item.component as ItemGeneral).button1;
 				SourceElement.Row row = item.obj as SourceElement.Row;

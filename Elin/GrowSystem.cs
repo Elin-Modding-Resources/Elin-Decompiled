@@ -338,12 +338,12 @@ public class GrowSystem : EClass
 		{
 			return;
 		}
-		pos.ForeachNeighbor(delegate(Point pos2)
+		pos.ForeachNeighbor(delegate(Point point)
 		{
-			Thing thing = EClass._map.TryGetPlant(pos2)?.seed;
+			Thing thing = EClass._map.TryGetPlant(point)?.seed;
 			if (thing == null)
 			{
-				Thing installed = pos2.Installed;
+				Thing installed = point.Installed;
 				if (installed != null && installed.id == p1.seed.id)
 				{
 					thing = installed;

@@ -133,9 +133,9 @@ public class SpriteReplacer
 		{
 			num = ~num;
 		}
-		for (int i = num; i < list.Count; i++)
+		for (int num2 = num; num2 < list.Count; num2++)
 		{
-			string text = list[i];
+			string text = list[num2];
 			if (text.StartsWith(id))
 			{
 				string text2 = text[id.Length..];

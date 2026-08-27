@@ -525,16 +525,16 @@ public class LayerConfig : ELayer
 			ApplyFont();
 		}, invoke: false);
 		componentInChildren.options.Clear();
-		for (int j = 0; j < skins.FontList.Count; j++)
+		for (int num = 0; num < skins.FontList.Count; num++)
 		{
-			FontSource fontSource = skins.FontList[j];
+			FontSource fontSource = skins.FontList[num];
 			componentInChildren.options.Add(new Dropdown.OptionData
 			{
 				text = fontSource._name
 			});
-			if (j == data.index)
+			if (num == data.index)
 			{
-				componentInChildren.value = j;
+				componentInChildren.value = num;
 			}
 		}
 		componentInChildren.onValueChanged.RemoveAllListeners();

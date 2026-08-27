@@ -412,9 +412,9 @@ public class AttackProcess : EClass
 		}
 		bool isLaser = toolRange is TraitToolRangeGunEnergy || (customData?.forceLaser ?? false);
 		bool isRail = isLaser && (weapon.id == "gun_rail" || (customData?.forceRail ?? false));
-		for (int i = 0; i < numFire; i++)
+		for (int num = 0; num < numFire; num++)
 		{
-			TweenUtil.Delay((float)i * data.delay + delay, delegate
+			TweenUtil.Delay((float)num * data.delay + delay, delegate
 			{
 				if (EClass.core.IsGameStarted && _CC.IsAliveInCurrentZone && _zone == _CC.currentZone)
 				{
@@ -806,11 +806,11 @@ public class AttackProcess : EClass
 		int attackStyleElement = CC.body.GetAttackStyleElement(attackStyle);
 		if (!subAttack)
 		{
-			int mod2 = 100 / (count + 1);
+			int mod = 100 / (count + 1);
 			if (!IsRanged || count == 0)
 			{
-				ModExpAtk(weaponSkill.id, mod2);
-				ModExpAtk(flag3 ? 304 : (IsRanged ? 133 : 132), mod2);
+				ModExpAtk(weaponSkill.id, mod);
+				ModExpAtk(flag3 ? 304 : (IsRanged ? 133 : 132), mod);
 			}
 			if (crit)
 			{
@@ -919,11 +919,11 @@ public class AttackProcess : EClass
 			TC.PlaySound("push", 1.5f);
 		}
 		return true;
-		void AddBane(bool valid, int idEle, int mod)
+		void AddBane(bool valid, int idEle, int num14)
 		{
 			if (valid)
 			{
-				bane += (CC.Evalue(idEle) + ((weapon != null) ? weapon.Evalue(idEle, ignoreGlobalElement: true) : 0) + ((ammo != null) ? ammo.Evalue(idEle, ignoreGlobalElement: true) : 0)) * mod / 100;
+				bane += (CC.Evalue(idEle) + ((weapon != null) ? weapon.Evalue(idEle, ignoreGlobalElement: true) : 0) + ((ammo != null) ? ammo.Evalue(idEle, ignoreGlobalElement: true) : 0)) * num14 / 100;
 			}
 		}
 		bool IgnoreExp()
@@ -934,11 +934,11 @@ public class AttackProcess : EClass
 			}
 			return true;
 		}
-		void ModExpAtk(int ele, int mod)
+		void ModExpAtk(int ele, int num14)
 		{
 			if (!IgnoreExp() && (!TC.isCopy || EClass.rnd(10) == 0))
 			{
-				int a = (Mathf.Clamp((TC.LV + 10 - CC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(TC.LV / 10, 10)) * mod / 100;
+				int a = (Mathf.Clamp((TC.LV + 10 - CC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(TC.LV / 10, 10)) * num14 / 100;
 				a = Mathf.Min(a, 200);
 				if (TC == CC)
 				{
@@ -950,23 +950,23 @@ public class AttackProcess : EClass
 				}
 			}
 		}
-		void ModExpDef(int ele, int mod)
+		void ModExpDef(int ele, int num14)
 		{
 			if (!IgnoreExp() && (!CC.isCopy || EClass.rnd(10) == 0))
 			{
-				int a2 = (Mathf.Clamp((CC.LV + 10 - TC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(CC.LV / 10, 10)) * mod / 100;
-				a2 = Mathf.Min(a2, TC.isRestrained ? 10 : 200);
+				int a = (Mathf.Clamp((CC.LV + 10 - TC.elements.ValueWithoutLink(ele)) / 2, 1, 10) + Mathf.Min(CC.LV / 10, 10)) * num14 / 100;
+				a = Mathf.Min(a, TC.isRestrained ? 10 : 200);
 				if (TC == CC)
 				{
-					a2 /= 2;
+					a /= 2;
 				}
 				if (!TC.IsPC && !TC.isRestrained && !TC.HasHost)
 				{
-					a2 *= 3;
+					a *= 3;
 				}
-				if (a2 > 0)
+				if (a > 0)
 				{
-					TC.ModExp(ele, a2 + EClass.rnd(a2 / 2 + 1));
+					TC.ModExp(ele, a + EClass.rnd(a / 2 + 1));
 				}
 			}
 		}

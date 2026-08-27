@@ -8,7 +8,7 @@ public class GoalSleep : Goal
 
 	public override IEnumerable<Status> Run()
 	{
-		for (int j = 0; j < 5; j++)
+		for (int i = 0; i < 5; i++)
 		{
 			yield return Status.Running;
 		}
@@ -33,7 +33,7 @@ public class GoalSleep : Goal
 				yield return DoGoto(baseArea.GetRandomFreePos(), 0, ignoreConnection: false, base.KeepRunning);
 			}
 		}
-		for (int j = 0; j < 5; j++)
+		for (int i = 0; i < 5; i++)
 		{
 			if (!owner.pos.HasMultipleChara)
 			{

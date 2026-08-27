@@ -104,8 +104,8 @@ public class TraitSwitch : Trait
 		c.ModExp(293, 20 + TrapLv / 3);
 		if (c.IsPCParty)
 		{
-			int @int = owner.GetInt(60);
-			owner.SetInt(60, @int + 1);
+			int num2 = owner.GetInt(60);
+			owner.SetInt(60, num2 + 1);
 		}
 		if (IsJammed)
 		{

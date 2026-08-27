@@ -229,9 +229,9 @@ public class PartialMapMenu : EMono
 			{
 				int num = 0;
 				FileInfo[] files = a.GetFiles("*.mp", SearchOption.AllDirectories);
-				for (int j = 0; j < files.Length; j++)
+				for (int i = 0; i < files.Length; i++)
 				{
-					_ = files[j];
+					_ = files[i];
 					num++;
 				}
 				b.mainText.text = ((a == dir && !isMain) ? "(Root)" : (a.Name + "(" + num + ")"));

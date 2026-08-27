@@ -148,26 +148,26 @@ public class UIFactionInfo : EMono
 			note.Space();
 			note.AddHeaderTopic("landfeat".lang());
 			List<Element> list = _zone.ListLandFeats();
-			for (int i = 0; i < list.Count; i++)
+			for (int num = 0; num < list.Count; num++)
 			{
-				note.AddText(list[i].Name + (((i == 1 && branch.lv < 4) || (i == 2 && branch.lv < 7)) ? "landfeat_locked".lang() : ""));
+				note.AddText(list[num].Name + (((num == 1 && branch.lv < 4) || (num == 2 && branch.lv < 7)) ? "landfeat_locked".lang() : ""));
 			}
 			note.Space();
 			note.AddHeaderTopic("listRoamers".lang());
-			int num = 0;
+			int num2 = 0;
 			foreach (Chara value in EMono.game.cards.globalCharas.Values)
 			{
 				if (value.homeBranch == branch)
 				{
 					note.AddText(value.Name);
-					num++;
-					if (num > 5)
+					num2++;
+					if (num2 > 5)
 					{
 						break;
 					}
 				}
 			}
-			if (num == 0)
+			if (num2 == 0)
 			{
 				note.AddText("????????");
 			}

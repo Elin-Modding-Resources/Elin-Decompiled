@@ -179,7 +179,7 @@ public class ModPackage : EMod
 		FileInfo[] files = dir.GetFiles("*.*", SearchOption.AllDirectories);
 		foreach (FileInfo fileInfo in files)
 		{
-			if (ModUtil.GetAudioType(fileInfo.Extension) != 0)
+			if (ModUtil.GetAudioType(fileInfo.Extension) != AudioType.UNKNOWN)
 			{
 				string key = Path.ChangeExtension(Path.GetRelativePath(dir.FullName, fileInfo.FullName).NormalizePath(), null);
 				Dictionary<string, FileInfo> dictionary = MOD.sounds;
@@ -472,14 +472,14 @@ public class ModPackage : EMod
 		int num = 0;
 		int num2 = 0;
 		int num3 = 10;
-		IRow row2 = destSheet.GetRow(0);
-		IRow row3 = oldSheet.GetRow(0);
+		IRow row = destSheet.GetRow(0);
+		IRow row2 = oldSheet.GetRow(0);
 		List<SheetIndex> list = new List<SheetIndex>();
-		int cellnum = FindField(row2, "id");
-		int cellnum2 = FindField(row3, "id");
-		for (int i = 0; i < row2.LastCellNum; i++)
+		int cellnum = FindField(row, "id");
+		int cellnum2 = FindField(row2, "id");
+		for (int i = 0; i < row.LastCellNum; i++)
 		{
-			ICell cell = row2.GetCell(i);
+			ICell cell = row.GetCell(i);
 			if (cell == null)
 			{
 				break;
@@ -489,9 +489,9 @@ public class ModPackage : EMod
 			{
 				continue;
 			}
-			for (int j = 0; j < row3.LastCellNum; j++)
+			for (int j = 0; j < row2.LastCellNum; j++)
 			{
-				cell = row3.GetCell(j);
+				cell = row2.GetCell(j);
 				if (cell == null)
 				{
 					break;
@@ -510,8 +510,8 @@ public class ModPackage : EMod
 		}
 		for (int k = 2; k <= oldSheet.LastRowNum; k++)
 		{
-			IRow row4 = oldSheet.GetRow(k);
-			if (row4 == null)
+			IRow row3 = oldSheet.GetRow(k);
+			if (row3 == null)
 			{
 				if (num2 >= num3)
 				{
@@ -521,7 +521,7 @@ public class ModPackage : EMod
 				continue;
 			}
 			num2 = 0;
-			ICell cell2 = row4.GetCell(cellnum2);
+			ICell cell2 = row3.GetCell(cellnum2);
 			if (cell2 == null)
 			{
 				continue;
@@ -534,7 +534,7 @@ public class ModPackage : EMod
 			string[] array = new string[list.Count];
 			for (int l = 0; l < list.Count; l++)
 			{
-				ICell cell3 = row4.GetCell(list[l].old);
+				ICell cell3 = row3.GetCell(list[l].old);
 				if (cell3 != null)
 				{
 					string stringCellValue2 = cell3.StringCellValue;
@@ -549,8 +549,8 @@ public class ModPackage : EMod
 		num2 = 0;
 		for (int m = 2; m <= destSheet.LastRowNum; m++)
 		{
-			IRow row5 = destSheet.GetRow(m);
-			if (row5 == null)
+			IRow row4 = destSheet.GetRow(m);
+			if (row4 == null)
 			{
 				if (num2 >= num3)
 				{
@@ -560,7 +560,7 @@ public class ModPackage : EMod
 				continue;
 			}
 			num2 = 0;
-			ICell cell4 = row5.GetCell(cellnum);
+			ICell cell4 = row4.GetCell(cellnum);
 			if (cell4 == null)
 			{
 				continue;
@@ -573,7 +573,7 @@ public class ModPackage : EMod
 			string[] array2 = dictionary[text2];
 			for (int n = 0; n < list.Count; n++)
 			{
-				ICell cell5 = row5.GetCell(list[n].dest) ?? row5.CreateCell(list[n].dest, CellType.String);
+				ICell cell5 = row4.GetCell(list[n].dest) ?? row4.CreateCell(list[n].dest, CellType.String);
 				if (cell5 != null)
 				{
 					cell5.SetCellValue(array2[n]);
@@ -584,11 +584,11 @@ public class ModPackage : EMod
 			}
 		}
 		return num;
-		static int FindField(IRow row, string id)
+		static int FindField(IRow row5, string id)
 		{
-			for (int num4 = 0; num4 < row.LastCellNum; num4++)
+			for (int num4 = 0; num4 < row5.LastCellNum; num4++)
 			{
-				ICell cell6 = row.GetCell(num4);
+				ICell cell6 = row5.GetCell(num4);
 				if (cell6 == null)
 				{
 					break;

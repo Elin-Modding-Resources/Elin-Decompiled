@@ -82,18 +82,20 @@ public class AM_Picker : AM_BaseTileSelect
 
 	public Result TestBlock(Point point)
 	{
-		Result result = default(Result);
-		result.mat = point.matBlock;
-		result.source = TryGetRecipe(point.sourceBlock.RecipeID);
-		return result;
+		return new Result
+		{
+			mat = point.matBlock,
+			source = TryGetRecipe(point.sourceBlock.RecipeID)
+		};
 	}
 
 	public Result TestObj(Point point)
 	{
-		Result result = default(Result);
-		result.mat = point.cell.matObj;
-		result.source = TryGetRecipe(point.sourceObj.RecipeID);
-		return result;
+		return new Result
+		{
+			mat = point.cell.matObj,
+			source = TryGetRecipe(point.sourceObj.RecipeID)
+		};
 	}
 
 	public Result TestFloor(Point point)

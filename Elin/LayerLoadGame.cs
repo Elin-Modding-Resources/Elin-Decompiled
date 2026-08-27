@@ -237,9 +237,9 @@ public class LayerLoadGame : ELayer
 						}
 						RefreshList(text);
 					}
-					catch (Exception ex2)
+					catch (Exception ex)
 					{
-						ELayer.ui.Say(ex2.Message);
+						ELayer.ui.Say(ex.Message);
 					}
 				}
 			});
@@ -249,11 +249,11 @@ public class LayerLoadGame : ELayer
 			Dialog.YesNo("dialog_switchCloud", delegate
 			{
 				string sourceDirName = (cloud ? CorePath.RootSaveCloud : CorePath.RootSave) + i.id;
-				string text2 = (cloud ? CorePath.RootSave : CorePath.RootSaveCloud) + i.id;
-				string text3 = (cloud ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id;
-				string text4 = (cloud ? CorePath.PathBackup : CorePath.PathBackupCloud) + i.id;
-				bool flag2 = Directory.Exists(text3);
-				if (Directory.Exists(text2) || Directory.Exists(text4))
+				string text = (cloud ? CorePath.RootSave : CorePath.RootSaveCloud) + i.id;
+				string text2 = (cloud ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id;
+				string text3 = (cloud ? CorePath.PathBackup : CorePath.PathBackupCloud) + i.id;
+				bool flag2 = Directory.Exists(text2);
+				if (Directory.Exists(text) || Directory.Exists(text3))
 				{
 					SE.Beep();
 					ELayer.ui.Say("cloud_conflict");
@@ -266,7 +266,7 @@ public class LayerLoadGame : ELayer
 						if (flag2)
 						{
 							Debug.Log("Converting Backup files:");
-							Directory.Move(text3, text4);
+							Directory.Move(text2, text3);
 							foreach (GameIndex game in GameIO.GetGameList(((!cloud) ? CorePath.PathBackupCloud : CorePath.PathBackup) + i.id + "/"))
 							{
 								Debug.Log("Processing:" + game.id + ": " + game.path);
@@ -277,8 +277,8 @@ public class LayerLoadGame : ELayer
 							}
 						}
 						Debug.Log("Converting Current World:");
-						Directory.Move(sourceDirName, text2);
-						i.path = text2;
+						Directory.Move(sourceDirName, text);
+						i.path = text;
 						i.cloud = !cloud;
 						GameIO.UpdateGameIndex(i);
 						if (i.cloud)

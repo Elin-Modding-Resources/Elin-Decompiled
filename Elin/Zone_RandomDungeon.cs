@@ -63,8 +63,8 @@ public class Zone_RandomDungeon : Zone_Dungeon
 		{
 			base.Boss = SpawnMob(null, SpawnSetting.Boss(DangerLv, DangerLv));
 			Chara boss = base.Boss;
-			Hostility hostility2 = (base.Boss.c_originalHostility = Hostility.Enemy);
-			boss.hostility = hostility2;
+			Hostility hostility = (base.Boss.c_originalHostility = Hostility.Enemy);
+			boss.hostility = hostility;
 			foreach (Chara chara in EClass._map.charas)
 			{
 				if (chara.IsHostile())

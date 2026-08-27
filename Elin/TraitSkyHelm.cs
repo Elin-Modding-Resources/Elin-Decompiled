@@ -35,7 +35,7 @@ public class TraitSkyHelm : TraitItem
 						SE.Play("ship_bell");
 						EClass.game.survival.listGateZone.Clear();
 						EClass.ui.CloseLayers();
-						EClass.pc.pos.TalkWitnesses(EClass.pc, "ahoy", 6, WitnessType.everyone, (Chara c) => true);
+						EClass.pc.pos.TalkWitnesses(EClass.pc, "ahoy", 6, WitnessType.everyone, (Chara chara) => true);
 					}
 				},
 				onRedraw = delegate(Zone a, ButtonElement b, int i)

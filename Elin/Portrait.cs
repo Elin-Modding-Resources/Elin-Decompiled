@@ -229,14 +229,14 @@ public class Portrait : UIButton
 
 	public void SetPortrait(string id, Color colorOverlay = default(Color), bool applyColorMod = true)
 	{
-		Sprite @object = modPortraits.GetItem(id).GetObject();
-		Sprite object2 = modOverlays.GetObject(id + "-overlay");
+		Sprite spritePortrait = modPortraits.GetItem(id).GetObject();
+		Sprite spriteOverlay = modOverlays.GetObject(id + "-overlay");
 		Sprite spriteFull = ((enableFull && (bool)imageFull) ? modFull.GetObject(id + "-full") : null);
 		if (applyColorMod)
 		{
 			colorOverlay = PCCManager.current.ApplyColorMod(colorOverlay);
 		}
-		SetPortrait(isPortrait: true, @object, object2, colorOverlay, spriteFull);
+		SetPortrait(isPortrait: true, spritePortrait, spriteOverlay, colorOverlay, spriteFull);
 	}
 
 	public void SetPortrait(bool isPortrait, Sprite spritePortrait, Sprite spriteOverlay = null, Color colorOverlay = default(Color), Sprite spriteFull = null)

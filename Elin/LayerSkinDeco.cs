@@ -38,11 +38,11 @@ public class LayerSkinDeco : ELayer
 			}
 			SkinDecoActor selected = InputModuleEX.GetComponentOf<SkinDecoActor>();
 			Vector3 clickPos = Input.mousePosition;
-			UIContextMenu i = ELayer.ui.CreateContextMenu();
+			UIContextMenu m = ELayer.ui.CreateContextMenu();
 			if ((bool)selected)
 			{
 				SkinDeco deco = selected.owner;
-				i.AddButton("editColor", delegate
+				m.AddButton("editColor", delegate
 				{
 					ELayer.ui.AddLayer<LayerColorPicker>().SetColor(deco.color, Color.white, delegate(PickerState state, Color _c)
 					{
@@ -50,46 +50,46 @@ public class LayerSkinDeco : ELayer
 						selected.Refresh();
 					});
 				});
-				i.AddButton("bringToTop", delegate
+				m.AddButton("bringToTop", delegate
 				{
 					decos.Remove(deco);
 					decos.Add(deco);
 					selected.transform.SetAsLastSibling();
 				});
-				i.AddSlider("rotation", (float n) => (n * 45f).ToString() ?? "", deco.rz, delegate(float a)
+				m.AddSlider("rotation", (float n) => (n * 45f).ToString() ?? "", deco.rz, delegate(float a)
 				{
 					deco.rz = (int)a;
 					selected.Refresh();
 				}, 0f, 7f, isInt: true);
-				i.AddSlider("size", (float n) => n.ToString() ?? "", Mathf.Abs(deco.sx), delegate(float a)
+				m.AddSlider("size", (float n) => n.ToString() ?? "", Mathf.Abs(deco.sx), delegate(float a)
 				{
 					deco.sx = (int)a * ((deco.sx > 0) ? 1 : (-1));
 					deco.sy = (int)a * ((deco.sy > 0) ? 1 : (-1));
 					selected.Refresh();
 				}, 10f, 400f, isInt: true);
-				i.AddToggle("shadow", deco.shadow, delegate(bool a)
+				m.AddToggle("shadow", deco.shadow, delegate(bool a)
 				{
 					deco.shadow = a;
 					selected.Refresh();
 				});
-				i.AddToggle("reverse", deco.reverse, delegate(bool a)
+				m.AddToggle("reverse", deco.reverse, delegate(bool a)
 				{
 					deco.reverse = a;
 					selected.Refresh();
 				});
-				i.AddToggle("placeBeforeWidget", deco.bottom, delegate(bool a)
+				m.AddToggle("placeBeforeWidget", deco.bottom, delegate(bool a)
 				{
 					deco.bottom = a;
 					selected.Refresh();
 				});
-				i.AddButton("removeDeco", delegate
+				m.AddButton("removeDeco", delegate
 				{
 					widget.RemoveDeco(selected.owner);
 				});
 			}
 			else
 			{
-				UIContextMenu uIContextMenu = i.AddChild("addDeco");
+				UIContextMenu uIContextMenu = m.AddChild("addDeco");
 				UIList uIList = Util.Instantiate<UIList>("UI/Element/List/ListImageGrid", uIContextMenu);
 				uIList.callbacks = new UIList.Callback<Sprite, UIButton>
 				{
@@ -111,7 +111,7 @@ public class LayerSkinDeco : ELayer
 						Activate(actor);
 						actor.transform.position = clickPos;
 						EInput.Consume();
-						i.Hide();
+						m.Hide();
 					}
 				};
 				Sprite[] array = Resources.LoadAll<Sprite>("Media/Graphics/Deco/");
@@ -121,7 +121,7 @@ public class LayerSkinDeco : ELayer
 				}
 				uIList.Refresh();
 			}
-			i.Show();
+			m.Show();
 		}
 		if (EInput.rightMouse.down)
 		{

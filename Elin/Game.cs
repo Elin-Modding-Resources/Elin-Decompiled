@@ -833,9 +833,9 @@ public class Game : EClass
 			EClass.core.actionsNextFrame.Add(LayerTitle.KillActor);
 			Player obj = player;
 			Chara chara = EClass.pc;
-			Zone zone2 = (EClass.pc.homeZone = EClass.game.spatials.Find(EClass.game.Prologue.idStartZone));
-			Zone zone4 = (chara.currentZone = zone2);
-			obj.zone = zone4;
+			Zone zone = (EClass.pc.homeZone = EClass.game.spatials.Find(EClass.game.Prologue.idStartZone));
+			Zone zone3 = (chara.currentZone = zone);
+			obj.zone = zone3;
 			EClass.pc.global.transition = new ZoneTransition
 			{
 				state = ZoneTransition.EnterState.Exact,
@@ -945,16 +945,16 @@ public class Game : EClass
 			{
 				Player obj2 = player;
 				Chara chara2 = EClass.pc;
-				Zone zone2 = (EClass.pc.homeZone = zone5);
-				Zone zone4 = (chara2.currentZone = zone2);
-				obj2.zone = zone4;
+				Zone zone = (EClass.pc.homeZone = zone5);
+				Zone zone3 = (chara2.currentZone = zone);
+				obj2.zone = zone3;
 				EClass.pc.global.transition = transition;
 			}
 			else
 			{
 				Player obj3 = player;
-				Zone zone4 = (EClass.pc.currentZone = EClass.game.spatials.Find(EClass.debug.startZone));
-				obj3.zone = zone4;
+				Zone zone3 = (EClass.pc.currentZone = EClass.game.spatials.Find(EClass.debug.startZone));
+				obj3.zone = zone3;
 				EClass.pc.global.transition = new ZoneTransition
 				{
 					state = ZoneTransition.EnterState.Return

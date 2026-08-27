@@ -141,10 +141,10 @@ public class ActTelekinesis : Spell
 			Act.CC.pos.TryWitnessCrime(Act.CC, Act.TC.Chara, 5, (Chara c) => EClass.rnd(3) == 0);
 		}
 		Point point = list.Last();
-		for (int i = 0; i < list.Count; i++)
+		for (int num = 0; num < list.Count; num++)
 		{
-			Point point2 = list[i];
-			Effect.Get("telekinesis2").Play(0.1f * (float)i, point2);
+			Point point2 = list[num];
+			Effect.Get("telekinesis2").Play(0.1f * (float)num, point2);
 			if (point2.Equals(Act.TC.pos) || !point2.HasChara)
 			{
 				continue;
@@ -155,7 +155,7 @@ public class ActTelekinesis : Spell
 				Act.TC.pos.PlayEffect("vanish");
 				if (!flag && (item.isChara || item.trait.CanBeAttacked))
 				{
-					DoDamage(item, i, 50);
+					DoDamage(item, num, 50);
 				}
 			}
 		}

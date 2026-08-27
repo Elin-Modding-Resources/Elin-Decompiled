@@ -43,16 +43,16 @@ public class UIDistribution : EMono
 			{
 				b.uid = a.uid;
 				b.mainText.text = a.GetName().ToTitleCase();
-				bool flag3 = false;
+				bool flag = false;
 				foreach (int item in cats)
 				{
 					if (a.Contatin(item))
 					{
-						flag3 = true;
+						flag = true;
 						break;
 					}
 				}
-				b.SetFold(a.children.Count > 0, !flag3, delegate(UIList l)
+				b.SetFold(a.children.Count > 0, !flag, delegate(UIList l)
 				{
 					foreach (SourceCategory.Row child in a.children)
 					{
@@ -62,9 +62,9 @@ public class UIDistribution : EMono
 				b.buttonToggle.icon.SetActive(cats.Contains(a.uid));
 				b.buttonToggle.SetOnClick(delegate
 				{
-					bool flag4 = !cats.Contains(a.uid);
-					b.buttonToggle.icon.SetActive(flag4);
-					if (flag4)
+					bool flag2 = !cats.Contains(a.uid);
+					b.buttonToggle.icon.SetActive(flag2);
+					if (flag2)
 					{
 						cats.Add(a.uid);
 					}
@@ -72,7 +72,7 @@ public class UIDistribution : EMono
 					{
 						cats.Remove(a.uid);
 					}
-					SetAll(a.uid, flag4);
+					SetAll(a.uid, flag2);
 					SE.Click();
 				});
 			},

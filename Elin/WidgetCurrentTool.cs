@@ -97,8 +97,8 @@ public class WidgetCurrentTool : Widget
 		{
 			onRedraw = delegate(Thing a, ButtonGridDrag b, int i)
 			{
-				int num = i + 1;
-				b.subText2.SetText((num % 10).ToString() ?? "");
+				int num2 = i + 1;
+				b.subText2.SetText((num2 % 10).ToString() ?? "");
 				b.subText2.SetActive(extra.showShortcut);
 				b.index = i % 10 + 10 * page;
 				b.SetCardGrid(a, new InvOwnerHotbar(EMono.pc)
@@ -107,16 +107,16 @@ public class WidgetCurrentTool : Widget
 				});
 			}
 		};
-		for (int j = 0; j < maxSlots; j++)
+		for (int num = 0; num < maxSlots; num++)
 		{
 			list.Add(null);
 		}
 		list.onBeforeRedraw = delegate
 		{
 			dirty = false;
-			for (int k = 0; k < grid.Count; k++)
+			for (int i = 0; i < grid.Count; i++)
 			{
-				grid[k] = null;
+				grid[i] = null;
 			}
 			foreach (Thing thing in EMono.pc.things)
 			{
@@ -132,11 +132,11 @@ public class WidgetCurrentTool : Widget
 					}
 				}
 			}
-			for (int l = 0; l < list.buttons.Count; l++)
+			for (int j = 0; j < list.buttons.Count; j++)
 			{
-				UIList.ButtonPair value = list.buttons[l];
-				value.obj = grid[l + page * 10];
-				list.buttons[l] = value;
+				UIList.ButtonPair value = list.buttons[j];
+				value.obj = grid[j + page * 10];
+				list.buttons[j] = value;
 			}
 			buttonSwitchPage.mainText.text = (page + 1).ToString() ?? "";
 		};

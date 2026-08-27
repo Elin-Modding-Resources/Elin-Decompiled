@@ -76,7 +76,7 @@ public class TCOrbitChara : TCOrbit
 			{
 				emo = Emo2.hintEvent;
 			}
-			else if (owner.isRestocking && (!owner.IsPCParty || EMono._zone.IsPCFaction) && owner.trait.GetRestockedIcon() != 0 && !(EMono._zone is Zone_Dungeon) && !EMono._zone.IsInstance)
+			else if (owner.isRestocking && (!owner.IsPCParty || EMono._zone.IsPCFaction) && owner.trait.GetRestockedIcon() != Emo2.none && !(EMono._zone is Zone_Dungeon) && !EMono._zone.IsInstance)
 			{
 				emo = owner.trait.GetRestockedIcon();
 			}
@@ -126,7 +126,7 @@ public class TCOrbitChara : TCOrbit
 				}
 			}
 		}
-		if (EMono.player.currentHotItem.Thing != null && EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner) != 0)
+		if (EMono.player.currentHotItem.Thing != null && EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner) != Emo2.none)
 		{
 			emo = EMono.player.currentHotItem.Thing.trait.GetHeldEmo(owner);
 		}

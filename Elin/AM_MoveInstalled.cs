@@ -374,8 +374,8 @@ public class AM_MoveInstalled : AM_Designation<TaskMoveInstalled>
 			int desiredDir = target.TileType.GetDesiredDir(point, moldCard.dir);
 			if (desiredDir != -1)
 			{
-				int num2 = (moldCard.dir = desiredDir);
-				dir = num2;
+				int num = (moldCard.dir = desiredDir);
+				dir = num;
 			}
 			bool flag = !base.tileSelector.multisize || (base.tileSelector.firstInMulti && base.Summary.count == base.Summary.countValid);
 			moldCard.RenderMarker(point, active: false, result, flag, -1);

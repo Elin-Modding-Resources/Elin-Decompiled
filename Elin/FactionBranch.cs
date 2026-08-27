@@ -196,7 +196,7 @@ public class FactionBranch : EClass
 		int ration = 0;
 		foreach (Chara member in members)
 		{
-			if (member.memberType != 0 || member.IsPCParty || member.homeBranch == null || member.homeBranch.owner == null)
+			if (member.memberType != FactionMemberType.Default || member.IsPCParty || member.homeBranch == null || member.homeBranch.owner == null)
 			{
 				continue;
 			}
@@ -368,7 +368,7 @@ public class FactionBranch : EClass
 		if ((date.IsRealTime || num2 > 0) && !EClass.debug.enable && EClass.rnd(num5) == 0 && !EClass.pc.IsDeadOrSleeping && EClass._map.CountHostile() < num4)
 		{
 			int num7 = 1 + EClass.rnd(num2 + num3 + 1);
-			for (int i = 0; i < num7; i++)
+			for (int num8 = 0; num8 < num7; num8++)
 			{
 				Chara chara = EClass._zone.SpawnMob(null, SpawnSetting.HomeEnemy(DangerLV));
 				if (chara.IsAnimal && policies.IsActive(2709))
@@ -383,14 +383,14 @@ public class FactionBranch : EClass
 		}
 		if (EClass.rnd(5) == 0 && policies.IsActive(2810))
 		{
-			int num8 = 3 + lv + Evalue(2206) / 5 + Evalue(3702) * 2 + Evalue(2202) / 2;
-			num8 = num8 * (100 + Evalue(3702) * 20 + Evalue(2206)) / 100;
-			num8 = num8 * (100 + (int)Mathf.Sqrt(Evalue(2811)) * 3) / 100;
+			int num9 = 3 + lv + Evalue(2206) / 5 + Evalue(3702) * 2 + Evalue(2202) / 2;
+			num9 = num9 * (100 + Evalue(3702) * 20 + Evalue(2206)) / 100;
+			num9 = num9 * (100 + (int)Mathf.Sqrt(Evalue(2811)) * 3) / 100;
 			if (luckyMonth)
 			{
-				num8 = num8 * 2 + 5;
+				num9 = num9 * 2 + 5;
 			}
-			if (EClass._map.CountGuest() < num8)
+			if (EClass._map.CountGuest() < num9)
 			{
 				Chara chara2;
 				if (luckyMonth || (policies.IsActive(2822) && Mathf.Sqrt(Evalue(2822) / 2) + 5f >= (float)EClass.rnd(100)))
@@ -447,7 +447,7 @@ public class FactionBranch : EClass
 		}
 		if (date.hour == 5)
 		{
-			for (int j = 0; j < ((!luckyMonth) ? 1 : 2); j++)
+			for (int num10 = 0; num10 < ((!luckyMonth) ? 1 : 2); num10++)
 			{
 				DailyOutcome(date);
 			}
@@ -471,7 +471,7 @@ public class FactionBranch : EClass
 		{
 			foreach (Chara item2 in EClass._map.charas.Where((Chara c) => c.memberType == FactionMemberType.Guest).ToList())
 			{
-				for (int k = 0; k < 3; k++)
+				for (int num11 = 0; num11 < 3; num11++)
 				{
 					AI_Shopping.TryShop(item2, realtime: false);
 				}
@@ -501,7 +501,7 @@ public class FactionBranch : EClass
 	{
 		foreach (Chara member in members)
 		{
-			if (member.IsPCParty || !member.ExistsOnMap || member.memberType != 0)
+			if (member.IsPCParty || !member.ExistsOnMap || member.memberType != FactionMemberType.Default)
 			{
 				continue;
 			}
@@ -749,19 +749,19 @@ public class FactionBranch : EClass
 		Thing thing = null;
 		foreach (Chara member in members)
 		{
-			Chara i = member;
-			if (EClass.rnd(EClass.debug.enable ? 2 : (360 * members.Count)) == 0 && !i.IsPC && EClass.pc.faction.IsGlobalPolicyActive(2712) && i.things.Find((Thing t) => t.id == "panty" && t.c_idRefCard == i.id) == null && !i.things.IsFull())
+			Chara m = member;
+			if (EClass.rnd(EClass.debug.enable ? 2 : (360 * members.Count)) == 0 && !m.IsPC && EClass.pc.faction.IsGlobalPolicyActive(2712) && m.things.Find((Thing thing4) => thing4.id == "panty" && thing4.c_idRefCard == m.id) == null && !m.things.IsFull())
 			{
 				Thing thing2 = ThingGen.Create("panty");
-				thing2.c_idRefCard = i.id;
-				i.AddThing(thing2);
+				thing2.c_idRefCard = m.id;
+				m.AddThing(thing2);
 			}
-			if (i.IsPCParty || !i.ExistsOnMap)
+			if (m.IsPCParty || !m.ExistsOnMap)
 			{
 				continue;
 			}
-			i.RefreshWorkElements(elements);
-			if (i.memberType == FactionMemberType.Livestock)
+			m.RefreshWorkElements(elements);
+			if (m.memberType == FactionMemberType.Livestock)
 			{
 				if (thing == null)
 				{
@@ -771,37 +771,37 @@ public class FactionBranch : EClass
 				{
 					continue;
 				}
-				if (i.race.breeder >= EClass.rnd(2500 - (int)Mathf.Sqrt(Evalue(2827) * 100)))
+				if (m.race.breeder >= EClass.rnd(2500 - (int)Mathf.Sqrt(Evalue(2827) * 100)))
 				{
 					if (EClass.rnd(3) != 0)
 					{
-						Thing t2 = i.MakeEgg(date.IsRealTime, 1, date.IsRealTime);
+						Thing t = m.MakeEgg(date.IsRealTime, 1, date.IsRealTime);
 						if (!date.IsRealTime)
 						{
-							i.TryPutShared(t2);
+							m.TryPutShared(t);
 						}
 					}
 					else
 					{
-						Thing t3 = i.MakeMilk(date.IsRealTime, 1, date.IsRealTime);
+						Thing t2 = m.MakeMilk(date.IsRealTime, 1, date.IsRealTime);
 						if (!date.IsRealTime)
 						{
-							i.TryPutShared(t3);
+							m.TryPutShared(t2);
 						}
 					}
 				}
-				if (i.HaveFur())
+				if (m.HaveFur())
 				{
-					if (i.HasElement(1533))
+					if (m.HasElement(1533))
 					{
-						i.c_fur = 0;
+						m.c_fur = 0;
 					}
 					else
 					{
-						i.c_fur++;
-						if (EClass.rnd(4) == 0 && i.HasElement(1532))
+						m.c_fur++;
+						if (EClass.rnd(4) == 0 && m.HasElement(1532))
 						{
-							i.c_fur++;
+							m.c_fur++;
 						}
 					}
 				}
@@ -812,28 +812,28 @@ public class FactionBranch : EClass
 				}
 				continue;
 			}
-			foreach (Hobby item in i.ListHobbies())
+			foreach (Hobby item in m.ListHobbies())
 			{
 				GetOutcome(item);
 			}
-			foreach (Hobby item2 in i.ListWorks())
+			foreach (Hobby item2 in m.ListWorks())
 			{
 				GetOutcome(item2);
 			}
 			void GetOutcome(Hobby h)
 			{
-				int num3 = h.GetEfficiency(i) * GetProductBonus(i) / 100;
-				int num4 = h.GetLv(i);
+				int num3 = h.GetEfficiency(m) * GetProductBonus(m) / 100;
+				int num4 = h.GetLv(m);
 				int id = EClass.sources.elements.alias[h.source.skill].id;
-				if (!i.elements.HasBase(id))
+				if (!m.elements.HasBase(id))
 				{
-					i.elements.SetBase(id, 1);
+					m.elements.SetBase(id, 1);
 				}
-				i.ModExp(id, 100);
-				for (int j = 0; j < h.source.things.Length; j += 2)
+				m.ModExp(id, 100);
+				for (int i = 0; i < h.source.things.Length; i += 2)
 				{
-					string text = h.source.things[j];
-					int num5 = Mathf.Max(1, h.source.things[j + 1].ToInt() * num3 / 1000);
+					string text = h.source.things[i];
+					int num5 = Mathf.Max(1, h.source.things[i + 1].ToInt() * num3 / 1000);
 					int num6 = num5 / 1000;
 					if (num5 % 1000 > EClass.rnd(1000))
 					{
@@ -845,11 +845,11 @@ public class FactionBranch : EClass
 						{
 							if (text == "_milk")
 							{
-								i.MakeMilk(date.IsRealTime, num6);
+								m.MakeMilk(date.IsRealTime, num6);
 							}
 							else
 							{
-								Thing thing4 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[j], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
+								Thing thing4 = ((!text.StartsWith("#")) ? ThingGen.Create(h.source.things[i], -1, num4) : ThingGen.CreateFromCategory(text.Replace("#", ""), num4));
 								if (thing4 != null)
 								{
 									num6 *= thing4.trait.CraftNum;
@@ -887,7 +887,7 @@ public class FactionBranch : EClass
 										}
 										else
 										{
-											CraftUtil.MakeDish(thing4, num4 + 10, i);
+											CraftUtil.MakeDish(thing4, num4 + 10, m);
 											if (thing4.id == "lunch_dystopia")
 											{
 												flag = true;
@@ -900,14 +900,14 @@ public class FactionBranch : EClass
 									}
 									else
 									{
-										i.TryPutShared(thing4);
+										m.TryPutShared(thing4);
 									}
 								}
 							}
 						}
 						else
 						{
-							i.MakeEgg(date.IsRealTime, num6);
+							m.MakeEgg(date.IsRealTime, num6);
 						}
 					}
 				}
@@ -921,7 +921,7 @@ public class FactionBranch : EClass
 						{
 							if (member2.isDead && member2.CanRevive() && EClass.rnd(num3) > EClass.rnd(100))
 							{
-								Log("bNurse", i, member2);
+								Log("bNurse", m, member2);
 								member2.Revive(member2.pos, msg: true);
 								if (date.IsRealTime && member2.c_wasInPcParty)
 								{
@@ -940,7 +940,7 @@ public class FactionBranch : EClass
 				case "Chore":
 				case "Clean":
 				{
-					for (int k = 0; k < num3 / 2; k++)
+					for (int num8 = 0; num8 < num3 / 2; num8++)
 					{
 						Point randomPoint = EClass._map.bounds.GetRandomPoint();
 						if (randomPoint.HasDecal)
@@ -953,11 +953,11 @@ public class FactionBranch : EClass
 				case "TreasureHunt":
 					if (EClass.rnd(num3) > EClass.rnd(EClass.debug.enable ? 100 : 5000))
 					{
-						Thing thing5 = EClass._zone.TryGetThingFromSharedContainer((Thing t) => t.trait is TraitScrollMapTreasure);
+						Thing thing5 = EClass._zone.TryGetThingFromSharedContainer((Thing thing7) => thing7.trait is TraitScrollMapTreasure);
 						if (thing5 != null)
 						{
 							Thing thing6 = ThingGen.CreateTreasure("chest_treasure", thing5.LV);
-							i.TryPutShared(thing6);
+							m.TryPutShared(thing6);
 							thing5.Destroy();
 							WidgetPopText.Say("foundTreasure".lang(thing6.Name));
 						}
@@ -1059,7 +1059,7 @@ public class FactionBranch : EClass
 		int num4 = 50 + (int)Mathf.Sqrt(Evalue(2512)) * 5;
 		foreach (Chara member in members)
 		{
-			if (member.IsPC || member.memberType != 0)
+			if (member.IsPC || member.memberType != FactionMemberType.Default)
 			{
 				continue;
 			}
@@ -1456,7 +1456,7 @@ public class FactionBranch : EClass
 		c.hostility = Hostility.Ally;
 		c.enemy = null;
 		c.orgPos = null;
-		if (c.memberType != 0 && c.memberType != FactionMemberType.Livestock)
+		if (c.memberType != FactionMemberType.Default && c.memberType != FactionMemberType.Livestock)
 		{
 			c.memberType = FactionMemberType.Default;
 		}
@@ -1616,7 +1616,7 @@ public class FactionBranch : EClass
 		int num = 0;
 		foreach (Chara member in members)
 		{
-			if (member.memberType == type && (!onlyAlive || !member.isDead) && (type != 0 || member.trait.IsCountAsResident))
+			if (member.memberType == type && (!onlyAlive || !member.isDead) && (type != FactionMemberType.Default || member.trait.IsCountAsResident))
 			{
 				num++;
 			}
@@ -1695,12 +1695,12 @@ public class FactionBranch : EClass
 			return;
 		}
 		new List<Chara>(EClass.game.cards.globalCharas.Values).Shuffle();
-		for (int j = 0; j < num2; j++)
+		for (int num3 = 0; num3 < num2; num3++)
 		{
 			Chara chara = CharaGen.CreateFromFilter("c_neutral", ContentLV + Mathf.Min(EClass.player.stats.days, 10));
 			if (chara.isBackerContent || chara.source.quality != 0)
 			{
-				j--;
+				num3--;
 			}
 			else
 			{

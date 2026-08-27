@@ -120,9 +120,9 @@ public class LayerResource : ELayer
 			{
 				List<Thing> list = new List<Thing>();
 				list = ELayer._map.Stocked.ListThingsInCategory(cat);
-				for (int j = 0; j < list.Count; j++)
+				for (int i = 0; i < list.Count; i++)
 				{
-					list[j].SetSortVal(m);
+					list[i].SetSortVal(m);
 				}
 				list.Sort((Thing a, Thing b) => a.sortVal - b.sortVal);
 				int num = 0;

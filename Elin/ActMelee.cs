@@ -117,10 +117,10 @@ public class ActMelee : ActBaseAttack
 			return true;
 		}
 		Act.CC.renderer.PlayAnime(AnimeID.Attack, Act.TC);
-		bool intercepted = (Act.TC?.Chara?.RequestProtection(Act.CC, delegate(Chara c)
+		bool intercepted = Act.TC?.Chara?.RequestProtection(Act.CC, delegate(Chara c)
 		{
 			Act.TC = c;
-		})).GetValueOrDefault();
+		}) == true;
 		Act.TP.Set(Act.TC.pos);
 		CellEffect effect = Act.TP.cell.effect;
 		if (effect != null && effect.id == 6 && EClass.rnd(2) == 0)
@@ -217,7 +217,7 @@ public class ActMelee : ActBaseAttack
 					feint = GetWeaponEnc(623, addSelfEnc: true);
 					knockback = Act.CC.Evalue(603, ignoreGlobalElement: true);
 					mod_talisman = GetWeaponEnc(609, addSelfEnc: true);
-					List<Point> list2 = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
+					List<Point> list = EClass._map.ListPointsInLine(Act.CC.pos, Act.TC.pos, num2 / 10 + ((num2 % 10 > EClass.rnd(10)) ? 1 : 0) + 1);
 					if (w != null)
 					{
 						if (safety)
@@ -239,7 +239,7 @@ public class ActMelee : ActBaseAttack
 					{
 						if (num2 > 0)
 						{
-							foreach (Point item in list2)
+							foreach (Point item in list)
 							{
 								if (!item.Equals(orgPos))
 								{
@@ -267,21 +267,21 @@ public class ActMelee : ActBaseAttack
 						}
 						else if (num3 > 0)
 						{
-							List<Point> list = new List<Point>();
+							List<Point> list2 = new List<Point>();
 							Act.TP.ForeachNeighbor(delegate(Point p)
 							{
 								if (!p.Equals(Act.TP))
 								{
-									list.Add(p.Copy());
+									list2.Add(p.Copy());
 								}
 							});
-							list.Shuffle();
+							list2.Shuffle();
 							int num4 = 0;
-							for (int i = 0; i < 9 && num3 > EClass.rnd(10 + (int)Mathf.Pow(3f, i + 2)); i++)
+							for (int num5 = 0; num5 < 9 && num3 > EClass.rnd(10 + (int)Mathf.Pow(3f, num5 + 2)); num5++)
 							{
 								num4++;
 							}
-							foreach (Point item2 in list)
+							foreach (Point item2 in list2)
 							{
 								foreach (Card item3 in item2.ListCards().Copy())
 								{
@@ -312,48 +312,48 @@ public class ActMelee : ActBaseAttack
 				AttackProcess.Current.Prepare(Act.CC, w, Act.TC, Act.TP, count);
 				if (AllowParry && !Act.TC.IsDisabled && !Act.TC.IsRestrainedResident)
 				{
-					int num5 = Act.TC.Evalue(437);
-					if (num5 > 0 && !Act.CC.HasElement(439))
+					int num6 = Act.TC.Evalue(437);
+					if (num6 > 0 && !Act.CC.HasElement(439))
 					{
-						int num6 = EClass.curve(5 + num5 / 3, 10, 3, 70);
-						int ele2 = 123;
-						int num7 = Act.TC.Evalue(ele2);
+						int num7 = EClass.curve(5 + num6 / 3, 10, 3, 70);
+						int ele = 123;
+						int num8 = Act.TC.Evalue(ele);
 						if (Act.TC.isChara)
 						{
-							num6 += Act.TC.Evalue(1750) * 2 * ((Act.TC.Chara.body.GetAttackStyle() != AttackStyle.Shield) ? 1 : 2);
+							num7 += Act.TC.Evalue(1750) * 2 * ((Act.TC.Chara.body.GetAttackStyle() != AttackStyle.Shield) ? 1 : 2);
 							foreach (BodySlot slot2 in Act.TC.Chara.body.slots)
 							{
-								if (slot2.thing != null && slot2.thing.HasElement(437) && Act.TC.Evalue(slot2.thing.category.skill) > num7)
+								if (slot2.thing != null && slot2.thing.HasElement(437) && Act.TC.Evalue(slot2.thing.category.skill) > num8)
 								{
-									ele2 = slot2.thing.category.skill;
-									num7 = Act.TC.Evalue(ele2);
+									ele = slot2.thing.category.skill;
+									num8 = Act.TC.Evalue(ele);
 								}
 							}
 						}
-						num6 = num6 * 100 / (int)Mathf.Clamp((float)AttackProcess.Current.weaponSkill.Value / (float)num7 * 100f, 50f, 150f);
-						if (EClass.rnd(100) < num6)
+						num7 = num7 * 100 / (int)Mathf.Clamp((float)AttackProcess.Current.weaponSkill.Value / (float)num8 * 100f, 50f, 150f);
+						if (EClass.rnd(100) < num7)
 						{
 							Act.TC.Say((Act.TC.isChara && Act.TC.Chara.IsHostile()) ? "parry_enemy" : "parry");
 							Act.TC.PlaySound("parry");
-							Act.TC.ModExp(ele2, 20);
+							Act.TC.ModExp(ele, 20);
 							parried = true;
 							return;
 						}
 					}
 				}
-				int num8 = 1;
+				int num9 = 1;
 				if (chaser > 0)
 				{
-					for (int j = 0; j < 10; j++)
+					for (int i = 0; i < 10; i++)
 					{
-						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, j + 2)))
+						if (chaser > EClass.rnd(4 + (int)Mathf.Pow(4f, i + 2)))
 						{
-							num8++;
+							num9++;
 						}
 					}
 				}
 				bool flag = false;
-				for (int k = 0; k < num8; k++)
+				for (int j = 0; j < num9; j++)
 				{
 					if (!Act.CC.IsAliveInCurrentZone)
 					{
@@ -363,7 +363,7 @@ public class ActMelee : ActBaseAttack
 					{
 						break;
 					}
-					if (k > 0)
+					if (j > 0)
 					{
 						Act.CC.Say(Act.CC.IsHostile() ? "attack_chaser_enemy" : "attack_chaser");
 					}
@@ -464,9 +464,9 @@ public class ActMelee : ActBaseAttack
 				}
 				if (Act.TC.isChara && !Act.TC.HasCondition<ConGravity>() && Act.TC.ExistsOnMap && knockback > 0 && knockback * 2 + 15 > EClass.rnd(100) && !Act.TC.isRestrained)
 				{
-					Card.MoveResult num9 = Act.TC.Chara.TryMoveFrom(Act.CC.pos);
+					Card.MoveResult num10 = Act.TC.Chara.TryMoveFrom(Act.CC.pos);
 					bool flag3 = Act.CC.id == "tsunami";
-					if (num9 == Card.MoveResult.Success)
+					if (num10 == Card.MoveResult.Success)
 					{
 						Act.TC.renderer.SetFirst(first: true);
 						Act.TC.PlaySound("wave_hit_small");
@@ -493,15 +493,15 @@ public class ActMelee : ActBaseAttack
 			}
 			void AttackWithFlurry(Card _tc, Point _tp, float mtp, bool subAttack)
 			{
-				int num10 = 1;
+				int num6 = 1;
 				if (flurry > 0)
 				{
-					for (int l = 0; l < 10 && flurry > EClass.rnd(25 + (int)Mathf.Pow(5f, l + 2)); l++)
+					for (int i = 0; i < 10 && flurry > EClass.rnd(25 + (int)Mathf.Pow(5f, i + 2)); i++)
 					{
-						num10++;
+						num6++;
 					}
 				}
-				for (int m = 0; m < num10; m++)
+				for (int j = 0; j < num6; j++)
 				{
 					if (!Act.CC.IsAliveInCurrentZone)
 					{
@@ -515,7 +515,7 @@ public class ActMelee : ActBaseAttack
 					{
 						break;
 					}
-					if (m > 0)
+					if (j > 0)
 					{
 						Act.CC.Say(Act.CC.IsHostile() ? "attack_flurry_enemy" : "attack_flurry");
 					}

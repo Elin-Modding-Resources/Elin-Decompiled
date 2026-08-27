@@ -392,7 +392,7 @@ public class AIAct : Act
 		if (Enumerator == null)
 		{
 			Start();
-			if (status != 0)
+			if (status != Status.Running)
 			{
 				return status;
 			}

@@ -1504,8 +1504,8 @@ public class Chara : Card, IPathfindWalker
 
 	public Chara SetHostility(Hostility h)
 	{
-		Hostility hostility2 = (base.c_originalHostility = h);
-		this.hostility = hostility2;
+		Hostility hostility = (base.c_originalHostility = h);
+		this.hostility = hostility;
 		return this;
 	}
 
@@ -1634,14 +1634,14 @@ public class Chara : Card, IPathfindWalker
 			int _genLv = Mathf.Min(genLv, 100);
 			List<Tuple<string, int, int>> list = new List<Tuple<string, int, int>>();
 			string[] mainElement = source.mainElement;
-			for (int i = 0; i < mainElement.Length; i++)
+			for (int num2 = 0; num2 < mainElement.Length; num2++)
 			{
-				string[] array = mainElement[i].Split('/');
+				string[] array = mainElement[num2].Split('/');
 				SourceElement.Row row = EClass.sources.elements.alias["ele" + array[0]];
-				int num2 = source.LV * row.eleP / 100;
-				if (list.Count == 0 || num2 < _genLv || array[0] == bp.idEle)
+				int num3 = source.LV * row.eleP / 100;
+				if (list.Count == 0 || num3 < _genLv || array[0] == bp.idEle)
 				{
-					list.Add(new Tuple<string, int, int>(array[0], (array.Length > 1) ? int.Parse(array[1]) : 0, num2));
+					list.Add(new Tuple<string, int, int>(array[0], (array.Length > 1) ? int.Parse(array[1]) : 0, num3));
 				}
 			}
 			Tuple<string, int, int> tuple = list.RandomItemWeighted((Tuple<string, int, int> a) => 10000 / Mathf.Max(100 + (_genLv - a.Item3) * 25, 1));
@@ -1676,9 +1676,9 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (base.LV > 5 && race.id == "mutant")
 		{
-			for (int j = 0; j < Mathf.Min(1 + base.LV / 5, 20); j++)
+			for (int num4 = 0; num4 < Mathf.Min(1 + base.LV / 5, 20); num4++)
 			{
-				SetFeat(1644, j + 1);
+				SetFeat(1644, num4 + 1);
 			}
 		}
 		switch (id)
@@ -1878,7 +1878,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return false;
 		}
-		if (c.c_bossType != 0 || base.c_bossType != 0)
+		if (c.c_bossType != BossType.none || base.c_bossType != BossType.none)
 		{
 			return false;
 		}
@@ -2225,20 +2225,20 @@ public class Chara : Card, IPathfindWalker
 		{
 		case EditorTag.HostilityNeutral:
 		{
-			Hostility hostility2 = (base.c_originalHostility = Hostility.Neutral);
-			this.hostility = hostility2;
+			Hostility hostility = (base.c_originalHostility = Hostility.Neutral);
+			this.hostility = hostility;
 			break;
 		}
 		case EditorTag.HostilityEnemy:
 		{
-			Hostility hostility2 = (base.c_originalHostility = Hostility.Enemy);
-			this.hostility = hostility2;
+			Hostility hostility = (base.c_originalHostility = Hostility.Enemy);
+			this.hostility = hostility;
 			break;
 		}
 		case EditorTag.HostilityFriend:
 		{
-			Hostility hostility2 = (base.c_originalHostility = Hostility.Friend);
-			this.hostility = hostility2;
+			Hostility hostility = (base.c_originalHostility = Hostility.Friend);
+			this.hostility = hostility;
 			break;
 		}
 		case EditorTag.Male:
@@ -2521,8 +2521,8 @@ public class Chara : Card, IPathfindWalker
 			SetGlobal();
 			SetFaction(EClass.Home);
 		}
-		Hostility hostility2 = (base.c_originalHostility = Hostility.Ally);
-		this.hostility = hostility2;
+		Hostility hostility = (base.c_originalHostility = Hostility.Ally);
+		this.hostility = hostility;
 		orgPos = null;
 		base.c_summonDuration = 0;
 		base.isSummon = false;
@@ -2556,8 +2556,8 @@ public class Chara : Card, IPathfindWalker
 	public void MakeMinion(Chara _master, MinionType type = MinionType.Default)
 	{
 		UnmakeMinion();
-		Hostility hostility2 = (base.c_originalHostility = (_master.IsPCFaction ? Hostility.Ally : _master.hostility));
-		this.hostility = hostility2;
+		Hostility hostility = (base.c_originalHostility = (_master.IsPCFaction ? Hostility.Ally : _master.hostility));
+		this.hostility = hostility;
 		base.c_uidMaster = _master.uid;
 		base.c_minionType = type;
 		master = _master;
@@ -3254,7 +3254,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				foreach (Card item2 in pos.ListCards())
 				{
-					if (!item2.isThing || item2.placeState != 0 || item2.ignoreAutoPick)
+					if (!item2.isThing || item2.placeState != PlaceState.roaming || item2.ignoreAutoPick)
 					{
 						continue;
 					}
@@ -4121,7 +4121,7 @@ public class Chara : Card, IPathfindWalker
 					{
 						preventRegen = true;
 					}
-					if (condition.EmoIcon != 0 && condition.EmoIcon > emoIcon)
+					if (condition.EmoIcon != Emo2.none && condition.EmoIcon > emoIcon)
 					{
 						emoIcon = condition.EmoIcon;
 					}
@@ -4253,8 +4253,8 @@ public class Chara : Card, IPathfindWalker
 						}
 					}
 					Chara chara = null;
-					EloMap.Cell cell2 = EClass.scene.elomap.GetCell(EClass.pc.pos);
-					if (cell2 != null && (cell2.zone == null || (cell2.zone is Zone_Field && !cell2.zone.IsPCFaction)))
+					EloMap.Cell cell = EClass.scene.elomap.GetCell(EClass.pc.pos);
+					if (cell != null && (cell.zone == null || (cell.zone is Zone_Field && !cell.zone.IsPCFaction)))
 					{
 						foreach (Chara chara2 in EClass._map.charas)
 						{
@@ -4277,7 +4277,7 @@ public class Chara : Card, IPathfindWalker
 					}
 					else if (EClass.player.safeTravel <= 0)
 					{
-						if (cell2 != null && cell2.zone == null && !EClass.debug.ignoreEncounter)
+						if (cell != null && cell.zone == null && !EClass.debug.ignoreEncounter)
 						{
 							EloMap.TileInfo tileInfo = EClass.scene.elomap.GetTileInfo(EClass.pc.pos.eloX, EClass.pc.pos.eloY);
 							if (!tileInfo.shore)
@@ -4432,8 +4432,8 @@ public class Chara : Card, IPathfindWalker
 			}
 			ai.Tick();
 		}
-		Cell cell = base.Cell;
-		if (EClass._zone.IsUnderwater || (cell.IsTopWaterAndNoSnow && !cell.isFloating))
+		Cell cell2 = base.Cell;
+		if (EClass._zone.IsUnderwater || (cell2.IsTopWaterAndNoSnow && !cell2.isFloating))
 		{
 			AddCondition<ConWet>(50);
 			if (pos.IsHotSpring)
@@ -4441,18 +4441,18 @@ public class Chara : Card, IPathfindWalker
 				hygiene.Mod(2);
 			}
 		}
-		if (cell.sourceSurface.id == 20)
+		if (cell2.sourceSurface.id == 20)
 		{
 			AddCondition<ConBurning>();
 		}
-		if (IsPC && !EClass._zone.IsRegion && cell.CanSuffocate() && !EClass.debug.godMode && !HasElement(1252))
+		if (IsPC && !EClass._zone.IsRegion && cell2.CanSuffocate() && !EClass.debug.godMode && !HasElement(1252))
 		{
 			AddCondition<ConSuffocation>(800 / (100 + EvalueMax(200, -5) * 10), force: true);
 		}
 		CellEffect e;
-		if (cell.effect != null)
+		if (cell2.effect != null)
 		{
-			e = cell.effect;
+			e = cell2.effect;
 			switch (e.id)
 			{
 			case 1:
@@ -4497,11 +4497,11 @@ public class Chara : Card, IPathfindWalker
 		}
 		void ClearEffect()
 		{
-			EClass._map.SetLiquid(cell.x, cell.z, 0, 0);
+			EClass._map.SetLiquid(cell2.x, cell2.z, 0, 0);
 		}
 		void ProcEffect()
 		{
-			if (e.idEffect != 0)
+			if (e.idEffect != EffectId.None)
 			{
 				ActEffect.ProcAt(e.idEffect, e.power, e.isBlessed ? BlessedState.Blessed : (e.isCursed ? BlessedState.Cursed : BlessedState.Normal), this, this, new Point(pos), e.isHostileAct, new ActRef
 				{
@@ -5436,7 +5436,7 @@ public class Chara : Card, IPathfindWalker
 		{
 			return;
 		}
-		if (!IsPC && (!trait.CanJoinPartyResident || !trait.CanJoinParty || memberType != 0))
+		if (!IsPC && (!trait.CanJoinPartyResident || !trait.CanJoinParty || memberType != FactionMemberType.Default))
 		{
 			if (homeZone != null && EClass._zone != homeZone)
 			{
@@ -6145,7 +6145,7 @@ public class Chara : Card, IPathfindWalker
 		int num3 = 1;
 		Act.Cost cost = a.GetCost(this);
 		a.GetPower(this);
-		int i = 1;
+		int n = 1;
 		int num4 = 0;
 		bool flag = a.IsTargetHostileParty();
 		bool flag2 = ability.Has(a.id);
@@ -6160,40 +6160,40 @@ public class Chara : Card, IPathfindWalker
 		}
 		if (pt)
 		{
-			i = 0;
+			n = 0;
 			if (flag)
 			{
 				ForeachEnemy(delegate
 				{
-					i++;
+					n++;
 				});
 			}
 			else
 			{
 				ForeachParty(delegate
 				{
-					i++;
+					n++;
 				});
 			}
 		}
-		if (a is Spell && IsPC && a.vPotential < i && !flag2)
+		if (a is Spell && IsPC && a.vPotential < n && !flag2)
 		{
-			i = 1;
+			n = 1;
 			_pts.Clear();
 			_pts.Add(this);
 			pt = false;
 		}
 		int num5 = 100;
-		if (!a.TargetType.ForceParty && i > 1)
+		if (!a.TargetType.ForceParty && n > 1)
 		{
-			num5 = (IsPC ? (i * 100) : (50 + i * 50));
+			num5 = (IsPC ? (n * 100) : (50 + n * 50));
 		}
 		int num6 = cost.cost * num5 / 100;
 		if (cost.type == Act.CostType.MP && Evalue(483) > 0)
 		{
 			num6 = num6 * 100 / (100 + (int)Mathf.Sqrt(Evalue(483) * 10) * 3);
 		}
-		if (i == 0)
+		if (n == 0)
 		{
 			if (IsPC)
 			{
@@ -6254,24 +6254,24 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (IsPC)
 			{
-				_ = (i + 1) / 2;
-				if (a.vPotential < i && !flag2)
+				_ = (n + 1) / 2;
+				if (a.vPotential < n && !flag2)
 				{
 					Msg.Say("noSpellStock");
 					EInput.Consume();
 					return false;
 				}
-				if (num4 > 0 && (a.vPotential >= i * 2 || flag2))
+				if (num4 > 0 && (a.vPotential >= n * 2 || flag2))
 				{
 					if (!flag2)
 					{
-						a.vPotential -= i * 2;
+						a.vPotential -= n * 2;
 					}
 					num6 = num6 * (100 - num4 * 20) / 100;
 				}
 				else if (!flag2)
 				{
-					a.vPotential -= i;
+					a.vPotential -= n;
 				}
 				LayerAbility.SetDirty(a);
 			}
@@ -6337,7 +6337,7 @@ public class Chara : Card, IPathfindWalker
 			return true;
 		}
 		int spellExp = elements.GetSpellExp(this, a, num5);
-		if (EClass.rnd(100) >= CalcCastingChance(a, i) && !EClass.debug.godMode)
+		if (EClass.rnd(100) >= CalcCastingChance(a, n) && !EClass.debug.godMode)
 		{
 			Say("fizzle", this);
 			PlayEffect("fizzle");
@@ -6380,13 +6380,13 @@ public class Chara : Card, IPathfindWalker
 		}
 		else
 		{
-			for (int j = 0; j < num3; j++)
+			for (int num7 = 0; num7 < num3; num7++)
 			{
 				if (a.TargetType != TargetType.SelfParty && tc != null && !tc.IsAliveInCurrentZone)
 				{
 					break;
 				}
-				ActEffect.RapidCount = j;
+				ActEffect.RapidCount = num7;
 				ActEffect.RapidDelay = a.RapidDelay;
 				flag3 = a.Perform(this, tc, pos);
 			}
@@ -6418,18 +6418,18 @@ public class Chara : Card, IPathfindWalker
 		{
 			if (_pts.Count == 0)
 			{
-				for (int num11 = EClass._map.charas.Count - 1; num11 >= 0; num11--)
+				for (int num8 = EClass._map.charas.Count - 1; num8 >= 0; num8--)
 				{
-					Chara chara3 = EClass._map.charas[num11];
-					if (chara3 != this && CanSeeLos(chara3) && chara3.IsHostile(this))
+					Chara chara = EClass._map.charas[num8];
+					if (chara != this && CanSeeLos(chara) && chara.IsHostile(this))
 					{
-						_pts.Add(chara3);
+						_pts.Add(chara);
 					}
 				}
 			}
-			for (int num12 = _pts.Count - 1; num12 >= 0; num12--)
+			for (int num9 = _pts.Count - 1; num9 >= 0; num9--)
 			{
-				action(_pts[num12]);
+				action(_pts[num9]);
 			}
 		}
 		void ForeachParty(Action<Chara> action)
@@ -6438,9 +6438,9 @@ public class Chara : Card, IPathfindWalker
 			{
 				if (IsPCParty)
 				{
-					for (int num7 = EClass.pc.party.members.Count - 1; num7 >= 0; num7--)
+					for (int num8 = EClass.pc.party.members.Count - 1; num8 >= 0; num8--)
 					{
-						Chara chara = EClass.pc.party.members[num7];
+						Chara chara = EClass.pc.party.members[num8];
 						if (chara == this || chara.host != null || CanSeeLos(chara))
 						{
 							_pts.Add(chara);
@@ -6449,9 +6449,9 @@ public class Chara : Card, IPathfindWalker
 				}
 				else
 				{
-					for (int num8 = EClass._map.charas.Count - 1; num8 >= 0; num8--)
+					for (int num9 = EClass._map.charas.Count - 1; num9 >= 0; num9--)
 					{
-						Chara chara2 = EClass._map.charas[num8];
+						Chara chara2 = EClass._map.charas[num9];
 						if ((chara2 == this || (chara2.IsFriendOrAbove(this) && CanSeeLos(chara2))) && (chara2 == tc || _pts.Count < 3 || EClass.rnd(_pts.Count * _pts.Count) > 6))
 						{
 							_pts.Add(chara2);
@@ -6459,15 +6459,15 @@ public class Chara : Card, IPathfindWalker
 					}
 				}
 			}
-			int num9 = _pts.IndexOf(this);
-			if (num9 != -1)
+			int num10 = _pts.IndexOf(this);
+			if (num10 != -1)
 			{
-				_pts.RemoveAt(num9);
+				_pts.RemoveAt(num10);
 				_pts.Insert(0, this);
 			}
-			for (int num10 = _pts.Count - 1; num10 >= 0; num10--)
+			for (int num11 = _pts.Count - 1; num11 >= 0; num11--)
 			{
-				action(_pts[num10]);
+				action(_pts[num11]);
 			}
 		}
 	}
@@ -9056,7 +9056,7 @@ public class Chara : Card, IPathfindWalker
 			{
 				foreach (Chara chara in EClass._map.charas)
 				{
-					if (chara.IsPCFaction && chara.trait.ShopType != 0)
+					if (chara.IsPCFaction && chara.trait.ShopType != ShopType.None)
 					{
 						flag = true;
 					}
@@ -9715,7 +9715,7 @@ public class Chara : Card, IPathfindWalker
 	public void TickWork(VirtualDate date)
 	{
 		TimeTable.Span span = TimeTable.GetSpan(idTimeTable, date.hour);
-		if (span != TimeTable.Span.Work && span != 0)
+		if (span != TimeTable.Span.Work && span != TimeTable.Span.Free)
 		{
 			return;
 		}
@@ -9763,7 +9763,7 @@ public class Chara : Card, IPathfindWalker
 		workSummary.food += num2;
 		workSummary.knowledge += num3;
 		workSummary.material += num4;
-		int PerformWork(Hobby work, int idx, bool isHobby)
+		int PerformWork(Hobby work, int idx, bool flag)
 		{
 			if (idx >= work.source.resources.Length)
 			{
@@ -9772,7 +9772,7 @@ public class Chara : Card, IPathfindWalker
 			int num5 = work.source.resources[idx];
 			int num6 = num5;
 			num5 = Rand.Range(num5 * (100 - work.source.resources[idx]) / 100, num5);
-			num5 = num5 * (isHobby ? 50 : 100) * session.efficiency / 10000;
+			num5 = num5 * (flag ? 50 : 100) * session.efficiency / 10000;
 			if (num6 > 0 && num5 <= 0)
 			{
 				num5 = 1;
@@ -10034,7 +10034,8 @@ public class Chara : Card, IPathfindWalker
 		T condition = GetCondition<T>();
 		if (condition != null)
 		{
-			condition.value -= v;
+			int value = condition.value - v;
+			condition.value = value;
 			if (condition.value <= 0)
 			{
 				condition.Kill();
@@ -10586,10 +10587,10 @@ public class Chara : Card, IPathfindWalker
 			return false;
 		}
 		IEnumerable<SourceElement.Row> ie = EClass.sources.elements.rows.Where((SourceElement.Row a) => a.category == (ether ? "ether" : "mutation") && !a.tag.Contains("noRandomMutation"));
-		for (int i = 0; i < tries; i++)
+		for (int num = 0; num < tries; num++)
 		{
 			SourceElement.Row row = ie.RandomItem();
-			if (i == 0 && vec < 0 && ether && base.c_corruptionHistory != null && base.c_corruptionHistory.Count > 0)
+			if (num == 0 && vec < 0 && ether && base.c_corruptionHistory != null && base.c_corruptionHistory.Count > 0)
 			{
 				if (EClass.sources.elements.map.ContainsKey(base.c_corruptionHistory.LastItem()))
 				{
@@ -10602,7 +10603,7 @@ public class Chara : Card, IPathfindWalker
 				}
 			}
 			Element element = elements.GetElement(row.id);
-			int num = 1;
+			int num2 = 1;
 			if ((vec > 0 && ((row.id == 1563 && corruption < 300) || (row.id == 1562 && corruption < 1000 && base.IsPowerful))) || (vec < 0 && (element == null || element.Value <= 0)) || (vec > 0 && element != null && element.Value >= row.max))
 			{
 				continue;
@@ -10627,20 +10628,20 @@ public class Chara : Card, IPathfindWalker
 			bool flag2 = true;
 			if (element != null)
 			{
-				num = element.Value + ((vec != 0) ? vec : ((EClass.rnd(2) == 0) ? 1 : (-1)));
-				if (num > element.source.max)
+				num2 = element.Value + ((vec != 0) ? vec : ((EClass.rnd(2) == 0) ? 1 : (-1)));
+				if (num2 > element.source.max)
 				{
-					num = element.source.max - 1;
+					num2 = element.source.max - 1;
 				}
-				flag = (flag && num > element.Value) || (!flag && num < element.Value);
-				flag2 = num > element.Value;
+				flag = (flag && num2 > element.Value) || (!flag && num2 < element.Value);
+				flag2 = num2 > element.Value;
 				if (vec > 0 && !flag2)
 				{
 					continue;
 				}
 			}
 			Say(flag2 ? "mutation_gain" : "mutation_loose", this);
-			SetFeat(row.id, num);
+			SetFeat(row.id, num2);
 			if (flag2 && ether)
 			{
 				if (base.c_corruptionHistory == null)

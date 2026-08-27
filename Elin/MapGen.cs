@@ -768,12 +768,12 @@ public class MapGen : BaseMapGen
 				foreach (Point point2 in r.points)
 				{
 					map.SetObj(point2.x, point2.z, id);
-					int num = 3;
+					int num2 = 3;
 					if (EClass.rnd(6) == 0)
 					{
-						num++;
+						num2++;
 					}
-					point2.growth.SetStage(num);
+					point2.growth.SetStage(num2);
 				}
 				return false;
 			});
@@ -781,9 +781,9 @@ public class MapGen : BaseMapGen
 		if (crawlers != null)
 		{
 			Crawler[] array = crawlers;
-			for (int k = 0; k < array.Length; k++)
+			for (int num = 0; num < array.Length; num++)
 			{
-				array[k].Crawl(map);
+				array[num].Crawl(map);
 			}
 		}
 		MakeRoad();

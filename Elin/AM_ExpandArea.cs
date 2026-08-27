@@ -43,7 +43,7 @@ public class AM_ExpandArea : AM_BaseTileSelect
 			return base.HitTest(point, start);
 		}
 		HitResult hitResult = EClass._map.rooms.GetHitResult(point, start);
-		if (hitResult != 0)
+		if (hitResult != HitResult.Default)
 		{
 			return hitResult;
 		}

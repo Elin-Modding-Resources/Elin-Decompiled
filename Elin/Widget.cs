@@ -241,7 +241,7 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 		else
 		{
 			dragPanel.autoAnchor = config.userAnchor == RectPosition.Auto;
-			if (config.userAnchor != 0)
+			if (config.userAnchor != RectPosition.Auto)
 			{
 				_rect.SetAnchor(config.userAnchor);
 			}
@@ -630,21 +630,21 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 		if (!(this is WidgetSideScreen))
 		{
 			UIContextMenu uIContextMenu = m.AddChild("anchor");
-			foreach (RectPosition p2 in Util.EnumToList<RectPosition>())
+			foreach (RectPosition p in Util.EnumToList<RectPosition>())
 			{
-				uIContextMenu.AddButton(((config.userAnchor == p2) ? "★ " : "") + p2.ToString().lang(), delegate
+				uIContextMenu.AddButton(((config.userAnchor == p) ? "★ " : "") + p.ToString().lang(), delegate
 				{
-					SetAnchor(p2);
+					SetAnchor(p);
 					SE.ClickGeneral();
 					m.Hide();
 				});
 			}
 			uIContextMenu = m.AddChild("pivot");
-			foreach (RectPosition p in Util.EnumToList<RectPosition>())
+			foreach (RectPosition p2 in Util.EnumToList<RectPosition>())
 			{
-				uIContextMenu.AddButton(((config.pivot == p) ? "★ " : "") + p.ToString().lang(), delegate
+				uIContextMenu.AddButton(((config.pivot == p2) ? "★ " : "") + p2.ToString().lang(), delegate
 				{
-					SetPivot(p);
+					SetPivot(p2);
 					SE.ClickGeneral();
 					m.Hide();
 				});
@@ -673,7 +673,7 @@ public class Widget : EMono, IChangeResolution, ISkinRoot
 			}, -50f, 50f, isInt: true);
 			uIContextMenu2.AddButton("colorBG", delegate
 			{
-				if (EMono.ui.skins.skinSets[cfg.id].bgs[cfg.bg].redirect != 0)
+				if (EMono.ui.skins.skinSets[cfg.id].bgs[cfg.bg].redirect != SkinAssetRedirect.None)
 				{
 					SE.Beep();
 				}

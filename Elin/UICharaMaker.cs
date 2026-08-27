@@ -275,8 +275,8 @@ public class UICharaMaker : EMono
 				RerollBio(keepParent: true);
 			}, delegate(SourceRace.Row a, ItemGeneral item)
 			{
-				UIButton b2 = item.button1;
-				b2.SetTooltip(delegate(UITooltip t)
+				UIButton b = item.button1;
+				b.SetTooltip(delegate(UITooltip t)
 				{
 					ElementContainer elementContainer = new ElementContainer();
 					elementContainer.ApplyElementMap(EMono.pc.uid, SourceValueType.Chara, a.elementMap, 1);
@@ -297,7 +297,7 @@ public class UICharaMaker : EMono
 					TooltipManager.Instance.GetComponent<CanvasGroup>().DOFade(1f, 0.3f);
 					EMono.core.actionsNextFrame.Add(delegate
 					{
-						b2.ShowTooltipForced();
+						b.ShowTooltipForced();
 					});
 				}
 				first = false;
@@ -332,8 +332,8 @@ public class UICharaMaker : EMono
 				RerollBio(keepParent: true);
 			}, delegate(SourceJob.Row a, ItemGeneral item)
 			{
-				UIButton b2 = item.button1;
-				b2.SetTooltip(delegate(UITooltip t)
+				UIButton b = item.button1;
+				b.SetTooltip(delegate(UITooltip t)
 				{
 					ElementContainer elementContainer = new ElementContainer();
 					elementContainer.ApplyElementMap(EMono.pc.uid, SourceValueType.Chara, a.elementMap, 1);
@@ -353,7 +353,7 @@ public class UICharaMaker : EMono
 					TooltipManager.Instance.GetComponent<CanvasGroup>().DOFade(1f, 0.3f);
 					EMono.core.actionsNextFrame.Add(delegate
 					{
-						b2.ShowTooltipForced();
+						b.ShowTooltipForced();
 					});
 				}
 				first = false;

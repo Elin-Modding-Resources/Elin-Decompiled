@@ -1061,41 +1061,42 @@ public class Element : EClass
 	{
 		if (source.cost[0] == 0)
 		{
-			Act.Cost result = default(Act.Cost);
-			result.type = Act.CostType.None;
-			return result;
+			return new Act.Cost
+			{
+				type = Act.CostType.None
+			};
 		}
-		Act.Cost result2 = default(Act.Cost);
+		Act.Cost result = default(Act.Cost);
 		if (this is Spell)
 		{
-			result2.type = Act.CostType.MP;
+			result.type = Act.CostType.MP;
 			int num = EClass.curve(Value, 50, 10);
-			result2.cost = source.cost[0] * (100 + ((!source.tag.Contains("noCostInc")) ? (num * 3) : 0)) / 100;
+			result.cost = source.cost[0] * (100 + ((!source.tag.Contains("noCostInc")) ? (num * 3) : 0)) / 100;
 		}
 		else
 		{
-			result2.type = Act.CostType.SP;
-			result2.cost = source.cost[0];
+			result.type = Act.CostType.SP;
+			result.cost = source.cost[0];
 			switch (source.id)
 			{
 			case 6020:
-				result2.cost = Mathf.Min(c.stamina.max / 3 + 10, 30);
+				result.cost = Mathf.Min(c.stamina.max / 3 + 10, 30);
 				break;
 			case 6663:
 			case 6664:
 			case 6665:
 			{
 				int num2 = -2 + c.body.CountWeapons();
-				result2.cost += num2 * 2;
+				result.cost += num2 * 2;
 				break;
 			}
 			}
 		}
-		if (!c.IsPC && result2.cost > 2)
+		if (!c.IsPC && result.cost > 2)
 		{
-			result2.cost /= 2;
+			result.cost /= 2;
 		}
-		return result2;
+		return result;
 	}
 
 	public virtual int GetPower(Card c)

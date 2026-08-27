@@ -463,28 +463,28 @@ public class GameDate : Date
 			int uidZone = 0;
 			foreach (Thing thing2 in container_deliver.things)
 			{
-				int @int = thing2.GetInt(102);
-				if (@int != 0)
+				int num2 = thing2.GetInt(102);
+				if (num2 != 0)
 				{
-					uidZone = @int;
+					uidZone = num2;
 					thing2.SetInt(102);
 					break;
 				}
 			}
-			int num2 = 20;
+			int num3 = 20;
 			Thing thing = ThingGen.CreateCardboardBox(uidZone);
-			for (int num3 = container_deliver.things.Count - 1; num3 >= 0; num3--)
+			for (int num4 = container_deliver.things.Count - 1; num4 >= 0; num4--)
 			{
-				Thing c = container_deliver.things[num3];
+				Thing c = container_deliver.things[num4];
 				thing.AddCard(c);
-				num2 += 5;
+				num3 += 5;
 				if (thing.things.IsFull())
 				{
 					break;
 				}
 			}
 			EClass.world.SendPackage(thing);
-			Thing bill = ThingGen.CreateBill(num2, tax: false);
+			Thing bill = ThingGen.CreateBill(num3, tax: false);
 			EClass.pc.faction.TryPayBill(bill);
 		}
 	}
@@ -575,33 +575,33 @@ public class GameDate : Date
 		}
 		else
 		{
-			string id2 = "trash2";
+			string id = "trash2";
 			if (EClass.rnd(3) == 0)
 			{
-				id2 = "trash1";
+				id = "trash1";
 			}
 			if (EClass.rnd(3) == 0)
 			{
-				id2 = ((EClass.rnd(3) == 0) ? "529" : "1170");
+				id = ((EClass.rnd(3) == 0) ? "529" : "1170");
 			}
 			if (EClass.rnd(5) == 0)
 			{
-				id2 = "_poop";
+				id = "_poop";
 			}
 			if (EClass.rnd(100) == 0)
 			{
-				id2 = "goodness";
+				id = "goodness";
 				flag = false;
 			}
-			Add(id2, 1);
+			Add(id, 1);
 		}
 		if (!flag)
 		{
 			EClass.world.SendPackage(box);
 		}
-		void Add(string id, int num)
+		void Add(string id2, int num)
 		{
-			AddThing(ThingGen.Create(id), num);
+			AddThing(ThingGen.Create(id2), num);
 		}
 		void AddThing(Thing t, int num)
 		{

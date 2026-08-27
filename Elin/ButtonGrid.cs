@@ -288,7 +288,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 			if (c.IsIdentified)
 			{
 				BlessedState blessedState2 = c.blessedState;
-				if (blessedState2 != 0)
+				if (blessedState2 != BlessedState.Normal)
 				{
 					Attach("status_" + blessedState2);
 				}
@@ -339,7 +339,7 @@ public class ButtonGrid : UIButton, IMouseHint, IPrefImage
 			if (c.IsIdentified)
 			{
 				BlessedState blessedState = c.blessedState;
-				if (blessedState != 0)
+				if (blessedState != BlessedState.Normal)
 				{
 					Attach("status_" + blessedState);
 				}

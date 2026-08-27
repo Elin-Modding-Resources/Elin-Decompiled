@@ -449,12 +449,12 @@ public class UIInventory : EMono
 
 	public void RefreshMenu()
 	{
-		UIButton b2 = window.buttonSort;
+		UIButton b = window.buttonSort;
 		Window.SaveData data = window.saveData;
-		if ((bool)b2)
+		if ((bool)b)
 		{
-			b2.onClick.RemoveAllListeners();
-			b2.onClick.AddListener(delegate
+			b.onClick.RemoveAllListeners();
+			b.onClick.AddListener(delegate
 			{
 				UIContextMenu uIContextMenu = EMono.ui.CreateContextMenuInteraction();
 				uIContextMenu.layoutGroup.childAlignment = TextAnchor.UpperLeft;
@@ -510,10 +510,10 @@ public class UIInventory : EMono
 					UIContextMenu uIContextMenu3 = uIContextMenu.AddChild("catFilterType", TextAnchor.UpperRight);
 					foreach (Window.SaveData.CategoryType item in Util.EnumToList<Window.SaveData.CategoryType>())
 					{
-						Window.SaveData.CategoryType _c2 = item;
-						uIContextMenu3.AddButton(((data.category == item) ? "context_checker".lang() : "") + ("catFilterType_" + _c2).lang(), delegate
+						Window.SaveData.CategoryType _c = item;
+						uIContextMenu3.AddButton(((data.category == item) ? "context_checker".lang() : "") + ("catFilterType_" + _c).lang(), delegate
 						{
-							data.category = _c2;
+							data.category = _c;
 							uiMagic.idCat = "";
 							list.Redraw();
 							SE.Click();
@@ -521,42 +521,42 @@ public class UIInventory : EMono
 					}
 				}
 				Card con2 = owner.Container;
-				bool flag4 = (!con2.isNPCProperty && !con2.isChara && (con2.trait is TraitShippingChest || (con2.GetRoot() is Zone && EMono._zone.IsPCFaction) || con2.GetRootCard() == EMono.pc)) || EMono._zone is Zone_Tent;
+				bool flag2 = (!con2.isNPCProperty && !con2.isChara && (con2.trait is TraitShippingChest || (con2.GetRoot() is Zone && EMono._zone.IsPCFaction) || con2.GetRootCard() == EMono.pc)) || EMono._zone is Zone_Tent;
 				if (con2.IsPC)
 				{
-					flag4 = false;
+					flag2 = false;
 				}
 				if (con2.trait is TraitChestMerchant)
 				{
-					flag4 = false;
+					flag2 = false;
 				}
-				UIContextMenu dis2;
-				Transform dist2;
-				Transform distAdv2;
-				if (flag4)
+				UIContextMenu dis;
+				Transform dist;
+				Transform distAdv;
+				if (flag2)
 				{
-					dis2 = uIContextMenu.AddChild("distribution", TextAnchor.UpperRight);
-					dis2.AddSlider("priority_hint", (float a) => a.ToString() ?? "", data.priority, delegate(float a)
+					dis = uIContextMenu.AddChild("distribution", TextAnchor.UpperRight);
+					dis.AddSlider("priority_hint", (float a) => a.ToString() ?? "", data.priority, delegate(float a)
 					{
 						data.priority = (int)a;
 					}, -5f, 20f, isInt: true, hideOther: false);
-					dist2 = ShowDistribution(dis2, data);
-					distAdv2 = ShowAdvDistribution(dis2, data);
+					dist = ShowDistribution(dis, data);
+					distAdv = ShowAdvDistribution(dis, data);
 					RefreshDist();
 					if (con2.trait.IsFridge || EMono.core.config.game.advancedMenu)
 					{
-						dis2.AddToggle("onlyRottable", data.onlyRottable, delegate(bool a)
+						dis.AddToggle("onlyRottable", data.onlyRottable, delegate(bool a)
 						{
 							data.onlyRottable = a;
 							SE.ClickOk();
 						});
 					}
-					dis2.AddToggle("noRotten", data.noRotten, delegate(bool a)
+					dis.AddToggle("noRotten", data.noRotten, delegate(bool a)
 					{
 						data.noRotten = a;
 						SE.ClickOk();
 					});
-					dis2.AddToggle("advDistribution", data.advDistribution, delegate(bool a)
+					dis.AddToggle("advDistribution", data.advDistribution, delegate(bool a)
 					{
 						data.advDistribution = a;
 						RefreshDist();
@@ -564,7 +564,7 @@ public class UIInventory : EMono
 					});
 					if (EMono.core.config.game.advancedMenu)
 					{
-						dis2.AddButton(data.filter.IsEmpty() ? "distFilter" : "distFilter2".lang(data.filter), delegate
+						dis.AddButton(data.filter.IsEmpty() ? "distFilter" : "distFilter2".lang(data.filter), delegate
 						{
 							Dialog.InputName("distFilter3", data.filter.IsEmpty(""), delegate(bool cancel, string s)
 							{
@@ -578,30 +578,30 @@ public class UIInventory : EMono
 					}
 				}
 				Window.SaveData data2;
-				UIContextMenu dis;
-				Transform dist;
-				Transform distAdv;
+				UIContextMenu dis2;
+				Transform dist2;
+				Transform distAdv2;
 				if (con2.IsPC && EMono.core.config.game.advancedMenu)
 				{
 					data2 = EMono.player.dataPick;
-					dis = uIContextMenu.AddChild("autopick", TextAnchor.UpperRight);
-					dist = ShowDistribution(dis, data2);
-					distAdv = ShowAdvDistribution(dis, data2);
-					RefreshDist();
-					dis.AddToggle("noRotten", data2.noRotten, delegate(bool a)
+					dis2 = uIContextMenu.AddChild("autopick", TextAnchor.UpperRight);
+					dist2 = ShowDistribution(dis2, data2);
+					distAdv2 = ShowAdvDistribution(dis2, data2);
+					RefreshDist2();
+					dis2.AddToggle("noRotten", data2.noRotten, delegate(bool a)
 					{
 						data2.noRotten = a;
 						SE.ClickOk();
 					});
-					dis.AddToggle("advDistribution", data2.advDistribution, delegate(bool a)
+					dis2.AddToggle("advDistribution", data2.advDistribution, delegate(bool a)
 					{
 						data2.advDistribution = a;
-						RefreshDist();
+						RefreshDist2();
 						SE.ClickOk();
 					});
 					if (EMono.core.config.game.advancedMenu)
 					{
-						dis.AddButton(data2.filter.IsEmpty() ? "distFilter" : "distFilter2".lang(data2.filter), delegate
+						dis2.AddButton(data2.filter.IsEmpty() ? "distFilter" : "distFilter2".lang(data2.filter), delegate
 						{
 							Dialog.InputName("distFilter3", data2.filter.IsEmpty(""), delegate(bool cancel, string s)
 							{
@@ -625,9 +625,9 @@ public class UIInventory : EMono
 						AutodumpFlag.none
 					})
 					{
-						string text2 = ((data.autodump == item2) ? "context_checker".lang() : "");
+						string text = ((data.autodump == item2) ? "context_checker".lang() : "");
 						AutodumpFlag _e = item2;
-						UIButton uIButton = uIContextMenu4.AddButton(text2 + ("dump_" + item2).lang(), delegate
+						UIButton uIButton = uIContextMenu4.AddButton(text + ("dump_" + item2).lang(), delegate
 						{
 							SE.Click();
 							data.autodump = _e;
@@ -696,11 +696,11 @@ public class UIInventory : EMono
 					{
 						uIContextMenu5.AddButton("changeName", delegate
 						{
-							Dialog.InputName("dialogChangeName", con2.c_altName.IsEmpty(""), delegate(bool cancel, string text)
+							Dialog.InputName("dialogChangeName", con2.c_altName.IsEmpty(""), delegate(bool cancel, string c_altName)
 							{
 								if (!cancel)
 								{
-									con2.c_altName = text;
+									con2.c_altName = c_altName;
 								}
 							}, Dialog.InputType.Item);
 						});
@@ -734,25 +734,25 @@ public class UIInventory : EMono
 					RefreshGrid();
 					SE.ClickOk();
 				});
-				uIContextMenu6.AddSlider("size", (float a) => a.ToString() ?? "", data.size, delegate(float b)
+				uIContextMenu6.AddSlider("size", (float a) => a.ToString() ?? "", data.size, delegate(float num)
 				{
-					data.size = (int)b;
+					data.size = (int)num;
 					RefreshGrid();
 				}, -25f, 25f, isInt: true, hideOther: false);
 				if (EMono.core.config.game.advancedMenu && !IsMagicChest)
 				{
-					uIContextMenu6.AddSlider("columns", (float a) => a.ToString() ?? "", data.columns, delegate(float b)
+					uIContextMenu6.AddSlider("columns", (float a) => a.ToString() ?? "", data.columns, delegate(float num)
 					{
-						data.columns = (int)b;
+						data.columns = (int)num;
 						RefreshGrid();
 					}, 0f, 20f, isInt: true, hideOther: false);
 				}
 				uIContextMenu6.AddButton("colorGrid", delegate
 				{
-					EMono.ui.AddLayer<LayerColorPicker>().SetColor(data.color, InvStyle.gridColor, delegate(PickerState state, Color _c)
+					EMono.ui.AddLayer<LayerColorPicker>().SetColor(data.color, InvStyle.gridColor, delegate(PickerState state, Color color)
 					{
-						data.color = _c;
-						list.bgGrid.color = _c;
+						data.color = color;
+						list.bgGrid.color = color;
 						if (data.color.a == 0)
 						{
 							list.bgGrid.color = InvStyle.gridColor;
@@ -810,9 +810,9 @@ public class UIInventory : EMono
 							item4.invs[0].RefreshGrid();
 						}
 					});
-					uIContextMenu8.AddSlider("iconSize", (float a) => a.ToString() ?? "", EMono.game.config.gridIconSize, delegate(float b)
+					uIContextMenu8.AddSlider("iconSize", (float a) => a.ToString() ?? "", EMono.game.config.gridIconSize, delegate(float num)
 					{
-						EMono.game.config.gridIconSize = (int)b;
+						EMono.game.config.gridIconSize = (int)num;
 						RefreshGrid();
 					}, 100f, 150f, isInt: true, hideOther: false);
 				}
@@ -820,53 +820,53 @@ public class UIInventory : EMono
 				uIContextMenu.hideOnMouseLeave = false;
 				void RefreshDist()
 				{
-					dist2.SetActive(!data.advDistribution);
-					distAdv2.SetActive(data.advDistribution);
-					dis2.layoutGroup.RebuildLayout();
-				}
-				void RefreshDist()
-				{
-					dist.SetActive(!data2.advDistribution);
-					distAdv.SetActive(data2.advDistribution);
+					dist.SetActive(!data.advDistribution);
+					distAdv.SetActive(data.advDistribution);
 					dis.layoutGroup.RebuildLayout();
+				}
+				void RefreshDist2()
+				{
+					dist2.SetActive(!data2.advDistribution);
+					distAdv2.SetActive(data2.advDistribution);
+					dis2.layoutGroup.RebuildLayout();
 				}
 			});
 		}
-		b2 = window.buttonQuickSort;
-		if ((bool)b2)
+		b = window.buttonQuickSort;
+		if ((bool)b)
 		{
-			b2.onClick.RemoveAllListeners();
-			b2.onClick.AddListener(delegate
+			b.onClick.RemoveAllListeners();
+			b.onClick.AddListener(delegate
 			{
 				Sort();
 				SE.Click();
 			});
 		}
-		b2 = window.buttonExtra;
-		if ((bool)b2)
+		b = window.buttonExtra;
+		if ((bool)b)
 		{
-			b2.SetActive(owner.Container.IsPC);
-			b2.onClick.RemoveAllListeners();
-			b2.onClick.AddListener(delegate
+			b.SetActive(owner.Container.IsPC);
+			b.onClick.RemoveAllListeners();
+			b.onClick.AddListener(delegate
 			{
 				TaskDump.TryPerform();
 			});
 		}
-		b2 = window.buttonShared;
-		if ((bool)b2)
+		b = window.buttonShared;
+		if ((bool)b)
 		{
 			Card con = owner.Container;
 			bool flag = !con.isChara && ((con.IsInstalled && EMono._zone.IsPCFaction) || owner.owner.IsPC);
-			b2.SetActive(flag);
+			b.SetActive(flag);
 			if (flag)
 			{
 				RefreshShareButton();
-				b2.SetOnClick(delegate
+				b.SetOnClick(delegate
 				{
-					bool flag3 = data.sharedType == ContainerSharedType.Shared;
+					bool flag2 = data.sharedType == ContainerSharedType.Shared;
 					SE.ClickOk();
-					Msg.Say("changePermission", con, (flag3 ? "stPersonal" : "stShared").lang());
-					data.sharedType = ((!flag3) ? ContainerSharedType.Shared : ContainerSharedType.Personal);
+					Msg.Say("changePermission", con, (flag2 ? "stPersonal" : "stShared").lang());
+					data.sharedType = ((!flag2) ? ContainerSharedType.Shared : ContainerSharedType.Personal);
 					RefreshShareButton();
 				});
 			}
@@ -933,9 +933,9 @@ public class UIInventory : EMono
 		void RefreshShareButton()
 		{
 			bool flag2 = data.sharedType == ContainerSharedType.Shared;
-			b2.image.sprite = (flag2 ? EMono.core.refs.icons.shared : EMono.core.refs.icons.personal);
-			b2.tooltip.lang = (flag2 ? "hintShared" : "hintPrivate");
-			b2.ShowTooltipForced();
+			b.image.sprite = (flag2 ? EMono.core.refs.icons.shared : EMono.core.refs.icons.personal);
+			b.tooltip.lang = (flag2 ? "hintShared" : "hintPrivate");
+			b.ShowTooltipForced();
 		}
 	}
 
@@ -955,12 +955,12 @@ public class UIInventory : EMono
 			Refresh();
 			SE.ClickOk();
 		});
-		foreach (ContainerFlag f2 in obj)
+		foreach (ContainerFlag f in obj)
 		{
-			SourceCategory.Row row = EMono.sources.categories.map[f2.ToString()];
-			items.Add(dis.AddToggle(row.GetName(), !data.flag.HasFlag(f2), delegate(bool a)
+			SourceCategory.Row row = EMono.sources.categories.map[f.ToString()];
+			items.Add(dis.AddToggle(row.GetName(), !data.flag.HasFlag(f), delegate(bool a)
 			{
-				SetOn(f2, !a);
+				SetOn(f, !a);
 				Refresh();
 				SE.ClickOk();
 			}));
@@ -985,15 +985,15 @@ public class UIInventory : EMono
 			}
 			itemAll.toggle.SetIsOnWithoutNotify(isOnWithoutNotify);
 		}
-		void SetOn(ContainerFlag f, bool on)
+		void SetOn(ContainerFlag containerFlag, bool on)
 		{
-			if (!on && data.flag.HasFlag(f))
+			if (!on && data.flag.HasFlag(containerFlag))
 			{
-				data.flag &= ~f;
+				data.flag &= ~containerFlag;
 			}
-			else if (on && !data.flag.HasFlag(f))
+			else if (on && !data.flag.HasFlag(containerFlag))
 			{
-				data.flag |= f;
+				data.flag |= containerFlag;
 			}
 		}
 	}
@@ -1112,8 +1112,8 @@ public class UIInventory : EMono
 			{
 				_ = a.Name;
 				bool flag = mode == Mode.Buy || mode == Mode.Sell || mode == Mode.Identify;
-				int num2 = ((destNum != -1) ? 1 : a.Num);
-				int cost = (flag ? (a.GetPrice(CurrencyType, mode == Mode.Sell) * num2) : 0);
+				int num = ((destNum != -1) ? 1 : a.Num);
+				int cost = (flag ? (a.GetPrice(CurrencyType, mode == Mode.Sell) * num) : 0);
 				bool canPay = cost < EMono.pc.GetCurrency(IDCurrency);
 				if (mode == Mode.Identify)
 				{
@@ -1195,14 +1195,14 @@ public class UIInventory : EMono
 			Vector2 cellSize = style.gridSize * (100 + window.saveData.size) / 100f;
 			g.cellSize = cellSize;
 			GridLayoutGroup gridLayoutGroup = g;
-			bool flag2 = (component.enabled = true);
-			gridLayoutGroup.enabled = flag2;
+			bool flag = (component.enabled = true);
+			gridLayoutGroup.enabled = flag;
 		}
 		else
 		{
 			GridLayoutGroup gridLayoutGroup2 = g;
-			bool flag2 = (component.enabled = false);
-			gridLayoutGroup2.enabled = flag2;
+			bool flag = (component.enabled = false);
+			gridLayoutGroup2.enabled = flag;
 			list.Rect().sizeDelta = style.sizeContainer;
 		}
 		list.Clear();
@@ -1228,8 +1228,8 @@ public class UIInventory : EMono
 					{
 						b.Rect().anchoredPosition = new Vector2(a.posInvX, a.posInvY);
 					}
-					float num3 = 0.01f * (float)EMono.game.config.gridIconSize;
-					b.icon.Rect().localScale = new Vector3(num3, num3, 1f);
+					float num = 0.01f * (float)EMono.game.config.gridIconSize;
+					b.icon.Rect().localScale = new Vector3(num, num, 1f);
 					b.Rect().sizeDelta = b.icon.rectTransform.sizeDelta;
 				}
 				if (flag4)
@@ -1268,18 +1268,18 @@ public class UIInventory : EMono
 				{
 					if (IsMagicChest)
 					{
-						for (int k = 0; k < owner.Container.things.GridSize; k++)
+						for (int i = 0; i < owner.Container.things.GridSize; i++)
 						{
-							list.Add(owner.Things[k]);
+							list.Add(owner.Things[i]);
 						}
 					}
 					else
 					{
 						int count = owner.Things.Count;
-						int num2 = (int)Mathf.Ceil(count / g.constraintCount + ((count % g.constraintCount != 0) ? 1 : 0)) * g.constraintCount;
-						for (int l = 0; l < num2; l++)
+						int num = (int)Mathf.Ceil(count / g.constraintCount + ((count % g.constraintCount != 0) ? 1 : 0)) * g.constraintCount;
+						for (int j = 0; j < num; j++)
 						{
-							list.Add((l < count) ? owner.Things[l] : null);
+							list.Add((j < count) ? owner.Things[j] : null);
 						}
 					}
 				}
@@ -1333,11 +1333,11 @@ public class UIInventory : EMono
 			if (UseGrid)
 			{
 				UIList uIList = list;
-				for (int j = 0; j < uIList.buttons.Count; j++)
+				for (int i = 0; i < uIList.buttons.Count; i++)
 				{
-					UIList.ButtonPair value = uIList.buttons[j];
-					value.obj = ((j < owner.Container.things.grid.Count) ? owner.Container.things.grid[j] : null);
-					uIList.buttons[j] = value;
+					UIList.ButtonPair value = uIList.buttons[i];
+					value.obj = ((i < owner.Container.things.grid.Count) ? owner.Container.things.grid[i] : null);
+					uIList.buttons[i] = value;
 				}
 			}
 		};

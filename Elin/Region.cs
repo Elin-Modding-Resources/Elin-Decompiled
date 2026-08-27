@@ -30,10 +30,10 @@ public class Region : Zone
 	{
 		children.ForeachReverse(delegate(Spatial _z)
 		{
-			Zone zone2 = _z as Zone;
-			if (zone2.CanDestroy())
+			Zone zone = _z as Zone;
+			if (zone.CanDestroy())
 			{
-				zone2.Destroy();
+				zone.Destroy();
 			}
 		});
 		children.ForeachReverse(delegate(Spatial _z)

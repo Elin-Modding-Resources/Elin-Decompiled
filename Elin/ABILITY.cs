@@ -338,7 +338,7 @@ public class Ability : Act
 
 	public override long GetSourceValue(long v, int lv, SourceValueType type)
 	{
-		if (type != 0)
+		if (type != SourceValueType.Chara)
 		{
 			return base.GetSourceValue(v, lv, type);
 		}

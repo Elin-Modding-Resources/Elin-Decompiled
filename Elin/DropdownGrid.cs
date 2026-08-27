@@ -66,11 +66,11 @@ public class DropdownGrid : EMono
 				a.SetButton(b);
 			}
 		};
-		for (int j = 0; j < slots; j++)
+		for (int num = 0; num < slots; num++)
 		{
-			if (j < items.Count)
+			if (num < items.Count)
 			{
-				list.Add(items[j]);
+				list.Add(items[num]);
 			}
 			else
 			{
@@ -109,10 +109,10 @@ public class DropdownGrid : EMono
 				{
 					bool flag = false;
 					List<int> list = EMono.player.recipes.lastIngredients.TryGetValue(recipe.id);
-					int num = recipe.ingredients.IndexOf(ingredient);
-					if (num != -1 && list != null && list.Count > num)
+					int num2 = recipe.ingredients.IndexOf(ingredient);
+					if (num2 != -1 && list != null && list.Count > num2)
 					{
-						int uid = list[num];
+						int uid = list[num2];
 						if (uid != 0)
 						{
 							Thing thing = EMono.pc.things.Find((Thing t) => t.uid == uid) ?? EMono._map.Stocked.Find(uid);
@@ -144,12 +144,12 @@ public class DropdownGrid : EMono
 						{
 							if (ingredient.thing == null)
 							{
-								int num2 = lastMats.TryGetValue(recipe.id, -1);
-								if (num2 != -1)
+								int num3 = lastMats.TryGetValue(recipe.id, -1);
+								if (num3 != -1)
 								{
 									foreach (Thing item in things)
 									{
-										if (item.material.id == num2 && item.Num >= ingredient.req)
+										if (item.material.id == num3 && item.Num >= ingredient.req)
 										{
 											ingredient.SetThing(item);
 											break;
@@ -157,7 +157,7 @@ public class DropdownGrid : EMono
 									}
 									if (ingredient.thing == null && EMono.debug.godBuild)
 									{
-										Thing thing3 = ThingGen.Create(ingredient.id, num2).SetNum(999);
+										Thing thing3 = ThingGen.Create(ingredient.id, num3).SetNum(999);
 										EMono.pc.AddThing(thing3);
 										ingredient.SetThing(thing3);
 									}
@@ -224,13 +224,13 @@ public class DropdownGrid : EMono
 					{
 						return null;
 					}
-					int num3 = 0;
+					int num4 = 0;
 					Thing result = null;
 					foreach (Thing item4 in things)
 					{
-						if (item4.Num > num3)
+						if (item4.Num > num4)
 						{
-							num3 = item4.Num;
+							num4 = item4.Num;
 							result = item4;
 						}
 					}
@@ -242,11 +242,11 @@ public class DropdownGrid : EMono
 				b.SetIngredient(recipe, a);
 			}
 		};
-		for (int j = 0; j < slots; j++)
+		for (int num = 0; num < slots; num++)
 		{
-			if (j < recipe.ingredients.Count)
+			if (num < recipe.ingredients.Count)
 			{
-				list.Add(recipe.ingredients[j]);
+				list.Add(recipe.ingredients[num]);
 				continue;
 			}
 			list.Add(new Recipe.Ingredient

@@ -134,16 +134,16 @@ public class Lot : EClass
 		{
 			if (board.data == null)
 			{
-				TraitHouseBoard.Data data2 = (board.data = new TraitHouseBoard.Data());
+				TraitHouseBoard.Data data = (board.data = new TraitHouseBoard.Data());
 				CoreRef.DefaultRoof defaultRoof = EClass.core.refs.defaultRoofs[EClass.sources.blocks.map[num2 / 1000].roof];
-				data2.height = (fullblock ? 1 : 2);
-				data2.heightFix = (fullblock ? 40 : 0);
-				data2.reverse = EClass.rnd(2) == 0;
-				data2.idRoofStyle = ((!EClass._map.IsIndoor && flag) ? 2 : 0);
-				data2.idBlock = defaultRoof.idBlock;
-				data2.idRamp = defaultRoof.idRamp;
+				data.height = (fullblock ? 1 : 2);
+				data.heightFix = (fullblock ? 40 : 0);
+				data.reverse = EClass.rnd(2) == 0;
+				data.idRoofStyle = ((!EClass._map.IsIndoor && flag) ? 2 : 0);
+				data.idBlock = defaultRoof.idBlock;
+				data.idRamp = defaultRoof.idRamp;
 				SourceMaterial.Row row = EClass.sources.materials.map[num2 % 1000];
-				data2.colRoof = IntColor.ToInt(row.matColor);
+				data.colRoof = IntColor.ToInt(row.matColor);
 			}
 			RefreshData(board.data);
 		}

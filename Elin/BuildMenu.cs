@@ -582,10 +582,10 @@ public class BuildMenu : EMono
 						counts[item.recipeCat]++;
 						if (!(item.recipeCat != cat))
 						{
-							for (int k = 0; k < ((item.row.skins != null) ? item.row.skins.Length : 0) + 1; k++)
+							for (int j = 0; j < ((item.row.skins != null) ? item.row.skins.Length : 0) + 1; j++)
 							{
 								Recipe recipe = Recipe.Create(item);
-								recipe.idSkin = k;
+								recipe.idSkin = j;
 								list.Add(recipe);
 							}
 						}

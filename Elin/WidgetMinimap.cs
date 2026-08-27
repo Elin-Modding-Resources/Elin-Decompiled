@@ -266,12 +266,13 @@ public class WidgetMinimap : Widget, IPointerDownHandler, IEventSystemHandler, I
 		float x = (float)num / (float)Size - 0.5f;
 		float y = (float)num2 / (float)Size - 0.5f;
 		count++;
-		ParticleSystem.EmitParams emitParams = default(ParticleSystem.EmitParams);
-		emitParams.position = new Vector3(x, y, z);
-		emitParams.startSize = psSize;
-		emitParams.startLifetime = intervalPS;
-		emitParams.startColor = col;
-		ParticleSystem.EmitParams emitParams2 = emitParams;
-		psAlly.Emit(emitParams2, 1);
+		ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams
+		{
+			position = new Vector3(x, y, z),
+			startSize = psSize,
+			startLifetime = intervalPS,
+			startColor = col
+		};
+		psAlly.Emit(emitParams, 1);
 	}
 }

@@ -279,16 +279,17 @@ public class Steam : MonoBehaviour
 	{
 		FileInfo fileInfo = new FileInfo(p.dirInfo.FullName + "/preview.jpg");
 		DirectoryInfo directoryInfo = new DirectoryInfo(p.dirInfo.FullName);
-		WorkshopItemData workshopItemData = default(WorkshopItemData);
-		workshopItemData.appId = steamworks.settings.applicationId;
-		workshopItemData.title = p.title;
-		workshopItemData.description = p.description;
-		workshopItemData.content = directoryInfo;
-		workshopItemData.preview = fileInfo;
-		workshopItemData.metadata = p.id ?? "";
-		workshopItemData.tags = p.tags;
-		workshopItemData.visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic;
-		WorkshopItemData result = workshopItemData;
+		WorkshopItemData result = new WorkshopItemData
+		{
+			appId = steamworks.settings.applicationId,
+			title = p.title,
+			description = p.description,
+			content = directoryInfo,
+			preview = fileInfo,
+			metadata = (p.id ?? ""),
+			tags = p.tags,
+			visibility = ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic
+		};
 		switch (p.visibility)
 		{
 		case "Unlisted":

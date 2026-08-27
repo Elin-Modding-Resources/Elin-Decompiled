@@ -92,35 +92,35 @@ public class Los : EClass
 		List<Point> list = new List<Point>();
 		List<Point> vecs = new List<Point>();
 		Point lastPoint = p1.Copy();
-		IsVisible(p1.x, p2.x, p1.z, p2.z, delegate(Point p, bool blocked)
+		IsVisible(p1.x, p2.x, p1.z, p2.z, delegate(Point point4, bool blocked)
 		{
-			Point point3 = new Point(p.x - lastPoint.x, p.z - lastPoint.z);
+			Point point3 = new Point(point4.x - lastPoint.x, point4.z - lastPoint.z);
 			if (point3.x != 0 || point3.z != 0)
 			{
 				vecs.Add(point3);
 			}
-			lastPoint.Set(p);
+			lastPoint.Set(point4);
 		}, returnOnBlock: false);
 		if (vecs.Count == 0)
 		{
 			return list;
 		}
 		Point point = p1.Copy();
-		for (int i = 0; i < radius; i++)
+		for (int num = 0; num < radius; num++)
 		{
-			Point point2 = vecs[i % vecs.Count];
+			Point point2 = vecs[num % vecs.Count];
 			point.x += point2.x;
 			point.z += point2.z;
 		}
-		IsVisible(p1.x, point.x, p1.z, point.z, delegate(Point p, bool blocked)
+		IsVisible(p1.x, point.x, p1.z, point.z, delegate(Point point3, bool blocked)
 		{
 			if (!blocked || !returnOnBlocked)
 			{
-				list.Add(p.Copy());
+				list.Add(point3.Copy());
 			}
 			if (_onVisit != null)
 			{
-				_onVisit(p, blocked);
+				_onVisit(point3, blocked);
 			}
 		}, returnOnBlocked);
 		return list;
@@ -129,11 +129,11 @@ public class Los : EClass
 	public static Point GetNearestNeighbor(Point p1, Point p2)
 	{
 		Point dest = null;
-		IsVisible(p1, p2, delegate(Point p, bool blocked)
+		IsVisible(p1, p2, delegate(Point point, bool blocked)
 		{
-			if (!blocked && dest == null && p2.Distance(p) == 1 && !p.HasChara)
+			if (!blocked && dest == null && p2.Distance(point) == 1 && !point.HasChara)
 			{
-				dest = new Point(p);
+				dest = new Point(point);
 			}
 		});
 		return dest;
@@ -143,17 +143,17 @@ public class Los : EClass
 	{
 		Point rushPos = null;
 		bool valid = true;
-		IsVisible(p1, dest, delegate(Point p, bool blocked)
+		IsVisible(p1, dest, delegate(Point point, bool blocked)
 		{
-			if (!p.Equals(dest) && !p.Equals(p1))
+			if (!point.Equals(dest) && !point.Equals(p1))
 			{
-				if (blocked || p.HasChara || p.IsBlocked)
+				if (blocked || point.HasChara || point.IsBlocked)
 				{
 					valid = false;
 				}
-				if (p.Distance(dest) == 1)
+				if (point.Distance(dest) == 1)
 				{
-					rushPos = p.Copy();
+					rushPos = point.Copy();
 				}
 			}
 		});

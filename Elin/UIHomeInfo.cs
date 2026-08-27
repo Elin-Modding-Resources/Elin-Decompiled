@@ -176,28 +176,28 @@ public class UIHomeInfo : EMono
 		buttonLv.mainText.SetText(branch.lv.ToString() ?? "");
 		buttonLv.SetTooltip(delegate(UITooltip t)
 		{
-			UINote i = t.note;
-			i.Clear();
-			i.AddHeader("branchLv".lang());
-			i.AddTopic("TopicLeft", "vCurrent".lang(), EMono.Branch.TextLv);
-			i.Space();
+			UINote n = t.note;
+			n.Clear();
+			n.AddHeader("branchLv".lang());
+			n.AddTopic("TopicLeft", "vCurrent".lang(), EMono.Branch.TextLv);
+			n.Space();
 			Write(branch.lv);
 			if (branch.lv < branch.MaxLv)
 			{
-				i.Space();
-				i.AddHeaderTopic("nextLevel");
+				n.Space();
+				n.AddHeaderTopic("nextLevel");
 				Write(branch.lv + 1);
 			}
 			t.note.Build();
 			void Write(int lv)
 			{
 				string[] array = branch.GetHearthHint(lv).SplitNewline();
-				for (int j = 0; j < array.Length; j++)
+				for (int i = 0; i < array.Length; i++)
 				{
-					string text = array[j].Replace(Environment.NewLine, "");
+					string text = array[i].Replace(Environment.NewLine, "");
 					if (!text.IsEmpty())
 					{
-						i.AddText(text);
+						n.AddText(text);
 					}
 				}
 			}
@@ -205,14 +205,14 @@ public class UIHomeInfo : EMono
 		buttonRanking.mainText.SetText(EMono.game.spatials.ranks.GetRankText(EMono._zone));
 		buttonRanking.SetTooltip(delegate(UITooltip t)
 		{
-			UINote note2 = t.note;
-			note2.Clear();
-			note2.AddHeader("homeRanking".lang());
-			note2.AddTopic("TopicLeft", "vCurrent".lang(), EMono.game.spatials.ranks.GetRankText(EMono._zone));
-			note2.Space();
-			note2.AddHeader("HeaderTopic", "rank_income".lang());
-			note2.Space(1);
-			note2.AddText("rank_income2".lang(EMono.game.spatials.ranks.GetIncome(EMono._zone).ToFormat()));
+			UINote note = t.note;
+			note.Clear();
+			note.AddHeader("homeRanking".lang());
+			note.AddTopic("TopicLeft", "vCurrent".lang(), EMono.game.spatials.ranks.GetRankText(EMono._zone));
+			note.Space();
+			note.AddHeader("HeaderTopic", "rank_income".lang());
+			note.Space(1);
+			note.AddText("rank_income2".lang(EMono.game.spatials.ranks.GetIncome(EMono._zone).ToFormat()));
 			t.note.Build();
 		});
 		buttonRank.mainText.SetText(branch.rank.ToString() ?? "");
@@ -369,7 +369,7 @@ public class UIHomeInfo : EMono
 		}
 		foreach (Chara member in branch.members)
 		{
-			if (member.isDead || member.IsPCParty || member.memberType != 0 || member.noMove)
+			if (member.isDead || member.IsPCParty || member.memberType != FactionMemberType.Default || member.noMove)
 			{
 				continue;
 			}

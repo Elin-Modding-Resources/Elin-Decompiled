@@ -242,14 +242,14 @@ public class AI_PlayMusic : AIAct
 					UISong.Instance.SetSong(playing.source, playing.bgm, part);
 					if (EClass.Sound.currentBGM != null)
 					{
-						float num3 = 0.5f - 0.1f * (float)playing.index;
-						if (num3 < 0f)
+						float num = 0.5f - 0.1f * (float)playing.index;
+						if (num < 0f)
 						{
-							num3 = 0f;
+							num = 0f;
 						}
-						if (EClass.Sound.sourceBGM.volume > EClass.Sound.currentBGM.data.volume * num3)
+						if (EClass.Sound.sourceBGM.volume > EClass.Sound.currentBGM.data.volume * num)
 						{
-							EClass.Sound.sourceBGM.DOFade(EClass.Sound.currentBGM.data.volume * num3, 3f);
+							EClass.Sound.sourceBGM.DOFade(EClass.Sound.currentBGM.data.volume * num, 3f);
 						}
 						SoundManager.jingleTimer = part.duration / playing.bgm.pitch + playing.bgm.song.fadeIn + 2f;
 					}

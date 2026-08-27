@@ -504,9 +504,9 @@ public class CoreDebug : EScriptable
 			list = EClass.sources.charas.map.Values.Where((SourceChara.Row a) => a._idRenderData == "chara_L").ToList();
 			for (int num = 0; num < 20; num++)
 			{
-				string id2 = list.RandomItem().id;
+				string id = list.RandomItem().id;
 				Thing thing4 = ThingGen.Create("figure");
-				thing4.MakeFigureFrom(id2);
+				thing4.MakeFigureFrom(id);
 				thing.AddCard(thing4);
 			}
 			EClass.pc.AddCard(thing);
@@ -514,9 +514,9 @@ public class CoreDebug : EScriptable
 			list = EClass.sources.charas.map.Values.Where((SourceChara.Row a) => a._idRenderData == "chara").ToList();
 			for (int num2 = 0; num2 < 20; num2++)
 			{
-				string id3 = list.RandomItem().id;
+				string id2 = list.RandomItem().id;
 				Thing thing5 = ThingGen.Create("figure3");
-				thing5.MakeFigureFrom(id3);
+				thing5.MakeFigureFrom(id2);
 				thing.AddCard(thing5);
 			}
 			EClass.pc.AddCard(thing);
@@ -525,9 +525,9 @@ public class CoreDebug : EScriptable
 			list = EClass.sources.charas.map.Values.Where((SourceChara.Row a) => a._idRenderData == "chara_L").ToList();
 			for (int num3 = 0; num3 < 20; num3++)
 			{
-				string id4 = list.RandomItem().id;
+				string id3 = list.RandomItem().id;
 				Thing thing6 = ThingGen.Create("figure3");
-				thing6.MakeFigureFrom(id4);
+				thing6.MakeFigureFrom(id3);
 				thing.AddCard(thing6);
 			}
 			EClass.pc.AddCard(thing);
@@ -670,9 +670,9 @@ public class CoreDebug : EScriptable
 		{
 			AddAllRecipes();
 		}
-		foreach (Thing thing12 in EClass.pc.things)
+		foreach (Thing thing11 in EClass.pc.things)
 		{
-			thing12.isNew = false;
+			thing11.isNew = false;
 		}
 		LayerInventory.SetDirtyAll();
 		EClass.core.actionsNextFrame.Add(EClass.pc.RecalculateFOV);
@@ -707,23 +707,23 @@ public class CoreDebug : EScriptable
 			EClass.player.ModKeyItem("potion_sorin", 1, msg: false);
 			EClass.player.ModKeyItem("potion_farris", 1, msg: false);
 		}
-		static Thing AddAbility(string id)
+		static Thing AddAbility(string c_idAbility)
 		{
 			Thing thing10 = EClass.pc.AddThing(ThingGen.Create("catalyst"));
-			thing10.c_idAbility = id;
+			thing10.c_idAbility = c_idAbility;
 			return thing10;
 		}
-		Thing AddHotbar(string id)
+		Thing AddHotbar(string id4)
 		{
-			Thing thing11 = EClass.pc.AddThing(ThingGen.Create(id));
-			thing11.invX = idx;
-			thing11.invY = 1;
+			Thing thing10 = EClass.pc.AddThing(ThingGen.Create(id4));
+			thing10.invX = idx;
+			thing10.invY = 1;
 			idx++;
-			return thing11;
+			return thing10;
 		}
-		void AddParty(string id)
+		void AddParty(string id4)
 		{
-			Chara chara = CharaGen.Create(id);
+			Chara chara = CharaGen.Create(id4);
 			chara.SetFaction(EClass.Home);
 			chara.SetHomeZone(homeZone);
 			if (chara.currentZone != EClass._zone)
@@ -997,8 +997,8 @@ public class CoreDebug : EScriptable
 				Quest q = EClass.game.quests.Add("debt", "loytel");
 				EClass.game.quests.Start(q);
 				EClass.pc.party.RemoveMember(chara);
-				Hostility hostility2 = (chara.c_originalHostility = Hostility.Ally);
-				chara.hostility = hostility2;
+				Hostility hostility = (chara.c_originalHostility = Hostility.Ally);
+				chara.hostility = hostility;
 			}
 			return;
 		}
@@ -1108,7 +1108,7 @@ public class CoreDebug : EScriptable
 			if (Input.GetKey(KeyCode.F9))
 			{
 				EClass.scene.paused = false;
-				for (int j = 0; j < advanceMin; j++)
+				for (int num = 0; num < advanceMin; num++)
 				{
 					EClass.game.updater.FixedUpdate();
 				}
@@ -1168,7 +1168,7 @@ public class CoreDebug : EScriptable
 		List<Card> list = hitPoint.ListCards();
 		if (Input.GetMouseButtonDown(2))
 		{
-			if (EClass.core.releaseMode != 0)
+			if (EClass.core.releaseMode != ReleaseMode.Public)
 			{
 				if (key)
 				{
@@ -1208,9 +1208,9 @@ public class CoreDebug : EScriptable
 				}
 				else if (hitPoint.detail != null)
 				{
-					for (int num = hitPoint.detail.charas.Count - 1; num >= 0; num--)
+					for (int num2 = hitPoint.detail.charas.Count - 1; num2 >= 0; num2--)
 					{
-						hitPoint.detail.charas[num].DamageHP(999999999L, AttackSource.Finish, EClass.pc);
+						hitPoint.detail.charas[num2].DamageHP(999999999L, AttackSource.Finish, EClass.pc);
 					}
 				}
 				EInput.Consume();
@@ -1231,24 +1231,24 @@ public class CoreDebug : EScriptable
 			}
 			else if (hitPoint.detail != null)
 			{
-				for (int num2 = hitPoint.detail.things.Count - 1; num2 >= 0; num2--)
+				for (int num3 = hitPoint.detail.things.Count - 1; num3 >= 0; num3--)
 				{
-					hitPoint.detail.things[num2].Destroy();
+					hitPoint.detail.things[num3].Destroy();
 				}
 				if (hitPoint.detail != null)
 				{
-					for (int num3 = hitPoint.detail.charas.Count - 1; num3 >= 0; num3--)
+					for (int num4 = hitPoint.detail.charas.Count - 1; num4 >= 0; num4--)
 					{
-						hitPoint.detail.charas[num3].Destroy();
+						hitPoint.detail.charas[num4].Destroy();
 					}
 				}
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.End) && hitPoint.detail != null)
 		{
-			for (int num4 = hitPoint.detail.things.Count - 1; num4 >= 0; num4--)
+			for (int num5 = hitPoint.detail.things.Count - 1; num5 >= 0; num5--)
 			{
-				Thing thing2 = hitPoint.detail.things[num4];
+				Thing thing2 = hitPoint.detail.things[num5];
 				Debug.Log(thing2.id + "/" + thing2.Pref.height + "/" + thing2.trait?.ToString() + "/" + thing2.source.tileType.CanStack + "/" + thing2.source.tileType?.ToString() + "/" + thing2.isSynced + "/" + RenderObject.syncList.Contains(thing2.renderer));
 			}
 		}
@@ -1260,56 +1260,56 @@ public class CoreDebug : EScriptable
 		{
 		case DebugHotkey.Anime:
 		{
-			int num5 = -1;
+			int num6 = -1;
 			if (Input.GetKeyDown(KeyCode.Alpha0))
 			{
-				num5 = 0;
+				num6 = 0;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				num5 = 1;
+				num6 = 1;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				num5 = 2;
+				num6 = 2;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				num5 = 3;
+				num6 = 3;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 			{
-				num5 = 4;
+				num6 = 4;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha5))
 			{
-				num5 = 5;
+				num6 = 5;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha6))
 			{
-				num5 = 6;
+				num6 = 6;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha7))
 			{
-				num5 = 7;
+				num6 = 7;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha8))
 			{
-				num5 = 8;
+				num6 = 8;
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha9))
 			{
-				num5 = 9;
+				num6 = 9;
 			}
-			if (num5 == -1)
+			if (num6 == -1)
 			{
 				break;
 			}
 			foreach (Card item4 in hitPoint.ListCards())
 			{
-				item4.renderer.PlayAnime(num5.ToEnum<AnimeID>());
+				item4.renderer.PlayAnime(num6.ToEnum<AnimeID>());
 			}
-			Debug.Log(num5.ToEnum<AnimeID>());
+			Debug.Log(num6.ToEnum<AnimeID>());
 			break;
 		}
 		case DebugHotkey.Block:
@@ -1472,20 +1472,20 @@ public class CoreDebug : EScriptable
 	public void InitDebugCommands()
 	{
 		commands.Clear();
-		int cat2 = 0;
-		Add(cat2, "Save Widgets", delegate
+		int cat = 0;
+		Add(cat, "Save Widgets", delegate
 		{
 			EClass.ui.widgets.Save();
 		});
-		Add(cat2, "Save Widgets(Dialog)", delegate
+		Add(cat, "Save Widgets(Dialog)", delegate
 		{
 			EClass.ui.widgets.DialogSave();
 		});
-		Add(cat2, "Export Zone", delegate
+		Add(cat, "Export Zone", delegate
 		{
 			EClass._zone.Export();
 		});
-		Add(cat2, "Export Zone(Dialog)", delegate
+		Add(cat, "Export Zone(Dialog)", delegate
 		{
 			EClass._zone.ExportDialog();
 		});
@@ -1493,7 +1493,7 @@ public class CoreDebug : EScriptable
 		{
 			EClass._zone.ImportDialog();
 		});
-		Add(cat2, "Validate Backer Contents", delegate
+		Add(cat, "Validate Backer Contents", delegate
 		{
 			foreach (SourceBacker.Row row2 in EClass.sources.backers.rows)
 			{
@@ -1523,14 +1523,14 @@ public class CoreDebug : EScriptable
 				}
 			}
 		});
-		Add(cat2, "Edit PCC", delegate
+		Add(cat, "Edit PCC", delegate
 		{
 			EClass.ui.AddLayer<LayerEditPCC>("LayerPCC/LayerEditPCC").Activate(EClass.pc, UIPCC.Mode.Full);
 		});
-		Add(cat2, "COM_Teleport", COM_Teleport);
-		Add(cat2, "LOG_Spatials", LOG_Spatials);
-		Add(cat2, "Play Start Drama", COM_PlayStartDrama);
-		Add(cat2, "Fix Floating Items", delegate
+		Add(cat, "COM_Teleport", COM_Teleport);
+		Add(cat, "LOG_Spatials", LOG_Spatials);
+		Add(cat, "Play Start Drama", COM_PlayStartDrama);
+		Add(cat, "Fix Floating Items", delegate
 		{
 			foreach (Thing thing in EClass._map.things)
 			{
@@ -1540,8 +1540,8 @@ public class CoreDebug : EScriptable
 				}
 			}
 		});
-		cat2 = 1;
-		Add(cat2, "Add Conditions", delegate
+		cat = 1;
+		Add(cat, "Add Conditions", delegate
 		{
 			if (EScriptable.rnd(2) == 0)
 			{
@@ -1560,9 +1560,9 @@ public class CoreDebug : EScriptable
 				EClass.pc.AddCondition<ConDisease>();
 			}
 		});
-		cat2 = 2;
-		Add(cat2, "Max Construction", COM_MaxConstruction);
-		Add(cat2, "Add Reserves", delegate
+		cat = 2;
+		Add(cat, "Max Construction", COM_MaxConstruction);
+		Add(cat, "Add Reserves", delegate
 		{
 			EClass.Home.AddReserve(CharaGen.Create("merc_archer"));
 			EClass.Home.AddReserve(CharaGen.Create("healer"));
@@ -1572,7 +1572,7 @@ public class CoreDebug : EScriptable
 			EClass.Home.AddReserve(CharaGen.CreateFromFilter("c_wilds"));
 			EClass.Home.AddReserve(CharaGen.CreateFromFilter("c_wilds"));
 		});
-		Add(cat2, "Add Recruits", delegate
+		Add(cat, "Add Recruits", delegate
 		{
 			if (EClass.Branch != null)
 			{
@@ -1585,7 +1585,7 @@ public class CoreDebug : EScriptable
 				EClass.Branch.AddRecruit(CharaGen.CreateFromFilter("c_wilds"));
 			}
 		});
-		Add(cat2, "Add Resources", delegate
+		Add(cat, "Add Resources", delegate
 		{
 			if (EClass.Branch != null)
 			{
@@ -1593,20 +1593,20 @@ public class CoreDebug : EScriptable
 				EClass.Branch.resources.knowledge.Mod(100);
 			}
 		});
-		Add(cat2, "Remove Influence", delegate
+		Add(cat, "Remove Influence", delegate
 		{
 			EClass._zone.influence = 0;
 		});
-		Add(cat2, "Reroll Hobbies", delegate
+		Add(cat, "Reroll Hobbies", delegate
 		{
 			foreach (Chara chara in EClass._map.charas)
 			{
 				chara.RerollHobby();
 			}
 		});
-		Add(cat2, "Test_Siege", Test_Siege);
-		Add(cat2, "Test_SiegeGuard", Test_SiegeGuard);
-		Add(cat2, "Log_BranchMembers", delegate
+		Add(cat, "Test_Siege", Test_Siege);
+		Add(cat, "Test_SiegeGuard", Test_SiegeGuard);
+		Add(cat, "Log_BranchMembers", delegate
 		{
 			if (EClass._zone.IsPCFaction)
 			{
@@ -1617,29 +1617,29 @@ public class CoreDebug : EScriptable
 				}
 			}
 		});
-		cat2 = 3;
-		Add(cat2, "Weather.Fine", delegate
+		cat = 3;
+		Add(cat, "Weather.Fine", delegate
 		{
 			EClass.world.weather.SetCondition(Weather.Condition.Fine);
 		});
-		Add(cat2, "Weather.Blossom", delegate
+		Add(cat, "Weather.Blossom", delegate
 		{
 			EClass.world.weather.SetCondition(Weather.Condition.Blossom);
 		});
-		Add(cat2, "Weather.Random", delegate
+		Add(cat, "Weather.Random", delegate
 		{
 			EClass.world.weather.SetRandomCondition();
 		});
-		Add(cat2, "Weather.Ether+50", delegate
+		Add(cat, "Weather.Ether+50", delegate
 		{
 			EClass.world.ModEther(50);
 			Debug.Log(EClass.world.ether + "/" + EClass.world.weather.CurrentCondition);
 		});
-		Add(cat2, "Season.Next", delegate
+		Add(cat, "Season.Next", delegate
 		{
 			EClass.world.season.Next();
 		});
-		Add(cat2, "Unreveal Map", delegate
+		Add(cat, "Unreveal Map", delegate
 		{
 			EClass._map.ForeachCell(delegate(Cell c)
 			{
@@ -1647,10 +1647,10 @@ public class CoreDebug : EScriptable
 			});
 			WidgetMinimap.Instance.Reload();
 		});
-		Add(cat2, "Test_GodTalk", Test_GodTalk);
-		Add(cat2, "Test_Filter", Test_Filter);
-		Add(cat2, "Test_Grow", Test_Grow);
-		Add(cat2, "Turn On All Lights", delegate
+		Add(cat, "Test_GodTalk", Test_GodTalk);
+		Add(cat, "Test_Filter", Test_Filter);
+		Add(cat, "Test_Grow", Test_Grow);
+		Add(cat, "Turn On All Lights", delegate
 		{
 			foreach (Thing thing2 in EClass._map.things)
 			{
@@ -1660,7 +1660,7 @@ public class CoreDebug : EScriptable
 				}
 			}
 		});
-		Add(cat2, "Reset All Custom Lights", delegate
+		Add(cat, "Reset All Custom Lights", delegate
 		{
 			foreach (Thing thing3 in EClass._map.things)
 			{
@@ -1668,7 +1668,7 @@ public class CoreDebug : EScriptable
 				thing3.RecalculateFOV();
 			}
 		});
-		Add(cat2, "Reset All obj materials", delegate
+		Add(cat, "Reset All obj materials", delegate
 		{
 			EClass._map.ForeachCell(delegate(Cell c)
 			{
@@ -1678,7 +1678,7 @@ public class CoreDebug : EScriptable
 				}
 			});
 		});
-		Add(cat2, "Reset Certain obj materials", delegate
+		Add(cat, "Reset Certain obj materials", delegate
 		{
 			EClass._map.ForeachCell(delegate(Cell c)
 			{
@@ -1688,7 +1688,7 @@ public class CoreDebug : EScriptable
 				}
 			});
 		});
-		Add(cat2, "Fix Floors under Blocks", delegate
+		Add(cat, "Fix Floors under Blocks", delegate
 		{
 			EClass._map.ForeachCell(delegate(Cell c)
 			{
@@ -1700,28 +1700,28 @@ public class CoreDebug : EScriptable
 				}
 			});
 		});
-		Add(cat2, "Bless Inventory", delegate
+		Add(cat, "Bless Inventory", delegate
 		{
 			EClass.pc.things.Foreach(delegate(Thing t)
 			{
 				t.SetBlessedState(BlessedState.Blessed);
 			});
 		});
-		Add(cat2, "Curse Inventory", delegate
+		Add(cat, "Curse Inventory", delegate
 		{
 			EClass.pc.things.Foreach(delegate(Thing t)
 			{
 				t.SetBlessedState(BlessedState.Cursed);
 			});
 		});
-		Add(cat2, "List Global Charas", delegate
+		Add(cat, "List Global Charas", delegate
 		{
 			foreach (KeyValuePair<int, Chara> globalChara in EClass.game.cards.globalCharas)
 			{
 				Debug.Log(globalChara.Key + "/" + globalChara.Value.Name + "/" + ((globalChara.Value.currentZone == null) ? "NULL" : globalChara.Value.currentZone.Name) + "/" + globalChara.Value.faction?.ToString() + "/" + globalChara.Value.homeBranch);
 			}
 		});
-		Add(cat2, "List Global Charas In Zone", delegate
+		Add(cat, "List Global Charas In Zone", delegate
 		{
 			foreach (KeyValuePair<int, Chara> globalChara2 in EClass.game.cards.globalCharas)
 			{
@@ -1731,7 +1731,7 @@ public class CoreDebug : EScriptable
 				}
 			}
 		});
-		Add(cat2, "List Citizen", delegate
+		Add(cat, "List Citizen", delegate
 		{
 			foreach (KeyValuePair<int, string> p in EClass._zone.dictCitizen)
 			{
@@ -1740,13 +1740,13 @@ public class CoreDebug : EScriptable
 				Debug.Log(EClass._map.deadCharas.Find((Chara c) => c.uid == p.Key));
 			}
 		});
-		void Add(int cat, string id, Action action)
+		void Add(int cat2, string id, Action action)
 		{
 			DebugCommand item = new DebugCommand
 			{
 				name = id,
 				action = action,
-				cat = cat
+				cat = cat2
 			};
 			commands.Add(item);
 		}
@@ -1909,7 +1909,7 @@ public class CoreDebug : EScriptable
 		}
 		EClass.Branch.members.ForeachReverse(delegate(Chara c)
 		{
-			if ((c.id == "kettle" || c.id == "quru") && EClass.Branch.members.Where((Chara c2) => c2.id == c.id).Count() >= 2)
+			if ((c.id == "kettle" || c.id == "quru") && EClass.Branch.members.Where((Chara chara) => chara.id == c.id).Count() >= 2)
 			{
 				EClass.Branch.RemoveMemeber(c);
 				c.Destroy();
@@ -2146,7 +2146,7 @@ public class CoreDebug : EScriptable
 		{
 			item.Destroy();
 		}
-		for (int i = 0; i < num; i++)
+		for (int num2 = 0; num2 < num; num2++)
 		{
 			EClass._zone.SpawnMob(EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false, ignoreCenter: true), new SpawnSetting
 			{

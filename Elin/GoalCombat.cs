@@ -232,7 +232,7 @@ public class GoalCombat : Goal
 						{
 							owner.Talk("run_suicide");
 						}
-						if (owner.host == null && owner.TryMoveFrom(tc.pos) != 0)
+						if (owner.host == null && owner.TryMoveFrom(tc.pos) != Card.MoveResult.Fail)
 						{
 							yield return Status.Running;
 							idleCount = 0;
@@ -714,8 +714,8 @@ public class GoalCombat : Goal
 			case "buffStats":
 				num = ForeachChara(ability, delegate(Chara c)
 				{
-					Element buffStats2 = c.GetBuffStats(s.proc[1]);
-					return (buffStats2 == null || buffStats2.Value < 0) ? tactics.P_Buff : 0;
+					Element buffStats = c.GetBuffStats(s.proc[1]);
+					return (buffStats == null || buffStats.Value < 0) ? tactics.P_Buff : 0;
 				}, isFriendlyAbility: true);
 				if (ability.aiPt || (owner.IsPC && tactics.CastPartyBuff))
 				{
@@ -982,36 +982,36 @@ public class GoalCombat : Goal
 				{
 					return 0;
 				}
-				float num8 = (float)c.hp / (float)c.MaxHP;
-				if (num8 > (isHOT ? 0.85f : 0.75f))
+				float num6 = (float)c.hp / (float)c.MaxHP;
+				if (num6 > (isHOT ? 0.85f : 0.75f))
 				{
 					return 0;
 				}
-				int num9 = tactics.P_Heal - (int)((float)tactics.P_Heal * num8) + (isHOT ? 50 : 25);
+				int num7 = tactics.P_Heal - (int)((float)tactics.P_Heal * num6) + (isHOT ? 50 : 25);
 				foreach (Condition condition2 in c.conditions)
 				{
 					if (condition2 is ConFear)
 					{
-						num9 += 10;
+						num7 += 10;
 					}
 					else if (condition2 is ConPoison)
 					{
-						num9 += 2;
+						num7 += 2;
 					}
 					else if (condition2 is ConConfuse)
 					{
-						num9 += 4;
+						num7 += 4;
 					}
 					else if (condition2 is ConDim)
 					{
-						num9 += 6;
+						num7 += 6;
 					}
 					else if (condition2 is ConBleed)
 					{
-						num9 += 8;
+						num7 += 8;
 					}
 				}
-				return num9;
+				return num7;
 			}
 		}
 		abilities.Sort((ItemAbility a, ItemAbility b) => b.priority - a.priority);
@@ -1108,8 +1108,8 @@ public class GoalCombat : Goal
 			{
 				if (chara2 != owner)
 				{
-					int num12 = owner.Dist(chara2);
-					if (num12 > sightRadius || !owner.CanSeeLos(chara2, num12))
+					int num6 = owner.Dist(chara2);
+					if (num6 > sightRadius || !owner.CanSeeLos(chara2, num6))
 					{
 						continue;
 					}
@@ -1168,38 +1168,38 @@ public class GoalCombat : Goal
 			{
 				return 0;
 			}
-			int num10 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
-			int num11 = -15 * tc.ResistLvFrom(num10);
+			int num6 = ((a.source.aliasRef == "mold") ? owner.MainElement.id : EClass.sources.elements.alias[a.source.aliasRef].id);
+			int num7 = -15 * tc.ResistLvFrom(num6);
 			if (a is ActSword)
 			{
-				num11 = 0;
+				num7 = 0;
 			}
-			if (owner.HasElement(1238) && num11 < -15)
+			if (owner.HasElement(1238) && num7 < -15)
 			{
-				num11 = -15;
+				num7 = -15;
 			}
-			switch (num10)
+			switch (num6)
 			{
 			case 910:
 				if (tc.isWet)
 				{
-					num11 -= 30;
+					num7 -= 30;
 				}
 				break;
 			case 911:
 				if (tc.HasCondition<ConBurning>())
 				{
-					num11 -= 30;
+					num7 -= 30;
 				}
 				break;
 			case 912:
 				if (tc.isWet)
 				{
-					num11 += 30;
+					num7 += 30;
 				}
 				break;
 			}
-			return num11;
+			return num7;
 		}
 		void GetNumEnemy(int radius)
 		{

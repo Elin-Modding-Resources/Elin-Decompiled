@@ -27,7 +27,7 @@ public class AI_PassTime : AIAct
 	{
 		get
 		{
-			if (type != 0)
+			if (type != Type.passTime)
 			{
 				return TargetType.Self;
 			}

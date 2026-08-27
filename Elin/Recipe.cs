@@ -787,7 +787,7 @@ public class Recipe : EClass
 		{
 			if (point.HasObj)
 			{
-				_ = ref point.Position();
+				point.Position();
 			}
 			renderParam.z += ((point.cell.liquidLv > 0) ? (-0.01f) : EClass.setting.render.tileMarkerZFloor);
 			EClass.screen.tileMap.rendererFloorMarker.Draw(renderParam);

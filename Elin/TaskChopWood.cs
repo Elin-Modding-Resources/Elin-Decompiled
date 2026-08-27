@@ -55,12 +55,12 @@ public class TaskChopWood : TaskDesignation
 		};
 		p.onProgress = delegate
 		{
-			Thing log2 = GetLog();
-			SourceMaterial.Row material2 = log2.material;
-			log2.PlaySoundImpact();
-			material2.AddBlood(pos);
-			log2.PlayAnime(AnimeID.HitObj);
-			material2.PlayHitEffect(pos);
+			Thing log = GetLog();
+			SourceMaterial.Row material = log.material;
+			log.PlaySoundImpact();
+			material.AddBlood(pos);
+			log.PlayAnime(AnimeID.HitObj);
+			material.PlayHitEffect(pos);
 			owner.renderer.NextFrame();
 		};
 		p.onProgressComplete = delegate

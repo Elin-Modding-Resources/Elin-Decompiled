@@ -155,9 +155,9 @@ public class LayerNewspaper : ELayer
 			{
 				break;
 			}
-			for (int j = 1; j < listImageId.Count; j++)
+			for (int num = 1; num < listImageId.Count; num++)
 			{
-				ModItem<Sprite> item = Portrait.modPortraits.GetItem(listImageId[j], returnNull: true);
+				ModItem<Sprite> item = Portrait.modPortraits.GetItem(listImageId[num], returnNull: true);
 				if (item != null)
 				{
 					Util.Instantiate(moldPortrait, layoutPortrait).SetPortrait(item.id);
@@ -263,7 +263,7 @@ public class LayerNewspaper : ELayer
 			onInstantiate = delegate(Weather.WeatherForecast a, UIItem b)
 			{
 				string text = a.date.month + "/" + a.date.day;
-				foreach (KeyValuePair<Weather.Condition, int> item in a.cons.OrderByDescending((KeyValuePair<Weather.Condition, int> a) => a.Value))
+				foreach (KeyValuePair<Weather.Condition, int> item in a.cons.OrderByDescending((KeyValuePair<Weather.Condition, int> keyValuePair) => keyValuePair.Value))
 				{
 					if (b.image1.sprite == null)
 					{

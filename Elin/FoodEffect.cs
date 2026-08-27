@@ -290,7 +290,7 @@ public class FoodEffect : EClass
 		if (!c.IsCat && food.trait is TraitFoodChuryu)
 		{
 			int num8 = 0;
-			foreach (Chara item in c.pos.ListCharasInRadius(c, 5, (Chara c) => c.IsCat))
+			foreach (Chara item in c.pos.ListCharasInRadius(c, 5, (Chara chara) => chara.IsCat))
 			{
 				item.Say("angry", item);
 				item.ShowEmo(Emo.angry);
@@ -433,8 +433,8 @@ public class FoodEffect : EClass
 			{
 			case "god":
 			{
-				int int2 = c.GetInt(117);
-				if (int2 < 10)
+				int num2 = c.GetInt(117);
+				if (num2 < 10)
 				{
 					foreach (Element value2 in c.elements.dict.Values)
 					{
@@ -447,7 +447,7 @@ public class FoodEffect : EClass
 				c.Say("little_eat", c);
 				c.PlaySound("ding_potential");
 				c.elements.ModExp(306, -1000f);
-				c.SetInt(117, int2 + 1);
+				c.SetInt(117, num2 + 1);
 				break;
 			}
 			case "exp":
@@ -486,13 +486,13 @@ public class FoodEffect : EClass
 				break;
 			case "little":
 			{
-				int @int = c.GetInt(112);
-				if (@int < 30)
+				int num = c.GetInt(112);
+				if (num < 30)
 				{
 					c.Say("little_eat", c);
 					c.PlaySound("ding_potential");
-					int v2 = Mathf.Max(5 - @int / 2, 1);
-					Debug.Log("sister eaten:" + @int + "/" + v2);
+					int v2 = Mathf.Max(5 - num / 2, 1);
+					Debug.Log("sister eaten:" + num + "/" + v2);
 					foreach (Element value3 in c.elements.dict.Values)
 					{
 						if (value3.IsMainAttribute)
@@ -506,16 +506,16 @@ public class FoodEffect : EClass
 					c.Say("little_adam", c);
 					c.SetFeat(1230, c.elements.Base(1230) + 1);
 				}
-				c.SetInt(112, @int + 1);
+				c.SetInt(112, num + 1);
 				break;
 			}
 			}
 			void AddPotential(int idEle)
 			{
 				int vTempPotential = c.elements.GetElement(idEle).vTempPotential;
-				int num = EClass.rndHalf((int)(v / 5f) + 1);
-				num = num * 100 / Mathf.Max(100, vTempPotential * 2 / 3);
-				c.elements.ModTempPotential(idEle, num, 8);
+				int num3 = EClass.rndHalf((int)(v / 5f) + 1);
+				num3 = num3 * 100 / Mathf.Max(100, vTempPotential * 2 / 3);
+				c.elements.ModTempPotential(idEle, num3, 8);
 			}
 		}
 	}

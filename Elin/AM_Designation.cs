@@ -56,7 +56,7 @@ public class AM_Designation<T> : AM_BaseTileSelect where T : TaskDesignation
 		}
 		mold.pos.Set(point);
 		HitResult hitResult = mold.GetHitResult();
-		if (hitResult != 0)
+		if (hitResult != HitResult.Default)
 		{
 			return hitResult;
 		}

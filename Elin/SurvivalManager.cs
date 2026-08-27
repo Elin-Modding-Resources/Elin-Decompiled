@@ -229,7 +229,7 @@ public class SurvivalManager : EClass
 		});
 		if (listGateZone.Count == 0)
 		{
-			for (int i = 0; i < 3; i++)
+			for (int num = 0; num < 3; num++)
 			{
 				if (EClass.rnd(4) == 0)
 				{
@@ -280,13 +280,13 @@ public class SurvivalManager : EClass
 
 	public void OnExpandFloor(Point pos)
 	{
-		int i = 0;
+		int n = 0;
 		bool done = false;
 		EClass._map.ForeachCell(delegate(Cell c)
 		{
 			if (!c.sourceFloor.tileType.IsSkipFloor)
 			{
-				i++;
+				n++;
 			}
 		});
 		Check(6, delegate
@@ -327,7 +327,7 @@ public class SurvivalManager : EClass
 		}
 		void Check(int a, Action action)
 		{
-			if (!done && flags.floors < a && i >= a)
+			if (!done && flags.floors < a && n >= a)
 			{
 				Meteor(pos, action);
 				EClass.game.survival.flags.floors = a;
@@ -360,8 +360,8 @@ public class SurvivalManager : EClass
 		int num = searchWreck / 50 + 1;
 		if (searchWreck == 0)
 		{
-			Thing t2 = ThingGen.CreateParcel(null, ThingGen.Create("log").SetNum(6), ThingGen.Create("rock").SetNum(4), ThingGen.Create("resin").SetNum(2), ThingGen.Create("money2").SetNum(10), ThingGen.Create("1267"), ThingGen.CreateRod(50311, 8));
-			Pop(t2);
+			Thing t = ThingGen.CreateParcel(null, ThingGen.Create("log").SetNum(6), ThingGen.Create("rock").SetNum(4), ThingGen.Create("resin").SetNum(2), ThingGen.Create("money2").SetNum(10), ThingGen.Create("1267"), ThingGen.CreateRod(50311, 8));
+			Pop(t);
 		}
 		switch (sourceObj.alias)
 		{
@@ -418,14 +418,14 @@ public class SurvivalManager : EClass
 		if (searchWreck > 10 && EClass.rnd(40 + num) == 0)
 		{
 			TreasureType treasureType = ((EClass.rnd(10) == 0) ? TreasureType.BossNefia : ((EClass.rnd(10) == 0) ? TreasureType.Map : TreasureType.RandomChest));
-			Thing t3 = ThingGen.Create(treasureType switch
+			Thing t2 = ThingGen.Create(treasureType switch
 			{
 				TreasureType.Map => "chest_treasure", 
 				TreasureType.BossNefia => "chest_boss", 
 				_ => "chest3", 
 			});
-			ThingGen.CreateTreasureContent(t3, num, treasureType, clearContent: true);
-			MeteorThing(GetRandomPoint(), t3, install: true);
+			ThingGen.CreateTreasureContent(t2, num, treasureType, clearContent: true);
+			MeteorThing(GetRandomPoint(), t2, install: true);
 		}
 		if (EClass.rnd(12) == 0)
 		{
@@ -483,9 +483,9 @@ public class SurvivalManager : EClass
 				EClass._map.SetObj(point.x, point.z, EClass.sources.objs.alias[source.RandomItem()].id);
 			}
 		}
-		bool Pop(Thing t)
+		bool Pop(Thing t3)
 		{
-			EClass._map.TrySmoothPick(point, t, EClass.pc);
+			EClass._map.TrySmoothPick(point, t3, EClass.pc);
 			Next();
 			return true;
 		}

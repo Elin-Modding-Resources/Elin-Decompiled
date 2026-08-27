@@ -177,27 +177,27 @@ public class CustomThingContent : CustomSourceContent
 			}
 		}
 		thing.sockets.RemoveAll((int s) => s == 0);
-		for (int i = 0; i < num; i++)
+		for (int num2 = 0; num2 < num; num2++)
 		{
 			thing.sockets.Add(0);
 		}
 		void ApplyRangedSocket(string socket)
 		{
-			int num2 = 3 + Mathf.Min(thing.genLv / 10, 15);
+			int num3 = 3 + Mathf.Min(thing.genLv / 10, 15);
 			if (!EClass.sources.elements.alias.TryGetValue(socket, out var value4))
 			{
 				ModUtil.LogModError("source thing row '" + base.ContentId + "' has invalid addSocket spec '" + socket + "'", base.Owner);
 			}
 			else
 			{
-				float num3 = Mathf.Sqrt((float)(thing.genLv * value4.encFactor) / 100f);
-				float num4 = (float)num2 + num3;
-				int num5 = (value4.mtp + EClass.rnd(value4.mtp + (int)num4)) / value4.mtp;
-				if (value4.encFactor == 0 && num5 > 25)
+				float num4 = Mathf.Sqrt((float)(thing.genLv * value4.encFactor) / 100f);
+				float num5 = (float)num3 + num4;
+				int num6 = (value4.mtp + EClass.rnd(value4.mtp + (int)num5)) / value4.mtp;
+				if (value4.encFactor == 0 && num6 > 25)
 				{
-					num5 = 25;
+					num6 = 25;
 				}
-				thing.ApplySocket(value4.id, num5);
+				thing.ApplySocket(value4.id, num6);
 			}
 		}
 	}

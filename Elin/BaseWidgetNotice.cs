@@ -53,14 +53,14 @@ public class BaseWidgetNotice : Widget
 	{
 		layout.childAlignment = RectPositionToTextAnchor(base.config.pivot);
 		OnRefresh();
-		foreach (BaseNotification i in list)
+		foreach (BaseNotification n in list)
 		{
-			i.Refresh();
-			i.item.SetActive(i.Visible, delegate(bool enabled)
+			n.Refresh();
+			n.item.SetActive(n.Visible, delegate(bool enabled)
 			{
 				if (enabled)
 				{
-					i.item.button.RebuildLayout(recursive: true);
+					n.item.button.RebuildLayout(recursive: true);
 				}
 				dirty = true;
 			});
@@ -81,9 +81,9 @@ public class BaseWidgetNotice : Widget
 	{
 		IList<BaseNotification> list = this.list.Copy();
 		list.Sort((BaseNotification a, BaseNotification b) => b.GetSortVal() - a.GetSortVal());
-		for (int i = 0; i < list.Count; i++)
+		for (int num = 0; num < list.Count; num++)
 		{
-			list[i].item.transform.SetSiblingIndex(4 + i);
+			list[num].item.transform.SetSiblingIndex(4 + num);
 		}
 	}
 

@@ -18,11 +18,11 @@ public class QuestSubdue : QuestInstance
 
 	public override string GetTextProgress()
 	{
-		ZoneEventSubdue @event = EClass._zone.events.GetEvent<ZoneEventSubdue>();
-		if (@event == null)
+		ZoneEventSubdue zoneEventSubdue = EClass._zone.events.GetEvent<ZoneEventSubdue>();
+		if (zoneEventSubdue == null)
 		{
 			return "";
 		}
-		return "progressHunt".lang((@event.max - @event.enemies.Count).ToString() ?? "", @event.max.ToString() ?? "");
+		return "progressHunt".lang((zoneEventSubdue.max - zoneEventSubdue.enemies.Count).ToString() ?? "", zoneEventSubdue.max.ToString() ?? "");
 	}
 }

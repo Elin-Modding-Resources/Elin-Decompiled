@@ -211,8 +211,8 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			if (!h.source.destTrait.IsEmpty())
 			{
 				bool flag = EClass._map.FindThing(Type.GetType("Trait" + h.source.destTrait + ", Elin"), a) != null;
-				List<CardRow> obj = EClass.sources.cards.rows.Where((CardRow t) => t.trait.Length != 0 && Type.GetType("Trait" + h.source.destTrait).IsAssignableFrom(Type.GetType("Trait" + t.trait[0]))).ToList();
-				obj.Sort((CardRow a, CardRow b) => a.LV - b.LV);
+				List<CardRow> obj = EClass.sources.cards.rows.Where((CardRow cardRow2) => cardRow2.trait.Length != 0 && Type.GetType("Trait" + h.source.destTrait).IsAssignableFrom(Type.GetType("Trait" + cardRow2.trait[0]))).ToList();
+				obj.Sort((CardRow cardRow2, CardRow b) => cardRow2.LV - b.LV);
 				CardRow cardRow = obj[0];
 				t.note.AddText("NoteText_small", "・ " + "workDestTrait".lang(cardRow.GetName().ToTitleCase().TagColor(flag ? FontColor.Good : FontColor.Warning)));
 			}
@@ -222,31 +222,31 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 			}
 			else
 			{
-				for (int i = 0; i < h.source.things.Length; i += 2)
+				for (int num = 0; num < h.source.things.Length; num += 2)
 				{
-					float num = Mathf.Max(1f, (long)h.source.things[i + 1].ToInt() * (long)efficiency * a.homeBranch.GetProductBonus(a) / 100 / 1000);
-					string text3 = h.source.things[i];
-					string s = (text3.StartsWith("#") ? EClass.sources.categories.map[text3.Replace("#", "")].GetName() : EClass.sources.cards.map[h.source.things[i]].GetName());
+					float num2 = Mathf.Max(1f, (long)h.source.things[num + 1].ToInt() * (long)efficiency * a.homeBranch.GetProductBonus(a) / 100 / 1000);
+					string text3 = h.source.things[num];
+					string s = (text3.StartsWith("#") ? EClass.sources.categories.map[text3.Replace("#", "")].GetName() : EClass.sources.cards.map[h.source.things[num]].GetName());
 					if (h.source.alias == "Breeding")
 					{
-						num = a.race.breeder * 100 / 2500;
-						num = num * (float)((!(text3 == "_egg")) ? 1 : 2) / 3f;
-						if (a.race.breeder > 0 && num <= 0f)
+						num2 = a.race.breeder * 100 / 2500;
+						num2 = num2 * (float)((!(text3 == "_egg")) ? 1 : 2) / 3f;
+						if (a.race.breeder > 0 && num2 <= 0f)
 						{
-							num = 1f;
+							num2 = 1f;
 						}
 					}
-					num = (float)Math.Round(num, 1);
-					t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num.ToString() ?? ""));
+					num2 = (float)Math.Round(num2, 1);
+					t.note.AddText("NoteText_small", "・ " + "work_produce".lang(s.ToTitleCase(), num2.ToString() ?? ""));
 				}
 				if (!h.source.elements.IsEmpty())
 				{
-					for (int j = 0; j < h.source.elements.Length; j += 2)
+					for (int num3 = 0; num3 < h.source.elements.Length; num3 += 2)
 					{
-						SourceElement.Row row = EClass.sources.elements.map[h.source.elements[j]];
-						int num2 = h.source.elements[j + 1];
-						float num3 = ((num2 < 0 || row.id == 2115 || row.id == 2207) ? ((float)(num2 / 10)) : Mathf.Max((h.GetEfficiency(a) > 0) ? 1 : 0, (long)num2 * (long)h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
-						t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num2 > 0) ? "+" : "") + num3) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num2 >= 0) ? FontColor.Default : FontColor.Bad);
+						SourceElement.Row row = EClass.sources.elements.map[h.source.elements[num3]];
+						int num4 = h.source.elements[num3 + 1];
+						float num5 = ((num4 < 0 || row.id == 2115 || row.id == 2207) ? ((float)(num4 / 10)) : Mathf.Max((h.GetEfficiency(a) > 0) ? 1 : 0, (long)num4 * (long)h.GetEfficiency(a) * a.homeBranch.efficiency / 100 / 1000));
+						t.note.AddText("NoteText_small", "・ " + "workBonus_skill".lang(row.GetName().ToTitleCase(), ((num4 > 0) ? "+" : "") + num5) + ((row.id == 2115 || row.id == 2207) ? (" " + "fixedFactionSkill".lang()) : ""), (num4 >= 0) ? FontColor.Default : FontColor.Bad);
 					}
 				}
 				string[] array2 = h.source.GetDetail().SplitNewline();
@@ -350,16 +350,16 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						}
 						uIContextMenu.AddButton("togglePCC", delegate
 						{
-							bool isSynced2 = c.isSynced;
+							bool isSynced = c.isSynced;
 							c.pccData = PCCData.Create(c.IDPCCBodySet);
 							c.pccData.Randomize(c.IDPCCBodySet);
-							if (isSynced2)
+							if (isSynced)
 							{
 								c.renderer.OnLeaveScreen();
 							}
 							EClass.scene.syncList.Remove(c.renderer);
 							c._CreateRenderer();
-							if (isSynced2)
+							if (isSynced)
 							{
 								EClass.scene.syncList.Add(c.renderer);
 								c.renderer.OnEnterScreen();
@@ -411,9 +411,9 @@ public class BaseListPeople : ListOwner<Chara, ItemGeneral>
 						SE.Click();
 					});
 				}
-				int @int = c.GetInt(36);
-				bool isLivestockTimerOn = memberType == FactionMemberType.Default && !EClass.world.date.IsExpired(@int);
-				int remainingHours = EClass.world.date.GetRemainingHours(@int);
+				int num = c.GetInt(36);
+				bool isLivestockTimerOn = memberType == FactionMemberType.Default && !EClass.world.date.IsExpired(num);
+				int remainingHours = EClass.world.date.GetRemainingHours(num);
 				if (!c.IsPCParty)
 				{
 					uIContextMenu.AddButton((c.memberType == FactionMemberType.Livestock) ? "daMakeResident" : (isLivestockTimerOn ? "daMakeLivestock2".lang(Date.GetText(remainingHours)) : "daMakeLivestock"), delegate
