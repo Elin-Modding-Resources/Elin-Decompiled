@@ -207,8 +207,11 @@ public class GoalCombat : Goal
 			}
 			if (this is GoalAutoCombat)
 			{
-				ActionMode.Adv.SetTurbo(EClass.game.config.autoCombat.turbo ? (-1) : 0);
-				EClass.pc.ModExp(135, 20);
+				if (owner.IsPC)
+				{
+					ActionMode.Adv.SetTurbo(EClass.game.config.autoCombat.turbo ? (-1) : 0);
+				}
+				owner.ModExp(135, 20);
 			}
 			int dist = owner.Dist(tc);
 			bool move = owner.host == null && (tactics.ChanceMove > EClass.rnd(100) || (owner.IsPC && tc.HasCondition<ConFear>() && dist >= EClass.pc.GetSightRadius() - 1));

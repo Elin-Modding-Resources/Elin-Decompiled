@@ -1,7 +1,9 @@
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class ReligionCustom : Religion
 {
+	[JsonIgnore]
 	public CustomReligionContent content;
 
 	public override string id => content?.SourceId ?? "";

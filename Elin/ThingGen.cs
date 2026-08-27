@@ -100,14 +100,14 @@ public class ThingGen : CardGen
 
 	public static Thing CreateBlock(int id, int idMat)
 	{
-		Thing thing = Create(EClass.sources.blocks.rows[id].idThing, idMat);
+		Thing thing = Create(EClass.sources.blocks[id].idThing, idMat);
 		thing.refVal = id;
 		return thing;
 	}
 
 	public static Thing CreateFloor(int id, int idMat, bool platform = false)
 	{
-		_ = EClass.sources.floors.rows[id];
+		_ = EClass.sources.floors[id];
 		Thing thing = Create(platform ? "platform" : "floor", idMat);
 		thing.refVal = id;
 		return thing;
@@ -115,7 +115,7 @@ public class ThingGen : CardGen
 
 	public static Thing CreateDeco(int id, int idMat)
 	{
-		_ = EClass.sources.decos.rows[id];
+		_ = EClass.sources.decos[id];
 		Thing thing = Create("deco", idMat);
 		thing.refVal = id;
 		return thing;
@@ -123,7 +123,7 @@ public class ThingGen : CardGen
 
 	public static Thing CreateObj(int id, int idMat)
 	{
-		_ = EClass.sources.objs.rows[id];
+		_ = EClass.sources.objs[id];
 		Thing thing = Create("obj", idMat);
 		thing.refVal = id;
 		return thing;

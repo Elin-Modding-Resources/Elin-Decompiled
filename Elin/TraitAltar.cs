@@ -274,7 +274,7 @@ public class TraitAltar : Trait
 			c.elements.ModExp(306, offeringValue / 5);
 		}
 		c.RefreshFaithElement();
-		if (c.faith.GetGiftRank() != -1)
+		if (c.faith.GetGiftRank(c) != -1)
 		{
 			c.faith.Talk("like");
 		}

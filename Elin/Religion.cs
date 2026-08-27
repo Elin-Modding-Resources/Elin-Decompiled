@@ -238,13 +238,13 @@ public class Religion : EClass
 		}
 	}
 
-	public virtual int GetGiftRank()
+	public virtual int GetGiftRank(Chara chara = null)
 	{
 		if (IsEyth || source.rewards.Length == 0)
 		{
 			return -1;
 		}
-		int num = EClass.pc.Evalue(85);
+		int num = (chara ?? EClass.pc).Evalue(85);
 		if (giftRank == 0 && (num >= 15 || EClass.debug.enable))
 		{
 			return 1;
@@ -256,23 +256,27 @@ public class Religion : EClass
 		return -1;
 	}
 
-	public virtual bool TryGetGift()
+	public virtual bool TryGetGift(Chara chara = null)
 	{
-		int num = GetGiftRank();
+		if (chara == null)
+		{
+			chara = EClass.pc;
+		}
+		int num = GetGiftRank(chara);
 		if (num == -1)
 		{
 			return false;
 		}
-		Point point = EClass.pc.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false) ?? EClass.pc.pos;
+		Point point = chara.pos.GetNearestPoint(allowBlock: false, allowChara: false, allowInstalled: false) ?? chara.pos;
 		switch (num)
 		{
 		case 1:
 		{
 			Talk("pet");
-			Chara chara = CharaGen.Create(source.rewards[0]);
-			EClass._zone.AddCard(chara, point);
-			chara.MakeAlly();
-			chara.PlayEffect("aura_heaven");
+			Chara chara2 = CharaGen.Create(source.rewards[0]);
+			EClass._zone.AddCard(chara2, point);
+			chara2.MakeAlly();
+			chara2.PlayEffect("aura_heaven");
 			giftRank = 1;
 			return true;
 		}

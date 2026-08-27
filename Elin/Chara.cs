@@ -3320,7 +3320,7 @@ public class Chara : Card, IPathfindWalker
 					Msg.Say(Lang.GetList("walk_storm").RandomItem());
 				}
 			}
-			ActWait.Search(EClass.pc);
+			ActWait.Search(this);
 		}
 		if (IsPCC)
 		{
@@ -8772,13 +8772,13 @@ public class Chara : Card, IPathfindWalker
 			{
 				num2 *= 2;
 			}
-			EClass.pc.PlayEffect("identify");
-			EClass.pc.PlaySound("identify");
+			PlayEffect("identify");
+			PlaySound("identify");
 			c.PlayEffect("mutation");
 			c.Say("draw_curse", c, t);
 			t.Destroy();
 			List<Element> list = new List<Element>();
-			foreach (Element value in EClass.pc.elements.dict.Values)
+			foreach (Element value in elements.dict.Values)
 			{
 				if (value is Spell)
 				{
@@ -8787,12 +8787,12 @@ public class Chara : Card, IPathfindWalker
 			}
 			if (list.Count == 0)
 			{
-				EClass.pc.SayNothingHappans();
+				SayNothingHappans();
 				return;
 			}
 			Element element = list.RandomItem();
-			EClass.pc.ModExp(element.id, num2);
-			EClass.pc.Say("draw_curse2", EClass.pc, element.Name);
+			ModExp(element.id, num2);
+			Say("draw_curse2", this, element.Name);
 			c.AddExp(Mathf.Min(num2 / 3, c.ExpToNext));
 			return;
 		}

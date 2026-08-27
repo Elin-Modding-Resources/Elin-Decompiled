@@ -399,6 +399,13 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 
 	public static Dictionary<string, TierList> tierMap = new Dictionary<string, TierList>();
 
+	[NonSerialized]
+	private TileLookup<Row> _lookup;
+
+	private TileLookup<Row> Lookup => _lookup ?? (_lookup = new TileLookup<Row>(map));
+
+	public Row this[int id] => Lookup[id];
+
 	public override string[] ImportFields => new string[1] { "altName" };
 
 	public override Row CreateRow()
@@ -500,6 +507,8 @@ public class SourceMaterial : SourceDataInt<SourceMaterial.Row>
 
 	public override void OnInit()
 	{
+		Lookup.Build();
+		Cell.matSource = this;
 		Cell.matList = rows;
 		tierMap.Clear();
 		tierMap.Add("gem", new TierList());

@@ -35,7 +35,7 @@ public class MapGenRegion : BaseMapGen
 						map.cells[j, i].impassable = row.attribs[0] == 0;
 						if (row.floor != 0)
 						{
-							SetFloor(j, i, EClass.sources.floors.rows[row.floor].DefaultMaterial.id, row.floor);
+							SetFloor(j, i, EClass.sources.floors[row.floor].DefaultMaterial.id, row.floor);
 						}
 					}
 				}

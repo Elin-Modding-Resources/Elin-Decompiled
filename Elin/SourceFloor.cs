@@ -145,6 +145,13 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 
 	public static RenderData FallbackRenderData;
 
+	[NonSerialized]
+	private TileLookup<Row> _lookup;
+
+	private TileLookup<Row> Lookup => _lookup ?? (_lookup = new TileLookup<Row>(map));
+
+	public Row this[int id] => Lookup[id];
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -276,8 +283,14 @@ public class SourceFloor : SourceDataInt<SourceFloor.Row>
 
 	public override void OnInit()
 	{
+		Lookup.Build();
 		FallbackRenderData = ResourceCache.Load<RenderData>("Scene/Render/Data/floor");
+		Cell.floorSource = this;
 		Cell.floorList = rows;
+		FLOOR.sourceSnow = this[39];
+		FLOOR.sourceSnow2 = this[56];
+		FLOOR.sourceIce = this[38];
+		FLOOR.sourceWood = this[21];
 		foreach (Row row in rows)
 		{
 			row.Init();

@@ -70,6 +70,13 @@ public class SourceCellEffect : SourceDataInt<SourceCellEffect.Row>
 
 	public static RenderData FallbackRenderData;
 
+	[NonSerialized]
+	private TileLookup<Row> _lookup;
+
+	private TileLookup<Row> Lookup => _lookup ?? (_lookup = new TileLookup<Row>(map));
+
+	public Row this[int id] => Lookup[id];
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -154,7 +161,9 @@ public class SourceCellEffect : SourceDataInt<SourceCellEffect.Row>
 
 	public override void OnInit()
 	{
+		Lookup.Build();
 		FallbackRenderData = ResourceCache.Load<RenderData>("Scene/Render/Data/liquid");
+		Cell.effectSource = this;
 		Cell.effectList = rows;
 		foreach (Row row in rows)
 		{

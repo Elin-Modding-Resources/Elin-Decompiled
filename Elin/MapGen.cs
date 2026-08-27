@@ -164,7 +164,7 @@ public class MapGen : BaseMapGen
 				continue;
 			}
 			biomeProfiles[num4].layerBlock.FillHeightMap(heights1, OX, 0, OZ, Size, Size, zp.seeds.biome);
-			bool flag = EClass.sources.floors.rows[biomeProfiles[num4].exterior.floor.id].tag.Contains("soil");
+			bool flag = EClass.sources.floors[biomeProfiles[num4].exterior.floor.id].tag.Contains("soil");
 			for (int num5 = 0; num5 < Size; num5++)
 			{
 				if (zp.clearEdge && ((num5 > map.bounds.x - 4 && num5 <= map.bounds.x + 4) || (num5 > map.bounds.maxX - 4 && num5 <= map.bounds.maxX + 4)))
@@ -175,7 +175,7 @@ public class MapGen : BaseMapGen
 				{
 					if ((!zp.clearEdge || ((num6 <= map.bounds.z - 4 || num6 > map.bounds.z + 4) && (num6 <= map.bounds.maxZ - 4 || num6 > map.bounds.maxZ + 4))) && !(biomes[num5, num6] != biomeProfiles[num4]) && heights1[num5, num6] > (float)blockHeight)
 					{
-						SourceBlock.Row row = EClass.sources.blocks.rows[biomeProfiles[num4].exterior.block.id];
+						SourceBlock.Row row = EClass.sources.blocks[biomeProfiles[num4].exterior.block.id];
 						if (!flag || row.alias == "block_ice")
 						{
 							SourceFloor.Row row2 = EClass.sources.floors.alias[row.autoFloor];

@@ -33,8 +33,6 @@ public class CustomReligionContent : CustomSourceContent
 
 	public override string SourceType => "SourceReligion";
 
-	public string ChunkName => "custom_religion_" + base.SourceId;
-
 	public static CustomReligionContent CreateFromRow(SourceReligion.Row r, ModPackage owner = null)
 	{
 		string text = r.id.Split('#')[0];
@@ -51,9 +49,10 @@ public class CustomReligionContent : CustomSourceContent
 			isMinorGod = r.id.Contains("#minor")
 		};
 		EClass.sources.religions.map[text] = r;
-		if (!Portrait.modPortraits.dict.ContainsKey("UN_" + r.id) && SpriteReplacer.dictModItems.TryGetValue(r.id, out var value))
+		if (!Portrait.modPortraits.dict.ContainsKey("UN_" + text) && SpriteReplacer.dictModItems.TryGetValue(text, out var value))
 		{
-			Portrait.modPortraits.Add("UN_" + r.id, new FileInfo(value + ".png"));
+			Portrait.modPortraits.Add("UN_" + text, new FileInfo(value + ".png"));
+			Portrait.allIds.Add("UN_" + text + ".png");
 		}
 		obj.RegisterCustomReligion();
 		return obj;
@@ -83,7 +82,10 @@ public class CustomReligionContent : CustomSourceContent
 					{
 						value.content.canJoin = customReligionContent2.canJoin;
 						value.content.isMinorGod = customReligionContent2.isMinorGod;
+						value.content.noPunish = customReligionContent2.noPunish;
+						value.content.noPunishTakeover = customReligionContent2.noPunishTakeover;
 						value.content.artifacts = customReligionContent2.artifacts;
+						value.content.elements = customReligionContent2.elements;
 						value.content.offeringMtp = customReligionContent2.offeringMtp;
 						value.content.offeringValue = customReligionContent2.offeringValue;
 						value.content.godAbilities = customReligionContent2.godAbilities;
@@ -103,14 +105,22 @@ public class CustomReligionContent : CustomSourceContent
 			{
 				if (row.HasTag(CTAG.godArtifact))
 				{
-					managed.Values.FirstOrDefault((ReligionCustom r) => row.tag.Contains(r.id))?.content.artifacts.Add(row.id);
+					ReligionCustom religionCustom = managed.Values.FirstOrDefault((ReligionCustom r) => row.tag.Contains(r.id));
+					if (religionCustom != null && !religionCustom.content.artifacts.Contains(row.id))
+					{
+						religionCustom.content.artifacts.Add(row.id);
+					}
 				}
 			}
 			foreach (SourceElement.Row row2 in EClass.sources.elements.rows)
 			{
 				if (row2.tag.Contains("godAbility"))
 				{
-					managed.Values.FirstOrDefault((ReligionCustom r) => row2.tag.Contains(r.id))?.content.godAbilities.Add(row2.alias);
+					ReligionCustom religionCustom2 = managed.Values.FirstOrDefault((ReligionCustom r) => row2.tag.Contains(r.id));
+					if (religionCustom2 != null && !religionCustom2.content.godAbilities.Contains(row2.alias))
+					{
+						religionCustom2.content.godAbilities.Add(row2.alias);
+					}
 				}
 			}
 			(FileInfo, EMod)[] filesEx2 = PackageIterator.GetFilesEx("Data/religion_elements.json");
@@ -198,7 +208,16 @@ public class CustomReligionContent : CustomSourceContent
 
 	internal static void SaveReligionData(GameIOContext context)
 	{
-		if (!context.Load<Dictionary<string, ReligionCustom>>("custom_religion_data", out var data))
+		Dictionary<string, ReligionCustom> data = null;
+		try
+		{
+			context.Load<Dictionary<string, ReligionCustom>>("custom_religion_data", out data);
+		}
+		catch (Exception ex)
+		{
+			Debug.LogWarning("#mod-content rebuilding corrupted religion data chunk\n" + ex.Message);
+		}
+		if (data == null)
 		{
 			data = new Dictionary<string, ReligionCustom>();
 		}

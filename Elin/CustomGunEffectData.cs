@@ -1,50 +1,31 @@
 using Newtonsoft.Json;
 using UnityEngine;
 
-[JsonObject(MemberSerialization.OptOut)]
 public class CustomGunEffectData : GameSetting.EffectData
 {
-	public bool forceLaser;
-
-	public bool forceRail;
-
-	public string caneColor;
-
-	public bool caneColorBlend;
-
-	public string idSprite = "ranged_gun";
-
-	public string idSoundEject = "bullet_drop";
-
-	public GameSetting.EffectData CreateEffectData()
+	public static readonly JsonSerializerSettings JsonSettings = new JsonSerializerSettings
 	{
-		return new CustomGunEffectData
-		{
-			sprite = (ModUtil.LoadSprite(idSprite) ?? Resources.Load<Sprite>("Media/Effect/General/" + idSprite)),
-			eject = eject,
-			firePos = firePos,
-			num = num,
-			delay = delay,
-			idEffect = idEffect,
-			idSound = idSound
-		};
+		NullValueHandling = NullValueHandling.Ignore,
+		ContractResolver = new GameIOContext.WritablePropertiesOnlyResolver()
+	};
+
+	public CustomGunEffectData()
+	{
+		num = 1;
+		delay = 0.1f;
+		eject = true;
+		firePos = new Vector2(0.23f, 0.04f);
+		idSprite = "ranged_gun";
+		idSoundEject = "bullet_drop";
 	}
 
-	public static CustomGunEffectData CreateFromId(string id)
+	public void ResolveSprite()
 	{
-		if (!EClass.setting.effect.guns.TryGetValue(id, out var value))
+		if (!idSprite.IsEmpty())
 		{
-			return null;
+			string spritePath = idSprite;
+			string name = idSprite;
+			sprite = ModUtil.LoadSprite(spritePath, null, name) ?? Resources.Load<Sprite>("Media/Effect/General/" + idSprite) ?? Resources.Load<Sprite>(idSprite) ?? Resources.Load<Sprite>("Media/Effect/General/ranged_gun");
 		}
-		return new CustomGunEffectData
-		{
-			num = value.num,
-			delay = value.delay,
-			idEffect = value.idEffect,
-			idSound = value.idSound,
-			idSprite = (value.sprite ? value.sprite.name : ""),
-			eject = value.eject,
-			firePos = value.firePos
-		};
 	}
 }

@@ -510,9 +510,9 @@ public class BiomeProfile : EScriptable
 		{
 			public int idObj;
 
-			public override bool IsSpawnOnBlock => EClass.sources.objs.map[idObj].tileType.IsBlockMount;
+			public override bool IsSpawnOnBlock => EClass.sources.objs[idObj].tileType.IsBlockMount;
 
-			public override bool IsSpawnOnWater => EClass.sources.objs.map[idObj].tileType.CanSpawnOnWater;
+			public override bool IsSpawnOnWater => EClass.sources.objs[idObj].tileType.CanSpawnOnWater;
 
 			public string obj
 			{
@@ -709,9 +709,9 @@ public class BiomeProfile : EScriptable
 		}
 	}
 
-	public SourceMaterial.Row MatFloor => _mat ?? (_mat = EClass.sources.materials.map[exterior.floor.mat]);
+	public SourceMaterial.Row MatFloor => _mat ?? (_mat = EClass.sources.materials[exterior.floor.mat]);
 
-	public SourceMaterial.Row MatSub => _matSub ?? (_matSub = ((exterior.floor.matSub == 0) ? MatFloor : EClass.sources.materials.map[exterior.floor.matSub]));
+	public SourceMaterial.Row MatSub => _matSub ?? (_matSub = ((exterior.floor.matSub == 0) ? MatFloor : EClass.sources.materials[exterior.floor.matSub]));
 
 	public void Populate(Point point, bool interior = false, float mtpDensity = 1f)
 	{

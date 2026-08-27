@@ -26,7 +26,7 @@ public class ZoneInspector : EMono
 			EMono._map.ForeachCell(delegate(Cell c)
 			{
 				int dir = (randomFillDir ? EMono.rnd(4) : 0);
-				EMono._map.SetFloor(c.x, c.z, EMono.sources.floors.rows[fillFloor].DefaultMaterial.id, fillFloor, dir);
+				EMono._map.SetFloor(c.x, c.z, EMono.sources.floors[fillFloor].DefaultMaterial.id, fillFloor, dir);
 			});
 		}
 
@@ -35,7 +35,7 @@ public class ZoneInspector : EMono
 			EMono._map.ForeachCell(delegate(Cell c)
 			{
 				int dir = (randomFillDir ? EMono.rnd(4) : 0);
-				EMono._map.SetBlock(c.x, c.z, EMono.sources.blocks.rows[fillBlock].DefaultMaterial.id, fillBlock, dir);
+				EMono._map.SetBlock(c.x, c.z, EMono.sources.blocks[fillBlock].DefaultMaterial.id, fillBlock, dir);
 			});
 		}
 

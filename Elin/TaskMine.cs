@@ -123,7 +123,7 @@ public class TaskMine : BaseTaskHarvest
 			{
 				return HitResult.Default;
 			}
-			if (mode == Mode.Ramp && (pos.cell.HasRamp || EClass._map.GetRampDir(pos.x, pos.z, EClass.sources.blocks.rows[ramp].tileType) == -1))
+			if (mode == Mode.Ramp && (pos.cell.HasRamp || EClass._map.GetRampDir(pos.x, pos.z, EClass.sources.blocks[ramp].tileType) == -1))
 			{
 				return HitResult.Default;
 			}

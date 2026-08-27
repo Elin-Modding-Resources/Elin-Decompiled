@@ -36,9 +36,10 @@ public class CustomBiographyContent : CustomFileContent
 
 	private int[] _tempLangKey = new int[4];
 
-	private bool _initialized;
+	[JsonIgnore]
+	public string BioId { get; private set; }
 
-	public static CustomBiographyContent CreateFromId(string biographyId, ModPackage owner = null)
+	public static CustomBiographyContent CreateFromId(string biographyId, ModPackage owner = null, string charaId = null)
 	{
 		var (fileInfo, eMod) = PackageIterator.GetFilesEx("Data/bio_" + biographyId + ".json").LastOrDefault();
 		if (fileInfo == null)
@@ -51,7 +52,8 @@ public class CustomBiographyContent : CustomFileContent
 		}
 		return new CustomBiographyContent
 		{
-			ContentId = "Biography/" + biographyId,
+			ContentId = "Biography/" + charaId.IsEmpty(biographyId),
+			BioId = biographyId,
 			Owner = owner,
 			File = fileInfo
 		};
@@ -59,7 +61,7 @@ public class CustomBiographyContent : CustomFileContent
 
 	public override void OnSetLang(string lang)
 	{
-		CustomBiographyContent customBiographyContent = CreateFromId(base.ContentId.Split('/')[^1]);
+		CustomBiographyContent customBiographyContent = CreateFromId(BioId.IsEmpty(base.ContentId.Split('/')[^1]));
 		if (customBiographyContent != null)
 		{
 			base.File = customBiographyContent.File;
@@ -70,10 +72,6 @@ public class CustomBiographyContent : CustomFileContent
 	public void RefreshCharaBio(Chara chara)
 	{
 		Load();
-		if (_initialized)
-		{
-			return;
-		}
 		Biography bio = chara.bio;
 		if (birthDay != 0)
 		{
@@ -130,7 +128,6 @@ public class CustomBiographyContent : CustomFileContent
 				bio.idHobby = element;
 			}
 		}
-		_initialized = true;
 		int SetTempWord(string text, int tempIndex)
 		{
 			int num = _tempLangKey[tempIndex];
@@ -166,6 +163,5 @@ public class CustomBiographyContent : CustomFileContent
 		likeHobby = customBiographyContent.likeHobby;
 		favCategory = customBiographyContent.favCategory;
 		favFood = customBiographyContent.favFood;
-		_initialized = false;
 	}
 }

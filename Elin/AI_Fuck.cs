@@ -289,7 +289,7 @@ public class AI_Fuck : AIAct
 						num6 = 10;
 					}
 					totalAffinity += num4;
-					c.ModAffinity(EClass.pc, num4, show: true, showOnlyEmo: true);
+					c.ModAffinity(cc, num4, show: true, showOnlyEmo: true);
 					cc.elements.ModExp(237, num6);
 					if (EClass.rnd(4) == 0)
 					{

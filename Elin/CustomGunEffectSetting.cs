@@ -3,7 +3,7 @@ using System.IO;
 
 public class CustomGunEffectSetting : CustomFileContent
 {
-	public Dictionary<string, CustomGunEffectData> items;
+	public Dictionary<string, CustomGunEffectData> items = new Dictionary<string, CustomGunEffectData>();
 
 	public static CustomGunEffectSetting CreateFromFile(FileInfo file, ModPackage owner = null)
 	{
@@ -21,8 +21,8 @@ public class CustomGunEffectSetting : CustomFileContent
 
 	protected override void LoadContent()
 	{
-		Dictionary<string, CustomGunEffectData> dictionary = IO.LoadFile<Dictionary<string, CustomGunEffectData>>(base.File.FullName, compress: false, GameIOContext.Settings);
-		items = dictionary;
+		Dictionary<string, CustomGunEffectData> dictionary = IO.LoadFile<Dictionary<string, CustomGunEffectData>>(base.File.FullName, compress: false, CustomGunEffectData.JsonSettings);
+		items = dictionary ?? new Dictionary<string, CustomGunEffectData>();
 	}
 
 	public override string ToString()

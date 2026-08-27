@@ -63,8 +63,8 @@ public class GrowSystem : EClass
 			{
 				obj = new SourceObj.Row[2]
 				{
-					EClass.sources.objs.map[54],
-					EClass.sources.objs.map[55]
+					EClass.sources.objs[54],
+					EClass.sources.objs[55]
 				};
 				_sourceSnowTree = (SourceObj.Row[])obj;
 			}
@@ -685,10 +685,6 @@ public class GrowSystem : EClass
 				return;
 			}
 			t.SetNum(num2);
-		}
-		else if (Application.isEditor)
-		{
-			Debug.Log("harvest count not set:" + source.id + "/" + source.alias);
 		}
 		if (num > 0)
 		{

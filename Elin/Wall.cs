@@ -6,7 +6,7 @@ public struct Wall
 
 	public byte idMat;
 
-	public SourceBlock.Row source => Cell.blockList[id];
+	public SourceBlock.Row source => Cell.blockSource[id];
 
-	public SourceMaterial.Row mat => Cell.matList[idMat];
+	public SourceMaterial.Row mat => Cell.matSource[idMat];
 }

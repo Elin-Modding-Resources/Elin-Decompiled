@@ -6,7 +6,7 @@ public class TraitSeed : Trait
 {
 	public static List<SourceObj.Row> listSeeds;
 
-	public SourceObj.Row row => EClass.sources.objs.map[owner.refVal];
+	public SourceObj.Row row => EClass.sources.objs[owner.refVal];
 
 	public override int InstallBottomPriority => 10000;
 

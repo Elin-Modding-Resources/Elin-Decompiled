@@ -51,19 +51,20 @@ public class TaskClean : Task
 				owner.renderer.NextFrame();
 				yield return KeepRunning();
 			}
-			EClass.pc.Say("clean", owner);
-			EClass.pc.PlaySound("clean_floor");
+			owner.Say("clean", owner);
+			owner.PlaySound("clean_floor");
 			if (range > 1)
 			{
 				List<Point> list = EClass._map.ListPointsInSquare(dest, range - 1, mustBeWalkable: false);
 				list.Sort((Point a, Point b) => a.Distance(dest) - b.Distance(dest));
 				foreach (Point item in list)
 				{
-					if (owner == null || owner.isDead)
+					if (owner != null && !owner.isDead)
 					{
-						break;
+						Clean(item);
+						continue;
 					}
-					Clean(item);
+					break;
 				}
 			}
 			else
@@ -72,16 +73,19 @@ public class TaskClean : Task
 			}
 			yield return KeepRunning();
 		}
-		static void Clean(Point p)
+		void Clean(Point p)
 		{
 			if (CanClean(p))
 			{
 				EClass._map.SetDecal(p.x, p.z);
 				EClass._map.SetLiquid(p.x, p.z, 0, 0);
 				p.PlayEffect("vanish");
-				EClass.pc.ModExp(293, 30);
-				EClass.player.stats.clean++;
-				EClass.pc.stamina.Mod(-1);
+				owner.ModExp(293, 30);
+				if (owner.IsPC)
+				{
+					EClass.player.stats.clean++;
+				}
+				owner.stamina.Mod(-1);
 			}
 		}
 	}

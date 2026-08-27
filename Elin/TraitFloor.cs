@@ -1,4 +1,4 @@
 public class TraitFloor : TraitTile
 {
-	public override TileRow source => EClass.sources.floors.rows[owner.refVal];
+	public override TileRow source => EClass.sources.floors[owner.refVal];
 }

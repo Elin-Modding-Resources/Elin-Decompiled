@@ -19,6 +19,15 @@ public class TCText : TCUI
 		{
 			return;
 		}
+		string id;
+		float chance;
+		while (ExtractSoundTag(ref s, out id, out chance))
+		{
+			if (Rand.rndf(1f) <= chance)
+			{
+				base.owner.PlaySound(id);
+			}
+		}
 		PopItem p;
 		switch (s[0])
 		{
@@ -98,5 +107,36 @@ public class TCText : TCUI
 		DrawImmediate(ref lastPos);
 		pop.CopyAll(EMono.ui.rectDynamic);
 		pop.KillAll(instant: true);
+	}
+
+	private static bool ExtractSoundTag(ref string text, out string id, out float chance)
+	{
+		id = null;
+		chance = 1f;
+		int num = text.IndexOf("<sound", StringComparison.Ordinal);
+		if (num == -1)
+		{
+			return false;
+		}
+		int num2 = text.IndexOf('>', num);
+		if (num2 == -1)
+		{
+			return false;
+		}
+		int num3 = num + 6;
+		string text2 = text.Substring(num3, num2 - num3);
+		int num4 = text2.IndexOf(',');
+		if (num4 == -1)
+		{
+			id = text2;
+		}
+		else
+		{
+			id = text2[..num4];
+			float.TryParse(text2[(num4 + 1)..], out chance);
+		}
+		text = text.Remove(num, num2 - num + 1);
+		chance = Mathf.Clamp01(chance);
+		return true;
 	}
 }

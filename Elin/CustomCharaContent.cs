@@ -107,9 +107,9 @@ public class CustomCharaContent : CustomSourceContent
 			{
 				string text4 = text2.IsEmpty(r.id);
 				customCharaContent.mapStr["biography_override"] = text4;
-				if (!ModUtil.HasContent("Biography/" + text4))
+				if (!ModUtil.HasContent("Biography/" + r.id))
 				{
-					CustomBiographyContent customBiographyContent = CustomBiographyContent.CreateFromId(text4, owner);
+					CustomBiographyContent customBiographyContent = CustomBiographyContent.CreateFromId(text4, owner, r.id);
 					if (customBiographyContent != null)
 					{
 						ModUtil.AddContent(customBiographyContent);
@@ -140,36 +140,8 @@ public class CustomCharaContent : CustomSourceContent
 			return value;
 		}
 		Trait trait2 = ClassCache.Create<Trait>("Trait" + trait, "Elin");
-		if (!(trait2 is TraitChara traitChara))
-		{
-			goto IL_005f;
-		}
-		SpawnType spawnType;
-		if (traitChara.AdvType == TraitChara.Adv_Type.None)
-		{
-			if (!(trait2 is TraitMerchant))
-			{
-				if (!(trait2 is TraitUniqueChara))
-				{
-					goto IL_005f;
-				}
-				spawnType = SpawnType.Unique;
-			}
-			else
-			{
-				spawnType = SpawnType.Merchant;
-			}
-		}
-		else
-		{
-			spawnType = SpawnType.Adventurer;
-		}
-		goto IL_0061;
-		IL_0061:
+		SpawnType spawnType = ((trait2 is TraitAdventurer) ? SpawnType.Adventurer : ((trait2 is TraitMerchant) ? SpawnType.Merchant : ((trait2 is TraitUniqueChara) ? SpawnType.Unique : SpawnType.Common)));
 		return _cachedSpawnTypes[trait] = spawnType;
-		IL_005f:
-		spawnType = SpawnType.Common;
-		goto IL_0061;
 	}
 
 	public void OnCharaCreated(Chara chara)
@@ -269,11 +241,11 @@ public class CustomCharaContent : CustomSourceContent
 		{
 			if (num2 != 1)
 			{
-				goto IL_01cf;
+				goto IL_01d6;
 			}
 			if (IsAdventurer)
 			{
-				goto IL_0178;
+				goto IL_017f;
 			}
 		}
 		else if (IsAdventurer)
@@ -283,17 +255,17 @@ public class CustomCharaContent : CustomSourceContent
 		}
 		if (num == 0)
 		{
-			goto IL_0178;
+			goto IL_017f;
 		}
-		goto IL_01cf;
-		IL_0178:
+		goto IL_01d6;
+		IL_017f:
 		Debug.Log("#mod-content skipping existing character '" + base.SourceId + "', " + $"{count} at {string.Join(',', list2.Select((Chara c) => c.currentZone?.ZoneFullName))}");
 		return;
-		IL_01cf:
-		for (int num3 = 0; num3 < num; num3++)
+		IL_01d6:
+		HashSet<Zone> occupied = list2.Select((Chara c) => c.homeZone).ToHashSet();
+		foreach (Zone item in list.Where((Zone z) => !occupied.Contains(z)).Take(num))
 		{
-			Zone z = list[num3];
-			Chara chara = SpawnToZone(z);
+			Chara chara = SpawnToZone(item);
 			if (chara == null)
 			{
 				ModUtil.LogModError("can't spawn character '" + base.SourceId + "'", base.Owner);
@@ -305,16 +277,16 @@ public class CustomCharaContent : CustomSourceContent
 				break;
 			}
 		}
-		Chara SpawnToZone(Zone zone2)
+		Chara SpawnToZone(Zone z)
 		{
 			Chara chara2 = CharaGen.Create(base.SourceId);
 			if (chara2.id == "chicken")
 			{
 				return null;
 			}
-			chara2.SetHomeZone(zone2);
-			chara2.MoveZone(zone2, ZoneTransition.EnterState.RandomVisit);
-			Debug.Log("#mod-content spawned character '" + base.SourceId + "' to " + zone2.ZoneFullName);
+			chara2.SetHomeZone(z);
+			chara2.MoveZone(z, ZoneTransition.EnterState.RandomVisit);
+			Debug.Log("#mod-content spawned character '" + base.SourceId + "' to " + z.ZoneFullName);
 			return chara2;
 		}
 	}

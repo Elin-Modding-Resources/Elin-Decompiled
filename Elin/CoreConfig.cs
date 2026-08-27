@@ -537,6 +537,8 @@ public class CoreConfig : EClass
 
 		public int screenExtraHeight;
 
+		public int maxSimHour;
+
 		public bool showNumbers;
 
 		public bool stackNumbers;

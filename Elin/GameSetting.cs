@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class GameSetting : ScriptableObject
@@ -289,11 +290,53 @@ public class GameSetting : ScriptableObject
 
 		public string idSound;
 
-		public Sprite sprite;
+		public string idSoundEject;
+
+		public string idSprite;
 
 		public bool eject;
 
+		public bool fireFromMuzzle;
+
+		public bool forceLaser;
+
+		public bool forceRail;
+
+		public bool caneColorBlend;
+
+		[JsonIgnore]
+		public Sprite sprite;
+
+		[JsonIgnore]
+		public Color caneColor;
+
 		public Vector2 firePos;
+
+		[JsonProperty("caneColor")]
+		public string CaneColorHex
+		{
+			get
+			{
+				if (!(caneColor.a <= 0f))
+				{
+					return "#" + ((caneColor.a < 1f) ? ColorUtility.ToHtmlStringRGBA(caneColor) : ColorUtility.ToHtmlStringRGB(caneColor));
+				}
+				return null;
+			}
+			set
+			{
+				caneColor = default(Color);
+				if (!value.IsEmpty())
+				{
+					ColorUtility.TryParseHtmlString("#" + value.Replace("#", "").Replace("0x", ""), out caneColor);
+				}
+			}
+		}
+
+		public EffectData Clone()
+		{
+			return (EffectData)MemberwiseClone();
+		}
 	}
 
 	public AudioSetting audio;

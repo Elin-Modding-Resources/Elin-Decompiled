@@ -17,6 +17,10 @@ public class QuestTrackCraft : Quest
 
 	public override string GetTitle()
 	{
+		if (recipe == null)
+		{
+			return "???";
+		}
 		return "trackCraft_title".lang(recipe.Name, recipe.NameFactory);
 	}
 
@@ -27,6 +31,10 @@ public class QuestTrackCraft : Quest
 
 	public override string GetDetail(bool onJournal = false)
 	{
+		if (recipe == null)
+		{
+			return "???";
+		}
 		if (ingredients == null)
 		{
 			ingredients = recipe.GetIngredients();

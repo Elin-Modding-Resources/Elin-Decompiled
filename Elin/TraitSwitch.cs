@@ -59,12 +59,13 @@ public class TraitSwitch : Trait
 			c.Say("disarm_success", c, owner);
 			owner.PlaySound("disarm");
 			c.ModExp(293, 50 + TrapLv);
-			int num = (EClass.debug.enable ? 10 : (c.IsPCFactionOrMinion ? EClass.pc.Evalue(1656) : 0));
+			Chara chara = (c.IsPC ? c : EClass.pc);
+			int num = (EClass.debug.enable ? 10 : (c.IsPCFactionOrMinion ? chara.Evalue(1656) : 0));
 			if (!IsLaidByDog && num > 0 && num + 2 > EClass.rnd(10))
 			{
 				string id = "scrap";
 				int idMat = -1;
-				int lv = num * 5 + EClass.pc.Evalue(293) / 4 + EClass.pc.Evalue(210) / 4;
+				int lv = num * 5 + chara.Evalue(293) / 4 + chara.Evalue(210) / 4;
 				if (EClass.rnd(3) == 0)
 				{
 					id = "junk";
@@ -93,8 +94,8 @@ public class TraitSwitch : Trait
 				}
 				Thing thing = ThingGen.Create(id, idMat, lv);
 				thing.isHidden = false;
-				EClass.pc.Say("scavenge", owner, thing);
-				EClass._map.TrySmoothPick(owner.pos, thing, EClass.pc);
+				chara.Say("scavenge", owner, thing);
+				EClass._map.TrySmoothPick(owner.pos, thing, chara);
 			}
 			owner.Destroy();
 			return true;

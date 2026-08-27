@@ -86,9 +86,9 @@ public class Thing : Card
 			{
 				if (trait is TraitFakeBlock)
 				{
-					return EClass.sources.blocks.map[base.refVal];
+					return EClass.sources.blocks[base.refVal];
 				}
-				return EClass.sources.objs.map[base.refVal];
+				return EClass.sources.objs[base.refVal];
 			}
 			return base.TileRow;
 		}
@@ -1555,7 +1555,7 @@ public class Thing : Card
 			break;
 		case Trait.TileMode.FakeBlock:
 		{
-			SourceBlock.Row row2 = EClass.sources.blocks.map[base.refVal];
+			SourceBlock.Row row2 = EClass.sources.blocks[base.refVal];
 			p.tile = row2._tiles[base.dir % row2._tiles.Length];
 			if (row2.tileType.IsFullBlock)
 			{
@@ -1565,7 +1565,7 @@ public class Thing : Card
 		}
 		case Trait.TileMode.FakeObj:
 		{
-			SourceObj.Row row = EClass.sources.objs.map[base.refVal];
+			SourceObj.Row row = EClass.sources.objs[base.refVal];
 			p.tile = row._tiles[base.dir % row._tiles.Length];
 			break;
 		}

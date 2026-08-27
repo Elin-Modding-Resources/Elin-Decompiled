@@ -162,7 +162,7 @@ public class TaskCraft : Task
 		Effect.Get("smoke").Play(CraftPos);
 		Effect.Get("mine").Play(CraftPos).SetParticleColor(recipe.GetColorMaterial().GetColor())
 			.Emit(10 + EClass.rnd(10));
-		EClass.pc.stamina.Mod(-costSP);
+		owner.stamina.Mod(-costSP);
 	}
 
 	public void PutOutResources()

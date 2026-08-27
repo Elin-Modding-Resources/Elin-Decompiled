@@ -624,8 +624,6 @@ public class Map : MapBounds, IPathfindGrid
 		Validate(ref bytes19, "roofBlocks");
 		Validate(ref bytes20, "roofBlockMats");
 		Validate(ref bytes21, "roofBlockDirs");
-		int count = EClass.sources.floors.rows.Count;
-		int count2 = EClass.sources.materials.rows.Count;
 		int num3 = 0;
 		for (int i = 0; i < num; i++)
 		{
@@ -665,11 +663,11 @@ public class Map : MapBounds, IPathfindGrid
 					isObjDyed = bytes13[num3].GetBit(1),
 					crossWall = bytes13[num3].GetBit(2)
 				});
-				if (cell._bridge >= count)
+				if (!EClass.sources.floors.map.ContainsKey(cell._bridge))
 				{
 					cell._bridge = 0;
 				}
-				if (cell._bridgeMat >= count2)
+				if (!EClass.sources.materials.map.ContainsKey(cell._bridgeMat))
 				{
 					cell._bridgeMat = 1;
 				}
@@ -1580,7 +1578,7 @@ public class Map : MapBounds, IPathfindGrid
 
 	public void SetObj(int x, int z, int id = 0, int value = 1, int dir = 0)
 	{
-		SetObj(x, z, (byte)EClass.sources.objs.rows[id].DefaultMaterial.id, id, value, dir);
+		SetObj(x, z, (byte)EClass.sources.objs[id].DefaultMaterial.id, id, value, dir);
 	}
 
 	public void SetObj(int x, int z, int idMat, int idObj, int value, int dir, bool ignoreRandomMat = false)
@@ -1720,7 +1718,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		SourceMaterial.Row row = (flag ? point.matRoofBlock : point.matBlock);
 		byte b = (flag ? point.cell._roofBlock : point.cell._block);
-		SourceBlock.Row row2 = EClass.sources.blocks.rows[b];
+		SourceBlock.Row row2 = EClass.sources.blocks[b];
 		Effect.Get("smoke").Play(point);
 		Effect.Get("mine").Play(point).SetParticleColor(row.GetColor())
 			.Emit(10 + EClass.rnd(10));
@@ -1788,10 +1786,10 @@ public class Map : MapBounds, IPathfindGrid
 			Effect.Get("mine").Play(point).SetParticleColor(point.matBlock.GetColor())
 				.Emit(10 + EClass.rnd(10));
 			MineObj(point);
-			int rampDir = EClass._map.GetRampDir(point.x, point.z, EClass.sources.blocks.rows[ramp].tileType);
+			int rampDir = EClass._map.GetRampDir(point.x, point.z, EClass.sources.blocks[ramp].tileType);
 			RemoveLonelyRamps(point.cell);
 			SetBlock(point.x, point.z, point.cell._blockMat, ramp, rampDir);
-			DropBlockComponent(point, EClass.sources.blocks.rows[block], matBlock, recoverBlock);
+			DropBlockComponent(point, EClass.sources.blocks[block], matBlock, recoverBlock);
 		}
 	}
 
@@ -1839,7 +1837,7 @@ public class Map : MapBounds, IPathfindGrid
 		}
 		if (!EClass._zone.IsRegion && !point.sourceFloor.components[0].Contains("chunk@soil"))
 		{
-			point.SetFloor(EClass.sources.floors.rows[1].DefaultMaterial.id, 40);
+			point.SetFloor(EClass.sources.floors[1].DefaultMaterial.id, 40);
 		}
 	}
 

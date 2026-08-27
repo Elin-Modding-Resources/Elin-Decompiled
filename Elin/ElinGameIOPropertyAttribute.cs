@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 [AttributeUsage(AttributeTargets.Property)]
@@ -63,13 +64,32 @@ public class ElinGameIOPropertyAttribute : ElinGameIOEventAttribute
 			{
 				string key2 = propertyInfo.DeclaringType.FullName + ":" + text;
 				object valueOrDefault = data.GetValueOrDefault(key2);
-				action(valueOrDefault);
+				action(CoerceValue(valueOrDefault, propertyInfo.PropertyType));
 			}
 			catch (Exception arg)
 			{
 				Debug.LogError($"#io failed to populate context var {text}\n{arg}");
-				_contextVars.Remove(text);
 			}
+		}
+		static object CoerceValue(object obj, Type type)
+		{
+			if (obj == null)
+			{
+				return type.IsValueType ? Activator.CreateInstance(type) : null;
+			}
+			if (obj is JToken jToken)
+			{
+				return jToken.ToObject(type);
+			}
+			if (type.IsInstanceOfType(obj))
+			{
+				return obj;
+			}
+			if (obj is IConvertible)
+			{
+				return Convert.ChangeType(obj, type);
+			}
+			return obj;
 		}
 	}
 
@@ -92,7 +112,6 @@ public class ElinGameIOPropertyAttribute : ElinGameIOEventAttribute
 			catch (Exception arg)
 			{
 				Debug.LogError($"#io failed to save context var {text}\n{arg}");
-				_contextVars.Remove(text);
 			}
 		}
 		context.Save("context_vars", dictionary);

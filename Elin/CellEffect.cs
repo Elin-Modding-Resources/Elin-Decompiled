@@ -142,7 +142,7 @@ public class CellEffect : EClass
 		}
 	}
 
-	public SourceCellEffect.Row source => _source ?? (_source = EClass.sources.cellEffects.rows[id]);
+	public SourceCellEffect.Row source => _source ?? (_source = EClass.sources.cellEffects[id]);
 
 	public bool IsFire => id == 3;
 

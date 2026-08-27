@@ -24,7 +24,7 @@ public class TraitDrinkMilkMother : TraitDrinkMilk
 			EClass.game.cards.uidNext = 1;
 			Rand.SetSeed(1);
 			Chara chara = CharaGen.Create(owner.c_idRefCard);
-			chara.SetLv(Mathf.Clamp(5 + owner.encLV * 5, 1, 20 + EClass.pc.Evalue(237)));
+			chara.SetLv(Mathf.Clamp(5 + owner.encLV * 5, 1, 20 + (c.master ?? EClass.pc).Evalue(237)));
 			Rand.SetSeed();
 			EClass.game.cards.uidNext = uidNext;
 			Debug.Log(chara.id + "/" + chara.LV);
@@ -94,7 +94,7 @@ public class TraitDrinkMilkMother : TraitDrinkMilk
 				c.PlaySound("ding_potential");
 			}
 			c.PlayEffect("buff");
-			EClass.pc.ModExp(237, 100);
+			(c.master ?? EClass.pc).ModExp(237, 100);
 		}
 		else
 		{

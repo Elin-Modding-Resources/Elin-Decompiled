@@ -14,16 +14,21 @@ public class CustomMerchantStock : CustomFileContent
 		Load();
 		List<Thing> list = new List<Thing>();
 		int createLv = owner?.trait?.ShopLv ?? (-1);
-		foreach (CustomThingContent item2 in items)
+		foreach (CustomThingContent item in items)
 		{
 			try
 			{
-				Thing item = item2.Create(createLv);
-				list.Add(item);
+				Thing thing = item.Create(createLv);
+				if (thing != null)
+				{
+					list.Add(thing);
+					continue;
+				}
+				ModUtil.LogModError("can't create stock item '" + item.id + "' in '" + base.ContentId + "'", base.Owner);
 			}
 			catch (Exception ex)
 			{
-				ModUtil.LogModError("can't create stock item '" + item2.ContentId + "'\n" + ex.Message, base.Owner);
+				ModUtil.LogModError("can't create stock item '" + item.id + "' in '" + base.ContentId + "'\n" + ex.Message, base.Owner);
 				Debug.LogException(ex);
 			}
 		}

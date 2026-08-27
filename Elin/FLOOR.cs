@@ -28,13 +28,13 @@ public class FLOOR : EClass
 
 	public const int floor_shore = 33;
 
-	public static SourceFloor.Row sourceSnow = EClass.sources.floors.rows[39];
+	public static SourceFloor.Row sourceSnow;
 
-	public static SourceFloor.Row sourceSnow2 = EClass.sources.floors.rows[56];
+	public static SourceFloor.Row sourceSnow2;
 
-	public static SourceFloor.Row sourceIce = EClass.sources.floors.rows[38];
+	public static SourceFloor.Row sourceIce;
 
-	public static SourceFloor.Row sourceWood = EClass.sources.floors.rows[21];
+	public static SourceFloor.Row sourceWood;
 
 	public static bool IsTatami(int id)
 	{

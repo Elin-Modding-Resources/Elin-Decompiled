@@ -58,7 +58,7 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 			if (tileType == TileType.HalfBlock)
 			{
 				int num = 104025;
-				Row row = ((id == 5) ? base.sources.blocks.rows[mat.defBlock] : this);
+				Row row = ((id == 5) ? base.sources.blocks[mat.defBlock] : this);
 				renderParam.tile = row._tiles[0];
 				renderParam.matColor = ((row.colorMod == 0) ? num : BaseTileMap.GetColorInt(ref mat.matColor, row.colorMod));
 				renderParam.tile2 = row.sourceAutoFloor._tiles[0];
@@ -141,6 +141,13 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 	public Dictionary<int, Row> _rows = new Dictionary<int, Row>();
 
 	public static RenderData FallbackRenderData;
+
+	[NonSerialized]
+	private TileLookup<Row> _lookup;
+
+	private TileLookup<Row> Lookup => _lookup ?? (_lookup = new TileLookup<Row>(map));
+
+	public Row this[int id] => Lookup[id];
 
 	public override Row CreateRow()
 	{
@@ -275,13 +282,15 @@ public class SourceBlock : SourceDataInt<SourceBlock.Row>
 
 	public override void OnInit()
 	{
+		Lookup.Build();
 		FallbackRenderData = ResourceCache.Load<RenderData>("Scene/Render/Data/block");
+		Cell.blockSource = this;
 		Cell.blockList = rows;
 		SourceFloor floors = Core.Instance.sources.floors;
 		foreach (Row row in rows)
 		{
 			row.Init();
-			row.sourceAutoFloor = (row.autoFloor.IsEmpty() ? floors.rows[40] : floors.alias[row.autoFloor]);
+			row.sourceAutoFloor = (row.autoFloor.IsEmpty() ? floors[40] : floors.alias[row.autoFloor]);
 		}
 	}
 }

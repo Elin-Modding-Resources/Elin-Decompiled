@@ -433,7 +433,7 @@ public class TileMapElona : BaseTileMap
 				break;
 			}
 			case BlockRenderMode.HalfBlock:
-				_sourceBlock = ((sourceBlock.id == 5) ? EMono.sources.blocks.rows[matBlock.defBlock] : sourceBlock);
+				_sourceBlock = ((sourceBlock.id == 5) ? EMono.sources.blocks[matBlock.defBlock] : sourceBlock);
 				param.tile = _sourceBlock._tiles[0];
 				param.matColor = ((_sourceBlock.colorMod == 0) ? 104025 : BaseTileMap.GetColorInt(ref matBlock.matColor, _sourceBlock.colorMod));
 				param.tile2 = _sourceBlock.sourceAutoFloor._tiles[0];

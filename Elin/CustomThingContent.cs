@@ -50,6 +50,8 @@ public class CustomThingContent : CustomSourceContent
 
 	public string material = "";
 
+	public bool forceRarity;
+
 	public bool noCopy;
 
 	public bool noRandomSocket;
@@ -87,6 +89,7 @@ public class CustomThingContent : CustomSourceContent
 			switch (text)
 			{
 			case "forceRarity":
+				customThingContent.forceRarity = true;
 				customThingContent.rarity = r.quality.ToEnum<Rarity>();
 				break;
 			case "noCopy":
@@ -144,7 +147,7 @@ public class CustomThingContent : CustomSourceContent
 			int value3 = value2;
 			thing.SetInt(text2, value3);
 		}
-		if (thing.source.ContainsTag("forceRarity"))
+		if (forceRarity)
 		{
 			thing.ChangeRarity(rarity);
 		}
@@ -192,12 +195,13 @@ public class CustomThingContent : CustomSourceContent
 			{
 				float num4 = Mathf.Sqrt((float)(thing.genLv * value4.encFactor) / 100f);
 				float num5 = (float)num3 + num4;
-				int num6 = (value4.mtp + EClass.rnd(value4.mtp + (int)num5)) / value4.mtp;
-				if (value4.encFactor == 0 && num6 > 25)
+				int num6 = Mathf.Max(1, value4.mtp);
+				int num7 = (num6 + EClass.rnd(num6 + (int)num5)) / num6;
+				if (value4.encFactor == 0 && num7 > 25)
 				{
-					num6 = 25;
+					num7 = 25;
 				}
-				thing.ApplySocket(value4.id, num6);
+				thing.ApplySocket(value4.id, num7);
 			}
 		}
 	}

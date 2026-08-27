@@ -388,7 +388,6 @@ public class AttackProcess : EClass
 		bool isGun = toolRange is TraitToolRangeGun;
 		bool isCane = toolRange is TraitToolRangeCane;
 		GameSetting.EffectData data = EClass.setting.effect.guns.TryGetValue(weapon.id) ?? EClass.setting.effect.guns[isCane ? "cane" : (isGun ? "gun" : "bow")];
-		CustomGunEffectData customData = data as CustomGunEffectData;
 		bool isPCC = CC.IsPCC && CC.renderer.hasActor;
 		Vector2 firePos = (isPCC ? new Vector2(data.firePos.x * (float)((CC.renderer.actor.currentDir != 0 && CC.renderer.actor.currentDir != 1) ? 1 : (-1)), data.firePos.y) : Vector2.zero);
 		Chara _CC = CC;
@@ -404,28 +403,28 @@ public class AttackProcess : EClass
 			{
 				effColor = EClass.Colors.elementColors.TryGetValue(element.source.alias, "eleFire");
 			}
-			if (!string.IsNullOrEmpty(customData?.caneColor))
+			if (data.caneColor.a > 0f)
 			{
-				Color color = customData.caneColor.ToColor();
-				effColor = (customData.caneColorBlend ? Color.Lerp(effColor, color, 0.5f) : color);
+				effColor = (data.caneColorBlend ? Color.Lerp(effColor, data.caneColor, 0.5f) : data.caneColor);
 			}
 		}
-		bool isLaser = toolRange is TraitToolRangeGunEnergy || (customData?.forceLaser ?? false);
-		bool isRail = isLaser && (weapon.id == "gun_rail" || (customData?.forceRail ?? false));
+		bool isLaser = toolRange is TraitToolRangeGunEnergy || data.forceLaser;
+		bool isRail = isLaser && (weapon.id == "gun_rail" || data.forceRail);
+		Vector3 muzzleFix = (data.fireFromMuzzle ? ((Vector3)firePos) : Vector3.zero);
 		for (int num = 0; num < numFire; num++)
 		{
 			TweenUtil.Delay((float)num * data.delay + delay, delegate
 			{
 				if (EClass.core.IsGameStarted && _CC.IsAliveInCurrentZone && _zone == _CC.currentZone)
 				{
-					Vector3 fromV = (_CC.isSynced ? _CC.renderer.position : _CC.pos.Position());
+					Vector3 fromV = (_CC.isSynced ? _CC.renderer.position : _CC.pos.Position()) + muzzleFix;
 					switch (_weapon.id)
 					{
 					case "gun_rail":
-						_CC.PlayEffect("laser_rail").GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
+						_CC.PlayEffect("laser_rail", useRenderPos: true, 0f, muzzleFix).GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
 						break;
 					case "gun_laser":
-						_CC.PlayEffect("laser").GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
+						_CC.PlayEffect("laser", useRenderPos: true, 0f, muzzleFix).GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
 						break;
 					case "gun_laser_assault":
 						Effect.Get("ranged_laser")._Play(_CC.pos, fromV, 0f, _TP, data.sprite);
@@ -434,7 +433,7 @@ public class AttackProcess : EClass
 						if (isLaser)
 						{
 							string id = (isRail ? "laser_rail" : "laser");
-							_CC.PlayEffect(id).GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
+							_CC.PlayEffect(id, useRenderPos: true, 0f, muzzleFix).GetComponent<SpriteBasedLaser>().Play(_TP.PositionCenter());
 						}
 						else
 						{
@@ -450,7 +449,7 @@ public class AttackProcess : EClass
 					{
 						if (!ignoreSound)
 						{
-							_CC.PlaySound(customData?.idSoundEject.IsEmpty("bullet_drop"));
+							_CC.PlaySound(data.idSoundEject.IsEmpty("bullet_drop"));
 						}
 						_CC.PlayEffect("bullet").Emit(1);
 					}

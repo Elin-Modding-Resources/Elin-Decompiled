@@ -1334,7 +1334,6 @@ public class Zone : Spatial, ICardParent, IInspect
 		VirtualDate virtualDate = new VirtualDate(HourSinceLastActive);
 		List<Chara> list = EClass._map.charas.ToList();
 		int num2 = HourSinceLastActive / 24;
-		int num3 = 0;
 		if (num2 > 0)
 		{
 			foreach (Chara item in list)
@@ -1358,12 +1357,17 @@ public class Zone : Spatial, ICardParent, IInspect
 			}
 		}
 		VirtualDate.current = virtualDate;
+		int num3 = EClass.core.config.test.maxSimHour;
+		if (num3 <= 0)
+		{
+			num3 = 8640;
+		}
+		int num4 = HourSinceLastActive - num3;
 		for (int i = 0; i < HourSinceLastActive; i++)
 		{
-			virtualDate.SimulateHour();
-			if (!virtualDate.IsWinter)
+			if (i >= num4)
 			{
-				num3++;
+				virtualDate.SimulateHour();
 			}
 		}
 		EClass._map.things.ForeachReverse(delegate(Thing t)
@@ -1375,7 +1379,7 @@ public class Zone : Spatial, ICardParent, IInspect
 		{
 			return;
 		}
-		int num4 = 0;
+		int num5 = 0;
 		foreach (Chara item2 in list)
 		{
 			if (item2.IsPCParty)
@@ -1386,7 +1390,7 @@ public class Zone : Spatial, ICardParent, IInspect
 			{
 				if (item2.id == "bee")
 				{
-					num4++;
+					num5++;
 				}
 				if (num2 > 0 && item2.IsGuest())
 				{
@@ -1426,11 +1430,11 @@ public class Zone : Spatial, ICardParent, IInspect
 				list2.Add(thing);
 			}
 		}
-		if (num4 >= list2.Count)
+		if (num5 >= list2.Count)
 		{
 			return;
 		}
-		for (int num5 = num4; num5 < list2.Count; num5++)
+		for (int num6 = num5; num6 < list2.Count; num6++)
 		{
 			if (EClass.rnd(200) <= HourSinceLastActive)
 			{

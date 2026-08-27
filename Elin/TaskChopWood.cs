@@ -75,7 +75,7 @@ public class TaskChopWood : TaskDesignation
 			log.ModNum(-1);
 			owner.elements.ModExp(225, 30f);
 			owner.stamina.Mod(-1);
-			EClass._map.TrySmoothPick(pos, thing, EClass.pc);
+			EClass._map.TrySmoothPick(pos, thing, owner);
 		};
 	}
 }

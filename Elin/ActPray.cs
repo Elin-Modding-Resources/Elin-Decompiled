@@ -26,36 +26,39 @@ public class ActPray : Act
 		if (c.faith.IsEyth && !c.HasElement(1228))
 		{
 			c.Say("pray", c);
-			if (passive && c.Evalue(1655) >= 2 && EClass.pc.party.members.Count > 1)
+			if (passive && c.Evalue(1655) >= 2 && c.party.members.Count > 1)
 			{
-				foreach (Chara member in EClass.pc.party.members)
+				foreach (Chara member in c.party.members)
 				{
-					if (member != EClass.pc)
+					if (member != c)
 					{
 						member.Say("pray2", member, member.faith.Name);
 						member.ModExp(306, 200);
 					}
 				}
 			}
-			if (EClass.player.prayed)
+			if (c.IsPC && EClass.player.prayed)
 			{
 				c.PlaySound("pray_ignore");
 			}
 			else
 			{
-				EClass.player.prayed = true;
+				if (c.IsPC)
+				{
+					EClass.player.prayed = true;
+				}
 				c.ModExp(306, 100);
 			}
 			return true;
 		}
-		foreach (Chara member2 in EClass.pc.party.members)
+		foreach (Chara member2 in c.party.members)
 		{
-			if (member2 == EClass.pc || (passive && c.Evalue(1655) >= 2))
+			if (member2 == c || (passive && c.Evalue(1655) >= 2))
 			{
 				member2.Say("pray2", member2, member2.faith.Name);
 			}
 		}
-		if (passive || !c.faith.TryGetGift())
+		if (passive || !c.faith.TryGetGift(c))
 		{
 			if (c.IsPC && EClass.player.prayed)
 			{
@@ -81,12 +84,12 @@ public class ActPray : Act
 		}
 		if (!passive)
 		{
-			c.Say("pray_answer", c, Act.CC.faith.Name);
+			c.Say("pray_answer", c, c.faith.Name);
 			c.faith.Revelation((EClass.rnd(2) == 0) ? "random" : "chat", c);
 		}
-		foreach (Chara member in EClass.pc.party.members)
+		foreach (Chara member in c.party.members)
 		{
-			if (member == EClass.pc || (passive && c.Evalue(1655) >= 2))
+			if (member == c || (passive && c.Evalue(1655) >= 2))
 			{
 				member.ModExp(306, 200);
 			}

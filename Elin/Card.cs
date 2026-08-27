@@ -4321,6 +4321,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
+		long num3 = 99999999L;
+		if (!IsPCFaction && LV > 50)
+		{
+			dmg = dmg * (100 - (int)Mathf.Min(80f, Mathf.Sqrt(LV - 50) * 2.5f)) / 100;
+		}
 		if (origin != null && origin.HasElement(1208))
 		{
 			switch (attackSource)
@@ -4362,6 +4367,11 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			if (!e.source.aliasRef.IsEmpty() && attackSource != AttackSource.ManaBackfire)
 			{
 				dmg = Element.GetResistDamage(dmg, Evalue(e.source.aliasRef), (resistPenetrationLevel != 0) ? resistPenetrationLevel : GetResistPenetrationLevel(e.id, attackSource, origin));
+				num3 = Element.GetResistDamage(num3, Evalue(e.source.aliasRef), (resistPenetrationLevel != 0) ? resistPenetrationLevel : GetResistPenetrationLevel(e.id, attackSource, origin));
+				if (dmg > num3)
+				{
+					dmg = num3;
+				}
 				dmg = dmg * 100 / (100 + Mathf.Clamp(Evalue(961) * 5, -50, 200));
 				dmg = dmg * Mathf.Max(100 - Evalue(93), 10) / 100;
 			}
@@ -4393,20 +4403,16 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		}
 		if (attackSource != AttackSource.Finish)
 		{
-			if (!IsPCFaction && LV > 50)
-			{
-				dmg = dmg * (100 - (int)Mathf.Min(80f, Mathf.Sqrt(LV - 50) * 2.5f)) / 100;
-			}
 			if (origin != null && origin.HasCondition<ConBerserk>())
 			{
 				dmg = dmg * 3 / 2;
 			}
 			if (EClass.game.principal.enableDamageReduction && IsPCFaction)
 			{
-				int num3 = ((origin != null) ? origin.LV : EClass._zone.DangerLv);
-				if (num3 > 50)
+				int num4 = ((origin != null) ? origin.LV : EClass._zone.DangerLv);
+				if (num4 > 50)
 				{
-					dmg = dmg * (100 - (int)Mathf.Min(95f, Mathf.Sqrt(num3 - 50))) / 100;
+					dmg = dmg * (100 - (int)Mathf.Min(95f, Mathf.Sqrt(num4 - 50))) / 100;
 				}
 			}
 			if (attackSource == AttackSource.Throw || attackSource == AttackSource.Range)
@@ -4430,29 +4436,29 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			{
 				dmg = dmg * 90 / 100;
 			}
-			int num4 = EClass.pc.party.EvalueTotal(1207);
-			if (num4 > 0 && isChara)
+			int num5 = EClass.pc.party.EvalueTotal(1207);
+			if (num5 > 0 && isChara)
 			{
-				int num5 = 0;
 				int num6 = 0;
+				int num7 = 0;
 				foreach (Condition condition3 in Chara.conditions)
 				{
 					if (condition3.Type == ConditionType.Buff)
 					{
-						num5++;
+						num6++;
 					}
 					else if (condition3.Type == ConditionType.Debuff)
 					{
-						num6++;
+						num7++;
 					}
 				}
 				if (IsPCFactionOrMinion)
 				{
-					dmg = dmg * 100 / Mathf.Min(100 + num5 * (3 + num4 * 2), 120);
+					dmg = dmg * 100 / Mathf.Min(100 + num6 * (3 + num5 * 2), 120);
 				}
 				else if (origin != null && origin.IsPCFactionOrMinion)
 				{
-					dmg = dmg * Mathf.Min(100 + num6 * (3 + num4 + 2), 120) / 100;
+					dmg = dmg * Mathf.Min(100 + num7 * (3 + num5 + 2), 120) / 100;
 				}
 			}
 			if (IsPCParty && EClass.pc.ai is GoalAutoCombat)
@@ -4469,10 +4475,10 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 			}
 			if (dmg >= MaxHP / 10 && Evalue(68) > 0)
 			{
-				int num7 = MaxHP / 10;
-				long num8 = dmg - num7;
-				num8 = num8 * 100 / (200 + Evalue(68) * 10);
-				dmg = num7 + num8;
+				int num8 = MaxHP / 10;
+				long num9 = dmg - num8;
+				num9 = num9 * 100 / (200 + Evalue(68) * 10);
+				dmg = num8 + num9;
 			}
 		}
 		if (origin != null && origin.IsPC && EClass.pc.Evalue(654) > 0)
@@ -4483,18 +4489,17 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			dmg = 0L;
 		}
-		long num9 = 99999999L;
 		if (origin != null && (attackSource == AttackSource.Melee || attackSource == AttackSource.Range))
 		{
 			ConStrife condition = origin.GetCondition<ConStrife>();
 			if (condition != null)
 			{
-				num9 = num9 * (100 + condition.lv * 5) / 100;
+				num3 = num3 * (100 + condition.lv * 5) / 100;
 			}
 		}
-		if (dmg > num9)
+		if (dmg > num3)
 		{
-			dmg = num9;
+			dmg = num3;
 		}
 		float num10 = Mathf.Clamp(dmg * 6 / MaxHP, 0f, 4f) + (float)((dmg > 0) ? 1 : 0);
 		int num11 = hp;
@@ -4608,7 +4613,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 								Chara.AddCondition<ConFractured>((int)Mathf.Max(10f, 30f - Mathf.Sqrt(Evalue(436))));
 								hp = Mathf.Min(half * (int)Mathf.Sqrt(Evalue(436) * 2) / 100, MaxHP / 3);
 							});
-							goto IL_1128;
+							goto IL_117a;
 						}
 					}
 					if (zoneInstanceBout != null && (bool)LayerDrama.Instance)
@@ -4636,7 +4641,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 							if (EClass.player.invlunerable)
 							{
 								EvadeDeath(null);
-								goto IL_1128;
+								goto IL_117a;
 							}
 						}
 						if (Evalue(1220) > 0 && Chara.stamina.value >= (IsPC ? (Chara.stamina.max / 2) : (Chara.stamina.max / 3 * 2)))
@@ -4654,8 +4659,8 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				}
 			}
 		}
-		goto IL_1128;
-		IL_1128:
+		goto IL_117a;
+		IL_117a:
 		if (trait.CanBeAttacked)
 		{
 			renderer.PlayAnime(AnimeID.HitObj);
@@ -5392,7 +5397,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		if (AI_Slaughter.slaughtering)
 		{
 			flag2 = true;
-			num = EClass.rndHalf(4 + 10 * (50 + Mathf.Max(0, (int)MathF.Sqrt(EClass.pc.Evalue(290) * 10))) / 100);
+			num = EClass.rndHalf(4 + 10 * (50 + Mathf.Max(0, (int)MathF.Sqrt((AI_Slaughter.slaughterer ?? EClass.pc).Evalue(290) * 10))) / 100);
 		}
 		else if (origin != null && origin.HasElement(290) && !IsMinion)
 		{
@@ -5436,7 +5441,7 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 				int num3 = 10;
 				if (AI_Slaughter.slaughtering)
 				{
-					num3 += (int)Mathf.Min(Mathf.Sqrt(EClass.pc.Evalue(290)), 20f);
+					num3 += (int)Mathf.Min(Mathf.Sqrt((AI_Slaughter.slaughterer ?? EClass.pc).Evalue(290)), 20f);
 				}
 				if (num2 && num3 > EClass.rnd(100))
 				{
@@ -6555,9 +6560,9 @@ public class Card : BaseCard, IReservable, ICardParent, IRenderSource, IGlobalVa
 		{
 			if (trait is TraitFakeBlock)
 			{
-				return EClass.sources.blocks.map[refVal].GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
+				return EClass.sources.blocks[refVal].GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
 			}
-			return EClass.sources.objs.map[refVal].GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
+			return EClass.sources.objs[refVal].GetSprite(dir, trait.IdSkin, (IsInstalled && pos != null && pos.IsValid && pos.cell.IsSnowTile) ? true : false);
 		}
 		if (trait is TraitAbility)
 		{

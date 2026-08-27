@@ -6,7 +6,7 @@ public class TraitFakeTile : Trait
 
 	public override RenderData GetRenderData()
 	{
-		return EClass.sources.blocks.map[owner.refVal].renderData;
+		return EClass.sources.blocks[owner.refVal].renderData;
 	}
 
 	public override void OnCrafted(Recipe recipe, List<Thing> ings)

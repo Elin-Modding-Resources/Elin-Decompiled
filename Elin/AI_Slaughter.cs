@@ -5,6 +5,8 @@ public class AI_Slaughter : AI_TargetCard
 {
 	public static bool slaughtering;
 
+	public static Chara slaughterer;
+
 	public override bool CanManualCancel()
 	{
 		return true;
@@ -79,6 +81,7 @@ public class AI_Slaughter : AI_TargetCard
 					EClass._zone.AddCard(fur, target.pos);
 				}
 				slaughtering = true;
+				slaughterer = owner;
 				target.SetSale(sale: false);
 				if (target.IsPCParty && !target.IsPC)
 				{
@@ -91,6 +94,7 @@ public class AI_Slaughter : AI_TargetCard
 				target.Die();
 				Msg.Say("goto_heaven", target);
 				slaughtering = false;
+				slaughterer = null;
 				if (!target.IsPC)
 				{
 					if (target.Chara.trait.IsUnique)

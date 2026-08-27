@@ -73,7 +73,7 @@ public class ModUtil : EClass
 	{
 		string text = "#mod/" + package?.title + " (" + package?.id + ")\n" + message;
 		UnityEngine.Debug.LogWarning(text.RemoveAllTags());
-		if ((package?.isInPackages ?? false) || Application.isEditor)
+		if ((package != null && package.isInPackages && !package.builtin) || Application.isEditor)
 		{
 			EGui.CreatePopup(text);
 		}
@@ -225,7 +225,15 @@ public class ModUtil : EClass
 			}
 		}
 		List<ICustomContent> contents = new List<ICustomContent>();
-		CustomReligionContent.LoadReligionData(context);
+		try
+		{
+			CustomReligionContent.LoadReligionData(context);
+		}
+		catch (Exception ex)
+		{
+			LogModError("exception while loading custom religion data\n" + ex.Message);
+			UnityEngine.Debug.LogException(ex);
+		}
 		LoadCustomContent<CustomZoneContent>();
 		LoadCustomContent<CustomCharaContent>();
 		LoadOtherCustomContent();
@@ -234,15 +242,15 @@ public class ModUtil : EClass
 			UnityEngine.Debug.Log("#mod-content loading " + typeof(T).Name + "...");
 			foreach (T item in _customContent.Values.OfType<T>())
 			{
+				contents.Add(item);
 				try
 				{
 					item.OnGameLoad(context);
-					contents.Add(item);
 				}
-				catch (Exception ex)
+				catch (Exception ex2)
 				{
-					LogModError("exception while loading custom content '" + item.ContentId + "'\n" + ex.Message, item.Owner);
-					UnityEngine.Debug.LogException(ex);
+					LogModError("exception while loading custom content '" + item.ContentId + "'\n" + ex2.Message, item.Owner);
+					UnityEngine.Debug.LogException(ex2);
 				}
 			}
 		}
@@ -254,10 +262,10 @@ public class ModUtil : EClass
 				{
 					item2.OnGameLoad(context);
 				}
-				catch (Exception ex)
+				catch (Exception ex2)
 				{
-					LogModError("exception while loading custom content '" + item2.ContentId + "'\n" + ex.Message, item2.Owner);
-					UnityEngine.Debug.LogException(ex);
+					LogModError("exception while loading custom content '" + item2.ContentId + "'\n" + ex2.Message, item2.Owner);
+					UnityEngine.Debug.LogException(ex2);
 				}
 			}
 		}
@@ -271,17 +279,25 @@ public class ModUtil : EClass
 	[ElinPostSave]
 	private static void OnPostSaveInit(GameIOContext context)
 	{
-		CustomReligionContent.SaveReligionData(context);
+		try
+		{
+			CustomReligionContent.SaveReligionData(context);
+		}
+		catch (Exception ex)
+		{
+			LogModError("exception while saving custom religion data\n" + ex.Message);
+			UnityEngine.Debug.LogException(ex);
+		}
 		foreach (ICustomContent value in _customContent.Values)
 		{
 			try
 			{
 				value.OnGameSave(context);
 			}
-			catch (Exception ex)
+			catch (Exception ex2)
 			{
-				LogModError("exception while saving custom content '" + value.ContentId + "'\n" + ex.Message, value.Owner);
-				UnityEngine.Debug.LogException(ex);
+				LogModError("exception while saving custom content '" + value.ContentId + "'\n" + ex2.Message, value.Owner);
+				UnityEngine.Debug.LogException(ex2);
 			}
 		}
 	}
@@ -562,7 +578,7 @@ public class ModUtil : EClass
 		foreach (FileInfo fileInfo in files)
 		{
 			list.Add(fileInfo.FullName);
-			UnityEngine.Debug.Log("#mod-content loaded chara tone " + fileInfo.ShortPath());
+			UnityEngine.Debug.Log("#mod-content loaded chara talk " + fileInfo.ShortPath());
 		}
 		return list;
 	}
@@ -574,7 +590,7 @@ public class ModUtil : EClass
 		foreach (FileInfo fileInfo in files)
 		{
 			list.Add(fileInfo.FullName);
-			UnityEngine.Debug.Log("#mod-content loaded chara talk " + fileInfo.ShortPath());
+			UnityEngine.Debug.Log("#mod-content loaded chara tone " + fileInfo.ShortPath());
 		}
 		return list;
 	}
@@ -622,7 +638,7 @@ public class ModUtil : EClass
 				{
 					return null;
 				}
-				if (resizeWidth != 0 && resizeHeight != 0 && value2.width != resizeWidth && value2.height != resizeHeight)
+				if (resizeWidth != 0 && resizeHeight != 0 && (value2.width != resizeWidth || value2.height != resizeHeight))
 				{
 					Texture2D texture2D = value2.Rescale(resizeWidth, resizeHeight);
 					UnityEngine.Object.Destroy(value2);
@@ -699,26 +715,30 @@ public class ModUtil : EClass
 
 	public static void ImportAllGunEffectSettings()
 	{
-		foreach (KeyValuePair<string, CustomGunEffectData> item in LoadGunEffects())
+		foreach (var (key, customGunEffectData2) in LoadGunEffects())
 		{
-			item.Deconstruct(out var key, out var value);
-			string key2 = key;
-			GameSetting.EffectData value2 = value.CreateEffectData();
-			EClass.setting.effect.guns[key2] = value2;
+			customGunEffectData2.ResolveSprite();
+			EClass.setting.effect.guns[key] = customGunEffectData2;
 		}
 	}
 
 	public static string ExportAllGunEffectSettings()
 	{
-		UD_String_EffectData guns = EClass.setting.effect.guns;
 		string text = CorePath.rootExe + "/guns.json";
-		Dictionary<string, CustomGunEffectData> dictionary = new Dictionary<string, CustomGunEffectData>();
-		foreach (string key in guns.Keys)
+		Dictionary<string, GameSetting.EffectData> dictionary = new Dictionary<string, GameSetting.EffectData>();
+		foreach (KeyValuePair<string, GameSetting.EffectData> gun in EClass.setting.effect.guns)
 		{
-			CustomGunEffectData value = CustomGunEffectData.CreateFromId(key);
-			dictionary[key] = value;
+			gun.Deconstruct(out var key, out var value);
+			string key2 = key;
+			GameSetting.EffectData effectData = value;
+			GameSetting.EffectData effectData2 = effectData.Clone();
+			if (effectData2.idSprite.IsEmpty() && (bool)effectData.sprite)
+			{
+				effectData2.idSprite = effectData.sprite.name;
+			}
+			dictionary[key2] = effectData2;
 		}
-		File.WriteAllText(text, JsonConvert.SerializeObject(dictionary, Formatting.Indented, GameIOContext.Settings));
+		File.WriteAllText(text, JsonConvert.SerializeObject(dictionary, Formatting.Indented, CustomGunEffectData.JsonSettings));
 		return $"dumped {dictionary.Count} guns data to {text}";
 	}
 

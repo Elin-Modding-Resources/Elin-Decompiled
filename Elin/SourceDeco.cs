@@ -104,6 +104,13 @@ public class SourceDeco : SourceDataInt<SourceDeco.Row>
 
 	public Dictionary<int, Row> _rows = new Dictionary<int, Row>();
 
+	[NonSerialized]
+	private TileLookup<Row> _lookup;
+
+	private TileLookup<Row> Lookup => _lookup ?? (_lookup = new TileLookup<Row>(map));
+
+	public Row this[int id] => Lookup[id];
+
 	public override Row CreateRow()
 	{
 		return new Row
@@ -231,6 +238,8 @@ public class SourceDeco : SourceDataInt<SourceDeco.Row>
 
 	public override void OnInit()
 	{
+		Lookup.Build();
+		Cell.decoSource = this;
 		Cell.decoList = rows;
 		foreach (Row row in rows)
 		{

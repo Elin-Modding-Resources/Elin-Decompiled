@@ -21,6 +21,18 @@ public class Cell : WeightCell, IFloodCell
 
 	public static List<SourceObj.Row> objList;
 
+	public static SourceMaterial matSource;
+
+	public static SourceBlock blockSource;
+
+	public static SourceFloor floorSource;
+
+	public static SourceDeco decoSource;
+
+	public static SourceCellEffect effectSource;
+
+	public static SourceObj objSource;
+
 	public static int Size;
 
 	public static Cell[,] cells;
@@ -696,9 +708,9 @@ public class Cell : WeightCell, IFloodCell
 	{
 		get
 		{
-			if (!HasFullBlock && !floorList[_floor].tileType.IsWater)
+			if (!HasFullBlock && !floorSource[_floor].tileType.IsWater)
 			{
-				return floorList[_floor].edge == 0;
+				return floorSource[_floor].edge == 0;
 			}
 			return true;
 		}
@@ -710,9 +722,9 @@ public class Cell : WeightCell, IFloodCell
 		{
 			if (_bridge != 0)
 			{
-				return floorList[_bridge].tileType.IsWater;
+				return floorSource[_bridge].tileType.IsWater;
 			}
-			return floorList[_floor].tileType.IsWater;
+			return floorSource[_floor].tileType.IsWater;
 		}
 	}
 
@@ -732,7 +744,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 	}
 
-	public bool IsFloorWater => floorList[_floor].tileType.IsWater;
+	public bool IsFloorWater => floorSource[_floor].tileType.IsWater;
 
 	public bool IsFarmField
 	{
@@ -780,7 +792,7 @@ public class Cell : WeightCell, IFloodCell
 		{
 			if (_bridge != 0)
 			{
-				return floorList[_bridge].tileType.IsWater;
+				return floorSource[_bridge].tileType.IsWater;
 			}
 			return false;
 		}
@@ -822,7 +834,7 @@ public class Cell : WeightCell, IFloodCell
 		}
 	}
 
-	public bool HasFullBlock => blockList[_block].tileType.IsFullBlock;
+	public bool HasFullBlock => blockSource[_block].tileType.IsFullBlock;
 
 	public bool HasFullBlockOrWallOrFence
 	{
@@ -836,15 +848,15 @@ public class Cell : WeightCell, IFloodCell
 		}
 	}
 
-	public bool HasWallOrFence => blockList[_block].tileType.IsWallOrFence;
+	public bool HasWallOrFence => blockSource[_block].tileType.IsWallOrFence;
 
-	public bool HasWall => blockList[_block].tileType.IsWall;
+	public bool HasWall => blockSource[_block].tileType.IsWall;
 
-	public bool HasFence => blockList[_block].tileType.IsFence;
+	public bool HasFence => blockSource[_block].tileType.IsFence;
 
-	public bool HasRamp => blockList[_block].tileType.IsRamp;
+	public bool HasRamp => blockSource[_block].tileType.IsRamp;
 
-	public bool HasLadder => blockList[_block].tileType.IsLadder;
+	public bool HasLadder => blockSource[_block].tileType.IsLadder;
 
 	public bool HasRampOrLadder
 	{
@@ -858,19 +870,19 @@ public class Cell : WeightCell, IFloodCell
 		}
 	}
 
-	public bool HasSlope => blockList[_block].tileType == TileType.Slope;
+	public bool HasSlope => blockSource[_block].tileType == TileType.Slope;
 
-	public bool HasStairs => blockList[_block].tileType == TileType.Stairs;
+	public bool HasStairs => blockSource[_block].tileType == TileType.Stairs;
 
-	public bool HasHalfBlock => blockList[_block].tileType == TileType.HalfBlock;
+	public bool HasHalfBlock => blockSource[_block].tileType == TileType.HalfBlock;
 
-	public bool HasBlockOrRamp => blockList[_block].isBlockOrRamp;
+	public bool HasBlockOrRamp => blockSource[_block].isBlockOrRamp;
 
-	public bool UseLowBlock => blockList[_block].tileType.UseLowBlock;
+	public bool UseLowBlock => blockSource[_block].tileType.UseLowBlock;
 
-	public bool CastShadow => blockList[_block].tileType.CastShadowSelf;
+	public bool CastShadow => blockSource[_block].tileType.CastShadowSelf;
 
-	public bool CastAmbientShadow => blockList[_block].tileType.CastAmbientShadow;
+	public bool CastAmbientShadow => blockSource[_block].tileType.CastAmbientShadow;
 
 	public bool IsRoomEdge
 	{
@@ -1033,17 +1045,17 @@ public class Cell : WeightCell, IFloodCell
 		}
 	}
 
-	public SourceMaterial.Row matRoofBlock => matList[_roofBlockMat];
+	public SourceMaterial.Row matRoofBlock => matSource[_roofBlockMat];
 
-	public SourceMaterial.Row matBlock => matList[_blockMat];
+	public SourceMaterial.Row matBlock => matSource[_blockMat];
 
-	public SourceMaterial.Row matFloor => matList[_floorMat];
+	public SourceMaterial.Row matFloor => matSource[_floorMat];
 
-	public SourceMaterial.Row matDeco => matList[_decoMat];
+	public SourceMaterial.Row matDeco => matSource[_decoMat];
 
-	public SourceMaterial.Row matBridge => matList[_bridgeMat];
+	public SourceMaterial.Row matBridge => matSource[_bridgeMat];
 
-	public SourceMaterial.Row matObj => matList[objMat];
+	public SourceMaterial.Row matObj => matSource[objMat];
 
 	public SourceMaterial.Row matObj_fixed
 	{
@@ -1051,19 +1063,19 @@ public class Cell : WeightCell, IFloodCell
 		{
 			if (!isObjDyed)
 			{
-				return matList[objMat];
+				return matSource[objMat];
 			}
 			return sourceObj.DefaultMaterial;
 		}
 	}
 
-	public SourceBlock.Row sourceRoofBlock => blockList[_roofBlock];
+	public SourceBlock.Row sourceRoofBlock => blockSource[_roofBlock];
 
-	public SourceBlock.Row sourceBlock => blockList[_block];
+	public SourceBlock.Row sourceBlock => blockSource[_block];
 
-	public SourceFloor.Row sourceFloor => floorList[_floor];
+	public SourceFloor.Row sourceFloor => floorSource[_floor];
 
-	public SourceFloor.Row sourceBridge => floorList[_bridge];
+	public SourceFloor.Row sourceBridge => floorSource[_bridge];
 
 	public SourceFloor.Row sourceSurface
 	{
@@ -1077,11 +1089,11 @@ public class Cell : WeightCell, IFloodCell
 		}
 	}
 
-	public SourceDeco.Row sourceDeco => decoList[_deco];
+	public SourceDeco.Row sourceDeco => decoSource[_deco];
 
-	public SourceCellEffect.Row sourceEffect => effect?.source ?? effectList[0];
+	public SourceCellEffect.Row sourceEffect => effect?.source ?? effectSource[0];
 
-	public SourceObj.Row sourceObj => objList[obj];
+	public SourceObj.Row sourceObj => objSource[obj];
 
 	public BiomeProfile biome
 	{
@@ -1190,8 +1202,8 @@ public class Cell : WeightCell, IFloodCell
 		isSkyFloor = tileType2 != TileType.Sky && (cell2.sourceFloor.tileType == TileType.Sky || cell3.sourceFloor.tileType == TileType.Sky);
 		openPath = false;
 		openSight = tileType.IsOpenSight || (cell3.hasWindow && !cell3.isCurtainClosed) || (cell2.hasWindow && !cell2.isCurtainClosed);
-		blockSight = tileType.IsBlockSight || ((objList[obj].growth != null) ? objList[obj].growth.BlockSight(this) : objList[obj].tileType.IsBlockSight);
-		blocked = outOfBounds || tileType.IsBlockPass || (tileType2.IsBlockPass && !hasBridge) || ((objList[obj].growth != null) ? objList[obj].growth.BlockPass(this) : objList[obj].tileType.IsBlockPass) || impassable;
+		blockSight = tileType.IsBlockSight || ((objSource[obj].growth != null) ? objSource[obj].growth.BlockSight(this) : objSource[obj].tileType.IsBlockSight);
+		blocked = outOfBounds || tileType.IsBlockPass || (tileType2.IsBlockPass && !hasBridge) || ((objSource[obj].growth != null) ? objSource[obj].growth.BlockPass(this) : objSource[obj].tileType.IsBlockPass) || impassable;
 		isSlopeEdge = height > cell2.height || height > cell3.height;
 		if (hasBridge && sourceBridge.tileType.ShowPillar)
 		{
